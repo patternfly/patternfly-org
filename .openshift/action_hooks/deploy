@@ -2,4 +2,4 @@
 
 echo "Building static files using middleman..."
 
-cd $OPENSHIFT_REPO_DIR && bundle exec ./vendor/bundle/ruby/bin/jekyll build -d public
+cd $OPENSHIFT_REPO_DIR && bundle exec ./vendor/bundle/ruby/bin/jekyll build -s source -d public
