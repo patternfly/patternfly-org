@@ -1,0 +1,45 @@
+{
+  "name": "angular-patternfly",
+  "version": "0.0.5",
+  "authors": [
+    "Red Hat"
+  ],
+  "description": "Angular extension of the PatternFly project.",
+  "keywords": [ "angular", "patternfly"],
+  "license": "EPL-1.0",
+  "ignore": [
+    "node_modules",
+    "lib",
+    "Gruntfile.js",
+    "package.json",
+    ".bowerrc",
+    ".editorconfig",
+    ".gitignore",
+    ".jshintrc",
+    "karma.conf.js",
+    "server.js",
+    "misc",
+    "src",
+    "README.md",
+    "bower.json"
+  ],
+  "main": [
+    "dist/angular-patternfly.js",
+    "dist/angular-patternfly.min.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/patternfly/angular-patternfly.git"
+  },
+  "dependencies": {
+    "angular": "1.2.25 - 1.3.*",
+    "patternfly": "1.1.1 - 1.1.4"
+  },
+  "devDependencies": {
+    "angular-animate": "1.2.25 - 1.3.*",
+    "angular-mocks": "1.2.25 - 1.3.*",
+    "angular-sanitize": "1.2.25 - 1.3.*",
+    "angular-touch": "1.2.25 - 1.3.*",
+    "angular-route": "1.2.25 - 1.3.*"
+  }
+}
