@@ -1,5 +1,7 @@
 /*global module,require*/
-var lrSnippet = require('connect-livereload')();
+var lrSnippet = require('connect-livereload')({
+  port: 35731
+});
 var mountFolder = function (connect, dir) {
   return connect.static(require('path').resolve(dir));
 };
@@ -34,7 +36,7 @@ module.exports = function (grunt) {
               mountFolder(connect, projectConfig.src + 'docs/_site')
             ];
           },
-          port: 9000
+          port: 9002
         }
       }
     },
@@ -128,7 +130,7 @@ module.exports = function (grunt) {
         files: ['docs/_site/**/*.html', 'docs/_site/assets/css/*.css', 'docs/_site/assets/js/*.js']
       },
       options: {
-        livereload: true
+        livereload: 35731
       }
     }
   });
