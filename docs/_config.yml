@@ -1,6 +1,0 @@
-# Site settings
-title: PatternFly | open interface project
-email: patternfly@redhat.com
-description: open interface project
-baseurl: '' # the subpath of your site, e.g. /blog/
-url: 'https://www.patternfly.org' # the base hostname & protocol for your site

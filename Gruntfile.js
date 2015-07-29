@@ -33,7 +33,7 @@ module.exports = function (grunt) {
             return [
               lrSnippet,
               mountFolder(connect, projectConfig.src),
-              mountFolder(connect, projectConfig.src + 'docs/_site')
+              mountFolder(connect, projectConfig.src + 'source/_site')
             ];
           },
           port: 9002
@@ -41,9 +41,9 @@ module.exports = function (grunt) {
       }
     },
     csscount: {
-      docs: {
+      source: {
         src: [
-          'docs/assets/css/patternfly*.min.css'
+          'source/assets/css/patternfly*.min.css'
         ],
         options: {
           maxSelectors: 4096
@@ -51,12 +51,12 @@ module.exports = function (grunt) {
       }
     },
     cssmin: {
-      docs: {
+      source: {
         files: [{
           expand: true,
-          cwd: 'docs/assets/css',
+          cwd: 'source/assets/css',
           src: ['patternfly*.css', '!*.min.css'],
-          dest: 'docs/assets/css',
+          dest: 'source/assets/css',
           ext: '.min.css',
         }],
         options: {
@@ -65,36 +65,36 @@ module.exports = function (grunt) {
       }
     },
     jekyll: {
-      docs: {
+      source: {
         options: {
-          config: 'docs/_config.yml',
-          dest: 'docs/_site',
-          src: 'docs'
+          config: 'source/_config.yml',
+          dest: 'source/_site',
+          src: 'source'
         }
       }
     },
     less: {
       patternflySite: {
         files: {
-          'docs/assets/css/patternfly-site.css': 'docs/_less/patternfly-site.less'
+          'source/assets/css/patternfly-site.css': 'source/_less/patternfly-site.less'
         },
         options: {
           paths: ['less/'],
           sourceMap: true,
           outputSourceFiles: true,
-          sourceMapFilename: 'docs/assets/css/patternfly-site.css.map',
+          sourceMapFilename: 'source/assets/css/patternfly-site.css.map',
           sourceMapURL: 'patternfly-site.css.map'
         }
       },
       patternflySiteAdjusted: {
         files: {
-          'docs/assets/css/patternfly-adjusted.css': 'docs/_less/patternfly-adjusted.less'
+          'source/assets/css/patternfly-adjusted.css': 'source/_less/patternfly-adjusted.less'
         },
         options: {
           paths: ['less/'],
           sourceMap: true,
           outputSourceFiles: true,
-          sourceMapFilename: 'docs/assets/css/patternfly-adjusted.css.map',
+          sourceMapFilename: 'source/assets/css/patternfly-adjusted.css.map',
           sourceMapURL: 'patternfly-adjusted.css.map'
         }
       }
@@ -105,29 +105,29 @@ module.exports = function (grunt) {
       },
       production: {
         files: {
-          'docs/assets/js/patternfly-site.min.js': ['docs/assets/js/patternfly-site.js']
+          'source/assets/js/patternfly-site.min.js': ['source/assets/js/patternfly-site.js']
         }
       }
     },
     watch: {
       less: {
-        files: ['docs/_less/*.less'],
+        files: ['source/_less/*.less'],
         tasks: ['less']
       },
       css: {
-        files: ['docs/assets/css/*.css', '!docs/assets/css/*.min.css'],
+        files: ['source/assets/css/*.css', '!source/assets/css/*.min.css'],
         tasks: ['cssmin', 'csscount']
       },
       js: {
-        files: ['docs/assets/js/*.js', '!docs/assets/js/*.min.js'],
+        files: ['source/assets/js/*.js', '!source/assets/js/*.min.js'],
         tasks: ['uglify']
       },
       jekyll: {
-        files: ['docs/**/*', '!docs/_less/*', '!docs/_site/**/*', '!docs/assets/**/*'],
+        files: ['source/**/*', '!source/_less/*', '!source/_site/**/*', '!source/assets/**/*'],
         tasks: ['jekyll']
       },
       livereload: {
-        files: ['docs/_site/**/*.html', 'docs/_site/assets/css/*.css', 'docs/_site/assets/js/*.js']
+        files: ['source/_site/**/*.html', 'source/_site/assets/css/*.css', 'source/_site/assets/js/*.js']
       },
       options: {
         livereload: 35731
