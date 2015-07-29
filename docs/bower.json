@@ -1,10 +1,8 @@
 {
   "name": "patternfly-docs",
-  "version": "2.0.0-rc1",
-  "homepage": "https://github.com/patternfly/patternfly",
-  "authors": [
-    "Robb Hamilton <rhamilto@redhat.com>"
-  ],
+  "version": "2.0.0",
+  "homepage": "https://github.com/patternfly/patternfly-toolkit",
+  "author": "Red Hat",
   "description": "Documentation for PatternFly",
   "license": "Apache-2.0",
   "ignore": [
