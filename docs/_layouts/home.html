@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body class="home">
+    {% include header.html %}
+    {{ content }}
+    {% include footer.html %}
+    <script>
+      new WOW().init();
+      jQuery( document ).ready(function () {
+        jQuery('.arrow').click(function() {
+          jQuery.scrollTo(jQuery('.definition'), 500);
+        });
+      });
+    </script>
+  </body>
+</html>

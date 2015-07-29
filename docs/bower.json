@@ -1,0 +1,24 @@
+{
+  "name": "patternfly-docs",
+  "version": "2.0.0-rc1",
+  "homepage": "https://github.com/patternfly/patternfly",
+  "authors": [
+    "Robb Hamilton <rhamilto@redhat.com>"
+  ],
+  "description": "Documentation for PatternFly",
+  "license": "Apache-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "animate.css": "~3.3.0",
+    "jquery.scrollTo": "~2.1.1",
+    "wowjs": "~1.1.2",
+    "zeroclipboard": "~2.2.0"
+  }
+}

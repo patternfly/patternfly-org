@@ -1,0 +1,41 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="shortcut icon" href="{{ "/dist/img/favicon.ico" | prepend: site.baseurl }}">
+  <!-- iPad retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ "/dist/img/apple-touch-icon-precomposed-152.png" | prepend: site.baseurl }}">
+  <!-- iPad retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "/dist/img/apple-touch-icon-precomposed-144.png" | prepend: site.baseurl }}">
+  <!-- iPad non-retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ "/dist/img/apple-touch-icon-precomposed-76.png" | prepend: site.baseurl }}">
+  <!-- iPad non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ "/dist/img/apple-touch-icon-precomposed-72.png" | prepend: site.baseurl }}">
+  <!-- iPhone 6 Plus icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ "/dist/img/apple-touch-icon-precomposed-180.png" | prepend: site.baseurl }}">
+  <!-- iPhone retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ "/dist/img/apple-touch-icon-precomposed-114.png" | prepend: site.baseurl }}">
+  <!-- iPhone non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ "/dist/img/apple-touch-icon-precomposed-57.png" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/css/patternfly-adjusted.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/dist/css/patternfly-additions.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/css/patternfly-site.min.css" | prepend: site.baseurl }}">
+  {% if page.url-css-extra %}<link href="{{ page.url-css-extra }}" rel="stylesheet" media="screen, print">{% endif %}
+  <script src="{{ "/components/jquery/dist/jquery.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/components/bootstrap/dist/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/components/bootstrap-combobox/js/bootstrap-combobox.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/components/bootstrap-select/dist/js/bootstrap-select.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/components/bootstrap-treeview/dist/bootstrap-treeview.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/components/c3/c3.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/components/d3/d3.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/components/datatables/media/js/jquery.dataTables.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/components/google-code-prettify/bin/prettify.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/dist/js/patternfly.min.js" | prepend: site.baseurl }}"></script>
+  {% if page.url-js-extra %}{% for urlextrajs in page.url-js-extra %}<script src="{{ urlextrajs }}"></script>{% endfor %}{% endif %}
+  <script src="{{ "/assets/js/patternfly-site.min.js" | prepend: site.baseurl }}"></script>
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+</head>
