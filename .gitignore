@@ -19,3 +19,6 @@ npm.cmd
 # Ignore generated files
 patternfly.spec
 build
+=======
+_site
+public
