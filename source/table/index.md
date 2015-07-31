@@ -12,14 +12,14 @@ layout: page
 </p>
 
 <div id="data-tables-markup" class="collapse">
-  <pre class="prettyprint">{% capture data_tables_markup_include %}{% include datatable.html %}{% endcapture %}{{ data_tables_markup_include | xml_escape }}
-&lt;script src="/components/patternfly/components/datatables/media/js/jquery.dataTables.js"&gt;&lt;/script&gt;
-&lt;script&gt;
+  <pre class="prettyprint">{% capture data_tables_markup_include %}{% include datatable.html %}
+<script src="/components/patternfly/components/datatables/media/js/jquery.dataTables.js"></script>
+<script>
   // Initialize Datatables
   $(document).ready(function() {
     $('.datatable').dataTable();
   });
-&lt;/script&gt;
+</script>{% endcapture %}{{ data_tables_markup_include | xml_escape }}
 </pre>
 </div>
 
