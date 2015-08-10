@@ -718,7 +718,7 @@ th {
   text-indent: -9999px;
   width: 78px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #widget-footer #logo-redhat {
     float: right;
   }
@@ -728,14 +728,14 @@ th {
   margin-bottom: 0;
 }
 #widget-footer .widget_text:first-child {
-  padding-top: 5px;
+  padding-top: 0;
 }
 #widget-footer .widget_text + .widget_text {
   padding-top: 10px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #widget-footer .widget_text + .widget_text {
-    padding-top: 0;
+    padding-top: 5px;
   }
 }
 .wow {
@@ -871,12 +871,14 @@ th {
     width: 262px;
   }
 }
+@media (max-width: 991px) {
+  #widget-footer .widget + .widget {
+    float: none;
+  }
+}
 @media (min-width: 768px) {
   header + .container {
     padding-top: 73px;
-  }
-  #widget-footer .widget ul {
-    float: right;
   }
 }
 @media (max-width: 767px) {
@@ -888,8 +890,10 @@ th {
     position: static;
     width: auto;
   }
-  #widget-footer .widget + .widget {
-    float: none;
+}
+@media (max-width: 600px) {
+  .home #wpadminbar {
+    top: -46px;
   }
 }
 /*# sourceMappingURL=patternfly-site.css.map */
