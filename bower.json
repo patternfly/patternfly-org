@@ -14,7 +14,7 @@
     "tests"
   ],
   "devDependencies": {
-    "patternfly": "9c0f650edd1d51ac154070c121e84bf9c6117b41",
+    "patternfly": "~2.0.0",
     "angular-patternfly": "~0.0.6"
   }
 }
