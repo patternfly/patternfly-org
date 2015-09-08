@@ -1,6 +1,6 @@
 {
   "name": "angular-patternfly",
-  "version": "0.0.6",
+  "version": "2.2.0",
   "authors": [
     "Red Hat"
   ],
@@ -28,32 +28,31 @@
   ],
   "main": [
     "dist/angular-patternfly.js",
-    "dist/angular-patternfly.min.js"
+    "dist/angular-patternfly.css"
   ],
   "repository": {
     "type": "git",
     "url": "git://github.com/patternfly/angular-patternfly.git"
   },
-  "dependencies": {
-    "angular": "1.2.25 - 1.3.*",
-    "patternfly": "1.1.1 - 1.1.4"
-  },
   "devDependencies": {
-    "angular-animate": "1.2.25 - 1.3.*",
-    "angular-mocks": "1.2.25 - 1.3.*",
-    "angular-sanitize": "1.2.25 - 1.3.*",
-    "angular-touch": "1.2.25 - 1.3.*",
-    "angular-route": "1.2.25 - 1.3.*"
+    "angular": "1.3.0 - 1.4.*",
+    "angular-animate": "1.3.0 - 1.4.*",
+    "angular-mocks": "1.3.0 - 1.4.*",
+    "angular-sanitize": "1.3.0 - 1.4.*",
+    "angular-touch": "1.3.0 - 1.4.*",
+    "angular-route": "1.3.0 - 1.4.*",
+    "lodash": "3.x",
+    "patternfly": "2.2.0"
   },
   "homepage": "https://github.com/patternfly/angular-patternfly",
-  "_release": "0.0.6",
+  "_release": "2.2.0",
   "_resolution": {
     "type": "version",
-    "tag": "v0.0.6",
-    "commit": "f344b6174bcc72d1d87333007e04a58e23801a19"
+    "tag": "v2.2.0",
+    "commit": "37e6659eab1b55074a7de3854784122c1e21fae7"
   },
   "_source": "git://github.com/patternfly/angular-patternfly.git",
-  "_target": "~0.0.6",
+  "_target": "~2.2.0",
   "_originalSource": "angular-patternfly",
   "_direct": true
 }
