@@ -1,147 +1,31 @@
-<!--
-<header class="site-header">
-      <div class="wrapper">
-                <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-                <nav class="site-nav">
-                      <div class="trigger">
-                                {% for page in site.pages %}
-                                {% if page.title %}
-                                <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-                                {% endif %}
-                                {% endfor %}
-                      </div>
-                </nav>
-      </div>
-</header>
--->
-<header role="banner">
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" id="logo" title="open interface project" href="{{ site.baseurl }}/">{{ site.title }}</a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <form class="navbar-form navbar-right" role="search" method="get" id="searchform" action="/">
-          <div class="form-group">
-            <input name="s" id="s" type="text" class="form-control" autocomplete="off" placeholder="Search">
-            <button type="submit" class="btn btn-default">Submit</button>
+{% strip %}<header role="banner">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="logo" title="open interface project" href="{{ site.baseurl }}/">{{ site.title }}</a>
           </div>
-        </form>
-        <ul id="menu-primary" class="nav navbar-nav navbar-right">
-          <li class="menu-item menu-item-has-children dropdown">
-            <a href="/get-started/" class="dropdown-toggle" data-toggle="dropdown">Get Started<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li class="menu-item"><a href="/get-started/about-patternfly/">About PatternFly</a></li>
-              <li class="menu-item"><a href="/get-started/frequently-asked-questions/">Frequently Asked Questions</a></li>
-              <li class="menu-item"><a href="/whats-new/">What’s New</a></li> 
-              <li class="menu-item"><a href="/whats-next/">What’s Next</a></li> 
-              <li class="menu-item"><a href="/get-started/contribute/">Contribute</a></li>
+          <div class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right" role="search" method="get" id="searchform" action="http://www.google.com/search">
+              <div class="form-group">
+                <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                <input name="sitesearch" type="hidden" value="patternfly.org">
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div>
+            </form>
+            <ul id="menu-primary" class="nav navbar-nav navbar-right">
+              {% capture location %}{{ page.url | remove_first:'/' | split:'/' | first }}{% endcapture %}
+              <li{% if location == 'get-started' %} class="active"{% endif %}><a href="/get-started/">Get Started</a></li>
+              <li{% if location == 'pattern-library' %} class="active"{% endif %}><a href="/pattern-library/">Pattern Library</a></li>
+              <li{% if location == 'styles' %} class="active"{% endif %}><a href="/styles/">Styles</a></li>
+              <li{% if location == 'community' %} class="active"{% endif %}><a href="/community/">Community</a></li>
+              <li{% if location == 'download' %} class="active"{% endif %}><a href="/download/">Download</a></li>
             </ul>
-          </li>
-          <li class="menu-item menu-item-has-children dropdown"><a href="/layouts/" class="dropdown-toggle" data-toggle="dropdown">Layouts<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li class="menu-item"><a href="/layouts/">Overview</a></li> 
-              <li class="menu-item"><a href="/layouts/patternfly-grid-system/">PatternFly Grid System</a></li>
-              <li class="menu-item"><a href="/layouts/layout-templates/">Layout Templates</a></li>
-            </ul>
-          </li>
-          <li class="menu-item menu-item-has-children dropdown"><a href="/patterns/" class="dropdown-toggle" data-toggle="dropdown">Patterns<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li class="menu-item"><a href="/patterns">Overview</a></li> 
-              <li class="menu-item"><a href="/patterns/aggregate-status-card/">Aggregate Status Card</a></li> 
-              <li class="menu-item menu-item-has-children dropdown dropdown-submenu"><a href="/patterns/dashboard-layout/">Dashboard</a>
-                <ul class="dropdown-menu">
-                  <li class="menu-item"><a href="/patterns/dashboard-layout/">Dashboard Layout</a></li>
-                  <li class="menu-item"><a href="/patterns/dashboard-cards/">Dashboard Cards</a></li>
-                </ul>
-              </li> 
-              <li class="menu-item"><a href="/patterns/donut-chart/">Donut Chart</a></li> 
-              <li class="menu-item"><a href="/patterns/empty-state/">Empty State</a></li> 
-              <li class="menu-item menu-item-object-incsub_wiki"><a href="/wikis/patterns/forms/">Forms</a></li>
-              <li class="menu-item"><a href="/patterns/login-page/">Login Page</a></li> 
-              <li class="menu-item menu-item-object-incsub_wiki"><a href="/wikis/patterns/master-detail/">Master-Detail</a></li>
-              <li class="menu-item menu-item-object-incsub_wiki"><a href="/wikis/patterns/navigation/">Navigation</a></li>
-              <li class="menu-item menu-item-object-incsub_wiki"><a href="/wikis/patterns/search/">Search</a></li>
-              <li class="menu-item"><a href="/patterns/table/">Table</a></li> 
-              <li class="menu-item menu-item-object-incsub_wiki"><a href="/wikis/patterns/usability-testing/">Usability Testing</a></li><!--.dropdown-->
-            </ul>
-          </li>
-          <li class="menu-item menu-item-has-children dropdown"><a href="/widgets/" class="dropdown-toggle" data-toggle="dropdown">Widgets<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li class="menu-item"><a href="/widgets/#overview">Overview</a></li>
-              <li class="menu-item menu-item-has-children dropdown dropdown-submenu"><a href="/widgets/#css">CSS</a>
-                <ul class="dropdown-menu">
-                  <li class="menu-item"><a href="/widgets/#tables">Tables</a></li>
-                  <li class="menu-item"><a href="/widgets/#forms">Forms</a></li>
-                  <li class="menu-item"><a href="/widgets/#buttons">Buttons</a></li>
-                </ul>
-              </li> 
-              <li class="menu-item menu-item-has-children dropdown dropdown-submenu"><a href="/widgets/#components">Components</a>
-                <ul class="dropdown-menu">
-                  <li class="menu-item"><a href="/widgets/#dropdowns">Dropdowns</a></li>
-                  <li class="menu-item"><a href="/widgets/#button-groups">Button Groups</a></li>
-                  <li class="menu-item"><a href="/widgets/#tabs">Tabs</a></li>
-                  <li class="menu-item"><a href="/widgets/#breadcrumbs">Breadcrumbs</a></li>
-                  <li class="menu-item"><a href="/widgets/#pagination">Pagination</a></li>
-                  <li class="menu-item"><a href="/widgets/#labels">Labels</a></li>
-                  <li class="menu-item"><a href="/widgets/#badges">Badges</a></li>
-                  <li class="menu-item"><a href="/widgets/#alerts">Alerts</a></li>
-                  <li class="menu-item"><a href="/widgets/#progress">Progress Bars</a></li>
-                  <li class="menu-item"><a href="/widgets/#list-group">List Group</a></li>
-                  <li class="menu-item"><a href="/widgets/#panels">Panels</a></li>
-                  <li class="menu-item"><a href="/widgets/#spinner">Spinner</a></li>
-                </ul>
-              </li> 
-              <li class="menu-item menu-item-has-children dropdown dropdown-submenu"><a href="/widgets/#javascript">JavaScript</a>
-                <ul class="dropdown-menu">
-                  <li class="menu-item"><a href="/widgets/#modal">Modal</a></li>
-                  <li class="menu-item"><a href="/widgets/#tooltip">Tooltip</a></li>
-                  <li class="menu-item"><a href="/widgets/#popover">Popover</a></li>
-                  <li class="menu-item"><a href="/widgets/#accordion">Accordion</a></li>
-                  <li class="menu-item"><a href="/widgets/#data-tables">Data Tables</a></li>
-                  <li class="menu-item"><a href="/widgets/#bootstrap-combobox">Bootstrap Combobox</a></li>
-                  <li class="menu-item"><a href="/widgets/#bootstrap-datepicker">Bootstrap-datepicker</a></li>
-                  <li class="menu-item"><a href="/widgets/#bootstrap-select">Bootstrap-select</a></li>
-                  <li class="menu-item"><a href="/widgets/#bootstrap-tree-view">Bootstrap Tree View</a></li>
-                  <li class="menu-item"><a href="/widgets/#search">Search</a></li>
-                  <li class="menu-item"><a href="/widgets/#info-tip">Info Tip</a></li>
-                  <li class="menu-item"><a href="/widgets/#google-code-prettify">Google Code Prettify</a></li>
-                  <li class="menu-item"><a href="/widgets/#basic-charts">Basic Charts</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="menu-item menu-item-has-children dropdown"><a href="/styles/" class="dropdown-toggle" data-toggle="dropdown">Styles<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li class="menu-item"><a href="/styles/">Overview</a></li>
-              <li class="menu-item"><a href="/styles/color-palette/">Color Palette</a></li> 
-              <li class="menu-item"><a href="/styles/typography/">Typography</a></li> 
-              <li class="pull-left menu-item menu-item-has-children dropdown dropdown-submenu"><a href="/styles/icons/">Icons</a>
-                <ul class="dropdown-menu">
-                  <li class="menu-item"><a href="/styles/icons/cheatsheet/">Cheatsheet</a></li>
-                </ul>
-              </li> 
-              <li class="pull-left menu-item menu-item-has-children dropdown dropdown-submenu"><a href="/styles/terminology-and-wording/">Terminology and Wording</a>
-                <ul class="dropdown-menu">
-                  <li class="menu-item"><a href="/terminology-and-wording/#terms-and-words">Terms and Words</a></li>
-                  <li class="menu-item"><a href="/terminology-and-wording/#action-labels">Action Labels</a></li>
-                  <li class="menu-item"><a href="/terminology-and-wording/#abbreviations">Abbreviations</a></li>
-                  <li class="menu-item"><a href="/terminology-and-wording/#acronyms">Acronyms</a></li>
-                  <li class="menu-item"><a href="/terminology-and-wording/#capitalization">Capitalization</a></li>
-                  <li class="menu-item"><a href="/terminology-and-wording/#punctuation">Punctuation</a></li>
-                  <li class="menu-item"><a href="/terminology-and-wording/#truncation">Truncation</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="menu-item"><a href="/download/">Download</a></li>
-        </ul>
-      </div><!-- end .navbar-collapse -->
-    </div><!-- end .container -->
-  </nav>
-</header>
+          </div><!-- end .navbar-collapse -->
+        </div><!-- end .container -->
+      </nav>
+    </header>{% endstrip %}

@@ -32,3 +32,4 @@ layout: page
 </div>
 
 <h2>Check out blog posts by PatternFly community members.</h2>
+<p>[to do: blog posts here]
