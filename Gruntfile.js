@@ -123,7 +123,7 @@ module.exports = function (grunt) {
         tasks: ['uglify']
       },
       jekyll: {
-        files: ['source/**/*', '!source/_less/*', '!source/_site/**/*', '!source/assets/**/*'],
+        files: ['source/**/*', '!source/_less/*', '!source/_site/**/*'],
         tasks: ['jekyll']
       },
       livereload: {
@@ -144,6 +144,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('server', [
+    'build',
     'connect:server',
     'watch'
   ]);
