@@ -8640,6 +8640,9 @@ button.close {
 .alert .alert-link:hover {
   color: #00618a;
 }
+.alert > .btn.pull-right {
+  margin-top: -3px;
+}
 .alert > .pficon {
   font-size: 20px;
   position: absolute;
@@ -8943,6 +8946,7 @@ fieldset[disabled] .btn-primary.active {
   text-transform: uppercase;
 }
 .btn-group > .dropdown-menu,
+.dropdown > .dropdown-menu,
 .input-group-btn > .dropdown-menu {
   margin-top: -1px;
 }

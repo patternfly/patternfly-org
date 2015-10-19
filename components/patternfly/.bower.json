@@ -1,12 +1,13 @@
 {
   "name": "patternfly",
-  "version": "2.2.0",
+  "version": "2.4.0",
   "authors": "Red Hat",
   "license": "Apache-2.0",
   "homepage": "https://www.patternfly.org",
   "main": [
     "dist/js/patternfly.js",
-    "dist/css/patternfly.css"
+    "dist/css/patternfly.css",
+    "dist/css/patternfly-additions.css"
   ],
   "ignore": [
     "**/.*",
@@ -26,6 +27,8 @@
     "bootstrap-combobox": "~1.1.6",
     "bootstrap-datepicker": "~1.4.0",
     "bootstrap-select": "~1.7.3",
+    "bootstrap-switch": "~3.3.2",
+    "bootstrap-touchspin": "~3.0.3",
     "bootstrap-treeview": "~1.2.0",
     "c3": "~0.4.10",
     "datatables": "~1.10.7",
@@ -36,14 +39,14 @@
     "jquery": "~2.1.4",
     "matchHeight": "~0.6.0"
   },
-  "_release": "2.2.0",
+  "_release": "2.4.0",
   "_resolution": {
     "type": "version",
-    "tag": "v2.2.0",
-    "commit": "9e8a54f9b81397d52bad7521afc2aaee1e97630f"
+    "tag": "v2.4.0",
+    "commit": "a72edf01d55ca1484aaa25ca78abd3616fff4f2e"
   },
   "_source": "git://github.com/patternfly/patternfly.git",
-  "_target": "~2.2.0",
+  "_target": "~2.4.0",
   "_originalSource": "patternfly",
   "_direct": true
 }

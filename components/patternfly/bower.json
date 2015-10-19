@@ -1,12 +1,13 @@
 {
   "name": "patternfly",
-  "version": "2.2.0",
+  "version": "2.4.0",
   "authors": "Red Hat",
   "license": "Apache-2.0",
   "homepage": "https://www.patternfly.org",
   "main": [
     "dist/js/patternfly.js",
-    "dist/css/patternfly.css"
+    "dist/css/patternfly.css",
+    "dist/css/patternfly-additions.css"
   ],
   "ignore": [
     "**/.*",
@@ -26,6 +27,8 @@
     "bootstrap-combobox": "~1.1.6",
     "bootstrap-datepicker": "~1.4.0",
     "bootstrap-select": "~1.7.3",
+    "bootstrap-switch": "~3.3.2",
+    "bootstrap-touchspin": "~3.0.3",
     "bootstrap-treeview": "~1.2.0",
     "c3": "~0.4.10",
     "datatables": "~1.10.7",

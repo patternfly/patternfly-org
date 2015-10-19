@@ -208,7 +208,7 @@ Since PatternFly is based on Bootstrap, PatternFly supports [the same browsers a
 
 ### Product Backlog
 
-See [https://trello.com/b/Hz3Nmwk4/patternfly-reference-implementation](https://trello.com/b/Hz3Nmwk4/patternfly-reference-implementation).
+See [https://patternfly.atlassian.net/secure/RapidBoard.jspa?projectKey=PTNFLY&rapidView=4&view=planning](https://patternfly.atlassian.net/secure/RapidBoard.jspa?projectKey=PTNFLY&rapidView=4&view=planning).
 
 ## License
 
