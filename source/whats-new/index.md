@@ -3,72 +3,135 @@ title: 'What&#8217;s New'
 author: lhinson
 layout: page
 ---
-## July 8, 2015 {.h4}
+## September 30, 2015 {.h4}
 
-  * [Dashboard Layout][1] and [Dashboard Cards][2] were added under the Pattern section.
-  * Changed all instances of the &#8220;Tile&#8221; name to &#8220;Card&#8221; to match industry standard. View changes on the [Aggregate Status Card][3] page.
+  * Release of [reference implementation v2.3.0][1].
+  * Release of [Angular PatternFly v2.3.0][2].
 
-## July 6, 2015 {.h4}
+## September 9, 2015 {.h4}
 
-  * Changed all instances of the &#8220;Blank Slate&#8221; name to &#8220;Empty State&#8221; to match industry standard. View changes on the [Empty State][4] page.
-  * [Donut Chart][5] was added under the Patterns section.
+  * A [Community][3] page was added to the primary navigation.
+  * The [Download][4] page moved to Get Started.
 
-## June 4, 2015 {.h4}
+## September 8, 2015 {.h4}
 
-  * Release of [reference implementation v1.3.0][6].
-  * Added [Basic Charts][7] to [Widgets][8].
+  * Release of [Angular PatternFly v2.2.0][5].
 
-## May 27, 2015 {.h4}
+## September 3, 2015 {.h4}
 
-  * Release of [reference implementation v1.2.1][9].
-  * A [Sass port of PatternFly][10] is now available, as is a [Sass-based Rails Gem][11].
+  * Based on user feedback regarding the donut chart, we&#8217;ve updated the blue fill to green to represent that utilization has not passed a threshold. The blue color will still be used when no thresholds exists. See [Donut Chart][6] and [Utilization Card ][7] for more details.
+  * Release of [reference implementation v2.2.0][8].
 
-## May 26, 2015 {.h4}
+## September 1, 2015 {.h4}
 
-  * Release of [reference implementation v1.2.0][12].
-  * [Empty State][4] was added to the Patterns section and includes a live example.
-  * Updated [Alerts][13] with new icons under Widgets.
-  * The [Icons][14] page was updated and a [ cheatsheet][15] was added.
+  * [Datepicker][9] documentation and reference markup was added under Patterns.
+  * [Trend Card][10] documentation was added under Patterns > Cards.
 
-## April 27, 2015 {.h4}
+## August 27, 2015 {.h4}
 
-  * The [Aggregate Status Card][3] was added under the Patterns section.
-  * [Terminology and Wording][16] was added under the Styles section.
-  * The [Login][17] pattern was updated with samples and spec information.
-  * The [Table][18] pattern was updated with samples and spec information.
-  * The [Color Palette][19] page was updated with a new and extended color palette.
-  * The [Typography][20] page was updated with samples.
-  * The updated [Contribute][21] page outlines how you can get involved.
+  * Live example and reference markup added to the [Aggregate Status Card][11] pattern page.
+  * [Bootstrap-datepicker][12] example and reference markup added to the Widgets section.
 
-## March 26, 2015 {.h4}
+## August 26, 2015 {.h4}
 
-  * Release of [reference implementation v1.1.4][22].
+  * Release of [reference implementation v2.1.0][13].
 
-## March 24, 2015 {.h4}
+## August 17, 2015 {.h4}
 
-  * A What&#8217;s New page to keep you up-to-date on all the latest PatternFly releases.
-  * A [What&#8217;s Next ][23]page to keep you in the loop about all the ongoing efforts.
+  * New section created under Patterns called &#8220;Cards&#8221;.
+  * [Aggregate Status Card][14] was moved under Patterns > Cards.
+      * The [Utilization Card][7] was added under Patterns > Cards.</ul>
+    ## August 13, 2015 {.h4}
 
- [1]: https://www.patternfly.org/patterns/dashboard-layout/
- [2]: https://www.patternfly.org/patterns/dashboard-cards/
- [3]: https://www.patternfly.org/patterns/aggregate-status-card/
- [4]: https://www.patternfly.org/patterns/empty-state/
- [5]: https://www.patternfly.org/patterns/donut-chart/
- [6]: https://github.com/patternfly/patternfly/releases/tag/v1.3.0 "PatternFly reference implementation v1.3.0 on Github"
- [7]: /widgets/#basic-charts
- [8]: /widgets
- [9]: https://github.com/patternfly/patternfly/releases/tag/v1.2.1 "PatternFly reference implementation v1.2.1 on Github"
- [10]: https://github.com/patternfly/patternfly-sass
- [11]: https://rubygems.org/gems/patternfly-sass
- [12]: https://github.com/patternfly/patternfly/releases/tag/v1.2.0 "PatternFly reference implementation v1.2.0 on Github"
- [13]: https://www.patternfly.org/widgets/#alerts
- [14]: https://www.patternfly.org/styles/icons/
- [15]: https://www.patternfly.org/styles/icons/cheatsheet/
- [16]: https://www.patternfly.org/styles/terminology-and-wording/
- [17]: https://www.patternfly.org/patterns/login-page/
- [18]: https://www.patternfly.org/patterns/table/
- [19]: https://www.patternfly.org/styles/color-palette/
- [20]: https://www.patternfly.org/styles/typography/
- [21]: https://www.patternfly.org/get-started/contribute/
- [22]: https://github.com/patternfly/patternfly/releases/tag/v1.1.4 "PatternFly reference implementation v1.1.4 on Github"
- [23]: https://www.patternfly.org/whats-next/ "What’s Next"
+      * The [PatternFly 2.0 Migration Guide][15] was added to the Get Started menu and the [Frequently Asked Questions][16] page.
+    ## August 12, 2015 {.h4}
+
+      * [Sparkline][17] documentation and reference markup was added under Patterns > Charts.
+      * [Donut Chart][6] was moved under Patterns > Charts.
+    ## August 11, 2015 {.h4}
+
+      * Release of [reference implementation v2.0.0][18].
+    ## August 10, 2015 {.h4}
+
+      * [ Field Level Help][19] documentation and reference markup was added under Patterns > Forms.
+    ## July 8, 2015 {.h4}
+
+      * [Dashboard Layout][20] and [Dashboard Cards][21] were added under the Pattern section.
+      * Changed all instances of the &#8220;Tile&#8221; name to &#8220;Card&#8221; to match industry standard. View changes on the [Aggregate Status Card][14] page.
+    ## July 6, 2015 {.h4}
+
+      * Changed all instances of the &#8220;Blank Slate&#8221; name to &#8220;Empty State&#8221; to match industry standard. View changes on the [Empty State][22] page.
+      * [Donut Chart][23] was added under the Patterns section.
+    ## June 4, 2015 {.h4}
+
+      * Release of [reference implementation v1.3.0][24].
+      * Added [Basic Charts][25] to [Widgets][26].
+    ## May 27, 2015 {.h4}
+
+      * Release of [reference implementation v1.2.1][27].
+      * A [Sass port of PatternFly][28] is now available, as is a [Sass-based Rails Gem][29].
+    ## May 26, 2015 {.h4}
+
+      * Release of [reference implementation v1.2.0][30].
+      * [Empty State][22] was added to the Patterns section and includes a live example.
+      * Updated [Alerts][31] with new icons under Widgets.
+      * The [Icons][32] page was updated and a [ cheatsheet][33] was added.
+    ## April 27, 2015 {.h4}
+
+      * The [Aggregate Status Card][34] was added under the Patterns section.
+      * [Terminology and Wording][35] was added under the Styles section.
+      * The [Login][36] pattern was updated with samples and spec information.
+      * The [Table][37] pattern was updated with samples and spec information.
+      * The [Color Palette][38] page was updated with a new and extended color palette.
+      * The [Typography][39] page was updated with samples.
+      * The updated [Contribute][40] page outlines how you can get involved.
+    ## March 26, 2015 {.h4}
+
+      * Release of [reference implementation v1.1.4][41].
+    ## March 24, 2015 {.h4}
+
+      * A What&#8217;s New page to keep you up-to-date on all the latest PatternFly releases.
+      * A [What&#8217;s Next ][42]page to keep you in the loop about all the ongoing efforts.
+
+ [1]: https://github.com/patternfly/patternfly/releases/tag/v2.3.0 "PatternFly reference implementation v2.3.0 on Github"
+ [2]: https://github.com/patternfly/angular-patternfly/releases/tag/v2.3.0 "Angular PatternFly reference implementation v2.3.0 on Github"
+ [3]: /community/
+ [4]: /download/
+ [5]: https://github.com/patternfly/angular-patternfly/releases/tag/v2.2.0 "Angular PatternFly reference implementation v2.2.0 on Github"
+ [6]: /patterns/donut-chart/
+ [7]: /patterns/utilization-card/
+ [8]: https://github.com/patternfly/patternfly/releases/tag/v2.2.0 "PatternFly reference implementation v2.2.0 on Github"
+ [9]: /patterns/datepicker/
+ [10]: /patterns/trend-card/
+ [11]: /aggregate-status-card/
+ [12]: /widgets/#bootstrap-datepicker
+ [13]: https://github.com/patternfly/patternfly/releases/tag/v2.1.0 "PatternFly reference implementation v2.1.0 on Github"
+ [14]: /patterns/aggregate-status-card/
+ [15]: /get-started/patternfly-migration-guide/
+ [16]: /get-started/frequently-asked-questions/
+ [17]: /patterns/sparkline/
+ [18]: https://github.com/patternfly/patternfly/releases/tag/v2.0.0 "PatternFly reference implementation v2.0.0 on Github"
+ [19]: /patterns/field-level-help/
+ [20]: /patterns/dashboard-layout/
+ [21]: /patterns/dashboard-cards/
+ [22]: /patterns/empty-state/
+ [23]: /patterns/donut-chart/
+ [24]: https://github.com/patternfly/patternfly/releases/tag/v1.3.0 "PatternFly reference implementation v1.3.0 on Github"
+ [25]: /widgets/#basic-charts
+ [26]: /widgets
+ [27]: https://github.com/patternfly/patternfly/releases/tag/v1.2.1 "PatternFly reference implementation v1.2.1 on Github"
+ [28]: https://github.com/patternfly/patternfly-sass
+ [29]: https://rubygems.org/gems/patternfly-sass
+ [30]: https://github.com/patternfly/patternfly/releases/tag/v1.2.0 "PatternFly reference implementation v1.2.0 on Github"
+ [31]: /widgets/#alerts
+ [32]: /styles/icons/
+ [33]: /styles/icons/cheatsheet/
+ [34]: /patterns/aggregate-status-card/
+ [35]: /styles/terminology-and-wording/
+ [36]: /patterns/login-page/
+ [37]: /patterns/table/
+ [38]: /styles/color-palette/
+ [39]: /styles/typography/
+ [40]: /get-started/contribute/
+ [41]: https://github.com/patternfly/patternfly/releases/tag/v1.1.4 "PatternFly reference implementation v1.1.4 on Github"
+ [42]: /whats-next/ "What’s Next"

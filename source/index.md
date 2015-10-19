@@ -9,18 +9,18 @@ url-js-extra: ['/bower_components/wowjs/dist/wow.min.js', '/bower_components/jqu
   <div class="container">
     <div class="splash">
       <div class="content">
-        <img src="assets/img/patternfly-orb.svg" alt="PatternFly logo" class="wow fadeInDown" /> 
+        <img src="assets/img/patternfly-orb.svg" alt="PatternFly logo" class="wow fadeInDown" />
         <h1 class="wow fadeIn" data-wow-delay="750ms">
-          PatternFly Open Interface Project
+          PatternFly
         </h1>
         <p class="description wow fadeIn" data-wow-delay="1250ms">
-          Promotes design commonality and improved user experience across enterprise IT products and applications.
+          A community of designers and developers collaborating to build a UI framework for enterprise web applications.
         </p>
         <div class="btn-group wow fadeIn" role="group" aria-label="PatternFly details" data-wow-delay="1500ms">
-          <a class="btn btn-primary btn-lg" href="/get-started">Learn More</a> <a class="btn btn-primary btn-lg" href="http://github.com/patternfly/patternfly">GitHub Repo</a>
+          <a class="btn btn-primary btn-lg" href="/download">Download</a>
         </div>
         <p class="version wow fadeIn" data-wow-delay="1500ms">
-          Version 2.0.0
+          Version 2.3.0
         </p>
       </div>
     </div>

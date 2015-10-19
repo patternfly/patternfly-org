@@ -1049,7 +1049,7 @@ dvew_checkbox:
           </div>
           <div id="collapseTwo" class="panel-collapse collapse">
             <div class="panel-body">
-              Donec consequat dignissim neque, sed suscipit quam egestas in. Fusce bibendum laoreet lectus commodo interdum. Vestibulum odio ipsum, tristique et ante vel, iaculis placerat nulla. Suspendisse iaculis urna feugiat lorem semper, ut iaculis risus tempus. 
+              Donec consequat dignissim neque, sed suscipit quam egestas in. Fusce bibendum laoreet lectus commodo interdum. Vestibulum odio ipsum, tristique et ante vel, iaculis placerat nulla. Suspendisse iaculis urna feugiat lorem semper, ut iaculis risus tempus.
             </div>
           </div>
         </div>
@@ -1097,7 +1097,7 @@ dvew_checkbox:
     &lt;/div&gt;
     &lt;div id="collapseTwo" class="panel-collapse collapse"&gt;
       &lt;div class="panel-body"&gt;
-        Donec consequat dignissim neque, sed suscipit quam egestas in. Fusce bibendum laoreet lectus commodo interdum. Vestibulum odio ipsum, tristique et ante vel, iaculis placerat nulla. Suspendisse iaculis urna feugiat lorem semper, ut iaculis risus tempus. 
+        Donec consequat dignissim neque, sed suscipit quam egestas in. Fusce bibendum laoreet lectus commodo interdum. Vestibulum odio ipsum, tristique et ante vel, iaculis placerat nulla. Suspendisse iaculis urna feugiat lorem semper, ut iaculis risus tempus.
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -1329,6 +1329,48 @@ dvew_checkbox:
   // Initialize Boostrap-select
    $('.selectpicker').selectpicker();
 &lt;/script&gt;
+</pre>
+    </div>
+  </div>
+  <div class="section" id="bootstrap-switch">
+    <h3>Bootstrap Switch</h3>
+    <p>See <a href="http://www.bootstrap-switch.org/">http://www.bootstrap-switch.org/</a> for complete Bootstrap Switch documentation.</p>
+    <div class="pf-example">
+      <input class="bootstrap-switch" id="bootstrap-switch-state" type="checkbox" checked>
+      <script>
+        jQuery(".bootstrap-switch").bootstrapSwitch();
+      </script>
+    </div>
+    <p class="reference-markup">
+      <a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="bootstrap-switch-markup" href="#bootstrap-switch-markup">Reference Markup</a>
+    </p>
+    <div class="collapse" id="bootstrap-switch-markup">
+      <pre class="prettyprint">&lt;input class="bootstrap-switch" id="bootstrap-switch-state" type="checkbox" checked&gt;
+&lt;script&gt;
+  jQuery(".bootstrap-switch").bootstrapSwitch();
+&lt;/script&gt;
+&lt;script src="/components/patternfly/components/bootstrap-switch/dist/js/bootstrap-switch.min.js"&gt;&lt;/script&gt;
+</pre>
+    </div>
+  </div>
+  <div class="section" id="bootstrap-touchspin">
+    <h3>Bootstrap Touchspin</h3>
+    <p>See <a href="http://www.virtuosoft.eu/code/bootstrap-touchspin/">http://www.virtuosoft.eu/code/bootstrap-touchspin/</a> for complete Bootstrap Touchspin documentation.</p>
+    <div class="pf-example">
+      <input class="bootstrap-touchspin" id="bootstrap-touchspin-empty" type="text" value="" name="bootstrap-touchspin-empty">
+      <script>
+          jQuery(".bootstrap-touchspin").TouchSpin();
+      </script>
+    </div>
+    <p class="reference-markup">
+      <a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="bootstrap-touchspin-markup" href="#bootstrap-touchspin-markup">Reference Markup</a>
+    </p>
+    <div class="collapse" id="bootstrap-touchspin-markup">
+      <pre class="prettyprint">&lt;input class="bootstrap-touchspin" id="bootstrap-touchspin-empty" type="text" value="" name="bootstrap-touchspin-empty"&gt;
+&lt;script&gt;
+    $(".bootstrap-touchspin").TouchSpin();
+&lt;/script&gt;
+&lt;script src="/components/patternfly/components/bootstrap-touchspin/dist/js/jquery.bootstrap-touchspin.min.js"&gt;&lt;/script&gt;
 </pre>
     </div>
   </div>

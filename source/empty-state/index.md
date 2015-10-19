@@ -3,28 +3,39 @@ title: Empty State
 author: lhinson
 layout: page
 ---
+## Overview
+
+The goal of a empty state pattern is to provide a good first impression that helps users to achieve their goals. It should be used when a view is empty because no objects exists and you want to guide the user to perform specific actions.
+
+This pattern should NOT be used when:
+
+  * Selected filters cause an empty result.
+  * There is a connectivity issue and the data set cannot be obtained.
+
+## Example
+
 <div class="pf-example">
   <div class="blank-slate-pf">
     <div class="blank-slate-pf-icon">
       <span class="pficon pficon pficon-add-circle-o"></span>
     </div>
-    
+
     <h1>
       Empty State Title
     </h1>
-    
+
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </p>
-    
+
     <p>
       Learn more about this <a href="#">on the documentation</a>.
     </p>
-    
+
     <div class="blank-slate-pf-main-action">
       <button class="btn btn-primary btn-lg"> Main Action </button>
     </div>
-    
+
     <div class="blank-slate-pf-secondary-action">
       <button class="btn btn-default"> Secondary Action </button> <button class="btn btn-default"> Secondary Action </button> <button class="btn btn-default"> Secondary Action </button>
     </div>
@@ -63,25 +74,16 @@ layout: page
 &lt;/div&gt;</pre>
 </div>
 
-## Overview and Usage Scenarios
-
-The goal of a empty state pattern is to provide a good first impression that helps users to achieve their goals. It should be used when a view is empty because no objects exists and you want to guide the user to perform specific actions.
-
-This pattern should NOT be used when:
-
-  * Selected filters cause an empty result.
-  * There is a connectivity issue and the data set cannot be obtained.
-
 ## Description<a "/wp-content/uploads/2015/05/emptyState_spec.png">
 
-<img src="/wp-content/uploads/2015/05/emptyState_spec.png" alt="emptyState_spec" class="alignnone size-full wp-image-4083" /></a> 
+<img src="/wp-content/uploads/2015/05/emptyState_spec.png" alt="emptyState_spec" class="alignnone size-full wp-image-4083" /></a>
 
-## 
+##
 
   1. **Icon** (optional): If an object icon is associated with this view, it can be displayed here.
   2. **Empty State Title:** Give it a name.
   3. **Text** (optional): This text should be personal and helpful. It should minimize the user’s effort to complete tasks.
-  4. **Primary action button:** The primary action is displayed as a prominent blue button. See the [Action Labels][1] section for more information about terminology and wording specific to action labels.
-  5. **Secondary action buttons** (optional): Secondary actions are alternative options for the user. They are shown as more subtle gray buttons and located below the main action. There can be more than one secondary action.
+  4. **Primary Action Button:** The primary action is displayed as a prominent blue button. See the [Action Labels][1] section for more information about terminology and wording specific to action labels.
+  5. **Secondary Action Buttons** (optional): Secondary actions are alternative options for the user. They are shown as more subtle gray buttons and located below the main action. There can be more than one secondary action.
 
- [1]: https://www.patternfly.org/styles/terminology-and-wording/#action-labels
+ [1]: /styles/terminology-and-wording/#action-labels

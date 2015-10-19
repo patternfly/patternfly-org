@@ -18,4 +18,4 @@ As the viewport is resized, columns will resize accordingly while padding and gu
  [1]: /wp-content/uploads/2014/02/Screen-Shot-2014-04-08-at-5.07.22-PM.png
  [2]: /wp-content/uploads/2014/02/Columns_content.jpg
  [3]: http://getbootstrap.com/css/#grid
- [4]: https://www.patternfly.org/wikis/patterns/layout-templates/ "Layout Templates"
+ [4]: /patterns/layout-templates/ "Layout Templates"

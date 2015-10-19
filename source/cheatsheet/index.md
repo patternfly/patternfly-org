@@ -106,6 +106,12 @@ To use on the desktop, install [PatternFlyIcons-webfont.ttf][1] or [FontAwesome.
         <span class="pficon pficon-unicode-character"></span> <span class="icon-class">pficon-settings</span>
       </li>
       <li>
+        <span class="pficon pficon-unicode-character"></span> <span class="icon-class">pficon-thumb-tack-o</span>
+      </li>
+      <li>
+        <span class="pficon pficon-unicode-character"></span> <span class="icon-class">pficon-topology</span>
+      </li>
+      <li>
         <span class="pficon pficon-unicode-character"></span> <span class="icon-class">pficon-user</span>
       </li>
       <li>
@@ -188,6 +194,9 @@ To use on the desktop, install [PatternFlyIcons-webfont.ttf][1] or [FontAwesome.
       </li>
       <li>
         <span class="fa fa-unicode-character"></span> <span class="icon-class">fa-star-o</span>
+      </li>
+      <li>
+        <span class="fa fa-unicode-character"></span> <span class="icon-class">fa-thumb-tack</span>
       </li>
       <li>
         <span class="fa fa-unicode-character"></span> <span class="icon-class">fa-unlock-alt</span>

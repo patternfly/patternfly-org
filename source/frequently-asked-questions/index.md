@@ -57,10 +57,17 @@ Since PatternFly is based on Bootstrap, PatternFly supports [the same browsers a
 
 *Important:* starting with the v2.0.0 release, **PatternFly no longer supports Internet Explorer 8**.
 
- [1]: https://www.patternfly.org/widgets/ "Widgets"
+&nbsp;
+
+**Q: How do I migrate to PatternFly 2.0?**
+See the [PatternFly 2.0 Migration Guide][8] for step-by-step guidance to upgrade from PatternFly 1.x to [PatternFly 2.0][9].
+
+ [1]: /widgets/ "Widgets"
  [2]: http://getbootstrap.com/
- [3]: https://www.patternfly.org/wikis/patterns/ "Patterns"
- [4]: https://www.patternfly.org/contribute/ "Contribute"
+ [3]: /wikis/patterns/ "Patterns"
+ [4]: /contribute/ "Contribute"
  [5]: https://www.redhat.com/mailman/listinfo/patternfly
  [6]: http://getbootstrap.com/getting-started/#support
  [7]: https://support.mozilla.org/en-US/kb/install-firefox-linux
+ [8]: /get-started/patternfly-migration-guide/
+ [9]: https://github.com/patternfly/patternfly/releases

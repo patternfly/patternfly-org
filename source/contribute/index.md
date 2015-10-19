@@ -7,8 +7,7 @@ layout: page
 
 Anyone can contribute a design pattern or code sample. We are looking for contributions that complement existing PatternFly content and provide the community with flexible solutions that can be applied across multiple applications.
 
-## How can I contribute a design pattern?****  
-****
+## How can I contribute a design pattern?
 
 **Step 1: Email the PatternFly [mailing list][1] with your ideas. **This serves a couple different purposes. First, it makes the PatternFly team aware of your efforts so that we can provide support and answer your questions as needed. Also, it encourages collaboration and open communication with the PatternFly community.
 
@@ -37,26 +36,14 @@ Visit the [PatternFly Github site][2].
 
 We are a group of UX practitioners focused on user experience design for IT enterprise applications and dedicated to continuing and building the scope of the PatternFly project.
 
-[<img class="alignnone size-full wp-image-3481" src="/wp-content/uploads/2014/01/photo_reviewteam.png" alt="photo_reviewteam" />][3]
-
-*Pictured from left to right: Matt Carrano, Kyle Baker, Serena Doyle, Robb Hamilton and Leslie Hinson. *
-
 ## How does the review work?
 
 After the pattern proposal and/or sample code is submitted for review, you can expect some follow up questions and feedback, which may require updates, clarifications and/or considerations. Once this process is complete, the review team will vote on your proposal.  A majority of “yes” votes is required for approval.
 
-## What’s next?****  
-****
+## What’s new?
 
-You can view a list of the PatternFly community’s ongoing efforts by visiting the [What’s Next page][4].
-
-## What’s new?****  
-****
-
-You can view a list of recently published content on the [What’s New page][5].
+You can view a list of recently published content on the [What’s New page][3].
 
  [1]: mailto:patternfly@redhat.com
  [2]: https://github.com/patternfly/patternfly
- [3]: /wp-content/uploads/2014/01/photo_reviewteam.png
- [4]: https://www.patternfly.org/whats-next/ "What’s Next"
- [5]: https://www.patternfly.org/whats-new/ "What’s New"
+ [3]: /whats-new/ "What’s New"

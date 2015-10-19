@@ -3,9 +3,7 @@ title: Donut Chart
 author: lhinson
 layout: page
 ---
-<a "/wp-content/uploads/2015/07/donutChart.png"><img src="/wp-content/uploads/2015/07/donutChart.png" alt="donutChart" class="alignnone size-full wp-image-4074" /></a> 
-
-## Overview and Usage Scenarios
+## Overview
 
 The most common use case for a donut chart are:
 
@@ -13,20 +11,33 @@ The most common use case for a donut chart are:
   * Show utilization for an object (e.g. network, CPU, storage, etc.) as a percentage.
   * Show the relationship of a set of values to a whole (design and specs for this use case are not addressed at this time, TBD.).
 
+## Example
+
+![donut-chart-example][1]
+
 ## Description
 
 <div class="row">
+  <div class="col-md-4">
+    <p>
+      <img src="/wp-content/uploads/2015/07/donut-chart-callout.png" alt="donut-chart-callout" />
+    </p>
+  </div>
+  
   <div class="col-md-8">
     <ol>
       <li>
         <b>Donut Chart Background Fill:</b> The background color is grey (#d1d1d1)
       </li>
       <li>
-        <b>Donut Chart Fill:</b> The fill starts at 12 o’clock and moves clockwise. There are three possible fill colors, dependent on whether or not there are thresholds.
+        <b>Donut Chart Fill:</b> The fill starts at 12 o’clock and moves clockwise. The fill color depends on the thresholds.
       </li>
       <ul>
         <li>
-          When no thresholds exist, or if the percentage has not surpassed any thresholds, the indicator is blue (#0088ce).
+          When no thresholds exist the indicator is blue (#0088ce).
+        </li>
+        <li>
+          When a threshold exists and the percentage has not surpassed any thresholds, the indicator is green (#3f9c35).
         </li>
         <li>
           When the utilization percentage has surpassed the warning threshold, but not the error threshold, the indicator is orange (#ec7a08)
@@ -63,11 +74,10 @@ The most common use case for a donut chart are:
             <b>Tooltip</b> (optional): When the donut chart is used to represent utilization, the percentage is displayed in a tooltip on hover.
           </li>
           <li>
-            <b>Warning Threshold Indicator</b> (optional): If a warning threshold exists, you may show that as a tick mark on the chart. 75% is the typical default value for a warning threshold but some products may have configurable thresholds (design not currently shown, visuals are still TBD).
+            <b>Warning Threshold Indicator</b> (optional): If a warning threshold exists, that may be visually indicated on the chart. 75% is the typical default value for a warning threshold but some products may have configurable thresholds (design not currently shown, visuals are still TBD).
           </li>
           <li>
-            <b>Error Threshold Indicator</b> (optional): If an error threshold exists, you may show that as a tick mark on the chart. 90% is the typical default value for an error threshold but some products may have configurable thresholds (design not currently shown, visuals are still TBD).
-          </li></ol> </div> 
-          <div class="col-md-4">
-            <a /wp-content/uploads/2015/07/donutChart_callout.png"><img src="/wp-content/uploads/2015/07/donutChart_callout.png" alt="donutChart_callout" class="alignnone size-full wp-image-4066" /></a>
-          </div></div>
+            <b>Error Threshold Indicator</b> (optional): If an error threshold exists, that may be visually indicated on the chart. 90% is the typical default value for an error threshold but some products may have configurable thresholds (design not currently shown, visuals are still TBD).
+          </li></ol> </div> </div>
+
+ [1]: /wp-content/uploads/2015/07/donut-chart-example.png

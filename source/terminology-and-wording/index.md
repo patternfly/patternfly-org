@@ -6,7 +6,7 @@ layout: page
 ## Common Terms and Words {#terms-and-words}
 
   * Login (adj): As in a Login page. It also could be use as a noun as another name for username. However, &#8220;username&#8221; is recommended.
-  * Log in (v): Use &#8220;Log In&#8221; on the button for the Login page.
+  * Log in (v): Use &#8220;Log In&#8221; as the button label for the Login page.
   * Username (n): Usually a unique ID (e.g. ssmith123). Use &#8220;username&#8221; for the product login screen.
 
 ## Terminology and Wording for Action Labels {#action-labels}

@@ -7,24 +7,107 @@ layout: page
   <a title="Login Page Sample" href="https://rawgit.com/patternfly/patternfly/master/tests/login.html" target="_blank"><img class="alignnone wp-image-3625" src="/wp-content/uploads/2015/05/login.png" alt="login" width="1200" height="687" /></a>
 </p>
 
-## 
+<p class="reference-markup">
+  <a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="login-layout-markup" href="#login-layout-markup">Reference Markup</a>
+</p>
 
-## Overview and Usage Scenarios The login page allows the user to gain access to an application by entering their username and password. Usage scenarios related to the login page include: 
+<div class="collapse" id="login-layout-markup">
+  <pre class="prettyprint">
+&lt;!DOCTYPE html&gt;
+&lt;!--[if IE 9]&gt;&lt;html class="ie9 login-pf"&gt;&lt;![endif]--&gt;
+&lt;!--[if gt IE 9]&gt;&lt;!--&gt;
+&lt;html class="login-pf"&gt;
+&lt;!--&lt;![endif]--&gt;
+  &lt;head&gt;
+    &lt;title&gt;Login - PatternFly&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="shortcut icon" href="../dist/img/favicon.ico"&gt;
+    &lt;!-- iPad retina icon --&gt;
+    &lt;link rel="apple-touch-icon-precomposed" sizes="152x152" href="../dist/img/apple-touch-icon-precomposed-152.png"&gt;
+    &lt;!-- iPad retina icon (iOS &lt; 7) --&gt;
+    &lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="../dist/img/apple-touch-icon-precomposed-144.png"&gt;
+    &lt;!-- iPad non-retina icon --&gt;
+    &lt;link rel="apple-touch-icon-precomposed" sizes="76x76" href="../dist/img/apple-touch-icon-precomposed-76.png"&gt;
+    &lt;!-- iPad non-retina icon (iOS &lt; 7) --&gt;
+    &lt;link rel="apple-touch-icon-precomposed" sizes="72x72" href="../dist/img/apple-touch-icon-precomposed-72.png"&gt;
+    &lt;!-- iPhone 6 Plus icon --&gt;
+    &lt;link rel="apple-touch-icon-precomposed" sizes="120x120" href="../dist/img/apple-touch-icon-precomposed-180.png"&gt;
+    &lt;!-- iPhone retina icon (iOS &lt; 7) --&gt;
+    &lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="../dist/img/apple-touch-icon-precomposed-114.png"&gt;
+    &lt;!-- iPhone non-retina icon (iOS &lt; 7) --&gt;
+    &lt;link rel="apple-touch-icon-precomposed" sizes="57x57" href="../dist/img/apple-touch-icon-precomposed-57.png"&gt;
+    &lt;link href="../dist/css/patternfly.min.css" rel="stylesheet" media="screen, print"&gt;
+    &lt;link href="../dist/css/patternfly-additions.min.css" rel="stylesheet" media="screen, print"&gt;
+    &lt;script src="../components/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="../components/bootstrap/dist/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;script src="../dist/js/patternfly.min.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;span id="badge"&gt;
+      &lt;img src="../dist/img/logo.svg" alt="PatternFly logo" /&gt;
+    &lt;/span&gt;
+    &lt;div class="container"&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-sm-12"&gt;
+          &lt;div id="brand"&gt;
+            &lt;img src="../dist/img/brand.svg" alt="PatternFly Enterprise Application"&gt;
+          &lt;/div&gt;&lt;!--/#brand--&gt;
+        &lt;/div&gt;&lt;!--/.col-*--&gt;
+        &lt;div class="col-sm-7 col-md-6 col-lg-5 login"&gt;
+          &lt;form class="form-horizontal" role="form"&gt;
+            &lt;div class="form-group"&gt;
+              &lt;label for="inputUsername" class="col-sm-2 col-md-2 control-label"&gt;Username&lt;/label&gt;
+              &lt;div class="col-sm-10 col-md-10"&gt;
+                &lt;input type="text" class="form-control" id="inputUsername" placeholder="" tabindex="1"&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+              &lt;label for="inputPassword" class="col-sm-2 col-md-2 control-label"&gt;Password&lt;/label&gt;
+              &lt;div class="col-sm-10 col-md-10"&gt;
+                &lt;input type="password" class="form-control" id="inputPassword" placeholder="" tabindex="2"&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+              &lt;div class="col-xs-8 col-sm-offset-2 col-sm-6 col-md-offset-2 col-md-6"&gt;
+                &lt;div class="checkbox"&gt;
+                  &lt;label&gt;
+                    &lt;input type="checkbox" tabindex="3"&gt; Remember username
+                  &lt;/label&gt;
+                &lt;/div&gt;
+                &lt;span class="help-block"&gt; Forgot &lt;a href="#" tabindex="5"&gt;username&lt;/a&gt; or &lt;a href="#" tabindex="6"&gt;password&lt;/a&gt;?&lt;/span&gt;
+              &lt;/div&gt;
+              &lt;div class="col-xs-4 col-sm-4 col-md-4 submit"&gt;
+                &lt;button type="submit" class="btn btn-primary btn-lg" tabindex="4"&gt;Log In&lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;&lt;!--/.col-*--&gt;
+        &lt;div class="col-sm-5 col-md-6 col-lg-7 details"&gt;
+          &lt;p&gt;&lt;strong&gt;Welcome to PatternFly!&lt;/strong&gt;
+          This is placeholder text, only. Use this area to place any information or introductory message about your application that may be relevant for users. For example, you might include news or information about the latest release of your product here&mdash;such as a version number.&lt;/p&gt;
+        &lt;/div&gt;&lt;!--/.col-*--&gt;
+      &lt;/div&gt;&lt;!--/.row--&gt;
+    &lt;/div&gt;&lt;!--/.container--&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
 
-  * A user navigates to an application and is presented with a login page as a way to gain access to the application. There are two possible results: 
+## Overview The login page allows the user to gain access to an application by entering their username and password. Usage scenarios related to the login page include:
+
+  * A user navigates to an application and is presented with a login page as a way to gain access to the application. There are two possible results:
       * Authentication is successful and the user is directed to the application landing page.
       * Authentication fails and the user remains on the login page. If authentication fails, the screen should show an informational or error messages about the failure.
   * A user is automatically logged out due to inactivity. In this event, they will be returned to the login page, which will display an informational message explaining what happened. Once the user logs in again, they should be taken back to the page they were previously on before being timed out. Thirty minutes is the suggested duration before a session timeout, but this is subject to change based on your product’s security requirements.
-  * A user has forgotten their username and/or password. A link is available to begin the process to reset this information. Once the user clicks on one of these links, the contents of the login page is replaced with fields specific to recovering their username and/or password. There are a number of different ways the user could recover their password. This pattern does not dictate which methods an application should follow. Some options include: 
+  * A user has forgotten their username and/or password. A link is available to begin the process to reset this information. Once the user clicks on one of these links, the contents of the login page is replaced with fields specific to recovering their username and/or password. There are a number of different ways the user could recover their password. This pattern does not dictate which methods an application should follow. Some options include:
       * The user could provide their e-mail and be sent a temporary password or a link to reset their password.
       * The user could answer a security question.
       * The user could get a message explaining that they have to contact a specific person.
 
 ## Description
 
-[<img class="alignnone wp-image-3608" src="/wp-content/uploads/2015/05/login_sample-1024x586.png" alt="login_sample" width="1200" height="687" />][1] 
+[<img class="alignnone wp-image-3608" src="/wp-content/uploads/2015/05/login_sample-1024x586.png" alt="login_sample" width="1200" height="687" />][1]
 
-## 
+##
 
   1. **The application or project name** uses a combination of Overpass Bold and Overpass regular.
   2. ** The logo** is located in the top right.
@@ -37,28 +120,28 @@ layout: page
       <li>
         An error is triggered if the user incorrectly types their username or password. In this event, after the information has been submitted, the value entered for the username and other optional fields remains populated however, the value for the password is discarded. <h3>
         </h3>
-        
+
         <a href="/wp-content/uploads/2015/05/login_error.png"><img class="alignnone wp-image-3610 size-full" src="/wp-content/uploads/2015/05/login_error.png" alt="login_error" width="699" height="364" /></a> <h3>
         </h3>
       </li>
-      
+
       <li>
         A warning message is triggered if the user has the caps lock turned on. Once the caps lock is turned off, the warning should disappear. <h3>
         </h3>
-        
+
         <a href="/wp-content/uploads/2015/05/login_warningNew.png"><img class="alignnone wp-image-3615 size-full" src="/wp-content/uploads/2015/05/login_warningNew.png" alt="login_warningNew" width="699" height="364" /></a> <h3>
         </h3>
       </li>
-      
+
       <li>
         An informational message is triggered if the user is timed out of the application. They will be returned to the login page, which will display an informational message explaining that the session timed out due to inactivity. <h3>
         </h3>
-        
+
         <a href="/wp-content/uploads/2015/05/login_info2.png"><img class="alignnone wp-image-3616 size-full" src="/wp-content/uploads/2015/05/login_info2.png" alt="login_info2" width="699" height="364" /></a> <h3>
         </h3>
       </li>
     </ol>
 
  [1]: /wp-content/uploads/2015/05/login_sample.png
- [2]: https://www.patternfly.org/visual-styles/terminology-and-wording//#terms-and-words "Terminology and Wording"
- [3]: https://www.patternfly.org/visual-styles/terminology-and-wording/#terms-and-words "Terminology and Wording"
+ [2]: /visual-styles/terminology-and-wording//#terms-and-words "Terminology and Wording"
+ [3]: /visual-styles/terminology-and-wording/#terms-and-words "Terminology and Wording"

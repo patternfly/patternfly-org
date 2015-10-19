@@ -13,8 +13,8 @@ The current PatternFly visual styles were developed with consideration for users
 
 Components are styled with a flatter, 2d design treatment. The flattened presentation allows the application content to be more visible, because there is less “visual noise” in the form of gradients and other stylistic embellishments.
 
-[  
-<img class="alignnone size-full wp-image-633" alt="Flat-inset" src="/wp-content/uploads/2013/08/Flat-inset.jpg" width="364" height="336" />  
+[
+<img class="alignnone size-full wp-image-633" alt="Flat-inset" src="/wp-content/uploads/2013/08/Flat-inset.jpg" width="364" height="336" />
 ][2]
 
 Edges are sharp and squared-off. When elements have borders, or use other lines, they always appear thin and precise. To avoid an excess of lines dominating the screen, “white space” is used to visually define screen areas wherever possible.

@@ -43,6 +43,6 @@ Organizing the workspace requires special consideration. When faced with the nee
 
 <img class="alignnone wp-image-2256 size-full" src="/wp-content/uploads/2014/02/Layout_regions_tabs21.png" alt="Layout_regions_tabs2" width="960" height="700" />
 
- [1]: https://www.patternfly.org/layouts/layout-templates/ "Layout Templates"
+ [1]: /layouts/layout-templates/ "Layout Templates"
  [2]: http://getbootstrap.com/css/#grid
- [3]: https://www.patternfly.org/wikis/patterns/navigation/primary-navigation-bar/ "Primary Navigation Bar"
+ [3]: /wikis/patterns/navigation/primary-navigation-bar/ "Primary Navigation Bar"

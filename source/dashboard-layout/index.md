@@ -3,14 +3,14 @@ title: Dashboard Layout
 author: lhinson
 layout: page
 ---
-## Overview and Usage Scenarios
+## Overview
 
 This section provides guidance on laying out a dashboard page, and does not currently include editable dashboard requirements. When creating a dashboard layout, use the [12 column grid system][1].
 
 ## Description
 
-[<img src="/wp-content/uploads/2015/07/dashboard_callout.png" alt="dashboard_callout" class="alignnone size-full wp-image-4177" />][2]   
-</br> 
+[<img src="/wp-content/uploads/2015/07/dashboard_callout.png" alt="dashboard_callout" class="alignnone size-full wp-image-4177" />][2]
+</br>
 
 The following are suggested visualizations and placement of common attributes of a dashboard:
 

@@ -114,6 +114,12 @@ To use these icons on the desktop, check out the [cheatsheet][4].
         <span class="pficon pficon-settings"></span> <span class="icon-class">pficon-settings</span>
       </li>
       <li>
+        <span class="pficon pficon-thumb-tack-o"></span> <span class="icon-class">pficon-thumb-tack-o</span>
+      </li>
+      <li>
+        <span class="pficon pficon-topology"></span> <span class="icon-class">pficon-topology</span>
+      </li>
+      <li>
         <span class="pficon pficon-user"></span> <span class="icon-class">pficon-user</span>
       </li>
       <li>
@@ -200,6 +206,9 @@ To use these icons on the desktop, check out the [cheatsheet][4].
       </li>
       <li>
         <span class="fa fa-star-o"></span> <span class="icon-class">fa-star-o</span>
+      </li>
+      <li>
+        <span class="fa fa-thumb-tack"></span> <span class="icon-class">fa-thumb-tack</span>
       </li>
       <li>
         <span class="fa fa-unlock-alt"></span> <span class="icon-class">fa-unlock-alt</span>
