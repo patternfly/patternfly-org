@@ -751,6 +751,7 @@ th {
   .navbar.navbar-default .navbar-collapse .navbar-form .form-control {
     background: transparent;
     color: transparent;
+    cursor: pointer;
     display: inline-block;
     padding-right: 0;
     position: relative;
@@ -761,6 +762,7 @@ th {
     background: #545454;
     background: rgba(255, 255, 255, 0.25);
     color: #fff;
+    cursor: inherit;
     -webkit-transition-duration: 400ms;
     transition-duration: 400ms;
     -webkit-transition-property: width, background, z-index;
