@@ -123,11 +123,11 @@ module.exports = function (grunt) {
         tasks: ['uglify']
       },
       jekyll: {
-        files: ['source/**/*', '!source/_less/*', '!source/_site/**/*'],
+        files: ['source/**/*', '!source/_less/*', '!source/_site/**/*', '!source/assets/css/*.css',],
         tasks: ['jekyll']
       },
       livereload: {
-        files: ['source/_site/**/*.html', 'source/_site/assets/css/*.css', 'source/_site/assets/js/*.js']
+        files: ['source/_site/**/*.html', '!source/_site/bower_components/**/*.html', '!source/_site/components/**/*.html', 'source/_site/assets/css/*.css', 'source/_site/assets/js/*.js']
       },
       options: {
         livereload: 35731
