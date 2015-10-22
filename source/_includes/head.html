@@ -39,5 +39,5 @@
   {% if page.url-js-extra %}{% for urlextrajs in page.url-js-extra %}<script src="{{ urlextrajs }}"></script>{% endfor %}{% endif %}
   <script src="{{ "/assets/js/patternfly-site.min.js" | prepend: site.baseurl }}"></script>
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed/index.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed/index.xml" | prepend: site.baseurl }}" />
 </head>
