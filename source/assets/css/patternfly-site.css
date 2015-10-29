@@ -316,7 +316,7 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
   background-size: 40% auto, 40% auto, 60% auto, auto;
   color: #e4e4e4;
   margin: 0;
-  padding: 100px 0 110px;
+  padding: 90px 0 110px;
   position: relative;
   text-align: center;
 }
@@ -358,7 +358,7 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
   vertical-align: middle;
 }
 .home .jumbotron .description {
-  margin: 46px auto 40px;
+  margin: 46px auto 30px;
   position: relative;
   width: 55%;
 }
