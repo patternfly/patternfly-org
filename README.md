@@ -1,7 +1,12 @@
 ## Jekyll on OpenShift
 
 #### Running on OpenShift
+
+### Using the OpenShift Hub
 You can launch a Jekyll site on OpenShift using the [QuickStart on the OpenShift Hub](https://hub.openshift.com/quickstarts/41-jekyll)
+
+### Using the command line
+    rhc app create <appname> php-5.4 --from-code=https://github.com/openshift-quickstart/jekyll-openshift.git
 
 #### Updating your site
 - Clone your OpenShift application to your local workstation
