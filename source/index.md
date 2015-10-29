@@ -20,13 +20,13 @@ url-js-extra: ['/bower_components/wowjs/dist/wow.min.js', '/bower_components/jqu
           <a class="btn btn-primary btn-lg" href="/download">Download</a>
         </div>
         <p class="version wow fadeIn" data-wow-delay="1500ms">
-          Version 2.3.0
+          Version 2.5.0
         </p>
       </div>
     </div>
   </div>
-  <div class="arrow">
-    <i class="fa fa-angle-down wow fadeInDown" data-wow-delay="2000ms"></i>
+  <div class="arrow wow fadeIn" data-wow-delay="2000ms">
+    <i class="fa fa-angle-down"></i>
   </div>
 </div>
 <div class="definition">

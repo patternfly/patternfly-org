@@ -341,21 +341,15 @@ header {
       text-align: left;
     }
     .arrow {
+      background-color: rgba(255,255,255,.75);
       bottom: 0;
+      color: #000;
       display: block;
       font-size: 40px;
       position: absolute;
       width: 100%;
-      &:hover:before {
-        border: 20px solid rgba(255,255,255,.25);
-        border-radius: 100px;
-        content: '';
-        height: 0;
-        left: 50%;
-        margin-left: -20px;
-        position: absolute;
-        top: 14px;
-        width: 0;
+      &:hover {
+        background-color: rgba(255,255,255,.95);
       }
     }
     .container, .content, .splash {
