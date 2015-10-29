@@ -6,7 +6,6 @@ The PatternFly Toolkit is the new source for the official documentation for Patt
 
 To install (after git cloning repo):
 
-1. `git checkout docs-openshift`
 1. `npm install`
 1. `bower install`
 1. `grunt server`
