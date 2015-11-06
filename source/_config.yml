@@ -6,3 +6,5 @@ baseurl: '' # the subpath of your site, e.g. /blog/
 url: 'https://www.patternfly.org' # the base hostname & protocol for your site
 paginate: 10
 paginate_path: "/community/page:num/"
+collections:
+- whats-news

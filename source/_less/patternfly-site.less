@@ -62,6 +62,61 @@ body {
   margin: 20px 0;
 }
 
+footer {
+  background: #040404;
+  border-bottom: 2px solid #32a6d7;
+  color: #fff;
+  font-size: 10px;
+  line-height: 15px;
+  margin-top: 30px;
+  padding-bottom: 28px;
+  padding-top: 28px;
+  .home & {
+    margin-top: 0;
+  }
+  a {
+    &, &:focus, &:hover {
+    color: #3bb1dc;
+    }
+  }
+  #logo-redhat {
+    background: url(/assets/img/redhat.svg) no-repeat;
+    display: none;
+    float: left;
+    height: 34px;
+    margin: -3px 50px 0 0;
+    text-indent: -9999px;
+    width: 106px;
+    @media (min-width: @screen-lg) {
+      display: block;
+    }
+  }
+  p {
+    font-size: @font-size-small;
+    margin-bottom: 0;
+  }
+  .social {
+    clear: left;
+    list-style: none;
+    margin: 15px 0 0;
+    padding: 0;
+    @media (min-width: @screen-md) {
+      margin-top: 3px;
+      text-align: right;
+    }
+    li {
+      display: inline-block;
+      + li {
+        margin-left: 10px;
+      }
+      a {
+        color: #fff;
+        font-size: 26px;
+      }
+    }
+  }
+}
+
 h1 {
   font-weight: 300;
   font-size: 24px;
@@ -99,7 +154,7 @@ header {
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
-    border-top: 2px solid #1688c0;
+    border-top: 2px solid #32a6d7;
     font-size: @font-size-base + 1;
     margin-bottom: 0;
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false) !important;
@@ -226,27 +281,51 @@ header {
 .home {
   height: 100%;
   position: relative;
-  .btn-group {
-    #gradient .vertical(#66effc, #2a8ec7);
-    margin: 0 0 10px;
-    padding: 2px;
-    .btn {
-      background: #060606;
-      border: 0;
-      font-size: 13px;
-      font-weight: 100;
-      padding: 6px 12px;
-      @media (min-width: @screen-sm) {
-        font-size: 16px;
-        padding-left: 20px;
-        padding-right: 20px;
+  > div p {
+    font-size: 13px;
+    @media (min-width: @screen-sm) {
+      font-size: 14px;
+    }
+    @media (min-width: @screen-md) {
+      font-size: 17px;
+      font-weight: 300;
+    }
+  }
+  .about {
+    font-weight: 300;
+    padding-bottom: 35px;
+    padding-top: 10px;
+    .container > p {
+      margin-bottom: 0;
+    }
+    h3 {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.25; // 30px
+      @media (min-width: 400px) and (max-width: @screen-md-max) {
+        font-size: 22px;
       }
-      .reset-filter();
-      &:hover {
-        background: lighten(#060606, 10%);
+      @media (min-width: @screen-lg) {
+        font-size: 24px;
       }
-      + .btn {
-        margin-left: 2px;
+    }
+    .row > div {
+      text-align: center;
+      img {
+        margin-top: 25px;
+        max-width: 175px;
+        @media (min-width: @screen-sm) {
+          margin-top: 15px;
+        }
+      }
+      p > a {
+        font-size: 13px;
+        @media (min-width: 400px) and (max-width: @screen-md-max) {
+          font-size: 15px;
+        }
+        @media (min-width: @screen-lg) {
+          font-size: 17px;
+        }
       }
     }
   }
@@ -258,65 +337,12 @@ header {
       border-color: @gray-light;
     }
   }
-  .carousel-inner > .item > img {
-    margin: 0 auto;
-  }
-  .definition {
-    padding-bottom: 40px;
-    text-align: center;
-    .equals, .plus {
-      margin: 20px 0;
-      @media (min-width: @grid-float-breakpoint) {
-        margin-top: 70px;
-      }
-    }
-    h2 {
-      color: #3bb1dc;
-      line-height: 34px;
-      margin-bottom: 80px;
-      margin-top: 40px;
-      position: relative;
-      &:after {
-        background: #aaa;
-        bottom: -30px;
-        content: '';
-        height: 2px;
-        left: 50%;
-        margin: 0 0 0 -28px;
-        position: absolute;
-        width: 56px;
-      }
-    }
-    h3 {
-      color: #3bb1dc;
-      font-size: 21px;
-      font-weight: 100;
-      margin-bottom: 0;
-    }
-  }
-  .get-involved {
-    background: #010101;
-    background: url(../img/grid-get-involved-left.svg) no-repeat 0 0, linear-gradient(to bottom,#2B2B2B 0,#010101 100%);
-    color: #e4e4e4;
-    padding-bottom: 40px;
-    text-align: center;
-    @media (min-width: @screen-md) {
-      background: url(../img/grid-get-involved-left.svg) no-repeat 0 0, url(../img/grid-get-involved-right.svg) no-repeat 110% 0, linear-gradient(to bottom,#2B2B2B 0,#010101 100%);
-    }
-    h2 {
-      background: -webkit-linear-gradient(#5feffe, #208bc9);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: #3bb1dc;
-      margin-bottom: 40px;
-      margin-top: 40px;
-    }
-  }
   h2 {
+    color: #3bb1dc;
     font-size: 24px;
-    font-weight: 100;
+    font-weight: 300;
     @media (min-width: @screen-sm) {
-      font-size: 30px;
+      font-size: 32px;
     }
   }
   .jumbotron {
@@ -360,18 +386,32 @@ header {
       vertical-align: middle;
     }
     .description {
-      margin: 46px auto 30px;
+      font-size: @font-size-large;
+      margin: 50px auto 50px;
       position: relative;
-      width: 55%;
       &:after {
-        background: #e4e4e4;
-        top: -24px;
+        background: #bbb;
+        top: -26px;
         content: '';
         height: 2px;
         left: 50%;
         margin: 0 0 0 -28px;
         position: absolute;
         width: 56px;
+      }
+      @media (min-width: @screen-xs) {
+        width: 58%;
+      }
+      @media (min-width: @screen-sm) {
+        font-size: (@font-size-base * 1.5); // 18px
+        font-weight: 300;
+        width: 73%;
+      }
+      @media (min-width: @screen-md) {
+        width: 55%;
+      }
+      @media (min-width: @screen-lg) {
+        width: 46%;
       }
     }
     h1 {
@@ -408,39 +448,26 @@ header {
       font-size: @font-size-small;
     }
   }
-  .layouts {
-    background: #f6f6f6;
-    text-align: center;
+  .whats-new {
+    background-color: #f6f6f6;
     @media (min-width: @screen-md) {
-      text-align: left;
-    }
-    .btn-group {
-      margin-bottom: 40px;
-      margin-top: 20px;
-      .btn {
-        background: #f6f6f6;
-        color: inherit;
-        &:hover {
-          background: darken(#f6f6f6, 5%);
-        }
-      }
+      background-image: url(../img/grid-whats-new.svg);
+      background-position: 100% 0;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
     }
     .container {
-      @media (min-width: @screen-md) {
-        background: url(../img/grid-layouts.svg) no-repeat 95% 0;
-        background-size: auto auto;
-      }
-      padding-top: 40px;
+      padding-bottom: 25px;
+      padding-top: 15px;
     }
-  }
-  p {
-    font-size: 13px;
-    font-weight: 100;
-    @media (min-width: @screen-sm) {
-      font-size: 14px;
+    h3 {
+      font-size: 18px;
     }
-    @media (min-width: @screen-md) {
-      font-size: 16px;
+    .updates {
+      list-style: none;
+      margin-bottom: 20px;
+      margin-left: 0;
+      padding-left: 0;
     }
   }
 }
@@ -681,46 +708,6 @@ th {
   margin-top: -12px;
 }
 
-#widget-footer {
-  color: #444;
-  font-size: 10px;
-  line-height: 15px;
-  padding-bottom: 20px;
-  padding-top: 40px;
-  .home & {
-    padding-top: 20px;
-  }
-  hr {
-    margin: 0 0 30px;
-    .home & {
-      display: none;
-    }
-  }
-  #logo-redhat {
-    background: url(/assets/img/redhat.svg) no-repeat;
-    display: block;
-    @media (min-width: @screen-md) {
-      float: right;
-    }
-    height: 25px;
-    text-indent: -9999px;
-    width: 78px;
-  }
-  p {
-    font-size: @font-size-small;
-    margin-bottom: 0;
-  }
-  .widget_text:first-child {
-    padding-top: 0;
-  }
-  .widget_text + .widget_text {
-    padding-top: 10px;
-    @media (min-width: @screen-md) {
-      padding-top: 5px;
-    }
-  }
-}
-
 .wow {
   visibility: hidden;
 }
@@ -770,7 +757,7 @@ th {
           }
         }
         > a {
-          padding: 25px 15px 26px;
+          padding: 25px 18px 26px;
         }
       }
     }
@@ -798,12 +785,6 @@ th {
   }
   .sidebar .menu {
     width: 255px;
-  }
-}
-
-@media (max-width: @screen-sm-max) {
-  #widget-footer .widget + .widget {
-    float: none;
   }
 }
 

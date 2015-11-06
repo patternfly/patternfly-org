@@ -47,6 +47,64 @@ body {
 .examples {
   margin: 20px 0;
 }
+footer {
+  background: #040404;
+  border-bottom: 2px solid #32a6d7;
+  color: #fff;
+  font-size: 10px;
+  line-height: 15px;
+  margin-top: 30px;
+  padding-bottom: 28px;
+  padding-top: 28px;
+}
+.home footer {
+  margin-top: 0;
+}
+footer a,
+footer a:focus,
+footer a:hover {
+  color: #3bb1dc;
+}
+footer #logo-redhat {
+  background: url(/assets/img/redhat.svg) no-repeat;
+  display: none;
+  float: left;
+  height: 34px;
+  margin: -3px 50px 0 0;
+  text-indent: -9999px;
+  width: 106px;
+}
+@media (min-width: 1200px) {
+  footer #logo-redhat {
+    display: block;
+  }
+}
+footer p {
+  font-size: 11px;
+  margin-bottom: 0;
+}
+footer .social {
+  clear: left;
+  list-style: none;
+  margin: 15px 0 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  footer .social {
+    margin-top: 3px;
+    text-align: right;
+  }
+}
+footer .social li {
+  display: inline-block;
+}
+footer .social li + li {
+  margin-left: 10px;
+}
+footer .social li a {
+  color: #fff;
+  font-size: 26px;
+}
 h1 {
   font-weight: 300;
   font-size: 24px;
@@ -80,7 +138,7 @@ header .navbar.navbar-default {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  border-top: 2px solid #1688c0;
+  border-top: 2px solid #32a6d7;
   font-size: 13px;
   margin-bottom: 0;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false) !important;
@@ -205,35 +263,67 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
   height: 100%;
   position: relative;
 }
-.home .btn-group {
-  background-image: -webkit-linear-gradient(top, #66effc 0%, #2a8ec7 100%);
-  background-image: -o-linear-gradient(top, #66effc 0%, #2a8ec7 100%);
-  background-image: linear-gradient(to bottom, #66effc 0%, #2a8ec7 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff66effc', endColorstr='#ff2a8ec7', GradientType=0);
-  margin: 0 0 10px;
-  padding: 2px;
-}
-.home .btn-group .btn {
-  background: #060606;
-  border: 0;
+.home > div p {
   font-size: 13px;
-  font-weight: 100;
-  padding: 6px 12px;
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 @media (min-width: 768px) {
-  .home .btn-group .btn {
-    font-size: 16px;
-    padding-left: 20px;
-    padding-right: 20px;
+  .home > div p {
+    font-size: 14px;
   }
 }
-.home .btn-group .btn:hover {
-  background: #202020;
+@media (min-width: 992px) {
+  .home > div p {
+    font-size: 17px;
+    font-weight: 300;
+  }
 }
-.home .btn-group .btn + .btn {
-  margin-left: 2px;
+.home .about {
+  font-weight: 300;
+  padding-bottom: 35px;
+  padding-top: 10px;
+}
+.home .about .container > p {
+  margin-bottom: 0;
+}
+.home .about h3 {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+@media (min-width: 400px) and (max-width: 1199px) {
+  .home .about h3 {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1200px) {
+  .home .about h3 {
+    font-size: 24px;
+  }
+}
+.home .about .row > div {
+  text-align: center;
+}
+.home .about .row > div img {
+  margin-top: 25px;
+  max-width: 175px;
+}
+@media (min-width: 768px) {
+  .home .about .row > div img {
+    margin-top: 15px;
+  }
+}
+.home .about .row > div p > a {
+  font-size: 13px;
+}
+@media (min-width: 400px) and (max-width: 1199px) {
+  .home .about .row > div p > a {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .home .about .row > div p > a {
+    font-size: 17px;
+  }
 }
 .home .carousel-indicators .active {
   background-color: #999999;
@@ -241,73 +331,14 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
 .home .carousel-indicators li {
   border-color: #999999;
 }
-.home .carousel-inner > .item > img {
-  margin: 0 auto;
-}
-.home .definition {
-  padding-bottom: 40px;
-  text-align: center;
-}
-.home .definition .equals,
-.home .definition .plus {
-  margin: 20px 0;
-}
-@media (min-width: 992px) {
-  .home .definition .equals,
-  .home .definition .plus {
-    margin-top: 70px;
-  }
-}
-.home .definition h2 {
-  color: #3bb1dc;
-  line-height: 34px;
-  margin-bottom: 80px;
-  margin-top: 40px;
-  position: relative;
-}
-.home .definition h2:after {
-  background: #aaa;
-  bottom: -30px;
-  content: '';
-  height: 2px;
-  left: 50%;
-  margin: 0 0 0 -28px;
-  position: absolute;
-  width: 56px;
-}
-.home .definition h3 {
-  color: #3bb1dc;
-  font-size: 21px;
-  font-weight: 100;
-  margin-bottom: 0;
-}
-.home .get-involved {
-  background: #010101;
-  background: url(../img/grid-get-involved-left.svg) no-repeat 0 0, linear-gradient(to bottom, #2b2b2b 0, #010101 100%);
-  color: #e4e4e4;
-  padding-bottom: 40px;
-  text-align: center;
-}
-@media (min-width: 992px) {
-  .home .get-involved {
-    background: url(../img/grid-get-involved-left.svg) no-repeat 0 0, url(../img/grid-get-involved-right.svg) no-repeat 110% 0, linear-gradient(to bottom, #2b2b2b 0, #010101 100%);
-  }
-}
-.home .get-involved h2 {
-  background: -webkit-linear-gradient(#5feffe, #208bc9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #3bb1dc;
-  margin-bottom: 40px;
-  margin-top: 40px;
-}
 .home h2 {
+  color: #3bb1dc;
   font-size: 24px;
-  font-weight: 100;
+  font-weight: 300;
 }
 @media (min-width: 768px) {
   .home h2 {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 .home .jumbotron {
@@ -358,19 +389,41 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
   vertical-align: middle;
 }
 .home .jumbotron .description {
-  margin: 46px auto 30px;
+  font-size: 14px;
+  margin: 50px auto 50px;
   position: relative;
-  width: 55%;
 }
 .home .jumbotron .description:after {
-  background: #e4e4e4;
-  top: -24px;
+  background: #bbb;
+  top: -26px;
   content: '';
   height: 2px;
   left: 50%;
   margin: 0 0 0 -28px;
   position: absolute;
   width: 56px;
+}
+@media (min-width: 480px) {
+  .home .jumbotron .description {
+    width: 58%;
+  }
+}
+@media (min-width: 768px) {
+  .home .jumbotron .description {
+    font-size: 18px;
+    font-weight: 300;
+    width: 73%;
+  }
+}
+@media (min-width: 992px) {
+  .home .jumbotron .description {
+    width: 55%;
+  }
+}
+@media (min-width: 1200px) {
+  .home .jumbotron .description {
+    width: 46%;
+  }
 }
 .home .jumbotron h1 {
   background: -webkit-linear-gradient(#5feffe, #208bc9);
@@ -413,48 +466,29 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
   color: #bebebe;
   font-size: 11px;
 }
-.home .layouts {
-  background: #f6f6f6;
-  text-align: center;
+.home .whats-new {
+  background-color: #f6f6f6;
 }
 @media (min-width: 992px) {
-  .home .layouts {
-    text-align: left;
+  .home .whats-new {
+    background-image: url(../img/grid-whats-new.svg);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
   }
 }
-.home .layouts .btn-group {
-  margin-bottom: 40px;
-  margin-top: 20px;
+.home .whats-new .container {
+  padding-bottom: 25px;
+  padding-top: 15px;
 }
-.home .layouts .btn-group .btn {
-  background: #f6f6f6;
-  color: inherit;
+.home .whats-new h3 {
+  font-size: 18px;
 }
-.home .layouts .btn-group .btn:hover {
-  background: #e9e9e9;
-}
-.home .layouts .container {
-  padding-top: 40px;
-}
-@media (min-width: 992px) {
-  .home .layouts .container {
-    background: url(../img/grid-layouts.svg) no-repeat 95% 0;
-    background-size: auto auto;
-  }
-}
-.home p {
-  font-size: 13px;
-  font-weight: 100;
-}
-@media (min-width: 768px) {
-  .home p {
-    font-size: 14px;
-  }
-}
-@media (min-width: 992px) {
-  .home p {
-    font-size: 16px;
-  }
+.home .whats-new .updates {
+  list-style: none;
+  margin-bottom: 20px;
+  margin-left: 0;
+  padding-left: 0;
 }
 hr {
   border-top-color: #D5D5D5;
@@ -684,49 +718,6 @@ th {
   margin-bottom: 20px;
   margin-top: -12px;
 }
-#widget-footer {
-  color: #444;
-  font-size: 10px;
-  line-height: 15px;
-  padding-bottom: 20px;
-  padding-top: 40px;
-}
-.home #widget-footer {
-  padding-top: 20px;
-}
-#widget-footer hr {
-  margin: 0 0 30px;
-}
-.home #widget-footer hr {
-  display: none;
-}
-#widget-footer #logo-redhat {
-  background: url(/assets/img/redhat.svg) no-repeat;
-  display: block;
-  height: 25px;
-  text-indent: -9999px;
-  width: 78px;
-}
-@media (min-width: 992px) {
-  #widget-footer #logo-redhat {
-    float: right;
-  }
-}
-#widget-footer p {
-  font-size: 11px;
-  margin-bottom: 0;
-}
-#widget-footer .widget_text:first-child {
-  padding-top: 0;
-}
-#widget-footer .widget_text + .widget_text {
-  padding-top: 10px;
-}
-@media (min-width: 992px) {
-  #widget-footer .widget_text + .widget_text {
-    padding-top: 5px;
-  }
-}
 .wow {
   visibility: hidden;
 }
@@ -771,7 +762,7 @@ th {
     background: rgba(0, 0, 0, 0.1);
   }
   .navbar.navbar-default .navbar-right > li > a {
-    padding: 25px 15px 26px;
+    padding: 25px 18px 26px;
   }
 }
 @media (max-width: 991px) {
@@ -792,11 +783,6 @@ th {
   }
   .sidebar .menu {
     width: 255px;
-  }
-}
-@media (max-width: 991px) {
-  #widget-footer .widget + .widget {
-    float: none;
   }
 }
 @media (min-width: 768px) {

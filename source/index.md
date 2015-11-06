@@ -16,9 +16,6 @@ url-js-extra: ['/bower_components/wowjs/dist/wow.min.js', '/bower_components/jqu
         <p class="description wow fadeIn" data-wow-delay="1250ms">
           A community of designers and developers collaborating to build a UI framework for enterprise web applications.
         </p>
-        <div class="btn-group wow fadeIn" role="group" aria-label="PatternFly details" data-wow-delay="1500ms">
-          <a class="btn btn-primary btn-lg" href="/download">Download</a>
-        </div>
         <p class="version wow fadeIn" data-wow-delay="1500ms">
           Version 2.5.0
         </p>
@@ -29,71 +26,72 @@ url-js-extra: ['/bower_components/wowjs/dist/wow.min.js', '/bower_components/jqu
     <i class="fa fa-angle-down"></i>
   </div>
 </div>
-<div class="definition">
+<div class="about">
   <div class="container">
-    <h2 class="wow fadeInDown">
-      PatternFly combines UX goodness with the ease of Bootstrap
+    <h2>
+      About PatternFly
     </h2>
-    <div class="row equation">
-      <div class="col-md-3 heart wow fadeIn" data-wow-delay="250ms">
-        <img src="assets/img/equation-heart.svg" alt="Heart" />
-      </div>
-      <div class="col-md-1 plus wow fadeIn" data-wow-delay="500ms">
-        <img src="assets/img/equation-plus.svg" alt="+" />
-      </div>
-      <div class="col-md-3 bootstrap wow fadeIn" data-wow-delay="750ms">
-        <img src="assets/img/equation-bootstrap.svg" alt="Bootstrap" />
-      </div>
-      <div class="col-md-2 equals wow fadeIn" data-wow-delay="1000ms">
-        <img src="assets/img/equation-equals.svg" alt="=" />
-      </div>
-      <div class="col-md-3 patternflys wow fadeIn" data-wow-delay="1250ms">
-        <img src="assets/img/equation-patternfly.svg" alt="PatternFly" />
-      </div>
-    </div>
-    <div class="row patternflys wow fadeIn" data-wow-delay="1500ms">
-      <div class="col-md-3">
-        <h3>
-          Applicable UX Knowledge
-        </h3>
+    <p>PatternFly is a community project that promotes design commonality and improved user experience. Its offerings include open source code, patterns, style guides and supporting community (all this is tbd).</p>
+    <div class="row">
+      <div class="col-xs-6 col-sm-3 col-md-3">
+        <a href="/download/">
+          <img src="/assets/img/icon-code.svg" alt="Code icon" />
+        </a>
+        <h3>Code</h3>
         <p>
-          Visual and behavioral patterns based on research, testing, and application of UX best practices.
+          <a href="/download/">Download</a>
         </p>
       </div>
-      <div class="col-md-3 col-md-offset-1">
-        <h3>
-          Bootstrap Framework
-        </h3>
+      <div class="col-xs-6 col-sm-3 col-md-3">
+        <a href="/pattern-library/">
+          <img src="/assets/img/icon-library.svg" alt="Pattern Library icon" />
+        </a>
+        <h3>Pattern Library</h3>
         <p>
-          The most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
+          <a href="/pattern-library/">View Patterns</a>
         </p>
       </div>
-      <div class="col-md-3 col-md-offset-2">
-        <h3>
-          Enterprise Usability
-        </h3>
+      <div class="col-xs-6 col-sm-3 col-md-3">
+        <a href="/community/">
+          <img src="/assets/img/icon-community.svg" alt="Community icon" />
+        </a>
+        <h3>Community</h3>
         <p>
-          Custom look and feel, additional components, and consistent behavior.
+          <a href="/community/">Get Involved</a>
+        </p>
+      </div>
+      <div class="col-xs-6 col-sm-3 col-md-3">
+        <a href="/styles/">
+          <img src="/assets/img/icon-styles.svg" alt="Styles icon" />
+        </a>
+        <h3>Styles</h3>
+        <p>
+          <a href="/styles/">View Styles</a>
         </p>
       </div>
     </div>
   </div>
 </div>
-<div class="layouts">
+<div class="whats-new">
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-6">
         <h2>
-          Layout Templates
+          What's New
         </h2>
-        <p>
-          Choose from a variety of page templates that implement common web UI layout patterns. Download the PatternFly library, choose a template, and get started.
-        </p>
-        <div class="btn-group" role="group" aria-label="PatternFly layouts">
-          <a class="btn btn-primary btn-lg" href="/layouts">See All Layouts</a>
-        </div>
+        <ul class="updates">
+        {% assign whats-news = site.whats-news | sort: 'date' | reverse %}
+        {% for whatsnew in whats-news limit:2 %}
+          <li>
+            <h3>{{ whatsnew.date | date: '%B %-d, %Y' }}</h3>
+            {{ whatsnew.content }}
+          </li>
+        {% endfor %}
+        </ul>
+        <p><a href="/whats-new/">View all</a></p>
       </div>
-      <div class="col-md-8">
+      <div class="col-md-6">
+        <h3>Featured Content</h3>
         <div id="carousel-layouts" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carousel-layouts" data-slide-to="0" class="active"></li>
@@ -121,16 +119,6 @@ url-js-extra: ['/bower_components/wowjs/dist/wow.min.js', '/bower_components/jqu
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-<div class="get-involved">
-  <div class="container">
-    <h2 class="wow fadeInDown" data-wow-delay="250ms">
-      Learn How To Get Involved With Building Our Library
-    </h2>
-    <div class="btn-group wow fadeInUp" data-wow-delay="250ms" role="group" aria-label="PatternFly involvement">
-      <a class="btn btn-primary btn-lg" href="/get-started/contribute/">Contribute</a> <a class="btn btn-primary btn-lg" href="https://www.redhat.com/mailman/listinfo/patternfly">Join Our Mailing List</a>
     </div>
   </div>
 </div>
