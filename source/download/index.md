@@ -55,7 +55,7 @@ The PatternFly Framework includes reference HTML markup and CSS for widgets and 
         Sass PatternFly
       </h2>
       <p>
-        Sass Patternfly is a part of PatternFly from Less to Sass for your Sass powered applications.
+        Sass Patternfly is a port of PatternFly from Less to Sass for your Sass powered applications.
       </p>
       <p>
         <a href="https://github.com/patternfly/patternfly-sass">Visit Sass Patternfly Repository</a>
