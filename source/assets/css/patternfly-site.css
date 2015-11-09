@@ -44,6 +44,20 @@ body {
 #content {
   position: relative;
 }
+.download {
+  position: relative;
+}
+.download-description {
+  margin-left: 116px;
+}
+.download-icon {
+  left: 20px;
+  position: absolute;
+  top: 30px;
+}
+.download-icon img {
+  width: 91px;
+}
 .examples {
   margin: 20px 0;
 }
