@@ -249,11 +249,11 @@ header .navbar.navbar-default .navbar-right > li > a:hover {
 }
 header .navbar.navbar-default .navbar-right > li.active > a,
 header .navbar.navbar-default .navbar-right > li.active:hover > a {
-  background: #1f1f1f !important;
-  color: #fff !important;
+  background: transparent !important;
+  color: #3bb1dc !important;
 }
 header .navbar.navbar-default .navbar-right > li:hover {
-  background: #171717;
+  background: #212121;
 }
 header .navbar.navbar-default .navbar-right > li:hover > a {
   background: transparent;
@@ -767,7 +767,7 @@ th {
     -webkit-transition-property: width, background, z-index;
     transition-property: width, background, z-index;
     padding-right: 2px;
-    width: 130px;
+    width: 120px;
     z-index: auto;
   }
   .home .navbar.navbar-default .navbar-right > li:hover,
@@ -776,7 +776,7 @@ th {
     background: rgba(0, 0, 0, 0.1);
   }
   .navbar.navbar-default .navbar-right > li > a {
-    padding: 25px 18px 26px;
+    padding: 25px 15px 26px;
   }
 }
 @media (max-width: 991px) {
