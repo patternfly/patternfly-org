@@ -17,7 +17,7 @@ url-js-extra: ['/bower_components/wowjs/dist/wow.min.js', '/bower_components/jqu
           A community of designers and developers collaborating to build a UI framework for enterprise web applications.
         </p>
         <p class="version wow fadeIn" data-wow-delay="1500ms">
-          Version 2.5.0
+          Version 2.6.0
         </p>
       </div>
     </div>
