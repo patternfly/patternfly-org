@@ -365,7 +365,7 @@
                     </span>
                   </p>
                   <div id="chart-pf-donut"></div>
-                  <div id="chart-pf-sparkline"></div>
+                  <div class="chart-pf-sparkline" id="chart-pf-sparkline"></div>
                   <script>
                     var chart1 = c3.generate({
                       bindto: '#chart-pf-donut',
@@ -403,14 +403,12 @@
                         order: null
                       },
                     });
-                    $( "#chart-pf-donut .c3-chart-arcs-title" ).html(
-                      '<tspan dy="0" x="0" class="donut-title-big-pf">' +
-                      '950' +
-                      '</tspan>' +
-                      '<tspan dy="20" x="0" class="donut-title-small-pf">' +
-                      'MHz Used' +
-                      '</tspan>'
-                    );
+
+                    var donutChartTitle = d3.select("#chart-pf-donut").select('text.c3-chart-arcs-title');
+                    donutChartTitle.text("");
+                    donutChartTitle.insert('tspan').text("950").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+                    donutChartTitle.insert('tspan').text("MHz Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
+
                     var chart2 = c3.generate({
                       axis: {
                         x: {
@@ -426,7 +424,7 @@
                       },
                       data: {
                         columns: [
-                          ['Less than one year remaining', 10, 50, 28, 20, 31, 27, 60, 36, 52, 55, 62, 68, 69, 88, 74, 88, 95],
+                          ['Last 30 days', 10, 50, 28, 20, 31, 27, 60, 36, 52, 55, 62, 68, 69, 88, 74, 88, 95],
                         ],
                         type: 'area'
                       },
@@ -465,7 +463,7 @@
                     </span>
                   </p>
                   <div id="chart-pf-donut-2"></div>
-                  <div id="chart-pf-sparkline-2"></div>
+                  <div class="chart-pf-sparkline" id="chart-pf-sparkline-2"></div>
                   <script>
                     var chart3 = c3.generate({
                       bindto: '#chart-pf-donut-2',
@@ -487,7 +485,7 @@
                       tooltip: {
                         contents: function (d) {
                           return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
-                                  Math.round(d[0].ratio * 100) + '%' + ' MHz ' + d[0].name +
+                                  Math.round(d[0].ratio * 100) + '%' + ' GB ' + d[0].name +
                                   '</span>';
                         }
                       },
@@ -503,14 +501,12 @@
                         order: null
                       },
                     });
-                    $( "#chart-pf-donut-2 .c3-chart-arcs-title" ).html(
-                      '<tspan dy="0" x="0" class="donut-title-big-pf">' +
-                      '176' +
-                      '</tspan>' +
-                      '<tspan dy="20" x="0" class="donut-title-small-pf">' +
-                      'GB Used' +
-                      '</tspan>'
-                    );
+
+                    var donutChartTitle = d3.select("#chart-pf-donut-2").select('text.c3-chart-arcs-title');
+                    donutChartTitle.text("");
+                    donutChartTitle.insert('tspan').text("176").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+                    donutChartTitle.insert('tspan').text("GB Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
+
                     var chart4 = c3.generate({
                       axis: {
                         x: {
@@ -526,7 +522,7 @@
                       },
                       data: {
                         columns: [
-                          ['Less than one year remaining', 35, 36, 20, 30, 31, 22, 44, 36, 40, 41, 55, 52, 48, 48, 50, 40, 41],
+                          ['Last 30 days', 35, 36, 20, 30, 31, 22, 44, 36, 40, 41, 55, 52, 48, 48, 50, 40, 41],
                         ],
                         type: 'area'
                       },
@@ -561,11 +557,11 @@
                     <span class="card-pf-utilization-card-details-count">200</span>
                     <span class="card-pf-utilization-card-details-description">
                       <span class="card-pf-utilization-card-details-line-1">Available</span>
-                      <span class="card-pf-utilization-card-details-line-2">of 1300 Gpbs</span>
+                      <span class="card-pf-utilization-card-details-line-2">of 1300 Gbps</span>
                     </span>
                   </p>
                   <div id="chart-pf-donut-3"></div>
-                  <div id="chart-pf-sparkline-3"></div>
+                  <div class="chart-pf-sparkline" id="chart-pf-sparkline-3"></div>
                   <script>
                     var chart5 = c3.generate({
                       bindto: '#chart-pf-donut-3',
@@ -587,7 +583,7 @@
                       tooltip: {
                         contents: function (d) {
                           return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
-                                  Math.round(d[0].ratio * 100) + '%' + ' MHz ' + d[0].name +
+                                  Math.round(d[0].ratio * 100) + '%' + ' Gbps ' + d[0].name +
                                   '</span>';
                         }
                       },
@@ -603,14 +599,12 @@
                         order: null
                       },
                     });
-                    $( "#chart-pf-donut-3 .c3-chart-arcs-title" ).html(
-                      '<tspan dy="0" x="0" class="donut-title-big-pf">' +
-                      '1100' +
-                      '</tspan>' +
-                      '<tspan dy="20" x="0" class="donut-title-small-pf">' +
-                      'Gpbs Used' +
-                      '</tspan>'
-                    );
+
+                    var donutChartTitle = d3.select("#chart-pf-donut-3").select('text.c3-chart-arcs-title');
+                    donutChartTitle.text("");
+                    donutChartTitle.insert('tspan').text("1100").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+                    donutChartTitle.insert('tspan').text("Gpbs Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
+
                     var chart6 = c3.generate({
                       axis: {
                         x: {
@@ -626,7 +620,7 @@
                       },
                       data: {
                         columns: [
-                          ['Less than one year remaining', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
+                          ['Last 30 days', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
                         ],
                         type: 'area'
                       },
@@ -672,11 +666,11 @@
                 <span class="card-pf-utilization-card-details-count">200</span>
                 <span class="card-pf-utilization-card-details-description">
                   <span class="card-pf-utilization-card-details-line-1">Available</span>
-                  <span class="card-pf-utilization-card-details-line-2">of 1300 Gpbs</span>
+                  <span class="card-pf-utilization-card-details-line-2">of 1300 Gbps</span>
                 </span>
               </p>
               <div id="chart-pf-donut-4"></div>
-              <div id="chart-pf-sparkline-4"></div>
+              <div class="chart-pf-sparkline" id="chart-pf-sparkline-4"></div>
               <script>
                 var chart7 = c3.generate({
                   bindto: '#chart-pf-donut-4',
@@ -698,7 +692,7 @@
                   tooltip: {
                     contents: function (d) {
                       return '<span class="donut-tooltip-pf" style="white-space: nowrap;">' +
-                              Math.round(d[0].ratio * 100) + '%' + ' MHz ' + d[0].name +
+                              Math.round(d[0].ratio * 100) + '%' + ' Gbps ' + d[0].name +
                               '</span>';
                     }
                   },
@@ -714,14 +708,12 @@
                     order: null
                   },
                 });
-                $( "#chart-pf-donut-4 .c3-chart-arcs-title" ).html(
-                  '<tspan dy="0" x="0" class="donut-title-big-pf">' +
-                  '1100' +
-                  '</tspan>' +
-                  '<tspan dy="20" x="0" class="donut-title-small-pf">' +
-                  'Gpbs Used' +
-                  '</tspan>'
-                );
+
+                var donutChartTitle = d3.select("#chart-pf-donut-4").select('text.c3-chart-arcs-title');
+                donutChartTitle.text("");
+                donutChartTitle.insert('tspan').text("1100").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+                donutChartTitle.insert('tspan').text("Gpbs Used").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
+
                 var chart8 = c3.generate({
                   axis: {
                     x: {
@@ -737,7 +729,7 @@
                   },
                   data: {
                     columns: [
-                      ['Less than one year remaining', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
+                      ['Last 30 days', 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
                     ],
                     type: 'area'
                   },
@@ -822,14 +814,14 @@
       <div class="row row-cards-pf">
       <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
         <div class="col-xs-12 col-sm-5 col-md-5">
-          <div class="card-pf" style="height: 180px;">
-            <h2 class="card-pf-title" style="height: 17px;">
+          <div class="card-pf">
+            <h2 class="card-pf-title">
               Card Title
             </h2>
-            <div class="card-pf-body" style="height: 40px;">
+            <div class="card-pf-body">
               <p>[card contents]</p>
             </div>
-            <div class="card-pf-footer" style="">
+            <div class="card-pf-footer">
               <div class="dropdown card-pf-time-frame-filter">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                   Last 30 Days <span class="caret"></span>
@@ -848,11 +840,11 @@
           </div>
         </div>
         <div class="col-xs-12 col-sm-7 col-md-7">
-          <div class="card-pf" style="height: 180px;">
-            <h2 class="card-pf-title" style="height: 17px;">
+          <div class="card-pf">
+            <h2 class="card-pf-title">
               Card Title
             </h2>
-            <div class="card-pf-body" style="height: 40px;">
+            <div class="card-pf-body">
               <p>[card contents]</p>
             </div>
           </div>
