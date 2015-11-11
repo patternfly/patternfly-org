@@ -15,7 +15,7 @@ A trend card displays a trend of one or more metrics. The most common use case f
 
 ### Large Cards
 
-![large-cards2][2] &nbsp; 
+![large-cards2][2] &nbsp;
 
 ## Description
 
@@ -24,14 +24,14 @@ A trend card displays a trend of one or more metrics. The most common use case f
 <div class="row">
   <div class="col-md-7">
     <p>
-      <img src="/wp-content/uploads/2015/08/single-card-callout.png" alt="single-card-callout" />
+      <img src="{{ site.baseurl}}wp-content/uploads/2015/08/single-card-callout.png" alt="single-card-callout" />
     </p>
-    
+
     <p>
-      <img src="/wp-content/uploads/2015/08/action-card-callout.png" alt="action-card-callout" />
+      <img src="{{ site.baseurl}}wp-content/uploads/2015/08/action-card-callout.png" alt="action-card-callout" />
     </p>
   </div>
-  
+
   <div class="col-md-5">
     <ol>
       <li>
@@ -47,7 +47,7 @@ A trend card displays a trend of one or more metrics. The most common use case f
           </li>
         </ul>
       </li>
-      
+
       <li>
         <b>Total Value</b> (optional): If needed, provide total value next to the actual value to help provide context.
       </li>
@@ -55,7 +55,7 @@ A trend card displays a trend of one or more metrics. The most common use case f
         <b>Unit of Measurement:</b> The label for unit of measurement is shown after the the value.
       </li>
       <li>
-        <b>Sparkline:</b> See the<a href="/patterns/sparkline/"> Sparkline pattern</a> for more details.
+        <b>Sparkline:</b> See the<a href="{{ site.baseurl}}patterns/sparkline/"> Sparkline pattern</a> for more details.
       </li>
       <li>
         <b>Tooltip:</b> Use a tooltip on hover to display additional information about exact points on the sparkline (e.g. values and/or percentages). A vertical line and marker helps to accentuate the hover point.
@@ -69,14 +69,14 @@ A trend card displays a trend of one or more metrics. The most common use case f
             Under the sparkline
           </li>
           <li>
-            In a <a href="/patterns/dashboard-cards/#dashboard-cards-time-frame-filter">time frame filter</a>
+            In a <a href="{{ site.baseurl}}patterns/dashboard-cards/#dashboard-cards-time-frame-filter">time frame filter</a>
           </li>
-        </ul> The time frame on a card is optional since there could be a single instance of the time frame label or 
-        
-        <a href="/patterns/dashboard-cards/#dashboard-cards-time-frame-filter">time frame filter</a> that applies to all cards within a single view.
+        </ul> The time frame on a card is optional since there could be a single instance of the time frame label or
+
+        <a href="{{ site.baseurl}}patterns/dashboard-cards/#dashboard-cards-time-frame-filter">time frame filter</a> that applies to all cards within a single view.
       </li>
       <li>
-        <b>Actions Panel</b> (optional): See <a href="/patterns/dashboard-cards/#dashboard-cards-actions-panel"> actions panel</a> under the Dashboard Cards pattern for more details.
+        <b>Actions Panel</b> (optional): See <a href="{{ site.baseurl}}patterns/dashboard-cards/#dashboard-cards-actions-panel"> actions panel</a> under the Dashboard Cards pattern for more details.
       </li>
     </ol>
   </div>
@@ -87,10 +87,10 @@ A trend card displays a trend of one or more metrics. The most common use case f
 <div class="row">
   <div class="col-md-7">
     <p>
-      <img src="/wp-content/uploads/2015/08/multi-card-callout.png" alt="multi-card-callout" />
+      <img src="{{ site.baseurl}}wp-content/uploads/2015/08/multi-card-callout.png" alt="multi-card-callout" />
     </p>
   </div>
-  
+
   <div class="col-md-5">
     <ol>
       <li>
@@ -115,7 +115,7 @@ A trend card displays a trend of one or more metrics. The most common use case f
         <b>Percentage</b> (optional): The location of the percentage can be shown to the right of the sparkline.
       </li>
       <li>
-        <b>Sparkline:</b> See the<a href="/patterns/sparkline/"> Sparkline pattern</a> for more details.
+        <b>Sparkline:</b> See the<a href="{{ site.baseurl}}patterns/sparkline/"> Sparkline pattern</a> for more details.
       </li>
       <li>
         <b>Tooltip:</b> Use a tooltip on hover to display additional information about exact points on the sparkline such as values or percentages. A vertical line and marker helps to accentuate the user’s hover point.

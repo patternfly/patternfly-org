@@ -2,8 +2,8 @@
 title: PatternFly
 author: rhamilton
 layout: home
-url-css-extra: '/bower_components/animate.css/animate.min.css'
-url-js-extra: ['/bower_components/wowjs/dist/wow.min.js', '/bower_components/jquery.scrollTo/jquery.scrollTo.min.js']
+url-css-extra: 'bower_components/animate.css/animate.min.css'
+url-js-extra: ['bower_components/wowjs/dist/wow.min.js', 'bower_components/jquery.scrollTo/jquery.scrollTo.min.js']
 ---
 <div class="jumbotron">
   <div class="container">
@@ -34,39 +34,39 @@ url-js-extra: ['/bower_components/wowjs/dist/wow.min.js', '/bower_components/jqu
     <p>PatternFly is a community project that promotes design commonality and improved user experience. Its offerings include open source code, patterns, style guides and supporting community (all this is tbd).</p>
     <div class="row">
       <div class="col-xs-6 col-sm-3 col-md-3">
-        <a href="/download/">
-          <img src="/assets/img/icon-code.svg" alt="Code icon" />
+        <a href="{{ site.baseurl}}download/">
+          <img src="{{ site.baseurl}}assets/img/icon-code.svg" alt="Code icon" />
         </a>
         <h3>Code</h3>
         <p>
-          <a href="/download/">Download</a>
+          <a href="{{ site.baseurl}}download/">Download</a>
         </p>
       </div>
       <div class="col-xs-6 col-sm-3 col-md-3">
-        <a href="/pattern-library/">
-          <img src="/assets/img/icon-library.svg" alt="Pattern Library icon" />
+        <a href="{{ site.baseurl}}pattern-library/">
+          <img src="{{ site.baseurl}}assets/img/icon-library.svg" alt="Pattern Library icon" />
         </a>
         <h3>Pattern Library</h3>
         <p>
-          <a href="/pattern-library/">View Patterns</a>
+          <a href="{{ site.baseurl}}pattern-library/">View Patterns</a>
         </p>
       </div>
       <div class="col-xs-6 col-sm-3 col-md-3">
-        <a href="/community/">
-          <img src="/assets/img/icon-community.svg" alt="Community icon" />
+        <a href="{{ site.baseurl}}community/">
+          <img src="{{ site.baseurl}}assets/img/icon-community.svg" alt="Community icon" />
         </a>
         <h3>Community</h3>
         <p>
-          <a href="/community/">Get Involved</a>
+          <a href="{{ site.baseurl}}community/">Get Involved</a>
         </p>
       </div>
       <div class="col-xs-6 col-sm-3 col-md-3">
-        <a href="/styles/">
-          <img src="/assets/img/icon-styles.svg" alt="Styles icon" />
+        <a href="{{ site.baseurl}}styles/">
+          <img src="{{ site.baseurl}}assets/img/icon-styles.svg" alt="Styles icon" />
         </a>
         <h3>Styles</h3>
         <p>
-          <a href="/styles/">View Styles</a>
+          <a href="{{ site.baseurl}}styles/">View Styles</a>
         </p>
       </div>
     </div>
@@ -88,7 +88,7 @@ url-js-extra: ['/bower_components/wowjs/dist/wow.min.js', '/bower_components/jqu
           </li>
         {% endfor %}
         </ul>
-        <p><a href="/whats-new/">View all</a></p>
+        <p><a href="{{ site.baseurl}}whats-new/">View all</a></p>
       </div>
       <div class="col-md-6">
         <h3>Featured Content</h3>
@@ -102,19 +102,19 @@ url-js-extra: ['/bower_components/wowjs/dist/wow.min.js', '/bower_components/jqu
           </ol>
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-              <img alt="Dashboard layout" src="/wp-content/uploads/2014/11/layouts-dashboard.png" />
+              <img alt="Dashboard layout" src="{{ site.baseurl}}wp-content/uploads/2014/11/layouts-dashboard.png" />
             </div>
             <div class="item">
-              <img alt="Form layout" src="/wp-content/uploads/2014/11/layouts-form.png" />
+              <img alt="Form layout" src="{{ site.baseurl}}wp-content/uploads/2014/11/layouts-form.png" />
             </div>
             <div class="item">
-              <img alt="Treeview layout" src="/wp-content/uploads/2014/11/layouts-treeview.png" />
+              <img alt="Treeview layout" src="{{ site.baseurl}}wp-content/uploads/2014/11/layouts-treeview.png" />
             </div>
             <div class="item">
-              <img alt="Tabs layout" src="/wp-content/uploads/2014/11/layouts-tab.png" />
+              <img alt="Tabs layout" src="{{ site.baseurl}}wp-content/uploads/2014/11/layouts-tab.png" />
             </div>
             <div class="item">
-              <img alt="Basic layout" src="/wp-content/uploads/2014/11/layouts-basic.png" />
+              <img alt="Basic layout" src="{{ site.baseurl}}wp-content/uploads/2014/11/layouts-basic.png" />
             </div>
           </div>
         </div>

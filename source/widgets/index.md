@@ -7,7 +7,7 @@ dvew_checkbox:
 ---
 <p>
   Part of the job of designing a great user experience involves the proper selection and use of widgets. The PattenFly library consists of components that are commonly used. Broader usage of PattenFly widgets is covered with the
-  <a title="Patterns" href="/patterns/">Patterns</a>
+  <a title="Patterns" href="{{ site.baseurl}}patterns/">Patterns</a>
   section of this site.
 </p>
 <p>

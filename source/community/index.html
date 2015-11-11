@@ -3,8 +3,7 @@ title: Community
 author: rhamilto
 layout: page
 ---
-<p>PatternFly is a <a href="#" class="href-needed">community of designers and developers</a> collaborating to build a UI framework for enterprise web applications. There are a number of ways you can participate.</p>
-
+<p>PatternFly is a community of designers and developers collaborating to build a UI framework for enterprise web applications. There are a number of ways you can participate.</p>
 <div class="row">
   <div class="col-md-4">
     <h2>Communicate</h2>
@@ -20,16 +19,15 @@ layout: page
     <p>PatternFly is an open source project, built by a community of designers and developers. We invite anyone to contribute.</p>
     <p><a href="https://github.com/patternfly/patternfly/issues/" target="_blank">Report an issue on PatternFly</a></p>
     <p><a href="https://github.com/patternfly/angular-patternfly/issues/" target="_blank">Report an issue on Angular PatternFly</a></p>
-    <p><a href="/get-started/contribute/">Contribute a design</a></p>
+    <p><a href="{{ site.baseurl}}get-started/contribute/">Contribute a design</a></p>
     <p><a href="https://github.com/patternfly/patternfly#patternfly-reference-implementation">Contribute reference code</a></p>
   </div>
   <div class="col-md-4">
     <h2>Keep Up-To-Date</h2>
     <p>Check out sprint schedules and a list of outstanding bugs and features as well as their status.</p>
-    <p><a href="https://trello.com/b/NVGU2lol/patternfly-patterns-and-styles/" target="_blank">View the Pattern Roadmap on Trello</a></p>
-    <p><a href="https://patternfly.atlassian.net/secure/RapidBoard.jspa?rapidView=4&projectKey=PTNFLY&view=planning.nodetail" target="_blank">View product backlog on Jira</a></p>
-    <p><a href="https://patternfly.atlassian.net/secure/RapidBoard.jspa?rapidView=4&view=planning&selectedIssue=PTNFLY-428&quickFilter=35" target="_blank"> View official list of bugs on Jira</a></p>
-    <p><a href="/community/monthly-community-meeting/">Join our monthly Community meeting</a></p>
+    <p><a href="https://patternfly.atlassian.net/secure/RapidBoard.jspa?rapidView=4amp;projectKey=PTNFLYamp;view=planning.nodetail" target="_blank">View product backlog on Jira</a></p>
+    <p><a href="https://patternfly.atlassian.net/secure/RapidBoard.jspa?rapidView=4amp;view=planningamp;selectedIssue=PTNFLY-428amp;quickFilter=35" target="_blank"> View official list of bugs on Jira</a></p>
+    <p><a href="{{ site.baseurl}}community/monthly-community-meeting/">Join our monthly Community meeting</a></p>
   </div>
 </div>
 <h2>Check out blog posts by PatternFly community members.</h2>
@@ -49,11 +47,11 @@ layout: page
     {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
         <li>
-          <a href="/community">&laquo;</a>
+          <a href="{{ site.baseurl}}community">&laquo;</a>
         </li>
       {% else %}
         <li>
-          <a href="/community/page{{paginator.previous_page}}">&laquo;</a>
+          <a href="{{ site.baseurl}}community/page{{paginator.previous_page}}">&laquo;</a>
         </li>
       {% endif %}
     {% else %}
@@ -67,7 +65,7 @@ layout: page
       </li>
     {% else %}
       <li>
-        <a href="/community">1</a>
+        <a href="{{ site.baseurl}}community">1</a>
       </li>
     {% endif %}
     {% for count in (2..paginator.total_pages) %}
@@ -77,13 +75,13 @@ layout: page
         </li>
       {% else %}
         <li>
-          <a href="/community/page{{count}}">{{count}}</a>
+          <a href="{{ site.baseurl}}community/page{{count}}">{{count}}</a>
         </li>
       {% endif %}
     {% endfor %}
     {% if paginator.next_page %}
       <li>
-        <a href="/community/page{{paginator.next_page}}">&raquo;</a>
+        <a href="{{ site.baseurl}}community/page{{paginator.next_page}}">&raquo;</a>
       </li>
     {% else %}
       <li class="disabled">

@@ -134,7 +134,7 @@ The aggregated status card shows a total number of objects and an aggregated sta
 <div class="row">
   <div class="col-md-4">
     <p>
-      <img src="/wp-content/uploads/2015/04/AggregateStatus_header-callout.png" alt="AggregateStatus_header-callout" />
+      <img src="{{ site.baseurl}}wp-content/uploads/2015/04/AggregateStatus_header-callout.png" alt="AggregateStatus_header-callout" />
     </p>
   </div>
 
@@ -176,7 +176,7 @@ The aggregated status card shows a total number of objects and an aggregated sta
 
 <div class="row">
   <div class="col-md-4">
-    <img src="/wp-content/uploads/2015/04/AggregateStatus-ContentArea-Callout.png" alt="AggregateStatus-ContentArea-Callout" class="alignnone size-full wp-image-4430" />
+    <img src="{{ site.baseurl}}wp-content/uploads/2015/04/AggregateStatus-ContentArea-Callout.png" alt="AggregateStatus-ContentArea-Callout" class="alignnone size-full wp-image-4430" />
   </div>
 
   <div class="col-md-8">
