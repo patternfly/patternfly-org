@@ -116,7 +116,7 @@ module.exports = function (grunt) {
       },
       css: {
         files: ['source/assets/css/*.css', '!source/assets/css/*.min.css'],
-        tasks: ['cssmin', 'csscount']
+        tasks: ['cssmin'/* , 'csscount' */]
       },
       js: {
         files: ['source/assets/js/*.js', '!source/assets/js/*.min.js'],
@@ -138,7 +138,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'less',
     'cssmin',
-    'csscount',
+    //'csscount',
     'uglify',
     'jekyll'
   ]);
