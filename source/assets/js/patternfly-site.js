@@ -29,7 +29,6 @@ jQuery( document ).ready(function() {
     if(window.location.hash == '') {
       window.location.hash = window.location.hash + '#_';
     }
-    console.log(window.location.hash);
     var hash = window.location.hash.split('#')[1];
     var prefix = '_';
     var hpieces = hash.split('/');
