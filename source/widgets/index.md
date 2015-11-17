@@ -2,8 +2,6 @@
 title: Widgets
 author: rhamilto
 layout: page
-dvew_checkbox:
-  - 1
 ---
 <p>
   Part of the job of designing a great user experience involves the proper selection and use of widgets. The PattenFly library consists of components that are commonly used. Broader usage of PattenFly widgets is covered with the

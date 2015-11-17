@@ -2,7 +2,6 @@
 title: Cheatsheet
 author: rhamilto
 layout: page
-url-js-extra: ['/bower_components/zeroclipboard/ZeroClipboard.min.js']
 ---
 To use on the desktop, install [PatternFlyIcons-webfont.ttf][1] or [FontAwesome.otf][2], set it as the font in your application, and copy and paste the icons directly from this page into your designs.
 
@@ -276,19 +275,18 @@ To use on the desktop, install [PatternFlyIcons-webfont.ttf][1] or [FontAwesome.
 </div>
 
 <script>
-  ZeroClipboard.config( { moviePath: '/bower_components/zeroclipboard/ZeroClipboard.swf' } );
   var client = new ZeroClipboard( jQuery('[class*="unicode-character"]') );
-  client.on( 'load', function() {
+  client.on( 'ready', function(event) {
     jQuery('#global-zeroclipboard-html-bridge').data('placement', 'top').attr('title', 'Copy to clipboard').tooltip();
+    client.on( 'copy', function(event) {
+      var glyph = jQuery(event.target).text();
+      client.setText(glyph);
+    }),
+    client.on( 'aftercopy', function(event) {
+      jQuery('#global-zeroclipboard-html-bridge').attr("title", "Copied!").tooltip("fixTitle").tooltip("show").attr("title", "Copy to clipboard").tooltip("fixTitle");
+    });
   });
-  client.on( 'dataRequested', function() {
-    var glyph = jQuery(this).text();
-    client.setText(glyph);
-  }),
-  client.on( 'complete', function() {
-    jQuery('#global-zeroclipboard-html-bridge').attr("title", "Copied!").tooltip("fixTitle").tooltip("show").attr("title", "Copy to clipboard").tooltip("fixTitle");
-  });
-  client.on( 'noflash wrongflash', function() {
+  client.on( 'error', function(event) {
     client.destroy();
   });
 </script>
