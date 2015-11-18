@@ -79,6 +79,7 @@ body {
 .example-pf .example-pf-demo-no-padding {
   padding: 0;
 }
+.example-pf h1,
 .example-pf h2,
 .example-pf h3 {
   line-height: 1.1;
