@@ -19,6 +19,9 @@ body {
   padding-right: (@grid-gutter-width / 4);
   position: absolute;
   right: (@grid-gutter-width / 2);
+  + .prettyprint {
+    max-height: 400px;
+  }
 }
 
 .clearfix img {
@@ -86,6 +89,11 @@ body {
   border: 1px solid @pre-border-color;
   border-bottom: 0;
   border-radius: @border-radius-base;
+  font-size: @font-size-base;
+  h2,
+  h3 {
+    line-height: 1.1;
+  }
 }
 
 footer {
@@ -550,7 +558,7 @@ html {
     }
     > a {
       background: #f5f5f5;
-      border: 1px solid #b3b3b3 !important;
+      border: 1px solid @pre-border-color !important;
       margin-bottom: 0 !important;
       &:hover {
         background: #e6e6e6;
@@ -578,7 +586,7 @@ html {
           width: 0;
         }
         &:before {
-          border-top-color: #999;
+          border-top-color: #aaa;
           bottom: -10px;
         }
       }
