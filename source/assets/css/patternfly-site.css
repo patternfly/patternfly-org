@@ -68,10 +68,16 @@ body {
   width: 91px;
 }
 .example-pf {
+  font-size: 12px;
+}
+.example-pf .example-pf-demo {
   border: 1px solid #cccccc;
   border-bottom: 0;
   border-radius: 1px;
-  font-size: 12px;
+  padding: 20px;
+}
+.example-pf .example-pf-demo-no-padding {
+  padding: 0;
 }
 .example-pf h2,
 .example-pf h3 {
@@ -558,6 +564,9 @@ html {
 .meta {
   color: #999999;
   font-size: 11px;
+}
+.nav-tabs-code {
+  margin-bottom: 20px;
 }
 .nav-tabs-pattern {
   margin-bottom: 40px;
