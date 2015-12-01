@@ -4,7 +4,9 @@
   <body class="home">
     {% include header.html %}
     {{ content }}
-    {% include footer.html %}
+    <div class="container-fluid">
+      {% include footer.html %}
+    </div>
     <script>
       new WOW().init();
       jQuery( document ).ready(function () {

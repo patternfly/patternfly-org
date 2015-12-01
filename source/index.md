@@ -6,7 +6,7 @@ url-css-extra: 'bower_components/animate.css/animate.min.css'
 url-js-extra: ['bower_components/wowjs/dist/wow.min.js', 'bower_components/jquery.scrollTo/jquery.scrollTo.min.js']
 ---
 <div class="jumbotron">
-  <div class="container">
+  <div class="container-fluid">
     <div class="splash">
       <div class="content">
         <img src="assets/img/patternfly-orb.svg" alt="PatternFly logo" class="wow fadeInDown" />
@@ -27,7 +27,7 @@ url-js-extra: ['bower_components/wowjs/dist/wow.min.js', 'bower_components/jquer
   </div>
 </div>
 <div class="about">
-  <div class="container">
+  <div class="container-fluid">
     <h2>
       About PatternFly
     </h2>
@@ -73,7 +73,7 @@ url-js-extra: ['bower_components/wowjs/dist/wow.min.js', 'bower_components/jquer
   </div>
 </div>
 <div class="whats-new">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-6">
         <h2>

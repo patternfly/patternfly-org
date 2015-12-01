@@ -1,8 +1,9 @@
 {% strip %}<header>
       <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
+        <div class="container-fluid">
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -26,7 +27,7 @@
               <li{% if location == 'community' %} class="active"{% endif %}><a href="{{ site.baseurl }}community/">Community</a></li>
               <li{% if location == 'download' %} class="active"{% endif %}><a href="{{ site.baseurl }}download/">Download</a></li>
             </ul>
-          </div><!-- end .navbar-collapse -->
-        </div><!-- end .container -->
+          </div>
+        </div>
       </nav>
     </header>{% endstrip %}

@@ -21,7 +21,7 @@ jQuery( document ).ready(function() {
     container: "body"
   });
   // Prevent the default behavior of <a>s in .pf-examples on /widgets
-  jQuery(".pf-example a").click(function( event ) {
+  jQuery('.pf-example a, .example-pf a').click(function( event ) {
     event.preventDefault();
   });
   // Enable nested tabs to remember location on refresh
