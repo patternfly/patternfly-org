@@ -687,8 +687,8 @@ html {
 .post_content h4[id],
 .post_content h5[id],
 .post_content p[id] {
-  margin-top: -83px;
-  padding-top: 83px;
+  margin-top: -82px;
+  padding-top: 82px;
 }
 .reference-markup {
   margin-top: 20px;
