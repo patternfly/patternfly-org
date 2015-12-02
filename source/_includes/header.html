@@ -16,12 +16,24 @@
             </form>
             <ul id="menu-primary" class="nav navbar-nav navbar-right">
               {% capture location %}{{ page.url | remove_first:'/' | split:'/' | first }}{% endcapture %}
-              <li{% if location == 'get-started' %} class="active"{% endif %}><a href="{{ site.baseurl }}get-started/">Get Started</a></li>
-              <li{% if location == 'whats-new' %} class="active"{% endif %}><a href="{{ site.baseurl }}whats-new">What's New</a></li>
-              <li{% if location == 'pattern-library' %} class="active"{% endif %}><a href="{{ site.baseurl }}pattern-library/">Pattern Library</a></li>
-              <li{% if location == 'styles' %} class="active"{% endif %}><a href="{{ site.baseurl }}styles/">Styles</a></li>
-              <li{% if location == 'community' %} class="active"{% endif %}><a href="{{ site.baseurl }}community/">Community</a></li>
-              <li{% if location == 'download' %} class="active"{% endif %}><a href="{{ site.baseurl }}download/">Download</a></li>
+              <li{% if location == 'get-started' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}get-started/">Get Started</a>
+              </li>
+              <li{% if location == 'whats-new' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}whats-new">What's New</a>
+              </li>
+              <li{% if location == 'pattern-library' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/">Pattern Library</a>
+              </li>
+              <li{% if location == 'styles' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}styles/">Styles</a>
+              </li>
+              <li{% if location == 'community' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}community/">Community</a>
+              </li>
+              <li{% if location == 'download' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}download/">Download</a>
+              </li>
             </ul>
           </div>
         </div>
