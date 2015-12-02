@@ -87,7 +87,7 @@ footer {
   border-top: 1px solid #D5D5D5;
   font-size: 10px;
   line-height: 15px;
-  margin-top: 30px;
+  margin-top: 70px;
   padding-bottom: 28px;
   padding-top: 28px;
 }
@@ -263,7 +263,7 @@ header .navbar.navbar-default .navbar-form {
   }
 }
 header .navbar.navbar-default .navbar-form:before {
-  color: #ddd;
+  color: #eee;
   content: "\f002";
   font: 14px/1 "FontAwesome";
   position: absolute;
@@ -275,9 +275,6 @@ header .navbar.navbar-default .navbar-form:before {
     left: 14px;
     top: 4px;
   }
-}
-header .navbar.navbar-default .navbar-form:hover:before {
-  color: #fff;
 }
 header .navbar.navbar-default .navbar-form .btn {
   display: none;
