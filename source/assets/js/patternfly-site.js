@@ -25,7 +25,7 @@ jQuery( document ).ready(function() {
     event.preventDefault();
   });
   // Enable nested tabs to remember location on refresh
-   jQuery(function(){
+  jQuery(function(){
     if(window.location.hash == '') {
       window.location.hash = window.location.hash + '#_';
     }
@@ -69,5 +69,9 @@ jQuery( document ).ready(function() {
   client.on( 'error', function(event) {
     client.destroy();
     jQuery('.btn-copy').hide();
+  });
+  // enable .navbar-toggle-sidebar to show/hide .navbar-sidebar
+  jQuery('.navbar-toggle-sidebar').on('click', function (e) {
+    jQuery('.navbar-sidebar').toggleClass('open');
   });
 });

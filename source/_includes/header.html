@@ -12,30 +12,91 @@
           </div>
           <div class="navbar-collapse collapse">
             <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
-              {% include search.html name="q" %}
+              <div class="form-group">
+                <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                <input name="sitesearch" type="hidden" value="patternfly.org">
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div>
             </form>
             <ul id="menu-primary" class="nav navbar-nav navbar-right">
-              {% capture location %}{{ page.url | remove_first:'/' | split:'/' | first }}{% endcapture %}
-              <li{% if location == 'get-started' %} class="active"{% endif %}>
+              <li{% if primary == 'get-started' %} class="active"{% endif %}>
                 <a href="{{ site.baseurl }}get-started/">Get Started</a>
               </li>
-              <li{% if location == 'whats-new' %} class="active"{% endif %}>
+              <li{% if primary == 'whats-new' %} class="active"{% endif %}>
                 <a href="{{ site.baseurl }}whats-new">What's New</a>
               </li>
-              <li{% if location == 'pattern-library' %} class="active"{% endif %}>
+              <li{% if primary == 'pattern-library' %} class="active"{% endif %}>
                 <a href="{{ site.baseurl }}pattern-library/">Pattern Library</a>
               </li>
-              <li{% if location == 'styles' %} class="active"{% endif %}>
+              <li{% if primary == 'styles' %} class="active"{% endif %}>
                 <a href="{{ site.baseurl }}styles/">Styles</a>
               </li>
-              <li{% if location == 'community' %} class="active"{% endif %}>
+              <li{% if primary == 'community' %} class="active"{% endif %}>
                 <a href="{{ site.baseurl }}community/">Community</a>
               </li>
-              <li{% if location == 'download' %} class="active"{% endif %}>
+              <li{% if primary == 'download' %} class="active"{% endif %}>
                 <a href="{{ site.baseurl }}download/">Download</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+      {% if primary == 'get-started' or primary == 'pattern-library' or primary == 'styles' %}<nav class="navbar navbar-sidebar" aria-labelledby="navbar-toggle-sidebar">
+        <button class="btn btn-default navbar-toggle-sidebar" id="navbar-toggle-sidebar">
+          <span class="fa fa-angle-double-right"></span>
+          <span class="sr-only">Toggle</span>
+        </button>
+        <ul>
+          {% if primary == 'get-started' %}
+          <li>
+            <a href="{{ site.baseurl }}get-started/">Get Started</a>
+          </li>
+          {% elsif primary == 'pattern-library' %}
+          <li>
+            <a href="{{ site.baseurl }}pattern-library/">Pattern Library</a>
+            <ul>
+              <li {% if secondary == 'application-framework' %} class="active"{% endif %}>
+                 <a href="{{ site.baseurl }}pattern-library/application-framework/">Application Framework</a>
+              </li>
+              <li {% if secondary == 'cards' %} class="active"{% endif %}>
+                <a role="button" data-toggle="collapse" href="#cards-secondary" aria-expanded="false" aria-controls="cards-secondary">Cards</a>
+                <ul class="collapse {% if secondary == 'cards' %}in{% endif %}" id="cards-secondary">
+                  <li {% if tertiary == 'aggregate-status-card' %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}pattern-library/cards/aggregate-status-card/">Aggregate Status Card</a>
+                  </li>
+                  <li {% if tertiary == 'trend-card' %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}pattern-library/cards/trend-card/">Trend Card</a>
+                  </li>
+                  <li {% if tertiary == 'utilization-bar-card' %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}pattern-library/cards/utilization-bar-card/">Utilization Bar Card</a>
+                  </li>
+                   <li {% if tertiary == 'utilization-trend-card' %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}pattern-library/cards/utilization-trend-card/">Utilization Trend Card</a>
+                  </li>
+                </ul>
+              </li>
+              <li {% if secondary == 'content-views' %} class="active"{% endif %}>
+                 <a href="{{ site.baseurl }}pattern-library/content-views/">Content Views</a>
+              </li>
+              <li {% if secondary == 'communication' %} class="active"{% endif %}>
+                 <a href="{{ site.baseurl }}pattern-library/communication/">Communication</a>
+              </li>
+              <li {% if secondary == 'data-visualization' %} class="active"{% endif %}>
+                 <a href="{{ site.baseurl }}pattern-library/data-visualization/">Data Visualization</a>
+              </li>
+              <li {% if secondary == 'forms-and-controls' %} class="active"{% endif %}>
+                 <a href="{{ site.baseurl }}pattern-library/forms-and-controls/">Forms and Controls</a>
+              </li>
+              <li {% if secondary == 'navigation' %} class="active"{% endif %}>
+                 <a href="{{ site.baseurl }}pattern-library/navigation/">Navigation</a>
+              </li>
+            </ul>
+          </li>
+          {% elsif primary == 'styles' %}
+          <li>
+            <a href="{{ site.baseurl }}styles/">Styles</a>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>{% endif %}
     </header>{% endstrip %}

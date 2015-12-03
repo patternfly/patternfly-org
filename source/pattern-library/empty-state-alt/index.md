@@ -3,7 +3,7 @@ title: Empty State
 author: lhinson
 layout: page
 ---
-{% include nav-tabs-pattern.html codetab=false %}
+{% include nav-tabs-pattern.html %}
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">
     <p>
@@ -16,20 +16,9 @@ layout: page
       <li>Selected filters cause an empty result.</li>
       <li>There is a connectivity issue and the data set cannot be obtained.</li>
     </ul>
-    {% include nav-tabs-code.html %}
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane nested active" id="ref-impl">
-        <div class="example-pf">
-          <div class="example-pf-demo">
-            {% include empty-state.html %}
-          </div>
-        </div>
-        <button class="btn btn-default btn-copy">Copy</button>
-        <pre class="prettyprint">{% capture markup_include %}{% include empty-state.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
-      </div>
-      <div role="tabpanel" class="tab-pane nested" id="angular">
-        [angular code goes here]
-      </div>
+    <h2>Example</h2>
+    <div class="example-pf">
+      {% include empty-state.html %}
     </div>
   </div>
   <div role="tabpanel" class="tab-pane" id="design">
@@ -45,6 +34,23 @@ layout: page
       <li><strong>Primary Action Button:</strong> The primary action is displayed as a prominent blue button. See the <a href="/styles/terminology-and-wording/#action-labels">Action Labels</a> section for more information about terminology and wording specific to action labels.</li>
       <li><strong>Secondary Action Buttons</strong> (optional): Secondary actions are alternative options for the user. They are shown as more subtle gray buttons and located below the main action. There can be more than one secondary action.</li>
     </ol>
+   </div>
+   <div role="tabpanel" class="tab-pane" id="code">
+    {% include nav-tabs-code.html %}
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane nested active" id="ref-impl">
+        <div class="example-pf">
+          <div class="example-pf-demo">
+            {% include empty-state.html %}
+          </div>
+        </div>
+        <button class="btn btn-default btn-copy">Copy</button>
+        <pre class="prettyprint">{% capture markup_include %}{% include empty-state.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+      </div>
+      <div role="tabpanel" class="tab-pane nested" id="angular">
+        [angular code goes here]
+      </div>
+    </div>
   </div>
   <div role="tabpanel" class="tab-pane" id="usability-test">
     [ usability content goes here ]

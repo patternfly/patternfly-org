@@ -196,6 +196,13 @@ h1, h2, h3 {
 header {
   + .container-fluid {
     padding-top: 72px;
+    transition: padding-left .2s cubic-bezier(.35,0,.25,1);
+    .has-sidebar & {
+      padding-left: ((@grid-gutter-width / 2) + @navbar-toggle-sidebar-width);
+      @media (min-width: @screen-md) {
+        padding-left: (@navbar-sidebar-width + (@grid-gutter-width / 2));
+      }
+    }
   }
   .navbar.navbar-default {
     background: #040404 !important;
@@ -239,16 +246,15 @@ header {
     }
     .navbar-collapse {
       border-top-color: rgba(255,255,255,.15);
-      -moz-box-shadow: none;
-      -webkit-box-shadow: none;
-      box-shadow: none;
       max-height: auto;
       @media (max-width: @grid-float-breakpoint-max) {
+        box-shadow: 0 0 3px rgba(0,0,0,.95);
         padding-bottom: 10px;
         padding-top: 15px;
         .home & {
           background: #040404;
           border-top-color: transparent;
+          box-shadow: none;
         }
       }
       .navbar-nav {
@@ -593,6 +599,165 @@ html {
 .meta {
   color: @gray-light;
   font-size: @font-size-small;
+}
+
+.navbar-sidebar {
+  background: @navbar-sidebar-bg-color url(../img/grid-sidebar.png) no-repeat 50% 100%;
+  border: 0;
+  border-radius: 0;
+  bottom: 0;
+  left: (-(@navbar-sidebar-width));
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 72px;
+  transition: all .2s cubic-bezier(.35,0,.25,1);
+  width: @navbar-sidebar-width;
+  z-index: (@zindex-navbar-fixed - 1);
+  @media (min-width: @screen-md) {
+    box-shadow: none !important;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-right: 0;
+  }
+  &.open {
+    box-shadow: 0 0 3px rgba(0,0,0,.95);
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .navbar-toggle-sidebar {
+      box-shadow: none;
+      background-color: transparent;
+      right: 0;
+      &:active,
+      &:hover {
+        background: rgba(92, 103, 112, 0.5) !important;
+      }
+      &:focus {
+        background: transparent;
+      }
+      .fa-angle-double-right{
+        left: 6px;
+        &:before {
+          content: @fa-var-angle-double-left;
+        }
+      }
+    }
+  }
+  .navbar-toggle-sidebar {
+    background: @navbar-sidebar-bg-color;
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0 0 3px rgba(0,0,0,.95);
+    color: rgba(255,255,255,.6);
+    height: 100%;
+    padding: 0 5px;
+    position: absolute;
+    right: (-(@navbar-toggle-sidebar-width));
+    top: 0;
+    width: @navbar-toggle-sidebar-width;
+    z-index: 3;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false) !important;
+    @media (min-width: @screen-md) {
+      display: none;
+    }
+    &:active,
+    &:focus,
+    &:hover {
+      background: lighten(@navbar-sidebar-bg-color, 10%);
+      color: rgba(255,255,255,1);
+      outline: none;
+    }
+    .fa-angle-double-right {
+      font-size: 20px;
+      position: absolute;
+      left: 7px;
+      top: 5px;
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      position: relative;
+      &.active > a {
+        font-weight: 600;
+      }
+      a {
+        color: #fff;
+        display: block;
+        padding: (@grid-gutter-width / 8) (@grid-gutter-width / 2);
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  > ul {
+    margin: (@grid-gutter-width / 2) 0;
+    > li {
+      > a {
+        border-bottom: 1px solid #393f44;
+        font-size: (@font-size-large + 2);
+        margin-bottom: 10px;
+        padding-bottom: ((@grid-gutter-width / 4) + 4);
+        padding-top: (@grid-gutter-width / 4);
+      }
+      > ul > li {
+        &.active {
+          background: rgba(101, 109, 115, 0.25);
+          &:after {
+            background: @link-color;
+            content: '';
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 4px;
+            z-index: 2;
+          }
+          > a:hover {
+            background: transparent;
+          }
+          > ul {
+            display: block;
+            > li {
+              &.active > a {
+                color: @link-color;
+                &:hover {
+                  background: transparent;
+                }
+              }
+              > a:hover {
+                background: rgba(0,0,0,.25);
+              }
+            }
+          }
+        }
+        a {
+          &:focus {
+            text-decoration: none;
+          }
+          &:hover {
+            background: rgba(101, 109, 115, 0.15);
+          }
+        }
+        > ul {
+          &, &.collapse {
+            display: none;
+          }
+          &.collapse.in {
+            display: block;
+          }
+          > li > a {
+            padding-left: ((@grid-gutter-width) / 2 + (@grid-gutter-width) / 4);
+          }
+        }
+      }
+    }
+  }
 }
 
 .nav-tabs-code {
