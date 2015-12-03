@@ -2,7 +2,7 @@
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -44,7 +44,7 @@
       {% if primary == 'get-started' or primary == 'pattern-library' or primary == 'styles' %}<nav class="navbar navbar-sidebar" aria-labelledby="navbar-toggle-sidebar">
         <button class="btn btn-default navbar-toggle-sidebar" id="navbar-toggle-sidebar">
           <span class="fa fa-angle-double-right"></span>
-          <span class="sr-only">Toggle</span>
+          <span class="sr-only">Toggle sub navigation</span>
         </button>
         <ul>
           {% if primary == 'get-started' %}
@@ -59,7 +59,7 @@
                  <a href="{{ site.baseurl }}pattern-library/application-framework/">Application Framework</a>
               </li>
               <li {% if secondary == 'cards' %} class="active"{% endif %}>
-                <a role="button" data-toggle="collapse" href="#cards-secondary" aria-expanded="false" aria-controls="cards-secondary">Cards</a>
+                <a role="button" data-toggle="collapse" href="#cards-secondary" aria-expanded="{% if secondary == 'cards' %}true{% else %}false{% endif %}" aria-controls="cards-secondary">Cards</a>
                 <ul class="collapse {% if secondary == 'cards' %}in{% endif %}" id="cards-secondary">
                   <li {% if tertiary == 'aggregate-status-card' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/cards/aggregate-status-card/">Aggregate Status Card</a>
