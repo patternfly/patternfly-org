@@ -763,7 +763,7 @@ html {
   background: transparent;
 }
 .navbar-sidebar > ul > li > ul > li.active > ul > li > a:hover {
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.1);
 }
 .navbar-sidebar > ul > li > ul > li a:focus {
   text-decoration: none;

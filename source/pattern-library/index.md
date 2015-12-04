@@ -23,7 +23,7 @@ Consider these patterns to be recipes for designing common interactions.  You s
 
 Use of standard widgets and styling will ensure visual and behavioral consistency with other applications applying the PatternFly toolkit.  Our widget library is built on [Bootstrap 3][8] with some extensions and additions.  Users can download component and visual assets, along with live code examples from our [GitHub site][1] to integrate with your project.  If you are in need of a widget that you don&#8217;t find included as part of our standard library or want to integrate PatternFly styling with another framework, [contact us][9] for advice and design assistance.
 
-### [Visual Styles][10]
+### [Styles][10]
 
 Visit the Styles page for additional information about color palettes, fonts, and icons used in PatternFly.
 
@@ -36,12 +36,12 @@ This project will succeed because we build important connections between communi
 We welcome and encourage all of those that would are interested, to help us in this project effort. Please visit our <a title="Contribute" href="/contribute/">Contribute </a>page for more information.  If you have questions or would like to provide suggestions on how to enhance PatternFly, please contact <a href="mailto:patternfly@redhat.com">patternfly@redhat.com</a> or <a href="https://www.redhat.com/mailman/listinfo/patternfly">join our mailing list</a>.-->
 
  [1]: https://github.com/patternfly/patternfly
- [2]: /layouts/ "Layouts"
- [3]: /layouts/layout-templates/ "Layout Templates"
- [4]: /layouts/patternfly-grid-system/ "PatternFly Grid System"
- [5]: /wikis/patterns/ "Patterns"
+ [2]: /layouts/
+ [3]: /layouts/layout-templates/
+ [4]: /layouts/patternfly-grid-system/
+ [5]: /wikis/patterns/
  [6]: /patterns/
- [7]: /widgets/ "Widgets"
+ [7]: /widgets/
  [8]: http://getbootstrap.com/
- [9]: mailto:patternfly@redhat.com "contact us"
- [10]: /visual-styles/ "Styles"
+ [9]: mailto:patternfly@redhat.com
+ [10]: /styles/
