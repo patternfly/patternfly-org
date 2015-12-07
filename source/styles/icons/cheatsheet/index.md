@@ -14,6 +14,10 @@ To use on the desktop, install [PatternFlyIcons-webfont.ttf][1] or [FontAwesome.
         <span class="icon-class">pficon-add-circle-o</span>
       </li>
       <li>
+        <span class="pficon pficon-unicode-character"></span>
+        <span class="icon-class">pficon-build</span>
+      </li>
+      <li>
         <span class="pficon pficon-unicode-character"></span>
         <span class="icon-class">pficon-builder-image</span>
       </li>

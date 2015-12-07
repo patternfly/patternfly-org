@@ -24,6 +24,10 @@ To use these icons on the desktop, check out the [cheatsheet][4].
         <span class="icon-class">pficon-add-circle-o</span>
       </li>
       <li>
+        <span class="pficon pficon-build"></span>
+        <span class="icon-class">pficon-build</span>
+      </li>
+      <li>
         <span class="pficon pficon-builder-image"></span>
         <span class="icon-class">pficon-builder-image</span>
       </li>
