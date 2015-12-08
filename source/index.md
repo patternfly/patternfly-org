@@ -81,7 +81,7 @@ url-js-extra: ['bower_components/wowjs/dist/wow.min.js', 'bower_components/jquer
         </h2>
         <ul class="updates">
         {% assign whats-news = site.whats-news | sort: 'date' | reverse %}
-        {% for whatsnew in whats-news limit:2 %}
+        {% for whatsnew in whats-news limit:3 %}
           <li>
             <h3>{{ whatsnew.date | date: '%B %-d, %Y' }}</h3>
             {{ whatsnew.content }}
