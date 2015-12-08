@@ -51,7 +51,7 @@ layout: page
     <h2>Card with a Single Metric</h2>
     <div class="row">
       <div class="col-md-7">
-        <img src="{{site.baseurl}}wp-content/uploads/2015/08/singe-metric-utilization-card2.png" alt="singe-metric-utilization-card2" />
+        <img src="{{site.baseurl}}assets/img/singe-metric-utilization-card2.png" alt="singe-metric-utilization-card2" />
       </div>
       <div class="col-md-5">
         <ol>
@@ -70,7 +70,7 @@ layout: page
     <h2>Card with Multiple Metrics</h2>
     <div class="row">
       <div class="col-md-7">
-        <img src="{{site.baseurl}}wp-content/uploads/2015/08/multi-metric-utilization-card-callout1.png" alt="multi-metric-utilization-card-callout"/>
+        <img src="{{site.baseurl}}assets/img/multi-metric-utilization-card-callout1.png" alt="multi-metric-utilization-card-callout"/>
       </div>
       <div class="col-md-5">
         <ol>

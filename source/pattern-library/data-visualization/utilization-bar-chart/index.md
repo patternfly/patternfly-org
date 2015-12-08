@@ -47,7 +47,7 @@ layout: page
 <h2>Description</h2>
 <div class="row">
 <div class="col-md-6">
-<p><img src="{{site.baseurl}}wp-content/uploads/2015/11/utilziationbarchart1.png" alt="utilziationbarchart1"/></p>
+<p><img src="{{site.baseurl}}assets/img/utilziationbarchart1.png" alt="utilziationbarchart1"/></p>
 </div>
 
 <div class="col-md-6">

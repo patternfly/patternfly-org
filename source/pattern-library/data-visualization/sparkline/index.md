@@ -112,7 +112,7 @@ layout: page
 
 <div class="row">
 <div class="col-md-4">
-<p><img src="{{site.baseurl}}wp-content/uploads/2015/08/sparkline_callout2.png" alt="sparkline_callout2"/></p>
+<p><img src="{{site.baseurl}}assets/img/sparkline_callout2.png" alt="sparkline_callout2"/></p>
 </div>
 
 <div class="col-md-8">

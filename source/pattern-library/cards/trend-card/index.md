@@ -9,16 +9,16 @@ layout: page
 
 <h2>Examples</h2>
 <h3>Small Cards</h3>
-<p><img src="{{site.baseurl}}wp-content/uploads/2015/08/small-cards-example.png" alt="small-cards-example"/></p>
+<p><img src="{{site.baseurl}}assets/img/small-cards-example.png" alt="small-cards-example"/></p>
 <h3>Large Cards</h3>
-<p><img src="{{site.baseurl}}wp-content/uploads/2015/08/large-cards2.png" alt="large-cards2"/></p>
+<p><img src="{{site.baseurl}}assets/img/large-cards2.png" alt="large-cards2"/></p>
 
 <h2>Description</h2>
 <h3>Card with a Single Trend</h3>
 <div class="row">
     <div class="col-md-7">
-        <p><img src="{{site.baseurl}}wp-content/uploads/2015/08/single-card-callout.png" alt="single-card-callout"/></p>
-        <p><img src="{{site.baseurl}}wp-content/uploads/2015/08/action-card-callout.png" alt="action-card-callout"/></p>
+        <p><img src="{{site.baseurl}}assets/img/single-card-callout.png" alt="single-card-callout"/></p>
+        <p><img src="{{site.baseurl}}assets/img/action-card-callout.png" alt="action-card-callout"/></p>
     </div>
     <div class="col-md-5">
         <ol>
@@ -48,7 +48,7 @@ The time frame on a card is optional since there could be a single instance of t
 <h3>Card with Multiple Trends</h3>
 <div class="row">
     <div class="col-md-7">
-        <p><img src="{{site.baseurl}}wp-content/uploads/2015/08/multi-card-callout.png" alt="multi-card-callout"/></p>
+        <p><img src="{{site.baseurl}}assets/img/multi-card-callout.png" alt="multi-card-callout"/></p>
     </div>
     <div class="col-md-5">
         <ol>

@@ -48,7 +48,7 @@ This pattern should NOT be used when:
 
 <div class="row">
   <div class="col-md-4">
-    <img src="{{site.baseurl}}wp-content/uploads/2015/08/datepicker-callout3.png" alt="datepicker-callout3" />
+    <img src="{{site.baseurl}}assets/img/datepicker-callout3.png" alt="datepicker-callout3" />
   </div>
 
   <div class="col-md-8">
@@ -70,6 +70,9 @@ This pattern should NOT be used when:
       </li>
       <li>
         <b>Previous and Next Buttons:</b> Allows the user to navigate through the months or years.
-      </li></div> </div>
+      </li>
+    </ol>
+  </div>
+</div>
 
  [1]: http://bootstrap-datepicker.readthedocs.org/en/latest/

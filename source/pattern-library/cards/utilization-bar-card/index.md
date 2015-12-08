@@ -314,7 +314,7 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
 <h2>Description</h2>
 <div class="row">
 <div class="col-md-7">
-<p><img src="{{site.baseurl}}wp-content/uploads/2015/11/utilization-bar-card3.png" alt="utilization-bar-card3"/></p>
+<p><img src="{{site.baseurl}}assets/img/utilization-bar-card3.png" alt="utilization-bar-card3"/></p>
 </div>
 
 <div class="col-md-5">

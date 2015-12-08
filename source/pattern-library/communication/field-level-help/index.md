@@ -40,7 +40,7 @@ layout: page
 
 <h2>Description</h2>
 
-<a href="{{site.baseurl}}wp-content/uploads/2015/08/field-level-help-callout.png"><img src="{{site.baseurl}}wp-content/uploads/2015/08/field-level-help-callout.png" alt="field-level-help-callout" class="alignnone size-full wp-image-4230" /></a>
+<a href="{{site.baseurl}}assets/img/field-level-help-callout.png"><img src="{{site.baseurl}}assets/img/field-level-help-callout.png" alt="field-level-help-callout" class="alignnone size-full wp-image-4230" /></a>
 
 <ol>
 <li><b>Icon:</b> The help icon is Font Awesome icon, fa-info-circle, and is positioned to the right of the component. The icon is blue (hex# 0099d3) to indicate that it is interactive.</li>

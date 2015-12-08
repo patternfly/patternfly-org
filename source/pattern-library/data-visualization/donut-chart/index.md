@@ -322,7 +322,7 @@ layout: page
 
 <div class="row">
 <div class="col-md-4">
-<p><img src="{{site.baseurl}}wp-content/uploads/2015/07/donut-chart-callout.png" alt="donut-chart-callout"/></p>
+<p><img src="{{site.baseurl}}assets/img/donut-chart-callout.png" alt="donut-chart-callout"/></p>
 </div>
 
 <div class="col-md-8">

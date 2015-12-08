@@ -220,9 +220,9 @@ layout: page
 <h3>Header Area:</h3>
 <div class="row">
 <div class="col-md-4">
-<p><img src="{{site.baseurl}}wp-content/uploads/2015/04/AggregateStatus_header-callout.png" alt="AggregateStatus_header-callout"/></p>
+<p><img src="{{site.baseurl}}assets/img/AggregateStatus_header-callout.png" alt="AggregateStatus_header-callout"/></p>
 
-<p><img src="{{site.baseurl}}wp-content/uploads/2015/04/single_mini_agg_status-header-callout.png" alt="single_mini_agg_status-header-callout"/></p>
+<p><img src="{{site.baseurl}}assets/img/single_mini_agg_status-header-callout.png" alt="single_mini_agg_status-header-callout"/></p>
 </div>
 
 <div class="col-md-8">
@@ -238,8 +238,8 @@ layout: page
 <h3>Content Area:</h3>
 <div class="row">
 <div class="col-md-4">
-<p><img src="{{site.baseurl}}wp-content/uploads/2015/04/aggstatus_callout.png" alt="aggstatus_callout"/></p>
-<p><img src="{{site.baseurl}}wp-content/uploads/2015/04/single_mini_agg_status-number-callout.png" alt="single_mini_agg_status-number-callout"/></p>
+<p><img src="{{site.baseurl}}assets/img/aggstatus_callout.png" alt="aggstatus_callout"/></p>
+<p><img src="{{site.baseurl}}assets/img/single_mini_agg_status-number-callout.png" alt="single_mini_agg_status-number-callout"/></p>
 </div>
 
 <div class="col-md-8">

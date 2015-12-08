@@ -101,19 +101,19 @@ url-js-extra: ['bower_components/wowjs/dist/wow.min.js', 'bower_components/jquer
           </ol>
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-              <img alt="Dashboard layout" src="{{ site.baseurl}}wp-content/uploads/2014/11/layouts-dashboard.png" />
+              <img alt="Dashboard layout" src="{{ site.baseurl}}assets/img/layouts-dashboard.png" />
             </div>
             <div class="item">
-              <img alt="Form layout" src="{{ site.baseurl}}wp-content/uploads/2014/11/layouts-form.png" />
+              <img alt="Form layout" src="{{ site.baseurl}}assets/img/layouts-form.png" />
             </div>
             <div class="item">
-              <img alt="Treeview layout" src="{{ site.baseurl}}wp-content/uploads/2014/11/layouts-treeview.png" />
+              <img alt="Treeview layout" src="{{ site.baseurl}}assets/img/layouts-treeview.png" />
             </div>
             <div class="item">
-              <img alt="Tabs layout" src="{{ site.baseurl}}wp-content/uploads/2014/11/layouts-tab.png" />
+              <img alt="Tabs layout" src="{{ site.baseurl}}assets/img/layouts-tab.png" />
             </div>
             <div class="item">
-              <img alt="Basic layout" src="{{ site.baseurl}}wp-content/uploads/2014/11/layouts-basic.png" />
+              <img alt="Basic layout" src="{{ site.baseurl}}assets/img/layouts-basic.png" />
             </div>
           </div>
         </div>

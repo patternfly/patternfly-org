@@ -25,7 +25,7 @@ Once the information architecture is understood, you should identify a common la
 
 &nbsp;
 
-<img class="alignnone wp-image-2254 size-full" src="{{site.baseurl}}wp-content/uploads/2014/02/DesigningWebApplications.png" alt="DesigningWebApplications" width="960" height="700" />
+<img class="alignnone wp-image-2254 size-full" src="{{site.baseurl}}assets/img/DesigningWebApplications.png" alt="DesigningWebApplications" width="960" height="700" />
 
 &nbsp;
 
@@ -41,7 +41,7 @@ Organizing the workspace requires special consideration. When faced with the nee
 
 &nbsp;
 
-<img class="alignnone wp-image-2256 size-full" src="{{site.baseurl}}wp-content/uploads/2014/02/Layout_regions_tabs21.png" alt="Layout_regions_tabs2" width="960" height="700" />
+<img class="alignnone wp-image-2256 size-full" src="{{site.baseurl}}assets/img/Layout_regions_tabs21.png" alt="Layout_regions_tabs2" width="960" height="700" />
 
  [1]: {{site.baseurl}}layouts/layout-templates/ "Layout Templates"
  [2]: http://getbootstrap.com/css/#grid

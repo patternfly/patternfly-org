@@ -3,7 +3,7 @@ title: Login Page
 author: serena
 layout: page
 ---
-<p class="tn-prototype tn-prototype-inverse"><a title="Login Page Sample" href="https://rawgit.com/patternfly/patternfly/master/tests/login.html" target="_blank"><img class="alignnone wp-image-3625" src="{{site.baseurl}}wp-content/uploads/2015/05/login.png" alt="login" width="1200" height="687" /></a></p>
+<p class="tn-prototype tn-prototype-inverse"><a title="Login Page Sample" href="https://rawgit.com/patternfly/patternfly/master/tests/login.html" target="_blank"><img class="alignnone wp-image-3625" src="{{site.baseurl}}assets/img/login.png" alt="login" width="1200" height="687" /></a></p>
 <p class="reference-markup"><a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="login-layout-markup" href="#login-layout-markup">Reference Markup</a></p>
 <div class="collapse" id="login-layout-markup">
   <pre class="prettyprint">
@@ -104,7 +104,7 @@ The login page allows the user to gain access to an application by entering thei
 </li>
 </ul>
 <h2>Description</h2>
-<a href="{{site.baseurl}}wp-content/uploads/2015/05/login_sample.png"><img class="alignnone wp-image-3608" src="{{site.baseurl}}wp-content/uploads/2015/05/login_sample-1024x586.png" alt="login_sample" width="1200" height="687" /></a>
+<a href="{{site.baseurl}}assets/img/login_sample.png"><img class="alignnone wp-image-3608" src="{{site.baseurl}}assets/img/login_sample.png" alt="login_sample" width="1200" height="687" /></a>
 <h2></h2>
 <ol>
   <li><b>The application or project name</b> uses a combination of Open Sans Extra Bold and Open Sans Regular.</li>
@@ -118,17 +118,17 @@ The login page allows the user to gain access to an application by entering thei
 <ol style="list-style-type: lower-alpha;">
   <li>An error is triggered if the user incorrectly types their username or password. In this event, after the information has been submitted, the value entered for the username and other optional fields remains populated however, the value for the password is discarded.
 <h3></h3>
-<a href="{{site.baseurl}}wp-content/uploads/2015/05/login_error.png"><img class="alignnone wp-image-3610 size-full" src="{{site.baseurl}}wp-content/uploads/2015/05/login_error.png" alt="login_error" width="699" height="364" /></a>
+<a href="{{site.baseurl}}assets/img/login_error.png"><img class="alignnone wp-image-3610 size-full" src="{{site.baseurl}}assets/img/login_error.png" alt="login_error" width="699" height="364" /></a>
 <h3></h3>
 </li>
   <li>A warning message is triggered if the user has the caps lock turned on. Once the caps lock is turned off, the warning should disappear.
 <h3></h3>
-<a href="{{site.baseurl}}wp-content/uploads/2015/05/login_warningNew.png"><img class="alignnone wp-image-3615 size-full" src="{{site.baseurl}}wp-content/uploads/2015/05/login_warningNew.png" alt="login_warningNew" width="699" height="364" /></a>
+<a href="{{site.baseurl}}assets/img/login_warningNew.png"><img class="alignnone wp-image-3615 size-full" src="{{site.baseurl}}assets/img/login_warningNew.png" alt="login_warningNew" width="699" height="364" /></a>
 <h3></h3>
 </li>
   <li>An informational message is triggered if the user is timed out of the application. They will be returned to the login page, which will display an informational message explaining that the session timed out due to inactivity.
 <h3></h3>
-<a href="{{site.baseurl}}wp-content/uploads/2015/05/login_info2.png"><img class="alignnone wp-image-3616 size-full" src="{{site.baseurl}}wp-content/uploads/2015/05/login_info2.png" alt="login_info2" width="699" height="364" /></a>
+<a href="{{site.baseurl}}assets/img/login_info2.png"><img class="alignnone wp-image-3616 size-full" src="{{site.baseurl}}assets/img/login_info2.png" alt="login_info2" width="699" height="364" /></a>
 <h3></h3>
 </li>
 </ol>

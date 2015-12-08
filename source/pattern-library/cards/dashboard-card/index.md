@@ -145,7 +145,7 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
 <h3>Style</h3>
 <div class="row">
 <div class="col-md-7">
-<p><img src="{{site.baseurl}}wp-content/uploads/2015/11/card1.png" alt="card1"/></p>
+<p><img src="{{site.baseurl}}assets/img/card1.png" alt="card1"/></p>
 </div>
 
 <div class="col-md-5">
@@ -160,7 +160,7 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
 <h3>Titles</h3>
 <div class="row">
 <div class="col-md-7">
-<p><img src="{{site.baseurl}}wp-content/uploads/2015/11/Card_titleAndSubtitle.png" alt="Card_titleAndSubtitle"/></p>
+<p><img src="{{site.baseurl}}assets/img/Card_titleAndSubtitle.png" alt="Card_titleAndSubtitle"/></p>
 </div>
 
 <div class="col-md-5">
@@ -175,7 +175,7 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
 <h3 id="dashboard-card-time-frame-filter">Time Frame Filter (optional):</h3>
 <div class="row">
 <div class="col-md-7">
-<p><img src="{{site.baseurl}}wp-content/uploads/2015/11/card_timeframe.png" alt="card_timeframe"/></p>
+<p><img src="{{site.baseurl}}assets/img/card_timeframe.png" alt="card_timeframe"/></p>
 </div>
 
 <div class="col-md-5">
@@ -190,7 +190,7 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
 <h3 id="dashboard-card-actions-panel">Actions Panel (optional):</h3>
 <div class="row">
 <div class="col-md-7">
-<p><img src="{{site.baseurl}}wp-content/uploads/2015/11/card_actionspanel.png" alt="card_actionspanel"/></p>
+<p><img src="{{site.baseurl}}assets/img/card_actionspanel.png" alt="card_actionspanel"/></p>
 </div>
 
 <div class="col-md-5">

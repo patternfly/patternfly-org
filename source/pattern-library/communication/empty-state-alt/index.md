@@ -23,8 +23,8 @@ layout: page
   </div>
   <div role="tabpanel" class="tab-pane" id="design">
     <p>
-      <a href="{{ site.baseurl}}wp-content/uploads/2015/05/emptyState_spec.png">
-        <img src="{{site.baseurl}}wp-content/uploads/2015/05/emptyState_spec.png" alt="emptyState_spec" class="alignnone size-full wp-image-4083" />
+      <a href="{{ site.baseurl}}assets/img/emptyState_spec.png">
+        <img src="{{site.baseurl}}assets/img/emptyState_spec.png" alt="emptyState_spec" class="alignnone size-full wp-image-4083" />
       </a>
     </p>
     <ol>
