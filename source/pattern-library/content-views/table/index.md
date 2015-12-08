@@ -17,6 +17,7 @@ layout: page
   });
 </script>{% endcapture %}{{ data_tables_markup_include | xml_escape }}
 </pre>
+</div>
 
 ## Overview
 
@@ -160,9 +161,9 @@ A page size control allows the user to select the number of rows shown per pag
 
 Another pagination option is an infinite scroll design. The table will initially display one page worth of rows. As the user scrolls, additional rows will be displayed below the currently displayed rows.
 
- [1]: /wikis/patterns/pattern-development/draft-patterns/master-detail/
- [2]: /wikis/patterns/pattern-development/draft-patterns/dashboards/
- [3]: /wp-content/uploads/2015/05/tabledescription.png
+ [1]: {{site.baseurl}}wikis/patterns/pattern-development/draft-patterns/master-detail/
+ [2]: {{site.baseurl}}wikis/patterns/pattern-development/draft-patterns/dashboards/
+ [3]: {{site.baseurl}}wp-content/uploads/2015/05/tabledescription.png
  [4]: #grid-and-empty-table
  [5]: #filtering
  [6]: #row-hover
@@ -173,21 +174,21 @@ Another pagination option is an infinite scroll design. The table will initially
  [11]: #table-actions
  [12]: #inline-actions
  [13]: #pagination
- [14]: /wp-content/uploads/2014/01/Empty-Table1.png
- [15]: /wikis/patterns/pattern-development/draft-patterns/search/
- [16]: /wp-content/uploads/2015/05/filter2.png
- [17]: /wp-content/uploads/2015/05/filter_results3.png
- [18]: /wp-content/uploads/2014/01/table-filter-41.png
- [19]: /wp-content/uploads/2014/09/grid2.png
- [20]: /wp-content/uploads/201409/select2.png
- [21]: /wp-content/uploads/2014/09/select3.png
- [22]: /wp-content/uploads/2014/09/expand2.png
- [23]: /wp-content/uploads/2014/09/expand4.png
- [24]: /wp-content/uploads/2014/09/expand6.png
+ [14]: {{site.baseurl}}wp-content/uploads/2014/01/Empty-Table1.png
+ [15]: {{site.baseurl}}wikis/patterns/pattern-development/draft-patterns/search/
+ [16]: {{site.baseurl}}wp-content/uploads/2015/05/filter2.png
+ [17]: {{site.baseurl}}wp-content/uploads/2015/05/filter_results3.png
+ [18]: {{site.baseurl}}wp-content/uploads/2014/01/table-filter-41.png
+ [19]: {{site.baseurl}}wp-content/uploads/2014/09/grid2.png
+ [20]: {{site.baseurl}}wp-content/uploads/201409/select2.png
+ [21]: {{site.baseurl}}wp-content/uploads/2014/09/select3.png
+ [22]: {{site.baseurl}}wp-content/uploads/2014/09/expand2.png
+ [23]: {{site.baseurl}}wp-content/uploads/2014/09/expand4.png
+ [24]: {{site.baseurl}}wp-content/uploads/2014/09/expand6.png
  [25]: https://rawgit.com/patternfly/patternfly/master/tests/datatables-columns.html
- [26]: /wp-content/uploads/2014/09/tableaction.png
- [27]: /wp-content/uploads/2014/09/inline1.png
- [28]: /wp-content/uploads/2014/09/inline2.png
- [29]: /wp-content/uploads/2014/09/inline3.png
- [30]: /wp-content/uploads/2014/09/pagination1.png
- [31]: /wp-content/uploads/2014/09/pagination2.png
+ [26]: {{site.baseurl}}wp-content/uploads/2014/09/tableaction.png
+ [27]: {{site.baseurl}}wp-content/uploads/2014/09/inline1.png
+ [28]: {{site.baseurl}}wp-content/uploads/2014/09/inline2.png
+ [29]: {{site.baseurl}}wp-content/uploads/2014/09/inline3.png
+ [30]: {{site.baseurl}}wp-content/uploads/2014/09/pagination1.png
+ [31]: {{site.baseurl}}wp-content/uploads/2014/09/pagination2.png

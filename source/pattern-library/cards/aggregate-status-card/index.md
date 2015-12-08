@@ -3,25 +3,22 @@ title: Aggregate Status Card
 author: lhinson
 layout: page
 ---
-## Overview
+<h2>Overview</h2>
+<p>The aggregated status card shows a total number of objects and an aggregated status for those objects. The most common use case for this pattern is seen in a dashboard view to illustrate the total count and the status of objects in an environment. The mini card alternate can be used in the case when there is less space available for the status card as well as when there is less information to show in the card.</p>
 
-The aggregated status card shows a total number of objects and an aggregated status for those objects. The most common use case for this pattern is seen in a dashboard view to illustrate the total count and the status (e.g. error, warning, OK) of objects in an environment.
+<h2>Examples</h2>
 
-## Example
-
+<h3>Regular Card</h3>
 <!-- don't copy this example as it's been modified to work within the context of the documentation -->
-
 <div class="cards-pf">
   <div class="container-fluid container-cards-pf">
     <div class="row row-cards-pf" style="padding-top: 20px;">
       <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-
       <div class="col-xs-6 col-sm-4 col-md-4">
         <div class="card-pf card-pf-aggregate-status">
           <h2 class="card-pf-title" style="line-height: 1.1">
             0 Ipsum
           </h2>
-
           <div class="card-pf-body">
             <p class="card-pf-aggregate-status-notifications">
               <span class="card-pf-aggregate-status-notification tooltip-demo"><a href="#" class="add" data-toggle="tooltip" data-placement="top" title="Add Ipsum"><span class="pficon pficon-add-circle-o"></span></a></span>
@@ -29,27 +26,24 @@ The aggregated status card shows a total number of objects and an aggregated sta
           </div>
         </div>
       </div>
-
       <div class="col-xs-6 col-sm-4 col-md-4">
         <div class="card-pf card-pf-aggregate-status card-pf-with-action">
           <h2 class="card-pf-title" style="line-height: 1.1">
-            <a href="#">2 Amet</a>
+            <a href="#">2  Amet</a>
           </h2>
-
           <div class="card-pf-body">
             <p class="card-pf-aggregate-status-notifications">
-              <span class="card-pf-aggregate-status-notification"><a href="#"><span class="pficon pficon-error-circle-o"></span>4</a></span> <span class="card-pf-aggregate-status-notification"><a href="#"><span class="pficon pficon-warning-triangle-o"></span>1</a></span>
+              <span class="card-pf-aggregate-status-notification"><a href="#"><span class="pficon pficon-error-circle-o"></span>4</a></span>
+              <span class="card-pf-aggregate-status-notification"><a href="#"><span class="pficon pficon-warning-triangle-o"></span>1</a></span>
             </p>
           </div>
         </div>
       </div>
-
       <div class="col-xs-6 col-sm-4 col-md-4">
         <div class="card-pf card-pf-aggregate-status card-pf-with-action">
           <h2 class="card-pf-title" style="line-height: 1.1">
             <a href="#">9 Adipiscing</a>
           </h2>
-
           <div class="card-pf-body">
             <p class="card-pf-aggregate-status-notifications">
               <span class="card-pf-aggregate-status-notification"><span class="pficon pficon-ok"></span></span>
@@ -57,16 +51,10 @@ The aggregated status card shows a total number of objects and an aggregated sta
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- /row -->
+    </div><!-- /row -->
   </div>
 </div>
-
-<p class="reference-markup">
-  <a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="aggregate-status-card-markup" href="#aggregate-status-card-markup">Reference Markup</a>
-</p>
-
+<p class="reference-markup"><a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="aggregate-status-card-markup" href="#aggregate-status-card-markup">Reference Markup</a></p>
 <div class="collapse" id="aggregate-status-card-markup">
   <pre class="prettyprint">
 &lt;body class="cards-pf"&gt;
@@ -127,75 +115,140 @@ The aggregated status card shows a total number of objects and an aggregated sta
 &lt;/body&gt;</pre>
 </div>
 
-## Description
-
-### Header Area:
-
-<div class="row">
-  <div class="col-md-4">
-    <p>
-      <img src="{{ site.baseurl}}wp-content/uploads/2015/04/AggregateStatus_header-callout.png" alt="AggregateStatus_header-callout" />
-    </p>
-  </div>
-
-  <div class="col-md-8">
-    <ol>
-      <li>
-        <b>Top Accent</b> (optional): If the aggregate status card is located at the top of a dashboard view, you may opt to add the the blue stripe to the top of the card. If the card is located somewhere other than a dashboard, there is no blue stripe.
-      </li>
-      <li>
-        <b>Object Icon</b> (optional): There is an option to display an object icon before the count and object name.  Make sure you are consistent and either opt to always use the icon or not. Do not mix and match by applying icons to some cards but not others. Icons should be used thoughtfully and sparingly. Ensure that the icon’s visual metaphor provides valuable meaning rather than pointless clutter.
-      </li>
-      <li>
-        <b>Total Number:</b> This is a number that represents a count for the total number of objects in the environment.
-      </li>
-      <li>
-        <b>Object Type Label:</b> This is text that displays the object type. A tooltip should appear on hover to inform the user about this action.
-      </li>
-    </ol>
+<h3>Mini Card Alternate</h3>
+<!-- don't copy this example as it's been modified to work within the context of the documentation -->
+<div class="cards-pf">
+  <div class="container-fluid container-cards-pf">
+    <div class="row row-cards-pf" style="padding-top: 20px;">
+      <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini">
+          <h2 class="card-pf-title" style="line-height: 1.1">
+            <span class="fa fa-car"></span>
+            <a href="#">
+              <span class="card-pf-aggregate-status-count">23</span> Cars
+            </a>
+          </h2>
+          <div class="card-pf-body">
+            <p class="card-pf-aggregate-status-notifications">
+              <span class="card-pf-aggregate-status-notification"><a href="#"><span class="pficon pficon-error-circle-o"></span>3</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini">
+          <h2 class="card-pf-title" style="line-height: 1.1">
+            <span class="fa fa-paper-plane"></span>
+            <a href="#">
+              <span class="card-pf-aggregate-status-count">300</span> Paper Services
+            </a>
+          </h2>
+          <div class="card-pf-body">
+            <p class="card-pf-aggregate-status-notifications">
+              <span class="card-pf-aggregate-status-notification"><a href="#"><span class="pficon pficon-error-circle-o"></span>3</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini">
+          <h2 class="card-pf-title" style="line-height: 1.1">
+            <span class="fa fa-rebel"></span>
+            <a href="#">
+              <span class="card-pf-aggregate-status-count">2500</span> Rebel Services
+            </a>
+          </h2>
+        </div>
+      </div>
+    </div><!-- /row -->
   </div>
 </div>
+<p class="reference-markup"><a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="aggregate-status-mini-card-markup" href="#aggregate-status-mini-card-markup">Reference Markup</a></p>
+<div class="collapse" id="aggregate-status-mini-card-markup">
+  <pre class="prettyprint">
+&lt;body class="cards-pf"&gt;
+  ...
+  &lt;div class="container-fluid container-cards-pf"&gt;
+    &lt;div class="row row-cards-pf"&gt;
+      &lt;div class="col-xs-12 col-sm-6 col-md-4"&gt;
+        &lt;div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini"&gt;
+          &lt;h2 class="card-pf-title"&gt;
+            &lt;span class="fa fa-car"&gt;&lt;/span&gt;
+            &lt;a href="#"&gt;
+              &lt;span class="card-pf-aggregate-status-count"&gt;23&lt;/span&gt; Cars
+            &lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;div class="card-pf-body"&gt;
+            &lt;p class="card-pf-aggregate-status-notifications"&gt;
+              &lt;span class="card-pf-aggregate-status-notification"&gt;&lt;a href="#"&gt;&lt;span class="pficon pficon-error-circle-o"&gt;&lt;/span&gt;3&lt;/a&gt;&lt;/span&gt;
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="col-xs-12 col-sm-6 col-md-4"&gt;
+        &lt;div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini"&gt;
+          &lt;h2 class="card-pf-title"&gt;
+            &lt;span class="fa fa-paper-plane"&gt;&lt;/span&gt;
+            &lt;a href="#"&gt;
+              &lt;span class="card-pf-aggregate-status-count"&gt;300&lt;/span&gt; Paper Services
+            &lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;div class="card-pf-body"&gt;
+            &lt;p class="card-pf-aggregate-status-notifications"&gt;
+              &lt;span class="card-pf-aggregate-status-notification"&gt;&lt;a href="#"&gt;&lt;span class="pficon pficon-error-circle-o"&gt;&lt;/span&gt;3&lt;/a&gt;&lt;/span&gt;
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="col-xs-12 col-sm-6 col-md-4"&gt;
+        &lt;div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini"&gt;
+          &lt;h2 class="card-pf-title"&gt;
+            &lt;span class="fa fa-rebel"&gt;&lt;/span&gt;
+            &lt;a href="#"&gt;
+              &lt;span class="card-pf-aggregate-status-count"&gt;2500&lt;/span&gt; Rebel Services
+            &lt;/a&gt;
+          &lt;/h2&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- /row --&gt;
+  &lt;/div&gt;&lt;!-- /container --&gt;
+&lt;/body&gt;</pre>
+</div>
 
-<!--<h3>Action Area (optional):</h3>
+<h2>Description</h2>
+<h3>Header Area:</h3>
 <div class="row">
 <div class="col-md-4">
-<a h"/wp-content/uploads/2015/04/AggregateStatus_actionsAreaSpec.png"><img src="/wp-content/uploads/2015/04/AggregateStatus_actionsAreaSpec.png" alt="AggregateStatus_actionsAreaSpec" class="alignnone size-full wp-image-3870" /></a>
+<p><img src="{{site.baseurl}}wp-content/uploads/2015/04/AggregateStatus_header-callout.png" alt="AggregateStatus_header-callout"/></p>
+
+<p><img src="{{site.baseurl}}wp-content/uploads/2015/04/single_mini_agg_status-header-callout.png" alt="single_mini_agg_status-header-callout"/></p>
 </div>
 
 <div class="col-md-8">
 <ol>
-  <li><b>Action Menu</b> (optional): If there is more than one action associated with this card, an action menu can be displayed in the top right corner.</li>
-<li><b>Action Icon</b> (optional): Alternatively, you may use the add or create action icon. See the <a title="Terminology and Wording" href="/visual-styles/terminology-and-wording//#terms-and-words">Terminology and Wording Style Guide</a> for more information regarding wording recommendations for action labels.</li>
+<li><b>Top Accent</b> (optional): If the aggregate status card is located at the top of a dashboard view, you may opt to add the the blue stripe to the top of the card. If the card is located somewhere other than a dashboard, there is no blue stripe.</li>
+<li><b>Object Icon</b> (optional): An object icon can be used before the count and object name.  Make sure you are consistent and either opt to always use the icon or not. Do not mix and match by applying icons to some cards but not others. Icons should be used thoughtfully and sparingly. Ensure that the icon’s visual metaphor provides valuable meaning rather than pointless clutter. Note: In the case of the mini card alternate, it is strongly recommended to use this object icon.</li>
+<li><b>Total Number:</b> This is a number that represents a count for the total number of objects in the environment.</li>
+<li><b>Object Type Label:</b> Include a label that states the object type.</li>
     </ol>
   </div>
 </div>
 
-&nbsp;-->
-
-### Content Area:
-
+<h3>Content Area:</h3>
 <div class="row">
-  <div class="col-md-4">
-    <img src="{{ site.baseurl}}wp-content/uploads/2015/04/AggregateStatus-ContentArea-Callout.png" alt="AggregateStatus-ContentArea-Callout" class="alignnone size-full wp-image-4430" />
-  </div>
+<div class="col-md-4">
+<p><img src="{{site.baseurl}}wp-content/uploads/2015/04/aggstatus_callout.png" alt="aggstatus_callout"/></p>
+<p><img src="{{site.baseurl}}wp-content/uploads/2015/04/single_mini_agg_status-number-callout.png" alt="single_mini_agg_status-number-callout"/></p>
+</div>
 
-  <div class="col-md-8">
-    <ol>
-      <li>
-        <b>Status Icon(s):</b> A status icon either assures the user that everything is ok or informs them about error or warnings. An error and warning can be displayed together however, avoid showing an OK status with a warning or error. Either everything is OK or it’s not.
-      </li>
-      <li>
-        <b>Number Count:</b> This shows the count associated with the icon. In general, a number next to the OK icon is redundant since the total count is already shown in the header area. Therefore, an OK status should be visually represented by an icon only. Alternatively, a card, not located in the dashboard view, may require the number count to be displayed with the OK icon.
-      </li>
-      <li>
-        <b>Action Icon</b> (optional): If no objects exists, you may want to display the create or add icon, whichever is the primary action.
-      </li>
-      <li>
-        <b>Tooltips:</b> Use tooltips as necessary.
-      </li>
-      <li>
-        <b>Links:</b> Blue text with an underline on hover reinforces that elements are interactive.
-      </li>
+<div class="col-md-8">
+<ol>
+<li><b>Status Icon(s):</b> A status icon represents the status of the objects in the card. If everything is OK, one status icon for OK should be shown. Otherwise, multiple status icons can be shown to represent each status. Note: In the case of the mini card alternate, it is recommended to limit this to one status icon due to space restrictions.</li>
+<li><b>Number Count:</b> This shows the count associated with the icon. In general, a number next to the OK icon is redundant since the total count is already shown in the header area. Therefore, an OK status should be visually represented by an icon only. Alternatively, a card, not located in the dashboard view, may require the number count to be displayed with the OK icon. Note: In the case of the mini card alternate, it is recommended to limit this to one number due to space restrictions.</li>
+<li><b>Action Icon</b> (optional): If no objects exists, you may want to display the create or add icon, whichever is the primary action. Note: Currently, only one action icon is supported in this design.</li>
+<li><b>Tooltips:</b> Use tooltips as necessary. It is recommended that tooltips are used for the status and action icons.</li>
+<li><b>Links:</b> Blue text with an underline on hover reinforces that elements are interactive.</li>
     </ol>
   </div>
 </div>

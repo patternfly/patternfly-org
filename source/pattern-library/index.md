@@ -33,15 +33,15 @@ Visit the Styles page for additional information about color palettes, fonts, an
 
 This project will succeed because we build important connections between communities of open source innovation and enterprise IT. The information presented within this site has been created through an ongoing dialogue between our users, developers, designers, business partners and all other key stakeholders.
 
-We welcome and encourage all of those that would are interested, to help us in this project effort. Please visit our <a title="Contribute" href="/contribute/">Contribute </a>page for more information.  If you have questions or would like to provide suggestions on how to enhance PatternFly, please contact <a href="mailto:patternfly@redhat.com">patternfly@redhat.com</a> or <a href="https://www.redhat.com/mailman/listinfo/patternfly">join our mailing list</a>.-->
+We welcome and encourage all of those that would are interested, to help us in this project effort. Please visit our <a title="Contribute" href="{{site.baseurl}}contribute/">Contribute </a>page for more information.  If you have questions or would like to provide suggestions on how to enhance PatternFly, please contact <a href="mailto:patternfly@redhat.com">patternfly@redhat.com</a> or <a href="https://www.redhat.com/mailman/listinfo/patternfly">join our mailing list</a>.-->
 
  [1]: https://github.com/patternfly/patternfly
- [2]: /layouts/
- [3]: /layouts/layout-templates/
- [4]: /layouts/patternfly-grid-system/
- [5]: /wikis/patterns/
- [6]: /patterns/
- [7]: /widgets/
+ [2]: {{ site.baseurl}}layouts/
+ [3]: {{ site.baseurl}}layouts/layout-templates/
+ [4]: {{ site.baseurl}}layouts/patternfly-grid-system/
+ [5]: {{ site.baseurl}}wikis/patterns/
+ [6]: {{ site.baseurl}}patterns/
+ [7]: {{ site.baseurl}}widgets/
  [8]: http://getbootstrap.com/
  [9]: mailto:patternfly@redhat.com
- [10]: /styles/
+ [10]: {{ site.baseurl}}styles/

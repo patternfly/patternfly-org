@@ -78,12 +78,12 @@ layout: page
 &lt;/div&gt;</pre>
 </div>
 <h3>In Context</h3>
-<p><img src="/wp-content/uploads/2015/11/notification_inContext.png" alt="notification_inContext"/></p>
+<p><img src="{{site.baseurl}}wp-content/uploads/2015/11/notification_inContext.png" alt="notification_inContext"/></p>
 
 <h2>Description</h2>
 <div class="row">
 <div class="col-md-5">
-<p><img src="/wp-content/uploads/2015/11/notification_callout2.png" alt="notification_callout2"/></p>
+<p><img src="{{site.baseurl}}wp-content/uploads/2015/11/notification_callout2.png" alt="notification_callout2"/></p>
 </div>
 
 <div class="col-md-7">

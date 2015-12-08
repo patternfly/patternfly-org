@@ -46,4 +46,4 @@ You can view a list of recently published content on the [What’s New page][3].
 
  [1]: mailto:patternfly@redhat.com
  [2]: https://github.com/patternfly/patternfly
- [3]: /whats-new/ "What’s New"
+ [3]: {{site.baseurl}}whats-new/ "What’s New"

@@ -48,9 +48,9 @@ This pattern should NOT be used when:
 
 <div class="row">
   <div class="col-md-4">
-    <img src="/wp-content/uploads/2015/08/datepicker-callout3.png" alt="datepicker-callout3" />
+    <img src="{{site.baseurl}}wp-content/uploads/2015/08/datepicker-callout3.png" alt="datepicker-callout3" />
   </div>
-  
+
   <div class="col-md-8">
     <ol>
       <li>

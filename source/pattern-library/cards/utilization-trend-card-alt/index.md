@@ -34,7 +34,7 @@ layout: page
     <h2>Card with a Single Metric</h2>
     <div class="row">
       <div class="col-md-7">
-        <img src="/wp-content/uploads/2015/08/singe-metric-utilization-card2.png" alt="singe-metric-utilization-card2" />
+        <img src="{{site.baseurl}}wp-content/uploads/2015/08/singe-metric-utilization-card2.png" alt="singe-metric-utilization-card2" />
       </div>
       <div class="col-md-5">
         <ol>
@@ -44,8 +44,8 @@ layout: page
           <li><b>Total Value:</b> The total value is left aligned and listed under the label.</li>
           <li><b>Unit of Measurement:</b> The label for unit of measurement is shown after the total value.</li>
           <li><b>Content Separator:</b> A horizontal line visually separates the content in the card. The content separator is located below the values and above the donut chart. </li>
-          <li><b>Donut Chart:</b> See the <a href="/patterns/donut-chart/">Donut Chart Pattern</a> for more details.</li>
-          <li><b>Sparkline:</b> See the <a href="/patterns/sparkline/">Sparkline Pattern</a> for more details.</li>
+          <li><b>Donut Chart:</b> See the <a href="{{ site.baseurl}}patterns/donut-chart/">Donut Chart Pattern</a> for more details.</li>
+          <li><b>Sparkline:</b> See the <a href="{{ site.baseurl}}patterns/sparkline/">Sparkline Pattern</a> for more details.</li>
           <li><b>Time Frame:</b> The time frame is indicated under the sparkline by small text and is left aligned.</li>
         </ol>
       </div>
@@ -53,7 +53,7 @@ layout: page
     <h2>Card with Multiple Metrics</h2>
     <div class="row">
       <div class="col-md-7">
-        <img src="/wp-content/uploads/2015/08/multi-metric-utilization-card-callout1.png" alt="multi-metric-utilization-card-callout"/>
+        <img src="{{site.baseurl}}wp-content/uploads/2015/08/multi-metric-utilization-card-callout1.png" alt="multi-metric-utilization-card-callout"/>
       </div>
       <div class="col-md-5">
         <ol>
@@ -65,8 +65,8 @@ layout: page
           <li><b>Total Value:</b> The total value is left aligned and listed under the label.</li>
           <li><b>Unit of Measurement:</b> The label for unit of measurement is shown after the total value.</li>
           <li><b>Content Separator:</b> A horizontal line visually separates the content in the card. The content separator is located below the values and above the donut chart.</li>
-          <li><b>Donut Chart:</b> See the <a href="/patterns/donut-chart/">Donut Chart Pattern</a> for more details.</li>
-          <li><b>Sparkline:</b> See the <a href="/patterns/sparkline/">Sparkline Pattern</a> for more details.</li>
+          <li><b>Donut Chart:</b> See the <a href="{{ site.baseurl}}patterns/donut-chart/">Donut Chart Pattern</a> for more details.</li>
+          <li><b>Sparkline:</b> See the <a href="{{ site.baseurl}}patterns/sparkline/">Sparkline Pattern</a> for more details.</li>
           <li><b>Time Frame:</b> The time frame is indicated under the sparkline by small text and is left aligned.</li>
         </ol>
       </div>

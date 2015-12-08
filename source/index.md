@@ -9,7 +9,7 @@ url-js-extra: ['bower_components/wowjs/dist/wow.min.js', 'bower_components/jquer
   <div class="container-fluid">
     <div class="splash">
       <div class="content">
-        <img src="assets/img/patternfly-orb.svg" alt="PatternFly logo" class="wow fadeInDown" />
+        <img src="{{ site.baseurl}}assets/img/patternfly-orb.svg" alt="PatternFly logo" class="wow fadeInDown" />
         <h1 class="wow fadeIn" data-wow-delay="750ms">
           PatternFly
         </h1>

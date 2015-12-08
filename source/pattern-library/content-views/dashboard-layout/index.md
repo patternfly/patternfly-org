@@ -9,7 +9,7 @@ This section provides guidance on laying out a dashboard page, and does not curr
 
 ## Description
 
-[<img src="/wp-content/uploads/2015/07/dashboard_callout.png" alt="dashboard_callout" class="alignnone size-full wp-image-4177" />][2]
+[<img src="{{site.baseurl}}wp-content/uploads/2015/07/dashboard_callout.png" alt="dashboard_callout" class="alignnone size-full wp-image-4177" />][2]
 
 The following are suggested visualizations and placement of common attributes of a dashboard:
 
@@ -18,4 +18,4 @@ The following are suggested visualizations and placement of common attributes of
   3. **Refresh Action** (optional): If the dashboard needs a Refresh action so that the user can manually refresh, place it on the right of the Dashboard Title Panel.
 
  [1]: http://getbootstrap.com/css/#grid
- [2]: /wp-content/uploads/2015/07/dashboard_callout.png
+ [2]: {{site.baseurl}}wp-content/uploads/2015/07/dashboard_callout.png

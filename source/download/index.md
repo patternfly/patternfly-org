@@ -9,7 +9,7 @@ The PatternFly Framework includes reference HTML markup and CSS for widgets and 
   <div class="col-md-6 download">
     <div class="download-icon">
       <a href="https://github.com/patternfly/patternfly">
-        <img src="/assets/img/icon-patternfly.png" alt="PatternFly icon" />
+        <img src="{{ site.baseurl }}assets/img/icon-patternfly.png" alt="PatternFly icon" />
       </a>
     </div>
     <div class="download-description">
@@ -27,7 +27,7 @@ The PatternFly Framework includes reference HTML markup and CSS for widgets and 
   <div class="col-md-6 download">
     <div class="download-icon">
       <a href="https://github.com/patternfly/angular-patternfly">
-        <img src="/assets/img/icon-angular.png" alt="Angular icon" />
+        <img src="{{ site.baseurl }}assets/img/icon-angular.png" alt="Angular icon" />
       </a>
     </div>
     <div class="download-description">
@@ -47,7 +47,7 @@ The PatternFly Framework includes reference HTML markup and CSS for widgets and 
   <div class="col-md-6 download">
     <div class="download-icon">
       <a href="https://github.com/patternfly/patternfly-sass">
-        <img src="/assets/img/icon-sass.png" alt="Sass icon" />
+        <img src="{{ site.baseurl }}assets/img/icon-sass.png" alt="Sass icon" />
       </a>
     </div>
     <div class="download-description">
@@ -65,7 +65,7 @@ The PatternFly Framework includes reference HTML markup and CSS for widgets and 
   <div class="col-md-6 download">
     <div class="download-icon">
       <a href="https://rubygems.org/gems/patternfly-sass">
-        <img src="/assets/img/icon-rubygems.png" alt="RubyGems icon" />
+        <img src="{{ site.baseurl }}assets/img/icon-rubygems.png" alt="RubyGems icon" />
       </a>
     </div>
     <div class="download-description">
@@ -85,7 +85,7 @@ The PatternFly Framework includes reference HTML markup and CSS for widgets and 
   <div class="col-md-6 download">
     <div class="download-icon">
       <a href="https://copr.fedoraproject.org/coprs/patternfly/">
-        <img src="/assets/img/icon-rpm.png" alt="RPM icon" />
+        <img src="{{ site.baseurl }}assets/img/icon-rpm.png" alt="RPM icon" />
       </a>
     </div>
     <div class="download-description">
