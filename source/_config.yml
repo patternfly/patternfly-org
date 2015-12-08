@@ -1,7 +1,7 @@
 # Site settings
 title: PatternFly | open interface project
 email: patternfly@redhat.com
-description: open interface project
+description: PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets
 baseurl: '/' # the subpath of your site, e.g. /blog/
 url: 'https://www.patternfly.org' # the base hostname & protocol for your site
 paginate: 10

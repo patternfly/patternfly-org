@@ -1,5 +1,4 @@
 ---
-title: PatternFly
 author: rhamilton
 layout: home
 url-css-extra: 'bower_components/animate.css/animate.min.css'
