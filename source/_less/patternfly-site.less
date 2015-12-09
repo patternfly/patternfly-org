@@ -231,7 +231,7 @@ header {
       position: relative;
       text-indent: -9999px;
       width: 220px;
-      @media (min-width: @grid-float-breakpoint) {
+      @media (min-width: @screen-sm-min) {
         margin-left: 0;
       }
       &:hover:after {
@@ -246,9 +246,8 @@ header {
     }
     .navbar-collapse {
       border-top-color: rgba(255,255,255,.15);
-      max-height: auto;
-      @media (max-width: @grid-float-breakpoint-max) {
-        box-shadow: 0 0 3px rgba(0,0,0,.95);
+      box-shadow: 0 0 3px rgba(0,0,0,.95);
+      @media (max-width: @screen-sm-max) {
         padding-bottom: 10px;
         padding-top: 15px;
         .home & {
@@ -257,9 +256,34 @@ header {
           box-shadow: none;
         }
       }
+      @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+        border-top-style: solid;
+        border-top-width: 1px;
+        margin-right: -(@grid-gutter-width / 2);
+        margin-left: -(@grid-gutter-width / 2);
+        padding-left: 0;
+        padding-right: 0;
+        &.collapse {
+          display: none !important;
+          overflow-x: hidden !important;
+          &.in {
+            display: block !important;
+            overflow-x: visible !important;
+          }
+        }
+      }
+      @media (min-width: @screen-md) {
+        border-top: 0;
+        box-shadow: none;
+      }
       .navbar-nav {
         margin-bottom: 0;
         margin-top: 0;
+        @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+          > li {
+            float: none;
+          }
+        }
       }
     }
     .navbar-form {
@@ -270,7 +294,7 @@ header {
       padding-bottom: 0;
       padding-top: 0;
       position: relative;
-      @media (min-width: @grid-float-breakpoint) {
+      @media (min-width: @screen-md) {
         margin-bottom: 24px;
         margin-right: 0;
         margin-top: 23px;
@@ -284,7 +308,7 @@ header {
         position: absolute;
         left: 24px;
         top: 4px;
-        @media (min-width: @grid-float-breakpoint) {
+        @media (min-width: @screen-md) {
           left: 14px;
           top: 4px;
         }
@@ -305,9 +329,9 @@ header {
         @media (min-width: @screen-sm) {
           width: 100%;
         }
-        @media (min-width: @grid-float-breakpoint) {
+        @media (min-width: @screen-md) {
           display: inline-block;
-          width: 110px;
+          width: 130px;
         }
         &:focus {
           background: rgba(255,255,255,.3);
@@ -317,35 +341,48 @@ header {
         }
       }
     }
-    .navbar-right > li {
-      &.active {
-        > a, &:hover > a {
-          background: transparent !important;
-          color: #3bb1dc !important;
-        }
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+      .navbar-header {
+        float: none;
+        margin-right: -(@grid-gutter-width / 2);
+        margin-left: -(@grid-gutter-width / 2);
       }
-      &:hover {
-        background: #212121;
-        > a {
-          background: transparent;
-          color: #fff;
-        }
+    }
+    .navbar-right {
+      @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+        float: none !important;
+        margin-right: 0;
       }
-      > a {
-        color: #eee;
-        padding: 7px 20px;
-        @media (min-width: @grid-float-breakpoint) {
-          padding: 25px 15px;
+      > li {
+        &.active {
+          > a, &:hover > a {
+            background: transparent !important;
+            color: #3bb1dc !important;
+          }
         }
         &:hover {
-          color: #fff;
+          background: #212121;
+          > a {
+            background: transparent;
+            color: #fff;
+          }
         }
-      }
-      @media (min-width: @grid-float-breakpoint) {
-        .home & {
-          &:hover, &.open {
-            background: #252525;
-            background: rgba(0,0,0,.1);
+        > a {
+          color: #eee;
+          padding: 7px 20px;
+          @media (min-width: @screen-md) {
+            padding: 25px 15px;
+          }
+          &:hover {
+            color: #fff;
+          }
+        }
+        @media (min-width: @screen-md) {
+          .home & {
+            &:hover, &.open {
+              background: #252525;
+              background: rgba(0,0,0,.1);
+            }
           }
         }
       }
@@ -358,6 +395,9 @@ header {
       margin-left: (@grid-gutter-width / 2);
       margin-right: 15px;
       margin-top: 19px;
+      @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+        display: block;
+      }
       &:focus {
         outline: none;
       }

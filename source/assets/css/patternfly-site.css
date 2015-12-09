@@ -217,7 +217,7 @@ header .navbar.navbar-default .navbar-brand {
   text-indent: -9999px;
   width: 220px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   header .navbar.navbar-default .navbar-brand {
     margin-left: 0;
   }
@@ -233,11 +233,10 @@ header .navbar.navbar-default .navbar-brand:hover:after {
 }
 header .navbar.navbar-default .navbar-collapse {
   border-top-color: rgba(255, 255, 255, 0.15);
-  max-height: auto;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.95);
 }
 @media (max-width: 991px) {
   header .navbar.navbar-default .navbar-collapse {
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.95);
     padding-bottom: 10px;
     padding-top: 15px;
   }
@@ -247,9 +246,38 @@ header .navbar.navbar-default .navbar-collapse {
     box-shadow: none;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  header .navbar.navbar-default .navbar-collapse {
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  header .navbar.navbar-default .navbar-collapse.collapse {
+    display: none !important;
+    overflow-x: hidden !important;
+  }
+  header .navbar.navbar-default .navbar-collapse.collapse.in {
+    display: block !important;
+    overflow-x: visible !important;
+  }
+}
+@media (min-width: 992px) {
+  header .navbar.navbar-default .navbar-collapse {
+    border-top: 0;
+    box-shadow: none;
+  }
+}
 header .navbar.navbar-default .navbar-collapse .navbar-nav {
   margin-bottom: 0;
   margin-top: 0;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .navbar.navbar-default .navbar-collapse .navbar-nav > li {
+    float: none;
+  }
 }
 header .navbar.navbar-default .navbar-form {
   border: 0;
@@ -307,7 +335,7 @@ header .navbar.navbar-default .navbar-form .form-control {
 @media (min-width: 992px) {
   header .navbar.navbar-default .navbar-form .form-control {
     display: inline-block;
-    width: 110px;
+    width: 130px;
   }
 }
 header .navbar.navbar-default .navbar-form .form-control:focus {
@@ -317,6 +345,19 @@ header .navbar.navbar-default .navbar-form .form-control:focus {
   transition-duration: 400ms;
   -webkit-transition-property: background, color;
   transition-property: background, color;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .navbar.navbar-default .navbar-header {
+    float: none;
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .navbar.navbar-default .navbar-right {
+    float: none !important;
+    margin-right: 0;
+  }
 }
 header .navbar.navbar-default .navbar-right > li.active > a,
 header .navbar.navbar-default .navbar-right > li.active:hover > a {
@@ -357,6 +398,11 @@ header .navbar.navbar-default .navbar-toggle {
   margin-left: 20px;
   margin-right: 15px;
   margin-top: 19px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .navbar.navbar-default .navbar-toggle {
+    display: block;
+  }
 }
 header .navbar.navbar-default .navbar-toggle:focus {
   outline: none;
