@@ -858,6 +858,18 @@ layout: page
 &lt;p&gt;&lt;span class="spinner spinner-xs spinner-inline"&gt;&lt;/span&gt; Along with some text&lt;/p&gt;
 </pre>
     </div>
+    <h4>Inverse (on a dark background)</h4>
+    <div class="pf-example">
+      <div style="background-color: #000; padding: 10px 0;">
+        <div class="spinner spinner-inverse"></div>
+      </div>
+    </div>
+    <p class="reference-markup"><a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="spinner-inverse-markup" href="#spinner-inverse-markup">Reference Markup</a></p>
+    <div class="collapse" id="spinner-inverse-markup">
+      <pre class="prettyprint">
+&lt;div class="spinner spinner-inverse"&gt;&lt;/div&gt;
+</pre>
+    </div>
   </div>
 </div>
 <div class="super-section" id="javascript">
@@ -953,36 +965,36 @@ layout: page
     <h3>Tooltip</h3>
     <p>See <a href="http://getbootstrap.com/javascript/#tooltips">http://getbootstrap.com/javascript/#tooltips</a> for complete tooltip documentation.</p>
     <div class="pf-example tooltip-demo">
-      <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="" data-original-title="Tooltip on left">Tooltip on left</button>
+      <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
       <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
       <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-      <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tooltip on right">Tooltip on right</button>
+      <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
     </div>
     <p class="reference-markup"><a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="tooltip-markup" href="#tooltip-markup">Reference Markup</a></p>
     <div class="collapse" id="tooltip-markup">
       <pre class="prettyprint">
-&lt;button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="" data-original-title="Tooltip on left"&gt;Tooltip on left&lt;/button&gt;
+&lt;button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left"&gt;Tooltip on left&lt;/button&gt;
 &lt;button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top"&gt;Tooltip on top&lt;/button&gt;
 &lt;button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"&gt;Tooltip on bottom&lt;/button&gt;
-&lt;button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tooltip on right"&gt;Tooltip on right&lt;/button&gt;
+&lt;button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right"&gt;Tooltip on right&lt;/button&gt;
 </pre>
     </div>
   </div>
   <div class="section" id="popover">
     <h3>Popover</h3>
     <p>See <a href="http://getbootstrap.com/javascript/#popovers">http://getbootstrap.com/javascript/#popovers</a> for complete popover documentation.</p>
-    <p><strong>Note:</strong> Displaying the close (X) icon in popovers requires <a href="https://github.com/patternfly/patternfly/blob/master/dist/js/patternfly.min.js">patternfly.min.js</a> and adding data attribute <strong>data-close="true"</strong>
+    <p><strong>Note:</strong> Displaying the close (X) icon in popovers requires <a href="https://github.com/patternfly/patternfly/blob/master/dist/js/patternfly.min.js">patternfly.min.js</a>, initialization via <code>popover<strong>s</strong>()</code> (note the "s"), and adding data attribute <strong>data-close="true"</strong>
       to the trigger element.
     </p>
     <div class="pf-example">
-      <a href="#" class="btn btn-default" data-toggle="popover" data-html="true" title="" data-content="This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy." data-original-title="1 http smartproxy 1 http http http" data-close="true">Click to toggle popover 1</a>
+      <a href="#" class="btn btn-default" data-toggle="popover" data-html="true" title="1 http smartproxy 1 http http http" data-content="This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy." data-close="true">Click to toggle popover 1</a>
     </div>
     <div class="pf-example" style="margin-top: 20px;">
       <a href="#" class="btn btn-default" data-toggle="popover" data-html="true" title="" data-content="Close icon with no Title text. This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy." data-close="true">Click to toggle popover 2</a>
     </div>
     <div class="pf-example" style="margin: 20px 0;">
-      <a href="#" class="btn btn-default" data-toggle="popover" data-html="true" title="" data-content="Popover with no Close icon.
-        This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy." data-original-title="3 popover example">Click to toggle popover 3
+      <a href="#" class="btn btn-default" data-toggle="popover" data-html="true" title="3 popover example" data-content="Popover with no Close icon.
+        This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy.">Click to toggle popover 3
       </a>
     </div>
     <div class="pf-example" style="margin: 20px 0;">
@@ -994,14 +1006,14 @@ layout: page
     <div class="collapse" id="popover-markup">
       <pre class="prettyprint">
 &lt;div&gt;
-  &lt;a href="#" class="btn btn-default" data-toggle="popover" data-html="true" title="" data-content="This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy." data-original-title="1 http smartproxy 1 http http http" data-close="true"&gt;Click to toggle popover 1&lt;/a&gt;
+  &lt;a href="#" class="btn btn-default" data-toggle="popover" data-html="true" title="1 http smartproxy 1 http http http" data-content="This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy." data-close="true"&gt;Click to toggle popover 1&lt;/a&gt;
 &lt;/div&gt;
 &lt;div style="margin-top: 20px;"&gt;
   &lt;a href="#" class="btn btn-default" data-toggle="popover" data-html="true" title="" data-content="Close icon with no Title text. This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy." data-close="true"&gt;Click to toggle popover 2&lt;/a&gt;
 &lt;/div&gt;
 &lt;div style="margin: 20px 0;"&gt;
-  &lt;a href="#" class="btn btn-default" data-toggle="popover" data-html="true" title="" data-content="Popover with no Close icon.
-    This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy." data-original-title="3 popover example"&gt;Click to toggle popover 3
+  &lt;a href="#" class="btn btn-default" data-toggle="popover" data-html="true" title="3 popover example" data-content="Popover with no Close icon.
+    This is more information about a smartproxy. This is more information about a smartproxy. This is more information about a smartproxy."&gt;Click to toggle popover 3
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;div style="margin: 20px 0;"&gt;
