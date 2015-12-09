@@ -9,6 +9,7 @@ layout: page
     <h2>Communicate</h2>
     <p>Subscribe to the <a href="https://www.redhat.com/mailman/listinfo/patternfly">PatternFly Mailing List</a> and the <a href="https://www.redhat.com/mailman/listinfo/patternfly-angular">Angular PatternFly Mailing List</a></p>
     <p><a href="http://webchat.freenode.net/?channels=#patternfly">Find us on Freenode at #patternfly</a></p>
+    <p><a href="{{ site.blogurl }}"><i class="fa fa-rss-square"></i> Visit our blog</a></p>
     <p><a href="https://twitter.com/patternfly_des"><i class="fa fa-twitter-square"></i> Follow us on Twitter</a></p>
     <p><a href="https://plus.google.com/communities/117224483835467139511" target="_blank"><i class="fa fa-google-plus-square"></i> Find us on Google+</a></p>
     <p><a href="https://www.facebook.com/groups/PatternFlyCommunity/" target="_blank"><i class="fa fa-facebook-official"></i> Follow us on Facebook</a></p>
@@ -22,68 +23,9 @@ layout: page
   </div>
   <div class="col-md-4">
     <h2>Keep Up-To-Date</h2>
+    <p><a href="{{ site.blogurl }}"> Visit our blog</a></p>
     <p><a href="https://patternfly.atlassian.net/issues/?filter=10405">View backlog on Jira</a></p>
     <p><a href="https://patternfly.atlassian.net/issues/?filter=10304">View official list of bugs on Jira</a></p>
     <p><a href="/community/monthly-community-meeting/">View monthly Community meeting details</a></p>
   </div>
 </div>
-<h2>Check out blog posts by PatternFly community members.</h2>
-<ul>
-<!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
-  <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-    <div>
-      Published on <span class="date">{{ post.date | date: "%B, %-d %Y"}}</span> | By {{ post.author }}
-    </div>
-  </li>
-{% endfor %}
-</ul>
-<nav>
-  <ul class="pagination">
-    {% if paginator.previous_page %}
-      {% if paginator.previous_page == 1 %}
-        <li>
-          <a href="{{ site.baseurl}}community">&laquo;</a>
-        </li>
-      {% else %}
-        <li>
-          <a href="{{ site.baseurl}}community/page{{paginator.previous_page}}">&laquo;</a>
-        </li>
-      {% endif %}
-    {% else %}
-      <li class="disabled">
-        <a href="#">&laquo;</a>
-      </li>
-    {% endif %}
-    {% if paginator.page == 1 %}
-      <li class="active">
-        <a href="#">1</a>
-      </li>
-    {% else %}
-      <li>
-        <a href="{{ site.baseurl}}community">1</a>
-      </li>
-    {% endif %}
-    {% for count in (2..paginator.total_pages) %}
-      {% if count == paginator.page %}
-        <li class="active">
-          <a href="#">{{count}}</a>
-        </li>
-      {% else %}
-        <li>
-          <a href="{{ site.baseurl}}community/page{{count}}">{{count}}</a>
-        </li>
-      {% endif %}
-    {% endfor %}
-    {% if paginator.next_page %}
-      <li>
-        <a href="{{ site.baseurl}}community/page{{paginator.next_page}}">&raquo;</a>
-      </li>
-    {% else %}
-      <li class="disabled">
-        <a href="#">&raquo;</a>
-      </li>
-    {% endif %}
-  </ul>
-</nav>
