@@ -78,7 +78,7 @@
                 </ul>
               </li>
               <li {% if secondary == 'cards' %} class="active"{% endif %}>
-                <a class="{% if secondary == 'cards' %}{% else %}collapsed{% endif %}" aria-controls="cards-secondary"role="button" data-toggle="collapse" href="#cards-secondary" aria-expanded="{% if secondary == 'cards' %}true{% else %}false{% endif %}" aria-controls="cards-secondary">Cards</a>
+                <a class="{% if secondary == 'cards' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#cards-secondary" aria-expanded="{% if secondary == 'cards' %}true{% else %}false{% endif %}" aria-controls="cards-secondary">Cards</a>
                 <ul class="collapse {% if secondary == 'cards' %}in{% endif %}" id="cards-secondary">
                   <li {% if tertiary == 'aggregate-status-card' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/cards/aggregate-status-card/">Aggregate Status Card</a>
