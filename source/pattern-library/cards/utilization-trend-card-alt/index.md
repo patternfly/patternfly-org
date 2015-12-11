@@ -5,7 +5,7 @@ layout: page
 ---
 {% include nav-tabs-pattern.html %}
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
+  <div role="tabpanel" class="tab-pane active" id="usage-and-examples">
     <p>Utilization cards display the current utilization and a trend of a single metric.  The most common use case for this pattern is seen in a dashboard.</p>
     <h2>Card with a Single Metric</h2>
     <div class="example-pf">

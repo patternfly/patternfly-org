@@ -5,7 +5,7 @@ layout: page
 ---
 {% include nav-tabs-pattern.html %}
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="overview">
+  <div role="tabpanel" class="tab-pane active" id="usage-and-examples">
     <p>
       The goal of a empty state pattern is to provide a good first impression that helps users to achieve their goals. It should be used when a view is empty because no objects exists and you want to guide the user to perform specific actions.
     </p>
