@@ -62,14 +62,10 @@ layout: page
     },
   });
 
-  jQuery( "#donut-1 .c3-chart-arcs-title" ).html(
-    '<tspan dy="0" x="0" class="donut-title-big-pf">' +
-    '32' +
-    '</tspan>' +
-    '<tspan dy="20" x="0" class="donut-title-small-pf">' +
-    'of 128 GB' +
-    '</tspan>'
-  );
+  var donutChartTitle = d3.select("#donut-1").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("32").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+  donutChartTitle.insert('tspan').text("of 128 GB").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
   var donut2 = c3.generate({
     bindto: '#donut-2',
@@ -108,14 +104,10 @@ layout: page
     },
   });
 
-  jQuery( "#donut-2 .c3-chart-arcs-title" ).html(
-    '<tspan dy="0" x="0" class="donut-title-big-pf">' +
-    '69.82' +
-    '</tspan>' +
-    '<tspan dy="20" x="0" class="donut-title-small-pf">' +
-    'of 71.98 GB' +
-    '</tspan>'
-  );
+  var donutChartTitle = d3.select("#donut-2").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("69.82").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+  donutChartTitle.insert('tspan').text("of 71.98 GB").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
   var donut3 = c3.generate({
     bindto: '#donut-3',
@@ -154,14 +146,10 @@ layout: page
     },
   });
 
-  jQuery( "#donut-3 .c3-chart-arcs-title" ).html(
-    '<tspan dy="0" x="0" class="donut-title-big-pf">' +
-    '75' +
-    '</tspan>' +
-    '<tspan dy="20" x="0" class="donut-title-small-pf">' +
-    'of 100 GB' +
-    '</tspan>'
-  );
+  var donutChartTitle = d3.select("#donut-3").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("75").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+  donutChartTitle.insert('tspan').text("of 100 GB").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 </script>
 <p class="reference-markup"><a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="donut-chart-markup" href="#donut-chart-markup">Reference Markup</a></p>
 <div class="collapse" id="donut-chart-markup">
@@ -215,14 +203,10 @@ layout: page
     },
   });
 
-  jQuery( "#donut-1 .c3-chart-arcs-title" ).html(
-    '&lt;tspan dy="0" x="0" class="donut-title-big-pf"&gt;' +
-    '32' +
-    '&lt;/tspan&gt;' +
-    '&lt;tspan dy="20" x="0" class="donut-title-small-pf"&gt;' +
-    'of 128 GB' +
-    '&lt;/tspan&gt;'
-  );
+  var donutChartTitle = d3.select("#donut-1").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("32").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+  donutChartTitle.insert('tspan').text("of 128 GB").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
   var donut2 = c3.generate({
     bindto: '#donut-2',
@@ -261,14 +245,10 @@ layout: page
     },
   });
 
-  jQuery( "#donut-2 .c3-chart-arcs-title" ).html(
-    '&lt;tspan dy="0" x="0" class="donut-title-big-pf"&gt;' +
-    '69.82' +
-    '&lt;/tspan&gt;' +
-    '&lt;tspan dy="20" x="0" class="donut-title-small-pf"&gt;' +
-    'of 71.98 GB' +
-    '&lt;/tspan&gt;'
-  );
+  var donutChartTitle = d3.select("#donut-2").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("69.82").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+  donutChartTitle.insert('tspan').text("of 71.98 GB").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 
   var donut3 = c3.generate({
     bindto: '#donut-3',
@@ -307,14 +287,10 @@ layout: page
     },
   });
 
-  jQuery( "#donut-3 .c3-chart-arcs-title" ).html(
-    '&lt;tspan dy="0" x="0" class="donut-title-big-pf"&gt;' +
-    '75' +
-    '&lt;/tspan&gt;' +
-    '&lt;tspan dy="20" x="0" class="donut-title-small-pf"&gt;' +
-    'of 100 GB' +
-    '&lt;/tspan&gt;'
-  );
+  var donutChartTitle = d3.select("#donut-3").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("75").classed('donut-title-big-pf', true).attr('dy', 0).attr('x', 0);
+  donutChartTitle.insert('tspan').text("of 100 GB").classed('donut-title-small-pf', true).attr('dy', 20).attr('x', 0);
 &lt;/script&gt;</pre>
 </div>
 
