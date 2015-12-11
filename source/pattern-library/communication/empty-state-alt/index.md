@@ -18,7 +18,7 @@ layout: page
     </ul>
     <h2>Example</h2>
     <div class="example-pf">
-      {% include empty-state.html %}
+      {% include widgets/blank-slate.html %}
     </div>
   </div>
   <div role="tabpanel" class="tab-pane" id="design">
@@ -41,11 +41,11 @@ layout: page
       <div role="tabpanel" class="tab-pane nested active" id="ref-impl">
         <div class="example-pf">
           <div class="example-pf-demo">
-            {% include empty-state.html %}
+            {% include widgets/blank-slate.html %}
           </div>
         </div>
         <button class="btn btn-default btn-copy">Copy</button>
-        <pre class="prettyprint">{% capture markup_include %}{% include empty-state.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+        <pre class="prettyprint">{% capture markup_include %}{% include widgets/blank-slate.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">
         [angular code goes here]

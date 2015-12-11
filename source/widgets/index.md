@@ -1134,11 +1134,11 @@ layout: page
     <p>See <a href="http://datatables.net">http://datatables.net</a> for complete data tables documentation.</p>
     <p><strong>Note:</strong> jquery.dataTables.js must occur in the html source before patternfly*.js.</p>
     <div class="pf-example">
-     {% include datatable.html %}
+     {% include widgets/datatable.html %}
     </div>
     <p class="reference-markup"><a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="data-tables-markup" href="#data-tables-markup">Reference Markup</a></p>
     <div class="collapse" id="data-tables-markup">
-      <pre class="prettyprint">{% capture data_tables_markup_include %}{% include datatable.html %}
+      <pre class="prettyprint">{% capture data_tables_markup_include %}{% include widgets/datatable.html %}
 <script src="/components/patternfly/components/datatables/media/js/jquery.dataTables.js"></script>
 <script>
   // Initialize Datatables

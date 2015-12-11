@@ -13,7 +13,7 @@ layout: page
         <div class="container-fluid container-cards-pf" style="margin-top: 0;">
           <div class="row row-cards-pf" style="padding-top: 20px;">
             <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-            {% include card-pf-utilization-single-metric.html chart1="chart-pf-donut" chart2="chart-pf-sparkline" %}
+            {% include widgets/card-pf-utilization-single-metric.html chart1="chart-pf-donut" chart2="chart-pf-sparkline" %}
           </div>
         </div>
       </div>
@@ -24,7 +24,7 @@ layout: page
         <div class="container-fluid container-cards-pf" style="margin-top: 0;">
           <div class="row row-cards-pf" style="padding-top: 20px;">
             <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-            {% include card-pf-utilization-multiple-metrics.html chart3="chart-pf-donut-2" chart4="chart-pf-sparkline-2" chart5="chart-pf-donut-3" chart6="chart-pf-sparkline-3" chart7="chart-pf-donut-4" chart8="chart-pf-sparkline-4" %}
+            {% include widgets/card-pf-utilization-multiple-metrics.html chart3="chart-pf-donut-2" chart4="chart-pf-sparkline-2" chart5="chart-pf-donut-3" chart6="chart-pf-sparkline-3" chart7="chart-pf-donut-4" chart8="chart-pf-sparkline-4" %}
           </div>
         </div>
       </div>
@@ -83,14 +83,14 @@ layout: page
               <div class="container-fluid container-cards-pf" style="margin-top: 0;">
                 <div class="row row-cards-pf" style="padding-top: 20px;">
                   <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include card-pf-utilization-single-metric.html chart1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}
+                  {% include widgets/card-pf-utilization-single-metric.html chart1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}
                 </div>
               </div>
             </div>
           </div>
         </div>
         <button class="btn btn-default btn-copy">Copy</button>
-        <pre class="prettyprint">{% capture markup_include %}{% include card-pf-utilization-single-metric.html chart1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+        <pre class="prettyprint">{% capture markup_include %}{% include widgets/card-pf-utilization-single-metric.html chart1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         <h2>Card with Multiple Metrics</h2>
         <div class="example-pf">
           <div class="example-pf-demo example-pf-demo-no-padding">
@@ -98,14 +98,14 @@ layout: page
               <div class="container-fluid container-cards-pf" style="margin-top: 0;">
                 <div class="row row-cards-pf" style="padding-top: 20px;">
                   <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include card-pf-utilization-multiple-metrics.html chart3="chart-pf-donut-6" chart4="chart-pf-sparkline-6" chart5="chart-pf-donut-7" chart6="chart-pf-sparkline-7" chart7="chart-pf-donut-8" chart8="chart-pf-sparkline-8" %}
+                  {% include widgets/card-pf-utilization-multiple-metrics.html chart3="chart-pf-donut-6" chart4="chart-pf-sparkline-6" chart5="chart-pf-donut-7" chart6="chart-pf-sparkline-7" chart7="chart-pf-donut-8" chart8="chart-pf-sparkline-8" %}
                 </div>
               </div>
             </div>
           </div>
         </div>
         <button class="btn btn-default btn-copy">Copy</button>
-        <pre class="prettyprint">{% capture markup_include %}{% include card-pf-utilization-multiple-metrics.html chart3="chart-pf-donut-6" chart4="chart-pf-sparkline-6" chart5="chart-pf-donut-7" chart6="chart-pf-sparkline-7" chart7="chart-pf-donut-8" chart8="chart-pf-sparkline-8" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+        <pre class="prettyprint">{% capture markup_include %}{% include widgets/card-pf-utilization-multiple-metrics.html chart3="chart-pf-donut-6" chart4="chart-pf-sparkline-6" chart5="chart-pf-donut-7" chart6="chart-pf-sparkline-7" chart7="chart-pf-donut-8" chart8="chart-pf-sparkline-8" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">
         [angular code goes here]

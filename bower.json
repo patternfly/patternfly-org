@@ -16,7 +16,7 @@
     "angular-patternfly": "~2.7.0",
     "animate.css": "~3.4.0",
     "jquery.scrollTo": "~2.1.2",
-    "patternfly": "~2.7.0",
+    "patternfly": "#master",
     "wowjs": "~1.1.2",
     "zeroclipboard": "~2.2.0"
   }
