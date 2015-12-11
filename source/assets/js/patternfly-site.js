@@ -53,7 +53,7 @@ jQuery( document ).ready(function() {
     jQuery(window).trigger('resize');
   });
   // enable code copy buttons
-  ZeroClipboard.config( { swfPath: '/bower_components/zeroclipboard/dist/ZeroClipboard.swf' } );
+  ZeroClipboard.config( { swfPath: '/components/zeroclipboard/dist/ZeroClipboard.swf' } );
   var client = new ZeroClipboard( jQuery('.btn-copy') );
   client.on( 'ready', function(event) {
     jQuery('#global-zeroclipboard-html-bridge').data('placement', 'top').attr('title', 'Copy to clipboard').tooltip();

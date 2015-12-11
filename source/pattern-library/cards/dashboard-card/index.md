@@ -2,7 +2,7 @@
 title: Dashboard Cards
 author: lhinson
 layout: page
-url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
+url-js-extra: ['components/patternfly/components/matchHeight/jquery.matchHeight-min.js']
 ---
 <h2>Overview</h2>
 <p>This section provides guidance on the base elements of a card for a dashboard view. Some examples of a dashboard card includes:</p>
@@ -126,7 +126,7 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
       &lt;/div&gt;
     &lt;/div&gt;&lt;!-- /row --&gt;
   &lt;/div&gt;&lt;!-- /container --&gt;
-  &lt;script src="/components/patternfly/components/matchHeight/jquery.matchHeight-min.js"&gt;&lt;/script&gt;
+  &lt;script src="/components/matchHeight/jquery.matchHeight-min.js"&gt;&lt;/script&gt;
   &lt;script&gt;
     $(function() {
       // matchHeight the contents of each .card-pf and then the .card-pf itself

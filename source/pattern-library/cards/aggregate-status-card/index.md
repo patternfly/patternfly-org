@@ -100,7 +100,7 @@ layout: page
       &lt;/div&gt;
     &lt;/div&gt;&lt;!-- /row --&gt;
   &lt;/div&gt;&lt;!-- /container --&gt;
-  &lt;script src="/components/patternfly/components/matchHeight/jquery.matchHeight-min.js"&gt;&lt;/script&gt;
+  &lt;script src="/components/matchHeight/jquery.matchHeight-min.js"&gt;&lt;/script&gt;
   &lt;script&gt;
     $(function() {
       // matchHeight the contents of each .card-pf and then the .card-pf itself

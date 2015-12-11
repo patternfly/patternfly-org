@@ -1,8 +1,8 @@
 ---
 author: rhamilton
 layout: home
-url-css-extra: 'bower_components/animate.css/animate.min.css'
-url-js-extra: ['bower_components/wowjs/dist/wow.min.js', 'bower_components/jquery.scrollTo/jquery.scrollTo.min.js']
+url-css-extra: 'components/animate.css/animate.min.css'
+url-js-extra: ['components/wowjs/dist/wow.min.js', 'components/jquery.scrollTo/jquery.scrollTo.min.js']
 ---
 <div class="jumbotron">
   <div class="container-fluid">
