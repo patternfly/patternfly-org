@@ -783,6 +783,19 @@ html {
           &:hover {
             background: rgba(101, 109, 115, 0.15);
           }
+          &[data-toggle] {
+            &:before {
+              content: @fa-var-angle-down;
+              font-family: @icon-font-name-fa;
+              margin-right: 5px;
+              vertical-align: 0;
+            }
+            &.collapsed:before {
+              content: @fa-var-angle-right;
+              margin-left: 2px;
+              margin-right: 7px;
+            }
+          }
         }
         > ul {
           &, &.collapse {
@@ -792,7 +805,7 @@ html {
             display: block;
           }
           > li > a {
-            padding-left: ((@grid-gutter-width) / 2 + (@grid-gutter-width) / 4);
+            padding-left: ((@grid-gutter-width) / 2 + (@grid-gutter-width) / 4 + 4);
           }
         }
       }

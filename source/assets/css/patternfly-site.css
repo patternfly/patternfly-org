@@ -817,6 +817,17 @@ html {
 .navbar-sidebar > ul > li > ul > li a:hover {
   background: rgba(101, 109, 115, 0.15);
 }
+.navbar-sidebar > ul > li > ul > li a[data-toggle]:before {
+  content: "\f107";
+  font-family: "FontAwesome";
+  margin-right: 5px;
+  vertical-align: 0;
+}
+.navbar-sidebar > ul > li > ul > li a[data-toggle].collapsed:before {
+  content: "\f105";
+  margin-left: 2px;
+  margin-right: 7px;
+}
 .navbar-sidebar > ul > li > ul > li > ul,
 .navbar-sidebar > ul > li > ul > li > ul.collapse {
   display: none;
@@ -825,7 +836,7 @@ html {
   display: block;
 }
 .navbar-sidebar > ul > li > ul > li > ul > li > a {
-  padding-left: 30px;
+  padding-left: 34px;
 }
 .nav-tabs-code {
   margin-bottom: 20px;

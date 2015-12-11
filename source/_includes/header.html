@@ -70,7 +70,7 @@
                 <a href="{{ site.baseurl }}pattern-library/">Overview</a>
               </li>
               <li {% if secondary == 'application-framework' %} class="active"{% endif %}>
-                <a role="button" data-toggle="collapse" href="#application-framework-secondary" aria-expanded="{% if secondary == 'application-framework' %}true{% else %}false{% endif %}" aria-controls="application-framework-secondary">Application Framework</a>
+                <a class="{% if secondary == 'application-framework' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#application-framework-secondary" aria-expanded="{% if secondary == 'application-framework' %}true{% else %}false{% endif %}" aria-controls="application-framework-secondary">Application Framework</a>
                 <ul class="collapse {% if secondary == 'application-framework' %}in{% endif %}" id="application-framework-secondary">
                   <li {% if tertiary == 'login-page' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/application-framework/login-page/">Login Page</a>
@@ -78,7 +78,7 @@
                 </ul>
               </li>
               <li {% if secondary == 'cards' %} class="active"{% endif %}>
-                <a role="button" data-toggle="collapse" href="#cards-secondary" aria-expanded="{% if secondary == 'cards' %}true{% else %}false{% endif %}" aria-controls="cards-secondary">Cards</a>
+                <a class="{% if secondary == 'cards' %}{% else %}collapsed{% endif %}" aria-controls="cards-secondary"role="button" data-toggle="collapse" href="#cards-secondary" aria-expanded="{% if secondary == 'cards' %}true{% else %}false{% endif %}" aria-controls="cards-secondary">Cards</a>
                 <ul class="collapse {% if secondary == 'cards' %}in{% endif %}" id="cards-secondary">
                   <li {% if tertiary == 'aggregate-status-card' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/cards/aggregate-status-card/">Aggregate Status Card</a>
@@ -98,7 +98,7 @@
                 </ul>
               </li>
               <li {% if secondary == 'communication' %} class="active"{% endif %}>
-                <a role="button" data-toggle="collapse" href="#communication-secondary" aria-expanded="{% if secondary == 'communication' %}true{% else %}false{% endif %}" aria-controls="communication-secondary">Communication</a>
+                <a class="{% if secondary == 'communication' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#communication-secondary" aria-expanded="{% if secondary == 'communication' %}true{% else %}false{% endif %}" aria-controls="communication-secondary">Communication</a>
                 <ul class="collapse {% if secondary == 'communication' %}in{% endif %}" id="communication-secondary">
                   <li {% if tertiary == 'empty-state' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/communication/empty-state/">Empty State</a>
@@ -112,7 +112,7 @@
                 </ul>
               </li>
               <li {% if secondary == 'content-views' %} class="active"{% endif %}>
-                <a role="button" data-toggle="collapse" href="#content-views-secondary" aria-expanded="{% if secondary == 'content-views' %}true{% else %}false{% endif %}" aria-controls="content-views-secondary">Content Views</a>
+                <a class="{% if secondary == 'content-views' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#content-views-secondary" aria-expanded="{% if secondary == 'content-views' %}true{% else %}false{% endif %}" aria-controls="content-views-secondary">Content Views</a>
                 <ul class="collapse {% if secondary == 'content-views' %}in{% endif %}" id="content-views-secondary">
                   <li {% if tertiary == 'dashboard-layout' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/content-views/dashboard-layout/">Dashboard Layout</a>
@@ -123,7 +123,7 @@
                 </ul>
               </li>
               <li {% if secondary == 'data-visualization' %} class="active"{% endif %}>
-                <a role="button" data-toggle="collapse" href="#data-visualization-secondary" aria-expanded="{% if secondary == 'data-visualization' %}true{% else %}false{% endif %}" aria-controls="data-visualization-secondary">Data Visualization</a>
+                <a class="{% if secondary == 'data-visualization' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#data-visualization-secondary" aria-expanded="{% if secondary == 'data-visualization' %}true{% else %}false{% endif %}" aria-controls="data-visualization-secondary">Data Visualization</a>
                 <ul class="collapse {% if secondary == 'data-visualization' %}in{% endif %}" id="data-visualization-secondary">
                   <li {% if tertiary == 'donut-chart' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/data-visualization/donut-chart/">Donut Chart</a>
@@ -137,7 +137,7 @@
                 </ul>
               </li>
               <li {% if secondary == 'forms-and-controls' %} class="active"{% endif %}>
-                <a role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="{% if secondary == 'forms-and-controls' %}true{% else %}false{% endif %}" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
+                <a class="{% if secondary == 'forms-and-controls' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="{% if secondary == 'forms-and-controls' %}true{% else %}false{% endif %}" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
                 <ul class="collapse {% if secondary == 'forms-and-controls' %}in{% endif %}" id="forms-and-controls-secondary">
                   <li {% if tertiary == 'date-picker' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/forms-and-controls/date-picker/">Date Picker</a>
