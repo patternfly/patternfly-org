@@ -13,7 +13,7 @@ layout: page
         <div class="container-fluid container-cards-pf" style="margin-top: 0;">
           <div class="row row-cards-pf" style="padding-top: 20px;">
             <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-            {% include widgets/card-pf-utilization-single-metric.html chart1="chart-pf-donut" chart2="chart-pf-sparkline" %}
+            {% include widgets/card-pf-utilization-single-metric.html chart1="chart-pf-donut-1" chart2="chart-pf-sparkline-1" %}
           </div>
         </div>
       </div>

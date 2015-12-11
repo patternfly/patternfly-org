@@ -16,7 +16,7 @@ layout: page
       <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
       <div class="col-xs-6 col-sm-4 col-md-4">
         <div class="card-pf card-pf-aggregate-status">
-          <h2 class="card-pf-title" style="line-height: 1.1">
+          <h2 class="card-pf-title">
             0 Ipsum
           </h2>
           <div class="card-pf-body">
@@ -28,7 +28,7 @@ layout: page
       </div>
       <div class="col-xs-6 col-sm-4 col-md-4">
         <div class="card-pf card-pf-aggregate-status card-pf-with-action">
-          <h2 class="card-pf-title" style="line-height: 1.1">
+          <h2 class="card-pf-title">
             <a href="#">2  Amet</a>
           </h2>
           <div class="card-pf-body">
@@ -41,7 +41,7 @@ layout: page
       </div>
       <div class="col-xs-6 col-sm-4 col-md-4">
         <div class="card-pf card-pf-aggregate-status card-pf-with-action">
-          <h2 class="card-pf-title" style="line-height: 1.1">
+          <h2 class="card-pf-title">
             <a href="#">9 Adipiscing</a>
           </h2>
           <div class="card-pf-body">
@@ -123,7 +123,7 @@ layout: page
       <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini">
-          <h2 class="card-pf-title" style="line-height: 1.1">
+          <h2 class="card-pf-title">
             <span class="fa fa-car"></span>
             <a href="#">
               <span class="card-pf-aggregate-status-count">23</span> Cars
@@ -138,7 +138,7 @@ layout: page
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini">
-          <h2 class="card-pf-title" style="line-height: 1.1">
+          <h2 class="card-pf-title">
             <span class="fa fa-paper-plane"></span>
             <a href="#">
               <span class="card-pf-aggregate-status-count">300</span> Paper Services
@@ -153,7 +153,7 @@ layout: page
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini">
-          <h2 class="card-pf-title" style="line-height: 1.1">
+          <h2 class="card-pf-title">
             <span class="fa fa-rebel"></span>
             <a href="#">
               <span class="card-pf-aggregate-status-count">2500</span> Rebel Services

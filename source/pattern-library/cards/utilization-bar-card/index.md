@@ -18,7 +18,7 @@ url-js-extra: ['components/patternfly/components/matchHeight/jquery.matchHeight-
           <div class="col-md-12">
             <div class="card-pf">
               <div class="card-pf-heading">
-                <h2 class="card-pf-title" style="line-height: 1.1">Top Utilized Clusters</h2>
+                <h2 class="card-pf-title">Top Utilized Clusters</h2>
               </div>
               <div class="card-pf-body">
                 <div class="progress-description">RHOS6-Controller</div>
@@ -153,7 +153,7 @@ url-js-extra: ['components/patternfly/components/matchHeight/jquery.matchHeight-
           <div class="col-md-12">
             <div class="card-pf">
               <div class="card-pf-heading">
-                <h2 class="card-pf-title" style="line-height: 1.1">
+                <h2 class="card-pf-title">
                   Quotas
                 </h2>
               </div>

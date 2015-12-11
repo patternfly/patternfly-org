@@ -28,7 +28,7 @@ url-js-extra: ['components/patternfly/components/matchHeight/jquery.matchHeight-
                 <li><a href="#">Last 90 Days</a></li>
               </ul>
             </div>
-            <h2 class="card-pf-title" style="line-height: 1.1">
+            <h2 class="card-pf-title">
               Card Title
             </h2>
           </div>
@@ -39,7 +39,7 @@ url-js-extra: ['components/patternfly/components/matchHeight/jquery.matchHeight-
       </div>
       <div class="col-xs-12 col-sm-12 col-md-6">
         <div class="card-pf">
-          <h2 class="card-pf-title" style="line-height: 1.1">
+          <h2 class="card-pf-title">
             Card Title
           </h2>
           <div class="card-pf-body">
