@@ -43,7 +43,9 @@ layout: page
         <pre class="prettyprint">{% capture markup_include %}{% include widgets/card-pf-utilization-multiple-metrics.html chart3="chart-pf-donut-2" chart4="chart-pf-sparkline-2" chart5="chart-pf-donut-3" chart6="chart-pf-sparkline-3" chart7="chart-pf-donut-4" chart8="chart-pf-sparkline-4" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">
-        [angular code goes here]
+        <div ng-app="docsApp" ng-controller="DocsController" class="content">
+          <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.charts.directive.pfUtilizationChart.html'"></div>
+        </div>
       </div>
     </div>
   </div>
