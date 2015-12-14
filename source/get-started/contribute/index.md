@@ -40,9 +40,6 @@ We are a group of UX practitioners focused on user experience design for IT ente
 
 After the pattern proposal and/or sample code is submitted for review, you can expect some follow up questions and feedback, which may require updates, clarifications and/or considerations. Once this process is complete, the review team will vote on your proposal.  A majority of “yes” votes is required for approval.
 
-## What’s new?
-
-You can view a list of recently published content on the [What’s New page][3].
 
  [1]: mailto:patternfly@redhat.com
  [2]: https://github.com/patternfly/patternfly
