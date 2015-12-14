@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
   {% assign pageurl = page.url | remove_first:'/' | split:'/' %}
   {% capture primary %}{{ pageurl[0] }}{% endcapture %}
   {% capture secondary %}{{ pageurl[1] }}{% endcapture %}
   {% capture tertiary %}{{ pageurl[2] }}{% endcapture %}
+  {% include head.html %}
   <body {% if primary == 'get-started' or primary == 'pattern-library' or primary == 'styles' %}class="has-sidebar"{% endif %}>
     {% include header.html %}
     <div class="container-fluid">

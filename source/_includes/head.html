@@ -22,11 +22,10 @@
   <link rel="stylesheet" href="{{ "assets/css/patternfly-adjusted.min.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "components/patternfly/dist/css/patternfly-additions.min.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "assets/css/patternfly-site.min.css" | prepend: site.baseurl }}">
-  <!-- for ng-docs -->
-  <link rel="stylesheet" href="{{ "components/angular-patternfly/dist/docs/css/animations.css" | prepend: site.baseurl }}">
+  {% if primary == 'pattern-library' # only add for pages that may contain ng-docs %}<link rel="stylesheet" href="{{ "components/angular-patternfly/dist/docs/css/animations.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "components/angular-patternfly/dist/docs/css/angular-patternfly.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "components/angular-patternfly/dist/docs/css/ng-docs.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "components/angular-patternfly/dist/docs/css/examples.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "components/angular-patternfly/dist/docs/css/examples.css" | prepend: site.baseurl }}">{% endif %}
   {% if page.url-css-extra %}<link href="{{ page.url-css-extra | prepend: site.baseurl }}" rel="stylesheet" media="screen, print">{% endif %}
   <script src="{{ "components/patternfly/components/jquery/dist/jquery.min.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "components/patternfly/components/bootstrap/dist/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
@@ -42,8 +41,7 @@
   <script src="{{ "components/patternfly/components/google-code-prettify/bin/prettify.min.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "components/zeroclipboard/dist/ZeroClipboard.min.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "components/patternfly/dist/js/patternfly.min.js" | prepend: site.baseurl }}"></script>
-  <!-- for ng-docs -->
-  <script src="{{ "components/angular-patternfly/dist/docs/js/marked.js" | prepend: site.baseurl }}"></script>
+  {% if primary == 'pattern-library' # only add for pages that may contain ng-docs %}<script src="{{ "components/angular-patternfly/dist/docs/js/marked.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "components/angular-patternfly/dist/docs/grunt-scripts/angular.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "components/angular-patternfly/dist/docs/grunt-scripts/angular-sanitize.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "components/angular-patternfly/dist/docs/grunt-scripts/angular-animate.js" | prepend: site.baseurl }}"></script>
@@ -55,12 +53,8 @@
   <script src="{{ "components/angular-patternfly/dist/docs/js/angular-bootstrap.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "components/angular-patternfly/dist/docs/js/docs-setup.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "components/angular-patternfly/dist/docs/js/docs.js" | prepend: site.baseurl }}"></script>
-  <script src="{{ "ngdocs/formatForPFsite.js" | prepend: site.baseurl }}"></script>
-
+  <script src="{{ "ngdocs/formatForPFsite.js" | prepend: site.baseurl }}"></script>{% endif %}
   {% if page.url-js-extra %}{% for urlextrajs in page.url-js-extra %}<script src="{{ urlextrajs | prepend: site.baseurl }}"></script>{% endfor %}{% endif %}
   <script src="{{ "assets/js/patternfly-site.min.js" | prepend: site.baseurl }}"></script>
-  {% if site.baseurl == "/" %}
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
-  {% endif %}
-
+  {% if site.baseurl == "/" %}<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">{% endif %}
 </head>
