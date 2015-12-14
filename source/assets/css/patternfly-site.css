@@ -961,7 +961,7 @@ th {
   background: rgba(255, 255, 255, 0.4);
 }
 .tn-prototype a {
-  display: block;
+  display: inline-block;
   position: relative;
 }
 .tn-prototype a:hover:after {
