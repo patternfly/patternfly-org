@@ -922,6 +922,38 @@ html {
   }
 }
 
+.sections {
+  > .row {
+    padding-bottom: @grid-gutter-width;
+    padding-top: @grid-gutter-width;
+    h2 {
+      margin-top: 0;
+    }
+    @media (min-width: @screen-md-min) {
+      h3 {
+        text-align: center;
+      }
+    }
+    hr {
+      margin-bottom: 0;
+      margin-top: 27px;
+    }
+    .section-img {
+      text-align: center;
+    }
+  }
+  &.sections-zebra {
+    > .row {
+      &:nth-child(odd) {
+        background: #f8f8f8;
+      }
+    }
+  }
+  p + & {
+    margin-top: @grid-gutter-width;
+  }
+}
+
 .super-section:before {
   background: #dfdfdf;
 }

@@ -941,6 +941,31 @@ html {
 .super-section .pager {
   margin: 0;
 }
+.sections > .row {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.sections > .row h2 {
+  margin-top: 0;
+}
+@media (min-width: 992px) {
+  .sections > .row h3 {
+    text-align: center;
+  }
+}
+.sections > .row hr {
+  margin-bottom: 0;
+  margin-top: 27px;
+}
+.sections > .row .section-img {
+  text-align: center;
+}
+.sections.sections-zebra > .row:nth-child(odd) {
+  background: #f8f8f8;
+}
+p + .sections {
+  margin-top: 40px;
+}
 .super-section:before {
   background: #dfdfdf;
 }
