@@ -43,4 +43,4 @@ This local server (i.e., [http://localhost:9002](http://localhost:9002)) has the
 Asssuming you've completed <a href="#development-setup">Development Setup</a>, from a command line run:
 
 1. `grunt server`
-1.  Visit http://localhost:9002/
+1.  Visit [http://localhost:9002](http://localhost:9002))
