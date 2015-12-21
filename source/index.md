@@ -30,7 +30,7 @@ url-js-extra: ['components/wowjs/dist/wow.min.js', 'components/jquery.scrollTo/j
     <h2>
       About PatternFly
     </h2>
-    <p>PatternFly is a community project that promotes design commonality and improved user experience. Its offerings include open source code, patterns, style guides and supporting community (all this is tbd).</p>
+    <p>PatternFly is a community project that promotes design commonality and improved user experience. Its offerings include open source code, patterns, style guides and an active community that helps support it all.</p>
     <div class="row">
       <div class="col-xs-6 col-sm-3 col-md-3">
         <a href="{{ site.baseurl}}download/">
