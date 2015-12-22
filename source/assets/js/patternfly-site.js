@@ -52,23 +52,34 @@ jQuery( document ).ready(function() {
   $('.nav-tabs-pattern a, .nav-tabs-code a').on('shown.bs.tab', function (e) {
     jQuery(window).trigger('resize');
   });
-  // enable code copy buttons
-  ZeroClipboard.config( { swfPath: '/components/zeroclipboard/dist/ZeroClipboard.swf' } );
-  var client = new ZeroClipboard( jQuery('.btn-copy') );
-  client.on( 'ready', function(event) {
-    jQuery('#global-zeroclipboard-html-bridge').data('placement', 'top').attr('title', 'Copy to clipboard').tooltip();
-    client.on( 'copy', function(event) {
-      var markup = jQuery(event.target).next('.prettyprint').text();
-      event.clipboardData.setData('text/plain', markup);
-    }),
-    client.on( 'aftercopy', function(event) {
-      jQuery('#global-zeroclipboard-html-bridge').attr("title", "Copied!").tooltip("fixTitle").tooltip("show").attr("title", "Copy to clipboard").tooltip("fixTitle");
-    });
+  // Insert copy to clipboard button before .prettyprint
+  $('.prettyprint').each(function () {
+    var btnHtml = '<button class="btn btn-default btn-copy" title="Copy to clipboard">Copy</button>'
+    $(this).before(btnHtml);
+    $('.btn-copy').tooltip();
   });
-  // if Flash isn't available, destory the client and hide the code copy buttons
-  client.on( 'error', function(event) {
-    client.destroy();
-    jQuery('.btn-copy').hide();
+  var clipboard = new Clipboard('.btn-copy', {
+    target: function (trigger) {
+      return trigger.nextElementSibling.nextElementSibling;
+    }
+  });
+  clipboard.on('success', function (e) {
+    $(e.trigger)
+      .attr('title', 'Copied!')
+      .tooltip('fixTitle')
+      .tooltip('show')
+      .attr('title', 'Copy to clipboard')
+      .tooltip('fixTitle')
+    e.clearSelection()
+  });
+  clipboard.on('error', function (e) {
+    var fallbackMsg = /Mac/i.test(navigator.userAgent) ? 'Press \u2318-C to copy' : 'Press Ctrl-C to copy'
+    $(e.trigger)
+      .attr('title', fallbackMsg)
+      .tooltip('fixTitle')
+      .tooltip('show')
+      .attr('title', 'Copy to clipboard')
+      .tooltip('fixTitle')
   });
   // enable .navbar-toggle-sidebar to show/hide .navbar-sidebar
   jQuery('.navbar-toggle-sidebar').on('click', function (e) {

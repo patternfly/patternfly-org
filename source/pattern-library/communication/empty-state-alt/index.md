@@ -44,7 +44,6 @@ layout: page
             {% include widgets/blank-slate.html %}
           </div>
         </div>
-        <button class="btn btn-default btn-copy">Copy</button>
         <pre class="prettyprint">{% capture markup_include %}{% include widgets/blank-slate.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">

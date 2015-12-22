@@ -89,7 +89,6 @@ layout: page
             </div>
           </div>
         </div>
-        <button class="btn btn-default btn-copy">Copy</button>
         <pre class="prettyprint">{% capture markup_include %}{% include widgets/card-pf-utilization-single-metric.html chart1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         <h2>Card with Multiple Metrics</h2>
         <div class="example-pf">
@@ -104,7 +103,6 @@ layout: page
             </div>
           </div>
         </div>
-        <button class="btn btn-default btn-copy">Copy</button>
         <pre class="prettyprint">{% capture markup_include %}{% include widgets/card-pf-utilization-multiple-metrics.html chart3="chart-pf-donut-6" chart4="chart-pf-sparkline-6" chart5="chart-pf-donut-7" chart6="chart-pf-sparkline-7" chart7="chart-pf-donut-8" chart8="chart-pf-sparkline-8" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">
