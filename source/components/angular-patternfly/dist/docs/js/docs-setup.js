@@ -37,7 +37,7 @@ NG_DOCS={
       "type": "directive",
       "moduleName": "patternfly.charts",
       "shortDescription": "Directive for wrapping c3 library",
-      "keywords": "$scope add angular api application bind button c3 chart chartconfig chartctrl chartid charts class color columns config configuration container controller d1d1d1 data default dependency directive donut false form form-control form-group function groups height html js label legend library mhz module newused ng-click ng-controller ng-model note null options order pattern patternfly pf-c3-chart role script size style submitform text title tooltip total type updateavailable val width wrapping"
+      "keywords": "$scope add angular api application bind button c3 c3chartdefaults chart chartconfig chartctrl chartid charts class columns config configuration container controller data default dependency directive donut form form-control form-group function getdefaultdonutconfig groups html js library mhz module newused ng-click ng-controller ng-model note null options order patternfly pf-c3-chart role script style submitform text total type updateavailable val width wrapping"
     },
     {
       "section": "api",
@@ -55,7 +55,7 @@ NG_DOCS={
       "type": "directive",
       "moduleName": "patternfly.charts",
       "shortDescription": "Directive for rendering a heatmap chart.",
-      "keywords": "$scope angular api block call ce0000 chart chart-title chartctrl charts charttitle checkbox class click-action clickaction clicked col-md-12 col-md-5 colors console controller correspond d4f0fa data default defaults directive displayed ec7a08 f00 f9d67a flag form form-group function heapmap heatmap heatmap-color-pattern heatmapcolorpattern height hightest hover html js kubernetes labels legend legend-labels legendlabels legends list-style-type log m8y measurement message module ng-controller ng-model node openshift overriding patternfly pf-heatmap provider radio-inline rendering role row script show-legend showlegend showlegends style threshold thresholds title titlealt tooltip total true type units utilization values var"
+      "keywords": "$scope angular api block call ce0000 chart chart-data-available chart-title chartctrl chartdataavailable charts charttitle checkbox checkbox-inline class click-action clickaction clicked col-md-12 col-md-5 colors console controller correspond d4f0fa data dataavailable default defaults directive displayed ec7a08 example-heatmap-container f00 f9d67a flag form form-group function heapmap heatmap heatmap-color-pattern heatmapcolorpattern height hightest hover html js kubernetes labels legend legend-labels legendlabels legends list-style-type log m8y measurement message module ng-controller ng-model node openshift overriding patternfly pf-heatmap provider rendering role row script show-legend showlegend showlegends style threshold thresholds title titlealt tooltip total true type units utilization values var"
     },
     {
       "section": "api",
@@ -73,7 +73,7 @@ NG_DOCS={
       "type": "directive",
       "moduleName": "patternfly.charts",
       "shortDescription": "Directive for rendering a trend chart. The trend chart combines overall data with a",
-      "keywords": "$scope $watch actual add adddatapoint alert amount angular api array axis c3 callback callbackfn called card chart chart-data chartctrl chartdata chartheight chartid charts checkbox checkbox-inline class cluster col-md-12 col-md-2 col-md-3 col-md-4 combines compact config configuration controller custshowxaxis custshowyaxis d-- data dates days demo directive disk display element exampletrendschart fa fa-plus-circle false filter filterconfig filters fn footer footerconfig form form-group format frame full function gb gettime height html http iconclass inline js label large latest layout length list list-style-type mhz minutes module network newvalue ng-click ng-controller ng-hide ng-model ng-selected number options org override patternfly percentage pf-select pf-select-sm pf-trends-chart pfsparklinechart point points push random rendering representing role round row script selected settings show-x-axis show-y-axis showing showxaxis showyaxis sizes small sparkline style text time timeframe title titles today tooltiptype total trend trendlabel trends true type unique unit units utilization values valuetype var virtual width xdata ydata"
+      "keywords": "$scope $watch actual add adddatapoint alert amount angular api array axis c3 callback callbackfn called card chart chart-data chartctrl chartdata chartheight chartid charts checkbox checkbox-inline class cluster col-md-12 col-md-2 col-md-3 col-md-4 col-md-6 combines compact config configuration controller custshowxaxis custshowyaxis d-- data dataavailable dates days default demo directive disk display element exampletrendschart fa fa-plus-circle false filter filterconfig filters flag fn footer footerconfig form form-group format frame full function gb gettime height html http iconclass inline js label large latest layout length list list-style-type mhz minutes module network newvalue ng-click ng-controller ng-hide ng-model ng-selected number options org override patternfly percentage pf-select pf-select-sm pf-trends-chart pfsparklinechart point points push random rendering representing role round row script selected settings show-x-axis show-y-axis showing showxaxis showyaxis sizes small sparkline style text time timeframe title titles today tooltiptype total trend trendlabel trends true type unique unit units utilization values valuetype var virtual width xdata ydata"
     },
     {
       "section": "api",
@@ -91,7 +91,7 @@ NG_DOCS={
       "type": "directive",
       "moduleName": "patternfly.charts",
       "shortDescription": "Directive for rendering a utilization chart. The utilization chart combines overall data with a pfDonutPctChart and",
-      "keywords": "$scope add adddatapoint amount angular api array axis c3 center center-label centerlabel chart chart-data charta chartctrl chartdata chartid charts checkbox checkbox-inline class col-md-12 col-md-3 col-md-6 combines config configuration contents controller custchartheight custshowxaxis custshowyaxis d-- data dates day default directive display displays donut donut-config donutcenterlabel donutconfig element error examplesparkline false form form-group full function gb gettime height html http js label length list list-style-type math memory mhz module newdata newdate ng-click ng-controller ng-model number options org override parameter patternfly pct percent percentage pf-utilization-chart pfdonutchart pfdonutpctchart pfsparklinechart point points push radio radio-inline random rendering representing role round row script settings show-sparkline-x-axis show-sparkline-y-axis showing showsparklinexaxis showsparklineyaxis sparkline sparkline-chart-height sparkline-config sparklinechartheight sparklineconfig specifics specifies style thresholds title today tooltip tooltiptype total type unit units usage usageperday utilization valueperday values var warning width xdata ydata"
+      "keywords": "$scope add adddatapoint amount angular api array axis c3 center center-label centerlabel chart chart-data charta chartctrl chartdata chartid charts checkbox checkbox-inline class col-md-12 col-md-3 col-md-6 combines config configuration contents controller custchartheight custshowxaxis custshowyaxis d-- data dataavailable dates day default directive display displays donut donut-config donutcenterlabel donutconfig element error examplesparkline false flag form form-group full function gb gettime height html http js label length list list-style-type math memory mhz module newdata newdate ng-change ng-click ng-controller ng-model number options org override parameter patternfly pct percent percentage pf-utilization-chart pfdonutchart pfdonutpctchart pfsparklinechart point points push radio radio-inline random rendering representing role round row script settings show-sparkline-x-axis show-sparkline-y-axis showing showsparklinexaxis showsparklineyaxis sparkline sparkline-chart-height sparkline-config sparklinechartheight sparklineconfig specifics specifies style thresholds title today tooltip tooltiptype total true type unit units updatedataavailable usage usageperday utilization valueperday values var warning width xdata ydata"
     },
     {
       "section": "api",
@@ -146,6 +146,15 @@ NG_DOCS={
       "moduleName": "patternfly.form",
       "shortDescription": "Encapsulates the structure and styling for a label + input used within a",
       "keywords": "$scope angular api based bootstrap3 class col-sm-2 col-sm-5 col-sm-9 controller creates default description directive doh donuts duff element encapsulates field form form-horizontal formdemoctrl function homer html input item js label module ng-controller ng-model patternfly pf-form-group pf-input-class pf-label pffieldid pfinputclass pflabel pflabelclass required scope script simpson structure styling text type"
+    },
+    {
+      "section": "api",
+      "id": "patternfly.form.directive:pfRemainingCharsCount",
+      "shortName": "pfRemainingCharsCount",
+      "type": "directive",
+      "moduleName": "patternfly.form",
+      "shortDescription": "Directive for showing a characters remaining count and triggering warning and error",
+      "keywords": "$on $scope additional additionally allow angular api applied area behavior block block-input-at-max-limit btn btn-default button character characters characters-remaining charremainingcntfld_1 charremainingcntfld_2 charremainingcntfld_3 chars-max-limit chars-remaining-pf chars-warn-remaining chars-warn-remaining-pf charsmaxlimitexceeded class col-md-4 color container controller count count-fld css default democtrl directive disable dispatched dispatching display emptly entered equal error event example falls false field form form-control form-group function greater html initial input input_3 js limit max maximum message messagearea messagearea1text messagearea2text messagearea_1 messagearea_2 messageinput3text model module negative ng-controller ng-disabled ng-model number overcharsmaxlimit padding-left passed passing paste patternfly pf-remaining-chars-count placeholder postbtn_1 postbtn_2 pull-left pull-right reached red remaining removed representing required resize right-click row rows scope script setting showing string style submit text textarea tfid threshold thresholds trigger triggered triggering true turns type undercharsmaxlimit variable warn warning width"
     },
     {
       "section": "api",
@@ -253,6 +262,7 @@ NG_DOCS={
     "bootstrap-treeview.js",
     "c3.js",
     "d3.js",
+    "patternfly.js",
     "angular.js",
     "angular-sanitize.js",
     "angular-animate.js",

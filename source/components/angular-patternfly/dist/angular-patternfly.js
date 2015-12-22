@@ -536,104 +536,23 @@ angular.module('patternfly.card').directive('pfCard', function () {
 ;(function () {
   'use strict';
 
+  var patternflyDefaults = $().c3ChartDefaults();
+
   angular.module('patternfly.charts').constant('c3ChartDefaults', {
-    getDefaultDonut: function (title) {
-      return {
-        title: title,
-        label: {
-          show: false
-        },
-        width: 11
-      };
-    },
-    getDefaultDonutSize: function () {
-      return {
-        height: 171 // produces a diameter of 150 and a centered chart
-      };
-    },
-    getDefaultDonutColor: function () {
-      return {
-        pattern: ['#0088CE', '#D1D1D1']
-      };
-    },
-    getDefaultDonutTooltip: function () {
-      return {
-        show: false
-      };
-    },
-    getDefaultDonutLegend: function () {
-      return {
-        show: false
-      };
-    },
-    getDefaultDonutConfig: function (title) {
-      return {
-        donut: this.getDefaultDonut(title),
-        size: this.getDefaultDonutSize(),
-        legend: this.getDefaultDonutLegend(),
-        color: this.getDefaultDonutColor(),
-        tooltip: this.getDefaultDonutTooltip()
-      };
-    },
-    getDefaultSparklineArea: function () {
-      return {
-        zerobased: true
-      };
-    },
-    getDefaultSparklineSize: function () {
-      return {
-        height: 60
-      };
-    },
-    getDefaultSparklineAxis: function () {
-      return {
-        x: {
-          show: false
-        },
-        y: {
-          show: false
-        }
-      };
-    },
-    getDefaultSparklineColor: function () {
-      return {
-        pattern: ['#0088ce', '#00659c', '#3f9c35', '#ec7a08', '#cc0000']
-      };
-    },
-    getDefaultSparklineLegend: function () {
-      return {
-        show: false
-      };
-    },
-    getDefaultSparklinePoint: function () {
-      return {
-        r: 1,
-        focus: {
-          expand: {
-            r: 4
-          }
-        }
-      };
-    },
-    getDefaultSparklineTooltip: function () {
-      return {
-        // because a sparkline should only contain a single data column, the tooltip will only work for a single data column
-        contents: function (d) {
-          return '<span class="c3-tooltip-sparkline">' + d[0].value + ' ' + d[0].name + '</span>';
-        }
-      };
-    },
-    getDefaultSparklineConfig: function () {
-      return {
-        area: this.getDefaultSparklineArea(),
-        size: this.getDefaultSparklineSize(),
-        axis: this.getDefaultSparklineAxis(),
-        color: this.getDefaultSparklineColor(),
-        legend: this.getDefaultSparklineLegend(),
-        point: this.getDefaultSparklinePoint(),
-        tooltip: this.getDefaultSparklineTooltip()
-      };
-    }
+    getDefaultColors: patternflyDefaults.getDefaultColors,
+    getDefaultDonut: patternflyDefaults.getDefaultDonut,
+    getDefaultDonutSize: patternflyDefaults.getDefaultDonutSize,
+    getDefaultDonutColor: patternflyDefaults.getDefaultDonutColors,
+    getDefaultDonutLegend: patternflyDefaults.getDefaultDonutLegend,
+    getDefaultDonutConfig: patternflyDefaults.getDefaultDonutConfig,
+    getDefaultSparklineArea: patternflyDefaults.getDefaultSparklineArea,
+    getDefaultSparklineSize: patternflyDefaults.getDefaultSparklineSize,
+    getDefaultSparklineAxis: patternflyDefaults.getDefaultSparklineAxis,
+    getDefaultSparklineColor: patternflyDefaults.getDefaultColors,
+    getDefaultSparklineLegend: patternflyDefaults.getDefaultSparklineLegend,
+    getDefaultSparklinePoint: patternflyDefaults.getDefaultSparklinePoint,
+    getDefaultSparklineTooltip: patternflyDefaults.getDefaultSparklineTooltip,
+    getDefaultSparklineConfig: patternflyDefaults.getDefaultSparklineConfig
   });
 })();
 ;/**
@@ -674,34 +593,17 @@ angular.module('patternfly.card').directive('pfCard', function () {
        $scope.total = 1000;
        $scope.available =  $scope.total - $scope.used;
 
-       $scope.chartConfig = {
+       $scope.chartConfig = $().c3ChartDefaults().getDefaultDonutConfig('MHz Used');
+       $scope.chartConfig.data = {
          type: "donut",
-         donut: {
-           title: "MHz Used",
-           label: {show: false},
-           width: 10
-          },
-          size: {
-            height: 130
-          },
-          legend: {
-            show: false
-            },
-          color: {
-            pattern: ["#0088CE","#D1D1D1"]
-          },
-          tooltip: {},
-          data: {
-            type: "donut",
-            columns: [
-              ["Used", $scope.used],
-              ["Available", $scope.total - $scope.used]
-            ],
-            groups: [
-              ["used", "available"]
-            ],
-            order: null
-          }
+         columns: [
+           ["Used", $scope.used],
+           ["Available", $scope.total - $scope.used]
+         ],
+         groups: [
+           ["used", "available"]
+         ],
+         order: null
        };
 
        $scope.updateAvailable = function (val) {
@@ -973,7 +875,7 @@ angular.module('patternfly.card').directive('pfCard', function () {
    </file>
  </example>
  */
-angular.module('patternfly.charts').directive('pfDonutPctChart', ["c3ChartDefaults", "pfUtils", "$timeout", function (c3ChartDefaults, pfUtils, $timeout) {
+angular.module('patternfly.charts').directive('pfDonutPctChart', ["pfUtils", "$timeout", function (pfUtils, $timeout) {
   'use strict';
 
   return {
@@ -1098,7 +1000,7 @@ angular.module('patternfly.charts').directive('pfDonutPctChart', ["c3ChartDefaul
           $scope.config.data.onclick = $scope.config.onClickFn;
         };
 
-        $scope.config = pfUtils.merge(c3ChartDefaults.getDefaultDonutConfig(), $scope.config);
+        $scope.config = pfUtils.merge($().c3ChartDefaults().getDefaultDonutConfig(), $scope.config);
         $scope.updateAll($scope);
       }
     ],
@@ -1141,6 +1043,41 @@ angular.module('patternfly.charts').directive('pfDonutPctChart', ["c3ChartDefaul
     }
   };
 }]);
+;/**
+ *
+ * @description
+ *   Directive for rendering an empty chart. This is used by chart directives when the data
+ *   available flag is set to false.
+ *
+ * @param {string=} chartHeight height of the chart (no units) - default: 40
+ */
+angular.module('patternfly.charts').directive('pfEmptyChart', function () {
+  'use strict';
+  return {
+    restrict: 'A',
+    scope: {
+      chartHeight: '=?'
+    },
+    replace: true,
+    templateUrl: 'charts/empty-chart.html',
+    controller: ["$scope", function ($scope) {
+      $scope.setSizeStyles = function () {
+        var height = $scope.chartHeight || 40;
+        var topPadding = Math.min(Math.round((height - 40) / 2), 20);
+        $scope.sizeStyles = {
+          height: height + 'px',
+          'padding-top': topPadding + 'px'
+        };
+      };
+      $scope.setSizeStyles();
+    }],
+    link: function (scope) {
+      scope.$watch('chartHeight', function () {
+        scope.setSizeStyles();
+      });
+    }
+  };
+});
 ;angular.module('patternfly.charts').directive('pfHeatmapLegend',
   function () {
     'use strict';
@@ -1191,6 +1128,7 @@ angular.module('patternfly.charts').directive('pfDonutPctChart', ["c3ChartDefaul
  * <li>.tooltip       - message to be displayed on hover
  * </ul>
  *
+ * @param {boolean=} chartDataAvailable flag if the chart data is available - default: true
  * @param {string=} height height of the chart (no units) - default: "200"
  * @param {string=} chartTitle title of the chart
  * @param {boolean=} showLegend flag to show the legend, defaults to true
@@ -1202,21 +1140,35 @@ angular.module('patternfly.charts').directive('pfDonutPctChart', ["c3ChartDefaul
  <example module="patternfly.charts">
    <file name="index.html">
      <div ng-controller="ChartCtrl" class="row">
-       <div class="col-md-5">
-         <div pf-heatmap id="id" chart-title="title" data="data" show-legend="showLegends"></div>
+       <div class="col-md-5 example-heatmap-container">
+         <div pf-heatmap id="id" chart-title="title" data="data" chart-data-available="dataAvailable"
+              show-legend="showLegends"></div>
        </div>
-       <div class="col-md-5">
-         <div pf-heatmap id="id" chart-title="titleAlt" data="data" show-legend="showLegends" legend-labels="legendLabels" heatmap-color-pattern="heatmapColorPattern" thresholds="thresholds" click-action="clickAction"></div>
+       <div class="col-md-5 example-heatmap-container">
+         <div pf-heatmap id="id" chart-title="titleAlt" data="data" chart-data-available="dataAvailable"
+              show-legend="showLegends" legend-labels="legendLabels"
+              heatmap-color-pattern="heatmapColorPattern" thresholds="thresholds"
+              click-action="clickAction"></div>
        </div>
        <div class="col-md-12">
          <form role="form">
            <div class="form-group">
-             <label class="radio-inline">
+             <label class="checkbox-inline">
+               <input type="checkbox" ng-model="dataAvailable">Data Available</input>
+             </label>
+           </div>
+         </form>
+       </div>
+       <div class="col-md-12">
+         <form role="form">
+           <div class="form-group">
+             <label class="checkbox-inline">
                <input type="checkbox" ng-model="showLegends">Show Legends</input>
              </label>
            </div>
          </form>
        </div>
+     </div>
    </file>
    <file name="script.js">
      angular.module( 'patternfly.charts' ).controller( 'ChartCtrl', function( $scope) {
@@ -1274,9 +1226,9 @@ angular.module('patternfly.charts').directive('pfDonutPctChart', ["c3ChartDefaul
        {'id': 51, 'value': 0.22, 'tooltip': 'Node 26 : My Kubernetes Provider<br\>22% : 22 Used of 100 Total<br\>78 Available'},
        {'id': 14, 'value': 0.2, 'tooltip': 'Node 14 : My OpenShift Provider<br\>20% : 20 Used of 100 Total<br\>80 Available'}];
 
+       $scope.dataAvailable = true;
        $scope.title = 'Utilization - Using Defaults';
        $scope.titleAlt = 'Utilization - Overriding Defaults';
-
        $scope.legendLabels = ['< 60%','70%', '70-80%' ,'80-90%', '> 90%'];
        $scope.thresholds = [0.6, 0.7, 0.8, 0.9];
        $scope.heatmapColorPattern = ['#d4f0fa', '#F9D67A', '#EC7A08', '#CE0000', '#f00'];
@@ -1296,6 +1248,7 @@ angular.module('patternfly.charts').directive('pfHeatmap', ["$compile", function
     restrict: 'A',
     scope: {
       data: '=',
+      chartDataAvailable: '=?',
       height: '=',
       chartTitle: '=?',
       showLegend: '=?',
@@ -1328,6 +1281,13 @@ angular.module('patternfly.charts').directive('pfHeatmap', ["$compile", function
     link: function (scope, element, attrs) {
       var thisComponent = element[0].querySelector('.pf-heatmap-svg');
       var containerWidth, containerHeight, blockSize, numberOfRows;
+
+      var setStyles = function () {
+        scope.containerStyles = {
+          height: scope.height + 'px',
+          display: scope.chartDataAvailable === false ? 'none' : 'block'
+        };
+      };
 
       var setSizes = function () {
         var parentContainer = element[0].querySelector('.heatmap-container');
@@ -1410,9 +1370,13 @@ angular.module('patternfly.charts').directive('pfHeatmap', ["$compile", function
       scope.$watch('data', function (newVal, oldVal) {
         if (typeof(newVal) !== 'undefined') {
           scope.loadingDone = true;
+          setStyles();
           setSizes();
           redraw();
         }
+      });
+      scope.$watch('chartDataAvailable', function () {
+        setStyles();
       });
     }
   };
@@ -1549,7 +1513,7 @@ angular.module('patternfly.charts').directive('pfHeatmap', ["$compile", function
    </file>
  </example>
  */
-angular.module('patternfly.charts').directive('pfSparklineChart', ["c3ChartDefaults", "pfUtils", function (c3ChartDefaults, pfUtils) {
+angular.module('patternfly.charts').directive('pfSparklineChart', ["pfUtils", function (pfUtils) {
   'use strict';
   return {
     restrict: 'A',
@@ -1631,7 +1595,7 @@ angular.module('patternfly.charts').directive('pfSparklineChart', ["c3ChartDefau
                     '</tr>';
                   break;
                 default:
-                  tipRows = c3ChartDefaults.getDefaultSparklineTooltip().contents(d);
+                  tipRows = $().c3ChartDefaults().getDefaultSparklineTooltip().contents(d);
                 }
               }
               return $scope.getTooltipTableHTML(tipRows);
@@ -1677,7 +1641,7 @@ angular.module('patternfly.charts').directive('pfSparklineChart', ["c3ChartDefau
           $scope.showYAxis = ($scope.config.showAxis !== undefined) && $scope.config.showAxis;
         }
 
-        $scope.defaultConfig = c3ChartDefaults.getDefaultSparklineConfig();
+        $scope.defaultConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
         $scope.defaultConfig.axis = {
           x: {
             show: $scope.showXAxis === true,
@@ -1762,6 +1726,7 @@ angular.module('patternfly.charts').directive('pfSparklineChart', ["c3ChartDefau
  * <li>.total  - number representing the total amount
  * <li>.xData  - Array, X values for the data points, first element must be the name of the data
  * <li>.yData  - Array, Y Values for the data points, first element must be the name of the data
+ * <li>.dataAvailable - Flag if there is data available - default: true
  * </ul>
  *
  * @param {int=} chartHeight   height of the sparkline chart
@@ -1770,84 +1735,96 @@ angular.module('patternfly.charts').directive('pfSparklineChart', ["c3ChartDefau
  * @example
  <example module="demo">
  <file name="index.html">
-   <div ng-controller="ChartCtrl" class="row" style="display:inline-block; width: 55%;">
+   <div ng-controller="ChartCtrl" class="row" style="display:inline-block; width: 100%;">
      <div class="col-md-12">
        <div pf-trends-chart config="config" chart-data="data"
             show-x-axis="custShowXAxis" show-y-axis="custShowYAxis"></div>
      </div>
      <hr class="col-md-12">
      <div class="col-md-12">
-     <div class="row">
-       <div class="col-md-4">
-         <form role="form"">
-           <div class="form-group">
-             <label>Show</label></br>
-             <label class="checkbox-inline">
-               <input type="checkbox" ng-model="custShowXAxis">X Axis</input>
-             </label>
-             <label class="checkbox-inline">
-               <input type="checkbox" ng-model="custShowYAxis">Y Axis</input>
-             </label>
-           </div>
-         </form>
+       <div class="row">
+         <div class="col-md-4">
+           <form role="form"">
+             <div class="form-group">
+               <label>Show</label></br>
+               <label class="checkbox-inline">
+                 <input type="checkbox" ng-model="custShowXAxis">X Axis</input>
+               </label>
+               <label class="checkbox-inline">
+                 <input type="checkbox" ng-model="custShowYAxis">Y Axis</input>
+               </label>
+             </div>
+           </form>
+         </div>
+         <div class="col-md-3">
+           <form role="form" >
+             <div class="form-group">
+               <label>Layout</label></br>
+               <select pf-select class="pf-select-sm" ng-model="layout" id="layout">
+                 <option value="large" ng-selected="true" selected>Large</option>
+                 <option value="small">Small</option>
+                 <option value="compact">Compact</option>
+                 <option value="inline">Inline</option>
+               </select>
+             </div>
+           </form>
+         </div>
+         <div class="col-md-3">
+           <form role="form" ng-hide="layout == 'inline'">
+             <div class="form-group">
+               <label>Title Value Type</label></br>
+               <select pf-select class="pf-select-sm" ng-model="valueType" id="valueType">
+                 <option value="actual" ng-selected="true" selected>Actual</option>
+                 <option value="percentage">Percentage</option>
+               </select>
+             </div>
+           </form>
+         </div>
+         <div class="col-md-2">
+           <button ng-click="addDataPoint()">Add Data Point</button>
+         </div>
        </div>
-       <div class="col-md-3">
-         <form role="form" >
-           <div class="form-group">
-             <label>Layout</label></br>
-             <select pf-select class="pf-select-sm" ng-model="layout" id="layout">
-               <option value="large" ng-selected="true" selected>Large</option>
-               <option value="small">Small</option>
-               <option value="compact">Compact</option>
-               <option value="inline">Inline</option>
-             </select>
-           </div>
-         </form>
-       </div>
-       <div class="col-md-3">
-         <form role="form" ng-hide="layout == 'inline'">
-           <div class="form-group">
-             <label>Title Value Type</label></br>
-             <select pf-select class="pf-select-sm" ng-model="valueType" id="valueType">
-               <option value="actual" ng-selected="true" selected>Actual</option>
-               <option value="percentage">Percentage</option>
-             </select>
-           </div>
-         </form>
-       </div>
-       <div class="col-md-2">
-         <button ng-click="addDataPoint()">Add Data Point</button>
+       <div class="row">
+         <div class="col-md-6">
+           <form role="form"">
+             <div class="form-group">
+               <label class="checkbox-inline">
+                 <input type="checkbox" ng-model="data.dataAvailable">Data Available</input>
+               </label>
+             </div>
+           </form>
+         </div>
        </div>
      </div>
-    </div>
+   </div>
  </file>
  <file name="script.js">
  angular.module( 'demo', ['patternfly.charts', 'patternfly.card'] ).controller( 'ChartCtrl', function( $scope ) {
 
        $scope.config = {
-         'chartId'      : 'exampleTrendsChart',
-         'title'        : 'Network Utilization Trends',
-         'layout'       : 'large',
-         'trendLabel'   : 'Virtual Disk I/O',
-         'valueType'    : 'actual',
-         'timeFrame'    : 'Last 15 Minutes',
-         'units'        : 'MHz',
-         'tooltipType'  : 'percentage'
+         chartId      : 'exampleTrendsChart',
+         title        : 'Network Utilization Trends',
+         layout       : 'large',
+         trendLabel   : 'Virtual Disk I/O',
+         valueType    : 'actual',
+         timeFrame    : 'Last 15 Minutes',
+         units        : 'MHz',
+         tooltipType  : 'percentage'
        };
 
        $scope.footerConfig = {
-         'iconClass' : 'fa fa-plus-circle',
-         'text'      : 'Add New Cluster',
-         'callBackFn': function () {
+         iconClass : 'fa fa-plus-circle',
+         text      : 'Add New Cluster',
+         callBackFn: function () {
             alert("Footer Callback Fn Called");
           }
        }
 
        $scope.filterConfig = {
-         'filters' : [{label:'Last 30 Days', value:'30'},
+         filters : [{label:'Last 30 Days', value:'30'},
                       {label:'Last 15 Days', value:'15'},
                       {label:'Today', value:'today'}],
-         'callBackFn': function (f) {
+         callBackFn: function (f) {
             alert("Filter Callback Fn Called for '" + f.label + "' value = " + f.value);
           }
        }
@@ -1859,9 +1836,10 @@ angular.module('patternfly.charts').directive('pfSparklineChart', ["c3ChartDefau
       }
 
        $scope.data = {
-           'total': '250',
-           'xData': dates,
-           'yData': ['used', '10', '20', '30', '20', '30', '10', '14', '20', '25', '68', '54', '56', '78', '56', '67', '88', '76', '65', '87', '76']
+           dataAvailable: true,
+           total: 250,
+           xData: dates,
+           yData: ['used', 10, 20, 30, 20, 30, 10, 14, 20, 25, 68, 54, 56, 78, 56, 67, 88, 76, 65, 87, 76]
        };
 
        $scope.custShowXAxis = false;
@@ -2109,6 +2087,7 @@ angular.module('patternfly.charts').directive('pfUtilizationBarChart', ["$timeou
  * <li>.total  - number representing the total amount
  * <li>.xData  - Array, X values for the data points, first element must be the name of the data
  * <li>.yData  - Array, Y Values for the data points, first element must be the name of the data
+ * <li>.dataAvailable - Flag if there is data available - default: true
  * </ul>
  *
  * @param {string=} donutCenterLabel specifies the contents of the donut's center label.<br/>
@@ -2202,6 +2181,16 @@ angular.module('patternfly.charts').directive('pfUtilizationBarChart', ["$timeou
              <button ng-click="addDataPoint()">Add Data Point</button>
            </div>
          </div>
+         <div class="row">
+           <div class="col-md-6">
+             <form role="form"">
+               <div class="form-group">
+                 <label class="checkbox-inline">
+                   <input type="checkbox" ng-model="data.dataAvailable" ng-change="updateDataAvailable()">Data Available</input>
+                 </label>
+               </div>
+             </form>
+         </div>
        </div>
      </div>
    </file>
@@ -2228,6 +2217,7 @@ angular.module('patternfly.charts').directive('pfUtilizationBarChart', ["$timeou
     }
 
      $scope.data = {
+         dataAvailable: true,
          used: 76,
          total: 100,
          xData: dates,
@@ -2928,6 +2918,184 @@ angular.module('patternfly.form').directive('pfFormGroup', function () {
     }
   };
 });
+;/**
+ * @ngdoc directive
+ * @name patternfly.form.directive:pfRemainingCharsCount
+ *
+ * @description
+ *   Directive for showing a characters remaining count and triggering warning and error</br>
+ *   behavior when passing specified thresholds.  When the <code>chars-warn-remaining</code> threshold is passed, </br>
+ *   the <code>chars-warn-remaining-pf</code> css class is applied to the <code>count-fld</code>, which by default, turns </br>
+ *   the remaining count number <font color='red'>red</font>.</br>
+ *   By default, characters may be entered into the text field after the <code>chars-max-limit</code> limit has been reached,</br>
+ *   the remaining count number will become a negative value. Setting the <code>blockInputAtMaxLimit</code> to <em>true</em>,</br>
+ *   will block additional input into the text field after the max has been reached; additionally a right-click 'paste' will only </br>
+ *   paste characters until the maximum character limit is reached.
+ *
+ * @param {string} ng-model The scope model variable which contains the initial text for the text field.  Required, but</br>
+ * can be an emptly string ("").
+ * @param {string} count-fld The id of the field to display the 'characters-remaining' count.
+ * @param {string} chars-max-limit Number representing the maximum number of characters to allow before dispatching a<br/>
+ * 'overCharsMaxLimit' event.   When the number of characters falls below <code>chars-max-limit</code>, a 'underCharsMaxLimit'<br/>
+ * event is dispatched.
+ * @param {string} chars-warn-remaining Number of remaining characters to warn upon.  The 'chars-warn-remaining-pf'<br/>
+ * class will be applied to the <code>count-fld</code> when the remaining characters is less than the<br/>
+ * <code>chars-warn-remaining</code> threshold.  When/if the number of remaining characters becomes greater than the<br/>
+ * <code>chars-warn-remaining</code> threshold, the 'chars-warn-remaining-pf' class is removed from the <code>count-fld</code> field.
+ * @param {boolean=} block-input-at-max-limit If true, no more characters can be entered into the text field when the<br/>
+ * <code>chars-max-limit</code> has been reached.  If false (the default), characters may be entered into the text field after the<br/>
+ * max. limit has been reached, but these additional characters will trigger the 'overCharsMaxLimit' event to be<br/>
+ * dispatched.  When <code>blockInputAtMaxLimit</code> is <em>true</em>, a right-click 'paste' will only paste<br/>
+ * characters until the maximum character limit is reached.
+ *
+ * @example
+ <example module="patternfly.example">
+   <file name="index.html">
+     <div ng-controller="DemoCtrl" style="display:inline-block; width: 100%;">
+
+     <style>
+       textarea {
+         resize: none;
+       }
+     </style>
+
+     <div class="container">
+       <strong>Max limit: 20, warn when 5 or less remaining, disable button after max limit</strong>
+       <div class="row">
+         <div class="col-md-4">
+
+           <form>
+             <div class="form-group">
+               <label for="messageArea"></label>
+               <textarea class="form-control" pf-remaining-chars-count id="messageArea_1" ng-model="messageArea1text" chars-max-limit="20" chars-warn-remaining="5"
+                         count-fld="charRemainingCntFld_1" name="text" placeholder="Type in your message" rows="5"></textarea>
+             </div>
+             <span class="pull-right chars-remaining-pf">
+               <span id="charRemainingCntFld_1"></span>
+               <button id="postBtn_1" ng-disabled="charsMaxLimitExceeded" type="submit" class="btn btn-default">Post New Message</button>
+             </span>
+           </form>
+
+         </div>
+       </div>
+       <br>
+       <strong>Max limit: 10, warn when 2 or less remaining, block input after max limit</strong>
+       <div class="row">
+         <div class="col-md-4">
+          <form>
+             <div class="form-group">
+               <label for="messageArea"></label>
+               <textarea class="form-control" pf-remaining-chars-count id="messageArea_2" ng-model="messageArea2text" chars-max-limit="10" chars-warn-remaining="2"
+                         block-input-at-max-limit="true" count-fld="charRemainingCntFld_2" name="text"
+                         placeholder="Type in your message" rows="5"></textarea>
+             </div>
+             <span class="pull-left">
+               <button id="postBtn_2" type="submit" class="btn btn-default">Submit</button>
+             </span>
+             <span class="pull-right chars-remaining-pf">
+               <span id="charRemainingCntFld_2"></span>
+             </span>
+           </form>
+         </div>
+       </div>
+       <br>
+       <strong>Max limit: 10, warn when 5 or less remaining, block input after max limit</strong>
+       <div class="row">
+         <div class="col-md-4">
+           <input id="input_3" pf-remaining-chars-count chars-max-limit="10" ng-model="messageInput3text" chars-warn-remaining="5" count-fld="charRemainingCntFld_3"
+             block-input-at-max-limit="true"/>
+             <span class="chars-remaining-pf"><span id="charRemainingCntFld_3" style="padding-left: 5px"></span>Remaining</span>
+         </div>
+       </div>
+     </div>
+   </file>
+
+   <file name="script.js">
+   angular.module( 'patternfly.example', ['patternfly.form']);
+
+   angular.module( 'patternfly.example' ).controller( 'DemoCtrl', function( $scope ) {
+     $scope.messageArea1text = "Initial Text";
+     $scope.messageArea2text = "";
+     $scope.messageInput3text = "";
+
+     $scope.charsMaxLimitExceeded = false;
+
+     // 'tfId' will equal the id of the text area/input field which
+     // triggered the event
+     $scope.$on('overCharsMaxLimit', function (event, tfId) {
+         if(!$scope.charsMaxLimitExceeded){
+           $scope.charsMaxLimitExceeded = true;
+         }
+     });
+
+     // 'tfId' will equal the id of the text area/input field which
+     // triggered the event
+     $scope.$on('underCharsMaxLimit', function (event, tfId) {
+         if($scope.charsMaxLimitExceeded){
+           $scope.charsMaxLimitExceeded = false;
+         }
+     });
+
+   });
+
+   </file>
+ </example>
+*/
+
+angular.module('patternfly.form').directive('pfRemainingCharsCount', ["$timeout", function ($timeout) {
+  'use strict';
+  return {
+    restrict: 'A',
+    require: 'ngModel',
+    scope: {
+      ngModel: "="
+    },
+    link: function ($scope, $element, $attributes) {
+      var charsMaxLimit = $attributes.charsMaxLimit;
+      var charsWarnRemaining = $attributes.charsWarnRemaining;
+      var countRemainingFld = angular.element(document.getElementById($attributes.countFld));
+      var blockInputAtMaxLimit = ($attributes.blockInputAtMaxLimit === 'true');
+      var checkCharactersRemaining = function () {
+        var charsLength = $scope.ngModel.length;
+        var remainingChars = charsMaxLimit - charsLength;
+
+        // trim if blockInputAtMaxLimit and over limit
+        if (blockInputAtMaxLimit && charsLength > charsMaxLimit) {
+          $scope.ngModel = $scope.ngModel.substring(0, charsMaxLimit);
+          charsLength = $scope.ngModel.length;
+          remainingChars = charsMaxLimit - charsLength;
+        }
+
+        // creating scope vars for unit testing
+        $scope.remainingChars = remainingChars;
+        $scope.remainingCharsWarning = (remainingChars <= charsWarnRemaining ? true : false);
+
+        countRemainingFld.text(remainingChars);
+        countRemainingFld.toggleClass('chars-warn-remaining-pf', remainingChars <= charsWarnRemaining);
+
+        if (remainingChars < 0) {
+          $scope.$emit('overCharsMaxLimit', $attributes.id);
+        } else {
+          $scope.$emit('underCharsMaxLimit', $attributes.id);
+        }
+      };
+
+      $scope.$watch('ngModel', function () {
+        checkCharactersRemaining();
+      });
+
+      $element.bind('keypress', function (event) {
+        // Once the charsMaxLimit has been met or exceeded, prevent all keypresses from working
+        if (blockInputAtMaxLimit && $element.val().length >= charsMaxLimit) {
+          // Except backspace
+          if (event.keyCode !== 8) {
+            event.preventDefault();
+          }
+        }
+      });
+    }
+  };
+}]);
 ;/**
  * @ngdoc service
  * @name patternfly.notification.Notification
@@ -5252,13 +5420,18 @@ angular.module('patternfly.views').directive('pfDataToolbar', function () {
   );
 
 
+  $templateCache.put('charts/empty-chart.html',
+    "<div class=empty-chart-content ng-style=sizeStyles><span class=\"pficon pficon-info\"></span> <span>No data available</span></div>"
+  );
+
+
   $templateCache.put('charts/heatmap/heatmap-legend.html',
     "<ul class=pf-heatmap-legend-container><li ng-repeat=\"item in legendItems\" class=pf-heatmap-legend-items><span class=pf-legend-color-box ng-style=\"{background: item.color}\"></span> <span class=pf-legend-text>{{item.text}}</span></li></ul>"
   );
 
 
   $templateCache.put('charts/heatmap/heatmap.html',
-    "<div class=pf-heatmap-container><h3>{{chartTitle}}</h3><div class=heatmap-container style=\"height: {{height}}px\"><svg class=pf-heatmap-svg></svg></div><div ng-if=!loadingDone class=\"spinner spinner-lg loading\"></div><div ng-if=showLegend pf-heatmap-legend legend=legendLabels legend-colors=heatmapColorPattern></div></div>"
+    "<div class=pf-heatmap-container><h3>{{chartTitle}}</h3><div class=heatmap-container ng-style=containerStyles><svg class=pf-heatmap-svg></svg></div><div pf-empty-chart ng-if=\"chartDataAvailable === false\" chart-height=height></div><div ng-if=!loadingDone class=\"spinner spinner-lg loading\"></div><div ng-if=showLegend pf-heatmap-legend legend=legendLabels legend-colors=heatmapColorPattern></div></div>"
   );
 
 
@@ -5268,7 +5441,7 @@ angular.module('patternfly.views').directive('pfDataToolbar', function () {
 
 
   $templateCache.put('charts/trends/trends-chart.html',
-    "<span ng-switch on=config.layout><div ng-switch-default ng-class=\"{'trend-card-large-pf': showLargeCardLayout,'trend-card-small-pf': showSmallCardLayout}\"><span class=trend-header-pf ng-if=config.title>{{config.title}}</span> <span ng-if=showActualValue><span class=trend-title-big-pf>{{getLatestValue()}}</span> <span class=trend-title-small-pf>{{config.units}}</span></span> <span ng-if=showPercentageValue><span class=trend-title-big-pf>{{getPercentageValue() + '%'}}</span> <span class=trend-title-small-pf>of {{chartData.total + ' ' + config.units}}</span></span><div pf-sparkline-chart config=config chart-data=chartData chart-height=getChartHeight() show-x-axis=showXAxis show-y-axis=showYAxis></div><span class=trend-footer-pf ng-if=config.timeFrame>{{config.timeFrame}}</span></div><div ng-switch-when=compact><div class=\"row trend-row\"><div class=\"col-sm-4 col-md-4\"><div class=trend-compact-details><span ng-if=showActualValue><span class=trend-title-compact-big-pf>{{getLatestValue()}}</span> <span class=trend-title-compact-small-pf>{{config.units}}</span></span> <span ng-if=showPercentageValue><span class=trend-title-compact-big-pf>{{getPercentageValue() + '%'}}</span> <span class=trend-title-compact-small-pf>of {{chartData.total + ' ' + config.units}}</span></span> <span class=trend-header-compact-pf ng-if=config.title>{{config.title}}</span></div></div><div class=\"col-sm-8 col-md-8\"><div pf-sparkline-chart config=config chart-data=chartData chart-height=getChartHeight() show-x-axis=showXAxis show-y-axis=showYAxis></div></div></div></div><div ng-switch-when=inline><div class=\"row trend-row\"><div class=\"col-sm-8 col-md-8 trend-flat-col\"><div pf-sparkline-chart config=config chart-data=chartData chart-height=getChartHeight() show-x-axis=showXAxis show-y-axis=showYAxis></div></div><div class=\"col-sm-4 col-md-4 trend-flat-col\"><div class=trend-flat-details><div class=trend-flat-details-cell><span class=trend-title-flat-big-pf>{{getPercentageValue() + '%'}}</span></div><div class=trend-flat-details-cell><span class=trend-label-flat-strong-pf>{{config.trendLabel}}</span> <span class=trend-label-flat-pf>{{getLatestValue()}} of {{chartData.total + ' ' + config.units}}</span></div></div></div></div></div></span>"
+    "<span ng-switch on=config.layout ng-class=\"{'data-unavailable-pf': chartData.dataAvailable === false}\"><div ng-switch-default ng-class=\"{'trend-card-large-pf': showLargeCardLayout,'trend-card-small-pf': showSmallCardLayout}\"><span class=trend-header-pf ng-if=config.title>{{config.title}}</span> <span ng-if=showActualValue><span class=trend-title-big-pf>{{getLatestValue()}}</span> <span class=trend-title-small-pf>{{config.units}}</span></span> <span ng-if=showPercentageValue><span class=trend-title-big-pf>{{getPercentageValue() + '%'}}</span> <span class=trend-title-small-pf>of {{chartData.total + ' ' + config.units}}</span></span><div pf-sparkline-chart ng-if=\"chartData.dataAvailable !== false\" config=config chart-data=chartData chart-height=getChartHeight() show-x-axis=showXAxis show-y-axis=showYAxis></div><div pf-empty-chart ng-if=\"chartData.dataAvailable === false\" chart-height=getChartHeight()></div><span class=trend-footer-pf ng-if=config.timeFrame>{{config.timeFrame}}</span></div><div ng-switch-when=compact class=trend-card-compact-pf><div class=\"row trend-row\"><div class=\"col-sm-4 col-md-4\"><div class=trend-compact-details><span ng-if=showActualValue><span class=trend-title-compact-big-pf>{{getLatestValue()}}</span> <span class=trend-title-compact-small-pf>{{config.units}}</span></span> <span ng-if=showPercentageValue><span class=trend-title-compact-big-pf>{{getPercentageValue() + '%'}}</span> <span class=trend-title-compact-small-pf>of {{chartData.total + ' ' + config.units}}</span></span> <span class=trend-header-compact-pf ng-if=config.title>{{config.title}}</span></div></div><div class=\"col-sm-8 col-md-8\"><div pf-sparkline-chart ng-if=\"chartData.dataAvailable !== false\" config=config chart-data=chartData chart-height=getChartHeight() show-x-axis=showXAxis show-y-axis=showYAxis></div><div pf-empty-chart ng-if=\"chartData.dataAvailable === false\" chart-height=getChartHeight()></div></div></div></div><div ng-switch-when=inline class=trend-card-inline-pf><div class=\"row trend-row\"><div class=\"col-sm-8 col-md-8 trend-flat-col\"><div pf-sparkline-chart ng-if=\"chartData.dataAvailable !== false\" config=config chart-data=chartData chart-height=getChartHeight() show-x-axis=showXAxis show-y-axis=showYAxis></div><div pf-empty-chart ng-if=\"chartData.dataAvailable === false\" chart-height=getChartHeight()></div></div><div class=\"col-sm-4 col-md-4 trend-flat-col\"><div class=trend-flat-details><div class=trend-flat-details-cell><span class=trend-title-flat-big-pf>{{getPercentageValue() + '%'}}</span></div><div class=trend-flat-details-cell><span class=trend-label-flat-strong-pf>{{config.trendLabel}}</span> <span class=trend-label-flat-pf>{{getLatestValue()}} of {{chartData.total + ' ' + config.units}}</span></div></div></div></div></div></span>"
   );
 
 
@@ -5279,7 +5452,7 @@ angular.module('patternfly.views').directive('pfDataToolbar', function () {
 
 
   $templateCache.put('charts/utilization/utilization-chart.html',
-    "<div class=utilization-chart-pf><h3>{{config.title}}</h3><div class=current-values><h1 class=\"available-count pull-left\"><span>{{currentValue}}</span></h1><div class=\"available-text pull-left\"><div><span>{{currentText}}</span></div><div><span>of {{chartData.total}} {{config.units}}</span></div></div></div><div class=donut-chart-pf><div pf-donut-pct-chart config=donutConfig data=chartData center-label=centerLabel></div></div><div class=sparkline-chart><div pf-sparkline-chart config=sparklineConfig chart-data=chartData chart-height=sparklineChartHeight show-x-axis=showSparklineXAxis show-y-axis=showSparklineYAxis></div></div><span class=\"pull-left legend-text\">{{legendLeftText}}</span> <span class=\"pull-right legend-text\">{{legendRightText}}</span></div>"
+    "<div class=utilization-chart-pf ng-class=\"{'data-unavailable-pf': chartData.dataAvailable === false}\"><h3>{{config.title}}</h3><div class=current-values><h1 class=\"available-count pull-left\">{{currentValue}}</h1><div class=\"available-text pull-left\"><div><span>{{currentText}}</span></div><div><span>of {{chartData.total}} {{config.units}}</span></div></div></div><div class=donut-chart-pf><div pf-donut-pct-chart ng-if=\"chartData.dataAvailable !== false\" config=donutConfig data=chartData center-label=centerLabel></div><div pf-empty-chart ng-if=\"chartData.dataAvailable === false\" chart-height=231></div></div><div ng-if=\"chartData.dataAvailable !== false\" class=sparkline-chart><div pf-sparkline-chart config=sparklineConfig chart-data=chartData chart-height=sparklineChartHeight show-x-axis=showSparklineXAxis show-y-axis=showSparklineYAxis></div></div><span class=\"pull-left legend-text\">{{legendLeftText}}</span> <span class=\"pull-right legend-text\">{{legendRightText}}</span></div>"
   );
 
 }]);
@@ -5287,7 +5460,7 @@ angular.module('patternfly.views').directive('pfDataToolbar', function () {
   'use strict';
 
   $templateCache.put('filters/simple-filter-fields.html',
-    "<div class=\"simple-filter filter-fields\"><form><div class=\"form-group toolbar-pf-filter\"><div class=input-group><div dropdown class=input-group-btn><button dropdown-toggle type=button class=\"btn btn-default dropdown-toggle filter-fields\" aria-haspopup=true aria-expanded=false tooltip=\"Filter by\" tooltip-placement=bottom>{{currentField.title}} <span class=caret></span></button><ul class=dropdown-menu><li ng-repeat=\"item in config.fields\"><a class=filter-field role=menuitem tabindex=-1 ng-click=selectField(item)>{{item.title}}</a></li></ul></div><div ng-if=\"currentField.filterType !== 'select'\"><input class=form-control type={{currentField.filterType}} ng-model=config.currentValue placeholder={{currentField.placeholder}} ng-keypress=\"onValueKeyPress($event)\"></div><div ng-if=\"currentField.filterType === 'select'\"><select pf-select class=\"form-control filter-select\" id=currentValue ng-model=config.currentValue ng-options=\"filterValue for filterValue in currentField.filterValues\" ng-change=selectValue(config.currentValue)><option value=\"\">{{currentField.placeholder}}</option></select></div></div></div></form></div>"
+    "<div class=\"simple-filter filter-fields\"><form><div class=\"form-group toolbar-pf-filter\"><div class=input-group><div dropdown class=input-group-btn><button dropdown-toggle type=button class=\"btn btn-default dropdown-toggle filter-fields\" aria-haspopup=true aria-expanded=false tooltip=\"Filter by\" tooltip-placement=top>{{currentField.title}} <span class=caret></span></button><ul class=dropdown-menu><li ng-repeat=\"item in config.fields\"><a class=filter-field role=menuitem tabindex=-1 ng-click=selectField(item)>{{item.title}}</a></li></ul></div><div ng-if=\"currentField.filterType !== 'select'\"><input class=form-control type={{currentField.filterType}} ng-model=config.currentValue placeholder={{currentField.placeholder}} ng-keypress=\"onValueKeyPress($event)\"></div><div ng-if=\"currentField.filterType === 'select'\"><select pf-select class=\"form-control filter-select\" id=currentValue ng-model=config.currentValue ng-options=\"filterValue for filterValue in currentField.filterValues\" ng-change=selectValue(config.currentValue)><option value=\"\">{{currentField.placeholder}}</option></select></div></div></div></form></div>"
   );
 
 

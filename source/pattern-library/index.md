@@ -1738,9 +1738,7 @@ layout: page
                 }
               },
               bindto: '#basic-chart-line',
-              color: {
-                pattern: ['#0088ce', '#00659c', '#3f9c35', '#ec7a08', '#cc0000']
-              },
+              color: $().c3ChartDefaults().getDefaultColors(),
               data: {
                 columns: [
                   ['data1', 30, 200, 100, 400, 150, 250],
@@ -1786,9 +1784,7 @@ layout: page
           }
         },
         bindto: '#basic-chart-line',
-        color: {
-          pattern: ['#0088ce', '#00659c', '#3f9c35', '#ec7a08', '#cc0000']
-        },
+        color: $().c3ChartDefaults().getDefaultColors(),
         data: {
           columns: [
             ['data1', 30, 200, 100, 400, 150, 250],
@@ -1811,8 +1807,80 @@ layout: page
   })(jQuery);
 &lt;/script&gt;
 </pre>
-  </div>
+    </div>
     <h4>Other Basic Charts</h4>
     <p>Additional basic chart examples such as sparkline, spline, area, stacked area, bar, stacked bar, and donut are available at <a href="https://rawgit.com/patternfly/patternfly/master/tests/charts.html">https://rawgit.com/patternfly/patternfly/master/tests/charts.html</a></p>
+  </div>
+  <div class="section" id="cnt-remaining-chars">
+    <h3>Count Remaining Characters</h3>
+    <p><strong>Note:</strong> By default <code>blockInputAtMaxLimit</code> is <strong>false</strong>, meaning that after
+      reaching the maximum number of characters specified, the user can still enter additional characters; the remaining
+      character count will turn negative.  When <code>blockInputAtMaxLimit</code> is <strong>true</strong>, the user will
+      be blocked from entering more characters after reaching the maximum character limit.  The remaining character count
+      will stop at 0.  When <code>blockInputAtMaxLimit</code> is <strong>true</strong>, Right-Click 'paste' will only paste
+      characters until the maximum character limit is reached.
+    </p>
+    <div class="pf-example">
+      <form>
+        <div class="form-group">
+          <label for="messageArea"></label>
+          <textarea class="form-control" id="messageArea" name="text" placeholder="Type in your message" rows="5"></textarea>
+        </div>
+            <span class="pull-right chars-remaining-pf">
+              <span id="charRemainingCntFld"></span>
+              <button id="postBtn" type="submit" class="btn btn-default">Post New Message</button>
+            </span>
+      </form></br>
+      <script>
+  (function($) {
+        $('#messageArea').countRemainingChars( {countFld: 'charRemainingCntFld',
+          charsMaxLimit: 100,
+          charsWarnRemaining: 5,
+          blockInputAtMaxLimit: false} );
+
+        $('#messageArea').on("overCharsMaxLimitEvent", function( event, taId ) {
+          $('#postBtn').prop("disabled",true);
+        });
+
+        $('#messageArea').on("underCharsMaxLimitEvent", function( event, taId) {
+          $('#postBtn').prop("disabled",false);
+        });
+    })(jQuery);
+      </script>
     </div>
+    <p class="reference-markup"><a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="cntRemainingChars-markup" href="#cntRemainingChars-markup">Reference Markup</a></p>
+    <div class="collapse" id="cntRemainingChars-markup">
+        <pre class="prettyprint">
+&lt;form&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="messageArea"&gt;&lt;/label&gt;
+    &lt;textarea class="form-control" id="messageArea" name="text" placeholder="Type in your message"
+              rows="5"&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+  &lt;span class="pull-right chars-remaining-pf"&gt;
+    &lt;span id="charRemainingCntFld"&gt;&lt;/span&gt;
+    &lt;button id="postBtn" type="submit" class="btn btn-default"&gt;Post New Message&lt;/button&gt;
+  &lt;/span&gt;
+&lt;/form&gt;
+&lt;script&gt;
+  (function($) {
+    // countFld is the id of the field where you want the 'remaining chars. count' number
+    // to be displayed.
+    $('#messageArea').countRemainingChars( {countFld: 'charRemainingCntFld',
+                                            charsMaxLimit: 100,
+                                            charsWarnRemaining: 5,
+                                            blockInputAtMaxLimit: false} );
+
+    // taId is the id of the textArea field which triggered the event
+    $('#messageArea').on("overCharsMaxLimitEvent", function( event, taId ) {
+      $('#postBtn').prop("disabled",true);
+    });
+    $('#messageArea').on("underCharsMaxLimitEvent", function( event, taId) {
+      $('#postBtn').prop("disabled",false);
+    });
+  })(jQuery);
+&lt;/script&gt;
+</pre>
+    </div>
+  </div>
 </div>
