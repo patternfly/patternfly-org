@@ -54,7 +54,7 @@ jQuery( document ).ready(function() {
   });
   // Insert copy to clipboard button before .prettyprint
   $('.prettyprint').each(function () {
-    var btnHtml = '<button class="btn btn-default btn-copy" title="Copy to clipboard">Copy</button>'
+    var btnHtml = '<button class="btn btn-default btn-copy" title="Copy to clipboard" data-placement="left">Copy</button>'
     $(this).before(btnHtml);
     $('.btn-copy').tooltip();
   });
