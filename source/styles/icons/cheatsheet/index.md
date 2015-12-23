@@ -279,7 +279,7 @@ To use on the desktop, install [PatternFlyIcons-webfont.ttf][1] or [FontAwesome.
 </div>
 
 <script>
-  $('[class*="unicode-character"').tooltip();
+  $('[class*="unicode-character"]').tooltip();
   var clipboard = new Clipboard('[class*="unicode-character"]', {
     target: function (trigger) {
       return trigger;
