@@ -295,7 +295,7 @@ To use on the desktop, install [PatternFlyIcons-webfont.ttf][1] or [FontAwesome.
     e.clearSelection()
   });
   clipboard.on('error', function (e) {
-    var fallbackMsg = /Mac/i.test(navigator.userAgent) ? 'Press \u2318-C to copy' : 'Press Ctrl-C to copy'
+    var fallbackMsg = /Mac/i.test(navigator.userAgent) ? 'Press \u2318C to copy' : 'Press Ctrl-C to copy'
     $(e.trigger)
       .attr('title', fallbackMsg)
       .tooltip('fixTitle')
