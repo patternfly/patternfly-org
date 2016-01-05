@@ -19,3 +19,6 @@ Redirect 301 /pop-over-notifications-toasters-where-good-communication-happens h
         Header set Access-Control-Allow-Origin "*"
     </IfModule>
 </FilesMatch>
+
+# Custom 404 page
+ErrorDocument 404 /404.html
