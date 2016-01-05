@@ -1,0 +1,21 @@
+RewriteEngine on
+
+# Redirect all traffic to https
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+# Redirect blog posts to the new blog url
+Redirect 301 /donut-chart-relationship-of-a-set-of-values-to-a-whole https://blog.patternfly.org/donut-chart-relationship-of-a-set-of-values-to-a-whole
+Redirect 301 /vertical-navigation-using-a-non-persistent-secondary-menu https://blog.patternfly.org/vertical-navigation-using-a-non-persistent-secondary-menu
+Redirect 301 /simple-actions-for-the-data-toolbar https://blog.patternfly.org/simple-actions-for-the-data-toolbar
+Redirect 301 /bar-charts-visualizing-quantitative-data https://blog.patternfly.org/bar-charts-visualizing-quantitative-data
+Redirect 301 /table-view-organize-your-data https://blog.patternfly.org/table-view-organize-your-data
+Redirect 301 /vertical-navigation-finding-your-way https://blog.patternfly.org/vertical-navigation-finding-your-way
+Redirect 301 /pop-over-notifications-toasters-where-good-communication-happens https://blog.patternfly.org/pop-over-notifications-toasters-where-good-communication-happensy
+
+# CORS fix for font files
+<FilesMatch "\.(ttf|otf|eot)$">
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+    </IfModule>
+</FilesMatch>
