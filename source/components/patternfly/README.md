@@ -13,6 +13,26 @@ PatternFly can be installed and managed through [Bower](http://bower.io/). To do
 bower install patternfly
 ```
 
+#### Using Wiredep?
+
+Are you using [Wiredep](https://github.com/taptapship/wiredep)?  PatternFly's CSS includes the CSS of its dependencies.  As a result, you'll want to add the following to your [Wiredep configuration](https://github.com/taptapship/wiredep#configuration) so you don't end up with duplicate CSS.
+
+```
+exclude: [
+  "bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.css",
+  "bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css",
+  "bower_components/bootstrap-select/dist/css/bootstrap-select.css",
+  "bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css",
+  "bower_components/bootstrap-treeview/dist/bootstrap-treeview.min.css",
+  "bower_components/c3/c3.css",
+  "bower_components/datatables/media/css/jquery.dataTables.css",
+  "bower_components/datatables-colreorder/css/dataTables.colReorder.css",
+  "bower_components/datatables-colvis/css/dataTables.colVis.css",
+  "bower_components/font-awesome/css/font-awesome.css",
+  "bower_components/google-code-prettify/bin/prettify.min.css"
+],
+```
+
 ### Install with npm
 
 PatternFly can be installed and managed through [npm](https://www.npmjs.com/).  To do so, run the following:
@@ -35,19 +55,31 @@ A set of [common AngularJS directives](https://github.com/patternfly/angular-pat
 
 ## Dependencies
 
-PatternFly incorporates other libraries and components; therefore, in addition to the contents of `dist`, the contents of `components` are also required for a complete installation of PatternFly.
+PatternFly includes a number of dependencies that are not committed to this repository.  To add them, see "Install Bower Components".  And make sure you keep them updated (see "Keeping Bower Components Updated").
 
 ## Development
 
 Development setup requires nodejs and Ruby. If you do not already have nodejs, npm, and Ruby installed on your system, see https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager and https://www.ruby-lang.org/en/downloads.
 
-### Install Bower
+### Install Bower Components
 
 After ensuring nodejs and npm are available, install [Bower](http://bower.io/) globally:
 
     npm install -g bower
 
-Bower is used to install and update PatternFly's dependencies.
+Now that Bower is available, we can install the required development components:
+
+    bower install
+
+At this point, you should now have a top level components/ folder with all dependencies listed in the bower.json file installed.  Unless you plan to contribute to PatternFly itself, you're done.  Celebrate by working on integrating PatternFly and its dependencies in your app!
+
+#### Keeping Bower Components Updated
+
+Anytime you pull a new version of PatternFly, make sure you also run
+
+    bower update
+
+so you get the latest version of the components specified in bower.json.
 
 ### Install Development Dependencies
 

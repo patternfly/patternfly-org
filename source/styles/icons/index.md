@@ -96,16 +96,8 @@ To use these icons on the desktop, check out the [cheatsheet][4].
         <span class="icon-class">pficon-info</span>
       </li>
       <li>
-        <span class="pficon pficon-kubernetes"></span>
-        <span class="icon-class">pficon-kubernetes</span>
-      </li>
-      <li>
         <span class="pficon pficon-ok"></span>
         <span class="icon-class">pficon-ok</span>
-      </li>
-      <li>
-        <span class="pficon pficon-openshift"></span>
-        <span class="icon-class">pficon-openshift</span>
       </li>
       <li>
         <span class="pficon pficon-print"></span>

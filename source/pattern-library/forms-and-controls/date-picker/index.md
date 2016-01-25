@@ -32,7 +32,7 @@ This pattern should NOT be used when:
 &lt;div class="input-group date">
   &lt;input type="text" class="form-control bootstrap-datepicker" readonly>&lt;span class="input-group-addon">&lt;span class="fa fa-calendar">&lt;/span>&lt;/span>
 &lt;/div&gt;
-&lt;script src="/components/patternfly/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"&gt;&lt;/script&gt;
+&lt;script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   // Initialize Boostrap-datepicker
   $('.input-group.date').datepicker({

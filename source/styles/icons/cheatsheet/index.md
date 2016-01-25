@@ -86,16 +86,8 @@ To use on the desktop, install [PatternFlyIcons-webfont.ttf][1] or [FontAwesome.
         <span class="icon-class">pficon-info</span>
       </li>
       <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-kubernetes</span>
-      </li>
-      <li>
         <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
         <span class="icon-class">pficon-ok</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-openshift</span>
       </li>
       <li>
         <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>

@@ -53,7 +53,7 @@ We&#8217;ve split PatternFly styles into two style sheets. The links to the styl
 
 If you are using [Boostrap Select][4] you should change the path to javascript. It&#8217;ll look something like this:
 
-<pre class="prettyprint">&lt;script src="PATH_TO_PATTERNFLY/components/patternfly/components/bootstrap-select/dist/js/bootstrap-select.min.js"&gt;&lt;/script&gt;</pre>
+<pre class="prettyprint">&lt;script src="PATH_TO_PATTERNFLY/components/bootstrap-select/dist/js/bootstrap-select.min.js"&gt;&lt;/script&gt;</pre>
 
 ## Dependency Upgrades
 

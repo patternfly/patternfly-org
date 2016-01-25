@@ -2,7 +2,7 @@
 title: Utilization Bar Card
 author: rhamilto
 layout: page
-url-js-extra: ['components/patternfly/components/matchHeight/jquery.matchHeight-min.js']
+url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
 ---
 <h2>Overview</h2>
 <p>A Utilization Bar Card displays the utilization for metrics using the <a href="{{site.baseurl}}pattern-library/data-visualization/utilization-bar-chart">Utilization Bar Chart</a>.  The most common use case for this pattern is seen in a dashboard.</p>

@@ -1128,7 +1128,7 @@ layout: page
     <p class="reference-markup"><a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="data-tables-markup" href="#data-tables-markup">Reference Markup</a></p>
     <div class="collapse" id="data-tables-markup">
       <pre class="prettyprint">{% capture data_tables_markup_include %}{% include widgets/datatable.html %}
-<script src="/components/patternfly/components/datatables/media/js/jquery.dataTables.js"></script>
+<script src="/components/datatables/media/js/jquery.dataTables.js"></script>
 <script>
   // Initialize Datatables
   $(document).ready(function() {
@@ -1259,7 +1259,7 @@ layout: page
     &lt;option value="WY"&gt;Wyoming&lt;/option&gt;
   &lt;/select&gt;
 &lt;/div&gt;
-&lt;script src="/components/patternfly/components/bootstrap-combobox/js/bootstrap-combobox.js"&gt;&lt;/script&gt;
+&lt;script src="/components/bootstrap-combobox/js/bootstrap-combobox.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   // Initialize Boostrap-Combobox
   $('.combobox').combobox();
@@ -1277,7 +1277,7 @@ layout: page
     <div class="collapse" id="bootstrap-datepicker-markup">
       <pre class="prettyprint">
 &lt;input type="text" class="form-control bootstrap-datepicker"&gt;
-&lt;script src="/components/patternfly/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"&gt;&lt;/script&gt;
+&lt;script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   // Initialize Boostrap-datepicker
   $('.bootstrap-datepicker').datepicker({
@@ -1323,7 +1323,7 @@ layout: page
   &lt;option&gt;Relish&lt;/option&gt;
   &lt;option disabled&gt;Onions&lt;/option&gt;
 &lt;/select&gt;
-&lt;script src="/components/patternfly/components/bootstrap-select/dist/js/bootstrap-select.min.js"&gt;&lt;/script&gt;
+&lt;script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   // Initialize Boostrap-select
    $('.selectpicker').selectpicker();
@@ -1348,7 +1348,7 @@ layout: page
 &lt;script&gt;
   jQuery(".bootstrap-switch").bootstrapSwitch();
 &lt;/script&gt;
-&lt;script src="/components/patternfly/components/bootstrap-switch/dist/js/bootstrap-switch.min.js"&gt;&lt;/script&gt;
+&lt;script src="/components/bootstrap-switch/dist/js/bootstrap-switch.min.js"&gt;&lt;/script&gt;
 </pre>
     </div>
   </div>
@@ -1369,7 +1369,7 @@ layout: page
 &lt;script&gt;
     $(".bootstrap-touchspin").TouchSpin();
 &lt;/script&gt;
-&lt;script src="/components/patternfly/components/bootstrap-touchspin/dist/js/jquery.bootstrap-touchspin.min.js"&gt;&lt;/script&gt;
+&lt;script src="/components/bootstrap-touchspin/dist/js/jquery.bootstrap-touchspin.min.js"&gt;&lt;/script&gt;
 </pre>
     </div>
   </div>
@@ -1449,7 +1449,7 @@ layout: page
     <div class="collapse" id="bootstrap-tree-view-markup">
       <pre class="prettyprint">
 &lt;div id="treeview1"&gt;&lt;/div&gt;
-&lt;script src="/components/patternfly/components/bootstrap-treeview/dist/bootstrap-treeview.min.js"&gt;&lt;/script&gt;
+&lt;script src="/components/bootstrap-treeview/dist/bootstrap-treeview.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   $(function() {
     var defaultData = [
@@ -1704,7 +1704,7 @@ layout: page
 &lt;pre class="prettyprint"&gt;
 &lt;p class="my-class"&gt;Sample text here...&lt;/p&gt;
 &lt;/pre&gt;
-&lt;script src="/components/patternfly/components/google-code-prettify/bin/prettify.min.js"&gt;&lt;/script&gt;
+&lt;script src="/components/google-code-prettify/bin/prettify.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   (function($) {
     $(document).ready(function(){
@@ -1765,8 +1765,8 @@ layout: page
     <div class="collapse" id="basic-charts-markup">
       <pre class="prettyprint">
 &lt;div id="basic-chart-line">&lt;/div&gt;
-&lt;script src="/components/patternfly/components/d3/d3.min.js"&gt;&lt;/script&gt;
-&lt;script src="/components/patternfly/components/c3/c3.min.js"&gt;&lt;/script&gt;
+&lt;script src="/components/d3/d3.min.js"&gt;&lt;/script&gt;
+&lt;script src="/components/c3/c3.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   (function($) {
     $(document).ready(function() {
