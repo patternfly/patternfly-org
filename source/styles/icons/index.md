@@ -14,7 +14,6 @@ To use these icons on the desktop, check out the [cheatsheet][4].
     <h2>
       PatternFly Icons
     </h2>
-
     <p>
       Custom icons and selections from <a href="http://icomoon.io/#icons">IcoMoon &#8211; Free</a>.
     </p>
@@ -36,6 +35,14 @@ To use these icons on the desktop, check out the [cheatsheet][4].
         <span class="icon-class">pficon-close</span>
       </li>
       <li>
+        <span class="pficon pficon-cloud-security"></span>
+        <span class="icon-class">pficon-cloud-security</span>
+      </li>
+      <li>
+        <span class="pficon pficon-cloud-tenant"></span>
+        <span class="icon-class">pficon-cloud-tenant</span>
+      </li>
+      <li>
         <span class="pficon pficon-cluster"></span>
         <span class="icon-class">pficon-cluster</span>
       </li>
@@ -44,12 +51,20 @@ To use these icons on the desktop, check out the [cheatsheet][4].
         <span class="icon-class">pficon-container-node</span>
       </li>
       <li>
+        <span class="pficon pficon-cpu"></span>
+        <span class="icon-class">pficon-cpu</span>
+      </li>
+      <li>
         <span class="pficon pficon-delete"></span>
         <span class="icon-class">pficon-delete</span>
       </li>
       <li>
         <span class="pficon pficon-edit"></span>
         <span class="icon-class">pficon-edit</span>
+      </li>
+      <li>
+        <span class="pficon pficon-enterprise"></span>
+        <span class="icon-class">pficon-enterprise</span>
       </li>
       <li>
         <span class="pficon pficon-error-circle-o"></span>
@@ -62,6 +77,10 @@ To use these icons on the desktop, check out the [cheatsheet][4].
       <li>
         <span class="pficon pficon-flag"></span>
         <span class="icon-class">pficon-flag</span>
+      </li>
+      <li>
+        <span class="pficon pficon-flavor"></span>
+        <span class="icon-class">pficon-flavor</span>
       </li>
       <li>
         <span class="pficon pficon-folder-close"></span>
@@ -96,6 +115,14 @@ To use these icons on the desktop, check out the [cheatsheet][4].
         <span class="icon-class">pficon-info</span>
       </li>
       <li>
+        <span class="pficon pficon-memory"></span>
+        <span class="icon-class">pficon-memory</span>
+      </li>
+      <li>
+        <span class="pficon pficon-network"></span>
+        <span class="icon-class">pficon-network</span>
+      </li>
+      <li>
         <span class="pficon pficon-ok"></span>
         <span class="icon-class">pficon-ok</span>
       </li>
@@ -108,12 +135,24 @@ To use these icons on the desktop, check out the [cheatsheet][4].
         <span class="icon-class">pficon-project</span>
       </li>
       <li>
+        <span class="pficon pficon-regions"></span>
+        <span class="icon-class">pficon-regions</span>
+      </li>
+      <li>
         <span class="pficon pficon-registry"></span>
         <span class="icon-class">pficon-registry</span>
       </li>
       <li>
         <span class="pficon pficon-replicator"></span>
         <span class="icon-class">pficon-replicator</span>
+      </li>
+      <li>
+        <span class="pficon pficon-repository"></span>
+        <span class="icon-class">pficon-repository</span>
+      </li>
+      <li>
+        <span class="pficon pficon-resource-pool"></span>
+        <span class="icon-class">pficon-resource-pool</span>
       </li>
       <li>
         <span class="pficon pficon-restart"></span>
@@ -136,12 +175,20 @@ To use these icons on the desktop, check out the [cheatsheet][4].
         <span class="icon-class">pficon-screen</span>
       </li>
       <li>
+        <span class="pficon pficon-server"></span>
+        <span class="icon-class">pficon-server</span>
+      </li>
+      <li>
         <span class="pficon pficon-service"></span>
         <span class="icon-class">pficon-service</span>
       </li>
       <li>
         <span class="pficon pficon-settings"></span>
         <span class="icon-class">pficon-settings</span>
+      </li>
+      <li>
+        <span class="pficon pficon-storage-domain"></span>
+        <span class="icon-class">pficon-storage-domain</span>
       </li>
       <li>
         <span class="pficon pficon-thumb-tack-o"></span>
@@ -168,8 +215,20 @@ To use these icons on the desktop, check out the [cheatsheet][4].
         <span class="icon-class">pficon-users</span>
       </li>
       <li>
+        <span class="pficon pficon-virtual-machine"></span>
+        <span class="icon-class">pficon-virtual-machine</span>
+      </li>
+      <li>
+        <span class="pficon pficon-volume"></span>
+        <span class="icon-class">pficon-volume</span>
+      </li>
+      <li>
         <span class="pficon pficon-warning-triangle-o"></span>
         <span class="icon-class">pficon-warning-triangle-o</span>
+      </li>
+      <li>
+        <span class="pficon pficon-zone"></span>
+        <span class="icon-class">pficon-zone</span>
       </li>
     </ul>
   </div>
@@ -178,11 +237,9 @@ To use these icons on the desktop, check out the [cheatsheet][4].
     <h2>
       Recommended Font Awesome Icons
     </h2>
-
     <p>
       All <a href="http://fontawesome.io/icons/">Font Awesome</a> icons are available, but only these are recommended for use with PatternFly.
     </p>
-
     <ul class="icons list-unstyled">
       <li>
         <span class="fa fa-angle-down"></span>
@@ -217,6 +274,10 @@ To use these icons on the desktop, check out the [cheatsheet][4].
         <span class="icon-class">fa-ban</span>
       </li>
       <li>
+        <span class="fa fa-bug"></span>
+        <span class="icon-class">fa-bug</span>
+      </li>
+      <li>
         <span class="fa fa-check"></span>
         <span class="icon-class">fa-check</span>
       </li>
@@ -233,6 +294,10 @@ To use these icons on the desktop, check out the [cheatsheet][4].
         <span class="icon-class">fa-cubes</span>
       </li>
       <li>
+        <span class="fa fa-database"></span>
+        <span class="icon-class">fa-database</span>
+      </li>
+      <li>
         <span class="fa fa-envelope"></span>
         <span class="icon-class">fa-envelope</span>
       </li>
@@ -245,12 +310,20 @@ To use these icons on the desktop, check out the [cheatsheet][4].
         <span class="icon-class">fa-lock</span>
       </li>
       <li>
+        <span class="fa fa-map-marker"></span>
+        <span class="icon-class">fa-map-marker</span>
+      </li>
+      <li>
         <span class="fa fa-minus"></span>
         <span class="icon-class">fa-minus</span>
       </li>
       <li>
         <span class="fa fa-plus"></span>
         <span class="icon-class">fa-plus</span>
+      </li>
+      <li>
+        <span class="fa fa-plus-square"></span>
+        <span class="icon-class">fa-plus-square</span>
       </li>
       <li>
         <span class="fa fa-power-off"></span>
@@ -263,6 +336,10 @@ To use these icons on the desktop, check out the [cheatsheet][4].
       <li>
         <span class="fa fa-search"></span>
         <span class="icon-class">fa-search</span>
+      </li>
+      <li>
+        <span class="fa fa-shield"></span>
+        <span class="icon-class">fa-shield</span>
       </li>
       <li>
         <span class="fa fa-star"></span>
