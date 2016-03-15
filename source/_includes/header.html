@@ -147,6 +147,104 @@
               <li {% if secondary == 'navigation' %} class="active"{% endif %}>
                  <a href="{{ site.baseurl }}pattern-library/navigation/">Navigation</a>
               </li>
+              <li {% if secondary == 'widgets' %} class="active"{% endif %}>
+              <a class="{% if secondary == 'widgets' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="{% if secondary == 'widgets' %}true{% else %}false{% endif %}" aria-controls="widgets-secondary">Widgets</a>
+              <ul class="collapse {% if secondary == 'widgets' %}in{% endif %}" id="widgets-secondary">
+                <li {% if tertiary == 'accordion' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#accordion">Accordion</a>
+                </li>
+                <li {% if tertiary == 'alerts' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#alerts">Alerts</a>
+                </li>
+                <li {% if tertiary == 'badges' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#badges">Badges</a>
+                </li>
+                <li {% if tertiary == 'basic-charts' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#basic-charts">Basic Charts</a>
+                </li>
+                <li {% if tertiary == 'bootstrap-combobox' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#bootstrap-combobox">Bootstrap Combobox</a>
+                </li>
+                <li {% if tertiary == 'bootstrap-datepicker' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#bootstrap-datepicker">Bootstrap Datepicker</a>
+                </li>
+                <li {% if tertiary == 'bootstrap-select' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#bootstrap-select">Bootstrap Select</a>
+                </li>
+                <li {% if tertiary == 'bootstrap-switch' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#bootstrap-switch">Bootstrap Switch</a>
+                </li>
+                <li {% if tertiary == 'bootstrap-touchspin' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#bootstrap-touchspin">Bootstrap Touchspin</a>
+                </li>
+                <li {% if tertiary == 'bootstrap-tree-view' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#bootstrap-tree-view">Bootstrap Tree View</a>
+                </li>
+                <li {% if tertiary == 'breadcrumbs' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#breadcrumbs">Breadcrumbs</a>
+                </li>
+                <li {% if tertiary == 'buttons' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#buttons">Buttons</a>
+                </li>
+                <li {% if tertiary == 'button-groups' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#button-groups">Button Groups</a>
+                </li>
+                <li {% if tertiary == 'cnt-remaining-chars' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#cnt-remaining-chars">Count Remaining Characters</a>
+                </li>
+                <li {% if tertiary == 'data-tables' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#data-tables">Data Tables</a>
+                </li>
+                <li {% if tertiary == 'dropdowns' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#dropdowns">Dropdowns</a>
+                </li>
+                <li {% if tertiary == 'forms' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#forms">Forms</a>
+                </li>
+                <li {% if tertiary == 'google-code-prettify' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#google-code-prettify">Google Code Prettify</a>
+                </li>
+                <li {% if tertiary == 'info-tip' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#info-tip">Info Tip</a>
+                </li>
+                <li {% if tertiary == 'labels' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#labels">Labels</a>
+                </li>
+                <li {% if tertiary == 'list-group' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#list-group">List Group</a>
+                </li>
+                <li {% if tertiary == 'modal' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#modal">Modal</a>
+                </li>
+                <li {% if tertiary == 'pagination' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#pagination">Pagination</a>
+                </li>
+                <li {% if tertiary == 'panels' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#panels">Panels</a>
+                </li>
+                <li {% if tertiary == 'popover' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#popover">Popover</a>
+                </li>
+                <li {% if tertiary == 'progress-bars' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#progress-bars">Progress Bars</a>
+                </li>
+                <li {% if tertiary == 'search' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#search">Search</a>
+                </li>
+                <li {% if tertiary == 'spinner' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#spinner">Spinner</a>
+                </li>
+                <li {% if tertiary == 'tables' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#tables">Tables</a>
+                </li>
+                <li {% if tertiary == 'tabs' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#tabs">Tabs</a>
+                </li>
+                <li {% if tertiary == 'tooltip' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}pattern-library/widgets/#tooltip">Tooltip</a>
+                </li>
+              </ul>
+              </li>
             </ul>
           </li>
           {% elsif primary == 'styles' %}
