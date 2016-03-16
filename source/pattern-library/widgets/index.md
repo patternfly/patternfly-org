@@ -20,7 +20,6 @@ layout: page
   <p><strong>Note:</825213
   strong> PatternFly incorporates Bootstrap's CSS in its CSS, but it does not incorporate Bootstrap's JavaScript (so as to keep the Bootstrap JavaScript modular--see <a href="http://getbootstrap.com/javascript/#js-overview">http://getbootstrap.com/javascript/#js-overview</a>).</p>
   <div class="section" id="tables">
-    <a href="#tables"></a>
     <h3>Tables</h3>
     <p>See <a href="http://getbootstrap.com/css/#tables">http://getbootstrap.com/css/#tables</a> for complete tables documentation.</p>
     <p><strong>Note:</strong>  all tables in PatternFly are condensed.</p>
@@ -91,7 +90,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="forms">
-    <a href="#forms"></a>
     <h3>Forms</h3>
     <p>See <a href="http://getbootstrap.com/css/#forms">http://getbootstrap.com/css/#forms</a> for complete forms documentation.</p>
     <h4>Horizontal Form</h4>
@@ -144,7 +142,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="buttons">
-    <a href="#buttons"></a>
     <h3>Buttons</h3>
     <p>See <a href="http://getbootstrap.com/css/#buttons">http://getbootstrap.com/css/#buttons</a> for complete buttons documentation.</p>
     <div class="pf-example">
@@ -191,7 +188,6 @@ layout: page
   <p>See <a href="http://getbootstrap.com/components/">http://getbootstrap.com/components/</a> for complete components documentation.</p>
   <p><strong>Note:</strong> PatternFly incorporates Bootstrap's CSS in its CSS, but it does not incorporate Bootstrap's JavaScript (so as to keep the Bootstrap JavaScript modular--see <a href="http://getbootstrap.com/javascript/#js-overview">http://getbootstrap.com/javascript/#js-overview</a>).</p>
   <div class="section" id="dropdowns">
-    <a href="#dropdowns"></a>
     <h3>Dropdowns</h3>
     <p>See <a href="http://getbootstrap.com/components/#dropdowns">http://getbootstrap.com/components/#dropdowns</a> for complete dropdowns documentation.</p>
     <div class="pf-example">
@@ -231,7 +227,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="button-groups">
-    <a href="#button-groups"></a>
     <h3>Button Groups</h3>
     <p>See <a href="http://getbootstrap.com/components/#btn-groups">http://getbootstrap.com/components/#btn-groups</a> for complete button groups documentation.</p>
     <div class="pf-example">
@@ -253,7 +248,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="tabs">
-    <a href="#tabs"></a>
     <h3>Tabs</h3>
     <p>See <a href="http://getbootstrap.com/components/#nav-tabs">http://getbootstrap.com/components/#nav-tabs</a> for complete tabs documentation.</p>
     <h4>Single Level</h4>
@@ -361,7 +355,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="breadcrumbs">
-    <a href="#breadcrumbs"></a>
     <h3>Breadcrumbs</h3>
     <p>See <a href="http://getbootstrap.com/components/#breadcrumbs">http://getbootstrap.com/components/#breadcrumbs</a> for complete breadcrumbs documentation.</p>
     <div class="pf-example">
@@ -401,7 +394,6 @@ layout: page
     </div>
   </div>
   <div class="section" id ="pagination">
-    <a href="#pagination"></a>
     <h3>Pagination</h3>
     <p>See <a href="http://getbootstrap.com/components/#pagination">http://getbootstrap.com/components/#pagination</a> for complete pagination documentation.</p>
     <h4>Default Pagination</h4>
@@ -504,7 +496,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="labels">
-    <a href="#labels"></a>
     <h3>Labels</h3>
     <p>See <a href="http://getbootstrap.com/components/#labels">http://getbootstrap.com/components/#labels</a> for complete labels documentation.</p>
     <div class="pf-example">
@@ -528,7 +519,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="badges">
-    <a href="#badges"></a>
     <h3>Badges</h3>
     <p>See <a href="http://getbootstrap.com/components/#badges">http://getbootstrap.com/components/#badges</a> for complete badges documentation.</p>
     <div class="pf-example">
@@ -542,7 +532,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="alerts">
-    <a href="#alerts"></a>
     <h3>Alerts</h3>
     <p>See <a href="http://getbootstrap.com/components/#alerts">http://getbootstrap.com/components/#alerts</a> for complete alerts documentation.</p>
     <div class="pf-example">
@@ -600,7 +589,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="progress-bars">
-    <a href="#progress-bars"></a>
     <h3>Progress Bars</h3>
     <p>See <a href="http://getbootstrap.com/components/#progress">http://getbootstrap.com/components/#progress</a> for complete progress bar documentation.</p>
     <h4>Basic</h4>
@@ -767,7 +755,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="list-group">
-    <a href="#list-group"></a>
     <h3>List Group</h3>
     <p>See <a href="http://getbootstrap.com/components/#list-group">http://getbootstrap.com/components/#list-group</a> for complete list group documentation.</p>
     <div class="pf-example">
@@ -793,7 +780,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="panels">
-    <a href="#panels"></a>
     <h3>Panels</h3>
     <p>See <a href="http://getbootstrap.com/components/#panels">http://getbootstrap.com/components/#panels</a> for complete panels documentation.</p>
     <div class="pf-example">
@@ -821,7 +807,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="spinner">
-    <a href="#spinner"></a>
     <h3>Spinner</h3>
     <p><strong>Note:</strong> IE9 requires a conditional class on &lt;html&gt; in order to display an animated gif fallback as it doesn't support CSS animation.  See lines 2-5 of <a href="https://github.com/patternfly/patternfly/blob/master/tests/spinner.html">https://github.com/patternfly/patternfly/blob/master/tests/spinner.html</a>.</p>
     <div class="pf-example">
@@ -893,7 +878,6 @@ layout: page
   <p>See <a href="http://getbootstrap.com/javascript/">http://getbootstrap.com/javascript/</a> for complete javascript documentation.</p>
   <p><strong>Note:</strong> PatternFly incorporates Bootstrap's CSS in its CSS, but it does not incorporate Bootstrap's JavaScript (so as to keep the Bootstrap JavaScript modular--see <a href="http://getbootstrap.com/javascript/#js-overview">http://getbootstrap.com/javascript/#js-overview</a>).</p>
   <div class="section" id="modal">
-    <a href="#modal"></a>
     <h3>Modal</h3>
     <p>See <a href="http://getbootstrap.com/javascript/#modals">http://getbootstrap.com/javascript/#modals</a> for complete modal documentation.</p>
     <div class="pf-example">
@@ -979,7 +963,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="tooltip">
-    <a href="#tooltip"></a>
     <h3>Tooltip</h3>
     <p>See <a href="http://getbootstrap.com/javascript/#tooltips">http://getbootstrap.com/javascript/#tooltips</a> for complete tooltip documentation.</p>
     <div class="pf-example tooltip-demo">
@@ -999,7 +982,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="popover">
-    <a href="#popover"></a>
     <h3>Popover</h3>
     <p>See <a href="http://getbootstrap.com/javascript/#popovers">http://getbootstrap.com/javascript/#popovers</a> for complete popover documentation.</p>
     <p><strong>Note:</strong> Displaying the close (X) icon in popovers requires <a href="https://github.com/patternfly/patternfly/blob/master/dist/js/patternfly.min.js">patternfly.min.js</a>, initialization via <code>popover<strong>s</strong>()</code> (note the "s"), and adding data attribute <strong>data-close="true"</strong>
@@ -1050,7 +1032,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="accordion">
-    <a href="#accordion"></a>
     <h3>Accordion (Collapse)</h3>
     <p>See <a href="http://getbootstrap.com/javascript/#collapse">http://getbootstrap.com/javascript/#collapse</a> for complete accordion documentation.</p>
     <div class="pf-example">
@@ -1150,7 +1131,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="data-tables">
-    <a href="#data-tables"></a>
     <h3>Data Tables</h3>
     <p>See <a href="http://datatables.net">http://datatables.net</a> for complete data tables documentation.</p>
     <p><strong>Note:</strong> jquery.dataTables.js must occur in the html source before patternfly*.js.</p>
@@ -1171,7 +1151,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="bootstrap-combobox">
-    <a href="#bootstrap-combobox"></a>
     <h3>Bootstrap Combobox</h3>
     <p>See <a href="https://github.com/danielfarrell/bootstrap-combobox">https://github.com/danielfarrell/bootstrap-combobox</a> for complete Bootstrap Combobox documentation.</p>
     <div class="pf-example">
@@ -1301,7 +1280,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="bootstrap-datepicker">
-    <a href="#bootstrap-datepicker"></a>
     <h3>Bootstrap Datepicker</h3>
     <p>See <a href="http://bootstrap-datepicker.readthedocs.org/en/latest/">http://bootstrap-datepicker.readthedocs.org/en/latest/</a> for complete Bootstrap Datepicker documentation.</p>
     <div class="pf-example">
@@ -1324,7 +1302,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="bootstrap-select">
-    <a href="#bootstrap-select"></a>
     <h3>Bootstrap Select</h3>
     <p>See <a href="http://silviomoreto.github.io/bootstrap-select/">http://silviomoreto.github.io/bootstrap-select/</a> for complete Bootstrap Select documentation.</p>
     <div class="pf-example">
@@ -1367,7 +1344,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="bootstrap-switch">
-    <a href="#bootstrap-switch"></a>
     <h3>Bootstrap Switch</h3>
     <p>See <a href="http://www.bootstrap-switch.org/">http://www.bootstrap-switch.org/</a> for complete Bootstrap Switch documentation.</p>
     <div class="pf-example">
@@ -1389,7 +1365,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="bootstrap-touchspin">
-    <a href="#bootstrap-touchspin"></a>
     <h3>Bootstrap Touchspin</h3>
     <p>See <a href="http://www.virtuosoft.eu/code/bootstrap-touchspin/">http://www.virtuosoft.eu/code/bootstrap-touchspin/</a> for complete Bootstrap Touchspin documentation.</p>
     <div class="pf-example">
@@ -1411,7 +1386,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="bootstrap-tree-view">
-    <a href="#bootstrap-tree-view"></a>
     <h3>Bootstrap Tree View</h3>
     <p>See <a href="https://github.com/jonmiles/bootstrap-treeview">https://github.com/jonmiles/bootstrap-treeview</a> for complete Bootstrap Tree View documentation.</p>
     <div class="pf-example">
@@ -1558,7 +1532,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="search">
-    <a href="#search"></a>
     <h3>Search</h3>
     <div class="pf-example">
       <form role="form" class="search-pf has-button">
@@ -1637,7 +1610,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="info-tip">
-    <a href="#info-tip"></a>
     <h3>Info Tip</h3>
     <p><strong>Note:</strong> Info Tip uses <a href="#dropdowns">Dropdowns</a>.</p>
     <div class="pf-example">
@@ -1733,7 +1705,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="google-code-prettify">
-    <a href="#google-code-prettify"></a>
     <h3>Google Code Prettify</h3>
     <p>See <a href="https://code.google.com/p/google-code-prettify/wiki/GettingStarted">https://code.google.com/p/google-code-prettify/wiki/GettingStarted</a> for complete Google Code Prettify documentation.</p>
     <div class="pf-example">
@@ -1757,7 +1728,6 @@ layout: page
     </div>
   </div>
   <div class="section" id="basic-charts">
-    <a href="#basic-charts"></a>
     <h3>Basic Charts</h3>
     <p>See <a href="http://c3js.org/">http://c3js.org/</a> for complete basic charts documentation.</p>
     <h4>Line</h4>
@@ -1854,7 +1824,6 @@ layout: page
     <p>Additional basic chart examples such as sparkline, spline, area, stacked area, bar, stacked bar, and donut are available at <a href="https://rawgit.com/patternfly/patternfly/master/tests/charts.html">https://rawgit.com/patternfly/patternfly/master/tests/charts.html</a></p>
   </div>
   <div class="section" id="cnt-remaining-chars">
-    <a href="#cnt-remaining-chars"></a>
     <h3>Count Remaining Characters</h3>
     <p><strong>Note:</strong> By default <code>blockInputAtMaxLimit</code> is <strong>false</strong>, meaning that after
       reaching the maximum number of characters specified, the user can still enter additional characters; the remaining

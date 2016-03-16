@@ -20,7 +20,7 @@ body {
   position: absolute;
   right: (@grid-gutter-width / 2);
   + .prettyprint {
-    max-height: 400px;
+    /* max-height: 400px; */
   }
 }
 
@@ -89,9 +89,10 @@ body {
   font-size: @font-size-base;
   .example-pf-demo {
     border: 1px solid @pre-border-color;
-    border-bottom: 0;
+    /* border-bottom: 0; */
     border-radius: @border-radius-base;
     padding: (@grid-gutter-width / 2);
+    margin-bottom: 10px;
   }
   .example-pf-demo-no-padding {
     padding: 0;
@@ -1008,4 +1009,21 @@ th {
 
 .wow {
   visibility: hidden;
+}
+
+.page-tabs-header {
+  @media (min-width: @screen-md) {
+    vertical-align: middle;
+    .cols-nopad-left {
+      padding-left: 0;
+    }
+    .cols-nopad-right {
+      padding-right: 0;
+    }
+    h1 {
+      border-bottom: 1px solid #D5D5D5;
+      line-height: 54px;
+      margin-top: 0px;
+    }
+  }
 }
