@@ -10,7 +10,7 @@ body {
   right: 20px;
 }
 .btn-copy + .prettyprint {
-  max-height: 400px;
+  /* max-height: 400px; */
 }
 .clearfix img {
   height: auto;
@@ -72,9 +72,10 @@ body {
 }
 .example-pf .example-pf-demo {
   border: 1px solid #cccccc;
-  border-bottom: 0;
+  /* border-bottom: 0; */
   border-radius: 1px;
   padding: 20px;
+  margin-bottom: 10px;
 }
 .example-pf .example-pf-demo-no-padding {
   padding: 0;
@@ -1015,5 +1016,21 @@ th {
 }
 .wow {
   visibility: hidden;
+}
+@media (min-width: 992px) {
+  .page-tabs-header {
+    vertical-align: middle;
+  }
+  .page-tabs-header .cols-nopad-left {
+    padding-left: 0;
+  }
+  .page-tabs-header .cols-nopad-right {
+    padding-right: 0;
+  }
+  .page-tabs-header h1 {
+    border-bottom: 1px solid #D5D5D5;
+    line-height: 54px;
+    margin-top: 0px;
+  }
 }
 /*# sourceMappingURL=patternfly-site.css.map */
