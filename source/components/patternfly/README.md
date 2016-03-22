@@ -28,6 +28,7 @@ exclude: [
   "bower_components/datatables/media/css/jquery.dataTables.css",
   "bower_components/datatables-colreorder/css/dataTables.colReorder.css",
   "bower_components/datatables-colvis/css/dataTables.colVis.css",
+  "bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css",
   "bower_components/font-awesome/css/font-awesome.css",
   "bower_components/google-code-prettify/bin/prettify.min.css"
 ],
@@ -91,7 +92,9 @@ Additionally you may need to install the grunt command line utility.  To do this
 
 Test pages are generated using [Jekyll](http://jekyllrb.com/).  After ensuring Ruby is installed and available, run:
 
-    gem install jekyll
+    gem install jekyll -v 2.5.3
+
+Note: You can use any version prior to 3.1.x, due to [#4433](https://github.com/jekyll/jekyll/issues/4433) and [#4442](https://github.com/jekyll/jekyll/issues/4442)
 
 ### Live Reload Server
 
