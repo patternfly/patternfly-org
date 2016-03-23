@@ -71,7 +71,7 @@ body {
   font-size: 12px;
 }
 .example-pf .example-pf-demo {
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   /* border-bottom: 0; */
   border-radius: 1px;
   padding: 20px;
@@ -499,7 +499,7 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
 }
 .home .jumbotron {
   background: #010101;
-  background: url(../img/grid-left.svg) no-repeat -10% 0, url(../img/grid-right.svg) no-repeat 120% 0, url(../img/grid-bottom.svg) no-repeat 50% 105%, linear-gradient(to bottom, #2b2b2b 0, #010101 100%);
+  background: url(../img/grid-left.svg) no-repeat -10% 0, url(../img/grid-right.svg) no-repeat 120% 0, url(../img/grid-bottom.svg) no-repeat 50% 105%, linear-gradient(to bottom, #2B2B2B 0, #010101 100%);
   background-size: 40% auto, 40% auto, 60% auto, auto;
   color: #e4e4e4;
   margin: 0;
@@ -851,7 +851,7 @@ html {
 }
 .nav-tabs-pattern > li > a {
   background: #f5f5f5;
-  border: 1px solid #cccccc !important;
+  border: 1px solid #ccc !important;
   margin-bottom: 0 !important;
 }
 .nav-tabs-pattern > li > a:hover {

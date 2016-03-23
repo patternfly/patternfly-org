@@ -24,7 +24,7 @@
   > thead {
     background-clip: padding-box;
     background-color: #f9f9f9;
-    #gradient > .vertical(@start-color: #fafafa; @end-color: #ededed; @start-percent: 0%; @end-percent: 100%);
+    #gradient > .vertical(@start-color: @color-pf-black-100; @end-color: #ededed; @start-percent: 0%; @end-percent: 100%);
   }
 }
 
@@ -66,5 +66,25 @@
       background-color: @table-bg-hover;
       border-bottom-color: @table-border-hover;
     }
+  }
+}
+
+.table-treegrid {
+  span.indent {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  span.icon {
+    display: inline-block;
+    font-size: 13px;
+    margin-right: 5px;
+    min-width: 10px;
+    text-align: center;
+  }
+  span.expand-icon, span.collapse-icon {
+    cursor: pointer;
+  }
+  > tbody > tr.odd {
+    background-color: @table-bg-accent;
   }
 }
