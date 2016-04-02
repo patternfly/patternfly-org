@@ -1454,9 +1454,9 @@
 				"Asia/Yakutsk",
 				"Asia/Khandyga",
 				"Asia/Vladivostok",
-				"Asia/Sakhalin",
 				"Asia/Ust-Nera",
 				"Asia/Magadan",
+				"Asia/Sakhalin",
 				"Asia/Srednekolymsk",
 				"Asia/Kamchatka",
 				"Asia/Anadyr"
@@ -4348,7 +4348,7 @@
 			"countries": [
 				"RU"
 			],
-			"comments": "MSK+05 - Zabaykalsky"
+			"comments": "MSK+06 - Zabaykalsky"
 		},
 		"Asia/Yakutsk": {
 			"name": "Asia/Yakutsk",
@@ -4377,15 +4377,6 @@
 			],
 			"comments": "MSK+07 - Amur River"
 		},
-		"Asia/Sakhalin": {
-			"name": "Asia/Sakhalin",
-			"lat": 46.9667,
-			"long": 142.7,
-			"countries": [
-				"RU"
-			],
-			"comments": "MSK+07 - Sakhalin Island"
-		},
 		"Asia/Ust-Nera": {
 			"name": "Asia/Ust-Nera",
 			"lat": 64.5603,
@@ -4403,6 +4394,15 @@
 				"RU"
 			],
 			"comments": "MSK+07 - Magadan"
+		},
+		"Asia/Sakhalin": {
+			"name": "Asia/Sakhalin",
+			"lat": 46.9667,
+			"long": 142.7,
+			"countries": [
+				"RU"
+			],
+			"comments": "MSK+08 - Sakhalin Island"
 		},
 		"Asia/Srednekolymsk": {
 			"name": "Asia/Srednekolymsk",

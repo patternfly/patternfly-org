@@ -34,6 +34,6 @@
     "commit": "81fc55dd525f08a6af6f3a8465026ae1e672bdae"
   },
   "_source": "git://github.com/istvan-ujjmeszaros/bootstrap-touchspin.git",
-  "_target": "3.0.3",
+  "_target": "~3.0.3",
   "_originalSource": "bootstrap-touchspin"
 }
