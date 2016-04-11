@@ -16,15 +16,15 @@ layout: page-tabs
               <div class="row row-cards-pf">
                 <div class="col-xs-12 col-sm-6 col-md-4">
                   <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/cards/card-pf-aggregate-status-ipsum.html %}
+                  {% include widgets/cards/aggregate-status-ipsum.html %}
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                   <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/cards/card-pf-aggregate-status-amet.html %}
+                  {% include widgets/cards/aggregate-status-amet.html %}
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                   <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/cards/card-pf-aggregate-status-adipiscing.html %}
+                  {% include widgets/cards/aggregate-status-adipiscing.html %}
                 </div>
               </div>
             </div>
@@ -41,15 +41,15 @@ layout: page-tabs
               <div class="row row-cards-pf">
                 <div class="col-xs-12 col-sm-6 col-md-4">
                   <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/cards/card-pf-aggregate-status-ipsum-mini.html %}
+                  {% include widgets/cards/aggregate-status-ipsum-mini.html %}
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                   <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/cards/card-pf-aggregate-status-amet-mini.html %}
+                  {% include widgets/cards/aggregate-status-amet-mini.html %}
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                   <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/cards/card-pf-aggregate-status-adipiscing-mini.html %}
+                  {% include widgets/cards/aggregate-status-adipiscing-mini.html %}
                 </div>
               </div>
             </div>
@@ -106,15 +106,15 @@ layout: page-tabs
                     <div class="row row-cards-pf">
                       <div class="col-xs-12 col-sm-6 col-md-4">
                         <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/card-pf-aggregate-status-ipsum.html %}
+                        {% include widgets/cards/aggregate-status-ipsum.html %}
                       </div>
                       <div class="col-xs-12 col-sm-6 col-md-4">
                         <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/card-pf-aggregate-status-amet.html %}
+                        {% include widgets/cards/aggregate-status-amet.html %}
                       </div>
                       <div class="col-xs-12 col-sm-6 col-md-4">
                         <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/card-pf-aggregate-status-adipiscing.html %}
+                        {% include widgets/cards/aggregate-status-adipiscing.html %}
                       </div>
                     </div>
                   </div>
@@ -125,7 +125,7 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-1" href="#card-markup-1">Reference Markup</a></p>
         <div class="collapse in" id="card-markup-1">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/card-pf-aggregate-status-ipsum.html %}{% include widgets/cards/card-pf-aggregate-status-amet.html %}{% include widgets/cards/card-pf-aggregate-status-adipiscing.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/aggregate-status-ipsum.html %}{% include widgets/cards/aggregate-status-amet.html %}{% include widgets/cards/aggregate-status-adipiscing.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Mini Card Alternate</h2>
         <div class="row">
@@ -137,15 +137,15 @@ layout: page-tabs
                     <div class="row row-cards-pf">
                       <div class="col-xs-12 col-sm-6 col-md-4">
                         <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/card-pf-aggregate-status-ipsum.html %}
+                        {% include widgets/cards/aggregate-status-ipsum.html %}
                       </div>
                       <div class="col-xs-12 col-sm-6 col-md-4">
                         <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/card-pf-aggregate-status-amet.html %}
+                        {% include widgets/cards/aggregate-status-amet.html %}
                       </div>
                       <div class="col-xs-12 col-sm-6 col-md-4">
                         <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/card-pf-aggregate-status-adipiscing.html %}
+                        {% include widgets/cards/aggregate-status-adipiscing.html %}
                       </div>
                     </div>
                   </div>
@@ -156,7 +156,7 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-2" href="#card-markup-2">Reference Markup</a></p>
         <div class="collapse in" id="card-markup-2">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/card-pf-aggregate-status-ipsum-mini.html %}{% include widgets/cards/card-pf-aggregate-status-amet-mini.html %}{% include widgets/cards/card-pf-aggregate-status-adipiscing-mini.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/aggregate-status-ipsum-mini.html %}{% include widgets/cards/aggregate-status-amet-mini.html %}{% include widgets/cards/aggregate-status-adipiscing-mini.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">

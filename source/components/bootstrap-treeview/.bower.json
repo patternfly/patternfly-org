@@ -36,7 +36,7 @@
     "tag": "v1.2.0",
     "commit": "542f57eab636e14417216e95fa7f7049bbf3d69f"
   },
-  "_source": "git://github.com/jonmiles/bootstrap-treeview.git",
+  "_source": "https://github.com/jonmiles/bootstrap-treeview.git",
   "_target": "~1.2.0",
   "_originalSource": "bootstrap-treeview"
 }

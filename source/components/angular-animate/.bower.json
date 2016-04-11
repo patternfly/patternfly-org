@@ -14,7 +14,7 @@
     "tag": "v1.5.3",
     "commit": "671c738980fb0509b2b494716ccd8c004c39f368"
   },
-  "_source": "git://github.com/angular/bower-angular-animate.git",
+  "_source": "https://github.com/angular/bower-angular-animate.git",
   "_target": "1.3.0 - 1.5.*",
   "_originalSource": "angular-animate"
 }

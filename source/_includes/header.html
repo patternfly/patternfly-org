@@ -125,8 +125,23 @@
               <li {% if secondary == 'data-visualization' %} class="active"{% endif %}>
                 <a class="{% if secondary == 'data-visualization' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#data-visualization-secondary" aria-expanded="{% if secondary == 'data-visualization' %}true{% else %}false{% endif %}" aria-controls="data-visualization-secondary">Data Visualization</a>
                 <ul class="collapse {% if secondary == 'data-visualization' %}in{% endif %}" id="data-visualization-secondary">
+                  <li {% if tertiary == 'area-chart' %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}pattern-library/data-visualization/area-chart/">Area Chart</a>
+                  </li>
+                  <li {% if tertiary == 'bar-chart' %} class="active"{% endif %}>
+                  <a href="{{ site.baseurl }}pattern-library/data-visualization/bar-chart/">Bar Chart</a>
+                  </li>
                   <li {% if tertiary == 'donut-chart' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/data-visualization/donut-chart/">Donut Chart</a>
+                  </li>
+                  <li {% if tertiary == 'heat-map' %} class="active"{% endif %}>
+                  <a href="{{ site.baseurl }}pattern-library/data-visualization/heat-map/">Heat Map</a>
+                  </li>
+                  <li {% if tertiary == 'line-chart' %} class="active"{% endif %}>
+                  <a href="{{ site.baseurl }}pattern-library/data-visualization/line-chart/">Line Chart</a>
+                  </li>
+                  <li {% if tertiary == 'pie-chart' %} class="active"{% endif %}>
+                  <a href="{{ site.baseurl }}pattern-library/data-visualization/pie-chart/">Pie Chart</a>
                   </li>
                   <li {% if tertiary == 'sparkline' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/data-visualization/sparkline/">Sparkline</a>

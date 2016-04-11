@@ -19,7 +19,7 @@
     "tag": "v1.4.1",
     "commit": "7ea7cf35191c812c8614bf9c561e9cbcd31fe80c"
   },
-  "_source": "git://github.com/eternicode/bootstrap-datepicker.git",
+  "_source": "https://github.com/eternicode/bootstrap-datepicker.git",
   "_target": "~1.4.0",
   "_originalSource": "bootstrap-datepicker"
 }

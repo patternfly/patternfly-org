@@ -45,7 +45,7 @@
     "tag": "v3.3.2",
     "commit": "73ac2c1051417d1de82d30c66db53ca8261cbd36"
   },
-  "_source": "git://github.com/patternfly/patternfly.git",
+  "_source": "https://github.com/patternfly/patternfly.git",
   "_target": "3.3.2",
   "_originalSource": "patternfly"
 }

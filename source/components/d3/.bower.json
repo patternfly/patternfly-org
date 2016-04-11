@@ -30,7 +30,7 @@
     "tag": "v3.5.0",
     "commit": "3c7a0dcb8e24b3561d44e12a8221910451728fc6"
   },
-  "_source": "git://github.com/mbostock-bower/d3-bower.git",
+  "_source": "https://github.com/mbostock-bower/d3-bower.git",
   "_target": "<=3.5.0",
   "_originalSource": "d3"
 }
