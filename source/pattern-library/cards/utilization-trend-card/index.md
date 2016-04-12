@@ -8,12 +8,18 @@ layout: page-tabs
     <p>Utilization cards display the current utilization and a trend of a single metric.  The most common use case for this pattern is seen in a dashboard.</p>
     <p>Jump to <a href="#example-overview-1">Card with a Single Metric</a> or <a href="#example-overview-2">Card with Multiple Metrics</a></p>
     <h2 id="example-overview-1">Card with a Single Metric</h2>
-    <div class="example-pf">
-      <div class="cards-pf">
-        <div class="container-fluid container-cards-pf" style="margin-top: 0;">
-          <div class="row row-cards-pf" style="padding-top: 20px;">
-            <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-            {% include widgets/card-pf-utilization-single-metric.html chart1="chart-pf-donut-1" chart2="chart-pf-sparkline-1" %}
+    <div class="row">
+      <div class="col-md-5">
+        <div class="example-pf">
+          <div class="cards-pf">
+            <div class="container-fluid container-cards-pf">
+              <div class="row row-cards-pf">
+                <div class="col-md-12">
+                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
+                  {% include widgets/cards/card-pf-utilization-trend-single-metric.html chart1="chart-pf-donut-1" chart2="chart-pf-sparkline-1" %}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -21,10 +27,12 @@ layout: page-tabs
     <h2 id="example-overview-2">Card with Multiple Metrics</h2>
     <div class="example-pf">
       <div class="cards-pf">
-        <div class="container-fluid container-cards-pf" style="margin-top: 0;">
-          <div class="row row-cards-pf" style="padding-top: 20px;">
-            <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-            {% include widgets/card-pf-utilization-multiple-metrics.html chart3="chart-pf-donut-2" chart4="chart-pf-sparkline-2" chart5="chart-pf-donut-3" chart6="chart-pf-sparkline-3" chart7="chart-pf-donut-4" chart8="chart-pf-sparkline-4" %}
+        <div class="container-fluid container-cards-pf">
+          <div class="row row-cards-pf">
+            <div class="col-md-12">
+              <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
+              {% include widgets/cards/card-pf-utilization-trend-multiple-metrics.html chart3="chart-pf-donut-2" chart4="chart-pf-sparkline-2" chart5="chart-pf-donut-3" chart6="chart-pf-sparkline-3" chart7="chart-pf-donut-4" chart8="chart-pf-sparkline-4" %}
+            </div>
           </div>
         </div>
       </div>
@@ -74,17 +82,23 @@ layout: page-tabs
   </div>
   <div role="tabpanel" class="tab-pane" id="code">
     {% include nav-tabs-code.html %}
-    <p>Jump to <a href="#example-code-1">Card with a Single Metric</a> or <a href="#example-code-2">Card with Multiple Metrics</a></p>
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
+        <p>Jump to <a href="#example-code-1">Card with a Single Metric</a> or <a href="#example-code-2">Card with Multiple Metrics</a></p>
         <h2 id="example-code-1">Card with a Single Metric</h2>
-        <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            <div class="cards-pf">
-              <div class="container-fluid container-cards-pf" style="margin-top: 0;">
-                <div class="row row-cards-pf" style="padding-top: 20px;">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/card-pf-utilization-single-metric.html chart1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}
+        <div class="row">
+          <div class="col-md-5">
+            <div class="example-pf">
+              <div class="example-pf-demo example-pf-demo-no-padding">
+                <div class="cards-pf">
+                  <div class="container-fluid container-cards-pf">
+                    <div class="row row-cards-pf">
+                      <div class="col-md-12">
+                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
+                        {% include widgets/cards/card-pf-utilization-trend-single-metric.html chart1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -92,16 +106,18 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-1" href="#card-markup-1">Reference Markup</a></p>
         <div class="collapse in" id="card-markup-1">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/card-pf-utilization-single-metric.html chart1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/card-pf-utilization-trend-single-metric.html chart1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Card with Multiple Metrics</h2>
         <div class="example-pf">
           <div class="example-pf-demo example-pf-demo-no-padding">
             <div class="cards-pf">
-              <div class="container-fluid container-cards-pf" style="margin-top: 0;">
-                <div class="row row-cards-pf" style="padding-top: 20px;">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/card-pf-utilization-multiple-metrics.html chart3="chart-pf-donut-6" chart4="chart-pf-sparkline-6" chart5="chart-pf-donut-7" chart6="chart-pf-sparkline-7" chart7="chart-pf-donut-8" chart8="chart-pf-sparkline-8" %}
+              <div class="container-fluid container-cards-pf">
+                <div class="row row-cards-pf">
+                  <div class="col-md-12">
+                    <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
+                    {% include widgets/cards/card-pf-utilization-trend-multiple-metrics.html chart3="chart-pf-donut-6" chart4="chart-pf-sparkline-6" chart5="chart-pf-donut-7" chart6="chart-pf-sparkline-7" chart7="chart-pf-donut-8" chart8="chart-pf-sparkline-8" %}
+                  </div>
                 </div>
               </div>
             </div>
@@ -109,12 +125,12 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-2" href="#card-markup-2">Reference Markup</a></p>
         <div class="collapse in" id="card-markup-2">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/card-pf-utilization-multiple-metrics.html chart3="chart-pf-donut-6" chart4="chart-pf-sparkline-6" chart5="chart-pf-donut-7" chart6="chart-pf-sparkline-7" chart7="chart-pf-donut-8" chart8="chart-pf-sparkline-8" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/card-pf-utilization-trend-multiple-metrics.html chart3="chart-pf-donut-6" chart4="chart-pf-sparkline-6" chart5="chart-pf-donut-7" chart6="chart-pf-sparkline-7" chart7="chart-pf-donut-8" chart8="chart-pf-sparkline-8" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">
         <div ng-app="docsApp" ng-controller="DocsController" class="content">
-          <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.charts.directive.pfUtilizationChart.html'"></div>
+          <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.charts.directive.pfUtilizationTrendChart.html'"></div>
         </div>
       </div>
     </div>

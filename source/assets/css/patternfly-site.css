@@ -70,6 +70,9 @@ body {
 .example-pf {
   font-size: 12px;
 }
+.example-pf .container-cards-pf {
+  margin-top: 0;
+}
 .example-pf .example-pf-demo {
   border: 1px solid #ccc;
   /* border-bottom: 0; */
@@ -79,6 +82,9 @@ body {
 }
 .example-pf .example-pf-demo-no-padding {
   padding: 0;
+}
+.example-pf .row-cards-pf {
+  padding-top: 20px;
 }
 .example-pf h1,
 .example-pf h2,
