@@ -33,7 +33,7 @@
     "tag": "v3.3.2",
     "commit": "ec69b5dd914dacb19cf1fa8e1be7eea6bcc7b083"
   },
-  "_source": "git://github.com/nostalgiaz/bootstrap-switch.git",
+  "_source": "https://github.com/nostalgiaz/bootstrap-switch.git",
   "_target": "~3.3.2",
   "_originalSource": "bootstrap-switch"
 }

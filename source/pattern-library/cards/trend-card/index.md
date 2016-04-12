@@ -60,17 +60,17 @@ layout: page-tabs
           </li>
           <li><b>Total Value</b> (ƒoptional): If needed, provide total value next to the actual value to help provide context.</li>
           <li><b>Unit of Measurement:</b> The label for unit of measurement is shown after the the value.</li>
-          <li><b>Sparkline:</b> See the<a href="/pattern-library/data-visualization/sparkline/"> Sparkline pattern</a> for more details.</li>
+          <li><b>Sparkline:</b> See the<a href="{{ site.baseurl}}pattern-library/data-visualization/sparkline/"> Sparkline pattern</a> for more details.</li>
           <li><b>Tooltip:</b> Use a tooltip on hover to display additional information about exact points on the sparkline (e.g. values and/or percentages). A vertical line and marker helps to accentuate the hover point.</li>
           <li><b>Time Frame</b> (optional): The time frame is indicated by placing a label on one of the following areas:
             <ul>
               <li>Under the title</li>
               <li>Under the sparkline</li>
-              <li>In a <a href="/pattern-library/cards/dashboard-card/#dashboard-card-time-frame-filter">time frame filter</a></li>
+              <li>In a <a href="{{ site.baseurl}}pattern-library/cards/dashboard-card/#dashboard-card-time-frame-filter">time frame filter</a></li>
             </ul>
-            The time frame on a card is optional since there could be a single instance of the time frame label or <a href="/pattern-library/cards/dashboard-card/#dashboard-card-time-frame-filter">time frame filter</a> that applies to all cards within a single view.
+            The time frame on a card is optional since there could be a single instance of the time frame label or <a href="{{ site.baseurl}}pattern-library/cards/dashboard-card/#dashboard-card-time-frame-filter">time frame filter</a> that applies to all cards within a single view.
           </li>
-          <li><b>Actions Panel</b> (optional): See <a href="/pattern-library/cards/dashboard-card/#dashboard-card-actions-panel"> actions panel</a> under the Dashboard Cards pattern for more details.</li>
+          <li><b>Actions Panel</b> (optional): See <a href="{{ site.baseurl}}pattern-library/cards/dashboard-card/#dashboard-card-actions-panel"> actions panel</a> under the Dashboard Cards pattern for more details.</li>
         </ol>
       </div>
     </div>
@@ -88,7 +88,7 @@ layout: page-tabs
           <li><b>Total Value</b> (optional): If needed, provide total value next to the actual value to help provide context.</li>
           <li><b>Unit of Measurement:</b> The label for unit of measurement is shown after the the value.</li>
           <li><b>Percentage</b> (optional): The location of the percentage can be shown to the right of the sparkline.</li>
-          <li><b>Sparkline:</b> See the<a href="/pattern-library/data-visualization/sparkline/"> Sparkline pattern</a> for more details.</li>
+          <li><b>Sparkline:</b> See the<a href="{{ site.baseurl}}pattern-library/data-visualization/sparkline/"> Sparkline pattern</a> for more details.</li>
           <li><b>Tooltip:</b> Use a tooltip on hover to display additional information about exact points on the sparkline such as values or percentages. A vertical line and marker helps to accentuate the user’s hover point.</li>
         </ol>
       </div>
@@ -99,7 +99,7 @@ layout: page-tabs
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane nested active" id="angular">
         <div ng-app="docsApp" ng-controller="DocsController" class="content">
-          <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.card.directive.pfCard.html'"></div>
+          <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.card.directive.pfCard - Trends.html'"></div>
         </div>
       </div>
     </div>

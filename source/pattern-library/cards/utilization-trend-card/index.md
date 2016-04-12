@@ -16,7 +16,7 @@ layout: page-tabs
               <div class="row row-cards-pf">
                 <div class="col-md-12">
                   <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/cards/card-pf-utilization-trend-single-metric.html chart1="chart-pf-donut-1" chart2="chart-pf-sparkline-1" %}
+                  {% include widgets/cards/utilization-trend-single-metric.html chart1="chart-pf-donut-1" chart2="chart-pf-sparkline-1" %}
                 </div>
               </div>
             </div>
@@ -31,7 +31,7 @@ layout: page-tabs
           <div class="row row-cards-pf">
             <div class="col-md-12">
               <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-              {% include widgets/cards/card-pf-utilization-trend-multiple-metrics.html chart3="chart-pf-donut-2" chart4="chart-pf-sparkline-2" chart5="chart-pf-donut-3" chart6="chart-pf-sparkline-3" chart7="chart-pf-donut-4" chart8="chart-pf-sparkline-4" %}
+              {% include widgets/cards/utilization-trend-multiple-metrics.html chart3="chart-pf-donut-2" chart4="chart-pf-sparkline-2" chart5="chart-pf-donut-3" chart6="chart-pf-sparkline-3" chart7="chart-pf-donut-4" chart8="chart-pf-sparkline-4" %}
             </div>
           </div>
         </div>
@@ -52,8 +52,8 @@ layout: page-tabs
           <li><b>Total Value:</b> The total value is left aligned and listed under the label.</li>
           <li><b>Unit of Measurement:</b> The label for unit of measurement is shown after the total value.</li>
           <li><b>Content Separator:</b> A horizontal line visually separates the content in the card. The content separator is located below the values and above the donut chart. </li>
-          <li><b>Donut Chart:</b> See the <a href="{{ site.baseurl}}patterns/donut-chart/">Donut Chart Pattern</a> for more details.</li>
-          <li><b>Sparkline:</b> See the <a href="{{ site.baseurl}}patterns/sparkline/">Sparkline Pattern</a> for more details.</li>
+          <li><b>Donut Chart:</b> See the <a href="{{ site.baseurl}}pattern-library/data-visualization/donut-chart/">Donut Chart Pattern</a> for more details.</li>
+          <li><b>Sparkline:</b> See the <a href="{{ site.baseurl}}pattern-library/data-visualization/sparkline/">Sparkline Pattern</a> for more details.</li>
           <li><b>Time Frame:</b> The time frame is indicated under the sparkline by small text and is left aligned.</li>
         </ol>
       </div>
@@ -73,8 +73,8 @@ layout: page-tabs
           <li><b>Total Value:</b> The total value is left aligned and listed under the label.</li>
           <li><b>Unit of Measurement:</b> The label for unit of measurement is shown after the total value.</li>
           <li><b>Content Separator:</b> A horizontal line visually separates the content in the card. The content separator is located below the values and above the donut chart.</li>
-          <li><b>Donut Chart:</b> See the <a href="{{ site.baseurl}}patterns/donut-chart/">Donut Chart Pattern</a> for more details.</li>
-          <li><b>Sparkline:</b> See the <a href="{{ site.baseurl}}patterns/sparkline/">Sparkline Pattern</a> for more details.</li>
+          <li><b>Donut Chart:</b> See the <a href="{{ site.baseurl}}pattern-library/data-visualization/donut-chart/">Donut Chart Pattern</a> for more details.</li>
+          <li><b>Sparkline:</b> See the <a href="{{ site.baseurl}}pattern-library/data-visualization/sparkline/">Sparkline Pattern</a> for more details.</li>
           <li><b>Time Frame:</b> The time frame is indicated under the sparkline by small text and is left aligned.</li>
         </ol>
       </div>
@@ -95,7 +95,7 @@ layout: page-tabs
                     <div class="row row-cards-pf">
                       <div class="col-md-12">
                         <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/card-pf-utilization-trend-single-metric.html chart1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}
+                        {% include widgets/cards/utilization-trend-single-metric.html chart1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}
                       </div>
                     </div>
                   </div>
@@ -106,7 +106,7 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-1" href="#card-markup-1">Reference Markup</a></p>
         <div class="collapse in" id="card-markup-1">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/card-pf-utilization-trend-single-metric.html chart1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/utilization-trend-single-metric.html chart1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Card with Multiple Metrics</h2>
         <div class="example-pf">
@@ -116,7 +116,7 @@ layout: page-tabs
                 <div class="row row-cards-pf">
                   <div class="col-md-12">
                     <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                    {% include widgets/cards/card-pf-utilization-trend-multiple-metrics.html chart3="chart-pf-donut-6" chart4="chart-pf-sparkline-6" chart5="chart-pf-donut-7" chart6="chart-pf-sparkline-7" chart7="chart-pf-donut-8" chart8="chart-pf-sparkline-8" %}
+                    {% include widgets/cards/utilization-trend-multiple-metrics.html chart3="chart-pf-donut-6" chart4="chart-pf-sparkline-6" chart5="chart-pf-donut-7" chart6="chart-pf-sparkline-7" chart7="chart-pf-donut-8" chart8="chart-pf-sparkline-8" %}
                   </div>
                 </div>
               </div>
@@ -125,7 +125,7 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-2" href="#card-markup-2">Reference Markup</a></p>
         <div class="collapse in" id="card-markup-2">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/card-pf-utilization-trend-multiple-metrics.html chart3="chart-pf-donut-6" chart4="chart-pf-sparkline-6" chart5="chart-pf-donut-7" chart6="chart-pf-sparkline-7" chart7="chart-pf-donut-8" chart8="chart-pf-sparkline-8" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/utilization-trend-multiple-metrics.html chart3="chart-pf-donut-6" chart4="chart-pf-sparkline-6" chart5="chart-pf-donut-7" chart6="chart-pf-sparkline-7" chart7="chart-pf-donut-8" chart8="chart-pf-sparkline-8" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">

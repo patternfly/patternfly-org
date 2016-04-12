@@ -17,7 +17,7 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
               <div class="row row-cards-pf">
                 <div class="col-md-12">
                   <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/cards/card-pf-dashboard-timeframe-header.html %}
+                  {% include widgets/cards/dashboard-timeframe-header.html %}
                 </div>
               </div>
             </div>
@@ -29,7 +29,7 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
                 <div class="row row-cards-pf">
                   <div class="col-md-12">
                     <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                    {% include widgets/cards/card-pf-dashboard-timeframe-footer.html %}
+                    {% include widgets/cards/dashboard-timeframe-footer.html %}
                   </div>
                 </div>
               </div>
@@ -106,7 +106,7 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
                     <div class="row row-cards-pf">
                       <div class="col-md-12">
                         <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/card-pf-dashboard-timeframe-header.html %}
+                        {% include widgets/cards/dashboard-timeframe-header.html %}
                       </div>
                     </div>
                   </div>
@@ -119,7 +119,7 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
           <div class="col-md-12">
             <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-1" href="#card-markup-1">Reference Markup</a></p>
             <div class="collapse in" id="card-markup-1">
-              <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/card-pf-dashboard-timeframe-header.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+              <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/dashboard-timeframe-header.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
             </div>
           </div>
         </div>
@@ -133,7 +133,7 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
                     <div class="row row-cards-pf">
                       <div class="col-md-12">
                         <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/card-pf-dashboard-timeframe-footer.html %}
+                        {% include widgets/cards/dashboard-timeframe-footer.html %}
                       </div>
                     </div>
                   </div>
@@ -146,14 +146,14 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
           <div class="col-md-12">
             <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-2" href="#card-markup-2">Reference Markup</a></p>
             <div class="collapse in" id="card-markup-2">
-              <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/card-pf-dashboard-timeframe-footer.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+              <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/dashboard-timeframe-footer.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
             </div>
           </div>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">
         <div ng-app="docsApp" ng-controller="DocsController" class="content">
-          <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.card.directive.pfCard.html'"></div>
+          <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.card.directive.pfCard - Timeframe Filters.html'"></div>
         </div>
       </div>
     </div>

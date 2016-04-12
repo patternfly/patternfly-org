@@ -27,7 +27,7 @@
     "tag": "2.11.2",
     "commit": "c9afcbd8c4e0177d03b220a89ab19f62c6cc7bcf"
   },
-  "_source": "git://github.com/moment/moment.git",
+  "_source": "https://github.com/moment/moment.git",
   "_target": "~2.11.2",
   "_originalSource": "moment"
 }

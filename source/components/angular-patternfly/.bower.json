@@ -54,7 +54,7 @@
     "tag": "v3.3.2",
     "commit": "683341dcbf500721b3a1c3347d1b5488ea20c852"
   },
-  "_source": "git://github.com/patternfly/angular-patternfly.git",
+  "_source": "https://github.com/patternfly/angular-patternfly.git",
   "_target": "~3.3.2",
   "_originalSource": "angular-patternfly"
 }
