@@ -1039,4 +1039,10 @@ th {
     margin-top: 0px;
   }
 }
+.col-center {
+  float: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 /*# sourceMappingURL=patternfly-site.css.map */

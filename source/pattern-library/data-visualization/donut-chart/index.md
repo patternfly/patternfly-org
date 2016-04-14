@@ -1,8 +1,7 @@
 ---
 title: Donut Chart
-author: lhinson
+author: dlabrecq
 layout: page-tabs
-url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.cloudflare.com/ajax/libs/d3/3.5.0/d3.min.js']
 ---
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">
@@ -15,14 +14,14 @@ url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.
     <p>Jump to <a href="#example-overview-1">Utilization</a>, <a href="#example-overview-2">Relationship to a Whole</a> or <a href="#example-overview-3">Small Donut Chart</a></p>
     <h2 id="example-overview-1">Utilization</h2>
     <div class="row">
-      <div class="col-md-3" style="padding-right: 0px;">
+      <div class="col-md-3 col-center" style="padding-right: 0px;">
         <div class="example-pf">
           <div class="cards-pf">
             <div class="container-fluid container-cards-pf">
               <div class="row row-cards-pf">
                 <div class="col-md-12">
                   <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/charts/donut-utilization.html chart1="donut-chart-1" %}
+                  {% include widgets/charts/donut-utilization.html id="donut-chart-1" %}
                 </div>
               </div>
             </div>
@@ -31,7 +30,7 @@ url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.
       </div>
     </div>
     <div class="row">
-      <div class="col-md-11">
+      <div class="col-md-11 col-center">
         <h2 id="example-overview-2">Relationship to a Whole</h2>
         <div class="example-pf">
           <div class="cards-pf">
@@ -39,7 +38,7 @@ url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.
               <div class="row row-cards-pf">
                 <div class="col-md-12">
                   <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/charts/donut-whole-relationship.html chart1="donut-chart-2" chart2="donut-chart-3" chart3="donut-chart-4" %}
+                  {% include widgets/charts/donut-whole-relationship.html id1="donut-chart-2" id2="donut-chart-3" id3="donut-chart-4" %}
                 </div>
               </div>
             </div>
@@ -48,7 +47,7 @@ url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-4 col-center">
         <h2 id="example-overview-3">Small Donut Chart</h2>
         <div class="example-pf">
           <div class="cards-pf">
@@ -56,7 +55,7 @@ url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.
               <div class="row row-cards-pf">
                 <div class="col-md-12">
                   <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/charts/donut-mini.html chart1="donut-chart-5" %}
+                  {% include widgets/charts/donut-mini.html id="donut-chart-5" %}
                 </div>
               </div>
             </div>
@@ -106,7 +105,7 @@ url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.
         <p>Jump to <a href="#example-code-1">Utilization</a>, <a href="#example-overview-2">Relationship to a Whole</a> or <a href="#example-code-3">Small Donut Chart</a></p>
         <h2 id="example-code-1">Utilization</h2>
         <div class="row">
-          <div class="col-md-3" style="padding-right: 0px;">
+          <div class="col-md-3 col-center" style="padding-right: 0px;">
             <div class="example-pf">
               <div class="example-pf-demo example-pf-demo-no-padding">
                 <div class="cards-pf">
@@ -114,7 +113,7 @@ url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.
                     <div class="row row-cards-pf">
                       <div class="col-md-12">
                         <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/charts/donut-utilization.html chart1="donut-chart-6" %}
+                        {% include widgets/charts/donut-utilization.html id="donut-chart-6" %}
                       </div>
                     </div>
                   </div>
@@ -125,11 +124,11 @@ url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-1" href="#card-markup-1">Reference Markup</a></p>
         <div class="collapse in" id="card-markup-1">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/charts/donut-utilization.html chart1="donut-chart-6" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}{% include widgets/charts/donut-utilization.html id="donut-chart-6" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Relationship to a Whole</h2>
         <div class="row">
-          <div class="col-md-11">
+          <div class="col-md-11 col-center">
             <div class="example-pf">
               <div class="example-pf-demo example-pf-demo-no-padding">
                 <div class="cards-pf">
@@ -137,7 +136,7 @@ url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.
                     <div class="row row-cards-pf">
                       <div class="col-md-12">
                         <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/charts/donut-whole-relationship.html chart1="donut-chart-7" chart2="donut-chart-8" chart3="donut-chart-9" %}
+                        {% include widgets/charts/donut-whole-relationship.html id1="donut-chart-7" id2="donut-chart-8" id3="donut-chart-9" %}
                       </div>
                     </div>
                   </div>
@@ -146,13 +145,13 @@ url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-2" href="#card-markup-2">Reference Markup</a></p>
-        <div class="collapse in" id="card-markup-2">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/charts/donut-whole-relationship.html chart1="donut-chart-7" chart2="donut-chart-8" chart3="donut-chart-9" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+        <div class="collapse in" id="markup-2">
+          <pre class="prettyprint">{% capture markup_include %}{% include widgets/charts/donut-whole-relationship.html id1="donut-chart-7" id2="donut-chart-8" id3="donut-chart-9" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-3">Small Donut Chart</h2>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 col-center">
             <div class="example-pf">
               <div class="example-pf-demo example-pf-demo-no-padding">
                 <div class="cards-pf">
@@ -160,7 +159,7 @@ url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.
                     <div class="row row-cards-pf">
                       <div class="col-md-12">
                         <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/charts/donut-mini.html chart1="donut-chart-10" %}
+                        {% include widgets/charts/donut-mini.html id="donut-chart-10" %}
                       </div>
                     </div>
                   </div>
@@ -169,9 +168,9 @@ url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-3" href="#card-markup-3">Reference Markup</a></p>
-        <div class="collapse in" id="card-markup-3">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/charts/donut-mini.html chart1="donut-chart-10" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
+        <div class="collapse in" id="markup-3">
+          <pre class="prettyprint">{% capture markup_include %}{% include widgets/charts/donut-mini.html id="donut-chart-10" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">

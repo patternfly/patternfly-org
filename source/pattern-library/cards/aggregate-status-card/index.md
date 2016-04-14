@@ -1,6 +1,6 @@
 ---
 title: Aggregate Status Card
-author: lhinson
+author: dlabrecq
 layout: page-tabs
 ---
 <div class="tab-content">
@@ -9,7 +9,7 @@ layout: page-tabs
     <p>Jump to <a href="#example-overview-1">Regular Card</a> or <a href="#example-overview-2">Mini Card Alternate</a></p>
     <h2 id="example-overview-1">Regular Card</h2>
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8 col-center">
         <div class="example-pf">
           <div class="cards-pf">
             <div class="container-fluid container-cards-pf">
@@ -34,7 +34,7 @@ layout: page-tabs
     </div>
     <h2 id="example-overview-2">Mini Card Alternate</h2>
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8 col-center">
         <div class="example-pf">
           <div class="cards-pf">
             <div class="container-fluid container-cards-pf">
@@ -98,7 +98,7 @@ layout: page-tabs
         <p>Jump to <a href="#example-code-1">Regular Card</a> or <a href="#example-code-2">Mini Card Alternate</a></p>
         <h2 id="example-code-1">Regular Card</h2>
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-8 col-center">
             <div class="example-pf">
               <div class="example-pf-demo example-pf-demo-no-padding">
                 <div class="cards-pf">
@@ -123,13 +123,13 @@ layout: page-tabs
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-1" href="#card-markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="card-markup-1">
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+        <div class="collapse in" id="markup-1">
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/aggregate-status-ipsum.html %}{% include widgets/cards/aggregate-status-amet.html %}{% include widgets/cards/aggregate-status-adipiscing.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Mini Card Alternate</h2>
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-8 col-center">
             <div class="example-pf">
               <div class="example-pf-demo example-pf-demo-no-padding">
                 <div class="cards-pf">
@@ -154,8 +154,8 @@ layout: page-tabs
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-2" href="#card-markup-2">Reference Markup</a></p>
-        <div class="collapse in" id="card-markup-2">
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+        <div class="collapse in" id="markup-2">
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/aggregate-status-ipsum-mini.html %}{% include widgets/cards/aggregate-status-amet-mini.html %}{% include widgets/cards/aggregate-status-adipiscing-mini.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>
