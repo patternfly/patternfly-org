@@ -9,14 +9,14 @@ layout: page-tabs
     <p>Jump to <a href="#example-overview-1">Card with a Single Metric</a> or <a href="#example-overview-2">Card with Multiple Metrics</a></p>
     <h2 id="example-overview-1">Card with a Single Metric</h2>
     <div class="row">
-      <div class="col-md-5">
+      <div class="col-md-5 col-center">
         <div class="example-pf">
           <div class="cards-pf">
             <div class="container-fluid container-cards-pf">
               <div class="row row-cards-pf">
                 <div class="col-md-12">
                   <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/cards/utilization-trend-single-metric.html chart1="chart-pf-donut-1" chart2="chart-pf-sparkline-1" %}
+                  {% include widgets/cards/utilization-trend-single-metric.html id1="chart-pf-donut-1" id2="chart-pf-sparkline-1" %}
                 </div>
               </div>
             </div>
@@ -31,7 +31,7 @@ layout: page-tabs
           <div class="row row-cards-pf">
             <div class="col-md-12">
               <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-              {% include widgets/cards/utilization-trend-multiple-metrics.html chart3="chart-pf-donut-2" chart4="chart-pf-sparkline-2" chart5="chart-pf-donut-3" chart6="chart-pf-sparkline-3" chart7="chart-pf-donut-4" chart8="chart-pf-sparkline-4" %}
+              {% include widgets/cards/utilization-trend-multiple-metrics.html id3="chart-pf-donut-2" id4="chart-pf-sparkline-2" id5="chart-pf-donut-3" id6="chart-pf-sparkline-3" id7="chart-pf-donut-4" id8="chart-pf-sparkline-4" %}
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@ layout: page-tabs
         <p>Jump to <a href="#example-code-1">Card with a Single Metric</a> or <a href="#example-code-2">Card with Multiple Metrics</a></p>
         <h2 id="example-code-1">Card with a Single Metric</h2>
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-5 col-center">
             <div class="example-pf">
               <div class="example-pf-demo example-pf-demo-no-padding">
                 <div class="cards-pf">
@@ -95,7 +95,7 @@ layout: page-tabs
                     <div class="row row-cards-pf">
                       <div class="col-md-12">
                         <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/utilization-trend-single-metric.html chart1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}
+                        {% include widgets/cards/utilization-trend-single-metric.html id1="chart-pf-donut-5" id2="chart-pf-sparkline-5" %}
                       </div>
                     </div>
                   </div>
@@ -104,9 +104,9 @@ layout: page-tabs
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-1" href="#card-markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="card-markup-1">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/utilization-trend-single-metric.html chart1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+        <div class="collapse in" id="markup-1">
+          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/utilization-trend-single-metric.html id1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Card with Multiple Metrics</h2>
         <div class="example-pf">
@@ -116,16 +116,16 @@ layout: page-tabs
                 <div class="row row-cards-pf">
                   <div class="col-md-12">
                     <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                    {% include widgets/cards/utilization-trend-multiple-metrics.html chart3="chart-pf-donut-6" chart4="chart-pf-sparkline-6" chart5="chart-pf-donut-7" chart6="chart-pf-sparkline-7" chart7="chart-pf-donut-8" chart8="chart-pf-sparkline-8" %}
+                    {% include widgets/cards/utilization-trend-multiple-metrics.html id3="chart-pf-donut-6" id4="chart-pf-sparkline-6" id5="chart-pf-donut-7" id6="chart-pf-sparkline-7" id7="chart-pf-donut-8" id8="chart-pf-sparkline-8" %}
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-2" href="#card-markup-2">Reference Markup</a></p>
-        <div class="collapse in" id="card-markup-2">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/utilization-trend-multiple-metrics.html chart3="chart-pf-donut-6" chart4="chart-pf-sparkline-6" chart5="chart-pf-donut-7" chart6="chart-pf-sparkline-7" chart7="chart-pf-donut-8" chart8="chart-pf-sparkline-8" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+        <div class="collapse in" id="markup-2">
+          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/utilization-trend-multiple-metrics.html id3="chart-pf-donut-6" id4="chart-pf-sparkline-6" id5="chart-pf-donut-7" id6="chart-pf-sparkline-7" id7="chart-pf-donut-8" id8="chart-pf-sparkline-8" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">

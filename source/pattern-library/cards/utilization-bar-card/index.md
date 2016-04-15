@@ -1,6 +1,6 @@
 ---
 title: Utilization Bar Card
-author: rhamilto
+author: dlabrecq
 layout: page-tabs
 url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
 ---
@@ -10,7 +10,7 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
     <p>Jump to <a href="#example-overview-1">Top Left Description and Top Right Label</a> or <a href="#example-overview-2">Left Description and Right Label</a></p>
     <h2 id="example-overview-1">Top Left Description and Top Right Label</h2>
     <div class="row">
-      <div class="col-md-7">
+      <div class="col-md-7 col-center">
         <div class="example-pf">
           <div class="cards-pf">
             <div class="container-fluid container-cards-pf">
@@ -64,7 +64,7 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
         <p>Jump to <a href="#example-code-1">Top Left Description and Top Right Label</a> or <a href="#example-code-2">Left Description and Right Label</a></p>
         <h2 id="example-code-1">Top Left Description and Top Right Label</h2>
         <div class="row">
-          <div class="col-md-7">
+          <div class="col-md-7 col-center">
             <div class="example-pf">
               <div class="example-pf-demo example-pf-demo-no-padding">
                 <div class="cards-pf">
@@ -81,13 +81,13 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-1" href="#card-markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="card-markup-1">
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+        <div class="collapse in" id="markup-1">
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/utilization-bar-top-labels.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Left Description and Right Label</h2>
         <div class="row">
-          <div class="col-md-7">
+          <div class="col-md-7 col-center">
             <div class="example-pf">
               <div class="example-pf-demo example-pf-demo-no-padding">
                 <div class="cards-pf">
@@ -104,8 +104,8 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-2" href="#card-markup-2">Reference Markup</a></p>
-        <div class="collapse in" id="card-markup-2">
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+        <div class="collapse in" id="markup-2">
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/utilization-bar-side-labels.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>

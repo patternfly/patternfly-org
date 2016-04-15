@@ -1,6 +1,6 @@
 ---
 title: Trend Card
-author: lhinson
+author: dlabrecq
 layout: page-tabs
 ---
 <div class="tab-content">
@@ -9,7 +9,7 @@ layout: page-tabs
     <p>Jump to <a href="#example-overview-1">Small Cards</a> or <a href="#example-overview-2">Large Cards</a></p>
     <h2 id="example-overview-1">Small Cards</h2>
     <div class="row">
-      <div class="col-md-10">
+      <div class="col-md-10 col-center">
         <div class="example-pf">
           <div class="cards-pf">
             <div class="container-fluid container-cards-pf">
@@ -26,7 +26,7 @@ layout: page-tabs
     </div>
     <h2 id="example-overview-2">Large Cards</h2>
     <div class="row">
-      <div class="col-md-10">
+      <div class="col-md-10 col-center">
         <div class="example-pf">
           <div class="cards-pf">
             <div class="container-fluid container-cards-pf">

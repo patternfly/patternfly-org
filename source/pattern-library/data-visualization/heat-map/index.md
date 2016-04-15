@@ -1,8 +1,7 @@
 ---
 title: Heat Map
-author: lhinson
+author: dlabrecq
 layout: page-tabs
-url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.cloudflare.com/ajax/libs/d3/3.5.0/d3.min.js']
 ---
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">
@@ -14,7 +13,7 @@ url-js-extra: ['//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js', '//cdnjs.
     </ul>
     <h2 id="example-overview-1">Example</h2>
     <div class="row">
-      <div class="col-md-10">
+      <div class="col-md-10 col-center">
         <div class="example-pf">
           <div class="cards-pf">
             <div class="container-fluid container-cards-pf">
