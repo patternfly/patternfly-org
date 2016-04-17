@@ -2,7 +2,7 @@
 title: Timepicker
 author: dlabrecq
 layout: page-tabs-no-design
-url-js-extra: ['components/moment/min/moment.min.js', components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js]
+url-js-extra: ['components/moment/min/moment.min.js', 'components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js']
 ---
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">
@@ -62,7 +62,11 @@ url-js-extra: ['components/moment/min/moment.min.js', components/eonasdan-bootst
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
         <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/forms/time-picker.html id="time-picker-2" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}
+<script src="components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"></script>
+<script src="components/moment/min/moment.min.js"></script>
+{% include widgets/forms/time-picker.html id="time-picker-2" %}
+          {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>
     </div>

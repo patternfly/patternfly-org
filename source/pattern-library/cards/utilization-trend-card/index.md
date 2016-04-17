@@ -106,7 +106,11 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
         <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/utilization-trend-single-metric.html id1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}
+<script src="components/c3/c3.min.js"></script>
+<script src="components/d3/d3.min.js"></script>
+{% include widgets/cards/utilization-trend-single-metric.html id1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}
+          {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Card with Multiple Metrics</h2>
         <div class="example-pf">
@@ -125,7 +129,11 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
         <div class="collapse in" id="markup-2">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/utilization-trend-multiple-metrics.html id3="chart-pf-donut-6" id4="chart-pf-sparkline-6" id5="chart-pf-donut-7" id6="chart-pf-sparkline-7" id7="chart-pf-donut-8" id8="chart-pf-sparkline-8" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}
+<script src="components/c3/c3.min.js"></script>
+<script src="components/d3/d3.min.js"></script>
+{% include widgets/cards/utilization-trend-multiple-metrics.html id3="chart-pf-donut-6" id4="chart-pf-sparkline-6" id5="chart-pf-donut-7" id6="chart-pf-sparkline-7" id7="chart-pf-donut-8" id8="chart-pf-sparkline-8" %}
+          {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">

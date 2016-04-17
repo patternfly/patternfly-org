@@ -27,10 +27,10 @@ layout: page-tabs
   <div role="tabpanel" class="tab-pane" id="design">
     <h2>Description</h2>
     <div class="row">
-      <div class="col-md-7 col-lg-5">
+      <div class="col-md-5 col-lg-4">
         <img src="{{site.baseurl}}assets/img/utilziationbarchart1.png" alt="utilziationbarchart1"/>
       </div>
-      <div class="col-md-5 col-lg-7">
+      <div class="col-md-7 col-lg-8">
         <ol>
           <li><b>Chart Fill:</b> The fill color depends on the thresholds.
             <ul>
@@ -73,7 +73,11 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
         <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/charts/utilization-bar.html id="donut-chart-2" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}
+<script src="components/c3/c3.min.js"></script>
+<script src="components/d3/d3.min.js"></script>
+{% include widgets/charts/utilization-bar.html id="donut-chart-2" %}
+          {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">
