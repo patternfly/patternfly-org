@@ -666,6 +666,11 @@ html {
   margin-left: 30px;
 }
 
+.list-img-block {
+  display: block;
+  padding: 10px 0;
+}
+
 .meta {
   color: @gray-light;
   font-size: @font-size-small;
@@ -916,8 +921,8 @@ html {
   }
 }
 
-// Anchor offset for navbars
 .post_content {
+  // Anchor offset for navbars
   h2 + h3 {
     margin-top: 0;
   }
@@ -925,6 +930,10 @@ html {
     // 82px = 72px [height of .navbar-fixed-top] + 10px)
     margin-top: -82px;
     padding-top: 82px;
+  }
+  .example-pf iframe {
+    border: none;
+    margin-bottom: (@grid-gutter-width / 4);
   }
 }
 
@@ -1031,7 +1040,6 @@ th {
 }
 
 .tn-prototype {
-  margin-top: 25px;
   @media (min-width: @screen-md) {
     [class^="col"] > & {
       margin-top: 0;
