@@ -99,7 +99,11 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
         <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/charts/line-multiple.html id="line-chart-3" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}
+<script src="components/c3/c3.min.js"></script>
+<script src="components/d3/d3.min.js"></script>
+{% include widgets/charts/line-multiple.html id="line-chart-3" %}
+          {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Single Line Chart</h2>
         <div class="row">
@@ -122,7 +126,11 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
         <div class="collapse in" id="markup-2">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/charts/line-single.html id="donut-chart-4" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}
+<script src="components/c3/c3.min.js"></script>
+<script src="components/d3/d3.min.js"></script>
+{% include widgets/charts/line-single.html id="donut-chart-4" %}
+          {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">

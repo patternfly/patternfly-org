@@ -27,10 +27,10 @@ layout: page-tabs
   <div role="tabpanel" class="tab-pane" id="design">
     <h2>Description</h2>
     <div class="row">
-      <div class="col-md-7 col-lg-5">
+      <div class="col-md-5 col-lg-4">
         <img src="{{site.baseurl}}assets/img/sparkline_callout2.png" alt="sparkline_callout2"/>
       </div>
-      <div class="col-md-5 col-lg-7">
+      <div class="col-md-7 col-lg-8">
         <ol>
         <li><b>Sparkline:</b> The sparkline is blue with a light blue fill, which helps to visually define the x axis.</li>
         <li><b>Tooltip:</b> Use a tooltip on hover to display additional information about exact points on the sparkline such as values or percentages. A vertical line and dot may be added to accentuate the user’s hover point.</li>
@@ -64,7 +64,11 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
         <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/charts/sparkline.html id="sparkline-chart-2" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}
+<script src="components/c3/c3.min.js"></script>
+<script src="components/d3/d3.min.js"></script>
+{% include widgets/charts/sparkline.html id="sparkline-chart-2" %}
+          {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">
