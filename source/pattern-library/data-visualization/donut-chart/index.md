@@ -124,7 +124,11 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="card-markup-1" href="#card-markup-1">Reference Markup</a></p>
         <div class="collapse in" id="card-markup-1">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/charts/donut-utilization.html id="donut-chart-6" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}
+<script src="components/c3/c3.min.js"></script>
+<script src="components/d3/d3.min.js"></script>
+{% include widgets/charts/donut-utilization.html id="donut-chart-6" %}
+          {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Relationship to a Whole</h2>
         <div class="row">
@@ -147,7 +151,11 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
         <div class="collapse in" id="markup-2">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/charts/donut-whole-relationship.html id1="donut-chart-7" id2="donut-chart-8" id3="donut-chart-9" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}
+<script src="components/c3/c3.min.js"></script>
+<script src="components/d3/d3.min.js"></script>
+{% include widgets/charts/donut-whole-relationship.html id1="donut-chart-7" id2="donut-chart-8" id3="donut-chart-9" %}
+          {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-3">Small Donut Chart</h2>
         <div class="row">
@@ -170,7 +178,11 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
         <div class="collapse in" id="markup-3">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/charts/donut-mini.html id="donut-chart-10" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}
+<script src="components/c3/c3.min.js"></script>
+<script src="components/d3/d3.min.js"></script>
+{% include widgets/charts/donut-mini.html id="donut-chart-10" %}
+          {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">

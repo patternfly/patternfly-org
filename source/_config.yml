@@ -8,3 +8,8 @@ collections:
 - whats-news
 blogurl: https://blog.patternfly.org
 exclude: ["components/patternfly/tests-src"]
+navbar-pf-navbar-brand-icon: true
+navbar-pf-alt-navbar-brand-icon: true
+navbar-brand-icon: '/assets/img/logo-alt.svg'
+navbar-alt-brand-icon: '/assets/img/brand-alt.svg'
+title-product: 'PatternFly Enterprise Application'

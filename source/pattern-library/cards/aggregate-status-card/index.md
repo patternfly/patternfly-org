@@ -19,11 +19,9 @@ layout: page-tabs
                   {% include widgets/cards/aggregate-status-ipsum.html %}
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
                   {% include widgets/cards/aggregate-status-amet.html %}
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
                   {% include widgets/cards/aggregate-status-adipiscing.html %}
                 </div>
               </div>
@@ -44,11 +42,9 @@ layout: page-tabs
                   {% include widgets/cards/aggregate-status-ipsum-mini.html %}
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
                   {% include widgets/cards/aggregate-status-amet-mini.html %}
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
                   {% include widgets/cards/aggregate-status-adipiscing-mini.html %}
                 </div>
               </div>
@@ -61,11 +57,11 @@ layout: page-tabs
   <div role="tabpanel" class="tab-pane" id="design">
     <h2>Header Area</h2>
     <div class="row">
-      <div class="col-md-7 col-lg-5">
+      <div class="col-md-5 col-lg-4">
         <p><img src="{{site.baseurl}}assets/img/AggregateStatus_header-callout.png" alt="AggregateStatus_header-callout"/></p>
         <p><img src="{{site.baseurl}}assets/img/single_mini_agg_status-header-callout.png" alt="single_mini_agg_status-header-callout"/></p>
       </div>
-      <div class="col-md-5 col-lg-7">
+      <div class="col-md-7 col-lg-8">
         <ol>
           <li><b>Top Accent</b> (optional): If the aggregate status card is located at the top of a dashboard view, you may opt to add the the blue stripe to the top of the card. If the card is located somewhere other than a dashboard, there is no blue stripe.</li>
           <li><b>Object Icon</b> (optional): An object icon can be used before the count and object name.  Make sure you are consistent and either opt to always use the icon or not. Do not mix and match by applying icons to some cards but not others. Icons should be used thoughtfully and sparingly. Ensure that the icon’s visual metaphor provides valuable meaning rather than pointless clutter. Note: In the case of the mini card alternate, it is strongly recommended to use this object icon.</li>
@@ -76,11 +72,11 @@ layout: page-tabs
     </div>
     <h2>Content Area</h2>
     <div class="row">
-      <div class="col-md-7 col-lg-5">
+      <div class="col-md-5 col-lg-4">
         <p><img src="{{site.baseurl}}assets/img/aggstatus_callout.png" alt="aggstatus_callout"/></p>
         <p><img src="{{site.baseurl}}assets/img/single_mini_agg_status-number-callout.png" alt="single_mini_agg_status-number-callout"/></p>
       </div>
-      <div class="col-md-5 col-lg-7">
+      <div class="col-md-7 col-lg-8">
         <ol>
           <li><b>Status Icon(s):</b> A status icon represents the status of the objects in the card. If everything is OK, one status icon for OK should be shown. Otherwise, multiple status icons can be shown to represent each status. Note: In the case of the mini card alternate, it is recommended to limit this to one status icon due to space restrictions.</li>
           <li><b>Number Count:</b> This shows the count associated with the icon. In general, a number next to the OK icon is redundant since the total count is already shown in the header area. Therefore, an OK status should be visually represented by an icon only. Alternatively, a card, not located in the dashboard view, may require the number count to be displayed with the OK icon. Note: In the case of the mini card alternate, it is recommended to limit this to one number due to space restrictions.</li>
@@ -109,11 +105,9 @@ layout: page-tabs
                         {% include widgets/cards/aggregate-status-ipsum.html %}
                       </div>
                       <div class="col-xs-12 col-sm-6 col-md-4">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
                         {% include widgets/cards/aggregate-status-amet.html %}
                       </div>
                       <div class="col-xs-12 col-sm-6 col-md-4">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
                         {% include widgets/cards/aggregate-status-adipiscing.html %}
                       </div>
                     </div>
@@ -125,7 +119,11 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
         <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/aggregate-status-ipsum.html %}{% include widgets/cards/aggregate-status-amet.html %}{% include widgets/cards/aggregate-status-adipiscing.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}
+{% include widgets/cards/aggregate-status-ipsum.html %}
+{% include widgets/cards/aggregate-status-amet.html %}
+{% include widgets/cards/aggregate-status-adipiscing.html %}
+          {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Mini Card Alternate</h2>
         <div class="row">
@@ -137,15 +135,13 @@ layout: page-tabs
                     <div class="row row-cards-pf">
                       <div class="col-xs-12 col-sm-6 col-md-4">
                         <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/aggregate-status-ipsum.html %}
+                        {% include widgets/cards/aggregate-status-ipsum-mini.html %}
                       </div>
                       <div class="col-xs-12 col-sm-6 col-md-4">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/aggregate-status-amet.html %}
+                        {% include widgets/cards/aggregate-status-amet-mini.html %}
                       </div>
                       <div class="col-xs-12 col-sm-6 col-md-4">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/aggregate-status-adipiscing.html %}
+                        {% include widgets/cards/aggregate-status-adipiscing-mini.html %}
                       </div>
                     </div>
                   </div>
@@ -156,7 +152,11 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
         <div class="collapse in" id="markup-2">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/aggregate-status-ipsum-mini.html %}{% include widgets/cards/aggregate-status-amet-mini.html %}{% include widgets/cards/aggregate-status-adipiscing-mini.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}
+{% include widgets/cards/aggregate-status-ipsum-mini.html %}
+{% include widgets/cards/aggregate-status-amet-mini.html %}
+{% include widgets/cards/aggregate-status-adipiscing-mini.html %}
+          {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">

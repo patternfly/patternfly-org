@@ -1,7 +1,7 @@
 /* www.patternfly.org */
 body {
   font-size: 13px;
-  padding-top: 0 !important;
+  padding-top: 0;
 }
 .btn-copy {
   padding-left: 10px;
@@ -15,6 +15,12 @@ body {
 .clearfix img {
   height: auto;
   max-width: 100%;
+}
+.col-center {
+  float: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .collapse-toggle {
   color: #0099d3;
@@ -975,6 +981,9 @@ strong {
 th {
   font-weight: 600;
 }
+.tab-pane:not(.nested) > h2:first-child {
+  margin-top: 0;
+}
 .tn-prototype {
   margin-top: 25px;
 }
@@ -1038,11 +1047,5 @@ th {
     line-height: 54px;
     margin-top: 0px;
   }
-}
-.col-center {
-  float: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 /*# sourceMappingURL=patternfly-site.css.map */

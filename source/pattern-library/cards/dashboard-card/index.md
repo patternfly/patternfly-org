@@ -22,15 +22,19 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
               </div>
             </div>
           </div>
-          <h2 id="example-overview-2">Timeframe filter in footer</h2>
-          <div class="example-pf">
-            <div class="cards-pf">
-              <div class="container-fluid container-cards-pf">
-                <div class="row row-cards-pf">
-                  <div class="col-md-12">
-                    <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                    {% include widgets/cards/dashboard-timeframe-footer.html %}
-                  </div>
+        </div>
+      </div>
+    </div>
+    <h2 id="example-overview-2">Timeframe filter in footer</h2>
+    <div class="row">
+      <div class="col-md-6 col-center">
+        <div class="example-pf">
+          <div class="cards-pf">
+            <div class="container-fluid container-cards-pf">
+              <div class="row row-cards-pf">
+                <div class="col-md-12">
+                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
+                  {% include widgets/cards/dashboard-timeframe-footer.html %}
                 </div>
               </div>
             </div>
@@ -159,4 +163,3 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
     </div>
   </div>
 </div>
-
