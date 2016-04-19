@@ -13,18 +13,11 @@ layout: page-tabs
       <li>Selecting a date range</li>
     </ul>
     <h2 id="example-overview-1">Example</h2>
-    <div class="row">
-      <div class="col-md-6 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf" style="padding-bottom: 20px;">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/forms/bootstrap-datepicker.html id="date-1" %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="example-pf">
+            {% include widgets/forms/bootstrap-datepicker.html id="date-1" %}
           </div>
         </div>
       </div>
@@ -33,10 +26,10 @@ layout: page-tabs
   <div role="tabpanel" class="tab-pane" id="design">
     <h2>Description</h2>
     <div class="row">
-      <div class="col-md-5 col-lg-5">
+      <div class="col-md-4 col-lg-3">
         <img src="{{site.baseurl}}assets/img/datepicker-callout3.png" alt="Date Picker callout3"/>
       </div>
-      <div class="col-md-7 col-lg-7">
+      <div class="col-md-8 col-lg-9">
         <ol>
           <li><b>Input Field:</b> At this time, we recommend that the datepicker field is read only due to the limitations of the input validation.</li>
           <li><b>Calendar Icon:</b> The calendar icon is shown on the right.</li>
@@ -53,20 +46,11 @@ layout: page-tabs
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
         <h2 id="example-code-1">Example</h2>
-        <div class="row">
-          <div class="col-md-6 col-center">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf" style="padding-bottom: 20px;">
-                      <div class="col-md-12">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/forms/bootstrap-datepicker.html id="date-2" %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="example-pf" style="padding-bottom: 20px;">
+                {% include widgets/forms/bootstrap-datepicker.html id="date-2" %}
               </div>
             </div>
           </div>

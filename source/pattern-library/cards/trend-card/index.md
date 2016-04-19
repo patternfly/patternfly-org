@@ -8,39 +8,9 @@ layout: page-tabs
     <p>A trend card displays a trend of one or more metrics. The most common use case for this pattern is in a dashboard. For a single trend card, there are two different sizes of cards to choose from dependent on your application's needs.</p>
     <p>Jump to <a href="#example-overview-1">Small Cards</a> or <a href="#example-overview-2">Large Cards</a></p>
     <h2 id="example-overview-1">Small Cards</h2>
-    <div class="row">
-      <div class="col-md-10 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  <img src="{{site.baseurl}}assets/img/small-cards-example.png" alt="small-cards-example"/>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <p><img src="{{site.baseurl}}assets/img/small-cards-example.png" alt="small-cards-example"/></p>
     <h2 id="example-overview-2">Large Cards</h2>
-    <div class="row">
-      <div class="col-md-10 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  <img src="{{site.baseurl}}assets/img/large-cards2.png" alt="large-cards2"/>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <p><img src="{{site.baseurl}}assets/img/large-cards2.png" alt="large-cards2"/></p>
   </div>
   <div role="tabpanel" class="tab-pane" id="design">
     <h2>Card with a Single Trend</h2>

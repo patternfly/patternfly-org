@@ -12,22 +12,7 @@ layout: page-tabs
       <li>Users need to scan the status of each object in a data set.</li>
     </ul>
     <h2 id="example-overview-1">Example</h2>
-    <div class="row">
-      <div class="col-md-10 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  <img src="{{site.baseurl}}assets/img/Screen-Shot-2016-03-24-at-4.48.37-PM.png" alt="heat-map-callout1"/>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <p><img src="{{site.baseurl}}assets/img/Screen-Shot-2016-03-24-at-4.48.37-PM.png" alt="heat-map-callout1"/></p>
   </div>
   <div role="tabpanel" class="tab-pane" id="design">
     <h2>Description</h2>

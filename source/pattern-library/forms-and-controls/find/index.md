@@ -15,56 +15,11 @@ layout: page-tabs-no-code
     </ul>
     <p>Jump to <a href="#example-overview-1">Find in a List View</a>, <a href="#example-overview-2">Find in a Table View</a> or <a href="#example-overview-3">Find in a Card View</a></p>
     <h2 id="example-overview-1">Find in a List View</h2>
-    <div class="row">
-      <div class="col-md-9 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf" style="padding-bottom: 20px;">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  <img src="{{site.baseurl}}assets/img/Simple-Find-List_2015-12-01.png" alt="Simple Find List callout"/>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <p><img src="{{site.baseurl}}assets/img/Simple-Find-List_2015-12-01.png" alt="Simple Find List callout"/></p>
     <h2 id="example-overview-2">Find in a Table View</h2>
-    <div class="row">
-      <div class="col-md-9 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  <img src="{{site.baseurl}}assets/img/Simple-Find-Table_2015-12-011.png" alt="Simple Find Table callout"/>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <p><img src="{{site.baseurl}}assets/img/Simple-Find-Table_2015-12-011.png" alt="Simple Find Table callout"/></p>
     <h2 id="example-overview-3">Find in a Card View</h2>
-    <div class="row">
-      <div class="col-md-9 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  <img src="{{site.baseurl}}assets/img/Simple-Find-Tile_2015-12-01.png" alt="Simple Find Card callout"/>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <p><img src="{{site.baseurl}}assets/img/Simple-Find-Tile_2015-12-01.png" alt="Simple Find Card callout"/></p>
   </div>
   <div role="tabpanel" class="tab-pane" id="design">
     <h2>Find Field</h2>

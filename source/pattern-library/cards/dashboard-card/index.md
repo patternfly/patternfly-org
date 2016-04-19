@@ -9,35 +9,21 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
     <p>This section provides guidance on the base elements of a card for a dashboard view.</p>
     <p>Jump to <a href="#example-overview-1">Timeframe filter in header</a> or <a href="#example-overview-2">Timeframe filter in footer</a></p>
     <h2 id="example-overview-1">Timeframe filter in header</h2>
-    <div class="row">
-      <div class="col-md-6 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/cards/dashboard-timeframe-header.html %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="example-pf">
+            {% include widgets/cards/dashboard-timeframe-header.html %}
           </div>
         </div>
       </div>
     </div>
     <h2 id="example-overview-2">Timeframe filter in footer</h2>
-    <div class="row">
-      <div class="col-md-6 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/cards/dashboard-timeframe-footer.html %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="example-pf">
+            {% include widgets/cards/dashboard-timeframe-footer.html %}
           </div>
         </div>
       </div>
@@ -101,58 +87,32 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
         <p>Jump to <a href="#example-code-1">Timeframe filter in header</a> or <a href="#example-code-2">Timeframe filter in footer</a></p>
         <h2 id="example-code-1">Timeframe filter in header</h2>
-        <div class="row">
-          <div class="col-md-6 col-center">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf">
-                      <div class="col-md-12">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/dashboard-timeframe-header.html %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="example-pf">
+                {% include widgets/cards/dashboard-timeframe-header.html %}
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-            <div class="collapse in" id="markup-1">
-              <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/dashboard-timeframe-header.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
-            </div>
-          </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+        <div class="collapse in" id="markup-1">
+          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/dashboard-timeframe-header.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Timeframe filter in footer</h2>
-        <div class="row">
-          <div class="col-md-6 col-center">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf">
-                      <div class="col-md-12">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/dashboard-timeframe-footer.html %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="example-pf">
+                {% include widgets/cards/dashboard-timeframe-footer.html %}
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
-            <div class="collapse in" id="markup-2">
-              <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/dashboard-timeframe-footer.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
-            </div>
-          </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+        <div class="collapse in" id="markup-2">
+          <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/dashboard-timeframe-footer.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">

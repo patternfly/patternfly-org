@@ -10,35 +10,21 @@ layout: page-tabs-no-design
     -->
     <p>Jump to <a href="#example-overview-1">Area Chart</a> or <a href="#example-overview-2">Single Area Chart</a></p>
     <h2 id="example-overview-1">Area Chart</h2>
-    <div class="row">
-      <div class="col-md-7 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/charts/area-multiple.html id="area-chart-1" %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="example-pf">
+            {% include widgets/charts/area-multiple.html id="area-chart-1" %}
           </div>
         </div>
       </div>
     </div>
     <h2 id="example-overview-2">Single Area Chart</h2>
-    <div class="row">
-      <div class="col-md-7 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/charts/area-single.html id="area-chart-2" %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="example-pf">
+            {% include widgets/charts/area-single.html id="area-chart-2" %}
           </div>
         </div>
       </div>
@@ -59,20 +45,11 @@ layout: page-tabs-no-design
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
         <p>Jump to <a href="#example-code-1">Area Chart</a> or <a href="#example-code-2">Single Area Chart</a></p>
         <h2 id="example-code-1">Area Chart</h2>
-        <div class="row">
-          <div class="col-md-8 col-center" style="padding-right: 0px;">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf">
-                      <div class="col-md-12">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/charts/area-multiple.html id="area-chart-3" %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="example-pf">
+                {% include widgets/charts/area-multiple.html id="area-chart-3" %}
               </div>
             </div>
           </div>
@@ -86,20 +63,11 @@ layout: page-tabs-no-design
           {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Single Area Chart</h2>
-        <div class="row">
-          <div class="col-md-8 col-center">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf">
-                      <div class="col-md-12">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/charts/area-single.html id="area-chart-4" %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="example-pf">
+                {% include widgets/charts/area-single.html id="area-chart-4" %}
               </div>
             </div>
           </div>

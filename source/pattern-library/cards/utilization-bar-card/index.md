@@ -9,35 +9,21 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
     <p>A Utilization Bar Card displays the utilization for metrics using the <a href="{{site.baseurl}}pattern-library/data-visualization/utilization-bar-chart">Utilization Bar Chart</a>.  The most common use case for this pattern is seen in a dashboard.</p>
     <p>Jump to <a href="#example-overview-1">Top Left Description and Top Right Label</a> or <a href="#example-overview-2">Left Description and Right Label</a></p>
     <h2 id="example-overview-1">Top Left Description and Top Right Label</h2>
-    <div class="row">
-      <div class="col-md-7 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/cards/utilization-bar-top-labels.html  %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="example-pf">
+            {% include widgets/cards/utilization-bar-top-labels.html  %}
           </div>
         </div>
       </div>
     </div>
     <h2 id="example-overview-2">Left Description and Right Label</h2>
-    <div class="row">
-      <div class="col-md-7 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/cards/utilization-bar-side-labels.html  %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="example-pf">
+            {% include widgets/cards/utilization-bar-side-labels.html  %}
           </div>
         </div>
       </div>
@@ -67,20 +53,11 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
         <p>Jump to <a href="#example-code-1">Top Left Description and Top Right Label</a> or <a href="#example-code-2">Left Description and Right Label</a></p>
         <h2 id="example-code-1">Top Left Description and Top Right Label</h2>
-        <div class="row">
-          <div class="col-md-7 col-center">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf">
-                      <div class="col-md-12">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/utilization-bar-top-labels.html  %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="example-pf">
+                {% include widgets/cards/utilization-bar-top-labels.html  %}
               </div>
             </div>
           </div>
@@ -94,20 +71,11 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
           {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Left Description and Right Label</h2>
-        <div class="row">
-          <div class="col-md-7 col-center">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf">
-                      <div class="col-md-12">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/utilization-bar-side-labels.html  %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="example-pf">
+                {% include widgets/cards/utilization-bar-side-labels.html  %}
               </div>
             </div>
           </div>

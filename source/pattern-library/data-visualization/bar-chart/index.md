@@ -12,69 +12,41 @@ layout: page-tabs
      available, you should check out the <a href="{{ site.baseurl}}pattern-library/data-visualization/utilization-bar-chart">Utilization Bar Chart pattern</a>.</p>
     <p>Jump to <a href="#example-overview-1">Vertical Bar Chart</a>, <a href="#example-overview-2">Grouped Vertical Bar Chart</a>, <a href="#example-overview-3">Horizontal Bar Chart</a> or <a href="#example-overview-4">Grouped Horizontal Bar Chart</a></p>
     <h2 id="example-overview-1">Vertical Bar Chart</h2>
-    <div class="row">
-      <div class="col-md-5 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/charts/bar-vertical.html id="bar-chart-1" %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="example-pf">
+            {% include widgets/charts/bar-vertical.html id="bar-chart-1" %}
           </div>
         </div>
       </div>
     </div>
     <h2 id="example-overview-2">Grouped Vertical Bar Chart</h2>
-    <div class="row">
-      <div class="col-md-5 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/charts/bar-vertical-group.html id="bar-chart-2" %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="example-pf">
+            {% include widgets/charts/bar-vertical-group.html id="bar-chart-2" %}
           </div>
         </div>
       </div>
     </div>
     <h2 id="example-overview-3">Horizontal BarChart</h2>
-    <div class="row">
-      <div class="col-md-5 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/charts/bar-horizontal.html id="bar-chart-3" %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="example-pf">
+            {% include widgets/charts/bar-horizontal.html id="bar-chart-3" %}
           </div>
         </div>
       </div>
     </div>
     <h2 id="example-overview-4">Grouped Horizontal BarChart</h2>
-    <div class="row">
-      <div class="col-md-5 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/charts/bar-horizontal-group.html id="bar-chart-4" %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="example-pf">
+            {% include widgets/charts/bar-horizontal-group.html id="bar-chart-4" %}
           </div>
         </div>
       </div>
@@ -153,20 +125,11 @@ layout: page-tabs
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
         <p>Jump to <a href="#example-code-1">Vertical Bar Chart</a>, <a href="#example-code-2">Grouped Vertical Bar Chart</a>, <a href="#example-code-3">Horizontal Bar Chart</a> or <a href="#example-code-4">Grouped Horizontal Bar Chart</a></p>
         <h2 id="example-code-1">Vertical Bar Chart</h2>
-        <div class="row">
-          <div class="col-md-5 col-center">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf">
-                      <div class="col-md-12">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/charts/bar-vertical.html id="donut-chart-5" %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="example-pf">
+                {% include widgets/charts/bar-vertical.html id="donut-chart-5" %}
               </div>
             </div>
           </div>
@@ -180,20 +143,11 @@ layout: page-tabs
           {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Grouped Vertical Bar Chart</h2>
-        <div class="row">
-          <div class="col-md-5 col-center">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf">
-                      <div class="col-md-12">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/charts/bar-vertical-group.html id="bar-chart-6" %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="example-pf">
+                {% include widgets/charts/bar-vertical-group.html id="bar-chart-6" %}
               </div>
             </div>
           </div>
@@ -207,20 +161,11 @@ layout: page-tabs
           {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-3">Horizontal Bar Chart</h2>
-        <div class="row">
-          <div class="col-md-5 col-center">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf">
-                      <div class="col-md-12">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/charts/bar-horizontal.html id="bar-chart-7" %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="example-pf">
+                {% include widgets/charts/bar-horizontal.html id="bar-chart-7" %}
               </div>
             </div>
           </div>
@@ -234,20 +179,11 @@ layout: page-tabs
           {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-4">Grouped Horizontal Bar Chart</h2>
-        <div class="row">
-          <div class="col-md-5 col-center">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf">
-                      <div class="col-md-12">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/charts/bar-horizontal-group.html id="bar-chart-8" %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="example-pf">
+                {% include widgets/charts/bar-horizontal-group.html id="bar-chart-8" %}
               </div>
             </div>
           </div>
