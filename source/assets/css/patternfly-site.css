@@ -72,8 +72,6 @@ body {
 }
 .example-pf .container-cards-pf {
   margin-top: 0;
-  /*padding-left: 10px;*/
-  /*padding-right: 10px;*/
 }
 .example-pf .example-pf-demo {
   border: 1px solid #ccc;
@@ -1032,11 +1030,6 @@ th {
 }
 .tn-prototype a img {
   border: 1px solid #dfdfdf;
-}
-#toast-text {
-  display: block;
-  width: 300px;
-  text-align: left;
 }
 .wow {
   visibility: hidden;

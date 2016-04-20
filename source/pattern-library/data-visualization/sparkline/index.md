@@ -40,7 +40,7 @@ layout: page-tabs
         <div class="example">
           <div class="row">
             <div class="col-md-5">
-              <div class="example-pf">
+              <div class="example-pf" style="padding-bottom: 20px;">
                 {% include widgets/charts/sparkline.html id="sparkline-chart-2" %}
               </div>
             </div>

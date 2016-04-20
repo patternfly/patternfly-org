@@ -1,7 +1,8 @@
 ---
 title: Find
 author: dlabrecq
-layout: page-tabs-no-code
+layout: page-tabs
+codetab: false
 ---
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">

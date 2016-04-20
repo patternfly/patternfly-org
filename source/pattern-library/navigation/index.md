@@ -19,11 +19,13 @@ layout: page-tabs
       <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation.html"
               width="100%" height="650px;" scrolling="no" seamless></iframe>
     </div>
+    <p><a href="{{ site.baseurl}}pattern-library/navigation/vertical-navigation.html" target="_blank">View full page example</a></p>
     <h2 id="example-overview-2">Without Primary Menu Icons</h2>
     <div class="example-pf">
       <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation-without-icons.html"
               width="100%" height="650px;" scrolling="no" seamless></iframe>
     </div>
+    <p><a href="{{ site.baseurl}}pattern-library/navigation/vertical-navigation-without-icons.html" target="_blank">View full page example</a></p>
   </div>
   <div role="tabpanel" class="tab-pane" id="design">
     <h2>Primary Navigation with Persistent Secondary</h2>
@@ -132,6 +134,7 @@ layout: page-tabs
           <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation.html"
                   width="100%" height="650px;" scrolling="no" seamless></iframe>
         </div>
+        <p><a href="{{ site.baseurl}}pattern-library/navigation/vertical-navigation.html" target="_blank">View full page example</a></p>
         <div class="row">
           <div class="col-md-12">
             <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
@@ -166,6 +169,7 @@ layout: page-tabs
           <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation-without-icons.html"
                   width="100%" height="650px;" scrolling="no" seamless></iframe>
         </div>
+        <p><a href="{{ site.baseurl}}pattern-library/navigation/vertical-navigation-without-icons.html" target="_blank">View full page example</a></p>
         <div class="row">
           <div class="col-md-12">
             <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>

@@ -1,7 +1,8 @@
 ---
 title: Pie Chart
 author: dlabrecq
-layout: page-tabs-no-design
+layout: page-tabs
+designtab: false
 ---
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">

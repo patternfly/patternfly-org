@@ -21,9 +21,7 @@ layout: page-tabs
     <h2>Description</h2>
     <div class="row">
       <div class="col-md-12 col-lg-8">
-        <div class="example-pf">
-          <img src="{{site.baseurl}}assets/img/emptyState_spec.png" alt="emptyState_spec" />
-        </div>
+        <img src="{{site.baseurl}}assets/img/emptyState_spec.png" alt="emptyState_spec" />
       </div>
       <div class="col-md-12 col-lg-4">
         <ol>
