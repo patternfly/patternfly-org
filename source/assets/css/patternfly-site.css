@@ -802,14 +802,15 @@ html {
   text-decoration: none;
 }
 .navbar-sidebar > ul {
-  margin: 20px 0;
+  margin: 0 0 20px 0;
 }
 .navbar-sidebar > ul > li > a {
   border-bottom: 1px solid #393f44;
   font-size: 16px;
   margin-bottom: 10px;
-  padding-bottom: 14px;
-  padding-top: 10px;
+  line-height: 60px;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 .navbar-sidebar > ul > li > ul > li.active {
   background: rgba(101, 109, 115, 0.25);
@@ -870,7 +871,7 @@ html {
   margin-bottom: 20px;
 }
 .nav-tabs-pattern {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 .nav-tabs-pattern > li.active > a:hover {
   box-shadow: none;
@@ -906,9 +907,9 @@ html {
     bottom: -10px;
   }
   .nav-tabs-pattern > li > a {
-    margin-top: 0;
-    padding-bottom: 15px;
-    padding-top: 15px;
+    line-height: 59px;
+    padding-bottom: 0;
+    padding-top: 0;
   }
   .nav-tabs-pattern > li + li > a {
     margin-left: -1px;
@@ -925,6 +926,9 @@ html {
 .pf-example h3 {
   line-height: 1.1;
 }
+.pf-example .datatable {
+  margin-bottom: 10px;
+}
 .post_content h2 + h3 {
   margin-top: 0;
 }
@@ -935,6 +939,39 @@ html {
 .post_content p[id] {
   margin-top: -82px;
   padding-top: 82px;
+}
+.post_content .cards-pf {
+  margin-bottom: 10px;
+}
+.post_content .example-pf-demo .cards-pf {
+  margin-bottom: 0;
+}
+.post_content div + h2[id],
+.post_content ol + h2[id],
+.post_content p + h2[id],
+.post_content ul + h2[id] {
+  padding-top: 116px;
+}
+.post_content h1,
+.post_content h2,
+.post_content h3 {
+  line-height: 1.4;
+  padding-bottom: 10px;
+}
+.post_content #html-css > h2[id]:first-child {
+  padding-top: 106px;
+}
+.post_content ol + h2 {
+  margin-top: 42px;
+}
+.post_content ol + h2[id] {
+  margin-top: -82px;
+}
+.post_content .row + h2 {
+  margin-top: 36px;
+}
+.post_content .row + h2[id] {
+  margin-top: -82px;
 }
 .section,
 .super-section {
@@ -1058,8 +1095,9 @@ th {
   }
   .page-tabs-header h1 {
     border-bottom: 1px solid #D5D5D5;
-    line-height: 54px;
+    line-height: 60px;
     margin-top: 0px;
+    padding-bottom: 0;
   }
 }
 /*# sourceMappingURL=patternfly-site.css.map */

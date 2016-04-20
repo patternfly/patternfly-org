@@ -77,9 +77,9 @@ layout: page-tabs
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/communication/toast-max-width.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-3">In Context</h2>
-        <div style="padding-bottom: 20px;">
+        <p>
           <img src="{{site.baseurl}}assets/img/example_toast2.png" alt="in-context-example"/>
-        </div>
+        </p>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
         <div class="collapse in" id="markup-3">
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/communication/toast-in-context.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>

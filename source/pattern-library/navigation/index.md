@@ -31,7 +31,9 @@ layout: page-tabs
     <h2>Primary Navigation with Persistent Secondary</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
-        <img src="{{site.baseurl}}assets/img/left-nav-callout-1.png" alt="left-nav-callout-1"/>
+        <p>
+          <img src="{{site.baseurl}}assets/img/left-nav-callout-1.png" alt="left-nav-callout-1"/>
+        </p>
       </div>
       <div class="col-md-5 col-lg-7">
         <ol>
@@ -45,9 +47,11 @@ layout: page-tabs
         </ol>
       </div>
     </div>
-    <div class="row" style="padding-top: 10px;">
+    <div class="row">
       <div class="col-md-7 col-lg-5">
-        <img src="{{site.baseurl}}assets/img/left-nav-callout-2.png" alt="left-nav-callout-2"/>
+        <p>
+          <img src="{{site.baseurl}}assets/img/left-nav-callout-2.png" alt="left-nav-callout-2"/>
+        </p>
       </div>
       <div class="col-md-5 col-lg-7">
         <p>The secondary navigation is shown in a second column that opens to the right.</p>
@@ -69,7 +73,9 @@ layout: page-tabs
     <h2>Collapsed Primary Navigation with Icons</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
-        <img src="{{site.baseurl}}assets/img/left-nav-callout-3.png" alt="left-nav-callout-3"/>
+        <p>
+          <img src="{{site.baseurl}}assets/img/left-nav-callout-3.png" alt="left-nav-callout-3"/>
+        </p>
       </div>
       <div class="col-md-5 col-lg-7">
         <ol>
@@ -82,7 +88,9 @@ layout: page-tabs
     <h2>Collapsed Primary Navigation without Icons</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
-        <img src="{{site.baseurl}}assets/img/left-nav-callout-4b.png" alt="left-nav-callout-4"/>
+        <p>
+          <img src="{{site.baseurl}}assets/img/left-nav-callout-4b.png" alt="left-nav-callout-4"/>
+        </p>
       </div>
       <div class="col-md-5 col-lg-7">
         <ol>
@@ -103,7 +111,9 @@ layout: page-tabs
     <h2>Primary Navigation (Responsive State)</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
-        <img src="{{site.baseurl}}assets/img/left-nav-callout-51.png" alt="left-nav-callout-5"/>
+        <p>
+          <img src="{{site.baseurl}}assets/img/left-nav-callout-51.png" alt="left-nav-callout-5"/>
+        </p>
       </div>
       <div class="col-md-5 col-lg-7">
         <ol>
@@ -114,7 +124,9 @@ layout: page-tabs
     <h2>Secondary Navigation (Responsive State)</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
-        <img src="{{site.baseurl}}assets/img/left-nav-callout-6.png" alt="left-nav-callout-6"/>
+        <p>
+          <img src="{{site.baseurl}}assets/img/left-nav-callout-6.png" alt="left-nav-callout-6"/>
+        </p>
       </div>
       <div class="col-md-5 col-lg-7">
         <p>If you have a secondary level navigation then it will replace the primary navigation menu.</p>
