@@ -24,3 +24,4 @@ build
 _site
 public
 .DS_Store
+source/components
