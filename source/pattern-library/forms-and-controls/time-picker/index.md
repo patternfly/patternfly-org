@@ -11,18 +11,11 @@ url-js-extra: ['components/moment/min/moment.min.js', 'components/eonasdan-boots
     <a href="http://eonasdan.github.io/bootstrap-datetimepicker/#bootstrap-3-datepicker-v4-docs">Bootstrap 3 Datepicker v4 Docs</a>
     for complete documentation.</p>
     <h2 id="example-overview-1">Example</h2>
-    <div class="row">
-      <div class="col-md-4 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf" style="padding-bottom: 20px;">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/forms/time-picker.html id="time-picker-1" %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="example-pf">
+            {% include widgets/forms/time-picker.html id="time-picker-1" %}
           </div>
         </div>
       </div>
@@ -42,20 +35,11 @@ url-js-extra: ['components/moment/min/moment.min.js', 'components/eonasdan-boots
     <div class="tab-content">
       <h2 id="example-code-1">Example</h2>
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <div class="row">
-          <div class="col-md-4 col-center">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf" style="padding-bottom: 20px;">
-                      <div class="col-md-12">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/forms/time-picker.html id="time-picker-2" %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="example-pf" style="padding-bottom: 20px;">
+                {% include widgets/forms/time-picker.html id="time-picker-2" %}
               </div>
             </div>
           </div>

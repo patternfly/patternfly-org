@@ -8,47 +8,33 @@ layout: page-tabs
     <p>The aggregated status card shows a total number of objects and an aggregated status for those objects. The most common use case for this pattern is seen in a dashboard view to illustrate the total count and the status of objects in an environment. The mini card alternate can be used in the case when there is less space available for the status card as well as when there is less information to show in the card.</p>
     <p>Jump to <a href="#example-overview-1">Regular Card</a> or <a href="#example-overview-2">Mini Card Alternate</a></p>
     <h2 id="example-overview-1">Regular Card</h2>
-    <div class="row">
-      <div class="col-md-8 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/cards/aggregate-status-ipsum.html %}
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                  {% include widgets/cards/aggregate-status-amet.html %}
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                  {% include widgets/cards/aggregate-status-adipiscing.html %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="example-pf col-md-9">
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            {% include widgets/cards/aggregate-status-ipsum.html %}
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            {% include widgets/cards/aggregate-status-amet.html %}
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            {% include widgets/cards/aggregate-status-adipiscing.html %}
           </div>
         </div>
       </div>
     </div>
     <h2 id="example-overview-2">Mini Card Alternate</h2>
-    <div class="row">
-      <div class="col-md-8 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/cards/aggregate-status-ipsum-mini.html %}
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                  {% include widgets/cards/aggregate-status-amet-mini.html %}
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                  {% include widgets/cards/aggregate-status-adipiscing-mini.html %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="example-pf col-md-9">
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            {% include widgets/cards/aggregate-status-ipsum-mini.html %}
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            {% include widgets/cards/aggregate-status-amet-mini.html %}
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            {% include widgets/cards/aggregate-status-adipiscing-mini.html %}
           </div>
         </div>
       </div>
@@ -93,26 +79,17 @@ layout: page-tabs
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
         <p>Jump to <a href="#example-code-1">Regular Card</a> or <a href="#example-code-2">Mini Card Alternate</a></p>
         <h2 id="example-code-1">Regular Card</h2>
-        <div class="row">
-          <div class="col-md-8 col-center">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf">
-                      <div class="col-xs-12 col-sm-6 col-md-4">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/aggregate-status-ipsum.html %}
-                      </div>
-                      <div class="col-xs-12 col-sm-6 col-md-4">
-                        {% include widgets/cards/aggregate-status-amet.html %}
-                      </div>
-                      <div class="col-xs-12 col-sm-6 col-md-4">
-                        {% include widgets/cards/aggregate-status-adipiscing.html %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="example-pf col-md-9">
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                {% include widgets/cards/aggregate-status-ipsum.html %}
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                {% include widgets/cards/aggregate-status-amet.html %}
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                {% include widgets/cards/aggregate-status-adipiscing.html %}
               </div>
             </div>
           </div>
@@ -126,26 +103,17 @@ layout: page-tabs
           {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Mini Card Alternate</h2>
-        <div class="row">
-          <div class="col-md-8 col-center">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf">
-                      <div class="col-xs-12 col-sm-6 col-md-4">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/cards/aggregate-status-ipsum-mini.html %}
-                      </div>
-                      <div class="col-xs-12 col-sm-6 col-md-4">
-                        {% include widgets/cards/aggregate-status-amet-mini.html %}
-                      </div>
-                      <div class="col-xs-12 col-sm-6 col-md-4">
-                        {% include widgets/cards/aggregate-status-adipiscing-mini.html %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="example-pf col-md-9">
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                {% include widgets/cards/aggregate-status-ipsum-mini.html %}
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                {% include widgets/cards/aggregate-status-amet-mini.html %}
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                {% include widgets/cards/aggregate-status-adipiscing-mini.html %}
               </div>
             </div>
           </div>

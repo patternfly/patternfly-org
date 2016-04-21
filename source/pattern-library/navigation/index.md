@@ -16,31 +16,13 @@ layout: page-tabs
     <p>Jump to <a href="#example-overview-1">With Primary Menu Icons</a> or <a href="#example-overview-2">Without Primary Menu Icons</a></p>
     <h2 id="example-overview-1">With Primary Menu Icons</h2>
     <div class="example-pf">
-      <div class="cards-pf">
-        <div class="container-fluid container-cards-pf">
-          <div class="row row-cards-pf">
-            <div class="col-md-12">
-              <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-              <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation.html"
-                      width="100%" height="650px;" scrolling="no" seamless></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
+      <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation.html"
+              width="100%" height="650px;" scrolling="no" seamless></iframe>
     </div>
     <h2 id="example-overview-2">Without Primary Menu Icons</h2>
     <div class="example-pf">
-      <div class="cards-pf">
-        <div class="container-fluid container-cards-pf">
-          <div class="row row-cards-pf">
-            <div class="col-md-12">
-              <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-              <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation-without-icons.html"
-                      width="100%" height="650px;" scrolling="no" seamless></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
+      <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation-without-icons.html"
+              width="100%" height="650px;" scrolling="no" seamless></iframe>
     </div>
   </div>
   <div role="tabpanel" class="tab-pane" id="design">
@@ -147,19 +129,8 @@ layout: page-tabs
         <p>Jump to <a href="#example-code-1">With Primary Menu Icons</a> or <a href="#example-code-2">Without Primary Menu Icons</a></p>
         <h2 id="example-code-1">With Primary Menu Icons</h2>
         <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            <div class="cards-pf">
-              <div class="container-fluid container-cards-pf">
-                <div class="row row-cards-pf">
-                  <div class="col-md-12">
-                    <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                    <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation.html"
-                            width="100%" height="650px;" scrolling="no" seamless></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation.html"
+                  width="100%" height="650px;" scrolling="no" seamless></iframe>
         </div>
         <div class="row">
           <div class="col-md-12">
@@ -192,19 +163,8 @@ layout: page-tabs
         </div>
         <h2 id="example-code-2">Without Primary Menu Icons</h2>
         <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            <div class="cards-pf">
-              <div class="container-fluid container-cards-pf">
-                <div class="row row-cards-pf">
-                  <div class="col-md-12">
-                    <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                    <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation-without-icons.html"
-                            width="100%" height="650px;" scrolling="no" seamless></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation-without-icons.html"
+                  width="100%" height="650px;" scrolling="no" seamless></iframe>
         </div>
         <div class="row">
           <div class="col-md-12">

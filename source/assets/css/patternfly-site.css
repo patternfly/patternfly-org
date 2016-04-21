@@ -16,12 +16,6 @@ body {
   height: auto;
   max-width: 100%;
 }
-.col-center {
-  float: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 .collapse-toggle {
   color: #0099d3;
   padding-left: 12px;
@@ -78,6 +72,8 @@ body {
 }
 .example-pf .container-cards-pf {
   margin-top: 0;
+  /*padding-left: 10px;*/
+  /*padding-right: 10px;*/
 }
 .example-pf .example-pf-demo {
   border: 1px solid #ccc;
@@ -96,6 +92,14 @@ body {
 .example-pf h2,
 .example-pf h3 {
   line-height: 1.1;
+}
+.example .row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.example .example-pf {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 footer {
   border-top: 1px solid #D5D5D5;
@@ -1028,6 +1032,11 @@ th {
 }
 .tn-prototype a img {
   border: 1px solid #dfdfdf;
+}
+#toast-text {
+  display: block;
+  width: 300px;
+  text-align: left;
 }
 .wow {
   visibility: hidden;

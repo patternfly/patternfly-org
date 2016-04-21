@@ -7,18 +7,11 @@ layout: page-tabs
   <div role="tabpanel" class="tab-pane active" id="overview">
     <p>The Utilization Bar Chart depicts the percentage utilization ratio between used and available.</p>
     <h2 id="example-overview-1">Utilization Bar Chart</h2>
-    <div class="row">
-      <div class="col-md-5 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/charts/utilization-bar.html id="bar-chart-1" %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="example-pf">
+            {% include widgets/charts/utilization-bar.html id="bar-chart-1" %}
           </div>
         </div>
       </div>
@@ -53,20 +46,11 @@ layout: page-tabs
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
         <h2 id="example-code-1">Utilization Bar Chart</h2>
-        <div class="row">
-          <div class="col-md-5 col-center">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf">
-                      <div class="col-md-12">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/charts/utilization-bar.html id="donut-chart-2" %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="example-pf">
+                {% include widgets/charts/utilization-bar.html id="donut-chart-2" %}
               </div>
             </div>
           </div>

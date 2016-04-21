@@ -9,35 +9,21 @@ layout: page-tabs
     <p>Multiple lines on the same chart allow the user to visualize relationships between varying data sets, such as correlated events, similarities or unexpected differences. We recommend displaying no more than 6 lines on a single graph to avoid confusion.</p>
     <p>Jump to <a href="#example-overview-1">Line Chart</a> or <a href="#example-overview-2">Single Line Chart</a></p>
     <h2 id="example-overview-1">Line Chart</h2>
-    <div class="row">
-      <div class="col-md-8 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/charts/line-multiple.html id="line-chart-1" %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="example-pf">
+            {% include widgets/charts/line-multiple.html id="line-chart-1" %}
           </div>
         </div>
       </div>
     </div>
     <h2 id="example-overview-2">Single Line Chart</h2>
-    <div class="row">
-      <div class="col-md-8 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/charts/line-single.html id="line-chart-2" %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="example-pf">
+            {% include widgets/charts/line-single.html id="line-chart-2" %}
           </div>
         </div>
       </div>
@@ -79,20 +65,11 @@ layout: page-tabs
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
         <p>Jump to <a href="#example-code-1">Line Chart</a> or <a href="#example-code-2">Single Line Chart</a></p>
         <h2 id="example-code-1">Line Chart</h2>
-        <div class="row">
-          <div class="col-md-8 col-center">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf">
-                      <div class="col-md-12">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/charts/line-multiple.html id="line-chart-3" %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="example-pf">
+                {% include widgets/charts/line-multiple.html id="line-chart-3" %}
               </div>
             </div>
           </div>
@@ -106,20 +83,11 @@ layout: page-tabs
           {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Single Line Chart</h2>
-        <div class="row">
-          <div class="col-md-8 col-center">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf">
-                      <div class="col-md-12">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/charts/line-single.html id="line-chart-4" %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="example-pf">
+                {% include widgets/charts/line-single.html id="line-chart-4" %}
               </div>
             </div>
           </div>

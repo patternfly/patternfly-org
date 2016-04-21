@@ -7,18 +7,11 @@ layout: page-tabs
   <div role="tabpanel" class="tab-pane active" id="overview">
     <p>A sparkline is a small chart that helps users to analyze data and understand trends and patterns (e.g. CPU Utilization in an environment). Sparklines are commonly used in tables, reports and dashboards.</p>
     <h2 id="example-overview-1">Example</h2>
-    <div class="row">
-      <div class="col-md-5 col-center">
-        <div class="example-pf">
-          <div class="cards-pf">
-            <div class="container-fluid container-cards-pf">
-              <div class="row row-cards-pf">
-                <div class="col-md-12">
-                  <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                  {% include widgets/charts/sparkline.html id="sparkline-chart-1" %}
-                </div>
-              </div>
-            </div>
+    <div class="example">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="example-pf">
+            {% include widgets/charts/sparkline.html id="sparkline-chart-1" %}
           </div>
         </div>
       </div>
@@ -44,20 +37,11 @@ layout: page-tabs
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
         <h2 id="example-code-1">Example</h2>
-        <div class="row">
-          <div class="col-md-5 col-center">
-            <div class="example-pf">
-              <div class="example-pf-demo example-pf-demo-no-padding">
-                <div class="cards-pf">
-                  <div class="container-fluid container-cards-pf">
-                    <div class="row row-cards-pf">
-                      <div class="col-md-12">
-                        <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
-                        {% include widgets/charts/sparkline.html id="sparkline-chart-2" %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="example">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="example-pf">
+                {% include widgets/charts/sparkline.html id="sparkline-chart-2" %}
               </div>
             </div>
           </div>
