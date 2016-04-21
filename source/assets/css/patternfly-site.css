@@ -99,6 +99,12 @@ body {
   padding-left: 0px;
   padding-right: 0px;
 }
+.example-bg .row {
+  margin-left: 0px;
+}
+.example-bg .example-pf {
+  padding-left: 0px;
+}
 footer {
   border-top: 1px solid #D5D5D5;
   font-size: 10px;
