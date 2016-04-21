@@ -83,9 +83,6 @@
                   <li {% if tertiary == 'aggregate-status-card' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/cards/aggregate-status-card/">Aggregate Status Card</a>
                   </li>
-                  <li {% if tertiary == 'dashboard-card' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/cards/dashboard-card/">Dashboard Card</a>
-                  </li>
                   <li {% if tertiary == 'trend-card' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/cards/trend-card/">Trend Card</a>
                   </li>
@@ -114,14 +111,22 @@
               <li {% if secondary == 'content-views' %} class="active"{% endif %}>
                 <a class="{% if secondary == 'content-views' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#content-views-secondary" aria-expanded="{% if secondary == 'content-views' %}true{% else %}false{% endif %}" aria-controls="content-views-secondary">Content Views</a>
                 <ul class="collapse {% if secondary == 'content-views' %}in{% endif %}" id="content-views-secondary">
-                  <li {% if tertiary == 'dashboard-layout' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/content-views/dashboard-layout/">Dashboard Layout</a>
-                  </li>
                   <li {% if tertiary == 'list-view' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/content-views/list-view/">List View</a>
                   </li>
                   <li {% if tertiary == 'table-view' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/content-views/table-view/">Table View</a>
+                  </li>
+                </ul>
+              </li>
+              <li {% if secondary == 'dashboard' %} class="active"{% endif %}>
+                <a class="{% if secondary == 'dashboard' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#dashboard-secondary" aria-expanded="{% if secondary == 'dashboard' %}true{% else %}false{% endif %}" aria-controls="dashboard-secondary">Dashboard</a>
+                <ul class="collapse {% if secondary == 'dashboard' %}in{% endif %}" id="dashboard-secondary">
+                  <li {% if tertiary == 'dashboard-card' %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}pattern-library/dashboard/dashboard-card/">Dashboard Card (Base)</a>
+                  </li>
+                  <li {% if tertiary == 'dashboard-layout' %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}pattern-library/dashboard/dashboard-layout/">Dashboard Layout</a>
                   </li>
                 </ul>
               </li>

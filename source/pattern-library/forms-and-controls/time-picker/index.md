@@ -1,7 +1,8 @@
 ---
 title: Timepicker
 author: dlabrecq
-layout: page-tabs-no-design
+layout: page-tabs
+designtab: false
 url-js-extra: ['components/moment/min/moment.min.js', 'components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js']
 ---
 <div class="tab-content">

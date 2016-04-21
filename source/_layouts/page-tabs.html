@@ -9,7 +9,13 @@ layout: default
           <h1>{{ page.title }}</h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left">
-          {% include nav-tabs-pattern.html %}
+          {% if page.codetab == false %}
+            {% include nav-tabs-pattern.html codetab=false %}
+          {% elsif page.designtab == false %}
+            {% include nav-tabs-pattern.html designtab=false %}
+          {% else %}
+            {% include nav-tabs-pattern.html %}
+          {% endif %}
         </div>
       </div>
     </header>
