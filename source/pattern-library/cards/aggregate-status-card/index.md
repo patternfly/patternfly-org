@@ -14,13 +14,13 @@ layout: page-tabs
           <div class="cards-pf">
             <div class="container-fluid container-cards-pf">
               <div class="row-cards-pf">
-                <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="col-xs-12 col-sm-6 col-md-4" style="padding-left: 0px;">
                   {% include widgets/cards/aggregate-status-ipsum.html %}
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                   {% include widgets/cards/aggregate-status-amet.html %}
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="col-xs-12 col-sm-6 col-md-4" style="padding-right: 0px;">
                   {% include widgets/cards/aggregate-status-adipiscing.html %}
                 </div>
               </div>
@@ -36,13 +36,13 @@ layout: page-tabs
           <div class="cards-pf">
             <div class="container-fluid container-cards-pf">
               <div class="row-cards-pf">
-                <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="col-xs-12 col-sm-6 col-md-4" style="padding-left: 0px;">
                   {% include widgets/cards/aggregate-status-ipsum-mini.html %}
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                   {% include widgets/cards/aggregate-status-amet-mini.html %}
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="col-xs-12 col-sm-6 col-md-4" style="padding-right: 0px;">
                   {% include widgets/cards/aggregate-status-adipiscing-mini.html %}
                 </div>
               </div>
@@ -97,13 +97,13 @@ layout: page-tabs
               <div class="cards-pf">
                 <div class="container-fluid container-cards-pf">
                   <div class="row-cards-pf">
-                    <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="col-xs-12 col-sm-6 col-md-4" style="padding-left: 0px;">
                       {% include widgets/cards/aggregate-status-ipsum.html %}
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4">
                       {% include widgets/cards/aggregate-status-amet.html %}
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="col-xs-12 col-sm-6 col-md-4" style="padding-right: 0px;">
                       {% include widgets/cards/aggregate-status-adipiscing.html %}
                     </div>
                   </div>
@@ -127,13 +127,13 @@ layout: page-tabs
               <div class="cards-pf">
                 <div class="container-fluid container-cards-pf">
                   <div class="row-cards-pf">
-                    <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="col-xs-12 col-sm-6 col-md-4" style="padding-left: 0px;">
                       {% include widgets/cards/aggregate-status-ipsum-mini.html %}
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4">
                       {% include widgets/cards/aggregate-status-amet-mini.html %}
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="col-xs-12 col-sm-6 col-md-4" style="padding-right: 0px;">
                       {% include widgets/cards/aggregate-status-adipiscing-mini.html %}
                     </div>
                   </div>

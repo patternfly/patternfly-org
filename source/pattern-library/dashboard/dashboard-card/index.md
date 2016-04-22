@@ -9,21 +9,29 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
     <p>This section provides guidance on the base elements of a card for a dashboard view.</p>
     <p>Jump to <a href="#example-overview-1">Timeframe filter in header</a> or <a href="#example-overview-2">Timeframe filter in footer</a></p>
     <h2 id="example-overview-1">Timeframe filter in header</h2>
-    <div class="example">
+    <div class="example-bg">
       <div class="row">
-        <div class="col-md-6">
-          <div class="example-pf">
-            {% include widgets/cards/dashboard-timeframe-header.html %}
+        <div class="example-pf col-md-6">
+          <div class="cards-pf">
+            <div class="container-fluid container-cards-pf">
+              <div class="row-cards-pf">
+                {% include widgets/cards/dashboard-timeframe-header.html %}
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <h2 id="example-overview-2">Timeframe filter in footer</h2>
-    <div class="example">
+    <div class="example-bg">
       <div class="row">
-        <div class="col-md-6">
-          <div class="example-pf">
-            {% include widgets/cards/dashboard-timeframe-footer.html %}
+        <div class="example-pf col-md-6">
+          <div class="cards-pf">
+            <div class="container-fluid container-cards-pf">
+              <div class="row-cards-pf">
+                {% include widgets/cards/dashboard-timeframe-footer.html %}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -87,11 +95,17 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
         <p>Jump to <a href="#example-code-1">Timeframe filter in header</a> or <a href="#example-code-2">Timeframe filter in footer</a></p>
         <h2 id="example-code-1">Timeframe filter in header</h2>
-        <div class="example">
+        <div class="example-bg">
           <div class="row">
-            <div class="col-md-6">
-              <div class="example-pf">
-                {% include widgets/cards/dashboard-timeframe-header.html %}
+            <div class="example-pf col-md-6">
+              <div class="cards-pf">
+                <div class="container-fluid container-cards-pf">
+                  <div class="row-cards-pf">
+                    <div>
+                      {% include widgets/cards/dashboard-timeframe-header.html %}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -101,11 +115,17 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/cards/dashboard-timeframe-header.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Timeframe filter in footer</h2>
-        <div class="example">
+        <div class="example-bg">
           <div class="row">
-            <div class="col-md-6">
-              <div class="example-pf">
-                {% include widgets/cards/dashboard-timeframe-footer.html %}
+            <div class="example-pf col-md-6">
+              <div class="cards-pf">
+                <div class="container-fluid container-cards-pf">
+                  <div class="row-cards-pf">
+                    <div>
+                      {% include widgets/cards/dashboard-timeframe-footer.html %}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
