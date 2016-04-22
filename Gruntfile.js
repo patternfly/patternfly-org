@@ -135,6 +135,12 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.registerTask('jenkins', [
+    'less',
+    'cssmin',
+    'uglify'
+  ]);
+
   grunt.registerTask('build', [
     'less',
     'cssmin',
