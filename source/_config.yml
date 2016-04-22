@@ -10,6 +10,8 @@ blogurl: https://blog.patternfly.org
 exclude: ["components/patternfly/tests-src"]
 navbar-pf-navbar-brand-icon: true
 navbar-pf-alt-navbar-brand-icon: true
-navbar-brand-icon: '/assets/img/logo-alt.svg'
-navbar-alt-brand-icon: '/assets/img/brand-alt.svg'
+navbar-logo-icon: '/assets/img/logo.svg'
+navbar-logo-alt-icon: '/assets/img/logo-alt.svg'
+navbar-brand-icon: '/assets/img/brand.svg'
+navbar-brand-alt-icon: '/assets/img/brand-alt.svg'
 title-product: 'PatternFly Enterprise Application'
