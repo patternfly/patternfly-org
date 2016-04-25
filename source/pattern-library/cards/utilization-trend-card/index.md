@@ -40,7 +40,9 @@ layout: page-tabs
     <h2>Card with a Single Metric</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
-        <img src="{{site.baseurl}}assets/img/singe-metric-utilization-card2.png" alt="singe-metric-utilization-card2" />
+        <p>
+          <img src="{{site.baseurl}}assets/img/singe-metric-utilization-card2.png" alt="singe-metric-utilization-card2" />
+        </p>
       </div>
       <div class="col-md-5 col-lg-7">
         <ol>
@@ -59,7 +61,9 @@ layout: page-tabs
     <h2>Card with Multiple Metrics</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
-        <img src="{{site.baseurl}}assets/img/multi-metric-utilization-card-callout1.png" alt="multi-metric-utilization-card-callout"/>
+        <p>
+          <img src="{{site.baseurl}}assets/img/multi-metric-utilization-card-callout1.png" alt="multi-metric-utilization-card-callout"/>
+        </p>
       </div>
       <div class="col-md-5 col-lg-7">
         <ol>

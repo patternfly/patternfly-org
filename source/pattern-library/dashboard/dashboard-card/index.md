@@ -41,7 +41,9 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
     <h2>Style</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
-        <img src="{{site.baseurl}}assets/img/card1.png" alt="card1"/>
+        <p>
+          <img src="{{site.baseurl}}assets/img/card1.png" alt="card1"/>
+        </p>
       </div>
       <div class="col-md-5 col-lg-7">
         <ol>
@@ -53,7 +55,9 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
     <h2>Titles</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
-        <img src="{{site.baseurl}}assets/img/Card_titleAndSubtitle.png" alt="Card_titleAndSubtitle"/>
+        <p>
+          <img src="{{site.baseurl}}assets/img/Card_titleAndSubtitle.png" alt="Card_titleAndSubtitle"/>
+        </p>
       </div>
       <div class="col-md-5 col-lg-7">
         <ol>
@@ -65,7 +69,9 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
     <h2>Time Frame Filter (optional)</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
-        <img src="{{site.baseurl}}assets/img/card_timeframe.png" alt="card_timeframe"/>
+        <p>
+          <img src="{{site.baseurl}}assets/img/card_timeframe.png" alt="card_timeframe"/>
+        </p>
       </div>
       <div class="col-md-5 col-lg-7">
         <p>There are two options that the time frame filter may be placed:</p>
@@ -78,7 +84,9 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
     <h2>Actions Panel (optional)</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
-        <img src="{{site.baseurl}}assets/img/card_actionspanel.png" alt="card_actionspanel"/>
+        <p>
+          <img src="{{site.baseurl}}assets/img/card_actionspanel.png" alt="card_actionspanel"/>
+        </p>
       </div>
       <div class="col-md-5 col-lg-7">
         <ol>

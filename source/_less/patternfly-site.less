@@ -766,14 +766,15 @@ html {
     }
   }
   > ul {
-    margin: (@grid-gutter-width / 2) 0;
+     margin: 0 0 (@grid-gutter-width / 2) 0;
     > li {
       > a {
         border-bottom: 1px solid #393f44;
         font-size: (@font-size-large + 2);
         margin-bottom: 10px;
-        padding-bottom: ((@grid-gutter-width / 4) + 4);
-        padding-top: (@grid-gutter-width / 4);
+        line-height: 60px;
+        padding-bottom: 0;
+        padding-top: 0;
       }
       > ul > li {
         &.active {
@@ -848,7 +849,7 @@ html {
 }
 
 .nav-tabs-pattern {
-  margin-bottom: @grid-gutter-width;
+  margin-bottom: (@grid-gutter-width + 5);
   > li {
     &.active > a:hover {
       box-shadow: none;
@@ -888,9 +889,9 @@ html {
         }
       }
       > a {
-        margin-top: 0;
-        padding-bottom: 15px;
-        padding-top: 15px;
+        line-height: 59px;
+        padding-bottom: 0;
+        padding-top: 0;
       }
       + li > a {
         margin-left: -1px;
@@ -910,6 +911,9 @@ html {
   h3 {
     line-height: 1.1;
   }
+  .datatable {
+    margin-bottom: (@grid-gutter-width / 4);
+  }
 }
 
 // Anchor offset for navbars
@@ -921,6 +925,41 @@ html {
     // 82px = 72px [height of .navbar-fixed-top] + 10px)
     margin-top: -82px;
     padding-top: 82px;
+  }
+}
+
+// Adjustments to make 50px vertical spaces
+.post_content {
+  .cards-pf {
+    margin-bottom: 10px; //so every element gets 10px bottom
+  }
+  .example-pf-demo .cards-pf {
+    margin-bottom: 0;
+  }
+  div + h2[id],
+  ol + h2[id],
+  p + h2[id],
+  ul + h2[id]  {
+    padding-top: 116px; //results in 50px as visual offset
+  }
+  h1,h2,h3 {
+    line-height: 1.4;
+    padding-bottom: 10px;
+  }
+  #html-css > h2[id]:first-child {
+    padding-top: 106px;
+  }
+  ol + h2 {
+    margin-top: 42px;
+    &[id] {
+      margin-top: -82px;
+    }
+  }
+  .row + h2 {
+    margin-top: 36px;
+    &[id] {
+      margin-top: -82px;
+    }
   }
 }
 
@@ -1054,8 +1093,9 @@ th {
     }
     h1 {
       border-bottom: 1px solid #D5D5D5;
-      line-height: 54px;
+      line-height: 60px;
       margin-top: 0px;
+      padding-bottom: 0;
     }
   }
 }
