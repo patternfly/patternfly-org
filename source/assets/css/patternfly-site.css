@@ -2,6 +2,17 @@
 body {
   font-size: 13px;
   padding-top: 0;
+  margin-bottom: 158px;
+}
+@media (min-width: 992px) {
+  body {
+    margin-bottom: 87px;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    margin-bottom: 102px;
+  }
 }
 .btn-copy {
   padding-left: 10px;
@@ -113,11 +124,24 @@ body {
 }
 footer {
   border-top: 1px solid #D5D5D5;
+  bottom: 0;
   font-size: 10px;
+  left: 20px;
   line-height: 15px;
-  margin-top: 70px;
   padding-bottom: 28px;
   padding-top: 28px;
+  position: absolute;
+  width: calc(100% - 40px);
+}
+.has-sidebar footer {
+  left: 45px;
+  width: calc(100% - 25px - 40px);
+}
+@media (min-width: 992px) {
+  .has-sidebar footer {
+    left: 260px;
+    width: calc(100% - 240px - 40px);
+  }
 }
 .home footer {
   border-top: 0;
@@ -205,6 +229,7 @@ h3.card-pf-title {
   line-height: 1.1;
 }
 header + .container-fluid {
+  padding-bottom: 50px;
   padding-top: 72px;
   transition: padding-left 0.2s cubic-bezier(0.35, 0, 0.25, 1);
 }
@@ -676,7 +701,8 @@ hr {
   border-top-color: #D5D5D5;
 }
 html {
-  height: 100%;
+  min-height: 100%;
+  position: relative;
 }
 .icons .fa,
 .icons .glyphicon,

@@ -12,6 +12,13 @@
 body {
   font-size: 13px;
   padding-top: 0;
+  margin-bottom: 158px; // footer height
+  @media (min-width: @screen-md) {
+    margin-bottom: 87px;
+  }
+  @media (min-width: @screen-lg) {
+    margin-bottom: 102px;
+  }
 }
 
 .btn-copy {
@@ -134,11 +141,22 @@ body {
 
 footer {
   border-top: 1px solid #D5D5D5;
+  bottom: 0;
   font-size: 10px;
+  left: (@grid-gutter-width / 2);
   line-height: 15px;
-  margin-top: 70px;
   padding-bottom: 28px;
   padding-top: 28px;
+  position: absolute;
+  width: calc(100% ~"-" @grid-gutter-width);
+  .has-sidebar & {
+    left: (@navbar-toggle-sidebar-width + (@grid-gutter-width / 2));
+    width: calc(100% ~"-" @navbar-toggle-sidebar-width ~"-" @grid-gutter-width);
+    @media (min-width: @screen-md) {
+      left: (@navbar-sidebar-width + (@grid-gutter-width / 2));
+      width: calc(100% ~"-" @navbar-sidebar-width ~"-" @grid-gutter-width);
+    }
+  }
   .home & {
     border-top: 0;
     margin-top: 0;
@@ -225,6 +243,7 @@ h1, h2, h3 {
 
 header {
   + .container-fluid {
+    padding-bottom: 50px;
     padding-top: 72px;
     transition: padding-left .2s cubic-bezier(.35,0,.25,1);
     .has-sidebar & {
@@ -641,7 +660,8 @@ hr {
 }
 
 html {
-  height: 100%;
+  min-height: 100%;
+  position: relative;
 }
 
 .icons {
