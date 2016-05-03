@@ -931,6 +931,21 @@ html {
   padding: 0;
 }
 
+.pattern-section { // used on /pattern-library
+  padding-top: @grid-gutter-width;
+  .pattern-thumbnail {
+    padding-bottom: (@grid-gutter-width / 2);
+    padding-top: (@grid-gutter-width / 2);
+  }
+  h2 {
+    border-bottom: 1px solid #D5D5D5;
+  }
+  p {
+    text-align: center;
+    width: 200px;
+  }
+}
+
 .pf-example {
   font-size: @font-size-base;
   h3 {

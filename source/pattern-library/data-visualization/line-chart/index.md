@@ -1,5 +1,5 @@
 ---
-title: Donut Chart
+title: Line Chart
 author: dlabrecq
 layout: page-tabs
 ---
