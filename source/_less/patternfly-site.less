@@ -874,7 +874,7 @@ html {
 }
 
 .nav-tabs-pattern {
-  margin-bottom: (@grid-gutter-width + 5);
+  /* margin-bottom: (@grid-gutter-width + 5); */
   > li {
     &.active > a:hover {
       box-shadow: none;
@@ -932,7 +932,7 @@ html {
 }
 
 .pattern-section { // used on /pattern-library
-  padding-top: @grid-gutter-width;
+  padding-top: (@grid-gutter-width / 2);
   .pattern-thumbnail {
     padding-bottom: (@grid-gutter-width / 2);
     padding-top: (@grid-gutter-width / 2);
@@ -1126,6 +1126,7 @@ th {
 }
 
 .page-tabs-header {
+  margin-bottom: (@grid-gutter-width + 5);
   @media (min-width: @screen-md) {
     vertical-align: middle;
     .cols-nopad-left {

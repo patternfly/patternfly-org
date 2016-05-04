@@ -4,11 +4,15 @@ author: dlabrecq
 layout: page
 ---
 <p>The PatternFly library is a collection of UI design patterns. Design patterns are recurring solutions that solve
-common design problems and provide a common language amongst people who create user interfaces. Patterns do not specify
-requirements, but rather allow for debate over alternatives.</p>
-<p>Each pattern within this library contains suggested usages and examples annotated with interaction and visual design
-specifications, and the code to build the example. Additionally, patterns that have gone through usability testing will
-include relevant findings.</p>
+common design problems and provide a common language for people who create user interfaces. In general, patterns do not
+specify requirements, but rather, present recommended solutions to design problems. PatternFly patterns build on that
+approach by additionally considering the needs of complex enterprise IT software, and the habits and motivations of its
+users, in their recommendations.</p>
+<p>Each pattern within this library contains suggested usages and examples that are annotated with interaction and
+visual design specifications. Patterns that have gone through usability testing include a link to the PatternFly blog
+where relevant findings are described in more detail. Many patterns also include the code you can use to build the
+example. The library is continually being updated with new patterns or code samples for existing patterns. Stay current
+with these updates by checking out “What’s New” on the <a href="https://blog.patternfly.org" target="_blank">PatternFly blog</a></p>
 <div class="pattern-section" id="application-framework">
   <h2>Application Framework</h2>
   <div class="row">
@@ -116,7 +120,7 @@ include relevant findings.</p>
       <div class="pattern-thumbnail">
        <p>Dashboard Card (Base)</p>
         <a href="{{ site.baseurl }}pattern-library/dashboard/dashboard-card">
-          <img src="{{site.baseurl}}assets/img/thumbnails/Dash-Layout.png" alt="dashboard-card"/>
+          <img src="{{site.baseurl}}assets/img/thumbnails/Dash-Base.png" alt="dashboard-card"/>
         </a>
       </div>
     </div>

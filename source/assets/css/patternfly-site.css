@@ -901,7 +901,7 @@ html {
   margin-bottom: 20px;
 }
 .nav-tabs-pattern {
-  margin-bottom: 45px;
+  /* margin-bottom: (@grid-gutter-width + 5); */
 }
 .nav-tabs-pattern > li.active > a:hover {
   box-shadow: none;
@@ -951,7 +951,7 @@ html {
   padding: 0;
 }
 .pattern-section {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 .pattern-section .pattern-thumbnail {
   padding-bottom: 20px;
@@ -1127,6 +1127,9 @@ th {
 }
 .wow {
   visibility: hidden;
+}
+.page-tabs-header {
+  margin-bottom: 45px;
 }
 @media (min-width: 992px) {
   .page-tabs-header {
