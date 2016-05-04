@@ -191,6 +191,9 @@
               <li {% if secondary == 'navigation' %} class="active"{% endif %}>
                 <a class="{% if secondary == 'navigation' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#navigation-secondary" aria-expanded="{% if secondary == 'navigation' %}true{% else %}false{% endif %}" aria-controls="navigation-secondary">Navigation</a>
                 <ul class="collapse {% if secondary == 'navigation' %}in{% endif %}" id="navigation-secondary">
+                  <li {% if tertiary == 'horizontal-navigation' %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}pattern-library/navigation/horizontal-navigation/">Horizontal Navigation</a>
+                  </li>
                   <li {% if tertiary == 'vertical-navigation' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/navigation/vertical-navigation/">Vertical Navigation</a>
                   </li>
