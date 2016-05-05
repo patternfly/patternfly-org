@@ -13,11 +13,11 @@ layout: page-tabs
     </ul>
     <p>Jump to <a href="#example-overview-1">Utilization</a>, <a href="#example-overview-2">Relationship to a Whole</a> or <a href="#example-overview-3">Small Donut Chart</a></p>
     <h2 id="example-overview-1">Utilization</h2>
-    <div class="example-pf" style="width: 200px;">
+    <div class="example-pf">
       {% include widgets/charts/donut-utilization.html id="donut-chart-1" %}
     </div>
     <h2 id="example-overview-2">Relationship to a Whole</h2>
-    <div class="example-pf" style="width: 700px;">
+    <div class="example-pf">
       {% include widgets/charts/donut-whole-relationship.html id1="donut-chart-2" id2="donut-chart-3" id3="donut-chart-4" %}
     </div>
     <h2 id="example-overview-3">Small Donut Chart</h2>
@@ -63,13 +63,13 @@ layout: page-tabs
     {% include nav-tabs-code.html %}
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <p>Jump to <a href="#example-code-1">Utilization</a>, <a href="#example-overview-2">Relationship to a Whole</a> or <a href="#example-code-3">Small Donut Chart</a></p>
+        <p>Jump to <a href="#example-code-1">Utilization</a>, <a href="#example-code-2">Relationship to a Whole</a> or <a href="#example-code-3">Small Donut Chart</a></p>
         <h2 id="example-code-1">Utilization</h2>
-        <div class="example-pf" style="width: 200px;">
+        <div class="example-pf">
           {% include widgets/charts/donut-utilization.html id="donut-chart-1" %}
         </div>
         <div class="row">
-          <div class="example-pf" style="width: 220px;">
+          <div class="example-pf">
             <div class="container-fluid container-cards-pf">
               {% include widgets/charts/donut-utilization.html id="donut-chart-6" %}
             </div>
@@ -84,7 +84,7 @@ layout: page-tabs
           {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Relationship to a Whole</h2>
-        <div class="example-pf" style="width: 700px;">
+        <div class="example-pf">
           {% include widgets/charts/donut-whole-relationship.html id1="donut-chart-7" id2="donut-chart-8" id3="donut-chart-9" %}
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
