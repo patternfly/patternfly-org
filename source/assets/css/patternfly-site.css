@@ -122,6 +122,44 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
+.example-pie-chart,
+.example-pie-chart-right-legend,
+.example-pie-chart-bottom-legend {
+  width: 440px;
+}
+.example-pie-chart {
+  margin-left: 10px;
+}
+.example-pie-chart-right-legend {
+  margin-left: 27px;
+}
+.example-pie-chart-bottom-legend {
+  margin-left: -50px;
+}
+.example-pie-chart-mini {
+  margin-left: 23px;
+}
+.example-donut-chart,
+.example-donut-chart-right-legend,
+.example-donut-chart-bottom-legend {
+  width: 440px;
+}
+.example-donut-chart {
+  margin-left: 10px;
+}
+.example-donut-chart-right-legend {
+  margin-left: 28px;
+}
+.example-donut-chart-bottom-legend {
+  margin-left: -25px;
+}
+.example-donut-chart-mini {
+  margin-left: 28px;
+}
+.example-donut-chart-utilization {
+  width: 220px;
+  margin-left: 10px;
+}
 footer {
   border-top: 1px solid #D5D5D5;
   bottom: 0;
