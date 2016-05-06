@@ -1,6 +1,6 @@
-# patternfly-toolkit
+# patternfly-org
 
-The PatternFly Toolkit is the new source for the official documentation for PatternFly.
+The PatternFly Org is the new source for the official documentation for PatternFly.
 
 ## Development Setup
 
