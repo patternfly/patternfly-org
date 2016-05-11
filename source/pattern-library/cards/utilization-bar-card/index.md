@@ -83,8 +83,17 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
           <pre class="prettyprint">{% capture markup_include %}
 <script src="components/c3/c3.min.js"></script>
 <script src="components/d3/d3.min.js"></script>
-{% include widgets/cards/utilization-bar-top-labels.html %}
-          {% endcapture %}{{ markup_include | xml_escape }}</pre>
+<body class="cards-pf">
+  ...
+  <div class="container-fluid container-cards-pf">
+    <div class="row row-cards-pf">
+      <div class="col-xs-6 col-sm-4 col-md-4">
+        {% include widgets/cards/utilization-bar-top-labels.html %}
+      </div>
+    </div><!-- /row -->
+  </div><!-- /container -->
+</body>
+        {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Left Description and Right Label</h2>
         <div class="example-bg">
@@ -107,7 +116,16 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
           <pre class="prettyprint">{% capture markup_include %}
 <script src="components/c3/c3.min.js"></script>
 <script src="components/d3/d3.min.js"></script>
-{% include widgets/cards/utilization-bar-side-labels.html %}
+<body class="cards-pf">
+  ...
+  <div class="container-fluid container-cards-pf">
+    <div class="row row-cards-pf">
+      <div class="col-xs-6 col-sm-4 col-md-4">
+        {% include widgets/cards/utilization-bar-side-labels.html %}
+      </div>
+    </div><!-- /row -->
+  </div><!-- /container -->
+</body>
           {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>

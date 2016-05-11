@@ -94,9 +94,7 @@ layout: page-tabs
               <div class="cards-pf">
                 <div class="container-fluid container-cards-pf">
                   <div class="row-cards-pf">
-                    <div>
-                      {% include widgets/cards/utilization-trend-single-metric.html id1="chart-pf-donut-5" id2="chart-pf-sparkline-5" %}
-                    </div>
+                    {% include widgets/cards/utilization-trend-single-metric.html id1="chart-pf-donut-5" id2="chart-pf-sparkline-5" %}
                   </div>
                 </div>
               </div>
@@ -108,7 +106,16 @@ layout: page-tabs
           <pre class="prettyprint">{% capture markup_include %}
 <script src="components/c3/c3.min.js"></script>
 <script src="components/d3/d3.min.js"></script>
-{% include widgets/cards/utilization-trend-single-metric.html id1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}
+<body class="cards-pf">
+  ...
+  <div class="container-fluid container-cards-pf">
+    <div class="row row-cards-pf">
+      <div class="col-xs-6 col-sm-4 col-md-4">
+        {% include widgets/cards/utilization-trend-single-metric.html id1="chart-pf-donut-5" chart2="chart-pf-sparkline-5" %}
+      </div>
+    </div><!-- /row -->
+  </div><!-- /container -->
+</body>
           {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Card with Multiple Metrics</h2>
@@ -118,7 +125,7 @@ layout: page-tabs
               <div class="cards-pf">
                 <div class="container-fluid container-cards-pf">
                   <div class="row-cards-pf">
-                    <div>
+                    <div class="col-xs-12">
                       {% include widgets/cards/utilization-trend-multiple-metrics.html id3="chart-pf-donut-6" id4="chart-pf-sparkline-6" id5="chart-pf-donut-7" id6="chart-pf-sparkline-7" id7="chart-pf-donut-8" id8="chart-pf-sparkline-8" %}
                     </div>
                   </div>
@@ -132,7 +139,17 @@ layout: page-tabs
           <pre class="prettyprint">{% capture markup_include %}
 <script src="components/c3/c3.min.js"></script>
 <script src="components/d3/d3.min.js"></script>
-{% include widgets/cards/utilization-trend-multiple-metrics.html id3="chart-pf-donut-6" id4="chart-pf-sparkline-6" id5="chart-pf-donut-7" id6="chart-pf-sparkline-7" id7="chart-pf-donut-8" id8="chart-pf-sparkline-8" %}
+
+<body class="cards-pf">
+  ...
+  <div class="container-fluid container-cards-pf">
+    <div class="row row-cards-pf">
+      <div class="col-xs-12">
+        {% include widgets/cards/utilization-trend-multiple-metrics.html id3="chart-pf-donut-6" id4="chart-pf-sparkline-6" id5="chart-pf-donut-7" id6="chart-pf-sparkline-7" id7="chart-pf-donut-8" id8="chart-pf-sparkline-8" %}
+      </div>
+    </div><!-- /row -->
+  </div><!-- /container -->
+</body>
           {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>
