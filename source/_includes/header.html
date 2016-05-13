@@ -54,9 +54,6 @@
               <li {% if secondary == 'index.html' %} class="active"{% endif %}>
                 <a href="{{ site.baseurl }}get-started/">Overview</a>
               </li>
-              <li {% if secondary == 'about' %} class="active"{% endif %}>
-              <a href="{{ site.baseurl }}get-started/about/">About PatternFly</a>
-              </li>
               <li {% if secondary == 'contribute' %} class="active"{% endif %}>
                 <a href="{{ site.baseurl }}get-started/contribute/">Contribute</a>
               </li>
@@ -100,6 +97,9 @@
               <li {% if secondary == 'communication' %} class="active"{% endif %}>
                 <a class="{% if secondary == 'communication' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#communication-secondary" aria-expanded="{% if secondary == 'communication' %}true{% else %}false{% endif %}" aria-controls="communication-secondary">Communication</a>
                 <ul class="collapse {% if secondary == 'communication' %}in{% endif %}" id="communication-secondary">
+                  <li {% if tertiary == 'about-modal' %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}pattern-library/communication/about-modal/">About Modal</a>
+                  </li>
                   <li {% if tertiary == 'empty-state' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/communication/empty-state/">Empty State</a>
                   </li>

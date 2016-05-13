@@ -134,8 +134,8 @@ with these updates by checking out “What’s New” on the <a href="https://bl
     </div>
   </div>
 </div>
-<div class="pattern-section" id="data-visulization">
-  <h2>Data Visulization</h2>
+<div class="pattern-section" id="data-visualization">
+  <h2>Data Visualization</h2>
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
