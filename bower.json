@@ -1,7 +1,7 @@
 {
-  "name": "patternfly-toolkit",
+  "name": "patternfly-org",
   "version": "3.3.5",
-  "homepage": "https://github.com/patternfly/patternfly-toolkit",
+  "homepage": "https://github.com/patternfly/patternfly-org",
   "author": "Red Hat",
   "description": "Documentation, etc. for PatternFly",
   "license": "Apache-2.0",
