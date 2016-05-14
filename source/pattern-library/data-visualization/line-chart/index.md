@@ -34,6 +34,7 @@ layout: page-tabs
     <div class="row">
       <div class="col-md-7 col-lg-5">
         <img src="{{site.baseurl}}assets/img/line-chart-callout1.png" alt="line-chart-callout1"/>
+        <img src="{{site.baseurl}}assets/img/line-chart-callout2.png" alt="line-chart-callout2"/>
       </div>
       <div class="col-md-5 col-lg-7">
         <ol>
