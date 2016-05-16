@@ -156,22 +156,6 @@ layout: page-tabs
 <script src="components/d3/d3.min.js"></script>
 <script src="components/matchHeight/jquery.matchHeight-min.js"></script>
 {% include widgets/navigation/vertical-nav-with-secondary.html %}
-<div class="container-fluid container-cards-pf container-pf-nav-pf-vertical container-pf-nav-pf-vertical-with-secondary">
-{% include widgets/layouts/cards-alt.html %}
-</div>
-<script>
-  $(document).ready(function() {
-    // matchHeight the contents of each .card-pf and then the .card-pf itself
-    $(".row-cards-pf > [class*='col'] > .card-pf .card-pf-title").matchHeight();
-    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
-    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
-    $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
-    // initialize tooltips
-    $('[data-toggle="tooltip"]').tooltip();
-    // Initialize the vertical navigation
-    $().setupVerticalNavigation(true);
-  });
-</script>
               {% endcapture %}{{ markup_include | xml_escape }}</pre>
             </div>
           </div>
@@ -191,22 +175,6 @@ layout: page-tabs
 <script src="components/d3/d3.min.js"></script>
 <script src="components/matchHeight/jquery.matchHeight-min.js"></script>
 {% include widgets/navigation/vertical-nav-with-secondary.html %}
-<div class="container-fluid container-cards-pf container-pf-nav-pf-vertical container-pf-nav-pf-vertical-with-secondary hidden-icons-pf">
-{% include widgets/layouts/cards-alt.html %}
-</div>
-<script>
-  $(document).ready(function() {
-    // matchHeight the contents of each .card-pf and then the .card-pf itself
-    $(".row-cards-pf > [class*='col'] > .card-pf .card-pf-title").matchHeight();
-    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
-    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
-    $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
-    // initialize tooltips
-    $('[data-toggle="tooltip"]').tooltip();
-    // Initialize the vertical navigation
-    $().setupVerticalNavigation(true);
-  });
-</script>
               {% endcapture %}{{ markup_include | xml_escape }}</pre>
             </div>
           </div>
