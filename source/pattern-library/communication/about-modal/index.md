@@ -1,5 +1,5 @@
 ---
-title: Empty State
+title: About Modal
 author: dlabrecq
 layout: page-tabs
 codetab: false

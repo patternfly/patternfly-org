@@ -1,5 +1,5 @@
 ---
-title: Toast Notifications
+title: Notification Drawer
 author: dlabrecq
 layout: page-tabs
 codetab: false
