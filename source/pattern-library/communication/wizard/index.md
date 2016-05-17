@@ -1,5 +1,5 @@
 ---
-title: Toast Notifications
+title: Wizard
 author: dlabrecq
 layout: page-tabs
 codetab: false
