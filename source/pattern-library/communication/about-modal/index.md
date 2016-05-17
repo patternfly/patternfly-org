@@ -20,10 +20,10 @@ codetab: false
   <div role="tabpanel" class="tab-pane" id="design">
     <h2>Description</h2>
     <div class="row">
-      <div class="col-md-12 col-lg-8">
+      <div class="col-md-8 col-lg-7">
         <img src="{{site.baseurl}}assets/img/Screen-Shot-2016-05-10-at-9.44.20-AM.png" alt="about_modal_spec" />
       </div>
-      <div class="col-md-12 col-lg-4">
+      <div class="col-md-4 col-lg-5">
         <ol>
           <li><b>PatternFly Modal:</b> Utilizes the existing <a href="https://www.patternfly.org/widgets/#modal">PatternFly Modal</a>. Upon opening, the background behind the modal should “dim” in order to provide a focused view of the modal, reducing confusion. The modal should be centered on the screen.</li>
           <li><b>Close Button:</b> Clicking the close button (pficon-close) will dismiss the modal and return the background to it’s original state.</li>
