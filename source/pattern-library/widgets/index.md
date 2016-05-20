@@ -17,8 +17,7 @@ layout: page
 <div class="super-section" id="css">
   <h2>CSS</h2>
   <p>See <a href="http://getbootstrap.com/css/">http://getbootstrap.com/css/</a> for complete CSS documentation.</p>
-  <p><strong>Note:</825213
-  strong> PatternFly incorporates Bootstrap's CSS in its CSS, but it does not incorporate Bootstrap's JavaScript (so as to keep the Bootstrap JavaScript modular--see <a href="http://getbootstrap.com/javascript/#js-overview">http://getbootstrap.com/javascript/#js-overview</a>).</p>
+  <p><strong>Note:</strong> PatternFly incorporates Bootstrap's CSS in its CSS, but it does not incorporate Bootstrap's JavaScript (so as to keep the Bootstrap JavaScript modular--see <a href="http://getbootstrap.com/javascript/#js-overview">http://getbootstrap.com/javascript/#js-overview</a>).</p>
   <div class="section" id="tables">
     <h3>Tables</h3>
     <p>See <a href="http://getbootstrap.com/css/#tables">http://getbootstrap.com/css/#tables</a> for complete tables documentation.</p>
