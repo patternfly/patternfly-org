@@ -3,11 +3,11 @@ title: Horizontal Navigation
 author: gcardoso
 layout: page-tabs
 ---
-<div class="tab-content"> 
+<div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">
     <p>It is recommended to use horizontal navigation when you want to provide access to global navigation of an application at the top of every page. This horizontal navigation pattern will support up to three levels of navigation.</p>
     <p>The top level (primary) navigation should always be exposed.  Secondary and tertiary levels can either be persistent or hidden within drop-down menus.  The latter provides less visibility to lower-level categories but saves vertical screen space.</p>
-    <p>As a rule of thumb, the horizontal navigation is the prefered choice over <a href="{{site.baseurl}}pattern-library/navigation/vertical-navigation/">vertical navigation</a> when:</p>
+    <p>As a rule of thumb, the horizontal navigation is the preferred choice over <a href="{{site.baseurl}}pattern-library/navigation/vertical-navigation/">vertical navigation</a> when:</p>
     <ul>
       <li>There are a small number of fixed categories.</li>
       <li>You want to provide the best visibility to primary categories by placing them immediately below the page header area.</li>
