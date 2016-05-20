@@ -18,10 +18,10 @@ codetab: false
   <div role="tabpanel" class="tab-pane" id="design">
     <h2>Toast Notification</h2>
     <div class="row">
-      <div class="col-md-7 col-lg-5">
+      <div class="col-md-8 col-lg-7">
         <img src="{{site.baseurl}}assets/img/toast.png" alt="toast-callout"/>
       </div>
-      <div class="col-md-5 col-lg-7">
+      <div class="col-md-4 col-lg-5">
         <ol>
           <li><b>Toast Notification:</b> The drawer should utilize the current <a href="https://www.patternfly.org/patterns/toast-notifications/">Toast Notification</a>. Shows the notification title and and optional content relevant icon. </li>
         </ol>
@@ -29,10 +29,10 @@ codetab: false
     </div>
     <h2>Notification Drawer</h2>
     <div class="row">
-      <div class="col-md-7 col-lg-5">
+      <div class="col-md-8 col-lg-7">
         <img src="{{site.baseurl}}assets/img/tray.png" alt="tray-callout"/>
       </div>
-      <div class="col-md-5 col-lg-7">
+      <div class="col-md-4 col-lg-5">
         <ol>
           <li><b>Icon:</b> Displays visual differentiator when new or unread notifications are present. Clicking on the icon will slide out a drawer and dismiss the toast notification. Clicking on the icon again will close the drawer. </li>
           <li><b>Drawer Title:</b> Title of Drawer.</li>

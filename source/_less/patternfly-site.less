@@ -519,7 +519,7 @@ header {
 
 .home {
   height: 100%;
-  position: relative;
+//   position: relative;
   > div p {
     font-size: 13px;
     @media (min-width: @screen-sm) {
@@ -750,6 +750,13 @@ html {
 .meta {
   color: @gray-light;
   font-size: @font-size-small;
+}
+
+.navbar .navbar-brand img { // Overwriting inherited styles from ng-docs.css.
+  padding-right: 0;
+  height: 10px;
+  width: 270px;
+  margin: 0;
 }
 
 .navbar-sidebar {
