@@ -518,7 +518,6 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
 }
 .home {
   height: 100%;
-  position: relative;
 }
 .home > div p {
   font-size: 13px;
