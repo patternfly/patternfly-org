@@ -1,8 +1,11 @@
 RewriteEngine on
 
 # Redirect all traffic to https
-RewriteCond %{HTTP:X-Forwarded-Proto} !https
-RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+#RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+RewriteCond %{HTTPS:X-Forwarded-Proto} !http
+RewriteRule .* http://%{HTTP_HOST}%{REQUEST_URI} [R,L]
 
 # Redirect blog posts to the new blog url
 Redirect 301 /donut-chart-relationship-of-a-set-of-values-to-a-whole https://blog.patternfly.org/donut-chart-relationship-of-a-set-of-values-to-a-whole
