@@ -88,8 +88,40 @@ url-js-extra: ['components/wowjs/dist/wow.min.js', 'components/jquery.scrollTo/j
         <p><a href="{{ site.baseurl}}whats-new/">View all</a></p>
       </div>
       <div class="col-md-6">
-        <h3>Featured Content</h3>
-        <div id="carousel-layouts" class="carousel slide" data-ride="carousel">
+        <h2>Featured Content</h2>
+        <div id="carousel-layouts" class="carousel slide" data-ride="carousel" data-interval="false">
+          <!-- Controls for slides -->
+          <div class="carousel-header">
+            <h3 id="caption"></h3>
+            <div class="controls">
+              <a id="learn" class="learn" href="#">Learn More</a>
+              <a class="previous" title="Previous">
+                <span class="fa fa-angle-left"></span>
+              </a>
+              <a class="next" title="Next">
+                <span class="fa fa-angle-right"></span>
+              </a>
+            </div>
+          </div>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img alt="Dashboard Layout" src="{{site.baseurl}}assets/img/layouts-dashboard.png" />
+            </div>
+            <div class="item">
+              <img alt="Forms Layout" src="{{site.baseurl}}assets/img/layouts-form.png" />
+            </div>
+            <div class="item">
+              <img alt="Treeview Layout" src="{{site.baseurl}}assets/img/layouts-treeview.png" />
+            </div>
+            <div class="item">
+              <img alt="Tabs Layout" src="{{site.baseurl}}assets/img/layouts-tab.png" />
+            </div>
+            <div class="item">
+              <img alt="Basic Layout" src="{{site.baseurl}}assets/img/layouts-basic.png" />
+            </div>
+          </div>
+          <!-- Indicators
           <ol class="carousel-indicators">
             <li data-target="#carousel-layouts" data-slide-to="0" class="active"></li>
             <li data-target="#carousel-layouts" data-slide-to="1"></li>
@@ -97,25 +129,49 @@ url-js-extra: ['components/wowjs/dist/wow.min.js', 'components/jquery.scrollTo/j
             <li data-target="#carousel-layouts" data-slide-to="3"></li>
             <li data-target="#carousel-layouts" data-slide-to="4"></li>
           </ol>
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <img alt="Dashboard layout" src="{{ site.baseurl}}assets/img/layouts-dashboard.png" />
-            </div>
-            <div class="item">
-              <img alt="Form layout" src="{{ site.baseurl}}assets/img/layouts-form.png" />
-            </div>
-            <div class="item">
-              <img alt="Treeview layout" src="{{ site.baseurl}}assets/img/layouts-treeview.png" />
-            </div>
-            <div class="item">
-              <img alt="Tabs layout" src="{{ site.baseurl}}assets/img/layouts-tab.png" />
-            </div>
-            <div class="item">
-              <img alt="Basic layout" src="{{ site.baseurl}}assets/img/layouts-basic.png" />
-            </div>
-          </div>
+          -->
         </div>
       </div>
     </div>
   </div>
 </div>
+<script>
+  $(document).ready(function() {
+    // Carousel data
+    var carouselData = [{
+      caption: "Dashboard Layout",
+      url: "{{site.baseurl}}pattern-library/dashboard/dashboard-layout"
+    }, {
+      caption: "Forms Layout",
+      url: "{{site.baseurl}}pattern-library/widgets/#forms"
+    }, {
+      caption: "Treeview Layout",
+      url: "{{site.baseurl}}pattern-library/widgets/#bootstrap-tree-view"
+    }, {
+      caption: "Tabs Layout",
+      url: "{{site.baseurl}}pattern-library/widgets/#tabs"
+    }, {
+      caption: "Basic Layout",
+      url: "{{site.baseurl}}pattern-library/widgets/#tables"
+    }];
+    // Initialize caption and learn more url
+    $("#caption").text(carouselData[0].caption);
+    $("#learn").attr("href", carouselData[0].url);
+
+    // Previous slide
+    $(".previous").click(function() {
+      $("#carousel-layouts").carousel("prev");
+    });
+    // Next slide
+    $(".next").click(function() {
+      $("#carousel-layouts").carousel("next");
+    });
+
+    // Update caption and learn more url
+    $("#carousel-layouts").on("slid.bs.carousel", function() {
+      var currentIndex = $('div.active').index();
+      $("#caption").text(carouselData[currentIndex].caption);
+      $("#learn").attr("href", carouselData[currentIndex].url);
+    });
+  });
+</script>
