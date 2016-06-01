@@ -82,7 +82,15 @@ jQuery( document ).ready(function() {
       .tooltip('fixTitle')
   });
   // enable .navbar-toggle-sidebar to show/hide .navbar-sidebar
-  jQuery('.navbar-toggle-sidebar').on('click', function (e) {
+  //jQuery('.navbar-toggle-sidebar').on('click', function (e) {
+    //jQuery('.navbar-sidebar').toggleClass('open');
+  //});
+  jQuery('.navbar-toggle').on('click', function (e) {
     jQuery('.navbar-sidebar').toggleClass('open');
+  });
+
+  jQuery('.secondary-menu-toggle').on('click', function (e) {
+    jQuery('.primary-menu').toggleClass('hidden');
+    jQuery('.secondary-menu').toggleClass('hidden');
   });
 });
