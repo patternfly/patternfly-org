@@ -33,16 +33,16 @@ layout: page-tabs
     <h2>Form Text Fields</h2>
     <div class="row">
       <div class="col-md-8 col-lg-7">
-        <p><img class="example-image" src="{{site.baseurl}}assets/img/TBD.png" alt="IMAGE COMING SOON"/></p>
+        <p><img src="{{site.baseurl}}assets/img/form-modal.png" alt="form-modal"/></p>
       </div>
       <div class="col-md-4 col-lg-5">
         <ol>
-          <li><b>Field labels:</b> Do not include a colon at the end. Visit the Capitalization section of Terminology and Wording for information regarding capitalization. </li>
-          <li>Populate fields with default values when possible.</li>
-          <li><b>Primary input field:</b> This field gets focused when the modal appears. The initial primary input field is usually the first input field which is required. </li>
+          <li><b>Field Labels:</b> Do not include a colon at the end. Visit the Capitalization section of Terminology and Wording for information regarding capitalization. </li>
+          <li><b>Primary Input Field:</b> This field gets focused when the modal appears. The initial primary input field is usually the first input field which is required. </li>
         </ol>
         <p><b>Additional notes about behavior for form fields</b></p>
         <ul>
+          <li>Populate fields with default values when possible.</li>
           <li>Support Enter key for button activation in the modal. </li>
           <li>If there is only one input field, pressing Enter key behaves the same as clicking primary button.</li>
           <li>Support Tab key (to progress forward) and Tab+Shift (to move backward) keys to move between input fields. </li>
@@ -54,27 +54,26 @@ layout: page-tabs
     <h2>Validation</h2>
     <div class="row">
       <div class="col-md-8 col-lg-7">
-        <p><img class="example-image" src="{{site.baseurl}}assets/img/FormValidation_Description1.png" alt="form-validation-callout"/></p>
+        <p><img src="{{site.baseurl}}assets/img/FormValidation_Description1.png" alt="form-validation-callout"/></p>
       </div>
       <div class="col-md-4 col-lg-5">
         <ol>
-          <li><b>Form level validation</b> (optional): When the user submits the form, the entire page/modal is reloaded with indications of validation errors for each error via an inline notification.   This notification is located at the top of the page, describes what the error is and preferably, offers guidance about how to fix the error. Additionally, if possible, you may want to inform the user the number of error(s) that have occurred, particularly if some of the errors are beyond the user’s current view.</li>
+          <li><b>Form Level Validation</b> (optional): When the user submits the form, the entire page/modal is reloaded with indications of validation errors for each error via an inline notification.   This notification is located at the top of the page, describes what the error is and preferably, offers guidance about how to fix the error. Additionally, if possible, you may want to inform the user the number of error(s) that have occurred, particularly if some of the errors are beyond the user’s current view.</li>
           <ul>
             <li>Depending on application constraints, dynamic (on the fly) dismissal of errors would be ideal as it provides a visual cue that the user has corrected the error.  </li>
           </ul>
-          <li><b>Field level validation:</b> In addition to the optional inline notification, the erroneous fields are indicated with a red outline with a message below the field describing the error and/or how to fix the issue.</li>
+          <li><b>Field Level Validation:</b> In addition to the optional inline notification, the erroneous fields are indicated with a red outline with a message below the field describing the error and/or how to fix the issue.</li>
           <ul>
             <li>Ensure validation is relevant to the field.</li>
             <li>Messages should be specific and offer solutions.</li>
           </ul>
-          <li><b>Field Spacing:</b> Avoid shifting of fields and buttons (reflow) by designing forms with enough space to accommodate errors that may appear on form submission.</li>
         </ol>
       </div>
     </div>
     <h2>Operational Behavior</h2>
     <div class="row">
       <div class="col-md-8 col-lg-7">
-        <p><img class="example-image" src="{{site.baseurl}}assets/img/FormValidation_Description1.png" alt="form-validation-description-callout"/></p>
+        <p><img class="example-image" src="{{site.baseurl}}assets/img/FormValidation_Description2.png" alt="form-validation-description-callout"/></p>
       </div>
       <div class="col-md-4 col-lg-5">
         <p>The modal operation happens with the modal still open. Clicking the affirmative button starts the operation.
