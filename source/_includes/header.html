@@ -2,12 +2,20 @@
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+<!--
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse-pf-site" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
+-->
             <a class="navbar-brand" id="logo" title="open interface project" href="{{ site.baseurl }}">{{ site.title }}</a>
           </div>
           <div class="navbar-collapse navbar-collapse-pf-site collapse">
@@ -41,15 +49,50 @@
           </div>
         </div>
       </nav>
-      {% if primary == 'get-started' or primary == 'pattern-library' or primary == 'styles' %}<nav class="navbar navbar-sidebar" aria-labelledby="navbar-toggle-sidebar">
+      <nav class="navbar navbar-sidebar {% if page.url == '/index.html' %}navbar-home{% endif %}{% if primary != 'get-started' and primary != 'pattern-library' and primary != 'styles' %} navbar-primary{% endif %}">
+
+<!--
+      { % if primary == 'get-started' or primary == 'pattern-library' or primary == 'styles' % }
+      <nav class="navbar navbar-sidebar" aria-labelledby="navbar-toggle-sidebar">
         <button class="btn btn-default navbar-toggle-sidebar" id="navbar-toggle-sidebar">
           <span class="fa fa-angle-double-right"></span>
           <span class="sr-only">Toggle sub navigation</span>
         </button>
+-->
         <ul>
+          <li class="primary-menu {% if primary == 'get-started' or primary == 'pattern-library' or primary == 'styles' %}hidden{% endif %}">
+            <a href="{{ site.baseurl }}">Menu</a>
+            <ul>
+              <li{% if primary == 'get-started' %} class="active"{% endif %}>
+              <a href="{{ site.baseurl }}get-started/">Get Started<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li{% if primary == 'pattern-library' %} class="active"{% endif %}>
+              <a href="{{ site.baseurl }}pattern-library/">Pattern Library<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li{% if primary == 'styles' %} class="active"{% endif %}>
+              <a href="{{ site.baseurl }}styles/">Styles<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li{% if primary == 'community' %} class="active"{% endif %}>
+              <a href="{{ site.baseurl }}community/">Community</a>
+              </li>
+              <li{% if primary == 'download' %} class="active"{% endif %}>
+              <a href="{{ site.baseurl }}download/">Download</a>
+              </li>
+              <li>
+                <a href="{{ site.blogurl }}">Blog</a>
+              </li>
+              <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
+                <div class="form-group">
+                  <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                  <input name="sitesearch" type="hidden" value="patternfly.org">
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+              </form>
+            </ul>
+          </li>
           {% if primary == 'get-started' %}
-          <li>
-            <a href="{{ site.baseurl }}get-started/">Get Started</a>
+          <li class="secondary-menu">
+            <a class="secondary-menu-toggle"><span class="secondary-menu-toggle-icon"></span>Get Started</a>
             <ul>
               <li {% if secondary == 'index.html' %} class="active"{% endif %}>
                 <a href="{{ site.baseurl }}get-started/">Overview</a>
@@ -63,8 +106,8 @@
             </ul>
           </li>
           {% elsif primary == 'pattern-library' %}
-          <li>
-            <a href="{{ site.baseurl }}pattern-library/">Pattern Library</a>
+          <li class="secondary-menu">
+            <a class="secondary-menu-toggle"><span class="secondary-menu-toggle-icon"></span>Pattern Library</a>
             <ul>
               <li {% if secondary == 'index.html' %} class="active"{% endif %}>
                 <a href="{{ site.baseurl }}pattern-library/">Overview</a>
@@ -300,8 +343,8 @@
             </ul>
           </li>
           {% elsif primary == 'styles' %}
-          <li>
-            <a href="{{ site.baseurl }}styles/">Styles</a>
+          <li class="secondary-menu">
+            <a class="secondary-menu-toggle"><span class="secondary-menu-toggle-icon"></span>Styles</a>
             <ul>
               <li {% if secondary == 'index.html' %} class="active"{% endif %}>
                 <a href="{{ site.baseurl }}styles/">Overview</a>
@@ -322,5 +365,5 @@
           </li>
           {% endif %}
         </ul>
-      </nav>{% endif %}
+      </nav><!--{ % endif % }-->
     </header>{% endstrip %}
