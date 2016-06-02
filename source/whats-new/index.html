@@ -6,7 +6,7 @@ layout: page
 
 <!-- This loops through the whats-new posts -->
 {% assign whats-news = site.whats-news | sort: 'date' | reverse %}
-{% for whatsnew in whats-news limit:10 %}
+{% for whatsnew in whats-news limit:50 %}
   <h2>{{ whatsnew.date | date: '%B %-d, %Y' }}</h2>
   {{ whatsnew.content }}
 {% endfor %}
