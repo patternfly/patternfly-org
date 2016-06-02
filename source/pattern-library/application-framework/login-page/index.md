@@ -78,7 +78,12 @@ layout: page-tabs
       <a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="login-layout-markup" href="#login-layout-markup">Reference Markup</a>
     </p>
     <div class="collapse in" id="login-layout-markup">
-      <pre class="prettyprint">{% capture markup_include %}{% include widgets/framework/login.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+      <pre class="prettyprint">{% capture markup_include %}
+<html class="login-pf">
+...
+{% include widgets/framework/login.html %}
+</html>
+      {% endcapture %}{{ markup_include | xml_escape }}</pre>
     </div>
   </div>
 </div>
