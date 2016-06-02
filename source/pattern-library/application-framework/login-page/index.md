@@ -66,6 +66,7 @@ layout: page-tabs
     </ol>
   </div>
   <div role="tabpanel" class="tab-pane" id="code">
+   {% include nav-tabs-code.html angular=false %}
     <div class="example-pf">
       <iframe src="{{ site.baseurl }}pattern-library/application-framework/login-page/login.html"
               width="100%" height="650px;" scrolling="no" seamless></iframe>
