@@ -1194,9 +1194,10 @@ html {
   h3 {
     line-height: 1.1;
   }
-  .datatable {
-    margin-bottom: (@grid-gutter-width / 4);
-  }
+  // Pagination controls are detached from data tables -- issue #135.
+  //.datatable {
+  //  margin-bottom: (@grid-gutter-width / 4);
+  //}
 }
 
 .post_content {
