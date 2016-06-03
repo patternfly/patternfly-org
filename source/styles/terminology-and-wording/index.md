@@ -193,6 +193,26 @@ layout: page
 </tr>
 </tbody>
 </table>
+<h2 id="terms-and-words">Common Terms and Words</h2>
+<ul>
+	<li>Login (adj): As in a Login page. It also could be use as a noun as another name for username. However, “username” is recommended.</li>
+	<li>Log in (v): Use “Log In” as the button label for the Login page.</li>
+	<li>Username (n): Usually a unique ID (e.g. ssmith123). Use “username” for the product login screen.</li>
+</ul>
+<h2 id="links">Links</h2>
+<h3>More Information Link</h3>
+<p>As a user, I want to see a single link that directs me to a page or document with additional information to learn more about a particular subject or task. As the user is reading the sentence, they have the option to click on the documentation or page link to view the documentation. This documentation could live within the same site or outside of the site. If it lives outside the site, we should let the user know by adding an icon to make this clear.</p>
+<h3>General Rules</h3>
+<ul>
+<li>The link should be included in a complete sentence, use punctuation and sentence style capitalization.</li>
+<li>Names or titles of a document or page should use header style capitalization.
+</li><li>The name of the document should should use link text styling to indicate that it is clickable. Check out an example of the link text under <a href="/styles/typography/#style-samples">Styles Samples</a> on the Typography page.</li>
+<li>Some recommendations for wording include:</li>
+<ul>
+<li>View &lt;Document Link&gt; for more information.</li>
+<li>View ‘X’ in &lt;Document Link&gt; for more information.</li>
+</ul>
+</ul>
 <h2 id="punctuation">Punctuation</h2>
 <table class="table table-bordered">
 <tbody>
