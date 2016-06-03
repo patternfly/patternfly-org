@@ -42,7 +42,7 @@ Below are some samples of common typographic layouts. Check out more samples on 
   
   <hr />
   
-  <b>Style Samples</b> 
+  <b id="style-samples">Style Samples</b>
   
   <p>
   </p><section> 
