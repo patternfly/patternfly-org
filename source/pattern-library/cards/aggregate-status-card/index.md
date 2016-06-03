@@ -62,7 +62,7 @@ layout: page-tabs
       <div class="col-md-7 col-lg-8">
         <ol>
           <li><b>Top Accent</b> (optional): If the aggregate status card is located at the top of a dashboard view, you may opt to add the the blue stripe to the top of the card. If the card is located somewhere other than a dashboard, there is no blue stripe.</li>
-          <li><b>Object Icon</b> (optional): An object icon can be used before the count and object name.  Make sure you are consistent and either opt to always use the icon or not. Do not mix and match by applying icons to some cards but not others. Icons should be used thoughtfully and sparingly. Ensure that the icon’s visual metaphor provides valuable meaning rather than pointless clutter. Note: In the case of the mini card alternate, it is strongly recommended to use this object icon.</li>
+          <li><b>Object Icon</b> (optional): An object icon can be used before the count and object name. Be consistent; either use the icon on all the cards throughout your application, or don't use it in any. Do not mix and match by applying icons to some cards but not others. Use icons thoughtfully and sparingly. Ensure that the icon’s symbol metaphor provides valuable meaning. Note: In the case of the mini card alternate, it is strongly recommended to use this object icon.</li>
           <li><b>Total Number:</b> This is a number that represents a count for the total number of objects in the environment.</li>
           <li><b>Object Type Label:</b> Include a label that states the object type.</li>
         </ol>
@@ -76,11 +76,11 @@ layout: page-tabs
       </div>
       <div class="col-md-7 col-lg-8">
         <ol>
-          <li><b>Status Icon(s):</b> A status icon represents the status of the objects in the card. If everything is OK, one status icon for OK should be shown. Otherwise, multiple status icons can be shown to represent each status. Note: In the case of the mini card alternate, it is recommended to limit this to one status icon due to space restrictions.</li>
+          <li><b>Status Icon(s):</b> This represents the status of the objects in the card. If everything is OK, one status icon for OK should be shown. Otherwise, multiple status icons can be shown to represent each status. Note: In the case of the mini card alternate, it is recommended to limit this to one status icon due to space restrictions.</li>
           <li><b>Number Count:</b> This shows the count associated with the icon. In general, a number next to the OK icon is redundant since the total count is already shown in the header area. Therefore, an OK status should be visually represented by an icon only. Alternatively, a card, not located in the dashboard view, may require the number count to be displayed with the OK icon. Note: In the case of the mini card alternate, it is recommended to limit this to one number due to space restrictions.</li>
-          <li><b>Action Icon</b> (optional): If no objects exists, you may want to display the create or add icon, whichever is the primary action. Note: Currently, only one action icon is supported in this design.</li>
+          <li><b>Action Icon</b> (optional): If no objects exist, you may want to display the create or add icon, whichever is the primary action. Note: Currently, only one action icon is supported in this design.</li>
           <li><b>Tooltips:</b> Use tooltips as necessary. It is recommended that tooltips are used for the status and action icons.</li>
-          <li><b>Links:</b> Blue text with an underline on hover reinforces that elements are interactive.</li>
+          <li><b>Links:</b> Blue text with an underline that appears on hover reinforces that elements are interactive.</li>
         </ol>
       </div>
     </div>
