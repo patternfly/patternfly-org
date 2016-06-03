@@ -22,11 +22,17 @@ layout: page-tabs
     <p><a href="{{ site.baseurl}}pattern-library/navigation/horizontal-navigation/horizontal-navigation.html" target="_blank">View full page example</a></p>
     <h2 id="example-overview-2">Navbar Variations</h2>
     <h3>Single-Level Menu Bar</h3>
-    {% include widgets/navigation/horizontal-primary-nav-bar.html %}
+    <div class="example-pf">
+      {% include widgets/navigation/horizontal-primary-nav-bar.html %}
+    </div>
     <h3>Two-Level Menu Bar</h3>
-    {% include widgets/navigation/horizontal-persistent-secondary-tertiary.html %}
+    <div class="example-pf" style="height: 140px;">
+      {% include widgets/navigation/horizontal-persistent-secondary-tertiary.html %}
+    </div>
     <h3>Menu Bar with Drop-Downs</h3>
-    {% include widgets/navigation/horizontal-multi-level.html %}
+    <div class="example-pf">
+      {% include widgets/navigation/horizontal-multi-level.html %}
+    </div>
   </div>
   <div role="tabpanel" class="tab-pane" id="design">
     <h2>Single-Level Menu Bar</h2>
@@ -64,7 +70,7 @@ layout: page-tabs
     {% include nav-tabs-code.html angular=false %}
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
-    <p>Jump to <a href="#example-code-1">Standard Horizontal Navigation</a>, <a href="#example-code-2">Single-Level Menu Bar</a>, <a href="#example-code-3">Two-Level Menu Bar</a>, or <a href="#example-code-4">Menu Bar with Drop-Downs</a></p>
+        <p>Jump to <a href="#example-code-1">Standard Horizontal Navigation</a>, <a href="#example-code-2">Single-Level Menu Bar</a>, <a href="#example-code-3">Two-Level Menu Bar</a>, or <a href="#example-code-4">Menu Bar with Drop-Downs</a></p>
         <h2 id="example-code-1">Standard Horizontal Navigation</h2>
         <div class="example-pf">
           <iframe src="{{ site.baseurl}}pattern-library/navigation/horizontal-navigation/horizontal-navigation.html"
@@ -99,30 +105,24 @@ layout: page-tabs
           {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Single-Level Menu Bar</h2>
-        <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            {% include widgets/navigation/horizontal-primary-nav-bar.html %}
-          </div>
+        <div class="example-pf" style="padding-bottom: 20px;">
+          {% include widgets/navigation/horizontal-primary-nav-bar.html %}
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
         <div class="collapse in" id="markup-2">
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/navigation/horizontal-primary-nav-bar.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-3">Two-Level Menu Bar</h2>
-        <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            {% include widgets/navigation/horizontal-persistent-secondary-tertiary.html %}
-          </div>
+        <div class="example-pf" style="height: 140px;">
+          {% include widgets/navigation/horizontal-persistent-secondary-tertiary.html %}
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
         <div class="collapse in" id="markup-3">
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/navigation/horizontal-persistent-secondary-tertiary.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-4">Menu Bar with Drop-Downs</h2>
-        <div class="example-pf">
-          <div class="example-pf-demo example-pf-demo-no-padding">
-            {% include widgets/navigation/horizontal-multi-level.html %}
-          </div>
+        <div class="example-pf" style="padding-bottom: 20px;">
+          {% include widgets/navigation/horizontal-multi-level.html %}
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a></p>
         <div class="collapse in" id="markup-4">
