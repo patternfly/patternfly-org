@@ -16,7 +16,7 @@ layout: page-tabs
     <h2 id="example-overview-1">Example</h2>
     <div class="example">
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-7">
           <div class="example-pf">
             {% include widgets/forms/field-level-help.html id="help-1" %}
           </div>
@@ -46,7 +46,7 @@ layout: page-tabs
         <h2 id="example-code-1">Example</h2>
         <div class="example">
           <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-7">
               <div class="example-pf">
                 {% include widgets/forms/field-level-help.html id="help-2" %}
               </div>
