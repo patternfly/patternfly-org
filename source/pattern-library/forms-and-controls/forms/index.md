@@ -114,17 +114,6 @@ layout: page-tabs
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
         <div class="collapse in" id="markup-1">
           <pre class="prettyprint">{% capture markup_include %}
-<style>
-  .modal{
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    z-index: 1;
-    display: block;
-  }
-</style>
 {% include widgets/forms/input-validation-modal.html id-default="modalInput" id-disabled="modalInputDisabled" id-error="modalInputError" has-error=false %}
           {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
@@ -135,17 +124,6 @@ layout: page-tabs
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
         <div class="collapse in" id="markup-2">
           <pre class="prettyprint">{% capture markup_include %}
-<style>
-  .modal{
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    z-index: 1;
-    display: block;
-  }
-</style>
 {% include widgets/forms/input-validation-modal.html id-default="modalInput" id-disabled="modalInputDisabled" id-error="modalInputError" has-error=true %}
           {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
