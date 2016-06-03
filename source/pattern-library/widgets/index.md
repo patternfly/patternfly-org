@@ -225,6 +225,41 @@ layout: page
 </pre>
     </div>
   </div>
+  <div class="section" id="kebabs">
+    <h3>Kebabs</h3>
+    <p>Kebabs are a restyled version of a dropdown and support the same feature set. See <a href="http://getbootstrap.com/components/#dropdowns">http://getbootstrap.com/components/#dropdowns</a> for complete dropdowns documentation.</p>
+    <div class="pf-example">
+      <div class="dropdown  dropdown-kebab-pf">
+        <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span class="fa fa-ellipsis-v"></span>
+        </button>
+        <ul class="dropdown-menu " aria-labelledby="dropdownKebab">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="reference-markup"><a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="dropdowns-markup" href="#kebabs-markup">Reference Markup</a></p>
+    <div class="collapse" id="kebabs-markup">
+      <pre class="prettyprint">
+      &lt;div class="dropdown  dropdown-kebab-pf"&gt;
+        &lt;button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"&gt;
+          &lt;span class="fa fa-ellipsis-v"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;ul class="dropdown-menu " aria-labelledby="dropdownKebab"&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+          &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      </pre>
+    </div>
+  </div>
   <div class="section" id="button-groups">
     <h3>Button Groups</h3>
     <p>See <a href="http://getbootstrap.com/components/#btn-groups">http://getbootstrap.com/components/#btn-groups</a> for complete button groups documentation.</p>
@@ -1129,6 +1164,254 @@ layout: page
 </pre>
     </div>
   </div>
+  <div class="section" id="fixed-height-accordion">
+    <h3>Fixed Height Accordion (Collapse)</h3>
+    <p>Same markup as Accordion but in a fixed height container. The content of the collapse areas scroll rather than expanding the outer accordion container.</p>
+    <p><strong>Note:</strong> Setting the collapse areas to scroll rather than expand requires <a href="https://github.com/patternfly/patternfly/blob/master/dist/js/patternfly.min.js">patternfly.min.js</a>, initialization via <code>initCollapseHeights()</code></p>
+    <div class="pf-example">
+      <div class="panel-group" id="fixed-accordion" style="height: 350px; width:240px;">
+        <div class="panel panel-default">
+          <div class="panel-heading" data-component="collapse-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#fixed-accordion" href="#fixedCollapseOne">
+                Lorem ipsum
+              </a>
+            </h4>
+          </div>
+          <div id="fixedCollapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+              Praesent sagittis est et arcu fringilla placerat. Cras erat ante, dapibus non mauris ac, volutpat sollicitudin ligula. Morbi gravida nisl vel risus tempor, sit amet luctus erat tempus. Curabitur blandit sem non pretium bibendum. Donec eleifend non turpis vitae vestibulum. Vestibulum ut sem ac nunc posuere blandit sed porta lorem. Cras rutrum velit vel leo iaculis imperdiet.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" data-component="collapse-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#fixed-accordion" href="#fixedCollapseTwo" class="collapsed">
+                Dolor sit amet
+              </a>
+            </h4>
+          </div>
+          <div id="fixedCollapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+              Donec consequat dignissim neque, sed suscipit quam egestas in. Fusce bibendum laoreet lectus commodo interdum. Vestibulum odio ipsum, tristique et ante vel, iaculis placerat nulla. Suspendisse iaculis urna feugiat lorem semper, ut iaculis risus tempus.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" data-component="collapse-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#fixed-accordion" href="#fixedCollapseThree" class="collapsed">
+                Consectetur
+              </a>
+            </h4>
+          </div>
+          <div id="fixedCollapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              Curabitur nisl quam, interdum a venenatis a, consequat a ligula. Nunc nec lorem in erat rhoncus lacinia at ac orci. Sed nec augue congue, vehicula justo quis, venenatis turpis. Nunc quis consectetur purus. Nam vitae viverra lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu augue felis. Maecenas in dignissim purus, quis pulvinar lectus. Vivamus euismod ultrices diam, in mattis nibh.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" data-component="collapse-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#fixed-accordion" href="#fixedCollapseFour" class="collapsed">
+                Adipisicing elit
+              </a>
+            </h4>
+          </div>
+          <div id="fixedCollapseFour" class="panel-collapse collapse">
+            <div class="panel-body">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.              </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" data-component="collapse-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#fixed-accordion" href="#fixedCollapseFive" class="collapsed">
+                Suspendisse lectus tortor
+              </a>
+            </h4>
+          </div>
+          <div id="fixedCollapseFive" class="panel-collapse collapse">
+            <div class="panel-body">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" data-component="collapse-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#fixed-accordion" href="#fixedCollapseSix" class="collapsed">
+                Velit mauris
+              </a>
+            </h4>
+          </div>
+          <div id="fixedCollapseSix" class="panel-collapse collapse">
+            <div class="panel-body">
+              Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" data-component="collapse-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#fixed-accordion" href="#fixedCollapseSeven" class="collapsed">
+                Aliquam convallis
+              </a>
+            </h4>
+          </div>
+          <div id="fixedCollapseSeven" class="panel-collapse collapse">
+            <div class="panel-body">
+              Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" data-component="collapse-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#fixed-accordion" href="#fixedCollapseEight" class="collapsed">
+                Vulputate dictum
+              </a>
+            </h4>
+          </div>
+          <div id="fixedCollapseEight" class="panel-collapse collapse">
+            <div class="panel-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget vulputate orci purus ut lorem. In fringilla mi in ligula. Pellentesque aliquam quam vel dolor. Nunc adipiscing. Sed quam odio, tempus ac, aliquam molestie, varius ac, tellus. Vestibulum ut nulla aliquam risus rutrum interdum. Pellentesque lorem. Curabitur sit amet erat quis risus feugiat viverra. Pellentesque augue justo, sagittis et, lacinia at, venenatis non, arcu. Nunc nec libero. In cursus dictum risus. Etiam tristique nisl a nulla. Ut a orci. Curabitur dolor nunc, egestas at, accumsan at, malesuada nec, magna.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      jQuery(document).ready(function() {
+        jQuery('#fixed-accordion').initCollapseHeights();
+      });
+    </script>
+    <p class="reference-markup"><a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="accordion-markup" href="#fixed-accordion-markup">Reference Markup</a></p>
+    <div class="collapse" id="fixed-accordion-markup">
+        <pre class="prettyprint">
+        &lt;div class="panel-group" id="fixed-accordion" style="height: 350px;"&gt;
+          &lt;div class="panel panel-default"&gt;
+            &lt;div class="panel-heading" data-component="collapse-heading"&gt;
+              &lt;h4 class="panel-title"&gt;
+                &lt;a data-toggle="collapse" data-parent="#fixed-accordion" href="#fixedCollapseOne"&gt;
+                  Lorem ipsum
+                &lt;/a&gt;
+              &lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div id="fixedCollapseOne" class="panel-collapse collapse in"&gt;
+              &lt;div class="panel-body"&gt;
+                Praesent sagittis est et arcu fringilla placerat. Cras erat ante, dapibus non mauris ac, volutpat sollicitudin ligula. Morbi gravida nisl vel risus tempor, sit amet luctus erat tempus. Curabitur blandit sem non pretium bibendum. Donec eleifend non turpis vitae vestibulum. Vestibulum ut sem ac nunc posuere blandit sed porta lorem. Cras rutrum velit vel leo iaculis imperdiet.
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="panel panel-default"&gt;
+            &lt;div class="panel-heading" data-component="collapse-heading"&gt;
+              &lt;h4 class="panel-title"&gt;
+                &lt;a data-toggle="collapse" data-parent="#fixed-accordion" href="#fixedCollapseTwo" class="collapsed"&gt;
+                  Dolor sit amet
+                &lt;/a&gt;
+              &lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div id="fixedCollapseTwo" class="panel-collapse collapse"&gt;
+              &lt;div class="panel-body"&gt;
+                Donec consequat dignissim neque, sed suscipit quam egestas in. Fusce bibendum laoreet lectus commodo interdum. Vestibulum odio ipsum, tristique et ante vel, iaculis placerat nulla. Suspendisse iaculis urna feugiat lorem semper, ut iaculis risus tempus.
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="panel panel-default"&gt;
+            &lt;div class="panel-heading" data-component="collapse-heading"&gt;
+              &lt;h4 class="panel-title"&gt;
+                &lt;a data-toggle="collapse" data-parent="#fixed-accordion" href="#fixedCollapseThree" class="collapsed"&gt;
+                  Consectetur
+                &lt;/a&gt;
+              &lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div id="fixedCollapseThree" class="panel-collapse collapse"&gt;
+              &lt;div class="panel-body"&gt;
+                Curabitur nisl quam, interdum a venenatis a, consequat a ligula. Nunc nec lorem in erat rhoncus lacinia at ac orci. Sed nec augue congue, vehicula justo quis, venenatis turpis. Nunc quis consectetur purus. Nam vitae viverra lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu augue felis. Maecenas in dignissim purus, quis pulvinar lectus. Vivamus euismod ultrices diam, in mattis nibh.
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="panel panel-default"&gt;
+            &lt;div class="panel-heading" data-component="collapse-heading"&gt;
+              &lt;h4 class="panel-title"&gt;
+                &lt;a data-toggle="collapse" data-parent="#fixed-accordion" href="#fixedCollapseFour" class="collapsed"&gt;
+                  Adipisicing elit
+                &lt;/a&gt;
+              &lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div id="fixedCollapseFour" class="panel-collapse collapse"&gt;
+              &lt;div class="panel-body"&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="panel panel-default"&gt;
+            &lt;div class="panel-heading" data-component="collapse-heading"&gt;
+              &lt;h4 class="panel-title"&gt;
+                &lt;a data-toggle="collapse" data-parent="#fixed-accordion" href="#fixedCollapseFive" class="collapsed"&gt;
+                  Suspendisse lectus tortor
+                &lt;/a&gt;
+              &lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div id="fixedCollapseFive" class="panel-collapse collapse"&gt;
+              &lt;div class="panel-body"&gt;
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="panel panel-default"&gt;
+            &lt;div class="panel-heading" data-component="collapse-heading"&gt;
+              &lt;h4 class="panel-title"&gt;
+                &lt;a data-toggle="collapse" data-parent="#fixed-accordion" href="#fixedCollapseSix" class="collapsed"&gt;
+                  Velit mauris
+                &lt;/a&gt;
+              &lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div id="fixedCollapseSix" class="panel-collapse collapse"&gt;
+              &lt;div class="panel-body"&gt;
+                Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="panel panel-default"&gt;
+            &lt;div class="panel-heading" data-component="collapse-heading"&gt;
+              &lt;h4 class="panel-title"&gt;
+                &lt;a data-toggle="collapse" data-parent="#fixed-accordion" href="#fixedCollapseSeven" class="collapsed"&gt;
+                  Aliquam convallis
+                &lt;/a&gt;
+              &lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div id="fixedCollapseSeven" class="panel-collapse collapse"&gt;
+              &lt;div class="panel-body"&gt;
+                Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="panel panel-default"&gt;
+            &lt;div class="panel-heading" data-component="collapse-heading"&gt;
+              &lt;h4 class="panel-title"&gt;
+                &lt;a data-toggle="collapse" data-parent="#fixed-accordion" href="#fixedCollapseEight" class="collapsed"&gt;
+                  Vulputate dictum
+                &lt;/a&gt;
+              &lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div id="fixedCollapseEight" class="panel-collapse collapse"&gt;
+              &lt;div class="panel-body"&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget vulputate orci purus ut lorem. In fringilla mi in ligula. Pellentesque aliquam quam vel dolor. Nunc adipiscing. Sed quam odio, tempus ac, aliquam molestie, varius ac, tellus. Vestibulum ut nulla aliquam risus rutrum interdum. Pellentesque lorem. Curabitur sit amet erat quis risus feugiat viverra. Pellentesque augue justo, sagittis et, lacinia at, venenatis non, arcu. Nunc nec libero. In cursus dictum risus. Etiam tristique nisl a nulla. Ut a orci. Curabitur dolor nunc, egestas at, accumsan at, malesuada nec, magna.
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;script&gt;
+          $(document).ready(function() {
+            $('#fixed-accordion').initCollapseHeights();
+          });
+        &lt;/script&gt;
+        </pre>
+    </div>
+  </div>
   <div class="section" id="data-tables">
     <h3>Data Tables</h3>
     <p>See <a href="http://datatables.net">http://datatables.net</a> for complete data tables documentation.</p>
@@ -1147,6 +1430,267 @@ layout: page
   });
 </script>{% endcapture %}{{ data_tables_markup_include | xml_escape }}
 </pre>
+    </div>
+  </div>
+  <div class="section" id="treegrid-table">
+    <h3>TreeGrid Table</h3>
+    <div class="pf-example">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover table-treegrid">
+          <thead>
+            <tr>
+              <th>Column heading</th>
+              <th>Column heading</th>
+              <th>Column heading</th>
+              <th>Column heading</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="treegrid-node">
+                <span class="icon node-icon fa fa-folder"></span>
+                Parent 1
+              </td>
+              <td>Column content</td>
+              <td>Column content</td>
+              <td>Column content</td>
+            </tr>
+            <tr data-parent="0">
+              <td class="treegrid-node">
+                <span class="icon node-icon fa fa-file-o"></span>
+                Child 1
+              </td>
+              <td>Column content</td>
+              <td>Column content</td>
+              <td>Column content</td>
+            </tr>
+            <tr data-parent="1">
+              <td class="treegrid-node">
+                <span class="icon node-icon fa fa-file-o"></span>
+                Grandchild 1
+              </td>
+              <td>Column content</td>
+              <td>Column content</td>
+              <td>Column content</td>
+            </tr>
+            <tr data-parent="1">
+              <td class="treegrid-node">
+                <span class="icon node-icon fa fa-file-o"></span>
+                Grandchild 2
+              </td>
+              <td>Column content</td>
+              <td>Column content</td>
+              <td>Column content</td>
+            </tr>
+            <tr data-parent="1">
+              <td class="treegrid-node">
+                <span class="icon node-icon fa fa-file-o"></span>
+                Grandchild 3
+              </td>
+              <td>Column content</td>
+              <td>Column content</td>
+              <td>Column content</td>
+            </tr>
+            <tr data-parent="0">
+              <td class="treegrid-node">
+                <span class="icon node-icon fa fa-file-o"></span>
+                Child 2
+              </td>
+              <td>Column content</td>
+              <td>Column content</td>
+              <td>Column content</td>
+            </tr>
+            <tr>
+              <td class="treegrid-node">
+                <span class="icon node-icon fa fa-folder"></span>
+                Parent 2
+              </td>
+              <td>Column content</td>
+              <td>Column content</td>
+              <td>Column content</td>
+            </tr>
+            <tr id="parent-3">
+              <td class="treegrid-node">
+                <span class="icon node-icon fa fa-folder"></span>
+                Parent 3
+              </td>
+              <td>Column content</td>
+              <td>Column content</td>
+              <td>Column content</td>
+            </tr>
+            <tr data-parent="#parent-3">
+              <td class="treegrid-node">
+                <span class="icon node-icon fa fa-file-o"></span>
+                Child 3
+              </td>
+              <td>Column content</td>
+              <td>Column content</td>
+              <td>Column content</td>
+            </tr>
+            <tr id="parent-4" class="collapsed">
+              <td class="treegrid-node">
+                <span class="icon node-icon fa fa-folder"></span>
+                Parent 4
+              </td>
+              <td>Column content</td>
+              <td>Column content</td>
+              <td>Column content</td>
+            </tr>
+            <tr data-parent="#parent-4" id="child-4">
+              <td class="treegrid-node">
+                <span class="icon node-icon fa fa-file-o"></span>
+                Child 4
+              </td>
+              <td>Column content</td>
+              <td>Column content</td>
+              <td>Column content</td>
+            </tr>
+            <tr data-parent="#child-4">
+              <td class="treegrid-node">
+                <span class="icon node-icon fa fa-file-o"></span>
+                Grandchild 4
+              </td>
+              <td>Column content</td>
+              <td>Column content</td>
+              <td>Column content</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <script>
+        jQuery('.table-treegrid').treegrid();
+      </script>
+    </div>
+    <p class="reference-markup">
+    <a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="bootstrap-combobox-markup" href="#treegrid-table-markup">Reference Markup</a></p>
+    <div class="collapse" id="treegrid-table-markup">
+      <pre class="prettyprint">
+&lt;div class="table-responsive"&gt;
+  &lt;table class="table table-bordered table-hover table-treegrid"&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td class="treegrid-node"&gt;
+        &lt;span class="icon node-icon fa fa-folder"&gt;&lt;/span&gt;
+        Parent 1
+      &lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr data-parent="0"&gt;
+      &lt;td class="treegrid-node"&gt;
+        &lt;span class="icon node-icon fa fa-file-o"&gt;&lt;/span&gt;
+        Child 1
+      &lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr data-parent="1"&gt;
+      &lt;td class="treegrid-node"&gt;
+        &lt;span class="icon node-icon fa fa-file-o"&gt;&lt;/span&gt;
+        Grandchild 1
+      &lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr data-parent="1"&gt;
+      &lt;td class="treegrid-node"&gt;
+        &lt;span class="icon node-icon fa fa-file-o"&gt;&lt;/span&gt;
+        Grandchild 2
+      &lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr data-parent="1"&gt;
+      &lt;td class="treegrid-node"&gt;
+        &lt;span class="icon node-icon fa fa-file-o"&gt;&lt;/span&gt;
+        Grandchild 3
+      &lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr data-parent="0"&gt;
+      &lt;td class="treegrid-node"&gt;
+        &lt;span class="icon node-icon fa fa-file-o"&gt;&lt;/span&gt;
+        Child 2
+      &lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class="treegrid-node"&gt;
+        &lt;span class="icon node-icon fa fa-folder"&gt;&lt;/span&gt;
+        Parent 2
+      &lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr id="parent-3"&gt;
+      &lt;td class="treegrid-node"&gt;
+        &lt;span class="icon node-icon fa fa-folder"&gt;&lt;/span&gt;
+        Parent 3
+      &lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr data-parent="#parent-3"&gt;
+      &lt;td class="treegrid-node"&gt;
+        &lt;span class="icon node-icon fa fa-file-o"&gt;&lt;/span&gt;
+        Child 3
+      &lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr id="parent-4" class="collapsed"&gt;
+      &lt;td class="treegrid-node"&gt;
+        &lt;span class="icon node-icon fa fa-folder"&gt;&lt;/span&gt;
+        Parent 4
+      &lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr data-parent="#parent-4" id="child-4"&gt;
+      &lt;td class="treegrid-node"&gt;
+        &lt;span class="icon node-icon fa fa-file-o"&gt;&lt;/span&gt;
+        Child 4
+      &lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr data-parent="#child-4"&gt;
+      &lt;td class="treegrid-node"&gt;
+        &lt;span class="icon node-icon fa fa-file-o"&gt;&lt;/span&gt;
+        Grandchild 4
+      &lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $('.table-treegrid').treegrid();
+&lt;/script&gt;
+      </pre>
     </div>
   </div>
   <div class="section" id="bootstrap-combobox">
