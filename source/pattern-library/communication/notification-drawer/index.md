@@ -23,7 +23,7 @@ codetab: false
       </div>
       <div class="col-md-4 col-lg-5">
         <ol>
-          <li><b>Toast Notification:</b> The drawer should utilize the current <a href="https://www.patternfly.org/patterns/toast-notifications/">Toast Notification</a>. Shows the notification title and and optional content relevant icon. </li>
+          <li><b>Toast Notification:</b> The drawer should utilize the current <a href="{{site.baseurl}}pattern-library/communication/toast-notifications/">Toast Notification</a>. Shows the notification title and and optional content relevant icon. </li>
         </ol>
       </div>
     </div>
@@ -36,12 +36,12 @@ codetab: false
         <ol>
           <li><b>Icon:</b> Displays visual differentiator when new or unread notifications are present. Clicking on the icon will slide out a drawer and dismiss the toast notification. Clicking on the icon again will close the drawer. </li>
           <li><b>Drawer Title:</b> Title of Drawer.</li>
-          <li><b>Accordian:</b> Only one notification tab may be opened at a given time -maximizing drawer space. Italicized text will indicate number of new events. Clicking on the title will expand accordion.</li>
+          <li><b>Accordion:</b> Only one notification tab may be opened at a given time -maximizing drawer space. Italicized text will indicate number of new events. Clicking on the title will expand accordion.</li>
           <li><b>Row:</b> Example content shows relevant icon creating a visual differentiator between content severity or object type. New/unread notifications are shown in bold.</li>
           <li><b>Row Hover State:</b> Example of hover state.</li>
           <li><b>Mark All Read:</b> Clicking “Mark All Read” changes all visible unread rows (bold row type) to read (regular row type).</li>
           <li><b>Icon Empty:</b> The empty state shows no new events.</li>
-          <li><b>Row Actions:</b> Clicking on the <a href="https://www.patternfly.org/widgets/#kebabs">Kabob</a> menu will reveal a drop down containing actions for that item.</li>
+          <li><b>Row Actions:</b> Clicking on the <a href="{{site.baseurl}}pattern-library/widgets/#kebabs">Kabob</a> menu will reveal a drop down containing actions for that item.</li>
           <li><b>Infinite Scroll:</b> Infinite scroll reduces need to identify time range on accordion tab. Allows for free-range historical search of notifications.</li>
         </ol>
       </div>
