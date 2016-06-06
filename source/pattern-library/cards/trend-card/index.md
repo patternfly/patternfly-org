@@ -36,11 +36,11 @@ layout: page-tabs
             <ul>
               <li>Under the title</li>
               <li>Under the sparkline</li>
-              <li>In a <a href="{{ site.baseurl}}pattern-library/cards/dashboard-card/#dashboard-card-time-frame-filter">time frame filter</a></li>
+              <li>In a <a href="{{ site.baseurl}}pattern-library/dashboard/dashboard-card/#example-overview-2">time frame filter</a></li>
             </ul>
-            The time frame on a card is optional since there could be a single instance of the time frame label or <a href="{{ site.baseurl}}pattern-library/cards/dashboard-card/#dashboard-card-time-frame-filter">time frame filter</a> that applies to all cards within a single view.
+            The time frame on a card is optional since there could be a single instance of the time frame label or <a href="{{ site.baseurl}}pattern-library/dashboard/dashboard-card/#example-overview-2">time frame filter</a> that applies to all cards within a single view.
           </li>
-          <li><b>Actions Panel</b> (optional): See <a href="{{ site.baseurl}}pattern-library/cards/dashboard-card/#dashboard-card-actions-panel"> actions panel</a> under the Dashboard Cards pattern for more details.</li>
+          <li><b>Actions Panel</b> (optional): See <a href="{{ site.baseurl}}pattern-library/dashboard/dashboard-card"> actions panel</a> under the Dashboard Cards pattern for more details.</li>
         </ol>
       </div>
     </div>
