@@ -152,10 +152,13 @@ layout: page-tabs
             <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
             <div class="collapse in" id="markup-1">
               <pre class="prettyprint">{% capture markup_include %}
+<html class="layout-pf layout-pf-fixed">
+...
 <script src="components/c3/c3.min.js"></script>
 <script src="components/d3/d3.min.js"></script>
 <script src="components/matchHeight/jquery.matchHeight-min.js"></script>
 {% include widgets/navigation/vertical-nav-with-secondary.html %}
+</html>
               {% endcapture %}{{ markup_include | xml_escape }}</pre>
             </div>
           </div>
@@ -171,10 +174,13 @@ layout: page-tabs
             <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
             <div class="collapse in" id="markup-2">
               <pre class="prettyprint">{% capture markup_include %}
+<html class="layout-pf layout-pf-fixed">
+...
 <script src="components/c3/c3.min.js"></script>
 <script src="components/d3/d3.min.js"></script>
 <script src="components/matchHeight/jquery.matchHeight-min.js"></script>
 {% include widgets/navigation/vertical-nav-with-secondary.html %}
+</html>
               {% endcapture %}{{ markup_include | xml_escape }}</pre>
             </div>
           </div>
