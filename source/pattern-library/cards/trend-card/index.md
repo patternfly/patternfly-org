@@ -22,13 +22,13 @@ layout: page-tabs
       <div class="col-md-5 col-lg-7">
         <ol>
           <li><b>Title:</b> Identify a name for the trend being displayed. If the title does not require much emphasis and the trend is on the right, you may opt to place the title under the actual value versus the top left of the card.</li>
-          <li><b>Actual Value or Percentage:</b> The location of the actual value or percentage should be shown. The position may vary dependent on usage. Placement options for the actual value include:
+          <li><b>Actual Value or Percentage:</b> Shows the current value or percentage. The position may vary dependent on usage. Placement options for the actual value include:
             <ul>
               <li>Above the sparkline</li>
               <li>Left of the sparkline</li>
             </ul>
           </li>
-          <li><b>Total Value</b> (ƒoptional): If needed, provide total value next to the actual value to help provide context.</li>
+          <li><b>Total Value</b> (optional): If needed, provide total value next to the actual value to help provide context.</li>
           <li><b>Unit of Measurement:</b> The label for unit of measurement is shown after the the value.</li>
           <li><b>Sparkline:</b> See the<a href="{{ site.baseurl}}pattern-library/data-visualization/sparkline/"> Sparkline pattern</a> for more details.</li>
           <li><b>Tooltip:</b> Use a tooltip on hover to display additional information about exact points on the sparkline (e.g. values and/or percentages). A vertical line and marker helps to accentuate the hover point.</li>
@@ -36,11 +36,11 @@ layout: page-tabs
             <ul>
               <li>Under the title</li>
               <li>Under the sparkline</li>
-              <li>In a <a href="{{ site.baseurl}}pattern-library/cards/dashboard-card/#dashboard-card-time-frame-filter">time frame filter</a></li>
+              <li>In a <a href="{{ site.baseurl}}pattern-library/dashboard/dashboard-card/#example-overview-2">time frame filter</a></li>
             </ul>
-            The time frame on a card is optional since there could be a single instance of the time frame label or <a href="{{ site.baseurl}}pattern-library/cards/dashboard-card/#dashboard-card-time-frame-filter">time frame filter</a> that applies to all cards within a single view.
+            The time frame on a card is optional since there could be a single instance of the time frame label or <a href="{{ site.baseurl}}pattern-library/dashboard/dashboard-card/#example-overview-2">time frame filter</a> that applies to all cards within a single view.
           </li>
-          <li><b>Actions Panel</b> (optional): See <a href="{{ site.baseurl}}pattern-library/cards/dashboard-card/#dashboard-card-actions-panel"> actions panel</a> under the Dashboard Cards pattern for more details.</li>
+          <li><b>Actions Panel</b> (optional): See <a href="{{ site.baseurl}}pattern-library/dashboard/dashboard-card"> actions panel</a> under the Dashboard Cards pattern for more details.</li>
         </ol>
       </div>
     </div>
@@ -54,7 +54,7 @@ layout: page-tabs
           <li><b>Title:</b> Identify the name of the group or category of the trends being displayed. For a card with multiple trends, the title is always located at the top left.</li>
           <li><b>Time Frame:</b> The time frame is located under the title in a card with multiple trends.</li>
           <li><b>Trend Label:</b> Since there are multiple trends, each trend should be labeled.</li>
-          <li><b>Actual Value:</b> The location of the actual value should be shown to the right of the sparkline.</li>
+          <li><b>Actual Value:</b> Shows the current value to the right of the sparkline.</li>
           <li><b>Total Value</b> (optional): If needed, provide total value next to the actual value to help provide context.</li>
           <li><b>Unit of Measurement:</b> The label for unit of measurement is shown after the the value.</li>
           <li><b>Percentage</b> (optional): The location of the percentage can be shown to the right of the sparkline.</li>

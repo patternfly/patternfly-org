@@ -30,7 +30,8 @@ layout: page-tabs
       {% include widgets/navigation/horizontal-persistent-secondary-tertiary.html %}
     </div>
     <h3>Menu Bar with Drop-Downs</h3>
-    <div class="example-pf">
+    <!-- Giving menus a little room so they don't drop off the page. -->
+    <div class="example-pf" style="margin-bottom: 150px;">
       {% include widgets/navigation/horizontal-multi-level.html %}
     </div>
   </div>
@@ -128,6 +129,8 @@ layout: page-tabs
         <div class="collapse in" id="markup-4">
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/navigation/horizontal-multi-level.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
+        <!-- Giving menus a little room so they don't drop off the page. -->
+        <div class="collapse in" id="markup-4" style="margin-bottom: 150px;"></div>
       </div>
     </div>
   </div>
