@@ -9,7 +9,7 @@ codetab: false
     <p>The find pattern is used to locate objects in a large dataset by entering a query. Unlike filter, find does not
     remove non-matching objects from view so it can be used to sift through a large dataset without losing the context
     provided by other displayed items. Find is displayed as a component of the Data Toolbar.</p>
-    <p><b>Find should NOT be used in the following cases:</b></p>
+    <p>Find should not be used in the following cases:</p>
     <ul>
       <li>Paging is used and find cannot work across all pages.</li>
       <li>Infinite scrolling is used and find cannot work across the entire data set.</li>
