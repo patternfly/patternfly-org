@@ -47,7 +47,7 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
       </div>
       <div class="col-md-5 col-lg-7">
         <ol>
-          <li><b>Title:</b> Define a title for the card. See <a href="{{ site.baseurl}}pattern-library/cards/dashboard-card/">Dashboard Cards</a> for more information.</li>
+          <li><b>Title:</b> Define a title for the card. See <a href="{{ site.baseurl}}pattern-library/dashboard/dashboard-card">Dashboard Cards</a> for more information.</li>
           <li><b>Utilization Bar Chart:</b> See <a href="{{ site.baseurl}}pattern-library/data-visualization/utilization-bar-chart/">Utilization Bar Chart</a> for more information about the chart’s appearance and behavior.</li>
           <li><b>Used Value:</b> Show a value for amount used.</li>
           <li><b>Total Value:</b> In addition to the used value, it is recommended to show the total value. This can be shown with the used value (i.e x of y used) or you may opt to provide this additional information in a tooltip.</li>
