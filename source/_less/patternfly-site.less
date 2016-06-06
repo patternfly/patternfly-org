@@ -12,12 +12,12 @@
 body {
   font-size: 13px;
   padding-top: 0;
-  margin-bottom: 158px; // footer height
+  margin-bottom: 158px; // Sticky footer
   @media (min-width: @screen-md) {
-    margin-bottom: 87px;
+    margin-bottom: 87px; // Sticky footer
   }
   @media (min-width: @screen-lg) {
-    margin-bottom: 102px;
+    margin-bottom: 102px; // Sticky footer
   }
 }
 
@@ -236,14 +236,15 @@ body {
 
 footer {
   border-top: 1px solid #D5D5D5;
-  bottom: 0;
+  bottom: 0; // Sticky footer
   font-size: 10px;
-  left: (@grid-gutter-width / 2);
+  left: (@grid-gutter-width / 2); // Sticky footer
   line-height: 15px;
   padding-bottom: 28px;
   padding-top: 28px;
-  position: absolute;
+  position: absolute; // Sticky footer
   width: calc(100% ~"-" @grid-gutter-width);
+  // Sticky footer
   .has-sidebar & {
     left: (@navbar-toggle-sidebar-width + (@grid-gutter-width / 2));
     width: calc(100% ~"-" @navbar-toggle-sidebar-width ~"-" @grid-gutter-width);
@@ -338,7 +339,7 @@ h1, h2, h3 {
 
 header {
   + .container-fluid {
-    padding-bottom: 50px;
+    padding-bottom: 50px; // Sticky footer
     padding-top: 72px;
     transition: padding-left .2s cubic-bezier(.35,0,.25,1);
     .has-sidebar & {
@@ -558,7 +559,7 @@ header {
 
 .home {
   height: 100%;
-//   position: relative;
+//  position: relative;
   > div p {
     font-size: 13px;
     @media (min-width: @screen-sm) {
@@ -755,8 +756,14 @@ hr {
 }
 
 html {
-  min-height: 100%;
-  position: relative;
+  min-height: 100%; // Sticky footer
+  position: relative; // Sticky footer
+  &.home-container {
+    height: 100%; // Sticky footer
+    footer {
+      position: relative; // Override Sticky footer
+    }
+  }
 }
 
 .icons {
