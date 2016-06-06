@@ -54,7 +54,7 @@ layout: page-tabs
           <li><b>Content Separator:</b> A horizontal line visually separates the content in the card. The content separator is located below the values and above the donut chart. </li>
           <li><b>Donut Chart:</b> See the <a href="{{ site.baseurl}}pattern-library/data-visualization/donut-chart/">Donut Chart Pattern</a> for more details.</li>
           <li><b>Sparkline:</b> See the <a href="{{ site.baseurl}}pattern-library/data-visualization/sparkline/">Sparkline Pattern</a> for more details.</li>
-          <li><b>Time Frame:</b> The time frame is indicated under the sparkline by small text and is left aligned.</li>
+          <li><b>Time Frame</b> (optional): The time frame is indicated under the sparkline by small text and is left aligned.</li>
         </ol>
       </div>
     </div>
@@ -77,7 +77,7 @@ layout: page-tabs
           <li><b>Content Separator:</b> A horizontal line visually separates the content in the card. The content separator is located below the values and above the donut chart.</li>
           <li><b>Donut Chart:</b> See the <a href="{{ site.baseurl}}pattern-library/data-visualization/donut-chart/">Donut Chart Pattern</a> for more details.</li>
           <li><b>Sparkline:</b> See the <a href="{{ site.baseurl}}pattern-library/data-visualization/sparkline/">Sparkline Pattern</a> for more details.</li>
-          <li><b>Time Frame:</b> The time frame is indicated under the sparkline by small text and is left aligned.</li>
+          <li><b>Time Frame</b> (optional): The time frame is indicated under the sparkline by small text and is left aligned.</li>
         </ol>
       </div>
     </div>
