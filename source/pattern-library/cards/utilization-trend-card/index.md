@@ -70,7 +70,7 @@ layout: page-tabs
           <li><b>Card Title:</b> Use a card title if multiple metrics are shown in one card.</li>
           <li><b>Title Separator:</b> Include a horizontal line under the card title.</li>
           <li><b>Metric Title:</b> Display the metric name.</li>
-          <li><b>Current Value:</b> Display the current value. This could be available, which is the PatternFly default, or used.</li>
+          <li><b>Current Value:</b> Display the current value. This could be the amount available (PatternFly default) or the amount used.</li>
           <li><b>Label:</b> The label for the value is left aligned and listed above the total value.</li>
           <li><b>Total Value:</b> The total value is left aligned and listed under the label.</li>
           <li><b>Unit of Measurement:</b> The label for unit of measurement is shown after the total value.</li>
