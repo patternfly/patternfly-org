@@ -5,15 +5,15 @@ layout: page
 ---
 <h3 id="overview">Overview</h3>
 <p>
-  Part of the job of designing a great user experience involves the proper selection and use of widgets. The PattenFly library consists of components that are commonly used. Broader usage of PattenFly widgets is covered with the
-  <a title="Patterns" href="{{ site.baseurl}}patterns/">Patterns</a>
-  section of this site.
+Widgets are reusable controls and elements — building blocks for your UI. Widgets are often used together as elements of
+larger <a href="{{site.baseurl}}pattern-library">Design Patterns</a>.
 </p>
 <p>
-  In essence, PatternFly is customized version <a href="http://getbootstrap.com">Bootstrap 3</a> with a few extra widgets thrown in.  Please see <a href="http://getbootstrap.com">http://getbootstrap.com</a> for complete documentation on using these widgets.  Of course, you can always use these examples as reference for building your own version of these widgets independent of Bootstrap.
-</p>
-<p>
-  Below is a list of Bootstrap's widgets as customized for Patternfly, as well as the widgets that PatternFly adds.
+A note on code dependencies: Most PatternFly widgets are customized versions of
+<a href="http://getbootstrap.com/components/" target="_blank">Bootstrap Components</a>. PatternFly depends on Bootstrap’s CSS, but
+not <a href="http://getbootstrap.com/javascript/#js-overview" target="_blank">Bootstrap’s JavaScript</a>, in order to keep the
+Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" target="_blank">C3.js</a> for chart components, and
+<a href="https://datatables.net/" target="_blank">DataTables.net</a> for table-based components.
 </p>
 <!--
 <div class="super-section">
