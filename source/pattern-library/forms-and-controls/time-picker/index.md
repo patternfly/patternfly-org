@@ -7,7 +7,7 @@ url-js-extra: ['components/moment/min/moment.min.js', 'components/eonasdan-boots
 ---
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>The timepicker allows a user to select a time. The most common use case is selecting a date for something to run
+    <p>The timepicker allows a user to select a time. The most common use case is selecting a time for something to run
     or expire. The timepicker widget is based on the Bootstrap-datetimepicker. See the
     <a href="http://eonasdan.github.io/bootstrap-datetimepicker/#bootstrap-3-datepicker-v4-docs">Bootstrap 3 Datepicker v4 Docs</a>
     for complete documentation.</p>
