@@ -33,7 +33,7 @@ layout: page-tabs
       </div>
       <div class="col-md-7 col-lg-8">
         <ol>
-          <li><b>Background:</b> The notification should occupy the full width of the main content area. See the "In Context" example above.</li>
+          <li><b>Background:</b> The notification should occupy the full width of the main content area. See the <a href="{{site.baseurl}}pattern-library/communication/inline-notifications">"In Context"</a> example.</li>
           <li><b>Icons:</b> Indicate the type of the notification. There are four types of available notifications: info, success, warning and error.</li>
           <li><b>Message:</b> Show a short message within the notification and make it clear what just happened or what the user needs to perform next.</li>
           <ul>
