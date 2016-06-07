@@ -8,8 +8,9 @@ codetab: false
   <div role="tabpanel" class="tab-pane active" id="overview">
     <p>The Notification Drawer is a content delivery system such as events, tasks, and alerts. It is a self contained
     system that is viewable without having to navigate to another area of the application. Upon login it offers initial
-    notifications for what has changed in the form of dismissible Toast Notifications and a permanent interactive icon
-    in the header bar. It is hidden or revealed at the user’s request.</p>
+    notifications for what has changed in the form of dismissible
+    <a href="{{site.baseurl}}pattern-library/communication/toast-notifications">Toast Notifications</a> and a permanent
+    interactive icon in the header bar. It is hidden or revealed at the user’s request.</p>
     <h2 id="example-overview-1">Example</h2>
     <div class="example-pf">
       <img src="{{site.baseurl}}assets/img/Patternfly_ToastNotificationTray_Hover.jpg" alt="notification-drawer-example"/>
