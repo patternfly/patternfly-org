@@ -10,9 +10,13 @@ codetab: false
     system that is viewable without having to navigate to another area of the application. Upon login it offers initial
     notifications for what has changed in the form of dismissible Toast Notifications and a permanent interactive icon
     in the header bar. It is hidden or revealed at the user’s request.</p>
-    <h2 id="example-overview-1">Example</h2>
+    <h2 id="example-overview-1">Vertical Navigation Example</h2>
     <div class="example-pf">
-      <img src="{{site.baseurl}}assets/img/Patternfly_ToastNotificationTray_Hover.jpg" alt="notification-drawer-example"/>
+      <img src="{{site.baseurl}}assets/img/Patternfly_ToastNotification_Tray_06_11_2016.jpg" alt="notification-drawer-example"/>
+    </div>  
+    <h2 id="example-overview-1">Horizontal Navigation Example</h2>
+    <div class="example-pf">
+      <img src="{{site.baseurl}}assets/img/Patternfly_ToastNotification_Tray_Horizontal.jpg" alt="notification drawer horizontal nav example"/>
     </div>
   </div>
   <div role="tabpanel" class="tab-pane" id="design">
