@@ -11,9 +11,14 @@ codetab: false
     notifications for what has changed in the form of dismissible
     <a href="{{site.baseurl}}pattern-library/communication/toast-notifications">Toast Notifications</a> and a permanent
     interactive icon in the header bar. It is hidden or revealed at the user’s request.</p>
-    <h2 id="example-overview-1">Example</h2>
+    <p>Jump to <a href="#example-overview-1">Vertical Navigation</a> or <a href="#example-overview-2">Horizontal Navigation</a></p>
+    <h2 id="example-overview-1">Vertical Navigation</h2>
     <div class="example-pf">
-      <img src="{{site.baseurl}}assets/img/Patternfly_ToastNotificationTray_Hover.jpg" alt="notification-drawer-example"/>
+      <img src="{{site.baseurl}}assets/img/Patternfly_ToastNotification_Tray_06_11_2016.jpg" alt="notification-drawer-example"/>
+    </div>  
+    <h2 id="example-overview-2">Horizontal Navigation</h2>
+    <div class="example-pf">
+      <img src="{{site.baseurl}}assets/img/Patternfly_ToastNotification_Tray_Horizontal.jpg" alt="notification drawer horizontal nav example"/>
     </div>
   </div>
   <div role="tabpanel" class="tab-pane" id="design">
