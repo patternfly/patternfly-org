@@ -81,6 +81,7 @@ The PatternFly Framework includes reference HTML markup and CSS for widgets and 
     </div>
   </div>
 </div>
+<!--
 <div class="row">
   <div class="col-md-6 download">
     <div class="download-icon">
@@ -101,6 +102,7 @@ The PatternFly Framework includes reference HTML markup and CSS for widgets and 
     </div>
   </div>
 </div>
+-->
 
 [1]: http://getbootstrap.com/
 [2]: http://www.apache.org/licenses/LICENSE-2.0.html
