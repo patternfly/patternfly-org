@@ -3,37 +3,37 @@ RewriteEngine on
 # Redirect all traffic to https
 #RewriteCond %{HTTP:X-Forwarded-Proto} !https
 #RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
-RewriteRule ^/?widgets/(.*)$ /pattern-library/widgets/$1 [L,R=301]
+#RewriteRule ^/?widgets/(.*)$ /pattern-library/widgets/$1 [L,R=301]
 
 # Redirect old urls to new site
-Redirect 301 /patterns/aggregate-status-card /pattern-library/cards/aggregate-status-card
-Redirect 301 /patterns/trend-card /pattern-library/cards/trend-card
-Redirect 301 /patterns/utilization-bar-card /pattern-library/cards/utilization-bar-card
-Redirect 301 /patterns/utilization-trend-card /pattern-library/cards/utilization-trend-card
-Redirect 301 /patterns/dashboard-layout /pattern-library/dashboard/dashboard-layout
-Redirect 301 /dashboard-card-base /pattern-library/dashboard/dashboard-card
-Redirect 301 /patterns/area-charts /pattern-library/data-visualization/area-chart
-Redirect 301 /patterns/bar-chart /pattern-library/data-visualization/bar-chart
-Redirect 301 /patterns/donut-chart /pattern-library/data-visualization/donut-chart
-Redirect 301 /patterns/heat-map /pattern-library/data-visualization/heat-map
-Redirect 301 /patterns/line-chart /pattern-library/data-visualization/line-chart
-Redirect 301 /patterns/pie-chart /pattern-library/data-visualization/pie-chart
-Redirect 301 /patterns/sparkline /pattern-library/data-visualization/sparkline
-Redirect 301 /patterns/utilization-bar-chart /pattern-library/data-visualization/utilization-bar-chart
-Redirect 301 /patterns/about-modal /pattern-library/communication/about-modal
-Redirect 301 /patterns/empty-state /pattern-library/communication/empty-state
-Redirect 301 /patterns/inline-notifications /pattern-library/communication/inline-notifications
-Redirect 301 /patterns/notification-drawer /pattern-library/communication/notification-drawer
-Redirect 301 /patterns/toast-notifications /pattern-library/communication/toast-notifications
-Redirect 301 /patterns/wizard /pattern-library/communication/wizard
-Redirect 301 /list-view /pattern-library/content-views/list-view
-Redirect 301 /patterns/table-view pattern-library/content-views/tree-view
-Redirect 301 /patterns/datepicker /pattern-library/forms-and-controls/date-picker
-Redirect 301 /patterns/field-level-help /pattern-library/forms-and-controls/field-level-help
-Redirect 301 /patterns/find /pattern-library/forms-and-controls/find
-Redirect 301 /patterns/forms /pattern-library/forms-and-controls/forms
-Redirect 301 /timepicker /pattern-library/forms-and-controls/timepicker
-Redirect 301 /patterns/vertical-with-persistent-secondary /pattern-library/navigation/vertical-navigation
+#Redirect 301 /patterns/aggregate-status-card /pattern-library/cards/aggregate-status-card
+#Redirect 301 /patterns/trend-card /pattern-library/cards/trend-card
+#Redirect 301 /patterns/utilization-bar-card /pattern-library/cards/utilization-bar-card
+#Redirect 301 /patterns/utilization-trend-card /pattern-library/cards/utilization-trend-card
+#Redirect 301 /patterns/dashboard-layout /pattern-library/dashboard/dashboard-layout
+#Redirect 301 /dashboard-card-base /pattern-library/dashboard/dashboard-card
+#Redirect 301 /patterns/area-charts /pattern-library/data-visualization/area-chart
+#Redirect 301 /patterns/bar-chart /pattern-library/data-visualization/bar-chart
+#Redirect 301 /patterns/donut-chart /pattern-library/data-visualization/donut-chart
+#Redirect 301 /patterns/heat-map /pattern-library/data-visualization/heat-map
+#Redirect 301 /patterns/line-chart /pattern-library/data-visualization/line-chart
+#Redirect 301 /patterns/pie-chart /pattern-library/data-visualization/pie-chart
+#Redirect 301 /patterns/sparkline /pattern-library/data-visualization/sparkline
+#Redirect 301 /patterns/utilization-bar-chart /pattern-library/data-visualization/utilization-bar-chart
+#Redirect 301 /patterns/about-modal /pattern-library/communication/about-modal
+#Redirect 301 /patterns/empty-state /pattern-library/communication/empty-state
+#Redirect 301 /patterns/inline-notifications /pattern-library/communication/inline-notifications
+#Redirect 301 /patterns/notification-drawer /pattern-library/communication/notification-drawer
+#Redirect 301 /patterns/toast-notifications /pattern-library/communication/toast-notifications
+#Redirect 301 /patterns/wizard /pattern-library/communication/wizard
+#Redirect 301 /list-view /pattern-library/content-views/list-view
+#Redirect 301 /patterns/table-view pattern-library/content-views/tree-view
+#Redirect 301 /patterns/datepicker /pattern-library/forms-and-controls/date-picker
+#Redirect 301 /patterns/field-level-help /pattern-library/forms-and-controls/field-level-help
+#Redirect 301 /patterns/find /pattern-library/forms-and-controls/find
+#Redirect 301 /patterns/forms /pattern-library/forms-and-controls/forms
+#Redirect 301 /timepicker /pattern-library/forms-and-controls/timepicker
+#Redirect 301 /patterns/vertical-with-persistent-secondary /pattern-library/navigation/vertical-navigation
 
 # Redirect blog posts to the new blog url
 Redirect 301 /donut-chart-relationship-of-a-set-of-values-to-a-whole https://blog.patternfly.org/donut-chart-relationship-of-a-set-of-values-to-a-whole
