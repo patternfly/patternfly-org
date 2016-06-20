@@ -155,6 +155,14 @@ To use these icons on the desktop, check out the [cheatsheet][4].
         <span class="icon-class">pficon-resource-pool</span>
       </li>
       <li>
+        <span class="pficon pficon-resources-almost-full"></span>
+        <span class="icon-class">pficon-resources-almost-full</span>
+      </li>      
+      <li>
+        <span class="pficon pficon-resources-full"></span>
+        <span class="icon-class">pficon-resources-full</span>
+      </li>      
+      <li>
         <span class="pficon pficon-restart"></span>
         <span class="icon-class">pficon-restart</span>
       </li>
