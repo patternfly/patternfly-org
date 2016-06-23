@@ -90,6 +90,30 @@ with these updates by checking out “What’s New” on the <a href="https://bl
         </a>
       </div>
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>About Modal</p>
+        <a href="{{ site.baseurl }}pattern-library/communication/about-modal">
+          <img src="{{site.baseurl}}assets/img/thumbnails/About-Modal.png" alt="About-Modal"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Notification Drawer</p>
+        <a href="{{ site.baseurl }}pattern-library/communication/notification-drawer">
+          <img src="{{site.baseurl}}assets/img/thumbnails/Notification-Drawer.png" alt="Notification Drawer"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Wizard</p>
+        <a href="{{ site.baseurl }}pattern-library/communication/wizard">
+          <img src="{{site.baseurl}}assets/img/thumbnails/Wizard.png" alt="Wizard"/>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 <div class="pattern-section" id="content-views">
@@ -238,6 +262,14 @@ with these updates by checking out “What’s New” on the <a href="https://bl
         </a>
       </div>
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Forms</p>
+        <a href="{{ site.baseurl }}pattern-library/forms-and-controls/forms">
+          <img src="{{site.baseurl}}assets/img/thumbnails/Forms.png" alt="time-picker"/>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 <div class="pattern-section" id="navigation">
@@ -248,6 +280,14 @@ with these updates by checking out “What’s New” on the <a href="https://bl
         <p>Vertical Navigation</p>
         <a href="{{ site.baseurl }}pattern-library/navigation/vertical-navigation">
           <img src="{{site.baseurl}}assets/img/thumbnails/Vert-Nav.png" alt="vertical-navigation"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Horizontal Navigation</p>
+        <a href="{{ site.baseurl }}pattern-library/navigation/horizontal-navigation">
+          <img src="{{site.baseurl}}assets/img/thumbnails/Horizontal-Navigation.png" alt="Horizontal Navigation"/>
         </a>
       </div>
     </div>
