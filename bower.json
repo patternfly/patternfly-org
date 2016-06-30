@@ -1,6 +1,6 @@
 {
   "name": "patternfly-org",
-  "version": "3.5.0",
+  "version": "3.5.1",
   "homepage": "https://github.com/patternfly/patternfly-org",
   "author": "Red Hat",
   "description": "Documentation, etc. for PatternFly",
@@ -13,11 +13,11 @@
     "tests"
   ],
   "dependencies": {
-    "angular-patternfly": "~3.5.0",
+    "angular-patternfly": "~3.5.1",
     "animate.css": "~3.4.0",
     "clipboard": "~1.5.5",
     "jquery.scrollTo": "~2.1.2",
-    "patternfly": "3.5.0",
+    "patternfly": "3.5.1",
     "wowjs": "~1.1.2"
   }
 }
