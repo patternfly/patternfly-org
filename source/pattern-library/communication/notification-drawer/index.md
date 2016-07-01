@@ -2,7 +2,7 @@
 title: Notification Drawer
 author: dlabrecq
 layout: page-tabs
-codetab: false
+codetab: true
 ---
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">
@@ -50,6 +50,37 @@ codetab: false
           <li><b>Row Actions:</b> Clicking on the <a href="{{site.baseurl}}pattern-library/widgets/#kebabs">Kabob</a> menu will reveal a drop down containing actions for that item.</li>
           <li><b>Infinite Scroll:</b> Infinite scroll reduces need to identify time range on accordion tab. Allows for free-range historical search of notifications.</li>
         </ol>
+      </div>
+    </div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="code">
+    {% include nav-tabs-code.html %}
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane nested active" id="html-css">
+        <h2 id="example-code-1">Vertical Navigation with Notification Drawer</h2>
+          <div class="example-pf">
+            <iframe src="{{ site.baseurl}}pattern-library/communication/notification-drawer/vertical-nav-notification-drawer.html"
+                    width="100%" height="650px;" scrolling="no" seamless></iframe>
+          </div>
+          <p><a href="{{ site.baseurl}}pattern-library/communication/notification-drawer/vertical-nav-notification-drawer.html" target="_blank">View full page example</a></p>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+              <div class="collapse in" id="markup-1">
+                <pre class="prettyprint">{% capture markup_include %}
+<html class="layout-pf layout-pf-fixed">
+...
+{% include widgets/navigation/vertical-nav-notification-drawer.html %}
+</html>
+                {% endcapture %}{{ markup_include | xml_escape }}</pre>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div role="tabpanel" class="tab-pane nested" id="angular">
+        <div ng-app="docsApp" ng-controller="DocsController" class="content">
+          <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.notification.directive.pfNotificationDrawer.html'"></div>
+        </div>
       </div>
     </div>
   </div>
