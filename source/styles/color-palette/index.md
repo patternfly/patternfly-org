@@ -533,12 +533,12 @@ layout: page
           <div class="important-color-swatch color-pf-cyan-700" data-toggle="popover" data-container="body" data-content="pf-cyan-700 #001f22"></div>
           <!-- Light Blue -->
           <div class="important-color-swatch color-pf-light-blue-100" data-toggle="popover" data-container="body" data-content="pf-light-blue-100 #beedf9"></div>
-          <div class="important-color-swatch color-pf-light-blue-200" data-toggle="popover" data-container="body" data-content="pf-light-blue-100 #7cdbf3"></div>
-          <div class="important-color-swatch color-pf-light-blue-300" data-toggle="popover" data-container="body" data-content="pf-light-blue-100 #35caed"></div>
-          <div class="important-color-swatch color-pf-light-blue-400" data-toggle="popover" data-container="body" data-content="pf-light-blue-100 #00b9e4"></div>
-          <div class="important-color-swatch color-pf-light-blue-500" data-toggle="popover" data-container="body" data-content="pf-light-blue-100 #008bad"></div>
-          <div class="important-color-swatch color-pf-light-blue-600" data-toggle="popover" data-container="body" data-content="pf-light-blue-100 #005c73"></div>
-          <div class="important-color-swatch color-pf-light-blue-700" data-toggle="popover" data-container="body" data-content="pf-light-blue-100 #002d39"></div>
+          <div class="important-color-swatch color-pf-light-blue-200" data-toggle="popover" data-container="body" data-content="pf-light-blue-200 #7cdbf3"></div>
+          <div class="important-color-swatch color-pf-light-blue-300" data-toggle="popover" data-container="body" data-content="pf-light-blue-300 #35caed"></div>
+          <div class="important-color-swatch color-pf-light-blue-400" data-toggle="popover" data-container="body" data-content="pf-light-blue-400 #00b9e4"></div>
+          <div class="important-color-swatch color-pf-light-blue-500" data-toggle="popover" data-container="body" data-content="pf-light-blue-500 #008bad"></div>
+          <div class="important-color-swatch color-pf-light-blue-600" data-toggle="popover" data-container="body" data-content="pf-light-blue-600 #005c73"></div>
+          <div class="important-color-swatch color-pf-light-blue-700" data-toggle="popover" data-container="body" data-content="pf-light-blue-700 #002d39"></div>
           <!-- Blue -->
           <div class="important-color-swatch color-pf-blue-50" data-toggle="popover" data-container="body" data-content="pf-blue-50 #def3ff"></div>
           <div class="important-color-swatch color-pf-blue-100" data-toggle="popover" data-container="body" data-content="pf-blue-100 #bee1f4"></div>
@@ -731,9 +731,9 @@ Use for general UI and backgrounds.</p>
     <div class="primary-color-swatch color-pf-gold-500 white-text">
     <p>pf-gold-500 <span class="primary-color-swatch-left-spacing-12">#b58100</span></p></div>
     <div class="primary-color-swatch color-pf-gold-600 white-text">
-    <p>pf-gold-400 <span class="primary-color-swatch-left-spacing-12">#795600</span></p></div>
+    <p>pf-gold-600 <span class="primary-color-swatch-left-spacing-12">#795600</span></p></div>
     <div class="primary-color-swatch color-pf-gold-700 white-text">
-    <p>pf-gold-500 <span class="primary-color-swatch-left-spacing-12">#3d2c00</span></p></div>
+    <p>pf-gold-700 <span class="primary-color-swatch-left-spacing-12">#3d2c00</span></p></div>
   </div>
 </div>
 <div class="col-lg-3">
@@ -751,9 +751,9 @@ Use for general UI and backgrounds.</p>
     <div class="primary-color-swatch color-pf-light-green-500 white-text">
     <p>pf-light-green-500 <span class="primary-color-swatch-left-spacing-12">#6ca100</span></p></div>
     <div class="primary-color-swatch color-pf-light-green-600 white-text">
-    <p>pf-light-green-400 <span class="primary-color-swatch-left-spacing-12">#486b00</span></p></div>
+    <p>pf-light-green-600 <span class="primary-color-swatch-left-spacing-12">#486b00</span></p></div>
     <div class="primary-color-swatch color-pf-light-green-700 white-text">
-    <p>pf-light-green-500 <span class="primary-color-swatch-left-spacing-12">#253600</span></p></div>
+    <p>pf-light-green-700 <span class="primary-color-swatch-left-spacing-12">#253600</span></p></div>
   </div>
 </div>
 </div>
@@ -814,9 +814,9 @@ Use for general UI and backgrounds.</p>
     <div class="primary-color-swatch color-pf-light-blue-500 white-text">
     <p>pf-light-blue-500 <span class="primary-color-swatch-left-spacing-12">#008bad</span></p></div>
     <div class="primary-color-swatch color-pf-light-blue-600 white-text">
-    <p>pf-light-blue-400 <span class="primary-color-swatch-left-spacing-12">#005c73</span></p></div>
+    <p>pf-light-blue-600 <span class="primary-color-swatch-left-spacing-12">#005c73</span></p></div>
     <div class="primary-color-swatch color-pf-light-blue-700 white-text">
-    <p>pf-light-blue-500 <span class="primary-color-swatch-left-spacing-12">#002d39</span></p></div>
+    <p>pf-light-blue-700 <span class="primary-color-swatch-left-spacing-12">#002d39</span></p></div>
   </div>
 </div>
 <div class="col-lg-3">
