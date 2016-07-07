@@ -1,5 +1,11 @@
 #/bin/sh
 
+# This script is called from .travis.yml, upon a successful build, and commits 
+# generated files to a seperate branch. Note that this script depends on 
+# AUTH_TOKEN being set via Travis CI configuration.
+
+TARGET_BRANCH=travis-build
+
 # User info
 git config --global user.name "Admin"
 git config --global user.email "patternfly@redhat.com"
