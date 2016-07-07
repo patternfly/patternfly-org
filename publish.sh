@@ -4,7 +4,7 @@
 # generated files to a seperate branch. Note that this script depends on 
 # AUTH_TOKEN being set via Travis CI configuration.
 
-TARGET_BRANCH=travis-build
+TARGET_BRANCH=releases
 
 # User info
 git config --global user.name "Admin"
