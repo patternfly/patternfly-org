@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/patternfly/patternfly-org.svg?branch=master)](https://travis-ci.org/patternfly/patternfly-org)
+
 # patternfly-org
 
 The PatternFly Org is the new source for the official documentation for PatternFly.
