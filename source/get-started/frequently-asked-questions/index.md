@@ -65,7 +65,7 @@ See the [PatternFly 2.0 Migration Guide][8] for step-by-step guidance to upgrade
  [1]: {{site.baseurl}}widgets/ "Widgets"
  [2]: http://getbootstrap.com/
  [3]: {{site.baseurl}}wikis/patterns/ "Patterns"
- [4]: {{site.baseurl}}contribute/ "Contribute"
+ [4]: {{site.baseurl}}get-started/contribute/ "Contribute"
  [5]: https://www.redhat.com/mailman/listinfo/patternfly
  [6]: http://getbootstrap.com/getting-started/#support
  [7]: https://support.mozilla.org/en-US/kb/install-firefox-linux

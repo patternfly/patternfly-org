@@ -7,7 +7,7 @@ url: 'https://www.patternfly.org' # the base hostname & protocol for your site
 collections:
 - whats-news
 blogurl: https://blog.patternfly.org
-exclude: ["components/patternfly/tests-src"]
+exclude: ["components/patternfly/tests"]
 navbar-pf-navbar-brand-icon: true
 navbar-pf-alt-navbar-brand-icon: true
 navbar-logo-icon: '/assets/img/logo.svg'
