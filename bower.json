@@ -19,6 +19,8 @@
     "jquery.scrollTo": "~2.1.2",
     "patternfly": "f012b78c7f90fada15718705a6d99f72d7060d5c",
     "wowjs": "~1.1.2"
+  },
+  "resolutions": {
+    "patternfly": "f012b78c7f90fada15718705a6d99f72d7060d5c"
   }
 }
-
