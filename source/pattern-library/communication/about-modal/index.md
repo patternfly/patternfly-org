@@ -16,27 +16,27 @@ codetab: false
     <div class="example-pf">
       <img src="{{site.baseurl}}assets/img/About_PFv2OneLine.jpg" alt="one line example"/>
     </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Description</h2>
-    <div class="row">
-      <div class="col-md-8 col-lg-7">
-        <img src="{{site.baseurl}}assets/img/Screen-Shot-2016-05-10-at-9.44.20-AM.png" alt="about_modal_spec" />
-      </div>
-      <div class="col-md-4 col-lg-5">
-        <ol>
-          <li><b>PatternFly Modal:</b> Utilizes the existing <a href="{{site.baseurl}}pattern-library/widgets/#modal">PatternFly Modal</a>. Upon opening, the background behind the modal should “dim” in order to provide a focused view of the modal, reducing confusion. The modal should be centered on the screen.</li>
-          <li><b>Close Button:</b> Clicking the close button (pficon-close) will dismiss the modal and return the background to it’s original state.</li>
-          <li><b>Content:</b> Title of product, label and version, and legal text are present. Adequate spacing and font weight consideration should be provided for legibility. Two columns are available for versions that contain both a release name and version number or in the event more space is needed.</li>
-          <li><b>Corner Graphic:</b> Corner graphic allows the opportunity for branding.</li>
-        </ol>
-      </div>
-    </div>
     <h2>What’s not covered in the current design but will be covered in future sprints:</h2>
     <ul>
       <li>How the About Version Modal is accessed.</li>
       <li>Content other than the title, version number(s) and legal text.</li>
       <li>Minimum and maximum modal sizes.</li>
     </ul>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="design">
+    <h2>Description</h2>
+    <div class="row">
+      <div class="col-md-8 col-lg-7">
+        <img src="{{site.baseurl}}assets/img/PatternFly_About_Modal_callout.png" alt="about_modal_spec" />
+      </div>
+      <div class="col-md-4 col-lg-5">
+        <ol>
+          <li><b>Modal:</b> The About Modal leverages the existing <a href="{{site.baseurl}}pattern-library/widgets/#modal">modal</a> in PatternFly. Upon opening the modal, the background behind it should “dim” in order to provide a focused view, reducing confusion. The <a href="{{site.baseurl}}pattern-library/widgets/#modal">modal</a> should use the default position, top and centered on the screen.</li>
+          <li><b>Close Button:</b> Clicking the close button (pficon-close) will dismiss the modal and return the background to it’s original state.</li>
+          <li><b>Content:</b> Title of product, label and version, and legal text are present. Adequate spacing and font weight consideration should be provided for legibility. Two columns are available for versions that contain both a release name and version number or in the event more space is needed.</li>
+          <li><b>Corner Graphic:</b> Corner graphic allows the opportunity for branding.</li>
+        </ol>
+      </div>
+    </div>
   </div>
 </div>
