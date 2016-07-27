@@ -94,9 +94,22 @@ url-js-extra: ['components/matchHeight/jquery.matchHeight-min.js']
           <li><b>Actions Icon</b> (optional): Include an associated icon with the action button if applicable.</li>
           <li><b>Flat Actions Button</b> Within an actions panel, you should have an action, which is represented as a flat button on the left.</li>
         </ol>
+        </div>
       </div>
-    </div>
-  </div>
+      <h2>No Data Available</h2>
+      <div class="row">
+        <div class="col-md-7 col-lg-5">
+          <p>
+            <img src="{{site.baseurl}}assets/img/card-no-data-callout.png" alt="card_no_data"/>
+          </p>
+        </div>
+        <div class="col-md-5 col-lg-7">
+          <ol>
+            <li><b>No Data Available:</b> If the data for a card does not exist or cannot be reached, the card will display an informational icon with the text, "No data available". Note: This display is not meant to indicate that data is loading, and should only be used when data is unreachable.</li>
+          </ol>
+          </div>
+        </div>
+      </div>
   <div role="tabpanel" class="tab-pane" id="code">
     {% include nav-tabs-code.html %}
     <div class="tab-content">
