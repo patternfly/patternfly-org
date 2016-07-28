@@ -1,4 +1,5 @@
 /*global module,require*/
+// TEST 3b
 var lrSnippet = require('connect-livereload')({
   port: 35731
 });
