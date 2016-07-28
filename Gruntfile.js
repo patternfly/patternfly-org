@@ -40,6 +40,15 @@ module.exports = function (grunt) {
         }
       }
     },
+    copy: {
+      prebuild: {
+        files: [
+          // Copy resources from git submodules, node_modules, or bower components
+          // This copy command replaces the symlink currently in place
+          {expand: true, cwd: 'source/components/patternfly/tests/pages/_includes/widgets', src: ['**'], dest: 'source/_includes/widgets'},
+        ]
+      }
+    },
     csscount: {
       source: {
         src: [
@@ -141,7 +150,12 @@ module.exports = function (grunt) {
     'uglify'
   ]);
 
+  grunt.registerTask('prebuild', [
+    'copy:prebuild'
+  ])
+
   grunt.registerTask('build', [
+    'prebuild',
     'less',
     'cssmin',
     //'csscount',

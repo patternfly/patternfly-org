@@ -20,6 +20,7 @@ npm.cmd
 # Ignore generated files
 patternfly.spec
 build
+source/_includes/widgets
 =======
 _site
 public
