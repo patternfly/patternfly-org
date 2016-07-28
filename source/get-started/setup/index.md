@@ -13,6 +13,44 @@ layout: page
 </div>
 <div class="row">
   <div class="col-md-12">
+    <h2>Prerequisites</h2>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <p>Before you can use PatternFly, you must have the following utilities installed:</p>
+        <ul>
+          <li><a href="https://git-scm.com/downloads" target="top">Git</a>: a free and open source distributed version control system.
+            <ul>
+              <li>Unfamiliar with Git? Try <a href="https://desktop.github.com/" target="top">GitHub for Windows</a> or <a href="https://desktop.github.com/" target="top">GitHub for Mac</a></li>
+            </ul>
+          </li>
+          <li><a href="https://nodejs.org/en/" target="top">NodeJS (v4.x LTS)</a>: a software platform that is used to build server-side applications.
+            <ul>
+              <li>
+                <kbd>$ sudo gem install node</kbd>
+              </li>
+            </ul>
+          </li>
+          <li><a href="http://gruntjs.com/getting-started" target="top">Grunt</a>: a JavaScript task runner.
+            <ul>
+              <li>
+                <kbd>$ sudo npm install -g grunt-cli</kbd>
+              </li>
+            </ul>
+          </li>
+          <li><a href="https://bower.io/#installing-bower" target="top">Bower</a>: a package manager for the web.
+            <ul>
+              <li>
+                <kbd>$ sudo install -g bower</kbd>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
     <h2>Step 1: Create A Project Directory</h2>
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-6">
@@ -51,11 +89,32 @@ layout: page
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="well">
-          <b>Note:</b> Bower is a package manager. We are going to use Bower to install the PatternFly framework.
+          <b>Note:</b> We are going to use Bower to install and update the PatternFly framework, as well as our other dependencies. Verify that you are in the correct project folder before installing with bower.
         </div>
-        <p>The first thing needs to be done is to install Bower globally. This is done using the command <kbd>npm install -g bower</kbd></p>
-        <p>Occasionally, you will have to run this command as an Administrator. To do so, precede <kbd>npm install -g bower</kbd> with <kbd>sudo</kbd> and run the command again.</p>
-        <p>Verify that you are in the correct project folder before installing PatternFly. Once you have done so, run <kbd>bower install patternfly</kbd></p>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <p>Create your bower.json file
+          <ul>
+            <li>
+              <kbd>$ bower init</kbd>
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-12 section-img">
+        <img src="{{ site.baseurl}}assets/img/get-started-myProject_bower.png" alt="">
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <p>Once you have created your bower.json file, you can run the install command for PatternFly. This will add the PatternFly, Bootstrap and jQuery libraries (as well as other packages) to the bower_components folder. Adding '--save' to the end adds the package to your bower.json file.
+          <ul>
+            <li>
+              <kbd>$ bower install patternfly --save</kbd>
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-12 section-img">
+        <img src="{{ site.baseurl}}assets/img/get-started-bower-init.png" alt="">
       </div>
     </div>
   </div>
@@ -67,7 +126,7 @@ layout: page
       <div class="col-xs-12 col-sm-12 col-md-12">
         <p>Your folder should now look like this:</p>
         <div class="col-sm-8 col-md-8 section-img">
-          <img src="{{ site.baseurl}}assets/img/get-started-file-structure.jpg" alt="">
+          <img src="{{ site.baseurl}}assets/img/get-started-file-structure.png" alt="">
         </div>
         <div class="col-sm-4 col-md-4">
           <b>Tip:</b> Remember never to change the content of the /bower_components folder. Doing so will cause issues with the PatternFly update process.
@@ -89,10 +148,10 @@ layout: page
       <div class="col-xs-12 col-sm-12 col-md-12">
         <p>Now create two folders - one for less and one for css.</p>
         <div class="col-sm-8 col-md-8 section-img">
-          <img src="{{ site.baseurl}}assets/img/get-started-add-styles.jpg" alt="">
+          <img src="{{ site.baseurl}}assets/img/get-started-add-styles.png" alt="">
         </div>
         <div class="col-sm-4 col-md-4">
-          <b>Note:</b> You need to leave the /css folder empty, as that is where the project will place the compiled css files.
+          <b>Note:</b> You need to leave the css folder empty, as that is where the project will place the compiled css files.
         <div>
       </div>
     </div>
@@ -103,9 +162,9 @@ layout: page
     <h2>Step 5: Create the styles.less File</h2>
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12">
-        <p>Open your favorite text editor and create a new file called <b>style.less</b>.</p>
+        <p>Open your favorite text editor and create a new file called <b>styles.less</b>.</p>
         <div class="col-sm-8 col-md-8 section-img">
-          <img src="{{ site.baseurl}}assets/img/get-started-create-styles.jpg" alt="">
+          <img src="{{ site.baseurl}}assets/img/get-started-create-styles.png" alt="">
         </div>
       </div>
     </div>
@@ -113,17 +172,24 @@ layout: page
   <div class="col-md-12">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12">
-        <p>In order to import PatternFly into your project, you will need to add the PatternFly less file to your styles.less file</p>
+        <p>In order to import PatternFly into your project, you will need to add the PatternFly less files to your styles.less file.</p>
         <p>
-          <kbd>@import "../bower_components/patternfly/less/patternfly.less";</kbd>
+          <pre>
+            <code>// PatternFly libraries</code><br />
+            <code>@import "../bower_components/patternfly/less/patternfly.less";</code><br />
+            <code>@import "../bower_components/patternfly/less/patternfly-additions.less";</code>
+          </pre>
         </p>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-12">
         <p>Additionally, you will need to add the icons and fonts to your styles.less file</p>
         <p>
-          <kbd>@fa-font-path:   "../bower_components/patternfly/components/font-awesome/fonts/";</kbd><br />
-          <kbd>@font-path:      "../bower_components/patternfly/dist/fonts";</kbd><br />
-          <kbd>@icon-font-path: "../bower_components/patternfly/components/bootstrap/fonts/";</kbd>
+          <pre>
+            <code>// Font Awesome, PatternFly Fonts and Bootstrap Fonts</code><br />
+            <code>@fa-font-path: "../bower_components/patternfly/components/font-awesome/fonts/";</code><br />
+            <code>@font-path: "../bower_components/patternfly/dist/fonts";</code><br />
+            <code>@icon-font-path: "../bower_components/patternfly/components/bootstrap/fonts/";</code>
+          </pre>
         </p>
         <p>
           Now that your styles.less file has been configured, you can begin to write your project specific styles.
@@ -141,13 +207,15 @@ layout: page
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12">
         <p>
-          In order to create a CSS file, you will need to compile your Less file using a code compiler. As mentioned previously, you can use <a href="https://incident57.com/codekit/" target="top">CodeKit</a> to perform this function, or you can configure <a href="http://gruntjs.com/" target="top">Grunt</a> or <a href="http://gulpjs.com/" target="top">Gulp</a>.
+          <div class="well">
+            <b>Note:</b> In order to create a CSS file, you will need to compile your Less file using a code compiler. As mentioned previously, you can use <a href="https://incident57.com/codekit/" target="top">CodeKit</a> to perform this function, or you can configure <a href="http://gruntjs.com/" target="top">Grunt</a> or <a href="http://gulpjs.com/" target="top">Gulp</a>.
+          </div>
         </p>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-12">
         <p>This will generate a new file called styles.css under the /css directory.</p>
         <div class="col-sm-8 col-md-8 section-img">
-          <img src="{{ site.baseurl}}assets/img/get-started-compile.jpg" alt="">
+          <img src="{{ site.baseurl}}assets/img/get-started-compile.png" alt="">
         </div>
         <div class="col-sm-4 col-md-4">
           <b>Tip:</b> Do not edit the CSS file, as recompiling the Less file will overwrite your changes. You should only edit the Less file.
@@ -162,10 +230,22 @@ layout: page
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12">
         <p>
-          Add a link to the style.css file to the top of the HTML head.
+          Create a basic index.html file and add a link to your CSS and JS files to the top of the HTML head.
+        </p>
+          <pre>
+            <code>&lt;!-- myProject Styles + PatternFly --&gt;</code><br />
+            <code>&lt;link href="css/styles.css" rel="stylesheet" media="screen, print"&gt;</code>
+          </pre>
+        <p>
+          Add the following script references to your HTML file. If you would like additional pieces, you can find them in the <a href="https://github.com/patternfly/patternfly/blob/master/QUICKSTART.md">PatternFly Quickstart Guide</a>.
         </p>
         <p>
-          <code>&lt;link href="css/styles.css" rel="stylesheet" media="screen, print"&gt;</code>
+          <pre>
+            <code>&lt;!-- jQuery --&gt;</code><br />
+            <code>&lt;script src="bower_components/jquery/dist/jquery.min.js"&gt;&lpngscript&gt;</code><br />
+            <code>&lt;!-- Bootstrap --&gt;</code><br />
+            <code>&lt;script src="bower_components/bootstrap/dist/js/bootstrap.min.js"&gt;&lt;/script&gt;</code>
+          </pre>
         </p>
         <div class="col-sm-8 col-md-8 section-img">
           <img src="{{ site.baseurl}}assets/img/get-started-header.png" alt="">
@@ -176,10 +256,10 @@ layout: page
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12">
         <p>
-          Your HTML file should sit at the root of /myProject, so that it can reference the folders and files within the project correctly
+          Your HTML file should sit at the root of /myProject, so that it can reference the folders and files within the project correctly.
         </p>
         <div class="col-sm-8 col-md-8 section-img">
-          <img src="{{ site.baseurl}}assets/img/get-started-html.jpg" alt="">
+          <img src="{{ site.baseurl}}assets/img/get-started-html.png" alt="">
         </div>
         <div class="col-sm-4 col-md-4">
           <b>Tip:</b> By calling just one CSS file, you avoid making unnecessary requests.
