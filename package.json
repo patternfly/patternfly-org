@@ -15,6 +15,7 @@
     "grunt-css-count": "^0.3.0",
     "grunt-jekyll": "^0.4.2",
     "grunt-jslint": "^1.1.14",
+    "grunt-run": "^0.6.0",
     "matchdep": "~0.3.0"
   },
   "description": "Documentation, etc. for PatternFly",

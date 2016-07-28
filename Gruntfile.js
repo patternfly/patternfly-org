@@ -40,12 +40,25 @@ module.exports = function (grunt) {
         }
       }
     },
+    run: {
+      options: {
+      },
+      submodulesUpdate: {
+        cmd: 'git',
+        args: [
+          'submodule',
+          'update',
+          '--init',
+          '--remote'
+        ]
+      }
+    },
     copy: {
       prebuild: {
         files: [
           // Copy resources from git submodules, node_modules, or bower components
           // This copy command replaces the symlink currently in place
-          {expand: true, cwd: 'source/components/patternfly/tests/pages/_includes/widgets', src: ['**'], dest: 'source/_includes/widgets'},
+          {expand: true, cwd: 'submodules/patternfly-core/tests/pages/_includes/widgets', src: ['**'], dest: 'source/_includes/widgets'},
         ]
       }
     },
@@ -151,6 +164,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('prebuild', [
+    'run:submodulesUpdate',
     'copy:prebuild'
   ])
 
