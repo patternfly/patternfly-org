@@ -116,13 +116,8 @@ layout: page
       <div class="col-sm-8 col-md-8 section-img">
         <img src="{{ site.baseurl}}assets/img/get-started-bower-init.png" alt="">
       </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h2>Step 3: Configure Your Project Structure</h2>
-    <div class="row">
+      <div class="col-sm-4 col-md-4">
+      </div>
       <div class="col-xs-12 col-sm-12 col-md-12">
         <p>Your folder should now look like this:</p>
         <div class="col-sm-8 col-md-8 section-img">
@@ -137,41 +132,7 @@ layout: page
 </div>
 <div class="row">
   <div class="col-md-12">
-    <h2>Step 4: Create the CSS Folder</h2>
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="well col-md-12">
-          <b>Note:</b> This setup utilizes the pre-built PatternFly styles. If you'd prefer to use the full Less or Sass builds, you can find them on GitHub at <a href="https://github.com/patternfly/patternfly" target="top">PatternFly</a> and <a href="https://github.com/patternfly/patternfly-sass" target="top">PatternFly Sass</a>.
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-12">
-        <p>Now create your CSS folder.</p>
-        <div class="col-sm-8 col-md-8 section-img">
-          <img src="{{ site.baseurl}}assets/img/get-started-add-styles.png" alt="">
-        </div>
-        <div class="col-sm-4 col-md-4">
-          <b>Note:</b> You need to leave the CSS folder empty, as that is where the project will place the compiled CSS files.
-        <div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h2>Step 5: Create the styles.css File</h2>
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12">
-        <p>Open your favorite text editor and create a new file called <b>styles.css</b>. This file will need to be placed in the CSS folder that you create in Step 4.</p>
-        <div class="col-sm-8 col-md-8 section-img">
-          <img src="{{ site.baseurl}}assets/img/get-started-create-styles.png" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h2>Step 6: Setting Up Your HTML</h2>
+    <h2>Step 3: Set Up Your HTML</h2>
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12">
         <p>
@@ -189,10 +150,9 @@ layout: page
           Create a basic index.html file and add a link to your CSS and JS files to the top of the HTML head.
         </p>
           <pre>
-            <code>&lt;!-- myProject Styles --&gt;</code>
-            <code>&lt;link href="css/styles.css" rel="stylesheet" media="screen, print"&gt;</code>
             <code>&lt;!-- PatternFly Styles --&gt;</code>
             <code>&lt;link href="bower_components/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print"&gt;</code>
+            <code>&lt;link href="bower_components/patternfly/dist/css/patternfly-additions.min.css" rel="stylesheet" media="screen, print"&gt;</code>
           </pre>
         <p>
           Add the following script references to your HTML file. If you would like additional pieces, you can find them in the <a href="https://github.com/patternfly/patternfly/blob/master/QUICKSTART.md">PatternFly Quickstart Guide</a>.
@@ -216,7 +176,7 @@ layout: page
 </div>
 <div class="row">
   <div class="col-md-12">
-    <h2>Step 7: Enjoy!</h2>
+    <h2>Step 4: Enjoy!</h2>
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12">
         <p>
