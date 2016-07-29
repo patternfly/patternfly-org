@@ -13,7 +13,7 @@ script:
   - 'grunt'
 
 after_success:
-  - SUCCESS='sh -x ./scripts/publish.sh'
+  - sh -x ./scripts/publish.sh
 
 deploy:
   provider: openshift
@@ -24,4 +24,4 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
-    condition: $SUCCESS = 0
+    condition: $TRAVIS_REPO_SLUG = "patternfly/patternfly-org"

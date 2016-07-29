@@ -2,7 +2,7 @@
 
 set -o errexit -o nounset
 
-if [ -z "$TRAVIS_TAG" -a "$TRAVIS_BRANCH" != "master" -o "$TRAVIS_REPO_SLUG" != "patternfly/patternfly-org" ]
+if [ -z "$TRAVIS_TAG" -a "$TRAVIS_BRANCH" != "master" ]
 then
   echo "This commit was made against $TRAVIS_BRANCH and not the master or tag! Do not deploy!"
   exit 1
