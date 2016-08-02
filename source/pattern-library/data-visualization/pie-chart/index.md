@@ -6,11 +6,9 @@ designtab: false
 ---
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">
-  <!--
-    <p>TBD: Add pie chart description</p>
--->
-    <p>Jump to <a href="#example-overview-1">Relationship to a Whole</a> or <a href="#example-overview-2">Small Pie Chart</a></p>
-    <h2 id="example-overview-1">Relationship to a Whole</h2>
+    <p>Pie charts are used to show percentage or proportional data. On hover, the percentage of each category is provided in a tooltip. The  pieces of a pie chart must add up to 100%. It is recommended that there is no more than six categories per one pie chart. Sections within a pie chart may be hard to compare to each other so you should use a pie chart when you want to compare an individual section to the whole. If you wish to show the exact value of each category, please check out the <a href="{{ site.baseurl}}pattern-library/data-visualization/bar-chart"> Bar Chart pattern</a>.</p>
+    <p>Jump to <a href="#example-overview-1">Pie Chart</a> or <a href="#example-overview-2">Small Pie Chart</a></p>
+    <h2 id="example-overview-1">Pie Chart</h2>
     <div class="example-pf">
       {% include widgets/charts/pie-whole-relationship.html id1="pie-chart-1" id2="pie-chart-2" id3="pie-chart-3" %}
     </div>
