@@ -2,6 +2,7 @@
 title: Vertical Navigation
 author: dlabrecq
 layout: page-tabs
+submenus: true
 ---
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">
@@ -157,7 +158,7 @@ layout: page-tabs
 <script src="components/c3/c3.min.js"></script>
 <script src="components/d3/d3.min.js"></script>
 <script src="components/matchHeight/jquery.matchHeight-min.js"></script>
-{% include widgets/navigation/vertical-nav-with-secondary.html %}
+{% include widgets/navigation/vertical-navigation.html %}
 </html>
               {% endcapture %}{{ markup_include | xml_escape }}</pre>
             </div>
@@ -179,7 +180,7 @@ layout: page-tabs
 <script src="components/c3/c3.min.js"></script>
 <script src="components/d3/d3.min.js"></script>
 <script src="components/matchHeight/jquery.matchHeight-min.js"></script>
-{% include widgets/navigation/vertical-nav-with-secondary.html %}
+{% include widgets/navigation/vertical-navigation.html %}
 </html>
               {% endcapture %}{{ markup_include | xml_escape }}</pre>
             </div>

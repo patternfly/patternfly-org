@@ -2,6 +2,8 @@
 title: Notification Drawer
 author: dlabrecq
 layout: page-tabs
+notification-drawer: true
+submenus: true
 codetab: true
 ---
 <div class="tab-content">
@@ -70,7 +72,7 @@ codetab: true
                 <pre class="prettyprint">{% capture markup_include %}
 <html class="layout-pf layout-pf-fixed">
 ...
-{% include widgets/navigation/vertical-nav-notification-drawer.html %}
+{% include widgets/navigation/vertical-navigation.html %}
 </html>
                 {% endcapture %}{{ markup_include | xml_escape }}</pre>
               </div>
