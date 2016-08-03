@@ -8,7 +8,7 @@ default()
   SCRIPT=`basename $0`
   SCRIPT_DIR=`dirname $0`
   SCRIPT_DIR=`cd $SCRIPT_DIR; pwd`
-  TMP_DIR="/tmp/patternfly-org-releases"
+  TMP_DIR="/tmp/patternfly-releases"
 
   BOWER_JSON=bower.json
   PACKAGE_JSON=package.json
