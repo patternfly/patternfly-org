@@ -5,7 +5,7 @@ layout: page
 ---
 PatternFly uses Open Sans, an open-licensed, sans serif, typeface designed by Steve Matteson. The type family includes a complete 897 character set, along with Cyrillic character sets. There are ten type-face variants available with this font. Use the CSS rule &#8220;@font-face&#8221; to include these fonts in your application styles. For more information, check out <a href="http://www.w3schools.com/cssref/css3_pr_font-face_rule.asp" target="_blank">w3schools&#8217; @font-face css reference</a>.
 
-Below are some samples of common typographic layouts. Check out more samples on our <a href="https://rawgit.com/patternfly/patternfly/master/tests/typography-2.html" target="_blank">PatternFly Typography test page</a>
+Below are some samples of common typographic layouts. Check out more samples on our <a href="https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/typography-2.html" target="_blank">PatternFly Typography test page</a>
 
 * * *
 
