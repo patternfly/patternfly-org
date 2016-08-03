@@ -27,7 +27,7 @@ layout: page-tabs
               width="100%" height="650px;" scrolling="no" seamless></iframe>
     </div>
     <p>
-      <a href="https://rawgit.com/patternfly/patternfly/master/tests/login.html" target="_blank">View full page example</a>
+      <a href="https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/login.html" target="_blank">View full page example</a>
     </p>
   </div>
   <div role="tabpanel" class="tab-pane" id="design">
@@ -72,7 +72,7 @@ layout: page-tabs
               width="100%" height="650px;" scrolling="no" seamless></iframe>
     </div>
     <p>
-      <a href="https://rawgit.com/patternfly/patternfly/master/tests/login.html" target="_blank">View full page example</a>
+      <a href="https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/login.html" target="_blank">View full page example</a>
     </p>
     <p class="reference-markup">
       <a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="login-layout-markup" href="#login-layout-markup">Reference Markup</a>

@@ -282,7 +282,7 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
 </pre>
     </div>
     <h4>Other Basic Charts</h4>
-    <p>Additional basic chart examples such as sparkline, spline, area, stacked area, bar, stacked bar, and donut are available at <a href="https://rawgit.com/patternfly/patternfly/master/tests/charts.html">https://rawgit.com/patternfly/patternfly/master/tests/charts.html</a></p>
+    <p>Additional basic chart examples such as sparkline, spline, area, stacked area, bar, stacked bar, and donut are available at <a href="https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/index.html">https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/index.html</a></p>
   </div>
 -->
   <div class="section" id="bootstrap-combobox">
