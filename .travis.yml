@@ -25,3 +25,7 @@ deploy:
   on:
     branch: master
     condition: $TRAVIS_REPO_SLUG = "patternfly/patternfly-org"
+
+notifications:
+  email:
+    - patternfly-build@redhat.com
