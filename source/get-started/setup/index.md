@@ -160,7 +160,7 @@ layout: page
         <p>
           <pre>
             <code>&lt;!-- jQuery --&gt;</code>
-            <code>&lt;script src="bower_components/jquery/dist/jquery.min.js"&gt;&lpngscript&gt;</code>
+            <code>&lt;script src="bower_components/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;</code>
             <code>&lt;!-- Bootstrap --&gt;</code>
             <code>&lt;script src="bower_components/bootstrap/dist/js/bootstrap.min.js"&gt;&lt;/script&gt;</code>
             <code>&lt;!-- PatternFly --&gt;</code>
