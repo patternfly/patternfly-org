@@ -2,6 +2,7 @@
 title: Vertical Navigation
 author: dlabrecq
 layout: page-tabs
+submenus: true
 ---
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">
@@ -13,7 +14,13 @@ layout: page-tabs
       <li>Vertical menus more readily adapt to small screen sizes.  While horizontal menus can also be made responsive, it usually requires a transformation from horizontal to vertical.  Since vertical menus are already in this format, the transition from desktop to mobile is less disorienting.</li>
       <li>Vertical navigation supports common left to right flow. Navigation categories are easily differentiated from other information that may exist in the header area of the application.</li>
     </ul>
-    <p>Jump to <a href="#example-overview-1">With Primary Menu Icons</a> or <a href="#example-overview-2">Without Primary Menu Icons</a></p>
+    <p>The vertical navigation pattern supports up to three levels of navigation (Primary, Secondary and Tertiary).  Each navigation item does not have to have the same number of levels of navigation. To illustrate this, look at the example below:</p>
+    <ul>
+      <li>The "Dashboard" category has no secondary navigation items</li>
+      <li>The "Ipsum" category has secondary level navigation items</li>
+      <li>The "Amet" category may have some secondary items which have tertiary navigation items</li>
+    </ul>
+    <p>Jump to <a href="#example-overview-1">Primary Nav with Icons</a> or <a href="#example-overview-2">Primary Nav without Icons</a></p>
     <h2 id="example-overview-1">With Primary Menu Icons</h2>
     <div class="example-pf">
       <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation.html"
@@ -28,77 +35,65 @@ layout: page-tabs
     <p><a href="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html" target="_blank">View full page example</a></p>
   </div>
   <div role="tabpanel" class="tab-pane" id="design">
-    <h2>Primary Navigation with Persistent Secondary</h2>
+    <h2>Primary Navigation</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
         <p>
-          <img src="{{site.baseurl}}assets/img/left-nav-callout-1.png" alt="left-nav-callout-1"/>
+          <img src="{{site.baseurl}}assets/img/navigation-primary-callout.png" alt="nav-callout-1"/>
         </p>
       </div>
       <div class="col-md-5 col-lg-7">
         <ol>
-          <li><b>Icons</b> (optional)<b>:</b> Icons may be used with text labels to speed recognition, and allow menu to be collapsed into reduced width state with only icons and tooltips.</li>
-          <li><b>Menu Item:</b>
-          <ol type="a">
-            <li>Hover state provides feedback that this item is active.</li>
-            <li>Selected items are highlighted.</li>
-          </ol>
-          </li><li><b>Caret Icon:</b> Indicates that there is another level of navigation for this menu item.</li>
+          <li><b>Primary Navigation Icons</b>: (optional): When the primary areas of the UI are easily represented by icons, we recommend using icons in primary navigation.</li>
+          <li><b>Selection:</b> A selected primary navigation item is highlighted and includes a vertical blue line decorator.</li>
+          <li><b>Hover:</b> On hover, the primary navigation item is highlighted.</li>
         </ol>
       </div>
     </div>
+   
+    <h2>Primary with Secondary Navigation</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
         <p>
-          <img src="{{site.baseurl}}assets/img/left-nav-callout-2.png" alt="left-nav-callout-2"/>
+          <img src="{{site.baseurl}}assets/img/navigation-with-secondary-callout.png" alt="nav-callout-2"/>
         </p>
       </div>
       <div class="col-md-5 col-lg-7">
-        <p>The secondary navigation is shown in a second column that opens to the right.</p>
+        <p>Secondary navigation is non-persistent, appearing on hover.  The secondary navigation is shown in a second column that opens to the right.</p>
         <ol>
-          <li><b>Collapse:</b> The user may manually collapse the navigation back to one column.</li>
-          <li><b>Primary Category Label:</b> The label at the top of the secondary menu mirrors the selected primary category to reinforce the user’s current location.</li>
-          <li><b>Menu Section Labels</b> (optional): Used to visually show content into groupings for secondary menus with many items.</li>
-          <li><b>Menu item:</b>
-            <ol type="a">
-              <li>Selected item in secondary menu is highlighted.</li>
-              <li>Active items are highlighted on hover.</li>
-            </ol>
-          </li>
-          <li><b>Status icons</b> (optional)<b>:</b> You may include status icons inline for any secondary menu item.</li>
-          <li><b>Total Count Badge</b> (optional): If the category links to a view of objects, you may include a total number of objects as a badge.</li>
+          <li><b>Label:</b> The label at the top of the secondary menu mirrors the selected primary category to reinforce the user’s current location.</li>
+          <li><b>Selection:</b> A selected item in the secondary navigation is highlighted.</li>
+          <li><b>Hover:</b> On hover, the secondary navigation is highlighted and underlined.</li>
         </ol>
       </div>
     </div>
-    <h2>Collapsed Primary Navigation with Icons</h2>
+   
+    <h2>Primary with Tertiary Navigation</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
         <p>
-          <img src="{{site.baseurl}}assets/img/left-nav-callout-3.png" alt="left-nav-callout-3"/>
+          <img src="{{site.baseurl}}assets/img/navigation-with-tertiary-callout.png" alt="nav-callout-3"/>
         </p>
       </div>
       <div class="col-md-5 col-lg-7">
+        <p>Tertiary navigation is non-persistent and only appears on hover.  The tertiary navigation is shown as a third column that opens to the right.</p>
         <ol>
-          <li><b>Collapsed State:</b> In this state, the primary navigation is collapsed to a thin column with only icons showing.</li>
-          <li><b>Expand Primary:</b> Clicking on this arrow icon will expand the primary navigation.</li>
-          <li><b>Tooltips:</b> Hover state displays a tooltip with full label name.</li>
+          <li><b>Pin Menu</b> (optional):</li>  
+          <ul>
+            <li>If the secondary navigation is pinned, the navigation is collapsed to a single column and the secondary navigation is the only menu visible. </li>
+            <li>If the tertiary navigation is pinned, the navigation is collapsed to a single column and the tertiary navigation is the only menu visible.</li>
+          </ul> 
+          <li><b>Label:</b></li>
+          <ul>
+          <li>The label at the top of the secondary navigation mirrors the selected primary category to reinforce the user’s current location.</li>
+          <li>The label at the top of the tertiary navigation mirrors the selected secondary category to reinforce the user’s current location.</li>
+          </ul>
+          <li><b>Selection:</b> A selected item in the tertiary navigation is highlighted.</li>
+          <li><b>Hover:</b> On hover, the tertiary navigation is highlighted and underlined.</li>
         </ol>
       </div>
     </div>
-    <h2>Collapsed Primary Navigation without Icons</h2>
-    <div class="row">
-      <div class="col-md-7 col-lg-5">
-        <p>
-          <img src="{{site.baseurl}}assets/img/left-nav-callout-4b.png" alt="left-nav-callout-4"/>
-        </p>
-      </div>
-      <div class="col-md-5 col-lg-7">
-        <ol>
-          <li><b>Collapsed State:</b> If primary menu does not include icons, first column is entirely replaced.</li>
-          <li><b>Back Link:</b> Back link allows navigation back to the primary menu.</li>
-        </ol>
-      </div>
-    </div>
+
     <h2>Responsive States</h2>
     <div class="row">
       <div class="col-md-12">
@@ -108,11 +103,12 @@ layout: page-tabs
         </ul>
       </div>
     </div>
+   
     <h2>Primary Navigation (Responsive State)</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
         <p>
-          <img src="{{site.baseurl}}assets/img/left-nav-callout-51.png" alt="left-nav-callout-5"/>
+          <img src="{{site.baseurl}}assets/img/nav-responsive-callout1.png" alt="nav-responsive-callout-1"/>
         </p>
       </div>
       <div class="col-md-5 col-lg-7">
@@ -121,11 +117,12 @@ layout: page-tabs
         </ol>
       </div>
     </div>
+   
     <h2>Secondary Navigation (Responsive State)</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
         <p>
-          <img src="{{site.baseurl}}assets/img/left-nav-callout-6.png" alt="left-nav-callout-6"/>
+          <img src="{{site.baseurl}}assets/img/nav-responsive-callout2.png" alt="nav-responsive-callout-2"/>
         </p>
       </div>
       <div class="col-md-5 col-lg-7">
@@ -136,6 +133,7 @@ layout: page-tabs
       </div>
     </div>
   </div>
+  
   <div role="tabpanel" class="tab-pane" id="code">
     {% include nav-tabs-code.html angular=false %}
     <div class="tab-content">
@@ -157,7 +155,7 @@ layout: page-tabs
 <script src="components/c3/c3.min.js"></script>
 <script src="components/d3/d3.min.js"></script>
 <script src="components/matchHeight/jquery.matchHeight-min.js"></script>
-{% include widgets/navigation/vertical-nav-with-secondary.html %}
+{% include widgets/navigation/vertical-navigation.html %}
 </html>
               {% endcapture %}{{ markup_include | xml_escape }}</pre>
             </div>
@@ -179,7 +177,7 @@ layout: page-tabs
 <script src="components/c3/c3.min.js"></script>
 <script src="components/d3/d3.min.js"></script>
 <script src="components/matchHeight/jquery.matchHeight-min.js"></script>
-{% include widgets/navigation/vertical-nav-with-secondary.html %}
+{% include widgets/navigation/vertical-navigation.html %}
 </html>
               {% endcapture %}{{ markup_include | xml_escape }}</pre>
             </div>
