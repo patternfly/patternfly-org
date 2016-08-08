@@ -79,4 +79,4 @@ Send an email to the [mailing list][5] or reach out on [Gitter][6] or [Freenode]
  [5]: mailto:patternfly@redhat.com
  [6]: https://gitter.im/patternfly/patternfly?utm_source=share-link&utm_medium=link&utm_campaign=share-link
  [7]: https://webchat.freenode.net/
- [8]: {{site.baseurl}}get-started/patternfly-angular-migration-guide-3.0/
+ [8]: {{site.baseurl}}get-started/patternfly-migration-guides/angular-patternfly-migration-guide-3.0.md
