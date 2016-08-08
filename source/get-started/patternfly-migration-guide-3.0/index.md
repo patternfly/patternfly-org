@@ -3,7 +3,9 @@ title: PatternFly 3.0 Migration Guide
 author: ajolicoeur
 layout: page
 ---
-This guide details how to upgrade from PatternFly 2.x to our latest version, [PatternFly 3.0][1].
+## PatternFly 3.0 Migration Guide
+
+This guide details how to upgrade from PatternFly 2.x to our latest version, [PatternFly 3.0][1]. Looking for the Angular migration guide? Use the [PatternFly Angular 3.0][8] upgrade instead.
 
 ## PatternFly 3.0 is (almost) backwards compatible with v2.x.
 
@@ -77,3 +79,4 @@ Send an email to the [mailing list][5] or reach out on [Gitter][6] or [Freenode]
  [5]: mailto:patternfly@redhat.com
  [6]: https://gitter.im/patternfly/patternfly?utm_source=share-link&utm_medium=link&utm_campaign=share-link
  [7]: https://webchat.freenode.net/
+ [8]: {{site.baseurl}}get-started/patternfly-angular-migration-guide-3.0/
