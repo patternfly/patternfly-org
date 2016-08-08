@@ -8,12 +8,9 @@ layout: page-tabs
     <p>A List View displays data in rows. Each row displays the same set of attributes, although not necessarily displayed in columns, and the attributes may wrap. The List View omits column headers and other visual noise, making it a cleaner visualization than a data table.</p>
     <p>Jump to <a href="#standard">Standard List View</a>, <a href="#expanding-rows">List View with Expanding Rows</a> or <a href="#row-variations">Row Variation Examples</a>.</p>
     <h2 id="standard">Standard List View</h2>
-
-    <div class="example-pf">
-      <iframe src="{{site.baseurl}}pattern-library/content-views/list-view/list-view.html"
-              width="100%" height="650px;" scrolling="no" seamless></iframe>
-    </div>
-    <p><a href="{{site.baseurl}}pattern-library/content-views/list-view/list-view.html" target="_blank">View full page example</a></p>
+    <p>
+      <img src="{{site.baseurl}}assets/img/list-view-example.png" alt="Standard List View">
+    </p>
     <h2 id="expanding-rows">List View with Expanding Rows</h2>
     <p>Use a List View with expanding rows when you want to display details in place without requiring drill-down to a new page.  This is useful when you want to allow users to view details of an object without reloading the page or when the detail information is small and does not require its own page. Simple expansion and compound expansion are two variants of this pattern.</p>
     <h3>Simple Expansion</h3>
@@ -109,18 +106,8 @@ layout: page-tabs
     {% include nav-tabs-code.html %}
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <p>Jump to <a href="#example-code-1">Standard List View</a>, <a href="#example-code-2">Default Row</a>, <a href="#example-code-3">Row Variation #1</a>, <a href="#example-code-4">Row Variation #2</a>, <a href="#example-code-5">Row Variation #3</a>, <a href="#example-code-6">Row Variation #4</a>, <a href="#example-code-7">Row Variation #5</a> or <a href="#example-code-8">Row Variation #6</a>.</p>
-        <h2 id="example-code-1">Standard List View</h2>
-        <div class="example-pf">
-          <iframe src="{{site.baseurl}}pattern-library/content-views/list-view/list-view.html"
-                  width="100%" height="650px;" scrolling="no" seamless></iframe>
-        </div>
-        <p><a href="{{site.baseurl}}pattern-library/content-views/list-view/list-view.html" target="_blank">View full page example</a></p>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/list-view/list-view-page.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
-        </div>
-        <h2 id="example-code-2">Default Row</h2>
+        <p>Jump to <a href="#example-code-1">Default Row</a>, <a href="#example-code-2">Row Variation #1</a>, <a href="#example-code-3">Row Variation #2</a>, <a href="#example-code-4">Row Variation #3</a>, <a href="#example-code-5">Row Variation #4</a>, <a href="#example-code-6">Row Variation #5</a> or <a href="#example-code-7">Row Variation #6</a>.</p>
+        <h2 id="example-code-1">Default Row</h2>
         <div class="example-pf">
           <div class="example-pf-demo example-pf-demo-no-padding">
             <div class="cards-pf">
@@ -132,11 +119,11 @@ layout: page-tabs
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
-        <div class="collapse in" id="markup-2">
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+        <div class="collapse in" id="markup-1">
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/list-view/list-view-default.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
-        <h2 id="example-code-3">Row Variation #1</h2>
+        <h2 id="example-code-2">Row Variation #1</h2>
         <div class="example-pf">
           <div class="example-pf-demo example-pf-demo-no-padding">
             <div class="cards-pf">
@@ -149,11 +136,11 @@ layout: page-tabs
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
-        <div class="collapse in" id="markup-3">
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+        <div class="collapse in" id="markup-2">
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/list-view/list-view-variation-1.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
-        <h2 id="example-code-4">Row Variation #2</h2>
+        <h2 id="example-code-3">Row Variation #2</h2>
         <div class="example-pf">
           <div class="example-pf-demo example-pf-demo-no-padding">
             <div class="cards-pf">
@@ -165,11 +152,11 @@ layout: page-tabs
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a></p>
-        <div class="collapse in" id="markup-4">
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
+        <div class="collapse in" id="markup-3">
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/list-view/list-view-variation-2.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
-        <h2 id="example-code-5">Row Variation #3</h2>
+        <h2 id="example-code-4">Row Variation #3</h2>
         <div class="example-pf">
           <div class="example-pf-demo example-pf-demo-no-padding">
             <div class="cards-pf">
@@ -181,11 +168,11 @@ layout: page-tabs
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-5" href="#markup-5">Reference Markup</a></p>
-        <div class="collapse in" id="markup-5">
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a></p>
+        <div class="collapse in" id="markup-4">
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/list-view/list-view-variation-3.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
-        <h2 id="example-code-6">Row Variation #4</h2>
+        <h2 id="example-code-5">Row Variation #4</h2>
         <div class="example-pf">
           <div class="example-pf-demo example-pf-demo-no-padding">
             <div class="cards-pf">
@@ -197,11 +184,11 @@ layout: page-tabs
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-6" href="#markup-6">Reference Markup</a></p>
-        <div class="collapse in" id="markup-6">
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-5" href="#markup-5">Reference Markup</a></p>
+        <div class="collapse in" id="markup-5">
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/list-view/list-view-variation-4.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
-        <h2 id="example-code-7">Row Variation #5</h2>
+        <h2 id="example-code-6">Row Variation #5</h2>
         <div class="example-pf">
           <div class="example-pf-demo example-pf-demo-no-padding">
             <div class="cards-pf">
@@ -213,11 +200,11 @@ layout: page-tabs
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-7" href="#markup-7">Reference Markup</a></p>
-        <div class="collapse in" id="markup-7">
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-6" href="#markup-6">Reference Markup</a></p>
+        <div class="collapse in" id="markup-6">
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/list-view/list-view-variation-5.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
-        <h2 id="example-code-8">Row Variation #6</h2>
+        <h2 id="example-code-7">Row Variation #6</h2>
         <div class="example-pf">
           <div class="example-pf-demo example-pf-demo-no-padding">
             <div class="cards-pf">
@@ -229,8 +216,8 @@ layout: page-tabs
             </div>
           </div>
         </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-8" href="#markup-8">Reference Markup</a></p>
-        <div class="collapse in" id="markup-8">
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-7" href="#markup-7">Reference Markup</a></p>
+        <div class="collapse in" id="markup-7">
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/list-view/list-view-variation-6.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
       </div>

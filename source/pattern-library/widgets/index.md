@@ -282,7 +282,7 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
 </pre>
     </div>
     <h4>Other Basic Charts</h4>
-    <p>Additional basic chart examples such as sparkline, spline, area, stacked area, bar, stacked bar, and donut are available at <a href="https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/index.html">https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/index.html</a></p>
+    <p>Additional basic chart examples such as sparkline, spline, area, stacked area, bar, stacked bar, and donut are available at <a href="https://rawgit.com/patternfly/patternfly/master/tests/charts.html">https://rawgit.com/patternfly/patternfly/master/tests/charts.html</a></p>
   </div>
 -->
   <div class="section" id="bootstrap-combobox">
@@ -522,7 +522,7 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
   </div>
   <div class="section" id="bootstrap-tree-view">
     <h3>Bootstrap Tree View</h3>
-    <p>See <a href="https://github.com/patternfly/patternfly-bootstrap-treeview">https://github.com/patternfly/patternfly-bootstrap-treeview</a> for complete Bootstrap Tree View documentation.</p>
+    <p>See <a href="https://github.com/jonmiles/bootstrap-treeview">https://github.com/jonmiles/bootstrap-treeview</a> for complete Bootstrap Tree View documentation.</p>
     <div class="pf-example">
       <div id="treeview1"></div>
       <script>
@@ -596,7 +596,7 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
     <div class="collapse" id="bootstrap-tree-view-markup">
       <pre class="prettyprint">
 &lt;div id="treeview1"&gt;&lt;/div&gt;
-&lt;script src="/components/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"&gt;&lt;/script&gt;
+&lt;script src="/components/bootstrap-treeview/dist/bootstrap-treeview.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   $(function() {
     var defaultData = [

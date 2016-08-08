@@ -8,7 +8,7 @@ default()
   SCRIPT=`basename $0`
   SCRIPT_DIR=`dirname $0`
   SCRIPT_DIR=`cd $SCRIPT_DIR; pwd`
-  TMP_DIR="/tmp/patternfly-releases"
+  TMP_DIR="/tmp/patternfly-org-releases"
 
   BOWER_JSON=bower.json
   PACKAGE_JSON=package.json
@@ -151,7 +151,7 @@ cat <<- EEOOFF
     OPTIONS:
     h       Display this message (default) 
     f       Force push to new repo branch (e.g., bump-v3.7.0)
-    s       Skip new clone, clean, and install to rebuild previously created repo
+    s       Skip repo setup (e.g., to rebuild previously created repo)
     v       The version number (e.g., 3.7.0)
 
 EEOOFF
@@ -188,15 +188,11 @@ EEOOFF
     setup_repo
   fi
 
+  clean
   bump_bower
   bump_package
   bump_home
-
-  if [ -z "$SETUP" ]; then
-    clean
-    install
-  fi
-
+  install
   build
 
   if [ -n "$PUSH" ]; then

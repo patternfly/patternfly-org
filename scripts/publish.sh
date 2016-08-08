@@ -10,7 +10,7 @@ fi
 
 # User info
 git config user.name "Admin"
-git config user.email "patternfly-build@redhat.com"
+git config user.email "patternfly@redhat.com"
 git config --global push.default simple
 
 # Commit generated files
