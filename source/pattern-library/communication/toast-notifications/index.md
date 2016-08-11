@@ -12,8 +12,6 @@ layout: page-tabs
     information behind them for too long, but allows the user to read the message. Ideally, the user can decide what
     kinds of notifications appear and how long they remain on the screen. Toast notifications should remain on the
     screen when the user is hovering on them.</p>
-    <p>Generally, there shouldn’t be more than one toast notification shown at the same time. If two notifications are
-    triggered at the same time, they should be shown one by one.</p>
     <p>Jump to <a href="#example-overview-1">Examples</a>, <a href="#example-overview-2">With Max-Width</a> or <a href="#example-overview-3">In Context</a></p>
     <h2 id="example-overview-1">Examples</h2>
     <div class="example-pf">
