@@ -3,7 +3,7 @@ title: Monthly Community Meeting
 author: dlabrecq
 layout: page
 ---
-<p>Join us at our next Community Meeting on <b><a href="http://www.timeanddate.com/worldclock/fixedtime.html?msg=August+PatternFly+Community+Meeting&iso=20160810T10&p1=207&ah=1">August 10 at 10AM EST</a></b>.</p>
+<p>Join us at our next Community Meeting on <b><a href="http://www.timeanddate.com/worldclock/fixedtime.html?msg=September+PatternFly+Community+Meeting+&year=&month=09&day=07&hour=10&min=00&sec=0&p1=207&ah=1">September 7 at 10AM EST (2PM UTC)</a></b>.</p>
 <p>Join the BlueJeans Video Conference by visiting <a href="https://bluejeans.com/9737130658">https://bluejeans.com/9737130658</a>.</p>
 <p>Just want to dial in on your phone?</p>
 <ol>
@@ -23,6 +23,12 @@ layout: page
     </tr>
   </thead>
   <tbody>
+  <tr>
+    <td>August 11, 2016</td>
+    <td><a href="https://www.dropbox.com/s/avsmiitfjko7l7t/PatternFly%20Community%20Meeting%202016-08.pdf?dl=0">View Deck</a></td>
+    <td><a target="_blank" href="https://bluejeans.com/s/aa4d/">View Recording</a></td>
+  </tr>
+  <tr>
   <tr>
     <td>July 13, 2016</td>
     <td><a href="https://www.dropbox.com/s/fnoy4qkvd18vk67/PatternFly%20Community%20Meeting%202016-07.pdf?dl=0">View Deck</a></td>
