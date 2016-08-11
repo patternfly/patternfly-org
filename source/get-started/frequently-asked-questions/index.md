@@ -72,18 +72,6 @@ See the [PatternFly 3.0 Migration Guide][10] for step-by-step guidance to upgrad
  [5]: https://www.redhat.com/mailman/listinfo/patternfly
  [6]: http://getbootstrap.com/getting-started/#support
  [7]: https://support.mozilla.org/en-US/kb/install-firefox-linux
-<<<<<<< HEAD
-<<<<<<< HEAD
  [8]: {{site.baseurl}}get-started/patternfly-migration-guides/patternfly-migration-guide-2.0.md
  [9]: https://github.com/patternfly/patternfly/releases
  [10]: {{site.baseurl}}get-started/patternfly-migration-guides/patternfly-migration-guide-3.0.md
-=======
- [8]: {{site.baseurl}}get-started/patternfly-migration-guide-2.0/
- [9]: https://github.com/patternfly/patternfly/releases
- [10]: {{site.baseurl}}get-started/patternfly-migration-guide-3.0/
->>>>>>> 09d554b... Complete Angular-PatternFly write-up and FAQ addition for 3.0
-=======
- [8]: {{site.baseurl}}get-started/patternfly-migration-guides/patternfly-migration-guide-2.0.md
- [9]: https://github.com/patternfly/patternfly/releases
- [10]: {{site.baseurl}}get-started/patternfly-migration-guides/patternfly-migration-guide-3.0.md
->>>>>>> 3a0fc8d... Combine migration guides into one folder with specific file names per version. Remove old folders and files.
