@@ -2,8 +2,6 @@
 
 # patternfly-org
 
-This is a test. 
-
 The PatternFly Org is the new source for the official documentation for PatternFly.
 
 ## Development Setup
