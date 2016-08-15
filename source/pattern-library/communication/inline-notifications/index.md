@@ -47,7 +47,7 @@ layout: page-tabs
     </div>
   </div>
   <div role="tabpanel" class="tab-pane" id="code">
-    {% include nav-tabs-code.html %}
+    {% include nav-tabs-code.html angular=false %}
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
         <p>Jump to <a href="#example-code-1">Examples</a>, <a href="#example-code-2">Variations</a> or <a href="#example-code-3">In Context</a></p>
