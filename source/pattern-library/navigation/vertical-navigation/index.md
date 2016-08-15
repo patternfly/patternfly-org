@@ -20,19 +20,19 @@ submenus: true
       <li>The "Ipsum" category has secondary level navigation items</li>
       <li>The "Amet" category may have some secondary items which have tertiary navigation items</li>
     </ul>
-    <p>Jump to <a href="#example-overview-1">Primary Nav with Icons</a> or <a href="#example-overview-2">Primary Nav without Icons</a></p>
+    <p>Jump to <a href="#example-overview-1">Masthead Design</a>, <a href="#example-overview-2">Primary Nav with Icons</a>, or <a href="#example-overview-3">Primary Nav without Icons</a></p>
     <h2 id="example-overview-1">Masthead Design</h2>
     <p>Since vertical navigation does not compromise vertical real estate, the masthead is taller than the masthead for products that use horizontal navigation. The taller design allows for a product icon and the option of utilizing a burger bar menu.</p>
     <p>
       <img src="{{site.baseurl}}assets/img/Masthead_Vertical.png" alt="Masthead Vertical" width="1400"/>
     </p>
-    <h2 id="example-overview-1">With Primary Menu Icons</h2>
+    <h2 id="example-overview-2">With Primary Menu Icons</h2>
     <div class="example-pf">
       <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation.html"
               width="100%" height="650px;" scrolling="no" seamless></iframe> 
     </div>
     <p><a href="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation.html" target="_blank">View full page example</a></p>
-    <h2 id="example-overview-2">Without Primary Menu Icons</h2>
+    <h2 id="example-overview-3">Without Primary Menu Icons</h2>
     <div class="example-pf">
       <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html"
               width="100%" height="650px;" scrolling="no" seamless></iframe>

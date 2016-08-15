@@ -13,8 +13,8 @@ layout: page-tabs
       <li>You want to provide the best visibility to primary categories by placing them immediately below the page header area.</li>
     </ul>
     <p>Consider using <a href="{{site.baseurl}}pattern-library/navigation/vertical-navigation/">vertical navigation</a> if you need a solution that can easily scale for a large amount of menu items and easily adapt to small screen sizes. Horizontal menus can also be made responsive but it usually requires a transformation from horizontal to vertical. Since vertical menus are already in this format, the transition from desktop to mobile is less disorienting.</p>
-    <p>Jump to <a href="#example-overview-1">Standard Horizontal Navigation</a>, or <a href="#example-overview-2">Navbar Variations</a></p>
-    <h2 id="example-overview-2">Masthead Design</h2>
+    <p>Jump to <a href="#example-overview-1">Masthead Design</a>, <a href="#example-overview-2">Standard Horizontal Navigation</a>, or <a href="#example-overview-3">Navbar Variations</a></p>
+    <h2 id="example-overview-1">Masthead Design</h2>
     <p>For horizontal navigation, we recommend the masthead design be small in height to reduce vertical real estate, accommodating for the navigation.  The logo area is in the left corner and contains the application product name image file, in the form of a sized SVG graphic.  However, if additional rebranding capabilities are desired, there is an option for a taller masthead which will include a product logo.</p>
     <h3>Option 1</h3>
     <p>
@@ -24,13 +24,13 @@ layout: page-tabs
     <p>
       <img src="{{site.baseurl}}assets/img/Masthead_HorizontalVariation.png" alt="Masthead Horizontal - Option 2" width="1400"/>
     </p>
-    <h2 id="example-overview-1">Standard Horizontal Navigation</h2>
+    <h2 id="example-overview-2">Standard Horizontal Navigation</h2>
     <div class="example-pf">
       <iframe src="{{ site.baseurl}}pattern-library/navigation/horizontal-navigation/horizontal-navigation.html"
               width="100%" height="650px;" scrolling="no" seamless></iframe>
     </div>
     <p><a href="{{ site.baseurl}}pattern-library/navigation/horizontal-navigation/horizontal-navigation.html" target="_blank">View full page example</a></p>
-    <h2 id="example-overview-2">Navbar Variations</h2>
+    <h2 id="example-overview-3">Navbar Variations</h2>
     <h3>Single-Level Menu Bar</h3>
     <div class="example-pf example-navbar">
       {% include widgets/navigation/horizontal-primary-nav-bar.html %}
