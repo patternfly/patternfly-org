@@ -14,6 +14,16 @@ layout: page-tabs
     </ul>
     <p>Consider using <a href="{{site.baseurl}}pattern-library/navigation/vertical-navigation/">vertical navigation</a> if you need a solution that can easily scale for a large amount of menu items and easily adapt to small screen sizes. Horizontal menus can also be made responsive but it usually requires a transformation from horizontal to vertical. Since vertical menus are already in this format, the transition from desktop to mobile is less disorienting.</p>
     <p>Jump to <a href="#example-overview-1">Standard Horizontal Navigation</a>, or <a href="#example-overview-2">Navbar Variations</a></p>
+    <h2 id="example-overview-2">Masthead Design</h2>
+    <p>For horizontal navigation, we recommend the masthead design be small in height to reduce vertical real estate, accommodating for the navigation.  The logo area is in the left corner and contains the application product name image file, in the form of a sized SVG graphic.  However, if additional rebranding capabilities are desired, there is an option for a taller masthead which will include a product logo.</p>
+    <h3>Option 1</h3>
+    <p>
+      <img src="{{site.baseurl}}assets/img/Masthead_Horizontal.png" alt="Masthead Horizontal - Option 1" width="1400"/>
+    </p>
+    <h3>Option 2</h3>
+    <p>
+      <img src="{{site.baseurl}}assets/img/Masthead_HorizontalVariation.png" alt="Masthead Horizontal - Option 2" width="1400"/>
+    </p>
     <h2 id="example-overview-1">Standard Horizontal Navigation</h2>
     <div class="example-pf">
       <iframe src="{{ site.baseurl}}pattern-library/navigation/horizontal-navigation/horizontal-navigation.html"
@@ -36,6 +46,24 @@ layout: page-tabs
     </div>
   </div>
   <div role="tabpanel" class="tab-pane" id="design">
+  <h2>Default Horizontal Masthead Design</h2>
+    <p>
+      <img src="{{site.baseurl}}assets/img/Masthead_Horizontal_Annotations.png" alt="Masthead_Horizontal_Annotations" width="1400"/>
+    </p>
+    <p>The Default Horizontal Masthead Design is the recommended masthead for apps utilizing horizontal navigation.</p>
+    <ol>
+      <li><strong>Logo Area</strong>: The logo area contains the application product name image file, in the form of a sized SVG graphic</li>
+    </ol>
+<h2>Horizontal Masthead Design Variation</h2>
+    <p>
+      <img src="{{site.baseurl}}assets/img/Masthead_HorizontalVariation_Annotations.png" alt="Masthead_HorizontalVariation_Annotations" width="1400"/>
+    </p>
+    <p>If your app requires additional branding within the Masthead, use the Horizontal Masthead variation. This allows the use of an icon within the Masthead.</p>
+    <ol>
+      <li><strong>Additional Branding</strong>: If using an icon, it must be the product icon</li>
+      <li><strong>Logo Area</strong>: The logo area contains the application product name image file, in the form of a sized SVG graphic</li>
+    </ol>
+
     <h2>Single-Level Menu Bar</h2>
     <p>
       <img src="{{site.baseurl}}assets/img/horizontal-nav-single.png" alt="Horizontal Navbar with Single-Level" width="880"/>
