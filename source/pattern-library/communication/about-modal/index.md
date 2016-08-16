@@ -2,7 +2,6 @@
 title: About Modal
 author: dlabrecq
 layout: page-tabs
-codetab: false
 ---
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">
@@ -12,6 +11,7 @@ codetab: false
     <div class="example-pf">
       <img src="{{site.baseurl}}assets/img/PatternFly_About_Modal.jpg" alt="multi line example"/>
     </div>
+    {% include widgets/communication/about-modal.html aboutModalId="about-modal-1" %}
     <h2 id="example-overview-2">One-Line</h2>
     <div class="example-pf">
       <img src="{{site.baseurl}}assets/img/About_PFv2OneLine.jpg" alt="one line example"/>
@@ -36,6 +36,21 @@ codetab: false
           <li><b>Content:</b> Title of product, label and version, and legal text are present. Adequate spacing and font weight consideration should be provided for legibility. Two columns are available for versions that contain both a release name and version number or in the event more space is needed.</li>
           <li><b>Corner Graphic:</b> Corner graphic allows the opportunity for branding.</li>
         </ol>
+      </div>
+    </div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="code">
+    {% include nav-tabs-code.html angular=false %}
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane nested active" id="html-css">
+        <h2 id="example-code-1">Multi-Line</h2>
+        {% include widgets/communication/about-modal.html aboutModalId="about-modal-2" %}
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+        <div class="collapse in" id="markup-1">
+          <pre class="prettyprint">
+{% capture markup_include %}{% include widgets/communication/about-modal.html aboutModalId="about-modal" %}{% endcapture %}{{ markup_include | xml_escape }}
+          </pre>
+        </div>
       </div>
     </div>
   </div>

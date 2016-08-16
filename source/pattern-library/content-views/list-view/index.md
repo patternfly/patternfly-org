@@ -107,7 +107,7 @@ layout: page-tabs
   </div>
   <div role="tabpanel" class="tab-pane" id="code">
     {% include nav-tabs-code.html %}
-    <div class="tab-content">
+    {% include nav-tabs-code.html angular=false %}
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
         <p>Jump to <a href="#example-code-1">Standard List View</a>, <a href="#example-code-2">Default Row</a>, <a href="#example-code-3">Row Variation #1</a>, <a href="#example-code-4">Row Variation #2</a>, <a href="#example-code-5">Row Variation #3</a>, <a href="#example-code-6">Row Variation #4</a>, <a href="#example-code-7">Row Variation #5</a> or <a href="#example-code-8">Row Variation #6</a>.</p>
         <h2 id="example-code-1">Standard List View</h2>
