@@ -48,7 +48,7 @@ layout: page-tabs
   <div role="tabpanel" class="tab-pane" id="design">
   <h2>Default Horizontal Masthead Design</h2>
     <p>
-      <img src="{{site.baseurl}}assets/img/Masthead_Horizontal_Annotations.png" alt="Masthead_Horizontal_Annotations" width="1400"/>
+      <img src="{{site.baseurl}}assets/img/Masthead_Horizontal_annotations.png" alt="Masthead_Horizontal_Annotations" width="1400"/>
     </p>
     <p>The Default Horizontal Masthead Design is the recommended masthead for apps utilizing horizontal navigation.</p>
     <ol>
