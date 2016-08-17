@@ -36,7 +36,7 @@ layout: page-tabs
       {% include widgets/navigation/horizontal-primary-nav-bar.html %}
     </div>
     <h3>Two-Level Menu Bar</h3>
-    <div class="example-pf example-navbar" style="height: 140px;">
+    <div class="example-pf example-navbar">
       {% include widgets/navigation/horizontal-persistent-secondary-tertiary.html %}
     </div>
     <h3>Menu Bar with Drop-Downs</h3>
@@ -134,7 +134,7 @@ layout: page-tabs
           {% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-2">Single-Level Menu Bar</h2>
-        <div class="example-pf example-navbar" style="padding-bottom: 20px;">
+        <div class="example-pf example-navbar">
           {% include widgets/navigation/horizontal-primary-nav-bar.html %}
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
@@ -150,7 +150,7 @@ layout: page-tabs
           <pre class="prettyprint">{% capture markup_include %}{% include widgets/navigation/horizontal-persistent-secondary-tertiary.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-4">Menu Bar with Drop-Downs</h2>
-        <div class="example-pf example-navbar" style="padding-bottom: 20px;">
+        <div class="example-pf example-navbar">
           {% include widgets/navigation/horizontal-multi-level.html %}
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a></p>

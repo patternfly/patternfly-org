@@ -49,7 +49,7 @@ layout: page-tabs
         <div class="example">
           <div class="row">
             <div class="col-md-5">
-              <div class="example-pf" style="padding-bottom: 20px;">
+              <div class="example-pf">
                 {% include widgets/forms/bootstrap-datepicker.html id="date-2" %}
               </div>
             </div>

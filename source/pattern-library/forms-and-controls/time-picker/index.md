@@ -39,7 +39,7 @@ url-js-extra: ['components/moment/min/moment.min.js', 'components/eonasdan-boots
         <div class="example">
           <div class="row">
             <div class="col-md-5">
-              <div class="example-pf" style="padding-bottom: 20px;">
+              <div class="example-pf">
                 {% include widgets/forms/time-picker.html id="time-picker-2" %}
               </div>
             </div>

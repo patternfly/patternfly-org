@@ -149,10 +149,13 @@ body {
 
 .example-pf {
   font-size: @font-size-base;
+  .blank-slate-pf,
+  .dataTables_wrapper,
+  .progress,
+  .toolbar-pf { margin-bottom: 10px; }
   .container-cards-pf { margin-top: 0; }
   .example-pf-demo {
     border: 1px solid @pre-border-color;
-    /* border-bottom: 0; */
     border-radius: @border-radius-base;
     padding: (@grid-gutter-width / 2);
     margin-bottom: 10px;
@@ -815,7 +818,9 @@ html {
   font-size: @font-size-small;
 }
 
-.modal + .reference-markup { margin-top: 10px; }
+.reference-markup {
+  margin-top: 10px;
+}
 
 .navbar-sidebar {
   background: @navbar-sidebar-bg-color url(../img/grid-sidebar.png) no-repeat 50% 100%;
