@@ -132,7 +132,10 @@ setup_repo() {
   git clone $PTNFLY_REPO
   cd $PTNFLY_DIR
 
-  git checkout -B $BRANCH
+  git checkout $BRANCH
+  if [ "$?" -ne 0 ]; then
+    git checkout -B $BRANCH
+  fi
   check $? "Local repo setup failure"
 }
 
