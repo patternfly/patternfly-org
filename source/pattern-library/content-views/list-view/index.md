@@ -6,7 +6,7 @@ layout: page-tabs
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">
     <p>A List View displays data in rows. Each row displays the same set of attributes, although not necessarily displayed in columns, and the attributes may wrap. The List View omits column headers and other visual noise, making it a cleaner visualization than a data table.</p>
-    <p>Jump to <a href="#standard">Standard List View</a>, <a href="#expanding-rows">List View with Expanding Rows</a> or <a href="#row-variations">Row Variation Examples</a>.</p>
+    <p>Jump to <a href="#standard">Standard List View</a>, <a href="#expanding-rows">List View with Expanding Rows</a> or <a href="#row-variations">Row Variation Examples</a></p>
     <h2 id="standard">Standard List View</h2>
 
     <div class="example-pf">
@@ -107,9 +107,9 @@ layout: page-tabs
   </div>
   <div role="tabpanel" class="tab-pane" id="code">
     {% include nav-tabs-code.html %}
-    {% include nav-tabs-code.html angular=false %}
+    <div class="tab-content">
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <p>Jump to <a href="#example-code-1">Standard List View</a>, <a href="#example-code-2">Default Row</a>, <a href="#example-code-3">Row Variation #1</a>, <a href="#example-code-4">Row Variation #2</a>, <a href="#example-code-5">Row Variation #3</a>, <a href="#example-code-6">Row Variation #4</a>, <a href="#example-code-7">Row Variation #5</a> or <a href="#example-code-8">Row Variation #6</a>.</p>
+        <p>Jump to <a href="#example-code-1">Standard List View</a>, <a href="#example-code-2">Default Row</a>, <a href="#example-code-3">Row Variation #1</a>, <a href="#example-code-4">Row Variation #2</a>, <a href="#example-code-5">Row Variation #3</a>, <a href="#example-code-6">Row Variation #4</a>, <a href="#example-code-7">Row Variation #5</a> or <a href="#example-code-8">Row Variation #6</a></p>
         <h2 id="example-code-1">Standard List View</h2>
         <div class="example-pf">
           <iframe src="{{site.baseurl}}pattern-library/content-views/list-view/list-view.html"
