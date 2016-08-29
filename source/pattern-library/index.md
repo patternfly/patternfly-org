@@ -121,6 +121,14 @@ with these updates by checking out “What’s New” on the <a href="https://bl
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
+       <p>Card View</p>
+        <a href="{{ site.baseurl }}pattern-library/content-views/card-view">
+          <img src="{{site.baseurl}}assets/img/thumbnails/card-view.png" alt="card-view"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
        <p>List View</p>
         <a href="{{ site.baseurl }}pattern-library/content-views/list-view">
           <img src="{{site.baseurl}}assets/img/thumbnails/List-View.png" alt="list-view"/>

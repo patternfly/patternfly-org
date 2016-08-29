@@ -166,6 +166,9 @@
               <li {% if secondary == 'content-views' %} class="active"{% endif %}>
                 <a class="{% if secondary == 'content-views' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#content-views-secondary" aria-expanded="{% if secondary == 'content-views' %}true{% else %}false{% endif %}" aria-controls="content-views-secondary">Content Views</a>
                 <ul class="collapse {% if secondary == 'content-views' %}in{% endif %}" id="content-views-secondary">
+                  <li {% if tertiary == 'card-view' %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}pattern-library/content-views/card-view/">Card View</a>
+                  </li>
                   <li {% if tertiary == 'list-view' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/content-views/list-view/">List View</a>
                   </li>
