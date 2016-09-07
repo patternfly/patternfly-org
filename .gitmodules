@@ -2,3 +2,7 @@
 	path = submodules/patternfly-core
 	url = https://github.com/patternfly/patternfly.git
 	branch = master
+[submodule "submodules/patternfly-design"]
+	path = submodules/patternfly-design
+	url = https://github.com/patternfly/patternfly-design.git
+	branch = master
