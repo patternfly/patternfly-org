@@ -21,6 +21,7 @@ npm.cmd
 patternfly.spec
 build
 source/_includes/widgets
+source/_includes/patterns
 =======
 _site
 public

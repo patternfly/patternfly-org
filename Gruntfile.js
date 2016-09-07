@@ -59,6 +59,7 @@ module.exports = function (grunt) {
           // Copy resources from git submodules, node_modules, or bower components
           // This copy command replaces the symlink currently in place
           {expand: true, cwd: 'submodules/patternfly-core/tests/pages/_includes/widgets', src: ['**'], dest: 'source/_includes/widgets'},
+          {expand: true, cwd: 'submodules/patternfly-design/pattern_library', src: ['**'], dest: 'source/_includes/patterns'},
         ]
       }
     },
