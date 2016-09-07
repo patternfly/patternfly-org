@@ -1,0 +1,4 @@
+[submodule "submodules/patternfly-core"]
+	path = submodules/patternfly-core
+	url = https://github.com/patternfly/patternfly.git
+	branch = master
