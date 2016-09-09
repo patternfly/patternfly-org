@@ -9,4 +9,4 @@
 [submodule "submodules/angular-patternfly"]
 	path = submodules/angular-patternfly
 	url = https://github.com/patternfly/angular-patternfly.git
-	branch = master
+	branch = master-dist

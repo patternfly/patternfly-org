@@ -32,6 +32,11 @@ layout: default
         <div role="tabpanel" class="tab-pane" id="code">
           {% include nav-tabs-code.html html=false %}
           <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                {% include {{page.code}} %}
+              </div>
+            </div>
           </div>
         </div>
       </div>

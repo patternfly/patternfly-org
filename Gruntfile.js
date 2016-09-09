@@ -61,6 +61,7 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'submodules/patternfly-core/tests/pages/_includes/widgets', src: ['**'], dest: 'source/_includes/widgets'},
           {expand: true, cwd: 'submodules/patternfly-design/pattern_library', src: ['**'], dest: 'source/_includes/patterns'},
           {expand: true, cwd: 'submodules/patternfly-design/pattern_library', src: ['**', '!**/*.md'], dest: 'source/pattern-library'},
+          {expand: true, cwd: 'submodules/angular-patternfly/dist/docs/partials', src: ['**'], dest: 'source/_includes/angular-partials'},
         ]
       }
     },
