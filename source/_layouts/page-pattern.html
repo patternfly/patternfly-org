@@ -34,7 +34,8 @@ layout: default
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane nested active" id="angular">
               <div ng-app="docsApp" ng-controller="DocsController" class="content">
-                {% include {{page.code}} %}
+                <div ng-include src="'{{page.code}}'"></div>
+                <!-- % include {{page.code}} % -->
               </div>
             </div>
           </div>
