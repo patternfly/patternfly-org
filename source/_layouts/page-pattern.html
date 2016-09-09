@@ -20,8 +20,21 @@ layout: default
       </div>
     </header>
     <section class="post_content">
-      {% capture my_include %}{% include {{page.pattern}} %}{% endcapture %}
-      {{ my_include | markdownify }}
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          {% capture my_include %}{% include {{page.overview}} %}{% endcapture %}
+          {{ my_include | markdownify }}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="design">
+          {% capture my_include %}{% include {{page.design}} %}{% endcapture %}
+          {{ my_include | markdownify }}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          {% include nav-tabs-code.html html=false %}
+          <div class="tab-content">
+          </div>
+        </div>
+      </div>
     </section>
   </article>
 </div>
