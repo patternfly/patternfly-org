@@ -44,3 +44,14 @@ layout: default
     </section>
   </article>
 </div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>

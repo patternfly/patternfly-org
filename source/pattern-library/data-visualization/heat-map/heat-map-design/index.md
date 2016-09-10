@@ -1,5 +1,5 @@
 ---
-title: Heat Map
+title: Pattern
 author: bleathem
 layout: page-pattern
 overview: patterns/data-visualization/heat-map/heat-map-design/heat-map-overview.md
