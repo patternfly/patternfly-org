@@ -13,16 +13,21 @@ codetab: true
     notifications for what has changed in the form of dismissible
     <a href="{{site.baseurl}}pattern-library/communication/toast-notifications">Toast Notifications</a> and a permanent
     interactive icon in the header bar. It is hidden or revealed at the user’s request.</p>
-    <p>Jump to <a href="#example-overview-1">Vertical Navigation</a> or <a href="#example-overview-2">Horizontal Navigation</a></p>
-    <h2 id="example-overview-1">Vertical Navigation</h2>
+    <p>Jump to <a href="#example-overview-1">Horizontal Navigation</a> or <a href="#example-overview-2">Vertical Navigation</a></p>
+    <h2 id="example-overview-1">Horizontal Navigation</h2>
     <div class="example-pf">
-      <img src="{{site.baseurl}}assets/img/Patternfly_ToastNotification_Tray_06_11_2016.jpg" alt="notification-drawer-example"/>
-    </div>  
-    <h2 id="example-overview-2">Horizontal Navigation</h2>
-    <div class="example-pf">
-      <img src="{{site.baseurl}}assets/img/Patternfly_ToastNotification_Tray_Horizontal.jpg" alt="notification drawer horizontal nav example"/>
+      <iframe src="{{ site.baseurl}}pattern-library/communication/notification-drawer/notification-drawer-horizontal-nav.html"
+              width="100%" height="650px;" scrolling="no" seamless></iframe>
     </div>
+    <p><a href="{{ site.baseurl}}pattern-library/communication/notification-drawer/notification-drawer-horizontal-nav.html" target="_blank">View full page example</a></p>
+    <h2 id="example-overview-2">Vertical Navigation</h2>
+    <div class="example-pf">
+      <iframe src="{{ site.baseurl}}pattern-library/communication/notification-drawer/notification-drawer-vertical-nav.html"
+              width="100%" height="650px;" scrolling="no" seamless></iframe>
+    </div>
+    <p><a href="{{ site.baseurl}}pattern-library/communication/notification-drawer/notification-drawer-vertical-nav.html" target="_blank">View full page example</a></p>
   </div>
+  
   <div role="tabpanel" class="tab-pane" id="design">
     <h2>Toast Notification</h2>
     <div class="row">
@@ -49,35 +54,56 @@ codetab: true
           <li><b>Row Hover State:</b> Example of hover state.</li>
           <li><b>Mark All Read:</b> Clicking “Mark All Read” changes all visible unread rows (bold row type) to read (regular row type).</li>
           <li><b>Icon Empty:</b> The empty state shows no new events.</li>
-          <li><b>Row Actions:</b> Clicking on the <a href="{{site.baseurl}}pattern-library/widgets/#kebabs">Kabob</a> menu will reveal a drop down containing actions for that item.</li>
+          <li><b>Row Actions:</b> Clicking on the <a href="{{site.baseurl}}pattern-library/widgets/#kebabs">kebab</a> menu will reveal a drop down containing actions for that item.</li>
           <li><b>Infinite Scroll:</b> Infinite scroll reduces need to identify time range on accordion tab. Allows for free-range historical search of notifications.</li>
         </ol>
       </div>
     </div>
   </div>
+  
   <div role="tabpanel" class="tab-pane" id="code">
     {% include nav-tabs-code.html %}
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <h2 id="example-code-1">Vertical Navigation with Notification Drawer</h2>
-          <div class="example-pf">
-            <iframe src="{{ site.baseurl}}pattern-library/communication/notification-drawer/vertical-nav-notification-drawer.html"
-                    width="100%" height="650px;" scrolling="no" seamless></iframe>
+        <p>Jump to <a href="#example-code-1">Notification Drawer for Horizontal Navigation</a> or <a href="#example-code-2">Notification Drawer for Vertical Navigation</a></p>
+        <h2 id="example-code-1">Notification Drawer for Horizontal Navigation</h2>
+        <div class="example-pf">
+          <iframe src="{{ site.baseurl}}pattern-library/communication/notification-drawer/notification-drawer-horizontal-nav.html"
+                  width="100%" height="650px;" scrolling="no" seamless></iframe>
+        </div>
+        <p><a href="{{ site.baseurl}}pattern-library/communication/notification-drawer/notification-drawer-horizontal-nav.html" target="_blank">View full page example</a></p>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+            <div class="collapse in" id="markup-1">
+              <pre class="prettyprint">{% capture markup_include %}
+<html class="layout-pf layout-pf-fixed">
+...
+{% include widgets/navigation/horizontal-primary-nav-bar-page.html %}
+</html>
+              {% endcapture %}{{ markup_include | xml_escape }}</pre>
+            </div>
           </div>
-          <p><a href="{{ site.baseurl}}pattern-library/communication/notification-drawer/vertical-nav-notification-drawer.html" target="_blank">View full page example</a></p>
-          <div class="row">
-            <div class="col-md-12">
-              <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-              <div class="collapse in" id="markup-1">
-                <pre class="prettyprint">{% capture markup_include %}
+        </div>
+        <h2 id="example-code-2">Notification Drawer for Vertical Navigation</h2>
+        <div class="example-pf">
+          <iframe src="{{ site.baseurl}}pattern-library/communication/notification-drawer/notification-drawer-vertical-nav.html"
+                  width="100%" height="650px;" scrolling="no" seamless></iframe>
+        </div>
+        <p><a href="{{ site.baseurl}}pattern-library/communication/notification-drawer/notification-drawer-vertical-nav.html" target="_blank">View full page example</a></p>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+            <div class="collapse in" id="markup-2">
+              <pre class="prettyprint">{% capture markup_include %}
 <html class="layout-pf layout-pf-fixed">
 ...
 {% include widgets/navigation/vertical-navigation.html %}
 </html>
-                {% endcapture %}{{ markup_include | xml_escape }}</pre>
-              </div>
+              {% endcapture %}{{ markup_include | xml_escape }}</pre>
             </div>
           </div>
+        </div>
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">
         <div ng-app="docsApp" ng-controller="DocsController" class="content">
