@@ -30,8 +30,17 @@ layout: default
           {{ my_include | site_replace | markdownify }}
         </div>
         <div role="tabpanel" class="tab-pane" id="code">
-          {% include nav-tabs-code.html html=false %}
+          {% if page.code_html == false %}
+            {% include nav-tabs-code.html html=false %}
+          {% elsif page.code_angular == false %}
+            {% include nav-tabs-code.html angular=false %}
+          {% else %}
+            {% include nav-tabs-code.html %}
+          {% endif %}
           <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              <!-- % include {{page.code_html}} % -->
+            </div>
             <div role="tabpanel" class="tab-pane nested active" id="angular">
               <div ng-app="docsApp" ng-controller="DocsController" class="content">
                 <div ng-include src="'{{page.code_angular}}'"></div>
