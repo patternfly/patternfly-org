@@ -23,11 +23,11 @@ layout: default
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="overview">
           {% capture my_include %}{% include {{page.overview}} %}{% endcapture %}
-          {{ my_include | markdownify }}
+          {{ my_include | site_replace | markdownify }}
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
           {% capture my_include %}{% include {{page.design}} %}{% endcapture %}
-          {{ my_include | markdownify }}
+          {{ my_include | site_replace | markdownify }}
         </div>
         <div role="tabpanel" class="tab-pane" id="code">
           {% include nav-tabs-code.html html=false %}
