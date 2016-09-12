@@ -40,7 +40,7 @@ layout: page-tabs
     </div>
   </div>
   <div role="tabpanel" class="tab-pane" id="code">
-    {% include nav-tabs-code.html angular=false %}
+    {% include nav-tabs-code.html %}
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
         <h2 id="example-code-1">Multi-Line</h2>
@@ -50,6 +50,11 @@ layout: page-tabs
           <pre class="prettyprint">
 {% capture markup_include %}{% include widgets/communication/about-modal.html aboutModalId="about-modal" %}{% endcapture %}{{ markup_include | xml_escape }}
           </pre>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane nested" id="angular">
+        <div ng-app="docsApp" ng-controller="DocsController" class="content">
+          <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.modals.directive.pfAboutModal.html'"></div>
         </div>
       </div>
     </div>
