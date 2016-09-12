@@ -20,6 +20,9 @@ npm.cmd
 # Ignore generated files
 patternfly.spec
 build
+source/_includes/widgets
+source/_includes/patterns
+source/_includes/angular-partials
 =======
 _site
 public

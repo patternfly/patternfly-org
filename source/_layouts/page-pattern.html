@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<div id="main" class="col-md-12 clearfix" role="main">
+  <article class="post">
+    <header class="page-tabs-header">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 cols-nopad-right">
+          <h1>{{ page.title }}</h1>
+        </div>
+        <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
+          {% if page.code == false %}
+            {% include nav-tabs-pattern.html codetab=false %}
+          {% elsif page.design == false %}
+            {% include nav-tabs-pattern.html designtab=false %}
+          {% else %}
+            {% include nav-tabs-pattern.html %}
+          {% endif %}
+        </div>
+      </div>
+    </header>
+    <section class="post_content">
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="overview">
+          {% capture my_include %}{% include {{page.overview}} %}{% endcapture %}
+          {{ my_include | site_replace | markdownify }}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="design">
+          {% capture my_include %}{% include {{page.design}} %}{% endcapture %}
+          {{ my_include | site_replace | markdownify }}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="code">
+          {% if page.code_html == false %}
+            {% include nav-tabs-code.html html=false %}
+          {% elsif page.code_angular == false %}
+            {% include nav-tabs-code.html angular=false %}
+          {% else %}
+            {% include nav-tabs-code.html %}
+          {% endif %}
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane nested active" id="html-css">
+              <!-- % include {{page.code_html}} % -->
+            </div>
+            <div role="tabpanel" class="tab-pane nested active" id="angular">
+              <div ng-app="docsApp" ng-controller="DocsController" class="content">
+                <div ng-include src="'{{page.code_angular}}'"></div>
+                <!-- % include {{page.code}} % -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</div>
+<script>
+  var pageHeader = document.querySelector('.page-tabs-header h1'),
+      markdownHeader = document.querySelector('.tab-pane h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+  if (markdownHeader) {
+    pageHeader.innerText = markdownHeader.innerText;
+    Array.prototype.forEach.call(markdownHeaders, function(h1) {
+      h1.style.display = 'none';
+    });
+  }
+</script>

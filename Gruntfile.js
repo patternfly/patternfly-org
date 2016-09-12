@@ -40,6 +40,60 @@ module.exports = function (grunt) {
         }
       }
     },
+    run: {
+      options: {
+      },
+      submodulesUpdate: {
+        cmd: 'git',
+        args: [
+          'submodule',
+          'update',
+          '--init',
+          '--remote'
+        ]
+      }
+    },
+    copy: {
+      prebuild: {
+        files: [
+          // Copy resources from git submodules
+          {
+            expand: true,
+            cwd: 'submodules/patternfly-core/tests/pages/_includes/widgets',
+            src: ['**'],
+            dest: 'source/_includes/widgets'
+          },
+          {
+            expand: true,
+            cwd: 'submodules/patternfly-design/pattern-library',
+            src: ['**/design/**', '!**/documents/**'],
+            dest: 'source/_includes/patterns',
+            rename: function(dest, src) {
+              return dest + '/' + src.replace('/design', '');
+            }
+          },
+          {
+            expand: true,
+            cwd: 'submodules/angular-patternfly/dist/docs/partials',
+            src: ['**'],
+            dest: 'source/_includes/angular-partials'
+          }
+        ]
+      },
+      postbuild: {
+        files: [
+          {
+            expand: true,
+            cwd: 'submodules/patternfly-design/pattern-library',
+            src: ['**/design/**', '!**/documents/**', '!**/*.md'],
+            dest: 'source/_site/pattern-library',
+            rename: function(dest, src) {
+              return dest + '/' + src.replace('/design', '');
+            }
+          }
+        ]
+      }
+    },
     csscount: {
       source: {
         src: [
@@ -141,12 +195,19 @@ module.exports = function (grunt) {
     'uglify'
   ]);
 
+  grunt.registerTask('prebuild', [
+    'run:submodulesUpdate',
+    'copy:prebuild'
+  ])
+
   grunt.registerTask('build', [
+    'prebuild',
     'less',
     'cssmin',
     //'csscount',
     'uglify',
-    'jekyll'
+    'jekyll',
+    'copy:postbuild'
   ]);
 
   grunt.registerTask('server', [
