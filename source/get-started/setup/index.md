@@ -40,7 +40,7 @@ layout: page
           <li><a href="https://bower.io/#installing-bower" target="top">Bower</a>: a package manager for the web.
             <ul>
               <li>
-                <kbd>$ sudo install -g bower</kbd>
+                <kbd>$ sudo npm install -g bower</kbd>
               </li>
             </ul>
           </li>
