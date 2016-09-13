@@ -9,7 +9,7 @@ git config --global push.default simple
 
 # OpenShift expects "php" as application directory's document root
 cd source/_site
-find . | cpio -dumpv ../php
+find . | cpio -dumpv ../../php
 cd ../..
 
 # Commit generated files
