@@ -8,7 +8,9 @@ git config user.email "patternfly-build@redhat.com"
 git config --global push.default simple
 
 # OpenShift expects "php" as application directory's document root
-mv source/_site php
+cd source/_site
+find . | cpio -dumpv ../php
+cd ../..
 
 # Commit generated files
 git add php --force
