@@ -133,7 +133,10 @@ module.exports = function (grunt) {
           'source/assets/css/patternfly-site.css': 'source/_less/patternfly-site.less'
         },
         options: {
-          paths: ['less/'],
+          paths: [
+            'less/',
+            'node_modules/'
+          ],
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapFilename: 'source/assets/css/patternfly-site.css.map',
@@ -145,7 +148,10 @@ module.exports = function (grunt) {
           'source/assets/css/patternfly-adjusted.css': 'source/_less/patternfly-adjusted.less'
         },
         options: {
-          paths: ['less/'],
+          paths: [
+            'less/',
+            'node_modules/'
+          ],
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapFilename: 'source/assets/css/patternfly-adjusted.css.map',
