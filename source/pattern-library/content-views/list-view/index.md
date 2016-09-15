@@ -143,7 +143,7 @@ layout: page-tabs
               <div class="container-fluid container-cards-pf">
                 <div class="row row-cards-pf">
                   <!-- Need to be fixed. It is not displaying the c3 charts. -->
-                  {% include widgets/list-view/list-view-variation-1.html %} 
+                  {% include widgets/list-view/list-view-variation-1.html id1="donut-chart-1" id2="donut-chart-2" id3="donut-chart-3" id4="donut-chart-4" %}
                 </div>
               </div>
             </div>
