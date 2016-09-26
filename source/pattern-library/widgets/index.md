@@ -1909,7 +1909,7 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
   </div>
   <div class="section" id="spinner">
     <h3>Spinner</h3>
-    <p><strong>Note:</strong> IE9 requires a conditional class on &lt;html&gt; in order to display an animated gif fallback as it doesn't support CSS animation.  See lines 2-5 of <a href="https://github.com/patternfly/patternfly/blob/master/tests/spinner.html">https://github.com/patternfly/patternfly/blob/master/tests/spinner.html</a>.</p>
+    <p><strong>Note:</strong> IE9 requires a conditional class on &lt;html&gt; in order to display an animated gif fallback as it doesn't support CSS animation.  See lines 2-5 of <a href="https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/spinner.html">https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/spinner.html</a>.</p>
     <div class="pf-example">
       <div class="spinner"></div>
     </div>
