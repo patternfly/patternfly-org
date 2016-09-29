@@ -469,7 +469,16 @@ layout: page
     <div class="important-center-container">
       <div class="row">
         <div class="col-md-4 download-button">
-        <a class="btn btn-default btn-lg" type="button" href="/assets/img/PatternFly_Swatches.aco"><i class="fa fa-download"></i>&nbsp;Download Color Swatches</a>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-download"></i> Download Color Swatches <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-pf-full">
+              <li><a href="/assets/file/PatternFly_Swatches_08-31-2016.aco">For Adobe Photoshop</a></li>
+              <li><a href="/assets/file/PatternFly_Swatches_08-31-2016.ase">For Adobe Illustrator/Indesign</a></li>
+            </ul>
+          </div>
+          <span class="last-update">Last updated: 31 Aug 2016</span>
         </div>
         <div class="col-md-8 clearfix">
         <div class="important-color-swatches">
@@ -576,17 +585,23 @@ layout: page
           </div>
           <div id="collapseOne" class="panel-collapse collapse">
             <div class="panel-body">
-            <strong>Install Adobe Photoshop palettes:</strong>
+              <strong>Install palette for Adobe Photoshop:</strong>
               <ol>
-                <li>Download and unzip the Adobe Color Zip file.</li>
+                <li>Download the Adobe Color file for Photoshop.</li>
                 <li>In Finder, go to Applications > Adobe Photoshop CC > Presets > Color Swatches</li>
-                <li>Place the .aco files from the zip file into the Color Swatches folder.</li>
+                <li>Place the .aco file into the Color Swatches folder.</li>
               </ol>
-            <strong>Install Adobe Illustrator palettes:</strong>
+              <strong>Install palette for Adobe Illustrator:</strong>
               <ol>
-                <li>Download and unzip the Adobe Color Zip file.</li>
-                <li>In Finder, go to Applications > Adobe Illustrator CC > Presets > en_US.Swatches</li>
-                <li>Place the .ase files from the zip file into the Swatches folder.</li>
+                <li>Download the Adobe Color file for Illustrator.</li>
+                <li>In Finder, go to Applications > Adobe Illustrator CC > Presets > en_US > Swatches</li>
+                <li>Place the .ase file into the Swatches folder.</li>
+              </ol>
+              <strong>Install palette for Adobe InDesign:</strong>
+              <ol>
+                <li>Download the Adobe Color file for InDesign.</li>
+                <li>In Finder, go to Applications > Adobe InDesign CC > Presets > Swatch Libraries</li>
+                <li>Place the .ase file into the Swatches folder.</li>
               </ol>
             </div>
           </div>
