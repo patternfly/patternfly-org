@@ -8,7 +8,6 @@ layout: page-tabs
     <p>A List View displays data in rows. Each row displays the same set of attributes, although not necessarily displayed in columns, and the attributes may wrap. The List View omits column headers and other visual noise, making it a cleaner visualization than a data table.</p>
     <p>Jump to <a href="#standard">Standard List View</a>, <a href="#expanding-rows">List View with Expanding Rows</a> or <a href="#row-variations">Row Variation Examples</a></p>
     <h2 id="standard">Standard List View</h2>
-
     <div class="example-pf">
       <iframe src="{{site.baseurl}}pattern-library/content-views/list-view/list-view.html"
               width="100%" height="650px;" scrolling="no" seamless></iframe>
@@ -30,7 +29,7 @@ layout: page-tabs
           <div class="row row-cards-pf">
             <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
             {% include widgets/list-view/list-view-default.html %}
-            {% include widgets/list-view/list-view-variation-1.html %}
+            {% include widgets/list-view/list-view-variation-1.html id1="donut-chart-1" id2="donut-chart-2" id3="donut-chart-3" id4="donut-chart-4"%}
             {% include widgets/list-view/list-view-variation-2.html %}
             {% include widgets/list-view/list-view-variation-3.html %}
             {% include widgets/list-view/list-view-variation-4.html %}
@@ -143,7 +142,7 @@ layout: page-tabs
               <div class="container-fluid container-cards-pf">
                 <div class="row row-cards-pf">
                   <!-- Need to be fixed. It is not displaying the c3 charts. -->
-                  {% include widgets/list-view/list-view-variation-1.html %} 
+                  {% include widgets/list-view/list-view-variation-1.html id1="donut-chart-5" id2="donut-chart-6" id3="donut-chart-7" id4="donut-chart-8" %}
                 </div>
               </div>
             </div>
@@ -151,7 +150,7 @@ layout: page-tabs
         </div>
         <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
         <div class="collapse in" id="markup-3">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/list-view/list-view-variation-1.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+          <pre class="prettyprint">{% capture markup_include %}{% include widgets/list-view/list-view-variation-1.html id1="donut-chart-5" id2="donut-chart-6" id3="donut-chart-7" id4="donut-chart-8" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
         </div>
         <h2 id="example-code-4">Row Variation #2</h2>
         <div class="example-pf">
