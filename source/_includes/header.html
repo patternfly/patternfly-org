@@ -220,6 +220,9 @@
               <li {% if secondary == 'forms-and-controls' %} class="active"{% endif %}>
                 <a class="{% if secondary == 'forms-and-controls' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="{% if secondary == 'forms-and-controls' %}true{% else %}false{% endif %}" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
                 <ul class="collapse {% if secondary == 'forms-and-controls' %}in{% endif %}" id="forms-and-controls-secondary">
+                  <li {% if tertiary == 'conditional-fields' %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}pattern-library/forms-and-controls/conditional-fields/">Conditional Fields</a>
+                  </li>
                   <li {% if tertiary == 'date-picker' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/forms-and-controls/date-picker/">Date Picker</a>
                   </li>
