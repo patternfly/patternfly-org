@@ -30,10 +30,12 @@ layout: default
           {{ my_include | site_replace | markdownify }}
         </div>
         <div role="tabpanel" class="tab-pane" id="code">
-          {% if page.code_html == false %}
+          {% if page.code_html == false and page.code_angular != false %}
             {% include nav-tabs-code.html html=false %}
-          {% elsif page.code_angular == false %}
+          {% elsif page.code_html != false and page.code_angular == false %}
             {% include nav-tabs-code.html angular=false %}
+          {% elsif page.code_html == false and page.code_angular == false %}
+            {% include nav-tabs-code.html html=false angular=false %}
           {% else %}
             {% include nav-tabs-code.html %}
           {% endif %}
