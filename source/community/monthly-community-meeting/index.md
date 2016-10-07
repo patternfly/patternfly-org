@@ -23,33 +23,31 @@ layout: page
     </tr>
   </thead>
   <tbody>
-  <tr>
-    <td>October 5, 2016</td>
-    <td><a href="https://www.dropbox.com/s/bw81zc0cguag7z7/PatternFly%20Community%20Meeting%202016-10.pdf?dl=0">View Deck</a></td>
-    <td><a target="_blank" href="https://bluejeans.com/s/PZdLS/">View Recording</a></td>
-  </tr>
-  <tr>
-    <td>September 7, 2016</td>
-    <td><a href="https://www.dropbox.com/s/fp3p58n9wmfgnvt/PatternFly%20Community%20Meeting%202016-09.pdf?dl=0">View Deck</a></td>
-    <td><a target="_blank" href="https://bluejeans.com/s/aNH4r/">View Recording</a></td>
-  </tr>
-  <tr>
-  <tr>
-    <td>August 11, 2016</td>
-    <td><a href="https://www.dropbox.com/s/avsmiitfjko7l7t/PatternFly%20Community%20Meeting%202016-08.pdf?dl=0">View Deck</a></td>
-    <td><a target="_blank" href="https://bluejeans.com/s/aa4d/">View Recording</a></td>
-  </tr>
-  <tr>
-  <tr>
-    <td>July 13, 2016</td>
-    <td><a href="https://www.dropbox.com/s/fnoy4qkvd18vk67/PatternFly%20Community%20Meeting%202016-07.pdf?dl=0">View Deck</a></td>
-    <td><a target="_blank" href="https://bluejeans.com/s/a27m/">View Recording</a></td>
-  </tr>
-  <tr>
-    <td>June 15, 2016</td>
-    <td><a href="https://www.dropbox.com/s/yg9u0lp2kziqzqb/PatternFly%20Community%20Meeting%202016-06.pdf?dl=0">View Deck</a></td>
-    <td><a target="_blank" href="https://bluejeans.com/s/9PLG/">View Recording</a></td>
-  </tr>
+    <tr>
+      <td>October 5, 2016</td>
+      <td><a href="https://www.dropbox.com/s/bw81zc0cguag7z7/PatternFly%20Community%20Meeting%202016-10.pdf?dl=0">View Deck</a></td>
+      <td><a target="_blank" href="https://bluejeans.com/s/PZdLS/">View Recording</a></td>
+    </tr>
+    <tr>
+      <td>September 7, 2016</td>
+      <td><a href="https://www.dropbox.com/s/fp3p58n9wmfgnvt/PatternFly%20Community%20Meeting%202016-09.pdf?dl=0">View Deck</a></td>
+      <td><a target="_blank" href="https://bluejeans.com/s/aNH4r/">View Recording</a></td>
+    </tr>
+    <tr>
+      <td>August 11, 2016</td>
+      <td><a href="https://www.dropbox.com/s/avsmiitfjko7l7t/PatternFly%20Community%20Meeting%202016-08.pdf?dl=0">View Deck</a></td>
+      <td><a target="_blank" href="https://bluejeans.com/s/aa4d/">View Recording</a></td>
+    </tr>
+    <tr>
+      <td>July 13, 2016</td>
+      <td><a href="https://www.dropbox.com/s/fnoy4qkvd18vk67/PatternFly%20Community%20Meeting%202016-07.pdf?dl=0">View Deck</a></td>
+      <td><a target="_blank" href="https://bluejeans.com/s/a27m/">View Recording</a></td>
+    </tr>
+    <tr>
+      <td>June 15, 2016</td>
+      <td><a href="https://www.dropbox.com/s/yg9u0lp2kziqzqb/PatternFly%20Community%20Meeting%202016-06.pdf?dl=0">View Deck</a></td>
+      <td><a target="_blank" href="https://bluejeans.com/s/9PLG/">View Recording</a></td>
+    </tr>
     <tr>
       <td>May 18, 2016</td>
       <td><a href="https://www.dropbox.com/s/gg2w5wls8kvd2lj/PatternFly%20Community%20Meeting%202016-05%20%281%29.pdf?dl=0">View Deck</a></td>
@@ -75,7 +73,6 @@ layout: page
       <td><a href="https://www.dropbox.com/s/z5e2obske4tl15t/PatternFly%20Community%20Meeting%202016-01.pdf?dl=0">View Deck</a></td>
       <td><a target="_blank" href="https://bluejeans.com/s/91SG/">View Recording</a></td>
     </tr>
-    <tr></tr>
     <tr>
       <td>December 16, 2015</td>
       <td><a href="https://www.dropbox.com/s/hwdoxrnlqmvqmp0/PatternFly%20Community%20Meeting%202015-12.pdf?dl=0">View Deck</a></td>
