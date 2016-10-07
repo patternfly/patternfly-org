@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  
+  
+  
+  
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contribute | PatternFly</title>
+  <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
+  <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
+  <!-- iPad retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-152.png">
+  <!-- iPad retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-144.png">
+  <!-- iPad non-retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-76.png">
+  <!-- iPad non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-72.png">
+  <!-- iPhone 6 Plus icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-180.png">
+  <!-- iPhone retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-114.png">
+  <!-- iPhone non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-57.png">
+  <link rel="stylesheet" href="/assets/css/patternfly-adjusted.min.css">
+  <link rel="stylesheet" href="/components/patternfly/dist/css/patternfly-additions.min.css">
+  <link rel="stylesheet" href="/assets/css/patternfly-site.min.css">
+  
+  
+  <script src="/components/jquery/dist/jquery.min.js"></script>
+  <script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/components/bootstrap-combobox/js/bootstrap-combobox.js"></script>
+  <script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+  <script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  <script src="/components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+  <script src="/components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+  <script src="/components/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+  <script src="/components/c3/c3.min.js"></script>
+  <script src="/components/d3/d3.min.js"></script>
+  <script src="/components/datatables/media/js/jquery.dataTables.js"></script>
+  <script src="/components/google-code-prettify/bin/prettify.min.js"></script>
+  <script src="/components/clipboard/dist/clipboard.min.js"></script>
+  <script src="/components/patternfly/dist/js/patternfly.min.js"></script>
+  
+  
+  <script src="/assets/js/patternfly-site.min.js"></script>
+  <link rel="canonical" href="https://www.patternfly.org/get-started/contribute/">
+</head>
+
+  <body class="has-sidebar">
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+<!--
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse-pf-site" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+-->
+            <a class="navbar-brand" id="logo" title="open interface project" href="/">PatternFly | open interface project</a>
+          </div>
+          <div class="navbar-collapse navbar-collapse-pf-site collapse">
+            <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
+              <div class="form-group">
+                <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                <input name="sitesearch" type="hidden" value="patternfly.org">
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div>
+            </form>
+            <ul id="menu-primary" class="nav navbar-nav navbar-right">
+              <li class="active">
+                <a href="/get-started/">Get Started</a>
+              </li>
+              <li>
+                <a href="/pattern-library/">Pattern Library</a>
+              </li>
+              <li>
+                <a href="/styles/">Styles</a>
+              </li>
+              <li>
+                <a href="/community/">Community</a>
+              </li>
+              <li>
+                <a href="/download/">Download</a>
+              </li>
+              <li>
+                <a href="https://blog.patternfly.org">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-sidebar ">
+<!--
+      { % if primary == 'get-started' or primary == 'pattern-library' or primary == 'styles' % }
+      <nav class="navbar navbar-sidebar" aria-labelledby="navbar-toggle-sidebar">
+        <button class="btn btn-default navbar-toggle-sidebar" id="navbar-toggle-sidebar">
+          <span class="fa fa-angle-double-right"></span>
+          <span class="sr-only">Toggle sub navigation</span>
+        </button>
+-->
+        <ul>
+          <li class="primary-menu hidden">
+            <a href="/">Menu</a>
+            <ul>
+              <li class="active">
+              <a href="/get-started/">Get Started<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/pattern-library/">Pattern Library<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/styles/">Styles<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/community/">Community</a>
+              </li>
+              <li>
+              <a href="/download/">Download</a>
+              </li>
+              <li>
+                <a href="https://blog.patternfly.org">Blog</a>
+              </li>
+              <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
+                <div class="form-group">
+                  <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                  <input name="sitesearch" type="hidden" value="patternfly.org">
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+              </form>
+            </ul>
+          </li>
+          <li class="secondary-menu">
+            <a class="secondary-menu-toggle"><span class="secondary-menu-toggle-icon"></span>Get Started</a>
+            <ul>
+              <li >
+                <a href="/get-started/">Overview</a>
+              </li>
+              <li  class="active">
+                <a href="/get-started/contribute/">Contribute</a>
+              </li>
+              <li >
+                <a href="/get-started/frequently-asked-questions/">Frequently Asked Questions</a>
+              </li>
+              <li >
+                <a href="/get-started/setup/">Setting Up PatternFly</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!--{ % endif % }-->
+    </header>
+
+    <div class="container-fluid">
+      <div class="clearfix row" id="content">
+        <div id="main" class="col-md-12 clearfix" role="main">
+  <article class="post">
+    <header class="page-tabs-header">
+      <h1>Contribute</h1>
+    </header>
+    <section class="post_content">
+      <h2 id="contributing-to-patternfly">Contributing to PatternFly</h2>
+
+<p>Hello, we are glad you’re here! We need contributors to help PatternFly improve and grow. While code contributions are important, there are many ways that you can get involved and help out.</p>
+
+<p>This page contains some tips and guidelines for contributing to PatternFly. These are just guidelines, not rules. Use your best judgment and feel free to propose changes to this document in a pull request.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<h3 id="read-our-code-of-conduct">Read Our Code Of Conduct</h3>
+<p>PatternFly adheres to the <a href="http://contributor-covenant.org/">Contributor Covenant Code of Conduct</a>. As a PatternFly community member, you are expected to uphold this code of conduct, whether that be attending a community meeting, replying to the mailing list or contributing.</p>
+
+<h3 id="contact-us">Contact Us</h3>
+<p>By contacting the community you can get feedback on the contributions or ideas that you’re excited about. Here are the best ways to get in touch:
+- Chat (IRC):
+  - Join us in the <a href="http://webchat.freenode.net/?channels=#patternfly">#patternfly channel on Freenode</a>. If you don’t have an IRC client, you can use the <a href="http://webchat.freenode.net/?channels=patternfly">web-based</a> client.
+- Mailing List:
+  - <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#112;&#097;&#116;&#116;&#101;&#114;&#110;&#102;&#108;&#121;&#064;&#114;&#101;&#100;&#104;&#097;&#116;&#046;&#099;&#111;&#109;">Subscribe to our mailing list</a> to participate or follow a variety of discussions on both technical and design topics. This is also a good place to ask questions, gather requirements, or join forces with other community members. Older threads are found in the <a href="https://www.redhat.com/archives/patternfly/">archive</a>.
+- Community Meetings:
+  - PatternFly hosts a monthly community meeting to discuss upcoming sprint work as well as review ongoing or completed work. Check the <a href="https://www.patternfly.org/community/monthly-community-meeting/">Monthly Community Meeting</a> page for details about upcoming meetings or to view prior recordings and slides. Reach out to us on the mailing list (<a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#112;&#097;&#116;&#116;&#101;&#114;&#110;&#102;&#108;&#121;&#064;&#114;&#101;&#100;&#104;&#097;&#116;&#046;&#099;&#111;&#109;">&#112;&#097;&#116;&#116;&#101;&#114;&#110;&#102;&#108;&#121;&#064;&#114;&#101;&#100;&#104;&#097;&#116;&#046;&#099;&#111;&#109;</a>) if you have suggestions on how we might improve the meeting format or want to add a topic for discussion on the agenda for an upcoming meeting.</p>
+
+<h2 id="contribute">Contribute</h2>
+
+<h3 id="reports-bugs">Reports Bugs</h3>
+<p>Before creating a bug report, check the list of <a href="https://patternfly.atlassian.net/issues/?filter=10300">known bugs</a> and <a href="https://github.com/patternfly/patternfly/labels/bug">open issues</a>. Bugs are tracked as <a href="https://guides.github.com/features/issues/">GitHub issues</a>. When you create a bug report, include as many details as possible, use a clear and descriptive title, and remember that an image is worth a thousand words, so try to add images and links to rawgit when possible.</p>
+
+<h3 id="proposing-or-modifying-a-design">Proposing or Modifying a Design</h3>
+<p>You may want to start by sharing your idea on the mailing list (<a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#112;&#097;&#116;&#116;&#101;&#114;&#110;&#102;&#108;&#121;&#064;&#114;&#101;&#100;&#104;&#097;&#116;&#046;&#099;&#111;&#109;">&#112;&#097;&#116;&#116;&#101;&#114;&#110;&#102;&#108;&#121;&#064;&#114;&#101;&#100;&#104;&#097;&#116;&#046;&#099;&#111;&#109;</a>) to kick off the discussion. A design proposal may have many forms, but it should answer these questions:
+- What is the name of the design pattern or component?
+- What problem does it solve?
+- When do you use it or what are the use cases?</p>
+
+<p>Once your design proposal is ready for review, send a <a href="https://help.github.com/articles/using-pull-requests/">pull request (PR)</a> written in <a href="https://guides.github.com/features/mastering-markdown/">markdown</a> to the <a href="https://github.com/patternfly/patternfly-design">PatternFly Doc repo</a>. The PR will be a way to discuss and refine the design with the goal of merging it as PatternFly documentation and making it viewable on patternfly.org. Design documents are living documents, therefore new PRs may be opened to add to or modify the documentation as necessary.</p>
+
+<p>If you don’t know how to send a PR using GitHub, don’t worry! We are aware that GitHub was created by and for developers. That’s why we’ve created <a href="https://github.com/patternfly/patternfly">guides</a> to get you up and running. If you need additional help, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#112;&#097;&#116;&#116;&#101;&#114;&#110;&#102;&#108;&#121;&#064;&#114;&#101;&#100;&#104;&#097;&#116;&#046;&#099;&#111;&#109;">contact us</a>.</p>
+
+<h3 id="contributing-code">Contributing code</h3>
+<p>Check out our <a href="http://codeguide.patternfly.org/">PatternFly Code Guide</a>. Both developers and designers review PRs, so if you are committing a new design or modifying an existing design, be sure to add a link to a graphic or a working version on rawgit so that designers can preview the request.</p>
+
+<p>To provide as much background as possible to reviewers, when possible, provide a link to the design documentation or specification that supported the development of the code. If you need help or guidance, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#112;&#097;&#116;&#116;&#101;&#114;&#110;&#102;&#108;&#121;&#064;&#114;&#101;&#100;&#104;&#097;&#116;&#046;&#099;&#111;&#109;">contact us</a>.</p>
+
+<p>The PR will be reviewed by the community and merged once two people from the team approve it.</p>
+
+
+    </section>
+  </article>
+</div>
+
+      </div>
+    </div>
+    <footer>
+  <div class="row">
+    <div class="col-md-9">
+      <p>
+        <a href="http://www.redhat.com" id="logo-redhat" target="_blank">Red Hat</a>
+        PatternFly is a <a href="http://www.redhat.com" target="_blank">Red Hat</a> sponsored project. <br> Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> Creative Commons Attribution 4.0 International license.</a>
+      </p>
+    </div>
+    <div class="col-md-3">
+      <ul class="social">
+<!--
+        <li>
+          <a href="https://blog.patternfly.org"><span class="fa fa-rss-square"></span></a>
+        </li>
+-->
+        <li>
+          <a href="https://github.com/patternfly/patternfly" target="_blank"><span class="fa fa-github-square"></span></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/patternfly_des" target="_blank"><span class="fa fa-twitter-square"></span></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/groups/PatternFlyCommunity/" target="_blank"><span class="fa fa-facebook-square"></span></a>
+        </li>
+        <li>
+          <a href="https://plus.google.com/communities/117224483835467139511" target="_blank"><span class="fa fa-google-plus-square"></span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47523816-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

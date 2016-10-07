@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html>
+  
+  
+  
+  
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card View | PatternFly</title>
+  <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
+  <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
+  <!-- iPad retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-152.png">
+  <!-- iPad retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-144.png">
+  <!-- iPad non-retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-76.png">
+  <!-- iPad non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-72.png">
+  <!-- iPhone 6 Plus icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-180.png">
+  <!-- iPhone retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-114.png">
+  <!-- iPhone non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-57.png">
+  <link rel="stylesheet" href="/assets/css/patternfly-adjusted.min.css">
+  <link rel="stylesheet" href="/components/patternfly/dist/css/patternfly-additions.min.css">
+  <link rel="stylesheet" href="/assets/css/patternfly-site.min.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/animations.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/angular-patternfly.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/ng-docs.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/examples.css">
+  
+  <script src="/components/jquery/dist/jquery.min.js"></script>
+  <script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/components/bootstrap-combobox/js/bootstrap-combobox.js"></script>
+  <script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+  <script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  <script src="/components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+  <script src="/components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+  <script src="/components/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+  <script src="/components/c3/c3.min.js"></script>
+  <script src="/components/d3/d3.min.js"></script>
+  <script src="/components/datatables/media/js/jquery.dataTables.js"></script>
+  <script src="/components/google-code-prettify/bin/prettify.min.js"></script>
+  <script src="/components/clipboard/dist/clipboard.min.js"></script>
+  <script src="/components/patternfly/dist/js/patternfly.min.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/marked.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-sanitize.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-animate.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/ui-bootstrap-tpls.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-bootstrap-prettify.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/lodash.min.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-patternfly.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/patternfly.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/angular-bootstrap.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/docs-setup.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/docs.js"></script>
+  <script src="/ngdocs/formatForPFsite.js"></script>
+  <script src="/components/matchHeight/jquery.matchHeight-min.js"></script>
+  <script src="/assets/js/patternfly-site.min.js"></script>
+  <link rel="canonical" href="https://www.patternfly.org/pattern-library/content-views/card-view/">
+</head>
+
+  <body class="has-sidebar">
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+<!--
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse-pf-site" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+-->
+            <a class="navbar-brand" id="logo" title="open interface project" href="/">PatternFly | open interface project</a>
+          </div>
+          <div class="navbar-collapse navbar-collapse-pf-site collapse">
+            <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
+              <div class="form-group">
+                <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                <input name="sitesearch" type="hidden" value="patternfly.org">
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div>
+            </form>
+            <ul id="menu-primary" class="nav navbar-nav navbar-right">
+              <li>
+                <a href="/get-started/">Get Started</a>
+              </li>
+              <li class="active">
+                <a href="/pattern-library/">Pattern Library</a>
+              </li>
+              <li>
+                <a href="/styles/">Styles</a>
+              </li>
+              <li>
+                <a href="/community/">Community</a>
+              </li>
+              <li>
+                <a href="/download/">Download</a>
+              </li>
+              <li>
+                <a href="https://blog.patternfly.org">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-sidebar ">
+<!--
+      { % if primary == 'get-started' or primary == 'pattern-library' or primary == 'styles' % }
+      <nav class="navbar navbar-sidebar" aria-labelledby="navbar-toggle-sidebar">
+        <button class="btn btn-default navbar-toggle-sidebar" id="navbar-toggle-sidebar">
+          <span class="fa fa-angle-double-right"></span>
+          <span class="sr-only">Toggle sub navigation</span>
+        </button>
+-->
+        <ul>
+          <li class="primary-menu hidden">
+            <a href="/">Menu</a>
+            <ul>
+              <li>
+              <a href="/get-started/">Get Started<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li class="active">
+              <a href="/pattern-library/">Pattern Library<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/styles/">Styles<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/community/">Community</a>
+              </li>
+              <li>
+              <a href="/download/">Download</a>
+              </li>
+              <li>
+                <a href="https://blog.patternfly.org">Blog</a>
+              </li>
+              <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
+                <div class="form-group">
+                  <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                  <input name="sitesearch" type="hidden" value="patternfly.org">
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+              </form>
+            </ul>
+          </li>
+          <li class="secondary-menu">
+            <a class="secondary-menu-toggle"><span class="secondary-menu-toggle-icon"></span>Pattern Library</a>
+            <ul>
+              <li >
+                <a href="/pattern-library/">Overview</a>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#application-framework-secondary" aria-expanded="false" aria-controls="application-framework-secondary">Application Framework</a>
+                <ul class="collapse " id="application-framework-secondary">
+                  <li >
+                    <a href="/pattern-library/application-framework/login-page/">Login Page</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#cards-secondary" aria-expanded="false" aria-controls="cards-secondary">Cards</a>
+                <ul class="collapse " id="cards-secondary">
+                  <li >
+                    <a href="/pattern-library/cards/aggregate-status-card/">Aggregate Status Card</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/cards/trend-card/">Trend Card</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/cards/utilization-bar-card/">Utilization Bar Card</a>
+                  </li>
+                   <li >
+                    <a href="/pattern-library/cards/utilization-trend-card/">Utilization Trend Card</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#communication-secondary" aria-expanded="false" aria-controls="communication-secondary">Communication</a>
+                <ul class="collapse " id="communication-secondary">
+                  <li >
+                    <a href="/pattern-library/communication/about-modal/">About Modal</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/empty-state/">Empty State</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/inline-notifications/">Inline Notifications</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/notification-drawer/">Notification Drawer</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/toast-notifications/">Toast Notifications</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/wizard/">Wizard</a>
+                  </li>
+                </ul>
+              </li>
+              <li  class="active">
+                <a class="" role="button" data-toggle="collapse" href="#content-views-secondary" aria-expanded="true" aria-controls="content-views-secondary">Content Views</a>
+                <ul class="collapse in" id="content-views-secondary">
+                  <li  class="active">
+                    <a href="/pattern-library/content-views/card-view/">Card View</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/content-views/list-view/">List View</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/content-views/table-view/">Table View</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#dashboard-secondary" aria-expanded="false" aria-controls="dashboard-secondary">Dashboard</a>
+                <ul class="collapse " id="dashboard-secondary">
+                  <li >
+                    <a href="/pattern-library/dashboard/dashboard-card/">Dashboard Card (Base)</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/dashboard/dashboard-layout/">Dashboard Layout</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#data-visualization-secondary" aria-expanded="false" aria-controls="data-visualization-secondary">Data Visualization</a>
+                <ul class="collapse " id="data-visualization-secondary">
+                  <li >
+                    <a href="/pattern-library/data-visualization/area-chart/">Area Chart</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/bar-chart/">Bar Chart</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/data-visualization/donut-chart/">Donut Chart</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/heat-map/">Heat Map</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/line-chart/">Line Chart</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/pie-chart/">Pie Chart</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/data-visualization/sparkline/">Sparkline</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/data-visualization/utilization-bar-chart/">Utilization Bar Chart</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="false" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
+                <ul class="collapse " id="forms-and-controls-secondary">
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/date-picker/">Date Picker</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/field-level-help/">Field Level Help</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/find/">Find</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/forms-and-controls/forms/">Forms</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/time-picker/">Time Picker</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/toolbar/">Toolbar</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#navigation-secondary" aria-expanded="false" aria-controls="navigation-secondary">Navigation</a>
+                <ul class="collapse " id="navigation-secondary">
+                  <li >
+                    <a href="/pattern-library/navigation/horizontal-navigation/">Horizontal Navigation</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/navigation/vertical-navigation/">Vertical Navigation</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+              <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
+              <ul class="collapse " id="widgets-secondary">
+                <li >
+                <a href="/pattern-library/widgets/">Overview</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#accordion">Accordion</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#alerts">Alerts</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#badges">Badges</a>
+                </li>
+<!--
+                <li >
+                <a href="/pattern-library/widgets/#basic-charts">Basic Charts</a>
+                </li>
+-->
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-combobox">Bootstrap Combobox</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-datepicker">Bootstrap Datepicker</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-select">Bootstrap Select</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-switch">Bootstrap Switch</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-touchspin">Bootstrap Touchspin</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-tree-view">Bootstrap Tree View</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#breadcrumbs">Breadcrumbs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#buttons">Buttons</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#button-groups">Button Groups</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#cnt-remaining-chars">Count Remaining Characters</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#data-tables">Data Tables</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#dropdowns">Dropdowns</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#fixed-height-accordion">Fixed Height Accordion</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#forms">Forms</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#google-code-prettify">Google Code Prettify</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#info-tip">Info Tip</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#kebabs">Kebabs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#labels">Labels</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#list-group">List Group</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#modal">Modal</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#pagination">Pagination</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#panels">Panels</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#popover">Popover</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#progress-bars">Progress Bars</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#search">Search</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#spinner">Spinner</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tables">Tables</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tabs">Tabs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tooltip">Tooltip</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#treegrid-table">TreeGrid Table</a>
+                </li>
+              </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!--{ % endif % }-->
+    </header>
+
+    <div class="container-fluid">
+      <div class="clearfix row" id="content">
+        <div id="main" class="col-md-12 clearfix" role="main">
+  <article class="post">
+    <header class="page-tabs-header">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 cols-nopad-right">
+          <h1>Card View</h1>
+        </div>
+        <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
+          
+            <ul class="nav nav-tabs nav-justified nav-tabs-pattern" id="tabs-pattern" role="tablist">
+  <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Overview</a></li>
+
+    <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
+
+
+    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+
+<!--
+  <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
+-->
+</ul>
+<script>
+    // Workaround for bug with hidden C3 charts in v0.4.11.
+    $(document).on('shown.bs.tab', 'a[data-toggle="tab"]', function () {
+        if (window.dispatchEvent) {
+            window.dispatchEvent(new Event('resize'));
+        }
+        // Special case for IE
+        if ($(document).fireEvent) {
+            $(document).fireEvent('onresize');
+        }
+    });
+</script>
+
+          
+        </div>
+      </div>
+    </header>
+    <section class="post_content">
+      <div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="overview">
+    <p>Card View organizes content into a grid of cards. Card View is useful for displaying a small to moderate amount of content in a way that is not visually overwhelming. If the pieces of content to be displayed are best identified by a graphic or other visual representation, Card View enables a user to easily visualize and compare them. It is also useful when you want to present a large number of objects at once within the same summary page.</p>
+    <p>The Card View should NOT be used if:</p>
+    <ul>
+      <li>Users need to quickly scan a large amount of text-based content. Consider using a <a href="/pattern-library/content-views/table-view/">Table View</a>.</li>
+      <li>You want to display more content about each object that can fit into a small tile. Consider using a <a href="/pattern-library/content-views/list-view/">List View</a>.</li>
+    </ul>
+    <p>Jump to <a href="#single-select">Single-Select Card View</a>, <a href="#multi-select">Multi-Select Card View</a> or <a href="#card-variations">Card Variation Examples</a></p>
+    <h2 id="single-select">Single-Select Card View</h2>
+    <div class="example-pf">
+      <iframe src="/pattern-library/content-views/card-view/card-view-single-select.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
+    </div>
+    <p><a href="/pattern-library/content-views/card-view/card-view-single-select.html" target="_blank">View full page example</a></p>
+    <h2 id="multi-select">Multi-Select Card View</h2>
+    <div class="example-pf">
+      <iframe src="/pattern-library/content-views/card-view/card-view-multi-select.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
+    </div>
+    <p><a href="/pattern-library/content-views/card-view/card-view-multi-select.html" target="_blank">View full page example</a></p>
+    <h2 id="card-variations">Card Variation Examples</h2>
+    <p>The following card variations provide some examples of how you might visualize content within a card. You are not limited to these layouts. You may need to adjust the visualizations and/or combine elements to best fit your application’s needs. Each card within a card view should have a consistent layout. Do not mix and match.</p>
+    <h3>Large Card</h3>
+    <p>When you have fewer cards and more space to work with, you may consider a larger card option that also shows some status and additional information.</p>
+    <div class="example-pf">
+      <div class="cards-pf">
+        <div class="container-fluid container-cards-pf">
+          <div class="row row-cards-pf">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card-pf card-pf-view ">
+  <div class="card-pf-body">
+    <div class="card-pf-top-element">
+      <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
+    </div>
+    <h2 class="card-pf-title text-center">
+      Cake Service
+    </h2>
+    <div class="card-pf-items text-center">
+      <div class="card-pf-item">
+        <span class="pficon pficon-screen"></span>
+        <span class="card-pf-item-text">8</span>
+      </div>
+      <div class="card-pf-item">
+        <span class="fa fa-check"></span>
+      </div>
+    </div>
+    <p class="card-pf-info text-center"><strong>Created On</strong> 2015-03-01 02:00 AM <br /> Never Expires</p>
+  </div>
+  <div class="card-pf-view-checkbox">
+    <input type="checkbox" />
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3>Small Card</h3>
+    <p>If you have many cards and space is tighter, use the smaller card option.</p>
+    <div class="example-pf">
+      <div class="cards-pf">
+        <div class="container-fluid container-cards-pf">
+          <div class="row row-cards-pf">
+            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+              <div class="card-pf card-pf-view ">
+  <div class="card-pf-body">
+    <div class="card-pf-top-element">
+      <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
+    </div>
+    <h2 class="card-pf-title text-center">
+      Cake Service
+    </h2>
+    <div class="card-pf-items text-center">
+      <div class="card-pf-item">
+        <span class="pficon pficon-screen"></span>
+        <span class="card-pf-item-text">8</span>
+      </div>
+      <div class="card-pf-item">
+        <span class="fa fa-check"></span>
+      </div>
+    </div>
+    <p class="card-pf-info text-center"><strong>Created On</strong> 2015-03-01 02:00 AM <br /> Never Expires</p>
+  </div>
+  <div class="card-pf-view-checkbox">
+    <input type="checkbox" />
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3>Mini Card with status</h3>
+    <p>Use when you want to display many objects within a grid layout. Any inline actions should be hidden in an actions menu placed in the upper right corner of the card. Status can be reflected through a status icon preceding object name (title) and or a single chart graphic. The bar graph is used here because of its small vertical footprint.</p>
+    <div class="example-pf">
+      <div class="cards-pf">
+        <div class="container-fluid container-cards-pf">
+          <div class="row row-cards-pf">
+            <div class="col-xs-12 col-sm-3 col-md-2">
+              <div class="card-pf card-pf-view card-pf-view-xs">
+  <div class="card-pf-body">
+    <div class="card-pf-heading-kebab">
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropupKebabRight2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropupKebabRight2">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+      <h2 class="card-pf-title">
+        <span class="pficon pficon-cluster"></span> Storage_1
+      </h2>
+    </div>
+    <div class="progress-pf-legend">
+      <div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;" data-toggle="tooltip" title="25% Used">
+    <span class="sr-only">25% Used</span>
+  </div>
+  <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;" data-toggle="tooltip" title="75% Available">
+    <span class="sr-only">75% Available</span>
+  </div>
+</div>
+<script>
+  // Initialize Tooltip
+  jQuery(document).ready(function() {
+    jQuery('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+
+      <p><span class="pficon pficon-warning-triangle-o"></span> <strong>10%</strong> in use</p>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3>Mini Card with text</h3>
+    <p>Alternatively include a small amount of text based content within the card with links. Inline actions accessible from the actions menu.</p>
+    <div class="example-pf">
+      <div class="cards-pf">
+        <div class="container-fluid container-cards-pf">
+          <div class="row row-cards-pf">
+            <div class="col-xs-12 col-sm-3 col-md-2">
+              <div class="card-pf card-pf-view card-pf-view-xs">
+  <div class="card-pf-body">
+    <div class="card-pf-heading-kebab">
+      <div class="dropup pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropupKebabRight3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropupKebabRight3">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+      <h2 class="card-pf-title">
+        <span class="pficon pficon-service"></span> Zone_1
+      </h2>
+    </div>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque. <a href="#">More info</a></p>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div role="tabpanel" class="tab-pane" id="design">
+    <h2>Description</h2>
+    <p>
+      <img src="/assets/img/card-view-callout.png" alt="Card View" />
+    </p>
+    <ol>
+      <li><b>Toolbar</b>: The <a href="/pattern-library/forms-and-controls/toolbar/">Toolbar</a> pattern may include filter, sort, actions, find and change view type.  If the user can add new objects that will appear in the view, and Add action should be included here.</li>
+      <li><b>Card</b>: The card is a container for displaying content about an object.  At a minimum each card should be uniquely identified with the name of the object that it represents.
+        <ul>
+          <li>Each Card should have the same layout:
+            <ul>
+              <li>When including titles, Make the title bold rather than appending a colon ( : )</li>
+              <li>Links may be displayed within a card</li>
+            </ul>
+          </li>
+          <li>When the viewport size is decreased:
+            <ul>
+              <li>The number of cards in each row may decrease</li>
+            </ul>
+          </li>
+          <li>Use tooltips as necessary.</li>
+        </ul>
+      </li>
+      <li><b>Selection</b>:
+        <ul>
+          <li>When only single-select is supported, a user can drill down on a card by clicking on it.</li>
+          <li>If multi-select is supported, a checkbox will be displayed when the user hovers over a card. When it is clicked, that card is selected which is indicated by the check mark in the checkbox as well as a blue outline on the card. The selected checkbox will be shown as long as the card remains selected. Actions in the Toolbar apply to all selected cards.</li>
+          <li>For multi-select on mobile devices, checkboxes should be displayed at all times, and should use the device default checkbox rather than the patternfly checkbox.</li>
+        </ul>
+      </li>
+      <li><b>Card Hover</b>: A visual indication is shown when the user hovers over a card.</li>
+      <li><b>Inline Actions</b>: Inline actions should be included if the user needs to be able to quickly perform an action on a single card. Very large numbers of actions should be placed in the Actions section of the Toolbar rather than on the card. See <a href="/pattern-library/content-views/card-view/">Card Variation Examples</a> for some ways that you may represent inline actions on cards.</li>
+    </ol>
+    <h2>Additional Notes about Behavior</h2>
+    <ul>
+      <li><b>Empty State:</b> If no cards exist to be displayed, display an Empty State page. See the <a href="/pattern-library/communication/empty-state/">Empty State</a> pattern for more details.</li>
+      <li><b>Vertical Scroll:</b> Use a vertical scrollbar as needed. A horizontal scrollbar should NOT be used. Instead, the page containing the Card View should be responsive.</li>
+    </ul>
+  </div>
+  
+  <div role="tabpanel" class="tab-pane" id="code">
+    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+
+  <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
+  <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
+
+</ul>
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane nested active" id="html-css">
+        <p>Jump to <a href="#example-code-1">Single-Select Card View</a>, <a href="#example-code-2">Multi-Select Card View</a>, <a href="#example-code-3">Large Card</a>, <a href="#example-code-4">Small Card</a>, <a href="#example-code-5">Mini Card with status</a>, <a href="#example-code-6">Mini Card with text</a></p>
+        <h2 id="example-code-1">Single-Select Card View</h2>
+        <div class="example-pf">
+          <iframe src="/pattern-library/content-views/card-view/card-view-single-select.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
+        </div>
+        <p><a href="/pattern-library/content-views/card-view/card-view-single-select.html" target="_blank">View full page example</a></p>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+        <div class="collapse in" id="markup-1">
+          <pre class="prettyprint">
+&lt;body class=&quot;cards-pf&quot;&gt;
+    &lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+      &lt;div class=&quot;navbar-header&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-1&quot;&gt;
+          &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;
+          &lt;img src=&quot;/assets/img/brand.svg&quot; alt=&quot;PatternFly Enterprise Application&quot; /&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;collapse navbar-collapse navbar-collapse-1&quot;&gt;
+        &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Status&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;dropdown&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+              &lt;span class=&quot;pficon pficon-user&quot;&gt;&lt;/span&gt;
+              Brian Johnson &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+            &lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li class=&quot;dropdown-submenu&quot;&gt;
+                &lt;a tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;More options&lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                  &lt;li class=&quot;dropdown-header&quot;&gt;Nav header&lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;nav navbar-nav navbar-primary&quot;&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+
+      &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;div class=&quot;row toolbar-pf&quot;&gt;
+          &lt;div class=&quot;col-sm-12&quot;&gt;
+            &lt;form class=&quot;toolbar-pf-actions&quot;&gt;
+              &lt;div class=&quot;form-group toolbar-pf-filter&quot;&gt;
+                &lt;label class=&quot;sr-only&quot; for=&quot;filter&quot;&gt;Name&lt;/label&gt;
+                &lt;div class=&quot;input-group&quot;&gt;
+                  &lt;div class=&quot;input-group-btn&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                      &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/div&gt;&lt;!-- /btn-group --&gt;
+                  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;filter&quot; placeholder=&quot;Filter By Name...&quot;&gt;
+                &lt;/div&gt;&lt;!-- /input-group --&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;div class=&quot;dropdown btn-group&quot;&gt;
+                  &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                  &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                  &lt;span class=&quot;fa fa-sort-alpha-asc&quot;&gt;&lt;/span&gt;
+                &lt;/button&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Action&lt;/button&gt;
+                &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Action&lt;/button&gt;
+                &lt;div class=&quot;dropdown btn-group  dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebab&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu &quot; aria-labelledby=&quot;dropdownKebab&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+              &lt;/div&gt;
+              &lt;div class=&quot;toolbar-pf-action-right&quot;&gt;
+                &lt;div class=&quot;form-group toolbar-pf-find&quot;&gt;
+                  &lt;button class=&quot;btn btn-link btn-find&quot; type=&quot;button&quot;&gt;
+                    &lt;span class=&quot;fa fa-search&quot;&gt;&lt;/span&gt;
+                  &lt;/button&gt;
+                  &lt;div class=&quot;find-pf-dropdown-container&quot;&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;find&quot; placeholder=&quot;Find By Keyword...&quot;&gt;
+                    &lt;div class=&quot;find-pf-buttons&quot;&gt;
+                      &lt;span class=&quot;find-pf-nums&quot;&gt;1 of 3&lt;/span&gt;
+                      &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;fa fa-angle-up&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                      &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;fa fa-angle-down&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                      &lt;button class=&quot;btn btn-link btn-find-close&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;form-group toolbar-pf-view-selector&quot;&gt;
+                  &lt;button class=&quot;btn btn-link&quot;&gt;&lt;i class=&quot;fa fa-th&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;button class=&quot;btn btn-link active&quot;&gt;&lt;i class=&quot;fa fa-th-large&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;button class=&quot;btn btn-link&quot;&gt;&lt;i class=&quot;fa fa-th-list&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/form&gt;
+            &lt;div class=&quot;row toolbar-pf-results&quot;&gt;
+              &lt;div class=&quot;col-sm-12&quot;&gt;
+                &lt;h5&gt;40 Results&lt;/h5&gt;
+                &lt;p&gt;Active filters:&lt;/p&gt;
+                &lt;ul class=&quot;list-inline&quot;&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Clear All Filters&lt;/a&gt;&lt;/p&gt;
+              &lt;/div&gt;&lt;!-- /col --&gt;
+            &lt;/div&gt;&lt;!-- /row --&gt;
+          &lt;/div&gt;&lt;!-- /col --&gt;
+        &lt;/div&gt;&lt;!-- /row --&gt;
+      &lt;/div&gt;&lt;!-- /container --&gt;
+      &lt;script&gt;
+      (function($) {
+        $(document).ready(function() {
+          // Upon clicking the find button, show the find dropdown content
+          $(&quot;.btn-find&quot;).click(function () {
+            $(&quot;.find-pf-dropdown-container&quot;).toggle();
+          });
+          // Upon clicking the find close button, hide the find dropdown content
+          $(&quot;.btn-find-close&quot;).click(function () {
+            $(&quot;.find-pf-dropdown-container&quot;).hide();
+          });
+
+        });
+      })(jQuery);
+    &lt;/script&gt;
+&lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
+  &lt;div class=&quot;row row-cards-pf&quot;&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-6 col-md-4 col-lg-3&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-single-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-6 col-md-4 col-lg-3&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-single-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-6 col-md-4 col-lg-3&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-single-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-6 col-md-4 col-lg-3&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-single-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-6 col-md-4 col-lg-3&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-single-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-6 col-md-4 col-lg-3&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-single-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $(function() {
+    // matchHeight the contents of each .card-pf and then the .card-pf itself
+    $(&quot;.row-cards-pf &gt; [class*=&#39;col&#39;] &gt; .card-pf &gt; .card-pf-body&quot;).matchHeight();
+  });
+  $(document).ready(function() {
+    // Card Single Select
+    $(&#39;.card-pf-view-single-select&#39;).click(function() {
+      if ($(this).hasClass(&#39;active&#39;))
+      { $(this).removeClass(&#39;active&#39;); }
+      else
+      { $(&#39;.card-pf-view-single-select&#39;).removeClass(&#39;active&#39;); $(this).addClass(&#39;active&#39;); }
+    });
+  });
+&lt;/script&gt;
+&lt;/body&gt;</pre>
+        </div>
+        <h2 id="example-code-2">Multi-Select Card View</h2>
+        <div class="example-pf">
+          <iframe src="/pattern-library/content-views/card-view/card-view-multi-select.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
+        </div>
+        <p><a href="/pattern-library/content-views/card-view/card-view-multi-select.html" target="_blank">View full page example</a></p>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+        <div class="collapse in" id="markup-2">
+          <pre class="prettyprint">
+&lt;body class=&quot;cards-pf&quot;&gt;
+    &lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+      &lt;div class=&quot;navbar-header&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-1&quot;&gt;
+          &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;
+          &lt;img src=&quot;/assets/img/brand.svg&quot; alt=&quot;PatternFly Enterprise Application&quot; /&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;collapse navbar-collapse navbar-collapse-1&quot;&gt;
+        &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Status&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;dropdown&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+              &lt;span class=&quot;pficon pficon-user&quot;&gt;&lt;/span&gt;
+              Brian Johnson &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+            &lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li class=&quot;dropdown-submenu&quot;&gt;
+                &lt;a tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;More options&lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                  &lt;li class=&quot;dropdown-header&quot;&gt;Nav header&lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;nav navbar-nav navbar-primary&quot;&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+
+      &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;div class=&quot;row toolbar-pf&quot;&gt;
+          &lt;div class=&quot;col-sm-12&quot;&gt;
+            &lt;form class=&quot;toolbar-pf-actions&quot;&gt;
+              &lt;div class=&quot;form-group toolbar-pf-filter&quot;&gt;
+                &lt;label class=&quot;sr-only&quot; for=&quot;filter&quot;&gt;Name&lt;/label&gt;
+                &lt;div class=&quot;input-group&quot;&gt;
+                  &lt;div class=&quot;input-group-btn&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                      &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/div&gt;&lt;!-- /btn-group --&gt;
+                  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;filter&quot; placeholder=&quot;Filter By Name...&quot;&gt;
+                &lt;/div&gt;&lt;!-- /input-group --&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;div class=&quot;dropdown btn-group&quot;&gt;
+                  &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                  &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                  &lt;span class=&quot;fa fa-sort-alpha-asc&quot;&gt;&lt;/span&gt;
+                &lt;/button&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Action&lt;/button&gt;
+                &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Action&lt;/button&gt;
+                &lt;div class=&quot;dropdown btn-group  dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebab&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu &quot; aria-labelledby=&quot;dropdownKebab&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+              &lt;/div&gt;
+              &lt;div class=&quot;toolbar-pf-action-right&quot;&gt;
+                &lt;div class=&quot;form-group toolbar-pf-find&quot;&gt;
+                  &lt;button class=&quot;btn btn-link btn-find&quot; type=&quot;button&quot;&gt;
+                    &lt;span class=&quot;fa fa-search&quot;&gt;&lt;/span&gt;
+                  &lt;/button&gt;
+                  &lt;div class=&quot;find-pf-dropdown-container&quot;&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;find&quot; placeholder=&quot;Find By Keyword...&quot;&gt;
+                    &lt;div class=&quot;find-pf-buttons&quot;&gt;
+                      &lt;span class=&quot;find-pf-nums&quot;&gt;1 of 3&lt;/span&gt;
+                      &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;fa fa-angle-up&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                      &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;fa fa-angle-down&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                      &lt;button class=&quot;btn btn-link btn-find-close&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;form-group toolbar-pf-view-selector&quot;&gt;
+                  &lt;button class=&quot;btn btn-link&quot;&gt;&lt;i class=&quot;fa fa-th&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;button class=&quot;btn btn-link active&quot;&gt;&lt;i class=&quot;fa fa-th-large&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;button class=&quot;btn btn-link&quot;&gt;&lt;i class=&quot;fa fa-th-list&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/form&gt;
+            &lt;div class=&quot;row toolbar-pf-results&quot;&gt;
+              &lt;div class=&quot;col-sm-12&quot;&gt;
+                &lt;h5&gt;40 Results&lt;/h5&gt;
+                &lt;p&gt;Active filters:&lt;/p&gt;
+                &lt;ul class=&quot;list-inline&quot;&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Clear All Filters&lt;/a&gt;&lt;/p&gt;
+              &lt;/div&gt;&lt;!-- /col --&gt;
+            &lt;/div&gt;&lt;!-- /row --&gt;
+          &lt;/div&gt;&lt;!-- /col --&gt;
+        &lt;/div&gt;&lt;!-- /row --&gt;
+      &lt;/div&gt;&lt;!-- /container --&gt;
+      &lt;script&gt;
+      (function($) {
+        $(document).ready(function() {
+          // Upon clicking the find button, show the find dropdown content
+          $(&quot;.btn-find&quot;).click(function () {
+            $(&quot;.find-pf-dropdown-container&quot;).toggle();
+          });
+          // Upon clicking the find close button, hide the find dropdown content
+          $(&quot;.btn-find-close&quot;).click(function () {
+            $(&quot;.find-pf-dropdown-container&quot;).hide();
+          });
+
+        });
+      })(jQuery);
+    &lt;/script&gt;
+&lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
+  &lt;div class=&quot;row row-cards-pf&quot;&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-multi-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-multi-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-multi-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-multi-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-multi-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-multi-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-multi-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-multi-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-multi-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-multi-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-multi-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-multi-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-multi-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-multi-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-multi-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-view card-pf-view-select card-pf-view-multi-select&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $(function() {
+    // matchHeight the contents of each .card-pf and then the .card-pf itself
+    $(&quot;.row-cards-pf &gt; [class*=&#39;col&#39;] &gt; .card-pf &gt; .card-pf-body&quot;).matchHeight();
+  });
+  $(document).ready(function() {
+    // Card Multi Select
+    $(&#39;input[type=checkbox]&#39;).click(function() {
+      if ($(this).parent().parent().hasClass(&#39;active&#39;))
+      { $(this).parent().parent().removeClass(&#39;active&#39;); }
+      else
+      { $(this).parent().parent().addClass(&#39;active&#39;); }
+    });
+  });
+&lt;/script&gt;
+&lt;/body&gt;</pre>
+        </div>
+        <h2 id="example-code-3">Large Card</h2>
+        <div class="example-pf">
+          <div class="example-pf-demo example-pf-demo-no-padding">
+            <div class="cards-pf">
+              <div class="container-fluid container-cards-pf">
+                <div class="row row-cards-pf">
+                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card-pf card-pf-view ">
+  <div class="card-pf-body">
+    <div class="card-pf-top-element">
+      <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
+    </div>
+    <h2 class="card-pf-title text-center">
+      Cake Service
+    </h2>
+    <div class="card-pf-items text-center">
+      <div class="card-pf-item">
+        <span class="pficon pficon-screen"></span>
+        <span class="card-pf-item-text">8</span>
+      </div>
+      <div class="card-pf-item">
+        <span class="fa fa-check"></span>
+      </div>
+    </div>
+    <p class="card-pf-info text-center"><strong>Created On</strong> 2015-03-01 02:00 AM <br /> Never Expires</p>
+  </div>
+  <div class="card-pf-view-checkbox">
+    <input type="checkbox" />
+  </div>
+</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
+        <div class="collapse in" id="markup-3">
+          <pre class="prettyprint">
+&lt;div class=&quot;col-xs-12 col-sm-6 col-md-4 col-lg-3&quot;&gt;
+  &lt;div class=&quot;card-pf card-pf-view &quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <h2 id="example-code-4">Small Card</h2>
+        <div class="example-pf">
+          <div class="example-pf-demo example-pf-demo-no-padding">
+            <div class="cards-pf">
+              <div class="container-fluid container-cards-pf">
+                <div class="row row-cards-pf">
+                  <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card-pf card-pf-view ">
+  <div class="card-pf-body">
+    <div class="card-pf-top-element">
+      <span class="fa fa-birthday-cake card-pf-icon-circle"></span>
+    </div>
+    <h2 class="card-pf-title text-center">
+      Cake Service
+    </h2>
+    <div class="card-pf-items text-center">
+      <div class="card-pf-item">
+        <span class="pficon pficon-screen"></span>
+        <span class="card-pf-item-text">8</span>
+      </div>
+      <div class="card-pf-item">
+        <span class="fa fa-check"></span>
+      </div>
+    </div>
+    <p class="card-pf-info text-center"><strong>Created On</strong> 2015-03-01 02:00 AM <br /> Never Expires</p>
+  </div>
+  <div class="card-pf-view-checkbox">
+    <input type="checkbox" />
+  </div>
+</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a></p>
+        <div class="collapse in" id="markup-4">
+          <pre class="prettyprint">
+&lt;div class=&quot;col-xs-12 col-sm-4 col-md-3 col-lg-2&quot;&gt;
+  &lt;div class=&quot;card-pf card-pf-view &quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-top-element&quot;&gt;
+      &lt;span class=&quot;fa fa-birthday-cake card-pf-icon-circle&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title text-center&quot;&gt;
+      Cake Service
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-pf-items text-center&quot;&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;card-pf-item-text&quot;&gt;8&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card-pf-item&quot;&gt;
+        &lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;card-pf-info text-center&quot;&gt;&lt;strong&gt;Created On&lt;/strong&gt; 2015-03-01 02:00 AM &lt;br/&gt; Never Expires&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-view-checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <h2 id="example-code-5">Mini Card with status</h2>
+        <div class="example-pf">
+          <div class="example-pf-demo example-pf-demo-no-padding">
+            <div class="cards-pf">
+              <div class="container-fluid container-cards-pf">
+                <div class="row row-cards-pf">
+                  <div class="col-xs-12 col-sm-3 col-md-2">
+                    <div class="card-pf card-pf-view card-pf-view-xs">
+  <div class="card-pf-body">
+    <div class="card-pf-heading-kebab">
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropupKebabRight2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropupKebabRight2">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+      <h2 class="card-pf-title">
+        <span class="pficon pficon-cluster"></span> Storage_1
+      </h2>
+    </div>
+    <div class="progress-pf-legend">
+      <div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;" data-toggle="tooltip" title="25% Used">
+    <span class="sr-only">25% Used</span>
+  </div>
+  <div class="progress-bar progress-bar-remaining" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;" data-toggle="tooltip" title="75% Available">
+    <span class="sr-only">75% Available</span>
+  </div>
+</div>
+<script>
+  // Initialize Tooltip
+  jQuery(document).ready(function() {
+    jQuery('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+
+      <p><span class="pficon pficon-warning-triangle-o"></span> <strong>10%</strong> in use</p>
+    </div>
+  </div>
+</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-5" href="#markup-5">Reference Markup</a></p>
+        <div class="collapse in" id="markup-5">
+          <pre class="prettyprint">
+&lt;div class=&quot;col-xs-12 col-sm-3 col-md-2&quot;&gt;
+  &lt;div class=&quot;card-pf card-pf-view card-pf-view-xs&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-heading-kebab&quot;&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropupKebabRight2&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropupKebabRight2&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+      &lt;h2 class=&quot;card-pf-title&quot;&gt;
+        &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt; Storage_1
+      &lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;progress-pf-legend&quot;&gt;
+      &lt;div class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 25%;&quot; data-toggle=&quot;tooltip&quot; title=&quot;25% Used&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;25% Used&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;progress-bar progress-bar-remaining&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;75&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 75%;&quot; data-toggle=&quot;tooltip&quot; title=&quot;75% Available&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;75% Available&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  // Initialize Tooltip
+  jQuery(document).ready(function() {
+    jQuery(&#39;[data-toggle=&quot;tooltip&quot;]&#39;).tooltip();
+  });
+&lt;/script&gt;
+
+      &lt;p&gt;&lt;span class=&quot;pficon pficon-warning-triangle-o&quot;&gt;&lt;/span&gt; &lt;strong&gt;10%&lt;/strong&gt; in use&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <h2 id="example-code-6">Mini Card with text</h2>
+        <div class="example-pf">
+          <div class="example-pf-demo example-pf-demo-no-padding">
+            <div class="cards-pf">
+              <div class="container-fluid container-cards-pf">
+                <div class="row row-cards-pf">
+                  <div class="col-xs-12 col-sm-3 col-md-2">
+                    <div class="card-pf card-pf-view card-pf-view-xs">
+  <div class="card-pf-body">
+    <div class="card-pf-heading-kebab">
+      <div class="dropup pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropupKebabRight3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropupKebabRight3">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+      <h2 class="card-pf-title">
+        <span class="pficon pficon-service"></span> Zone_1
+      </h2>
+    </div>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque. <a href="#">More info</a></p>
+  </div>
+</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-6" href="#markup-6">Reference Markup</a></p>
+        <div class="collapse in" id="markup-6">
+          <pre class="prettyprint">
+&lt;div class=&quot;col-xs-12 col-sm-3 col-md-2&quot;&gt;
+  &lt;div class=&quot;card-pf card-pf-view card-pf-view-xs&quot;&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;card-pf-heading-kebab&quot;&gt;
+      &lt;div class=&quot;dropup pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropupKebabRight3&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropupKebabRight3&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+      &lt;h2 class=&quot;card-pf-title&quot;&gt;
+        &lt;span class=&quot;pficon pficon-service&quot;&gt;&lt;/span&gt; Zone_1
+      &lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque. &lt;a href=&quot;#&quot;&gt;More info&lt;/a&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane nested" id="angular">
+        <div ng-app="docsApp" ng-controller="DocsController" class="content">
+          <div ng-include="" src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.views.directive.pfCardView.html'"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </section>
+  </article>
+</div>
+
+      </div>
+    </div>
+    <footer>
+  <div class="row">
+    <div class="col-md-9">
+      <p>
+        <a href="http://www.redhat.com" id="logo-redhat" target="_blank">Red Hat</a>
+        PatternFly is a <a href="http://www.redhat.com" target="_blank">Red Hat</a> sponsored project. <br> Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> Creative Commons Attribution 4.0 International license.</a>
+      </p>
+    </div>
+    <div class="col-md-3">
+      <ul class="social">
+<!--
+        <li>
+          <a href="https://blog.patternfly.org"><span class="fa fa-rss-square"></span></a>
+        </li>
+-->
+        <li>
+          <a href="https://github.com/patternfly/patternfly" target="_blank"><span class="fa fa-github-square"></span></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/patternfly_des" target="_blank"><span class="fa fa-twitter-square"></span></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/groups/PatternFlyCommunity/" target="_blank"><span class="fa fa-facebook-square"></span></a>
+        </li>
+        <li>
+          <a href="https://plus.google.com/communities/117224483835467139511" target="_blank"><span class="fa fa-google-plus-square"></span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47523816-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

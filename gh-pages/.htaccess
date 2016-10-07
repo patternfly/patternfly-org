@@ -1,0 +1,55 @@
+RewriteEngine on
+
+# Redirect all traffic to https
+#RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+RewriteRule ^/?widgets/(.*)$ /pattern-library/widgets/$1 [L,R=301]
+
+# Redirect old urls to new site
+Redirect 301 /patterns/aggregate-status-card http://www.patternfly.org/pattern-library/cards/aggregate-status-card
+Redirect 301 /patterns/trend-card http://www.patternfly.org/pattern-library/cards/trend-card
+Redirect 301 /patterns/utilization-bar-card http://www.patternfly.org/pattern-library/cards/utilization-bar-card
+Redirect 301 /patterns/utilization-trend-card http://www.patternfly.org/pattern-library/cards/utilization-trend-card
+Redirect 301 /patterns/dashboard-layout http://www.patternfly.org/pattern-library/dashboard/dashboard-layout
+Redirect 301 /dashboard-card-base http://www.patternfly.org/pattern-library/dashboard/dashboard-card
+Redirect 301 /patterns/area-charts http://www.patternfly.org/pattern-library/data-visualization/area-chart
+Redirect 301 /patterns/bar-chart http://www.patternfly.org/pattern-library/data-visualization/bar-chart
+Redirect 301 /patterns/donut-chart http://www.patternfly.org/pattern-library/data-visualization/donut-chart
+Redirect 301 /patterns/heat-map http://www.patternfly.org/pattern-library/data-visualization/heat-map
+Redirect 301 /patterns/line-chart http://www.patternfly.org/pattern-library/data-visualization/line-chart
+Redirect 301 /patterns/pie-chart http://www.patternfly.org/pattern-library/data-visualization/pie-chart
+Redirect 301 /patterns/sparkline http://www.patternfly.org/pattern-library/data-visualization/sparkline
+Redirect 301 /patterns/utilization-bar-chart http://www.patternfly.org/pattern-library/data-visualization/utilization-bar-chart
+Redirect 301 /patterns/about-modal http://www.patternfly.org/pattern-library/communication/about-modal
+Redirect 301 /patterns/empty-state http://www.patternfly.org/pattern-library/communication/empty-state
+Redirect 301 /patterns/inline-notifications http://www.patternfly.org/pattern-library/communication/inline-notifications
+Redirect 301 /patterns/notification-drawer http://www.patternfly.org/pattern-library/communication/notification-drawer
+Redirect 301 /patterns/toast-notifications http://www.patternfly.org/pattern-library/communication/toast-notifications
+Redirect 301 /patterns/wizard http://www.patternfly.org/pattern-library/communication/wizard
+Redirect 301 /list-view http://www.patternfly.org/pattern-library/content-views/list-view
+Redirect 301 /patterns/table-view http://www.patternfly.org/pattern-library/content-views/table-view
+Redirect 301 /patterns/datepicker http://www.patternfly.org/pattern-library/forms-and-controls/date-picker
+Redirect 301 /patterns/field-level-help http://www.patternfly.org/pattern-library/forms-and-controls/field-level-help
+Redirect 301 /patterns/find http://www.patternfly.org/pattern-library/forms-and-controls/find
+Redirect 301 /patterns/forms http://www.patternfly.org/pattern-library/forms-and-controls/forms
+Redirect 301 /timepicker http://www.patternfly.org/pattern-library/forms-and-controls/time-picker
+Redirect 301 /patterns/vertical-with-persistent-secondary http://www.patternfly.org/pattern-library/navigation/vertical-navigation
+
+# Redirect blog posts to the new blog url
+Redirect 301 /donut-chart-relationship-of-a-set-of-values-to-a-whole https://blog.patternfly.org/donut-chart-relationship-of-a-set-of-values-to-a-whole
+Redirect 301 /vertical-navigation-using-a-non-persistent-secondary-menu https://blog.patternfly.org/vertical-navigation-using-a-non-persistent-secondary-menu
+Redirect 301 /simple-actions-for-the-data-toolbar https://blog.patternfly.org/simple-actions-for-the-data-toolbar
+Redirect 301 /bar-charts-visualizing-quantitative-data https://blog.patternfly.org/bar-charts-visualizing-quantitative-data
+Redirect 301 /table-view-organize-your-data https://blog.patternfly.org/table-view-organize-your-data
+Redirect 301 /vertical-navigation-finding-your-way https://blog.patternfly.org/vertical-navigation-finding-your-way
+Redirect 301 /pop-over-notifications-toasters-where-good-communication-happens https://blog.patternfly.org/pop-over-notifications-toasters-where-good-communication-happensy
+
+# CORS fix for font files
+<FilesMatch "\.(ttf|otf|eot)$">
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+    </IfModule>
+</FilesMatch>
+
+# Custom 404 page
+ErrorDocument 404 /404.html

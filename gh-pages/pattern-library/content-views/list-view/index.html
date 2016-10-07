@@ -1,0 +1,2902 @@
+<!DOCTYPE html>
+<html>
+  
+  
+  
+  
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List View | PatternFly</title>
+  <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
+  <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
+  <!-- iPad retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-152.png">
+  <!-- iPad retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-144.png">
+  <!-- iPad non-retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-76.png">
+  <!-- iPad non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-72.png">
+  <!-- iPhone 6 Plus icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-180.png">
+  <!-- iPhone retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-114.png">
+  <!-- iPhone non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-57.png">
+  <link rel="stylesheet" href="/assets/css/patternfly-adjusted.min.css">
+  <link rel="stylesheet" href="/components/patternfly/dist/css/patternfly-additions.min.css">
+  <link rel="stylesheet" href="/assets/css/patternfly-site.min.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/animations.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/angular-patternfly.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/ng-docs.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/examples.css">
+  
+  <script src="/components/jquery/dist/jquery.min.js"></script>
+  <script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/components/bootstrap-combobox/js/bootstrap-combobox.js"></script>
+  <script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+  <script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  <script src="/components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+  <script src="/components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+  <script src="/components/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+  <script src="/components/c3/c3.min.js"></script>
+  <script src="/components/d3/d3.min.js"></script>
+  <script src="/components/datatables/media/js/jquery.dataTables.js"></script>
+  <script src="/components/google-code-prettify/bin/prettify.min.js"></script>
+  <script src="/components/clipboard/dist/clipboard.min.js"></script>
+  <script src="/components/patternfly/dist/js/patternfly.min.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/marked.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-sanitize.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-animate.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/ui-bootstrap-tpls.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-bootstrap-prettify.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/lodash.min.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-patternfly.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/patternfly.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/angular-bootstrap.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/docs-setup.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/docs.js"></script>
+  <script src="/ngdocs/formatForPFsite.js"></script>
+  
+  <script src="/assets/js/patternfly-site.min.js"></script>
+  <link rel="canonical" href="https://www.patternfly.org/pattern-library/content-views/list-view/">
+</head>
+
+  <body class="has-sidebar">
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+<!--
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse-pf-site" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+-->
+            <a class="navbar-brand" id="logo" title="open interface project" href="/">PatternFly | open interface project</a>
+          </div>
+          <div class="navbar-collapse navbar-collapse-pf-site collapse">
+            <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
+              <div class="form-group">
+                <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                <input name="sitesearch" type="hidden" value="patternfly.org">
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div>
+            </form>
+            <ul id="menu-primary" class="nav navbar-nav navbar-right">
+              <li>
+                <a href="/get-started/">Get Started</a>
+              </li>
+              <li class="active">
+                <a href="/pattern-library/">Pattern Library</a>
+              </li>
+              <li>
+                <a href="/styles/">Styles</a>
+              </li>
+              <li>
+                <a href="/community/">Community</a>
+              </li>
+              <li>
+                <a href="/download/">Download</a>
+              </li>
+              <li>
+                <a href="https://blog.patternfly.org">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-sidebar ">
+<!--
+      { % if primary == 'get-started' or primary == 'pattern-library' or primary == 'styles' % }
+      <nav class="navbar navbar-sidebar" aria-labelledby="navbar-toggle-sidebar">
+        <button class="btn btn-default navbar-toggle-sidebar" id="navbar-toggle-sidebar">
+          <span class="fa fa-angle-double-right"></span>
+          <span class="sr-only">Toggle sub navigation</span>
+        </button>
+-->
+        <ul>
+          <li class="primary-menu hidden">
+            <a href="/">Menu</a>
+            <ul>
+              <li>
+              <a href="/get-started/">Get Started<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li class="active">
+              <a href="/pattern-library/">Pattern Library<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/styles/">Styles<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/community/">Community</a>
+              </li>
+              <li>
+              <a href="/download/">Download</a>
+              </li>
+              <li>
+                <a href="https://blog.patternfly.org">Blog</a>
+              </li>
+              <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
+                <div class="form-group">
+                  <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                  <input name="sitesearch" type="hidden" value="patternfly.org">
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+              </form>
+            </ul>
+          </li>
+          <li class="secondary-menu">
+            <a class="secondary-menu-toggle"><span class="secondary-menu-toggle-icon"></span>Pattern Library</a>
+            <ul>
+              <li >
+                <a href="/pattern-library/">Overview</a>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#application-framework-secondary" aria-expanded="false" aria-controls="application-framework-secondary">Application Framework</a>
+                <ul class="collapse " id="application-framework-secondary">
+                  <li >
+                    <a href="/pattern-library/application-framework/login-page/">Login Page</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#cards-secondary" aria-expanded="false" aria-controls="cards-secondary">Cards</a>
+                <ul class="collapse " id="cards-secondary">
+                  <li >
+                    <a href="/pattern-library/cards/aggregate-status-card/">Aggregate Status Card</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/cards/trend-card/">Trend Card</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/cards/utilization-bar-card/">Utilization Bar Card</a>
+                  </li>
+                   <li >
+                    <a href="/pattern-library/cards/utilization-trend-card/">Utilization Trend Card</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#communication-secondary" aria-expanded="false" aria-controls="communication-secondary">Communication</a>
+                <ul class="collapse " id="communication-secondary">
+                  <li >
+                    <a href="/pattern-library/communication/about-modal/">About Modal</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/empty-state/">Empty State</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/inline-notifications/">Inline Notifications</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/notification-drawer/">Notification Drawer</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/toast-notifications/">Toast Notifications</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/wizard/">Wizard</a>
+                  </li>
+                </ul>
+              </li>
+              <li  class="active">
+                <a class="" role="button" data-toggle="collapse" href="#content-views-secondary" aria-expanded="true" aria-controls="content-views-secondary">Content Views</a>
+                <ul class="collapse in" id="content-views-secondary">
+                  <li >
+                    <a href="/pattern-library/content-views/card-view/">Card View</a>
+                  </li>
+                  <li  class="active">
+                    <a href="/pattern-library/content-views/list-view/">List View</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/content-views/table-view/">Table View</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#dashboard-secondary" aria-expanded="false" aria-controls="dashboard-secondary">Dashboard</a>
+                <ul class="collapse " id="dashboard-secondary">
+                  <li >
+                    <a href="/pattern-library/dashboard/dashboard-card/">Dashboard Card (Base)</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/dashboard/dashboard-layout/">Dashboard Layout</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#data-visualization-secondary" aria-expanded="false" aria-controls="data-visualization-secondary">Data Visualization</a>
+                <ul class="collapse " id="data-visualization-secondary">
+                  <li >
+                    <a href="/pattern-library/data-visualization/area-chart/">Area Chart</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/bar-chart/">Bar Chart</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/data-visualization/donut-chart/">Donut Chart</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/heat-map/">Heat Map</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/line-chart/">Line Chart</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/pie-chart/">Pie Chart</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/data-visualization/sparkline/">Sparkline</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/data-visualization/utilization-bar-chart/">Utilization Bar Chart</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="false" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
+                <ul class="collapse " id="forms-and-controls-secondary">
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/date-picker/">Date Picker</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/field-level-help/">Field Level Help</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/find/">Find</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/forms-and-controls/forms/">Forms</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/time-picker/">Time Picker</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/toolbar/">Toolbar</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#navigation-secondary" aria-expanded="false" aria-controls="navigation-secondary">Navigation</a>
+                <ul class="collapse " id="navigation-secondary">
+                  <li >
+                    <a href="/pattern-library/navigation/horizontal-navigation/">Horizontal Navigation</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/navigation/vertical-navigation/">Vertical Navigation</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+              <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
+              <ul class="collapse " id="widgets-secondary">
+                <li >
+                <a href="/pattern-library/widgets/">Overview</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#accordion">Accordion</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#alerts">Alerts</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#badges">Badges</a>
+                </li>
+<!--
+                <li >
+                <a href="/pattern-library/widgets/#basic-charts">Basic Charts</a>
+                </li>
+-->
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-combobox">Bootstrap Combobox</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-datepicker">Bootstrap Datepicker</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-select">Bootstrap Select</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-switch">Bootstrap Switch</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-touchspin">Bootstrap Touchspin</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-tree-view">Bootstrap Tree View</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#breadcrumbs">Breadcrumbs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#buttons">Buttons</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#button-groups">Button Groups</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#cnt-remaining-chars">Count Remaining Characters</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#data-tables">Data Tables</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#dropdowns">Dropdowns</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#fixed-height-accordion">Fixed Height Accordion</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#forms">Forms</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#google-code-prettify">Google Code Prettify</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#info-tip">Info Tip</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#kebabs">Kebabs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#labels">Labels</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#list-group">List Group</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#modal">Modal</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#pagination">Pagination</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#panels">Panels</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#popover">Popover</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#progress-bars">Progress Bars</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#search">Search</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#spinner">Spinner</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tables">Tables</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tabs">Tabs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tooltip">Tooltip</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#treegrid-table">TreeGrid Table</a>
+                </li>
+              </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!--{ % endif % }-->
+    </header>
+
+    <div class="container-fluid">
+      <div class="clearfix row" id="content">
+        <div id="main" class="col-md-12 clearfix" role="main">
+  <article class="post">
+    <header class="page-tabs-header">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 cols-nopad-right">
+          <h1>List View</h1>
+        </div>
+        <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
+          
+            <ul class="nav nav-tabs nav-justified nav-tabs-pattern" id="tabs-pattern" role="tablist">
+  <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Overview</a></li>
+
+    <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
+
+
+    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+
+<!--
+  <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
+-->
+</ul>
+<script>
+    // Workaround for bug with hidden C3 charts in v0.4.11.
+    $(document).on('shown.bs.tab', 'a[data-toggle="tab"]', function () {
+        if (window.dispatchEvent) {
+            window.dispatchEvent(new Event('resize'));
+        }
+        // Special case for IE
+        if ($(document).fireEvent) {
+            $(document).fireEvent('onresize');
+        }
+    });
+</script>
+
+          
+        </div>
+      </div>
+    </header>
+    <section class="post_content">
+      <div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="overview">
+    <p>A List View displays data in rows. Each row displays the same set of attributes, although not necessarily displayed in columns, and the attributes may wrap. The List View omits column headers and other visual noise, making it a cleaner visualization than a data table.</p>
+    <p>Jump to <a href="#standard">Standard List View</a>, <a href="#expanding-rows">List View with Expanding Rows</a> or <a href="#row-variations">Row Variation Examples</a></p>
+    <h2 id="standard">Standard List View</h2>
+    <div class="example-pf">
+      <iframe src="/pattern-library/content-views/list-view/list-view.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
+    </div>
+    <p><a href="/pattern-library/content-views/list-view/list-view.html" target="_blank">View full page example</a></p>
+    <h2 id="expanding-rows">List View with Expanding Rows</h2>
+    <p>Use a List View with expanding rows when you want to display details in place without requiring drill-down to a new page.  This is useful when you want to allow users to view details of an object without reloading the page or when the detail information is small and does not require its own page. Simple expansion and compound expansion are two variants of this pattern.</p>
+    <h3>Simple Expansion</h3>
+    <p>Simple expansion supports a single expansion state to expose more detail for a selected row.</p>
+    <p><img src="/assets/img/list-view-simple-expansion2.png" alt="List View with Simple Expansion" /></p>
+    <h3>Compound Expansion</h3>
+    <p>Compound expansion supports multiple expansion panels to examine multiple attributes of the selected row.</p>
+    <p><img src="/assets/img/list-view-compound-expansion-example.png" alt="List View with Compound Expansion" /></p>
+    <h2 id="row-variations">Row Variation Examples</h2>
+    <p>The following row variations provide some examples of how you might visualize content within a row. You are not limited to these layouts. You may need to adjust the visualizations to best fit your application’s needs. Each row within a list view should have a consistent layout. Do not mix and match.</p>
+    <div class="example-pf">
+      <div class="cards-pf">
+        <div class="container-fluid container-cards-pf">
+          <div class="row row-cards-pf">
+            <!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  -->
+            <div class="list-group list-view-pf">
+  <div class="list-group-item">
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox" />
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>8</strong> Clusters
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-container-node"></span>
+            <strong>18</strong> Nodes
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-image"></span>
+            <strong>4</strong> Images
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Row Checkbox Selection
+  $(document).ready(function () {
+    $("input[type='checkbox']").change(function (e) {
+      if ($(this).is(":checked")) {
+        $(this).closest('.list-group-item').addClass("active");
+      } else {
+        $(this).closest('.list-group-item').removeClass("active");
+      }
+    });
+  });
+</script>
+            <div class="list-group list-view-pf">
+  <div class="list-group-item list-view-pf-stacked">
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight15" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight15">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-lg"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+            <small>Feb 23, 2015 12:32 am</small>
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart">
+              <span id="donut-chart-1"></span>
+          </div>
+          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart">
+              <span id="donut-chart-2"></span>
+          </div>
+          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart">
+              <span id="donut-chart-3"></span>
+          </div>
+          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart">
+              <span id="donut-chart-4"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Donut Charts
+  var c3ChartDefaults = $().c3ChartDefaults();
+  var customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('34%');
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = '#donut-chart-1';
+  customDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 34],
+      ["Available", 86]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  var donutChartTitle = d3.select("#donut-chart-1").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("34%").classed('list-view-donut-title', true);
+
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('21%');
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = '#donut-chart-2';
+  customDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 21],
+      ["Available", 79]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  donutChartTitle = d3.select("#donut-chart-2").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("21%").classed('list-view-donut-title', true);
+
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('14%');
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = '#donut-chart-3';
+  customDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 14],
+      ["Available", 86]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  donutChartTitle = d3.select("#donut-chart-3").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("14%").classed('list-view-donut-title', true);
+
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('25%');
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = '#donut-chart-4';
+  customDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 25],
+      ["Available", 75]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  donutChartTitle = d3.select("#donut-chart-4").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("25%").classed('list-view-donut-title', true);
+</script>
+            <div class="list-group list-view-pf">
+  <div class="list-group-item list-view-pf-stacked">
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight2">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <div class="list-view-pf-calendar">
+          March
+          <strong>29</strong>
+        </div>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Clusters
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-container-node"></span>
+            <strong>18</strong>
+            Nodes
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-image"></span>
+            <strong>4</strong> Images
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+            <div class="list-group list-view-pf">
+  <div class="list-group-item list-view-pf-stacked list-view-pf-top-align">
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox" />
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      <button class="btn btn-default">Action</button>
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight3">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event Ones
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked">
+            <strong>113,735</strong> Service One
+          </div>
+          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked">
+            <strong>35%</strong> Service Two
+          </div>
+          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked">
+            <strong>22.0%</strong> Service Three
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Row Checkbox Selection
+  $(document).ready(function () {
+    $("input[type='checkbox']").change(function (e) {
+      if ($(this).is(":checked")) {
+        $(this).closest('.list-group-item').addClass("active");
+      } else {
+        $(this).closest('.list-group-item').removeClass("active");
+      }
+    });
+  });
+</script>
+            <div class="list-group list-view-pf">
+  <div class="list-group-item">
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox" />
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>8</strong> Clusters
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Row Checkbox Selection
+  $(document).ready(function () {
+    $("input[type='checkbox']").change(function (e) {
+      if ($(this).is(":checked")) {
+        $(this).closest('.list-group-item').addClass("active");
+      } else {
+        $(this).closest('.list-group-item').removeClass("active");
+      }
+    });
+  });
+</script>
+            <div class="list-group list-view-pf list-view-pf-equalized-column">
+  <div class="list-group-item">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="pficon pficon-ok list-view-pf-icon-md list-view-pf-icon-success"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>108</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>28</strong> Clusters
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list-group-item">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="pficon pficon-info list-view-pf-icon-md list-view-pf-icon-info"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>28</strong> Clusters
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list-group-item">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="pficon pficon-warning-triangle-o list-view-pf-icon-md list-view-pf-icon-warning"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>108</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>28</strong> Clusters
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list-group-item">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="pficon pficon-error-circle-o list-view-pf-icon-md list-view-pf-icon-danger"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>28</strong> Clusters
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Equalize column width
+  $(document).ready(function () {
+  	var widest = 0;
+  	$('.list-view-pf-equalized-column .list-view-pf-additional-info-item').each( function() {
+  		widest = $(this).width() > widest ? $(this).width() : widest;
+  	}).width(widest);
+  });
+</script>
+            <div class="list-group list-view-pf">
+  <div class="list-group-item list-view-pf-stacked list-view-pf-top-align">
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox" />
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      <button class="btn btn-default">Action</button>
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight4">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <img src="http://placehold.it/60x60" alt="placeholder image" />
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>8</strong> Clusters
+          </div>
+          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked">
+            <strong>35%</strong> Service Two
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Row Checkbox Selection
+  $(document).ready(function () {
+    $("input[type='checkbox']").change(function (e) {
+      if ($(this).is(":checked")) {
+        $(this).closest('.list-group-item').addClass("active");
+      } else {
+        $(this).closest('.list-group-item').removeClass("active");
+      }
+    });
+  });
+</script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="design">
+    <h2>Standard List View</h2>
+    <p>
+      <img src="/assets/img/live-view-callout.png" alt="Standard List View" />
+    </p>
+    <ol>
+      <li><b>Data Toolbar:</b> The Data Toolbar pattern may include filter, sort, actions, find and change view type.</li>
+      <li><b>Row:</b>
+        <ul>
+          <li>If drill down behavior is supported, clicking on an item will link to the appropriate page.</li>
+          <li>Each item in List View should have the same layout
+            <ul>
+              <li>When including titles, Make the title <b>bold</b> rather than appending a colon ( : )</li>
+              <li>Links may be displayed within an item</li>
+            </ul>
+          </li>
+          <li>When the viewport size is decreased:
+            <ul>
+              <li>Content should wrap, displaying multiple rows of data</li>
+              <li>Content could be eliminated</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><b>Multi-Selection via Checkboxes</b> (optional)<b>:</b> If multi-selection is supported, checkboxes appear  on the left.  Actions in the Data Toolbar apply to the selected items.</li>
+      <li><b>Item Hover:</b> A hover state  should be shown visually when a user hovers over an item.</li>
+      <li><b>Inline Actions:</b> Inline actions should be included if the user needs to be able to quickly perform an action on a single item.</li>
+    </ol>
+    <h2 id="simple-expansion-description">List View with Simple Expansion</h2>
+    <p>
+      <img src="/assets/img/list-view-simple-expansion-callout.png" alt="List View with Simple Expansion" />
+    </p>
+    <ol>
+      <li><b>Icon:</b> Placing the caret at the front of the row signifies that this row is expandable.  The caret icon points to the right when it is closed and down when it is expanded.</li>
+      <li><b>Interaction</b>
+        <ul>
+          <li>Hovering over a row highlights it.  Single clicking anywhere in the row expands the row.  </li>
+          <li>If the list supports both expansion and drill-down to details, a button or link must be added to the row to support the drill-down action.</li>
+        </ul>
+      </li>
+      <li><b>Expansion Panel:</b> When the row is expanded, a panel is inserted between the bottom of the row and the top of the next row.  All other content is pushed down the page.  The panel should be sized to accommodate the content.  Content can be anything that is required to convey details of a selected object.  However, we do not recommend placing tables of log lists of items inside the expansion panel.  This could result in nested scrolling (i.e. the master list and the detailed content require separate scroll bars). </li>
+      <li><b>Close/Collapse:</b> Clicking the Close icon will collapse the expansion panel and return the list to its original (collapsed) state.  Alternatively, clicking anywhere on the row again will have the same effect.</li>
+    </ol>
+    <h2 id="compound-expansion-description">List View with Compound Expansion</h2>
+    <p>
+      <img src="/assets/img/list-view-compound-expansion-callout.png" alt="List View with Compound Expansion" />
+    </p>
+    <ol>
+      <li><b>Icon:</b> When the list supports compound expansion, the caret is placed in front of each attribute that is expandable.</li>
+      <li><b>Expandable Attribute:</b>
+        <ul>
+          <li>Hovering over an expandable attribute highlights it.  Note that in this case there is no action that applies to single clicking on the entire row.  The user must explicitly click on the element they want to expand.</li>
+          <li>Clicking on any expandable attribute opens the expansion panels with details for the selected attribute, only.  The caret changes direction to point down, and the attribute remains highlighted.</li>
+          <li>Hovering over another expandable attribute will highlight it.  Clicking will close the current expansion panel and expand this attribute by opening its row expansion.   This action is exactly equivalent to closing the first panel (by clicking close) and expanding the second panel.</li>
+        </ul>
+      </li>
+      <li><b>Close/Collapse:</b> Click the Close icon to close/collapse the expansion panel.</li>
+    </ol>
+    <h2>Additional Notes about Behavior</h2>
+    <ul>
+      <li><b>Empty State:</b> If no items exist, display an Empty State page.  See the <a href="/pattern-library/communication/empty-state/">Empty State</a> pattern for more details.</li>
+      <li><b>Vertical Scroll:</b> Use a vertical scrollbar as needed. A horizontal scrollbar should NOT be used.  Instead, the page containing the List View should be responsive.</li>
+    </ul>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="code">
+    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+
+  <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
+  <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
+
+</ul>
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane nested active" id="html-css">
+        <p>Jump to <a href="#example-code-1">Standard List View</a>, <a href="#example-code-2">Default Row</a>, <a href="#example-code-3">Row Variation #1</a>, <a href="#example-code-4">Row Variation #2</a>, <a href="#example-code-5">Row Variation #3</a>, <a href="#example-code-6">Row Variation #4</a>, <a href="#example-code-7">Row Variation #5</a> or <a href="#example-code-8">Row Variation #6</a></p>
+        <h2 id="example-code-1">Standard List View</h2>
+        <div class="example-pf">
+          <iframe src="/pattern-library/content-views/list-view/list-view.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
+        </div>
+        <p><a href="/pattern-library/content-views/list-view/list-view.html" target="_blank">View full page example</a></p>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+        <div class="collapse in" id="markup-1">
+          <pre class="prettyprint">    &lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+      &lt;div class=&quot;navbar-header&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-1&quot;&gt;
+          &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;
+          &lt;img src=&quot;/assets/img/brand.svg&quot; alt=&quot;PatternFly Enterprise Application&quot; /&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;collapse navbar-collapse navbar-collapse-1&quot;&gt;
+        &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Status&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;dropdown&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+              &lt;span class=&quot;pficon pficon-user&quot;&gt;&lt;/span&gt;
+              Brian Johnson &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+            &lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li class=&quot;dropdown-submenu&quot;&gt;
+                &lt;a tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;More options&lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                  &lt;li class=&quot;dropdown-header&quot;&gt;Nav header&lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;nav navbar-nav navbar-primary&quot;&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+
+      &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;div class=&quot;row toolbar-pf&quot;&gt;
+          &lt;div class=&quot;col-sm-12&quot;&gt;
+            &lt;form class=&quot;toolbar-pf-actions&quot;&gt;
+              &lt;div class=&quot;form-group toolbar-pf-filter&quot;&gt;
+                &lt;label class=&quot;sr-only&quot; for=&quot;filter&quot;&gt;Name&lt;/label&gt;
+                &lt;div class=&quot;input-group&quot;&gt;
+                  &lt;div class=&quot;input-group-btn&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                      &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/div&gt;&lt;!-- /btn-group --&gt;
+                  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;filter&quot; placeholder=&quot;Filter By Name...&quot;&gt;
+                &lt;/div&gt;&lt;!-- /input-group --&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;div class=&quot;dropdown btn-group&quot;&gt;
+                  &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Name &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                  &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                  &lt;span class=&quot;fa fa-sort-alpha-asc&quot;&gt;&lt;/span&gt;
+                &lt;/button&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;form-group&quot;&gt;
+                &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Action&lt;/button&gt;
+                &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Action&lt;/button&gt;
+                &lt;div class=&quot;dropdown btn-group  dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebab&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu &quot; aria-labelledby=&quot;dropdownKebab&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+              &lt;/div&gt;
+              &lt;div class=&quot;toolbar-pf-action-right&quot;&gt;
+                &lt;div class=&quot;form-group toolbar-pf-find&quot;&gt;
+                  &lt;button class=&quot;btn btn-link btn-find&quot; type=&quot;button&quot;&gt;
+                    &lt;span class=&quot;fa fa-search&quot;&gt;&lt;/span&gt;
+                  &lt;/button&gt;
+                  &lt;div class=&quot;find-pf-dropdown-container&quot;&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;find&quot; placeholder=&quot;Find By Keyword...&quot;&gt;
+                    &lt;div class=&quot;find-pf-buttons&quot;&gt;
+                      &lt;span class=&quot;find-pf-nums&quot;&gt;1 of 3&lt;/span&gt;
+                      &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;fa fa-angle-up&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                      &lt;button class=&quot;btn btn-link&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;fa fa-angle-down&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                      &lt;button class=&quot;btn btn-link btn-find-close&quot; type=&quot;button&quot;&gt;
+                        &lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;
+                      &lt;/button&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;form-group toolbar-pf-view-selector&quot;&gt;
+                  &lt;button class=&quot;btn btn-link&quot;&gt;&lt;i class=&quot;fa fa-th&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;button class=&quot;btn btn-link active&quot;&gt;&lt;i class=&quot;fa fa-th-large&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                  &lt;button class=&quot;btn btn-link&quot;&gt;&lt;i class=&quot;fa fa-th-list&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/form&gt;
+            &lt;div class=&quot;row toolbar-pf-results&quot;&gt;
+              &lt;div class=&quot;col-sm-12&quot;&gt;
+                &lt;h5&gt;40 Results&lt;/h5&gt;
+                &lt;p&gt;Active filters:&lt;/p&gt;
+                &lt;ul class=&quot;list-inline&quot;&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;span class=&quot;label label-info&quot;&gt;
+                      Name: nameofthething
+                      &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-close&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/span&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Clear All Filters&lt;/a&gt;&lt;/p&gt;
+              &lt;/div&gt;&lt;!-- /col --&gt;
+            &lt;/div&gt;&lt;!-- /row --&gt;
+          &lt;/div&gt;&lt;!-- /col --&gt;
+        &lt;/div&gt;&lt;!-- /row --&gt;
+      &lt;/div&gt;&lt;!-- /container --&gt;
+      &lt;script&gt;
+      (function($) {
+        $(document).ready(function() {
+          // Upon clicking the find button, show the find dropdown content
+          $(&quot;.btn-find&quot;).click(function () {
+            $(&quot;.find-pf-dropdown-container&quot;).toggle();
+          });
+          // Upon clicking the find close button, hide the find dropdown content
+          $(&quot;.btn-find-close&quot;).click(function () {
+            $(&quot;.find-pf-dropdown-container&quot;).hide();
+          });
+
+        });
+      })(jQuery);
+    &lt;/script&gt;
+&lt;div class=&quot;container-fluid&quot;&gt;
+&lt;div class=&quot;list-group list-view-pf list-view-pf-view&quot;&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+      &lt;input type=&quot;checkbox&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight9&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight9&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-heading&quot;&gt;
+            Event One
+          &lt;/div&gt;
+          &lt;div class=&quot;list-group-item-text&quot;&gt;
+            The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;8&lt;/strong&gt; Hosts
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;6&lt;/strong&gt; Clusters
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;10&lt;/strong&gt; Nodes
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;8&lt;/strong&gt; Images
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+      &lt;input type=&quot;checkbox&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight10&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight10&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;fa fa-magic list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-heading&quot;&gt;
+            Event Two
+          &lt;/div&gt;
+          &lt;div class=&quot;list-group-item-text&quot;&gt;
+            The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;4&lt;/strong&gt; Hosts
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;2&lt;/strong&gt; Clusters
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;11&lt;/strong&gt; Nodes
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;6&lt;/strong&gt; Images
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+      &lt;input type=&quot;checkbox&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight11&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight11&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;fa fa-gamepad list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-heading&quot;&gt;
+            Event Three
+          &lt;/div&gt;
+          &lt;div class=&quot;list-group-item-text&quot;&gt;
+            The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;4&lt;/strong&gt; Hosts
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;2&lt;/strong&gt; Clusters
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;10&lt;/strong&gt; Nodes
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;6&lt;/strong&gt; Images
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+      &lt;input type=&quot;checkbox&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight12&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight12&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;fa fa-linux list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-heading&quot;&gt;
+            Event Four
+          &lt;/div&gt;
+          &lt;div class=&quot;list-group-item-text&quot;&gt;
+            The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;4&lt;/strong&gt; Hosts
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;2&lt;/strong&gt; Clusters
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;10&lt;/strong&gt; Nodes
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;6&lt;/strong&gt; Images
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+      &lt;input type=&quot;checkbox&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight13&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight13&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;fa fa-briefcase list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-heading&quot;&gt;
+            Event Five
+          &lt;/div&gt;
+          &lt;div class=&quot;list-group-item-text&quot;&gt;
+            The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;4&lt;/strong&gt; Hosts
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;2&lt;/strong&gt; Clusters
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;10&lt;/strong&gt; Nodes
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;6&lt;/strong&gt; Images
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+      &lt;input type=&quot;checkbox&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight14&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight14&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;fa fa-coffee list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-heading&quot;&gt;
+            Event Six
+          &lt;/div&gt;
+          &lt;div class=&quot;list-group-item-text&quot;&gt;
+            The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;4&lt;/strong&gt; Hosts
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;2&lt;/strong&gt; Clusters
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;10&lt;/strong&gt; Nodes
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;6&lt;/strong&gt; Images
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $(document).ready(function () {
+    // Row Checkbox Selection
+    $(&quot;input[type=&#39;checkbox&#39;]&quot;).change(function (e) {
+      if ($(this).is(&quot;:checked&quot;)) {
+        $(this).closest(&#39;.list-group-item&#39;).addClass(&quot;active&quot;);
+      } else {
+        $(this).closest(&#39;.list-group-item&#39;).removeClass(&quot;active&quot;);
+      }
+    });
+    // toggle dropdown menu
+    $(&#39;.list-view-pf-actions&#39;).on(&#39;show.bs.dropdown&#39;, function () {
+      var $this = $(this);
+      var $dropdown = $this.find(&#39;.dropdown&#39;);
+      var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find(&#39;.dropdown-menu&#39;).outerHeight(true);
+      $dropdown.toggleClass(&#39;dropup&#39;, space &lt; 10);
+    });
+  });
+&lt;/script&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <h2 id="example-code-2">Default Row</h2>
+        <div class="example-pf">
+          <div class="example-pf-demo example-pf-demo-no-padding">
+            <div class="cards-pf">
+              <div class="container-fluid container-cards-pf">
+                <div class="row row-cards-pf">
+                  <div class="list-group list-view-pf">
+  <div class="list-group-item">
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox" />
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>8</strong> Clusters
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-container-node"></span>
+            <strong>18</strong> Nodes
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-image"></span>
+            <strong>4</strong> Images
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Row Checkbox Selection
+  $(document).ready(function () {
+    $("input[type='checkbox']").change(function (e) {
+      if ($(this).is(":checked")) {
+        $(this).closest('.list-group-item').addClass("active");
+      } else {
+        $(this).closest('.list-group-item').removeClass("active");
+      }
+    });
+  });
+</script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+        <div class="collapse in" id="markup-2">
+          <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+      &lt;input type=&quot;checkbox&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-heading&quot;&gt;
+            Event One
+          &lt;/div&gt;
+          &lt;div class=&quot;list-group-item-text&quot;&gt;
+            The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;8&lt;/strong&gt; Hosts
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;8&lt;/strong&gt; Clusters
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;18&lt;/strong&gt; Nodes
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;4&lt;/strong&gt; Images
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  // Row Checkbox Selection
+  $(document).ready(function () {
+    $(&quot;input[type=&#39;checkbox&#39;]&quot;).change(function (e) {
+      if ($(this).is(&quot;:checked&quot;)) {
+        $(this).closest(&#39;.list-group-item&#39;).addClass(&quot;active&quot;);
+      } else {
+        $(this).closest(&#39;.list-group-item&#39;).removeClass(&quot;active&quot;);
+      }
+    });
+  });
+&lt;/script&gt;</pre>
+        </div>
+        <h2 id="example-code-3">Row Variation #1</h2>
+        <div class="example-pf">
+          <div class="example-pf-demo example-pf-demo-no-padding">
+            <div class="cards-pf">
+              <div class="container-fluid container-cards-pf">
+                <div class="row row-cards-pf">
+                  <!-- Need to be fixed. It is not displaying the c3 charts. -->
+                  <div class="list-group list-view-pf">
+  <div class="list-group-item list-view-pf-stacked">
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight15" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight15">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-lg"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+            <small>Feb 23, 2015 12:32 am</small>
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart">
+              <span id="donut-chart-5"></span>
+          </div>
+          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart">
+              <span id="donut-chart-6"></span>
+          </div>
+          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart">
+              <span id="donut-chart-7"></span>
+          </div>
+          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart">
+              <span id="donut-chart-8"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Donut Charts
+  var c3ChartDefaults = $().c3ChartDefaults();
+  var customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('34%');
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = '#donut-chart-5';
+  customDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 34],
+      ["Available", 86]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  var donutChartTitle = d3.select("#donut-chart-5").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("34%").classed('list-view-donut-title', true);
+
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('21%');
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = '#donut-chart-6';
+  customDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 21],
+      ["Available", 79]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  donutChartTitle = d3.select("#donut-chart-6").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("21%").classed('list-view-donut-title', true);
+
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('14%');
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = '#donut-chart-7';
+  customDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 14],
+      ["Available", 86]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  donutChartTitle = d3.select("#donut-chart-7").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("14%").classed('list-view-donut-title', true);
+
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig('25%');
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = '#donut-chart-8';
+  customDonutChartConfig.data = {
+    type: "donut",
+    columns: [
+      ["Used", 25],
+      ["Available", 75]
+    ],
+    groups: [
+      ["used", "available"]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  donutChartTitle = d3.select("#donut-chart-8").select('text.c3-chart-arcs-title');
+  donutChartTitle.text("");
+  donutChartTitle.insert('tspan').text("25%").classed('list-view-donut-title', true);
+</script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
+        <div class="collapse in" id="markup-3">
+          <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
+  &lt;div class=&quot;list-group-item list-view-pf-stacked&quot;&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight15&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight15&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;fa fa-plane list-view-pf-icon-lg&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-heading&quot;&gt;
+            Event One
+            &lt;small&gt;Feb 23, 2015 12:32 am&lt;/small&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-group-item-text&quot;&gt;
+            The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart&quot;&gt;
+              &lt;span id=&quot;donut-chart-5&quot;&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart&quot;&gt;
+              &lt;span id=&quot;donut-chart-6&quot;&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart&quot;&gt;
+              &lt;span id=&quot;donut-chart-7&quot;&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item list-view-pf-additional-info-item-donut-chart&quot;&gt;
+              &lt;span id=&quot;donut-chart-8&quot;&gt;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  // Donut Charts
+  var c3ChartDefaults = $().c3ChartDefaults();
+  var customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig(&#39;34%&#39;);
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = &#39;#donut-chart-5&#39;;
+  customDonutChartConfig.data = {
+    type: &quot;donut&quot;,
+    columns: [
+      [&quot;Used&quot;, 34],
+      [&quot;Available&quot;, 86]
+    ],
+    groups: [
+      [&quot;used&quot;, &quot;available&quot;]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  var donutChartTitle = d3.select(&quot;#donut-chart-5&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+  donutChartTitle.text(&quot;&quot;);
+  donutChartTitle.insert(&#39;tspan&#39;).text(&quot;34%&quot;).classed(&#39;list-view-donut-title&#39;, true);
+
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig(&#39;21%&#39;);
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = &#39;#donut-chart-6&#39;;
+  customDonutChartConfig.data = {
+    type: &quot;donut&quot;,
+    columns: [
+      [&quot;Used&quot;, 21],
+      [&quot;Available&quot;, 79]
+    ],
+    groups: [
+      [&quot;used&quot;, &quot;available&quot;]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  donutChartTitle = d3.select(&quot;#donut-chart-6&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+  donutChartTitle.text(&quot;&quot;);
+  donutChartTitle.insert(&#39;tspan&#39;).text(&quot;21%&quot;).classed(&#39;list-view-donut-title&#39;, true);
+
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig(&#39;14%&#39;);
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = &#39;#donut-chart-7&#39;;
+  customDonutChartConfig.data = {
+    type: &quot;donut&quot;,
+    columns: [
+      [&quot;Used&quot;, 14],
+      [&quot;Available&quot;, 86]
+    ],
+    groups: [
+      [&quot;used&quot;, &quot;available&quot;]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  donutChartTitle = d3.select(&quot;#donut-chart-7&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+  donutChartTitle.text(&quot;&quot;);
+  donutChartTitle.insert(&#39;tspan&#39;).text(&quot;14%&quot;).classed(&#39;list-view-donut-title&#39;, true);
+
+  customDonutChartConfig = c3ChartDefaults.getDefaultDonutConfig(&#39;25%&#39;);
+  customDonutChartConfig.size.height = 71;
+  customDonutChartConfig.donut.width = 5;
+  customDonutChartConfig.bindto = &#39;#donut-chart-8&#39;;
+  customDonutChartConfig.data = {
+    type: &quot;donut&quot;,
+    columns: [
+      [&quot;Used&quot;, 25],
+      [&quot;Available&quot;, 75]
+    ],
+    groups: [
+      [&quot;used&quot;, &quot;available&quot;]
+    ],
+    order: null
+  };
+  c3.generate(customDonutChartConfig);
+  donutChartTitle = d3.select(&quot;#donut-chart-8&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+  donutChartTitle.text(&quot;&quot;);
+  donutChartTitle.insert(&#39;tspan&#39;).text(&quot;25%&quot;).classed(&#39;list-view-donut-title&#39;, true);
+&lt;/script&gt;</pre>
+        </div>
+        <h2 id="example-code-4">Row Variation #2</h2>
+        <div class="example-pf">
+          <div class="example-pf-demo example-pf-demo-no-padding">
+            <div class="cards-pf">
+              <div class="container-fluid container-cards-pf">
+                <div class="row row-cards-pf">
+                  <div class="list-group list-view-pf">
+  <div class="list-group-item list-view-pf-stacked">
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight2">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <div class="list-view-pf-calendar">
+          March
+          <strong>29</strong>
+        </div>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Clusters
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-container-node"></span>
+            <strong>18</strong>
+            Nodes
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-image"></span>
+            <strong>4</strong> Images
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a></p>
+        <div class="collapse in" id="markup-4">
+          <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
+  &lt;div class=&quot;list-group-item list-view-pf-stacked&quot;&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight2&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight2&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;div class=&quot;list-view-pf-calendar&quot;&gt;
+          March
+          &lt;strong&gt;29&lt;/strong&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-heading&quot;&gt;
+            Event One
+          &lt;/div&gt;
+          &lt;div class=&quot;list-group-item-text&quot;&gt;
+            The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;8&lt;/strong&gt; Clusters
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;8&lt;/strong&gt; Hosts
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-container-node&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;18&lt;/strong&gt;
+            Nodes
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;4&lt;/strong&gt; Images
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <h2 id="example-code-5">Row Variation #3</h2>
+        <div class="example-pf">
+          <div class="example-pf-demo example-pf-demo-no-padding">
+            <div class="cards-pf">
+              <div class="container-fluid container-cards-pf">
+                <div class="row row-cards-pf">
+                  <div class="list-group list-view-pf">
+  <div class="list-group-item list-view-pf-stacked list-view-pf-top-align">
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox" />
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      <button class="btn btn-default">Action</button>
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight3">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event Ones
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked">
+            <strong>113,735</strong> Service One
+          </div>
+          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked">
+            <strong>35%</strong> Service Two
+          </div>
+          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked">
+            <strong>22.0%</strong> Service Three
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Row Checkbox Selection
+  $(document).ready(function () {
+    $("input[type='checkbox']").change(function (e) {
+      if ($(this).is(":checked")) {
+        $(this).closest('.list-group-item').addClass("active");
+      } else {
+        $(this).closest('.list-group-item').removeClass("active");
+      }
+    });
+  });
+</script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-5" href="#markup-5">Reference Markup</a></p>
+        <div class="collapse in" id="markup-5">
+          <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
+  &lt;div class=&quot;list-group-item list-view-pf-stacked list-view-pf-top-align&quot;&gt;
+    &lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+      &lt;input type=&quot;checkbox&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+      &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight3&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight3&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-heading&quot;&gt;
+            Event Ones
+          &lt;/div&gt;
+          &lt;div class=&quot;list-group-item-text&quot;&gt;
+            The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked&quot;&gt;
+            &lt;strong&gt;113,735&lt;/strong&gt; Service One
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked&quot;&gt;
+            &lt;strong&gt;35%&lt;/strong&gt; Service Two
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked&quot;&gt;
+            &lt;strong&gt;22.0%&lt;/strong&gt; Service Three
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  // Row Checkbox Selection
+  $(document).ready(function () {
+    $(&quot;input[type=&#39;checkbox&#39;]&quot;).change(function (e) {
+      if ($(this).is(&quot;:checked&quot;)) {
+        $(this).closest(&#39;.list-group-item&#39;).addClass(&quot;active&quot;);
+      } else {
+        $(this).closest(&#39;.list-group-item&#39;).removeClass(&quot;active&quot;);
+      }
+    });
+  });
+&lt;/script&gt;</pre>
+        </div>
+        <h2 id="example-code-6">Row Variation #4</h2>
+        <div class="example-pf">
+          <div class="example-pf-demo example-pf-demo-no-padding">
+            <div class="cards-pf">
+              <div class="container-fluid container-cards-pf">
+                <div class="row row-cards-pf">
+                  <div class="list-group list-view-pf">
+  <div class="list-group-item">
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox" />
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>8</strong> Clusters
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Row Checkbox Selection
+  $(document).ready(function () {
+    $("input[type='checkbox']").change(function (e) {
+      if ($(this).is(":checked")) {
+        $(this).closest('.list-group-item').addClass("active");
+      } else {
+        $(this).closest('.list-group-item').removeClass("active");
+      }
+    });
+  });
+</script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-6" href="#markup-6">Reference Markup</a></p>
+        <div class="collapse in" id="markup-6">
+          <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+      &lt;input type=&quot;checkbox&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-heading&quot;&gt;
+            Event One
+          &lt;/div&gt;
+          &lt;div class=&quot;list-group-item-text&quot;&gt;
+            The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;8&lt;/strong&gt; Hosts
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;8&lt;/strong&gt; Clusters
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  // Row Checkbox Selection
+  $(document).ready(function () {
+    $(&quot;input[type=&#39;checkbox&#39;]&quot;).change(function (e) {
+      if ($(this).is(&quot;:checked&quot;)) {
+        $(this).closest(&#39;.list-group-item&#39;).addClass(&quot;active&quot;);
+      } else {
+        $(this).closest(&#39;.list-group-item&#39;).removeClass(&quot;active&quot;);
+      }
+    });
+  });
+&lt;/script&gt;</pre>
+        </div>
+        <h2 id="example-code-7">Row Variation #5</h2>
+        <div class="example-pf">
+          <div class="example-pf-demo example-pf-demo-no-padding">
+            <div class="cards-pf">
+              <div class="container-fluid container-cards-pf">
+                <div class="row row-cards-pf">
+                  <div class="list-group list-view-pf list-view-pf-equalized-column">
+  <div class="list-group-item">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="pficon pficon-ok list-view-pf-icon-md list-view-pf-icon-success"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>108</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>28</strong> Clusters
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list-group-item">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="pficon pficon-info list-view-pf-icon-md list-view-pf-icon-info"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>28</strong> Clusters
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list-group-item">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="pficon pficon-warning-triangle-o list-view-pf-icon-md list-view-pf-icon-warning"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>108</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>28</strong> Clusters
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list-group-item">
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="pficon pficon-error-circle-o list-view-pf-icon-md list-view-pf-icon-danger"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-screen"></span>
+            <strong>8</strong> Hosts
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>28</strong> Clusters
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Equalize column width
+  $(document).ready(function () {
+  	var widest = 0;
+  	$('.list-view-pf-equalized-column .list-view-pf-additional-info-item').each( function() {
+  		widest = $(this).width() > widest ? $(this).width() : widest;
+  	}).width(widest);
+  });
+</script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-7" href="#markup-7">Reference Markup</a></p>
+        <div class="collapse in" id="markup-7">
+          <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf list-view-pf-equalized-column&quot;&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;pficon pficon-ok list-view-pf-icon-md list-view-pf-icon-success&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-heading&quot;&gt;
+            Event One
+          &lt;/div&gt;
+          &lt;div class=&quot;list-group-item-text&quot;&gt;
+            The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;108&lt;/strong&gt; Hosts
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;28&lt;/strong&gt; Clusters
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;pficon pficon-info list-view-pf-icon-md list-view-pf-icon-info&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-heading&quot;&gt;
+            Event One
+          &lt;/div&gt;
+          &lt;div class=&quot;list-group-item-text&quot;&gt;
+            The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;8&lt;/strong&gt; Hosts
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;28&lt;/strong&gt; Clusters
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;pficon pficon-warning-triangle-o list-view-pf-icon-md list-view-pf-icon-warning&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-heading&quot;&gt;
+            Event One
+          &lt;/div&gt;
+          &lt;div class=&quot;list-group-item-text&quot;&gt;
+            The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;108&lt;/strong&gt; Hosts
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;28&lt;/strong&gt; Clusters
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list-group-item&quot;&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;pficon pficon-error-circle-o list-view-pf-icon-md list-view-pf-icon-danger&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-heading&quot;&gt;
+            Event One
+          &lt;/div&gt;
+          &lt;div class=&quot;list-group-item-text&quot;&gt;
+            The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-screen&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;8&lt;/strong&gt; Hosts
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;28&lt;/strong&gt; Clusters
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  // Equalize column width
+  $(document).ready(function () {
+  	var widest = 0;
+  	$(&#39;.list-view-pf-equalized-column .list-view-pf-additional-info-item&#39;).each( function() {
+  		widest = $(this).width() &gt; widest ? $(this).width() : widest;
+  	}).width(widest);
+  });
+&lt;/script&gt;</pre>
+        </div>
+        <h2 id="example-code-8">Row Variation #6</h2>
+        <div class="example-pf">
+          <div class="example-pf-demo example-pf-demo-no-padding">
+            <div class="cards-pf">
+              <div class="container-fluid container-cards-pf">
+                <div class="row row-cards-pf">
+                  <div class="list-group list-view-pf">
+  <div class="list-group-item list-view-pf-stacked list-view-pf-top-align">
+    <div class="list-view-pf-checkbox">
+      <input type="checkbox" />
+    </div>
+    <div class="list-view-pf-actions">
+      <button class="btn btn-default">Action</button>
+      <button class="btn btn-default">Action</button>
+      <div class="dropdown pull-right dropdown-kebab-pf">
+  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <span class="fa fa-ellipsis-v"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight4">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+    </div>
+    <div class="list-view-pf-main-info">
+      <div class="list-view-pf-left">
+        <span class="fa fa-plane list-view-pf-icon-sm"></span>
+      </div>
+      <div class="list-view-pf-body">
+        <div class="list-view-pf-description">
+          <div class="list-group-item-heading">
+            Event One
+          </div>
+          <div class="list-group-item-text">
+            The following snippet of text is <a href="#">rendered as link text</a>.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+          </div>
+        </div>
+        <div class="list-view-pf-additional-info">
+          <div class="list-view-pf-additional-info-item">
+            <img src="http://placehold.it/60x60" alt="placeholder image" />
+          </div>
+          <div class="list-view-pf-additional-info-item">
+            <span class="pficon pficon-cluster"></span>
+            <strong>8</strong> Clusters
+          </div>
+          <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked">
+            <strong>35%</strong> Service Two
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Row Checkbox Selection
+  $(document).ready(function () {
+    $("input[type='checkbox']").change(function (e) {
+      if ($(this).is(":checked")) {
+        $(this).closest('.list-group-item').addClass("active");
+      } else {
+        $(this).closest('.list-group-item').removeClass("active");
+      }
+    });
+  });
+</script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-8" href="#markup-8">Reference Markup</a></p>
+        <div class="collapse in" id="markup-8">
+          <pre class="prettyprint">&lt;div class=&quot;list-group list-view-pf&quot;&gt;
+  &lt;div class=&quot;list-group-item list-view-pf-stacked list-view-pf-top-align&quot;&gt;
+    &lt;div class=&quot;list-view-pf-checkbox&quot;&gt;
+      &lt;input type=&quot;checkbox&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+      &lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;
+      &lt;div class=&quot;dropdown pull-right dropdown-kebab-pf&quot;&gt;
+  &lt;button class=&quot;btn btn-link dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownKebabRight4&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;true&quot;&gt;
+    &lt;span class=&quot;fa fa-ellipsis-v&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; aria-labelledby=&quot;dropdownKebabRight4&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;list-view-pf-main-info&quot;&gt;
+      &lt;div class=&quot;list-view-pf-left&quot;&gt;
+        &lt;span class=&quot;fa fa-plane list-view-pf-icon-sm&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-view-pf-body&quot;&gt;
+        &lt;div class=&quot;list-view-pf-description&quot;&gt;
+          &lt;div class=&quot;list-group-item-heading&quot;&gt;
+            Event One
+          &lt;/div&gt;
+          &lt;div class=&quot;list-group-item-text&quot;&gt;
+            The following snippet of text is &lt;a href=&quot;#&quot;&gt;rendered as link text&lt;/a&gt;.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;list-view-pf-additional-info&quot;&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;img src=&quot;http://placehold.it/60x60&quot; alt=&quot;placeholder image&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item&quot;&gt;
+            &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+            &lt;strong&gt;8&lt;/strong&gt; Clusters
+          &lt;/div&gt;
+          &lt;div class=&quot;list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked&quot;&gt;
+            &lt;strong&gt;35%&lt;/strong&gt; Service Two
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  // Row Checkbox Selection
+  $(document).ready(function () {
+    $(&quot;input[type=&#39;checkbox&#39;]&quot;).change(function (e) {
+      if ($(this).is(&quot;:checked&quot;)) {
+        $(this).closest(&#39;.list-group-item&#39;).addClass(&quot;active&quot;);
+      } else {
+        $(this).closest(&#39;.list-group-item&#39;).removeClass(&quot;active&quot;);
+      }
+    });
+  });
+&lt;/script&gt;</pre>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane nested" id="angular">
+        <div ng-app="docsApp" ng-controller="DocsController" class="content">
+          <div ng-include="" src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.views.directive.pfListView.html'"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </section>
+  </article>
+</div>
+
+      </div>
+    </div>
+    <footer>
+  <div class="row">
+    <div class="col-md-9">
+      <p>
+        <a href="http://www.redhat.com" id="logo-redhat" target="_blank">Red Hat</a>
+        PatternFly is a <a href="http://www.redhat.com" target="_blank">Red Hat</a> sponsored project. <br> Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> Creative Commons Attribution 4.0 International license.</a>
+      </p>
+    </div>
+    <div class="col-md-3">
+      <ul class="social">
+<!--
+        <li>
+          <a href="https://blog.patternfly.org"><span class="fa fa-rss-square"></span></a>
+        </li>
+-->
+        <li>
+          <a href="https://github.com/patternfly/patternfly" target="_blank"><span class="fa fa-github-square"></span></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/patternfly_des" target="_blank"><span class="fa fa-twitter-square"></span></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/groups/PatternFlyCommunity/" target="_blank"><span class="fa fa-facebook-square"></span></a>
+        </li>
+        <li>
+          <a href="https://plus.google.com/communities/117224483835467139511" target="_blank"><span class="fa fa-google-plus-square"></span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47523816-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+  
+  
+  
+  
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's New | PatternFly</title>
+  <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
+  <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
+  <!-- iPad retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-152.png">
+  <!-- iPad retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-144.png">
+  <!-- iPad non-retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-76.png">
+  <!-- iPad non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-72.png">
+  <!-- iPhone 6 Plus icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-180.png">
+  <!-- iPhone retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-114.png">
+  <!-- iPhone non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-57.png">
+  <link rel="stylesheet" href="/assets/css/patternfly-adjusted.min.css">
+  <link rel="stylesheet" href="/components/patternfly/dist/css/patternfly-additions.min.css">
+  <link rel="stylesheet" href="/assets/css/patternfly-site.min.css">
+  
+  
+  <script src="/components/jquery/dist/jquery.min.js"></script>
+  <script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/components/bootstrap-combobox/js/bootstrap-combobox.js"></script>
+  <script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+  <script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  <script src="/components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+  <script src="/components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+  <script src="/components/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+  <script src="/components/c3/c3.min.js"></script>
+  <script src="/components/d3/d3.min.js"></script>
+  <script src="/components/datatables/media/js/jquery.dataTables.js"></script>
+  <script src="/components/google-code-prettify/bin/prettify.min.js"></script>
+  <script src="/components/clipboard/dist/clipboard.min.js"></script>
+  <script src="/components/patternfly/dist/js/patternfly.min.js"></script>
+  
+  
+  <script src="/assets/js/patternfly-site.min.js"></script>
+  <link rel="canonical" href="https://www.patternfly.org/whats-new/">
+</head>
+
+  <body >
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+<!--
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse-pf-site" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+-->
+            <a class="navbar-brand" id="logo" title="open interface project" href="/">PatternFly | open interface project</a>
+          </div>
+          <div class="navbar-collapse navbar-collapse-pf-site collapse">
+            <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
+              <div class="form-group">
+                <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                <input name="sitesearch" type="hidden" value="patternfly.org">
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div>
+            </form>
+            <ul id="menu-primary" class="nav navbar-nav navbar-right">
+              <li>
+                <a href="/get-started/">Get Started</a>
+              </li>
+              <li>
+                <a href="/pattern-library/">Pattern Library</a>
+              </li>
+              <li>
+                <a href="/styles/">Styles</a>
+              </li>
+              <li>
+                <a href="/community/">Community</a>
+              </li>
+              <li>
+                <a href="/download/">Download</a>
+              </li>
+              <li>
+                <a href="https://blog.patternfly.org">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-sidebar  navbar-primary">
+<!--
+      { % if primary == 'get-started' or primary == 'pattern-library' or primary == 'styles' % }
+      <nav class="navbar navbar-sidebar" aria-labelledby="navbar-toggle-sidebar">
+        <button class="btn btn-default navbar-toggle-sidebar" id="navbar-toggle-sidebar">
+          <span class="fa fa-angle-double-right"></span>
+          <span class="sr-only">Toggle sub navigation</span>
+        </button>
+-->
+        <ul>
+          <li class="primary-menu ">
+            <a href="/">Menu</a>
+            <ul>
+              <li>
+              <a href="/get-started/">Get Started<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/pattern-library/">Pattern Library<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/styles/">Styles<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/community/">Community</a>
+              </li>
+              <li>
+              <a href="/download/">Download</a>
+              </li>
+              <li>
+                <a href="https://blog.patternfly.org">Blog</a>
+              </li>
+              <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
+                <div class="form-group">
+                  <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                  <input name="sitesearch" type="hidden" value="patternfly.org">
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+              </form>
+            </ul>
+          </li>
+        </ul>
+      </nav><!--{ % endif % }-->
+    </header>
+
+    <div class="container-fluid">
+      <div class="clearfix row" id="content">
+        <div id="main" class="col-md-12 clearfix" role="main">
+  <article class="post">
+    <header class="page-tabs-header">
+      <h1>What's New</h1>
+    </header>
+    <section class="post_content">
+      <!-- This loops through the whats-new posts -->
+
+
+  <h2>August 11, 2016</h2>
+  <ul>
+  <li>Check out our new <a href="/get-started/contribute">Contribution Guide</a></li>
+</ul>
+
+
+  <h2>August 5, 2016</h2>
+  <ul>
+  <li><a href="/pattern-library/data-visualization/pie-chart">Pie Chart</a> Overview and Design tab updated with documentation.</li>
+</ul>
+<ul>
+  <li><a href="/pattern-library/content-views/list-view">List View</a> Updated with live full page example.</li>
+</ul>
+<ul>
+  <li><a href="/pattern-library/data-visualization/heat-map/#/_code">Heat Map</a> AngularJS updated to include example of hover on multiple blocks.</li>
+</ul>
+
+
+  <h2>August 5, 2016</h2>
+  <ul>
+  <li>Documentation regarding “No Data Available” added to the <a href="/pattern-library/dashboard/dashboard-card/#/_design">Dashboard Card</a> pattern.</li>
+</ul>
+<ul>
+  <li><a href="/pattern-library/communication/about-modal/#_design">About Modal pattern</a> updated with specifications regarding modal location on a screen.</li>
+</ul>
+<ul>
+  <li><a href="/community/monthly-community-meeting">Community page</a> updated with July’s meeting deck and recording.</li>
+</ul>
+
+
+  <h2>August 1, 2016</h2>
+  <ul>
+  <li><a href="/http://www.patternfly.org/get-started/setup">Setting up PatternFly</a> guide added to the site.</li>
+</ul>
+
+
+  <h2>June 30, 2016</h2>
+  <ul>
+  <li><a href="/pattern-library/communication/notification-drawer/">Notification drawer</a> live examples and reference implementation added.</li>
+</ul>
+
+
+  <h2>May 25, 2016</h2>
+  <ul>
+  <li>Release of <a href="https://github.com/patternfly/patternfly/releases/tag/v3.4.0" title="PatternFly reference implementation v3.4.0 on Github">reference implementation v3.4.0</a>.</li>
+</ul>
+
+
+  <h2>May 10, 2016</h2>
+  <ul>
+  <li><a href="/pattern-library/communication/about-modal/">About Modal</a> documentation added.</li>
+</ul>
+
+
+  <h2>April 29, 2016</h2>
+  <ul>
+  <li><a href="/pattern-library/data-visualization/area-chart/">Area Chart</a> documentation added.</li>
+</ul>
+
+
+  <h2>April 28, 2016</h2>
+  <ul>
+  <li><a href="/pattern-library/communication/notification-drawer/">Notification Drawer</a> documentation and image examples added.</li>
+</ul>
+
+
+  <h2>April 27, 2016</h2>
+  <ul>
+  <li>Release of <a href="https://github.com/patternfly/patternfly/releases/tag/v3.3.4" title="PatternFly reference implementation v3.3.4 on Github">reference implementation v3.3.4</a>.</li>
+  <li><a href="/pattern-library/forms-and-controls/forms/">Forms</a> documentation and image examples added.</li>
+  <li><a href="/pattern-library/communication/wizard/">Wizard</a> documentation and image examples added.</li>
+</ul>
+
+
+  <h2>March 17, 2016</h2>
+  <ul>
+  <li>Release of <a href="https://github.com/patternfly/patternfly/releases/tag/v3.3.0" title="PatternFly reference implementation v3.3.0 on Github">reference implementation v3.3.0</a>.</li>
+</ul>
+
+
+  <h2>March 4, 2016</h2>
+  <ul>
+  <li><a href="/pattern-library/data-visualization/area-chart">Area Chart</a> live example and reference implementation was added.</li>
+  <li><a href="/pattern-library/data-visualization/bar-chart">Bar Chart</a> live examples and reference implementations were added.</li>
+  <li><a href="/pattern-library/data-visualization/donut-chart">Donut Chart</a> Relationship of a Set of Values to a Whole live example and reference implementation was added.</li>
+  <li><a href="/pattern-library/data-visualization/line-chart">Line Chart</a> live examples and reference implementations were added.</li>
+  <li><a href="/pattern-library/data-visualization/pie-chart">Pie Chart</a> live example and reference implementation was added.</li>
+</ul>
+
+
+  <h2>March 2, 2016</h2>
+  <ul>
+  <li>Release of <a href="https://github.com/patternfly/patternfly/releases/tag/v3.2.0" title="PatternFly reference implementation v3.2.0 on Github">reference implementation v3.2.0</a>.</li>
+</ul>
+
+
+  <h2>March 1, 2016</h2>
+  <ul>
+  <li><a href="/pattern-library/widgets/#kebabs">Kebabs</a> were added to the Widgets page.</li>
+  <li><a href="/pattern-library/widgets/#treegrid-table">TreeGrid Table</a> was added to the Widgets page.</li>
+</ul>
+
+
+  <h2>February 29, 2016</h2>
+  <ul>
+  <li><a href="/pattern-library/data-visualization/heat-map/">Heat Map</a> documentation and image examples added.</li>
+  <li><a href="/pattern-library/data-visualization/line-chart/">Line Chart</a> documentation and image examples added.</li>
+  <li><a href="/pattern-library/content-views/list-view/">List View</a> pattern updated with <a href="/pattern-library/content-views/list-view/#expanding-rows">Expand Row</a> documentation and image examples.</li>
+</ul>
+
+
+  <h2>February 26, 2016</h2>
+  <ul>
+  <li><a href="/pattern-library/content-views/list-view">List View</a> live examples and reference implementation added.</li>
+  <li><a href="/pattern-library/navigation/vertical-navigation">Vertical Navigation with Persistent Secondary</a> live example and reference implementation added.</li>
+</ul>
+
+
+  <h2>February 15, 2016</h2>
+  <ul>
+  <li><a href="/pattern-library/data-visualization/bar-chart/">Bar Chart</a> documentation and image examples added.</li>
+  <li><a href="/pattern-library/data-visualization/donut-chart/#example-overview-2">Donut Chart: Set of Values to a Whole</a> documentation and image examples added to the <a href="https://www.patternfly.org/patterns/donut-chart/">Donut Chart</a> pattern page.</li>
+</ul>
+
+
+  <h2>February 2, 2016</h2>
+  <ul>
+  <li>Documentation was added regarding <a href="/styles/terminology-and-wording/#links">Additional Information Links</a> under Terminology and Wording.</li>
+  <li><a href="/pattern-library/widgets/#fixed-height-accordion">Fixed Height Accordion</a> was added to the Widgets page.</li>
+</ul>
+
+
+  <h2>January 24, 2016</h2>
+  <ul>
+  <li>Release of <a href="https://github.com/patternfly/patternfly/releases/tag/v3.1.0" title="PatternFly reference implementation v3.1.0 on Github">reference implementation v3.1.0</a>.</li>
+</ul>
+
+
+  <h2>January 21, 2016</h2>
+  <ul>
+  <li><a href="/pattern-library/communication/toast-notifications">Toast Notifications</a> live example and reference implementation added.</li>
+</ul>
+
+
+  <h2>January 19, 2016</h2>
+  <ul>
+  <li>Release of <a href="https://github.com/patternfly/patternfly/releases/tag/v3.0.0" title="PatternFly reference implementation v3.0.0 on Github">reference implementation v3.0.0</a>.</li>
+  <li>Release of <a href="https://github.com/patternfly/patternfly/releases/tag/v2.9.0" title="PatternFly reference implementation v2.9.0 on Github">reference implementation v2.9.0</a>.</li>
+</ul>
+
+
+  <h2>December 22, 2015</h2>
+  <ul>
+  <li><a href="/pattern-library/content-views/table-view">Table View</a> documentation and examples were added under Patterns &gt; Content Views.</li>
+  <li><a href="/pattern-library/widgets/#cnt-remaining-chars">Count Remaining Characters</a> documentation and examples were added under Widgets &gt; Javascript.</li>
+  <li>The function c3ChartDefaults was added to provide default settings for chart colors, spark line charts, and donut charts.</li>
+  <li>Release of <a href="https://github.com/patternfly/patternfly/releases/tag/v2.8.0" title="PatternFly reference implementation v2.8.0 on Github">reference implementation v2.8.0</a>.</li>
+</ul>
+
+
+  <h2>December 14, 2015</h2>
+  <ul>
+<li>Added a tertiary level under Patterns called Communication and moved <a href="/pattern-library/communication/inline-notifications">Inline Notifications</a>, <a href="/pattern-library/communication/toast-notifications">Toast Notifications</a> and <a href="/pattern-library/communication/empty-state">Empty State</a> underneath.</li>
+</ul>
+
+
+  <h2>December 8, 2015</h2>
+  <ul>
+  <li><a href="/pattern-library/navigation/vertical-navigation">Vertical Navigation and Persistent Secondary</a> documentation and image examples added.</li>
+  <li>Added a tertiary level under Patterns called Content Views and moved <a href="/pattern-library/content-views/table-view">Table View</a> underneath.</li>
+  <li><a href="/pattern-library/content-views/list-view">List View</a> documentation and examples were added under Patterns &gt; Content Views.</li>
+</ul>
+
+
+  <h2>December 7, 2015</h2>
+  <ul>
+  <li>Release of <a href="https://github.com/patternfly/patternfly/releases/tag/v2.7.0" title="PatternFly reference implementation v2.7.0 on Github">reference implementation v2.7.0</a>.</li>
+  <li><a href="/pattern-library/dashboard/dashboard-card">Dashboard Card (Base)</a> updated.</li>
+  <ul>
+    <li>Dashboard Cards renamed to Dashboard Card Base.</li>
+    <li>Live example and reference implementation added.</li>
+    <li>Images updated to show the base card only.</li>
+  </ul>
+</ul>
+
+
+  <h2>December 4, 2015</h2>
+  <ul>
+  <li><a href="/pattern-library/communication/toast-notifications">Toast Notification</a> documentation was added under Patterns.</li>
+  <li><a href="/pattern-library/forms-and-controls/find">Find</a> documentation was added under Patterns.</li>
+  <li>Added a tertiary level under Patterns called Notifications and moved <a href="/pattern-library/communication/inline-notifications">Inline Notifications</a> underneath along with <a href="/pattern-library/communication/toast-notifications">Toast Notifications</a>.</li>
+  <li>Added a tertiary level under Patterns called Forms and Controls and moved <a href="/pattern-library/forms-and-controls/date-picker">Datepicker</a> and <a href="/pattern-library/forms-and-controls/field-level-help">Field Level Help</a> underneath along with <a href="/pattern-library/forms-and-controls/find">Find</a>.</li>
+</ul>
+
+
+  <h2>November 11, 2015</h2>
+  <ul>
+  <li><a href="/pattern-library/communication/inline-notifications/">Inline Notifications</a> live example and reference implementation was added.</li>
+</ul>
+
+
+  <h2>November 10, 2015</h2>
+  <ul>
+  <li>Release of <a href="https://github.com/patternfly/patternfly/releases/tag/v2.6.0" title="PatternFly reference implementation v2.6.0 on Github">reference implementation v2.6.0</a>.</li>
+  <li><a href="/pattern-library/communication/inline-notifications/">Inline Notifications</a> example and documentation was added under Patterns.</li>
+</ul>
+
+
+  <h2>November 5, 2015</h2>
+  <ul>
+  <li>
+    <a href="/pattern-library/data-visualization/utilization-bar-chart/">Utilization Bar Chart</a> example, documentation and reference markup was added under Patterns.
+  </li>
+  <li>
+    <a href="/pattern-library/cards/utilization-bar-card">Utilization Bar Card</a> example, documentation and reference markup was added under Patterns.
+  </li>
+  <li>
+    The Utilization Card has been renamed to <a href="/pattern-library/cards/utilization-trend-card/">Utilization Trend Card</a> to help differentiate it from other patterns.
+  </li>
+</ul>
+
+
+
+    </section>
+  </article>
+</div>
+
+      </div>
+    </div>
+    <footer>
+  <div class="row">
+    <div class="col-md-9">
+      <p>
+        <a href="http://www.redhat.com" id="logo-redhat" target="_blank">Red Hat</a>
+        PatternFly is a <a href="http://www.redhat.com" target="_blank">Red Hat</a> sponsored project. <br> Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> Creative Commons Attribution 4.0 International license.</a>
+      </p>
+    </div>
+    <div class="col-md-3">
+      <ul class="social">
+<!--
+        <li>
+          <a href="https://blog.patternfly.org"><span class="fa fa-rss-square"></span></a>
+        </li>
+-->
+        <li>
+          <a href="https://github.com/patternfly/patternfly" target="_blank"><span class="fa fa-github-square"></span></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/patternfly_des" target="_blank"><span class="fa fa-twitter-square"></span></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/groups/PatternFlyCommunity/" target="_blank"><span class="fa fa-facebook-square"></span></a>
+        </li>
+        <li>
+          <a href="https://plus.google.com/communities/117224483835467139511" target="_blank"><span class="fa fa-google-plus-square"></span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47523816-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

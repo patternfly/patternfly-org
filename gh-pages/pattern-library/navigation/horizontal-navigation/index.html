@@ -1,0 +1,2797 @@
+<!DOCTYPE html>
+<html>
+  
+  
+  
+  
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal Navigation | PatternFly</title>
+  <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
+  <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
+  <!-- iPad retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-152.png">
+  <!-- iPad retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-144.png">
+  <!-- iPad non-retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-76.png">
+  <!-- iPad non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-72.png">
+  <!-- iPhone 6 Plus icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-180.png">
+  <!-- iPhone retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-114.png">
+  <!-- iPhone non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-57.png">
+  <link rel="stylesheet" href="/assets/css/patternfly-adjusted.min.css">
+  <link rel="stylesheet" href="/components/patternfly/dist/css/patternfly-additions.min.css">
+  <link rel="stylesheet" href="/assets/css/patternfly-site.min.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/animations.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/angular-patternfly.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/ng-docs.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/examples.css">
+  
+  <script src="/components/jquery/dist/jquery.min.js"></script>
+  <script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/components/bootstrap-combobox/js/bootstrap-combobox.js"></script>
+  <script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+  <script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  <script src="/components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+  <script src="/components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+  <script src="/components/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+  <script src="/components/c3/c3.min.js"></script>
+  <script src="/components/d3/d3.min.js"></script>
+  <script src="/components/datatables/media/js/jquery.dataTables.js"></script>
+  <script src="/components/google-code-prettify/bin/prettify.min.js"></script>
+  <script src="/components/clipboard/dist/clipboard.min.js"></script>
+  <script src="/components/patternfly/dist/js/patternfly.min.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/marked.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-sanitize.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-animate.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/ui-bootstrap-tpls.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-bootstrap-prettify.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/lodash.min.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-patternfly.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/patternfly.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/angular-bootstrap.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/docs-setup.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/docs.js"></script>
+  <script src="/ngdocs/formatForPFsite.js"></script>
+  
+  <script src="/assets/js/patternfly-site.min.js"></script>
+  <link rel="canonical" href="https://www.patternfly.org/pattern-library/navigation/horizontal-navigation/">
+</head>
+
+  <body class="has-sidebar">
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+<!--
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse-pf-site" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+-->
+            <a class="navbar-brand" id="logo" title="open interface project" href="/">PatternFly | open interface project</a>
+          </div>
+          <div class="navbar-collapse navbar-collapse-pf-site collapse">
+            <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
+              <div class="form-group">
+                <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                <input name="sitesearch" type="hidden" value="patternfly.org">
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div>
+            </form>
+            <ul id="menu-primary" class="nav navbar-nav navbar-right">
+              <li>
+                <a href="/get-started/">Get Started</a>
+              </li>
+              <li class="active">
+                <a href="/pattern-library/">Pattern Library</a>
+              </li>
+              <li>
+                <a href="/styles/">Styles</a>
+              </li>
+              <li>
+                <a href="/community/">Community</a>
+              </li>
+              <li>
+                <a href="/download/">Download</a>
+              </li>
+              <li>
+                <a href="https://blog.patternfly.org">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-sidebar ">
+<!--
+      { % if primary == 'get-started' or primary == 'pattern-library' or primary == 'styles' % }
+      <nav class="navbar navbar-sidebar" aria-labelledby="navbar-toggle-sidebar">
+        <button class="btn btn-default navbar-toggle-sidebar" id="navbar-toggle-sidebar">
+          <span class="fa fa-angle-double-right"></span>
+          <span class="sr-only">Toggle sub navigation</span>
+        </button>
+-->
+        <ul>
+          <li class="primary-menu hidden">
+            <a href="/">Menu</a>
+            <ul>
+              <li>
+              <a href="/get-started/">Get Started<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li class="active">
+              <a href="/pattern-library/">Pattern Library<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/styles/">Styles<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/community/">Community</a>
+              </li>
+              <li>
+              <a href="/download/">Download</a>
+              </li>
+              <li>
+                <a href="https://blog.patternfly.org">Blog</a>
+              </li>
+              <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
+                <div class="form-group">
+                  <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                  <input name="sitesearch" type="hidden" value="patternfly.org">
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+              </form>
+            </ul>
+          </li>
+          <li class="secondary-menu">
+            <a class="secondary-menu-toggle"><span class="secondary-menu-toggle-icon"></span>Pattern Library</a>
+            <ul>
+              <li >
+                <a href="/pattern-library/">Overview</a>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#application-framework-secondary" aria-expanded="false" aria-controls="application-framework-secondary">Application Framework</a>
+                <ul class="collapse " id="application-framework-secondary">
+                  <li >
+                    <a href="/pattern-library/application-framework/login-page/">Login Page</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#cards-secondary" aria-expanded="false" aria-controls="cards-secondary">Cards</a>
+                <ul class="collapse " id="cards-secondary">
+                  <li >
+                    <a href="/pattern-library/cards/aggregate-status-card/">Aggregate Status Card</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/cards/trend-card/">Trend Card</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/cards/utilization-bar-card/">Utilization Bar Card</a>
+                  </li>
+                   <li >
+                    <a href="/pattern-library/cards/utilization-trend-card/">Utilization Trend Card</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#communication-secondary" aria-expanded="false" aria-controls="communication-secondary">Communication</a>
+                <ul class="collapse " id="communication-secondary">
+                  <li >
+                    <a href="/pattern-library/communication/about-modal/">About Modal</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/empty-state/">Empty State</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/inline-notifications/">Inline Notifications</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/notification-drawer/">Notification Drawer</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/toast-notifications/">Toast Notifications</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/wizard/">Wizard</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#content-views-secondary" aria-expanded="false" aria-controls="content-views-secondary">Content Views</a>
+                <ul class="collapse " id="content-views-secondary">
+                  <li >
+                    <a href="/pattern-library/content-views/card-view/">Card View</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/content-views/list-view/">List View</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/content-views/table-view/">Table View</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#dashboard-secondary" aria-expanded="false" aria-controls="dashboard-secondary">Dashboard</a>
+                <ul class="collapse " id="dashboard-secondary">
+                  <li >
+                    <a href="/pattern-library/dashboard/dashboard-card/">Dashboard Card (Base)</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/dashboard/dashboard-layout/">Dashboard Layout</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#data-visualization-secondary" aria-expanded="false" aria-controls="data-visualization-secondary">Data Visualization</a>
+                <ul class="collapse " id="data-visualization-secondary">
+                  <li >
+                    <a href="/pattern-library/data-visualization/area-chart/">Area Chart</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/bar-chart/">Bar Chart</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/data-visualization/donut-chart/">Donut Chart</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/heat-map/">Heat Map</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/line-chart/">Line Chart</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/pie-chart/">Pie Chart</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/data-visualization/sparkline/">Sparkline</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/data-visualization/utilization-bar-chart/">Utilization Bar Chart</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="false" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
+                <ul class="collapse " id="forms-and-controls-secondary">
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/date-picker/">Date Picker</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/field-level-help/">Field Level Help</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/find/">Find</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/forms-and-controls/forms/">Forms</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/time-picker/">Time Picker</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/toolbar/">Toolbar</a>
+                  </li>
+                </ul>
+              </li>
+              <li  class="active">
+                <a class="" role="button" data-toggle="collapse" href="#navigation-secondary" aria-expanded="true" aria-controls="navigation-secondary">Navigation</a>
+                <ul class="collapse in" id="navigation-secondary">
+                  <li  class="active">
+                    <a href="/pattern-library/navigation/horizontal-navigation/">Horizontal Navigation</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/navigation/vertical-navigation/">Vertical Navigation</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+              <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
+              <ul class="collapse " id="widgets-secondary">
+                <li >
+                <a href="/pattern-library/widgets/">Overview</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#accordion">Accordion</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#alerts">Alerts</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#badges">Badges</a>
+                </li>
+<!--
+                <li >
+                <a href="/pattern-library/widgets/#basic-charts">Basic Charts</a>
+                </li>
+-->
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-combobox">Bootstrap Combobox</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-datepicker">Bootstrap Datepicker</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-select">Bootstrap Select</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-switch">Bootstrap Switch</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-touchspin">Bootstrap Touchspin</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-tree-view">Bootstrap Tree View</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#breadcrumbs">Breadcrumbs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#buttons">Buttons</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#button-groups">Button Groups</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#cnt-remaining-chars">Count Remaining Characters</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#data-tables">Data Tables</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#dropdowns">Dropdowns</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#fixed-height-accordion">Fixed Height Accordion</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#forms">Forms</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#google-code-prettify">Google Code Prettify</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#info-tip">Info Tip</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#kebabs">Kebabs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#labels">Labels</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#list-group">List Group</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#modal">Modal</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#pagination">Pagination</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#panels">Panels</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#popover">Popover</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#progress-bars">Progress Bars</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#search">Search</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#spinner">Spinner</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tables">Tables</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tabs">Tabs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tooltip">Tooltip</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#treegrid-table">TreeGrid Table</a>
+                </li>
+              </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!--{ % endif % }-->
+    </header>
+
+    <div class="container-fluid">
+      <div class="clearfix row" id="content">
+        <div id="main" class="col-md-12 clearfix" role="main">
+  <article class="post">
+    <header class="page-tabs-header">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 cols-nopad-right">
+          <h1>Horizontal Navigation</h1>
+        </div>
+        <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
+          
+            <ul class="nav nav-tabs nav-justified nav-tabs-pattern" id="tabs-pattern" role="tablist">
+  <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Overview</a></li>
+
+    <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
+
+
+    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+
+<!--
+  <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
+-->
+</ul>
+<script>
+    // Workaround for bug with hidden C3 charts in v0.4.11.
+    $(document).on('shown.bs.tab', 'a[data-toggle="tab"]', function () {
+        if (window.dispatchEvent) {
+            window.dispatchEvent(new Event('resize'));
+        }
+        // Special case for IE
+        if ($(document).fireEvent) {
+            $(document).fireEvent('onresize');
+        }
+    });
+</script>
+
+          
+        </div>
+      </div>
+    </header>
+    <section class="post_content">
+      <div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="overview">
+    <p>It is recommended to use horizontal navigation when you want to provide access to global navigation of an application at the top of every page. This horizontal navigation pattern will support up to three levels of navigation.</p>
+    <p>The top level (primary) navigation should always be exposed.  Secondary and tertiary levels can either be persistent or hidden within drop-down menus.  The latter provides less visibility to lower-level categories but saves vertical screen space.</p>
+    <p>As a rule of thumb, the horizontal navigation is the preferred choice over <a href="/pattern-library/navigation/vertical-navigation/">vertical navigation</a> when:</p>
+    <ul>
+      <li>There are a small number of fixed categories.</li>
+      <li>You want to provide the best visibility to primary categories by placing them immediately below the page header area.</li>
+    </ul>
+    <p>Consider using <a href="/pattern-library/navigation/vertical-navigation/">vertical navigation</a> if you need a solution that can easily scale for a large amount of menu items and easily adapt to small screen sizes. Horizontal menus can also be made responsive but it usually requires a transformation from horizontal to vertical. Since vertical menus are already in this format, the transition from desktop to mobile is less disorienting.</p>
+    <p>Jump to <a href="#example-overview-1">Masthead Design</a>, <a href="#example-overview-2">Standard Horizontal Navigation</a>, or <a href="#example-overview-3">Navbar Variations</a></p>
+    <h2 id="example-overview-1">Masthead Design</h2>
+    <p>For horizontal navigation, we recommend the masthead design be small in height to reduce vertical real estate, accommodating for the navigation.  The logo area is in the left corner and contains the application product name image file, in the form of a sized SVG graphic.  However, if additional rebranding capabilities are desired, there is an option for a taller masthead which will include a product logo.</p>
+    <h3>Option 1</h3>
+    <p>
+      <img src="/assets/img/Masthead_Horizontal.png" alt="Masthead Horizontal - Option 1" width="1400" />
+    </p>
+    <h3>Option 2</h3>
+    <p>
+      <img src="/assets/img/Masthead_HorizontalVariation.png" alt="Masthead Horizontal - Option 2" width="1400" />
+    </p>
+    <h2 id="example-overview-2">Standard Horizontal Navigation</h2>
+    <div class="example-pf">
+      <iframe src="/pattern-library/navigation/horizontal-navigation/horizontal-navigation.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
+    </div>
+    <p><a href="/pattern-library/navigation/horizontal-navigation/horizontal-navigation.html" target="_blank">View full page example</a></p>
+    <h2 id="example-overview-3">Navbar Variations</h2>
+    <h3>Single-Level Menu Bar</h3>
+    <div class="example-pf example-navbar">
+      <nav class="navbar navbar-default navbar-pf" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/assets/img/brand.svg" alt="PatternFly Enterprise Application" />
+    </a>
+  </div>
+  <div class="collapse navbar-collapse navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-utility">
+      <li>
+        <a href="#">Status</a>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <span class="pficon pficon-user"></span>
+          Brian Johnson <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#">Another link</a>
+          </li>
+          <li>
+            <a href="#">Something else here</a>
+          </li>
+          <li class="divider"></li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">More options</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li>
+                <a href="#">Separated link</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">One more separated link</a>
+              </li>
+            </ul>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">One more separated link</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-primary">
+      <li>
+        <a href="#">First Link</a>
+      </li>
+      <li class="active">
+        <a href="#">Another Link</a>
+      </li>
+      <li>
+        <a href="#">And Another</a>
+      </li>
+      <li>
+        <a href="#">As a General Rule</a>
+      </li>
+      <li>
+        <a href="#">Five to Seven Links</a>
+      </li>
+      <li>
+        <a href="#">Is Good</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    </div>
+    <h3>Two-Level Menu Bar</h3>
+    <div class="example-pf example-navbar">
+      <nav class="navbar navbar-default navbar-pf" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-11">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/assets/img/brand.svg" alt="PatternFly Enterprise Application" />
+    </a>
+  </div>
+  <div class="collapse navbar-collapse navbar-collapse-11">
+    <ul class="nav navbar-nav navbar-utility">
+      <li>
+        <a href="#">Status</a>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <span class="pficon pficon-user"></span>
+          Brian Johnson
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#">Another link</a>
+          </li>
+          <li>
+            <a href="#">Something else here</a>
+          </li>
+          <li class="divider"></li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">More options</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li>
+                <a href="#">Separated link</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">One more separated link</a>
+              </li>
+            </ul>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">One more separated link</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-primary persistent-secondary">
+      <li>
+        <a href="#">First Link</a>
+      </li>
+      <li class="active">
+        <a href="#">Another Link</a>
+        <ul class="nav navbar-nav navbar-persistent">
+          <li class="dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Link</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li>
+                <a href="#">Remembering to keep</a>
+              </li>
+              <li>
+                <a href="#">It between five and seven</a>
+              </li>
+            </ul>
+          </li>
+          <li class="active">
+            <a href="#">Another Link</a>
+          </li>
+          <li class="dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Something Else Here</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li>
+                <a href="#">Remembering to keep</a>
+              </li>
+              <li>
+                <a href="#">It between five and seven</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Remembering to Keep</a>
+          </li>
+          <li>
+            <a href="#">It Between Five and Seven</a>
+          </li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">More options</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li>
+                <a href="#">Remembering to keep</a>
+              </li>
+              <li>
+                <a href="#">It between five and seven</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">And Another</a>
+      </li>
+      <li>
+        <a href="#">As a General Rule</a>
+      </li>
+      <li>
+        <a href="#">Five to Seven Links</a>
+      </li>
+      <li>
+        <a href="#">Is Good</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    </div>
+    <h3>Menu Bar with Drop-Downs</h3>
+    <!-- Giving menus a little room so they don't drop off the page. -->
+    <div class="example-pf example-navbar" style="margin-bottom: 150px;">
+      <nav class="navbar navbar-default navbar-pf" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-5">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/assets/img/brand.svg" alt="PatternFly Enterprise Application" />
+    </a>
+  </div>
+  <div class="collapse navbar-collapse navbar-collapse-5">
+    <ul class="nav navbar-nav navbar-utility">
+      <li>
+        <a href="#">Status</a>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <span class="pficon pficon-user"></span>
+          Brian Johnson
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#">Another link</a>
+          </li>
+          <li>
+            <a href="#">Something else here</a>
+          </li>
+          <li class="divider"></li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">More options</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li>
+                <a href="#">Separated link</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">One more separated link</a>
+              </li>
+            </ul>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">One more separated link</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-primary">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Dropdown
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#">Another link</a>
+          </li>
+          <li>
+            <a href="#">Something else here</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">Separated link</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">One more separated link</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown active">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Dropdown with Submenu
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#">Another link</a>
+          </li>
+          <li>
+            <a href="#">Something else here</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">Separated link</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">One more separated link</a>
+          </li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">More options</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">Separated link</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">One more separated link</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Dropdown with Dropup Submenu
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu dropup">
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#">Another link</a>
+          </li>
+          <li>
+            <a href="#">Something else here</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">Separated link</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">One more separated link</a>
+          </li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">More options</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">Separated link</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">One more separated link</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Dropdown with Pull-left Submenu
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#">Another link</a>
+          </li>
+          <li>
+            <a href="#">Something else here</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">Separated link</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">One more separated link</a>
+          </li>
+          <li class="dropdown-submenu pull-left">
+            <a tabindex="-1" href="#">More options</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">Separated link</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">One more separated link</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">No Dropdown</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    </div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="design">
+  <h2>Default Horizontal Masthead Design</h2>
+    <p>
+      <img src="/assets/img/Masthead_Horizontal_annotations.png" alt="Masthead_Horizontal_Annotations" width="1400" />
+    </p>
+    <p>The Default Horizontal Masthead Design is the recommended masthead for apps utilizing horizontal navigation.</p>
+    <ol>
+      <li><strong>Logo Area</strong>: The logo area contains the application product name image file, in the form of a sized SVG graphic</li>
+    </ol>
+<h2>Horizontal Masthead Design Variation</h2>
+    <p>
+      <img src="/assets/img/Masthead_HorizontalVariation_Annotations.png" alt="Masthead_HorizontalVariation_Annotations" width="1400" />
+    </p>
+    <p>If your app requires additional branding within the Masthead, use the Horizontal Masthead variation. This allows the use of an icon within the Masthead.</p>
+    <ol>
+      <li><strong>Additional Branding</strong>: If using an icon, it must be the product icon</li>
+      <li><strong>Logo Area</strong>: The logo area contains the application product name image file, in the form of a sized SVG graphic</li>
+    </ol>
+
+    <h2>Single-Level Menu Bar</h2>
+    <p>
+      <img src="/assets/img/horizontal-nav-single.png" alt="Horizontal Navbar with Single-Level" width="880" />
+    </p>
+    <p>The Single-Level Menu Bar is the default navbar, all other options are added to this basic pattern.</p>
+    <ol>
+      <li><strong>Menu Item - Selected</strong>: The current selection will be highlighted to indicate the current page.  There will be a current selection at all times.  When an application is opened, the first (left-most) item will be selected by default.</li>
+      <li><strong>Menu Item - On-Hover</strong>: Hover state provides feedback that menu items are active.</li>
+    </ol>
+    <h2>Two-Level Menu Bar</h2>
+    <p>
+      <img src="/assets/img/horizontal-nav-two.png" alt="Horizontal Navbar with Two-Level" width="880" />
+    </p>
+    <p>When a second level of persistent navigation is needed, add a second tier of links.</p>
+    <ol>
+      <li><strong>Secondary Menu Item Selected</strong>: Show the selected state of both the primary and secondary menu items to tell the user where they are in the hierarchy.  By default the first (left-most) item in both menus is selected.</li>
+      <li><strong>Secondary Menu Item On-Hover</strong>: Hover state provides feedback that menu items are active.</li>
+      <li><strong>Primary Menu Item On Hover</strong>: When the user hovers over a new primary menu item, the contents of the secondary menu will update to display secondary menu options associated with this item.</li>
+    </ol>
+    <h2>Menu Bar with Drop-Downs</h2>
+    <p>
+      <img src="/assets/img/horizontal-nav-dropdown.png" alt="Horizontal Navbar with Drop-Down" width="880" />
+    </p>
+    <p>Add a drop-down menu to a single menu bar to expose a vertical list of sub-categories that the user can select from.  Note that when drop-down menus are used, all categories are not required to have secondary navigation.</p>
+    <ol>
+      <li><strong>Primary Menu Item</strong>: Any primary item that supports a secondary level of navigation will add a down-caret icon  to indicate that a drop-down menu exists.  The primary item will display its selected state when any secondary page within that branch is selected.  This will provide the user feedback about which primary section they are working in.  When an application is initially opened, the first secondary page within the first section will be opened, by default.</li>
+      <li><strong>Drop-Down Menu</strong>: Single-clicking a primary item opens the drop down. Clicking anywhere outside of the menu will dismiss it.</li>
+      <li><strong>Secondary Menu Item</strong>: Secondary items have hover and selected states.  Clicking an item navigates to a new page and dismisses the menu. If a third level of navigation is to be exposed, a right-facing caret icon will be displayed on the right of the menu item.  Hovering over this item will expose a fly-out menu to the right.</li>
+      <li><strong>Fly-Out Menu</strong>: Drop-down menus may also expose an additional level of menus, sometimes called a flyout menu to expose an additional level of the information hierarchy. Flyout menu should appear to the right.</li>
+    </ol>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="code">
+    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+
+  <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
+  <li role="presentation" class="disabled"><a class="nested" aria-controls="angular" role="tab" disabled="disabled" title="AngularJS example is not available at this time">AngularJS</a></li>
+
+</ul>
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane nested active" id="html-css">
+        <p>Jump to <a href="#example-code-1">Standard Horizontal Navigation</a>, <a href="#example-code-2">Single-Level Menu Bar</a>, <a href="#example-code-3">Two-Level Menu Bar</a>, or <a href="#example-code-4">Menu Bar with Drop-Downs</a></p>
+        <h2 id="example-code-1">Standard Horizontal Navigation</h2>
+        <div class="example-pf">
+          <iframe src="/pattern-library/navigation/horizontal-navigation/horizontal-navigation.html" width="100%" height="650px;" scrolling="no" seamless=""></iframe>
+        </div>
+        <p><a href="/pattern-library/navigation/horizontal-navigation/horizontal-navigation.html" target="_blank">View full page example</a></p>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+        <div class="collapse in" id="markup-1">
+          <pre class="prettyprint">
+&lt;script src=&quot;components/c3/c3.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;components/d3/d3.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;components/matchHeight/jquery.matchHeight-min.js&quot;&gt;&lt;/script&gt;
+&lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+  &lt;div class=&quot;navbar-header&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-1&quot;&gt;
+      &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;
+      &lt;img src=&quot;/assets/img/brand.svg&quot; alt=&quot;PatternFly Enterprise Application&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;collapse navbar-collapse navbar-collapse-1&quot;&gt;
+    &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Status&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+          &lt;span class=&quot;pficon pficon-user&quot;&gt;&lt;/span&gt;
+          Brian Johnson &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li class=&quot;dropdown-submenu&quot;&gt;
+            &lt;a tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;More options&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li class=&quot;dropdown-header&quot;&gt;Nav header&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class=&quot;nav navbar-nav navbar-primary&quot;&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;First Link&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;active&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;Another Link&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;And Another&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;As a General Rule&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Five to Seven Links&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Is Good&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+&lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
+      &lt;div class=&quot;row row-cards-pf&quot;&gt;
+      &lt;!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  --&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-6 col-md-3&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-accented card-pf-aggregate-status&quot;&gt;
+  &lt;h2 class=&quot;card-pf-title&quot;&gt;
+    &lt;span class=&quot;fa fa-shield&quot;&gt;&lt;/span&gt;&lt;span class=&quot;card-pf-aggregate-status-count&quot;&gt;0&lt;/span&gt; Ipsum
+  &lt;/h2&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;p class=&quot;card-pf-aggregate-status-notifications&quot;&gt;
+      &lt;span class=&quot;card-pf-aggregate-status-notification&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;add&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Add Ipsum&quot;&gt;&lt;span class=&quot;pficon pficon-add-circle-o&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-6 col-md-3&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-accented card-pf-aggregate-status&quot;&gt;
+  &lt;h2 class=&quot;card-pf-title&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-shield&quot;&gt;&lt;/span&gt;&lt;span class=&quot;card-pf-aggregate-status-count&quot;&gt;20&lt;/span&gt; Amet&lt;/a&gt;
+  &lt;/h2&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;p class=&quot;card-pf-aggregate-status-notifications&quot;&gt;
+      &lt;span class=&quot;card-pf-aggregate-status-notification&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-error-circle-o&quot;&gt;&lt;/span&gt;4&lt;/a&gt;&lt;/span&gt;
+      &lt;span class=&quot;card-pf-aggregate-status-notification&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-warning-triangle-o&quot;&gt;&lt;/span&gt;1&lt;/a&gt;&lt;/span&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-6 col-md-3&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-accented card-pf-aggregate-status&quot;&gt;
+  &lt;h2 class=&quot;card-pf-title&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-shield&quot;&gt;&lt;/span&gt;&lt;span class=&quot;card-pf-aggregate-status-count&quot;&gt;9&lt;/span&gt; Adipiscing&lt;/a&gt;
+  &lt;/h2&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;p class=&quot;card-pf-aggregate-status-notifications&quot;&gt;
+      &lt;span class=&quot;card-pf-aggregate-status-notification&quot;&gt;&lt;span class=&quot;pficon pficon-ok&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-6 col-md-3&quot;&gt;
+          &lt;div class=&quot;card-pf card-pf-accented card-pf-aggregate-status&quot;&gt;
+            &lt;h2 class=&quot;card-pf-title&quot;&gt;
+              &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;fa fa-shield&quot;&gt;&lt;/span&gt;&lt;span class=&quot;card-pf-aggregate-status-count&quot;&gt;12&lt;/span&gt; Lorem&lt;/a&gt;
+            &lt;/h2&gt;
+            &lt;div class=&quot;card-pf-body&quot;&gt;
+              &lt;p class=&quot;card-pf-aggregate-status-notifications&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;card-pf-aggregate-status-notification&quot;&gt;&lt;span class=&quot;pficon pficon-error-circle-o&quot;&gt;&lt;/span&gt;1&lt;/span&gt;&lt;/a&gt;
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;&lt;!-- /row --&gt;
+      &lt;div class=&quot;row row-cards-pf&quot;&gt;
+      &lt;!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  --&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-6 col-md-3&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini&quot;&gt;
+  &lt;h2 class=&quot;card-pf-title&quot;&gt;
+    &lt;span class=&quot;fa fa-rebel&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;card-pf-aggregate-status-count&quot;&gt;0&lt;/span&gt; Ipsum
+  &lt;/h2&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;p class=&quot;card-pf-aggregate-status-notifications&quot;&gt;
+      &lt;span class=&quot;card-pf-aggregate-status-notification&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;add&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Add Ipsum&quot;&gt;&lt;span class=&quot;pficon pficon-add-circle-o&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-6 col-md-3&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini&quot;&gt;
+  &lt;h2 class=&quot;card-pf-title&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;
+      &lt;span class=&quot;fa fa-paper-plane&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;card-pf-aggregate-status-count&quot;&gt;20&lt;/span&gt; Amet
+    &lt;/a&gt;
+  &lt;/h2&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;p class=&quot;card-pf-aggregate-status-notifications&quot;&gt;
+      &lt;span class=&quot;card-pf-aggregate-status-notification&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;pficon pficon-error-circle-o&quot;&gt;&lt;/span&gt;4&lt;/a&gt;&lt;/span&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-6 col-md-3&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini&quot;&gt;
+  &lt;h2 class=&quot;card-pf-title&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;
+      &lt;span class=&quot;pficon pficon-cluster&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;card-pf-aggregate-status-count&quot;&gt;9&lt;/span&gt; Adipiscing
+    &lt;/a&gt;
+  &lt;/h2&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;p class=&quot;card-pf-aggregate-status-notifications&quot;&gt;
+      &lt;span class=&quot;card-pf-aggregate-status-notification&quot;&gt;&lt;span class=&quot;pficon pficon-ok&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-6 col-md-3&quot;&gt;
+          &lt;div class=&quot;card-pf card-pf-accented card-pf-aggregate-status card-pf-aggregate-status-mini&quot;&gt;
+            &lt;h2 class=&quot;card-pf-title&quot;&gt;
+              &lt;a href=&quot;#&quot;&gt;
+                &lt;span class=&quot;pficon pficon-image&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;card-pf-aggregate-status-count&quot;&gt;12&lt;/span&gt; Lorem
+              &lt;/a&gt;
+            &lt;/h2&gt;
+            &lt;div class=&quot;card-pf-body&quot;&gt;
+              &lt;p class=&quot;card-pf-aggregate-status-notifications&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;card-pf-aggregate-status-notification&quot;&gt;&lt;span class=&quot;pficon pficon-error-circle-o&quot;&gt;&lt;/span&gt;1&lt;/span&gt;&lt;/a&gt;
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;row row-cards-pf&quot;&gt;
+      &lt;!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  --&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-6&quot;&gt;
+&lt;div class=&quot;card-pf&quot;&gt;
+  &lt;div class=&quot;card-pf-heading&quot;&gt;
+    &lt;h2 class=&quot;card-pf-title&quot;&gt;
+      Top Utilized Clusters
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;progress-description&quot;&gt;
+      RHOS6-Controller
+    &lt;/div&gt;
+    &lt;div class=&quot;progress progress-label-top-right&quot;&gt;
+      &lt;div class=&quot;progress-bar progress-bar-danger&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;95&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 95%;&quot;  data-toggle=&quot;tooltip&quot; title=&quot;95% Used&quot;&gt;
+        &lt;span&gt;&lt;strong&gt;190.0 of 200.0 GB&lt;/strong&gt; Used&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;progress-bar progress-bar-remaining&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;5&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 5%;&quot; data-toggle=&quot;tooltip&quot; title=&quot;5% Available&quot;&gt;
+        &lt;span class=&quot;sr-only&quot;&gt;5% Available&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;progress-description&quot;&gt;
+      CFMEQE-Cluster
+    &lt;/div&gt;
+    &lt;div class=&quot;progress progress-label-top-right&quot;&gt;
+      &lt;div class=&quot;progress-bar progress-bar-success&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 50%;&quot;  data-toggle=&quot;tooltip&quot; title=&quot;50% Used&quot;&gt;
+        &lt;span&gt;&lt;strong&gt;100.0 of 200.0 GB&lt;/strong&gt; Used&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;progress-bar progress-bar-remaining&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 50%;&quot; data-toggle=&quot;tooltip&quot; title=&quot;50% Available&quot;&gt;
+        &lt;span class=&quot;sr-only&quot;&gt;50% Available&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;progress-description&quot;&gt;
+      RHOS-Undercloud
+    &lt;/div&gt;
+    &lt;div class=&quot;progress progress-label-top-right&quot;&gt;
+      &lt;div class=&quot;progress-bar progress-bar-warning&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;70&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 70%;&quot;  data-toggle=&quot;tooltip&quot; title=&quot;70% Used&quot;&gt;
+        &lt;span&gt;&lt;strong&gt;140.0 of 200.0 GB&lt;/strong&gt; Used&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;progress-bar progress-bar-remaining&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;30&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 30%;&quot; data-toggle=&quot;tooltip&quot; title=&quot;30% Available&quot;&gt;
+        &lt;span class=&quot;sr-only&quot;&gt;30% Available&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;progress-description&quot;&gt;
+      RHEL6-Controller
+    &lt;/div&gt;
+    &lt;div class=&quot;progress progress-label-top-right&quot;&gt;
+      &lt;div class=&quot;progress-bar progress-bar-warning&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;76.5&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 76.5%;&quot;  data-toggle=&quot;tooltip&quot; title=&quot;76.5% Used&quot;&gt;
+        &lt;span&gt;&lt;strong&gt;153.0 of 200.0 GB&lt;/strong&gt; Used&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;progress-bar progress-bar-remaining&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;23.5&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 23.5%;&quot; data-toggle=&quot;tooltip&quot; title=&quot;23.5% Available&quot;&gt;
+        &lt;span class=&quot;sr-only&quot;&gt;23.5% Available&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-6&quot;&gt;
+&lt;div class=&quot;card-pf&quot;&gt;
+  &lt;div class=&quot;card-pf-heading&quot;&gt;
+    &lt;h2 class=&quot;card-pf-title&quot;&gt;
+      Quotas
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;progress-container progress-description-left progress-label-right&quot;&gt;
+      &lt;div class=&quot;progress-description&quot;&gt;
+        CPU
+      &lt;/div&gt;
+      &lt;div class=&quot;progress&quot;&gt;
+        &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 25%;&quot; data-toggle=&quot;tooltip&quot; title=&quot;25% Used&quot;&gt;
+          &lt;span&gt;&lt;strong&gt;115 of 460&lt;/strong&gt; MHz&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;progress-bar progress-bar-remaining&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;75&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 75%;&quot; data-toggle=&quot;tooltip&quot; title=&quot;75% Available&quot;&gt;
+          &lt;span class=&quot;sr-only&quot;&gt;75% Available&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;progress-container progress-description-left progress-label-right&quot;&gt;
+      &lt;div class=&quot;progress-description&quot;&gt;
+        Memory
+      &lt;/div&gt;
+      &lt;div class=&quot;progress&quot;&gt;
+        &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 50%;&quot; data-toggle=&quot;tooltip&quot; title=&quot;8 GB Used&quot;&gt;
+          &lt;span&gt;&lt;strong&gt;8 of 16&lt;/strong&gt; GB&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;progress-bar progress-bar-remaining&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 50%;&quot; data-toggle=&quot;tooltip&quot; title=&quot;8 GB Available&quot;&gt;
+          &lt;span class=&quot;sr-only&quot;&gt;50% Available&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;progress-container progress-description-left progress-label-right&quot;&gt;
+      &lt;div class=&quot;progress-description&quot;&gt;
+        Pods
+      &lt;/div&gt;
+      &lt;div class=&quot;progress&quot;&gt;
+        &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;62.5&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 62.5%;&quot; data-toggle=&quot;tooltip&quot; title=&quot;62.5% Used&quot;&gt;
+          &lt;span&gt;&lt;strong&gt;5 of 8&lt;/strong&gt; Total&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;progress-bar progress-bar-remaining&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;37.5&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 37.5%;&quot; data-toggle=&quot;tooltip&quot; title=&quot;37.5% Available&quot;&gt;
+          &lt;span class=&quot;sr-only&quot;&gt;37.5% Available&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;progress-container progress-description-left progress-label-right&quot;&gt;
+      &lt;div class=&quot;progress-description&quot;&gt;
+        Services
+      &lt;/div&gt;
+      &lt;div class=&quot;progress&quot;&gt;
+        &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;100&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 100%;&quot; data-toggle=&quot;tooltip&quot; title=&quot;100% Used&quot;&gt;
+          &lt;span&gt;&lt;strong&gt;2 of 2&lt;/strong&gt; Total&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;&lt;!-- /row --&gt;
+      &lt;div class=&quot;row row-cards-pf&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-utilization&quot;&gt;
+  &lt;div class=&quot;card-pf-heading&quot;&gt;
+    &lt;p class=&quot;card-pf-heading-details&quot;&gt;Last 30 days&lt;/p&gt;
+    &lt;h2 class=&quot;card-pf-title&quot;&gt;
+      Utilization
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-xs-12 col-sm-4 col-md-4&quot;&gt;
+        &lt;h3 class=&quot;card-pf-subtitle&quot;&gt;CPU&lt;/h3&gt;
+        &lt;p class=&quot;card-pf-utilization-details&quot;&gt;
+          &lt;span class=&quot;card-pf-utilization-card-details-count&quot;&gt;50&lt;/span&gt;
+            &lt;span class=&quot;card-pf-utilization-card-details-description&quot;&gt;
+              &lt;span class=&quot;card-pf-utilization-card-details-line-1&quot;&gt;Available&lt;/span&gt;
+              &lt;span class=&quot;card-pf-utilization-card-details-line-2&quot;&gt;of 1000 MHz&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/p&gt;
+        &lt;div id=&quot;chart-pf-donut-1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;chart-pf-sparkline&quot; id=&quot;chart-pf-sparkline-1&quot;&gt;&lt;/div&gt;
+        &lt;script&gt;
+          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig(&#39;A&#39;);
+          donutConfig.bindto = &#39;#chart-pf-donut-1&#39;;
+          donutConfig.color =  {
+            pattern: [&quot;#cc0000&quot;,&quot;#D1D1D1&quot;]
+          };
+          donutConfig.data = {
+            type: &quot;donut&quot;,
+            columns: [
+              [&quot;Used&quot;, 95],
+              [&quot;Available&quot;, 5]
+            ],
+            groups: [
+              [&quot;used&quot;, &quot;available&quot;]
+            ],
+            order: null
+          };
+          donutConfig.tooltip = {
+            contents: function (d) {
+              return &#39;&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;&#39; +
+                      Math.round(d[0].ratio * 100) + &#39;%&#39; + &#39; MHz &#39; + d[0].name +
+                      &#39;&lt;/span&gt;&#39;;
+            }
+          };
+
+          var chart1 = c3.generate(donutConfig);
+          var donutChartTitle = d3.select(&quot;#chart-pf-donut-1&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+          donutChartTitle.text(&quot;&quot;);
+          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;950&quot;).classed(&#39;donut-title-big-pf&#39;, true).attr(&#39;dy&#39;, 0).attr(&#39;x&#39;, 0);
+          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;MHz Used&quot;).classed(&#39;donut-title-small-pf&#39;, true).attr(&#39;dy&#39;, 20).attr(&#39;x&#39;, 0);
+
+          var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
+          sparklineConfig.bindto = &#39;#chart-pf-sparkline-1&#39;;
+          sparklineConfig.data = {
+            columns: [
+              [&#39;%&#39;, 10, 50, 28, 20, 31, 27, 60, 36, 52, 55, 62, 68, 69, 88, 74, 88, 95],
+            ],
+            type: &#39;area&#39;
+          };
+          var chart2 = c3.generate(sparklineConfig);
+        &lt;/script&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-xs-12 col-sm-4 col-md-4&quot;&gt;
+        &lt;h3 class=&quot;card-pf-subtitle&quot;&gt;Memory&lt;/h3&gt;
+        &lt;p class=&quot;card-pf-utilization-details&quot;&gt;
+          &lt;span class=&quot;card-pf-utilization-card-details-count&quot;&gt;256&lt;/span&gt;
+            &lt;span class=&quot;card-pf-utilization-card-details-description&quot;&gt;
+              &lt;span class=&quot;card-pf-utilization-card-details-line-1&quot;&gt;Available&lt;/span&gt;
+              &lt;span class=&quot;card-pf-utilization-card-details-line-2&quot;&gt;of 432 GB&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/p&gt;
+        &lt;div id=&quot;chart-pf-donut-2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;chart-pf-sparkline&quot; id=&quot;chart-pf-sparkline-2&quot;&gt;&lt;/div&gt;
+        &lt;script&gt;
+          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig(&#39;A&#39;);
+          donutConfig.bindto = &#39;#chart-pf-donut-2&#39;;
+          donutConfig.color =  {
+            pattern: [&quot;#3f9c35&quot;,&quot;#D1D1D1&quot;]
+          };
+          donutConfig.data = {
+            type: &quot;donut&quot;,
+            columns: [
+              [&quot;Used&quot;, 41],
+              [&quot;Available&quot;, 59]
+            ],
+            groups: [
+              [&quot;used&quot;, &quot;available&quot;]
+            ],
+            order: null
+          };
+          donutConfig.tooltip = {
+            contents: function (d) {
+              return &#39;&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;&#39; +
+                      Math.round(d[0].ratio * 100) + &#39;%&#39; + &#39; GB &#39; + d[0].name +
+                      &#39;&lt;/span&gt;&#39;;
+            }
+          };
+
+          var chart3 = c3.generate(donutConfig);
+          var donutChartTitle = d3.select(&quot;#chart-pf-donut-2&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+          donutChartTitle.text(&quot;&quot;);
+          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;176&quot;).classed(&#39;donut-title-big-pf&#39;, true).attr(&#39;dy&#39;, 0).attr(&#39;x&#39;, 0);
+          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;GB Used&quot;).classed(&#39;donut-title-small-pf&#39;, true).attr(&#39;dy&#39;, 20).attr(&#39;x&#39;, 0);
+
+          var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
+          sparklineConfig.bindto = &#39;#chart-pf-sparkline-2&#39;;
+          sparklineConfig.data = {
+            columns: [
+              [&#39;%&#39;, 35, 36, 20, 30, 31, 22, 44, 36, 40, 41, 55, 52, 48, 48, 50, 40, 41],
+            ],
+            type: &#39;area&#39;
+          };
+          var chart4 = c3.generate(sparklineConfig);
+        &lt;/script&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-xs-12 col-sm-4 col-md-4&quot;&gt;
+        &lt;h3 class=&quot;card-pf-subtitle&quot;&gt;Network&lt;/h3&gt;
+        &lt;p class=&quot;card-pf-utilization-details&quot;&gt;
+          &lt;span class=&quot;card-pf-utilization-card-details-count&quot;&gt;200&lt;/span&gt;
+            &lt;span class=&quot;card-pf-utilization-card-details-description&quot;&gt;
+              &lt;span class=&quot;card-pf-utilization-card-details-line-1&quot;&gt;Available&lt;/span&gt;
+              &lt;span class=&quot;card-pf-utilization-card-details-line-2&quot;&gt;of 1300 Gbps&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/p&gt;
+        &lt;div id=&quot;chart-pf-donut-3&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;chart-pf-sparkline&quot; id=&quot;chart-pf-sparkline-3&quot;&gt;&lt;/div&gt;
+        &lt;script&gt;
+          var donutConfig = $().c3ChartDefaults().getDefaultDonutConfig(&#39;A&#39;);
+          donutConfig.bindto = &#39;#chart-pf-donut-3&#39;;
+          donutConfig.color =  {
+            pattern: [&quot;#EC7A08&quot;,&quot;#D1D1D1&quot;]
+          };
+          donutConfig.data = {
+            type: &quot;donut&quot;,
+            columns: [
+              [&quot;Used&quot;, 85],
+              [&quot;Available&quot;, 15]
+            ],
+            groups: [
+              [&quot;used&quot;, &quot;available&quot;]
+            ],
+            order: null
+          };
+          donutConfig.tooltip = {
+            contents: function (d) {
+              return &#39;&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;&#39; +
+                      Math.round(d[0].ratio * 100) + &#39;%&#39; + &#39; Gbps &#39; + d[0].name +
+                      &#39;&lt;/span&gt;&#39;;
+            }
+          };
+
+          var chart5 = c3.generate(donutConfig);
+          var donutChartTitle = d3.select(&quot;#chart-pf-donut-3&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+          donutChartTitle.text(&quot;&quot;);
+          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;1100&quot;).classed(&#39;donut-title-big-pf&#39;, true).attr(&#39;dy&#39;, 0).attr(&#39;x&#39;, 0);
+          donutChartTitle.insert(&#39;tspan&#39;).text(&quot;Gbps Used&quot;).classed(&#39;donut-title-small-pf&#39;, true).attr(&#39;dy&#39;, 20).attr(&#39;x&#39;, 0);
+
+          var sparklineConfig = $().c3ChartDefaults().getDefaultSparklineConfig();
+          sparklineConfig.bindto = &#39;#chart-pf-sparkline-3&#39;;
+          sparklineConfig.data = {
+            columns: [
+              [&#39;%&#39;, 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
+            ],
+            type: &#39;area&#39;
+          };
+          var chart6 = c3.generate(sparklineConfig);
+        &lt;/script&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;&lt;!-- /row --&gt;
+      &lt;div class=&quot;row row-cards-pf&quot;&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-4 col-md-4&quot;&gt;
+&lt;div class=&quot;card-pf card-pf-utilization&quot;&gt;
+  &lt;h2 class=&quot;card-pf-title&quot;&gt;
+    Network
+  &lt;/h2&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;p class=&quot;card-pf-utilization-details&quot;&gt;
+      &lt;span class=&quot;card-pf-utilization-card-details-count&quot;&gt;200&lt;/span&gt;
+        &lt;span class=&quot;card-pf-utilization-card-details-description&quot;&gt;
+          &lt;span class=&quot;card-pf-utilization-card-details-line-1&quot;&gt;Available&lt;/span&gt;
+          &lt;span class=&quot;card-pf-utilization-card-details-line-2&quot;&gt;of 1300 Gbps&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/p&gt;
+    &lt;div id=&quot;chart-pf-donut-4&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;chart-pf-sparkline&quot; id=&quot;chart-pf-sparkline-4&quot;&gt;&lt;/div&gt;
+    &lt;script&gt;
+      var c3ChartDefaults = $().c3ChartDefaults();
+
+      var donutConfig = c3ChartDefaults.getDefaultDonutConfig(&#39;A&#39;);
+      donutConfig.bindto = &#39;#chart-pf-donut-4&#39;;
+      donutConfig.color =  {
+        pattern: [&quot;#EC7A08&quot;,&quot;#D1D1D1&quot;]
+      };
+      donutConfig.data = {
+        type: &quot;donut&quot;,
+        columns: [
+          [&quot;Used&quot;, 85],
+          [&quot;Available&quot;, 15]
+        ],
+        groups: [
+          [&quot;used&quot;, &quot;available&quot;]
+        ],
+        order: null
+      };
+      donutConfig.tooltip = {
+        contents: function (d) {
+          return &#39;&lt;span class=&quot;donut-tooltip-pf&quot; style=&quot;white-space: nowrap;&quot;&gt;&#39; +
+                  Math.round(d[0].ratio * 100) + &#39;%&#39; + &#39; Gbps &#39; + d[0].name +
+                  &#39;&lt;/span&gt;&#39;;
+        }
+      };
+
+      var chart1 = c3.generate(donutConfig);
+      var donutChartTitle = d3.select(&quot;#chart-pf-donut-4&quot;).select(&#39;text.c3-chart-arcs-title&#39;);
+      donutChartTitle.text(&quot;&quot;);
+      donutChartTitle.insert(&#39;tspan&#39;).text(&quot;1100&quot;).classed(&#39;donut-title-big-pf&#39;, true).attr(&#39;dy&#39;, 0).attr(&#39;x&#39;, 0);
+      donutChartTitle.insert(&#39;tspan&#39;).text(&quot;Gbps Used&quot;).classed(&#39;donut-title-small-pf&#39;, true).attr(&#39;dy&#39;, 20).attr(&#39;x&#39;, 0);
+
+      var sparklineConfig = c3ChartDefaults.getDefaultSparklineConfig();
+      sparklineConfig.bindto = &#39;#chart-pf-sparkline-4&#39;;
+      sparklineConfig.data = {
+        columns: [
+          [&#39;%&#39;, 60, 55, 70, 44, 31, 67, 54, 46, 58, 75, 62, 68, 69, 88, 74, 88, 85],
+        ],
+        type: &#39;area&#39;
+      };
+
+      var chart2 = c3.generate(sparklineConfig);
+    &lt;/script&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;&lt;!-- /row --&gt;
+      &lt;div class=&quot;row row-cards-pf&quot;&gt;
+      &lt;!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  --&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-6 col-md-5&quot;&gt;
+&lt;div class=&quot;card-pf&quot;&gt;
+  &lt;div class=&quot;card-pf-heading&quot;&gt;
+    &lt;div class=&quot;dropdown card-pf-time-frame-filter&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+        Last 30 Days &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 60 Days&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 90 Days&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title&quot;&gt;
+      Card Title
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;p&gt;[card contents]&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-6 col-md-7&quot;&gt;
+&lt;div class=&quot;card-pf&quot;&gt;
+  &lt;h2 class=&quot;card-pf-title&quot;&gt;
+    Card Title
+  &lt;/h2&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;p&gt;[card contents]&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-footer&quot;&gt;
+    &lt;div class=&quot;dropdown card-pf-time-frame-filter&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+        Last 30 Days &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 60 Days&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 90 Days&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;p&gt;
+      &lt;a href=&quot;#&quot; class=&quot;card-pf-link-with-icon&quot;&gt;
+        &lt;span class=&quot;pficon pficon-add-circle-o&quot;&gt;&lt;/span&gt;Add New Cluster
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;&lt;!-- /row --&gt;
+      &lt;div class=&quot;row row-cards-pf&quot;&gt;
+      &lt;!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  --&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-5 col-md-5&quot;&gt;
+          &lt;div class=&quot;card-pf&quot;&gt;
+            &lt;h2 class=&quot;card-pf-title&quot;&gt;
+              Card Title
+            &lt;/h2&gt;
+            &lt;div class=&quot;card-pf-body&quot;&gt;
+              &lt;p&gt;[card contents]&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-pf-footer&quot;&gt;
+              &lt;div class=&quot;dropdown card-pf-time-frame-filter&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+                  Last 30 Days &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot;&gt;
+                  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 60 Days&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 90 Days&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/div&gt;
+              &lt;p&gt;
+                &lt;a href=&quot;#&quot; class=&quot;card-pf-link-with-icon&quot;&gt;
+                  &lt;span class=&quot;pficon pficon-flag&quot;&gt;&lt;/span&gt;View CPU Events
+                &lt;/a&gt;
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-12 col-sm-7 col-md-7&quot;&gt;
+          &lt;div class=&quot;card-pf&quot;&gt;
+            &lt;h2 class=&quot;card-pf-title&quot;&gt;
+              Card Title
+            &lt;/h2&gt;
+            &lt;div class=&quot;card-pf-body&quot;&gt;
+              &lt;p&gt;[card contents]&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;row row-cards-pf&quot;&gt;
+      &lt;!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  --&gt;
+        &lt;div class=&quot;col-xs-6 col-sm-8 col-md-8&quot;&gt;
+          &lt;div class=&quot;card-pf&quot;&gt;
+            &lt;div class=&quot;card-pf-body&quot;&gt;
+              &lt;p&gt;[card contents]&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-pf-footer&quot;&gt;
+              &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Footer link&lt;/a&gt;&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-6 col-sm-4 col-md-4&quot;&gt;
+          &lt;div class=&quot;card-pf&quot;&gt;
+            &lt;div class=&quot;card-pf-body&quot;&gt;
+              &lt;p&gt;[card contents]&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-pf-footer&quot;&gt;
+              &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Footer link&lt;/a&gt;&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;&lt;!-- /row --&gt;
+      &lt;div class=&quot;row row-cards-pf&quot;&gt;
+      &lt;!-- Important:  if you need to nest additional .row within a .row.row-cards-pf, do *not* use .row-cards-pf on the nested .row  --&gt;
+        &lt;div class=&quot;col-xs-6 col-sm-6 col-md-6&quot;&gt;
+          &lt;div class=&quot;card-pf&quot;&gt;
+            &lt;div class=&quot;card-pf-body&quot;&gt;
+              &lt;p&gt;[card contents]&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-xs-6 col-sm-6 col-md-6&quot;&gt;
+          &lt;div class=&quot;card-pf&quot;&gt;
+            &lt;div class=&quot;card-pf-body&quot;&gt;
+              &lt;p&gt;[card contents]&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;&lt;!-- /row --&gt;
+
+&lt;/div&gt;
+&lt;script&gt;
+  $(document).ready(function() {
+    // matchHeight the contents of each .card-pf and then the .card-pf itself
+    $(&quot;.row-cards-pf &gt; [class*=&#39;col&#39;] &gt; .card-pf .card-pf-title&quot;).matchHeight();
+    $(&quot;.row-cards-pf &gt; [class*=&#39;col&#39;] &gt; .card-pf &gt; .card-pf-body&quot;).matchHeight();
+    $(&quot;.row-cards-pf &gt; [class*=&#39;col&#39;] &gt; .card-pf &gt; .card-pf-footer&quot;).matchHeight();
+    $(&quot;.row-cards-pf &gt; [class*=&#39;col&#39;] &gt; .card-pf&quot;).matchHeight();
+
+    // initialize tooltips
+    $(&#39;[data-toggle=&quot;tooltip&quot;]&#39;).tooltip();
+
+    // Initialize the vertical navigation
+    $().setupVerticalNavigation(true);
+  });
+&lt;/script&gt;          
+          </pre>
+        </div>
+        <h2 id="example-code-2">Single-Level Menu Bar</h2>
+        <div class="example-pf example-navbar">
+          <nav class="navbar navbar-default navbar-pf" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/assets/img/brand.svg" alt="PatternFly Enterprise Application" />
+    </a>
+  </div>
+  <div class="collapse navbar-collapse navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-utility">
+      <li>
+        <a href="#">Status</a>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <span class="pficon pficon-user"></span>
+          Brian Johnson <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#">Another link</a>
+          </li>
+          <li>
+            <a href="#">Something else here</a>
+          </li>
+          <li class="divider"></li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">More options</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li>
+                <a href="#">Separated link</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">One more separated link</a>
+              </li>
+            </ul>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">One more separated link</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-primary">
+      <li>
+        <a href="#">First Link</a>
+      </li>
+      <li class="active">
+        <a href="#">Another Link</a>
+      </li>
+      <li>
+        <a href="#">And Another</a>
+      </li>
+      <li>
+        <a href="#">As a General Rule</a>
+      </li>
+      <li>
+        <a href="#">Five to Seven Links</a>
+      </li>
+      <li>
+        <a href="#">Is Good</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+        </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+        <div class="collapse in" id="markup-2">
+          <pre class="prettyprint">&lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+  &lt;div class=&quot;navbar-header&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-1&quot;&gt;
+      &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;
+      &lt;img src=&quot;/assets/img/brand.svg&quot; alt=&quot;PatternFly Enterprise Application&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;collapse navbar-collapse navbar-collapse-1&quot;&gt;
+    &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Status&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+          &lt;span class=&quot;pficon pficon-user&quot;&gt;&lt;/span&gt;
+          Brian Johnson &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li class=&quot;dropdown-submenu&quot;&gt;
+            &lt;a tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;More options&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li class=&quot;dropdown-header&quot;&gt;Nav header&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class=&quot;nav navbar-nav navbar-primary&quot;&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;First Link&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;active&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;Another Link&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;And Another&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;As a General Rule&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Five to Seven Links&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Is Good&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</pre>
+        </div>
+        <h2 id="example-code-3">Two-Level Menu Bar</h2>
+        <div class="example-pf example-navbar" style="height: 140px;">
+          <nav class="navbar navbar-default navbar-pf" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-11">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/assets/img/brand.svg" alt="PatternFly Enterprise Application" />
+    </a>
+  </div>
+  <div class="collapse navbar-collapse navbar-collapse-11">
+    <ul class="nav navbar-nav navbar-utility">
+      <li>
+        <a href="#">Status</a>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <span class="pficon pficon-user"></span>
+          Brian Johnson
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#">Another link</a>
+          </li>
+          <li>
+            <a href="#">Something else here</a>
+          </li>
+          <li class="divider"></li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">More options</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li>
+                <a href="#">Separated link</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">One more separated link</a>
+              </li>
+            </ul>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">One more separated link</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-primary persistent-secondary">
+      <li>
+        <a href="#">First Link</a>
+      </li>
+      <li class="active">
+        <a href="#">Another Link</a>
+        <ul class="nav navbar-nav navbar-persistent">
+          <li class="dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Link</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li>
+                <a href="#">Remembering to keep</a>
+              </li>
+              <li>
+                <a href="#">It between five and seven</a>
+              </li>
+            </ul>
+          </li>
+          <li class="active">
+            <a href="#">Another Link</a>
+          </li>
+          <li class="dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Something Else Here</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li>
+                <a href="#">Remembering to keep</a>
+              </li>
+              <li>
+                <a href="#">It between five and seven</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Remembering to Keep</a>
+          </li>
+          <li>
+            <a href="#">It Between Five and Seven</a>
+          </li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">More options</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li>
+                <a href="#">Remembering to keep</a>
+              </li>
+              <li>
+                <a href="#">It between five and seven</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">And Another</a>
+      </li>
+      <li>
+        <a href="#">As a General Rule</a>
+      </li>
+      <li>
+        <a href="#">Five to Seven Links</a>
+      </li>
+      <li>
+        <a href="#">Is Good</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+        </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
+        <div class="collapse in" id="markup-3">
+          <pre class="prettyprint">&lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+  &lt;div class=&quot;navbar-header&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-11&quot;&gt;
+      &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;
+      &lt;img src=&quot;/assets/img/brand.svg&quot; alt=&quot;PatternFly Enterprise Application&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;collapse navbar-collapse navbar-collapse-11&quot;&gt;
+    &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Status&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+          &lt;span class=&quot;pficon pficon-user&quot;&gt;&lt;/span&gt;
+          Brian Johnson
+          &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li class=&quot;dropdown-submenu&quot;&gt;
+            &lt;a tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;More options&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li class=&quot;dropdown-header&quot;&gt;Nav header&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class=&quot;nav navbar-nav navbar-primary persistent-secondary&quot;&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;First Link&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;active&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;Another Link&lt;/a&gt;
+        &lt;ul class=&quot;nav navbar-nav navbar-persistent&quot;&gt;
+          &lt;li class=&quot;dropdown-submenu&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Link&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Remembering to keep&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;It between five and seven&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;active&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Another Link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;dropdown-submenu&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Something Else Here&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Remembering to keep&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;It between five and seven&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Remembering to Keep&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;It Between Five and Seven&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;dropdown-submenu&quot;&gt;
+            &lt;a tabindex=&quot;-1&quot; href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;More options&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Remembering to keep&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;It between five and seven&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;And Another&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;As a General Rule&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Five to Seven Links&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Is Good&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</pre>
+        </div>
+        <h2 id="example-code-4">Menu Bar with Drop-Downs</h2>
+        <div class="example-pf example-navbar">
+          <nav class="navbar navbar-default navbar-pf" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-5">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/assets/img/brand.svg" alt="PatternFly Enterprise Application" />
+    </a>
+  </div>
+  <div class="collapse navbar-collapse navbar-collapse-5">
+    <ul class="nav navbar-nav navbar-utility">
+      <li>
+        <a href="#">Status</a>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <span class="pficon pficon-user"></span>
+          Brian Johnson
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#">Another link</a>
+          </li>
+          <li>
+            <a href="#">Something else here</a>
+          </li>
+          <li class="divider"></li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">More options</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li>
+                <a href="#">Separated link</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">One more separated link</a>
+              </li>
+            </ul>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">One more separated link</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-primary">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Dropdown
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#">Another link</a>
+          </li>
+          <li>
+            <a href="#">Something else here</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">Separated link</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">One more separated link</a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown active">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Dropdown with Submenu
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#">Another link</a>
+          </li>
+          <li>
+            <a href="#">Something else here</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">Separated link</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">One more separated link</a>
+          </li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">More options</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">Separated link</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">One more separated link</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Dropdown with Dropup Submenu
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu dropup">
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#">Another link</a>
+          </li>
+          <li>
+            <a href="#">Something else here</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">Separated link</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">One more separated link</a>
+          </li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">More options</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">Separated link</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">One more separated link</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Dropdown with Pull-left Submenu
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#">Another link</a>
+          </li>
+          <li>
+            <a href="#">Something else here</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">Separated link</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">One more separated link</a>
+          </li>
+          <li class="dropdown-submenu pull-left">
+            <a tabindex="-1" href="#">More options</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">Separated link</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">One more separated link</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">No Dropdown</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+        </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-4" href="#markup-4">Reference Markup</a></p>
+        <div class="collapse in" id="markup-4">
+          <pre class="prettyprint">&lt;nav class=&quot;navbar navbar-default navbar-pf&quot; role=&quot;navigation&quot;&gt;
+  &lt;div class=&quot;navbar-header&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse-5&quot;&gt;
+      &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;
+      &lt;img src=&quot;/assets/img/brand.svg&quot;  alt=&quot;PatternFly Enterprise Application&quot; /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;collapse navbar-collapse navbar-collapse-5&quot;&gt;
+    &lt;ul class=&quot;nav navbar-nav navbar-utility&quot;&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Status&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+          &lt;span class=&quot;pficon pficon-user&quot;&gt;&lt;/span&gt;
+          Brian Johnson
+          &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li class=&quot;dropdown-submenu&quot;&gt;
+            &lt;a tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;More options&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li class=&quot;dropdown-header&quot;&gt;Nav header&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class=&quot;nav navbar-nav navbar-primary&quot;&gt;
+      &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+          Dropdown
+          &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;dropdown active&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+          Dropdown with Submenu
+          &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;dropdown-submenu&quot;&gt;
+            &lt;a tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;More options&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+          Dropdown with Dropup Submenu
+          &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu dropup&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;dropdown-submenu&quot;&gt;
+            &lt;a tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;More options&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+          Dropdown with Pull-left Submenu
+          &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+        &lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;dropdown-submenu pull-left&quot;&gt;
+            &lt;a tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;More options&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;No Dropdown&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</pre>
+        </div>
+        <!-- Giving menus a little room so they don't drop off the page. -->
+        <div class="collapse in" id="markup-4" style="margin-bottom: 150px;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </section>
+  </article>
+</div>
+
+      </div>
+    </div>
+    <footer>
+  <div class="row">
+    <div class="col-md-9">
+      <p>
+        <a href="http://www.redhat.com" id="logo-redhat" target="_blank">Red Hat</a>
+        PatternFly is a <a href="http://www.redhat.com" target="_blank">Red Hat</a> sponsored project. <br> Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> Creative Commons Attribution 4.0 International license.</a>
+      </p>
+    </div>
+    <div class="col-md-3">
+      <ul class="social">
+<!--
+        <li>
+          <a href="https://blog.patternfly.org"><span class="fa fa-rss-square"></span></a>
+        </li>
+-->
+        <li>
+          <a href="https://github.com/patternfly/patternfly" target="_blank"><span class="fa fa-github-square"></span></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/patternfly_des" target="_blank"><span class="fa fa-twitter-square"></span></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/groups/PatternFlyCommunity/" target="_blank"><span class="fa fa-facebook-square"></span></a>
+        </li>
+        <li>
+          <a href="https://plus.google.com/communities/117224483835467139511" target="_blank"><span class="fa fa-google-plus-square"></span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47523816-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

@@ -1,19 +1,31 @@
 #/bin/sh
 
-set -o errexit -o nounset
 
+if [ ! -z $TRAVIS_REPO_SLUG ]; then
+  # We are running the script in travis
+  if [ "$TRAVIS_REPO_SLUG" = "patternfly/patternfly-org" ] || [ "$TRAVIS_REPO_SLUG" = "patternfly/patternfly.github.io" ]; then
+    echo "This build is running against ${TRAVIS_REPO_SLUG}"
+    if [ "$TRAVIS_BRANCH" != "master" ]
+    then
+      echo "This commit was made against $TRAVIS_BRANCH and not the master branch! Do not deploy!"
+      exit 1
+    fi
+  fi
+fi
+
+set -o errexit -o nounset
 # User info
 git config user.name "patternfly-build"
 git config user.email "patternfly-build@redhat.com"
 git config --global push.default simple
 
 ## Deploy to github pages
-if [ -d "patternfly.github.io" ]; then
+if [ -d "gh-pages" ]; then
   rm -rf patternfly.github.io
 fi
-git clone git@github.com:patternfly/patternfly.github.io.git
-rsync -av --delete --exclude .git source/_site/ patternfly.github.io
-cd patternfly.github.io
+git clone -b gh-pages git@github.com:patternfly/patternfly.github.io.git
+rsync -av --delete --exclude .git source/_site/ gh-pages
+cd gh-pages
 find components -type f -not -regex ".*/.*\.\(html\|js\|css\|less\)" -print0 | xargs -0 rm
 git add . -A
 if [ -z "$(git status --porcelain)" ]; then
@@ -24,4 +36,4 @@ else
   git push origin master:master
 fi
 cd ..
-rm -rf patternfly.github.io
+rm -rf gh-pages

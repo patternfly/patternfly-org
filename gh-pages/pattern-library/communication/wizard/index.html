@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+  
+  
+  
+  
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wizard | PatternFly</title>
+  <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
+  <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
+  <!-- iPad retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-152.png">
+  <!-- iPad retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-144.png">
+  <!-- iPad non-retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-76.png">
+  <!-- iPad non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-72.png">
+  <!-- iPhone 6 Plus icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-180.png">
+  <!-- iPhone retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-114.png">
+  <!-- iPhone non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-57.png">
+  <link rel="stylesheet" href="/assets/css/patternfly-adjusted.min.css">
+  <link rel="stylesheet" href="/components/patternfly/dist/css/patternfly-additions.min.css">
+  <link rel="stylesheet" href="/assets/css/patternfly-site.min.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/animations.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/angular-patternfly.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/ng-docs.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/examples.css">
+  
+  <script src="/components/jquery/dist/jquery.min.js"></script>
+  <script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/components/bootstrap-combobox/js/bootstrap-combobox.js"></script>
+  <script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+  <script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  <script src="/components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+  <script src="/components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+  <script src="/components/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+  <script src="/components/c3/c3.min.js"></script>
+  <script src="/components/d3/d3.min.js"></script>
+  <script src="/components/datatables/media/js/jquery.dataTables.js"></script>
+  <script src="/components/google-code-prettify/bin/prettify.min.js"></script>
+  <script src="/components/clipboard/dist/clipboard.min.js"></script>
+  <script src="/components/patternfly/dist/js/patternfly.min.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/marked.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-sanitize.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-animate.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/ui-bootstrap-tpls.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-bootstrap-prettify.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/lodash.min.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-patternfly.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/patternfly.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/angular-bootstrap.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/docs-setup.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/docs.js"></script>
+  <script src="/ngdocs/formatForPFsite.js"></script>
+  
+  <script src="/assets/js/patternfly-site.min.js"></script>
+  <link rel="canonical" href="https://www.patternfly.org/pattern-library/communication/wizard/">
+</head>
+
+  <body class="has-sidebar">
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+<!--
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse-pf-site" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+-->
+            <a class="navbar-brand" id="logo" title="open interface project" href="/">PatternFly | open interface project</a>
+          </div>
+          <div class="navbar-collapse navbar-collapse-pf-site collapse">
+            <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
+              <div class="form-group">
+                <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                <input name="sitesearch" type="hidden" value="patternfly.org">
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div>
+            </form>
+            <ul id="menu-primary" class="nav navbar-nav navbar-right">
+              <li>
+                <a href="/get-started/">Get Started</a>
+              </li>
+              <li class="active">
+                <a href="/pattern-library/">Pattern Library</a>
+              </li>
+              <li>
+                <a href="/styles/">Styles</a>
+              </li>
+              <li>
+                <a href="/community/">Community</a>
+              </li>
+              <li>
+                <a href="/download/">Download</a>
+              </li>
+              <li>
+                <a href="https://blog.patternfly.org">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-sidebar ">
+<!--
+      { % if primary == 'get-started' or primary == 'pattern-library' or primary == 'styles' % }
+      <nav class="navbar navbar-sidebar" aria-labelledby="navbar-toggle-sidebar">
+        <button class="btn btn-default navbar-toggle-sidebar" id="navbar-toggle-sidebar">
+          <span class="fa fa-angle-double-right"></span>
+          <span class="sr-only">Toggle sub navigation</span>
+        </button>
+-->
+        <ul>
+          <li class="primary-menu hidden">
+            <a href="/">Menu</a>
+            <ul>
+              <li>
+              <a href="/get-started/">Get Started<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li class="active">
+              <a href="/pattern-library/">Pattern Library<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/styles/">Styles<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/community/">Community</a>
+              </li>
+              <li>
+              <a href="/download/">Download</a>
+              </li>
+              <li>
+                <a href="https://blog.patternfly.org">Blog</a>
+              </li>
+              <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
+                <div class="form-group">
+                  <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                  <input name="sitesearch" type="hidden" value="patternfly.org">
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+              </form>
+            </ul>
+          </li>
+          <li class="secondary-menu">
+            <a class="secondary-menu-toggle"><span class="secondary-menu-toggle-icon"></span>Pattern Library</a>
+            <ul>
+              <li >
+                <a href="/pattern-library/">Overview</a>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#application-framework-secondary" aria-expanded="false" aria-controls="application-framework-secondary">Application Framework</a>
+                <ul class="collapse " id="application-framework-secondary">
+                  <li >
+                    <a href="/pattern-library/application-framework/login-page/">Login Page</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#cards-secondary" aria-expanded="false" aria-controls="cards-secondary">Cards</a>
+                <ul class="collapse " id="cards-secondary">
+                  <li >
+                    <a href="/pattern-library/cards/aggregate-status-card/">Aggregate Status Card</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/cards/trend-card/">Trend Card</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/cards/utilization-bar-card/">Utilization Bar Card</a>
+                  </li>
+                   <li >
+                    <a href="/pattern-library/cards/utilization-trend-card/">Utilization Trend Card</a>
+                  </li>
+                </ul>
+              </li>
+              <li  class="active">
+                <a class="" role="button" data-toggle="collapse" href="#communication-secondary" aria-expanded="true" aria-controls="communication-secondary">Communication</a>
+                <ul class="collapse in" id="communication-secondary">
+                  <li >
+                    <a href="/pattern-library/communication/about-modal/">About Modal</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/empty-state/">Empty State</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/inline-notifications/">Inline Notifications</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/notification-drawer/">Notification Drawer</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/toast-notifications/">Toast Notifications</a>
+                  </li>
+                  <li  class="active">
+                    <a href="/pattern-library/communication/wizard/">Wizard</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#content-views-secondary" aria-expanded="false" aria-controls="content-views-secondary">Content Views</a>
+                <ul class="collapse " id="content-views-secondary">
+                  <li >
+                    <a href="/pattern-library/content-views/card-view/">Card View</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/content-views/list-view/">List View</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/content-views/table-view/">Table View</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#dashboard-secondary" aria-expanded="false" aria-controls="dashboard-secondary">Dashboard</a>
+                <ul class="collapse " id="dashboard-secondary">
+                  <li >
+                    <a href="/pattern-library/dashboard/dashboard-card/">Dashboard Card (Base)</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/dashboard/dashboard-layout/">Dashboard Layout</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#data-visualization-secondary" aria-expanded="false" aria-controls="data-visualization-secondary">Data Visualization</a>
+                <ul class="collapse " id="data-visualization-secondary">
+                  <li >
+                    <a href="/pattern-library/data-visualization/area-chart/">Area Chart</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/bar-chart/">Bar Chart</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/data-visualization/donut-chart/">Donut Chart</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/heat-map/">Heat Map</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/line-chart/">Line Chart</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/pie-chart/">Pie Chart</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/data-visualization/sparkline/">Sparkline</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/data-visualization/utilization-bar-chart/">Utilization Bar Chart</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="false" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
+                <ul class="collapse " id="forms-and-controls-secondary">
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/date-picker/">Date Picker</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/field-level-help/">Field Level Help</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/find/">Find</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/forms-and-controls/forms/">Forms</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/time-picker/">Time Picker</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/toolbar/">Toolbar</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#navigation-secondary" aria-expanded="false" aria-controls="navigation-secondary">Navigation</a>
+                <ul class="collapse " id="navigation-secondary">
+                  <li >
+                    <a href="/pattern-library/navigation/horizontal-navigation/">Horizontal Navigation</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/navigation/vertical-navigation/">Vertical Navigation</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+              <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
+              <ul class="collapse " id="widgets-secondary">
+                <li >
+                <a href="/pattern-library/widgets/">Overview</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#accordion">Accordion</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#alerts">Alerts</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#badges">Badges</a>
+                </li>
+<!--
+                <li >
+                <a href="/pattern-library/widgets/#basic-charts">Basic Charts</a>
+                </li>
+-->
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-combobox">Bootstrap Combobox</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-datepicker">Bootstrap Datepicker</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-select">Bootstrap Select</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-switch">Bootstrap Switch</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-touchspin">Bootstrap Touchspin</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-tree-view">Bootstrap Tree View</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#breadcrumbs">Breadcrumbs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#buttons">Buttons</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#button-groups">Button Groups</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#cnt-remaining-chars">Count Remaining Characters</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#data-tables">Data Tables</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#dropdowns">Dropdowns</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#fixed-height-accordion">Fixed Height Accordion</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#forms">Forms</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#google-code-prettify">Google Code Prettify</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#info-tip">Info Tip</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#kebabs">Kebabs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#labels">Labels</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#list-group">List Group</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#modal">Modal</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#pagination">Pagination</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#panels">Panels</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#popover">Popover</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#progress-bars">Progress Bars</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#search">Search</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#spinner">Spinner</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tables">Tables</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tabs">Tabs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tooltip">Tooltip</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#treegrid-table">TreeGrid Table</a>
+                </li>
+              </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!--{ % endif % }-->
+    </header>
+
+    <div class="container-fluid">
+      <div class="clearfix row" id="content">
+        <div id="main" class="col-md-12 clearfix" role="main">
+  <article class="post">
+    <header class="page-tabs-header">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 cols-nopad-right">
+          <h1>Wizard</h1>
+        </div>
+        <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
+          
+            <ul class="nav nav-tabs nav-justified nav-tabs-pattern" id="tabs-pattern" role="tablist">
+  <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Overview</a></li>
+
+    <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
+
+
+    <li role="presentation" class="disabled"><a aria-controls="code" role="tab" title="Code example is not available at this time">Code</a></li>
+
+<!--
+  <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
+-->
+</ul>
+<script>
+    // Workaround for bug with hidden C3 charts in v0.4.11.
+    $(document).on('shown.bs.tab', 'a[data-toggle="tab"]', function () {
+        if (window.dispatchEvent) {
+            window.dispatchEvent(new Event('resize'));
+        }
+        // Special case for IE
+        if ($(document).fireEvent) {
+            $(document).fireEvent('onresize');
+        }
+    });
+</script>
+
+          
+        </div>
+      </div>
+    </header>
+    <section class="post_content">
+      <div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="overview">
+    <p>Wizards should be used when the user needs to go through a sequential set of steps to complete a task. A wizard
+    is a good way to break a complex task into sub-tasks that can be more readily understood and completed. More complex
+    wizards can have branching which takes the user to a different step depending on their settings/answers to previous
+    questions.</p>
+    <h2 id="example-overview-1">Example</h2>
+    <div class="example-pf">
+      <img src="/assets/img/Wizard_Flow_Example.png" alt="wizard-flow-example" />
+    </div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="design">
+    <h2>Loading Screen</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <p><img class="example-image" src="/assets/img/Wizard_Flow_Description1.png" alt="wizard-flow-description1-callout" /></p>
+      </div>
+      <div class="col-md-12">
+        <ol>
+          <li><b>Title Bar</b> (optional for embedded wizards):  There should be a title bar for the wizard, this is required for modal wizards and optional for embedded wizards. The title given to the wizard should convey the purpose of the wizard and the process the user is going through.  It can be the action label on the button, link or menu that invokes the wizard, but should also take advantage of the ability for something more descriptive while remaining concise.</li>
+          <li><b>Loading Wizard State</b> (optional):  For cases when wizard will take a few moments to load, we recommend using a loading indicator and short message informing the user that the wizard is loading.  Wizard will be empty besides the message and indicator.</li>
+        </ol>
+      </div>
+    </div>
+    <h2>First Step</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <p><img class="example-image" src="/assets/img/Wizard_Flow_Description2.png" alt="wizard-flow-description2-callout" /></p>
+      </div>
+      <div class="col-md-12">
+        <ol>
+          <li><b>Main Steps:</b>  The main steps of the wizard are shown in the bar along the top of the screen.  User can always see all of the primary steps in the flow at all times.  The main step labels can be used to jump between steps in a non-sequential manner as long as previous steps have been completed. This should also be enabled for next steps as long as all required information has been completed on the current step and there are no dependencies between the steps. Main steps can be broken down into sub-steps.</li>
+          <li><b>Sub-steps for the Selected Main Step:</b>  Sub-steps are optional. If they are used, every effort should be made to provide sub-steps for each step in order to maintain a consistent layout and expectation from the users.</li>
+          <li><b>Button Bar:</b>  The button bar provides the appropriate action buttons, these are usually a combination of Cancel, Back, Next and Finish.  The exact wording on the Finish button can be adjusted to be more reflective of the completion action appropriate to what the user will be doing. The  Back button should always be enabled except for the first step.  The Next button should become enabled once all required information has been entered for the current step and/or sub-step. The Next button will move the user through any sub-steps before it moves the user to the next main step.  The Back button will also behave the same way. In some cases the completion action button will close the dialog, in others, it views progress in the wizard, and ends up changing the label of that button.</li>
+          <ul>
+            <li> In the example above, the back button is disabled since this shows the first sub step within the first step.</li>
+          </ul>
+        </ol>
+      </div>
+    </div>
+    <h2>Next Step</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <p><img class="example-image" src="/assets/img/Wizard_Flow_Description3.png" alt="wizard-flow-description3-callout" /></p>
+      </div>
+      <div class="col-md-12">
+        <ol>
+          <li><b>Main Steps:</b>  The step that the user is currently on should be highlighted in some way to appear different than the other steps.  If other steps are enabled, the user can click to go to that step either previous or next depending on the completion of or need for required inputs.</li>
+          <li><b>Expand/Collapse Information</b> (optional):  Progressive disclosure can be used in the main content area of the step in order to accommodate more information. This is recommended to be used only as necessary or on the review step.</li>
+        </ol>
+      </div>
+    </div>
+    <h2>Final Step – Progress</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <p><img class="example-image" src="/assets/img/Wizard_Flow_Description4.png" alt="wizard-flow-description4-callout" /></p>
+      </div>
+      <div class="col-md-12">
+        <ol>
+          <li><b>Main Steps:</b>  The last step in the wizard can be a Review step that shows a summary of the information selected and/or set in the previous steps of the wizard. A Review step is optional but can provide a place to show a summary of the settings the user has gone through.  Exact wording of the step and sub-steps can change depending on what makes sense for the particular task.  Review along with Summary and Progress are only suggestions.</li>
+          <li><b>Completion Button:</b>  Once all required information has been provided, the Next button becomes the Completion button with wording that makes sense for the particular task.  For wizards that do not remain open while the particular task is being processed, the Completion button would close the wizard. On the last step of the wizard, there is no Next button.</li>
+          <li><b>Progress Indicator:</b>  If it takes a few moments to load the information into the page, a progress indicator can be used.  In most instances when this occurs, the Back and Completion buttons should be disabled.  The Cancel button can be enabled if cancelling the process is supported by the wizard.</li>
+        </ol>
+      </div>
+    </div>
+    <h2>Completion Page</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <p><img class="example-image" src="/assets/img/Wizard_Flow_Description5.png" alt="wizard-flow-description5-callout" /></p>
+      </div>
+      <div class="col-md-12">
+        <ol>
+          <li><b>Completion Message:</b>  If the completion button does not close the wizard, a completion message can be used to provide users with feedback that the wizard has been successfully completed or if any errors have occurred.</li>
+          <li><b>Completion Button:</b>  The wording on the completion button can change once processing of the content in the wizard is complete.  This may be Close or some other word that makes sense for the particular use case.  If the user has the option to go back and make alterations and resubmit the process, then the Back button should be enabled.</li>
+        </ol>
+      </div>
+    </div>
+    <h3>What’s not covered in the current design but will be covered in future sprints:</h3>
+    <p>The following functionality is not covered in this pattern:</p>
+    <ol>
+      <li>In certain cases, the wizard will need to show step by step progress.  This functionality is not covered. </li>
+      <li>In some cases, it may be advantageous to the user to be able to jump to the review page without having completed previous steps.</li>
+      <li>For more complex and time-consuming tasks, a wizard can have an optional save to let the user leave the wizard and return later.  Some considerations for this feature are auto-saving and what happens if a session times out.</li>
+      <li>For more complex wizards, there may be more steps or text than can be shown on the screen at one time.  This pattern does not address the scalability of the main step bar.</li>
+      <li>Wizards can be shown in modal dialogs or embedded on the main page.  This pattern only address modal dialog implementations.  Embedded wizards may need different design considerations such as location of buttons on the button bar and how Back and Next might work.</li>
+    </ol>
+    <p>These requirements will be added to the pattern at a later date.</p>
+  </div>
+</div>
+
+    </section>
+  </article>
+</div>
+
+      </div>
+    </div>
+    <footer>
+  <div class="row">
+    <div class="col-md-9">
+      <p>
+        <a href="http://www.redhat.com" id="logo-redhat" target="_blank">Red Hat</a>
+        PatternFly is a <a href="http://www.redhat.com" target="_blank">Red Hat</a> sponsored project. <br> Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> Creative Commons Attribution 4.0 International license.</a>
+      </p>
+    </div>
+    <div class="col-md-3">
+      <ul class="social">
+<!--
+        <li>
+          <a href="https://blog.patternfly.org"><span class="fa fa-rss-square"></span></a>
+        </li>
+-->
+        <li>
+          <a href="https://github.com/patternfly/patternfly" target="_blank"><span class="fa fa-github-square"></span></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/patternfly_des" target="_blank"><span class="fa fa-twitter-square"></span></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/groups/PatternFlyCommunity/" target="_blank"><span class="fa fa-facebook-square"></span></a>
+        </li>
+        <li>
+          <a href="https://plus.google.com/communities/117224483835467139511" target="_blank"><span class="fa fa-google-plus-square"></span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47523816-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

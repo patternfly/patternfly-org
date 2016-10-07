@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+  
+  
+  
+  
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Cards | PatternFly</title>
+  <meta name="description" content="PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets">
+  <link rel="shortcut icon" href="/components/patternfly/dist/img/favicon.ico">
+  <!-- iPad retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-152.png">
+  <!-- iPad retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-144.png">
+  <!-- iPad non-retina icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-76.png">
+  <!-- iPad non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-72.png">
+  <!-- iPhone 6 Plus icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-180.png">
+  <!-- iPhone retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-114.png">
+  <!-- iPhone non-retina icon (iOS < 7) -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/components/patternfly/dist/img/apple-touch-icon-precomposed-57.png">
+  <link rel="stylesheet" href="/assets/css/patternfly-adjusted.min.css">
+  <link rel="stylesheet" href="/components/patternfly/dist/css/patternfly-additions.min.css">
+  <link rel="stylesheet" href="/assets/css/patternfly-site.min.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/animations.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/angular-patternfly.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/ng-docs.css">
+  <link rel="stylesheet" href="/components/angular-patternfly/dist/docs/css/examples.css">
+  
+  <script src="/components/jquery/dist/jquery.min.js"></script>
+  <script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/components/bootstrap-combobox/js/bootstrap-combobox.js"></script>
+  <script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+  <script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  <script src="/components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+  <script src="/components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+  <script src="/components/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+  <script src="/components/c3/c3.min.js"></script>
+  <script src="/components/d3/d3.min.js"></script>
+  <script src="/components/datatables/media/js/jquery.dataTables.js"></script>
+  <script src="/components/google-code-prettify/bin/prettify.min.js"></script>
+  <script src="/components/clipboard/dist/clipboard.min.js"></script>
+  <script src="/components/patternfly/dist/js/patternfly.min.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/marked.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-sanitize.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-animate.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/ui-bootstrap-tpls.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-bootstrap-prettify.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/lodash.min.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/angular-patternfly.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/grunt-scripts/patternfly.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/angular-bootstrap.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/docs-setup.js"></script>
+  <script src="/components/angular-patternfly/dist/docs/js/docs.js"></script>
+  <script src="/ngdocs/formatForPFsite.js"></script>
+  <script src="/components/matchHeight/jquery.matchHeight-min.js"></script>
+  <script src="/assets/js/patternfly-site.min.js"></script>
+  <link rel="canonical" href="https://www.patternfly.org/pattern-library/dashboard/dashboard-card/">
+</head>
+
+  <body class="has-sidebar">
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+<!--
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse-pf-site" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+-->
+            <a class="navbar-brand" id="logo" title="open interface project" href="/">PatternFly | open interface project</a>
+          </div>
+          <div class="navbar-collapse navbar-collapse-pf-site collapse">
+            <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
+              <div class="form-group">
+                <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                <input name="sitesearch" type="hidden" value="patternfly.org">
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div>
+            </form>
+            <ul id="menu-primary" class="nav navbar-nav navbar-right">
+              <li>
+                <a href="/get-started/">Get Started</a>
+              </li>
+              <li class="active">
+                <a href="/pattern-library/">Pattern Library</a>
+              </li>
+              <li>
+                <a href="/styles/">Styles</a>
+              </li>
+              <li>
+                <a href="/community/">Community</a>
+              </li>
+              <li>
+                <a href="/download/">Download</a>
+              </li>
+              <li>
+                <a href="https://blog.patternfly.org">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-sidebar ">
+<!--
+      { % if primary == 'get-started' or primary == 'pattern-library' or primary == 'styles' % }
+      <nav class="navbar navbar-sidebar" aria-labelledby="navbar-toggle-sidebar">
+        <button class="btn btn-default navbar-toggle-sidebar" id="navbar-toggle-sidebar">
+          <span class="fa fa-angle-double-right"></span>
+          <span class="sr-only">Toggle sub navigation</span>
+        </button>
+-->
+        <ul>
+          <li class="primary-menu hidden">
+            <a href="/">Menu</a>
+            <ul>
+              <li>
+              <a href="/get-started/">Get Started<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li class="active">
+              <a href="/pattern-library/">Pattern Library<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/styles/">Styles<span class="fa fa-angle-right"></span></a>
+              </li>
+              <li>
+              <a href="/community/">Community</a>
+              </li>
+              <li>
+              <a href="/download/">Download</a>
+              </li>
+              <li>
+                <a href="https://blog.patternfly.org">Blog</a>
+              </li>
+              <form class="navbar-form navbar-right" method="get" id="searchform" action="http://www.google.com/search">
+                <div class="form-group">
+                  <input name="q" id="q" type="text" class="form-control" autocomplete="off" placeholder="Search">
+                  <input name="sitesearch" type="hidden" value="patternfly.org">
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+              </form>
+            </ul>
+          </li>
+          <li class="secondary-menu">
+            <a class="secondary-menu-toggle"><span class="secondary-menu-toggle-icon"></span>Pattern Library</a>
+            <ul>
+              <li >
+                <a href="/pattern-library/">Overview</a>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#application-framework-secondary" aria-expanded="false" aria-controls="application-framework-secondary">Application Framework</a>
+                <ul class="collapse " id="application-framework-secondary">
+                  <li >
+                    <a href="/pattern-library/application-framework/login-page/">Login Page</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#cards-secondary" aria-expanded="false" aria-controls="cards-secondary">Cards</a>
+                <ul class="collapse " id="cards-secondary">
+                  <li >
+                    <a href="/pattern-library/cards/aggregate-status-card/">Aggregate Status Card</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/cards/trend-card/">Trend Card</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/cards/utilization-bar-card/">Utilization Bar Card</a>
+                  </li>
+                   <li >
+                    <a href="/pattern-library/cards/utilization-trend-card/">Utilization Trend Card</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#communication-secondary" aria-expanded="false" aria-controls="communication-secondary">Communication</a>
+                <ul class="collapse " id="communication-secondary">
+                  <li >
+                    <a href="/pattern-library/communication/about-modal/">About Modal</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/empty-state/">Empty State</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/inline-notifications/">Inline Notifications</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/notification-drawer/">Notification Drawer</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/toast-notifications/">Toast Notifications</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/communication/wizard/">Wizard</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#content-views-secondary" aria-expanded="false" aria-controls="content-views-secondary">Content Views</a>
+                <ul class="collapse " id="content-views-secondary">
+                  <li >
+                    <a href="/pattern-library/content-views/card-view/">Card View</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/content-views/list-view/">List View</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/content-views/table-view/">Table View</a>
+                  </li>
+                </ul>
+              </li>
+              <li  class="active">
+                <a class="" role="button" data-toggle="collapse" href="#dashboard-secondary" aria-expanded="true" aria-controls="dashboard-secondary">Dashboard</a>
+                <ul class="collapse in" id="dashboard-secondary">
+                  <li  class="active">
+                    <a href="/pattern-library/dashboard/dashboard-card/">Dashboard Card (Base)</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/dashboard/dashboard-layout/">Dashboard Layout</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#data-visualization-secondary" aria-expanded="false" aria-controls="data-visualization-secondary">Data Visualization</a>
+                <ul class="collapse " id="data-visualization-secondary">
+                  <li >
+                    <a href="/pattern-library/data-visualization/area-chart/">Area Chart</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/bar-chart/">Bar Chart</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/data-visualization/donut-chart/">Donut Chart</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/heat-map/">Heat Map</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/line-chart/">Line Chart</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/data-visualization/pie-chart/">Pie Chart</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/data-visualization/sparkline/">Sparkline</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/data-visualization/utilization-bar-chart/">Utilization Bar Chart</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="false" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
+                <ul class="collapse " id="forms-and-controls-secondary">
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/date-picker/">Date Picker</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/field-level-help/">Field Level Help</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/find/">Find</a>
+                  </li>
+                  <li >
+                  <a href="/pattern-library/forms-and-controls/forms/">Forms</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/time-picker/">Time Picker</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/forms-and-controls/toolbar/">Toolbar</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+                <a class="collapsed" role="button" data-toggle="collapse" href="#navigation-secondary" aria-expanded="false" aria-controls="navigation-secondary">Navigation</a>
+                <ul class="collapse " id="navigation-secondary">
+                  <li >
+                    <a href="/pattern-library/navigation/horizontal-navigation/">Horizontal Navigation</a>
+                  </li>
+                  <li >
+                    <a href="/pattern-library/navigation/vertical-navigation/">Vertical Navigation</a>
+                  </li>
+                </ul>
+              </li>
+              <li >
+              <a class="collapsed" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="false" aria-controls="widgets-secondary">Widgets</a>
+              <ul class="collapse " id="widgets-secondary">
+                <li >
+                <a href="/pattern-library/widgets/">Overview</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#accordion">Accordion</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#alerts">Alerts</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#badges">Badges</a>
+                </li>
+<!--
+                <li >
+                <a href="/pattern-library/widgets/#basic-charts">Basic Charts</a>
+                </li>
+-->
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-combobox">Bootstrap Combobox</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-datepicker">Bootstrap Datepicker</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-select">Bootstrap Select</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-switch">Bootstrap Switch</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-touchspin">Bootstrap Touchspin</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#bootstrap-tree-view">Bootstrap Tree View</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#breadcrumbs">Breadcrumbs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#buttons">Buttons</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#button-groups">Button Groups</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#cnt-remaining-chars">Count Remaining Characters</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#data-tables">Data Tables</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#dropdowns">Dropdowns</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#fixed-height-accordion">Fixed Height Accordion</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#forms">Forms</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#google-code-prettify">Google Code Prettify</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#info-tip">Info Tip</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#kebabs">Kebabs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#labels">Labels</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#list-group">List Group</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#modal">Modal</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#pagination">Pagination</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#panels">Panels</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#popover">Popover</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#progress-bars">Progress Bars</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#search">Search</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#spinner">Spinner</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tables">Tables</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tabs">Tabs</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#tooltip">Tooltip</a>
+                </li>
+                <li >
+                <a href="/pattern-library/widgets/#treegrid-table">TreeGrid Table</a>
+                </li>
+              </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!--{ % endif % }-->
+    </header>
+
+    <div class="container-fluid">
+      <div class="clearfix row" id="content">
+        <div id="main" class="col-md-12 clearfix" role="main">
+  <article class="post">
+    <header class="page-tabs-header">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 cols-nopad-right">
+          <h1>Dashboard Cards</h1>
+        </div>
+        <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
+          
+            <ul class="nav nav-tabs nav-justified nav-tabs-pattern" id="tabs-pattern" role="tablist">
+  <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Overview</a></li>
+
+    <li role="presentation"><a href="#design" aria-controls="design" role="tab" data-toggle="tab">Design</a></li>
+
+
+    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+
+<!--
+  <li role="presentation"><a href="#usability-test" aria-controls="usability-test" role="tab" data-toggle="tab">Usability Test</a></li>
+-->
+</ul>
+<script>
+    // Workaround for bug with hidden C3 charts in v0.4.11.
+    $(document).on('shown.bs.tab', 'a[data-toggle="tab"]', function () {
+        if (window.dispatchEvent) {
+            window.dispatchEvent(new Event('resize'));
+        }
+        // Special case for IE
+        if ($(document).fireEvent) {
+            $(document).fireEvent('onresize');
+        }
+    });
+</script>
+
+          
+        </div>
+      </div>
+    </header>
+    <section class="post_content">
+      <div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="overview">
+    <p>This section provides guidance on the base elements of a card for a dashboard view.</p>
+    <p>Jump to <a href="#example-overview-1">Timeframe filter in header</a> or <a href="#example-overview-2">Timeframe filter in footer</a></p>
+    <h2 id="example-overview-1">Timeframe filter in header</h2>
+    <div class="example-bg">
+      <div class="row">
+        <div class="example-pf col-md-6">
+          <div class="cards-pf">
+            <div class="container-fluid container-cards-pf">
+              <div class="row-cards-pf">
+                <div class="card-pf">
+  <div class="card-pf-heading">
+    <div class="dropdown card-pf-time-frame-filter">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        Last 30 Days <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-right" role="menu">
+        <li><a href="#">Last 60 Days</a></li>
+        <li><a href="#">Last 90 Days</a></li>
+      </ul>
+    </div>
+    <h2 class="card-pf-title">
+      Card Title
+    </h2>
+  </div>
+  <div class="card-pf-body">
+    <p>[card contents]</p>
+  </div>
+</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 id="example-overview-2">Timeframe filter in footer</h2>
+    <div class="example-bg">
+      <div class="row">
+        <div class="example-pf col-md-6">
+          <div class="cards-pf">
+            <div class="container-fluid container-cards-pf">
+              <div class="row-cards-pf">
+                <div class="card-pf">
+  <h2 class="card-pf-title">
+    Card Title
+  </h2>
+  <div class="card-pf-body">
+    <p>[card contents]</p>
+  </div>
+  <div class="card-pf-footer">
+    <div class="dropdown card-pf-time-frame-filter">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        Last 30 Days <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-right" role="menu">
+        <li><a href="#">Last 60 Days</a></li>
+        <li><a href="#">Last 90 Days</a></li>
+      </ul>
+    </div>
+    <p>
+      <a href="#" class="card-pf-link-with-icon">
+        <span class="pficon pficon-add-circle-o"></span>Add New Cluster
+      </a>
+    </p>
+  </div>
+</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="design">
+    <h2>Style</h2>
+    <div class="row">
+      <div class="col-md-7 col-lg-5">
+        <p>
+          <img src="/assets/img/card1.png" alt="card1" />
+        </p>
+      </div>
+      <div class="col-md-5 col-lg-7">
+        <ol>
+          <li><b>Background and Borders:</b> All cards on a dashboard should have the same background and border treatment.</li>
+          <li><b>Top Accent</b> (optional): Add a top accent to a row of cards to give them visual hierarchy</li>
+        </ol>
+      </div>
+    </div>
+    <h2>Titles</h2>
+    <div class="row">
+      <div class="col-md-7 col-lg-5">
+        <p>
+          <img src="/assets/img/Card_titleAndSubtitle.png" alt="Card_titleAndSubtitle" />
+        </p>
+      </div>
+      <div class="col-md-5 col-lg-7">
+        <ol>
+          <li><b>Title</b> (optional): If the content of the card is not obvious, add a title to clarify what information is being presented.  The title is always followed by a horizontal separator.</li>
+          <li><b>Subtitle</b> (optional): Add a subtitle if the card contains the same visualization for different object types.</li>
+        </ol>
+      </div>
+    </div>
+    <h2>Time Frame Filter (optional)</h2>
+    <div class="row">
+      <div class="col-md-7 col-lg-5">
+        <p>
+          <img src="/assets/img/card_timeframe.png" alt="card_timeframe" />
+        </p>
+      </div>
+      <div class="col-md-5 col-lg-7">
+        <p>There are two options that the time frame filter may be placed:</p>
+        <ol>
+          <li>If there is a card title, the filter should be displayed on the right of the title panel.</li>
+          <li>If there is an action panel, the filter can be displayed on the right of the action panel.</li>
+        </ol>
+      </div>
+    </div>
+    <h2>Actions Panel (optional)</h2>
+    <div class="row">
+      <div class="col-md-7 col-lg-5">
+        <p>
+          <img src="/assets/img/card_actionspanel.png" alt="card_actionspanel" />
+        </p>
+      </div>
+      <div class="col-md-5 col-lg-7">
+        <ol>
+          <li><b>Actions Panel</b> (optional): Include an actions panel, at the bottom of the card, if there is a primary action that you would like the user to quickly and easily be able to access from the card view.</li>
+          <li><b>Actions Icon</b> (optional): Include an associated icon with the action button if applicable.</li>
+          <li><b>Flat Actions Button</b> Within an actions panel, you should have an action, which is represented as a flat button on the left.</li>
+        </ol>
+        </div>
+      </div>
+      <h2>No Data Available</h2>
+      <div class="row">
+        <div class="col-md-7 col-lg-5">
+          <p>
+            <img src="/assets/img/card-no-data-callout.png" alt="card_no_data" />
+          </p>
+        </div>
+        <div class="col-md-5 col-lg-7">
+          <ol>
+            <li><b>No Data Available:</b> If the data for a card does not exist or cannot be reached, the card will display an informational icon with the text, "No data available". Note: This display is not meant to indicate that data is loading, and should only be used when data is unreachable.</li>
+          </ol>
+          </div>
+        </div>
+      </div>
+  <div role="tabpanel" class="tab-pane" id="code">
+    <ul class="nav nav-tabs nav-tabs-pf nav-tabs-code" id="tabs-code" role="tablist">
+
+  <li role="presentation" class="active"><a class="nested" href="#html-css" aria-controls="html-css" role="tab" data-toggle="tab">HTML/CSS</a></li>
+  <li role="presentation"><a class="nested" href="#angular" aria-controls="angular" role="tab" data-toggle="tab">AngularJS</a></li>
+
+</ul>
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane nested active" id="html-css">
+        <p>Jump to <a href="#example-code-1">Timeframe filter in header</a> or <a href="#example-code-2">Timeframe filter in footer</a></p>
+        <h2 id="example-code-1">Timeframe filter in header</h2>
+        <div class="example-bg">
+          <div class="row">
+            <div class="example-pf col-md-6">
+              <div class="cards-pf">
+                <div class="container-fluid container-cards-pf">
+                  <div class="row-cards-pf">
+                    <div>
+                      <div class="card-pf">
+  <div class="card-pf-heading">
+    <div class="dropdown card-pf-time-frame-filter">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        Last 30 Days <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-right" role="menu">
+        <li><a href="#">Last 60 Days</a></li>
+        <li><a href="#">Last 90 Days</a></li>
+      </ul>
+    </div>
+    <h2 class="card-pf-title">
+      Card Title
+    </h2>
+  </div>
+  <div class="card-pf-body">
+    <p>[card contents]</p>
+  </div>
+</div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+        <div class="collapse in" id="markup-1">
+          <pre class="prettyprint">
+          
+          
+&lt;body class=&quot;cards-pf&quot;&gt;
+  ...
+  &lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
+    &lt;div class=&quot;row row-cards-pf&quot;&gt;
+      &lt;div class=&quot;col-xs-6 col-sm-4 col-md-4&quot;&gt;
+      &lt;div class=&quot;card-pf&quot;&gt;
+  &lt;div class=&quot;card-pf-heading&quot;&gt;
+    &lt;div class=&quot;dropdown card-pf-time-frame-filter&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+        Last 30 Days &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 60 Days&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 90 Days&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;h2 class=&quot;card-pf-title&quot;&gt;
+      Card Title
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;p&gt;[card contents]&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- /row --&gt;
+  &lt;/div&gt;&lt;!-- /container --&gt;
+&lt;/body&gt;
+          
+          </pre>
+        </div>
+        <h2 id="example-code-2">Timeframe filter in footer</h2>
+        <div class="example-bg">
+          <div class="row">
+            <div class="example-pf col-md-6">
+              <div class="cards-pf">
+                <div class="container-fluid container-cards-pf">
+                  <div class="row-cards-pf">
+                    <div>
+                      <div class="card-pf">
+  <h2 class="card-pf-title">
+    Card Title
+  </h2>
+  <div class="card-pf-body">
+    <p>[card contents]</p>
+  </div>
+  <div class="card-pf-footer">
+    <div class="dropdown card-pf-time-frame-filter">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        Last 30 Days <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-right" role="menu">
+        <li><a href="#">Last 60 Days</a></li>
+        <li><a href="#">Last 90 Days</a></li>
+      </ul>
+    </div>
+    <p>
+      <a href="#" class="card-pf-link-with-icon">
+        <span class="pficon pficon-add-circle-o"></span>Add New Cluster
+      </a>
+    </p>
+  </div>
+</div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
+        <div class="collapse in" id="markup-2">
+          <pre class="prettyprint">
+          
+&lt;body class=&quot;cards-pf&quot;&gt;
+  ...
+  &lt;div class=&quot;container-fluid container-cards-pf&quot;&gt;
+    &lt;div class=&quot;row row-cards-pf&quot;&gt;
+      &lt;div class=&quot;col-xs-6 col-sm-4 col-md-4&quot;&gt;
+        &lt;div class=&quot;card-pf&quot;&gt;
+  &lt;h2 class=&quot;card-pf-title&quot;&gt;
+    Card Title
+  &lt;/h2&gt;
+  &lt;div class=&quot;card-pf-body&quot;&gt;
+    &lt;p&gt;[card contents]&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-pf-footer&quot;&gt;
+    &lt;div class=&quot;dropdown card-pf-time-frame-filter&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+        Last 30 Days &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot; role=&quot;menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 60 Days&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Last 90 Days&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;p&gt;
+      &lt;a href=&quot;#&quot; class=&quot;card-pf-link-with-icon&quot;&gt;
+        &lt;span class=&quot;pficon pficon-add-circle-o&quot;&gt;&lt;/span&gt;Add New Cluster
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- /row --&gt;
+  &lt;/div&gt;&lt;!-- /container --&gt;
+&lt;/body&gt;
+          </pre>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane nested" id="angular">
+        <div ng-app="docsApp" ng-controller="DocsController" class="content">
+          <div ng-include="" src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.card.directive.pfCard - Timeframe Filters.html'"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </section>
+  </article>
+</div>
+
+      </div>
+    </div>
+    <footer>
+  <div class="row">
+    <div class="col-md-9">
+      <p>
+        <a href="http://www.redhat.com" id="logo-redhat" target="_blank">Red Hat</a>
+        PatternFly is a <a href="http://www.redhat.com" target="_blank">Red Hat</a> sponsored project. <br> Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> Creative Commons Attribution 4.0 International license.</a>
+      </p>
+    </div>
+    <div class="col-md-3">
+      <ul class="social">
+<!--
+        <li>
+          <a href="https://blog.patternfly.org"><span class="fa fa-rss-square"></span></a>
+        </li>
+-->
+        <li>
+          <a href="https://github.com/patternfly/patternfly" target="_blank"><span class="fa fa-github-square"></span></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/patternfly_des" target="_blank"><span class="fa fa-twitter-square"></span></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/groups/PatternFlyCommunity/" target="_blank"><span class="fa fa-facebook-square"></span></a>
+        </li>
+        <li>
+          <a href="https://plus.google.com/communities/117224483835467139511" target="_blank"><span class="fa fa-google-plus-square"></span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47523816-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
