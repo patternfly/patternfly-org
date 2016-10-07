@@ -13,7 +13,9 @@ script:
   - 'grunt'
 
 after_success:
+  - sh -x ./scripts/setup-git-env.sh
   - sh -x ./scripts/publish.sh
+  - sh -x ./scripts/publish-ghpages.sh
 
 deploy:
   provider: openshift
