@@ -14,7 +14,9 @@ After ensuring nodejs and npm are available, install [Bower](http://bower.io/) g
 
     npm install -g bower
 
-Bower is used to install and update dependencies.
+Bower is used to install and update dependencies.  Run:
+
+    bower install
 
 ### Install Development Dependencies
 
@@ -30,7 +32,7 @@ Additionally you may need to install the grunt command line utility.  To do this
 
 The site is generated using [Jekyll](http://jekyllrb.com/).  After ensuring Ruby is installed and available, run:
 
-    gem install jekyll
+    bundle install
 
 ### Live Reload Server
 
