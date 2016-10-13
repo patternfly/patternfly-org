@@ -123,7 +123,8 @@ module.exports = function (grunt) {
         options: {
           config: 'source/_config.yml',
           dest: 'source/_site',
-          src: 'source'
+          src: 'source',
+          bundleExec: 'true'
         }
       }
     },
