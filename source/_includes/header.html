@@ -195,22 +195,28 @@
                     <a href="{{ site.baseurl }}pattern-library/data-visualization/area-chart/">Area Chart</a>
                   </li>
                   <li {% if tertiary == 'bar-chart' %} class="active"{% endif %}>
-                  <a href="{{ site.baseurl }}pattern-library/data-visualization/bar-chart/">Bar Chart</a>
+                    <a href="{{ site.baseurl }}pattern-library/data-visualization/bar-chart/">Bar Chart</a>
+                  </li>
+                  <li {% if tertiary == 'bullet-chart' %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}pattern-library/data-visualization/bullet-chart/">Bullet Chart</a>
                   </li>
                   <li {% if tertiary == 'donut-chart' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/data-visualization/donut-chart/">Donut Chart</a>
                   </li>
                   <li {% if tertiary == 'heat-map' %} class="active"{% endif %}>
-                  <a href="{{ site.baseurl }}pattern-library/data-visualization/heat-map/">Heat Map</a>
+                    <a href="{{ site.baseurl }}pattern-library/data-visualization/heat-map/">Heat Map</a>
                   </li>
                   <li {% if tertiary == 'line-chart' %} class="active"{% endif %}>
-                  <a href="{{ site.baseurl }}pattern-library/data-visualization/line-chart/">Line Chart</a>
+                    <a href="{{ site.baseurl }}pattern-library/data-visualization/line-chart/">Line Chart</a>
                   </li>
-                  <li {% if tertiary == 'pie-chart' %} class="active"{% endif %}>
+                    <li {% if tertiary == 'pie-chart' %} class="active"{% endif %}>
                   <a href="{{ site.baseurl }}pattern-library/data-visualization/pie-chart/">Pie Chart</a>
                   </li>
                   <li {% if tertiary == 'sparkline' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/data-visualization/sparkline/">Sparkline</a>
+                  </li>
+                  <li {% if tertiary == 'timeline' %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}pattern-library/data-visualization/timeline/">Timeline</a>
                   </li>
                   <li {% if tertiary == 'utilization-bar-chart' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/data-visualization/utilization-bar-chart/">Utilization Bar Chart</a>
@@ -220,6 +226,9 @@
               <li {% if secondary == 'forms-and-controls' %} class="active"{% endif %}>
                 <a class="{% if secondary == 'forms-and-controls' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="{% if secondary == 'forms-and-controls' %}true{% else %}false{% endif %}" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
                 <ul class="collapse {% if secondary == 'forms-and-controls' %}in{% endif %}" id="forms-and-controls-secondary">
+                  <li {% if tertiary == 'advanced-options' %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}pattern-library/forms-and-controls/advanced-options/">Advanced Options</a>
+                  </li>
                   <li {% if tertiary == 'conditional-fields' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/forms-and-controls/conditional-fields/">Conditional Fields</a>
                   </li>
@@ -231,6 +240,9 @@
                   </li>
                   <li {% if tertiary == 'find' %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/forms-and-controls/find/">Find</a>
+                  </li>
+                  <li {% if tertiary == 'form-field-layouts' %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}pattern-library/forms-and-controls/form-field-layouts/">Form Field Layouts</a>
                   </li>
                   <li {% if tertiary == 'forms' %} class="active"{% endif %}>
                   <a href="{{ site.baseurl }}pattern-library/forms-and-controls/forms/">Forms</a>
