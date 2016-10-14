@@ -4,6 +4,24 @@ set -o errexit -o nounset
 
 # When running this script on TRAVIS, first run the "setup-git-env.sh" script to set the git username accordingly
 
+setUserInfo () {
+  git config user.name "patternfly-build"
+  git config user.email "patternfly-build@redhat.com"
+  git config --global push.default simple
+}
+
+getDeployKey () {
+  # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
+  ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
+  ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
+  ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
+  ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
+  openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in deploy_key.enc -out deploy_key -d
+  chmod 600 deploy_key
+  eval `ssh-agent -s`
+  ssh-add deploy_key
+}
+
 checkRepoSlug () {
   REPO_SLUG="${1:-patternfly/patternfly}"
   REPO_BRANCH="${2:-master}"
@@ -55,6 +73,8 @@ deploySite () {
 
 main () {
   checkRepoSlug "patternfly/patternfly-org" "master"
+  setUserInfo
+  getDeployKey
   cleanSite
   cloneSite
   copySite
