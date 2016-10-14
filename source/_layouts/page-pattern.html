@@ -9,7 +9,9 @@ layout: default
           <h1>{{ page.title }}</h1>
         </div>
         <div class="col-sm-12 col-md-6 cols-nopad-left cols-nopad-right">
-          {% if page.code == false %}
+          {% if page.code == false and page.design == false %}
+            {% include nav-tabs-pattern.html designtab=false codetab=false %}
+          {% elsif page.code == false %}
             {% include nav-tabs-pattern.html codetab=false %}
           {% elsif page.design == false %}
             {% include nav-tabs-pattern.html designtab=false %}
@@ -26,8 +28,10 @@ layout: default
           {{ my_include | site_replace | markdownify }}
         </div>
         <div role="tabpanel" class="tab-pane" id="design">
-          {% capture my_include %}{% include {{page.design}} %}{% endcapture %}
-          {{ my_include | site_replace | markdownify }}
+          {% if page.design != false %}
+            {% capture my_include %}{% include {{page.design}} %}{% endcapture %}
+            {{ my_include | site_replace | markdownify }}
+          {% endif %}
         </div>
         <div role="tabpanel" class="tab-pane" id="code">
           {% if page.code_html == false and page.code_angular != false %}
