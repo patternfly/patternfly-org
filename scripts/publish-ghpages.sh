@@ -1,12 +1,12 @@
-#/bin/bash
+#!/usr/bin/env bash
 
 set -o errexit -o nounset
 
 # When running this script on TRAVIS, first run the "setup-git-env.sh" script to set the git username accordingly
 
 setUserInfo () {
-  git config user.name "patternfly-build"
-  git config user.email "patternfly-build@redhat.com"
+  git config --global user.name "patternfly-build"
+  git config --global user.email "patternfly-build@redhat.com"
   git config --global push.default simple
 }
 
