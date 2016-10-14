@@ -19,7 +19,7 @@ script:
 
 after_success:
   - sh -x ./scripts/publish.sh
-  - sh -x ./scripts/publish-ghpages.sh
+  - ./scripts/publish-ghpages.sh
 
 deploy:
   provider: openshift
