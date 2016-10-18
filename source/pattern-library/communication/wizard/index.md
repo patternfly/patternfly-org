@@ -2,7 +2,6 @@
 title: Wizard
 author: dlabrecq
 layout: page-tabs
-codetab: false
 ---
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">
@@ -14,6 +13,7 @@ codetab: false
     <div class="example-pf">
       <img src="{{site.baseurl}}assets/img/Wizard_Flow_Example.png" alt="wizard-flow-example"/>
     </div>
+    {% include widgets/communication/wizard.html id="complete1" %}
   </div>
   <div role="tabpanel" class="tab-pane" id="design">
     <h2>Loading Screen</h2>
@@ -91,5 +91,23 @@ codetab: false
       <li>Wizards can be shown in modal dialogs or embedded on the main page.  This pattern only address modal dialog implementations.  Embedded wizards may need different design considerations such as location of buttons on the button bar and how Back and Next might work.</li>
     </ol>
     <p>These requirements will be added to the pattern at a later date.</p>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="code">
+    {% include nav-tabs-code.html %}
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane nested active" id="html-css">
+        <h2 id="example-code-1">Complete Wizard</h2>
+        {% include widgets/communication/wizard.html id="complete2" %}
+        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
+        <div class="collapse in" id="markup-1">
+          <pre class="prettyprint">{% capture markup_include %}{% include widgets/communication/wizard.html id="complete" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane nested" id="angular">
+        <div ng-app="docsApp" ng-controller="DocsController" class="content">
+          <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.wizard.directive.pfWizard.html'"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
