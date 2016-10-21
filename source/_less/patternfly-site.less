@@ -27,10 +27,7 @@ body {
   position: absolute;
   right: 0;
   .tab-content & {
-    right: (@grid-gutter-width / 2);
-  }
-  + .prettyprint {
-    /* max-height: 400px; */
+    right: 0;
   }
 }
 
@@ -107,6 +104,10 @@ body {
   &.collapsed:hover:after {
     border-left-color: @link-hover-color;
   }
+}
+
+#code pre {
+  max-height: 364px;
 }
 
 #content {
@@ -1351,6 +1352,14 @@ strong {
 
 th {
   font-weight: 600;
+}
+
+.tab-content,
+.widgets-content {
+  max-width: 920px;
+  .collapse.in {
+    position: relative;
+  }
 }
 
 .tab-pane:not(.nested) > h2:first-child {
