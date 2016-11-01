@@ -1,7 +1,7 @@
 ---
 title: Widgets
 author: dlabrecq
-layout: page
+layout: page-widgets
 ---
 <h3 id="overview">Overview</h3>
 <p>
