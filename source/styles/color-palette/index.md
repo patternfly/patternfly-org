@@ -465,7 +465,7 @@ layout: page
 <div class="row important-box-row">
   <div class="col-md-12 important-box">
         <h2>Important</h2>
-        <p>Use these color swatches to ensure that you are using the correct colors -- do not use the eyedropper tool to select colors. Palettes for Adobe Photoshop and Adobe Illustrator, that have the correct hex colors in swatch form, are also available to download and install. </p>
+        <p>Use these color swatches to ensure that you are using the correct colors -- do not use the eyedropper tool to select colors. Palettes for Adobe Photoshop, Adobe Illustrator and Sketch, that have the correct hex colors in swatch form, are also available to download and install. </p>
     <div class="important-center-container">
       <div class="row">
         <div class="col-md-4 download-button">
@@ -476,9 +476,10 @@ layout: page
             <ul class="dropdown-menu dropdown-menu-pf-full">
               <li><a href="/assets/file/PatternFly_Swatches_08-31-2016.aco">For Adobe Photoshop</a></li>
               <li><a href="/assets/file/PatternFly_Swatches_08-31-2016.ase">For Adobe Illustrator/Indesign</a></li>
+              <li><a href="/assets/file/PatternFly_Palette.sketchpalette">For Sketch</a></li>
             </ul>
           </div>
-          <span class="last-update">Last updated: 31 Aug 2016</span>
+          <span class="last-update">Last updated: 27 Oct 2016</span>
         </div>
         <div class="col-md-8 clearfix">
         <div class="important-color-swatches">
@@ -602,6 +603,15 @@ layout: page
                 <li>Download the Adobe Color file for InDesign.</li>
                 <li>In Finder, go to Applications > Adobe InDesign CC > Presets > Swatch Libraries</li>
                 <li>Place the .ase file into the Swatches folder.</li>
+              </ol>
+              <strong>Install palette for Sketch:</strong>
+              <ol>
+                <li>Download the Sketch palette file.</li>
+                <li>Download the <a href="https://github.com/andrewfiorillo/sketch-palettes" target="top">Sketch-Palettes</a> plugin and follow the installation instructions.</li>
+                <li>Open Sketch and your desired file.</li>
+                <li>In Sketch, go to Plugins > Sketch Palettes > Document Colors > Load Palette</li>
+                <li>Locate the PatternFly_Palette.sketchpalette file that you downloaded.</li>
+                <li>Find the palette in the Inspector sidebar > Fills > Document Colors</li>
               </ol>
             </div>
           </div>
