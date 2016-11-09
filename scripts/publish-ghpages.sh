@@ -50,7 +50,7 @@ cloneSite () {
 
 copySite () {
   rsync -av --delete --exclude .git source/_site/ patternfly.github.io
-  find patternfly.github.io/components -type f -not -regex ".*/.*\.\(html\|js\|css\|less|otf|eot|svg|ttf|woff|woff2\)" -print0 | xargs -0 rm
+  find patternfly.github.io/components -type f -not -regex ".*/.*\.\(html\|js\|css\|less\|otf\|eot\|svg\|ttf\|woff\|woff2\)" -print0 | xargs -0 rm
 }
 
 deploySite () {
@@ -71,7 +71,17 @@ deploySite () {
   fi
 }
 
-main () {
+manualDeploy () {
+  shift
+  echo "Manual deploy"
+  cleanSite
+  cloneSite
+  copySite
+  deploySite
+  cleanSite
+}
+
+travisDeploy () {
   checkRepoSlug "patternfly/patternfly-org" "master"
   setUserInfo
   getDeployKey
@@ -82,4 +92,11 @@ main () {
   cleanSite
 }
 
-main
+ARG="${1:-default}"
+case $ARG in
+  deploy)
+    manualDeploy "$@"
+  ;;
+  *)
+    travisDeploy
+esac
