@@ -844,11 +844,11 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
     <p>See <a href="http://datatables.net">http://datatables.net</a> for complete data tables documentation.</p>
     <p><strong>Note:</strong> jquery.dataTables.js must occur in the html source before patternfly*.js.</p>
     <div class="pf-example">
-     {% include widgets/datatable.html %}
+     {% include widgets/table-view/table-view.html %}
     </div>
     <p class="reference-markup"><a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="data-tables-markup" href="#data-tables-markup">Reference Markup</a></p>
     <div class="collapse" id="data-tables-markup">
-      <pre class="prettyprint">{% capture data_tables_markup_include %}{% include widgets/datatable.html %}
+      <pre class="prettyprint">{% capture data_tables_markup_include %}{% include widgets/table-view/table-view.html %}
 <script src="/components/datatables/media/js/jquery.dataTables.js"></script>
 <script>
   // Initialize Datatables
