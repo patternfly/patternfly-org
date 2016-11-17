@@ -6,7 +6,7 @@ baseurl: '/' # the subpath of your site, e.g. /blog/
 url: 'http://www.patternfly.org' # the base hostname & protocol for your site
 collections:
 - whats-news
-blogurl: https://blog.patternfly.org
+blogurl: http://blog.patternfly.org
 exclude: ["components/patternfly/tests"]
 navbar-pf-navbar-brand-icon: true
 navbar-pf-alt-navbar-brand-icon: true
