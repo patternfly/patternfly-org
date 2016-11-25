@@ -33,7 +33,7 @@ module.exports = function (grunt) {
             return [
               lrSnippet,
               mountFolder(connect, projectConfig.src),
-              mountFolder(connect, projectConfig.src + 'source/_site')
+              mountFolder(connect, projectConfig.src + '_site')
             ];
           },
           port: 9002
@@ -86,7 +86,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: 'submodules/patternfly-design/pattern-library',
             src: ['**/design/**', '!**/documents/**', '!**/*.md'],
-            dest: 'source/_site/pattern-library',
+            dest: '_site/pattern-library',
             rename: function(dest, src) {
               return dest + '/' + src.replace('/design', '');
             }
@@ -122,7 +122,7 @@ module.exports = function (grunt) {
       source: {
         options: {
           config: 'source/_config.yml',
-          dest: 'source/_site',
+          dest: '_site',
           src: 'source',
           bundleExec: 'true'
         }
@@ -188,7 +188,7 @@ module.exports = function (grunt) {
         tasks: ['jekyll', 'copy:postbuild']
       },
       livereload: {
-        files: ['source/_site/**/*.html', '!source/_site/bower_components/**/*.html', '!source/_site/components/**/*.html', 'source/_site/assets/css/*.css', 'source/_site/assets/js/*.js']
+        files: ['_site/**/*.html', '!_site/bower_components/**/*.html', '!_site/components/**/*.html', '_site/assets/css/*.css', '_site/assets/js/*.js']
       },
       options: {
         livereload: 35731
