@@ -91,7 +91,9 @@ module.exports = function (grunt) {
             src: ['**/design/**', '!**/documents/**'],
             dest: '<%= config.build %>/_includes/patterns',
             rename: function(dest, src) {
-              return dest + '/' + src.replace('/design', '');
+              dest = dest + '/' + src.replace('/design', '');
+              dest = dest.replace('site.md', 'index.md');
+              return dest;
             }
           },
           {
@@ -111,6 +113,15 @@ module.exports = function (grunt) {
             dest: '<%= config.build %>/pattern-library',
             rename: function(dest, src) {
               return dest + '/' + src.replace('/design', '');
+            }
+          },
+          {
+            expand: true,
+            cwd: 'submodules/patternfly-design/pattern-library',
+            src: ['**/site.md'],
+            dest: '<%= config.build %>/pattern-library',
+            rename: function(dest, src) {
+              return dest + '/' + src.replace('site.md', 'index.md');
             }
           }
         ]
