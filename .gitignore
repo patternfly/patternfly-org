@@ -23,6 +23,7 @@ build
 source/_includes/widgets
 source/_includes/patterns
 source/_includes/angular-partials
+*.map
 =======
 _site
 public
