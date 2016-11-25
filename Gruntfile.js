@@ -65,6 +65,17 @@ module.exports = function (grunt) {
       }
     },
     copy: {
+      bower: {
+        files: [
+          // Copy resources from git submodules
+          {
+            expand: true,
+            cwd: 'bower_components',
+            src: ['**'],
+            dest: '<%= config.build %>/components'
+          },
+        ]
+      },
       prebuild: {
         files: [
           // Copy resources from git submodules
@@ -148,7 +159,8 @@ module.exports = function (grunt) {
         options: {
           paths: [
             'less/',
-            'node_modules/'
+            'node_modules/',
+            '_build/components/'
           ],
           sourceMap: true,
           outputSourceFiles: true,
@@ -163,7 +175,8 @@ module.exports = function (grunt) {
         options: {
           paths: [
             'less/',
-            'node_modules/'
+            'node_modules/',
+            '_build/components/'
           ],
           sourceMap: true,
           outputSourceFiles: true,
@@ -221,6 +234,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean',
+    'copy:bower',
     'sync:source',
     'copy:design',
     'prebuild',

@@ -25,5 +25,5 @@ _build
 _site
 public
 .DS_Store
-source/components
+bower_components
 source/assets/css
