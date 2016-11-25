@@ -245,11 +245,16 @@ module.exports = function (grunt) {
     'jekyll'
   ]);
 
-  grunt.registerTask('server', [
+  grunt.registerTask('serve', [
     'build',
     'connect:server',
     'watch'
   ]);
+
+  grunt.registerTask('server', function () {
+    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
+    grunt.task.run(['serve']);
+  });
 
   grunt.registerTask('default', ['build']);
 };
