@@ -8,17 +8,13 @@ env:
   - COMMIT_AUTHOR_EMAIL: "patternfly-build@redhat.com"
 
 before_install:
-  - 'git checkout -B $TRAVIS_BRANCH' # Reconcile detached HEAD
   - 'npm install -g bower grunt-cli'
   - 'gem install jekyll -v 3.1.6'
 
 script:
-  - 'npm install'
-  - 'bower install'
-  - 'grunt'
+  - sh -x ./scripts/build.sh
 
 after_success:
-  - sh -x ./scripts/publish.sh
   - ./scripts/publish-ghpages.sh
 
 deploy:
