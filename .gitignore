@@ -19,13 +19,11 @@ npm.cmd
 
 # Ignore generated files
 patternfly.spec
-build
-source/_includes/widgets
-source/_includes/patterns
-source/_includes/angular-partials
+_build
+*.map
 =======
 _site
 public
 .DS_Store
-source/components
+bower_components
 source/assets/css
