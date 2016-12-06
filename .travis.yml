@@ -21,7 +21,7 @@ script:
 
 after_success:
   - sh -x ./scripts/publish.sh
-  - ./scripts/publish-ghpages.sh -w -r "git@github.com:patternfly/patternfly.github.io.git" -b master _site
+  - ./scripts/publish-ghpages.sh -t -w -r "git@github.com:patternfly/patternfly.github.io.git" -b master _site
 
 deploy:
   provider: openshift
