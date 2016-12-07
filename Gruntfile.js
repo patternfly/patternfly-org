@@ -89,12 +89,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: 'submodules/patternfly-design/pattern-library',
             src: ['**/design/**', '!**/documents/**'],
-            dest: '<%= config.build %>/_includes/pattern-library',
-            rename: function(dest, src) {
-              dest = dest + '/' + src.replace('/design', '');
-              dest = dest.replace('site.md', 'index.md');
-              return dest;
-            }
+            dest: '<%= config.build %>/_includes/pattern-library'
           },
           {
             expand: true,
