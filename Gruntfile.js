@@ -85,11 +85,23 @@ module.exports = function (grunt) {
             src: ['**'],
             dest: '<%= config.build %>/_includes/widgets'
           },
+          // this one is deprecated
           {
             expand: true,
             cwd: 'submodules/patternfly-design/pattern-library',
             src: ['**/design/**', '!**/documents/**'],
             dest: '<%= config.build %>/_includes/patterns',
+            rename: function(dest, src) {
+              dest = dest + '/' + src.replace('/design', '');
+              dest = dest.replace('site.md', 'index.md');
+              return dest;
+            }
+          },
+          {
+            expand: true,
+            cwd: 'submodules/patternfly-design/pattern-library',
+            src: ['**/design/**', '!**/documents/**'],
+            dest: '<%= config.build %>/_includes/pattern-library',
             rename: function(dest, src) {
               dest = dest + '/' + src.replace('/design', '');
               dest = dest.replace('site.md', 'index.md');
