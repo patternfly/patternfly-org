@@ -26,7 +26,7 @@ layout: page
   <tr>
   <td>December 7, 2016</td>
   <td><a href="https://www.dropbox.com/s/kknzi0altkcd6fy/PatternFly%20Community%20Meeting%202016-12.pdf?dl=0">View Deck</a></td>
-<td><a target="_blank" href="https://bluejeans.com/s/PZdLS/">View Recording</a></td>
+<td><a target="_blank" href="https://bluejeans.com/s/tvGXE/">View Recording</a></td>
   </tr>
     <td>November 2, 2016</td>
     <td><a href="https://www.dropbox.com/s/q9sue4oqeb9rzd9/PatternFly%20Community%20Meeting%202016-11.pdf?dl=0">View Deck</a></td>
