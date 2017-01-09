@@ -44,10 +44,12 @@ layout: default
             {% include nav-tabs-code.html %}
           {% endif %}
           <div class="tab-content">
-            <div role="tabpanel" class="tab-pane nested active" id="html-css">
-              <!-- % include {{page.code_html}} % -->
+            <div role="tabpanel" class="tab-pane nested{% if page.code_html %} active{% endif %}" id="html-css">
+              {% if page.code_html %}
+                {% include {{page.code_html}} %}
+              {% endif %}
             </div>
-            <div role="tabpanel" class="tab-pane nested active" id="angular">
+            <div role="tabpanel" class="tab-pane nested{% if page.code_html == nil or page.code_html == false %} active{% endif %}" id="angular">
               <div ng-app="docsApp" ng-controller="DocsController" class="content">
                 <div ng-include src="'{{page.code_angular}}'"></div>
                 <!-- % include {{page.code}} % -->
