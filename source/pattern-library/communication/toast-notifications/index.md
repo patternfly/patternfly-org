@@ -1,8 +1,11 @@
 ---
-title: Toast Notifications
-author: dlabrecq
-layout: page-tabs
+layout: page-pattern
+overview: pattern-library/communication/toast-notifications/design/overview.md
+design: pattern-library/communication/toast-notifications/design/design.md
+code_html: code/communication/toast-notifications/code.md
+code_angular: /components/angular-patternfly/dist/docs/partials/api/patternfly.notification.directive.pfInlineNotification.html
 ---
+
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">
     <p>Toast notifications pop onto the screen to notify the user of a system occurrence. The notifications should have
@@ -49,43 +52,11 @@ layout: page-tabs
     {% include nav-tabs-code.html angular=false %}
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <p>Jump to <a href="#example-code-1">Examples</a>, <a href="#example-code-2">With Max-Width</a> or <a href="#example-code-3">In Context</a></p>
-        <h2 id="example-code-1">Examples</h2>
-        <div class="example-pf">
-          {% include widgets/communication/toast-info.html %}<br>
-          {% include widgets/communication/toast-success.html %}<br>
-          {% include widgets/communication/toast-warning.html %}<br>
-          {% include widgets/communication/toast-danger.html %}
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">{% capture markup_include %}
-{% include widgets/communication/toast-info.html %}
-{% include widgets/communication/toast-success.html %}
-{% include widgets/communication/toast-warning.html %}
-{% include widgets/communication/toast-danger.html %}
-          {% endcapture %}{{ markup_include | xml_escape }}</pre>
-        </div>
-        <h2 id="example-code-2">With Max-Width</h2>
-        <div class="example-pf">
-          {% include widgets/communication/toast-max-width.html %}
-        </div>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
-        <div class="collapse in" id="markup-2">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/communication/toast-max-width.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
-        </div>
-        <h2 id="example-code-3">In Context</h2>
-        <p>
-          <img src="{{site.baseurl}}assets/img/example_toast2.png" alt="in-context-example"/>
-        </p>
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
-        <div class="collapse in" id="markup-3">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/communication/toast-in-context.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
-        </div>
+
       </div>
       <div role="tabpanel" class="tab-pane nested" id="angular">
         <div ng-app="docsApp" ng-controller="DocsController" class="content">
-          <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.notification.directive.pfInlineNotification.html'"></div>
+          <div ng-include src="''"></div>
         </div>
       </div>
     </div>

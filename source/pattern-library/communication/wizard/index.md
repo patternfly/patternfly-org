@@ -1,7 +1,9 @@
 ---
-title: Wizard
-author: dlabrecq
-layout: page-tabs
+layout: page-pattern
+overview: pattern-library/communication/wizard/design/overview.md
+design: pattern-library/communication/wizard/design/design.md
+code_html: code/communication/wizard/code.md
+code_angular: /components/angular-patternfly/dist/docs/partials/api/patternfly.wizard.directive.pfWizard.html
 ---
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">
@@ -96,17 +98,7 @@ layout: page-tabs
     {% include nav-tabs-code.html %}
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <h2 id="example-code-1">Complete Wizard</h2>
-        {% include widgets/communication/wizard.html id="complete2" %}
-        <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-        <div class="collapse in" id="markup-1">
-          <pre class="prettyprint">{% capture markup_include %}{% include widgets/communication/wizard.html id="complete" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
-        </div>
-      </div>
-      <div role="tabpanel" class="tab-pane nested" id="angular">
-        <div ng-app="docsApp" ng-controller="DocsController" class="content">
-          <div ng-include src="'/components/angular-patternfly/dist/docs/partials/api/patternfly.wizard.directive.pfWizard.html'"></div>
-        </div>
+        
       </div>
     </div>
   </div>
