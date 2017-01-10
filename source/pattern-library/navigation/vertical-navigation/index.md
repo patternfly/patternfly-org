@@ -29,7 +29,7 @@ submenus: true
     <h2 id="example-overview-2">With Primary Menu Icons</h2>
     <div class="example-pf">
       <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation.html"
-              width="100%" height="650px;" scrolling="no" seamless></iframe> 
+              width="100%" height="650px;" scrolling="no" seamless></iframe>
     </div>
     <p><a href="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation.html" target="_blank">View full page example</a></p>
     <h2 id="example-overview-3">Without Primary Menu Icons</h2>
@@ -49,7 +49,7 @@ submenus: true
       <li><b>Burger Bar</b>: If necessary, burger bar icon can be used within the masthead</li>
       <li><b>Logo Area</b>: The logo area contains the application product name image file, in the form of a sized SVG graphic</li>
       </ol>
-    
+
     <h2>Primary Navigation</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
@@ -65,7 +65,7 @@ submenus: true
         </ol>
       </div>
     </div>
-   
+
     <h2>Primary with Secondary Navigation</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
@@ -82,7 +82,7 @@ submenus: true
         </ol>
       </div>
     </div>
-   
+
     <h2>Primary with Tertiary Navigation</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
@@ -93,11 +93,11 @@ submenus: true
       <div class="col-md-5 col-lg-7">
         <p>Tertiary navigation is non-persistent and only appears on hover.  The tertiary navigation is shown as a third column that opens to the right.</p>
         <ol>
-          <li><b>Pin Menu</b> (optional):</li>  
+          <li><b>Pin Menu</b> (optional):</li>
           <ul>
             <li>If the secondary navigation is pinned, the navigation is collapsed to a single column and the secondary navigation is the only menu visible. </li>
             <li>If the tertiary navigation is pinned, the navigation is collapsed to a single column and the tertiary navigation is the only menu visible.</li>
-          </ul> 
+          </ul>
           <li><b>Label:</b></li>
           <ul>
           <li>The label at the top of the secondary navigation mirrors the selected primary category to reinforce the user’s current location.</li>
@@ -118,7 +118,7 @@ submenus: true
         </ul>
       </div>
     </div>
-   
+
     <h2>Primary Navigation (Responsive State)</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
@@ -132,7 +132,7 @@ submenus: true
         </ol>
       </div>
     </div>
-   
+
     <h2>Secondary Navigation (Responsive State)</h2>
     <div class="row">
       <div class="col-md-7 col-lg-5">
@@ -148,56 +148,12 @@ submenus: true
       </div>
     </div>
   </div>
-  
+
   <div role="tabpanel" class="tab-pane" id="code">
     {% include nav-tabs-code.html angular=false %}
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane nested active" id="html-css">
-        <p>Jump to <a href="#example-code-1">With Primary Menu Icons</a> or <a href="#example-code-2">Without Primary Menu Icons</a></p>
-        <h2 id="example-code-1">With Primary Menu Icons</h2>
-        <div class="example-pf">
-          <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation.html"
-                  width="100%" height="650px;" scrolling="no" seamless></iframe>
-        </div>
-        <p><a href="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation.html" target="_blank">View full page example</a></p>
-        <div class="row">
-          <div class="col-md-12">
-            <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
-            <div class="collapse in" id="markup-1">
-              <pre class="prettyprint">{% capture markup_include %}
-<html class="layout-pf layout-pf-fixed">
-...
-<script src="components/c3/c3.min.js"></script>
-<script src="components/d3/d3.min.js"></script>
-<script src="components/matchHeight/jquery.matchHeight-min.js"></script>
-{% include widgets/navigation/vertical-navigation.html %}
-</html>
-              {% endcapture %}{{ markup_include | xml_escape }}</pre>
-            </div>
-          </div>
-        </div>
-        <h2 id="example-code-2">Without Primary Menu Icons</h2>
-        <div class="example-pf">
-          <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html"
-                  width="100%" height="650px;" scrolling="no" seamless></iframe>
-        </div>
-        <p><a href="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html" target="_blank">View full page example</a></p>
-        <div class="row">
-          <div class="col-md-12">
-            <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
-            <div class="collapse in" id="markup-2">
-              <pre class="prettyprint">{% capture markup_include %}
-<html class="layout-pf layout-pf-fixed">
-...
-<script src="components/c3/c3.min.js"></script>
-<script src="components/d3/d3.min.js"></script>
-<script src="components/matchHeight/jquery.matchHeight-min.js"></script>
-{% include widgets/navigation/vertical-navigation.html %}
-</html>
-              {% endcapture %}{{ markup_include | xml_escape }}</pre>
-            </div>
-          </div>
-        </div>
+        {% include code/navigation/vertical-navigation/code.md %}
       </div>
     </div>
   </div>
