@@ -115,160 +115,33 @@
               <li {% if secondary == 'index.html' %} class="active"{% endif %}>
                 <a href="{{ site.baseurl }}pattern-library/">Overview</a>
               </li>
-              <li {% if secondary == 'application-framework' %} class="active"{% endif %}>
-                <a class="{% if secondary == 'application-framework' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#application-framework-secondary" aria-expanded="{% if secondary == 'application-framework' %}true{% else %}false{% endif %}" aria-controls="application-framework-secondary">Application Framework</a>
-                <ul class="collapse {% if secondary == 'application-framework' %}in{% endif %}" id="application-framework-secondary">
-                  <li {% if tertiary == 'login-page' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/application-framework/login-page/">Login Page</a>
+              {% for library in site.patternLibraries %}
+              <li {% if secondary == library %} class="active"{% endif %}>
+                <a class="{% if secondary == library %}{% else %}collapsed{% endif %}"
+                   role="button" data-toggle="collapse"
+                   href="#{{ library }}-secondary"
+                   aria-expanded="{% if secondary == 'library' %}true{% else %}false{% endif %}"
+                   aria-controls="{{ library }}-secondary">
+                   {{library}}
+                </a>
+                <ul class="collapse {% if secondary == library %}in{% endif %}"
+                    id="{{ library }}-secondary">
+                {% for node in site.patternPages %}
+                  {% if node.url contains primary and node.url contains library %}
+                    {% assign node_url_parts = node.url | split: '/' %}
+                    {% assign pagename = node_url_parts[3] %}
+                    {% assign filename = node_url_parts[4] %}
+                    {% if filename == null %}
+                  <li {% if tertiary == pagename %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}pattern-library/{{ library }}/{{ pagename }}/">{{ pagename }}</a>
                   </li>
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
                 </ul>
               </li>
-              <li {% if secondary == 'cards' %} class="active"{% endif %}>
-                <a class="{% if secondary == 'cards' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#cards-secondary" aria-expanded="{% if secondary == 'cards' %}true{% else %}false{% endif %}" aria-controls="cards-secondary">Cards</a>
-                <ul class="collapse {% if secondary == 'cards' %}in{% endif %}" id="cards-secondary">
-                  <li {% if tertiary == 'aggregate-status-card' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/cards/aggregate-status-card/">Aggregate Status Card</a>
-                  </li>
-                  <li {% if tertiary == 'trend-card' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/cards/trend-card/">Trend Card</a>
-                  </li>
-                  <li {% if tertiary == 'utilization-bar-card' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/cards/utilization-bar-card/">Utilization Bar Card</a>
-                  </li>
-                   <li {% if tertiary == 'utilization-trend-card' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/cards/utilization-trend-card/">Utilization Trend Card</a>
-                  </li>
-                </ul>
-              </li>
-              <li {% if secondary == 'communication' %} class="active"{% endif %}>
-                <a class="{% if secondary == 'communication' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#communication-secondary" aria-expanded="{% if secondary == 'communication' %}true{% else %}false{% endif %}" aria-controls="communication-secondary">Communication</a>
-                <ul class="collapse {% if secondary == 'communication' %}in{% endif %}" id="communication-secondary">
-                  <li {% if tertiary == 'about-modal' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/communication/about-modal/">About Modal</a>
-                  </li>
-                  <li {% if tertiary == 'empty-state' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/communication/empty-state/">Empty State</a>
-                  </li>
-                  <li {% if tertiary == 'inline-notifications' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/communication/inline-notifications/">Inline Notifications</a>
-                  </li>
-                  <li {% if tertiary == 'notification-drawer' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/communication/notification-drawer/">Notification Drawer</a>
-                  </li>
-                  <li {% if tertiary == 'toast-notifications' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/communication/toast-notifications/">Toast Notifications</a>
-                  </li>
-                  <li {% if tertiary == 'wizard' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/communication/wizard/">Wizard</a>
-                  </li>
-                </ul>
-              </li>
-              <li {% if secondary == 'content-views' %} class="active"{% endif %}>
-                <a class="{% if secondary == 'content-views' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#content-views-secondary" aria-expanded="{% if secondary == 'content-views' %}true{% else %}false{% endif %}" aria-controls="content-views-secondary">Content Views</a>
-                <ul class="collapse {% if secondary == 'content-views' %}in{% endif %}" id="content-views-secondary">
-                  <li {% if tertiary == 'card-view' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/content-views/card-view/">Card View</a>
-                  </li>
-                  <li {% if tertiary == 'list-view' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/content-views/list-view/">List View</a>
-                  </li>
-                  <li {% if tertiary == 'table-view' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/content-views/table-view/">Table View</a>
-                  </li>
-                </ul>
-              </li>
-              <li {% if secondary == 'dashboard' %} class="active"{% endif %}>
-                <a class="{% if secondary == 'dashboard' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#dashboard-secondary" aria-expanded="{% if secondary == 'dashboard' %}true{% else %}false{% endif %}" aria-controls="dashboard-secondary">Dashboard</a>
-                <ul class="collapse {% if secondary == 'dashboard' %}in{% endif %}" id="dashboard-secondary">
-                  <li {% if tertiary == 'dashboard-card' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/dashboard/dashboard-card/">Dashboard Card (Base)</a>
-                  </li>
-                  <li {% if tertiary == 'dashboard-layout' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/dashboard/dashboard-layout/">Dashboard Layout</a>
-                  </li>
-                </ul>
-              </li>
-              <li {% if secondary == 'data-visualization' %} class="active"{% endif %}>
-                <a class="{% if secondary == 'data-visualization' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#data-visualization-secondary" aria-expanded="{% if secondary == 'data-visualization' %}true{% else %}false{% endif %}" aria-controls="data-visualization-secondary">Data Visualization</a>
-                <ul class="collapse {% if secondary == 'data-visualization' %}in{% endif %}" id="data-visualization-secondary">
-                  <li {% if tertiary == 'area-chart' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/data-visualization/area-chart/">Area Chart</a>
-                  </li>
-                  <li {% if tertiary == 'bar-chart' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/data-visualization/bar-chart/">Bar Chart</a>
-                  </li>
-                  <li {% if tertiary == 'bullet-chart' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/data-visualization/bullet-chart/">Bullet Chart</a>
-                  </li>
-                  <li {% if tertiary == 'donut-chart' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/data-visualization/donut-chart/">Donut Chart</a>
-                  </li>
-                  <li {% if tertiary == 'heat-map' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/data-visualization/heat-map/">Heat Map</a>
-                  </li>
-                  <li {% if tertiary == 'line-chart' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/data-visualization/line-chart/">Line Chart</a>
-                  </li>
-                    <li {% if tertiary == 'pie-chart' %} class="active"{% endif %}>
-                  <a href="{{ site.baseurl }}pattern-library/data-visualization/pie-chart/">Pie Chart</a>
-                  </li>
-                  <li {% if tertiary == 'sparkline' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/data-visualization/sparkline/">Sparkline</a>
-                  </li>
-                  <li {% if tertiary == 'timeline' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/data-visualization/timeline/">Timeline</a>
-                  </li>
-                  <li {% if tertiary == 'utilization-bar-chart' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/data-visualization/utilization-bar-chart/">Utilization Bar Chart</a>
-                  </li>
-                </ul>
-              </li>
-              <li {% if secondary == 'forms-and-controls' %} class="active"{% endif %}>
-                <a class="{% if secondary == 'forms-and-controls' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#forms-and-controls-secondary" aria-expanded="{% if secondary == 'forms-and-controls' %}true{% else %}false{% endif %}" aria-controls="forms-and-controls-secondary">Forms and Controls</a>
-                <ul class="collapse {% if secondary == 'forms-and-controls' %}in{% endif %}" id="forms-and-controls-secondary">
-                  <li {% if tertiary == 'date-picker' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/forms-and-controls/date-picker/">Date Picker</a>
-                  </li>
-                  <li {% if tertiary == 'errors-and-validation' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/forms-and-controls/errors-and-validation/">Errors and Validation</a>
-                  </li>
-                  <li {% if tertiary == 'expand-collapse-section' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/forms-and-controls/expand-collapse-section/">Expand/Collapse Section</a>
-                  </li>
-                  <li {% if tertiary == 'field-level-help' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/forms-and-controls/field-level-help/">Field Level Help</a>
-                  </li>
-                  <li {% if tertiary == 'find' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/forms-and-controls/find/">Find</a>
-                  </li>
-                  <li {% if tertiary == 'form-field-layouts' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/forms-and-controls/form-field-layouts/">Form Field Layouts</a>
-                  </li>
-                  <li {% if tertiary == 'forms' %} class="active"{% endif %}>
-                  <a href="{{ site.baseurl }}pattern-library/forms-and-controls/forms/">Forms</a>
-                  </li>
-                  <li {% if tertiary == 'progressive-disclosure' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/forms-and-controls/progressive-disclosure/">Progressive Disclosure</a>
-                  </li>
-                  <li {% if tertiary == 'time-picker' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/forms-and-controls/time-picker/">Time Picker</a>
-                  </li>
-                  <li {% if tertiary == 'toolbar' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/forms-and-controls/toolbar/">Toolbar</a>
-                  </li>
-                </ul>
-              </li>
-              <li {% if secondary == 'navigation' %} class="active"{% endif %}>
-                <a class="{% if secondary == 'navigation' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#navigation-secondary" aria-expanded="{% if secondary == 'navigation' %}true{% else %}false{% endif %}" aria-controls="navigation-secondary">Navigation</a>
-                <ul class="collapse {% if secondary == 'navigation' %}in{% endif %}" id="navigation-secondary">
-                  <li {% if tertiary == 'horizontal-navigation' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/navigation/horizontal-navigation/">Horizontal Navigation</a>
-                  </li>
-                  <li {% if tertiary == 'vertical-navigation' %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/navigation/vertical-navigation/">Vertical Navigation</a>
-                  </li>
-                </ul>
-              </li>
+              {% endfor %}
+
               <li {% if secondary == 'widgets' %} class="active"{% endif %}>
               <a class="{% if secondary == 'widgets' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="{% if secondary == 'widgets' %}true{% else %}false{% endif %}" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse {% if secondary == 'widgets' %}in{% endif %}" id="widgets-secondary">
