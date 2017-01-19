@@ -34,11 +34,12 @@ module Jekyll
   end
 
   class PatternPage
-    attr_accessor :library, :title, :url, :name, :filename
+    attr_accessor :primary, :library, :title, :url, :name, :filename
 
     def initialize(url)
       @url = url
       parts = url.split('/')
+      @primary = parts[1]
       @library = parts[2]
       @name = parts[3]
       @filename = parts[4]
@@ -68,14 +69,17 @@ module Jekyll
       libs = Hash.new
       site.pages.each do |page|
         parts = page.url.split('/')
-        if ( parts[1] == 'pattern-library' && !parts[2].nil?)
-          patternPage = PatternPage.new(page.url)
+        patternPage = PatternPage.new(page.url)
+        if ( patternPage.primary == 'pattern-library' &&
+             !patternPage.library.nil? &&
+             patternPage.library != 'widgets')
           patternLibrary = libs[patternPage.library]
           if (patternLibrary.nil?)
             patternLibrary = PatternLibrary.new(patternPage.library)
             libs[patternLibrary.library] = patternLibrary
           end
-          patternLibrary.pages.push(patternPage).sort!
+          # index files only
+          patternLibrary.pages.push(patternPage).sort! if (patternPage.filename.nil?)
         end
       end
       site.config['patternLibraries'] = libs.values.sort
