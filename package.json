@@ -1,6 +1,6 @@
 {
   "name": "patternfly-org",
-  "version": "3.18.0",
+  "version": "3.18.1",
   "author": "Red Hat",
   "license": "Apache-2.0",
   "devDependencies": {
@@ -19,7 +19,7 @@
     "grunt-run": "^0.6.0",
     "grunt-sync": "^0.6.2",
     "matchdep": "~0.3.0",
-    "patternfly-eng-release": "git+https://github.com/patternfly/patternfly-eng-release.git"
+    "patternfly-eng-release": "~3.18.1"
   },
   "description": "Documentation, etc. for PatternFly",
   "repository": {
