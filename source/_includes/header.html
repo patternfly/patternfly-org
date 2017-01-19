@@ -116,23 +116,7 @@
                 <a href="{{ site.baseurl }}pattern-library/">Overview</a>
               </li>
               {% for patternLibrary in site.patternLibraries %}
-              <li {% if secondary == patternLibrary.library %} class="active"{% endif %}>
-                <a class="{% if secondary == patternLibrary.library %}{% else %}collapsed{% endif %}"
-                   role="button" data-toggle="collapse"
-                   href="#{{ patternLibrary.library }}-secondary"
-                   aria-expanded="{% if secondary == 'patternLibrary.library' %}true{% else %}false{% endif %}"
-                   aria-controls="{{ patternLibrary.library }}-secondary">
-                   {{patternLibrary.title}}
-                </a>
-                <ul class="collapse {% if secondary == patternLibrary.library %}in{% endif %}"
-                    id="{{ patternLibrary.library }}-secondary">
-                {% for node in patternLibrary.pages %}
-                  <li {% if tertiary == node.name %} class="active"{% endif %}>
-                    <a href="{{ site.baseurl }}pattern-library/{{ node.library }}/{{ node.name }}">{{ node.title }}</a>
-                  </li>
-                {% endfor %}
-                </ul>
-              </li>
+                {% include menu-node.html menuNode=patternLibrary %}
               {% endfor %}
 
               <li {% if secondary == 'widgets' %} class="active"{% endif %}>
