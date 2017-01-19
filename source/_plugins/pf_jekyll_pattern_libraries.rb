@@ -1,9 +1,39 @@
 require "set"
 
-module Jekyll
-  class PatternPage
-    attr_accessor :url, :library, :name, :title, :filename
+module MyJekyll
+  class PatternLibrary
+    attr_accessor :library, :title
 
+    def initialize(url)
+      parts = url.split('/')
+      @library = parts[2]
+      @title = GenerateTitle(@library)
+    end
+
+    def GenerateTitle(string)
+      string.split('-')
+      .each{|i| i.capitalize! if ! ['and', 'or'].include? i }
+      .join(' ') unless string.nil?
+    end
+
+    def ==(other)
+      self.library == other.library
+    end
+
+    def <=>(other)
+      self.library <=> other.library
+    end
+
+    def to_liquid
+      {
+        'library' => library,
+        'title' => title
+      }
+    end
+  end
+
+  class PatternPage < PatternLibrary
+    attr_accessor :url, :name, :filename
 
     def initialize(url)
       @url = url
@@ -11,13 +41,7 @@ module Jekyll
       @library = parts[2]
       @name = parts[3]
       @filename = parts[4]
-      @title = generateTitle(@name)
-    end
-
-    def generateTitle(string)
-      string.split('-')
-        .each{|i| i.capitalize! if ! ['and', 'or'].include? i }
-        .join(' ') unless string.nil?
+      @title = GenerateTitle(@name)
     end
 
     def ==(other)
@@ -33,37 +57,6 @@ module Jekyll
         'url' => url,
         'library' => library,
         'name' => name,
-        'title' => title
-      }
-    end
-  end
-
-  class PatternLibrary
-    attr_accessor :library, :title
-    def initialize(url)
-      @url = url
-      parts = url.split('/')
-      @library = parts[2]
-      @title = generateTitle(@library)
-    end
-
-    def generateTitle(string)
-      string.split('-')
-        .each{|i| i.capitalize! if ! ['and', 'or'].include? i }
-        .join(' ') unless string.nil?
-    end
-
-    def ==(other)
-      self.library == other.library
-    end
-
-    def <=>(other)
-      self.library <=> other.library
-    end
-
-    def to_liquid
-      {
-        'library' => library,
         'title' => title
       }
     end
