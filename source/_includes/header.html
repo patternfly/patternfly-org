@@ -126,12 +126,10 @@
                 </a>
                 <ul class="collapse {% if secondary == patternLibrary.library %}in{% endif %}"
                     id="{{ patternLibrary.library }}-secondary">
-                {% for node in site.patternPages %}
-                  {% if node.library == patternLibrary.library %}
+                {% for node in patternLibrary.pages %}
                   <li {% if tertiary == node.name %} class="active"{% endif %}>
                     <a href="{{ site.baseurl }}pattern-library/{{ node.library }}/{{ node.name }}">{{ node.title }}</a>
                   </li>
-                  {% endif %}
                 {% endfor %}
                 </ul>
               </li>

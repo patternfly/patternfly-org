@@ -1,19 +1,19 @@
 require "set"
 
-module MyJekyll
+module Jekyll
+  GenerateTitle = lambda { |string|
+    string.split('-')
+    .each{|i| i.capitalize! if ! ['and', 'or'].include? i }
+    .join(' ') unless string.nil?
+  }
+
   class PatternLibrary
-    attr_accessor :library, :title
+    attr_accessor :library, :title, :pages
 
-    def initialize(url)
-      parts = url.split('/')
-      @library = parts[2]
-      @title = GenerateTitle(@library)
-    end
-
-    def GenerateTitle(string)
-      string.split('-')
-      .each{|i| i.capitalize! if ! ['and', 'or'].include? i }
-      .join(' ') unless string.nil?
+    def initialize(library)
+      @library = library
+      @title = GenerateTitle.call(library)
+      @pages = Array.new
     end
 
     def ==(other)
@@ -27,13 +27,14 @@ module MyJekyll
     def to_liquid
       {
         'library' => library,
-        'title' => title
+        'title' => title,
+        'pages' => pages
       }
     end
   end
 
-  class PatternPage < PatternLibrary
-    attr_accessor :url, :name, :filename
+  class PatternPage
+    attr_accessor :library, :title, :url, :name, :filename
 
     def initialize(url)
       @url = url
@@ -41,7 +42,7 @@ module MyJekyll
       @library = parts[2]
       @name = parts[3]
       @filename = parts[4]
-      @title = GenerateTitle(@name)
+      @title = GenerateTitle.call(@name)
     end
 
     def ==(other)
@@ -64,19 +65,20 @@ module MyJekyll
 
   class SitePatternPageGenerator < Jekyll::Generator
     def generate(site)
-      libs = Array.new
-      pages = Array.new
+      libs = Hash.new
       site.pages.each do |page|
         parts = page.url.split('/')
         if ( parts[1] == 'pattern-library' && !parts[2].nil?)
           patternPage = PatternPage.new(page.url)
-          pages.push(patternPage) if patternPage.filename.nil?
-          patternLibrary = PatternLibrary.new(page.url)
-          libs.push(patternLibrary) unless libs.include?(patternLibrary)
+          patternLibrary = libs[patternPage.library]
+          if (patternLibrary.nil?)
+            patternLibrary = PatternLibrary.new(patternPage.library)
+            libs[patternLibrary.library] = patternLibrary
+          end
+          patternLibrary.pages.push(patternPage).sort!
         end
       end
-      site.config['patternLibraries'] = libs.sort
-      site.config['patternPages'] = pages.sort
+      site.config['patternLibraries'] = libs.values.sort
     end
   end
 end
