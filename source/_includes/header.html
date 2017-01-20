@@ -119,6 +119,9 @@
                 {% include menu-node.html menuNode=patternLibrary %}
               {% endfor %}
 
+                  <li {% if tertiary == 'masthead' %} class="active"{% endif %}>
+                    <a href="{{ site.baseurl }}pattern-library/application-framework/masthead/">Masthead</a>
+                  </li>
               <li {% if secondary == 'widgets' %} class="active"{% endif %}>
               <a class="{% if secondary == 'widgets' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="{% if secondary == 'widgets' %}true{% else %}false{% endif %}" aria-controls="widgets-secondary">Widgets</a>
               <ul class="collapse {% if secondary == 'widgets' %}in{% endif %}" id="widgets-secondary">
