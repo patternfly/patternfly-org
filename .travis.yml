@@ -21,6 +21,7 @@ script:
   - sh -x ./node_modules/patternfly-eng-release/scripts/_build.sh -o
 
 after_success:
+  - grunt build
   - ./scripts/publish-ghpages.sh -t -w -r "git@github.com:patternfly/patternfly.github.io.git" -b master _site
 
 deploy:
