@@ -377,5 +377,5 @@ To use on the desktop, install [PatternFlyIcons-webfont.ttf][1] or [FontAwesome.
   });
 </script>
 
- [1]: https://github.com/patternfly/patternfly/raw/master/dist/fonts/PatternFlyIcons-webfont.ttf
- [2]: https://github.com/patternfly/patternfly/raw/master/dist/fonts/FontAwesome.otf
+ [1]: https://github.com/patternfly/patternfly/raw/master-dist/dist/fonts/PatternFlyIcons-webfont.ttf
+ [2]: https://github.com/patternfly/patternfly/raw/master-dist/dist/fonts/FontAwesome.otf
