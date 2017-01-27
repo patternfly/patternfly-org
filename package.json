@@ -19,6 +19,7 @@
     "grunt-run": "^0.6.0",
     "grunt-sync": "^0.6.2",
     "matchdep": "~0.3.0",
+    "open": "0.0.5",
     "patternfly-eng-release": "~3.18.1",
     "serve-static": "^1.11.2"
   },

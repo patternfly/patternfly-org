@@ -2,7 +2,8 @@
 var connect = require('connect'),
     connectLivereload = require('connect-livereload'),
     serveStatic = require('serve-static'),
-    http = require('http');
+    http = require('http'),
+    open = require("open");
 
 module.exports = function (grunt) {
   // load all grunt tasks
@@ -249,13 +250,15 @@ module.exports = function (grunt) {
     var host = '0.0.0.0'
     var port = 9002;
     grunt.log.writeln(`Starting static web server for folder ${config.site} on host ${host}:${port}.`);
-    grunt.log.writeln(`http://localhost:${port}${baseurl}/`);
+    var url = `http://localhost:${port}${baseurl}/`;
+    grunt.log.writeln(url);
     var app = connect();
     app.use(connectLivereload({
       port: 35731
     }));
     app.use(baseurl, serveStatic(config.site));
     http.createServer(app).listen(port, host);
+    open(url);
   });
 
   grunt.registerTask('server', function () {
