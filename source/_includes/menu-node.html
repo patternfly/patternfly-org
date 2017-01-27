@@ -11,7 +11,7 @@
       id="{{ menuNode.library }}-secondary">
   {% for menuPage in menuNode.pages %}
     <li {% if tertiary == menuPage.name %} class="active"{% endif %}>
-      <a href="{{ site.baseurl }}pattern-library/{{ menuPage.library }}/{{ menuPage.name }}">{{ menuPage.title }}</a>
+      <a href="{{ site.baseurl }}/pattern-library/{{ menuPage.library }}/{{ menuPage.name }}">{{ menuPage.title }}</a>
     </li>
   {% endfor %}
   </ul>

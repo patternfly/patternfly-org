@@ -376,4 +376,4 @@ To use these icons on the desktop, check out the [cheatsheet][4].
  [1]: http://icomoon.io/#icons
  [2]: http://fontawesome.io/icons/
  [3]: http://getbootstrap.com/components/#glyphicons
- [4]: {{site.baseurl}}styles/icons/cheatsheet
+ [4]: {{site.baseurl}}/styles/icons/cheatsheet

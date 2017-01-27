@@ -3,10 +3,10 @@
 <a href="#example-code-7">Row Variation #3</a>, <a href="#example-code-8">Row Variation #4</a>, <a href="#example-code-9">Row Variation #5</a> or <a href="#example-code-10">Row Variation #6</a></p>
 <h2 id="example-code-1">Standard List View</h2>
 <div class="example-pf">
-  <iframe src="{{site.baseurl}}pattern-library/content-views/list-view/list-view.html"
+  <iframe src="{{site.baseurl}}/pattern-library/content-views/list-view/list-view.html"
           width="100%" height="650px;" scrolling="no" seamless></iframe>
 </div>
-<p><a href="{{site.baseurl}}pattern-library/content-views/list-view/list-view.html" target="_blank">View full page example</a></p>
+<p><a href="{{site.baseurl}}/pattern-library/content-views/list-view/list-view.html" target="_blank">View full page example</a></p>
 <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
 <div class="collapse in" id="markup-1">
   <pre class="prettyprint">{% capture markup_include %}{% include widgets/list-view/list-view-page.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>

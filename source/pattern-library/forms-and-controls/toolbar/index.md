@@ -5,7 +5,7 @@ layout: page-tabs
 ---
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="overview">
-    <p>The Toolbar pattern sits above a content view such as a <a href="{{ site.baseurl }}pattern-library/content-views/list-view/">List View</a>, <a href="{{ site.baseurl }}pattern-library/content-views/card-view/">Card View</a> or <a href="{{ site.baseurl }}pattern-library/content-views/table-view/">Table View</a>. The Toolbar provides a framework for a number of content control patterns including, but not limited to:</p>
+    <p>The Toolbar pattern sits above a content view such as a <a href="{{ site.baseurl }}/pattern-library/content-views/list-view/">List View</a>, <a href="{{ site.baseurl }}/pattern-library/content-views/card-view/">Card View</a> or <a href="{{ site.baseurl }}/pattern-library/content-views/table-view/">Table View</a>. The Toolbar provides a framework for a number of content control patterns including, but not limited to:</p>
     <ul>
       <li>Filter</li>
       <li>Sort</li>
@@ -22,7 +22,7 @@ layout: page-tabs
   <div role="tabpanel" class="tab-pane" id="design">
     <h2>Description</h2>
     <p>
-      <img src="{{site.baseurl}}assets/img/toolbar-design.jpg" alt="Toolbar"/>
+      <img src="{{site.baseurl}}/assets/img/toolbar-design.jpg" alt="Toolbar"/>
     </p>
     <ol>
       <li><b>Filter</b>: Enables a user to quickly reduce the amount on screen at one time by applying stackable filters to a content view.</li>
@@ -37,19 +37,19 @@ layout: page-tabs
     <h2>Layouts</h2>
     <p>The Toolbar can take different shapes depending on which content controls are included.</p>
     <p>
-      <img src="{{site.baseurl}}assets/img/toolbar-layout1.png" width="900" alt="Toolbar"/>
+      <img src="{{site.baseurl}}/assets/img/toolbar-layout1.png" width="900" alt="Toolbar"/>
     </p>
     <p>
-      <img src="{{site.baseurl}}assets/img/toolbar-layout2.png" width="900" alt="Toolbar"/>
+      <img src="{{site.baseurl}}/assets/img/toolbar-layout2.png" width="900" alt="Toolbar"/>
     </p>
     <p>The content controls should be arranged according to the above templates. If one or more component patterns are not needed, the remaining patterns should align to the edge of the toolbar rather than leaving an empty space for the missing pattern.</p>
     <h3>Without Simple Filter</h3>
     <p>
-      <img src="{{site.baseurl}}assets/img/toolbar-layout3.png" width="1024" alt="Toolbar"/>
+      <img src="{{site.baseurl}}/assets/img/toolbar-layout3.png" width="1024" alt="Toolbar"/>
     </p>
     <h3>Without Find and Change View</h3>
     <p>
-      <img src="{{site.baseurl}}assets/img/toolbar-layout4.png" width="1024" alt="Toolbar"/>
+      <img src="{{site.baseurl}}/assets/img/toolbar-layout4.png" width="1024" alt="Toolbar"/>
     </p>
   </div>
   <div role="tabpanel" class="tab-pane" id="code">

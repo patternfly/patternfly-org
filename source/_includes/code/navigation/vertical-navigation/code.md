@@ -1,10 +1,10 @@
 <p>Jump to <a href="#example-code-1">With Primary Menu Icons</a> or <a href="#example-code-2">Without Primary Menu Icons</a></p>
 <h2 id="example-code-1">With Primary Menu Icons</h2>
 <div class="example-pf">
-  <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation.html"
+  <iframe src="{{ site.baseurl}}/pattern-library/navigation/vertical-navigation/vertical-navigation.html"
           width="100%" height="650px;" scrolling="no" seamless></iframe>
 </div>
-<p><a href="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation.html" target="_blank">View full page example</a></p>
+<p><a href="{{ site.baseurl}}/pattern-library/navigation/vertical-navigation/vertical-navigation.html" target="_blank">View full page example</a></p>
 <div class="row">
   <div class="col-md-12">
     <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-1" href="#markup-1">Reference Markup</a></p>
@@ -23,10 +23,10 @@
 </div>
 <h2 id="example-code-2">Without Primary Menu Icons</h2>
 <div class="example-pf">
-  <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html"
+  <iframe src="{{ site.baseurl}}/pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html"
           width="100%" height="650px;" scrolling="no" seamless></iframe>
 </div>
-<p><a href="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html" target="_blank">View full page example</a></p>
+<p><a href="{{ site.baseurl}}/pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html" target="_blank">View full page example</a></p>
 <div class="row">
   <div class="col-md-12">
     <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>

@@ -65,13 +65,13 @@ See the [PatternFly 2.0 Migration Guide][8] for step-by-step guidance to upgrade
 **Q: How do I migrate to PatternFly 3.0?**
 See the [PatternFly 3.0 Migration Guide][10] for step-by-step guidance to upgrade from PatternFly 2.x to 3.0.
 
- [1]: {{site.baseurl}}widgets/ "Widgets"
+ [1]: {{site.baseurl}}/widgets/ "Widgets"
  [2]: http://getbootstrap.com/
- [3]: {{site.baseurl}}wikis/patterns/ "Patterns"
- [4]: {{site.baseurl}}get-started/contribute/ "Contribute"
+ [3]: {{site.baseurl}}/wikis/patterns/ "Patterns"
+ [4]: {{site.baseurl}}/get-started/contribute/ "Contribute"
  [5]: https://www.redhat.com/mailman/listinfo/patternfly
  [6]: http://getbootstrap.com/getting-started/#support
  [7]: https://support.mozilla.org/en-US/kb/install-firefox-linux
- [8]: {{site.baseurl}}get-started/patternfly-migration-guides/patternfly-migration-guide-2.0.html
+ [8]: {{site.baseurl}}/get-started/patternfly-migration-guides/patternfly-migration-guide-2.0.html
  [9]: https://github.com/patternfly/patternfly/releases
- [10]: {{site.baseurl}}get-started/patternfly-migration-guides/patternfly-migration-guide-3.0.html
+ [10]: {{site.baseurl}}/get-started/patternfly-migration-guides/patternfly-migration-guide-3.0.html

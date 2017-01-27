@@ -33,7 +33,7 @@ layout: page-tabs
     <h2>Form Text Fields</h2>
     <div class="row">
       <div class="col-md-8 col-lg-7">
-        <p><img src="{{site.baseurl}}assets/img/form-modal.png" alt="form-modal"/></p>
+        <p><img src="{{site.baseurl}}/assets/img/form-modal.png" alt="form-modal"/></p>
       </div>
       <div class="col-md-4 col-lg-5">
         <ol>
@@ -54,7 +54,7 @@ layout: page-tabs
     <h2>Validation</h2>
     <div class="row">
       <div class="col-md-8 col-lg-7">
-        <p><img src="{{site.baseurl}}assets/img/FormValidation_Description1.png" alt="form-validation-callout"/></p>
+        <p><img src="{{site.baseurl}}/assets/img/FormValidation_Description1.png" alt="form-validation-callout"/></p>
       </div>
       <div class="col-md-4 col-lg-5">
         <ol>
@@ -73,7 +73,7 @@ layout: page-tabs
     <h2>Operational Behavior</h2>
     <div class="row">
       <div class="col-md-8 col-lg-7">
-        <p><img class="example-image" src="{{site.baseurl}}assets/img/FormValidation_Description2.png" alt="form-validation-description-callout"/></p>
+        <p><img class="example-image" src="{{site.baseurl}}/assets/img/FormValidation_Description2.png" alt="form-validation-description-callout"/></p>
       </div>
       <div class="col-md-4 col-lg-5">
         <p>The modal operation happens with the modal still open. Clicking the affirmative button starts the operation.

@@ -102,7 +102,7 @@ layout: page
         </p>
       </div>
       <div class="col-sm-8 col-md-8 section-img">
-        <img src="{{ site.baseurl}}assets/img/get-started-myProject_bower.png" alt="">
+        <img src="{{ site.baseurl}}/assets/img/get-started-myProject_bower.png" alt="">
       </div>
       <div class="col-xs-12 col-sm-12 col-md-12">
         <p>Once you have created your bower.json file, you can run the install command for PatternFly. This will add the PatternFly library to the bower_components folder. Adding '--save' to the end adds the package to your bower.json file.
@@ -114,14 +114,14 @@ layout: page
         </p>
       </div>
       <div class="col-sm-8 col-md-8 section-img">
-        <img src="{{ site.baseurl}}assets/img/get-started-bower-init.png" alt="">
+        <img src="{{ site.baseurl}}/assets/img/get-started-bower-init.png" alt="">
       </div>
       <div class="col-sm-4 col-md-4">
       </div>
       <div class="col-xs-12 col-sm-12 col-md-12">
         <p>Your folder should now look like this:</p>
         <div class="col-sm-8 col-md-8 section-img">
-          <img src="{{ site.baseurl}}assets/img/get-started-file-structure.png" alt="">
+          <img src="{{ site.baseurl}}/assets/img/get-started-file-structure.png" alt="">
         </div>
         <div class="col-sm-4 col-md-4">
           <b>Tip:</b> Remember never to manually change the contents of the /bower_components folder. Doing so will cause issues with the PatternFly update process.
@@ -139,7 +139,7 @@ layout: page
           Your HTML file should sit at the root of myProject, so that it can reference the folders and files within the project correctly.
         </p>
         <div class="col-sm-8 col-md-8 section-img">
-          <img src="{{ site.baseurl}}assets/img/get-started-html.png" alt="">
+          <img src="{{ site.baseurl}}/assets/img/get-started-html.png" alt="">
         </div>
       </div>
     </div>
@@ -168,7 +168,7 @@ layout: page
           </pre>
         </p>
         <div class="col-sm-8 col-md-8 section-img">
-          <img src="{{ site.baseurl}}assets/img/get-started-header.png" alt="">
+          <img src="{{ site.baseurl}}/assets/img/get-started-header.png" alt="">
         </div>
       </div>
     </div>

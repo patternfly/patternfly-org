@@ -7,4 +7,4 @@ UI Patterns are interaction design solutions that can be applied consistently to
 
 Browse the patterns below to find out what&#8217;s included in the PatternFly library.  Don&#8217;t see what you are looking for? The UI pattern library is built out of contributions from interaction designers who have volunteered their time to contribute to the PatternFly project. [Learn how you can become a contributor][1]. You may also request a new pattern by contacting us at <patternfly@redhat.com>.
 
- [1]: {{site.baseurl}}contribute/
+ [1]: {{site.baseurl}}/contribute/

@@ -20,7 +20,7 @@ layout: page
     <div class="col-md-12">
       <div class="row">
         <div class="col-sm-4 col-md-3 col-lg-3 section-img">
-          <div class="styles-img"><img src="{{ site.baseurl}}assets/img/Styles-ComponentStyling.png" alt=""></div>
+          <div class="styles-img"><img src="{{ site.baseurl}}/assets/img/Styles-ComponentStyling.png" alt=""></div>
         </div>
         <div class="col-sm-8 col-md-9 col-lg-9">
           <h2>Component Styling</h2>
@@ -35,7 +35,7 @@ layout: page
     <div class="col-md-12">
       <div class="row">
         <div class="col-sm-4 col-md-3 col-lg-3 section-img">
-          <div class="styles-img"><img src="{{ site.baseurl}}assets/img/Styles-Visual-Treatment.png" alt=""></div>
+          <div class="styles-img"><img src="{{ site.baseurl}}/assets/img/Styles-Visual-Treatment.png" alt=""></div>
         </div>
         <div class="col-sm-8 col-md-9 col-lg-9">
           <h2>Visual Treatments</h2>
@@ -50,7 +50,7 @@ layout: page
     <div class="col-md-12">
       <div class="row">
         <div class="col-sm-4 col-md-3 col-lg-3 section-img">
-          <div class="styles-img"><img src="{{ site.baseurl}}assets/img/Styles-UtilityMarketing.png" alt=""></div>
+          <div class="styles-img"><img src="{{ site.baseurl}}/assets/img/Styles-UtilityMarketing.png" alt=""></div>
         </div>
         <div class="col-sm-8 col-md-9 col-lg-9">
           <h2>Utility vs. Marketing</h2>
@@ -65,7 +65,7 @@ layout: page
     <div class="col-md-12">
       <div class="row">
         <div class="col-sm-4 col-md-3 col-lg-3 section-img">
-          <div class="styles-img"><img src="{{ site.baseurl}}assets/img/Styles-TypographicLanguage.png" alt=""></div>
+          <div class="styles-img"><img src="{{ site.baseurl}}/assets/img/Styles-TypographicLanguage.png" alt=""></div>
         </div>
         <div class="col-sm-8 col-md-9 col-lg-9">
           <h2>Typographic Language</h2>
@@ -80,7 +80,7 @@ layout: page
     <div class="col-md-12">
       <div class="row">
         <div class="col-sm-4 col-md-3 col-lg-3 section-img">
-          <div class="styles-img"><img src="{{ site.baseurl}}assets/img/Styles-EasilyRebrandable.png" alt=""></div>
+          <div class="styles-img"><img src="{{ site.baseurl}}/assets/img/Styles-EasilyRebrandable.png" alt=""></div>
         </div>
         <div class="col-sm-8 col-md-9 col-lg-9">
           <h2>Easy to Customize</h2>
@@ -95,7 +95,7 @@ layout: page
     <div class="col-md-12">
       <div class="row">
         <div class="col-sm-4 col-md-3 col-lg-3 section-img">
-          <div class="styles-img"><img src="{{ site.baseurl}}assets/img/Styles-Colorpalette.png" alt=""></div>
+          <div class="styles-img"><img src="{{ site.baseurl}}/assets/img/Styles-Colorpalette.png" alt=""></div>
         </div>
         <div class="col-sm-8 col-md-9 col-lg-9">
           <h2>Color Palette</h2>

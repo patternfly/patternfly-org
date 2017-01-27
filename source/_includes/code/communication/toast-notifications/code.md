@@ -25,7 +25,7 @@
 </div>
 <h2 id="example-code-3">In Context</h2>
 <p>
-  <img src="{{site.baseurl}}assets/img/example_toast2.png" alt="in-context-example"/>
+  <img src="{{site.baseurl}}/assets/img/example_toast2.png" alt="in-context-example"/>
 </p>
 <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
 <div class="collapse in" id="markup-3">
