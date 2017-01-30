@@ -1,5 +1,5 @@
 <div class="example-pf">
-  <iframe src="{{ site.baseurl }}pattern-library/application-framework/login-page/login.html"
+  <iframe src="{{ site.baseurl }}/pattern-library/application-framework/login-page/login.html"
           width="100%" height="650px;" scrolling="no" seamless></iframe>
 </div>
 <p>
