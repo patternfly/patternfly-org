@@ -6,7 +6,7 @@ layout: page-widgets
 <h3 id="overview">Overview</h3>
 <p>
 Widgets are reusable controls and elements — building blocks for your UI. Widgets are often used together as elements of
-larger <a href="{{site.baseurl}}pattern-library">Design Patterns</a>.
+larger <a href="{{site.baseurl}}/pattern-library">Design Patterns</a>.
 </p>
 <p>
 A note on code dependencies: Most PatternFly widgets are customized versions of

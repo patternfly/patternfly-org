@@ -15,17 +15,17 @@ layout: page-tabs
     </ul>
     <p>Jump to <a href="#example-overview-1">Find in a List View</a>, <a href="#example-overview-2">Find in a Table View</a> or <a href="#example-overview-3">Find in a Card View</a></p>
     <h2 id="example-overview-1">Find in a List View</h2>
-    <p><img src="{{site.baseurl}}assets/img/Simple-Find-List_2015-12-01.png" alt="Simple Find List callout"/></p>
+    <p><img src="{{site.baseurl}}/assets/img/Simple-Find-List_2015-12-01.png" alt="Simple Find List callout"/></p>
     <h2 id="example-overview-2">Find in a Table View</h2>
-    <p><img src="{{site.baseurl}}assets/img/Simple-Find-Table_2015-12-011.png" alt="Simple Find Table callout"/></p>
+    <p><img src="{{site.baseurl}}/assets/img/Simple-Find-Table_2015-12-011.png" alt="Simple Find Table callout"/></p>
     <h2 id="example-overview-3">Find in a Card View</h2>
-    <p><img src="{{site.baseurl}}assets/img/Simple-Find-Tile_2015-12-01.png" alt="Simple Find Card callout"/></p>
+    <p><img src="{{site.baseurl}}/assets/img/Simple-Find-Tile_2015-12-01.png" alt="Simple Find Card callout"/></p>
   </div>
   <div role="tabpanel" class="tab-pane" id="design">
     <h2>Find Field</h2>
     <div class="row">
       <div class="col-md-5 col-lg-4">
-        <img src="{{site.baseurl}}assets/img/simplefind_callout11.png" alt="Find Field callout"/>
+        <img src="{{site.baseurl}}/assets/img/simplefind_callout11.png" alt="Find Field callout"/>
       </div>
       <div class="col-md-7 col-lg-8">
         <ol>
@@ -40,7 +40,7 @@ layout: page-tabs
     <h2>Find Results</h2>
     <div class="row">
       <div class="col-md-5 col-lg-4">
-        <img src="{{site.baseurl}}assets/img/simplefind_callout2.png" alt="Find Results callout"/>
+        <img src="{{site.baseurl}}/assets/img/simplefind_callout2.png" alt="Find Results callout"/>
       </div>
       <div class="col-md-7 col-lg-8">
         <ol>

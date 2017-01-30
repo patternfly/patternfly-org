@@ -72,7 +72,7 @@ Send an email to the [mailing list][7] or join the IRC channel #patternfly on Fr
  [1]: https://github.com/patternfly/patternfly/releases
  [2]: https://support.microsoft.com/en-us/kb/262161
  [3]: https://github.com/patternfly/patternfly/archive/master.zip
- [4]: {{site.baseurl}}widgets/#bootstrap-select
+ [4]: {{site.baseurl}}/widgets/#bootstrap-select
  [5]: https://github.com/patternfly/patternfly/releases/tag/v2.0.0
  [6]: http://blog.andresgalante.com/howto/2015/02/06/patternfly.html
  [7]: mailto:patternfly@redhat.com

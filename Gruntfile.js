@@ -1,10 +1,9 @@
 /*global module,require*/
-var lrSnippet = require('connect-livereload')({
-  port: 35731
-});
-var mountFolder = function (connect, dir) {
-  return connect.static(require('path').resolve(dir));
-};
+var connect = require('connect'),
+    connectLivereload = require('connect-livereload'),
+    serveStatic = require('serve-static'),
+    http = require('http'),
+    open = require("open");
 
 module.exports = function (grunt) {
   // load all grunt tasks
@@ -18,26 +17,15 @@ module.exports = function (grunt) {
     source: 'source'
   };
 
+  // Load the jekyll config
+  var jekyllConfig = grunt.file.readYAML(`${config.source}/_config.yml`);
+
   grunt.initConfig({
     clean: {
       build: '<%= config.build %>',
       site: '<%= config.site %>'
     },
     config: config,
-    connect: {
-      server: {
-        options: {
-          hostname: '0.0.0.0',
-          middleware: function (connect) {
-            return [
-              lrSnippet,
-              mountFolder(connect, config.site)
-            ];
-          },
-          port: 9002
-        }
-      }
-    },
     run: {
       options: {
       },
@@ -256,6 +244,22 @@ module.exports = function (grunt) {
     'connect:server',
     'watch'
   ]);
+
+  grunt.registerTask('connect', function(task) {
+    var baseurl = jekyllConfig.baseurl;
+    var host = '0.0.0.0'
+    var port = 9002;
+    grunt.log.writeln(`Starting static web server for folder ${config.site} on host ${host}:${port}.`);
+    var url = `http://localhost:${port}${baseurl}/`;
+    grunt.log.writeln(url);
+    var app = connect();
+    app.use(connectLivereload({
+      port: 35731
+    }));
+    app.use(baseurl, serveStatic(config.site));
+    http.createServer(app).listen(port, host);
+    open(url);
+  });
 
   grunt.registerTask('server', function () {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');

@@ -24,25 +24,25 @@ submenus: true
     <h2 id="example-overview-1">Masthead Design</h2>
     <p>Since vertical navigation does not compromise vertical real estate, the masthead is taller than the masthead for products that use horizontal navigation. The taller design allows for a product icon and the option of utilizing a burger bar menu.</p>
     <p>
-      <img src="{{site.baseurl}}assets/img/Masthead_Vertical.png" alt="Masthead Vertical" width="1400"/>
+      <img src="{{site.baseurl}}/assets/img/Masthead_Vertical.png" alt="Masthead Vertical" width="1400"/>
     </p>
     <h2 id="example-overview-2">With Primary Menu Icons</h2>
     <div class="example-pf">
-      <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation.html"
+      <iframe src="{{ site.baseurl}}/pattern-library/navigation/vertical-navigation/vertical-navigation.html"
               width="100%" height="650px;" scrolling="no" seamless></iframe>
     </div>
-    <p><a href="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation.html" target="_blank">View full page example</a></p>
+    <p><a href="{{ site.baseurl}}/pattern-library/navigation/vertical-navigation/vertical-navigation.html" target="_blank">View full page example</a></p>
     <h2 id="example-overview-3">Without Primary Menu Icons</h2>
     <div class="example-pf">
-      <iframe src="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html"
+      <iframe src="{{ site.baseurl}}/pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html"
               width="100%" height="650px;" scrolling="no" seamless></iframe>
     </div>
-    <p><a href="{{ site.baseurl}}pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html" target="_blank">View full page example</a></p>
+    <p><a href="{{ site.baseurl}}/pattern-library/navigation/vertical-navigation/vertical-navigation-without-icons.html" target="_blank">View full page example</a></p>
   </div>
   <div role="tabpanel" class="tab-pane" id="design">
   <h2>Masthead Design</h2>
     <p>
-      <img src="{{site.baseurl}}assets/img/Masthead_Vertical_Annotations.png" alt="Masthead_Vertical_Annotations" width="1400"/>
+      <img src="{{site.baseurl}}/assets/img/Masthead_Vertical_Annotations.png" alt="Masthead_Vertical_Annotations" width="1400"/>
     </p>
     <ol>
       <li><b>Branding</b>: Product icon can also be used in addition to the burger bar OR as a standalone icon.</li>
@@ -54,7 +54,7 @@ submenus: true
     <div class="row">
       <div class="col-md-7 col-lg-5">
         <p>
-          <img src="{{site.baseurl}}assets/img/navigation-primary-callout.png" alt="nav-callout-1"/>
+          <img src="{{site.baseurl}}/assets/img/navigation-primary-callout.png" alt="nav-callout-1"/>
         </p>
       </div>
       <div class="col-md-5 col-lg-7">
@@ -70,7 +70,7 @@ submenus: true
     <div class="row">
       <div class="col-md-7 col-lg-5">
         <p>
-          <img src="{{site.baseurl}}assets/img/navigation-with-secondary-callout.png" alt="nav-callout-2"/>
+          <img src="{{site.baseurl}}/assets/img/navigation-with-secondary-callout.png" alt="nav-callout-2"/>
         </p>
       </div>
       <div class="col-md-5 col-lg-7">
@@ -87,7 +87,7 @@ submenus: true
     <div class="row">
       <div class="col-md-7 col-lg-5">
         <p>
-          <img src="{{site.baseurl}}assets/img/navigation-with-tertiary-callout.png" alt="nav-callout-3"/>
+          <img src="{{site.baseurl}}/assets/img/navigation-with-tertiary-callout.png" alt="nav-callout-3"/>
         </p>
       </div>
       <div class="col-md-5 col-lg-7">
@@ -123,7 +123,7 @@ submenus: true
     <div class="row">
       <div class="col-md-7 col-lg-5">
         <p>
-          <img src="{{site.baseurl}}assets/img/nav-responsive-callout1.png" alt="nav-responsive-callout-1"/>
+          <img src="{{site.baseurl}}/assets/img/nav-responsive-callout1.png" alt="nav-responsive-callout-1"/>
         </p>
       </div>
       <div class="col-md-5 col-lg-7">
@@ -137,7 +137,7 @@ submenus: true
     <div class="row">
       <div class="col-md-7 col-lg-5">
         <p>
-          <img src="{{site.baseurl}}assets/img/nav-responsive-callout2.png" alt="nav-responsive-callout-2"/>
+          <img src="{{site.baseurl}}/assets/img/nav-responsive-callout2.png" alt="nav-responsive-callout-2"/>
         </p>
       </div>
       <div class="col-md-5 col-lg-7">

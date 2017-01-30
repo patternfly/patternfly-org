@@ -51,7 +51,9 @@ layout: default
             </div>
             <div role="tabpanel" class="tab-pane nested{% if page.code_html == nil or page.code_html == false %} active{% endif %}" id="angular">
               <div ng-app="docsApp" ng-controller="DocsController" class="content">
-                <div ng-include src="'{{page.code_angular}}'"></div>
+                {% if page.code_angular %}
+                  <div ng-include src="'{{site.baseurl}}{{page.code_angular}}'"></div>
+                {% endif %}
                 <!-- % include {{page.code}} % -->
               </div>
             </div>
