@@ -78,19 +78,6 @@ module.exports = function (grunt) {
             }
           }
         ]
-      }
-    },
-    copy: {
-      bower: {
-        files: [
-          // Copy resources from git submodules
-          {
-            expand: true,
-            cwd: 'bower_components',
-            src: ['**'],
-            dest: '<%= config.build %>/components'
-          },
-        ]
       },
       examples: {
         files: [
@@ -108,9 +95,19 @@ module.exports = function (grunt) {
             dest: '<%= config.build %>/_includes/angular-partials'
           }
         ]
-      },
-      design: {
-
+      }
+    },
+    copy: {
+      bower: {
+        files: [
+          // Copy resources from git submodules
+          {
+            expand: true,
+            cwd: 'bower_components',
+            src: ['**'],
+            dest: '<%= config.build %>/components'
+          },
+        ]
       }
     },
     csscount: {
@@ -213,6 +210,11 @@ module.exports = function (grunt) {
         files: ['submodules/patternfly-design/**/*'],
         tasks: ['sync:design']
       },
+      examples: {
+        files: ['submodules/patternfly-core/tests/pages/_includes/widgets',
+                'submodules/angular-patternfly/dist/docs/partials'],
+        tasks: ['sync:examples']
+      },
       livereload: {
         files: ['<%= config.site %>/**/*'],
         options: {
@@ -234,7 +236,7 @@ module.exports = function (grunt) {
     'copy:bower',
     'sync:source',
     'sync:design',
-    'copy:examples',
+    'sync:examples',
     'less',
     'cssmin',
     //'csscount',
