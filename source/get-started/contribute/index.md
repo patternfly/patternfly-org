@@ -26,7 +26,7 @@ By contacting the community you can get feedback on the contributions or ideas t
 ## Reports Bugs
 Before creating a bug report, check the list of [known bugs][7] and [open issues][8]. Bugs are tracked as [GitHub issues][9]. When you create a bug report, include as many details as possible, use a clear and descriptive title, and remember that an image is worth a thousand words, so try to add images and links to rawgit when possible.
 
-## Proposing or Modifying a Design  
+## Proposing or Modifying a Design
 You may want to start by sharing your idea on the mailing list ([patternfly@redhat.com][4]) to kick off the discussion. A design proposal may have many forms, but it should answer these questions:
 - What is the name of the design pattern or component?
 - What problem does it solve?
@@ -49,7 +49,7 @@ The PR will be reviewed by the community and merged once two people from the tea
  [4]: mailto:patternfly@redhat.com
  [5]: https://www.redhat.com/archives/patternfly/
  [6]: https://www.patternfly.org/community/monthly-community-meeting/
- [7]:https://patternfly.atlassian.net/issues/?filter=10300
+ [7]: https://patternfly.atlassian.net/issues/?filter=13500
  [8]: https://github.com/patternfly/patternfly/labels/bug
  [9]: https://guides.github.com/features/issues/
  [10]: https://help.github.com/articles/using-pull-requests/
