@@ -24,7 +24,7 @@
     "grunt-sync": "^0.6.2",
     "matchdep": "~0.3.0",
     "open": "0.0.5",
-    "patternfly-eng-publish": "0.0.3",
+    "patternfly-eng-publish": "0.0.4",
     "patternfly-eng-release": "~3.19.0",
     "serve-static": "^1.11.2"
   },
