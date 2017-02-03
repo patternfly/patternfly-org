@@ -786,7 +786,7 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
               <span id="charRemainingCntFld"></span>
               <button id="postBtn" type="submit" class="btn btn-default">Post New Message</button>
             </span>
-      </form></br>
+      </form>
       <script>
   (function($) {
         $('#messageArea').countRemainingChars( {countFld: 'charRemainingCntFld',
