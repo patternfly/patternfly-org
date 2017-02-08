@@ -15,7 +15,8 @@ module.exports = function (grunt) {
   var config = {
     site: '_site',
     build: '_build',
-    source: 'source'
+    source: 'source',
+    defaultTarget: 'staging'
   };
 
   grunt.initConfig({
@@ -243,7 +244,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('serve', function (target) {
-    target = target || 'production';
+    target = target || config.defaultTarget;
     grunt.task.run([
       'build:' + target,
       'connect:' + target,
@@ -252,7 +253,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', function (target) {
-    target = target || 'production';
+    target = target || config.defaultTarget;
     grunt.task.run([
       'clean',
       'run:submodulesUpdate',
