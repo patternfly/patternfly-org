@@ -1,0 +1,2 @@
+# Site settings for staging.  Overrides the values in _config.yml
+baseurl: '/patternfly-org' # the subpath of your site, e.g. /blog

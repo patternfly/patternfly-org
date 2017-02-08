@@ -22,6 +22,7 @@
     "grunt-jslint": "^1.1.14",
     "grunt-run": "^0.6.0",
     "grunt-sync": "^0.6.2",
+    "lodash": "^4.17.4",
     "matchdep": "~0.3.0",
     "open": "0.0.5",
     "patternfly-eng-publish": "0.0.4",
@@ -36,5 +37,10 @@
   "bugs": {
     "url": "https://github.com/patternfly/patternfly-org/issues"
   },
-  "homepage": "https://github.com/patternfly/patternfly-org"
+  "homepage": "https://github.com/patternfly/patternfly-org",
+  "patternfly": {
+    "publish": {
+      "siteFolder": "_site"
+    }
+  }
 }
