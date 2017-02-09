@@ -3,8 +3,8 @@
   "version": "3.19.0",
   "author": "Red Hat",
   "scripts": {
-    "publish": "publish-ghpages.sh",
-    "publish-travis": "publish-ghpages.sh -t -w -r 'git@github.com:patternfly/patternfly.github.io.git' -b master _site"
+    "publish": "ghpages",
+    "publish-travis": "ghpages -t -r 'git@github.com:patternfly/patternfly.github.io.git' -b master _site"
   },
   "license": "Apache-2.0",
   "devDependencies": {
