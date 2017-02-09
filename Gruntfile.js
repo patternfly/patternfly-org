@@ -3,7 +3,8 @@ var connect = require('connect'),
     connectLivereload = require('connect-livereload'),
     serveStatic = require('serve-static'),
     http = require('http'),
-    open = require("open");
+    open = require('open'),
+    _ = require('lodash');
 
 module.exports = function (grunt) {
   // load all grunt tasks
@@ -14,11 +15,9 @@ module.exports = function (grunt) {
   var config = {
     site: '_site',
     build: '_build',
-    source: 'source'
+    source: 'source',
+    defaultTarget: 'staging'
   };
-
-  // Load the jekyll config
-  var jekyllConfig = grunt.file.readYAML(`${config.source}/_config.yml`);
 
   grunt.initConfig({
     clean: {
@@ -104,7 +103,8 @@ module.exports = function (grunt) {
           {
             expand: true,
             cwd: 'bower_components',
-            src: ['**'],
+            // use a whitelist of file extensions we want to copy
+            src: ['**/*.{html,txt,js,coffee,css,scss,less,otf,eot,svg,ttf,woff,woff2,png,jpg,gif,ico,xml,yml,yaml,map,json,md}'],
             dest: '<%= config.build %>/components'
           },
         ]
@@ -135,13 +135,19 @@ module.exports = function (grunt) {
       }
     },
     jekyll: {
-      source: {
+      options: {
+        dest: '<%= config.site %>',
+        config: '<%= config.source %>/_config.yml',
+        src: '<%= config.build %>',
+        bundleExec: 'true',
+        incremental: 'true'
+      },
+      production: {
+        incremental: 'false'
+      },
+      staging: {
         options: {
-          config: '<%= config.source %>/_config.yml',
-          dest: '<%= config.site %>',
-          src: '<%= config.build %>',
-          bundleExec: 'true',
-          incremental: 'true'
+          config: '<%= config.source %>/_config.yml,<%= config.source %>/_config-staging.yml'
         }
       }
     },
@@ -230,29 +236,50 @@ module.exports = function (grunt) {
     'uglify'
   ]);
 
-  grunt.registerTask('build', [
-    'clean',
-    'run:submodulesUpdate',
-    'copy:bower',
-    'sync:source',
-    'sync:design',
-    'sync:examples',
-    'less',
-    'cssmin',
-    //'csscount',
-    'uglify',
-    'jekyll'
-  ]);
+  grunt.registerTask('cname', function (target) {
+    if (target === 'production') {
+      grunt.log.writeln(`Writing CNAME file to ${config.build}/CNAME`);
+      grunt.file.write(`${config.build}/CNAME`, 'www.patternfly.org\n');
+    }
+  });
 
-  grunt.registerTask('serve', [
-    'build',
-    'connect:server',
-    'watch'
-  ]);
+  grunt.registerTask('serve', function (target) {
+    target = target || config.defaultTarget;
+    grunt.task.run([
+      'build:' + target,
+      'connect:' + target,
+      'watch'
+    ]);
+  });
 
-  grunt.registerTask('connect', function(task) {
+  grunt.registerTask('build', function (target) {
+    target = target || config.defaultTarget;
+    grunt.task.run([
+      'clean',
+      'run:submodulesUpdate',
+      'copy:bower',
+      'cname:' + target,
+      'sync:source',
+      'sync:design',
+      'sync:examples',
+      'less',
+      'cssmin',
+      //'csscount',
+      'uglify',
+      'jekyll:' + target
+    ]);
+  });
+
+  grunt.registerTask('connect', function(target) {
+    // Load the jekyll config
+    var jekyllConfig = grunt.file.readYAML(`${config.source}/_config.yml`);
+    var jekyllStagingConfig = grunt.file.readYAML(`${config.source}/_config-staging.yml`);
+    if (target === 'staging') {
+      _.merge(jekyllConfig, jekyllStagingConfig);
+    }
+
     var baseurl = jekyllConfig.baseurl;
-    var host = '0.0.0.0'
+    var host = '0.0.0.0';
     var port = 9002;
     grunt.log.writeln(`Starting static web server for folder ${config.site} on host ${host}:${port}.`);
     var url = `http://localhost:${port}${baseurl}/`;
@@ -266,9 +293,9 @@ module.exports = function (grunt) {
     open(url);
   });
 
-  grunt.registerTask('server', function () {
+  grunt.registerTask('server', function (target) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-    grunt.task.run(['serve']);
+    grunt.task.run(['serve:'+target]);
   });
 
   grunt.registerTask('default', ['build']);

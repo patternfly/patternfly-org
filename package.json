@@ -3,8 +3,8 @@
   "version": "3.19.0",
   "author": "Red Hat",
   "scripts": {
-    "publish": "publish-ghpages.sh",
-    "publish-travis": "publish-ghpages.sh -t -w -r 'git@github.com:patternfly/patternfly.github.io.git' -b master _site"
+    "publish": "ghpages",
+    "publish-travis": "ghpages -t -r 'git@github.com:patternfly/patternfly.github.io.git' -b master _site"
   },
   "license": "Apache-2.0",
   "devDependencies": {
@@ -22,9 +22,10 @@
     "grunt-jslint": "^1.1.14",
     "grunt-run": "^0.6.0",
     "grunt-sync": "^0.6.2",
+    "lodash": "^4.17.4",
     "matchdep": "~0.3.0",
     "open": "0.0.5",
-    "patternfly-eng-publish": "0.0.4",
+    "patternfly-eng-publish": "0.1.0-alpha.19",
     "patternfly-eng-release": "~3.19.0",
     "serve-static": "^1.11.2"
   },
@@ -36,5 +37,10 @@
   "bugs": {
     "url": "https://github.com/patternfly/patternfly-org/issues"
   },
-  "homepage": "https://github.com/patternfly/patternfly-org"
+  "homepage": "https://github.com/patternfly/patternfly-org",
+  "patternfly": {
+    "publish": {
+      "siteFolder": "_site"
+    }
+  }
 }
