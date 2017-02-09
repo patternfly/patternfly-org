@@ -34,9 +34,11 @@ jQuery( document ).ready(function() {
     var hpieces = hash.split('/');
     for (var i=0;i<hpieces.length;i++) {
       var domelid = hpieces[i].replace(prefix,'');
-      var domitem = $('a[href=#' + domelid + '][data-toggle=tab]');
-      if (domitem.length > 0) {
-        domitem.tab('show');
+      if (domelid) {
+        var domitem = $('a[href=#' + domelid + '][data-toggle=tab]');
+        if (domitem.length > 0) {
+          domitem.tab('show');
+        }
       }
     }
     $('.nav-tabs-pattern a, .nav-tabs-code a').on('shown.bs.tab', function (e) {
