@@ -98,14 +98,30 @@ module.exports = function (grunt) {
       }
     },
     copy: {
-      bower: {
+      components: {
         files: [
-          // Copy resources from git submodules
           {
             expand: true,
-            cwd: 'bower_components',
-            // use a whitelist of file extensions we want to copy
-            src: ['**/*.{html,txt,js,coffee,css,scss,less,otf,eot,svg,ttf,woff,woff2,png,jpg,gif,ico,xml,yml,yaml,map,json,md}'],
+            cwd: 'node_modules',
+            src: [
+              '**/*'
+            ],
+            filter: function(filepath) { // this filter is 5x faster as the corresponding glob
+              if (! grunt.file.isFile(filepath)) {
+                return false;
+              }
+              var fileparts = filepath.split('/');
+              if (fileparts[2] == 'node_modules') {
+                return false;
+              }
+              var packages = ['angular-patternfly','animate.css','bootstrap','bootstrap-combobox','bootstrap-datepicker','bootstrap-select','bootstrap-switch','bootstrap-touchspin','c3','clipboard','d3','datatables','eonasdan-bootstrap-datetimepicker','google-code-prettify','jquery','jquery.scrollTo','matchHeight','moment','patternfly','patternfly-bootstrap-combobox','patternfly-bootstrap-treeview','wowjs'];
+              if (packages.indexOf(fileparts[1]) < 0) {
+                return false;
+              }
+              var extensions = ['html','txt','js','coffee','css','scss','less','otf','eot','svg','ttf','woff','woff2','png','jpg','gif','ico','xml','yml','yaml','map','json','md'];
+              var extparts = fileparts[fileparts.length - 1].split('.');
+              return extensions.indexOf(extparts[extparts.length-1]) >= 0;
+            },
             dest: '<%= config.build %>/components'
           },
         ]
@@ -160,8 +176,7 @@ module.exports = function (grunt) {
         options: {
           paths: [
             'less/',
-            'node_modules/',
-            '_build/components/'
+            'node_modules/'
           ],
           sourceMap: true,
           outputSourceFiles: true,
@@ -176,8 +191,7 @@ module.exports = function (grunt) {
         options: {
           paths: [
             'less/',
-            'node_modules/',
-            '_build/components/'
+            'node_modules/'
           ],
           sourceMap: true,
           outputSourceFiles: true,
@@ -258,7 +272,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean',
       'run:submodulesUpdate',
-      'copy:bower',
+      'copy:components',
       'cname:' + target,
       'sync:source',
       'sync:design',
