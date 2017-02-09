@@ -38,11 +38,6 @@
     "url": "https://github.com/patternfly/patternfly-org/issues"
   },
   "homepage": "https://github.com/patternfly/patternfly-org",
-  "patternfly": {
-    "publish": {
-      "siteFolder": "_site"
-    }
-  }
   "dependencies": {
     "angular-patternfly": "^3.19.0",
     "animate.css": "^3.5.2",
@@ -65,5 +60,10 @@
     "patternfly-bootstrap-combobox": "^1.1.7",
     "patternfly-bootstrap-treeview": "^2.1.1",
     "wowjs": "^1.1.3"
+  },
+  "patternfly": {
+    "publish": {
+      "siteFolder": "_site"
+    }
   }
 }
