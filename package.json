@@ -25,7 +25,7 @@
     "lodash": "^4.17.4",
     "matchdep": "~0.3.0",
     "open": "0.0.5",
-    "patternfly-eng-publish": "0.0.4",
+    "patternfly-eng-publish": "0.1.0-alpha.19",
     "patternfly-eng-release": "~3.19.0",
     "serve-static": "^1.11.2"
   },
