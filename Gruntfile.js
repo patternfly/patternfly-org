@@ -4,7 +4,8 @@ var connect = require('connect'),
     serveStatic = require('serve-static'),
     http = require('http'),
     open = require('open'),
-    _ = require('lodash');
+    _ = require('lodash'),
+    packageJson = require('./package.json');
 
 
 module.exports = function (grunt) {
@@ -114,7 +115,7 @@ module.exports = function (grunt) {
               if (fileparts[2] == 'node_modules') {
                 return false;
               }
-              var packages = ['angular-patternfly','animate.css','bootstrap','bootstrap-combobox','bootstrap-datepicker','bootstrap-select','bootstrap-switch','bootstrap-touchspin','c3','clipboard','d3','datatables','eonasdan-bootstrap-datetimepicker','google-code-prettify','jquery','jquery.scrollTo','matchHeight','moment','patternfly','patternfly-bootstrap-combobox','patternfly-bootstrap-treeview','wowjs'];
+              var packages = _.keys(packageJson.dependencies);
               if (packages.indexOf(fileparts[1]) < 0) {
                 return false;
               }
