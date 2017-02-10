@@ -14,7 +14,7 @@
 <div class="collapse in" id="card-markup-1">
   <pre class="prettyprint">{% capture markup_include %}
 <script src="components/c3/c3.min.js"></script>
-<script src="components/d3/d3.min.js"></script>
+<script src="components/d3/build/d3.min.js"></script>
 {% include widgets/charts/donut-utilization.html id="donut-chart-6" %}
   {% endcapture %}{{ markup_include | xml_escape }}</pre>
 </div>
@@ -26,7 +26,7 @@
 <div class="collapse in" id="markup-2">
   <pre class="prettyprint">{% capture markup_include %}
 <script src="components/c3/c3.min.js"></script>
-<script src="components/d3/d3.min.js"></script>
+<script src="components/d3/build/d3.min.js"></script>
 {% include widgets/charts/donut-whole-relationship.html id1="donut-chart-7" id2="donut-chart-8" id3="donut-chart-9" %}
   {% endcapture %}{{ markup_include | xml_escape }}</pre>
 </div>
@@ -38,7 +38,7 @@
 <div class="collapse in" id="markup-3">
   <pre class="prettyprint">{% capture markup_include %}
 <script src="components/c3/c3.min.js"></script>
-<script src="components/d3/d3.min.js"></script>
+<script src="components/d3/build/d3.min.js"></script>
 {% include widgets/charts/donut-mini.html id="donut-chart-10" %}
   {% endcapture %}{{ markup_include | xml_escape }}</pre>
 </div>

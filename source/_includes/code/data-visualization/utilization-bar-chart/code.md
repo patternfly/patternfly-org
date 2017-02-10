@@ -12,7 +12,7 @@
 <div class="collapse in" id="markup-1">
   <pre class="prettyprint">{% capture markup_include %}
 <script src="components/c3/c3.min.js"></script>
-<script src="components/d3/d3.min.js"></script>
+<script src="components/d3/build/d3.min.js"></script>
 {% include widgets/charts/utilization-bar.html id="donut-chart-2" %}
   {% endcapture %}{{ markup_include | xml_escape }}</pre>
 </div>

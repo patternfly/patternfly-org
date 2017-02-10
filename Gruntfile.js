@@ -4,7 +4,8 @@ var connect = require('connect'),
     serveStatic = require('serve-static'),
     http = require('http'),
     open = require('open'),
-    _ = require('lodash');
+    _ = require('lodash'),
+    packageJson = require('./package.json');
 
 
 module.exports = function (grunt) {
@@ -98,14 +99,30 @@ module.exports = function (grunt) {
       }
     },
     copy: {
-      bower: {
+      components: {
         files: [
-          // Copy resources from git submodules
           {
             expand: true,
-            cwd: 'bower_components',
-            // use a whitelist of file extensions we want to copy
-            src: ['**/*.{html,txt,js,coffee,css,scss,less,otf,eot,svg,ttf,woff,woff2,png,jpg,gif,ico,xml,yml,yaml,map,json,md}'],
+            cwd: 'node_modules',
+            src: [
+              '**/*'
+            ],
+            filter: function(filepath) { // this filter is 5x faster as the corresponding glob
+              if (! grunt.file.isFile(filepath)) {
+                return false;
+              }
+              var fileparts = filepath.split('/');
+              if (fileparts[2] == 'node_modules') {
+                return false;
+              }
+              var packages = _.keys(packageJson.dependencies);
+              if (packages.indexOf(fileparts[1]) < 0) {
+                return false;
+              }
+              var extensions = ['html','txt','js','coffee','css','scss','less','otf','eot','svg','ttf','woff','woff2','png','jpg','gif','ico','xml','yml','yaml','map','json','md'];
+              var extparts = fileparts[fileparts.length - 1].split('.');
+              return extensions.indexOf(extparts[extparts.length-1]) >= 0;
+            },
             dest: '<%= config.build %>/components'
           },
         ]
@@ -160,8 +177,7 @@ module.exports = function (grunt) {
         options: {
           paths: [
             'less/',
-            'node_modules/',
-            '_build/components/'
+            'node_modules/'
           ],
           sourceMap: true,
           outputSourceFiles: true,
@@ -176,8 +192,7 @@ module.exports = function (grunt) {
         options: {
           paths: [
             'less/',
-            'node_modules/',
-            '_build/components/'
+            'node_modules/'
           ],
           sourceMap: true,
           outputSourceFiles: true,
@@ -258,7 +273,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean',
       'run:submodulesUpdate',
-      'copy:bower',
+      'copy:components',
       'cname:' + target,
       'sync:source',
       'sync:design',
