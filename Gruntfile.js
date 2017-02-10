@@ -6,17 +6,18 @@ var connect = require('connect'),
     open = require('open'),
     _ = require('lodash');
 
+
 module.exports = function (grunt) {
   // load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   grunt.loadNpmTasks('grunt-sync');
 
-  // configurable paths
   var config = {
     site: '_site',
     build: '_build',
     source: 'source',
-    defaultTarget: 'staging'
+    defaultTarget: 'staging',
+    baseurl: '/' + (grunt.option('baseurl') || 'patternfly-org')
   };
 
   grunt.initConfig({
@@ -147,7 +148,7 @@ module.exports = function (grunt) {
       },
       staging: {
         options: {
-          config: '<%= config.source %>/_config.yml,<%= config.source %>/_config-staging.yml'
+          raw: `baseurl: '${config.baseurl}'`
         }
       }
     },
@@ -273,22 +274,20 @@ module.exports = function (grunt) {
   grunt.registerTask('connect', function(target) {
     // Load the jekyll config
     var jekyllConfig = grunt.file.readYAML(`${config.source}/_config.yml`);
-    var jekyllStagingConfig = grunt.file.readYAML(`${config.source}/_config-staging.yml`);
     if (target === 'staging') {
-      _.merge(jekyllConfig, jekyllStagingConfig);
+      jekyllConfig.baseurl = config.baseurl;
     }
 
-    var baseurl = jekyllConfig.baseurl;
     var host = '0.0.0.0';
     var port = 9002;
     grunt.log.writeln(`Starting static web server for folder ${config.site} on host ${host}:${port}.`);
-    var url = `http://localhost:${port}${baseurl}/`;
+    var url = `http://localhost:${port}${config.baseurl}/`;
     grunt.log.writeln(url);
     var app = connect();
     app.use(connectLivereload({
       port: 35731
     }));
-    app.use(baseurl, serveStatic(config.site));
+    app.use(config.baseurl, serveStatic(config.site));
     http.createServer(app).listen(port, host);
     open(url);
   });
