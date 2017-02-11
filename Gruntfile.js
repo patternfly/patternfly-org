@@ -268,7 +268,7 @@ module.exports = function (grunt) {
     ]);
   });
 
-  grunt.registerTask('build', function (target) {
+  grunt.registerTask('prebuild', function (target) {
     target = target || config.defaultTarget;
     grunt.task.run([
       'clean',
@@ -282,6 +282,13 @@ module.exports = function (grunt) {
       'cssmin',
       //'csscount',
       'uglify',
+    ]);
+  });
+
+  grunt.registerTask('build', function (target) {
+    target = target || config.defaultTarget;
+    grunt.task.run([
+      'prebuild:' + target,
       'jekyll:' + target
     ]);
   });
