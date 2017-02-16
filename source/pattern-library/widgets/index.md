@@ -238,7 +238,7 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
     <div class="collapse" id="basic-charts-markup">
       <pre class="prettyprint">
 &lt;div id="basic-chart-line">&lt;/div&gt;
-&lt;script src="/components/d3/build/d3.min.js"&gt;&lt;/script&gt;
+&lt;script src="/components/d3/d3.min.js"&gt;&lt;/script&gt;
 &lt;script src="/components/c3/c3.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   (function($) {

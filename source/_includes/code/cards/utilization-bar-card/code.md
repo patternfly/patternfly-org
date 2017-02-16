@@ -19,7 +19,7 @@
 <div class="collapse in" id="markup-1">
   <pre class="prettyprint">{% capture markup_include %}
     <script src="components/c3/c3.min.js"></script>
-    <script src="components/d3/build/d3.min.js"></script>
+    <script src="components/d3/d3.min.js"></script>
     <body class="cards-pf">
       ...
       <div class="container-fluid container-cards-pf">
@@ -53,7 +53,7 @@
 <div class="collapse in" id="markup-2">
   <pre class="prettyprint">{% capture markup_include %}
     <script src="components/c3/c3.min.js"></script>
-    <script src="components/d3/build/d3.min.js"></script>
+    <script src="components/d3/d3.min.js"></script>
     <body class="cards-pf">
       ...
       <div class="container-fluid container-cards-pf">
