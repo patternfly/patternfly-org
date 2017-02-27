@@ -19,5 +19,8 @@
     "jquery.scrollTo": "~2.1.2",
     "patternfly": "~3.21.0",
     "wowjs": "~1.1.2"
+  },
+  "resolutions": {
+    "jquery": "~2.1.4"
   }
 }
