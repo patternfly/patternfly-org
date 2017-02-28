@@ -96,6 +96,23 @@ module.exports = function (grunt) {
             dest: '<%= config.build %>/_includes/angular-partials'
           }
         ]
+      },
+      patternflyDist: {
+        files: [
+          // Copy resources from git submodules
+          {
+            expand: true,
+            cwd: 'submodules/patternfly-core/dist',
+            src: ['**'],
+            dest: '<%= config.build %>/components/patternfly/dist'
+          },
+          {
+            expand: true,
+            cwd: 'submodules/angular-patternfly/dist',
+            src: ['**'],
+            dest: '<%= config.build %>/components/angular-patternfly/dist'
+          }
+        ]
       }
     },
     copy: {
@@ -116,7 +133,7 @@ module.exports = function (grunt) {
                 return false;
               }
               var packages = _.keys(packageJson.dependencies);
-              if (packages.indexOf(fileparts[1]) < 0) {
+              if (fileparts[1] === 'patternfly' || fileparts[1] === 'angular-patternfly' || packages.indexOf(fileparts[1]) < 0) {
                 return false;
               }
               var extensions = ['html','txt','js','coffee','css','scss','less','otf','eot','svg','ttf','woff','woff2','png','jpg','gif','ico','xml','yml','yaml','map','json','md'];
@@ -274,6 +291,7 @@ module.exports = function (grunt) {
       'clean',
       'run:submodulesUpdate',
       'copy:components',
+      'sync:patternflyDist',
       'cname:' + target,
       'sync:source',
       'sync:design',
