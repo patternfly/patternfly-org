@@ -2,11 +2,14 @@
 	path = submodules/patternfly-core
 	url = https://github.com/patternfly/patternfly.git
 	branch = master-dist
+	ignore = all
 [submodule "submodules/patternfly-design"]
 	path = submodules/patternfly-design
 	url = https://github.com/patternfly/patternfly-design.git
 	branch = master
+	ignore = all
 [submodule "submodules/angular-patternfly"]
 	path = submodules/angular-patternfly
 	url = https://github.com/patternfly/angular-patternfly.git
 	branch = master-dist
+	ignore = all
