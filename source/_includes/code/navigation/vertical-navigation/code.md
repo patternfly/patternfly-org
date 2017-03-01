@@ -14,7 +14,7 @@
 ...
 <script src="components/c3/c3.min.js"></script>
 <script src="components/d3/d3.min.js"></script>
-<script src="components/jquery-match-height/jquery.matchHeight-min.js"></script>
+<script src="components/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
 {% include widgets/navigation/vertical-navigation.html %}
 </html>
       {% endcapture %}{{ markup_include | xml_escape }}</pre>
@@ -36,7 +36,7 @@
 ...
 <script src="components/c3/c3.min.js"></script>
 <script src="components/d3/d3.min.js"></script>
-<script src="components/jquery-match-height/jquery.matchHeight-min.js"></script>
+<script src="components/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
 {% include widgets/navigation/vertical-navigation.html %}
 </html>
       {% endcapture %}{{ markup_include | xml_escape }}</pre>
