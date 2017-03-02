@@ -1,381 +1,106 @@
 ---
 title: Cheatsheet
-author: rhamilto
+author: lhinson
 layout: page
 ---
-To use on the desktop, install [PatternFlyIcons-webfont.ttf][1] or [FontAwesome.otf][2], set it as the font in your application, and copy and paste the icons directly from this page into your designs.
+# Icon Guidelines Cheatsheet
 
-<div class="row">
-  <div class="col-sm-6 col-md-6">
-    <h2>PatternFly Icons</h2>
-    <ul class="icons list-unstyled">
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-add-circle-o</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-build</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-builder-image</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-close</span>
-      </li>
-      <li>
-        <span class="pficon pficon pficon-unicode-character"></span>
-        <span class="icon-class">pficon-cloud-security</span>
-      </li>
-      <li>
-        <span class="pficon pficon pficon-unicode-character"></span>
-        <span class="icon-class">pficon-cloud-tenant</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-cluster</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-container-node</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-cpu</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-delete</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-edit</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-enterprise</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-error-circle-o</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-export</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-flag</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-flavor</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-folder-close</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-folder-open</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-help</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-home</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-history</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-image</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-import</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-info</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-memory</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-network</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-ok</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-print</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-project</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-regions</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-registry</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-replicator</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-repository</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-resource-pool</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-restart</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-route</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-running</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-save</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-screen</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-server</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-service</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-settings</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-storage-domain</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-thumb-tack-o</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-topology</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-trend-down</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-trend-up</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-user</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-users</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-virtual-machine</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-volume</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-warning-triangle-o</span>
-      </li>
-      <li>
-        <span class="pficon pficon-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">pficon-zone</span>
-      </li>
-    </ul>
-  </div>
-  <div class="col-sm-6 col-md-6">
-    <h2>Recommended Font Awesome Icons</h2>
-    <ul class="icons list-unstyled">
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-angle-down</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-angle-left</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-angle-right</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-angle-up</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-angle-double-left</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-angle-double-right</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-arrow-circle-o-down</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-ban</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-bug</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-check</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-clock-o</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-cube</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-cubes</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-database</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-envelope</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-filter</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-lock</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-map-marker</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-minus</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-plus</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-plus-square</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-power-off</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-refresh</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-search</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-shield</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-star</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-star-o</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-tachometer</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-thumb-tack</span>
-      </li>
-      <li>
-        <span class="fa fa-unicode-character" title="Copy to clipboard"></span>
-        <span class="icon-class">fa-unlock-alt</span>
-      </li>
-    </ul>
-  </div>
-</div>
+To copy any icon to the clipboard, just click on the icon. To use an icon within desktop applications, install [PatternFlyIcons-webfont.ttf](https://github.com/patternfly/patternfly/raw/master-dist/dist/fonts/PatternFlyIcons-webfont.ttf) or [FontAwesome.otf](https://github.com/patternfly/patternfly/raw/master-dist/dist/fonts/FontAwesome.otf), set it as the font in your application, and paste the icons into your designs.
 
-<script>
-  $('[class*="unicode-character"]').tooltip();
-  var clipboard = new Clipboard('[class*="unicode-character"]', {
-    target: function (trigger) {
-      return trigger;
-    }
-  });
-  clipboard.on('success', function (e) {
-    $(e.trigger)
-      .attr('title', 'Copied!')
-      .tooltip('fixTitle')
-      .tooltip('show')
-      .attr('title', 'Copy to clipboard')
-      .tooltip('fixTitle')
-    e.clearSelection()
-  });
-  clipboard.on('error', function (e) {
-    var fallbackMsg = /Mac/i.test(navigator.userAgent) ? 'Press \u2318C to copy' : 'Press Ctrl-C to copy'
-    $(e.trigger)
-      .attr('title', fallbackMsg)
-      .tooltip('fixTitle')
-      .tooltip('show')
-      .attr('title', 'Copy to clipboard')
-      .tooltip('fixTitle')
-  });
-</script>
+You may also download the set of [PatternFly icon SVGs](patternfly-svg-icons.zip).
 
- [1]: https://github.com/patternfly/patternfly/raw/master-dist/dist/fonts/PatternFlyIcons-webfont.ttf
- [2]: https://github.com/patternfly/patternfly/raw/master-dist/dist/fonts/FontAwesome.otf
+| Icon                                                        | Name                           |
+| ----------------------------------------------------------- | ------------------------------ |
+| <span class="fa fa-check"></span>                      | fa-check                  |
+| <span class="fa fa-arrow-circle-o-down"></span>        | fa-arrow-circle-o-down    |
+| <span class="fa fa-arrow-circle-o-up"></span>          | fa-arrow-circle-o-up      |
+| <span class="pficon pficon-error-circle-o"></span>     | pficon-error-circle-o     |
+| <span class="pficon pficon-warning-triangle-o"></span> | pficon-warning-triangle-o |
+| <span class="pficon pficon-search"></span>             | pficon-search             |
+| <span class="fa fa-clock-o"></span>                    | fa-clock-o                |
+| <span class="pficon pficon-ok"></span>                 | pficon-ok                 |
+| <span class="pficon pficon-info"></span>               | pficon-info               |
+| <span class="pficon pficon-restart"></span>            | pficon-restart            |
+| <span class="pficon pficon-spinner"></span>            | pficon-spinner            |
+| <span class="pficon pficon-spinner2"></span>           | pficon-spinner2           |
+| <span class="pficon pficon-folder-open"></span>        | pficon-folder-open        |
+| <span class="pficon pficon-folder-close"></span>       | pficon-folder-close       |
+| <span class="pficon pficon-key"></span>                | pficon-key                |
+| <span class="pficon pficon-locked"></span>             | pficon-locked             |
+| <span class="pficon pficon-unlocked"></span>           | pficon-unlocked           |
+| <span class="pficon pficon-private"></span>            | pficon-private            |
+| <span class="pficon pficon-thumb-tack"></span>         | pficon-thumb-tack         |
+| <span class="pficon pficon-home"></span>               | pficon-home               |
+| <span class="pficon pficon-print"></span>              | pficon-print              |
+| <span class="fa fa-cubes"></span>                      | fa-cubes                  |
+| <span class="fa fa-cube"></span>                       | fa-cube                   |
+| <span class="pficon pficon-image"></span>              | pficon-image              |
+| <span class="pficon pficon-service"></span>            | pficon-service            |
+| <span class="pficon pficon-container-node"></span>     | pficon-container-node     |
+| <span class="pficon pficon-cluster"></span>            | pficon-cluster            |
+| <span class="pficon pficon-bundle"></span>             | pficon-bundle             |
+| <span class="pficon pficon-middleware"></span>         | pficon-middleware         |
+| <span class="pficon pficon-route"></span>              | pficon-route              |
+| <span class="pficon pficon-replicator"></span>         | pficon-replicator         |
+| <span class="pficon pficon-registry"></span>           | pficon-registry           |
+| <span class="pficon pficon-rebalance"></span>          | pficon-rebalance          |
+| <span class="pficon pficon-degraded"></span>           | pficon-degraded           |
+| <span class="fa fa-tachometer"></span>                 | fa-tachometer             |
+| <span class="fa fa-th-large"></span>                   | fa-th-large               |
+| <span class="fa fa-th"></span>                         | fa-th                     |
+| <span class="fa fa-table"></span>                      | fa-table                  |
+| <span class="pficon pficon-topology"></span>           | pficon-topology           |
+| <span class="fa fa-list-alt"></span>                   | fa-list-alt               |
+| <span class="fa fa-bell"></span>                       | fa-bell                   |
+| <span class="fa fa-bug"></span>                        | fa-bug                    |
+| <span class="fa fa-shield"></span>                     | fa-shield                 |
+| <span class="fa fa-plus-square"></span>                | fa-plus-square            |
+| <span class="pficon pficon-cloud-security"></span>     | pficon-cloud-security     |
+| <span class="pficon pficon-cloud-tenant"></span>       | pficon-cloud-tenant       |
+| <span class="pficon pficon-cpu"></span>                | pficon-cpu                |
+| <span class="fa fa-database"></span>                   | fa-database               |
+| <span class="pficon pficon-enterprise"></span>         | pficon-enterprise         |
+| <span class="pficon pficon-flavor"></span>             | pficon-flavor             |
+| <span class="pficon pficon-memory"></span>             | pficon-memory             |
+| <span class="pficon pficon-network"></span>            | pficon-network            |
+| <span class="pficon pficon-regions"></span>            | pficon-regions            |
+| <span class="pficon pficon-repository"></span>         | pficon-repository         |
+| <span class="pficon pficon-resource-pool"></span>      | pficon-resource-pool      |
+| <span class="pficon pficon-resources-almost-full"></span>| pficon-resources-almost-full|
+| <span class="pficon pficon-resources-full"></span>     | pficon-resources-full     |
+| <span class="pficon pficon-server"></span>             | pficon-server             |
+| <span class="pficon pficon-server-group"></span>       | pficon-server-group       |
+| <span class="pficon pficon-settings"></span>           | pficon-settings           |
+| <span class="pficon pficon-storage-domain"></span>     | pficon-storage-domain     |
+| <span class="pficon pficon-user"></span>               | pficon-user               |
+| <span class="pficon pficon-users"></span>              | pficon-users              |
+| <span class="pficon pficon-project"></span>            | pficon-project            |
+| <span class="pficon pficon-blueprint"></span>          | pficon-blueprint          |
+| <span class="pficon pficon-chat"></span>               | pficon-chat               |
+| <span class="pficon pficon-messages"></span>           | pficon-messages           |
+| <span class="pficon pficon-virtual-machine"></span>    | pficon-virtual-machine    |
+| <span class="pficon pficon-volume"></span>             | pficon-volume             |
+| <span class="pficon pficon-zone"></span>               | pficon-zone               |
+| <span class="pficon pficon-screen"></span>             | pficon-screen             |
+| <span class="fa fa-envelope"></span>                   | fa-envelope               |
+| <span class="fa fa-refresh"></span>                    | fa-refresh                |
+| <span class="fa fa-filter"></span>                     | fa-filter                 |
+| <span class="pficon pficon-add-circle-o"></span>       | pficon-add-circle-o       |
+| <span class="pficon pficon-edit"></span>               | pficon-edit               |
+| <span class="pficon pficon-save"></span>               | pficon-save               |
+| <span class="pficon pficon-remove"></span>             | pficon-remove             |
+| <span class="pficon pficon-help"></span>               | pficon-help               |
+| <span class="pficon pficon-close"></span>              | pficon-close              |
+| <span class="pficon pficon-export"></span>             | pficon-export             |
+| <span class="pficon pficon-import"></span>             | pficon-import             |
+| <span class="pficon pficon-arrow"></span>              | pficon-arrow              |
+| <span class="fa fa-angle-up"></span>                   | fa-angle-up               |
+| <span class="fa fa-angle-down"></span>                 | fa-angle-down             |
+| <span class="fa fa-angle-left"></span>                 | fa-angle-left             |
+| <span class="fa fa-angle-right"></span>                | fa-angle-right            |
+| <span class="fa fa-angle-double-left"></span>          | fa-angle-double-left      |
+| <span class="fa fa-angle-double-right"></span>         | fa-angle-double-right     |
+| <span class="fa fa-search"></span>                     | fa-search                 |
+| <span class="fa fa-sort"></span>                       | fa-sort                   |
+| <span class="fa fa-sort-asc"></span>                   | fa-sort-asc               |
+| <span class="fa fa-sort-desc"></span>                  | fa-sort-desc              |
