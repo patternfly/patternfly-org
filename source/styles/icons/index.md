@@ -1,6 +1,6 @@
 ---
 title: Icons
-author: rhamilto
+author: bleathem
 layout: page
 ---
 PatternFly icons are two dimensional and flat. Most of the icons are gray, with the exception of icons that require color for emphasis.
@@ -8,6 +8,8 @@ PatternFly icons are two dimensional and flat. Most of the icons are gray, with 
 PatternFly includes custom icons and selections from [IcoMoon &#8211; Free][1] and [FontAwesome][2]. Not all of the FontAwesome icons are recommended for use with PatternFly, but are included for convenience. [Bootstrap Glyphicons][3] are also included in PatternFly, but are not recommended for use. See below for recommendations.
 
 To copy any icon to the clipboard, just click on the icon. To use an icon within desktop applications, install [PatternFlyIcons-webfont.ttf](https://github.com/patternfly/patternfly/raw/master-dist/dist/fonts/PatternFlyIcons-webfont.ttf) or [FontAwesome.otf](https://github.com/patternfly/patternfly/raw/master-dist/dist/fonts/FontAwesome.otf), set it as the font in your application, and paste the icons into your designs.
+
+You can also download the set of [PatternFly icon SVGs](https://rawgit.com/patternfly/patternfly-design/master/styles/icons/patternfly-svg-icons.zip).
 
 <div class="row">
   <div class="col-sm-6 col-md-6 icomoon">
