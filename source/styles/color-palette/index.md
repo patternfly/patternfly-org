@@ -479,7 +479,7 @@ layout: page
               <li><a href="/assets/file/PatternFly_Palette.sketchpalette">For Sketch</a></li>
             </ul>
           </div>
-          <span class="last-update">Last updated: 27 Oct 2016</span>
+          <span class="last-update">Last updated: 27 Feb 2017</span>
         </div>
         <div class="col-md-8 clearfix">
         <div class="important-color-swatches">
