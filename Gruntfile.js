@@ -49,8 +49,7 @@ module.exports = function (grunt) {
             src: ['**', '!<%= config.build %>/assets/css'],
             dest: '<%= config.build %>'
           }
-        ],
-        verbose: true
+        ]
       },
       design: {
         files: [
@@ -77,6 +76,12 @@ module.exports = function (grunt) {
             rename: function(dest, src) {
               return dest + '/' + src.replace('site.md', 'index.md');
             }
+          },
+          {
+            expand: true,
+            cwd: 'submodules/patternfly-design/styles',
+            src: ['**/*.md'],
+            dest: '<%= config.build %>/_includes/styles'
           }
         ]
       },
