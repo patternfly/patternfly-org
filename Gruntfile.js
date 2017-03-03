@@ -243,7 +243,7 @@ module.exports = function (grunt) {
       },
       jekyll: {
         files: ['<%= config.build %>/**/*', '!<%= config.source %>/_less/**/*'],
-        tasks: ['jekyll']
+        tasks: ['jekyll:staging']
       },
       design: {
         files: ['submodules/patternfly-design/**/*'],
