@@ -1,377 +1,63 @@
 ---
 title: Icons
-author: rhamilto
+author: bleathem
 layout: page
 ---
 PatternFly icons are two dimensional and flat. Most of the icons are gray, with the exception of icons that require color for emphasis.
 
 PatternFly includes custom icons and selections from [IcoMoon &#8211; Free][1] and [FontAwesome][2]. Not all of the FontAwesome icons are recommended for use with PatternFly, but are included for convenience. [Bootstrap Glyphicons][3] are also included in PatternFly, but are not recommended for use. See below for recommendations.
 
-To use these icons on the desktop, check out the [cheatsheet][4].
+To copy any icon to the clipboard, just click on the icon. To use an icon within desktop applications, install [PatternFlyIcons-webfont.ttf](https://github.com/patternfly/patternfly/raw/master-dist/dist/fonts/PatternFlyIcons-webfont.ttf) or [FontAwesome.otf](https://github.com/patternfly/patternfly/raw/master-dist/dist/fonts/FontAwesome.otf), set it as the font in your application, and paste the icons into your designs.
+
+You can also download the set of [PatternFly icon SVGs](https://rawgit.com/patternfly/patternfly-design/master/styles/icons/patternfly-svg-icons.zip).
 
 <div class="row">
-  <div class="col-sm-6 col-md-6">
-    <h2>
-      PatternFly Icons
-    </h2>
-    <p>
-      Custom icons and selections from <a href="http://icomoon.io/#icons">IcoMoon &#8211; Free</a>.
-    </p>
-    <ul class="icons list-unstyled">
-      <li>
-        <span class="pficon pficon-add-circle-o"></span>
-        <span class="icon-class">pficon-add-circle-o</span>
-      </li>
-      <li>
-        <span class="pficon pficon-build"></span>
-        <span class="icon-class">pficon-build</span>
-      </li>
-      <li>
-        <span class="pficon pficon-builder-image"></span>
-        <span class="icon-class">pficon-builder-image</span>
-      </li>
-      <li>
-        <span class="pficon pficon-close"></span>
-        <span class="icon-class">pficon-close</span>
-      </li>
-      <li>
-        <span class="pficon pficon-cloud-security"></span>
-        <span class="icon-class">pficon-cloud-security</span>
-      </li>
-      <li>
-        <span class="pficon pficon-cloud-tenant"></span>
-        <span class="icon-class">pficon-cloud-tenant</span>
-      </li>
-      <li>
-        <span class="pficon pficon-cluster"></span>
-        <span class="icon-class">pficon-cluster</span>
-      </li>
-      <li>
-        <span class="pficon pficon-container-node"></span>
-        <span class="icon-class">pficon-container-node</span>
-      </li>
-      <li>
-        <span class="pficon pficon-cpu"></span>
-        <span class="icon-class">pficon-cpu</span>
-      </li>
-      <li>
-        <span class="pficon pficon-delete"></span>
-        <span class="icon-class">pficon-delete</span>
-      </li>
-      <li>
-        <span class="pficon pficon-edit"></span>
-        <span class="icon-class">pficon-edit</span>
-      </li>
-      <li>
-        <span class="pficon pficon-enterprise"></span>
-        <span class="icon-class">pficon-enterprise</span>
-      </li>
-      <li>
-        <span class="pficon pficon-error-circle-o"></span>
-        <span class="icon-class">pficon-error-circle-o</span>
-      </li>
-      <li>
-        <span class="pficon pficon-export"></span>
-        <span class="icon-class">pficon-export</span>
-      </li>
-      <li>
-        <span class="pficon pficon-flag"></span>
-        <span class="icon-class">pficon-flag</span>
-      </li>
-      <li>
-        <span class="pficon pficon-flavor"></span>
-        <span class="icon-class">pficon-flavor</span>
-      </li>
-      <li>
-        <span class="pficon pficon-folder-close"></span>
-        <span class="icon-class">pficon-folder-close</span>
-      </li>
-      <li>
-        <span class="pficon pficon-folder-open"></span>
-        <span class="icon-class">pficon-folder-open</span>
-      </li>
-      <li>
-        <span class="pficon pficon-help"></span>
-        <span class="icon-class">pficon-help</span>
-      </li>
-      <li>
-        <span class="pficon pficon-home"></span>
-        <span class="icon-class">pficon-home</span>
-      </li>
-      <li>
-        <span class="pficon pficon-history"></span>
-        <span class="icon-class">pficon-history</span>
-      </li>
-      <li>
-        <span class="pficon pficon-image"></span>
-        <span class="icon-class">pficon-image</span>
-      </li>
-      <li>
-        <span class="pficon pficon-import"></span>
-        <span class="icon-class">pficon-import</span>
-      </li>
-      <li>
-        <span class="pficon pficon-info"></span>
-        <span class="icon-class">pficon-info</span>
-      </li>
-      <li>
-        <span class="pficon pficon-memory"></span>
-        <span class="icon-class">pficon-memory</span>
-      </li>
-      <li>
-        <span class="pficon pficon-network"></span>
-        <span class="icon-class">pficon-network</span>
-      </li>
-      <li>
-        <span class="pficon pficon-ok"></span>
-        <span class="icon-class">pficon-ok</span>
-      </li>
-      <li>
-        <span class="pficon pficon-print"></span>
-        <span class="icon-class">pficon-print</span>
-      </li>
-      <li>
-        <span class="pficon pficon-project"></span>
-        <span class="icon-class">pficon-project</span>
-      </li>
-      <li>
-        <span class="pficon pficon-regions"></span>
-        <span class="icon-class">pficon-regions</span>
-      </li>
-      <li>
-        <span class="pficon pficon-registry"></span>
-        <span class="icon-class">pficon-registry</span>
-      </li>
-      <li>
-        <span class="pficon pficon-replicator"></span>
-        <span class="icon-class">pficon-replicator</span>
-      </li>
-      <li>
-        <span class="pficon pficon-repository"></span>
-        <span class="icon-class">pficon-repository</span>
-      </li>
-      <li>
-        <span class="pficon pficon-resource-pool"></span>
-        <span class="icon-class">pficon-resource-pool</span>
-      </li>
-      <li>
-        <span class="pficon pficon-resources-almost-full"></span>
-        <span class="icon-class">pficon-resources-almost-full</span>
-      </li>      
-      <li>
-        <span class="pficon pficon-resources-full"></span>
-        <span class="icon-class">pficon-resources-full</span>
-      </li>      
-      <li>
-        <span class="pficon pficon-restart"></span>
-        <span class="icon-class">pficon-restart</span>
-      </li>
-      <li>
-        <span class="pficon pficon-route"></span>
-        <span class="icon-class">pficon-route</span>
-      </li>
-      <li>
-        <span class="pficon pficon-running"></span>
-        <span class="icon-class">pficon-running</span>
-      </li>
-      <li>
-        <span class="pficon pficon-save"></span>
-        <span class="icon-class">pficon-save</span>
-      </li>
-      <li>
-        <span class="pficon pficon-screen"></span>
-        <span class="icon-class">pficon-screen</span>
-      </li>
-      <li>
-        <span class="pficon pficon-server"></span>
-        <span class="icon-class">pficon-server</span>
-      </li>
-      <li>
-        <span class="pficon pficon-service"></span>
-        <span class="icon-class">pficon-service</span>
-      </li>
-      <li>
-        <span class="pficon pficon-settings"></span>
-        <span class="icon-class">pficon-settings</span>
-      </li>
-      <li>
-        <span class="pficon pficon-storage-domain"></span>
-        <span class="icon-class">pficon-storage-domain</span>
-      </li>
-      <li>
-        <span class="pficon pficon-thumb-tack-o"></span>
-        <span class="icon-class">pficon-thumb-tack-o</span>
-      </li>
-      <li>
-        <span class="pficon pficon-topology"></span>
-        <span class="icon-class">pficon-topology</span>
-      </li>
-      <li>
-        <span class="pficon pficon-trend-down"></span>
-        <span class="icon-class">pficon-trend-down</span>
-      </li>
-      <li>
-        <span class="pficon pficon-trend-up"></span>
-        <span class="icon-class">pficon-trend-up</span>
-      </li>
-      <li>
-        <span class="pficon pficon-user"></span>
-        <span class="icon-class">pficon-user</span>
-      </li>
-      <li>
-        <span class="pficon pficon-users"></span>
-        <span class="icon-class">pficon-users</span>
-      </li>
-      <li>
-        <span class="pficon pficon-virtual-machine"></span>
-        <span class="icon-class">pficon-virtual-machine</span>
-      </li>
-      <li>
-        <span class="pficon pficon-volume"></span>
-        <span class="icon-class">pficon-volume</span>
-      </li>
-      <li>
-        <span class="pficon pficon-warning-triangle-o"></span>
-        <span class="icon-class">pficon-warning-triangle-o</span>
-      </li>
-      <li>
-        <span class="pficon pficon-zone"></span>
-        <span class="icon-class">pficon-zone</span>
-      </li>
-    </ul>
+  <div class="col-sm-6 col-md-6 icomoon">
+{% capture my_include %}{% include styles/icons/icomoon.md %}{% endcapture %}
+{{ my_include | site_replace | markdownify }}
   </div>
-
   <div class="col-sm-6 col-md-6">
-    <h2>
-      Recommended Font Awesome Icons
-    </h2>
-    <p>
-      All <a href="http://fontawesome.io/icons/">Font Awesome</a> icons are available, but only these are recommended for use with PatternFly.
-    </p>
-    <ul class="icons list-unstyled">
-      <li>
-        <span class="fa fa-angle-down"></span>
-        <span class="icon-class">fa-angle-down</span>
-      </li>
-      <li>
-        <span class="fa fa-angle-left"></span>
-        <span class="icon-class">fa-angle-left</span>
-      </li>
-      <li>
-        <span class="fa fa-angle-right"></span>
-        <span class="icon-class">fa-angle-right</span>
-      </li>
-      <li>
-        <span class="fa fa-angle-up"></span>
-        <span class="icon-class">fa-angle-up</span>
-      </li>
-      <li>
-        <span class="fa fa-angle-double-left"></span>
-        <span class="icon-class">fa-angle-double-left</span>
-      </li>
-      <li>
-        <span class="fa fa-angle-double-right"></span>
-        <span class="icon-class">fa-angle-double-right</span>
-      </li>
-      <li>
-        <span class="fa fa-arrow-circle-o-down"></span>
-        <span class="icon-class">fa-arrow-circle-o-down</span>
-      </li>
-      <li>
-        <span class="fa fa-ban"></span>
-        <span class="icon-class">fa-ban</span>
-      </li>
-      <li>
-        <span class="fa fa-bug"></span>
-        <span class="icon-class">fa-bug</span>
-      </li>
-      <li>
-        <span class="fa fa-check"></span>
-        <span class="icon-class">fa-check</span>
-      </li>
-      <li>
-        <span class="fa fa-clock-o"></span>
-        <span class="icon-class">fa-clock-o</span>
-      </li>
-      <li>
-        <span class="fa fa-cube"></span>
-        <span class="icon-class">fa-cube</span>
-      </li>
-      <li>
-        <span class="fa fa-cubes"></span>
-        <span class="icon-class">fa-cubes</span>
-      </li>
-      <li>
-        <span class="fa fa-database"></span>
-        <span class="icon-class">fa-database</span>
-      </li>
-      <li>
-        <span class="fa fa-envelope"></span>
-        <span class="icon-class">fa-envelope</span>
-      </li>
-      <li>
-        <span class="fa fa-filter"></span>
-        <span class="icon-class">fa-filter</span>
-      </li>
-      <li>
-        <span class="fa fa-lock"></span>
-        <span class="icon-class">fa-lock</span>
-      </li>
-      <li>
-        <span class="fa fa-map-marker"></span>
-        <span class="icon-class">fa-map-marker</span>
-      </li>
-      <li>
-        <span class="fa fa-minus"></span>
-        <span class="icon-class">fa-minus</span>
-      </li>
-      <li>
-        <span class="fa fa-plus"></span>
-        <span class="icon-class">fa-plus</span>
-      </li>
-      <li>
-        <span class="fa fa-plus-square"></span>
-        <span class="icon-class">fa-plus-square</span>
-      </li>
-      <li>
-        <span class="fa fa-power-off"></span>
-        <span class="icon-class">fa-power-off</span>
-      </li>
-      <li>
-        <span class="fa fa-refresh"></span>
-        <span class="icon-class">fa-refresh</span>
-      </li>
-      <li>
-        <span class="fa fa-search"></span>
-        <span class="icon-class">fa-search</span>
-      </li>
-      <li>
-        <span class="fa fa-shield"></span>
-        <span class="icon-class">fa-shield</span>
-      </li>
-      <li>
-        <span class="fa fa-star"></span>
-        <span class="icon-class">fa-star</span>
-      </li>
-      <li>
-        <span class="fa fa-star-o"></span>
-        <span class="icon-class">fa-star-o</span>
-      </li>
-      <li>
-        <span class="fa fa-tachometer"></span>
-        <span class="icon-class">fa-tachometer</span>
-      </li>
-      <li>
-        <span class="fa fa-thumb-tack"></span>
-        <span class="icon-class">fa-thumb-tack</span>
-      </li>
-      <li>
-        <span class="fa fa-unlock-alt"></span>
-        <span class="icon-class">fa-unlock-alt</span>
-      </li>
-    </ul>
+{% capture my_include %}{% include styles/icons/fontawesome.md %}{% endcapture %}
+{{ my_include | site_replace | markdownify }}
   </div>
 </div>
+
+<script>
+  $('table td:nth-child(3),th:nth-child(3)').hide();
+  $('table').addClass('table table-striped table-bordered')
+  $('td').tooltip({container: 'body'}).attr('title', 'Copy to clipboard').tooltip('fixTitle');
+  var clipboard = new Clipboard('td', {
+    text: function (trigger) {
+      var icon = trigger.querySelector('.pficon, .fa');
+      console.log(icon)
+      if (icon) {
+        var content = window.getComputedStyle(icon, ':before').getPropertyValue('content')
+        return content.replace(/"/g, '');
+      } else {
+        return trigger.innerText;
+      }
+    }
+  });
+  clipboard.on('success', function (e) {
+    $(e.trigger)
+      .attr('title', 'Copied!')
+      .tooltip('fixTitle')
+      .tooltip('show')
+      .attr('title', 'Copy to clipboard')
+      .tooltip('fixTitle')
+    e.clearSelection()
+  });
+  clipboard.on('error', function (e) {
+    var fallbackMsg = /Mac/i.test(navigator.userAgent) ? 'Press \u2318C to copy' : 'Press Ctrl-C to copy'
+    $(e.trigger)
+      .attr('title', fallbackMsg)
+      .tooltip('fixTitle')
+      .tooltip('show')
+      .attr('title', 'Copy to clipboard')
+      .tooltip('fixTitle')
+  });
+</script>
+
 
  [1]: http://icomoon.io/#icons
  [2]: http://fontawesome.io/icons/
