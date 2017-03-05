@@ -11,6 +11,8 @@ To copy any icon to the clipboard, just click on the icon. To use an icon within
 
 You can also download the set of [PatternFly icon SVGs][6].
 
+Search for an icon: <input type="text" id="icon-search"/>
+
 <div class="row">
   <div class="col-sm-6 col-md-6 icomoon">
 {% capture my_include %}{% include styles/icons/icomoon.md %}{% endcapture %}
@@ -62,6 +64,21 @@ You can also download the set of [PatternFly icon SVGs][6].
       .attr('title', 'Copy to clipboard')
       .tooltip('fixTitle')
   });
+  $('#icon-search').on('input', function() {
+    var text = this.value;
+    $('.table tr').each(function() {
+      var row = this;
+      setTimeout(function() {
+        var child = row.children[1];
+        var show = text.length === 0 || child.nodeName === 'TH' || row.children[1].innerText.indexOf(text) > 0;
+        if (show) {
+          $(row).show(100);
+        } else {
+          $(row).hide(100);
+        }
+      }, 100)
+    })
+  })
 </script>
 
 
