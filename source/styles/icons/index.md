@@ -13,7 +13,7 @@ You can also download the set of [PatternFly icon SVGs][6].
 
 Search for an icon: <input type="text" id="icon-search"/>
 
-<div class="row">
+<div class="row icons">
   <div class="col-sm-6 col-md-6 icomoon">
 {% capture my_include %}{% include styles/icons/icomoon.md %}{% endcapture %}
 {{ my_include | site_replace | markdownify }}
@@ -28,6 +28,14 @@ Search for an icon: <input type="text" id="icon-search"/>
 .post_content h2[id], .post_content h3[id], .post_content h4[id], .post_content h5[id], .post_content p[id] {
   margin-top: 0;
   padding-top: 0;
+}
+
+.icons table {
+  /*width: auto;*/
+}
+
+.icons table td:nth-child(1) {
+  width: 5rem;
 }
 </style>
 
@@ -66,17 +74,14 @@ Search for an icon: <input type="text" id="icon-search"/>
   });
   $('#icon-search').on('input', function() {
     var text = this.value;
-    $('.table tr').each(function() {
-      var row = this;
-      setTimeout(function() {
-        var child = row.children[1];
-        var show = text.length === 0 || child.nodeName === 'TH' || row.children[1].innerText.indexOf(text) > 0;
-        if (show) {
-          $(row).show(100);
-        } else {
-          $(row).hide(100);
-        }
-      }, 100)
+    $('.icons .table tr').each(function() {
+      var child = this.children[1];
+      var show = text.length === 0 || child.nodeName === 'TH' || child.innerText.indexOf(text) >= 0;
+      if (show) {
+        $(this).show(100);
+      } else {
+        $(this).hide(100);
+      }
     })
   })
 </script>
