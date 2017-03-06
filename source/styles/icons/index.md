@@ -11,7 +11,7 @@ To copy any icon to the clipboard, just click on the icon. To use an icon within
 
 You can also download the set of [PatternFly icon SVGs][6].
 
-Search for an icon: <input type="text" id="icon-search"/>
+Search for an icon: <span class="icon-search-container"><input type="text" id="icon-search" placeholder="Search..."/></span>
 
 <div class="row icons">
   <div class="col-sm-6 col-md-6 icomoon">
@@ -32,6 +32,18 @@ Search for an icon: <input type="text" id="icon-search"/>
 
 .icons table {
   /*width: auto;*/
+}
+
+.icon-search-container:before {
+  font-family: "FontAwesome";
+  content: "\f002";
+  position: relative;
+  left: 2rem;
+}
+
+#icon-search {
+  padding-left: 2.5rem;
+  width: 12rem;
 }
 
 .icons table td:nth-child(1) {
