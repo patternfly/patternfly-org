@@ -88,7 +88,9 @@ Search for an icon: <span class="icon-search-container"><input type="text" id="i
     var text = this.value;
     $('.icons .table tr').each(function() {
       var child = this.children[1];
-      var show = text.length === 0 || child.nodeName === 'TH' || child.innerText.indexOf(text) >= 0;
+      var show = text.length === 0
+        || child.nodeName === 'TH'
+        || child.innerText.toLowerCase().indexOf(text.toLowerCase()) >= 0;
       if (show) {
         $(this).show(100);
       } else {
