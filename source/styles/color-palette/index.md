@@ -957,7 +957,7 @@ Use for general UI and backgrounds.</p>
 <div class="row row-gray">
   <div class="col-md-6">
     <h2>Contrast Ratios</h2>
-    <p>AAA requires a contrast ratio of 7:1 for normal text and 4:5:1 for large text.  All patternfly fonts must adhere to AAA standards.  More details on contrast ratios are at <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">WCAG 2.0.</a></p>
+    <p>AAA requires a contrast ratio of 7:1 for normal text and 4.5:1 for large text.  All patternfly fonts must adhere to AAA standards.  More details on contrast ratios are at <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">WCAG 2.0.</a></p>
     <div class="primary-color-swatch color-pf-blue-300">
     <p>pf-blue-300 <span class="primary-color-swatch-left-spacing-12">#39a5dc</span></p></div>
     <div class="primary-color-swatch color-pf-blue-400 white-text">
