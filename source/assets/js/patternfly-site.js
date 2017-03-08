@@ -36,7 +36,11 @@ jQuery( document ).ready(function() {
             domitem.tab('show');
         } else { // invalid location hash, ignore it
           $('a[href=\\#overview][data-toggle=tab]').tab('show');
-          history.pushState("", document.title, window.location.pathname + window.location.search);
+          if ('pushState' in history) {
+            history.pushState('', document.title, window.location.pathname + window.location.search);
+          } else {
+            window.location.hash = '';
+          }
         }
       }
     }
