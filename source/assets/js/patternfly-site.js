@@ -26,6 +26,9 @@ jQuery( document ).ready(function() {
   });
   // Enable nested tabs to remember location on refresh
   jQuery(function(){
+    if (!window.location.hash) {
+      return;
+    }
     var hash = window.location.hash.split('#')[1];
     var hpieces = hash.split('/');
     for (var i=0;i<hpieces.length;i++) {
