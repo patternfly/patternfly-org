@@ -35,7 +35,7 @@ jQuery( document ).ready(function() {
     for (var i=0;i<hpieces.length;i++) {
       var domelid = hpieces[i].replace(prefix,'');
       if (domelid) {
-        var domitem = $('a[href=#' + domelid + '][data-toggle=tab]');
+        var domitem = $('a[href="#' + domelid + '"][data-toggle=tab]');
         if (domitem.length > 0) {
           domitem.tab('show');
         }
