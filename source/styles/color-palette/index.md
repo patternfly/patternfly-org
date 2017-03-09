@@ -474,8 +474,8 @@ layout: page
               <i class="fa fa-download"></i> Download Color Swatches <span class="caret"></span>
             </button>
             <ul class="dropdown-menu dropdown-menu-pf-full">
-              <li><a href="/assets/file/PatternFly_Swatches_08-31-2016.aco">For Adobe Photoshop</a></li>
-              <li><a href="/assets/file/PatternFly_Swatches_08-31-2016.ase">For Adobe Illustrator/Indesign</a></li>
+              <li><a href="/assets/file/PatternFly_Swatches_02-27-2017.aco">For Adobe Photoshop</a></li>
+              <li><a href="/assets/file/PatternFly_Swatches_02-27-2017.ase">For Adobe Illustrator/Indesign</a></li>
               <li><a href="/assets/file/PatternFly_Palette.sketchpalette">For Sketch</a></li>
             </ul>
           </div>
