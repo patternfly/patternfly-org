@@ -36,7 +36,7 @@ jQuery( document ).ready(function() {
       if (domelid) {
         var domitem = $('a[href="#' + domelid + '"][data-toggle=tab]');
         if (domitem.length > 0) {
-            domitem.tab('show');
+          domitem.tab('show');
         } else { // invalid location hash, ignore it
           $('a[href=\\#overview][data-toggle=tab]').tab('show');
           if ('pushState' in history) {
