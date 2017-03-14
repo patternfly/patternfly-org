@@ -39,7 +39,7 @@
           </div>
         </div><!-- /row -->
       </div><!-- /container -->
-      <script src="/components/jquery-match-height/jquery.matchHeight-min.js"></script>
+      <script src="/components/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
       <script>
       $(function() {
         // matchHeight the contents of each .card-pf and then the .card-pf itself
@@ -95,7 +95,7 @@
           </div>
         </div><!-- /row -->
       </div><!-- /container -->
-      <script src="/components/jquery-match-height/jquery.matchHeight-min.js"></script>
+      <script src="/components/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
       <script>
       $(function() {
         // matchHeight the contents of each .card-pf and then the .card-pf itself
