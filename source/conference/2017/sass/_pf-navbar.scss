@@ -1,0 +1,53 @@
+/*
+Copyright 2016 Red Hat, Inc
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+//
+// NavBar Horizontal
+// --------------------------------------------------
+
+.pf-navbar-horizontal {
+  @include pf-gradient-y-four-colors;
+
+  .nav-item {
+    @include hover-focus-active {
+      @include pf-gradient-y-four-colors(
+        $start-color: $pf-color-black-700,
+        $second-quarter-color: $pf-color-black-700,
+        $third-quarter-color: #2f2f2f,
+        $end-color: #1b1b1b
+      );
+    }
+    &.active {
+      border-top-width: 1px;
+      border-top-style: solid;
+      background: $pf-color-black-900;
+      border-top-color: $pf-color-black-600;
+    }
+
+  }
+
+  // Placeholder important till I figure out how to overwrite Bootstrap specificity
+  .nav-link {
+    padding-left: ($grid-gutter-width-base / 2) !important;
+    padding-right: ($grid-gutter-width-base / 2) !important;
+  }
+
+  .navbar-nav {
+//    background: red;
+  }
+
+}
+
+// @import "https://cdn.rawgit.com/srambach/classbxr/9ba3784c/css/classbxr.css";

@@ -1,0 +1,809 @@
+/*
+Copyright 2016 Red Hat, Inc
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+
+// PatternFly Variables
+//
+// PatternFly variables overwrite Bootstrap _variables.scss
+
+
+// Table of Contents
+//
+// PatternFly box shadows
+// Patternfly Gradient
+// Patternfly font path
+// Patternfly Icons
+// Colors
+// Options
+// Spacing
+// Body
+// Links
+// Grid breakpoints
+// Grid containers
+// Grid columns
+// Fonts
+// Components
+// Tables
+// Buttons
+// Forms
+// Dropdowns
+// Z-index master list
+// Navbar
+// Navs
+// Pagination
+// Jumbotron
+// Form states and alerts
+// Cards
+// Tooltips
+// Popovers
+// Badges
+// Modals
+// Alerts
+// Progress bars
+// List group
+// Image thumbnails
+// Figures
+// Breadcrumbs
+// Carousel
+// Close
+// Code
+
+
+// General variable structure
+//
+// Variable format should follow the `$component-modifier-state-property` order.
+
+
+// We are using the default root font of the browser, we assume a 16px base
+// since most browser root size is 16. This variables is just to make the
+// transformation from px to rem.
+$pf-font-size-root: 13 !default;
+
+// PatternFly box shadows
+//
+// -sm is for btns, -md is for cards, -lg is for toast or modals, -inset is for inputs
+
+$pf-box-shadow-sm: 0  ((2 / $pf-font-size-root) * 1rem)  ((3 / $pf-font-size-root) * 1rem) ((-2 / $pf-font-size-root) * 1rem) rgba($pf-color-black-1000, 0.25) !default;
+$pf-box-shadow-md: 0  ((2 / $pf-font-size-root) * 1rem)  ((2 / $pf-font-size-root) * 1rem) rgba($pf-color-black-1000, 0.2) !default;
+$pf-box-shadow-lg: 0  ((3 / $pf-font-size-root) * 1rem)  ((5 / $pf-font-size-root) * 1rem) rgba($pf-color-black-1000, 0.3) !default;
+$pf-box-shadow-inset: inset 0  ((1 / $pf-font-size-root) * 1rem)  ((2 / $pf-font-size-root) * 1rem) rgba($pf-color-black-1000, 0.1) !default;
+$pf-box-shadow-left: -.2rem 0 .5rem -.2rem rgba($pf-color-black-1000, 0.3) !default;
+$pf-box-shadow-right: .2rem 0 .5rem -.2rem rgba($pf-color-black-1000, 0.3) !default;
+
+
+// Patternfly Gradient
+
+$pf-gradient-color-start: $pf-color-black-100 !default;
+$pf-gradient-color-end: $pf-color-black-200 !default;
+$pf-gradient-percent-start: 0% !default;
+$pf-gradient-percent-end: 100% !default;
+
+
+// Patternfly font path
+
+// Defines path to /font foldeer
+$fa-font-path: "../fonts" !default;
+$pf-font-path: "../fonts" !default;
+// $pf-icon-font-name-fa:  "FontAwesome" !default;
+$pf-icon-font-name:  "PatternFlyIcons-webfont" !default;
+$pf-icon-prefix:  pf-icon !default;
+
+
+// Patternfly Icons
+
+$pf-icon-size-lg: 3.3rem;
+$pf-icon-size-md: 1.75rem;
+$pf-icon-size-sm: 1.5rem;
+
+$pf-icon-var-add-circle-o:               "\e61b";
+$pf-icon-var-middleware:                 "\e917";
+$pf-icon-var-blueprint:                  "\e915";
+$pf-icon-var-build:                      "\e902";
+$pf-icon-var-builder-image:              "\e800";
+$pf-icon-var-bundle:                     "\e918";
+$pf-icon-var-close:                      "\e60b";
+$pf-icon-var-cloud-security:             "\e903";
+$pf-icon-var-cloud-tenant:               "\e904";
+$pf-icon-var-cluster:                    "\e620";
+$pf-icon-var-container-node:             "\e621";
+$pf-icon-var-cpu:                        "\e905";
+$pf-icon-var-delete:                     "\e611";
+$pf-icon-var-domain:                     "\e919";
+$pf-icon-var-edit:                       "\e60a";
+$pf-icon-var-enterprise:                 "\e906";
+$pf-icon-var-error-circle-o:             "\e61d";
+$pf-icon-var-export:                     "\e616";
+$pf-icon-var-flag:                       "\e603";
+$pf-icon-var-flavor:                     "\e907";
+$pf-icon-var-folder-close:               "\e607";
+$pf-icon-var-folder-open:                "\e606";
+$pf-icon-var-help:                       "\e605";
+$pf-icon-var-history:                    "\e617";
+$pf-icon-var-home:                       "\e618";
+$pf-icon-var-image:                      "\e61f";
+$pf-icon-var-import:                     "\e615";
+$pf-icon-var-info:                       "\e604";
+$pf-icon-var-kubernetes:                 "\e627";
+$pf-icon-var-memory:                     "\e908";
+$pf-icon-var-network:                    "\e909";
+$pf-icon-var-ok:                         "\e602";
+$pf-icon-var-openshift:                  "\e626";
+$pf-icon-var-private:                    "\e914";
+$pf-icon-var-print:                      "\e612";
+$pf-icon-var-project:                    "\e622";
+$pf-icon-var-regions:                    "\e90a";
+$pf-icon-var-registry:                   "\e623";
+$pf-icon-var-replicator:                 "\e624";
+$pf-icon-var-repository:                 "\e90b";
+$pf-icon-var-resource-pool:              "\e90c";
+$pf-icon-var-resources-almost-full:      "\e912";
+$pf-icon-var-resources-full:             "\e913";
+$pf-icon-var-restart:                    "\e613";
+$pf-icon-var-route:                      "\e625";
+$pf-icon-var-running:                    "\e614";
+$pf-icon-var-save:                       "\e601";
+$pf-icon-var-screen:                     "\e600";
+$pf-icon-var-server:                     "\e90d";
+$pf-icon-var-server-group:               "\e91a";
+$pf-icon-var-service:                    "\e61e";
+$pf-icon-var-settings:                   "\e610";
+$pf-icon-var-storage-domain:             "\e90e";
+$pf-icon-var-tenant:                     "\e916";
+$pf-icon-var-thumb-tack-o:               "\e609";
+$pf-icon-var-topology:                   "\e608";
+$pf-icon-var-trend-down:                 "\e900";
+$pf-icon-var-trend-up:                   "\e901";
+$pf-icon-var-user:                       "\e60e";
+$pf-icon-var-users:                      "\e60f";
+$pf-icon-var-virtual-machine:            "\e90f";
+$pf-icon-var-volume:                     "\e910";
+$pf-icon-var-warning-triangle-o:         "\e61c";
+$pf-icon-var-zone:                       "\e911";
+
+
+
+// Colors
+//
+// Grayscale and brand colors for use across Bootstrap.
+
+// Start with assigning color names to specific hex values.
+$white:  $pf-color-white !default;
+$black:  $pf-color-black-1000 !default;
+$red:    $pf-color-red-100 !default;
+$orange: $pf-color-orange-400 !default;
+$yellow: $pf-color-gold-400 !default;
+$green:  $pf-color-green-400 !default;
+$blue:   $pf-color-blue-400 !default;
+$teal:   $pf-color-cyan-400 !default;
+$pink:   #ff5b77 !default;
+$purple: $pf-color-purple-400 !default;
+
+// Create grayscale
+$gray-dark:                 $pf-color-black-900 !default;
+$gray:                      $pf-color-black-700 !default;
+$gray-light:                $pf-color-black-500 !default;
+$gray-lighter:              $pf-color-black-300 !default;
+$gray-lightest:             $pf-color-black-100 !default;
+
+// Reassign color vars to semantic color scheme
+$brand-primary:             $blue !default;
+$brand-success:             $green !default;
+$brand-info:                $pf-color-blue-500 !default;
+$brand-warning:             $orange !default;
+$brand-danger:              $red !default;
+$brand-inverse:             $gray-dark !default;
+
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-rounded:            false !default;
+$enable-shadows:            true !default;
+$enable-gradients:          true !default;
+
+
+
+// Opacity
+//
+
+$pf-opacity-dark:   0.85;
+
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer:   1rem;
+$pf-spacer-xxxs:   (3 / $pf-font-size-root) * 1rem !default;
+$pf-spacer-xxs:    (7 / $pf-font-size-root) * 1rem !default;
+$pf-spacer-xs:     (10 / $pf-font-size-root) * 1rem !default;
+$pf-spacer-sm:     (14 / $pf-font-size-root) * 1rem !default;
+$pf-spacer-md:     (17 / $pf-font-size-root) * 1rem !default;
+$pf-spacer-lg:     (21 / $pf-font-size-root) * 1rem !default;
+$pf-spacer-xl:     (24 / $pf-font-size-root) * 1rem !default;
+$pf-spacer-xxl:    (28 / $pf-font-size-root) * 1rem !default;
+$pf-spacer-xxxl:   (35 / $pf-font-size-root) * 1rem !default;
+$pf-spacer-xxxxl:  (42 / $pf-font-size-root) * 1rem !default;
+
+$spacer-x: $spacer;
+$spacer-y: $spacer;
+$spacers: (
+  0: (
+    x: 0,
+    y: 0
+  ),
+  1: (
+    x: $spacer-x,
+    y: $spacer-y
+  ),
+  2: (
+    x: ($spacer-x * 1.5),
+    y: ($spacer-y * 1.5)
+  ),
+  3: (
+    x: ($spacer-x * 3),
+    y: ($spacer-y * 3)
+  ),
+  pf-xxxs: (
+    x: $pf-spacer-xxxs,
+    y: $pf-spacer-xxxs
+  ),
+  pf-xxs: (
+    x: $pf-spacer-xxs,
+    y: $pf-spacer-xxs
+  ),
+  pf-xs: (
+    x: $pf-spacer-xs,
+    y: $pf-spacer-xs
+  ),
+  pf-sm: (
+    x: $pf-spacer-sm,
+    y: $pf-spacer-sm
+  ),
+  pf-md: (
+    x: $pf-spacer-md,
+    y: $pf-spacer-md
+  ),
+  pf-lg: (
+    x: $pf-spacer-lg,
+    y: $pf-spacer-lg
+  ),
+  pf-xl: (
+    x: $pf-spacer-xl,
+    y: $pf-spacer-xl
+  ),
+  pf-xxl: (
+    x: $pf-spacer-xxl,
+    y: $pf-spacer-xxl
+  ),
+  pf-xxxl: (
+    x: $pf-spacer-xxxl,
+    y: $pf-spacer-xxxl
+  ),
+  pf-xxxxl: (
+    x: $pf-spacer-xxxxl,
+    y: $pf-spacer-xxxxl
+  )
+);
+$border-width: 1px !default;
+
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+// $body-bg:       $white !default;
+$body-color:    $gray-dark !default;
+// $inverse-bg:    $gray-dark !default;
+// $inverse-color: $gray-lighter !default;
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:            $pf-color-blue-400;
+// $link-decoration:       none !default;
+// $link-hover-color:      darken($link-color, 15%) !default;
+// $link-hover-decoration: underline !default;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:               12 !default;
+$grid-gutter-width-base:     $pf-spacer-xxxl !default; //Bootstrap default is 30px
+$grid-gutter-widths: (
+  xs: $grid-gutter-width-base,
+  sm: $grid-gutter-width-base,
+  md: $grid-gutter-width-base * 2,
+  lg: $grid-gutter-width-base * 4,
+  xl: $grid-gutter-width-base * 4
+) !default;
+
+
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300');
+// Fonts
+//
+// Change default font to Overpass http://overpassfont.org/
+$font-family-sans-serif: “overpass”, Overpass, “Open Sans”, Helvetica, sans-serif;
+$font-family-monospace:  “overpass-mono”, Overpass-mono, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-serif: 'Cormorant Garamond', Georgia, "Times New Roman", Times, serif;
+
+
+$font-size-base: (14 / $pf-font-size-root) * 1rem !default; // 14px
+$font-size-lg:   (16 / $pf-font-size-root) * 1rem !default; // 16px
+$font-size-sm:   (12 / $pf-font-size-root) * 1rem !default; // 12px
+$font-size-xs:   (10 / $pf-font-size-root) * 1rem !default; // 10px
+
+// Use relative font sizes when font size should vary with the parent
+$pf-font-size-relative-base: 1em !default;
+$pf-font-size-relative-lg:   1.25em !default;
+$pf-font-size-relative-sm:   .85em !default;
+$pf-font-size-relative-xs:   .75em !default;
+
+// Font weights for overpass
+$pf-font-weight-light:      300;
+$pf-font-weight-regular:    400;
+$pf-font-weight-semi-bold:  600;
+$pf-font-weight-bold:       700;
+
+$font-weight-normal: $pf-font-weight-regular !default;
+$font-weight-bold: $pf-font-weight-bold !default;
+
+// $line-height-base: 1.6666 !default;
+
+$font-size-h1: (28 / $pf-font-size-root) * 1rem !default; // 28px
+$font-size-h2: (24 / $pf-font-size-root) * 1rem !default; // 24px
+$font-size-h3: (20 / $pf-font-size-root) * 1rem !default; // 20px
+$font-size-h4: (16 / $pf-font-size-root) * 1rem !default; // 16px
+$font-size-h5: (14 / $pf-font-size-root) * 1rem !default; // 14px
+$font-size-h6: (12 / $pf-font-size-root) * 1rem !default; // 12px
+
+$headings-margin-bottom: $pf-spacer-sm !default;
+$pf-headings-margin-top: $pf-spacer-xl !default;
+$headings-font-weight: $pf-font-weight-light !default;
+
+$lead-font-weight: $pf-font-weight-light !default;
+
+$list-inline-padding: $pf-spacer-xxxs !default;
+
+$small-font-size: $font-size-sm !default;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+// $line-height-lg:         (4 / 3) !default;
+// $line-height-sm:         1.5 !default;
+
+// $border-radius:          .25rem !default;
+// $border-radius-lg:       .3rem !default;
+// $border-radius-sm:       .2rem !default;
+
+$component-active-color: $pf-color-white !default;
+$component-active-bg:    $link-color !default;
+
+// Colors for hover state, for example hover over a table row or dropmenu item
+$pf-component-hover-bg: $pf-color-blue-50;
+$pf-component-hover-border-color: $pf-color-blue-200;
+
+// Color for all borders, tables, tabs, inputs etc
+$pf-component-border-color: $pf-color-black-300;
+$pf-component-border-color-dark: $pf-color-black-400;
+
+// $caret-width:            .3em !default;
+
+// $transition-base:        all .2s ease-in-out !default;
+// $transition-fade:        opacity .15s linear !default;
+// $transition-collapse:    height .35s ease !default;
+
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+// This space is applyed to the left and right of the cell, the top and bottom
+// are defined on _b-tables.scss
+$table-cell-padding:            $pf-spacer-lg !default;
+$table-sm-cell-padding:         $pf-spacer-xxxs !default;
+
+
+// $table-bg:                      transparent !default;
+$table-bg-accent:               $pf-color-black-150;
+$table-bg-hover:                $pf-component-hover-bg;
+// $pf-table-border-hover:         $pf-border-hover-color;
+$table-bg-active:               $table-bg-hover;
+
+// $table-border-width:            $border-width !default;
+$table-border-color:            $pf-component-border-color-dark !default;
+
+
+// Buttons
+//
+// For each of Bootstraps buttons, define text, background and border color.
+
+$btn-padding-x:                  $pf-spacer-md !default;
+$btn-padding-y:                  $pf-spacer-xxs !default;
+// $btn-line-height:                1.25 !default;
+$btn-font-weight:                $pf-font-weight-regular !default;
+$btn-box-shadow:                 inset 0 1px 0 rgba($pf-color-white, .15), $pf-box-shadow-sm !default;
+$btn-active-box-shadow:          $pf-box-shadow-inset !default;
+
+$btn-primary-start-bg:           $pf-color-blue-300 !default;
+$btn-primary-end-bg:             $brand-primary !default;
+$btn-primary-border:             $pf-color-blue-500 !default;
+
+$btn-secondary-start-bg:         $pf-gradient-color-start !default;
+$btn-secondary-end-bg:           $pf-gradient-color-end !default;
+$btn-secondary-border:           $pf-color-black-400 !default;
+
+$btn-info-start-bg:              $pf-color-blue-400 !default;
+$btn-info-end-bg:                $brand-info !default;
+$btn-info-border:                $pf-color-blue-600 !default;
+
+$btn-success-start-bg:           $pf-color-green-300 !default;
+$btn-success-end-bg:             $brand-success !default;
+$btn-success-border:             $pf-color-green-500 !default;
+
+$btn-warning-start-bg:           $pf-color-orange-300 !default;
+$btn-warning-end-bg:             $brand-warning !default;
+$btn-warning-border:             $pf-color-orange-500 !default;
+
+$btn-danger-start-bg:            $pf-color-red-100 !default;
+$btn-danger-end-bg:              $pf-color-red-200 !default;
+$btn-danger-border:              $pf-color-red-300 !default;
+
+// $btn-link-disabled-color:        $gray-light !default;
+
+$btn-padding-x-sm:               $btn-padding-x !default;
+$btn-padding-y-sm:               $btn-padding-y !default;
+
+$btn-padding-x-lg:               $btn-padding-x !default;
+$btn-padding-y-lg:               $btn-padding-y !default;
+
+$btn-block-spacing-y:            $pf-spacer-xxs !default;
+$btn-toolbar-margin:             $pf-spacer-xxs !default;
+
+
+// Forms
+
+$input-padding-x:                $pf-spacer-xs !default;
+$input-padding-y:                $pf-spacer-xxs !default;
+// $input-line-height:              1.25 !default;
+
+$input-bg:                       $pf-color-white !default;
+$input-bg-disabled:              $pf-color-black-200 !default;
+
+$input-color:                    $body-color !default;
+$input-border-color:             $pf-component-border-color-dark !default;
+$input-btn-border-width:         $border-width !default; // For form controls and buttons
+$input-box-shadow:               $pf-box-shadow-inset !default;
+
+// $input-border-radius:            $border-radius !default;
+// $input-border-radius-lg:         $border-radius-lg !default;
+// $input-border-radius-sm:         $border-radius-sm !default;
+
+$input-bg-focus:                 $input-bg !default;
+$input-border-focus:             $pf-color-blue-500 !default;
+$input-box-shadow-focus:         $input-box-shadow, 0 0 8px rgba(102,175,233,.6) !default;
+$input-color-focus:              $input-color !default;
+
+$input-color-placeholder:        $pf-color-black-500 !default;
+
+$input-padding-x-sm:             $pf-spacer-xxxs !default;
+$input-padding-y-sm:             $pf-spacer-xxxs !default;
+
+$input-padding-x-lg:             $pf-spacer-sm !default;
+$input-padding-y-lg:             $pf-spacer-sm !default;
+
+// $input-height:                   (($font-size-base * $line-height-base) + ($input-padding-y * 2)) !default;
+// $input-height-lg:                (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2)) !default;
+// $input-height-sm:                (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2)) !default;
+
+$form-group-margin-bottom:       $pf-spacer-sm !default;
+
+// $input-group-addon-bg:           $gray-lighter !default;
+// $input-group-addon-border-color: $input-border-color !default;
+
+$cursor-disabled:                not-allowed !default;
+
+// $custom-control-gutter:   1.5rem !default;
+// $custom-control-spacer-x: 1rem !default;
+// $custom-control-spacer-y: .25rem !default;
+
+// $custom-control-indicator-size:       1rem !default;
+// $custom-control-indicator-bg:         #ddd !default;
+// $custom-control-indicator-bg-size:    50% 50% !default;
+// $custom-control-indicator-box-shadow: inset 0 .25rem .25rem rgba(0,0,0,.1) !default;
+
+// $custom-control-disabled-cursor:             $cursor-disabled !default;
+// $custom-control-disabled-indicator-bg:       #eee !default;
+// $custom-control-disabled-description-color:  #767676 !default;
+
+// $custom-control-checked-indicator-color:      #fff !default;
+// $custom-control-checked-indicator-bg:         #0074d9 !default;
+// $custom-control-checked-indicator-box-shadow: none !default;
+
+// $custom-control-focus-indicator-box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9 !default;
+
+// $custom-control-active-indicator-color:      #fff !default;
+// $custom-control-active-indicator-bg:         #84c6ff !default;
+// $custom-control-active-indicator-box-shadow: none !default;
+
+// $custom-checkbox-radius: $border-radius !default;
+// $custom-checkbox-checked-icon: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$custom-control-checked-indicator-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E") !default;
+
+// $custom-checkbox-indeterminate-bg: #0074d9 !default;
+// $custom-checkbox-indeterminate-indicator-color: $custom-control-checked-indicator-color !default;
+// $custom-checkbox-indeterminate-icon: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{$custom-checkbox-indeterminate-indicator-color}' d='M0 2h4'/%3E%3C/svg%3E") !default;
+// $custom-checkbox-indeterminate-box-shadow: none !default;
+
+// $custom-radio-radius: 50% !default;
+// $custom-radio-checked-icon: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$custom-control-checked-indicator-color}'/%3E%3C/svg%3E") !default;
+
+// $custom-select-padding-x:          .75rem  !default;
+// $custom-select-padding-y:          .375rem !default;
+// $custom-select-indicator-padding:  1rem !default; // Extra padding to account for the presence of the background-image based indicator
+// $custom-select-color:          $input-color !default;
+// $custom-select-disabled-color: $gray-light !default;
+// $custom-select-bg:            #fff !default;
+// $custom-select-disabled-bg:   $gray-lighter !default;
+// $custom-select-bg-size:       8px 10px !default; // In pixels because image dimensions
+// $custom-select-indicator-color: #333 !default;
+// $custom-select-indicator:     url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") !default;
+// $custom-select-border-width:  $input-btn-border-width !default;
+// $custom-select-border-color:  $input-border-color !default;
+// $custom-select-border-radius: $border-radius !default;
+
+// $custom-select-focus-border-color: #51a7e8 !default;
+// $custom-select-focus-box-shadow:   inset 0 1px 2px rgba(0, 0, 0, .075), 0 0 5px rgba(81, 167, 232, .5) !default;
+
+// $custom-select-sm-padding-y: .2rem !default;
+// $custom-select-sm-font-size: 75% !default;
+
+// $custom-file-height:           2.5rem !default;
+// $custom-file-width:            14rem !default;
+// $custom-file-focus-box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9 !default;
+
+// $custom-file-padding-x:     .5rem !default;
+// $custom-file-padding-y:     1rem !default;
+// $custom-file-line-height:   1.5 !default;
+// $custom-file-color:         #555 !default;
+// $custom-file-bg:            #fff !default;
+// $custom-file-border-width:  $border-width !default;
+// $custom-file-border-color:  #ddd !default;
+// // $custom-file-border-radius: $border-radius !default;
+// $custom-file-box-shadow:    inset 0 .2rem .4rem rgba(0,0,0,.05) !default;
+// $custom-file-button-color:  $custom-file-color !default;
+// $custom-file-button-bg:     #eee !default;
+// $custom-file-text: (
+//   placeholder: (
+//     en: "Choose file..."
+//   ),
+//   button-label: (
+//     en: "Browse"
+//   )
+// ) !default;
+
+
+// // Form validation icons
+// $form-icon-success-color: $brand-success !default;
+// $form-icon-success: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$form-icon-success-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3E%3C/svg%3E") !default;
+
+// $form-icon-warning-color: $brand-warning !default;
+// $form-icon-warning: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$form-icon-warning-color}' d='M4.4 5.324h-.8v-2.46h.8zm0 1.42h-.8V5.89h.8zM3.76.63L.04 7.075c-.115.2.016.425.26.426h7.397c.242 0 .372-.226.258-.426C6.726 4.924 5.47 2.79 4.253.63c-.113-.174-.39-.174-.494 0z'/%3E%3C/svg%3E") !default;
+
+// $form-icon-danger-color: $brand-danger !default;
+// $form-icon-danger: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$form-icon-danger-color}' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E") !default;
+
+
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+$dropdown-min-width:             3em !default;
+$dropdown-padding-y:             $pf-spacer-xs !default;
+// $dropdown-margin-top:            0rem !default;
+$dropdown-bg:                    $pf-color-white !default;
+$dropdown-border-color:          $pf-component-border-color-dark !default;
+$dropdown-border-width:          $border-width !default;
+$dropdown-divider-bg:            $pf-color-black-200 !default;
+$dropdown-box-shadow:            $pf-box-shadow-sm !default;
+
+$dropdown-link-color:            $gray-dark !default;
+$dropdown-link-hover-color:      $gray-dark !default;
+$dropdown-link-hover-bg:         $pf-component-hover-bg !default;
+
+// $dropdown-link-active-color:     $pf-color-white !default;
+// $dropdown-link-active-bg:        $brand-primary !default;
+
+// $dropdown-link-disabled-color:   $gray-light !default;
+
+$dropdown-item-padding-x:        $pf-spacer-lg !default;
+
+// $dropdown-header-color:          $gray-light !default;
+
+
+
+// Navbar
+
+// $navbar-border-radius:              $border-radius !default;
+$navbar-padding-x:                  ($grid-gutter-width-base / 2) !default;
+$navbar-padding-y:                  0 !default;
+
+$navbar-brand-padding-y:            .25rem !default;
+
+$navbar-toggler-padding-x:           .75rem !default;
+$navbar-toggler-padding-y:           .25rem !default;
+$navbar-toggler-font-size:           $font-size-lg !default;
+// $navbar-toggler-border-radius:       $btn-border-radius !default;
+
+$navbar-inverse-color:                 $pf-color-black-200 !default;
+$navbar-inverse-hover-color:           $pf-color-white !default;
+$navbar-inverse-active-color:          $pf-color-white !default;
+$navbar-inverse-disabled-color:        $pf-color-black-600 !default;
+$navbar-inverse-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-inverse-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23") !default;
+$navbar-inverse-toggler-border:        rgba($white,.1) !default;
+
+// $navbar-light-color:                rgba($black,.5) !default;
+// $navbar-light-hover-color:          rgba($black,.7) !default;
+// $navbar-light-active-color:         rgba($black,.9) !default;
+// $navbar-light-disabled-color:       rgba($black,.3) !default;
+// $navbar-light-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23") !default;
+$navbar-light-toggler-border:       rgba($black,.1) !default;
+
+
+
+
+// Navs
+
+
+$pf-tabs-color:                               $gray;
+
+$nav-tabs-border-color:                       $pf-component-border-color !default;
+$nav-tabs-link-hover-border-color:            $pf-color-black-200 !default;
+$nav-tabs-active-link-hover-color:            $link-color !default;
+$nav-tabs-active-link-hover-border-color:     $pf-component-border-color !default;
+$nav-tabs-justified-link-border-color:        $pf-component-border-color !default;
+
+$nav-item-margin:               $pf-spacer-xxxs !default;
+$nav-item-inline-spacer:        $pf-spacer-sm !default;
+$nav-link-padding:              $pf-spacer-xs $pf-spacer-sm !default;
+
+
+// Pagination
+
+$pagination-padding-x:                $pf-spacer-xs !default;
+$pagination-padding-y:                $pf-spacer-xxxs !default;
+$pagination-padding-x-sm:             $pf-spacer-xs !default;
+$pagination-padding-y-sm:             $pf-spacer-xxxs !default;
+$pagination-padding-x-lg:             $pf-spacer-lg !default;
+$pagination-padding-y-lg:             $pf-spacer-xs !default;
+
+$pagination-color:                     $gray !default;
+$pagination-border-color:              $pf-component-border-color !default;
+
+$pagination-hover-color:               $pagination-color !default;
+$pagination-hover-bg:                  $pf-gradient-color-end !default;
+$pagination-hover-border:              $pagination-border-color !default;
+
+$pagination-active-color:              $pagination-color !default;
+$pagination-active-bg:                 $pagination-hover-bg !default;
+$pagination-active-border:             $btn-secondary-border !default;
+
+$pagination-disabled-border:           $pf-color-black-300 !default;
+
+
+// Form states and alerts
+//
+// Define colors for form feedback states and, by default, alerts.
+
+$state-success-text:             $gray !default;
+$state-success-bg:               lighten($pf-color-green-100, 8%);
+$state-success-border:           $brand-success;
+
+$state-info-text:                $gray;
+$state-info-bg:                  $pf-color-black-150;
+$state-info-border:              $pf-color-black-500;
+
+$state-warning-text:             $gray;
+$state-warning-bg:               lighten($pf-color-orange-100, 8%);
+$state-warning-border:           $brand-warning;
+
+$state-danger-text:              $gray;
+$state-danger-bg:                lighten($pf-color-red-100, 55%);
+$state-danger-border:            $brand-danger;
+
+
+// Cards
+// $card-spacer-x:            1.25rem !default;
+// $card-spacer-y:            .75rem !default;
+$card-border-width:           $border-width !default;
+$card-border-color:           $pf-color-black-300;
+$card-cap-bg:                 $pf-color-black-150;
+
+$pf-card-border-color:        $pf-color-black-300;
+$pf-card-cap-bg:              $pf-color-white;
+$pf-card-footer-bg:           $pf-color-black-100;
+$pf-card-border-color-active: $pf-color-blue-300;
+
+
+//$card-bg:                  $pf-color-white;
+
+//$card-link-hover-color:    #fff !default;
+
+$card-img-overlay-padding: 1.25rem !default;
+$card-deck-margin:         .625rem !default;
+$card-columns-sm-up-column-gap: 1.25rem !default;
+
+// Tooltips
+// Add variables for tooltips
+
+// Popovers
+// Add variable for popovers
+
+
+// Badges
+
+$badge-font-size:             $font-size-sm!default;
+$badge-padding-x:             $pf-spacer-xxs !default;
+$badge-padding-y:             $pf-spacer-xxxs !default;
+$badge-pill-padding-x:        $pf-spacer-xxxs !default;
+
+// Modals
+// Add modals variables
+
+// Alerts
+// Add alert variables once the toast notification PR is merged
+
+$alert-padding-x:             $pf-spacer-sm;
+$alert-link-font-weight:      $pf-font-weight-regular;
+$pf-alert-icon-font-size:     $pf-icon-size-sm;
+
+
+// Progress bars
+// Add progress bar variables
+
+
+// List group
+// Add list group variables
+
+
+// Breadcrumbs/
+
+$breadcrumb-padding-y:          $pf-spacer-xs !default;
+$breadcrumb-padding-x:          $pf-spacer-xxs !default;
+$breadcrumb-item-padding:       $pf-spacer-sm !default;
+
+$breadcrumb-bg:                 $pf-color-white !default;
+$breadcrumb-divider-color:      $pf-color-black-500 !default;
+$breadcrumb-active-color:       $pf-color-black-700 !default;
+$breadcrumb-divider:            "»" !default;
+
+
+
+// Close
+// Add close variables
+
+// Code
+// Add code variables

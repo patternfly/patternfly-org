@@ -1,0 +1,86 @@
+/*
+Copyright 2016 Red Hat, Inc
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+//
+// PatternFly Tabs
+// --------------------------------------------------
+
+
+.nav-link {
+  font-size: $font-size-lg;
+  color: $pf-tabs-color;
+  @include hover-focus-active {
+    color: $pf-tabs-color;
+  }
+}
+
+.nav-tabs {
+  // overrides bootstrap to make the tabs butt next to each other
+  .nav-item {
+    + .nav-item {
+      margin-left: 0;
+    }
+  }
+  // adjusts the top of the dropdown to visually connect with the tab
+  // .dropdown-menu {
+    // margin-top: 0;
+    // border-top: 0;
+  // }
+}
+
+// Patternfly-style tabs
+.pf-nav-tabs {
+
+  // .nav-item {
+  //   margin-bottom: 0;
+  // }
+  .nav-link {
+    border-width: 0 0 ($nav-tabs-border-width * 2) 0;
+    border-color: transparent;
+    margin: $pf-spacer-xs $pf-spacer-sm 0; // remove padding and add margin so that the underline is only beneath the text
+    padding: 0 0 $pf-spacer-xxxs 0;
+    font-size: $font-size-base;
+
+    @include hover-focus-active {
+      border-color: $nav-tabs-active-link-hover-border-color;
+    }
+
+    &.active {
+      border-color: $nav-tabs-active-link-hover-color;
+      @include hover-focus-active {
+        border-color: $nav-tabs-active-link-hover-color;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    margin-top: 0;
+    margin-left: $pf-spacer-sm;
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $nav-tabs-active-link-hover-color;
+    background-color:inherit;
+    border-color: inherit;
+  }
+
+// if Patternfly-style tabs are used as a secondary menu to another .nav-tabs
+  .nav-tabs + & {
+    .nav-link {
+      padding-bottom: $pf-spacer-xxxs;
+    }
+  }
+}

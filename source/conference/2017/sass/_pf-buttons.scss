@@ -1,0 +1,46 @@
+/*
+Copyright 2016 Red Hat, Inc
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+//
+// PatternFly Buttons
+// --------------------------------------------------
+
+.btn-primary {
+  @include pf-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-start-bg, $btn-primary-end-bg, $btn-primary-border);
+}
+
+.btn-secondary {
+  @include pf-button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-start-bg, $btn-secondary-end-bg, $btn-secondary-border);
+}
+
+.btn-info {
+  @include pf-button-variant($btn-info-color, $btn-info-bg, $btn-info-start-bg, $btn-info-end-bg,  $btn-info-border);
+}
+.btn-success {
+  @include pf-button-variant($btn-success-color, $btn-success-bg, $btn-success-start-bg, $btn-success-end-bg,  $btn-success-border);
+}
+.btn-warning {
+  @include pf-button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-start-bg, $btn-warning-end-bg,  $btn-warning-border);
+}
+.btn-danger {
+  @include pf-button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-start-bg, $btn-danger-end-bg,  $btn-danger-border);
+}
+
+.btn-link {
+  .fa, .pf-icon {
+    color: $pf-color-black-900;
+    @include hover-focus-active { color: $link-color; }
+  }
+}

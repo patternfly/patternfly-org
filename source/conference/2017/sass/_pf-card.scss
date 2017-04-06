@@ -1,0 +1,105 @@
+/*
+Copyright 2016 Red Hat, Inc
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+//
+// Cards
+// --------------------------------------------------
+
+
+// Base styles
+.card {
+  @include box-shadow($pf-box-shadow-md);
+}
+// Although .pf-card is a modifier of bootstrap .card, I am treating it as a
+// block element. The nesting classes are to keep the code DRY and overwrite
+// bootstrap defaults.
+//
+
+.pf-card {
+  border: none;
+  box-shadow: none;
+  .card-header{
+    background: $pf-card-cap-bg;
+    border-bottom-color: $pf-card-border-color;
+    padding: $pf-spacer-lg;
+    .card-title { margin: 0; }
+    .dropdown { margin: -$pf-spacer-xxs 0; }
+  }
+  .card-footer{
+    background: $pf-card-footer-bg;
+    border-top-color: $pf-card-border-color;
+    padding: $pf-spacer-sm $pf-spacer-lg;
+    p { margin: $pf-spacer-xxxs 0; }
+  }
+  .card-block { padding: $pf-spacer-lg; }
+  .card-title {
+    @include text-truncate;
+  }
+  // .dropdown {
+  //   margin: -$pf-spacer-xxs 0;
+  // }
+  .dropdown.pf-dropdown--kebab { margin: -$pf-spacer-xxs; }
+  &::after {
+    @include box-shadow($pf-box-shadow-sm);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    content: "";
+    pointer-events: none; // needed to avoid interfering with clicking on contents in the card.
+  }
+}
+.pf-card__top-element { margin-bottom: $pf-spacer-md; }
+.pf-card--accented { border-top: 2px solid $pf-color-blue-300; }
+.pf-card--select {
+  border: 2px solid transparent;
+  background-clip: content-box;
+  &:hover::after { @include box-shadow($pf-box-shadow-lg); }
+  &.active { border-color: $pf-card-border-color-active; }
+}
+.pf-card--multiselect {
+  .card-block,
+  .card-header {
+    padding-left: $pf-spacer-xxl;
+    padding-right: $pf-spacer-xxl;
+  }
+}
+.pf-card__checkbox {
+  width: $pf-spacer-xxl;
+  height: $pf-spacer-xxxxl;
+  text-align: center;
+  padding-top:$pf-spacer-md;
+  position: absolute;
+  top: 0;
+  left: 0;
+  // checkboxes are only hidden where hover is available (and also for browsers
+  // that support the hover media query)
+  @media (hover: hover) {
+    input[type=checkbox] {
+      // visibility: hidden; is not keyboard accessible therefore it's being
+      // replaced with z-index which keeps the checkbox "visible" in the dom
+      // z-index: -1 results in the checkbox being pushed behind the card and
+      // therefore not visible on the screen;
+      // then on hover over the card, or focus or selection in the checkbox,
+      // z-index: auto displays the checkbox on top of the card
+      z-index:-1;
+      position: relative;
+      .pf-card--select:hover &,
+      &:focus,
+      &:checked { z-index: auto; }
+    }
+  }
+}
