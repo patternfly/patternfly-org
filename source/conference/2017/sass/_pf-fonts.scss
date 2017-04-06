@@ -1,0 +1,246 @@
+/**
+* Copyright 2016 Red Hat, Inc
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+
+
+//
+// Fonts
+// --------------------------------------------------
+// PatternFly uses Overpass and Overpass mono http://overpassfont.org/
+//
+
+
+// Overpass
+@font-face {
+  font-family: 'overpass';
+  src: url('#{$pf-font-path}/overpass-thin.eot'); /* IE9 Compat Modes */
+  src: url('#{$pf-font-path}/overpass-thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$pf-font-path}/overpass-thin.woff2') format('woff2'), /* Super Modern Browsers */
+       url('#{$pf-font-path}/overpass-thin.woff') format('woff'), /* Pretty Modern Browsers */
+       url('#{$pf-font-path}/overpass-thin.ttf')  format('truetype'); /* Safari, Android, iOS */
+       font-weight: 200;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'overpass';
+  src: url('#{$pf-font-path}/overpass-thin-italic.eot');
+  src: url('#{$pf-font-path}/overpass-thin-italic.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-thin-italic.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-thin-italic.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-thin-italic.ttf')  format('truetype');
+       font-weight: 200;
+       font-style: italic;
+}
+
+@font-face {
+  font-family: 'overpass';
+  src: url('#{$pf-font-path}/overpass-extralight.eot');
+  src: url('#{$pf-font-path}/overpass-extralight.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-extralight.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-extralight.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-extralight.ttf')  format('truetype');
+       font-weight: 300;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'overpass';
+  src: url('#{$pf-font-path}/overpass-extralight-italic.eot');
+  src: url('#{$pf-font-path}/overpass-extralight-italic.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-extralight-italic.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-extralight-italic.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-extralight-italic.ttf')  format('truetype');
+       font-weight: 300;
+       font-style: italic;
+}
+
+@font-face {
+  font-family: 'overpass';
+  src: url('#{$pf-font-path}/overpass-light.eot');
+  src: url('#{$pf-font-path}/overpass-light.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-light.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-light.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-light.ttf')  format('truetype');
+       font-weight: 400;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'overpass';
+  src: url('#{$pf-font-path}/overpass-light-italic.eot');
+  src: url('#{$pf-font-path}/overpass-light-italic.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-light-italic.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-light-italic.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-light-italic.ttf')  format('truetype');
+       font-weight: 400;
+       font-style: italic;
+}
+
+@font-face {
+  font-family: 'overpass';
+  src: url('#{$pf-font-path}/overpass-regular.eot');
+  src: url('#{$pf-font-path}/overpass-regular.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-regular.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-regular.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-regular.ttf')  format('truetype');
+       font-weight: 500;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'overpass';
+  src: url('#{$pf-font-path}/overpass-italic.eot');
+  src: url('#{$pf-font-path}/overpass-italic.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-italic.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-italic.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-italic.ttf')  format('truetype');
+       font-weight: 500;
+       font-style: italic;
+}
+
+@font-face {
+  font-family: 'overpass';
+  src: url('#{$pf-font-path}/overpass-semibold.eot');
+  src: url('#{$pf-font-path}/overpass-semibold.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-semibold.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-semibold.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-semibold.ttf')  format('truetype');
+       font-weight: 600;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'overpass';
+  src: url('#{$pf-font-path}/overpass-semibold-italic.eot');
+  src: url('#{$pf-font-path}/overpass-semibold-italic.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-semibold-italic.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-semibold-italic.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-semibold-italic.ttf')  format('truetype');
+       font-weight: 600;
+       font-style: italic;
+}
+
+@font-face {
+  font-family: 'overpass';
+  src: url('#{$pf-font-path}/overpass-bold.eot');
+  src: url('#{$pf-font-path}/overpass-bold.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-bold.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-bold.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-bold.ttf')  format('truetype');
+       font-weight: 700;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'overpass';
+  src: url('#{$pf-font-path}/overpass-bold-italic.eot');
+  src: url('#{$pf-font-path}/overpass-bold-italic.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-bold-italic.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-bold-italic.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-bold-italic.ttf')  format('truetype');
+       font-weight: 700;
+       font-style: italic;
+}
+
+@font-face {
+  font-family: 'overpass';
+  src: url('#{$pf-font-path}/overpass-extrabold.eot');
+  src: url('#{$pf-font-path}/overpass-extrabold.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-extrabold.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-extrabold.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-extrabold.ttf')  format('truetype');
+       font-weight: 800;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'overpass';
+  src: url('#{$pf-font-path}/overpass-extrabold-italic.eot');
+  src: url('#{$pf-font-path}/overpass-extrabold-italic.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-extrabold-italic.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-extrabold-italic.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-extrabold-italic.ttf')  format('truetype');
+       font-weight: 800;
+       font-style: italic;
+}
+
+@font-face {
+  font-family: 'overpass';
+  src: url('#{$pf-font-path}/overpass-heavy.eot');
+  src: url('#{$pf-font-path}/overpass-heavy.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-heavy.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-heavy.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-heavy.ttf')  format('truetype');
+       font-weight: 900;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'overpass';
+  src: url('#{$pf-font-path}/overpass-heavy-italic.eot');
+  src: url('#{$pf-font-path}/overpass-heavy-italic.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-heavy-italic.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-heavy-italic.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-heavy-italic.ttf')  format('truetype');
+       font-weight: 900;
+       font-style: italic;
+}
+
+
+// Overpass Mono
+@font-face {
+  font-family: 'overpass-mono';
+  src: url('#{$pf-font-path}/overpass-mono-light.eot');
+  src: url('#{$pf-font-path}/overpass-mono-light.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-mono-light.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-mono-light.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-mono-light.ttf')  format('truetype');
+       font-weight: 300;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'overpass-mono';
+  src: url('#{$pf-font-path}/overpass-mono-regular.eot');
+  src: url('#{$pf-font-path}/overpass-mono-regular.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-mono-regular.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-mono-regular.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-mono-regular.ttf')  format('truetype');
+       font-weight: 400;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'overpass-mono';
+  src: url('#{$pf-font-path}/overpass-mono-semibold.eot');
+  src: url('#{$pf-font-path}/overpass-mono-semibold.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-mono-semibold.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-mono-semibold.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-mono-semibold.ttf')  format('truetype');
+       font-weight: 500;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'overpass-mono';
+  src: url('#{$pf-font-path}/overpass-mono-bold.eot');
+  src: url('#{$pf-font-path}/overpass-mono-bold.eot?#iefix') format('embedded-opentype'),
+       url('#{$pf-font-path}/overpass-mono-bold.woff2') format('woff2'),
+       url('#{$pf-font-path}/overpass-mono-bold.woff') format('woff'),
+       url('#{$pf-font-path}/overpass-mono-bold.ttf')  format('truetype');
+       font-weight: 600;
+       font-style: normal;
+}

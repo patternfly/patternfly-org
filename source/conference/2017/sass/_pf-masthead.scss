@@ -1,0 +1,87 @@
+/*
+Copyright 2016 Red Hat, Inc
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+//
+// Masthead
+// --------------------------------------------------
+
+.pf-masthead {
+  //align-items: center;
+  background-color: $pf-color-black-1000;
+  border-top: 3px solid $pf-color-blue-300;
+  color: $pf-color-black-300;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+    min-height: 2rem;
+  @include media-breakpoint-up(md) {
+    padding-left: ($grid-gutter-width-base / 2);
+  } 
+}
+
+.pf-masthead__section {
+  display: flex;
+  align-items: inherit;
+}
+
+.pf-masthead__navicon {
+  display: flex;
+  align-self: center;
+  .fa {
+    color: $pf-color-black-300;
+  }
+}
+.pf-masthead__brand {
+  // display: block;
+  padding: $pf-spacer-xxs 0 ;
+  display: flex;
+  align-items: center;
+  img {
+    margin-right: $pf-spacer-xxs;
+  }
+}
+
+.pf-utilities {
+  display: flex;
+  align-items: stretch;
+  .nav-item {
+    display: flex;
+    align-items: inherit;
+    border-left: 1px solid $pf-color-black-700;
+  }
+  .nav-link {
+    // min-height: 2rem;
+    // align-self: center;
+    display:flex;
+    align-items: center;
+    color: $pf-color-black-300;
+    font-size: $font-size-sm;
+    // padding-top: 0;
+    // padding-bottom: 0;
+    padding-left:$pf-spacer-sm;
+    padding-right:$pf-spacer-sm;
+    @include hover {
+      background: $pf-color-black-900;
+    }
+  }
+  
+  .pf-icon, .fa { margin-right: $pf-spacer-xxxs; }
+
+  .nav-item + .nav-item,
+  .nav-link + .nav-link {
+    margin-left: 0;
+  }
+  
+}

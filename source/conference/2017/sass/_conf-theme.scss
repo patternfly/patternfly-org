@@ -1,0 +1,140 @@
+body {
+  margin-top: $pf-spacer-xl;
+  color: $gray-lightest;
+  background-color: $gray-dark;
+  background-image:
+    url("../img/grid-left.svg"),
+    linear-gradient(#2B2B2B, #010101);
+  background-repeat: no-repeat;
+  background-size: 100%, auto;
+  background-attachment: fixed;
+  @include media-breakpoint-up(lg) {
+    background-size: 35%, auto;
+    margin-top: 0;
+  }
+}
+
+::selection {
+  background: $brand-primary;
+  color: $pf-color-white;
+}
+
+
+// Header
+
+.event{
+  position: sticky;
+  top: 3em;
+  margin-bottom: 4em;
+}
+
+.event__title {
+  margin-bottom: $pf-spacer-xxl;
+  width: 50%;
+  @include media-breakpoint-up(lg) {
+    width: 100%;
+  }
+}
+
+.event__details {
+  text-transform: uppercase;
+  font-weight: $pf-font-weight-light;
+  margin-bottom: $pf-spacer-xxxl;
+  time {
+    display: block;
+    margin-bottom: $pf-spacer-md;
+  }
+}
+
+
+// Main Area
+
+.main {
+  color: $pf-color-black-900;
+  background: #fff;
+  padding-top: $pf-spacer-xxxl;
+}
+
+
+// Section
+
+.conf-section {
+  padding: $pf-spacer-xxxxl 0 $pf-spacer-xxl 0;
+  border-bottom: 1px solid $pf-color-black-200;
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+.conf-section__header{
+  text-transform: uppercase;
+  font-weight: $pf-font-weight-light;
+  font-size: $font-size-sm;
+}
+
+.conf-section__title{
+  font-size: $font-size-h2;
+  font-weight: 500;
+  margin: 0 0 $pf-spacer-lg 0;
+}
+
+
+// Footer
+
+.conf-section--footer, .conf-section--alt  {
+  @include media-breakpoint-up(lg) {
+    background-color: $pf-color-black-900;
+    color: $pf-color-black-200;
+    margin-left: -$grid-gutter-width-base*2;
+    margin-right: -$grid-gutter-width-base*2;
+    margin-bottom: 0;
+    border: none;
+    padding: $pf-spacer-xxxl $grid-gutter-width-base*2 $pf-spacer-xxl $grid-gutter-width-base*2;
+    box-shadow: inset 0 .1em .4em rgba(0,0,0,.2);
+    a {
+      color: $pf-color-blue-200;
+    }
+  }
+}
+
+.conf-section--alt  {
+  @include media-breakpoint-up(lg) {
+    background-color: $pf-color-black-700;
+  }
+}
+
+.conf-section--alt-two  {
+  @include media-breakpoint-up(lg) {
+    background-color: $pf-color-black-800;
+  }
+}
+
+// .conf-speaker__avatar{
+//   position: relative;
+//   img{
+//     width: 50%;
+//     display: block;
+// //    clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 0% 50%);
+//     @include media-breakpoint-up(lg) {
+//       width: 25%;
+//     }
+//   }
+//   &::before{
+//     content: "";
+//     position: absolute;
+//     height: 100%;
+//     width: 25%;
+//     top: 0;
+//     bottom: 0;
+//     border: 1px solid $brand-primary;
+//     // mix-blend-mode: color;
+//     background:
+//       linear-gradient(45deg, transparent 15%, $pf-color-blue-700 15%, $pf-color-blue-700 20%, transparent 20%, transparent 100%) 0 0,
+//       linear-gradient(45deg, $brand-primary 21%, transparent 21%, transparent 100%) 0 0,
+//       linear-gradient(-135deg, $brand-primary 15%, transparent 15%, transparent 100%) 0 0;
+//   }
+// }
+// .sponsor-logo {
+//   max-width: 10rem;
+//   max-height: 2rem;
+// }

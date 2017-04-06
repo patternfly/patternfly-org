@@ -1,0 +1,257 @@
+/*
+Copyright 2016 Red Hat, Inc
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+//
+// PatternFly Icons
+// --------------------------------------------------
+// Custom icons and selections from IcoMoon - Free (http://icomoon.io/#icons)
+
+@font-face {
+  font-family: "#{$pf-icon-font-name}";
+  src:url("#{$pf-font-path}/#{$pf-icon-font-name}.eot");
+  src:url("#{$pf-font-path}/#{$pf-icon-font-name}.eot?#iefix") format("embedded-opentype"),
+    url("#{$pf-font-path}/#{$pf-icon-font-name}.ttf") format("truetype"),
+    url("#{$pf-font-path}/#{$pf-icon-font-name}.woff") format("woff"),
+    url("#{$pf-font-path}/#{$pf-icon-font-name}.svg##{$pf-icon-font-name}") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="#{$pf-icon-prefix}-"],
+[class*=" #{$pf-icon-prefix}-"] {
+  display: inline-block;
+  font-family: "#{$pf-icon-font-name}";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+.#{$pf-icon-prefix}-middleware:before {
+  content: $pf-icon-var-middleware;
+}
+.#{$pf-icon-prefix}-add-circle-o:before {
+  content: $pf-icon-var-add-circle-o;
+}
+.#{$pf-icon-prefix}-build:before {
+  content: $pf-icon-var-build;
+}
+.#{$pf-icon-prefix}-builder-image:before {
+  content: $pf-icon-var-builder-image;
+}
+.#{$pf-icon-prefix}-bundle:before {
+  content: $pf-icon-var-bundle;
+}
+.#{$pf-icon-prefix}-blueprint:before {
+  content: $pf-icon-var-blueprint;
+}
+.#{$pf-icon-prefix}-close:before {
+  content: $pf-icon-var-close;
+}
+.#{$pf-icon-prefix}-cloud-security:before {
+  content: $pf-icon-var-cloud-security;
+}
+.#{$pf-icon-prefix}-cloud-tenant:before {
+  content: $pf-icon-var-cloud-tenant;
+}
+.#{$pf-icon-prefix}-cluster:before {
+  content: $pf-icon-var-cluster;
+}
+.#{$pf-icon-prefix}-container-node:before {
+  content: $pf-icon-var-container-node;
+}
+.#{$pf-icon-prefix}-cpu:before {
+  content: $pf-icon-var-cpu;
+}
+.#{$pf-icon-prefix}-delete:before {
+  content: $pf-icon-var-delete;
+}
+.#{$pf-icon-prefix}-domain:before {
+  content: $pf-icon-var-domain;
+}
+.#{$pf-icon-prefix}-edit:before {
+  content: $pf-icon-var-edit;
+}
+.#{$pf-icon-prefix}-enterprise:before {
+  content: $pf-icon-var-enterprise;
+}
+.#{$pf-icon-prefix}-error-circle-o:before {
+  color: $brand-danger;
+  content: $pf-icon-var-error-circle-o;
+}
+.#{$pf-icon-prefix}-export:before {
+  content: $pf-icon-var-export;
+}
+.#{$pf-icon-prefix}-flag:before,
+.#{$pf-icon-prefix}-messages:before { // class name deprecated
+  content: $pf-icon-var-flag;
+}
+.#{$pf-icon-prefix}-flavor:before {
+  content: $pf-icon-var-flavor;
+}
+.#{$pf-icon-prefix}-folder-close:before {
+  content: $pf-icon-var-folder-close;
+}
+.#{$pf-icon-prefix}-folder-open:before {
+  content: $pf-icon-var-folder-open;
+}
+.#{$pf-icon-prefix}-help:before {
+  content: $pf-icon-var-help;
+}
+.#{$pf-icon-prefix}-history:before {
+  content: $pf-icon-var-history;
+}
+.#{$pf-icon-prefix}-home:before {
+  content: $pf-icon-var-home;
+}
+.#{$pf-icon-prefix}-image:before {
+  content: $pf-icon-var-image;
+}
+.#{$pf-icon-prefix}-import:before {
+  content: $pf-icon-var-import;
+}
+.#{$pf-icon-prefix}-info:before {
+  color: $pf-color-black-700;
+  content: $pf-icon-var-info;
+}
+.#{$pf-icon-prefix}-memory:before {
+  content: $pf-icon-var-memory;
+}
+.#{$pf-icon-prefix}-network:before {
+  content: $pf-icon-var-network;
+}
+.#{$pf-icon-prefix}-ok:before {
+  color: $brand-success;
+  content: $pf-icon-var-ok;
+}
+.#{$pf-icon-prefix}-print:before {
+  content: $pf-icon-var-print;
+}
+.#{$pf-icon-prefix}-private:before {
+  content: $pf-icon-var-private;
+}
+.#{$pf-icon-prefix}-project:before {
+  content: $pf-icon-var-project;
+}
+.#{$pf-icon-prefix}-refresh:before, // class name deprecated
+.#{$pf-icon-prefix}-restart:before {
+  content: $pf-icon-var-restart;
+}
+.#{$pf-icon-prefix}-regions:before {
+  content: $pf-icon-var-regions;
+}
+.#{$pf-icon-prefix}-registry:before {
+  content: $pf-icon-var-registry;
+}
+.#{$pf-icon-prefix}-replicator:before {
+  content: $pf-icon-var-replicator;
+}
+.#{$pf-icon-prefix}-repository:before {
+  content: $pf-icon-var-repository;
+}
+.#{$pf-icon-prefix}-resource-pool:before {
+  content: $pf-icon-var-resource-pool;
+}
+.#{$pf-icon-prefix}-resources-almost-full:before {
+  content: $pf-icon-var-resources-almost-full;
+}
+.#{$pf-icon-prefix}-resources-full:before {
+  content: $pf-icon-var-resources-full;
+}
+.#{$pf-icon-prefix}-route:before {
+  content: $pf-icon-var-route;
+}
+.#{$pf-icon-prefix}-running:before {
+  content: $pf-icon-var-running;
+}
+.#{$pf-icon-prefix}-save:before {
+  content: $pf-icon-var-save;
+}
+.#{$pf-icon-prefix}-screen:before {
+  content: $pf-icon-var-screen;
+}
+.#{$pf-icon-prefix}-server:before {
+  content: $pf-icon-var-server;
+}
+.#{$pf-icon-prefix}-server-group:before {
+  content: $pf-icon-var-server-group;
+}
+.#{$pf-icon-prefix}-service:before {
+  content: $pf-icon-var-service;
+}
+.#{$pf-icon-prefix}-settings:before {
+  content: $pf-icon-var-settings;
+}
+.#{$pf-icon-prefix}-storage-domain:before {
+  content: $pf-icon-var-storage-domain;
+}
+.#{$pf-icon-prefix}-tenant:before {
+  content: $pf-icon-var-tenant;
+}
+.#{$pf-icon-prefix}-thumb-tack-o:before {
+  content: $pf-icon-var-thumb-tack-o;
+}
+.#{$pf-icon-prefix}-topology:before {
+  content: $pf-icon-var-topology;
+}
+.#{$pf-icon-prefix}-trend-down:before {
+  content: $pf-icon-var-trend-down;
+}
+.#{$pf-icon-prefix}-trend-up:before {
+  content: $pf-icon-var-trend-up;
+}
+.#{$pf-icon-prefix}-user:before {
+  content: $pf-icon-var-user;
+}
+.#{$pf-icon-prefix}-users:before {
+  content: $pf-icon-var-users;
+}
+.#{$pf-icon-prefix}-virtual-machine:before {
+  content: $pf-icon-var-virtual-machine;
+}
+.#{$pf-icon-prefix}-volume:before {
+  content: $pf-icon-var-volume;
+}
+.#{$pf-icon-prefix}-warning-triangle-o:before {
+  color: $brand-warning;
+  content: $pf-icon-var-warning-triangle-o;
+}
+.#{$pf-icon-prefix}-zone:before {
+  content: $pf-icon-var-zone;
+}
+
+// Display icon at large or medium size
+.pf-icon--lg {
+  font-size: $pf-icon-size-lg;
+}
+.pf-icon--md {
+  font-size: $pf-icon-size-md;
+}
+
+// Display circle around the icon
+// width/height value should be 4px (i.e. 2 x border-width) greater than
+// line-height value to accommodate 2px border on each side
+.pf-icon--circle {
+  width: calc(2em + 4px);
+  height: calc(2em + 4px);
+  line-height: 2em;
+  text-align: center;
+  border: 2px solid $pf-color-blue-300;
+  border-radius: 50%;
+}
