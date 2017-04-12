@@ -5,9 +5,18 @@
     <title>The PatternFly Conference</title>
     <link rel="stylesheet" href="css/patternfly.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cssgram-cssgram.netdna-ssl.com/cssgram.min.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <nav>
+      <ul class="list-unstyled">
+        <li><a href="#about">About</a></li>
+        <li><a href="#keynote">Keynote</a></li>
+        <li><a href="#cfp">CFP</a></li>
+        <li><a href="#sponsor">Sponsor</a></li>
+      </ul>
+    </nav>
 
     <div class="container-fluid">
 
@@ -49,14 +58,35 @@
 
         <div class="col-lg-8 main" id="main">
 
-          <section class="conf-section">
-            <h2 class="conf-section__title">About the conference</h2>
+          <section class="conf-section" id="about">
+            <h2 class="conf-section__header">About the conference</h2>
             <p>The <a href="http://www.patternfly.org/">PatternFly</a> Conference is a half-day community conference dedicated to sharing ideas, techniques, and tools to power great user experiences through front-end design and development.</p>
           </section><!-- speaker -->
 
+        
 
-          <section class="conf-section">
-            <h2 class="conf-section__title">Call for speakers</h2>
+          <section class="conf-section" id="keynote">
+            <h2 class="conf-section__header">Keynote</h2>
+            <!-- <h2 class="conf-section__title"></h2> -->
+
+            <div class="conf-speaker">
+              <figure class="conf-speaker__avatar">
+                <img src="img/tiemann-2.jpg">
+              </figure>
+
+              <div class="conf-speaker-info">
+                <h2 class="conf-speaker-name">Michael Tiemann</h2>
+                <p class="conf-speaker-title">Vice President of Open Source Affairs at Red Hat, Inc.</p>
+                <!-- <p class="conf-speaker__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inisi ut aliquip ex ea commodo consequat. -->
+                </p>
+            </div>
+            </div>
+          </section>
+
+
+
+          <section class="conf-section" id="cfp">
+            <h2 class="conf-section__header">Call for speakers</h2>
             <p>We’re looking for speakers to talk about various aspects of user experience, including front-end design and development. The conference targets technology professionals and students at universities and colleges in the Triangle area. Talks are 45-minute blocks including Q&A.<p>
             <p>The <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRfcXmsBNd0wvRo1fOtW-XaOkYzTRkLD_tBWebnvYvQV0jeg/viewform">Call for Speakers</a> is from April 5 - 19, so please move quickly if interested!</p>
             <p>Possible topics include (but aren’t limited to):</p>
@@ -71,7 +101,7 @@
           </section><!-- speaker -->
 
 
-          <section class="conf-section conf-section--footer conf-section--alt">
+          <section class="conf-section conf-section--footer conf-section--alt" id="sponsor">
             <h2 class="conf-section__header">Sponsor</h2>
             <p>Thank you to <a href="http://redhat.com/uxd">The Red Hat UXD team</a> for sponsoring the PatternFly project and conference, and big thanks to the PatternFly community volunteers for helping organize the effort.</p>
           </section><!-- speaker -->
@@ -89,18 +119,8 @@
 
 
 
-    <!--
-          <section class="conf-section conf-speaker" itemscope itemtype="http://schema.org/Person">
-            <p class="conf-section__header">Speakers</p>
-              <figure class="conf-speaker__avatar">
-                <img src="img/beyonce-knowles-1.jpg" alt="Beyonce" itemtype="image">
-              </figure>
 
-              <h2 class="conf-section__title mb-pf-xxxs" itemprop="name">Beyonce Knowles</h2>
-              <p class="conf-speaker__url"><a href="https://github.com/cshinn" itemprop="url">github.com/bknowles</a></p>
-              <p class="conf-speaker__description" itemprop="description">Beyonce is here just for to make Leslie like this website. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-          </section> speaker -->
+
 
 
 
