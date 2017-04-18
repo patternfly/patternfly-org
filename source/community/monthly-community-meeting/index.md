@@ -4,15 +4,12 @@ author: dlabrecq
 layout: page
 ---
 <p>Join us at our next Community Meeting on <b><a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=April+Community+Meeting&iso=20170419T10&p1=207&ah=1">April 19 at 10AM EST</a></b>.</p>
-<p>Join the BlueJeans Video Conference by visiting <a href="https://bluejeans.com/9737130658">https://bluejeans.com/9737130658</a>.</p>
-<p>Just want to dial in on your phone?</p>
-<ol>
-  <li>+1 800 451 8679<br>+1 212 729 5016<br>
-    <a href="https://www.intercallonline.com/listNumbersByCode.action?confCode=9737130658">All Numbers</a>
-  </li>
-  <li>Enter Meeting ID: 9737130658</li>
-  <li>Press #</li>
-</ol>
+<p>Join the BlueJeans Video Conference: <a href="https://bluejeans.com/985415746">https://bluejeans.com/985415746</a>.</p>
+<p>Or, dial in via phone:</p>
+<ul>
+  <li>Call-in number: 1-800-451-8679</li>
+  <li>Meeting ID: 985415746</li>
+</ul>
 <h3>Prior Community Meetings</h3>
 <table class="table table-bordered">
   <thead>
