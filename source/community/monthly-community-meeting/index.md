@@ -3,13 +3,14 @@ title: Monthly Community Meeting
 author: dlabrecq
 layout: page
 ---
-<p>Join us at our next Community Meeting on <b><a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=April+Community+Meeting&iso=20170419T10&p1=207&ah=1">April 19 at 10AM EST</a></b>.</p>
+<!--<p>Join us at our next Community Meeting on <b><a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=April+Community+Meeting&iso=20170419T10&p1=207&ah=1">April 19 at 10AM EST</a></b>.</p>
 <p>Join the BlueJeans Video Conference: <a href="https://bluejeans.com/985415746">https://bluejeans.com/985415746</a>.</p>
 <p>Or, dial in via phone:</p>
 <ul>
   <li>Call-in number: 1-800-451-8679</li>
   <li>Meeting ID: 985415746</li>
-</ul>
+</ul>-->
+
 <h3>Prior Community Meetings</h3>
 <table class="table table-bordered">
   <thead>
