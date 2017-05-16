@@ -1,139 +1,300 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>The PatternFly Conference</title>
-    <link rel="stylesheet" href="css/patternfly.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cssgram-cssgram.netdna-ssl.com/cssgram.min.css"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <!-- <nav> -->
-    <!--   <ul class="list-unstyled"> -->
-    <!--     <li><a href="#about">About</a></li> -->
-    <!--     <li><a href="#keynote">Keynote</a></li> -->
-    <!--     <li><a href="#cfp">CFP</a></li> -->
-    <!--     <li><a href="#sponsor">Sponsor</a></li> -->
-    <!--   </ul> -->
-    <!-- </nav> -->
+<head>
+  <meta charset="utf-8">
+  <title>The PatternFly Conference</title>
+  <link rel="stylesheet" href="css/patternfly.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-    <div class="container-fluid">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-      <div class="row">
+  <script type="text/javascript">
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').focus()
+  })
+  </script>
 
-        <div class="col-lg-4">
 
-          <header class="event">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <h1 class="event__title">
-              <img src="img/the-patternfly-conference-logo.svg" alt="The PatternFly Conference">
-            </h1>
+</head>
+<body>
 
-            <div class="event__details">
-              <time datetime="2017-05-08T12:00">
-                <span class="event__date d-block">June 8, 2017</span>
-                <span class="event__time">1 - 6 PM</span>
-              </time>
+  <div class="container-fluid">
 
-              <div class="event__venue">
-                <strong>Red Hat Annex</strong>
-                <address class="event__address">
-                  190 E Davie St<br>
-                  Raleigh, NC 27601
-                </address>
-              </div>
+    <div class="row">
+
+      <div class="col-lg-4">
+
+        <header class="event">
+
+          <h1 class="event__title">
+            <img src="img/the-patternfly-conference-logo.svg" alt="The PatternFly Conference">
+          </h1>
+
+          <div class="event__details">
+            <time datetime="2017-05-08T12:00">
+              <span class="event__date d-block">June 8, 2017</span>
+              <span class="event__time">1 - 6 PM</span>
+            </time>
+
+            <div class="event__venue">
+              <strong>Red Hat Annex</strong>
+              <address class="event__address">
+                190 E Davie St<br>
+                Raleigh, NC 27601
+              </address>
             </div>
-            <p class="mb-pf-xxs">
-              <a
-                href="https://www.eventbrite.com/e/the-patternfly-conference-tickets-33459739983"
-                class="btn btn-primary btn-block btn-lg">
-                Register for Free
-              </a>
-            </p>
+          </div>
+          <p class="mb-pf-xxs">
+            <a
+            href="https://www.eventbrite.com/e/the-patternfly-conference-tickets-33459739983"
+            class="btn btn-primary btn-block btn-lg disabled" disabled>
+            Sold Out</span>
+          </a>
+        </p>
 
-          </header> <!-- header -->
-        </div> <!-- col -->
-
-
-        <div class="col-lg-8 main" id="main">
-
-          <section class="conf-section" id="about">
-            <h2 class="conf-section__header">About the conference</h2>
-            <p>The <a href="http://www.patternfly.org/">PatternFly</a> Conference is a half-day community conference dedicated to sharing ideas, techniques, and tools to power great user experiences through front-end design and development.</p>
-          </section><!-- speaker -->
+      </header> <!-- header -->
+    </div> <!-- col -->
 
 
-          <section class="conf-section" id="keynote">
-            <h2 class="conf-section__header">Keynote</h2>
-            <!-- <h2 class="conf-section__title"></h2> -->
+    <main class="col-lg-8 main" id="main">
 
-            <div class="conf-speaker">
-              <figure class="conf-speaker__avatar">
-                <img src="img/tiemann-2.jpg">
-              </figure>
+      <nav>
+        <ul class="list-unstyled">
+          <li><a href="#about">About</a></li>
+          <li><a href="#keynote">Keynote</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#sponsor">Sponsor</a></li>
+        </ul>
+      </nav>
 
-              <div class="conf-speaker-info">
-                <h2 class="conf-speaker-name">Michael Tiemann</h2>
-                <p class="conf-speaker-title">Vice President of Open Source Affairs at Red Hat, Inc.</p>
-                <div class="conf-speaker__description">
-                  <p>Michael Tiemann is a true
-                  open source software pioneer.  He made his contributions 30
-                  years ago by first writing patches and ports for the GNU C
-                  compiler and then writing the GNU C++ compiler and debugger.
-                  His early work led to the creation of leading open source
-                  technologies and the first open source business model.</p>
-                  <p>He continues to extend and apply the principles of open source to
-                  new disciplines, ranging from agriculture to music to
-                  sustainable energy production. </p>
-                  <p>As both a Vice President at
-                  Red Hat and Chair of the Board of Trustees of UNC School of
-                  the Arts, he has a unique perspective on innovation,
-                  presentation, and community.<p>
-                </div>
+      <section class="conf-section" id="about">
+        <h2 class="conf-section__header">About the conference</h2>
+        <p>The <a href="http://www.patternfly.org/">PatternFly</a> Conference is a half-day community conference dedicated to sharing ideas, techniques, and tools to power great user experiences through front-end design and development.</p>
+      </section><!-- speaker -->
 
-              </div>
+
+      <section class="conf-section" id="keynote">
+        <h2 class="conf-section__header">Keynote</h2>
+        <!-- <h2 class="conf-section__title"></h2> -->
+
+        <div class="conf-speaker" data-toggle="modal" data-target="#michaelModal">
+          <figure class="conf-speaker__avatar">
+            <img src="img/tiemann-2.jpg" alt="Michael Tiemann">
+          </figure>
+
+          <div class="conf-speaker-info">
+            <h3 class="conf-speaker-name">Michael Tiemann</h3>
+            <p class="conf-speaker-title">Vice President of Open Source Affairs at Red Hat, </p>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="conf-section" id="speakers">
+        <h2 class="conf-section__header">Speakers</h2>
+        <div class="conf-speakers">
+
+
+          <div class="conf-speaker" data-toggle="modal" data-target="#johnModal">
+            <figure class="conf-speaker__avatar">
+              <img src="img/Dwight-McNight.jpg" alt="Dwight McNight">
+            </figure>
+            <div class="conf-speaker-info">
+              <h3 class="conf-speaker-name">Dwight McNight</h3>
+              <p class="conf-speaker-title">Visual Designer at PointSource</p>
             </div>
-          </section>
+          </div>
+
+          <div class="conf-speaker" data-toggle="modal" data-target="#elizabethModal">
+            <figure class="conf-speaker__avatar">
+              <img src="img/Elizabeth-Matusov.jpg" alt="Elizabeth Matusov">
+            </figure>
+            <div class="conf-speaker-info">
+              <h3 class="conf-speaker-name">Elizabeth Matusov</h3>
+              <p class="conf-speaker-title">Associate Consultant at Red Hat</p>
+            </div>
+          </div>
+
+
+          <div class="conf-speaker" data-toggle="modal" data-target="#johnModal">
+            <figure class="conf-speaker__avatar">
+              <img src="img/john-romano.jpg" alt="John Romano">
+            </figure>
+            <div class="conf-speaker-info">
+              <h3 class="conf-speaker-name">John Romano</h3>
+              <p class="conf-speaker-title">UX Director at PointSource</p>
+            </div>
+          </div>
+
+
+          <div class="conf-speaker" data-toggle="modal" data-target="#kendallModal">
+            <figure class="conf-speaker__avatar">
+              <img src="img/Kendall-Totten.jpg" alt="Kendall Totten">
+            </figure>
+            <div class="conf-speaker-info">
+              <h3 class="conf-speaker-name">Kendall Totten</h3>
+              <p class="conf-speaker-title">Front-End Architect and Developer at Red Hat</p>
+            </div>
+          </div>
+
+          <div class="conf-speaker" data-toggle="modal" data-target="#meganModal">
+            <figure class="conf-speaker__avatar">
+              <img src="img/megan-squire.jpg" alt="Megan Squire">
+            </figure>
+            <div class="conf-speaker-info">
+              <h3 class="conf-speaker-name">Megan Squire</h3>
+              <p class="conf-speaker-title">Professor of Computing Sciences at Elon University</p>
+            </div>
+          </div>
+
+          <div class="conf-speaker" data-toggle="modal" data-target="#patrickModal">
+            <figure class="conf-speaker__avatar">
+              <img src="img/Patrick-Riley.jpg" alt="Patrick Riley">
+            </figure>
+            <div class="conf-speaker-info">
+              <h3 class="conf-speaker-name">Patrick Riley</h3>
+              <p class="conf-speaker-title">Software Engineer at at Red Hat</p>
+            </div>
+          </div>
+
+          <div class="conf-speaker" data-toggle="modal" data-target="#sjModal">
+            <figure class="conf-speaker__avatar">
+              <img src="img/Sarahjane-Clark.jpg" alt="Sarahjane Clark">
+            </figure>
+            <div class="conf-speaker-info">
+              <h3 class="conf-speaker-name">Sarahjane Clark</h3>
+              <p class="conf-speaker-title">Senior User Experience Researcher at Red Hat</p>
+            </div>
+          </div>
 
 
 
-          <section class="conf-section" id="cfp">
-            <h2 class="conf-section__header">Call for speakers</h2>
-            <p><strong>Update:</strong> The 2017 <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfRfcXmsBNd0wvRo1fOtW-XaOkYzTRkLD_tBWebnvYvQV0jeg/viewform">Call
-                for Speakers</a> is now closed and the
-              selection process has begun. Thank you to everyone who submitted a
-              talk. If you missed out on the call but would still like to
-              participate in The PatternFly Conference 2017, we will continue to
-              accept talks until the selection process is over.</p>
-            <p>We’re looking for speakers to talk about various aspects of user experience, including front-end design and development. The conference targets technology professionals and students at universities and colleges in the Triangle area. Talks are 45-minute blocks including Q&A.<p>
-            <p>Possible topics include (but aren’t limited to):</p>
-            <ul>
-              <li>User Experience</li>
-              <li>Mobile</li>
-              <li>Front-End Development</li>
-              <li>Community</li>
-              <li>Research/Usability Testing </li>
-              <li>Visual Design</li>
-            </ul>
-          </section><!-- speaker -->
+
+        </div>
+      </section>
 
 
-          <section class="conf-section conf-section--footer conf-section--alt" id="sponsor">
-            <h2 class="conf-section__header">Sponsor</h2>
-            <p>Thank you to <a href="http://redhat.com/uxd">The Red Hat UXD team</a> for sponsoring the PatternFly project and conference, and big thanks to the PatternFly community volunteers for helping organize the effort.</p>
-          </section><!-- speaker -->
+      <section class="conf-section" id="agenda">
+        <h2 class="conf-section__header">Agenda</h2>
 
-          <section class="conf-section conf-section--footer conf-section--alt-two">
-            <h2 class="conf-section__header">Social Media</h2>
-            <p>Follow us on Twitter <a href="https://twitter.com/patternfly_des">@patternfly_des</a> to stay up-to-date. Use <strong>#PFCon2017</strong> to reference the event.</p>
-          </section><!-- speaker -->
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <col class="conf-col-time">
+            <col class="conf-col-talk">
+            <col class="conf-col-talk">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th colspan="2">Session</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>12:00</td>
+                <td colspan="2">
+                  Registration
+                </td>
+              </tr>
 
-          <section class="conf-section conf-section--footer">
-            <h2 class="conf-section__header">Code of conduct</h2>
-            We believe that everyone deserves a thoroughly pleasant conference experience. We adhere to the <a href="https://bocoup.com/guidelines/code-of-conduct">Bocoup Code of Conduct</a> and expect that all of our speakers, attendees, sponsors, and volunteers will do the same.
-          </section><!-- speaker -->
+              <tr>
+                <td>1:00</td>
+                <td colspan="2">
+                  Welcome
+                </td>
+              </tr>
+
+              <tr>
+                <td>1:15</td>
+                <td colspan="2"  data-toggle="modal" data-target="#michaelModal">
+                  Keynote, Name of the talk
+                  <small><strong>Michael Tiemann</strong></small>
+                </td>
+              </tr>
+
+              <!-- <tr class="table-info break">
+                <td>2:00</td>
+                <td colspan="2">
+                  Break
+                </td>
+              </tr> -->
+
+              <tr class="conf-trackname">
+                <td></td>
+
+                <td class="table-info">
+                  Developer track
+                </td>
+
+                <td class="table-info">
+                  Designer track
+                </td>
+
+              </tr>
+
+              <tr>
+                <td>2:10</td>
+
+                <td data-toggle="modal" data-target="#patrickModal">
+                  Building an enterprise modular design system based on Bootstrap 4 and Web Components
+                  <small><strong>Patrick Riley</strong></small>
+                </td>
+
+                <td  data-toggle="modal" data-target="#johnModal">
+                  Aligning Teammates Using Pattern Libraries
+                  <small><strong>John Romano and Dwight McNight</strong></small>
+                </td>
+
+              </tr>
+
+              <!-- <tr class="table-info break">
+                <td>3:00</td>
+                <td colspan="2">
+                  Break
+                </td>
+              </tr> -->
+
+              <tr>
+                <td>3:15</td>
+                <td data-toggle="modal" data-target="#kendallModal">
+                  Maintainable & modular CSS
+                  <small><strong>Kendall Totten</strong></small>
+                </td>
+                <td data-toggle="modal" data-target="#meganModal">
+                  Top five open source data visualization tool
+                  <small><strong>Megan Squire</strong></small>
+                </td>
+              </tr>
+
+              <!-- <tr class="table-info break">
+                <td>4:00</td>
+                <td colspan="2">
+                  Break
+                </td>
+              </tr> -->
+
+              <tr>
+                <td>4:15</td>
+                <td data-toggle="modal" data-target="#elizabethModal">
+                  Angular Redux - How State Sharing Changes the Web Developer Experience
+                  <small><strong>Elizabeth Matusov</strong></small>
+                </td>
+                <td data-toggle="modal" data-target="#sjModal">
+                  Awesome pattern! Now, let's write about it
+                  <small><strong>Sj Clark</strong></small>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+
+      </section><!-- speaker -->
 
 
 
@@ -141,13 +302,230 @@
 
 
 
+      <section class="conf-section conf-section--footer conf-section--alt" id="sponsor">
+        <h2 class="conf-section__header">Sponsor</h2>
+        <p>Thank you to <a href="http://redhat.com/uxd">The Red Hat UXD team</a> for sponsoring the PatternFly project and conference, and big thanks to the PatternFly community volunteers for helping organize the effort.</p>
+      </section><!-- speaker -->
+
+      <section class="conf-section conf-section--footer conf-section--alt-two">
+        <h2 class="conf-section__header">Social Media</h2>
+        <p>Follow us on Twitter <a href="https://twitter.com/patternfly_des">@patternfly_des</a> to stay up-to-date. Use <strong>#PFCon2017</strong> to reference the event.</p>
+      </section><!-- speaker -->
+
+      <section class="conf-section conf-section--footer">
+        <h2 class="conf-section__header">Code of conduct</h2>
+        We believe that everyone deserves a thoroughly pleasant conference experience. We adhere to the <a href="https://bocoup.com/guidelines/code-of-conduct">Bocoup Code of Conduct</a> and expect that all of our speakers, attendees, sponsors, and volunteers will do the same.
+      </section><!-- speaker -->
 
 
-      </div> <!-- col -->
 
-    </div><!--  row -->
 
-  </div><!-- Container -->
+      <!-- Michael Modal -->
+      <div class="modal fade" id="michaelModal" tabindex="-1" role="dialog" aria-labelledby="Michael Tiemann" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="conf-modal-header">
+                <img src="img/tiemann-2.jpg" alt="Michael Tiemann">
+                <h2>Michael Tiemann <small>Vice President of Open Source Affairs at Red Hat</small></h2>
+              </div>
 
-  </body>
+              <!-- <h3>Title TDB</h3>
+              <p>Abstract TBD</p> -->
+
+              <h3>Speaker Bio</h3>
+              <p>Michael Tiemann is a true open source software pioneer. He made his contributions 30 years ago by first writing patches and ports for the GNU C compiler and then writing the GNU C++ compiler and debugger. His early work led to the creation of leading open source technologies and the first open source business model.</p>
+              <p>He continues to extend and apply the principles of open source to new disciplines, ranging from agriculture to music to sustainable energy production.</p>
+              <p>As both a Vice President at Red Hat and Chair of the Board of Trustees of UNC School of the Arts, he has a unique perspective on innovation, presentation, and community.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Kendal Modal -->
+      <div class="modal fade" id="kendallModal" tabindex="-1" role="dialog" aria-labelledby="Kendall Totten" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="conf-modal-header">
+                <img src="img/Kendall-Totten.jpg" alt="Kendall Totten">
+                <h2>Kendall Totten <small>Front-End Architect and Developer at Red Hat</small></h2>
+              </div>
+
+              <h3>Maintainable & Modular CSS</h3>
+              <p>CSS bloat is a challenge for every website. Style at the component level using data attributes, plus 4 simple rules to writing maintainable Sass.</p>
+
+              <h3>Speaker Bio</h3>
+              <p>I am the UX Dev team lead for redhat.com. Previously I worked for two Drupal web agencies, as a front-end developer and designer. I love living in Raleigh with my husband Doug, and our cat Frank. I attended Eastern Michigan University where I studied Communication Technology and Graphic Design. I enjoy photography, traveling, music, dancing, good food, the great outdoors, and I'm a geek at heart.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Megan Modal -->
+      <div class="modal fade" id="meganModal" tabindex="-1" role="dialog" aria-labelledby="Megan-Squire" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="conf-modal-header">
+                <img src="img/megan-squire.jpg" alt="Meghan Squire">
+                <h2>Meghan Squire <small>Professor of Computing Sciences at Elon University</small></h2>
+              </div>
+
+              <h3>Top 5 Must-Have Open Source Tools for Data Viz</h3>
+              <p>You've done the hard work of collecting, cleaning, storing, and analyzing your data - now it's time to show off with equally beautiful data visualizations. In this talk, we will take a tour of my TOP FIVE open source data visualization tools. We will learn how each tool can be applied to real world data from a variety of domains. Data sets and demo code will be provided for optional hands-on participation.</p>
+
+              <h3>Speaker Bio</h3>
+              <p>Megan Squire is a Professor of Computing Sciences at Elon University, and author of two books: Mastering Data Mining with Python, and Clean Data. She is also the leader of FLOSSmole, a project to collect and analyze data about how free, libre, and open source software (FLOSS) is made.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Elizabeth Modal -->
+      <div class="modal fade" id="elizabethModal" tabindex="-1" role="dialog" aria-labelledby="Elizabeth-Matusov" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="conf-modal-header">
+                <img src="img/Elizabeth-Matusov.jpg" alt="Elizabeth Matusov">
+                <h2>Elizabeth Matusov <small>Associate Consultant at Red Hat </small></h2>
+              </div>
+
+              <h3>Angular Redux - How State Sharing Changes the Web Developer Experience</h3>
+              <p>In 2014, Facebook modified their web client architecture for user interfaces based on the idea that unidirectional data flow can solve the issues faced with sharing data using MVC architecture. This new implementation would become known as FLUX.</p>
+              <p>Now in 2017, the ever evolving state of web application development has come to adopt and expand Facebook's original model. This talk will cover the idea of storing shared data in a central state store using NGRX and Angular. It will also cover how state is propagated with unidirectional data flow implemented with RxJS, with high level conversations about how a UI interacts with data and how that data is piped through the NGRX architecture. We will also discuss how this architecture changes the developer experience to make for easier debugging and feature scaling.</p>
+
+              <h3>Speaker Bio</h3>
+              <p>Elizabeth Matusov is a software consultant at Red Hat. In her role, she develops web applications using multiple Red Hat technologies - including work leveraging JBOSS and hybrid mobile application development using the Red Hat Mobile Application Platform. Her most recent project involved implementation of NGRX Architecture for an Angular 2 Web Application for a large-scale bioinformatics company.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- SJ Modal -->
+      <div class="modal fade" id="sjModal" tabindex="-1" role="dialog" aria-labelledby="Elizabeth-Matusov" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="conf-modal-header">
+                <img src="img/Sarahjane-Clark.jpg" alt="Sarahjane Clark">
+                <h2>Sarahjane Clark <small>Senior User Experience Researcher at Red Hat </small></h2>
+              </div>
+
+              <h3>Awesome pattern! Now, let's write about it</h3>
+              <p>All the hard work and time spent designing and testing and coding your excellent submission to PatternFly is done, congratulations!  But now it's time to let the world know all about your creation by introducing it via a blog post, or documenting the design specifications and code. You don't need to be a professional writer to make good doc for your pattern, let me show you how.</p>
+
+              <h3>Speaker Bio</h3>
+              <p>Sarahjane Clark is senior user experience researcher on the user experience design (UXD) team at Red Hat. Before moving into UX, she was a technical writer for nearly 15 years and enjoys sharing tips and tricks to help designers and engineers improve their writing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Patrick Modal -->
+      <div class="modal fade" id="patrickModal" tabindex="-1" role="dialog" aria-labelledby="Elizabeth-Matusov" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="conf-modal-header">
+                <img src="img/Patrick-Riley.jpg" alt="Patrick Riley">
+                <h2>Patrick Riley <small>Software Engineer at at Red Hat </small></h2>
+              </div>
+
+              <h3>Building an enterprise modular design system based on Bootstrap 4 and Web Components</h3>
+              <p>Based on a real life example, this live coding session will take developers through the process of architecting and developing a large scale enterprise open source design system based on Bootstrap 4 and Web Components.</p>
+              <p>We will share our experience building the next generation of PatternFly: The challenge of upgrading to Bootstrap 4, how to set up modular CSS based on Brad Frost’s Atomic Design principles and our experience implementing behaviors via Web Components.</p>
+              <p>You will learn:</p>
+              <ul>
+                <li>UX Basics</li>
+                <li>How to structure a large CSS code base in a modular and maintainable way.</li>
+                <li>The advantages (and disadvantages) of using Bootstrap.</li>
+                <li>Difference between Bootstrap 3 and 4.</li>
+                <li>An introduction to Web components and it’s 4 standards: HTML Templates, Shadow DOM,Custom elements and HTML Imports.</li>
+                <li>How to apply them in common frameworks React and Angular.</li>
+              </ul>
+                <p>The audience will leave the room with useful tools that will help them take their front end development projects to the next level.</p>
+
+              <h3>Speaker Bio</h3>
+              <p>Patrick considers himself a Javascript Jedi with Vulcan-like abilities. Always searching for best patterns to make his web concoctions more dynamic and extendable, he frequently plays mind tricks on fellow developers to encourage evolving web standards like web components and ES6 javascript in their code. Patrick also enjoys new web frameworks like React.js and Node.js.</p>
+
+              <p>When he’s not “javascripting”, he spends time sleeping, biking, and playing board games with family and friends.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- John and Dwight Modal -->
+      <div class="modal fade" id="johnModal" tabindex="-1" role="dialog" aria-labelledby="John Romano and Dwight McNight" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="conf-modal-header">
+                <img src="img/Dwight-and-Jhon.jpg" alt="John Romano and Dwight McNight">
+                <h2>John Romano and Dwight McNight <small>UX Director & Visual Designer at PointSource</small></h2>
+              </div>
+
+              <h3>Aligning Teammates Using Pattern Libraries</h3>
+              <p>The more people that embrace a pattern library within an organization, the more value the library can deliver. Adoption across roles can have huge benefits on quality, efficiency, and velocity. But getting people aligned around a library and  institutionalizing it can often be a challenge. People may view them as limiting, think that they stifle innovation, or fail to see their value.</p>
+
+              <p>If you are trying to gain adoption of pattern libraries, this talk will help you:</p>
+              <ul>
+                <li>identify new techniques that need to be embraced or taught</li>
+                <li>see why others resist pattern libraries</li>
+                <li>learn how to win over the naysayers</li>
+                <li>invest wisely on internal tools and process to get the most out of your efforts</li>
+              </ul>
+
+              <h3>Speakers Bio</h3>
+              <p>John and Dwight are designers at PointSource. They recently open sourced BlueOak ( http://blueoak.io ), a set of Axure and Sketch libraries built on Zurb's Foundation. They’ve been evangelizing the libraries with their fellow designers and with the development team.</p>
+
+              <p>John Romano is the a UX practitioner and UX Director at PointSource where he focuses on fostering collaborative, cross-disciplinary teams. He enjoys rallying the efforts of designers, UXDs, and developers around the needs of the user.</p>
+
+              <p>Dwight McNight is a visual designer who builds mobile apps, responsive websites, and wearables. His goal is to create meaningful and beautiful user experiences that engage users.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </main> <!-- col -->
+
+  </div><!--  row -->
+
+</div><!-- Container -->
+
+
+
+
+</body>
 </html>
