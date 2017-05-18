@@ -465,7 +465,7 @@ layout: page
 <div class="row important-box-row">
   <div class="col-md-12 important-box">
         <h2>Important</h2>
-        <p>Use these color swatches to ensure that you are using the correct colors -- do not use the eyedropper tool to select colors. Palettes for Adobe Photoshop, Adobe Illustrator and Sketch, that have the correct hex colors in swatch form, are also available to download and install. </p>
+        <p>Use these color swatches to ensure that you are using the correct colors -- do not use the eyedropper tool to select colors. Palettes for Adobe Photoshop, Adobe Illustrator, Sketch, Inkscape, and GIMP that have the correct hex colors in swatch form, are also available to download and install. </p>
     <div class="important-center-container">
       <div class="row">
         <div class="col-md-4 download-button">
@@ -477,6 +477,7 @@ layout: page
               <li><a href="/assets/file/PatternFly_Swatches_02-27-2017.aco">For Adobe Photoshop</a></li>
               <li><a href="/assets/file/PatternFly_Swatches_02-27-2017.ase">For Adobe Illustrator/Indesign</a></li>
               <li><a href="/assets/file/PatternFly_Palette.sketchpalette">For Sketch</a></li>
+              <li><a href="/assets/file/PatternFly_Palette.gpl">For Inkscape & GIMP</a></li>
             </ul>
           </div>
           <span class="last-update">Last updated: 27 Feb 2017</span>
@@ -612,6 +613,20 @@ layout: page
                 <li>In Sketch, go to Plugins > Sketch Palettes > Document Colors > Load Palette</li>
                 <li>Locate the PatternFly_Palette.sketchpalette file that you downloaded.</li>
                 <li>Find the palette in the Inspector sidebar > Fills > Document Colors</li>
+              </ol>
+              <strong>Install palette for Inkscape:</strong>
+              <ol>
+                <li>Download the Inkscape palette file.</li>
+                <li>Open the terminal.</li>
+                <li>Create the palette directory: <kbd>mkdir -p ~/.config/inkscape/palettes/</kbd></li>
+                <li>Copy the palette file: <kbd>cp -v PatternFly_Palette.gpl ~/.config/inkscape/palettes/</kbd></li>
+              </ol>
+              <strong>Install palette for GIMP:</strong>
+              <ol>
+                <li>Download the GIMP palette file.</li>
+                <li>Open the terminal.</li>
+                <li>Create the palette directory: <kbd>mkdir -p ~/.gimp-2.8/palettes/</kbd></li>
+                <li>Copy the palette file: <kbd>cp -v PatternFly_Palette.gpl ~/.gimp-2.8/palettes/</kbd></li>
               </ol>
             </div>
           </div>
