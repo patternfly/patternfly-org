@@ -26,7 +26,7 @@ layout: page
     <tr>
       <td>Angular-PatternFly</td>
       <td>Tuesday May 30, at 11:00am EDT</td>
-      <td><a href="https://bluejeans.com/8479013013">https://bluejeans.com/8479013013</a></td>
+      <td><a target="blank" href="https://bluejeans.com/8479013013">https://bluejeans.com/8479013013</a></td>
       <td> Dial: 1-888-847-2201, ID: 8479013013</td>
     </tr>
   </tbody>
