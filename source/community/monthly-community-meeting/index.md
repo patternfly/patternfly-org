@@ -23,6 +23,7 @@ layout: page
   </thead>
 
   <tbody>
+    <tr>
       <td>Angular-PatternFly</td>
       <td>Tuesday May 30, at 11:00am EDT</td>
       <td><a href="https://bluejeans.com/8479013013">https://bluejeans.com/8479013013</a></td>
