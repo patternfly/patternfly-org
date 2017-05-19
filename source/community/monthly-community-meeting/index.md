@@ -50,7 +50,7 @@ layout: page
       <td>April 19, 2017</td>
       <td><a href="https://docs.google.com/presentation/d/1CZA5OAYwQGUSn6BO8wtJC3b-0OVlVlu6HvKooLU5pNE/edit#slide=id.g1cf4dff9ec_0_299">View Deck</a></td>
       <td><a target="blank" href="https://bluejeans.com/4324593630">View Recording</a></td>
-    </tr>  
+    </tr>
     <tr>
       <td>PatternFly</td>
       <td>April 19, 2017</td>
