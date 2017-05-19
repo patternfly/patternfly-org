@@ -27,7 +27,7 @@ layout: page
       <td>Angular-PatternFly</td>
       <td>Tuesday May 30, at 11:00am EDT</td>
       <td><a target="blank" href="https://bluejeans.com/8479013013">https://bluejeans.com/8479013013</a></td>
-      <td> Dial: 1-888-847-2201, ID: 8479013013</td>
+      <td>Dial: 1-888-847-2201, ID: 8479013013</td>
     </tr>
   </tbody>
 </table>
@@ -51,28 +51,24 @@ layout: page
       <td><a href="https://docs.google.com/presentation/d/1CZA5OAYwQGUSn6BO8wtJC3b-0OVlVlu6HvKooLU5pNE/edit#slide=id.g1cf4dff9ec_0_299">View Deck</a></td>
       <td><a target="blank" href="https://bluejeans.com/4324593630">View Recording</a></td>
     </tr>  
-
     <tr>
       <td>PatternFly</td>
       <td>April 19, 2017</td>
       <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/PatternFly%20Community%20Meeting%202017-04.pdf">View Deck</a></td>
       <td>Recording not available</td>
     </tr>
-
     <tr>
       <td>PatternFly</td>
       <td>March 23, 2017</td>
       <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/PatternFly%20Community%20Meeting%202017-03.pdf">View Deck</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/Xj1Cr">View Recording</a></td>
     </tr>
-
     <tr>
       <td>PatternFly</td>
       <td>February 22, 2017</td>
       <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/PatternFly%20Community%20Meeting%202017-02.pdf">View Deck</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/Cnu5T/">View Recording</a></td>
     </tr>
-
     <tr>
       <td>PatternFly</td>
       <td>January 25, 2017</td>
