@@ -16,31 +16,31 @@ layout: page
   </div>
   <div class="col-xs-12 col-sm-12 col-md-12">
     <pre class="prettyprint">
-      <code class="language-html">
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly.min.css"&gt;
-  &lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly-additions.min.css"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div class="container"&gt;
+    <code class="language-html">{% escape_html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly-additions.min.css">
+</head>
+<body>
+  <div class="container">
 
-    &lt;!-- Just enjoy various PatternFly components --&gt;
-    &lt;div class="alert alert-success"&gt;
-      &lt;span class="pficon pficon-ok"&gt;&lt;/span&gt;
-      &lt;strong&gt;Great job!&lt;/strong&gt; This is really working out &lt;a href="#" class="alert-link"&gt;great for us&lt;/a&gt;.
-    &lt;/div&gt;
+    <!-- Just enjoy various PatternFly components -->
+    <div class="alert alert-success">
+      <span class="pficon pficon-ok"></span>
+      <strong>Great job!</strong> This is really working out <a href="#" class="alert-link">great for us</a>.
+    </div>
 
-  &lt;/div&gt;
+  </div>
 
-  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
-  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"&gt;&lt;/script&gt;
-  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly.min.css"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-      </code>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly.min.css"></script>
+</body>
+</html>
+{% endescape_html %}</code>
     </pre>
   </div>
 </div>
@@ -82,31 +82,31 @@ layout: page
   </div>
   <div class="col-xs-12 col-sm-12 col-md-12">
     <pre class="prettyprint">
-      <code class="language-html">
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;link rel="stylesheet" type="text/css" href="node_modules/patternfly/dist/css/patternfly.min.css"&gt;
-  &lt;link rel="stylesheet" type="text/css" href="node_modules/patternfly/dist/css/patternfly-additions.min.css"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div class="container"&gt;
+      <code class="language-html">{% escape_html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly-additions.min.css">
+</head>
+<body>
+  <div class="container">
 
-  &lt;!-- Just enjoy various PatternFly components --&gt;
-  &lt;div class="alert alert-success"&gt;
-    &lt;span class="pficon pficon-ok"&gt;&lt;/span&gt;
-    &lt;strong&gt;Great job!&lt;/strong&gt; This is really working out &lt;a href="#" class="alert-link"&gt;great for us&lt;/a&gt;.
-  &lt;/div&gt;
+    <!-- Just enjoy various PatternFly components -->
+    <div class="alert alert-success">
+      <span class="pficon pficon-ok"></span>
+      <strong>Great job!</strong> This is really working out <a href="#" class="alert-link">great for us</a>.
+    </div>
 
-  &lt;/div&gt;
+  </div>
 
-  &lt;script src="node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;
-  &lt;script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"&gt;&lt;/script&gt;
-  &lt;script src="node_modules/patternfly/dist/js/patternfly.min.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-      </code>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly.min.css"></script>
+</body>
+</html>
+{% endescape_html %}</code>
     </pre>
   </div>
 </div>
