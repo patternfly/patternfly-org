@@ -18,9 +18,25 @@ with these updates by checking out “What’s New” on the <a href="https://bl
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
+       <p>Launcher</p>
+       <a href="{{ site.baseurl }}/pattern-library/application-framework/launcher">
+         <img src="{{site.baseurl}}/assets/img/thumbnails/Launcher.jpg" alt="launcher"/>
+       </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
        <p>Login Page</p>
        <a href="{{ site.baseurl }}/pattern-library/application-framework/login-page">
          <img src="{{site.baseurl}}/assets/img/thumbnails/Login.png" alt="login"/>
+       </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+       <p>Masthead</p>
+       <a href="{{ site.baseurl }}/pattern-library/application-framework/masthead">
+         <img src="{{site.baseurl}}/assets/img/thumbnails/Masthead.jpg" alt="masthead"/>
        </a>
       </div>
     </div>
@@ -68,6 +84,14 @@ with these updates by checking out “What’s New” on the <a href="https://bl
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
+        <p>About Modal</p>
+        <a href="{{ site.baseurl }}/pattern-library/communication/about-modal">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/About-Modal.png" alt="About-Modal"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
        <p>Empty State</p>
         <a href="{{ site.baseurl }}/pattern-library/communication/empty-state">
           <img src="{{site.baseurl}}/assets/img/thumbnails/Empty-State.png" alt="empty-state"/>
@@ -82,6 +106,14 @@ with these updates by checking out “What’s New” on the <a href="https://bl
         </a>
       </div>
     </div>
+     <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Notification Drawer</p>
+        <a href="{{ site.baseurl }}/pattern-library/communication/notification-drawer">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Notification-Drawer.png" alt="Notification Drawer"/>
+        </a>
+      </div>
+    </div>
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
         <p>Toast Notifications</p>
@@ -92,17 +124,9 @@ with these updates by checking out “What’s New” on the <a href="https://bl
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
-        <p>About Modal</p>
-        <a href="{{ site.baseurl }}/pattern-library/communication/about-modal">
-          <img src="{{site.baseurl}}/assets/img/thumbnails/About-Modal.png" alt="About-Modal"/>
-        </a>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-3">
-      <div class="pattern-thumbnail">
-        <p>Notification Drawer</p>
-        <a href="{{ site.baseurl }}/pattern-library/communication/notification-drawer">
-          <img src="{{site.baseurl}}/assets/img/thumbnails/Notification-Drawer.png" alt="Notification Drawer"/>
+        <p>Tour</p>
+        <a href="{{ site.baseurl }}/pattern-library/communication/tour">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Tour.jpg" alt="tour"/>
         </a>
       </div>
     </div>
@@ -119,6 +143,14 @@ with these updates by checking out “What’s New” on the <a href="https://bl
 <div class="pattern-section" id="content-views">
   <h2>Content Views</h2>
   <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+       <p>Canvas View</p>
+        <a href="{{ site.baseurl }}/pattern-library/content-views/canvas-view">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Canvas-view" alt="canvas-view"/>
+        </a>
+      </div>
+    </div>
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
        <p>Card View</p>
@@ -187,6 +219,14 @@ with these updates by checking out “What’s New” on the <a href="https://bl
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
+        <p>Bullet Chart</p>
+        <a href="{{ site.baseurl }}/pattern-library/data-visualization/bullet-chart">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Bullet-Chart.jpg" alt="bullet-chart"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
         <p>Donut Chart</p>
         <a href="{{ site.baseurl }}/pattern-library/data-visualization/donut-chart">
           <img src="{{site.baseurl}}/assets/img/thumbnails/Donut-Chart.png" alt="donut-chart"/>
@@ -227,6 +267,14 @@ with these updates by checking out “What’s New” on the <a href="https://bl
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
+        <p>Timeline</p>
+        <a href="{{ site.baseurl }}/pattern-library/data-visualization/timeline">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Timeline.jpg" alt="timeline"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
         <p>Utilization Bar Chart</p>
         <a href="{{ site.baseurl }}/pattern-library/data-visualization/utilization-bar-chart">
           <img src="{{site.baseurl}}/assets/img/thumbnails/Util-Bar-Chart.png" alt="utilization-bar-chart "/>
@@ -240,9 +288,49 @@ with these updates by checking out “What’s New” on the <a href="https://bl
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
+        <p>Buttons On Forms</p>
+        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/buttons-on-forms">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Buttons-on-Forms.jpg" alt="buttons-on-forms"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
         <p>Date Picker</p>
         <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/date-picker">
           <img src="{{site.baseurl}}/assets/img/thumbnails/Datepicker.png" alt="donut-chart-callout"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Drag and Drop</p>
+        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/drag-and-drop">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Drag-and-Drop.jpg" alt="drag-and-drop"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Errors and Validation</p>
+        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/errors-and-validation">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Errors-and-Validation.png" alt="errors-and-validation"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Expand Collapse Section</p>
+        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/expand-collapse-section">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Expand-Collapse-Section.png" alt="expand-collapse-section"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Field Labeling</p>
+        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/field-labeling">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Field-Labeling.png" alt="field-labeling"/>
         </a>
       </div>
     </div>
@@ -256,9 +344,65 @@ with these updates by checking out “What’s New” on the <a href="https://bl
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
+        <p>Filter</p>
+        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/filter">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Filter.png" alt="filter"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
         <p>Find</p>
         <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/find">
           <img src="{{site.baseurl}}/assets/img/thumbnails/Search.png" alt="find"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Forms</p>
+        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/forms">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Forms.png" alt="forms"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Inline Edit</p>
+        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/inline-edit">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/In-Line-Edit.png" alt="inline-edit"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Input Controls</p>
+        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/input-controls">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Input-Control.png" alt="input-controls"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Language Selector</p>
+        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/language-selector">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Language-Selector.png" alt="language-selector"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Progressive Disclosure</p>
+        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/progressive-disclosure">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Progressive-Disclosure.png" alt="progressive-disclosure"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Sort</p>
+        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/sort">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Sort.png" alt="sort"/>
         </a>
       </div>
     </div>
@@ -272,9 +416,9 @@ with these updates by checking out “What’s New” on the <a href="https://bl
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
-        <p>Forms</p>
-        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/forms">
-          <img src="{{site.baseurl}}/assets/img/thumbnails/Forms.png" alt="time-picker"/>
+        <p>Toolbar</p>
+        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/toolbar">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Toolbar.png" alt="toolbar"/>
         </a>
       </div>
     </div>
@@ -285,9 +429,9 @@ with these updates by checking out “What’s New” on the <a href="https://bl
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
-        <p>Vertical Navigation</p>
-        <a href="{{ site.baseurl }}/pattern-library/navigation/vertical-navigation">
-          <img src="{{site.baseurl}}/assets/img/thumbnails/Vert-Nav.png" alt="vertical-navigation"/>
+        <p>Breadcrumbs</p>
+        <a href="{{ site.baseurl }}/pattern-library/navigation/breadcrumbs">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Breadcrumbs.png" alt="breadcrumbs"/>
         </a>
       </div>
     </div>
@@ -295,7 +439,23 @@ with these updates by checking out “What’s New” on the <a href="https://bl
       <div class="pattern-thumbnail">
         <p>Horizontal Navigation</p>
         <a href="{{ site.baseurl }}/pattern-library/navigation/horizontal-navigation">
-          <img src="{{site.baseurl}}/assets/img/thumbnails/Horizontal-Navigation.png" alt="Horizontal Navigation"/>
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Horizontal-Navigation.png" alt="horizontal-navigation"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Pagination</p>
+        <a href="{{ site.baseurl }}/pattern-library/navigation/pagination">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Pagination.png" alt="pagination"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Vertical Navigation</p>
+        <a href="{{ site.baseurl }}/pattern-library/navigation/vertical-navigation">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Vert-Nav.png" alt="vertical-navigation"/>
         </a>
       </div>
     </div>
