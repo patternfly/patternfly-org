@@ -55,6 +55,14 @@ with these updates by checking out “What’s New” on the <a href="https://bl
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
+        <p>Base Card</p>
+       <a href="{{ site.baseurl }}/pattern-library/cards/base-card">
+         <img src="{{site.baseurl}}/assets/img/thumbnails/Base-Card.png" alt="base-card"/>
+       </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
         <p>Trend Card</p>
        <a href="{{ site.baseurl }}/pattern-library/cards/trend-card">
          <img src="{{site.baseurl}}/assets/img/thumbnails/Trend-Card.png" alt="trend-card"/>
@@ -296,9 +304,17 @@ with these updates by checking out “What’s New” on the <a href="https://bl
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
-        <p>Date Picker</p>
-        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/date-picker">
-          <img src="{{site.baseurl}}/assets/img/thumbnails/Datepicker.png" alt="donut-chart-callout"/>
+        <p>Date Input</p>
+        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/data-input">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Date-Input.png" alt="data-input"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
+        <p>Datepicker</p>
+        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/datepicker">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Datepicker.png" alt="datepicker"/>
         </a>
       </div>
     </div>
