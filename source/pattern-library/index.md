@@ -155,7 +155,7 @@ with these updates by checking out “What’s New” on the <a href="https://bl
       <div class="pattern-thumbnail">
        <p>Canvas View</p>
         <a href="{{ site.baseurl }}/pattern-library/content-views/canvas-view">
-          <img src="{{site.baseurl}}/assets/img/thumbnails/Canvas-view" alt="canvas-view"/>
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Canvas-view.jpg" alt="canvas-view"/>
         </a>
       </div>
     </div>
@@ -188,14 +188,6 @@ with these updates by checking out “What’s New” on the <a href="https://bl
 <div class="pattern-section" id="dashboard">
   <h2>Dashboard</h2>
   <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-3">
-      <div class="pattern-thumbnail">
-       <p>Dashboard Card (Base)</p>
-        <a href="{{ site.baseurl }}/pattern-library/dashboard/dashboard-card">
-          <img src="{{site.baseurl}}/assets/img/thumbnails/Dash-Base.png" alt="dashboard-card"/>
-        </a>
-      </div>
-    </div>
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
         <p>Dashboard Layout</p>
@@ -304,9 +296,9 @@ with these updates by checking out “What’s New” on the <a href="https://bl
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
-        <p>Date Input</p>
+        <p>Data Input</p>
         <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/data-input">
-          <img src="{{site.baseurl}}/assets/img/thumbnails/Date-Input.png" alt="data-input"/>
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Data-Input.png" alt="data-input"/>
         </a>
       </div>
     </div>
