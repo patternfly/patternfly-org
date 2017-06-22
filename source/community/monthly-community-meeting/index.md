@@ -11,7 +11,7 @@ layout: page
   <li>Meeting ID: 985415746</li>
 </ul>-->
 
-<!--<h3>Community Meeting Schedule</h3>
+<h3>Community Meeting Schedule</h3>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -24,13 +24,13 @@ layout: page
 
   <tbody>
     <tr>
-      <td>Angular-PatternFly</td>
-      <td>Tuesday May 30, at 11:00am EDT</td>
-      <td><a target="blank" href="https://bluejeans.com/8479013013">https://bluejeans.com/8479013013</a></td>
-      <td>Dial: 1-888-847-2201, ID: 8479013013</td>
+      <td>PatternFly-React</td>
+      <td>Monday June 26, at 11:00am EDT</td>
+      <td><a target="blank" href="https://bluejeans.com/1418302074">https://bluejeans.com/1418302074</a></td>
+      <td>Dial: 1-888-847-2201, ID: 1418302074</td>
     </tr>
   </tbody>
-</table>-->
+</table>
 
 
 <h3>Prior Community Meetings</h3>
