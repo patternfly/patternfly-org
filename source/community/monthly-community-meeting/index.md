@@ -11,7 +11,7 @@ layout: page
   <li>Meeting ID: 985415746</li>
 </ul>-->
 
-<h3>Community Meeting Schedule</h3>
+<!-- <h3>Community Meeting Schedule</h3>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -30,7 +30,7 @@ layout: page
       <td>Dial: 1-888-847-2201, ID: 1418302074</td>
     </tr>
   </tbody>
-</table>
+</table> -->
 
 
 <h3>Prior Community Meetings</h3>
@@ -45,12 +45,18 @@ layout: page
   </thead>
 
   <tbody>
-  <tr>
-    <td>Angular-PatternFly</td>
-    <td>May 30, 2017</td>
-    <td><a href="https://www.dropbox.com/s/3be8hm94oyi3vz1/May%202017%20Angular%20PatternFly%20Community%20Meeting.pdf?dl=0">View Deck</a></td>
-    <td><a target="blank" href="https://bluejeans.com/s/rHmNY/">View Recording</a></td>
-  </tr>
+    <tr>
+      <td>PatternFly-React</td>
+      <td>June 26, 2017</td>
+      <td><a href="https://www.dropbox.com/s/f4ho9bhcrclyozq/PatternFly%20React%20June%202017%20Update.pdf?dl=0">View Deck</a></td>
+      <td><a target="blank" href="https://bluejeans.com/s/mwqtB/">View Recording</a></td>
+    </tr>
+    <tr>
+      <td>Angular-PatternFly</td>
+      <td>May 30, 2017</td>
+      <td><a href="https://www.dropbox.com/s/3be8hm94oyi3vz1/May%202017%20Angular%20PatternFly%20Community%20Meeting.pdf?dl=0">View Deck</a></td>
+      <td><a target="blank" href="https://bluejeans.com/s/rHmNY/">View Recording</a></td>
+    </tr>
     <tr>
       <td>PatternFly-React</td>
       <td>April 19, 2017</td>
