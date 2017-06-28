@@ -40,7 +40,7 @@ jQuery( document ).ready(function() {
         } else { // invalid location hash, ignore it
           $('a[href=\\#overview][data-toggle=tab]').tab('show');
           if ('pushState' in history) {
-            history.pushState('', document.title, window.location.pathname + window.location.search);
+            history.replaceState('', document.title, window.location.pathname + window.location.search);
           } else {
             window.location.hash = '';
           }
