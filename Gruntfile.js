@@ -8,6 +8,21 @@ var connect = require('connect'),
     packageJson = require('./package.json');
 
 
+function correctBaseUrl(_baseurl) {
+  if (_baseurl.length) {
+    if (_baseurl.substr(0, 1) !== '/') {
+      // add leading slash
+      _baseurl = '/' + _baseurl;
+    }
+    if (_baseurl.substr(-1, 1) === '/') {
+      // remove trailing slash
+      _baseurl = _baseurl.slice(0, -1);
+    }
+  }
+  return _baseurl;
+}
+
+
 module.exports = function (grunt) {
   // load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
@@ -18,7 +33,7 @@ module.exports = function (grunt) {
     build: '_build',
     source: 'source',
     defaultTarget: 'staging',
-    baseurl: '/' + (grunt.option('baseurl') || 'patternfly-org')
+    baseurl: correctBaseUrl(grunt.option('baseurl') || '/patternfly-org')
   };
 
   grunt.initConfig({
