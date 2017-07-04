@@ -4,7 +4,8 @@
   "author": "Red Hat",
   "scripts": {
     "publish": "ghpages",
-    "publish-travis": "ghpages -t -r 'git@github.com:patternfly/patternfly.github.io.git' -b master _site"
+    "publish-travis": "ghpages -t -r 'git@github.com:patternfly/patternfly.github.io.git' -b master _site",
+    "grunt": "grunt"
   },
   "license": "Apache-2.0",
   "devDependencies": {
