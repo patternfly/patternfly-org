@@ -97,6 +97,12 @@ module.exports = function (grunt) {
             cwd: 'submodules/patternfly-design/styles',
             src: ['**/*.md'],
             dest: '<%= config.build %>/_includes/styles'
+          },
+          {
+            expand: true,
+            cwd: 'submodules/patternfly-design/styles',
+            src: ['**/!(*.md)'],
+            dest: '<%= config.build %>/styles'
           }
         ]
       },
