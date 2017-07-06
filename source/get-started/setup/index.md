@@ -78,7 +78,7 @@ layout: page
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12">
     <h3>Step 3: Apply PatternFly in your project</h3>
-    <p>Now we can includ the necessary assets by directly specifying their path inside the node_modules folder.</p>
+    <p>Now we can include the necessary assets by directly specifying their path inside the node_modules folder.</p>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-12">
     <pre class="prettyprint">
@@ -87,8 +87,8 @@ layout: page
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly-additions.min.css">
+  <link rel="stylesheet" type="text/css" href="/node_modules/patternfly/dist/css/patternfly.css">
+  <link rel="stylesheet" type="text/css" href="/node_modules/patternfly/dist/css/patternfly-additions.css">
 </head>
 <body>
   <div class="container">
@@ -101,9 +101,8 @@ layout: page
 
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly.min.css"></script>
+  <script src="/node_modules/jquery/dist/jquery.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>
 {% endescape_html %}</code>
