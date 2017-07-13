@@ -287,7 +287,7 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
 -->
   <div class="section" id="bootstrap-combobox">
     <h3>Bootstrap Combobox</h3>
-    <p>See <a href="https://github.com/danielfarrell/bootstrap-combobox">https://github.com/danielfarrell/bootstrap-combobox</a> for complete Bootstrap Combobox documentation.</p>
+    <p>See <a href="https://github.com/patternfly/patternfly-bootstrap-combobox">https://github.com/patternfly/patternfly-bootstrap-combobox</a> for complete Bootstrap Combobox documentation.</p>
     <div class="pf-example">
       <div class="form-group">
         <label>State</label>
