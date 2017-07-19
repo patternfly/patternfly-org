@@ -32,6 +32,37 @@ layout: page
   </tbody>
 </table> -->
 
+<p>Join us at our next Community Meeting on <b><a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=April+Community+Meeting&iso=20170419T10&p1=207&ah=1">August 2 at 1PM EST</a></b>.</p>
+<p>Join the BlueJeans Video Conference: <a href="https://bluejeans.com/421052074">https://bluejeans.com/421052074</a>.</p>
+<p>Or, dial in via phone:</p>
+<ul>
+  <li>Call-in number: 1-800-451-8679</li>
+  <li>Meeting ID: 421052074</li>
+</ul>
+
+<h3>Community Meeting Schedule</h3>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>Community</td>
+      <td>Next Meeting</td>
+      <td>Video Conference Link</td>
+      <td>Dial-in Info</td>
+      <td>Agenda</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>PatternFly-ng</td>
+      <td>Wednesday August 2, at 1:00pm EDT</td>
+      <td><a target="blank" href="https://bluejeans.com/421052074">https://bluejeans.com/421052074</a></td>
+      <td>Dial: 1-888-847-2201, ID: 421052074</td>
+      <td><a target="blank" href="https://github.com/patternfly/patternfly-ng/blob/master/resources/community-meetings/patternfly-ng_communitymeetingagenda_2017-08.md">View Agenda</a></td>
+    </tr>
+  </tbody>
+</table>
+
 
 <h3>Prior Community Meetings</h3>
 <table class="table table-bordered">
