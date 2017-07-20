@@ -32,14 +32,6 @@ layout: page
   </tbody>
 </table> -->
 
-<p>Join us at our next Community Meeting on <b><a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=April+Community+Meeting&iso=20170419T10&p1=207&ah=1">August 2 at 1PM EST</a></b>.</p>
-<p>Join the BlueJeans Video Conference: <a href="https://bluejeans.com/421052074">https://bluejeans.com/421052074</a>.</p>
-<p>Or, dial in via phone:</p>
-<ul>
-  <li>Call-in number: 1-888-847-2201 or <a href="http://bluejeans.com/premium-numbers">See all numbers</a></li>
-  <li>Meeting ID: 421052074</li>
-</ul>
-
 <h3>Community Meeting Schedule</h3>
 <table class="table table-bordered">
   <thead>
