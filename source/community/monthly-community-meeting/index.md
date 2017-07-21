@@ -49,7 +49,7 @@ layout: page
       <td>PatternFly-ng</td>
       <td>Wednesday August 2, at 1:00pm EDT</td>
       <td><a target="blank" href="https://bluejeans.com/421052074">https://bluejeans.com/421052074</a></td>
-      <td>Dial: 1-888-847-2201, ID: 421052074 or <a href="http://bluejeans.com/premium-numbers">See all numbers</a></li></td>
+      <td>Dial: 1-888-847-2201, ID: 421052074 or <a href="http://bluejeans.com/premium-numbers">See all numbers</a></td>
       <td><a target="blank" href="https://github.com/patternfly/patternfly-ng/blob/master/resources/community-meetings/patternfly-ng_communitymeetingagenda_2017-08.md">View Agenda</a></td>
     </tr>
   </tbody>
