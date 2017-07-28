@@ -1,6 +1,6 @@
 {
   "name": "patternfly-org",
-  "version": "3.25.0",
+  "version": "3.26.1",
   "author": "Red Hat",
   "scripts": {
     "publish": "ghpages",
@@ -28,7 +28,7 @@
     "matchdep": "~0.3.0",
     "open": "0.0.5",
     "patternfly-eng-publish": "0.1.0-alpha.19",
-    "patternfly-eng-release": "~3.25.0",
+    "patternfly-eng-release": "3.26.2",
     "serve-static": "^1.11.2"
   },
   "description": "Documentation, etc. for PatternFly",
