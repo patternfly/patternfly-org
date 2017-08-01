@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="{{ "/assets/css/patternfly-adjusted.min.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/components/patternfly/dist/css/patternfly-additions.min.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/assets/css/patternfly-site.min.css" | prepend: site.baseurl }}">
-  {% if primary == 'pattern-library' # only add for pages that may contain ng-docs %}<link rel="stylesheet" href="{{ "/components/angular-patternfly/dist/docs/css/animations.css" | prepend: site.baseurl }}">
+  {% if primary == 'pattern-library' and secondary != 'widgets' # only add for pages that may contain ng-docs %}<link rel="stylesheet" href="{{ "/components/angular-patternfly/dist/docs/css/animations.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/components/angular-patternfly/dist/docs/css/angular-patternfly.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/components/angular-patternfly/dist/docs/css/ng-docs.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/components/angular-patternfly/dist/docs/css/examples.css" | prepend: site.baseurl }}">{% endif %}
