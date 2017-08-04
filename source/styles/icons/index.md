@@ -13,15 +13,11 @@ You can also download the set of [PatternFly icon SVGs][6].
 
 Search for an icon: <span class="icon-search-container"><input type="text" id="icon-search" placeholder="Search..."/></span>
 
-<div class="row icons">
-  <div class="col-sm-6 col-md-6 icomoon">
+<div class="icons">
 {% capture my_include %}{% include styles/icons/icomoon.md %}{% endcapture %}
 {{ my_include | site_replace | markdownify }}
-  </div>
-  <div class="col-sm-6 col-md-6">
 {% capture my_include %}{% include styles/icons/fontawesome.md %}{% endcapture %}
 {{ my_include | site_replace | markdownify }}
-  </div>
 </div>
 
 <style>
@@ -52,7 +48,7 @@ Search for an icon: <span class="icon-search-container"><input type="text" id="i
 </style>
 
 <script>
-  $('table td:nth-child(3),th:nth-child(3)').hide();
+  // $('table td:nth-child(3),th:nth-child(3)').hide();
   $('td').tooltip({container: 'body'}).attr('title', 'Copy to clipboard').tooltip('fixTitle');
   var clipboard = new Clipboard('td', {
     text: function (trigger) {

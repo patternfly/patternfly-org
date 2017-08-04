@@ -11,27 +11,6 @@ layout: page
   <li>Meeting ID: 985415746</li>
 </ul>-->
 
-<!-- <h3>Community Meeting Schedule</h3>
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <td>Community</td>
-      <td>Next Meeting</td>
-      <td>Video Conference Link</td>
-      <td>Dial-in Info</td>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>PatternFly-React</td>
-      <td>Monday June 26, at 11:00am EDT</td>
-      <td><a target="blank" href="https://bluejeans.com/1418302074">https://bluejeans.com/1418302074</a></td>
-      <td>Dial: 1-888-847-2201, ID: 1418302074</td>
-    </tr>
-  </tbody>
-</table> -->
-
 <h3>Community Meeting Schedule</h3>
 <table class="table table-bordered">
   <thead>
@@ -51,6 +30,13 @@ layout: page
       <td><a target="blank" href="https://bluejeans.com/876759318">https://bluejeans.com/876759318</a></td>
       <td>Dial: 1-888-847-2201, ID: 876759318 or <a href="http://bluejeans.com/premium-numbers">See all numbers</a></td>
       <td><a target="blank" href="https://github.com/patternfly/patternfly-ng/blob/master/resources/community-meetings/2017-08-22_communitymtg_agenda.md">View Agenda</a></td>
+    </tr>
+    <tr>
+      <td>PatternFly-React</td>
+      <td>Tuesday August 22, at 11:00am EDT</td>
+      <td><a target="blank" href="https://bluejeans.com/424387898">https://bluejeans.com/424387898</a></td>
+      <td>Dial: 1-888-847-2201, ID: 424387898 or <a href="http://bluejeans.com/premium-numbers">See all numbers</a></td>
+      <td>Coming Soon</td>
     </tr>
   </tbody>
 </table>
