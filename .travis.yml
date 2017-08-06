@@ -2,6 +2,13 @@ language: ruby
 rvm:
   - 2.3.1
 
+cache:
+  directories:
+    - node_modules
+
+notifications:
+  email: false
+
 env:
   global:
   - ENCRYPTION_LABEL: "195bd079f767"
@@ -22,4 +29,10 @@ script:
 
 after_success:
   - grunt build:production
+  - npm prune
+  - npm run semantic-release
   - npm run publish-travis
+
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
