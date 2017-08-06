@@ -1,11 +1,16 @@
 {
   "name": "patternfly-org",
-  "version": "3.26.1",
+  "version": "0.0.0-semantically-released",
   "author": "Red Hat",
+  "release": {
+    "branch": "master",
+    "debug": false
+  },
   "scripts": {
     "publish": "ghpages",
     "publish-travis": "ghpages -t -r 'git@github.com:patternfly/patternfly.github.io.git' -b master _site",
-    "grunt": "grunt"
+    "grunt": "grunt",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "license": "Apache-2.0",
   "devDependencies": {
@@ -28,8 +33,9 @@
     "matchdep": "~0.3.0",
     "open": "0.0.5",
     "patternfly-eng-publish": "0.1.0-alpha.19",
-    "patternfly-eng-release": "3.26.2",
-    "serve-static": "^1.11.2"
+    "patternfly-eng-release": "^3.26.5",
+    "serve-static": "^1.11.2",
+    "semantic-release": "^6.3.6"
   },
   "description": "Documentation, etc. for PatternFly",
   "repository": {
