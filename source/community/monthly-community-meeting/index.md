@@ -36,7 +36,7 @@ layout: page
       <td>Tuesday August 22, at 11:00am EDT</td>
       <td><a target="blank" href="https://bluejeans.com/424387898">https://bluejeans.com/424387898</a></td>
       <td>Dial: 1-888-847-2201, ID: 424387898 or <a href="http://bluejeans.com/premium-numbers">See all numbers</a></td>
-      <td>Coming Soon</td>
+      <td><a target="blank" href="https://github.com/patternfly/patternfly-react/wiki/PatternFly-React-Community-Meeting">View Agenda</a></td>
     </tr>
   </tbody>
 </table>
