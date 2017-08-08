@@ -26,10 +26,10 @@ layout: page
   <tbody>
     <tr>
       <td>PatternFly-ng</td>
-      <td>Wednesday August 2, at 1:00pm EDT</td>
-      <td><a target="blank" href="https://bluejeans.com/421052074">https://bluejeans.com/421052074</a></td>
-      <td>Dial: 1-888-847-2201, ID: 421052074 or <a href="http://bluejeans.com/premium-numbers">See all numbers</a></td>
-      <td><a target="blank" href="https://github.com/patternfly/patternfly-ng/blob/master/resources/community-meetings/patternfly-ng_communitymeetingagenda_2017-08.md">View Agenda</a></td>
+      <td>Tuesday August 22, at 9:00am EDT</td>
+      <td><a target="blank" href="https://bluejeans.com/876759318">https://bluejeans.com/876759318</a></td>
+      <td>Dial: 1-888-847-2201, ID: 876759318 or <a href="http://bluejeans.com/premium-numbers">See all numbers</a></td>
+      <td><a target="blank" href="https://github.com/patternfly/patternfly-ng/blob/master/resources/community-meetings/2017-08-22_communitymtg_agenda.md">View Agenda</a></td>
     </tr>
     <tr>
       <td>PatternFly-React</td>
@@ -54,6 +54,12 @@ layout: page
   </thead>
 
   <tbody>
+    <tr>
+      <td>PatternFly-ng</td>
+      <td>August 2, 2017</td>
+      <td><a href="https://github.com/patternfly/patternfly-ng/blob/master/resources/community-meetings/2017-08-02_communitymtg_slides.pdf">View Deck</a></td>
+      <td><a target="blank" href="https://bluejeans.com/s/23_w6">View Recording</a></td>
+    </tr>
     <tr>
       <td>PatternFly-React</td>
       <td>June 26, 2017</td>
