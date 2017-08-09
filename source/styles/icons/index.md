@@ -14,9 +14,7 @@ You can also download the set of [PatternFly icon SVGs][6].
 Search for an icon: <span class="icon-search-container"><input type="text" id="icon-search" placeholder="Search..."/></span>
 
 <div class="icons">
-{% capture my_include %}{% include styles/icons/icomoon.md %}{% endcapture %}
-{{ my_include | site_replace | markdownify }}
-{% capture my_include %}{% include styles/icons/fontawesome.md %}{% endcapture %}
+{% capture my_include %}{% include styles/icons/icons.md %}{% endcapture %}
 {{ my_include | site_replace | markdownify }}
 </div>
 
