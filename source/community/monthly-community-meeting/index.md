@@ -26,7 +26,7 @@ layout: page
   <tbody>
     <tr>
       <td>Angular-PatternFly</td>
-      <td>Thursday August 17, at 10:00am EDT</td>
+      <td>Thursday August 17, at 11:00am EDT</td>
       <td><a target="blank" href="https://bluejeans.com/8479013013">https://bluejeans.com/8479013013</a></td>
       <td>Dial: 1-888-847-2201, ID: 8479013013 or <a href="http://bluejeans.com/premium-numbers">See all numbers</a></td>
       <td><a target="blank" href="https://github.com/patternfly/angular-patternfly/blob/master/wiki/Community_Meetings/Angular_PF_Community_Meeting_Aug17.md">View Agenda</a></td>
