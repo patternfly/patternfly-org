@@ -11,7 +11,29 @@ layout: page
   <li>Meeting ID: 985415746</li>
 </ul>-->
 
-<h3>Community Meeting Schedule</h3>
+<h2>Join us for an upcoming community meeting</h2>
+
+<p>PatternFly has a diverse community, therefore we have organized smaller community meetings around our JS framework implementations, in addition to our larger PatternFly community meeting.</p>
+
+<p>Agenda topics for community meetings include:</p>
+<ul>
+<li>Coordination with community on various initiatives.</li>
+<li>Updates on current status including demos of recent designs and/or implementations.</li>
+<li>Capture community requirements and/or feedback.</li>
+</ul>
+
+<p>Community meeting schedules and agendas are posted here and sent to the PatternFly mailing list. Smaller community meetings are scheduled dependent on the demand of that community with a cadence of 1-2 months. The larger community meeting occurs on a quarterly basis.</p> 
+
+<p>Community Meeting Leads:<p>
+<ul>
+<li>PatternFly: Leslie Hinson and Brain Leathem</li>
+<li>Angular PatternFly: Colleen Hart and Jeff Phillips</li>
+<li>PatternFly ng: Cat Robson and Dana Gutride</li>
+<li>PatternFly React: Jenn Giardino and Patrick Riley</li>
+<li>Patternfly Web Components: Brian Leathem and Patrick Riley </li>
+</ul>
+
+<h2>Community Meeting Schedule</h2>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -49,7 +71,7 @@ layout: page
 </table>
 
 
-<h3>Prior Community Meetings</h3>
+<h2>Prior Community Meetings</h2>
 <table class="table table-bordered">
   <thead>
     <tr>
