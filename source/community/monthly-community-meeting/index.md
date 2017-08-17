@@ -11,7 +11,29 @@ layout: page
   <li>Meeting ID: 985415746</li>
 </ul>-->
 
-<h3>Community Meeting Schedule</h3>
+<h2>Join Us</h2>
+
+<p>PatternFly has a diverse community, therefore we have organized smaller community meetings around our JS framework implementations, in addition to our larger PatternFly community meeting.</p>
+
+<p>Agenda topics for community meetings include:</p>
+<ul>
+<li>Coordination with community on various initiatives.</li>
+<li>Updates on current status including demos of recent designs and/or implementations.</li>
+<li>Capture community requirements and/or feedback.</li>
+</ul>
+
+<p>Community meeting schedules and agendas are posted here and sent to the PatternFly mailing list. Smaller community meetings are scheduled dependent on the demand of that community with a cadence of 1-2 months. The larger community meeting occurs on a quarterly basis.</p>
+
+<p>Community Meeting Leads:<p>
+<ul>
+<li>PatternFly: Leslie Hinson and Brain Leathem</li>
+<li>Angular PatternFly: Colleen Hart and Jeff Phillips</li>
+<li>PatternFly ng: Cat Robson and Dana Gutride</li>
+<li>PatternFly React: Jenn Giardino and Patrick Riley</li>
+<li>Patternfly Web Components: Brian Leathem and Patrick Riley </li>
+</ul>
+
+<h2>Upcoming Community Meetings and Agendas</h2>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -49,13 +71,13 @@ layout: page
 </table>
 
 
-<h3>Prior Community Meetings</h3>
+<h2>Prior Community Meeting's Recording and Slides</h2>
 <table class="table table-bordered">
   <thead>
     <tr>
       <td>Community Meeting</td>
       <td>Date</td>
-      <td>Deck</td>
+      <td>Slides</td>
       <td>Recording</td>
     </tr>
   </thead>
@@ -64,139 +86,139 @@ layout: page
     <tr>
       <td>PatternFly-ng</td>
       <td>August 2, 2017</td>
-      <td><a href="https://github.com/patternfly/patternfly-ng/blob/master/resources/community-meetings/2017-08-02_communitymtg_slides.pdf">View Deck</a></td>
+      <td><a href="https://github.com/patternfly/patternfly-ng/blob/master/resources/community-meetings/2017-08-02_communitymtg_slides.pdf">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/23_w6">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly-React</td>
       <td>June 26, 2017</td>
-      <td><a href="https://www.dropbox.com/s/f4ho9bhcrclyozq/PatternFly%20React%20June%202017%20Update.pdf?dl=0">View Deck</a></td>
+      <td><a href="https://www.dropbox.com/s/f4ho9bhcrclyozq/PatternFly%20React%20June%202017%20Update.pdf?dl=0">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/mwqtB/">View Recording</a></td>
     </tr>
     <tr>
       <td>Angular-PatternFly</td>
       <td>May 30, 2017</td>
-      <td><a href="https://www.dropbox.com/s/3be8hm94oyi3vz1/May%202017%20Angular%20PatternFly%20Community%20Meeting.pdf?dl=0">View Deck</a></td>
+      <td><a href="https://www.dropbox.com/s/3be8hm94oyi3vz1/May%202017%20Angular%20PatternFly%20Community%20Meeting.pdf?dl=0">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/rHmNY/">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly-React</td>
       <td>April 19, 2017</td>
-      <td><a href="https://docs.google.com/presentation/d/1CZA5OAYwQGUSn6BO8wtJC3b-0OVlVlu6HvKooLU5pNE/edit#slide=id.g1cf4dff9ec_0_299">View Deck</a></td>
+      <td><a href="https://docs.google.com/presentation/d/1CZA5OAYwQGUSn6BO8wtJC3b-0OVlVlu6HvKooLU5pNE/edit#slide=id.g1cf4dff9ec_0_299">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/vBR02">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>April 19, 2017</td>
-      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/PatternFly%20Community%20Meeting%202017-04.pdf">View Deck</a></td>
+      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/PatternFly%20Community%20Meeting%202017-04.pdf">View Slides</a></td>
       <td>Recording not available</td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>March 23, 2017</td>
-      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/PatternFly%20Community%20Meeting%202017-03.pdf">View Deck</a></td>
+      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/PatternFly%20Community%20Meeting%202017-03.pdf">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/Xj1Cr">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>February 22, 2017</td>
-      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/PatternFly%20Community%20Meeting%202017-02.pdf">View Deck</a></td>
+      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/PatternFly%20Community%20Meeting%202017-02.pdf">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/Cnu5T/">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>January 25, 2017</td>
-      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/PatternFly%20Community%20Meeting%202017-01.pdf">View Deck</a></td>
+      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/PatternFly%20Community%20Meeting%202017-01.pdf">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/UQbyU/">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>December 7, 2016</td>
-      <td><a href="https://www.dropbox.com/s/kknzi0altkcd6fy/PatternFly%20Community%20Meeting%202016-12.pdf?dl=0">View Deck</a></td>
+      <td><a href="https://www.dropbox.com/s/kknzi0altkcd6fy/PatternFly%20Community%20Meeting%202016-12.pdf?dl=0">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/tvGXE/">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>November 2, 2016</td>
-      <td><a href="https://www.dropbox.com/s/q9sue4oqeb9rzd9/PatternFly%20Community%20Meeting%202016-11.pdf?dl=0">View Deck</a></td>
+      <td><a href="https://www.dropbox.com/s/q9sue4oqeb9rzd9/PatternFly%20Community%20Meeting%202016-11.pdf?dl=0">View Slides</a></td>
       <td>No Recording due to Bluejeans error.</td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>October 5, 2016</td>
-      <td><a href="https://www.dropbox.com/s/bw81zc0cguag7z7/PatternFly%20Community%20Meeting%202016-10.pdf?dl=0">View Deck</a></td>
+      <td><a href="https://www.dropbox.com/s/bw81zc0cguag7z7/PatternFly%20Community%20Meeting%202016-10.pdf?dl=0">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/PZdLS/">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>September 7, 2016</td>
-      <td><a href="https://www.dropbox.com/s/fp3p58n9wmfgnvt/PatternFly%20Community%20Meeting%202016-09.pdf?dl=0">View Deck</a></td>
+      <td><a href="https://www.dropbox.com/s/fp3p58n9wmfgnvt/PatternFly%20Community%20Meeting%202016-09.pdf?dl=0">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/aNH4r/">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>August 11, 2016</td>
-      <td><a href="https://www.dropbox.com/s/avsmiitfjko7l7t/PatternFly%20Community%20Meeting%202016-08.pdf?dl=0">View Deck</a></td>
+      <td><a href="https://www.dropbox.com/s/avsmiitfjko7l7t/PatternFly%20Community%20Meeting%202016-08.pdf?dl=0">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/aa4d/">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>July 13, 2016</td>
-      <td><a href="https://www.dropbox.com/s/fnoy4qkvd18vk67/PatternFly%20Community%20Meeting%202016-07.pdf?dl=0">View Deck</a></td>
+      <td><a href="https://www.dropbox.com/s/fnoy4qkvd18vk67/PatternFly%20Community%20Meeting%202016-07.pdf?dl=0">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/a27m/">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>June 15, 2016</td>
-      <td><a href="https://www.dropbox.com/s/yg9u0lp2kziqzqb/PatternFly%20Community%20Meeting%202016-06.pdf?dl=0">View Deck</a></td>
+      <td><a href="https://www.dropbox.com/s/yg9u0lp2kziqzqb/PatternFly%20Community%20Meeting%202016-06.pdf?dl=0">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/9PLG/">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>May 18, 2016</td>
-      <td><a href="https://www.dropbox.com/s/gg2w5wls8kvd2lj/PatternFly%20Community%20Meeting%202016-05%20%281%29.pdf?dl=0">View Deck</a></td>
+      <td><a href="https://www.dropbox.com/s/gg2w5wls8kvd2lj/PatternFly%20Community%20Meeting%202016-05%20%281%29.pdf?dl=0">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/9FhO/">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>April 20, 2016</td>
-      <td><a href="https://www.dropbox.com/s/ou05dnqzy0zyxct/PatternFly%20Community%20Meeting%202016-04.pdf?dl=0">View Deck</a></td>
+      <td><a href="https://www.dropbox.com/s/ou05dnqzy0zyxct/PatternFly%20Community%20Meeting%202016-04.pdf?dl=0">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/9w4A/">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>March 30, 2016</td>
-      <td><a href="https://www.dropbox.com/s/f0c69ai4ec2sjst/PatternFly%20Community%20Meeting%202016-03.pdf?dl=0">View Deck</a></td>
+      <td><a href="https://www.dropbox.com/s/f0c69ai4ec2sjst/PatternFly%20Community%20Meeting%202016-03.pdf?dl=0">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/9mQW/">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>February 24, 2016</td>
-      <td><a href="https://www.dropbox.com/s/lh6ws2xblzv1cl1/PatternFly%20Community%20Meeting%202016-02.pdf?dl=0">View Deck</a></td>
+      <td><a href="https://www.dropbox.com/s/lh6ws2xblzv1cl1/PatternFly%20Community%20Meeting%202016-02.pdf?dl=0">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/9aM0/">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>January 27, 2016</td>
-      <td><a href="https://www.dropbox.com/s/z5e2obske4tl15t/PatternFly%20Community%20Meeting%202016-01.pdf?dl=0">View Deck</a></td>
+      <td><a href="https://www.dropbox.com/s/z5e2obske4tl15t/PatternFly%20Community%20Meeting%202016-01.pdf?dl=0">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/91SG/">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>December 16, 2015</td>
-      <td><a href="https://www.dropbox.com/s/hwdoxrnlqmvqmp0/PatternFly%20Community%20Meeting%202015-12.pdf?dl=0">View Deck</a></td>
+      <td><a href="https://www.dropbox.com/s/hwdoxrnlqmvqmp0/PatternFly%20Community%20Meeting%202015-12.pdf?dl=0">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/8Wh4/">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>November 18, 2015</td>
-      <td><a target="blank" href="https://www.dropbox.com/s/s156g46b3dvfyo1/PatternFly%20Community%20Meeting%202015-11.pdf?dl=0">View Deck</a></td>
+      <td><a target="blank" href="https://www.dropbox.com/s/s156g46b3dvfyo1/PatternFly%20Community%20Meeting%202015-11.pdf?dl=0">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/8Per/">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>October 26, 2015</td>
-      <td><a target="blank" href="https://www.dropbox.com/s/9dgu2bu781o0bh2/PatternFly%20Community%20Meeting%202015-10.pdf?dl=0">View Deck</a></td>
+      <td><a target="blank" href="https://www.dropbox.com/s/9dgu2bu781o0bh2/PatternFly%20Community%20Meeting%202015-10.pdf?dl=0">View </a></td>
       <td><a target="blank" href="https://bluejeans.com/s/8KyT/">View Recording</a></td>
     </tr>
   </tbody>
