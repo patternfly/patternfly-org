@@ -47,13 +47,6 @@ layout: page
 
   <tbody>
     <tr>
-      <td>Angular-PatternFly</td>
-      <td>Thursday August 17, at 11:00am EDT</td>
-      <td><a target="blank" href="https://bluejeans.com/8479013013">https://bluejeans.com/8479013013</a></td>
-      <td>Dial: 1-888-847-2201, ID: 8479013013 or <a href="http://bluejeans.com/premium-numbers">See all numbers</a></td>
-      <td><a target="blank" href="https://github.com/patternfly/angular-patternfly/blob/master/wiki/Community_Meetings/Angular_PF_Community_Meeting_Aug17.md">View Agenda</a></td>
-    </tr>
-    <tr>
       <td>PatternFly-ng</td>
       <td>Tuesday August 22, at 9:00am EDT</td>
       <td><a target="blank" href="https://bluejeans.com/876759318">https://bluejeans.com/876759318</a></td>
@@ -83,6 +76,12 @@ layout: page
   </thead>
 
   <tbody>
+  <tr>
+    <td>Angular-PatternFly</td>
+    <td>August 17, 2017</td>
+    <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/angular-patternfly-community/angular-patternfly-community-meeting-08-2017.pdf">View Slides</a></td>
+    <td><a target="blank" href="https://bluejeans.com/s/sPZk/">View Recording</a></td>
+  </tr>
     <tr>
       <td>PatternFly-ng</td>
       <td>August 2, 2017</td>
