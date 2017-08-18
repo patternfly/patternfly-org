@@ -79,7 +79,7 @@ layout: page
   <tr>
     <td>Angular-PatternFly</td>
     <td>August 17, 2017</td>
-    <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/angular-patternfly-community/Angular%20PatternFly%20Community%20Meeting%2008-2017.pdf">View Slides</a></td>
+    <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/angular-patternfly-community/angular-patternfly-community-meeting-08-2017.pdf">View Slides</a></td>
     <td><a target="blank" href="https://bluejeans.com/s/sPZk/">View Recording</a></td>
   </tr>
     <tr>
