@@ -1,18 +1,42 @@
-<div class="example-pf">
-  <iframe src="{{ site.baseurl }}/pattern-library/application-framework/login-page/login.html"
-          width="100%" height="650px;" scrolling="no" seamless></iframe>
-</div>
-<p>
-  <a href="https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/login.html" target="_blank">View full page example</a>
-</p>
-<p class="reference-markup">
-  <a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="login-layout-markup" href="#login-layout-markup">Reference Markup</a>
-</p>
-<div class="collapse in" id="login-layout-markup">
-  <pre class="prettyprint">{% capture markup_include %}
-<html class="login-pf">
-...
-{% include widgets/navigation/application-launcher-page.html %}
-</html>
-  {% endcapture %}{{ markup_include | xml_escape }}</pre>
-</div>
+<h2>Horizontal Nav Bar</h2>
+
+<h3>Grid Menu</h3>
+
+<h4>Icons</h4>
+{% include widgets/navigation/horizontal-primary-nav-bar.html launcher-icons=true launcher-grid=true navindex=1 %}
+<h4>No Icons</h4>
+{% include widgets/navigation/horizontal-primary-nav-bar.html launcher-icons=false launcher-grid=true navindex=2 %}
+
+<h3>List Menu</h3>
+
+<h4>Icons</h4>
+{% include widgets/navigation/horizontal-primary-nav-bar.html launcher-icons=true launcher-grid=false navindex=3 %}
+
+<h4>No Icons</h4>
+{% include widgets/navigation/horizontal-primary-nav-bar.html launcher-icons=false launcher-grid=false navindex=4 %}
+
+<br>
+<br>
+<h2>Vertical Nav Bar</h2>
+
+<h3>Grid Menu</h3>
+
+<h4>Icons</h4>
+{% include widgets/layouts/navbar-vertical.html launcher-grid=true launcher-icons=true navindex=5 %}
+
+<h4>No Icons</h4>
+{% include widgets/layouts/navbar-vertical.html launcher-grid=true launcher-icons=false navndex=6 %}
+
+<h3>List Menu</h3>
+
+<h4>Icons</h4>
+{% include widgets/layouts/navbar-vertical.html launcher-grid=false launcher-icons=true navindex=7 %}
+
+<h4>No Icons</h4>
+{% include widgets/layouts/navbar-vertical.html launcher-grid=false launcher-icons=false navindex=8 %}
+
+<script>
+  $(document).ready(function() {
+    $('.applauncher-pf .dropdown-toggle').eq(0).click();
+  });
+</script>
