@@ -1,3 +1,5 @@
+<div class="example-navbar">
+
 <h2>Horizontal Nav Bar</h2>
 
 <h3>Grid Menu</h3>
@@ -34,6 +36,8 @@
 
 <h4>No Icons</h4>
 {% include widgets/layouts/navbar-vertical.html launcher-grid=false launcher-icons=false navindex=8 %}
+
+</div>
 
 <script>
   $(document).ready(function() {
