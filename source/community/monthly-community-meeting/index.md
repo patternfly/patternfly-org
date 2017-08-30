@@ -85,8 +85,8 @@ layout: page
     <tr>
       <td>PatternFly-ng</td>
       <td>August 22, 2017</td>
-      <td></td>
-      <td></td>
+      <td><a href="https://github.com/patternfly/patternfly-ng/blob/master/resources/community-meetings/2017-08-22_communitymtg_notes.md">Notes and Slides</a></td>
+      <td>Recording not available</td>
     </tr>
     <tr>
       <td>Angular-PatternFly</td>
