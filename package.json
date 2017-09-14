@@ -59,6 +59,8 @@
     "jquery-match-height": "^0.7.0",
     "jquery.scrollto": "^2.1.2",
     "patternfly": "^3.19.0",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
+    "moment": "~2.14.1",
     "patternfly-bootstrap-combobox": "^1.1.7",
     "patternfly-bootstrap-treeview": "^2.1.1",
     "wowjs": "^1.1.3"
