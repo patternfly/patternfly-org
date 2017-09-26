@@ -54,7 +54,16 @@
   <script src="{{ "/components/angular-patternfly/dist/docs/js/docs-setup.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "/components/angular-patternfly/dist/docs/js/docs.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "/ngdocs/formatForPFsite.js" | prepend: site.baseurl }}"></script>{% endif %}
-  {% if page.url-js-extra %}{% for urlextrajs in page.url-js-extra %}<script src="{{ site.baseurl }}/{{ urlextrajs }}"></script>{% endfor %}{% endif %}
+  {% if page.url-js-extra %}
+    {% for urlextrajs in page.url-js-extra %}
+      {% assign prefix = urlextrajs | slice: 0, 2 %}
+      {% if prefix == '//' %}
+        <script src="{{ urlextrajs }}"></script>
+      {% else %}
+        <script src="{{ urlextrajs | prepend: '/' | prepend: site.baseurl }}"></script>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
   <script src="{{ "/assets/js/patternfly-site.min.js" | prepend: site.baseurl }}"></script>
   {% if site.baseurl == "" %}<link rel="canonical" href="/{{ page.url | replace:'index.html','' | prepend: site.url }}">{% endif %}
 </head>
