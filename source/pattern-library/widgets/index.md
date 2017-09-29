@@ -1234,7 +1234,7 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="/">
-            <img class="navbar-brand-name" src="{{site.navbar-brand-alt-icon}}" alt="{{site.title-product}}" />
+            <img class="navbar-brand-name" src="{{site.baseurl}}/{{site.navbar-brand-alt-icon}}" alt="{{site.title-product}}" />
           </a>
         </div>
         <div class="collapse navbar-collapse navbar-collapse-1">
