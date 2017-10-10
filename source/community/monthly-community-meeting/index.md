@@ -3,13 +3,6 @@ title: Monthly Community Meeting
 author: dlabrecq
 layout: page
 ---
-<!--<p>Join us at our next Community Meeting on <b><a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=April+Community+Meeting&iso=20170419T10&p1=207&ah=1">April 19 at 10AM EST</a></b>.</p>
-<p>Join the BlueJeans Video Conference: <a href="https://bluejeans.com/985415746">https://bluejeans.com/985415746</a>.</p>
-<p>Or, dial in via phone:</p>
-<ul>
-  <li>Call-in number: 1-800-451-8679</li>
-  <li>Meeting ID: 985415746</li>
-</ul>-->
 
 <h2>Join Us</h2>
 
@@ -26,14 +19,14 @@ layout: page
 
 <p>Community Meeting Leads:<p>
 <ul>
-<li>PatternFly: Leslie Hinson and Brain Leathem</li>
+<li>PatternFly: Leslie Hinson</li>
 <li>Angular PatternFly: Colleen Hart and Jeff Phillips</li>
 <li>PatternFly ng: Cat Robson and Dana Gutride</li>
 <li>PatternFly React: Jenn Giardino and Patrick Riley</li>
-<li>Patternfly Web Components: Brian Leathem and Patrick Riley </li>
+<li>Patternfly Web Components: Patrick Riley </li>
 </ul>
 
-<!-- <h2>Upcoming Community Meetings and Agendas</h2>
+<h2>Upcoming Community Meetings and Agendas</h2>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -47,21 +40,14 @@ layout: page
 
   <tbody>
     <tr>
-      <td>PatternFly-ng</td>
-      <td>Tuesday August 22, at 9:00am EDT</td>
+      <td>PatternFly</td>
+      <td>Wednesday, October 10, at 9:30am EDT</td>
       <td><a target="blank" href="https://bluejeans.com/876759318">https://bluejeans.com/876759318</a></td>
-      <td>Dial: 1-888-847-2201, ID: 876759318 or <a href="http://bluejeans.com/premium-numbers">See all numbers</a></td>
-      <td><a target="blank" href="https://github.com/patternfly/patternfly-ng/blob/master/resources/community-meetings/2017-08-22_communitymtg_agenda.md">View Agenda</a></td>
-    </tr>
-    <tr>
-      <td>PatternFly-React</td>
-      <td>Tuesday August 22, at 11:00am EDT</td>
-      <td><a target="blank" href="https://bluejeans.com/424387898">https://bluejeans.com/424387898</a></td>
-      <td>Dial: 1-888-847-2201, ID: 424387898 or <a href="http://bluejeans.com/premium-numbers">See all numbers</a></td>
-      <td><a target="blank" href="https://github.com/patternfly/patternfly-react/wiki/PatternFly-React-Community-Meeting">View Agenda</a></td>
+      <td>Dial: 1-888-847-2201, ID: 876759318<a href="http://bluejeans.com/premium-numbers"></a></td>
+      <td><a target="blank" href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/community-mtg-agenda-2017-10-11.md">View Agenda</a></td>
     </tr>
   </tbody>
-</table> -->
+</table>
 
 
 <h2>Prior Community Meeting's Recording and Slides</h2>
