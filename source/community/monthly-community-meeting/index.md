@@ -42,8 +42,8 @@ layout: page
     <tr>
       <td>PatternFly</td>
       <td>Wednesday, October 10, at 9:30am EDT</td>
-      <td><a target="blank" href="https://bluejeans.com/876759318">https://bluejeans.com/876759318</a></td>
-      <td>Dial: 1-888-847-2201, ID: 876759318<a href="http://bluejeans.com/premium-numbers"></a></td>
+      <td><a target="blank" href="https://redhat.bluejeans.com/1193274196">https://redhat.bluejeans.com/1193274196</a></td>
+      <td>Dial: 1.888.240.2560, ID: 1193274196</td>
       <td><a target="blank" href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/community-mtg-agenda-2017-10-11.md">View Agenda</a></td>
     </tr>
   </tbody>
