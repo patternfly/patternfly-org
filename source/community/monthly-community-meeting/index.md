@@ -26,7 +26,7 @@ layout: page
 <li>Patternfly Web Components: Patrick Riley </li>
 </ul>
 
-<h2>Upcoming Community Meetings and Agendas</h2>
+<!---<h2>Upcoming Community Meetings and Agendas</h2>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -47,7 +47,7 @@ layout: page
       <td><a target="blank" href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/community-mtg-agenda-2017-10-11.md">View Agenda</a></td>
     </tr>
   </tbody>
-</table>
+</table>-->
 
 
 <h2>Prior Community Meeting's Recording and Slides</h2>
@@ -62,6 +62,18 @@ layout: page
   </thead>
 
   <tbody>
+    <tr>
+      <td>PatternFly</td>
+      <td>October 11, 2017</td>
+      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/patternfly-community/2017-10-slides.pdf">View Slides</a></td>
+      <td><a target="blank" href="https://bluejeans.com/s/foJTO/">View Recording</a></td>
+    </tr>
+    <tr>
+      <td>PatternFly-ng</td>
+      <td>August 22, 2017</td>
+      <td></td>
+      <td></td>
+    </tr>
     <tr>
       <td>PatternFly-React</td>
       <td>August 22, 2017</td>
@@ -107,25 +119,25 @@ layout: page
     <tr>
       <td>PatternFly</td>
       <td>April 19, 2017</td>
-      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/PatternFly%20Community%20Meeting%202017-04.pdf">View Slides</a></td>
+      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/patternfly-community/2017-04-slides.pdf">View Slides</a></td>
       <td>Recording not available</td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>March 23, 2017</td>
-      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/PatternFly%20Community%20Meeting%202017-03.pdf">View Slides</a></td>
+      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/patternfly-community/2017-03-slides.pdf">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/Xj1Cr">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>February 22, 2017</td>
-      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/PatternFly%20Community%20Meeting%202017-02.pdf">View Slides</a></td>
+      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/patternfly-community/2017-02-slides.pdf">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/Cnu5T/">View Recording</a></td>
     </tr>
     <tr>
       <td>PatternFly</td>
       <td>January 25, 2017</td>
-      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/PatternFly%20Community%20Meeting%202017-01.pdf">View Slides</a></td>
+      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/patternfly-community/2017-01-slides.pdf">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/UQbyU/">View Recording</a></td>
     </tr>
     <tr>
