@@ -22,7 +22,6 @@
     "grunt-css-count": "^0.3.0",
     "grunt-jekyll": "^0.4.2",
     "grunt-jslint": "^1.1.14",
-    "grunt-run": "^0.6.0",
     "grunt-sync": "^0.6.2",
     "lodash": "^4.17.4",
     "matchdep": "~0.3.0",
