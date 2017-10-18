@@ -4,8 +4,3 @@
 <div class="collapse in" id="markup-1">
   <pre class="prettyprint">{% capture markup_include %}{% include widgets/communication/wizard.html id="complete" %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
 </div>
-</div>
-<div role="tabpanel" class="tab-pane nested" id="angular">
-<div ng-app="docsApp" ng-controller="DocsController" class="content">
-  <div ng-include src="''"></div>
-</div>
