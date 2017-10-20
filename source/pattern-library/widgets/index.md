@@ -1326,10 +1326,10 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
         </button>
         <ul class="dropdown-menu " aria-labelledby="dropdownKebab">
           <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
+          <li><a href="#">Another Action</a></li>
+          <li><a href="#">Something Else Here</a></li>
           <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
+          <li><a href="#">Separated Link</a></li>
         </ul>
       </div>
     </div>
