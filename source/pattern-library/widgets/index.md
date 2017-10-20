@@ -2150,6 +2150,57 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
 </pre>
     </div>
   </div>
+  <div class="section" id="timepicker">
+    <h3>Timepicker</h3>
+    <p>See <a href="http://eonasdan.github.io/bootstrap-datetimepicker/">http://eonasdan.github.io/bootstrap-datetimepicker/</a> for complete Timepicker documentation.</p>
+    <div class="pf-example">
+      <div class="input-group time-picker-pf" id="time-picker-2">
+        <input type="text" class="form-control">
+        <span class="input-group-addon btn btn-default">
+          <span class="fa fa-clock-o"></span>
+        </span>
+      </div>
+      <script type="text/javascript">
+        $(function () {
+          $('#time-picker-2').datetimepicker({
+            format: 'LT',
+            keyBinds: {
+              enter: function () {
+                $('#time-picker-2').find('input').trigger('change');
+                this.hide();
+              }
+            }
+          });
+          $('#time-picker-2').data('DateTimePicker').clear();
+        });
+      </script>
+    </div>
+    <p><p class="reference-markup"><a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="timepicker-markup" href="#timepicker-markup">Reference Markup</a></p></p>
+    <div class="collapse" id="timepicker-markup">
+      <pre class="prettyprint">
+&lt;script src="/components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"&gt;&lt;/script&gt;
+&lt;script src="/components/moment/min/moment.min.js"&gt;&lt;/script&gt;
+&lt;div class="input-group time-picker-pf" id="time-picker-2"&gt;
+  &lt;input type="text" class="form-control"/&gt;
+  &lt;span class="input-group-addon btn btn-default"&gt;
+    &lt;span class="fa fa-clock-o"&gt;&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $('#time-picker-2').datetimepicker({
+    format: 'LT',
+    keyBinds: {
+      enter: function () {
+        $('#time-picker-2').find('input').trigger('change');
+        this.hide();
+      }
+    }
+  });
+  $('#time-picker-2').data('DateTimePicker').clear();
+&lt;/script&gt;
+</pre>
+    </div>
+  </div>
   <div class="section" id="tooltip">
     <h3>Tooltip</h3>
     <p>See <a href="http://getbootstrap.com/javascript/#tooltips">http://getbootstrap.com/javascript/#tooltips</a> for complete tooltip documentation.</p>

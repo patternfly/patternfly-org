@@ -416,14 +416,6 @@ with these updates by checking out “What’s New” on the <a href="https://bl
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
-        <p>Timepicker</p>
-        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/timepicker">
-          <img src="{{site.baseurl}}/assets/img/thumbnails/Timepicker.png" alt="timepicker"/>
-        </a>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-3">
-      <div class="pattern-thumbnail">
         <p>Toolbar</p>
         <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/toolbar">
           <img src="{{site.baseurl}}/assets/img/thumbnails/Toolbar.png" alt="toolbar"/>
