@@ -5,6 +5,7 @@ var connect = require('connect'),
     http = require('http'),
     open = require('open'),
     _ = require('lodash'),
+    yaml = require('js-yaml'),
     packageJson = require('./package.json');
 
 
@@ -25,7 +26,7 @@ function correctBaseUrl(_baseurl) {
 
 module.exports = function (grunt) {
   // load all grunt tasks
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  require('matchdep').filterDev(['grunt-*', '!grunt-cli']).forEach(grunt.loadNpmTasks);
   grunt.loadNpmTasks('grunt-sync');
 
   var config = {
@@ -185,7 +186,7 @@ module.exports = function (grunt) {
     jekyll: {
       options: {
         dest: '<%= config.site %>',
-        config: '<%= config.source %>/_config.yml',
+        config: '<%= config.build %>/_config.yml',
         src: '<%= config.build %>',
         bundleExec: 'true',
         incremental: 'true'
@@ -194,9 +195,6 @@ module.exports = function (grunt) {
         incremental: 'false'
       },
       staging: {
-        options: {
-          raw: `baseurl: '${config.baseurl}'`
-        }
       }
     },
     less: {
@@ -289,6 +287,14 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.registerTask('buildConfig', function (target) {
+    if (target === 'staging') {
+      var jekyllConfig = grunt.file.readYAML(`${config.source}/_config.yml`);
+      jekyllConfig.baseurl = config.baseurl;
+      grunt.file.write(`${config.build}/_config.yml`, yaml.safeDump(jekyllConfig));
+    }
+  })
+
   grunt.registerTask('serve', function (target) {
     target = target || config.defaultTarget;
     grunt.task.run([
@@ -306,6 +312,7 @@ module.exports = function (grunt) {
       'copy:components',
       'sync:patternflyDist',
       'cname:' + target,
+      'buildConfig:' + target,
       'sync:source',
       'sync:design',
       'sync:examples',
@@ -318,6 +325,10 @@ module.exports = function (grunt) {
 
   grunt.registerTask('reposUpdate', function (target) {
     var done = this.async();
+    if (grunt.option('skip-repos-update')) {
+      done();
+      return;
+    }
     var repoMap = {
       'patternfly-core': {
         path: 'repos/patternfly-core',
