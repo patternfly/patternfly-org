@@ -325,6 +325,10 @@ module.exports = function (grunt) {
 
   grunt.registerTask('reposUpdate', function (target) {
     var done = this.async();
+    if (grunt.option('skip-repos-update')) {
+      done();
+      return;
+    }
     var repoMap = {
       'patternfly-core': {
         path: 'repos/patternfly-core',
