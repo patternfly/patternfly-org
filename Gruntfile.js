@@ -354,7 +354,7 @@ module.exports = function (grunt) {
         // git pull the repos
         grunt.util.spawn({
           cmd: 'git',
-          args: [ '-C', repo.path, 'pull', '--rebase', '--autostash']
+          args: [ '-C', repo.path, 'pull']
         }, function(error, result, code) {
           if (error) {  // repo folder doesn't exists, so clone instead
             grunt.util.spawn({
