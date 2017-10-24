@@ -385,7 +385,7 @@ layout: page
 
     .white-text {
       color: #ffffff;
-    }   
+    }
 
     .row-gray {
       background: #f8f8f8;
@@ -474,10 +474,10 @@ layout: page
               <i class="fa fa-download"></i> Download Color Swatches <span class="caret"></span>
             </button>
             <ul class="dropdown-menu dropdown-menu-pf-full">
-              <li><a href="/assets/file/PatternFly_Swatches_02-27-2017.aco">For Adobe Photoshop</a></li>
-              <li><a href="/assets/file/PatternFly_Swatches_02-27-2017.ase">For Adobe Illustrator/Indesign</a></li>
-              <li><a href="/assets/file/PatternFly_Palette.sketchpalette">For Sketch</a></li>
-              <li><a href="/assets/file/PatternFly_Palette.gpl">For Inkscape & GIMP</a></li>
+              <li><a href="{{ site.baseurl}}/assets/file/PatternFly_Swatches_02-27-2017.aco">For Adobe Photoshop</a></li>
+              <li><a href="{{ site.baseurl}}/assets/file/PatternFly_Swatches_02-27-2017.ase">For Adobe Illustrator/Indesign</a></li>
+              <li><a href="{{ site.baseurl}}/assets/file/PatternFly_Palette.sketchpalette">For Sketch</a></li>
+              <li><a href="{{ site.baseurl}}/assets/file/PatternFly_Palette.gpl">For Inkscape & GIMP</a></li>
             </ul>
           </div>
           <span class="last-update">Last updated: 27 Feb 2017</span>
@@ -958,7 +958,7 @@ Use for general UI and backgrounds.</p>
     <path class="C-cls-10" d="M65.17,125.06L51.51,133h0L40,139.67a72.09,72.09,0,0,0,62.4,35.95V146.47A43,43,0,0,1,65.17,125.06Z" transform="translate(-3.83 -4.96)" data-toggle="popover" data-container="body" data-content="pf-green-400 #3f9c35"/>
     <path class="C-cls-11" d="M59.35,103.45a42.81,42.81,0,0,1,5.93-21.79l-8.42-5h0L53,74.45l-1.33-.78h0L40.22,66.9A72.17,72.17,0,0,0,40,139.67L56.73,130h0l8.44-4.89A42.8,42.8,0,0,1,59.35,103.45Z" transform="translate(-3.83 -4.96)" data-toggle="popover" data-container="body" data-content="pf-blue-300 #39a5dc"/>
     <path class="C-cls-12" d="M40.22,66.9L53,74.45l12.24,7.21a43,43,0,0,1,37.09-21.23V31.38A72.08,72.08,0,0,0,40.22,66.9Z" transform="translate(-3.83 -4.96)" data-toggle="popover" data-container="body" data-content="pf-black-300 #d1d1d1"/></svg>
-  </div>  
+  </div>
   <h3>Status Palette</h3>
   <p>Choose colors that correspond with the severity of the message. It should not alarm or threaten users, but instead motivate them to take action. These colors should be used sparingly.</p>
  </div>
