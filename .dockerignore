@@ -1,7 +1,6 @@
 bower_components
 github.io
 node_modules
-.git
 .openshift
 php
 _site

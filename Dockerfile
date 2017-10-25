@@ -1,29 +1,29 @@
-# Use the travis ruby image as a base to mimic production deployment
-FROM quay.io/travisci/travis-ruby
+FROM centos:centos7
 
-SHELL ["/bin/bash", "--login", "-c"]
-USER travis
-ENV HOME /home/travis
+RUN yum -y install centos-release-scl; yum clean all
+RUN yum -y update; yum clean all
+RUN yum install -y rh-git29 rh-ruby23 rh-ruby23-ruby-devel rh-nodejs4; yum clean all
 
-ENV INSTALL_RUBY_VERSION 2.3.1
-RUN echo $PATH \
-    && rvm install $INSTALL_RUBY_VERSION \
-    && rvm --default use $INSTALL_RUBY_VERSION \
-    && ruby --version
-
-RUN gem install bundle
-
-ENV NODE_VERSION 4.8.4
-RUN nvm install $NODE_VERSION \
-    && nvm alias default $NODE_VERSION \
-    && nvm use default \
-    && node --version
-
-RUN if [[ `npm -v` != 3* ]]; then npm i -g npm@5; fi \
+RUN source /opt/rh/rh-nodejs4/enable \
+    && if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi \
     && npm --version
 
+RUN useradd -ms /bin/bash patternfly
+
+SHELL ["/bin/bash", "--login", "-c"]
+USER patternfly
+ENV HOME /home/patternfly
+WORKDIR $HOME
+
+RUN echo 'source /opt/rh/rh-git29/enable' >> $HOME/.bash_profile
+RUN echo 'source /opt/rh/rh-ruby23/enable' >> $HOME/.bash_profile
+RUN echo 'source /opt/rh/rh-nodejs4/enable' >> $HOME/.bash_profile
+
+RUN gem install bundler --no-ri --no-rdoc
+
 # Create app directory
-WORKDIR $HOME/builds
+RUN mkdir patternfly-org
+WORKDIR $HOME/patternfly-org
 
 COPY Gemfile Gemfile.lock ./
 RUN bundle install

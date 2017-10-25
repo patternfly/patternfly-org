@@ -7,7 +7,7 @@
     "publish-travis": "ghpages -t -r 'git@github.com:patternfly/patternfly.github.io.git' -b master _site",
     "grunt": "grunt",
     "docker:build": "docker build -t patternfly/patternfly-org .",
-    "docker:run": "docker run -it -p 9002:9002 -p35731:35731 -v ${PWD}/source:/home/travis/builds/source patternfly/patternfly-org"
+    "docker:run": "docker run -it -p 9002:9002 -p35731:35731 -v ${PWD}/source:/home/patternfly/patternfly-org/source patternfly/patternfly-org"
   },
   "license": "Apache-2.0",
   "devDependencies": {

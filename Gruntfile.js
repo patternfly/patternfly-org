@@ -362,15 +362,15 @@ module.exports = function (grunt) {
               args: [ 'clone', '--single-branch', '--depth', '1', '-b', repo.branch, repo.url, repo.path ]
             }, function(error, result, code) {
               if (error) { // an unknown error
-                console.error(`${key}: ${error.stderr}`);
+                console.error(`${key} (clone): ${error.stderr}`);
                 reject(error.code);
               }
               // clone is complete
-              console.log(`${key}: ${result.stderr}`);
+              console.log(`${key} (clone): ${result.stdout}`);
               resolve(code);
             });
           } else { // update is complete
-            console.log(`${key}: ${result}`);
+            console.log(`${key} (update): ${result}`);
             resolve(code);
           }
         });
