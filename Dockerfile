@@ -15,6 +15,10 @@ USER patternfly
 ENV HOME /home/patternfly
 WORKDIR $HOME
 
+RUN mkdir $HOME/.ssh \
+    && chmod 700 $HOME/.ssh \
+    && ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
+
 RUN echo 'source /opt/rh/rh-git29/enable' >> $HOME/.bash_profile
 RUN echo 'source /opt/rh/rh-ruby23/enable' >> $HOME/.bash_profile
 RUN echo 'source /opt/rh/rh-nodejs4/enable' >> $HOME/.bash_profile
