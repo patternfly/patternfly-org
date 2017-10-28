@@ -1442,3 +1442,69 @@ th {
     }
   }
 }
+
+.pf-design-table {
+  width: auto;
+  margin: auto;
+}
+.pf-design-table__cell {
+  text-align: center;
+}
+.pf-design-table__cell--missing {
+  background-color: #ffe6e6;
+}
+.pf-design-table__icon {
+  line-height: 1.66666667;
+}
+.pf-design-table__icon--new {
+  color: #f0ab00;
+}
+.pf-design-table__icon--changed {
+  color: #00659c;
+}
+.pf-design-table__icon--present {
+  color: #8b8d8f;
+}
+.pf-design-table__cell__impl .pf-design-table__icon--present {
+  color: #92d400;
+}
+.pf-design-table__icon--missing {
+  color: #a30000;
+}
+.pf-design-table__days-slider {
+  display: flex;
+}
+.pf-design-table__days-output {
+  font-size: 100%;
+  padding: 3px;
+  flex-shrink: 0;
+}
+.pf-design-table__row__header-files {
+  white-space: nowrap;
+}
+.remove-icon {
+  animation: disappear .2s ease;
+  animation-fill-mode: forwards;
+}
+.add-icon {
+  animation: appear .2s ease;
+  animation-fill-mode: forwards;
+}
+.pf-design-table__legend_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  white-space: nowrap;
+}
+.pf-design-table__date-input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  white-space: nowrap;
+}
+.table-striped > tbody > tr:nth-of-type(odd) > td.pf-design-table__cell__impl {
+  background-color: #f5f5f5;
+}
+.table-striped > tbody > tr:nth-of-type(even) > td.pf-design-table__cell__impl {
+  background-color: #ededed;
+}
