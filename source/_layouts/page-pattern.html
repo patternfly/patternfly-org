@@ -1,5 +1,6 @@
 ---
 layout: default
+url-js-extra: ['']
 ---
 <div id="main" class="col-md-12 clearfix" role="main">
   <article class="post">
@@ -40,31 +41,55 @@ layout: default
               {% if page.impl_angular %}
                 <li class="pforg-code__showcase-link-item">
                   <a href="{{ page.impl_angular }}" target="patternfly_showcase">
-                    <button><i class="fa fa-external-link" aria-hidden="true"></i> Angular PatternFly</button>
+                    <button type="button" class="btn" data-toggle="tooltip" data-placement="top" title="Pattern implementation in angular-patternfly">
+                      <i class="fa fa-external-link" aria-hidden="true"></i>
+                      Angular PatternFly
+                    </button>
                   </a>
                 </li>
               {% else %}
-                <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled"><button><i class="fa fa-external-link" aria-hidden="true"></i> Angular PatternFly</button></a></li>
+                <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled">
+                  <button type="button" class="btn disabled" data-toggle="tooltip" data-placement="top" title="Pattern implementation not available for angular-patternfly">
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                    Angular PatternFly
+                  </button>
+                </li>
               {% endif %}
 
               {% if page.impl_ng %}
                 <li class="pforg-code__showcase-link-item">
                   <a href="{{ page.impl_ng }}" target="patternfly_showcase">
-                    <button><i class="fa fa-external-link" aria-hidden="true"></i> PatternFly Ng</button>
+                    <button type="button" class="btn" data-toggle="tooltip" data-placement="top" title="Pattern implementation in patternfly-ng">
+                      <i class="fa fa-external-link" aria-hidden="true"></i>
+                      PatternFly Ng
+                    </button>
                   </a>
                 </li>
               {% else %}
-                <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled"><button><i class="fa fa-external-link" aria-hidden="true"></i> PatternFly Ng</button></a></li>
+                <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled disabled">
+                  <button type="button" class="btn disabled" data-toggle="tooltip" data-placement="top" title="Pattern implementation not available for patternfly-ng">
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                    PatternFly Ng
+                  </button></a>
+                </li>
               {% endif %}
 
               {% if page.impl_react %}
                 <li class="pforg-code__showcase-link-item">
                   <a href="{{ page.impl_react }}" target="patternfly_showcase">
-                    <button><i class="fa fa-external-link" aria-hidden="true"></i> PatternFly React</button>
+                    <button type="button" class="btn" data-toggle="tooltip" data-placement="top" title="Pattern implementation in patternfly-react">
+                      <i class="fa fa-external-link" aria-hidden="true"></i>
+                      PatternFly React
+                    </button>
                   </a>
                 </li>
               {% else %}
-                <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled"><button><i class="fa fa-external-link" aria-hidden="true"></i> PatternFly React</button></a></li>
+                <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled disabled">
+                  <button type="button" class="btn disabled" data-toggle="tooltip" data-placement="top" title="Pattern implementation not available for patternfly-react">
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                    PatternFly React
+                  </button>
+                </li>
               {% endif %}
             </ul>
           </div>
@@ -89,4 +114,11 @@ layout: default
       h1.style.display = 'none';
     });
   }
+  // Initialize Tooltip
+  $(document).ready(function() {
+    $('#code').tooltip({
+      selector: "[data-toggle=tooltip]",
+      container: "body"
+    });
+  });
 </script>
