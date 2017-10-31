@@ -19,11 +19,14 @@ with these updates by checking out “What’s New” on the <a href="https://bl
   <tbody class='pf-design-table__files'>
     <tr><th colspan='8'><h2>{{ family.name }}</h2></th></tr>
     <tr class='pf-design-table__row__header-files'>
-      <th>Pattern</th><th>jQuery</th><th>Angular 1</th><th>Angular 2+ (ng)</th><th>React</th><th>Web component</th><th>CSS.Next</th>
+      <th>Pattern</th><th>PatternFly Core</th><th>Angular 1</th><th>Angular 2+ (ng)</th><th>React</th>
+      <!-- <th>Web component</th><th>CSS.Next</th> -->
     </tr>
     {% for pattern in family.patterns %}
       <tr>
-        <td>{{ pattern.name }}</td>
+        <td>
+          <a href="{{ site.baseurl}}/pattern-library/{{family.name}}/{{pattern.name}}">{{ pattern.name }}</a>
+        </td>
         <td class="pf-design-table__cell pf-design-table__cell__impl">
           {% if pattern.files.site.frontmatter.impl_jquery %}
             <a href="{{pattern.files.site.frontmatter.impl_jquery}}" target="_new">
@@ -60,7 +63,7 @@ with these updates by checking out “What’s New” on the <a href="https://bl
             <span class='pficon pficon-close pf-design-table__icon pf-design-table__icon--missing'></span>
           {% endif %}
         </td>
-        <td class="pf-design-table__cell pf-design-table__cell__impl">
+        <!-- <td class="pf-design-table__cell pf-design-table__cell__impl">
           {% if pattern.files.site.frontmatter.impl_webcomponent %}
             <a href="{{pattern.files.site.frontmatter.impl_webcomponent}}" target="_new">
               <span class='fa fa-check pf-design-table__icon pf-design-table__icon--present'></span>
@@ -77,7 +80,7 @@ with these updates by checking out “What’s New” on the <a href="https://bl
           {% else %}
             <span class='pficon pficon-close pf-design-table__icon pf-design-table__icon--missing'></span>
           {% endif %}
-        </td>
+        </td> -->
       </tr>
     {% endfor %}
   </tbody>
