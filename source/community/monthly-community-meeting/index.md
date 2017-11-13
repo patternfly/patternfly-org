@@ -26,28 +26,28 @@ layout: page
 <li>Patternfly Web Components: Patrick Riley </li>
 </ul>
 
-<!---<h2>Upcoming Community Meetings and Agendas</h2>
+<h2>Upcoming Community Meetings and Agendas</h2>
 <table class="table table-bordered">
   <thead>
     <tr>
       <td>Community</td>
       <td>Next Meeting</td>
       <td>Video Conference Link</td>
-      <td>Dial-in Info</td>
+      <td>Call Info</td>
       <td>Agenda</td>
     </tr>
   </thead>
 
   <tbody>
     <tr>
-      <td>PatternFly</td>
-      <td>Wednesday, October 11, at 9:30am EDT</td>
-      <td><a target="blank" href="https://redhat.bluejeans.com/1193274196">https://redhat.bluejeans.com/1193274196</a></td>
-      <td>Dial: 1.888.240.2560, ID: 1193274196</td>
-      <td><a target="blank" href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/community-mtg-agenda-2017-10-11.md">View Agenda</a></td>
+      <td>Angular-PatternFly</td>
+      <td>Monday, November 27 at 10:00am EDT</td>
+      <td><a target="blank" href="https://bluejeans.com/8479013013">https://bluejeans.com/8479013013</a></td>
+      <td>Dial: 1-888-847-2201, ID: 8479013013</td>
+      <td><a target="blank" href="https://github.com/patternfly/angular-patternfly/blob/master/wiki/Community_Meetings/Angular_PF_Community_Meeting_NOV2017.md">View Agenda</a></td>
     </tr>
   </tbody>
-</table>-->
+</table>
 
 
 <h2>Prior Community Meeting's Recording and Slides</h2>
@@ -62,12 +62,6 @@ layout: page
   </thead>
 
   <tbody>
-    <tr>
-      <td>Angular-PatternFly</td>
-      <td>November 27, 2017</td>
-      <td><a href="https://github.com/patternfly/angular-patternfly/blob/master/wiki/Community_Meetings/Angular_PF_Community_Meeting_NOV2017.md">View Agenda</a></td>
-      <td> Join Meeting: <a href="https://bluejeans.com/8479013013">https://bluejeans.com/8479013013</a></td>
-      </tr>
     <tr>
       <td>PatternFly</td>
       <td>October 11, 2017</td>
