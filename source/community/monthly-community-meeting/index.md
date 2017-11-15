@@ -46,6 +46,13 @@ layout: page
       <td>Dial: 1-888-847-2201, ID: 8479013013</td>
       <td><a target="blank" href="https://github.com/patternfly/angular-patternfly/blob/master/wiki/Community_Meetings/Angular_PF_Community_Meeting_NOV2017.md">View Agenda</a></td>
     </tr>
+    <tr>
+      <td>PatternFly-React</td>
+      <td>Thursday December 7 at 10:00am EDT</td>
+      <td><a target="blank" href="https://bluejeans.com/861117604">https://bluejeans.com/861117604</a></td>
+      <td>Dial: 1-888-847-2201, ID: 861117604 or <a href="http://bluejeans.com/premium-numbers">See all numbers</a></td>
+      <td><a target="blank" href="https://github.com/patternfly/patternfly-react/wiki/PatternFly-React-Community-Meeting">View Agenda</a></td>
+    </tr>
   </tbody>
 </table>
 
