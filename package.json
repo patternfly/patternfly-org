@@ -1,6 +1,6 @@
 {
   "name": "patternfly-org",
-  "version": "3.26.1",
+  "version": "3.30.1",
   "author": "Red Hat",
   "scripts": {
     "publish": "ghpages",
@@ -60,7 +60,7 @@
     "jquery": "^2.2.4",
     "jquery-match-height": "^0.7.0",
     "jquery.scrollto": "^2.1.2",
-    "patternfly": "^3.19.0",
+    "patternfly": "3.30.1",
     "eonasdan-bootstrap-datetimepicker": "^4.17.47",
     "moment": "~2.14.1",
     "patternfly-bootstrap-combobox": "^1.1.7",
