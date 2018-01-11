@@ -1425,7 +1425,7 @@ th {
 }
 
 .page-tabs-header {
-  margin-bottom: (@grid-gutter-width + 5);
+  margin-bottom: 25px;
   @media (min-width: @screen-md) {
     vertical-align: middle;
     .cols-nopad-left {
@@ -1440,5 +1440,42 @@ th {
       margin-top: 0px;
       padding-bottom: 0;
     }
+  }
+}
+
+.pforg-code__title-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.pforg-code__core-example-title {
+  margin: 0;
+  padding: 0;
+}
+
+.pforg-code__showcase-link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  border-bottom: 1px solid #D5D5D5;
+}
+
+.pforg-code__showcase-link-item {
+  padding-right: 4rem;
+}
+.pforg-code__showcase-link-item__disabled {
+  color: #cccccc;
+  cursor: not-allowed;
+}
+
+.pforg-no-code {
+  text-align: center;
+
+  .pforg-no-code-icon img {
+    width: 6%;
   }
 }

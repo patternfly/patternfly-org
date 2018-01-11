@@ -1,5 +1,6 @@
 ---
 layout: default
+url-js-extra: ['']
 ---
 <div id="main" class="col-md-12 clearfix" role="main">
   <article class="post">
@@ -34,29 +35,73 @@ layout: default
           {% endif %}
         </div>
         <div role="tabpanel" class="tab-pane" id="code">
-          {% if page.code_html == false and page.code_angular != false %}
-            {% include nav-tabs-code.html html=false %}
-          {% elsif page.code_html != false and page.code_angular == false %}
-            {% include nav-tabs-code.html angular=false %}
-          {% elsif page.code_html == false and page.code_angular == false %}
-            {% include nav-tabs-code.html html=false angular=false %}
-          {% else %}
-            {% include nav-tabs-code.html %}
-          {% endif %}
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane nested{% if page.code_html %} active{% endif %}" id="html-css">
-              {% if page.code_html %}
-                {% include {{page.code_html}} %}
-              {% endif %}
-            </div>
-            <div role="tabpanel" class="tab-pane nested{% if page.code_html == nil or page.code_html == false %} active{% endif %}" id="angular">
-              <div ng-app="docsApp" ng-controller="DocsController" class="content">
-                {% if page.code_angular %}
-                  <div ng-include src="'{{site.baseurl}}{{page.code_angular}}'"></div>
-                {% endif %}
-                <!-- % include {{page.code}} % -->
+          <ul class="pforg-code__showcase-link-list">
+            {% if page.impl_angular %}
+            <li class="pforg-code__showcase-link-item">
+              <a href="{{ page.impl_angular }}" target="patternfly_showcase">
+                <span class="pforg-example-text">View Angular PatternFly Example</span>
+                <i class="fa fa-external-link" aria-hidden="true"></i>
+              </a>
+            </li>
+            {% else %}
+            <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled" data-toggle="tooltip" data-placement="top" title="Not available">
+              <span class="pforg-example-text">View Angular PatternFly Example</span>
+              <i class="fa fa-external-link" aria-hidden="true"></i>
+            </li>
+            {% endif %}
+
+            {% if page.impl_ng %}
+            <li class="pforg-code__showcase-link-item">
+              <a href="{{ page.impl_ng }}" target="patternfly_showcase">
+                <span class="pforg-example-text">View PatternFly NG Example</span>
+                <i class="fa fa-external-link" aria-hidden="true"></i>
+              </a>
+            </li>
+            {% else %}
+            <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled disabled" data-toggle="tooltip" data-placement="top" title="Not available">
+              <span class="pforg-example-text">View PatternFly NG Example</span>
+              <i class="fa fa-external-link" aria-hidden="true"></i>
+            </li>
+            {% endif %}
+
+            {% if page.impl_react %}
+            <li class="pforg-code__showcase-link-item">
+              <a href="{{ page.impl_react }}" target="patternfly_showcase">
+                <span class="pforg-example-text">View PatternFly React Example</span>
+                <i class="fa fa-external-link" aria-hidden="true"></i>
+              </a>
+            </li>
+            {% else %}
+            <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled" data-toggle="tooltip" data-placement="top" title="Not available">
+              <span class=pforg-example-text">View PatternFly React Example</span>
+              <i class="fa fa-external-link" aria-hidden="true"></i>
+            </li>
+            {% endif %}
+          </ul>
+          <div class="pforg-code__title-row">
+            {% if page.code_html %}
+            <h2 class="pforg-code__core-example-title">PatternFly Core Example</h2>
+            {% endif %}
+          </div>
+          <div class="" id="html-css">
+            {% if page.code_html %}
+              {% include {{page.code_html}} %}
+            {% else %}
+            <div class="pforg-no-code">
+              <div class="pforg-no-code-icon">
+                <img src="/patternfly-org/assets/img/icon-code-clear.svg" alt="Code icon">
               </div>
+              <h1>
+                PatternFly Core Example Not Available
+              </h1>
+              <p>
+                There is no PatternFly-Core code available for this pattern at this time. Links to the JS framework implementations can be seen above.
+              </p>
+              <p>
+                Visit the <a href="https://github.com/patternfly/patternfly#contributing-to-patternfly">Contributing to PatternFly</a> documentation to learn how to contribute the code.
+              </p>
             </div>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -65,12 +110,19 @@ layout: default
 </div>
 <script>
   var pageHeader = document.querySelector('.page-tabs-header h1'),
-      markdownHeader = document.querySelector('.tab-pane h1'),
-      markdownHeaders = document.querySelectorAll('.tab-pane h1');
+      markdownHeader = document.querySelector('.tab-pane>h1'),
+      markdownHeaders = document.querySelectorAll('.tab-pane>h1');
   if (markdownHeader) {
     pageHeader.innerText = markdownHeader.innerText;
     Array.prototype.forEach.call(markdownHeaders, function(h1) {
       h1.style.display = 'none';
     });
   }
+  // Initialize Tooltip
+  $(document).ready(function() {
+    $('#code').tooltip({
+      selector: "[data-toggle=tooltip]",
+      container: "body"
+    });
+  });
 </script>
