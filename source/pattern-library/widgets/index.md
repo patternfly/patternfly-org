@@ -2116,19 +2116,59 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
     <p><strong>Note:</strong> the markup semantics used here are sub-optimal in order to easily achieve a responsive layout.</p>
     <div class="pf-example">
       <ul class="nav nav-tabs">
-        <li class="active"><a href="#">Tab One</a></li>
-        <li><a href="#">Tab Two</a></li>
-        <li><a href="#">Tab Three</a></li>
-        <li><a href="#">Tab Four</a></li>
-        <li><a href="#">Tab Five</a></li>
+        <li class="active"><a href="#tab1" data-toggle="tab">Tab One</a></li>
+        <li><a href="#tab2" data-toggle="tab">Tab Two</a></li>
+        <li><a href="#tab3" data-toggle="tab">Tab Three</a></li>
+        <li><a href="#tab4" data-toggle="tab">Tab Four</a></li>
+        <li><a href="#tab5" data-toggle="tab">Tab Five</a></li>
       </ul>
-      <ul class="nav nav-tabs nav-tabs-pf">
-        <li class="active"><a href="#">Secondary Tab One</a></li>
-        <li><a href="#">Secondary Tab Two</a></li>
-        <li><a href="#">Secondary Tab Three</a></li>
-        <li><a href="#">Secondary Tab Four</a></li>
-        <li><a href="#">Secondary Tab Five</a></li>
-      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="tab1">
+          <ul class="nav nav-tabs nav-tabs-pf">
+            <li class="active"><a href="#">Secondary Tab One</a></li>
+            <li><a href="#">Secondary Tab Two</a></li>
+            <li><a href="#">Secondary Tab Three</a></li>
+            <li><a href="#">Secondary Tab Four</a></li>
+            <li><a href="#">Secondary Tab Five</a></li>
+          </ul>
+        </div>
+        <div class="tab-pane" id="tab2">
+          <ul class="nav nav-tabs nav-tabs-pf">
+            <li><a href="#">Secondary Tab One</a></li>
+            <li class="active"><a href="#">Secondary Tab Two</a></li>
+            <li><a href="#">Secondary Tab Three</a></li>
+            <li><a href="#">Secondary Tab Four</a></li>
+            <li><a href="#">Secondary Tab Five</a></li>
+          </ul>
+        </div>
+        <div class="tab-pane" id="tab3">
+          <ul class="nav nav-tabs nav-tabs-pf">
+            <li><a href="#">Secondary Tab One</a></li>
+            <li><a href="#">Secondary Tab Two</a></li>
+            <li class="active"><a href="#">Secondary Tab Three</a></li>
+            <li><a href="#">Secondary Tab Four</a></li>
+            <li><a href="#">Secondary Tab Five</a></li>
+          </ul>
+        </div>
+        <div class="tab-pane" id="tab4">
+          <ul class="nav nav-tabs nav-tabs-pf">
+            <li><a href="#">Secondary Tab One</a></li>
+            <li><a href="#">Secondary Tab Two</a></li>
+            <li><a href="#">Secondary Tab Three</a></li>
+            <li class="active"><a href="#">Secondary Tab Four</a></li>
+            <li><a href="#">Secondary Tab Five</a></li>
+          </ul>
+        </div>
+        <div class="tab-pane" id="tab5">
+          <ul class="nav nav-tabs nav-tabs-pf">
+            <li><a href="#">Secondary Tab One</a></li>
+            <li><a href="#">Secondary Tab Two</a></li>
+            <li><a href="#">Secondary Tab Three</a></li>
+            <li><a href="#">Secondary Tab Four</a></li>
+            <li class="active"><a href="#">Secondary Tab Five</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
     <p><p class="reference-markup"><a class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="tabs-markup-3" href="#tabs-markup-3">Reference Markup</a></p></p>
     <div class="collapse" id="tabs-markup-3">
@@ -2140,13 +2180,53 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
   &lt;li&gt;&lt;a href="#"&gt;Tab Four&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="#"&gt;Tab Five&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;ul class="nav nav-tabs nav-tabs-pf"&gt;
-  &lt;li class="active"&gt;&lt;a href="#"&gt;Secondary Tab One&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Two&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Three&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Four&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Five&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div class="tab-content"&gt;
+  &lt;div class="tab-pane active" id="tab1"&gt;
+    &lt;ul class="nav nav-tabs nav-tabs-pf"&gt;
+      &lt;li class="active"&gt;&lt;a href="#"&gt;Secondary Tab One&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Two&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Three&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Four&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Five&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class="tab-pane" id="tab2"&gt;
+    &lt;ul class="nav nav-tabs nav-tabs-pf"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab One&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="active"&gt;&lt;a href="#"&gt;Secondary Tab Two&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Three&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Four&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Five&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class="tab-pane" id="tab3"&gt;
+    &lt;ul class="nav nav-tabs nav-tabs-pf"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab One&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Two&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="active"&gt;&lt;a href="#"&gt;Secondary Tab Three&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Four&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Five&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class="tab-pane" id="tab4"&gt;
+    &lt;ul class="nav nav-tabs nav-tabs-pf"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab One&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Two&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Three&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="active"&gt;&lt;a href="#"&gt;Secondary Tab Four&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Five&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab5"&gt;
+    &lt;ul class="nav nav-tabs nav-tabs-pf"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab One&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Two&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Three&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Secondary Tab Four&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="active"&gt;&lt;a href="#"&gt;Secondary Tab Five&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </pre>
     </div>
   </div>
