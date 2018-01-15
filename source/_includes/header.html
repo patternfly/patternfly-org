@@ -120,7 +120,9 @@
               {% endfor %}
 
               <li {% if secondary == 'widgets' %} class="active"{% endif %}>
-              <a class="{% if secondary == 'widgets' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="{% if secondary == 'widgets' %}true{% else %}false{% endif %}" aria-controls="widgets-secondary">Widgets</a>
+              <a class="{% if secondary == 'widgets' %}{% else %}collapsed{% endif %}" role="button" data-toggle="collapse" href="#widgets-secondary" aria-expanded="{% if secondary == 'widgets' %}true{% else %}false{% endif %}" aria-controls="widgets-secondary">
+                Widgets
+              </a>
               <ul class="collapse {% if secondary == 'widgets' %}in{% endif %}" id="widgets-secondary">
                 <li {% if tertiary == 'overview' %} class="active"{% endif %}>
                 <a href="{{ site.baseurl }}/pattern-library/widgets/">Overview</a>
