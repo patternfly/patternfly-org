@@ -1,4 +1,4 @@
-<p>Jump to <a href="#example-code-1">Standard Horizontal Navigation</a>, <a href="#example-code-2">Single-Level Menu Bar</a>, <a href="#example-code-3">Two-Level Menu Bar</a>, or <a href="#example-code-4">Menu Bar with Drop-Downs</a></p>
+<p>Jump to <a href="#example-code-1">Standard Horizontal Navigation</a>, <a href="#example-code-2">Single-Level Menu Bar</a>, <a href="#example-code-3">Two-Level Menu Bar</a>, or <a href="#example-code-4">Menu Bar with Dropdowns</a></p>
 <h2 id="example-code-1">Standard Horizontal Navigation</h2>
 <div class="example-pf">
   <iframe src="{{ site.baseurl}}/pattern-library/navigation/horizontal-navigation/horizontal-navigation.html"
@@ -48,7 +48,7 @@ $().setupVerticalNavigation(true);
 <div class="collapse in" id="markup-3">
   <pre class="prettyprint">{% capture markup_include %}{% include widgets/navigation/horizontal-persistent-secondary-tertiary.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
 </div>
-<h2 id="example-code-4">Menu Bar with Drop-Downs</h2>
+<h2 id="example-code-4">Menu Bar with Dropdowns</h2>
 <div class="example-pf example-navbar">
   {% include widgets/navigation/horizontal-multi-level.html %}
 </div>
