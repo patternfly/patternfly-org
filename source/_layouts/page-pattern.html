@@ -1,5 +1,6 @@
 ---
 layout: default
+url-js-extra: ['']
 ---
 <div id="main" class="col-md-12 clearfix" role="main">
   <article class="post">
@@ -34,29 +35,69 @@ layout: default
           {% endif %}
         </div>
         <div role="tabpanel" class="tab-pane" id="code">
-          {% if page.code_html == false and page.code_angular != false %}
-            {% include nav-tabs-code.html html=false %}
-          {% elsif page.code_html != false and page.code_angular == false %}
-            {% include nav-tabs-code.html angular=false %}
-          {% elsif page.code_html == false and page.code_angular == false %}
-            {% include nav-tabs-code.html html=false angular=false %}
-          {% else %}
-            {% include nav-tabs-code.html %}
-          {% endif %}
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane nested{% if page.code_html %} active{% endif %}" id="html-css">
-              {% if page.code_html %}
-                {% include {{page.code_html}} %}
+          <div class="pforg-code__title-row">
+            <h2 class="pforg-code__core-example-title">PatternFly Core Example</h2>
+            <ul class="pforg-code__showcase-link-list">
+              {% if page.impl_angular %}
+                <li class="pforg-code__showcase-link-item">
+                  <a href="{{ page.impl_angular }}" target="patternfly_showcase">
+                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Pattern implementation in angular-patternfly">
+                      <i class="fa fa-external-link" aria-hidden="true"></i>
+                      Angular PatternFly
+                    </button>
+                  </a>
+                </li>
+              {% else %}
+                <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled">
+                  <button type="button" class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Pattern implementation not available for angular-patternfly">
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                    Angular PatternFly
+                  </button>
+                </li>
               {% endif %}
-            </div>
-            <div role="tabpanel" class="tab-pane nested{% if page.code_html == nil or page.code_html == false %} active{% endif %}" id="angular">
-              <div ng-app="docsApp" ng-controller="DocsController" class="content">
-                {% if page.code_angular %}
-                  <div ng-include src="'{{site.baseurl}}{{page.code_angular}}'"></div>
-                {% endif %}
-                <!-- % include {{page.code}} % -->
-              </div>
-            </div>
+
+              {% if page.impl_ng %}
+                <li class="pforg-code__showcase-link-item">
+                  <a href="{{ page.impl_ng }}" target="patternfly_showcase">
+                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Pattern implementation in patternfly-ng">
+                      <i class="fa fa-external-link" aria-hidden="true"></i>
+                      PatternFly Ng
+                    </button>
+                  </a>
+                </li>
+              {% else %}
+                <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled disabled">
+                  <button type="button" class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Pattern implementation not available for patternfly-ng">
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                    PatternFly Ng
+                  </button></a>
+                </li>
+              {% endif %}
+
+              {% if page.impl_react %}
+                <li class="pforg-code__showcase-link-item">
+                  <a href="{{ page.impl_react }}" target="patternfly_showcase">
+                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Pattern implementation in patternfly-react">
+                      <i class="fa fa-external-link" aria-hidden="true"></i>
+                      PatternFly React
+                    </button>
+                  </a>
+                </li>
+              {% else %}
+                <li class="pforg-code__showcase-link-item pforg-code__showcase-link-item__disabled disabled">
+                  <button type="button" class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Pattern implementation not available for patternfly-react">
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                    PatternFly React
+                  </button>
+                </li>
+              {% endif %}
+            </ul>
+          </div>
+          <div class="" id="html-css">
+            {% if page.code_html %}
+              {% include {{page.code_html}} %}
+            {% endif %}
+          </div>
           </div>
         </div>
       </div>
@@ -73,4 +114,11 @@ layout: default
       h1.style.display = 'none';
     });
   }
+  // Initialize Tooltip
+  $(document).ready(function() {
+    $('#code').tooltip({
+      selector: "[data-toggle=tooltip]",
+      container: "body"
+    });
+  });
 </script>
