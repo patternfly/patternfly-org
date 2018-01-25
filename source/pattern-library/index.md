@@ -296,6 +296,14 @@ with these updates by checking out “What’s New” on the <a href="https://bl
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
+        <p>Data Input</p>
+        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/data-input">
+          <img src="{{site.baseurl}}/assets/img/thumbnails/Data-Input.png" alt="data-input"/>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3">
+      <div class="pattern-thumbnail">
         <p>Datepicker</p>
         <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/datepicker">
           <img src="{{site.baseurl}}/assets/img/thumbnails/Datepicker.png" alt="datepicker"/>
@@ -355,14 +363,6 @@ with these updates by checking out “What’s New” on the <a href="https://bl
         <p>Inline Edit</p>
         <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/inline-edit">
           <img src="{{site.baseurl}}/assets/img/thumbnails/In-Line-Edit.png" alt="inline-edit"/>
-        </a>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-3">
-      <div class="pattern-thumbnail">
-        <p>Input Controls</p>
-        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/input-controls">
-          <img src="{{site.baseurl}}/assets/img/thumbnails/Input-Control.png" alt="input-controls"/>
         </a>
       </div>
     </div>
