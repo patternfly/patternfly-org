@@ -344,14 +344,6 @@ with these updates by checking out “What’s New” on the <a href="https://bl
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
-        <p>Field Level Help</p>
-        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/field-level-help">
-          <img src="{{site.baseurl}}/assets/img/thumbnails/Inline-Help.png" alt="field-level-help"/>
-        </a>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-3">
-      <div class="pattern-thumbnail">
         <p>Filter</p>
         <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/filter">
           <img src="{{site.baseurl}}/assets/img/thumbnails/Filter.png" alt="filter"/>
@@ -368,25 +360,9 @@ with these updates by checking out “What’s New” on the <a href="https://bl
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
-        <p>Forms</p>
-        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/forms">
-          <img src="{{site.baseurl}}/assets/img/thumbnails/Forms.png" alt="forms"/>
-        </a>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-3">
-      <div class="pattern-thumbnail">
         <p>Inline Edit</p>
         <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/inline-edit">
           <img src="{{site.baseurl}}/assets/img/thumbnails/In-Line-Edit.png" alt="inline-edit"/>
-        </a>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-3">
-      <div class="pattern-thumbnail">
-        <p>Input Controls</p>
-        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/input-controls">
-          <img src="{{site.baseurl}}/assets/img/thumbnails/Input-Control.png" alt="input-controls"/>
         </a>
       </div>
     </div>
