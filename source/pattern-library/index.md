@@ -296,14 +296,6 @@ with these updates by checking out “What’s New” on the <a href="https://bl
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
-        <p>Data Input</p>
-        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/data-input">
-          <img src="{{site.baseurl}}/assets/img/thumbnails/Data-Input.png" alt="data-input"/>
-        </a>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-3">
-      <div class="pattern-thumbnail">
         <p>Datepicker</p>
         <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/datepicker">
           <img src="{{site.baseurl}}/assets/img/thumbnails/Datepicker.png" alt="datepicker"/>
@@ -344,14 +336,6 @@ with these updates by checking out “What’s New” on the <a href="https://bl
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3">
       <div class="pattern-thumbnail">
-        <p>Field Level Help</p>
-        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/field-level-help">
-          <img src="{{site.baseurl}}/assets/img/thumbnails/Inline-Help.png" alt="field-level-help"/>
-        </a>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-3">
-      <div class="pattern-thumbnail">
         <p>Filter</p>
         <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/filter">
           <img src="{{site.baseurl}}/assets/img/thumbnails/Filter.png" alt="filter"/>
@@ -363,14 +347,6 @@ with these updates by checking out “What’s New” on the <a href="https://bl
         <p>Find</p>
         <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/find">
           <img src="{{site.baseurl}}/assets/img/thumbnails/Search.png" alt="find"/>
-        </a>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-3">
-      <div class="pattern-thumbnail">
-        <p>Forms</p>
-        <a href="{{ site.baseurl }}/pattern-library/forms-and-controls/forms">
-          <img src="{{site.baseurl}}/assets/img/thumbnails/Forms.png" alt="forms"/>
         </a>
       </div>
     </div>
