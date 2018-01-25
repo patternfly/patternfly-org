@@ -25,4 +25,17 @@
             $(document).fireEvent('onresize');
         }
     });
+
+    $(function () {
+        // updates and adds url hash to tab
+        var hash = window.location.hash;
+        hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+
+        // scroll to the top when clicking the tab rather than to the id
+        $('.nav-tabs a').click(function () {
+            var scroll = $('body').scrollTop() || $('html').scrollTop();
+            window.location.hash = this.hash;
+            $('html,body').scrollTop(scroll);
+        });
+    });
 </script>
