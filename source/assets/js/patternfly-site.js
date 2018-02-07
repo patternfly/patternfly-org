@@ -14,7 +14,10 @@ jQuery( document ).ready(function() {
   // Initialize Data Tables
   jQuery('.datatable').dataTable();
   // Initialize Popovers
-  jQuery('[data-toggle=popover]').popovers();
+  jQuery('[data-toggle=popover]').popovers()
+    .on('hidden.bs.popover', function (e) {
+      $(e.target).data('bs.popover').inState.click = false;
+    });
  // Initialize Tooltip
   jQuery('.tooltip-demo').tooltip({
     selector: "[data-toggle=tooltip]",
