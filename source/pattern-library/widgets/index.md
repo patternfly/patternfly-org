@@ -1658,6 +1658,9 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
   // Initialize Popovers
   $(document).ready(function() {
     $('[data-toggle=popover]').popovers()
+      .on('hidden.bs.popover', function (e) {
+        $(e.target).data('bs.popover').inState.click = false;
+      });
   });
 &lt;/script&gt;
 </pre>
