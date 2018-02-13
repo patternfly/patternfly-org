@@ -5,17 +5,17 @@
 <h3>Grid Menu</h3>
 
 <h4>Icons</h4>
-{% include widgets/navigation/horizontal-primary-nav-bar.html launcher-icons=true launcher-grid=true navindex=1 %}
+{% include widgets/navigation/horizontal-primary-nav-bar.html launchericons=true launchergrid=true navindex=1 %}
 <h4>No Icons</h4>
-{% include widgets/navigation/horizontal-primary-nav-bar.html launcher-icons=false launcher-grid=true navindex=2 %}
+{% include widgets/navigation/horizontal-primary-nav-bar.html launchericons=false launchergrid=true navindex=2 %}
 
 <h3>List Menu</h3>
 
 <h4>Icons</h4>
-{% include widgets/navigation/horizontal-primary-nav-bar.html launcher-icons=true launcher-grid=false navindex=3 %}
+{% include widgets/navigation/horizontal-primary-nav-bar.html launchericons=true launchergrid=false navindex=3 %}
 
 <h4>No Icons</h4>
-{% include widgets/navigation/horizontal-primary-nav-bar.html launcher-icons=false launcher-grid=false navindex=4 %}
+{% include widgets/navigation/horizontal-primary-nav-bar.html launchericons=false launchergrid=false navindex=4 %}
 
 <br>
 <br>
@@ -24,18 +24,18 @@
 <h3>Grid Menu</h3>
 
 <h4>Icons</h4>
-{% include widgets/layouts/navbar-vertical.html launcher-grid=true launcher-icons=true navindex=5 %}
+{% include widgets/layouts/navbar-vertical.html launchergrid=true launchericons=true navindex=5 %}
 
 <h4>No Icons</h4>
-{% include widgets/layouts/navbar-vertical.html launcher-grid=true launcher-icons=false navndex=6 %}
+{% include widgets/layouts/navbar-vertical.html launchergrid=true launchericons=false navndex=6 %}
 
 <h3>List Menu</h3>
 
 <h4>Icons</h4>
-{% include widgets/layouts/navbar-vertical.html launcher-grid=false launcher-icons=true navindex=7 %}
+{% include widgets/layouts/navbar-vertical.html launchergrid=false launchericons=true navindex=7 %}
 
 <h4>No Icons</h4>
-{% include widgets/layouts/navbar-vertical.html launcher-grid=false launcher-icons=false navindex=8 %}
+{% include widgets/layouts/navbar-vertical.html launchergrid=false launchericons=false navindex=8 %}
 
 </div>
 
@@ -54,17 +54,17 @@
   <h3>Grid Menu</h3>
 
   <h4>Icons</h4>
-  {% include widgets/navigation/horizontal-primary-nav-bar.html launcher-icons=true launcher-grid=true navindex=1 %}
+  {% include widgets/navigation/horizontal-primary-nav-bar.html launchericons=true launchergrid=true navindex=1 %}
   <h4>No Icons</h4>
-  {% include widgets/navigation/horizontal-primary-nav-bar.html launcher-icons=false launcher-grid=true navindex=2 %}
+  {% include widgets/navigation/horizontal-primary-nav-bar.html launchericons=false launchergrid=true navindex=2 %}
 
   <h3>List Menu</h3>
 
   <h4>Icons</h4>
-  {% include widgets/navigation/horizontal-primary-nav-bar.html launcher-icons=true launcher-grid=false navindex=3 %}
+  {% include widgets/navigation/horizontal-primary-nav-bar.html launchericons=true launchergrid=false navindex=3 %}
 
   <h4>No Icons</h4>
-  {% include widgets/navigation/horizontal-primary-nav-bar.html launcher-icons=false launcher-grid=false navindex=4 %}
+  {% include widgets/navigation/horizontal-primary-nav-bar.html launchericons=false launchergrid=false navindex=4 %}
 
   <br>
   <br>
@@ -73,18 +73,18 @@
   <h3>Grid Menu</h3>
 
   <h4>Icons</h4>
-  {% include widgets/layouts/navbar-vertical.html launcher-grid=true launcher-icons=true navindex=5 %}
+  {% include widgets/layouts/navbar-vertical.html launchergrid=true launchericons=true navindex=5 %}
 
   <h4>No Icons</h4>
-  {% include widgets/layouts/navbar-vertical.html launcher-grid=true launcher-icons=false navndex=6 %}
+  {% include widgets/layouts/navbar-vertical.html launchergrid=true launchericons=false navndex=6 %}
 
   <h3>List Menu</h3>
 
   <h4>Icons</h4>
-  {% include widgets/layouts/navbar-vertical.html launcher-grid=false launcher-icons=true navindex=7 %}
+  {% include widgets/layouts/navbar-vertical.html launchergrid=false launchericons=true navindex=7 %}
 
   <h4>No Icons</h4>
-  {% include widgets/layouts/navbar-vertical.html launcher-grid=false launcher-icons=false navindex=8 %}
+  {% include widgets/layouts/navbar-vertical.html launchergrid=false launchericons=false navindex=8 %}
 
   <script>
     $(document).ready(function() {
