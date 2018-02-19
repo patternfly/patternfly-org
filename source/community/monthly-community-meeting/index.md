@@ -64,6 +64,12 @@ layout: page
   <tbody>
     <tr>
       <td>PatternFly-React</td>
+      <td>February 14, 2018</td>
+      <td><a href="https://www.dropbox.com/s/z7wp6iauoqcn03y/PatternFly-React-2018-02.pdf?dl=0">View Slides</a></td>
+      <td><a target="blank" href="https://bluejeans.com/s/lcwq0">View Recording</a></td>
+    </tr>
+    <tr>
+      <td>PatternFly-React</td>
       <td>January 10, 2018</td>
       <td><a href="https://www.dropbox.com/s/s2n3u98wk38hcg1/PatternFly-React-2018-01.pdf?dl=0">View Slides</a></td>
       <td><a target="blank" href="https://bluejeans.com/s/r2TX1/">View Recording</a></td>
