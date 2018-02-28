@@ -12,6 +12,9 @@ navbar-pf-navbar-brand-icon: true
 navbar-pf-alt-navbar-brand-icon: true
 navbar-logo-icon: assets/img/logo.svg
 brand-horizontal: assets/img/Logo_Horizontal_Reversed.svg
+gmail-icon: assets/img/gmail.svg
+google-calendar-icon: assets/img/google-calendar.svg
+google-drive-icon: assets/img/google-drive.svg
 navbar-logo-alt-icon: assets/img/logo-alt.svg
 navbar-brand-icon: assets/img/brand.svg
 navbar-brand-alt-icon: assets/img/brand-alt.svg
