@@ -97,7 +97,7 @@ jQuery( document ).ready(function() {
   //jQuery('.navbar-toggle-sidebar').on('click', function (e) {
     //jQuery('.navbar-sidebar').toggleClass('open');
   //});
-  jQuery('.navbar-toggle').on('click', function (e) {
+  jQuery('.navbar-fixed-top .navbar-toggle').on('click', function (e) {
     jQuery('.navbar-sidebar').toggleClass('open');
   });
 
