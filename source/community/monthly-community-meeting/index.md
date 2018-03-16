@@ -41,7 +41,7 @@ layout: page
   <tbody>
     <tr>
       <td>PatternFly-React</td>
-      <td>Wednesday, March 14 2018 at 10:00am EDT</td>
+      <td>Wednesday, April, 11 2018 at 10:00am EDT</td>
       <td><a target="blank" href="https://bluejeans.com/259952429">https://bluejeans.com/259952429</a></td>
       <td>Dial: 1-888-847-2201, ID: 259952429 or <a href="http://bluejeans.com/premium-numbers">See all numbers</a></td>
       <td><a target="blank" href="https://github.com/patternfly/patternfly-react/wiki/PatternFly-React-Community-Meeting">View Agenda</a></td>
@@ -62,6 +62,12 @@ layout: page
   </thead>
 
   <tbody>
+  <tr>
+    <td>PatternFly-React</td>
+    <td>March 14, 2018</td>
+    <td><a href="https://www.dropbox.com/s/wjjt7icc4ke9e34/PatternFly-React-2018-03.pdf?dl=0">View Slides</a></td>
+    <td><a target="blank" href="https://bluejeans.com/s/EdHuv">View Recording</a></td>
+  </tr>
     <tr>
       <td>PatternFly-React</td>
       <td>February 14, 2018</td>
