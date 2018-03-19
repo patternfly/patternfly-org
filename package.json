@@ -1,6 +1,6 @@
 {
   "name": "patternfly-org",
-  "version": "3.41.7",
+  "version": "3.42.0",
   "author": "Red Hat",
   "scripts": {
     "publish": "ghpages",
@@ -62,7 +62,7 @@
     "jquery-match-height": "^0.7.0",
     "jquery.scrollto": "^2.1.2",
     "moment": "~2.21.0",
-    "patternfly": "3.41.7",
+    "patternfly": "3.42.0",
     "patternfly-bootstrap-combobox": "^1.1.7",
     "patternfly-bootstrap-treeview": "^2.1.1",
     "wowjs": "^1.1.3"
