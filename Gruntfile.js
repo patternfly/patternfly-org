@@ -183,6 +183,14 @@ module.exports = function (grunt) {
         }
       }
     },
+    http: {
+      pattern_status: {
+        options: {
+           url: 'https://www.patternfly.org/patternfly-design/status/pattern-status.json'
+        },
+        dest: '_build/_data/pattern-status.json'
+      }
+    },
     jekyll: {
       options: {
         dest: '<%= config.site %>',
@@ -309,6 +317,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean',
       'reposUpdate',
+      'http:pattern_status',
       'copy:components',
       'sync:patternflyDist',
       'cname:' + target,
