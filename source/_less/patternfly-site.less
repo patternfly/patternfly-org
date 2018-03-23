@@ -1488,3 +1488,25 @@ th {
   max-width:820px;
   margin:50px auto 0 auto;
 }
+
+.pforg-code-usage-table {
+  width: 100%;
+  border: 1px solid #ccc;
+  &:last-of-type {margin-bottom: 50px;}
+  &:not(:last-of-type) {border-bottom:none;}
+  &:not(:first-of-type) {border-top:none;}
+  thead{
+    background: #f2f2f2;
+  }
+  th,td {
+    padding:5px 10px;
+  }
+  tr{
+    &:not(:last-of-type){border-bottom: 1px solid #f1f1f1;}
+    @media (min-width: @screen-md) {
+      td:first-of-type {
+        width:20rem;
+      }
+    }
+  }
+}

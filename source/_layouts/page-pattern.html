@@ -83,6 +83,15 @@ url-js-extra: ['']
             <h2 class="pforg-code__core-example-title">PatternFly Core Example</h2>
             {% endif %}
           </div>
+          <br>
+          <div class="pforg-code-doc">
+            {% if page.code_doc and page.code_html %}
+              <h2 class="pforg-code__core-example-title">Usage Notes</h2>
+              <p><strong>Disclaimer</strong>: Only classes that may be missed are highlighted.</p>
+              {% include {{page.code_doc}} %}
+            {% endif %}
+          </div>
+
           <div class="" id="html-css">
             {% if page.code_html %}
               {% include {{page.code_html}} %}
