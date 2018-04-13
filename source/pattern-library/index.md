@@ -14,25 +14,33 @@ where relevant findings are described in more detail. Many patterns also include
 example. The library is continually being updated with new patterns or code samples for existing patterns. Stay current
 with these updates by checking out “What’s New” on the <a href="https://blog.patternfly.org" target="_blank">PatternFly blog</a></p>
 
-<!-- Textbox Filter -->
+
+<!-- Toolbar -->
 <div class="pattern-status-wrapper">
-  <div class="pattern-status-search">
-    <div style="width: 300px;">
-      <div class="filter-pf">
-        <div class="filter-pf-fields">
-          <div class="input-group form-group">
+  <div class="row toolbar-pf table-view-pf-toolbar">
+    <div class="col-sm-12">
+      <form class="toolbar-pf-actions">
+        <div class="form-group toolbar-pf-filter">
+          <label class="sr-only" for="filter">Name</label>
+          <div class="input-group">
             <div class="input-group-btn">
-              <div class="dropdown btn-group">
-                <button type="button" class="dropdown-toggle btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Name
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                  <li class="selected"><a href="#">Name</a></li>
-                </ul>
-              </div>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#" id="nameFilter">Name</a></li>
+                <li><a href="#" id="categoryFilter">Category</a></li>
+              </ul>
             </div>
-            <input id="inputText" type="text" class="form-control">
+            <input type="text" class="form-control" placeholder="Filter By Pattern Name..." autocomplete="off" id="inputText">
+          </div>
+        </div>
+      </form>
+      <div class="row toolbar-pf-results">
+        <div class="col-sm-9">
+          <div class="hidden">
+            <h5>0 Results</h5>
+            <p>Active filters:</p>
+            <ul class="list-inline"></ul>
+            <p><a href="#">Clear All Filters</a></p>
           </div>
         </div>
       </div>
@@ -40,76 +48,79 @@ with these updates by checking out “What’s New” on the <a href="https://bl
   </div>
 
   <!-- Table HTML -->
-  <table class="table table-striped table-bordered pattern-status-table" id="patternTable">
+  <table class="table table-striped table-bordered" id="patternTable">
     <thead>
       <tr>
-        <th>Pattern</th>
-        <th>Pattern Category</th>
-        <th>Patternfly Core</th>
-        <th>Angular Patternfly</th>
-        <th>Patternfly NG</th>
-        <th>Patternfly React</th>
+          <th>Pattern</th>
+          <th>Pattern Category</th>
+          <th>Patternfly Core</th>
+          <th>Angular Patternfly</th>
+          <th>Patternfly NG</th>
+          <th>Patternfly React</th>
       </tr>
     </thead>
   </table>
-</div>
+  </div>
 
-<script>
-$(document).ready(function() {
+  <script>
+  $(document).ready(function() {
 
-  var patternData = [];
+    var patternData = [];
 
-  $.getJSON('https://www.patternfly.org/patternfly-design/status/pattern-status.json', function (data) {
+    $.getJSON('https://www.patternfly.org/patternfly-design/status/pattern-status.json', function (data) {
 
-    data.forEach(function (parentValue, index) {
+      data.forEach(function (parentValue, index) {
 
-        var designPatterns = parentValue.patterns.map(function(childVal, i) {
+          var designPatterns = parentValue.patterns.map(function(childVal, i) {
 
-          var patternLinks;
-          var patternflyCoreLink;
-          var angularPatternflyLink;
-          var patternflyNgLink;
-          var patternflyReactLink;
-      
-          try {
-              patternLinks = childVal.files.site.frontmatter;
-              
-              patternflyCoreLink = patternLinks.impl_jquery ? `<a href="${patternLinks.impl_jquery}">view</a>` : "n/a";
-
-              angularPatternflyLink = patternLinks.impl_angular ? `<a href="${patternLinks.impl_angular}">view</a>` : "n/a";
-
-              patternflyNgLink = patternLinks.impl_ng ? `<a href="${patternLinks.impl_ng}">view</a>` : "n/a";
-
-              patternflyReactLink = patternLinks.impl_react ? `<a href="${patternLinks.impl_react}">view</a>` : "n/a";                   
-          
-          } catch (err) {
-            patternflyCoreLink = "n/a";
-            angularPatternflyLink = "n/a";
-            patternflyNgLink = "n/a";
-            patternflyReactLink = "n/a";
-          }
+            var patternOverview;
+            var patternLinks;
+            var patternflyCoreLink;
+            var angularPatternflyLink;
+            var patternflyNgLink;
+            var patternflyReactLink;
         
-          return {
-            patternName: childVal.name,
-            patternCategory: parentValue.name,
-            patternflyCore: patternflyCoreLink,
-            angularPatternfly: angularPatternflyLink,
-            patternflyNg: patternflyNgLink,
-            patternflyReact: patternflyReactLink
-          };
-        });
+            try {
 
-        patternData = patternData.concat(designPatterns);
-    });
+                patternOverview = childVal ? `<a href="${parentValue.name}/${childVal.name}/">${childVal.name}</a>` : childVal.name || "pattern unavailable"; 
 
-    loadDataTable(patternData);
-});
+                patternLinks = childVal.files.site.frontmatter;
+                
+                patternflyCoreLink = patternLinks.impl_jquery ? `<a href="${patternLinks.impl_jquery}">view</a>` : "n/a";
 
-// Load DataTable
-function loadDataTable(designStatusData) {
+                angularPatternflyLink = patternLinks.impl_angular ? `<a href="${patternLinks.impl_angular}">view</a>` : "n/a";
+
+                patternflyNgLink = patternLinks.impl_ng ? `<a href="${patternLinks.impl_ng}">view</a>` : "n/a";
+
+                patternflyReactLink = patternLinks.impl_react ? `<a href="${patternLinks.impl_react}">view</a>` : "n/a";                   
+            
+            } catch (err) {
+              patternOverview = childVal.name || "pattern unavailable";
+              patternflyCoreLink = "n/a";
+              angularPatternflyLink = "n/a";
+              patternflyNgLink = "n/a";
+              patternflyReactLink = "n/a";
+            }
+          
+            return {
+              patternName: patternOverview,
+              patternCategory: parentValue.name,
+              patternflyCore: patternflyCoreLink,
+              angularPatternfly: angularPatternflyLink,
+              patternflyNg: patternflyNgLink,
+              patternflyReact: patternflyReactLink
+            };
+          });
+
+          patternData = patternData.concat(designPatterns);
+      });
+
+      loadDataTable(patternData);
+  });
+
+  function loadDataTable(designStatusData) {
     var table = $("#patternTable").DataTable({
-      "paging": false,
-      "searching": true,
+
       columns: [
         { data: "patternName" },
         { data: "patternCategory"},
@@ -118,14 +129,25 @@ function loadDataTable(designStatusData) {
         { data: "patternflyNg"},
         { data: "patternflyReact"}
       ],
+      "paging": false,
       data: designStatusData,
       dom: "t",
       language: {
-      zeroRecords: "No patterns found"
-       },
-    });
-    $('#inputText').keyup( function (){
-      table.search($(this).val()).draw() 
+        zeroRecords: "No records found"
+      },
+      pfConfig: {
+        filterCaseInsensitive: true,
+        filterCols: [
+          {
+            default: true,
+            optionSelector: "#nameFilter",
+            placeholder: "Filter By Pattern..."
+          }, {
+            optionSelector: "#categoryFilter",
+            placeholder: "Filter By Category..."
+          }
+        ]
+      }
     });
   }
 });
