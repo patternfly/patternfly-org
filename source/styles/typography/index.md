@@ -172,10 +172,9 @@ ___
   </div>
 
   <!-- /col -->
-</div>
-
 <!-- /row -->
-</div></section>
+</div>
+</section>
 
 ## Color Usage
 
