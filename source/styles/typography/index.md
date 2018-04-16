@@ -174,13 +174,13 @@ ___
   <!-- /col -->
 </div>
 
-<!-- /row --></section>
-</div>
+<!-- /row -->
+</div></section>
 
 ## Color Usage
 
 | Style 	| Color (Hex#) 	| Usage 	|
-|---------------	|--------------	|------------------------------------------------------------------------	|
+|---------------|--------------|------------------------------------------------------------------------|
 | Regular Copy 	| #363636 	| This text color is used as often as possible, and always on body text. 	|
 | Text Links 	| #0088ce 	| This color is reserved only for links. 	|
 | Disabled Text 	| #9c9c9c 	| This color is reserved for disabled text. 	|
