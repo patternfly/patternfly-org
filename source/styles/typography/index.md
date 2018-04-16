@@ -57,6 +57,7 @@ The below style samples represent commonly-used typographic layouts. Check out m
 | Body Copy (Italicized) | 12         | Italic        | 1.666em     | Italics should be used sparingly. See the PatternFly Typography test page for an example.        |
 | Link Text              | 12         | 500 (Regular) | 1.666em     | Link text should always be blue (#0088ce), and should never be underlined.                       |
 | Small Text             | 10         | 500 (Regular) | 1.666em     | This is the minimum font size. Use sparingly, only as needed.                                                                   |
+{:.table .table-striped .table-bordered}
 ___
 
 <b>List Samples</b> <section>
@@ -187,3 +188,4 @@ ___
 | Regular Copy 	| #363636 	| This text color is used as often as possible, and always on body text. 	|
 | Text Links 	| #0088ce 	| This color is reserved only for links. 	|
 | Disabled Text 	| #9c9c9c 	| This color is reserved for disabled text. 	|
+{:.table .table-striped .table-bordered}
