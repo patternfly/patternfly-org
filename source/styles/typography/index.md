@@ -14,23 +14,19 @@ ___
 
 The below style samples represent commonly-used typographic layouts. Check out more samples including description lists, alignment classes, unstyled lists, and inline lists on the [PatternFly Typography test page](https://rawgit.com/patternfly/patternfly/master-dist/dist/tests/typography-2.html).
 
-<h1> Application Heading h1</h1>
+<h1> Application Heading (h1)</h1>
 
 <h2> Level 2 Heading </h2>
 
-<h3> Level 3 Heading <h3>
+<h3> Level 3 Heading </h3>
 
 <hr />
 
 <b id="style-samples">Style Samples</b>
 
-<p>
-</p><section>
+<section>
 
 <small>This line of small text is meant to be treated as fine print.</small>
-
-<p>
-</p>
 
 <p>
   The following snippet of text is <strong>rendered as bold text</strong>.
