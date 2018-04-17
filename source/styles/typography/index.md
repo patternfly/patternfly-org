@@ -56,7 +56,8 @@ The below style samples represent commonly-used typographic layouts. Check out m
 {:.table .table-striped .table-bordered}
 ___
 
-<b>List Samples</b> <section>
+<b>List Samples</b> 
+<section>
 
 <div class="row">
   <div class="col-sm-6 col-md-3">
