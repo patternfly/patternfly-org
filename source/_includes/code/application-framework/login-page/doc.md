@@ -2,6 +2,25 @@
   <thead>
     <tr>
       <th>Selector</th>
+      <th>.login-pf</th>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Applied to</td>
+    <td><code>body</code></td>
+  </tr>
+  <tr>
+    <td>Required</td>
+    <td><strong>Yes</strong></td>
+  </tr>
+  <tr>
+    <td>Summary</td>
+    <td>Adds background image and styling</td>
+  </tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>Selector</th>
       <th>.login-pf-page</th>
     </tr>
   </thead>
