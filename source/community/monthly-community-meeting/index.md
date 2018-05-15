@@ -41,7 +41,7 @@ layout: page
   <tbody>
     <tr>
       <td>PatternFly-React</td>
-      <td>Wednesday, May 16, 2018 at 10:00am EDT</td>
+      <td>Wednesday, May 23, 2018 at 10:00am EDT</td>
       <td><a target="blank" href="https://bluejeans.com/259952429">https://bluejeans.com/259952429</a></td>
       <td>Dial: 1-888-847-2201, ID: 259952429 or <a href="http://bluejeans.com/premium-numbers">See all numbers</a></td>
       <td><a target="blank" href="https://github.com/patternfly/patternfly-react/wiki/PatternFly-React-Community-Meeting">View Agenda</a></td>
