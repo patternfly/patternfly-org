@@ -457,6 +457,12 @@ layout: page
   // Initialize Popovers
   $(document).ready(function() {
     $('[data-toggle=popover]').popovers()
+
+    $('body').on('click', function (e) {
+      if ($(e.target).data('toggle') !== 'popover' && !$(e.target).parents('.popover.in').length) {
+        $('.important-color-swatches').children().popover('hide');
+      }
+    });
   });
 </script>
 
