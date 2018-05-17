@@ -47,7 +47,9 @@ Search for an icon: <span class="icon-search-container"><input type="text" id="i
 
 <script>
   // $('table td:nth-child(3),th:nth-child(3)').hide();
-  $('td').tooltip({container: 'body'}).attr('title', 'Copy to clipboard').tooltip('fixTitle');
+  $('td').filter(function () {
+    return $(this).parent().children().index(this) < 4;
+  }).tooltip({container: 'body'}).attr('title', 'Copy to clipboard').tooltip('fixTitle');
   var clipboard = new Clipboard('td', {
     text: function (trigger) {
       var icon = trigger.querySelector('.pficon, .fa');
