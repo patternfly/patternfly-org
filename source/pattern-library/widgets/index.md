@@ -480,7 +480,7 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
   </div>
 <div class="section" id="bootstrap-switch">
     <h3>Bootstrap Switch</h3>
-    <p>See <a href="http://www.bootstrap-switch.org/">http://www.bootstrap-switch.org/</a> for complete Bootstrap Switch documentation.</p>
+    <p>See <a href="http://bootstrapswitch.site/">http://bootstrapswitch.site/</a> for complete Bootstrap Switch documentation.</p>
     <div class="pf-example">
       <input class="bootstrap-switch" id="bootstrap-switch-state" type="checkbox" checked>
       <script>
