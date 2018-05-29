@@ -26,7 +26,7 @@ layout: page
 <li>Patternfly Web Components: Patrick Riley </li>
 </ul>
 
-<h2>Upcoming Community Meetings and Agendas</h2>
+<!-- <h2>Upcoming Community Meetings and Agendas</h2>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -47,7 +47,7 @@ layout: page
       <td><a target="blank" href="https://github.com/patternfly/patternfly-react/wiki/PatternFly-React-Community-Meeting">View Agenda</a></td>
     </tr>
   </tbody>
-</table>
+</table> -->
 
 
 <h2>Prior Community Meeting's Recording and Slides</h2>
@@ -62,6 +62,12 @@ layout: page
   </thead>
 
   <tbody>
+  <tr>
+    <td>PatternFly-React</td>
+    <td>May 23, 2018</td>
+    <td><a href="https://www.dropbox.com/s/xxb6dkx58otuhqp/PatternFly-React-2018-05.pdf?dl=0">View Slides</a></td>
+    <td><a target="blank" href="https://bluejeans.com/s/Mu9gu/">View Recording</a></td>
+  </tr>
   <tr>
     <td>PatternFly</td>
     <td>April 18, 2018</td>
