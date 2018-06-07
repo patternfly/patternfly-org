@@ -91,6 +91,12 @@ module.exports = function (grunt) {
             cwd: 'repos/patternfly-design/styles',
             src: ['**/!(*.md)'],
             dest: '<%= config.build %>/styles'
+          },
+          {
+            expand: true,
+            cwd: 'repos/patternfly-design/styles/icons',
+            src: ['icons.json'],
+            dest: '<%= config.build %>/_data'
           }
         ]
       },
