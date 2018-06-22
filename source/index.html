@@ -72,55 +72,36 @@ url-js-extra: ['components/wowjs/dist/wow.min.js', 'components/jquery.scrollto/j
 <div class="whats-new">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6">
-        <h2>
-          What's New
-        </h2>
-        <ul id="whats-new" class="updates"></ul>
-        <!--
-        <ul class="updates">
-        {% assign whats-news = site.whats-news | sort: 'date' | reverse %}
-        {% for whatsnew in whats-news limit:3 %}
-          <li>
-            <h3>{{ whatsnew.date | date: '%B %-d, %Y' }}</h3>
-            {{ whatsnew.content }}
-          </li>
-        {% endfor %}
-        </ul>
-        <p><a href="{{ site.baseurl}}/whats-new/">View all</a></p>
-        -->
-      </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <h2>Featured Content</h2>
+        <h3 id="caption"></h3>
+        <p id="feature-description"></p>
+        <p>
+          <a id="learn" class="learn" href="#">Learn More</a>
+        </p>
+      </div>
+      <div class="col-md-8">
         <div id="carousel-layouts" class="carousel slide" data-ride="carousel" data-interval="false">
-          <!-- Controls for slides -->
-          <div class="carousel-header">
-            <h3 id="caption"></h3>
-            <div class="controls">
-              <a id="learn" class="learn" href="#">Learn More</a>
-              <a class="previous" title="Previous" role="button">
-                <span class="fa fa-angle-left"></span>
-              </a>
-              <a class="next" title="Next" role="button">
-                <span class="fa fa-angle-right"></span>
-              </a>
-            </div>
-          </div>
-          <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-              <a href="/pattern-library/dashboard/dashboard-layout/"><img alt="Dashboard Layout" style="border:1px solid #bbbbbb;" src="{{site.baseurl}}/assets/img/layouts-dashboard.png" /></a>
+              <a href="/pattern-library/dashboard/dashboard-layout/"><img alt="Dashboard Layout" style="border:1px solid #bbbbbb;" src="{{site.baseurl}}/assets/img/layouts-dashboard-slide.png" /></a>
             </div>
             <div class="item">
               <a href="/pattern-library/content-views/list-view/"><img alt="List View" style="border:1px solid #bbbbbb;" src="{{site.baseurl}}/assets/img/list-view-example-slide.png" /></a>
             </div>
             <div class="item">
-              <a href="/pattern-library/communication/notification-drawer/"><img alt="Notification Drawer" style="border:1px solid #bbbbbb;" src="{{site.baseurl}}/assets/img/Patternfly_ToastNotificationTray_Hover-slide.jpg" /></a>
+              <a href="/pattern-library/communication/notification-drawer/"><img alt="Notification Drawer" style="border:1px solid #bbbbbb;" src="{{site.baseurl}}/assets/img/notification-drawer-slide.png" /></a>
             </div>
             <div class="item">
               <a href="/pattern-library/navigation/vertical-navigation/"><img alt="Vertical Navigation" style="border:1px solid #bbbbbb;" src="{{site.baseurl}}/assets/img/vertical-nav-with-secondary-slide.png" /></a>
             </div>
           </div>
+          <a class="controls previous disabled" title="Previous" role="button">
+            <span class="fa fa-angle-left"></span>
+          </a>
+          <a class="controls next" title="Next" role="button">
+            <span class="fa fa-angle-right"></span>
+          </a>
           <!-- Indicators
           <ol class="carousel-indicators">
             <li data-target="#carousel-layouts" data-slide-to="0" class="active"></li>
@@ -137,54 +118,58 @@ url-js-extra: ['components/wowjs/dist/wow.min.js', 'components/jquery.scrollto/j
 </div>
 <script>
   $(document).ready(function() {
-    // Insert what's new post from Patternfly blog site -- blog posts must be tagged with the
-    // category name: "What’s New on PatternFly.org".
-    //
-    // Note: JSONP wraps result in a script tag, allowing cross-site requests. However, our request returns HTML and
-    // '<' chars are invalid as a JavaScript object. Instead, using CORS to perform cross-site scripting. This solution
-    // is also available to localhost.
-    //
-    // See: http://ourcodeworld.com/articles/read/73/how-to-bypass-access-control-allow-origin-error-with-xmlhttprequest-jquery-ajax-
-    $.get("https://cors-anywhere.herokuapp.com/http://blog.patternfly.org/whats-new-on-patternfly-org").done(function(data) {
-      $('#whats-new').html(data.
-        replace(/class="h4"/g, "").    // remove the h4 classes
-        replace(/\<h2/g, "<li><h3").   // surround each blog post item with an li tag
-        replace(/\/h2/g, "/h3").       // replace h2 with h3 tags
-        replace(/\/ul>/g, "/ul></li>"));
-    },'html');
-
     // Carousel data
     var carouselData = [{
       caption: "Dashboard Layout",
+      description: "This section provides guidance on laying out a dashboard page, and does not currently include editable dashboard requirements. When creating a dashboard layout, use the column grid system.",
       url: "{{site.baseurl}}/pattern-library/dashboard/dashboard-layout"
     }, {
       caption: "List View",
+      description: "A List View displays data in rows. Each row displays the same set of attributes, although not necessarily displayed in columns, and the attributes may wrap. The List View omits column headers and other visual noise, making it a cleaner visualization than a Table View.",
       url: "{{site.baseurl}}/pattern-library/content-views/list-view"
     }, {
       caption: "Notification Drawer",
+      description: "The Notification Drawer is a content delivery system such as events, tasks, and alerts. It is a self contained system that is viewable without having to navigate to another area of the application. Upon login it offers initial notifications for what has changed in the form of dismissible Toast Notifications and a permanent interactive icon in the header bar. It is hidden or revealed at the user’s request.",
       url: "{{site.baseurl}}/pattern-library/communication/notification-drawer"
     }, {
       caption: "Vertical Navigation",
+      description: "It is recommended to use vertical navigation when your application requires global navigation that is displayed on the left. While vertical navigation menus generally consume more space than their horizontal counterparts, they have become more popular as desktop monitors move to wide-screen formats.",
       url: "{{site.baseurl}}/pattern-library/navigation/vertical-navigation"
     }];
     // Initialize caption and learn more url
     $("#caption").text(carouselData[0].caption);
+    $("#feature-description").text(carouselData[0].description);
     $("#learn").attr("href", carouselData[0].url);
 
     // Previous slide
     $(".previous").click(function() {
+      if ($(this).is('.disabled')) {
+        return;
+      }
       $("#carousel-layouts").carousel("prev");
     });
     // Next slide
     $(".next").click(function() {
+      if ($(this).is('.disabled')) {
+        return;
+      }
       $("#carousel-layouts").carousel("next");
     });
 
     // Update caption and learn more url
     $("#carousel-layouts").on("slid.bs.carousel", function() {
+      var $this = $(this);
       var currentIndex = $('div.active').index();
       $("#caption").text(carouselData[currentIndex].caption);
+      $("#feature-description").text(carouselData[currentIndex].description);
       $("#learn").attr("href", carouselData[currentIndex].url);
+
+      $this.find(".controls").removeClass("disabled");
+      if($this.find(".carousel-inner .item:first").is(".active")) {
+        $this.find(".previous").addClass("disabled");
+      } else if($this.find(".carousel-inner .item:last").is(".active")) {
+        $this.find(".next").addClass("disabled");
+      }
     });
   });
 </script>
