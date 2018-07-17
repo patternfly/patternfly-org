@@ -1,4 +1,4 @@
-<p>Jump to <a href="#example-code-1">Standard Horizontal Navigation</a>, <a href="#example-code-2">Single-Level Menu Bar</a>, <a href="#example-code-3">Two-Level Menu Bar</a>, or <a href="#example-code-4">Menu Bar with Dropdowns</a></p>
+<p>Jump to <a href="#example-code-1">Standard Horizontal Navigation</a>, <a href="#example-code-2">Single-Level Menu Bar</a>, or <a href="#example-code-4">Menu Bar with Dropdowns</a></p>
 <h2 id="example-code-1">Standard Horizontal Navigation</h2>
 <div class="example-pf">
   <iframe src="{{ site.baseurl}}/pattern-library/navigation/horizontal-navigation/horizontal-navigation.html"
@@ -39,14 +39,6 @@ $().setupVerticalNavigation(true);
 <p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-2" href="#markup-2">Reference Markup</a></p>
 <div class="collapse in" id="markup-2">
   <pre class="prettyprint">{% capture markup_include %}{% include widgets/navigation/horizontal-primary-nav-bar.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
-</div>
-<h2 id="example-code-3">Two-Level Menu Bar</h2>
-<div class="example-pf example-navbar" style="height: 140px;">
-  {% include widgets/navigation/horizontal-persistent-secondary-tertiary.html %}
-</div>
-<p class="reference-markup"><a class="collapse-toggle" data-toggle="collapse" aria-expanded="true" aria-controls="markup-3" href="#markup-3">Reference Markup</a></p>
-<div class="collapse in" id="markup-3">
-  <pre class="prettyprint">{% capture markup_include %}{% include widgets/navigation/horizontal-persistent-secondary-tertiary.html %}{% endcapture %}{{ markup_include | xml_escape }}</pre>
 </div>
 <h2 id="example-code-4">Menu Bar with Dropdowns</h2>
 <div class="example-pf example-navbar">
