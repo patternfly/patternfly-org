@@ -62,24 +62,30 @@ layout: page
   </thead>
 
   <tbody>
-  <tr>
-    <td>PatternFly-React</td>
-    <td>May 23, 2018</td>
-    <td><a href="https://www.dropbox.com/s/xxb6dkx58otuhqp/PatternFly-React-2018-05.pdf?dl=0">View Slides</a></td>
-    <td><a target="blank" href="https://bluejeans.com/s/Mu9gu/">View Recording</a></td>
-  </tr>
-  <tr>
-    <td>PatternFly</td>
-    <td>April 18, 2018</td>
-    <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/patternfly-community/2018-18-04-slides.pdf">View Slides</a></td>
-    <td><a target="blank" href="https://bluejeans.com/s/nC@i5">View Recording</a></td>
-  </tr>
-  <tr>
-    <td>PatternFly-React</td>
-    <td>March 14, 2018</td>
-    <td><a href="https://www.dropbox.com/s/wjjt7icc4ke9e34/PatternFly-React-2018-03.pdf?dl=0">View Slides</a></td>
-    <td><a target="blank" href="https://bluejeans.com/s/EdHuv">View Recording</a></td>
-  </tr>
+    <tr>
+      <td>PatternFly-React</td>
+      <td>July 11, 2018</td>
+      <td><a href="https://www.dropbox.com/s/wtbhgg3a3nies7o/PatternFly-React-2018-07.pdf?dl=0">View Slides</a></td>
+      <td><a target="blank" href="https://bluejeans.com/s/l5Fow">View Recording</a></td>
+    </tr>
+    <tr>
+      <td>PatternFly-React</td>
+      <td>May 23, 2018</td>
+      <td><a href="https://www.dropbox.com/s/xxb6dkx58otuhqp/PatternFly-React-2018-05.pdf?dl=0">View Slides</a></td>
+      <td><a target="blank" href="https://bluejeans.com/s/Mu9gu/">View Recording</a></td>
+    </tr>
+    <tr>
+      <td>PatternFly</td>
+      <td>April 18, 2018</td>
+      <td><a href="https://github.com/patternfly/patternfly-design/blob/master/resources/community-meetings/patternfly-community/2018-18-04-slides.pdf">View Slides</a></td>
+      <td><a target="blank" href="https://bluejeans.com/s/nC@i5">View Recording</a></td>
+    </tr>
+    <tr>
+      <td>PatternFly-React</td>
+      <td>March 14, 2018</td>
+      <td><a href="https://www.dropbox.com/s/wjjt7icc4ke9e34/PatternFly-React-2018-03.pdf?dl=0">View Slides</a></td>
+      <td><a target="blank" href="https://bluejeans.com/s/EdHuv">View Recording</a></td>
+    </tr>
     <tr>
       <td>PatternFly-React</td>
       <td>February 14, 2018</td>
