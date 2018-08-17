@@ -48,7 +48,7 @@ In general, the PatternFly team will help ensure that issues are filed appropria
 * For issues that you have with a design, how a pattern works, a visual design, or anything else regarding the overall pattern submit against PatternFly-Design.
 * For issues with a JS framework implementation, submit issues to their respective repos. There are a number of PatternFly JS framework implementations including:
   * [PatternFly-React](https://github.com/patternfly/patternfly-react/issues/new)
-  * [PatternFly-NG](https://github.com/patternfly/patternfly-ng/issues/new) (Angular 4+)
+  * [PatternFly-NG](https://github.com/patternfly/patternfly-ng/issues/new) (Angular 6+)
   * [Angular-PatternFly](https://github.com/patternfly/angular-patternfly/issues/new) (Angular 1)
 
 ## <a name="accessibility"></a>How is PatternFly addressing accessibility?
