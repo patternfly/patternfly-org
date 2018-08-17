@@ -19,6 +19,9 @@ layout: page
 - [How do I request or propose a design contribution?](#request-or-propose-a-design-contribution)
 - [Why should I care about consistency?](#why-should-i-care-about-consistency)
 - [What sets PatternFly apart from other design libraries?](#what-sets-patternfly-apart)
+- [How can I contribute?](#how-to-contribute)
+- [Who is PatternFly for and why would I use it?](#who-is-pf-for)
+
 
 
 ## <a name="offer"></a>What does PatternFly offer?
@@ -118,26 +121,11 @@ Consistency leads to better usability. Applications become intuitive when common
 
 While there are other good general web UI pattern libraries out there, we felt like none of these were optimized for the enterprise IT space. We recognize that a “one size fits all” approach to design is not always possible and IT users have unique requirements that don’t necessarily translate across other domains. PatternFly addresses this by basing its designs on an understanding of the needs of IT users and usage scenarios. This includes the need to manage large amounts of complex information in an efficient manner. In short, we believe that PatternFly fills a targeted niche where other general pattern libraries do not.
 
-## Q: How do I know that these interaction patterns will work to make my application more usable?
+## <a name="how-to-contribute"></a>How can I contribute?**
 
-We believe that design is an iterative process, and we will be continually evolving and improving our content. Testing is an important part of our process and most patterns will be submitted to a usability testing process to validate design decisions and generate user information to feed subsequent design iterations.
+Visit the [Contribute section]({{site.baseurl}}/get-started/community/) of our Community page for more information and/or [join our mailing list](https://www.redhat.com/mailman/listinfo/patternfly). We welcome your ideas and feedback!
 
-## Q: Having a common widget library is great, but I’m not using the Bootstrap 3 framework. Is PatternFly still useful to me?
-
-Yes. You may still want to download the PatternFly library to examine reference examples and integrate PatternFly styling into whatever UI framework technology that you are using.  We are also open to adding support for additional frameworks in the future.
-
-## Q: How can I contribute?**
-
-Visit the [Contribute]({{site.baseurl}}/get-started/contribute/) page on the website for more information and/or [join our mailing list](https://www.redhat.com/mailman/listinfo/patternfly). We welcome your ideas and feedback!
-
-
-## How do I migrate to PatternFly 2.0?
-See the [PatternFly 2.0 Migration Guide]({{site.baseurl}}/get-started/patternfly-migration-guides/patternfly-migration-guide-2.0.html) for step-by-step guidance to upgrade from PatternFly 1.x to [PatternFly 2.0](https://github.com/patternfly/patternfly/releases).
-
-## How do I migrate to PatternFly 3.0?
-See the [PatternFly 3.0 Migration Guide]({{site.baseurl}}/get-started/patternfly-migration-guides/patternfly-migration-guide-3.0.html) for step-by-step guidance to upgrade from PatternFly 2.x to 3.0.
-
-## Who is PatternFly for and why would I use it?
+## <a name="who-is-pf-for"></a>Who is PatternFly for and why would I use it?
 * I’m a front-end developer and wrote my application with Bootstrap, but found that it was missing a number of components for my enterprise use cases.  PatternFly is valuable to me because it provides those components, implemented in CSS and a number of popular javascript frameworks.
 
 * I’m a developer that works on a application that has to fit within a larger product portfolio.  I leverage PatternFly because it provides assurance that my front-end will be consistent with other products that are also built with PatternFly.  This gives me more time to innovate on application specific features and functions.
