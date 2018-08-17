@@ -123,7 +123,7 @@ While there are other good general web UI pattern libraries out there, we felt l
 
 ## <a name="how-to-contribute"></a>How can I contribute?**
 
-Visit the [Contribute]({{site.baseurl}}/get-started/contribute/) page on the website for more information and/or [join our mailing list](https://www.redhat.com/mailman/listinfo/patternfly). We welcome your ideas and feedback!
+Visit the [Contribute section]({{site.baseurl}}/get-started/community/) of our Community page for more information and/or [join our mailing list](https://www.redhat.com/mailman/listinfo/patternfly). We welcome your ideas and feedback!
 
 ## <a name="who-is-pf-for"></a>Who is PatternFly for and why would I use it?
 * I’m a front-end developer and wrote my application with Bootstrap, but found that it was missing a number of components for my enterprise use cases.  PatternFly is valuable to me because it provides those components, implemented in CSS and a number of popular javascript frameworks.
