@@ -9,7 +9,7 @@
 *.swo
 
 # Ignore local nodejs packages
-node_modules/
+node_modules
 
 # Ignore node files
 *.man
@@ -28,5 +28,8 @@ public
 bower_components
 source/assets/css
 github.io
+out
 
 repos
+lerna-debug.log
+package-lock.json

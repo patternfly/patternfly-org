@@ -1,25 +1,27 @@
-language: ruby
-rvm:
-  - 2.3.1
-
-env:
-  global:
-  - ENCRYPTION_LABEL: "195bd079f767"
-  - COMMIT_AUTHOR_EMAIL: "patternfly-build@redhat.com"
-  - TRIGGER_REPO_SLUG: "patternfly/patternfly-org"
-  - TRIGGER_REPO_BRANCH: "master"
-
+language: node_js
+node_js:
+  - "8"
+sudo: required
+cache: yarn
+deploy:
+  provider: surge
+  skip_cleanup: true
+  project: ./out/
+  domain: patternfly.surge.sh
+  on: monorepo
+notifications:
+  email: false
+git:
+  depth: 1
 before_install:
-  - nvm install 4
-  - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
-  - npm install -g bower grunt-cli
-  - npm install patternfly-eng-release
-
+- npm install -g lerna grunt-cli gatsby-cli
+- curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.7.0
+- export PATH=$HOME/.yarn/bin:$PATH
+- yarn bootstrap
 install: true
-
 script:
-  - sh -x ./node_modules/patternfly-eng-release/scripts/_build.sh -o
-
-after_success:
-  - grunt build:production
-  - npm run publish-travis
+- yarn build
+after_success: |
+  mkdir -p out/4.0
+  cp -R packages/patternfly-3/_site/. out/
+  # cp -R packages/patternfly-4/public/. out/4.0/
