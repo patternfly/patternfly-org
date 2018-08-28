@@ -1,0 +1,77 @@
+.wpf-page {
+  font-family: 'overpass', sans-serif;
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .sub-header {
+    color: #008bc2;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+
+  .body-text {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .dark-bg {
+    background-color: #07385a;
+    color: #ffffff;
+
+    .hero-title {
+      color: #ffffff;
+      font-size: 48px;
+      line-height: 1.3;
+      font-weight: 400;
+    }
+
+    .btn {
+      background-color: #40cbeb;
+      border-color: #40cbeb;
+      color: #04253c;
+      font-weight: 500;
+      border-radius: 25px;
+
+      &:hover {
+        background-color: #5fedfe;
+        border-color: #5fedfe;
+      }
+    }
+  }
+
+  .light-bg {
+    background-color: #f6fbfd;
+
+    .hero-title {
+      color: #008bc2;
+      font-size: 48px;
+      line-height: 1.3;
+      font-weight: 400;
+    }
+  }
+
+  .large-text {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .logo {
+    background: url(../assets/patternfly.svg) no-repeat 0 50%;
+    height: 40px;
+    width: 220px;
+  }
+}
+
+#sidebar {
+  .nav-link[data-toggle].collapsed:after {
+    content: "▾";
+  }
+  .nav-link[data-toggle]:not(.collapsed):after {
+    content: "▴";
+  }
+}

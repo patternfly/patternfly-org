@@ -6,17 +6,29 @@ The PatternFly Org is the source for the official documentation for PatternFly 3
 
 ## Development Setup
 
-Development setup requires nodejs and Ruby. If you do not already have nodejs, npm, and Ruby installed on your system, see https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager and https://www.ruby-lang.org/en/downloads.
+Development setup requires yarn. If you do not already have yarn installed on your system, see https://yarnpkg.com/en/.
 
-### Install Dependencies
+### Build
 
-Install the site dependencies using yarn:
+Install the site dependencies and build it using yarn:
 
-    yarn global add lerna grunt-cli gatsby-cli
+    yarn install
     yarn bootstrap
     yarn build
 
-This will install all necessary packages into `node_modules/`.
-
 The packages/patternfly-3 site is generated using [Jekyll](http://jekyllrb.com/).
 The packages/patternfly-4 site is generated using [Gatsby](https://www.gatsbyjs.org/).
+
+### Live Reload Server
+
+A local development server can be quickly fired up for patternfly 3 or patternfly 4 by using either of these commands:
+
+    yarn start:pf3
+    yarn start:pf4
+
+### Deploy
+
+Deploy the static content with your favorite web-publishing tool. For example with surge:
+    yarn global add surge
+    cd out/
+    surge

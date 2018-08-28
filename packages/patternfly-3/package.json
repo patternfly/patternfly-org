@@ -40,7 +40,7 @@
     "serve-static": "^1.11.2",
     "shelljs": "^0.8.2"
   },
-  "description": "Documentation, etc. for PatternFly",
+  "description": "Documentation, etc. for PatternFly 3",
   "repository": {
     "type": "git",
     "url": "https://github.com/patternfly/patternfly-org.git"
