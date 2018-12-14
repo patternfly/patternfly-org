@@ -26,12 +26,12 @@ layout: page
 
 ## <a name="offer"></a>What does PatternFly offer?
 
-There are two parts to PatternFly that will help you efficiently design and develop enterprise web applications. First, our [widget library]({{site.baseurl}}/widgets/) implements enterprise-optimized visual styling for common web UI widgets. This is supported with a downloadable library of HTML mark-up, CSS styling, and code samples built on top of the [Bootstrap 3](http://getbootstrap.com/) framework. Second, our [pattern library]({{site.baseurl}}/wikis/patterns/) includes a set of interaction patterns that offer consistent solutions to common user interaction problems.
+There are two parts to PatternFly that will help you efficiently design and develop enterprise web applications. First, our [widget library]({{site.baseurl}}/pattern-library/widgets/) implements enterprise-optimized visual styling for common web UI widgets. This is supported with a downloadable library of HTML mark-up, CSS styling, and code samples built on top of the [Bootstrap 3](http://getbootstrap.com/) framework. Second, our [pattern library]({{site.baseurl}}/pattern-library/) includes a set of interaction patterns that offer consistent solutions to common user interaction problems.
 
 ## <a name="support"></a>Which browsers does PatternFly support?
-PF3 supports [the same browsers as BS3](https://getbootstrap.com/docs/3.3/getting-started/#support) with the exception of Internet Explorer 8-9. PatternFly 4 supports the latest two versions of Edge, Safari, Firefox and Chrome.  
+PF3 supports [the same browsers as BS3](https://getbootstrap.com/docs/3.3/getting-started/#support) with the exception of Internet Explorer 8-9. PatternFly 4 supports the latest two versions of Edge, Safari, Firefox and Chrome.
 
-## <a name="implementations"></a>What JS framework implementations does PatternFly offer?  
+## <a name="implementations"></a>What JS framework implementations does PatternFly offer?
 PatternFly-Core is HTML/CSS and jQuery. In addition, PatternFly 3 (our current version) supports various JS framework implementations including [Angular-PatternFly](https://github.com/patternfly/angular-patternfly) (Angular 1.x), [PatternFly-ng](https://github.com/patternfly/patternfly-ng) (Angular 6.x+), and [PatternFly-React](https://github.com/patternfly/patternfly-react). PatternFly will continue to support the PF3 framework implementations by:
 
 * Managing releases.
@@ -66,7 +66,7 @@ PatternFly-ng is the name of our repo that houses Angular 6.x+ implementations o
 ## <a name="initiatives"></a>What are the PF4 initiatives?
 * **Modularity:** Today products have challenges adopting some PatternFly patterns because they are too use case specific. The goal of modular components is to deliver the building blocks necessary for any use case.
 * **Accessibility:** See [How is PatternFly addressing accessibility?](#how-is-patternfly-addressing-accessibility?)
-* **Responsive design:** Address responsive states for all components and designs.  
+* **Responsive design:** Address responsive states for all components and designs.
 * **A new visual design system:** Provide an updated look that is more flexible and desirable for PatternFly’s multiple personas.
 
 ## <a name="bootstrap-for-pf4"></a>Why did we move away from Bootstrap for PF4?
@@ -75,7 +75,7 @@ Tying PatternFly to Bootstrap was a great win for the team initially because we 
 Additionally, making PatternFly-Core framework agnostic means that it can live side by side with PatternFly 3, allowing for incremental migration. See the section, How we will address UX consistency with varying levels of adoption between PF3 and PF4?, for more specifics on this.
 
 # <a name="pf4-migration-plan"></a>What is the PF3 to PF4 migration plan and deliverables?
-Migration tooling and best practices are under development.   
+Migration tooling and best practices are under development.
 
 * PF4 component documentation will clearly show which PF3 component it replaces
 * Examples of the old/new HTML structure will be provided
@@ -93,7 +93,7 @@ PatternFly 4 is in development, therefore PatternFly 3 continues to be a priorit
 * Contributions introducing breaking changes for PF3 will not be accepted unless there is evidence validating the the value and cost.
 
 
-## <a name="progress-for-design-and-development"></a>Where can I see progress for design and development?   
+## <a name="progress-for-design-and-development"></a>Where can I see progress for design and development?
 **GitHub:** All of our code and design documentation is located on GitHub. Visit our repos to view issues, project boards, and review PRs. Some specific boards to make note of include:
 
 * [PatternFly 4 Feature Board](https://github.com/orgs/patternfly/projects/3)
