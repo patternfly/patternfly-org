@@ -1,44 +1,7 @@
-import React from 'react';
-import { renderToString } from 'react-dom/server';
-import { renderStatic } from '@patternfly/react-styles/server';
+/**
+ * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/ssr-apis/
+ */
 
-exports.replaceRenderer = ({
-  bodyComponent,
-  replaceBodyHTMLString,
-  setHeadComponents
-}) => {
-  const { html, styleTags, renderedClassNames } = renderStatic(
-    () => {
-      try {
-        // console.log('\n');
-        // console.log(bodyComponent);
-        renderToString(bodyComponent);
-      } catch (err) {
-        console.log(err);
-      }
-    }
-  );
-
-  replaceBodyHTMLString(html);
-
-  setHeadComponents([
-    ...styleTags.map((tag, i) => (
-      <style
-        key={i}
-        {...tag.attributes}
-        dangerouslySetInnerHTML={{ __html: tag.content }}
-      />
-    )),
-    <script
-      id="patternfly-style-ids"
-      key="patternfly-style-ids"
-      dangerouslySetInnerHTML={{
-        __html: `
-        // <![CDATA[
-        window._pf_styles = ${JSON.stringify(renderedClassNames)}
-        // ]]>
-        `
-      }}
-    />
-  ]);
-};
+// You can delete this file if you're not using it

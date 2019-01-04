@@ -1,11 +1,9 @@
 import { StyleSheet } from '@patternfly/react-styles';
 import {
-  global_FontSize_xs as fontSizeXs,
-  global_spacer_sm as spacerSm,
-  global_spacer_xs as spacerXs,
+  global_FontSize_lg as fontSizeLg,
   global_spacer_md as spacerMd,
   global_BackgroundColor_100 as navBackgroundColor,
-  l_page__sidebar_md_Width as sidebarWidth
+  c_nav_Width as sidebarWidth
 } from '@patternfly/react-tokens';
 
 export default StyleSheet.create({
@@ -13,8 +11,10 @@ export default StyleSheet.create({
     width: sidebarWidth.value
   },
   navigationContent: {
+    position: 'fixed',
     width: 'inherit',
-    overflowY: 'auto',
+    height: '100vh',
+    overflowY: 'scroll',
     backgroundColor: navBackgroundColor.var
   },
   logo: {
@@ -22,13 +22,13 @@ export default StyleSheet.create({
     margin: `${spacerMd.var} 0`,
     padding: `0 ${spacerMd.var}`
   },
-  search: {
-    margin: spacerMd.var
-  },
-  input: {
-    padding: `${spacerSm.var} ${spacerXs.var}`,
-    width: '100%',
-    border: 'none',
-    fontSize: fontSizeXs.var
-  }
+  search: `
+    &.pf-c-form {
+      margin: ${spacerMd.var} 0;
+      padding: 0 ${spacerMd.var};
+    }
+    .pf-c-form__label {
+      --pf-c-form__label--FontSize: ${fontSizeLg.var};
+    }
+  `
 });

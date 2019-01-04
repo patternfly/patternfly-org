@@ -1,0 +1,327 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`aria-disabled is set to true and tabIndex to -1 if component is not a button and is disabled 1`] = `
+.pf-c-button.pf-m-primary.pf-m-disabled {
+  display: inline-block;
+  position: relative;
+  padding: 0.375rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  border: 0px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #72767b;
+  background-color: #d1d1d1;
+  pointer-events: none;
+}
+
+<a
+  aria-disabled={true}
+  aria-label={null}
+  className="pf-c-button pf-m-primary pf-m-disabled"
+  disabled={null}
+  tabIndex={-1}
+  type={null}
+>
+  Disabled Anchor Button
+</a>
+`;
+
+exports[`danger button 1`] = `
+.pf-c-button.pf-m-danger {
+  display: inline-block;
+  position: relative;
+  padding: 0.375rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  border: 0px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #cc0000;
+}
+
+<button
+  aria-disabled={null}
+  aria-label="danger"
+  className="pf-c-button pf-m-danger"
+  disabled={false}
+  tabIndex={null}
+  type="button"
+>
+  danger
+   Button
+</button>
+`;
+
+exports[`isBlock 1`] = `
+.pf-c-button.pf-m-primary.pf-m-block {
+  display: block;
+  position: relative;
+  padding: 0.375rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  border: 0px;
+  border-radius: 3px;
+  text-decoration: none;
+  width: 100%;
+  color: #ffffff;
+  background-color: #007bba;
+}
+
+<button
+  aria-disabled={null}
+  aria-label={null}
+  className="pf-c-button pf-m-primary pf-m-block"
+  disabled={false}
+  tabIndex={null}
+  type="button"
+>
+  Block Button
+</button>
+`;
+
+exports[`isDisabled 1`] = `
+.pf-c-button.pf-m-primary.pf-m-disabled {
+  display: inline-block;
+  position: relative;
+  padding: 0.375rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  border: 0px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #72767b;
+  background-color: #d1d1d1;
+  pointer-events: none;
+}
+
+<button
+  aria-disabled={null}
+  aria-label={null}
+  className="pf-c-button pf-m-primary pf-m-disabled"
+  disabled={true}
+  tabIndex={null}
+  type="button"
+>
+  Disabled Button
+</button>
+`;
+
+exports[`isFocus 1`] = `
+.pf-c-button.pf-m-primary.pf-m-focus {
+  display: inline-block;
+  position: relative;
+  padding: 0.375rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  border: 0px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #007bba;
+}
+
+<button
+  aria-disabled={null}
+  aria-label={null}
+  className="pf-c-button pf-m-primary pf-m-focus"
+  disabled={false}
+  tabIndex={null}
+  type="button"
+>
+  Focused Button
+</button>
+`;
+
+exports[`isHover 1`] = `
+.pf-c-button.pf-m-primary.pf-m-hover {
+  display: inline-block;
+  position: relative;
+  padding: 0.375rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  border: 0px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #007bba;
+}
+
+<button
+  aria-disabled={null}
+  aria-label={null}
+  className="pf-c-button pf-m-primary pf-m-hover"
+  disabled={false}
+  tabIndex={null}
+  type="button"
+>
+  Hovered Button
+</button>
+`;
+
+exports[`link button 1`] = `
+.pf-c-button.pf-m-link {
+  display: inline-block;
+  position: relative;
+  padding: 0.375rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  border: 0px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #007bba;
+}
+
+<button
+  aria-disabled={null}
+  aria-label="link"
+  className="pf-c-button pf-m-link"
+  disabled={false}
+  tabIndex={null}
+  type="button"
+>
+  link
+   Button
+</button>
+`;
+
+exports[`plain button 1`] = `
+.pf-c-button.pf-m-plain {
+  display: inline-block;
+  position: relative;
+  padding: 0.375rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  border: 0px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #72767b;
+}
+
+<button
+  aria-disabled={null}
+  aria-label="plain"
+  className="pf-c-button pf-m-plain"
+  disabled={false}
+  tabIndex={null}
+  type="button"
+>
+  plain
+   Button
+</button>
+`;
+
+exports[`primary button 1`] = `
+.pf-c-button.pf-m-primary {
+  display: inline-block;
+  position: relative;
+  padding: 0.375rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  border: 0px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #007bba;
+}
+
+<button
+  aria-disabled={null}
+  aria-label="primary"
+  className="pf-c-button pf-m-primary"
+  disabled={false}
+  tabIndex={null}
+  type="button"
+>
+  primary
+   Button
+</button>
+`;
+
+exports[`secondary button 1`] = `
+.pf-c-button.pf-m-secondary {
+  display: inline-block;
+  position: relative;
+  padding: 0.375rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  border: 0px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #007bba;
+  background-color: transparent;
+}
+
+<button
+  aria-disabled={null}
+  aria-label="secondary"
+  className="pf-c-button pf-m-secondary"
+  disabled={false}
+  tabIndex={null}
+  type="button"
+>
+  secondary
+   Button
+</button>
+`;
+
+exports[`tertiary button 1`] = `
+.pf-c-button.pf-m-tertiary {
+  display: inline-block;
+  position: relative;
+  padding: 0.375rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  border: 0px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #282d33;
+  background-color: transparent;
+}
+
+<button
+  aria-disabled={null}
+  aria-label="tertiary"
+  className="pf-c-button pf-m-tertiary"
+  disabled={false}
+  tabIndex={null}
+  type="button"
+>
+  tertiary
+   Button
+</button>
+`;

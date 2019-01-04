@@ -5,24 +5,34 @@ import styles from './section.styles';
 import { Title } from '@patternfly/react-core';
 
 const propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string
+  className: PropTypes.string,
+  description: PropTypes.string,
+  headingLevel: PropTypes.string,
+  name: PropTypes.string,
+  preface: PropTypes.string,
+  title: PropTypes.string
 };
 
 const defaultProps = {
   children: null,
   className: '',
-  title: '',
-  description: ''
+  description: '',
+  name: '',
+  preface: '',
+  title: ''
 };
 
-const Section = ({ children, className, title, description, ...props }) => (
+const Section = ({ children, className, description, headingLevel, name, preface, title, ...props }) => (
   <section className={css(styles.section, className)}>
     {Boolean(title || description) && (
       <header className={css(styles.header)}>
-        {Boolean(title) && <Title size="lg">{title}</Title>}
+        {Boolean(title) && (
+          <Title size="lg" id={name} headingLevel={headingLevel}>
+            {title}
+          </Title>
+        )}
+        {Boolean(preface) && <p className={css(styles.preface)}>{preface}</p>}
         {Boolean(description) && <p>{description}</p>}
       </header>
     )}
