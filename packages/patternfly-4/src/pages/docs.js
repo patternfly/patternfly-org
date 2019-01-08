@@ -4,22 +4,27 @@ import NavigationItem from '../components/navigation/navigationItem';
 import * as DocsFiles from '../../.tmp';
 
 import {
+  Button,
+  Bullseye,
   Nav,
   NavGroup,
-  NavItem
+  NavItem,
+  Form,
+  FormGroup,
+  TextInput
 } from '@patternfly/react-core';
+import { css } from '@patternfly/react-styles';
+import styles from '../components/navigation/navigation.styles';
 
 import Layout from '../components/layout'
 import Image from '../components/image'
 import SEO from '../components/seo'
 
 class DocsPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeItem: ''
-    };
-  }
+  state = {
+    activeItem: '',
+    searchValue: ''
+  };
 
   onSideNavSelect = result => {
     this.setState({
@@ -27,9 +32,16 @@ class DocsPage extends React.Component {
     });
   };
 
+  handleSearchChange = (checked, event) => {
+    const searchValue = event.target.value;
+    this.setState(() => ({
+      searchValue
+    }));
+  };
+
   render() {
     const { data } = this.props;
-    const { activeItem } = this.state;
+    const { activeItem, searchValue } = this.state;
 
     const componentMapper = (path, label) => {
       const { components } = DocsFiles[`${label.toLowerCase()}_docs`];
@@ -64,11 +76,42 @@ class DocsPage extends React.Component {
       }))
       : [];
 
+    const searchRE = new RegExp(searchValue, 'i');
+
+    const filteredComponentRoutes = componentRoutes.filter(c => {
+      c.filteredComponents = c.components.filter(component => searchRE.test(component.label));
+      return searchRE.test(c.label) || c.filteredComponents.length > 0;
+    });
+
+    const filteredLayoutRoutes = layoutRoutes.filter(c => {
+      c.filteredComponents = c.components.filter(component => searchRE.test(component.label));
+      return searchRE.test(c.label) || c.filteredComponents.length > 0;
+    });
+
+    const filteredDemoRoutes = demoRoutes.filter(c => searchRE.test(c.label));
+
     const SideNav = (
       <Nav onSelect={this.onSideNavSelect} aria-label="Nav">
-        {Boolean(componentRoutes.length) && (
+        <Bullseye>
+          <Button variant="secondary">React</Button><Button variant="tertiary">Core</Button>
+        </Bullseye>
+        <Form className={css(styles.search)} onSubmit={event => { event.preventDefault(); return false; }}>
+          <FormGroup
+            label="Search Components"
+            fieldId="primaryComponentSearch">
+            <TextInput
+              type="text"
+              id="primaryComponentSearch"
+              name="primaryComponentSearch"
+              placeholder="For example, &quot;button&quot;"
+              value={searchValue}
+              onChange={this.handleSearchChange}
+            />
+          </FormGroup>
+        </Form>
+        {Boolean(filteredComponentRoutes.length) && (
           <NavGroup title="Components">
-            {componentRoutes.map(route => (
+            {filteredComponentRoutes.map(route => (
               <NavItem
                 itemId={route.to} 
                 isActive={activeItem === route.to}
@@ -85,9 +128,9 @@ class DocsPage extends React.Component {
             ))}
           </NavGroup>
         )}
-        {Boolean(layoutRoutes.length) && (
+        {Boolean(filteredLayoutRoutes.length) && (
           <NavGroup title="Layouts">
-            {layoutRoutes.map(route => (
+            {filteredLayoutRoutes.map(route => (
               <NavItem
                 itemId={route.to} 
                 isActive={activeItem === route.to}
@@ -104,9 +147,9 @@ class DocsPage extends React.Component {
             ))}
           </NavGroup>
         )}
-        {Boolean(demoRoutes.length) && (
+        {Boolean(filteredDemoRoutes.length) && (
           <NavGroup title="Demos">
-            {demoRoutes.map(route => (
+            {filteredDemoRoutes.map(route => (
               <NavigationItem key={route.label} to={route.to}>
                 {route.label}
               </NavigationItem>
@@ -169,45 +212,3 @@ export default props => (
     render={data => <DocsPage data={data} {...props} />}
   />
 );
-
-
-// export const query = graphql`
-//   query SiteLayoutQuery {
-//     componentPages: allSitePage(
-//       filter: { path: { glob: "**/components/*" } }
-//       sort: { fields: [fields___label], order: ASC }
-//     ) {
-//       edges {
-//         node {
-//           path
-//           fields {
-//             label
-//           }
-//         }
-//       }
-//     }
-//     layoutPages: allSitePage(
-//       filter: { path: { glob: "**/layouts/*" } }
-//       sort: { fields: [fields___label], order: ASC }
-//     ) {
-//       edges {
-//         node {
-//           path
-//           fields {
-//             label
-//           }
-//         }
-//       }
-//     }
-//     demoPages: allSitePage(filter: { path: { glob: "**/demos/*" } }, sort: { fields: [fields___label], order: ASC }) {
-//       edges {
-//         node {
-//           path
-//           fields {
-//             label
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;

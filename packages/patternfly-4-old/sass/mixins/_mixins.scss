@@ -1,0 +1,59 @@
+$mq-extend-flag: true !global;
+//*****************************************
+//  UTILITIES
+//*****************************************
+@mixin cf() {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin text-clamp($font-size, $line-height, $lines) {
+    font-size: $font-size;
+    line-height: $line-height;
+    height: $lines*$font-size*$line-height;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @supports (-webkit-line-clamp: 1) {
+        display: -webkit-box;
+        -webkit-line-clamp: $lines;
+        -webkit-box-orient: vertical
+    }
+}
+
+
+@mixin unselectable() {
+    user-select: none;
+}
+
+@mixin placeholder() {
+     ::-webkit-input-placeholder {
+        @content;
+    }
+     :-moz-placeholder {
+        @content;
+    }
+     ::-moz-placeholder {
+        @content;
+    }
+     :-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin mobile-detect() {
+    display: none;
+    @media (max-width: 1024px) and (orientation: landscape), (max-width: 1024px) and (orientation: portrait) {
+        display: block;
+    }
+}
+
+@mixin retina() {
+    $mq-extend-flag: false !global;
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and ( min--moz-device-pixel-ratio: 1.5), only screen and ( -o-min-device-pixel-ratio: 3/2), only screen and ( min-device-pixel-ratio: 1.5), only screen and (min-resolution: 192dpi) {
+        @content;
+    }
+    $mq-extend-flag: true !global;
+}

@@ -1,0 +1,22 @@
+{
+  "presets": [
+    [
+      "babel-preset-gatsby",
+      {
+        "targets": {
+          "browsers": [">0.25%", "not dead"]
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "babel-plugin-react-docgen-typescript",
+      {
+        "docgenCollectionName": "TS_DOCGEN",
+        "include": "_repos\/react-.*.tsx$",
+        "exclude": "\/(.cache|.tmp|static|scripts|src)\/"
+      }
+    ]
+  ]
+}

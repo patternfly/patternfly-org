@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { StaticQuery, graphql, withPrefix, Link } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql, withPrefix, Link } from 'gatsby';
 
 // import './layout.css'
-import '@patternfly/react-core/dist/styles/base.css'
+// import '@patternfly/react-core/dist/styles/base.css'
 
 import {
   BackgroundImage,
@@ -23,6 +23,7 @@ import {
   ToolbarItem,
   Switch
 } from '@patternfly/react-core';
+import { Location } from '@reach/router';
 
 import brandImg from './l_pf-reverse-164x11.png';
 
@@ -30,8 +31,7 @@ class Layout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isChecked: true,
-      activeItem: 0
+      isChecked: true
     };
   }
 
@@ -39,35 +39,37 @@ class Layout extends React.Component {
     this.setState({ isChecked });
   };
 
-  onNavSelect = result => {
-    this.setState({
-      activeItem: result.itemId
-    });
-  };
-
   render() {
     const { activeItem, isChecked } = this.state;
     const { sideNav } = this.props;
     const PageNav = (
-      <Nav onSelect={this.onNavSelect} aria-label="Nav">
-        <NavList variant={NavVariants.horizontal}>
-          <NavItem to="#nav-link1" itemId={0} isActive={activeItem === 0}>
-            Page 1
-          </NavItem>
-          <NavItem itemId={1} isActive={activeItem === 1}>
-            <Link to="/page-2/">Go to page 2</Link>
-          </NavItem>
-          <NavItem itemId={2} isActive={activeItem === 2}>
-            <Link to="/docs/">Docs</Link>
-          </NavItem>
-          <NavItem to="#nav-link4" itemId={3} isActive={activeItem === 3}>
-            Network Services
-          </NavItem>
-          <NavItem to="#nav-link5" itemId={4} isActive={activeItem === 4}>
-            Server
-          </NavItem>
-        </NavList>
-      </Nav>
+      <Location>
+        {({ location }) => {
+          console.log(location);
+          const currentPath = location.pathname;
+          return (
+            <Nav aria-label="Nav">
+              <NavList variant={NavVariants.horizontal}>
+                <NavItem isActive={currentPath.indexOf('/get-started/') > -1}>
+                  <Link to="/get-started/">Get Started</Link>
+                </NavItem>
+                <NavItem isActive={currentPath.indexOf('/design-guidelines/') > -1}>
+                  <Link to="/design-guidelines/">Design Guidelines</Link>
+                </NavItem>
+                <NavItem isActive={currentPath.indexOf('/docs/') > -1}>
+                  <Link to="/docs/">Documentation</Link>
+                </NavItem>
+                <NavItem isActive={currentPath.indexOf('/community/') > -1}>
+                  <Link to="/community/">Community</Link>
+                </NavItem>
+                <NavItem isActive={currentPath.indexOf('/blog/') > -1}>
+                  <Link to="/blog/">Blog</Link>
+                </NavItem>
+              </NavList>
+            </Nav>
+          );
+        }}
+      </Location>
     );
     const bgImages = {
       [BackgroundImageSrc.lg]: withPrefix('/img/pfbg_1200.jpg'),
@@ -76,25 +78,27 @@ class Layout extends React.Component {
       [BackgroundImageSrc.xl]: withPrefix('/img/pfbg_2000.jpg'),
       [BackgroundImageSrc.filter]: withPrefix('/img/background-filter.svg#image_overlay')
     };
-    const PageToolbar = (
-      <Toolbar>
-        <ToolbarGroup>
-          <ToolbarItem>
-            <Switch
-              id="simple-switch"
-              label={isChecked ? 'React' : 'Core'}
-              isChecked={isChecked}
-              onChange={this.handleChange}
-              aria-label="simple Switch example"
-            />
-          </ToolbarItem>
-        </ToolbarGroup>
-      </Toolbar>
-    );
+    // const PageToolbar = (
+    //   <Toolbar>
+    //     <ToolbarGroup>
+    //       <ToolbarItem>
+    //         <Switch
+    //           id="simple-switch"
+    //           label={isChecked ? 'React' : 'Core'}
+    //           isChecked={isChecked}
+    //           onChange={this.handleChange}
+    //           aria-label="simple Switch example"
+    //         />
+    //       </ToolbarItem>
+    //     </ToolbarGroup>
+    //   </Toolbar>
+    // );
     const SiteHeader = (
       <PageHeader
-        logo={<Brand src={brandImg} alt="Patternfly Logo" />}
-        toolbar={PageToolbar}
+        logo={<Link to="/">
+          <Brand src={brandImg} alt="Patternfly Logo"/>
+        </Link>}
+        // toolbar={PageToolbar}
         topNav={PageNav}
       />
     );
@@ -121,7 +125,12 @@ class Layout extends React.Component {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  sideNav: PropTypes.node
+  sideNav: PropTypes.node,
+  activeNavItem: PropTypes.number
 }
+
+Layout.defaultProps = {
+  activeNavItem: 0
+};
 
 export default Layout
