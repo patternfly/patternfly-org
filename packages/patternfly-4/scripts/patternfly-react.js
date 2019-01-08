@@ -3,7 +3,7 @@ const fs = require('fs-extra');
 const packages = ['react-core', 'react-charts'];
 
 packages.forEach(pkg => {
-  const source = `node_modules/@patternfly/patternfly-react/packages/patternfly-4/${pkg}/src`;
+  const source = `node_modules/@patternfly/src-patternfly-react/packages/patternfly-4/${pkg}/src`;
   const destination = `_repos/${pkg}/src`;
 
   fs.remove(`_repos/${pkg}`, (errRemove) => {

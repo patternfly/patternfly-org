@@ -32,6 +32,7 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
+    // following plugins common to REACT and CORE
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -39,6 +40,42 @@ module.exports = {
         path: `${__dirname}/_repos`
       }
     },
-    'gatsby-transformer-react-docgen'
+    // following plugins for REACT
+    'gatsby-plugin-typescript',
+    'gatsby-transformer-react-docgen',
+    // following plugins for CORE
+    // {
+    //   resolve: `gatsby-plugin-sass`,
+    //   options: {
+    //     postCssPlugins: [],
+    //     precision: 5
+    //   }
+    // },
+    // {
+    //   resolve: 'gatsby-transformer-remark',
+    //   options: {
+    //     plugins: [
+    //       `gatsby-remark-autolink-headers`,
+    //       // {
+    //       //   resolve: `gatsby-remark-prismjs`,
+    //       //   options: {
+    //       //     classPrefix: 'prism-language-'
+    //       //   }
+    //       // }
+    //     ]
+    //   }
+    // },
+    // {
+    //   resolve: 'gatsby-remark-embed-snippet',
+    //   options: {
+    //     directory: `${__dirname}/_repos/core`
+    //   }
+    // },
+    // {
+    //   resolve: `gatsby-plugin-page-creator`,
+    //   options: {
+    //     path: `${__dirname}/_repos/core/src/patternfly`
+    //   }
+    // },
   ],
 }
