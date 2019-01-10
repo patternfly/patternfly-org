@@ -57,12 +57,7 @@ const Example = ({
     const pathName = typeof window !== 'undefined' ? window.location.pathname : '';
     const exampleName = name.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
     const separator = pathName.endsWith('/') ? '' : '/';
-    // Grab the last 2 path pieces, e.g. components/backgroundimage, layouts/gallery, demos/pagelayout
-    const pathStart = `${pathName}${separator}`
-      .split('/')
-      .slice(-3)
-      .slice(0, 2)
-      .join('/');
+    const pathStart = `${pathName}${separator}`;
     const path = `/${pathStart}/examples/${exampleName}`;
     return (
       <Section>

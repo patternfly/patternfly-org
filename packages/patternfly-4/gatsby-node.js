@@ -10,9 +10,23 @@ const pascalCase = require('pascal-case');
 const paramCase = require('param-case');
 const inflection = require('inflection');
 
+exports.onCreateNode = ({ node, actions }) => {
+  reactOnCreateNode({ node, actions });
+  coreOnCreateNode({ node, actions });
+};
+
+exports.createPages = ({ graphql, actions }) => {
+  reactCreatePages({ graphql, actions });
+  coreCreatePages({ graphql, actions });
+};
+
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  coreOnCreateWebpackConfig({ stage, actions });
+};
+
 const reactOnCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
-  const componentPathRegEx = /(components|layouts|demos)\//;
+  const componentPathRegEx = /\/docs\/react\/.*(components|layouts|demos)\//;
   if (node.internal.type === 'SitePage' && componentPathRegEx.test(node.path)) {
     const pathLabel = node.component
       .split('/')
@@ -30,56 +44,37 @@ const reactOnCreateNode = ({ node, actions }) => {
 
 const coreOnCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
+  const componentPathRegEx = /\/docs\/core\/.*(components|layouts|demos|upgrade-examples|utilities)\//;
   const COMPONENTS_BASE_DIR = path.resolve(__dirname, './_repos/core/src/patternfly/components');
   const DEMOS_BASE_DIR = path.resolve(__dirname, './_repos/core/src/patternfly/demos');
   const LAYOUTS_BASE_DIR = path.resolve(__dirname, './_repos/core/src/patternfly/layouts');
   const UTILITIES_BASE_DIR = path.resolve(__dirname, './_repos/core/src/patternfly/utilities');
   const UPGRADES_BASE_DIR = path.resolve(__dirname, './_repos/core/src/patternfly/upgrade-examples');
+  const isComponent = node.fileAbsolutePath && node.fileAbsolutePath.includes(COMPONENTS_BASE_DIR);
+  const isLayout = node.fileAbsolutePath && node.fileAbsolutePath.includes(LAYOUTS_BASE_DIR);
+  const isDemo = node.fileAbsolutePath && node.fileAbsolutePath.includes(DEMOS_BASE_DIR);
+  const isUtility = node.fileAbsolutePath && node.fileAbsolutePath.includes(UTILITIES_BASE_DIR);
+  const isUpgrade = node.fileAbsolutePath && node.fileAbsolutePath.includes(UPGRADES_BASE_DIR);
   const isMarkdown = node.internal.type === 'MarkdownRemark';
-
-  if (isMarkdown && node.fileAbsolutePath) {
-    const isComponent = node.fileAbsolutePath.includes(COMPONENTS_BASE_DIR);
-    const isLayout = node.fileAbsolutePath.includes(LAYOUTS_BASE_DIR);
-    const isDemo = node.fileAbsolutePath.includes(DEMOS_BASE_DIR);
-    const isUtility = node.fileAbsolutePath.includes(UTILITIES_BASE_DIR);
-    const isUpgrade = node.fileAbsolutePath.includes(UPGRADES_BASE_DIR);
-    if (isComponent) {
-      const componentName = path.basename(path.dirname(node.fileAbsolutePath));
-      const pagePath = `/components/${componentName}/docs`;
-      createNodeField({ node, name: 'path', value: pagePath });
-      createNodeField({ node, name: 'type', value: 'documentation' });
-      createNodeField({ node, name: 'contentType', value: 'component' });
-    } else if (isLayout) {
-      const layoutName = path.basename(path.dirname(node.fileAbsolutePath));
-      const pagePath = `/layouts/${layoutName}/docs`;
-      createNodeField({ node, name: 'path', value: pagePath });
-      createNodeField({ node, name: 'type', value: 'documentation' });
-      createNodeField({ node, name: 'contentType', value: 'layout' });
-    } else if (isDemo) {
-      const demoName = path.basename(path.dirname(node.fileAbsolutePath));
-      const pagePath = `/demos/${demoName}/docs`;
-      createNodeField({ node, name: 'path', value: pagePath });
-      createNodeField({ node, name: 'type', value: 'documentation' });
-      createNodeField({ node, name: 'contentType', value: 'demo' });
-    } else if (isUtility) {
-      const utilityName = path.basename(path.dirname(node.fileAbsolutePath));
-      const pagePath = `/utilities/${utilityName}/docs`;
-      createNodeField({ node, name: 'path', value: pagePath });
-      createNodeField({ node, name: 'type', value: 'documentation' });
-      createNodeField({ node, name: 'contentType', value: 'utility' });
-    } else if (isUpgrade) {
-      const upgradeName = path.basename(path.dirname(node.fileAbsolutePath));
-      const pagePath = `/upgrades/${upgradeName}/docs`;
-      createNodeField({ node, name: 'path', value: pagePath });
-      createNodeField({ node, name: 'type', value: 'documentation' });
-      createNodeField({ node, name: 'contentType', value: 'upgrade' });
-    }
-  }
-};
-
-exports.onCreateNode = ({ node, actions }) => {
-  reactOnCreateNode({ node, actions });
-  // coreOnCreateNode({ node, actions });
+  const isSitePage = node.internal.type === 'SitePage';
+  if (isSitePage && componentPathRegEx.test(node.path)) {
+    // console.log(`label: ${node.path.split('/').pop()}`);
+    createNodeField({
+      node,
+      name: 'label',
+      value: pascalCase(node.path.split('/').pop())
+    });
+    createNodeField({
+      node,
+      name: 'type',
+      value: node.path.split('/')[3]
+    });
+  }/* else if (isMarkdown && (isComponent || isLayout || isDemo || isUtility || isUpgrade)) {
+    const pathArr = node.fileAbsolutePath.split('/');
+    const relativeDir = `/docs/core/${pathArr.slice(pathArr.length - 4, pathArr.length - 2).join('/')}`;
+    // console.log(`creating field: ${relativeDir}`);
+    createNodeField({ node, name: 'path', value: relativeDir });
+  }*/
 };
 
 const reactCreatePages = ({ graphql, actions }) => {
@@ -94,21 +89,21 @@ const reactCreatePages = ({ graphql, actions }) => {
         name
       }
       query AllDocsFiles {
-        docs: allFile(filter: { absolutePath: { glob: "**/_repos/react-*/**/*.docs.js" } }) {
+        docs: allFile(filter: { sourceInstanceName: { eq: "react" }, absolutePath: { glob: "**/*.docs.js" } }) {
           edges {
             node {
               ...DocFile
             }
           }
         }
-        examples: allFile(filter: { absolutePath: { glob: "**/_repos/react-*/**/examples/!(*.styles).js" } }) {
+        examples: allFile(filter: { sourceInstanceName: { eq: "react" }, absolutePath: { glob: "**/examples/!(*.styles).js" } }) {
           edges {
             node {
               ...DocFile
             }
           }
         }
-        exampleImages: allFile(filter: { absolutePath: { glob: "**/_repos/react-*/**" }, extension: { regex: "/(png|svg|jpg)/" } }) {
+        exampleImages: allFile(filter: { sourceInstanceName: { eq: "react" }, extension: { regex: "/(png|svg|jpg)/" } }) {
           edges {
             node {
               ...DocFile
@@ -133,16 +128,16 @@ const reactCreatePages = ({ graphql, actions }) => {
           if (
             example.relativeDirectory
               .split('/')
-              .slice(0, 4)
+              .slice(0, 3)
               .join('/') === doc.relativeDirectory
           ) {
-            const examplePath = `../_repos/${example.relativePath}`;
+            const examplePath = `../_repos/${packageDir}/${example.relativePath}`;
             rawExamples.push(`{name: '${example.name}', path: '${examplePath}', file: require('!!raw-loader!${examplePath}')}`);
           }
         });
         const allImages = [];
         exampleImages.edges.forEach(({ node: image }) => {
-          const imagePath = `../_repos/${image.relativePath}`;
+          const imagePath = `../_repos/react-core/${image.relativePath}`;
           allImages.push(`{name: '${image.base}', file: require('${imagePath}')}`);
         });
 
@@ -167,7 +162,8 @@ const reactCreatePages = ({ graphql, actions }) => {
         );
 
         fs.outputFileSync(filePath, content);
-        const shortenedPath = doc.relativePath.split('/').slice(2).join('/');
+        const shortenedPath = doc.relativePath.split('/').slice(1).join('/');
+        console.log(`creating page for: /docs/react/${path.dirname(shortenedPath).toLowerCase()}`);
         createPage({
           path: `/docs/react/${path.dirname(shortenedPath).toLowerCase()}`,
           component: filePath
@@ -178,9 +174,9 @@ const reactCreatePages = ({ graphql, actions }) => {
       fs.writeFileSync(indexFilePath, docExports.join('\n'));
 
       examples.edges.forEach(({ node: example }) => {
-        const shortenedPath = example.relativePath.split('/').slice(2).join('/');
+        const shortenedPath = example.relativePath.split('/').slice(1).join('/');
         const examplePath = `/docs/react/${path.dirname(shortenedPath).toLowerCase()}/${paramCase(example.name)}`;
-
+        console.log(`creating page for: ${examplePath}`);
         createPage({
           path: examplePath,
           layout: 'example',
@@ -192,109 +188,115 @@ const reactCreatePages = ({ graphql, actions }) => {
   })
 };
 
-const coreCreatePages = ({ actions, graphql }) => {
+const coreCreatePages = ({ graphql, actions }) => {
   const { createPage } = actions;
-
-  return graphql(`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              type
-              path
-              contentType
+  return new Promise((resolve, reject) => {
+    graphql(`
+      fragment DocFile on File {
+        relativePath
+        relativeDirectory
+        absolutePath
+        base
+        name
+      }
+      query AllCoreFiles {
+        examples: allFile(filter: { sourceInstanceName: { eq: "core" }, absolutePath: { glob: "**/examples/index.js" } }) {
+          edges {
+            node {
+              ...DocFile
             }
           }
         }
       }
-    }
-  `).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors);
-    }
-
-    return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      if (!node.fields) {
-        return;
+    `).then(result => {
+      if (result.errors) {
+        return reject(result.errors);
       }
-      console.log(`creating page for: ${node.fields.path}`);
-      createPage({
-        path: node.fields.path,
-        component: path.resolve(__dirname, `./_repos/core/src/_site/templates/${node.fields.type}.js`),
-        context: {
-          pagePath: node.fields.path,
-          type: node.fields.type,
-          contentType: node.fields.contentType
-        }
+      const { examples } = result.data;
+
+      examples.edges.forEach(({ node }) => {
+        const shortenedPath = node.relativePath.split('/').slice(2, 4).join('/').toLowerCase();
+        const examplePath = `/docs/core/${shortenedPath}`;
+
+        console.log(`creating page for: ${examplePath}`);
+        createPage({
+          path: examplePath,
+          component: path.resolve(__dirname, node.absolutePath)
+        });
+        // also create a full demo page for each component
+        console.log(`creating page for: ${examplePath}-full`);
+        createPage({
+          path: `${examplePath}-full`,
+          component: path.resolve(__dirname, node.absolutePath)
+        });
       });
     });
-  });
-};
-
-exports.createPages = ({ graphql, actions }) => {
-  reactCreatePages({ graphql, actions });
-  // coreCreatePages({ graphql, actions });
-};
-
-exports.NO_onCreatePage = async ({ page, actions }) => {
-  const { createPage } = actions;
-  const CATEGORY_PAGE_REGEX = /^\/(components|layouts|demos|utilities)\/$/;
-  const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|layouts|demos|utilities)\/([A-Za-z0-9_-]+)/;
-  const UPGRADES_PAGE_REGEX = /^\/(upgrade-examples)\/([A-Za-z0-9_-]+)/;
-  return new Promise((resolve, reject) => {
-    console.log(`checking: ${page.path}`);
-    const isCategoryPage = page.path.match(CATEGORY_PAGE_REGEX);
-    const isCategoryChildPage = page.path.match(CATEGORY_CHILD_PAGE_REGEX);
-    const isUpgradePage = page.path.match(UPGRADES_PAGE_REGEX);
-
-    page.context.type = 'page';
-    page.context.category = 'page';
-    page.context.slug = '';
-    page.context.name = '';
-    page.context.title = '';
-    page.layout = 'index';
-
-    if (isCategoryPage) {
-      page.context.type = 'category';
-      page.context.category = page.path.match(CATEGORY_PAGE_REGEX)[1];
-    } else if (isCategoryChildPage) {
-      const pageCategory = page.path.match(CATEGORY_CHILD_PAGE_REGEX)[1];
-      const pageSlug = page.path.match(CATEGORY_CHILD_PAGE_REGEX)[2];
-      const pageName = pageSlug.replace('-', ' ');
-      const pageTitle = inflection.titleize(pageName);
-      page.context.type = inflection.singularize(pageCategory);
-      page.context.category = pageCategory;
-      page.context.slug = pageSlug;
-      page.context.name = pageName;
-      page.context.title = pageTitle;
-    } else if (isUpgradePage) {
-      const pageCategory = 'upgrade';
-      const pageSlug = page.path.match(UPGRADES_PAGE_REGEX)[2];
-      const pageName = pageSlug.replace('-', ' ');
-      const pageTitle = inflection.titleize(pageName);
-      page.context.type = inflection.singularize(pageCategory);
-      page.context.category = pageCategory;
-      page.context.slug = pageSlug;
-      page.context.name = pageName;
-      page.context.title = pageTitle;
-      page.layout = 'upgrade';
-    }
-    createPage(page);
-
-    if (isCategoryChildPage || isUpgradePage) {
-      // create full demo page for each component
-      const demoPage = Object.assign({}, page);
-      demoPage.layout = 'demo';
-      const nodePath = demoPage.path;
-      demoPage.path = `${nodePath.substr(0, nodePath.length - 1)}-full/`;
-      createPage(demoPage);
-    }
     resolve();
-  });
+  })
 };
 
-exports.NO_onCreateWebpackConfig = ({ stage, actions }) => {
+// const coreOnCreatePage = async ({ page, actions }) => {
+//   const { createPage } = actions;
+//   const CATEGORY_PAGE_REGEX = /^\/(components|layouts|demos|utilities)\/$/;
+//   const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|layouts|demos|utilities)\/([A-Za-z0-9_-]+)/;
+//   const UPGRADES_PAGE_REGEX = /^\/(upgrade-examples)\/([A-Za-z0-9_-]+)/;
+//   return new Promise((resolve, reject) => {
+//     const isCategoryPage = page.path.match(CATEGORY_PAGE_REGEX);
+//     const isCategoryChildPage = page.path.match(CATEGORY_CHILD_PAGE_REGEX);
+//     const isUpgradePage = page.path.match(UPGRADES_PAGE_REGEX);
+
+//     page.context.type = 'page';
+//     page.context.category = 'page';
+//     page.context.slug = '';
+//     page.context.name = '';
+//     page.context.title = '';
+//     page.layout = 'index';
+
+//     if (isCategoryPage) {
+//       page.context.type = 'category';
+//       page.context.category = page.path.match(CATEGORY_PAGE_REGEX)[1];
+//       page.path = `/docs/core${page.path}`;
+//     } else if (isCategoryChildPage) {
+//       const pageCategory = page.path.match(CATEGORY_CHILD_PAGE_REGEX)[1];
+//       const pageSlug = page.path.match(CATEGORY_CHILD_PAGE_REGEX)[2];
+//       const pageName = pageSlug.replace('-', ' ');
+//       const pageTitle = inflection.titleize(pageName);
+//       page.path = `/docs/core${page.path}`;
+//       page.context.type = inflection.singularize(pageCategory);
+//       page.context.category = pageCategory;
+//       page.context.slug = pageSlug;
+//       page.context.name = pageName;
+//       page.context.title = pageTitle;
+//     } else if (isUpgradePage) {
+//       const pageCategory = 'upgrade';
+//       const pageSlug = page.path.match(UPGRADES_PAGE_REGEX)[2];
+//       const pageName = pageSlug.replace('-', ' ');
+//       const pageTitle = inflection.titleize(pageName);
+//       page.path = `/docs/core${page.path}`;
+//       page.context.type = inflection.singularize(pageCategory);
+//       page.context.category = pageCategory;
+//       page.context.slug = pageSlug;
+//       page.context.name = pageName;
+//       page.context.title = pageTitle;
+//       page.layout = 'upgrade';
+//     }
+//     console.log(`creating page: ${page.path}`);
+//     createPage(page);
+
+//     if (isCategoryChildPage || isUpgradePage) {
+//       // create full demo page for each component
+//       const demoPage = Object.assign({}, page);
+//       demoPage.layout = 'demo';
+//       const nodePath = demoPage.path;
+//       demoPage.path = `/docs/core${nodePath.substr(0, nodePath.length - 1)}-full/`;
+//       console.log(`creating full page: ${demoPage.path}`);
+//       createPage(demoPage);
+//     }
+//     resolve();
+//   });
+// };
+
+const coreOnCreateWebpackConfig = ({ stage, actions }) => {
   const COMPONENTS_PATH = path.resolve(__dirname, './_repos/core/src/patternfly/components');
   const DEMOS_PATH = path.resolve(__dirname, './_repos/core/src/patternfly/demos');
   const LAYOUTS_PATH = path.resolve(__dirname, './_repos/core/src/patternfly/layouts');
@@ -328,10 +330,10 @@ exports.NO_onCreateWebpackConfig = ({ stage, actions }) => {
     },
     resolve: {
       alias: {
-        '@siteComponents': path.resolve(__dirname, './_repos/core/src/site/_site'),
+        '@siteComponents': path.resolve(__dirname, './src/components/_site'),
         '@components': path.resolve(__dirname, './_repos/core/src/patternfly/components'),
         '@layouts': path.resolve(__dirname, './_repos/core/src/patternfly/layouts'),
-        '@demos': path.resolve(__dirname, './_repos/core/src/demos'),
+        '@demos': path.resolve(__dirname, './_repos/core/src/patternfly/demos'),
         '@project': path.resolve(__dirname, './_repos/core/src')
       }
     },

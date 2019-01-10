@@ -33,22 +33,50 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
     // following plugins common to REACT and CORE
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `repos`,
+    //     path: `${__dirname}/_repos`
+    //   }
+    // },
+    // following plugins for REACT
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `repos`,
-        path: `${__dirname}/_repos`
+        name: `react`,
+        path: `${__dirname}/_repos/react-core`
       }
     },
-    // following plugins for REACT
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `react`,
+        path: `${__dirname}/_repos/react-charts`
+      }
+    },
     'gatsby-plugin-typescript',
     'gatsby-transformer-react-docgen',
     // following plugins for CORE
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `core`,
+        path: `${__dirname}/_repos/core`
+      }
+    },
+    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [],
+        precision: 5
+      }
+    },
     // {
-    //   resolve: `gatsby-plugin-sass`,
+    //   resolve: `gatsby-plugin-page-creator`,
     //   options: {
-    //     postCssPlugins: [],
-    //     precision: 5
+    //     path: `${__dirname}/_repos/core/src/patternfly`
     //   }
     // },
     // {
@@ -69,12 +97,6 @@ module.exports = {
     //   resolve: 'gatsby-remark-embed-snippet',
     //   options: {
     //     directory: `${__dirname}/_repos/core`
-    //   }
-    // },
-    // {
-    //   resolve: `gatsby-plugin-page-creator`,
-    //   options: {
-    //     path: `${__dirname}/_repos/core/src/patternfly`
     //   }
     // },
   ],

@@ -8,7 +8,7 @@ import Content from '../content';
 import { Title } from '@patternfly/react-core';
 import PropsTable from '../propsTable';
 import Section from '../section';
-import DocsPage from '../../pages/docs';
+import DocsReactPage from '../../pages/docs/react';
 
 const propTypes = {
   data: PropTypes.any.isRequired,
@@ -48,7 +48,7 @@ class ComponentDocs extends React.PureComponent {
     const makeDescription = html => ({ __html: html });
     const getDocGenInfo = name => data.allComponentMetadata.edges.find(edge => edge.node.displayName === name);
     return (
-      <DocsPage>
+      <DocsReactPage>
         <Content>
           <Title size="3xl">{title}</Title>
           {Boolean(description) && (
@@ -97,7 +97,7 @@ class ComponentDocs extends React.PureComponent {
             return null;
           })}
         </Content>
-      </DocsPage>
+      </DocsReactPage>
     );
   }
 }

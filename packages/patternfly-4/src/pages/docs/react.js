@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
-import * as DocsFiles from '../../.tmp';
+import * as DocsFiles from '../../../.tmp';
 
 import {
   Button,
@@ -13,14 +13,14 @@ import {
   TextInput
 } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
-import styles from '../components/navigation/navigation.styles';
-import NavigationItem from '../components/navigation/navigationItem';
-import Layout from '../components/layout';
-import Image from '../components/image';
-import SEO from '../components/seo';
-import Switcher from '../components/switcher';
+import styles from '../../components/navigation/navigation.styles';
+import NavigationItem from '../../components/navigation/navigationItem';
+import Layout from '../../components/layout';
+import Image from '../../components/image';
+import SEO from '../../components/seo';
+import Switcher from '../../components/switcher';
 
-class DocsPage extends React.Component {
+class DocsReactPage extends React.Component {
   state = {
     activeItem: '',
     searchValue: ''
@@ -93,6 +93,67 @@ class DocsPage extends React.Component {
     const SideNav = (
       <Nav onSelect={this.onSideNavSelect} aria-label="Nav">
         <Switcher />
+        <Form className={css(styles.search)} onSubmit={event => { event.preventDefault(); return false; }}>
+          <FormGroup
+            label="Search Components"
+            fieldId="primaryComponentSearch">
+            <TextInput
+              type="text"
+              id="primaryComponentSearch"
+              name="primaryComponentSearch"
+              placeholder="For example, &quot;button&quot;"
+              value={searchValue}
+              onChange={this.handleSearchChange}
+            />
+          </FormGroup>
+        </Form>
+        {Boolean(filteredComponentRoutes.length) && (
+          <NavGroup title="Components">
+            {filteredComponentRoutes.map(route => (
+              <NavItem
+                itemId={route.to} 
+                isActive={activeItem === route.to}
+                key={route.label}
+              >
+                <NavigationItem
+                  to={route.to}
+                  pkg={route.pkg}
+                  components={route.filteredComponents || route.components}
+                >
+                  {route.label}
+                </NavigationItem>
+              </NavItem>
+            ))}
+          </NavGroup>
+        )}
+        {Boolean(filteredLayoutRoutes.length) && (
+          <NavGroup title="Layouts">
+            {filteredLayoutRoutes.map(route => (
+              <NavItem
+                itemId={route.to} 
+                isActive={activeItem === route.to}
+                key={route.label}
+              >
+                <NavigationItem
+                  to={route.to}
+                  pkg={route.pkg}
+                  components={route.filteredComponents || route.components}
+                >
+                  {route.label}
+                </NavigationItem>
+              </NavItem>
+            ))}
+          </NavGroup>
+        )}
+        {Boolean(filteredDemoRoutes.length) && (
+          <NavGroup title="Demos">
+            {filteredDemoRoutes.map(route => (
+              <NavigationItem key={route.label} to={route.to}>
+                {route.label}
+              </NavigationItem>
+            ))}
+          </NavGroup>
+        )}
       </Nav>
     );
 
@@ -144,6 +205,6 @@ export default props => (
         }
       }
     `}
-    render={data => <DocsPage data={data} {...props} />}
+    render={data => <DocsReactPage data={data} {...props} />}
   />
 );

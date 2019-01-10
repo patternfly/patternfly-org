@@ -4,6 +4,8 @@ const source = 'node_modules/@patternfly/src-patternfly-next/src';
 const destination = '_repos/core/src';
 const sourceHelpers = 'node_modules/@patternfly/src-patternfly-next/build/helpers';
 const destinationHelpers = '_repos/core/build/helpers';
+const sourceAssets = 'node_modules/@patternfly/src-patternfly-next/static/assets';
+const destinationAssets = './static/assets';
 
 fs.remove('_repos/core', (errRemove) => {
 if (errRemove) {
@@ -50,6 +52,26 @@ console.log('Removed _repos/core dir');
       }
       // eslint-disable-next-line no-console
       console.log('Copied core/build/helpers into _repos/core/build/helpers dir');
+    });
+  });
+
+  // create directory structure
+  fs.ensureDir(destinationAssets, (errCreateAssets) => {
+    if (errCreateAssets) {
+      // eslint-disable-next-line no-console
+      return console.error(errCreateAssets);
+    }
+    // eslint-disable-next-line no-console
+    console.log('Created static/assets dir');
+
+    // Copy files
+    fs.copy(sourceAssets, destinationAssets, (errCopyAssets) => {
+      if (errCopyAssets) {
+        // eslint-disable-next-line no-console
+        return console.error(errCopyAssets);
+      }
+      // eslint-disable-next-line no-console
+      console.log('Copied core/static/assets into static dir');
     });
   });
 
