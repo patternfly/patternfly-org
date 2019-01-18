@@ -3,7 +3,7 @@ import styles from '@patternfly/patternfly-next/components/Dropdown/dropdown.css
 import { css } from '@patternfly/react-styles';
 import PropTypes from 'prop-types';
 import { componentShape } from '../../internal/componentShape';
-import { DropdownPosition } from './dropdownConstants';
+import { DropdownPosition, DropdownContext } from './dropdownConstants';
 import FocusTrap from 'focus-trap-react';
 
 const propTypes = {
@@ -16,7 +16,9 @@ const propTypes = {
   /** Indicates which component will be used as dropdown menu */
   component: componentShape,
   /** Indicates where menu will be alligned horizontally */
-  position: PropTypes.oneOf(Object.keys(DropdownPosition))
+  position: PropTypes.oneOf(Object.values(DropdownPosition)),
+  /** Additional props are spread to the container component */
+  '': PropTypes.any
 };
 
 const defaultProps = {
@@ -31,21 +33,30 @@ const DropdownMenu = ({ className, isOpen, position, children, component: Compon
   let menu = null;
   if (Component === 'div') {
     menu = (
-      <Component
-        {...props}
-        className={css(
-          styles.dropdownMenu,
-          position === DropdownPosition.right && styles.modifiers.alignRight,
-          className
+      <DropdownContext.Consumer>
+        {onSelect => (
+          <Component
+            {...props}
+            className={css(
+              styles.dropdownMenu,
+              position === DropdownPosition.right && styles.modifiers.alignRight,
+              className
+            )}
+            hidden={!isOpen}
+            onClick={event => onSelect && onSelect(event)}
+          >
+            {children}
+          </Component>
         )}
-        hidden={!isOpen}
-      >
-        {children}
-      </Component>
+      </DropdownContext.Consumer>
     );
   } else if (Component === 'ul') {
     menu = (
-      <FocusTrap>
+      <FocusTrap
+        focusTrapOptions={{
+          clickOutsideDeactivates: true
+        }}
+      >
         <Component
           {...props}
           className={css(

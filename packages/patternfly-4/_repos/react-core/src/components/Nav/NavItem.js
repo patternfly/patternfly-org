@@ -13,6 +13,8 @@ const propTypes = {
   to: PropTypes.string,
   /** Flag indicating whether the item is active */
   isActive: PropTypes.bool,
+  /** Flag indicating whether the item has a horizontal separator below */
+  isSeparated: PropTypes.bool,
   /** Group identifier, will be returned with the onToggle and onSelect callback passed to the Nav component */
   groupId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /** Item identifier, will be returned with the onToggle and onSelect callback passed to the Nav component */
@@ -20,7 +22,9 @@ const propTypes = {
   /** If true prevents the default anchor link action to occur. Set to true if you want to handle navigation yourself. */
   preventDefault: PropTypes.bool,
   /** Callback for item click */
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  /** Additional props are spread to the container <a> */
+  '': PropTypes.any
 };
 
 const defaultProps = {
@@ -28,20 +32,35 @@ const defaultProps = {
   className: '',
   to: '',
   isActive: false,
+  isSeparated: false,
   groupId: null,
   itemId: null,
   preventDefault: false,
   onClick: null
 };
 
-const NavItem = ({ className, children, to, isActive, groupId, itemId, preventDefault, onClick, ...rest }) => {
+const NavItem = ({
+  className,
+  children,
+  to,
+  isActive,
+  isSeparated,
+  groupId,
+  itemId,
+  preventDefault,
+  onClick,
+  ...rest
+}) => {
   const defaultLink = (
     <NavContext.Consumer>
       {context => (
         <a
           href={to}
           onClick={e => context.onSelect(e, groupId, itemId, to, preventDefault, onClick)}
-          className={css(styles.navLink, isActive && styles.modifiers.current, className)}
+          className={css(styles.navLink,
+            isActive && styles.modifiers.current,
+            isSeparated && styles.modifiers.separator,
+            className)}
           aria-current={isActive ? 'page' : null}
           {...rest}
         >
@@ -57,7 +76,11 @@ const NavItem = ({ className, children, to, isActive, groupId, itemId, preventDe
       {context =>
         React.cloneElement(children, {
           onClick: e => context.onSelect(e, groupId, itemId, to, preventDefault, onClick),
-          className: css(styles.navLink, isActive && styles.modifiers.current, className),
+          className: css(
+            styles.navLink,
+            isActive && styles.modifiers.current,
+            isSeparated && styles.modifiers.separator,
+            className),
           'aria-current': isActive ? 'page' : null
         })
       }

@@ -22,7 +22,7 @@ const navItemDescriptor = pkg => `Found in patternfly ${pkg}`;
 const navItemDescriptorId = children => `${children}Descriptor`;
 
 const NavigationItem = ({ to, children, pkg, components }) => (
-  <li>
+  <>
     <Link
       className={css(styles.navigationItem)}
       activeClassName={css(styles.active)}
@@ -49,7 +49,7 @@ const NavigationItem = ({ to, children, pkg, components }) => (
           ))}
         </ul>
       )}
-  </li>
+  </>
 );
 
 NavigationItem.propTypes = propTypes;

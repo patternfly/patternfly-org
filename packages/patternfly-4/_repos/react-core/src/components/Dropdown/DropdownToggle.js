@@ -7,7 +7,9 @@ import { css } from '@patternfly/react-styles';
 
 const DropdownToggle = ({ children, iconComponent: IconComponent, ...props }) => (
   <Toggle {...props}>
-    {children}
+    <span className={css(styles.dropdownToggleText)} >
+      {children}
+    </span>
     {IconComponent && <IconComponent className={css(styles.dropdownToggleIcon)} />}
   </Toggle>
 );
@@ -34,7 +36,9 @@ DropdownToggle.propTypes = {
   /** Display the toggle with no border or background */
   isPlain: PropTypes.bool,
   /** The icon to display for the toggle. Defaults to CaretDownIcon. Set to null to not show an icon. */
-  iconComponent: PropTypes.func
+  iconComponent: PropTypes.func,
+  /** Additional props are spread to the container component */
+  '': PropTypes.any
 };
 
 DropdownToggle.defaultProps = {

@@ -1,6 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`state active 1`] = `
+.pf-c-dropdown__toggle-text {
+  display: block;
+}
 .pf-c-dropdown__toggle-icon {
   display: block;
 }
@@ -49,8 +52,13 @@ exports[`state active 1`] = `
       className="pf-c-dropdown__toggle pf-m-active"
       id="Dropdown Toggle"
       onClick={[Function]}
+      type="button"
     >
-      Dropdown
+      <span
+        className="pf-c-dropdown__toggle-text"
+      >
+        Dropdown
+      </span>
       <CaretDownIcon
         className="pf-c-dropdown__toggle-icon"
         color="currentColor"
@@ -84,6 +92,9 @@ exports[`state active 1`] = `
 `;
 
 exports[`state focus 1`] = `
+.pf-c-dropdown__toggle-text {
+  display: block;
+}
 .pf-c-dropdown__toggle-icon {
   display: block;
 }
@@ -132,8 +143,13 @@ exports[`state focus 1`] = `
       className="pf-c-dropdown__toggle pf-m-focus"
       id="Dropdown Toggle"
       onClick={[Function]}
+      type="button"
     >
-      Dropdown
+      <span
+        className="pf-c-dropdown__toggle-text"
+      >
+        Dropdown
+      </span>
       <CaretDownIcon
         className="pf-c-dropdown__toggle-icon"
         color="currentColor"
@@ -167,6 +183,9 @@ exports[`state focus 1`] = `
 `;
 
 exports[`state hover 1`] = `
+.pf-c-dropdown__toggle-text {
+  display: block;
+}
 .pf-c-dropdown__toggle-icon {
   display: block;
 }
@@ -215,8 +234,13 @@ exports[`state hover 1`] = `
       className="pf-c-dropdown__toggle pf-m-hover"
       id="Dropdown Toggle"
       onClick={[Function]}
+      type="button"
     >
-      Dropdown
+      <span
+        className="pf-c-dropdown__toggle-text"
+      >
+        Dropdown
+      </span>
       <CaretDownIcon
         className="pf-c-dropdown__toggle-icon"
         color="currentColor"

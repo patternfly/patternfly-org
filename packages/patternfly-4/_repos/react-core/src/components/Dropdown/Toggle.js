@@ -24,7 +24,9 @@ const propTypes = {
   /** Forces active state */
   isActive: PropTypes.bool,
   /** Display the toggle with no border or background */
-  isPlain: PropTypes.bool
+  isPlain: PropTypes.bool,
+  /** Additional props are spread to the container <button> */
+  '': PropTypes.any
 };
 
 const defaultProps = {
@@ -42,11 +44,13 @@ const defaultProps = {
 class DropdownToggle extends Component {
   componentDidMount = () => {
     document.addEventListener('mousedown', this.onDocClick);
+    document.addEventListener('touchstart', this.onDocClick);
     document.addEventListener('keydown', this.onEscPress);
   };
 
   componentWillUnmount = () => {
     document.removeEventListener('mousedown', this.onDocClick);
+    document.removeEventListener('touchstart', this.onDocClick);
     document.removeEventListener('keydown', this.onEscPress);
   };
 
@@ -77,6 +81,7 @@ class DropdownToggle extends Component {
       onToggle,
       parentRef,
       id,
+      type,
       ...props
     } = this.props;
     return (
@@ -94,6 +99,7 @@ class DropdownToggle extends Component {
           isPlain && styles.modifiers.plain,
           className
         )}
+        type={type || 'button'}
         onClick={_event => onToggle && onToggle(!isOpen)}
         aria-expanded={isOpen}
       >

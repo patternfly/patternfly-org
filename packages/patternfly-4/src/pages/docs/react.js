@@ -159,6 +159,7 @@ class DocsReactPage extends React.Component {
 
     return (<Layout sideNav={SideNav}>
     <SEO title="Docs" keywords={['gatsby', 'application', 'react']} />
+    {!this.props.children && (<p>React Documentation</p>)}
     {this.props.children}
   </Layout>);
   }

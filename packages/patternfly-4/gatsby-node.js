@@ -9,6 +9,10 @@ const fs = require('fs-extra');
 const pascalCase = require('pascal-case');
 const paramCase = require('param-case');
 const inflection = require('inflection');
+const glob = require('glob');
+
+// Map to handlebars partial files for Core
+let partialsToLocationsMap = null;
 
 exports.onCreateNode = ({ node, actions }) => {
   reactOnCreateNode({ node, actions });
@@ -20,8 +24,77 @@ exports.createPages = ({ graphql, actions }) => {
   coreCreatePages({ graphql, actions });
 };
 
-exports.onCreateWebpackConfig = ({ stage, actions }) => {
-  coreOnCreateWebpackConfig({ stage, actions });
+exports.onCreateWebpackConfig = ({ stage, actions, plugins, getConfig }) => 
+  new Promise((resolve, reject) => {
+    if (partialsToLocationsMap === null) {
+      partialsToLocationsMap = {};
+      glob(path.resolve(__dirname, './_repos/core/src/patternfly/**/*.hbs'), { ignore: '**/examples/**' }, (err, files) => {
+        files.forEach(file => {
+          const fileNameArr = file.split('/');
+          const fileName = fileNameArr[fileNameArr.length - 1].slice(0, -4);
+          partialsToLocationsMap[fileName] = file;
+        });
+        continueWebpackConfig({ stage, actions, plugins, getConfig });
+        resolve();
+      });
+    } else {
+      continueWebpackConfig({ stage, actions, plugins, getConfig });
+      resolve();
+    }
+});
+
+const continueWebpackConfig = ({ stage, actions, plugins, getConfig }) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.md$/,
+          loader: 'html-loader!markdown-loader'
+        },
+        {
+          test: /\.hbs$/,
+          query: {
+            extensions: '.hbs',
+            partialResolver(partial, callback) {
+              console.log(`resolving ${partial}: ${partialsToLocationsMap[partial]}`);
+              callback(null, partialsToLocationsMap[partial]);
+            },
+            helperDirs: path.resolve(__dirname, './_repos/core/build/helpers')
+          },
+          loader: 'handlebars-loader'
+        }
+      ]
+    },
+    resolve: {
+      alias: {
+        '@siteComponents': path.resolve(__dirname, './src/components/_site'),
+        '@components': path.resolve(__dirname, './_repos/core/src/patternfly/components'),
+        '@layouts': path.resolve(__dirname, './_repos/core/src/patternfly/layouts'),
+        '@demos': path.resolve(__dirname, './_repos/core/src/patternfly/demos'),
+        '@project': path.resolve(__dirname, './_repos/core/src')
+      }
+    },
+    resolveLoader: {
+      alias: { raw: 'raw-loader' }
+    }
+  });
+
+  const configAfter = getConfig();
+  const minimizer = [
+    plugins.minifyJs({
+      terserOptions: {
+        // keep function names so that we can find the corresponding example components in src/components/componentDocs/componentDocs.js
+        keep_fnames: true
+      }
+    }),
+    plugins.minifyCss()
+  ];
+  if (!configAfter.optimization) {
+    configAfter.optimization = {};
+  }
+  configAfter.optimization.minimizer = minimizer;
+
+  actions.replaceWebpackConfig(configAfter);
 };
 
 const reactOnCreateNode = ({ node, actions }) => {
@@ -45,16 +118,6 @@ const reactOnCreateNode = ({ node, actions }) => {
 const coreOnCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
   const componentPathRegEx = /\/docs\/core\/.*(components|layouts|demos|upgrade-examples|utilities)\//;
-  const COMPONENTS_BASE_DIR = path.resolve(__dirname, './_repos/core/src/patternfly/components');
-  const DEMOS_BASE_DIR = path.resolve(__dirname, './_repos/core/src/patternfly/demos');
-  const LAYOUTS_BASE_DIR = path.resolve(__dirname, './_repos/core/src/patternfly/layouts');
-  const UTILITIES_BASE_DIR = path.resolve(__dirname, './_repos/core/src/patternfly/utilities');
-  const UPGRADES_BASE_DIR = path.resolve(__dirname, './_repos/core/src/patternfly/upgrade-examples');
-  const isComponent = node.fileAbsolutePath && node.fileAbsolutePath.includes(COMPONENTS_BASE_DIR);
-  const isLayout = node.fileAbsolutePath && node.fileAbsolutePath.includes(LAYOUTS_BASE_DIR);
-  const isDemo = node.fileAbsolutePath && node.fileAbsolutePath.includes(DEMOS_BASE_DIR);
-  const isUtility = node.fileAbsolutePath && node.fileAbsolutePath.includes(UTILITIES_BASE_DIR);
-  const isUpgrade = node.fileAbsolutePath && node.fileAbsolutePath.includes(UPGRADES_BASE_DIR);
   const isMarkdown = node.internal.type === 'MarkdownRemark';
   const isSitePage = node.internal.type === 'SitePage';
   if (isSitePage && componentPathRegEx.test(node.path)) {
@@ -64,6 +127,7 @@ const coreOnCreateNode = ({ node, actions }) => {
       name: 'label',
       value: pascalCase(node.path.split('/').pop())
     });
+    // console.log(`type: ${node.path.split('/')[3]}`);
     createNodeField({
       node,
       name: 'type',
@@ -295,53 +359,6 @@ const coreCreatePages = ({ graphql, actions }) => {
 //     resolve();
 //   });
 // };
-
-const coreOnCreateWebpackConfig = ({ stage, actions }) => {
-  const COMPONENTS_PATH = path.resolve(__dirname, './_repos/core/src/patternfly/components');
-  const DEMOS_PATH = path.resolve(__dirname, './_repos/core/src/patternfly/demos');
-  const LAYOUTS_PATH = path.resolve(__dirname, './_repos/core/src/patternfly/layouts');
-  const UTILITIES_PATH = path.resolve(__dirname, './_repos/core/src/patternfly/utilities');
-  const UPGRADE_PATH = path.resolve(__dirname, './_repos/core/src/patternfly/upgrade-examples');
-  const COMPONENT_PATHS = fs.readdirSync(COMPONENTS_PATH).map(name => path.resolve(COMPONENTS_PATH, `./${name}`));
-  const DEMO_PATH = fs.readdirSync(DEMOS_PATH).map(name => path.resolve(DEMOS_PATH, `./${name}`));
-  const LAYOUT_PATHS = fs.readdirSync(LAYOUTS_PATH).map(name => path.resolve(LAYOUTS_PATH, `./${name}`));
-  const UTILITIES_PATHS = fs.readdirSync(UTILITIES_PATH).map(name => path.resolve(UTILITIES_PATH, `./${name}`));
-  const UPGRADES_PATHS = fs.readdirSync(UPGRADE_PATH).map(name => path.resolve(UPGRADE_PATH, `./${name}`));
-
-  actions.setWebpackConfig({
-    module: {
-      rules: [
-        {
-          test: /\.md$/,
-          loader: 'html-loader!markdown-loader'
-        },
-        {
-          test: /\.hbs$/,
-          query: {
-            partialDirs: COMPONENT_PATHS.concat(LAYOUT_PATHS)
-              .concat(DEMO_PATH)
-              .concat(UTILITIES_PATHS)
-              .concat(UPGRADES_PATHS),
-            helperDirs: path.resolve(__dirname, './_repos/core/build/helpers')
-          },
-          loader: 'handlebars-loader'
-        }
-      ]
-    },
-    resolve: {
-      alias: {
-        '@siteComponents': path.resolve(__dirname, './src/components/_site'),
-        '@components': path.resolve(__dirname, './_repos/core/src/patternfly/components'),
-        '@layouts': path.resolve(__dirname, './_repos/core/src/patternfly/layouts'),
-        '@demos': path.resolve(__dirname, './_repos/core/src/patternfly/demos'),
-        '@project': path.resolve(__dirname, './_repos/core/src')
-      }
-    },
-    resolveLoader: {
-      alias: { raw: 'raw-loader' }
-    }
-  });
-};
 
 ////////// EXPERIMENTAL TYPESCRIPT CODE BELOW - TRYING TO PARSE TSX TO DOCGEN //////////
 

@@ -24,7 +24,9 @@ const propTypes = {
   /** the number of columns all grid items should span on a large device */
   lg: gridItemSpanValueShape,
   /** the number of columns all grid items should span on a xLarge device */
-  xl: gridItemSpanValueShape
+  xl: gridItemSpanValueShape,
+  /** Additional props are spread to the container <div> */
+  '': PropTypes.any
 };
 
 const defaultProps = {
@@ -55,7 +57,6 @@ const Grid = ({ children, className, gutter, span, ...props }) => {
 
   return (
     <div
-      className={css(...classes, gutter && getGutterModifier(styles, gutter, styles.modifiers.gutter), className)}
       {...props}
     >
       {children}

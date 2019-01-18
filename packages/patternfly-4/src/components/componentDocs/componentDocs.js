@@ -57,7 +57,6 @@ class ComponentDocs extends React.PureComponent {
           <Section title="Examples" headingLevel="h2">
             {examples.map((exampleObj, i) => {
               const ComponentExample = exampleObj.component;
-              // const { __docgenInfo: componentDocs } = ComponentExample;
               const rawExample = rawExamples.find(
                 example => example.name === ComponentExample.name
               );
@@ -81,6 +80,7 @@ class ComponentDocs extends React.PureComponent {
             })}
           </Section>
           {Object.entries(components).map(([componentName]) => {
+            // Loop through the components and find the docGen info for each one
             // Only generate docs for props for javascript code.
             const componentDocs = getDocGenInfo(componentName);
             if (componentDocs) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@patternfly/patternfly-next/components/Label/styles.css';
+import styles from '@patternfly/patternfly-next/components/Label/label.css';
 import { css } from '@patternfly/react-styles';
 import PropTypes from 'prop-types';
 
@@ -15,7 +15,9 @@ Label.propTypes = {
   /** Content rendered inside the label. */
   children: PropTypes.node.isRequired,
   /** Flag to show if the label is compact. */
-  isCompact: PropTypes.bool
+  isCompact: PropTypes.bool,
+  /** Additional props are spread to the container <span> */
+  '': PropTypes.any
 };
 
 Label.defaultProps = {

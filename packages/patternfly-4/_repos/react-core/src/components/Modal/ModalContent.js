@@ -27,7 +27,9 @@ const propTypes = {
   /** Creates a large version of the Modal */
   isLarge: PropTypes.bool,
   /** id to use for Modal Box description */
-  id: PropTypes.string.isRequired
+  id: PropTypes.string.isRequired,
+  /** Additional props are spread to the ModalBoxBody component */
+  '': PropTypes.any
 };
 
 const defaultProps = {
@@ -41,7 +43,7 @@ const defaultProps = {
 
 const ModalContent = ({ children, className, isOpen, title, hideTitle, actions, onClose, isLarge, id, ...props }) => {
   const modalBoxHeader = title && <ModalBoxHeader> {title} </ModalBoxHeader>;
-  const modalBoxFooter = actions && <ModalBoxFooter> {actions} </ModalBoxFooter>;
+  const modalBoxFooter = actions.length > 0 && <ModalBoxFooter> {actions} </ModalBoxFooter>;
   if (!isOpen) {
     return null;
   }

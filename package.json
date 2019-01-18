@@ -17,10 +17,10 @@
   },
   "license": "Apache-2.0",
   "devDependencies": {
-    "fs-extra": "^7.0.0",
-    "lerna": "^2.11.0"
+    "fs-extra": "^7.0.1",
+    "lerna": "^3.10.5"
   },
-  "description": "Documentation, etc. for PatternFly",
+  "description": "Documentation for PatternFly",
   "repository": {
     "type": "git",
     "url": "https://github.com/patternfly/patternfly-org.git"
@@ -28,5 +28,10 @@
   "bugs": {
     "url": "https://github.com/patternfly/patternfly-org/issues"
   },
-  "homepage": "https://github.com/patternfly/patternfly-org"
+  "homepage": "https://github.com/patternfly/patternfly-org",
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ]
+  }
 }

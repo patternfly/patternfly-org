@@ -29,7 +29,9 @@ const propTypes = {
   /** Adds accessible text to the Alert */
   'aria-label': PropTypes.string,
   /** Variant label text for screen readers */
-  variantLabel: PropTypes.string
+  variantLabel: PropTypes.string,
+  /** Additional props are spread to the container <div>  */
+  '': PropTypes.any
 };
 
 const defaultProps = {
@@ -56,7 +58,7 @@ const Alert = ({
   variantLabel = variantLabel || capitalize(AlertVariant[variant]);
   const readerTitle = (
     <React.Fragment>
-      <span className={css(accessibleStyles.srOnly)}>{variantLabel}: </span>
+      <span className={css(accessibleStyles.screenReader)}>{variantLabel}: </span>
       {title}
     </React.Fragment>
   );

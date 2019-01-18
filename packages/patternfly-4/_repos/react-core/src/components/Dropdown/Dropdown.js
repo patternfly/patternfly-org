@@ -3,7 +3,7 @@ import styles from '@patternfly/patternfly-next/components/Dropdown/dropdown.css
 import { css } from '@patternfly/react-styles';
 import PropTypes from 'prop-types';
 import DropdownMenu from './DropdownMenu';
-import { DropdownPosition, DropdownDirection } from './dropdownConstants';
+import { DropdownPosition, DropdownDirection, DropdownContext } from './dropdownConstants';
 
 // seed for the aria-labelledby ID
 let currentId = 0;
@@ -27,13 +27,15 @@ const propTypes = {
   /** Display the toggle with no border or background */
   isPlain: PropTypes.bool,
   /** Indicates where menu will be alligned horizontally */
-  position: PropTypes.oneOf(Object.keys(DropdownPosition)),
+  position: PropTypes.oneOf(Object.values(DropdownPosition)),
   /** Display menu above or below dropdown toggle */
-  direction: PropTypes.oneOf(Object.keys(DropdownDirection)),
+  direction: PropTypes.oneOf(Object.values(DropdownDirection)),
   /** Placeholder to use custom toggle elements */
   toggle: PropTypes.node.isRequired,
   /** Function callback called when user selects item */
-  onSelect: PropTypes.func
+  onSelect: PropTypes.func,
+  /** Additional props are spread to the container <div> */
+  '': PropTypes.any
 };
 
 const defaultProps = {
@@ -86,15 +88,11 @@ class Dropdown extends React.Component {
       >
         {Children.map(toggle, oneToggle => cloneElement(oneToggle, { parentRef: this.parentRef, isOpen, id, isPlain }))}
         {isOpen && (
-          <DropdownMenu
-            component={component}
-            isOpen={isOpen}
-            position={position}
-            aria-labelledby={id}
-            onClick={event => onSelect && onSelect(event)}
-          >
-            {renderedContent}
-          </DropdownMenu>
+          <DropdownContext.Provider value={event => onSelect && onSelect(event)}>
+            <DropdownMenu component={component} isOpen={isOpen} position={position} aria-labelledby={id}>
+              {renderedContent}
+            </DropdownMenu>
+          </DropdownContext.Provider>
         )}
       </div>
     );
