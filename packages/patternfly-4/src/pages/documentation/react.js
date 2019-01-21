@@ -1,7 +1,6 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery, Link } from 'gatsby'
 import * as DocsFiles from '../../../.tmp';
-
 import {
   Button,
   Bullseye,
@@ -111,17 +110,19 @@ class DocsReactPage extends React.Component {
           <NavGroup title="Components">
             {filteredComponentRoutes.map(route => (
               <NavItem
-                itemId={route.to} 
                 isActive={activeItem === route.to}
-                key={route.label}
+                key={route.to}
               >
-                <NavigationItem
+                <Link to={route.to}>
+                  {route.label}
+                </Link>
+                {/* <NavigationItem
                   to={route.to}
                   pkg={route.pkg}
                   components={route.filteredComponents || route.components}
                 >
                   {route.label}
-                </NavigationItem>
+                </NavigationItem> */}
               </NavItem>
             ))}
           </NavGroup>
@@ -130,17 +131,19 @@ class DocsReactPage extends React.Component {
           <NavGroup title="Layouts">
             {filteredLayoutRoutes.map(route => (
               <NavItem
-                itemId={route.to} 
                 isActive={activeItem === route.to}
-                key={route.label}
+                key={route.to}
               >
-                <NavigationItem
+                <Link to={route.to}>
+                  {route.label}
+                </Link>
+                {/* <NavigationItem
                   to={route.to}
                   pkg={route.pkg}
                   components={route.filteredComponents || route.components}
                 >
                   {route.label}
-                </NavigationItem>
+                </NavigationItem> */}
               </NavItem>
             ))}
           </NavGroup>
@@ -148,9 +151,17 @@ class DocsReactPage extends React.Component {
         {Boolean(filteredDemoRoutes.length) && (
           <NavGroup title="Demos">
             {filteredDemoRoutes.map(route => (
-              <NavigationItem key={route.label} to={route.to}>
-                {route.label}
-              </NavigationItem>
+              <NavItem
+                isActive={activeItem === route.to}
+                key={route.to}
+              >
+                <Link to={route.to}>
+                  {route.label}
+                </Link>
+              </NavItem>
+              // <NavigationItem key={route.label} to={route.to}>
+              //   {route.label}
+              // </NavigationItem>
             ))}
           </NavGroup>
         )}
@@ -159,7 +170,6 @@ class DocsReactPage extends React.Component {
 
     return (<Layout sideNav={SideNav}>
     <SEO title="Docs" keywords={['gatsby', 'application', 'react']} />
-    {!this.props.children && (<p>React Documentation</p>)}
     {this.props.children}
   </Layout>);
   }
@@ -171,7 +181,7 @@ export default props => (
     query={graphql`
       query {
         componentPages: allSitePage(
-          filter: { path: { glob: "/docs/react/components/*" } }
+          filter: { path: { glob: "/documentation/react/components/*" } }
         ) {
           edges {
             node {
@@ -183,7 +193,7 @@ export default props => (
           }
         }
         layoutPages: allSitePage(
-          filter: { path: { glob: "/docs/react/layouts/*" } }
+          filter: { path: { glob: "/documentation/react/layouts/*" } }
         ) {
           edges {
             node {
@@ -194,7 +204,7 @@ export default props => (
             }
           }
         }
-        demoPages: allSitePage(filter: { path: { glob: "/docs/react/demos/*" } }) {
+        demoPages: allSitePage(filter: { path: { glob: "/documentation/react/demos/*" } }) {
           edges {
             node {
               path

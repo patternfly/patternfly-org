@@ -42,7 +42,7 @@ class Layout extends React.Component {
 
   render() {
     const { activeItem, isChecked } = this.state;
-    const { sideNav } = this.props;
+    const { tertiaryNav, sideNav } = this.props;
     const PageNav = (
       <Location>
         {({ location }) => {
@@ -55,13 +55,13 @@ class Layout extends React.Component {
                   <Link to="/get-started/">Get Started</Link>
                 </NavItem>
                 <NavItem isActive={currentPath.indexOf('/design-guidelines/') > -1}>
-                  <Link to="/design-guidelines/">Design Guidelines</Link>
+                  <Link to="/design-guidelines/styles">Design Guidelines</Link>
                 </NavItem>
-                <NavItem isActive={currentPath.indexOf('/docs/') > -1}>
-                  <Link to="/docs/">Documentation</Link>
+                <NavItem isActive={currentPath.indexOf('/documentation/') > -1}>
+                  <Link to="/documentation/react">Documentation</Link>
                 </NavItem>
                 <NavItem isActive={currentPath.indexOf('/community/') > -1}>
-                  <Link to="/community/">Community</Link>
+                  <Link to="/community/contribute">Community</Link>
                 </NavItem>
                 <NavItem isActive={currentPath.indexOf('/blog/') > -1}>
                   <Link to="/blog/">Blog</Link>
@@ -131,10 +131,11 @@ class Layout extends React.Component {
         </Helmet>
         <BackgroundImage src={bgImages} />
         <Page header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} isNavOpen /> : null}>
-          <PageSection variant={PageSectionVariants.light}>
-            {this.props.children}
-          </PageSection>
-        </Page>
+          {tertiaryNav && <PageSection variant={PageSectionVariants.light}>
+            {tertiaryNav}
+          </PageSection>}
+          {this.props.children}
+        </Page>}
       </>} />);
   }
 
@@ -142,11 +143,14 @@ class Layout extends React.Component {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  tertiaryNav: PropTypes.node,
   sideNav: PropTypes.node,
   activeNavItem: PropTypes.number
 }
 
 Layout.defaultProps = {
+  tertiaryNav: null,
+  sideNav: null,
   activeNavItem: 0
 };
 

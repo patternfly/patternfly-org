@@ -1,3 +1,6 @@
+---
+path: "/design-guidelines/usage-and-behavior/buttons-and-links"
+---
 # Buttons
 Buttons communicate and trigger actions a user can take throughout an experience.
 

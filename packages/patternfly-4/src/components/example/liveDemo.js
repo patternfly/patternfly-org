@@ -11,6 +11,9 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview, withLive } from 'reac
 import { transform } from 'babel-standalone';
 import Section from '../section';
 import copy from 'clipboard-copy';
+// add className="GeneratedSource__pre language-html" to use this theme
+import 'prismjs/themes/prism-coy.css';
+import './core-preview.scss';
 
 const propTypes = {
   className: PropTypes.string,
@@ -18,7 +21,8 @@ const propTypes = {
   path: PropTypes.string,
   images: PropTypes.array,
   live: PropTypes.bool,
-  liveScope: PropTypes.object
+  liveScope: PropTypes.object,
+  editorLanguage: PropTypes.string
 };
 
 const defaultProps = {
@@ -26,12 +30,16 @@ const defaultProps = {
   path: '',
   images: [],
   live: true,
-  liveScope: {}
+  liveScope: {},
+  editorLanguage: 'jsx'
 };
 
 const scopePlayground = { React, ...ChartComponents, ...StyledSystemComponents, ...CoreComponents, ...CoreIcons, css };
 
-const transformCode = code => {
+const transformCode = (code, editorLanguage) => {
+  if (editorLanguage !== 'jsx') {
+    return;
+  }
   try {
     // LiveEditor doesn't work properly with these so need to remove
     code = code.replace(/^import(.|\s)*?;$/gm, '');
@@ -77,7 +85,7 @@ class LiveDemo extends React.Component {
   };
 
   render() {
-    const { className, raw, images, live, liveScope, path } = this.props;
+    const { className, raw, images, live, liveScope, path, editorLanguage } = this.props;
     const { codeOpen, showCopyMessage } = this.state;
 
     const GITHUB_BASE = 'https://github.com/patternfly/patternfly-react/blob/master/packages/patternfly-4';
@@ -98,8 +106,8 @@ class LiveDemo extends React.Component {
 
     return (
       <Section>
-        <LiveProvider code={raw} scope={scope} transformCode={transformCode}>
-          {live && <LivePreview className={css(className, exampleStyles.example)} />}
+        <LiveProvider code={raw} scope={scope} transformCode={code => transformCode(code, editorLanguage)}>
+          {live && <LivePreview className={css(exampleStyles.example)} />}
           <div className={css(styles.toolbar)}>
             <CoreComponents.Button
               onClick={this.handleClickCodeOpen}
@@ -141,7 +149,7 @@ class LiveDemo extends React.Component {
                 </CoreComponents.TextContent>
               )}
           </div>
-          {codeOpen && <LiveEditor className={styles.code} ignoreTabKey contentEditable={live} />}
+          {codeOpen && <LiveEditor className={css(className, styles.code)} language={editorLanguage} ignoreTabKey contentEditable={live} />}
           {live && <LiveError />}
         </LiveProvider>
       </Section>

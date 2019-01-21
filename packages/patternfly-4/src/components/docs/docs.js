@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './docs.styles';
 import { css } from '@patternfly/react-styles';
 import { Title } from '@patternfly/react-core';
-import Content from '../content';
 import PropTypes from 'prop-types';
 
 const PropsTable = () => null;
@@ -19,7 +18,7 @@ const defaultProps = {
 };
 
 const Docs = ({ title, description, children, props }) => (
-  <Content>
+  <>
     <Title size="3xl">{title}</Title>
     <p className={css(styles.description)}>{description}</p>
     <section>
@@ -31,7 +30,7 @@ const Docs = ({ title, description, children, props }) => (
       <p className={css(styles.description)}>The {title} component accepts the following props:</p>
       <PropsTable props={props} />
     </section>
-  </Content>
+  </>
 );
 
 Docs.propTypes = propTypes;

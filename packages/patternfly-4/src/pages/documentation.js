@@ -1,16 +1,18 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery, Link } from 'gatsby'
 import * as DocsFiles from '../../.tmp';
 
 import {
   Button,
   Bullseye,
   Nav,
+  NavList,
   NavGroup,
   NavItem,
   Form,
   FormGroup,
-  TextInput
+  TextInput,
+  NavVariants
 } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import styles from '../components/navigation/navigation.styles';
@@ -19,6 +21,7 @@ import Layout from '../components/layout';
 import Image from '../components/image';
 import SEO from '../components/seo';
 import Switcher from '../components/switcher';
+import { Location } from '@reach/router';
 
 class DocsPage extends React.Component {
   state = {
@@ -96,7 +99,40 @@ class DocsPage extends React.Component {
       </Nav>
     );
 
-    return (<Layout sideNav={SideNav}>
+    const frameworksNav = [{
+      text: 'Core',
+      path: '/documentation/core'
+    }, {
+      text: 'React',
+      path: '/documentation/react'
+    }];
+
+    const tertiaryNav = (
+      <Location>
+        {({ location }) => {
+          console.log(location);
+          const currentPath = location.pathname;
+          return (
+            <Nav aria-label="Tertiary Nav">
+              <NavList variant={NavVariants.tertiary}>
+                {frameworksNav.map(item => (
+                  <NavItem
+                    key={item.path}
+                    isActive={currentPath.indexOf(item.path) > -1}
+                  >
+                    <Link to={item.path}>
+                      {item.text}
+                    </Link>
+                  </NavItem>
+                ))}
+              </NavList>
+            </Nav>
+          );
+        }}
+      </Location>
+    );
+
+    return (<Layout tertiaryNav={tertiaryNav} sideNav={SideNav}>
     <SEO title="Docs" keywords={['gatsby', 'application', 'react']} />
     {this.props.children}
   </Layout>);
@@ -109,7 +145,7 @@ export default props => (
     query={graphql`
       query {
         componentPages: allSitePage(
-          filter: { path: { glob: "/docs/react/components/*" } }
+          filter: { path: { glob: "/documentation/react/components/*" } }
         ) {
           edges {
             node {
@@ -121,7 +157,7 @@ export default props => (
           }
         }
         layoutPages: allSitePage(
-          filter: { path: { glob: "/docs/react/layouts/*" } }
+          filter: { path: { glob: "/documentation/react/layouts/*" } }
         ) {
           edges {
             node {
@@ -132,7 +168,7 @@ export default props => (
             }
           }
         }
-        demoPages: allSitePage(filter: { path: { glob: "/docs/react/demos/*" } }) {
+        demoPages: allSitePage(filter: { path: { glob: "/documentation/react/demos/*" } }) {
           edges {
             node {
               path

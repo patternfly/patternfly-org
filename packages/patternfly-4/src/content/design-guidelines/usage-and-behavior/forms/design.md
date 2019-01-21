@@ -1,3 +1,6 @@
+---
+path: "/design-guidelines/usage-and-behavior/forms"
+---
 # Forms
 ## About
 A form is a group of elements used to collect information from a user. Forms can be presented to the user in a variety of contexts depending on the use case and scenario.

@@ -1,3 +1,6 @@
+---
+path: "/design-guidelines/usage-and-behavior/about-modal"
+---
 # About Modal
 The About Modal stores the version number(s) of the application as well as any appropriate legal text.
 

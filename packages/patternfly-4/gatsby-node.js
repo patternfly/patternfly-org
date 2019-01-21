@@ -56,7 +56,7 @@ const continueWebpackConfig = ({ stage, actions, plugins, getConfig }) => {
           query: {
             extensions: '.hbs',
             partialResolver(partial, callback) {
-              console.log(`resolving ${partial}: ${partialsToLocationsMap[partial]}`);
+              // console.log(`resolving ${partial}: ${partialsToLocationsMap[partial]}`);
               callback(null, partialsToLocationsMap[partial]);
             },
             helperDirs: path.resolve(__dirname, './_repos/core/build/helpers')
@@ -99,7 +99,7 @@ const continueWebpackConfig = ({ stage, actions, plugins, getConfig }) => {
 
 const reactOnCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
-  const componentPathRegEx = /\/docs\/react\/.*(components|layouts|demos)\//;
+  const componentPathRegEx = /\/documentation\/react\/.*(components|layouts|demos)\//;
   if (node.internal.type === 'SitePage' && componentPathRegEx.test(node.path)) {
     const pathLabel = node.component
       .split('/')
@@ -117,7 +117,7 @@ const reactOnCreateNode = ({ node, actions }) => {
 
 const coreOnCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
-  const componentPathRegEx = /\/docs\/core\/.*(components|layouts|demos|upgrade-examples|utilities)\//;
+  const componentPathRegEx = /\/documentation\/core\/.*(components|layouts|demos|upgrade-examples|utilities)\//;
   const isMarkdown = node.internal.type === 'MarkdownRemark';
   const isSitePage = node.internal.type === 'SitePage';
   if (isSitePage && componentPathRegEx.test(node.path)) {
@@ -143,6 +143,7 @@ const coreOnCreateNode = ({ node, actions }) => {
 
 const reactCreatePages = ({ graphql, actions }) => {
   const { createPage } = actions;
+  const markdownPageTemplate = path.resolve(`src/templates/markdownPageTemplate.js`)
   return new Promise((resolve, reject) => {
     graphql(`
       fragment DocFile on File {
@@ -174,14 +175,24 @@ const reactCreatePages = ({ graphql, actions }) => {
             }
           }
         }
+        markdownPages: allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/src/content/**"}, frontmatter: {path: {ne: null}}}) {
+          edges {
+            node {
+              fileAbsolutePath
+              frontmatter {
+                path
+              }
+            }
+          }
+        }
       }
     `).then(result => {
       if (result.errors) {
         return reject(result.errors);
       }
-      const { docs, examples, exampleImages} = result.data;
+      const { docs, examples, exampleImages, markdownPages} = result.data;
       const docExports = [];
-      const docsComponentPath = path.resolve(__dirname, './src/components/componentDocs');
+      const docsComponentPath = path.resolve(__dirname, './src/components/Documentation');
       docs.edges.forEach(({ node: doc }) => {
         const filePath = path.resolve(__dirname, '.tmp', doc.base);
 
@@ -208,7 +219,7 @@ const reactCreatePages = ({ graphql, actions }) => {
         const content = `
         import React from 'react';
         import docs from '${doc.absolutePath}';
-        import ComponentDocs from '${docsComponentPath}';
+        import Documentation from '${docsComponentPath}';
 
         const rawExamples = [${rawExamples}];
         const images = [${allImages}];
@@ -216,7 +227,7 @@ const reactCreatePages = ({ graphql, actions }) => {
         export const ${doc.base.split('.')[0].toLowerCase()}_docs = docs;
         export const ${doc.base.split('.')[0].toLowerCase()}_package = '${packageDir}';
 
-        export default () => <ComponentDocs rawExamples={rawExamples} images={images} {...docs} />;
+        export default () => <Documentation rawExamples={rawExamples} images={images} {...docs} />;
         `;
 
         docExports.push(
@@ -227,9 +238,9 @@ const reactCreatePages = ({ graphql, actions }) => {
 
         fs.outputFileSync(filePath, content);
         const shortenedPath = doc.relativePath.split('/').slice(1).join('/');
-        console.log(`creating page for: /docs/react/${path.dirname(shortenedPath).toLowerCase()}`);
+        console.log(`creating page for: /documentation/react/${path.dirname(shortenedPath).toLowerCase()}`);
         createPage({
-          path: `/docs/react/${path.dirname(shortenedPath).toLowerCase()}`,
+          path: `/documentation/react/${path.dirname(shortenedPath).toLowerCase()}`,
           component: filePath
         });
       });
@@ -239,13 +250,22 @@ const reactCreatePages = ({ graphql, actions }) => {
 
       examples.edges.forEach(({ node: example }) => {
         const shortenedPath = example.relativePath.split('/').slice(1).join('/');
-        const examplePath = `/docs/react/${path.dirname(shortenedPath).toLowerCase()}/${paramCase(example.name)}`;
+        const examplePath = `/documentation/react/${path.dirname(shortenedPath).toLowerCase()}/${paramCase(example.name)}`;
         console.log(`creating page for: ${examplePath}`);
         createPage({
           path: examplePath,
           layout: 'example',
           component: example.absolutePath
         });
+      });
+
+      markdownPages.edges.forEach(({ node }) => {
+        console.log(`creating page for: ${node.frontmatter.path}`);
+        createPage({
+          path: node.frontmatter.path,
+          component: markdownPageTemplate,
+          context: {}, // additional data can be passed via context
+        })
       });
     });
     resolve();
@@ -280,7 +300,7 @@ const coreCreatePages = ({ graphql, actions }) => {
 
       examples.edges.forEach(({ node }) => {
         const shortenedPath = node.relativePath.split('/').slice(2, 4).join('/').toLowerCase();
-        const examplePath = `/docs/core/${shortenedPath}`;
+        const examplePath = `/documentation/core/${shortenedPath}`;
 
         console.log(`creating page for: ${examplePath}`);
         createPage({

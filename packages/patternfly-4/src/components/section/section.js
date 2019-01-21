@@ -28,7 +28,7 @@ const Section = ({ children, className, description, headingLevel, name, preface
     {Boolean(title || description) && (
       <header className={css(styles.header)}>
         {Boolean(title) && (
-          <Title size="lg" id={name} headingLevel={headingLevel}>
+          <Title size="2xl" id={name} headingLevel={headingLevel}>
             {title}
           </Title>
         )}

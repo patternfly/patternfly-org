@@ -6,7 +6,6 @@ import SEO from '../../components/seo';
 const DocsCorePage = () => (
   <Layout>
     <SEO title="Core" />
-    <p>Core Documentation</p>
   </Layout>
 )
 

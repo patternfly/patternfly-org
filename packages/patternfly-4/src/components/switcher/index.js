@@ -4,12 +4,26 @@ import {
   Bullseye
 } from '@patternfly/react-core';
 import { Link } from 'gatsby';
+import { Location } from '@reach/router';
+import './styles.css';
 
 const Switcher = () => (
-  <Bullseye>
-    <Link to="/docs/react"><Button variant="secondary">React</Button></Link><Link to="/docs/core"><Button variant="secondary">Core</Button></Link>
-    {/* <Button variant="secondary"><Link to="/docs/react">React</Link></Button><Button variant="tertiary"><Link to="/docs/core">Core</Link></Button> */}
-  </Bullseye>
+  <Location>
+    {({ location }) => {
+      console.log(location);
+      const currentPath = location.pathname;
+      return (
+        <Bullseye>
+          <Link to="/documentation/react">
+            <Button variant="secondary" className="pf-w-btn-left" isActive={currentPath.indexOf('/documentation/react') > -1}>React</Button>
+          </Link>
+          <Link to="/documentation/core">
+            <Button variant="tertiary" className="pf-w-btn-right" isActive={currentPath.indexOf('/documentation/core') > -1}>Core</Button>
+          </Link>
+        </Bullseye>
+      )
+    }}
+  </Location>
 );
 
 export default Switcher;

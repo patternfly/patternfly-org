@@ -18,7 +18,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "fs-extra": "^7.0.1",
-    "lerna": "^3.10.5"
+    "lerna": "^3.10.6"
   },
   "description": "Documentation for PatternFly",
   "repository": {
@@ -29,9 +29,7 @@
     "url": "https://github.com/patternfly/patternfly-org/issues"
   },
   "homepage": "https://github.com/patternfly/patternfly-org",
-  "workspaces": {
-    "packages": [
-      "packages/**"
-    ]
-  }
+  "workspaces": [
+    "packages/*"
+  ]
 }

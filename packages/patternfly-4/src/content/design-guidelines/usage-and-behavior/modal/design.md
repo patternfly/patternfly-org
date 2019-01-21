@@ -1,3 +1,6 @@
+---
+path: "/design-guidelines/usage-and-behavior/modal"
+---
 # Modal
 Modals load and display important information without navigating away from the current page.
 

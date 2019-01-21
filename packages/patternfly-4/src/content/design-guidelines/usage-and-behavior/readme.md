@@ -1,3 +1,6 @@
+---
+path: "/design-guidelines/usage-and-behavior"
+---
 Please follow these steps to add a new design guidelines page.
 
 1. To create a new topic, make a copy of the 'template' folder and rename it with the name of the new topic that you want to add.

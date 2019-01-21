@@ -5,6 +5,7 @@
   "author": "Red Hat",
   "scripts": {
     "build": "gatsby build",
+    "build-4k": "node --max_old_space_size=4096 ./node_modules/.bin/gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
@@ -38,6 +39,7 @@
     "gatsby-plugin-typescript": "^2.0.3",
     "gatsby-remark-autolink-headers": "^2.0.12",
     "gatsby-remark-embed-snippet": "^3.2.0",
+    "gatsby-remark-images": "^3.0.1",
     "gatsby-remark-prismjs": "^3.2.0",
     "gatsby-source-filesystem": "^2.0.16",
     "gatsby-transformer-react-docgen": "^3.0.0",

@@ -7,7 +7,8 @@ import {
 export default StyleSheet.create({
   code: {
     'max-height': '37.5rem',
-    overflow: 'auto'
+    overflow: 'auto',
+    border: '1px solid'
   },
   toolbar: {
     borderLeft: `${borderWidth.var} solid ${borderColor.var}`,
