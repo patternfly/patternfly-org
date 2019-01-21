@@ -61,23 +61,26 @@ export default function Template({
   const { markdownRemark } = data;// data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
   const getStartedNav = [{
-    text: 'Designers',
-    path: '/get-started/designers'
+    text: 'About',
+    path: '/get-started/about'
   }, {
     text: 'Developers',
     path: '/get-started/developers'
   }, {
-    text: 'Accessibility',
+    text: 'Designers',
+    path: '/get-started/designers'
+  }, {
+    text: 'Accessibility (WIP)',
     path: '/get-started/accessibility'
   }, {
-    text: 'Upgrade from PF3',
+    text: 'Upgrade from PF3 (WIP)',
     path: '/get-started/upgrade'
   }, {
-    text: 'FAQs',
+    text: 'FAQs (WIP)',
     path: '/get-started/faqs'
   }];
   const designGuidelinesNav = [{
-    text: 'Styles',
+    text: 'Styles (WIP)',
     path: '/design-guidelines/styles/',
     subNav: [{
       text: 'Overview',
@@ -115,14 +118,14 @@ export default function Template({
       path: '/design-guidelines/usage-and-behavior/progress-bar'
     }]
   }, {
-    text: 'Content',
+    text: 'Content (WIP)',
     path: '/design-guidelines/content'
   }];
   const communityNav = [{
-    text: 'Contribute',
+    text: 'Contribute (WIP)',
     path: '/community/contribute'
   }, {
-    text: 'Forum',
+    text: 'Forum (WIP)',
     path: '/community/forum'
   }];
   let SideNav;

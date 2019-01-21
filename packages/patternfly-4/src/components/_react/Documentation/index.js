@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import styles from './Documentation.styles';
 import { css } from '@patternfly/react-styles';
-import Example from '../example';
+import Example from '../../example';
 import { Title, PageSection, PageSectionVariants } from '@patternfly/react-core';
 import PropsTable from '../propsTable';
-import Section from '../section';
-import DocsReactPage from '../../pages/documentation/react';
+import Section from '../../section';
+import Layout from '../../layout';
 import { Location } from '@reach/router';
+import SideNav from './SideNav';
+import SEO from '../../seo';
 
 const propTypes = {
   data: PropTypes.any.isRequired,
@@ -63,7 +65,8 @@ class Documentation extends React.PureComponent {
             componentType = 'Upgrades';
           }
           return (
-            <DocsReactPage>
+            <Layout sideNav={<SideNav />}>
+              <SEO title="React" />
               <PageSection variant={PageSectionVariants.light} className={css(styles['pf-w-section-border'])}>
                 <Title size="md">{componentType}</Title>
                 <Title size="4xl">{title}</Title>
@@ -118,7 +121,7 @@ class Documentation extends React.PureComponent {
                   return null;
                 })}
               </PageSection>
-            </DocsReactPage>
+            </Layout>
           )
         }}
       </Location>

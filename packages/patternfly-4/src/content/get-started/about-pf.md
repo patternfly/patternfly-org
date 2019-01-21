@@ -1,3 +1,6 @@
+---
+path: "/get-started/about"
+---
 # About PatternFly 4
 PatternFly is an open source design system that was created to enable consistency and usability across a wide range of applications and use cases. PatternFly provides clear standards, guidance, and tools to help designers and developers work together more efficiently to build better products and user experiences.
 

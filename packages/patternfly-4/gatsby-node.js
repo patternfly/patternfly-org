@@ -105,7 +105,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
       const { docs, examples, exampleImages, coreExamples, markdownPages} = result.data;
       const docExports = [];
-      const docsComponentPath = path.resolve(__dirname, './src/components/Documentation');
+      const docsComponentPath = path.resolve(__dirname, './src/components/_react/Documentation');
       docs.edges.forEach(({ node: doc }) => {
         const filePath = path.resolve(__dirname, '.tmp', doc.base);
 
@@ -248,7 +248,7 @@ const continueWebpackConfig = ({ stage, actions, plugins, getConfig }) => {
     },
     resolve: {
       alias: {
-        '@siteComponents': path.resolve(__dirname, './src/components/_site'),
+        '@siteComponents': path.resolve(__dirname, './src/components/_core'),
         '@components': path.resolve(__dirname, './_repos/core/src/patternfly/components'),
         '@layouts': path.resolve(__dirname, './_repos/core/src/patternfly/layouts'),
         '@demos': path.resolve(__dirname, './_repos/core/src/patternfly/demos'),

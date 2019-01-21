@@ -36,7 +36,7 @@ class Layout extends React.Component {
             <Nav aria-label="Nav">
               <NavList variant={NavVariants.horizontal}>
                 <NavItem isActive={currentPath.indexOf('/get-started/') > -1}>
-                  <Link to="/get-started/">Get Started</Link>
+                  <Link to="/get-started/about">Get Started</Link>
                 </NavItem>
                 <NavItem isActive={currentPath.indexOf('/design-guidelines/') > -1}>
                   <Link to="/design-guidelines/styles">Design Guidelines</Link>

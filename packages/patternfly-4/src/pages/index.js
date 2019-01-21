@@ -1,24 +1,20 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Layout from '../components/layout';
-import Image from '../components/image';
 import SEO from '../components/seo';
 import {
   PageSection,
-  PageSectionVariants
+  PageSectionVariants,
+  Bullseye
 } from '@patternfly/react-core';
+import orb from '../images/patternfly-orb.svg';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
-    <PageSection variant={PageSectionVariants.light}>
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-        <Image />
-      </div>
-      <Link to="/documentation/react">Go to documentation</Link>
+    <PageSection variant={PageSectionVariants.darker} style={{height: '100%'}}>
+      <Bullseye>
+        <img src={orb} alt="PatternFly logo" />
+      </Bullseye>
     </PageSection>
   </Layout>
 )

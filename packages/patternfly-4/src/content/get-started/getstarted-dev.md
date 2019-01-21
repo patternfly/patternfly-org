@@ -1,3 +1,6 @@
+---
+path: "/get-started/developers"
+---
 # Getting started for developers
 To get acquainted with the basics of the PatternFly 4 design system, check out the overview at [About PatternFly 4](URL).
 

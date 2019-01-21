@@ -6,9 +6,9 @@ import { Title } from '@patternfly/react-core';
 import LiveDemo from './liveDemo';
 import Link from 'gatsby-link';
 import Section from '../section';
-import PreviewToolbar from '../_site/Preview/PreviewToolbar';
-import Preview from '../_site/Preview';
-import ComponentItems from '../_site/Example/ComponentItems';
+import PreviewToolbar from '../_core/Preview/PreviewToolbar';
+import Preview from '../_core/Preview';
+import ComponentItems from '../_core/Example/ComponentItems';
 
 const propTypes = {
   children: PropTypes.node.isRequired,
