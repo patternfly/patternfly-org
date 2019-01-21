@@ -15,133 +15,39 @@ const glob = require('glob');
 let partialsToLocationsMap = null;
 
 exports.onCreateNode = ({ node, actions }) => {
-  reactOnCreateNode({ node, actions });
-  coreOnCreateNode({ node, actions });
+  const { createNodeField } = actions;
+  const reactComponentPathRegEx = /\/documentation\/react\/.*(components|layouts|demos)\//;
+  const coreComponentPathRegEx = /\/documentation\/core\/.*(components|layouts|demos|upgrade-examples|utilities)\//;
+  const isSitePage = node.internal.type === 'SitePage';
+  if (isSitePage) {
+    if (reactComponentPathRegEx.test(node.path)) {
+      const pathLabel = node.component
+        .split('/')
+        .pop()
+        .split('.')
+        .shift();
+
+      createNodeField({
+        node,
+        name: 'label',
+        value: pathLabel
+      });
+    } else if (coreComponentPathRegEx.test(node.path)) {
+      createNodeField({
+        node,
+        name: 'label',
+        value: pascalCase(node.path.split('/').pop())
+      });
+      createNodeField({
+        node,
+        name: 'type',
+        value: node.path.split('/')[3]
+      });
+    }
+  }
 };
 
 exports.createPages = ({ graphql, actions }) => {
-  reactCreatePages({ graphql, actions });
-  coreCreatePages({ graphql, actions });
-};
-
-exports.onCreateWebpackConfig = ({ stage, actions, plugins, getConfig }) => 
-  new Promise((resolve, reject) => {
-    if (partialsToLocationsMap === null) {
-      partialsToLocationsMap = {};
-      glob(path.resolve(__dirname, './_repos/core/src/patternfly/**/*.hbs'), { ignore: '**/examples/**' }, (err, files) => {
-        files.forEach(file => {
-          const fileNameArr = file.split('/');
-          const fileName = fileNameArr[fileNameArr.length - 1].slice(0, -4);
-          partialsToLocationsMap[fileName] = file;
-        });
-        continueWebpackConfig({ stage, actions, plugins, getConfig });
-        resolve();
-      });
-    } else {
-      continueWebpackConfig({ stage, actions, plugins, getConfig });
-      resolve();
-    }
-});
-
-const continueWebpackConfig = ({ stage, actions, plugins, getConfig }) => {
-  actions.setWebpackConfig({
-    module: {
-      rules: [
-        {
-          test: /\.md$/,
-          loader: 'html-loader!markdown-loader'
-        },
-        {
-          test: /\.hbs$/,
-          query: {
-            extensions: '.hbs',
-            partialResolver(partial, callback) {
-              // console.log(`resolving ${partial}: ${partialsToLocationsMap[partial]}`);
-              callback(null, partialsToLocationsMap[partial]);
-            },
-            helperDirs: path.resolve(__dirname, './_repos/core/build/helpers')
-          },
-          loader: 'handlebars-loader'
-        }
-      ]
-    },
-    resolve: {
-      alias: {
-        '@siteComponents': path.resolve(__dirname, './src/components/_site'),
-        '@components': path.resolve(__dirname, './_repos/core/src/patternfly/components'),
-        '@layouts': path.resolve(__dirname, './_repos/core/src/patternfly/layouts'),
-        '@demos': path.resolve(__dirname, './_repos/core/src/patternfly/demos'),
-        '@project': path.resolve(__dirname, './_repos/core/src')
-      }
-    },
-    resolveLoader: {
-      alias: { raw: 'raw-loader' }
-    }
-  });
-
-  const configAfter = getConfig();
-  const minimizer = [
-    plugins.minifyJs({
-      terserOptions: {
-        // keep function names so that we can find the corresponding example components in src/components/componentDocs/componentDocs.js
-        keep_fnames: true
-      }
-    }),
-    plugins.minifyCss()
-  ];
-  if (!configAfter.optimization) {
-    configAfter.optimization = {};
-  }
-  configAfter.optimization.minimizer = minimizer;
-
-  actions.replaceWebpackConfig(configAfter);
-};
-
-const reactOnCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions;
-  const componentPathRegEx = /\/documentation\/react\/.*(components|layouts|demos)\//;
-  if (node.internal.type === 'SitePage' && componentPathRegEx.test(node.path)) {
-    const pathLabel = node.component
-      .split('/')
-      .pop()
-      .split('.')
-      .shift();
-
-    createNodeField({
-      node,
-      name: 'label',
-      value: pathLabel
-    });
-  }
-};
-
-const coreOnCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions;
-  const componentPathRegEx = /\/documentation\/core\/.*(components|layouts|demos|upgrade-examples|utilities)\//;
-  const isMarkdown = node.internal.type === 'MarkdownRemark';
-  const isSitePage = node.internal.type === 'SitePage';
-  if (isSitePage && componentPathRegEx.test(node.path)) {
-    // console.log(`label: ${node.path.split('/').pop()}`);
-    createNodeField({
-      node,
-      name: 'label',
-      value: pascalCase(node.path.split('/').pop())
-    });
-    // console.log(`type: ${node.path.split('/')[3]}`);
-    createNodeField({
-      node,
-      name: 'type',
-      value: node.path.split('/')[3]
-    });
-  }/* else if (isMarkdown && (isComponent || isLayout || isDemo || isUtility || isUpgrade)) {
-    const pathArr = node.fileAbsolutePath.split('/');
-    const relativeDir = `/docs/core/${pathArr.slice(pathArr.length - 4, pathArr.length - 2).join('/')}`;
-    // console.log(`creating field: ${relativeDir}`);
-    createNodeField({ node, name: 'path', value: relativeDir });
-  }*/
-};
-
-const reactCreatePages = ({ graphql, actions }) => {
   const { createPage } = actions;
   const markdownPageTemplate = path.resolve(`src/templates/markdownPageTemplate.js`)
   return new Promise((resolve, reject) => {
@@ -175,6 +81,13 @@ const reactCreatePages = ({ graphql, actions }) => {
             }
           }
         }
+        coreExamples: allFile(filter: { sourceInstanceName: { eq: "core" }, absolutePath: { glob: "**/examples/index.js" } }) {
+          edges {
+            node {
+              ...DocFile
+            }
+          }
+        }
         markdownPages: allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/src/content/**"}, frontmatter: {path: {ne: null}}}) {
           edges {
             node {
@@ -190,7 +103,7 @@ const reactCreatePages = ({ graphql, actions }) => {
       if (result.errors) {
         return reject(result.errors);
       }
-      const { docs, examples, exampleImages, markdownPages} = result.data;
+      const { docs, examples, exampleImages, coreExamples, markdownPages} = result.data;
       const docExports = [];
       const docsComponentPath = path.resolve(__dirname, './src/components/Documentation');
       docs.edges.forEach(({ node: doc }) => {
@@ -259,46 +172,7 @@ const reactCreatePages = ({ graphql, actions }) => {
         });
       });
 
-      markdownPages.edges.forEach(({ node }) => {
-        console.log(`creating page for: ${node.frontmatter.path}`);
-        createPage({
-          path: node.frontmatter.path,
-          component: markdownPageTemplate,
-          context: {}, // additional data can be passed via context
-        })
-      });
-    });
-    resolve();
-  })
-};
-
-const coreCreatePages = ({ graphql, actions }) => {
-  const { createPage } = actions;
-  return new Promise((resolve, reject) => {
-    graphql(`
-      fragment DocFile on File {
-        relativePath
-        relativeDirectory
-        absolutePath
-        base
-        name
-      }
-      query AllCoreFiles {
-        examples: allFile(filter: { sourceInstanceName: { eq: "core" }, absolutePath: { glob: "**/examples/index.js" } }) {
-          edges {
-            node {
-              ...DocFile
-            }
-          }
-        }
-      }
-    `).then(result => {
-      if (result.errors) {
-        return reject(result.errors);
-      }
-      const { examples } = result.data;
-
-      examples.edges.forEach(({ node }) => {
+      coreExamples.edges.forEach(({ node }) => {
         const shortenedPath = node.relativePath.split('/').slice(2, 4).join('/').toLowerCase();
         const examplePath = `/documentation/core/${shortenedPath}`;
 
@@ -314,9 +188,94 @@ const coreCreatePages = ({ graphql, actions }) => {
           component: path.resolve(__dirname, node.absolutePath)
         });
       });
+
+      markdownPages.edges.forEach(({ node }) => {
+        console.log(`creating page for: ${node.frontmatter.path}`);
+        createPage({
+          path: node.frontmatter.path,
+          component: markdownPageTemplate,
+          context: {}, // additional data can be passed via context
+        })
+      });
     });
     resolve();
   })
+};
+
+exports.onCreateWebpackConfig = ({ stage, actions, plugins, getConfig }) => 
+  new Promise((resolve, reject) => {
+    if (partialsToLocationsMap === null) {
+      partialsToLocationsMap = {};
+      glob(path.resolve(__dirname, './_repos/core/src/patternfly/**/*.hbs'), { ignore: '**/examples/**' }, (err, files) => {
+        files.forEach(file => {
+          const fileNameArr = file.split('/');
+          const fileName = fileNameArr[fileNameArr.length - 1].slice(0, -4);
+          partialsToLocationsMap[fileName] = file;
+        });
+        continueWebpackConfig({ stage, actions, plugins, getConfig });
+        resolve();
+      });
+    } else {
+      continueWebpackConfig({ stage, actions, plugins, getConfig });
+      resolve();
+    }
+});
+
+const continueWebpackConfig = ({ stage, actions, plugins, getConfig }) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.md$/,
+          loader: 'html-loader!markdown-loader'
+        },
+        {
+          test: /\.hbs$/,
+          query: {
+            extensions: '.hbs',
+            partialResolver(partial, callback) {
+              if (partialsToLocationsMap[partial]) {
+                callback(null, partialsToLocationsMap[partial]);
+              } else {
+                throw new Error(`Could not find partial: ${partial}`);
+              }
+            },
+            helperDirs: path.resolve(__dirname, './_repos/core/build/helpers')
+          },
+          loader: 'handlebars-loader'
+        }
+      ]
+    },
+    resolve: {
+      alias: {
+        '@siteComponents': path.resolve(__dirname, './src/components/_site'),
+        '@components': path.resolve(__dirname, './_repos/core/src/patternfly/components'),
+        '@layouts': path.resolve(__dirname, './_repos/core/src/patternfly/layouts'),
+        '@demos': path.resolve(__dirname, './_repos/core/src/patternfly/demos'),
+        '@project': path.resolve(__dirname, './_repos/core/src')
+      }
+    },
+    resolveLoader: {
+      alias: { raw: 'raw-loader' }
+    }
+  });
+
+  const configAfter = getConfig();
+  const minimizer = [
+    plugins.minifyJs({
+      terserOptions: {
+        // keep function names so that we can find the corresponding example components in src/components/componentDocs/componentDocs.js
+        keep_fnames: true
+      }
+    }),
+    plugins.minifyCss()
+  ];
+  if (!configAfter.optimization) {
+    configAfter.optimization = {};
+  }
+  configAfter.optimization.minimizer = minimizer;
+
+  actions.replaceWebpackConfig(configAfter);
 };
 
 // const coreOnCreatePage = async ({ page, actions }) => {

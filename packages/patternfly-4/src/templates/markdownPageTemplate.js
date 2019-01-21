@@ -4,10 +4,11 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import {
   Nav,
-  NavGroup,
   NavItem,
   NavList,
-  NavExpandable
+  NavExpandable,
+  PageSection,
+  PageSectionVariants
 } from '@patternfly/react-core';
 import { Location } from '@reach/router';
 import './markdownPageTemplate.css';
@@ -135,10 +136,12 @@ export default function Template({
   return (
     <Layout sideNav={SideNav}>
       <SEO title="Docs" keywords={['gatsby', 'application', 'react']} />
-      <div
-        className="markdown-body"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      <PageSection variant={PageSectionVariants.light}>
+        <div
+          className="markdown-body"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      </PageSection>
     </Layout>
   )
 }

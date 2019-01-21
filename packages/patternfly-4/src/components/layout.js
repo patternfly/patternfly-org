@@ -18,30 +18,14 @@ import {
   PageHeader,
   PageSection,
   PageSectionVariants,
-  PageSidebar,
-  Toolbar,
-  ToolbarGroup,
-  ToolbarItem,
-  Switch
+  PageSidebar
 } from '@patternfly/react-core';
 import { Location } from '@reach/router';
 
 import brandImg from './l_pf-reverse-164x11.png';
 
 class Layout extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isChecked: true
-    };
-  }
-
-  handleChange = isChecked => {
-    this.setState({ isChecked });
-  };
-
   render() {
-    const { activeItem, isChecked } = this.state;
     const { tertiaryNav, sideNav } = this.props;
     const PageNav = (
       <Location>
@@ -79,27 +63,11 @@ class Layout extends React.Component {
       [BackgroundImageSrc.xl]: withPrefix('/img/pfbg_2000.jpg'),
       [BackgroundImageSrc.filter]: withPrefix('/img/background-filter.svg#image_overlay')
     };
-    // const PageToolbar = (
-    //   <Toolbar>
-    //     <ToolbarGroup>
-    //       <ToolbarItem>
-    //         <Switch
-    //           id="simple-switch"
-    //           label={isChecked ? 'React' : 'Core'}
-    //           isChecked={isChecked}
-    //           onChange={this.handleChange}
-    //           aria-label="simple Switch example"
-    //         />
-    //       </ToolbarItem>
-    //     </ToolbarGroup>
-    //   </Toolbar>
-    // );
     const SiteHeader = (
       <PageHeader
         logo={<Link to="/">
           <Brand src={brandImg} alt="Patternfly Logo"/>
         </Link>}
-        // toolbar={PageToolbar}
         topNav={PageNav}
       />
     );

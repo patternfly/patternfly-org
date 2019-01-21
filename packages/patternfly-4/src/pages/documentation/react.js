@@ -2,8 +2,6 @@ import React from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import * as DocsFiles from '../../../.tmp';
 import {
-  Button,
-  Bullseye,
   Nav,
   NavGroup,
   NavItem,
@@ -13,9 +11,7 @@ import {
 } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import styles from '../../components/navigation/navigation.styles';
-import NavigationItem from '../../components/navigation/navigationItem';
 import Layout from '../../components/layout';
-import Image from '../../components/image';
 import SEO from '../../components/seo';
 import Switcher from '../../components/switcher';
 
