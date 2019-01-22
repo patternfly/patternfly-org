@@ -80,7 +80,7 @@ class SideNav extends React.Component {
     const SideNav = (
       <Location>
       {({ location }) => {
-        console.log(location);
+        // console.log(location);
         const currentPath = location.pathname;
         return (
           <Nav aria-label="Nav">

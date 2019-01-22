@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-// import '../../../patternfly/patternfly-base.scss';
+// import '../../../../_repos/core/src/patternfly/patternfly-base.scss';
 
 export default ({ children }) => (
   <div>

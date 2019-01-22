@@ -10,8 +10,9 @@ export default class Preview extends React.Component {
 
   componentDidMount() {
     // eslint-disable-next-line react/no-did-mount-set-state
+    const endsWithSlash = window.location.pathname.substr(-1) === '/';
     this.setState({
-      fullPath: `${window.location.pathname.substr(0, window.location.pathname.length)}-full?component=${
+      fullPath: `${window.location.pathname.substr(0, window.location.pathname.length - (endsWithSlash ? 1 : 0))}-full?component=${
         this.props.heading
       }`
     });
@@ -24,7 +25,7 @@ export default class Preview extends React.Component {
     const preview = fullPageOnly ? (
       <div className="Preview__body ">
         This Preview can only be accessed in&nbsp;
-        <Link to={this.state.fullPath} target="_blank">
+        <Link to={this.state.fullPath}>
           full page mode
         </Link>.
       </div>

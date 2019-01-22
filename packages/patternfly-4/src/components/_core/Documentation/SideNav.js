@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link, StaticQuery, graphql } from 'gatsby';
-import Prism from 'prismjs'; // eslint-disable-line no-unused-vars
-import 'prismjs/themes/prism-coy.css';
-// import '../../../../_repos/core/src/patternfly/patternfly-base.scss'
+// import Prism from 'prismjs'; // eslint-disable-line no-unused-vars
+// import 'prismjs/themes/prism-coy.css';
 import {
   Nav,
   NavGroup,
@@ -52,7 +51,7 @@ export default ({ children }) => (
       const SideNav = (
         <Location>
           {({ location }) => {
-            console.log(location);
+            // console.log(location);
             const currentPath = location.pathname;
             return (
               <Nav aria-label="Nav">

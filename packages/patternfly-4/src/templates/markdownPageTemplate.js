@@ -17,7 +17,7 @@ const navBuilder = navData => {
   return (
     <Location>
       {({ location }) => {
-        console.log(location);
+        // console.log(location);
         const currentPath = location.pathname;
         return (
           <Nav aria-label="Nav">

@@ -10,8 +10,9 @@ export default class PreviewToolbar extends React.Component {
 
   componentDidMount() {
     // eslint-disable-next-line react/no-did-mount-set-state
+    const endsWithSlash = window.location.pathname.substr(-1) === '/';
     this.setState({
-      fullPath: `${window.location.pathname.substr(0, window.location.pathname.length)}-full?component=${
+      fullPath: `${window.location.pathname.substr(0, window.location.pathname.length - (endsWithSlash ? 1 : 0))}-full?component=${
         this.props.heading
       }`
     });

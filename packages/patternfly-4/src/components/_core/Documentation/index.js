@@ -27,7 +27,7 @@ export default class Documentation extends React.Component {
     return !this.state.isFull ? (
       <Location>
       {({ location }) => {
-        console.log(location);
+        // console.log(location);
         const currentPath = location.pathname;
         let componentType = 'Components';
         if (currentPath.indexOf('/layouts/') > -1) {

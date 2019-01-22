@@ -10,7 +10,7 @@ import './styles.css';
 const Switcher = () => (
   <Location>
     {({ location }) => {
-      console.log(location);
+      // console.log(location);
       const currentPath = location.pathname;
       return (
         <Bullseye>

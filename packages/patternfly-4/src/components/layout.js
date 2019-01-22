@@ -30,7 +30,7 @@ class Layout extends React.Component {
     const PageNav = (
       <Location>
         {({ location }) => {
-          console.log(location);
+          // console.log(location);
           const currentPath = location.pathname;
           return (
             <Nav aria-label="Nav">
