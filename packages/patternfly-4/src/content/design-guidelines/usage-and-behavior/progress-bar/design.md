@@ -17,7 +17,7 @@ Progress bars are composed of four elements:
 ## Components and demos used
 The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use-cases. We’ll explore several examples in this documentation.
 
-**CSS components**
+**HTML/CSS components**
 [Progress](/documentation/core/components/progress)
 
 **React components**
@@ -104,7 +104,7 @@ A green progress bar represents the successful completion of a process, and the 
 
 ![progressbar](img/progress-bar-success.png)
 
-## Content 
+## Content
 Titles should clearly describe the process that is being measure. Try to keep titles between 1 and 3 words.  An example of a title could be “Downloading Your Application.” Insert in “Your Application” the application name.
 
 Do not provide any other supporting copy to the progress bar that would require the user to read about how to use the progress bar. A progress bar should be self-explanatory if you implement labels 1 through 4 that are detailed in the article above.

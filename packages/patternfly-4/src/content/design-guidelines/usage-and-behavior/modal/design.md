@@ -16,7 +16,7 @@ Modals load and display important information without navigating away from the c
 ## Components and demos used
 The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use-cases. We’ll explore several examples in this documentation.
 
-**CSS components**
+**HTML/CSS components**
 [Modal](/documentation/core/demos/modal), [Modalbox](/documentation/core/components/modalbox), [Button](/documentation/core/components/button)
 
 Related CSS components: [Aboutmodal](/documentation/core/demos/aboutmodal), [Aboutmodalbox](/documentation/core/components/aboutmodalbox)
@@ -39,7 +39,7 @@ Use modals to:
 ### When not to use
 Modals interrupt user task flow and should be avoided for any information that is not critical to user success.
 
-### Content 
+### Content
 * Clearly restate the action the user is trying to take and explicitly outline the consequences of that action.
 
 * Provide buttons labels that make it simple for users to understand and confirm their choices. Use descriptive verbs that clearly indicate the consequence of a selection, like Delete, Save, or Create. Avoid vague labels like OK or Done.

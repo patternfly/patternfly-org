@@ -17,7 +17,7 @@ Navigation is used to organize an application’s structure and content, making 
 ## Components and demos used
 The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use-cases. We’ll explore several examples in this documentation.
 
-**CSS components**
+**HTML/CSS components**
 [Page](/documentation/core/demos/page), [Breadcrumb](/documentation/core/components/breadcrumb), [Nav](/documentation/core/components/nav), [Tabs](/documentation/core/components/tabs)
 
 **React components**

@@ -34,7 +34,7 @@ While every form will require a different combination of components depending on
 ## Components and demos used
 The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use-cases. We’ll explore several examples in this documentation.
 
-**CSS components**
+**HTML/CSS components**
 [Form](/documentation/core/components/form), [Button](/documentation/core/components/button), [Check](/documentation/core/components/check), [Content](/documentation/core/components/content), [Dropdown](/documentation/core/components/dropdown), [Formcontrol](/documentation/core/components/formcontrol), [Inputgroup](/documentation/core/components/inputgroup), [Popover](/documentation/core/components/popover), [Progress](/documentation/core/components/progress), [Switch](/documentation/core/components/switch), [Tooltip](/documentation/core/components/tooltip)
 
 **React components**
@@ -151,7 +151,7 @@ Notification messages should describe the error and help users solve the problem
 
 > Note: For buttons on wizards, follow modal standards. Buttons are aligned to the right edge of the input field. Place the primary button on the far right and the secondary button is to the left.
 
-### Content 
+### Content
 Think of a form as a conversation between your application and your user. Apply the following principles to organize and craft content for your forms:
 
 **Focus on the task and context**

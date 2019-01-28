@@ -1,7 +1,7 @@
 ---
 path: "/design-guidelines/usage-and-behavior/about-modal"
 ---
-# About Modal
+# About modal
 The About Modal stores the version number(s) of the application as well as any appropriate legal text.
 
 ## Primary elements
@@ -19,7 +19,7 @@ The About Modal stores the version number(s) of the application as well as any a
 8. Modal image: The modal image should be the same as the [background image](/documentation/react/components/backgroundimage) you use for your application.
 
 ## Components and demos used
-**CSS components**
+**HTML/CSS components**
 [Aboutmodal](/documentation/core/demos/aboutmodal), [Aboutmodalbox](/documentation/core/components/aboutmodalbox), [Backdrop](/documentation/core/components/backdrop), [Backgroundimage](/documentation/core/components/backgroundimage)
 
 Related CSS components: [Modal](/documentation/core/demos/modal), [Modalbox](/documentation/core/components/modalbox), [Button](/documentation/core/components/button)
