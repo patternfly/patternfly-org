@@ -4,30 +4,29 @@ path: "/design-guidelines/usage-and-behavior/progress-bar"
 # Progress bar
 Progress bars inform users about the status of ongoing processes, such as loading an app, submitting a form, or saving updates. Progress bars can also inform users about their progress through a tutorial or a series of steps to reach completion.
 
-## Usage
-Use a progress bar to visually indicate an extended operation that needs to be completed by a user or system.
-
-Without a progress bar marking their progress towards completion a user could become lost about how much effort or time it will take to complete a given process. Progress bars solve the problem of helping users understand how much of a process has been completed.
-
-### The anatomy of a progress bar
+## Primary elements
 ![progress-bar](img/progress-bar-callouts.png)
 
 Progress bars are composed of four elements:
 
-1. **Title**
+1. Title - When writing the progress bar title concisely convey the task the user or system is working to complete.
+2. Track - Use the track as a visual guide to describe to the user what it takes to meet full task completion.
+3. Value of progress - Use a value of progress that is most helpful to the user for a given use case.
+4. Indicator - Animate the indicator along the track to draw the user eye to the progress bar and demonstrate the user’s progress towards completion.
 
-  When writing the progress bar title concisely convey the task the user or system is working to complete.
-2. **Track**
+## Components and demos used
+The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use-cases. We’ll explore several examples in this documentation.
 
-  Use the track as a visual guide to describe to the user what it takes to meet full task completion.
+**HTML/CSS components**
+[Progress](/documentation/core/components/progress)
 
-3. **Value of progress**
+**React components**
+[Progress](/documentation/react/components/progress)
 
-  Use a value of progress that is most helpful to the user for a given use case.
+## Usage
+Use a progress bar to visually indicate an extended operation that needs to be completed by a user or system.
 
-4. **Indicator**
-
-  Animate the indicator along the track to draw the user eye to the progress bar and demonstrate the user’s progress towards completion.
+Without a progress bar marking their progress towards completion a user could become lost about how much effort or time it will take to complete a given process. Progress bars solve the problem of helping users understand how much of a process has been completed.
 
 ### When to use
 ![progress-bar](img/progress_bar_blue_animated.gif)
@@ -61,7 +60,7 @@ Do not use a progress bar when a spinner should be used instead. A spinner shoul
 
 Do not use a spinner and a progress bar together. Use one progress measure at a time.
 
-## How to use progress bar in context
+## Using progress bars in your designs
 ![progress-bar](img/progress-bar-do-dont.png)
 
 The Do state demonstrates that the progress bar should be placed in alignment with relevant context. The Don’t state demonstrates that the progress bar should not be used without a descriptive title and a percentage of completion when possible. The progress bar should be placed within the user’s line of sight as a guide.
@@ -109,3 +108,5 @@ A green progress bar represents the successful completion of a process, and the 
 Titles should clearly describe the process that is being measure. Try to keep titles between 1 and 3 words.  An example of a title could be “Downloading Your Application.” Insert in “Your Application” the application name.
 
 Do not provide any other supporting copy to the progress bar that would require the user to read about how to use the progress bar. A progress bar should be self-explanatory if you implement labels 1 through 4 that are detailed in the article above.
+
+See our [content guidelines](/design-guidelines/content/) for additional guidance.
