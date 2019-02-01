@@ -10,29 +10,30 @@ While every form will require a different combination of components depending on
 ![Elements of a form](img/form-elements.png)
 *Elements of a form*
 
-1. [Labels](/design-guidelines/usage-and-behavior/data-input) - Field labels can be aligned to the left or top of the field depending on the layout of your page and the amount of space you have to work with. Indicate all required text and input fields with a red asterisk. Learn more about field labels in the [text and data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
+1. [Labels](/design-guidelines/usage-and-behavior/data-input) - Field labels can be aligned to the left or top of the field depending on the layout of your page and the amount of space you have to work with. Learn more about field labels in the [text and data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
 
-  ![Required field](img/required-field.png)
-  *Required field*
-
-  ![Aligned to the top](img/top-alignment.png)
+  ![Aligned to the top](img/top-aligned.png)
   *Aligned to the top*
 
-  ![Aligned tot he left](img/left-alignment.png)
+  ![Aligned to the left](img/left-aligned.png)
   *Aligned to the left*
 
 2. [Text field](/design-guidelines/usage-and-behavior/data-input) - provides an area for users to input free-form text.
+
 3. [Data input](/design-guidelines/usage-and-behavior/data-input) - provides a way for users to submit any information that is not free-form text. For example, you might use a check box to enable users to select from multiple predetermined values. Input components are designed for specific use cases.
+
 4. [Help](#Provide-the-right-kind-of-help) - provides assistance in any area where the user might need additional information or context to provide the right input
     * Field level help - provides content in a popover.
     * Input help - provides help in or directly below a field.
         * Helper text
         * Syntax hints
-5. Action buttons - enable a user to submit or exit a form.
-6. [Validation and errors](#Provide-validation-and-errors) - ensure that the correct information is collected before the form can be submitted to the system.
+
+5. [Validation and errors](#Provide-validation-and-errors) - ensure that the correct information is collected before the form can be submitted to the system.
+
+6. Action buttons - enable a user to submit or exit a form.
 
 ## Components and demos used
-The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use-cases. We’ll explore several examples in this documentation.
+These PatternFly components listed can be used in a number of ways to build forms to suit specific needs or use-cases.
 
 **HTML/CSS components**
 [Form](/documentation/core/components/form), [Button](/documentation/core/components/button), [Check](/documentation/core/components/check), [Content](/documentation/core/components/content), [Dropdown](/documentation/core/components/dropdown), [Formcontrol](/documentation/core/components/formcontrol), [Inputgroup](/documentation/core/components/inputgroup), [Popover](/documentation/core/components/popover), [Progress](/documentation/core/components/progress), [Switch](/documentation/core/components/switch), [Tooltip](/documentation/core/components/tooltip)
@@ -41,78 +42,67 @@ The PatternFly components listed in the following sections can be used in a numb
 [Form](/documentation/react/components/form), [Button](/documentation/react/components/button), [Checkbox](documentation/react/components/checkbox), [Dropdown](/documentation/react/components/dropdown), [Progress](/documentation/react/components/progress), [Radio](/documentation/react/components/radio), [Select](/documentation/react/components/select), [Switch](/documentation/react/components/switch), [TextArea](/documentation/react/components/textarea), [Text](/documentation/react/components/text), [Popover](/documentation/react/components/popover), [TextInput](/documentation/react/components/textinput), [Tooltip](/documentation/react/components/tooltip)
 
 ## Usage
-### Use progressive disclosure
+There's a lot to think about when you're building a form, and there's no one-size-fits-all solution. These usage guidelines are here to help you use the right combination of elements and content to gather the information you need from your users.
 
-![Progressive disclosure](img/progressive-disclosure.png)
-*Progressive disclosure example*
+### Provide the right data input
+PatternFly provides a variety of components that enable a user to make a simple selection. Each component was created to serve a specific use case. For example, you might need to allow your user to select one or more items from a list, but should you use a checkbox or a multi-select dropdown? It depends on the number of items your user needs to choose from.    
 
-Use progressive disclosure to hide and show fields based on the users’ selection. This approach keeps the workflow short and allows the user focus on only the fields relevant to them. It also avoids using color to indicate whether or not a field is available, making it suitable for colorblind users.
-
-### Choose the right data input
-There are multiple components that enable a user to make a simple selection. To learn more about data input, visit the [text and data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
+Learn more about data input in the [text and data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
 
 ### Provide the right kind of help
-There are multiple ways to provide help on forms.
+There are a few different ways to provide help on forms. The type of help you choose will depend on the content you need to relay to your user.  
 
 **Field level help**
-![Progressive disclosure](img/field-level-help.png)
-*Field level help example*
-
 Use field level help to provide additional context to a text or input field. Field level help is denoted by the information icon and displayed in a popover on a click.
 
+![Field level help](img/field-level-help.png)
+*Field level help example*
+
 **DO**
-<span style="color:green"> - - - - </span>
 * Use field level help wherever any field needs additional background or explanation.
 * Keep descriptions as concise as possible.
 
 **DON'T**
-<span style="color:red"> - - - - </span>
 * Don’t use field level help to compensate for bad design or rely on it to explain a graphic or word choice.
-* **Never** hide critical information in a popover. Don’t put any information into a popover that a user needs to complete their task.
+* **Never** hide critical information in a popover. Don’t put any information into a popover that a user will always need to complete their task.
 
 **Helper text**
+Helper text is text below a form field that helps a user provide the right information, like “Provide a unique name.” Use helper text for information that a user needs to know in order to enter the correct information. For context or background information that is “nice to have,” use field level help in a popover.
 
-![Helper text](img/helper-text.png)
+![Helper text](img/helpertext.png)
 *Helper text example*
 
-Helper text is text below a form field that helps a user provide the right information, like “Add a unique name.” Use helper text for any information that a user needs to provide the correct input. For context or background information that is “nice to have,” use field level help in a popover.
-
 **DO**
-<span style="color:green"> - - - - </span>
 * Keep helper text concise while providing enough information to enable a user to complete their task.
 * Use helper text to provide critical information that is secondary to the field label.
 * Limit the use of helper text to avoid overwhelming the user.
 
 **DON'T**
-<span style="color:red"> - - - - </span>
 * Try to avoid helper text that exceeds the length of the input area.
 * **Never** use helper text as a replacement for form field labels.
 
 **Syntax hints**
-
-![Syntax hint](img/hsyntax-hint.png)
-*Syntax hint example*
-
 A syntax hint provides an example of the required or recommended format for data input.
 
 For example, a syntax hint for a date might be _DD/MM/YYYY_.
 
-Use syntax hints when the requested data type might be unfamiliar, or the field requires the user to provide data in a specific format.
+Use syntax hints when the requested data type might be unfamiliar or the field requires the user to provide data in a specific format.
+
+![Syntax hint](img/syntax-hint.png)
+*Syntax hint example*
 
 **DO**
-<span style="color:green"> - - - - </span>
 * Only use syntax hints for text input fields.
 * Keep hints concise; never extend the length of the text field.
 * Limit the use of syntax hints to avoid overwhelming the user.
 
 **DON'T**
-<span style="color:red"> - - - - </span>
 * Don’t use syntax hints for complex and lengthy requirements like password requirements. Instead, use field level help.
 * Don’t provide syntax hints when they are not necessary.
 * **Never** use syntax hints as a replacement for form field labels.
 
 ### Provide validation and errors
-What you want to Let users know whenever a form field submission results in an error. Always present error states on the form, and use inline errors whenever possible. The error state you use will depend on whether the validation happens on the client or the server.
+When a form field submission results in an error, let users know as soon as possible. Always present error states on the form, and use inline errors whenever possible. The error state you can use will depend on whether validation happens on the client or the server.
 
 **Client-side validation**
 Client-side validation can be performed as soon as a field loses focus, and allows you to use inline validation to alert users of errors or issues immediately. This type of validation allows users to quickly see and address issues, but can become frustrating or overwhelming if overused.
@@ -127,17 +117,23 @@ Some common use cases include:
 **Server-side validation**
 Server-side validation is performed when the user attempts to submit a form. In this scenario, the user completes the form in its entirety and the page is reloaded with any errors detected.
 
-For server-side validation, use an inline notification along with inline errors wherever possible to make it simple for the user to quickly identify areas that need to be fixed.
+For server-side validation, use an inline alert along with inline errors wherever possible to make it simple for the user to quickly identify areas that need to be fixed.
 
 Notification messages should describe the error and help users solve the problem.
 
-![Validation](img/validation.png)
+![Validation](img/validation-example.png)
 *Validation example*
 
+### Use progressive disclosure
+Use progressive disclosure to hide and show fields based on the users’ selection. This approach keeps the workflow short and allows the user to focus on only the fields relevant to them. It also avoids using color to indicate whether or not a field is available, making it suitable for colorblind users.
+
+![Progressive disclosure](img/progressive-disclosure.png)
+*Progressive disclosure example*
+
 ### Using forms in your designs
-**Full page**
-![Full page form](img/full-page-example.png)
-*Full page form example*
+**In a card**
+![Card example](img/card-example.png)
+*Card example*
 
 **In a modal**
 ![Modal example](img/modal-example.png)
