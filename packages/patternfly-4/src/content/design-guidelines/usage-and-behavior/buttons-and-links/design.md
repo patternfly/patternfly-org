@@ -20,7 +20,7 @@ Use different button types to build hierarchy in an application layout.
 ![Buttons grid](img/buttons.png)
 
 **Primary**
-Use primary buttons for the main action you want a user to take on a page. In general, try to limit primary buttons to one per page.
+Use primary buttons for the main action you want a user to take on a page. Try to limit primary buttons to one per page.
 
 **Secondary**
 Use secondary buttons for secondary actions a user can take. For example, a cancel button would be secondary to a submit button on a form or modal.
@@ -28,7 +28,7 @@ Use secondary buttons for secondary actions a user can take. For example, a canc
 **Tertiary**
 Use tertiary buttons for any action a user can take on a page that is not primary or secondary. For example, actions a user might take to edit items in a list could be represented as tertiary buttons.
 
-**Danger**
+**Destructive**
 Use destructive buttons for actions a user can take that are potentially destructive or difficult/impossible to undo like deleting or removing user data.
 
 ### Button states
