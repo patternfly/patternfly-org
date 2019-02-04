@@ -35,6 +35,7 @@
     "clipboard-copy": "2.0.1",
     "css": "2.2.4",
     "css-loader": "2.1.0",
+    "exenv": "^1.2.2",
     "gatsby": "2.0.91",
     "gatsby-image": "2.0.25",
     "gatsby-plugin-catch-links": "2.0.9",
@@ -79,8 +80,6 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "prettier": "1.15.3",
-    "cross-env": "5.1.4",
     "@babel/cli": "7.0.0",
     "@babel/core": "7.0.0",
     "@babel/plugin-proposal-class-properties": "7.0.0",
@@ -95,7 +94,9 @@
     "babel-jest": "23.6.0",
     "babel-plugin-transform-es2015-modules-umd": "6.24.1",
     "babel-plugin-transform-imports": "1.5.0",
-    "babel-plugin-typescript-to-proptypes": "0.13.0"
+    "babel-plugin-typescript-to-proptypes": "0.13.0",
+    "cross-env": "5.1.4",
+    "prettier": "1.15.3"
   },
   "repository": {
     "type": "git",

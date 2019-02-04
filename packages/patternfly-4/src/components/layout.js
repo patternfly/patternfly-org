@@ -18,6 +18,7 @@ import {
 } from '@patternfly/react-core';
 import { Location } from '@reach/router';
 import brandImg from './l_pf-reverse-164x11.png';
+import { canUseDOM } from 'exenv';
 
 class Layout extends React.Component {
   render() {
@@ -74,7 +75,7 @@ class Layout extends React.Component {
           }
         }
       }
-    `} render={data => <>
+    `} render={data => canUseDOM && <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <BackgroundImage src={bgImages} />
         <Page header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} isNavOpen /> : null}>
