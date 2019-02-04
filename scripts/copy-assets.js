@@ -3,7 +3,7 @@ const fs = require('fs-extra');
 
 const source = path.resolve(__dirname, '../packages/patternfly-4/public/assets');
 const destinationRoot = path.resolve(__dirname, '../out/assets');
-const destinationDocs = path.resolve(__dirname, '../out/4.0/documentation/assets');
+const destinationDocs = path.resolve(__dirname, '../out/documentation/assets');
 
 fs.copy(source, destinationRoot, (errCopy) => {
   if (errCopy) {
