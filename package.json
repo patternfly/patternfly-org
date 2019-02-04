@@ -8,7 +8,7 @@
     "bootstrap": "lerna bootstrap",
     "prebuild": "lerna run prebuild",
     "build": "yarn clean && yarn build:pf4 && yarn combine-builds && yarn copy-assets",
-    "build:pf4": "lerna run build --scope=@patternfly/org-patternfly-4 --stream",
+    "build:pf4": "lerna run build:4k --scope=@patternfly/org-patternfly-4 --stream",
     "combine-builds": "node ./scripts/combine-sites",
     "copy-assets": "node ./scripts/copy-assets",
     "clean": "rm -rf out && yarn clean:pf3 && yarn clean:pf4",
