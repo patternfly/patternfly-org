@@ -4,6 +4,26 @@ path: "/design-guidelines/usage-and-behavior/navigation-system"
 # Navigation system
 Navigation is used to organize an application’s structure and content, making it easy to find information and accomplish tasks. Navigation communicates relationships, context, and actions a user can take within an application.
 
+## Primary elements
+**Elements with vertical navigation**
+![Navigation system elements - Vertical navigation](img/tertiary.png)
+1. Primary global navigation
+2. Secondary global navigation
+3. Tertiary local navigation
+
+**Elements with horizontal navigation**
+![Navigation system elements - Horizontal navigation](x.png)
+
+## Components and demos used
+The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use-cases. We’ll explore several examples in this documentation.
+
+**HTML/CSS components**
+[Page](/documentation/core/demos/page), [Breadcrumb](/documentation/core/components/breadcrumb), [Nav](/documentation/core/components/nav), [Tabs](/documentation/core/components/tabs)
+
+**React components**
+[PageLayout](/documentation/react/demos/pagelayout), [Nav](/documentation/react/components/nav), [Breadcrumb](/documentation/react/components/breadcrumb),
+
+## Usage
 ### Vertical navigation
 ![Vertical nav](img/simple-vertical.png)
 
@@ -40,13 +60,6 @@ Horizontal navigation is global navigation that displays nav items from left to 
 * You have only one level of navigation and no secondary navigation items
 
 ### Tertiary navigation
-
-![Tertiary nav](img/tertiary.png)
-
-1. Primary navigation
-2. Secondary navigation
-3. Tertiary navigation
-
 Global navigation is limited to two levels - primary and secondary. You can add tertiary navigation when you need to include local navigation specific to a particular window or tab in the interface.
 
 ### Context selector
@@ -59,7 +72,7 @@ Use a context selector in addition to your global navigation when the data or re
 
 ![Breadcrumbs](img/breadcrumbs.png)
 
-Breadcrumbs act as a resource to help users navigate more efficiently and provide context to help users understand where they are in the application hierarchy. Use breadcrumbs in addition to your global navigation to display a user's location in the application. 
+Breadcrumbs act as a resource to help users navigate more efficiently and provide context to help users understand where they are in the application hierarchy. Use breadcrumbs in addition to your global navigation to display a user's location in the application.
 
 #### When to use
 * Use breadcrumbs when the primary and secondary navigation items are not always exposed.
