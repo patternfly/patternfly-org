@@ -11,7 +11,7 @@ import {
   PageSectionVariants
 } from '@patternfly/react-core';
 import { Location } from '@reach/router';
-import './markdownPageTemplate.css';
+import './markdownPageTemplate.scss';
 
 const navBuilder = navData => {
   return (

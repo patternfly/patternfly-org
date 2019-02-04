@@ -1,16 +1,39 @@
+const globImporter = require('node-sass-glob-importer');
+
 module.exports = {
   // Note: it must *not* have a trailing slash.
-  pathPrefix: `/img`,
+  // pathPrefix: `/img`,
   siteMetadata: {
     title: 'PatternFly 4',
     description: 'Documentation for PatternFly 4',
-    author: 'Red Hat'
+    author: 'Red Hat',
+    siteUrl: 'http://patternfly-react.surge.sh'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-remark-images',
+    // catch links in markdown files and use gatsby-link to navigate
+    'gatsby-plugin-catch-links',
+    // create sitemap (only in prod) and save to /sitemap.xml
+    'gatsby-plugin-sitemap',
+    // create robots.txt
+    'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*'}]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        importer: globImporter(),
+        postCssPlugins: [],
+        precision: 5
+      }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
@@ -77,13 +100,6 @@ module.exports = {
             }
           }
         ]
-      }
-    },
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        postCssPlugins: [],
-        precision: 5
       }
     },
     // {

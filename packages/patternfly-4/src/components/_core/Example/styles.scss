@@ -20,17 +20,22 @@
 }
 
 .Example__section {
+  border-left: 1px solid #bbb;
+  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  padding: 0.5rem;
+
   .pf-p-secondary-nav__link {
     border: none;
   }
 }
 
-.Example__section:not(:last-of-type) {
-  margin-bottom: 1rem;
-}
+// .Example__section:not(:last-of-type) {
+//   margin-bottom: 1rem;
+// }
 
 .Example__componentLink {
-  padding-top: .25em;
+  // padding-top: .25em;
 
   ul {
     display: inline;

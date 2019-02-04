@@ -1,14 +1,14 @@
 import { StyleSheet } from '@patternfly/react-styles';
 import {
   global_BorderWidth_sm as borderWidth,
-  global_BorderColor_dark as borderColor
+  global_BorderColor_light as borderColor
 } from '@patternfly/react-tokens';
 
 export default StyleSheet.create({
   code: {
     'max-height': '37.5rem',
     overflow: 'auto',
-    border: '1px solid'
+    border: '1px solid #bbb'
   },
   toolbar: {
     borderLeft: `${borderWidth.var} solid ${borderColor.var}`,

@@ -1,11 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql, withPrefix, Link } from 'gatsby';
-import Helmet from 'react-helmet';
-
-// import './layout.css'
-// import '@patternfly/react-core/dist/styles/base.css'
-
+import Header from './header';
 import {
   BackgroundImage,
   BackgroundImageSrc,
@@ -21,7 +17,6 @@ import {
   PageSidebar
 } from '@patternfly/react-core';
 import { Location } from '@reach/router';
-
 import brandImg from './l_pf-reverse-164x11.png';
 
 class Layout extends React.Component {
@@ -80,30 +75,14 @@ class Layout extends React.Component {
         }
       }
     `} render={data => <>
-        {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-        <Helmet>
-          <title>PatternFly</title>
-          <html lang="en-US" />
-          <script
-            defer
-            src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
-            integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
-            crossOrigin="anonymous"
-          />
-          <script
-            defer
-            src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
-            integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
-            crossOrigin="anonymous"
-          />
-        </Helmet>
+        <Header siteTitle={data.site.siteMetadata.title} />
         <BackgroundImage src={bgImages} />
         <Page header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} isNavOpen /> : null}>
           {tertiaryNav && <PageSection variant={PageSectionVariants.light}>
             {tertiaryNav}
           </PageSection>}
           {this.props.children}
-        </Page>}
+        </Page>
       </>} />);
   }
 

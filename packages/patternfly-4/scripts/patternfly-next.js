@@ -1,11 +1,13 @@
 const fs = require('fs-extra');
 
-const source = 'node_modules/@patternfly/src-patternfly-next/src';
-const destination = '_repos/core/src';
-const sourceHelpers = 'node_modules/@patternfly/src-patternfly-next/build/helpers';
+const source = '../../node_modules/@patternfly/src-patternfly-next/src/patternfly';
+const destination = '_repos/core/src/patternfly';
+const sourceHelpers = '../../node_modules/@patternfly/src-patternfly-next/build/helpers';
 const destinationHelpers = '_repos/core/build/helpers';
-const sourceAssets = 'node_modules/@patternfly/src-patternfly-next/static/assets';
+const sourceAssets = '../../node_modules/@patternfly/src-patternfly-next/static/assets';
 const destinationAssets = './static/assets';
+const sourceGatsbyVariables = '../../node_modules/@patternfly/src-patternfly-next/src/site/gatsby-variables.scss';
+const destinationGatsbyVariables = '_repos/core/src/site/gatsby-variables.scss';
 
 fs.remove('_repos/core', (errRemove) => {
 if (errRemove) {
@@ -15,7 +17,7 @@ if (errRemove) {
 // eslint-disable-next-line no-console
 console.log('Removed _repos/core dir');
 
-  // create directory structure
+  // core
   fs.ensureDir(destination, (errCreate) => {
     if (errCreate) {
       // eslint-disable-next-line no-console
@@ -35,7 +37,7 @@ console.log('Removed _repos/core dir');
     });
   });
 
-  // create directory structure
+  // helpers
   fs.ensureDir(destinationHelpers, (errCreateHelpers) => {
     if (errCreateHelpers) {
       // eslint-disable-next-line no-console
@@ -55,7 +57,7 @@ console.log('Removed _repos/core dir');
     });
   });
 
-  // create directory structure
+  // assets
   fs.ensureDir(destinationAssets, (errCreateAssets) => {
     if (errCreateAssets) {
       // eslint-disable-next-line no-console
@@ -73,6 +75,16 @@ console.log('Removed _repos/core dir');
       // eslint-disable-next-line no-console
       console.log('Copied core/static/assets into static dir');
     });
+  });
+
+  // gatsby-variables.scss
+  fs.copy(sourceGatsbyVariables, destinationGatsbyVariables, (errCopyGatsbyVariables) => {
+    if (errCopyGatsbyVariables) {
+      // eslint-disable-next-line no-console
+      return console.error(errCopyGatsbyVariables);
+    }
+    // eslint-disable-next-line no-console
+    console.log('Copied gatsby-variables.scss');
   });
 
 });

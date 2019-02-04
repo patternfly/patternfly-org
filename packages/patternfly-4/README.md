@@ -95,3 +95,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 ## 💫 Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+
+## Updating React
+
+When updating the @patternfly/src-patternfly-react dependency (`yarn patternfly-react`) make sure that the version of @patternfly/next matches the one used in `{root}/node_modules/@patternfly/src-patternfly-react/packages/patternfly-4/react-core/package.json`

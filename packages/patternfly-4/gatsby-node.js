@@ -172,7 +172,7 @@ exports.createPages = ({ graphql, actions }) => {
         });
       });
 
-      coreExamples.edges.forEach(({ node }) => {
+      coreExamples && coreExamples.edges.forEach(({ node }) => {
         const shortenedPath = node.relativePath.split('/').slice(2, 4).join('/').toLowerCase();
         const examplePath = `/documentation/core/${shortenedPath}`;
 
@@ -197,12 +197,44 @@ exports.createPages = ({ graphql, actions }) => {
           context: {}, // additional data can be passed via context
         })
       });
+
+      const sourceAssets =  path.resolve(__dirname, './public/assets');
+      const destinationAssetsDev = path.resolve(__dirname, './public/documentation/core/assets');
+      const destinationAssetsProd = path.resolve(__dirname, './public/documentation/assets');
+      fs.symlink(sourceAssets, destinationAssetsDev, 'dir', err => {
+        console.log(err);
+      });
+      fs.symlink(sourceAssets, destinationAssetsProd, 'dir', err => {
+        console.log(err);
+      });
+
+      // Copy assets to the place that Core CSS expects them to be
+      // const sourceAssets = '../../node_modules/@patternfly/src-patternfly-next/static/assets';
+      // const destinationAssets = './public/documentation/core/assets';
+      // fs.ensureDir(destinationAssets, (errCreateAssets) => {
+      //   if (errCreateAssets) {
+      //     // eslint-disable-next-line no-console
+      //     return console.error(errCreateAssets);
+      //   }
+      //   // eslint-disable-next-line no-console
+      //   console.log(`Created ${destinationAssets} dir`);
+
+      //   // Copy files
+      //   fs.copy(sourceAssets, destinationAssets, (errCopyAssets) => {
+      //     if (errCopyAssets) {
+      //       // eslint-disable-next-line no-console
+      //       return console.error(errCopyAssets);
+      //     }
+      //     // eslint-disable-next-line no-console
+      //     console.log(`Copied assets into ${destinationAssets} dir`);
+      //   });
+      // });
     });
     resolve();
   })
 };
 
-exports.onCreateWebpackConfig = ({ stage, actions, plugins, getConfig }) => 
+exports.onCreateWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) => 
   new Promise((resolve, reject) => {
     if (partialsToLocationsMap === null) {
       partialsToLocationsMap = {};
@@ -212,19 +244,39 @@ exports.onCreateWebpackConfig = ({ stage, actions, plugins, getConfig }) =>
           const fileName = fileNameArr[fileNameArr.length - 1].slice(0, -4);
           partialsToLocationsMap[fileName] = file;
         });
-        continueWebpackConfig({ stage, actions, plugins, getConfig });
+        continueWebpackConfig({ stage, loaders, actions, plugins, getConfig });
         resolve();
       });
     } else {
-      continueWebpackConfig({ stage, actions, plugins, getConfig });
+      continueWebpackConfig({ stage, loaders, actions, plugins, getConfig });
       resolve();
     }
 });
 
-const continueWebpackConfig = ({ stage, actions, plugins, getConfig }) => {
+const continueWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) => {
+  const pfStylesTest = /patternfly-next.*(components|layouts|utilities).*\.css$/;
   actions.setWebpackConfig({
     module: {
       rules: [
+        // {
+        //   test: pfStylesTest,
+        //   use: [{ loader: 'babel-loader' }, { loader: require.resolve('@patternfly/react-styles/loader') }]
+        // },
+        // {
+        //   test: /\.css$/,
+        //   use: [loaders.miniCssExtract(), loaders.css({ sourceMap: false, singleton: true })],
+        //   exclude: pfStylesTest
+        // },
+        // {
+        //   test: /\.scss$/,
+        //   use: [{
+        //       loader: "style-loader" // creates style nodes from JS strings
+        //   }, {
+        //       loader: "css-loader" // translates CSS into CommonJS
+        //   }, {
+        //       loader: "sass-loader" // compiles Sass to CSS, using Node Sass by default
+        //   }]
+        // },
         {
           test: /\.md$/,
           loader: 'html-loader!markdown-loader'
@@ -237,7 +289,7 @@ const continueWebpackConfig = ({ stage, actions, plugins, getConfig }) => {
               if (partialsToLocationsMap[partial]) {
                 callback(null, partialsToLocationsMap[partial]);
               } else {
-                throw new Error(`Could not find partial: ${partial}`);
+                callback(new Error(`Could not find partial: ${partial}`), '');
               }
             },
             helperDirs: path.resolve(__dirname, './_repos/core/build/helpers')
@@ -252,7 +304,13 @@ const continueWebpackConfig = ({ stage, actions, plugins, getConfig }) => {
         '@components': path.resolve(__dirname, './_repos/core/src/patternfly/components'),
         '@layouts': path.resolve(__dirname, './_repos/core/src/patternfly/layouts'),
         '@demos': path.resolve(__dirname, './_repos/core/src/patternfly/demos'),
-        '@project': path.resolve(__dirname, './_repos/core/src')
+        '@project': path.resolve(__dirname, './_repos/core/src'),
+        // '@patternfly/react-table': path.resolve(__dirname, './_repos/react-table/src'),
+        // '@patternfly/react-charts': path.resolve(__dirname, './_repos/react-charts/src'),
+        // '@patternfly/react-core': path.resolve(__dirname, './_repos/react-core/src'),
+        // '@patternfly/react-styles': path.resolve(__dirname, './_repos/react-styles/src'),
+        // '@patternfly/react-styled-system': path.resolve(__dirname, './_repos/react-styled-system/src'),
+        // '@patternfly/patternfly-next': path.resolve(__dirname, './_repos/core/src/patternfly')
       }
     },
     resolveLoader: {
@@ -261,6 +319,7 @@ const continueWebpackConfig = ({ stage, actions, plugins, getConfig }) => {
   });
 
   const configAfter = getConfig();
+  // configAfter.module.rules = configAfter.module.rules.filter(rule => rule.oneOf === undefined);
   const minimizer = [
     plugins.minifyJs({
       terserOptions: {
