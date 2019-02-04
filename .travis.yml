@@ -8,7 +8,7 @@ deploy:
   skip_cleanup: true
   project: ./out/
   domain: patternfly.surge.sh
-  on: monorepo
+  on: gatsby2
 notifications:
   email: false
 git:

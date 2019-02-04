@@ -198,15 +198,15 @@ exports.createPages = ({ graphql, actions }) => {
         })
       });
 
-      const sourceAssets =  path.resolve(__dirname, './public/assets');
-      const destinationAssetsDev = path.resolve(__dirname, './public/documentation/core/assets');
-      const destinationAssetsProd = path.resolve(__dirname, './public/documentation/assets');
-      fs.symlink(sourceAssets, destinationAssetsDev, 'dir', err => {
-        console.log(err);
-      });
-      fs.symlink(sourceAssets, destinationAssetsProd, 'dir', err => {
-        console.log(err);
-      });
+      // const sourceAssets =  path.resolve(__dirname, './public/assets');
+      // const destinationAssetsDev = path.resolve(__dirname, './public/documentation/core/assets');
+      // const destinationAssetsProd = path.resolve(__dirname, './public/documentation/assets');
+      // fs.symlink(sourceAssets, destinationAssetsDev, 'dir', err => {
+      //   console.log(err);
+      // });
+      // fs.symlink(sourceAssets, destinationAssetsProd, 'dir', err => {
+      //   console.log(err);
+      // });
 
       // Copy assets to the place that Core CSS expects them to be
       // const sourceAssets = '../../node_modules/@patternfly/src-patternfly-next/static/assets';

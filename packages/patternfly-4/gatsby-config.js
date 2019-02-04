@@ -1,8 +1,7 @@
 const globImporter = require('node-sass-glob-importer');
 
 module.exports = {
-  // Note: it must *not* have a trailing slash.
-  // pathPrefix: `/img`,
+  pathPrefix: '/4.0',
   siteMetadata: {
     title: 'PatternFly 4',
     description: 'Documentation for PatternFly 4',

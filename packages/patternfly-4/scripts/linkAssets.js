@@ -7,6 +7,6 @@ const destinationAssetsProd = path.resolve(__dirname, '../public/documentation/a
 fs.symlink(sourceAssets, destinationAssetsDev, 'dir', err => {
   console.log(err);
 });
-fs.symlink(sourceAssets, destinationAssetsProd, 'dir', err => {
-  console.log(err);
-});
+// fs.link(sourceAssets, destinationAssetsProd, err => {
+//   console.log(err);
+// });

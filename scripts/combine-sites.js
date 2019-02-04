@@ -25,16 +25,17 @@ fs.remove(build_root, (errRemove) => {
     console.log('Created out/4.0 dir');
 
     // Copy files
-    fs.copy(pf3_build, build_root, (errPf3) => {
-      if (errPf3) {
-        // eslint-disable-next-line no-console
-        return console.error(errPf3);
-      }
-      // eslint-disable-next-line no-console
-      console.log('Copied pf3 build into out dir');
-    });
+    // fs.copy(pf3_build, build_root, (errPf3) => {
+    //   if (errPf3) {
+    //     // eslint-disable-next-line no-console
+    //     return console.error(errPf3);
+    //   }
+    //   // eslint-disable-next-line no-console
+    //   console.log('Copied pf3 build into out dir');
+    // });
 
-    fs.copy(pf4_build, pf4_root, (errPf4) => {
+    // TODO: Change dest back to pf4_root
+    fs.copy(pf4_build, build_root, (errPf4) => {
       if (errPf4) {
         // eslint-disable-next-line no-console
         return console.error(errPf4);
