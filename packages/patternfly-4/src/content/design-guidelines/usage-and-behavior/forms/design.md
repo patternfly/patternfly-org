@@ -7,8 +7,8 @@ A form is a group of elements used to collect information from a user. Forms can
 ## Primary elements
 Most forms will contain the following basic elements:
 
-*Elements of a form*
-![Elements of a form](img/form-elements.png)
+*Primary form elements*
+![Primary form elements](img/form-elements.png)
 
 1. [Labels](/design-guidelines/usage-and-behavior/data-input) - Field labels can be aligned to the left or top of the field depending on the layout of your page and the amount of space you have to work with. Learn more about field labels in the [text and data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
 
@@ -28,9 +28,9 @@ Most forms will contain the following basic elements:
         * Helper text
         * Syntax hints
 
-5. [Validation and errors](#Provide-validation-and-errors) - ensure that the correct information is collected before the form can be submitted to the system.
+5. [Validation and errors](#Provide-validation-and-errors) - ensures that the correct information is collected before the form can be submitted to the system.
 
-6. Action buttons - enable a user to submit or exit a form. Button placement depends on the type of form you're presenting to the user.
+6. Action buttons - enables a user to submit or exit a form. Button placement depends on the type of form you're presenting to the user.
 
 When using forms in a modal, align buttons to the right edge of the input field. Place the primary button on the far right and the secondary button to the left.
 
@@ -44,7 +44,7 @@ Align buttons on full page forms to the left, placing the primary button on the 
 
 
 ## Components and demos used
-These PatternFly components listed can be used in a number of ways to build forms to suit specific needs or use-cases.
+The PatternFly components listed can be used in a number of ways to build forms to suit specific needs or use-cases.
 
 **HTML/CSS components**
 [Form](/documentation/core/components/form), [Button](/documentation/core/components/button), [Check](/documentation/core/components/check), [Content](/documentation/core/components/content), [Dropdown](/documentation/core/components/dropdown), [Formcontrol](/documentation/core/components/formcontrol), [Inputgroup](/documentation/core/components/inputgroup), [Popover](/documentation/core/components/popover), [Progress](/documentation/core/components/progress), [Switch](/documentation/core/components/switch), [Tooltip](/documentation/core/components/tooltip)
