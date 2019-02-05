@@ -20,7 +20,7 @@ Most forms will contain the following basic elements:
 
 2. [Text field](/design-guidelines/usage-and-behavior/data-input) - provides an area for users to input free-form text.
 
-3. [Data input](/design-guidelines/usage-and-behavior/data-input) - provides a way for users to submit any information that is not free-form text. For example, you might use a check box to enable users to select from multiple predetermined values or a radio button to enable users to select one valued from a list of several values. Input components are designed for specific use cases. Learn more about data input variations in the [text and data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
+3. [Data input](/design-guidelines/usage-and-behavior/data-input) - provides a way for users to submit any information that is not free-form text. For example, you might use a check box to enable users to select from multiple predetermined values or a radio button to enable users to select one value from a list of several values. Input components are designed for specific use cases. Learn more about data input variations in the [text and data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
 
 4. [Help](#Provide-the-right-kind-of-help) - provides assistance in any area where the user might need additional information or context to provide the right input
     * Field level help - provides content in a popover.
@@ -32,16 +32,15 @@ Most forms will contain the following basic elements:
 
 6. Action buttons - enables a user to submit or exit a form. Button placement depends on the type of form you're presenting to the user.
 
-When using forms in a modal, align buttons to the right edge of the input field. Place the primary button on the far right and the secondary button to the left.
+  When using forms in a modal, align buttons to the right edge of the input field. Place the primary button on the far right and the secondary button to the left.
 
-*Buttons on a modal*
-![Buttons on a modal](img/modal-button.png)
+  *Buttons on a modal*
+  ![Buttons on a modal](img/modal-button.png)
 
-Align buttons on full page forms to the left, placing the primary button on the left and secondary on the right.
+  When using full page forms, align buttons to the left, placing the primary button on the left and secondary on the right.
 
-*Buttons on a full page form*
-![Buttons on a full page](img/fullpage-button.png)
-
+  *Buttons on a full page form*
+  ![Buttons on a full page](img/fullpage-button.png)
 
 ## Components and demos used
 The PatternFly components listed can be used in a number of ways to build forms to suit specific needs or use-cases.
