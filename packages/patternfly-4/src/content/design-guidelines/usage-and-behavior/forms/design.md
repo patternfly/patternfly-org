@@ -5,22 +5,22 @@ path: "/design-guidelines/usage-and-behavior/forms"
 A form is a group of elements used to collect information from a user. Forms can be presented to the user in a variety of contexts depending on the use case and scenario.
 
 ## Primary elements
-While every form will require a different combination of components depending on the use-case, most forms will contain the following basic elements:
+Most forms will contain the following basic elements:
 
-![Elements of a form](img/form-elements.png)
 *Elements of a form*
+![Elements of a form](img/form-elements.png)
 
 1. [Labels](/design-guidelines/usage-and-behavior/data-input) - Field labels can be aligned to the left or top of the field depending on the layout of your page and the amount of space you have to work with. Learn more about field labels in the [text and data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
 
-  ![Aligned to the top](img/top-aligned.png)
   *Aligned to the top*
+  ![Aligned to the top](img/top-aligned.png)
 
-  ![Aligned to the left](img/left-aligned.png)
   *Aligned to the left*
+  ![Aligned to the left](img/left-aligned.png)
 
 2. [Text field](/design-guidelines/usage-and-behavior/data-input) - provides an area for users to input free-form text.
 
-3. [Data input](/design-guidelines/usage-and-behavior/data-input) - provides a way for users to submit any information that is not free-form text. For example, you might use a check box to enable users to select from multiple predetermined values. Input components are designed for specific use cases.
+3. [Data input](/design-guidelines/usage-and-behavior/data-input) - provides a way for users to submit any information that is not free-form text. For example, you might use a check box to enable users to select from multiple predetermined values or a radio button to enable users to select one valued from a list of several values. Input components are designed for specific use cases. Learn more about data input variations in the [text and data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
 
 4. [Help](#Provide-the-right-kind-of-help) - provides assistance in any area where the user might need additional information or context to provide the right input
     * Field level help - provides content in a popover.
@@ -30,7 +30,18 @@ While every form will require a different combination of components depending on
 
 5. [Validation and errors](#Provide-validation-and-errors) - ensure that the correct information is collected before the form can be submitted to the system.
 
-6. Action buttons - enable a user to submit or exit a form.
+6. Action buttons - enable a user to submit or exit a form. Button placement depends on the type of form you're presenting to the user.
+
+When using forms in a modal, align buttons to the right edge of the input field. Place the primary button on the far right and the secondary button to the left.
+
+*Buttons on a modal*
+![Buttons on a modal](img/modal-button.png)
+
+Align buttons on full page forms to the left, placing the primary button on the left and secondary on the right.
+
+*Buttons on a full page form*
+![Buttons on a full page](img/fullpage-button.png)
+
 
 ## Components and demos used
 These PatternFly components listed can be used in a number of ways to build forms to suit specific needs or use-cases.
@@ -55,8 +66,8 @@ There are a few different ways to provide help on forms. The type of help you ch
 **Field level help**
 Use field level help to provide additional context to a text or input field. Field level help is denoted by the information icon and displayed in a popover on a click.
 
-![Field level help](img/field-level-help.png)
 *Field level help example*
+![Field level help](img/field-level-help.png)
 
 **DO**
 * Use field level help wherever any field needs additional background or explanation.
@@ -69,8 +80,8 @@ Use field level help to provide additional context to a text or input field. Fie
 **Helper text**
 Helper text is text below a form field that helps a user provide the right information, like “Provide a unique name.” Use helper text for information that a user needs to know in order to enter the correct information. For context or background information that is “nice to have,” use field level help in a popover.
 
-![Helper text](img/helpertext.png)
 *Helper text example*
+![Helper text](img/helpertext.png)
 
 **DO**
 * Keep helper text concise while providing enough information to enable a user to complete their task.
@@ -88,8 +99,8 @@ For example, a syntax hint for a date might be _DD/MM/YYYY_.
 
 Use syntax hints when the requested data type might be unfamiliar or the field requires the user to provide data in a specific format.
 
-![Syntax hint](img/syntax-hint.png)
 *Syntax hint example*
+![Syntax hint](img/syntax-hint.png)
 
 **DO**
 * Only use syntax hints for text input fields.
@@ -121,31 +132,26 @@ For server-side validation, use an inline alert along with inline errors whereve
 
 Notification messages should describe the error and help users solve the problem.
 
-![Validation](img/validation-example.png)
 *Validation example*
+![Validation](img/validation-example.png)
 
 ### Use progressive disclosure
 Use progressive disclosure to hide and show fields based on the users’ selection. This approach keeps the workflow short and allows the user to focus on only the fields relevant to them. It also avoids using color to indicate whether or not a field is available, making it suitable for colorblind users.
 
-![Progressive disclosure](img/progressive-disclosure.png)
 *Progressive disclosure example*
+![Progressive disclosure](img/progressive-disclosure.png)
 
 ### Using forms in your designs
 **In a card**
 ![Card example](img/card-example.png)
-*Card example*
 
 **In a modal**
 ![Modal example](img/modal-example.png)
-*Modal example*
-
-> Note: When using forms in a modal, button placement is different. Buttons are aligned to the right edge of the input field. The primary button is on the far right and the secondary button is to the left.
 
 **As a wizard**
 ![Wizard](img/wizard-example.png)
-*Wizard example*
 
-> Note: For buttons on wizards, follow modal standards. Buttons are aligned to the right edge of the input field. Place the primary button on the far right and the secondary button is to the left.
+> Note: For buttons on wizards, follow modal standards. Align buttons to the right. Place the primary button on the far right and the secondary button to the left.  
 
 ### Content
 Think of a form as a conversation between your application and your user. Apply the following principles to organize and craft content for your forms:
@@ -153,7 +159,7 @@ Think of a form as a conversation between your application and your user. Apply 
 **Focus on the task and context**
 Make sure you are clear about what the user is trying to accomplish with this form and how your users are thinking about the task they’re trying to complete.
 
-* What terminology do they expect to see?  
+* What are they trying to achieve?  
 * What kinds of questions will they have?
 * Where might they get stuck?
 
@@ -161,13 +167,14 @@ Start by writing out the conversation you might have with someone if you were gu
 
 **Use your understanding of context to plan your content hierarchy:**
 
-* **Include the most critical information in the field label.** Answer the most basic question first: what data do I need to provide here? The field label you choose will depend on the context of your form. For example, can you ask for an address, or do you need to ask for a business address? Is it enough to request a name, or do you need to specify first name, last name, and middle initial?
+* **Include the most critical information in the field label.** Answer the most basic question first: what data do I need to provide here? The field label you choose will depend on the context of your form. For example, is it enough to request a name, or do you need to specify first name, last name, and middle initial?
 
-* **Include critical secondary information as helper text.** This is any information a user must have to provide the right input. For example, a user creating a name for a new asset may need to specify a unique name for that asset. Letting the user know this up front helps avoid unnecessary errors.
+* **Include critical secondary information as helper text.** Critical secondary information is information a user must have in order to provide the right input. For example, a user creating a name for a new asset may need to specify a unique name for that asset. Letting the user know this up front helps avoid unnecessary errors.
 
-* **Include background information/context as field-level help in a popover.** Never hide critical information in a popover. For example, you could use this type of help to define an unfamiliar term or concept that a novice user might not be familiar with.
+* **Include background information/context as field-level help in a popover.**
+For example, you could use this type of help to define an unfamiliar term or concept that a novice user might not be familiar with. **Never hide critical information in a popover.**
 
-**Use natural language**
+* **Use natural language**
 Again, think of a form as a conversation with your user. No one wants to have a conversation with a robot.
 
 See our [content guidelines](/design-guidelines/content/) for additional guidance.
