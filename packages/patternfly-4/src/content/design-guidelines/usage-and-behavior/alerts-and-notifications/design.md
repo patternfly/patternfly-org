@@ -86,11 +86,7 @@ Do not use a toast alert when an event requires immediate action or for synchron
 Transient toast alerts automatically dismiss after a period of time. Eight (8) seconds is a recommended timeout, but alerts should remain visible if the user is hovering over them.
 
 ### Stacking multiple alerts
-Multiple alerts will stack.
-
-![stacked notifications](img/toast-notification-multiple.png)
-
-The most recent alert should appear at the top and others will push down. When alerts are deleted, any space above will be filled by pushing remaining alerts up in the stack order.
+Multiple alerts will stack. The most recent alert should appear at the top and others will push down. When alerts are deleted, any space above will be filled by pushing remaining alerts up in the stack order.
 
 An Alert Group component allows a set of alerts to be properly positioned and stacked as shown below.
 
