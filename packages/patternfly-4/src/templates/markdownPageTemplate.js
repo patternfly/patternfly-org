@@ -118,8 +118,18 @@ export default function Template({
       path: '/design-guidelines/usage-and-behavior/progress-bar'
     }]
   }, {
-    text: 'Content (WIP)',
-    path: '/design-guidelines/content'
+    text: 'Content',
+    path: '/design-guidelines/content',
+    subNav: [{
+      text: 'Writing',
+      path: '/design-guidelines/content/writing'
+    }, {
+      text: 'Voice and Tone',
+      path: '/design-guidelines/content/voice-and-tone'
+    }, {
+      text: 'Grammar and Terminology',
+      path: '/design-guidelines/content/grammar-and-terminology'
+    }]
   }];
   const communityNav = [{
     text: 'Contribute (WIP)',

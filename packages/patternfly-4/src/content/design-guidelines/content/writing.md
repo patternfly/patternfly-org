@@ -1,3 +1,6 @@
+---
+path: "/design-guidelines/content/writing"
+---
 # Writing for user experience
 
 ## What is writing for UX?
