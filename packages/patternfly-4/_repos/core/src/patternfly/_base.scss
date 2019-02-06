@@ -1,6 +1,14 @@
-// CSS shild against PF 3
+@if $pf-global--load-pf-3 {
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly.min.css");
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.37.10/css/patternfly-additions.min.css");
+}
+
+// CSS shield against PF 3
 .pf-c-about-modal-box,
 .pf-c-alert,
+.pf-c-alert-group,
+.pf-c-app-launcher,
 .pf-c-avatar,
 .pf-c-backdrop,
 .pf-c-background-image,
@@ -13,6 +21,7 @@
 .pf-c-chip,
 .pf-c-chip-group,
 .pf-c-content,
+.pf-c-context-selector,
 .pf-c-data-list,
 .pf-c-dropdown,
 .pf-c-empty-state,
@@ -24,36 +33,50 @@
 .pf-c-login,
 .pf-c-modal-box,
 .pf-c-nav,
+.pf-c-options-menu,
 .pf-c-page,
+.pf-c-pagination,
 .pf-c-popover,
 .pf-c-progress,
+.pf-c-radio,
+.pf-c-select,
 .pf-c-switch,
 .pf-c-table,
 .pf-c-tabs,
 .pf-c-title,
+.pf-c-toolbar,
 .pf-c-tooltip,
 .pf-l-bullseye,
+.pf-l-flex,
 .pf-l-gallery,
 .pf-l-grid,
 .pf-l-level,
 .pf-l-split,
-.pf-l-stack,
-.pf-l-toolbar {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.pf-l-stack {
   font-family: var(--pf-global--FontFamily--sans-serif);
   font-size: var(--pf-global--FontSize--md);
   font-weight: var(--pf-global--FontWeight--normal);
   line-height: var(--pf-global--LineHeight--md);
   color: var(--pf-global--Color--100); // this color rule is set here to be able to use themes
-  background-color: transparent;
   text-rendering: optimizeLegibility;
+}
+
+[class*="pf-c"],
+[class*="pf-u"],
+[class*="pf-l"] {
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+  }
 }
 
 // Since PF3 sets root font size to 10px, we need to unset it.
 // This doesn't affect PF3.
-// https://github.com/twbs/bootstrap/blob/v3.4.0-dev/less/scaffolding.less#L23
+// https://github.com/twbs/bootstrap/blob/v3.4.0/less/scaffolding.less#L23
 
 /* stylelint-disable */
 html {
@@ -95,6 +118,11 @@ html {
   h6 {
     padding: 0;
     margin: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
   }
 
   h1,

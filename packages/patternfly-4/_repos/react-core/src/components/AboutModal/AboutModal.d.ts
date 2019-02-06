@@ -1,4 +1,4 @@
-import { SFC, HTMLProps, ReactNode } from 'react';
+import { FunctionComponent, HTMLProps, ReactNode } from 'react';
 
 export interface AboutModalProps extends HTMLProps<HTMLDivElement> {
   children: ReactNode;
@@ -10,10 +10,8 @@ export interface AboutModalProps extends HTMLProps<HTMLDivElement> {
   brandImageAlt: string;
   logoImageSrc?: string;
   logoImageAlt?: string;
-  heroImageSrc: string;
-  heroImageAlt?: string;
 }
 
-declare const AboutModal: SFC<AboutModalProps>;
+declare const AboutModal: FunctionComponent<AboutModalProps>;
 
 export default AboutModal;

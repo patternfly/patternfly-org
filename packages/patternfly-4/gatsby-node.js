@@ -197,38 +197,6 @@ exports.createPages = ({ graphql, actions }) => {
           context: {}, // additional data can be passed via context
         })
       });
-
-      // const sourceAssets =  path.resolve(__dirname, './public/assets');
-      // const destinationAssetsDev = path.resolve(__dirname, './public/documentation/core/assets');
-      // const destinationAssetsProd = path.resolve(__dirname, './public/documentation/assets');
-      // fs.symlink(sourceAssets, destinationAssetsDev, 'dir', err => {
-      //   console.log(err);
-      // });
-      // fs.symlink(sourceAssets, destinationAssetsProd, 'dir', err => {
-      //   console.log(err);
-      // });
-
-      // Copy assets to the place that Core CSS expects them to be
-      // const sourceAssets = '../../node_modules/@patternfly/src-patternfly-next/static/assets';
-      // const destinationAssets = './public/documentation/core/assets';
-      // fs.ensureDir(destinationAssets, (errCreateAssets) => {
-      //   if (errCreateAssets) {
-      //     // eslint-disable-next-line no-console
-      //     return console.error(errCreateAssets);
-      //   }
-      //   // eslint-disable-next-line no-console
-      //   console.log(`Created ${destinationAssets} dir`);
-
-      //   // Copy files
-      //   fs.copy(sourceAssets, destinationAssets, (errCopyAssets) => {
-      //     if (errCopyAssets) {
-      //       // eslint-disable-next-line no-console
-      //       return console.error(errCopyAssets);
-      //     }
-      //     // eslint-disable-next-line no-console
-      //     console.log(`Copied assets into ${destinationAssets} dir`);
-      //   });
-      // });
     });
     resolve();
   })
@@ -254,7 +222,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }
 });
 
 const continueWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) => {
-  const pfStylesTest = /patternfly-next.*(components|layouts|utilities).*\.css$/;
+  const pfStylesTest = /patternfly.*(components|layouts|utilities).*\.css$/;
   actions.setWebpackConfig({
     module: {
       rules: [

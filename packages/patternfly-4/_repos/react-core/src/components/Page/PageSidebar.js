@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@patternfly/patternfly-next/components/Page/page.css';
+import styles from '@patternfly/patternfly/components/Page/page.css';
 import { css } from '@patternfly/react-styles';
 import PropTypes from 'prop-types';
 
@@ -8,7 +8,7 @@ const propTypes = {
   className: PropTypes.string,
   /** Component to render the side navigation (e.g. <Nav /> */
   nav: PropTypes.node,
-  /** True if the side nav is shown  */
+  /** Programmatically manage if the side nav is shown, if isManagedSidebar is set to true in the Page component, this prop is managed */
   isNavOpen: PropTypes.bool,
   /** Additional props are spread to the container <aside> */
   '': PropTypes.any
@@ -21,7 +21,8 @@ const defaultProps = {
 };
 
 const PageSidebar = ({ className, nav, isNavOpen, ...props }) => (
-  <aside
+  <div
+    id="page-sidebar"
     className={css(
       styles.pageSidebar,
       isNavOpen && styles.modifiers.expanded,
@@ -31,7 +32,7 @@ const PageSidebar = ({ className, nav, isNavOpen, ...props }) => (
     {...props}
   >
     {nav}
-  </aside>
+  </div>
 );
 
 PageSidebar.propTypes = propTypes;
