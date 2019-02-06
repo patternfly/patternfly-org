@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@patternfly/patternfly-next/components/Form/form.css';
+import styles from '@patternfly/patternfly/components/Form/form.css';
 import PropTypes from 'prop-types';
 import { css } from '@patternfly/react-styles';
 import { FormContext } from './FormContext';
@@ -22,7 +22,7 @@ const defaultProps = {
 };
 
 const Form = ({ className, children, isHorizontal, ...props }) => (
-  <form {...props} className={css(styles.form, isHorizontal && styles.modifiers.horizontal, className)}>
+  <form noValidate {...props} className={css(styles.form, isHorizontal && styles.modifiers.horizontal, className)}>
     <FormContext.Provider value={{ isHorizontal }}>{children}</FormContext.Provider>
   </form>
 );

@@ -33,9 +33,6 @@ module.exports = {
         precision: 5
       }
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -54,6 +51,9 @@ module.exports = {
         display: 'minimal-ui'
       },
     },
+    // this plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.app/offline
+    'gatsby-plugin-offline',
     // following plugins common to REACT and CORE
     {
       resolve: `gatsby-source-filesystem`,

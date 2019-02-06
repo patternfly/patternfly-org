@@ -1,4 +1,4 @@
-import { SFC, HTMLProps, ReactNode } from 'react';
+import { FunctionComponent, HTMLProps, ReactNode } from 'react';
 import { OneOf, Omit } from '../../typeUtils';
 
 export const AlertVariant: {
@@ -12,10 +12,11 @@ export interface AlertProps extends Omit<HTMLProps<HTMLDivElement>, 'action'> {
   variant: OneOf<typeof AlertVariant, keyof typeof AlertVariant>;
   children?: ReactNode;
   action?: ReactNode;
-  onClose?: Function;
-  closeButtonAriaLabel?: String;
+  title?: string;
+  'aria-label'?: string;
+  variantLabel?: string;
 }
 
-declare const Alert: SFC<AlertProps>;
+declare const Alert: FunctionComponent<AlertProps>;
 
 export default Alert;

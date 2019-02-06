@@ -78,7 +78,7 @@ class Layout extends React.Component {
     `} render={data => canUseDOM && <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <BackgroundImage src={bgImages} />
-        <Page header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} isNavOpen /> : null}>
+        <Page style={{height: '100vh'}} header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} isNavOpen /> : null}>
           {tertiaryNav && <PageSection variant={PageSectionVariants.light}>
             {tertiaryNav}
           </PageSection>}

@@ -25,6 +25,16 @@
   --pf-c-dropdown__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-dropdown__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
 
+  // split buttons
+  --pf-c-dropdown__toggle--m-split-button--child--PaddingTop: var(--pf-global--spacer--form-element);
+  --pf-c-dropdown__toggle--m-split-button--child--PaddingRight: var(--pf-global--spacer--xs);
+  --pf-c-dropdown__toggle--m-split-button--child--PaddingBottom: var(--pf-global--spacer--form-element);
+  --pf-c-dropdown__toggle--m-split-button--child--PaddingLeft: var(--pf-global--spacer--xs);
+  --pf-c-dropdown__toggle--m-split-button--child--BackgroundColor: transparent;
+  --pf-c-dropdown__toggle--m-split-button--first-child--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__toggle--m-split-button--last-child--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__toggle-m-split-button__toggle-check__input--Transform: translateY(#{pf-size-prem(-1px)});
+
   // Toggle Arrow
   --pf-c-dropdown__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
 
@@ -40,6 +50,7 @@
   --pf-c-dropdown--m-top__menu--Transform: translateY(calc(-100% - var(--pf-global--spacer--xs))); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
   // Menu Item
+  --pf-c-dropdown__menu-item--BackgroundColor: transparent;
   --pf-c-dropdown__menu-item--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-dropdown__menu-item--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-dropdown__menu-item--PaddingBottom: var(--pf-global--spacer--sm);
@@ -55,6 +66,8 @@
   // Menu Item Separator
   --pf-c-dropdown__separator--Height: var(--pf-global--BorderWidth--sm);
   --pf-c-dropdown__separator--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-dropdown__separator--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__separator--MarginBottom: var(--pf-global--spacer--sm);
 
   position: relative;
   display: inline-block;
@@ -74,6 +87,40 @@
   line-height: var(--pf-c-dropdown__toggle--LineHeight);
   background-color: var(--pf-c-dropdown__toggle--BackgroundColor);
   border: none;
+
+  &.pf-m-split-button {
+    padding: 0;
+
+    > * {
+      position: relative;
+      padding-top: var(--pf-c-dropdown__toggle--m-split-button--child--PaddingTop);
+      padding-right: var(--pf-c-dropdown__toggle--m-split-button--child--PaddingRight);
+      padding-bottom: var(--pf-c-dropdown__toggle--m-split-button--child--PaddingBottom);
+      padding-left: var(--pf-c-dropdown__toggle--m-split-button--child--PaddingLeft);
+      background-color: var(--pf-c-dropdown__toggle--m-split-button--child--BackgroundColor);
+
+      &:first-child {
+        --pf-c-dropdown__toggle--m-split-button--child--PaddingLeft: var(--pf-c-dropdown__toggle--m-split-button--first-child--PaddingLeft);
+      }
+
+      &:last-child {
+        --pf-c-dropdown__toggle--m-split-button--child--PaddingRight: var(--pf-c-dropdown__toggle--m-split-button--last-child--PaddingRight);
+      }
+    }
+
+    .pf-c-dropdown__toggle-check {
+      cursor: pointer;
+
+      /* stylelint-disable-next-line */
+      input {
+        transform: var(--pf-c-dropdown__toggle-m-split-button__toggle-check__input--Transform);
+      }
+    }
+
+    .pf-c-dropdown__toggle-button {
+      border: 0;
+    }
+  }
 
   &::before {
     position: absolute;
@@ -139,7 +186,8 @@
   .pf-c-dropdown__toggle-icon {
     margin-left: var(--pf-c-dropdown__toggle-icon--MarginLeft);
 
-    .pf-m-top.pf-m-expanded > & {
+    /* stylelint-disable-next-line */
+    .pf-c-dropdown.pf-m-top.pf-m-expanded > & {
       transform: rotate(-180deg);
     }
   }
@@ -178,6 +226,7 @@
   color: var(--pf-c-dropdown__menu-item--Color);
   text-align: left;
   white-space: nowrap;
+  background-color: var(--pf-c-dropdown__menu-item--BackgroundColor);
   border: none;
 
   &:hover,
@@ -185,21 +234,23 @@
   &:focus,
   &.pf-m-focus {
     --pf-c-dropdown__menu-item--Color: var(--pf-c-dropdown__menu-item--Color);
+    --pf-c-dropdown__menu-item--BackgroundColor: var(--pf-c-dropdown__menu-item--hover--BackgroundColor);
 
     text-decoration: none;
-    background-color: var(--pf-c-dropdown__menu-item--hover--BackgroundColor);
   }
 
   &:disabled,
   &.pf-m-disabled {
     --pf-c-dropdown__menu-item--Color: var(--pf-c-dropdown__menu-item--disabled--Color);
+    --pf-c-dropdown__menu-item--BackgroundColor: var(--pf-c-dropdown__menu-item--disabled--BackgroundColor);
 
     pointer-events: none;
-    background-color: var(--pf-c-dropdown__menu-item--disabled--BackgroundColor);
   }
 }
 
 .pf-c-dropdown__separator {
   height: var(--pf-c-dropdown__separator--Height);
+  margin-top: var(--pf-c-dropdown__separator--MarginTop);
+  margin-bottom: var(--pf-c-dropdown__separator--MarginBottom);
   background-color: var(--pf-c-dropdown__separator--BackgroundColor);
 }

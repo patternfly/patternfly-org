@@ -24,8 +24,8 @@ exports[`KebabToggle basic 1`] = `
   color: #282d33;
   text-align: left;
   white-space: nowrap;
+  background-color: transparent;
   text-decoration: none;
-  background-color: #ededed;
 }
 .pf-c-dropdown__menu {
   display: block;
@@ -649,11 +649,15 @@ exports[`KebabToggle expanded 1`] = `
 .pf-c-dropdown__separator {
   display: block;
   height: 1px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   background-color: #ededed;
 }
 .pf-c-dropdown__separator {
   display: block;
   height: 1px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   background-color: #ededed;
 }
 .pf-c-dropdown__menu {
@@ -1841,8 +1845,8 @@ exports[`dropdown basic 1`] = `
   color: #282d33;
   text-align: left;
   white-space: nowrap;
+  background-color: transparent;
   text-decoration: none;
-  background-color: #ededed;
 }
 .pf-c-dropdown__menu {
   display: block;
@@ -2514,11 +2518,15 @@ exports[`dropdown expanded 1`] = `
 .pf-c-dropdown__separator {
   display: block;
   height: 1px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   background-color: #ededed;
 }
 .pf-c-dropdown__separator {
   display: block;
   height: 1px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   background-color: #ededed;
 }
 .pf-c-dropdown__menu {

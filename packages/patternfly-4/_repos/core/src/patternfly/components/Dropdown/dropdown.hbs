@@ -2,19 +2,16 @@
   {{#if dropdown--attribute}}
     {{dropdown--attribute}}
   {{/if}}>
-  {{#if dropdown--IsSelect}}
-    <span id="{{id}}-label" hidden>Select a fruit</span>
-  {{else if dropdown--IsMultiSelect}}
-    <span id="{{id}}-label" hidden>Select one or more fruits</span>
-  {{/if}}
-  {{> dropdown-toggle}}
-  {{#if dropdown--IsSelect}}
-    {{> dropdown-select}}
-  {{else if dropdown--IsMultiSelect}}
-    {{> dropdown-multi-select}}
-  {{else if dropdown--IsActionMenu}}
+  {{#> dropdown-toggle}}
+    {{> @partial-block}}
+  {{/dropdown-toggle}}
+  {{#if dropdown--IsActionMenu}}
     {{> dropdown-menu}}
+  {{else if dropdown--IsBasicActionMenu}}
+    {{> dropdown-menu-basic-action}}
+  {{else if dropdown--IsSplitButton}}
+    {{> dropdown-menu-split-button}}
   {{else}}
-    {{> dropdown-basic}}
+    {{> dropdown-menu-basic}}
   {{/if}}
 </div>
