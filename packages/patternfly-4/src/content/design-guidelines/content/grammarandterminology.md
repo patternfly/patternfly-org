@@ -1,3 +1,6 @@
+---
+path: "/design-guidelines/content/grammar-and-terminology"
+---
 # Terminology, grammar, and mechanics
 
 ## Index
