@@ -99,6 +99,24 @@ class SideNav extends React.Component {
                 />
               </FormGroup>
             </Form>
+            <NavGroup title="Style">
+              <NavItem
+                isActive={currentPath.indexOf('/documentation/react/styles/tokens') > -1}
+                key="/documentation/react/styles/tokens"
+              >
+                <Link to="/documentation/react/styles/tokens">
+                  Tokens
+                </Link>
+              </NavItem>
+              <NavItem
+                isActive={currentPath.indexOf('/documentation/react/documentation/react/styles/icons') > -1}
+                key="/documentation/react/styles/icons"
+              >
+                <Link to="/documentation/react/styles/icons">
+                  Icons
+                </Link>
+              </NavItem>
+            </NavGroup>
             {Boolean(filteredComponentRoutes.length) && (
               <NavGroup title="Components">
                 {filteredComponentRoutes.map(route => (
@@ -109,13 +127,6 @@ class SideNav extends React.Component {
                     <Link to={route.to}>
                       {route.label}
                     </Link>
-                    {/* <NavigationItem
-                      to={route.to}
-                      pkg={route.pkg}
-                      components={route.filteredComponents || route.components}
-                    >
-                      {route.label}
-                    </NavigationItem> */}
                   </NavItem>
                 ))}
               </NavGroup>
@@ -130,13 +141,6 @@ class SideNav extends React.Component {
                     <Link to={route.to}>
                       {route.label}
                     </Link>
-                    {/* <NavigationItem
-                      to={route.to}
-                      pkg={route.pkg}
-                      components={route.filteredComponents || route.components}
-                    >
-                      {route.label}
-                    </NavigationItem> */}
                   </NavItem>
                 ))}
               </NavGroup>
@@ -152,9 +156,6 @@ class SideNav extends React.Component {
                       {route.label}
                     </Link>
                   </NavItem>
-                  // <NavigationItem key={route.label} to={route.to}>
-                  //   {route.label}
-                  // </NavigationItem>
                 ))}
               </NavGroup>
             )}
