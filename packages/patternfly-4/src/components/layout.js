@@ -61,6 +61,7 @@ class Layout extends React.Component {
     };
     const SiteHeader = (
       <PageHeader
+        showNavToggle={sideNav !== null}
         logo={<Link to="/">
           <Brand src={brandImg} alt="Patternfly Logo"/>
         </Link>}
@@ -78,7 +79,7 @@ class Layout extends React.Component {
     `} render={data => canUseDOM && <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <BackgroundImage src={bgImages} />
-        <Page style={{height: '100vh'}} header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} isNavOpen /> : null}>
+        <Page isManagedSidebar={sideNav !== null} style={{height: '100vh'}} header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} /> : null}>
           {tertiaryNav && <PageSection variant={PageSectionVariants.light}>
             {tertiaryNav}
           </PageSection>}
