@@ -25,15 +25,10 @@ The status area and alert title are coded to communicate the severity of an aler
 |Success  |Green (#92D400)   |fa-check-circle | Use to indicate that a task or process has completed successfully
 
 
-### Modal message dialogs
-Modals can be used when you want to block other actions until the user dismisses the dialog or takes action.
-
-![modal messsage dialog](img/modal_basic_spec.png)
-
 ## Related components and demos
-**Core HTML/CSS:** [Alert](#), [Alert Group](#), Alert Demo, [Modal Demo](#)
+**Core HTML/CSS:** [Alert](/documentation/core/components/alert), [Alert Group](/documentation/core/components/alert-group), Alert Demo
 
-**React:** [Alert](#), [Alert Group](#), [Modal](#)
+**React:** [Alert](/documentation/react/components/alert), [Alert Group](/documentation/core/react/alert-group)
 
 ## Usage
 There are two primary use cases when alerts are used:
@@ -102,7 +97,7 @@ When a condition occurs that requires immediate action, a modal message dialog i
 
 ![modal notification](img/modal-notification.png)
 
-For more information about designing modal messages see [Message Dialog] guidelines.
+For more information about designing modal messages see [Message Dialogs](#).
 
 ## Content guidelines
 Message text should be succinct and clearly state what the issue or problem is. Embedded links should navigate the user to the location where they can take action.
