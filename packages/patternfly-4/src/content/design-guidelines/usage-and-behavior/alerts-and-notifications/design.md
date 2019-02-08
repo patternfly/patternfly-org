@@ -1,5 +1,5 @@
-# Alerts
-Alerts are used when the system wants to communicate some status or other information back to a user. Alerts and notifications are closely related. In PatternFly an alert is the mechanism for delivering a notification of some event or status change from the system to the user.
+# Alerts and notifications
+Alerts are used when the system wants to notify the user about some status or other event. This guideline talks about how to properly use different types of alerts in your designs.
 ## Elements
 ### Alert
 Alerts are used to communicate status information to the user without blocking other actions through the user interface.
@@ -7,6 +7,15 @@ Alerts are used to communicate status information to the user without blocking o
 ![alert types](img/alerts.png)
 
 1. **Status Area:** use an icon and color to indicate status or severity of the alert.
+2. **Alert title:** Include a short descriptive message. Long message text will wrap. Text color is coded to match alert type.
+3. **Close (optional):** Dismiss the alert.
+4. **Action (optional):** An action can be placed inside of an alert. Only a single action is supported. Note that the alert can include a close button or a single action, but not both.
+5. **Description (optional):** If a longer message is required, it can be included within the Description field.
+
+#### Communicating Status
+The status area and alert title are coded to communicate the severity of an alert.
+
+![alert colors](img/alert-status.png)
 
 |Type     |Color    |Icon    |Use when      |
 |---------|---------|--------|--------------|
@@ -15,10 +24,6 @@ Alerts are used to communicate status information to the user without blocking o
 |Critical |Red (#CC0000)     |fa-exclamation-circle | Use to indicate that a critical or blocking error has occurred
 |Success  |Green (#92D400)   |fa-check-circle | Use to indicate that a task or process has completed successfully
 
-2. **Alert title:** Include a short descriptive message. Long message text will wrap. Text color is coded to match alert type.
-3. **Close (optional):** Dismiss the alert.
-4. **Action (optional):** An action can be placed inside of an alert. Only a single action is supported. Note that the alert can include a close button or a single action, but not both.
-5. **Description (optional):** If a longer message is required, it can be included within the Description field.
 
 ### Modal message dialogs
 Modals can be used when you want to block other actions until the user dismisses the dialog or takes action.
