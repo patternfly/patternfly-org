@@ -26,6 +26,23 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-mdx`,
+      options: {
+        extensions: [`.mdx`],
+        defaultLayouts: {
+          default: require.resolve("./src/templates/markdownPageTemplate.js")
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 700
+            }
+          }
+        ]
+      }
+    },
+    {
       resolve: `gatsby-plugin-sass`,
       options: {
         importer: globImporter(),
