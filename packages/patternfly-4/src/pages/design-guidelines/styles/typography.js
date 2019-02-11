@@ -4,7 +4,7 @@ import { StyledText } from '@patternfly/react-styled-system';
 
 export const TypographyGrid = ({children, title, legendItem, fontWeight, fontSize, lineHeight}) => (
   <>
-    <span style={{color: "purple"}}>{title} {legendItem && <span style={{fontSize: "10px", verticalAlign: "text-bottom"}}>{legendItem}</span>}</span>
+    <span style={{color: "#703FEC"}}>{title} {legendItem && <span style={{fontSize: "10px", verticalAlign: "text-bottom"}}>{legendItem}</span>}</span>
     <Grid gutter="md" style={{borderBottom: "1px solid #eaecef", marginBottom: "10px", paddingBottom: "10px"}}>
       <GridItem span={2} rowSpan={3}>
         Font Family:<br/>
@@ -28,11 +28,11 @@ export const TypographyGrid = ({children, title, legendItem, fontWeight, fontSiz
 export const TypographyGridLegend = () => (
   <Grid style={{borderBottom: "1px solid #eaecef", marginBottom: "10px", paddingBottom: "10px"}}>
     <GridItem span={1}>
-      <span style={{color: "purple"}}>&#9679;</span>
+      <span style={{color: "#703FEC"}}>&#9679;</span>
     </GridItem>
     <GridItem span={3}>
       <StyledText fontWeight="400" fontSize="14" lineHeight="1.3">
-        <span style={{color: "purple"}}>Special Use Case</span>
+        <span style={{color: "#703FEC"}}>Special Use Case</span>
       </StyledText>
     </GridItem>
     <GridItem span={8}>
@@ -41,11 +41,11 @@ export const TypographyGridLegend = () => (
       </StyledText>
     </GridItem>
     <GridItem span={1}>
-      <span style={{color: "purple"}}>&#9675;</span>
+      <span style={{color: "#703FEC"}}>&#9675;</span>
     </GridItem>
     <GridItem span={3}>
       <StyledText fontWeight="400" fontSize="14" lineHeight="1.3">
-        <span style={{color: "purple"}}>Special Use Case</span>
+        <span style={{color: "#703FEC"}}>Special Use Case</span>
       </StyledText>
     </GridItem>
     <GridItem span={8}>
@@ -57,7 +57,7 @@ export const TypographyGridLegend = () => (
 );
 
 export const SpacingContentItem = ({children, fontWeight, fontSize, lineHeight}) => (
-  <div style={{border: "1px solid purple"}}>
+  <div style={{border: "1px solid #703FEC"}}>
     <StyledText fontWeight={fontWeight} fontSize={fontSize} lineHeight={lineHeight}>
       {children}
     </StyledText>
@@ -76,7 +76,7 @@ export const Spacer = ({color, size, description}) => {
   return (
   <div style={{display: "flex", padding: description ? "5px" : "0px"}}>
     {description && <div style={{alignSelf: "center", fontSize: "12px", width: "80px", textAlign: "right", paddingRight: "10px"}}>{description}</div>}
-    <div style={{alignSelf: "center", width: `${size}px`, height: `${size}px`, backgroundColor: backgroundColor, border: !color ? "1px solid purple": "none"}}></div>
+    <div style={{alignSelf: "center", width: `${size}px`, height: `${size}px`, backgroundColor: backgroundColor, border: !color ? "1px solid #703FEC": "none"}}></div>
   </div>
 )};
 
