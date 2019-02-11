@@ -6,7 +6,7 @@ module.exports = {
     title: 'PatternFly 4',
     description: 'Documentation for PatternFly 4',
     author: 'Red Hat',
-    siteUrl: 'http://patternfly-react.surge.sh'
+    siteUrl: 'http://patternfly.surge.sh'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
