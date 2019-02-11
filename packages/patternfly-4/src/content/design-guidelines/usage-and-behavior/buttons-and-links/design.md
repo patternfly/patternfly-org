@@ -49,9 +49,6 @@ Use different button types to build hierarchy in an application layout.
   **Icon button**
   Use icon buttons for actions that are commonly associated with icons. For example, you could use the close icon to exit a modal or window, or use the hamburger icon to toggle a menu.
 
-### Button states
-
-![Button states](img/buttonstates.png)
 
 ### Using buttons in your designs
 #### Buttons on full page forms
@@ -66,7 +63,7 @@ Use different button types to build hierarchy in an application layout.
 * Align submit buttons with right-edge of input fields.
 
 #### Buttons on wizards
-The placement of buttons on wizards will depend on the types of content you present. 
+The placement of buttons on wizards will depend on the types of content you present.
 
 ![Buttons on modals](img/modal-button.png)
 
