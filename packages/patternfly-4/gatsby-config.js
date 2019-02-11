@@ -1,19 +1,38 @@
+const globImporter = require('node-sass-glob-importer');
+
 module.exports = {
-  // Note: it must *not* have a trailing slash.
-  pathPrefix: `/img`,
+  pathPrefix: '/4.0',
   siteMetadata: {
     title: 'PatternFly 4',
     description: 'Documentation for PatternFly 4',
-    author: 'Red Hat'
+    author: 'Red Hat',
+    siteUrl: 'http://patternfly.surge.sh'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-remark-images',
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    // catch links in markdown files and use gatsby-link to navigate
+    'gatsby-plugin-catch-links',
+    // create sitemap (only in prod) and save to /sitemap.xml
+    'gatsby-plugin-sitemap',
+    // create robots.txt
+    'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*'}]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        importer: globImporter(),
+        postCssPlugins: [],
+        precision: 5
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -32,6 +51,9 @@ module.exports = {
         display: 'minimal-ui'
       },
     },
+    // this plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.app/offline
+    'gatsby-plugin-offline',
     // following plugins common to REACT and CORE
     {
       resolve: `gatsby-source-filesystem`,
@@ -77,13 +99,6 @@ module.exports = {
             }
           }
         ]
-      }
-    },
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        postCssPlugins: [],
-        precision: 5
       }
     },
     // {

@@ -13,7 +13,7 @@ Layouts are generic tools that allow you to structure and organize the content o
 
 ### Components
 Components, like buttons and alerts, can be assembled together to build applications.
-[View Core components](URL) | [View React components](URL)
+[View Core components](/documentation/core/) | [View React components](/documentation/react/)
 
 ## Style and design
 ### Styles

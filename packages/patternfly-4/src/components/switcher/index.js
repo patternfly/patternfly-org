@@ -5,7 +5,7 @@ import {
 } from '@patternfly/react-core';
 import { Link } from 'gatsby';
 import { Location } from '@reach/router';
-import './styles.css';
+import './styles.scss';
 
 const Switcher = () => (
   <Location>

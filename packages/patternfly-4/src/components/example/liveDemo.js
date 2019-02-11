@@ -7,13 +7,13 @@ import * as ChartComponents from '@patternfly/react-charts';
 import * as CoreComponents from '@patternfly/react-core';
 import * as CoreIcons from '@patternfly/react-icons';
 import * as StyledSystemComponents from '@patternfly/react-styled-system';
-import { LiveProvider, LiveEditor, LiveError, LivePreview, withLive } from 'react-live';
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import { transform } from 'babel-standalone';
 import Section from '../section';
-import copy from 'clipboard-copy';
-// add className="GeneratedSource__pre language-html" to use this theme
-import 'prismjs/themes/prism-coy.css';
-import './core-preview.scss';
+import EditorToolbar from './editorToolbar';
+import classNames from 'classnames';
+import PreviewToolbar from '../PreviewToolbar/PreviewToolbar';
+import paramCase from 'param-case';
 
 const propTypes = {
   className: PropTypes.string,
@@ -22,7 +22,8 @@ const propTypes = {
   images: PropTypes.array,
   live: PropTypes.bool,
   liveScope: PropTypes.object,
-  editorLanguage: PropTypes.string
+  fullPageOnly: PropTypes.bool,
+  children: PropTypes.node
 };
 
 const defaultProps = {
@@ -31,15 +32,13 @@ const defaultProps = {
   images: [],
   live: true,
   liveScope: {},
-  editorLanguage: 'jsx'
+  fullPageOnly: false,
+  children: null
 };
 
 const scopePlayground = { React, ...ChartComponents, ...StyledSystemComponents, ...CoreComponents, ...CoreIcons, css };
 
-const transformCode = (code, editorLanguage) => {
-  if (editorLanguage !== 'jsx') {
-    return;
-  }
+const transformCode = code => {
   try {
     // LiveEditor doesn't work properly with these so need to remove
     code = code.replace(/^import(.|\s)*?;$/gm, '');
@@ -62,34 +61,16 @@ const transformCode = (code, editorLanguage) => {
 
 class LiveDemo extends React.Component {
   state = {
-    codeOpen: false,
-    showCopyMessage: false
+    lights: true
   };
 
-  handleClickCodeOpen = () => {
-    this.setState({
-      codeOpen: !this.state.codeOpen
-    });
-  };
-
-  handleClickCopy = () => {
-    copy(this.props.raw);
-    this.setState({
-      showCopyMessage: true
-    });
-    setTimeout(() => {
-      this.setState({
-        showCopyMessage: false
-      });
-    }, 2000);
+  onLightsChange = lights => {
+    this.setState({lights});
   };
 
   render() {
-    const { className, raw, images, live, liveScope, path, editorLanguage } = this.props;
-    const { codeOpen, showCopyMessage } = this.state;
-
-    const GITHUB_BASE = 'https://github.com/patternfly/patternfly-react/blob/master/packages/patternfly-4';
-    const examplePath = `${GITHUB_BASE}${path.substr(5)}`;
+    const { className, raw, images, live, liveScope, path, fullPageOnly, children } = this.props;
+    const { lights } = this.state;
 
     const scope = {
       ...scopePlayground,
@@ -104,52 +85,28 @@ class LiveDemo extends React.Component {
       }
     }
 
+    const GITHUB_BASE = 'https://github.com/patternfly/patternfly-react/blob/master/packages/patternfly-4';
+    const examplePath = `${GITHUB_BASE}${path.substr(9)}`;
+
+    const endsWithSlash = typeof window !== 'undefined' && window.location.href.substr(-1) === '/';
+    const fullPath = fullPageOnly ? path : typeof window !== 'undefined' && `${window.location.href.substr(0, window.location.href.length - (endsWithSlash ? 1 : 0))}/examples/${
+      paramCase(path.split('/').slice(-1)[0].slice(0, -3))
+    }`
+
+    const editor = <LiveEditor className={css(className, styles.code)} ignoreTabKey contentEditable={live} />;
+
+    const darkThemeClasses =
+      classNames({
+        'pf-t-dark pf-m-opaque-200': !lights,
+      });
+
     return (
       <Section>
-        <LiveProvider code={raw} scope={scope} transformCode={code => transformCode(code, editorLanguage)}>
-          {live && <LivePreview className={css(exampleStyles.example)} />}
-          <div className={css(styles.toolbar)}>
-            <CoreComponents.Button
-              onClick={this.handleClickCodeOpen}
-              variant="plain"
-              title="Toggle code"
-              aria-label="Toggle code"
-            >
-              <CoreIcons.CodeIcon />
-            </CoreComponents.Button>
-            <CoreComponents.Button
-              onClick={this.handleClickCopy}
-              variant="plain"
-              title="Copy code"
-              aria-label="Copy code"
-            >
-              <CoreIcons.CopyIcon />
-            </CoreComponents.Button>
-            <a href={examplePath} target="_blank" rel="noopener noreferrer">
-              <CoreComponents.Button
-                onClick={this.handleClickCopy}
-                variant="plain"
-                title="View on GitHub"
-                aria-label="View on GitHub"
-              >
-                <i className={css('fab fa-github')} />
-              </CoreComponents.Button>
-            </a>
-            <CoreComponents.TextContent className={css(styles.message, showCopyMessage && styles.messageShow)}>
-              <CoreComponents.Text component="pre" className={css(styles.messageText)}>
-                Copied to clipboard
-              </CoreComponents.Text>
-            </CoreComponents.TextContent>
-            {codeOpen &&
-              !live && (
-                <CoreComponents.TextContent className={css(styles.messageShow)}>
-                  <CoreComponents.Text component="pre" className={css(styles.messageText)}>
-                    Live edititing disabled
-                  </CoreComponents.Text>
-                </CoreComponents.TextContent>
-              )}
-          </div>
-          {codeOpen && <LiveEditor className={css(className, styles.code)} language={editorLanguage} ignoreTabKey contentEditable={live} />}
+        <LiveProvider code={raw} scope={scope} transformCode={transformCode}>
+          <PreviewToolbar fullPath={fullPath} showLights={!fullPageOnly} showViewports={false} onLightsChange={this.onLightsChange}/>
+          {live && <LivePreview className={css(className, exampleStyles.example, darkThemeClasses)} />}
+          {children}
+          <EditorToolbar editor={editor} raw={raw} path={examplePath} />
           {live && <LiveError />}
         </LiveProvider>
       </Section>
@@ -160,4 +117,4 @@ class LiveDemo extends React.Component {
 LiveDemo.propTypes = propTypes;
 LiveDemo.defaultProps = defaultProps;
 
-export default withLive(LiveDemo);
+export default LiveDemo;

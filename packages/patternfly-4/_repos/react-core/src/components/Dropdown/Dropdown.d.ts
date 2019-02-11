@@ -1,11 +1,11 @@
-import { SFC, HTMLProps, ReactType, ReactNode } from 'react';
+import { FunctionComponent, HTMLProps, ReactNode } from 'react';
 import { OneOf } from '../../typeUtils';
-import DropdownToggle from './DropdownToggle';
 import { DropdownPosition, DropdownDirection } from './dropdownConstants';
 
 export interface DropdownProps extends HTMLProps<HTMLDivElement> {
   children?: ReactNode;
   dropdownItems: ReactNode[];
+  isPlain?: boolean;
   isOpen?: boolean;
   isAction?: boolean;
   onSelect(event: React.SyntheticEvent<HTMLDivElement>): void;
@@ -14,6 +14,6 @@ export interface DropdownProps extends HTMLProps<HTMLDivElement> {
   toggle?: ReactNode;
 }
 
-declare const Dropdown: SFC<DropdownProps>;
+declare const Dropdown: FunctionComponent<DropdownProps>;
 
 export default Dropdown;

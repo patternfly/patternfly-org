@@ -93,7 +93,6 @@ class Documentation extends React.PureComponent {
                         live={exampleObj.live}
                         liveScope={exampleObj.liveScope}
                         name={ComponentExample.name}
-                        editorLanguage="jsx"
                         {...(exampleObj.getContainerProps ? exampleObj.getContainerProps() : {})}
                       >
                         <ComponentExample />

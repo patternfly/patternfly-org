@@ -1,12 +1,12 @@
 import React from 'react';
 import { css, getModifier } from '@patternfly/react-styles';
 import PropTypes from 'prop-types';
-import styles from '@patternfly/patternfly-next/components/Alert/alert.css';
-import accessibleStyles from '@patternfly/patternfly-next/utilities/Accessibility/accessibility.css';
+import styles from '@patternfly/patternfly/components/Alert/alert.css';
+import accessibleStyles from '@patternfly/patternfly/utilities/Accessibility/accessibility.css';
 import AlertIcon from './AlertIcon';
-import AlertBody from './AlertBody';
-import AlertAction from './AlertAction';
-import { capitalize } from '../../internal/util';
+import { capitalize } from '../../helpers/util';
+import AlertActionCloseButton from './AlertActionCloseButton';
+import AlertActionLink from './AlertActionLink';
 
 export const AlertVariant = {
   success: 'success',
@@ -18,7 +18,7 @@ export const AlertVariant = {
 const propTypes = {
   /** Adds Alert variant styles */
   variant: PropTypes.oneOf(Object.values(AlertVariant)).isRequired,
-  /** Action button to put in the Alert */
+  /** Action button to put in the Alert.  Should be <AlertActionLink> or <AlertActionCloseButton> */
   action: PropTypes.node,
   /** Title of the Alert */
   title: PropTypes.string,
@@ -68,8 +68,13 @@ const Alert = ({
   return (
     <div {...props} className={customClassName} aria-label={ariaLabel}>
       <AlertIcon variant={variant} />
-      <AlertBody title={readerTitle}>{children}</AlertBody>
-      {action && <AlertAction>{action}</AlertAction>}
+      {title && <h4 className={css(styles.alertTitle)}>{readerTitle}</h4>}
+      {children && (
+        <div className={css(styles.alertDescription)}>
+          <p>{children}</p>
+        </div>
+      )}
+      {action && <div className={css(styles.alertAction, className)}>{action}</div>}
     </div>
   );
 };

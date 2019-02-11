@@ -13,8 +13,8 @@ import {
   ToolbarSection
 } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
-import flexStyles from '@patternfly/patternfly-next/utilities/Flex/flex.css';
-import spacingStyles from '@patternfly/patternfly-next/utilities/Spacing/spacing.css';
+import flexStyles from '@patternfly/patternfly/utilities/Flex/flex.css';
+import spacingStyles from '@patternfly/patternfly/utilities/Spacing/spacing.css';
 import { ListUlIcon, SortAlphaDownIcon, TableIcon } from '@patternfly/react-icons';
 
 class ComplexToolbarDemo extends React.Component {
@@ -69,11 +69,13 @@ class ComplexToolbarDemo extends React.Component {
         position={DropdownPosition.right}
         toggle={<DropdownToggle onToggle={this.onDropDownToggle}>All</DropdownToggle>}
         isOpen={isDropDownOpen}
+        dropdownItems={[
+          <DropdownItem key="item-1">Item 1</DropdownItem>,
+          <DropdownItem key="item-2">Item 2</DropdownItem>,
+          <DropdownItem key="item-3">Item 3</DropdownItem>,
+          <DropdownItem isDisabled key="all">All</DropdownItem>
+        ]}
       >
-        <DropdownItem>Item 1</DropdownItem>
-        <DropdownItem>Item 2</DropdownItem>
-        <DropdownItem>Item 3</DropdownItem>
-        <DropdownItem isDisabled>All</DropdownItem>
       </Dropdown>
     );
   };
@@ -88,13 +90,15 @@ class ComplexToolbarDemo extends React.Component {
         toggle={<KebabToggle onToggle={this.onKebabToggle} />}
         isOpen={isKebabOpen}
         isPlain
-      >
-        <DropdownItem>Link</DropdownItem>
-        <DropdownItem component="button">Action</DropdownItem>
-        <DropdownItem isDisabled>Disabled Link</DropdownItem>
-        <DropdownItem isDisabled component="button">
-          Disabled Action
+        dropdownItems={[
+          <DropdownItem key="link">Link</DropdownItem>,
+          <DropdownItem component="button" key="action_button">Action</DropdownItem>,
+          <DropdownItem isDisabled key="disabled_link">Disabled Link</DropdownItem>,
+          <DropdownItem isDisabled component="button" key="disabled_button">
+            Disabled Action
         </DropdownItem>
+        ]}
+      >
       </Dropdown>
     );
   };

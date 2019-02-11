@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import './styles.scss';
 
 export default class Preview extends React.Component {
@@ -25,9 +24,9 @@ export default class Preview extends React.Component {
     const preview = fullPageOnly ? (
       <div className="Preview__body ">
         This Preview can only be accessed in&nbsp;
-        <Link to={this.state.fullPath}>
+        <a href={this.state.fullPath} target="_blank" rel="noopener noreferrer">
           full page mode
-        </Link>.
+        </a>.
       </div>
     ) : (
       <div

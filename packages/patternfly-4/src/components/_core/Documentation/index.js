@@ -47,7 +47,7 @@ export default class Documentation extends React.Component {
               <Title size="4xl">{heading}</Title>
             </PageSection>
             <PageSection variant={PageSectionVariants.light} className="pf-w-section-border">
-              <Section title="Examples" headingLevel="h2">
+              <Section title="Examples" headingLevel="h2" className={className}>
                 {children}
               </Section>
             </PageSection>
@@ -63,7 +63,7 @@ export default class Documentation extends React.Component {
     ) : (
       <FullPageExampleLayout>
         <div className={className}>
-          <h1 className="pf-u-sr-only">{this.props.heading} full example</h1>
+          <h1 className="pf-screen-reader">{this.props.heading} full example</h1>
           {children}
         </div>
       </FullPageExampleLayout>

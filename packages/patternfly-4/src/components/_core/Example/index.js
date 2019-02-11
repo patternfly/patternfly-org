@@ -4,11 +4,14 @@ import ReactDOMServer from 'react-dom/server';
 import pretty from 'pretty';
 import { css } from '@patternfly/react-styles';
 import styles from '../../example/example.styles';
-import PreviewToolbar from '../Preview/PreviewToolbar';
+import PreviewToolbar from '../../PreviewToolbar/PreviewToolbar';
 import Preview from '../Preview';
 import ComponentItems from './ComponentItems';
 import { Title } from '@patternfly/react-core';
-// import LiveDemo from '../../example/liveDemo';
+import EditorToolbar from '../../example/editorToolbar';
+import PrismCode from 'react-prism';
+import 'prismjs/themes/prism-coy.css';
+import './core-preview.scss';
 
 export default class Example extends React.Component {
   static parseQueryString(queryString) {
@@ -33,7 +36,7 @@ export default class Example extends React.Component {
 
   componentDidMount() {
     let showComponent = true;
-    debugger;
+
     if (window.location.search !== '') {
       // specific component was requested - make sure it matches
       const queryObject = Example.parseQueryString(window.location.search.substr(1));
@@ -72,18 +75,24 @@ export default class Example extends React.Component {
     const makeDescription = html => ({
       __html: html
     });
+    const editor = (
+      <pre className="GeneratedSource__pre">
+        <PrismCode className="language-html">{indentedOutput}</PrismCode>
+      </pre>
+    );
+    const endsWithSlash = typeof window !== 'undefined' && window.location.href.substr(-1) === '/';
+    const fullPath = typeof window !== 'undefined' && `${window.location.href.substr(0, window.location.href.length - (endsWithSlash ? 1 : 0))}-full?component=${heading}`;
     if (!this.state.isFull) {
       return (
         <div>
           <Title size="lg">{heading}</Title>
-          <PreviewToolbar heading={heading} onViewportChange={this.onViewportChange} onLightsChange={this.onLightsChange}/>
+          <PreviewToolbar fullPath={fullPath} showLights={!fullPageOnly} showViewports={!fullPageOnly} onViewportChange={this.onViewportChange} onLightsChange={this.onLightsChange}/>
           {Boolean(description) && <p className={css(styles.description)} dangerouslySetInnerHTML={makeDescription(description)} />}
-          <div className={css(styles.example)}>
-            <Preview heading={heading} viewport={this.state.viewport} lights={this.state.lights} fullPageOnly={fullPageOnly} minHeight={minHeight}>
-              {children}
-            </Preview>
-            <ComponentItems children={children} />
-          </div>
+          <Preview heading={heading} viewport={this.state.viewport} lights={this.state.lights} fullPageOnly={fullPageOnly} minHeight={minHeight}>
+            {children}
+          </Preview>
+          <ComponentItems children={children} className={css(styles.example)} />
+          <EditorToolbar editor={editor} raw={indentedOutput} live={false} showMessage={false} />
           {/* <LiveDemo raw={indentedOutput.trim()} live={false} editorLanguage="html" /> */}
         </div>
       );

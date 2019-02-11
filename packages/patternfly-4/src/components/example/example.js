@@ -4,17 +4,15 @@ import styles from './example.styles';
 import PropTypes from 'prop-types';
 import { Title } from '@patternfly/react-core';
 import LiveDemo from './liveDemo';
-import Link from 'gatsby-link';
 import Section from '../section';
-import PreviewToolbar from '../_core/Preview/PreviewToolbar';
+import PreviewToolbar from '../PreviewToolbar/PreviewToolbar';
 import Preview from '../_core/Preview';
-import ComponentItems from '../_core/Example/ComponentItems';
+// import ComponentItems from '../_core/Example/ComponentItems';
 
 const propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string,
   description: PropTypes.string,
-  editorClassName: PropTypes.string,
   fullPageOnly: PropTypes.bool,
   name: PropTypes.string,
   raw: PropTypes.string,
@@ -22,16 +20,11 @@ const propTypes = {
   images: PropTypes.array,
   live: PropTypes.bool,
   liveScope: PropTypes.object,
-  editorLanguage: PropTypes.string,
   showPreviewOptions: PropTypes.bool,
-  coreExample: PropTypes.any,
-  previewFullPageOnly: PropTypes.bool,
-  previewMinHeight: PropTypes.string,
-  examplePath: PropTypes.string
+  className: PropTypes.string
 };
 
 const defaultProps = {
-  editorClassName: '',
   description: '',
   fullPageOnly: false,
   title: '',
@@ -41,12 +34,8 @@ const defaultProps = {
   images: [],
   live: true,
   liveScope: {},
-  editorLanguage: 'jsx',
   showPreviewOptions: false,
-  coreExample: null,
-  previewFullPageOnly: false,
-  previewMinHeight: '',
-  examplePath: ''
+  className: ''
 };
 
 const GATSBY_LIVE_EXAMPLES = process.env.GATSBY_LIVE_EXAMPLES === 'true';
@@ -70,7 +59,6 @@ class Example extends React.Component {
       children,
       title,
       description,
-      editorClassName,
       fullPageOnly,
       name,
       raw,
@@ -78,12 +66,8 @@ class Example extends React.Component {
       images,
       live,
       liveScope,
-      editorLanguage,
       showPreviewOptions,
-      coreExample,
-      previewFullPageOnly,
-      previewMinHeight,
-      examplePath,
+      className,
       ...props
     } = this.props;
     const makeDescription = html => ({
@@ -95,18 +79,21 @@ class Example extends React.Component {
       const exampleName = name.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
       const separator = pathName.endsWith('/') ? '' : '/';
       const pathStart = `${pathName}${separator}`;
-      const path = `/${pathStart}/examples/${exampleName}`;
-      return <Section>
-        <Title size="lg" headingLevel="h3">{title}</Title>
-        <div className={css(styles.example)} {...props}>
-          This example can only be accessed in&nbsp;
-          <Link target="_blank" to={path}>
-            full page mode
-          </Link>
-          .
-        </div>
-        <LiveDemo raw={raw.trim()} path={examplePath} live={false} editorLanguage={editorLanguage} />
-      </Section>;
+      const path = `${pathStart}examples/${exampleName}`;
+      return (
+        <Section>
+          <Title size="lg" headingLevel="h3">{title}</Title>
+          <LiveDemo raw={raw.trim()} path={path} fullPageOnly live={false} className={className}>
+            <div className={css(className, styles.example)} {...props}>
+              This example can only be accessed in&nbsp;
+              <a href={path} target="_blank" rel="noopener noreferrer">
+                full page mode
+              </a>
+              .
+            </div>
+          </LiveDemo>
+        </Section>
+      );
     }
 
     return (
@@ -114,22 +101,25 @@ class Example extends React.Component {
         <Title size="lg">{title}</Title>
         {showPreviewOptions && <PreviewToolbar onViewportChange={this.onViewportChange} onLightsChange={this.onLightsChange}/>}
         {Boolean(description) && <p className={css(styles.description)} dangerouslySetInnerHTML={makeDescription(description)} />}
-        {GATSBY_LIVE_EXAMPLES ? <React.Fragment>
-            {!live && <div className={css(styles.example)} {...props}>
-              <Preview viewport={this.state.viewport} lights={this.state.lights} fullPageOnly={previewFullPageOnly} minHeight={previewMinHeight}>
+        {GATSBY_LIVE_EXAMPLES ? (
+          <React.Fragment>
+            {!live && <div className={css(className, styles.example)} {...props}>
+              <Preview viewport={this.state.viewport} lights={this.state.lights}>
                 {children}
               </Preview>
-              {coreExample && <ComponentItems children={coreExample} />}
               </div>}
-            <LiveDemo raw={raw.trim()} path={examplePath} images={images} className={editorClassName} live={live} liveScope={liveScope} editorLanguage={editorLanguage} />
-          </React.Fragment> : <React.Fragment>
-            <div className={css(styles.example)} {...props}>
+            <LiveDemo raw={raw.trim()} path={path} images={images} live={live} liveScope={liveScope} className={className} />
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            <div className={css(className, styles.example)} {...props}>
               <Preview viewport={this.state.viewport}>
                 {children}
               </Preview>
             </div>
-            <LiveDemo raw={raw.trim()} path={examplePath} live={false} editorLanguage={editorLanguage} />
-          </React.Fragment>}
+            <LiveDemo raw={raw.trim()} path={path} live={false} className={className} />
+          </React.Fragment>
+        )}
       </div>
     );
   }

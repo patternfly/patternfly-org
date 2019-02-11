@@ -1,3 +1,6 @@
+---
+path: "/design-guidelines/content/voice-and-tone"
+---
 # Voice and tone
 To quote Red Hat’s brand standards, “The more you write, the less they’ll read.” Keep things clear, simple, and action-focused to make your content easy to understand, scan, and act on.
 
@@ -31,7 +34,7 @@ Then, we can revise again for concision.
 >_**The jury upheld** the conviction._
 
 
-![Characters and actions example](/img/character-action.png)
+![Characters and actions example](img/character-action.png)
 
 **Avoid technical jargon**
 Jargon can confuse novice users and generally makes content more difficult to understand.
@@ -39,17 +42,17 @@ Jargon can confuse novice users and generally makes content more difficult to un
 **Use simple verbs and tenses**
 As nice as it might sound, avoid the future-perfect tense (and all of its complicated siblings.) Keep it simple.
 
-![Simple verbs and tenses example](/img/simple-verbs.png)
+![Simple verbs and tenses example](img/simple-verbs.png)
 
 **Use active voice**
 Active voice tends to sound more natural and it's generally easier to understand. It also often provides a more concise way to get your point across.
 
-![Active voice example](/img/active-voice.png)
+![Active voice example](img/active-voice.png)
 
 **An exception to the _active voice_ rule: Errors!**
 Errors messages are a good time to avoid active voice. Don’t assign blame to the user.
 
-![Error example](/img/error-states.png)
+![Error example](img/error-states.png)
 
 ## Be useful
 Focus on providing content that helps your users accomplish their tasks.
@@ -68,7 +71,7 @@ In order to find and click the correct button for the action we want to take, we
 
 Don’t make users work that hard. Put the most important stuff up front.
 
-![Frontload important info example](/img/frontload.png)
+![Frontload important info example](img/frontload.png)
 
 **Keep users in the interface**
 Use informative titles, headers, and contextual help (like tooltips, popovers, and helper text) to enable users to accomplish their tasks without leaving the interface.  

@@ -6,6 +6,6 @@ export default StyleSheet.create({
     marginBottom: spacerXl.var
   },
   'pf-w-section-border': {
-    borderBottom: '1px solid'
+    borderBottom: '1px solid #bbb'
   }
 });

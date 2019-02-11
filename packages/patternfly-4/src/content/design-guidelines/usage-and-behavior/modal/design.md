@@ -42,8 +42,8 @@ Modals interrupt user task flow and should be avoided for any information that i
 ### Content
 * Clearly restate the action the user is trying to take and explicitly outline the consequences of that action.
 
-* Provide buttons labels that make it simple for users to understand and confirm their choices. Use descriptive verbs that clearly indicate the consequence of a selection, like Delete, Save, or Create. Avoid vague labels like OK or Done.
+* Provide button labels that make it simple for users to understand and confirm their choices. Use descriptive verbs that clearly indicate the consequence of a selection, like Delete, Save, or Create. Avoid vague labels like OK or Done.
 
-* Use descriptive title and button labels so the user can scan  content and make a decision quickly. Ambiguous title and button labels make it more difficult for the user to understand their options and make a decision.
+* Use descriptive title and button labels so the user can scan content and make a decision quickly. Ambiguous title and button labels make it more difficult for the user to understand their options and make a decision.
 
 See our [content guidelines](/design-guidelines/content/) for additional guidance.

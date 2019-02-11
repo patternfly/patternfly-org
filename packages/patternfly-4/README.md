@@ -13,22 +13,12 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the default starter.
-
-    ```sh
-    # create a new Gatsby site using the default starter
-    npx gatsby new my-default-starter
-    ```
-
 1.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    Navigate into your site’s directory and start it up.
 
     ```sh
-    cd my-default-starter/
-    gatsby develop
+    yarn start:pf4
     ```
 
 1.  **Open the source code and start editing!**
@@ -36,8 +26,27 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     Your site is now running at `http://localhost:8000`!
     
     *Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).*
-    
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+
+1.  **Updating the Core and React library**
+
+    The version of Core that we pull in has to match the version of Core used in @patternfly/react-core.
+    Get the version numbers from `https://github.com/patternfly/patternfly-react/blob/master/packages/patternfly-4/react-core/package.json`.
+    You should get the following versions:
+    - @patternfly/react-core
+    - @patternfly/react-icons
+    - @patternfly/react-styles
+    - @patternfly/react-tokens
+    - @patternfly/patternfly
+
+    1. Update the dependencies in packages/patternfly-4/package.json based on the above versions
+    2. Clear node_modules folders
+    ```sh
+    rm -rf node_modules
+    lerna clean
+    ```
+    3. `yarn install`
+    4. Update the @patternfly/src-patternfly-next and @patternfly/src-patternfly-react with the tag that matches the versions above
+    5. In packages/patterfly-4 run `yarn repos`
     
 ## 🧐 What's inside?
 
@@ -95,3 +104,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 ## 💫 Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+
+## Updating React
+
+When updating the @patternfly/src-patternfly-react dependency (`yarn patternfly-react`) make sure that the version of @patternfly/next matches the one used in `{root}/node_modules/@patternfly/src-patternfly-react/packages/patternfly-4/react-core/package.json`
