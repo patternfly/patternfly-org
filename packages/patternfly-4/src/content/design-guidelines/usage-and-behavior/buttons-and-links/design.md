@@ -2,11 +2,11 @@
 path: "/design-guidelines/usage-and-behavior/buttons-and-links"
 ---
 # Buttons and links
-Buttons communicate and trigger actions a user can take throughout an experience. Links are used to take users somewhere, like another page inside of a web application, or an external site such as help or documentation.  
+Buttons communicate and trigger actions a user can take in an application or website. Links are used to take users somewhere, like another page inside of a web application, or an external site such as help or documentation.  
 
 Technically, a button represents a box area that can be clicked or tapped, while a link represents text that can be clicked or tapped.
 
-## Primary elements
+## Elements
 ### Button elements
 ![Elements of a button](img/button-element.png)
 
@@ -25,7 +25,7 @@ Technically, a button represents a box area that can be clicked or tapped, while
 [Link usage](#link-usage)
 
 ## Button usage
-A button should represent an action a user can take, like submitting a form, cancelling a process, or creating a new object. When the user clicks the button, the associated action should be triggered or performed immediately.
+A button should represent an action a user can take, like submitting a form, cancelling a process, or creating a new object. When the user clicks a button, the associated action should be triggered or performed immediately.
 
 ### Button types
 Use different button types to build hierarchy in an application layout.
@@ -42,7 +42,7 @@ Use different button types to build hierarchy in an application layout.
   Use danger buttons for actions a user can take that are potentially destructive or difficult/impossible to undo, like deleting or removing user data.
 
   **Link button**
-  Use a link button for secondary or tertiary actions on a modal or page. For example, actions a user might take on items in a data list or table could be represented as link buttons to avoid visual clutter and save space.
+  Use a link button for secondary or tertiary actions on a page or modal. For example, you might use link buttons to indicate actions a user might take on items in a data list or table to reduce visual clutter and save space.
 
   >Note: Don't use a link button as a replacement for an actual link. While they may look the same to the user, they serve different purposes and should be treated differently. Remember: buttons communicate and trigger actions and links take you somewhere. See [Link usage](#link-usage) for more information.
 
@@ -62,26 +62,30 @@ Use different button types to build hierarchy in an application layout.
 * Place the primary button to the right of the cancel button.
 * Align submit buttons with right-edge of input fields.
 
-#### Buttons on wizards
-The placement of buttons on wizards will depend on the types of content you present.
-
 ![Buttons on modals](img/modal-button.png)
 
-## Link usage
-Links should be used to take users somewhere. If you want to use link text to represent low-priority actions on a screen, use a [link button](#link-button).
+<!-- We'll want to include some information for button usage on wizards when we have some examples.
+ #### Buttons on wizards
+The placement of buttons on wizards will depend on the layout of content you present. -->
 
-For links that navigate users to any location external to the current website or application the user is currently in, link text must be followed by the external link icon.
+## Link usage
+Links are used to take users somewhere, like another page inside of a web application, or an external site like help or documentation.
+
+For links that navigate users to any location external to the current website or application, link text must be followed by the external link icon.
 
 ![External link icon](img/external-link.png)
 
+### When not to use
+Don't use link text to represent actions. Instead, use a [link button](#link-button) to represent secondary or tertiary actions a user can take on a page or modal.
+
 ## Content
 **Writing button labels**
-* Button labels should tell the user what will happen with they click a button.
+* Button labels should be specific and clearly communicate their associated action.
 * Always use verbs or verb phrases.
-* Use specific labels that clearly describe the user action.
 * Aim for short (1-3 words) labels wherever possible.
-* Do not use long button labels that might risk wrapping.
+* Avoid long button labels that might risk wrapping.
 
 **Writing link labels**
+Use specific, action-focused labels that match what the user will see when they arrive at their location. For example, if you are sending a user to a dashboard, your link label might read _View dashboard_. For a link directing a user to a support forum, you might say _Get help in the support forum_.
 
 See our [content guidelines](/design-guidelines/content/) for additional guidance.
