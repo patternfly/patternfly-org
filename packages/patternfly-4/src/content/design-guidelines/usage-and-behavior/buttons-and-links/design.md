@@ -65,6 +65,9 @@ Use different button types to build hierarchy in an application layout.
 * Place the primary button to the right of the cancel button.
 * Align submit buttons with right-edge of input fields.
 
+#### Buttons on wizards
+The placement of buttons on wizards will depend on the types of content you present. 
+
 ![Buttons on modals](img/modal-button.png)
 
 ## Link usage

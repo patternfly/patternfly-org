@@ -31,18 +31,18 @@ Vertical navigation is hierarchical global navigation that displays navigation o
 
 #### When to use
 * You have five or more primary navigation items
-* You have secondary navigation items (even if you have less than five primary navigation items
-* You expect your application to be used on desktop, laptop, and mobile devices
+* You have secondary navigation items (even if you have less than five primary navigation items)
+* You expect your application to be used on mobile devices
 
 #### Variations
-**Single level vertical navigation**
+**Simple vertical navigation**
 ![Single level](img/single-level.png)
-Use single level vertical navigation when you only have one level of navigation to display. If you have five navigation options or less, you could consider horizontal navigation.
+Use a simple, single-level vertical navigation when you only have one level of navigation to display.
 
-**Two level vertical navigation**
+**Grouped navigation**
 ![Two level nav](img/two-level.png)
 
-When you have a small amount of secondary nav items, you can display them persistently beneath the primary navigation items.
+When you have a small amount of secondary navigation items, you can group your items and display them persistently beneath the primary navigation items.
 
 **Expandable vertical navigation**
 
@@ -54,13 +54,13 @@ When you have a large number of secondary navigation items, you can use an expan
 
 ![Horizontal nav](img/horizontal-nav.png)
 
-Horizontal navigation is global navigation that displays nav items from left to right at the top of an interface.
+Horizontal navigation is global navigation that displays navigation items from left to right in the application's masthead.
 
 #### When to use
 * You have less than five primary navigation items
 * You have only one level of navigation and no secondary navigation items
 
-### Local navigation
+### Local navigation - Tabs
 ![Local navigation](img/local.png)
 While global navigation controls what users are seeing at the application-level, local navigation provides more granular navigation specific to a particular page or window in the application. For example, a user might use global navigation to get to a settings page, and then use local navigation to access privacy and general user settings.
 
@@ -68,7 +68,7 @@ While global navigation controls what users are seeing at the application-level,
 
 ![Context selector](img/context-selector.png)
 
-Use a context selector in addition to your global navigation when the data or resources you need to show in the interface are dependent on the users’ context.
+Use a context selector in addition to your global navigation when the data or resources you need to show in the interface need to change depending on the users’ context. 
 
 ### Breadcrumbs
 
@@ -77,5 +77,5 @@ Use a context selector in addition to your global navigation when the data or re
 Breadcrumbs act as a resource to help users navigate more efficiently and provide context to help users understand where they are in the application hierarchy. Use breadcrumbs in addition to your global navigation to display a user's location in the application.
 
 #### When to use
-* Use breadcrumbs when the primary and secondary navigation items are not always exposed.
-* Don't use breadcrumbs as a replacement for global navigation.
+* Use breadcrumbs when the primary global navigation items are not always exposed.
+* Never use breadcrumbs as a replacement for global navigation.
