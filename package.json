@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/patternfly/patternfly-org",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "packages/patternfly-4/plugins/gatsby-mdx-tmp"
   ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "gatsby-mdx-tmp",
-  "private": true,
+  "private": false,
   "version": "0.3.6",
   "description": "mdx integration for gatsby",
   "main": "index.js",

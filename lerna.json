@@ -1,7 +1,8 @@
 {
   "lerna": "3.10.5",
   "packages": [
-    "packages/*"
+    "packages/*",
+    "packages/patternfly-4/plugins/gatsby-mdx-tmp"
   ],
   "version": "independent",
   "npmClient": "yarn",
