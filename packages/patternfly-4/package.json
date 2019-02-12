@@ -44,6 +44,7 @@
     "gatsby-image": "2.0.25",
     "gatsby-mdx": "^0.3.6",
     "gatsby-plugin-catch-links": "2.0.9",
+    "gatsby-plugin-emotion": "^4.0.3",
     "gatsby-plugin-manifest": "2.0.13",
     "gatsby-plugin-offline": "2.0.20",
     "gatsby-plugin-react-helmet": "3.0.5",

@@ -26,20 +26,20 @@ export const styles = {
     text-align: right;
     padding-right: 10px;
   `,
-  spacerBox: (size, backgroundColor, color) => (css`
+  spacerBox: (size, backgroundColor, showBorder) => (css`
     align-self: center;
     width: ${size}px;
     height: ${size}px;
     background-color: ${backgroundColor};
-    border: ${!color ? '1px solid #703FEC' : 'none'};
+    border: ${showBorder ? '1px solid #703FEC' : 'none'};
   `),
   lineHeightTitle: css`padding-top: 16px; padding-bottom: 16px;`
 };
 
-export const TypographyGrid = ({children, title, symbol, fontWeight, fontSize, lineHeight}) => (
+export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontSize, lineHeight}) => (
   <>
     <div css={[styles.textColor, styles.gridTitle]}>{title} {symbol && <span css={styles.gridTitleSymbol}>{symbol}</span>}</div>
-    <Grid gutter="md" css={[styles.gridRowCenter, styles.typographyGrid]}>
+    <Grid gutter="sm" css={[styles.gridRowCenter, styles.typographyGrid]}>
       <GridItem span={2} rowSpan={3}>
         <div css={styles.gridRowItem}>Font Family:</div>
         <div css={styles.gridRowItem}>Font Size:</div>
@@ -55,6 +55,7 @@ export const TypographyGrid = ({children, title, symbol, fontWeight, fontSize, l
           {children}
         </StyledText>
       </GridItem>
+      {note && <GridItem span={12}><div css={styles.textColor}>{note}</div></GridItem>}
     </Grid>
   </>
 );
@@ -95,7 +96,7 @@ export const SpacingContentItem = ({children, fontWeight, fontSize, lineHeight})
   </div>
 );
 
-export const Spacer = ({color, size, description}) => {
+export const Spacer = ({color, size, description, showBorder}) => {
   let backgroundColor = null;
   if (color === '8') {
     backgroundColor = '#9CD819';
@@ -107,7 +108,7 @@ export const Spacer = ({color, size, description}) => {
   return (
   <div style={{display: "flex", padding: description ? "5px" : "0px"}}>
     {description && <div css={styles.spacerDescription}>{description}</div>}
-    <div css={styles.spacerBox(size, backgroundColor, color)}></div>
+    <div css={styles.spacerBox(size, backgroundColor, showBorder)}></div>
   </div>
 )};
 

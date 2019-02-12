@@ -144,12 +144,12 @@
   fill: currentColor;
 }
 
-.markdown-body a {
+.markdown-body a:not(.pf-c-button) {
   background-color: transparent;
 }
 
-.markdown-body a:active,
-.markdown-body a:hover {
+.markdown-body a:active:not(.pf-c-button),
+.markdown-body a:hover:not(.pf-c-button) {
   outline-width: 0;
 }
 
@@ -207,12 +207,12 @@
   line-height: inherit;
 }
 
-.markdown-body a {
+.markdown-body a:not(.pf-c-button) {
   color: #0366d6;
   text-decoration: none;
 }
 
-.markdown-body a:hover {
+.markdown-body a:hover:not(.pf-c-button) {
   text-decoration: underline;
 }
 
@@ -385,7 +385,7 @@
   margin-bottom: 0 !important;
 }
 
-.markdown-body a:not([href]) {
+.markdown-body a:not([href]):not(.pf-c-button) {
   color: inherit;
   text-decoration: none;
 }
