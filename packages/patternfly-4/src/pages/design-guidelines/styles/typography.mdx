@@ -1,6 +1,8 @@
 import { Button, Grid, GridItem } from '@patternfly/react-core';
 import { CheckCircleIcon, TimesCircleIcon } from '@patternfly/react-icons';
-import { TypographyGrid, TypographyGridLegend, SpacingContentItem, Spacer } from './typography';
+import { TypographyGrid, TypographyGridLegend, TypographyGridLegendItem, LineHeightTitle, SpacingContentItem, Spacer } from './typography';
+import correct from './typography_correct_spacing.png';
+import incorrect from './typography_incorrect_spacing.png';
 
 ## Our font family
 We use the open source typeface, Overpass, inspired by Highway Gothic. 
@@ -10,7 +12,7 @@ We use the open source typeface, Overpass, inspired by Highway Gothic.
 ## Usage guidelines
 Use our typographic styles to communicate visual hierarchy. A consistent and logical hierarchy provides a clear pattern for users, making it easier to quickly scan and understand information on a page.
 
-<TypographyGrid title="Hero Title" legendItem="&#9679;" fontWeight="400" fontSize="36" lineHeight="1.3">Did the Patriots win the Super Bowl?</TypographyGrid>
+<TypographyGrid title="Hero Title" symbol="&#9679;" fontWeight="400" fontSize="36" lineHeight="1.3">Did the Patriots win the Super Bowl?</TypographyGrid>
 <TypographyGrid title="Main Title" fontWeight="400" fontSize="28" lineHeight="1.3">Did the Patriots win the Super Bowl?</TypographyGrid>
 <TypographyGrid title="Secondary Title" fontWeight="400" fontSize="24" lineHeight="1.3">Did the Patriots win the Super Bowl?</TypographyGrid>
 <TypographyGrid title="Subtitle" fontWeight="400" fontSize="21" lineHeight="1.5">Did the Patriots win the Super Bowl?</TypographyGrid>
@@ -18,27 +20,32 @@ Use our typographic styles to communicate visual hierarchy. A consistent and log
 <TypographyGrid title="Fifth Level Title" fontWeight="500" fontSize="16" lineHeight="1.5">Did the Patriots win the Super Bowl?</TypographyGrid>
 <TypographyGrid title="Body" fontWeight="400" fontSize="16" lineHeight="1.5">Did the Patriots win the Super Bowl?</TypographyGrid>
 <TypographyGrid title="Small Text" fontWeight="400" fontSize="14" lineHeight="1.3">Did the Patriots win the Super Bowl?</TypographyGrid>
-<TypographyGrid title="Tiny Text" legendItem="&#9675;" fontWeight="400" fontSize="12" lineHeight="1.3">Yes, yes they did.</TypographyGrid>
-<TypographyGridLegend />
+<TypographyGrid title="Tiny Text" symbol="&#9675;" fontWeight="400" fontSize="12" lineHeight="1.3">Yes, yes they did.</TypographyGrid>
+<TypographyGridLegend>
+  <TypographyGridLegendItem symbol="&#9679;">Not to be used in content block (Landing pages, login, etc.)</TypographyGridLegendItem>
+  <TypographyGridLegendItem symbol="&#9675;">Not to be used in content block (Only used with data visualizations when 14px is not small enough.)</TypographyGridLegendItem>
+</TypographyGridLegend>
 
 ## Line height
 When laying out text-based content, you need to factor in line-height when measuring spacing. Line height is a relative number used in CSS that represents a ratio to the text size. For example, body text uses a line height of 1.5. Body text size is 16px. 16*1.5 = 24px line height. So, when creating designs in design software, you must include the 24px line height as a part of the text.
 
-<Grid gutter="md">
+<Grid>
   <GridItem span={6}>
-    <div><CheckCircleIcon color="#52A549" /> Correct</div>
+    <LineHeightTitle><CheckCircleIcon color="#52A549" /> Correct</LineHeightTitle>
     <div>Note how the line height space is included when laying out with spacer elements.</div>
   </GridItem>
   <GridItem span={6}>
-    Image
+    <img src={correct} />
   </GridItem>
+  <GridItem span={12}><Spacer size="48" /></GridItem>
   <GridItem span={6}>
-    <div><TimesCircleIcon color="#CC0000" /> Incorrect</div>
+    <LineHeightTitle><TimesCircleIcon color="#CC0000" /> Incorrect</LineHeightTitle>
     <div>Do not use the text itself to align with spacing elements when designing. Remember to always include the line height space.</div>
   </GridItem>
   <GridItem span={6}>
-    Image
+    <img src={incorrect} />
   </GridItem>
+  <GridItem span={12}><Spacer size="48" /></GridItem>
 </Grid>
 
 ## Spacing

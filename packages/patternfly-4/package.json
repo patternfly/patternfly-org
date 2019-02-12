@@ -19,6 +19,7 @@
     "patternfly-styles": "node ./scripts/copyStyles.js"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.7",
     "@mdx-js/mdx": "^0.16.8",
     "@mdx-js/tag": "^0.16.8",
     "@patternfly/patternfly": "1.0.178",
@@ -54,7 +55,6 @@
     "gatsby-remark-autolink-headers": "2.0.12",
     "gatsby-remark-embed-snippet": "3.2.0",
     "gatsby-remark-images": "3.0.1",
-    "gatsby-remark-prismjs": "3.2.0",
     "gatsby-source-filesystem": "2.0.16",
     "gatsby-transformer-react-docgen": "3.0.0",
     "gatsby-transformer-remark": "2.1.19",

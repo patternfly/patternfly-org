@@ -26,13 +26,16 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-mdx`,
+      resolve: `gatsby-mdx-tmp`,
       options: {
         extensions: [`.mdx`],
         defaultLayouts: {
           default: require.resolve("./src/templates/markdownPageTemplate.js")
         },
         gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-autolink-headers`
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {

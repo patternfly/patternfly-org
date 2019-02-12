@@ -33,16 +33,16 @@ const getStartedNav = [{
   path: '/get-started/faqs'
 }];
 const designGuidelinesNav = [{
-  text: 'Styles (WIP)',
+  text: 'Styles',
   path: '/design-guidelines/styles/',
   subNav: [{
-    text: 'Overview',
+    text: 'Overview (WIP)',
     path: '/design-guidelines/styles/overview'
   }, {
-    text: 'Color',
+    text: 'Colors (WIP)',
     path: '/design-guidelines/styles/color'
   }, {
-    text: 'Icons',
+    text: 'Icons (WIP)',
     path: '/design-guidelines/styles/icons'
   }, {
     text: 'Typography',
