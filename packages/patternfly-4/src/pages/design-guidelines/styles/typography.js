@@ -1,3 +1,4 @@
+import React from 'react';
 import { Grid, GridItem } from '@patternfly/react-core';
 import { StyledText } from '@patternfly/react-styled-system';
 /** @jsx jsx */
