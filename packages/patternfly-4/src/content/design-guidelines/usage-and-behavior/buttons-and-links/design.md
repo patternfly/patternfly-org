@@ -6,6 +6,13 @@ Buttons communicate and trigger actions a user can take in an application or web
 
 Technically, a button represents a box area that can be clicked or tapped, while a link represents text that can be clicked or tapped.
 
+## Components and demos used
+**HTML/CSS components**
+* [Button](/documentation/core/components/button)
+
+**React components**
+* [Button](/documentation/react/components/button)
+
 ## Usage
 [Button usage](#button-usage)
 [Link usage](#link-usage)
