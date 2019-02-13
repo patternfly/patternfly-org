@@ -181,6 +181,9 @@ Use progressive disclosure to hide and show fields based on the users’ selecti
 
 > Note: For buttons on wizards, follow modal standards. Align buttons to the right. Place the primary button on the far right and the secondary button to the left.  
 
+**Specifications**
+When you're laying out your form elements, we recommend leaving enough vertical space to accommodate a line of caption text (about 32px) beneath form fields to account for inline errors and helper text. For more information see [Spacers](/design-guidelines/styles/spacers). 
+
 ### Content
 Think of a form as a conversation between your application and your user. Apply the following principles to organize and craft content for your forms:
 
