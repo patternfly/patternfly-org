@@ -42,7 +42,7 @@ const designGuidelinesNav = [{
     text: 'Colors (WIP)',
     path: '/design-guidelines/styles/color'
   }, {
-    text: 'Icons (WIP)',
+    text: 'Icons',
     path: '/design-guidelines/styles/icons'
   }, {
     text: 'Typography',
