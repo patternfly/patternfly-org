@@ -6,7 +6,7 @@ module.exports = {
     title: 'PatternFly 4',
     description: 'Documentation for PatternFly 4',
     author: 'Red Hat',
-    siteUrl: 'http://patternfly-react.surge.sh'
+    siteUrl: 'http://patternfly.surge.sh'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -25,6 +25,27 @@ module.exports = {
         policy: [{ userAgent: '*'}]
       }
     },
+    {
+      resolve: `gatsby-mdx-tmp`,
+      options: {
+        extensions: [`.mdx`],
+        defaultLayouts: {
+          default: require.resolve("./src/templates/markdownPageTemplate.js")
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-autolink-headers`
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 700
+            }
+          }
+        ]
+      }
+    },
+    'gatsby-plugin-emotion',
     {
       resolve: `gatsby-plugin-sass`,
       options: {
