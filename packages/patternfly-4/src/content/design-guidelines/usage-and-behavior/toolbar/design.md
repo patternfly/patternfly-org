@@ -4,8 +4,8 @@ The toolbar contains multiple components that allow a user to manage and manipul
 ## Elements
 ![toolbar](img/toolbar.png)
 
-The following elements may be included in a typical toolbar.
-1. **Bulk selection (optional)**: A bulk selector may be added when this functionality is not available from the data presentation component itself. Card views and data lists may require a bulk selector. Besides allowing the user to select and deselect all items on a page, other application specific options can be added. There should also be an indeterminate state where the bulk selector notifies the user that there are some items selected on a page. When a bulk selector is included, it will always be the left-most element in the toolbar. If the view type is a list, the bulk selector should be aligned with the checkboxes in each row.
+The following elements can be included in a typical toolbar.
+1. **Bulk selection (optional)**: Bulk selection can be added when the functionality isn't available from the component you're using to present the data. For example, you might need to include a bulk selector for a card view or data list, but a table will enable bulk selection by default. Besides allowing the user to select and deselect all items on a page, other application specific options can be added in the dropdown. Bulk selection allows the user to select or deselect all items on a page and provide an indeterminate state that notifies the user when only some items are selected. Bulk selectors should always be the left-most element in a toolbar. When providing a bulk selector in a list view, it should be aligned with the checkboxes.
 2. **Filters**: PatternFly supports a variety of common filter types that can be used alone or in combination to construct a custom filter.
 3. **Sort (optional)**: A sort component may to added when this functionality is needed. Tables have built in sorting, but card views and data lists may require toolbar sorting.
 4. **Global actions**: Any global actions that apply to selected data items are included left-aligned following filter and sort controls. These may be exposed as buttons or collapsed into a kabob menu. No more than two items should be exposed as buttons. Button labels should be limited in length to preserve horizontal space.
@@ -32,10 +32,10 @@ The following elements may be included in a typical toolbar.
 
 ## Usage
 ### When to use
-The toolbar should be used when users may need to manage and manipulate a data set, whether it is displayed in a table view, list view, card view, or any other view that requires manipulation and does not already offer controls to do so. There are multiple toolbar variations in order to address a variety of use cases. The toolbar may be further customized by using a unique set of components from the related components list.
+Toolbars enable users to manipulate data in views where built-in controls aren't already available, like list views or card views. You can choose from multiple toolbar variations to suit your use case, and further customize your toolbar using any of the components listed under [Related components and demos](#related-components-and-demos).
 
 ### When not to use
-The toolbar should not be used when the data view already includes the necessary controls to manipulate the data set.
+Don't provide a toolbar for any data view that already includes the controls needed to manipulate a given data.
 
 ### Layout considerations
 ![layout](img/toolbar-layout.png)
@@ -62,24 +62,7 @@ When the current settings of the controls are not sufficient to convey applied f
 
 **Custom toolbar**
 ![custom](img/custom-toolbar.png)
-When the current settings of the controls are not sufficient to convey applied filters, filter chips should be used.
-1. **Filter chips**: When filters are applied the toolbar will expand and filter chips will be displayed on the second row. Users can clear all filters by clicking the “Clear filters” link, and the toolbar will collapse back into one row.
-
-**Mobile toolbar**
-
-Collapsed
-
-![closed](img/mobile-basic.png)
-
-Expanded
-
-![open](img/mobile-expanded.png)
-
-Footer with pagination
-
-![footer](img/mobile-footer.png)
-
-The toolbar adapts to smaller viewport sizes by collapsing or hiding elements that take significant space, including filters and actions. On mobile devices, when used, pagination will be available from the footer, only.
+Custom toolbars can vary by use case. In the above example, the toolbar is primarily comprised of filters.
 
 ## Examples
 **Toolbar in data table**
@@ -89,6 +72,8 @@ The toolbar adapts to smaller viewport sizes by collapsing or hiding elements th
 ![datalist](img/data-list-example.png)
 
 **Responsive toolbar**
+
+The toolbar adapts to smaller viewport sizes by collapsing or hiding elements that take significant space, including filters and actions. On mobile devices, when used, pagination will be available from the footer, only.
 
 ![responsive1](img/responsive-closed.png)
 ![responsive2](img/responsive-open.png)
