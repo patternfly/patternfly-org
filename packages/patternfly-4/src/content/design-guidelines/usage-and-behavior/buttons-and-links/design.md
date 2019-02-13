@@ -6,20 +6,6 @@ Buttons communicate and trigger actions a user can take in an application or web
 
 Technically, a button represents a box area that can be clicked or tapped, while a link represents text that can be clicked or tapped.
 
-## Elements
-### Button elements
-![Elements of a button](img/button-element.png)
-
-1. Button box  
-2. Button label
-
-### Link elements
-![Elements of a link](img/link-elements.png)
-
-1. Link label
-2. Link underline (on hover)
-3. External link icon (optional)- use when the link will navigate users to an external page. Pages should open in a new tab or window.
-
 ## Usage
 [Button usage](#button-usage)
 [Link usage](#link-usage)
@@ -41,21 +27,21 @@ Use different button types to build hierarchy in an application layout.
   **Danger button**
   Use danger buttons for actions a user can take that are potentially destructive or difficult/impossible to undo, like deleting or removing user data.
 
-  **Link button**
-  Use a link button for secondary or tertiary actions on a page or modal. For example, you might use link buttons to indicate actions a user might take on items in a data list or table to reduce visual clutter and save space.
-
-  >Note: Don't use a link button as a replacement for an actual link. While they may look the same to the user, they serve different purposes and should be treated differently. Remember: buttons communicate and trigger actions and links take you somewhere. See [Link usage](#link-usage) for more information.
+  **Text button**
+  Use a text button for secondary or tertiary actions on a page or modal. For example, you might use text buttons to indicate actions a user might take on items in a data list or table to reduce visual clutter and save space.
 
   **Icon button**
   Use icon buttons for actions that are commonly associated with icons. For example, you could use the close icon to exit a modal or window, or use the hamburger icon to toggle a menu.
 
 
 ### Using buttons in your designs
+We recommend aligning buttons to different elements or areas on the screen depending on the content being provided. The recommended alignment simplifies scanning and helps users complete and submit form content more quickly.  
+
 #### Buttons on full page forms
 * Place the primary button to the left of the cancel button.
 * Align submit buttons with left-edge of input fields.
 
-![Buttons on modals](img/fullpage-button.png)
+![Buttons on full page forms](img/fullpage-button.png)
 
 #### Buttons on modals
 * Align submit buttons to the bottom right of the modal.
@@ -76,7 +62,7 @@ For links that navigate users to any location external to the current website or
 ![External link icon](img/external-link.png)
 
 ### When not to use
-Don't use link text to represent actions. Instead, use a [link button](#link-button) to represent secondary or tertiary actions a user can take on a page or modal.
+Don't use link text to represent actions.
 
 ## Content
 **Writing button labels**
