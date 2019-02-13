@@ -28,7 +28,7 @@ Most forms will contain the following basic elements:
         * Placeholder text
         * Helper text
 
-5. [Validation and errors](#Provide-validation-and-errors) - ensures that the correct information is collected before the form can be submitted to the system.
+5. [Errors and validation](#Provide-errors-and-validation) - ensures that the correct information is collected before the form can be submitted to the system.
 
 6. Action buttons - enables a user to submit or exit a form. Button placement depends on the type of form you're presenting to the user.
 
@@ -140,7 +140,7 @@ Use placeholder text when the requested data type might be unfamiliar or the fie
 * Don’t provide placeholder text when it isn't necessary.
 * **Never** use placeholder text as a replacement for field labels.
 
-### Provide validation and errors
+### Provide errors and validation
 When a form field submission results in an error, let users know as soon as possible. Always present error states on the form, and use inline errors whenever possible. The error state you can use will depend on whether validation happens on the client or the server.
 
 **Client-side validation**
