@@ -2,18 +2,16 @@
 path: "/get-started/developers"
 ---
 # Getting started for developers
-To get acquainted with the basics of the PatternFly 4 design system, check out the overview at [About PatternFly 4](URL).
+To get acquainted with the basics of the PatternFly 4 design system, check out the overview at [About PatternFly 4](/get-started/about).
 
-Explore the different layouts, components, and utilities available to ensure that the system provides all the elements that you need for your project.
-
-Not seeing what you need? You can always [become a contributor](URL) and help us expand the design system.
+Explore the different layouts, components, and utilities available to ensure that the system provides all the elements you need for your project.
 
 Get started with:
-* [Core HTML/CSS](#core)
+* [HTML/CSS](#html/css)
 * [React](#react)
 
-## Core
-The Core library provides a collection of HTML and CSS code samples you can use to build interfaces with consistent PatternFly markup and styling.
+## HTML/CSS
+The HTML/CSS library provides a collection of code samples you can use to build interfaces with consistent PatternFly markup and styling.
 
 ### Before you begin
 **Install NPM**
@@ -24,7 +22,6 @@ Using npm, run the following commands to install:
 ```
 npm install @patternfly/patternfly-next
 ```
-
 
 **What’s included?**
 Each of the three modules (layouts, components, and utilities) delivers a sass file (.scss) and CSS file, so you can include them in your build environment or consume the CSS from your page header.
@@ -94,7 +91,7 @@ PatternFly 4 uses the Overpass font family. Overpass can be utilized in two diff
   ```
 
 **Icons**
-PatternFly 4 uses Font Awesome 5.Font Awesome 5 can be utilized in two different ways:
+PatternFly 4 uses Font Awesome 5. Font Awesome 5 can be utilized in two different ways:
 
   Built into PatternFly 4
   By default, Overpass is included as part of the PatternFly 4 distributed CSS file. You do not need to do anything with your configuration to use this font family.
@@ -123,8 +120,6 @@ Use PF3 and 4 at the same time
 All the CSS classes
 Using bootstrap, for example, bootstrap will not inadvertently style our elements, scoped = name uniquely to pf
 -->
-
-Interested in contributing? Visit our [Contributions page](URL) to learn more.
 
 ## React
 
