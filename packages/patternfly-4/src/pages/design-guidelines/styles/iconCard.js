@@ -95,14 +95,6 @@ class IconCard extends React.Component {
     this.iconRef = React.createRef();
   }
 
-  onShow = () => {
-    this.state.hovering === false && this.setState({ hovering: true });
-  };
-
-  onHide = () => {
-    this.state.hovering && this.setState({ hovering: false });
-  };
-
   onCopyReact = event => {
     event.stopPropagation();
     const { id } = this.props;
