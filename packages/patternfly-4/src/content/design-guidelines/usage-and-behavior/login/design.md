@@ -144,7 +144,7 @@ When users submit a form, the entire page is reloaded if there are validation er
 ##### Account doesn’t exist/password is wrong
 
 
-![Invalid-characters](account-doesn't-exist:password-is-wrong.png "invalid-characters")
+![Invalid-characters](account-doesn't-exist_password-is-wrong.png "invalid-characters")
 
 
 An error message should be displayed when the user types an incorrect username that doesn’t exist or the wrong password. The most secure approach is to provide a generic message that the username or password is incorrect but to not point out which one is incorrect. This way the identity of a valid user is protected. If your application doesn’t require this level of security there are a few additional messages that can be used. Once the field has been modified, the error message should disappear. The following error messages are suggested for use.
