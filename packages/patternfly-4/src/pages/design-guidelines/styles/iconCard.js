@@ -160,9 +160,7 @@ class IconCard extends React.Component {
           css={styles.popover}
           position="right" 
           headerContent={<div css={styles.popoverHeader}>{name}</div>} 
-          bodyContent={popoverBody} 
-          onShow={() => this.onShow()}
-          onHidden={() => this.onHide()}
+          bodyContent={popoverBody}
         >
           {renderedItem}
         </Popover>
