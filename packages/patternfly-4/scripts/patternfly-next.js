@@ -8,6 +8,8 @@ const sourceAssets = '../../node_modules/@patternfly/src-patternfly-next/static/
 const destinationAssets = './static/assets';
 const sourceGatsbyVariables = '../../node_modules/@patternfly/src-patternfly-next/src/site/gatsby-variables.scss';
 const destinationGatsbyVariables = '_repos/core/src/site/gatsby-variables.scss';
+const sourceIconDefs = '../../node_modules/@patternfly/src-patternfly-next/src/icons/definitions/pf-icons.json';
+const destinationIconDefs = '_repos/core/src/icons/definitions/pf-icons.json';
 
 fs.remove('_repos/core', (errRemove) => {
 if (errRemove) {
@@ -85,6 +87,16 @@ console.log('Removed _repos/core dir');
     }
     // eslint-disable-next-line no-console
     console.log('Copied gatsby-variables.scss');
+  });
+
+  // pf-icons.json
+  fs.copy(sourceIconDefs, destinationIconDefs, (errCopyIconDefs) => {
+    if (errCopyIconDefs) {
+      // eslint-disable-next-line no-console
+      return console.error(errCopyIconDefs);
+    }
+    // eslint-disable-next-line no-console
+    console.log('Copied pf-icons.json');
   });
 
 });
