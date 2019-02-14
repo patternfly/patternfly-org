@@ -13,9 +13,11 @@ Most forms will contain the following basic elements:
 1. [Labels](/design-guidelines/usage-and-behavior/data-input) - Field labels can be aligned to the left or top of the field depending on the layout of your page and the amount of space you have to work with. Learn more about field labels in the [text and data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
 
   *Aligned to the top*
+
   ![Aligned to the top](img/top-aligned.png)
 
   *Aligned to the left*
+
   ![Aligned to the left](img/left-aligned.png)
 
 2. [Text field](/design-guidelines/usage-and-behavior/data-input) - provides an area for users to input free-form text.
@@ -35,11 +37,13 @@ Most forms will contain the following basic elements:
   When using forms in a modal, align buttons to the right edge of the input field. Place the primary button on the far right and the secondary button to the left.
 
   *Buttons on a modal*
+
   ![Buttons on a modal](img/modal-button.png)
 
   When using full page forms, align buttons to the left, placing the primary button on the left and secondary on the right.
 
   *Buttons on a full page form*
+
   ![Buttons on a full page](img/fullpage-button.png)
 
   7. Required field indicator
@@ -91,9 +95,11 @@ Use an infotip to provide context around a text or input field. Infotips are rep
 
 
 *Infotip example - top aligned labels*
+
 ![Infotips](img/infotip.png)
 
 *Infotip example - left aligned labels*
+
 ![Infotips](img/infotip-left.png)
 
 **DO**
@@ -105,10 +111,10 @@ Use an infotip to provide context around a text or input field. Infotips are rep
 * **Never** hide critical information in an infotip. Don’t put any information into an infotip that a user will always need to complete their task.
 
 **Helper text**
-Helper text is text below a form field that helps a user provide the right information, like “Provide a unique name.” Use helper text for information that a user needs to know in order to enter the correct information. For context or background information that is “nice to have,” use an infotip.
+Helper text is text below a form field that helps a user provide the right information, like _Enter a unique name_. Use helper text for information that a user needs to know in order to enter the correct information. For context or background information that is “nice to have,” use an infotip.
 
 *Helper text example*
-![Helper text](img/helpertext.png)
+![Helper text](img/helper-text.png)
 
 **DO**
 * Keep helper text concise while providing enough information to enable a user to complete their task.
@@ -127,7 +133,7 @@ For example, placeholder text for a date might be _e.g. DD/MM/YYYY_.
 Use placeholder text when the requested data type might be unfamiliar or the field requires the user to provide data in a specific format.
 
 *Placeholder text example*
-![Placeholder text](img/syntax-hint.png)
+![Placeholder text](img/placeholdertext.png)
 
 **DO**
 * Try to limit the use of placeholder text to unfamiliar input types or specific syntax requirements (like a specific date format, number format, etc).
@@ -169,7 +175,7 @@ Use progressive disclosure to hide and show fields based on the users’ selecti
 *Progressive disclosure example*
 ![Progressive disclosure](img/progressive-disclosure.png)
 
-### Using forms in your designs
+### Form examples
 **In a card**
 ![Card example](img/card-example.png)
 
@@ -182,7 +188,7 @@ Use progressive disclosure to hide and show fields based on the users’ selecti
 > Note: For buttons on wizards, follow modal standards. Align buttons to the right. Place the primary button on the far right and the secondary button to the left.  
 
 **Specifications**
-When you're laying out your form elements, we recommend leaving enough vertical space to accommodate a line of caption text (about 32px) beneath form fields to account for inline errors and helper text. For more information see [Spacers](/design-guidelines/styles/spacers). 
+When you're laying out your form elements, we recommend leaving enough vertical space to accommodate a line of caption text (about 32px) beneath form fields to account for inline errors and helper text. For more information see [Spacers](/design-guidelines/styles/spacers).
 
 ### Content
 Think of a form as a conversation between your application and your user. Apply the following principles to organize and craft content for your forms:
