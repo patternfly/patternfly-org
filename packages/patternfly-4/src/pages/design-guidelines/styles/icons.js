@@ -1,5 +1,5 @@
 import React from 'react';
-import { Gallery, Form, FormGroup, TextInput } from '@patternfly/react-core';
+import { Gallery, Form, TextInput } from '@patternfly/react-core';
 import * as icons from '@patternfly/react-icons';
 import IconCard from './iconCard';
 import paramCase from 'param-case';

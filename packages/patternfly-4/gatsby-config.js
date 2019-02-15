@@ -18,7 +18,6 @@ module.exports = {
     // create sitemap (only in prod) and save to /sitemap.xml
     'gatsby-plugin-sitemap',
     // create robots.txt
-    'gatsby-plugin-robots-txt',
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {

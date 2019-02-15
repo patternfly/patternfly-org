@@ -10,6 +10,7 @@ import {
   PageSection,
   PageSectionVariants
 } from '@patternfly/react-core';
+import { PatternFlyThemeProvider } from '@patternfly/react-styled-system';
 import { Location } from '@reach/router';
 import './markdownPageTemplate.scss';
 
@@ -184,7 +185,7 @@ export default function Template({
     <Layout sideNav={SideNav}>
       <SEO title="Docs" keywords={['gatsby', 'application', 'react']} />
       <PageSection variant={PageSectionVariants.light}>
-        {content}
+        <PatternFlyThemeProvider>{content}</PatternFlyThemeProvider>
       </PageSection>
     </Layout>
   )

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, GridItem } from '@patternfly/react-core';
-import { PatternFlyThemeProvider, StyledText } from '@patternfly/react-styled-system';
+import { StyledText } from '@patternfly/react-styled-system';
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
 
@@ -37,7 +37,7 @@ export const styles = {
 };
 
 export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontSize, lineHeight}) => (
-  <PatternFlyThemeProvider>
+  <>
     <div css={[styles.textColor, styles.gridTitle]}>{title} {symbol && <span css={styles.gridTitleSymbol}>{symbol}</span>}</div>
     <Grid gutter="sm" css={[styles.gridRowCenter, styles.typographyGrid]}>
       <GridItem span={2} rowSpan={3}>
@@ -57,7 +57,7 @@ export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontS
       </GridItem>
       {note && <GridItem span={12}><div css={styles.textColor}>{note}</div></GridItem>}
     </Grid>
-  </PatternFlyThemeProvider>
+  </>
 );
 
 export const TypographyGridLegend = ({children}) => (
