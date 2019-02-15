@@ -117,8 +117,16 @@ Use when you have more information than will comfortably fit inside a row or you
 #### When to use
 Use a compound expandable list when you want multiple expansion panels that relate to specific table columns where it would not make sense to combine all of this information into a single, simple expansion.
 
+### Data Tables on Mobile
+The PatternFly 4 data table is designed to be fully responsive. When columns no longer fit within the width of the viewport, columns are stacked so that data in each row is displayed as sets of attribute-value pairs.
+
+![mobile data table](img/Mobile-data-table-example.png)
+
+** Data table on mobile**
+
+
 ## Using lists and tables in a page
-lists or a tables should be placed in the body of a page with the width being driver be the containing element.
+Lists or a tables should be placed in the body of a page with the width being set by the containing element.
 
 ![table in a page](img/data-table-example.png)
 
