@@ -1,12 +1,12 @@
 # Lists and tables
 PatternFly offers two components for displaying large data sets, the Data List and the Data Table. They satisfy similar use cases, but choosing the correct component to use in your design will be dependent on the type of data you need to display.
 
-Use [Data Lists](# Data lists) when:
+Use [Data Lists](#Data-lists) when:
 * A flexible layout is more important than arranging information in a grid.
 * You want to include active content like a chart.
 * Content displayed may vary between rows.
 
-Use a [Data Tables](# Data tables) when:
+Use a [Data Tables](#Data-tables) when:
 * Users will want to consume data as a grid (i.e. structured rows and columns).
 * You want column headers.
 
