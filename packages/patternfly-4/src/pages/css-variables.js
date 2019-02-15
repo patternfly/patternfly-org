@@ -1,11 +1,10 @@
 import React from 'react';
 import { Title, PageSection, PageSectionVariants } from '@patternfly/react-core';
-import { Table, Heading, Body, TH, TD, Row } from '../../../../components/_react/table';
+import { Table, Heading, Body, TH, TD, Row } from '../components/_react/table';
 import * as tokensModule from '@patternfly/react-tokens';
 import { StyleSheet, css } from '@patternfly/react-styles';
-import Layout from '../../../../components/layout';
-import SEO from '../../../../components/seo';
-import SideNav from '../../../../components/_react/Documentation/SideNav';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const styles = StyleSheet.create({
   name: {
@@ -26,10 +25,10 @@ const isColorRegex = /^(#|rgb)/;
 
 function Tokens() {
   return (
-    <Layout sideNav={<SideNav />}>
-      <SEO title="React Tokens" />
+    <Layout>
+      <SEO title="Global CSS Variables" />
       <PageSection variant={PageSectionVariants.light}>
-        <Title size="3xl">Tokens</Title>
+        <Title size="3xl">Global CSS Variables</Title>
         <Table>
           <Heading>
             <TH>Variable</TH>
@@ -39,7 +38,7 @@ function Tokens() {
           <Body>
             {Object.keys(tokensModule).reduce((acc, key) => {
               const token = tokensModule[key];
-              if (!token.name || !token.value) {
+              if (!token.name || !token.value || !key.startsWith('global_')) {
                 return acc;
               }
               return [

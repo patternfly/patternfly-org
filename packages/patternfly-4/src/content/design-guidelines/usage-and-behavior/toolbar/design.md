@@ -1,3 +1,6 @@
+---
+path: "/design-guidelines/usage-and-behavior/toolbar"
+---
 # Toolbar
 The toolbar contains multiple components that allow a user to manage and manipulate a data set. Data can be presented in a variety of views (table, list, card, etc.). PatternFly supports multiple toolbar variations that address a variety of use cases.
 

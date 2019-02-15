@@ -13,6 +13,18 @@ import {
 import { Location } from '@reach/router';
 import './markdownPageTemplate.scss';
 
+/*
+  {
+    text: 'Accessibility (WIP)',
+    path: '/get-started/accessibility'
+  }, {
+    text: 'Upgrade from PF3 (WIP)',
+    path: '/get-started/upgrade'
+  }, {
+    text: 'FAQs (WIP)',
+    path: '/get-started/faqs'
+  }
+*/
 const getStartedNav = [{
   text: 'About',
   path: '/get-started/about'
@@ -22,27 +34,21 @@ const getStartedNav = [{
 }, {
   text: 'Designers',
   path: '/get-started/designers'
-}, {
-  text: 'Accessibility (WIP)',
-  path: '/get-started/accessibility'
-}, {
-  text: 'Upgrade from PF3 (WIP)',
-  path: '/get-started/upgrade'
-}, {
-  text: 'FAQs (WIP)',
-  path: '/get-started/faqs'
 }];
-const designGuidelinesNav = [{
-  text: 'Styles',
-  path: '/design-guidelines/styles/',
-  subNav: [{
+/*
+  {
     text: 'Overview (WIP)',
     path: '/design-guidelines/styles/overview'
   }, {
     text: 'Colors (WIP)',
     path: '/design-guidelines/styles/color'
-  }, {
-    text: 'Icons (WIP)',
+  }, 
+*/
+const designGuidelinesNav = [{
+  text: 'Styles',
+  path: '/design-guidelines/styles/',
+  subNav: [{
+    text: 'Icons',
     path: '/design-guidelines/styles/icons'
   }, {
     text: 'Typography',
@@ -69,6 +75,9 @@ const designGuidelinesNav = [{
   }, {
     text: 'Progress Bar',
     path: '/design-guidelines/usage-and-behavior/progress-bar'
+  }, {
+    text: 'Toolbar',
+    path: '/design-guidelines/usage-and-behavior/toolbar'
   }]
 }, {
   text: 'Content',
