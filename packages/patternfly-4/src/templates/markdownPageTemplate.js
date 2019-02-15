@@ -75,6 +75,9 @@ const designGuidelinesNav = [{
   }, {
     text: 'Progress Bar',
     path: '/design-guidelines/usage-and-behavior/progress-bar'
+  }, {
+    text: 'Toolbar',
+    path: '/design-guidelines/usage-and-behavior/toolbar'
   }]
 }, {
   text: 'Content',

@@ -35,7 +35,7 @@ class Layout extends React.Component {
                   <Link to="/get-started/about">Get Started</Link>
                 </NavItem>
                 <NavItem isActive={currentPath.indexOf('/design-guidelines/') > -1}>
-                  <Link to="/design-guidelines/styles">Design Guidelines</Link>
+                  <Link to="/design-guidelines/styles/icons">Design Guidelines</Link>
                 </NavItem>
                 <NavItem isActive={currentPath.indexOf('/documentation/') > -1}>
                   <Link to="/documentation/react">Documentation</Link>

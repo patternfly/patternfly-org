@@ -28,7 +28,7 @@ function Tokens() {
     <Layout>
       <SEO title="Global CSS Variables" />
       <PageSection variant={PageSectionVariants.light}>
-        <Title size="3xl">CSS Variables</Title>
+        <Title size="3xl">Global CSS Variables</Title>
         <Table>
           <Heading>
             <TH>Variable</TH>
@@ -38,7 +38,7 @@ function Tokens() {
           <Body>
             {Object.keys(tokensModule).reduce((acc, key) => {
               const token = tokensModule[key];
-              if (!token.name || !token.value) {
+              if (!token.name || !token.value || !key.startsWith('global_')) {
                 return acc;
               }
               return [
