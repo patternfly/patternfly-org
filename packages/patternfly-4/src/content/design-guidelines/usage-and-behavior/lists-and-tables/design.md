@@ -17,7 +17,7 @@ PatternFly supports several variations of the Data List component.
 
 ![standard data list](img/standard-list.png)
 
-1. **Toolbar:** The toolbar sits above the list and contains controls for manipulating list data. Common actions include filtering, sorting, and pagination.
+1. **[Toolbar:](../toolbar/design.md)** The toolbar sits above the list and contains controls for manipulating list data. Common actions include filtering, sorting, and pagination.
 2. **Row:** Row height may be variable and sizes to the content. Rows in a data list may take any supported layout.
 3. **Inline actions:** These actions apply only to the current row/item.
 
@@ -64,15 +64,15 @@ The expandable list adds an expansion panel to every row to reveal more detail a
 Use when you have more information than will comfortably fit inside a row or you want to provide a way for advanced users to access information that is not applicable to all users.
 
 ## Data tables
-Two alternative stylings are available for Data Tables.
-* **Standard styling**, sometimes been referred to as a hybrid list as it combines the styling of a list view with behaviors that are commonly associated with tables.
-* **Compact styling**, when you want to maximize the amount of data that can be displayed in a small space.
+Two variants are available for Data Tables.
+* **Standard**, sometimes been referred to as a hybrid list as it combines the styling of a list view with behaviors that are commonly associated with tables.
+* **Compact**, when you want to maximize the amount of data that can be displayed in a small space.
 
 ### Standard Data Table
 
 ![standard data table](img/standard-data-table.png)
 
-1. **Toolbar:** The toolbar sits above the list and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
+1. **[Toolbar:](../toolbar/design.md)** The toolbar sits above the list and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
 2. **Select all:** When present, selects all items in a table. If pagination is being used, this will only select items on the current page.
 3. **Column headers:** If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on one column at a time.
 4. **Select checkbox:** Select this row.
@@ -84,7 +84,7 @@ Two alternative stylings are available for Data Tables.
 Use a Data Table when the information you want to display is fits into a structured, tabular format, i.e. has distinct rows and columns.
 
 #### When not to use
-The Data Table is not recommended for less structured of variably structured data that cannot be easily organized into columns. In these situations a Data Table should be used.
+The Data Table is not recommended for less structured or variably structured data that cannot be easily organized into columns. In these situations a Data Table should be used.
 
 #### How to use
 Consider the structure of the data you want to display and organize that information into columns. Columns will typically have column headers. Every row within a table must have a consistent format, and if the table row includes actions, they should always be placed in the rightmost column(s).
@@ -101,7 +101,7 @@ Use a Compact Data Table when you want to show as much data per page as possible
 
 ![expandable data table](img/expandable-data-table.png)
 
-1. **Expansion:** When present, expands the row.
+1. **Expansion:** expands the row.
 2. **Expansion panel:** contains details associated with a row.
 
 When to use
@@ -117,17 +117,19 @@ Use when you have more information than will comfortably fit inside a row or you
 #### When to use
 Use a compound expandable list when you want multiple expansion panels that relate to specific table columns where it would not make sense to combine all of this information into a single, simple expansion.
 
-## Components and demos used
-
-### Core components and demos
-[DataList](/documentation/core/components/DataList), [DataTable](/documentation/core/components/DataTable)
-
-### React components and demos
-[DataList](/documentation/react/components/DataList), [DataTable](/documentation/react/components/DataTable)
-
 ## Using lists and tables in a page
 lists or a tables should be placed in the body of a page with the width being driver be the containing element.
 
 ![table in a page](img/data-table-example.png)
 
 In the example shown here, a data table is positioned in the body of a page by placing it inside of a card.
+
+## Components and demos used
+
+### Core components and demos
+* [DataList](/documentation/core/components/DataList)
+* [DataTable](/documentation/core/components/DataTable)
+
+### React components and demos
+* [DataList](/documentation/react/components/DataList)
+* [DataTable](/documentation/react/components/DataTable)
