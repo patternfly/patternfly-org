@@ -127,25 +127,8 @@ class IconCard extends React.Component {
   
   render() {
     const { icon: Icon, id, name } = this.props;
-    const renderedItem = (  
-      <div css={styles.iconCell}>
-        <div css={styles.iconbox}>
-          <Bullseye>
-            <div css={styles.innerItem}>
-              <Bullseye>
-                <Icon size="xl" key={id} title={id} />
-              </Bullseye>
-            </div>
-          </Bullseye>
-        </div>
-        <div css={[styles.textbox, styles.label]}>
-          {name}
-        </div>
-      </div>
-    );
     const popoverBody = (
       <div css={styles.popoverBody}>
-        <Icon size="lg" key={id} title={id} ref={this.iconRef} style={{display: 'none'}} />
         <div css={styles.copyButtons}>
           <Box><Button variant="secondary" onClick={this.onCopyReact}>Copy React</Button></Box>
           <div css={css`width: 16px; height: 8px;`}></div>
@@ -162,7 +145,20 @@ class IconCard extends React.Component {
           headerContent={<div css={styles.popoverHeader}>{name}</div>} 
           bodyContent={popoverBody}
         >
-          {renderedItem}
+          <div css={styles.iconCell}>
+            <div css={styles.iconbox}>
+              <Bullseye>
+                <div css={styles.innerItem}>
+                  <Bullseye>
+                    {typeof window !== 'undefined' && <Icon size="xl" ref={this.iconRef} />}
+                  </Bullseye>
+                </div>
+              </Bullseye>
+            </div>
+            <div css={[styles.textbox, styles.label]}>
+              {name}
+            </div>
+          </div>
         </Popover>
       </GalleryItem>
     );

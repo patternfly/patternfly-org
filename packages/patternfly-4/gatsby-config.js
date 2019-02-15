@@ -22,7 +22,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        policy: [{ userAgent: '*'}]
+        host: 'http://patternfly.surge.sh',
+        sitemap: 'http://patternfly.surge.sh/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
       }
     },
     {
