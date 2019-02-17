@@ -6,6 +6,7 @@ import { Title, PageSection, PageSectionVariants } from '@patternfly/react-core'
 import { StyleSheet, css } from '@patternfly/react-styles';
 import packageJsonReactCore from '@patternfly/src-patternfly-react/packages/patternfly-4/react-core/package.json';
 import packageJsonReactCharts from '@patternfly/src-patternfly-react/packages/patternfly-4/react-charts/package.json';
+import packageJsonReactTable from '@patternfly/src-patternfly-react/packages/patternfly-4/react-table/package.json';
 import {
   global_Color_light_100 as heroTextColor
 } from '@patternfly/react-tokens';
@@ -33,6 +34,14 @@ const DocsReactPage = () => (
       </Title>
       <Title size="md" className={css(styles.heroText)}>
         Version: {packageJsonReactCharts.version}
+      </Title>
+    </PageSection>
+    <PageSection variant={PageSectionVariants.dark}>
+      <Title size="2xl" className={css(styles.heroText)}>
+        @patternfly/react-table
+      </Title>
+      <Title size="md" className={css(styles.heroText)}>
+        Version: {packageJsonReactTable.version}
       </Title>
     </PageSection>
   </Layout>

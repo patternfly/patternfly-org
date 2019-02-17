@@ -111,7 +111,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         const rawExamples = [];
         const getPackage = pkg => doc.absolutePath.indexOf(pkg) !== -1 && pkg;
-        const packageDir = getPackage('react-core') || getPackage('react-charts');
+        const packageDir = getPackage('react-core') || getPackage('react-charts') || getPackage('react-table');
         examples.edges.forEach(({ node: example }) => {
           if (
             example.relativeDirectory

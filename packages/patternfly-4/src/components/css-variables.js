@@ -3,10 +3,8 @@ import { Title, PageSection, PageSectionVariants, Form, TextInput } from '@patte
 import { Table, TableHeader, TableBody, sortable, SortByDirection } from '@patternfly/react-table';
 import * as tokensModule from '@patternfly/react-tokens';
 import { StyleSheet, css } from '@patternfly/react-styles';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-/** @jsx jsx */
-import { css as emotionCss, jsx } from '@emotion/core';
+import Layout from './layout';
+import SEO from './seo';
 
 const styles = StyleSheet.create({
   color: {
@@ -42,7 +40,8 @@ class Tokens extends React.Component {
     super(props);
     const dataRows = [];
     Object.entries(tokensModule).map(([key, token]) => {
-      if (!token.name || !token.value || !key.startsWith('global_')) {
+      const filter = props.component || 'global_';
+      if (!token.name || !token.value || !key.startsWith(filter)) {
         return;
       }
       dataRows.push([
@@ -55,13 +54,18 @@ class Tokens extends React.Component {
     const dataRowsSorted = dataRows.sort((a, b) => {
       return a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0;
     });
+    let columns;
+    if (props.isReact) {
+      columns = [{ title: 'React Tokens', transforms: [sortable] }];
+    } else {
+      columns = [];
+    }
     this.state = {
       searchValue: '',
-      columns: [
-        { title: 'React Tokens', transforms: [sortable] },
-        { title: 'Core Variables', transforms: [sortable] },
+      columns: columns.concat([
+        { title: 'Variables', transforms: [sortable] },
         { title: 'Value', transforms: [sortable] }
-      ],
+      ]),
       dataRows: dataRowsSorted,
       rows: this.processToComponents(dataRowsSorted),
       sortBy: {
@@ -75,14 +79,19 @@ class Tokens extends React.Component {
   processToComponents = dataRows => {
     const rows = [];
     dataRows.map(dataRow => {
-      rows.push([
-        <span className={css(styles.tokenCell)}>{dataRow[0]}</span>, 
+      let toPush;
+      if (this.props.isReact) {
+        toPush = [<span className={css(styles.tokenCell)}>{dataRow[0]}</span>];
+      } else {
+        toPush = [];
+      }
+      rows.push(toPush.concat([
         <span className={css(styles.tokenCell)}>{dataRow[1]}</span>,
         <span>
           {isColorRegex.test(dataRow[2]) && <span className={css(styles.color)} style={{backgroundColor: dataRow[2]}} />}
           <span className={css(styles.value)}>{dataRow[2]}</span>
         </span>
-      ]);
+      ]));
     }, []);
     return rows;
   };
@@ -107,6 +116,7 @@ class Tokens extends React.Component {
 
   render() {
     const { searchValue, columns, rows, dataRows, sortBy } = this.state;
+    const { component, sideNav } = this.props;
     const searchRE = new RegExp(searchValue, 'i');
     const filteredTokens = dataRows.filter(c => {
       return searchRE.test(c[0]) || searchRE.test(c[1]) || searchRE.test(c[2]);
@@ -114,11 +124,11 @@ class Tokens extends React.Component {
     const filteredRows = this.processToComponents(filteredTokens);
 
     return (
-      <Layout>
+      <Layout sideNav={sideNav}>
         <SEO title="Global CSS Variables" />
         <PageSection variant={PageSectionVariants.light} className={css(styles.overflow)}>
           <Title size="3xl">Global CSS Variables</Title>
-          <Form className={css(styles.search)} onSubmit={event => { event.preventDefault(); return false; }}>
+          {!component && <Form className={css(styles.search)} onSubmit={event => { event.preventDefault(); return false; }}>
             <TextInput
                   type="text"
                   id="primaryIconsSearch"
@@ -127,8 +137,8 @@ class Tokens extends React.Component {
                   value={searchValue}
                   onChange={this.handleSearchChange}
                 />
-          </Form>
-          <Table variant="compact" sortBy={sortBy} onSort={this.onSort} cells={columns} rows={filteredRows}>
+          </Form>}
+          <Table variant="compact" aria-label="CSS Variables" sortBy={sortBy} onSort={this.onSort} cells={columns} rows={filteredRows}>
             <TableHeader />
             <TableBody />
           </Table>

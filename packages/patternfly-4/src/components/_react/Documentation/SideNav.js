@@ -86,19 +86,20 @@ class SideNav extends React.Component {
           <Nav aria-label="Nav">
             <Switcher />
             <Form className={css(styles.search)} onSubmit={event => { event.preventDefault(); return false; }}>
-              <FormGroup
-                label="Search Components"
-                fieldId="primaryComponentSearch">
-                <TextInput
-                  type="text"
-                  id="primaryComponentSearch"
-                  name="primaryComponentSearch"
-                  placeholder="For example, &quot;button&quot;"
-                  value={searchValue}
-                  onChange={this.handleSearchChange}
-                />
-              </FormGroup>
+              <TextInput
+                type="text"
+                id="primaryComponentSearch"
+                name="primaryComponentSearch"
+                placeholder="Search"
+                value={searchValue}
+                onChange={this.handleSearchChange}
+              />
             </Form>
+            <NavGroup title="Styles">
+              <NavItem isActive={currentPath.indexOf('/documentation/react/css-variables/') > -1}>
+                <Link to="/documentation/react/css-variables/">CSS Variables</Link>
+              </NavItem>
+            </NavGroup>
             {Boolean(filteredComponentRoutes.length) && (
               <NavGroup title="Components">
                 {filteredComponentRoutes.map(route => (

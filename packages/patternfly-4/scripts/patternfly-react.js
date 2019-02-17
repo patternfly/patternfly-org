@@ -1,6 +1,6 @@
 const fs = require('fs-extra');
 
-const packages = ['react-core', 'react-charts'];
+const packages = ['react-core', 'react-charts', 'react-table'];
 
 packages.forEach(pkg => {
   const source = `../../node_modules/@patternfly/src-patternfly-react/packages/patternfly-4/${pkg}/src`;

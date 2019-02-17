@@ -62,6 +62,9 @@ const designGuidelinesNav = [{
     text: 'About Modal',
     path: '/design-guidelines/usage-and-behavior/about-modal'
   }, {
+    text: 'Alerts and Notifications',
+    path: '/design-guidelines/usage-and-behavior/alerts-and-notifications'
+  }, {
     text: 'Buttons and Links',
     path: '/design-guidelines/usage-and-behavior/buttons-and-links'
   }, {

@@ -99,6 +99,13 @@ module.exports = {
         path: `${__dirname}/_repos/react-charts`
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `react`,
+        path: `${__dirname}/_repos/react-table`
+      }
+    },
     'gatsby-plugin-typescript',
     'gatsby-transformer-react-docgen',
     // following plugins for CORE
