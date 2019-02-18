@@ -18,7 +18,7 @@ export interface LoginPageProps extends HTMLProps<HTMLElement> {
   footerListVariants?: OneOf<typeof LoginListVariant, keyof typeof LoginListVariant>;
   loginTitle: string;
   signUpForAccountMessage?: ReactNode;
-  languageSelector?: ReactNode;
+  forgotCredentials?: ReactNode;
   socialMediaLoginContent?: ReactNode;
 }
 

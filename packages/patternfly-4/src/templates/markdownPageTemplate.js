@@ -62,11 +62,17 @@ const designGuidelinesNav = [{
     text: 'About Modal',
     path: '/design-guidelines/usage-and-behavior/about-modal'
   }, {
+    text: 'Alerts and Notifications',
+    path: '/design-guidelines/usage-and-behavior/alerts-and-notifications'
+  }, {
     text: 'Buttons and Links',
     path: '/design-guidelines/usage-and-behavior/buttons-and-links'
   }, {
     text: 'Forms',
     path: '/design-guidelines/usage-and-behavior/forms'
+  }, {
+    text: 'Lists and Tables',
+    path: '/design-guidelines/usage-and-behavior/lists-and-tables'
   }, {
     text: 'Modal',
     path: '/design-guidelines/usage-and-behavior/modal'

@@ -4,7 +4,7 @@ import SideNav from '../../components/_core/Documentation/SideNav';
 import SEO from '../../components/seo';
 import { Title, PageSection, PageSectionVariants } from '@patternfly/react-core';
 import { StyleSheet, css } from '@patternfly/react-styles';
-import packageJsonCore from '@patternfly/src-patternfly-next/package.json';
+import packageJsonCore from '@patternfly/patternfly/package.json';
 import {
   global_Color_light_100 as heroTextColor
 } from '@patternfly/react-tokens';

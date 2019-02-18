@@ -3,6 +3,7 @@ import { css } from '@patternfly/react-styles';
 import exampleStyles from './example.styles';
 import styles from './liveDemo.styles';
 import PropTypes from 'prop-types';
+import * as TableComponents from '@patternfly/react-table';
 import * as ChartComponents from '@patternfly/react-charts';
 import * as CoreComponents from '@patternfly/react-core';
 import * as CoreIcons from '@patternfly/react-icons';
@@ -36,7 +37,7 @@ const defaultProps = {
   children: null
 };
 
-const scopePlayground = { React, ...ChartComponents, ...StyledSystemComponents, ...CoreComponents, ...CoreIcons, css };
+const scopePlayground = { React, ...TableComponents, ...ChartComponents, ...StyledSystemComponents, ...CoreComponents, ...CoreIcons, css };
 
 const transformCode = code => {
   try {

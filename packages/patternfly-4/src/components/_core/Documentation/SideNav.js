@@ -56,6 +56,11 @@ export default ({ children }) => (
             return (
               <Nav aria-label="Nav">
                 <Switcher />
+                <NavGroup title="Styles">
+                  <NavItem isActive={currentPath.indexOf('/documentation/core/css-variables/') > -1}>
+                    <Link to="/documentation/core/css-variables/">CSS Variables</Link>
+                  </NavItem>
+                </NavGroup>
                 {Boolean(components.length) && (
                   <NavGroup title="Components">
                     {components.map(navItem => {

@@ -1,3 +1,6 @@
+---
+path: "/design-guidelines/usage-and-behavior/alerts-and-notifications"
+---
 # Alerts and notifications
 Alerts are used when the system wants to notify the user about some status or other event. This guideline talks about how to properly use different types of alerts in your designs.
 ## Elements
