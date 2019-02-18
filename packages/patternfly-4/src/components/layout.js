@@ -40,12 +40,12 @@ class Layout extends React.Component {
                 <NavItem isActive={currentPath.indexOf('/documentation/') > -1}>
                   <Link to="/documentation/react">Documentation</Link>
                 </NavItem>
-                <NavItem isActive={currentPath.indexOf('/community/') > -1}>
+                {/* <NavItem isActive={currentPath.indexOf('/community/') > -1}>
                   <Link to="/community/contribute">Community</Link>
                 </NavItem>
                 <NavItem isActive={currentPath.indexOf('/blog/') > -1}>
                   <Link to="/blog/">Blog</Link>
-                </NavItem>
+                </NavItem> */}
               </NavList>
             </Nav>
           );

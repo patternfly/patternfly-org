@@ -52,7 +52,14 @@ const propTypes = {
   rows: PropTypes.arrayOf(
     PropTypes.oneOfType([
       PropTypes.shape({
-        cells: PropTypes.arrayOf(PropTypes.node),
+        cells: PropTypes.arrayOf(
+          PropTypes.oneOfType([
+            PropTypes.node,
+            PropTypes.shape({
+              title: PropTypes.node
+            })
+          ])
+        ),
         isOpen: PropTypes.bool,
         parent: PropTypes.number,
         props: PropTypes.any
@@ -134,7 +141,18 @@ class Table extends React.Component {
     this.state = {
       headerData: []
     };
+    this.isSelected = this.isSelected.bind(this);
+    this.areAllRowsSelected = this.areAllRowsSelected.bind(this);
   }
+
+  isSelected(row) {
+    return row.selected === true;
+  }
+
+  areAllRowsSelected(rows) {
+    return rows.every(this.isSelected);
+  }
+
   render() {
     const {
       caption,
@@ -162,6 +180,7 @@ class Table extends React.Component {
       sortBy,
       onSort,
       onSelect,
+      allRowsSelected: onSelect ? this.areAllRowsSelected(rows) : false,
       actions,
       onCollapse,
       rowLabeledBy,
@@ -183,7 +202,7 @@ class Table extends React.Component {
           {...props}
           renderers={{
             body: {
-              wrapper: BodyWrapper(rows),
+              wrapper: BodyWrapper(rows, onCollapse),
               row: RowWrapper,
               cell: BodyCell
             },

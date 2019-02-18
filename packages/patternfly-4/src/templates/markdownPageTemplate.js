@@ -71,6 +71,9 @@ const designGuidelinesNav = [{
     text: 'Forms',
     path: '/design-guidelines/usage-and-behavior/forms'
   }, {
+    text: 'Lists and Tables',
+    path: '/design-guidelines/usage-and-behavior/lists-and-tables'
+  }, {
     text: 'Modal',
     path: '/design-guidelines/usage-and-behavior/modal'
   }, {

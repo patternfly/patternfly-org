@@ -7,22 +7,24 @@ export default (
   label,
   {
     column: {
-      extraParams: { onSelect, rowLabeledBy = 'simple-node' }
+      extraParams: { onSelect, allRowsSelected, rowLabeledBy = 'simple-node' }
     },
     rowIndex,
     rowData
   }
 ) => {
-  if (rowData && rowData.hasOwnProperty('parent') && !rowData.showSelect) {
+  if ((rowData && rowData.hasOwnProperty('parent')) && !rowData.showSelect) {
     return {
       component: 'td',
+      isVisible: true,
       scope: ''
     };
   }
   const rowId = rowIndex !== undefined ? rowIndex : -1;
+
   function selectClick(event) {
     const selected = rowIndex === undefined ? event.target.checked : rowData && !rowData.selected;
-    onSelect && onSelect(selected, selected, rowId);
+    onSelect && onSelect(event, selected, rowId);
   }
   const customProps = {
     ...(rowId !== -1
@@ -31,6 +33,7 @@ export default (
           'aria-labelledby': rowLabeledBy + rowIndex
         }
       : {
+          checked: allRowsSelected,
           'aria-label': 'Select all rows'
         })
   };
@@ -39,6 +42,7 @@ export default (
     className: css(styles.tableCheck),
     component: 'td',
     scope: '',
+    isVisible: true,
     children: (
       <SelectColumn {...customProps} onSelect={selectClick} name={rowId !== -1 ? `checkrow${rowIndex}` : 'check-all'}>
         {label}

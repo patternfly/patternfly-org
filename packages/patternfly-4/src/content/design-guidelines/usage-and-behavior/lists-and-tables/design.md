@@ -1,3 +1,6 @@
+---
+path: "/design-guidelines/usage-and-behavior/lists-and-tables"
+---
 # Lists and tables
 PatternFly offers two components for displaying large data sets, the Data List and the Data Table. They satisfy similar use cases, but choosing the correct component to use in your design will be dependent on the type of data you need to display.
 
