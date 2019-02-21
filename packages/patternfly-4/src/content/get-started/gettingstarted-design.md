@@ -1,8 +1,8 @@
 ---
 path: "/get-started/designers"
 ---
-# Getting started for designers
-To get acquainted with the basics of the PatternFly 4 design system, check out the overview at [About PatternFly 4](/get-started/about).
+# Design with PatternFly
+Before you begin, check out [About PatternFly 4](/get-started/about) to get acquainted with the basic elements of the design system.
 
 ## Designing with PatternFly 4
 PatternFly is made up of modular components that can be assembled in a variety of ways to build applications and interfaces, along with styles, standards, and design guidelines to help you choose and use the right components for your project.
