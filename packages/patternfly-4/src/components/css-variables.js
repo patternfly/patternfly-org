@@ -54,16 +54,17 @@ class Tokens extends React.Component {
     const dataRowsSorted = dataRows.sort((a, b) => {
       return a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0;
     });
-    let columns;
-    if (props.isReact) {
-      columns = [{ title: 'React Tokens', transforms: [sortable] }];
-    } else {
-      columns = [];
-    }
+    let columns = [];
+    // if (props.isReact) {
+    //   columns = [{ title: 'React Tokens', transforms: [sortable] }];
+    // } else {
+    //   columns = [];
+    // }
     this.state = {
       searchValue: '',
       columns: columns.concat([
         { title: 'Variables', transforms: [sortable] },
+        { title: 'React Tokens', transforms: [sortable] },
         { title: 'Value', transforms: [sortable] }
       ]),
       dataRows: dataRowsSorted,
@@ -79,14 +80,15 @@ class Tokens extends React.Component {
   processToComponents = dataRows => {
     const rows = [];
     dataRows.map(dataRow => {
-      let toPush;
-      if (this.props.isReact) {
-        toPush = [<span className={css(styles.tokenCell)}>{dataRow[0]}</span>];
-      } else {
-        toPush = [];
-      }
+      let toPush = [];
+      // if (this.props.isReact) {
+      //   toPush = [<span className={css(styles.tokenCell)}>{dataRow[0]}</span>];
+      // } else {
+      //   toPush = [];
+      // }
       rows.push(toPush.concat([
         <span className={css(styles.tokenCell)}>{dataRow[1]}</span>,
+        <span className={css(styles.tokenCell)}>{dataRow[0]}</span>,
         <span>
           {isColorRegex.test(dataRow[2]) && <span className={css(styles.color)} style={{backgroundColor: dataRow[2]}} />}
           <span className={css(styles.value)}>{dataRow[2]}</span>
