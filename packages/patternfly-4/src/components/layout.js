@@ -38,7 +38,7 @@ class Layout extends React.Component {
                   <Link to="/design-guidelines/styles/icons">Design Guidelines</Link>
                 </NavItem>
                 <NavItem isActive={currentPath.indexOf('/documentation/') > -1}>
-                  <Link to="/documentation/react">Documentation</Link>
+                  <Link to="/documentation/react/components/alert">Documentation</Link>
                 </NavItem>
                 {/* <NavItem isActive={currentPath.indexOf('/community/') > -1}>
                   <Link to="/community/contribute">Community</Link>
@@ -79,7 +79,7 @@ class Layout extends React.Component {
     `} render={data => canUseDOM && <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <BackgroundImage src={bgImages} />
-        <Page isManagedSidebar={sideNav !== null} style={{height: '100vh'}} header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} /> : null}>
+        <Page isManagedSidebar={sideNav !== null} header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} /> : null}>
           {tertiaryNav && <PageSection variant={PageSectionVariants.light}>
             {tertiaryNav}
           </PageSection>}

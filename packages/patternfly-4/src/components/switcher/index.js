@@ -14,10 +14,10 @@ const Switcher = () => (
       const currentPath = location.pathname;
       return (
         <Bullseye>
-          <Link to="/documentation/react">
+          <Link to="/documentation/react/components/aboutmodal">
             <Button variant="secondary" className="pf-w-btn-left" isActive={currentPath.indexOf('/documentation/react') > -1}>React</Button>
           </Link>
-          <Link to="/documentation/core">
+          <Link to="/documentation/core/components/aboutmodalbox">
             <Button variant="tertiary" className="pf-w-btn-right" isActive={currentPath.indexOf('/documentation/core') > -1}>Core</Button>
           </Link>
         </Bullseye>

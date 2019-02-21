@@ -127,7 +127,7 @@ const navBuilder = navData => {
           <Nav aria-label="Nav">
             <NavList>
               {navData.map(item => item.subNav ? (
-                <NavExpandable title={item.text} isExpanded={currentPath.indexOf(item.path) > -1} isActive={currentPath.indexOf(item.path) > -1}>
+                <NavExpandable key={item.text} title={item.text} isExpanded={currentPath.indexOf(item.path) > -1} isActive={currentPath.indexOf(item.path) > -1}>
                   {item.subNav.map(item => (
                     <NavItem
                       itemId={item.path} 

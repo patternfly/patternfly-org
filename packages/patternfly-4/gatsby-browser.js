@@ -19,3 +19,23 @@ require('./_repos/core/src/patternfly/patternfly.scss');
 //     window.location.reload()
 //   }
 // }
+
+// const scrollTo = id => () => {	
+//   const hash = id.replace('#', '');
+//   const element = document.getElementById(hash);
+//   if (element) {
+//     const offset = element.offsetTop;
+//     // Wait for the browser to finish rendering before scrolling.
+//     setTimeout((function() {
+//       window.scrollTo(0, offset - 16)
+//     }), 0);
+//   }
+// };	
+
+//  export const onRouteUpdate = ({ location }) => {	
+//   const { hash } = location;
+//   console.log(location);
+//   if (hash) {	
+//     window.setTimeout(scrollTo(hash), 10);	
+//   }	
+// };
