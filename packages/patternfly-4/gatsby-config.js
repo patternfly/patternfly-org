@@ -6,7 +6,7 @@ module.exports = {
     title: 'PatternFly 4',
     description: 'Documentation for PatternFly 4',
     author: 'Red Hat',
-    siteUrl: 'http://patternfly.surge.sh'
+    siteUrl: 'https://v2.patternfly.org'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'http://patternfly.surge.sh',
-        sitemap: 'http://patternfly.surge.sh/sitemap.xml',
+        host: 'https://v2.patternfly.org',
+        sitemap: 'https://v2.patternfly.org/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },

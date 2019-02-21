@@ -11,6 +11,7 @@ import Layout from '../../layout';
 import { Location } from '@reach/router';
 import SideNav from './SideNav';
 import SEO from '../../seo';
+import Tokens from '../../css-variables';
 
 const propTypes = {
   data: PropTypes.any.isRequired,
@@ -47,6 +48,7 @@ const defaultProps = {
 class Documentation extends React.PureComponent {
   render() {
     const { data, title, description, examples, components, enumValues, fullPageOnly, rawExamples, images } = this.props;
+    debugger;
     const makeDescription = html => ({ __html: html });
     const getDocGenInfo = name => data.allComponentMetadata.edges.find(edge => edge.node.displayName === name);
     return (
@@ -120,6 +122,11 @@ class Documentation extends React.PureComponent {
                   return null;
                 })}
               </PageSection>
+              {/* <PageSection variant={PageSectionVariants.light}>
+                <Section title="CSS Variables" headingLevel="h2">
+                  <Tokens component="--pf-c-about-modal-box" />
+                </Section>
+              </PageSection> */}
             </Layout>
           )
         }}

@@ -1,10 +1,17 @@
 import React from 'react';
-import { Title, PageSection, PageSectionVariants, Form, TextInput } from '@patternfly/react-core';
+import PropTypes from 'prop-types';
+import { Form, TextInput } from '@patternfly/react-core';
 import { Table, TableHeader, TableBody, sortable, SortByDirection } from '@patternfly/react-table';
 import * as tokensModule from '@patternfly/react-tokens';
 import { StyleSheet, css } from '@patternfly/react-styles';
-import Layout from './layout';
-import SEO from './seo';
+
+const propTypes = {
+  component: PropTypes.string
+};
+
+const defaultProps = {
+  component: ''
+};
 
 const styles = StyleSheet.create({
   color: {
@@ -28,10 +35,7 @@ const styles = StyleSheet.create({
     .pf-c-form__label {
       --pf-c-form__label--FontSize: ${tokensModule.global_FontSize_lg.var};
     }
-  `,
-  overflow: {
-    overflowX: 'auto'
-  }
+  `
 });
 const isColorRegex = /^(#|rgb)/;
 
@@ -41,6 +45,7 @@ class Tokens extends React.Component {
     const dataRows = [];
     Object.entries(tokensModule).map(([key, token]) => {
       const filter = props.component || 'global_';
+      // const filter = props.component;
       if (!token.name || !token.value || !key.startsWith(filter)) {
         return;
       }
@@ -118,7 +123,7 @@ class Tokens extends React.Component {
 
   render() {
     const { searchValue, columns, rows, dataRows, sortBy } = this.state;
-    const { component, sideNav } = this.props;
+    const { component, title } = this.props;
     const searchRE = new RegExp(searchValue, 'i');
     const filteredTokens = dataRows.filter(c => {
       return searchRE.test(c[0]) || searchRE.test(c[1]) || searchRE.test(c[2]);
@@ -126,28 +131,27 @@ class Tokens extends React.Component {
     const filteredRows = this.processToComponents(filteredTokens);
 
     return (
-      <Layout sideNav={sideNav}>
-        <SEO title="Global CSS Variables" />
-        <PageSection variant={PageSectionVariants.light} className={css(styles.overflow)}>
-          <Title size="3xl">Global CSS Variables</Title>
-          {!component && <Form className={css(styles.search)} onSubmit={event => { event.preventDefault(); return false; }}>
-            <TextInput
-                  type="text"
-                  id="primaryIconsSearch"
-                  name="primaryIconsSearch"
-                  placeholder="Search Variables"
-                  value={searchValue}
-                  onChange={this.handleSearchChange}
-                />
-          </Form>}
-          <Table variant="compact" aria-label="CSS Variables" sortBy={sortBy} onSort={this.onSort} cells={columns} rows={filteredRows}>
-            <TableHeader />
-            <TableBody />
-          </Table>
-        </PageSection>
-      </Layout>
+      <>
+        <Form className={css(styles.search)} onSubmit={event => { event.preventDefault(); return false; }}>
+          <TextInput
+                type="text"
+                id="primaryIconsSearch"
+                name="primaryIconsSearch"
+                placeholder="Search Variables"
+                value={searchValue}
+                onChange={this.handleSearchChange}
+              />
+        </Form>
+        <Table variant="compact" aria-label="CSS Variables" sortBy={sortBy} onSort={this.onSort} cells={columns} rows={filteredRows}>
+          <TableHeader />
+          <TableBody />
+        </Table>
+      </>
     );
   }
 }
+
+Tokens.propTypes = propTypes;
+Tokens.defaultProps = defaultProps;
 
 export default Tokens;

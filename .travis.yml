@@ -7,7 +7,7 @@ deploy:
   provider: surge
   skip_cleanup: true
   project: ./out/
-  domain: patternfly.surge.sh
+  domain: v2.patternfly.org
   on: gatsby2
 notifications:
   email: false

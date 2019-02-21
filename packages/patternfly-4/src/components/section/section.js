@@ -11,7 +11,8 @@ const propTypes = {
   headingLevel: PropTypes.string,
   name: PropTypes.string,
   preface: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
+  size: PropTypes.string
 };
 
 const defaultProps = {
@@ -20,15 +21,16 @@ const defaultProps = {
   description: '',
   name: '',
   preface: '',
-  title: ''
+  title: '',
+  size: '2xl'
 };
 
-const Section = ({ children, className, description, headingLevel, name, preface, title, ...props }) => (
+const Section = ({ children, className, description, headingLevel, name, preface, title, size, ...props }) => (
   <section className={css(styles.section, className)}>
     {Boolean(title || description) && (
       <header className={css(styles.header)}>
         {Boolean(title) && (
-          <Title size="2xl" id={name} headingLevel={headingLevel}>
+          <Title size={size} id={name} headingLevel={headingLevel}>
             {title}
           </Title>
         )}
