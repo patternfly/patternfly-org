@@ -33,7 +33,7 @@ When laying out text-based content, you need to factor in line-height when measu
     <div>Note how the line height space is included when laying out with spacer elements.</div>
   </GridItem>
   <GridItem sm={12} span={6} lg={8}>
-    <img style={{padding: '16px'}} src={correct} />
+    <img style={{maxHeight: '170px', padding: '16px'}} src={correct} />
   </GridItem>
   <GridItem span={12}><Spacer size="48" /></GridItem>
   <GridItem sm={12} span={6} lg={4}>
@@ -41,7 +41,7 @@ When laying out text-based content, you need to factor in line-height when measu
     <div>Do not use the text itself to align with spacing elements when designing. Remember to always include the line height space.</div>
   </GridItem>
   <GridItem sm={12} span={6} lg={8}>
-    <img style={{padding: '16px'}} src={incorrect} />
+    <img style={{maxHeight: '125px', padding: '16px'}} src={incorrect} />
   </GridItem>
   <GridItem span={12}><Spacer size="48" /></GridItem>
 </Grid>

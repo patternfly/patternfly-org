@@ -14,6 +14,7 @@ const styles = {
     width: 240px;
     // box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.12), 0 6px 20px 2px rgba(0, 0, 0, 0.12);
     background-color: rgba(190, 225, 244, 0.5);
+    cursor: pointer;
     &:hover {
       background-color: rgba(190, 225, 244, 0.75);
     }
@@ -50,7 +51,10 @@ const styles = {
       background-color: rgba(0, 0, 0, 1.0);
       color: white;
     }
-    .pf-c-button, .pf-c-title {
+    .pf-c-popover__content > .pf-c-button {
+      color: white;
+    }
+    .pf-c-title {
       color: white;
     }
   `,

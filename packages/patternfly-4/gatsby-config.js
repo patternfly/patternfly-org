@@ -13,8 +13,6 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-remark-images',
-    // catch links in markdown files and use gatsby-link to navigate
-    'gatsby-plugin-catch-links',
     // create sitemap (only in prod) and save to /sitemap.xml
     'gatsby-plugin-sitemap',
     // create robots.txt
@@ -26,6 +24,22 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          'gatsby-remark-autolink-headers',
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 700,
+            }
+          }
+        ]
+      }
+    },
+    // catch links in markdown files and use gatsby-link to navigate
+    'gatsby-plugin-catch-links',
     {
       resolve: `gatsby-mdx-tmp`,
       options: {
@@ -114,20 +128,6 @@ module.exports = {
       options: {
         name: `core`,
         path: `${__dirname}/_repos/core`
-      }
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          'gatsby-remark-autolink-headers',
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 700,
-            }
-          }
-        ]
       }
     },
     // {

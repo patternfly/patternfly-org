@@ -4,8 +4,9 @@ import { Link, StaticQuery, graphql } from 'gatsby';
 // import 'prismjs/themes/prism-coy.css';
 import {
   Nav,
-  NavGroup,
-  NavItem
+  NavExpandable,
+  NavItem,
+  NavList
 } from '@patternfly/react-core';
 import Switcher from '../../switcher';
 import { Location } from '@reach/router';
@@ -56,13 +57,8 @@ export default ({ children }) => (
             return (
               <Nav aria-label="Nav">
                 <Switcher />
-                <NavGroup title="Styles">
-                  <NavItem isActive={currentPath.indexOf('/documentation/core/css-variables/') > -1}>
-                    <Link to="/documentation/core/css-variables/">CSS Variables</Link>
-                  </NavItem>
-                </NavGroup>
-                {Boolean(components.length) && (
-                  <NavGroup title="Components">
+                <NavList>
+                  <NavExpandable title="Components" isExpanded={currentPath.indexOf('/components/') > -1} isActive={currentPath.indexOf(/components/) > -1}>
                     {components.map(navItem => {
                       const { path, text } = navItem;
                       const isFullPage = path.endsWith('-full');
@@ -79,11 +75,9 @@ export default ({ children }) => (
                         </Link>
                       </NavItem>
                     )})}
-                  </NavGroup>
-                )}
-                {Boolean(layouts.length) && (
-                  <NavGroup title="Layouts">
-                    {layouts.map(navItem => {
+                </NavExpandable>
+                <NavExpandable title="Layouts" isExpanded={currentPath.indexOf('/layouts/') > -1} isActive={currentPath.indexOf(/layouts/) > -1}>
+                  {layouts.map(navItem => {
                       const { path, text } = navItem;
                       const isFullPage = path.endsWith('-full');
                       if (isFullPage) {
@@ -99,11 +93,9 @@ export default ({ children }) => (
                         </Link>
                       </NavItem>
                     )})}
-                  </NavGroup>
-                )}
-                {Boolean(utilities.length) && (
-                  <NavGroup title="Utilities">
-                    {utilities.map(navItem => {
+                </NavExpandable>
+                <NavExpandable title="Utilities" isExpanded={currentPath.indexOf('/utilities/') > -1} isActive={currentPath.indexOf(/utilities/) > -1}>
+                  {utilities.map(navItem => {
                       const { path, text } = navItem;
                       const isFullPage = path.endsWith('-full');
                       if (isFullPage) {
@@ -119,11 +111,9 @@ export default ({ children }) => (
                         </Link>
                       </NavItem>
                     )})}
-                  </NavGroup>
-                )}
-                {Boolean(demos.length) && (
-                  <NavGroup title="Demos">
-                    {demos.map(navItem => {
+                </NavExpandable>
+                <NavExpandable title="Demos" isExpanded={currentPath.indexOf('/demos/') > -1} isActive={currentPath.indexOf(/demos/) > -1}>
+                  {demos.map(navItem => {
                       const { path, text } = navItem;
                       const isFullPage = path.endsWith('-full');
                       if (isFullPage) {
@@ -139,11 +129,9 @@ export default ({ children }) => (
                           </Link>
                         </NavItem>
                     )})}
-                  </NavGroup>
-                )}
-                {Boolean(upgradeExamples.length) && (
-                  <NavGroup title="Upgrades">
-                    {upgradeExamples.map(navItem => {
+                </NavExpandable>
+                <NavExpandable title="Upgrade Examples" isExpanded={currentPath.indexOf('/upgrade-examples/') > -1} isActive={currentPath.indexOf(/upgrade-examples/) > -1}>
+                  {upgradeExamples.map(navItem => {
                       const { path, text } = navItem;
                       const isFullPage = path.endsWith('-full');
                       if (isFullPage) {
@@ -159,8 +147,11 @@ export default ({ children }) => (
                         </Link>
                       </NavItem>
                     )})}
-                  </NavGroup>
-                )}
+                </NavExpandable>
+                <NavItem isActive={currentPath.indexOf('/documentation/core/css-variables/') > -1}>
+                    <Link to="/documentation/core/css-variables/">CSS Variables</Link>
+                  </NavItem>
+                </NavList>
               </Nav>
             );
           }}

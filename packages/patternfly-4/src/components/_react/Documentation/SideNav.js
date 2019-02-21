@@ -3,10 +3,10 @@ import { graphql, StaticQuery, Link } from 'gatsby';
 import * as DocsFiles from '../../../../.tmp';
 import {
   Nav,
-  NavGroup,
+  NavList,
+  NavExpandable,
   NavItem,
   Form,
-  FormGroup,
   TextInput
 } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
@@ -95,53 +95,47 @@ class SideNav extends React.Component {
                 onChange={this.handleSearchChange}
               />
             </Form>
-            <NavGroup title="Styles">
+            <NavList>
+              <NavExpandable title="Components" isExpanded={currentPath.indexOf('/components/') > -1} isActive={currentPath.indexOf(/components/) > -1}>
+                {filteredComponentRoutes.map(item => (
+                  <NavItem
+                    key={item.to}
+                    isActive={currentPath.indexOf(item.to) > -1}
+                  >
+                    <Link to={item.to}>
+                      {item.label}
+                    </Link>
+                  </NavItem>
+                ))}
+              </NavExpandable>
+              <NavExpandable title="Layouts" isExpanded={currentPath.indexOf('/layouts/') > -1} isActive={currentPath.indexOf(/layouts/) > -1}>
+                {filteredLayoutRoutes.map(item => (
+                  <NavItem
+                    key={item.to}
+                    isActive={currentPath.indexOf(item.to) > -1}
+                  >
+                    <Link to={item.to}>
+                      {item.label}
+                    </Link>
+                  </NavItem>
+                ))}
+              </NavExpandable>
+              <NavExpandable title="Demos" isExpanded={currentPath.indexOf('/demos/') > -1} isActive={currentPath.indexOf(/demos/) > -1}>
+                {filteredDemoRoutes.map(item => (
+                  <NavItem
+                    key={item.to}
+                    isActive={currentPath.indexOf(item.to) > -1}
+                  >
+                    <Link to={item.to}>
+                      {item.label}
+                    </Link>
+                  </NavItem>
+                ))}
+              </NavExpandable>
               <NavItem isActive={currentPath.indexOf('/documentation/react/css-variables/') > -1}>
                 <Link to="/documentation/react/css-variables/">CSS Variables</Link>
               </NavItem>
-            </NavGroup>
-            {Boolean(filteredComponentRoutes.length) && (
-              <NavGroup title="Components">
-                {filteredComponentRoutes.map(route => (
-                  <NavItem
-                    isActive={currentPath.indexOf(route.to) > -1}
-                    key={route.to}
-                  >
-                    <Link to={route.to}>
-                      {route.label}
-                    </Link>
-                  </NavItem>
-                ))}
-              </NavGroup>
-            )}
-            {Boolean(filteredLayoutRoutes.length) && (
-              <NavGroup title="Layouts">
-                {filteredLayoutRoutes.map(route => (
-                  <NavItem
-                    isActive={currentPath.indexOf(route.to) > -1}
-                    key={route.to}
-                  >
-                    <Link to={route.to}>
-                      {route.label}
-                    </Link>
-                  </NavItem>
-                ))}
-              </NavGroup>
-            )}
-            {Boolean(filteredDemoRoutes.length) && (
-              <NavGroup title="Demos">
-                {filteredDemoRoutes.map(route => (
-                  <NavItem
-                    isActive={currentPath.indexOf(route.to) > -1}
-                    key={route.to}
-                  >
-                    <Link to={route.to}>
-                      {route.label}
-                    </Link>
-                  </NavItem>
-                ))}
-              </NavGroup>
-            )}
+            </NavList>
           </Nav>
           );
         }}
@@ -158,7 +152,8 @@ export default props => (
     query={graphql`
       query {
         componentPages: allSitePage(
-          filter: { path: { glob: "/documentation/react/components/*" } }
+          filter: { path: { glob: "/documentation/react/components/*" } },
+          sort: { fields: path }
         ) {
           edges {
             node {
@@ -170,7 +165,8 @@ export default props => (
           }
         }
         layoutPages: allSitePage(
-          filter: { path: { glob: "/documentation/react/layouts/*" } }
+          filter: { path: { glob: "/documentation/react/layouts/*" } },
+          sort: { fields: path }
         ) {
           edges {
             node {
@@ -181,7 +177,10 @@ export default props => (
             }
           }
         }
-        demoPages: allSitePage(filter: { path: { glob: "/documentation/react/demos/*" } }) {
+        demoPages: allSitePage(
+          filter: { path: { glob: "/documentation/react/demos/*" } },
+          sort: { fields: path }
+        ) {
           edges {
             node {
               path
