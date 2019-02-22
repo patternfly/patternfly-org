@@ -10,11 +10,17 @@ PatternFly is made up of modular components that can be assembled in a variety o
 ### Start with styles.
 What typography should you be using? What about colors? Spacing? Check out styles to learn everything you need to know about our foundational design elements.
 
-### Get familiar with design guidelines.
+[View styles](/design-guidelines/styles/icons)
+
+### Get familiar with usage and behavior guidelines.
 Should you use a wizard or a form to solve this problem? How do you write a good button label? Which navigation makes the most sense? Check out our design guidelines to choose and use the right components for your use case.
+
+[View usage and behavior](/design-guidelines/usage-and-behavior/about-modal)
 
 ### Start building with components.
 What does a toolbar look like? What about a filter chip? Components are the building blocks of the design system. Check out individual component pages to view examples, understand states and behavior, and check out the code samples (if you’re into that kind of thing).
+
+[View HTML/CSS components](/documentation/core) | [View React components](/documentation/react)
 
 ### Still feeling unsure? See all the pieces working together with demos.
 What does it look like when you combine all the ingredients? Demos provide examples of a few common ways you might combine layouts and components to give you an idea what’s possible.
