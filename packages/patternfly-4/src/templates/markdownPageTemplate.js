@@ -166,6 +166,7 @@ export default function Template({
   let SideNav;
   let content;
   if (data) {
+    debugger;
     const { markdownRemark } = data;// data.markdownRemark holds our post data
     const { frontmatter, html } = markdownRemark;
 

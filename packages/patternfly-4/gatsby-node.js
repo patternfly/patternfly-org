@@ -88,10 +88,20 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-        markdownPages: allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/src/content/**"}, frontmatter: {path: {ne: null}}}) {
+        markdownPages: allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/content/**"}, frontmatter: {path: {ne: null}}}) {
           edges {
             node {
               fileAbsolutePath
+              frontmatter {
+                path
+              }
+            }
+          }
+        }
+        mdxPages: allMdx {
+          edges {
+            node {
+              id
               frontmatter {
                 path
               }
@@ -103,7 +113,7 @@ exports.createPages = ({ graphql, actions }) => {
       if (result.errors) {
         return reject(result.errors);
       }
-      const { docs, examples, exampleImages, coreExamples, markdownPages} = result.data;
+      const { docs, examples, exampleImages, coreExamples, markdownPages, mdxPages} = result.data;
       const docExports = [];
       const docsComponentPath = path.resolve(__dirname, './src/components/_react/Documentation');
       docs.edges.forEach(({ node: doc }) => {
@@ -151,7 +161,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         fs.outputFileSync(filePath, content);
         const shortenedPath = doc.relativePath.split('/').slice(1).join('/');
-        console.log(`creating page for: /documentation/react/${path.dirname(shortenedPath).toLowerCase()}`);
+        // console.log(`creating page for: /documentation/react/${path.dirname(shortenedPath).toLowerCase()}`);
         createPage({
           path: `/documentation/react/${path.dirname(shortenedPath).toLowerCase()}`,
           component: filePath
@@ -164,7 +174,7 @@ exports.createPages = ({ graphql, actions }) => {
       examples.edges.forEach(({ node: example }) => {
         const shortenedPath = example.relativePath.split('/').slice(1).join('/');
         const examplePath = `/documentation/react/${path.dirname(shortenedPath).toLowerCase()}/${paramCase(example.name)}`;
-        console.log(`creating page for: ${examplePath}`);
+        // console.log(`creating page for: ${examplePath}`);
         createPage({
           path: examplePath,
           layout: 'example',
@@ -176,13 +186,13 @@ exports.createPages = ({ graphql, actions }) => {
         const shortenedPath = node.relativePath.split('/').slice(2, 4).join('/').toLowerCase();
         const examplePath = `/documentation/core/${shortenedPath}`;
 
-        console.log(`creating page for: ${examplePath}`);
+        // console.log(`creating page for: ${examplePath}`);
         createPage({
           path: examplePath,
           component: path.resolve(__dirname, node.absolutePath)
         });
         // also create a full demo page for each component
-        console.log(`creating page for: ${examplePath}-full`);
+        // console.log(`creating page for: ${examplePath}-full`);
         createPage({
           path: `${examplePath}-full`,
           component: path.resolve(__dirname, node.absolutePath)
@@ -190,7 +200,16 @@ exports.createPages = ({ graphql, actions }) => {
       });
 
       markdownPages.edges.forEach(({ node }) => {
-        console.log(`creating page for: ${node.frontmatter.path}`);
+        // console.log(`creating page for: ${node.frontmatter.path}`);
+        createPage({
+          path: node.frontmatter.path,
+          component: markdownPageTemplate,
+          context: {}, // additional data can be passed via context
+        })
+      });
+
+      mdxPages.edges.forEach(({ node }) => {
+        console.log(`creating mdx page for: ${node.frontmatter.path}`);
         createPage({
           path: node.frontmatter.path,
           component: markdownPageTemplate,
