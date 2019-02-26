@@ -111,9 +111,3 @@ export const Spacer = ({color, size, description, showBorder}) => {
     <div css={styles.spacerBox(size, backgroundColor, showBorder)}></div>
   </div>
 )};
-
-const Dummy = () => (
-  <div>dummy</div>
-)
-
-export default Dummy;

@@ -49,7 +49,8 @@ exports.onCreateNode = ({ node, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
-  const markdownPageTemplate = path.resolve(`src/templates/markdownPageTemplate.js`)
+  const markdownPageTemplate = path.resolve(`src/templates/markdownPageTemplate.js`);
+  const mdxPageTemplate = path.resolve(`src/templates/mdxPageTemplate.js`);
   return new Promise((resolve, reject) => {
     graphql(`
       fragment DocFile on File {
@@ -212,8 +213,8 @@ exports.createPages = ({ graphql, actions }) => {
         console.log(`creating mdx page for: ${node.frontmatter.path}`);
         createPage({
           path: node.frontmatter.path,
-          component: markdownPageTemplate,
-          context: {}, // additional data can be passed via context
+          component: mdxPageTemplate,
+          context: {id: node.id}, // additional data can be passed via context
         })
       });
     });

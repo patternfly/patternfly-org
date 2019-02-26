@@ -13,6 +13,20 @@ import {
 import { PatternFlyThemeProvider } from '@patternfly/react-styled-system';
 import { Location } from '@reach/router';
 import './markdownPageTemplate.scss';
+import MDXRenderer from 'gatsby-mdx/mdx-renderer';
+import Icons from '../components/content/icons/icons';
+import * as CoreComponents from '@patternfly/react-core';
+import * as ReactIcons from '@patternfly/react-icons';
+import * as TypographyComponents from '../components/content/typography/typography';
+import MdxImage from './MdxImage';
+
+const mdxScope = {
+  MdxImage,
+  Icons,
+  ...CoreComponents,
+  ...ReactIcons,
+  ...TypographyComponents
+};
 
 /*
   {
@@ -159,15 +173,11 @@ const navBuilder = navData => {
   );
 };
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-  children
-}) {
+export default function MdxPageTemplate({ children, data: { mdx } }) {
   let SideNav;
   let content;
-  if (data) {
-    const { markdownRemark } = data;// data.markdownRemark holds our post data
-    const { frontmatter, html } = markdownRemark;
+  if (mdx) {
+    const { frontmatter, code } = mdx;
 
     if (frontmatter.path.indexOf('/get-started') > -1 ) {
       SideNav = navBuilder(getStartedNav);
@@ -177,15 +187,16 @@ export default function Template({
       SideNav = navBuilder(communityNav);
     }
 
-    content = <div
-      className="markdown-body"
-      dangerouslySetInnerHTML={{ __html: html }}
-    />;
+    // content = <div
+    //   className="markdown-body"
+    //   dangerouslySetInnerHTML={{ __html: html }}
+    // />;
+    content = <div className="markdown-body"><MDXRenderer scope={mdxScope}>{code.body}</MDXRenderer></div>;
   } else {
     SideNav = navBuilder();
-    content = <div
-      className="markdown-body"
-    >{children}</div>;
+    content = <div className="markdown-body"><MDXRenderer
+      scope={mdxScope}
+    >{children}</MDXRenderer></div>;
   }
   return (
     <Layout sideNav={SideNav}>
@@ -198,12 +209,15 @@ export default function Template({
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+  query MdxPageQuery($id: String) {
+    mdx(id: { eq: $id }) {
+      id
       frontmatter {
         path
       }
+      code {
+        body
+      }
     }
   }
-`
+`;

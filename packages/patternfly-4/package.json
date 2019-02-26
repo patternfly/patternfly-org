@@ -21,6 +21,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@mdx-js/mdx": "^0.16.8",
+    "@mdx-js/runtime": "^0.18.0",
     "@mdx-js/tag": "^0.16.8",
     "@patternfly/patternfly": "1.0.184",
     "@patternfly/react-charts": "2.0.3",
