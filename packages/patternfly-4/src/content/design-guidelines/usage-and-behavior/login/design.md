@@ -94,6 +94,7 @@ Please refer to branding guidelines when using logos for social login page. Exam
 Let users know when a form field submission results in an error. Always present error states on the form, and use inline errors whenever possible. The error state you use will depend on whether the validation happens on the client or the server.
 
 #### Client-side Errors
+![Client-side-errors](client_side_error.png "Client-side-errors")
 Error messages are presented before the form is submitted. Client-side validation can be performed as soon as a field loses focus, and allows you to use inline validation to alert users of errors or issues immediately. In most cases, client-side validations are performed as inline validations for each field. Some common examples are shown below.
 
 ##### Empty Field(s)
@@ -137,6 +138,7 @@ A warning message should be displayed when caps lock is on so users avoid making
 
 
 #### Server-side Errors
+![Server-side-error](server-side-error.png "server-side-error")
 When users submit a form, the entire page is reloaded if there are validation errors. At the same time, the password field should be cleared to provide additional security. Error messages can appear as inline errors for each field or as an inline error displayed below the application name and above the input fields. If there are multiple messages, each message appears on its own line; spacing between fields should be enough so that the form doesn’t jump to fit the messages.
 
 
