@@ -46,7 +46,7 @@ class Tokens extends React.Component {
     Object.entries(tokensModule).map(([key, token]) => {
       const filter = props.component || 'global_';
       // const filter = props.component;
-      if (!token.name || !token.value || !key.startsWith(filter)) {
+      if (!token.name || !token.value) {
         return;
       }
       dataRows.push([

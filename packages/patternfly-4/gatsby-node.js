@@ -88,7 +88,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-        markdownPages: allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/src/content/**"}, frontmatter: {path: {ne: null}}}) {
+        markdownPages: allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/patternfly-4/content/**"}, frontmatter: {path: {ne: null}}}) {
           edges {
             node {
               fileAbsolutePath

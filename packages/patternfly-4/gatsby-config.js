@@ -9,6 +9,12 @@ module.exports = {
     siteUrl: 'https://v2.patternfly.org'
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/content`,
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
@@ -30,6 +36,12 @@ module.exports = {
       options: {
         plugins: [
           'gatsby-remark-autolink-headers',
+          // {
+          //   resolve: `gatsby-remark-prismjs`,
+          //   options: {
+          //     classPrefix: 'prism-language-'
+          //   }
+          // },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -96,7 +108,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
-        path: `${__dirname}/src/content`
+        path: `${__dirname}/content`
       }
     },
     // following plugins for REACT
@@ -134,20 +146,6 @@ module.exports = {
         path: `${__dirname}/_repos/core`
       }
     },
-    // {
-    //   resolve: 'gatsby-transformer-remark',
-    //   options: {
-    //     plugins: [
-    //       `gatsby-remark-autolink-headers`,
-    //       // {
-    //       //   resolve: `gatsby-remark-prismjs`,
-    //       //   options: {
-    //       //     classPrefix: 'prism-language-'
-    //       //   }
-    //       // }
-    //     ]
-    //   }
-    // },
     // {
     //   resolve: 'gatsby-remark-embed-snippet',
     //   options: {
