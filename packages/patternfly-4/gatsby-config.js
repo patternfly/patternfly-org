@@ -24,6 +24,7 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
+    'gatsby-transformer-json',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -45,7 +46,7 @@ module.exports = {
       options: {
         extensions: [`.mdx`],
         defaultLayouts: {
-          default: require.resolve("./src/templates/markdownPageTemplate.js")
+          default: require.resolve("./src/templates/mdxPageTemplate.js")
         },
         gatsbyRemarkPlugins: [
           {
@@ -103,21 +104,24 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `react`,
-        path: `${__dirname}/_repos/react-core`
+        path: `${__dirname}/_repos/react-core`,
+        ignore: [`**/*.json`]
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `react`,
-        path: `${__dirname}/_repos/react-charts`
+        path: `${__dirname}/_repos/react-charts`,
+        ignore: [`**/*.json`]
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `react`,
-        path: `${__dirname}/_repos/react-table`
+        path: `${__dirname}/_repos/react-table`,
+        ignore: [`**/*.json`]
       }
     },
     'gatsby-plugin-typescript',

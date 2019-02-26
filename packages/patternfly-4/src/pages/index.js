@@ -11,7 +11,7 @@ import orb from '../images/patternfly-orb.svg';
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
-    <PageSection variant={PageSectionVariants.darker} style={{height: '100%'}}>
+    <PageSection variant={PageSectionVariants.darker} style={{height: 'calc(100vh - 76px)'}}>
       <Bullseye>
         <img src={orb} alt="PatternFly logo" />
       </Bullseye>

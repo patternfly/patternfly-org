@@ -48,7 +48,6 @@ const defaultProps = {
 class Documentation extends React.PureComponent {
   render() {
     const { data, title, description, examples, components, enumValues, fullPageOnly, rawExamples, images } = this.props;
-    debugger;
     const makeDescription = html => ({ __html: html });
     const getDocGenInfo = name => data.allComponentMetadata.edges.find(edge => edge.node.displayName === name);
     return (

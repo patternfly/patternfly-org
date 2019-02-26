@@ -19,55 +19,12 @@ import {
 import { Location } from '@reach/router';
 import brandImg from './l_pf-reverse-164x11.png';
 import { canUseDOM } from 'exenv';
+import './layout.css';
 
 class Layout extends React.Component {
   render() {
     const { tertiaryNav, sideNav } = this.props;
-    const PageNav = (
-      <Location>
-        {({ location }) => {
-          // console.log(location);
-          const currentPath = location.pathname;
-          return (
-            <Nav aria-label="Nav">
-              <NavList variant={NavVariants.horizontal}>
-                <NavItem isActive={currentPath.indexOf('/get-started/') > -1}>
-                  <Link to="/get-started/about">Get Started</Link>
-                </NavItem>
-                <NavItem isActive={currentPath.indexOf('/design-guidelines/') > -1}>
-                  <Link to="/design-guidelines/styles/icons">Design Guidelines</Link>
-                </NavItem>
-                <NavItem isActive={currentPath.indexOf('/documentation/') > -1}>
-                  <Link to="/documentation/react/components/alert">Documentation</Link>
-                </NavItem>
-                {/* <NavItem isActive={currentPath.indexOf('/community/') > -1}>
-                  <Link to="/community/contribute">Community</Link>
-                </NavItem>
-                <NavItem isActive={currentPath.indexOf('/blog/') > -1}>
-                  <Link to="/blog/">Blog</Link>
-                </NavItem> */}
-              </NavList>
-            </Nav>
-          );
-        }}
-      </Location>
-    );
-    const bgImages = {
-      [BackgroundImageSrc.lg]: withPrefix('/img/pfbg_1200.jpg'),
-      [BackgroundImageSrc.sm]: withPrefix('/img/pfbg_768.jpg'),
-      [BackgroundImageSrc.sm2x]: withPrefix('/img/pfbg_768@2x.jpg'),
-      [BackgroundImageSrc.xl]: withPrefix('/img/pfbg_2000.jpg'),
-      [BackgroundImageSrc.filter]: withPrefix('/img/background-filter.svg#image_overlay')
-    };
-    const SiteHeader = (
-      <PageHeader
-        showNavToggle={sideNav !== null}
-        logo={<Link to="/">
-          <Brand src={brandImg} alt="Patternfly Logo"/>
-        </Link>}
-        topNav={PageNav}
-      />
-    );
+
     return (<StaticQuery query={graphql`
       query SiteTitleQuery {
         site {
@@ -75,8 +32,58 @@ class Layout extends React.Component {
             title
           }
         }
+        allMainNavigationJson {
+          edges {
+            node {
+              text
+              path
+            }
+          }
+        }
       }
-    `} render={data => canUseDOM && <>
+    `} render={data => {
+      const PageNav = (
+        <Location>
+          {({ location }) => {
+            // console.log(location);
+            const currentPath = location.pathname;
+            return (
+              <Nav aria-label="Nav">
+                <NavList variant={NavVariants.horizontal}>
+                  {data.allMainNavigationJson.edges.map(item => {
+                    const { node } = item;
+                    const startPath = `/${node.path.split('/')[1]}/`;
+                    return (
+                      <NavItem key={node.path} isActive={currentPath.indexOf(startPath) > -1}>
+                        <Link to={node.path}>{node.text}</Link>
+                      </NavItem>
+                    )
+                  })}
+                </NavList>
+              </Nav>
+            );
+          }}
+        </Location>
+      );
+      const bgImages = {
+        [BackgroundImageSrc.lg]: withPrefix('/img/pfbg_1200.jpg'),
+        [BackgroundImageSrc.sm]: withPrefix('/img/pfbg_768.jpg'),
+        [BackgroundImageSrc.sm2x]: withPrefix('/img/pfbg_768@2x.jpg'),
+        [BackgroundImageSrc.xl]: withPrefix('/img/pfbg_2000.jpg'),
+        [BackgroundImageSrc.filter]: withPrefix('/img/background-filter.svg#image_overlay')
+      };
+      const SiteHeader = (
+        <PageHeader
+          showNavToggle={sideNav !== null}
+          logo={<Link to="/">
+            <Brand src={brandImg} alt="Patternfly Logo"/>
+          </Link>}
+          topNav={PageNav}
+        />
+      );
+
+      return canUseDOM && 
+      <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <BackgroundImage src={bgImages} />
         <Page isManagedSidebar={sideNav !== null} header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} /> : null}>
@@ -85,7 +92,8 @@ class Layout extends React.Component {
           </PageSection>}
           {this.props.children}
         </Page>
-      </>} />);
+      </>
+      }} />);
   }
 
 }

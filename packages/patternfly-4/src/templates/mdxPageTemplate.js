@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { StaticQuery, graphql, Link } from "gatsby";
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import {
@@ -20,6 +20,12 @@ const navBuilder = navData => {
       {({ location }) => {
         // console.log(location);
         const currentPath = location.pathname;
+        const { allGetStartedNavigationJson, allDesignGuidelinesNavigationJson } = navData;
+        if (currentPath.indexOf('/get-started') > -1 ) {
+          navData = allGetStartedNavigationJson.edges;
+        } else if (currentPath.indexOf('/design-guidelines') > -1 ) {
+          navData = allDesignGuidelinesNavigationJson.edges;
+        }
         return (
           <Nav aria-label="Nav">
             <NavList>
@@ -56,24 +62,9 @@ const navBuilder = navData => {
   );
 };
 
-export default function MarkdownPageTemplate({
-  data // this prop will be injected by the GraphQL query below.
-}) {
-  let SideNav;
-  let content;
-  const { markdownRemark, allGetStartedNavigationJson, allDesignGuidelinesNavigationJson } = data;// data.markdownRemark holds our post data
-    const { frontmatter, html } = markdownRemark;
-
-    if (frontmatter.path.indexOf('/get-started') > -1 ) {
-      SideNav = navBuilder(allGetStartedNavigationJson.edges);
-    } else if (frontmatter.path.indexOf('/design-guidelines') > -1 ) {
-      SideNav = navBuilder(allDesignGuidelinesNavigationJson.edges);
-    }
-
-    content = <div
-      className="markdown-body"
-      dangerouslySetInnerHTML={{ __html: html }}
-    />;
+const MdxPageTemplate = ({ data, children, props }) => {
+  const SideNav = navBuilder(data);
+  const content = <div className="markdown-body">{children}</div>;
   return (
     <Layout sideNav={SideNav}>
       <SEO title="Docs" keywords={['gatsby', 'application', 'react']} />
@@ -81,36 +72,35 @@ export default function MarkdownPageTemplate({
         <PatternFlyThemeProvider>{content}</PatternFlyThemeProvider>
       </PageSection>
     </Layout>
-  )
-}
+  );
+};
 
-export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        path
-      }
-    }
-    allGetStartedNavigationJson {
-      edges {
-        node {
-          text
-          path
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query MdxPageTemplateQuery {
+        allGetStartedNavigationJson {
+          edges {
+            node {
+              text
+              path
+            }
+          }
         }
-      }
-    }
-    allDesignGuidelinesNavigationJson {
-      edges {
-        node {
-          text
-          path
-          subNav {
-            text
-            path
+        allDesignGuidelinesNavigationJson {
+          edges {
+            node {
+              text
+              path
+              subNav {
+                text
+                path
+              }
+            }
           }
         }
       }
-    }
-  }
-`
+    `}
+    render={data => <MdxPageTemplate data={data} {...props} />}
+  />
+);

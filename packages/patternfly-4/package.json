@@ -56,6 +56,7 @@
     "gatsby-remark-autolink-headers": "2.0.14",
     "gatsby-remark-images": "3.0.4",
     "gatsby-source-filesystem": "2.0.20",
+    "gatsby-transformer-json": "^2.1.8",
     "gatsby-transformer-react-docgen": "3.0.2",
     "gatsby-transformer-remark": "2.2.5",
     "gatsby-transformer-sharp": "2.1.13",
