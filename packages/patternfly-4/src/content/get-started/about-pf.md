@@ -37,7 +37,7 @@ You can customize PatternFly for your project using the CSS variable system, whi
 Global variables define and enforce style elements (like global values for color, spacing, and font size) across the entire system.  
 
 **Component variables**
-Component variables are used for define custom properties at the component level. Component variables are always defined by global variables.
+Component variables are used to define custom properties at the component level. Component variables are always defined by global variables.
 
 [Learn more and view CSS variables](/documentation/react/css-variables/)
 

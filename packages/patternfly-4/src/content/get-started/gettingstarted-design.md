@@ -25,6 +25,7 @@ What does a toolbar look like? What about a filter chip? Components are the buil
 ### Still feeling unsure? See all the pieces working together with demos.
 What does it look like when you combine all the ingredients? Demos provide examples of a few common ways you might combine layouts and components to give you an idea what’s possible.
 
+[View HTML/CSS demos](/documentation/core) | [View React demos](/documentation/react)
 <!-- **WIP - still need to gather details on how this will work**
 
 ### Download and install the PatterFly 4 design kit
