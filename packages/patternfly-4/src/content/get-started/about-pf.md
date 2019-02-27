@@ -2,41 +2,53 @@
 path: "/get-started/about"
 ---
 # About PatternFly 4
-PatternFly is an open source design system that was created to enable consistency and usability across a wide range of applications and use cases. PatternFly provides clear standards, guidance, and tools to help designers and developers work together more efficiently to build better products and user experiences.
+PatternFly is an open source design system created to enable consistency and usability across a wide range of applications and use cases. PatternFly provides clear standards, guidance, and tools that help designers and developers work together more efficiently and build better user experiences.
 
 ## Basic structure
-PatterFly 4 is separated into isolated and modular structures that fall into two categories: layouts and components.
-
-### Layouts
-Layouts are generic tools that allow you to structure and organize the content on your pages.
-[View layouts](URL)
 
 ### Components
 Components, like buttons and alerts, can be assembled together to build applications.
-[View Core components](/documentation/core/) | [View React components](/documentation/react/)
 
-## Style and design
+### Layouts
+Layouts are generic tools that allow you to structure and organize the content on your pages.
+
+### Demos
+Demos use components and layouts in combination to show you how to build more complex structures and application views.
+
+[View components, layouts, and demos in HTML/CSS](/documentation/core) | [View components, layouts, and demos in React](/documentation/react)
+
+## Design guidelines
 ### Styles
-Styles define foundational elements of the design system like color, typography, and spacing.
+Style guidelines define foundational elements of the design system, like color, typography, and spacing.
 
-### Design guidelines
-PatternFly design guidelines communicate design standards and best practices for common patterns like navigation, dashboards, or forms.
+### Usage and behavior
+Usage and behavior guidelines communicate standards and best practices for common design patterns like navigation, dashboards, or forms.
+
+### Content
+Content guidelines provide principles and best practices around writing for user experience along with general voice and style guidance.
+
+[View Styles](/design-guidelines/styles/icons)
 
 ## Additional tools
-### Demos
-Demos demonstrate (see what we did there?) how components and layouts can be combined to build more complex structures like dashboards.
-[View Core demos](URL) | [View React demos](URL)
+### CSS variables
+You can customize PatternFly for your project using the CSS variable system, which enables you to change style elements like color across your project. The CSS variable system is a two-layer theming system where global variables inform component variables.
+
+**Global variables**
+Global variables define and enforce style elements (like global values for color, spacing, and font size) across the entire system.  
+
+**Component variables**
+Component variables are used to define custom properties at the component level. Component variables are always defined by global variables.
+
+[Learn more and view CSS variables](/documentation/react/css-variables/)
 
 ### Utilities
-Since PatternFly 4 is made up of isolated components that don't allow dependencies, the use of helpers is discouraged.
-
-However, you might run into a situation where you need custom styling. Utilities are a set of classes that enable you to customize and modify elements in your project without having to write any custom CSS.
+Utilities are a set of classes that enable you to further customize and modify elements in your project without having to write any custom CSS.
 
 For example, you might use a utility class to add additional spacing between elements, align content in a layout, or even add a box shadow to an element.
-[View utilities](URL)
 
-### Variables
-You can further customize PatternFly using the CSS variable system, which enables you to easily change things like color or shape without overwriting existing PatternFly styles. <Learn more about customizing with the variable system.>
+[View utilities](/documentation/core/utilities/accessibility)
+
+
 
 <!-- This section is WIP ** we need to wait to see how this content gets included **
 
@@ -47,5 +59,3 @@ For example, our code is written like pf-c-alert
 alert
 So if you had …
 Include an example -->
-
-Interested in contributing? Visit our [Contributions page](URL) to learn more.
