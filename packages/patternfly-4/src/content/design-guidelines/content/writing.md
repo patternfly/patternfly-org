@@ -5,21 +5,12 @@ path: "/design-guidelines/content/writing"
 
 ## What is writing for UX?
 ### And why is it important?
-The words we use in our products are just as important as the components or layouts. The right words can drive better design decisions and guide users to succeed. The wrong words can lead to confusion, failure, and frustration.
+The words we use in our products are just as important as the components or layouts. The right words can drive better design decisions and guide users to succeed.
 
-Our content standards will help you think strategically about your content choices and teach you how to use content design and strategy to build better experiences.
+Our content standards help you use content design and strategy to build better experiences.
 
 ## How does UX writing fit into my design process?
 Words can and should be factored in to every step in the design process. Simply put, ditch the lorem ipsum. Design with words.
-
-Include content design and strategy at the beginning of your design process. Why?
-* You’ll identify gaps in understanding.
-* You’ll identify usability issues earlier.
-* You’ll make better design decisions.
-
-Like all aspects of your design, content should be iterative and evolve with your project.
-
-Your content should match the fidelity of your sketches, wireframes, or mockups. What does that mean? Let’s take a look.
 
 **Discovery and sketching**
 It’s ok to be a bit vague in your early sketches, as long as you’re still using real words for:
@@ -29,9 +20,7 @@ It’s ok to be a bit vague in your early sketches, as long as you’re still us
 
 When you focus on these major content elements, you’re able to clarify the purpose of each screen and identify all of the main actions users are going to want or need to take.
 
-**Iteration and wireframing**
-Fill in the gaps. Determine the different pieces of content you need and then work with your team to create a first draft.
-
+**Low and mid-fidelity wireframes**
 Replace any remaining placeholder text with real words. You’ll get better feedback from your team, stakeholders, and user test participants.
 
 During this stage, it's also useful to pull all content out of the wireframes and catalog it using a spreadsheet or doc. This step is especially important when you are working with a larger team and content is reviewed and collaborated on by multiple people.
@@ -50,23 +39,23 @@ If you design with real content from the beginning, by the time you create high 
 
 Now, you can work across teams to fine-tune your copy and align your words with voice and tone standards.
 
-## General UX writing principles
+## Tips - writing effectively for UX
 A small change in thinking can make a big impact. Focus on these general principles when you’re making content decisions.
 
-* Audience
-* Task
-* Context
+* Know your audience
+* Focus on their tasks and goals
+* Understand the context
 
-### Audience: Who is my user?
-Take the time to get to know your user so you can answer questions like these:
+### Know your audience
+Before you start, take minute to understand who you're writing for.
 
-* What terminology or jargon is my user familiar with?
-* What products or standards are they working with now?
-* How do they talk about their work?
-* What are my their main goals and tasks?
-* What type of content are they seeing in the interfaces they use every day?
+* Who is reading this?
+* What do they care about?
+* What messages do I want to communicate to them?
+* What do they want to do? What am I trying to help them do?
+* What are they seeing in the interfaces they already use every day?
 
-Without this insight, content could feel confusing or even incorrect to your audience, which can erode trust no matter how well everything else is working.
+Without this insight, content can feel confusing or even incorrect to your audience.
 
 **Strategies to try**
 Create user personas (or use the ones your team already has) and reference them as you work. If your team is in the process of gathering information about users, get involved!
@@ -77,7 +66,7 @@ Create user personas (or use the ones your team already has) and reference them 
 
 The more familiar you are with your user and their domain, the more natural the language in your interface will feel.
 
-### Task: What is my user trying to do?
+### Focus on tasks and goals
 A task is more than just an end-goal; it’s every step your user needs to take to get from beginning to end. Understand the entire user journey to provide the right information in the right place at the right time.
 
 **Strategies to try**
@@ -87,23 +76,7 @@ Frame each task as a conversation. Imagine you are sitting in a room with your u
 * It helps you anticipate information you need to collect from you user.
 * It identifies gaps in your knowledge or understanding.
 
-You don’t have to do this exercise on your own! It can be helpful to engage other disciplines like product management, engineering, and support to align understanding and get everyone on the same page.
-
-Take a look at this simple example:
-
->**User:** Hi! I need to create a new project.
-**Me:** Great. Is this your first time using our service or have you been here before?
-**User:** My first time.
-**Me:** Ok, first you’ll need to create an account. You’ll choose a username and a password. Your password has to be between 8 and 10 characters and contain at least one uppercase letter.
-**User:** Ok! What now?
-**Me:** Once you’ve submitted your request for the new account, you’ll need to verify your email address.
-**User:** Which email address?
-**Me:** The one you used to create your account.
-…
-
-You can see how even very simple tasks can surface a variety of paths and questions. When you identify those paths and questions up front, it's easier to anticipate and provide the right information for you user in the right place.
-
-### Context: Where are my users coming from?
+### Understand the context: Where are my users coming from?
 Users carry around a lot of baggage. Now that you’ve got a great understanding of who your user is and where they’re trying to go, it’s time to figure out where they’re coming from...
 
 **Literally** - Take a look at the application or feature you’re building and figure out the potential paths your user could have taken to arrive in this spot. Are they coming from a Google search? Another page in the application? An email?
@@ -123,4 +96,4 @@ Use that context to choose the right terminology and prioritize your content.
 Use this context to make good choices about your tone. For example, a stressful error scenario is probably not a good time to make a joke.
 
 ## What's next?
-Now that you have an idea of what UX writing is, how it fits into your process, and how to get started, use the [voice and tone standards](grammarandterminology.md) to learn more about how to use the right words in the right context.
+Now that you have an idea of what UX writing is, how it fits into your process, and how to get started, use the [voice standards](voiceandtone.md) to learn more about how to use the right words in the right context.
