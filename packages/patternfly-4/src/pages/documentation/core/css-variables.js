@@ -11,7 +11,7 @@ const CoreTokens = () => (
     <SEO title="Global CSS Variables" />
     <PageSection variant={PageSectionVariants.light}>
       <Section title="Global CSS Variables" size="3xl" headingLevel="h1">
-        <Tokens sideNav={<SideNav />} />
+        <Tokens sideNav={<SideNav />} variables="pf-global" />
       </Section>
     </PageSection>
   </Layout>

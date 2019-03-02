@@ -30,6 +30,7 @@ const propTypes = {
   ),
   components: PropTypes.objectOf(PropTypes.func),
   enumValues: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.any)),
+  variablesRoot: PropTypes.oneOf(PropTypes.string, PropTypes.array),
   rawExamples: PropTypes.array,
   images: PropTypes.array,
   fullPageOnly: PropTypes.bool
@@ -40,6 +41,7 @@ const defaultProps = {
   examples: [],
   components: {},
   enumValues: {},
+  variablesRoot: null,
   rawExamples: [],
   images: [],
   fullPageOnly: false
@@ -47,8 +49,7 @@ const defaultProps = {
 
 class Documentation extends React.PureComponent {
   render() {
-    const { data, title, description, examples, components, enumValues, fullPageOnly, rawExamples, images } = this.props;
-    debugger;
+    const { data, title, description, examples, components, enumValues, variablesRoot, fullPageOnly, rawExamples, images } = this.props;
     const makeDescription = html => ({ __html: html });
     const getDocGenInfo = name => data.allComponentMetadata.edges.find(edge => edge.node.displayName === name);
     return (
@@ -122,11 +123,12 @@ class Documentation extends React.PureComponent {
                   return null;
                 })}
               </PageSection>
-              {/* <PageSection variant={PageSectionVariants.light}>
-                <Section title="CSS Variables" headingLevel="h2">
-                  <Tokens component="--pf-c-about-modal-box" />
+              {variablesRoot && <PageSection variant={PageSectionVariants.light}>
+                <Section title="Local CSS Variables" headingLevel="h2">
+                  <Tokens variables={variablesRoot} />
+                  {/* {variables.map(variable => <Tokens component={`--${variable}`} />)} */}
                 </Section>
-              </PageSection> */}
+              </PageSection>}
             </Layout>
           )
         }}

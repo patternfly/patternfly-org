@@ -6,11 +6,11 @@ import * as tokensModule from '@patternfly/react-tokens';
 import { StyleSheet, css } from '@patternfly/react-styles';
 
 const propTypes = {
-  component: PropTypes.string
+  variables: PropTypes.oneOf(PropTypes.string, PropTypes.array)
 };
 
 const defaultProps = {
-  component: ''
+  variables: null
 };
 
 const styles = StyleSheet.create({
@@ -43,11 +43,43 @@ class Tokens extends React.Component {
   constructor(props) {
     super(props);
     const dataRows = [];
+    // let allVariables = {};
+    // Object.entries(tokensModule).map(([key, token]) => {
+    //   const shortName = token.name.split('--')[1].split('__')[0];
+    //   if (!allVariables[shortName]) {
+    //     allVariables[shortName] = [];
+    //   }
+    //   allVariables[shortName].push(tokensModule[key]);
+    // }, []);
+
+    // const regex = new RegExp(`^--pf-(c|l)-${props.component}(--|__)`, 'g');
+    // const match = regex.test(token.name);
+    // if (!match) {
+    //   return;
+    // }
     Object.entries(tokensModule).map(([key, token]) => {
-      const filter = props.component || 'global_';
-      // const filter = props.component;
       if (!token.name || !token.value) {
         return;
+      }
+      if (props.variables) {
+        let variablesArray;
+        if (typeof props.variables === 'string') {
+          variablesArray = [props.variables];
+        } else {
+          variablesArray = props.variables;
+        }
+        let tokenMatch = false;
+        for (let i = 0; i < variablesArray.length; i++) {
+          const regex = new RegExp(`^--${variablesArray[i]}(--|__)`, 'g');
+          const match = regex.test(token.name);
+          if (match) {
+            tokenMatch = true;
+            break;
+          }
+        }
+        if (!tokenMatch) {
+          return;
+        }
       }
       dataRows.push([
         key, 

@@ -10,6 +10,8 @@ const pascalCase = require('pascal-case');
 const paramCase = require('param-case');
 const inflection = require('inflection');
 const glob = require('glob');
+const findInFiles = require('find-in-files');
+// const styleFinder = require('./scripts/find-react-styles');
 
 // Map to handlebars partial files for Core
 let partialsToLocationsMap = null;
@@ -226,25 +228,6 @@ const continueWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) 
   actions.setWebpackConfig({
     module: {
       rules: [
-        // {
-        //   test: pfStylesTest,
-        //   use: [{ loader: 'babel-loader' }, { loader: require.resolve('@patternfly/react-styles/loader') }]
-        // },
-        // {
-        //   test: /\.css$/,
-        //   use: [loaders.miniCssExtract(), loaders.css({ sourceMap: false, singleton: true })],
-        //   exclude: pfStylesTest
-        // },
-        // {
-        //   test: /\.scss$/,
-        //   use: [{
-        //       loader: "style-loader" // creates style nodes from JS strings
-        //   }, {
-        //       loader: "css-loader" // translates CSS into CommonJS
-        //   }, {
-        //       loader: "sass-loader" // compiles Sass to CSS, using Node Sass by default
-        //   }]
-        // },
         {
           test: /\.md$/,
           loader: 'html-loader!markdown-loader'
@@ -272,13 +255,7 @@ const continueWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) 
         '@components': path.resolve(__dirname, './_repos/core/src/patternfly/components'),
         '@layouts': path.resolve(__dirname, './_repos/core/src/patternfly/layouts'),
         '@demos': path.resolve(__dirname, './_repos/core/src/patternfly/demos'),
-        '@project': path.resolve(__dirname, './_repos/core/src'),
-        // '@patternfly/react-table': path.resolve(__dirname, './_repos/react-table/src'),
-        // '@patternfly/react-charts': path.resolve(__dirname, './_repos/react-charts/src'),
-        // '@patternfly/react-core': path.resolve(__dirname, './_repos/react-core/src'),
-        // '@patternfly/react-styles': path.resolve(__dirname, './_repos/react-styles/src'),
-        // '@patternfly/react-styled-system': path.resolve(__dirname, './_repos/react-styled-system/src'),
-        // '@patternfly/patternfly-next': path.resolve(__dirname, './_repos/core/src/patternfly')
+        '@project': path.resolve(__dirname, './_repos/core/src')
       }
     },
     resolveLoader: {
@@ -304,135 +281,3 @@ const continueWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) 
 
   actions.replaceWebpackConfig(configAfter);
 };
-
-// const coreOnCreatePage = async ({ page, actions }) => {
-//   const { createPage } = actions;
-//   const CATEGORY_PAGE_REGEX = /^\/(components|layouts|demos|utilities)\/$/;
-//   const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|layouts|demos|utilities)\/([A-Za-z0-9_-]+)/;
-//   const UPGRADES_PAGE_REGEX = /^\/(upgrade-examples)\/([A-Za-z0-9_-]+)/;
-//   return new Promise((resolve, reject) => {
-//     const isCategoryPage = page.path.match(CATEGORY_PAGE_REGEX);
-//     const isCategoryChildPage = page.path.match(CATEGORY_CHILD_PAGE_REGEX);
-//     const isUpgradePage = page.path.match(UPGRADES_PAGE_REGEX);
-
-//     page.context.type = 'page';
-//     page.context.category = 'page';
-//     page.context.slug = '';
-//     page.context.name = '';
-//     page.context.title = '';
-//     page.layout = 'index';
-
-//     if (isCategoryPage) {
-//       page.context.type = 'category';
-//       page.context.category = page.path.match(CATEGORY_PAGE_REGEX)[1];
-//       page.path = `/docs/core${page.path}`;
-//     } else if (isCategoryChildPage) {
-//       const pageCategory = page.path.match(CATEGORY_CHILD_PAGE_REGEX)[1];
-//       const pageSlug = page.path.match(CATEGORY_CHILD_PAGE_REGEX)[2];
-//       const pageName = pageSlug.replace('-', ' ');
-//       const pageTitle = inflection.titleize(pageName);
-//       page.path = `/docs/core${page.path}`;
-//       page.context.type = inflection.singularize(pageCategory);
-//       page.context.category = pageCategory;
-//       page.context.slug = pageSlug;
-//       page.context.name = pageName;
-//       page.context.title = pageTitle;
-//     } else if (isUpgradePage) {
-//       const pageCategory = 'upgrade';
-//       const pageSlug = page.path.match(UPGRADES_PAGE_REGEX)[2];
-//       const pageName = pageSlug.replace('-', ' ');
-//       const pageTitle = inflection.titleize(pageName);
-//       page.path = `/docs/core${page.path}`;
-//       page.context.type = inflection.singularize(pageCategory);
-//       page.context.category = pageCategory;
-//       page.context.slug = pageSlug;
-//       page.context.name = pageName;
-//       page.context.title = pageTitle;
-//       page.layout = 'upgrade';
-//     }
-//     console.log(`creating page: ${page.path}`);
-//     createPage(page);
-
-//     if (isCategoryChildPage || isUpgradePage) {
-//       // create full demo page for each component
-//       const demoPage = Object.assign({}, page);
-//       demoPage.layout = 'demo';
-//       const nodePath = demoPage.path;
-//       demoPage.path = `/docs/core${nodePath.substr(0, nodePath.length - 1)}-full/`;
-//       console.log(`creating full page: ${demoPage.path}`);
-//       createPage(demoPage);
-//     }
-//     resolve();
-//   });
-// };
-
-////////// EXPERIMENTAL TYPESCRIPT CODE BELOW - TRYING TO PARSE TSX TO DOCGEN //////////
-
-// exports.resolvableExtensions = () => {
-//   return [`.js`, `.jsx`, `.ts`, `.tsx`]
-// };
-
-// const { transpileModule } = require(`typescript`)
-
-// const test = /\.tsx?$/
-// const compilerDefaults = {
-//   target: `esnext`,
-//   experimentalDecorators: true,
-//   jsx: `react`,
-//   module: `es6`,
-// }
-
-// exports.onCreateWebpackConfig = (
-//   { stage, plugins, actions, loaders },
-//   { compilerOptions, ...options }
-// ) => {
-//   const typescriptOptions = {
-//     transpileOnly: false,
-//     compilerOptions: {
-//       ...compilerDefaults,
-//       ...compilerOptions,
-//     },
-//   }
-//   actions.setWebpackConfig({
-//     module: {
-//       rules: [
-//         {
-//           test,
-//           use: [
-//             loaders.js(),
-//             {
-//               loader: require.resolve(`ts-loader`),
-//               options: typescriptOptions,
-//             },
-//           ],
-//         },
-//       ],
-//     },
-//   });
-//   switch (stage) {
-//     case 'build-javascript': {
-//       actions.setWebpackConfig({
-//         optimization: {
-//           minimizer: [
-//             plugins.minifyJs({
-//               terserOptions: {
-//                 keep_classnames: true,
-//                 keep_fnames: true
-//               }
-//             }),
-//             plugins.minifyCss()
-//           ]
-//         } // optimization
-//       })
-//     }
-//   }
-// }
-
-// exports.preprocessSource = ({ contents, filename }, { compilerOptions }) => {
-//   const copts = { ...compilerDefaults, ...compilerOptions }
-
-//   // return the transpiled source if it's TypeScript, otherwise null
-//   return test.test(filename)
-//     ? transpileModule(contents, { compilerOptions: copts }).outputText
-//     : null
-// }
