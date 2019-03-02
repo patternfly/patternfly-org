@@ -1,19 +1,15 @@
 ---
 path: "/get-started/developers"
 ---
-# Getting started for developers
-To get acquainted with the basics of the PatternFly 4 design system, check out the overview at [About PatternFly 4](URL).
-
-Explore the different layouts, components, and utilities available to ensure that the system provides all the elements that you need for your project.
-
-Not seeing what you need? You can always [become a contributor](URL) and help us expand the design system.
+# Develop with PatternFly
+Before you begin, check out [About PatternFly 4](/get-started/about) to get acquainted with the basic elements of the design system.
 
 Get started with:
-* [Core HTML/CSS](#core)
+* [HTML/CSS](#html/css)
 * [React](#react)
 
-## Core
-The Core library provides a collection of HTML and CSS code samples you can use to build interfaces with consistent PatternFly markup and styling.
+## HTML/CSS
+The HTML/CSS library provides a collection of code samples you can use to build interfaces with consistent PatternFly markup and styling.
 
 ### Before you begin
 **Install NPM**
@@ -24,7 +20,6 @@ Using npm, run the following commands to install:
 ```
 npm install @patternfly/patternfly-next
 ```
-
 
 **What’s included?**
 Each of the three modules (layouts, components, and utilities) delivers a sass file (.scss) and CSS file, so you can include them in your build environment or consume the CSS from your page header.
@@ -94,7 +89,7 @@ PatternFly 4 uses the Overpass font family. Overpass can be utilized in two diff
   ```
 
 **Icons**
-PatternFly 4 uses Font Awesome 5.Font Awesome 5 can be utilized in two different ways:
+PatternFly 4 uses Font Awesome 5. Font Awesome 5 can be utilized in two different ways:
 
   Built into PatternFly 4
   By default, Overpass is included as part of the PatternFly 4 distributed CSS file. You do not need to do anything with your configuration to use this font family.
@@ -108,23 +103,16 @@ PatternFly 4 uses Font Awesome 5.Font Awesome 5 can be utilized in two different
   $pf-global--enable-fontawesome-cdn: true !default;
   ```
 
-<!-- **This section is a WIP - not included for beta** Customizing PatternFly for your project
-The PatternFly 4 variable system enables you to easily customize things like color or shape without overwriting existing PatternFly styles.
+### Customizing PatternFly for your project
+The CSS variable system enables you to easily customize things like color or shape without overwriting existing PatternFly styles.
 
-Using variables
-https://pf-next.com/guidelines
+[Learn more and view CSS variables.](/documentation/react/css-variables/)
 
-Imagine you want to change color of a button
-Example
-Link to advanced docs.
-
-PF class structure is scoped so you can use PF4 with another design system
+<!-- PF class structure is scoped so you can use PF4 with another design system
 Use PF3 and 4 at the same time
 All the CSS classes
 Using bootstrap, for example, bootstrap will not inadvertently style our elements, scoped = name uniquely to pf
 -->
-
-Interested in contributing? Visit our [Contributions page](URL) to learn more.
 
 ## React
 
@@ -154,6 +142,13 @@ Using npm, run the following commands to install:
 npm install @patternfly/react-core --save
 ```
 
+**OR**
+
+Using yarn, run the following commands to install:
+```
+yarn add @patternfly/react-core
+```
+
 **If you’re using webpack...**
 Check out the following files for example configurations:
 * [webpack.common.js](https://github.com/patternfly/patternfly-react-seed/blob/master/webpack.common.js)
@@ -168,10 +163,4 @@ See [babel.config.js](https://github.com/patternfly/patternfly-react-seed/blob/m
 **If you’re using typescript...**
 See [typescript.example.js](URL) for an example configuration. -->
 
-<!--
-**This section is a WIP. We need to create the hello world tutorial.**
-
-Importing and using components
-Follow this quick Hello World tutorial to learn how to import and use PatternFly React components in your project.
-
--->
+<!--### Importing and using components -->
