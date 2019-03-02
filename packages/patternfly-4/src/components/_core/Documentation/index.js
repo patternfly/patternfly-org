@@ -58,7 +58,7 @@ export default class Documentation extends React.Component {
               </Section>
             </PageSection>
             {variablesRoot && <PageSection variant={PageSectionVariants.light}>
-              <Section title="Local CSS Variables" headingLevel="h2">
+              <Section title="CSS Variables" headingLevel="h2">
                 <Tokens variables={variablesRoot} />
               </Section>
             </PageSection>}

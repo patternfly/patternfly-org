@@ -5,10 +5,10 @@
   "author": "Red Hat",
   "scripts": {
     "build:babel": "cross-env babel _repos/react-core/src --out-dir dist/esm --extensions \".js,jsx,.ts,.tsx\"",
-    "build:4k": "node --max_old_space_size=4096 ./node_modules/.bin/gatsby build",
-    "build": "gatsby build",
-    "build:prefix": "gatsby build --prefix-paths",
-    "develop": "gatsby develop",
+    "build:4k": "yarn gen-ts-docs && node --max_old_space_size=4096 ./node_modules/.bin/gatsby build",
+    "build": "yarn gen-ts-docs && gatsby build",
+    "build:prefix": "yarn gen-ts-docs && gatsby build --prefix-paths",
+    "develop": "yarn gen-ts-docs && gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,7 +16,8 @@
     "repos": "yarn clean && yarn patternfly-next && yarn patternfly-react && yarn patternfly-styles",
     "patternfly-next": "node ./scripts/patternfly-next.js",
     "patternfly-react": "node ./scripts/patternfly-react.js",
-    "patternfly-styles": "node ./scripts/copyStyles.js"
+    "patternfly-styles": "node ./scripts/copyStyles.js",
+    "gen-ts-docs": "typedoc --json ts-docs/ts-output.json ./_repos/react-core/src --ignoreCompilerErrors --mode file --tsconfig ./_repos/react-core/src/tsconfig.dts.json && node scripts/transformTsDocs.js"
   },
   "dependencies": {
     "@emotion/core": "^10.0.7",
@@ -105,7 +106,8 @@
     "babel-plugin-transform-imports": "1.5.0",
     "babel-plugin-typescript-to-proptypes": "0.13.0",
     "cross-env": "5.1.4",
-    "prettier": "1.15.3"
+    "prettier": "1.15.3",
+    "typedoc": "^0.14.2"
   },
   "repository": {
     "type": "git",

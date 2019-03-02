@@ -6,6 +6,7 @@ import { css } from '@patternfly/react-styles';
 import Example from '../../example';
 import { Title, PageSection, PageSectionVariants } from '@patternfly/react-core';
 import PropsTable from '../propsTable';
+import PropsTableTs from '../propsTableTs';
 import Section from '../../section';
 import Layout from '../../layout';
 import { Location } from '@reach/router';
@@ -30,7 +31,7 @@ const propTypes = {
   ),
   components: PropTypes.objectOf(PropTypes.func),
   enumValues: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.any)),
-  variablesRoot: PropTypes.oneOf(PropTypes.string, PropTypes.array),
+  variablesRoot: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
   rawExamples: PropTypes.array,
   images: PropTypes.array,
   fullPageOnly: PropTypes.bool
@@ -52,6 +53,7 @@ class Documentation extends React.PureComponent {
     const { data, title, description, examples, components, enumValues, variablesRoot, fullPageOnly, rawExamples, images } = this.props;
     const makeDescription = html => ({ __html: html });
     const getDocGenInfo = name => data.allComponentMetadata.edges.find(edge => edge.node.displayName === name);
+    const getDocGenInfoTs = name => data.allTsDocsJson.edges[0].node.data.find(edge => edge.name === `${name}Props`);
     return (
       <Location>
         {({ location }) => {
@@ -108,25 +110,31 @@ class Documentation extends React.PureComponent {
                 {Object.entries(components).map(([componentName]) => {
                   // Loop through the components and find the docGen info for each one
                   // Only generate docs for props for javascript code.
-                  const componentDocs = getDocGenInfo(componentName);
-                  if (componentDocs) {
+                  const componentDocsJs = getDocGenInfo(componentName);
+                  if (componentDocsJs) {
                     return (
                       <PropsTable
                         key={componentName}
                         name={componentName}
-                        description={componentDocs.node.description}
-                        props={componentDocs.node.props}
+                        description={componentDocsJs.node.description}
+                        props={componentDocsJs.node.props}
                         enumValues={enumValues}
                       />
                     );
+                  }
+                  let componentDocsTs;
+                  if (!componentDocsJs) {
+                    componentDocsTs = getDocGenInfoTs(componentName);
+                    if (componentDocsTs) {
+                      return <PropsTableTs key={componentName} name={componentName} props={componentDocsTs.children} />;
+                    }
                   }
                   return null;
                 })}
               </PageSection>
               {variablesRoot && <PageSection variant={PageSectionVariants.light}>
-                <Section title="Local CSS Variables" headingLevel="h2">
+                <Section title="CSS Variables" headingLevel="h2">
                   <Tokens variables={variablesRoot} />
-                  {/* {variables.map(variable => <Tokens component={`--${variable}`} />)} */}
                 </Section>
               </PageSection>}
             </Layout>
@@ -162,6 +170,31 @@ export default props => (
                   value
                 }
                 required
+              }
+            }
+          }
+        }
+        allTsDocsJson {
+          edges {
+            node {
+              id
+              name
+              kind
+              data {
+                name
+                children {
+                  name
+                  comment {
+                    shortText
+                  }
+                  type {
+                    type
+                    name
+                  }
+                  flags {
+                    isOptional
+                  }
+                }
               }
             }
           }

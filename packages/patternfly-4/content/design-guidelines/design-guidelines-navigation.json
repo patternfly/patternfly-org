@@ -38,6 +38,10 @@
         "path": "/design-guidelines/usage-and-behavior/lists-and-tables"
       }, 
       {
+        "text": "Login",
+        "path": "/design-guidelines/usage-and-behavior/login"
+      },
+      {
         "text": "Modal",
         "path": "/design-guidelines/usage-and-behavior/modal"
       }, 
