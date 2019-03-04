@@ -77,6 +77,13 @@ class SideNav extends React.Component {
 
     const filteredDemoRoutes = demoRoutes.filter(c => searchRE.test(c.label));
 
+    const isActiveTest = (currentPath, path) => {
+      const pathWithSlash = path.endsWith('/') ? path : `${path}/`;
+      const currentPathWithSlash = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
+
+      return currentPathWithSlash.endsWith(pathWithSlash);
+    }
+
     const SideNav = (
       <Location>
       {({ location }) => {
@@ -100,7 +107,7 @@ class SideNav extends React.Component {
                 {filteredComponentRoutes.map(item => (
                   <NavItem
                     key={item.to}
-                    isActive={currentPath.indexOf(item.to) > -1}
+                    isActive={isActiveTest(currentPath, item.to)}
                   >
                     <Link to={item.to}>
                       {item.label}
@@ -112,7 +119,7 @@ class SideNav extends React.Component {
                 {filteredLayoutRoutes.map(item => (
                   <NavItem
                     key={item.to}
-                    isActive={currentPath.indexOf(item.to) > -1}
+                    isActive={isActiveTest(currentPath, item.to)}
                   >
                     <Link to={item.to}>
                       {item.label}
@@ -124,7 +131,7 @@ class SideNav extends React.Component {
                 {filteredDemoRoutes.map(item => (
                   <NavItem
                     key={item.to}
-                    isActive={currentPath.indexOf(item.to) > -1}
+                    isActive={isActiveTest(currentPath, item.to)}
                   >
                     <Link to={item.to}>
                       {item.label}
@@ -132,8 +139,8 @@ class SideNav extends React.Component {
                   </NavItem>
                 ))}
               </NavExpandable>
-              <NavItem isActive={currentPath.indexOf('/documentation/react/css-variables/') > -1}>
-                <Link to="/documentation/react/css-variables/">CSS Variables</Link>
+              <NavItem isActive={currentPath.indexOf('/documentation/react/css-variables') > -1}>
+                <Link to="/documentation/react/css-variables/">Global CSS Variables</Link>
               </NavItem>
             </NavList>
           </Nav>

@@ -81,6 +81,8 @@ class CoreSideNav extends React.Component {
                 <NavExpandable title="Components" isExpanded={currentPath.indexOf('/components/') > -1 || (searchValue && filteredComponents.length > 0)} isActive={currentPath.indexOf(/components/) > -1}>
                   {filteredComponents.map(navItem => {
                     const { path, text } = navItem;
+                    const pathWithSlash = path.endsWith('/') ? path : `${path}/`;
+                    const currentPathWithSlash = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
                     const isFullPage = path.endsWith('-full');
                     if (isFullPage) {
                       return null;
@@ -88,7 +90,7 @@ class CoreSideNav extends React.Component {
                     return (
                     <NavItem
                       key={path}
-                      isActive={currentPath.indexOf(path) > -1}
+                      isActive={currentPathWithSlash.endsWith(pathWithSlash)}
                     >
                       <Link to={path}>
                         {text}
@@ -100,13 +102,15 @@ class CoreSideNav extends React.Component {
                 {filteredLayouts.map(navItem => {
                     const { path, text } = navItem;
                     const isFullPage = path.endsWith('-full');
+                    const pathWithSlash = path.endsWith('/') ? path : `${path}/`;
+                    const currentPathWithSlash = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
                     if (isFullPage) {
                       return null;
                     }
                     return (
                     <NavItem
                       key={path}
-                      isActive={currentPath.indexOf(path) > -1}
+                      isActive={currentPathWithSlash.endsWith(pathWithSlash)}
                     >
                       <Link to={path}>
                         {text}
@@ -118,13 +122,15 @@ class CoreSideNav extends React.Component {
                 {filteredUtilities.map(navItem => {
                     const { path, text } = navItem;
                     const isFullPage = path.endsWith('-full');
+                    const pathWithSlash = path.endsWith('/') ? path : `${path}/`;
+                    const currentPathWithSlash = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
                     if (isFullPage) {
                       return null;
                     }
                     return (
                     <NavItem
                       key={path}
-                      isActive={currentPath.indexOf(path) > -1}
+                      isActive={currentPathWithSlash.endsWith(pathWithSlash)}
                     >
                       <Link to={path}>
                         {text}
@@ -136,13 +142,15 @@ class CoreSideNav extends React.Component {
                 {filteredDemos.map(navItem => {
                     const { path, text } = navItem;
                     const isFullPage = path.endsWith('-full');
+                    const pathWithSlash = path.endsWith('/') ? path : `${path}/`;
+                    const currentPathWithSlash = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
                     if (isFullPage) {
                       return null;
                     }
                     return (
                       <NavItem
                         key={path}
-                        isActive={currentPath.indexOf(path) > -1}
+                        isActive={currentPathWithSlash.endsWith(pathWithSlash)}
                       >
                         <Link to={path}>
                           {text}
@@ -154,13 +162,15 @@ class CoreSideNav extends React.Component {
                 {filteredUpgradeExamples.map(navItem => {
                     const { path, text } = navItem;
                     const isFullPage = path.endsWith('-full');
+                    const pathWithSlash = path.endsWith('/') ? path : `${path}/`;
+                    const currentPathWithSlash = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
                     if (isFullPage) {
                       return null;
                     }
                     return (
                     <NavItem
                       key={path}
-                      isActive={currentPath.indexOf(path) > -1}
+                      isActive={currentPathWithSlash.endsWith(pathWithSlash)}
                     >
                       <Link to={path}>
                         {text}
@@ -168,8 +178,8 @@ class CoreSideNav extends React.Component {
                     </NavItem>
                   )})}
               </NavExpandable>
-              <NavItem isActive={currentPath.indexOf('/documentation/core/css-variables/') > -1}>
-                  <Link to="/documentation/core/css-variables/">CSS Variables</Link>
+              <NavItem isActive={currentPath.indexOf('/documentation/core/css-variables') > -1}>
+                  <Link to="/documentation/core/css-variables/">Global CSS Variables</Link>
                 </NavItem>
               </NavList>
             </Nav>
