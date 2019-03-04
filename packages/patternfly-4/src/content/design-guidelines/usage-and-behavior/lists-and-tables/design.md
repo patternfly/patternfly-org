@@ -77,7 +77,7 @@ Two variants are available for Data Tables.
 
 1. **[Toolbar:](../toolbar/design.md)** The toolbar sits above the list and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
 2. **Select all:** When present, selects all items in a table. If pagination is being used, this will only select items on the current page.
-3. **Column headers:** If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on one column at a time.
+3. **Column headers:** Headers should align with the content they contain. If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on one column at a time.
 4. **Select checkbox:** Select this row.
 5. **Global actions:** These actions apply to all selected items.
 6. **Inline actions:** These actions apply only to the current row/item.
