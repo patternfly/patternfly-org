@@ -7,6 +7,7 @@ import { Location } from '@reach/router';
 import Section from '../../section';
 import SEO from '../../seo';
 import './styles.scss';
+import Tokens from '../../css-variables';
 
 export default class Documentation extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ export default class Documentation extends React.Component {
   }
 
   render() {
-    const { children, className = '', docs = '', heading = '' } = this.props;
+    const { children, className = '', docs = '', heading = '', variablesRoot } = this.props;
     const HTML_DOCS = { __html: docs };
     return !this.state.isFull ? (
       <Location>
@@ -56,6 +57,11 @@ export default class Documentation extends React.Component {
                 <div className="Documentation Documentation__docsection" dangerouslySetInnerHTML={HTML_DOCS} />
               </Section>
             </PageSection>
+            {variablesRoot && <PageSection variant={PageSectionVariants.light}>
+              <Section title="CSS Variables" headingLevel="h2">
+                <Tokens variables={variablesRoot} />
+              </Section>
+            </PageSection>}
           </Layout>
         )
       }}

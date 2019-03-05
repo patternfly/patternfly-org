@@ -58,6 +58,7 @@ typings/
 .cache/
 public
 .tmp/
+ts-docs/
 
 # Mac files
 .DS_Store

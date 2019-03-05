@@ -24,6 +24,7 @@
 
 :root {
   --pf-global--BackgroundColor--100: #fff;
+  --pf-global--BackgroundColor--150: #f5f5f5;
   --pf-global--BackgroundColor--200: #fafafa;
   --pf-global--BackgroundColor--300: #ededed;
   --pf-global--BackgroundColor--light-100: #fff;
@@ -36,6 +37,7 @@
   --pf-global--Color--100: #282d33;
   --pf-global--Color--200: #72767b;
   --pf-global--Color--300: #393f44;
+  --pf-global--Color--400: #8b8d8f;
   --pf-global--Color--light-100: #fff;
   --pf-global--Color--light-200: #ededed;
   --pf-global--Color--dark-100: #282d33;
@@ -124,8 +126,8 @@
   --pf-global--icon--FontSize--md: 1.125rem;
   --pf-global--icon--FontSize--lg: 1.5rem;
   --pf-global--icon--FontSize--xl: 3.375rem;
-  --pf-global--FontFamily--sans-serif: “overpass”, overpass, “open sans”, -apple-system, blinkmacsystemfont, Segoe UI, roboto, Helvetica Neue, arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  --pf-global--FontFamily--monospace: “overpass-mono”, overpass-mono, SFMono-Regular, menlo, monaco, consolas, Liberation Mono, Courier New, monospace;
+  --pf-global--FontFamily--sans-serif: overpass, overpass, open sans, -apple-system, blinkmacsystemfont, Segoe UI, roboto, Helvetica Neue, arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --pf-global--FontFamily--monospace: overpass-mono, overpass-mono, SFMono-Regular, menlo, monaco, consolas, Liberation Mono, Courier New, monospace;
   --pf-global--FontSize--4xl: 2.25rem;
   --pf-global--FontSize--3xl: 1.75rem;
   --pf-global--FontSize--2xl: 1.5rem;
@@ -313,6 +315,7 @@
 }
 
 .pf-c-about-modal-box,
+.pf-c-accordion,
 .pf-c-alert,
 .pf-c-alert-group,
 .pf-c-app-launcher,
@@ -327,11 +330,13 @@
 .pf-c-check,
 .pf-c-chip,
 .pf-c-chip-group,
+.pf-c-clipboard-copy,
 .pf-c-content,
 .pf-c-context-selector,
 .pf-c-data-list,
 .pf-c-dropdown,
 .pf-c-empty-state,
+.pf-c-expandable,
 .pf-c-form,
 .pf-c-form-control,
 .pf-c-input-group,
@@ -348,6 +353,7 @@
 .pf-c-radio,
 .pf-c-select,
 .pf-c-switch,
+.pf-c-tab-content,
 .pf-c-table,
 .pf-c-tabs,
 .pf-c-title,
@@ -447,6 +453,7 @@ textarea {
   font-family: inherit;
   font-size: 100%;
   line-height: var(--pf-global--LineHeight--md);
+  color: var(--pf-global--Color--100);
 }
 
 img,
@@ -518,6 +525,13 @@ button::-moz-focus-inner,
   border-style: none;
 }
 
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
 .pf-t-dark.pf-m-transparent {
   background-color: transparent;
 }
@@ -552,6 +566,11 @@ button::-moz-focus-inner,
 
 .pf-t-light.pf-m-opaque-300 {
   background-color: #ededed;
+}
+
+html {
+  /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+readers do not read off random characters that represent icons */
 }
 
 @font-face {

@@ -62,18 +62,18 @@ export default function MarkdownPageTemplate({
   let SideNav;
   let content;
   const { markdownRemark, allGetStartedNavigationJson, allDesignGuidelinesNavigationJson } = data;// data.markdownRemark holds our post data
-    const { frontmatter, html } = markdownRemark;
+  const { frontmatter, html } = markdownRemark;
 
-    if (frontmatter.path.indexOf('/get-started') > -1 ) {
-      SideNav = navBuilder(allGetStartedNavigationJson.edges);
-    } else if (frontmatter.path.indexOf('/design-guidelines') > -1 ) {
-      SideNav = navBuilder(allDesignGuidelinesNavigationJson.edges);
-    }
+  if (frontmatter.path.indexOf('/get-started') > -1 ) {
+    SideNav = navBuilder(allGetStartedNavigationJson.edges);
+  } else if (frontmatter.path.indexOf('/design-guidelines') > -1 ) {
+    SideNav = navBuilder(allDesignGuidelinesNavigationJson.edges);
+  }
 
-    content = <div
-      className="markdown-body"
-      dangerouslySetInnerHTML={{ __html: html }}
-    />;
+  content = <div
+    className="markdown-body"
+    dangerouslySetInnerHTML={{ __html: html }}
+  />;
   return (
     <Layout sideNav={SideNav}>
       <SEO title="Docs" keywords={['gatsby', 'application', 'react']} />

@@ -2,7 +2,7 @@
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="check-all" aria-label="Select all rows"'}}{{/check-input}}
+        <input type="checkbox" name="check-all" aria-label="Select all rows">
       {{/table-td}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Contributor
@@ -30,7 +30,7 @@
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="checkrow1" aria-labelledby="name1"'}}{{/check-input}}
+        <input type="checkbox" name="checkrow1" aria-labelledby="name1">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor Name"}}
         <span id="name1">Andres Galant</span>
@@ -54,15 +54,14 @@
         <a href="#">Link 1</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='id="action1" aria-labelledby="name1 action1" aria-label="Actions"'}}
-          <i class="fas fa-ellipsis-v"></i>
-        {{/button}}
+        {{#> dropdown id="dropdown-kebab-right-aligned-8" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="checkrow2" aria-labelledby="name2"'}}{{/check-input}}
+        <input type="checkbox" name="checkrow2" aria-labelledby="name2">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor Name"}}
         <span id="name2">Jenny Haines</span>
@@ -86,15 +85,14 @@
         <a href="#">Link 2</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='id="action2" aria-labelledby="name2 action2" aria-label="Actions"'}}
-          <i class="fas fa-ellipsis-v"></i>
-        {{/button}}
+        {{#> dropdown id="dropdown-example-right-aligned-9" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        {{#> check-input check-input--attribute='type="checkbox" name="checkrow3" aria-labelledby="name3"'}}{{/check-input}}
+        <input type="checkbox" name="checkrow3" aria-labelledby="name3">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor Name"}}
         <span id="name3">Kyle Baker</span>
@@ -118,9 +116,8 @@
         <a href="#">Link 3</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> button button--modifier="pf-m-plain" button--attribute='id="action3" aria-labelledby="node3 action3" aria-label="Actions"'}}
-          <i class="fas fa-ellipsis-v"></i>
-        {{/button}}
+        {{#> dropdown id="dropdown-kebab-right-aligned-10" dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
