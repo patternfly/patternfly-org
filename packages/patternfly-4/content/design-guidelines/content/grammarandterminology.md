@@ -1,17 +1,14 @@
 ---
 path: "/design-guidelines/content/grammar-and-terminology"
 ---
-# Terminology, grammar, and mechanics
+# Style guide
 
-## Index
-
-1. [Common terminology](#common-terminology)
-1. [Abbreviations](#abbreviations)
-1. [Acronyms](#acronyms)
-1. [Capitalization](#capitalization)
-1. [Links](#links)
-1. [Punctuation](#punctuation)
-1. [Truncation](#truncation)
+[Common terminology](#common-terminology)
+[Abbreviations](#abbreviations)
+[Acronyms](#acronyms)
+[Capitalization](#capitalization)
+[Punctuation](#punctuation)
+[Truncation](#truncation)
 
 ## Common terminology
 
@@ -33,13 +30,13 @@ path: "/design-guidelines/content/grammar-and-terminology"
 
 ## Abbreviations
 
-### General Rules
+### General rules
 
 - Use abbreviations that users are familiar with, and write out uncommon abbreviations.
 - Abbreviate units of measurement.
 - Use abbreviations consistently.
 
-### Common Abbreviations
+### Common abbreviations
 
 | Abbreviation  | Usage |
 | ------------- | ----- |
@@ -63,7 +60,7 @@ When referring to time zones, use [http://www.timeanddate.com/time/zones/](http:
 
 ## Acronyms
 
-### General Rules
+### General rules
 
 - Use acronyms that users are familiar with, and write out uncommon acronyms.
 - Use acronyms consistently.
@@ -72,28 +69,24 @@ When referring to time zones, use [http://www.timeanddate.com/time/zones/](http:
 
 ### Sentence style
 Use sentence-style capitalization for all text elements, **except:**
-* Product Names
+* Product names and proper nouns
 
 Sentence style capitalizes only the first word of each sentence and proper nouns, like names.
 
-## Links
-
-### More Information Link
-
-As a user, I want to see a single link that directs me to a page or document with additional information to learn more about a particular subject or task. As the user is reading the sentence, they have the option to click on the more information link to view the additional information. This additional information could live within the same site or outside of the site.
+<!--## Links
 
 ### External links
 
 Links that direct users to an external site should be followed by the [fa-external-link](https://www.patternfly.org/styles/icons/) icon to indicate that they will be taken to a different site. When possible, external links should open in a new browser tab or window, depending on the user's browser preferences.
 
-### General Rules
+### General rules
 
 - The link should be included in a complete sentence. Use punctuation and sentence style capitalization.
 - Names or titles of a document or page should use headline style capitalization.
-- Links should should use link text styling to indicate that it is clickable. See an example of link text styling under Styles Samples on the [Typography](http://www.patternfly.org/styles/typography/) page.
+- Links should should use link text styling to indicate that it is clickable.
 - Some recommendations for wording include:
     - View [Document Link] for more information.
-    - View ‘X’ in [Document Link] for more information.
+    - View ‘X’ in [Document Link] for more information.-->
 
 ## Punctuation
 
