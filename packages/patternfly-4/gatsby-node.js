@@ -263,21 +263,33 @@ const continueWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) 
     }
   });
 
-  const configAfter = getConfig();
-  // configAfter.module.rules = configAfter.module.rules.filter(rule => rule.oneOf === undefined);
-  const minimizer = [
-    plugins.minifyJs({
-      terserOptions: {
-        // keep function names so that we can find the corresponding example components in src/components/componentDocs/componentDocs.js
-        keep_fnames: true
-      }
-    }),
-    plugins.minifyCss()
-  ];
-  if (!configAfter.optimization) {
-    configAfter.optimization = {};
+  if (stage === `build-javascript`) {
+    let config = getConfig();
+    config.optimization = {
+      runtimeChunk: {
+        name: `webpack-runtime`,
+      },
+      splitChunks: {
+        name: false,
+        cacheGroups: {
+          styles: {
+            name: `styles`,
+            // This should cover all our types of CSS.
+            test: /\.(css|scss|sass|less|styl)$/,
+            chunks: `all`,
+            enforce: true,
+          },
+        },
+      },
+      minimizer: [
+        plugins.minifyJs({
+          terserOptions: {
+            keep_fnames: true
+          }
+        }),
+        plugins.minifyCss(),
+      ].filter(Boolean),
+    }
+    actions.replaceWebpackConfig(config);
   }
-  configAfter.optimization.minimizer = minimizer;
-
-  actions.replaceWebpackConfig(configAfter);
 };
