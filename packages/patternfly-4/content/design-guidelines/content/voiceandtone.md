@@ -80,4 +80,4 @@ Consider how your content will be consumed by users with different needs.
   * Avoid unnecessary capitalization.
   * Avoid _leet speak_ that uses numbers or special characters in place of letters (like "a11y" for accessibility).
 
-Learn more about our approach to accessibility in our [Accessibility Guide](url).
+Learn more about our approach to accessibility in our [Accessibility guide](url).

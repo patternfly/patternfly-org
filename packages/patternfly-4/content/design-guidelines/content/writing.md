@@ -96,4 +96,4 @@ Use that context to choose the right terminology and prioritize your content.
 Use this context to make good choices about your tone. For example, a stressful error scenario is probably not a good time to make a joke.
 
 ## What's next?
-Now that you have an idea of what UX writing is, how it fits into your process, and how to get started, use the [voice standards](voiceandtone.md) to learn more about how to use the right words in the right context.
+Now that you have an idea of what UX writing is, how it fits into your process, and how to get started, use the [voice standards](/design-guidelines/content/voice-and-tone) to learn more about how to use the right words in the right context.
