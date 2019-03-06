@@ -1,4 +1,5 @@
 @import './styles/variables.scss';
+@import './styles/overrides';
 @import './styles/animation.scss';
 @import './styles/navigation.scss';
 @import './styles/homepage.scss';
@@ -25,6 +26,15 @@ $block: '.pf4';
 #{$block}-site-c-hero {
   max-width: 600px;
   margin: 0 auto !important;
+}
+
+.pf4-site-framework-title {
+  color: #06c;
+  font-weight: 700 !important;
+}
+
+.pf-c-page__main-section.pf-m-light {
+  background-color: var(--pf-global--BackgroundColor--200);
 }
 
 .pf4-site-framework-title {
@@ -77,7 +87,9 @@ $block: '.pf4';
 .ws-example {
   .example {
     padding: var(--pf-global--spacer--md);
-    border: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--light);
+    background-color: var(--pf-global--BackgroundColor--light-100);
+    border-top: var(--pf-global--BorderWidth--sm) solid #f8f8f8;
+    border-bottom: var(--pf-global--BorderWidth--sm) solid #f8f8f8;
   }
   .description {
     margin-bottom: var(--pf-global--spacer--xl);
@@ -85,7 +97,9 @@ $block: '.pf4';
 }
 
 .ws-example-heading {
-  padding-bottom: 10px;
+  padding: var(--pf-global--spacer--md);
+  background-color: #fff;
+  border-bottom: var(--pf-global--BorderWidth--sm) solid #f8f8f8;
 }
 
 .ws-live-demo {
@@ -97,9 +111,7 @@ $block: '.pf4';
     border: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--light);
   }
   .toolbar {
-    border-left: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--light);
-    border-right: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--light);
-    border-bottom: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--light);
+    background-color: var(--pf-global--BackgroundColor--light-100);
   }
   .message {
     transition: 500ms all ease;
@@ -118,8 +130,21 @@ $block: '.pf4';
   }
   .example {
     padding: var(--pf-global--spacer--md);
-    border: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--light);
+    background-color: var(--pf-global--BackgroundColor--light-100);
+    border-top: var(--pf-global--BorderWidth--sm) solid #f8f8f8;
+    border-bottom: var(--pf-global--BorderWidth--sm) solid #f8f8f8;
   }
+}
+
+.react-live {
+  .ws-example {
+    padding: var(--pf-global--spacer--md);
+    background-color: var(--pf-global--BackgroundColor--light-100);
+  }
+}
+
+.react-live-preview.example.pf-t-dark.pf-m-opaque-200 {
+  background-color: #282d33 !important;
 }
 
 .ws-search {

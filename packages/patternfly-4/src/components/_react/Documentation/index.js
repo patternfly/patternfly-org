@@ -11,6 +11,7 @@ import Layout from '../../layout';
 import { Location } from '@reach/router';
 import SideNav from './SideNav';
 import SEO from '../../seo';
+import './styles.scss';
 import Tokens from '../../css-variables';
 
 const propTypes = {
@@ -73,13 +74,11 @@ class Documentation extends React.PureComponent {
           return (
             <Layout sideNav={<SideNav />} className="ws-documentation">
               <SEO title="React" />
-              <PageSection variant={PageSectionVariants.light} className="section-border">
-                <AutoLinkHeader size="md" is="h1">{componentType}</AutoLinkHeader>
-                <AutoLinkHeader size="4xl" is="h2">{title}</AutoLinkHeader>
-              </PageSection>
-              <PageSection variant={PageSectionVariants.light} className="section-border">
+              <PageSection variant={PageSectionVariants.light} className="section-border pf-u-pt-md pf-site-background-medium">
+                <AutoLinkHeader size="md" is="h1" className="pf4-site-framework-title">{componentType}</AutoLinkHeader>
+                <AutoLinkHeader size="4xl" is="h2" className="pf-u-mt-sm pf-u-mb-md">{title}</AutoLinkHeader>
                 {Boolean(description) && (
-                  <p className="description" dangerouslySetInnerHTML={makeDescription(description)} />
+                  <p className="description pf-u-mb-md" dangerouslySetInnerHTML={makeDescription(description)} />
                 )}
                 <Section title="Examples" headingLevel="h3">
                   {examples.map((exampleObj, i) => {
@@ -107,7 +106,7 @@ class Documentation extends React.PureComponent {
                   })}
                 </Section>
               </PageSection>
-              <PageSection variant={PageSectionVariants.light}>
+              <PageSection variant={PageSectionVariants.light} className="pf-site-background-medium">
                 {Object.entries(components).map(([componentName]) => {
                   // Loop through the components and find the docGen info for each one
                   // Only generate docs for props for javascript code.
@@ -133,7 +132,7 @@ class Documentation extends React.PureComponent {
                   return null;
                 })}
               </PageSection>
-              {variablesRoot && <PageSection variant={PageSectionVariants.light}>
+              {variablesRoot && <PageSection variant={PageSectionVariants.light} className="pf-site-background-medium">
                 <Section title="CSS Variables" headingLevel="h3">
                   <Tokens variables={variablesRoot} />
                 </Section>

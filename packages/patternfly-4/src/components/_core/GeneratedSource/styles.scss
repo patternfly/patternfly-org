@@ -50,10 +50,10 @@
 .GeneratedSource__pre[class*="language-"] {
   min-width: 100%;
   max-width: 100%;
-  padding: 1rem;
+  padding: 0;
   margin: 0;
   overflow: initial;
-  background-color: transparent;
+  background-color: #fff;
   border-left: 0;
   box-shadow: none;
 
@@ -64,7 +64,7 @@
 }
 
 .GeneratedSource__pre[class*="language-"] > code {
-  padding: 0;
+  padding: 1rem;
   background-color: #fff;
   background-image: none;
   border-left: 0;

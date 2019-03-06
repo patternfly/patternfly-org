@@ -22,7 +22,7 @@ const navBuilder = navData => {
         // console.log(location);
         const currentPath = location.pathname;
         return (
-          <Nav aria-label="Nav">
+          <Nav className="pf-site-md-nav" aria-label="Nav">
             <NavList>
               {navData.map(({ node }) => node.subNav ? (
                 <NavExpandable key={node.text} title={node.text} isExpanded={currentPath.indexOf(node.path) > -1} isActive={currentPath.indexOf(node.path) > -1}>

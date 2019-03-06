@@ -20,9 +20,8 @@
 }
 
 .Example__section {
-  border-left: 1px solid #bbb;
-  border-right: 1px solid #bbb;
-  border-bottom: 1px solid #bbb;
+  background-color: #fff;
+  border: none;
   padding: 0.5rem;
 
   .pf-p-secondary-nav__link {
@@ -30,13 +29,7 @@
   }
 }
 
-// .Example__section:not(:last-of-type) {
-//   margin-bottom: 1rem;
-// }
-
 .Example__componentLink {
-  // padding-top: .25em;
-
   ul {
     display: inline;
     list-style: none;
@@ -48,11 +41,18 @@
   }
 
   code {
-    padding: .25em .75em;
-    color: #004368;
+    min-width: 32px;
+    padding: 4px 8px;
+    background-color: #00659c;
+    border-radius: 18px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
     white-space: nowrap;
-    background-color: #def3ff;
-    border-radius: .5em;
+    a {
+      color: #fff;
+    }
   }
 }
 

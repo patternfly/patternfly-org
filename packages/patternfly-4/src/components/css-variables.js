@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
     display: 'inline-block',
     height: 18,
     width: 18,
-    border: `${tokensModule.global_BorderWidth_sm.var} solid ${tokensModule.global_BorderColor.var}`,
+    borderTop: `${tokensModule.global_BorderWidth_sm.var} solid ${tokensModule.global_BorderColor.var}`,
+    borderBottom: `${tokensModule.global_BorderWidth_sm.var} solid ${tokensModule.global_BorderColor.var}`,
     marginRight: tokensModule.global_spacer_sm.var,
     verticalAlign: 'middle'
   },
@@ -64,7 +65,7 @@ class Tokens extends React.Component {
         }
       }
       dataRows.push([
-        key, 
+        key,
         token.name,
         token.value,
       ]);
@@ -145,13 +146,13 @@ class Tokens extends React.Component {
       <>
         <Form className="ws-search" onSubmit={event => { event.preventDefault(); return false; }}>
           <TextInput
-                type="text"
-                id="primaryIconsSearch"
-                name="primaryIconsSearch"
-                placeholder="Search Variables"
-                value={searchValue}
-                onChange={this.handleSearchChange}
-              />
+            type="text"
+            id="primaryIconsSearch"
+            name="primaryIconsSearch"
+            placeholder="Search CSS Variables"
+            value={searchValue}
+            onChange={this.handleSearchChange}
+          />
         </Form>
         <Table variant="compact" aria-label="CSS Variables" sortBy={sortBy} onSort={this.onSort} cells={columns} rows={filteredRows}>
           <TableHeader />

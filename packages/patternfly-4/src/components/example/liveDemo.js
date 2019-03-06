@@ -110,7 +110,7 @@ class LiveDemo extends React.Component {
     return (
       <Section className="ws-live-demo">
         <AutoLinkHeader size="lg" is="h4" className="ws-example-heading">{title}</AutoLinkHeader>
-        {Boolean(description) && <p className={css('description')} dangerouslySetInnerHTML={makeDescription(description)} />}
+        {Boolean(description) && <p className="pf-c-content" dangerouslySetInnerHTML={makeDescription(description)} />}
         <LiveProvider code={raw} scope={scope} transformCode={transformCode}>
           {live && <LivePreview className={css(className, 'example', darkThemeClasses)} />}
           {children}

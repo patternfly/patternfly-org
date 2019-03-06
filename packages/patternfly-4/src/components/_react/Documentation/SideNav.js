@@ -90,7 +90,7 @@ class SideNav extends React.Component {
         // console.log(location);
         const currentPath = location.pathname;
         return (
-          <Nav className="pf4-site-vertical-navigation" aria-label="Nav">
+          <Nav className="pf-site-vertical-navigation" aria-label="Nav">
             <Switcher />
             {/* <Form className={css(styles.search)} onSubmit={event => { event.preventDefault(); return false; }}>
               <TextInput
