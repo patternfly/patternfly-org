@@ -3,7 +3,7 @@
 ## About
 PatternFly provides a number of common filters that can be used in a various combinations to create a custom filtering experience. These elements may be used in a toolbar or alone. You can use the decision tree below to help determine which filter best fits your use case.
 
-![image1](/img/decision-tree.png)
+![image1](img/decision-tree.png)
 
 
 
@@ -22,10 +22,10 @@ The following elements may be used to create a custom filter. Keep in mind that 
 The most basic filter gives the user the ability to filter by one attribute either using a single search field or a single select list with a fixed set of values.
 
 **Single search field**
-![image2](/img/basic-filter-search.png)
+![image2](img/basic-filter-search.png)
 
 **Single select list**
-![image3](/img/basic-filter-select.png)
+![image3](img/basic-filter-select.png)
 
 #### When to use
 Use a basic filter when there is only one attribute by which users can filter. Use the single search field when data is unbound and the single select list when data is bound.
@@ -37,13 +37,13 @@ A filter query is triggered whenever a new value is set by the user. This can be
 ### Attribute-value (textbox) filters
 The attribute-value filter gives the user the ability to specify an attribute-value pair for filtering a data set.
 
-![image4](/img/attribute-value-input.png)
+![image4](img/attribute-value-input.png)
 
-![image5](/img/attribute-value-dropdown.png)
+![image5](img/attribute-value-dropdown.png)
 
-![image6](/img/attribute-value-multi.png)
+![image6](img/attribute-value-multi.png)
 
-![image7](/img/attribute-value-date-picker.png)
+![image7](img/attribute-value-date-picker.png)
 
 The following elements can be used in an attribute-value (textbox) filter.
 1. **Attribute selector**: A select list that allows the user to select the attribute that they want to filter against.
@@ -69,7 +69,7 @@ A filter query is triggered whenever a new value is set by the user. The followi
 ### Faceted (checkbox) filters
 Faceted filtering is useful when items can be described by categories according to multiple dimensions or facets.
 
-![image8](/img/faceted.png)
+![image8](img/faceted.png)
 
 The following elements can be used in a faceted (checkbox) filter.
 1. **Facets**: In this example, Status and Vendor represent different facets, or categories.
@@ -90,8 +90,8 @@ New filters are applied or removed as the user selects/deselects values via the 
 ### Type-ahead filters
 Type-ahead filters are useful when there is a large number of items to select from the filter dropdown. Users can quickly find the value they would like to filter by by typing in the field.
 
-![image9](/img/type-ahead-single.png)
-![image10](/img/type-ahead-multi.png)
+![image9](img/type-ahead-single.png)
+![image10](img/type-ahead-multi.png)
 
 The following elements can be used in a type-ahead filter.
 1. **Single select**: Single select type-ahead filters can handle one input. Users may scroll through the dropdown list or type in the box to find the desired option.
@@ -117,14 +117,14 @@ When filters are applied, filter chips may be used to provide feedback.
 **Basic filter chips**
 As filters are applied, the value will be displayed as a filter chip. Each filter chip has an ‘x’ to remove the filter, or users may click “Clear filters” to clear all applied filters at once.
 
-![image11](/img/basic-filter-chips.png)
+![image11](img/basic-filter-chips.png)
 
 **Complex filter chips**
 Filter chips may be used to show Boolean relationships between different attribute-value pairs. Individual filter chips can be removed by clicking the ‘x’ in each chip, and entire filter groups can be removed using the group ‘x’.
 
-![image12](/img/attribute-value-multi-chips.png)
+![image12](img/attribute-value-multi-chips.png)
 
-![image13](/img/faceted-combo-chips.png)
+![image13](img/faceted-combo-chips.png)
 
 * Filters between attribute categories should be combined with a boolean AND operator.
 * Filters within a category are shown grouped together and should be combined with a boolean OR operator.
@@ -150,7 +150,7 @@ Do not use filter chips when:
 ### Multiple filters
 You can use multiple filters in combination to create a custom filtering experience.
 
-![image14](/img/multiple-filters.png)
+![image14](img/multiple-filters.png)
 
 #### When to use
 Use multiple dropdown filters when you only have a handful of attributes that you want to show. Only use this filter when space allows; otherwise consider using a faceted filter.
@@ -162,7 +162,7 @@ Filter queries are applied when the user selects or deselects an item in the lis
 ### Complex faceted filter
 You can create a complex faceted filter by incorporating elements such as a search field into the dropdown component.
 
-![image15](/img/faceted-complex.png)
+![image15](img/faceted-complex.png)
 
 #### When to use
 Use a complex faceted filter when you have limited space and multiple attributes with a variety of input types, for example, and search field and checkbox selects.
@@ -197,15 +197,15 @@ Filters may be included in a toolbar and are usually left aligned. There may be 
 ### Mobile considerations
 In responsive views, filters may be hidden within the filter icon. On click, the toolbar will expand to reveal the filter. If there are multiple filter elements, they will be collapsed into a single faceted filter.
 
-![image16](/img/mobile.png)
+![image16](img/mobile.png)
 
 
 ## Examples
 **Filter in toolbar on data list**
-![image17](/img/example1.png)
+![image17](img/example1.png)
 
 **Multiple filters in toolbar**
-![image18](/img/example2.png)
+![image18](img/example2.png)
 
 
 ## Content
