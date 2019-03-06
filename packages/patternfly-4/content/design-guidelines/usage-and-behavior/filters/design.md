@@ -1,3 +1,6 @@
+---
+path: "/design-guidelines/usage-and-behavior/filters"
+---
 # Filters
 
 ## About
