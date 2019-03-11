@@ -118,11 +118,13 @@ A filter query is triggered whenever a new value is set by the user. The followi
 When filters are applied, filter chips may be used to provide feedback.
 
 **Basic filter chips**
+
 As filters are applied, the value will be displayed as a filter chip. Each filter chip has an ‘x’ to remove the filter, or users may click “Clear filters” to clear all applied filters at once.
 
 ![image11](img/basic-filter-chips.png)
 
 **Complex filter chips**
+
 Filter chips may be used to show Boolean relationships between different attribute-value pairs. Individual filter chips can be removed by clicking the ‘x’ in each chip, and entire filter groups can be removed using the group ‘x’.
 
 ![image12](img/attribute-value-multi-chips.png)
@@ -217,5 +219,5 @@ In responsive views, filters may be hidden within the filter icon. On click, the
 ### Filters
 Filter hint text in input fields should read “Filter by [attribute]...” and be in sentence case.
 
-### Clearing Filters
+### Clearing filters
 The option to clear all filters will be displayed after the last filter chip. It should read “Clear filters” in sentence case. When clicked, it should remove all applied filters and collapse the toolbar back into a single row.
