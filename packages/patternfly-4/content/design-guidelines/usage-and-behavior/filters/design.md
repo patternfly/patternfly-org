@@ -184,6 +184,7 @@ Filter queries are applied when the user selects or deselects an item in the lis
 * [Input group](/documentation/core/components/inputgroup)
 * [Options Menus](/documentation/core/components/optionsmenu)
 * [Select](/documentation/core/components/select)
+* [Toolbar](/documentation/core/components/toolbar)
 
 **React**
 * [Badges](/documentation/react/components/badge)
