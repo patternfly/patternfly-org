@@ -185,7 +185,7 @@ Again, think of a form as a conversation with your user. No one wants to have a 
 
 See our [content guidelines](/design-guidelines/content/) for additional guidance.
 
-## Components and demos used
+## Related components and demos
 The PatternFly components listed can be used in a number of ways to build forms to suit specific needs or use-cases.
 
 **HTML/CSS components**
