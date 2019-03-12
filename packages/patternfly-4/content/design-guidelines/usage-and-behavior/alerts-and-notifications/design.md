@@ -110,6 +110,6 @@ A more accessible version of this message would look like this:
 While this is more verbose, it has the advantage of being usable for both sighted and non-sighted users by providing instructions to screen reader users about where they can go to complete the action.
 
 ## Related components and demos
-**Core HTML/CSS:** [Alert](/documentation/core/components/alert), [Alert Group](/documentation/core/components/alert-group), Alert Demo
+**Core HTML/CSS:** [Alert](/documentation/core/components/alert), [Alert Group](/documentation/core/components/alert-group)
 
-**React:** [Alert](/documentation/react/components/alert), [Alert Group](/documentation/core/react/alert-group)
+**React:** [Alert](/documentation/react/components/alert)
