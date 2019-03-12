@@ -9,7 +9,7 @@ The login page allows a user to gain access to an application by entering their 
 
 ## Elements of a Login page
 
-![Default-login](default-login.png "default-login")
+![Default-login](img/default-login.png "default-login")
 
 **1. Title:** The title is located at the top of the login card. “Your Account” can be replaced by the product name or any other term that makes sense for your application. If the text is longer than the space allowed, text should wrap to the next line.
 
@@ -58,19 +58,19 @@ The multi-factor login allows a user to gain access to an application by enterin
 
 When you need more security, you can incorporate additional authentication methods into the sign in process. An example showing both password and verification code is displayed below.
 
-![Multi-factor-login-process](multi-factor-login-process.png "Multi-factor-login-process")
+![Multi-factor-login-process](img/multi-factor-login-process.png "Multi-factor-login-process")
 
 **1. More Verification Methods (optional):** Once the user has provided a valid password, the gray band that provides a way to sign up for an account and retrieve a lost or forgotten username or password is hidden and a link called “More verification options” is displayed. Clicking the link allows users to select an alternate type of verification if they can’t complete the default method. The link will lead to the next step where all allowable verification methods will be displayed.
 
 Examples of additional multi-factor authentication that could be used include an authentication code, a SMS code or a backup code. An example of each is displayed below.
 
-![Multi-factor-login-validation-options](multi-factor-login-validation-options.png "Multi-factor-login-validation-options")
+![Multi-factor-login-validation-options](img/multi-factor-login-validation-options.png "Multi-factor-login-validation-options")
 
 
 #### Single Sign On (SSO) Login
 SSO (single sign-on) will allow a user to sign-in once and access multiple applications within the same organization. This type of login supports displaying both the username and password fields at the same time, or displaying one field at a time as in the multi factor login. Displaying one field at a time allows for greater security.
 
-![Multi-factor-login-validation-options](sso-single-step.png "Multi-factor-login-validation-options")
+![Multi-factor-login-validation-options](img/sso-single-step.png "Multi-factor-login-validation-options")
 
 Additional Features for Single Sign-On
 
@@ -97,13 +97,13 @@ Please refer to branding guidelines when using logos for social login page. Exam
 Let users know when a form field submission results in an error. Always present error states on the form, and use inline errors whenever possible. The error state you use will depend on whether the validation happens on the client or the server.
 
 #### Client-side Errors
-![Client-side-errors](client_side_error.png "Client-side-errors")
+![Client-side-errors](img/client_side_error.png "Client-side-errors")
 Error messages are presented before the form is submitted. Client-side validation can be performed as soon as a field loses focus, and allows you to use inline validation to alert users of errors or issues immediately. In most cases, client-side validations are performed as inline validations for each field. Some common examples are shown below.
 
 ##### Empty Field(s)
 
 
-![Empty-fields](empty-fields.png "empty-fields")
+![Empty-fields](img/empty-fields.png "empty-fields")
 
 An error message should be displayed below any required field that is empty once the action button (Log In/Next) has been clicked. Once the field has been filled, the error message should disappear. The following error messages are suggested for use.
 
@@ -115,7 +115,7 @@ An error message should be displayed below any required field that is empty once
 
 ##### Invalid Characters
 
-![Invalid-characters](invalid-characters.png "invalid-characters")
+![Invalid-characters](img/invalid-characters.png "invalid-characters")
 
 An error message should be displayed when there is an invalid character in the username. Once the field has been modified, the error message should disappear. The following error messages are suggested for use.
 
@@ -129,7 +129,7 @@ An error message should be displayed when there is an invalid character in the u
 
 ##### Caps lock is on
 
-![Multi-factor-login-validation-options](caps-lock-on.png "Multi-factor-login-validation-options")
+![Multi-factor-login-validation-options](img/caps-lock-on.png "Multi-factor-login-validation-options")
 
 
 A warning message should be displayed when caps lock is on so users avoid making a mistake when typing a case-sensitive password. The warning message should be displayed in a popover when a user clicks into the input field. Once caps lock has been turned off, the warning message should disappear. The following warning message is suggested for use.
@@ -141,7 +141,7 @@ A warning message should be displayed when caps lock is on so users avoid making
 
 
 #### Server-side Errors
-![Server-side-error](server-side-error.png "server-side-error")
+![Server-side-error](img/server-side-error.png "server-side-error")
 When users submit a form, the entire page is reloaded if there are validation errors. At the same time, the password field should be cleared to provide additional security. Error messages can appear as inline errors for each field or as an inline error displayed below the application name and above the input fields. If there are multiple messages, each message appears on its own line; spacing between fields should be enough so that the form doesn’t jump to fit the messages.
 
 
@@ -149,7 +149,7 @@ When users submit a form, the entire page is reloaded if there are validation er
 ##### Account doesn’t exist/password is wrong
 
 
-![Invalid-characters](account-doesn't-exist_password-is-wrong.png "invalid-characters")
+![Invalid-characters](img/account-doesn't-exist_password-is-wrong.png "invalid-characters")
 
 
 An error message should be displayed when the user types an incorrect username that doesn’t exist or the wrong password. The most secure approach is to provide a generic message that the username or password is incorrect but to not point out which one is incorrect. This way the identity of a valid user is protected. If your application doesn’t require this level of security there are a few additional messages that can be used. Once the field has been modified, the error message should disappear. The following error messages are suggested for use.
@@ -165,7 +165,7 @@ An error message should be displayed when the user types an incorrect username t
 
 ##### General Warning Messages
 
-![Multi-factor-login-validation-options](other-error-messages.png "Multi-factor-login-validation-options")
+![Multi-factor-login-validation-options](img/other-error-messages.png "Multi-factor-login-validation-options")
 
 
 Another form of error state message is a warning message. These messages are triggered by system level events or if a user is timed out of the application. Notifications should be displayed until the user attempts a new login. These messages should be displayed above the username field. The following are examples of general error messages.
