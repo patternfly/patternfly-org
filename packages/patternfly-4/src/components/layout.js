@@ -18,7 +18,6 @@ import {
 } from '@patternfly/react-core';
 import { Location } from '@reach/router';
 import brandImg from './l_pf-reverse-164x11.png';
-import { canUseDOM } from 'exenv';
 import './layout.css';
 
 class Layout extends React.Component {
@@ -82,17 +81,18 @@ class Layout extends React.Component {
         />
       );
 
-      return canUseDOM && 
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <BackgroundImage src={bgImages} />
-        <Page isManagedSidebar={sideNav !== null} header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} /> : null}>
-          {tertiaryNav && <PageSection variant={PageSectionVariants.light}>
-            {tertiaryNav}
-          </PageSection>}
-          {this.props.children}
-        </Page>
-      </>
+      return (
+        <>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <BackgroundImage src={bgImages} />
+          <Page isManagedSidebar={sideNav !== null} header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} /> : null}>
+            {tertiaryNav && <PageSection variant={PageSectionVariants.light}>
+              {tertiaryNav}
+            </PageSection>}
+            {this.props.children}
+          </Page>
+        </>
+      )
       }} />);
   }
 
