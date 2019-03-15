@@ -14,19 +14,19 @@
     ]
   },
   {
-    "text": "Usage & Behavior",
+    "text": "Usage and behavior",
     "path": "/design-guidelines/usage-and-behavior/",
     "subNav": [
       {
-        "text": "About Modal",
+        "text": "About modal",
         "path": "/design-guidelines/usage-and-behavior/about-modal"
       },
       {
-        "text": "Alerts and Notifications",
+        "text": "Alerts and notifications",
         "path": "/design-guidelines/usage-and-behavior/alerts-and-notifications"
       },
       {
-        "text": "Buttons and Links",
+        "text": "Buttons and links",
         "path": "/design-guidelines/usage-and-behavior/buttons-and-links"
       },
       {
@@ -38,7 +38,7 @@
         "path": "/design-guidelines/usage-and-behavior/forms"
       },
       {
-        "text": "Lists and Tables",
+        "text": "Lists and tables",
         "path": "/design-guidelines/usage-and-behavior/lists-and-tables"
       },
       {
@@ -50,11 +50,11 @@
         "path": "/design-guidelines/usage-and-behavior/modal"
       },
       {
-        "text": "Navigation System",
+        "text": "Navigation system",
         "path": "/design-guidelines/usage-and-behavior/navigation-system"
       },
       {
-        "text": "Progress Bar",
+        "text": "Progress bar",
         "path": "/design-guidelines/usage-and-behavior/progress-bar"
       },
       {
@@ -72,11 +72,11 @@
         "path": "/design-guidelines/content/writing"
       },
       {
-        "text": "Voice and Tone",
+        "text": "Voice",
         "path": "/design-guidelines/content/voice-and-tone"
       },
       {
-        "text": "Grammar and Terminology",
+        "text": "Style guide",
         "path": "/design-guidelines/content/grammar-and-terminology"
       }
     ]
