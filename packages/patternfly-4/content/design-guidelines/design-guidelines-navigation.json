@@ -30,6 +30,10 @@
         "path": "/design-guidelines/usage-and-behavior/buttons-and-links"
       },
       {
+        "text": "Filters",
+        "path": "/design-guidelines/usage-and-behavior/filters"
+      },  
+      {
         "text": "Forms",
         "path": "/design-guidelines/usage-and-behavior/forms"
       },
@@ -70,7 +74,7 @@
       {
         "text": "Voice",
         "path": "/design-guidelines/content/voice-and-tone"
-      }, 
+      },
       {
         "text": "Style guide",
         "path": "/design-guidelines/content/grammar-and-terminology"
