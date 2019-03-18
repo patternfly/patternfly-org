@@ -15,7 +15,7 @@ const Switcher = () => (
       const activeReact = currentPath.indexOf('/documentation/react') > -1;
       const activeCore = currentPath.indexOf('/documentation/core') > -1;
       return (
-        <Bullseye className="switcher-group">
+        <Bullseye className="ws-switcher-group">
           <Link to="/documentation/react/components/aboutmodal">
             <Button variant={activeReact ? 'primary' : 'tertiary'} className="pf-w-btn-left" isActive={activeReact}>React</Button>
           </Link>

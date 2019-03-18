@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 require('./_repos/core/src/patternfly/patternfly.scss');
+require('prismjs/themes/prism-coy.css');
+require('./src/workspace.scss');
 
 /**
  * Display message when update is available, see:

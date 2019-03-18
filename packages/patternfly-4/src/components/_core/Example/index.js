@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import pretty from 'pretty';
 import { css } from '@patternfly/react-styles';
-import styles from '../../example/example.styles';
 import PreviewToolbar from '../../PreviewToolbar/PreviewToolbar';
 import Preview from '../Preview';
 import ComponentItems from './ComponentItems';
@@ -84,14 +83,14 @@ export default class Example extends React.Component {
     const fullPath = typeof window !== 'undefined' && `${window.location.href.substr(0, window.location.href.length - (endsWithSlash ? 1 : 0))}-full?component=${heading}`;
     if (!this.state.isFull) {
       return (
-        <div>
+        <div className="ws-live-demo">
           <Title size="lg">{heading}</Title>
           <PreviewToolbar fullPath={fullPath} showLights={!fullPageOnly} showViewports={!fullPageOnly} onViewportChange={this.onViewportChange} onLightsChange={this.onLightsChange}/>
-          {Boolean(description) && <p className={css(styles.description)} dangerouslySetInnerHTML={makeDescription(description)} />}
+          {Boolean(description) && <p className={css('description')} dangerouslySetInnerHTML={makeDescription(description)} />}
           <Preview heading={heading} viewport={this.state.viewport} lights={this.state.lights} fullPageOnly={fullPageOnly} minHeight={minHeight}>
             {children}
           </Preview>
-          <ComponentItems children={children} className={css(styles.example)} />
+          <ComponentItems children={children} className={css('example')} />
           <EditorToolbar editor={editor} raw={indentedOutput} live={false} showMessage={false} />
           {/* <LiveDemo raw={indentedOutput.trim()} live={false} editorLanguage="html" /> */}
         </div>

@@ -1,7 +1,5 @@
 import React from 'react';
 import { css } from '@patternfly/react-styles';
-import exampleStyles from './example.styles';
-import styles from './liveDemo.styles';
 import PropTypes from 'prop-types';
 import * as TableComponents from '@patternfly/react-table';
 import * as ChartComponents from '@patternfly/react-charts';
@@ -94,7 +92,7 @@ class LiveDemo extends React.Component {
       paramCase(path.split('/').slice(-1)[0].slice(0, -3))
     }`
 
-    const editor = <LiveEditor className={css(className, styles.code)} ignoreTabKey contentEditable={live} />;
+    const editor = <LiveEditor className={css('code')} ignoreTabKey contentEditable={live} />;
 
     const darkThemeClasses =
       classNames({
@@ -102,10 +100,10 @@ class LiveDemo extends React.Component {
       });
 
     return (
-      <Section>
+      <Section className="ws-live-demo">
         <LiveProvider code={raw} scope={scope} transformCode={transformCode}>
           <PreviewToolbar fullPath={fullPath} showLights={!fullPageOnly} showViewports={false} onLightsChange={this.onLightsChange}/>
-          {live && <LivePreview className={css(className, exampleStyles.example, darkThemeClasses)} />}
+          {live && <LivePreview className={css(className, 'example', darkThemeClasses)} />}
           {children}
           <EditorToolbar editor={editor} raw={raw} path={examplePath} />
           {live && <LiveError />}

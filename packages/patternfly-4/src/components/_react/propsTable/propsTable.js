@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './propsTable.styles';
-import { css } from '@patternfly/react-styles';
 import { Table, Row, TD, TH, Body, Heading } from '../table';
 import Section from '../../section';
 import { ExclamationCircleIcon } from '@patternfly/react-icons';
@@ -37,7 +35,7 @@ export const PropsTable = ({ name, description: preface, props, enumValues }) =>
     preface={preface}
     description={`The ${name} component accepts the following props.`}
   >
-    <Table>
+    <Table className="ws-props-table">
       <Heading>
         <TH>Name</TH>
         <TH>Type</TH>
@@ -50,7 +48,7 @@ export const PropsTable = ({ name, description: preface, props, enumValues }) =>
           <Row key={prop.name}>
             <TD>{prop.name}</TD>
             <TD>
-              <div className={css(styles.enumValues)}>{getEnumValue(prop, enumValues)}</div>
+              <div className="enumValues">{getEnumValue(prop, enumValues)}</div>
             </TD>
             <TD align="center">{prop.required && <ExclamationCircleIcon />}</TD>
             <TD>{Boolean(prop.defaultValue) && prop.defaultValue.value}</TD>

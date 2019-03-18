@@ -6,7 +6,7 @@ import * as tokensModule from '@patternfly/react-tokens';
 import { StyleSheet, css } from '@patternfly/react-styles';
 
 const propTypes = {
-  variables: PropTypes.oneOf(PropTypes.string, PropTypes.array)
+  variables: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
 };
 
 const defaultProps = {
@@ -27,15 +27,7 @@ const styles = StyleSheet.create({
   },
   tokenCell: {
     whiteSpace: 'nowrap'
-  },
-  search: `
-    &.pf-c-form {
-      margin: ${tokensModule.global_spacer_md.var} 0;
-    }
-    .pf-c-form__label {
-      --pf-c-form__label--FontSize: ${tokensModule.global_FontSize_lg.var};
-    }
-  `
+  }
 });
 const isColorRegex = /^(#|rgb)/;
 
@@ -43,21 +35,7 @@ class Tokens extends React.Component {
   constructor(props) {
     super(props);
     const dataRows = [];
-    // let allVariables = {};
-    // Object.entries(tokensModule).map(([key, token]) => {
-    //   const shortName = token.name.split('--')[1].split('__')[0];
-    //   if (!allVariables[shortName]) {
-    //     allVariables[shortName] = [];
-    //   }
-    //   allVariables[shortName].push(tokensModule[key]);
-    // }, []);
-
-    // const regex = new RegExp(`^--pf-(c|l)-${props.component}(--|__)`, 'g');
-    // const match = regex.test(token.name);
-    // if (!match) {
-    //   return;
-    // }
-    Object.entries(tokensModule).map(([key, token]) => {
+    Object.entries(tokensModule).forEach(([key, token]) => {
       if (!token.name || !token.value) {
         return;
       }
@@ -92,11 +70,6 @@ class Tokens extends React.Component {
       return a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0;
     });
     let columns = [];
-    // if (props.isReact) {
-    //   columns = [{ title: 'React Tokens', transforms: [sortable] }];
-    // } else {
-    //   columns = [];
-    // }
     this.state = {
       searchValue: '',
       columns: columns.concat([
@@ -116,13 +89,8 @@ class Tokens extends React.Component {
 
   processToComponents = dataRows => {
     const rows = [];
-    dataRows.map(dataRow => {
+    dataRows.forEach(dataRow => {
       let toPush = [];
-      // if (this.props.isReact) {
-      //   toPush = [<span className={css(styles.tokenCell)}>{dataRow[0]}</span>];
-      // } else {
-      //   toPush = [];
-      // }
       rows.push(toPush.concat([
         <span className={css(styles.tokenCell)}>{dataRow[1]}</span>,
         <span className={css(styles.tokenCell)}>{dataRow[0]}</span>,
@@ -154,8 +122,7 @@ class Tokens extends React.Component {
   };
 
   render() {
-    const { searchValue, columns, rows, dataRows, sortBy } = this.state;
-    const { component, title } = this.props;
+    const { searchValue, columns, dataRows, sortBy } = this.state;
     const searchRE = new RegExp(searchValue, 'i');
     const filteredTokens = dataRows.filter(c => {
       return searchRE.test(c[0]) || searchRE.test(c[1]) || searchRE.test(c[2]);
@@ -164,7 +131,7 @@ class Tokens extends React.Component {
 
     return (
       <>
-        <Form className={css(styles.search)} onSubmit={event => { event.preventDefault(); return false; }}>
+        <Form className="ws-search" onSubmit={event => { event.preventDefault(); return false; }}>
           <TextInput
                 type="text"
                 id="primaryIconsSearch"

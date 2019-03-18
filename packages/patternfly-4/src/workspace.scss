@@ -1,0 +1,109 @@
+#___gatsby {
+  height: 100%;
+}
+
+.ws-documentation {
+  .description {
+    margin-bottom: var(--pf-global--spacer--xl);
+  }
+  .section-border {
+    border-bottom: 1px solid #bbb;
+  }
+}
+
+.ws-props-table {
+  enumValues {
+    max-width: 200px;
+  }
+  requiredColumn {
+    text-align: center;
+  }
+}
+
+.ws-table {
+  width: 100%;
+  font-size: var(--pf-global--FontSize--sm);
+
+  .row {
+    border-bottom: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--light);
+  }
+  .cell {
+    padding: var(--pf-global--spacer--sm) var(--pf-global--spacer--md);
+  }
+  .enumValues {
+    white-space: pre;
+  }
+  .leftAlign {
+    text-align: left;
+  }
+  .centerAlign {
+    text-align: center;
+  }
+  .rightAlign {
+    text-align: right;
+  }
+}
+
+.ws-example {
+  .example {
+    padding: var(--pf-global--spacer--md);
+    border: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--light);
+  }
+  .description {
+    margin-bottom: var(--pf-global--spacer--xl);
+  }
+}
+
+.ws-live-demo {
+  .code {
+    max-height: 37.5rem;
+    overflow: auto;
+    border: 1px solid #bbb;
+  }
+  .toolbar {
+    border-left: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--light);
+    border-right: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--light);
+    border-bottom: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--light);
+  }
+  .message {
+    transition: 500ms all ease;
+    opacity: 0;
+    height: 0;
+    will-change: opacity;
+  }
+  .messageText {
+    background: black;
+    color: white;
+    padding: 3px 5px;
+  }
+  .messageShow {
+    opacity: 1;
+    height: initial;
+  }
+  .example {
+    padding: var(--pf-global--spacer--md);
+    border: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--light);
+  }
+}
+
+.ws-search {
+  &.pf-c-form {
+    margin: var(--pf-global--spacer--md) 0;
+  }
+  .pf-c-form__label {
+    --pf-c-form__label--FontSize: var(--pf-global--FontSize--lg);
+  }
+}
+
+.ws-section {
+  margin-bottom: var(--pf-global--spacer--lg);
+}
+
+.ws-header {
+  margin-bottom: var(--pf-global--spacer--md);
+}
+
+.ws-preface {
+  margin-top: var(--pf-global--spacer--sm);
+  margin-bottom: var(--pf-global--spacer--sm);
+}

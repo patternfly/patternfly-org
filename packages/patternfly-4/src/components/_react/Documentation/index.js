@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
-import styles from './Documentation.styles';
-import { css } from '@patternfly/react-styles';
 import Example from '../../example';
 import { Title, PageSection, PageSectionVariants } from '@patternfly/react-core';
 import PropsTable from '../propsTable';
@@ -70,15 +68,15 @@ class Documentation extends React.PureComponent {
             componentType = 'Upgrades';
           }
           return (
-            <Layout sideNav={<SideNav />}>
+            <Layout sideNav={<SideNav />} className="ws-documentation">
               <SEO title="React" />
-              <PageSection variant={PageSectionVariants.light} className={css(styles['pf-w-section-border'])}>
+              <PageSection variant={PageSectionVariants.light} className="section-border">
                 <Title size="md">{componentType}</Title>
                 <Title size="4xl">{title}</Title>
               </PageSection>
-              <PageSection variant={PageSectionVariants.light} className={css(styles['pf-w-section-border'])}>
+              <PageSection variant={PageSectionVariants.light} className="section-border">
                 {Boolean(description) && (
-                  <p className={css(styles.description)} dangerouslySetInnerHTML={makeDescription(description)} />
+                  <p className="description" dangerouslySetInnerHTML={makeDescription(description)} />
                 )}
                 <Section title="Examples" headingLevel="h2">
                   {examples.map((exampleObj, i) => {
