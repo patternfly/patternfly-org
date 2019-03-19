@@ -1,17 +1,17 @@
-.switcher-group {
+.ws-switcher-group {
   margin: 5px 0px !important;
-}
 
-.pf-w-btn-left.pf-c-button,
-.pf-w-btn-left.pf-c-button::after {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-  border-right-width: 0.5px;
-}
+  .pf-w-btn-left.pf-c-button,
+  .pf-w-btn-left.pf-c-button::after {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right-width: 0.5px;
+  }
 
-.pf-w-btn-right.pf-c-button,
-.pf-w-btn-right.pf-c-button::after {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  border-left-width: 0.5px;
+  .pf-w-btn-right.pf-c-button,
+  .pf-w-btn-right.pf-c-button::after {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left-width: 0.5px;
+  }
 }

@@ -103,7 +103,11 @@ class SideNav extends React.Component {
               />
             </Form>
             <NavList>
-              <NavExpandable title="Components" isExpanded={currentPath.indexOf('/components/') > -1 || (searchValue && filteredComponentRoutes.length > 0)} isActive={currentPath.indexOf(/components/) > -1}>
+              <NavExpandable 
+                title="Components" 
+                isExpanded={currentPath.indexOf('/components/') > -1 || Boolean(searchValue && filteredComponentRoutes.length > 0)} 
+                isActive={currentPath.indexOf(/components/) > -1}
+              >
                 {filteredComponentRoutes.map(item => (
                   <NavItem
                     key={item.to}
@@ -115,7 +119,11 @@ class SideNav extends React.Component {
                   </NavItem>
                 ))}
               </NavExpandable>
-              <NavExpandable title="Layouts" isExpanded={currentPath.indexOf('/layouts/') > -1 || (searchValue && filteredLayoutRoutes.length > 0)} isActive={currentPath.indexOf(/layouts/) > -1}>
+              <NavExpandable 
+                title="Layouts" 
+                isExpanded={currentPath.indexOf('/layouts/') > -1 || Boolean(searchValue && filteredLayoutRoutes.length > 0)} 
+                isActive={currentPath.indexOf(/layouts/) > -1}
+              >
                 {filteredLayoutRoutes.map(item => (
                   <NavItem
                     key={item.to}
@@ -127,7 +135,11 @@ class SideNav extends React.Component {
                   </NavItem>
                 ))}
               </NavExpandable>
-              <NavExpandable title="Demos" isExpanded={currentPath.indexOf('/demos/') > -1 || (searchValue && filteredDemoRoutes.length > 0)} isActive={currentPath.indexOf(/demos/) > -1}>
+              <NavExpandable 
+                title="Demos" 
+                isExpanded={currentPath.indexOf('/demos/') > -1 || Boolean(searchValue && filteredDemoRoutes.length > 0)} 
+                isActive={currentPath.indexOf(/demos/) > -1}
+              >
                 {filteredDemoRoutes.map(item => (
                   <NavItem
                     key={item.to}

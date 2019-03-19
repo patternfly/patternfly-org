@@ -130,7 +130,7 @@ class IconCard extends React.Component {
   };
   
   render() {
-    const { icon: Icon, id, name } = this.props;
+    const { icon: Icon, name } = this.props;
     const popoverBody = (
       <div css={styles.popoverBody}>
         <div css={styles.copyButtons}>

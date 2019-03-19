@@ -3,11 +3,10 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import pretty from 'pretty';
 import { css } from '@patternfly/react-styles';
-import styles from '../../example/example.styles';
 import PreviewToolbar from '../../PreviewToolbar/PreviewToolbar';
 import Preview from '../Preview';
 import ComponentItems from './ComponentItems';
-import { Title } from '@patternfly/react-core';
+import AutoLinkHeader from '@content/AutoLinkHeader';
 import EditorToolbar from '../../example/editorToolbar';
 import PrismCode from 'react-prism';
 import 'prismjs/themes/prism-coy.css';
@@ -84,14 +83,14 @@ export default class Example extends React.Component {
     const fullPath = typeof window !== 'undefined' && `${window.location.href.substr(0, window.location.href.length - (endsWithSlash ? 1 : 0))}-full?component=${heading}`;
     if (!this.state.isFull) {
       return (
-        <div>
-          <Title size="lg">{heading}</Title>
+        <div className="ws-live-demo">
+          <AutoLinkHeader size="lg" is="h4">{heading}</AutoLinkHeader>
           <PreviewToolbar fullPath={fullPath} showLights={!fullPageOnly} showViewports={!fullPageOnly} onViewportChange={this.onViewportChange} onLightsChange={this.onLightsChange}/>
-          {Boolean(description) && <p className={css(styles.description)} dangerouslySetInnerHTML={makeDescription(description)} />}
+          {Boolean(description) && <p className={css('description')} dangerouslySetInnerHTML={makeDescription(description)} />}
           <Preview heading={heading} viewport={this.state.viewport} lights={this.state.lights} fullPageOnly={fullPageOnly} minHeight={minHeight}>
             {children}
           </Preview>
-          <ComponentItems children={children} className={css(styles.example)} />
+          <ComponentItems children={children} className={css('example')} />
           <EditorToolbar editor={editor} raw={indentedOutput} live={false} showMessage={false} />
           {/* <LiveDemo raw={indentedOutput.trim()} live={false} editorLanguage="html" /> */}
         </div>

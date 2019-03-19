@@ -1,8 +1,7 @@
 import React from 'react';
 import { css } from '@patternfly/react-styles';
-import styles from './example.styles';
 import PropTypes from 'prop-types';
-import { Title } from '@patternfly/react-core';
+import AutoLinkHeader from '@content/AutoLinkHeader';
 import LiveDemo from './liveDemo';
 import Section from '../section';
 import PreviewToolbar from '../PreviewToolbar/PreviewToolbar';
@@ -82,9 +81,9 @@ class Example extends React.Component {
       const path = `${pathStart}examples/${exampleName}`;
       return (
         <Section>
-          <Title size="lg" headingLevel="h3">{title}</Title>
+          <AutoLinkHeader size="lg" is="h3">{title}</AutoLinkHeader>
           <LiveDemo raw={raw.trim()} path={path} fullPageOnly live={false} className={className}>
-            <div className={css(className, styles.example)} {...props}>
+            <div className={css(className, 'ws-example')} {...props}>
               This example can only be accessed in&nbsp;
               <a href={path} target="_blank" rel="noopener noreferrer">
                 full page mode
@@ -97,13 +96,13 @@ class Example extends React.Component {
     }
 
     return (
-      <div>
-        <Title size="lg">{title}</Title>
+      <div className="ws-example">
+        <AutoLinkHeader size="lg" is="h4">{title}</AutoLinkHeader>
         {showPreviewOptions && <PreviewToolbar onViewportChange={this.onViewportChange} onLightsChange={this.onLightsChange}/>}
-        {Boolean(description) && <p className={css(styles.description)} dangerouslySetInnerHTML={makeDescription(description)} />}
+        {Boolean(description) && <p className={css('description')} dangerouslySetInnerHTML={makeDescription(description)} />}
         {GATSBY_LIVE_EXAMPLES ? (
           <React.Fragment>
-            {!live && <div className={css(className, styles.example)} {...props}>
+            {!live && <div className={css(className, 'example')} {...props}>
               <Preview viewport={this.state.viewport} lights={this.state.lights}>
                 {children}
               </Preview>
@@ -112,7 +111,7 @@ class Example extends React.Component {
           </React.Fragment>
         ) : (
           <React.Fragment>
-            <div className={css(className, styles.example)} {...props}>
+            <div className={css(className, 'example')} {...props}>
               <Preview viewport={this.state.viewport}>
                 {children}
               </Preview>

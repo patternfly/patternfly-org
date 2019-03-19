@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './table.styles';
 import { css } from '@patternfly/react-styles';
 
 const propTypes = {
@@ -16,7 +15,7 @@ const defaultProps = {
 };
 
 export const TD = ({ children, align, className, ...props }) => (
-  <td {...props} className={css(className, styles.cell, align && styles[`${align}Align`])}>
+  <td {...props} className={css(className, 'cell', align && `${align}Align`)}>
     {children}
   </td>
 );
@@ -24,12 +23,12 @@ TD.propTypes = propTypes;
 TD.defaultProps = defaultProps;
 
 export const TH = ({ children, align }) => (
-  <th className={css(styles.cell, align && styles[`${align}Align`])}>{children}</th>
+  <th className={css('cell', align && `${align}Align`)}>{children}</th>
 );
 TH.propTypes = propTypes;
 TH.defaultProps = defaultProps;
 
-export const Row = ({ children }) => <tr className={css(styles.row)}>{children}</tr>;
+export const Row = ({ children }) => <tr className={css('row')}>{children}</tr>;
 Row.propTypes = propTypes;
 Row.defaultProps = defaultProps;
 
@@ -45,6 +44,6 @@ export const Body = ({ children }) => <tbody>{children}</tbody>;
 Body.propTypes = propTypes;
 Body.defaultProps = defaultProps;
 
-export const Table = ({ children }) => <table className={css(styles.table)}>{children}</table>;
+export const Table = ({ children }) => <table className={css('ws-table')}>{children}</table>;
 Table.propTypes = propTypes;
 Table.defaultProps = defaultProps;

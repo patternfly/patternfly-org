@@ -1,6 +1,5 @@
 import React from 'react';
 import editIcon from './edit.svg';
-import './styles.scss';
 
 export default ({
   title = 'PatternFly Next Pen',

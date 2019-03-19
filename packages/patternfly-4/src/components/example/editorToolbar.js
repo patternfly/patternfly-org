@@ -1,6 +1,5 @@
 import React from 'react';
 import { css } from '@patternfly/react-styles';
-import styles from './liveDemo.styles';
 import PropTypes from 'prop-types';
 import { Button, TextContent, Text } from '@patternfly/react-core';
 import { CodeIcon, CopyIcon } from '@patternfly/react-icons';
@@ -54,12 +53,13 @@ class EditorToolbar extends React.Component {
   };
 
   render() {
+    // eslint-disable-next-line
     const { editor, live, path: examplePath, showMessage } = this.props;
     const { codeOpen, showCopyMessage } = this.state;
 
     return (
       <>
-        <div className={css(styles.toolbar)}>
+        <div className={css('toolbar')}>
           <Button
             onClick={this.handleClickCodeOpen}
             variant="plain"
@@ -85,15 +85,15 @@ class EditorToolbar extends React.Component {
               <i className={css('fab fa-github')} />
             </Button>
           </a> */}
-          <TextContent className={css(styles.message, showCopyMessage && styles.messageShow)}>
-            <Text component="pre" className={css(styles.messageText)}>
+          <TextContent className={css('message', showCopyMessage && 'messageShow')}>
+            <Text component="pre" className={css('messageText')}>
               Copied to clipboard
             </Text>
           </TextContent>
           {codeOpen &&
             !live && showMessage && (
-              <TextContent className={css(styles.messageShow)}>
-                <Text component="pre" className={css(styles.messageText)}>
+              <TextContent className={css('messageShow')}>
+                <Text component="pre" className={css('messageText')}>
                   Live edititing disabled
                 </Text>
               </TextContent>

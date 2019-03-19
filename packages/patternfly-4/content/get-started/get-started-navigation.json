@@ -2,13 +2,13 @@
   {
     "text": "About",
     "path": "/get-started/about"
-  }, 
+  },
   {
-    "text": "Developers",
+    "text": "Develop",
     "path": "/get-started/developers"
-  }, 
+  },
   {
-    "text": "Designers",
+    "text": "Design",
     "path": "/get-started/designers"
   }
 ]
