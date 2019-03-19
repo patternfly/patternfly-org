@@ -25,14 +25,14 @@ import { Location } from '@reach/router';
 import brandImg from './l_pf-reverse-164x11.png';
 
 class Layout extends React.Component {
-  
+
   componentDidMount() {
     // eslint-disable-next-line no-undef
     if (window.docsearch) {
       window.docsearch({
-        apiKey: '06941733239da4f8617d272cf2ed4d5c', 
-        indexName: 'patternfly', 
-        inputSelector: '#global-search-input', 
+        apiKey: '06941733239da4f8617d272cf2ed4d5c',
+        indexName: 'patternfly',
+        inputSelector: '#global-search-input',
         debug: false // Set debug to true if you want to inspect the dropdown
       });
     } else {
@@ -115,6 +115,7 @@ class Layout extends React.Component {
       };
       const SiteHeader = (
         <PageHeader
+          className="pf4-site-header"
           showNavToggle={sideNav !== null}
           logoProps={logoProps}
           logo={<Brand src={brandImg} alt="PatternFly Logo"/>}

@@ -1,0 +1,96 @@
+@import '../../../../node_modules/@patternfly/patternfly/sass-utilities/all.scss';
+
+@import '../workspace.scss';
+
+$block: '.pf4';
+
+.pf-m-white,
+.pf-m-white > * {
+  color: #fff !important; /* stylelint-disable-line */
+}
+
+.pf4-c-button__cta-primary {
+  @extend %btn-call-to-action;
+  @extend %call-to-action-text;
+  background-color: #fff;
+  color: #06c;
+  border-color: #fff;
+  &:hover {
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.pf4-c-button__cta-outline {
+  @extend %btn-call-to-action;
+  @extend %call-to-action-text;
+  background-color: transparent;
+  color: #fff !important;
+  border-color: #fff;
+  &:hover {
+    background-color: #fff;
+    color: #06c !important;
+    text-decoration: none;
+  }
+}
+
+.pf4-c-link__text {
+  @extend %cross-link-text;
+}
+
+#{$block}-c-background-image {
+  --pf4-c-image--Background: url("../images/homeHeroLines.svg");
+
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  background-image: var(--pf4-c-image--Background), linear-gradient(to bottom, #065e8e 0%, #0469a8 25%, #048bc1 75%, #03b9e4 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top, right;
+
+  /* stylelint-disable */
+  @media (max-width: $pf-global--breakpoint--sm) and (-webkit-min-device-pixel-ratio: 2),
+    (max-width: $pf-global--breakpoint--sm) and (min-resolution: 192dpi) {
+    background-image: none, linear-gradient(to bottom, #065e8e 0%, #0469a8 25%, #048bc1 75%, #03b9e4 100%);
+  }
+
+  @media (min-width: $pf-global--breakpoint--sm) {
+    background-size: contain;
+    background-image: url("../images/aboutPF4Lines.svg"), linear-gradient(to bottom, #065e8e 0%, #0469a8 25%, #048bc1 75%, #03b9e4 100%);
+  }
+
+  @media (min-width: $pf-global--breakpoint--sm) and (-webkit-min-device-pixel-ratio: 2),
+    (min-width: $pf-global--breakpoint--sm) and (min-resolution: 192dpi) {
+    background-image: url("../images/aboutPF4Lines.svg"), linear-gradient(to bottom, #065e8e 0%, #0469a8 25%, #048bc1 75%, #03b9e4 100%);
+    background-size: cover;
+  }
+
+  @media (min-width: $pf-global--breakpoint--lg) {
+    background-image: var(--pf4-c-image--Background), linear-gradient(to bottom, #065e8e 0%, #0469a8 25%, #048bc1 75%, #03b9e4 100%);
+    background-size: cover;
+  }
+  /* stylelint-enable */
+}
+
+#{$block}-c-background-image-principles {
+  width: 100%;
+  max-width: 100%;
+  background-image: url("../images/PF4PrinciplesLines.svg"), linear-gradient(to bottom, #03b9e4, #2767b2);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top right, right;
+}
+
+#{$block}-c-background-lines {
+  width: 100%;
+  max-width: 100%;
+  background-image: url("../images/aboutPF4Lines.svg"), linear-gradient(to bottom, #fff, #fff);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top right, right;
+}
+
+@media (max-width: $pf-global--breakpoint--sm) {
+  .pf-c-image {
+    width: 50%;
+    text-align: center;
+  }
+}
