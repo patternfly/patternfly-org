@@ -113,8 +113,6 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve("./src/templates/mdxPageTemplate.js")
         },
-        // mdPlugins: [require('remark-autolink-headings')],
-        // hastPlugins: [require('rehype-autolink-headings')],
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,

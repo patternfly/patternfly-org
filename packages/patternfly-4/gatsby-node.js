@@ -60,9 +60,9 @@ exports.createPages = ({ graphql, actions }) => {
     createRedirect({
       fromPath: f,
       redirectInBrowser: true,
-      toPath: t,
+      toPath: t
     })
-    console.log('\nRedirecting:\n' + f + '\nTo:\n' + t + '\n');
+    console.log('\nRedirecting: ' + f + ' to: ' + t);
   })
   const markdownPageTemplate = path.resolve(`src/templates/markdownPageTemplate.js`)
   return new Promise((resolve, reject) => {
