@@ -23,11 +23,7 @@ Use the About Modal to provide information about the product including the produ
 
 ## Related components and demos
 **HTML/CSS components**
-[Aboutmodal](/documentation/core/demos/aboutmodal), [Aboutmodalbox](/documentation/core/components/aboutmodalbox), [Backdrop](/documentation/core/components/backdrop), [Backgroundimage](/documentation/core/components/backgroundimage)
-
-Related CSS components: [Modal](/documentation/core/demos/modal), [Modalbox](/documentation/core/components/modalbox), [Button](/documentation/core/components/button)
+[Aboutmodal](/documentation/core/demos/aboutmodal), [Aboutmodalbox](/documentation/core/components/aboutmodalbox), [Backdrop](/documentation/core/components/backdrop), [Backgroundimage](/documentation/core/components/backgroundimage), [Button](/documentation/core/components/button)
 
 **React components**
-[AboutModal](/documentation/react/components/aboutmodal), [Backgroundimage](/documentation/react/components/backgroundimage), [Brand](/documentation/react/components/brand),
-
-Related React components: [Modal](/documentation/react/components/modal), [Button](/documentation/react/components/button)
+[AboutModal](/documentation/react/components/aboutmodal), [Backgroundimage](/documentation/react/components/backgroundimage), [Brand](/documentation/react/components/brand),[Button](/documentation/react/components/button)
