@@ -6,11 +6,15 @@ import * as tokensModule from '@patternfly/react-tokens';
 import { StyleSheet, css } from '@patternfly/react-styles';
 
 const propTypes = {
-  variables: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
+  variables: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  filter: PropTypes.string,
+  exact: PropTypes.boolean
 };
 
 const defaultProps = {
-  variables: null
+  variables: null,
+  filter: null,
+  exact: false
 };
 
 const styles = StyleSheet.create({
@@ -71,7 +75,8 @@ class Tokens extends React.Component {
     });
     let columns = [];
     this.state = {
-      searchValue: '',
+      searchValue: this.props.filter || '',
+      searchChanged: false,
       columns: columns.concat([
         { title: 'Variables', transforms: [sortable] },
         { title: 'React Tokens', transforms: [sortable] },
@@ -117,13 +122,20 @@ class Tokens extends React.Component {
   handleSearchChange = (checked, event) => {
     const searchValue = event.target.value;
     this.setState(() => ({
-      searchValue
+      searchValue,
+      searchChanged: true
     }));
   };
 
   render() {
-    const { searchValue, columns, dataRows, sortBy } = this.state;
-    const searchRE = new RegExp(searchValue, 'i');
+    const { searchValue, columns, dataRows, sortBy, searchChanged } = this.state;
+    const { exact } = this.props;
+    let searchRE;
+    if (exact && !searchChanged) {
+      searchRE = new RegExp(`^${searchValue}$`, 'i');
+    } else {
+      searchRE = new RegExp(searchValue, 'i');
+    }
     const filteredTokens = dataRows.filter(c => {
       return searchRE.test(c[0]) || searchRE.test(c[1]) || searchRE.test(c[2]);
     });

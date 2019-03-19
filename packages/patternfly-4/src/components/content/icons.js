@@ -6,21 +6,6 @@ import paramCase from 'param-case';
 import coreIcons from '../../../_repos/core/src/icons/definitions/pf-icons.json';
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
-import {
-  global_FontSize_lg as fontSizeLg,
-  global_spacer_md as spacerMd
-} from '@patternfly/react-tokens';
-
-const styles = {
-  search: css`
-    &.pf-c-form {
-      margin: ${spacerMd.var} 0;
-    }
-    .pf-c-form__label {
-      --pf-c-form__label--FontSize: ${fontSizeLg.var};
-    }
-  `
-};
 
 const allIcons = Object.entries(icons).filter(([name]) => name.endsWith('Icon'));
 let commonIcons = allIcons.filter(([name]) => {
@@ -56,7 +41,7 @@ class Icons extends React.Component {
     });
     return (
       <>
-        <Form css={styles.search} onSubmit={event => { event.preventDefault(); return false; }}>
+        <Form className="ws-search" onSubmit={event => { event.preventDefault(); return false; }}>
         <TextInput
               type="text"
               id="primaryIconsSearch"

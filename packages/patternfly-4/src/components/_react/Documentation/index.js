@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import Example from '../../example';
-import { Title, PageSection, PageSectionVariants } from '@patternfly/react-core';
+import { PageSection, PageSectionVariants } from '@patternfly/react-core';
+import AutoLinkHeader from '@content/AutoLinkHeader';
 import PropsTable from '../propsTable';
 import PropsTableTs from '../propsTableTs';
 import Section from '../../section';
@@ -67,18 +68,20 @@ class Documentation extends React.PureComponent {
           } else if (currentPath.indexOf('/upgrades/') > -1) {
             componentType = 'Upgrades';
           }
+          // ignore above and just set to React for now
+          componentType = 'React';
           return (
             <Layout sideNav={<SideNav />} className="ws-documentation">
               <SEO title="React" />
               <PageSection variant={PageSectionVariants.light} className="section-border">
-                <Title size="md">{componentType}</Title>
-                <Title size="4xl">{title}</Title>
+                <AutoLinkHeader size="md" is="h1">{componentType}</AutoLinkHeader>
+                <AutoLinkHeader size="4xl" is="h2">{title}</AutoLinkHeader>
               </PageSection>
               <PageSection variant={PageSectionVariants.light} className="section-border">
                 {Boolean(description) && (
                   <p className="description" dangerouslySetInnerHTML={makeDescription(description)} />
                 )}
-                <Section title="Examples" headingLevel="h2">
+                <Section title="Examples" headingLevel="h3">
                   {examples.map((exampleObj, i) => {
                     const ComponentExample = exampleObj.component;
                     const rawExample = rawExamples.find(
@@ -131,7 +134,7 @@ class Documentation extends React.PureComponent {
                 })}
               </PageSection>
               {variablesRoot && <PageSection variant={PageSectionVariants.light}>
-                <Section title="CSS Variables" headingLevel="h2">
+                <Section title="CSS Variables" headingLevel="h3">
                   <Tokens variables={variablesRoot} />
                 </Section>
               </PageSection>}

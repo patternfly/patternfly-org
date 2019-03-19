@@ -12,6 +12,8 @@ import {
 } from '@patternfly/react-core';
 import { PatternFlyThemeProvider } from '@patternfly/react-styled-system';
 import { Location } from '@reach/router';
+import { MDXProvider } from '@mdx-js/tag';
+import AutoLinkHeader from '@content/AutoLinkHeader';
 import './markdownPageTemplate.scss';
 
 const navBuilder = navData => {
@@ -64,7 +66,21 @@ const navBuilder = navData => {
 
 const MdxPageTemplate = ({ data, children, props }) => {
   const SideNav = navBuilder(data);
-  const content = <div className="markdown-body">{children}</div>;
+  const content = (
+    <MDXProvider
+      components={{
+        h1: props => <AutoLinkHeader is='h1' {...props} />,
+        h2: props => <AutoLinkHeader is='h2' {...props} />,
+        h3: props => <AutoLinkHeader is='h3' {...props} />,
+        h4: props => <AutoLinkHeader is='h4' {...props} />,
+        h5: props => <AutoLinkHeader is='h5' {...props} />,
+        h6: props => <AutoLinkHeader is='h6' {...props} />
+      }}
+    >
+      <div className="markdown-body">{children}</div>
+    </MDXProvider>
+  );
+  // const content = <div className="markdown-body">{children}</div>;
   return (
     <Layout sideNav={SideNav}>
       <SEO title="Docs" keywords={['gatsby', 'application', 'react']} />

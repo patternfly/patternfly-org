@@ -2,7 +2,8 @@ import React from 'react';
 import SideNav from './SideNav';
 import Layout from '../../layout';
 import FullPageExampleLayout from '@siteComponents/FullPageExampleLayout';
-import { Title, PageSection, PageSectionVariants } from '@patternfly/react-core';
+import { PageSection, PageSectionVariants } from '@patternfly/react-core';
+import AutoLinkHeader from '@content/AutoLinkHeader';
 import { Location } from '@reach/router';
 import Section from '../../section';
 import SEO from '../../seo';
@@ -40,25 +41,27 @@ export default class Documentation extends React.Component {
         } else if (currentPath.indexOf('/upgrades/') > -1) {
           componentType = 'Upgrades';
         }
+        // ignore above and just set to HTML for now
+        componentType = 'HTML';
         return (
           <Layout sideNav={<SideNav />}>
             <SEO title="React" />
             <PageSection variant={PageSectionVariants.light} className="pf-w-section-border">
-              <Title size="md">{componentType}</Title>
-              <Title size="4xl">{heading}</Title>
+              <AutoLinkHeader size="md" is="h1">{componentType}</AutoLinkHeader>
+              <AutoLinkHeader size="4xl" is="h2">{heading}</AutoLinkHeader>
             </PageSection>
             <PageSection variant={PageSectionVariants.light} className="pf-w-section-border">
-              <Section title="Examples" headingLevel="h2" className={className}>
+              <Section title="Examples" headingLevel="h3" className={className}>
                 {children}
               </Section>
             </PageSection>
             <PageSection variant={PageSectionVariants.light}>
-              <Section title="Documentation" headingLevel="h2">
+              <Section title="Documentation" headingLevel="h3">
                 <div className="Documentation Documentation__docsection" dangerouslySetInnerHTML={HTML_DOCS} />
               </Section>
             </PageSection>
             {variablesRoot && <PageSection variant={PageSectionVariants.light}>
-              <Section title="CSS Variables" headingLevel="h2">
+              <Section title="CSS Variables" headingLevel="h3">
                 <Tokens variables={variablesRoot} />
               </Section>
             </PageSection>}

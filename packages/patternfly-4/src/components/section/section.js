@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@patternfly/react-styles';
 import { Title } from '@patternfly/react-core';
+import AutoLinkHeader from '@content/AutoLinkHeader';
 
 const propTypes = {
   children: PropTypes.node,
@@ -29,9 +30,7 @@ const Section = ({ children, className, description, headingLevel, name, preface
     {Boolean(title || description) && (
       <header className={css('ws-header')}>
         {Boolean(title) && (
-          <Title size={size} id={name} headingLevel={headingLevel}>
-            {title}
-          </Title>
+          <AutoLinkHeader size={size} is={headingLevel}>{title}</AutoLinkHeader>
         )}
         {Boolean(preface) && <p className={css('ws-preface')}>{preface}</p>}
         {Boolean(description) && <p>{description}</p>}

@@ -50,7 +50,20 @@ exports.onCreateNode = ({ node, actions }) => {
 };
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
+  const redirects = [
+    { f: `/get-started`, t: `/get-started/about` },
+    { f: `/design-guidelines`, t: `/design-guidelines/styles/icons` },
+    { f: `/documentation`, t: `/documentation/react/components/aboutmodal` }
+  ];
+  redirects.forEach(({ f, t }) => {
+    createRedirect({
+      fromPath: f,
+      redirectInBrowser: true,
+      toPath: t,
+    })
+    console.log('\nRedirecting:\n' + f + '\nTo:\n' + t + '\n');
+  })
   const markdownPageTemplate = path.resolve(`src/templates/markdownPageTemplate.js`)
   return new Promise((resolve, reject) => {
     graphql(`
@@ -255,7 +268,8 @@ const continueWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) 
         '@components': path.resolve(__dirname, './_repos/core/src/patternfly/components'),
         '@layouts': path.resolve(__dirname, './_repos/core/src/patternfly/layouts'),
         '@demos': path.resolve(__dirname, './_repos/core/src/patternfly/demos'),
-        '@project': path.resolve(__dirname, './_repos/core/src')
+        '@project': path.resolve(__dirname, './_repos/core/src'),
+        '@content': path.resolve(__dirname, './src/components/content')
       }
     },
     resolveLoader: {

@@ -104,7 +104,6 @@ class Layout extends React.Component {
                     id="global-search-input"
                     name="global-search-input"
                     placeholder="Search"
-                    value=""
                   />
             </Form>
             </ToolbarItem>
