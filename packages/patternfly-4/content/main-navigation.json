@@ -1,14 +1,14 @@
 [
   {
     "text": "Get started",
-    "path": "/get-started/about"
+    "path": "/get-started"
   },
   {
     "text": "Design guidelines",
-    "path": "/design-guidelines/styles/icons"
+    "path": "/design-guidelines"
   },
   {
     "text": "Documentation",
-    "path": "/documentation/react/components/alert"
+    "path": "/documentation"
   }
 ]

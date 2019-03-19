@@ -6,7 +6,7 @@ import { css } from '@patternfly/react-styles';
 import PreviewToolbar from '../../PreviewToolbar/PreviewToolbar';
 import Preview from '../Preview';
 import ComponentItems from './ComponentItems';
-import { Title } from '@patternfly/react-core';
+import AutoLinkHeader from '@content/AutoLinkHeader';
 import EditorToolbar from '../../example/editorToolbar';
 import PrismCode from 'react-prism';
 import 'prismjs/themes/prism-coy.css';
@@ -84,7 +84,7 @@ export default class Example extends React.Component {
     if (!this.state.isFull) {
       return (
         <div className="ws-live-demo">
-          <Title size="lg">{heading}</Title>
+          <AutoLinkHeader size="lg" is="h4">{heading}</AutoLinkHeader>
           <PreviewToolbar fullPath={fullPath} showLights={!fullPageOnly} showViewports={!fullPageOnly} onViewportChange={this.onViewportChange} onLightsChange={this.onLightsChange}/>
           {Boolean(description) && <p className={css('description')} dangerouslySetInnerHTML={makeDescription(description)} />}
           <Preview heading={heading} viewport={this.state.viewport} lights={this.state.lights} fullPageOnly={fullPageOnly} minHeight={minHeight}>

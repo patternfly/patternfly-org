@@ -49,9 +49,11 @@ module.exports = async (
     return;
   }
 
-  if (node.internal.owner === "gatsby-transformer-react-docgen") {
+  if (!node.absolutePath || node.absolutePath.indexOf('/patternfly-4/content/') === -1) {
     return;
   }
+
+  console.log(`creating page for: ${node.relativePath}`);
 
   const content = await loadNodeContent(node);
 

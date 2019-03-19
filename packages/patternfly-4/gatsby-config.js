@@ -109,14 +109,11 @@ module.exports = {
     {
       resolve: `gatsby-mdx-tmp`,
       options: {
-        extensions: [`.mdx`],
+        extensions: ['.mdx'],
         defaultLayouts: {
           default: require.resolve("./src/templates/mdxPageTemplate.js")
         },
         gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-autolink-headers`
-          },
           {
             resolve: `gatsby-remark-images`,
             options: {

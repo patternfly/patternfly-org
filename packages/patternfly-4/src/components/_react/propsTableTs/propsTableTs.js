@@ -24,7 +24,12 @@ const defaultProps = {
 };
 
 export const PropsTableTs = ({ name, props }) => (
-  <Section name={name} title={`${name} Props`} description={`The ${name} component accepts the following props.`}>
+  <Section 
+    name={name} 
+    title={`${name} Props`} 
+    headingLevel="h3"
+    description={`The ${name} component accepts the following props.`}
+  >
     <Table className="ws-props-table">
       <Heading>
         <TH>Name</TH>
