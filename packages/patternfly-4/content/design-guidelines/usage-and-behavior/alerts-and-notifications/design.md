@@ -27,12 +27,6 @@ The status area and alert title are coded to communicate the severity of an aler
 |Critical |Red (#CC0000)     |fa-exclamation-circle | Use to indicate that a critical or blocking error has occurred
 |Success  |Green (#92D400)   |fa-check-circle | Use to indicate that a task or process has completed successfully
 
-
-## Related components and demos
-**Core HTML/CSS:** [Alert](/documentation/core/components/alert), [Alert Group](/documentation/core/components/alert-group), Alert Demo
-
-**React:** [Alert](/documentation/react/components/alert), [Alert Group](/documentation/core/react/alert-group)
-
 ## Usage
 There are two primary use cases when alerts are used:
 
@@ -114,3 +108,8 @@ A more accessible version of this message would look like this:
 ![non-accessible toast notification](img/notification-accessible.png)
 
 While this is more verbose, it has the advantage of being usable for both sighted and non-sighted users by providing instructions to screen reader users about where they can go to complete the action.
+
+## Related components and demos
+**Core HTML/CSS:** [Alert](/documentation/core/components/alert), [Alert Group](/documentation/core/components/alert-group)
+
+**React:** [Alert](/documentation/react/components/alert)

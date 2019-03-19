@@ -24,13 +24,13 @@ Most forms will contain the following basic elements:
 
 3. [Data input](/design-guidelines/usage-and-behavior/data-input) - provides a way for users to submit any information that is not free-form text. For example, you might use a check box to enable users to select from multiple predetermined values or a radio button to enable users to select one value from a list of several values. Input components are designed for specific use cases. Learn more about data input variations in the [text and data input design guidelines](/design-guidelines/usage-and-behavior/data-input).
 
-4. [Help](#Provide-the-right-kind-of-help) - provides assistance in any area where the user might need additional information or context to provide the right input
+4. [Help](#provide-the-right-kind-of-help) - provides assistance in any area where the user might need additional information or context to provide the right input
     * Infotip - provides content in a popover or tooltip.
     * Input help - provides help inside of or directly below a field.
         * Placeholder text
         * Helper text
 
-5. [Errors and validation](#Provide-errors-and-validation) - ensures that the correct information is collected before the form can be submitted to the system.
+5. [Errors and validation](#provide-errors-and-validation) - ensures that the correct information is collected before the form can be submitted to the system.
 
 6. Action buttons - enables a user to submit or exit a form. Button placement depends on the type of form you're presenting to the user.
 
@@ -47,37 +47,6 @@ Most forms will contain the following basic elements:
   ![Buttons on a full page](img/fullpage-button.png)
 
   7. Required field indicator
-
-## Components and demos used
-The PatternFly components listed can be used in a number of ways to build forms to suit specific needs or use-cases.
-
-**HTML/CSS components**
-* [Form](/documentation/core/components/form)
-* [Button](/documentation/core/components/button)
-* [Check](/documentation/core/components/check)
-* [Content](/documentation/core/components/content)
-* [Dropdown](/documentation/core/components/dropdown)
-* [Formcontrol](/documentation/core/components/formcontrol)
-* [Inputgroup](/documentation/core/components/inputgroup)
-* [Popover](/documentation/core/components/popover)
-* [Progress](/documentation/core/components/progress)
-* [Switch](/documentation/core/components/switch)
-* [Tooltip](/documentation/core/components/tooltip)
-
-**React components**
-* [Form](/documentation/react/components/form)
-* [Button](/documentation/react/components/button)
-* [Checkbox](documentation/react/components/checkbox)
-* [Dropdown](/documentation/react/components/dropdown)
-* [Progress](/documentation/react/components/progress)
-* [Radio](/documentation/react/components/radio)
-* [Select](/documentation/react/components/select)
-* [Switch](/documentation/react/components/switch)
-* [TextArea](/documentation/react/components/textarea)
-* [Text](/documentation/react/components/text)
-* [Popover](/documentation/react/components/popover)
-* [TextInput](/documentation/react/components/textinput)
-* [Tooltip](/documentation/react/components/tooltip)
 
 ## Usage
 ### Provide the right data input
@@ -163,11 +132,13 @@ Some common use cases include:
 ![Inline error](img/validation-example.png)
 
 **Server-side validation**
-Server-side validation is performed when the user attempts to submit a form. In this scenario, the user completes the form in its entirety and the page is reloaded with any errors detected.
+Server-side validation is performed when the user attempts to submit a form. A user completes the form in its entirety and the page is reloaded with any errors detected.
 
 For server-side validation, use an inline alert along with inline errors wherever possible to make it simple for the user to quickly identify areas that need to be fixed.
 
 Notifications should describe the error and help users solve the problem.
+
+See [alerts and notifications](/design-guidelines/usage-and-behavior/alerts-and-notifications) for more information.
 
 ### Use progressive disclosure
 Use progressive disclosure to hide and show fields based on the users’ selection. This approach keeps the workflow short and allows the user to focus on only the fields relevant to them. It also avoids using color to indicate whether or not a field is available, making it suitable for colorblind users.
@@ -184,8 +155,6 @@ Use progressive disclosure to hide and show fields based on the users’ selecti
 
 **As a wizard**
 ![Wizard](img/wizard-example.png)
-
-> Note: For buttons on wizards, follow modal standards. Align buttons to the right. Place the primary button on the far right and the secondary button to the left.  
 
 **Specifications**
 When you're laying out your form elements, we recommend leaving enough vertical space to accommodate a line of caption text (about 32px) beneath form fields to account for inline errors and helper text. For more information see [Spacers](/design-guidelines/styles/spacers).
@@ -215,3 +184,34 @@ For example, you could use this type of help to define an unfamiliar term or con
 Again, think of a form as a conversation with your user. No one wants to have a conversation with a robot.
 
 See our [content guidelines](/design-guidelines/content/) for additional guidance.
+
+## Related components and demos
+The PatternFly components listed can be used in a number of ways to build forms to suit specific needs or use-cases.
+
+**HTML/CSS components**
+* [Form](/documentation/core/components/form)
+* [Button](/documentation/core/components/button)
+* [Check](/documentation/core/components/check)
+* [Content](/documentation/core/components/content)
+* [Dropdown](/documentation/core/components/dropdown)
+* [Formcontrol](/documentation/core/components/formcontrol)
+* [Inputgroup](/documentation/core/components/inputgroup)
+* [Popover](/documentation/core/components/popover)
+* [Progress](/documentation/core/components/progress)
+* [Switch](/documentation/core/components/switch)
+* [Tooltip](/documentation/core/components/tooltip)
+
+**React components**
+* [Form](/documentation/react/components/form)
+* [Button](/documentation/react/components/button)
+* [Checkbox](documentation/react/components/checkbox)
+* [Dropdown](/documentation/react/components/dropdown)
+* [Progress](/documentation/react/components/progress)
+* [Radio](/documentation/react/components/radio)
+* [Select](/documentation/react/components/select)
+* [Switch](/documentation/react/components/switch)
+* [TextArea](/documentation/react/components/textarea)
+* [Text](/documentation/react/components/text)
+* [Popover](/documentation/react/components/popover)
+* [TextInput](/documentation/react/components/textinput)
+* [Tooltip](/documentation/react/components/tooltip)
