@@ -131,19 +131,19 @@ const IndexPage = () => (
               <Title size="md" className="pf-m-white">QUICKLINKS</Title>
               <Nav aria-label="Quick Links" className="pf-m-white">
                 <NavList className="pf-c-nav__list-footer">
-                  <NavItem to="#" aria-label="Get started with PatternFly 4">
+                  <NavItem to="/get-started" aria-label="Get started with PatternFly 4">
                     Get started
                   </NavItem>
-                  <NavItem to="#" aria-label="PatternFly 4 components">
+                  <NavItem to="/documentation/react/components/alert" aria-label="PatternFly 4 components">
                     Components
                   </NavItem>
-                  <NavItem to="#" aria-label="PatternFly 4 layouts">
+                  <NavItem to="/documentation/react/layouts/bullseye" aria-label="PatternFly 4 layouts">
                     Layouts
                   </NavItem>
-                  <NavItem to="#" aria-label="PatternFly 4 styles">
+                  <NavItem to="design-guidelines/styles/icons" aria-label="PatternFly 4 styles">
                     Styles
                   </NavItem>
-                  <NavItem to="#" aria-label="View the PatternFly 3 website">
+                  <NavItem to="https://www.patternfly.org" target="top" aria-label="View the PatternFly 3 website">
                     PatternFly 3
                   </NavItem>
                 </NavList>
@@ -153,13 +153,13 @@ const IndexPage = () => (
               <Title size="md" className="pf-m-white">CONTRIBUTE</Title>
               <Nav aria-label="Quick Links">
                 <NavList className="pf-c-nav__list-footer">
-                  <NavItem to="#" aria-label="How to contribute as a Designer">
+                  <NavItem to="/get-started/designers" aria-label="How to contribute as a Designer">
                     Designers
                   </NavItem>
-                  <NavItem to="#" aria-label="How to contribute as a Developer">
+                  <NavItem to="/get-started/developers" aria-label="How to contribute as a Developer">
                     Developers
                   </NavItem>
-                  <NavItem to="#" aria-label="PatternFly 4 Code of Conduct">
+                  <NavItem to="https://github.com/patternfly/patternfly/blob/master/CODE_OF_CONDUCT.md" target="top" aria-label="PatternFly 4 Code of Conduct">
                     Code of Conduct
                   </NavItem>
                 </NavList>
@@ -174,15 +174,15 @@ const IndexPage = () => (
               <p className="pf-m-white pf-u-pb-lg">
                 PatternFly is an open source design system built to drive consistency and unify teams. We provide tools like design documentation, components, and code examples to make it possible for anyone to design and build responsive, accessible web applications.
               </p>
-              <Link to="https://www.facebook.com/groups/PatternFlyCommunity/" target="top" aria-label="Link to PatternFly Facebook page">
+              <Text component={TextVariants.a} href="https://www.facebook.com/groups/PatternFlyCommunity/" target="top" aria-label="Link to PatternFly Facebook page">
                 <i class="fab fa-facebook"></i>
-              </Link>
-              <Link to="https://github.com/patternfly/patternfly" target="top" aria-label="Link to PatternFly GitHub page">
+              </Text>
+              <Text component={TextVariants.a} href="https://github.com/patternfly/patternfly" target="top" aria-label="Link to PatternFly GitHub page">
                 <i class="fab fa-github"></i>
-              </Link>
-              <Link to="https://twitter.com/patternfly_des" target="top" aria-label="Link to PatternFly Twitter page">
+              </Text>
+              <Text component={TextVariants.a} href="https://twitter.com/patternfly_des" target="top" aria-label="Link to PatternFly Twitter page">
                 <i class="fab fa-twitter"></i>
-              </Link>
+              </Text>
             </GridItem>
           </Grid>
         </GridItem>
@@ -191,19 +191,21 @@ const IndexPage = () => (
     <PageSection className="pf4-l-footer-dark">
       <Grid className="pf-u-py-xl-on-sm pf-u-py-0-on-md pf-u-align-items-center">
         <GridItem md={3} mdOffset={1}>
-          <img src={redhatLogo} alt="Red Hat logo" />
+          <Text component={TextVariants.a} href="https://www.redhat.com" target="top" aria-label="Visit Red Hat.com">
+            <img src={redhatLogo} alt="Red Hat logo" />
+          </Text>
         </GridItem>
         <GridItem md={2}>
           Copyright &copy; 2019 Red Hat, Inc.
         </GridItem>
         <GridItem md={4}>
-          <Text component={TextVariants.a} href="https://www.redhat.com/en/about/privacy-policy" aria-label="Privacy statement">
+          <Text component={TextVariants.a} href="https://www.redhat.com/en/about/privacy-policy" target="top" aria-label="Privacy statement">
             Privacy Statement
           </Text>
-          <Text component={TextVariants.a} href="#" aria-label="Terms of use">
+          <Text component={TextVariants.a} href="https://www.redhat.com/en/about/terms-use" target="top" aria-label="Terms of use">
             Terms of use
           </Text>
-          <Text component={TextVariants.a} href="https://www.redhat.com/en/about/all-policies-guidelines" aria-label="All policies and guidelines">
+          <Text component={TextVariants.a} href="https://www.redhat.com/en/about/all-policies-guidelines" target="top" aria-label="All policies and guidelines">
             All policies and guidelines
           </Text>
         </GridItem>
