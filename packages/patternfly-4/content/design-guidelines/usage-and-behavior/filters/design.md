@@ -48,13 +48,19 @@ The attribute-value filter gives the user the ability to specify an attribute-va
 
 ![image7](img/attribute-value-date-picker.png)
 
-The following elements can be used in an attribute-value (textbox) filter.
+The attribute-value filter can be built using an **InputGroup** component |[Core](/documentation/core/components/inputgroup) | [React](#)|. The following elements can be used in an attribute-value (textbox) filter.
 1. **Attribute selector**: A select list that allows the user to select the attribute that they want to filter against.
+> Components used: **Select** |[HTML](#) | [React](#)|
+
 2. **Value selector**: The value selector can be any data input component that is used to pass a value to the filter. Common components used for value selection include:
   * A **Search Field** for entering a value from the keyboard. Use when you will enter the value as unbounded data (e.g. a name).
+  > Components used: **Form Control** |[Core](/documentation/core/components/formcontrol)|, **Text Input** |[React](/documentation/react/components/textinput)|
   * A **Single Select** for selecting a value from a predefined list.
+  > Components used: **Select** |[Core](/documentation/core/components/select) | [React](/documentation/core/components/select)|
   * A **Checkbox Select** for selecting multiple values from a predefined list. Multiple values will be combined using a logical OR operation. Items that meet both values will be shown higher in the results list.
+  > Components used: **Select** |[Core](/documentation/core/components/select) | [React](/documentation/core/components/select)|
   * A **Date Picker** for selecting a date, time, or a date/time range. Use when the value you want to filter on is expressed as a date and/or time stamp.
+  > Components used: **DatePicker** [coming]
 
 #### When to use
 Use an attribute-value filter when the data to be filtered consists of sets of attribute-value pairs and values may be either unbounded (i.e text entry), a bounded value list, or temporal data like date and time. Attribute-value filters are also useful for cases where you expect your users to only be filtering by one thing at a time.
@@ -80,6 +86,8 @@ The following elements can be used in a faceted (checkbox) filter.
 
 **Note**: Consider adding an “Other” option to attribute lists where items may not fall under any of the specified values.
 
+> Components used: **Select** |[Core](/documentation/core/components/select) | [React](/documentation/core/components/select)|
+
 #### When to use
 Use a faceted (checkbox) filter when:
 * The user is browsing a set of items without robust knowledge of what is in the set.
@@ -99,6 +107,8 @@ Type-ahead filters are useful when there is a large number of items to select fr
 The following elements can be used in a type-ahead filter.
 1. **Single select**: Single select type-ahead filters can handle one input. Users may scroll through the dropdown list or type in the box to find the desired option.
 2. **Multi select**: Multi select type-ahead filters can handle multiple selections. Users may scroll through the dropdown list and select multiple options, or type in the box to find the desired options. Values will be shown in the input field as filter chips.
+
+> Components used: **Select** |[Core](/documentation/core/components/select) | [React](/documentation/core/components/select)|
 
 #### When to use
 Use a type-ahead filter when:
@@ -123,6 +133,8 @@ As filters are applied, the value will be displayed as a filter chip. Each filte
 
 ![image11](img/basic-filter-chips.png)
 
+> Components used: **Chip** |[Core](/documentation/core/components/chip)|, **ChipGroup** |[React](/documentation/react/components/chipgroup)|
+
 **Complex filter chips**
 
 Filter chips may be used to show Boolean relationships between different attribute-value pairs. Individual filter chips can be removed by clicking the ‘x’ in each chip, and entire filter groups can be removed using the group ‘x’.
@@ -138,6 +150,8 @@ Filter chips may be used to show Boolean relationships between different attribu
   * **Example**: Items that have both Samsung and Hewlett-Packard as vendors are listed before items that only have Samsung or Hewlett-Packard.
 
 In the example above, the result will be to show all items that have a status of stopped OR down AND are from vendor Samsung OR Hewlett-Packard AND match the keyword.
+
+> Components used: **ChipGroup** |[Core](/documentation/core/components/chipgroup)|[React](/documentation/react/components/chipgroup)|
 
 #### When to use
 Use filter chips when:
@@ -174,27 +188,6 @@ Use a complex faceted filter when you have limited space and multiple attributes
 
 #### Behavior
 Filter queries are applied when the user selects or deselects an item in the list, or types a query in the input field and presses Enter.
-
-
-
-## Related components and demos
-**Core HTML/CSS**
-* [Badges](/documentation/core/components/badge)
-* [Check](/documentation/core/components/check)
-* [Chip](/documentation/core/components/chip)
-* [Chip group](/documentation/core/components/chipgroup)
-* [Input group](/documentation/core/components/inputgroup)
-* [Options Menus](/documentation/core/components/optionsmenu)
-* [Select](/documentation/core/components/select)
-* [Toolbar](/documentation/core/components/toolbar)
-
-**React**
-* [Badges](/documentation/react/components/badge)
-* [Checkbox](/documentation/react/components/checkbox)
-* [Chip Group](/documentation/react/components/chipgroup)
-* [Toolbar demo](/documentation/react/demos/toolbar)
-
-
 
 ## Usage
 ### Layout considerations
