@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql, withPrefix, Link, navigate } from 'gatsby';
 import Header from './header';
 import {
-  BackgroundImage,
-  BackgroundImageSrc,
   Brand,
   Nav,
   NavItem,
@@ -87,13 +85,6 @@ class Layout extends React.Component {
           }}
         </Location>
       );
-      const bgImages = {
-        [BackgroundImageSrc.lg]: withPrefix('/img/pfbg_1200.jpg'),
-        [BackgroundImageSrc.sm]: withPrefix('/img/pfbg_768.jpg'),
-        [BackgroundImageSrc.sm2x]: withPrefix('/img/pfbg_768@2x.jpg'),
-        [BackgroundImageSrc.xl]: withPrefix('/img/pfbg_2000.jpg'),
-        [BackgroundImageSrc.filter]: withPrefix('/img/background-filter.svg#image_overlay')
-      };
       const PageToolbar = (
         <Toolbar>
           <ToolbarGroup>
@@ -127,7 +118,6 @@ class Layout extends React.Component {
       return (
         <>
           <Header siteTitle={data.site.siteMetadata.title} />
-          <BackgroundImage src={bgImages} />
           <Page isManagedSidebar={sideNav !== null} header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} /> : null}>
             {tertiaryNav && <PageSection variant={PageSectionVariants.light}>
               {tertiaryNav}
