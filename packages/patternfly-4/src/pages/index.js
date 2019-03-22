@@ -54,7 +54,7 @@ const IndexPage = () => (
       <Grid gutter="md" className="pf-u-pb-3xl">
         <GridItem sm={12}>
           <Grid>
-            <GridItem sm={12} md={4} mdOffset={2}>
+            <GridItem sm={12} md={4} mdOffset={1} lgOffset={2} className="pf-u-display-flex pf-u-display-block-on-sm pf-u-flex-direction-column pf-u-pt-2xl pf-u-pt-0-on-sm">
               <TextContent>
                 <div className="pf-u-pb-2xl">
                   <Text component={TextVariants.h2}>Make better decisions with clear guidance</Text>
@@ -63,15 +63,15 @@ const IndexPage = () => (
                   </Text>
                 </div>
                 <div className="pf-u-pb-2xl">
-                  <Text component={TextVariants.h2}>Start building with components</Text>
-                  <Text component={TextVariants.p}>Components are like building blocks. Designed to be flexible and modular, you can mix and match to create a solution for almost any UI problem.</Text>
-                  <Text component={TextVariants.a} href="/documentation/react/components/alert" aria-label="view components" className="pf-u-pl-0 pf4-c-link__text">View components <CaretRightIcon />
-                  </Text>
-                </div>
-                <div className="pf-u-pb-2xl">
                   <Text component={TextVariants.h2}>Stay aligned with layouts</Text>
                   <Text component={TextVariants.p}>Layouts provide fully responsive page structure that keeps your components organized and aligned regardless of screen size.</Text>
                   <Text component={TextVariants.a} href="/documentation/react/layouts/bullseye" aria-label="view layouts" className="pf-u-pl-0 pf4-c-link__text">View layouts <CaretRightIcon />
+                  </Text>
+                </div>
+                <div className="pf-u-pb-2xl">
+                  <Text component={TextVariants.h2}>Start building with components</Text>
+                  <Text component={TextVariants.p}>Components are like building blocks. Designed to be flexible and modular, you can mix and match to create a solution for almost any UI problem.</Text>
+                  <Text component={TextVariants.a} href="/documentation/react/components/alert" aria-label="view components" className="pf-u-pl-0 pf4-c-link__text">View components <CaretRightIcon />
                   </Text>
                 </div>
                 <div className="pf-u-pb-2xl">
@@ -83,11 +83,15 @@ const IndexPage = () => (
               </TextContent>
             </GridItem>
             <GridItem sm={12} md={6}>
-              <Grid>
+              <div class="pf4-c-image__laptop">&nbsp;</div>
+              <div class="pf4-c-image__phone">&nbsp;</div>
+              <div class="pf4-c-image__screen">&nbsp;</div>
+              <div class="pf4-c-image__desktop">&nbsp;</div>
+              {/* <Grid>
                 <GridItem smOffset={1} className="pf-u-text-align-center">
                   <img src={pf4hardware} alt="hardware" className="pf-c-image" />
                 </GridItem>
-              </Grid>
+              </Grid> */}
             </GridItem>
           </Grid>
         </GridItem>

@@ -94,3 +94,59 @@ $block: '.pf4';
     text-align: center;
   }
 }
+
+/* positioning of images based on a 1440px width */
+.pf4-c-image__laptop {
+  height: 40%;
+  width: 100%;
+  background-image: url("../images/laptop.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  @media (max-width: $pf-global--breakpoint--sm) {
+    position: absolute;
+    height: 25%;
+    background-position: 70%;
+  }
+}
+.pf4-c-image__phone {
+  position: relative;
+  top: -120px;
+  height: 25%;
+  width: 100%;
+  background-image: url("../images/phone.svg");
+  background-repeat: no-repeat;
+  background-position: 32%;
+  @media (max-width: $pf-global--breakpoint--sm) {
+    top: 50px;
+    height: 140px;
+    background-position: 40%;
+  }
+}
+.pf4-c-image__screen {
+  position: relative;
+  top: -225px;
+  height: 25%;
+  width: 100%;
+  background-image: url("../images/screen.svg");
+  background-repeat: no-repeat;
+  background-position: 60%;
+  z-index: 2;
+  @media (max-width: $pf-global--breakpoint--sm) {
+    top: 30px;
+    height: 145px;
+    background-position: 53%;
+  }
+}
+.pf4-c-image__desktop {
+  position: relative;
+  top: -300px;
+  height: 42%;
+  width: 100%;
+  background-image: url("../images/desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 42%;
+  @media (max-width: $pf-global--breakpoint--sm) {
+    top: -115px;
+    height: 230px;
+  }
+}
