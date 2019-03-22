@@ -6,18 +6,18 @@ $block: '.pf4';
 
 .pf-m-white,
 .pf-m-white > * {
-  color: #fff !important; /* stylelint-disable-line */
+  color: var(--pf-global--Color--light-100) !important; /* stylelint-disable-line */
 }
 
 .pf4-c-button__cta-primary {
   @extend %btn-call-to-action;
   @extend %call-to-action-text;
-  background-color: #fff;
+  background-color: var(--pf-global--Color--light-100);
   color: #06c;
-  border-color: #fff;
+  border-color: var(--pf-global--Color--light-100);
   &:hover {
     background-color: transparent;
-    color: #fff;
+    color: var(--pf-global--Color--light-100);
     text-decoration: none;
   }
 }
@@ -25,10 +25,10 @@ $block: '.pf4';
   @extend %btn-call-to-action;
   @extend %call-to-action-text;
   background-color: transparent;
-  color: #fff !important;
-  border-color: #fff;
+  color: var(--pf-global--Color--light-100) !important;
+  border-color: var(--pf-global--Color--light-100);
   &:hover {
-    background-color: #fff;
+    background-color: var(--pf-global--Color--light-100);
     color: #06c !important;
     text-decoration: none;
   }

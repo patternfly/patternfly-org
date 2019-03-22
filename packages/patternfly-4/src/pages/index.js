@@ -44,7 +44,7 @@ const IndexPage = () => (
     </PageSection>
     <PageSection variant={PageSectionVariants.light}>
       <Grid>
-        <GridItem sm={12} md={4} mdOffset={4} className="pf-u-text-align-center">
+        <GridItem sm={12} md={6} mdOffset={3} className="pf-u-py-2xl pf-u-text-align-center">
           <Title size="4xl" id="AboutPatternFly4" className="pf-u-mb-md">About PatternFly 4</Title>
           <Title size="lg">We provide tools like design documentation, components, and code examples to make it possible for anyone to design and build responsive, accessible user experiences.</Title>
         </GridItem>
@@ -169,7 +169,7 @@ const IndexPage = () => (
         </GridItem>
         <GridItem md={5}>
           <Grid className="pf-u-py-xl-on-sm pf-u-py-8-on-md">
-            <GridItem md={7} mdOffset={5} className="pf4-l-footer-column pf-u-p-lg">
+            <GridItem sm={12} md={8} mdOffset={4} className="pf4-l-footer-column pf-u-p-lg">
               <img src={patternflyLogo} alt="PatternFly logo" className="pf-u-pb-lg" />
               <p className="pf-m-white pf-u-pb-lg">
                 PatternFly is an open source design system built to drive consistency and unify teams. We provide tools like design documentation, components, and code examples to make it possible for anyone to design and build responsive, accessible web applications.

@@ -20,7 +20,7 @@ import {
   TextInput
 } from '@patternfly/react-core';
 import { Location } from '@reach/router';
-import brandImg from './l_pf-reverse-164x11.png';
+import brandImg from '../images/PatternFly_logo.svg';
 
 class Layout extends React.Component {
 
