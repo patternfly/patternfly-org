@@ -7,6 +7,7 @@ path: "/design-guidelines/content/grammar-and-terminology"
 [Abbreviations](#abbreviations)
 [Acronyms](#acronyms)
 [Capitalization](#capitalization)
+[Date and time](#date-and-time)
 [Punctuation](#punctuation)
 [Truncation](#truncation)
 
@@ -48,16 +49,6 @@ path: "/design-guidelines/content/grammar-and-terminology"
 | N/A           | Refers to data not available. Applies to tables, list views, card views, etc. |
 | --            | Refers to data not applicable. It is different than N/A that data would never be available for the object. |
 
-### Date and time
-
-When referring to time zones, use [http://www.timeanddate.com/time/zones/](http://www.timeanddate.com/time/zones/):
-
-| Symbol | Period |
-| --- | --- |
-| AM | Ante meridiem (before noon) |
-| PM | Post meridiem (after noon) |
-
-
 ## Acronyms
 
 ### General rules
@@ -73,6 +64,63 @@ Use sentence-style capitalization for all text elements, **except:**
 
 Sentence style capitalizes only the first word of each sentence and proper nouns, like names.
 
+## Date and time
+
+Whenever possible, it is best to enable users to customize the format in which date and time are displayed in the interface.
+
+These date and time standards are based in American English, but date and time is formatted differently depending on language.
+
+### Date
+Use the default US style of **Month DD, YYYY**. Use **DD Month YYYY** for non-US locations.
+
+Whenever possible, write out the full name of the month. If you have space constraints, use the 3 letter abbreviation for the name of the month.
+
+Jan
+Feb
+Mar
+Apr
+May
+Jun
+Jul
+Aug
+Sep
+Oct
+Nov
+Dec
+
+**Examples**
+Thursday, 01 January 2019
+07 January 2019
+07 Jan 2019
+
+When you represent the date as a numeric value or label, use the ISO Standard 8601: YYYY-MM-DD.
+
+### Time
+By default, use the 12 hour clock followed by AM or PM. Enter a space after the last number to separate the time from the abbreviation.
+
+When representing date and time, include your time stamp after the date and separate with a comma.
+
+**Examples**
+Thursday, 21 January 2019, 9:38:11 PM
+9:38:11 PM
+9:38 PM
+
+**Absolute and relative time**
+The use of absolute or relative times stamps will depend on your user needs and use case. If your user is primarily interested in understanding the exact date and time that an event occurred, use an absolute timestamp.
+
+If users are interested in how long ago an event occurred, use a relative timestamp.
+
+For consistent timestamp formatting, we recommend using the following examples:
+
+| Timeframe  | Usage |
+| ------------- | ----- |
+| 0-60 seconds | Just now |
+| 1-60 minutes | 30 mins ago |
+| 1-24 hours | 9:30 AM |
+| Yesterday | Yesterday, 9:30 AM |
+| In the last week | Thursday, 9:30 AM |
+| 1 week - 1 year | 21 Jan, 9:30 AM |
+| 1 year + | 21 Jan 2019 |
 <!--## Links
 
 ### External links
