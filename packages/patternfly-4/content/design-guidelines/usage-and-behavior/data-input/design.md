@@ -22,7 +22,7 @@ You can also use a single checkbox to allow a user enable or disable a feature o
 ![One checkbox](img/one-checkbox.png)
 
 **When not to use**
-* Don't use checkboxes for lists that are longer than 5 items. Instead, use a select.
+* Don't use checkboxes for lists that are longer than 5 items. Instead, use a [select list](#select-lists).
 * Don't use checkboxes for lists where the user can only select one mutually exclusive option. Instead, use [radio buttons](#radio-buttons).
 
 **Labeling and alignment**
@@ -54,12 +54,12 @@ Use radio buttons to allow users to select **one item** from a list of possible 
 * To enable the user to select a null option, provide a radio button with the label “None.”
 
 **When not to use**
-Do not use a radio button when you have more than 5 options to provide to the user. Instead, use a select list.  
+Do not use a radio button when you have more than 5 options to provide to the user. Instead, use a [select list](#select-lists).  
 
 **Labeling and alignment**
 Radio button labels fall to the right of the radio button control.
 
-Arrange radio buttons vertically or horizontally according to your preference. Vertically-arranged radio buttons are easier to scan.
+Arrange radio buttons vertically or horizontally depending on space considerations. Vertically arranged radio buttons are easier to scan and are the preferred arrangement.
 
 ![Vertical radio buttons](img/vertical-radio.png)
 
@@ -74,9 +74,11 @@ Use a select list to enable users to select one or more items from a list. Selec
 
 PatternFly offers several variations of select list:
 * Single select enables users to select a single, mutually exclusive option.
+
 ![Single select](img/selectlist.png)
 
 * Multi-select enables users to select one or more options.
+
 ![Multi-select](img/selectlist-multi.png)
 
 * Typeahead is available for all select lists when you have lists with more than ten options. Typeahead enables users to type into an input field to narrow the list of available options that is displayed.

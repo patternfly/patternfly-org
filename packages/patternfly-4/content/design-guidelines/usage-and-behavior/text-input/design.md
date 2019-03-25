@@ -10,8 +10,8 @@ Use text input to gather free-form text from a user.
 
 1. Label
 2. Input field
-3. Help
-4. Errors and validation
+3. [Help](#help) - provides contextual assistance like popovers, placeholder text, or helper text, in any area where the user might need additional information to provide the right input.
+4. [Errors and validation](#errors-and-validation) - ensures that the correct information is collected before the form can be submitted to the system.
 
 ## Usage
 * Be sure to size input fields appropriately to anticipate the longest likely value (if a maximum character length is known).
@@ -37,6 +37,7 @@ For more information about how to provide help content, see  the [forms design g
 
 ### Errors and validation
 Wherever possible, use inline errors to notify users that something has gone wrong. Inline errors help should be short and help users quickly identify and understand what they need to fix and why.
+
 ![Errors and validation](img/input-error.png)
 
 For more information about how to provide errors and validation, see  the [forms design guidelines](/design-guidelines/usage-and-behavior/forms#provide-errors-and-validations).

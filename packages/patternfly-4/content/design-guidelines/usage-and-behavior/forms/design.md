@@ -12,15 +12,11 @@ Most forms will contain the following basic elements:
 
 1. [Labels](#labeling) - Field labels can be aligned to the left or top of the field depending on the layout of your page and the amount of space you have to work with.
 
-  ![Aligned to the top](img/top-aligned.png)
-
-  ![Aligned to the left](img/left-aligned.png)
-
 2. [Text input/text area](/design-guidelines/usage-and-behavior/data-input) - provides an area for users to input free-form text.
 
 3. [Data input](#choose-the-right-data-input) - provides a way for users to submit any information that is not free-form text.
 
-4. [Help](#provide-the-right-kind-of-help) - provides contextual assistance like infotips, placeholder text, or helper text, in any area where the user might need additional information to provide the right input.
+4. [Help](#provide-the-right-kind-of-help) - provides contextual assistance like popovers, placeholder text, or helper text, in any area where the user might need additional information to provide the right input.
 
 5. [Errors and validation](#provide-errors-and-validation) - ensures that the correct information is collected before the form can be submitted to the system.
 
@@ -39,6 +35,10 @@ Most forms will contain the following basic elements:
 ## Designing forms
 ### Labeling
 Always provide labels for text and data input so users understand what information is being requested of them. Labels can be aligned to the top or left of an input.
+
+![Aligned to the top](img/top-aligned.png)
+
+![Aligned to the left](img/left-aligned.png)
 
 * Use top-aligned labels when you are space constrained or if mobile usage is a high priority.
 * Whichever approach you use, we recommend that you maintain consistency throughout an application.
@@ -167,6 +167,8 @@ Some common use cases include:
 > Note: Inline error messages replace any existing helper text.
 
 ![Inline error](img/validation-example.png)
+
+When an error occurs, inline errors will replace any existing [helper text](#provide-the-right-kind-of-help) until the error is fixed.
 
 **Server-side validation**
 Server-side validation is performed when the user attempts to submit a form. In this scenario, the user completes the form in its entirety and the page is reloaded with any errors detected.
