@@ -120,6 +120,9 @@ $block: '.pf4';
     height: 25%;
     background-position: 70%;
   }
+  @media (min-width: $pf-global--breakpoint--sm) and (max-width: $pf-global--breakpoint--md) {
+    height: 28%;
+  }
 }
 #{$block}-c-image__phone {
   position: relative;
@@ -133,6 +136,10 @@ $block: '.pf4';
     top: 50px;
     height: 140px;
     background-position: 40%;
+  }
+  @media (min-width: $pf-global--breakpoint--sm) and (max-width: $pf-global--breakpoint--md) {
+    top: 50px;
+    height: 15%;
   }
 }
 #{$block}-c-image__screen {
@@ -149,6 +156,10 @@ $block: '.pf4';
     height: 145px;
     background-position: 53%;
   }
+  @media (min-width: $pf-global--breakpoint--sm) and (max-width: $pf-global--breakpoint--md) {
+    top: 30px;
+    height: 15%;
+  }
 }
 #{$block}-c-image__desktop {
   position: relative;
@@ -161,5 +172,9 @@ $block: '.pf4';
   @media (max-width: $pf-global--breakpoint--sm) {
     top: -115px;
     height: 230px;
+  }
+  @media (min-width: $pf-global--breakpoint--sm) and (max-width: $pf-global--breakpoint--md) {
+    top: 50px;
+    height: 23%;
   }
 }

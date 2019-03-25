@@ -51,7 +51,7 @@ const IndexPage = () => (
       </Grid>
     </PageSection>
     <PageSection variant={PageSectionVariants.light} className="pf4-c-background-lines">
-      <Grid gutter="md" className="pf-u-pb-3xl">
+      <Grid gutter="md" className="pf-u-pb-3xl-on-sm">
         <GridItem sm={12}>
           <Grid>
             <GridItem sm={12} md={4} mdOffset={1} lgOffset={2} className="pf-u-display-flex pf-u-display-block-on-sm pf-u-flex-direction-column pf-u-pt-2xl pf-u-pt-0-on-sm">
