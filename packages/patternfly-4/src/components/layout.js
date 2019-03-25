@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql, withPrefix, Link, navigate } from 'gatsby';
 import Header from './header';
+import Footer from './footer/footer';
 import {
   Brand,
   Nav,
@@ -123,6 +124,7 @@ class Layout extends React.Component {
               {tertiaryNav}
             </PageSection>}
             {this.props.children}
+            <Footer></Footer>
           </Page>
         </>
       )
