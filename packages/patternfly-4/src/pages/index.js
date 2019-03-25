@@ -23,12 +23,12 @@ const IndexPage = () => (
       <Grid>
         <GridItem sm={12} md={8} mdOffset={2} lg={6} lgOffset={3} className="pf-u-py-2xl pf-u-text-align-center">
           <TextContent>
-            <img src={orb} alt="PatternFly logo" />
-            <Title size="4xl" className="pf-m-white">Build better experiences with repeatable, scalable design.</Title>
-            <Title size="xl" className="pf-m-white pf-u-mb-md pf-u-mb-3xl-on-md">PatternFly 4 is an open source design system built to drive consistency and unify teams.</Title>
+            <img src={orb} alt="PatternFly logo" className="fadeInDown animated fadeInOne" />
+            <Title size="4xl" className="pf-m-white fadeIn animated fadeInTwo">Build better experiences with repeatable, scalable design.</Title>
+            <Title size="xl" className="pf-m-white pf-u-mb-md pf-u-mb-3xl-on-md fadeInUp animated fadeInThree">PatternFly 4 is an open source design system built to drive consistency and unify teams.</Title>
             <div class="pf-u-display-flex pf-u-justify-content-center pf-u-flex-direction-column pf-u-flex-direction-row-on-md">
-              <a href="/get-started/about" type="button" className="pf-c-button pf4-c-button__cta-primary pf-u-mr-0 pf-u-mb-md pf-u-mb-0-on-md pf-u-mr-xl-on-md" aria-label="Get started with PatternFly">Get Started</a>
-              <a href="#AboutPatternFly4" type="button" className="pf-c-button pf4-c-button__cta-outline" aria-label="Why PatternFly 4">Why PatternFly 4</a>
+              <a href="/get-started/about" type="button" className="pf-c-button pf4-c-button__cta-primary pf-u-mr-0 pf-u-mb-md pf-u-mb-0-on-md pf-u-mr-xl-on-md fadeIn animated fadeInFour" aria-label="Get started with PatternFly">Get Started</a>
+              <a href="#AboutPatternFly4" type="button" className="pf-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour" aria-label="Why PatternFly 4">Why PatternFly 4</a>
             </div>
           </TextContent>
         </GridItem>
@@ -108,7 +108,6 @@ const IndexPage = () => (
               </TextContent>
             </GridItem>
             <GridItem sm={12} md={5} className="pf-u-mt-lg pf-u-mt-0-on-sm pf-u-text-align-center pf-u-text-align-right-on-md pf-u-text-align-right-on-md">
-              {/* <div class="pf4-c-image__principles">&nbsp;</div> */}
               <img src={principles} alt="PatternFly 4 principles image" className="pf4-c-image__principles" />
             </GridItem>
           </Grid>
