@@ -8,7 +8,8 @@ import {
   NavList,
   NavExpandable,
   PageSection,
-  PageSectionVariants
+  PageSectionVariants,
+  TextContent
 } from '@patternfly/react-core';
 import { PatternFlyThemeProvider } from '@patternfly/react-styled-system';
 import { Location } from '@reach/router';
@@ -35,7 +36,7 @@ const navBuilder = navData => {
                 <NavExpandable key={node.text} title={node.text} isExpanded={currentPath.indexOf(node.path) > -1} isActive={currentPath.indexOf(node.path) > -1}>
                   {node.subNav.map(item => (
                     <NavItem
-                      itemId={item.path} 
+                      itemId={item.path}
                       key={item.path}
                       isActive={currentPath.indexOf(item.path) > -1}
                     >
@@ -47,7 +48,7 @@ const navBuilder = navData => {
                 </NavExpandable>
               ): (
                 <NavItem
-                  itemId={node.path} 
+                  itemId={node.path}
                   key={node.path}
                   isActive={currentPath.indexOf(node.path) > -1}
                 >
@@ -85,7 +86,9 @@ const MdxPageTemplate = ({ data, children, props }) => {
     <Layout sideNav={SideNav}>
       <SEO title="Docs" keywords={['gatsby', 'application', 'react']} />
       <PageSection variant={PageSectionVariants.light}>
-        <PatternFlyThemeProvider>{content}</PatternFlyThemeProvider>
+        <PatternFlyThemeProvider>
+          <TextContent>{content}</TextContent>
+        </PatternFlyThemeProvider>
       </PageSection>
     </Layout>
   );

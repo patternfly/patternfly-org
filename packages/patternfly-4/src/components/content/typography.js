@@ -6,25 +6,9 @@ import { css, jsx } from '@emotion/core';
 
 export const styles = {
   textColor: css`color: #703FEC;`,
-  gridTitle: css`padding-bottom: 8px;`,
   gridTitleSymbol: css`
     font-size: 10px;
     vertical-align: text-bottom;
-  `,
-  gridRowCenter: css`align-items: center;`,
-  gridRowItem: css`padding-bottom: 8px;`,
-  typographyGrid: css`
-    border-bottom: 1px solid #eaecef;
-    margin-bottom: 24px;
-    padding-bottom: 24px;
-  `,
-  spacingContentItem: css`border: 1px solid #703FEC;`,
-  spacerDescription: css`
-    align-self: center;
-    font-size: 12px;
-    width: 80px;
-    text-align: right;
-    padding-right: 10px;
   `,
   spacerBox: (size, backgroundColor, showBorder) => (css`
     align-self: center;
@@ -32,25 +16,32 @@ export const styles = {
     height: ${size}px;
     background-color: ${backgroundColor};
     border: ${showBorder ? '1px solid #703FEC' : 'none'};
-  `),
-  lineHeightTitle: css`padding-top: 16px; padding-bottom: 16px;`
+  `)
 };
 
 export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontSize, lineHeight}) => (
   <>
-    <div css={[styles.textColor, styles.gridTitle]}>{title} {symbol && <span css={styles.gridTitleSymbol}>{symbol}</span>}</div>
+    <h3>{title} {symbol && <span css={styles.gridTitleSymbol}>{symbol}</span>}</h3>
     <Grid gutter="sm" css={[styles.gridRowCenter, styles.typographyGrid]}>
-      <GridItem span={2} rowSpan={3}>
-        <div css={styles.gridRowItem}>Font Family:</div>
-        <div css={styles.gridRowItem}>Font Size:</div>
-        <div css={styles.gridRowItem}>Line Height:</div>
+      <GridItem span={6}>
+        <table className="pf-c-table pf-m-compact" aria-label="typography usage guidelines breakout">
+          <tbody>
+            <tr>
+              <td className="pf-u-pr-sm">Font Family:</td>
+              <td>Overpass {fontWeight === '400' ? '(Regular/400)' : '(Semibold/500)'}</td>
+            </tr>
+            <tr>
+              <td>Font Size:</td>
+              <td>{fontSize}px</td>
+            </tr>
+            <tr>
+              <td>Line Height:</td>
+              <td>{lineHeight}</td>
+            </tr>
+          </tbody>
+        </table>
       </GridItem>
-      <GridItem span={4} rowSpan={3}>
-        <div css={styles.gridRowItem}>Overpass {fontWeight === '400' ? '(Regular/400)' : '(Semibold/500)'}</div>
-        <div css={styles.gridRowItem}>{fontSize}px</div>
-        <div css={styles.gridRowItem}>{lineHeight}</div>
-      </GridItem>
-      <GridItem span={6} rowSpan={3}>
+      <GridItem span={6}>
         <StyledText fontWeight={fontWeight} fontSize={fontSize} lineHeight={lineHeight}>
           {children}
         </StyledText>
