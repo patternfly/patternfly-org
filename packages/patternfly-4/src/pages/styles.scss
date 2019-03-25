@@ -9,24 +9,26 @@ $block: '.pf4';
   color: var(--pf-global--Color--light-100) !important; /* stylelint-disable-line */
 }
 
-.pf4-c-button__cta-primary {
+#{$block}-c-button__cta-primary {
   @extend %btn-call-to-action;
   @extend %call-to-action-text;
   background-color: var(--pf-global--Color--light-100);
   color: #06c;
   border-color: var(--pf-global--Color--light-100);
+  transition: var(--pf-global--Transition);
   &:hover {
     background-color: transparent;
     color: var(--pf-global--Color--light-100);
     text-decoration: none;
   }
 }
-.pf4-c-button__cta-outline {
+#{$block}-c-button__cta-outline {
   @extend %btn-call-to-action;
   @extend %call-to-action-text;
   background-color: transparent;
   color: var(--pf-global--Color--light-100) !important;
   border-color: var(--pf-global--Color--light-100);
+  transition: var(--pf-global--Transition);
   &:hover {
     background-color: var(--pf-global--Color--light-100);
     color: #06c !important;
@@ -34,7 +36,7 @@ $block: '.pf4';
   }
 }
 
-.pf4-c-link__text {
+#{$block}-c-link__text {
   @extend %cross-link-text;
 }
 
@@ -95,8 +97,19 @@ $block: '.pf4';
   }
 }
 
+#{$block}-c-image__principles {
+  background-image: url("../images/PF4_WIREFRAME.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 100%;
+  transition: var(--pf-global--Transition);
+  &:hover {
+    background-image: url("../images/wireframe.svg");
+  }
+}
+
 /* positioning of images based on a 1440px width */
-.pf4-c-image__laptop {
+#{$block}-c-image__laptop {
   height: 40%;
   width: 100%;
   background-image: url("../images/laptop.svg");
@@ -108,7 +121,7 @@ $block: '.pf4';
     background-position: 70%;
   }
 }
-.pf4-c-image__phone {
+#{$block}-c-image__phone {
   position: relative;
   top: -120px;
   height: 25%;
@@ -122,7 +135,7 @@ $block: '.pf4';
     background-position: 40%;
   }
 }
-.pf4-c-image__screen {
+#{$block}-c-image__screen {
   position: relative;
   top: -225px;
   height: 25%;
@@ -137,7 +150,7 @@ $block: '.pf4';
     background-position: 53%;
   }
 }
-.pf4-c-image__desktop {
+#{$block}-c-image__desktop {
   position: relative;
   top: -300px;
   height: 42%;

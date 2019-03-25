@@ -83,15 +83,10 @@ const IndexPage = () => (
               </TextContent>
             </GridItem>
             <GridItem sm={12} md={6}>
-              <div class="pf4-c-image__laptop">&nbsp;</div>
-              <div class="pf4-c-image__phone">&nbsp;</div>
-              <div class="pf4-c-image__screen">&nbsp;</div>
-              <div class="pf4-c-image__desktop">&nbsp;</div>
-              {/* <Grid>
-                <GridItem smOffset={1} className="pf-u-text-align-center">
-                  <img src={pf4hardware} alt="hardware" className="pf-c-image" />
-                </GridItem>
-              </Grid> */}
+              <div class="pf4-c-image__laptop" aria-label="laptop image">&nbsp;</div>
+              <div class="pf4-c-image__phone" aria-label="phone image">&nbsp;</div>
+              <div class="pf4-c-image__screen" aria-label="screen image">&nbsp;</div>
+              <div class="pf4-c-image__desktop" aria-label="desktop image">&nbsp;</div>
             </GridItem>
           </Grid>
         </GridItem>
@@ -121,7 +116,8 @@ const IndexPage = () => (
               </TextContent>
             </GridItem>
             <GridItem sm={12} md={5} className="pf-u-mt-lg pf-u-mt-0-on-sm pf-u-text-align-center pf-u-text-align-right-on-md pf-u-text-align-right-on-md">
-              <img src={principles} alt="PatternFly 4 principles image" className="pf-c-image" />
+              {/* <div class="pf4-c-image__principles">&nbsp;</div> */}
+              <img src={principles} alt="PatternFly 4 principles image" className="pf4-c-image__principles" />
             </GridItem>
           </Grid>
         </GridItem>

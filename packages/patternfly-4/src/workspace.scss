@@ -16,16 +16,16 @@
 }
 
 %btn-call-to-action {
-  padding: 12px var(--pf-global--spacer--lg);
+  padding: var(--pf-global--spacer--md) var(--pf-global--spacer--lg);
   border-radius: var(--pf-global--BorderRadius--sm);
   border: var(--pf-global--BorderWidth--sm) solid;
 }
 
 
 .pf-c-page__header {
-  background-color: #252525;
+  background-color: #151515;
   .pf-c-page__header-brand {
-    background-color: #252525;
+    background-color: #151515;
   }
 }
 
