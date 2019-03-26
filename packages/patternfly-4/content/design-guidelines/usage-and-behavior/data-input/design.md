@@ -5,7 +5,7 @@ path: "/design-guidelines/usage-and-behavior/data-input"
 Data input controls allow the user to provide information by selecting from a known set of options or a constrained format/value range.  
 
 **Selection controls:** [Checkboxes](#checkbox), [Radio buttons](#radio-buttons), [Select lists](#select-lists), [Switch](#switch)
-**Bound-entry controls:** [Date picker](#date-picker), [Slider](#slider)
+**Bound-entry controls:** Bound entry controls like [date picker](#date-picker) and [slider](#slider) are _in progress and coming soon_ to PatternFly 4.
 
 ## Usage: Selection controls
 Use selection controls to enable users to select from a predetermined set of options. Choose controls based on the the following considerations:
@@ -97,6 +97,8 @@ Provide a switch to allow users to instantly toggle between an enabled or disabl
 
 ## Usage: Bound-entry controls
 Use bound-entry controls to enable users to enter special data types, such as dates, times, and other numeric data. Bound-entry controls constrain user input and combine keyboard and mouse interaction. These controls are designed to only allow valid inputs. As a result, field should be is unnecessary.
+
+Components coming soon!
 
 ### Datepicker
 ![Datepicker](img/datepicker.png)
