@@ -4,6 +4,8 @@ path: "/design-guidelines/usage-and-behavior/forms"
 # Forms
 A form is a group of elements used to collect information from a user. Forms can be presented to the user in a variety of contexts depending on the use case and scenario.
 
+[View form demos](/documentation/core/demos/basicforms) 
+
 ## Elements
 Most forms will contain the following basic elements:
 
@@ -20,7 +22,7 @@ Most forms will contain the following basic elements:
 
 5. [Errors and validation](#provide-errors-and-validation) - ensures that the correct information is collected before the form can be submitted to the system.
 
-6. Action buttons - enables a user to submit or exit a form. Button placement depends on the type of form you're presenting to the user.
+6. Buttons - enable a user to submit or exit a form. Button placement depends on the type of form you're presenting to the user.
 
 <!--When using forms in a modal, align buttons to the right edge of the input field. Place the primary button on the far right and the secondary button to the left.
 
@@ -48,7 +50,7 @@ Always provide labels for text and data input so users understand what informati
 * Labels should clearly state the required input.
 * Do not use a colon after the label name.
 
-**Top-Aligned Labels**
+**Top-aligned labels**
 Use top-aligned labels by default. Top-aligned labels provide a consistent left edge and close proximity between label and input. Top-aligned labels also offer the most horizontal area for long labels.
 
 When to use:
@@ -58,7 +60,7 @@ When to use:
 * Only a few form fields need to be presented.
 * Related fields must be grouped horizontally, e.g. [first name] [last name].
 
-**Left-Aligned Labels**
+**Left-aligned labels**
 Left-aligned labels provide a strong vertical edge and help users to scan for context.
 
 Left-aligned labels are good for unfamiliar content or forms in which well-considered responses are necessary. They support left to right reading between label and field and are good for layouts with more horizontal space than vertical.
@@ -77,7 +79,7 @@ A required field should be indicated with an asterisk ( * ) to the right of the 
 
 ![Required field image](img/required-field.png)
 
-If **all fields** on a form are required, do not use an asterisk for every field. Instead, provide a message at the top of the form stating, "All fields are required." If all field are optional, the message should state, "All fields are optional." 
+If **all fields** on a form are required, do not use an asterisk for every field. Instead, provide a message at the top of the form stating, "All fields are required." If all field are optional, the message should state, "All fields are optional."
 
 ![All required](img/all-required.png)
 
@@ -181,9 +183,9 @@ Notifications should describe the error and help users solve the problem.
 Use progressive disclosure to hide and show fields based on the users’ selection. This approach keeps the workflow short and allows the user to focus on only the fields relevant to them. It also avoids using color to indicate whether or not a field is available, making it suitable for colorblind users.
 
 *Progressive disclosure example*
-![Progressive disclosure](img/progressive-disclosure.png)
+![Progressive disclosure](img/progressive-disclosure2.png)
 
-### Form examples
+<!-- ### Form examples
 **In a card**
 ![Card example](img/card-example.png)
 
@@ -191,8 +193,7 @@ Use progressive disclosure to hide and show fields based on the users’ selecti
 ![Modal example](img/modal-example.png)
 
 **As a wizard**
-![Wizard](img/wizard-example.png)
-
+![Wizard](img/wizard-example.png)-->
 ### Content
 Think of a form as a conversation between your application and your user. Apply the following principles to organize and craft content for your forms:
 
@@ -211,8 +212,8 @@ Start by writing out the conversation you might have with someone if you were gu
 
 * **Include critical secondary information as helper text.** Critical secondary information is information a user must have in order to provide the right input. For example, a user creating a name for a new asset may need to specify a unique name for that asset. Letting the user know this up front helps avoid unnecessary errors.
 
-* **Include background information/context as field-level help in an infopop.**
-For example, you could use this type of help to define an unfamiliar term or concept that a novice user might not be familiar with. **Never hide critical information in an infopop.**
+* **Include background information/context as field-level help in an popover.**
+For example, you could use this type of help to define an unfamiliar term or concept that a novice user might not be familiar with. **Never hide critical information in an popover.**
 
 * **Use natural language**
 Again, think of a form as a conversation with your user. No one wants to have a conversation with a robot.
