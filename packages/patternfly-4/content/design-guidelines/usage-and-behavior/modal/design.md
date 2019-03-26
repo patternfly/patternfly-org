@@ -5,26 +5,17 @@ path: "/design-guidelines/usage-and-behavior/modal"
 Modals load and display important information without navigating away from the current page.
 
 ## Primary elements
-![Modal](img/general-modal.png)
+![Modal](img/modal.png)
+
 1. **Backdrop**
 2. **Modal box**
 3. **Title:** Concisely convey the purpose of the modal.
 4. **Close**
 5. **Content area**
-6. **Buttons:** Action buttons should be right aligned. Make your primary action the right-most button.
+6. **Buttons** 
 
 ## Components and demos used
 The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use-cases. We’ll explore several examples in this documentation.
-
-**HTML/CSS components**
-[Modal](/documentation/core/demos/modal), [Modalbox](/documentation/core/components/modalbox), [Button](/documentation/core/components/button)
-
-Related CSS components: [Aboutmodal](/documentation/core/demos/aboutmodal), [Aboutmodalbox](/documentation/core/components/aboutmodalbox)
-
-**React components**
-[Modal](/documentation/react/components/modal), [Button](/documentation/react/components/button)
-
-Related React components: [AboutModal](/documentation/react/components/aboutmodal)
 
 ## Usage
 ### When to use
@@ -47,3 +38,12 @@ Modals interrupt user task flow and should be avoided for any information that i
 * Use descriptive title and button labels so the user can scan content and make a decision quickly. Ambiguous title and button labels make it more difficult for the user to understand their options and make a decision.
 
 See our [content guidelines](/design-guidelines/content/) for additional guidance.
+
+**HTML/CSS components**
+* [Modal](/documentation/core/demos/modal)
+* [Modalbox](/documentation/core/components/modalbox)
+* [Button](/documentation/core/components/button)
+
+**React components**
+* [Modal](/documentation/react/components/modal),
+* [Button](/documentation/react/components/button)

@@ -4,7 +4,7 @@ path: "/design-guidelines/usage-and-behavior/navigation-system"
 # Navigation system
 Navigation is used to organize an application’s structure and content, making it easy to find information and accomplish tasks. Navigation communicates relationships, context, and actions a user can take within an application.
 
-## Primary elements
+## Elements
 ![Navigation system elements](img/nav-elements.png)
 1. Masthead
 2. [Context selector (optional)](#context-selector) - enables a user to switch between different application contexts, like administration and monitoring
@@ -13,15 +13,6 @@ Navigation is used to organize an application’s structure and content, making 
 5. Menu icon button - provides a way for users to toggle vertical navigation
 6. [Vertical navigation](#vertical-navigation)
 7. [Local navigation](#local-navigation)
-
-## Components and demos used
-The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use-cases. We’ll explore several examples in this documentation.
-
-**HTML/CSS components**
-[Page](/documentation/core/demos/page), [Breadcrumb](/documentation/core/components/breadcrumb), [Nav](/documentation/core/components/nav), [Tabs](/documentation/core/components/tabs)
-
-**React components**
-[PageLayout](/documentation/react/demos/pagelayout), [Nav](/documentation/react/components/nav), [Breadcrumb](/documentation/react/components/breadcrumb),
 
 ## Usage
 ### Vertical navigation
@@ -68,7 +59,7 @@ While global navigation controls what users are seeing at the application-level,
 
 ![Context selector](img/context-selector.png)
 
-Use a context selector in addition to your global navigation when the data or resources you need to show in the interface need to change depending on the users’ context. 
+Use a context selector in addition to your global navigation when the data or resources you need to show in the interface need to change depending on the users’ context.
 
 ### Breadcrumbs
 
@@ -79,3 +70,15 @@ Breadcrumbs act as a resource to help users navigate more efficiently and provid
 #### When to use
 * Use breadcrumbs when the primary global navigation items are not always exposed.
 * Never use breadcrumbs as a replacement for global navigation.
+
+## Components and demos used
+**HTML/CSS**
+* [Page](/documentation/core/demos/page)
+* [Breadcrumb](/documentation/core/components/breadcrumb)
+* [Nav](/documentation/core/components/nav)
+* [Tabs](/documentation/core/components/tabs)
+
+**React**
+* [PageLayout](/documentation/react/demos/pagelayout)
+* [Nav](/documentation/react/components/nav)
+* [Breadcrumb](/documentation/react/components/breadcrumb)

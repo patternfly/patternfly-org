@@ -14,25 +14,6 @@ The following elements can be included in a typical toolbar.
 4. **Global actions**: Any global actions that apply to selected data items are included left-aligned following filter and sort controls. These may be exposed as buttons or collapsed into a kabob menu. No more than two items should be exposed as buttons. Button labels should be limited in length to preserve horizontal space.
 5. **Pagination**: When pagination is supported, a pagination component will be included. Pagination will always be right aligned in the toolbar.
 
-## Related components and demos
-**Core HTML/CSS**
-* [Badges](/documentation/core/components/badge)
-* [Buttons](/documentation/core/components/button)
-* [Chip](/documentation/core/components/chip)
-* [Chip group](/documentation/core/components/chipgroup)
-* [Dropdowns](/documentation/core/components/dropdown)
-* [Input group](/documentation/core/components/inputgroup)
-* [Options Menus](/documentation/core/components/optionsmenu)
-* [Pagination](/documentation/core/components/pagination)
-* [Select](/documentation/core/components/select)
-
-**React**
-* [Badges](/documentation/react/components/badge)
-* [Buttons](/documentation/react/components/button)
-* [Chip](/documentation/react/components/chip)
-* [Dropdowns](/documentation/react/components/dropdown)
-* [Toolbar demo](/documentation/react/demos/toolbar)
-
 ## Usage
 ### When to use
 Toolbars enable users to manipulate data in views where built-in controls aren't already available, like list views or card views. You can choose from multiple toolbar variations to suit your use case, and further customize your toolbar using any of the components listed under [Related components and demos](#related-components-and-demos).
@@ -80,3 +61,22 @@ The toolbar adapts to smaller viewport sizes by collapsing or hiding elements th
 
 ![responsive1](img/responsive-closed.png)
 ![responsive2](img/responsive-open.png)
+
+## Related components and demos
+**Core HTML/CSS**
+* [Badges](/documentation/core/components/badge)
+* [Buttons](/documentation/core/components/button)
+* [Chip](/documentation/core/components/chip)
+* [Chip group](/documentation/core/components/chipgroup)
+* [Dropdowns](/documentation/core/components/dropdown)
+* [Input group](/documentation/core/components/inputgroup)
+* [Options Menus](/documentation/core/components/optionsmenu)
+* [Pagination](/documentation/core/components/pagination)
+* [Select](/documentation/core/components/select)
+
+**React**
+* [Badges](/documentation/react/components/badge)
+* [Buttons](/documentation/react/components/button)
+* [Chip](/documentation/react/components/chip)
+* [Dropdowns](/documentation/react/components/dropdown)
+* [Toolbar demo](/documentation/react/demos/toolbar)
