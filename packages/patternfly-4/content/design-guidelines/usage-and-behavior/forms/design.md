@@ -192,6 +192,12 @@ Use progressive disclosure to hide and show fields based on the users’ selecti
 
 **As a wizard**
 ![Wizard](img/wizard-example.png)-->
+### Enabling and disabling buttons
+* For short forms like wizards, disable submit buttons until all conditions required to complete the form are met - this reduces the need to return validation errors due to incomplete submissions.
+* For long scrolling forms, do not disable the submit button - the missing field and submit button might not be visible on the screen at the same time.
+* Once a user has submitted a form, disable the submit button to avoid duplicate submission.  
+* Use feedback messages and progress indicators like spinners or progress bars if the time to process the form might exceed users’ expectations.
+
 ### Content
 Think of a form as a conversation between your application and your user. Apply the following principles to organize and craft content for your forms:
 
