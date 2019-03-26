@@ -4,7 +4,7 @@ path: "/design-guidelines/usage-and-behavior/forms"
 # Forms
 A form is a group of elements used to collect information from a user. Forms can be presented to the user in a variety of contexts depending on the use case and scenario.
 
-[View form demos](/documentation/core/demos/basicforms) 
+[View form demos](/documentation/core/demos/basicforms)
 
 ## Elements
 Most forms will contain the following basic elements:
@@ -38,10 +38,6 @@ Most forms will contain the following basic elements:
 ### Labeling
 Always provide labels for text and data input so users understand what information is being requested of them. Labels can be aligned to the top or left of an input.
 
-![Aligned to the top](img/top-aligned.png)
-
-![Aligned to the left](img/left-aligned.png)
-
 * Use top-aligned labels when you are space constrained or if mobile usage is a high priority.
 * Whichever approach you use, we recommend that you maintain consistency throughout an application.
 
@@ -51,6 +47,9 @@ Always provide labels for text and data input so users understand what informati
 * Do not use a colon after the label name.
 
 **Top-aligned labels**
+
+![Aligned to the top](img/top-aligned.png)
+
 Use top-aligned labels by default. Top-aligned labels provide a consistent left edge and close proximity between label and input. Top-aligned labels also offer the most horizontal area for long labels.
 
 When to use:
@@ -61,6 +60,9 @@ When to use:
 * Related fields must be grouped horizontally, e.g. [first name] [last name].
 
 **Left-aligned labels**
+
+![Aligned to the left](img/left-aligned.png)
+
 Left-aligned labels provide a strong vertical edge and help users to scan for context.
 
 Left-aligned labels are good for unfamiliar content or forms in which well-considered responses are necessary. They support left to right reading between label and field and are good for layouts with more horizontal space than vertical.
@@ -141,7 +143,6 @@ For example, placeholder text for a date might be _e.g. YYYY-MM-DD_.
 
 Use placeholder text when the requested data type might be unfamiliar or the field requires the user to provide data in a specific format.
 
-*Placeholder text example*
 ![Placeholder text](img/placeholdertext.png)
 
   **DO**
@@ -182,7 +183,6 @@ Notifications should describe the error and help users solve the problem.
 ### Use progressive disclosure
 Use progressive disclosure to hide and show fields based on the users’ selection. This approach keeps the workflow short and allows the user to focus on only the fields relevant to them. It also avoids using color to indicate whether or not a field is available, making it suitable for colorblind users.
 
-*Progressive disclosure example*
 ![Progressive disclosure](img/progressive-disclosure2.png)
 
 <!-- ### Form examples
