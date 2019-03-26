@@ -167,8 +167,6 @@ Some common use cases include:
 * A user leaving a required field blank
 * A user leaving a required field incomplete
 
-> Note: Inline error messages replace any existing helper text.
-
 ![Inline error](img/validation-example.png)
 
 When an error occurs, inline errors will replace any existing [helper text](#provide-the-right-kind-of-help) until the error is fixed.
