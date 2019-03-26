@@ -116,7 +116,7 @@ Use when you have more information than will comfortably fit inside a row or you
 1. **Expandable cell:** a cell that can be clicked to reveal more detail about an item. If the expansion for an item is already open, clicking on a different cell will close the current item and open a new one.
 2. **Expansion panel:** contains details associated with an expandable item.
 
-**When to use**
+#### When to use
 Use a compound expandable list when you want multiple expansion panels that relate to specific table columns where it would not make sense to combine all of this information into a single, simple expansion.
 
 ### Data tables on mobile
