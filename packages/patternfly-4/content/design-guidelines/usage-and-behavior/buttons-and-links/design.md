@@ -33,8 +33,7 @@ Use different button types to build hierarchy in an application layout.
   **Icon button**
   Use icon buttons for actions that are commonly associated with icons. For example, you could use the close icon to exit a modal or window, or use the hamburger icon to toggle a menu.
 
-
-### Using buttons in your designs
+<!--  ### Using buttons in your designs
 We recommend aligning buttons to different elements or areas on the screen depending on the content being provided. The recommended alignment simplifies scanning and helps users complete and submit form content more quickly.  
 
 #### Buttons on full page forms
@@ -50,10 +49,9 @@ We recommend aligning buttons to different elements or areas on the screen depen
 
 ![Buttons on modals](img/modal-button.png)
 
-<!-- We'll want to include some information for button usage on wizards when we have some examples.
+We'll want to include some information for button usage on wizards when we have some examples.
  #### Buttons on wizards
 The placement of buttons on wizards will depend on the layout of content you present. -->
-
 ## Link usage
 Links are used to take users somewhere, like another page inside of a web application, or an external site like help or documentation.
 
@@ -77,8 +75,8 @@ Use specific, action-focused labels that match what the user will see when they 
 See our [content guidelines](/design-guidelines/content/) for additional guidance.
 
 ## Related components and demos
-**HTML/CSS components**
+**HTML/CSS**
 * [Button](/documentation/core/components/button)
 
-**React components**
+**React**
 * [Button](/documentation/react/components/button)

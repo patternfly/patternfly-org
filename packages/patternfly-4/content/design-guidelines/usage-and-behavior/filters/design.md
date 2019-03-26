@@ -49,12 +49,12 @@ The attribute-value filter gives the user the ability to specify an attribute-va
 ![image7](img/attribute-value-date-picker.png)
 
 The following elements can be used in an attribute-value (textbox) filter.
-1. **Attribute selector**: A select list that allows the user to select the attribute that they want to filter against.
-2. **Value selector**: The value selector can be any data input component that is used to pass a value to the filter. Common components used for value selection include:
-  * A **Search Field** for entering a value from the keyboard. Use when you will enter the value as unbounded data (e.g. a name).
-  * A **Single Select** for selecting a value from a predefined list.
-  * A **Checkbox Select** for selecting multiple values from a predefined list. Multiple values will be combined using a logical OR operation. Items that meet both values will be shown higher in the results list.
-  * A **Date Picker** for selecting a date, time, or a date/time range. Use when the value you want to filter on is expressed as a date and/or time stamp.
+1. **Attribute selector:** A select list that allows the user to select the attribute that they want to filter against.
+2. **Value selector:** The value selector can be any data input component that is used to pass a value to the filter. Common components used for value selection include:
+  * A **search field** for entering a value from the keyboard. Use when you will enter the value as unbounded data (e.g. a name).
+  * A **single select** for selecting a value from a predefined list.
+  * A **checkbox select** for selecting multiple values from a predefined list. Multiple values will be combined using a logical OR operation. Items that meet both values will be shown higher in the results list.
+  * A **date picker** for selecting a date, time, or a date/time range. Use when the value you want to filter on is expressed as a date and/or time stamp.
 
 #### When to use
 Use an attribute-value filter when the data to be filtered consists of sets of attribute-value pairs and values may be either unbounded (i.e text entry), a bounded value list, or temporal data like date and time. Attribute-value filters are also useful for cases where you expect your users to only be filtering by one thing at a time.
@@ -178,7 +178,7 @@ Filter queries are applied when the user selects or deselects an item in the lis
 
 
 ## Related components and demos
-**Core HTML/CSS**
+**HTML/CSS**
 * [Badges](/documentation/core/components/badge)
 * [Check](/documentation/core/components/check)
 * [Chip](/documentation/core/components/chip)

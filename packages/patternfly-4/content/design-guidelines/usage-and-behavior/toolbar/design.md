@@ -8,30 +8,11 @@ The toolbar contains multiple components that allow a user to manage and manipul
 ![toolbar](img/toolbar.png)
 
 The following elements can be included in a typical toolbar.
-1. **Bulk selection (optional)**: Bulk selection can be added when the functionality isn't available from the component you're using to present the data. For example, you might need to include a bulk selector for a card view or data list, but a table will enable bulk selection by default. Besides allowing the user to select and deselect all items on a page, other application specific options can be added in the dropdown. Bulk selection allows the user to select or deselect all items on a page and provide an indeterminate state that notifies the user when only some items are selected. Bulk selectors should always be the left-most element in a toolbar. When providing a bulk selector in a list view, it should be aligned with the checkboxes.
-2. **Filters**: PatternFly supports a variety of common filter types that can be used alone or in combination to construct a custom filter.
-3. **Sort (optional)**: A sort component may to added when this functionality is needed. Tables have built in sorting, but card views and data lists may require toolbar sorting.
-4. **Global actions**: Any global actions that apply to selected data items are included left-aligned following filter and sort controls. These may be exposed as buttons or collapsed into a kabob menu. No more than two items should be exposed as buttons. Button labels should be limited in length to preserve horizontal space.
-5. **Pagination**: When pagination is supported, a pagination component will be included. Pagination will always be right aligned in the toolbar.
-
-## Related components and demos
-**Core HTML/CSS**
-* [Badges](/documentation/core/components/badge)
-* [Buttons](/documentation/core/components/button)
-* [Chip](/documentation/core/components/chip)
-* [Chip group](/documentation/core/components/chipgroup)
-* [Dropdowns](/documentation/core/components/dropdown)
-* [Input group](/documentation/core/components/inputgroup)
-* [Options Menus](/documentation/core/components/optionsmenu)
-* [Pagination](/documentation/core/components/pagination)
-* [Select](/documentation/core/components/select)
-
-**React**
-* [Badges](/documentation/react/components/badge)
-* [Buttons](/documentation/react/components/button)
-* [Chip](/documentation/react/components/chip)
-* [Dropdowns](/documentation/react/components/dropdown)
-* [Toolbar demo](/documentation/react/demos/toolbar)
+1. **Bulk selection (optional)** - Bulk selection can be added when the functionality isn't available from the component you're using to present the data. For example, you might need to include a bulk selector for a card view or data list, but a table will enable bulk selection by default. Besides allowing the user to select and deselect all items on a page, other application specific options can be added in the dropdown. Bulk selection allows the user to select or deselect all items on a page and provide an indeterminate state that notifies the user when only some items are selected. Bulk selectors should always be the left-most element in a toolbar. When providing a bulk selector in a list view, it should be aligned with the checkboxes.
+2. **Filters** - PatternFly supports a variety of common filter types that can be used alone or in combination to construct a custom filter.
+3. **Sort (optional)** - A sort component may to added when this functionality is needed. Tables have built in sorting, but card views and data lists may require toolbar sorting.
+4. **Global actions** - Any global actions that apply to selected data items are included left-aligned following filter and sort controls. These may be exposed as buttons or collapsed into a kabob menu. No more than two items should be exposed as buttons. Button labels should be limited in length to preserve horizontal space.
+5. **Pagination** - When pagination is supported, a pagination component will be included. Pagination will always be right aligned in the toolbar.
 
 ## Usage
 ### When to use
@@ -80,3 +61,22 @@ The toolbar adapts to smaller viewport sizes by collapsing or hiding elements th
 
 ![responsive1](img/responsive-closed.png)
 ![responsive2](img/responsive-open.png)
+
+## Related components and demos
+**Core HTML/CSS**
+* [Badges](/documentation/core/components/badge)
+* [Buttons](/documentation/core/components/button)
+* [Chip](/documentation/core/components/chip)
+* [Chip group](/documentation/core/components/chipgroup)
+* [Dropdowns](/documentation/core/components/dropdown)
+* [Input group](/documentation/core/components/inputgroup)
+* [Options Menus](/documentation/core/components/optionsmenu)
+* [Pagination](/documentation/core/components/pagination)
+* [Select](/documentation/core/components/select)
+
+**React**
+* [Badges](/documentation/react/components/badge)
+* [Buttons](/documentation/react/components/button)
+* [Chip](/documentation/react/components/chip)
+* [Dropdowns](/documentation/react/components/dropdown)
+* [Toolbar demo](/documentation/react/demos/toolbar)
