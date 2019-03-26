@@ -77,7 +77,7 @@ A required field should be indicated with an asterisk ( * ) to the right of the 
 
 ![Required field image](img/required-field.png)
 
-When all fields on a form are required, include a message at the top of the form that indicates whether all fields are required or optional.
+If **all fields** on a form are required, do not use an asterisk for every field. Instead, provide a message at the top of the form stating, "All fields are required." If all field are optional, the message should state, "All fields are optional." 
 
 ![All required](img/all-required.png)
 
