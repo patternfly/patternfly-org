@@ -5,6 +5,7 @@ path: "/design-guidelines/usage-and-behavior/data-input"
 Data input controls allow the user to provide information by selecting from a known set of options or a constrained format/value range.  
 
 **Selection controls:** [Checkboxes](#checkbox), [Radio buttons](#radio-buttons), [Select lists](#select-lists), [Switch](#switch)
+
 **Bound-entry controls:** Bound entry controls like [date picker](#date-picker) and [slider](#slider) are _in progress and coming soon_ to PatternFly 4.
 
 ## Usage: Selection controls
@@ -111,6 +112,6 @@ In general, data input controls should work to help users avoid input errors. Do
 
 For situations where you do need to provide validation and errors, it is best to provide inline errors as soon as a field leaves focus.
 
-![Error](img/input-error.png)
+![Error](img/input-error2.png)
 
 For more information about providing validation and errors for data input, see the [forms design guidelines](/design-guidelines/usage-and-behavior/forms#provide-errors-and-validation).
