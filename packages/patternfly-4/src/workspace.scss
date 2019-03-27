@@ -20,6 +20,7 @@
   border: var(--pf-global--BorderWidth--sm) solid;
 }
 
+$block: '.pf4';
 
 .pf-c-page__header {
   background-color: #151515;
@@ -28,7 +29,12 @@
   }
 }
 
-.pf4-site-header {
+#{$block}-site-c-hero {
+  max-width: 600px;
+  margin: 0 auto !important;
+}
+
+#{$block}-site-header {
   li a {
     &::after {
       content: '';

@@ -46,7 +46,7 @@ $block: '.pf4';
   width: 100%;
   max-width: 100%;
   height: 100%;
-  background-image: var(--pf4-c-image--Background), linear-gradient(to bottom, #065e8e 0%, #0469a8 25%, #048bc1 75%, #03b9e4 100%);
+  background-image: none, linear-gradient(to bottom, #065e8e 0%, #0469a8 25%, #048bc1 75%, #03b9e4 100%);
   background-repeat: no-repeat, no-repeat;
   background-position: top, right;
 
@@ -59,17 +59,20 @@ $block: '.pf4';
   @media (min-width: $pf-global--breakpoint--sm) {
     background-size: contain;
     background-image: url("../images/aboutPF4Lines.svg"), linear-gradient(to bottom, #065e8e 0%, #0469a8 25%, #048bc1 75%, #03b9e4 100%);
+    background-position: top right, right;
   }
 
   @media (min-width: $pf-global--breakpoint--sm) and (-webkit-min-device-pixel-ratio: 2),
     (min-width: $pf-global--breakpoint--sm) and (min-resolution: 192dpi) {
     background-image: url("../images/aboutPF4Lines.svg"), linear-gradient(to bottom, #065e8e 0%, #0469a8 25%, #048bc1 75%, #03b9e4 100%);
     background-size: cover;
+    background-position: top right, right;
   }
 
   @media (min-width: $pf-global--breakpoint--lg) {
     background-image: var(--pf4-c-image--Background), linear-gradient(to bottom, #065e8e 0%, #0469a8 25%, #048bc1 75%, #03b9e4 100%);
     background-size: cover;
+    background-position: top, right;
   }
   /* stylelint-enable */
 }
@@ -80,6 +83,10 @@ $block: '.pf4';
   background-image: url("../images/PF4PrinciplesLines.svg"), linear-gradient(to bottom, #03b9e4, #2767b2);
   background-repeat: no-repeat, no-repeat;
   background-position: top right, right;
+
+  @media (max-width: $pf-global--breakpoint--sm) {
+    background-image: none, linear-gradient(to bottom, #03b9e4, #2767b2);
+  }
 }
 
 #{$block}-c-background-lines {
@@ -88,6 +95,10 @@ $block: '.pf4';
   background-image: url("../images/aboutPF4Lines.svg"), linear-gradient(to bottom, #fff, #fff);
   background-repeat: no-repeat, no-repeat;
   background-position: top right, right;
+
+  @media (max-width: $pf-global--breakpoint--sm) {
+    background-image: none, linear-gradient(to bottom, #fff, #fff);
+  }
 }
 
 @media (max-width: $pf-global--breakpoint--sm) {
@@ -110,7 +121,9 @@ $block: '.pf4';
     background-position: 70%;
   }
   @media (min-width: $pf-global--breakpoint--sm) and (max-width: $pf-global--breakpoint--md) {
-    height: 28%;
+    position: absolute;
+    height: 18%;
+    background-position: 65%;
   }
 }
 #{$block}-c-image__phone {
@@ -127,8 +140,10 @@ $block: '.pf4';
     background-position: 40%;
   }
   @media (min-width: $pf-global--breakpoint--sm) and (max-width: $pf-global--breakpoint--md) {
+    position: relative;
     top: 50px;
-    height: 15%;
+    height: 155px;
+    background-position: 30%
   }
 }
 #{$block}-c-image__screen {
@@ -146,8 +161,9 @@ $block: '.pf4';
     background-position: 53%;
   }
   @media (min-width: $pf-global--breakpoint--sm) and (max-width: $pf-global--breakpoint--md) {
-    top: 30px;
-    height: 15%;
+    top: 15px;
+    height: 170px;
+    background-position: 50%;
   }
 }
 #{$block}-c-image__desktop {
@@ -163,8 +179,8 @@ $block: '.pf4';
     height: 230px;
   }
   @media (min-width: $pf-global--breakpoint--sm) and (max-width: $pf-global--breakpoint--md) {
-    top: 50px;
-    height: 23%;
+    top: -145px;
+    height: 220px;
   }
 }
 

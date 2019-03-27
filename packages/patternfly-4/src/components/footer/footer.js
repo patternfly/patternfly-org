@@ -17,7 +17,7 @@ class Footer extends React.Component {
   render() {
     return (
       <div>
-        <PageSection className="pf4-l-footer">
+        <PageSection className="pf4-l-footer pf-u-py-md pf-u-py-0-on-sm">
           <Grid className="pf-u-py-xl-on-sm pf-u-py-0-on-md">
             <GridItem md={5} mdOffset={1} className="pf-u-mb-lg pf-u-mb-0-on-sm">
               <Grid className="pf-u-py-xl-on-sm pf-u-py-8-on-md">
@@ -62,8 +62,8 @@ class Footer extends React.Component {
               </Grid>
             </GridItem>
             <GridItem md={5}>
-              <Grid className="pf-u-py-xl-on-sm pf-u-py-8-on-md">
-                <GridItem sm={12} md={8} mdOffset={4} className="pf4-l-footer-column pf-u-p-lg">
+              <Grid className="pf-u-py-xl-on-sm pf-u-py-0-on-md">
+                <GridItem sm={12} md={10} lg={8} xl={6} mdOffset={2} lgOffset={4} xlOffset={6} className="pf4-l-footer-column pf-u-p-lg">
                   <img src={patternflyLogo} alt="PatternFly logo" className="pf-u-pb-lg" />
                   <p className="pf-m-white pf-u-pb-lg">
                     PatternFly is an open source design system built to drive consistency and unify teams. We provide tools like design documentation, components, and code examples to make it possible for anyone to design and build responsive, accessible web applications.
@@ -92,7 +92,7 @@ class Footer extends React.Component {
             <GridItem md={4} lg={3} xl={2}>
               <span className="pf4-site-copyright">Copyright &copy; 2019 Red Hat, Inc.</span>
             </GridItem>
-            <GridItem md={4} lg={5}>
+            <GridItem md={4} lg={5} className="pf-u-ml-xl-on-xl">
               <Text component={TextVariants.a} href="https://www.redhat.com/en/about/privacy-policy" target="top" aria-label="Privacy statement">
                 Privacy Statement
               </Text>

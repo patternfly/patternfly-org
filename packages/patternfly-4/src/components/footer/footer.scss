@@ -16,6 +16,11 @@ $block: '.pf4';
     padding-left: 0;
     color: var(--pf-global--Color--light-100);
   }
+  @media screen and (max-width: 768px) {
+    &-column {
+      margin-left: -16px;
+    }
+  }
 }
 #{$block}-l-footer-dark {
   background: #151515 !important;
