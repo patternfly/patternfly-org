@@ -84,15 +84,15 @@ class Footer extends React.Component {
         </PageSection>
         <PageSection className="pf4-l-footer-dark">
           <Grid className="pf-u-py-xl-on-sm pf-u-py-0-on-md pf-u-align-items-center">
-            <GridItem md={3} mdOffset={1}>
+            <GridItem md={2} mdOffset={1}>
               <Text component={TextVariants.a} href="https://www.redhat.com" target="top" aria-label="Visit Red Hat.com">
                 <img src={redhatLogo} alt="Red Hat logo" />
               </Text>
             </GridItem>
-            <GridItem md={2}>
-              Copyright &copy; 2019 Red Hat, Inc.
+            <GridItem md={4} lg={3} xl={2}>
+              <span className="pf4-site-copyright">Copyright &copy; 2019 Red Hat, Inc.</span>
             </GridItem>
-            <GridItem md={4}>
+            <GridItem md={4} lg={5}>
               <Text component={TextVariants.a} href="https://www.redhat.com/en/about/privacy-policy" target="top" aria-label="Privacy statement">
                 Privacy Statement
               </Text>

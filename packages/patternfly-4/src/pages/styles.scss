@@ -97,17 +97,6 @@ $block: '.pf4';
   }
 }
 
-#{$block}-c-image__principles {
-  background-image: url("../images/PF4_WIREFRAME.svg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  height: 100%;
-  transition: var(--pf-global--Transition);
-  &:hover {
-    background-image: url("../images/wireframe.svg");
-  }
-}
-
 /* positioning of images based on a 1440px width */
 #{$block}-c-image__laptop {
   height: 40%;
