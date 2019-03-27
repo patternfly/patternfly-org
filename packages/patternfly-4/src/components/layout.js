@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql, withPrefix, Link, navigate } from 'gatsby';
 import Header from './header';
+import Footer from './footer/footer';
 import {
-  BackgroundImage,
-  BackgroundImageSrc,
   Brand,
   Nav,
   NavItem,
@@ -22,17 +21,17 @@ import {
   TextInput
 } from '@patternfly/react-core';
 import { Location } from '@reach/router';
-import brandImg from './l_pf-reverse-164x11.png';
+import brandImg from '../images/PatternFly_logo.svg';
 
 class Layout extends React.Component {
-  
+
   componentDidMount() {
     // eslint-disable-next-line no-undef
     if (window.docsearch) {
       window.docsearch({
-        apiKey: '06941733239da4f8617d272cf2ed4d5c', 
-        indexName: 'patternfly', 
-        inputSelector: '#global-search-input', 
+        apiKey: '06941733239da4f8617d272cf2ed4d5c',
+        indexName: 'patternfly',
+        inputSelector: '#global-search-input',
         debug: false // Set debug to true if you want to inspect the dropdown
       });
     } else {
@@ -87,13 +86,6 @@ class Layout extends React.Component {
           }}
         </Location>
       );
-      const bgImages = {
-        [BackgroundImageSrc.lg]: withPrefix('/img/pfbg_1200.jpg'),
-        [BackgroundImageSrc.sm]: withPrefix('/img/pfbg_768.jpg'),
-        [BackgroundImageSrc.sm2x]: withPrefix('/img/pfbg_768@2x.jpg'),
-        [BackgroundImageSrc.xl]: withPrefix('/img/pfbg_2000.jpg'),
-        [BackgroundImageSrc.filter]: withPrefix('/img/background-filter.svg#image_overlay')
-      };
       const PageToolbar = (
         <Toolbar>
           <ToolbarGroup>
@@ -115,6 +107,7 @@ class Layout extends React.Component {
       };
       const SiteHeader = (
         <PageHeader
+          className="pf4-site-header"
           showNavToggle={sideNav !== null}
           logoProps={logoProps}
           logo={<Brand src={brandImg} alt="PatternFly Logo"/>}
@@ -126,12 +119,12 @@ class Layout extends React.Component {
       return (
         <>
           <Header siteTitle={data.site.siteMetadata.title} />
-          <BackgroundImage src={bgImages} />
           <Page isManagedSidebar={sideNav !== null} header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} /> : null}>
             {tertiaryNav && <PageSection variant={PageSectionVariants.light}>
               {tertiaryNav}
             </PageSection>}
             {this.props.children}
+            <Footer></Footer>
           </Page>
         </>
       )
