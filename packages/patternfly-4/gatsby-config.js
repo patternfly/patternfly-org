@@ -67,6 +67,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    'gatsby-plugin-no-sourcemaps',
     'gatsby-transformer-json',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
