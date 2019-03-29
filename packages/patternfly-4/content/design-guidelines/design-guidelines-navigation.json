@@ -30,9 +30,13 @@
         "path": "/design-guidelines/usage-and-behavior/buttons-and-links"
       },
       {
+        "text": "Data Input",
+        "path": "/design-guidelines/usage-and-behavior/data-input"
+      },
+      {
         "text": "Filters",
         "path": "/design-guidelines/usage-and-behavior/filters"
-      },  
+      },
       {
         "text": "Forms",
         "path": "/design-guidelines/usage-and-behavior/forms"
