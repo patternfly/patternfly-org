@@ -223,7 +223,7 @@ exports.createPages = ({ graphql, actions }) => {
   })
 };
 
-exports.onCreateWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) => 
+exports.onCreateWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) =>
   new Promise((resolve, reject) => {
     if (partialsToLocationsMap === null) {
       partialsToLocationsMap = {};
