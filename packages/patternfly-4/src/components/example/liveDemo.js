@@ -11,8 +11,8 @@ import { transform } from 'babel-standalone';
 import Section from '../section';
 import EditorToolbar from './editorToolbar';
 import classNames from 'classnames';
-import PreviewToolbar from '../PreviewToolbar/PreviewToolbar';
 import paramCase from 'param-case';
+import AutoLinkHeader from '@content/AutoLinkHeader';
 
 const propTypes = {
   className: PropTypes.string,
@@ -22,7 +22,9 @@ const propTypes = {
   live: PropTypes.bool,
   liveScope: PropTypes.object,
   fullPageOnly: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
+  title: PropTypes.string,
+  description: PropTypes.string
 };
 
 const defaultProps = {
@@ -32,7 +34,9 @@ const defaultProps = {
   live: true,
   liveScope: {},
   fullPageOnly: false,
-  children: null
+  children: null,
+  title: '',
+  description: ''
 };
 
 const scopePlayground = { React, ...TableComponents, ...ChartComponents, ...StyledSystemComponents, ...CoreComponents, ...CoreIcons, css };
@@ -68,7 +72,7 @@ class LiveDemo extends React.Component {
   };
 
   render() {
-    const { className, raw, images, live, liveScope, path, fullPageOnly, children } = this.props;
+    const { className, raw, images, live, liveScope, path, fullPageOnly, children, title, description } = this.props;
     const { lights } = this.state;
 
     const scope = {
@@ -99,13 +103,18 @@ class LiveDemo extends React.Component {
         'pf-t-dark pf-m-opaque-200': !lights,
       });
 
+    const makeDescription = html => ({
+      __html: html
+    });
+
     return (
       <Section className="ws-live-demo">
+        <AutoLinkHeader size="lg" is="h4" className="ws-example-heading">{title}</AutoLinkHeader>
+        {Boolean(description) && <p className={css('description')} dangerouslySetInnerHTML={makeDescription(description)} />}
         <LiveProvider code={raw} scope={scope} transformCode={transformCode}>
-          <PreviewToolbar fullPath={fullPath} showLights={!fullPageOnly} showViewports={false} onLightsChange={this.onLightsChange}/>
           {live && <LivePreview className={css(className, 'example', darkThemeClasses)} />}
           {children}
-          <EditorToolbar editor={editor} raw={raw} path={examplePath} />
+          <EditorToolbar editor={editor} raw={raw} fullPath={fullPath} showLights={!fullPageOnly} onLightsChange={this.onLightsChange}/>
           {live && <LiveError />}
         </LiveProvider>
       </Section>

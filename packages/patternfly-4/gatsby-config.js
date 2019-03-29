@@ -57,7 +57,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `core`,
-        path: `${__dirname}/_repos/core`
+        path: `${__dirname}/_repos/core`,
+        ignore: [`**/*.scss`]
       }
     },
     {
@@ -65,6 +66,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `previews`,
+        path: `${__dirname}/previews`,
       },
     },
     'gatsby-plugin-no-sourcemaps',

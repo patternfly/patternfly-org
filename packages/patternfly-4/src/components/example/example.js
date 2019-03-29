@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import AutoLinkHeader from '@content/AutoLinkHeader';
 import LiveDemo from './liveDemo';
 import Section from '../section';
-import PreviewToolbar from '../PreviewToolbar/PreviewToolbar';
 import Preview from '../_core/Preview';
+import LinkPreview from '../LinkPreview';
 // import ComponentItems from '../_core/Example/ComponentItems';
 
 const propTypes = {
@@ -42,7 +42,11 @@ const GATSBY_LIVE_EXAMPLES = process.env.GATSBY_LIVE_EXAMPLES === 'true';
 class Example extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { viewport: '', fullPath: '', lights: true };
+    this.state = { 
+      viewport: '', 
+      fullPath: '', 
+      lights: true
+    };
   }
 
   onViewportChange = viewport => {
@@ -67,11 +71,9 @@ class Example extends React.Component {
       liveScope,
       showPreviewOptions,
       className,
+      data,
       ...props
     } = this.props;
-    const makeDescription = html => ({
-      __html: html
-    }); // Display full page link
 
     if (fullPageOnly) {
       const pathName = typeof window !== 'undefined' ? window.location.pathname : '';
@@ -83,13 +85,7 @@ class Example extends React.Component {
         <Section>
           <AutoLinkHeader size="lg" is="h3">{title}</AutoLinkHeader>
           <LiveDemo raw={raw.trim()} path={path} fullPageOnly live={false} className={className}>
-            <div className={css(className, 'ws-example')} {...props}>
-              This example can only be accessed in&nbsp;
-              <a href={path} target="_blank" rel="noopener noreferrer">
-                full page mode
-              </a>
-              .
-            </div>
+            <LinkPreview name={title} path={path} />
           </LiveDemo>
         </Section>
       );
@@ -97,9 +93,6 @@ class Example extends React.Component {
 
     return (
       <div className="ws-example">
-        <AutoLinkHeader size="lg" is="h4">{title}</AutoLinkHeader>
-        {showPreviewOptions && <PreviewToolbar onViewportChange={this.onViewportChange} onLightsChange={this.onLightsChange}/>}
-        {Boolean(description) && <p className={css('description')} dangerouslySetInnerHTML={makeDescription(description)} />}
         {GATSBY_LIVE_EXAMPLES ? (
           <React.Fragment>
             {!live && <div className={css(className, 'example')} {...props}>
@@ -107,7 +100,7 @@ class Example extends React.Component {
                 {children}
               </Preview>
               </div>}
-            <LiveDemo raw={raw.trim()} path={path} images={images} live={live} liveScope={liveScope} className={className} />
+            <LiveDemo title={title} description={description} raw={raw.trim()} path={path} images={images} live={live} liveScope={liveScope} className={className} />
           </React.Fragment>
         ) : (
           <React.Fragment>
@@ -116,7 +109,7 @@ class Example extends React.Component {
                 {children}
               </Preview>
             </div>
-            <LiveDemo raw={raw.trim()} path={path} live={false} className={className} />
+            <LiveDemo title={title} description={description} raw={raw.trim()} path={path} live={false} className={className} />
           </React.Fragment>
         )}
       </div>

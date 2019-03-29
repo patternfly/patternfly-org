@@ -108,7 +108,13 @@
   }
 }
 
+.ws-example-heading {
+  padding-bottom: 10px;
+}
+
 .ws-live-demo {
+  margin-top: 25px;
+
   .code {
     max-height: 37.5rem;
     overflow: auto;
@@ -157,4 +163,9 @@
 .ws-preface {
   margin-top: var(--pf-global--spacer--sm);
   margin-bottom: var(--pf-global--spacer--sm);
+}
+
+.ws-full-page-example {
+  width: 100%;
+  min-height: 500px;
 }

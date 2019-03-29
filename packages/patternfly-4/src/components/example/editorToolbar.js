@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from '@patternfly/react-styles';
 import PropTypes from 'prop-types';
 import { Button, TextContent, Text } from '@patternfly/react-core';
-import { CodeIcon, CopyIcon } from '@patternfly/react-icons';
+import { CodeIcon, CopyIcon, AsleepIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
 import copy from 'clipboard-copy';
 
 const propTypes = {
@@ -13,7 +13,10 @@ const propTypes = {
   live: PropTypes.bool,
   onToggle: PropTypes.func,
   onCopy: PropTypes.func,
-  showMessage: PropTypes.bool
+  showMessage: PropTypes.bool,
+  fullPath: PropTypes.string,
+  showLights: PropTypes.bool,
+  onLightsChange: PropTypes.func
 };
 
 const defaultProps = {
@@ -22,13 +25,18 @@ const defaultProps = {
   live: true,
   onToggle: null,
   onCopy: null,
-  showMessage: true
+  showMessage: true,
+  fullPath: '',
+  showLights: true,
+  onLightsChange: null
 };
 
 class EditorToolbar extends React.Component {
   state = {
     codeOpen: false,
-    showCopyMessage: false
+    showCopyMessage: false,
+    fullPath: '', 
+    lights: true
   };
 
   handleClickCodeOpen = () => {
@@ -52,9 +60,19 @@ class EditorToolbar extends React.Component {
     }, 2000);
   };
 
+  toggleLights = () => {
+    this.setState(prevState => {
+      const lights = !prevState.lights
+      this.props.onLightsChange && this.props.onLightsChange(lights);
+      return {
+        lights: lights
+      };
+    });
+  };
+
   render() {
     // eslint-disable-next-line
-    const { editor, live, path: examplePath, showMessage } = this.props;
+    const { editor, live, path: examplePath, showMessage, showLights } = this.props;
     const { codeOpen, showCopyMessage } = this.state;
 
     return (
@@ -75,6 +93,26 @@ class EditorToolbar extends React.Component {
             aria-label="Copy code"
           >
             <CopyIcon />
+          </Button>
+          {showLights && <Button
+            onClick={this.toggleLights}
+            variant="plain"
+            title="Toggle Dark Theme"
+            aria-label="Toggle Dark Theme"
+          >
+            <AsleepIcon />
+          </Button>}
+          <Button
+            component="a"
+            href={this.props.fullPath} 
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={this.toggleLights}
+            variant="plain"
+            title="Open in new window"
+            aria-label="Open in new window"
+          >
+            <ExternalLinkAltIcon />
           </Button>
           {/* <a href={examplePath} target="_blank" rel="noopener noreferrer">
             <Button

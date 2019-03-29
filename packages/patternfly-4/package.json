@@ -17,7 +17,8 @@
     "patternfly-next": "node ./scripts/patternfly-next.js",
     "patternfly-react": "node ./scripts/patternfly-react.js",
     "patternfly-styles": "node ./scripts/copyStyles.js",
-    "gen-ts-docs": "typedoc --json ts-docs/ts-output.json ./_repos/react-core/src --ignoreCompilerErrors --mode file --tsconfig ./_repos/react-core/src/tsconfig.dts.json && node scripts/transformTsDocs.js"
+    "gen-ts-docs": "typedoc --json ts-docs/ts-output.json ./_repos/react-core/src --ignoreCompilerErrors --mode file --tsconfig ./_repos/react-core/src/tsconfig.dts.json && node scripts/transformTsDocs.js",
+    "preview-screenshots": "node ./scripts/previewScreenshots.js"
   },
   "dependencies": {
     "@emotion/core": "^10.0.7",
@@ -35,6 +36,7 @@
     "@patternfly/src-patternfly-react": "patternfly/patternfly-react#61df512",
     "babel-plugin-react-docgen-typescript": "1.2.0",
     "babel-standalone": "6.26.0",
+    "capture-website": "^0.3.0",
     "classnames": "2.2.6",
     "clipboard-copy": "^2.0.1",
     "css": "2.2.4",
@@ -82,6 +84,7 @@
     "react-live": "1.12.0",
     "react-pose": "^4.0.7",
     "react-prism": "4.3.2",
+    "react-spinkit": "^3.0.0",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
     "ts-loader": "5.3.3",

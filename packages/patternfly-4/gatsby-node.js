@@ -23,22 +23,28 @@ exports.onCreateNode = ({ node, actions }) => {
   const isSitePage = node.internal.type === 'SitePage';
   if (isSitePage) {
     if (reactComponentPathRegEx.test(node.path)) {
-      const pathLabel = node.component
+      const reactPathLabel = node.component
         .split('/')
         .pop()
         .split('.')
-        .shift();
+        .shift()
+        .replace(/([A-Z])/g, ' $1');
 
       createNodeField({
         node,
         name: 'label',
-        value: pathLabel
+        value: reactPathLabel
       });
     } else if (coreComponentPathRegEx.test(node.path)) {
+      const corePathLabel = node.component
+        .split('/')
+        .slice(-3)[0]
+        .replace(/([A-Z])/g, ' $1');
+
       createNodeField({
         node,
         name: 'label',
-        value: pascalCase(node.path.split('/').pop())
+        value: corePathLabel
       });
       createNodeField({
         node,
