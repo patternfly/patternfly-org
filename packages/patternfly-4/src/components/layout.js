@@ -90,14 +90,14 @@ class Layout extends React.Component {
         <Toolbar>
           <ToolbarGroup>
             <ToolbarItem>
-            <Form className="ws-search" onSubmit={event => { event.preventDefault(); return false; }}>
-              <TextInput
-                    type="text"
-                    id="global-search-input"
-                    name="global-search-input"
-                    placeholder="Search"
-                  />
-            </Form>
+              <Form className="ws-search" onSubmit={event => { event.preventDefault(); return false; }}>
+                <TextInput
+                      type="text"
+                      id="global-search-input"
+                      name="global-search-input"
+                      placeholder="Search"
+                    />
+              </Form>
             </ToolbarItem>
           </ToolbarGroup>
         </Toolbar>
