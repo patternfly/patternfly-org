@@ -12,7 +12,7 @@ import {
   Text,
   TextVariants
 } from '@patternfly/react-core';
-import { CaretRightIcon } from '@patternfly/react-icons';
+import { ArrowRightIcon } from '@patternfly/react-icons';
 import orb from '../images/PF4_logo.svg';
 import principles from '../images/PF4_WIREFRAME.png';
 
@@ -24,7 +24,7 @@ const IndexPage = () => (
         <GridItem sm={12} md={8} mdOffset={2} lg={6} lgOffset={3} className="pf-u-py-2xl pf-u-text-align-center">
           <TextContent>
             <img src={orb} alt="PatternFly logo" className="fadeInDown animated fadeInOne" />
-            <Title size="4xl" className="pf-m-white fadeIn animated fadeInTwo">Build better experiences with repeatable, scalable design.</Title>
+            <Title size="4xl" className="pf-m-white pf4-site-c-hero fadeIn animated fadeInTwo">Build better experiences with repeatable, scalable design.</Title>
             <Title size="xl" className="pf-m-white pf-u-mb-md pf-u-mb-3xl-on-md fadeInUp animated fadeInThree">PatternFly 4 is an open source design system built to drive consistency and unify teams.</Title>
             <div class="pf-u-display-flex pf-u-justify-content-center pf-u-flex-direction-column pf-u-flex-direction-row-on-md">
               <a href="/get-started/about" type="button" className="pf-c-button pf4-c-button__cta-primary pf-u-mr-0 pf-u-mb-md pf-u-mb-0-on-md pf-u-mr-xl-on-md fadeIn animated fadeInFour" aria-label="Get started with PatternFly">Get started</a>
@@ -51,34 +51,34 @@ const IndexPage = () => (
                 <div className="pf-u-pb-2xl">
                   <Text component={TextVariants.h2}>Make better decisions with clear guidance</Text>
                   <Text component={TextVariants.p}>Design guidelines supply the foundation of the system. Get acquainted with our approach to icons, color, content, and more.</Text>
-                  <Text component={TextVariants.a} href="/design-guidelines" aria-label="view design guidelines" className="pf-u-pl-0 pf4-c-link__text">View design guidelines <CaretRightIcon />
+                  <Text component={TextVariants.a} href="/design-guidelines" aria-label="view design guidelines" className="pf-u-pl-0 pf4-c-link__text">View design guidelines <ArrowRightIcon />
                   </Text>
                 </div>
                 <div className="pf-u-pb-2xl">
                   <Text component={TextVariants.h2}>Stay aligned with layouts</Text>
                   <Text component={TextVariants.p}>Layouts provide fully responsive page structure that keeps your components organized and aligned regardless of screen size.</Text>
-                  <Text component={TextVariants.a} href="/documentation/react/layouts/bullseye" aria-label="view layouts" className="pf-u-pl-0 pf4-c-link__text">View layouts <CaretRightIcon />
+                  <Text component={TextVariants.a} href="/documentation/react/layouts/bullseye" aria-label="view layouts" className="pf-u-pl-0 pf4-c-link__text">View layouts <ArrowRightIcon />
                   </Text>
                 </div>
                 <div className="pf-u-pb-2xl">
                   <Text component={TextVariants.h2}>Start building with components</Text>
                   <Text component={TextVariants.p}>Components are like building blocks. Designed to be flexible and modular, you can mix and match to create a solution for almost any UI problem.</Text>
-                  <Text component={TextVariants.a} href="/documentation/react/components/alert" aria-label="view components" className="pf-u-pl-0 pf4-c-link__text">View components <CaretRightIcon />
+                  <Text component={TextVariants.a} href="/documentation/react/components/alert" aria-label="view components" className="pf-u-pl-0 pf4-c-link__text">View components <ArrowRightIcon />
                   </Text>
                 </div>
                 <div className="pf-u-pb-2xl">
                   <Text component={TextVariants.h2}>Get inspired with demos</Text>
                   <Text component={TextVariants.p}>Explore working examples of common UI elements like forms to see how components and layouts can be combined to solve common design problems.</Text>
-                  <Text component={TextVariants.a} href="/documentation/react/demos/pagelayout" aria-label="view demos" className="pf-u-pl-0 pf4-c-link__text">View demos <CaretRightIcon />
+                  <Text component={TextVariants.a} href="/documentation/react/demos/pagelayout" aria-label="view demos" className="pf-u-pl-0 pf4-c-link__text">View demos <ArrowRightIcon />
                   </Text>
                 </div>
               </TextContent>
             </GridItem>
             <GridItem sm={12} md={6}>
-              <div class="pf4-c-image__laptop" aria-label="laptop image">&nbsp;</div>
-              <div class="pf4-c-image__phone" aria-label="phone image">&nbsp;</div>
-              <div class="pf4-c-image__screen" aria-label="screen image">&nbsp;</div>
-              <div class="pf4-c-image__desktop" aria-label="desktop image">&nbsp;</div>
+              <object type="image/svg+xml" className="pf4-c-image__laptop" aria-label="laptop image">Laptop image</object>
+              <object type="image/svg+xml" className="pf4-c-image__phone" aria-label="phone image"></object>
+              <object type="image/svg+xml" className="pf4-c-image__screen" aria-label="screen image"></object>
+              <object type="image/svg+xml" className="pf4-c-image__desktop" aria-label="desktop image"></object>
             </GridItem>
           </Grid>
         </GridItem>
@@ -98,17 +98,17 @@ const IndexPage = () => (
                 <Text component={TextVariants.h2}>Built for teams, built to scale</Text>
                 <Text component={TextVariants.p} className="pf-u-mb-3xl">Unify design and development with a set of clear guidelines and tools to help streamline communication and build more consistent user experiences.</Text>
                 <div className="pf-u-pb-md">
-                  <Text component={TextVariants.a} href="/get-started/developers" className="pf-m-white pf4-c-link__text" aria-label="Get started for developer">Get started for developers <CaretRightIcon />
+                  <Text component={TextVariants.a} href="/get-started/developers" className="pf-m-white pf4-c-link__text" aria-label="Get started for developer">Get started for developers <ArrowRightIcon />
                   </Text>
                 </div>
                 <div className="pf-u-pb-md">
-                  <Text component={TextVariants.a} href="/get-started/designers" className="pf-m-white pf4-c-link__text" aria-label="Get started for designers">Get started for designers <CaretRightIcon />
+                  <Text component={TextVariants.a} href="/get-started/designers" className="pf-m-white pf4-c-link__text" aria-label="Get started for designers">Get started for designers <ArrowRightIcon />
                   </Text>
                 </div>
               </TextContent>
             </GridItem>
             <GridItem sm={12} md={5} className="pf-u-mt-lg pf-u-mt-0-on-sm pf-u-text-align-center pf-u-text-align-right-on-md pf-u-text-align-right-on-md">
-              <img src={principles} alt="PatternFly 4 principles image" className="pf4-c-image__principles" />
+              <img src={principles} alt="PatternFly 4 principles image" className="pf4-c-image__principles pf-u-ml-lg-on-md" />
             </GridItem>
           </Grid>
         </GridItem>
