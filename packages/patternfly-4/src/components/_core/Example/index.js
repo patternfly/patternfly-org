@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import pretty from 'pretty';
 import { css } from '@patternfly/react-styles';
-import PreviewToolbar from '../../PreviewToolbar/PreviewToolbar';
 import Preview from '../Preview';
 import ComponentItems from './ComponentItems';
 import AutoLinkHeader from '@content/AutoLinkHeader';
@@ -84,14 +83,13 @@ export default class Example extends React.Component {
     if (!this.state.isFull) {
       return (
         <div className="ws-live-demo">
-          <AutoLinkHeader size="lg" is="h4">{heading}</AutoLinkHeader>
-          <PreviewToolbar fullPath={fullPath} showLights={!fullPageOnly} showViewports={!fullPageOnly} onViewportChange={this.onViewportChange} onLightsChange={this.onLightsChange}/>
+          <AutoLinkHeader size="lg" is="h4" className="ws-example-heading">{heading}</AutoLinkHeader>
           {Boolean(description) && <p className={css('description')} dangerouslySetInnerHTML={makeDescription(description)} />}
           <Preview heading={heading} viewport={this.state.viewport} lights={this.state.lights} fullPageOnly={fullPageOnly} minHeight={minHeight}>
             {children}
           </Preview>
           <ComponentItems children={children} className={css('example')} />
-          <EditorToolbar editor={editor} raw={indentedOutput} live={false} showMessage={false} />
+          <EditorToolbar editor={editor} raw={indentedOutput} live={false} showMessage={false} fullPath={fullPath} showLights={!fullPageOnly} onLightsChange={this.onLightsChange}/>
           {/* <LiveDemo raw={indentedOutput.trim()} live={false} editorLanguage="html" /> */}
         </div>
       );

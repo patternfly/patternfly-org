@@ -1,10 +1,13 @@
 import React from 'react';
+import LinkPreview from '../../LinkPreview';
 import './styles.scss';
 
 export default class Preview extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { fullPath: '' };
+    this.state = { 
+      fullPath: ''
+    };
   }
 
   componentDidMount() {
@@ -18,17 +21,11 @@ export default class Preview extends React.Component {
   }
 
   render() {
-    const { children, fullPageOnly, isViewport, viewport = '', lights = true, minHeight } = this.props;
+    const { children, fullPageOnly, isViewport, viewport = '', lights = true, minHeight, heading } = this.props;
+    const { fullPath } = this.state;
     const output = { __html: children };
     const background = lights ? '' : 'pf-t-dark pf-m-opaque-200';
-    const preview = fullPageOnly ? (
-      <div className="Preview__body ">
-        This Preview can only be accessed in&nbsp;
-        <a href={this.state.fullPath} target="_blank" rel="noopener noreferrer">
-          full page mode
-        </a>.
-      </div>
-    ) : (
+    const preview = fullPageOnly ? <LinkPreview name={heading} path={fullPath} /> : (
       <div
         className={`Preview__body ${background} ${isViewport ? 'is-viewport' : ''}`}
         style={{ minHeight: minHeight }}

@@ -31,13 +31,13 @@ class SideNav extends React.Component {
     const { searchValue } = this.state;
 
     const componentMapper = (path, label) => {
-      const { components } = DocsFiles[`${label.toLowerCase()}_docs`];
+      const { components } = DocsFiles[`${label.toLowerCase().replace(/\s+/g,'')}_docs`];
       return Object.keys(components).map(k => ({
         label: k,
         to: `${path}#${k}`
       }));
     };
-    const getPackage = label => DocsFiles[`${label.toLowerCase()}_package`].substr(6);
+    const getPackage = label => DocsFiles[`${label.toLowerCase().replace(/\s+/g,'')}_package`].substr(6);
     const componentRoutes = data.componentPages
       ? data.componentPages.edges.map(e => ({
         to: e.node.path,
