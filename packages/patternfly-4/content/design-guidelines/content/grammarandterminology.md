@@ -77,7 +77,7 @@ Whenever possible, it is best to enable users to customize the format in which d
 These date and time standards are based in American English, but date and time is formatted differently depending on language.
 
 ### Date
-Use the default US style of **Month DD, YYYY**. Use **DD Month YYYY** for non-US locations.
+For applications or websites that will be accessed globally, use **DD Month YYYY**.
 
 Whenever possible, write out the full name of the month. If you have space constraints, use the 3 letter abbreviation for the name of the month.
 
@@ -106,12 +106,12 @@ When you represent the date as a numeric value or label, use the ISO Standard 86
 ### Time
 Time can be displayed in the user's time zone or in UTC.
 * UTC is recommended for cases where people may be collaborating across time zones (for instance, tracking incidents on a server).
-* The user's time zone is recommended when the user has the option of switching to/from any time zone and UTC in settings.
+* The user's time zone is recommended when the user has the option to switch to/from time zones within the application settings.
 
-When representing date and time, include your time stamp after the date and separate with a comma.
+When representing date and time, include the time stamp after the date and separate with a comma.
 
 **Examples**
-Thursday, 21 January 2019, 9:38:11 PM
+Thursday, 21 January 2019, 9:38:11 PM EST
 
 07 Jan 2019, 23:33 UTC
 
@@ -124,7 +124,7 @@ The use of absolute or relative times stamps will depend on your user needs and 
 
 If users are interested in how long ago an event occurred, use a relative timestamp.
 
-For consistent timestamp formatting, we recommend using the following examples:
+When reporting relative time, follow these examples:
 
 | Timeframe  | Usage |
 | ------------- | ----- |
