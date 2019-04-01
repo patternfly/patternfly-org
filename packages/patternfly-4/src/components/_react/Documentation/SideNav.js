@@ -90,9 +90,9 @@ class SideNav extends React.Component {
         // console.log(location);
         const currentPath = location.pathname;
         return (
-          <Nav aria-label="Nav">
+          <Nav className="pf4-site-vertical-navigation" aria-label="Nav">
             <Switcher />
-            <Form className={css(styles.search)} onSubmit={event => { event.preventDefault(); return false; }}>
+            {/* <Form className={css(styles.search)} onSubmit={event => { event.preventDefault(); return false; }}>
               <TextInput
                 type="text"
                 id="primaryComponentSearch"
@@ -101,11 +101,11 @@ class SideNav extends React.Component {
                 value={searchValue}
                 onChange={this.handleSearchChange}
               />
-            </Form>
+            </Form> */}
             <NavList>
-              <NavExpandable 
-                title="Components" 
-                isExpanded={currentPath.indexOf('/components/') > -1 || Boolean(searchValue && filteredComponentRoutes.length > 0)} 
+              <NavExpandable
+                title="Components"
+                isExpanded={currentPath.indexOf('/components/') > -1 || Boolean(searchValue && filteredComponentRoutes.length > 0)}
                 isActive={currentPath.indexOf(/components/) > -1}
               >
                 {filteredComponentRoutes.map(item => (
@@ -119,9 +119,9 @@ class SideNav extends React.Component {
                   </NavItem>
                 ))}
               </NavExpandable>
-              <NavExpandable 
-                title="Layouts" 
-                isExpanded={currentPath.indexOf('/layouts/') > -1 || Boolean(searchValue && filteredLayoutRoutes.length > 0)} 
+              <NavExpandable
+                title="Layouts"
+                isExpanded={currentPath.indexOf('/layouts/') > -1 || Boolean(searchValue && filteredLayoutRoutes.length > 0)}
                 isActive={currentPath.indexOf(/layouts/) > -1}
               >
                 {filteredLayoutRoutes.map(item => (
@@ -135,9 +135,9 @@ class SideNav extends React.Component {
                   </NavItem>
                 ))}
               </NavExpandable>
-              <NavExpandable 
-                title="Demos" 
-                isExpanded={currentPath.indexOf('/demos/') > -1 || Boolean(searchValue && filteredDemoRoutes.length > 0)} 
+              <NavExpandable
+                title="Demos"
+                isExpanded={currentPath.indexOf('/demos/') > -1 || Boolean(searchValue && filteredDemoRoutes.length > 0)}
                 isActive={currentPath.indexOf(/demos/) > -1}
               >
                 {filteredDemoRoutes.map(item => (

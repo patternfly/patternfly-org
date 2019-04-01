@@ -1,7 +1,5 @@
 @import '../../../../node_modules/@patternfly/patternfly/sass-utilities/all.scss';
 
-@import '../workspace.scss';
-
 $block: '.pf4';
 
 .pf-m-white,
@@ -41,7 +39,7 @@ $block: '.pf4';
 }
 
 #{$block}-c-background-image {
-  --pf4-c-image--Background: url("../images/homeHeroLines.svg");
+  --pf4-c-image--Background: url("./images/homeHeroLines.svg");
 
   width: 100%;
   max-width: 100%;
@@ -58,13 +56,12 @@ $block: '.pf4';
 
   @media (min-width: $pf-global--breakpoint--sm) {
     background-size: contain;
-    background-image: url("../images/aboutPF4Lines.svg"), linear-gradient(to bottom, #065e8e 0%, #0469a8 25%, #048bc1 75%, #03b9e4 100%);
-    background-position: top right, right;
+    background-image: url("./images/aboutPF4Lines.svg"), linear-gradient(to bottom, #065e8e 0%, #0469a8 25%, #048bc1 75%, #03b9e4 100%);
   }
 
   @media (min-width: $pf-global--breakpoint--sm) and (-webkit-min-device-pixel-ratio: 2),
     (min-width: $pf-global--breakpoint--sm) and (min-resolution: 192dpi) {
-    background-image: url("../images/aboutPF4Lines.svg"), linear-gradient(to bottom, #065e8e 0%, #0469a8 25%, #048bc1 75%, #03b9e4 100%);
+    background-image: url("./images/aboutPF4Lines.svg"), linear-gradient(to bottom, #065e8e 0%, #0469a8 25%, #048bc1 75%, #03b9e4 100%);
     background-size: cover;
     background-position: top right, right;
   }
@@ -80,7 +77,7 @@ $block: '.pf4';
 #{$block}-c-background-image-principles {
   width: 100%;
   max-width: 100%;
-  background-image: url("../images/PF4PrinciplesLines.svg"), linear-gradient(to bottom, #03b9e4, #2767b2);
+  background-image: url("./images/PF4PrinciplesLines.svg"), linear-gradient(to bottom, #03b9e4, #2767b2);
   background-repeat: no-repeat, no-repeat;
   background-position: top right, right;
 
@@ -92,7 +89,7 @@ $block: '.pf4';
 #{$block}-c-background-lines {
   width: 100%;
   max-width: 100%;
-  background-image: url("../images/aboutPF4Lines.svg"), linear-gradient(to bottom, #fff, #fff);
+  background-image: url("./images/aboutPF4Lines.svg"), linear-gradient(to bottom, #fff, #fff);
   background-repeat: no-repeat, no-repeat;
   background-position: top right, right;
 
@@ -112,7 +109,7 @@ $block: '.pf4';
 #{$block}-c-image__laptop {
   height: 40%;
   width: 100%;
-  background-image: url("../images/laptop.svg");
+  background-image: url("./images/laptop.svg");
   background-repeat: no-repeat;
   background-position: center;
   @media (max-width: $pf-global--breakpoint--sm) {
@@ -131,7 +128,7 @@ $block: '.pf4';
   top: -120px;
   height: 25%;
   width: 100%;
-  background-image: url("../images/phone.svg");
+  background-image: url("./images/phone.svg");
   background-repeat: no-repeat;
   background-position: 32%;
   @media (max-width: $pf-global--breakpoint--sm) {
@@ -151,7 +148,7 @@ $block: '.pf4';
   top: -225px;
   height: 25%;
   width: 100%;
-  background-image: url("../images/screen.svg");
+  background-image: url("./images/screen.svg");
   background-repeat: no-repeat;
   background-position: 60%;
   z-index: 2;
@@ -171,7 +168,7 @@ $block: '.pf4';
   top: -300px;
   height: 42%;
   width: 100%;
-  background-image: url("../images/desktop.svg");
+  background-image: url("./images/desktop.svg");
   background-repeat: no-repeat;
   background-position: 42%;
   @media (max-width: $pf-global--breakpoint--sm) {
@@ -182,126 +179,4 @@ $block: '.pf4';
     top: -145px;
     height: 220px;
   }
-}
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
-
-@-webkit-keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-}
-
-@-webkit-keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
-
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.fadeInOne {
-  -webkit-animation-delay: .2s;
-  -moz-animation-delay: .2s;
-  animation-delay: .2s;
-}
-
-.fadeInTwo {
-  -webkit-animation-delay: .6s;
-  -moz-animation-delay: .6s;
-  animation-delay: .6s;
-}
-
-.fadeInThree {
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  animation-delay: 1s;
-}
-
-.fadeInFour {
-  -webkit-animation-delay: 1.4s;
-  -moz-animation-delay: 1.4s;
-  animation-delay: 1.4s;
 }

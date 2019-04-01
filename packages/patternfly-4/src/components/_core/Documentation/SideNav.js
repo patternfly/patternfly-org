@@ -65,10 +65,10 @@ class CoreSideNav extends React.Component {
           // console.log(location);
           const currentPath = location.pathname;
           return (
-            <Nav aria-label="Nav">
+            <Nav className="pf4-site-vertical-navigation" aria-label="Nav">
               <Switcher />
               <NavList>
-              <Form className={css(styles.search)} onSubmit={event => { event.preventDefault(); return false; }}>
+              {/* <Form className={css(styles.search)} onSubmit={event => { event.preventDefault(); return false; }}>
                 <TextInput
                   type="text"
                   id="primaryComponentSearch"
@@ -77,10 +77,10 @@ class CoreSideNav extends React.Component {
                   value={searchValue}
                   onChange={this.handleSearchChange}
                 />
-              </Form>
-                <NavExpandable 
-                  title="Components" 
-                  isExpanded={currentPath.indexOf('/components/') > -1 || (searchValue && filteredComponents.length > 0) || false} 
+              </Form> */}
+                <NavExpandable
+                  title="Components"
+                  isExpanded={currentPath.indexOf('/components/') > -1 || (searchValue && filteredComponents.length > 0) || false}
                   isActive={currentPath.indexOf(/components/) > -1}
                 >
                   {filteredComponents.map(navItem => {
@@ -102,9 +102,9 @@ class CoreSideNav extends React.Component {
                     </NavItem>
                   )})}
               </NavExpandable>
-              <NavExpandable 
-                title="Layouts" 
-                isExpanded={currentPath.indexOf('/layouts/') > -1 || (searchValue && filteredLayouts.length > 0) || false} 
+              <NavExpandable
+                title="Layouts"
+                isExpanded={currentPath.indexOf('/layouts/') > -1 || (searchValue && filteredLayouts.length > 0) || false}
                 isActive={currentPath.indexOf(/layouts/) > -1}
               >
                 {filteredLayouts.map(navItem => {
@@ -126,9 +126,9 @@ class CoreSideNav extends React.Component {
                     </NavItem>
                   )})}
               </NavExpandable>
-              <NavExpandable 
-                title="Utilities" 
-                isExpanded={currentPath.indexOf('/utilities/') > -1 || (searchValue && filteredUtilities.length > 0) || false} 
+              <NavExpandable
+                title="Utilities"
+                isExpanded={currentPath.indexOf('/utilities/') > -1 || (searchValue && filteredUtilities.length > 0) || false}
                 isActive={currentPath.indexOf(/utilities/) > -1}
               >
                 {filteredUtilities.map(navItem => {
@@ -150,9 +150,9 @@ class CoreSideNav extends React.Component {
                     </NavItem>
                   )})}
               </NavExpandable>
-              <NavExpandable 
-                title="Demos" 
-                isExpanded={currentPath.indexOf('/demos/') > -1 || (searchValue && filteredDemos.length > 0) || false} 
+              <NavExpandable
+                title="Demos"
+                isExpanded={currentPath.indexOf('/demos/') > -1 || (searchValue && filteredDemos.length > 0) || false}
                 isActive={currentPath.indexOf(/demos/) > -1}
               >
                 {filteredDemos.map(navItem => {
@@ -174,9 +174,9 @@ class CoreSideNav extends React.Component {
                       </NavItem>
                   )})}
               </NavExpandable>
-              <NavExpandable 
-                title="Upgrade Examples" 
-                isExpanded={currentPath.indexOf('/upgrade-examples/') > -1 || (searchValue && filteredUpgradeExamples.length > 0) || false} 
+              <NavExpandable
+                title="Upgrade Examples"
+                isExpanded={currentPath.indexOf('/upgrade-examples/') > -1 || (searchValue && filteredUpgradeExamples.length > 0) || false}
                 isActive={currentPath.indexOf(/upgrade-examples/) > -1}
               >
                 {filteredUpgradeExamples.map(navItem => {
