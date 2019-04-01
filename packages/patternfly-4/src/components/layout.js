@@ -124,8 +124,8 @@ class Layout extends React.Component {
               {tertiaryNav}
             </PageSection>}
             {this.props.children}
-            <Footer></Footer>
           </Page>
+          <Footer></Footer>
         </>
       )
       }} />);

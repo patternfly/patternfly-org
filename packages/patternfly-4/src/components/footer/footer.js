@@ -21,7 +21,7 @@ class Footer extends React.Component {
           <Grid className="pf-u-py-xl-on-sm pf-u-py-0-on-md">
             <GridItem md={5} mdOffset={1} className="pf-u-mb-lg pf-u-mb-0-on-sm">
               <Grid className="pf-u-py-xl-on-sm pf-u-py-8-on-md">
-                <GridItem span={6} sm={4}>
+                <GridItem span={6} sm={4} className="pf-u-ml-md pf-u-ml-0-on-md">
                   <Title size="md" className="pf-m-white">QUICKLINKS</Title>
                   <Nav aria-label="Quick Links" className="pf-m-white">
                     <NavList className="pf-c-nav__list-footer">
@@ -63,7 +63,7 @@ class Footer extends React.Component {
             </GridItem>
             <GridItem md={5}>
               <Grid className="pf-u-py-xl-on-sm pf-u-py-0-on-md">
-                <GridItem sm={12} md={10} lg={8} xl={6} mdOffset={2} lgOffset={4} xlOffset={6} className="pf4-l-footer-column pf-u-p-lg">
+                <GridItem sm={12} md={10} lg={8} xl={6} mdOffset={2} lgOffset={4} xlOffset={6} className="pf4-l-footer-column pf-u-p-lg pf-u-pl-xl">
                   <img src={patternflyLogo} alt="PatternFly logo" className="pf-u-pb-lg" />
                   <p className="pf-m-white pf-u-pb-lg">
                     PatternFly is an open source design system built to drive consistency and unify teams. We provide tools like design documentation, components, and code examples to make it possible for anyone to design and build responsive, accessible web applications.
