@@ -4,10 +4,17 @@ path: "/design-guidelines/content/grammar-and-terminology"
 # Style guide
 
 [Common terminology](#common-terminology)
+
 [Abbreviations](#abbreviations)
+
 [Acronyms](#acronyms)
+
 [Capitalization](#capitalization)
+
+[Date and time](#date-and-time)
+
 [Punctuation](#punctuation)
+
 [Truncation](#truncation)
 
 ## Common terminology
@@ -48,16 +55,6 @@ path: "/design-guidelines/content/grammar-and-terminology"
 | N/A           | Refers to data not available. Applies to tables, list views, card views, etc. |
 | --            | Refers to data not applicable. It is different than N/A that data would never be available for the object. |
 
-### Date and time
-
-When referring to time zones, use [http://www.timeanddate.com/time/zones/](http://www.timeanddate.com/time/zones/):
-
-| Symbol | Period |
-| --- | --- |
-| AM | Ante meridiem (before noon) |
-| PM | Post meridiem (after noon) |
-
-
 ## Acronyms
 
 ### General rules
@@ -73,6 +70,72 @@ Use sentence-style capitalization for all text elements, **except:**
 
 Sentence style capitalizes only the first word of each sentence and proper nouns, like names.
 
+## Date and time
+
+Whenever possible, it is best to enable users to customize the format in which date and time are displayed in the interface.
+
+These date and time standards are based in American English, but date and time is formatted differently depending on language.
+
+### Date
+For applications or websites that will be accessed globally, use **DD Month YYYY**.
+
+Whenever possible, write out the full name of the month. If you have space constraints, use the 3 letter abbreviation for the name of the month.
+
+* Jan
+* Feb
+* Mar
+* Apr
+* May
+* Jun
+* Jul
+* Aug
+* Sep
+* Oct
+* Nov
+* Dec
+
+**Examples**
+Thursday, 01 January 2019
+
+07 January 2019
+
+07 Jan 2019
+
+When you represent the date as a numeric value or label, use the ISO Standard 8601: YYYY-MM-DD.
+
+### Time
+Time can be displayed in the user's time zone or in UTC.
+* UTC is recommended for cases where people may be collaborating across time zones (for instance, tracking incidents on a server).
+* The user's time zone is recommended when the user has the option to switch to/from time zones within the application settings.
+
+When representing date and time, include the time stamp after the date and separate with a comma.
+
+**Examples**
+Thursday, 21 January 2019, 9:38:11 PM EST
+
+07 Jan 2019, 23:33 UTC
+
+9:38:11 PM
+
+9:38 PM
+
+**Absolute and relative time**
+The use of absolute or relative times stamps will depend on your user needs and use case. If your user is primarily interested in understanding the exact date and time that an event occurred, use an absolute timestamp.
+
+If users are interested in how long ago an event occurred, use a relative timestamp.
+
+When reporting relative time, follow these examples:
+
+| Timeframe  | Usage |
+| ------------- | ----- |
+| 0-60 seconds | Just now |
+| 1-60 minutes | 4 minutes ago |
+| 1-24 hours | 4 hours ago |
+| Yesterday | 1 day ago |
+| 1 - 30 days ago | 24 days ago |
+| 1 month - 1 year ago | 4 months ago |
+| 1 year + | 21 Jan 2019 |
+| Exact date and time | 21 Jan 2019, 23:33 UTC |
 <!--## Links
 
 ### External links
