@@ -1,5 +1,8 @@
 @import '../../../../node_modules/@patternfly/patternfly/components/Table/table.scss';
 
+.pf4-site-typography-grid {
+  font-family: var(--pf-global--FontFamily--sans-serif);
+}
 .markdown-body {
   table {
     @extend .pf-c-table;
