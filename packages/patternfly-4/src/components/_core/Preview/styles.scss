@@ -13,10 +13,14 @@
 }
 
 div.Preview__body *,
-div.react-live-preview * {
+div.react-live-preview *,
+div.ws-live-demo > .Preview * {
   font-family: var(--pf-global--FontFamily--sans-serif);
   .fas {
     font-family: "Font Awesome 5 Free";
+  }
+  .pficon {
+    font-family: "PatternFlyIcons-webfont";
   }
 }
 
