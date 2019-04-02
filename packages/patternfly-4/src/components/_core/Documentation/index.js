@@ -9,6 +9,7 @@ import Section from '../../section';
 import SEO from '../../seo';
 import './styles.scss';
 import Tokens from '../../css-variables';
+import MarkdownDescription from '../../MarkdownDescription';
 
 export default class Documentation extends React.Component {
   constructor(props) {
@@ -49,6 +50,7 @@ export default class Documentation extends React.Component {
             <PageSection variant={PageSectionVariants.light} className="pf-w-section-border">
               <AutoLinkHeader size="md" is="h1">{componentType}</AutoLinkHeader>
               <AutoLinkHeader size="4xl" is="h2">{heading}</AutoLinkHeader>
+              <MarkdownDescription path={currentPath} />
             </PageSection>
             <PageSection variant={PageSectionVariants.light} className="pf-w-section-border">
               <Section title="Examples" headingLevel="h3" className={className}>

@@ -15,7 +15,6 @@ import { PatternFlyThemeProvider } from '@patternfly/react-styled-system';
 import { Location } from '@reach/router';
 import { MDXProvider } from '@mdx-js/tag';
 import AutoLinkHeader from '@content/AutoLinkHeader';
-import './markdownPageTemplate.scss';
 
 const navBuilder = navData => {
   return (

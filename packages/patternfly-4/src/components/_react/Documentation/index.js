@@ -12,6 +12,7 @@ import { Location } from '@reach/router';
 import SideNav from './SideNav';
 import SEO from '../../seo';
 import Tokens from '../../css-variables';
+import MarkdownDescription from '../../MarkdownDescription';
 
 const propTypes = {
   data: PropTypes.any.isRequired,
@@ -76,6 +77,7 @@ class Documentation extends React.PureComponent {
               <PageSection variant={PageSectionVariants.light} className="section-border">
                 <AutoLinkHeader size="md" is="h1">{componentType}</AutoLinkHeader>
                 <AutoLinkHeader size="4xl" is="h2">{title}</AutoLinkHeader>
+                <MarkdownDescription path={currentPath} />
               </PageSection>
               <PageSection variant={PageSectionVariants.light} className="section-border">
                 {Boolean(description) && (
@@ -153,6 +155,16 @@ export default props => (
   <StaticQuery
     query={graphql`
       query {
+        allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/content/documentation/**"}}) {
+          edges {
+            node {
+              html
+              frontmatter {
+                path
+              }
+            }
+          }
+        }
         allComponentMetadata {
           edges {
             node {

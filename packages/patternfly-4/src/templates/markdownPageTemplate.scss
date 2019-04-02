@@ -1,8 +1,0 @@
-@import '../../../../node_modules/@patternfly/patternfly/components/Table/table.scss';
-
-.markdown-body {
-  table {
-    @extend .pf-c-table;
-    @extend .pf-m-compact;
-  }
-}

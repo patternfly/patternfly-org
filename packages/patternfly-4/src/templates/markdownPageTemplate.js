@@ -13,7 +13,6 @@ import {
 } from '@patternfly/react-core';
 import { PatternFlyThemeProvider } from '@patternfly/react-styled-system';
 import { Location } from '@reach/router';
-import './markdownPageTemplate.scss';
 
 const navBuilder = navData => {
   return (
