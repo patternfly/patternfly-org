@@ -47,34 +47,40 @@
   --pf-c-title--m-md--FontWeight: 400;
 
   &.pf-m-5xl {
-    font-family: 'RedHatDisplay';
+    font-family: RedHatDisplay;
     font-size: var(--pf-c-title--m-5xl--FontSize);
     font-weight: var(--pf-c-title--m-5xl--FontWeight);
     line-height: var(--pf-c-title--m-5xl--LineHeight);
   }
 
   &.pf-m-4xl {
-    font-family: 'RedHatDisplay';
+    font-family: RedHatDisplay;
+    font-weight: 400;
   }
 
   &.pf-m-3xl {
-    font-family: 'RedHatDisplay';
+    font-family: RedHatDisplay;
+    font-weight: 400;
   }
 
   &.pf-m-2xl {
-    font-family: 'RedHatDisplay';
+    font-family: RedHatDisplay;
+    font-weight: 400;
   }
 
   &.pf-m-xl {
-    font-family: 'RedHatDisplay';
+    font-family: RedHatDisplay;
+    font-weight: 400;
   }
 
   &.pf-m-lg {
-    font-family: 'RedHatDisplay';
+    font-family: RedHatDisplay;
+    font-weight: 400;
   }
 
   &.pf-m-md {
-    font-family: 'RedHatText';
+    font-family: RedHatText;
+    font-weight: 400;
   }
 }
 
@@ -85,21 +91,22 @@
   h4,
   h5,
   h6 {
-    font-family: 'RedHatDisplay';
+    font-family: RedHatDisplay;
+    font-weight: 400;
   }
   p, a, button, input, optgroup, select, textarea {
-    font-family: 'RedHatText';
+    font-family: RedHatText;
     font-weight: 400;
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'RedHatDisplay';
+  font-family: RedHatDisplay;
   font-weight: 700;
 }
 
 p {
-  font-family: 'RedHatText';
+  font-family: RedHatText;
   font-weight: 400;
 }
 
@@ -108,21 +115,21 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: 'RedHatText';
+  font-family: RedHatText;
   font-weight: 400;
 }
 
 html {
-  font-family: 'RedHatText';
+  font-family: RedHatText;
 }
 
 body {
-  font-family: 'RedHatText';
+  font-family: RedHatText;
   font-weight: 400;
 }
 
 a {
-  font-family: 'RedHatText';
+  font-family: RedHatText;
   font-weight: 400;
 }
 
@@ -178,6 +185,6 @@ a {
 .pf-l-level,
 .pf-l-split,
 .pf-l-stack {
-  font-family: 'RedHatText';
+  font-family: RedHatText;
   font-weight: 400;
 }

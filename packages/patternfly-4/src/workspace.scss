@@ -5,6 +5,10 @@
 @import './fonts.scss';
 @import './typography';
 
+// Fontpath
+$pf-global--font-path: "./assets/webfonts" !default;
+
+
 #___gatsby {
   height: 100%;
 }
