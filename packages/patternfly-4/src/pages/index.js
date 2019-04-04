@@ -55,7 +55,7 @@ const IndexPage = () => (
                 </div>
                 <div className="pf-u-pb-2xl">
                   <Text component={TextVariants.h2}>Stay aligned with layouts</Text>
-                  <Text component={TextVariants.p}>Layouts provide fully responsive page structure that keeps your components organized and aligned regardless of screen size.</Text>
+                  <Text component={TextVariants.p}>A layout provides a fully responsive page structure that keeps your components organized and aligned regardless of screen size.</Text>
                   <Text component={TextVariants.a} href="/documentation/react/layouts/bullseye" aria-label="view layouts" className="pf-u-pl-0 pf4-c-link__text">View layouts <ArrowRightIcon />
                   </Text>
                 </div>
@@ -90,7 +90,7 @@ const IndexPage = () => (
             <GridItem sm={12} md={5} mdOffset={1}>
               <TextContent>
                 <Title size="4xl" className="pf-u-mb-md pf-m-white">PatternFly 4 principles</Title>
-                <Text component={TextVariants.h2}>Module &amp; flexible</Text>
+                <Text component={TextVariants.h2}>Modular &amp; flexible</Text>
                 <Text component={TextVariants.p} className="pf-u-mb-3xl">Arrange self-contained components in any number of ways to build a variety of applications and interfaces. You can also use the CSS variable system to customize styles across a website or interface.</Text>
                 <Text component={TextVariants.h2}>Accessible</Text>
                 <Text component={TextVariants.p} className="pf-u-mb-3xl">Take advantage of accessible markup and guidance. Because building applications that work for everyone, regardless of ability, is just the right thing to do.</Text>
