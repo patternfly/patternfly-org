@@ -1,4 +1,5 @@
 /* stylelint-disable */
+
 .Preview_title {
   padding: .5rem;
   font-weight: 600;
@@ -9,6 +10,18 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+div.Preview__body *,
+div.react-live-preview *,
+div.ws-live-demo > .Preview * {
+  font-family: var(--pf-global--FontFamily--sans-serif);
+  .fas {
+    font-family: "Font Awesome 5 Free";
+  }
+  .pficon {
+    font-family: "PatternFlyIcons-webfont";
+  }
 }
 
 .Preview__body {

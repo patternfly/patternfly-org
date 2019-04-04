@@ -1,11 +1,30 @@
 @import './styles/variables.scss';
 @import './styles/animation.scss';
 @import './styles/navigation.scss';
-
 @import './styles/homepage.scss';
+@import './fonts.scss';
+@import './typography';
+
+// Fontpath
+$pf-global--font-path: "./assets/webfonts" !default;
+
 
 #___gatsby {
   height: 100%;
+}
+
+$block: '.pf4';
+
+.pf-c-page__header {
+  background-color: #151515;
+  .pf-c-page__header-brand {
+    background-color: #151515;
+  }
+}
+
+#{$block}-site-c-hero {
+  max-width: 600px;
+  margin: 0 auto !important;
 }
 
 .pf4-site-framework-title {
