@@ -45,7 +45,7 @@ class Footer extends React.Component {
                 </GridItem>
                 <GridItem span={6} sm={4}>
                   <Title size="md" className="pf-m-white">CONTRIBUTE</Title>
-                  <Nav aria-label="Quick Links">
+                  <Nav aria-label="Contribute">
                     <NavList className="pf-c-nav__list-footer">
                       <NavItem to="/get-started/designers" aria-label="How to contribute as a Designer">
                         Designers
@@ -55,6 +55,19 @@ class Footer extends React.Component {
                       </NavItem>
                       <NavItem to="https://github.com/patternfly/patternfly/blob/master/CODE_OF_CONDUCT.md" target="top" aria-label="PatternFly 4 Code of Conduct">
                         Code of Conduct
+                      </NavItem>
+                    </NavList>
+                  </Nav>
+                </GridItem>
+                <GridItem span={6} sm={4} className="pf-u-ml-md pf-u-ml-0-on-md">
+                  <Title size="md" className="pf-m-white pf-u-mt-lg pf-u-mt-0-on-sm">STAY IN TOUCH</Title>
+                  <Nav aria-label="Stay in touch" className="pf-m-white">
+                    <NavList className="pf-c-nav__list-footer">
+                      <NavItem to="https://forum.patternfly.org" target="top" aria-label="Visit the PatternFly 4 forum">
+                        Forum
+                      </NavItem>
+                      <NavItem to="mailto:patternfly@redhat.com" aria-label="Message the PatternFly 4 mailing list">
+                        Mailing list
                       </NavItem>
                     </NavList>
                   </Nav>
