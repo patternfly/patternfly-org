@@ -5,8 +5,63 @@ path: "/get-started/developers"
 Before you begin, check out [About PatternFly 4](/get-started/about) to get acquainted with the basic elements of the design system.
 
 Get started with:
-* [HTML/CSS](#html/css)
 * [React](#react)
+* [HTML/CSS](#html/css)
+
+## React
+
+The React library provides a collection of React components you can use to build interfaces with consistent markup, styling, and behavior.
+
+## Before you begin
+### Install NPM
+NPM is a package manager that’s bundled with Node.js. It’s required to download dependencies. Download the installer from https://nodejs.org/en/download
+
+## Getting started
+**If you’re starting from scratch and would like to use a sample project**, we recommend starting with the PatternFly React seed.
+
+The React seed is an open source build scaffolding utility created to give developers a jump start when creating new projects that will use Patternfly.
+
+**If you already have a project**, you can skip to the next section, [Installing and configuring PatternFly React](#installing-and-configuring-patternfly).
+
+### Starting with the React seed
+**Fork the project**
+[Fork and clone](https://help.github.com/articles/fork-a-repo/) the PatternFly React Seed project from https://github.com/patternfly/patternfly-react-seed.
+
+**Install the project**
+Follow the steps outlined in the [React seed README](https://github.com/patternfly/patternfly-react-seed#quick-start) to install.
+
+### Installing and configuring PatternFly React
+Using npm, run the following commands to install:
+```
+npm install @patternfly/react-core --save
+```
+
+**OR**
+
+Using yarn, run the following commands to install:
+```
+yarn add @patternfly/react-core
+```
+
+**Configurations**
+* [TypeScript](https://github.com/patternfly/patternfly-react-seed/blob/master/tsconfig.json)
+* [Webpack](https://github.com/patternfly/patternfly-react-seed/blob/master/webpack.common.js)
+* [Jest](https://github.com/patternfly/patternfly-react-seed/blob/master/jest.config.js)
+* [Editor](https://github.com/patternfly/patternfly-react-seed/blob/master/.editorconfig)
+<!--Check out the following files for example configurations:
+* [webpack.common.js](https://github.com/patternfly/patternfly-react-seed/blob/master/webpack.common.js)
+* [webpack.dev.js](https://github.com/patternfly/patternfly-react-seed/blob/master/webpack.dev.js)
+* [webpack.prod.js](https://github.com/patternfly/patternfly-react-seed/blob/master/webpack.prod.js)
+
+**If you’re using babel...**
+See [babel.config.js](https://github.com/patternfly/patternfly-react-seed/blob/master/babel.config.js) for an example configuration.
+
+ We don't have this yet, but we will need it.
+
+**If you’re using typescript...**
+See [typescript.example.js](URL) for an example configuration. -->
+
+<!--### Importing and using components -->
 
 ## HTML/CSS
 The HTML/CSS library provides a collection of code samples you can use to build interfaces with consistent PatternFly markup and styling.
@@ -113,54 +168,3 @@ Use PF3 and 4 at the same time
 All the CSS classes
 Using bootstrap, for example, bootstrap will not inadvertently style our elements, scoped = name uniquely to pf
 -->
-
-## React
-
-The React library provides a collection of React components you can use to build interfaces with consistent markup, styling, and behavior.
-
-## Before you begin
-### Install NPM
-NPM is a package manager that’s bundled with Node.js. It’s required to download dependencies. Download the installer from https://nodejs.org/en/download
-
-## Getting started
-**If you’re starting from scratch and would like to use a sample project**, we recommend starting with the PatternFly React seed.
-
-The React seed is an open source build scaffolding utility created to give developers a jump start when creating new projects that will use Patternfly.
-
-**If you already have a project**, you can skip to the next section, [Installing and configuring PatternFly React](#installing-and-configuring-patternfly).
-
-### Starting with the React seed
-**Fork the project**
-[Fork and clone](https://help.github.com/articles/fork-a-repo/) the PatternFly React Seed project from https://github.com/patternfly/patternfly-react-seed.
-
-**Install the project**
-Follow the steps outlined in the [React seed README](https://github.com/patternfly/patternfly-react-seed#quick-start) to install.
-
-### Installing and configuring PatternFly React
-Using npm, run the following commands to install:
-```
-npm install @patternfly/react-core --save
-```
-
-**OR**
-
-Using yarn, run the following commands to install:
-```
-yarn add @patternfly/react-core
-```
-
-**If you’re using webpack...**
-Check out the following files for example configurations:
-* [webpack.common.js](https://github.com/patternfly/patternfly-react-seed/blob/master/webpack.common.js)
-* [webpack.dev.js](https://github.com/patternfly/patternfly-react-seed/blob/master/webpack.dev.js)
-* [webpack.prod.js](https://github.com/patternfly/patternfly-react-seed/blob/master/webpack.prod.js)
-
-**If you’re using babel...**
-See [babel.config.js](https://github.com/patternfly/patternfly-react-seed/blob/master/babel.config.js) for an example configuration.
-
-<!-- We don't have this yet, but we will need it.
-
-**If you’re using typescript...**
-See [typescript.example.js](URL) for an example configuration. -->
-
-<!--### Importing and using components -->
