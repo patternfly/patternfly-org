@@ -32,7 +32,7 @@ class Layout extends React.Component {
         apiKey: '06941733239da4f8617d272cf2ed4d5c',
         indexName: 'patternfly',
         inputSelector: '#global-search-input',
-        debug: false // Set debug to true if you want to inspect the dropdown
+        debug: true // Set debug to true if you want to inspect the dropdown
       });
     } else {
       console.warn('Search has failed to load');
@@ -92,11 +92,11 @@ class Layout extends React.Component {
             <ToolbarItem>
               <Form className="ws-search" onSubmit={event => { event.preventDefault(); return false; }}>
                 <TextInput
-                      type="text"
-                      id="global-search-input"
-                      name="global-search-input"
-                      placeholder="Search"
-                    />
+                  type="text"
+                  id="global-search-input"
+                  name="global-search-input"
+                  placeholder="Search"
+                />
               </Form>
             </ToolbarItem>
           </ToolbarGroup>
