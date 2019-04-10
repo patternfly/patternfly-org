@@ -5,9 +5,7 @@
   "author": "Red Hat",
   "scripts": {
     "build:babel": "cross-env babel _repos/react-core/src --out-dir dist/esm --extensions \".js,jsx,.ts,.tsx\"",
-    "build:4k": "yarn gen-ts-docs && node --max_old_space_size=4096 ./node_modules/.bin/gatsby build",
-    "build": "yarn gen-ts-docs && gatsby build",
-    "build:prefix": "yarn gen-ts-docs && gatsby build --prefix-paths",
+    "build": "yarn gen-ts-docs && node --max_old_space_size=4096 ./node_modules/.bin/gatsby build --prefix-paths",
     "develop": "yarn gen-ts-docs && gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
@@ -53,6 +51,7 @@
     "gatsby-plugin-no-sourcemaps": "^2.0.2",
     "gatsby-plugin-offline": "2.0.24",
     "gatsby-plugin-page-creator": "^2.0.8",
+    "gatsby-plugin-purgecss": "^3.1.1",
     "gatsby-plugin-react-helmet": "3.0.6",
     "gatsby-plugin-robots-txt": "1.4.0",
     "gatsby-plugin-sass": "2.0.10",

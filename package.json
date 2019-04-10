@@ -7,9 +7,11 @@
     "lerna": "lerna",
     "bootstrap": "lerna bootstrap",
     "prebuild": "lerna run prebuild",
-    "build": "yarn clean && yarn build:pf4 && yarn combine-builds && yarn copy-assets",
-    "build:pf4": "lerna run build:4k --scope=@patternfly/org-patternfly-4 --stream",
-    "combine-builds": "node ./scripts/combine-sites",
+    "build": "yarn clean && yarn build:pf && yarn combine-sites && yarn copy-assets",
+    "build:pf": "lerna run build --scope='@patternfly/org-patternfly-3' --scope='@patternfly/org-patternfly-4' --parallel --stream",
+    "build:pf3": "lerna run build --scope=@patternfly/org-patternfly-3 --stream",
+    "build:pf4": "lerna run build --scope=@patternfly/org-patternfly-4 --stream",
+    "combine-sites": "node ./scripts/combine-sites",
     "copy-assets": "node ./scripts/copy-assets",
     "clean": "rm -rf out && yarn clean:pf3 && yarn clean:pf4",
     "clean:pf3": "rm -rf packages/patternfly-3/_site && rm -rf packages/patternfly-3/_build && rm -rf packages/patternfly-3/repos",
@@ -34,5 +36,8 @@
   "workspaces": [
     "packages/*",
     "packages/patternfly-4/plugins/**/*"
-  ]
+  ],
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }

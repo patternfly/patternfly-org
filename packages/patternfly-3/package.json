@@ -4,7 +4,7 @@
   "version": "3.49.0",
   "author": "Red Hat",
   "scripts": {
-    "prebuild": "bundle install",
+    "prebuild": "npm install && bundle install",
     "build": "grunt build:staging --baseurl=/",
     "build-dev": "./node_modules/patternfly-eng-release/scripts/_build.sh -o",
     "dev": "grunt serve",
