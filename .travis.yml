@@ -3,12 +3,6 @@ node_js:
   - "8"
 sudo: required
 cache: yarn
-deploy:
-  provider: surge
-  skip_cleanup: true
-  project: ./out/
-  domain: v2.patternfly.org
-  on: gatsby2
 notifications:
   email: false
 git:
