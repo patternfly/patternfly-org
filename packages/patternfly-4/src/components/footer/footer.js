@@ -66,7 +66,7 @@ class Footer extends React.Component {
                       <NavItem to="https://forum.patternfly.org" target="top" aria-label="Visit the PatternFly 4 forum">
                         Forum
                       </NavItem>
-                      <NavItem to="mailto:patternfly@redhat.com" aria-label="Message the PatternFly 4 mailing list">
+                      <NavItem to="https://www.redhat.com/mailman/listinfo/patternfly" target="top" aria-label="Message the PatternFly 4 mailing list">
                         Mailing list
                       </NavItem>
                     </NavList>
@@ -81,9 +81,6 @@ class Footer extends React.Component {
                   <p className="pf-m-white pf-u-pb-lg">
                     PatternFly is an open source design system built to drive consistency and unify teams. We provide tools like design documentation, components, and code examples to make it possible for anyone to design and build responsive, accessible web applications.
                   </p>
-                  <Text component={TextVariants.a} href="https://www.facebook.com/groups/PatternFlyCommunity/" target="top" aria-label="Link to PatternFly Facebook page">
-                    <i class="fab fa-facebook"></i>
-                  </Text>
                   <Text component={TextVariants.a} href="https://github.com/patternfly/patternfly" target="top" aria-label="Link to PatternFly GitHub page">
                     <i class="fab fa-github"></i>
                   </Text>
