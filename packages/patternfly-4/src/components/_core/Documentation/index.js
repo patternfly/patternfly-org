@@ -46,7 +46,7 @@ export default class Documentation extends React.Component {
         return (
           <Layout sideNav={<SideNav />}>
             <SEO title="React" />
-            <PageSection variant={PageSectionVariants.light} className="pf-w-section-border pf-u-pt-md pf-site-background-medium">
+            <PageSection variant={PageSectionVariants.light} className="pf-u-pt-md pf-site-background-medium">
               <AutoLinkHeader size="md" is="h1" className="pf4-site-framework-title">{componentType}</AutoLinkHeader>
               <AutoLinkHeader size="4xl" is="h2" className="pf-u-mt-sm pf-u-mb-md">{heading}</AutoLinkHeader>
               <Section title="Examples" headingLevel="h3" className={className}>
