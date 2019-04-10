@@ -10,11 +10,15 @@
 .GeneratedSource__pre[class*="language-"] {
   min-width: 100%;
   max-width: 100%;
-  padding: 1rem;
+  padding: var(--pf-global--spacer--md);
   margin: 0;
   overflow: auto;
-  background-color: transparent;
-  border: 1px solid #bbb;
+  background-color: var(--pf-global--BackgroundColor--100);
+  background-image: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: var(--pf-global--BorderWidth--sm) solid #f8f8f8;
+  border-left: none;
   box-shadow: none;
 
   &::before,
@@ -25,7 +29,7 @@
 
 .GeneratedSource__pre[class*="language-"] > code {
   padding: 0;
-  background-color: #fff;
+  background-color: var(--pf-global--BackgroundColor--100);
   background-image: none;
   border-left: 0;
   box-shadow: none;

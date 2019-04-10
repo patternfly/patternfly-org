@@ -1,42 +1,62 @@
-/* stylelint-disable */
+.pf-site-vertical-navigation {
+  &__expanded {
+    font-size: var(--pf-global--FontSize--lg);
+  }
+  .pf-c-nav__item.pf-m-expanded .pf-c-nav__subnav {
+    max-height: 100% !important;
+    font-size: var(--pf-global--FontSize--md);
+  }
+  .pf-c-nav__subnav {
+    a.pf-c-nav__link {
+      border-left: 5px solid (--pf-global--Color--light-100);
+      &:active, &:hover {
+        background-color: #f8f8f8;
+        color: #151515;
+      }
+      &.pf-m-current {
+        background-color: #f8f8f8;
+        border-left-color: #06c;
+        color: #151515;
+      }
+    }
+  }
+}
+
+.pf-site-background-medium {
+  background-color: #f8f8f8 !important;
+}
+
 .Documentation_heading {
-  margin-bottom: .5rem;
+  margin-bottom: var(--pf-global--spacer--sm);
   font-size: 24px;
-  font-weight: 500;
+  font-weight: var(--pf-global--FontWeight--semi-bold);
   color: #393f44;
 }
 
 .Component_heading {
   font-size: 28px;
-  font-weight: 500px;
+  font-weight: var(--pf-global--FontWeight--semi-bold);
   color: #292e34;
 }
 
 .Documentation__docsection {
-  margin-top: 1rem;
+  margin-top: var(--pf-global--spacer--md);
 }
 
 .Documentation__docsection h2 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.25em;
-}
-
-.pf-w-section-border {
-  border-bottom: 1px solid #bbb;
+  margin-top: var(--pf-global--spacer--xl);
+  margin-bottom: var(--pf-global--spacer--md);
+  font-size: var(--pf-global--FontSize--lg);
 }
 
 .Documentation {
   &__section {
-    margin-bottom: 2rem;
+    margin-bottom: var(--pf-global--spacer--xl);
   }
 
   code {
-    padding: .25em .75em;
-    color: #004368;
+    color: #282d33;
     white-space: nowrap;
-    background-color: #def3ff;
-    border-radius: .5em;
   }
 
   mark {
@@ -45,14 +65,15 @@
 
   table {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: var(--pf-global--spacer--md);
   }
 
   table:not(.pf-c-table) {
     td, th, tr {
-      padding: .5em;
+      padding: var(--pf-global--spacer--sm);
       vertical-align: top;
-      border: 1px solid #ccc;
+      border-top: var(--pf-global--BorderWidth--sm) solid #e0e0e0;
+      border-bottom: var(--pf-global--BorderWidth--sm) solid #e0e0e0;
     }
   }
 
@@ -63,13 +84,7 @@
     th:not(.pf-c-table__sort) {
       border: none;
     }
-
-    tr:nth-child(even) {
-      background-color: transparent;
-    }
   }
-
-  tr:nth-child(even) {background: #f1f1f1;}
 
   &-container {
     &-tall {
