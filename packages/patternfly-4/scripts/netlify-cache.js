@@ -12,7 +12,7 @@ async function calculateDirs() {
     await ensureDir(dir);
   }
 
-  const netlifyCacheDir = resolve(process.env.NETLIFY_BUILD_BASE, 'cache', 'gatsby');
+  const netlifyCacheDir = resolve(process.env.NETLIFY_BUILD_BASE, 'cache');
 
   await ensureDir(netlifyCacheDir);
 
