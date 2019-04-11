@@ -5,7 +5,7 @@
   "author": "Red Hat",
   "scripts": {
     "build:babel": "cross-env babel _repos/react-core/src --out-dir dist/esm --extensions \".js,jsx,.ts,.tsx\"",
-    "build": "yarn netlify-cache",
+    "build": "yarn netlify-cache && yarn gen-ts-docs && node --max_old_space_size=4096 ./node_modules/.bin/gatsby build --prefix-paths",
     "build:root": "yarn gen-ts-docs && node --max_old_space_size=4096 ./node_modules/.bin/gatsby build",
     "develop": "yarn gen-ts-docs && gatsby develop",
     "netlify-cache": "node ./scripts/netlify-cache.js",

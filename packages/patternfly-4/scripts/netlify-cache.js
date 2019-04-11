@@ -3,7 +3,7 @@ const { ensureDir, remove, readdir, copySync } = require('fs-extra');
 
 async function calculateDirs() {
   const program = {
-    directory: join('/', 'opt', 'build', 'cache', 'packages', 'patternfly-4'),
+    directory: join('/', 'opt', 'build', 'cache'),
   };
 
   const dirsToCache = [resolve(program.directory, 'public'), resolve(program.directory, '.cache')];
@@ -12,7 +12,7 @@ async function calculateDirs() {
     await ensureDir(dir);
   }
 
-  const netlifyCacheDir = resolve(process.env.NETLIFY_BUILD_BASE, 'cache');
+  const netlifyCacheDir = resolve(process.env.NETLIFY_BUILD_BASE, 'cache', 'gatsby');
 
   await ensureDir(netlifyCacheDir);
 
