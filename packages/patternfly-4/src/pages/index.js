@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import {
+  Button,
   Grid,
   GridItem,
   PageSection,
@@ -11,13 +12,26 @@ import {
   Text,
   TextVariants
 } from '@patternfly/react-core';
-import { ArrowRightIcon } from '@patternfly/react-icons';
+import { ArrowRightIcon, TimesIcon} from '@patternfly/react-icons';
 import orb from '../images/PF4_logo.svg';
 import principles from '../images/PF4_WIREFRAME.png';
+import { bold } from '../../../../node_modules/ansi-colors';
+import Styles from '../styles/index.scss';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
+    <div class="pf-l-flex pf-m-justify-content-space-between">
+      <div class="pf-u-my-md">
+        <span class="pf-u-ml-xl custom-text-hide">Looking for PatternFly 3? All documentation and code examples are still available.</span>
+        <a href="" style={{fontWeight: 900, textDecoration: 'none'}} class="pf-u-mx-md">Go to PatternFly 3<i class="fas fa-arrow-right pf-u-mx-sm"></i></a>
+      </div>
+      <div class="pf-u-mr-xl custom-close-button">
+        <Button variant="plain" aria-label="Action">
+            <TimesIcon />
+        </Button>
+      </div>
+    </div>
     <PageSection variant={PageSectionVariants.light} className="pf4-c-background-image pf-u-display-flex pf-u-justify-content-center pf-u-align-items-center">
       <Grid>
         <GridItem sm={12} md={8} mdOffset={2} lg={6} lgOffset={3} className="pf-u-py-2xl pf-u-text-align-center">
