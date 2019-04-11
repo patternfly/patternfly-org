@@ -8,7 +8,6 @@ const path = require('path');
 const fs = require('fs-extra');
 const paramCase = require('param-case');
 const glob = require('glob');
-const ChildProcess = require('child_process');
 
 // Map to handlebars partial files for Core
 let partialsToLocationsMap = null;
@@ -215,8 +214,8 @@ exports.createPages = ({ graphql, actions }) => {
           context: {}, // additional data can be passed via context
         })
       });
+      resolve();
     });
-    resolve();
   })
 };
 
@@ -309,8 +308,4 @@ const continueWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) 
     }
     actions.replaceWebpackConfig(config);
   }
-};
-
-exports.onPostBuild = () => {
-  ChildProcess.execSync("ps aux | grep jest | grep -v grep | awk '{print $2}' | xargs kill");
 };
