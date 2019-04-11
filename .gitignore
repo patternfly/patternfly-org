@@ -23,7 +23,6 @@ _build
 *.map
 =======
 _site
-public
 .DS_Store
 bower_components
 source/assets/css

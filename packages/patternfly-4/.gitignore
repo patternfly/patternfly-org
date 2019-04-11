@@ -55,8 +55,6 @@ typings/
 .env
 
 # gatsby files
-.cache/
-public
 .tmp/
 ts-docs/
 
