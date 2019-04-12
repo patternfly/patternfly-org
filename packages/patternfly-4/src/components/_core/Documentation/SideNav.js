@@ -51,7 +51,7 @@ class CoreSideNav extends React.Component {
 
     const searchRE = new RegExp(searchValue, 'i');
 
-    return <div>asd</asd>;
+    return <div>asd</div>;
 
     const filteredComponents = components.filter(c => searchRE.test(c.text));
     const filteredLayouts = layouts.filter(c => searchRE.test(c.text));
