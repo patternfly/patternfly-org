@@ -124,97 +124,97 @@ exports.createPages = ({ graphql, actions }) => {
       const { docs, examples, exampleImages, coreExamples, markdownPages} = result.data;
       const docExports = [];
       const docsComponentPath = path.resolve(__dirname, './src/components/_react/Documentation');
-      docs.edges.forEach(({ node: doc }) => {
-        const filePath = path.resolve(__dirname, '.tmp', doc.base);
+      // docs.edges.forEach(({ node: doc }) => {
+      //   const filePath = path.resolve(__dirname, '.tmp', doc.base);
 
-        const rawExamples = [];
-        const getPackage = pkg => doc.absolutePath.indexOf(pkg) !== -1 && pkg;
-        const packageDir = getPackage('react-core') || getPackage('react-charts') || getPackage('react-table');
-        examples.edges.forEach(({ node: example }) => {
-          if (
-            example.relativeDirectory
-              .split('/')
-              .slice(0, 3)
-              .join('/') === doc.relativeDirectory
-          ) {
-            const examplePath = `../_repos/${packageDir}/${example.relativePath}`;
-            rawExamples.push(`{name: '${example.name}', path: '${examplePath}', file: require('!!raw-loader!${examplePath}')}`);
-          }
-        });
-        const allImages = [];
-        exampleImages.edges.forEach(({ node: image }) => {
-          const imagePath = `../_repos/react-core/${image.relativePath}`;
-          allImages.push(`{name: '${image.base}', file: require('${imagePath}')}`);
-        });
-
-        const content = `
-        import React from 'react';
-        import docs from '${doc.absolutePath}';
-        import Documentation from '${docsComponentPath}';
-
-        const rawExamples = [${rawExamples}];
-        const images = [${allImages}];
-
-        export const ${doc.base.split('.')[0].toLowerCase()}_docs = docs;
-        export const ${doc.base.split('.')[0].toLowerCase()}_package = '${packageDir}';
-
-        export default () => <Documentation rawExamples={rawExamples} images={images} {...docs} />;
-        `;
-
-        docExports.push(
-          `export { ${doc.base.split('.')[0].toLowerCase()}_docs, ${doc.base
-            .split('.')[0]
-            .toLowerCase()}_package } from './${doc.base}';`
-        );
-
-        fs.outputFileSync(filePath, content);
-        const shortenedPath = doc.relativePath.split('/').slice(1).join('/');
-        console.log(`creating page for: /documentation/react/${path.dirname(shortenedPath).toLowerCase()}`);
-        createPage({
-          path: `/documentation/react/${path.dirname(shortenedPath).toLowerCase()}`,
-          component: filePath
-        });
-      });
-
-      const indexFilePath = path.resolve(__dirname, '.tmp', 'index.js');
-      fs.writeFileSync(indexFilePath, docExports.join('\n'));
-
-      examples.edges.forEach(({ node: example }) => {
-        const shortenedPath = example.relativePath.split('/').slice(1).join('/');
-        const examplePath = `/documentation/react/${path.dirname(shortenedPath).toLowerCase()}/${paramCase(example.name)}`;
-        console.log(`creating page for: ${examplePath}`);
-        createPage({
-          path: examplePath,
-          layout: 'example',
-          component: example.absolutePath
-        });
-      });
-
-      // coreExamples && coreExamples.edges.forEach(({ node }) => {
-      //   const shortenedPath = node.relativePath.split('/').slice(2, 4).join('/').toLowerCase();
-      //   const examplePath = `/documentation/core/${shortenedPath}`;
-
-      //   console.log(`creating page for: ${examplePath}`);
-      //   createPage({
-      //     path: examplePath,
-      //     component: path.resolve(__dirname, node.absolutePath)
+      //   const rawExamples = [];
+      //   const getPackage = pkg => doc.absolutePath.indexOf(pkg) !== -1 && pkg;
+      //   const packageDir = getPackage('react-core') || getPackage('react-charts') || getPackage('react-table');
+      //   examples.edges.forEach(({ node: example }) => {
+      //     if (
+      //       example.relativeDirectory
+      //         .split('/')
+      //         .slice(0, 3)
+      //         .join('/') === doc.relativeDirectory
+      //     ) {
+      //       const examplePath = `../_repos/${packageDir}/${example.relativePath}`;
+      //       rawExamples.push(`{name: '${example.name}', path: '${examplePath}', file: require('!!raw-loader!${examplePath}')}`);
+      //     }
       //   });
-      //   // also create a full demo page for each component
-      //   console.log(`creating page for: ${examplePath}-full`);
+      //   const allImages = [];
+      //   exampleImages.edges.forEach(({ node: image }) => {
+      //     const imagePath = `../_repos/react-core/${image.relativePath}`;
+      //     allImages.push(`{name: '${image.base}', file: require('${imagePath}')}`);
+      //   });
+
+      //   const content = `
+      //   import React from 'react';
+      //   import docs from '${doc.absolutePath}';
+      //   import Documentation from '${docsComponentPath}';
+
+      //   const rawExamples = [${rawExamples}];
+      //   const images = [${allImages}];
+
+      //   export const ${doc.base.split('.')[0].toLowerCase()}_docs = docs;
+      //   export const ${doc.base.split('.')[0].toLowerCase()}_package = '${packageDir}';
+
+      //   export default () => <Documentation rawExamples={rawExamples} images={images} {...docs} />;
+      //   `;
+
+      //   docExports.push(
+      //     `export { ${doc.base.split('.')[0].toLowerCase()}_docs, ${doc.base
+      //       .split('.')[0]
+      //       .toLowerCase()}_package } from './${doc.base}';`
+      //   );
+
+      //   fs.outputFileSync(filePath, content);
+      //   const shortenedPath = doc.relativePath.split('/').slice(1).join('/');
+      //   console.log(`creating page for: /documentation/react/${path.dirname(shortenedPath).toLowerCase()}`);
       //   createPage({
-      //     path: `${examplePath}-full`,
-      //     component: path.resolve(__dirname, node.absolutePath)
+      //     path: `/documentation/react/${path.dirname(shortenedPath).toLowerCase()}`,
+      //     component: filePath
       //   });
       // });
 
-      markdownPages.edges.forEach(({ node }) => {
-        console.log(`creating page for: ${node.frontmatter.path}`);
+      // const indexFilePath = path.resolve(__dirname, '.tmp', 'index.js');
+      // fs.writeFileSync(indexFilePath, docExports.join('\n'));
+
+      // examples.edges.forEach(({ node: example }) => {
+      //   const shortenedPath = example.relativePath.split('/').slice(1).join('/');
+      //   const examplePath = `/documentation/react/${path.dirname(shortenedPath).toLowerCase()}/${paramCase(example.name)}`;
+      //   console.log(`creating page for: ${examplePath}`);
+      //   createPage({
+      //     path: examplePath,
+      //     layout: 'example',
+      //     component: example.absolutePath
+      //   });
+      // });
+
+      coreExamples && coreExamples.edges.forEach(({ node }) => {
+        const shortenedPath = node.relativePath.split('/').slice(2, 4).join('/').toLowerCase();
+        const examplePath = `/documentation/core/${shortenedPath}`;
+
+        console.log(`creating page for: ${examplePath}`);
         createPage({
-          path: node.frontmatter.path,
-          component: markdownPageTemplate,
-          context: {}, // additional data can be passed via context
-        })
+          path: examplePath,
+          component: path.resolve(__dirname, node.absolutePath)
+        });
+        // also create a full demo page for each component
+        console.log(`creating page for: ${examplePath}-full`);
+        createPage({
+          path: `${examplePath}-full`,
+          component: path.resolve(__dirname, node.absolutePath)
+        });
       });
+
+      // markdownPages.edges.forEach(({ node }) => {
+      //   console.log(`creating page for: ${node.frontmatter.path}`);
+      //   createPage({
+      //     path: node.frontmatter.path,
+      //     component: markdownPageTemplate,
+      //     context: {}, // additional data can be passed via context
+      //   })
+      // });
       resolve();
     });
   })

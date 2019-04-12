@@ -51,8 +51,6 @@ class CoreSideNav extends React.Component {
 
     const searchRE = new RegExp(searchValue, 'i');
 
-    return <div>tmp</div>;
-
     const filteredComponents = components.filter(c => searchRE.test(c.text));
     const filteredLayouts = layouts.filter(c => searchRE.test(c.text));
     const filteredDemos = demos.filter(c => searchRE.test(c.text));
@@ -221,7 +219,7 @@ export default props => (
               path
               fields {
                 label
-                # type
+                type
               }
             }
           }
