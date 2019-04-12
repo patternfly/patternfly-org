@@ -1,5 +1,27 @@
 const globImporter = require('node-sass-glob-importer');
 
+const ignore = [
+  `**/dist`,
+  `**/helpers`,
+  `**/scripts`,
+  `**/styles`,
+  `**/build`,
+  `**/utils`,
+  `**/test-helpers`,
+  /.*react-styles.*/,
+  /.*react-docs.*/,
+  /.*react-integration.*/,
+  `**/\..*`, // dotfiles
+  `**/*\.d\.ts`,
+  `**/*\.test\.*`,
+  `**/index.ts`,
+  `**/tsconfig*`,
+  `**/tslint*`,
+  `**/README*`,
+  `**/CHANGELOG*`,
+  /.*\.mdx?/, // md files in patternfly-next
+];
+
 module.exports = {
   pathPrefix: '/v4',
   siteMetadata: {
@@ -58,7 +80,7 @@ module.exports = {
       options: {
         name: `core`,
         path: `${__dirname}/_repos/core`,
-        ignore: [`**/*.scss`]
+        ignore: ignore
       }
     },
     {
