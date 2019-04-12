@@ -15,7 +15,7 @@ deploy:
   target_branch: master
   verbose: true
   on:
-    branch: master
+    branch: gatsby2
 git:
   depth: 1
 before_install:
