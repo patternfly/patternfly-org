@@ -215,14 +215,10 @@ export default props => (
   <StaticQuery
     query={graphql`
       query IndexOtherPageQuery {
-        allSitePage(filter: { path: { glob: "/documentation/core/**" }, fields: { label: { ne: null } } }, sort: {fields: fields___label}) {
+        allSitePage(filter: { path: { glob: "/documentation/core/**" } }) {
           edges {
             node {
               path
-              fields {
-                label
-                # type
-              }
             }
           }
         }
