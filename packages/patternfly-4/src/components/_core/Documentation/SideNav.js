@@ -51,8 +51,6 @@ class CoreSideNav extends React.Component {
 
     const searchRE = new RegExp(searchValue, 'i');
 
-    return <div>tmp</div>;
-
     const filteredComponents = components.filter(c => searchRE.test(c.text));
     const filteredLayouts = layouts.filter(c => searchRE.test(c.text));
     const filteredDemos = demos.filter(c => searchRE.test(c.text));
@@ -215,10 +213,14 @@ export default props => (
   <StaticQuery
     query={graphql`
       query IndexOtherPageQuery {
-        allSitePage(filter: { path: { glob: "/documentation/core/**" } }) {
+        allSitePage(filter: { path: { glob: "/documentation/core/**" }, fields: { label: { ne: null } } }, sort: {fields: fields___label}) {
           edges {
             node {
               path
+              fields {
+                label
+                # type
+              }
             }
           }
         }
