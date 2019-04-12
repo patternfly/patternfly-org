@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, StaticQuery, Link } from 'gatsby';
-import * as DocsFiles from '../../../../.tmp';
+// import * as DocsFiles from '../../../../.tmp';
 import {
   Nav,
   NavList,
@@ -29,6 +29,8 @@ class SideNav extends React.Component {
   render() {
     const { data } = this.props;
     const { searchValue } = this.state;
+
+    return <div>asd</div>;
 
     const componentMapper = (path, label) => {
       const { components } = DocsFiles[`${label.toLowerCase().replace(/\s+/g,'')}_docs`];
