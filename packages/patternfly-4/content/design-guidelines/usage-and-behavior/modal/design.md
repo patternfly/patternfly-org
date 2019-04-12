@@ -1,5 +1,5 @@
 ---
-path: "/design-guidelines/usage-and-behavior/modal-message-dialogs"
+path: "/design-guidelines/usage-and-behavior/modal"
 ---
 # Modal Message Dialogs
 Modals load and display important information without navigating away from the current page.
