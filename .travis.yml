@@ -6,7 +6,16 @@ cache: yarn
 notifications:
   email: false
 deploy:
+  provider: pages
   skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  local_dir: out
+  repo: https://github.com/jschuler/jschuler.github.io.git
+  target_branch: master
+  verbose: true
+  on:
+    branch: master
 git:
   depth: 1
 before_install:
@@ -15,5 +24,3 @@ before_install:
   - yarn install
 script:
   - travis_wait yarn build
-after_success:
-  - yarn deploy
