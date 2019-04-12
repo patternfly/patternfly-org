@@ -219,7 +219,7 @@ export default props => (
               path
               fields {
                 label
-                # type
+                type
               }
             }
           }

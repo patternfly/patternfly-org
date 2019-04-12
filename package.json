@@ -37,7 +37,5 @@
     "packages/*",
     "packages/patternfly-4/plugins/**/*"
   ],
-  "dependencies": {
-    "gh-pages": "^2.0.1"
-  }
+  "dependencies": {}
 }
