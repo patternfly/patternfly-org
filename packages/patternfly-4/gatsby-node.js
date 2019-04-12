@@ -6,12 +6,9 @@
 
 const path = require('path');
 const fs = require('fs-extra');
-const pascalCase = require('pascal-case');
 const paramCase = require('param-case');
-const inflection = require('inflection');
 const glob = require('glob');
-const findInFiles = require('find-in-files');
-// const styleFinder = require('./scripts/find-react-styles');
+const ChildProcess = require('child_process');
 
 // Map to handlebars partial files for Core
 let partialsToLocationsMap = null;
@@ -218,8 +215,8 @@ exports.createPages = ({ graphql, actions }) => {
           context: {}, // additional data can be passed via context
         })
       });
+      resolve();
     });
-    resolve();
   })
 };
 
@@ -312,4 +309,8 @@ const continueWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) 
     }
     actions.replaceWebpackConfig(config);
   }
+};
+
+exports.onPostBuild = () => {
+  ChildProcess.execSync("ps aux | grep jest | grep -v grep | awk '{print $2}' | xargs kill");
 };

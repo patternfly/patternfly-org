@@ -11,7 +11,7 @@ fs.copy(source, destinationRoot, (errCopy) => {
     return console.error(errCopy);
   }
   // eslint-disable-next-line no-console
-  console.log(errCopy);
+  console.log(`Copied assets to ${destinationRoot}`);
 });
 
 fs.copy(source, destinationDocs, (errCopy) => {
@@ -20,5 +20,5 @@ fs.copy(source, destinationDocs, (errCopy) => {
     return console.error(errCopy);
   }
   // eslint-disable-next-line no-console
-  console.log(errCopy);
+  console.log(`Copied assets to ${destinationDocs}`);
 });

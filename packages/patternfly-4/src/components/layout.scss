@@ -1,0 +1,16 @@
+.custom-text-hide {
+  @media screen and (max-width: 1050px) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+ .custom-close-button {
+  padding-right: 68px;
+  padding-left: 68px;
+
+   @media screen and (max-width: 799px) {
+    padding-right: 0;
+    padding-left: 0px;
+  }
+}

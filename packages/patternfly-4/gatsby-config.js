@@ -1,12 +1,34 @@
 const globImporter = require('node-sass-glob-importer');
 
+const ignore = [
+  `**/dist`,
+  `**/helpers`,
+  `**/scripts`,
+  `**/styles`,
+  `**/build`,
+  `**/utils`,
+  `**/test-helpers`,
+  /.*react-styles.*/,
+  /.*react-docs.*/,
+  /.*react-integration.*/,
+  `**/\..*`, // dotfiles
+  `**/*\.d\.ts`,
+  `**/*\.test\.*`,
+  `**/index.ts`,
+  `**/tsconfig*`,
+  `**/tslint*`,
+  `**/README*`,
+  `**/CHANGELOG*`,
+  /.*\.mdx?/, // md files in patternfly-next
+];
+
 module.exports = {
-  pathPrefix: '/4.0',
+  pathPrefix: '/v4',
   siteMetadata: {
     title: 'PatternFly 4',
     description: 'Documentation for PatternFly 4',
     author: 'Red Hat',
-    siteUrl: 'https://v2.patternfly.org'
+    siteUrl: 'https://jschuler.github.io/v4'
   },
   plugins: [
     {
@@ -58,7 +80,7 @@ module.exports = {
       options: {
         name: `core`,
         path: `${__dirname}/_repos/core`,
-        ignore: [`**/*.scss`]
+        ignore: ignore
       }
     },
     {
@@ -90,8 +112,6 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://v2.patternfly.org',
-        sitemap: 'https://v2.patternfly.org/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
@@ -150,12 +170,6 @@ module.exports = {
         theme_color: '#663399',
         display: 'minimal-ui'
       },
-    },
-    // {
-    //   resolve: 'gatsby-remark-embed-snippet',
-    //   options: {
-    //     directory: `${__dirname}/_repos/core`
-    //   }
-    // },
+    }
   ],
 }

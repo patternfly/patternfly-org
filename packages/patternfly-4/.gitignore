@@ -55,10 +55,10 @@ typings/
 .env
 
 # gatsby files
-.cache/
-public
 .tmp/
 ts-docs/
+.cache/
+public/
 
 # Mac files
 .DS_Store

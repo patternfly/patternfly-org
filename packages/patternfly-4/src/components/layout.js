@@ -5,6 +5,7 @@ import Header from './header';
 import Footer from './footer/footer';
 import {
   Brand,
+  Button,
   Nav,
   NavItem,
   NavList,
@@ -22,6 +23,8 @@ import {
 } from '@patternfly/react-core';
 import { Location } from '@reach/router';
 import brandImg from '../images/PatternFly_logo.svg';
+import { TimesIcon } from '@patternfly/react-icons';
+import './layout.scss';
 
 class Layout extends React.Component {
 
@@ -118,6 +121,17 @@ class Layout extends React.Component {
 
       return (
         <>
+          <div class="pf-l-flex pf-m-justify-content-space-between">
+            <div class="pf-u-my-md">
+            <span class="pf-u-ml-xl custom-text-hide">Looking for PatternFly 3? All documentation and code examples are still available.</span>
+            <a href="/" style={{fontWeight: 900, textDecoration: 'none'}} class="pf-u-mx-md">Go to PatternFly 3<i class="fas fa-arrow-right pf-u-mx-sm"></i></a>
+            </div>
+            <div class="pf-u-mr-xl custom-close-button">
+              <Button variant="plain" aria-label="Action">
+                  <TimesIcon />
+              </Button>
+            </div>
+          </div>
           <Header siteTitle={data.site.siteMetadata.title} />
           <Page isManagedSidebar={sideNav !== null} header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} /> : null}>
             {tertiaryNav && <PageSection variant={PageSectionVariants.light}>

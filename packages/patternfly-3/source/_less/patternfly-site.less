@@ -9,6 +9,72 @@
 
 @import "variables";
 
+.pf3-banner {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+ .pf3-banner-wrapper {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+ .pf3-banner-text {
+  margin-left: 32px;
+  font-size: 16px;
+
+   @media screen and (max-width: 1100px) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+ .pf3-banner-link {
+  font-weight: 600;
+  font-size: 18px;
+  color: #0066CC;
+  text-decoration: none;
+  margin-right: 16px;
+  margin-left: 16px;
+
+   &:hover {
+    color: #004080;
+    text-decoration: none;
+  }
+
+   > * {
+    margin-left: 8px;
+  }
+}
+
+ .pf3-banner-button {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 52px;
+  padding-left: 53px;
+  margin-right: 32px;
+
+   > * {
+    color: #72767b;
+    border: 0;
+    background-color: transparent;
+    font-size: 16px;
+
+     &:hover,
+    &:active,
+    &:focus {
+      color: #000;
+    }
+  }
+
+   @media screen and (max-width: 799px) {
+    padding-right: 0;
+    padding-left: 0px;
+  }
+}
+
 body {
   font-size: 13px;
   padding-top: 0;
@@ -382,20 +448,6 @@ header {
       padding-left: ((@grid-gutter-width / 2) + @navbar-toggle-sidebar-width);
       @media (min-width: @screen-md) {
         padding-left: (@navbar-sidebar-width + (@grid-gutter-width / 2));
-      }
-    }
-  }
-  .v4-tease-container {
-    background: url(../img/grid-sidebar.png) 100% 100% no-repeat #292e33;
-    .v4-tease {
-      display: block;
-      padding: 15px 20px;
-      font-weight: 700;
-      color: #fff;
-      text-align: center;
-      &:hover {
-        text-decoration: none;
-        background: rgba(101,109,115,.15);
       }
     }
   }
