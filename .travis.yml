@@ -5,6 +5,8 @@ sudo: required
 cache: yarn
 notifications:
   email: false
+deploy:
+  skip_cleanup: true
 git:
   depth: 1
 before_install:
