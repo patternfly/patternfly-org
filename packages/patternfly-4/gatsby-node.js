@@ -190,31 +190,31 @@ exports.createPages = ({ graphql, actions }) => {
         });
       });
 
-      // coreExamples && coreExamples.edges.forEach(({ node }) => {
-      //   const shortenedPath = node.relativePath.split('/').slice(2, 4).join('/').toLowerCase();
-      //   const examplePath = `/documentation/core/${shortenedPath}`;
+      coreExamples && coreExamples.edges.forEach(({ node }) => {
+        const shortenedPath = node.relativePath.split('/').slice(2, 4).join('/').toLowerCase();
+        const examplePath = `/documentation/core/${shortenedPath}`;
 
-      //   console.log(`creating page for: ${examplePath}`);
-      //   createPage({
-      //     path: examplePath,
-      //     component: path.resolve(__dirname, node.absolutePath)
-      //   });
-      //   // also create a full demo page for each component
-      //   console.log(`creating page for: ${examplePath}-full`);
-      //   createPage({
-      //     path: `${examplePath}-full`,
-      //     component: path.resolve(__dirname, node.absolutePath)
-      //   });
-      // });
+        console.log(`creating page for: ${examplePath}`);
+        createPage({
+          path: examplePath,
+          component: path.resolve(__dirname, node.absolutePath)
+        });
+        // also create a full demo page for each component
+        console.log(`creating page for: ${examplePath}-full`);
+        createPage({
+          path: `${examplePath}-full`,
+          component: path.resolve(__dirname, node.absolutePath)
+        });
+      });
 
-      // markdownPages.edges.forEach(({ node }) => {
-      //   console.log(`creating page for: ${node.frontmatter.path}`);
-      //   createPage({
-      //     path: node.frontmatter.path,
-      //     component: markdownPageTemplate,
-      //     context: {}, // additional data can be passed via context
-      //   })
-      // });
+      markdownPages.edges.forEach(({ node }) => {
+        console.log(`creating page for: ${node.frontmatter.path}`);
+        createPage({
+          path: node.frontmatter.path,
+          component: markdownPageTemplate,
+          context: {}, // additional data can be passed via context
+        })
+      });
       resolve();
     });
   })
