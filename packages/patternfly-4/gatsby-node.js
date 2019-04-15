@@ -55,9 +55,13 @@ exports.onCreateNode = ({ node, actions }) => {
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
   const redirects = [
-    { f: `/get-started`, t: `/get-started/about` },
-    { f: `/design-guidelines`, t: `/design-guidelines/styles/icons` },
-    { f: `/documentation`, t: `/documentation/react/components/aboutmodal` }
+    { f: '/get-started', t: '/get-started/about' },
+    { f: '/design-guidelines', t: '/design-guidelines/styles/icons' },
+    { f: '/design-guidelines/styles', t: '/design-guidelines/styles/icons'},
+    { f: '/documentation', t: '/documentation/react/components/aboutmodal' },
+    { f: '/documentation/react/components', t: '/documentation/react/components/aboutmodal'},
+    { f: '/documentation/react/layouts', t: '/documentation/react/layouts/bullseye'},
+    { f: '/documentation/react/demos', t: '/documentation/react/demos/pagelayout'}
   ];
   redirects.forEach(({ f, t }) => {
     createRedirect({
@@ -67,7 +71,7 @@ exports.createPages = ({ graphql, actions }) => {
     })
     console.log('\nRedirecting: ' + f + ' to: ' + t);
   })
-  const markdownPageTemplate = path.resolve(`src/templates/markdownPageTemplate.js`)
+  const markdownPageTemplate = path.resolve('src/templates/markdownPageTemplate.js')
   return new Promise((resolve, reject) => {
     graphql(`
       fragment DocFile on File {

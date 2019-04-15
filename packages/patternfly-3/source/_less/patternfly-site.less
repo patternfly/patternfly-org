@@ -440,9 +440,12 @@ h1, h2, h3 {
 }
 
 header {
+  + .container-fluid.pf-m-banner {
+    padding-top: 121px;
+  }
   + .container-fluid {
     padding-bottom: 50px; // Sticky footer
-    padding-top: 121px;
+    padding-top: 72px;
     transition: padding-left .2s cubic-bezier(.35,0,.25,1);
     .has-sidebar & {
       padding-left: ((@grid-gutter-width / 2) + @navbar-toggle-sidebar-width);
@@ -451,12 +454,16 @@ header {
       }
     }
   }
+  .navbar.navbar-default.pf-m-banner {
+    border-top: none;
+  }
   .navbar.navbar-default {
     background: #040404 !important;
     border-bottom: 0 !important;
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
+    border-top: 2px solid #32a6d7;
     font-size: @font-size-base + 1;
     margin-bottom: 0;
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false) !important;
@@ -914,6 +921,9 @@ html {
 }
 
 .navbar-sidebar {
+  &.pf-m-modifier {
+    top: 121px;
+  }
   background: @navbar-sidebar-bg-color url(../img/grid-sidebar.png) no-repeat 50% 100%;
   border: 0;
   border-radius: 0;
@@ -922,7 +932,7 @@ html {
   margin: 0;
   padding: 0;
   position: fixed;
-  top: 121px;
+  top: 72px;
   transition: all .2s cubic-bezier(.35,0,.25,1);
   width: @navbar-sidebar-width;
   z-index: (@zindex-navbar-fixed - 1);

@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const src = path.resolve(__dirname, '../content/preview-screenshots.json');
 const previews = JSON.parse(fs.readFileSync(src));
+const gatsbyConfig = require('../gatsby-config');
 
 const options = {
 	width: 1280,
@@ -26,7 +27,8 @@ const backgroundOptions = {
 };
 
 function fileNameFromUrl(url) {
-  return url.replace('https://v2.patternfly.org', '').replace(/\//g, '!').replace(/\?/g, '__').replace(/\s/g, '_').replace(/%20/g, '_');
+  const url = gatsbyConfig.siteMetadata.siteUrl;
+  return url.replace(url, '').replace(/\//g, '!').replace(/\?/g, '__').replace(/\s/g, '_').replace(/%20/g, '_');
 }
 
 (async () => {

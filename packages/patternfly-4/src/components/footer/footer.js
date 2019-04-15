@@ -10,6 +10,7 @@ import {
   Text, TextVariants,
   Title
 } from '@patternfly/react-core';
+import { withPrefix } from 'gatsby';
 import patternflyLogo from '../../images/l_pf-reverse-164x11.png';
 import redhatLogo from '../../images/RHLogo.svg';
 
@@ -25,16 +26,16 @@ class Footer extends React.Component {
                   <Title size="md" className="pf-m-white">QUICKLINKS</Title>
                   <Nav aria-label="Quick Links" className="pf-m-white">
                     <NavList className="pf-c-nav__list-footer">
-                      <NavItem to="/get-started" aria-label="Get started with PatternFly 4">
+                      <NavItem to={withPrefix('/get-started')} aria-label="Get started with PatternFly 4">
                         Get started
                       </NavItem>
-                      <NavItem to="/documentation/react/components/alert" aria-label="PatternFly 4 components">
+                      <NavItem to={withPrefix('/documentation/react/components')} aria-label="PatternFly 4 components">
                         Components
                       </NavItem>
-                      <NavItem to="/documentation/react/layouts/bullseye" aria-label="PatternFly 4 layouts">
+                      <NavItem to={withPrefix('/documentation/react/layouts')} aria-label="PatternFly 4 layouts">
                         Layouts
                       </NavItem>
-                      <NavItem to="design-guidelines/styles/icons" aria-label="PatternFly 4 styles">
+                      <NavItem to={withPrefix('/design-guidelines/styles')} aria-label="PatternFly 4 styles">
                         Styles
                       </NavItem>
                       <NavItem to="https://www.patternfly.org" target="top" aria-label="View the PatternFly 3 website">
@@ -47,10 +48,10 @@ class Footer extends React.Component {
                   <Title size="md" className="pf-m-white">CONTRIBUTE</Title>
                   <Nav aria-label="Contribute">
                     <NavList className="pf-c-nav__list-footer">
-                      <NavItem to="/get-started/designers" aria-label="How to contribute as a Designer">
+                      <NavItem to={withPrefix('/get-started/designers')} aria-label="How to contribute as a Designer">
                         Designers
                       </NavItem>
-                      <NavItem to="/get-started/developers" aria-label="How to contribute as a Developer">
+                      <NavItem to={withPrefix('/get-started/developers')} aria-label="How to contribute as a Developer">
                         Developers
                       </NavItem>
                       <NavItem to="https://github.com/patternfly/patternfly/blob/master/CODE_OF_CONDUCT.md" target="top" aria-label="PatternFly 4 Code of Conduct">
