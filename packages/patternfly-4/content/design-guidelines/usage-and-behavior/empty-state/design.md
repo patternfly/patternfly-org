@@ -33,21 +33,23 @@ Help users understand why there is no data to display and explain what they can 
 
 In this situation, a user may need to take steps to configure, connect, or enable something in order to view associated information or take advantage of features.
 
-![Configuration is required](img/emptystate-notentitled.png)
+![Configuration is required](img/config.png)
+
+![Configuration is required](img/config2.png)
 
 **The user is not entitled or the user role does not have access**
 
 Help users understand why they are not able to view content and provide next steps.
 
-![No access](img/emptystate-accessdenied.png)
+![No access](img/access-denied.png)
 
 **A backend failure**
 
 Provide the user with information about the error that is easy to understand, and provide clear next steps they can take to resolve the issue.
 
-![Backend failure](img/emptystate-errormessage.png)
+![Backend failure](img/backend-fail.png)
 
-![Page not found](img/pagenotfound.png)
+![Page not found](img/page_not_found.png)
 
 **Success**
 
@@ -55,7 +57,7 @@ Provide the users with information letting them know they’ve successfully comp
 
 ![Success](img/success.png)
 
-## Variations
+<!-- ## Variations
 
 Empty states are most commonly presented in data lists, data tables, card views, or as a full page.
 
@@ -69,4 +71,4 @@ Empty states are most commonly presented in data lists, data tables, card views,
 ![Large card](img/emptystate-lgcard.png)
 
 *In a full screen*
-![Full screen](img/emptystate-fullscreen.png)
+![Full screen](img/emptystate-fullscreen.png)-->
