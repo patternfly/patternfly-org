@@ -8,7 +8,7 @@ notifications:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GH_TOKEN # Set in the settings page of your repository, as a secure variable
+  github_token: $GH_PAGES_TOKEN # Set in the settings page of your repository, as a secure variable
   keep_history: true
   local_dir: out
   repo: patternfly/patternfly.github.io
