@@ -3,12 +3,9 @@
     {% if page.url == '/' %}
     <div id="pf3-banner" class="pf3-banner">
       <div class="pf3-banner-wrapper">
-        <span class="pf3-banner-text">PatternFly 4 is live! Visit the website for new design, code samples, and documentation.</span>
+        <span class="rhDisplayRegular pf3-banner-text">PatternFly 4 is live! Visit the website for new design, code samples, and documentation.</span>
         <a href="{{ site.baseurl }}/v4" class="pf3-banner-link">Go to PatternFly 4<i class="fa fa-arrow-right"></i></a>
       </div>
-      <!-- <div class="pf3-banner-button">
-        <button onclick="closeBanner()"><i class="fa fa-times"></i></button>
-      </div> -->
     </div>
     {% endif %}
     <div class="container-fluid {% if page.url == '/' %}pf-m-banner{% endif %}">
@@ -265,18 +262,3 @@
     </ul>
   </nav><!--{ % endif % }-->
 </header>{% endstrip %}
-<script>
-  function closeBanner() {
-    var pf3Banner = document.getElementById('pf3-banner');
-    window.sessionStorage.setItem('pf3-isBannerOpen', 'false');
-    pf3Banner.style.display = 'none';
-  }
-
-  var pf3Banner = document.getElementById('pf3-banner');
-  var showBanner = window.sessionStorage.getItem('pf3-isBannerOpen') === null ? true : JSON.parse(window.sessionStorage.getItem('pf3-isBannerOpen'));
-  if (showBanner) {
-    pf3Banner.style.display = 'flex';
-  } else {
-    pf3Banner.style.display = 'none';
-  }
-</script>
