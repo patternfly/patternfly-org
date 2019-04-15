@@ -84,7 +84,7 @@ export default class Example extends React.Component {
       return (
         <div className="ws-live-demo">
           <AutoLinkHeader size="lg" is="h4" className="ws-example-heading">{heading}</AutoLinkHeader>
-          {Boolean(description) && <p className={css('description')} dangerouslySetInnerHTML={makeDescription(description)} />}
+          {Boolean(description) && <p className="pf-c-content" dangerouslySetInnerHTML={makeDescription(description)} />}
           <Preview heading={heading} viewport={this.state.viewport} lights={this.state.lights} fullPageOnly={fullPageOnly} minHeight={minHeight}>
             {children}
           </Preview>
@@ -94,8 +94,8 @@ export default class Example extends React.Component {
         </div>
       );
       // return (
-      //   <TheExample live={false} title={heading} description={description} raw={indentedOutput} editorLanguage="html" 
-      //      editorClassName="GeneratedSource__pre language-html" showPreviewOptions coreExample={children} 
+      //   <TheExample live={false} title={heading} description={description} raw={indentedOutput} editorLanguage="html"
+      //      editorClassName="GeneratedSource__pre language-html" showPreviewOptions coreExample={children}
       //      previewFullPageOnly={fullPageOnly} previewMinHeight={minHeight}>
       //     {children}
       //     {/* <div className={`Example ${className}`}>

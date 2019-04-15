@@ -6,9 +6,7 @@ import {
   Nav,
   NavExpandable,
   NavItem,
-  NavList,
-  Form,
-  TextInput
+  NavList
 } from '@patternfly/react-core';
 import Switcher from '../../switcher';
 import { Location } from '@reach/router';
@@ -65,7 +63,7 @@ class CoreSideNav extends React.Component {
           // console.log(location);
           const currentPath = location.pathname;
           return (
-            <Nav className="pf4-site-vertical-navigation" aria-label="Nav">
+            <Nav className="pf-site-vertical-navigation" aria-label="Nav">
               <Switcher />
               <NavList>
               {/* <Form className={css(styles.search)} onSubmit={event => { event.preventDefault(); return false; }}>

@@ -15,6 +15,9 @@ $block: '.pf4';
   .pf-c-nav__list a.pf-c-nav__link {
     padding-left: 0;
     color: var(--pf-global--Color--light-100);
+    &:hover::after {
+      background-color: var(--pf-c-nav__list-link--hover--after--BackgroundColor) !important;
+    }
   }
   @media screen and (max-width: 768px) {
     &-column {
@@ -23,6 +26,7 @@ $block: '.pf4';
   }
 }
 #{$block}-l-footer-dark {
+  padding: 1rem !important;
   background: #151515 !important;
   & > * {
     color: #d2d2d2;

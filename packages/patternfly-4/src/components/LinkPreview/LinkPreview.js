@@ -4,7 +4,11 @@ import Img from 'gatsby-image';
 import './LinkPreview.scss';
 
 const LinkPreview = ({ data, name, path }) => {
-  const fileNameFromUrl = path.replace(/\//g, '!').replace(/\?/g, '!__').replace(/\s/g, '_').replace(/%20/g, '_');
+  const fileNameFromUrl = path.replace('/v4', '')
+    .replace(/\//g, '!')
+    .replace(/\?/g, '!__')
+    .replace(/\s/g, '_')
+    .replace(/%20/g, '_');
   const previewScreenshot = data ? data.allFile.edges.filter(({ node }) => node.relativePath === `${fileNameFromUrl}.png`) : null;
   return (
   <>

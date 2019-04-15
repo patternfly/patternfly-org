@@ -1,0 +1,27 @@
+.pf-site-vertical-navigation {
+  &__expanded {
+    font-size: var(--pf-global--FontSize--lg);
+  }
+  .pf-c-nav__item.pf-m-expanded .pf-c-nav__subnav {
+    max-height: 100% !important;
+    font-size: var(--pf-global--FontSize--md);
+  }
+  .pf-c-nav__subnav {
+    a.pf-c-nav__link {
+      border-left: 5px solid var(--pf-global--Color--light-100);
+      &:active, &:hover {
+        background-color: #f8f8f8;
+        color: #151515;
+      }
+      &.pf-m-current {
+        background-color: #f8f8f8;
+        border-left-color: #06c;
+        color: #151515;
+      }
+    }
+  }
+}
+
+.pf-site-background-medium {
+  background-color: #f8f8f8 !important;
+}

@@ -1,5 +1,11 @@
-.ws-switcher-group {
-  margin: 5px 0px !important;
+.pf-site-switcher-group {
+  display: flex;
+  flex-direction: column;
+  align-items: end !important;
+  &__title {
+    color: #06c;
+    font-weight: 700 !important;
+  }
 
   .pf-w-btn-left.pf-c-button,
   .pf-w-btn-left.pf-c-button::after {

@@ -47,9 +47,9 @@ export default class Documentation extends React.Component {
         return (
           <Layout sideNav={<SideNav />}>
             <SEO title="React" />
-            <PageSection variant={PageSectionVariants.light} className="pf-w-section-border">
-              <AutoLinkHeader size="md" is="h1">{componentType}</AutoLinkHeader>
-              <AutoLinkHeader size="4xl" is="h2">{heading}</AutoLinkHeader>
+            <PageSection variant={PageSectionVariants.light} className="pf-u-pt-md pf-site-background-medium">
+              <AutoLinkHeader size="md" is="h1" className="pf4-site-framework-title">{componentType}</AutoLinkHeader>
+              <AutoLinkHeader size="4xl" is="h2" className="pf-u-mt-sm pf-u-mb-md">{heading}</AutoLinkHeader>
               <MarkdownDescription path={currentPath} />
             </PageSection>
             <PageSection variant={PageSectionVariants.light} className="pf-w-section-border">
@@ -57,12 +57,12 @@ export default class Documentation extends React.Component {
                 {children}
               </Section>
             </PageSection>
-            <PageSection variant={PageSectionVariants.light}>
+            <PageSection variant={PageSectionVariants.light} className="pf-site-background-medium">
               <Section title="Documentation" headingLevel="h3">
                 <div className="Documentation Documentation__docsection" dangerouslySetInnerHTML={HTML_DOCS} />
               </Section>
             </PageSection>
-            {variablesRoot && <PageSection variant={PageSectionVariants.light}>
+            {variablesRoot && <PageSection variant={PageSectionVariants.light} className="pf-site-background-medium">
               <Section title="CSS Variables" headingLevel="h3">
                 <Tokens variables={variablesRoot} />
               </Section>

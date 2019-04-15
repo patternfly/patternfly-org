@@ -10,6 +10,7 @@ import {
   Text, TextVariants,
   Title
 } from '@patternfly/react-core';
+import { withPrefix } from 'gatsby';
 import patternflyLogo from '../../images/l_pf-reverse-164x11.png';
 import redhatLogo from '../../images/RHLogo.svg';
 
@@ -21,20 +22,20 @@ class Footer extends React.Component {
           <Grid className="pf-u-py-xl-on-sm pf-u-py-0-on-md">
             <GridItem md={5} mdOffset={1} className="pf-u-mb-lg pf-u-mb-0-on-sm">
               <Grid className="pf-u-py-xl-on-sm pf-u-py-8-on-md">
-                <GridItem span={6} sm={4}>
+                <GridItem span={6} sm={4} className="pf-u-ml-md pf-u-ml-0-on-md">
                   <Title size="md" className="pf-m-white">QUICKLINKS</Title>
                   <Nav aria-label="Quick Links" className="pf-m-white">
                     <NavList className="pf-c-nav__list-footer">
-                      <NavItem to="/get-started" aria-label="Get started with PatternFly 4">
+                      <NavItem to={withPrefix('/get-started')} aria-label="Get started with PatternFly 4">
                         Get started
                       </NavItem>
-                      <NavItem to="/documentation/react/components/alert" aria-label="PatternFly 4 components">
+                      <NavItem to={withPrefix('/documentation/react/components')} aria-label="PatternFly 4 components">
                         Components
                       </NavItem>
-                      <NavItem to="/documentation/react/layouts/bullseye" aria-label="PatternFly 4 layouts">
+                      <NavItem to={withPrefix('/documentation/react/layouts')} aria-label="PatternFly 4 layouts">
                         Layouts
                       </NavItem>
-                      <NavItem to="design-guidelines/styles/icons" aria-label="PatternFly 4 styles">
+                      <NavItem to={withPrefix('/design-guidelines/styles')} aria-label="PatternFly 4 styles">
                         Styles
                       </NavItem>
                       <NavItem to="https://www.patternfly.org" target="top" aria-label="View the PatternFly 3 website">
@@ -45,12 +46,12 @@ class Footer extends React.Component {
                 </GridItem>
                 <GridItem span={6} sm={4}>
                   <Title size="md" className="pf-m-white">CONTRIBUTE</Title>
-                  <Nav aria-label="Quick Links">
+                  <Nav aria-label="Contribute">
                     <NavList className="pf-c-nav__list-footer">
-                      <NavItem to="/get-started/designers" aria-label="How to contribute as a Designer">
+                      <NavItem to={withPrefix('/get-started/designers')} aria-label="How to contribute as a Designer">
                         Designers
                       </NavItem>
-                      <NavItem to="/get-started/developers" aria-label="How to contribute as a Developer">
+                      <NavItem to={withPrefix('/get-started/developers')} aria-label="How to contribute as a Developer">
                         Developers
                       </NavItem>
                       <NavItem to="https://github.com/patternfly/patternfly/blob/master/CODE_OF_CONDUCT.md" target="top" aria-label="PatternFly 4 Code of Conduct">
@@ -59,18 +60,28 @@ class Footer extends React.Component {
                     </NavList>
                   </Nav>
                 </GridItem>
+                <GridItem span={6} sm={4} className="pf-u-ml-md pf-u-ml-0-on-md">
+                  <Title size="md" className="pf-m-white pf-u-mt-lg pf-u-mt-0-on-sm">STAY IN TOUCH</Title>
+                  <Nav aria-label="Stay in touch" className="pf-m-white">
+                    <NavList className="pf-c-nav__list-footer">
+                      <NavItem to="https://forum.patternfly.org" target="top" aria-label="Visit the PatternFly 4 forum">
+                        Forum
+                      </NavItem>
+                      <NavItem to="https://www.redhat.com/mailman/listinfo/patternfly" target="top" aria-label="Message the PatternFly 4 mailing list">
+                        Mailing list
+                      </NavItem>
+                    </NavList>
+                  </Nav>
+                </GridItem>
               </Grid>
             </GridItem>
             <GridItem md={5}>
               <Grid className="pf-u-py-xl-on-sm pf-u-py-0-on-md">
-                <GridItem sm={12} md={10} lg={8} xl={6} mdOffset={2} lgOffset={4} xlOffset={6} className="pf4-l-footer-column pf-u-p-lg">
+                <GridItem sm={12} md={10} lg={8} xl={6} mdOffset={2} lgOffset={4} xlOffset={6} className="pf4-l-footer-column pf-u-p-lg pf-u-pl-xl">
                   <img src={patternflyLogo} alt="PatternFly logo" className="pf-u-pb-lg" />
                   <p className="pf-m-white pf-u-pb-lg">
                     PatternFly is an open source design system built to drive consistency and unify teams. We provide tools like design documentation, components, and code examples to make it possible for anyone to design and build responsive, accessible web applications.
                   </p>
-                  <Text component={TextVariants.a} href="https://www.facebook.com/groups/PatternFlyCommunity/" target="top" aria-label="Link to PatternFly Facebook page">
-                    <i class="fab fa-facebook"></i>
-                  </Text>
                   <Text component={TextVariants.a} href="https://github.com/patternfly/patternfly" target="top" aria-label="Link to PatternFly GitHub page">
                     <i class="fab fa-github"></i>
                   </Text>

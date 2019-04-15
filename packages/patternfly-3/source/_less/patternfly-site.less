@@ -6,8 +6,80 @@
 @import "font-awesome/less/variables.less";
 @import "patternfly/dist/less/variables.less";
 @import "patternfly/dist/less/mixins.less";
+@import "fonts";
 
 @import "variables";
+
+.rhDisplayRegular {
+  font-family: 'RedHatDisplay';
+  font-weight: 300;
+}
+
+.pf3-banner {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+ .pf3-banner-wrapper {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+ .pf3-banner-text {
+  margin-left: 32px;
+  font-size: 16px;
+
+   @media screen and (max-width: 1100px) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+ .pf3-banner-link {
+  font-weight: 600;
+  font-size: 18px;
+  color: #0066CC;
+  text-decoration: none;
+  margin-right: 16px;
+  margin-left: 16px;
+
+   &:hover {
+    color: #004080;
+    text-decoration: none;
+  }
+
+   > * {
+    margin-left: 8px;
+  }
+}
+
+ .pf3-banner-button {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 52px;
+  padding-left: 53px;
+  margin-right: 32px;
+
+   > * {
+    color: #72767b;
+    border: 0;
+    background-color: transparent;
+    font-size: 16px;
+
+     &:hover,
+    &:active,
+    &:focus {
+      color: #000;
+    }
+  }
+
+   @media screen and (max-width: 799px) {
+    padding-right: 0;
+    padding-left: 0px;
+  }
+}
 
 body {
   font-size: 13px;
@@ -374,9 +446,12 @@ h1, h2, h3 {
 }
 
 header {
+  + .container-fluid.pf-m-banner {
+    padding-top: 121px;
+  }
   + .container-fluid {
     padding-bottom: 50px; // Sticky footer
-    padding-top: 121px;
+    padding-top: 72px;
     transition: padding-left .2s cubic-bezier(.35,0,.25,1);
     .has-sidebar & {
       padding-left: ((@grid-gutter-width / 2) + @navbar-toggle-sidebar-width);
@@ -385,19 +460,8 @@ header {
       }
     }
   }
-  .v4-tease-container {
-    background: url(../img/grid-sidebar.png) 100% 100% no-repeat #292e33;
-    .v4-tease {
-      display: block;
-      padding: 15px 20px;
-      font-weight: 700;
-      color: #fff;
-      text-align: center;
-      &:hover {
-        text-decoration: none;
-        background: rgba(101,109,115,.15);
-      }
-    }
+  .navbar.navbar-default.pf-m-banner {
+    border-top: none;
   }
   .navbar.navbar-default {
     background: #040404 !important;
@@ -405,6 +469,7 @@ header {
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
+    border-top: 2px solid #32a6d7;
     font-size: @font-size-base + 1;
     margin-bottom: 0;
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false) !important;
@@ -862,6 +927,9 @@ html {
 }
 
 .navbar-sidebar {
+  &.pf-m-modifier {
+    top: 121px;
+  }
   background: @navbar-sidebar-bg-color url(../img/grid-sidebar.png) no-repeat 50% 100%;
   border: 0;
   border-radius: 0;
@@ -870,7 +938,7 @@ html {
   margin: 0;
   padding: 0;
   position: fixed;
-  top: 121px;
+  top: 72px;
   transition: all .2s cubic-bezier(.35,0,.25,1);
   width: @navbar-sidebar-width;
   z-index: (@zindex-navbar-fixed - 1);

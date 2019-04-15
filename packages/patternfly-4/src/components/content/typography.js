@@ -42,7 +42,7 @@ export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontS
         </table>
       </GridItem>
       <GridItem span={6}>
-        <StyledText fontWeight={fontWeight} fontSize={fontSize} lineHeight={lineHeight}>
+        <StyledText fontWeight={fontWeight} fontSize={fontSize} lineHeight={lineHeight} className="pf4-site-typography-grid">
           {children}
         </StyledText>
       </GridItem>
@@ -81,7 +81,7 @@ export const LineHeightTitle = ({children}) => (
 
 export const SpacingContentItem = ({children, fontWeight, fontSize, lineHeight}) => (
   <div css={styles.spacingContentItem}>
-    <StyledText fontWeight={fontWeight} fontSize={fontSize} lineHeight={lineHeight}>
+    <StyledText fontWeight={fontWeight} fontSize={fontSize} lineHeight={lineHeight} className="pf4-site-typography-grid">
       {children}
     </StyledText>
   </div>

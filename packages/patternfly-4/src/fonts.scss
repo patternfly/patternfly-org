@@ -1,0 +1,52 @@
+//
+// Fonts
+// --------------------------------------------------
+// PatternFly.org uses Red Hat Fonts - Red Hat Display and Red Hat Text https://github.com/RedHatOfficial/RedHatFont
+//
+
+//----------------------
+// Red Hat Font Mixin
+//----------------------
+
+@mixin printRedHatFont(
+  $weightValue: 400,
+  $weightName: 'normal',
+  $familyName: 'RedHatText',
+  $style: 'normal',
+  $relative: true,
+  $fontLocation: '../static/assets/webfonts'
+  ) {
+
+  $filePath: '../static/assets/webfonts/' + $familyName + '/' + $familyName + '-' + $weightName;
+
+  @if $relative == false {
+    $filePath: $fontLocation +  '/' + $familyName +  '/' + $familyName + '-' + $weightName;
+  }
+
+  @font-face {
+    font-family: $familyName;
+    src:
+      url('#{$filePath}.eot'); /* IE9 Compat Modes */
+    src:
+      url('#{$filePath}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('#{$filePath}.woff') format('woff'); /* Modern Browsers */
+    font-weight: $weightValue;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+//----------------------
+// Include the Red Hat Display font
+//----------------------
+@include printRedHatFont(300, Regular, $familyName: 'RedHatDisplay');
+@include printRedHatFont(400, Medium, $familyName: 'RedHatDisplay');
+@include printRedHatFont(700, Bold, $familyName: 'RedHatDisplay');
+// //----------------------
+// // Include the Red Hat Text font
+// //----------------------
+@include printRedHatFont(300, Regular, $familyName: 'RedHatText', $relative: false);
+@include printRedHatFont(400, Regular, $familyName: 'RedHatText', $relative: false);
+@include printRedHatFont(700, Medium, $familyName: 'RedHatText', $relative: false);
+@include printRedHatFont(900, Bold, $familyName: 'RedHatText', $relative: false);
+
+// // stylelint-disable

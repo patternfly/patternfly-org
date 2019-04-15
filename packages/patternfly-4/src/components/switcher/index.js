@@ -16,8 +16,8 @@ const Switcher = () => (
       const activeReact = currentPath.indexOf('/documentation/react') > -1;
       const activeCore = currentPath.indexOf('/documentation/core') > -1;
       return (
-        <Bullseye className="pf4-site-switcher-group pf-u-ml-xl">
-          <Title size="md" className="pf4-site-switcher-group__title pf-u-pb-sm">FRAMEWORK</Title>
+        <Bullseye className="pf-site-switcher-group pf-u-ml-xl">
+          <Title size="lg" className="pf-site-switcher-group__title pf-u-mb-sm">FRAMEWORK</Title>
           <div>
             <Link to="/documentation/react/components/aboutmodal">
               <Button variant={activeReact ? 'primary' : 'tertiary'} className="pf-w-btn-left" isActive={activeReact}>React</Button>
