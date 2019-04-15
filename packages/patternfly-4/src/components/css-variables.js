@@ -8,7 +8,7 @@ import { StyleSheet, css } from '@patternfly/react-styles';
 const propTypes = {
   variables: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   filter: PropTypes.string,
-  exact: PropTypes.boolean
+  exact: PropTypes.bool
 };
 
 const defaultProps = {
@@ -98,11 +98,11 @@ class Tokens extends React.Component {
     dataRows.forEach(dataRow => {
       let toPush = [];
       rows.push(toPush.concat([
-        <span className={css(styles.tokenCell)}>{dataRow[1]}</span>,
-        <span className={css(styles.tokenCell)}>{dataRow[0]}</span>,
-        <span>
+        <span key={dataRow[1]} className={css(styles.tokenCell)}>{dataRow[1]}</span>,
+        <span key ={dataRow[0]} className={css(styles.tokenCell)}>{dataRow[0]}</span>,
+        <span key={dataRow[2]}>
           {isColorRegex.test(dataRow[2]) && <span className={css(styles.color)} style={{backgroundColor: dataRow[2]}} />}
-          <span className={css(styles.value)}>{dataRow[2]}</span>
+          <span key={dataRow[2] + 'i'} className={css(styles.value)}>{dataRow[2]}</span>
         </span>
       ]));
     }, []);

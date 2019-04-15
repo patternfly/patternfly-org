@@ -34,6 +34,6 @@ const AutoLinkHeader = ({ is: Component, children, id, size, ...props }) => {
   )
 };
 
-AutoLinkHeader.defaultProps = { is: 'h2', inner: false };
+AutoLinkHeader.defaultProps = { is: 'h2' };
 
 export default AutoLinkHeader;
