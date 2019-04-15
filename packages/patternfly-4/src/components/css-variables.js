@@ -101,7 +101,7 @@ class Tokens extends React.Component {
         <span key={dataRow[1]} className={css(styles.tokenCell)}>{dataRow[1]}</span>,
         <span key ={dataRow[0]} className={css(styles.tokenCell)}>{dataRow[0]}</span>,
         <span key={dataRow[2]}>
-          {isColorRegex.test(dataRow[2]) && <span className={css(styles.color)} style={{backgroundColor: dataRow[2]}} />}
+          {isColorRegex.test(dataRow[2]) && <span key={dataRow[2] + 'ic'} className={css(styles.color)} style={{backgroundColor: dataRow[2]}} />}
           <span key={dataRow[2] + 'i'} className={css(styles.value)}>{dataRow[2]}</span>
         </span>
       ]));

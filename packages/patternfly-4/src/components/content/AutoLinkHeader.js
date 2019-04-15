@@ -2,7 +2,8 @@ import React from 'react';
 import { Title } from '@patternfly/react-core';
 import { GoLink } from 'react-icons/go';
 
-const slugger = (value, id) => {
+const slugger = (children, id) => {
+  const value = Array.isArray(children) ? children.join('') : children;
   const whitespace = /\s/g;
   const specials = /[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g;
   return value
