@@ -4,7 +4,6 @@ import { Table, Row, TD, TH, Body, Heading } from '../table';
 import Section from '../../section';
 import { ExclamationCircleIcon } from '@patternfly/react-icons';
 
-const docGenPropValueShape = PropTypes.shape({ value: PropTypes.string });
 const docGenPropShape = PropTypes.shape({
   type: PropTypes.shape({
     name: PropTypes.string,

@@ -1,6 +1,8 @@
 import React from 'react';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-import EditorToolbar from './editorToolbar';
+import { css } from '@patternfly/react-styles';
+import EditorToolbar from '../example/editorToolbar';
+import Preview from '../../components/_core/Preview';
 
 class LiveEdit extends React.Component {
   constructor(props) {
@@ -45,24 +47,22 @@ class LiveEdit extends React.Component {
 
   render() {
     const ExamplePreview = (
-      <div className={css(className, 'example')}>
+      <div className={css('example')}>
         <Preview viewport={this.state.viewport} />
       </div>
     );
 
-    const fullPath = fullPageOnly ? path : typeof window !== 'undefined' && `${
-      window.location.href.substr(0, window.location.href.length - (endsWithSlash ? 1 : 0))}/examples/${
-      paramCase(path.split('/').slice(-1)[0].slice(0, -3))}`
+    const fullPath = 'asdf';
 
-    if (GATSBY_LIVE_EXAMPLES && this.props.className === 'language-js') {
+    if (this.props.className === 'language-js') {
       return (
         <React.Fragment>
-          <ExamplePreview />
+          {ExamplePreview}
           <LiveProvider code={this.code} scope={this.scope} transformCode={this.transformCode}>
-            <LivePreview className={css(className, 'example', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')} />
+            <LivePreview className={css('example', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')} />
             <EditorToolbar
               raw={this.code}
-              editor={<LiveEditor className={css('code')} ignoreTabKey />}
+              editor={<LiveEditor className={css('code')} />}
               fullPath={fullPath}
               onLightsChange={this.onDarkModeChange} />
             <LiveError />
