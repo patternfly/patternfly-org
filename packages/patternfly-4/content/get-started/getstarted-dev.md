@@ -48,7 +48,7 @@ yarn add @patternfly/react-core
 * [Webpack](https://github.com/patternfly/patternfly-react-seed/blob/master/webpack.common.js)
 * [Jest](https://github.com/patternfly/patternfly-react-seed/blob/master/jest.config.js)
 * [Editor](https://github.com/patternfly/patternfly-react-seed/blob/master/.editorconfig)
-<!--Check out the following files for example configurations:
+{/* Check out the following files for example configurations:
 * [webpack.common.js](https://github.com/patternfly/patternfly-react-seed/blob/master/webpack.common.js)
 * [webpack.dev.js](https://github.com/patternfly/patternfly-react-seed/blob/master/webpack.dev.js)
 * [webpack.prod.js](https://github.com/patternfly/patternfly-react-seed/blob/master/webpack.prod.js)
@@ -59,9 +59,7 @@ See [babel.config.js](https://github.com/patternfly/patternfly-react-seed/blob/m
  We don't have this yet, but we will need it.
 
 **If you’re using typescript...**
-See [typescript.example.js](URL) for an example configuration. -->
-
-<!--### Importing and using components -->
+See [typescript.example.js](URL) for an example configuration.*/}
 
 ## HTML/CSS
 The HTML/CSS library provides a collection of code samples you can use to build interfaces with consistent PatternFly markup and styling.
@@ -163,8 +161,8 @@ The CSS variable system enables you to easily customize things like color or sha
 
 [Learn more and view CSS variables.](/documentation/react/css-variables/)
 
-<!-- PF class structure is scoped so you can use PF4 with another design system
+{/* PF class structure is scoped so you can use PF4 with another design system
 Use PF3 and 4 at the same time
 All the CSS classes
 Using bootstrap, for example, bootstrap will not inadvertently style our elements, scoped = name uniquely to pf
--->
+*/}
