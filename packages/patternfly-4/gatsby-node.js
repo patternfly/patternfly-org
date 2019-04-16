@@ -5,7 +5,7 @@
  */
 const path = require('path');
 const glob = require('glob');
-const navHelpers = require("./src/helpers/navHelpers");
+const navHelpers = require('./src/helpers/navHelpers');
 // const styleFinder = require('./scripts/find-react-styles');
 
 // Map to handlebars partial files for Core

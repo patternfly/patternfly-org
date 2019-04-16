@@ -7,7 +7,8 @@
   "private": true,
   "dependencies": {
     "react-docgen": "^4.1.0",
-    "react-docgen-typescript": "^1.12.3"
+    "react-docgen-typescript": "^1.12.3",
+    "typescript": "^3.3.3333"
   },
   "peerDependencies": {
     "gatsby": ">=2"

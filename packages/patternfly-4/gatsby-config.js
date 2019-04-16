@@ -92,7 +92,10 @@ module.exports = {
     'gatsby-plugin-catch-links', // catch links in markdown files and use gatsby-link to navigate
     'gatsby-plugin-emotion',
     'gatsby-plugin-offline', // this plugin enables Progressive Web App + Offline functionality https://gatsby.app/offline
-    `gatsby-transformer-react-docgen-typescript`, // Our custom plugin for *.js?x *.ts?x files to get prop types
+    {
+      // Our custom plugin for *.js?x *.ts?x files to get prop types
+      resolve: require.resolve(`${__dirname}/plugins/gatsby-transformer-react-docgen-typescript`),
+    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
