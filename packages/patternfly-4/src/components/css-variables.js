@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
     display: 'inline-block',
     height: 18,
     width: 18,
-    borderTop: `${tokensModule.global_BorderWidth_sm.var} solid ${tokensModule.global_BorderColor.var}`,
-    borderBottom: `${tokensModule.global_BorderWidth_sm.var} solid ${tokensModule.global_BorderColor.var}`,
+    borderTop: `1px solid #72767b`,
+    borderBottom: `1px solid #72767b`,
     marginRight: tokensModule.global_spacer_sm.var,
     verticalAlign: 'middle'
   },

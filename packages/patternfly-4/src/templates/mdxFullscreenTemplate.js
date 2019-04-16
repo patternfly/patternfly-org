@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { MDXRenderer } from 'gatsby-mdx';
+import { MDXRenderer } from '../components/mdx-renderer';
 import './template.scss';
 
 const MdxFullscreenTemplate = ({ data }) => {

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { PageSection, PageSectionVariants } from '@patternfly/react-core';
 import AutoLinkHeader from '@content/AutoLinkHeader';
 import { MDXProvider } from '@mdx-js/react';
-import { MDXRenderer } from '../components/mdxRenderer';
+import { MDXRenderer } from '../components/mdx-renderer';
 import SideNav from '../components/_react/Documentation/SideNav';
 import Section from '../components/section';
 import LiveEdit from '../components/_react/liveEdit';

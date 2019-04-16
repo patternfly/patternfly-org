@@ -13,7 +13,7 @@ import {
 } from '@patternfly/react-core';
 import { PatternFlyThemeProvider } from '@patternfly/react-styled-system';
 import { Location } from '@reach/router';
-import { MDXRenderer } from 'gatsby-mdx';
+import { MDXRenderer } from '../components/mdx-renderer';
 import './template.scss';
 
 const navBuilder = navData => {

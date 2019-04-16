@@ -185,23 +185,22 @@ class CoreSideNav extends React.Component {
 }
 
 export default props => (
-  <div>i should be a sidebar</div>
-  // <StaticQuery
-  //   query={graphql`
-  //     query IndexOtherPageQuery {
-  //       allSitePage(filter: { path: { glob: "/documentation/core/**" }, fields: { label: { ne: null } } }, sort: {fields: fields___label}) {
-  //         edges {
-  //           node {
-  //             path
-  //             fields {
-  //               label
-  //               type
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `}
-  //   render={data => <CoreSideNav data={data} {...props} />}
-  // />
+  <StaticQuery
+    query={graphql`
+      query IndexOtherPageQuery {
+        allSitePage(filter: { path: { glob: "/documentation/core/**" }, fields: { label: { ne: null } } }, sort: {fields: fields___label}) {
+          edges {
+            node {
+              path
+              fields {
+                label
+                type
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => <CoreSideNav data={data} {...props} />}
+  />
 );
