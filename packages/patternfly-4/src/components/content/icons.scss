@@ -1,0 +1,16 @@
+#icons {
+  font-size: 36px;
+}
+  
+.ws-search {
+  input {
+    &::placeholder {
+      color: #151515;
+    }
+
+    border: 1px solid #EDEDED;
+  }
+  .pf-c-form__label {
+    --pf-c-form__label--FontSize: var(--pf-global--FontSize--lg);
+  }
+}

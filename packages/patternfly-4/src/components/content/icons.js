@@ -6,6 +6,7 @@ import paramCase from 'param-case';
 import coreIcons from '../../../_repos/core/src/icons/definitions/pf-icons.json';
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
+import './icons.scss';
 
 const allIcons = Object.entries(icons).filter(([name]) => name.endsWith('Icon'));
 let commonIcons = allIcons.filter(([name]) => {
@@ -41,7 +42,7 @@ class Icons extends React.Component {
     });
     return (
       <>
-        <Form className="ws-search" onSubmit={event => { event.preventDefault(); return false; }}>
+        <Form className="ws-search searchIcons" onSubmit={event => { event.preventDefault(); return false; }}>
         <TextInput
               type="text"
               id="primaryIconsSearch"
