@@ -1,5 +1,5 @@
 import React from "react";
-import { StaticQuery, graphql, Link } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import {
@@ -13,9 +13,8 @@ import {
 } from '@patternfly/react-core';
 import { PatternFlyThemeProvider } from '@patternfly/react-styled-system';
 import { Location } from '@reach/router';
-import { MDXProvider } from '@mdx-js/tag';
-import AutoLinkHeader from '@content/AutoLinkHeader';
-import './markdownPageTemplate.scss';
+import { MDXRenderer } from 'gatsby-mdx';
+import './template.scss';
 
 const navBuilder = navData => {
   return (
@@ -23,14 +22,8 @@ const navBuilder = navData => {
       {({ location }) => {
         // console.log(location);
         const currentPath = location.pathname;
-        const { allGetStartedNavigationJson, allDesignGuidelinesNavigationJson } = navData;
-        if (currentPath.indexOf('/get-started') > -1 ) {
-          navData = allGetStartedNavigationJson.edges;
-        } else if (currentPath.indexOf('/design-guidelines') > -1 ) {
-          navData = allDesignGuidelinesNavigationJson.edges;
-        }
         return (
-          <Nav aria-label="Nav">
+          <Nav className="pf-site-md-nav" aria-label="Nav">
             <NavList>
               {navData.map(({ node }) => node.subNav ? (
                 <NavExpandable key={node.text} title={node.text} isExpanded={currentPath.indexOf(node.path) > -1} isActive={currentPath.indexOf(node.path) > -1}>
@@ -65,61 +58,64 @@ const navBuilder = navData => {
   );
 };
 
-const MdxPageTemplate = ({ data, children, props }) => {
-  const SideNav = navBuilder(data);
-  const content = (
-    <MDXProvider
-      components={{
-        h1: props => <AutoLinkHeader is='h1' {...props} />,
-        h2: props => <AutoLinkHeader is='h2' {...props} />,
-        h3: props => <AutoLinkHeader is='h3' {...props} />,
-        h4: props => <AutoLinkHeader is='h4' {...props} />,
-        h5: props => <AutoLinkHeader is='h5' {...props} />,
-        h6: props => <AutoLinkHeader is='h6' {...props} />
-      }}
-    >
-      <div className="markdown-body">{children}</div>
-    </MDXProvider>
-  );
-  // const content = <div className="markdown-body">{children}</div>;
+export default function ContentTemplate ({
+  data // this prop will be injected by the GraphQL query below.
+}) {
+  let SideNav;
+  const { mdx, allGetStartedNavigationJson, allDesignGuidelinesNavigationJson } = data;
+  const { frontmatter } = mdx;
+
+  if (frontmatter.path.indexOf('/get-started') > -1 ) {
+    SideNav = navBuilder(allGetStartedNavigationJson.edges);
+  } else if (frontmatter.path.indexOf('/design-guidelines') > -1 ) {
+    SideNav = navBuilder(allDesignGuidelinesNavigationJson.edges);
+  }
+
   return (
     <Layout sideNav={SideNav}>
       <SEO title="Docs" keywords={['gatsby', 'application', 'react']} />
       <PageSection variant={PageSectionVariants.light}>
         <PatternFlyThemeProvider>
-          <TextContent>{content}</TextContent>
+          <TextContent>
+            <MDXRenderer>
+              {mdx.code.body}
+            </MDXRenderer>
+          </TextContent>
         </PatternFlyThemeProvider>
       </PageSection>
     </Layout>
-  );
-};
+  )
+}
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query MdxPageTemplateQuery {
-        allGetStartedNavigationJson {
-          edges {
-            node {
-              text
-              path
-            }
-          }
+export const pageQuery = graphql`
+  query($path: String!) {
+    mdx(frontmatter: { path: { eq: $path } }) {
+      code {
+        body
+      }
+      frontmatter {
+        path
+      }
+    }
+    allGetStartedNavigationJson {
+      edges {
+        node {
+          text
+          path
         }
-        allDesignGuidelinesNavigationJson {
-          edges {
-            node {
-              text
-              path
-              subNav {
-                text
-                path
-              }
-            }
+      }
+    }
+    allDesignGuidelinesNavigationJson {
+      edges {
+        node {
+          text
+          path
+          subNav {
+            text
+            path
           }
         }
       }
-    `}
-    render={data => <MdxPageTemplate data={data} {...props} />}
-  />
-);
+    }
+  }
+`
