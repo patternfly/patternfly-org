@@ -8,7 +8,6 @@ const docGenPropValueShape = PropTypes.shape({ value: PropTypes.string });
 const docGenPropShape = PropTypes.shape({
   type: PropTypes.shape({
     name: PropTypes.string,
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(docGenPropValueShape)])
   }),
   required: PropTypes.bool,
   description: PropTypes.string,
@@ -26,7 +25,9 @@ const defaultProps = {
   description: ''
 };
 
-export const PropsTable = ({ name, description: preface, props }) => (
+export const PropsTable = ({ name, description: preface, props }) => {
+  console.log('im a props table', props)
+  return (
   <Section
     name={name}
     title={`${name} Props`}
@@ -46,15 +47,17 @@ export const PropsTable = ({ name, description: preface, props }) => (
         {props.map(prop => (
           <Row key={prop.name}>
             <TD>{prop.name}</TD>
+            <TD>{prop.type.name}</TD>
             <TD align="center">{prop.required && <ExclamationCircleIcon />}</TD>
-            <TD>{Boolean(prop.defaultValue) && prop.defaultValue.value}</TD>
+            <TD>{prop.defaultValue ? prop.defaultValue.value : ''}</TD>
             <TD>{prop.description}</TD>
           </Row>
         ))}
       </Body>
     </Table>
   </Section>
-);
+)
+        }
 
 PropsTable.propTypes = propTypes;
 PropsTable.defaultProps = defaultProps;

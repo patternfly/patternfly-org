@@ -1,9 +1,7 @@
 import React from 'react';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-import { Button } from '@patternfly/react-core';
-import { CodeIcon, CopyIcon } from '@patternfly/react-icons';
+import EditorToolbar from './editorToolbar';
 
-const liveEditorStyle = { code: { 'max-height': '37.5rem', overflow: 'auto' } };
 class LiveEdit extends React.Component {
   constructor(props) {
     super(props);
@@ -12,10 +10,14 @@ class LiveEdit extends React.Component {
     // This is injected in src/components/mdx-renderer
     this.scope = this.getScope();
     this.state = {
-      codeOpen: false,
-      copied: false
+      copied: false,
+      darkMode: false
     };
   }
+
+  onDarkModeChange = () => {
+    this.setState({darkMode: !this.state.darkMode});
+  };
 
   transformCode(code) {
     if (typeof code !== 'string') {
@@ -31,10 +33,6 @@ class LiveEdit extends React.Component {
     return toParse;
   }
 
-  onCodeOpen = () => {
-    this.setState({ codeOpen: !this.state.codeOpen })
-  }
-
   onCopy = () => {
     const el = document.createElement('textarea');
     el.value = this.code;
@@ -46,47 +44,40 @@ class LiveEdit extends React.Component {
   }
 
   render() {
-    const Toolbar = (
-      <div style={{ borderTop: `1px solid #72767b`, borderBottom: `1px solid #72767b` }}>
-        <Button
-          onClick={this.onCodeOpen}
-          variant="plain"
-          title="Toggle code"
-          aria-label="Toggle code"
-        >
-          <CodeIcon />
-        </Button>
-        <Button
-          onClick={this.onCopy}
-          variant="plain"
-          title="Copy code"
-          aria-label="Copy code"
-        >
-          <CopyIcon />
-        </Button>
-        <span>
-          {this.state.copied && 'Copied to clipboard!'}
-        </span>
+    const ExamplePreview = (
+      <div className={css(className, 'example')}>
+        <Preview viewport={this.state.viewport} />
       </div>
     );
 
-    if (this.props.className === 'language-js') {
+    const fullPath = fullPageOnly ? path : typeof window !== 'undefined' && `${
+      window.location.href.substr(0, window.location.href.length - (endsWithSlash ? 1 : 0))}/examples/${
+      paramCase(path.split('/').slice(-1)[0].slice(0, -3))}`
+
+    if (GATSBY_LIVE_EXAMPLES && this.props.className === 'language-js') {
       return (
-        <div style={{ border: `1px solid #72767b` }}>
+        <React.Fragment>
+          <ExamplePreview />
           <LiveProvider code={this.code} scope={this.scope} transformCode={this.transformCode}>
-            <LivePreview />
-            {Toolbar}
-            {this.state.codeOpen && <LiveEditor style={liveEditorStyle} />}
+            <LivePreview className={css(className, 'example', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')} />
+            <EditorToolbar
+              raw={this.code}
+              editor={<LiveEditor className={css('code')} ignoreTabKey />}
+              fullPath={fullPath}
+              onLightsChange={this.onDarkModeChange} />
             <LiveError />
           </LiveProvider>
-        </div>
+        </React.Fragment>
       );
     }
     else if (this.props.className === 'language-nolive') {
       return (
-        <LiveProvider code={this.code} disabled>
-          <LiveEditor style={liveEditorStyle} contentEditable={false} />
-        </LiveProvider>
+        <React.Fragment>
+          <ExamplePreview />
+          <LiveProvider code={this.code} disabled>
+            <LiveEditor className={css('code')} contentEditable={false} />
+          </LiveProvider>
+        </React.Fragment>
       );
     }
     else {
