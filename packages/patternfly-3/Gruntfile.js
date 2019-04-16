@@ -326,7 +326,6 @@ module.exports = function (grunt) {
       'http:pattern_status',
       'copy:components',
       'sync:patternflyDist',
-      'sync:fa5',
       'cname:' + target,
       'buildConfig:' + target,
       'sync:source',
