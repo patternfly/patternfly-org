@@ -1,16 +1,48 @@
-import { FunctionComponent, HTMLProps, ReactNode } from 'react';
-import { OneOf, Omit } from '../../../../react-core/src/typeUtils';
+import { FunctionComponent, HTMLProps, ReactNode, MouseEvent } from 'react';
 import { SortByDirection } from './SortColumn';
-import { DropdownPosition, DropdownDirection } from '@patternfly/react-core';
+import { DropdownPosition, DropdownDirection, OneOf, Omit } from '@patternfly/react-core';
+
+interface OnSort {
+  (event: MouseEvent, columnIndex: number, extraData: IExtraColumnData): void
+}
 
 export const TableGridBreakpoint: {
   grid: 'grid',
   gridMd: 'grid-md',
-  gridLg: 'grid-lg'
+  gridLg: 'grid-lg',
+  gridXl: 'grid-xl'
 };
 
 export const TableVariant: {
   'compact': 'compact'
+}
+
+export interface IRowData {
+}
+
+export interface IColumn {
+  extraParams: {
+    sortBy?: ISortBy;
+    onSort?: OnSort;
+  }
+}
+
+export interface IExtraRowData {
+  rowIndex: number;
+  rowKey?: string;
+}
+
+export interface IExtraColumnData {
+  columnIndex: number,
+  column: IColumn,
+  property: string,
+}
+
+export interface IExtraData extends IExtraColumnData, IExtraRowData {
+}
+
+export interface IExtra extends IExtraData {
+  rowData: IRowData,
 }
 
 export interface ISortBy {
@@ -20,7 +52,7 @@ export interface ISortBy {
 
 export interface IAction {
   title: String;
-  onClick: Function;
+  onClick: (event: MouseEvent, rowIndex: number, rowData: IRowData, extraData: IExtraData) => void;
 }
 
 export interface ISeparator {
@@ -29,35 +61,40 @@ export interface ISeparator {
 
 export interface ICell {
   title: String;
-  transfroms: Array<Function>;
-  cellTransforms: Array<Function>;
-  formatters: Array<Function>;
-  cellFormatters: Array<Function>;
-  props: unknown;
+  transforms: Array<Function>;
+  cellTransforms?: Array<Function>;
+  formatters?: Array<Function>;
+  cellFormatters?: Array<Function>;
+  props: any;
 }
 
 export interface IRowCell {
   title: ReactNode;
-  props: unknown;
+  props: any;
 }
 
 export interface IRow {
   cells: Array<ReactNode | IRowCell>;
   isOpen: Boolean;
   parent: Number;
-  props: unknown;
+  props: any;
+  fullWidth?: Boolean;
+  noPadding?: Boolean;
 }
 
 export interface TableProps extends Omit<Omit<HTMLProps<HTMLTableElement>, 'onSelect'>, 'rows'> {
   children?: ReactNode;
   className?: string;
   variant?: OneOf<typeof TableVariant, keyof typeof TableVariant>;
+  borders?: boolean;
   gridBreakPoint?: OneOf<typeof TableGridBreakpoint, keyof typeof TableGridBreakpoint>;
   sortBy?: ISortBy;
-  onCollapse?: Function;
-  onSelect?: Function;
-  onSort?: Function;
+  onCollapse?: (event: MouseEvent, rowIndex: number, isOpen: boolean, rowData: IRowData, extraData: IExtraData) => void;
+  onSelect?: (event: MouseEvent, isSelected: boolean, rowIndex: number, rowData: IRowData, extraData: IExtraData) => void;
+  onSort?: OnSort;
   actions?: Array<IAction | ISeparator>;
+  actionResolver?: (rowData: IRowData, extraData: IExtraData) => Array<IAction | ISeparator>;
+  areActionsDisabled?: (rowData: IRowData, extraData: IExtraData) => boolean;
   header?: ReactNode;
   caption?: ReactNode;
   rowLabeledBy?: String;

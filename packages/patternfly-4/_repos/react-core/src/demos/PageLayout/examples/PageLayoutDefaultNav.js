@@ -1,8 +1,6 @@
 import React from 'react';
 import {
   Avatar,
-  BackgroundImage,
-  BackgroundImageSrc,
   Brand,
   Button,
   ButtonVariant,
@@ -34,8 +32,8 @@ import accessibleStyles from '@patternfly/patternfly/utilities/Accessibility/acc
 import spacingStyles from '@patternfly/patternfly/utilities/Spacing/spacing.css';
 import { css } from '@patternfly/react-styles';
 import { BellIcon, CogIcon } from '@patternfly/react-icons';
-import brandImg from './l_pf-reverse-164x11.png';
-import avatarImg from './img_avatar.svg';
+import imgBrand from './imgBrand.png';
+import imgAvatar from './imgAvatar.svg';
 
 class PageLayoutDefaultNav extends React.Component {
   constructor(props) {
@@ -158,20 +156,12 @@ class PageLayoutDefaultNav extends React.Component {
         </ToolbarGroup>
       </Toolbar>
     );
-    const bgImages = {
-      [BackgroundImageSrc.lg]: '/assets/images/pfbg_1200.jpg',
-      [BackgroundImageSrc.sm]: '/assets/images/pfbg_768.jpg',
-      [BackgroundImageSrc.sm2x]: '/assets/images/pfbg_768@2x.jpg',
-      [BackgroundImageSrc.xs]: '/assets/images/pfbg_576.jpg',
-      [BackgroundImageSrc.xs2x]: '/assets/images/pfbg_576@2x.jpg',
-      [BackgroundImageSrc.filter]: '/assets/images/background-filter.svg#image_overlay'
-    };
 
     const Header = (
       <PageHeader
-        logo={<Brand src={brandImg} alt="Patternfly Logo" />}
+        logo={<Brand src={imgBrand} alt="Patternfly Logo" />}
         toolbar={PageToolbar}
-        avatar={<Avatar src={avatarImg} alt="Avatar image" />}
+        avatar={<Avatar src={imgAvatar} alt="Avatar image" />}
         showNavToggle
       />
     );
@@ -179,7 +169,6 @@ class PageLayoutDefaultNav extends React.Component {
 
     return (
       <React.Fragment>
-        <BackgroundImage src={bgImages} />
         <Page header={Header} sidebar={Sidebar} isManagedSidebar>
           <PageSection variant={PageSectionVariants.light}>
             <TextContent>
