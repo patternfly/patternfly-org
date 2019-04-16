@@ -5,9 +5,9 @@
   "author": "Red Hat",
   "scripts": {
     "build:babel": "cross-env babel _repos/react-core/src --out-dir dist/esm --extensions \".js,jsx,.ts,.tsx\"",
-    "build": "yarn gen-ts-docs && node --max_old_space_size=4096 ./node_modules/.bin/gatsby build --prefix-paths",
-    "build:root": "yarn gen-ts-docs && node --max_old_space_size=4096 ./node_modules/.bin/gatsby build",
-    "develop": "yarn gen-ts-docs && gatsby develop",
+    "build": "gatsby build --prefix-paths",
+    "build:root": "gatsby build",
+    "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,7 +16,6 @@
     "patternfly-next": "node ./scripts/patternfly-next.js",
     "patternfly-react": "node ./scripts/patternfly-react.js",
     "patternfly-styles": "node ./scripts/copyStyles.js",
-    "gen-ts-docs": "typedoc --json ts-docs/ts-output.json ./_repos/react-core/src --ignoreCompilerErrors --mode file --tsconfig ./_repos/react-core/src/tsconfig.dts.json && node scripts/transformTsDocs.js",
     "preview-screenshots": "node ./scripts/previewScreenshots.js"
   },
   "dependencies": {
@@ -86,8 +85,7 @@
     "react-spinkit": "^3.0.0",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
-    "ts-loader": "5.3.3",
-    "typescript": "3.4.3"
+    "ts-loader": "5.3.3"
   },
   "keywords": [
     "gatsby"
@@ -108,10 +106,8 @@
     "babel-jest": "23.6.0",
     "babel-plugin-transform-es2015-modules-umd": "6.24.1",
     "babel-plugin-transform-imports": "1.5.1",
-    "babel-plugin-typescript-to-proptypes": "0.17.1",
     "cross-env": "5.2.0",
-    "prettier": "1.16.4",
-    "typedoc": "^0.14.2"
+    "prettier": "1.16.4"
   },
   "repository": {
     "type": "git",
