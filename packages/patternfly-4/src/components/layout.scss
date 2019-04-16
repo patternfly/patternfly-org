@@ -1,7 +1,20 @@
 .custom-text-hide {
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 1100px) {
     display: none;
     visibility: hidden;
+  }
+}
+
+.custom-text-link {
+  text-decoration: none;
+  font-weight: 700;
+
+  @media screen and (max-width: 1100px) {
+    padding-left: 16px;
+  }
+
+  @media screen and (max-width: 765px) {
+    padding-left: 0px;
   }
 }
 
