@@ -82,10 +82,10 @@ class Footer extends React.Component {
                     PatternFly is an open source design system built to drive consistency and unify teams. We provide tools like design documentation, components, and code examples to make it possible for anyone to design and build responsive, accessible web applications.
                   </p>
                   <Text component={TextVariants.a} href="https://github.com/patternfly/patternfly" target="top" aria-label="Link to PatternFly GitHub page">
-                    <i class="fab fa-github"></i>
+                    <i className="fab fa-github"></i>
                   </Text>
                   <Text component={TextVariants.a} href="https://twitter.com/patternfly_des" target="top" aria-label="Link to PatternFly Twitter page">
-                    <i class="fab fa-twitter"></i>
+                    <i className="fab fa-twitter"></i>
                   </Text>
                 </GridItem>
               </Grid>

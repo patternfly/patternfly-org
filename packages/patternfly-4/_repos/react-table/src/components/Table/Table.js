@@ -15,7 +15,8 @@ import { calculateColumns } from './utils/headerUtils';
 export const TableGridBreakpoint = {
   grid: 'grid',
   gridMd: 'grid-md',
-  gridLg: 'grid-lg'
+  gridLg: 'grid-lg',
+  gridXl: 'grid-xl'
 };
 
 export const TableVariant = {
@@ -33,6 +34,8 @@ const propTypes = {
   variant: PropTypes.oneOf(Object.values(TableVariant)),
   /** Size at which table is broken into tiles. */
   gridBreakPoint: PropTypes.oneOf(Object.values(TableGridBreakpoint)),
+  /** Indicates if border is visible on a compacat table.  Note that this can not be applied when using expandable */
+  borders: PropTypes.bool,
   /** Settings for sorting, which index and direction is sorted by. */
   sortBy: PropTypes.shape({
     index: PropTypes.number,
@@ -49,7 +52,23 @@ const propTypes = {
       title: PropTypes.node
     })
   ),
-  /** Actual rows to display in table. Either array of strings or row ojects. */
+  /** Function should resolve an array of actions for each row in the same format as actions. */
+  actionResolver: PropTypes.func,
+  /** Function should resolve if action kebap is disabled for each row */
+  areActionsDisabled: PropTypes.func,
+  /** Override to the default BodyWrapper renderer */
+  bodyWrapper: PropTypes.func,
+  /** Override to the default RowWrapper renderer */
+  rowWrapper: PropTypes.func,
+  /** Actual rows to display in table. Either array of strings or row objects. <br/>
+   * If you want to use components in row cells you can pass them as title prop in cells definition. <br/>
+   * <pre>Ex: rows:[
+   *   {cells:[
+   *     {title: &lt;div>Some component&lt;/div>}
+   *     ...
+   *   ]}
+   * ]
+   * </pre> */
   rows: PropTypes.arrayOf(
     PropTypes.oneOfType([
       PropTypes.shape({
@@ -63,6 +82,8 @@ const propTypes = {
         ),
         isOpen: PropTypes.bool,
         parent: PropTypes.number,
+        fullWidth: PropTypes.bool,
+        noPadding: PropTypes.bool,
         props: PropTypes.any
       }),
       PropTypes.arrayOf(
@@ -126,6 +147,7 @@ const defaultProps = {
   onCollapse: null,
   className: '',
   variant: null,
+  borders: true,
   rowLabeledBy: 'simple-node',
   expandId: 'expandable-toggle',
   contentId: 'expanded-content',
@@ -151,7 +173,7 @@ class Table extends React.Component {
   }
 
   areAllRowsSelected(rows) {
-    return rows.every(this.isSelected);
+    return rows.every(row => this.isSelected(row) || (row.hasOwnProperty('parent') && !row.showSelect));
   }
 
   render() {
@@ -165,6 +187,8 @@ class Table extends React.Component {
       sortBy,
       children,
       actions,
+      actionResolver,
+      areActionsDisabled,
       onCollapse,
       rowLabeledBy,
       dropdownPosition,
@@ -174,6 +198,9 @@ class Table extends React.Component {
       variant,
       rows,
       cells,
+      bodyWrapper,
+      rowWrapper,
+      borders,
       ...props
     } = this.props;
 
@@ -183,12 +210,15 @@ class Table extends React.Component {
       onSelect,
       allRowsSelected: onSelect ? this.areAllRowsSelected(rows) : false,
       actions,
+      actionResolver,
+      areActionsDisabled,
       onCollapse,
       rowLabeledBy,
       expandId,
       contentId,
       dropdownPosition,
-      dropdownDirection
+      dropdownDirection,
+      firstUserColumnIndex: [onCollapse, onSelect].filter(callback => callback).length
     });
 
     return (
@@ -203,8 +233,8 @@ class Table extends React.Component {
           {...props}
           renderers={{
             body: {
-              wrapper: BodyWrapper,
-              row: RowWrapper,
+              wrapper: bodyWrapper || BodyWrapper,
+              row: rowWrapper || RowWrapper,
               cell: BodyCell
             },
             header: {
@@ -213,7 +243,14 @@ class Table extends React.Component {
           }}
           columns={headerData}
           role="grid"
-          className={css(styles.table, getModifier(stylesGrid, gridBreakPoint), getModifier(styles, variant), className)}
+          className={css(
+            styles.table,
+            getModifier(stylesGrid, gridBreakPoint),
+            getModifier(styles, variant),
+            onCollapse && variant === TableVariant.compact && styles.modifiers.expandable,
+            variant === TableVariant.compact && borders === false ? styles.modifiers.noBorderRows : null,
+            className
+          )}
         >
           {caption && <caption>{caption}</caption>}
           {children}

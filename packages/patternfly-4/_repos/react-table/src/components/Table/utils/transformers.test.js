@@ -9,9 +9,40 @@ import {
   headerCol,
   emptyCol,
   mapProps,
+  expandable,
   expandedRow
 } from './transformers';
 import { DropdownDirection, DropdownPosition } from '@patternfly/react-core';
+
+const testCellActions = ({ actions, actionResolver, areActionsDisabled, rowData, expectDisabled }) => {
+  const returnedData = cellActions(actions, actionResolver, areActionsDisabled)('', {
+    rowIndex: 0,
+    rowData,
+    column: {
+      extraParams: {
+        dropdownPosition: DropdownPosition.right,
+        dropdownDirection: DropdownDirection.down
+      }
+    }
+  });
+
+  if (actionResolver) {
+    actions = actionResolver(rowData);
+  }
+
+  expect(returnedData).toMatchObject({ className: 'pf-c-table__action' });
+
+  if (!actions || actions.length === 0) {
+    expect(returnedData.children).toBeUndefined();
+  } else {
+    const view = mount(returnedData.children);
+    view
+      .find('.pf-c-dropdown button')
+      .first()
+      .simulate('click');
+    expect(view.find('.pf-c-dropdown__menu li a')).toHaveLength(expectDisabled ? 0 : 1);
+  }
+};
 
 describe('Transformer functions', () => {
   describe('selectable', () => {
@@ -87,29 +118,46 @@ describe('Transformer functions', () => {
     });
   });
 
-  test('cellActions', () => {
+  test('simpleCellActions', () => {
     const actions = [
       {
         title: 'Some',
         onClick: jest.fn()
       }
     ];
-    const returnedData = cellActions(actions)('', {
-      rowIndex: 0,
-      column: {
-        extraParams: {
-          dropdownPosition: DropdownPosition.right,
-          dropdownDirection: DropdownDirection.down
-        }
+
+    const actionConfigs = [
+      {
+        actions: []
+      },
+      {
+        actions
+      },
+      {
+        actionResolver: () => null
+      },
+      {
+        actionResolver: () => actions
+      },
+      {
+        actionResolver: () => actions,
+        areActionsDisabled: () => false
+      },
+      {
+        actions,
+        rowData: {
+          disableActions: true
+        },
+        expectDisabled: true
+      },
+      {
+        actionResolver: () => actions,
+        areActionsDisabled: () => true,
+        expectDisabled: true
       }
-    });
-    expect(returnedData).toMatchObject({ className: 'pf-c-table__action' });
-    const view = mount(returnedData.children);
-    view
-      .find('.pf-c-dropdown button')
-      .first()
-      .simulate('click');
-    expect(view.find('.pf-c-dropdown__menu li a')).toHaveLength(1);
+    ];
+
+    actionConfigs.forEach(testCellActions);
   });
 
   describe('cellWidth', () => {
@@ -136,17 +184,59 @@ describe('Transformer functions', () => {
     expect(onCollapse.mock.calls).toHaveLength(1);
   });
 
+  test('collapsible full width', () => {
+    const onCollapse = jest.fn();
+    const rowData = {
+      fullWidth: true
+    };
+    const column = {
+      extraParams: { onCollapse }
+    };
+    const returnedData = collapsible('', { rowIndex: 0, rowData, column });
+    expect(returnedData).toMatchObject({ className: false, isVisible: false });
+  });
+
+  describe('expandable', () => {
+    test('with parent', () => {
+      const returned = expandable('test', { rowIndex: 2, rowData: { parent: 1 }, column: { extraParams: {} } });
+      const view = mount(returned);
+      expect(view.find('div.pf-c-table__expandable-row-content')).toHaveLength(1);
+      expect(view).toMatchSnapshot();
+    });
+
+    test('no parent', () => {
+      expect(expandable('test', { rowData: {}, column: { extraParams: {} } })).toBe('test');
+    });
+  });
+
   describe('expandedRow', () => {
     test('with parent', () => {
-      const returned = expandedRow(5)({ title: 'test' }, { rowData: { parent: 1 }, column: { extraParams: {} } });
-      expect(returned).toMatchObject({ colSpan: 5 });
-      const view = mount(returned.children);
-      expect(view.find('div.pf-c-table__expandable-row-content')).toHaveLength(1);
+      const returned = expandedRow(5)(
+        { title: 'test' },
+        { rowIndex: 2, rowData: { parent: 1 }, column: { extraParams: {} } }
+      );
+      expect(returned).toMatchObject({ colSpan: 5, id: 'expanded-content2' });
     });
 
     test('no parent', () => {
       expect(expandedRow(5)({ title: 'test' }, { rowData: {}, column: { extraParams: {} } })).toBe(false);
     });
+
+    test('full width', () => {
+      const returned = expandedRow(5)(
+        { title: 'test' },
+        { rowIndex: 2, rowData: { parent: 1, fullWidth: true }, column: { extraParams: {} } }
+      );
+      expect(returned).toMatchObject({ colSpan: 6, id: 'expanded-content2' });
+    });
+
+    test('no padding', () => {
+      const returned = expandedRow(5)(
+        { title: 'test' },
+        { rowIndex: 2, rowData: { parent: 1, noPadding: true }, column: { extraParams: {} } }
+      );
+      expect(returned).toMatchObject({ colSpan: 5, id: 'expanded-content2', className: 'pf-m-no-padding' });
+    })
   });
 
   test('scopeColTransformer', () => {

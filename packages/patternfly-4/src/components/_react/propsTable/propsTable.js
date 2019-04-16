@@ -11,24 +11,22 @@ const docGenPropShape = PropTypes.shape({
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(docGenPropValueShape)])
   }),
   required: PropTypes.bool,
-  description: PropTypes.shape({ text: PropTypes.string }),
+  description: PropTypes.string,
   defaultValue: PropTypes.shape({ value: PropTypes.string })
 });
 
 const propTypes = {
   name: PropTypes.string.isRequired,
   props: PropTypes.arrayOf(docGenPropShape),
-  enumValues: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.any)),
   description: PropTypes.string
 };
 
 const defaultProps = {
   props: [],
-  enumValues: {},
   description: ''
 };
 
-export const PropsTable = ({ name, description: preface, props, enumValues }) => (
+export const PropsTable = ({ name, description: preface, props }) => (
   <Section
     name={name}
     title={`${name} Props`}
@@ -48,31 +46,15 @@ export const PropsTable = ({ name, description: preface, props, enumValues }) =>
         {props.map(prop => (
           <Row key={prop.name}>
             <TD>{prop.name}</TD>
-            <TD>
-              <div className="enumValues">{getEnumValue(prop, enumValues)}</div>
-            </TD>
             <TD align="center">{prop.required && <ExclamationCircleIcon />}</TD>
             <TD>{Boolean(prop.defaultValue) && prop.defaultValue.value}</TD>
-            <TD>{prop.description && prop.description.text}</TD>
+            <TD>{prop.description}</TD>
           </Row>
         ))}
       </Body>
     </Table>
   </Section>
 );
-
-function getEnumValue(prop, enumValues) {
-  let returnValue = '';
-  let values;
-  if (prop.type.name === 'union') {
-    values = prop.type.value.map(v => v.name);
-    returnValue = `${values.join(' | ')}`;
-  } else {
-    values = Array.isArray(prop.type.value) ? prop.type.value.map(v => v.value) : enumValues[prop.type.value];
-    returnValue = values ? `${prop.type.name}: ${values.join(', ')}` : prop.type.name;
-  }
-  return returnValue;
-}
 
 PropsTable.propTypes = propTypes;
 PropsTable.defaultProps = defaultProps;

@@ -19,7 +19,7 @@ const LinkPreview = ({ data, name, path }) => {
             />
             <div className="preview-overlay">
               <div className="preview-icon">
-                <i className="fas fa-external-link-alt"></i> 
+                <i className="fas fa-external-link-alt"></i>
               </div>
             </div>
           </div>

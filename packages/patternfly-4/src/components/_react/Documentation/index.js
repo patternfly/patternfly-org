@@ -155,46 +155,14 @@ export default props => (
         allComponentMetadata {
           edges {
             node {
-              displayName
               description
               props {
                 name
-                description {
-                  text
-                }
-                defaultValue {
-                  value
-                }
+                description
                 type {
                   name
-                  value
                 }
                 required
-              }
-            }
-          }
-        }
-        allTsDocsJson {
-          edges {
-            node {
-              id
-              name
-              kind
-              data {
-                name
-                children {
-                  name
-                  comment {
-                    shortText
-                  }
-                  type {
-                    type
-                    name
-                  }
-                  flags {
-                    isOptional
-                  }
-                }
               }
             }
           }

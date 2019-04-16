@@ -23,6 +23,8 @@ const propTypes = {
   isHovered: PropTypes.bool,
   /** Forces active state */
   isActive: PropTypes.bool,
+  /** Disables the dropdown toggle */
+  isDisabled: PropTypes.bool,
   /** Display the toggle with no border or background */
   isPlain: PropTypes.bool,
   /** Additional props are spread to the container <button> */
@@ -37,6 +39,7 @@ const defaultProps = {
   isFocused: false,
   isHovered: false,
   isActive: false,
+  isDisabled: false,
   isPlain: false,
   onToggle: Function.prototype
 };
@@ -94,6 +97,7 @@ class DropdownToggle extends Component {
       isFocused,
       isActive,
       isHovered,
+      isDisabled,
       isPlain,
       ariaHasPopup,
       onToggle,
@@ -116,6 +120,7 @@ class DropdownToggle extends Component {
           isHovered && styles.modifiers.hover,
           isActive && styles.modifiers.active,
           isPlain && styles.modifiers.plain,
+          isDisabled && styles.modifiers.disabled,
           className
         )}
         type={type || 'button'}
@@ -123,6 +128,7 @@ class DropdownToggle extends Component {
         aria-expanded={isOpen}
         aria-haspopup={ariaHasPopup}
         onKeyDown={this.onKeyDown}
+        disabled={isDisabled}
       >
         {children}
       </button>

@@ -1,11 +1,5 @@
 ### Data List Width Notes
 
-<mark>**All simple data list accessibility and usage requirements apply.**</mark>
-<br>
-<mark>**All data list checkbox/action button accessibility and usage requirements apply.**</mark>
-<br>
-<mark>**All expandable data list accessibility and usage requirements apply.**</mark>
-
 ### Accessibility
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |

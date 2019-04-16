@@ -3,14 +3,9 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
-
 const path = require('path');
-const fs = require('fs-extra');
-const pascalCase = require('pascal-case');
-const paramCase = require('param-case');
-const inflection = require('inflection');
 const glob = require('glob');
-const findInFiles = require('find-in-files');
+const navHelpers = require("./src/helpers/navHelpers");
 // const styleFinder = require('./scripts/find-react-styles');
 
 // Map to handlebars partial files for Core
@@ -18,8 +13,8 @@ let partialsToLocationsMap = null;
 
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
-  const reactComponentPathRegEx = /\/documentation\/react\/.*(components|layouts|demos)\//;
-  const coreComponentPathRegEx = /\/documentation\/core\/.*(components|layouts|demos|upgrade-examples|utilities)\//;
+  const reactComponentPathRegEx = /\/documentation\/react\/.*/;
+  const coreComponentPathRegEx = /\/documentation\/core\/.*/;
   const isSitePage = node.internal.type === 'SitePage';
   if (isSitePage) {
     if (reactComponentPathRegEx.test(node.path)) {
@@ -55,236 +50,182 @@ exports.onCreateNode = ({ node, actions }) => {
   }
 };
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage, createRedirect } = actions;
+exports.createPages = async ({ graphql, actions }) => {
   const redirects = [
     { f: `/get-started`, t: `/get-started/about` },
     { f: `/design-guidelines`, t: `/design-guidelines/styles/icons` },
     { f: `/documentation`, t: `/documentation/react/components/aboutmodal` }
   ];
   redirects.forEach(({ f, t }) => {
-    createRedirect({
+    actions.createRedirect({
       fromPath: f,
       redirectInBrowser: true,
       toPath: t
     })
     console.log('\nRedirecting: ' + f + ' to: ' + t);
   })
-  const markdownPageTemplate = path.resolve(`src/templates/markdownPageTemplate.js`)
-  return new Promise((resolve, reject) => {
-    graphql(`
-      fragment DocFile on File {
-        relativePath
-        relativeDirectory
-        absolutePath
-        base
-        name
+  await graphql(`
+    query {
+      pf4Docs: allMdx(filter: {fileAbsolutePath: {glob: "**/patternfly-4/_repos/react*/**"} }) {
+        edges {
+          node {
+            fileAbsolutePath
+            frontmatter {
+              section
+              title
+              fullscreen
+            }
+          }
+        }
+      },
+      coreDocs: allFile(filter: { absolutePath: { glob: "**/_repos/core/**/examples/index.js" } } ) {
+        edges {
+          node {
+            relativePath
+            relativeDirectory
+            absolutePath
+            base
+            name
+          }
+        }
       }
-      query AllDocsFiles {
-        docs: allFile(filter: { sourceInstanceName: { eq: "react" }, absolutePath: { glob: "**/*.docs.js" } }) {
-          edges {
-            node {
-              ...DocFile
-            }
-          }
-        }
-        examples: allFile(filter: { sourceInstanceName: { eq: "react" }, absolutePath: { glob: "**/examples/!(*.styles).js" } }) {
-          edges {
-            node {
-              ...DocFile
-            }
-          }
-        }
-        exampleImages: allFile(filter: { sourceInstanceName: { eq: "react" }, extension: { regex: "/(png|svg|jpg)/" } }) {
-          edges {
-            node {
-              ...DocFile
-            }
-          }
-        }
-        coreExamples: allFile(filter: { sourceInstanceName: { eq: "core" }, absolutePath: { glob: "**/examples/index.js" } }) {
-          edges {
-            node {
-              ...DocFile
-            }
-          }
-        }
-        markdownPages: allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/patternfly-4/content/**"}, frontmatter: {path: {ne: null}}}) {
-          edges {
-            node {
-              fileAbsolutePath
-              frontmatter {
-                path
-              }
+      contentPages: allMdx(filter: {fileAbsolutePath: {glob: "**/patternfly-4/content/**"}, frontmatter: {path: {ne: null}}}) {
+        edges {
+          node {
+            fileAbsolutePath
+            frontmatter {
+              path
             }
           }
         }
       }
-    `).then(result => {
-      if (result.errors) {
-        return reject(result.errors);
-      }
-      const { docs, examples, exampleImages, coreExamples, markdownPages} = result.data;
-      const docExports = [];
-      const docsComponentPath = path.resolve(__dirname, './src/components/_react/Documentation');
-      docs.edges.forEach(({ node: doc }) => {
-        const filePath = path.resolve(__dirname, '.tmp', doc.base);
+    }
+  `).then(result => {
+    if (result.errors) {
+      return reject(result.errors);
+    }
+    const { pf4Docs, coreDocs, contentPages} = result.data;
 
-        const rawExamples = [];
-        const getPackage = pkg => doc.absolutePath.indexOf(pkg) !== -1 && pkg;
-        const packageDir = getPackage('react-core') || getPackage('react-charts') || getPackage('react-table');
-        examples.edges.forEach(({ node: example }) => {
-          if (
-            example.relativeDirectory
-              .split('/')
-              .slice(0, 3)
-              .join('/') === doc.relativeDirectory
-          ) {
-            const examplePath = `../_repos/${packageDir}/${example.relativePath}`;
-            rawExamples.push(`{name: '${example.name}', path: '${examplePath}', file: require('!!raw-loader!${examplePath}')}`);
-          }
-        });
-        const allImages = [];
-        exampleImages.edges.forEach(({ node: image }) => {
-          const imagePath = `../_repos/react-core/${image.relativePath}`;
-          allImages.push(`{name: '${image.base}', file: require('${imagePath}')}`);
-        });
-
-        const content = `
-        import React from 'react';
-        import docs from '${doc.absolutePath}';
-        import Documentation from '${docsComponentPath}';
-
-        const rawExamples = [${rawExamples}];
-        const images = [${allImages}];
-
-        export const ${doc.base.split('.')[0].toLowerCase()}_docs = docs;
-        export const ${doc.base.split('.')[0].toLowerCase()}_package = '${packageDir}';
-
-        export default () => <Documentation rawExamples={rawExamples} images={images} {...docs} />;
-        `;
-
-        docExports.push(
-          `export { ${doc.base.split('.')[0].toLowerCase()}_docs, ${doc.base
-            .split('.')[0]
-            .toLowerCase()}_package } from './${doc.base}';`
-        );
-
-        fs.outputFileSync(filePath, content);
-        const shortenedPath = doc.relativePath.split('/').slice(1).join('/');
-        console.log(`creating page for: /documentation/react/${path.dirname(shortenedPath).toLowerCase()}`);
-        createPage({
-          path: `/documentation/react/${path.dirname(shortenedPath).toLowerCase()}`,
-          component: filePath
-        });
-      });
-
-      const indexFilePath = path.resolve(__dirname, '.tmp', 'index.js');
-      fs.writeFileSync(indexFilePath, docExports.join('\n'));
-
-      examples.edges.forEach(({ node: example }) => {
-        const shortenedPath = example.relativePath.split('/').slice(1).join('/');
-        const examplePath = `/documentation/react/${path.dirname(shortenedPath).toLowerCase()}/${paramCase(example.name)}`;
-        console.log(`creating page for: ${examplePath}`);
-        createPage({
-          path: examplePath,
-          layout: 'example',
-          component: example.absolutePath
-        });
-      });
-
-      coreExamples && coreExamples.edges.forEach(({ node }) => {
-        const shortenedPath = node.relativePath.split('/').slice(2, 4).join('/').toLowerCase();
-        const examplePath = `/documentation/core/${shortenedPath}`;
-
-        console.log(`creating page for: ${examplePath}`);
-        createPage({
-          path: examplePath,
-          component: path.resolve(__dirname, node.absolutePath)
-        });
-        // also create a full demo page for each component
-        console.log(`creating page for: ${examplePath}-full`);
-        createPage({
-          path: `${examplePath}-full`,
-          component: path.resolve(__dirname, node.absolutePath)
-        });
-      });
-
-      markdownPages.edges.forEach(({ node }) => {
-        console.log(`creating page for: ${node.frontmatter.path}`);
-        createPage({
-          path: node.frontmatter.path,
-          component: markdownPageTemplate,
-          context: {}, // additional data can be passed via context
-        })
-      });
+    contentPages.edges.forEach(({ node }) => {
+      console.log(`creating content page (mdx): ${node.frontmatter.path}`);
+      actions.createPage({
+        path: node.frontmatter.path,
+        component: path.resolve(`src/templates/contentTemplate.js`),
+        context: {}, // additional data can be passed via context
+      })
     });
-    resolve();
-  })
+
+    pf4Docs.edges.forEach(({node}) => {
+      const componentName = navHelpers.getFileName(node.fileAbsolutePath);
+      const parentFolderName = navHelpers.getParentFolder(node.fileAbsolutePath, 3);
+      const folderName = navHelpers.getParentFolder(node.fileAbsolutePath);
+      const section = node.frontmatter.section ? node.frontmatter.section : 'components';
+
+      let link = '/bad-page/';
+      // Create fullscreen example component pages
+      if (node.frontmatter.fullscreen) {
+        link = `/documentation/react/${section}/${parentFolderName}/${componentName}/`.toLowerCase();
+        console.log('creating pf4 fullscreen page (mdx):', link);
+        actions.createPage({
+          path: link,
+          component: path.resolve('./src/templates/mdxFullscreenTemplate.js'),
+          context: {
+            title: node.frontmatter.title,
+            fileAbsolutePath: node.fileAbsolutePath, // Helps us get the markdown
+          }
+        });
+      } else {
+        // Normal templated component pages
+        link = `/documentation/react/${section}/${componentName}/`.toLowerCase();
+        console.log('creating pf4 doc page (mdx):', link);
+        actions.createPage({
+          path: link,
+          component: path.resolve('./src/templates/mdxPF4Template.js'),
+          context: {
+            title: node.frontmatter.title,
+            fileAbsolutePath: node.fileAbsolutePath, // Helps us get the markdown
+            pathRegex: `/${folderName}\/.*/` // Helps us get the docgenned props
+          }
+        });
+      }
+    });
+
+    coreDocs && coreDocs.edges.forEach(({ node }) => {
+      const shortenedPath = node.relativePath.split('/').slice(1, 3).join('/').toLowerCase();
+      const examplePath = `/documentation/core/${shortenedPath}`;
+
+      console.log(`creating core doc page (${node.absolutePath}):`, examplePath);
+      actions.createPage({
+        path: examplePath,
+        component: path.resolve(__dirname, node.absolutePath)
+      });
+
+      // also create a full demo page for each component
+      // console.log(`creating page for: ${examplePath}-full`);
+      // actions.createPage({
+      //   path: `${examplePath}-full`,
+      //   component: path.resolve(__dirname, node.absolutePath)
+      // });
+    });
+  });
 };
 
-exports.onCreateWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) =>
-  new Promise((resolve, reject) => {
-    if (partialsToLocationsMap === null) {
-      partialsToLocationsMap = {};
-      glob(path.resolve(__dirname, './_repos/core/src/patternfly/**/*.hbs'), { ignore: '**/examples/**' }, (err, files) => {
-        files.forEach(file => {
-          const fileNameArr = file.split('/');
-          const fileName = fileNameArr[fileNameArr.length - 1].slice(0, -4);
-          partialsToLocationsMap[fileName] = file;
-        });
-        continueWebpackConfig({ stage, loaders, actions, plugins, getConfig });
-        resolve();
+exports.onCreateWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) => {
+  if (partialsToLocationsMap === null) {
+    partialsToLocationsMap = {};
+    glob(path.resolve(__dirname, './_repos/core/src/patternfly/**/*.hbs'), { ignore: '**/examples/**' }, (err, files) => {
+      files.forEach(file => {
+        const fileNameArr = file.split('/');
+        const fileName = fileNameArr[fileNameArr.length - 1].slice(0, -4);
+        partialsToLocationsMap[fileName] = file;
       });
-    } else {
-      continueWebpackConfig({ stage, loaders, actions, plugins, getConfig });
-      resolve();
-    }
-});
+    });
+  }
 
-const continueWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) => {
-  const pfStylesTest = /patternfly.*(components|layouts|utilities).*\.css$/;
-  actions.setWebpackConfig({
-    module: {
-      rules: [
-        {
-          test: /\.md$/,
-          loader: 'html-loader!markdown-loader'
+  let config = getConfig();
+
+  let nonMDRules = config.module.rules.filter(rule => !(rule.test && rule.test.test('.md')));
+  config.module.rules = [
+    // Core handlebars loader
+    {
+      test: /\.hbs$/,
+      query: {
+        extensions: '.hbs',
+        partialResolver(partial, callback) {
+          if (partialsToLocationsMap[partial]) {
+            callback(null, partialsToLocationsMap[partial]);
+          } else {
+            callback(new Error(`Could not find partial: ${partial}`), '');
+          }
         },
-        {
-          test: /\.hbs$/,
-          query: {
-            extensions: '.hbs',
-            partialResolver(partial, callback) {
-              if (partialsToLocationsMap[partial]) {
-                callback(null, partialsToLocationsMap[partial]);
-              } else {
-                callback(new Error(`Could not find partial: ${partial}`), '');
-              }
-            },
-            helperDirs: path.resolve(__dirname, './_repos/core/build/helpers')
-          },
-          loader: 'handlebars-loader'
-        }
-      ]
+        helperDirs: path.resolve(__dirname, './_repos/core/build/helpers')
+      },
+      loader: 'handlebars-loader'
     },
-    resolve: {
-      alias: {
-        '@siteComponents': path.resolve(__dirname, './src/components/_core'),
-        '@components': path.resolve(__dirname, './_repos/core/src/patternfly/components'),
-        '@layouts': path.resolve(__dirname, './_repos/core/src/patternfly/layouts'),
-        '@demos': path.resolve(__dirname, './_repos/core/src/patternfly/demos'),
-        '@project': path.resolve(__dirname, './_repos/core/src'),
-        '@content': path.resolve(__dirname, './src/components/content')
-      }
+    // Core md loader (replace MDX's markdown loader)
+    {
+      test: /\.md$/,
+      loader: 'html-loader!markdown-loader'
     },
-    resolveLoader: {
-      alias: { raw: 'raw-loader' }
-    }
-  });
+    ...nonMDRules
+  ];
+
+  config.resolve.alias = {
+    '@siteComponents': path.resolve(__dirname, './src/components/_core'),
+    '@components': path.resolve(__dirname, './_repos/core/src/patternfly/components'),
+    '@layouts': path.resolve(__dirname, './_repos/core/src/patternfly/layouts'),
+    '@demos': path.resolve(__dirname, './_repos/core/src/patternfly/demos'),
+    '@project': path.resolve(__dirname, './_repos/core/src'),
+    '@content': path.resolve(__dirname, './src/components/content'),
+    ...config.resolve.alias
+  };
+
+  config.resolveLoader = {
+    alias: { raw: 'raw-loader' },
+    ...config.resolveLoader
+  };
 
   if (stage === `build-javascript`) {
-    let config = getConfig();
     config.optimization = {
       runtimeChunk: {
         name: `webpack-runtime`,
@@ -310,6 +251,7 @@ const continueWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) 
         plugins.minifyCss(),
       ].filter(Boolean),
     }
-    actions.replaceWebpackConfig(config);
   }
-};
+
+  actions.replaceWebpackConfig(config);
+}
