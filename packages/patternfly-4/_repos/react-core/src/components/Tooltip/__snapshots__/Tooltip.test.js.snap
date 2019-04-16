@@ -30,7 +30,7 @@ exports[`tooltip renders 1`] = `
   distance={15}
   flip={true}
   lazy={true}
-  maxWidth="12.5rem"
+  maxWidth="18.75rem"
   onCreate={[Function]}
   performance={true}
   placement="top"
@@ -47,6 +47,7 @@ exports[`tooltip renders 1`] = `
     }
   }
   theme="pf-tippy"
+  trigger="mouseenter focus"
   zIndex={9999}
 >
   <div>

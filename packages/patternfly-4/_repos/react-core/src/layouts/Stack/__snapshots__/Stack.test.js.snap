@@ -1,15 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Gutter lg 1`] = `
-.pf-l-stack__item {
-  display: block;
-}
-.pf-l-stack.pf-m-gutter {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
 <Stack
   className=""
   component="div"
@@ -20,7 +11,7 @@ exports[`Gutter lg 1`] = `
   >
     <StackItem
       className=""
-      isMain={false}
+      isFilled={false}
     >
       <div
         className="pf-l-stack__item"
@@ -33,15 +24,6 @@ exports[`Gutter lg 1`] = `
 `;
 
 exports[`Gutter md 1`] = `
-.pf-l-stack__item {
-  display: block;
-}
-.pf-l-stack.pf-m-gutter {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
 <Stack
   className=""
   component="div"
@@ -52,7 +34,7 @@ exports[`Gutter md 1`] = `
   >
     <StackItem
       className=""
-      isMain={false}
+      isFilled={false}
     >
       <div
         className="pf-l-stack__item"
@@ -65,15 +47,6 @@ exports[`Gutter md 1`] = `
 `;
 
 exports[`Gutter sm 1`] = `
-.pf-l-stack__item {
-  display: block;
-}
-.pf-l-stack.pf-m-gutter {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
 <Stack
   className=""
   component="div"
@@ -84,7 +57,7 @@ exports[`Gutter sm 1`] = `
   >
     <StackItem
       className=""
-      isMain={false}
+      isFilled={false}
     >
       <div
         className="pf-l-stack__item"
@@ -97,15 +70,6 @@ exports[`Gutter sm 1`] = `
 `;
 
 exports[`isMain defaults to false 1`] = `
-.pf-l-stack__item {
-  display: block;
-}
-.pf-l-stack {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
 <Stack
   className=""
   component="div"
@@ -116,7 +80,7 @@ exports[`isMain defaults to false 1`] = `
   >
     <StackItem
       className=""
-      isMain={false}
+      isFilled={false}
     >
       <div
         className="pf-l-stack__item"
@@ -129,15 +93,6 @@ exports[`isMain defaults to false 1`] = `
 `;
 
 exports[`isMain set to true 1`] = `
-.pf-l-stack__item.pf-m-main {
-  display: block;
-}
-.pf-l-stack {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
 <Stack
   className=""
   component="div"
@@ -148,12 +103,12 @@ exports[`isMain set to true 1`] = `
   >
     <StackItem
       className=""
-      isMain={true}
+      isFilled={true}
     >
       <div
-        className="pf-l-stack__item pf-m-main"
+        className="pf-l-stack__item pf-m-fill"
       >
-        Main content
+        Filled content
       </div>
     </StackItem>
   </div>

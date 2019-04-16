@@ -68,6 +68,7 @@ const mapHeader = (column, extra, key, ...props) => {
           .replace(/\s/g, '-')) ||
       `column-${key}`,
     extraParams: extra,
+    data: column.data,
     header: generateHeader(column, title),
     cell: generateCell(column, extra),
     props: {
@@ -101,13 +102,13 @@ const selectableTransforms = ({ onSelect }) => [
  * @param {*} extraObject with actions array.
  * @returns {*} object with empty title, tranforms - Array, cellTransforms - Array.
  */
-const actionsTransforms = ({ actions }) => [
-  ...(actions
+const actionsTransforms = ({ actions, actionResolver, areActionsDisabled }) => [
+  ...(actionResolver || actions
     ? [
         {
           title: '',
           transforms: [emptyTD],
-          cellTransforms: [cellActions(actions)]
+          cellTransforms: [cellActions(actions, actionResolver, areActionsDisabled)]
         }
       ]
     : [])

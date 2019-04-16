@@ -12,15 +12,25 @@ import {
 const propTypes = {
   children: PropTypes.node,
   items: PropTypes.array,
+  isDisabled: PropTypes.bool,
   dropdownPosition: PropTypes.oneOf(Object.values(DropdownPosition)),
-  dropdownDirection: PropTypes.oneOf(Object.values(DropdownDirection))
+  dropdownDirection: PropTypes.oneOf(Object.values(DropdownDirection)),
+  rowData: PropTypes.object,
+  extraData: PropTypes.shape({
+    rowIndex: PropTypes.number,
+    columnIndex: PropTypes.number,
+    column: PropTypes.object,
+    property: PropTypes.string
+  })
 };
 const defaultProps = {
   children: null,
-  className: '',
-  onSelect: null,
+  items: [],
+  isDisabled: false,
   dropdownPosition: DropdownPosition.right,
-  dropdownDirection: DropdownDirection.down
+  dropdownDirection: DropdownDirection.down,
+  rowData: {},
+  extraData: {}
 };
 
 class ActionsColumn extends React.Component {
@@ -38,9 +48,9 @@ class ActionsColumn extends React.Component {
   };
 
   onSelect = (event, onClick) => {
-    const { rowId } = this.props;
+    const { rowData, extraData } = this.props;
     event.preventDefault();
-    onClick && onClick(event, rowId);
+    onClick && onClick(event, extraData.rowIndex, rowData, extraData);
     this.setState({
       isOpen: !this.state.isOpen
     });
@@ -48,12 +58,12 @@ class ActionsColumn extends React.Component {
 
   render() {
     const { isOpen } = this.state;
-    const { items, children, dropdownPosition, dropdownDirection } = this.props;
+    const { items, children, dropdownPosition, dropdownDirection, isDisabled } = this.props;
     return (
       <React.Fragment>
         <Dropdown
           onToggle={this.onToggle}
-          toggle={<KebabToggle onToggle={this.onToggle} />}
+          toggle={<KebabToggle isDisabled={isDisabled} onToggle={this.onToggle} />}
           position={dropdownPosition}
           direction={dropdownDirection}
           isOpen={isOpen}
