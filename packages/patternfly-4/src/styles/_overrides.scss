@@ -1,0 +1,17 @@
+.description {
+  ul,
+  ol {
+    margin-top: var(--pf-global--spacer--sm);
+    margin-bottom: var(--pf-global--spacer--sm);
+    margin-left: var(--pf-global--spacer--sm);
+    padding-left: var(--pf-global--spacer--lg);
+    list-style: var(--pf-global--ListStyle);
+    li {
+      margin: 0;
+      padding: 0;
+    }
+    li + li {
+      margin-top: var(--pf-global--spacer--sm);
+    }
+  }
+}

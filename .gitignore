@@ -9,7 +9,7 @@
 *.swo
 
 # Ignore local nodejs packages
-node_modules/
+node_modules
 
 # Ignore node files
 *.man
@@ -23,10 +23,11 @@ _build
 *.map
 =======
 _site
-public
 .DS_Store
 bower_components
 source/assets/css
 github.io
+out
 
 repos
+lerna-debug.log

@@ -1,0 +1,233 @@
+.pf-c-tabs {
+  // Primary Tab items
+  --pf-c-tabs__item--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-tabs__item--BorderColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-tabs__item--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-tabs__item--m-current--ZIndex: var(--pf-global--ZIndex--sm);
+  --pf-c-tabs__item--m-current--Color: var(--pf-global--active-color--100);
+  --pf-c-tabs__item--m-current--BorderTopWidth: var(--pf-global--BorderWidth--md);
+
+  // Secondary Tab items
+  --pf-c-tabs__item--hover--Color: var(--pf-global--Color--dark-200);
+
+  // Tab buttons
+  --pf-c-tabs__button--Background: transparent;
+  --pf-c-tabs__button--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-tabs__button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-tabs__button--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-tabs__button--PaddingLeft: var(--pf-global--spacer--sm);
+
+  // Scroll buttons
+  --pf-c-tabs__scroll-button--Width: var(--pf-global--spacer--xl);
+  --pf-c-tabs__scroll-button--ZIndex: var(--pf-global--ZIndex--md);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  // Scroll buttons hidden by default
+  .pf-c-tabs__scroll-button {
+    display: none;
+    visibility: hidden;
+  }
+
+  // Scroll buttons shown with modifiers
+  &.pf-m-start .pf-c-tabs__scroll-button:nth-of-type(1),
+  &.pf-m-end .pf-c-tabs__scroll-button:nth-of-type(2) {
+    display: block;
+    visibility: visible;
+  }
+
+  // Scroll button current state
+  &.pf-m-start-current .pf-c-tabs__scroll-button:nth-of-type(1),
+  &.pf-m-end-current .pf-c-tabs__scroll-button:nth-of-type(2) {
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin-left: var(--pf-c-tabs__item--BorderWidth);
+      content: "";
+      border-top: var(--pf-c-tabs__item--m-current--BorderTopWidth) solid var(--pf-c-tabs__item--m-current--Color);
+    }
+  }
+
+  // Primary with secondary tabs style
+  + &.pf-m-tabs-secondary {
+    margin-top: calc(-1 * var(--pf-c-tabs__item--BorderWidth));
+    border-top: var(--pf-c-tabs__item--BorderWidth) solid var(--pf-c-tabs__item--BorderColor);
+
+    .pf-c-tabs__scroll-button {
+      margin-top: calc(-1 * var(--pf-c-tabs__item--BorderWidth));
+    }
+  }
+
+  // Filled style
+  &.pf-m-fill {
+    .pf-c-tabs__list {
+      width: 100%;
+    }
+
+    .pf-c-tabs__item {
+      flex: 1;
+      white-space: nowrap;
+
+      &:first-of-type .pf-c-tabs__button::before {
+        border-left: none;
+      }
+
+      &:last-of-type .pf-c-tabs__button::before {
+        border-right: none;
+      }
+
+      .pf-c-tabs__button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Tab List
+.pf-c-tabs__list {
+  position: relative;
+  display: flex;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  // Right border on last tab
+  .pf-c-tabs__item:last-of-type .pf-c-tabs__button::before {
+    border-right-width: var(--pf-c-tabs__item--BorderWidth);
+  }
+}
+
+// Tab items
+.pf-c-tabs__item {
+  flex: none;
+
+  // Tab item hover state
+  &:not(.pf-m-current):hover .pf-c-tabs__button::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-left: var(--pf-c-tabs__item--BorderWidth);
+    content: "";
+    border-top: var(--pf-c-tabs__item--m-current--BorderTopWidth) solid var(--pf-c-tabs__item--hover--Color);
+  }
+
+  // Tab item current state
+  &.pf-m-current .pf-c-tabs__button {
+    z-index: var(--pf-c-tabs__item--m-current--ZIndex);
+    color: var(--pf-c-tabs__item--m-current--Color);
+
+    &::before {
+      border-bottom-color: var(--pf-c-tabs__item--BackgroundColor);
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin-left: var(--pf-c-tabs__item--BorderWidth);
+      content: "";
+      border-top: var(--pf-c-tabs__item--m-current--BorderTopWidth) solid var(--pf-c-tabs__item--m-current--Color);
+    }
+  }
+
+  // Secondary tab states
+  .pf-m-tabs-secondary & .pf-c-tabs__button {
+    // Remove current state and hover state
+    &::before,
+    &::after,
+    &:hover::after {
+      content: none;
+    }
+  }
+
+  // Secondary tab hover state
+  .pf-m-tabs-secondary &:not(.pf-m-current) .pf-c-tabs__button:hover {
+    color: var(--pf-c-tabs__item--hover--Color);
+  }
+}
+
+
+// Tab button
+.pf-c-tabs__button {
+  position: relative;
+  padding: var(--pf-c-tabs__button--PaddingTop) var(--pf-c-tabs__button--PaddingRight) var(--pf-c-tabs__button--PaddingBottom) var(--pf-c-tabs__button--PaddingLeft);
+  user-select: none;
+  background: var(--pf-c-tabs__button--Background);
+  border: 0;
+
+  // Tab button borders
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    border: solid var(--pf-c-tabs__item--BorderColor);
+    border-width: var(--pf-c-tabs__item--BorderWidth) 0 var(--pf-c-tabs__item--BorderWidth) var(--pf-c-tabs__item--BorderWidth);
+  }
+}
+
+.pf-c-tabs__scroll-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: var(--pf-c-tabs__scroll-button--Width);
+
+  &:first-of-type {
+    left: 0;
+  }
+
+  &:last-of-type {
+    right: 0;
+  }
+}
+
+// Scroll buttons
+.pf-c-tabs__scroll-button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: var(--pf-c-tabs__scroll-button--ZIndex);
+  width: var(--pf-c-tabs__scroll-button--Width);
+  line-height: 1;
+  background-color: var(--pf-c-tabs__item--BackgroundColor);
+  border: initial;
+
+  // Align right scroll button
+  &:nth-of-type(2) {
+    right: 0;
+  }
+
+  // Scroll button borders
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    border: var(--pf-c-tabs__item--BorderWidth) solid var(--pf-c-tabs__item--BorderColor);
+  }
+
+  // Scroll button hover state
+  &:hover::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    border-top: var(--pf-c-tabs__item--m-current--BorderTopWidth) solid var(--pf-c-tabs__item--hover--Color);
+  }
+}
