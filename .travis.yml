@@ -1,25 +1,26 @@
-language: ruby
-rvm:
-  - 2.3.1
-
-env:
-  global:
-  - ENCRYPTION_LABEL: "195bd079f767"
-  - COMMIT_AUTHOR_EMAIL: "patternfly-build@redhat.com"
-  - TRIGGER_REPO_SLUG: "patternfly/patternfly-org"
-  - TRIGGER_REPO_BRANCH: "master"
-
+language: node_js
+node_js:
+  - "8"
+sudo: required
+cache: yarn
+notifications:
+  email: false
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $AUTH_TOKEN # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  local_dir: out
+  repo: patternfly/patternfly.github.io
+  target_branch: master
+  verbose: true
+  on:
+    branch: master
+git:
+  depth: 1
 before_install:
-  - nvm install 4
-  - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
-  - npm install -g bower grunt-cli
-  - npm install patternfly-eng-release
-
-install: true
-
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.7.0
+  - export PATH=$HOME/.yarn/bin:$PATH
+  - yarn install
 script:
-  - sh -x ./node_modules/patternfly-eng-release/scripts/_build.sh -o
-
-after_success:
-  - grunt build:production
-  - npm run publish-travis
+  - travis_wait yarn build

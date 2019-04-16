@@ -2,53 +2,33 @@
 
 # patternfly-org
 
-The PatternFly Org is the new source for the official documentation for PatternFly.
+The PatternFly Org is the source for the official documentation for PatternFly 3 and PatternFly 4.
 
-## Development Setup - with Docker
+## Development Setup
 
-The easiest way to get the site running locally for development purposes is via docker.  Run the pair of commands:
+Development setup requires yarn. If you do not already have yarn installed on your system, see https://yarnpkg.com/en/.
 
-```
-npm run docker:build
-npm run docker:run
-```
+### Build
 
-The first time you run these commands will be quite slow, as a number of docker layers have to be downloaded, and a number of docker layers have to be built locally.
-Subsequent executions however will use cached layers and be much faster.
+Install the site dependencies and build it using yarn:
 
-The docker environment supports "live reloading" of the site, so any source changes will trigger a jekyll incremental build and reload your browser.
+    yarn install
+    yarn bootstrap
+    yarn build
 
-## Development Setup - Manually
-
-Development setup requires nodejs and Ruby. If you do not already have nodejs, npm, and Ruby installed on your system, see https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager and https://www.ruby-lang.org/en/downloads.
-
-### Install Dependencies
-
-Install the site dependencies using npm:
-
-    npm install
-
-This will install all necessary packages into `node_modules/`. At this point, the gruntjs tasks are available for use such as starting a local development server or building the site from source.
-
-Additionally you may need to install the grunt command line utility.  To do this run:
-
-    npm install -g grunt-cli
-
-The site is generated using [Jekyll](http://jekyllrb.com/).  After ensuring Ruby is installed and available, run:
-
-    bundle install
+The packages/patternfly-3 site is generated using [Jekyll](http://jekyllrb.com/).
+The packages/patternfly-4 site is generated using [Gatsby](https://www.gatsbyjs.org/).
 
 ### Live Reload Server
 
-A local development server can be quickly fired up by using the Gruntjs server task:
+A local development server can be quickly fired up for patternfly 3 or patternfly 4 by using either of these commands:
 
-    grunt serve
+    yarn start:pf3
+    yarn start:pf4
 
-This local server (i.e., [http://localhost:9002](http://localhost:9002)) has the advantage of having livereload integration. Thus, if you start the Gruntjs server, any changes you make to `.html` or `.less` files will be automatically reloaded into your browser and the changes reflected almost immediately. This has the obvious benefit of not having to refresh your browser and still be able to see the changes as you add or remove them from your development files.  Additionally, any changes made to Jekyll source files (`source/`) will trigger a Jekyll build.
+### Deploy
 
-## Getting Started
-
-Asssuming you've completed <a href="#development-setup">Development Setup</a>, from a command line run:
-
-1. `grunt serve`
-1.  Visit [http://localhost:9002](http://localhost:9002)
+Deploy the static content with your favorite web-publishing tool. For example with surge:
+    yarn global add surge
+    cd out/
+    surge

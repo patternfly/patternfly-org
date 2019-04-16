@@ -1,0 +1,14 @@
+[
+  {
+    "text": "About",
+    "path": "/get-started/about"
+  },
+  {
+    "text": "Develop",
+    "path": "/get-started/developers"
+  },
+  {
+    "text": "Design",
+    "path": "/get-started/designers"
+  }
+]

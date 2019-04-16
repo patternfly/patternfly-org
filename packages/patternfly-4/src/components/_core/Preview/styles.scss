@@ -1,0 +1,129 @@
+/* stylelint-disable */
+
+.Preview_title {
+  padding: .5rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+.Preview__header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px 14px;
+  background-color: #fff;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid #f8f8f8;
+  border-left: none;
+  i {
+    color: #72757a;
+  }
+}
+
+div.Preview__body *,
+div.react-live-preview *,
+div.ws-live-demo > .Preview * {
+  font-family: var(--pf-global--FontFamily--sans-serif);
+  .fas {
+    font-family: "Font Awesome 5 Free";
+  }
+  .pficon {
+    font-family: "PatternFlyIcons-webfont";
+  }
+}
+
+.Preview__body {
+  width: 100%;
+  padding: 1rem;
+  background-color: #fff;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid #f8f8f8;
+  border-left: none;
+  transition: width .2s ease-in-out;
+}
+
+.Preview__body.has-no-padding {
+  padding: 0;
+}
+
+.Preview__body.is-viewport {
+  height: 300px;
+  padding: 0;
+  overflow: auto;
+  transform: scale(1);
+}
+
+.Preview__body.is-dark-preview {
+  background-color: #292e34;
+}
+
+.Preview__viewport-toggle {
+  font-size: 1.6rem;
+  background-color: #fff;
+  border-width: 0;
+  outline: 0;
+}
+
+.Preview__viewport-toggle.is-xs-toggle { font-size: 1.1rem; }
+.Preview__viewport-toggle.is-sm-toggle { font-size: 1.2rem; }
+.Preview__viewport-toggle.is-md-toggle { font-size: 1.3rem; }
+.Preview__viewport-toggle.is-lg-toggle { font-size: 1.4rem; }
+.Preview__viewport-toggle.is-xl-toggle { font-size: 1.5rem; }
+.Preview.is-xs .is-xs-toggle { color: #39a5dc; }
+.Preview.is-sm .is-sm-toggle { color: #39a5dc; }
+.Preview.is-md .is-md-toggle { color: #39a5dc; }
+.Preview.is-lg .is-lg-toggle { color: #39a5dc; }
+.Preview.is-xl .is-xl-toggle { color: #39a5dc; }
+
+.Preview.is-xs {
+  background-color: #fff;
+  .Preview__body {
+    width: 480px;
+  }
+}
+
+.Preview.is-sm {
+  background-color: #fff;
+  .Preview__body {
+    width: 576px;
+  }
+}
+
+.Preview.is-md {
+  background-color: #fff;
+  .Preview__body {
+    width: 768px;
+  }
+}
+
+.Preview.is-lg {
+  background-color: #fff;
+  .Preview__body {
+    width: 992px;
+  }
+}
+
+.Preview.is-xl {
+  background-color: #fff;
+  .Preview__body {
+    width: 1200px;
+  }
+}
+
+.Preview__viewport-link {
+  padding-left: .5rem;
+  font-size: 1.3rem;
+  color: #000;
+}
+
+.Preview__viewport-background-toggle {
+  padding-left: .5rem;
+  font-size: 1.3rem;
+  color: #000;
+  background-color: transparent;
+  border-width: 0;
+  border-left: 1px solid #000;
+  outline: 0;
+}

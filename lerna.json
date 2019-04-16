@@ -1,0 +1,9 @@
+{
+  "packages": [
+    "packages/*",
+    "packages/patternfly-4/plugins/**/*"
+  ],
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true
+}

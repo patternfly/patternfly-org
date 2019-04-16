@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalBoxHeader Test 1`] = `
+<React.Fragment>
+  <Title
+    className=""
+    headingLevel="h1"
+    size="2xl"
+  >
+    This is a ModalBox header
+  </Title>
+</React.Fragment>
+`;

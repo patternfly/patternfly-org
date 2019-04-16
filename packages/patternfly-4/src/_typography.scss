@@ -1,0 +1,190 @@
+:root {
+  // Font size
+  --pf-global--FontSize--5xl: 48px;
+  --pf-global--FontSize--4xl: 36px;
+  --pf-global--FontSize--3xl: 28px;
+  --pf-global--FontSize--2xl: 24px;
+  --pf-global--FontSize--xl: 21px;
+  --pf-global--FontSize--lg: 18px;
+  --pf-global--FontSize--md: 16px;
+  --pf-global--FontSize--sm: 14px;
+  --pf-global--FontSize--xs: 12px;
+}
+.pf-c-title {
+  // 5xl
+  --pf-c-title--m-5xl--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-title--m-5xl--FontSize: 48px;
+  --pf-c-title--m-5xl--FontWeight: 400;
+
+  // 4xl
+  --pf-c-title--m-4xl--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-title--m-4xl--FontSize: 36px;
+  --pf-c-title--m-4xl--FontWeight: 400;
+
+  // 3xl
+  --pf-c-title--m-3xl--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-title--m-3xl--FontSize: 28px;
+  --pf-c-title--m-3xl--FontWeight: 400;
+
+  // 2xl
+  --pf-c-title--m-2xl--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-title--m-2xl--FontSize: 24px;
+  --pf-c-title--m-2xl--FontWeight: 400;
+
+  // xl
+  --pf-c-title--m-xl--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-title--m-xl--FontSize: 21px;
+  --pf-c-title--m-xl--FontWeight: 400;
+
+  // lg
+  --pf-c-title--m-lg--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-title--m-lg--FontSize: 18px;
+  --pf-c-title--m-lg--FontWeight: 700;
+
+  // md
+  --pf-c-title--m-md--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-title--m-md--FontSize: 16px;
+  --pf-c-title--m-md--FontWeight: 400;
+
+  &.pf-m-5xl {
+    font-family: RedHatDisplay;
+    font-size: var(--pf-c-title--m-5xl--FontSize);
+    font-weight: var(--pf-c-title--m-5xl--FontWeight);
+    line-height: var(--pf-c-title--m-5xl--LineHeight);
+  }
+
+  &.pf-m-4xl {
+    font-family: RedHatDisplay;
+    font-weight: 400;
+  }
+
+  &.pf-m-3xl {
+    font-family: RedHatDisplay;
+    font-weight: 400;
+  }
+
+  &.pf-m-2xl {
+    font-family: RedHatDisplay;
+    font-weight: 400;
+  }
+
+  &.pf-m-xl {
+    font-family: RedHatDisplay;
+    font-weight: 400;
+  }
+
+  &.pf-m-lg {
+    font-family: RedHatDisplay;
+    font-weight: 400;
+  }
+
+  &.pf-m-md {
+    font-family: RedHatText;
+    font-weight: 400;
+  }
+}
+
+.pf-c-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: RedHatDisplay;
+    font-weight: 400;
+  }
+  p, a, button, input, optgroup, select, textarea {
+    font-family: RedHatText;
+    font-weight: 400;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: RedHatDisplay;
+  font-weight: 700;
+}
+
+p {
+  font-family: RedHatText;
+  font-weight: 400;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: RedHatText;
+  font-weight: 400;
+}
+
+html {
+  font-family: RedHatText;
+}
+
+body {
+  font-family: RedHatText;
+  font-weight: 400;
+}
+
+a {
+  font-family: RedHatText;
+  font-weight: 400;
+}
+
+.pf-c-about-modal-box,
+.pf-c-accordion,
+.pf-c-alert,
+.pf-c-alert-group,
+.pf-c-app-launcher,
+.pf-c-avatar,
+.pf-c-backdrop,
+.pf-c-background-image,
+.pf-c-badge,
+.pf-c-brand,
+.pf-c-breadcrumb,
+.pf-c-button,
+.pf-c-card,
+.pf-c-check,
+.pf-c-chip,
+.pf-c-chip-group,
+.pf-c-clipboard-copy,
+.pf-c-content,
+.pf-c-context-selector,
+.pf-c-data-list,
+.pf-c-dropdown,
+.pf-c-empty-state,
+.pf-c-expandable,
+.pf-c-form,
+.pf-c-form-control,
+.pf-c-input-group,
+.pf-c-label,
+.pf-c-list,
+.pf-c-login,
+.pf-c-modal-box,
+.pf-c-nav,
+.pf-c-options-menu,
+.pf-c-page,
+.pf-c-pagination,
+.pf-c-popover,
+.pf-c-progress,
+.pf-c-radio,
+.pf-c-select,
+.pf-c-switch,
+.pf-c-tab-content,
+.pf-c-table,
+.pf-c-tabs,
+.pf-c-title,
+.pf-c-toolbar,
+.pf-c-tooltip,
+.pf-l-bullseye,
+.pf-l-flex,
+.pf-l-gallery,
+.pf-l-grid,
+.pf-l-level,
+.pf-l-split,
+.pf-l-stack {
+  font-family: RedHatText;
+  font-weight: 400;
+}
