@@ -1,14 +1,14 @@
 {% strip %}<header>
-  <nav class="navbar navbar-default navbar-fixed-top {% if false || page.url == '/' %}pf-m-banner{% endif %}">
-    {% if false || page.url == '/' %}
+  <nav class="navbar navbar-default navbar-fixed-top {% if page.url == '/' %}pf-m-banner{% endif %}">
+    {% if page.url == '/' %}
     <div id="pf3-banner" class="pf3-banner">
       <div class="pf3-banner-wrapper">
         <span class="rhDisplayRegular pf3-banner-text">PatternFly 4 is live! Visit the website for new design, code samples, and documentation.</span>
-        <a href="{{ site.baseurl }}/v4" class="pf3-banner-link">Go to PatternFly 4<i class="fa fa-arrow-right"></i></a>
+        <a href="{{ site.baseurl }}/v4" class="pf3-banner-link">Go to PatternFly 4<i class="fa5 fa-arrow-right"></i></a>
       </div>
     </div>
     {% endif %}
-    <div class="container-fluid {% if false || page.url == '/' %}pf-m-banner{% endif %}">
+    <div class="container-fluid {% if page.url == '/' %}pf-m-banner{% endif %}">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle">
           <span class="sr-only">Toggle navigation</span>
@@ -51,7 +51,7 @@
       </div>
     </div>
   </nav>
-  <nav class="navbar navbar-sidebar {% if false || page.url == '/' %}pf-m-banner{% endif %} {% if page.url == '/' %}navbar-home{% endif %} {% if primary != 'get-started' and primary != 'pattern-library' and primary != 'styles' %}navbar-primary{% endif %}">
+  <nav class="navbar navbar-sidebar {% if page.url == '/' %}pf-m-banner{% endif %} {% if page.url == '/' %}navbar-home{% endif %} {% if primary != 'get-started' and primary != 'pattern-library' and primary != 'styles' %}navbar-primary{% endif %}">
 
 <!--
   { % if primary == 'get-started' or primary == 'pattern-library' or primary == 'styles' % }
