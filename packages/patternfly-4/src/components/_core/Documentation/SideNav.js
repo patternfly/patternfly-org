@@ -47,7 +47,7 @@ class CoreSideNav extends React.Component {
       return accum;
     }, {});
 
-    const { components, layouts, demos, utilities, 'upgrade-examples': upgradeExamples} = allPages;
+    const { components, layouts, demos, utilities } = allPages;
 
     const searchRE = new RegExp(searchValue, 'i');
 
@@ -55,7 +55,6 @@ class CoreSideNav extends React.Component {
     const filteredLayouts = layouts.filter(c => searchRE.test(c.text));
     const filteredDemos = demos.filter(c => searchRE.test(c.text));
     const filteredUtilities = utilities.filter(c => searchRE.test(c.text));
-    const filteredUpgradeExamples = upgradeExamples.filter(c => searchRE.test(c.text));
 
     const SideNav = (
       <Location>
@@ -172,30 +171,6 @@ class CoreSideNav extends React.Component {
                       </NavItem>
                   )})}
               </NavExpandable>
-              <NavExpandable
-                title="Upgrade Examples"
-                isExpanded={currentPath.indexOf('/upgrade-examples/') > -1 || (searchValue && filteredUpgradeExamples.length > 0) || false}
-                isActive={currentPath.indexOf(/upgrade-examples/) > -1}
-              >
-                {filteredUpgradeExamples.map(navItem => {
-                    const { path, text } = navItem;
-                    const isFullPage = path.endsWith('-full');
-                    const pathWithSlash = path.endsWith('/') ? path : `${path}/`;
-                    const currentPathWithSlash = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
-                    if (isFullPage) {
-                      return null;
-                    }
-                    return (
-                    <NavItem
-                      key={path}
-                      isActive={currentPathWithSlash.endsWith(pathWithSlash)}
-                    >
-                      <Link to={path}>
-                        {text}
-                      </Link>
-                    </NavItem>
-                  )})}
-              </NavExpandable>
               <NavItem isActive={currentPath.indexOf('/documentation/core/css-variables') > -1}>
                   <Link to="/documentation/core/css-variables/">Global CSS Variables</Link>
                 </NavItem>
@@ -210,22 +185,23 @@ class CoreSideNav extends React.Component {
 }
 
 export default props => (
-  <StaticQuery
-    query={graphql`
-      query IndexOtherPageQuery {
-        allSitePage(filter: { path: { glob: "/documentation/core/**" }, fields: { label: { ne: null } } }, sort: {fields: fields___label}) {
-          edges {
-            node {
-              path
-              fields {
-                label
-                type
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={data => <CoreSideNav data={data} {...props} />}
-  />
+  <div>i should be a sidebar</div>
+  // <StaticQuery
+  //   query={graphql`
+  //     query IndexOtherPageQuery {
+  //       allSitePage(filter: { path: { glob: "/documentation/core/**" }, fields: { label: { ne: null } } }, sort: {fields: fields___label}) {
+  //         edges {
+  //           node {
+  //             path
+  //             fields {
+  //               label
+  //               type
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   `}
+  //   render={data => <CoreSideNav data={data} {...props} />}
+  // />
 );
