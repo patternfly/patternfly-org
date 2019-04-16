@@ -5,7 +5,6 @@
   "author": "Red Hat",
   "scripts": {
     "lerna": "lerna",
-    "bootstrap": "lerna bootstrap",
     "prebuild": "lerna run prebuild",
     "build": "yarn clean && yarn build:pf && yarn combine-sites && yarn copy-assets",
     "build:pf": "lerna run build --scope='@patternfly/org-patternfly-3' --scope='@patternfly/org-patternfly-4' --parallel --stream",
@@ -16,12 +15,14 @@
     "clean": "rm -rf out && yarn clean:pf3",
     "clean:pf3": "rm -rf packages/patternfly-3/_site && rm -rf packages/patternfly-3/_build && rm -rf packages/patternfly-3/repos",
     "clean:pf4": "rm -rf packages/patternfly-4/public",
+    "start:prod": "http-server ./out -p 8384 -o",
     "start:pf3": "lerna run dev --scope=@patternfly/org-patternfly-3 --stream",
     "start:pf4": "lerna run develop --scope=@patternfly/org-patternfly-4 --stream"
   },
   "license": "Apache-2.0",
   "devDependencies": {
     "fs-extra": "7.0.1",
+    "http-server": "^0.11.1",
     "lerna": "^3.10.6"
   },
   "description": "Documentation for PatternFly",
