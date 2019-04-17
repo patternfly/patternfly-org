@@ -3,9 +3,25 @@ import { Grid, GridItem } from '@patternfly/react-core';
 import { StyledText } from '@patternfly/react-styled-system';
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
+import './typography.scss';
 
 export const styles = {
-  textColor: css`color: #703FEC;`,
+  textColor: css`
+    color: #004368; 
+    max-width: 350px;
+    font-size: 14px;
+  `,
+  tableTypography: css`
+    background-color: transparent !important;
+
+    tr > td:first-child {
+      padding-left: 0px !important;
+    }
+
+    tr:nth-child(even) {
+      background-color: transparent !important;
+    }
+  `,
   gridTitleSymbol: css`
     font-size: 10px;
     vertical-align: text-bottom;
@@ -24,7 +40,7 @@ export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontS
     <h3>{title} {symbol && <span css={styles.gridTitleSymbol}>{symbol}</span>}</h3>
     <Grid gutter="sm" css={[styles.gridRowCenter, styles.typographyGrid]}>
       <GridItem span={6}>
-        <table className="pf-c-table pf-m-compact" aria-label="typography usage guidelines breakout">
+        <table css={styles.tableTypography} className="pf-c-table pf-m-compact" aria-label="typography usage guidelines breakout">
           <tbody>
             <tr>
               <td className="pf-u-pr-sm">Font Family:</td>
@@ -37,6 +53,10 @@ export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontS
             <tr>
               <td>Line Height:</td>
               <td>{lineHeight}</td>
+            </tr>
+            <tr>
+              <td>Global CSS variable:</td>
+              <td>.pf-c-title</td>
             </tr>
           </tbody>
         </table>
