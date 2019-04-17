@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Content, Bullseye, GalleryItem, Popover } from '@patternfly/react-core';
+import { Button, Bullseye, GalleryItem, Popover } from '@patternfly/react-core';
 import { global_FontSize_sm as labelFontSize } from '@patternfly/react-tokens';
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
@@ -21,7 +21,6 @@ const styles = {
       background-color: rgba(190, 225, 244, 0.75);
     }
   `,
-  // iconbox: css`height: 121px;`,
   textbox: css`
     text-align: center;
     margin: 3px;
