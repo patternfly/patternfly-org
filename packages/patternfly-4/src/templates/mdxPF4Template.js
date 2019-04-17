@@ -13,8 +13,17 @@ import Tokens from '../components/css-variables';
 import PropsTable from '../components/_react/propsTable';
 import './template.scss';
 
+let liveEditCount = 0;
 const components = {
-  code: LiveEdit,
+  code: class LiveEditWrapper extends React.Component {
+    render() {
+      return (
+        <LiveEdit scope={this.getScope()} id={'' + liveEditCount++} className={this.props.className}>
+          {this.props.children}
+        </LiveEdit>
+      );
+    }
+  },
   pre: React.Fragment,
 };
 for (let i = 1; i <= 6; i++) {
@@ -24,15 +33,17 @@ for (let i = 1; i <= 6; i++) {
 const MdxPF4Template = ({ data }) => {
   // Exported components in the folder (i.e. src/components/Alerts/[Alert, AlertIcon, AlertBody])
   // We *should* use the MDXRenderer scope to get the names of these, but that's pretty difficult
-  const propComponents = data.metadata.edges
+  const propComponents = data.metadata ? data.metadata.edges
     .map(edge => edge.node.name)
     .filter(name => name) // Some HOCs don't get docgenned properly (like TabContent)
-    .filter(name => data.mdx.code.body.indexOf(name) !== -1);
+    .filter(name => data.mdx.code.body.indexOf(name) !== -1)
+    : [];
 
   // Finally, the props for each relevant component!
-  const props = data.metadata.edges
+  const props = data.metadata ? data.metadata.edges
     .filter(edge => propComponents.indexOf(edge.node.name) !== -1)
-    .map(edge => { return { name: edge.node.name, props: edge.node.props } });
+    .map(edge => { return { name: edge.node.name, props: edge.node.props } })
+    : [];
 
   const cssPrefix = data.mdx.frontmatter.cssPrefix;
   let section = data.mdx.frontmatter.section;

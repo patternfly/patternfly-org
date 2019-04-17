@@ -69,7 +69,7 @@ class LiveEdit extends React.Component {
     else if (this.props.className === 'language-nolive') {
       return (
         <div className={css('example', 'ws-live-demo')}>
-          <Preview raw={true} viewport={this.state.viewport}>
+          <Preview raw={true} id={this.props.id}>
             <LiveProvider code={this.code} disabled>
               <LiveEditor className={css('code')} contentEditable={false} />
             </LiveProvider>
@@ -80,7 +80,7 @@ class LiveEdit extends React.Component {
     else if (this.props.className === 'language-js') {
       return (
         <div className={css('example', 'ws-live-demo')}>
-          <Preview raw={true} viewport={this.state.viewport}>
+          <Preview raw={true}>
             <LiveProvider code={this.code} scope={this.scope} transformCode={LiveEdit.transformCode}>
               <LivePreview className={css('example', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')} />
               <EditorToolbar

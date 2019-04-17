@@ -136,6 +136,7 @@ exports.createPages = async ({ graphql, actions }) => {
           context: {
             title: node.frontmatter.title,
             fileAbsolutePath: node.fileAbsolutePath, // Helps us get the markdown
+            fullscreen: true
           }
         });
       } else {
@@ -157,7 +158,8 @@ exports.createPages = async ({ graphql, actions }) => {
           path: `${link}fullscreen`,
           component: path.resolve('./src/templates/mdxFullscreenTemplate.js'),
           context: {
-            fileAbsolutePath: node.fileAbsolutePath
+            fileAbsolutePath: node.fileAbsolutePath,
+            fullscreen: true
           }
         });
       }

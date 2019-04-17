@@ -31,7 +31,7 @@ class SideNav extends React.Component {
         label: e.node.context.title,
         pkg: 'core',
         components: []
-      }))
+      })).filter(e => e.label)
       : [];
 
     const layoutRoutes = data.layoutPages
@@ -40,14 +40,17 @@ class SideNav extends React.Component {
         label: e.node.context.title,
         pkg: 'core',
         components: []
-      }))
+      })).filter(e => e.label)
       : [];
 
+
     const demoRoutes = data.demoPages
-      ? data.demoPages.edges.map(e => ({
+      ? data.demoPages.edges
+      .filter(e => !e.node.context.fullscreen)
+      .map(e => ({
         to: e.node.path,
         label: e.node.context.title
-      }))
+      })).filter(e => e.label)
       : [];
 
     const searchRE = new RegExp(searchValue, 'i');
@@ -63,6 +66,8 @@ class SideNav extends React.Component {
     });
 
     const filteredDemoRoutes = demoRoutes.filter(c => searchRE.test(c.label));
+
+    console.log('filtered demos', filteredDemoRoutes)
 
     const isActiveTest = (currentPath, path) => {
       const pathWithSlash = path.endsWith('/') ? path : `${path}/`;
@@ -192,6 +197,7 @@ export default props => (
               path
               context {
                 title
+                fullscreen
               }
             }
           }

@@ -2,20 +2,29 @@
 title: 'Page Layout'
 section: 'demos'
 ---
+
+import LinkPreview from '@content/../LinkPreview';
+
 ## Using simple navigation
-<a href="pagelayoutsimplenav" target="_blank">Popout example</a>
+
+<LinkPreview name="Simple Nav" path="/documentation/react/demos/pagelayout/pagelayoutsimplenav" />
 
 ## Using default navigation
-<a href="pagelayoutdefaultnav" target="_blank">Popout example</a>
+
+<LinkPreview name="Default Nav" path="/documentation/react/demos/pagelayout/pagelayoutdefaultnav" />
 
 ## Using expandable navigation
-<a href="pagelayoutexpandablenav" target="_blank">Popout example</a>
+
+<LinkPreview name="Expandable Nav" path="/documentation/react/demos/pagelayout/pagelayoutexpandablenav" />
 
 ## Using grouped navigation
-<a href="pagelayoutgroupsnav" target="_blank">Popout example</a>
+
+<LinkPreview name="Grouped Nav" path="/documentation/react/demos/pagelayout/pagelayoutgroupsnav" />
 
 ## Using horizontal navigation
-<a href="pagelayouthorizontalnav" target="_blank">Popout example</a>
+
+<LinkPreview name="Horizontal Nav" path="/documentation/react/demos/pagelayout/pagelayouthorizontalnav" />
 
 ## Programmatically toggle the sidebar
-<a href="pagelayoutmanualnav" target="_blank">Popout example</a>
+
+<LinkPreview name="Manual Nav" path="/documentation/react/demos/pagelayout/pagelayoutmanualnav" />
