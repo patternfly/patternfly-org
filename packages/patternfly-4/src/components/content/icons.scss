@@ -2,8 +2,17 @@
   font-size: 36px;
 }
   
-.ws-search {
+.search-icons {
   input {
+    padding-left: 44px;
+    background-color: #fff;
+    background-image: url(search-icon.png);
+    background-position: 14px;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    margin-top: 16px;
+    margin-bottom:64px;
+
     &::placeholder {
       color: #151515;
     }
@@ -13,4 +22,8 @@
   .pf-c-form__label {
     --pf-c-form__label--FontSize: var(--pf-global--FontSize--lg);
   }
+}
+
+form {
+  padding-bottom: 64px;
 }

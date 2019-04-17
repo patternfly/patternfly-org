@@ -42,7 +42,7 @@ class Icons extends React.Component {
     });
     return (
       <>
-        <Form className="ws-search searchIcons" onSubmit={event => { event.preventDefault(); return false; }}>
+        <Form className="search-icons ws-search " onSubmit={event => { event.preventDefault(); return false; }}>
         <TextInput
               type="text"
               id="primaryIconsSearch"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Bullseye, GalleryItem, Popover } from '@patternfly/react-core';
+import { Button, Content, Bullseye, GalleryItem, Popover } from '@patternfly/react-core';
 import { global_FontSize_sm as labelFontSize } from '@patternfly/react-tokens';
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
@@ -36,6 +36,13 @@ const styles = {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    > * {
+      > * {
+        width: 32px;
+        height: 32px;
+      }
+    }
   `,
   labelHovered: css`
     font-size: ${labelFontSize.var};
@@ -51,12 +58,17 @@ const styles = {
     margin-right: 10px;
   `,
   popoverBody: css`
-    color: white; 
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: left;
   `,
-  copyButtons: css`padding-bottom: 16px; display: flex;`,
+  textDescription: css`
+    margin-bottom: 16px;
+  `,
+  copyButtons: css`
+    display: flex;
+    margin-left: -16px;
+  `,
   scaleDown: css`transform: scale(.7);`,
   openContainer: css`display: flex;`,
   leftContainer: css`
@@ -122,11 +134,13 @@ class IconCard extends React.Component {
     const { icon: Icon, name } = this.props;
     const popoverBody = (
       <div css={styles.popoverBody}>
+        <div css={styles.textDescription}>
+          <div>Indicates that a user may create or add something.</div>
+        </div>
         <div css={styles.copyButtons}>
-          <Box><Button variant="link" onClick={this.onCopyReact}>Copy React</Button></Box>
-          {/* <div css={css`width: 16px; height: 8px;`}></div> */}
-          <Box><Button variant="link" onClick={this.onCopyHtml}>Copy HTML</Button></Box>
           <Box><Button variant="link" onClick={this.onDownloadSvg}>Download SVG</Button></Box>
+          <Box><Button variant="link" onClick={this.onCopyHtml}>Copy HTML</Button></Box>
+          <Box><Button variant="link" onClick={this.onCopyReact}>Copy React</Button></Box>
         </div>
       </div>
     );
