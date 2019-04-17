@@ -21,17 +21,28 @@ export default class Preview extends React.Component {
   }
 
   render() {
-    const { children, fullPageOnly, isViewport, viewport = '', lights = true, minHeight, heading } = this.props;
+    const { children, fullPageOnly, isViewport, viewport = '', lights = true, minHeight, heading, raw } = this.props;
     const { fullPath } = this.state;
     const output = { __html: children };
     const background = lights ? '' : 'pf-t-dark pf-m-opaque-200';
-    const preview = fullPageOnly ? <LinkPreview name={heading} path={fullPath} /> : (
-      <div
+    let preview;
+    if (raw) {
+      preview = (
+        <div className={`Preview__body ${background} ${isViewport ? 'is-viewport' : ''}`}>
+          {children}
+        </div>
+      );
+    }
+    else if (fullPageOnly) {
+      preview = <LinkPreview name={heading} path={fullPath} />;
+    }
+    else {
+      preview = <div
         className={`Preview__body ${background} ${isViewport ? 'is-viewport' : ''}`}
         style={{ minHeight: minHeight }}
         dangerouslySetInnerHTML={output}
-      />
-    );
+      />;
+    }
     return (
       <div className={`Preview ${viewport}`}>
         {preview}

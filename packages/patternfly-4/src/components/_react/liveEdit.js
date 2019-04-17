@@ -1,4 +1,5 @@
 import React from 'react';
+import { Location } from '@reach/router';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import { css } from '@patternfly/react-styles';
 import EditorToolbar from '../example/editorToolbar';
@@ -8,12 +9,12 @@ class LiveEdit extends React.Component {
   constructor(props) {
     super(props);
     // Our children are elements inside a <code> tag created from rendered markdown
-    this.code = this.props.children;
+    this.code = props.children;
     // This is injected in src/components/mdx-renderer
-    this.scope = this.getScope();
+    this.scope = props.scope || this.getScope();
     this.state = {
       copied: false,
-      darkMode: false
+      darkMode: false,
     };
   }
 
@@ -21,7 +22,7 @@ class LiveEdit extends React.Component {
     this.setState({darkMode: !this.state.darkMode});
   };
 
-  transformCode(code) {
+  static transformCode(code) {
     if (typeof code !== 'string') {
       return;
     }
@@ -46,38 +47,51 @@ class LiveEdit extends React.Component {
   }
 
   render() {
-    const ExamplePreview = (
-      <div className={css('example')}>
-        <Preview viewport={this.state.viewport} />
-      </div>
-    );
+    const fullPath = 'fullscreen';
 
-    const fullPath = 'asdf';
-
-    if (this.props.className === 'language-js') {
+    if (this.props.justRender) {
       return (
-        <React.Fragment>
-          {ExamplePreview}
-          <LiveProvider code={this.code} scope={this.scope} transformCode={this.transformCode}>
-            <LivePreview className={css('example', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')} />
-            <EditorToolbar
-              raw={this.code}
-              editor={<LiveEditor className={css('code')} />}
-              fullPath={fullPath}
-              onLightsChange={this.onDarkModeChange} />
-            <LiveError />
-          </LiveProvider>
-        </React.Fragment>
+        <Location>
+        {({ location }) => {
+          const currentId = new URLSearchParams(location.search).get('id');
+          if (currentId !== this.props.id) {
+            return null;
+          }
+          return (
+            <LiveProvider code={this.code} scope={this.scope} transformCode={LiveEdit.transformCode} disabled>
+              <LivePreview />
+            </LiveProvider>
+          );
+        }}
+        </Location>
       );
     }
     else if (this.props.className === 'language-nolive') {
       return (
-        <React.Fragment>
-          <ExamplePreview />
-          <LiveProvider code={this.code} disabled>
-            <LiveEditor className={css('code')} contentEditable={false} />
-          </LiveProvider>
-        </React.Fragment>
+        <div className={css('example', 'ws-live-demo')}>
+          <Preview raw={true} viewport={this.state.viewport}>
+            <LiveProvider code={this.code} disabled>
+              <LiveEditor className={css('code')} contentEditable={false} />
+            </LiveProvider>
+          </Preview>
+        </div>
+      );
+    }
+    else if (this.props.className === 'language-js') {
+      return (
+        <div className={css('example', 'ws-live-demo')}>
+          <Preview raw={true} viewport={this.state.viewport}>
+            <LiveProvider code={this.code} scope={this.scope} transformCode={LiveEdit.transformCode}>
+              <LivePreview className={css('example', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')} />
+              <EditorToolbar
+                raw={this.code}
+                editor={<LiveEditor className={css('code')} />}
+                fullPath={fullPath}
+                onLightsChange={this.onDarkModeChange} />
+              <LiveError />
+            </LiveProvider>
+          </Preview>
+        </div>
       );
     }
     else {

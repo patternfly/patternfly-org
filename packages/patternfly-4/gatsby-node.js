@@ -151,6 +151,15 @@ exports.createPages = async ({ graphql, actions }) => {
             pathRegex: `/${folderName}\/.*/` // Helps us get the docgenned props
           }
         });
+        // also create a full demo page for each component
+        console.log(`creating page for: ${link}fullscreen`);
+        actions.createPage({
+          path: `${link}fullscreen`,
+          component: path.resolve('./src/templates/mdxFullscreenTemplate.js'),
+          context: {
+            fileAbsolutePath: node.fileAbsolutePath
+          }
+        });
       }
     });
 

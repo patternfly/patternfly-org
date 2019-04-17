@@ -25,38 +25,37 @@ const defaultProps = {
 };
 
 export const PropsTable = ({ name, description: preface, props }) => {
-  console.log('im a props table', props)
   return (
-  <Section
-    name={name}
-    title={`${name} Props`}
-    headingLevel="h3"
-    preface={preface}
-    description={`The ${name} component accepts the following props.`}
-  >
-    <Table className="ws-props-table">
-      <Heading>
-        <TH>Name</TH>
-        <TH>Type</TH>
-        <TH align="center">Required</TH>
-        <TH>Default</TH>
-        <TH>Description</TH>
-      </Heading>
-      <Body>
-        {props.map(prop => (
-          <Row key={prop.name}>
-            <TD>{prop.name}</TD>
-            <TD>{prop.type.name}</TD>
-            <TD align="center">{prop.required && <ExclamationCircleIcon />}</TD>
-            <TD>{prop.defaultValue ? prop.defaultValue.value : ''}</TD>
-            <TD>{prop.description}</TD>
-          </Row>
-        ))}
-      </Body>
-    </Table>
-  </Section>
-)
-        }
+    <Section
+      name={name}
+      title={`${name} Props`}
+      headingLevel="h3"
+      preface={preface}
+      description={`The ${name} component accepts the following props.`}
+    >
+      <Table className="ws-props-table">
+        <Heading>
+          <TH>Name</TH>
+          <TH>Type</TH>
+          <TH align="center">Required</TH>
+          <TH>Default</TH>
+          <TH>Description</TH>
+        </Heading>
+        <Body>
+          {props.map(prop => (
+            <Row key={prop.name}>
+              <TD>{prop.name}</TD>
+              <TD>{prop.type.name}</TD>
+              <TD align="center">{prop.required && <ExclamationCircleIcon />}</TD>
+              <TD>{prop.defaultValue ? prop.defaultValue.value : ''}</TD>
+              <TD>{prop.description}</TD>
+            </Row>
+          ))}
+        </Body>
+      </Table>
+    </Section>
+  )
+}
 
 PropsTable.propTypes = propTypes;
 PropsTable.defaultProps = defaultProps;
