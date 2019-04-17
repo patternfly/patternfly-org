@@ -67,8 +67,6 @@ class SideNav extends React.Component {
 
     const filteredDemoRoutes = demoRoutes.filter(c => searchRE.test(c.label));
 
-    console.log('filtered demos', filteredDemoRoutes)
-
     const isActiveTest = (currentPath, path) => {
       const pathWithSlash = path.endsWith('/') ? path : `${path}/`;
       const currentPathWithSlash = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
@@ -79,7 +77,6 @@ class SideNav extends React.Component {
     const SideNav = (
       <Location>
       {({ location }) => {
-        // console.log(location);
         const currentPath = location.pathname;
         return (
           <Nav className="pf-site-vertical-navigation" aria-label="Nav">

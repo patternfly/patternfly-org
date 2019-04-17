@@ -59,7 +59,6 @@ class CoreSideNav extends React.Component {
     const SideNav = (
       <Location>
         {({ location }) => {
-          // console.log(location);
           const currentPath = location.pathname;
           return (
             <Nav className="pf-site-vertical-navigation" aria-label="Nav">

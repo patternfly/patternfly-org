@@ -57,7 +57,6 @@ class Documentation extends React.PureComponent {
     return (
       <Location>
         {({ location }) => {
-          // console.log(location);
           const currentPath = location.pathname;
           let componentType = 'Components';
           if (currentPath.indexOf('/layouts/') > -1) {
