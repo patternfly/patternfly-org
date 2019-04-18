@@ -31,7 +31,7 @@ export const styles = {
     width: ${size}px;
     height: ${size}px;
     background-color: ${backgroundColor};
-    border: ${showBorder ? '1px solid #703FEC' : 'none'};
+    border: ${showBorder ? '1px solid #3E9DD0' : 'none'};
   `)
 };
 
@@ -110,11 +110,11 @@ export const SpacingContentItem = ({children, fontWeight, fontSize, lineHeight})
 export const Spacer = ({color, size, description, showBorder}) => {
   let backgroundColor = null;
   if (color === '8') {
-    backgroundColor = '#9CD819';
+    backgroundColor = '#FF00FF';
   } else if (color === '16') {
-    backgroundColor = '#52A549';
+    backgroundColor = '#FF9500';
   } else if (color === '24') {
-    backgroundColor = '#198793';
+    backgroundColor = '#FFEA00';
   }
   return (
   <div style={{display: "flex", padding: description ? "5px" : "0px"}}>
