@@ -79,19 +79,15 @@ class LiveEdit extends React.Component {
     }
     else if (this.props.className === 'language-js') {
       return (
-        <div className={css('example', 'ws-live-demo')}>
-          <Preview raw={true}>
-            <LiveProvider code={this.code} scope={this.scope} transformCode={LiveEdit.transformCode}>
-              <LivePreview className={css('example', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')} />
-              <EditorToolbar
-                raw={this.code}
-                editor={<LiveEditor className={css('code')} />}
-                fullPath={fullPath}
-                onLightsChange={this.onDarkModeChange} />
-              <LiveError />
-            </LiveProvider>
-          </Preview>
-        </div>
+        <LiveProvider code={this.code} scope={this.scope} transformCode={LiveEdit.transformCode}>
+          <LivePreview className={css('example', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')} />
+          <EditorToolbar
+            raw={this.code}
+            editor={<LiveEditor className={css('code')} />}
+            fullPath={fullPath}
+            onLightsChange={this.onDarkModeChange} />
+          <LiveError />
+        </LiveProvider>
       );
     }
     else {

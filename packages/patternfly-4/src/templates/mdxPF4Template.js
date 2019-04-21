@@ -8,6 +8,7 @@ import SideNav from '../components/_react/Documentation/SideNav';
 import Section from '../components/section';
 import LiveEdit from '../components/_react/liveEdit';
 import Layout from '../components/layout';
+import { Location } from '@reach/router';
 import SEO from '../components/seo';
 import Tokens from '../components/css-variables';
 import PropsTable from '../components/_react/propsTable';
@@ -24,10 +25,10 @@ const components = {
       );
     }
   },
-  pre: React.Fragment,
+  pre: React.Fragment
 };
 for (let i = 1; i <= 6; i++) {
-  components[`h${i}`] = props => <AutoLinkHeader is={`h${i}`} {...props}>{props.children}</AutoLinkHeader>;
+  components[`h${i}`] = props => <AutoLinkHeader className='ws-linked-heading' is={`h${i}`} {...props}>{props.children}</AutoLinkHeader>;
 }
 
 const MdxPF4Template = ({ data }) => {
@@ -51,17 +52,41 @@ const MdxPF4Template = ({ data }) => {
     section = 'component';
   
   return (
+    <Location>
+      {({ location }) => {
+        // console.log(location);
+        const currentPath = location.pathname;
+        let componentType = 'Components';
+        if (currentPath.indexOf('/layouts/') > -1) {
+          componentType = 'Layouts';
+        } else if (currentPath.indexOf('/utilities/') > -1) {
+          componentType = 'Utilities';
+        } else if (currentPath.indexOf('/demos/') > -1) {
+          componentType = 'Demos';
+        } else if (currentPath.indexOf('/upgrades/') > -1) {
+          componentType = 'Upgrades';
+        }
+        // ignore above and just set to React for now
+        componentType = 'React';
+    return (
     <Layout sideNav={<SideNav />} className="ws-documentation">
-      <SEO title="Docs" keywords={['gatsby', 'application', 'react']} />
-      <PageSection>
-        <AutoLinkHeader size="4xl" is="h1" style={{ textTransform: 'capitalize' }}>
-          {data.mdx.frontmatter.title} {section.indexOf('-') === -1 ? section : ''}
+      <SEO title="React" />
+      <PageSection variant={PageSectionVariants.light} className="section-border pf-u-pt-md pf-site-background-medium">
+        <AutoLinkHeader size="md" is="h1" className="pf4-site-framework-title">{componentType}</AutoLinkHeader>
+        <AutoLinkHeader size="4xl" is="h2" className="pf-u-mt-sm pf-u-mb-md">
+          {data.mdx.frontmatter.title}
         </AutoLinkHeader>
-        <MDXProvider components={components}>
-          <MDXRenderer>
-            {data.mdx.code.body}
-          </MDXRenderer>
-        </MDXProvider>
+        <Section title="Examples" headingLevel="h3">
+          <Section className="ws-live-demo">
+            <MDXProvider components={components}>
+              <div className='jjj'>
+              <MDXRenderer>
+                {data.mdx.code.body}
+              </MDXRenderer>
+              </div>
+            </MDXProvider>
+          </Section>
+        </Section>
       </PageSection>
 
       {props.length > 0 && props.map(component =>
@@ -78,8 +103,12 @@ const MdxPF4Template = ({ data }) => {
         <Section title="CSS Variables" headingLevel="h3">
           <Tokens variables={cssPrefix} />
         </Section>
-      </PageSection>}
+      </PageSection>
+      }
     </Layout>
+    );
+    }}
+  </Location>
   );
 };
 
