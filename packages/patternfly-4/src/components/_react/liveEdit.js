@@ -1,5 +1,4 @@
 import React from 'react';
-import { Location } from '@reach/router';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import { css } from '@patternfly/react-styles';
 import EditorToolbar from '../example/editorToolbar';
@@ -51,25 +50,15 @@ class LiveEdit extends React.Component {
 
     if (this.props.justRender) {
       return (
-        <Location>
-        {({ location }) => {
-          const currentId = new URLSearchParams(location.search).get('id');
-          if (currentId !== this.props.id) {
-            return null;
-          }
-          return (
-            <LiveProvider code={this.code} scope={this.scope} transformCode={LiveEdit.transformCode} disabled>
-              <LivePreview />
-            </LiveProvider>
-          );
-        }}
-        </Location>
+        <LiveProvider code={this.code} scope={this.scope} transformCode={LiveEdit.transformCode} disabled>
+          <LivePreview />
+        </LiveProvider>
       );
     }
     else if (this.props.className === 'language-nolive') {
       return (
         <div className={css('example', 'ws-live-demo')}>
-          <Preview raw={true} id={this.props.id}>
+          <Preview raw={true}>
             <LiveProvider code={this.code} disabled>
               <LiveEditor className={css('code')} contentEditable={false} />
             </LiveProvider>

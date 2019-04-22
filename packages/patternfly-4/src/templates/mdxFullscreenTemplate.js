@@ -5,12 +5,11 @@ import { MDXRenderer } from '../components/mdx-renderer';
 import LiveEdit from '../components/_react/liveEdit';
 import './template.scss';
 
-let liveEditCount = 0;
 const components = {
   code: class LiveEditWrapper extends React.Component {
     render() {
       return (
-        <LiveEdit justRender={true} scope={this.getScope()} id={'' + liveEditCount++}>
+        <LiveEdit justRender={true} scope={this.getScope()}>
           {this.props.children}
         </LiveEdit>
       );
