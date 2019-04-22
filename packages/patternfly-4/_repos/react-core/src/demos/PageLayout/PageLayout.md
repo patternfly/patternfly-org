@@ -5,6 +5,13 @@ section: 'demos'
 
 import LinkPreview from '@content/../LinkPreview';
 
+All but the last example set the isManagedSidebar prop on the Page component to have the sidebar automatically close for smaller screen widths. You can also manually control this behavior by not adding the isManagedSidebar prop and instead:
+
+- Add an onNavToggle callback to PageHeader
+- Pass in a boolean into the isNavOpen prop to PageSidebar
+
+The last example demonstrates this.
+
 ## Using simple navigation
 
 <LinkPreview name="Simple Nav" path="/documentation/react/demos/pagelayout/pagelayoutsimplenav" />
