@@ -112,6 +112,6 @@ In general, data input controls should work to help users avoid input errors. Do
 
 For situations where you do need to provide validation and errors, it is best to provide inline errors as soon as a field leaves focus.
 
-![Error](img/input-error 2.png)
+![Error](img/input-error.png)
 
 For more information about providing validation and errors for data input, see the [forms design guidelines](/design-guidelines/usage-and-behavior/forms#provide-errors-and-validation).
