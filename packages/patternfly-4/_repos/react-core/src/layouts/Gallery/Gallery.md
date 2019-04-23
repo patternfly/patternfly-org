@@ -6,8 +6,6 @@ section: 'layouts'
 
 import { Gallery, GalleryItem } from '@patternfly/react-core';
 
-A Gallery layout makes all of the children a uniform size, the children are displayed horizontally, and they wrap as needed.
-
 ## Simple Gallery Layout
 ```js
 import React from 'react';

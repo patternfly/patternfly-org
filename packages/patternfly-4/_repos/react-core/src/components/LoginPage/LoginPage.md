@@ -17,7 +17,7 @@ import {
 } from '@patternfly/react-core';
 import { ExclamationCircleIcon } from '@patternfly/react-icons';
 
-```nolive
+```js
 import React from 'react';
 import brandImgColor from './examples/brandImgColor.svg';
 import {

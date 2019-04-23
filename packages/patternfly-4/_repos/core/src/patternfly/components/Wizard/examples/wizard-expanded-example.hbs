@@ -1,7 +1,6 @@
 {{#> backdrop}}
 {{#> bullseye}}
   {{#> wizard wizard--IsExpanded="true"}}
-    {{#> background-image}}{{/background-image}}
     {{#> wizard-header}}
       {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
         {{> button-icon button-icon--type="times"}}
@@ -16,7 +15,7 @@
         {{#> wizard-toggle-list-item}}
           {{#> wizard-toggle-num}}2{{/wizard-toggle-num}}
           Configuration
-          {{> wizard-toggle-divider}}
+          {{> wizard-toggle-separator}}
         {{/wizard-toggle-list-item}}
         {{#> wizard-toggle-list-item}}
           Substep B
@@ -68,12 +67,10 @@
           {{/wizard-nav-list}}
         {{/wizard-nav}}
         {{#> wizard-main}}
-          {{#> wizard-body}}
-            <p>wizard content goes here</p>
-          {{/wizard-body}}
+          <p>wizard content goes here</p>
         {{/wizard-main}}
       {{/wizard-inner-wrap}}
-      {{#> wizard-footer wizard-footer--modifier="pf-m-align-right"}}
+      {{#> wizard-footer}}
         {{#> button button--modifier="pf-m-primary" button--attribute='type="submit"'}}
           Next
         {{/button}}

@@ -79,11 +79,9 @@ const MdxPF4Template = ({ data }) => {
         <Section title="Examples" headingLevel="h3">
           <Section className="ws-live-demo">
             <MDXProvider components={components}>
-              <div className='jjj'>
               <MDXRenderer>
                 {data.mdx.code.body}
               </MDXRenderer>
-              </div>
             </MDXProvider>
           </Section>
         </Section>

@@ -5,7 +5,7 @@ cssPrefix: 'pf-c-background-image'
 import { BackgroundImage, BackgroundImageSrc } from '@patternfly/react-core';
 
 ## Simple Background Image
-```nolive
+```js
 import React from 'react';
 import { BackgroundImage, BackgroundImageSrc } from '@patternfly/react-core';
 
