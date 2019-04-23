@@ -2,9 +2,14 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import DataList from './DataList';
 import DataListItem from './DataListItem';
+import DataListAction from './DataListAction';
 import DataListCell from './DataListCell';
 import DataListToggle from './DataListToggle';
+import DataListItemCells from './DataListItemCells';
+import DataListItemRow from './DataListItemRow';
+import DataListContent from './DataListContent';
 import { Button } from '../Button';
+import { DropdownItem, Dropdown, KebabToggle, DropdownPosition } from '../Dropdown';
 
 describe('DataList', () => {
   test('List default', () => {
@@ -18,17 +23,34 @@ describe('DataList', () => {
   });
 
   test('Item default', () => {
-    const view = shallow(<DataListItem key="item-id-1" aria-labelledby="item-1" />);
+    const view = shallow(
+      <DataListItem key="item-id-1" aria-labelledby="item-1">
+        test
+      </DataListItem>
+    );
     expect(view).toMatchSnapshot();
   });
 
   test('Item expanded', () => {
-    const view = shallow(<DataListItem aria-labelledby="item-1" isExpanded />);
+    const view = shallow(
+      <DataListItem aria-labelledby="item-1" isExpanded>
+        test
+      </DataListItem>
+    );
     expect(view.props().className).toBe('pf-c-data-list__item pf-m-expanded');
   });
 
   test('Item', () => {
-    const view = shallow(<DataListItem className="data-list-item-custom" aria-labelledby="item-1" />);
+    const view = shallow(
+      <DataListItem className="data-list-item-custom" aria-labelledby="item-1">
+        test
+      </DataListItem>
+    );
+    expect(view).toMatchSnapshot();
+  });
+
+  test('item row default', () => {
+    const view = shallow(<DataListItemRow>test</DataListItemRow>);
     expect(view).toMatchSnapshot();
   });
 
@@ -37,11 +59,18 @@ describe('DataList', () => {
     expect(view).toMatchSnapshot();
   });
 
-  test('Cell', () => {
+  test('Cells', () => {
     const view = shallow(
-      <DataListCell key="list-id-1" id="primary-item" className="data-list-custom">
-        Primary Id
-      </DataListCell>
+      <DataListItemCells
+        dataListCells={[
+          <DataListCell key="list-id-1" id="primary-item" className="data-list-custom">
+            Primary Id
+          </DataListCell>,
+          <DataListCell key="list-id-2" id="primary-item" className="data-list-custom">
+            Primary Id 2
+          </DataListCell>
+        ]}
+      />
     );
     expect(view).toMatchSnapshot();
   });
@@ -78,13 +107,51 @@ describe('DataList', () => {
   });
 
   test('Toggle expanded', () => {
-    const view = shallow(
-      <DataListToggle
-        aria-label="Toggle details for"
-        id="ex-toggle2"
-        isExpanded
-      />
-    );
+    const view = shallow(<DataListToggle aria-label="Toggle details for" id="ex-toggle2" isExpanded />);
     expect(view.find(Button).props()['aria-expanded']).toBe(true);
+  });
+
+  test('DataListAction dropdown', () => {
+    const view = shallow(
+      <DataListAction aria-label="Actions" aria-labelledby="ex-action" id="ex-action">
+        <Dropdown
+          isPlain
+          position={DropdownPosition.right}
+          toggle={<KebabToggle />}
+          dropdownItems={[
+            <DropdownItem component="button" onClick={jest.fn()} key="action-1">
+              action-1
+            </DropdownItem>,
+            <DropdownItem component="button" onClick={jest.fn()} key="action-2">
+              action-2
+            </DropdownItem>
+          ]}
+        />
+      </DataListAction>
+    );
+    expect(view).toMatchSnapshot();
+  });
+
+  test('DataListAction button', () => {
+    const view = shallow(
+      <DataListAction aria-label="Actions" aria-labelledby="ex-action" id="ex-action">
+        <Button id="delete-item-1">Delete</Button>
+      </DataListAction>
+    );
+    expect(view).toMatchSnapshot();
+  });
+
+  test('DataListContent', () => {
+    const view = shallow(<DataListContent aria-label="Primary Content Details"> test</DataListContent>);
+    expect(view).toMatchSnapshot();
+  });
+
+  test('DataListContent noPadding', () => {
+    const view = shallow(
+      <DataListContent aria-label="Primary Content Details" hidden noPadding>
+        test
+      </DataListContent>
+    );
+    expect(view).toMatchSnapshot();
   });
 });

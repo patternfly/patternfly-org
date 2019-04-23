@@ -1,9 +1,11 @@
 .pf-c-pagination {
   // Base
-  --pf-c-pagination--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-pagination--child--MarginRight: var(--pf-global--spacer--lg);
 
   // Dropdown
+  --pf-c-pagination--c-options-menu__toggle--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-pagination__menu-text--PaddingLeft: var(--pf-global--spacer--xs);
+  --pf-c-pagination__menu-text--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-pagination__menu-text--Color: var(--pf-global--Color--200);
 
   // Nav
@@ -12,6 +14,7 @@
   --pf-c-pagination__nav--c-button--FontSize: var(--pf-global--FontSize--md);
 
   // Nav page select
+  --pf-c-pagination__nav-page-select--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-pagination__nav-page-select--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-pagination__nav-page-select--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-pagination__nav-page-select--child--MarginRight: var(--pf-global--spacer--xs);
@@ -21,12 +24,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  font-size: var(--pf-c-pagination--FontSize);
-
-  * {
-    font-size: inherit;
-    white-space: nowrap;
-  }
 
   > *:not(:last-child):not(.pf-c-pagination__total-items) {
     margin-right: var(--pf-c-pagination--child--MarginRight);
@@ -37,11 +34,29 @@
     .pf-c-options-menu,
     .pf-c-pagination__nav {
       display: none;
+      visibility: hidden;
 
       @media screen and (min-width: $pf-global--breakpoint--md) {
         display: flex;
+        visibility: visible;
       }
     }
+  }
+
+  &.pf-m-footer {
+    .pf-c-options-menu {
+      display: none;
+      visibility: hidden;
+
+      @media screen and (min-width: $pf-global--breakpoint--md) {
+        display: flex;
+        visibility: visible;
+      }
+    }
+  }
+
+  .pf-c-options-menu__toggle {
+    font-size: var(--pf-c-pagination--c-options-menu__toggle--FontSize);
   }
 }
 
@@ -64,8 +79,13 @@
   padding-right: var(--pf-c-pagination__nav-page-select--PaddingRight);
   padding-left: var(--pf-c-pagination__nav-page-select--PaddingLeft);
 
-  > *:not(:last-child) {
-    margin-right: var(--pf-c-pagination__nav-page-select--child--MarginRight);
+  > * {
+    font-size: var(--pf-c-pagination__nav-page-select--FontSize);
+    white-space: nowrap;
+
+    &:not(:last-child) {
+      margin-right: var(--pf-c-pagination__nav-page-select--child--MarginRight);
+    }
   }
 
   .pf-c-form-control {
@@ -77,10 +97,13 @@
 .pf-c-pagination__total-items {
   @media screen and (min-width: $pf-global--breakpoint--md) {
     display: none;
+    visibility: hidden;
   }
 }
 
 // Dropdown elements
 .pf-c-pagination__menu-text {
+  padding-left: var(--pf-c-pagination__menu-text--PaddingLeft);
+  font-size: var(--pf-c-pagination__menu-text--FontSize);
   color: var(--pf-c-pagination__menu-text--Color);
 }
