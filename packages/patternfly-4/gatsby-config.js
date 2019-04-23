@@ -26,7 +26,7 @@ module.exports = {
     title: 'PatternFly 4',
     description: 'Documentation for PatternFly 4',
     author: 'Red Hat',
-    siteUrl: 'https://jschuler.github.io/v4'
+    siteUrl: 'https://www.patternfly.org'
   },
   plugins: [
     {
