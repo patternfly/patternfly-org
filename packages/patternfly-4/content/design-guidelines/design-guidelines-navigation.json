@@ -4,12 +4,20 @@
     "path": "/design-guidelines/styles/",
     "subNav": [
       {
+        "text": "Colors",
+        "path": "/design-guidelines/styles/colors"
+      },
+      {
         "text": "Icons",
         "path": "/design-guidelines/styles/icons"
       },
       {
         "text": "Typography",
         "path": "/design-guidelines/styles/typography"
+      },
+      {
+        "text": "Spacers",
+        "path": "/design-guidelines/styles/spacers"
       }
     ]
   },
