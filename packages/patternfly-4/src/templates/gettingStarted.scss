@@ -3,29 +3,39 @@
 }
 
 .h1 {
+  font-weight: 700;
   font-size: 36px;
   margin-bottom: 16px;
 }
 
 .h2 {
+  font-weight: 700;
   font-size: 28px;
-  margin-top: 24px;
+  margin-top: 40px;
   margin-bottom: 16px;
 }
 
 .h3 {
+  font-weight: 700;
   font-size: 20px;
   margin-top: 40px;
   margin-bottom: 16px;
 }
 
 p {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 0px;
 }
 
 .link > a {
   font-weight: 700;
+  font-size: 18px;
+}
+
+.link {
+  a + a {
+    margin-left: 32px;
+  }
 }
 
 .link + .link {
@@ -34,4 +44,21 @@ p {
 
 .lastLine {
   margin-top: 40px;
+}
+
+#largeMarginTop {
+  margin-top: 64px;
+}
+
+b {
+  font-weight: 900;
+}
+
+.code {
+  display: inline-block;
+  margin-bottom: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #fff;
+  border: 1px solid #ededed;
 }
