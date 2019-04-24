@@ -40,7 +40,7 @@ const CoreTokens = ({ location }) => (
               <li><code>__element</code> refers to the element inside of the block, like <code>__title</code>.</li>
               <li><code>modifier</code> is prefixed with <code>-m</code> and refers to a modifier class such as <code>.pf-m-danger</code>.</li>
               <li><code>state</code> is something like <code>hover</code> or <code>active</code>.</li>
-              <li><code>breakpoint</code> is a media query breakpoint such as <code>sm for <code>$pf-global--breakpoint--xs</code>.</li>
+              <li><code>breakpoint</code> is a media query breakpoint such as <code>sm</code> for <code>$pf-global--breakpoint--xs</code>.</li>
               <li><code>pseudo-element</code> is either <code>before</code> or <code>after</code>.</li>
             </ul>
 
