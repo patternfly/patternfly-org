@@ -15,7 +15,9 @@ Layouts are generic tools that allow you to structure and organize the content o
 ### Demos
 Demos use components and layouts in combination to show you how to build more complex structures and application views.
 
-[View components, layouts, and demos in HTML/CSS](/documentation/core) | [View components, layouts, and demos in React](/documentation/react)
+[View components, layouts, and demos in HTML/CSS](/documentation/core)
+
+[View components, layouts, and demos in React](/documentation/react)
 
 ## Design guidelines
 ### Styles
