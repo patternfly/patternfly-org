@@ -107,7 +107,6 @@ class EditorToolbar extends React.Component {
             href={this.props.fullPath} 
             target="_blank"
             rel="noopener noreferrer"
-            onClick={this.toggleLights}
             variant="plain"
             title="Open in new window"
             aria-label="Open in new window"

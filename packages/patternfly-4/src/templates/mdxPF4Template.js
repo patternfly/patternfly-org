@@ -14,6 +14,7 @@ import Tokens from '../components/css-variables';
 import PropsTable from '../components/_react/propsTable';
 import './template.scss';
 import './gettingStarted.scss';
+import '../styles/content/spacers.scss';
 
 let liveEditCount = 0;
 const components = {
