@@ -89,7 +89,7 @@ path: "/design-guidelines/styles/spacers"
   </div>
 </div>
 
-<a href="documentation/react/css-variables/">Click here for all variables</a>
+<a href="/documentation/react/css-variables">Click here for all variables</a>
 <div class="pf-u-display-flex demo pf-u-my-3xl pf-u-p-xl">
   <div class="pf-u-display-flex pf-u-flex-direction-column pf-u-mr-3xl">
     <div class="h4 correct">
