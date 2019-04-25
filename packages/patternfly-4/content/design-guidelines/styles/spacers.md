@@ -90,7 +90,6 @@ path: "/design-guidelines/styles/spacers"
 </div>
 
 <a href="">Click here for all variables</a>
-
 <div class="pf-u-display-flex demo pf-u-my-3xl pf-u-p-xl">
   <div class="pf-u-display-flex pf-u-flex-direction-column pf-u-mr-3xl">
     <div class="h4 correct">
@@ -100,7 +99,6 @@ path: "/design-guidelines/styles/spacers"
     <p>
       Include spacers in your designs to make it easy for developers to quickly see what size spacer you are using between elements.
     </p>
-    <img src="spacers-example.jpg"/>
   </div> 
   <div class="pf-u-display-flex pf-u-flex-direction-column">
     <div class="h4 incorrect">
@@ -120,7 +118,7 @@ path: "/design-guidelines/styles/spacers"
 <p>
   Certain components or elements like icons, buttons, and input fields, have a fixed amount of padding built-in. Remember to take that extra space around each element into account when laying the content out on your page. You may not have as much horizontal or vertical room as you think.
 </p>
-<img src="padding-example.png"/>
+![Spacers Example](padding-example.png)
 <p class="pf-u-mt-3xl">
   When laying out text-based content, remember to take line height into account so you’re leaving the right amount of vertical space between each line of text. 
 </p>
@@ -177,4 +175,4 @@ path: "/design-guidelines/styles/spacers"
   b. They still use the same text styling, however.
 </p>
 
-<p id="marginTopLarge">For more information about line height and typography, go to the <a href="/design-guidelines/styles/typography">typography page</a>.</p>
+<p class="pf-u-my-3xl">For more information about line height and typography, go to the <a href="/design-guidelines/styles/typography">typography page</a>.</p>
