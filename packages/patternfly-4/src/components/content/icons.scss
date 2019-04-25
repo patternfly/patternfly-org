@@ -11,13 +11,13 @@
     background-size: 16px 16px;
     background-repeat: no-repeat;
     margin-top: 16px;
-    margin-bottom:64px;
+    margin-bottom: 64px;
 
     &::placeholder {
       color: #151515;
     }
 
-    border: 1px solid #EDEDED;
+    border: 1px solid #ededed;
   }
   .pf-c-form__label {
     --pf-c-form__label--FontSize: var(--pf-global--FontSize--lg);
