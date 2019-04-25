@@ -16,8 +16,6 @@ path: "/get-started/about"
 <div class="h3">Demos</div>
 <p>Demos use components and layouts in combination to show you how to build more complex structures and application views.</p>
 
-[View components, layouts, and demos in React](/documentation/react)
-
 <div class="link"><a href="/documentation/core">View components, layouts, and demos in HTML/CSS</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
 
 <div class="link"><a href="/documentation/react">View components, layouts, and demos in React</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>

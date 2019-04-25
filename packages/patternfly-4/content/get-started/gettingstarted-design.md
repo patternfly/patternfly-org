@@ -64,4 +64,4 @@ Click Add library.
 3. **Start using the design kit!** That’s it - you’re all set to start using PatternFly 4 in your designs. -->
 
 
-<div class="lastLine">Interested in contributing? Visit our <a href="URL">contributions page</a>to learn more.</div>
+<div class="lastLine">Interested in contributing? Visit our <a href="URL">contributions page</a> to learn more.</div>
