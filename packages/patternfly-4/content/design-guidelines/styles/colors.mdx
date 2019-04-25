@@ -24,8 +24,8 @@ import pieChart from './sample_pie_chart.png';
       </GridItem>
     </Grid>
   </GridItem>
-  <GridItem xs={12} md={6} xl={3} rowSpan={2} className="colors-in-context grid-modifier-four">
-    <Grid>
+  <GridItem xs={12} md={6} rowSpan={2} className="grid-modifier-four">
+    <Grid className="colors-in-context">
       <GridItem span={12}>
         <h3>Colors in context</h3>
         <button class="pf-c-button pf-m-primary pf-u-mt-sm pf-u-mb-md">See what's possible</button>
@@ -47,9 +47,11 @@ import pieChart from './sample_pie_chart.png';
   </GridItem>
 </Grid>
 
-<Grid className="colors-theme--light" gutter="md" style={{marginTop: '32px'}}>
-  <GridItem span={6}>
+<Grid className="colors-theme--light grid-modifier" gutter="md" style={{marginTop: '32px'}}>
+  <GridItem xs={12}>
     <h3>Secondary default</h3>
+  </GridItem>
+  <GridItem xs={12} span={6} className="grid-modifier-first">
     <Grid>
       <GridItem span={6} xl={3}>
         <div className="colors-theme--color-secondary-100"></div>
@@ -58,6 +60,30 @@ import pieChart from './sample_pie_chart.png';
         <h3>#72767B</h3>
         <p>Global CSS variable</p>
         <span class="code-example">--pf-global--secondary-color--100</span>
+      </GridItem>
+    </Grid>
+  </GridItem>
+  <GridItem xs={12} md={6} rowSpan={2} className="grid-modifier-four">
+    <Grid className="colors-in-context">
+      <GridItem span={12}>
+        <h3>Colors in context</h3>
+        <div class="pf-c-chip pf-u-mr-xs pf-u-mb-xs">
+          <span class="pf-c-chip__text" id="chip_one">
+            Chip
+          </span>
+          <button class="pf-c-button pf-m-plain" aria-labelledby="remove_chip_one chip_one" aria-label="Remove" id="remove_chip_one">
+            <i class="fas fa-times-circle" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="pf-c-chip">
+          <span class="pf-c-chip__text" id="chip_two">
+            Really long Chip that goes on and on
+          </span>
+          <button class="pf-c-button pf-m-plain" aria-labelledby="remove_chip_two chip_two" aria-label="Remove" id="remove_chip_two">
+            <i class="fas fa-times-circle" aria-hidden="true"></i>
+          </button>
+        </div>
+        <p>This Chip uses default PatternFly 4 colors. The border uses <code>--pf-global--secondary-color--100</code>.</p>
       </GridItem>
     </Grid>
   </GridItem>
@@ -81,8 +107,8 @@ import pieChart from './sample_pie_chart.png';
       </GridItem>
     </Grid>
   </GridItem>
-  <GridItem xs={12} md={6} xl={3} rowSpan={2} className="colors-in-context grid-modifier-four">
-    <Grid>
+  <GridItem xs={12} md={6} rowSpan={2} className="grid-modifier-four">
+    <Grid className="colors-in-context">
       <GridItem span={12}>
         <h3>Colors in context</h3>
         <h2>This copy needs to be updated 21 px</h2>
@@ -135,8 +161,8 @@ import pieChart from './sample_pie_chart.png';
       </GridItem>
     </Grid>
   </GridItem>
-  <GridItem xs={12} md={6} xl={3} rowSpan={2} className="colors-in-context grid-modifier-second">
-    <Grid>
+  <GridItem xs={12} md={6} rowSpan={2} className="grid-modifier-second">
+    <Grid className="colors-in-context">
       <GridItem span={12}>
         <h3>Colors in context</h3>
         <p>Body text should be Overpass Regular at 16px. <a className="pf-m-link">This is a link within content</a>. It should have leading of 24px because of its relative line height of 1.5.
@@ -174,8 +200,8 @@ import pieChart from './sample_pie_chart.png';
       </GridItem>
     </Grid>
   </GridItem>
-  <GridItem xs={12} md={6} xl={4} className="colors-in-context grid-modifier-second">
-    <Grid>
+  <GridItem xs={12} md={6} className="grid-modifier-second">
+    <Grid className="colors-in-context">
       <GridItem span={12}>
         <h3>Colors in context</h3>
         <p>Icon color is #72767B unless it is or used in an alert.</p>
@@ -205,8 +231,8 @@ import pieChart from './sample_pie_chart.png';
       </GridItem>
     </Grid>
   </GridItem>
-  <GridItem xs={12} md={6} xl={4} rowSpan={2} className="colors-in-context grid-modifier-second">
-    <Grid>
+  <GridItem xs={12} md={6} rowSpan={2} className="grid-modifier-second">
+    <Grid className="colors-in-context">
       <GridItem span={12}>
         <h3>Colors in context</h3>
         <Alert
@@ -249,8 +275,8 @@ import pieChart from './sample_pie_chart.png';
       </GridItem>
     </Grid>
   </GridItem>
-  <GridItem xs={12} md={6} xl={4} rowSpan={2} className="colors-in-context grid-modifier-second">
-    <Grid>
+  <GridItem xs={12} md={6} rowSpan={2} className="grid-modifier-second">
+    <Grid className="colors-in-context">
       <GridItem span={12}>
         <h3>Colors in context</h3>
         <Alert
@@ -293,8 +319,8 @@ import pieChart from './sample_pie_chart.png';
       </GridItem>
     </Grid>
   </GridItem>
-  <GridItem xs={12} md={6} xl={4} rowSpan={2} className="colors-in-context grid-modifier-second">
-    <Grid>
+  <GridItem xs={12} md={6} rowSpan={2} className="grid-modifier-second">
+    <Grid className="colors-in-context">
       <GridItem span={12}>
         <h3>Colors in context</h3>
         <Alert
@@ -337,8 +363,8 @@ import pieChart from './sample_pie_chart.png';
       </GridItem>
     </Grid>
   </GridItem>
-  <GridItem xs={12} md={6} xl={4} rowSpan={2} className="colors-in-context grid-modifier-second">
-    <Grid>
+  <GridItem xs={12} md={6} rowSpan={2} className="grid-modifier-second">
+    <Grid className="colors-in-context">
       <GridItem span={12}>
         <h3>Colors in context</h3>
         <Alert
