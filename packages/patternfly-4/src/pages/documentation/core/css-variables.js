@@ -10,7 +10,7 @@ const CoreTokens = ({ location }) => (
   <Layout sideNav={<SideNav />}>
     <SEO title="Global CSS Variables" />
     <PageSection variant={PageSectionVariants.light}>
-         <div>
+         <div className="pf-c-content">
             <h2>About CSS variables</h2>
             <p>The CSS variable system is a two-layer theming system where global variables inform component variables.</p>
 
