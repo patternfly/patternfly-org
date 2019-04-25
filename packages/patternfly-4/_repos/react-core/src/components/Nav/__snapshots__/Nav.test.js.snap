@@ -1,38 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Default Nav List - Trigger item active update 1`] = `
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__list {
-  display: block;
-}
-.pf-c-nav {
-  display: block;
-  overflow-x: auto;
-}
-
 <Nav
   aria-label=""
   className=""
@@ -56,7 +24,6 @@ exports[`Default Nav List - Trigger item active update 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link1"
           onClick={null}
@@ -80,7 +47,6 @@ exports[`Default Nav List - Trigger item active update 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link2"
           onClick={null}
@@ -104,7 +70,6 @@ exports[`Default Nav List - Trigger item active update 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link3"
           onClick={null}
@@ -128,7 +93,6 @@ exports[`Default Nav List - Trigger item active update 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link4"
           onClick={null}
@@ -155,38 +119,6 @@ exports[`Default Nav List - Trigger item active update 1`] = `
 `;
 
 exports[`Default Nav List 1`] = `
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__list {
-  display: block;
-}
-.pf-c-nav {
-  display: block;
-  overflow-x: auto;
-}
-
 <Nav
   aria-label=""
   className=""
@@ -210,7 +142,6 @@ exports[`Default Nav List 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link1"
           onClick={null}
@@ -234,7 +165,6 @@ exports[`Default Nav List 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link2"
           onClick={null}
@@ -258,7 +188,6 @@ exports[`Default Nav List 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link3"
           onClick={null}
@@ -282,7 +211,6 @@ exports[`Default Nav List 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link4"
           onClick={null}
@@ -309,64 +237,6 @@ exports[`Default Nav List 1`] = `
 `;
 
 exports[`Expandable Nav List - Trigger toggle 1`] = `
-.pf-c-nav__toggle {
-  display: block;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  margin-left: auto;
-  font-size: 1rem;
-  line-height: 1;
-  pointer-events: none;
-  border: 0px;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__simple-list {
-  display: block;
-}
-.pf-c-nav__subnav {
-  display: block;
-  max-height: 0;
-  margin-top: 0px;
-  overflow: hidden;
-  opacity: 0;
-}
-.pf-c-nav__item.pf-m-expanded.expandable-group {
-  display: block;
-}
-.pf-c-nav__list {
-  display: block;
-}
-.pf-c-nav {
-  display: block;
-  overflow-x: auto;
-}
-
 <Nav
   aria-label=""
   className=""
@@ -396,8 +266,9 @@ exports[`Expandable Nav List - Trigger toggle 1`] = `
           title="Section 1"
         >
           <NavToggle
-            defaultValue={true}
             groupId={null}
+            isExpanded={true}
+            onExpand={[Function]}
             onToggle={[Function]}
           >
             <li
@@ -457,7 +328,6 @@ exports[`Expandable Nav List - Trigger toggle 1`] = `
                     className=""
                     groupId={null}
                     isActive={false}
-                    isSeparated={false}
                     itemId={null}
                     key="#link1"
                     onClick={null}
@@ -481,7 +351,6 @@ exports[`Expandable Nav List - Trigger toggle 1`] = `
                     className=""
                     groupId={null}
                     isActive={false}
-                    isSeparated={false}
                     itemId={null}
                     key="#link2"
                     onClick={null}
@@ -505,7 +374,6 @@ exports[`Expandable Nav List - Trigger toggle 1`] = `
                     className=""
                     groupId={null}
                     isActive={false}
-                    isSeparated={false}
                     itemId={null}
                     key="#link3"
                     onClick={null}
@@ -529,7 +397,6 @@ exports[`Expandable Nav List - Trigger toggle 1`] = `
                     className=""
                     groupId={null}
                     isActive={false}
-                    isSeparated={false}
                     itemId={null}
                     key="#link4"
                     onClick={null}
@@ -561,64 +428,6 @@ exports[`Expandable Nav List - Trigger toggle 1`] = `
 `;
 
 exports[`Expandable Nav List 1`] = `
-.pf-c-nav__toggle {
-  display: block;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  margin-left: auto;
-  font-size: 1rem;
-  line-height: 1;
-  pointer-events: none;
-  border: 0px;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__simple-list {
-  display: block;
-}
-.pf-c-nav__subnav {
-  display: block;
-  max-height: 0;
-  margin-top: 0px;
-  overflow: hidden;
-  opacity: 0;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__list {
-  display: block;
-}
-.pf-c-nav {
-  display: block;
-  overflow-x: auto;
-}
-
 <Nav
   aria-label=""
   className=""
@@ -648,8 +457,9 @@ exports[`Expandable Nav List 1`] = `
           title="Section 1"
         >
           <NavToggle
-            defaultValue={false}
             groupId={null}
+            isExpanded={false}
+            onExpand={[Function]}
             onToggle={[Function]}
           >
             <li
@@ -709,7 +519,6 @@ exports[`Expandable Nav List 1`] = `
                     className=""
                     groupId={null}
                     isActive={false}
-                    isSeparated={false}
                     itemId={null}
                     key="#link1"
                     onClick={null}
@@ -733,7 +542,6 @@ exports[`Expandable Nav List 1`] = `
                     className=""
                     groupId={null}
                     isActive={false}
-                    isSeparated={false}
                     itemId={null}
                     key="#link2"
                     onClick={null}
@@ -757,7 +565,6 @@ exports[`Expandable Nav List 1`] = `
                     className=""
                     groupId={null}
                     isActive={false}
-                    isSeparated={false}
                     itemId={null}
                     key="#link3"
                     onClick={null}
@@ -781,7 +588,6 @@ exports[`Expandable Nav List 1`] = `
                     className=""
                     groupId={null}
                     isActive={false}
-                    isSeparated={false}
                     itemId={null}
                     key="#link4"
                     onClick={null}
@@ -813,72 +619,6 @@ exports[`Expandable Nav List 1`] = `
 `;
 
 exports[`Expandable Nav List with aria label 1`] = `
-.pf-c-nav__toggle {
-  display: block;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  margin-left: auto;
-  font-size: 1rem;
-  line-height: 1;
-  pointer-events: none;
-  border: 0px;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-u-screen-reader {
-  display: block;
-  position: fixed;
-  overflow: hidden;
-  clip: rect(0px, 0px, 0px, 0px);
-  white-space: nowrap;
-  border: 0px;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__simple-list {
-  display: block;
-}
-.pf-c-nav__subnav {
-  display: block;
-  max-height: 0;
-  margin-top: 0px;
-  overflow: hidden;
-  opacity: 0;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__list {
-  display: block;
-}
-.pf-c-nav {
-  display: block;
-  overflow-x: auto;
-}
-
 <Nav
   aria-label="Test"
   className=""
@@ -908,8 +648,9 @@ exports[`Expandable Nav List with aria label 1`] = `
           title="Section 1"
         >
           <NavToggle
-            defaultValue={false}
             groupId={null}
+            isExpanded={false}
+            onExpand={[Function]}
             onToggle={[Function]}
           >
             <li
@@ -975,7 +716,6 @@ exports[`Expandable Nav List with aria label 1`] = `
                     className=""
                     groupId={null}
                     isActive={false}
-                    isSeparated={false}
                     itemId={null}
                     key="#link1"
                     onClick={null}
@@ -999,7 +739,6 @@ exports[`Expandable Nav List with aria label 1`] = `
                     className=""
                     groupId={null}
                     isActive={false}
-                    isSeparated={false}
                     itemId={null}
                     key="#link2"
                     onClick={null}
@@ -1023,7 +762,6 @@ exports[`Expandable Nav List with aria label 1`] = `
                     className=""
                     groupId={null}
                     isActive={false}
-                    isSeparated={false}
                     itemId={null}
                     key="#link3"
                     onClick={null}
@@ -1047,7 +785,6 @@ exports[`Expandable Nav List with aria label 1`] = `
                     className=""
                     groupId={null}
                     isActive={false}
-                    isSeparated={false}
                     itemId={null}
                     key="#link4"
                     onClick={null}
@@ -1079,38 +816,6 @@ exports[`Expandable Nav List with aria label 1`] = `
 `;
 
 exports[`Horizontal Nav List 1`] = `
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__horizontal-list {
-  display: inline-flex;
-}
-.pf-c-nav {
-  display: block;
-  overflow-x: auto;
-}
-
 <Nav
   aria-label=""
   className=""
@@ -1134,7 +839,6 @@ exports[`Horizontal Nav List 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link1"
           onClick={null}
@@ -1158,7 +862,6 @@ exports[`Horizontal Nav List 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link2"
           onClick={null}
@@ -1182,7 +885,6 @@ exports[`Horizontal Nav List 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link3"
           onClick={null}
@@ -1206,7 +908,6 @@ exports[`Horizontal Nav List 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link4"
           onClick={null}
@@ -1233,91 +934,6 @@ exports[`Horizontal Nav List 1`] = `
 `;
 
 exports[`Nav Grouped List 1`] = `
-.pf-c-nav__section-title {
-  display: block;
-  padding: 0.5rem 2rem 0.5rem 2rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #72767b;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__list {
-  display: block;
-}
-.pf-c-nav__simple-list {
-  display: block;
-}
-.pf-c-nav__section {
-  display: block;
-}
-.pf-c-nav__section-title {
-  display: block;
-  padding: 0.5rem 2rem 0.5rem 2rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #72767b;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__list {
-  display: block;
-}
-.pf-c-nav__simple-list {
-  display: block;
-}
-.pf-c-nav__section {
-  display: block;
-}
-.pf-c-nav {
-  display: block;
-  overflow-x: auto;
-}
-
 <Nav
   aria-label=""
   className=""
@@ -1359,7 +975,6 @@ exports[`Nav Grouped List 1`] = `
                 className=""
                 groupId={null}
                 isActive={false}
-                isSeparated={false}
                 itemId={null}
                 key="section1_#link1"
                 onClick={null}
@@ -1383,7 +998,6 @@ exports[`Nav Grouped List 1`] = `
                 className=""
                 groupId={null}
                 isActive={false}
-                isSeparated={false}
                 itemId={null}
                 key="section1_#link2"
                 onClick={null}
@@ -1407,7 +1021,6 @@ exports[`Nav Grouped List 1`] = `
                 className=""
                 groupId={null}
                 isActive={false}
-                isSeparated={false}
                 itemId={null}
                 key="section1_#link3"
                 onClick={null}
@@ -1431,7 +1044,6 @@ exports[`Nav Grouped List 1`] = `
                 className=""
                 groupId={null}
                 isActive={false}
-                isSeparated={false}
                 itemId={null}
                 key="section1_#link4"
                 onClick={null}
@@ -1485,7 +1097,6 @@ exports[`Nav Grouped List 1`] = `
                 className=""
                 groupId={null}
                 isActive={false}
-                isSeparated={false}
                 itemId={null}
                 key="section2_#link1"
                 onClick={null}
@@ -1509,7 +1120,6 @@ exports[`Nav Grouped List 1`] = `
                 className=""
                 groupId={null}
                 isActive={false}
-                isSeparated={false}
                 itemId={null}
                 key="section2_#link2"
                 onClick={null}
@@ -1533,7 +1143,6 @@ exports[`Nav Grouped List 1`] = `
                 className=""
                 groupId={null}
                 isActive={false}
-                isSeparated={false}
                 itemId={null}
                 key="section2_#link3"
                 onClick={null}
@@ -1557,7 +1166,6 @@ exports[`Nav Grouped List 1`] = `
                 className=""
                 groupId={null}
                 isActive={false}
-                isSeparated={false}
                 itemId={null}
                 key="section2_#link4"
                 onClick={null}
@@ -1587,20 +1195,6 @@ exports[`Nav Grouped List 1`] = `
 `;
 
 exports[`Nav List with custom item nodes 1`] = `
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__tertiary-list {
-  display: inline-flex;
-}
-.pf-c-nav {
-  display: block;
-  overflow-x: auto;
-}
-
 <Nav
   aria-label=""
   className=""
@@ -1624,7 +1218,6 @@ exports[`Nav List with custom item nodes 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           onClick={null}
           preventDefault={false}
@@ -1651,38 +1244,6 @@ exports[`Nav List with custom item nodes 1`] = `
 `;
 
 exports[`Simple Nav List 1`] = `
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__simple-list {
-  display: block;
-}
-.pf-c-nav {
-  display: block;
-  overflow-x: auto;
-}
-
 <Nav
   aria-label=""
   className=""
@@ -1706,7 +1267,6 @@ exports[`Simple Nav List 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link1"
           onClick={null}
@@ -1730,7 +1290,6 @@ exports[`Simple Nav List 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link2"
           onClick={null}
@@ -1754,7 +1313,6 @@ exports[`Simple Nav List 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link3"
           onClick={null}
@@ -1778,7 +1336,6 @@ exports[`Simple Nav List 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link4"
           onClick={null}
@@ -1805,38 +1362,6 @@ exports[`Simple Nav List 1`] = `
 `;
 
 exports[`Tertiary Nav List 1`] = `
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__link {
-  display: block;
-}
-.pf-c-nav__item {
-  display: block;
-}
-.pf-c-nav__tertiary-list {
-  display: inline-flex;
-}
-.pf-c-nav {
-  display: block;
-  overflow-x: auto;
-}
-
 <Nav
   aria-label=""
   className=""
@@ -1860,7 +1385,6 @@ exports[`Tertiary Nav List 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link1"
           onClick={null}
@@ -1884,7 +1408,6 @@ exports[`Tertiary Nav List 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link2"
           onClick={null}
@@ -1908,7 +1431,6 @@ exports[`Tertiary Nav List 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link3"
           onClick={null}
@@ -1932,7 +1454,6 @@ exports[`Tertiary Nav List 1`] = `
           className=""
           groupId={null}
           isActive={false}
-          isSeparated={false}
           itemId={null}
           key="#link4"
           onClick={null}

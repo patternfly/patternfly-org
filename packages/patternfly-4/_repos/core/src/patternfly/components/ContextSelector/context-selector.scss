@@ -8,10 +8,10 @@
   --pf-c-context-selector__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-context-selector__toggle--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-context-selector__toggle--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-context-selector__toggle--BorderTopColor: var(--pf-global--BorderColor--light-200);
-  --pf-c-context-selector__toggle--BorderRightColor: var(--pf-global--BorderColor--light-200);
-  --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-global--BorderColor--dark);
-  --pf-c-context-selector__toggle--BorderLeftColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-context-selector__toggle--BorderTopColor: var(--pf-global--BorderColor--300);
+  --pf-c-context-selector__toggle--BorderRightColor: var(--pf-global--BorderColor--300);
+  --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-global--BorderColor--200);
+  --pf-c-context-selector__toggle--BorderLeftColor: var(--pf-global--BorderColor--300);
   --pf-c-context-selector__toggle--Color: var(--pf-global--Color--100);
   --pf-c-context-selector__toggle--hover--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-context-selector__toggle--active--BorderBottomWidth: var(--pf-global--BorderWidth--md);
@@ -23,9 +23,9 @@
   --pf-c-context-selector__toggle-text--FontSize: var(--pf-global--FontSize--md);
   --pf-c-context-selector__toggle-text--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-context-selector__toggle-text--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-context-selector__toggle-text--MaxWidth: calc(var(--pf-c-context-selector--Width) - var(--pf-c-context-selector__toggle-icon--MarginLeft) - 30px); // hard coded last variable
 
   // Toggle Icon Arrow
+  --pf-c-context-selector__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-context-selector__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
 
   // Menu
@@ -41,7 +41,7 @@
   --pf-c-context-selector__menu-input--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-context-selector__menu-input--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-context-selector__menu-input--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-context-selector__menu-input--BottomBorderColor: var(--pf-global--BorderColor--light-200);
+  --pf-c-context-selector__menu-input--BottomBorderColor: var(--pf-global--BorderColor--100);
   --pf-c-context-selector__menu-input--BottomBorderWidth: var(--pf-global--BorderWidth--sm);
 
   // Menu Menu Item
@@ -66,7 +66,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 100%;
+  width: 100%;
   padding: var(--pf-c-context-selector__toggle--PaddingTop) var(--pf-c-context-selector__toggle--PaddingRight) var(--pf-c-context-selector__toggle--PaddingBottom) var(--pf-c-context-selector__toggle--PaddingLeft);
   color: var(--pf-c-context-selector__toggle--Color);
   white-space: nowrap;
@@ -114,17 +114,16 @@
   }
 
   .pf-c-context-selector__toggle-icon {
+    margin-right: var(--pf-c-context-selector__toggle-icon--MarginRight);
     margin-left: var(--pf-c-context-selector__toggle-icon--MarginLeft);
   }
 
   .pf-c-context-selector__toggle-text {
-    max-width: var(--pf-c-context-selector__toggle-text--MaxWidth);
-    overflow: hidden;
+    @include pf-text-overflow;
+
     font-size: var(--pf-c-context-selector__toggle-text--FontSize);
     font-weight: var(--pf-c-context-selector__toggle-text--FontWeight);
     line-height: var(--pf-c-context-selector__toggle-text--LineHeight);
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
 }
 

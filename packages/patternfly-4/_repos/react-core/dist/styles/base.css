@@ -1,7 +1,7 @@
 .pf-t-light {
   --pf-global--Color--100: var(--pf-global--Color--dark-100);
   --pf-global--Color--200: var(--pf-global--Color--dark-200);
-  --pf-global--BorderColor: var(--pf-global--BorderColor--dark);
+  --pf-global--BorderColor--100: var(--pf-global--BorderColor--dark-100);
   --pf-global--primary-color--100: var(--pf-global--primary-color--dark-100);
   --pf-global--link--Color: var(--pf-global--link--Color--dark);
   --pf-global--link--Color--hover: var(--pf-global--link--Color--dark--hover);
@@ -11,15 +11,34 @@
 .pf-t-dark {
   --pf-global--Color--100: var(--pf-global--Color--light-100);
   --pf-global--Color--200: var(--pf-global--Color--light-200);
-  --pf-global--BorderColor: var(--pf-global--BorderColor--light);
+  --pf-global--BorderColor--100: var(--pf-global--BorderColor--light-100);
   --pf-global--primary-color--100: var(--pf-global--primary-color--light-100);
   --pf-global--link--Color: var(--pf-global--link--Color--light);
-  --pf-global--link--Color--hover: var(--pf-global--link--Color--light--hover);
+  --pf-global--link--Color--hover: var(--pf-global--link--Color--light);
   --pf-global--BackgroundColor--100: var(--pf-global--BackgroundColor--dark-100);
 }
 
 .pf-t-dark .pf-c-card {
   --pf-c-card--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
+}
+
+.pf-t-dark .pf-c-button {
+  --pf-c-button--m-primary--Color: var(--pf-global--primary-color--dark-100);
+  --pf-c-button--m-primary--hover--Color: var(--pf-global--primary-color--dark-100);
+  --pf-c-button--m-primary--focus--Color: var(--pf-global--primary-color--dark-100);
+  --pf-c-button--m-primary--active--Color: var(--pf-global--primary-color--dark-100);
+  --pf-c-button--m-primary--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-button--m-primary--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-button--m-primary--focus--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-button--m-primary--active--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-button--m-secondary--Color: var(--pf-global--Color--light-100);
+  --pf-c-button--m-secondary--hover--Color: var(--pf-global--Color--light-100);
+  --pf-c-button--m-secondary--focus--Color: var(--pf-global--Color--light-100);
+  --pf-c-button--m-secondary--active--Color: var(--pf-global--Color--light-100);
+  --pf-c-button--m-secondary--BorderColor: var(--pf-global--Color--light-100);
+  --pf-c-button--m-secondary--hover--BorderColor: var(--pf-global--Color--light-100);
+  --pf-c-button--m-secondary--focus--BorderColor: var(--pf-global--Color--light-100);
+  --pf-c-button--m-secondary--active--BorderColor: var(--pf-global--Color--light-100);
 }
 
 :root {
@@ -30,37 +49,37 @@
   --pf-global--BackgroundColor--light-100: #fff;
   --pf-global--BackgroundColor--light-200: #fafafa;
   --pf-global--BackgroundColor--light-300: #ededed;
-  --pf-global--BackgroundColor--dark-100: #282d33;
+  --pf-global--BackgroundColor--dark-100: #151515;
   --pf-global--BackgroundColor--dark-200: #393f44;
   --pf-global--BackgroundColor--dark-transparent-100: rgba(3, 3, 3, 0.62);
   --pf-global--BackgroundColor--dark-transparent-200: rgba(3, 3, 3, 0.32);
-  --pf-global--Color--100: #282d33;
+  --pf-global--Color--100: #151515;
   --pf-global--Color--200: #72767b;
   --pf-global--Color--300: #393f44;
   --pf-global--Color--400: #8b8d8f;
   --pf-global--Color--light-100: #fff;
   --pf-global--Color--light-200: #ededed;
-  --pf-global--Color--dark-100: #282d33;
+  --pf-global--Color--dark-100: #151515;
   --pf-global--Color--dark-200: #72767b;
-  --pf-global--active-color--100: #007bba;
+  --pf-global--active-color--100: #06c;
   --pf-global--active-color--200: #bee1f4;
-  --pf-global--active-color--300: #39a5dc;
-  --pf-global--active-color--400: #7dc3e8;
+  --pf-global--active-color--300: #73bcf7;
+  --pf-global--active-color--400: #2b9af3;
   --pf-global--disabled-color--100: #72767b;
-  --pf-global--disabled-color--200: #d1d1d1;
+  --pf-global--disabled-color--200: #d2d2d2;
   --pf-global--disabled-color--300: #ededed;
-  --pf-global--primary-color--100: #007bba;
-  --pf-global--primary-color--200: #00659c;
-  --pf-global--primary-color--light-100: #39a5dc;
-  --pf-global--primary-color--dark-100: #007bba;
+  --pf-global--primary-color--100: #06c;
+  --pf-global--primary-color--200: #004080;
+  --pf-global--primary-color--light-100: #73bcf7;
+  --pf-global--primary-color--dark-100: #06c;
   --pf-global--secondary-color--100: #72767b;
   --pf-global--success-color--100: #92d400;
   --pf-global--success-color--200: #486b00;
-  --pf-global--info-color--100: #39a5dc;
+  --pf-global--info-color--100: #73bcf7;
   --pf-global--info-color--200: #004368;
   --pf-global--warning-color--100: #f0ab00;
   --pf-global--warning-color--200: #795600;
-  --pf-global--danger-color--100: #c00;
+  --pf-global--danger-color--100: #c9190b;
   --pf-global--danger-color--200: #a30000;
   --pf-global--danger-color--300: #470000;
   --pf-global--BoxShadow--sm: 0 0.0625rem 0.125rem 0 rgba(3, 3, 3, 0.2);
@@ -102,26 +121,27 @@
   --pf-global--breakpoint--md: 768px;
   --pf-global--breakpoint--lg: 992px;
   --pf-global--breakpoint--xl: 1200px;
-  --pf-global--link--Color: #007bba;
-  --pf-global--link--Color--hover: #00659c;
-  --pf-global--link--Color--light: #39a5dc;
-  --pf-global--link--Color--light--hover: #7dc3e8;
-  --pf-global--link--Color--dark: #007bba;
-  --pf-global--link--Color--dark--hover: #00659c;
+  --pf-global--link--Color: #06c;
+  --pf-global--link--Color--hover: #004080;
+  --pf-global--link--Color--light: #73bcf7;
+  --pf-global--link--Color--light--hover: #2b9af3;
+  --pf-global--link--Color--dark: #06c;
+  --pf-global--link--Color--dark--hover: #004080;
   --pf-global--link--FontWeight: 500;
   --pf-global--link--TextDecoration: none;
   --pf-global--link--TextDecoration--hover: underline;
   --pf-global--BorderWidth--sm: 1px;
   --pf-global--BorderWidth--md: 2px;
   --pf-global--BorderWidth--lg: 3px;
-  --pf-global--BorderColor: #72767b;
-  --pf-global--BorderColor--dark: #72767b;
-  --pf-global--BorderColor--light: #bbb;
-  --pf-global--BorderColor--light-200: #ededed;
+  --pf-global--BorderColor--100: #d2d2d2;
+  --pf-global--BorderColor--200: #8b8d8f;
+  --pf-global--BorderColor--300: #ededed;
+  --pf-global--BorderColor--dark-100: #d2d2d2;
+  --pf-global--BorderColor--light-100: #bbb;
   --pf-global--BorderRadius--sm: 3px;
   --pf-global--BorderRadius--lg: 30em;
-  --pf-global--icon--Color--light: #8b8d8f;
-  --pf-global--icon--Color--dark: #282d33;
+  --pf-global--icon--Color--light: #72767b;
+  --pf-global--icon--Color--dark: #151515;
   --pf-global--icon--FontSize--sm: 0.625rem;
   --pf-global--icon--FontSize--md: 1.125rem;
   --pf-global--icon--FontSize--lg: 1.5rem;
@@ -549,7 +569,7 @@ button:-moz-focusring,
 }
 
 .pf-t-dark.pf-m-opaque-200 {
-  background-color: #282d33;
+  background-color: #151515;
 }
 
 .pf-t-light.pf-m-transparent {

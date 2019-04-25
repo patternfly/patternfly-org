@@ -2,26 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@patternfly/react-styles';
 import styles from '@patternfly/patternfly/components/Card/card.css';
-import { componentShape } from '../../helpers/componentShape';
+import titleStyles from '@patternfly/patternfly/components/Title/title.css';
 
 const propTypes = {
   children: PropTypes.any,
   className: PropTypes.string,
-  component: componentShape,
-  /** Additional props are spread to the container component */
   '': PropTypes.any
 };
 
 const defaultProps = {
   children: null,
-  className: '',
-  component: 'div'
+  className: ''
 };
 
-const CardHeader = ({ children, className, component: Component, ...props }) => (
-  <Component className={css(styles.cardHeader, className)} {...props}>
+const CardHeader = ({ children, className, ...props }) => (
+  <div className={css(styles.cardHeader, titleStyles.title, titleStyles.modifiers.lg, className)} {...props}>
     {children}
-  </Component>
+  </div>
 );
 
 CardHeader.propTypes = propTypes;

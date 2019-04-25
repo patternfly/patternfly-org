@@ -1,16 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Gutter lg 1`] = `
-.pf-l-split__item {
-  display: block;
-}
-.pf-l-split.pf-m-gutter {
-  display: flex;
-  flex-wrap: nowrap;
-  padding: 0px;
-  margin: 0px;
-}
-
 <Split
   className=""
   component="div"
@@ -21,7 +11,7 @@ exports[`Gutter lg 1`] = `
   >
     <SplitItem
       className=""
-      isMain={false}
+      isFilled={false}
     >
       <div
         className="pf-l-split__item"
@@ -34,16 +24,6 @@ exports[`Gutter lg 1`] = `
 `;
 
 exports[`Gutter md 1`] = `
-.pf-l-split__item {
-  display: block;
-}
-.pf-l-split.pf-m-gutter {
-  display: flex;
-  flex-wrap: nowrap;
-  padding: 0px;
-  margin: 0px;
-}
-
 <Split
   className=""
   component="div"
@@ -54,7 +34,7 @@ exports[`Gutter md 1`] = `
   >
     <SplitItem
       className=""
-      isMain={false}
+      isFilled={false}
     >
       <div
         className="pf-l-split__item"
@@ -67,16 +47,6 @@ exports[`Gutter md 1`] = `
 `;
 
 exports[`Gutter sm 1`] = `
-.pf-l-split__item {
-  display: block;
-}
-.pf-l-split.pf-m-gutter {
-  display: flex;
-  flex-wrap: nowrap;
-  padding: 0px;
-  margin: 0px;
-}
-
 <Split
   className=""
   component="div"
@@ -87,7 +57,7 @@ exports[`Gutter sm 1`] = `
   >
     <SplitItem
       className=""
-      isMain={false}
+      isFilled={false}
     >
       <div
         className="pf-l-split__item"
@@ -100,16 +70,6 @@ exports[`Gutter sm 1`] = `
 `;
 
 exports[`isMain 1`] = `
-.pf-l-split__item.pf-m-main {
-  display: block;
-}
-.pf-l-split {
-  display: flex;
-  flex-wrap: nowrap;
-  padding: 0px;
-  margin: 0px;
-}
-
 <Split
   className=""
   component="div"
@@ -120,10 +80,12 @@ exports[`isMain 1`] = `
   >
     <SplitItem
       className=""
+      isFilled={false}
       isMain={true}
     >
       <div
-        className="pf-l-split__item pf-m-main"
+        className="pf-l-split__item"
+        isMain={true}
       >
         Main content
       </div>
@@ -133,16 +95,6 @@ exports[`isMain 1`] = `
 `;
 
 exports[`isMain defaults to false 1`] = `
-.pf-l-split__item {
-  display: block;
-}
-.pf-l-split {
-  display: flex;
-  flex-wrap: nowrap;
-  padding: 0px;
-  margin: 0px;
-}
-
 <Split
   className=""
   component="div"
@@ -153,7 +105,7 @@ exports[`isMain defaults to false 1`] = `
   >
     <SplitItem
       className=""
-      isMain={false}
+      isFilled={false}
     >
       <div
         className="pf-l-split__item"

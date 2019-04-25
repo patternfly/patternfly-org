@@ -10,7 +10,8 @@ export interface DropdownToggleProps extends HTMLProps<HTMLButtonElement> {
   isHovered?: boolean;
   isActive?: boolean;
   isPlain?: boolean;
-  iconComponent?: ReactType;
+  isDisabled?: boolean;
+  iconComponent?: ReactType | null;
 }
 
 declare const DropdownToggle: FunctionComponent<DropdownToggleProps>;
