@@ -1,36 +1,44 @@
 ---
 path: "/get-started/designers"
 ---
-# Design with PatternFly
-Before you begin, check out our [overview of PatternFly 4](/get-started/about) to get acquainted with the basic elements of the design system.
 
-## Designing with PatternFly 4
-PatternFly is made up of modular components that can be assembled in a variety of ways to build applications and interfaces, along with styles, standards, and design guidelines to help you choose and use the right components for your project.
+<h1 class="pf-c-title pf-m-4xl">Design with PatternFly</h1>
 
-### Start with styles.
-What typography should you be using? What about colors? Spacing? Check out styles to learn everything you need to know about our foundational design elements.
+<p>Before you begin, check out <a href="/get-started/about">About PatternFly 4</a> to get acquainted with the basic elements of the design system.</p>
 
-[View styles](/design-guidelines/styles/icons)
+<h1 class="pf-c-title pf-m-3xl pf-u-mt-xl">Designing with PatternFly 4</h1>
 
-### Get familiar with usage and behavior guidelines.
-Should you use a wizard or a form to solve this problem? How do you write a good button label? Which navigation makes the most sense? Check out our design guidelines to choose and use the right components for your use case.
+<p>PatternFly is made up of modular components that can be assembled in a variety of ways to build applications and interfaces, along with styles, standards, and design guidelines to help you choose and use the right components for your project.</p>
 
-[View usage and behavior](/design-guidelines/usage-and-behavior/about-modal)
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Start with styles</h1>
 
-### Start building with components.
-What does a toolbar look like? What about a filter chip? Components are the building blocks of the design system. Check out individual component pages to view examples, understand states and behavior, and check out the code samples (if you’re into that kind of thing).
+<p>What typography should you be using? What about colors? Spacing? Check out styles to learn everything you need to know about our foundational design elements.</p>
 
-[View HTML/CSS components](/documentation/core)
+<div class="link"><a href="/design-guidelines/styles/icons">View styles</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
 
-[View React components](/documentation/react)
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Get familiar with usage and behavior guidelines</h1>
 
-### Still feeling unsure? See all the pieces working together with demos.
-What does it look like when you combine all the ingredients? Demos provide examples of a few common ways you might combine layouts and components to give you an idea what’s possible.
+<p>Should you use a wizard or a form to solve this problem? How do you write a good button label? Which navigation makes the most sense? Check out our design guidelines to choose and use the right components for your use case.</p>
 
-[View HTML/CSS demos](/documentation/core)
+<div class="link"><a href="/design-guidelines/usage-and-behavior/about-modal">View usage and behavior</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
 
-[View React demos](/documentation/react)
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Start building with components</h1>
 
+<p>What does a toolbar look like? What about a filter chip? Components are the building blocks of the design system. Check out individual component pages to view examples, understand states and behavior, and check out the code samples (if you’re into that kind of thing).</p>
+
+<div class="link"><a href="/documentation/core">View HTML/CSS components</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
+
+<div class="link"><a href="/documentation/react">View React components</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
+
+
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Still feeling unsure? See all the pieces working together with demos.</h1>
+
+
+<p>What does it look like when you combine all the ingredients? Demos provide examples of a few common ways you might combine layouts and components to give you an idea what’s possible.</p>
+
+<div class="link"><a href="/documentation/core">View HTML/CSS demos</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
+
+<div class="link"><a href="/documentation/react">View React Demos</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
 
 <!-- **WIP - still need to gather details on how this will work**
 
@@ -55,3 +63,6 @@ Click Add library.
 1. From your PatternFly design kit directory, use Sketch to open the file PatternFly Template.sketch
 2. In Sketch, select ```File > Save as template```.
 3. **Start using the design kit!** That’s it - you’re all set to start using PatternFly 4 in your designs. -->
+
+
+<div class="lastLine">Interested in contributing? Visit our <a href="URL">contributions page</a> to learn more.</div>
