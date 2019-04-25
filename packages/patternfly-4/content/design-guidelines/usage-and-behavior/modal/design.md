@@ -1,25 +1,22 @@
 ---
 path: "/design-guidelines/usage-and-behavior/modal"
 ---
-# Modal Message Dialogs
-Modals load and display important information without navigating away from the current page.
+# Modal dialogs
+Use modal dialogs load and display important information without navigating away from the current page.
 
 ## Primary elements
 ![Modal](img/modal.png)
 
 1. **Backdrop**
 2. **Modal box**
-3. **Title:** Concisely convey the purpose of the modal.
+3. **Title:** concisely convey the purpose of the modal.
 4. **Close**
 5. **Content area**
-6. **Buttons:** Modals should not include two primary buttons
-
-## Components and demos used
-The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use-cases. We’ll explore several examples in this documentation.
+6. **Buttons:** enable a user to confirm, submit, or exit. Modal dialogs can include multiple action buttons, but should be limited to one primary button
 
 ## Usage
 ### When to use
-Use a modal when information is critical and requires user input or attention.
+Use a modal dialog when information is critical and requires user input or attention.
 Use modals to:
 * [Validate user decisions](#confirmation-dialog)
 * [Report errors](#report-errors)
@@ -27,10 +24,10 @@ Use modals to:
 * [Get required user input](#get-required-user-input)
 
 ### When not to use
-Modals interrupt user task flow and should be avoided for any information that is not critical to user success.
+Modal dialogs interrupt user task flow and should be avoided for any information that is not critical to user success.
 
 ### Types of modals
-#### Confirmation Dialog
+#### Get confirmation
 Use a confirmation dialog to validate user decisions and communicate consequences. Confirmation dialogs need to clearly restate the action the user is trying to take and explicitly outline the consequences of that action.
 
 **Note:** Since confirmation dialogs disrupt user task flow, do not provide confirmation dialogs for actions that are easily reversed or insignificant.
@@ -43,12 +40,12 @@ Ambiguous title and button labels make it more difficult for the user to underst
 
 ##### Confirm a destructive action
 ![Modal](img/confirm-destructive-action.png)
-If an action is difficult or impossible to undo a warning icon can be incorporated into the modal to add emphasis. If an action will seriously impact the system and cannot be undone, use a destructive style button. Otherwise, use a primary button.
+If an action is difficult or impossible to undo, a warning icon can be incorporated into the modal to add emphasis. If an action will seriously impact the system and cannot be undone, use a destructive style button. Otherwise, use a primary button.
 
 Sometimes it is necessary to require an additional confirmation with a destructive action. An example using a form field can be seen below. In order for the destructive action to become actionable, the user needs to type in a word or phrase to make the button active.
 ![Modal](img/2-step-confirm-destructive-action.png)
 
-#### Report Errors
+#### Report errors
 ![Modal](img/error-dialog.png)
 Use error dialogs to inform users of problems interrupting normal or expected behavior.
 An error message should be actionable, human readable, and answer the following questions:
@@ -94,6 +91,8 @@ See our [content guidelines](/design-guidelines/content/) for additional guidanc
 | ![times-circle](img/times-circle.svg) times-circle  | **Error:** Alert the user that there has been a critical failure/error  | Use on error dialogs to indicate a problem. |
 | ![info-circle](img/info-circle.svg) info-circle  | **Acknowledgement:** Informs the user of an action or result  | Use on confirmation or passive dialogs to indicate a lower level of urgency. |
 
+## Components and demos used
+The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use-cases. We’ll explore several examples in this documentation.
 
 **HTML/CSS components**
 * [Modal](/documentation/core/demos/modal)
