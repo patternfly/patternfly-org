@@ -12,7 +12,7 @@ import incorrect from './typography_incorrect_spacing.png';
 ## Our font family
 We use the open source typeface, Overpass, inspired by Highway Gothic.
 
-<Button variant="primary" component="a" href="https://fonts.google.com/specimen/Overpass" target="_blank">Download Overpass</Button>
+<Button style={{borderRadius: '0px', fontWeight: '600', paddingTop: '12px', paddingBottom: '12px', paddingLeft: '24px', paddingRight: '24px'}} variant="primary" component="a" href="https://fonts.google.com/specimen/Overpass" target="_blank">DOWNLOAD OVERPASS</Button>
 
 ## Usage guidelines
 Use our typographic styles to communicate visual hierarchy. A consistent and logical hierarchy provides a clear pattern for users, making it easier to quickly scan and understand information on a page.

@@ -13,14 +13,23 @@ export const styles = {
   `,
   tableTypography: css`
     background-color: transparent !important;
-
-    tr > td:first-child {
-      padding-left: 0px !important;
+    td {
+      border-style: hidden;
     }
+    tr > td:first-child {
+      padding-left: 0 !important;
+    };
 
     tr:nth-child(even) {
       background-color: transparent !important;
-    }
+    };
+  `,
+  variableName: css`
+    display: inline;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #ffffff;
+    border: 1px solid #ededed!important;
   `,
   gridTitleSymbol: css`
     font-size: 10px;
@@ -31,7 +40,7 @@ export const styles = {
     width: ${size}px;
     height: ${size}px;
     background-color: ${backgroundColor};
-    border: ${showBorder ? '1px solid #3E9DD0' : 'none'};
+    border: ${showBorder ? '1px solid #3e9dd0' : 'none'};
   `)
 };
 
@@ -56,7 +65,7 @@ export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontS
             </tr>
             <tr>
               <td>Global CSS variable:</td>
-              <td>.pf-c-title</td>
+              <td><span css={styles.variableName}>.pf-c-title</span></td>
             </tr>
           </tbody>
         </table>
@@ -110,14 +119,14 @@ export const SpacingContentItem = ({children, fontWeight, fontSize, lineHeight})
 export const Spacer = ({color, size, description, showBorder}) => {
   let backgroundColor = null;
   if (color === '8') {
-    backgroundColor = '#FF00FF';
+    backgroundColor = '#ff00ff';
   } else if (color === '16') {
-    backgroundColor = '#FF9500';
+    backgroundColor = '#ff9500';
   } else if (color === '24') {
-    backgroundColor = '#FFEA00';
+    backgroundColor = '#ffea00';
   }
   return (
-  <div style={{display: "flex", padding: description ? "5px" : "0px"}}>
+  <div style={{display: "flex", padding: description ? "15px" : "0px"}}>
     {description && <div css={styles.spacerDescription}>{description}</div>}
     <div css={styles.spacerBox(size, backgroundColor, showBorder)}></div>
   </div>
