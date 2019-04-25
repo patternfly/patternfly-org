@@ -1,5 +1,5 @@
 import { FunctionComponent, HTMLProps, ReactElement } from 'react';
-import { Omit } from '../../typeUtils';
+import { Omit } from '../../helpers/typeUtils';
 import { BasicPlacement, Props } from 'tippy.js';
 
 export const TooltipPosition: {
@@ -12,6 +12,8 @@ export const TooltipPosition: {
 export interface TooltipProps extends Omit<HTMLProps<HTMLDivElement>, 'content' | 'children'> {
   /** Tooltip position */
   position?: BasicPlacement;
+  /** Tooltip trigger */
+  trigger?: string;
   /** If true, tries to keep the tooltip in view by flipping it if necessary */
   enableFlip?: boolean;
   /** Tooltip additional class */

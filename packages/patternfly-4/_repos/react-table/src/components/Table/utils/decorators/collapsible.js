@@ -4,22 +4,23 @@ import styles from '@patternfly/patternfly/components/Table/table.css';
 import CollapseColumn from '../../CollapseColumn';
 import ExpandableRowContent from '../../ExpandableRowContent';
 
-export const collapsible = (
-  value,
-  {
+export const collapsible = (value, { rowIndex, columnIndex, rowData, column, property }) => {
+  const {
+    extraParams: { onCollapse, rowLabeledBy = 'simple-node', expandId = 'expand-toggle' }
+  } = column;
+  const extraData = {
     rowIndex,
-    rowData,
-    column: {
-      extraParams: { onCollapse, rowLabeledBy = 'simple-node', expandId = 'expand-toggle' }
-    }
-  }
-) => {
+    columnIndex,
+    column,
+    property
+  };
+
   function onToggle(event) {
-    onCollapse && onCollapse(event, rowIndex, rowData && !rowData.isOpen);
+    onCollapse && onCollapse(event, rowIndex, rowData && !rowData.isOpen, rowData, extraData);
   }
   return {
-    className: css(styles.tableToggle),
-    isVisible: true,
+    className: rowData.isOpen !== undefined && css(styles.tableToggle),
+    isVisible: !rowData.fullWidth,
     children: (
       <CollapseColumn
         aria-labelledby={`${rowLabeledBy}${rowIndex} ${expandId}${rowIndex}`}
@@ -33,6 +34,9 @@ export const collapsible = (
   };
 };
 
+export const expandable = (value, { rowData }) =>
+  rowData.hasOwnProperty('parent') ? <ExpandableRowContent>{value}</ExpandableRowContent> : value;
+
 export const expandedRow = colSpan => {
   const expandedRowFormatter = (
     value,
@@ -45,8 +49,9 @@ export const expandedRow = colSpan => {
     }
   ) =>
     rowData.hasOwnProperty('parent') && {
-      colSpan,
-      children: <ExpandableRowContent id={contentId + rowIndex}>{value.title || value}</ExpandableRowContent>
+      colSpan: colSpan + !!rowData.fullWidth,
+      id: contentId + rowIndex,
+      className: rowData.noPadding && css(styles.modifiers.noPadding)
     };
   return expandedRowFormatter;
 };

@@ -1,29 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`state active 1`] = `
-.pf-c-dropdown__toggle-text {
-  display: block;
-}
-.pf-c-dropdown__toggle-icon {
-  display: block;
-}
-.pf-c-dropdown__toggle-icon {
-  display: block;
-}
-.pf-c-dropdown__toggle.pf-m-active {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  min-width: 44px;
-  max-width: 100%;
-  padding: 0.375rem 0.5rem 0.375rem 0.5rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  background-color: transparent;
-}
-
 <DropdownToggle
   className=""
   iconComponent={[Function]}
@@ -40,6 +17,7 @@ exports[`state active 1`] = `
     className=""
     id="Dropdown Toggle"
     isActive={true}
+    isDisabled={false}
     isFocused={false}
     isHovered={false}
     isOpen={false}
@@ -50,6 +28,7 @@ exports[`state active 1`] = `
     <button
       aria-expanded={false}
       className="pf-c-dropdown__toggle pf-m-active"
+      disabled={false}
       id="Dropdown Toggle"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -93,29 +72,6 @@ exports[`state active 1`] = `
 `;
 
 exports[`state focus 1`] = `
-.pf-c-dropdown__toggle-text {
-  display: block;
-}
-.pf-c-dropdown__toggle-icon {
-  display: block;
-}
-.pf-c-dropdown__toggle-icon {
-  display: block;
-}
-.pf-c-dropdown__toggle.pf-m-focus {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  min-width: 44px;
-  max-width: 100%;
-  padding: 0.375rem 0.5rem 0.375rem 0.5rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  background-color: transparent;
-}
-
 <DropdownToggle
   className=""
   iconComponent={[Function]}
@@ -132,6 +88,7 @@ exports[`state focus 1`] = `
     className=""
     id="Dropdown Toggle"
     isActive={false}
+    isDisabled={false}
     isFocused={true}
     isHovered={false}
     isOpen={false}
@@ -142,6 +99,7 @@ exports[`state focus 1`] = `
     <button
       aria-expanded={false}
       className="pf-c-dropdown__toggle pf-m-focus"
+      disabled={false}
       id="Dropdown Toggle"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -185,29 +143,6 @@ exports[`state focus 1`] = `
 `;
 
 exports[`state hover 1`] = `
-.pf-c-dropdown__toggle-text {
-  display: block;
-}
-.pf-c-dropdown__toggle-icon {
-  display: block;
-}
-.pf-c-dropdown__toggle-icon {
-  display: block;
-}
-.pf-c-dropdown__toggle.pf-m-hover {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  min-width: 44px;
-  max-width: 100%;
-  padding: 0.375rem 0.5rem 0.375rem 0.5rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  background-color: transparent;
-}
-
 <DropdownToggle
   className=""
   iconComponent={[Function]}
@@ -224,6 +159,7 @@ exports[`state hover 1`] = `
     className=""
     id="Dropdown Toggle"
     isActive={false}
+    isDisabled={false}
     isFocused={false}
     isHovered={true}
     isOpen={false}
@@ -234,6 +170,7 @@ exports[`state hover 1`] = `
     <button
       aria-expanded={false}
       className="pf-c-dropdown__toggle pf-m-hover"
+      disabled={false}
       id="Dropdown Toggle"
       onClick={[Function]}
       onKeyDown={[Function]}

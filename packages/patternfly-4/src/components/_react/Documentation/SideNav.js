@@ -1,16 +1,11 @@
 import React from 'react';
 import { graphql, StaticQuery, Link } from 'gatsby';
-import * as DocsFiles from '../../../../.tmp';
 import {
   Nav,
   NavList,
   NavExpandable,
   NavItem,
-  Form,
-  TextInput
 } from '@patternfly/react-core';
-import { css } from '@patternfly/react-styles';
-import styles from '../../navigation/navigation.styles';
 import Switcher from '../../switcher';
 import { Location } from '@reach/router';
 
@@ -30,37 +25,32 @@ class SideNav extends React.Component {
     const { data } = this.props;
     const { searchValue } = this.state;
 
-    const componentMapper = (path, label) => {
-      const { components } = DocsFiles[`${label.toLowerCase().replace(/\s+/g,'')}_docs`];
-      return Object.keys(components).map(k => ({
-        label: k,
-        to: `${path}#${k}`
-      }));
-    };
-    const getPackage = label => DocsFiles[`${label.toLowerCase().replace(/\s+/g,'')}_package`].substr(6);
     const componentRoutes = data.componentPages
       ? data.componentPages.edges.map(e => ({
         to: e.node.path,
-        label: e.node.fields.label,
-        pkg: getPackage(e.node.fields.label),
-        components: componentMapper(e.node.path, e.node.fields.label)
-      }))
+        label: e.node.context.title,
+        pkg: 'core',
+        components: []
+      })).filter(e => e.label)
       : [];
 
     const layoutRoutes = data.layoutPages
       ? data.layoutPages.edges.map(e => ({
         to: e.node.path,
-        label: e.node.fields.label,
-        pkg: getPackage(e.node.fields.label),
-        components: componentMapper(e.node.path, e.node.fields.label)
-      }))
+        label: e.node.context.title,
+        pkg: 'core',
+        components: []
+      })).filter(e => e.label)
       : [];
 
+
     const demoRoutes = data.demoPages
-      ? data.demoPages.edges.map(e => ({
+      ? data.demoPages.edges
+      .filter(e => !e.node.context.fullscreen)
+      .map(e => ({
         to: e.node.path,
-        label: e.node.fields.label
-      }))
+        label: e.node.context.title
+      })).filter(e => e.label)
       : [];
 
     const searchRE = new RegExp(searchValue, 'i');
@@ -87,7 +77,6 @@ class SideNav extends React.Component {
     const SideNav = (
       <Location>
       {({ location }) => {
-        // console.log(location);
         const currentPath = location.pathname;
         return (
           <Nav className="pf-site-vertical-navigation" aria-label="Nav">
@@ -171,40 +160,41 @@ export default props => (
     query={graphql`
       query {
         componentPages: allSitePage(
-          filter: { path: { glob: "/documentation/react/components/*" } },
+          filter: { path: { glob: "/documentation/react/components/**" } },
           sort: { fields: path }
         ) {
           edges {
             node {
               path
-              fields {
-                label
+              context {
+                title
               }
             }
           }
         }
         layoutPages: allSitePage(
-          filter: { path: { glob: "/documentation/react/layouts/*" } },
+          filter: { path: { glob: "/documentation/react/layouts/**" } },
           sort: { fields: path }
         ) {
           edges {
             node {
               path
-              fields {
-                label
+              context {
+                title
               }
             }
           }
         }
         demoPages: allSitePage(
-          filter: { path: { glob: "/documentation/react/demos/*" } },
+          filter: { path: { glob: "/documentation/react/demos/**" } },
           sort: { fields: path }
         ) {
           edges {
             node {
               path
-              fields {
-                label
+              context {
+                title
+                fullscreen
               }
             }
           }

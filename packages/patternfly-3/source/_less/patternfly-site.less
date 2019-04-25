@@ -7,12 +7,19 @@
 @import "patternfly/dist/less/variables.less";
 @import "patternfly/dist/less/mixins.less";
 @import "fonts";
+@import "fa5/solid.less";
+@import "fa5/fontawesome.less";
 
 @import "variables";
 
 .rhDisplayRegular {
   font-family: 'RedHatDisplay';
   font-weight: 300;
+}
+
+.rhDisplaySemiBold {
+  font-family: 'RedHatDisplay';
+  font-weight: 700;
 }
 
 .pf3-banner {
@@ -36,16 +43,19 @@
   }
 }
 
- .pf3-banner-link {
-  font-weight: 600;
-  font-size: 18px;
-  color: #0066CC;
+.pf3-banner-link {
+  font-size: 16px;
+  color: #007bba;
   text-decoration: none;
   margin-right: 16px;
   margin-left: 16px;
 
+  @media screen and (max-width: 1100px) {
+    padding-left: 16px;
+  }
+
    &:hover {
-    color: #004080;
+    color: #00659c;
     text-decoration: none;
   }
 

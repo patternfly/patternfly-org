@@ -57,7 +57,6 @@ class Documentation extends React.PureComponent {
     return (
       <Location>
         {({ location }) => {
-          // console.log(location);
           const currentPath = location.pathname;
           let componentType = 'Components';
           if (currentPath.indexOf('/layouts/') > -1) {
@@ -155,46 +154,14 @@ export default props => (
         allComponentMetadata {
           edges {
             node {
-              displayName
               description
               props {
                 name
-                description {
-                  text
-                }
-                defaultValue {
-                  value
-                }
+                description
                 type {
                   name
-                  value
                 }
                 required
-              }
-            }
-          }
-        }
-        allTsDocsJson {
-          edges {
-            node {
-              id
-              name
-              kind
-              data {
-                name
-                children {
-                  name
-                  comment {
-                    shortText
-                  }
-                  type {
-                    type
-                    name
-                  }
-                  flags {
-                    isOptional
-                  }
-                }
               }
             }
           }

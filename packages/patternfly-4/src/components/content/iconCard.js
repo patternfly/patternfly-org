@@ -108,7 +108,7 @@ class IconCard extends React.Component {
   onCopyHtml = event => {
     event.stopPropagation();
     const { name } = this.props;
-    copy(`<i class="pf-icon pf-icon-${name}"></i>`);
+    copy(`<i className="pf-icon pf-icon-${name}"></i>`);
   };
 
   onDownloadSvg = () => {

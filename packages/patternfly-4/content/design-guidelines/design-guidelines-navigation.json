@@ -4,12 +4,20 @@
     "path": "/design-guidelines/styles/",
     "subNav": [
       {
+        "text": "Colors",
+        "path": "/design-guidelines/styles/colors"
+      },
+      {
         "text": "Icons",
         "path": "/design-guidelines/styles/icons"
       },
       {
         "text": "Typography",
         "path": "/design-guidelines/styles/typography"
+      },
+      {
+        "text": "Spacers",
+        "path": "/design-guidelines/styles/spacers"
       }
     ]
   },
@@ -34,6 +42,10 @@
         "path": "/design-guidelines/usage-and-behavior/data-input"
       },
       {
+        "text": "Empty state",
+        "path": "/design-guidelines/usage-and-behavior/empty-state"
+      },
+      {
         "text": "Filters",
         "path": "/design-guidelines/usage-and-behavior/filters"
       },
@@ -50,7 +62,7 @@
         "path": "/design-guidelines/usage-and-behavior/login"
       },
       {
-        "text": "Modal",
+        "text": "Modal dialog",
         "path": "/design-guidelines/usage-and-behavior/modal"
       },
       {

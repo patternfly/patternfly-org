@@ -1,19 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`EmptyState Main 1`] = `
-.pf-c-empty-state {
-  display: block;
-  max-width: 37.5rem;
-  padding: 2rem;
-  text-align: center;
-}
-
 <div
-  className="pf-c-empty-state"
+  className="pf-c-empty-state pf-m-lg"
 >
   <Title
-    className=""
-    headingLevel="h1"
+    headingLevel="h5"
     size="lg"
   >
     HTTP Proxies
@@ -55,5 +47,25 @@ exports[`EmptyState Main 1`] = `
       Learn more about this in the documentation.
     </Button>
   </EmptyStateSecondaryActions>
+</div>
+`;
+
+exports[`EmptyState Main variant regular 1`] = `
+<div
+  className="pf-c-empty-state"
+>
+  <Title>
+    EmptyState full
+  </Title>
+</div>
+`;
+
+exports[`EmptyState Main variant small 1`] = `
+<div
+  className="pf-c-empty-state pf-m-sm"
+>
+  <Title>
+    EmptyState small
+  </Title>
 </div>
 `;
