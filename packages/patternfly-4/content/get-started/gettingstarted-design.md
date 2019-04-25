@@ -1,27 +1,28 @@
 ---
 path: "/get-started/designers"
 ---
-<div class="h1">Design with PatternFly</div>
+
+<h1 class="pf-c-title pf-m-4xl">Design with PatternFly</h1>
 
 <p>Before you begin, check out <a href="/get-started/about">About PatternFly 4</a> to get acquainted with the basic elements of the design system.</p>
 
-<div class="h2">Designing with PatternFly 4</div>
+<h1 class="pf-c-title pf-m-3xl pf-u-mt-xl">Designing with PatternFly 4</h1>
 
 <p>PatternFly is made up of modular components that can be assembled in a variety of ways to build applications and interfaces, along with styles, standards, and design guidelines to help you choose and use the right components for your project.</p>
 
-<div class="h3">Start with styles</div>
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Start with styles</h1>
 
 <p>What typography should you be using? What about colors? Spacing? Check out styles to learn everything you need to know about our foundational design elements.</p>
 
 <div class="link"><a href="/design-guidelines/styles/icons">View styles</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
 
-<div class="h3">Get familiar with usage and behavior guidelines</div>
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Get familiar with usage and behavior guidelines</h1>
 
 <p>Should you use a wizard or a form to solve this problem? How do you write a good button label? Which navigation makes the most sense? Check out our design guidelines to choose and use the right components for your use case.</p>
 
 <div class="link"><a href="/design-guidelines/usage-and-behavior/about-modal">View usage and behavior</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
 
-<div class="h3">Start building with components</div>
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Start building with components</h1>
 
 <p>What does a toolbar look like? What about a filter chip? Components are the building blocks of the design system. Check out individual component pages to view examples, understand states and behavior, and check out the code samples (if you’re into that kind of thing).</p>
 
@@ -30,8 +31,8 @@ path: "/get-started/designers"
 <div class="link"><a href="/documentation/react">View React components</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
 
 
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Still feeling unsure? See all the pieces working together with demos.</h1>
 
-<div class="h3">Still feeling unsure? See all the pieces working together with demos.</div>
 
 <p>What does it look like when you combine all the ingredients? Demos provide examples of a few common ways you might combine layouts and components to give you an idea what’s possible.</p>
 

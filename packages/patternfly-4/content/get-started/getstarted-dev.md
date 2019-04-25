@@ -1,39 +1,40 @@
 ---
 path: "/get-started/developers"
 ---
-<div class="h1">Develop with PatternFly</div>
+<h1 class="pf-c-title pf-m-4xl">Develop with PatternFly</h1>
 <p>Before you begin, check out <a href="/get-started/about">About Patternfly 4</a> to get acquainted with the basic elements of the design system.</p>
 
-<div class="h3">Get started with:</div>
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Get started with:</h1>
+
 <div class="link"><a href="#react">React</a> <a href="#html/css">HTML/CSS</a></div>
 
-<div id="largeMarginTop" class="h2">React</div>
+<h1 class="pf-c-title pf-m-3xl pf-u-mt-3xl">React</h1>
 <p>The React library provides a collection of React components you can use to build interfaces with consistent markup, styling, and behavior.</p>
 
-<div class="h3">Before you begin</div>
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Before you begin</h1>
 <p><b>Install a Package Manager</b></p>
 
 <p><b>NPM</b></p>
-<p><a href="https://nodejs.org/en/download">Get started with npm</a></p>
+<p><a target="_blank" href="https://nodejs.org/en/download">Get started with npm</a></p>
 
 <p><b>Yarn</b></p>
-<p><a href="https://yarnpkg.com/en/docs/getting-started">Get started with Yarn</a></p>
+<p><a target="_blank" href="https://yarnpkg.com/en/docs/getting-started">Get started with Yarn</a></p>
 
 
-<div class="h3">Getting started</div>
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Getting started</h1>
 <p><b>If you’re starting from scratch and would like to use a sample project</b>, we recommend starting with the PatternFly React seed.</p>
 
 <p>The React seed is an open source build scaffolding utility created to give developers a jump start when creating new projects that will use Patternfly.</p>
 
 <p><b>If you already have a project</b>, you can skip to the next section, [Installing and configuring PatternFly React](#installing-and-configuring-patternfly).</p>
 
-<div class="h3">Starting with the React seed</div>
-<p><b>Fork the project</b> <a href="https://help.github.com/articles/fork-a-repo/">Fork and clone</a> the PatternFly React Seed project from <a href="https://github.com/patternfly/patternfly-react-seed">https://github.com/patternfly/patternfly-react-seed.</a></p>
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Starting with the React Seed</h1>
+<p><b>Fork the project</b> <a target="_blank" href="https://help.github.com/articles/fork-a-repo/">Fork and clone</a> the PatternFly React Seed project from <a target="_blank" href="https://github.com/patternfly/patternfly-react-seed">https://github.com/patternfly/patternfly-react-seed.</a></p>
 
 <p><b>Install the project</b>
 Follow the steps outlined in the [React seed README](https://github.com/patternfly/patternfly-react-seed#quick-start) to install.</p>
 
-<div class="h3">Installing and configuring PatternFly React</div>
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Installing and configuring PatternFly React</h1>
 <p>Using npm, run the following commands to install:</p>
 
 <div class="code">npm install @patternfly/react-core --save</div>
@@ -55,13 +56,13 @@ Follow the steps outlined in the [React seed README](https://github.com/patternf
 
 <p><b>If you’re using typescript...</b>See <a href="URL"> typescript.example.js</a>for an example configuration.</p>
 
-<div id="largeMarginTop" class="h2">HTML/CSS</div>
+<h1 class="pf-c-title pf-m-3xl pf-u-mt-3xl">HTML/CSS</h1>
 <p>The HTML/CSS library provides a collection of code samples you can use to build interfaces with consistent PatternFly markup and styling.</p>
 
-<div class="h3">Before you begin</div>
-<p><b>Install NPM</b>, NPM is a package manager that’s bundled with Node.js. It’s required to download dependencies. Download the installer from <a href="https://nodejs.org/en/download">https://nodejs.org/en/download</a></p>
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Before you begin</h1>
+<p><b>Install NPM</b>, NPM is a package manager that’s bundled with Node.js. It’s required to download dependencies. Download the installer from <a target="_blank" href="https://nodejs.org/en/download">https://nodejs.org/en/download</a></p>
 
-<div class="h3">Installing</div>
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Installing</h1>
 <p>Using npm, run the following commands to install:</p>
 <div class="code">npm install @patternfly/patternfly-next</div>
 
@@ -94,7 +95,7 @@ Follow the steps outlined in the [React seed README](https://github.com/patternf
 
 <p>Use these files to consume the library. The recommended consumption approach will vary from project to project.</p>
 
-<div class="h3">Configuring your project</div>
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Configuring your project</h1>
 <p>1. Navigate to the patternfly-next package you just installed and find the PatternFly 4 CSS stylesheet, ```patternfly.css```</p>
 
 <p>2.Copy ```patternfly.css``` to your project's CSS directory.</p>
@@ -117,7 +118,7 @@ Follow the steps outlined in the [React seed README](https://github.com/patternf
     link rel="stylesheet" href="css/patternfly-addons.scss"
   </div>
 
-<div class="h3">Using styles</div>
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Using styles</h1>
 <p><b>Typography</b> PatternFly 4 uses the Overpass font family. Overpass can be utilized in two different ways:</p>
 
 <p>1. Built into PatternFly 4</p>
@@ -141,7 +142,7 @@ Follow the steps outlined in the [React seed README](https://github.com/patternf
 <p>To use the CDN vs the standard build, update the ```utilities/variables.scss``` file as follows:</p>
 <div class="code">$pf-global--enable-fontawesome-cdn: true !default;</div>
 
-<div class="h3">Customizing Patternfly for your project</div>
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Customizing Patternfly for your project</h1>
 <p>The CSS variable system enables you to easily customize things like color or shape without overwriting existing PatternFly styles.</p>
 
 <div class="link"><a href="/documentation/react/css-variables/">Learn more and view CSS variables.</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
