@@ -5,10 +5,6 @@ $theme: '.colors-theme--';
   width: 100px;
 }
 
-.pf-c-nav__tertiary-list {
-  list-style: none !important;
-}
-
 .colors-in-context {
   padding: 32px 16px;
   background-color: #fff;
@@ -19,12 +15,12 @@ $theme: '.colors-theme--';
   padding: 2px 16px;
   background-color: #fff;
   border: 1px solid #ededed;
-  font-size: 1rem;
+  font-size: var(--pf-global--FontSize--md);
 }
 
 #{$theme}light {
   h3, p {
-    margin-bottom: 8px;
+    margin-bottom: var(--pf-global--spacer--sm);
   }
   .pf-c-alert__title {
     margin: 0 !important;
@@ -50,7 +46,7 @@ $theme: '.colors-theme--';
   }
   &-200 {
     @include color-block-dimensions;
-    background-color: #d2d2d2;
+    background-color: var(--pf-global--secondary-color--200);
   }
 }
 
@@ -58,32 +54,32 @@ $theme: '.colors-theme--';
   &-text {
     &-100 {
       @include color-block-dimensions;
-      background-color: #282d33;
+      background-color: var(--pf-global--Color--100);
     }
     &-200 {
       @include color-block-dimensions;
-      background-color: #72767b;
+      background-color: var(--pf-global--Color--200);
     }
     &-300 {
       @include color-block-dimensions;
-      background-color: #393f44;
+      background-color: var(--pf-global--Color--300);
     }
   }
 
   &-link {
     &-text {
       @include color-block-dimensions;
-      background-color: #0066cc;
+      background-color: var(--pf-global--primary-color--100);
     }
     &-hover {
       @include color-block-dimensions;
-      background-color: #00659c;
+      background-color: var(--pf-global--primary-color--200);
     }
   }
 
   &-icons {
     @include color-block-dimensions;
-    background-color: #282d33;
+    background-color: var(--pf-global--icon--Color--light);
   }
 
   &-alerts {
@@ -281,5 +277,30 @@ $gallery-colors: (
   &--orange-5 {
     @include color-block-dimensions;
     background-color: map-get($gallery-colors, "orange5");
+  }
+}
+
+.grid-modifier {
+  @media screen and (max-width: 768px) {
+     .grid-modifier-first {
+       order: 1;
+       margin-top: 31px;
+     }
+     .grid-modifier-second {
+       order: 3;
+       margin-top: 31px;
+     }
+     .grid-modifier-third {
+       order: 2;
+       margin-top: 31px;
+     }
+     .grid-modifier-four {
+       order: 4;
+       margin-top: 31px;
+     }
+     .grid-modifier-five {
+       order: 5;
+       margin-top: 31px;
+     }
   }
 }
