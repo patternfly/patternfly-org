@@ -49,6 +49,7 @@ const styles = {
     transform: scale(0.7);
   `,
   popover: css`
+    width: 500px;
     .pf-c-popover {
       width: 100%;
     }
@@ -58,6 +59,7 @@ const styles = {
   `,
   popoverBody: css`
     display: flex;
+    width: 800px;
     flex-direction: column;
     align-items: left;
   `,
