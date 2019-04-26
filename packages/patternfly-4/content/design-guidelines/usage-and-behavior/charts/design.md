@@ -1,4 +1,6 @@
+---
 path: "/design-guidelines/usage-and-behavior/charts"
+---
 
 # Charts
 
