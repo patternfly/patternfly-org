@@ -8,7 +8,7 @@ path: "/get-started/developers"
 
 <div class="link"><a href="#react">React</a> <a href="#html/css">HTML/CSS</a></div>
 
-<h1 class="pf-c-title pf-m-3xl pf-u-mt-3xl">React</h1>
+<h1 id="react" class="pf-c-title pf-m-3xl pf-u-mt-3xl">React</h1>
 <p>The React library provides a collection of React components you can use to build interfaces with consistent markup, styling, and behavior.</p>
 
 <h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Before you begin</h1>
@@ -26,15 +26,15 @@ path: "/get-started/developers"
 
 <p>The React seed is an open source build scaffolding utility created to give developers a jump start when creating new projects that will use Patternfly.</p>
 
-<p><b>If you already have a project</b>, you can skip to the next section, [Installing and configuring PatternFly React](#installing-and-configuring-patternfly).</p>
+<p><b>If you already have a project</b>, you can skip to the next section, [Installing and configuring PatternFly React](#installing-and-configuring).</p>
 
 <h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Starting with the React Seed</h1>
-<p><b>Fork the project</b> <a target="_blank" href="https://help.github.com/articles/fork-a-repo/">Fork and clone</a> the PatternFly React Seed project from <a target="_blank" href="https://github.com/patternfly/patternfly-react-seed">https://github.com/patternfly/patternfly-react-seed.</a></p>
+<p><b>Fork the project</b> <a target="_blank" href="https://help.github.com/articles/fork-a-repo/">Fork and clone</a> the PatternFly React Seed project from <a target="_blank" href="https://github.com/patternfly/patternfly-react-seed">https://github.com/patternfly/patternfly-react-seed</a></p>
 
 <p><b>Install the project</b>
 Follow the steps outlined in the [React seed README](https://github.com/patternfly/patternfly-react-seed#quick-start) to install.</p>
 
-<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Installing and configuring PatternFly React</h1>
+<h1 id="installing-and-configuring" class="pf-c-title pf-m-xl pf-u-mt-xl">Installing and configuring PatternFly React</h1>
 <p>Using npm, run the following commands to install:</p>
 
 <div class="code">npm install @patternfly/react-core --save</div>
@@ -50,13 +50,11 @@ Follow the steps outlined in the [React seed README](https://github.com/patternf
 * [webpack.dev.js](https://github.com/patternfly/patternfly-react-seed/blob/master/webpack.dev.js)
 * [webpack.prod.js](https://github.com/patternfly/patternfly-react-seed/blob/master/webpack.prod.js)
 
-<p><b>If you’re using babel...</b>See [babel.config.js](https://github.com/patternfly/patternfly-react-seed/blob/master/babel.config.js) for an example configuration.</p>
-
 <p>We don't have this yet, but we will need it.</p>
 
-<p><b>If you’re using typescript...</b>See <a href="URL"> typescript.example.js</a>for an example configuration.</p>
+<p><b>If you’re using typescript...</b>See <a href="https://github.com/patternfly/patternfly-react-seed/blob/master/tsconfig.json"> typescript.example.js</a>for an example configuration.</p>
 
-<h1 class="pf-c-title pf-m-3xl pf-u-mt-3xl">HTML/CSS</h1>
+<h1 id="html/css" class="pf-c-title pf-m-3xl pf-u-mt-3xl">HTML/CSS</h1>
 <p>The HTML/CSS library provides a collection of code samples you can use to build interfaces with consistent PatternFly markup and styling.</p>
 
 <h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Before you begin</h1>
