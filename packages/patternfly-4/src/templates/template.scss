@@ -4,8 +4,9 @@
   font-family: var(--pf-global--FontFamily--sans-serif);
 }
 .pf-site-md-nav {
+  margin-top: 16px;
+
   .pf-c-nav__link {
-    margin-left: var(--pf-global--spacer--xs);
     padding-top: var(--pf-global--spacer--sm) !important;
     border-left: 4px solid transparent;
     &:active,
@@ -20,6 +21,14 @@
     }
   }
 }
+
+.pageSectionStyles {
+  padding-top: 32px;
+  padding-right: 64px;
+  padding-bottom: 64px;
+  padding-left: 64px;
+}
+
 // .markdown-body {
 //   table {
 //     @extend .pf-c-table;

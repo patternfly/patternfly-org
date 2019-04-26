@@ -74,7 +74,7 @@ export default function ContentTemplate ({
   return (
     <Layout sideNav={SideNav}>
       <SEO title="Docs" keywords={['gatsby', 'application', 'react']} />
-      <PageSection variant={PageSectionVariants.light}>
+      <PageSection className="pageSectionStyles" variant={PageSectionVariants.light}>
         <PatternFlyThemeProvider>
           <TextContent>
             <MDXRenderer>
