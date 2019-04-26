@@ -4,6 +4,7 @@ import { Form, TextInput } from '@patternfly/react-core';
 import { Table, TableHeader, TableBody, sortable, SortByDirection } from '@patternfly/react-table';
 import * as tokensModule from '@patternfly/react-tokens';
 import { StyleSheet, css } from '@patternfly/react-styles';
+import './content/icons.scss';
 
 const propTypes = {
   variables: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),

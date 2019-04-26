@@ -3,9 +3,34 @@ import { Grid, GridItem } from '@patternfly/react-core';
 import { StyledText } from '@patternfly/react-styled-system';
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
+import './typography.scss';
 
 export const styles = {
-  textColor: css`color: #703FEC;`,
+  textColor: css`
+    color: #004368; 
+    max-width: 350px;
+    font-size: 14px;
+  `,
+  tableTypography: css`
+    background-color: transparent !important;
+    td {
+      border-style: hidden;
+    }
+    tr > td:first-child {
+      padding-left: 0 !important;
+    };
+
+    tr:nth-child(even) {
+      background-color: transparent !important;
+    };
+  `,
+  variableName: css`
+    display: inline;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #ffffff;
+    border: 1px solid #ededed!important;
+  `,
   gridTitleSymbol: css`
     font-size: 10px;
     vertical-align: text-bottom;
@@ -15,7 +40,7 @@ export const styles = {
     width: ${size}px;
     height: ${size}px;
     background-color: ${backgroundColor};
-    border: ${showBorder ? '1px solid #703FEC' : 'none'};
+    border: ${showBorder ? '1px solid #3e9dd0' : 'none'};
   `)
 };
 
@@ -24,7 +49,7 @@ export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontS
     <h3>{title} {symbol && <span css={styles.gridTitleSymbol}>{symbol}</span>}</h3>
     <Grid gutter="sm" css={[styles.gridRowCenter, styles.typographyGrid]}>
       <GridItem span={6}>
-        <table className="pf-c-table pf-m-compact" aria-label="typography usage guidelines breakout">
+        <table css={styles.tableTypography} className="pf-c-table pf-m-compact" aria-label="typography usage guidelines breakout">
           <tbody>
             <tr>
               <td className="pf-u-pr-sm">Font Family:</td>
@@ -37,6 +62,10 @@ export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontS
             <tr>
               <td>Line Height:</td>
               <td>{lineHeight}</td>
+            </tr>
+            <tr>
+              <td>Global CSS variable:</td>
+              <td><span css={styles.variableName}>.pf-c-title</span></td>
             </tr>
           </tbody>
         </table>
@@ -90,14 +119,14 @@ export const SpacingContentItem = ({children, fontWeight, fontSize, lineHeight})
 export const Spacer = ({color, size, description, showBorder}) => {
   let backgroundColor = null;
   if (color === '8') {
-    backgroundColor = '#9CD819';
+    backgroundColor = '#ff00ff';
   } else if (color === '16') {
-    backgroundColor = '#52A549';
+    backgroundColor = '#ff9500';
   } else if (color === '24') {
-    backgroundColor = '#198793';
+    backgroundColor = '#ffea00';
   }
   return (
-  <div style={{display: "flex", padding: description ? "5px" : "0px"}}>
+  <div style={{display: "flex", padding: description ? "15px" : "0px"}}>
     {description && <div css={styles.spacerDescription}>{description}</div>}
     <div css={styles.spacerBox(size, backgroundColor, showBorder)}></div>
   </div>
