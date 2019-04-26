@@ -6,7 +6,29 @@ path: "/get-started/designers"
 
 <p>Before you begin, check out <a href="/get-started/about">About PatternFly 4</a> to get acquainted with the basic elements of the design system.</p>
 
-<h1 class="pf-c-title pf-m-3xl pf-u-mt-xl">Designing with PatternFly 4</h1>
+<h1 class="pf-c-title pf-m-3xl pf-u-mt-xl">Get set up</h1>
+
+<h1 class="pf-c-title pf-m-2xl pf-u-mt-xl">Download and install the PatterFly 4 design kit</h1>
+
+<p>The design kit is a collection of assets that make it easy for you to create high-fidelity design mockups using PatternFly 4 components.</p>
+
+<p>The design kit works with Sketch libraries and templates. To use it, you'll need to have <div class="link"><a href="https://www.sketch.com/">Sketch</a> version 47 or above.</p>
+
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Download the design kit files:</h1>
+<p><b>Add the Sketch library</b></p>
+<ol>
+<li>Access the <div class="link"><a href="https://sketch.cloud/s/wxoZ9">PatternFly 4 design library</a> on Sketch cloud.</li>
+<li>Click <b>Add library to Sketch</b> on the bottom right to add the library. You'll be prompted with a modal. Click <b>Add library to Sketch</b> again. Sketch will show you the library in your preferences window. You're all set!</li>
+
+
+<p><b>Add the Sketch template</b></p>
+<ol>
+<li>Access the <div class="link"><a href="https://sketch.cloud/s/wxydj">PatternFly 4 design template</a> on Sketch cloud.</li>
+<li>Click <b>Download Document</b> on the bottom right to add the library.</li>
+<li>Navigate to the file you just downloaded, <code>PatternFly 4 Template.sketch</code>, and open it.</li>
+<li>Navigate to <code>File > Save as Template...</code> and name your file whatever makes sense to you. We recommend something simple like <code>PatternFly 4</code>." You can now access the PatternFly 4 template from <code>File > New from Template...</code>.</li>  
+
+<h1 class="pf-c-title pf-m-3xl pf-u-mt-xl">Start designing</h1>
 
 <p>PatternFly is made up of modular components that can be assembled in a variety of ways to build applications and interfaces, along with styles, standards, and design guidelines to help you choose and use the right components for your project.</p>
 
@@ -63,6 +85,3 @@ Click Add library.
 1. From your PatternFly design kit directory, use Sketch to open the file PatternFly Template.sketch
 2. In Sketch, select ```File > Save as template```.
 3. **Start using the design kit!** That’s it - you’re all set to start using PatternFly 4 in your designs. -->
-
-
-<div class="lastLine">Interested in contributing? Visit our <a href="URL">contributions page</a> to learn more.</div>

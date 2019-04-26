@@ -15,10 +15,10 @@ path: "/get-started/developers"
 <p><b>Install a Package Manager</b></p>
 
 <p><b>NPM</b></p>
-<p><a target="_blank" href="https://nodejs.org/en/download">Get started with npm</a></p>
+<p><a target="_blank" href="https://nodejs.org/en/download">Use npm</a></p>
 
 <p><b>Yarn</b></p>
-<p><a target="_blank" href="https://yarnpkg.com/en/docs/getting-started">Get started with Yarn</a></p>
+<p><a target="_blank" href="https://yarnpkg.com/en/docs/getting-started">Use Yarn</a></p>
 
 
 <h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Getting started</h1>
