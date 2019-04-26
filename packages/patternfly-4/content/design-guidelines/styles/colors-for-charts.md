@@ -1,5 +1,5 @@
 ---
-path: ""/design-guidelines/styles/colors-for-charts"
+path: "/design-guidelines/styles/colors-for-charts"
 ---
 
 # Colors for charts
