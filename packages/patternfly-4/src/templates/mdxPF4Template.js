@@ -15,6 +15,7 @@ import PropsTable from '../components/_react/propsTable';
 import './template.scss';
 import './gettingStarted.scss';
 import '../styles/content/spacers.scss';
+import '../styles/content/colors.scss';
 
 let liveEditCount = 0;
 const components = {
@@ -52,7 +53,7 @@ const MdxPF4Template = ({ data }) => {
   let section = data.mdx.frontmatter.section;
   if (!section)
     section = 'component';
-  
+
   return (
     <Location>
       {({ location }) => {
