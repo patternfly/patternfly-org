@@ -11,4 +11,8 @@
     "text": "Design",
     "path": "/get-started/designers"
   }
+  {
+    "text": "Migrate from PatternFly 3",
+    "path": "/get-started/migration"
+  }
 ]
