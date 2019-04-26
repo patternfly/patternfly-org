@@ -2,16 +2,16 @@
 path: "/design-guidelines/usage-and-behavior/wizard"
 ---
 # Wizard
-Wizards provide a guided workflow that offers a path to complete a task, create an object or objects, or finish a series of steps for some other outcome. The wizard should be a familiar interface element for most modern technology users, although it does suggest a throwback to earlier, simpler days of PC computing. Still, step-by-step, directed experiences can be helpful in many cases that range from the simple to the complex. Simple object creation when certain values must be provided to software installation with many choices and branching are suitable for a wizard.
+Wizards provide a guided workflow that offers a path to complete a task, create an object or objects, or finish a series of steps for some other outcome.
 
 ## Usage
 Use a wizard when
 
-* A system or product requires a set of information to be input by a user in a standard fashion, the guided stepped approach helps to eliminate errors of omission and catch them before having to process the entire chunk of information.
+* A system or product requires a set of information to be input by a user in a standard fashion. The guided stepped approach helps to eliminate errors of omission and catch them before having to process the entire chunk of information.
 * A simple form is not sufficient to aid a user in completing a task
 * Your users are inexperienced and you do not want to overwhelm them with complexity.
 
-Avoid using a wizard for very simple data entry tasks in which a basic form would suffice.
+Avoid using a wizard for simple data entry tasks in which a basic form would suffice.
 
 The PatternFly wizard is designed as a modal experience. This will keep users focused on the task at hand. They must either complete all of the steps of the wizard or cancel before navigating elsewhere within an application.
 
@@ -34,7 +34,7 @@ The wizard lives in a modal dialog. The width of the modal is variable and shoul
 In a standard wizard the user moves through the wizard sequentially, a step at a time.The Next button is always used to advance the wizard. In addition:
 
 * The Back button is disabled on the first page of the wizard.
-* To abandon the wizard, the user selects Cancel or the Close button in the header. Closing the wizard will discard current changes, so it may be appropriate to insert a confirmation message before executing this operation.
+* To abandon the wizard, the user selects Cancel in the button footer or the Close button in the header. Closing the wizard will discard current changes, so it may be appropriate to insert a confirmation message before executing this operation.
 * Wizard steps are skippable if the user configures them to be
 * The user can jump to steps directly if the user clicks on a step in the nav (if the step is not disabled)
 
@@ -57,9 +57,9 @@ The last step in a wizard should always be a Review step. This should include a 
 ![wizard review step](img/review-screen.png)
 
 1. **Review step**
-2. **Finish button**: on the last step of the wizard, the Next button is labeled Finish by default. This is a configurable choice and should be replaced by a more specific verb or verb-object word pair like “Create” or “Configure Networks,” when possible.
+2. **Finish button**: on the last step of the wizard, the Next button is labeled Finish by default. This is a configurable choice and should be replaced by a more specific verb or verb-object word pair like “Create” or “Configure networks,” when possible.
 
-If it will take a long time (more than a few seconds) for changes to be applied, a progress screen is recommended. This can be constructed from a variation of the empty state pattern by embedding a progress bar and appropriate messaging within the body of the wizard.
+If it will take a long time (more than a few seconds) for changes to be applied, a progress screen is recommended. This can be constructed from a variation of the [empty state](design-guidelines/usage-and-behavior/empty-state) pattern by embedding a progress bar and appropriate messaging within the body of the wizard.
 
 ![progress screen](img/progress-screen.png)
 
@@ -73,7 +73,7 @@ Once the changes initiated by the wizard are completed, a final confirmation scr
 ![completion screen](img/completion-screen.png)
 1. **Completion message**: provide appropriate messaging to inform the user about the outcome of the wizard.
 2. **Primary action**: in most cases this will be a navigational button to close the wizard and take the user to a page where they can see the results of their changes, e.g. a new project that was created. If there is no appropriate destination or if results will be seen on the current page, make the primary action Close.
-3. **Secondary action(s) (optional)**: If the primary action is other than Close, include a Close button here to close the wizard and return to the prior page. Other secondary actions can also be included. See [Empty state](design-guidelines/usage-and-behavior/empty-stae) for button placement.
+3. **Secondary action(s) (optional)**: If the primary action is other than Close, include a Close button here to close the wizard and return to the prior page. Other secondary actions can also be included. See [Empty state](design-guidelines/usage-and-behavior/empty-state) for button placement.
 
 In some cases the result of a wizard is to dispatch a task to the background to execute changes in the back end. In these circumstances, we recommend that you provide a navigation link to monitor task progress and/or simply a Close button.
 
@@ -83,13 +83,13 @@ A progressive wizard takes the same form as the standard wizard or wizard with s
 Here is an example...
 
 ![progressive wizard step 1](img/wizard-progressive-step1.png)
-Step 1: The user is presented with a Get Started screen where they can specify what they want to do.
+Step 1: The user is presented with a Get started screen where they can specify what they want to do.
 
 ![progressive wizard step 2](img/wizard-progressive-step2-new.png)
 Step 2: Based on their choice to create a new object, they are presented with a second set of options. But the remaining steps are still unknown.
 
 ![progressive wizard step 3](img/wizard-progressive-step3-new.png)
-Step 3: After the choose “Quick Create” and click Next, they can now be presented with a full set of steps. It should be possible to revisit either of the first two steps making different choices and steps shown should update accordingly.
+Step 3: After the choose “Quick create” and click Next, they can now be presented with a full set of steps. It should be possible to revisit either of the first two steps making different choices and steps shown should update accordingly.
 
 ### Mobile considerations
 When viewing a wizard on a mobile device, the steps sidebar will be hidden and collapse into a drop down menu panel as shown below.
@@ -102,7 +102,7 @@ You should keep the following in mind while designing your wizard screens:
 
 * Keep step labels short. The title at the top of each screen may be used to elaborate on the step label, but in all cases there should be a direct relationship between the step label and the screen title.
 * The last step should always be labeled review.
-* If you are replacing the default button labels, keep them short and action oriented, e.g. “Create network.”
+* Default button labels for wizard navigation are: Next, Back, and Finish. If you are replacing the default button labels, keep them short and action oriented, e.g. “Create network.”
 
 
 ## Related components and demos
