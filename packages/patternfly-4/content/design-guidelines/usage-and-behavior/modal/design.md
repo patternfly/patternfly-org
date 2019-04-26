@@ -100,5 +100,5 @@ The PatternFly components listed in the following sections can be used in a numb
 * [Button](/documentation/core/components/button)
 
 **React components**
-* [Modal](/documentation/react/components/modal),
+* [Modal](/documentation/react/components/modal)
 * [Button](/documentation/react/components/button)
