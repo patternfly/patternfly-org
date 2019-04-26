@@ -2,7 +2,7 @@
 path: "/get-started/developers"
 ---
 <h1 class="pf-c-title pf-m-4xl">Develop with PatternFly</h1>
-<p>Before you begin, check out <a href="/get-started/about">About Patternfly 4</a> to get acquainted with the basic elements of the design system.</p>
+<p>Before you begin, check out <a href="/get-started/about">About PatternFly 4</a> to get acquainted with the basic elements of the design system.</p>
 
 <h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Get started with:</h1>
 
@@ -24,7 +24,7 @@ path: "/get-started/developers"
 <h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Getting started</h1>
 <p><b>If you’re starting from scratch and would like to use a sample project</b>, we recommend starting with the PatternFly React seed.</p>
 
-<p>The React seed is an open source build scaffolding utility created to give developers a jump start when creating new projects that will use Patternfly.</p>
+<p>The React seed is an open source build scaffolding utility created to give developers a jump start when creating new projects that will use PatternFly.</p>
 
 <p><b>If you already have a project</b>, you can skip to the next section, [Installing and configuring PatternFly React](#installing-and-configuring).</p>
 
@@ -140,7 +140,7 @@ Follow the steps outlined in the [React seed README](https://github.com/patternf
 <p>To use the CDN vs the standard build, update the ```utilities/variables.scss``` file as follows:</p>
 <div class="code">$pf-global--enable-fontawesome-cdn: true !default;</div>
 
-<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Customizing Patternfly for your project</h1>
+<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Customizing PatternFly for your project</h1>
 <p>The CSS variable system enables you to easily customize things like color or shape without overwriting existing PatternFly styles.</p>
 
 <div class="link"><a href="/documentation/react/css-variables/">Learn more and view CSS variables.</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
