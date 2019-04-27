@@ -10,17 +10,21 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Update old stuff
+          command: |
+            curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.7.0
+            export PATH=$HOME/.yarn/bin:$PATH
+            curl -sSL "https://nodejs.org/dist/v8.15.0/node-v8.15.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v8.15.0-linux-x64/bin/node
+            curl https://www.npmjs.com/install.sh | sudo bash
+      - run:
           name: Sanity
           command: |
             yarn -v
             npm -v
             ruby -v
       - run:
-          name: Conditional install
-          command: |
-            curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.7.0
-            export PATH=$HOME/.yarn/bin:$PATH
-            yarn install
+          name: Install
+          command: yarn install
       - run:
           name: Build Site
           command: yarn build
