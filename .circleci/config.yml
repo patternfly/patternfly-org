@@ -5,7 +5,7 @@ jobs:
         ignore:
           - master
     docker:
-      - image: circleci/node:8.15
+      - image: circleci/ruby:2.4.6-jessie-node
     working_directory: ~/repo
     steps:
       - checkout
