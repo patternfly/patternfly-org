@@ -10,17 +10,17 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - run:
-          name: Update Node.js and npm
-          command: |
-            curl -sSL "https://nodejs.org/dist/v8.15.0/node-v8.15.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v8.15.0-linux-x64/bin/node
-            curl https://www.npmjs.com/install.sh | sudo bash
-      - run:
-          name: Install with yarn 1.7.0
-          command: |
-            curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.7.0
-            export PATH=$HOME/.yarn/bin:$PATH
-            yarn install
+      # - run:
+      #     name: Update Node.js and npm
+      #     command: |
+      #       curl -sSL "https://nodejs.org/dist/v8.15.0/node-v8.15.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v8.15.0-linux-x64/bin/node
+      #       curl https://www.npmjs.com/install.sh | sudo bash
+      # - run:
+      #     name: Install with yarn 1.7.0
+      #     command: |
+      #       curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.7.0
+      #       export PATH=$HOME/.yarn/bin:$PATH
+      #       yarn install
       - run:
           name: Build Site
           command: |
