@@ -3,13 +3,12 @@
 URL_SPLIT=(${CIRCLE_PULL_REQUEST//\// })
 PR_NUM=$(printf %s\\n "${URL_SPLIT[@]:(-1)}")
 # Domain names follow the RFC1123 spec [a-Z] [0-9] [-] limited to 253 characters
-# https://en.wikipedia.org/wiki/Domain_Name_System#Domain_name_syntax
 # So, just replace "/" or "." with "-"
-DEPLOY_SUBDOMAIN=`echo "$PR_NUM-pr-${CIRCLE_PROJECT_REPONAME}-${CIRCLE_PROJECT_USERNAME}" | tr '[\/|\.]' '-' | cut -c1-253`
+DEPLOY_SUBDOMAIN=`echo "$PR_NUM-pr-${CIRCLE_PROJECT_REPONAME}-${CIRCLE_PROJECT_USERNAME}" | tr '[\/|\.]' '-' | cut -c1-240`
 DEPLOY_DOMAIN="https://${DEPLOY_SUBDOMAIN}.surge.sh"
 ALREADY_DEPLOYED=`yarn run surge list | grep ${DEPLOY_SUBDOMAIN}`
 
-yarn run surge --project .public --domain $DEPLOY_DOMAIN;
+yarn run surge --project out --domain $DEPLOY_DOMAIN;
 
 if [ -z "$ALREADY_DEPLOYED" ]
 then
