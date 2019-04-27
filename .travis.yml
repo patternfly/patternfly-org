@@ -18,6 +18,9 @@ deploy:
     branch: master
 git:
   depth: 1
+branches:
+  only:
+  - master
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.7.0
   - export PATH=$HOME/.yarn/bin:$PATH
