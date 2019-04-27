@@ -1,0 +1,30 @@
+version: 2
+jobs:
+  build:
+    branches:
+        ignore:
+          - master
+    docker:
+      - image: circleci/node:8.15
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v{{ .Environment.CACHE_VERSION }}-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      - run:
+          name: Conditional install
+          command: if [ ! -d node_modules ]; then yarn install --frozen-lockfile; fi
+      - save_cache:
+          paths:
+            - node_modules
+            - packages/patternfly-3/node_modules
+            - packages/patternfly-4/node_modules
+            - packages/patternfly-4/plugins/gatsby-transformer-react-docgen-typescript/node_modules
+          key: v{{ .Environment.CACHE_VERSION }}-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      - run:
+          name: Build Site
+          command: yarn build
+      - run:
+          name: Deploy Docs
+          command: if [ -n "$CIRCLE_PULL_REQUEST" ]; then .circleci/upload_preview.sh; fi
