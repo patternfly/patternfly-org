@@ -5,13 +5,19 @@ jobs:
         ignore:
           - master
     docker:
-      - image: circleci/ruby:2.4.6-jessie-node
+      - image: circleci/ruby:2.4.1-jessie-node
     working_directory: ~/repo
     steps:
       - checkout
       - restore_cache:
           keys:
             - v{{ .Environment.CACHE_VERSION }}-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      - run:
+          name: Sanity
+          command: |
+            yarn -v
+            npm -v
+            ruby -v
       - run:
           name: Conditional install
           command: if [ ! -d node_modules ]; then yarn install --frozen-lockfile; fi
