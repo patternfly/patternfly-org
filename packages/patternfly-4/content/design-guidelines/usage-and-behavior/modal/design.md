@@ -1,6 +1,12 @@
 ---
 path: "/design-guidelines/usage-and-behavior/modal"
 ---
+
+import exclamationTriangle from './img/exclamation-triangle.svg';
+import exclamationCircle from './img/exclamation-circle.svg';
+import timesCircle from './img/times-circle.svg';
+import infoCircle from './img/info-circle.svg';
+
 # Modal dialogs
 Use modal dialogs load and display important information without navigating away from the current page.
 
@@ -86,10 +92,10 @@ See our [content guidelines](/design-guidelines/content/) for additional guidanc
 
 | Icon  | Use Case(s) | Usage |
 | ------------- | ------------- | ------------- |
-| ![exclamation-triangle](img/exclamation-triangle.svg) exclamation-triangle  | **Warning:** Caution/ Warning | Use on confirmation dialogs or passive dialogs to indicate a higher level of urgency and importance. |
-| ![exclamation-circle](img/exclamation-circle.svg) exclamation-circle  | **Critical Warning:** Information will be deleted/permanent action  | Use on confirmation dialogs or passive dialogs to indicate the highest level of urgency and importance. |
-| ![times-circle](img/times-circle.svg) times-circle  | **Error:** Alert the user that there has been a critical failure/error  | Use on error dialogs to indicate a problem. |
-| ![info-circle](img/info-circle.svg) info-circle  | **Acknowledgement:** Informs the user of an action or result  | Use on confirmation or passive dialogs to indicate a lower level of urgency. |
+| <img src={exclamationTriangle} /> | **Warning:** Caution/ Warning | Use on confirmation dialogs or passive dialogs to indicate a higher level of urgency and importance. |
+| <img src={exclamationCircle} /> | **Critical Warning:** Information will be deleted/permanent action  | Use on confirmation dialogs or passive dialogs to indicate the highest level of urgency and importance. |
+| <img src={timesCircle} /> | **Error:** Alert the user that there has been a critical failure/error  | Use on error dialogs to indicate a problem. |
+| <img src={infoCircle} /> | **Acknowledgement:** Informs the user of an action or result  | Use on confirmation or passive dialogs to indicate a lower level of urgency. |
 
 ## Components and demos used
 The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use-cases. We’ll explore several examples in this documentation.
