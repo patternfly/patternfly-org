@@ -3,6 +3,12 @@
   .pf-c-page__header-brand {
     background-color: #151515;
   }
+  @media screen and (min-width: 992px) {
+    .pf-c-page__header-nav {
+      margin-right: 50px;
+      margin-left: 50px;
+    }
+  }
   &-brand-toggle {
     display: none;
     @media (max-width: 768px) {
