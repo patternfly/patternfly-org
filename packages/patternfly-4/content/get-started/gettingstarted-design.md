@@ -1,44 +1,57 @@
 ---
 path: "/get-started/designers"
 ---
+# Design with PatternFly
+Before you begin, check out our [overview of PatternFly 4](/get-started/about) to get acquainted with the basic elements of the design system.
 
-<h1 class="pf-c-title pf-m-4xl">Design with PatternFly</h1>
+## Get set up
 
-<p>Before you begin, check out <a href="/get-started/about">About PatternFly 4</a> to get acquainted with the basic elements of the design system.</p>
+### Download and install the PatterFly 4 design kit
+The design kit is a collection of assets that make it easy for you to create high-fidelity design mockups using PatternFly 4 components.
 
-<h1 class="pf-c-title pf-m-3xl pf-u-mt-xl">Designing with PatternFly 4</h1>
+The design kit works with Sketch libraries and templates. To use it, you'll need to have [Sketch](https://www.sketch.com/) version 47 or above.
 
-<p>PatternFly is made up of modular components that can be assembled in a variety of ways to build applications and interfaces, along with styles, standards, and design guidelines to help you choose and use the right components for your project.</p>
+### Download the design kit files:
 
-<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Start with styles</h1>
+**Add the Sketch library**
 
-<p>What typography should you be using? What about colors? Spacing? Check out styles to learn everything you need to know about our foundational design elements.</p>
+1. Access the [PatternFly 4 design library](https://sketch.cloud/s/wxoZ9) on Sketch cloud.
+2. Click **Add library to Sketch** on the bottom right to add the library. You'll be prompted with a modal. Click **Add library to Sketch** again. Sketch will show you the library in your preferences window. You're all set!
 
-<div class="link"><a href="/design-guidelines/styles/icons">View styles</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
+**Add the Sketch template**
 
-<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Get familiar with usage and behavior guidelines</h1>
+1. Access the [PatternFly 4 design template](https://sketch.cloud/s/wxydj) on Sketch cloud.
+2. Click **Download Document** on the bottom right to add the library.
+3. Navigate to the file you just downloaded, `PatternFly 4 Template.sketch`, and open it.
+4. Navigate to `File > Save as Template...` and name your file whatever makes sense to you. We recommend something simple like `PatternFly 4`. You can now access the PatternFly 4 template from `File > New from Template...`.
 
-<p>Should you use a wizard or a form to solve this problem? How do you write a good button label? Which navigation makes the most sense? Check out our design guidelines to choose and use the right components for your use case.</p>
+## Start designing
+PatternFly is made up of modular components that can be assembled in a variety of ways to build applications and interfaces, along with styles, standards, and design guidelines to help you choose and use the right components for your project.
 
-<div class="link"><a href="/design-guidelines/usage-and-behavior/about-modal">View usage and behavior</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
+### Start with styles.
+What typography should you be using? What about colors? Spacing? Check out styles to learn everything you need to know about our foundational design elements.
 
-<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Start building with components</h1>
+[View styles](/design-guidelines/styles/icons)
 
-<p>What does a toolbar look like? What about a filter chip? Components are the building blocks of the design system. Check out individual component pages to view examples, understand states and behavior, and check out the code samples (if you’re into that kind of thing).</p>
+### Get familiar with usage and behavior guidelines.
+Should you use a wizard or a form to solve this problem? How do you write a good button label? Which navigation makes the most sense? Check out our design guidelines to choose and use the right components for your use case.
 
-<div class="link"><a href="/documentation/core">View HTML/CSS components</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
+[View usage and behavior](/design-guidelines/usage-and-behavior/about-modal)
 
-<div class="link"><a href="/documentation/react">View React components</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
+### Start building with components.
+What does a toolbar look like? What about a filter chip? Components are the building blocks of the design system. Check out individual component pages to view examples, understand states and behavior, and check out the code samples (if you’re into that kind of thing).
 
+[View HTML/CSS components](/documentation/core)
 
-<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Still feeling unsure? See all the pieces working together with demos.</h1>
+[View React components](/documentation/react)
 
+### Still feeling unsure? See all the pieces working together with demos.
+What does it look like when you combine all the ingredients? Demos provide examples of a few common ways you might combine layouts and components to give you an idea what’s possible.
 
-<p>What does it look like when you combine all the ingredients? Demos provide examples of a few common ways you might combine layouts and components to give you an idea what’s possible.</p>
+[View HTML/CSS demos](/documentation/core)
 
-<div class="link"><a href="/documentation/core">View HTML/CSS demos</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
+[View React demos](/documentation/react)
 
-<div class="link"><a href="/documentation/react">View React Demos</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
 
 <!-- **WIP - still need to gather details on how this will work**
 
@@ -63,6 +76,3 @@ Click Add library.
 1. From your PatternFly design kit directory, use Sketch to open the file PatternFly Template.sketch
 2. In Sketch, select ```File > Save as template```.
 3. **Start using the design kit!** That’s it - you’re all set to start using PatternFly 4 in your designs. -->
-
-<!-- 
-<div class="lastLine">Interested in contributing? Visit our <a href="URL">contributions page</a> to learn more.</div> -->
