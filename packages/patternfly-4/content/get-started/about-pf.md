@@ -1,57 +1,55 @@
 ---
 path: "/get-started/about"
 ---
+# About PatternFly 4
+PatternFly is an open source design system created to enable consistency and usability across a wide range of applications and use cases. PatternFly provides clear standards, guidance, and tools that help designers and developers work together more efficiently and build better user experiences.
 
-<h1 class="pf-c-title pf-m-4xl">About Patternfly 4</h1>
-<p>PatternFly is an open source design system created to enable consistency and usability across a wide range of applications and use cases. PatternFly provides clear standards, guidance, and tools that help designers and developers work together more efficiently and build better user experiences.</p>
+## Basic structure
 
-<h1 class="pf-c-title pf-m-3xl pf-u-mt-xl">Basic structure</h1>
+### Components
+Components, like buttons and alerts, can be assembled together to build applications.
 
-<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Components</h1>
-<p>Components, like buttons and alerts, can be assembled together to build applications.</p>
+### Layouts
+Layouts are generic tools that allow you to structure and organize the content on your pages.
 
-<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Layouts</h1>
-<p>Layouts are generic tools that allow you to structure and organize the content on your pages.</p>
+### Demos
+Demos use components and layouts in combination to show you how to build more complex structures and application views.
 
-<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Demos</h1>
-<p>Demos use components and layouts in combination to show you how to build more complex structures and application views.</p>
+[View components, layouts, and demos in HTML/CSS](/documentation/core)
 
-<div class="link"><a href="/documentation/core">View components, layouts, and demos in HTML/CSS</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
+[View components, layouts, and demos in React](/documentation/react)
 
-<div class="link"><a href="/documentation/react">View components, layouts, and demos in React</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
+## Design guidelines
+### Styles
+Style guidelines define foundational elements of the design system, like color, typography, and spacing.
 
-<h1 class="pf-c-title pf-m-3xl pf-u-mt-xl">Design guidelines</h1>
+### Usage and behavior
+Usage and behavior guidelines communicate standards and best practices for common design patterns like navigation, dashboards, or forms.
 
-<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Styles</h1>
-<p>Style guidelines define foundational elements of the design system, like color, typography, and spacing.</p>
+### Content
+Content guidelines provide principles and best practices around writing for user experience along with general voice and style guidance.
 
-<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Usage and behavior</h1>
-<p>Usage and behavior guidelines communicate standards and best practices for common design patterns like navigation, dashboards, or forms.</p>
+[View design guidelines](/design-guidelines/styles/icons)
 
-<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Content</h1>
-<p>Content guidelines provide principles and best practices around writing for user experience along with general voice and style guidance.</p>
+## Additional tools
+### CSS variables
+You can customize PatternFly for your project using the CSS variable system, which enables you to change style elements like color across your project. The CSS variable system is a two-layer theming system where global variables inform component variables.
 
-<div class="link"><a href="/design-guidelines/styles/icons">View Styles</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
+**Global variables**
+Global variables define and enforce style elements (like global values for color, spacing, and font size) across the entire system.  
 
-<h1 class="pf-c-title pf-m-3xl pf-u-mt-xl">Additional tools</h1>
+**Component variables**
+Component variables are used to define custom properties at the component level. Component variables are always defined by global variables.
 
-<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">CSS Variables</h1>
-<p>You can customize PatternFly for your project using the CSS variable system, which enables you to change style elements like color across your project. The CSS variable system is a two-layer theming system where global variables inform component variables.</p>
+[Learn more and view CSS variables](/documentation/react/css-variables/)
 
-<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Global variables</h1>
-<p>Global variables define and enforce style elements (like global values for color, spacing, and font size) across the entire system.</p>
+### Utilities
+Utilities are a set of classes that enable you to further customize and modify elements in your project without having to write any custom CSS.
 
-<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Component variables</h1>
-<p>Component variables are used to define custom properties at the component level. Component variables are always defined by global variables.</p>
+For example, you might use a utility class to add additional spacing between elements, align content in a layout, or even add a box shadow to an element.
 
-<div class="link"><a href="/documentation/react/css-variables/">Learn more and view CSS variables</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
+[View utilities](/documentation/core/utilities/accessibility)
 
-<h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Utilities</h1>
-<p>Utilities are a set of classes that enable you to further customize and modify elements in your project without having to write any custom CSS.</p>
-
-<p>For example, you might use a utility class to add additional spacing between elements, align content in a layout, or even add a box shadow to an element.</p>
-
-<div class="link"><a href="/documentation/core/utilities/accessibility">View utilities</a><i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i></div>
 
 
 <!-- This section is WIP ** we need to wait to see how this content gets included **
