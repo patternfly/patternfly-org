@@ -5,8 +5,8 @@ path: "/get-started/developers"
 Before you begin, check out our [overview of PatternFly 4](/get-started/about) to get acquainted with the basic elements of the design system.
 
 Get started with:
-* [React](#react)
-* [HTML/CSS](#html/css)
+* [**React**](#react)
+* [**HTML/CSS**](#html/css)
 
 ## React
 
@@ -17,11 +17,11 @@ The React library provides a collection of React components you can use to build
 
 **NPM**
 
-[Get started with npm](https://nodejs.org/en/download).
+[**Get started with npm**](https://nodejs.org/en/download).
 
 **Yarn**
 
-[Get started with Yarn](https://yarnpkg.com/en/docs/getting-started).
+[**Get started with Yarn**](https://yarnpkg.com/en/docs/getting-started).
 
 ## Getting started
 **If you’re starting from scratch and would like to use a sample project**, we recommend starting with the PatternFly React seed.
@@ -164,4 +164,4 @@ PatternFly 4 uses Font Awesome 5. Font Awesome 5 can be utilized in two differen
 ### Customizing PatternFly for your project
 The CSS variable system enables you to easily customize things like color or shape without overwriting existing PatternFly styles.
 
-[Learn more and view CSS variables.](/documentation/react/css-variables/)
+[**Learn more and view CSS variables**](/documentation/react/css-variables/) <i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
