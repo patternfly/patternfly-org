@@ -12,21 +12,22 @@ path: "/get-started/designers"
 
 <p>The design kit is a collection of assets that make it easy for you to create high-fidelity design mockups using PatternFly 4 components.</p>
 
-<p>The design kit works with Sketch libraries and templates. To use it, you'll need to have <div class="link"><a href="https://www.sketch.com/">Sketch</a> version 47 or above.</p>
+<p>The design kit works with Sketch libraries and templates. To use it, you'll need to have <a href="https://www.sketch.com/">Sketch</a> version 47 or above.</p>
 
 <h1 class="pf-c-title pf-m-xl pf-u-mt-xl">Download the design kit files:</h1>
 <p><b>Add the Sketch library</b></p>
 <ol>
-<li>Access the <div class="link"><a href="https://sketch.cloud/s/wxoZ9">PatternFly 4 design library</a> on Sketch cloud.</li>
+<li>Access the <a href="https://sketch.cloud/s/wxoZ9">PatternFly 4 design library</a> on Sketch cloud.</li>
 <li>Click <b>Add library to Sketch</b> on the bottom right to add the library. You'll be prompted with a modal. Click <b>Add library to Sketch</b> again. Sketch will show you the library in your preferences window. You're all set!</li>
-
+</ol>
 
 <p><b>Add the Sketch template</b></p>
 <ol>
 <li>Access the <div class="link"><a href="https://sketch.cloud/s/wxydj">PatternFly 4 design template</a> on Sketch cloud.</li>
 <li>Click <b>Download Document</b> on the bottom right to add the library.</li>
 <li>Navigate to the file you just downloaded, <code>PatternFly 4 Template.sketch</code>, and open it.</li>
-<li>Navigate to <code>File > Save as Template...</code> and name your file whatever makes sense to you. We recommend something simple like <code>PatternFly 4</code>." You can now access the PatternFly 4 template from <code>File > New from Template...</code>.</li>  
+<li>Navigate to <code>File > Save as Template...</code> and name your file whatever makes sense to you. We recommend something simple like <code>PatternFly 4</code>." You can now access the PatternFly 4 template from <code>File > New from Template...</code>.</li>
+</ol>  
 
 <h1 class="pf-c-title pf-m-3xl pf-u-mt-xl">Start designing</h1>
 
