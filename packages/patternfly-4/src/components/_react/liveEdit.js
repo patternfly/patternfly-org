@@ -72,6 +72,7 @@ class LiveEdit extends React.Component {
           <LivePreview className={css('example', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')} />
           <EditorToolbar
             raw={this.code}
+            showLights={false}
             editor={<LiveEditor className={css('code')} />}
             fullPath={fullPath}
             onLightsChange={this.onDarkModeChange} />
