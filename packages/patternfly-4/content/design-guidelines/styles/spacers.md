@@ -2,8 +2,8 @@
 path: "/design-guidelines/styles/spacers"
 ---
 
-<h1 class="pf-c-title pf-m-4xl">Spacers</h1>
-<p class="pf-u-mb-2xl">We use spacers to define fixed amounts of space between elements. Spacers make it easy for designers to maintain consistency across screens. Since the same spacer sizes and values are built into the PatternFly codebase, spacers also majorly simplify the design handoff between designers and developers.</p>
+# Spacers
+We use spacers to define fixed amounts of space between elements. Spacers make it easy for designers to maintain consistency across screens. Since the same spacer sizes and values are built into the PatternFly codebase, spacers also majorly simplify the design handoff between designers and developers.
 
 <div class="pf-u-display-flex pf-u-flex-direction-row pf-u-mb-lg">
   <div class="spacer4">
@@ -12,7 +12,7 @@ path: "/design-guidelines/styles/spacers"
     <div class="spacerTitle">4px spacer</div>
     <div class="pf-u-display-flex pf-u-flex-direction-row">
       <p>Global CSS variable</p>
-      <div class="code">pf-global-spacer-xs</div>
+      <div class="codeText">--pf-global-spacer-xs</div>
     </div>
   </div>
 </div>
@@ -24,7 +24,7 @@ path: "/design-guidelines/styles/spacers"
     <div class="spacerTitle">8px spacer</div>
     <div class="pf-u-display-flex pf-u-flex-direction-row">
       <p>Global CSS variable</p>
-      <div class="code">pf-global-spacer-sm</div>
+      <div class="codeText">--pf-global-spacer-sm</div>
     </div>
   </div>
 </div>
@@ -36,7 +36,7 @@ path: "/design-guidelines/styles/spacers"
     <div class="spacerTitle">16px spacer</div>
     <div class="pf-u-display-flex pf-u-flex-direction-row">
       <p>Global CSS variable</p>
-      <div class="code">pf-global-spacer-md</div>
+      <div class="codeText">--pf-global-spacer-md</div>
     </div>
   </div>
 </div>
@@ -48,7 +48,7 @@ path: "/design-guidelines/styles/spacers"
     <div class="spacerTitle">24px spacer</div>
     <div class="pf-u-display-flex pf-u-flex-direction-row">
       <p>Global CSS variable</p>
-      <div class="code">pf-global-spacer-lg</div>
+      <div class="codeText">--pf-global-spacer-lg</div>
     </div>
   </div>
 </div>
@@ -60,7 +60,7 @@ path: "/design-guidelines/styles/spacers"
     <div class="spacerTitle">32px spacer</div>
     <div class="pf-u-display-flex pf-u-flex-direction-row">
       <p>Global CSS variable</p>
-      <div class="code">pf-global-spacer-xl</div>
+      <div class="codeText">--pf-global-spacer-xl</div>
     </div>
   </div>
 </div>
@@ -72,7 +72,7 @@ path: "/design-guidelines/styles/spacers"
     <div class="spacerTitle">48px spacer</div>
     <div class="pf-u-display-flex pf-u-flex-direction-row">
       <p>Global CSS variable</p>
-      <div class="code">pf-global-spacer-2xl</div>
+      <div class="codeText">--pf-global-spacer-2xl</div>
     </div>
   </div>
 </div>
@@ -84,7 +84,7 @@ path: "/design-guidelines/styles/spacers"
     <div class="spacerTitle">64px spacer</div>
     <div class="pf-u-display-flex pf-u-flex-direction-row">
       <p>Global CSS variable</p>
-      <div class="code">pf-global-spacer-3xl</div>
+      <div class="codeText">--pf-global-spacer-3xl</div>
     </div>
   </div>
 </div>
