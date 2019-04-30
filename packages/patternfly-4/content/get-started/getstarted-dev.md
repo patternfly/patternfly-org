@@ -23,7 +23,6 @@ The React library provides a collection of React components you can use to build
 
   [Start with the PatternFly React seed](#starting-with-the-react-seed). The React seed is an open source build scaffolding utility created to give developers a jump start when creating new projects that will use Patternfly.
 
-
   * **Start with your existing project**
 
   If you want to start with your existing project, skip to the next section, [Installing and configuring PatternFly React](#installing-and-configuring-patternfly).
@@ -161,4 +160,4 @@ PatternFly 4 uses Font Awesome 5. Font Awesome 5 can be utilized in two differen
 ### Customizing PatternFly for your project
 The CSS variable system enables you to easily customize things like color or shape without overwriting existing PatternFly styles.
 
-[Learn more and view CSS variables.](/documentation/react/css-variables/)
+[**Learn more and view CSS variables**](/documentation/react/css-variables/) <i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i>

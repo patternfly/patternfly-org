@@ -15,9 +15,9 @@ Layouts are generic tools that allow you to structure and organize the content o
 ### Demos
 Demos use components and layouts in combination to show you how to build more complex structures and application views.
 
-[View components, layouts, and demos in HTML/CSS](/documentation/core)
+[**View components, layouts, and demos in HTML/CSS**](/documentation/core) <i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
-[View components, layouts, and demos in React](/documentation/react)
+[**View components, layouts, and demos in React**](/documentation/react) <i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 ## Design guidelines
 ### Styles
@@ -29,7 +29,7 @@ Usage and behavior guidelines communicate standards and best practices for commo
 ### Content
 Content guidelines provide principles and best practices around writing for user experience along with general voice and style guidance.
 
-[View design guidelines](/design-guidelines/styles/icons)
+[**View design guidelines**](/design-guidelines/styles/icons) <i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 ## Additional tools
 ### CSS variables
@@ -41,14 +41,14 @@ Global variables define and enforce style elements (like global values for color
 **Component variables**
 Component variables are used to define custom properties at the component level. Component variables are always defined by global variables.
 
-[Learn more and view CSS variables](/documentation/react/css-variables/)
+[**Learn more and view CSS variables**](/documentation/react/css-variables/) <i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 ### Utilities
 Utilities are a set of classes that enable you to further customize and modify elements in your project without having to write any custom CSS.
 
 For example, you might use a utility class to add additional spacing between elements, align content in a layout, or even add a box shadow to an element.
 
-[View utilities](/documentation/core/utilities/accessibility)
+[**View utilities**](/documentation/core/utilities/accessibility) <i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 
 
