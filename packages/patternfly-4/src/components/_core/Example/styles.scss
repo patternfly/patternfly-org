@@ -43,8 +43,8 @@
   code {
     min-width: 32px;
     padding: 4px 8px;
-    background-color: #00659c;
-    border-radius: 18px;
+    background-color: var(--pf-global--primary-color--100);
+    border-radius: var(--pf-global--BorderRadius--sm);
     color: #fff;
     font-size: 12px;
     font-weight: 600;
@@ -52,6 +52,11 @@
     white-space: nowrap;
     a {
       color: #fff;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: var(--pf-global--primary-color--200);
     }
   }
 }
