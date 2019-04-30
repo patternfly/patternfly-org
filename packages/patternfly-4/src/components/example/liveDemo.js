@@ -114,7 +114,7 @@ class LiveDemo extends React.Component {
         <LiveProvider code={raw} scope={scope} transformCode={transformCode}>
           {live && <LivePreview className={css(className, 'example', darkThemeClasses)} />}
           {children}
-          <EditorToolbar editor={editor} raw={raw} fullPath={fullPath} showLights={!fullPageOnly} onLightsChange={this.onLightsChange}/>
+          <EditorToolbar editor={editor} raw={raw} fullPath={fullPath} showLights={false} onLightsChange={this.onLightsChange}/>
           {live && <LiveError />}
         </LiveProvider>
       </Section>
