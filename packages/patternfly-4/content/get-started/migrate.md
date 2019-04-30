@@ -8,7 +8,7 @@ path: "/get-started/migration"
 The first step in moving from PatternFly 3 to PatternFly 4 should be a migration strategy. Putting a solid plan in place before you start trying to migrate your codebase will help you prioritize and chunk your work and identify areas where migrating may impact design elements like interaction patterns or spacing.
 
 ### Milestone 1: Start with high impact visuals
-<p>Make a big impact in a small amount of time by updating high impact visual elements first. This approach enables you to move your application into the same visual language as PatternFly 4 and also gets PatternFly 4 in your development stack.</p>
+Make a big impact in a small amount of time by updating high impact visual elements first. This approach enables you to move your application into the same visual language as PatternFly 4 and also gets PatternFly 4 in your development stack.
 
 High impact visuals include:
 * Color
@@ -16,7 +16,7 @@ High impact visuals include:
 * Iconography
 * Navigation and masthead
 
-**Note:** PatternFly 4 provides an updated navigation system. If you choose to rework your application’s existing navigation, it’s best to break this work into two steps: one that tackles styles like typography and color, and another for the navigation work.</p>  
+**Note:** PatternFly 4 provides an updated navigation system. If you choose to rework your application’s existing navigation, it’s best to break this work into two steps: one that tackles styles like typography and color, and another for the navigation work. 
 
 Use Sketch to create high fidelity mockups to visualize the changes required and communicate them to development.
 
