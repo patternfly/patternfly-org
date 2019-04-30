@@ -8,6 +8,7 @@ Technically, a button represents a box area that can be clicked or tapped, while
 
 ## Usage
 [Button usage](#button-usage)
+
 [Link usage](#link-usage)
 
 ## Button usage
@@ -19,18 +20,23 @@ Use different button types to build hierarchy in an application layout.
   ![Button types](img/buttontype.png)
 
   **Primary button**
+
   Use primary buttons for the main action you want a user to take on a page. Try to limit primary buttons to one per page.
 
   **Secondary button**
+
   Use secondary buttons for secondary actions a user can take. For example, a cancel button would be secondary to a submit button on a form or modal.
 
   **Danger button**
+
   Use danger buttons for actions a user can take that are potentially destructive or difficult/impossible to undo, like deleting or removing user data.
 
   **Text button**
+
   Use a text button for secondary or tertiary actions on a page or modal. For example, you might use text buttons to indicate actions a user might take on items in a data list or table to reduce visual clutter and save space.
 
   **Icon button**
+
   Use icon buttons for actions that are commonly associated with icons. For example, you could use the close icon to exit a modal or window, or use the hamburger icon to toggle a menu.
 
 <!--  ### Using buttons in your designs
@@ -63,13 +69,16 @@ For links that navigate users to any location external to the current website or
 Don't use link text to represent actions.
 
 ## Content
+
 **Writing button labels**
+
 * Button labels should be specific and clearly communicate their associated action.
 * Always use verbs or verb phrases.
 * Aim for short (1-3 words) labels wherever possible.
 * Avoid long button labels that might risk wrapping.
 
 **Writing link labels**
+
 Use specific, action-focused labels that match what the user will see when they arrive at their location. For example, if you are sending a user to a dashboard, your link label might read _View dashboard_. For a link directing a user to a support forum, you might say _Get help in the support forum_.
 
 See our [content guidelines](/design-guidelines/content/) for additional guidance.

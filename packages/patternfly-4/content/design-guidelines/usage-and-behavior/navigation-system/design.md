@@ -6,13 +6,18 @@ Navigation is used to organize an application’s structure and content, making 
 
 ## Elements
 ![Navigation system elements](img/nav-elements.png)
-1. Masthead
-2. [Context selector (optional)](#context-selector) - enables a user to switch between different application contexts, like administration and monitoring
-3. [Horizontal navigation](#horizontal-navigation)
-4. [Breadcrumbs](#breadcrumbs)
-5. Menu icon button - provides a way for users to toggle vertical navigation
-6. [Vertical navigation](#vertical-navigation)
-7. [Local navigation](#local-navigation)
+
+![Navigation system elements](img/nav-elements2.png)
+
+![Navigation system elements](img/nav-elements3.png)
+
+1. **Masthead**
+2. [**Context selector** (optional)](#context-selector) - enables a user to switch between different application contexts, like administration and monitoring
+3. [**Horizontal navigation**](#horizontal-navigation)
+4. **Menu icon button** - provides a way for users to toggle vertical navigation
+5. [**Vertical navigation**](#vertical-navigation)
+6. [**Local navigation**](#local-navigation)
+7. [**Breadcrumbs**](#breadcrumbs)
 
 ## Usage
 ### Vertical navigation
@@ -26,20 +31,20 @@ Vertical navigation is hierarchical global navigation that displays navigation o
 * You expect your application to be used on mobile devices
 
 #### Variations
-**Simple vertical navigation**
-![Single level](img/single-level.png)
-Use a simple, single-level vertical navigation when you only have one level of navigation to display.
+  * **Simple vertical navigation**
+  ![Single level](img/single-level.png)
+  Use a simple, single-level vertical navigation when you only have one level of navigation to display.
 
-**Grouped navigation**
-![Two level nav](img/two-level.png)
+  * **Grouped navigation**
+  ![Two level nav](img/two-level.png)
 
-When you have a small amount of secondary navigation items, you can group your items and display them persistently beneath the primary navigation items.
+  When you have a small amount of secondary navigation items, you can group your items and display them persistently beneath the primary navigation items.
 
-**Expandable vertical navigation**
+  * **Expandable vertical navigation**
 
-![Expandable nav](img/expandable.png)
+  ![Expandable nav](img/expandable.png)
 
-When you have a large number of secondary navigation items, you can use an expandable navigation to collapse and expand options as needed.
+  When you have a large number of secondary navigation items, you can use an expandable navigation to collapse and expand options as needed.
 
 ### Horizontal navigation
 
