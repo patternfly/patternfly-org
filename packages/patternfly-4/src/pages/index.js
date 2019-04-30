@@ -34,7 +34,7 @@ const IndexPage = () => (
         </GridItem>
       </Grid>
     </PageSection>
-    <PageSection variant={PageSectionVariants.light}>
+    <PageSection className="pf4-m-background-white">
       <Grid>
         <GridItem sm={12} md={6} mdOffset={3} className="pf-u-py-2xl pf-u-text-align-center">
           <Title size="4xl" id="AboutPatternFly4" className="pf-u-mb-md">About PatternFly 4</Title>

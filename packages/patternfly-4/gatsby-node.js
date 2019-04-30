@@ -242,7 +242,9 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }
         }),
         plugins.minifyCss(),
       ].filter(Boolean),
-    }
+    };
+    // No sourcemaps
+    config.devtool = false;
   }
 
   actions.replaceWebpackConfig(config);

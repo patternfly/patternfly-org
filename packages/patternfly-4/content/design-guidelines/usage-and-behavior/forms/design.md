@@ -12,7 +12,7 @@ Most forms will contain the following basic elements:
 *Form elements*
 ![Form elements](img/form-elements.png)
 
-1. [Labels](#labeling) - Field labels can be aligned to the left or top of the field depending on the layout of your page and the amount of space you have to work with.
+1. [Labels](#labeling) - Field labels can be aligned to the top or left of the field depending on the layout of your page and the amount of space you have to work with.
 
 2. [Text input/text area](/design-guidelines/usage-and-behavior/data-input) - provides an area for users to input free-form text.
 
@@ -24,15 +24,16 @@ Most forms will contain the following basic elements:
 
 6. Buttons - enable a user to submit or exit a form. Button placement depends on the type of form you're presenting to the user.
 
+7. [Required field indicator](#indicating-required-fields)
+
 <!--When using forms in a modal, align buttons to the right edge of the input field. Place the primary button on the far right and the secondary button to the left.
 
-  ![Buttons on a modal](img/modal-button.png)
+![Buttons on a modal](img/modal-button.png)
 
-  When using full page forms, align buttons to the left, placing the primary button on the left and secondary on the right.
+When using full page forms, align buttons to the left, placing the primary button on the left and secondary on the right.
 
-  ![Buttons on a full page](img/fullpage-button.png)-->
+![Buttons on a full page](img/fullpage-button.png)-->
 
-7. [Required field indicator](#indicating-required-fields)
 
 ## Designing forms
 ### Labeling
