@@ -4,53 +4,53 @@ path: "/get-started/developers"
 # Develop with PatternFly
 Before you begin, check out our [overview of PatternFly 4](/get-started/about) to get acquainted with the basic elements of the design system.
 
-Get started with:
-* [**React**](#react)
-* [**HTML/CSS**](#htmlcss)
+**Before you begin, install a package manager:**
+
+* [Use npm](https://nodejs.org/en/download)
+* [Use Yarn](https://yarnpkg.com/en/docs/getting-started)
+
+### Get started with:
+
+* [React](#react)
+* [HTML/CSS](#html/css)
 
 ## React
 
 The React library provides a collection of React components you can use to build interfaces with consistent markup, styling, and behavior.
 
-## Before you begin
-### Install a package manager
-
-**NPM**
-
-[**Get started with npm**](https://nodejs.org/en/download).
-
-**Yarn**
-
-[**Get started with Yarn**](https://yarnpkg.com/en/docs/getting-started).
-
 ## Getting started
-**If you’re starting from scratch and would like to use a sample project**, we recommend starting with the PatternFly React seed.
+  * **Start with a sample project**
 
-The React seed is an open source build scaffolding utility created to give developers a jump start when creating new projects that will use Patternfly.
+  [Start with the PatternFly React seed](#starting-with-the-react-seed). The React seed is an open source build scaffolding utility created to give developers a jump start when creating new projects that will use Patternfly.
 
-**If you already have a project**, you can skip to the next section, [Installing and configuring PatternFly React](#installing-and-configuring-patternfly).
+  * **Start with your existing project**
 
-### Starting with the React seed
-**Fork the project**
+  If you want to start with your existing project, skip to the next section, [Installing and configuring PatternFly React](#installing-and-configuring-patternfly).
 
-[Fork and clone](https://help.github.com/articles/fork-a-repo/) the PatternFly React Seed project from https://github.com/patternfly/patternfly-react-seed.
+### Start with the React seed
+1. **Fork the project**
 
-**Install the project**
+  [Fork and clone the PatternFly React Seed project](https://github.com/patternfly/patternfly-react-seed).
 
-Follow the steps outlined in the [React seed README](https://github.com/patternfly/patternfly-react-seed#quick-start) to install.
+  For more information about how to fork and clone a repo, [view GitHub Help](https://help.github.com/articles/fork-a-repo/).
 
-### Installing and configuring PatternFly React
-Using npm, run the following commands to install:
-```
-npm install @patternfly/react-core --save
-```
 
-**OR**
+2. **Install the project**
 
-Using yarn, run the following commands to install:
-```
-yarn add @patternfly/react-core
-```
+  Follow the steps outlined in the [README](https://github.com/patternfly/patternfly-react-seed#quick-start) to install.
+
+### Install and configure PatternFly React
+* Using npm, run the following commands to install:
+  ```
+  npm install @patternfly/react-core --save
+  ```
+
+  **OR**
+
+* Using yarn, run the following commands to install:
+  ```
+  yarn add @patternfly/react-core
+  ```
 
 **Configurations**
 * [TypeScript](https://github.com/patternfly/patternfly-react-seed/blob/master/tsconfig.json)
@@ -61,11 +61,7 @@ yarn add @patternfly/react-core
 ## HTML/CSS
 The HTML/CSS library provides a collection of code samples you can use to build interfaces with consistent PatternFly markup and styling.
 
-### Before you begin
-**Install NPM**
-NPM is a package manager that’s bundled with Node.js. It’s required to download dependencies. Download the installer from https://nodejs.org/en/download
-
-### Installing
+### Install
 Using npm, run the following commands to install:
 ```
 npm install @patternfly/patternfly-next
@@ -101,7 +97,7 @@ If you need to overwrite any elements, we recommend extending the variables foun
 
 Use these files to consume the library. The recommended consumption approach will vary from project to project.
 
-### Configuring your project
+### Configure your project
 1. Navigate to the patternfly-next package you just installed and find the PatternFly 4 CSS stylesheet, ```patternfly.css```
 
 2. Copy ```patternfly.css``` to your project's CSS directory.

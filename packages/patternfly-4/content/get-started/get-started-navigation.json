@@ -12,6 +12,10 @@
     "path": "/get-started/designers"
   },
   {
+    "text": "Migrate from PatternFly 3",
+    "path": "/get-started/migrate"
+  },
+  {
     "text": "Accessibility guide",
     "path": "/get-started/accessibility-guide"
   }
