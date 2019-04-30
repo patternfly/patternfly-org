@@ -12,7 +12,7 @@ Most forms will contain the following basic elements:
 *Form elements*
 ![Form elements](img/form-elements.png)
 
-1. [Labels](#labeling) - Field labels can be aligned to the left or top of the field depending on the layout of your page and the amount of space you have to work with.
+1. [Labels](#labeling) - Field labels can be aligned to the top or left of the field depending on the layout of your page and the amount of space you have to work with.
 
 2. [Text input/text area](/design-guidelines/usage-and-behavior/data-input) - provides an area for users to input free-form text.
 
