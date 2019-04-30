@@ -1,25 +1,5 @@
-// @import '~@patternfly/patternfly/components/Table/table.scss';
-
 .pf4-site-typography-grid {
   font-family: var(--pf-global--FontFamily--sans-serif);
-}
-.pf-site-md-nav {
-  margin-top: 16px;
-
-  .pf-c-nav__link {
-    padding-top: var(--pf-global--spacer--sm) !important;
-    border-left: 4px solid transparent;
-    &:active,
-    &:hover {
-      background-color: #f8f8f8;
-      border-left-color: #06c;
-      font-weight: var(--pf-global--FontWeight--normal);
-    }
-    &.pf-m-current {
-      background-color: #f8f8f8;
-      border-left-color: #06c;
-    }
-  }
 }
 
 .pageSectionStyles {

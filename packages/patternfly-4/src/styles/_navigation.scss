@@ -97,6 +97,18 @@
     &.pf-m-current {
       color: #151515;
     }
+    padding-top: var(--pf-global--spacer--sm) !important;
+    border-left: 4px solid transparent;
+    &:active,
+    &:hover {
+      background-color: #f8f8f8;
+      border-left-color: #06c;
+      font-weight: var(--pf-global--FontWeight--normal);
+    }
+    &.pf-m-current {
+      background-color: #f8f8f8;
+      border-left-color: #06c;
+    }
   }
   .pf-c-nav__link.pf-m-hover,
   .pf-c-nav__link:hover {
@@ -106,6 +118,14 @@
     font-size: var(--pf-global--FontSize--lg);
     font-weight: var(--pf-global--FontWeight--semi-bold);
     color: #252527;
+    padding-top: var(--pf-global--spacer--sm) !important;
+    border-left: 4px solid transparent;
+    &:active,
+    &:hover {
+      background-color: #f8f8f8;
+      border-left-color: #06c;
+      font-weight: var(--pf-global--FontWeight--normal);
+    }
     &:hover::after {
       background-color: transparent;
     }
@@ -125,5 +145,26 @@
   &__title {
     color: #06c;
     font-weight: 700 !important;
+  }
+}
+
+
+
+.pf-site-md-nav {
+  margin-top: 16px;
+
+  .pf-c-nav__link {
+    padding-top: var(--pf-global--spacer--sm) !important;
+    border-left: 4px solid transparent;
+    &:active,
+    &:hover {
+      background-color: #f8f8f8;
+      border-left-color: #06c;
+      font-weight: var(--pf-global--FontWeight--normal);
+    }
+    &.pf-m-current {
+      background-color: #f8f8f8;
+      border-left-color: #06c;
+    }
   }
 }
