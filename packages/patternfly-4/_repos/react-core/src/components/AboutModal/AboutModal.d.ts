@@ -4,12 +4,13 @@ export interface AboutModalProps extends HTMLProps<HTMLDivElement> {
   children: ReactNode;
   isOpen?: boolean;
   onClose?: Function;
-  productName: string;
+  productName?: string;
   trademark?: string;
   brandImageSrc: string;
   brandImageAlt: string;
   logoImageSrc?: string;
   logoImageAlt?: string;
+  noAboutModalBoxContentContainer?: boolean;
 }
 
 declare const AboutModal: FunctionComponent<AboutModalProps>;

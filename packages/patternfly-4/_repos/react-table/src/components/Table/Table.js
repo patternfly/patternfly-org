@@ -30,6 +30,8 @@ const propTypes = {
   className: PropTypes.string,
   /** Function called when user wants to collapse row. */
   onCollapse: PropTypes.func,
+  /** Function called when user wants to compound expand row. */
+  onExpand: PropTypes.func,
   /** Table variant, defaults to large. */
   variant: PropTypes.oneOf(Object.values(TableVariant)),
   /** Size at which table is broken into tiles. */
@@ -102,8 +104,9 @@ const propTypes = {
       PropTypes.node,
       PropTypes.shape({
         title: PropTypes.node,
-        transforms: PropTypes.arrayOf(PropTypes.func),
-        cellTransforms: PropTypes.arrayOf(PropTypes.func),
+        transforms: PropTypes.arrayOf(PropTypes.func), // Applies only to header cell
+        cellTransforms: PropTypes.arrayOf(PropTypes.func), // Applies only to body cells
+        columnTransforms: PropTypes.arrayOf(PropTypes.func), // Applies to both header and body cells
         formatters: PropTypes.arrayOf(PropTypes.func),
         cellFormatters: PropTypes.arrayOf(PropTypes.func)
       })
@@ -145,6 +148,7 @@ const propTypes = {
 const defaultProps = {
   children: null,
   onCollapse: null,
+  onExpand: null,
   className: '',
   variant: null,
   borders: true,
@@ -190,6 +194,7 @@ class Table extends React.Component {
       actionResolver,
       areActionsDisabled,
       onCollapse,
+      onExpand,
       rowLabeledBy,
       dropdownPosition,
       dropdownDirection,
@@ -213,6 +218,7 @@ class Table extends React.Component {
       actionResolver,
       areActionsDisabled,
       onCollapse,
+      onExpand,
       rowLabeledBy,
       expandId,
       contentId,
@@ -247,7 +253,7 @@ class Table extends React.Component {
             styles.table,
             getModifier(stylesGrid, gridBreakPoint),
             getModifier(styles, variant),
-            onCollapse && variant === TableVariant.compact && styles.modifiers.expandable,
+            ((onCollapse && variant === TableVariant.compact) || onExpand) && styles.modifiers.expandable,
             variant === TableVariant.compact && borders === false ? styles.modifiers.noBorderRows : null,
             className
           )}
