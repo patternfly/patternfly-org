@@ -1,5 +1,5 @@
 ---
-path: "/get-started/migration"
+path: "/get-started/migrate"
 ---
 
 # Migrate from Patternfly 3 to PatternFly 4
