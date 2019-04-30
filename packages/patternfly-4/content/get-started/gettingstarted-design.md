@@ -48,9 +48,9 @@ What does a toolbar look like? What about a filter chip? Components are the buil
 ### Still feeling unsure? See all the pieces working together with demos.
 What does it look like when you combine all the ingredients? Demos provide examples of a few common ways you might combine layouts and components to give you an idea what’s possible.
 
-[**View HTML/CSS demos**](/documentation/core) <i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**View HTML/CSS demos**](/documentation/core/demos) <i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
-[**View React demos**](/documentation/react) <i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**View React demos**](/documentation/react/demos) <i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 
 <!-- **WIP - still need to gather details on how this will work**

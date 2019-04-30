@@ -6,7 +6,7 @@ Before you begin, check out our [overview of PatternFly 4](/get-started/about) t
 
 Get started with:
 * [**React**](#react)
-* [**HTML/CSS**](#html/css)
+* [**HTML/CSS**](#htmlcss)
 
 ## React
 
