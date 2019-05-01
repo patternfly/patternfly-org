@@ -51,9 +51,6 @@ export default class Documentation extends React.Component {
             {variablesRoot && <AutoLinkHeader anchorOnly className="pf-site-toc">CSS Variables</AutoLinkHeader>}
           </Section>
           <Section title="Examples" headingLevel="h3" className={className}>
-            <Section>
-              {examples.map(example => <AutoLinkHeader anchorOnly className="pf-site-toc">{example.props.heading}</AutoLinkHeader>)}
-            </Section>
             {children}
           </Section>
         </PageSection>

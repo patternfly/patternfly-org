@@ -55,8 +55,6 @@ const MdxPF4Template = ({ data }) => {
   if (!section)
     section = 'component';
 
-  const { tableOfContents } = data.mdx;
-
   return (
     <Layout sideNav={<SideNav />} className="ws-documentation">
       <SEO title="React" />
@@ -78,9 +76,6 @@ const MdxPF4Template = ({ data }) => {
           {cssPrefix && <AutoLinkHeader anchorOnly className="pf-site-toc">CSS Variables</AutoLinkHeader>}
         </Section>
         <Section title="Examples" headingLevel="h3">
-          <Section>
-            {tableOfContents.items.map(item => <a className="pf-site-toc" href={item.url}>{item.title}</a>)}
-          </Section>
           <Section className="ws-live-demo">
             <MDXProvider components={components}>
               <MDXRenderer>
@@ -93,11 +88,6 @@ const MdxPF4Template = ({ data }) => {
 
       {props.length > 0 && 
         <PageSection>
-          <Section title="Props" headingLevel="h3">
-            {props.map(component =>
-              <AutoLinkHeader anchorOnly className="pf-site-toc">{`${component.name} Props`}</AutoLinkHeader>
-            )}
-          </Section>
           {props.map(component =>
             <PropsTable
               name={component.name}
@@ -133,7 +123,6 @@ query GetComponent($fileAbsolutePath: String!, $pathRegex: String!, $reactUrl: S
       section
       cssPrefix
     }
-    tableOfContents
   }
   metadata: allComponentMetadata(filter: {path: {regex: $pathRegex}}) {
     edges {
