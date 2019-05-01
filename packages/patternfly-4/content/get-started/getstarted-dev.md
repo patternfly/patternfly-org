@@ -146,4 +146,4 @@ PatternFly 4 uses Font Awesome 5. Font Awesome 5 can be utilized in two differen
 ### Customizing PatternFly for your project
 The CSS variable system enables you to easily customize things like color or shape without overwriting existing PatternFly styles.
 
-[Learn more and view CSS variables.](/documentation/react/css-variables/)
+[**Learn more and view CSS variables**](/documentation/react/css-variables/) <i class="blueArrow fas fa-arrow-right pf-u-mx-sm"></i>

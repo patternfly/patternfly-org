@@ -8,7 +8,6 @@ import SideNav from '../components/_react/Documentation/SideNav';
 import Section from '../components/section';
 import LiveEdit from '../components/_react/liveEdit';
 import Layout from '../components/layout';
-import { Location } from '@reach/router';
 import SEO from '../components/seo';
 import Tokens from '../components/css-variables';
 import PropsTable from '../components/_react/propsTable';
@@ -17,12 +16,11 @@ import './gettingStarted.scss';
 import '../styles/content/spacers.scss';
 import '../styles/content/colors.scss';
 
-let liveEditCount = 0;
 const components = {
   code: class LiveEditWrapper extends React.Component {
     render() {
       return (
-        <LiveEdit scope={this.getScope()} id={'' + liveEditCount++} className={this.props.className}>
+        <LiveEdit scope={this.getScope()} className={this.props.className}>
           {this.props.children}
         </LiveEdit>
       );
@@ -31,7 +29,10 @@ const components = {
   pre: React.Fragment
 };
 for (let i = 1; i <= 6; i++) {
-  components[`h${i}`] = props => <AutoLinkHeader className='ws-linked-heading' is={`h${i}`} {...props}>{props.children}</AutoLinkHeader>;
+  components[`h${i}`] = props => {
+    let inner = props.children.length > 0 ? props.children[1] : props.children;
+    return <AutoLinkHeader className='ws-linked-heading' is={`h${i}`} {...props}>{inner}</AutoLinkHeader>;
+  }
 }
 
 const MdxPF4Template = ({ data }) => {
@@ -54,31 +55,22 @@ const MdxPF4Template = ({ data }) => {
   if (!section)
     section = 'component';
 
+
   return (
-    <Location>
-      {({ location }) => {
-        // console.log(location);
-        const currentPath = location.pathname;
-        let componentType = 'Components';
-        if (currentPath.indexOf('/layouts/') > -1) {
-          componentType = 'Layouts';
-        } else if (currentPath.indexOf('/utilities/') > -1) {
-          componentType = 'Utilities';
-        } else if (currentPath.indexOf('/demos/') > -1) {
-          componentType = 'Demos';
-        } else if (currentPath.indexOf('/upgrades/') > -1) {
-          componentType = 'Upgrades';
-        }
-        // ignore above and just set to React for now
-        componentType = 'React';
-    return (
     <Layout sideNav={<SideNav />} className="ws-documentation">
       <SEO title="React" />
       <PageSection variant={PageSectionVariants.light} className="section-border pf-u-pt-md pf-site-background-medium">
-        <AutoLinkHeader size="md" is="h1" className="pf4-site-framework-title">{componentType}</AutoLinkHeader>
+        <AutoLinkHeader size="md" is="h1" className="pf4-site-framework-title">React</AutoLinkHeader>
         <AutoLinkHeader size="4xl" is="h2" className="pf-u-mt-sm pf-u-mb-md">
           {data.mdx.frontmatter.title}
         </AutoLinkHeader>
+        {data.description &&
+          <Section title="Description" headingLevel="h3">
+            <MDXRenderer>
+              {data.description.code.body}
+            </MDXRenderer>
+          </Section>
+        }
         <Section title="Examples" headingLevel="h3">
           <Section className="ws-live-demo">
             <MDXProvider components={components}>
@@ -107,9 +99,6 @@ const MdxPF4Template = ({ data }) => {
       </PageSection>
       }
     </Layout>
-    );
-    }}
-  </Location>
   );
 };
 
@@ -119,7 +108,7 @@ const MdxPF4Template = ({ data }) => {
 // We want component metadata from gatsby-transformer-react-docgen-typescript
 // for ALL components in that folder
 export const pageQuery = graphql`
-query GetComponent($fileAbsolutePath: String!, $pathRegex: String!) {
+query GetComponent($fileAbsolutePath: String!, $pathRegex: String!, $reactUrl: String!) {
   mdx(fileAbsolutePath: { eq: $fileAbsolutePath }) {
     code {
       body
@@ -148,6 +137,11 @@ query GetComponent($fileAbsolutePath: String!, $pathRegex: String!) {
           }
         }
       }
+    }
+  }
+  description: mdx(frontmatter: {reactUrl: {eq: $reactUrl}}) {
+    code {
+      body
     }
   }
   allGetStartedNavigationJson {

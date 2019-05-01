@@ -121,9 +121,11 @@ $block: '.pf4';
     will-change: opacity;
   }
   .messageText {
-    background: black;
-    color: var(--pf-global--Color--light-100);
-    padding: 3px 5px;
+    background: white;
+    color: black;
+    padding: 10px;
+    font-family: RedHatText;
+    font-weight: 400;
   }
   .messageShow {
     opacity: 1;
@@ -181,6 +183,7 @@ $block: '.pf4';
 
 // pull from gatsby autolink headers
 .anchor {
+  color: black;
   float: left;
   padding-right: 4px;
   margin-left: -20px;

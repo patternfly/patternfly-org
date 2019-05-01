@@ -1454,9 +1454,9 @@
     npmlog "^4.1.2"
     write-file-atomic "^2.3.0"
 
-"@mdx-js/mdx@1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.0.5.tgz#380eb24d04c99f608b82cf4f4ef6bddca3342b45"
+"@mdx-js/mdx@1.0.15":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.0.15.tgz#a78c084f73203e6062797ca2337de133f2f3ec29"
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-jsx" "^7.2.0"
@@ -1466,7 +1466,7 @@
     hast-util-raw "^5.0.0"
     lodash.uniq "^4.5.0"
     mdast-util-to-hast "^4.0.0"
-    remark-mdx "^1.0.2"
+    remark-mdx "^1.0.15"
     remark-parse "^6.0.0"
     remark-squeeze-paragraphs "^3.0.1"
     to-style "^1.3.3"
@@ -1474,9 +1474,9 @@
     unist-builder "^1.0.1"
     unist-util-visit "^1.3.0"
 
-"@mdx-js/react@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.0.2.tgz#5390102a5d4f4666fe40184622a8cc75bd8f4f77"
+"@mdx-js/react@1.0.15":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.0.15.tgz#1b93bb233ed56e85b8dd1c537d09ca9ae3d7ffbc"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -1530,13 +1530,13 @@
     universal-user-agent "^2.0.0"
     url-template "^2.0.8"
 
-"@patternfly/patternfly@2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-2.3.0.tgz#9f2a00ea7b2256651009289b8299f6def7d7f69b"
-
 "@patternfly/patternfly@2.6.4":
   version "2.6.4"
   resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-2.6.4.tgz#e672c634d47233ab97a795829303488f438c85aa"
+
+"@patternfly/patternfly@2.6.5":
+  version "2.6.5"
+  resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-2.6.5.tgz#6e4f22f0e7ac6d06bd42473b8282ce92a1cab8e1"
 
 "@patternfly/react-charts@3.0.2":
   version "3.0.2"
@@ -1549,13 +1549,13 @@
     victory "^30.1.0"
     victory-core "^31.1.0"
 
-"@patternfly/react-core@3.2.6", "@patternfly/react-core@^3.2.2":
-  version "3.2.6"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-3.2.6.tgz#8cc2ca0d16084e4437a6c1b25d399a2db6129b2c"
+"@patternfly/react-core@3.16.4", "@patternfly/react-core@^3.16.4":
+  version "3.16.4"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-3.16.4.tgz#b89fa9f40a4b5cd854951edf5a7b3d4ff01e68be"
   dependencies:
-    "@patternfly/react-icons" "^3.7.4"
-    "@patternfly/react-styles" "^3.0.2"
-    "@patternfly/react-tokens" "^2.3.3"
+    "@patternfly/react-icons" "^3.8.1"
+    "@patternfly/react-styles" "^3.2.0"
+    "@patternfly/react-tokens" "^2.5.1"
     "@tippy.js/react" "^1.1.1"
     emotion "^9.2.9"
     exenv "^1.2.2"
@@ -1565,9 +1565,9 @@
   version "3.7.4"
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-3.7.4.tgz#e4abe683de7208682dea257355768c4aefd1ff79"
 
-"@patternfly/react-icons@^3.7.4":
-  version "3.7.5"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-3.7.5.tgz#fc84079b8f9c1b283195d306841eec9a786e855a"
+"@patternfly/react-icons@^3.8.1":
+  version "3.8.1"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-3.8.1.tgz#95457a38ebdfd01c7fb4848ec874b840725f3372"
 
 "@patternfly/react-styled-system@3.0.2":
   version "3.0.2"
@@ -1598,14 +1598,31 @@
     relative "^3.0.2"
     resolve-from "^4.0.0"
 
-"@patternfly/react-table@2.1.2":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-2.1.2.tgz#5c3c48b5efb03ea59e04404dfb72f981b1b1d94d"
+"@patternfly/react-styles@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-3.2.0.tgz#c3008b472767109ff5127b14da9cad6506c6bf4f"
   dependencies:
-    "@patternfly/patternfly" "2.3.0"
-    "@patternfly/react-core" "^3.2.2"
-    "@patternfly/react-icons" "^3.7.4"
-    "@patternfly/react-styles" "^3.0.2"
+    "@babel/helper-plugin-utils" "^7.0.0-beta.48"
+    camel-case "^3.0.0"
+    css "^2.2.3"
+    cssom "^0.3.4"
+    cssstyle "^0.3.1"
+    emotion "^9.2.9"
+    emotion-server "^9.2.9"
+    fbjs-scripts "^0.8.3"
+    fs-extra "^6.0.1"
+    jsdom "^11.11.0"
+    relative "^3.0.2"
+    resolve-from "^4.0.0"
+
+"@patternfly/react-table@2.5.4":
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-2.5.4.tgz#7bd9deeaf0f198b9efb1ff6ccd93b1d6876bab37"
+  dependencies:
+    "@patternfly/patternfly" "2.6.5"
+    "@patternfly/react-core" "^3.16.4"
+    "@patternfly/react-icons" "^3.8.1"
+    "@patternfly/react-styles" "^3.2.0"
     exenv "^1.2.2"
     reactabular-table "^8.14.0"
 
@@ -1613,17 +1630,21 @@
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-2.3.2.tgz#6454ef30da2c3e4e242c452054aac97c4ece82ae"
 
-"@patternfly/react-tokens@^2.3.2", "@patternfly/react-tokens@^2.3.3":
+"@patternfly/react-tokens@^2.3.2":
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-2.3.3.tgz#6fea36b284a36d4404b4bd75ddcc3fa5a833654f"
 
-"@patternfly/src-patternfly-next@patternfly/patternfly-next#v2.6.4":
-  version "0.0.0-development"
-  resolved "https://codeload.github.com/patternfly/patternfly-next/tar.gz/761252544f5d747d2212cd80a03fd92a2785d376"
+"@patternfly/react-tokens@^2.5.1":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-2.5.1.tgz#f0b1d526ad19999f9ff7cbac733c94a258c714ab"
 
-"@patternfly/src-patternfly-react@patternfly/patternfly-react#d93933a":
+"@patternfly/src-patternfly-next@patternfly/patternfly-next#v2.6.6":
+  version "0.0.0-development"
+  resolved "https://codeload.github.com/patternfly/patternfly-next/tar.gz/f2e97e61648433b3fdef57567f0c59f7bbf9d57a"
+
+"@patternfly/src-patternfly-react@patternfly/patternfly-react":
   version "0.0.0"
-  resolved "https://codeload.github.com/patternfly/patternfly-react/tar.gz/d93933a03e7dd11b94c47f67ddb7c685cbf629fa"
+  resolved "https://codeload.github.com/patternfly/patternfly-react/tar.gz/736f9a80968d87d5f4a491c0adc000ef259b6769"
   optionalDependencies:
     sortabular "^1.5.1"
     table-resolver "^3.2.0"
@@ -7273,9 +7294,9 @@ gatsby-link@^2.0.16:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
-gatsby-mdx@0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/gatsby-mdx/-/gatsby-mdx-0.6.2.tgz#1662408fc1730158ea8d77eedc9992f51f8b00e8"
+gatsby-mdx@0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/gatsby-mdx/-/gatsby-mdx-0.6.3.tgz#bbb65c457877daee998d91e10d737762ce3ce5ef"
   dependencies:
     "@babel/core" "^7.4.3"
     "@babel/plugin-proposal-object-rest-spread" "^7.4.3"
@@ -13681,7 +13702,7 @@ relay-runtime@2.0.0:
     "@babel/runtime" "^7.0.0"
     fbjs "^1.0.0"
 
-remark-mdx@^1.0.2:
+remark-mdx@^1.0.15:
   version "1.0.15"
   resolved "https://registry.yarnpkg.com/remark-mdx/-/remark-mdx-1.0.15.tgz#6f2de2dcf3b94d5ed027d4140e1bd9c748c26a73"
   dependencies:

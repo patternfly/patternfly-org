@@ -25,33 +25,34 @@ class SideNav extends React.Component {
     const { data } = this.props;
     const { searchValue } = this.state;
 
-    const componentRoutes = data.componentPages
-      ? data.componentPages.edges.map(e => ({
-        to: e.node.path,
-        label: e.node.context.title,
-        pkg: 'core',
-        components: []
-      })).filter(e => e.label)
-      : [];
+    const componentRoutes = data.componentPages &&
+      data.componentPages.edges
+        .filter(e => e.node.context.title && !e.node.context.fullscreen)
+        .map(e => ({
+          to: e.node.path,
+          label: e.node.context.title,
+          pkg: 'core',
+          components: []
+        }));
 
-    const layoutRoutes = data.layoutPages
-      ? data.layoutPages.edges.map(e => ({
-        to: e.node.path,
-        label: e.node.context.title,
-        pkg: 'core',
-        components: []
-      })).filter(e => e.label)
-      : [];
+    const layoutRoutes = data.layoutPages &&
+      data.layoutPages.edges
+        .filter(e => e.node.context.title && !e.node.context.fullscreen)
+        .map(e => ({
+          to: e.node.path,
+          label: e.node.context.title,
+          pkg: 'core',
+          components: []
+        }));
 
 
-    const demoRoutes = data.demoPages
-      ? data.demoPages.edges
-      .filter(e => !e.node.context.fullscreen)
-      .map(e => ({
-        to: e.node.path,
-        label: e.node.context.title
-      })).filter(e => e.label)
-      : [];
+    const demoRoutes = data.demoPages && 
+      data.demoPages.edges
+        .filter(e => e.node.context.title && !e.node.context.fullscreen)
+        .map(e => ({
+          to: e.node.path,
+          label: e.node.context.title
+        }));
 
     const searchRE = new RegExp(searchValue, 'i');
 
@@ -141,7 +142,7 @@ class SideNav extends React.Component {
                 ))}
               </NavExpandable>
               <NavItem isActive={currentPath.indexOf('/documentation/react/css-variables') > -1}>
-                <Link to="/documentation/react/css-variables/">Global CSS Variables</Link>
+                <Link to="/documentation/react/css-variables/">Global CSS variables</Link>
               </NavItem>
             </NavList>
           </Nav>
@@ -168,6 +169,7 @@ export default props => (
               path
               context {
                 title
+                fullscreen
               }
             }
           }
@@ -181,6 +183,7 @@ export default props => (
               path
               context {
                 title
+                fullscreen
               }
             }
           }

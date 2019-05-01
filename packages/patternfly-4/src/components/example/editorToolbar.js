@@ -9,7 +9,6 @@ const propTypes = {
   className: PropTypes.string,
   raw: PropTypes.string.isRequired,
   editor: PropTypes.element.isRequired,
-  path: PropTypes.string,
   live: PropTypes.bool,
   onToggle: PropTypes.func,
   onCopy: PropTypes.func,
@@ -21,7 +20,6 @@ const propTypes = {
 
 const defaultProps = {
   className: '',
-  path: '',
   live: true,
   onToggle: null,
   onCopy: null,
@@ -72,7 +70,7 @@ class EditorToolbar extends React.Component {
 
   render() {
     // eslint-disable-next-line
-    const { editor, live, path: examplePath, showMessage, showLights } = this.props;
+    const { editor, live, showMessage, showLights } = this.props;
     const { codeOpen, showCopyMessage } = this.state;
 
     return (
@@ -102,26 +100,18 @@ class EditorToolbar extends React.Component {
           >
             <AsleepIcon />
           </Button>}
-          <Button
-            component="a"
-            href={this.props.fullPath} 
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="plain"
-            title="Open in new window"
-            aria-label="Open in new window"
-          >
-            <ExternalLinkAltIcon />
-          </Button>
-          {/* <a href={examplePath} target="_blank" rel="noopener noreferrer">
+          {this.props.fullPath &&
             <Button
+              component="a"
+              href={this.props.fullPath} 
+              target="_blank"
+              rel="noopener noreferrer"
               variant="plain"
-              title="View on GitHub"
-              aria-label="View on GitHub"
+              title="Open in new window"
+              aria-label="Open in new window"
             >
-              <i className={css('fab fa-github')} />
-            </Button>
-          </a> */}
+              <ExternalLinkAltIcon />
+            </Button>}
           <TextContent className={css('message', showCopyMessage && 'messageShow')}>
             <Text component="pre" className={css('messageText')}>
               Copied to clipboard
@@ -131,7 +121,7 @@ class EditorToolbar extends React.Component {
             !live && showMessage && (
               <TextContent className={css('messageShow')}>
                 <Text component="pre" className={css('messageText')}>
-                  Live edititing disabled
+                  Live editing disabled
                 </Text>
               </TextContent>
             )}
