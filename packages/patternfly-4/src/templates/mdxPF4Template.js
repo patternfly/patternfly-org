@@ -29,7 +29,10 @@ const components = {
   pre: React.Fragment
 };
 for (let i = 1; i <= 6; i++) {
-  components[`h${i}`] = props => <AutoLinkHeader className='ws-linked-heading' is={`h4`} {...props}>{props.children}</AutoLinkHeader>;
+  components[`h${i}`] = props => {
+    let inner = props.children.length > 0 ? props.children[1] : props.children;
+    return <AutoLinkHeader className='ws-linked-heading' is="h4" {...props}>{inner}</AutoLinkHeader>;
+  }
 }
 
 const MdxPF4Template = ({ data }) => {
@@ -62,6 +65,13 @@ const MdxPF4Template = ({ data }) => {
         <AutoLinkHeader size="4xl" is="h2" className="pf-u-mt-sm pf-u-mb-md">
           {data.mdx.frontmatter.title}
         </AutoLinkHeader>
+        {data.description &&
+          <Section>
+            <MDXRenderer>
+              {data.description.code.body}
+            </MDXRenderer>
+          </Section>
+        }
         <Section>
           <AutoLinkHeader anchorOnly className="pf-site-toc">Examples</AutoLinkHeader>
           {props.length > 0 && <AutoLinkHeader anchorOnly className="pf-site-toc">Props</AutoLinkHeader>}
@@ -113,7 +123,7 @@ const MdxPF4Template = ({ data }) => {
 // We want component metadata from gatsby-transformer-react-docgen-typescript
 // for ALL components in that folder
 export const pageQuery = graphql`
-query GetComponent($fileAbsolutePath: String!, $pathRegex: String!) {
+query GetComponent($fileAbsolutePath: String!, $pathRegex: String!, $reactUrl: String!) {
   mdx(fileAbsolutePath: { eq: $fileAbsolutePath }) {
     code {
       body
@@ -143,6 +153,11 @@ query GetComponent($fileAbsolutePath: String!, $pathRegex: String!) {
           }
         }
       }
+    }
+  }
+  description: mdx(frontmatter: {reactUrl: {eq: $reactUrl}}) {
+    code {
+      body
     }
   }
   allGetStartedNavigationJson {

@@ -137,7 +137,8 @@ exports.createPages = async ({ graphql, actions }) => {
           context: {
             title: node.frontmatter.title,
             fileAbsolutePath: node.fileAbsolutePath, // Helps us get the markdown
-            pathRegex: `/${folderName}\/.*/` // Helps us get the docgenned props
+            pathRegex: `/${folderName}\/.*/`, // Helps us get the docgenned props
+            reactUrl: componentName, // Helps us get the description
           }
         });
       }
@@ -147,11 +148,24 @@ exports.createPages = async ({ graphql, actions }) => {
       const shortenedPath = node.relativePath.split('/').slice(1, 3).join('/').toLowerCase();
       const examplePath = `/documentation/core/${shortenedPath}`;
 
-      console.log(`creating core doc page (${node.absolutePath}):`, examplePath);
-      actions.createPage({
-        path: examplePath,
-        component: path.resolve(__dirname, node.absolutePath)
-      });
+      graphql(`
+        {
+          description: mdx(frontmatter: {htmlUrl: {eq: "${shortenedPath.split('/').pop()}"}}) {
+            code {
+              body
+            }
+          }
+        }
+      `).then(result => {
+        console.log(`creating core doc page (${shortenedPath}):`, examplePath);
+        actions.createPage({
+          path: examplePath,
+          component: path.resolve(__dirname, node.absolutePath),
+          context: {
+            description: result.data.description,
+          }
+        });
+      })
 
       // also create a full demo page for each component
       console.log(`creating page for: ${examplePath}-full`);
