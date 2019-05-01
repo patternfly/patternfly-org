@@ -13,13 +13,6 @@
   }
 }
 
-.table-wrapper {
-  @media only screen and (max-width: 768px) {
-    max-width: 768px;
-    overflow-x: auto;
-  }
-}
-
 .markdown-body {
   h1 {
     font-size: 36px;
