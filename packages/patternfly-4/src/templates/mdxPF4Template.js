@@ -31,7 +31,7 @@ const components = {
 for (let i = 1; i <= 6; i++) {
   components[`h${i}`] = props => {
     let inner = props.children.length > 0 ? props.children[1] : props.children;
-    return <AutoLinkHeader className='ws-linked-heading' is={`h${i}`} {...props}>{inner}</AutoLinkHeader>;
+    return <AutoLinkHeader className='ws-linked-heading' is="h4" {...props}>{inner}</AutoLinkHeader>;
   }
 }
 
@@ -55,7 +55,6 @@ const MdxPF4Template = ({ data }) => {
   if (!section)
     section = 'component';
 
-
   return (
     <Layout sideNav={<SideNav />} className="ws-documentation">
       <SEO title="React" />
@@ -65,12 +64,17 @@ const MdxPF4Template = ({ data }) => {
           {data.mdx.frontmatter.title}
         </AutoLinkHeader>
         {data.description &&
-          <Section title="Description" headingLevel="h3">
+          <Section>
             <MDXRenderer>
               {data.description.code.body}
             </MDXRenderer>
           </Section>
         }
+        <Section>
+          <AutoLinkHeader anchorOnly className="pf-site-toc">Examples</AutoLinkHeader>
+          {props.length > 0 && <AutoLinkHeader anchorOnly className="pf-site-toc">Props</AutoLinkHeader>}
+          {cssPrefix && <AutoLinkHeader anchorOnly className="pf-site-toc">CSS Variables</AutoLinkHeader>}
+        </Section>
         <Section title="Examples" headingLevel="h3">
           <Section className="ws-live-demo">
             <MDXProvider components={components}>
@@ -82,15 +86,18 @@ const MdxPF4Template = ({ data }) => {
         </Section>
       </PageSection>
 
-      {props.length > 0 && props.map(component =>
-        <PageSection key={component.name}>
-          <PropsTable
-            name={component.name}
-            description={component.description}
-            props={component.props}
-            />
-        </PageSection>
-      )}
+      {props.length > 0 && 
+        <PageSection>
+          <Section title="Props" headingLevel="h3">	
+            {props.map(component =>
+              <PropsTable
+                name={component.name}
+                description={component.description}
+                props={component.props}
+              />
+            )}
+          </Section>
+        </PageSection>}
 
       {cssPrefix && <PageSection variant={PageSectionVariants.light} className="pf-site-background-medium">
         <Section title="CSS Variables" headingLevel="h3">

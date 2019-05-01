@@ -26,20 +26,30 @@ export default class Documentation extends React.Component {
 
   render() {
     const { children, className = '', docs = '', heading = '', variablesRoot, data } = this.props;
-    const HTML_DOCS = { __html: docs };
+    const examples = React.Children.toArray(children);
+    const changeHeadingLevel = (html, level) => {
+      const modifiedHtml = html.replace(/<h2/g, `<${level} class="pf-u-mt-xl pf-u-mb-sm"`).replace(/h2>/g, `${level}>`);
+      return modifiedHtml;
+    }
+    const HTML_DOCS = { __html: changeHeadingLevel(docs, 'h4') };
     return !this.state.isFull ? (
       <Layout sideNav={<SideNav />}>
         <SEO title="React" />
         <PageSection variant={PageSectionVariants.light} className="pf-u-pt-md pf-site-background-medium">
           <AutoLinkHeader size="md" is="h1" className="pf4-site-framework-title">HTML</AutoLinkHeader>
+          <AutoLinkHeader size="4xl" is="h2" className="pf-u-mt-sm pf-u-mb-md">{heading}</AutoLinkHeader>
           {data.pageContext && data.pageContext.description &&
-            <Section title="Description" headingLevel="h3" className={className}>
+            <Section className={className}>
               <MDXRenderer>
                 {data.pageContext.description.code.body}
               </MDXRenderer>
             </Section>
           }
-          <AutoLinkHeader size="4xl" is="h2" className="pf-u-mt-sm pf-u-mb-md">{heading}</AutoLinkHeader>
+          <Section>
+            <AutoLinkHeader anchorOnly className="pf-site-toc">Examples</AutoLinkHeader>
+            <AutoLinkHeader anchorOnly className="pf-site-toc">Documentation</AutoLinkHeader>
+            {variablesRoot && <AutoLinkHeader anchorOnly className="pf-site-toc">CSS Variables</AutoLinkHeader>}
+          </Section>
           <Section title="Examples" headingLevel="h3" className={className}>
             {children}
           </Section>
