@@ -52,6 +52,7 @@ const MdxPF4Template = ({ data }) => {
   if (!section)
     section = 'component';
 
+
   return (
     <Layout sideNav={<SideNav />} className="ws-documentation">
       <SEO title="React" />
@@ -60,6 +61,13 @@ const MdxPF4Template = ({ data }) => {
         <AutoLinkHeader size="4xl" is="h2" className="pf-u-mt-sm pf-u-mb-md">
           {data.mdx.frontmatter.title}
         </AutoLinkHeader>
+        {data.description &&
+          <Section title="Description" headingLevel="h3">
+            <MDXRenderer>
+              {data.description.code.body}
+            </MDXRenderer>
+          </Section>
+        }
         <Section title="Examples" headingLevel="h3">
           <Section className="ws-live-demo">
             <MDXProvider components={components}>
@@ -97,7 +105,7 @@ const MdxPF4Template = ({ data }) => {
 // We want component metadata from gatsby-transformer-react-docgen-typescript
 // for ALL components in that folder
 export const pageQuery = graphql`
-query GetComponent($fileAbsolutePath: String!, $pathRegex: String!) {
+query GetComponent($fileAbsolutePath: String!, $pathRegex: String!, $reactUrl: String!) {
   mdx(fileAbsolutePath: { eq: $fileAbsolutePath }) {
     code {
       body
@@ -126,6 +134,11 @@ query GetComponent($fileAbsolutePath: String!, $pathRegex: String!) {
           }
         }
       }
+    }
+  }
+  description: mdx(frontmatter: {reactUrl: {eq: $reactUrl}}) {
+    code {
+      body
     }
   }
   allGetStartedNavigationJson {
