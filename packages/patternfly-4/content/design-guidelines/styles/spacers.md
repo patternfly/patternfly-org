@@ -99,7 +99,7 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
     <p>
       Include spacers in your designs to make it easy for developers to quickly see what size spacer you are using between elements.
     </p>
-  </div> 
+  </div>
   <div class="pf-u-display-flex pf-u-flex-direction-column">
     <div class="h4 incorrect">
       <i class="fas fa-exclamation-triangle"></i>
@@ -120,7 +120,7 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
 </p>
 ![Spacers Example](padding-example.png)
 <p class="pf-u-mt-3xl">
-  When laying out text-based content, remember to take line height into account so you’re leaving the right amount of vertical space between each line of text. 
+  When laying out text-based content, remember to take line height into account so you’re leaving the right amount of vertical space between each line of text.
 </p>
 
 <div class="border" style="font-size: 36px; width: 510px;">
@@ -175,4 +175,4 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
   b. They still use the same text styling, however.
 </p>
 
-<p class="pf-u-my-3xl">For more information about line height and typography, go to the <a href="/design-guidelines/styles/typography">typography page</a>.</p>
+<p class="pf-u-my-3xl">For more information about line height and typography, go to the <a href="https://www.patternfly.org/v4/design-guidelines/styles/typography">typography page</a>.</p>
