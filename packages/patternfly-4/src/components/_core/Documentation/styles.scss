@@ -74,6 +74,10 @@
       vertical-align: top;
       border-top: var(--pf-global--BorderWidth--sm) solid #e0e0e0;
       border-bottom: var(--pf-global--BorderWidth--sm) solid #e0e0e0;
+
+      > code {
+        white-space: normal;
+      }
     }
   }
 
