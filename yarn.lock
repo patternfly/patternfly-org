@@ -1638,9 +1638,9 @@
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-2.5.1.tgz#f0b1d526ad19999f9ff7cbac733c94a258c714ab"
 
-"@patternfly/src-patternfly-next@patternfly/patternfly-next#v2.6.4":
+"@patternfly/src-patternfly-next@patternfly/patternfly-next#v2.6.6":
   version "0.0.0-development"
-  resolved "https://codeload.github.com/patternfly/patternfly-next/tar.gz/761252544f5d747d2212cd80a03fd92a2785d376"
+  resolved "https://codeload.github.com/patternfly/patternfly-next/tar.gz/f2e97e61648433b3fdef57567f0c59f7bbf9d57a"
 
 "@patternfly/src-patternfly-react@patternfly/patternfly-react":
   version "0.0.0"
