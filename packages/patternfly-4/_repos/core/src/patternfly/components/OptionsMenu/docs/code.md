@@ -10,6 +10,8 @@
 
 ## Usage
 
+<div class="table-wrapper">
+
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-options-menu` | `<div>` |  Initiates a custom options menu. |
@@ -29,3 +31,5 @@
 | `.pf-m-focus` | `.pf-c-options-menu__toggle` | Modifies for the focus state. |
 | `.pf-m-plain` | `.pf-c-options-menu__toggle` |  Modifies to display the toggle with no border. |
 | `.pf-m-text` | `.pf-c-options-menu__toggle` |  For use when the `.pf-c-options-menu__toggle` is a `<div>` or some non-interactive elment, and you're using a custom `.pf-c-options-menu__toggle-button` to toggle the options menu. |
+
+</div>

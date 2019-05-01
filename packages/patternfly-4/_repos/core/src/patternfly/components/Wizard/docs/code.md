@@ -1,5 +1,7 @@
 ## Accessibility
 
+<div class="table-wrapper">
+
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `aria-expanded="true"` | `.pf-c-wizard__toggle` | Indicates that the steps menu is visible. **Required** |
@@ -11,7 +13,11 @@
 | `aria-current="page"` | `.pf-c-wizard__nav-link` | Indicates the current page link. Can only occur once on page. **Required for the current link** |
 | `tabindex="-1"` | `.pf-c-wizard__nav-link` | Removes a link from keyboard focus. **Required for disabled links with `.pf-m-disabled`** |
 
+</div>
+
 ## Usage
+
+<div class="table-wrapper">
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
@@ -44,3 +50,5 @@
 | `.pf-m-no-padding` | `.pf-c-wizard__main` | Modifies the main container body to remove the padding. |
 | `.pf-m-hover` | `.pf-c-wizard__nav-link` | Modifies a step link for the hovered state. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class. |
 | `.pf-m-focus` | `.pf-c-wizard__nav-link` | Modifies a step link for the focus state. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class.|
+
+</div>

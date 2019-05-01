@@ -12,6 +12,8 @@ The Dropdown Multi Select should be used when the user is selecting multiple ite
 
 ## Usage
 
+<div class="table-wrapper">
+
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-select` | `<div>` |  Initiates a custom select. |
@@ -26,3 +28,5 @@ The Dropdown Multi Select should be used when the user is selecting multiple ite
 | `.pf-c-select__menu-item` | `<li>` |  Initiates the items in the custom select dropdown menu. |
 | `.pf-m-expanded` | `.pf-c-select` |  Indicates the select is expanded. |
 | `.pf-m-typeahead` | `.pf-c-select__toggle` |  Indicates the select has a typeahead. |
+
+</div>

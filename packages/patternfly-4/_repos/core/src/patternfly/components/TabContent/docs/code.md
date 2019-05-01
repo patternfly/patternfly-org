@@ -4,6 +4,8 @@ Tab Content should be used with the [Tabs component](/components/Tabs/examples/)
 
 ## Accessibility
 
+<div class="table-wrapper">
+
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `role="tabpanel"` | `.pf-c-tab-content` | Indicates that the element serves as a container for a set of tabs. **Required** |
@@ -11,6 +13,8 @@ Tab Content should be used with the [Tabs component](/components/Tabs/examples/)
 | `id=[ID of tab panel]` | `.pf-c-tab-content` | Provides an ID for the tab panel, and should be used as the value of `aria-controls` on the tab element that controls the panel.  **Required**
 | `hidden` | `.pf-c-tab-content` | Indicates that the tab panel is not visible. **Required on all but the active tab panel**
 | `tabindex="0"` | `.pf-c-tab-content` | Puts the tab panel in the page tab sequence and facilitates movement to panel content for assistive technology users. **Required**
+
+</div>
 
 
 ## Usage

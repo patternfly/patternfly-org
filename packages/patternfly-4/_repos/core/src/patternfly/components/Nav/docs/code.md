@@ -9,6 +9,8 @@ The navigation system relies on several different sub-components:
 
 ## Accessibility
 
+<div class="table-wrapper">
+
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `aria-label="[landmark description]"` | `.pf-c-nav` |  Describes `<nav>` landmark |
@@ -19,8 +21,11 @@ The navigation system relies on several different sub-components:
 | `aria-current="page"` | `.pf-c-nav__link` |  Indicates the current page link. Can only occur once on page. |
 | `role="separator"` | `.pf-c-nav__separator` |  Indicates that the divider separates and distinguishes sections of links in the nav. |
 
+</div>
 
 ## Usage
+
+<div class="table-wrapper">
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
@@ -43,3 +48,5 @@ The navigation system relies on several different sub-components:
 | `.pf-m-disabled` | `.pf-c-nav__link` | Modifies to display the link as disabled |
 | `.pf-m-start` | `.pf-c-nav` | Modifiers the nav to show the overflow at the start. |
 | `.pf-m-end` | `.pf-c-nav` | Modifiers the nav to show the overflow at the end. |
+
+</div>

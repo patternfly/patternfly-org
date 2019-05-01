@@ -4,6 +4,8 @@ This component provides the basic chrome for a page, including sidebar, header, 
 
 ## Accessibility
 
+<div class="table-wrapper">
+
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `role="banner"` | `.pf-c-page__header` | Identifies the element that serves as the banner region. **Required** |
@@ -11,7 +13,11 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `aria-expanded="true/false"` | `.pf-c-page__header-brand-toggle > .pf-c-button` | Indicates that the expandable content is visible and the current state of the contents. **Required** |
 | `aria-controls="[id of nav]"` | `.pf-c-page__header-brand-toggle > .pf-c-button` | Identifies the element controlled by the toggle. **Required**
 
+</div>
+
 ## Usage
+
+<div class="table-wrapper">
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
@@ -41,3 +47,5 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-m-no-padding-mobile` | `.pf-c-page__main-section` | Modifies a main page section to have no padding on mobile. |
 | `.pf-m-fill` | `.pf-c-page__main-section` | Modifies a main page section to grow to fill the available vertical space. |
 | `.pf-m-no-fill` | `.pf-c-page__main-section` | Modifies a main page section to not grow to fill the available vertical space. |
+
+</div>

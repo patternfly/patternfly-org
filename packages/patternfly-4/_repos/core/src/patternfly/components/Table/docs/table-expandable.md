@@ -8,6 +8,8 @@
 
 Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.pf-c-table__expandable-row-content`. For no padding add `.pf-m-no-padding` to `.pf-c-table__expandable-row` > `<td>`
 
+<div class="table-wrapper">
+
 ### Accessibility
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
@@ -18,8 +20,11 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `id="[button_id]"` | `.pf-c-table__toggle` > `.pf-c-button` | Provides a reference for toggle button description. **Required** |
 | `aria-controls="[id of element the button controls]"` | `.pf-c-table__toggle` > `.pf-c-button` | Identifies the expanded content controlled by the toggle button. **Required** |
 
+</div>
 
 ### Usage
+
+<div class="table-wrapper">
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |

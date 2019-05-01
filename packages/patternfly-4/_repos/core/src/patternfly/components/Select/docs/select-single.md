@@ -12,6 +12,8 @@ The Single Select should be used when the user is selecting an option from a lis
 
 ## Usage
 
+<div class="table-wrapper">
+
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-select` | `<div>` |  Initiates a custom select. |
@@ -23,3 +25,5 @@ The Single Select should be used when the user is selecting an option from a lis
 | `.pf-c-select__menu-item-icon` | `<i>` |  Initiates the selected item icon. |
 | `.pf-m-expanded` | `.pf-c-select` |  Indicates the select is expanded. |
 | `.pf-m-selected` | `.pf-c-select__menu-item` |  Indicates the menu item is selected. |
+
+</div>

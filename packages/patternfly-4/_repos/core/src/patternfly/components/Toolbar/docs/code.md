@@ -7,6 +7,8 @@
 
 ## Usage
 
+<div class="table-wrapper">
+
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-toolbar` | `<div>` |  Initiates the toolbar component. **Required** |
@@ -22,3 +24,5 @@
 | `.pf-m-expanded` | `.pf-c-toolbar__filter-toggle` | Modifies the mobile filter toggle for expanded state.
 | `.pf-m-expanded` | `.pf-c-toolbar__filter` | Modifies filter for the expanded state on small screens.
 | `.pf-m-expanded` | `.pf-c-toolbar__filter-list` | Modifies for the expanded state when filters are applied.
+
+</div>

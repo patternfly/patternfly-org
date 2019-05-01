@@ -4,6 +4,8 @@ A popover is used to provide contextual information for another component on cli
 
 ## Accessibility
 
+<div class="table-wrapper">
+
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
 | `role="dialog"` | `.pf-c-popover` | Identifies the element that serves as the popover container. **Required**|
@@ -14,8 +16,11 @@ A popover is used to provide contextual information for another component on cli
 | `aria-label="Close"` | `.pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
 | `aria-hidden="true"` | Parent element containing the page contents when the popover is open. | Hides main contents of the page from screen readers. The element with `.pf-c-popover` must not be a descendent of the element with `aria-hidden="true"`For more info see <a href="/accessibility-guide#trapping-focus">trapping focus</a>. **Required** |
 
+</div>
 
 ## Usage
+
+<div class="table-wrapper">
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
@@ -30,3 +35,5 @@ A popover is used to provide contextual information for another component on cli
 | `.pf-m-right` | `.pf-c-popover` | Positions the popover to the right of the element. |
 | `.pf-m-top` | `.pf-c-popover` | Positions the popover to the top of the element. |
 | `.pf-m-bottom` | `.pf-c-popover` | Positions the popover to the bottom of the element. | 
+
+</div>
