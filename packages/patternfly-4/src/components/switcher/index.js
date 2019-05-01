@@ -12,8 +12,8 @@ import './styles.scss';
 const trimTrailingSlash = str => str.replace(/\/$/, '');
 const verifyPath = (path, pages) =>
   pages.edges
-    .map(edge => trimTrailingSlash(edge.node.path))
-    .find(queryPath => queryPath === trimTrailingSlash(path));
+    .map(edge => edge.node.path)
+    .find(queryPath => path.indexOf(trimTrailingSlash(queryPath)) > -1);
 
 const Switcher = ({ data }) => (
   <Location>
@@ -47,7 +47,7 @@ export default props => (
     query={graphql`
       query IndexForSwitcher {
         corePages: allSitePage(
-          filter: { path: { glob: "/documentation/core/**" } },
+          filter: { path: { glob: "/documentation/core/*/**" } },
           sort: { fields: path }
         ) {
           edges {
@@ -57,7 +57,7 @@ export default props => (
           }
         }
         reactPages: allSitePage(
-          filter: { path: { glob: "/documentation/react/**" } },
+          filter: { path: { glob: "/documentation/react/*/**" } },
           sort: { fields: path }
         ) {
           edges {
