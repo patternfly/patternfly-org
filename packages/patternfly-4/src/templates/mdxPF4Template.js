@@ -88,13 +88,15 @@ const MdxPF4Template = ({ data }) => {
 
       {props.length > 0 && 
         <PageSection>
-          {props.map(component =>
-            <PropsTable
-              name={component.name}
-              description={component.description}
-              props={component.props}
-            />
-          )}
+          <Section title="Props" headingLevel="h3">	
+            {props.map(component =>
+              <PropsTable
+                name={component.name}
+                description={component.description}
+                props={component.props}
+              />
+            )}
+          </Section>
         </PageSection>}
 
       {cssPrefix && <PageSection variant={PageSectionVariants.light} className="pf-site-background-medium">
