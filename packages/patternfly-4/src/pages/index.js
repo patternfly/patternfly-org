@@ -98,11 +98,11 @@ const IndexPage = () => (
                 <Text component={TextVariants.h2}>Built for teams, built to scale</Text>
                 <Text component={TextVariants.p} className="pf-u-mb-3xl">Unify design and development with a set of clear guidelines and tools to help streamline communication and build more consistent user experiences.</Text>
                 <div className="pf-u-pb-md">
-                  <Text component={TextVariants.a} href="/get-started/developers" className="pf-m-white pf4-c-link__text" aria-label="Get started for developer">Get started for developers <ArrowRightIcon />
+                  <Text component={TextVariants.a} href={withPrefix('/get-started/developers')} className="pf-m-white pf4-c-link__text" aria-label="Get started for developer">Get started for developers <ArrowRightIcon />
                   </Text>
                 </div>
                 <div className="pf-u-pb-md">
-                  <Text component={TextVariants.a} href="/get-started/designers" className="pf-m-white pf4-c-link__text" aria-label="Get started for designers">Get started for designers <ArrowRightIcon />
+                  <Text component={TextVariants.a} href={withPrefix('/get-started/designers')} className="pf-m-white pf4-c-link__text" aria-label="Get started for designers">Get started for designers <ArrowRightIcon />
                   </Text>
                 </div>
               </TextContent>
