@@ -58,7 +58,7 @@ const MdxPF4Template = ({ data }) => {
   return (
     <Layout sideNav={<SideNav />} className="ws-documentation">
       <SEO title="React" />
-      <PageSection variant={PageSectionVariants.light} className="section-border pf-u-pt-md pf-site-background-medium">
+      <PageSection variant={PageSectionVariants.light} className="section-border pf-site-background-medium">
         <AutoLinkHeader size="md" is="h1" className="pf4-site-framework-title">React</AutoLinkHeader>
         <AutoLinkHeader size="4xl" is="h2" className="pf-u-mt-sm pf-u-mb-md">
           {data.mdx.frontmatter.title}

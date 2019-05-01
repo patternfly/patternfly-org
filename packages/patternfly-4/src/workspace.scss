@@ -34,6 +34,17 @@ $block: '.pf4';
   font-weight: 700 !important;
 }
 
+.pf-c-page__main-section {
+  padding-top: var(--pf-global--spacer--xl);
+  padding-right: var(--pf-global--spacer--2xl);
+  padding-bottom: var(--pf-global--spacer--2xl);
+  padding-left: var(--pf-global--spacer--2xl);
+
+  @media only screen and (max-width: 768px) {
+    padding: var(--pf-global--spacer--md);
+  }
+}
+
 .pf-c-page__main-section.pf-m-light {
   background-color: var(--pf-global--BackgroundColor--200);
 }
