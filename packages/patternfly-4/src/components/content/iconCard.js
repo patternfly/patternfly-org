@@ -135,7 +135,7 @@ class IconCard extends React.Component {
     const { icon: Icon, name } = this.props;
     const popoverBody = (
       <div css={styles.popoverBody}>
-        <div css={styles.textDescription}>
+        <div css={styles.textDescription} style={{'display': 'none'}}>
           <div>Indicates that a user may create or add something.</div>
         </div>
         <div css={styles.copyButtons}>

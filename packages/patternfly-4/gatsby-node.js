@@ -19,12 +19,15 @@ exports.onCreateNode = ({ node, actions }) => {
     const corePathLabel = node.component
       .split('/')
       .slice(-3)[0]
-      .replace(/([A-Z])/g, ' $1');
+      .replace(/([A-Z])/g, ' $1')
+      .trim();
+
+    label = corePathLabel.charAt(0) + corePathLabel.slice(1).toLowerCase();
 
     createNodeField({
       node,
       name: 'label',
-      value: corePathLabel
+      value: label
     });
     createNodeField({
       node,
