@@ -7,6 +7,8 @@
 
 ## Usage
 
+<div class="table-wrapper">
+
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-empty-state` | `<div>` |  Initiates an empty state component. **Required** |
@@ -17,3 +19,5 @@
 | `.pf-c-empty-state__secondary` | `<div>` |  Creates area for secondary actions. |
 | `.pf-m-sm` | `.pf-c-empty-state` | Modifies the empty state for a small max-width |
 | `.pf-m-lg` | `.pf-c-empty-state` | Modifies the empty state for a large max-width |
+
+</div>

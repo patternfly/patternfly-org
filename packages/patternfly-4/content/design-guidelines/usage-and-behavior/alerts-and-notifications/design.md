@@ -21,12 +21,16 @@ The status area and alert title are coded to communicate the severity of an aler
 
 ![alert colors](img/alert-status.png)
 
+<div class="table-wrapper">
+
 |Type     |Color    |Icon    |Usage      |
 |---------|---------|--------|--------------|
 |Info     |Blue (#39A5DC)    |fa-info-circle|Use for general informational messages (default)|
 |Warning  |Orange (#F0AB00)  |fa-exclamation-triangle |Use to indicate that a non-critical error has occurred|
 |Critical |Red (#CC0000)     |fa-exclamation-circle | Use to indicate that a critical or blocking error has occurred
 |Success  |Green (#92D400)   |fa-check-circle | Use to indicate that a task or process has completed successfully
+
+</div>
 
 ## Usage
 There are two primary use cases when alerts are used:
@@ -37,11 +41,14 @@ There are two primary use cases when alerts are used:
 
 Three alert patterns are defined in PatternFly for addressing these use cases.
 
+<div class="table-wrapper">
+
 |           |Usage     |UI placement     |Persistence
 |-----------|----------|-----------------|---------------|
 |[Inline alerts](#inline-alerts)|Synchronous notifications that are a direct response to a user action, eg., clicking the Submit button, and can be informational or can identify actions that are required on that page before the user can continue. |Appear at the top of the content area and push other content down. | Persist until the user dismisses them or navigates away from the page.
 |[Toast alerts](#toast-alerts) |A system notification that doesn’t interrupt the user’s current workflow. |Enter from the right edge of the screen and overlay content. |Remain until they time out, or the user dismisses them.
 |[Modal alerts](#modal-alerts) |Interrupting the flow until the user takes action. |Overlay the UI and prevent further user actions until the user closes the modal. |Yes, until the user dismisses the modal.
+</div>
 
 ### Inline alerts
 Inline alerts are synchronous and appear as the result of a user action or upon loading a page. They insert an alert at the top of the content area, push down other content, and will persist until the user closes them or navigates away from the page.

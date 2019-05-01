@@ -7,13 +7,19 @@ In the event that a page does not have a traditional `<h1>` page title, a headin
 
 ## Accessibility
 
+<div class="table-wrapper">
+
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `aria-label="[landmark description]"` | `.pf-c-breadcrumb` |  Describes `<nav>` landmark. |
 | `aria-label="[link name]"` | `.pf-c-breadcrumb__link` | If link has no text (icon), add an aria-label. |
 | `aria-current="page"` | `.pf-c-breadcrumb__item`, `.pf-c-breadcrumb__link` |  Indicates the current page within a set of pages. |
 
+</div>
+
 ## Usage
+
+<div class="table-wrapper">
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
@@ -24,3 +30,5 @@ In the event that a page does not have a traditional `<h1>` page title, a headin
 | `.pf-c-breadcrumb__link`          | `<a>`                     | Initiates default breadcrumb list link. |
 | `.pf-c-breadcrumb__title`         | `<h1>`                    | Initiates breadcrumb header. |
 | `.pf-m-current`                   | `.pf-c-breadcrumb__link`  | Modifies to display the list item as the current item. |
+
+</div>

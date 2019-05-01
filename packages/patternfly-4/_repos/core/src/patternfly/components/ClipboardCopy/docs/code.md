@@ -2,6 +2,8 @@
 
 ## Accessibility
 
+<div class="table-wrapper">
+
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `aria-label="Show content"` | `.pf-c-clipboard-copy__group-toggle` |  Provides an accessible name for the button when an icon is used instead of text. **Required when an icon is used with no supporting text.** |
@@ -14,7 +16,11 @@
 | `hidden` | `.pf-c-clipboard-copy__expandable-content` | Indicates that the expandable content is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
 | `aria-labelledby="[id of button] [id of input label]"` | `.pf-c-clipboard-copy__group-copy`, `.pf-c-clipboard-copy__group-toggle` | Provides an accessible name that is unique and communicates context of the button. Required when more than one ClipboardCopy component exists on the page. **Important:** If the label is defined on the `<input>` using `aria-label`, then use the `id` of the `<input>`. If the label is defined in a `<label>`, then use the `id` of the `<label>`. **Alternatively** this attribute can be ignored if the text input label is defined as part of the value in `aria-label`. |
 
+</div>
+
 ## Usage
+
+<div class="table-wrapper">
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
@@ -28,3 +34,5 @@
 | `.pf-m-active` | `.pf-c-clipboard-copy__group-toggle`, `.pf-c-clipboard-copy__group-copy`| Modifies toggle button for the active state. |
 | `.pf-m-focus` | `.pf-c-clipboard-copy__group-toggle`, `.pf-c-clipboard-copy__group-copy`| Modifies toggle button for the focus state. |
 | `.pf-m-expanded` | `.pf-c-clipboard-copy__group-toggle` | Modifies toggle button for the expanded state. |
+
+</div>

@@ -9,6 +9,8 @@
 
 ## Usage
 
+<div class="table-wrapper">
+
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-c-expandable` | `<div>` | Initiates the expandable component. **Required** |
@@ -19,3 +21,5 @@
 | `.pf-m-hover` | `.pf-c-expandable__toggle` | Modifies the expandable toggle for the hoverable state. |
 | `.pf-m-active` | `.pf-c-expandable__toggle` | Modifies the expandable toggle for the active state. |
 | `.pf-m-focus` | `.pf-c-expandable__toggle` | Modifies the expandable toggle for the focus state. |
+
+</div>

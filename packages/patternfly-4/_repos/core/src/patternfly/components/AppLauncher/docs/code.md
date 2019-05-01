@@ -1,5 +1,7 @@
 ## Accessibility
 
+<div class="table-wrapper">
+
 | Attribute | Applied | Outcome |
 | -- | -- | -- |
 | `aria-expanded="false"` | `.pf-c-button` |  Indicates that the menu is hidden |
@@ -9,6 +11,10 @@
 | `disabled` | `button.pf-c-app-launcher__menu-item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus |
 | `aria-disabled="true"` | `a.pf-c-app-launcher__menu-item` | When the menu item uses a link element, indicates that it is unavailable |
 | `tabindex="-1"` | `a.pf-c-app-launcher__menu-item` | When the menu item uses a link element, removes it from keyboard focus |
+
+</div>
+
+<div class="table-wrapper">
 
 ## Usage
 
@@ -21,3 +27,5 @@
 | `.pf-m-hover` | `.pf-c-app-launcher__menu-item` | Forces display of the hover state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:hover` pseudo-class. |
 | `.pf-m-focus` | `.pf-c-app-launcher__menu-item` | Forces display of the focus state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:focus` pseudo-class. |
 | `.pf-m-disabled` | `a.pf-c-app-launcher__menu-item` | Modifies to display the menu item as disabled.|
+
+</div>

@@ -64,8 +64,23 @@
   }
 
   table {
-    width: 100%;
     margin-bottom: var(--pf-global--spacer--md);
+  }
+
+  .table-wrapper {
+    overflow: auto;
+
+    @media (max-width: var(--pf-global--breakpoint--xl)) {
+      max-width: var(--pf-global--breakpoint--xl);
+    }
+
+    @media (max-width: var(--pf-global--breakpoint--lg)) {
+      max-width: var(--pf-global--breakpoint--lg);
+    }
+
+    @media (max-width: var(--pf-global--breakpoint--md)) {
+      max-width: var(--pf-global--breakpoint--md);
+    }
   }
 
   table:not(.pf-c-table) {
@@ -74,6 +89,10 @@
       vertical-align: top;
       border-top: var(--pf-global--BorderWidth--sm) solid #e0e0e0;
       border-bottom: var(--pf-global--BorderWidth--sm) solid #e0e0e0;
+
+      > code {
+        white-space: normal;
+      }
     }
   }
 

@@ -1,5 +1,7 @@
 ## Accessibility
 
+<div class="table-wrapper">
+
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `for` | `<label>` |  Each `<label>` must have a `for` attribute that matches its form field id. **Required** |
@@ -9,8 +11,11 @@
 | `aria-describedby="{helper_text_id}"` | `<input>`, `<select>`, `<textarea>` | Form fields with related `.pf-c-form__helper-text` require this attribute. Usage `<input aria-describedby="{helper_text_id}">`.  |
 | `aria-invalid="true" aria-describedby="{helper_text_id}"` | `<input>`, `<select>`, `<textarea>` |  When form validation fails `aria-describedby` is used to communicate the error to the user. These attributes need to be handled with Javascript so that `aria-describedby` only references help text that explains the error, and so that `aria-invalid="true"` is only present when validation fails. For proper styling of errors `aria-invalid="true"` is required. |
 
+</div>
 
 ## Usage
+
+<div class="table-wrapper">
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
@@ -26,3 +31,5 @@
 | `.pf-m-border` | `.pf-c-form__section` | Modifies form element border-bottom. |
 | `.pf-m-disabled` | `.pf-c-form__label` | Modifies form label to show disabled state. |
 | `.pf-m-inline` | `.pf-c-form__group` | Modifies form group children to be inline (this is primarily for radio buttons and checkboxes). |
+
+</div>

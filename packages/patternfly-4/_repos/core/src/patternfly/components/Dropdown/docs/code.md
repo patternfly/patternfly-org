@@ -4,6 +4,8 @@ The dropdown menu can contain either links or buttons, depending on the expected
 
 ## Accessibility
 
+<div class="table-wrapper">
+
 | Attribute | Applied | Outcome |
 | -- | -- | -- |
 | `aria-expanded="false"` | `.pf-c-dropdown__toggle`, `.pf-c-dropdown__toggle-check`, `.pf-c-dropdown__toggle-button` |  Indicates that the menu is hidden |
@@ -18,7 +20,11 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `aria-disabled="true"` | `a.pf-c-dropdown__menu-item` | When the menu item uses a link element, indicates that it is unavailable |
 | `tabindex="-1"` | `a.pf-c-dropdown__menu-item` | When the menu item uses a link element, removes it from keyboard focus |
 
+</div>
+
 ## Usage
+
+<div class="table-wrapper">
 
 | Class | Applied | Outcome |
 | -- | -- | -- |
@@ -44,3 +50,5 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-m-active` | `.pf-c-dropdown__toggle` | Forces display of the active state of the element. This state is primarily for demonstration purposes and would not normally be used in lieu of the `:active` pseudo-class. |
 | `.pf-m-disabled` | `a.pf-c-dropdown__menu-item` | Modifies to display the menu item as disabled. This applies to `a.pf-c-dropdown__menu-item` and should not be used in lieu of the `disabled` attribute on `button.pf-c-dropdown__menu-item`|
 | `.pf-m-disabled` | `div.pf-c-dropdown__toggle` | Modifies to display the dropdown toggle as disabled. This applies to `div.pf-c-dropdown__toggle` and should not be used in lieu of the `disabled` attribute on `button.pf-c-dropdown__toggle`. When this is used, `disabled` should also be added to any form elements in `div.pf-c-dropdown__toggle`|
+
+</div>

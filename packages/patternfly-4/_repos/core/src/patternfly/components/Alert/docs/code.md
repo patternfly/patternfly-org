@@ -4,6 +4,8 @@ Always add a modifier class. Do not use `.pf-c-alert` on its own.
 
 ## Accessibility
 
+<div class="table-wrapper">
+
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `aria-label="Success alert"` | `.pf-c-alert` |  Indicates the Success alert. |
@@ -13,9 +15,16 @@ Always add a modifier class. Do not use `.pf-c-alert` on its own.
 | `aria-label="Close Success alert: Success alert title"` | `.pf-c-button.pf-m-plain` | Indicates the close button. Please provide descriptive text to ensure assistive technologies clearly state which alert is being closed.|
 | `aria-hidden="true"` | `.pf-c-alert__icon <i>` |  Hides icon for assistive technologies. ** Required **|
 
+</div>
+<div class="table-wrapper">
+
 | Class | Applied To | Outcome |
 | -- | -- | -- |
 | `.pf-screen-reader` | `.pf-c-alert__title <span>` | Content that is visually hidden but accessible to assistive technologies. This should state the type of alert.  ** Required**|
+
+</div>
+
+<div class="table-wrapper">
 
 ## Usage
 
@@ -30,3 +39,5 @@ Always add a modifier class. Do not use `.pf-c-alert` on its own.
 | `.pf-m-danger` | `.pf-c-alert` |  Applies danger styling. |
 | `.pf-m-warning` | `.pf-c-alert` |  Applies warning styling. |
 | `.pf-m-info` | `.pf-c-alert` |  Applies info styling. |
+
+</div>

@@ -3,6 +3,8 @@
 
 ## Accessibility
 
+<div class="table-wrapper">
+
 | Attribute | Applied To | Outcome |
 | -- | -- | -- |
 | `aria-expanded="false"` | `.pf-c-accordion__toggle` | Indicates that the expanded content element is hidden. **Required**|
@@ -10,8 +12,11 @@
 | `hidden` | `.pf-c-accordion__expanded-content` | Indicates that the expanded content element is hidden. Use with `aria-expanded="false"` **Required** |
 | `aria-hidden="true"` | `.pf-c-accordion__toggle-icon` | Hides the icon from assistive technologies.**Required** |
 
+</div>
 
 ## Usage
+
+<div class="table-wrapper">
 
 | Class | Applied To | Outcome |
 | -- | -- | -- |
@@ -26,3 +31,5 @@
 | `.pf-m-active` | `.pf-c-accordion__toggle` | Modifies the accordion button for the active state. |
 | `.pf-m-focus` | `.pf-c-accordion__toggle` | Modifies the accordion button for the focus state. |
 | `.pf-m-fixed` | `.pf-c-accordion__expanded-content` | Modifies the expanded content for the fixed state. |
+
+</div>

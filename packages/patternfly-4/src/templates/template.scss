@@ -9,6 +9,13 @@
   padding-left: 64px;
 }
 
+.table-wrapper {
+  @media only screen and (max-width: 768px) {
+    max-width: 700px;
+    overflow-x: auto;
+  }
+}
+
 .markdown-body {
   h1 {
     font-size: 36px;
@@ -24,15 +31,27 @@
     white-space: nowrap;
     vertical-align: top;
   }
+  tbody {
+    max-width: 200px;
+    overflow-x: scroll;
+  }
   th {
     padding: 16px 16px 16px 32px;
     font-size: 14px;
     line-height: 21px;
     color: #151515;
+
+    @media only screen and (max-width: 992px) {
+      padding-left: 16px;
+    }
   }
   td {
     padding: 32px 16px 32px 32px;
     font-size: 16px;
+
+    @media only screen and (max-width: 992px) {
+      padding: 16px;
+    }
   }
   tr {
     height: 1px;

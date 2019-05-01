@@ -19,6 +19,8 @@ path: "/design-guidelines/content/grammar-and-terminology"
 
 ## Common terminology
 
+<div class="table-wrapper">
+
 | Term | Usage | Opposite | Notes |
 | ----- | ------ | ---------- | ----- |
 | Add |  (v.) Use to describe the action of adding an existing item to an existing list, group, view, or other container element. | Remove | If the object being added is not readily apparent from the context, consider adding a noun, like _Add User_. If you are creating a new object, do not use _Add_. See _Create_. |
@@ -34,6 +36,7 @@ path: "/design-guidelines/content/grammar-and-terminology"
 | Select | (v.) Use to prompt the user to select an item from a list, group, view, or other container element. | Deselect | Do not use “choose” for this use case. |
 | Username | (n.) Usually a unique ID like, ssmith123. |  |  | |
 
+</div>
 
 ## Abbreviations
 
@@ -45,6 +48,8 @@ path: "/design-guidelines/content/grammar-and-terminology"
 
 ### Common abbreviations
 
+<div class="table-wrapper">
+
 | Abbreviation  | Usage |
 | ------------- | ----- |
 | e.g. and i.e. | Use sparingly. E.g. means "for example," and i.e. means "in other words." Add commas after each (e.g., and i.e.,). Adapted from Red Hat Corporate Style Guide. |
@@ -54,6 +59,8 @@ path: "/design-guidelines/content/grammar-and-terminology"
 | VM            | Refers to a virtual machine.  OK to abbreviate as long as you've spelled it out once in the first occurrence, and as long as "VM" won't be confused with other terms that share that acronym. Taken from Red Hat Corporate Style Guide. |
 | N/A           | Refers to data not available. Applies to tables, list views, card views, etc. |
 | --            | Refers to data not applicable. It is different than N/A that data would never be available for the object. |
+
+</div>
 
 ## Acronyms
 

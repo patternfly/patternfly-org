@@ -51,6 +51,8 @@ Our goal is to meet [level AA in the Web Content Accessibility Guidelines 2.1](h
 
 If you use PatternFly, or contribute to PatternFly as a designer or developer, these are the items that are expected to be covered in PatternFly:
 
+<div class="table-wrapper">
+
 | Guideline  | Link  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- |
 | Semantic html structures are used to accurately communicate purpose and relationship of UI elements | [WCAG 1.3.1](https://www.w3.org/WAI/WCAG21/quickref/#info-and-relationships) | `design` | `html` | `css` |  |
@@ -69,6 +71,8 @@ If you use PatternFly, or contribute to PatternFly as a designer or developer, t
 | The target area for clickable elements is at least 44 by 44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) | [WCAG 2.5.5 (AAA)](https://www.w3.org/WAI/WCAG21/quickref/#target-size)* |  |  | `css` |  |
 | An accessible name is provided for all elements | [WCAG 4.1.2](https://www.w3.org/WAI/WCAG21/quickref/#name-role-value) | `design` | `html` |  |  |
 | Status messages can be programmatically determined through role or properties | [WCAG 4.1.3](https://www.w3.org/WAI/WCAG21/quickref/#status-messages) |  | `html` |  |  |
+
+</div>
 
 *WCAG 2.5.5 is included for reference only. This guideline suggests a size that is larger than what PatternFly requires.
 
