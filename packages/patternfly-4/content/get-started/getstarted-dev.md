@@ -12,7 +12,7 @@ Before you begin, check out our [overview of PatternFly 4](/get-started/about) t
 ### Get started with:
 
 * [React](#react)
-* [HTML/CSS](#html/css)
+* [HTML/CSS](#htmlcss)
 
 ## React
 
@@ -21,12 +21,12 @@ The React library provides a collection of React components you can use to build
 ## Getting started
   * **Start with a sample project**
 
-  [Start with the PatternFly React seed](#starting-with-the-react-seed). The React seed is an open source build scaffolding utility created to give developers a jump start when creating new projects that will use Patternfly.
+  [Start with the PatternFly React seed](#start-with-the-react-seed), which is an open source build scaffolding utility created to give developers a jump start when creating new projects that will use Patternfly.
 
 
   * **Start with your existing project**
 
-  If you want to start with your existing project, skip to the next section, [Installing and configuring PatternFly React](#installing-and-configuring-patternfly).
+  If you want to start with your existing project, skip to: [Install and configure PatternFly React](#install-and-configure-patternfly-react).
 
 ### Start with the React seed
 1. **Fork the project**
