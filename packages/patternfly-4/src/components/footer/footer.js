@@ -70,6 +70,9 @@ class Footer extends React.Component {
                       <NavItem to="https://www.redhat.com/mailman/listinfo/patternfly" target="top" aria-label="Join the PatternFly 4 mailing list">
                         Mailing list
                       </NavItem>
+                      <NavItem to="https://blog.patternfly.org/" target="top" aria-label="View the Patternfly Blog">
+                        Blog
+                      </NavItem>
                     </NavList>
                   </Nav>
                 </GridItem>
