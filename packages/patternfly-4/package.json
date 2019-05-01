@@ -29,7 +29,7 @@
     "@patternfly/react-styles": "3.0.2",
     "@patternfly/react-table": "2.5.4",
     "@patternfly/react-tokens": "2.3.2",
-    "@patternfly/src-patternfly-next": "patternfly/patternfly-next#v2.6.4",
+    "@patternfly/src-patternfly-next": "patternfly/patternfly-next#v2.6.6",
     "@patternfly/src-patternfly-react": "patternfly/patternfly-react",
     "babel-plugin-react-docgen-typescript": "1.2.0",
     "babel-standalone": "6.26.0",
