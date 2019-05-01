@@ -89,7 +89,7 @@ export default class Example extends React.Component {
             {children}
           </Preview>
           <ComponentItems children={children} className={css('example')} />
-          <EditorToolbar editor={editor} raw={indentedOutput} live={false} showMessage={false} fullPath={fullPath} showLights={!fullPageOnly} onLightsChange={this.onLightsChange}/>
+          <EditorToolbar editor={editor} raw={indentedOutput} live={false} showMessage={false} fullPath={fullPath} showLights={false} onLightsChange={this.onLightsChange}/>
           {/* <LiveDemo raw={indentedOutput.trim()} live={false} editorLanguage="html" /> */}
         </div>
       );

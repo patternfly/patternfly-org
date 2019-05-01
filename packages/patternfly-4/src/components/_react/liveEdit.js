@@ -2,7 +2,6 @@ import React from 'react';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import { css } from '@patternfly/react-styles';
 import EditorToolbar from '../example/editorToolbar';
-import Preview from '../../components/_core/Preview';
 
 class LiveEdit extends React.Component {
   constructor(props) {
@@ -46,36 +45,24 @@ class LiveEdit extends React.Component {
   }
 
   render() {
-    const fullPath = 'fullscreen';
+    const noLive = this.props.className === 'language-nolive';
 
-    if (this.props.justRender) {
+    if (noLive || this.props.className === 'language-js') {
       return (
-        <LiveProvider code={this.code} scope={this.scope} transformCode={LiveEdit.transformCode} disabled>
-          <LivePreview />
-        </LiveProvider>
-      );
-    }
-    else if (this.props.className === 'language-nolive') {
-      return (
-        <div className={css('example', 'ws-live-demo')}>
-          <Preview raw={true}>
-            <LiveProvider code={this.code} disabled>
-              <LiveEditor className={css('code')} contentEditable={false} />
-            </LiveProvider>
-          </Preview>
-        </div>
-      );
-    }
-    else if (this.props.className === 'language-js') {
-      return (
-        <LiveProvider code={this.code} scope={this.scope} transformCode={LiveEdit.transformCode}>
-          <LivePreview className={css('example', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')} />
+        <LiveProvider
+          code={this.code}
+          scope={this.scope}
+          transformCode={LiveEdit.transformCode}
+          disabled={noLive}
+        >
+          {!noLive &&
+            <LivePreview className={css('example', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')} />}
           <EditorToolbar
             raw={this.code}
+            showLights={false}
             editor={<LiveEditor className={css('code')} />}
-            fullPath={fullPath}
             onLightsChange={this.onDarkModeChange} />
-          <LiveError />
+          {!noLive && <LiveError />}
         </LiveProvider>
       );
     }

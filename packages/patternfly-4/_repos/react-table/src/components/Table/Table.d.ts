@@ -61,8 +61,9 @@ export interface ISeparator {
 
 export interface ICell {
   title: String;
-  transforms: Array<Function>;
+  transforms?: Array<Function>;
   cellTransforms?: Array<Function>;
+  columnTransforms?: Array<Function>;
   formatters?: Array<Function>;
   cellFormatters?: Array<Function>;
   props: any;
@@ -90,6 +91,7 @@ export interface TableProps extends Omit<Omit<HTMLProps<HTMLTableElement>, 'onSe
   gridBreakPoint?: OneOf<typeof TableGridBreakpoint, keyof typeof TableGridBreakpoint>;
   sortBy?: ISortBy;
   onCollapse?: (event: MouseEvent, rowIndex: number, isOpen: boolean, rowData: IRowData, extraData: IExtraData) => void;
+  onExpand?: (event: MouseEvent, rowIndex: number, colIndex: number, isOpen: boolean, rowData: IRowData, extraData: IExtraData) => void;
   onSelect?: (event: MouseEvent, isSelected: boolean, rowIndex: number, rowData: IRowData, extraData: IExtraData) => void;
   onSort?: OnSort;
   actions?: Array<IAction | ISeparator>;
@@ -104,6 +106,8 @@ export interface TableProps extends Omit<Omit<HTMLProps<HTMLTableElement>, 'onSe
   dropdownDirection?: OneOf<typeof DropdownDirection, keyof typeof DropdownDirection>;
   rows: Array<IRow | Array<String>>;
   cells: Array<ICell | String>;
+  bodyWrapper?: Function;
+  rowWrapper?: Function;
 }
 
 declare const Table: FunctionComponent<TableProps>;

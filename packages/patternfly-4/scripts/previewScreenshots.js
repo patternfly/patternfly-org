@@ -3,7 +3,7 @@ process.setMaxListeners(500);
 const captureWebsite = require('capture-website');
 const fs = require('fs');
 const path = require('path');
-const src = path.resolve(__dirname, '../content/preview-screenshots.json');
+const src = path.resolve(__dirname, './preview-screenshots.json');
 const previews = JSON.parse(fs.readFileSync(src));
 const gatsbyConfig = require('../gatsby-config');
 
@@ -27,8 +27,10 @@ const backgroundOptions = {
 };
 
 function fileNameFromUrl(url) {
-  const url = gatsbyConfig.siteMetadata.siteUrl;
-  return url.replace(url, '').replace(/\//g, '!').replace(/\?/g, '__').replace(/\s/g, '_').replace(/%20/g, '_');
+  return url
+    .replace('patternfly-4/', 'documentation/react/')
+    .replace(/http.*\.(org|sh)/, '')
+    .replace(/\//g, '!');
 }
 
 (async () => {

@@ -13,40 +13,24 @@ let partialsToLocationsMap = null;
 
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
-  const reactComponentPathRegEx = /\/documentation\/react\/.*/;
   const coreComponentPathRegEx = /\/documentation\/core\/.*/;
   const isSitePage = node.internal.type === 'SitePage';
-  if (isSitePage) {
-    if (reactComponentPathRegEx.test(node.path)) {
-      const reactPathLabel = node.component
-        .split('/')
-        .pop()
-        .split('.')
-        .shift()
-        .replace(/([A-Z])/g, ' $1');
+  if (isSitePage && coreComponentPathRegEx.test(node.path)) {
+    const corePathLabel = node.component
+      .split('/')
+      .slice(-3)[0]
+      .replace(/([A-Z])/g, ' $1');
 
-      createNodeField({
-        node,
-        name: 'label',
-        value: reactPathLabel
-      });
-    } else if (coreComponentPathRegEx.test(node.path)) {
-      const corePathLabel = node.component
-        .split('/')
-        .slice(-3)[0]
-        .replace(/([A-Z])/g, ' $1');
-
-      createNodeField({
-        node,
-        name: 'label',
-        value: corePathLabel
-      });
-      createNodeField({
-        node,
-        name: 'type',
-        value: node.path.split('/')[3]
-      });
-    }
+    createNodeField({
+      node,
+      name: 'label',
+      value: corePathLabel
+    });
+    createNodeField({
+      node,
+      name: 'type',
+      value: node.path.split('/')[3]
+    });
   }
 };
 
@@ -58,6 +42,7 @@ exports.createPages = async ({ graphql, actions }) => {
     { f: '/documentation', t: '/documentation/react/components/aboutmodal' },
     { f: '/documentation/core', t: '/documentation/core/components'},
     { f: '/documentation/core/components', t: '/documentation/core/components/aboutmodalbox'},
+    { f: '/documentation/core/demos', t: '/documentation/core/demos/aboutmodal'},
     { f: '/documentation/react', t: '/documentation/react/components'},
     { f: '/documentation/react/components', t: '/documentation/react/components/aboutmodal'},
     { f: '/documentation/react/layouts', t: '/documentation/react/layouts/bullseye'},
@@ -153,16 +138,6 @@ exports.createPages = async ({ graphql, actions }) => {
             title: node.frontmatter.title,
             fileAbsolutePath: node.fileAbsolutePath, // Helps us get the markdown
             pathRegex: `/${folderName}\/.*/` // Helps us get the docgenned props
-          }
-        });
-        // also create a full demo page for each component
-        console.log(`creating page for: ${link}fullscreen`);
-        actions.createPage({
-          path: `${link}fullscreen`,
-          component: path.resolve('./src/templates/mdxFullscreenTemplate.js'),
-          context: {
-            fileAbsolutePath: node.fileAbsolutePath,
-            fullscreen: true
           }
         });
       }
@@ -268,7 +243,9 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }
         }),
         plugins.minifyCss(),
       ].filter(Boolean),
-    }
+    };
+    // No sourcemaps
+    config.devtool = false;
   }
 
   actions.replaceWebpackConfig(config);

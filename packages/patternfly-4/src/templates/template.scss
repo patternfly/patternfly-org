@@ -1,25 +1,5 @@
-// @import '~@patternfly/patternfly/components/Table/table.scss';
-
 .pf4-site-typography-grid {
   font-family: var(--pf-global--FontFamily--sans-serif);
-}
-.pf-site-md-nav {
-  margin-top: 16px;
-
-  .pf-c-nav__link {
-    padding-top: var(--pf-global--spacer--sm) !important;
-    border-left: 4px solid transparent;
-    &:active,
-    &:hover {
-      background-color: #f8f8f8;
-      border-left-color: #06c;
-      font-weight: var(--pf-global--FontWeight--normal);
-    }
-    &.pf-m-current {
-      background-color: #f8f8f8;
-      border-left-color: #06c;
-    }
-  }
 }
 
 .pageSectionStyles {
@@ -27,11 +7,45 @@
   padding-right: 64px;
   padding-bottom: 64px;
   padding-left: 64px;
+
+  @media only screen and (max-width: 768px) {
+    padding: 16px;
+  }
 }
 
-// .markdown-body {
-//   table {
-//     @extend .pf-c-table;
-//     @extend .pf-m-compact;
-//   }
-// }
+.markdown-body {
+  h1 {
+    font-size: 36px;
+  }
+  table {
+    margin: 0;
+    padding: 0;
+    color: #151515;
+    text-align: left;
+  }
+  thead {
+    font-size: 16px;
+    white-space: nowrap;
+    vertical-align: top;
+  }
+  th {
+    padding: 16px 16px 16px 32px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #151515;
+  }
+  td {
+    padding: 32px 16px 32px 32px;
+    font-size: 16px;
+  }
+  tr {
+    height: 1px;
+    border-bottom: 1px solid #d2d2d2;
+  }
+  tr>* {
+    position: relative;
+    height: inherit;
+    font-weight: 400;
+    vertical-align: baseline;
+  }
+}

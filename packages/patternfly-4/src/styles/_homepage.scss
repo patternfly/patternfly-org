@@ -104,6 +104,10 @@ $block: '.pf4';
   }
 }
 
+#{$block}-m-background-white {
+  background-color: #fff;
+}
+
 #{$block}-c-background-lines {
   width: 100%;
   max-width: 100%;

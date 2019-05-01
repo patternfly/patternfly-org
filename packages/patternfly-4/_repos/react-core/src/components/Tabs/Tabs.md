@@ -3,11 +3,11 @@ title: 'Tabs'
 cssPrefix: 'pf-c-tabs'
 ---
 
-## Simple Tabs
+## Simple tabs
 
 import { Tabs, Tab, TabsVariant, TabContent } from '@patternfly/react-core';
 
-Use Primary Sections
+Use primary sections
 
 ```js
 import React from 'react';
@@ -45,7 +45,7 @@ class SimpleTabs extends React.Component {
 }
 ```
 
-## Scroll Buttons Tabs
+## Scroll buttons tabs
 ```js
 import React from 'react';
 import { Tabs, Tab, TabsVariant, TabContent } from '@patternfly/react-core';
@@ -110,7 +110,7 @@ class ScrollButtonsTabs extends React.Component {
 }
 ```
 
-## Secondary Buttons Tabs
+## Secondary buttons tabs
 ```js
 import React from 'react';
 import { Tabs, Tab, TabsVariant, TabContent } from '@patternfly/react-core';
@@ -164,7 +164,7 @@ class SecondaryTabs extends React.Component {
 }
 ```
 
-## Filled Buttons Tabs
+## Filled buttons tabs
 ```js
 import React from 'react';
 import { Tabs, Tab, TabsVariant, TabContent } from '@patternfly/react-core';
@@ -201,12 +201,12 @@ class FilledTabs extends React.Component {
 }
 ```
 
-## Accessible Secondary Tabs
+## Secondary tabs using the nav element
 ```js
 import React from 'react';
 import { Tabs, Tab, TabsVariant, TabContent } from '@patternfly/react-core';
 
-class AccessibleSecondaryTabs extends React.Component {
+class SecondaryTabsNavVariant extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -237,7 +237,7 @@ class AccessibleSecondaryTabs extends React.Component {
         aria-label="Local"
         variant={TabsVariant.nav}
       >
-        <Tab eventKey={0} title="Tab item 1">
+        <Tab eventKey={0} title="Tab item 1" href="#">
           <Tabs
             activeKey={this.state.activeTabKey2}
             isSecondary
@@ -245,21 +245,21 @@ class AccessibleSecondaryTabs extends React.Component {
             aria-label="Local secondary"
             variant={TabsVariant.nav}
           >
-            <Tab eventKey={10} title="Secondary tab item 1">
+            <Tab eventKey={10} title="Secondary tab item 1" href="#">
               Secondary tab item 1 item section
             </Tab>
-            <Tab eventKey={11} title="Secondary tab item 2">
+            <Tab eventKey={11} title="Secondary tab item 2" href="#">
               Secondary tab item 2 section
             </Tab>
-            <Tab eventKey={12} title="Secondary tab item 3">
+            <Tab eventKey={12} title="Secondary tab item 3" href="#">
               Secondary tab item 3 section
             </Tab>
           </Tabs>
         </Tab>
-        <Tab eventKey={1} title="Tab item 2">
+        <Tab eventKey={1} title="Tab item 2" href="#">
           Tab 2 section
         </Tab>
-        <Tab eventKey={2} title="Tab item 3">
+        <Tab eventKey={2} title="Tab item 3" href="#">
           Tab 3 section
         </Tab>
       </Tabs>
@@ -268,12 +268,12 @@ class AccessibleSecondaryTabs extends React.Component {
 }
 ```
 
-## AccessibleTabs
+## Tabs using the nav element
 ```js
 import React from 'react';
 import { Tabs, Tab, TabsVariant, TabContent } from '@patternfly/react-core';
 
-class AccessibleTabs extends React.Component {
+class TabsNavVariant extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -296,13 +296,13 @@ class AccessibleTabs extends React.Component {
         aria-label="Local"
         variant={TabsVariant.nav}
       >
-        <Tab eventKey={0} title="Tab item 1">
+        <Tab eventKey={0} title="Tab item 1" href="#">
           Tab 1 section
         </Tab>
-        <Tab eventKey={1} title="Tab item 2">
+        <Tab eventKey={1} title="Tab item 2" href="#">
           Tab 2 section
         </Tab>
-        <Tab eventKey={2} title="Tab item 3">
+        <Tab eventKey={2} title="Tab item 3" href="#">
           Tab 3 section
         </Tab>
       </Tabs>
@@ -311,7 +311,7 @@ class AccessibleTabs extends React.Component {
 }
 ```
 
-## SeparateTabContent
+## Separate tab content
 ```js
 import React from 'react';
 import { Tabs, Tab, TabsVariant, TabContent } from '@patternfly/react-core';
