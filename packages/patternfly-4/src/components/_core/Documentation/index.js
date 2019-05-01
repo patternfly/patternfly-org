@@ -25,7 +25,11 @@ export default class Documentation extends React.Component {
 
   render() {
     const { children, className = '', docs = '', heading = '', variablesRoot } = this.props;
-    const HTML_DOCS = { __html: docs };
+    const changeHeadingLevel = (html, level) => {
+      const modifiedHtml = html.replace(/<h2/g, `<${level} class="pf-u-mt-xl pf-u-mb-sm"`).replace(/h2>/g, `${level}>`);
+      return modifiedHtml;
+    }
+    const HTML_DOCS = { __html: changeHeadingLevel(docs, 'h4') };
     return !this.state.isFull ? (
       <Location>
       {({ location }) => {
@@ -42,13 +46,22 @@ export default class Documentation extends React.Component {
         }
         // ignore above and just set to HTML for now
         componentType = 'HTML';
+        const examples = React.Children.toArray(children);
         return (
           <Layout sideNav={<SideNav />}>
             <SEO title="React" />
             <PageSection variant={PageSectionVariants.light} className="pf-u-pt-md pf-site-background-medium">
               <AutoLinkHeader size="md" is="h1" className="pf4-site-framework-title">{componentType}</AutoLinkHeader>
               <AutoLinkHeader size="4xl" is="h2" className="pf-u-mt-sm pf-u-mb-md">{heading}</AutoLinkHeader>
+              <Section>
+                <AutoLinkHeader anchorOnly className="pf-site-toc">Examples</AutoLinkHeader>
+                <AutoLinkHeader anchorOnly className="pf-site-toc">Documentation</AutoLinkHeader>
+                {variablesRoot && <AutoLinkHeader anchorOnly className="pf-site-toc">CSS Variables</AutoLinkHeader>}
+              </Section>
               <Section title="Examples" headingLevel="h3" className={className}>
+                <Section>
+                  {examples.map(example => <AutoLinkHeader anchorOnly className="pf-site-toc">{example.props.heading}</AutoLinkHeader>)}
+                </Section>
                 {children}
               </Section>
             </PageSection>

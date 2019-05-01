@@ -29,7 +29,7 @@ const components = {
   pre: React.Fragment
 };
 for (let i = 1; i <= 6; i++) {
-  components[`h${i}`] = props => <AutoLinkHeader className='ws-linked-heading' is={`h${i}`} {...props}>{props.children}</AutoLinkHeader>;
+  components[`h${i}`] = props => <AutoLinkHeader className='ws-linked-heading' is={`h4`} {...props}>{props.children}</AutoLinkHeader>;
 }
 
 const MdxPF4Template = ({ data }) => {
@@ -52,6 +52,8 @@ const MdxPF4Template = ({ data }) => {
   if (!section)
     section = 'component';
 
+  const { tableOfContents } = data.mdx;
+
   return (
     <Layout sideNav={<SideNav />} className="ws-documentation">
       <SEO title="React" />
@@ -60,7 +62,15 @@ const MdxPF4Template = ({ data }) => {
         <AutoLinkHeader size="4xl" is="h2" className="pf-u-mt-sm pf-u-mb-md">
           {data.mdx.frontmatter.title}
         </AutoLinkHeader>
+        <Section>
+          <AutoLinkHeader anchorOnly className="pf-site-toc">Examples</AutoLinkHeader>
+          {props.length > 0 && <AutoLinkHeader anchorOnly className="pf-site-toc">Props</AutoLinkHeader>}
+          {cssPrefix && <AutoLinkHeader anchorOnly className="pf-site-toc">CSS Variables</AutoLinkHeader>}
+        </Section>
         <Section title="Examples" headingLevel="h3">
+          <Section>
+            {tableOfContents.items.map(item => <a className="pf-site-toc" href={item.url}>{item.title}</a>)}
+          </Section>
           <Section className="ws-live-demo">
             <MDXProvider components={components}>
               <MDXRenderer>
@@ -71,15 +81,21 @@ const MdxPF4Template = ({ data }) => {
         </Section>
       </PageSection>
 
-      {props.length > 0 && props.map(component =>
-        <PageSection key={component.name}>
-          <PropsTable
-            name={component.name}
-            description={component.description}
-            props={component.props}
+      {props.length > 0 && 
+        <PageSection>
+          <Section title="Props" headingLevel="h3">
+            {props.map(component =>
+              <AutoLinkHeader anchorOnly className="pf-site-toc">{`${component.name} Props`}</AutoLinkHeader>
+            )}
+          </Section>
+          {props.map(component =>
+            <PropsTable
+              name={component.name}
+              description={component.description}
+              props={component.props}
             />
-        </PageSection>
-      )}
+          )}
+        </PageSection>}
 
       {cssPrefix && <PageSection variant={PageSectionVariants.light} className="pf-site-background-medium">
         <Section title="CSS Variables" headingLevel="h3">
@@ -107,6 +123,7 @@ query GetComponent($fileAbsolutePath: String!, $pathRegex: String!) {
       section
       cssPrefix
     }
+    tableOfContents
   }
   metadata: allComponentMetadata(filter: {path: {regex: $pathRegex}}) {
     edges {

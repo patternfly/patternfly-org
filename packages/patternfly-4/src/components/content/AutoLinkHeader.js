@@ -13,8 +13,11 @@ const slugger = (children, id) => {
     .replace(whitespace, '-');
 };
 
-const AutoLinkHeader = ({ is: Component, children, id, size, ...props }) => {
+const AutoLinkHeader = ({ is: Component, children, id, size, anchorOnly, ...props }) => {
   const slug = slugger(children, id);
+  if (anchorOnly) {
+    return <a href={`#${slug}`} {...props}>{children}</a>
+  }
   if (!size) {
     return (
       <Component id={id || slug} {...props}>
