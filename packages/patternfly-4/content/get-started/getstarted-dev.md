@@ -1,7 +1,6 @@
 ---
 path: "/get-started/developers"
 ---
-
 # Develop with PatternFly
 Before you begin, check out our [overview of PatternFly 4](/get-started/about) to get acquainted with the basic elements of the design system.
 
@@ -13,7 +12,7 @@ Before you begin, check out our [overview of PatternFly 4](/get-started/about) t
 ### Get started with:
 
 * [React](#react)
-* [HTML/CSS](#html/css)
+* [HTML/CSS](#htmlcss)
 
 ## React
 
