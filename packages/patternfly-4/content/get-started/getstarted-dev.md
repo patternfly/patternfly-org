@@ -41,14 +41,14 @@ The React library provides a collection of React components you can use to build
   Follow the steps outlined in the [README](https://github.com/patternfly/patternfly-react-seed#quick-start) to install.
 
 ### Install and configure PatternFly React
-* Using npm, run the following commands to install:
+* Using npm, run the following command to install:
   ```
   npm install @patternfly/react-core --save
   ```
 
   **OR**
 
-* Using yarn, run the following commands to install:
+* Using yarn, run the following command to install:
   ```
   yarn add @patternfly/react-core
   ```
@@ -65,36 +65,21 @@ The HTML/CSS library provides a collection of code samples you can use to build 
 ### Install
 Using npm, run the following commands to install:
 ```
-npm install @patternfly/patternfly-next
+npm install @patternfly/patternfly --save
 ```
 
 **What’s included?**
 
-Each of the three modules (layouts, components, and utilities) delivers a sass file (.scss) and CSS file, so you can include them in your build environment or consume the CSS from your page header.
+Each of the three modules (layouts, components, and utilities) delivers a Sass file (.scss) and CSS file, so you can include them in your build environment or consume the CSS from your page header.
 
 If you need to overwrite any elements, we recommend extending the variables found in the .scss files, rather than manually overwriting the CSS.
 
-* PatternFly 4 **components** are kept under ``` @patternfly/patternfly-next/components/ ```
-* PatternFly 4 **layouts** are kept under ```@patternfly/patternfly-next/layouts/```
-* PatternFly 4 **utilities** are kept under``` @patternfly/patternfly-next/utilities/```
+When you install PatternFly 4, the package includes:
 
-**In additional detail, the package includes:**
-
-* A single file for the entire compiled library: ```node_modules/@patternfly/patternfly-next/patternfly.css```
-
-* A minified version of the patternfly.css: ```node_modules/@patternfly/patternfly-next/patternfly.min.css```
-
-* Individual files with each layout,  component, and utility compiled separately:
-  * ```node_modules/@patternfly/patternfly-next/layouts/<LayoutName>/<layout-name>.css```
-  * ```node_modules/@patternfly/patternfly-next/components/<ComponentName>/<component-name>.css```
-  * ```node_modules/@patternfly/patternfly-next/utilities/<UtilityName>/<utility-name>.css```
-
-* A single file for the entire library's source (SASS): ```node_modules/@patternfly/patternfly-next/patternfly.scss```
-
-* Individual source files for each layout, component, and utility (SASS):
-  * ```node_modules/@patternfly/patternfly-next/components/<ComponentName>/<component-name>.scss```
-  * ```node_modules/@patternfly/patternfly-next/layouts/<LayoutName>/<layout-name>.scss```
-  * ```node_modules/@patternfly/patternfly-next/utilities/<UtilityName>/<utility-name>.scss```
+  * A single file for the entire compiled library: `node_modules/@patternfly/patternfly/patternfly.css`
+  * Individual files with each component compiled separately: `node_modules/@patternfly/patternfly/<ComponentName>/styles.css`
+  * A single file for the entire library's source (Sass): `node_modules/@patternfly/patternfly/patternfly.scss`
+  * Individual files for each component's source (Sass): `node_modules/@patternfly/patternfly/<ComponentName>/styles.scss`
 
 Use these files to consume the library. The recommended consumption approach will vary from project to project.
 
@@ -132,9 +117,9 @@ PatternFly 4 uses the Overpass font family. Overpass can be utilized in two diff
 
   * **Used as a CDN**
 
-  If you wish to use the CDN for Overpass rather than the default approach, you need to update the ```utilities/variables.scss``` file and build PatternFly 4 as part of your build process.
+  If you wish to use the CDN for Overpass rather than the default approach, you need to update the ```sass-utilities/scss-variables.scss``` file and build PatternFly 4 as part of your build process.
 
-  To use the CDN vs the standard build, update the ```utilities/variables.scss``` file as follows:
+  To use the CDN vs the standard build, update the ```sass-utilities/scss-variables.scss``` file as follows:
 
   ```
   $pf-global--enable-font-overpass-cdn: true !default;
@@ -152,7 +137,7 @@ PatternFly 4 uses Font Awesome 5. Font Awesome 5 can be utilized in two differen
 
   If you wish to use the CDN for Font Awesome 5 rather than the default approach, you need to update the ```utilities/variables.scss``` file (from source ```node_modules/@patternfly/patternfly-next/```) and build PatternFly 4 as part of your build process.
 
-  To use the CDN vs the standard build, update the ```utilities/variables.scss``` file as follows:
+  To use the CDN vs the standard build, update the ```sass-utilities/scss-variables.scss``` file as follows:
 
   ```
   $pf-global--enable-fontawesome-cdn: true !default;
