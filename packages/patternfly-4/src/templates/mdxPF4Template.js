@@ -29,7 +29,10 @@ const components = {
   pre: React.Fragment
 };
 for (let i = 1; i <= 6; i++) {
-  components[`h${i}`] = props => <AutoLinkHeader className='ws-linked-heading' is={`h${i}`} {...props}>{props.children}</AutoLinkHeader>;
+  components[`h${i}`] = props => {
+    let inner = props.children.length > 0 ? props.children[1] : props.children;
+    return <AutoLinkHeader className='ws-linked-heading' is={`h${i}`} {...props}>{inner}</AutoLinkHeader>;
+  }
 }
 
 const MdxPF4Template = ({ data }) => {
