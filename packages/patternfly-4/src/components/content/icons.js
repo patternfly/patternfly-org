@@ -52,7 +52,7 @@ class Icons extends React.Component {
               onChange={this.handleSearchChange}
             />
         </Form>
-        <Gallery gutter="sm" css={css`--pf-l-gallery--GridTemplateColumns: repeat(auto-fill,minmax(240px,1fr)) !important;`}>
+        <Gallery gutter="sm" css={css`--pf-l-gallery--GridTemplateColumns: repeat(auto-fill,minmax(240px,1fr)) !important; grid-auto-flow: dense;`}>
         {filteredIcons.map(([id, Icon]) => {
           const name = paramCase(id.slice(0, -4));
           return <IconCard key={id} id={id} icon={Icon} name={name} />;
