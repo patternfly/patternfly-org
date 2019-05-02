@@ -192,13 +192,13 @@ class IconCard extends React.Component {
             </div>
           </div>
           <div className="pf-c-popover pf-m-bottom" style={{display: showBody ? 'block' : 'none', boxShadow: 'unset'}}>
-            <div className="pf-c-popover__arrow" style={{top: '24px'}} />
+            <div className="pf-c-popover__arrow" style={{top: '24px', zIndex: '1'}} />
           </div>
         </GalleryItem>
         <GalleryItem style={{display: showBody ? 'block' : 'none', gridColumn: '1 / -1'}}>
           <div className="pf-c-popover pf-m-bottom" role="dialog" aria-modal="true" aria-labelledby="popover-bottom-header" aria-describedby="popover-bottom-body" style={{maxWidth: 'unset'}} ref={this.galleryItemBodyRef}>
             {/* <div className="pf-c-popover__arrow" /> */}
-            <div className="pf-c-popover__content">
+            <div className="pf-c-popover__content" style={{zIndex: '2'}}>
               <button className="pf-c-button pf-m-plain" aria-label="Close" onClick={this.toggleBody}>
                 <i className="fas fa-times" aria-hidden="true"></i>
               </button>
