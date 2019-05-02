@@ -115,18 +115,18 @@ class IconCard extends React.Component {
   handleClickOutside(event) {
     // Little timeout to let the active component's showBody state resolve first
     setTimeout(function() {
-      if (!this.galleryItemRef.current.contains(event.target) && !this.galleryItemBodyRef.current.contains(event.target)) {
-        this.setState(() => ({
+      if (this.state.showBody && !this.galleryItemRef.current.contains(event.target) && !this.galleryItemBodyRef.current.contains(event.target)) {
+        this.setState({
           showBody: false
-        }));
+        });
       }
     }.bind(this), 1);
   }
 
   toggleBody = () => {
-    this.setState(() => ({
-      showBody: !this.state.showBody
-    }));
+    this.setState(prevState => ({
+      showBody: !prevState.showBody
+   }))
   };
 
   onCopyReact = event => {
