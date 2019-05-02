@@ -1,6 +1,8 @@
 ---
 path: "/contribute/designers"
 ---
+# Design contributions
+
 ## Ways to contribute
 Whether you have an existing design or requirements for a new feature, the first step is to open a New Feature Request issue. Your request will be reviewed and placed on the PatternFly roadmap. After this, the PatternFly design team will work with you to complete your design proposal and facilitate reviews.
 
@@ -28,25 +30,25 @@ __Example__
 
 ## Design contribution lifecycle
 
-Before you begin the contribution process, follow [these guidelines](https://patternfly.org/v4/get-started/designers) to get your environment setup.
+Before you begin the contribution process, follow [these guidelines](/get-started/designers) to get your environment setup.
 
 Follow these steps and this [template format](https://documentcloud.adobe.com/link/track?uri=urn%3Aaaid%3Ascds%3AUS%3A28fd970d-8b77-4008-b598-b2f629bda589) to submit your designs:
 
-1. Create an issue
-  - Navigate to the [PatternFly page](https://github.com/patternfly) on Github and go to the [PF4 Feature Board](https://github.com/orgs/patternfly/projects/2)
+__1. Create an issue__
+  - Navigate to the [PatternFly page](https://github.com/patternfly) on Github and go to the [PF4 Feature Board](https://github.com/orgs/patternfly/projects/3)
   - Open an issue for a new feature or comment on an existing issue for an enhancement
 
 
-2. Propose a design
+__2. Propose a design__
   - Using the Sketch PF4 symbol library, incorporate elements of existing components into the design
 
 
-3. Attach design deliverables
+__3. Attach design deliverables__
   - Add mockups and explanation of the design to the issue
   - Use a prototyping tool (i.e. InVision, Marvel, etc.) and document all interactions within the design clearly
 
 
-4. Submit your designs
+__4. Submit your designs__
   - The PatternFly team will help you throughout this process. If accepted, you will be assigned a buddy to assist you throughout the rest of the process
 
 ![Design contribution lifecycle flowchart](design-flowchart.png)
