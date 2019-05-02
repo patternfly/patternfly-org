@@ -53,9 +53,6 @@ const styles = {
     .pf-c-popover {
       width: 100%;
     }
-    .pf-c-popver__arrow {
-      z-index: 100;
-    }
   `,
   popoverHeader: css`
     margin-right: 10px;
