@@ -177,7 +177,7 @@ class IconCard extends React.Component {
     return (
       <>
         <GalleryItem onClick={this.toggleBody}>
-          <div css={styles.iconCell} ref={this.galleryItemRef}>
+          <div css={styles.iconCell} style={{height: '100%'}} ref={this.galleryItemRef}>
             <div css={styles.iconbox}>
               <Bullseye>
                 <div css={styles.innerItem}>
