@@ -69,7 +69,7 @@ Some usage examples include:
 **Note:** If information is not critical, don’t use a passive dialog. Instead, use inline notifications or toast notifications.
 
 #### Get required user input
-Sometimes users may need to provide additional input in order to complete an action. In this situation a form or other type of element may be incorporated into the modal. An example of this use case is the [Modal Wizard](/documentation/core/demos/wizard).
+Sometimes users may need to provide additional input in order to complete an action. In this situation a form or other type of element may be incorporated into the modal. An example of this use case is the [modal wizard](/documentation/core/demos/wizard).
 
 ### Content
 * Clearly restate the action the user is trying to take and explicitly outline the consequences of that action.
@@ -84,7 +84,7 @@ See our [content guidelines](/design-guidelines/content/) for additional guidanc
 
 #### Icon use in modal dialogs
 
-| Icon  | Use Case(s) | Usage |
+| Icon  | Use case(s) | Usage |
 | ------------- | ------------- | ------------- |
 | <i class="fas fa-exclamation-triangle"></i> | **Warning:** Caution/ Warning | Use on confirmation dialogs or passive dialogs to indicate a higher level of urgency and importance. |
 | <i class="fas fa-exclamation-circle"></i>   | **Critical Warning:** Information will be deleted/permanent action  | Use on confirmation dialogs or passive dialogs to indicate the highest level of urgency and importance. |
@@ -96,7 +96,7 @@ The PatternFly components listed in the following sections can be used in a numb
 
 **HTML/CSS components**
 * [Modal](/documentation/core/demos/modal)
-* [Modalbox](/documentation/core/components/modalbox)
+* [Modal box](/documentation/core/components/modalbox)
 * [Button](/documentation/core/components/button)
 
 **React components**

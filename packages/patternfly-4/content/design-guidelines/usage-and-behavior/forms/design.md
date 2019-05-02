@@ -127,6 +127,7 @@ Use a **popover** for longer (2 sentences or more) explanations, content that re
   * Use popovers for any field that may require additional background or explanation.
   * Keep descriptions as concise as possible.
 
+
   **DON'T**
 
   * Don’t use popovers to compensate for bad design or rely on them to explain a graphic or word choice.
@@ -143,6 +144,7 @@ Helper text is text below a form field that helps a user provide the right infor
   * Keep helper text concise while providing enough information to enable a user to complete their task.
   * Use helper text to provide critical information that is secondary to the field label.
   * Limit the use of helper text to avoid overwhelming the user.
+
 
   **DON'T**
 
@@ -165,6 +167,7 @@ Use placeholder text when the requested data type might be unfamiliar or the fie
   * Always precede placeholder text with "e.g." followed by a space. For example "e.g. (781)555-5555" or "e.g. 491"
   * Keep hints concise; never extend the length of the text field.
   * Limit the use of syntax hints to avoid overwhelming the user.
+
 
   **DON'T**
 
@@ -252,8 +255,8 @@ The PatternFly components listed can be used in a number of ways to build forms 
 * [Check](/documentation/core/components/check)
 * [Content](/documentation/core/components/content)
 * [Dropdown](/documentation/core/components/dropdown)
-* [Formcontrol](/documentation/core/components/formcontrol)
-* [Inputgroup](/documentation/core/components/inputgroup)
+* [Form control](/documentation/core/components/formcontrol)
+* [Input group](/documentation/core/components/inputgroup)
 * [Popover](/documentation/core/components/popover)
 * [Progress](/documentation/core/components/progress)
 * [Switch](/documentation/core/components/switch)
@@ -268,8 +271,8 @@ The PatternFly components listed can be used in a number of ways to build forms 
 * [Radio](/documentation/react/components/radio)
 * [Select](/documentation/react/components/select)
 * [Switch](/documentation/react/components/switch)
-* [TextArea](/documentation/react/components/textarea)
+* [Text area](/documentation/react/components/textarea)
 * [Text](/documentation/react/components/text)
 * [Popover](/documentation/react/components/popover)
-* [TextInput](/documentation/react/components/textinput)
+* [Text input](/documentation/react/components/textinput)
 * [Tooltip](/documentation/react/components/tooltip)
