@@ -27,7 +27,7 @@ const Switcher = ({ data }) => (
       const validCorePath = verifyPath(corePath, data.corePages) || '/documentation/core/components/aboutmodalbox';
       return (
         <Bullseye className="pf-site-switcher-group pf-u-ml-xl">
-          <Title size="lg" className="pf-site-switcher-group__title pf-u-mb-sm">FRAMEWORK</Title>
+          <Title className="pf-site-switcher-group__title pf-u-mb-sm">FRAMEWORK</Title>
           <div>
             <Link to={validReactPath}>
               <Button variant={activeReact ? 'primary' : 'tertiary'} className="pf-w-btn-left" isActive={activeReact}>React</Button>
