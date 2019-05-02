@@ -1,18 +1,18 @@
 [
   {
     "text": "Get started",
-    "path": "/get-started"
+    "path": "/get-started/about"
   },
   {
     "text": "Design guidelines",
-    "path": "/design-guidelines"
+    "path": "/design-guidelines/styles/colors"
   },
   {
     "text": "Documentation",
-    "path": "/documentation"
+    "path": "/documentation/react/components/aboutmodal"
   },
   {
     "text": "Contribute",
-    "path": "/contribute"
+    "path": "/contribute/about"
   }
 ]
