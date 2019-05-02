@@ -31,8 +31,8 @@ The React library provides a collection of React components you can use to build
 ### Start with the React seed
 1. **Fork the project**
 
-  * Typescript: [Fork and clone the PatternFly React Seed project](https://github.com/patternfly/patternfly-react-seed).
-  * Javascript: [Fork and clone the Javascript branch of the PatternFly React Seed project](https://github.com/patternfly/patternfly-react-seed/tree/javascript).
+  * TypeScript: [Fork and clone the PatternFly React Seed project](https://github.com/patternfly/patternfly-react-seed).
+  * JavaScript: [Fork and clone the Javascript branch of the PatternFly React Seed project](https://github.com/patternfly/patternfly-react-seed/tree/javascript).
 
   For more information about how to fork and clone a repo, [view GitHub Help](https://help.github.com/articles/fork-a-repo/).
 
