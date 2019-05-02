@@ -56,7 +56,7 @@ class LiveEdit extends React.Component {
           disabled={noLive}
         >
           {!noLive &&
-            <LivePreview className={css('example', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')} />}
+            <LivePreview className={css('example ws-preview', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')} />}
           <EditorToolbar
             raw={this.code}
             showLights={false}
