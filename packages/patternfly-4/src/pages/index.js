@@ -75,10 +75,10 @@ const IndexPage = () => (
               </TextContent>
             </GridItem>
             <GridItem sm={12} md={6}>
-              <object type="image/svg+xml" className="pf4-c-image__laptop" aria-label="laptop image">Laptop image</object>
-              <object type="image/svg+xml" className="pf4-c-image__phone" aria-label="phone image"></object>
-              <object type="image/svg+xml" className="pf4-c-image__screen" aria-label="screen image"></object>
-              <object type="image/svg+xml" className="pf4-c-image__desktop" aria-label="desktop image"></object>
+              <div type="image/svg+xml" className="pf4-c-image__laptop" aria-label="laptop image"></div>
+              <div type="image/svg+xml" className="pf4-c-image__phone" aria-label="phone image"></div>
+              <div type="image/svg+xml" className="pf4-c-image__screen" aria-label="screen image"></div>
+              <div type="image/svg+xml" className="pf4-c-image__desktop" aria-label="desktop image"></div>
             </GridItem>
           </Grid>
         </GridItem>
