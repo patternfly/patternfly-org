@@ -102,7 +102,7 @@ class Footer extends React.Component {
           <Grid className="pf-u-py-xl-on-sm pf-u-py-0-on-md pf-u-align-items-center">
             <GridItem md={2} mdOffset={1}>
               <Text component={TextVariants.a} href="https://www.redhat.com" target="top" aria-label="Visit Red Hat.com">
-                <img src={redhatLogo} alt="Red Hat logo" width="75%" height="75%"/>
+                <img src={redhatLogo} alt="Red Hat logo" width="145px" height="613px"/>
               </Text>
             </GridItem>
             <GridItem md={4} lg={3} xl={2}>
