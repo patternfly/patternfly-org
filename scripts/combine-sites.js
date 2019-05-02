@@ -31,9 +31,10 @@ console.log(`Copied pf3 build into ${build_root}`);
 // Use v4's 404
 const path404 = path.join(pf3_root, '404.html');
 fs.removeSync(path404);
-// To fix the 404 page JS from crashing after loading .org/asdfasdf we have
-// to remove this <script>. Could debug it in the future (has to do with prefix paths)
-const page404 = fs.readFileSync(path.join(pf4_root, '404.html'), 'utf-8')
-  .replace(/<script src=".*webpack-runtime.*><\/script>/, '');
+const page404 = `<!DOCTYPE html><html lang="en">
+  <script>
+    window.location.replace("/v4/404.html");
+  </script>
+</html>`;
 fs.writeFileSync(path404, page404);
 console.log(`Replaced 404 page at ${path404}`);
