@@ -120,7 +120,7 @@ class IconCard extends React.Component {
           showBody: false
         });
       }
-    }.bind(this), 1);
+    }.bind(this), 10);
   }
 
   toggleBody = () => {
