@@ -55,7 +55,8 @@ async function onCreateNode({
     if (isTSX(node)) {
       // Load up the already transpiled file
       const transpiledPath = node.absolutePath
-        .replace(/react-(.*)\/src/, 'react-$1/dist/esm')
+        .replace(/packages\/patternfly-4\/_repos\/react-(.*)\/src/,
+                'node_modules/@patternfly/react-$1/dist/esm')
         .replace(/\.tsx?$/, '.js');
       const jsText = fs.readFileSync(transpiledPath, 'utf8');
       parsed = docgenJavascript.parse(jsText);
