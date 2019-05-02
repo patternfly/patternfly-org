@@ -12,7 +12,7 @@ import {
 } from '@patternfly/react-core';
 import { withPrefix } from 'gatsby';
 import patternflyLogo from '../../images/l_pf-reverse-164x11.png';
-import redhatLogo from '../../images/RHLogo.svg';
+import redhatLogo from '../../images/RHLogo-new.png';
 
 class Footer extends React.Component {
   render() {
@@ -102,7 +102,7 @@ class Footer extends React.Component {
           <Grid className="pf-u-py-xl-on-sm pf-u-py-0-on-md pf-u-align-items-center">
             <GridItem md={2} mdOffset={1}>
               <Text component={TextVariants.a} href="https://www.redhat.com" target="top" aria-label="Visit Red Hat.com">
-                <img src={redhatLogo} alt="Red Hat logo" />
+                <img src={redhatLogo} alt="Red Hat logo" width="75%" height="75%"/>
               </Text>
             </GridItem>
             <GridItem md={4} lg={3} xl={2}>
