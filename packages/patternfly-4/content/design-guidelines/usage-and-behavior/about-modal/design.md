@@ -33,14 +33,14 @@ Provide access to the about modal using a help icon in the application masthead.
 
 ## Related components and demos
 **HTML/CSS**
-* [Aboutmodal](/documentation/core/demos/aboutmodal)
-* [Aboutmodalbox](/documentation/core/components/aboutmodalbox)
+* [About modal](/documentation/core/demos/aboutmodal)
+* [About modal box](/documentation/core/components/aboutmodalbox)
 * [Backdrop](/documentation/core/components/backdrop)
-* [Backgroundimage](/documentation/core/components/backgroundimage)
+* [Background image](/documentation/core/components/backgroundimage)
 * [Button](/documentation/core/components/button)
 
 **React**
-* [AboutModal](/documentation/react/components/aboutmodal)
-* [Backgroundimage](/documentation/react/components/backgroundimage)
+* [About modal](/documentation/react/components/aboutmodal)
+* [Background image](/documentation/react/components/backgroundimage)
 * [Brand](/documentation/react/components/brand)
 * [Button](/documentation/react/components/button)

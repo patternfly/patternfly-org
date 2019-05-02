@@ -1,4 +1,4 @@
 ---
 htmlUrl: 'modalbox'
 ---
-**Modalbox** is a component used to build modals.
+**Modal box** is a component used to build modals.

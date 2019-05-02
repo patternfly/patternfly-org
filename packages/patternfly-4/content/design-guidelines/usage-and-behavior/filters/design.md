@@ -184,14 +184,14 @@ Filter queries are applied when the user selects or deselects an item in the lis
 * [Chip](/documentation/core/components/chip)
 * [Chip group](/documentation/core/components/chipgroup)
 * [Input group](/documentation/core/components/inputgroup)
-* [Options Menus](/documentation/core/components/optionsmenu)
+* [Options menus](/documentation/core/components/optionsmenu)
 * [Select](/documentation/core/components/select)
 * [Toolbar](/documentation/core/components/toolbar)
 
 **React**
 * [Badges](/documentation/react/components/badge)
 * [Checkbox](/documentation/react/components/checkbox)
-* [Chip Group](/documentation/react/components/chipgroup)
+* [Chip group](/documentation/react/components/chipgroup)
 * [Toolbar demo](/documentation/react/demos/toolbar)
 
 

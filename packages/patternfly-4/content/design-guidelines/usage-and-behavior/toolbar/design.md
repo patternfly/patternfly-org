@@ -72,7 +72,7 @@ The toolbar adapts to smaller viewport sizes by collapsing or hiding elements th
 * [Chip group](/documentation/core/components/chipgroup)
 * [Dropdowns](/documentation/core/components/dropdown)
 * [Input group](/documentation/core/components/inputgroup)
-* [Options Menus](/documentation/core/components/optionsmenu)
+* [Options menus](/documentation/core/components/optionsmenu)
 * [Pagination](/documentation/core/components/pagination)
 * [Select](/documentation/core/components/select)
 

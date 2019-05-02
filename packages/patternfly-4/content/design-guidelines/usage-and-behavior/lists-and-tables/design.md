@@ -135,9 +135,9 @@ In this example, a data table is positioned in the body of a page in a card.
 ## Components and demos used
 
 **HTML/CSS**
-* [DataList](/documentation/core/components/DataList)
-* [DataTable](/documentation/core/components/DataTable)
+* [Data list](/documentation/core/components/DataList)
+* [Data table](/documentation/core/components/DataTable)
 
 **React**
-* [DataList](/documentation/react/components/DataList)
-* [DataTable](/documentation/react/components/DataTable)
+* [Data list](/documentation/react/components/DataList)
+* [Data table](/documentation/react/components/DataTable)
