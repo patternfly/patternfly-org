@@ -59,7 +59,6 @@ const styles = {
   `,
   popoverBody: css`
     display: flex;
-    width: 800px;
     flex-direction: column;
     align-items: left;
   `,
@@ -99,7 +98,36 @@ class IconCard extends React.Component {
   constructor(props) {
     super(props);
     this.iconRef = React.createRef();
+    this.state = { showBody: false };
+    this.galleryItemRef = React.createRef();
+    this.galleryItemBodyRef = React.createRef();
+    this.handleClickOutside = this.handleClickOutside.bind(this);
   }
+
+  componentDidMount = () => {
+    document.addEventListener('mousedown', this.handleClickOutside);
+  }
+
+  componentWillUnmount = () => {
+    document.removeEventListener('mousedown', this.handleClickOutside);
+  }
+
+  handleClickOutside(event) {
+    // Little timeout to let the active component's showBody state resolve first
+    setTimeout(function() {
+      if (!this.galleryItemRef.current.contains(event.target) && !this.galleryItemBodyRef.current.contains(event.target)) {
+        this.setState(() => ({
+          showBody: false
+        }));
+      }
+    }.bind(this), 1);
+  }
+
+  toggleBody = () => {
+    this.setState(() => ({
+      showBody: !this.state.showBody
+    }));
+  };
 
   onCopyReact = event => {
     event.stopPropagation();
@@ -133,9 +161,10 @@ class IconCard extends React.Component {
   
   render() {
     const { icon: Icon, name } = this.props;
+    const { showBody } = this.state;
     const popoverBody = (
       <div css={styles.popoverBody}>
-        <div css={styles.textDescription}>
+        <div css={styles.textDescription} style={{'display': 'none'}}>
           <div>Indicates that a user may create or add something.</div>
         </div>
         <div css={styles.copyButtons}>
@@ -146,14 +175,9 @@ class IconCard extends React.Component {
       </div>
     );
     return (
-      <GalleryItem>
-        <Popover 
-          css={styles.popover}
-          position="right" 
-          headerContent={<div css={styles.popoverHeader}>{name}</div>} 
-          bodyContent={popoverBody}
-        >
-          <div css={styles.iconCell}>
+      <>
+        <GalleryItem onClick={this.toggleBody}>
+          <div css={styles.iconCell} ref={this.galleryItemRef}>
             <div css={styles.iconbox}>
               <Bullseye>
                 <div css={styles.innerItem}>
@@ -167,8 +191,27 @@ class IconCard extends React.Component {
               {name}
             </div>
           </div>
-        </Popover>
-      </GalleryItem>
+          <div className="pf-c-popover pf-m-bottom" style={{display: showBody ? 'block' : 'none', boxShadow: 'unset'}}>
+            <div className="pf-c-popover__arrow" style={{top: '24px'}} />
+          </div>
+        </GalleryItem>
+        <GalleryItem style={{display: showBody ? 'block' : 'none', gridColumn: '1 / -1'}}>
+          <div className="pf-c-popover pf-m-bottom" role="dialog" aria-modal="true" aria-labelledby="popover-bottom-header" aria-describedby="popover-bottom-body" style={{maxWidth: 'unset'}} ref={this.galleryItemBodyRef}>
+            {/* <div className="pf-c-popover__arrow" /> */}
+            <div className="pf-c-popover__content">
+              <button className="pf-c-button pf-m-plain" aria-label="Close" onClick={this.toggleBody}>
+                <i className="fas fa-times" aria-hidden="true"></i>
+              </button>
+              <h1 className="pf-c-title pf-m-xl" id="popover-bottom-header" style={{marginTop: 0}}>
+                {name}
+              </h1>
+              <div className="pf-c-popover__body" id="popover-bottom-body">
+                {popoverBody}
+              </div>
+            </div>
+          </div>
+        </GalleryItem>
+      </>
     );
   }
 

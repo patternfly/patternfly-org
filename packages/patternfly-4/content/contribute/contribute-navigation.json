@@ -1,0 +1,14 @@
+[
+  {
+    "text": "About",
+    "path": "/contribute/about"
+  },
+  {
+    "text": "Develop",
+    "path": "/contribute/developers"
+  },
+  {
+    "text": "Design",
+    "path": "/contribute/designers"
+  }
+]

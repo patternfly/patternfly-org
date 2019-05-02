@@ -19,12 +19,15 @@ exports.onCreateNode = ({ node, actions }) => {
     const corePathLabel = node.component
       .split('/')
       .slice(-3)[0]
-      .replace(/([A-Z])/g, ' $1');
+      .replace(/([A-Z])/g, ' $1')
+      .trim();
+
+    label = corePathLabel.charAt(0) + corePathLabel.slice(1).toLowerCase();
 
     createNodeField({
       node,
       name: 'label',
-      value: corePathLabel
+      value: label
     });
     createNodeField({
       node,
@@ -37,6 +40,7 @@ exports.onCreateNode = ({ node, actions }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const redirects = [
     { f: '/get-started', t: '/get-started/about' },
+    { f: '/contribute', t: '/contribute/about' },
     { f: '/design-guidelines', t: '/design-guidelines/styles' },
     { f: '/design-guidelines/styles', t: '/design-guidelines/styles/colors'},
     { f: '/documentation', t: '/documentation/react/components/aboutmodal' },

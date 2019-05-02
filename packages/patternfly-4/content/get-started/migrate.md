@@ -2,7 +2,7 @@
 path: "/get-started/migrate"
 ---
 
-# Migrate from Patternfly 3 to PatternFly 4
+# Migration guide
 
 ## Design your migration strategy
 The first step in moving from PatternFly 3 to PatternFly 4 should be a migration strategy. Putting a solid plan in place before you start trying to migrate your codebase will help you prioritize and chunk your work and identify areas where migrating may impact design elements like interaction patterns or spacing.
@@ -16,7 +16,7 @@ High impact visuals include:
 * Iconography
 * Navigation and masthead
 
-**Note:** PatternFly 4 provides an updated navigation system. If you choose to rework your application’s existing navigation, it’s best to break this work into two steps: one that tackles styles like typography and color, and another for the navigation work. 
+**Note:** PatternFly 4 provides an updated navigation system. If you choose to rework your application’s existing navigation, it’s best to break this work into two steps: one that tackles styles like typography and color, and another for the navigation work.
 
 Use Sketch to create high fidelity mockups to visualize the changes required and communicate them to development.
 
@@ -32,9 +32,9 @@ In parallel to upgrading key functionality, use ongoing product work as an oppor
 If you run into trouble and need support, the PatternFly team is here to help. Simply go to the [PatternFly forum](https://forum.patternfly.org/c/support) and add a new topic to get in touch with us. We'll always do our best to answer your questions and connect you with the right people quickly.
 
 ## Start building with PatternFly 4 libraries
-[Get started with React](/v4/get-started/developers#react)
+[Get started with React](/get-started/developers#react)
 
-[Get started with HTML/CSS](/v4/get-started/developers#html/css)
+[Get started with HTML/CSS](/get-started/developers#html/css)
 
 **Do you need to run PatternFly 3 and PatternFly 4 together?**
 

@@ -171,7 +171,7 @@ class CoreSideNav extends React.Component {
                   )})}
               </NavExpandable>
               <NavItem isActive={currentPath.indexOf('/documentation/core/css-variables') > -1}>
-                  <Link to="/documentation/core/css-variables/">Global CSS Variables</Link>
+                  <Link to="/documentation/core/css-variables/">Global CSS variables</Link>
                 </NavItem>
               </NavList>
             </Nav>

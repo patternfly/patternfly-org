@@ -21,11 +21,11 @@ The most common use case for area charts is to show trending over a continuous s
 #### Example
 ![Area chart](img/areachart.png)
 
-1. Data area fill: The area fill is presented below the data line. Data area fills use colors that conform with the [Colors for charts](/styles/colors-for-charts).
+1. Data area fill: The area fill is presented below the data line. Data area fills use colors that conform with the [Colors for charts](/design-guidelines/styles/colors-for-charts).
 2. Interactive data points: Specific data points may be represented by dots on the line portion of the area chart. The tooltip will contain the data values for that specific point in time.
 
-#### React component
-[Area chart](/documentation/react/components/areachart)
+<!--#### React component
+[Area chart](/documentation/react/components/areachart)-->
 
 ### Bar chart
 
@@ -43,10 +43,10 @@ The benefit of using a bar chart is that discrete quantities of data can easily 
 
 ![Vertical bar chart](img/vertbarchart.png)
 
-1. Bar: All bars should be the same width. The height of the bar represents its value. The spacing between bars should be equal as well, mimicking the axis value spacing. For recommendations on fill colors, see [Colors for charts](/styles/colors-for-charts).
+1. Bar: All bars should be the same width. The height of the bar represents its value. The spacing between bars should be equal as well, mimicking the axis value spacing. For recommendations on fill colors, see [Colors for charts](/design-guidelines/styles/colors-for-charts).
 
-#### React component
-[Bar chart](/documentation/react/components/barchart)
+<!--#### React component
+[Bar chart](/documentation/react/components/barchart)-->
 
 ### Stacked bar charts
 
@@ -57,25 +57,25 @@ Stacked bar charts describe totals while allowing a degree of internal breakdown
 
 ![Vertical stacked bar chart](img/vertstackedbarchart.png)
 
-1. Stacked bar: The first series name is represented by the topmost stacked bar, and the last series name is represented by the bottommost stacked bar. For recommendations on series colors, see [Colors for charts](/styles/colors-for-charts).
+1. Stacked bar: The first series name is represented by the topmost stacked bar, and the last series name is represented by the bottommost stacked bar. For recommendations on series colors, see [Colors for charts](/design-guidelines/styles/colors-for-charts).
 
-#### React component
-[Stacked bar chart](/documentation/react/components/stackchart)
+<!--#### React component
+[Stacked bar chart](/documentation/react/components/stackchart)-->
 
 ### Donut chart
 Donut charts represent relative amounts that must add up to 100%.
 
 #### Usage
-The most common use cases for donut charts are to show progress completion as a percentage, show utilization for an object as a percentage and show the relationship of a set of values to a whole. Use donut charts to compare an individual section to the whole. As said previously, the entire donut should add up to 100% and the fill represents a percentage of that. There should be no more than six categories in total, similar to pie charts We recommend that you use the [Colors for charts](/styles/colors-for-charts) to represent your data when thresholds are not present. Consider using a [Bar chart](#bar-chart) if you would like to compare one category to another.
+The most common use cases for donut charts are to show progress completion as a percentage, show utilization for an object as a percentage and show the relationship of a set of values to a whole. Use donut charts to compare an individual section to the whole. As said previously, the entire donut should add up to 100% and the fill represents a percentage of that. There should be no more than six categories in total, similar to pie charts We recommend that you use the [Colors for charts](/design-guidelines/styles/colors-for-charts) to represent your data when thresholds are not present. Consider using a [Bar chart](#bar-chart) if you would like to compare one category to another.
 
-#### Example
-![Donut chart](img/donutchart.png)
+<!--#### Example
+![Donut chart](img/donutchart.png)-->
 
-1. Donut chart fill: We recommend that the [Colors for charts](/styles/colors-for-charts) are used for the donut chart color when thresholds are not being represented. Each color is separated by a small amount of padding at #FFFFFF.
+1. Donut chart fill: We recommend that the [Colors for charts](/design-guidelines/styles/colors-for-charts) are used for the donut chart color when thresholds are not being represented. Each color is separated by a small amount of padding at #FFFFFF.
 2. Label: When the Donut Chart is contained within a dashboard card, there is a label defining what the Donut Chart represents. The label may be shown either inside or outside of the Donut Chart. The label my also represent the total value of the data set. If this optional representation is chosen, it should follow the format of [total numeric value] + [data set label]. If the label does not fit within the donut, place it outside of the donut and leave the center empty.
 
-#### React component
-[Donut chart](/documentation/react/components/donutchart)
+<!--#### React component
+[Donut chart](/documentation/react/components/donutchart)-->
 
 ### Line chart
 
@@ -89,10 +89,10 @@ Multiple lines on the same chart allow the user to visualize relationships betwe
 #### Example
 ![Line chart](img/linechart.png)
 
-1. Line: Line charts can optionally visually represent data points as dots on the line. If so, the same interaction that occurs when hovering over one in an [Area chart](#area-chart) will occur in line charts. For line colors, we recommend using the [Colors for charts](/styles/colors-for-charts).
+1. Line: Line charts can optionally visually represent data points as dots on the line. If so, the same interaction that occurs when hovering over one in an [Area chart](#area-chart) will occur in line charts. For line colors, we recommend using the [Colors for charts](/design-guidelines/styles/colors-for-charts).
 
-#### React component
-[Line chart](/documentation/react/components/linechart)
+<!--#### React component
+[Line chart](/documentation/react/components/linechart)-->
 
 ### Pie chart
 
@@ -106,10 +106,10 @@ A pie chart may be the wrong choice when you need to compare categories to one a
 #### Example
 ![Pie chart](img/piechart.png)
 
-1. Pie chart fill: We recommend that fill colors should be based on the [Colors for charts](/styles/colors-for-charts).
+1. Pie chart fill: We recommend that fill colors should be based on the [Colors for charts](/design-guidelines/styles/colors-for-charts).
 
-#### React component
-[Pie chart](/documentation/react/components/piechart)
+<!--#### React component
+[Pie chart](/documentation/react/components/piechart)-->
 
 ### Charts in cards
 If a chart lives in a card, the title of that chart will be placed on the header of that card instead of the chart. The rest of the chart guidelines should be followed for the chart itself.

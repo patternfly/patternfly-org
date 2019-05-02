@@ -26,6 +26,11 @@
   background-color: #f8f8f8 !important;
 }
 
+.pf-site-toc {
+  margin-right: 30px;
+  display: inline-block;
+}
+
 .Documentation_heading {
   margin-bottom: var(--pf-global--spacer--sm);
   font-size: 24px;
@@ -74,6 +79,10 @@
       vertical-align: top;
       border-top: var(--pf-global--BorderWidth--sm) solid #e0e0e0;
       border-bottom: var(--pf-global--BorderWidth--sm) solid #e0e0e0;
+
+      > code {
+        white-space: normal;
+      }
     }
   }
 
