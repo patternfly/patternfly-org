@@ -1,5 +1,5 @@
 ---
-path: "/design-guidelines/styles/colors-for-charts"
+path: "/design-guidelines/styles/chart-colors"
 ---
 import theSystem from './thesystem.gif';
 import oneFamily from './onefamily.gif';
