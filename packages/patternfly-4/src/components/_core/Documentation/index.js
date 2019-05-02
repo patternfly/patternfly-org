@@ -14,7 +14,6 @@ export default class Documentation extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isFull: false };
-    console.log('data!', props.data)
   }
 
   componentDidMount() {

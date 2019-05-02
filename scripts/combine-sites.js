@@ -10,53 +10,30 @@ const build_root = 'out/';
 const pf3_root = build_root;
 const pf4_root = 'out/v4/';
 
-fs.remove(build_root, (errRemove) => {
-  if (errRemove) {
-    // eslint-disable-next-line no-console
-    return console.error(errRemove);
-  }
-  // eslint-disable-next-line no-console
-  console.log(`Removed ${build_root} dir`);
+fs.removeSync(build_root);
+console.log(`Removed ${build_root} dir`);
 
-  // create directory structure
-  fs.ensureDir(pf4_root, (errMakeDir) => {
-    if (errMakeDir) {
-      // eslint-disable-next-line no-console
-      return console.error(errMakeDir);
-    }
-    // eslint-disable-next-line no-console
-    console.log(`Created ${pf4_root} dir`);
+// create directory structure
+fs.ensureDirSync(pf4_root);
+console.log(`Created ${pf4_root} dir`);
 
-    // Copy PF4 files into /v4
-    fs.copy(pf4_build, pf4_root, (errPf4) => {
-      if (errPf4) {
-        // eslint-disable-next-line no-console
-        return console.error(errPf4);
-      }
-      // eslint-disable-next-line no-console
-      console.log(`Copied pf4 build into ${pf4_root}`);
+// Copy PF4 files into /v4
+fs.copySync(pf4_build, pf4_root)
+fs.moveSync(path.join(pf4_root, 'sitemap.xml'), path.join(build_root, 'sitemap.xml'));
+fs.moveSync(path.join(pf4_root, 'robots.txt'), path.join(build_root, 'robots.txt'));
+console.log(`Copied pf4 build into ${pf4_root}`);
 
-      fs.moveSync(path.join(pf4_root, 'sitemap.xml'), path.join(build_root, 'sitemap.xml'));
-      fs.moveSync(path.join(pf4_root, 'robots.txt'), path.join(build_root, 'robots.txt'));
-    });
-  });
-
-  fs.ensureDir(pf3_root, (errMakeDir) => {
-    if (errMakeDir) {
-      // eslint-disable-next-line no-console
-      return console.error(errMakeDir);
-    }
-    // eslint-disable-next-line no-console
-    console.log(`Created ${pf3_root} dir`);
-
-    // Copy PF3 files into /
-    fs.copy(pf3_build, pf3_root, (errPf3) => {
-      if (errPf3) {
-        // eslint-disable-next-line no-console
-        return console.error(errPf3);
-      }
-      // eslint-disable-next-line no-console
-      console.log(`Copied pf3 build into ${build_root}`);
-    });
-  });
-});
+// Copy PF3 files into /
+fs.ensureDirSync(pf3_root)
+console.log(`Created ${pf3_root} dir`);
+fs.copySync(pf3_build, pf3_root);
+console.log(`Copied pf3 build into ${build_root}`);
+// Use v4's 404
+const path404 = path.join(pf3_root, '404.html');
+fs.removeSync(path404);
+// To fix the 404 page JS from crashing after loading .org/asdfasdf we have
+// to remove this <script>. Could debug it in the future (has to do with prefix paths)
+const page404 = fs.readFileSync(path.join(pf4_root, '404.html'), 'utf-8')
+  .replace(/<script src=".*webpack-runtime.*><\/script>/, '');
+fs.writeFileSync(path404, page404);
+console.log(`Replaced 404 page at ${path404}`);
