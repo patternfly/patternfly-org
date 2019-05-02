@@ -10,6 +10,13 @@
   }
 
   .pf-w-btn-left.pf-c-button,
+  .pf-w-btn-right.pf-c-button {
+    &.pf-m-active {
+      background-color:#00659C;
+    }
+  }
+
+  .pf-w-btn-left.pf-c-button,
   .pf-w-btn-left.pf-c-button::after {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
