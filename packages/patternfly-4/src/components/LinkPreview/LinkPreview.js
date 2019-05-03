@@ -10,19 +10,20 @@ import './LinkPreview.scss';
 const LinkPreview = ({ data, name, path }) => {
   const encodePath = path => path
     .replace(data.site.pathPrefix, '')
-    .replace(/\?/g, '!?')
+    .replace('?', '/?')
     .replace(/ /g, '%20')
     .replace(/\//g, '!');
 
   return (
     <Location>
       {({ location }) => {
+        debugger;
         let fileNameFromUrl = encodePath(path);
         if (fileNameFromUrl.split('!').length < 3) {
           // It's a PF4 md page, clearly too short
           fileNameFromUrl = encodePath(location.pathname + path + '/');
         }
-        const previewScreenshot = data ? data.allFile.edges.filter(({ node }) => node.relativePath === `${fileNameFromUrl}.png`) : null;
+        const previewScreenshot = data ? data.allFile.edges.filter(({ node }) => node.relativePath.indexOf(fileNameFromUrl) > -1) : null;
         if (previewScreenshot && previewScreenshot.length > 0) {
           return (
             <div className="Preview__body">
