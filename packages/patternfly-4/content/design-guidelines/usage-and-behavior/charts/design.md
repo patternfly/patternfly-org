@@ -68,8 +68,8 @@ Donut charts represent relative amounts that must add up to 100%.
 #### Usage
 The most common use cases for donut charts are to show progress completion as a percentage, show utilization for an object as a percentage and show the relationship of a set of values to a whole. Use donut charts to compare an individual section to the whole. As said previously, the entire donut should add up to 100% and the fill represents a percentage of that. There should be no more than six categories in total, similar to pie charts We recommend that you use the [Colors for charts](/design-guidelines/styles/chart-colors) to represent your data when thresholds are not present. Consider using a [Bar chart](#bar-chart) if you would like to compare one category to another.
 
-<!--#### Example
-![Donut chart](img/donutchart.png)-->
+#### Example
+![Donut chart](img/donutchart.png)
 
 1. Donut chart fill: We recommend that the [Colors for charts](/design-guidelines/styles/chart-colors) are used for the donut chart color when thresholds are not being represented. Each color is separated by a small amount of padding at #FFFFFF.
 2. Label: When the Donut Chart is contained within a dashboard card, there is a label defining what the Donut Chart represents. The label may be shown either inside or outside of the Donut Chart. The label my also represent the total value of the data set. If this optional representation is chosen, it should follow the format of [total numeric value] + [data set label]. If the label does not fit within the donut, place it outside of the donut and leave the center empty.
