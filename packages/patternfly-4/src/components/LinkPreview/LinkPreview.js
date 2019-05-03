@@ -17,7 +17,6 @@ const LinkPreview = ({ data, name, path }) => {
   return (
     <Location>
       {({ location }) => {
-        debugger;
         let fileNameFromUrl = encodePath(path);
         if (fileNameFromUrl.split('!').length < 3) {
           // It's a PF4 md page, clearly too short
