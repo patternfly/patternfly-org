@@ -230,3 +230,39 @@ div.ws-live-demo > .Preview * {
     }
   }
 }
+
+.is-expanded-dropdown,
+.is-tall-body {
+  .Preview__body {
+    height: 24em;
+  }
+}
+
+.is-extra-tall-body {
+  .Preview__body {
+    height: 34em;
+  }
+}
+
+.is-expanded-top {
+  .Preview__body {
+    padding-top: 14em;
+  }
+}
+
+.is-align-right {
+  .Preview__body {
+    text-align: right;
+  }
+}
+
+.is-height-flex-column-grow {
+  .Preview__body {
+    display: flex;
+    flex-direction: column;
+
+    > * {
+      flex-grow: 1;
+    }
+  }
+}
