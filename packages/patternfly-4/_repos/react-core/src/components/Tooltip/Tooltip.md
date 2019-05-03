@@ -16,7 +16,7 @@ import { Tooltip, TooltipPosition, Checkbox } from '@patternfly/react-core';
     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.</div>
   }
 >
-  <span>I have a tooltip!</span>
+  <span>Hover to view tooltip</span>
 </Tooltip>
 ```
 
@@ -53,13 +53,15 @@ class TooltipPositions extends React.Component {
               </option>
             ))}
           </select>
-          <Checkbox
-            label="Flip tooltip if the position falls outside the view"
-            isChecked={this.state.keepInViewChecked}
-            onChange={this.handleKeepInViewChange}
-            aria-label="Keep in view"
-            id="check-3"
-          />
+          <div style={{ paddingTop: '10px' }}>
+            <Checkbox
+              label="Flip tooltip if the position falls outside the view"
+              isChecked={this.state.keepInViewChecked}
+              onChange={this.handleKeepInViewChange}
+              aria-label="Keep in view"
+              id="check-3"
+            />
+          </div>
         </div>
 
         <div style={{ margin: '50px' }}>
@@ -72,7 +74,7 @@ class TooltipPositions extends React.Component {
               </div>
             }
           >
-            <span>I have a tooltip!</span>
+            <span>Hover to view tooltip</span>
           </Tooltip>
         </div>
       </div>
