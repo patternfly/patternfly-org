@@ -22,7 +22,7 @@ const LinkPreview = ({ data, name, path }) => {
           // It's a PF4 md page, clearly too short
           fileNameFromUrl = encodePath(location.pathname + path + '/');
         }
-        const previewScreenshot = data ? data.allFile.edges.filter(({ node }) => node.relativePath.indexOf(fileNameFromUrl) > -1) : null;
+        const previewScreenshot = data ? data.allFile.edges.filter(({ node }) => node.relativePath.endsWith(`${fileNameFromUrl}.png`)) : null;
         if (previewScreenshot && previewScreenshot.length > 0) {
           return (
             <div className="Preview__body">
