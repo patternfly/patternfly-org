@@ -62,6 +62,7 @@ export default class Example extends React.Component {
     const {
       heading,
       description,
+      className = '',
       children,
       fullPageOnly,
       minHeight
@@ -82,7 +83,7 @@ export default class Example extends React.Component {
     const fullPath = typeof window !== 'undefined' && `${window.location.href.substr(0, window.location.href.length - (endsWithSlash ? 1 : 0))}-full?component=${heading}`;
     if (!this.state.isFull) {
       return (
-        <div className="ws-live-demo">
+        <div className={`ws-live-demo ${className}`}>
           <AutoLinkHeader size="lg" is="h4" className="ws-example-heading">{heading}</AutoLinkHeader>
           {Boolean(description) && <p className="pf-c-content" dangerouslySetInnerHTML={makeDescription(description)} />}
           <Preview heading={heading} viewport={this.state.viewport} lights={this.state.lights} fullPageOnly={fullPageOnly} minHeight={minHeight}>
