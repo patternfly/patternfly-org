@@ -11,8 +11,8 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
   <div class="pf-u-display-flex pf-u-flex-direction-column">
     <div class="spacerTitle">4px spacer</div>
     <div class="pf-u-display-flex pf-u-flex-direction-row">
-      <p>Global CSS variable</p>
-      <div class="codeText">--pf-global-spacer-xs</div>
+      <p class="pf-u-my-0 pf-u-mr-sm">Global CSS variable </p>
+      <code>--pf-global-spacer-xs</code>
     </div>
   </div>
 </div>
@@ -23,8 +23,8 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
   <div class="pf-u-display-flex pf-u-flex-direction-column">
     <div class="spacerTitle">8px spacer</div>
     <div class="pf-u-display-flex pf-u-flex-direction-row">
-      <p>Global CSS variable</p>
-      <div class="codeText">--pf-global-spacer-sm</div>
+      <p class="pf-u-my-0 pf-u-mr-sm">Global CSS variable </p>
+      <code>--pf-global-spacer-sm</code>
     </div>
   </div>
 </div>
@@ -35,8 +35,8 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
   <div class="pf-u-display-flex pf-u-flex-direction-column">
     <div class="spacerTitle">16px spacer</div>
     <div class="pf-u-display-flex pf-u-flex-direction-row">
-      <p>Global CSS variable</p>
-      <div class="codeText">--pf-global-spacer-md</div>
+      <p class="pf-u-my-0 pf-u-mr-sm">Global CSS variable </p>
+      <code>--pf-global-spacer-md</code>
     </div>
   </div>
 </div>
@@ -47,8 +47,8 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
   <div class="pf-u-display-flex pf-u-flex-direction-column">
     <div class="spacerTitle">24px spacer</div>
     <div class="pf-u-display-flex pf-u-flex-direction-row">
-      <p>Global CSS variable</p>
-      <div class="codeText">--pf-global-spacer-lg</div>
+      <p class="pf-u-my-0 pf-u-mr-sm">Global CSS variable </p>
+      <code>--pf-global-spacer-lg</code>
     </div>
   </div>
 </div>
@@ -59,8 +59,8 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
   <div class="pf-u-display-flex pf-u-flex-direction-column">
     <div class="spacerTitle">32px spacer</div>
     <div class="pf-u-display-flex pf-u-flex-direction-row">
-      <p>Global CSS variable</p>
-      <div class="codeText">--pf-global-spacer-xl</div>
+      <p class="pf-u-my-0 pf-u-mr-sm">Global CSS variable </p>
+      <code>--pf-global-spacer-xl</code>
     </div>
   </div>
 </div>
@@ -71,8 +71,8 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
   <div class="pf-u-display-flex pf-u-flex-direction-column">
     <div class="spacerTitle">48px spacer</div>
     <div class="pf-u-display-flex pf-u-flex-direction-row">
-      <p>Global CSS variable</p>
-      <div class="codeText">--pf-global-spacer-2xl</div>
+      <p class="pf-u-my-0 pf-u-mr-sm">Global CSS variable </p>
+      <code>--pf-global-spacer-2xl</code>
     </div>
   </div>
 </div>
@@ -83,8 +83,8 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
   <div class="pf-u-display-flex pf-u-flex-direction-column">
     <div class="spacerTitle">64px spacer</div>
     <div class="pf-u-display-flex pf-u-flex-direction-row">
-      <p>Global CSS variable</p>
-      <div class="codeText">--pf-global-spacer-3xl</div>
+      <p class="pf-u-my-0 pf-u-mr-sm">Global CSS variable </p>
+      <code>--pf-global-spacer-3xl</code>
     </div>
   </div>
 </div>

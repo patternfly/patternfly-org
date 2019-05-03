@@ -10,14 +10,6 @@ $theme: '.colors-theme--';
   background-color: #fff;
 }
 
-.code-example {
-  display: table;
-  padding: 2px 16px;
-  background-color: #fff;
-  border: 1px solid #ededed;
-  font-size: var(--pf-global--FontSize--md);
-}
-
 #{$theme}light {
   h3, p {
     margin-bottom: var(--pf-global--spacer--sm);
