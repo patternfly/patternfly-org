@@ -17,15 +17,15 @@ We use the open source typeface, Overpass, inspired by Highway Gothic.
 ## Usage guidelines
 Use our typographic styles to communicate visual hierarchy. A consistent and logical hierarchy provides a clear pattern for users, making it easier to quickly scan and understand information on a page.
 
-<TypographyGrid title="Hero title*" note="*Not to be used in content block (Landing pages, login, etc.)" fontWeight="400" fontSize="36" lineHeight="1.3">Design is where science and art break even.</TypographyGrid>
-<TypographyGrid title="Main title" fontWeight="400" fontSize="28" lineHeight="1.3">Design is where science and art break even.</TypographyGrid>
-<TypographyGrid title="Secondary title" fontWeight="400" fontSize="24" lineHeight="1.3">Design is where science and art break even.</TypographyGrid>
-<TypographyGrid title="Subtitle" fontWeight="400" fontSize="21" lineHeight="1.5">Design is where science and art break even.</TypographyGrid>
-<TypographyGrid title="Fourth level title" fontWeight="500" fontSize="18" lineHeight="1.5">Design is where science and art break even.</TypographyGrid>
-<TypographyGrid title="Fifth level title" fontWeight="500" fontSize="16" lineHeight="1.5">Design is where science and art break even.</TypographyGrid>
-<TypographyGrid title="Body" fontWeight="400" fontSize="16" lineHeight="1.5">Design is where science and art break even.</TypographyGrid>
-<TypographyGrid title="Small text" fontWeight="400" fontSize="14" lineHeight="1.3">Design is where science and art break even.</TypographyGrid>
-<TypographyGrid title="Tiny text*" note="*Not to be used in content block (Only used with data visualizations when 14px is not small enough.)" fontWeight="400" fontSize="12" lineHeight="1.3">Design is where science and art break even.</TypographyGrid>
+<TypographyGrid title="Hero title*" note="*Not to be used in content block (Landing pages, login, etc.)" fontWeight="400" variableName="--pf-global--FontSize--4xl" fontSize="36" lineHeight="1.3">Design is where science and art break even.</TypographyGrid>
+<TypographyGrid title="Main title" fontWeight="400" fontSize="28" variableName="--pf-global--FontSize--3xl" lineHeight="1.3">Design is where science and art break even.</TypographyGrid>
+<TypographyGrid title="Secondary title" fontWeight="400" fontSize="24" variableName="--pf-global--FontSize--2xl" lineHeight="1.3">Design is where science and art break even.</TypographyGrid>
+<TypographyGrid title="Subtitle" fontWeight="400" fontSize="21" variableName="--pf-global--FontSize--xl" lineHeight="1.5">Design is where science and art break even.</TypographyGrid>
+<TypographyGrid title="Fourth level title" fontWeight="500" fontSize="18" variableName="--pf-global--FontSize--lg" lineHeight="1.5">Design is where science and art break even.</TypographyGrid>
+<TypographyGrid title="Fifth level title" fontWeight="500" fontSize="16" variableName="--pf-global--FontSize--md" lineHeight="1.5">Design is where science and art break even.</TypographyGrid>
+<TypographyGrid title="Body" fontWeight="400" fontSize="16" variableName="--pf-global--FontSize--md" lineHeight="1.5">Design is where science and art break even.</TypographyGrid>
+<TypographyGrid title="Small text" fontWeight="400" fontSize="14" variableName="--pf-global--FontSize--sm" lineHeight="1.3">Design is where science and art break even.</TypographyGrid>
+<TypographyGrid title="Tiny text*" note="*Not to be used in content block (Only used with data visualizations when 14px is not small enough.)" fontWeight="400" fontSize="12" variableName="--pf-global--FontSize--xs" lineHeight="1.3">Design is where science and art break even.</TypographyGrid>
 
 ## Line height
 <div style={{marginBottom: '32px'}}>When laying out text-based content, you need to factor in line-height when measuring spacing. Line height is a relative number used in CSS that represents a ratio to the text size. For example, body text uses a line height of 1.5. Body text size is 16px. 16*1.5 = 24px line height. So, when creating designs in design software, you must include the 24px line height as a part of the text.</div>
