@@ -44,7 +44,7 @@ export const styles = {
   `)
 };
 
-export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontSize, lineHeight}) => (
+export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontSize, variableName, lineHeight}) => (
   <>
     <h3>{title} {symbol && <span css={styles.gridTitleSymbol}>{symbol}</span>}</h3>
     <Grid gutter="sm" css={[styles.gridRowCenter, styles.typographyGrid]}>
@@ -65,7 +65,7 @@ export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontS
             </tr>
             <tr>
               <td>Global CSS variable:</td>
-              <td><span css={styles.variableName}>.pf-c-title</span></td>
+              <td><span css={styles.variableName}>{variableName}</span></td>
             </tr>
           </tbody>
         </table>
