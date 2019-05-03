@@ -4,9 +4,6 @@ import { Location } from '@reach/router';
 import Img from 'gatsby-image';
 import './LinkPreview.scss';
 
-
-
-
 const LinkPreview = ({ data, name, path }) => {
   const encodePath = path => path
     .replace(data.site.pathPrefix, '')
