@@ -17,6 +17,16 @@
   h1 {
     font-size: 36px;
   }
+  code {
+    display: inline-block;
+    font-size: 16px !important;
+    background-color: #fff;
+    padding-top: 1px;
+    padding-right: 8px;
+    padding-bottom: 1px;
+    padding-left: 8px;
+    border: 1px solid #ededed;
+  }
   table {
     margin: 0;
     padding: 0;
