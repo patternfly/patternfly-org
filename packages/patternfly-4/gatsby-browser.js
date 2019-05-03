@@ -23,22 +23,27 @@ require('./src/workspace.scss');
 //   }
 // }
 
-// const scrollTo = id => () => {	
-//   const hash = id.replace('#', '');
-//   const element = document.getElementById(hash);
-//   if (element) {
-//     const offset = element.offsetTop;
-//     // Wait for the browser to finish rendering before scrolling.
-//     setTimeout((function() {
-//       window.scrollTo(0, offset - 16)
-//     }), 0);
-//   }
-// };	
+/**
+ * Scroll to the given id
+ */
+const scrollTo = id => () => {	
+  const hash = id.replace('#', '');
+  const element = document.getElementById(hash);
+  if (element) {
+    const offset = element.offsetTop;
+    // Wait for the browser to finish rendering before scrolling.
+    setTimeout((function() {
+      window.scrollTo(0, offset)
+    }), 0);
+  }
+};	
 
-//  export const onRouteUpdate = ({ location }) => {	
-//   const { hash } = location;
-//   console.log(location);
-//   if (hash) {	
-//     window.setTimeout(scrollTo(hash), 10);	
-//   }	
-// };
+/**
+ * Check URL for hash and if so attempt to scroll to the relevant section of the page
+ */
+ export const onRouteUpdate = ({ location }) => {	
+  const { hash } = location;
+  if (hash) {	
+    window.setTimeout(scrollTo(hash), 1000);	
+  }	
+};
