@@ -69,7 +69,7 @@ const IndexPage = () => (
                 <div className="pf-u-pb-2xl">
                   <Text component={TextVariants.h2}>Get inspired with demos</Text>
                   <Text component={TextVariants.p}>Explore working examples of common UI elements like forms to see how components and layouts can be combined to solve common design problems.</Text>
-                  <Text component={TextVariants.a} href={withPrefix('/documentation/react/demos')} aria-label="view demos" className="pf-u-pl-0 pf4-c-link__text">View demos <ArrowRightIcon />
+                  <Text component={TextVariants.a} href={withPrefix('/documentation/react/demos/pagelayout')} aria-label="view demos" className="pf-u-pl-0 pf4-c-link__text">View demos <ArrowRightIcon />
                   </Text>
                 </div>
               </TextContent>
