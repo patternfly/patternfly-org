@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import { html } from 'js-beautify';
+import pretty from 'pretty';
 import { css } from '@patternfly/react-styles';
 import Preview from '../Preview';
 import ComponentItems from './ComponentItems';
@@ -67,7 +67,8 @@ export default class Example extends React.Component {
     const output = { __html: this.props.children };
     const sourceOutput =
       typeof children === 'string' ? children : ReactDOMServer.renderToStaticMarkup(children).replace(/ "/g, '"');
-    const indentedOutput = html(sourceOutput);
+    const indentedOutput = pretty(sourceOutput, { ocd: true });
+    debugger;
     const makeDescription = html => ({
       __html: html
     });
