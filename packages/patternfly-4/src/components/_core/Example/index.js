@@ -68,7 +68,6 @@ export default class Example extends React.Component {
     const sourceOutput =
       typeof children === 'string' ? children : ReactDOMServer.renderToStaticMarkup(children).replace(/ "/g, '"');
     const indentedOutput = pretty(sourceOutput, { ocd: true });
-    debugger;
     const makeDescription = html => ({
       __html: html
     });
