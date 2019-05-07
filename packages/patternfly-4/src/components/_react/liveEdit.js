@@ -54,13 +54,18 @@ class LiveEdit extends React.Component {
           scope={this.scope}
           transformCode={LiveEdit.transformCode}
           disabled={noLive}
+          theme={{
+            /* disable theme so we can use the global one imported in gatsby-browser.js */
+            plain: {},
+            styles: []
+          }}
         >
           {!noLive &&
             <LivePreview className={css('example ws-preview', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')} />}
           <EditorToolbar
             raw={this.code}
             showLights={false}
-            editor={<LiveEditor className={css('code')} />}
+            editor={<div className={css('code')}><LiveEditor /></div>}
             onLightsChange={this.onDarkModeChange} />
           {!noLive && <LiveError />}
         </LiveProvider>
