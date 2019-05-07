@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import pretty from 'pretty';
+import { html } from 'js-beautify';
 import { css } from '@patternfly/react-styles';
 import Preview from '../Preview';
 import ComponentItems from './ComponentItems';
 import AutoLinkHeader from '@content/AutoLinkHeader';
 import EditorToolbar from '../../example/editorToolbar';
-import PrismCode from '../PrismCode';
+import { Editor } from 'react-live';
 
 export default class Example extends React.Component {
   static parseQueryString(queryString) {
@@ -67,12 +67,23 @@ export default class Example extends React.Component {
     const output = { __html: this.props.children };
     const sourceOutput =
       typeof children === 'string' ? children : ReactDOMServer.renderToStaticMarkup(children).replace(/ "/g, '"');
-    const indentedOutput = pretty(sourceOutput, { ocd: true });
+    const indentedOutput = html(sourceOutput);
     const makeDescription = html => ({
       __html: html
     });
     const editor = (
-      <PrismCode className="markup">{indentedOutput}</PrismCode>
+      <div className="code">
+        <Editor 
+          theme={{
+            /* disable theme so we can use the global one imported in gatsby-browser.js */
+            plain: {},
+            styles: []
+          }}
+          code={indentedOutput}
+          language="jsx"
+          readOnly
+        />
+      </div>
     );
     const endsWithSlash = typeof window !== 'undefined' && window.location.href.substr(-1) === '/';
     const fullPath = typeof window !== 'undefined' && `${window.location.href.substr(0, window.location.href.length - (endsWithSlash ? 1 : 0))}-full?component=${heading}`;
