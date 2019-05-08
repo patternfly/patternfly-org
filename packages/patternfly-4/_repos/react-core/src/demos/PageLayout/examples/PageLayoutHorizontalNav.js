@@ -186,7 +186,7 @@ class PageLayoutHorizontalNav extends React.Component {
 
     return (
       <React.Fragment>
-        <Page header={Header} skipToContent={PageSkipToContent} breadcrumb={PageBreadcrumb}>
+        <Page header={Header} skipToContent={PageSkipToContent} breadcrumb={PageBreadcrumb} className="pf4-site-demo-typography">
           <PageSection variant={PageSectionVariants.light}>
             <TextContent>
               <Text component="h1">Main Title</Text>

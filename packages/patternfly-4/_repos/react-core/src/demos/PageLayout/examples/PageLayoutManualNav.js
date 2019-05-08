@@ -203,7 +203,7 @@ class PageLayoutManualNav extends React.Component {
 
     return (
       <React.Fragment>
-        <Page header={Header} sidebar={Sidebar} onPageResize={this.onPageResize} skipToContent={PageSkipToContent}>
+        <Page header={Header} sidebar={Sidebar} onPageResize={this.onPageResize} skipToContent={PageSkipToContent} className="pf4-site-demo-typography">
           <PageSection variant={PageSectionVariants.light}>
             <TextContent>
               <Text component="h1">Main Title</Text>

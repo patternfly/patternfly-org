@@ -215,6 +215,7 @@ class PageLayoutExpandableNav extends React.Component {
           isManagedSidebar
           skipToContent={PageSkipToContent}
           breadcrumb={PageBreadcrumb}
+          className="pf4-site-demo-typography"
         >
           <PageSection variant={PageSectionVariants.light}>
             <TextContent>

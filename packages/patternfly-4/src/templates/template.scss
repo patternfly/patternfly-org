@@ -2,6 +2,12 @@
   font-family: var(--pf-global--FontFamily--sans-serif);
 }
 
+.pf4-site-demo-typography,
+.pf4-site-demo-typography *,
+.pf4-site-demo-typography .pf-c-content * {
+  font-family: var(--pf-global--FontFamily--sans-serif);
+}
+
 .pageSectionStyles {
   padding-top: 32px;
   padding-right: 64px;
