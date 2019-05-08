@@ -119,8 +119,9 @@ $block: '.pf4';
 
   .code {
     max-height: 37.5rem;
-    overflow: auto;
+    overflow: auto !important;
     border: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--light);
+    background-color: var(--pf-global--BackgroundColor--100);
   }
   .toolbar {
     background-color: var(--pf-global--BackgroundColor--light-100);

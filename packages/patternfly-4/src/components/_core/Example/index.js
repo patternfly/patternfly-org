@@ -1,5 +1,4 @@
 import React from 'react';
-// import TheExample from '../../example'
 import ReactDOMServer from 'react-dom/server';
 import pretty from 'pretty';
 import { css } from '@patternfly/react-styles';
@@ -7,9 +6,7 @@ import Preview from '../Preview';
 import ComponentItems from './ComponentItems';
 import AutoLinkHeader from '@content/AutoLinkHeader';
 import EditorToolbar from '../../example/editorToolbar';
-import PrismCode from 'react-prism';
-import 'prismjs/themes/prism-coy.css';
-import './core-preview.scss';
+import { Editor } from 'react-live';
 
 export default class Example extends React.Component {
   static parseQueryString(queryString) {
@@ -75,9 +72,18 @@ export default class Example extends React.Component {
       __html: html
     });
     const editor = (
-      <pre className="GeneratedSource__pre">
-        <PrismCode className="language-html">{indentedOutput}</PrismCode>
-      </pre>
+      <div className="code">
+        <Editor 
+          theme={{
+            /* disable theme so we can use the global one imported in gatsby-browser.js */
+            plain: {},
+            styles: []
+          }}
+          code={indentedOutput}
+          language="jsx"
+          readOnly
+        />
+      </div>
     );
     const endsWithSlash = typeof window !== 'undefined' && window.location.href.substr(-1) === '/';
     const fullPath = typeof window !== 'undefined' && `${window.location.href.substr(0, window.location.href.length - (endsWithSlash ? 1 : 0))}-full?component=${heading}`;
@@ -91,35 +97,8 @@ export default class Example extends React.Component {
           </Preview>
           <ComponentItems children={children} className={css('example')} />
           <EditorToolbar editor={editor} raw={indentedOutput} live={false} showMessage={false} fullPath={fullPath} showLights={false} onLightsChange={this.onLightsChange}/>
-          {/* <LiveDemo raw={indentedOutput.trim()} live={false} editorLanguage="html" /> */}
         </div>
       );
-      // return (
-      //   <TheExample live={false} title={heading} description={description} raw={indentedOutput} editorLanguage="html"
-      //      editorClassName="GeneratedSource__pre language-html" showPreviewOptions coreExample={children}
-      //      previewFullPageOnly={fullPageOnly} previewMinHeight={minHeight}>
-      //     {children}
-      //     {/* <div className={`Example ${className}`}>
-      //       <div className="Example__section">
-      //         <Preview isViewport={isViewport} heading={heading} fullPageOnly={fullPageOnly} minHeight={minHeight}>
-      //           {children}
-      //         </Preview>
-      //       </div>
-      //       <div className="Example__section">
-      //         {navigationItems && (
-      //           <div className="Example__componentLink">
-      //             Components and Layouts used: <ul>{navigationItems}</ul>
-      //           </div>
-      //         )}
-      //       </div>
-      //       {htmlDocs && (
-      //         <div className="Example__documentation">
-      //           <p className="Example__documentation--text" dangerouslySetInnerHTML={htmlDocs} />
-      //         </div>
-      //       )}
-      //     </div> */}
-      //   </TheExample>
-      // );
     } else if (this.state.showComponent) {
       return <div dangerouslySetInnerHTML={output} />;
     }

@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link, StaticQuery, graphql } from 'gatsby';
-// import Prism from 'prismjs'; // eslint-disable-line no-unused-vars
-// import 'prismjs/themes/prism-coy.css';
 import {
   Nav,
   NavExpandable,
@@ -10,8 +8,6 @@ import {
 } from '@patternfly/react-core';
 import Switcher from '../../switcher';
 import { Location } from '@reach/router';
-import { css } from '@patternfly/react-styles';
-import styles from '../../navigation/navigation.styles';
 
 class CoreSideNav extends React.Component {
   state = {
@@ -64,16 +60,6 @@ class CoreSideNav extends React.Component {
             <Nav className="pf-site-vertical-navigation" aria-label="Nav">
               <Switcher />
               <NavList>
-              {/* <Form className={css(styles.search)} onSubmit={event => { event.preventDefault(); return false; }}>
-                <TextInput
-                  type="text"
-                  id="primaryComponentSearch"
-                  name="primaryComponentSearch"
-                  placeholder="Search"
-                  value={searchValue}
-                  onChange={this.handleSearchChange}
-                />
-              </Form> */}
                 <NavExpandable
                   title="Components"
                   isExpanded={currentPath.indexOf('/components/') > -1 || (searchValue && filteredComponents.length > 0) || false}
