@@ -24,7 +24,9 @@
     "fs-extra": "7.0.1",
     "http-server": "^0.11.1",
     "lerna": "^3.10.6",
-    "surge": "^0.20.4"
+    "recursive-copy": "^2.0.10",
+    "surge": "^0.20.4",
+    "through2": "^3.0.1"
   },
   "description": "Documentation for PatternFly",
   "repository": {
@@ -38,9 +40,5 @@
   "workspaces": [
     "packages/*",
     "packages/patternfly-4/plugins/**/*"
-  ],
-  "dependencies": {
-    "recursive-copy": "^2.0.10",
-    "through2": "^3.0.1"
-  }
+  ]
 }
