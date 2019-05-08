@@ -34,7 +34,7 @@ module.exports = function (grunt) {
     build: '_build',
     source: 'source',
     defaultTarget: 'staging',
-    baseurl: correctBaseUrl(grunt.option('baseurl') || '/patternfly-org')
+    baseurl: correctBaseUrl(grunt.option('baseurl') || '/v3')
   };
 
   grunt.initConfig({
@@ -294,13 +294,6 @@ module.exports = function (grunt) {
     'uglify'
   ]);
 
-  grunt.registerTask('cname', function (target) {
-    if (target === 'production') {
-      grunt.log.writeln(`Writing CNAME file to ${config.build}/CNAME`);
-      grunt.file.write(`${config.build}/CNAME`, 'www.patternfly.org\n');
-    }
-  });
-
   grunt.registerTask('buildConfig', function (target) {
     if (target === 'staging') {
       var jekyllConfig = grunt.file.readYAML(`${config.source}/_config.yml`);
@@ -326,7 +319,6 @@ module.exports = function (grunt) {
       'http:pattern_status',
       'copy:components',
       'sync:patternflyDist',
-      'cname:' + target,
       'buildConfig:' + target,
       'sync:source',
       'sync:design',

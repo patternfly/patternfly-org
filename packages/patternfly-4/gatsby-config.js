@@ -96,12 +96,6 @@ module.exports = {
       resolve: require.resolve(`${__dirname}/plugins/gatsby-transformer-react-docgen-typescript`),
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
-    },
-    {
       resolve: `gatsby-mdx`,
       options: {
         extensions: ['.mdx', '.md'],

@@ -39,5 +39,8 @@
     "packages/*",
     "packages/patternfly-4/plugins/**/*"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "recursive-copy": "^2.0.10",
+    "through2": "^3.0.1"
+  }
 }

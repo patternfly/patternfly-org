@@ -2,8 +2,10 @@
 title: PatternFly | open interface project
 email: patternfly@redhat.com
 description: PatternFly is an open source web user interface framework promoting consistency and usability across IT applications through UX patterns and widgets
-baseurl:  # the subpath of your site, e.g. /blog
+baseurl: /v3 # the subpath of your site, e.g. /blog
 url: 'http://www.patternfly.org' # the base hostname & protocol for your site
+gems:
+  - jekyll-sitemap # generate a sitemap
 collections:
 - whats-news
 blogurl: 'http://blog.patternfly.org'
