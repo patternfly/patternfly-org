@@ -38,17 +38,12 @@ __1. Create an issue__
   - Navigate to the [PatternFly page](https://github.com/patternfly) on Github and go to the [PF4 Feature Board](https://github.com/orgs/patternfly/projects/3)
   - Open an issue for a new feature or comment on an existing issue for an enhancement
 
-
 __2. Propose a design__
-  - Using the Sketch PF4 symbol library, incorporate elements of existing components into the design
+  - Create a proposal for the new pattern or enhancements (be sure to re-use existing components in the design when applicable)
+  - Attach any design assets such as wireframes or mockups to help clarify the design intent and behavior
+  - Document all interactions within the desing clearly (you can leverage the PF4 Sketch library in addition to prototyping tools like InVision, Marvel, etc.)
 
-
-__3. Attach design deliverables__
-  - Add mockups and explanation of the design to the issue
-  - Use a prototyping tool (i.e. InVision, Marvel, etc.) and document all interactions within the design clearly
-
-
-__4. Submit your designs__
+__3. Submit your designs__
   - The PatternFly team will help you throughout this process. If accepted, you will be assigned a buddy to assist you throughout the rest of the process
 
 ![Design contribution lifecycle flowchart](design-flowchart.png)
