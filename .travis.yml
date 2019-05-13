@@ -16,6 +16,7 @@ deploy:
   verbose: true
   on:
     branch: master
+  tags: true # Only release if we publish a tagged version of the site
 git:
   depth: 1
 branches:
