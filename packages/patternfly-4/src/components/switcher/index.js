@@ -1,9 +1,11 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import {
-  Button,
   Bullseye,
-  Title
+  Select,
+  SelectOption,
+  SelectVariant,
+  Title,
 } from '@patternfly/react-core';
 import { Link } from 'gatsby';
 import { Location } from '@reach/router';
@@ -26,15 +28,13 @@ const Switcher = ({ data }) => (
       const validReactPath = verifyPath(reactPath, data.reactPages) || '/documentation/react/components/aboutmodal';
       const validCorePath = verifyPath(corePath, data.corePages) || '/documentation/core/components/aboutmodalbox';
       return (
-        <Bullseye className="pf-site-switcher-group pf-u-ml-xl">
+        <Bullseye className="pf-site-switcher-group pf-u-ml-lg">
           <Title className="pf-site-switcher-group__title pf-u-mb-sm">FRAMEWORK</Title>
           <div>
-            <Link to={validReactPath}>
-              <Button variant={activeReact ? 'primary' : 'tertiary'} className="pf-w-btn-left" isActive={activeReact}>React</Button>
-            </Link>
-            <Link to={validCorePath}>
-              <Button variant={activeCore ? 'primary' : 'tertiary'} className="pf-w-btn-right" isActive={activeCore}>HTML</Button>
-            </Link>
+            <Select className="pf-select-components" variant={SelectVariant.single}>
+              <SelectOption isDisabled={false} key={0} to={validReactPath} value={'React'} isActive={activeReact}></SelectOption>
+              <SelectOption isDisabled={false} key={1} to={validCorePath} value={'HTML'} isActive={activeCore}></SelectOption>
+            </Select>
           </div>
         </Bullseye>
       )
