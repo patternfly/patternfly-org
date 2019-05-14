@@ -9,7 +9,7 @@ Before you begin, check out our [overview of PatternFly 4](/get-started/about) t
 ### Download and install the PatterFly 4 design kit
 The design kit is a collection of assets that make it easy for you to create high-fidelity design mockups using PatternFly 4 components.
 
-The design kit works with Sketch libraries and templates. To use it, you'll need to have [Sketch](https://www.sketch.com/) version 47 or above.
+The design kit works with Sketch libraries and templates. To use it, you can get [Sketch](https://www.sketch.com/) version 47 or above. For users who do not have access to Sketch, a subset of functionality from our Sketch files, like symbols and fonts, can be imported and used in the free design tool, [Figma](https://www.figma.com/). Learn more about importing Sketch files in [the Figma documentation](https://help.figma.com/article/81-import).
 
 ### Download the design kit files:
 
