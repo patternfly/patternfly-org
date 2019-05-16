@@ -5,23 +5,23 @@ sudo: required
 cache: yarn
 notifications:
   email: false
-deploy:
-  provider: s3
-  access_key_id: "AKIATB7JUGICL546BWPD"
-  secret_access_key:
-    secure: Vf6ZK358gbDqI27jyn5i2jIt23Wzhcv1R8k568Chd6Fgw+mFFkWt096lfmI1cvUtqXKI76lTcL1CuYNT7yFPyrzFrq/t6sdzmxRkTHXP8XVstDbQ2VbFijVjYgzu9CTM1whiMx1CfNB5XpeAixeIBmJWrZaDpf6HjIL4qdSQ7fx9zqQtxtvGZPWCFyqTkTICsAnShoDCif/tJXkFmwJfvyCpaZWNOXz6RhfgfYbU4r9oXC6HbeJiwuMy7ghxLx6/DHuj7iLbontQqYineAS/x1mw1LjB/DtTNPDPpXDwIOnNMiNsPuI7cKZ8BhSY7BCf2JzIupp78lnw1CKsMfnf+GvHTp5FgLJoicDDwpp7if8AQDfFo8CUyd/l/dTVldbQVAKdh/HBfujQmiob1PyfJ+JlTsYxB83AsnsEbShQBhoGr2W3gjtxa4hSqZkEX5F/BDZZwioZdlA5gZTVlGQvCKw4Kv9o4cIvBmHKPfZMUu4BVruXXy+eerRWUBLqLWJVoyRCUClNiISo8ODAhZqFo7iUAa5ixzuig7nAbyR7Xh9tKpqFvm+lnuvLF162xQpz3lMjD1bDUDSzpC1eymL+gU1pGEHshGaVdEWyAh1xn3+nBE+FCKCrXAAPVoTRuHfKVtb7rUZUsBSl0jY+hEbg/kBHq6FWsH6GgA/H93Gzs44=
-  bucket: "patternfly-org"
-  skip_cleanup: true
-  local_dir: out
-  upload-dir: travis-build-1
-  on:
-    branch: s3-deploy
 git:
   depth: 1
 before_install:
 - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.7.0
 - export PATH=$HOME/.yarn/bin:$PATH
 script:
-  - echo $TRAVIS_BRANCH
-  - mkdir out && echo "<html>hello, world</html>" > out/index.html
-# - travis_wait yarn build
+- echo $TRAVIS_BRANCH
+- mkdir out && echo "<html>hello, world</html>" > out/index.html
+deploy:
+  provider: s3
+  access_key_id: AKIATB7JUGICL546BWPD
+  secret_access_key:
+    secure: wsvbB3MeqjUjyN2wR8XxKcPImXCncz6eaM/ujGq4q/ftHqjdd/zM9CLw4Zu8YMTDMtP5aLkOTPAFhd5XiygtjBjMUohJlE0p96v5t3C4gh/LVVMwVbSj9/VSBSVuky3Xx/yTFqZ5mhBYpTO+Hsi2l23vfiuURUO9bbzVkMH3ujeUI3rjKVhvtRZ1jggfJMVoIHtK2Gncm5HEal9BQ4QOEigMQrfg4/T0sEi/Yey4O+jy15aDtBEgVMq8Jkg0BbK763Rv1d3Hn5E9M4MmxF5uloPQPWI9Y8O3DxRq2c7ioPes23Jm4pcWml/m33xuW9U6vWf0SME9YZ23U/dOvHoF8ipB9o9qCZuSbwjiXdL1IeLWH/UAuX7cOGSqjL/6Q3yufRU+FVn7h3EKA0yH+tKyiM6XgjFDG8UzFqOQJcc3Q7RWdRQKKlrKAySkwwdT+m75zgqFPTbRvHRDx4VcQQj3XifTzV39N6tFSAkN2iamatAsZPf/Bsg3PSXcR4L++btzcHTmBFX6RKlh9gktP2Nwgka32xtxMu2WtantxCsvkiyGHvhKUo1H3zT9wq95DLjMzSAmqqPcGr/rXkdmkb8TtCd3U5jz6rfrlgysdLlJoE8X7iTD42VG7/rphch100KIxL0UxEsXJxMqtI6+Nz5PVMFf/PQxn0CfgRalU/Mf2EQ=
+  bucket: patternfly-org
+  local-dir: out
+  upload-dir: travis-build-1
+  acl: ''
+  on:
+    repo: patternfly/patternfly-org
+    branch: s3-deploy
