@@ -13,6 +13,7 @@ before_install:
 script:
 - mkdir out && echo "<html>hello world!</html>" > out/index.html
 # - yarn build
+- mkdir "${TRAVIS_BUILD_NUMBER}-${TRAVIS_COMMIT}"
 - mv out "${TRAVIS_BUILD_NUMBER}-${TRAVIS_COMMIT}"
 deploy:
   provider: s3
