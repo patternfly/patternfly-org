@@ -35,9 +35,5 @@
     "url": "https://github.com/patternfly/patternfly-org/issues"
   },
   "homepage": "https://github.com/patternfly/patternfly-org",
-  "workspaces": [
-    "packages/*",
-    "packages/patternfly-4/plugins/**/*"
-  ],
   "dependencies": {}
 }
