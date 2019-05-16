@@ -23,5 +23,4 @@ deploy:
   upload-dir: travis-build-1
   acl: ''
   on:
-    repo: patternfly/patternfly-org
     branch: s3-deploy
