@@ -90,7 +90,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-emotion',
-    'gatsby-plugin-offline', // this plugin enables Progressive Web App + Offline functionality https://gatsby.app/offline
     {
       // Our custom plugin for *.js?x *.ts?x files to get prop types
       resolve: require.resolve(`${__dirname}/plugins/gatsby-transformer-react-docgen-typescript`),
@@ -136,6 +135,16 @@ module.exports = {
         display: 'minimal-ui',
         include_favicon: false
       },
-    }
+    },
+    // this plugin enables Progressive Web App + Offline functionality https://gatsby.app/offline
+    // list AFTER gatsby-plugin-manifest
+    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-47523816-6',
+        respectDNT: true
+      },
+    },
   ],
 }
