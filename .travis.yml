@@ -16,7 +16,7 @@ script:
 - echo "${TRAVIS_BUILD_NUMBER}-${TRAVIS_COMMIT}"
 - mkdir "${TRAVIS_BUILD_NUMBER}-${TRAVIS_COMMIT}"
 - mv out "${TRAVIS_BUILD_NUMBER}-${TRAVIS_COMMIT}"
-- ls out
+- ls
 deploy:
   provider: s3
   skip_cleanup: true
