@@ -22,3 +22,5 @@ deploy:
   local-dir: out
   upload-dir: travis-build-1
   acl: ''
+  on:
+    all_branches: true
