@@ -23,4 +23,4 @@ deploy:
   upload-dir: travis-build-1
   acl: ''
   on:
-    branch: s3-deploy
+    branch: master
