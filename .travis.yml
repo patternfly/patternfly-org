@@ -11,9 +11,7 @@ before_install:
 - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.7.0
 - export PATH=$HOME/.yarn/bin:$PATH
 script:
-- echo $TRAVIS_BRANCH
-- mkdir out && echo "<html>hello, world</html>" > out/index.html
-- ls
+- yarn build
 deploy:
   provider: s3
   skip_cleanup: true
@@ -21,6 +19,7 @@ deploy:
   secret_access_key:
     secure: wsvbB3MeqjUjyN2wR8XxKcPImXCncz6eaM/ujGq4q/ftHqjdd/zM9CLw4Zu8YMTDMtP5aLkOTPAFhd5XiygtjBjMUohJlE0p96v5t3C4gh/LVVMwVbSj9/VSBSVuky3Xx/yTFqZ5mhBYpTO+Hsi2l23vfiuURUO9bbzVkMH3ujeUI3rjKVhvtRZ1jggfJMVoIHtK2Gncm5HEal9BQ4QOEigMQrfg4/T0sEi/Yey4O+jy15aDtBEgVMq8Jkg0BbK763Rv1d3Hn5E9M4MmxF5uloPQPWI9Y8O3DxRq2c7ioPes23Jm4pcWml/m33xuW9U6vWf0SME9YZ23U/dOvHoF8ipB9o9qCZuSbwjiXdL1IeLWH/UAuX7cOGSqjL/6Q3yufRU+FVn7h3EKA0yH+tKyiM6XgjFDG8UzFqOQJcc3Q7RWdRQKKlrKAySkwwdT+m75zgqFPTbRvHRDx4VcQQj3XifTzV39N6tFSAkN2iamatAsZPf/Bsg3PSXcR4L++btzcHTmBFX6RKlh9gktP2Nwgka32xtxMu2WtantxCsvkiyGHvhKUo1H3zT9wq95DLjMzSAmqqPcGr/rXkdmkb8TtCd3U5jz6rfrlgysdLlJoE8X7iTD42VG7/rphch100KIxL0UxEsXJxMqtI6+Nz5PVMFf/PQxn0CfgRalU/Mf2EQ=
   bucket: "patternfly-org"
+  region: "us-east-2"
   local-dir: "out"
   upload-dir: "travis-build-1"
   on:
