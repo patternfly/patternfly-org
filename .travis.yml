@@ -12,13 +12,16 @@ deploy:
     secure: Vf6ZK358gbDqI27jyn5i2jIt23Wzhcv1R8k568Chd6Fgw+mFFkWt096lfmI1cvUtqXKI76lTcL1CuYNT7yFPyrzFrq/t6sdzmxRkTHXP8XVstDbQ2VbFijVjYgzu9CTM1whiMx1CfNB5XpeAixeIBmJWrZaDpf6HjIL4qdSQ7fx9zqQtxtvGZPWCFyqTkTICsAnShoDCif/tJXkFmwJfvyCpaZWNOXz6RhfgfYbU4r9oXC6HbeJiwuMy7ghxLx6/DHuj7iLbontQqYineAS/x1mw1LjB/DtTNPDPpXDwIOnNMiNsPuI7cKZ8BhSY7BCf2JzIupp78lnw1CKsMfnf+GvHTp5FgLJoicDDwpp7if8AQDfFo8CUyd/l/dTVldbQVAKdh/HBfujQmiob1PyfJ+JlTsYxB83AsnsEbShQBhoGr2W3gjtxa4hSqZkEX5F/BDZZwioZdlA5gZTVlGQvCKw4Kv9o4cIvBmHKPfZMUu4BVruXXy+eerRWUBLqLWJVoyRCUClNiISo8ODAhZqFo7iUAa5ixzuig7nAbyR7Xh9tKpqFvm+lnuvLF162xQpz3lMjD1bDUDSzpC1eymL+gU1pGEHshGaVdEWyAh1xn3+nBE+FCKCrXAAPVoTRuHfKVtb7rUZUsBSl0jY+hEbg/kBHq6FWsH6GgA/H93Gzs44=
   bucket: "patternfly-org"
   skip_cleanup: true
-  verbose: true
   local_dir: out
   upload-dir: travis-build-1
+  on:
+    branch: s3-deploy
 git:
   depth: 1
 before_install:
 - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.7.0
 - export PATH=$HOME/.yarn/bin:$PATH
 script:
-- travis_wait yarn build
+  - echo $TRAVIS_BRANCH
+  - mkdir out && echo "<html>hello, world</html>" > out/index.html
+# - travis_wait yarn build
