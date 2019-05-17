@@ -25,4 +25,4 @@ deploy:
   local-dir: "out2"
   upload-dir: "travis-build"
   on:
-    all_branches: true
+    branch: master
