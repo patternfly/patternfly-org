@@ -7,7 +7,7 @@ import {
   SelectVariant,
   Title,
 } from '@patternfly/react-core';
-import { Link } from 'gatsby';
+import { navigate } from 'gatsby';
 import { Location } from '@reach/router';
 import './styles.scss';
 import { path } from '../../../../../node_modules/change-case';
@@ -16,8 +16,8 @@ class SingleSelectInput extends React.Component {
   constructor(props) {
     super(props);
     this.options = [
-      { value: 'React', disabled: false, isPlaceholder: true},
-      { value: 'HTML', disabled: false },
+      { value: 'React', isPlaceholder: props.reactActive, onClick: () => setTimeout(() => { navigate(props.reactPath) }, 1) },
+      { value: 'HTML', isPlaceholder: props.coreActive, onClick: () => setTimeout(() => { navigate(props.corePath) }, 1) }
     ];
 
     this.state = {
@@ -38,7 +38,6 @@ class SingleSelectInput extends React.Component {
           selected: selection,
           isExpanded: false,
         });
-        console.log('selected:', selection, validPath);
       }
     };
 
@@ -56,11 +55,11 @@ class SingleSelectInput extends React.Component {
     return (
       <div>
         <span id={titleId} hidden>
-          Title
+          Select React or HTML
         </span>
         <Select
           variant={SelectVariant.single}
-          aria-label="Select Input"
+          aria-label="Select Framework"
           onToggle={this.onToggle}
           onSelect={this.onSelect}
           selections={selected}
@@ -69,10 +68,10 @@ class SingleSelectInput extends React.Component {
         >
           {this.options.map((option, index) => (
             <SelectOption
-              isDisabled={option.disabled}
               key={index}
               value={option.value}
               isPlaceholder={option.isPlaceholder}
+              onClick={option.onClick}
             >
             </SelectOption>
           ))}
@@ -100,10 +99,8 @@ const Switcher = ({ data }) => (
       const validCorePath = verifyPath(corePath, data.corePages) || '/documentation/core/components/aboutmodalbox';
       return (
         <Bullseye className="pf-site-switcher-group pf-u-ml-lg">
-          <Title className="pf-site-switcher-group__title pf-u-mb-sm">FRAMEWORK</Title>
-          <SingleSelectInput>
-            <SelectOption/>
-          </SingleSelectInput>
+          <Title className="pf-site-switcher-group__title pf-u-mb-sm" size="md">FRAMEWORK</Title>
+          <SingleSelectInput reactActive={activeReact} coreActive={activeCore} reactPath={validReactPath} corePath={validCorePath} />
         </Bullseye>
       )
     }}
