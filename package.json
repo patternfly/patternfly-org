@@ -38,5 +38,6 @@
   "workspaces": [
     "packages/*",
     "packages/patternfly-4/plugins/**/*"
-  ]
+  ],
+  "dependencies": {}
 }
