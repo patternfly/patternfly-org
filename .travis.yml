@@ -14,6 +14,7 @@ script:
 - yarn build
 - mkdir -p out2/${TRAVIS_BUILD_NUMBER}-${TRAVIS_COMMIT}
 - mv out/* out2/${TRAVIS_BUILD_NUMBER}-${TRAVIS_COMMIT}
+- cp -r out2/${TRAVIS_BUILD_NUMBER}-${TRAVIS_COMMIT} out2/latest
 deploy:
   provider: s3
   skip_cleanup: true
