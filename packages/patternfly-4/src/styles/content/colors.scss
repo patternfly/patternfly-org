@@ -273,7 +273,7 @@ $gallery-colors: (
 }
 
 .grid-modifier {
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 997px) {
      .grid-modifier-first {
        order: 1;
        margin-top: 31px;
@@ -287,7 +287,7 @@ $gallery-colors: (
        margin-top: 31px;
      }
      .grid-modifier-four {
-       order: 4;
+       order: 1;
        margin-top: 31px;
      }
      .grid-modifier-five {
