@@ -1,13 +1,85 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import {
-  Button,
   Bullseye,
-  Title
+  Select,
+  SelectOption,
+  SelectVariant,
+  Title,
 } from '@patternfly/react-core';
-import { Link } from 'gatsby';
+import { navigate } from 'gatsby';
 import { Location } from '@reach/router';
 import './styles.scss';
+import { path } from '../../../../../node_modules/change-case';
+
+class SingleSelectInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.options = [
+      { value: 'React', isPlaceholder: props.reactActive, onClick: () => setTimeout(() => { navigate(props.reactPath) }, 1) },
+      { value: 'HTML', isPlaceholder: props.coreActive, onClick: () => setTimeout(() => { navigate(props.corePath) }, 1) }
+    ];
+
+    this.state = {
+      isExpanded: false,
+      selected: null
+    };
+
+    this.onToggle = isExpanded => {
+      this.setState({
+        isExpanded
+      });
+    };
+
+    this.onSelect = (event, selection, isPlaceholder, validPath) => {
+      if (isPlaceholder) this.clearSelection();
+      else {
+        this.setState({
+          selected: selection,
+          isExpanded: false,
+        });
+      }
+    };
+
+    this.clearSelection = () => {
+      this.setState({
+        selected: null,
+        isExpanded: false
+      });
+    };
+  }
+
+  render() {
+    const { isExpanded, selected } = this.state;
+    const titleId = 'title-id';
+    return (
+      <div>
+        <span id={titleId} hidden>
+          Select React or HTML
+        </span>
+        <Select
+          variant={SelectVariant.single}
+          aria-label="Select Framework"
+          onToggle={this.onToggle}
+          onSelect={this.onSelect}
+          selections={selected}
+          isExpanded={isExpanded}
+          ariaLabelledBy={titleId}
+        >
+          {this.options.map((option, index) => (
+            <SelectOption
+              key={index}
+              value={option.value}
+              isPlaceholder={option.isPlaceholder}
+              onClick={option.onClick}
+            >
+            </SelectOption>
+          ))}
+        </Select>
+      </div>
+    );
+  }
+}
 
 const trimTrailingSlash = str => str.replace(/\/$/, '');
 const verifyPath = (path, pages) =>
@@ -26,16 +98,9 @@ const Switcher = ({ data }) => (
       const validReactPath = verifyPath(reactPath, data.reactPages) || '/documentation/react/components/aboutmodal';
       const validCorePath = verifyPath(corePath, data.corePages) || '/documentation/core/components/aboutmodalbox';
       return (
-        <Bullseye className="pf-site-switcher-group pf-u-ml-xl">
-          <Title className="pf-site-switcher-group__title pf-u-mb-sm">FRAMEWORK</Title>
-          <div>
-            <Link to={validReactPath}>
-              <Button variant={activeReact ? 'primary' : 'tertiary'} className="pf-w-btn-left" isActive={activeReact}>React</Button>
-            </Link>
-            <Link to={validCorePath}>
-              <Button variant={activeCore ? 'primary' : 'tertiary'} className="pf-w-btn-right" isActive={activeCore}>HTML</Button>
-            </Link>
-          </div>
+        <Bullseye className="pf-site-switcher-group pf-u-ml-lg">
+          <Title className="pf-site-switcher-group__title pf-u-mb-sm" size="md">FRAMEWORK</Title>
+          <SingleSelectInput reactActive={activeReact} coreActive={activeCore} reactPath={validReactPath} corePath={validCorePath} />
         </Bullseye>
       )
     }}
