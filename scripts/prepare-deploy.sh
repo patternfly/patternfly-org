@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 BUILD_DIR=${TRAVIS_BUILD_NUMBER}-${TRAVIS_COMMIT}
 find out -type d -print | xargs rmdir 2>/dev/null
 cp -r out $BUILD_DIR
