@@ -6,7 +6,7 @@ Use text input to gather free-form text from a user.
 
 ## Elements
 
-![Elements](img/input-elements3.png)
+![Elements](./img/input-elements3.png)
 
 1. Label
 2. Input field
@@ -18,7 +18,7 @@ Use text input to gather free-form text from a user.
 * When a value is too long to be fully displayed in a text field, use [truncation](/design-guidelines/content/grammar-and-terminology#truncation).
 * Provide a [text area](/documentation/react/components/textarea) for input anticipated to be longer than a single line.
 
-![Text area](img/textarea.png)
+![Text area](./img/textarea.png)
 
 * Pre-populate fields with known values when possible, e.g. a default IP address.
 * When presented in a form, the initial input field is usually the first input field required. The primary input field should receive focus when the form is presented to the user.
@@ -38,6 +38,6 @@ For more information about how to provide help content, see  the [forms design g
 ### Errors and validation
 Wherever possible, use inline errors to notify users that something has gone wrong. Inline errors help should be short and help users quickly identify and understand what they need to fix and why.
 
-![Errors and validation](img/input-error.png)
+![Errors and validation](./img/input-error.png)
 
 For more information about how to provide errors and validation, see  the [forms design guidelines](/design-guidelines/usage-and-behavior/forms#provide-errors-and-validations).

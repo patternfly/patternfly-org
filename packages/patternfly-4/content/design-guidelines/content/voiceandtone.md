@@ -17,7 +17,7 @@ To quote Red Hat’s brand standards, “The more you write, the less they’ll 
 
 Very simply, use plain language. Chunk content into short, related sections, and avoid long paragraphs or strings of text.
 
-![Concise example](img/concise.png)
+![Concise example](./img/concise.png)
 
 **Avoid technical jargon**
 
@@ -27,19 +27,19 @@ Jargon can confuse novice users and generally makes content more difficult to un
 
 As nice as it might sound, avoid the future-perfect tense (and all of its complicated siblings.) Keep it simple.
 
-![Simple verbs and tenses example](img/simple-tense.png)
+![Simple verbs and tenses example](./img/simple-tense.png)
 
 **Use active voice**
 
 Active voice tends to sound more natural and it's generally easier to understand. It also often provides a more concise way to get your point across.
 
-![Active voice info example](img/active.png)
+![Active voice info example](./img/active.png)
 
 **An exception to the _active voice_ rule: Errors!**
 
 Errors messages are a good time to avoid active voice. Don’t assign blame to the user.
 
-![Error example](img/error.png)
+![Error example](./img/error.png)
 
 ## Be useful
 
@@ -49,7 +49,7 @@ Focus on providing content that helps your users accomplish their tasks.
 
 Don’t make users read something twice. Consider what your user needs to know most, and put that information up front.
 
-![Useful example](img/useful.png)
+![Useful example](./img/useful.png)
 
 **Keep users in the interface**
 
@@ -63,7 +63,7 @@ If you find yourself struggling to provide enough information to enable users to
 
 No one wants to talk to a robot. Don't be afraid to use contractions! But remember to stay professional. Never use all caps and only use an exclamation point if you would actually raise your voice to say it out loud.
 
-![Conversational example](img/conversational.png)
+![Conversational example](./img/conversational.png)
 
 And don't be overly mannerly. Only use please when the user is being inconvenienced.
 

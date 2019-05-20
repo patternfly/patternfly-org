@@ -26,7 +26,7 @@ Replace any remaining placeholder text with real words. You’ll get better feed
 
 During this stage, it's also useful to pull all content out of the wireframes and catalog it using a spreadsheet or doc. This step is especially important when you are working with a larger team and content is reviewed and collaborated on by multiple people.
 
-![Copy doc example](img/copydoc.png)
+![Copy doc example](./img/copydoc.png)
 
 This approach provides several benefits:
 * It decouples the words from the design and allows you to focus on the text.

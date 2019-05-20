@@ -20,7 +20,7 @@ The wizard lives in a modal dialog. The width of the modal is variable and shoul
 
 ### Simple wizard
 
-![simple-wizard](img/standard-wizard.png)
+![simple-wizard](./img/standard-wizard.png)
 
 1. **Header**: wizards always have a header area that contains the wizard title, description, and a close button.
 2. **Steps sidebar**: enumerated steps are displayed in the sidebar. Steps can be fixed or updated as the user proceeds through the process (see Progressive Wizard).
@@ -41,7 +41,7 @@ In a standard wizard the user moves through the wizard sequentially, a step at a
 ### Wizard with sub-steps
 Sub-steps can be added to the sidebar. Use sub-steps when there is a hierarchical relationship between a group of steps, if a primary step contains too much content to be displayed on one page, or when there is a set of optional settings that make sense to group together where the user need not visit each page.
 
-![wizard with substeps](img/wizard-with-substeps.png)
+![wizard with substeps](./img/wizard-with-substeps.png)
 
 1. **Sub-steps**: sub-steps are always nested inside of a major step.
 
@@ -54,14 +54,14 @@ Sub-steps can be added to the sidebar. Use sub-steps when there is a hierarchica
 ### Review and completion
 The last step in a wizard should always be a Review step. This should include a summary of what the user has input so the user may confirm them before committing their changes.
 
-![wizard review step](img/review-screen.png)
+![wizard review step](./img/review-screen.png)
 
 1. **Review step**
 2. **Finish button**: on the last step of the wizard, the Next button is labeled Finish by default. This is a configurable choice and should be replaced by a more specific verb or verb-object word pair like “Create” or “Configure networks,” when possible.
 
 If it will take a long time (more than a few seconds) for changes to be applied, a progress screen is recommended. This can be constructed from a variation of the [empty state](design-guidelines/usage-and-behavior/empty-state) pattern by embedding a progress bar and appropriate messaging within the body of the wizard.
 
-![progress screen](img/progress-screen.png)
+![progress screen](./img/progress-screen.png)
 
 1. **Progress message**: include a progress bar with appropriate messaging using an empty state pattern.
 2. **Cancel button (optional)**: include a cancel button only if the operation can be terminated once it is started. Cancel should back out all changes and leave the system in the state that existed before the user launched the wizard.
@@ -70,7 +70,7 @@ Note that once changes have been committed, the steps sidebar is hidden and the 
 
 Once the changes initiated by the wizard are completed, a final confirmation screen should be displayed. Again, this can leverage an empty state pattern to present a success (or failure) message to users.
 
-![completion screen](img/completion-screen.png)
+![completion screen](./img/completion-screen.png)
 1. **Completion message**: provide appropriate messaging to inform the user about the outcome of the wizard.
 2. **Primary action**: in most cases this will be a navigational button to close the wizard and take the user to a page where they can see the results of their changes, e.g. a new project that was created. If there is no appropriate destination or if results will be seen on the current page, make the primary action Close.
 3. **Secondary action(s) (optional)**: If the primary action is other than Close, include a Close button here to close the wizard and return to the prior page. Other secondary actions can also be included. See [Empty state](design-guidelines/usage-and-behavior/empty-state) for button placement.
@@ -82,19 +82,19 @@ A progressive wizard takes the same form as the standard wizard or wizard with s
 
 Here is an example...
 
-![progressive wizard step 1](img/wizard-progressive-step1.png)
+![progressive wizard step 1](./img/wizard-progressive-step1.png)
 Step 1: The user is presented with a Get started screen where they can specify what they want to do.
 
-![progressive wizard step 2](img/wizard-progressive-step2-new.png)
+![progressive wizard step 2](./img/wizard-progressive-step2-new.png)
 Step 2: Based on their choice to create a new object, they are presented with a second set of options. But the remaining steps are still unknown.
 
-![progressive wizard step 3](img/wizard-progressive-step3-new.png)
+![progressive wizard step 3](./img/wizard-progressive-step3-new.png)
 Step 3: After the choose “Quick create” and click Next, they can now be presented with a full set of steps. It should be possible to revisit either of the first two steps making different choices and steps shown should update accordingly.
 
 ### Mobile considerations
 When viewing a wizard on a mobile device, the steps sidebar will be hidden and collapse into a drop down menu panel as shown below.
 
-![wizard on mobile](img/mobile-wizard.png)
+![wizard on mobile](./img/mobile-wizard.png)
 
 
 ## Content

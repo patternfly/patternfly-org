@@ -5,7 +5,7 @@ path: "/design-guidelines/usage-and-behavior/toolbar"
 The toolbar contains multiple components that allow a user to manage and manipulate a data set. Data can be presented in a variety of views (table, list, card, etc.). PatternFly supports multiple toolbar variations that address a variety of use cases.
 
 ## Elements
-![toolbar](img/toolbar.png)
+![toolbar](./img/toolbar.png)
 
 The following elements can be included in a typical toolbar:
 
@@ -24,7 +24,7 @@ Toolbars enable users to manipulate data in views where built-in controls aren't
 Don't provide a toolbar for any data view that already includes the controls needed to manipulate a given data.
 
 ### Layout considerations
-![layout](img/toolbar-layout.png)
+![layout](./img/toolbar-layout.png)
 
 The toolbar should appear below the page title, if one exists. It should always appear above the data set to which it applies. Toolbars should stretch to the width of the data view to which it applies, with the elements aligned as specified below. When filters are applied, the toolbar will expand in height to make space for a row of filter chips. Upon clearing the applied filters, the toolbar will collapse to it’s default height.
 
@@ -32,37 +32,37 @@ Within the toolbar, layouts may vary depending on the use case. When used, bulk 
 
 ## Variations
 **Basic toolbar**
-![basic](img/basic-toolbar.png)
+![basic](./img/basic-toolbar.png)
 The basic toolbar is sufficient for most cases. It includes filters, global actions, and item count. The Toolbar is shown here with an Attribute-Value (textbox) filter, but a variety of filter types may be used.
 1. **Item count**: When a filter is applied, the item count will be updated to represent the filtered subset of items. For example, “10 of 17 items.” The item count should be the right-most element.
 
 **Toolbar with pagination**
-![pagination](img/toolbar-pagination.png)
+![pagination](./img/toolbar-pagination.png)
 When pagination is needed, a pagination component can be used.
 1. **Pagination**: When pagination is used, the pagination component replaces the item count. It should be the right-most element.
 
 **Toolbar with filter chips**
-![filterchips](img/toolbar-filter-chips.png)
+![filterchips](./img/toolbar-filter-chips.png)
 When the current settings of the controls are not sufficient to convey applied filters, filter chips should be used.
 1. **Filter chips**: When filters are applied the toolbar will expand and filter chips will be displayed on the second row. Users can clear all filters by clicking the “Clear filters” link, and the toolbar will collapse back into one row.
 
 **Custom toolbar**
-![custom](img/custom-toolbar.png)
+![custom](./img/custom-toolbar.png)
 Custom toolbars can vary by use case. In the above example, the toolbar is primarily comprised of filters.
 
 ## Examples
 **Toolbar in data table**
-![datatable](img/data-table-example.png)
+![datatable](./img/data-table-example.png)
 
 **Toolbar in data list**
-![datalist](img/data-list-example.png)
+![datalist](./img/data-list-example.png)
 
 **Responsive toolbar**
 
 The toolbar adapts to smaller viewport sizes by collapsing or hiding elements that take significant space, including filters and actions. On mobile devices, when used, pagination will be available from the footer, only.
 
-![responsive1](img/responsive-closed.png)
-![responsive2](img/responsive-open.png)
+![responsive1](./img/responsive-closed.png)
+![responsive2](./img/responsive-open.png)
 
 ## Related components and demos
 **Core HTML/CSS**
