@@ -10,6 +10,7 @@ git:
 before_install:
 - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.7.0
 - export PATH=$HOME/.yarn/bin:$PATH
+- sudo apt-get install -y python3-pip python3-dev
 - pip3 install --user awscli
 script:
 - mkdir out
