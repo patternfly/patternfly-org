@@ -9,22 +9,22 @@ Before you begin, check out our [overview of PatternFly 4](/get-started/about) t
 ### Download and install the PatterFly 4 design kit
 The design kit is a collection of assets that make it easy for you to create high-fidelity design mockups using PatternFly 4 components.
 
-The design kit works with Sketch libraries and templates. To use it, you can get [Sketch](https://www.sketch.com/) version 47 or above. For users who do not have access to Sketch, a subset of functionality from our Sketch files, like symbols and fonts, can be imported and used in the free design tool, [Figma](https://www.figma.com/). Learn more about importing Sketch files in [the Figma documentation](https://help.figma.com/article/81-import).
+The design kit works with Sketch libraries<!--and templates-->. To use it, you can get [Sketch](https://www.sketch.com/) version 47 or above. For users who do not have access to Sketch, a subset of functionality from our Sketch files, like symbols and fonts, can be imported and used in the free design tool, [Figma](https://www.figma.com/). Learn more about importing Sketch files in [the Figma documentation](https://help.figma.com/article/81-import).
 
-### Download the design kit files:
+### Download the design kit file:
 
 **Add the Sketch library**
 
-1. Access the [PatternFly 4 design library](https://sketch.cloud/s/wxoZ9) on Sketch cloud.
+1. Access the [PatternFly 4 design library](https://sketch.cloud/s/gb1ka) on Sketch cloud.
 2. Click **Add library to Sketch** on the bottom right to add the library. You'll be prompted with a modal. Click **Add library to Sketch** again. Sketch will show you the library in your preferences window. You're all set!
 
-**Add the Sketch template**
+<!--**Add the Sketch template**
 
 1. Access the [PatternFly 4 design template](https://sketch.cloud/s/wxydj) on Sketch cloud.
 2. Click **Download Document** on the bottom right to add the library.
 3. Navigate to the file you just downloaded, `PatternFly 4 Template.sketch`, and open it.
 4. Navigate to `File > Save as Template...` and name your file whatever makes sense to you. We recommend something simple like `PatternFly 4`. You can now access the PatternFly 4 template from `File > New from Template...`.
-
+-->
 ## Start designing
 PatternFly is made up of modular components that can be assembled in a variety of ways to build applications and interfaces, along with styles, standards, and design guidelines to help you choose and use the right components for your project.
 
