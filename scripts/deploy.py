@@ -1,3 +1,5 @@
+# We aren't using this script right now because it requires Python 3.6
+# This will save on upload time and bandwidth when uploading static files
 import wood
 import pathlib
 import boto3
