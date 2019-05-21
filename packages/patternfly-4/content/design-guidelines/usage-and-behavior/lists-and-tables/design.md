@@ -74,9 +74,9 @@ Use an expandable data list when you have more information than will comfortably
 
 ![standard data table](./img/standard-data-table.png)
 
-1. **[Toolbar](../toolbar/design.md)**: sits above the list and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
+1. **[Toolbar](/design-guidelines/usage-and-behavior/toolbar)**: sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
 2. **Select all**: when present, selects all items in a table. If pagination is being used, this will only select items on the current page.
-3. **Column headers**: should align with the content they contain. If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on one column at a time.
+3. **Column headers**: should align with the content they contain. If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on one column at a time. See [Sorting by columns](#sorting-by-columns) for more information on the sort component.
 4. **Select checkbox**: selects this row
 5. **Global actions**: actions that apply to all selected items
 6. **Inline actions:** actions that apply only to the current row/item
@@ -119,11 +119,19 @@ Use when you have more information than will comfortably fit inside a row or you
 #### When to use
 Use a compound expandable list when you want multiple expansion panels that relate to specific table columns where it would not make sense to combine all of this information into a single, simple expansion.
 
-### Data tables on mobile
+## Data tables on mobile
 The PatternFly 4 data table is designed to be fully responsive. When columns no longer fit within the width of the viewport, columns are stacked so that data in each row is displayed as sets of attribute-value pairs.
 
 ![mobile data table](./img/Mobile-data-table-example.png)
 
+## Sorting by columns
+Sorting by columns is possible for any data table variation. Enabling the component within a table eases the ability to scan and read through the content. This option is favored over adding sorting functionality to the toolbar.
+
+![sortable data table](img/sortable-data-table.png)
+
+1. **Sorted column**: when a column is being sorted by, the column header will turn blue and the sort icon will represent the direction of the sort. Subsequent clicks on the sortable column header will toggle the direction of the sort.
+2. **Hovered sort**: when a column is sortable, the sort icon will appear to the right of the column header. Upon hover, the  icon will change to a darker grey indicating that the icon is actionable.
+3. **Sortable column**: when a column is sortable, the sort icon will appear to the right of the column header in a light grey color. Sorting will not become active until the user selects the column header. This triggers the arrow to point upwards and the content to be sorted in ascending order.
 
 ## Using lists and tables in a page
 Lists or a tables should be placed in the body of a page. The width should be set by the containing element.
