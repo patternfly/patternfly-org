@@ -10,7 +10,7 @@ git:
 before_install:
 - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.7.0
 - export PATH=$HOME/.yarn/bin:$PATH
-- pip install --user awscli
+- pip3 install --user awscli
 script:
 - mkdir out
 - echo "<html>hi</html>" > out/index.html
@@ -19,3 +19,4 @@ script:
 - find out -type d -print | xargs rmdir 2>/dev/null # Remove empty directories
 - aws s3 rm s3://patternfly-org-staging --recursive # Remove current files
 - aws s3 sync out s3://patternfly-org-staging # Upload new files
+- aws cloudfront create-invalidation --distribution-id EQE4NPRH0CQXJ --paths "/*" # Invalidate everything on CDN
