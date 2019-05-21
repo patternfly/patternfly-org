@@ -17,7 +17,7 @@ A button should represent an action a user can take, like submitting a form, can
 ### Button types
 Use different button types to build hierarchy in an application layout.
 
-  ![Button types](img/buttontype.png)
+  ![Button types](./img/buttontype.png)
 
   **Primary button**
 
@@ -46,14 +46,14 @@ We recommend aligning buttons to different elements or areas on the screen depen
 * Place the primary button to the left of the cancel button.
 * Align submit buttons with left-edge of input fields.
 
-![Buttons on full page forms](img/fullpage-button.png)
+![Buttons on full page forms](./img/fullpage-button.png)
 
 #### Buttons on modals
 * Align submit buttons to the bottom right of the modal.
 * Place the primary button to the right of the cancel button.
 * Align submit buttons with right-edge of input fields.
 
-![Buttons on modals](img/modal-button.png)
+![Buttons on modals](./img/modal-button.png)
 
 We'll want to include some information for button usage on wizards when we have some examples.
  #### Buttons on wizards
@@ -63,7 +63,7 @@ Links are used to take users somewhere, like another page inside of a web applic
 
 For links that navigate users to any location external to the current website or application, link text must be followed by the external link icon.
 
-![External link icon](img/external-link.png)
+![External link icon](./img/external-link.png)
 
 ### When not to use
 Don't use link text to represent actions.

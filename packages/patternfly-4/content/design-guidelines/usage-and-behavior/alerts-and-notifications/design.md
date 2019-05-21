@@ -8,7 +8,7 @@ Alerts are used when the system wants to notify the user about some status or ot
 ### Alert
 Alerts are used to communicate status information to the user without blocking other actions through the user interface.
 
-![alert types](img/alerts.png)
+![alert types](./img/alerts.png)
 
 1. **Status area**: use an icon and color to indicate status or severity of the alert.
 2. **Alert title**: Include a short descriptive message. Long message text will wrap. Text color is coded to match alert type.
@@ -19,7 +19,7 @@ Alerts are used to communicate status information to the user without blocking o
 #### Communicating status
 The status area and alert title are coded to communicate the severity of an alert.
 
-![alert colors](img/alert-status.png)
+![alert colors](./img/alert-status.png)
 
 |Type     |Color    |Icon    |Usage      |
 |---------|---------|--------|--------------|
@@ -46,7 +46,7 @@ Three alert patterns are defined in PatternFly for addressing these use cases.
 ### Inline alerts
 Inline alerts are synchronous and appear as the result of a user action or upon loading a page. They insert an alert at the top of the content area, push down other content, and will persist until the user closes them or navigates away from the page.
 
-![inline notification placement](img/inline-notification.png)
+![inline notification placement](./img/inline-notification.png)
 
 For notifications with a severity of info or warning a close button is always recommended. If Close is not included, the alert will dismiss only when the condition raising it has been cleared.
 
@@ -65,7 +65,7 @@ Inline alerts should only be inserted into a page in response to a user action a
 ### Toast alerts
 Toast alerts enter from the right edge of the screen and remain until they time out or until the user dismisses them.
 
-![toast notification placement](img/toast-notification.png)
+![toast notification placement](./img/toast-notification.png)
 
 Single toast alerts appears in the upper right, below the page header, and animates from the right. Toast alerts overlay other content on the page.
 
@@ -88,12 +88,12 @@ Multiple alerts will stack. The most recent alert should appear at the top and o
 
 An Alert Group component allows a set of alerts to be properly positioned and stacked as shown below.
 
-![alert group](img/alert-group.png)
+![alert group](./img/alert-group.png)
 
 ### Modal alerts
 When a condition occurs that requires immediate action, a modal message dialog is recommended.
 
-![modal notification](img/modal-notification.png)
+![modal notification](./img/modal-notification.png)
 
 For more information about designing modal messages see the [message dialog design guidelines](/design-guidelines/usage-and-behavior/message-dialogs).
 
@@ -102,11 +102,11 @@ Message text should be succinct and clearly state what the issue or problem is. 
 
 Alert notifications present special challenges for accessibility. Screen readers will announce the arrival and message content of an incoming toast alert, but user focus will not be placed there. This will make it difficult for these users to directly act on the alerts itself. Therefore we recommend that any message containing actions be descriptive of how the action can be performed in the application. Messages that contain links should specify the location in text as well as including a simple text link. For example, a simple notification message might take the form:
 
-![non-accessible toast notification](img/notification-not-accessible.png)
+![non-accessible toast notification](./img/notification-not-accessible.png)
 
 A more accessible version of this message would look like this:
 
-![non-accessible toast notification](img/notification-accessible.png)
+![non-accessible toast notification](./img/notification-accessible.png)
 
 While this is more verbose, it has the advantage of being usable for both sighted and non-sighted users by providing instructions to screen reader users about where they can go to complete the action.
 

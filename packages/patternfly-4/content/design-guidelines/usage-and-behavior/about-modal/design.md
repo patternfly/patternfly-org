@@ -6,7 +6,7 @@ The about modal stores the version number(s) of the application as well as any a
 
 ## Primary elements
 
-![Modal](img/about-modal.png)
+![Modal](./img/about-modal.png)
 
 1. **Backdrop**: blurs any interface elements in the background to bring the modal content into focus
 2. **Modal**
@@ -27,7 +27,7 @@ Use the about modal to provide information about the product including the produ
 
 Provide access to the about modal using a help icon in the application masthead. Clicking the help icon will launch a dropdown menu. The help menu should always include an option labeled "About" that launches the about modal.
 
-![About modal menu](img/about-dropdown.png)
+![About modal menu](./img/about-dropdown.png)
 
 <!--Learn more about how to create and organize a masthead in the [masthead design guidelines](/design-guidelines/usage-and-behavior/).-->
 

@@ -18,7 +18,7 @@ PatternFly supports several variations of the data list component.
 
 ### Standard data list
 
-![standard data list](img/standard-list.png)
+![standard data list](./img/standard-list.png)
 
 1. **[Toolbar](../toolbar/design.md)**: The toolbar sits above the list and contains controls for manipulating list data. Common actions include filtering, sorting, and pagination.
 2. **Row**: Row height may be variable and sizes to the content. Rows in a data list may take any supported layout.
@@ -43,7 +43,7 @@ Think of each row in a data list as a container for some formatted content. In P
 ### Actionable data list
 The actionable data list provides checkboxes that enable users to select one or more rows and act on that selection using options in the toolbar.
 
-![actionable data list](img/actionable-list.png)
+![actionable data list](./img/actionable-list.png)
 
 1. **Checkbox**: enables a user to select a row
 2. **Global actions**: actions that can be applied to all selected items
@@ -57,7 +57,7 @@ Do not use actionable data lists when actions are restricted to a single row or 
 ### Expandable data list
 The expandable list adds an expansion panel to every row to reveal more details about the item.
 
-![expandable data list](img/expandable-list.png)
+![expandable data list](./img/expandable-list.png)
 
 
 1. **Expansion caret**: toggles the expansion open and closed
@@ -72,7 +72,7 @@ Use an expandable data list when you have more information than will comfortably
 
 ### Standard data table
 
-![standard data table](img/standard-data-table.png)
+![standard data table](./img/standard-data-table.png)
 
 1. **[Toolbar](../toolbar/design.md)**: sits above the list and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
 2. **Select all**: when present, selects all items in a table. If pagination is being used, this will only select items on the current page.
@@ -93,7 +93,7 @@ Consider the structure of the data you want to display and organize that informa
 
 ### Compact data table
 
-![compact data table](img/compact-data-table.png)
+![compact data table](./img/compact-data-table.png)
 
 #### When to use
 Use a compact data table when you want to show as much data per page as possible and readability is a secondary concern.
@@ -101,7 +101,7 @@ Use a compact data table when you want to show as much data per page as possible
 
 ### Expandable data table
 
-![expandable data table](img/expandable-data-table.png)
+![expandable data table](./img/expandable-data-table.png)
 
 1. **Expansion:** expands the row
 2. **Expansion panel:** contains details associated with a row
@@ -111,7 +111,7 @@ Use when you have more information than will comfortably fit inside a row or you
 
 ### Compound-expandable data table
 
-![compound expandable data table](img/compound-expandable-data-table.png)
+![compound expandable data table](./img/compound-expandable-data-table.png)
 
 1. **Expandable cell:** a cell that can be clicked to reveal more detail about an item. If the expansion for an item is already open, clicking on a different cell will close the current item and open a new one.
 2. **Expansion panel:** contains details associated with an expandable item.
@@ -122,13 +122,13 @@ Use a compound expandable list when you want multiple expansion panels that rela
 ### Data tables on mobile
 The PatternFly 4 data table is designed to be fully responsive. When columns no longer fit within the width of the viewport, columns are stacked so that data in each row is displayed as sets of attribute-value pairs.
 
-![mobile data table](img/Mobile-data-table-example.png)
+![mobile data table](./img/Mobile-data-table-example.png)
 
 
 ## Using lists and tables in a page
 Lists or a tables should be placed in the body of a page. The width should be set by the containing element.
 
-![table in a page](img/data-table-example.png)
+![table in a page](./img/data-table-example.png)
 
 In this example, a data table is positioned in the body of a page in a card.
 
