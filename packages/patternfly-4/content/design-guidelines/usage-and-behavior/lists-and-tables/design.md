@@ -67,7 +67,6 @@ The expandable list adds an expansion panel to every row to reveal more details 
 Use an expandable data list when you have more information than will comfortably fit inside a row, or you want to provide a way for advanced users to access information that is not applicable to all users.
 
 ## Data tables
-In general, PatternFly supports several variations of the data table component. Here are where they differentiate the most.
 * **Standard data table**: combines the styling of a list view with behaviors that are commonly associated with a table (sometimes referred to as a hybrid list)
 * **Compact data table**: maximizes the amount of data that can be displayed in a small space
 
@@ -76,11 +75,12 @@ In general, PatternFly supports several variations of the data table component. 
 ![standard data table](img/standard-data-table.png)
 
 1. **[Toolbar](/design-guidelines/usage-and-behavior/toolbar)**: sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
-2. **Select all and column headers**: when present, selects all items in a table. If pagination is being used, this will only select items on the current page. Column headers should align with the content they contain.
-3. **Select checkbox**: selects this row
-4. **Global actions**: actions that apply to all selected items
-5. **Inline actions:** actions that apply only to the current row/item
-6. **Pagination footer:** when present, provides navigation to additional pages
+2. **Select all**: when present, selects all items in a table. If pagination is being used, this will only select items on the current page.
+3. **Column headers**: should align with the content they contain. If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on one column at a time. See [Sorting by columns](#sorting-by-columns) for more information on the sort component.
+4. **Select checkbox**: selects this row
+5. **Global actions**: actions that apply to all selected items
+6. **Inline actions:** actions that apply only to the current row/item
+7. **Pagination footer:** when present, provides navigation to additional pages
 
 #### When to use
 Use a standard data table when the information you want to display fits into a structured, tabular format (i.e. has distinct rows and columns).
@@ -90,17 +90,6 @@ Do not use for less structured or variably structured data that cannot be easily
 
 #### How to use
 Consider the structure of the data you want to display and organize that information into columns. Columns will typically have column headers. Every row within a table must have a consistent format. If the table row includes actions, they should always be placed in the rightmost column(s).
-
-### Sortable data table
-
-![sortable data table](img/sortable-data-table.png)
-
-1. **Sorted column**: when a column is being sorted by, the column header will turn blue and the sort icon will represent the direction of the sort. Subsequent clicks on the sortable column header will toggle the direction of the sort.
-2. **Hovered sort**: when a column is sortable, the sort icon will appear to the right of the column header. Upon hover, the  icon will change to a darker grey indicating that the icon is actionable.
-3. **Sortable column**: when a column is sortable, the sort icon will appear to the right of the column header in a light grey color. Sorting will not become active until the user selects the column header. This triggers the arrow to point upwards and the content to be sorted in ascending order.
-
-#### When to use
-Use a sortable data table over a standard data table. When column headers allow for sorting, it eases the ability to scan and read through the content. This is desired for data tables rather than adding sorting functionality to the toolbar.
 
 ### Compact data table
 
@@ -130,11 +119,19 @@ Use when you have more information than will comfortably fit inside a row or you
 #### When to use
 Use a compound expandable list when you want multiple expansion panels that relate to specific table columns where it would not make sense to combine all of this information into a single, simple expansion.
 
-### Data tables on mobile
+## Data tables on mobile
 The PatternFly 4 data table is designed to be fully responsive. When columns no longer fit within the width of the viewport, columns are stacked so that data in each row is displayed as sets of attribute-value pairs.
 
 ![mobile data table](img/Mobile-data-table-example.png)
 
+## Sorting by columns
+Sorting by columns is possible for any data table variation. Enabling the component within a table eases the ability to scan and read through the content. This option is favored over adding sorting functionality to the toolbar.
+
+![sortable data table](img/sortable-data-table.png)
+
+1. **Sorted column**: when a column is being sorted by, the column header will turn blue and the sort icon will represent the direction of the sort. Subsequent clicks on the sortable column header will toggle the direction of the sort.
+2. **Hovered sort**: when a column is sortable, the sort icon will appear to the right of the column header. Upon hover, the  icon will change to a darker grey indicating that the icon is actionable.
+3. **Sortable column**: when a column is sortable, the sort icon will appear to the right of the column header in a light grey color. Sorting will not become active until the user selects the column header. This triggers the arrow to point upwards and the content to be sorted in ascending order.
 
 ## Using lists and tables in a page
 Lists or a tables should be placed in the body of a page. The width should be set by the containing element.
