@@ -6,9 +6,9 @@ Alerts are used when the system wants to notify the user about some status or ot
 
 ## Elements
 ### Alert
-Alerts are used to communicate status information to the user without blocking other actions through the user interface.
+Alerts are used to communicate status information to the user without blocking other actions through the user interface. There are two styles that can be applied to an alert depending on whether it is intended as an [inline](#inline-alerts) or [toast](#toast-alerts) alert. Regardless of the styling, the basic elements of all alerts are consistent.
 
-![alert types](./img/alerts.png)
+![alert types](./img/alert-types.png)
 
 1. **Status area**: use an icon and color to indicate status or severity of the alert.
 2. **Alert title**: Include a short descriptive message. Long message text will wrap. Text color is coded to match alert type.
@@ -49,6 +49,10 @@ Inline alerts are synchronous and appear as the result of a user action or upon 
 ![inline notification placement](./img/inline-notification.png)
 
 For notifications with a severity of info or warning a close button is always recommended. If Close is not included, the alert will dismiss only when the condition raising it has been cleared.
+
+In addition to static message content and links, interactive elements may optionally be included in the body of an inline alert when the user is being asked for some input or feedback.
+
+![interactive inline alert](./img/inline-interactive-alert.png)
 
 #### When to use
 Use an inline alert when you want to return feedback as the result of a user action within a page while allowing the user to continue working. Common uses for inline alerts include form validation or warning messages that should not interrupt the user’s flow.
