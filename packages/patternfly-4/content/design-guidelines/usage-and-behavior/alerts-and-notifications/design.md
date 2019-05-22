@@ -8,7 +8,7 @@ Alerts are used when the system wants to notify the user about some status or ot
 ### Alert
 Alerts are used to communicate status information to the user without blocking other actions through the user interface. There are two styles that can be applied to an alert depending on whether it is intended as an [inline](#inline-alerts) or [toast](#toast-alerts) alert. Regardless of the styling, the basic elements of all alerts are consistent.
 
-![alert types](./img/alert-types.png)
+![alert types](./img/alert-types-2.png)
 
 1. **Status area**: use an icon and color to indicate status or severity of the alert.
 2. **Alert title**: Include a short descriptive message. Long message text will wrap. Text color is coded to match alert type.
