@@ -29,6 +29,5 @@ console.log(`Created ${pf3_root} dir`);
 fs.copySync(pf3_build, pf3_root);
 console.log(`Copied pf3 build into ${build_root}`);
 // Use v4's 404
-console.log('exists?', path.join(__dirname, '404.html'))
 fs.copySync(path.join(__dirname, '404.html'), path.join(build_root, '404.html'));
 console.log(`Replaced 404 page at ${build_root}`);
