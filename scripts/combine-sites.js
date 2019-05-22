@@ -1,5 +1,3 @@
-// Copies build outputs from patternfly 3 and patternfly 4 and combines it into the out directory
-
 const fs = require('fs-extra');
 const path = require('path');
 
@@ -10,6 +8,7 @@ const build_root = 'out/';
 const pf3_root = build_root;
 const pf4_root = 'out/v4/';
 
+// Copies build outputs from patternfly 3 and patternfly 4 and combines it into the out directory
 fs.removeSync(build_root);
 console.log(`Removed ${build_root} dir`);
 
