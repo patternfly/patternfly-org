@@ -29,12 +29,6 @@ console.log(`Created ${pf3_root} dir`);
 fs.copySync(pf3_build, pf3_root);
 console.log(`Copied pf3 build into ${build_root}`);
 // Use v4's 404
-const path404 = path.join(pf3_root, '404.html');
-fs.removeSync(path404);
-const page404 = `<!DOCTYPE html><html lang="en">
-  <script>
-    window.location.replace("/v4/404.html");
-  </script>
-</html>`;
-fs.writeFileSync(path404, page404);
-console.log(`Replaced 404 page at ${path404}`);
+console.log('exists?', path.join(__dirname, '404.html'))
+fs.copySync(path.join(__dirname, '404.html'), path.join(build_root, '404.html'));
+console.log(`Replaced 404 page at ${build_root}`);

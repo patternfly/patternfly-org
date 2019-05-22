@@ -16,4 +16,4 @@ script:
 - mkdir out
 - yarn build
 - bash ./scripts/prepare-deploy.sh
-- if [[ $TRAVIS_BRANCH == "master" ]]; then bash ./scripts/deploy.sh; fi;
+- if [[ -d out && $TRAVIS_BRANCH == "master" ]]; then bash ./scripts/deploy.sh; fi;

@@ -64,13 +64,9 @@ export default class Example extends React.Component {
       fullPageOnly,
       minHeight
     } = this.props;
-    const output = { __html: this.props.children };
     const sourceOutput =
       typeof children === 'string' ? children : ReactDOMServer.renderToStaticMarkup(children).replace(/ "/g, '"');
     const indentedOutput = pretty(sourceOutput, { ocd: true });
-    const makeDescription = html => ({
-      __html: html
-    });
     const editor = (
       <div className="code">
         <Editor 
@@ -91,7 +87,7 @@ export default class Example extends React.Component {
       return (
         <div className={`ws-live-demo ${className}`}>
           <AutoLinkHeader size="lg" is="h4" className="ws-example-heading">{heading}</AutoLinkHeader>
-          {Boolean(description) && <p className="pf-c-content" dangerouslySetInnerHTML={makeDescription(description)} />}
+          {Boolean(description) && <p className="pf-c-content" dangerouslySetInnerHTML={{ __html: description }} />}
           <Preview heading={heading} viewport={this.state.viewport} lights={this.state.lights} fullPageOnly={fullPageOnly} minHeight={minHeight}>
             {children}
           </Preview>
@@ -100,7 +96,7 @@ export default class Example extends React.Component {
         </div>
       );
     } else if (this.state.showComponent) {
-      return <div dangerouslySetInnerHTML={output} />;
+      return <div dangerouslySetInnerHTML={{ __html: this.props.children }} />;
     }
     return null;
   }
