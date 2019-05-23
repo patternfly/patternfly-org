@@ -13,7 +13,7 @@ deployed = wood.s3.objects_to_root(bucket.objects.all())
 
 comparison = wood.compare(deployed, to_deploy)
 
-print('Writing changes to buket')
+print('Writing changes to bucket')
 syncer = wood.s3.Syncer(local_base, bucket)
 syncer.sync(comparison)
 
