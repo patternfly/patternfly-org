@@ -13,8 +13,7 @@ before_install:
 - sudo apt-get install -y python3-pip
 - pip3 install --user awscli
 script:
+- yarn build
 - bash ./scripts/prepare-deploy.sh
-- cat ~/.aws/credentials
 - bash ./scripts/deploy.sh
-# - yarn build
-# - if [[ -d out && $TRAVIS_BRANCH == "master" ]]; then bash ./scripts/deploy.sh; fi;
+- if [[ -d out && "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" = "false" ]]; then bash ./scripts/deploy.sh; fi;
