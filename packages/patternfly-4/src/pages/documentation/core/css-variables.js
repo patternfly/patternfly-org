@@ -18,7 +18,6 @@ const CoreTokens = ({ location }) => (
             <p>Global variables define and enforce global style elements (like values for color, spacing, and font size) across the entire system.</p>
 
             <p>Global variables follow this formula:</p>
-            <code>--pf-global--concept--PropertyCamelCase--modifier--state</code>
 
             <p>Where...</p>
             <ul>
