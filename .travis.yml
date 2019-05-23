@@ -16,4 +16,4 @@ script:
 - yarn build
 - bash ./scripts/prepare-deploy.sh
 - bash ./scripts/deploy.sh
-- if [[ -d out && "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" = "false" ]]; then bash ./scripts/deploy.sh; fi;
+- if [[ -d out && "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then bash ./scripts/deploy.sh; fi;
