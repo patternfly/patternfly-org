@@ -41,11 +41,6 @@ class Icons extends React.Component {
     const filteredIcons = commonIcons.filter(c => {
       return searchRE.test(c[0]);
     });
-    // function isEmpty (filteredIcons) {
-    //   if (this.state.filteredIcons && this.statefilteredIcons.length == null) {
-
-    //   }
-    // };
     return (
       <>
         <Form className="search-icons ws-search " onSubmit={event => { event.preventDefault(); return false; }}>
