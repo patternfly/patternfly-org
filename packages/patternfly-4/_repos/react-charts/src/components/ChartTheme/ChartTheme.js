@@ -1,20 +1,31 @@
-import ThemeDarkBlue from './theme-dark-blue';
-import ThemeDarkGreen from './theme-dark-green';
-import ThemeDarkMulti from './theme-dark-multi';
-import ThemeLightBlue from './theme-light-blue';
-import ThemeLightGreen from './theme-light-green';
-import ThemeLightMulti from './theme-light-multi';
+import { default as DonutTheme } from './themes/theme-donut';
+import {
+  dynamicDonut as DonutThresholdDynamicTheme,
+  staticDonut as DonutThresholdStaticTheme
+} from './themes/theme-donut-threshold';
+import {
+  dynamicDonut as DonutUtilizationDynamicTheme,
+  staticDonut as DonutUtilizationStaticTheme
+} from './themes/theme-donut-utilization';
+import { default as VictoryTheme } from './themes/theme-victory';
 
-export default {
-  default: ThemeLightBlue,
-  dark: {
-    blue: ThemeDarkBlue,
-    green: ThemeDarkGreen,
-    multi: ThemeDarkMulti
-  },
-  light: {
-    blue: ThemeLightBlue,
-    green: ThemeLightGreen,
-    multi: ThemeLightMulti
-  }
+export const ChartBaseTheme = VictoryTheme;
+export const ChartDonutUtilizationDynamicTheme = DonutUtilizationDynamicTheme;
+export const ChartDonutUtilizationStaticTheme = DonutUtilizationStaticTheme;
+export const ChartDonutTheme = DonutTheme;
+export const ChartDonutThresholdDynamicTheme = DonutThresholdDynamicTheme;
+export const ChartDonutThresholdStaticTheme = DonutThresholdStaticTheme;
+
+export const ChartThemeColor = {
+  blue: 'blue',
+  default: 'blue',
+  green: 'green',
+  grey: 'grey',
+  multi: 'multi'
+};
+
+export const ChartThemeVariant = {
+  dark: 'dark',
+  default: 'light',
+  light: 'light'
 };

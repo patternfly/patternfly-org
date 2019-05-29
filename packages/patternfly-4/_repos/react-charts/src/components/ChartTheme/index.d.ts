@@ -1,1 +1,10 @@
-export { default as ChartTheme } from './ChartTheme';
+export {
+  ChartBaseTheme,
+  ChartDonutTheme,
+  ChartDonutThresholdDynamicTheme,
+  ChartDonutThresholdStaticTheme,
+  ChartDonutUtilizationDynamicTheme,
+  ChartDonutUtilizationStaticTheme,
+  ChartThemeColor,
+  ChartThemeVariant
+} from './ChartTheme';
