@@ -1,5 +1,5 @@
 import React from 'react';
-import { Gallery, Form, TextInput } from '@patternfly/react-core';
+import { Gallery, Form, TextInput, Button, Title, EmptyState, EmptyStateVariant, EmptyStateIcon, EmptyStateBody } from '@patternfly/react-core';
 import * as icons from '@patternfly/react-icons';
 import IconCard from './iconCard';
 import paramCase from 'param-case';
@@ -7,6 +7,7 @@ import coreIcons from '../../../_repos/core/src/icons/definitions/pf-icons.json'
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
 import './icons.scss';
+import { CubesIcon } from '@patternfly/react-icons';
 
 const allIcons = Object.entries(icons).filter(([name]) => name.endsWith('Icon'));
 let commonIcons = allIcons.filter(([name]) => {
@@ -40,6 +41,11 @@ class Icons extends React.Component {
     const filteredIcons = commonIcons.filter(c => {
       return searchRE.test(c[0]);
     });
+    // function isEmpty (filteredIcons) {
+    //   if (this.state.filteredIcons && this.statefilteredIcons.length == null) {
+
+    //   }
+    // };
     return (
       <>
         <Form className="search-icons ws-search " onSubmit={event => { event.preventDefault(); return false; }}>
@@ -58,6 +64,20 @@ class Icons extends React.Component {
           return <IconCard key={id} id={id} icon={Icon} name={name} />;
         })}
         </Gallery>
+        <EmptyState variant={EmptyStateVariant.full}>
+          { filteredIcons.length == 0 && 
+            <div>
+              <EmptyStateIcon icon={CubesIcon}/>
+              <Title headingLevel="h5" size="2xl">
+                Sorry there are no icons found for "{ searchValue }"
+              </Title>
+              <EmptyStateBody>
+                Sorry we could not find the icon that you searched for. Try searching for another icon.
+              </EmptyStateBody>
+              <Button component="a" variant="primary" href="#primaryIconsSearch">Search Again</Button>
+            </div>
+            }
+        </EmptyState>
     </>
   );
   }

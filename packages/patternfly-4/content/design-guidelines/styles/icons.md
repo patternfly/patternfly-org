@@ -4,6 +4,7 @@ path: "/design-guidelines/styles/icons"
 import { Button, Grid, GridItem } from '@patternfly/react-core';
 import { CheckCircleIcon, TimesCircleIcon } from '@patternfly/react-icons';
 import Icons from '@content/icons';
+import { Title, EmptyState, EmptyStateVariant, EmptyStateIcon, EmptyStateBody, EmptyStateSecondaryActions } from '@patternfly/react-core';
 
 # Icons
  If you're a developer, [check out our getting started page](/get-started/developers#using-styles) to learn more about how to get and use our icon set.
