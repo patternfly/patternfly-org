@@ -1,6 +1,8 @@
 ---
 title: 'Text'
 cssPrefix: 'pf-c-content'
+typescript: true
+propComponents: ['TextContent', 'Text', 'TextList', 'TextListItem']
 ---
 
 import {

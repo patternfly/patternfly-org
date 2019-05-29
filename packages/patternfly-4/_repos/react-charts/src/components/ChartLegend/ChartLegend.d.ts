@@ -1,8 +1,9 @@
 import * as victory from 'victory';
-import { OneOf } from '../../typeUtils';
 
 export interface ChartLegendProps extends victory.VictoryLegendProps {
-  title?: OneOf<string, []>;
+  responsive?: boolean;
+  themeColor?: string;
+  themeVariant?: string;
 }
 
 declare const ChartLegend: React.ComponentClass<ChartLegendProps>;

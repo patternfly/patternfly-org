@@ -15,7 +15,7 @@ export interface CheckboxProps
   isChecked?: boolean;
   checked?: boolean;
   /** A callback for when the Checkbox selection changes. */
-  onChange?(checked: boolean, event: React.FormEvent<HTMLInputElement>): void;
+  onChange?: (checked: boolean, event: React.FormEvent<HTMLInputElement>) => void;
   /** Label text of the checkbox. */
   label?: React.ReactNode;
   /** Id of the checkbox. */
@@ -24,23 +24,21 @@ export interface CheckboxProps
   'aria-label': string;
 }
 
-const defaultProps = {
-  className: '',
-  isValid: true,
-  isDisabled: false,
-  isChecked: null,
-  onChange: () => undefined,
-  label: undefined
-};
-
 export class Checkbox extends React.Component<CheckboxProps> {
+  static defaultProps = {
+    className: '',
+    isValid: true,
+    isDisabled: false,
+    isChecked: false,
+    // tslint:disable-next-line:no-empty
+    onChange: () => {}
+  };
+
   constructor(props: any) {
     super(props);
   }
 
-  static defaultProps = defaultProps;
-
-  handleChange = (event: React.FormEvent<HTMLInputElement>): void => {
+  private handleChange = (event: React.FormEvent<HTMLInputElement>): void => {
     if (this.props.onChange) {
       this.props.onChange(event.currentTarget.checked, event);
     }
@@ -58,6 +56,13 @@ export class Checkbox extends React.Component<CheckboxProps> {
       checked,
       ...props
     } = this.props;
+    let value;
+    if (isChecked === false || checked === false) {
+      value = false;
+    }
+    if (isChecked === true || checked === true) {
+      value = true;
+    }
     return (
       <div className={css(styles.check, className)}>
         <input
@@ -68,7 +73,7 @@ export class Checkbox extends React.Component<CheckboxProps> {
           aria-invalid={!isValid}
           aria-label={ariaLabel}
           disabled={isDisabled}
-          checked={isChecked || checked}
+          checked={value}
         />
         {label && (
           <label
