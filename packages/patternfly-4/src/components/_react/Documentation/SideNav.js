@@ -45,6 +45,15 @@ class SideNav extends React.Component {
           components: []
         }));
 
+    const chartRoutes = data.chartPages &&
+      data.chartPages.edges
+        .filter(e => e.node.context.title && !e.node.context.fullscreen)
+        .map(e => ({
+          to: e.node.path,
+          label: e.node.context.title,
+          pkg: 'core',
+          components: []
+        }));
 
     const demoRoutes = data.demoPages && 
       data.demoPages.edges
@@ -62,6 +71,11 @@ class SideNav extends React.Component {
     });
 
     const filteredLayoutRoutes = layoutRoutes.filter(c => {
+      c.filteredComponents = c.components.filter(component => searchRE.test(component.label));
+      return searchRE.test(c.label) || c.filteredComponents.length > 0;
+    });
+
+    const filteredChartRoutes = chartRoutes.filter(c => {
       c.filteredComponents = c.components.filter(component => searchRE.test(component.label));
       return searchRE.test(c.label) || c.filteredComponents.length > 0;
     });
@@ -126,6 +140,22 @@ class SideNav extends React.Component {
                 ))}
               </NavExpandable>
               <NavExpandable
+                title="Charts"
+                isExpanded={currentPath.indexOf('/charts/') > -1 || Boolean(searchValue && filteredLayoutRoutes.length > 0)}
+                isActive={currentPath.indexOf(/charts/) > -1}
+              >
+                {filteredChartRoutes.map(item => (
+                  <NavItem
+                    key={item.to}
+                    isActive={isActiveTest(currentPath, item.to)}
+                  >
+                    <Link to={item.to}>
+                      {item.label}
+                    </Link>
+                  </NavItem>
+                ))}
+              </NavExpandable>
+              <NavExpandable
                 title="Demos"
                 isExpanded={currentPath.indexOf('/demos/') > -1 || Boolean(searchValue && filteredDemoRoutes.length > 0)}
                 isActive={currentPath.indexOf(/demos/) > -1}
@@ -176,6 +206,20 @@ export default props => (
         }
         layoutPages: allSitePage(
           filter: { path: { glob: "/documentation/react/layouts/**" } },
+          sort: { fields: path }
+        ) {
+          edges {
+            node {
+              path
+              context {
+                title
+                fullscreen
+              }
+            }
+          }
+        }
+        chartPages: allSitePage(
+          filter: { path: { glob: "/documentation/react/charts/**" } },
           sort: { fields: path }
         ) {
           edges {
