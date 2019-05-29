@@ -22,7 +22,7 @@
     "@mdx-js/mdx": "1.0.15",
     "@mdx-js/react": "1.0.15",
     "@patternfly/patternfly": "2.6.4",
-    "@patternfly/react-charts": "3.0.2",
+    "@patternfly/react-charts": "3.6.2",
     "@patternfly/react-core": "3.16.4",
     "@patternfly/react-icons": "3.7.4",
     "@patternfly/react-styled-system": "3.0.2",
