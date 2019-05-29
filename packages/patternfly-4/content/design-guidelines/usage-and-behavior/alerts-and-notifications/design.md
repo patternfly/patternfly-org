@@ -113,7 +113,7 @@ While this is more verbose, it has the advantage of being usable for both sighte
 ## Related components and demos
 **HTML/CSS**
 * [Alert](/documentation/core/components/alert)
-* [Alert group](/documentation/core/components/alert-group)
+* [Alert group](/documentation/core/components/alertgroup)
 
 **React**
 * [Alert](/documentation/react/components/alert)
