@@ -7,7 +7,7 @@ import coreIcons from '../../../_repos/core/src/icons/definitions/pf-icons.json'
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
 import './icons.scss';
-import { CubesIcon } from '@patternfly/react-icons';
+import { SearchIcon } from '@patternfly/react-icons';
 
 const allIcons = Object.entries(icons).filter(([name]) => name.endsWith('Icon'));
 let commonIcons = allIcons.filter(([name]) => {
@@ -59,20 +59,17 @@ class Icons extends React.Component {
           return <IconCard key={id} id={id} icon={Icon} name={name} />;
         })}
         </Gallery>
-        <EmptyState variant={EmptyStateVariant.full}>
-          { filteredIcons.length == 0 && 
-            <div>
-              <EmptyStateIcon icon={CubesIcon}/>
-              <Title headingLevel="h5" size="2xl">
-                Sorry there are no icons found for "{ searchValue }"
-              </Title>
-              <EmptyStateBody>
-                Sorry we could not find the icon that you searched for. Try searching for another icon.
-              </EmptyStateBody>
-              <Button component="a" variant="primary" href="#primaryIconsSearch">Search Again</Button>
-            </div>
-            }
+        {filteredIcons.length == 0 &&  <EmptyState variant={EmptyStateVariant.full}>
+          <EmptyStateIcon icon={SearchIcon}/>
+          <Title headingLevel="h5" size="2xl">
+            Sorry there are no icons found for "{ searchValue }".
+          </Title>
+          <EmptyStateBody>
+            We could not find the icon that you searched for. Try searching for another icon.
+          </EmptyStateBody>
+          <Button component="a" variant="primary" href="#primaryIconsSearch">Search Again</Button>
         </EmptyState>
+        }
     </>
   );
   }
