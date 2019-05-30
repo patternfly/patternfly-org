@@ -9,6 +9,7 @@ _Charts are only available in React_
 
 1. Title: We recommend that titles are always added above and left-aligned to charts.
 2. Axis labels and scale values: We recommend using tick marks to clearly mark scale values on the y-axis. The text for axis labels and scale values should be 12px font in standard text color. All scale values should be equally distributed across the axis and the axis label should fall outside the scale values, centered with the axis line.
+![Axis labels and scale values](./img/axis-labels.png)
 3. Legends: We recommend using legends when charts include more than one variable and therefore use more than one color. If space is not available to display names of horizontal and vertical axes, a legend must be added instead. The legend should list the colors that each variable obtains and the name of the variable. The text on the legend should be 14px size and standard text color. They can either be placed left-aligned to the right of the chart or centered below the chart.
 <!-- 4. Grid lines: We recommend using horizontal gridlines for vertical bar, line and area charts and vertical gridlines for horizontal charts. The line thickness should be 1px with #D2D2D2 color. By default, victory charts enable both horizontal and vertical lines, so a custom component needs to be added in order to override that. See here for information about adding custom gridlines (some link -- need to update). -->
 
@@ -70,27 +71,26 @@ Donut charts represent relative amounts that must add up to 100%.
 #### Usage
 These are the most common use cases for donut charts:
   - Showing the relationship of a set of values to a whole
-  - Showing progress completion as a percentage
   - Showing utilization for an object as a percentage (with or without thresholds)
 
-Donut charts can use percentages or whole numbers to compare parts to the whole. Consider using a [Bar chart](#bar-chart) if you would like to compare one category to another. Decide whether percentages or whole numbers is most compatible with your use case and make sure to be consistent throughout. We recommend displaying these values within the donut, see [Donut utilization](#donut-utilization) for styling. Don’t use more than six categories in total. We recommend that you use the [Colors for charts](/design-guidelines/styles/chart-colors) guidelines to represent your data when thresholds are not present.
+Donut charts can use percentages or integer values to compare parts to the whole. Consider using a [Bar chart](#bar-chart) if you would like to compare one category to another. Decide whether percentages or integers is most compatible with your use case and make sure to be consistent throughout. We recommend displaying these values within the donut, see [Donut utilization](#donut-utilization) for styling. Don’t use more than six categories in total. We recommend that you use the [Colors for charts](/design-guidelines/styles/chart-colors) guidelines to represent your data when thresholds are not present.
 
-![Donut chart](./img/donut chart.png)
+![Donut chart](./img/donut-chart.png)
 
 1. **Segment fill**: We recommend using [Colors for charts] (/design-guidelines/styles/chart-colors) for different items within the donut chart.
 2. **Segment padding**:  Always provide 3px of padding between segments.
 3. **Chart tooltip**:  A tooltip will appear upon hover that states the segment name and value. Depending on the type of donut, the information may change.
-  - **Donut**: We recommend stating the segment name and the value being represented. For example, if the segment represents “Bugs,” and the value being represented is 25, your chart tooltip would state, “Bugs - 25.”
-  - **Donut utilization**: Only the utilization segment will allow for hover. We recommend stating the segment name and the utilization value being captured. For example, if the user is tracking GBps utilization, the chart tooltip would state “GBps utilization - 75%.”
-  - **Donut utilization with thresholds**: We recommend stating the threshold name, the segment name, and the value being represented. For example, if the threshold being met is “Danger,” and the segment represents “Storage capacity,” and the value being represented is 92%, your chart tooltip would state, “Danger: Storage capacity - 92%.”  We recommend stating the threshold name “at” the percentage the threshold begins (ex. Warning at 60%).
-4. **Legend**: In order to fulfill a11y compliance requirements, we recommend adding a legend to all donuts.
+  - **Donut**: We recommend stating the segment name and the value being represented. For example, if the segment represents “Bugs,” and the value being represented is 25, your chart tooltip would state, “Bugs: 25.”
+  - **Donut utilization**: Only the utilization segment will allow for hover. We recommend stating the segment name and the utilization value being captured. For example, if the user is tracking GBps utilization, the chart tooltip would state “GBps utilization: 75%.”
+  - **Donut utilization with thresholds**: We recommend stating the threshold name, the segment name, and the value being represented. For example, if the threshold being met is “Danger,” and the segment represents “Storage capacity,” and the value being represented is 92%, your chart tooltip would state, “Danger: Storage capacity: 92%.”  We recommend stating the threshold name “at” the percentage the threshold begins (ex. Warning at 60%).
+4. **Legend**: In order to fulfill accessibility requirements, we recommend adding a legend to all donuts.
 
 <!--#### React component
 [Donut chart](/documentation/react/charts/donut)-->
 
 ### Donut utilization
-![Donut utilization](./img/donut utilization.png) ![Donut utilization hover](./img/donut utilization hover.png)
-![Donut utilization 2](./img/donut utilization 2.png)
+![Donut utilization](./img/donut-utilization.png) ![Donut utilization hover](./img/donut-utilization-hover.png)
+![Donut utilization 2](./img/donut-utilization-2.png)
 
 1. **Unused segment fill**: The unused area of the donut chart will always remain at #EDEDED.
 2. **Used segment fill**: We recommend using #0066cc for the used area of the donut chart. See [Colors for charts](/design-guidelines/styles/chart-colors) for other recommended color options.
@@ -101,7 +101,7 @@ Donut charts can use percentages or whole numbers to compare parts to the whole.
 [Donut utilization](/documentation/react/charts/donut-utilization)-->
 
 ### Donut utilization with threshold
-![Donut utilization with threshold](./img/donut chart with threshold.png)
+![Donut utilization with threshold](./img/donut-utilization-with-threshold.png)
 
 1. **Threshold segment fill**: The outer segments of the chart are static and represent the thresholds for your use case. The example diagrams show utilization thresholds for a database and are used to let users know when they move from a safe zone into a danger zone. For threshold segments, use incremental shades of  grey starting at #EDEDED then to #D2D2D2 then to #BBBBBB. Provide 3px of padding between each segment.
 2. **Utilization segment fill**: This dynamic chart is a concentric circle within the donut thresholds and will represent the data set. For this chart, we recommend using the following colors:
@@ -110,7 +110,7 @@ Donut charts can use percentages or whole numbers to compare parts to the whole.
   - #C9190B once the data set has hit the danger threshold
 3. **Legend**: The utilization segment color swatch will change in accordance to the chart.
 
-![Donut utilization with threshold hover](./img/donut chart with threshold hover.png)
+![Donut utilization with threshold hover](./img/donut-utilization-with-threshold-hover.png)
 
 4. **Chart tooltip**: Both the threshold segments and utilization segment can be hovered over.
 
