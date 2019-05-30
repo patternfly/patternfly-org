@@ -62,10 +62,10 @@ class Icons extends React.Component {
         {filteredIcons.length == 0 &&  <EmptyState variant={EmptyStateVariant.full}>
           <EmptyStateIcon icon={SearchIcon}/>
           <Title headingLevel="h5" size="2xl">
-            Sorry there are no icons found for "{ searchValue }".
+            No results found for "{ searchValue }".
           </Title>
           <EmptyStateBody>
-            We could not find the icon that you searched for. Try searching for another icon.
+            We couldn't find any icons that matched your search. Try entering a new search term to find what you're looking for.
           </EmptyStateBody>
           <Button component="a" variant="primary" href="#primaryIconsSearch">Search Again</Button>
         </EmptyState>
