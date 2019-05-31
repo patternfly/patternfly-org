@@ -80,7 +80,7 @@ Sometimes users may need to provide additional input in order to complete an act
 
 * If the modal needs to convey the importance of information visually, icons can be added.
 
-See our [content guidelines](/design-guidelines/content/) for additional guidance.
+See our [content guidelines](/design-guidelines/content/writing) for additional guidance.
 
 #### Icon use in modal dialogs
 
