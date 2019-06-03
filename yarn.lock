@@ -1749,13 +1749,13 @@
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-2.5.1.tgz#f0b1d526ad19999f9ff7cbac733c94a258c714ab"
 
-"@patternfly/src-patternfly-next@patternfly/patternfly-next#v2.6.6":
+"@patternfly/src-patternfly-next@patternfly/patternfly-next#v2.8.3":
   version "0.0.0-development"
-  resolved "https://codeload.github.com/patternfly/patternfly-next/tar.gz/f2e97e61648433b3fdef57567f0c59f7bbf9d57a"
+  resolved "https://codeload.github.com/patternfly/patternfly-next/tar.gz/e6dd8a0fbf0e31a6a0982eb8f89aab51563340b5"
 
-"@patternfly/src-patternfly-react@patternfly/patternfly-react#132ccf8":
+"@patternfly/src-patternfly-react@patternfly/patternfly-react#7495082":
   version "0.0.0"
-  resolved "https://codeload.github.com/patternfly/patternfly-react/tar.gz/132ccf8f9b0cf2097cef81735e91e5b2a5c819dc"
+  resolved "https://codeload.github.com/patternfly/patternfly-react/tar.gz/7495082afcc4d4518fce7c69b14b63a39e01ea54"
   optionalDependencies:
     sortabular "^1.5.1"
     table-resolver "^3.2.0"
