@@ -12,7 +12,7 @@ The following elements can be included in a typical toolbar:
 1. **Bulk selection (optional)**: Bulk selection can be added when the functionality isn't available from the component you're using to present the data. For example, you might need to include a bulk selector for a card view or data list, but a table will enable bulk selection by default. Besides allowing the user to select and deselect all items on a page, other application specific options can be added in the dropdown. Bulk selection allows the user to select or deselect all items on a page and provide an indeterminate state that notifies the user when only some items are selected. Bulk selectors should always be the left-most element in a toolbar. When providing a bulk selector in a list view, it should be aligned with the checkboxes.
 
 2. **Filters**: PatternFly supports a variety of common filter types that can be used alone or in combination to construct a custom filter.
-3. **Sort (optional)**: A sort component may to added when this functionality is needed. Tables have built in sorting, but card views and data lists may require toolbar sorting.
+3. **Sort (optional)**: A sort component may be added when this functionality is needed. Tables have built in sorting, but card views and data lists may require toolbar sorting.
 4. **Global actions**: Any global actions that apply to selected data items are included left-aligned following filter and sort controls. These may be exposed as buttons or collapsed into a kabob menu. No more than two items should be exposed as buttons. Button labels should be limited in length to preserve horizontal space.
 5. **Pagination**: When pagination is supported, a pagination component will be included. Pagination will always be right aligned in the toolbar.
 
@@ -26,7 +26,7 @@ Don't provide a toolbar for any data view that already includes the controls nee
 ### Layout considerations
 ![layout](./img/toolbar-layout.png)
 
-The toolbar should appear below the page title, if one exists. It should always appear above the data set to which it applies. Toolbars should stretch to the width of the data view to which it applies, with the elements aligned as specified below. When filters are applied, the toolbar will expand in height to make space for a row of filter chips. Upon clearing the applied filters, the toolbar will collapse to it’s default height.
+The toolbar should appear below the page title, if one exists. It should always appear above the data set to which it applies. Toolbars should stretch to the width of the data view to which it applies, with the elements aligned as specified below. When filters are applied, the toolbar will expand in height to make space for a row of filter chips. Upon clearing the applied filters, the toolbar will collapse to its default height.
 
 Within the toolbar, layouts may vary depending on the use case. When used, bulk selection should be the left-most element. Filters and global actions may follow. When pagination is used it should be the right-most element. When pagination is not used, the item count should be the right-most element.
 
@@ -81,4 +81,4 @@ The toolbar adapts to smaller viewport sizes by collapsing or hiding elements th
 * [Buttons](/documentation/react/components/button)
 * [Chip](/documentation/react/components/chip)
 * [Dropdowns](/documentation/react/components/dropdown)
-* [Toolbar demo](/documentation/react/demos/toolbar)
+* [Toolbar demo](/documentation/react/demos/toolbardemo)

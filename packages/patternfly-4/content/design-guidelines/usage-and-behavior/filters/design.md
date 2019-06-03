@@ -91,7 +91,7 @@ New filters are applied or removed as the user selects/deselects values via the 
 
 
 ### Type-ahead filters
-Type-ahead filters are useful when there is a large number of items to select from the filter dropdown. Users can quickly find the value they would like to filter by by typing in the field.
+Type-ahead filters are useful when there is a large number of items to select from the filter dropdown. Users can quickly find the value they would like to filter by typing in the field.
 
 ![image9](./img/type-ahead-single.png)
 ![image10](./img/type-ahead-multi.png)
@@ -192,7 +192,7 @@ Filter queries are applied when the user selects or deselects an item in the lis
 * [Badges](/documentation/react/components/badge)
 * [Checkbox](/documentation/react/components/checkbox)
 * [Chip group](/documentation/react/components/chipgroup)
-* [Toolbar demo](/documentation/react/demos/toolbar)
+* [Toolbar demo](/documentation/react/demos/toolbardemo)
 
 
 

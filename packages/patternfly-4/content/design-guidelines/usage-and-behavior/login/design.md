@@ -13,7 +13,7 @@ The login page allows a user to gain access to an application by entering their 
 
 2. **Language selector (optional)**
 
-3. **Required fields:** username and password are both required fields. Some applications may require additional fields like a specific server or geo-location. When additional fields are required, they should be ordered on a case-by-case basis and placed directly below the password field. The login card will expand to accommodate the additional fields. Try to limit the total number of fields to less than five. Also, you may use progressive disclosure if the field value have dependency on the previous relevant field.
+3. **Required fields:** username and password are both required fields. Some applications may require additional fields like a specific server or geo-location. When additional fields are required, they should be ordered on a case-by-case basis and placed directly below the password field. The login card will expand to accommodate the additional fields. Try to limit the total number of fields to less than five. Also, you may use progressive disclosure if the field value has dependency on the previous relevant field.
 
 4. **Checkbox (optional):** located under the required (and any additional) fields, and labeled based on the needs of the application.
 
@@ -67,7 +67,7 @@ Examples of additional multi-factor authentication that could be used include au
 
 
 #### Single sign-on (SSO)
-single sign-on (SSO) allows a user to log in once and access multiple applications within the same organization. This type of login supports displaying both single and multi-factor login. Mulit-factor login provides greater security.
+Single sign-on (SSO) allows a user to log in once and access multiple applications within the same organization. This type of login supports displaying both single and multi-factor login. Mulit-factor login provides greater security.
 
 ![Multi-factor-login-validation-options](./img/sso-single-step.png "Multi-factor-login-validation-options")
 
@@ -156,7 +156,7 @@ An error message should be displayed when the user types an incorrect username t
 | ----------- | ----------- |
 | Incorrect username or password (most secure error message) | Incorrect login credentials. |
 | Username does not exist | This account does not exist. Try again or [sign up](). |
-| Password is wrong | Incorrect password, try again |
+| Password is wrong | Incorrect password, try again. |
 | User inputs an old password | Incorrect password. Your password was modified in the last 2 days. |
 
 

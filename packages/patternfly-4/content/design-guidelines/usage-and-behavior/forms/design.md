@@ -83,7 +83,7 @@ A required field should be indicated with an asterisk ( * ) to the right of the 
 
 ![Required field image](./img/required-field.png)
 
-If **all fields** on a form are required, do not use an asterisk for every field. Instead, provide a message at the top of the form stating, "All fields are required." If all field are optional, the message should state, "All fields are optional."
+If **all fields** on a form are required, do not use an asterisk for every field. Instead, provide a message at the top of the form stating, "All fields are required." If all fields are optional, the message should state, "All fields are optional."
 
 ![All required](./img/all-required.png)
 
@@ -131,7 +131,7 @@ Use a **popover** for longer (2 sentences or more) explanations, content that re
   **DON'T**
 
   * Don’t use popovers to compensate for bad design or rely on them to explain a graphic or word choice.
-  * **Never** hide critical information in an popover. Don’t put any information into an popover that a user will always need to complete their task.
+  * **Never** hide critical information in a popover. Don’t put any information into an popover that a user will always need to complete their task.
 
 **Helper text**
 
@@ -265,7 +265,7 @@ The PatternFly components listed can be used in a number of ways to build forms 
 **React components**
 * [Form](/documentation/react/components/form)
 * [Button](/documentation/react/components/button)
-* [Checkbox](documentation/react/components/checkbox)
+* [Checkbox](/documentation/react/components/checkbox)
 * [Dropdown](/documentation/react/components/dropdown)
 * [Progress](/documentation/react/components/progress)
 * [Radio](/documentation/react/components/radio)
