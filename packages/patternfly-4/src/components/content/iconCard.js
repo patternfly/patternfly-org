@@ -7,7 +7,7 @@ import posed from 'react-pose';
 import copy from 'clipboard-copy';
 import { saveAs } from 'file-saver';
 import ReactDOM from 'react-dom';
-import { DownloadIcon, CopyrightIcon, ClipboardIcon } from '../../../node_modules/@patternfly/react-icons';
+import { DownloadIcon, ClipboardIcon } from '../../../node_modules/@patternfly/react-icons';
 
 const styles = {
   iconCell: css`
