@@ -7,6 +7,7 @@ import posed from 'react-pose';
 import copy from 'clipboard-copy';
 import { saveAs } from 'file-saver';
 import ReactDOM from 'react-dom';
+import { DownloadIcon, CopyrightIcon, ClipboardIcon } from '../../../node_modules/@patternfly/react-icons';
 
 const styles = {
   iconCell: css`
@@ -68,6 +69,11 @@ const styles = {
   copyButtons: css`
     display: flex;
     margin-left: -16px;
+    button {
+      @media only screen and (max-width: 499px) {
+        font-size: 14px;
+      }
+    }
   `,
   scaleDown: css`transform: scale(.7);`,
   openContainer: css`display: flex;`,
@@ -168,9 +174,9 @@ class IconCard extends React.Component {
           <div>Indicates that a user may create or add something.</div>
         </div>
         <div css={styles.copyButtons}>
-          <Box><Button variant="link" onClick={this.onDownloadSvg}>Download SVG</Button></Box>
-          <Box><Button variant="link" onClick={this.onCopyHtml}>Copy HTML</Button></Box>
-          <Box><Button variant="link" onClick={this.onCopyReact}>Copy React</Button></Box>
+          <Box><Button variant="link" onClick={this.onDownloadSvg}><DownloadIcon /> SVG</Button></Box>
+          <Box><Button variant="link" onClick={this.onCopyHtml}><ClipboardIcon /> HTML</Button></Box>
+          <Box><Button variant="link" onClick={this.onCopyReact}><ClipboardIcon />React</Button></Box>
         </div>
       </div>
     );
