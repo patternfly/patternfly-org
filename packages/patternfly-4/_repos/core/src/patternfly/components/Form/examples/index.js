@@ -10,29 +10,29 @@ import FormHorizontalAlignLabelsExample from './form-horizontal-align-labels-exa
 import FormHelpTextExample from './form-help-text-example.hbs';
 import FormActionGroupExample from './form-action-group-example.hbs';
 import docs from '../docs/code.md';
+import '../form.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const formVerticalAlignLabelsExample = FormVerticalAlignLabelsExample();
   const formHorizontalAlignLabelsExample = FormHorizontalAlignLabelsExample();
   const formHelpTextExample = FormHelpTextExample();
   const formActionGroupExample = FormActionGroupExample();
   const headingText = 'Form';
-  const variablesRoot = 'pf-c-form';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Vertical aligned labels" handlebars={FormVerticalAlignLabelsExampleRaw}>
+    <Documentation docs={Docs} heading={headingText}>
+      <Example heading="Vertical aligned Labels" handlebars={FormVerticalAlignLabelsExampleRaw}>
         {formVerticalAlignLabelsExample}
       </Example>
-      <Example heading="Horizontal aligned labels" handlebars={FormHorizontalAlignLabelsExampleRaw}>
+      <Example heading="Horizontal aligned Labels" handlebars={FormHorizontalAlignLabelsExampleRaw}>
         {formHorizontalAlignLabelsExample}
       </Example>
       <Example heading="Help text" handlebars={FormHelpTextExampleRaw}>
         {formHelpTextExample}
       </Example>
-      <Example heading="Action group" handlebars={FormActionGroupExampleRaw}>
+      <Example heading="Action Group" handlebars={FormActionGroupExampleRaw}>
         {formActionGroupExample}
       </Example>
     </Documentation>

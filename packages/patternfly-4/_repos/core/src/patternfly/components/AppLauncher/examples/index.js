@@ -6,17 +6,16 @@ import AppLauncherExpandedExampleRaw from '!raw!./app-launcher-expanded-example.
 import ApplauncherCollapsedExample from './app-launcher-collapsed-example.hbs';
 import ApplauncherExpandedExample from './app-launcher-expanded-example.hbs';
 import docs from '../docs/code.md';
+import '../app-launcher.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const AppLauncherCollapsedExample = ApplauncherCollapsedExample();
   const AppLauncherExpandedExample = ApplauncherExpandedExample();
-  const headingText = 'App launcher';
-  const variablesRoot = 'pf-c-app-launcher';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation docs={Docs}>
       <Example heading="Applauncher collapsed" handlebars={AppLauncherCollapsedExampleRaw}>
         {AppLauncherCollapsedExample}
       </Example>

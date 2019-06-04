@@ -13,29 +13,29 @@ import TooltipBottomExample from './tooltip-bottom-example.hbs';
 import TooltipLeftExample from './tooltip-left-example.hbs';
 
 import docs from '../docs/code.md';
+import '../tooltip.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const tooltipTopExample = TooltipTopExample();
   const tooltipRightExample = TooltipRightExample();
   const tooltipBottomExample = TooltipBottomExample();
   const tooltipLeftExample = TooltipLeftExample();
   const headingText = 'Tooltip';
-  const variablesRoot = 'pf-c-tooltip';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example className="is-tooltip" heading="Tooltip top" handlebars={TooltipTopExampleRaw}>
+    <Documentation docs={Docs} heading={headingText}>
+      <Example className="is-tooltip" heading="Tooltip Top" handlebars={TooltipTopExampleRaw}>
         {tooltipTopExample}
       </Example>
-      <Example className="is-tooltip" heading="Tooltip right" handlebars={TooltipRightExampleRaw}>
+      <Example className="is-tooltip" heading="Tooltip Right" handlebars={TooltipRightExampleRaw}>
         {tooltipRightExample}
       </Example>
-      <Example className="is-tooltip" heading="Tooltip bottom" handlebars={TooltipBottomExampleRaw}>
+      <Example className="is-tooltip" heading="Tooltip Bottom" handlebars={TooltipBottomExampleRaw}>
         {tooltipBottomExample}
       </Example>
-      <Example className="is-tooltip" heading="Tooltip left" handlebars={TooltipLeftExampleRaw}>
+      <Example className="is-tooltip" heading="Tooltip Left" handlebars={TooltipLeftExampleRaw}>
         {tooltipLeftExample}
       </Example>
     </Documentation>

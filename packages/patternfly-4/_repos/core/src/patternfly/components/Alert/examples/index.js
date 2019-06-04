@@ -7,21 +7,21 @@ import AlertVariationsRaw from '!raw!./alert-variations-example.hbs';
 import AlertTypes from './alert-types-example.hbs';
 import AlertVariations from './alert-variations-example.hbs';
 import docs from '../docs/code.md';
+import '../alert.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const alertTypes = AlertTypes();
   const alertVariations = AlertVariations();
   const headingText = 'Alert';
-  const variablesRoot = 'pf-c-alert';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Alert types" handlebars={AlertTypesRaw}>
+    <Documentation docs={Docs} heading={headingText}>
+      <Example heading="Alert Types" handlebars={AlertTypesRaw}>
         {alertTypes}
       </Example>
-      <Example heading="Alert variations" handlebars={AlertVariationsRaw}>
+      <Example heading="Alert Variations" handlebars={AlertVariationsRaw}>
         {alertVariations}
       </Example>
     </Documentation>

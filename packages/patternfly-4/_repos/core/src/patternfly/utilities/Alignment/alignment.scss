@@ -1,3 +1,5 @@
+@import "../../patternfly-imports";
+
 /* stylelint-disable */
 
 $pf-u-alignment-options: (
@@ -8,6 +10,6 @@ $pf-u-alignment-options: (
 );
 
 // Text utilities
-@include pf-utility-builder($pf-u-alignment-options, $pf-global--breakpoint-list);
+@include pf-utility-builder($pf-u-alignment-options, $pf-global--breakpoint-list); 
 
 /* stylelint-enable */

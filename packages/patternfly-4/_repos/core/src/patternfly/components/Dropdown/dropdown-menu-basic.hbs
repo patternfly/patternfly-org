@@ -3,5 +3,5 @@
     {{{dropdown-menu--attribute}}}
   {{/if}}
   {{#unless dropdown--IsExpanded}}hidden{{/unless}}>
-  [Panel contents here]
+  {{> @partial-block}}
 </{{#if dropdown-menu--type}}{{dropdown-menu--type}}{{else}}div{{/if}}>

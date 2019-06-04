@@ -4,17 +4,17 @@ import Example from '@siteComponents/Example';
 import InputgroupExampleRaw from '!raw!./input-group-example.hbs';
 import InputgroupExample from './input-group-example.hbs';
 import docs from '../docs/code.md';
+import '../input-group.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const inputGroupExample = InputgroupExample();
-  const headingText = 'Input group';
-  const variablesRoot = 'pf-c-input-group';
+  const headingText = 'Input Group';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Inputgroup example" handlebars={InputgroupExampleRaw}>
+    <Documentation docs={Docs} heading={headingText}>
+      <Example heading="Inputgroup Example" handlebars={InputgroupExampleRaw}>
         {inputGroupExample}
       </Example>
     </Documentation>

@@ -15,21 +15,21 @@ import ToastGroupExample from './toast-group-example.hbs';
 import toastGroupDocs from '../docs/toast-group.md';
 
 import docs from '../docs/code.md';
+import '../alert-group.scss';
 
-export const headingText = 'Alert group';
+export const headingText = 'Alert Group';
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const alertGroupExample = AlertGroupExample();
   const toastGroupExample = ToastGroupExample();
-  const variablesRoot = 'pf-c-alert-group';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Inline alert group" handlebars={alertGroupExampleRaw} docs={alertGroupDocs}>
+    <Documentation docs={Docs} heading={headingText}>
+      <Example heading="Inline Alert Group" handlebars={alertGroupExampleRaw} docs={alertGroupDocs}>
         {alertGroupExample}
       </Example>
-      <Example heading="Toast alert group" fullPageOnly="true" handlebars={toastGroupExampleRaw} docs={toastGroupDocs}>
+      <Example heading="Toast Alert Group" fullPageOnly="true" handlebars={toastGroupExampleRaw} docs={toastGroupDocs}>
         {toastGroupExample}
       </Example>
     </Documentation>

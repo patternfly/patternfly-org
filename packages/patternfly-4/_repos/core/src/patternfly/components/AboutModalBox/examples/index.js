@@ -3,16 +3,16 @@ import Documentation from '@siteComponents/Documentation';
 import Example from '@siteComponents/Example';
 import docs from '../docs/code.md';
 import AboutModalBoxExample from './about-modal-box-example.hbs';
+import './examples.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const aboutModalBoxExample = AboutModalBoxExample();
-  const headingText = 'About modal box';
-  const variablesRoot = 'pf-c-about-modal-box';
+  const headingText = 'About Modal Box';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example fullPageOnly="true" heading={headingText}>
         {aboutModalBoxExample}
       </Example>

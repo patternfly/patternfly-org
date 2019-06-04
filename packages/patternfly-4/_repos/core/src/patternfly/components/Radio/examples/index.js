@@ -4,17 +4,17 @@ import Example from '@siteComponents/Example';
 import RadioExampleRaw from '!raw!./radio-example.hbs';
 import RadioExample from './radio-example.hbs';
 import docs from '../docs/code.md';
+import '../radio.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const radioExample = RadioExample();
   const headingText = 'Radio';
-  const variablesRoot = 'pf-c-radio';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Radio example" handlebars={RadioExampleRaw}>
+    <Documentation docs={Docs} heading={headingText}>
+      <Example heading="Radio Example" handlebars={RadioExampleRaw}>
         {radioExample}
       </Example>
     </Documentation>

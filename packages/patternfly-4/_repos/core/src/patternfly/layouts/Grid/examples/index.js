@@ -18,10 +18,11 @@ import GridOffsets from './grid-offsets-example.hbs';
 import GridResponsive from './grid-responsive-example.hbs';
 import GridRowspan from './grid-rowspan-example.hbs';
 import docs from '../docs/code.md';
+import '../grid.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const gridBase = GridBase();
   const gridGutter = GridGutter();
   const gridSmart = GridSmart();
@@ -31,10 +32,9 @@ export default (props) => {
   const gridResponsive = GridResponsive();
   const gridRowspan = GridRowspan();
   const headingText = 'Grid';
-  const variablesRoot = 'pf-l-grid';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
+    <Documentation docs={Docs} heading={headingText} className="is-layout-page">
       <Example heading="Smart grid (responsive)" handlebars={GridSmartRaw}>
         {gridSmart}
       </Example>

@@ -4,16 +4,16 @@ import Example from '@siteComponents/Example';
 import alignmentSimpleExampleRaw from '!raw!./alignment-simple-example.hbs';
 import AlignmentSimpleExample from './alignment-simple-example.hbs';
 import docs from '../docs/code.md';
+import '../alignment.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const alignmentSimpleExample = AlignmentSimpleExample();
-  const headingText = 'Alignment';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} className="is-utility-page">
-      <Example heading="Alignment simple" handlebars={alignmentSimpleExampleRaw}>
+    <Documentation docs={Docs} className="is-utility-page">
+      <Example heading="Alignment Simple" handlebars={alignmentSimpleExampleRaw}>
         {alignmentSimpleExample}
       </Example>
     </Documentation>

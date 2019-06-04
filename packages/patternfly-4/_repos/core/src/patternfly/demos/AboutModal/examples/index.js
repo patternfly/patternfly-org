@@ -6,13 +6,13 @@ import AboutModalExample from './about-modal-example.hbs';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const aboutModalExample = AboutModalExample();
-  const headingText = 'About modal demo';
+  const headingText = 'About Modal Demo';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText}>
-      <Example heading="About modal example" fullPageOnly="true">
+    <Documentation docs={Docs} heading={headingText}>
+      <Example heading="About Modal Example" fullPageOnly="true">
         {aboutModalExample}
       </Example>
     </Documentation>

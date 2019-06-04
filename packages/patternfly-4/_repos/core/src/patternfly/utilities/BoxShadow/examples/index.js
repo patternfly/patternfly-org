@@ -4,18 +4,19 @@ import Example from '@siteComponents/Example';
 import boxShadowSimpleExampleRaw from '!raw!./box-shadow-simple-example.hbs';
 import BoxshadowSimpleExample from './box-shadow-simple-example.hbs';
 import docs from '../docs/code.md';
+import '../box-shadow.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const boxShadowSimpleExample = BoxshadowSimpleExample();
-  const headingText = 'Box shadow';
+  const headingText = 'Box Shadow';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example
         className="box-shadow"
-        heading="Boxshadow utility"
+        heading="Boxshadow Utility"
         handlebars={boxShadowSimpleExampleRaw}
         minHeight="20em"
       >

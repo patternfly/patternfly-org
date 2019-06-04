@@ -4,16 +4,16 @@ import Example from '@siteComponents/Example';
 import ChipExampleRaw from '!raw!./chip-example.hbs';
 import chipExample from './chip-example.hbs';
 import docs from '../docs/code.md';
+import '../chip.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const ChipExample = chipExample();
   const headingText = 'Chip';
-  const variablesRoot = 'pf-c-chip';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation docs={Docs} heading={headingText}>
       <Example heading="Chip" handlebars={ChipExampleRaw} className="is-light-preview">
         {ChipExample}
       </Example>

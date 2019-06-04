@@ -30,7 +30,7 @@
     "@patternfly/react-table": "2.8.21",
     "@patternfly/react-tokens": "2.5.3",
     "@patternfly/src-patternfly-next": "patternfly/patternfly-next#v2.8.3",
-    "@patternfly/src-patternfly-react": "patternfly/patternfly-react#7495082",
+    "@patternfly/src-patternfly-react": "patternfly/patternfly-react#2fdc07f",
     "babel-plugin-react-docgen-typescript": "1.2.0",
     "babel-standalone": "6.26.0",
     "capture-website": "^0.3.2",

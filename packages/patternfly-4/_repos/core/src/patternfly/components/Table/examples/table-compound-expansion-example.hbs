@@ -51,35 +51,42 @@
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table--id '-action1" aria-label="Actions"')}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-1')}}
-        {{/table-nested}}
+    {{#> table-tr table-tr--expandable="true" table-tr--modifier="pf-m-expanded"}}
+      {{#> table-td table-td--attribute='colspan="7"'}}
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-1">
+          {{#> table-nested table-nested-id="nested-table-1"}}
+          {{/table-nested}}
+        </div>
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-2')}}
-        {{/table-nested}}
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
+      {{#> table-td table-td--attribute='colspan="7"'}}
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-2">
+          {{#> table-nested table-nested-id="nested-table-2"}}
+          {{/table-nested}}
+        </div>
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-3')}}
-        {{/table-nested}}
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
+      {{#> table-td table-td--attribute='colspan="7"'}}
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-3">
+          {{#> table-nested table-nested-id="nested-table-3"}}
+          {{/table-nested}}
+        </div>
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
+    {{#> table-tr table-tr--expanded="true"}}
       {{#> table-th table-th--data-label="Repository Name"}}
         <a href="#">siemur/test-space</a>
       {{/table-th}}
@@ -108,35 +115,42 @@
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table--id '-action2" aria-label="Actions"')}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-4')}}
-        {{/table-nested}}
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
+      {{#> table-td table-td--attribute='colspan="4"'}}
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-4">
+          {{#> table-nested table-nested-id="nested-table-4"}}
+          {{/table-nested}}
+        </div>
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-5')}}
-        {{/table-nested}}
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
+      {{#> table-td table-td--attribute='colspan="5"'}}
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-5">
+          {{#> table-nested table-nested-id="nested-table-5"}}
+          {{/table-nested}}
+        </div>
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-6')}}
-        {{/table-nested}}
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
+      {{#> table-td table-td--attribute='colspan="6"'}}
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-6">
+          {{#> table-nested table-nested-id="nested-table-6"}}
+          {{/table-nested}}
+        </div>
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
+    {{#> table-tr table-tr--expanded="true"}}
        {{#> table-th table-th--data-label="Repository Name"}}
         <a href="#">siemur/test-space</a>
       {{/table-th}}
@@ -165,29 +179,36 @@
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table--id '-action3" aria-label="Actions"')}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-7')}}
-        {{/table-nested}}
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
+      {{#> table-td table-td--attribute='colspan="7"'}}
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-7">
+          {{#> table-nested table-nested-id="nested-table-7"}}
+          {{/table-nested}}
+        </div>
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-8')}}
-        {{/table-nested}}
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
+      {{#> table-td table-td--attribute='colspan="7"'}}
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-8">
+          {{#> table-nested table-nested-id="nested-table-8"}}
+          {{/table-nested}}
+        </div>
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true"}}
-      {{#> table-td table-td--attribute='colspan="7"' table-td--modifier="pf-m-no-padding"}}
-        {{#> table-nested table--id=(concat table--id '-nested-table-9')}}
-        {{/table-nested}}
+    {{#> table-tr table-tr--expandable="true" table-tr--attribute="hidden"}}
+      {{#> table-td table-td--attribute='colspan="7"'}}
+        <div class="pf-c-table__expandable-row-content" id="{{table--id}}-nested-table-9">
+          {{#> table-nested table-nested-id="nested-table-9"}}
+          {{/table-nested}}
+        </div>
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}

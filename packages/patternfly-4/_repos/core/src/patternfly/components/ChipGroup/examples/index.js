@@ -15,28 +15,28 @@ import chipGroupSelectCollapsedExample from './chip-group-select-collapsed-examp
 import chipGroupMultiSelectDoc from '../docs/chip-group-multi-select.md';
 
 import docs from '../docs/code.md';
+import '../chip-group.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const ChipGroupToolbarCollapsedExample = chipGroupToolbarCollapsedExample();
   const ChipGroupToolbarExpandedExample = chipGroupToolbarExpandedExample();
   const ChipGroupSelectExpandedExample = chipGroupSelectExpandedExample();
   const ChipGroupSelectCollapsedExample = chipGroupSelectCollapsedExample();
-  const headingText = 'Chip group';
-  const variablesRoot = 'pf-c-chip-group';
+  const headingText = 'Chip Group';
 
   return (
-    <Documentation data={props} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation heading={headingText}>
       <Example
-        heading="Chip group toolbar (collapsed)"
+        heading="Chip Group Toolbar (Collapsed)"
         handlebars={ChipGroupToolbarCollapsedExampleRaw}
         className="is-light-preview"
       >
         {ChipGroupToolbarCollapsedExample}
       </Example>
       <Example
-        heading="Chip group toolbar (expanded)"
+        heading="Chip Group Toolbar (Expanded)"
         handlebars={ChipGroupToolbarExpandedExampleRaw}
         className="is-light-preview"
         docs={chipGroupToolbarDoc}
@@ -44,14 +44,14 @@ export default (props) => {
         {ChipGroupToolbarExpandedExample}
       </Example>
       <Example
-        heading="Chip group multi-select (collapsed)"
+        heading="Chip Group Multi-Select (Collapsed)"
         handlebars={ChipGroupSelectCollapsedExampleRaw}
         className="is-light-preview"
       >
         {ChipGroupSelectCollapsedExample}
       </Example>
       <Example
-        heading="Chip group multi-select (expanded)"
+        heading="Chip Group Multi-Select (Expanded)"
         handlebars={ChipGroupSelectExpandedExampleRaw}
         className="is-light-preview"
         docs={chipGroupMultiSelectDoc}

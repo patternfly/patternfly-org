@@ -10,29 +10,29 @@ import ButtonStatesTemplate from './button-states-example.hbs';
 import ButtonBlockTemplate from './button-block-example.hbs';
 import ButtonLinkExample from './button-link-example.hbs';
 import docs from '../docs/code.md';
+import '../button.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const buttonTypesTemplate = ButtonTypesTemplate();
   const buttonStatesTemplate = ButtonStatesTemplate();
   const buttonLinkExample = ButtonLinkExample();
   const buttonBlockTemplate = ButtonBlockTemplate();
   const headingText = 'Button';
-  const variablesRoot = 'pf-c-button';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Button types" handlebars={ButtonTypesTemplateRaw}>
+    <Documentation docs={Docs} heading={headingText}>
+      <Example heading="Button Types" handlebars={ButtonTypesTemplateRaw}>
         {buttonTypesTemplate}
       </Example>
-      <Example heading="Button states" handlebars={ButtonStatesTemplateRaw}>
+      <Example heading="Button States" handlebars={ButtonStatesTemplateRaw}>
         {buttonStatesTemplate}
       </Example>
-      <Example heading="Links as buttons" handlebars={ButtonLinkExampleRaw}>
+      <Example heading="Links as Buttons" handlebars={ButtonLinkExampleRaw}>
         {buttonLinkExample}
       </Example>
-      <Example heading="Button (block level)" handlebars={ButtonBlockTemplateRaw}>
+      <Example heading="Button (Block Level)" handlebars={ButtonBlockTemplateRaw}>
         {buttonBlockTemplate}
       </Example>
     </Documentation>

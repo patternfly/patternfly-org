@@ -10,31 +10,30 @@ import PaginationBottomExample from './pagination-bottom-example.hbs';
 import paginationTopExampleDoc from '../docs/pagination-top-example.md';
 import paginationBottomExampleDoc from '../docs/pagination-bottom-example.md';
 import docs from '../docs/code.md';
+import '../pagination.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const paginationTopExample = PaginationTopExample();
   const paginationTopExpandedExample = PaginationTopExpandedExample();
   const paginationBottomExample = PaginationBottomExample();
-  const headingText = 'Pagination';
-  const variablesRoot = 'pf-c-pagination';
 
   return (
-    <Documentation data={props} docs={docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation docs={docs}>
       <Example
-        heading="Pagination top"
+        heading="Pagination Top"
         handlebars={paginationTopExampleRaw}
         fullPageOnly="true"
         docs={paginationTopExampleDoc}
       >
         {paginationTopExample}
       </Example>
-      <Example heading="Pagination top expanded" handlebars={paginationTopExpandedExampleRaw} fullPageOnly="true">
+      <Example heading="Pagination Top Expanded" handlebars={paginationTopExpandedExampleRaw} fullPageOnly="true">
         {paginationTopExpandedExample}
       </Example>
       <Example
-        heading="Pagination bottom"
+        heading="Pagination Bottom"
         handlebars={paginationBottomExampleRaw}
         fullPageOnly="true"
         docs={paginationBottomExampleDoc}

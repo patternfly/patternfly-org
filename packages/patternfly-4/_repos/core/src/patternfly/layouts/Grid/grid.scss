@@ -1,4 +1,6 @@
 // URL.com/guidelines#layout
+@import "../../patternfly-imports";
+
 // Generate smart grid layout
 // @parameter {Suffix} xs, sm, md, lg, xl, null
 @mixin pf-smart-grid($suffix: null) {

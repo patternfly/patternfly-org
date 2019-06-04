@@ -9,9 +9,7 @@ import navExampleRaw from '!raw!./nav-example.hbs';
 import navExpandableExampleRaw from '!raw!./nav-expandable-example.hbs';
 import navExpandableSubnavTitlesExampleRaw from '!raw!./nav-expandable-subnav-titles-example.hbs';
 import navHorizontalListExampleRaw from '!raw!./nav-horizontal-list-example.hbs';
-import navHorizontalListOverflowExampleRaw from '!raw!./nav-horizontal-list-overflow-example.hbs';
 import navListTertiaryExampleRaw from '!raw!./nav-tertiary-list-example.hbs';
-import navListTertiaryOverflowExampleRaw from '!raw!./nav-tertiary-list-overflow-example.hbs';
 import navMixedExampleRaw from '!raw!./nav-mixed-example.hbs';
 
 // Example files
@@ -21,68 +19,54 @@ import NavExample from './nav-example.hbs';
 import NavExpandableExample from './nav-expandable-example.hbs';
 import NavExpandableSubnavTitlesExample from './nav-expandable-subnav-titles-example.hbs';
 import NavHorizontalListExample from './nav-horizontal-list-example.hbs';
-import NavHorizontalListOverflowExample from './nav-horizontal-list-overflow-example.hbs';
 import NavListTertiaryExample from './nav-tertiary-list-example.hbs';
-import NavListTertiaryOverflowExample from './nav-tertiary-list-overflow-example.hbs';
 import NavMixedExample from './nav-mixed-example.hbs';
 
 import docs from '../docs/code.md';
+import '../nav.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const navSimpleListExample = NavSimpleListExample();
   const navListGroupedExample = NavListGroupedExample();
   const navExample = NavExample();
   const navExpandableExample = NavExpandableExample();
   const navExpandableSubnavTitlesExample = NavExpandableSubnavTitlesExample();
   const navHorizontalListExample = NavHorizontalListExample();
-  const navHorizontalListOverflowExample = NavHorizontalListOverflowExample();
   const navListTertiaryExample = NavListTertiaryExample();
-  const navListTertiaryOverflowExample = NavListTertiaryOverflowExample();
   const navMixedExample = NavMixedExample();
   const headingText = 'Navigation';
-  const variablesRoot = 'pf-c-nav';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Simple nav" handlebars={navSimpleListExampleRaw}>
+    <Documentation docs={Docs} heading={headingText}>
+      <Example heading="Simple Nav" handlebars={navSimpleListExampleRaw}>
         {navSimpleListExample}
       </Example>
-      <Example heading="Grouped nav" handlebars={navListGroupedExampleRaw}>
+      <Example heading="Grouped Nav" handlebars={navListGroupedExampleRaw}>
         {navListGroupedExample}
       </Example>
-      <Example heading="Default nav" handlebars={navExampleRaw}>
+      <Example heading="Default Nav" handlebars={navExampleRaw}>
         {navExample}
       </Example>
-      <Example heading="Expandable nav" handlebars={navExpandableExampleRaw}>
+      <Example heading="Expandable Nav" handlebars={navExpandableExampleRaw}>
         {navExpandableExample}
       </Example>
-      <Example heading="Expandable nav (w/subnav titles)" handlebars={navExpandableSubnavTitlesExampleRaw}>
+      <Example heading="Expandable Nav (w/subnav titles)" handlebars={navExpandableSubnavTitlesExampleRaw}>
         {navExpandableSubnavTitlesExample}
       </Example>
-      <Example heading="Nav mixed" handlebars={navMixedExampleRaw}>
+      <Example heading="Nav Mixed" handlebars={navMixedExampleRaw}>
         {navMixedExample}
       </Example>
       <Example
-        heading="Horizontal nav (only in masthead)"
+        heading="Horizontal Nav (only in masthead)"
         handlebars={navHorizontalListExampleRaw}
-        className="is-dark-preview pf-t-dark"
+        className="is-dark-preview"
       >
         {navHorizontalListExample}
       </Example>
-      <Example
-        heading="Horizontal nav overflow (only in masthead)"
-        handlebars={navHorizontalListOverflowExampleRaw}
-        className="is-dark-preview pf-t-dark"
-      >
-        {navHorizontalListOverflowExample}
-      </Example>
-      <Example heading="Tertiary nav" handlebars={navListTertiaryExampleRaw}>
+      <Example heading="Tertiary Nav" handlebars={navListTertiaryExampleRaw}>
         {navListTertiaryExample}
-      </Example>
-      <Example heading="Tertiary nav overflow" handlebars={navListTertiaryOverflowExampleRaw}>
-        {navListTertiaryOverflowExample}
       </Example>
     </Documentation>
   );

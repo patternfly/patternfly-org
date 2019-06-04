@@ -1,3 +1,5 @@
+@import "../../patternfly-imports";
+
 .pf-l-stack {
   --pf-l-stack--m-gutter--MarginBottom: var(--pf-global--gutter);
 
@@ -6,7 +8,7 @@
   height: 100%;
 }
 
-.pf-l-stack__item.pf-m-fill {
+.pf-l-stack__item.pf-m-main {
   flex-grow: 1;
 }
 

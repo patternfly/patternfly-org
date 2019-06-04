@@ -30,6 +30,7 @@ import SelectSingleTypeaheadExampleDoc from '../docs/select-single-typeahead.md'
 import SelectMultiTypeaheadExampleDoc from '../docs/select-multi-typeahead.md';
 import SelectCheckboxExampleDoc from '../docs/select-checkbox.md';
 import docs from '../docs/code.md';
+import '../select.scss';
 
 export const selectSingleExampleDoc = SelectSingleExampleDoc;
 export const selectSingleTypeaheadExampleDoc = SelectSingleTypeaheadExampleDoc;
@@ -37,7 +38,7 @@ export const selectMultiTypeaheadExampleDoc = SelectMultiTypeaheadExampleDoc;
 export const selectCheckboxExampleDoc = SelectCheckboxExampleDoc;
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const selectSingleExample = SelectSingleExample();
   const selectSingleExpandedExample = SelectSingleExpandedExample();
   const selectSingleExpandedSelectedExample = SelectSingleExpandedSelectedExample();
@@ -50,69 +51,67 @@ export default (props) => {
   const selectCheckboxExample = SelectCheckboxExample();
   const selectCheckboxExpandedExample = SelectCheckboxExpandedExample();
   const selectCheckboxExpandedSelectedExample = SelectCheckboxExpandedSelectedExample();
-  const headingText = 'Select';
-  const variablesRoot = 'pf-c-select';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Select - single" handlebars={SelectSingleExampleRaw}>
+    <Documentation docs={Docs}>
+      <Example heading="Select - Single" handlebars={SelectSingleExampleRaw}>
         {selectSingleExample}
       </Example>
-      <Example heading="Select - single (expanded)" handlebars={SelectSingleExpandedExampleRaw} minHeight="20em">
+      <Example heading="Select - Single (Expanded)" handlebars={SelectSingleExpandedExampleRaw} minHeight="20em">
         {selectSingleExpandedExample}
       </Example>
       <Example
-        heading="Select - single (expanded and selected)"
+        heading="Select - Single (Expanded and Selected)"
         handlebars={SelectSingleExpandedSelectedExampleRaw}
         docs={selectSingleExampleDoc}
         minHeight="20em"
       >
         {selectSingleExpandedSelectedExample}
       </Example>
-      <Example heading="Select - single with typeahead" handlebars={SelectSingleTypeaheadExampleRaw}>
+      <Example heading="Select - Single with Typeahead" handlebars={SelectSingleTypeaheadExampleRaw}>
         {selectSingleTypeaheadExample}
       </Example>
       <Example
-        heading="Select - single with typeahead (expanded)"
+        heading="Select - Single with Typeahead (Expanded)"
         handlebars={SelectSingleTypeaheadExpandedExampleRaw}
         minHeight="20em"
       >
         {selectSingleTypeaheadExpandedExample}
       </Example>
       <Example
-        heading="Select - single with typeahead (expanded and selected)"
+        heading="Select - Single with Typeahead (Expanded and Selected)"
         handlebars={SelectSingleTypeaheadExpandedSelectedExampleRaw}
         docs={selectSingleTypeaheadExampleDoc}
         minHeight="20em"
       >
         {selectSingleTypeaheadExpandedSelectedExample}
       </Example>
-      <Example heading="Select - multi with typeahead" handlebars={SelectMultiTypeaheadExampleRaw}>
+      <Example heading="Select - Multi with Typeahead" handlebars={SelectMultiTypeaheadExampleRaw}>
         {selectMultiTypeaheadExample}
       </Example>
       <Example
-        heading="Select - multi with typeahead (expanded, chip group expanded)"
+        heading="Select - Multi with Typeahead (Expanded, chip group expanded)"
         handlebars={SelectMultiTypeaheadExpandedExampleRaw}
         minHeight="20em"
       >
         {selectMultiTypeaheadExpandedExample}
       </Example>
       <Example
-        heading="Select - multi with typeahead (expanded, chip group collapsed)"
+        heading="Select - Multi with Typeahead (Expanded, chip group collapsed)"
         handlebars={SelectMultiTypeaheadExpandedSelectedExampleRaw}
         docs={selectMultiTypeaheadExampleDoc}
         minHeight="20em"
       >
         {selectMultiTypeaheadExpandedSelectedExample}
       </Example>
-      <Example heading="Select - checkbox" handlebars={SelectCheckboxExampleRaw}>
+      <Example heading="Select - Checkbox" handlebars={SelectCheckboxExampleRaw}>
         {selectCheckboxExample}
       </Example>
-      <Example heading="Select - checkbox (expanded)" handlebars={SelectCheckboxExpandedExampleRaw} minHeight="20em">
+      <Example heading="Select - Checkbox (Expanded)" handlebars={SelectCheckboxExpandedExampleRaw} minHeight="20em">
         {selectCheckboxExpandedExample}
       </Example>
       <Example
-        heading="Select - checkbox (expanded and selected with groups)"
+        heading="Select - Checkbox (Expanded and Selected with Groups)"
         handlebars={SelectCheckboxExpandedSelectedExampleRaw}
         docs={selectCheckboxExampleDoc}
         minHeight="29em"

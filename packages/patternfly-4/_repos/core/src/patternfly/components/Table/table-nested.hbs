@@ -1,4 +1,4 @@
-{{#> table newcontext table--id=table--id table--attribute=(concat table-nested--attribute ' id="' table--id '" aria-label="Nested table"') table--modifier="pf-m-compact pf-m-no-border-rows" table--grid="true"}}
+{{#> table newcontext table-nested--id=table-nested-id table--modifier="pf-m-compact" table--grid="true" table--attribute='aria-label="Nested table"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}Description{{/table-th}}
@@ -13,8 +13,9 @@
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Active{{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table-nested--id '-' table-tr--id '-action1" aria-label="Actions"')}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
       {{/table-td}}
     {{/table-tr}}
     {{#> table-tr table-tr--id="nested-tr2"}}
@@ -22,8 +23,9 @@
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Warning{{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table-nested--id '-' table-tr--id '-action2" aria-label="Actions"')}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
       {{/table-td}}
     {{/table-tr}}
     {{#> table-tr table-tr--id="nested-tr3"}}
@@ -31,8 +33,9 @@
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Active{{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table-nested--id '-' table-tr--id '-action3" aria-label="Actions"')}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
       {{/table-td}}
     {{/table-tr}}
     {{#> table-tr table-tr--id="nested-tr4"}}
@@ -40,8 +43,9 @@
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Active{{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table-nested--id '-' table-tr--id '-action4" aria-label="Actions"')}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
       {{/table-td}}
     {{/table-tr}}
     {{#> table-tr table-tr--id="nested-tr5"}}
@@ -49,8 +53,9 @@
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Active{{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table-nested--id '-' table-tr--id '-action5" aria-label="Actions"')}}
+          <i class="fas fa-ellipsis-v"></i>
+        {{/button}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}

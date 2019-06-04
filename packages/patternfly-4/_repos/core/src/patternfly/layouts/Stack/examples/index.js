@@ -6,26 +6,21 @@ import StackHasGutterRaw from '!raw!./stack-has-gutter-example.hbs';
 import Stack from './stack-example.hbs';
 import StackHasGutter from './stack-has-gutter-example.hbs';
 import docs from '../docs/code.md';
+import '../stack.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const stack = Stack();
   const stackHasGutter = StackHasGutter();
   const headingText = 'Stack';
-  const variablesRoot = 'pf-l-stack';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
-      <Example heading="Stack example" handlebars={StackRaw} minHeight="30em" className="is-height-flex-column-grow">
+    <Documentation docs={Docs} heading={headingText} className="is-layout-page">
+      <Example heading="Stack Example" handlebars={StackRaw}>
         {stack}
       </Example>
-      <Example
-        heading="Stack example with gutter"
-        handlebars={StackHasGutterRaw}
-        minHeight="30em"
-        className="is-height-flex-column-grow"
-      >
+      <Example heading="Stack Example with Gutter" handlebars={StackHasGutterRaw}>
         {stackHasGutter}
       </Example>
     </Documentation>

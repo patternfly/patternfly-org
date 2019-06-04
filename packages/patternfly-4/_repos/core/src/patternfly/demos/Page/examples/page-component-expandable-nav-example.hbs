@@ -1,7 +1,7 @@
+{{#> background-image}}
+{{/background-image}}
+
 {{#> page page--id="page-layout-expandable-nav"}}
-  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
-    Skip to content
-  {{/skip-to-content}}
   {{#> page-header}}
     {{!-- Brand --}}
     {{#> page-header-brand}}
@@ -19,7 +19,7 @@
   {{/page-header}}
 
   {{#> page-sidebar}}
-    {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-expandable-nav" aria-label="Global"')}}
+    {{#> nav nav--expandable="true" nav--attribute=(concat 'id="' page--id '-expandable-nav" aria-label="Primary Nav Expandable Example"')}}
       {{#> nav-list}}
         {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
           {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-nav-link1"'}}
@@ -102,9 +102,37 @@
     {{/nav}}
   {{/page-sidebar}}
   {{#> page-main}}
-    {{#> page-template-breadcrumb}}
-    {{/page-template-breadcrumb}}
-    <a id="main-content-{{page--id}}"></a>
+    {{#> page-main-nav}}
+      {{#> nav nav--attribute='aria-label="Tertiary Example"' aria-labelledby="primary-nav"}}
+        {{#> nav-list nav-list--type="tertiary"}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Nav Item 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Nav Item 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Nav Item 3
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Nav Item 4
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Nav Item 5
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav}}
+    {{/page-main-nav}}
     {{#> page-template-title}}
     {{/page-template-title}}
     {{#> page-template-gallery}}

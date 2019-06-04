@@ -4,17 +4,17 @@ import Example from '@siteComponents/Example';
 import ContextSelectorExampleRaw from '!raw!./context-selector-example.hbs';
 import ContextSelectorExample from './context-selector-example.hbs';
 import docs from '../docs/code.md';
+import '../context-selector.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const contextselectorexample = ContextSelectorExample();
-  const headingText = 'Context selector';
-  const variablesRoot = 'pf-c-context-selector';
+  const headingText = 'Context Selector';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
-      <Example heading="Context selector example" handlebars={ContextSelectorExampleRaw} minHeight="20em">
+    <Documentation docs={Docs} heading={headingText}>
+      <Example heading="Context Selector Example" handlebars={ContextSelectorExampleRaw} minHeight="20em">
         {contextselectorexample}
       </Example>
     </Documentation>

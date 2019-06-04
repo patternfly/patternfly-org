@@ -8,17 +8,18 @@ import SrOnlyExample from './accessibility-screen-reader-example.hbs';
 import VisibleExample from './accessibility-visible-example.hbs';
 import HiddenExample from './accessibility-hidden-example.hbs';
 import docs from '../docs/code.md';
+import '../accessibility.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const srOnlyExample = SrOnlyExample();
   const visibleExample = VisibleExample();
   const hiddenExample = HiddenExample();
   const headingText = 'Accessibility';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} className="is-utility-page">
+    <Documentation docs={Docs} heading={headingText} className="is-utility-page">
       <Example heading="Screen reader only" handlebars={srOnlyExampleRaw}>
         {srOnlyExample}
       </Example>

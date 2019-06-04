@@ -16,10 +16,11 @@ import ToolbarFilterExpandedCheckedExample from './toolbar-filter-expanded-check
 import ToolbarMobileFilterExample from './toolbar-mobile-filter-example.hbs';
 import ToolbarMobileFilterCheckedExample from './toolbar-mobile-filter-checked-example.hbs';
 import docs from '../docs/code.md';
+import '../toolbar.scss';
 
 export const Docs = docs;
 
-export default (props) => {
+export default () => {
   const toolbarSimpleExample = ToolbarSimpleExample();
   const toolbarExpandedExample = ToolbarExpandedExample();
   const toolbarPaginationExample = ToolbarPaginationExample();
@@ -27,11 +28,9 @@ export default (props) => {
   const toolbarFilterExpandedCheckedExample = ToolbarFilterExpandedCheckedExample();
   const toolbarMobileFilterExample = ToolbarMobileFilterExample();
   const toolbarMobileFilterCheckedExample = ToolbarMobileFilterCheckedExample();
-  const headingText = 'Toolbar';
-  const variablesRoot = 'pf-c-toolbar';
 
   return (
-    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+    <Documentation docs={Docs}>
       <Example fullPageOnly="true" heading="Toolbar simple" handlebars={toolbarSimpleExampleRaw}>
         {toolbarSimpleExample}
       </Example>
@@ -40,7 +39,7 @@ export default (props) => {
       </Example>
       <Example
         fullPageOnly="true"
-        heading="Toolbar w/ pagination and expanded menus for bulk selector, sort, action menu, and pagination"
+        heading="Toolbar w/ Pagination and expanded menus for bulk selector, sort, action menu, and pagination"
         handlebars={toolbarExpandedExampleRaw}
       >
         {toolbarExpandedExample}
