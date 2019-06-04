@@ -69,9 +69,13 @@ const styles = {
   copyButtons: css`
     display: flex;
     margin-left: -16px;
+    @media only screen and (max-width: 499px) {
+      display: block;
+    }
     button {
-      @media only screen and (max-width: 499px) {
-        font-size: 14px;
+      font-size: 13px;
+      @media only screen and (min-width: 770px) and (max-width: 840px) {
+        font-size: 12px;
       }
     }
   `,
@@ -174,9 +178,9 @@ class IconCard extends React.Component {
           <div>Indicates that a user may create or add something.</div>
         </div>
         <div css={styles.copyButtons}>
-          <Box><Button variant="link" onClick={this.onDownloadSvg}><DownloadIcon /> SVG</Button></Box>
-          <Box><Button variant="link" onClick={this.onCopyHtml}><ClipboardIcon /> HTML</Button></Box>
-          <Box><Button variant="link" onClick={this.onCopyReact}><ClipboardIcon />React</Button></Box>
+          <Box><Button variant="link" onClick={this.onDownloadSvg}><DownloadIcon /> Download SVG</Button></Box>
+          <Box><Button variant="link" onClick={this.onCopyHtml}><ClipboardIcon /> Copy HTML</Button></Box>
+          <Box><Button variant="link" onClick={this.onCopyReact}><ClipboardIcon /> Copy React</Button></Box>
         </div>
       </div>
     );
