@@ -1,6 +1,3 @@
-
-@import "../../patternfly-imports";
-
 .pf-c-form {
   --pf-c-form--GridGap: var(--pf-global--gutter);
 
@@ -13,20 +10,25 @@
   --pf-c-form__label--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-form__label--m-disabled--Color: var(--pf-global--disabled-color--100);
 
-  // required labels
+  // Required labels
   --pf-c-form__label-required--MarginLeft: var(--pf-global--spacer--xs);
   --pf-c-form__label-required--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-form__label-required--Color: var(--pf-global--danger-color--100);
 
-  // form Group
+  // Form group
   --pf-c-form__group--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-form--m-horizontal--md__group--GridTemplateColumns: 150px 1fr;
   --pf-c-form__group--m-action--MarginTop: var(--pf-global--spacer--xl);
 
   // actions
-  --pf-c-form__actions--MarginBottom: calc(var(--pf-c-form__actions--child--MarginBottom) * -1);
-  --pf-c-form__actions--child--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-form__actions--child--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-form__actions--child--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-form__actions--child--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-form__actions--child--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-form__actions--MarginTop: calc(var(--pf-c-form__actions--child--MarginTop) * -1);
+  --pf-c-form__actions--MarginRight: calc(var(--pf-c-form__actions--child--MarginRight) * -1);
+  --pf-c-form__actions--MarginBottom: calc(var(--pf-c-form__actions--child--MarginBottom) * -1);
+  --pf-c-form__actions--MarginLeft: calc(var(--pf-c-form__actions--child--MarginLeft) * -1);
 
   // Helpers
   --pf-c-form__helper-text--MarginTop: var(--pf-global--spacer--xs);
@@ -80,10 +82,6 @@
 }
 
 .pf-c-form__group {
-  .pf-c-form__label {
-    padding-bottom: var(--pf-c-form__label--PaddingBottom);
-  }
-
   &.pf-m-action {
     margin-top: var(--pf-c-form__group--m-action--MarginTop);
   }
@@ -101,6 +99,14 @@
       flex: auto 0;
       margin-right: var(--pf-c-form--m-inline--MarginRight);
     }
+  }
+
+  .pf-c-form__label {
+    padding-bottom: var(--pf-c-form__label--PaddingBottom);
+  }
+
+  .pf-c-form__helper-text {
+    margin-top: var(--pf-c-form__helper-text--MarginTop);
   }
 }
 
@@ -138,10 +144,6 @@
 .pf-c-form__helper-text {
   font-size: var(--pf-c-form__helper-text--FontSize);
 
-  .pf-c-form-control + & {
-    margin-top: var(--pf-c-form__helper-text--MarginTop);
-  }
-
   &:not(.pf-m-error) {
     color: var(--pf-c-form__helper-text--Color);
   }
@@ -152,6 +154,7 @@
 
   &.pf-m-inactive {
     display: none;
+    visibility: hidden;
   }
 
   &.pf-m-hidden {
@@ -168,13 +171,16 @@
 .pf-c-form__actions {
   display: flex;
   flex-wrap: wrap;
+  margin-top: var(--pf-c-form__actions--MarginTop);
+  margin-right: var(--pf-c-form__actions--MarginRight);
   margin-bottom: var(--pf-c-form__actions--MarginBottom);
+  margin-left: var(--pf-c-form__actions--MarginLeft);
+  overflow: hidden; // keeps the margin bottom on children from causing overflow issues
 
   > * {
+    margin-top: var(--pf-c-form__actions--child--MarginTop);
+    margin-right: var(--pf-c-form__actions--child--MarginRight);
     margin-bottom: var(--pf-c-form__actions--child--MarginBottom);
-
-    &:not(:last-child) {
-      margin-right: var(--pf-c-form__actions--child--MarginRight);
-    }
+    margin-left: var(--pf-c-form__actions--child--MarginLeft);
   }
 }

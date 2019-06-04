@@ -26,11 +26,10 @@ import FlexFillExample from './flex-fill-example.hbs';
 import FlexWrapExample from './flex-wrap-example.hbs';
 
 import docs from '../docs/code.md';
-import '../flex.scss';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const flexEnableExample = FlexEnableExample();
   const flexDirectionExample = FlexDirectionExample();
   const flexJustifyContentExample = FlexJustifyContentExample();
@@ -45,7 +44,7 @@ export default () => {
   const headingText = 'Flex';
 
   return (
-    <Documentation docs={Docs} heading={headingText} className="flex-examples is-utility-page">
+    <Documentation data={props} docs={Docs} heading={headingText} className="flex-examples is-utility-page">
       <Example heading="Enable flex" handlebars={flexEnableExampleRaw}>
         {flexEnableExample}
       </Example>

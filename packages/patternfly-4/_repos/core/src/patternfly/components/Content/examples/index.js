@@ -4,17 +4,17 @@ import Example from '@siteComponents/Example';
 import ContentTemplateRaw from '!raw!./content-template-example.hbs';
 import ContentTemplate from './content-template-example.hbs';
 import docs from '../docs/code.md';
-import '../content.scss';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const contentTemplate = ContentTemplate();
   const headingText = 'Content';
+  const variablesRoot = 'pf-c-content';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
-      <Example heading="Content Example" handlebars={ContentTemplateRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Content example" handlebars={ContentTemplateRaw}>
         {contentTemplate}
       </Example>
     </Documentation>

@@ -4,7 +4,7 @@ The checkbox select can select multiple items using checkboxes. The number of it
 
 *This section to be updated once the React implementation is complete.*
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role` or `aria` | `pf-c-select` |  accessibility notes. |
 *Note:* The attribute `aria-pressed="true"` should be set programmatically to the active item.
@@ -12,10 +12,10 @@ The checkbox select can select multiple items using checkboxes. The number of it
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-select` | `<div>` |  Initiates a custom select. |
-| `.pf-c-select__toggle` | `<div>` |  Initiates a custom toggle. |
+| `.pf-c-select__toggle` | `<button>` |  Initiates a custom toggle. |
 | `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates a custom select toggle wrapper so that chips and input field can wrap together. |
 | `.pf-c-chip` | `<div>` |  Initiates a chip. (See [chip component](/components/Check/examples/) for more details) |
 | `.pf-c-select__toggle-typeahead` | `input.pf-c-form-control` |  Initiates the input field for typeahead. |

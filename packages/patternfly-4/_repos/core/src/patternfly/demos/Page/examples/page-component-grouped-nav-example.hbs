@@ -1,7 +1,7 @@
-{{#> background-image}}
-{{/background-image}}
-
 {{#> page page--id="page-layout-grouped-nav"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
   {{#> page-header}}
     {{#> page-header-brand}}
       {{#> page-header-brand-toggle}}
@@ -10,17 +10,17 @@
         {{/button}}
       {{/page-header-brand-toggle}}
       {{#> page-header-brand-link page-header-brand-link--href="#"}}
-        {{#> brand brand--attribute='src="/assets/images/l_pf-reverse-164x11.png" alt="Patternfly Logo"'}}{{/brand}}
+        {{#> brand brand--attribute='src="/assets/images/l_pf-reverse-164x11.png" alt="PatternFly logo"'}}{{/brand}}
       {{/page-header-brand-link}}
     {{/page-header-brand}}
     {{#> page-template-header-tools-elements}}
     {{/page-template-header-tools-elements}}
   {{/page-header}}
   {{#> page-sidebar}}
-    {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Grouped Nav Example"')}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-grouped-nav" aria-label="Global"')}}
       {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
         {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
-          System Panel
+          System panel
         {{/nav-section-title}}
         {{#> nav-list nav-list--type="simple"}}
           {{#> nav-item newcontent}}
@@ -30,7 +30,7 @@
           {{/nav-item}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
-              Resource Usage
+              Resource usage
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
@@ -67,7 +67,7 @@
           {{/nav-item}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
-              Virtual Machines
+              Virtual machines
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
@@ -80,6 +80,7 @@
     {{/nav}}
   {{/page-sidebar}}
   {{#> page-main}}
+    <a id="main-content-{{page--id}}"></a>
     {{#> page-template-title}}
     {{/page-template-title}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}

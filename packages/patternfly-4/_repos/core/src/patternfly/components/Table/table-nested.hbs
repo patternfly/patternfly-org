@@ -1,4 +1,4 @@
-{{#> table newcontext table-nested--id=table-nested-id table--modifier="pf-m-compact" table--grid="true" table--attribute='aria-label="Nested table"'}}
+{{#> table newcontext table--id=table--id table--attribute=(concat table-nested--attribute ' id="' table--id '" aria-label="Nested table"') table--modifier="pf-m-compact pf-m-no-border-rows" table--grid="true"}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}Description{{/table-th}}
@@ -9,53 +9,48 @@
   {{/table-thead}}
   {{#> table-tbody}}
     {{#> table-tr table-tr--id="nested-tr1"}}
-      {{#> table-th table-th--data-label="Description"}}Item One{{/table-th}}
+      {{#> table-th table-th--data-label="Description"}}Item one{{/table-th}}
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Active{{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table-nested--id '-' table-tr--id '-action1" aria-label="Actions"')}}
-          <i class="fas fa-ellipsis-v"></i>
-        {{/button}}
+        {{#> dropdown id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
     {{#> table-tr table-tr--id="nested-tr2"}}
-      {{#> table-th table-th--data-label="Description"}}Item Two{{/table-th}}
+      {{#> table-th table-th--data-label="Description"}}Item two{{/table-th}}
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Warning{{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table-nested--id '-' table-tr--id '-action2" aria-label="Actions"')}}
-          <i class="fas fa-ellipsis-v"></i>
-        {{/button}}
+        {{#> dropdown id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
     {{#> table-tr table-tr--id="nested-tr3"}}
-      {{#> table-th table-th--data-label="Description"}}Item Three{{/table-th}}
+      {{#> table-th table-th--data-label="Description"}}Item three{{/table-th}}
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Active{{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table-nested--id '-' table-tr--id '-action3" aria-label="Actions"')}}
-          <i class="fas fa-ellipsis-v"></i>
-        {{/button}}
+        {{#> dropdown id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
     {{#> table-tr table-tr--id="nested-tr4"}}
-      {{#> table-th table-th--data-label="Description"}}Item Four{{/table-th}}
+      {{#> table-th table-th--data-label="Description"}}Item four{{/table-th}}
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Active{{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table-nested--id '-' table-tr--id '-action4" aria-label="Actions"')}}
-          <i class="fas fa-ellipsis-v"></i>
-        {{/button}}
+        {{#> dropdown id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
     {{#> table-tr table-tr--id="nested-tr5"}}
-      {{#> table-th table-th--data-label="Description"}}Item Five{{/table-th}}
+      {{#> table-th table-th--data-label="Description"}}Item five{{/table-th}}
       {{#> table-td table-td--data-label="Date"}}May 9, 2018{{/table-td}}
       {{#> table-td table-td--data-label="Status"}}Active{{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' table-nested--id '-' table-tr--id '-action5" aria-label="Actions"')}}
-          <i class="fas fa-ellipsis-v"></i>
-        {{/button}}
+        {{#> dropdown id=(concat table--id '-dropdown-kebab-' table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}

@@ -5,7 +5,7 @@ A Chip is used to display items that have been filtered or selected from a large
 
 ## Accessibility
 
-| Attribute | Applied To | Outcome |
+| Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-label="[button label text]"` | `.pf-c-button` |  Provides an accessible name for the button when an icon is used instead of text. Required when an icon is used with no supporting text. |
 | `aria-labelledby="[id value of .pf-c-button]"` | `.pf-c-button` | Gives the button an accessible name by referring to the element that provides the position of the button within a list. Required when the button is being removed. |
@@ -13,7 +13,7 @@ A Chip is used to display items that have been filtered or selected from a large
 
 ## Usage
 
-| Class | Applied To | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-chip` | `<div>, <li>` | Initiates the body of a chip. If used inside a `.pf-c-chip-group` use `<li>`. |
 | `.pf-c-chip__text` | `*` | Initiates the text inside of the chip. **Required.** |
@@ -21,3 +21,4 @@ A Chip is used to display items that have been filtered or selected from a large
 | `.pf-c-badge` | `<span>` | Initiates the badge inside the chip. |
 | `.pf-m-overflow` | `.pf-c-chip` | Applies styling of the overflow chip. |
 | `.pf-c-button` | `.pf-c-chip.pf-m-overflow <button>` | Initiates the button used to show the overflow toggle. |
+| `.pf-m-read-only` | `.pf-c-chip` | Modifies chip for read-only state. |

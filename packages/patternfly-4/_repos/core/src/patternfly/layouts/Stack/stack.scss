@@ -1,14 +1,17 @@
-@import "../../patternfly-imports";
-
 .pf-l-stack {
   --pf-l-stack--m-gutter--MarginBottom: var(--pf-global--gutter);
+  --pf-l-stack--m-gutter--md--MarginBottom: var(--pf-global--gutter--md);
+
+  @media screen and (max-width: $pf-global--breakpoint--md) {
+    --pf-l-stack--m-gutter--MarginBottom: var(--pf-l-stack--m-gutter--md--MarginBottom);
+  }
 
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.pf-l-stack__item.pf-m-main {
+.pf-l-stack__item.pf-m-fill {
   flex-grow: 1;
 }
 

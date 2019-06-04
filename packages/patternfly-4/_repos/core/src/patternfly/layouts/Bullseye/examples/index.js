@@ -4,17 +4,17 @@ import Example from '@siteComponents/Example';
 import BullseyeRaw from '!raw!./bullseye-example.hbs';
 import Bullseye from './bullseye-example.hbs';
 import docs from '../docs/code.md';
-import '../bullseye.scss';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const bullseye = Bullseye();
   const headingText = 'Bullseye';
+  const variablesRoot = 'pf-l-bullseye';
 
   return (
-    <Documentation docs={Docs} heading={headingText} className="is-layout-page">
-      <Example heading="Bullseye Example" handlebars={BullseyeRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
+      <Example heading="Bullseye example" handlebars={BullseyeRaw}>
         {bullseye}
       </Example>
     </Documentation>

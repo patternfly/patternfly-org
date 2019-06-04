@@ -4,17 +4,17 @@ import Example from '@siteComponents/Example';
 import TitleTemplateRaw from '!raw!./title-types-example.hbs';
 import TitleTemplate from './title-types-example.hbs';
 import docs from '../docs/code.md';
-import '../title.scss';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const titleTemplate = TitleTemplate();
   const headingText = 'Title';
+  const variablesRoot = 'pf-c-title';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
-      <Example heading="Title Types" handlebars={TitleTemplateRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Title types" handlebars={TitleTemplateRaw}>
         {titleTemplate}
       </Example>
     </Documentation>

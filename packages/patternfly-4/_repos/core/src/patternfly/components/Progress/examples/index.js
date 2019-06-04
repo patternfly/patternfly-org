@@ -13,7 +13,8 @@ import progressInsideSuccessExampleRaw from '!raw!./progress-inside-success-exam
 import progressOutsideFailureExampleRaw from '!raw!./progress-outside-failure-example.hbs';
 import progressNoMeasureExampleRaw from '!raw!./progress-no-measure-example.hbs';
 import progressNoMeasureFailureExampleRaw from '!raw!./progress-no-measure-failure-example.hbs';
-import progressDynamicExampleRaw from '!raw!./progress-dynamic-example.hbs';
+import progressFiniteStepExampleRaw from '!raw!./progress-finite-step-example.hbs';
+import progressStepInstructionExampleRaw from '!raw!./progress-step-instruction-example.hbs';
 import ProgressSimpleExample from './progress-simple-example.hbs';
 import ProgressSingleLineExample from './progress-single-line-example.hbs';
 import ProgressSmallExample from './progress-small-example.hbs';
@@ -26,14 +27,14 @@ import ProgressInsideSuccessExample from './progress-inside-success-example.hbs'
 import ProgressOutsideFailureExample from './progress-outside-failure-example.hbs';
 import ProgressNoMeasureExample from './progress-no-measure-example.hbs';
 import ProgressNoMeasureFailureExample from './progress-no-measure-failure-example.hbs';
-import ProgressDynamicExample from './progress-dynamic-example.hbs';
+import ProgressFiniteStepExample from './progress-finite-step-example.hbs';
+import ProgressStepInstructionExample from './progress-step-instruction-example.hbs';
 import progressDynamicExampleDoc from '../docs/progress-dynamic.md';
 import docs from '../docs/code.md';
-import '../progress.scss';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const progressSimpleExample = ProgressSimpleExample();
   const progressSingleLineExample = ProgressSingleLineExample();
   const progressSmallExample = ProgressSmallExample();
@@ -46,53 +47,62 @@ export default () => {
   const progressOutsideFailureExample = ProgressOutsideFailureExample();
   const progressNoMeasureExample = ProgressNoMeasureExample();
   const progressNoMeasureFailureExample = ProgressNoMeasureFailureExample();
-  const progressDynamicExample = ProgressDynamicExample();
+  const progressFiniteStepExample = ProgressFiniteStepExample();
+  const progressStepInstructionExample = ProgressStepInstructionExample();
   const headingText = 'Progress';
+  const variablesRoot = 'pf-c-progress';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
-      <Example heading="Progress Simple" handlebars={progressSimpleExampleRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot}>
+      <Example heading="Progress simple" handlebars={progressSimpleExampleRaw}>
         {progressSimpleExample}
       </Example>
-      <Example heading="Progress Small" handlebars={progressSmallExampleRaw}>
+      <Example heading="Progress small" handlebars={progressSmallExampleRaw}>
         {progressSmallExample}
       </Example>
-      <Example heading="Progress Large" handlebars={progressLargeExampleRaw}>
+      <Example heading="Progress large" handlebars={progressLargeExampleRaw}>
         {progressLargeExample}
       </Example>
-      <Example heading="Progress Outside" handlebars={progressOutsideExampleRaw}>
+      <Example heading="Progress outside" handlebars={progressOutsideExampleRaw}>
         {progressOutsideExample}
       </Example>
-      <Example heading="Progress Inside" handlebars={progressInsideExampleRaw}>
+      <Example heading="Progress inside" handlebars={progressInsideExampleRaw}>
         {progressInsideExample}
       </Example>
-      <Example heading="Progress Success" handlebars={progressSuccessExampleRaw}>
+      <Example heading="Progress success" handlebars={progressSuccessExampleRaw}>
         {progressSuccessExample}
       </Example>
-      <Example heading="Progress Failure" handlebars={progressFailureExampleRaw}>
+      <Example heading="Progress failure" handlebars={progressFailureExampleRaw}>
         {progressFailureExample}
       </Example>
-      <Example heading="Progress Inside Success" handlebars={progressInsideSuccessExampleRaw}>
+      <Example heading="Progress inside success" handlebars={progressInsideSuccessExampleRaw}>
         {progressInsideSuccessExample}
       </Example>
-      <Example heading="Progress Outside Failure" handlebars={progressOutsideFailureExampleRaw}>
+      <Example heading="Progress outside failure" handlebars={progressOutsideFailureExampleRaw}>
         {progressOutsideFailureExample}
       </Example>
-      <Example heading="Progress on Single Line" handlebars={progressSingleLineExampleRaw}>
+      <Example heading="Progress on single line" handlebars={progressSingleLineExampleRaw}>
         {progressSingleLineExample}
       </Example>
-      <Example heading="Progress Without Measure" handlebars={progressNoMeasureExampleRaw}>
+      <Example heading="Progress without measure" handlebars={progressNoMeasureExampleRaw}>
         {progressNoMeasureExample}
       </Example>
-      <Example heading="Progress Failure Without Measure" handlebars={progressNoMeasureFailureExampleRaw}>
+      <Example heading="Progress failure without measure" handlebars={progressNoMeasureFailureExampleRaw}>
         {progressNoMeasureFailureExample}
       </Example>
       <Example
-        heading="Progress with Dynamic Description"
-        handlebars={progressDynamicExampleRaw}
+        heading="Progress finite step"
+        handlebars={progressFiniteStepExampleRaw}
         docs={progressDynamicExampleDoc}
       >
-        {progressDynamicExample}
+        {progressFiniteStepExample}
+      </Example>
+      <Example
+        heading="Progress step instruction"
+        handlebars={progressStepInstructionExampleRaw}
+        docs={progressDynamicExampleDoc}
+      >
+        {progressStepInstructionExample}
       </Example>
     </Documentation>
   );

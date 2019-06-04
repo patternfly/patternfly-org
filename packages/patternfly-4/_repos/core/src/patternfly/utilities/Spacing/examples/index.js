@@ -9,18 +9,17 @@ import SpacingPaddingExample from './spacing-padding-example.hbs';
 import SpacingCombinedExample from './spacing-combined-example.hbs';
 
 import docs from '../docs/code.md';
-import '../spacing.scss';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const spacingMarginExample = SpacingMarginExample();
   const spacingPaddingExample = SpacingPaddingExample();
   const spacingCombinedExample = SpacingCombinedExample();
   const headingText = 'Spacing';
 
   return (
-    <Documentation docs={Docs} heading={headingText} className="is-utility-page">
+    <Documentation data={props} docs={Docs} heading={headingText} className="is-utility-page">
       <Example heading="Spacer margin" handlebars={spacingMarginExampleRaw}>
         {spacingMarginExample}
       </Example>

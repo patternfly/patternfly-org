@@ -1,5 +1,3 @@
-@import "../../patternfly-imports";
-
 .pf-c-login {
   --pf-c-login--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-login--PaddingBottom: var(--pf-global--spacer--lg);
@@ -43,12 +41,18 @@
   --pf-c-login__main-header--md--PaddingRight: var(--pf-global--spacer--2xl);
   --pf-c-login__main-header--md--PaddingLeft: var(--pf-global--spacer--2xl);
   --pf-c-login__main-header--ColumnGap: var(--pf-global--spacer--md);
-  --pf-c-login__main-header--RowGap: var(--pf-global--spacer--sm);
+  --pf-c-login__main-header--RowGap: var(--pf-global--spacer--md);
+
+  // main header desc
+  --pf-c-login__main-header-desc--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-login__main-header-desc--md--MarginBottom: 0;
+  --pf-c-login__main-header-desc--FontSize: var(--pf-global--FontSize--sm);
 
 
   @media (min-width: $pf-global--breakpoint--md) {
     --pf-c-login__main-header--PaddingRight: var(--pf-c-login__main-header--md--PaddingRight);
     --pf-c-login__main-header--PaddingLeft: var(--pf-c-login__main-header--md--PaddingLeft);
+    --pf-c-login__main-header-desc--MarginBottom: var(--pf-c-login__main-header-desc--md--MarginBottom);
   }
 
   // main body
@@ -72,7 +76,6 @@
   --pf-c-login__main-footer-links--PaddingRight: var(--pf-global--spacer--3xl);
   --pf-c-login__main-footer-links--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-login__main-footer-links--PaddingLeft: var(--pf-global--spacer--3xl);
-  --pf-c-login__main-footer-links--MarginBottom: calc(var(--pf-c-login__main-footer-links--MarginBottom) * -1);
   --pf-c-login__main-footer-links-item--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-login__main-footer-links-item--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-login__main-footer-links-item--MarginBottom: var(--pf-global--spacer--sm);
@@ -85,7 +88,6 @@
   --pf-c-login__main-footer-band--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-login__main-footer-band--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-login__main-footer-band--BackgroundColor: var(--pf-global--BackgroundColor--300);
-  --pf-c-login__main-footer-band--Color: var(--pf-global--Color--300);
   --pf-c-login__main-footer-band-item--PaddingTop: var(--pf-global--spacer--md);
 
   // footer
@@ -112,8 +114,6 @@
   @media (min-width: $pf-global--breakpoint--sm) {
     align-items: center;
   }
-
-  @include pf-t-dark;
 }
 
 .pf-c-login__container {
@@ -134,6 +134,8 @@
 }
 
 .pf-c-login__header {
+  @include pf-t-dark;
+
   grid-area: header;
 
   @media (max-width: $pf-global--breakpoint--sm) {
@@ -151,9 +153,6 @@
 }
 
 .pf-c-login__main {
-  // This component always needs to be light
-  @include pf-t-light;
-
   grid-area: main;
   background-color: var(--pf-c-login__main--BackgroundColor);
 
@@ -181,11 +180,25 @@
   align-items: center;
   padding: var(--pf-c-login__main-header--PaddingTop) var(--pf-c-login__main-header--PaddingRight) var(--pf-c-login__main-header--PaddingBottom) var(--pf-c-login__main-header--PaddingLeft);
 
-  .pf-c-title {
+  @media (max-width: $pf-global--breakpoint--md) {
+    grid-template-columns: 100%;
+  }
+
+  .pf-c-dropdown {
+    grid-column: 2 / 3;
+    grid-row: 1;
+
     @media (max-width: $pf-global--breakpoint--md) {
-      grid-column: -1 / 1;
+      grid-column: auto;
+      grid-row: auto;
     }
   }
+}
+
+.pf-c-login__main-header-desc {
+  margin-bottom: var(--pf-c-login__main-header-desc--MarginBottom);
+  font-size: var(--pf-c-login__main-header-desc--FontSize);
+  grid-column: 1 / -1;
 }
 
 .pf-c-login__main-body {
@@ -224,7 +237,6 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: var(--pf-c-login__main-footer-links--PaddingTop) var(--pf-c-login__main-footer-links--PaddingRight) var(--pf-c-login__main-footer-links--PaddingBottom) var(--pf-c-login__main-footer-links--PaddingLeft);
-  margin-bottom: var(--pf-c-login__main-footer-links--MarginBottom);
 }
 
 .pf-c-login__main-footer-links-item {
@@ -251,7 +263,6 @@
 
 .pf-c-login__main-footer-band {
   padding: var(--pf-c-login__main-footer-band--PaddingTop) var(--pf-c-login__main-footer-band--PaddingRight) var(--pf-c-login__main-footer-band--PaddingBottom) var(--pf-c-login__main-footer-band--PaddingLeft);
-  color: var(--pf-c-login__main-footer-band--Color);
   text-align: center;
   background-color: var(--pf-c-login__main-footer-band--BackgroundColor);
 
@@ -261,6 +272,8 @@
 }
 
 .pf-c-login__footer {
+  @include pf-t-dark;
+
   grid-area: footer;
 
   @media (max-width: $pf-global--breakpoint--sm) {

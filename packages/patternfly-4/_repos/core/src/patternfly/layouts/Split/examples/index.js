@@ -6,21 +6,21 @@ import SplitGuttersRaw from '!raw!./split-gutters-example.hbs';
 import Split from './split-example.hbs';
 import SplitGutters from './split-gutters-example.hbs';
 import docs from '../docs/code.md';
-import '../split.scss';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const split = Split();
   const splitGutters = SplitGutters();
   const headingText = 'Split';
+  const variablesRoot = 'pf-l-split';
 
   return (
-    <Documentation docs={Docs} heading={headingText} className="is-layout-page">
-      <Example heading="Split Example" handlebars={SplitRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText} variablesRoot={variablesRoot} className="is-layout-page">
+      <Example heading="Split example" handlebars={SplitRaw}>
         {split}
       </Example>
-      <Example heading="Split Example with gutter" handlebars={SplitGuttersRaw}>
+      <Example heading="Split example with gutter" handlebars={SplitGuttersRaw}>
         {splitGutters}
       </Example>
     </Documentation>

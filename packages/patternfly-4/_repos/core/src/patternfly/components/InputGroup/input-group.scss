@@ -1,24 +1,36 @@
-@import "../../patternfly-imports";
-
 .pf-c-input-group {
+  // Input group
+  --pf-c-input-group--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-input-group--BorderRadius: var(--pf-global--BorderRadius--sm);
+
+  // Input group text
   --pf-c-input-group__text--FontSize: var(--pf-global--FontSize--md);
   --pf-c-input-group__text--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--Color: var(--pf-global--Color--dark-200);
   --pf-c-input-group__text--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-input-group__text--BorderTopColor: var(--pf-global--BorderColor--light-200);
-  --pf-c-input-group__text--BorderRightColor: var(--pf-global--BorderColor--light-200);
-  --pf-c-input-group__text--BorderBottomColor: var(--pf-global--BorderColor--dark);
-  --pf-c-input-group__text--BorderLeftColor: var(--pf-global--BorderColor--light-200);
-  --pf-c-input-group__text--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-input-group__text--BorderTopColor: var(--pf-global--BorderColor--300);
+  --pf-c-input-group__text--BorderRightColor: var(--pf-global--BorderColor--300);
+  --pf-c-input-group__text--BorderBottomColor: var(--pf-global--BorderColor--200);
+  --pf-c-input-group__text--BorderLeftColor: var(--pf-global--BorderColor--300);
+  --pf-c-input-group__text--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-input-group__textarea--MinHeight: var(--pf-global--spacer--xl);
 
   // Button
   --pf-c-input-group--c-button--BorderRadius: var(--pf-global--BorderRadius--sm);
 
-  // Form Control
+  // Form control
   --pf-c-input-group--c-form-control--invalid--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-input-group--c-form-control--MarginRight: 1px;
+
+  // This component always needs to be light
+  @include pf-t-light;
+
+  display: flex;
+  width: 100%;
+  background-color: var(--pf-c-input-group--BackgroundColor);
+  border-radius: var(--pf-c-input-group--BorderRadius); // This adds a default border radius to make sure the input group wont display if a button with a border radius is used.
+
   /* stylelint-disable */
   > * + * {
     margin-left: -1px;
@@ -41,9 +53,6 @@
       }
     }
   }
-
-  display: flex;
-  width: 100%;
 
   .pf-c-button {
     position: relative;

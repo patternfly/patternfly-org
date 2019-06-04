@@ -4,17 +4,16 @@ import Example from '@siteComponents/Example';
 import brandSimpleExampleRaw from '!raw!./brand-simple-example.hbs';
 import BrandSimpleExample from './brand-simple-example.hbs';
 import docs from '../docs/code.md';
-import '../brand.scss';
 
 export const Docs = docs;
 
-export default () => {
+export default (props) => {
   const brandSimpleExample = BrandSimpleExample();
   const headingText = 'Brand';
 
   return (
-    <Documentation docs={Docs} heading={headingText}>
-      <Example heading="Brand Simple" handlebars={brandSimpleExampleRaw}>
+    <Documentation data={props} docs={Docs} heading={headingText}>
+      <Example heading="Brand simple" handlebars={brandSimpleExampleRaw}>
         {brandSimpleExample}
       </Example>
     </Documentation>
