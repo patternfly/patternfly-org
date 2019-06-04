@@ -1,6 +1,8 @@
 import React from 'react';
 import { Location } from '@reach/router';
 import LinkPreview from '../../LinkPreview';
+import ShadowDomPreview from '../../ShadowDomPreview';
+import { CoreContext } from '../Documentation';
 import './styles.scss';
 
 export default class Preview extends React.Component {
@@ -36,11 +38,19 @@ export default class Preview extends React.Component {
     } else if (fullPageOnly) {
       preview = <LinkPreview name={heading} path={fullPath} />;
     } else {
-      preview = <div
-        className={`Preview__body ${background} ${isViewport ? 'is-viewport' : ''}`}
-        style={{ minHeight: minHeight }}
-        dangerouslySetInnerHTML={output}
-      />;
+      preview = <div style={{ minHeight: minHeight }}>
+        <CoreContext.Consumer>
+          {({ coreClass }) => (
+            <ShadowDomPreview className={`${background} ${coreClass}`}>
+              <div className="Preview">
+                <div className="Preview__body">
+                  <div dangerouslySetInnerHTML={output} /> 
+                </div>
+              </div>
+            </ShadowDomPreview>
+          )}
+        </CoreContext.Consumer>
+      </div>;
     }
 
     return (
