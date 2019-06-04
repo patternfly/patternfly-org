@@ -96,6 +96,7 @@ For donut charts, don’t try to represent more than six categories. We recommen
 2. **Segment padding**:  Always provide 3px of padding between segments.
 3. **Chart tooltip**: A tooltip will appear upon hover that states the name of the segment and corresponding value. For example, if the segment represents “Bugs,” and the value being represented is 25, your chart tooltip would state, “Bugs: 25.”
 4. **Label**: When the Donut Chart is contained within a dashboard card, there is a label defining what the Donut Chart represents. The label may also represent the total value of the data set. If this optional representation is chosen, it should follow the format of [total numeric value] + [data set label]. The total numeric value cannot contain more than 14 characters. The data set label cannot contain more than 24 characters. They are to be centered within the donut and styled as shown. The label should be using 24px font in standard text color with 14px font underneath in secondary text color. If the label does not fit within the donut, place it outside of the donut and leave the center empty.
+5. **Legend**: In order to be compliant with accessibility guidelines, a legend is necessary.
 
 #### React component
 [Donut chart](/documentation/react/charts/chartdonut)
