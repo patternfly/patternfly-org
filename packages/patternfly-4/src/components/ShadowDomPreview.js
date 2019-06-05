@@ -6,7 +6,6 @@ import patternFlyAddons from '!raw!../../_repos/core/patternfly-addons.css';
 import patternFlyIcons from '!raw!../../_repos/core/patternfly-icons.css';
 import reactExampleStyles from '!raw!../../_repos/react-example-styles.css';
 import coreExampleStyles from '!!to-string-loader!css-loader!sass-loader!./_core/Preview/styles.scss';
-import { CoreContext } from './_core/Documentation/index.js';
 
 const styles = `
   .ws-example { 
