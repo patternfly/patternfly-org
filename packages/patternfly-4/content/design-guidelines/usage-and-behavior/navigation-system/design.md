@@ -12,9 +12,9 @@ Navigation is used to organize an application’s structure and content, making 
 ![Navigation system elements](./img/nav-elements3.png)
 
 1. **Masthead**
-2. [**Context selector** (optional)](#context-selector) - enables a user to switch between different application contexts, like administration and monitoring
+2. [**Context selector** (optional)](#context-selector): Enables a user to switch between different application contexts, like administration and monitoring
 3. [**Horizontal navigation**](#horizontal-navigation)
-4. **Menu icon button** - provides a way for users to toggle vertical navigation
+4. **Menu icon button:** Provides a way for users to toggle vertical navigation
 5. [**Vertical navigation**](#vertical-navigation)
 6. [**Local navigation**](#local-navigation---tabs)
 7. [**Breadcrumbs**](#breadcrumbs)

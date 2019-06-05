@@ -8,9 +8,9 @@ The about modal stores the version number(s) of the application as well as any a
 
 ![Modal](./img/about-modal.png)
 
-1. **Backdrop**: blurs any interface elements in the background to bring the modal content into focus
+1. **Backdrop**: Blurs any interface elements in the background to bring the modal content into focus
 2. **Modal**
-3. **Branding**: provides logo and branding for the product. Substitute your own logotype by providing an SVG that can be scaled proportionately to fit the space.
+3. **Branding**: Provides logo and branding for the product. Substitute your own logotype by providing an SVG that can be scaled proportionately to fit the space.
 4. **Product title**
 5. **Close button**
 6. **Content**: Label and version

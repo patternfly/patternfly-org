@@ -45,8 +45,8 @@ The actionable data list provides checkboxes that enable users to select one or 
 
 ![actionable data list](./img/actionable-list.png)
 
-1. **Checkbox**: enables a user to select a row
-2. **Global actions**: actions that can be applied to all selected items
+1. **Checkbox**: Enables a user to select a row
+2. **Global actions**: Actions that can be applied to all selected items
 
 #### When to use
 Use actionable data lists when you need to enable a user to select and act on multiple items in the list.
@@ -60,8 +60,8 @@ The expandable list adds an expansion panel to every row to reveal more details 
 ![expandable data list](./img/expandable-list.png)
 
 
-1. **Expansion caret**: toggles the expansion open and closed
-2. **Expansion panel**: a container that is revealed when the expansion is open. It can accept any supported layout to present additional content to the user.
+1. **Expansion caret**: Toggles the expansion open and closed
+2. **Expansion panel**: A container that is revealed when the expansion is open. It can accept any supported layout to present additional content to the user.
 
 #### When to use
 Use an expandable data list when you have more information than will comfortably fit inside a row, or you want to provide a way for advanced users to access information that is not applicable to all users.
@@ -74,13 +74,13 @@ Use an expandable data list when you have more information than will comfortably
 
 ![standard data table](./img/standard-data-table.png)
 
-1. **[Toolbar](/design-guidelines/usage-and-behavior/toolbar)**: sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
-2. **Select all**: when present, selects all items in a table. If pagination is being used, this will only select items on the current page.
-3. **Column headers**: should align with the content they contain. If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on one column at a time. See [Sorting by columns](#sorting-by-columns) for more information on the sort component.
-4. **Select checkbox**: selects this row
-5. **Global actions**: actions that apply to all selected items
-6. **Inline actions:** actions that apply only to the current row/item
-7. **Pagination footer:** when present, provides navigation to additional pages
+1. **[Toolbar](/design-guidelines/usage-and-behavior/toolbar)**: Sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
+2. **Select all**: When present, selects all items in a table. If pagination is being used, this will only select items on the current page.
+3. **Column headers**: Should align with the content they contain. If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on one column at a time. See [Sorting by columns](#sorting-by-columns) for more information on the sort component.
+4. **Select checkbox**: Selects this row
+5. **Global actions**: Actions that apply to all selected items
+6. **Inline actions:** Actions that apply only to the current row/item
+7. **Pagination footer:** When present, provides navigation to additional pages
 
 #### When to use
 Use a standard data table when the information you want to display fits into a structured, tabular format (i.e. has distinct rows and columns).
@@ -103,8 +103,8 @@ Use a compact data table when you want to show as much data per page as possible
 
 ![expandable data table](./img/expandable-data-table.png)
 
-1. **Expansion:** expands the row
-2. **Expansion panel:** contains details associated with a row
+1. **Expansion:** Expands the row
+2. **Expansion panel:** Contains details associated with a row
 
 #### When to use
 Use when you have more information than will comfortably fit inside a row or you want to provide a way for advanced users to access information that is not applicable to all users.
@@ -113,8 +113,8 @@ Use when you have more information than will comfortably fit inside a row or you
 
 ![compound expandable data table](./img/compound-expandable-data-table.png)
 
-1. **Expandable cell:** a cell that can be clicked to reveal more detail about an item. If the expansion for an item is already open, clicking on a different cell will close the current item and open a new one.
-2. **Expansion panel:** contains details associated with an expandable item.
+1. **Expandable cell:** A cell that can be clicked to reveal more detail about an item. If the expansion for an item is already open, clicking on a different cell will close the current item and open a new one.
+2. **Expansion panel:** Contains details associated with an expandable item.
 
 #### When to use
 Use a compound expandable list when you want multiple expansion panels that relate to specific table columns where it would not make sense to combine all of this information into a single, simple expansion.

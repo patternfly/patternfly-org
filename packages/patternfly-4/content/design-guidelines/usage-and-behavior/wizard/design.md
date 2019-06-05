@@ -22,13 +22,13 @@ The wizard lives in a modal dialog. The width of the modal is variable and shoul
 
 ![simple-wizard](./img/standard-wizard.png)
 
-1. **Header**: wizards always have a header area that contains the wizard title, description, and a close button.
-2. **Steps sidebar**: enumerated steps are displayed in the sidebar. Steps can be fixed or updated as the user proceeds through the process (see Progressive Wizard).
-3. **Visited step**: a step that has been already visited. In most cases users can click this step to return to a prior point in the flow.
-4. **Current step**: the current step is always highlighted.
-5. **Disabled step**: steps that follow the current step are usually disabled to enforce the sequential flow.
-6. **Body**: the contents of a step itself. Any valid form elements can be incorporated within the body. The size of the modal that contains the wizard can be adjusted based on the contents of the body section. If the height of the body section causes the bottom of the modal to push beyond the height of the viewport, a vertical scrollbar will appear. However it is recommended to break your workflow into small enough steps so that scrolling is not necessary on typical monitor sizes.
-7. **Button footer**: Buttons control the wizard flow. Default buttons are Next, Back, and Cancel. You may optionally add other actions, e.g. Skip to Finish or Start Over.
+1. **Header:** Wizards always have a header area that contains the wizard title, description, and a close button.
+2. **Steps sidebar:** Enumerated steps are displayed in the sidebar. Steps can be fixed or updated as the user proceeds through the process (see Progressive Wizard).
+3. **Visited step:** A step that has been already visited. In most cases users can click this step to return to a prior point in the flow.
+4. **Current step:** The current step is always highlighted.
+5. **Disabled step:** Steps that follow the current step are usually disabled to enforce the sequential flow.
+6. **Body:**: The contents of a step itself. Any valid form elements can be incorporated within the body. The size of the modal that contains the wizard can be adjusted based on the contents of the body section. If the height of the body section causes the bottom of the modal to push beyond the height of the viewport, a vertical scrollbar will appear. However it is recommended to break your workflow into small enough steps so that scrolling is not necessary on typical monitor sizes.
+7. **Button footer:**: Buttons control the wizard flow. Default buttons are Next, Back, and Cancel. You may optionally add other actions, e.g. Skip to Finish or Start Over.
 
 #### Behavior
 In a standard wizard the user moves through the wizard sequentially, a step at a time. The Next button is always used to advance the wizard. In addition:
@@ -43,7 +43,7 @@ Sub-steps can be added to the sidebar. Use sub-steps when there is a hierarchica
 
 ![wizard with substeps](./img/wizard-with-substeps.png)
 
-1. **Sub-steps**: sub-steps are always nested inside of a major step.
+1. **Sub-steps:** Sub-steps are always nested inside of a major step.
 
 #### Behavior
 
@@ -57,23 +57,23 @@ The last step in a wizard should always be a Review step. This should include a 
 ![wizard review step](./img/review-screen.png)
 
 1. **Review step**
-2. **Finish button**: on the last step of the wizard, the Next button is labeled Finish by default. This is a configurable choice and should be replaced by a more specific verb or verb-object word pair like “Create” or “Configure networks,” when possible.
+2. **Finish button:** On the last step of the wizard, the Next button is labeled Finish by default. This is a configurable choice and should be replaced by a more specific verb or verb-object word pair like “Create” or “Configure networks,” when possible.
 
 If it will take a long time (more than a few seconds) for changes to be applied, a progress screen is recommended. This can be constructed from a variation of the [empty state](/design-guidelines/usage-and-behavior/empty-state) pattern by embedding a progress bar and appropriate messaging within the body of the wizard.
 
 ![progress screen](./img/progress-screen.png)
 
-1. **Progress message**: include a progress bar with appropriate messaging using an empty state pattern.
-2. **Cancel button (optional)**: include a cancel button only if the operation can be terminated once it is started. Cancel should back out all changes and leave the system in the state that existed before the user launched the wizard.
+1. **Progress message:** Include a progress bar with appropriate messaging using an empty state pattern.
+2. **Cancel button (optional):** Include a cancel button only if the operation can be terminated once it is started. Cancel should back out all changes and leave the system in the state that existed before the user launched the wizard.
 
 Note that once changes have been committed, the steps sidebar is hidden and the user can no longer make changes.
 
 Once the changes initiated by the wizard are completed, a final confirmation screen should be displayed. Again, this can leverage an empty state pattern to present a success (or failure) message to users.
 
 ![completion screen](./img/completion-screen.png)
-1. **Completion message**: provide appropriate messaging to inform the user about the outcome of the wizard.
-2. **Primary action**: in most cases this will be a navigational button to close the wizard and take the user to a page where they can see the results of their changes, e.g. a new project that was created. If there is no appropriate destination or if results will be seen on the current page, make the primary action Close.
-3. **Secondary action(s) (optional)**: If the primary action is other than Close, include a Close button here to close the wizard and return to the prior page. Other secondary actions can also be included. See [Empty state](/design-guidelines/usage-and-behavior/empty-state) for button placement.
+1. **Completion message:** Provide appropriate messaging to inform the user about the outcome of the wizard.
+2. **Primary action:** In most cases this will be a navigational button to close the wizard and take the user to a page where they can see the results of their changes, e.g. a new project that was created. If there is no appropriate destination or if results will be seen on the current page, make the primary action Close.
+3. **Secondary action(s) (optional):** If the primary action is other than Close, include a Close button here to close the wizard and return to the prior page. Other secondary actions can also be included. See [Empty state](/design-guidelines/usage-and-behavior/empty-state) for button placement.
 
 In some cases the result of a wizard is to dispatch a task to the background to execute changes in the back end. In these circumstances, we recommend that you provide a navigation link to monitor task progress and/or simply a Close button.
 

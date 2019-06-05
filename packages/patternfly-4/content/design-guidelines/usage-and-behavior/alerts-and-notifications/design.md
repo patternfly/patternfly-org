@@ -10,7 +10,7 @@ Alerts are used to communicate status information to the user without blocking o
 
 ![alert types](./img/alerts.png)
 
-1. **Status area**: use an icon and color to indicate status or severity of the alert.
+1. **Status area**: Use an icon and color to indicate status or severity of the alert.
 2. **Alert title**: Include a short descriptive message. Long message text will wrap. Text color is coded to match alert type.
 3. **Close (optional)**: Dismiss the alert.
 4. **Action (optional)**: An action can be placed inside of an alert. Only a single action is supported. Note that the alert can include a close button or a single action, but not both.

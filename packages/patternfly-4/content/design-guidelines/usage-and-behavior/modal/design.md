@@ -9,10 +9,10 @@ Use modal dialogs load and display important information without navigating away
 
 1. **Backdrop**
 2. **Modal box**
-3. **Title:** concisely convey the purpose of the modal.
+3. **Title:** Concisely convey the purpose of the modal.
 4. **Close**
 5. **Content area**
-6. **Buttons:** enable a user to confirm, submit, or exit. Modal dialogs can include multiple action buttons, but should be limited to one primary button
+6. **Buttons:** Enable a user to confirm, submit, or exit. Modal dialogs can include multiple action buttons, but should be limited to one primary button
 
 ## Usage
 ### When to use
