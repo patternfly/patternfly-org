@@ -13,7 +13,7 @@ Since accessibility is best achieved when considered early in the design and dev
 - [Understanding users’ needs](#understanding-users-needs)
 - [Designing and developing for accessibility](#designing-and-developing-for-accessibility)
 - [Checklists](#checklists)
-  - [What patternFly should address](#what-patternfly-should-address)
+  - [What PatternFly should address](#what-patternfly-should-address)
   - [What products should address](#what-products-should-address)
 - [Guidelines and references](#guidelines-and-references)
 - [Techniques](#techniques)
@@ -47,7 +47,7 @@ Our goal is to meet [level AA in the Web Content Accessibility Guidelines 2.1](h
 
 ## Checklists
 
-### What patternFly should address
+### What PatternFly should address
 
 If you use PatternFly, or contribute to PatternFly as a designer or developer, these are the items that are expected to be covered in PatternFly:
 
