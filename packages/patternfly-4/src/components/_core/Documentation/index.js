@@ -29,8 +29,9 @@ export default class Documentation extends React.Component {
     const changeHeadingLevel = (html, level) => {
       const modifiedHtml = html.replace(/<h2/g, `<${level} class="pf-u-mt-xl pf-u-mb-sm"`).replace(/h2>/g, `${level}>`);
       return modifiedHtml;
-    }
-    const HTML_DOCS = { __html: changeHeadingLevel(docs, 'h4') };
+    };
+    const changeTableResponsiveness = html => html.replace(/<table>/g, '<table class="pf-m-grid">')
+    const HTML_DOCS = { __html: changeTableResponsiveness(changeHeadingLevel(docs, 'h4')) };
     return !this.state.isFull ? (
       <Layout sideNav={<SideNav />}>
         <SEO title="React" />
