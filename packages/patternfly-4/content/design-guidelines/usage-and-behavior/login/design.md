@@ -9,29 +9,29 @@ The login page allows a user to gain access to an application by entering their 
 
 ![Default-login](./img/default-login.png "default-login")
 
-1. **Title:** Located at the top of the login card. The title can be the product name or any other term that makes sense for your application. If the text is longer than the space allowed, text should wrap to the next line.
+1. **Title:** located at the top of the login card. The title can be the product name or any other term that makes sense for your application. If the text is longer than the space allowed, text should wrap to the next line.
 
 2. **Language selector (optional)**
 
-3. **Required fields:** Username and password are both required fields. Some applications may require additional fields like a specific server or geo-location. When additional fields are required, they should be ordered on a case-by-case basis and placed directly below the password field. The login card will expand to accommodate the additional fields. Try to limit the total number of fields to less than five. Also, you may use progressive disclosure if the field value has dependency on the previous relevant field.
+3. **Required fields:** username and password are both required fields. Some applications may require additional fields like a specific server or geo-location. When additional fields are required, they should be ordered on a case-by-case basis and placed directly below the password field. The login card will expand to accommodate the additional fields. Try to limit the total number of fields to less than five. Also, you may use progressive disclosure if the field value have dependency on the previous relevant field.
 
-4. **Checkbox (optional):** Located under the required (and any additional) fields, and labeled based on the needs of the application.
+4. **Checkbox (optional):** located under the required (and any additional) fields, and labeled based on the needs of the application.
 
-5. **Login button:** Button label should be “Log in”
+5. **Login button:** button label should be “Log in”
 
-6. **Social media buttons:** Displays available social login methods in the order of their highest usage with the most frequently used items displayed at the beginning of the list. Logos that take up more than one line can wrap to a second line. Additionally, each logo should have a tooltip label on hover that states the application name.
+6. **Social media buttons:** displays available social login methods in the order of their highest usage with the most frequently used items displayed at the beginning of the list. Logos that take up more than one line can wrap to a second line. Additionally, each logo should have a tooltip label on hover that states the application name.
 
-7. **Sign up (optional):** Takes user to the sign up flow
+7. **Sign up (optional):** takes user to the sign up flow
 
-8. **Forgot password/username link (optional):** Takes users to a page where they can recover their password and/or username
+8. **Forgot password/username link (optional):** takes users to a page where they can recover their password and/or username
 
-9. **[Background image](/documentation/react/components/backgroundimage):** Any background image can be used for your application; it will automatically have a gradient applied to it to aid readability.
+9. **[Background image](/documentation/react/components/backgroundimage):** any background image can be used for your application; it will automatically have a gradient applied to it to aid readability.
 
-10. **Logotype:** Provides an area for product logo  
+10. **Logotype:** provides an area for product logo  
 
-11. **Description (optional):** Provides a description of the website or application
+11. **Description (optional):** provides a description of the website or application
 
-12. **Links (optional):** Provides an area for additional links to pages where the user can get more information or help
+12. **Links (optional):** provides an area for additional links to pages where the user can get more information or help
 
 ## Usage
 
@@ -67,7 +67,7 @@ Examples of additional multi-factor authentication that could be used include au
 
 
 #### Single sign-on (SSO)
-Single sign-on (SSO) allows a user to log in once and access multiple applications within the same organization. This type of login supports displaying both single and multi-factor login. Mulit-factor login provides greater security.
+single sign-on (SSO) allows a user to log in once and access multiple applications within the same organization. This type of login supports displaying both single and multi-factor login. Mulit-factor login provides greater security.
 
 ![Multi-factor-login-validation-options](./img/sso-single-step.png "Multi-factor-login-validation-options")
 
@@ -156,7 +156,7 @@ An error message should be displayed when the user types an incorrect username t
 | ----------- | ----------- |
 | Incorrect username or password (most secure error message) | Incorrect login credentials. |
 | Username does not exist | This account does not exist. Try again or [sign up](). |
-| Password is wrong | Incorrect password, try again. |
+| Password is wrong | Incorrect password, try again |
 | User inputs an old password | Incorrect password. Your password was modified in the last 2 days. |
 
 

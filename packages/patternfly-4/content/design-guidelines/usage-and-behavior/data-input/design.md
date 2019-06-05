@@ -6,7 +6,7 @@ Data input controls allow the user to provide information by selecting from a kn
 
 **Selection controls:** [Checkboxes](#checkbox), [Radio buttons](#radio-buttons), [Select lists](#select-lists), [Switch](#switch)
 
-**Bound-entry controls:** Bound entry controls like [date picker](#datepicker) and [slider](#slider) are _in progress and coming soon_ to PatternFly 4.
+**Bound-entry controls:** Bound entry controls like [date picker](#date-picker) and [slider](#slider) are _in progress and coming soon_ to PatternFly 4.
 
 ## Usage: Selection controls
 Use selection controls to enable users to select from a predetermined set of options. Choose controls based on the the following considerations:
@@ -86,7 +86,7 @@ PatternFly offers several variations of select list:
 
 ![Typeahead](./img/typeahead.png)
 
-When providing fewer than five options, you can use [radio buttons](#radio-buttons) or [checkboxes](#checkbox) to display all options to the user simultaneously if you don’t have any space constraints.
+When providing fewer than five options, you can use [radio buttons](#radio-buttons) or [checkboxes](#checkboxes) to display all options to the user simultaneously if you don’t have any space constraints.
 
 ### Switch
 Provide a switch to allow users to instantly toggle between an enabled or disabled state.

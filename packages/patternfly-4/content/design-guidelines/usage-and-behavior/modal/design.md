@@ -9,16 +9,16 @@ Use modal dialogs load and display important information without navigating away
 
 1. **Backdrop**
 2. **Modal box**
-3. **Title:** Concisely convey the purpose of the modal.
+3. **Title:** concisely convey the purpose of the modal.
 4. **Close**
 5. **Content area**
-6. **Buttons:** Enable a user to confirm, submit, or exit. Modal dialogs can include multiple action buttons, but should be limited to one primary button
+6. **Buttons:** enable a user to confirm, submit, or exit. Modal dialogs can include multiple action buttons, but should be limited to one primary button
 
 ## Usage
 ### When to use
 Use a modal dialog when information is critical and requires user input or attention.
 Use modals to:
-* [Validate user decisions](#get-confirmation)
+* [Validate user decisions](#confirmation-dialog)
 * [Report errors](#report-errors)
 * [Provide the result of a task or state of an application](#Provide-the-result-of-a-task-or-state-of-an-application)
 * [Get required user input](#get-required-user-input)
@@ -69,7 +69,7 @@ Some usage examples include:
 **Note:** If information is not critical, don’t use a passive dialog. Instead, use inline notifications or toast notifications.
 
 #### Get required user input
-Sometimes users may need to provide additional input in order to complete an action. In this situation a form or other type of element may be incorporated into the modal. An example of this use case is the [modal wizard](/documentation/core/components/wizard).
+Sometimes users may need to provide additional input in order to complete an action. In this situation a form or other type of element may be incorporated into the modal. An example of this use case is the [modal wizard](/documentation/core/demos/wizard).
 
 ### Content
 * Clearly restate the action the user is trying to take and explicitly outline the consequences of that action.
@@ -80,7 +80,7 @@ Sometimes users may need to provide additional input in order to complete an act
 
 * If the modal needs to convey the importance of information visually, icons can be added.
 
-See our [content guidelines](/design-guidelines/content/writing) for additional guidance.
+See our [content guidelines](/design-guidelines/content/) for additional guidance.
 
 #### Icon use in modal dialogs
 
@@ -88,7 +88,7 @@ See our [content guidelines](/design-guidelines/content/writing) for additional 
 | ------------- | ------------- | ------------- |
 | <i class="fas fa-exclamation-triangle"></i> | **Warning:** Caution/ Warning | Use on confirmation dialogs or passive dialogs to indicate a higher level of urgency and importance. |
 | <i class="fas fa-exclamation-circle"></i>   | **Critical Warning:** Information will be deleted/permanent action  | Use on confirmation dialogs or passive dialogs to indicate the highest level of urgency and importance. |
-| <i class="fas fa-times-circle"></i>  | **Error:** Alerts the user that there has been a critical failure/error  | Use on error dialogs to indicate a problem. |
+| <i class="fas fa-times-circle"></i>  | **Error:** Alert the user that there has been a critical failure/error  | Use on error dialogs to indicate a problem. |
 | <i class="fas fa-info-circle"></i> | **Acknowledgement:** Informs the user of an action or result  | Use on confirmation or passive dialogs to indicate a lower level of urgency. |
 
 ## Components and demos used

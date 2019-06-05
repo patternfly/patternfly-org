@@ -8,11 +8,11 @@ Use an empty state to educate users and guide them with positive and proactive n
 
 ![Empty state elements](./img/emptystate-elements.png)
 
-1. **Icon/image (optional):**  Display associated object icons here. An icon is only recommended for full page empty states
-2. **Title:** Provide a concise explanation
-3. **Body:** Provide additional information that helps a user understand why the space is empty, what they can do to move forward, and the value or benefit that is gained by taking the next step
-4. **Primary button:** Primary call to action
-5. **Secondary buttons (optional):** Alternative options for the user. There can be more than one secondary action.
+1. **Icon/image (optional)** - display associated object icons here. An icon is only recommended for full page empty states
+2. **Title** - provide a concise explanation
+3. **Body** - provide additional information that helps a user understand why the space is empty, what they can do to move forward, and the value or benefit that is gained by taking the next step
+4. **Primary button** - primary call to action
+5. **Secondary buttons** (optional) - alternative options for the user. There can be more than one secondary action.
 
 ## Usage
 There are several common use cases for empty states:
