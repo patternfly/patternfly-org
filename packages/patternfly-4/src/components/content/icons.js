@@ -3,7 +3,7 @@ import { Gallery, Form, TextInput, Button, Title, EmptyState, EmptyStateVariant,
 import * as icons from '@patternfly/react-icons';
 import IconCard from './iconCard';
 import paramCase from 'param-case';
-import coreIcons from '../../../_repos/core/src/icons/definitions/pf-icons.json';
+import coreIcons from '../../../_repos/patternfly-next/src/icons/definitions/pf-icons.json';
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
 import './icons.scss';
