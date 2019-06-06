@@ -119,11 +119,11 @@ export const SpacingContentItem = ({children, fontWeight, fontSize, lineHeight})
 export const Spacer = ({color, size, description, showBorder}) => {
   let backgroundColor = null;
   if (color === '8') {
-    backgroundColor = '#ff00ff';
+    backgroundColor = '#9bd917';
   } else if (color === '16') {
-    backgroundColor = '#ff9500';
+    backgroundColor = '#51a549';
   } else if (color === '24') {
-    backgroundColor = '#ffea00';
+    backgroundColor = '#1b8793';
   }
   return (
   <div style={{display: "flex", padding: description ? "15px" : "0px"}}>
