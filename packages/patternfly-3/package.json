@@ -1,6 +1,6 @@
 {
   "name": "@patternfly/org-patternfly-3",
-  "private": false,
+  "private": true,
   "version": "3.49.0",
   "author": "Red Hat",
   "scripts": {
