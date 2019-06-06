@@ -133,6 +133,15 @@ Sorting by columns is possible for any data table variation. Enabling the compon
 2. **Hovered sort**: when a column is sortable, the sort icon will appear to the right of the column header. Upon hover, the  icon will change to a darker grey indicating that the icon is actionable.
 3. **Sortable column**: when a column is sortable, the sort icon will appear to the right of the column header in a light grey color. Sorting will not become active until the user selects the column header. This triggers the arrow to point upwards and the content to be sorted in ascending order.
 
+### When to use
+The default sort order for a table should support the primary use case for the application. All columns in a table do not require sort functionality. That is, you can disable the header sort function on some columns and enable it on others.
+
+### Example
+If a table contains these two attributes: (System Name | Last Sync) you may want to show the most recently synced system at the top of the table (ie, it is the default sort column), because a primary use case for this table is verifying that you have successfully connected or troubleshot the system’s connection to Cloud Services.
+
+
+If a table contains these three attributes: (System Name | Last Sync | Severity) you may want to show the system with the highest Severity because that is the system the user should tend to first.
+
 ## Using lists and tables in a page
 Lists or a tables should be placed in the body of a page. The width should be set by the containing element.
 
