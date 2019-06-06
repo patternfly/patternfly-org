@@ -13,14 +13,14 @@ Use charts to visualize data in an application. The type of chart you use will d
 1. **Title**: Titles should be left-aligned and appear above your chart.
 2. **Axis labels and scale values**:  We recommend using tick marks to clearly mark scale values on the y-axis. The text for axis labels and scale values should be 12px font in standard text color. All scale values should be equally distributed across the axis and the axis label should fall outside the scale values, centered with the axis line.
 3. **Legends**: We recommend using legends when charts include more than one variable and therefore use more than one color. If space is not available to display names of horizontal and vertical axes, a legend must be added instead. The legend should list the colors that each variable obtains and the name of the variable. The text on the legend should be 14px size and standard text color. They can either be placed left-aligned to the right of the chart or centered below the chart.
-4. **Chart tooltip**: A tooltip will appear on hover over certain elements of a chart, like bars in a bar chart or segments in a donut chart. Chart tooltips should drill down to display the specific values related to the element the user is hovering over
+4. **Chart tooltip**: A tooltip will appear on hover over certain elements of a chart, like bars in a bar chart or segments in a donut chart. Chart tooltips should display the specific values related to the element the user is hovering over.
 
 ## Chart types
 - [Area charts](#area-chart): use to show trending over a continuous scale (usually time)
 - [Bar charts](#bar-chart): great way to show and compare categorical data
   - [Stacked bar charts](#stacked-bar-chart)
--  [Donut charts](#donut-chart): use to show the relationship of a set of values to a whole or progress completion as a percentages
-  - [Donut utilization](#donut-chart-utilization): use to show utilization fo ran object as a percentages
+- [Donut charts](#donut-chart): use to show the relationship of a set of values to a whole or progress completion as a percentages
+  - [Donut utilization](#donut-chart-utilization): use to show utilization for an object as a percentages
   - [Donut utilization with threshold](#donut-chart-utilization-with-threshold)
 - [Line chart](#line-chart): use to compare several data sets, or to show data over a period of time
 - [Pie chart](#pie-chart): show percentages or proportional data
@@ -46,7 +46,7 @@ The most common use case for area charts is to show trending over a continuous s
 Bar charts are used to visualize and compare categorical data.
 
 #### Usage
-Since bar charts differentiate by length, we recommend that in most cases they be used rather than donut or pie charts, which differentiate by angle and area. As a rule of thumb, bar charts are a great way to show and compare categorical data. If you want to show continuous data over time, you may consider using a [Line chart](#line-chart) instead. If you wish to show the percentage utilization ratio between used and available, you should check out the [Utilization bar chart pattern](/documentation/react/charts/chartdonututilization).
+Since bar charts differentiate by length, we recommend that in most cases they be used rather than donut or pie charts, which differentiate by angle and area. As a rule of thumb, bar charts are a great way to show and compare categorical data. If you want to show continuous data over time, you may consider using a [Line chart](#line-chart) instead. If you wish to show the percentage utilization ratio between used and available, you should check out the [Utilization donut chart](/documentation/react/charts/chartdonututilization).
 
 #### Horizontal vs. vertical bar charts
 
@@ -95,8 +95,8 @@ For donut charts, don’t try to represent more than six categories. We recommen
 1. **Segment fill**: We recommend using [Colors for charts] (/design-guidelines/styles/chart-colors) for different items within the donut chart.
 2. **Segment padding**:  Always provide 3px of padding between segments.
 3. **Chart tooltip**: A tooltip will appear upon hover that states the name of the segment and corresponding value. For example, if the segment represents “Bugs,” and the value being represented is 25, your chart tooltip would state, “Bugs: 25.”
-4. **Label**: When the Donut Chart is contained within a dashboard card, there is a label defining what the Donut Chart represents. The label may also represent the total value of the data set. If this optional representation is chosen, it should follow the format of [total numeric value] + [data set label]. The total numeric value cannot contain more than 14 characters. The data set label cannot contain more than 24 characters. They are to be centered within the donut and styled as shown. The label should be using 24px font in standard text color with 14px font underneath in secondary text color. If the label does not fit within the donut, place it outside of the donut and leave the center empty.
-5. **Legend**: In order to be compliant with accessibility guidelines, a legend is necessary.
+4. **Label**: When the Donut Chart is contained within a dashboard card, there is a label defining what the Donut Chart represents. The label may also represent the total value of the data set. If this optional representation is chosen, it should follow the format of [total numeric value] + [data set label]. The total numeric value cannot contain more than 14 characters and should be styled using 24px font in standard text color. The data set label cannot contain more than 24 characters and should be styled using 14px font in secondary text color. They are to be centered within the donut and styled as shown. If the label exceeds the max character count, place it outside of the donut and leave the center empty.
+5. **Legend**: In order to be compliant with accessibility guidelines, a legend is necessary. Each variable on the legend should report their current value.
 
 #### React component
 [Donut chart](/documentation/react/charts/chartdonut)
