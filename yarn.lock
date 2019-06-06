@@ -1876,16 +1876,24 @@
     universal-user-agent "^2.0.0"
     url-template "^2.0.8"
 
+<<<<<<< HEAD
 "@patternfly/patternfly@2.12.5":
   version "2.12.5"
   resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-2.12.5.tgz#f2c5924deb875a8cde95e09e6d5c9022f00429da"
   integrity sha512-zB+pwtUXZVbv6l76XMU3ggMZrbHZtbZDBHrNBeWVfDngp2xnwTNVu0Ha4WaZVtZzutyVaF6F1VHTLnef6mO5ug==
+=======
+"@patternfly/patternfly@2.12.3":
+  version "2.12.3"
+  resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-2.12.3.tgz#be23f57720feb866b48bc105dda2fd71a98b36bb"
+  integrity sha512-XyZyXVoXSG42KhcLASP/YZWuTPNO5Cz4QVc0b6pfVFaTzwNmCzx79PTUt4Ov9I1FcJOr6wwdcFFKU7/uK8j9Lg==
+>>>>>>> fix gatsby-node
 
 "@patternfly/patternfly@2.8.2":
   version "2.8.2"
   resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-2.8.2.tgz#8362795b17a73be76dd9408b3c0d370e8a030d77"
   integrity sha512-DWx5v4m3qYgNSTS4aiNSapq3mXPhBcNu2kw4lk0qJei4WWtNysT/DNgCvMBzfrQzJdzEJ1KRMGl/sf8AIqWoNg==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 "@patternfly/react-charts@4.0.0":
   version "4.0.0"
@@ -1898,6 +1906,9 @@
   integrity sha512-XyZyXVoXSG42KhcLASP/YZWuTPNO5Cz4QVc0b6pfVFaTzwNmCzx79PTUt4Ov9I1FcJOr6wwdcFFKU7/uK8j9Lg==
 
 "@patternfly/react-charts@prerelease":
+=======
+"@patternfly/react-charts@4.1.1":
+>>>>>>> fix gatsby-node
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/@patternfly/react-charts/-/react-charts-4.1.1.tgz#08b7dac48158c33b735024978aadabdbc3bfa51b"
   integrity sha512-lM481yodB2k762Uh+djO4LmOtnvOZ7xUzBJ/NXBLn0Cov26lLfmxB6kQbOZkamAZdNm6SizzoL3/q4QDfC0Nnw==
@@ -1913,7 +1924,7 @@
     victory-core "^32.2.3"
     victory-legend "^32.2.3"
 
-"@patternfly/react-core@^3.36.0", "@patternfly/react-core@prerelease":
+"@patternfly/react-core@3.36.0", "@patternfly/react-core@^3.36.0":
   version "3.36.0"
   resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-3.36.0.tgz#c03a8309cdff8493660c7e40c297e3db9931f3b6"
   integrity sha512-WGJHBe0msb7jb31JAB1lLZ1MO9yG2GU8/6+QADgXgPUXR7NhaCpzMLtRpdwdQy3o71UvdS2I8k8xdWn4xlmpzw==
@@ -1926,14 +1937,14 @@
     exenv "^1.2.2"
     focus-trap-react "^4.0.1"
 
-"@patternfly/react-icons@^3.9.3", "@patternfly/react-icons@latest":
+"@patternfly/react-icons@3.9.3", "@patternfly/react-icons@^3.9.3":
   version "3.9.3"
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-3.9.3.tgz#a06a589ef90472568a40a01491473e741e6a91a5"
   integrity sha512-tLKuA5Qt4Kq+Bex2eDVazJrrixzbKQdxwkbPwzjzRdJ6oGb2CpZNjCVWIxKxibDsc0vGZ6aUaHguY6AFVcydQQ==
   dependencies:
     "@fortawesome/free-brands-svg-icons" "^5.8.1"
 
-"@patternfly/react-styled-system@prerelease":
+"@patternfly/react-styled-system@3.5.0":
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/@patternfly/react-styled-system/-/react-styled-system-3.5.0.tgz#12473ac2f4003081f0a9caf91e673be573b47be1"
   integrity sha512-u1qI1Qh6RoVjQvbL9p0WbDiJ1qYLmu8U/J1GsvUbesMUOmBSICHExvQkaMW1nzsfo3M8VhvUhmedbdZ/gH/RwA==
@@ -1946,7 +1957,7 @@
   optionalDependencies:
     "@types/styled-system" "^3.0.7"
 
-"@patternfly/react-styles@^3.3.0", "@patternfly/react-styles@prerelease":
+"@patternfly/react-styles@3.3.0", "@patternfly/react-styles@^3.3.0":
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-3.3.0.tgz#fd4c43b70bb60e1a2011bfa18b9ceadecf5e6abd"
   integrity sha512-rE6UumrQp00qL7WIVeAkiNJcR/lHQ2ZcbpqoJPseQI/yRO0kis1/0cXf1lN1H8ZAlSnUXevAg85Pndb+YWoxxg==
@@ -1965,7 +1976,7 @@
     resolve-from "^4.0.0"
     typescript "3.4.5"
 
-"@patternfly/react-table@prerelease":
+"@patternfly/react-table@2.10.0":
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-2.10.0.tgz#f723ad601348bf3109e3b5b84fb5820f2ac0e21a"
   integrity sha512-rX51GE4FhT0/OT759K4jmCaQpz5H4XAWx8YgQr206144CUKl3e/i3+m3HUta0dAT7tah1+2s+DD1SaWL98ufGw==
@@ -1977,7 +1988,7 @@
     exenv "^1.2.2"
     reactabular-table "^8.14.0"
 
-"@patternfly/react-tokens@^2.5.3", "@patternfly/react-tokens@prerelease":
+"@patternfly/react-tokens@2.5.3", "@patternfly/react-tokens@^2.5.3":
   version "2.5.3"
   resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-2.5.3.tgz#b1804626762583534745cede7599acf5a715fab8"
   integrity sha512-vH3fHKkx7VxyKkAiLx+VvOzZAuFIHhX01lW3HP66koFeUnKbCRynPuBy/Ep4nGZINZAgf5l9LNDmLS1ymntrLg==
@@ -8448,12 +8459,16 @@ functional-red-black-tree@^1.0.1:
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 gatsby-cli@^2.6.7:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.6.7.tgz#8e2038c4e35cec3edcb465c16e74c1ae9483eecb"
   integrity sha512-ngGOkozh0Wp2R2kblAUnMfMdPT84MoKMmuROqJVw+JUweB9zTrrGQsrH3ii26nw+7DDsrg6+AAkbELjp5SlYNA==
 =======
 gatsby-cli@^2.6.2:
+=======
+gatsby-cli@^2.6.5:
+>>>>>>> fix gatsby-node
   version "2.6.5"
   resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.6.5.tgz#54d812a7a9bfa39c48eaca1864d6bb56f4fde8c6"
   integrity sha512-M0M6OoZ3ZVT6dYHP1I0scJBJzQlTbeElgO7C08acc68Qj9BD0LbSnt38kyJ60j1oceCndnGgNsLP6lg3iR87/A==
@@ -8815,10 +8830,17 @@ gatsby-transformer-sharp@2.1.17:
     probe-image-size "^4.0.0"
     sharp "^0.21.3"
 
+<<<<<<< HEAD
 gatsby@~2.9.2:
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.9.2.tgz#caab8b601a2e3e2ba47c486b39ea9a1079060cda"
   integrity sha512-lAxfwxBYXO380ZJFN9ygHzjAMw+9GDuRbQer7E6xMbjPB856agnPnbqBuasGAezocsYMRqg3rhaAnIOhnWcOtw==
+=======
+gatsby@~2.8.5:
+  version "2.8.5"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.8.5.tgz#152ae131f8e8a9cd5c86e4eda3e908505861f3e5"
+  integrity sha512-R2uDNSUyFpLyPeU6Owm+hQX1uT3xdeQhhsK8arDGFPjILnkTOvEkbSqmNey+3yuFsiy7UyG8KZxiOlUjX0uZ0g==
+>>>>>>> fix gatsby-node
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -8876,7 +8898,11 @@ gatsby@~2.9.2:
     flat "^4.0.0"
     fs-exists-cached "1.0.0"
     fs-extra "^5.0.0"
+<<<<<<< HEAD
     gatsby-cli "^2.6.7"
+=======
+    gatsby-cli "^2.6.5"
+>>>>>>> fix gatsby-node
     gatsby-graphiql-explorer "^0.1.2"
     gatsby-link "^2.1.1"
     gatsby-plugin-page-creator "^2.0.13"
