@@ -30,7 +30,7 @@ const Section = ({ children, className, description, headingLevel, name, preface
     {Boolean(title || description) && (
       <header className={css('ws-header')}>
         {Boolean(title) && (
-          <AutoLinkHeader testKey="asd" size={size} is={headingLevel}>{title}</AutoLinkHeader>
+          <AutoLinkHeader size={size} is={headingLevel}>{title}</AutoLinkHeader>
         )}
         {Boolean(preface) && <p className={css('ws-preface')}>{preface}</p>}
         {Boolean(description) && <p>{description}</p>}
