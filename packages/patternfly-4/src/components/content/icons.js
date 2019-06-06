@@ -7,7 +7,6 @@ import coreIcons from '../../../_repos/core/src/icons/definitions/pf-icons.json'
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
 import './icons.scss';
-import { SearchIcon } from '@patternfly/react-icons';
 
 const allIcons = Object.entries(icons).filter(([name]) => name.endsWith('Icon'));
 let commonIcons = allIcons.filter(([name]) => {
@@ -60,7 +59,7 @@ class Icons extends React.Component {
         })}
         </Gallery>
         {filteredIcons.length == 0 &&  <EmptyState variant={EmptyStateVariant.full}>
-          <EmptyStateIcon icon={SearchIcon}/>
+          <EmptyStateIcon icon={icons.SearchIcon}/>
           <Title headingLevel="h5" size="2xl">
             No results found for "{ searchValue }".
           </Title>
