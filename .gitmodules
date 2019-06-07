@@ -1,6 +1,6 @@
 [submodule "packages/patternfly-4/_repos/patternfly-react"]
 	path = packages/patternfly-4/_repos/patternfly-react
-	url = git@github.com:patternfly/patternfly-react.git
+	url = https://github.com/patternfly/patternfly-react.git
 [submodule "packages/patternfly-4/_repos/patternfly-next"]
 	path = packages/patternfly-4/_repos/patternfly-next
-	url = git@github.com:patternfly/patternfly-next.git
+	url = https://github.com/patternfly/patternfly-next.git
