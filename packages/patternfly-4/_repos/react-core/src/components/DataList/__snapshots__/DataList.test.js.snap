@@ -44,22 +44,11 @@ exports[`DataList DataListAction button 1`] = `
   <div
     className="pf-c-data-list__action"
   >
-    <Button
-      aria-label={null}
-      className=""
-      component="button"
+    <Component
       id="delete-item-1"
-      isActive={false}
-      isBlock={false}
-      isDisabled={false}
-      isFocus={false}
-      isHover={false}
-      isInline={false}
-      type="button"
-      variant="primary"
     >
       Delete
-    </Button>
+    </Component>
   </div>
 </div>
 `;
@@ -98,6 +87,7 @@ exports[`DataList DataListAction dropdown 1`] = `
           </Item>,
         ]
       }
+      isGrouped={false}
       isOpen={false}
       isPlain={true}
       onSelect={[Function]}
@@ -170,7 +160,6 @@ exports[`DataList List 1`] = `
 <ul
   aria-label="this is a simple list"
   className="pf-c-data-list data-list-custom"
-  role="list"
 />
 `;
 
@@ -178,7 +167,6 @@ exports[`DataList List default 1`] = `
 <ul
   aria-label="this is a simple list"
   className="pf-c-data-list"
-  role="list"
 />
 `;
 

@@ -1,6 +1,8 @@
 ---
 title: 'Chip group'
 cssPrefix: 'pf-c-chip'
+typescript: true
+propComponents: ['Chip', 'ChipGroup', 'ChipGroupToolbarItem']
 ---
 
 import { Badge, Chip, ChipGroup, ChipGroupItem, ChipGroupToolbarItem } from '@patternfly/react-core';

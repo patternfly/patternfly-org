@@ -5,13 +5,14 @@ import Layout from '../../../components/layout';
 import SEO from '../../../components/seo';
 import Section from '../../../components/section';
 import { PageSection, PageSectionVariants } from '@patternfly/react-core';
+import '../../../templates/template.scss';
 
 const CoreTokens = ({ location }) => (
   <Layout sideNav={<SideNav />}>
     <SEO title="Global CSS Variables" />
-    <PageSection variant={PageSectionVariants.light}>
+    <PageSection className="markdown-body" variant={PageSectionVariants.light}>
          <div className="pf-c-content">
-            <h2>About CSS variables</h2>
+            <h1>About CSS variables</h1>
             <p>The CSS variable system is a two-layer theming system where global variables inform component variables.</p>
 
             <h3>Global variables</h3>

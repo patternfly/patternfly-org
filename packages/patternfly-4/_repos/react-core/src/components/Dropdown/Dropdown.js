@@ -1,7 +1,7 @@
 import React, { Children, cloneElement } from 'react';
+import PropTypes from 'prop-types';
 import styles from '@patternfly/patternfly/components/Dropdown/dropdown.css';
 import { css } from '@patternfly/react-styles';
-import PropTypes from 'prop-types';
 import DropdownMenu from './DropdownMenu';
 import { DropdownPosition, DropdownDirection, DropdownContext } from './dropdownConstants';
 
@@ -30,12 +30,14 @@ const propTypes = {
   position: PropTypes.oneOf(Object.values(DropdownPosition)),
   /** Display menu above or below dropdown toggle */
   direction: PropTypes.oneOf(Object.values(DropdownDirection)),
+  /** Flag to indicate if dropdown has groups */
+  isGrouped: PropTypes.bool,
   /** Placeholder to use custom toggle elements */
   toggle: PropTypes.node.isRequired,
   /** Function callback called when user selects item */
   onSelect: PropTypes.func,
   /** Additional props are spread to the container <div> */
-  '': PropTypes.any
+  '': PropTypes.any // eslint-disable-line react/require-default-props
 };
 
 const defaultProps = {
@@ -44,6 +46,7 @@ const defaultProps = {
   dropdownItems: [],
   isOpen: false,
   isPlain: false,
+  isGrouped: false,
   position: DropdownPosition.left,
   direction: DropdownDirection.down,
   onSelect: Function.prototype
@@ -66,6 +69,7 @@ class Dropdown extends React.Component {
       dropdownItems,
       isOpen,
       isPlain,
+      isGrouped,
       onSelect,
       position,
       toggle,
@@ -114,6 +118,7 @@ class Dropdown extends React.Component {
               position={position}
               aria-labelledby={id}
               openedOnEnter={this.openedOnEnter}
+              isGrouped={isGrouped}
             >
               {renderedContent}
             </DropdownMenu>

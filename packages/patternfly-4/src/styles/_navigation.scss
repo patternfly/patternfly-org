@@ -1,5 +1,10 @@
 .pf-c-page__header {
   background-color: #151515;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr auto;
+  }
+
   .pf-c-page__header-brand {
     background-color: #151515;
   }
@@ -13,6 +18,7 @@
     display: none;
     @media (max-width: 768px) {
       display: block;
+      position: relative !important;
     }
   }
 }

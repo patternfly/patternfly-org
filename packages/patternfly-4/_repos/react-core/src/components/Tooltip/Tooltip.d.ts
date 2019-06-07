@@ -1,4 +1,4 @@
-import { FunctionComponent, HTMLProps, ReactElement } from 'react';
+import { FunctionComponent, HTMLProps, ReactElement, ReactNode } from 'react';
 import { Omit } from '../../helpers/typeUtils';
 import { BasicPlacement, Props } from 'tippy.js';
 
@@ -19,9 +19,9 @@ export interface TooltipProps extends Omit<HTMLProps<HTMLDivElement>, 'content' 
   /** Tooltip additional class */
   className?: string;
   /** The reference element to which the tooltip is relatively placed to */
-  children: ReactElement<any>;
+  children: React.ReactNode;
   /** Tooltip content */
-  content: ReactElement<any> | string;
+  content: React.ReactNode;
   /** Delay in ms before a tooltip appears */
   entryDelay?: number;
   /** Delay in ms before a tooltip disappears */

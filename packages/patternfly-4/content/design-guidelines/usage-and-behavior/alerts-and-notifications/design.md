@@ -95,7 +95,7 @@ When a condition occurs that requires immediate action, a modal message dialog i
 
 ![modal notification](./img/modal-notification.png)
 
-For more information about designing modal messages see the [message dialog design guidelines](/design-guidelines/usage-and-behavior/message-dialogs).
+For more information about designing modal messages see the [message dialog design guidelines](/design-guidelines/usage-and-behavior/modal).
 
 ## Content guidelines
 Message text should be succinct and clearly state what the issue or problem is. Embedded links should navigate the user to the location where they can take action.
@@ -113,7 +113,7 @@ While this is more verbose, it has the advantage of being usable for both sighte
 ## Related components and demos
 **HTML/CSS**
 * [Alert](/documentation/core/components/alert)
-* [Alert group](/documentation/core/components/alert-group)
+* [Alert group](/documentation/core/components/alertgroup)
 
 **React**
 * [Alert](/documentation/react/components/alert)

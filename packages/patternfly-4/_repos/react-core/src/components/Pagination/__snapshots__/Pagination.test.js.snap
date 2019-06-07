@@ -2,8 +2,11 @@
 
 exports[`component render custom pagination toggle 1`] = `
 <Pagination
+  className=""
   dropDirection="down"
   itemCount={40}
+  itemsEnd={null}
+  itemsStart={null}
   onFirstClick={[Function]}
   onLastClick={[Function]}
   onNextClick={[Function]}
@@ -61,6 +64,7 @@ exports[`component render custom pagination toggle 1`] = `
       40 items
     </div>
     <PaginationOptionsMenu
+      className=""
       dropDirection="down"
       firstIndex={1}
       itemCount={40}
@@ -184,6 +188,7 @@ exports[`component render custom pagination toggle 1`] = `
               </Item>,
             ]
           }
+          isGrouped={false}
           isOpen={false}
           isPlain={true}
           onSelect={[Function]}
@@ -272,6 +277,7 @@ exports[`component render custom pagination toggle 1`] = `
       </div>
     </PaginationOptionsMenu>
     <Navigation
+      className=""
       currPage="Current page"
       lastPage={4}
       onFirstClick={[Function]}
@@ -292,19 +298,11 @@ exports[`component render custom pagination toggle 1`] = `
         aria-label="Pagination"
         className="pf-c-pagination__nav"
       >
-        <Button
+        <Component
           aria-label="Go to first page"
-          className=""
-          component="button"
           data-action="first"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -343,20 +341,12 @@ exports[`component render custom pagination toggle 1`] = `
               </svg>
             </AngleDoubleLeftIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to previous page"
-          className=""
-          component="button"
           data-action="previous"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -395,7 +385,7 @@ exports[`component render custom pagination toggle 1`] = `
               </svg>
             </AngleLeftIcon>
           </button>
-        </Button>
+        </Component>
         <div
           className="pf-c-pagination__nav-page-select"
         >
@@ -417,19 +407,11 @@ exports[`component render custom pagination toggle 1`] = `
             pages
           </span>
         </div>
-        <Button
+        <Component
           aria-label="Go to next page"
-          className=""
-          component="button"
           data-action="next"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -468,20 +450,12 @@ exports[`component render custom pagination toggle 1`] = `
               </svg>
             </AngleRightIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to last page"
-          className=""
-          component="button"
           data-action="last"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -520,7 +494,7 @@ exports[`component render custom pagination toggle 1`] = `
               </svg>
             </AngleDoubleRightIcon>
           </button>
-        </Button>
+        </Component>
       </nav>
     </Navigation>
   </div>
@@ -529,8 +503,11 @@ exports[`component render custom pagination toggle 1`] = `
 
 exports[`component render custom perPageOptions 1`] = `
 <Pagination
+  className=""
   dropDirection="down"
   itemCount={40}
+  itemsEnd={null}
+  itemsStart={null}
   onFirstClick={[Function]}
   onLastClick={[Function]}
   onNextClick={[Function]}
@@ -576,6 +553,7 @@ exports[`component render custom perPageOptions 1`] = `
       40 items
     </div>
     <PaginationOptionsMenu
+      className=""
       dropDirection="down"
       firstIndex={1}
       itemCount={40}
@@ -630,6 +608,7 @@ exports[`component render custom perPageOptions 1`] = `
               </Item>,
             ]
           }
+          isGrouped={false}
           isOpen={false}
           isPlain={true}
           onSelect={[Function]}
@@ -684,7 +663,8 @@ exports[`component render custom perPageOptions 1`] = `
                        - 
                       10
                     </strong>
-                     of 
+                     
+                    of 
                     <strong>
                       40
                     </strong>
@@ -735,6 +715,7 @@ exports[`component render custom perPageOptions 1`] = `
       </div>
     </PaginationOptionsMenu>
     <Navigation
+      className=""
       currPage="Current page"
       lastPage={4}
       onFirstClick={[Function]}
@@ -755,19 +736,11 @@ exports[`component render custom perPageOptions 1`] = `
         aria-label="Pagination"
         className="pf-c-pagination__nav"
       >
-        <Button
+        <Component
           aria-label="Go to first page"
-          className=""
-          component="button"
           data-action="first"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -806,20 +779,12 @@ exports[`component render custom perPageOptions 1`] = `
               </svg>
             </AngleDoubleLeftIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to previous page"
-          className=""
-          component="button"
           data-action="previous"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -858,7 +823,7 @@ exports[`component render custom perPageOptions 1`] = `
               </svg>
             </AngleLeftIcon>
           </button>
-        </Button>
+        </Component>
         <div
           className="pf-c-pagination__nav-page-select"
         >
@@ -880,19 +845,11 @@ exports[`component render custom perPageOptions 1`] = `
             pages
           </span>
         </div>
-        <Button
+        <Component
           aria-label="Go to next page"
-          className=""
-          component="button"
           data-action="next"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -931,20 +888,12 @@ exports[`component render custom perPageOptions 1`] = `
               </svg>
             </AngleRightIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to last page"
-          className=""
-          component="button"
           data-action="last"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -983,7 +932,7 @@ exports[`component render custom perPageOptions 1`] = `
               </svg>
             </AngleDoubleRightIcon>
           </button>
-        </Button>
+        </Component>
       </nav>
     </Navigation>
   </div>
@@ -992,6 +941,7 @@ exports[`component render custom perPageOptions 1`] = `
 
 exports[`component render custom start end 1`] = `
 <Pagination
+  className=""
   dropDirection="down"
   itemCount={40}
   itemsEnd={15}
@@ -1053,6 +1003,7 @@ exports[`component render custom start end 1`] = `
       40 items
     </div>
     <PaginationOptionsMenu
+      className=""
       dropDirection="down"
       firstIndex={5}
       itemCount={40}
@@ -1176,6 +1127,7 @@ exports[`component render custom start end 1`] = `
               </Item>,
             ]
           }
+          isGrouped={false}
           isOpen={false}
           isPlain={true}
           onSelect={[Function]}
@@ -1230,7 +1182,8 @@ exports[`component render custom start end 1`] = `
                        - 
                       15
                     </strong>
-                     of 
+                     
+                    of 
                     <strong>
                       40
                     </strong>
@@ -1281,6 +1234,7 @@ exports[`component render custom start end 1`] = `
       </div>
     </PaginationOptionsMenu>
     <Navigation
+      className=""
       currPage="Current page"
       lastPage={4}
       onFirstClick={[Function]}
@@ -1301,19 +1255,11 @@ exports[`component render custom start end 1`] = `
         aria-label="Pagination"
         className="pf-c-pagination__nav"
       >
-        <Button
+        <Component
           aria-label="Go to first page"
-          className=""
-          component="button"
           data-action="first"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -1352,20 +1298,12 @@ exports[`component render custom start end 1`] = `
               </svg>
             </AngleDoubleLeftIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to previous page"
-          className=""
-          component="button"
           data-action="previous"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -1404,7 +1342,7 @@ exports[`component render custom start end 1`] = `
               </svg>
             </AngleLeftIcon>
           </button>
-        </Button>
+        </Component>
         <div
           className="pf-c-pagination__nav-page-select"
         >
@@ -1426,19 +1364,11 @@ exports[`component render custom start end 1`] = `
             pages
           </span>
         </div>
-        <Button
+        <Component
           aria-label="Go to next page"
-          className=""
-          component="button"
           data-action="next"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -1477,20 +1407,12 @@ exports[`component render custom start end 1`] = `
               </svg>
             </AngleRightIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to last page"
-          className=""
-          component="button"
           data-action="last"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -1529,7 +1451,7 @@ exports[`component render custom start end 1`] = `
               </svg>
             </AngleDoubleRightIcon>
           </button>
-        </Button>
+        </Component>
       </nav>
     </Navigation>
   </div>
@@ -1538,8 +1460,11 @@ exports[`component render custom start end 1`] = `
 
 exports[`component render last page 1`] = `
 <Pagination
+  className=""
   dropDirection="down"
   itemCount={20}
+  itemsEnd={null}
+  itemsStart={null}
   onFirstClick={[Function]}
   onLastClick={[Function]}
   onNextClick={[Function]}
@@ -1597,6 +1522,7 @@ exports[`component render last page 1`] = `
       20 items
     </div>
     <PaginationOptionsMenu
+      className=""
       dropDirection="down"
       firstIndex={11}
       itemCount={20}
@@ -1720,6 +1646,7 @@ exports[`component render last page 1`] = `
               </Item>,
             ]
           }
+          isGrouped={false}
           isOpen={false}
           isPlain={true}
           onSelect={[Function]}
@@ -1774,7 +1701,8 @@ exports[`component render last page 1`] = `
                        - 
                       20
                     </strong>
-                     of 
+                     
+                    of 
                     <strong>
                       20
                     </strong>
@@ -1825,6 +1753,7 @@ exports[`component render last page 1`] = `
       </div>
     </PaginationOptionsMenu>
     <Navigation
+      className=""
       currPage="Current page"
       lastPage={2}
       onFirstClick={[Function]}
@@ -1845,19 +1774,11 @@ exports[`component render last page 1`] = `
         aria-label="Pagination"
         className="pf-c-pagination__nav"
       >
-        <Button
+        <Component
           aria-label="Go to first page"
-          className=""
-          component="button"
           data-action="first"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -1896,20 +1817,12 @@ exports[`component render last page 1`] = `
               </svg>
             </AngleDoubleLeftIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to previous page"
-          className=""
-          component="button"
           data-action="previous"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -1948,7 +1861,7 @@ exports[`component render last page 1`] = `
               </svg>
             </AngleLeftIcon>
           </button>
-        </Button>
+        </Component>
         <div
           className="pf-c-pagination__nav-page-select"
         >
@@ -1970,19 +1883,11 @@ exports[`component render last page 1`] = `
             pages
           </span>
         </div>
-        <Button
+        <Component
           aria-label="Go to next page"
-          className=""
-          component="button"
           data-action="next"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -2021,20 +1926,12 @@ exports[`component render last page 1`] = `
               </svg>
             </AngleRightIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to last page"
-          className=""
-          component="button"
           data-action="last"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -2073,7 +1970,7 @@ exports[`component render last page 1`] = `
               </svg>
             </AngleDoubleRightIcon>
           </button>
-        </Button>
+        </Component>
       </nav>
     </Navigation>
   </div>
@@ -2082,8 +1979,11 @@ exports[`component render last page 1`] = `
 
 exports[`component render limited number of pages 1`] = `
 <Pagination
+  className=""
   dropDirection="down"
   itemCount={20}
+  itemsEnd={null}
+  itemsStart={null}
   onFirstClick={[Function]}
   onLastClick={[Function]}
   onNextClick={[Function]}
@@ -2141,6 +2041,7 @@ exports[`component render limited number of pages 1`] = `
       20 items
     </div>
     <PaginationOptionsMenu
+      className=""
       dropDirection="down"
       firstIndex={1}
       itemCount={20}
@@ -2264,6 +2165,7 @@ exports[`component render limited number of pages 1`] = `
               </Item>,
             ]
           }
+          isGrouped={false}
           isOpen={false}
           isPlain={true}
           onSelect={[Function]}
@@ -2318,7 +2220,8 @@ exports[`component render limited number of pages 1`] = `
                        - 
                       20
                     </strong>
-                     of 
+                     
+                    of 
                     <strong>
                       20
                     </strong>
@@ -2369,6 +2272,7 @@ exports[`component render limited number of pages 1`] = `
       </div>
     </PaginationOptionsMenu>
     <Navigation
+      className=""
       currPage="Current page"
       lastPage={1}
       onFirstClick={[Function]}
@@ -2389,19 +2293,11 @@ exports[`component render limited number of pages 1`] = `
         aria-label="Pagination"
         className="pf-c-pagination__nav"
       >
-        <Button
+        <Component
           aria-label="Go to first page"
-          className=""
-          component="button"
           data-action="first"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -2440,20 +2336,12 @@ exports[`component render limited number of pages 1`] = `
               </svg>
             </AngleDoubleLeftIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to previous page"
-          className=""
-          component="button"
           data-action="previous"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -2492,7 +2380,7 @@ exports[`component render limited number of pages 1`] = `
               </svg>
             </AngleLeftIcon>
           </button>
-        </Button>
+        </Component>
         <div
           className="pf-c-pagination__nav-page-select"
         >
@@ -2514,19 +2402,11 @@ exports[`component render limited number of pages 1`] = `
             pages
           </span>
         </div>
-        <Button
+        <Component
           aria-label="Go to next page"
-          className=""
-          component="button"
           data-action="next"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -2565,20 +2445,12 @@ exports[`component render limited number of pages 1`] = `
               </svg>
             </AngleRightIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to last page"
-          className=""
-          component="button"
           data-action="last"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -2617,7 +2489,7 @@ exports[`component render limited number of pages 1`] = `
               </svg>
             </AngleDoubleRightIcon>
           </button>
-        </Button>
+        </Component>
       </nav>
     </Navigation>
   </div>
@@ -2626,8 +2498,11 @@ exports[`component render limited number of pages 1`] = `
 
 exports[`component render no items 1`] = `
 <Pagination
+  className=""
   dropDirection="down"
   itemCount={0}
+  itemsEnd={null}
+  itemsStart={null}
   onFirstClick={[Function]}
   onLastClick={[Function]}
   onNextClick={[Function]}
@@ -2685,6 +2560,7 @@ exports[`component render no items 1`] = `
       0 items
     </div>
     <PaginationOptionsMenu
+      className=""
       dropDirection="down"
       firstIndex={0}
       itemCount={0}
@@ -2808,6 +2684,7 @@ exports[`component render no items 1`] = `
               </Item>,
             ]
           }
+          isGrouped={false}
           isOpen={false}
           isPlain={true}
           onSelect={[Function]}
@@ -2862,7 +2739,8 @@ exports[`component render no items 1`] = `
                        - 
                       0
                     </strong>
-                     of 
+                     
+                    of 
                     <strong>
                       0
                     </strong>
@@ -2913,6 +2791,7 @@ exports[`component render no items 1`] = `
       </div>
     </PaginationOptionsMenu>
     <Navigation
+      className=""
       currPage="Current page"
       lastPage={0}
       onFirstClick={[Function]}
@@ -2933,19 +2812,11 @@ exports[`component render no items 1`] = `
         aria-label="Pagination"
         className="pf-c-pagination__nav"
       >
-        <Button
+        <Component
           aria-label="Go to first page"
-          className=""
-          component="button"
           data-action="first"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -2984,20 +2855,12 @@ exports[`component render no items 1`] = `
               </svg>
             </AngleDoubleLeftIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to previous page"
-          className=""
-          component="button"
           data-action="previous"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -3036,7 +2899,7 @@ exports[`component render no items 1`] = `
               </svg>
             </AngleLeftIcon>
           </button>
-        </Button>
+        </Component>
         <div
           className="pf-c-pagination__nav-page-select"
         >
@@ -3058,19 +2921,11 @@ exports[`component render no items 1`] = `
             pages
           </span>
         </div>
-        <Button
+        <Component
           aria-label="Go to next page"
-          className=""
-          component="button"
           data-action="next"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -3109,20 +2964,12 @@ exports[`component render no items 1`] = `
               </svg>
             </AngleRightIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to last page"
-          className=""
-          component="button"
           data-action="last"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -3161,7 +3008,7 @@ exports[`component render no items 1`] = `
               </svg>
             </AngleDoubleRightIcon>
           </button>
-        </Button>
+        </Component>
       </nav>
     </Navigation>
   </div>
@@ -3170,8 +3017,11 @@ exports[`component render no items 1`] = `
 
 exports[`component render should render correctly bottom 1`] = `
 <Pagination
+  className=""
   dropDirection="down"
   itemCount={20}
+  itemsEnd={null}
+  itemsStart={null}
   onFirstClick={[Function]}
   onLastClick={[Function]}
   onNextClick={[Function]}
@@ -3224,6 +3074,7 @@ exports[`component render should render correctly bottom 1`] = `
     className="pf-c-pagination pf-m-footer"
   >
     <PaginationOptionsMenu
+      className=""
       dropDirection="down"
       firstIndex={1}
       itemCount={20}
@@ -3347,6 +3198,7 @@ exports[`component render should render correctly bottom 1`] = `
               </Item>,
             ]
           }
+          isGrouped={false}
           isOpen={false}
           isPlain={true}
           onSelect={[Function]}
@@ -3401,7 +3253,8 @@ exports[`component render should render correctly bottom 1`] = `
                        - 
                       10
                     </strong>
-                     of 
+                     
+                    of 
                     <strong>
                       20
                     </strong>
@@ -3452,6 +3305,7 @@ exports[`component render should render correctly bottom 1`] = `
       </div>
     </PaginationOptionsMenu>
     <Navigation
+      className=""
       currPage="Current page"
       lastPage={2}
       onFirstClick={[Function]}
@@ -3472,19 +3326,11 @@ exports[`component render should render correctly bottom 1`] = `
         aria-label="Pagination"
         className="pf-c-pagination__nav"
       >
-        <Button
+        <Component
           aria-label="Go to first page"
-          className=""
-          component="button"
           data-action="first"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -3523,20 +3369,12 @@ exports[`component render should render correctly bottom 1`] = `
               </svg>
             </AngleDoubleLeftIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to previous page"
-          className=""
-          component="button"
           data-action="previous"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -3575,7 +3413,7 @@ exports[`component render should render correctly bottom 1`] = `
               </svg>
             </AngleLeftIcon>
           </button>
-        </Button>
+        </Component>
         <div
           className="pf-c-pagination__nav-page-select"
         >
@@ -3597,19 +3435,11 @@ exports[`component render should render correctly bottom 1`] = `
             pages
           </span>
         </div>
-        <Button
+        <Component
           aria-label="Go to next page"
-          className=""
-          component="button"
           data-action="next"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -3648,20 +3478,12 @@ exports[`component render should render correctly bottom 1`] = `
               </svg>
             </AngleRightIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to last page"
-          className=""
-          component="button"
           data-action="last"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -3700,7 +3522,7 @@ exports[`component render should render correctly bottom 1`] = `
               </svg>
             </AngleDoubleRightIcon>
           </button>
-        </Button>
+        </Component>
       </nav>
     </Navigation>
   </div>
@@ -3709,8 +3531,11 @@ exports[`component render should render correctly bottom 1`] = `
 
 exports[`component render should render correctly top 1`] = `
 <Pagination
+  className=""
   dropDirection="down"
   itemCount={20}
+  itemsEnd={null}
+  itemsStart={null}
   onFirstClick={[Function]}
   onLastClick={[Function]}
   onNextClick={[Function]}
@@ -3768,6 +3593,7 @@ exports[`component render should render correctly top 1`] = `
       20 items
     </div>
     <PaginationOptionsMenu
+      className=""
       dropDirection="down"
       firstIndex={1}
       itemCount={20}
@@ -3891,6 +3717,7 @@ exports[`component render should render correctly top 1`] = `
               </Item>,
             ]
           }
+          isGrouped={false}
           isOpen={false}
           isPlain={true}
           onSelect={[Function]}
@@ -3945,7 +3772,8 @@ exports[`component render should render correctly top 1`] = `
                        - 
                       10
                     </strong>
-                     of 
+                     
+                    of 
                     <strong>
                       20
                     </strong>
@@ -3996,6 +3824,7 @@ exports[`component render should render correctly top 1`] = `
       </div>
     </PaginationOptionsMenu>
     <Navigation
+      className=""
       currPage="Current page"
       lastPage={2}
       onFirstClick={[Function]}
@@ -4016,19 +3845,11 @@ exports[`component render should render correctly top 1`] = `
         aria-label="Pagination"
         className="pf-c-pagination__nav"
       >
-        <Button
+        <Component
           aria-label="Go to first page"
-          className=""
-          component="button"
           data-action="first"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -4067,20 +3888,12 @@ exports[`component render should render correctly top 1`] = `
               </svg>
             </AngleDoubleLeftIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to previous page"
-          className=""
-          component="button"
           data-action="previous"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -4119,7 +3932,7 @@ exports[`component render should render correctly top 1`] = `
               </svg>
             </AngleLeftIcon>
           </button>
-        </Button>
+        </Component>
         <div
           className="pf-c-pagination__nav-page-select"
         >
@@ -4141,19 +3954,11 @@ exports[`component render should render correctly top 1`] = `
             pages
           </span>
         </div>
-        <Button
+        <Component
           aria-label="Go to next page"
-          className=""
-          component="button"
           data-action="next"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -4192,20 +3997,12 @@ exports[`component render should render correctly top 1`] = `
               </svg>
             </AngleRightIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to last page"
-          className=""
-          component="button"
           data-action="last"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -4244,7 +4041,7 @@ exports[`component render should render correctly top 1`] = `
               </svg>
             </AngleDoubleRightIcon>
           </button>
-        </Button>
+        </Component>
       </nav>
     </Navigation>
   </div>
@@ -4253,8 +4050,11 @@ exports[`component render should render correctly top 1`] = `
 
 exports[`component render titles 1`] = `
 <Pagination
+  className=""
   dropDirection="down"
   itemCount={40}
+  itemsEnd={null}
+  itemsStart={null}
   onFirstClick={[Function]}
   onLastClick={[Function]}
   onNextClick={[Function]}
@@ -4303,6 +4103,7 @@ exports[`component render titles 1`] = `
       40 values
     </div>
     <PaginationOptionsMenu
+      className=""
       dropDirection="down"
       firstIndex={1}
       itemCount={40}
@@ -4426,6 +4227,7 @@ exports[`component render titles 1`] = `
               </Item>,
             ]
           }
+          isGrouped={false}
           isOpen={false}
           isPlain={true}
           onSelect={[Function]}
@@ -4480,7 +4282,8 @@ exports[`component render titles 1`] = `
                        - 
                       10
                     </strong>
-                     of 
+                     
+                    of 
                     <strong>
                       40
                     </strong>
@@ -4531,6 +4334,7 @@ exports[`component render titles 1`] = `
       </div>
     </PaginationOptionsMenu>
     <Navigation
+      className=""
       currPage="Current page"
       lastPage={4}
       onFirstClick={[Function]}
@@ -4551,19 +4355,11 @@ exports[`component render titles 1`] = `
         aria-label="Pagination"
         className="pf-c-pagination__nav"
       >
-        <Button
+        <Component
           aria-label="Go to first page"
-          className=""
-          component="button"
           data-action="first"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -4602,20 +4398,12 @@ exports[`component render titles 1`] = `
               </svg>
             </AngleDoubleLeftIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to previous page"
-          className=""
-          component="button"
           data-action="previous"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -4654,7 +4442,7 @@ exports[`component render titles 1`] = `
               </svg>
             </AngleLeftIcon>
           </button>
-        </Button>
+        </Component>
         <div
           className="pf-c-pagination__nav-page-select"
         >
@@ -4676,19 +4464,11 @@ exports[`component render titles 1`] = `
             books
           </span>
         </div>
-        <Button
+        <Component
           aria-label="Go to next page"
-          className=""
-          component="button"
           data-action="next"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -4727,20 +4507,12 @@ exports[`component render titles 1`] = `
               </svg>
             </AngleRightIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to last page"
-          className=""
-          component="button"
           data-action="last"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -4779,7 +4551,7 @@ exports[`component render titles 1`] = `
               </svg>
             </AngleDoubleRightIcon>
           </button>
-        </Button>
+        </Component>
       </nav>
     </Navigation>
   </div>
@@ -4788,8 +4560,11 @@ exports[`component render titles 1`] = `
 
 exports[`component render up drop direction 1`] = `
 <Pagination
+  className=""
   dropDirection="up"
   itemCount={40}
+  itemsEnd={null}
+  itemsStart={null}
   onFirstClick={[Function]}
   onLastClick={[Function]}
   onNextClick={[Function]}
@@ -4847,6 +4622,7 @@ exports[`component render up drop direction 1`] = `
       40 items
     </div>
     <PaginationOptionsMenu
+      className=""
       dropDirection="up"
       firstIndex={1}
       itemCount={40}
@@ -4970,6 +4746,7 @@ exports[`component render up drop direction 1`] = `
               </Item>,
             ]
           }
+          isGrouped={false}
           isOpen={false}
           isPlain={true}
           onSelect={[Function]}
@@ -5024,7 +4801,8 @@ exports[`component render up drop direction 1`] = `
                        - 
                       10
                     </strong>
-                     of 
+                     
+                    of 
                     <strong>
                       40
                     </strong>
@@ -5075,6 +4853,7 @@ exports[`component render up drop direction 1`] = `
       </div>
     </PaginationOptionsMenu>
     <Navigation
+      className=""
       currPage="Current page"
       lastPage={4}
       onFirstClick={[Function]}
@@ -5095,19 +4874,11 @@ exports[`component render up drop direction 1`] = `
         aria-label="Pagination"
         className="pf-c-pagination__nav"
       >
-        <Button
+        <Component
           aria-label="Go to first page"
-          className=""
-          component="button"
           data-action="first"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -5146,20 +4917,12 @@ exports[`component render up drop direction 1`] = `
               </svg>
             </AngleDoubleLeftIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to previous page"
-          className=""
-          component="button"
           data-action="previous"
-          isActive={false}
-          isBlock={false}
           isDisabled={true}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -5198,7 +4961,7 @@ exports[`component render up drop direction 1`] = `
               </svg>
             </AngleLeftIcon>
           </button>
-        </Button>
+        </Component>
         <div
           className="pf-c-pagination__nav-page-select"
         >
@@ -5220,19 +4983,11 @@ exports[`component render up drop direction 1`] = `
             pages
           </span>
         </div>
-        <Button
+        <Component
           aria-label="Go to next page"
-          className=""
-          component="button"
           data-action="next"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -5271,20 +5026,12 @@ exports[`component render up drop direction 1`] = `
               </svg>
             </AngleRightIcon>
           </button>
-        </Button>
-        <Button
+        </Component>
+        <Component
           aria-label="Go to last page"
-          className=""
-          component="button"
           data-action="last"
-          isActive={false}
-          isBlock={false}
           isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[Function]}
-          type="button"
           variant="plain"
         >
           <button
@@ -5323,7 +5070,7 @@ exports[`component render up drop direction 1`] = `
               </svg>
             </AngleDoubleRightIcon>
           </button>
-        </Button>
+        </Component>
       </nav>
     </Navigation>
   </div>

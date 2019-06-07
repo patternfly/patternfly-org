@@ -59,37 +59,37 @@ exports.createPages = async ({ graphql, actions }) => {
     console.log('\nRedirecting: ' + f + ' to: ' + t);
   })
   await graphql(`
-    query {
+    {
       pf4Docs: allMdx(filter: {fileAbsolutePath: {glob: "**/patternfly-4/_repos/react*/**"} }) {
-        edges {
-          node {
-            fileAbsolutePath
-            frontmatter {
-              section
-              title
-              fullscreen
-            }
+        nodes {
+          fileAbsolutePath
+          frontmatter {
+            section
+            title
+            fullscreen
+            propComponents
           }
         }
       },
       coreDocs: allFile(filter: { absolutePath: { glob: "**/_repos/core/**/examples/index.js" } } ) {
-        edges {
-          node {
-            relativePath
-            relativeDirectory
-            absolutePath
-            base
-            name
+        nodes {
+          relativePath
+          relativeDirectory
+          absolutePath
+          base
+          name
+          childMdx {
+            code {
+              body
+            }
           }
         }
       }
       contentPages: allMdx(filter: {fileAbsolutePath: {glob: "**/patternfly-4/content/**"}, frontmatter: {path: {ne: null}}}) {
-        edges {
-          node {
-            fileAbsolutePath
-            frontmatter {
-              path
-            }
+        nodes {
+          fileAbsolutePath
+          frontmatter {
+            path
           }
         }
       }
@@ -100,26 +100,24 @@ exports.createPages = async ({ graphql, actions }) => {
     }
     const { pf4Docs, coreDocs, contentPages} = result.data;
 
-    contentPages.edges.forEach(({ node }) => {
-      console.log(`creating content page (mdx): ${node.frontmatter.path}`);
+    contentPages.nodes.forEach(node => {
+      // console.log(`creating content page (mdx): ${node.frontmatter.path}`);
       actions.createPage({
         path: node.frontmatter.path,
         component: path.resolve(`src/templates/contentTemplate.js`),
-        context: {}, // additional data can be passed via context
       })
     });
 
-    pf4Docs.edges.forEach(({node}) => {
+    pf4Docs.nodes.forEach(node => {
       const componentName = navHelpers.getFileName(node.fileAbsolutePath);
       const parentFolderName = navHelpers.getParentFolder(node.fileAbsolutePath, 3);
-      const folderName = navHelpers.getParentFolder(node.fileAbsolutePath);
       const section = node.frontmatter.section ? node.frontmatter.section : 'components';
 
       let link = '/bad-page/';
       // Create fullscreen example component pages
       if (node.frontmatter.fullscreen) {
         link = `/documentation/react/${section}/${parentFolderName}/${componentName}/`.toLowerCase();
-        console.log('creating pf4 fullscreen page (mdx):', link);
+        // console.log('creating pf4 fullscreen page (mdx):', link);
         actions.createPage({
           path: link,
           component: path.resolve('./src/templates/mdxFullscreenTemplate.js'),
@@ -132,45 +130,35 @@ exports.createPages = async ({ graphql, actions }) => {
       } else {
         // Normal templated component pages
         link = `/documentation/react/${section}/${componentName}/`.toLowerCase();
-        console.log('creating pf4 doc page (mdx):', link);
+        // console.log('creating pf4 doc page (mdx):', link);
         actions.createPage({
           path: link,
           component: path.resolve('./src/templates/mdxPF4Template.js'),
           context: {
             title: node.frontmatter.title,
             fileAbsolutePath: node.fileAbsolutePath, // Helps us get the markdown
-            pathRegex: `/${folderName}\/.*/`, // Helps us get the docgenned props
+            propComponents: node.frontmatter.propComponents || [], // Helps us get the docgenned props
             reactUrl: componentName, // Helps us get the description
           }
         });
       }
     });
 
-    coreDocs.edges.forEach(({ node }) => {
+    coreDocs.nodes.forEach(node => {
       const shortenedPath = node.relativePath.split('/').slice(1, 3).join('/').toLowerCase();
       const examplePath = `/documentation/core/${shortenedPath}`;
 
-      graphql(`
-        {
-          description: mdx(frontmatter: {htmlUrl: {eq: "${shortenedPath.split('/').pop()}"}}) {
-            code {
-              body
-            }
-          }
+      // console.log(`creating core doc page (${shortenedPath}):`, examplePath);
+      actions.createPage({
+        path: examplePath,
+        component: path.resolve(__dirname, node.absolutePath),
+        context: {
+          description: node.childMdx,
         }
-      `).then(result => {
-        console.log(`creating core doc page (${shortenedPath}):`, examplePath);
-        actions.createPage({
-          path: examplePath,
-          component: path.resolve(__dirname, node.absolutePath),
-          context: {
-            description: result.data.description,
-          }
-        });
-      })
+      });
 
       // also create a full demo page for each component
-      console.log(`creating page for: ${examplePath}-full`);
+      // console.log(`creating page for: ${examplePath}-full`);
       actions.createPage({
         path: `${examplePath}-full`,
         component: path.resolve(__dirname, node.absolutePath)

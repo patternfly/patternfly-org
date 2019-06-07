@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`test About Modal Box SHero 1`] = `
-<div
-  className="pf-c-about-modal-box__hero"
-/>
-`;
