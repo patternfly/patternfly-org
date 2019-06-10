@@ -69,7 +69,7 @@ Some usage examples include:
 **Note:** If information is not critical, don’t use a passive dialog. Instead, use inline notifications or toast notifications.
 
 #### Get required user input
-Sometimes users may need to provide additional input in order to complete an action. In this situation a form or other type of element may be incorporated into the modal. An example of this use case is the [modal wizard](/documentation/core/demos/wizard).
+Sometimes users may need to provide additional input in order to complete an action. In this situation a form or other type of element may be incorporated into the modal. An example of this use case is the [modal wizard](/documentation/core/demos/modal).
 
 ### Content
 * Clearly restate the action the user is trying to take and explicitly outline the consequences of that action.
