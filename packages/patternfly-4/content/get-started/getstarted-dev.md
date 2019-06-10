@@ -77,10 +77,10 @@ If you need to overwrite any elements, we recommend extending the variables foun
 
 When you install PatternFly 4, the package includes:
 
-  * A single file for the entire compiled library: `node_modules/@patternfly/patternfly/patternfly.css`
-  * Individual files with each component compiled separately: `node_modules/@patternfly/patternfly/<ComponentName>/styles.css`
-  * A single file for the entire library's source (Sass): `node_modules/@patternfly/patternfly/patternfly.scss`
-  * Individual files for each component's source (Sass): `node_modules/@patternfly/patternfly/<ComponentName>/styles.scss`
+  * A single file for the entire compiled library: ```node_modules/@patternfly/patternfly/patternfly.css```
+  * Individual files with each component compiled separately: ```node_modules/@patternfly/patternfly/<ComponentName>/styles.css```
+  * A single file for the entire library's source (Sass): ```node_modules/@patternfly/patternfly/patternfly.scss```
+  * Individual files for each component's source (Sass): ```node_modules/@patternfly/patternfly/<ComponentName>/styles.scss```
 
 Use these files to consume the library. The recommended consumption approach will vary from project to project.
 
