@@ -161,6 +161,7 @@ A pie chart may be the wrong choice when you need to compare categories to one a
 ![Pie chart](./img/piechart.png)
 
 1. **Pie chart fill**: We recommend that fill colors should be based on the [Colors for charts](/design-guidelines/styles/chart-colors).
+2. **Legend**: Each variable on the legend should report their current value.
 
 ### React component
 [Pie chart](/documentation/react/charts/chartpie)
