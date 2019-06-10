@@ -48,7 +48,7 @@ export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontS
   <>
     <h3>{title} {symbol && <span css={styles.gridTitleSymbol}>{symbol}</span>}</h3>
     <Grid gutter="sm" css={[styles.gridRowCenter, styles.typographyGrid]}>
-      <GridItem span={6}>
+      <GridItem span={12} sm={6}>
         <table css={styles.tableTypography} className="pf-c-table pf-m-compact" aria-label="typography usage guidelines breakout">
           <tbody>
             <tr>
@@ -70,7 +70,7 @@ export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontS
           </tbody>
         </table>
       </GridItem>
-      <GridItem span={6}>
+      <GridItem span={12} sm={6}>
         <StyledText fontWeight={fontWeight} fontSize={fontSize} lineHeight={lineHeight} className="pf4-site-typography-grid">
           {children}
         </StyledText>
@@ -119,11 +119,11 @@ export const SpacingContentItem = ({children, fontWeight, fontSize, lineHeight})
 export const Spacer = ({color, size, description, showBorder}) => {
   let backgroundColor = null;
   if (color === '8') {
-    backgroundColor = '#ff00ff';
+    backgroundColor = '#9bd917';
   } else if (color === '16') {
-    backgroundColor = '#ff9500';
+    backgroundColor = '#51a549';
   } else if (color === '24') {
-    backgroundColor = '#ffea00';
+    backgroundColor = '#1b8793';
   }
   return (
   <div style={{display: "flex", padding: description ? "15px" : "0px"}}>

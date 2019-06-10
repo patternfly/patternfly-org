@@ -124,12 +124,12 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
   When laying out text-based content, remember to take line height into account so you’re leaving the right amount of vertical space between each line of text.
 </p>
 
-<div class="border" style="font-size: 36px; width: 510px;">
+<div class="border" style="font-size: 36px;">
   Design is a journey of discovery
 </div>
 <div class="spacer16" style="height: 16px;">
 </div>
-<p class="border" style="width: 510px;">
+<p class="border">
   Body text should be Overpass Regular at 16px. It should have leading of 24px because of its relative line height of 1.5.
 </p>
 
