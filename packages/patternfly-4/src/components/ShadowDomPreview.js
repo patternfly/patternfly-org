@@ -27,11 +27,11 @@ const defaultProps = {
   isFull: false
 };
 
-const ShadowDomPreview = ({ children, className, isReact, isFull }) => {
+const ShadowDomPreview = ({ children, className, isReact, isFull, ...props }) => {
   // patternfly-icons assumes classes are nested under html tag, doesn't work in shadow dom so strip them out
   const strippedHtmlIconsStyles = patternFlyIcons.replace(/html\s/g, '');
   return (
-    <ShadowDOM>
+    <ShadowDOM {...props}>
       <div>
         {isReact && <style type="text/css" dangerouslySetInnerHTML={{__html: reactExampleStyles}} />}
         {!isReact && <style type="text/css" dangerouslySetInnerHTML={{__html: coreExampleStyles}} />}
