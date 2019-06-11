@@ -66,7 +66,6 @@ class Icons extends React.Component {
           <EmptyStateBody>
             We couldn't find any icons that matched your search. Try entering a new search term to find what you're looking for.
           </EmptyStateBody>
-          <Button component="a" variant="primary" href="#primaryIconsSearch">Search Again</Button>
         </EmptyState>
         }
     </>
