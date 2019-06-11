@@ -155,7 +155,7 @@ class Tokens extends React.Component {
             onChange={this.handleSearchChange}
           />
         </Form>
-        <Table className="pf-m-grid-2xl" variant="compact" aria-label="CSS Variables" sortBy={sortBy} onSort={this.onSort} cells={columns} rows={filteredRows}>
+        <Table className="table-css-vars pf-m-grid-2xl" variant="compact" aria-label="CSS Variables" sortBy={sortBy} onSort={this.onSort} cells={columns} rows={filteredRows}>
           <TableHeader />
           <TableBody />
         </Table>
