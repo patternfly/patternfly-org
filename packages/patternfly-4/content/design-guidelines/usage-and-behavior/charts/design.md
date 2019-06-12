@@ -10,10 +10,10 @@ Use charts to visualize data in an application. The type of chart you use will d
 ## Elements
 ![Chart](./img/axis-labels.png)
 
-1. **Title**: Titles should be left-aligned and appear above your chart.
-2. **Axis labels and scale values**:  We recommend using tick marks to clearly mark scale values on the y-axis. The text for axis labels and scale values should be 12px font in standard text color. All scale values should be equally distributed across the axis and the axis label should fall outside the scale values, centered with the axis line.
-3. **Legends**: We recommend using legends when charts include more than one variable and therefore use more than one color. If space is not available to display names of horizontal and vertical axes, a legend must be added instead. The legend should list the colors that each variable obtains and the name of the variable. The text on the legend should be 14px size and standard text color. They can either be placed left-aligned to the right of the chart or centered below the chart.
-4. **Chart tooltip**: A tooltip will appear on hover over certain elements of a chart, like bars in a bar chart or segments in a donut chart. Chart tooltips should display the specific values related to the element the user is hovering over.
+1. **Title:** Titles should be left-aligned and appear above your chart.
+2. **Axis labels and scale values:**  We recommend using tick marks to clearly mark scale values on the y-axis. The text for axis labels and scale values should be 12px font in standard text color. All scale values should be equally distributed across the axis and the axis label should fall outside the scale values, centered with the axis line.
+3. **Legends:** We recommend using legends when charts include more than one variable and therefore use more than one color. If space is not available to display names of horizontal and vertical axes, a legend must be added instead. The legend should list the colors that each variable obtains and the name of the variable. The text on the legend should be 14px size and standard text color. They can either be placed left-aligned to the right of the chart or centered below the chart.
+4. **Chart tooltip:** A tooltip will appear on hover over certain elements of a chart, like bars in a bar chart or segments in a donut chart. Chart tooltips should display the specific values related to the element the user is hovering over.
 
 ## Chart types
 - [Area charts](#area-chart): use to show trending over a continuous scale (usually time)
@@ -35,8 +35,8 @@ The most common use case for area charts is to show trending over a continuous s
 #### Example
 ![Area chart](./img/areachart.png)
 
-1. **Data area fill**: The area fill is presented below the data line. Data area fills use colors that conform with the [Colors for charts](/design-guidelines/styles/chart-colors).
-2. **Chart tooltip**: Use the chart tooltip to drill into the data related to any data point provided on your area chart.
+1. **Data area fill:** The area fill is presented below the data line. Data area fills use colors that conform with the [Colors for charts](/design-guidelines/styles/chart-colors).
+2. **Chart tooltip:** Use the chart tooltip to drill into the data related to any data point provided on your area chart.
 
 #### React component
 [Area chart](/documentation/react/charts/chartarea)
@@ -57,7 +57,7 @@ The orientation of bar charts is dependent on the data and space at hand. Any ba
 
 ![Vertical bar chart](./img/vertbarchart.png)
 
-1. **Bar**: All bars should be the same width. The height of the bar represents its value. The spacing between bars should be equal as well, mimicking the axis value spacing. For recommendations on fill colors, see [Colors for charts](/design-guidelines/styles/chart-colors).
+1. **Bar:** All bars should be the same width. The height of the bar represents its value. The spacing between bars should be equal as well, mimicking the axis value spacing. For recommendations on fill colors, see [Colors for charts](/design-guidelines/styles/chart-colors).
 
 #### React component
 [Bar chart](/documentation/react/charts/chartbar)
@@ -71,7 +71,7 @@ Stacked bar charts describe totals while allowing a degree of internal breakdown
 
 ![Vertical stacked bar chart](./img/vertstackedbarchart.png)
 
-1. **Stacked bar**: The first series name is represented by the topmost stacked bar, and the last series name is represented by the bottommost stacked bar. For recommendations on series colors, see [Colors for charts](/design-guidelines/styles/chart-colors).
+1. **Stacked bar:** The first series name is represented by the topmost stacked bar, and the last series name is represented by the bottommost stacked bar. For recommendations on series colors, see [Colors for charts](/design-guidelines/styles/chart-colors).
 
 #### React component
 [Stacked bar chart](/documentation/react/charts/chartstack)
@@ -92,11 +92,11 @@ For donut charts, don’t try to represent more than six categories. We recommen
 #### Example
 ![Donut chart](./img/donut-chart.png)
 
-1. **Segment fill**: We recommend using [Colors for charts] (/design-guidelines/styles/chart-colors) for different items within the donut chart.
-2. **Segment padding**:  Always provide 3px of padding between segments.
-3. **Chart tooltip**: A tooltip will appear upon hover that states the name of the segment and corresponding value. For example, if the segment represents “Bugs,” and the value being represented is 25, your chart tooltip would state, “Bugs: 25.”
-4. **Label**: When the Donut Chart is contained within a dashboard card, there is a label defining what the Donut Chart represents. The label may also represent the total value of the data set. If this optional representation is chosen, it should follow the format of [total numeric value] + [data set label]. The total numeric value should be rounded to two decimal places or less (14 characters max) and should be styled using 24px font in standard text color. The data set label cannot contain more than 24 characters and should be styled using 14px font in secondary text color. They are to be centered within the donut and styled as shown. If the label exceeds the max character count, place it outside of the donut and leave the center empty.
-5. **Legend**: In order to be compliant with accessibility guidelines, a legend is necessary. Each variable on the legend should report their current value.
+1. **Segment fill:** We recommend using [Colors for charts] (/design-guidelines/styles/chart-colors) for different items within the donut chart.
+2. **Segment padding:**  Always provide 3px of padding between segments.
+3. **Chart tooltip:** A tooltip will appear upon hover that states the name of the segment and corresponding value. For example, if the segment represents “Bugs,” and the value being represented is 25, your chart tooltip would state, “Bugs: 25.”
+4. **Label:** When the Donut Chart is contained within a dashboard card, there is a label defining what the Donut Chart represents. The label may also represent the total value of the data set. If this optional representation is chosen, it should follow the format of [total numeric value] + [data set label]. The total numeric value should be rounded to two decimal places or less (14 characters max) and should be styled using 24px font in standard text color. The data set label cannot contain more than 24 characters and should be styled using 14px font in secondary text color. They are to be centered within the donut and styled as shown. If the label exceeds the max character count, place it outside of the donut and leave the center empty.
+5. **Legend:** In order to be compliant with accessibility guidelines, a legend is necessary. Each variable on the legend should report their current value.
 
 #### React component
 [Donut chart](/documentation/react/charts/chartdonut)
@@ -106,10 +106,10 @@ For donut charts, don’t try to represent more than six categories. We recommen
 
 ![Donut utilization 2](./img/donut-utilization-2.png)
 
-1. **Unused segment fill**: The unused area of the donut chart will always remain at #EDEDED.
-2. **Used segment fill**: We recommend using #0066cc for the used area of the donut chart. See [Colors for charts](/design-guidelines/styles/chart-colors) for other recommended color options.
-3. **Utilization label**: Both percentages and whole numbers can be used to represent the utilization.
-4. **Chart tooltip**: Since this is a utilization donut chart, the tooltip will display the percentage of data utilized. Chart tooltips only appear on hover over the utilization segment of the chart. We recommend stating the segment name and the utilization value being captured. For example, if the user is tracking GBps utilization, the chart tooltip would state “GBps utilization: 75%.”
+1. **Unused segment fill:** The unused area of the donut chart will always remain at #EDEDED.
+2. **Used segment fill:** We recommend using #0066cc for the used area of the donut chart. See [Colors for charts](/design-guidelines/styles/chart-colors) for other recommended color options.
+3. **Utilization label:** Both percentages and whole numbers can be used to represent the utilization.
+4. **Chart tooltip:** Since this is a utilization donut chart, the tooltip will display the percentage of data utilized. Chart tooltips only appear on hover over the utilization segment of the chart. We recommend stating the segment name and the utilization value being captured. For example, if the user is tracking GBps utilization, the chart tooltip would state “GBps utilization: 75%.”
 
 #### React component
 [Donut utilization](/documentation/react/charts/chartdonututilization)
@@ -117,16 +117,16 @@ For donut charts, don’t try to represent more than six categories. We recommen
 ### Donut chart - Utilization with threshold
 ![Donut utilization with threshold](./img/donut-utilization-with-threshold.png)
 
-1. **Threshold segment fill**: The outer segments of the chart are static and represent the thresholds for your use case. The example diagrams show utilization thresholds for a database and are used to let users know when they move from a safe zone into a danger zone. For threshold segments, use incremental shades of  grey starting at #EDEDED then to #D2D2D2 then to #BBBBBB. Provide 3px of padding between each segment.
-2. **Utilization segment fill**: This dynamic chart is a concentric circle within the donut thresholds and will represent the data set. For this chart, we recommend using the following colors:
+1. **Threshold segment fill:** The outer segments of the chart are static and represent the thresholds for your use case. The example diagrams show utilization thresholds for a database and are used to let users know when they move from a safe zone into a danger zone. For threshold segments, use incremental shades of  grey starting at #EDEDED then to #D2D2D2 then to #BBBBBB. Provide 3px of padding between each segment.
+2. **Utilization segment fill:** This dynamic chart is a concentric circle within the donut thresholds and will represent the data set. For this chart, we recommend using the following colors:
   - #0066cc before the data set has hit a threshold
   - #F0AB00 once the data set has hit the warning threshold
   - #C9190B once the data set has hit the danger threshold
-3. **Legend**: The utilization segment color swatch will change in accordance to the chart.
+3. **Legend:** The utilization segment color swatch will change in accordance to the chart.
 
 ![Donut utilization with threshold hover](./img/donut-utilization-with-threshold-hover.png)
 
-4. **Chart tooltip**: Chart tooltips appear on hover for both threshold segments and utilization segments. We recommend stating the threshold name, the segment name, and the value being represented. For example, if the threshold being met is “Danger,” and the segment represents “Storage capacity,” and the value being represented is 92%, your chart tooltip would state, “Danger: Storage capacity: 92%.” We recommend stating the threshold name “at” the percentage the threshold begins (ex. Warning at 60%).
+4. **Chart tooltip:** Chart tooltips appear on hover for both threshold segments and utilization segments. We recommend stating the threshold name, the segment name, and the value being represented. For example, if the threshold being met is “Danger,” and the segment represents “Storage capacity,” and the value being represented is 92%, your chart tooltip would state, “Danger: Storage capacity: 92%.” We recommend stating the threshold name “at” the percentage the threshold begins (ex. Warning at 60%).
 
 #### React component
 [Donut utilization](/documentation/react/charts/chartdonututilization/#donut-utilization-chart-with-static-thresholds)
@@ -144,7 +144,7 @@ Multiple lines on the same chart allow the user to visualize relationships betwe
 #### Example
 ![Line chart](./img/linechart.png)
 
-1. **Line**: Line charts can optionally visually represent data points as dots on the line. If so, the same interaction that occurs when hovering over one in an [Area chart](#area-chart) will occur in line charts. For line colors, we recommend using the [Colors for charts](/design-guidelines/styles/chart-colors).
+1. **Line:** Line charts can optionally visually represent data points as dots on the line. If so, the same interaction that occurs when hovering over one in an [Area chart](#area-chart) will occur in line charts. For line colors, we recommend using the [Colors for charts](/design-guidelines/styles/chart-colors).
 
 ### React component
 [Line chart](/documentation/react/charts/chartline)
@@ -161,8 +161,8 @@ A pie chart may be the wrong choice when you need to compare categories to one a
 #### Example
 ![Pie chart](./img/piechart.png)
 
-1. **Pie chart fill**: We recommend that fill colors should be based on the [Colors for charts](/design-guidelines/styles/chart-colors).
-2. **Legend**: Each variable on the legend should report their current value.
+1. **Pie chart fill:** We recommend that fill colors should be based on the [Colors for charts](/design-guidelines/styles/chart-colors).
+2. **Legend:** Each variable on the legend should report their current value.
 
 ### React component
 [Pie chart](/documentation/react/charts/chartpie)
@@ -179,5 +179,5 @@ The brush and zoom properties allow for magnification of an area, bar, line or s
 
 ![Brush and zoom](./img/brush-and-zoom.png)
 
-1. **Window**: Click and drag to create a window around the section of the chart that you want to zoom in on
-2. **Magnified chart**: The portion selected will appear above the full chart view.
+1. **Window:** Click and drag to create a window around the section of the chart that you want to zoom in on
+2. **Magnified chart:** The portion selected will appear above the full chart view.
