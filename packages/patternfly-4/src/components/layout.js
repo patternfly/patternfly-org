@@ -24,7 +24,6 @@ import { Location } from '@reach/router';
 import brandImg from '../images/PatternFly_logo.svg';
 import Banner from './banner';
 import './layout.scss';
-import ShadowDomPreview from './ShadowDomPreview';
 
 // Set initial state
 let state = { isBannerOpen: true };
@@ -146,7 +145,6 @@ class Layout extends React.Component {
         <Location>
           {({ location }) => (
             <>
-            <ShadowDomPreview id="rootShadowDom"></ShadowDomPreview>
             {isBannerOpen && location.pathname === '/v4/' && <Banner onClose={this.closeBanner} />}
             <Header siteTitle={data.site.siteMetadata.title} />
             <Page isManagedSidebar={sideNav !== null} header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} /> : null}>

@@ -11,12 +11,11 @@
     "start": "gatsby develop",
     "format": "prettier --write \"src/**/*.js\"",
     "clean": "gatsby clean",
-    "repos": "node scripts/clean && yarn patternfly-next && yarn patternfly-react && yarn patternfly-styles && yarn get-patternfly-css && yarn compile-examples-css",
+    "repos": "node scripts/clean && yarn patternfly-next && yarn patternfly-react && yarn patternfly-styles && yarn compile-examples-css",
     "patternfly-next": "node ./scripts/patternfly-next.js",
     "patternfly-react": "node ./scripts/patternfly-react.js",
     "patternfly-styles": "node ./scripts/copyStyles.js",
     "preview-screenshots": "node ./scripts/previewScreenshots.js",
-    "get-patternfly-css": "node ./scripts/getPatternFlyCss.js",
     "compile-examples-css": "node-sass --importer ../../node_modules/node-sass-glob-importer/dist/cli.js -o _repos src/react-example-styles.scss"
   },
   "dependencies": {
