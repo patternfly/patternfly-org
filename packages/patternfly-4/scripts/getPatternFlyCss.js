@@ -1,15 +1,15 @@
 const fs = require('fs');
 const request = require('request');
 
-const packageJson = require('../package.json');
+const packageJson = require('@patternfly/react-core/package.json');
 // get the specific version of patternfly as used by the react examples
-const pfVersion = packageJson.dependencies['@patternfly/src-patternfly-next'].split('#v')[1];
-const patternFlySrc = `https://unpkg.com/@patternfly/patternfly@${pfVersion}/patternfly.css`;
-const patternFlyDest = '_repos/core/patternfly.css';
+const pfVersion = packageJson.devDependencies['@patternfly/patternfly'];
+const patternFlySrc = `https://unpkg.com/@patternfly/patternfly@${pfVersion}/patternfly.min.css`;
+const patternFlyDest = '_repos/react-core/patternfly.min.css';
 const patternFlyAddonsSrc = `https://unpkg.com/@patternfly/patternfly@${pfVersion}/patternfly-addons.css`;
-const patternFlyAddonsDest = '_repos/core/patternfly-addons.css';
+const patternFlyAddonsDest = '_repos/react-core/patternfly-addons.css';
 const patternFlyIconsSrc = `https://unpkg.com/@patternfly/patternfly@${pfVersion}/patternfly-icons.css`;
-const patternFlyIconsDest = '_repos/core/patternfly-icons.css'
+const patternFlyIconsDest = '_repos/react-core/patternfly-icons.css'
 
 const download = (url, dest, cb) => {
     const file = fs.createWriteStream(dest);

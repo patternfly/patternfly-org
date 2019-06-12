@@ -30,12 +30,12 @@ export default props => {
       <Example heading="Alert variations" handlebars={AlertVariationsRaw}>
         {alertVariations}
       </Example>
-      {/* <Example heading="Inline alert types" handlebars={AlertInlineRaw}>
+      <Example heading="Inline alert types" handlebars={AlertInlineRaw}>
         {alertInline}
-      </Example> */}
-      {/* <Example heading="Inline alert variations" handlebars={AlertInlineVariationsRaw}>
+      </Example>
+      <Example heading="Inline alert variations" handlebars={AlertInlineVariationsRaw}>
         {alertInlineVariations}
-      </Example> */}
+      </Example>
     </Documentation>
   );
 };
