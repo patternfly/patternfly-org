@@ -18,10 +18,10 @@ Use charts to visualize data in an application. The type of chart you use will d
 ## Chart types
 - [Area charts](#area-chart): use to show trending over a continuous scale (usually time)
 - [Bar charts](#bar-chart): great way to show and compare categorical data
-  - [Stacked bar charts](#stacked-bar-chart)
+  - [Stacked bar charts](#stacked-bar-charts)
 - [Donut charts](#donut-chart): use to show the relationship of a set of values to a whole or progress completion as a percentages
-  - [Donut utilization](#donut-chart-utilization): use to show utilization for an object as a percentages
-  - [Donut utilization with threshold](#donut-chart-utilization-with-threshold)
+  - [Donut utilization](#donut-chart--utilization): use to show utilization for an object as a percentages
+  - [Donut utilization with threshold](#donut-chart--utilization-with-threshold)
 - [Line chart](#line-chart): use to compare several data sets, or to show data over a period of time
 - [Pie chart](#pie-chart): show percentages or proportional data
 
@@ -46,7 +46,7 @@ The most common use case for area charts is to show trending over a continuous s
 Bar charts are used to visualize and compare categorical data.
 
 #### Usage
-Since bar charts differentiate by length, we recommend that in most cases they be used rather than donut or pie charts, which differentiate by angle and area. As a rule of thumb, bar charts are a great way to show and compare categorical data. If you want to show continuous data over time, you may consider using a [Line chart](#line-chart) instead. If you wish to show the percentage utilization ratio between used and available, you should check out the [Utilization donut chart](/documentation/react/charts/chartdonututilization).
+Since bar charts differentiate by length, we recommend that in most cases they be used rather than donut or pie charts, which differentiate by angle and area. As a rule of thumb, bar charts are a great way to show and compare categorical data. If you want to show continuous data over time, you may consider using a [Line chart](#line-chart) instead. If you wish to show the percentage utilization ratio between used and available, you should check out the [Utilization donut chart](#donut-chart--utilization).
 
 #### Horizontal vs. vertical bar charts
 
@@ -103,6 +103,7 @@ For donut charts, don’t try to represent more than six categories. We recommen
 
 ### Donut chart - Utilization
 ![Donut utilization](./img/donut-utilization.png) ![Donut utilization hover](./img/donut-utilization-hover.png)
+
 ![Donut utilization 2](./img/donut-utilization-2.png)
 
 1. **Unused segment fill**: The unused area of the donut chart will always remain at #EDEDED.
