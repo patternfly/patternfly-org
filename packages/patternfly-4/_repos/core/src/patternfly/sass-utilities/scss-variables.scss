@@ -4,7 +4,7 @@
 
 // `$pf-global--concept--PropiertyCamelCase--modifier--state`
 
-// Patternfly Options
+// Patternfly options
 //
 // Quickly modify global styling by enabling or disabling optional features.
 $pf-global--enable-reset: true !default;
@@ -114,7 +114,7 @@ $pf-global--font-path: "./assets/fonts" !default;
 // Iconpath
 $fa-font-path: "./assets/fonts/webfonts" !default;
 
-// FontIcon Path
+// FontIcon path
 $pf-global--fonticon-path: "./assets/pficon" !default;
 
 // Imagepath
@@ -129,11 +129,12 @@ $pf-global--spacer--xl: pf-size-prem(32px) !default;    // Light Blue
 $pf-global--spacer--2xl: pf-size-prem(48px) !default;   // Light Purple
 $pf-global--spacer--3xl: pf-size-prem(64px) !default;   // Dark Purple
 
-// Form Spacer - only used in forms
+// Form spacer - only used in forms
 $pf-global--spacer--form-element: pf-size-prem(6px) !default;
 
 // Gutter
 $pf-global--gutter: $pf-global--spacer--lg !default;
+$pf-global--gutter--md: $pf-global--spacer--md !default;
 
 // Ratio
 $pf-global--golden-ratio: 1.681 !default;
@@ -152,6 +153,7 @@ $pf-global--breakpoint--sm: 576px !default;
 $pf-global--breakpoint--md: 768px !default;
 $pf-global--breakpoint--lg: 992px !default;
 $pf-global--breakpoint--xl: 1200px !default;
+$pf-global--breakpoint--2xl: 1450px !default;
 
 // Borders
 $pf-global--BorderWidth--sm:     1px !default;
@@ -237,7 +239,8 @@ $pf-global--breakpoint-map: (
   "sm": "-on-sm",
   "md": "-on-md",
   "lg": "-on-lg",
-  "xl": "-on-xl"
+  "xl": "-on-xl",
+  "2xl": "-on-2xl"
 );
 
 // Global breakpoint list - used for @pf-utility-builder
@@ -245,7 +248,8 @@ $pf-global--breakpoint-list: (
   "sm",
   "md",
   "lg",
-  "xl"
+  "xl",
+  "2xl"
 );
 
 // Global breakpoint name map - used for %pf-hidden-visible
@@ -253,7 +257,8 @@ $pf-global--breakpoint-name-map: (
   "sm": $pf-global--breakpoint--sm,
   "md": $pf-global--breakpoint--md,
   "lg": $pf-global--breakpoint--lg,
-  "xl": $pf-global--breakpoint--xl
+  "xl": $pf-global--breakpoint--xl,
+  "2xl": $pf-global--breakpoint--2xl
 );
 
 // Spacer properties

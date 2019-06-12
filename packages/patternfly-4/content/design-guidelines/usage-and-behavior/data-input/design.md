@@ -99,13 +99,13 @@ Provide a switch to allow users to instantly toggle between an enabled or disabl
 ## Usage: Bound-entry controls
 Use bound-entry controls to enable users to enter special data types, such as dates, times, and other numeric data. Bound-entry controls constrain user input and combine keyboard and mouse interaction. These controls are designed to only allow valid inputs. As a result, field should be is unnecessary.
 
-Components coming soon!
+Datepicker and Slider components coming soon!
 
-### Datepicker
+<!-- ### Datepicker
 ![Datepicker](./img/datepicker.png)
 
 ### Slider
-![Slider](./img/slider.png)
+![Slider](./img/slider.png) -->
 
 ## Errors and validation
 In general, data input controls should work to help users avoid input errors. Do your best to disable options that might result in an error, and provide input components that help the user provide accurate data in the correct format. For example, a datepicker is better than a text field when asking users to provide a date because it helps to enforce the appropriate syntax.

@@ -71,19 +71,10 @@ exports[`Renders ContextSelector open 1`] = `
             type="search"
             value=""
           />
-          <Button
+          <Component
             aria-label="Search menu items"
-            className=""
-            component="button"
             id="pf-context-selector-search-button-id-0"
-            isActive={false}
-            isBlock={false}
-            isDisabled={false}
-            isFocus={false}
-            isHover={false}
-            isInline={false}
             onClick={[Function]}
-            type="button"
             variant="tertiary"
           >
             <SearchIcon
@@ -92,7 +83,7 @@ exports[`Renders ContextSelector open 1`] = `
               size="sm"
               title={null}
             />
-          </Button>
+          </Component>
         </InputGroup>
       </div>
       <ContextProvider
@@ -113,6 +104,7 @@ exports[`Renders ContextSelector open 1`] = `
             isHovered={false}
             key="0"
             onClick={[Function]}
+            sendRef={[Function]}
           >
             My Project
           </ContextSelectorItem>
@@ -122,6 +114,7 @@ exports[`Renders ContextSelector open 1`] = `
             isHovered={false}
             key="1"
             onClick={[Function]}
+            sendRef={[Function]}
           >
             OpenShift Cluster
           </ContextSelectorItem>
@@ -131,6 +124,7 @@ exports[`Renders ContextSelector open 1`] = `
             isHovered={false}
             key="2"
             onClick={[Function]}
+            sendRef={[Function]}
           >
             Production Ansible
           </ContextSelectorItem>
@@ -140,6 +134,7 @@ exports[`Renders ContextSelector open 1`] = `
             isHovered={false}
             key="3"
             onClick={[Function]}
+            sendRef={[Function]}
           >
             AWS
           </ContextSelectorItem>
@@ -149,6 +144,7 @@ exports[`Renders ContextSelector open 1`] = `
             isHovered={false}
             key="4"
             onClick={[Function]}
+            sendRef={[Function]}
           >
             Azure
           </ContextSelectorItem>

@@ -1,7 +1,7 @@
 //
-// Bootstrap Overwrite
+// Bootstrap overwrite
 //
-// Bootstrap overwrites from patternfly Variables
+// Bootstrap overwrites from patternfly variables
 
 // Colors
 // stylelint-disable
@@ -66,7 +66,8 @@ $grid-breakpoints: (
   sm: $pf-global--breakpoint--sm,
   md: $pf-global--breakpoint--md,
   lg: $pf-global--breakpoint--lg,
-  xl: $pf-global--breakpoint--xl
+  xl: $pf-global--breakpoint--xl,
+  2xl: $pf-global--breakpoint--2xl
 ) !default;
 
 // Grid columns
@@ -142,7 +143,7 @@ $table-cell-padding-sm:       $pf-global--spacer--sm !default;
 // $table-dark-color:            $body-bg !default;
 
 
-// Buttons + Forms
+// Buttons + forms
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 

@@ -18,9 +18,10 @@ Use modal dialogs load and display important information without navigating away
 ### When to use
 Use a modal dialog when information is critical and requires user input or attention.
 Use modals to:
-* [Validate user decisions](#Get-confirmation)
+
+* [Validate user decisions](#get-confirmation)
 * [Report errors](#report-errors)
-* [Provide the result of a task or state of an application](#Provide-the-result-of-a-task-or-state-of-an application)
+* [Provide the result of a task or state of an application](#provide-the-result-of-a-task-or-state-of-an-application)
 * [Get required user input](#get-required-user-input)
 
 ### When not to use

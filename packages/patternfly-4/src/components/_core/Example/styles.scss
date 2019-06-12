@@ -41,6 +41,8 @@
   }
 
   code {
+    display: inline-block;
+    word-break: break-all;
     min-width: 32px;
     padding: 4px 8px;
     background-color: var(--pf-global--primary-color--100);
@@ -49,7 +51,7 @@
     font-size: 12px;
     font-weight: 600;
     line-height: 18px;
-    white-space: nowrap;
+    white-space: normal;
     a {
       color: #fff;
       text-decoration: none;

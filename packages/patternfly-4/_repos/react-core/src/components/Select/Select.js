@@ -1,16 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from '@patternfly/patternfly/components/Select/select.css';
 import badgeStyles from '@patternfly/patternfly/components/Badge/badge.css';
 import formStyles from '@patternfly/patternfly/components/FormControl/form-control.css';
 import buttonStyles from '@patternfly/patternfly/components/Button/button.css';
 import { css } from '@patternfly/react-styles';
 import { TimesCircleIcon } from '@patternfly/react-icons';
-import PropTypes from 'prop-types';
+import { Chip, ChipGroup } from '../ChipGroup';
 import SingleSelect from './SingleSelect';
 import CheckboxSelect from './CheckboxSelect';
 import SelectToggle from './SelectToggle';
+import SelectOption from './SelectOption';
 import { SelectContext, SelectVariant } from './selectConstants';
-import { Chip, ChipGroup } from '../ChipGroup';
 
 // seed for the aria-labelledby ID
 let currentId = 0;
@@ -51,7 +52,7 @@ const propTypes = {
   /** Width of the select container as a number of px or string percentage */
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /** Additional props are spread to the container <ul> */
-  '': PropTypes.any
+  '': PropTypes.any // eslint-disable-line react/require-default-props
 };
 
 const defaultProps = {
@@ -101,10 +102,10 @@ class Select extends React.Component {
     }
     const filteredChildren =
       e.target.value !== ''
-        ? this.props.children.filter(child => child.props.value.search(input) === 0)
+        ? React.Children.toArray(this.props.children).filter(child => child.props.value.search(input) === 0)
         : this.props.children;
     if (filteredChildren.length === 0) {
-      filteredChildren.push(<div className={css(styles.selectMenuItem)}>No results found</div>);
+      filteredChildren.push(<SelectOption isDisabled key={0} value="No results found" />);
     }
     this.setState({
       typeaheadValue: e.target.value,
@@ -149,7 +150,7 @@ class Select extends React.Component {
     const selectToggleId = `pf-toggle-id-${currentId++}`;
     let childPlaceholderText = null;
     if (!selections && !placeholderText) {
-      const childPlaceholder = children.filter(child => child.props.isPlaceholder === true);
+      const childPlaceholder = React.Children.toArray(children).filter(child => child.props.isPlaceholder === true);
       childPlaceholderText =
         (childPlaceholder[0] && childPlaceholder[0].props.value) || (children[0] && children[0].props.value);
     }

@@ -43,6 +43,7 @@ Always provide labels for text and data input so users understand what informati
 * Whichever approach you use, we recommend that you maintain consistency throughout an application.
 
 **General guidelines**
+*  Use sentence-style capitalization for all text elements, **except**: product names and proper nouns. Sentence style capitalizes only the first word of each sentence and proper nouns, like names.
 * Always provide a label for input components.
 * Labels should clearly state the required input.
 * Do not use a colon after the label name.

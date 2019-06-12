@@ -106,6 +106,11 @@
   border: 0;
   border-radius: var(--pf-c-button--BorderRadius);
 
+  .pf-c-button__icon {
+    margin-right: var(--pf-c-button__icon--MarginRight);
+  }
+
+
   &::after {
     position: absolute;
     top: 0;
@@ -145,7 +150,7 @@
     width: 100%;
   }
 
-  // Primary Buttons
+  // Primary buttons
   &.pf-m-primary {
     color: var(--pf-c-button--m-primary--Color);
     background-color: var(--pf-c-button--m-primary--BackgroundColor);
@@ -169,7 +174,7 @@
     }
   }
 
-  // Secondary Buttons
+  // Secondary buttons
   &.pf-m-secondary {
     color: var(--pf-c-button--m-secondary--Color);
     background-color: var(--pf-c-button--m-secondary--BackgroundColor);
@@ -209,7 +214,7 @@
     }
   }
 
-  // Tertiary Buttons
+  // Tertiary buttons
   &.pf-m-tertiary {
     color: var(--pf-c-button--m-tertiary--Color);
     background-color: var(--pf-c-button--m-tertiary--BackgroundColor);
@@ -249,7 +254,7 @@
     }
   }
 
-  // Danger Buttons
+  // Danger buttons
   &.pf-m-danger {
     color: var(--pf-c-button--m-danger--Color);
     background-color: var(--pf-c-button--m-danger--BackgroundColor);
@@ -273,7 +278,7 @@
     }
   }
 
-  // Link Buttons
+  // Link buttons
   &.pf-m-link {
     color: var(--pf-c-button--m-link--Color);
 
@@ -311,7 +316,7 @@
     }
   }
 
-  // Disabled Buttons
+  // Disabled buttons
   // These styles need to go after the button types because they need to override some of the type styling
   &:disabled,
   &.pf-m-disabled {
@@ -324,7 +329,7 @@
     }
   }
 
-  // Icon Buttons
+  // Icon buttons
   &.pf-m-plain {
     color: var(--pf-c-button--m-plain--Color);
 
@@ -350,9 +355,4 @@
       background-color: var(--pf-c-button--m-plain--disabled--BackgroundColor);
     }
   }
-}
-
-// Add spacing to an icon in the button
-.pf-c-button__icon {
-  margin-right: var(--pf-c-button__icon--MarginRight);
 }
