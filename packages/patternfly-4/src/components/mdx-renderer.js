@@ -1,12 +1,14 @@
 import React from "react";
 import { useMDXComponents, mdx } from "@mdx-js/react";
 import { useMDXScope } from "gatsby-mdx/context";
+import ShadowDomPreview from './ShadowDomPreview';
 
 // Copy of `import { MDXRenderer } from 'gatsby-mdx';` with some added injection.
 export function MDXRenderer({
   scope,
   components,
   children,
+  isFull,
   ...props
 }) {
   const mdxComponents = useMDXComponents(components);
@@ -39,5 +41,9 @@ export function MDXRenderer({
     propComponents.code.prototype.getScope = () => fullScope;
   }
 
-  return element;
+  return isFull ? (
+    <ShadowDomPreview isReact isFull>
+      {element}
+    </ShadowDomPreview>
+  ) : element
 };
