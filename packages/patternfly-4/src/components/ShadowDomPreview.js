@@ -63,12 +63,16 @@ const ShadowDomPreview = ({ children, className, isReact, isFull, ...props }) =>
         {({ location }) => {
           const currentPath = location.pathname;
           // TODO: Update dependency of tippy in react-core as newer version supports shadow dom
+          // Don't shadow dom paths that use tooltip until that is done
           if (
             currentPath.indexOf('/documentation/react/components/popover') > -1 || 
-            currentPath.indexOf('/documentation/react/components/tooltip') > -1) {
-              return children;
+            currentPath.indexOf('/documentation/react/components/tooltip') > -1 ||
+            currentPath.indexOf('/documentation/react/components/applicationlauncher') > -1 ||
+            currentPath.indexOf('/documentation/react/components/chipgroup') > -1 ||
+            currentPath.indexOf('/documentation/react/components/clipboardcopy') > -1
+          ) {
+            return children;
           }
-          console.log(currentPath);
           return (
             <ShadowDOM {...props}>
               <div>
@@ -81,7 +85,8 @@ const ShadowDomPreview = ({ children, className, isReact, isFull, ...props }) =>
                 )}
                 {!isReact && <style type="text/css" dangerouslySetInnerHTML={{__html: coreExampleStyles}} />}
                 <>
-                  <style type="text/css" dangerouslySetInnerHTML={{__html: core}} />
+                  {/* Update assets path */}
+                  <style type="text/css" dangerouslySetInnerHTML={{__html: core.replace(/url\(assets\//g, 'url(/assets/')}} />
                   <style type="text/css" dangerouslySetInnerHTML={{__html: coreAddons}} />
                   {/* patternfly-icons assumes classes are nested under html tag, doesn't work in shadow dom so we strip them out below */}
                   <style type="text/css" dangerouslySetInnerHTML={{__html: coreIcons.replace(/html\s/g, '')}} />
