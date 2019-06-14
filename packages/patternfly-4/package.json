@@ -28,7 +28,6 @@
     "@patternfly/react-styles": "3.3.0",
     "@patternfly/react-table": "2.10.0",
     "@patternfly/react-tokens": "2.5.3",
-    "babel-standalone": "6.26.0",
     "capture-website": "^0.3.2",
     "classnames": "2.2.6",
     "clipboard-copy": "^2.0.1",
