@@ -81,7 +81,7 @@ Don't use link text to represent actions.
 
 Use specific, action-focused labels that match what the user will see when they arrive at their location. For example, if you are sending a user to a dashboard, your link label might read _View dashboard_. For a link directing a user to a support forum, you might say _Get help in the support forum_.
 
-See our [content guidelines](/design-guidelines/content/) for additional guidance.
+See our [content guidelines](/design-guidelines/content/writing) for additional guidance.
 
 ## Related components and demos
 **HTML/CSS**

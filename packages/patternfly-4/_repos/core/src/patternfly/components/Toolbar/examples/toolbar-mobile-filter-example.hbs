@@ -4,7 +4,7 @@
     {{> dropdown-toggle-button dropdown--IsToggleButton="true" dropdown-toggle-button--id=(concat toolbar--id '-split-button-dropdown-button') aria-label="Select"}}
   {{/dropdown}}
   {{#> button button--modifier="pf-m-plain pf-c-toolbar__filter-toggle pf-m-expanded" aria-label="Filter results"}}
-    {{> button-icon button-icon--type="filter"}}
+    <i class="fas fa-filter" aria-hidden="true"></i>
   {{/button}}
   {{#> toolbar-filter toolbar-filter--modifier="pf-m-expanded"}}
     {{#> select id=(concat toolbar--id '-select-checkbox') select--IsCheckboxSelect="true"}}
@@ -20,14 +20,14 @@
   {{/options-menu}}
   {{#> toolbar-action-group}}
     {{#> button button--modifier="pf-m-primary"}}
-      action
+      Action
     {{/button}}
     {{#> button button--modifier="pf-m-link"}}
-      secondary
+      Secondary
     {{/button}}
   {{/toolbar-action-group}}
   {{#> dropdown id=(concat toolbar--id '-dropdown') dropdown--modifier="pf-c-toolbar__action-list" dropdown--HasKebabIcon="true" dropdown-toggle--modifier="pf-m-plain" aria-label="Actions"}}
   {{/dropdown}}
-  {{#> toolbar-total-items}}37 Items{{/toolbar-total-items}}
+  {{#> toolbar-total-items}}37 items{{/toolbar-total-items}}
   {{#> toolbar-filter-list}}{{/toolbar-filter-list}}
 {{/toolbar}}

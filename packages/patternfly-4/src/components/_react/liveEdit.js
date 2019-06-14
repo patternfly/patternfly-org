@@ -1,7 +1,8 @@
 import React from 'react';
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
+import { LiveProvider, LiveEditor, LiveError, LivePreview, LiveContext } from 'react-live';
 import { css } from '@patternfly/react-styles';
 import EditorToolbar from '../example/editorToolbar';
+import ShadowDomPreview from '../ShadowDomPreview';
 
 class LiveEdit extends React.Component {
   constructor(props) {
@@ -60,8 +61,11 @@ class LiveEdit extends React.Component {
             styles: []
           }}
         >
-          {!noLive &&
-            <LivePreview className={css('example ws-preview', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')} />}
+          {!noLive && (
+            <LiveContext.Consumer>
+              {({ element: Element }) => Element && <ShadowDomPreview isReact><div className={css('example ws-preview', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')}><Element /></div></ShadowDomPreview>}
+            </LiveContext.Consumer>
+          )}
           <EditorToolbar
             raw={this.code}
             showLights={false}

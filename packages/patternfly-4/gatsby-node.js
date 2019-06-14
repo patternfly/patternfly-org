@@ -67,6 +67,7 @@ exports.createPages = async ({ graphql, actions }) => {
             section
             title
             fullscreen
+            propComponents
           }
         }
       },
@@ -110,7 +111,6 @@ exports.createPages = async ({ graphql, actions }) => {
     pf4Docs.nodes.forEach(node => {
       const componentName = navHelpers.getFileName(node.fileAbsolutePath);
       const parentFolderName = navHelpers.getParentFolder(node.fileAbsolutePath, 3);
-      const folderName = navHelpers.getParentFolder(node.fileAbsolutePath);
       const section = node.frontmatter.section ? node.frontmatter.section : 'components';
 
       let link = '/bad-page/';
@@ -137,7 +137,7 @@ exports.createPages = async ({ graphql, actions }) => {
           context: {
             title: node.frontmatter.title,
             fileAbsolutePath: node.fileAbsolutePath, // Helps us get the markdown
-            pathRegex: `/${folderName}\/.*/`, // Helps us get the docgenned props
+            propComponents: node.frontmatter.propComponents || [], // Helps us get the docgenned props
             reactUrl: componentName, // Helps us get the description
           }
         });

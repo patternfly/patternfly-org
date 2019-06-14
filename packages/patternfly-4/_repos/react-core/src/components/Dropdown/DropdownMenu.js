@@ -1,11 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from '@patternfly/patternfly/components/Dropdown/dropdown.css';
 import { css } from '@patternfly/react-styles';
-import PropTypes from 'prop-types';
 import { componentShape } from '../../helpers/componentShape';
 import ReactDOM from 'react-dom';
 import { keyHandler } from '../../helpers/util';
-import { DropdownPosition, DropdownDirection, DropdownArrowContext, DropdownContext } from './dropdownConstants';
+import { DropdownPosition, DropdownArrowContext, DropdownContext } from './dropdownConstants';
 import { KEY_CODES, KEYHANDLER_DIRECTION } from '../../helpers/constants';
 
 const propTypes = {
@@ -15,20 +15,26 @@ const propTypes = {
   className: PropTypes.string,
   /** Flag to indicate if menu is opened */
   isOpen: PropTypes.bool,
+  /** Flag to indicate if menu should be opened on enter */
+  openedOnEnter: PropTypes.bool,
   /** Indicates which component will be used as dropdown menu */
   component: componentShape,
   /** Indicates where menu will be alligned horizontally */
   position: PropTypes.oneOf(Object.values(DropdownPosition)),
+  /** Flag to indicate if menu is grouped */
+  isGrouped: PropTypes.bool,
   /** Additional props are spread to the container component */
-  '': PropTypes.any
+  '': PropTypes.any // eslint-disable-line react/require-default-props
 };
 
 const defaultProps = {
   children: null,
   className: '',
   isOpen: true,
+  openedOnEnter: false,
   position: DropdownPosition.left,
-  component: 'ul'
+  component: 'ul',
+  isGrouped: false
 };
 
 class DropdownMenu extends React.Component {
@@ -36,21 +42,31 @@ class DropdownMenu extends React.Component {
 
   componentDidMount() {
     if (this.props.openedOnEnter) {
-      if (this.props.component === 'ul') this.refsCollection[0].focus();
+      const focusTarget =
+        this.refsCollection.filter(
+          ref => ref && ((ref.current && !ref.current.hasAttribute('disabled')) || !ref.hasAttribute('disabled'))
+        )[0] || null;
+      if (this.props.component === 'ul') focusTarget && focusTarget.focus();
       else {
-        (this.refsCollection[0].current.focus && this.refsCollection[0].current.focus()) ||
-          ReactDOM.findDOMNode(this.refsCollection[0].current).focus();
+        (focusTarget.current.focus && focusTarget.current.focus()) ||
+          (focusTarget && ReactDOM.findDOMNode(focusTarget.current).focus()); // eslint-disable-line react/no-find-dom-node
       }
     }
   }
 
   childKeyHandler = (index, position, custom = false) => {
-    keyHandler(index, position, this.refsCollection, this.props.children, custom);
+    keyHandler(
+      index,
+      position,
+      this.refsCollection,
+      this.props.isGrouped ? this.refsCollection : this.props.children,
+      custom
+    );
   };
 
   sendRef = (index, node, isDisabled) => {
     if (!node.getAttribute) {
-      this.refsCollection[index] = ReactDOM.findDOMNode(node);
+      this.refsCollection[index] = ReactDOM.findDOMNode(node); // eslint-disable-line react/no-find-dom-node
     } else if (isDisabled || node.getAttribute('role') === 'separator') {
       this.refsCollection[index] = null;
     } else {
@@ -59,7 +75,25 @@ class DropdownMenu extends React.Component {
   };
 
   extendChildren() {
-    return React.Children.map(this.props.children, (child, index) =>
+    const { children, isGrouped } = this.props;
+    if (isGrouped) {
+      let index = 0;
+      return React.Children.map(children, group =>
+        React.cloneElement(group, {
+          children:
+            (group.props.children.constructor === Array &&
+              group.props.children.map(option =>
+                React.cloneElement(option, {
+                  index: index++
+                })
+              )) ||
+            React.cloneElement(group.props.children, {
+              index: index++
+            })
+        })
+      );
+    }
+    return React.Children.map(children, (child, index) =>
       React.cloneElement(child, {
         index
       })
@@ -95,8 +129,16 @@ class DropdownMenu extends React.Component {
   }
 
   render() {
-    const { className, isOpen, position, children, component: Component, openedOnEnter, ...props } = this.props;
-
+    const {
+      className,
+      isOpen,
+      position,
+      children,
+      component: Component,
+      isGrouped,
+      openedOnEnter,
+      ...props
+    } = this.props;
     return (
       <DropdownArrowContext.Provider
         value={{
@@ -121,18 +163,33 @@ class DropdownMenu extends React.Component {
             )}
           </DropdownContext.Consumer>
         ) : (
-          <Component
-            {...props}
-            className={css(
-              styles.dropdownMenu,
-              position === DropdownPosition.right && styles.modifiers.alignRight,
-              className
-            )}
-            hidden={!isOpen}
-            role="menu"
-          >
-            {this.extendChildren()}
-          </Component>
+          (isGrouped && (
+            <div
+              {...props}
+              className={css(
+                styles.dropdownMenu,
+                position === DropdownPosition.right && styles.modifiers.alignRight,
+                className
+              )}
+              hidden={!isOpen}
+              role="menu"
+            >
+              {this.extendChildren()}
+            </div>
+          )) || (
+            <Component
+              {...props}
+              className={css(
+                styles.dropdownMenu,
+                position === DropdownPosition.right && styles.modifiers.alignRight,
+                className
+              )}
+              hidden={!isOpen}
+              role="menu"
+            >
+              {this.extendChildren()}
+            </Component>
+          )
         )}
       </DropdownArrowContext.Provider>
     );
