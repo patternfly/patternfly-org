@@ -32,6 +32,9 @@
     top: 0;
   }
   .pf-c-nav__horizontal-list {
+    .pf-c-nav__item {
+      margin-right: 0;
+    }
     .pf-c-nav__link {
       padding-top: 22px;
       @media (max-width: 991px) {
