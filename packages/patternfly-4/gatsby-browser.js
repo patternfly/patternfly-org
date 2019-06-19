@@ -3,8 +3,8 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
-require('./_repos/core/src/patternfly/patternfly.scss');
-require('./_repos/core/src/patternfly/patternfly-addons.scss');
+require('@patternfly/patternfly/patternfly.scss');
+require('@patternfly/patternfly/patternfly-addons.scss');
 require('./src/styles/prism-coy.css');
 require('./src/workspace.scss');
 
