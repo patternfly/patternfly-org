@@ -26,6 +26,7 @@
     "@patternfly/react-styles": "3.4.6",
     "@patternfly/react-table": "2.13.43",
     "@patternfly/react-tokens": "2.6.5",
+    "@patternfly/react-virtualized-extension": "^1.1.15",
     "@webcomponents/webcomponentsjs": "^2.2.10",
     "capture-website": "^0.4.0",
     "classnames": "2.2.6",

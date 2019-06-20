@@ -40,23 +40,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `react-pages`,
-        path: `${__dirname}/_repos/patternfly-react/packages/patternfly-4/react-core`,
-        ignore: ignore.concat(`**/*.json`, `**/index.*`)
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `react-pages`,
-        path: `${__dirname}/_repos/patternfly-react/packages/patternfly-4/react-charts`,
-        ignore: ignore.concat(`**/*.json`, `**/index.*`)
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `react-pages`,
-        path: `${__dirname}/_repos/patternfly-react/packages/patternfly-4/react-table`,
+        path: `${__dirname}/_repos/patternfly-react`,
         ignore: ignore.concat(`**/*.json`, `**/index.*`)
       }
     },
@@ -64,8 +48,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `core-pages`,
-        path: `${__dirname}/_repos/patternfly-next/src`,
-        ignore: [`**/*.scss`, `**/*.md`]
+        path: `${__dirname}/_repos/patternfly-next`,
+        ignore: [`**/*.scss`, `**/build`, `**/patternfly-next/src/**/*.md`, `**/README*`, `**/CHANGELOG*`]
       }
     },
     {
@@ -100,12 +84,12 @@ module.exports = {
         extensions: ['.mdx', '.md'],
         gatsbyRemarkPlugins: [
           'gatsby-remark-autolink-headers',
-          {
+          /*{
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 700
             }
-          },
+          },*/
           'gatsby-remark-copy-linked-files'
         ]
       }
