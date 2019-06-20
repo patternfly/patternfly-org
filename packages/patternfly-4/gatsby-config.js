@@ -9,6 +9,7 @@ const ignore = [
   `**/utils`,
   `**/test-helpers`,
   /.*react-styles.*/,
+  /.*react-styled-system.*/,
   /.*react-docs.*/,
   /.*react-integration.*/,
   `**/\..*`, // dotfiles
@@ -48,8 +49,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `core-pages`,
-        path: `${__dirname}/_repos/patternfly-next`,
-        ignore: [`**/*.scss`, `**/build`, `**/patternfly-next/src/**/*.md`, `**/README*`, `**/CHANGELOG*`]
+        path: `${__dirname}/_repos/patternfly-next/src`,
+        ignore: [`**/*.scss`, `**/*.md`]
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `core-pages`,
+        path: `${__dirname}/_repos/patternfly-next/RELEASE-NOTES.md`,
       }
     },
     {
