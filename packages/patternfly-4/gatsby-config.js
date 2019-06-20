@@ -84,12 +84,12 @@ module.exports = {
         extensions: ['.mdx', '.md'],
         gatsbyRemarkPlugins: [
           'gatsby-remark-autolink-headers',
-          /*{
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 700
             }
-          },*/
+          },
           'gatsby-remark-copy-linked-files'
         ]
       }
