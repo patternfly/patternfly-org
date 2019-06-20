@@ -1,8 +1,8 @@
 $theme: '.colors-theme--';
 
 @mixin color-block-dimensions {
-  height: 100px;
-  width: 100px;
+  height: 85px;
+  width: 85px;
 }
 
 .colors-in-context {
@@ -148,8 +148,6 @@ $gallery-colors: (
 );
 
 .chart-colors-gallery {
-  grid-template-columns: repeat(auto-fill, 100px);
-
   &--blue-1 {
     @include color-block-dimensions;
     background-color: map-get($gallery-colors, "blue1");
