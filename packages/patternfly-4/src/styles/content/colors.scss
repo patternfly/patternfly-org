@@ -1,8 +1,8 @@
 $theme: '.colors-theme--';
 
 @mixin color-block-dimensions {
-  height: 75px;
-  width: 75px;
+  height: 85px;
+  width: 85px;
 
   @media screen and (min-width: 1200px) {
     height: 100px;
