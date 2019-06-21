@@ -2656,6 +2656,11 @@
     "@webassemblyjs/wast-parser" "1.7.11"
     "@xtuc/long" "4.2.1"
 
+"@webcomponents/webcomponentsjs@^2.2.10":
+  version "2.2.10"
+  resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-2.2.10.tgz#6f6bee0277833ae98d7e5b46f1e0fdb48cd5ff44"
+  integrity sha512-5dzhUhP+h0qMiK0IWb7VNb0OGBoXO3AuI6Qi8t9PoKT50s5L1jv0xnwnLq+cFgPuTB8FLTNP8xIDmyoOsKBy9Q==
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
@@ -3954,11 +3959,6 @@ babel-runtime@^6.22.0, babel-runtime@^6.26.0:
   dependencies:
     core-js "^2.4.0"
     regenerator-runtime "^0.11.0"
-
-babel-standalone@6.26.0:
-  version "6.26.0"
-  resolved "https://registry.yarnpkg.com/babel-standalone/-/babel-standalone-6.26.0.tgz#15fb3d35f2c456695815ebf1ed96fe7f015b6886"
-  integrity sha1-Ffs9NfLEVmlYFevx7Zb+fwFbaIY=
 
 babel-template@^6.16.0, babel-template@^6.24.1, babel-template@^6.26.0:
   version "6.26.0"
@@ -10374,6 +10374,11 @@ humanize-ms@^1.2.1:
   dependencies:
     ms "^2.0.0"
 
+humps@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/humps/-/humps-2.0.1.tgz#dd02ea6081bd0568dc5d073184463957ba9ef9aa"
+  integrity sha1-3QLqYIG9BWjcXQcxhEY5V7qe+ao=
+
 i@0.3.x:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/i/-/i-0.3.6.tgz#d96c92732076f072711b6b10fd7d4f65ad8ee23d"
@@ -15552,10 +15557,12 @@ react-reconciler@^0.20.0:
     prop-types "^15.6.2"
     scheduler "^0.13.6"
 
-react-shadow@^16.3.2:
-  version "16.3.2"
-  resolved "https://registry.yarnpkg.com/react-shadow/-/react-shadow-16.3.2.tgz#a431a7101b0e222dbc669c4070ab395f42dbb675"
-  integrity sha512-NxFoBvEg2WD3V25jgiWgIltpDfs2XBCbDyi63jEM6Gch8g8r2cqJxSWy2GfG666EfOpRR5Zsrhu0Qn5yze1PrA==
+react-shadow@^17.1.1:
+  version "17.1.1"
+  resolved "https://registry.yarnpkg.com/react-shadow/-/react-shadow-17.1.1.tgz#948ae0e810fd20f5b65ffe2327a78e30f29b0982"
+  integrity sha512-UjzfVxwtVozqXIhMgg6Wi5P3jhyRmF2raebyyVRq1pS1832zTiYi98m31pV0MJGRL0x9kA55Jr/eYU+SAKQXRQ==
+  dependencies:
+    humps "^2.0.0"
 
 react-side-effect@^1.1.0:
   version "1.1.5"

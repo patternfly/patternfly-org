@@ -14,7 +14,7 @@
     "repos": "node scripts/clean.js && yarn patternfly-styles.js && yarn compile-examples-css",
     "patternfly-styles": "node ./scripts/copyStyles.js",
     "preview-screenshots": "node ./scripts/previewScreenshots.js",
-    "compile-examples-css": "node-sass --importer ../../node_modules/node-sass-glob-importer/dist/cli.js -o _repos src/react-example-styles.scss"
+    "compile-examples-css": "node-sass --importer ../../node_modules/node-sass-glob-importer/dist/cli.js -o _repos src/example-styles.scss"
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
@@ -28,6 +28,7 @@
     "@patternfly/react-styles": "3.3.0",
     "@patternfly/react-table": "2.10.0",
     "@patternfly/react-tokens": "2.5.3",
+    "@webcomponents/webcomponentsjs": "^2.2.10",
     "capture-website": "^0.3.2",
     "classnames": "2.2.6",
     "clipboard-copy": "^2.0.1",
@@ -74,7 +75,7 @@
     "react-icons": "^3.6.1",
     "react-live": "2.0.1",
     "react-pose": "^4.0.8",
-    "react-shadow": "^16.3.2",
+    "react-shadow": "^17.1.1",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
     "to-string-loader": "^1.1.5"

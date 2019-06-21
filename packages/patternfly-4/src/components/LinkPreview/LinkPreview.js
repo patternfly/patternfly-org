@@ -23,7 +23,7 @@ const LinkPreview = ({ data, name, path }) => {
         if (previewScreenshot && previewScreenshot.length > 0) {
           return (
             <div className="Preview__body">
-              <a href={path} target="_blank" rel="noopener noreferrer">
+              <a href={path.replace(/ /g, '%20')} target="_blank" rel="noopener noreferrer">
                 <div className="preview-container">
                   <Img
                     fluid={previewScreenshot[0].node.childImageSharp.fluid}
@@ -43,7 +43,7 @@ const LinkPreview = ({ data, name, path }) => {
           return (
             <div className="Preview__body">
               This Preview can only be accessed in&nbsp;
-              <a href={path} target="_blank" rel="noopener noreferrer">
+              <a href={path.replace(/ /g, '%20')} target="_blank" rel="noopener noreferrer">
                 full page mode
               </a>.
             </div>
