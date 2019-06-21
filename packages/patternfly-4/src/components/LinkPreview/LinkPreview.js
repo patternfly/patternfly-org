@@ -5,27 +5,25 @@ import Img from 'gatsby-image';
 import './LinkPreview.scss';
 
 const LinkPreview = ({ data, name, path }) => {
-  const encodePath = (path, withBangs) => {
-    const encodedPath = path
+  const encodePath = path => path
     .replace(data.site.pathPrefix, '')
     .replace('?', '/?')
-    .replace(/ /g, '%20');
-  return withBangs ? encodedPath.replace(/\//g, '!') : encodedPath;
-  }
+    .replace(/ /g, '%20')
+    .replace(/\//g, '!');
 
   return (
     <Location>
       {({ location }) => {
-        let fileNameFromUrl = encodePath(path, true);
+        let fileNameFromUrl = encodePath(path);
         if (fileNameFromUrl.split('!').length < 3) {
           // It's a PF4 md page, clearly too short
-          fileNameFromUrl = encodePath(location.pathname + path + '/', true);
+          fileNameFromUrl = encodePath(location.pathname + path + '/');
         }
         const previewScreenshot = data ? data.allFile.edges.filter(({ node }) => node.relativePath.endsWith(`${fileNameFromUrl}.png`)) : null;
         if (previewScreenshot && previewScreenshot.length > 0) {
           return (
             <div className="Preview__body">
-              <a href={encodePath(path)} target="_blank" rel="noopener noreferrer">
+              <a href={path.replace(/ /g, '%20')} target="_blank" rel="noopener noreferrer">
                 <div className="preview-container">
                   <Img
                     fluid={previewScreenshot[0].node.childImageSharp.fluid}
@@ -45,7 +43,7 @@ const LinkPreview = ({ data, name, path }) => {
           return (
             <div className="Preview__body">
               This Preview can only be accessed in&nbsp;
-              <a href={encodePath(path)} target="_blank" rel="noopener noreferrer">
+              <a href={path.replace(/ /g, '%20')} target="_blank" rel="noopener noreferrer">
                 full page mode
               </a>.
             </div>

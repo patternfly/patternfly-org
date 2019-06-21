@@ -42,11 +42,17 @@ const ShadowDomPreview = ({ children, className, isReact, isFull, ...props }) =>
           }
           return (
             <ShadowDOM.div {...props}>
-              <style type="text/css" dangerouslySetInnerHTML={{__html: exampleStyles}} />
-              {isReact && !isFull && <style type="text/css">{styles}</style>}
-              <div className={children ? `ws-example ${className}` : className}>
-                {children}
-              </div>
+              <html>
+                <head>
+                  <style type="text/css" dangerouslySetInnerHTML={{__html: exampleStyles}} />
+                  {isReact && !isFull && <style type="text/css">{styles}</style>}
+                </head>
+                <body>
+                  <div className={children ? `ws-example ${className}` : className}>
+                    {children}
+                  </div>
+                </body>
+              </html>
             </ShadowDOM.div>
           )
         }}

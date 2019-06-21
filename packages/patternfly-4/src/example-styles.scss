@@ -35,5 +35,8 @@
 }
 
 $pf-global--image-path: "/assets/images";
+$pf-global--font-path: "/assets/fonts";
+$fa-font-path: "/assets/fonts/webfonts";
+$pf-global--fonticon-path: "/assets/pficon";
 @import '../../../node_modules/@patternfly/patternfly/patternfly.scss';
-@import '../../../node_modules/@patternfly/patternfly/assets/fontawesome/fontawesome.scss';
+@import '../../../node_modules/@patternfly/patternfly/patternfly-addons.scss';
