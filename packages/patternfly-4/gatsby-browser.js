@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
+require('@webcomponents/webcomponentsjs/webcomponents-bundle');
 require('./_repos/core/src/patternfly/patternfly.scss');
 require('./_repos/core/src/patternfly/patternfly-addons.scss');
 require('./src/styles/prism-coy.css');
