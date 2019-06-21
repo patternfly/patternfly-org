@@ -25,7 +25,7 @@ The login page allows a user to gain access to an application by entering their 
 
 8. **Forgot password/username link (optional):** takes users to a page where they can recover their password and/or username
 
-9. **[Background image](/documentation/react/components/backgroundimage):** any background image can be used for your application; it will automatically have a gradient applied to it to aid readability.
+9. **[Background image](documentation/react/components/backgroundimage/):** any background image can be used for your application; it will automatically have a gradient applied to it to aid readability.
 
 10. **Logotype:** provides an area for product logo  
 
