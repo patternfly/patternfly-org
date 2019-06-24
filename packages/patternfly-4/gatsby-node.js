@@ -60,17 +60,18 @@ exports.createPages = async ({ graphql, actions }) => {
   })
   await graphql(`
     {
-      pf4Docs: allMdx(filter: {fileAbsolutePath: {glob: "**/patternfly-4/_repos/react*/**"} }) {
+      pf4Docs: allMdx(filter: {fileAbsolutePath: {glob: "**/packages/patternfly-4/react-*/**"} }) {
         nodes {
           fileAbsolutePath
           frontmatter {
             section
             title
             fullscreen
+            propComponents
           }
         }
       },
-      coreDocs: allFile(filter: { absolutePath: { glob: "**/_repos/core/**/examples/index.js" } } ) {
+      coreDocs: allFile(filter: { absolutePath: { glob: "**/patternfly-next/**/examples/index.js" } } ) {
         nodes {
           relativePath
           relativeDirectory
@@ -110,7 +111,6 @@ exports.createPages = async ({ graphql, actions }) => {
     pf4Docs.nodes.forEach(node => {
       const componentName = navHelpers.getFileName(node.fileAbsolutePath);
       const parentFolderName = navHelpers.getParentFolder(node.fileAbsolutePath, 3);
-      const folderName = navHelpers.getParentFolder(node.fileAbsolutePath);
       const section = node.frontmatter.section ? node.frontmatter.section : 'components';
 
       let link = '/bad-page/';
@@ -137,7 +137,7 @@ exports.createPages = async ({ graphql, actions }) => {
           context: {
             title: node.frontmatter.title,
             fileAbsolutePath: node.fileAbsolutePath, // Helps us get the markdown
-            pathRegex: `/${folderName}\/.*/`, // Helps us get the docgenned props
+            propComponents: node.frontmatter.propComponents || [], // Helps us get the docgenned props
             reactUrl: componentName, // Helps us get the description
           }
         });
@@ -170,7 +170,7 @@ exports.createPages = async ({ graphql, actions }) => {
 exports.onCreateWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) => {
   if (partialsToLocationsMap === null) {
     partialsToLocationsMap = {};
-    glob(path.resolve(__dirname, './_repos/core/src/patternfly/**/*.hbs'), { ignore: '**/examples/**' }, (err, files) => {
+    glob(path.resolve(__dirname, './_repos/patternfly-next/src/patternfly/**/*.hbs'), { ignore: '**/examples/**' }, (err, files) => {
       files.forEach(file => {
         const fileNameArr = file.split('/');
         const fileName = fileNameArr[fileNameArr.length - 1].slice(0, -4);
@@ -195,7 +195,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }
             callback(new Error(`Could not find partial: ${partial}`), '');
           }
         },
-        helperDirs: path.resolve(__dirname, './_repos/core/build/helpers')
+        helperDirs: path.resolve(__dirname, './_repos/patternfly-next/build/helpers')
       },
       loader: 'handlebars-loader'
     },
@@ -209,10 +209,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }
 
   config.resolve.alias = {
     '@siteComponents': path.resolve(__dirname, './src/components/_core'),
-    '@components': path.resolve(__dirname, './_repos/core/src/patternfly/components'),
-    '@layouts': path.resolve(__dirname, './_repos/core/src/patternfly/layouts'),
-    '@demos': path.resolve(__dirname, './_repos/core/src/patternfly/demos'),
-    '@project': path.resolve(__dirname, './_repos/core/src'),
+    '@components': path.resolve(__dirname, './_repos/patternfly-next/src/patternfly/components'),
+    '@layouts': path.resolve(__dirname, './_repos/patternfly-next/src/patternfly/layouts'),
+    '@demos': path.resolve(__dirname, './_repos/patternfly-next/src/patternfly/demos'),
+    '@project': path.resolve(__dirname, './_repos/patternfly-next/src'),
     '@content': path.resolve(__dirname, './src/components/content'),
     ...config.resolve.alias
   };

@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 
 const DocsCorePage = () => (
   <Layout sideNav={<SideNav />}>
-    <SEO title="Core" />
+    <SEO title="HTML" />
     <PageSection variant={PageSectionVariants.dark}>
       <Title size="2xl" className={css(styles.heroText)}>
         @patternfly/patternfly

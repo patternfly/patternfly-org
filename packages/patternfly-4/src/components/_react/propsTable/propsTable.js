@@ -24,6 +24,22 @@ const defaultProps = {
   description: ''
 };
 
+const renderType = prop => {
+  if (prop.type) {
+    // JS prop
+    return prop.type.name;
+  } else if (prop.tsType) {
+    // TS Prop
+    if (prop.tsType.raw) {
+      // Raw is like 'h1' | 'h2' | 'h3'
+      return prop.tsType.raw;
+    }
+    return prop.tsType.name;
+  }
+
+  return '';
+};
+
 export const PropsTable = ({ name, description: preface, props }) => {
   return (
     <Section
@@ -45,7 +61,7 @@ export const PropsTable = ({ name, description: preface, props }) => {
           {props.map(prop => (
             <Row key={prop.name}>
               <TD>{prop.name}</TD>
-              <TD>{prop.type.name}</TD>
+              <TD>{renderType(prop)}</TD>
               <TD align="center">{prop.required && <ExclamationCircleIcon />}</TD>
               <TD>{prop.defaultValue ? prop.defaultValue.value : ''}</TD>
               <TD>{prop.description}</TD>
