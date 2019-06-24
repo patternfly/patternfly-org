@@ -3,6 +3,7 @@ import ShadowDOM from 'react-shadow';
 import PropTypes from 'prop-types';
 import exampleStyles from '!raw!../../_repos/example-styles.css';
 import { Location } from '@reach/router';
+import queryString from 'query-string';
 
 const styles = `
   .ws-example { 
@@ -28,6 +29,7 @@ const ShadowDomPreview = ({ children, className, isReact, isFull, ...props }) =>
   return (
     <Location>
         {({ location }) => {
+          const params = location.search ? queryString.parse(location.search, { parseBooleans: true }) : '';
           const currentPath = location.pathname;
           // TODO: Update dependency of tippy in react-core as newer version supports shadow dom
           // Don't shadow dom paths that use tooltip until that is done
@@ -38,6 +40,10 @@ const ShadowDomPreview = ({ children, className, isReact, isFull, ...props }) =>
             currentPath.indexOf('/documentation/react/components/chipgroup') > -1 ||
             currentPath.indexOf('/documentation/react/components/clipboardcopy') > -1
           ) {
+            return children;
+          }
+          // turn off shadow-dom if ?shadow=false is passed into the URL
+          if (params.shadow === false) {
             return children;
           }
           return (
