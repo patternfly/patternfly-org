@@ -1,5 +1,6 @@
 .pf-c-page__header {
   background-color: #151515;
+  min-height: unset;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr auto;
@@ -32,6 +33,9 @@
     top: 0;
   }
   .pf-c-nav__horizontal-list {
+    .pf-c-nav__item {
+      margin-right: 0;
+    }
     .pf-c-nav__link {
       padding-top: 22px;
       @media (max-width: 991px) {
