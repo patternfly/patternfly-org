@@ -12,7 +12,7 @@ As a designer, here are some of the contributions you can make:
 Work with PatternFly to design a new feature for your product and contribute it back to the system simultaneously.
 
 __Example__
-*I want to design and contribute a new design pattern for that allows a user to favorite or like an item in a data list.*
+*I want to design and contribute a new design pattern that allows a user to favorite or like an item in a data list.*
 
 ### Enhancement
 Improve or update an existing PatternFly 4 component or design pattern.

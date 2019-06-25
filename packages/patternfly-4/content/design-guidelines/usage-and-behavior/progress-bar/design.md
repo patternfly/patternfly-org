@@ -9,10 +9,10 @@ Progress bars inform users about the status of ongoing processes, such as loadin
 
 Progress bars are composed of four elements:
 
-1. **Title**: concisely conveys the task the user or system is working to complete
-2. **Track**: a visual guide to describe to the user what it takes to meet full task completion
-3. **Value of progress**: a value that helps the user understand how much progress has been made 
-4. **Indicator**: an animated indicator along the track that draws the user's eye to the progress bar and demonstrates the user’s progress towards completion
+1. **Title:** Concisely conveys the task the user or system is working to complete
+2. **Track:** A visual guide to describe to the user what it takes to meet full task completion
+3. **Value of progress:** A value that helps the user understand how much progress has been made
+4. **Indicator:** An animated indicator along the track that draws the user's eye to the progress bar and demonstrates the user’s progress towards completion
 
 ## Usage
 Use a progress bar to visually indicate an extended operation that needs to be completed by a user or system.
@@ -100,7 +100,7 @@ Titles should clearly describe the process that is being measure. Try to keep ti
 
 Do not provide any other supporting copy to the progress bar that would require the user to read about how to use the progress bar. A progress bar should be self-explanatory if you implement labels 1 through 4 that are detailed in the article above.
 
-See our [content guidelines](/design-guidelines/content/) for additional guidance.
+See our [content guidelines](/design-guidelines/content/writing) for additional guidance.
 
 ## Components and demos used
 The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use-cases. We’ll explore several examples in this documentation.

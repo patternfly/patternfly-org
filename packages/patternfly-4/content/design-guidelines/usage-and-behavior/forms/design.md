@@ -12,17 +12,17 @@ Most forms will contain the following basic elements:
 *Form elements*
 ![Form elements](./img/form-elements.png)
 
-1. [Labels](#labeling) - Field labels can be aligned to the top or left of the field depending on the layout of your page and the amount of space you have to work with.
+1. [Labels](#labeling): Field labels can be aligned to the top or left of the field depending on the layout of your page and the amount of space you have to work with.
 
-2. [Text input/text area](/design-guidelines/usage-and-behavior/data-input) - provides an area for users to input free-form text.
+2. [Text input/text area](/design-guidelines/usage-and-behavior/data-input): Provides an area for users to input free-form text.
 
-3. [Data input](#choose-the-right-data-input) - provides a way for users to submit any information that is not free-form text.
+3. [Data input](#choose-the-right-data-input): Provides a way for users to submit any information that is not free-form text.
 
-4. [Help](#provide-the-right-kind-of-help) - provides contextual assistance like popovers, placeholder text, or helper text, in any area where the user might need additional information to provide the right input.
+4. [Help](#provide-the-right-kind-of-help): Provides contextual assistance like popovers, placeholder text, or helper text, in any area where the user might need additional information to provide the right input.
 
-5. [Errors and validation](#provide-errors-and-validation) - ensures that the correct information is collected before the form can be submitted to the system.
+5. [Errors and validation](#provide-errors-and-validation): Ensures that the correct information is collected before the form can be submitted to the system.
 
-6. Buttons - enable a user to submit or exit a form. Button placement depends on the type of form you're presenting to the user.
+6. **Buttons:** Enable a user to submit or exit a form. Button placement depends on the type of form you're presenting to the user.
 
 7. [Required field indicator](#indicating-required-fields)
 
@@ -43,6 +43,7 @@ Always provide labels for text and data input so users understand what informati
 * Whichever approach you use, we recommend that you maintain consistency throughout an application.
 
 **General guidelines**
+*  Use sentence-style capitalization for all text elements, **except**: product names and proper nouns. Sentence style capitalizes only the first word of each sentence and proper nouns, like names.
 * Always provide a label for input components.
 * Labels should clearly state the required input.
 * Do not use a colon after the label name.
@@ -83,7 +84,7 @@ A required field should be indicated with an asterisk ( * ) to the right of the 
 
 ![Required field image](./img/required-field.png)
 
-If **all fields** on a form are required, do not use an asterisk for every field. Instead, provide a message at the top of the form stating, "All fields are required." If all field are optional, the message should state, "All fields are optional."
+If **all fields** on a form are required, do not use an asterisk for every field. Instead, provide a message at the top of the form stating, "All fields are required." If all fields are optional, the message should state, "All fields are optional."
 
 ![All required](./img/all-required.png)
 
@@ -131,7 +132,7 @@ Use a **popover** for longer (2 sentences or more) explanations, content that re
   **DON'T**
 
   * Don’t use popovers to compensate for bad design or rely on them to explain a graphic or word choice.
-  * **Never** hide critical information in an popover. Don’t put any information into an popover that a user will always need to complete their task.
+  * **Never** hide critical information in a popover. Don’t put any information into a popover that a user will always need to complete their task.
 
 **Helper text**
 
@@ -265,7 +266,7 @@ The PatternFly components listed can be used in a number of ways to build forms 
 **React components**
 * [Form](/documentation/react/components/form)
 * [Button](/documentation/react/components/button)
-* [Checkbox](documentation/react/components/checkbox)
+* [Checkbox](/documentation/react/components/checkbox)
 * [Dropdown](/documentation/react/components/dropdown)
 * [Progress](/documentation/react/components/progress)
 * [Radio](/documentation/react/components/radio)

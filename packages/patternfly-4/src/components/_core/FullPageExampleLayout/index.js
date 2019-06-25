@@ -1,10 +1,12 @@
 import React from 'react';
 import Header from '../../header';
-// import '../../../../_repos/core/src/patternfly/patternfly-base.scss';
+import ShadowDomPreview from '../../ShadowDomPreview';
 
 export default ({ children }) => (
   <div>
     <Header siteTitle="Full Page Example" />
-    <div>{children}</div>
+    <ShadowDomPreview isFull>
+      {children}
+    </ShadowDomPreview>
   </div>
 );
