@@ -1,5 +1,6 @@
 .pf-c-page__header {
   background-color: #151515;
+  min-height: unset;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr auto;
