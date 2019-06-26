@@ -1,8 +1,13 @@
 $theme: '.colors-theme--';
 
 @mixin color-block-dimensions {
-  height: 85px;
-  width: 85px;
+  height: 65px;
+  width: 65px;
+
+  @media screen and (min-width: 768px) {
+    height: 85px;
+    width: 85px;
+  }
 
   @media screen and (min-width: 1200px) {
     height: 100px;
@@ -322,6 +327,16 @@ $gallery-colors: (
        order: 5;
        margin-top: 31px;
      }
+  }
+}
+
+.css-var-text {
+  display: none;
+  visibility: hidden;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    visibility: visible;
   }
 }
 
