@@ -94,6 +94,9 @@ $block: '.pf4';
   .rightAlign {
     text-align: right;
   }
+  td {
+    word-break: break-word;
+  }
 }
 
 .ws-example {
