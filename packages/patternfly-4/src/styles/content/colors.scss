@@ -1,8 +1,18 @@
 $theme: '.colors-theme--';
 
 @mixin color-block-dimensions {
-  height: 100px;
-  width: 100px;
+  height: 65px;
+  width: 65px;
+
+  @media screen and (min-width: 768px) {
+    height: 85px;
+    width: 85px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 100px;
+    width: 100px;
+  }
 }
 
 .colors-in-context {
@@ -117,24 +127,24 @@ $theme: '.colors-theme--';
 $gallery-colors: (
   "blue1": #8BC1F7,
   "blue2": #519DE9,
-  "blue3": #0066CC,
+  "blue3": #0066cc,
   "blue4": #004B95,
   "blue5": #002F5D,
-  "green1": #A2D99C,
-  "green2": #88D080,
-  "green3": #6EC664,
-  "green4": #509149,
-  "green5": #3B6C37,
-  "cyan1": #8BB4B9,
-  "cyan2": #5C969D,
-  "cyan3": #2E7981,
-  "cyan4": #015C65,
-  "cyan5": #00434B,
-  "purple1": #CBC0FF,
-  "purple2": #B1A3FF,
-  "purple3": #A18FFF,
-  "purple4": #8476D1,
-  "purple5": #6753AC,
+  "green1": #BDE2B9,
+  "green2": #7CC674,
+  "green3": #4CB140,
+  "green4": #38812f,
+  "green5": #23511e,
+  "cyan1": #A2D9D9,
+  "cyan2": #73C5C5,
+  "cyan3": #009596,
+  "cyan4": #005f60,
+  "cyan5": #003737,
+  "purple1": #B2B0EA,
+  "purple2": #8481DD,
+  "purple3": #5752D1,
+  "purple4": #3C3D99,
+  "purple5": #2A265F,
   "gold1": #F9E0A2,
   "gold2": #F6D173,
   "gold3": #F4C145,
@@ -144,12 +154,15 @@ $gallery-colors: (
   "orange2": #EF9234,
   "orange3": #EC7A08,
   "orange4": #C46100,
-  "orange5": #8F4700
+  "orange5": #8F4700,
+  "black1": #D2D2D2,
+  "black2": #BBB,
+  "black3": #8B8D8F,
+  "black4": #72767B,
+  "black5": #4D5258
 );
 
 .chart-colors-gallery {
-  grid-template-columns: repeat(auto-fill, 100px);
-
   &--blue-1 {
     @include color-block-dimensions;
     background-color: map-get($gallery-colors, "blue1");
@@ -270,6 +283,26 @@ $gallery-colors: (
     @include color-block-dimensions;
     background-color: map-get($gallery-colors, "orange5");
   }
+  &--black-1 {
+    @include color-block-dimensions;
+    background-color: map-get($gallery-colors, "black1");
+  }
+  &--black-2 {
+    @include color-block-dimensions;
+    background-color: map-get($gallery-colors, "black2");
+  }
+  &--black-3 {
+    @include color-block-dimensions;
+    background-color: map-get($gallery-colors, "black3");
+  }
+  &--black-4 {
+    @include color-block-dimensions;
+    background-color: map-get($gallery-colors, "black4");
+  }
+  &--black-5 {
+    @include color-block-dimensions;
+    background-color: map-get($gallery-colors, "black5");
+  }
 }
 
 .grid-modifier {
@@ -294,5 +327,28 @@ $gallery-colors: (
        order: 5;
        margin-top: 31px;
      }
+  }
+}
+
+.css-var-text {
+  display: none;
+  visibility: hidden;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    visibility: visible;
+  }
+}
+
+.chart-colors-gallery--information {
+  margin-top: 8px;
+  margin-bottom: 16px;
+
+  > * {
+    font-size: 12px;
+
+    > code {
+      font-size: 10px !important;
+    }
   }
 }
