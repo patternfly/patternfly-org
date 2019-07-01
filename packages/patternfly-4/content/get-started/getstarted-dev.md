@@ -97,7 +97,7 @@ Use these files to consume the library. The recommended consumption approach wil
 
   This will ensure that PatternFly 4 styles take precedence over anything that currently resides in your application.
 
-4. If you want to use PatternFly 4 utilities in your project, find the utilities file,  ```patternfly-addons.css```
+4. If you want to use PatternFly utilities in your project, find the utilities file,  ```patternfly-addons.css```
 
 5. Copy ```patternfly-addons.css``` into your project’s CSS directory.
 
