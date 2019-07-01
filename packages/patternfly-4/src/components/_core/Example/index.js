@@ -64,13 +64,9 @@ export default class Example extends React.Component {
       fullPageOnly,
       minHeight
     } = this.props;
-    const output = { __html: this.props.children };
     const sourceOutput =
       typeof children === 'string' ? children : ReactDOMServer.renderToStaticMarkup(children).replace(/ "/g, '"');
     const indentedOutput = pretty(sourceOutput, { ocd: true });
-    const makeDescription = html => ({
-      __html: html
-    });
     const editor = (
       <div className="code">
         <Editor 
@@ -86,13 +82,13 @@ export default class Example extends React.Component {
       </div>
     );
     const endsWithSlash = typeof window !== 'undefined' && window.location.href.substr(-1) === '/';
-    const fullPath = typeof window !== 'undefined' && `${window.location.href.substr(0, window.location.href.length - (endsWithSlash ? 1 : 0))}-full?component=${heading}`;
+    const fullPath = typeof window !== 'undefined' && `${window.location.href.substr(0, window.location.href.length - (endsWithSlash ? 1 : 0))}-full/?component=${heading}`;
     if (!this.state.isFull) {
       return (
-        <div className={`ws-live-demo ${className}`}>
+        <div className="ws-live-demo">
           <AutoLinkHeader size="lg" is="h4" className="ws-example-heading">{heading}</AutoLinkHeader>
-          {Boolean(description) && <p className="pf-c-content" dangerouslySetInnerHTML={makeDescription(description)} />}
-          <Preview heading={heading} viewport={this.state.viewport} lights={this.state.lights} fullPageOnly={fullPageOnly} minHeight={minHeight}>
+          {Boolean(description) && <p className="pf-c-content" dangerouslySetInnerHTML={{ __html: description }} />}
+          <Preview className={className} heading={heading} viewport={this.state.viewport} lights={this.state.lights} fullPageOnly={fullPageOnly} minHeight={minHeight}>
             {children}
           </Preview>
           <ComponentItems children={children} className={css('example')} />
@@ -100,7 +96,7 @@ export default class Example extends React.Component {
         </div>
       );
     } else if (this.state.showComponent) {
-      return <div dangerouslySetInnerHTML={output} />;
+      return <div dangerouslySetInnerHTML={{ __html: this.props.children }} />;
     }
     return null;
   }

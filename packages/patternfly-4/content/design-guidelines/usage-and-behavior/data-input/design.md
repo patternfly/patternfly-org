@@ -6,7 +6,7 @@ Data input controls allow the user to provide information by selecting from a kn
 
 **Selection controls:** [Checkboxes](#checkbox), [Radio buttons](#radio-buttons), [Select lists](#select-lists), [Switch](#switch)
 
-**Bound-entry controls:** Bound entry controls like [date picker](#date-picker) and [slider](#slider) are _in progress and coming soon_ to PatternFly 4.
+**Bound-entry controls:** Bound entry controls like [date picker](#Datepicker) and [slider](#slider) are _in progress and coming soon_ to PatternFly 4.
 
 ## Usage: Selection controls
 Use selection controls to enable users to select from a predetermined set of options. Choose controls based on the the following considerations:
@@ -86,7 +86,7 @@ PatternFly offers several variations of select list:
 
 ![Typeahead](./img/typeahead.png)
 
-When providing fewer than five options, you can use [radio buttons](#radio-buttons) or [checkboxes](#checkboxes) to display all options to the user simultaneously if you don’t have any space constraints.
+When providing fewer than five options, you can use [radio buttons](#radio-buttons) or [checkboxes](#checkbox) to display all options to the user simultaneously if you don’t have any space constraints.
 
 ### Switch
 Provide a switch to allow users to instantly toggle between an enabled or disabled state.
@@ -99,13 +99,13 @@ Provide a switch to allow users to instantly toggle between an enabled or disabl
 ## Usage: Bound-entry controls
 Use bound-entry controls to enable users to enter special data types, such as dates, times, and other numeric data. Bound-entry controls constrain user input and combine keyboard and mouse interaction. These controls are designed to only allow valid inputs. As a result, field should be is unnecessary.
 
-Components coming soon!
+Datepicker and Slider components coming soon!
 
-### Datepicker
+<!-- ### Datepicker
 ![Datepicker](./img/datepicker.png)
 
 ### Slider
-![Slider](./img/slider.png)
+![Slider](./img/slider.png) -->
 
 ## Errors and validation
 In general, data input controls should work to help users avoid input errors. Do your best to disable options that might result in an error, and provide input components that help the user provide accurate data in the correct format. For example, a datepicker is better than a text field when asking users to provide a date because it helps to enforce the appropriate syntax.

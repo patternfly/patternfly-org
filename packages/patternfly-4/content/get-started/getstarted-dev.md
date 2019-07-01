@@ -21,7 +21,7 @@ The React library provides a collection of React components you can use to build
 ## Getting started
   * **Start with a sample project**
 
-  [Start with the PatternFly React seed](#start-with-the-react-seed), which is an open source build scaffolding utility created to give developers a jump start when creating new projects that will use Patternfly.
+  [Start with the PatternFly React seed](#start-with-the-react-seed), which is an open source build scaffolding utility created to give developers a jump start when creating new projects that will use PatternFly.
 
 
   * **Start with your existing project**
@@ -32,7 +32,7 @@ The React library provides a collection of React components you can use to build
 1. **Fork the project**
 
   * TypeScript: [Fork and clone the PatternFly React Seed project](https://github.com/patternfly/patternfly-react-seed).
-  * JavaScript: [Fork and clone the Javascript branch of the PatternFly React Seed project](https://github.com/patternfly/patternfly-react-seed/tree/javascript).
+  * JavaScript: [Fork and clone the JavaScript branch of the PatternFly React Seed project](https://github.com/patternfly/patternfly-react-seed/tree/javascript).
 
   For more information about how to fork and clone a repo, [view GitHub Help](https://help.github.com/articles/fork-a-repo/).
 
@@ -77,10 +77,10 @@ If you need to overwrite any elements, we recommend extending the variables foun
 
 When you install PatternFly 4, the package includes:
 
-  * A single file for the entire compiled library: `node_modules/@patternfly/patternfly/patternfly.css`
-  * Individual files with each component compiled separately: `node_modules/@patternfly/patternfly/<ComponentName>/styles.css`
-  * A single file for the entire library's source (Sass): `node_modules/@patternfly/patternfly/patternfly.scss`
-  * Individual files for each component's source (Sass): `node_modules/@patternfly/patternfly/<ComponentName>/styles.scss`
+  * A single file for the entire compiled library: ```node_modules/@patternfly/patternfly/patternfly.css```
+  * Individual files with each component compiled separately: ```node_modules/@patternfly/patternfly/<ComponentName>/styles.css```
+  * A single file for the entire library's source (Sass): ```node_modules/@patternfly/patternfly/patternfly.scss```
+  * Individual files for each component's source (Sass): ```node_modules/@patternfly/patternfly/<ComponentName>/styles.scss```
 
 Use these files to consume the library. The recommended consumption approach will vary from project to project.
 

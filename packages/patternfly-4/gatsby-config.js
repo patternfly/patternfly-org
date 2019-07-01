@@ -40,7 +40,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `react-pages`,
-        path: `${__dirname}/_repos/react-core`,
+        path: `${__dirname}/_repos/patternfly-react/packages/patternfly-4/react-core`,
         ignore: ignore.concat(`**/*.json`, `**/index.*`)
       }
     },
@@ -48,7 +48,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `react-pages`,
-        path: `${__dirname}/_repos/react-charts`,
+        path: `${__dirname}/_repos/patternfly-react/packages/patternfly-4/react-charts`,
         ignore: ignore.concat(`**/*.json`, `**/index.*`)
       }
     },
@@ -56,7 +56,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `react-pages`,
-        path: `${__dirname}/_repos/react-table`,
+        path: `${__dirname}/_repos/patternfly-react/packages/patternfly-4/react-table`,
         ignore: ignore.concat(`**/*.json`, `**/index.*`)
       }
     },
@@ -64,7 +64,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `core-pages`,
-        path: `${__dirname}/_repos/core/src`,
+        path: `${__dirname}/_repos/patternfly-next/src`,
         ignore: [`**/*.scss`, `**/*.md`]
       }
     },
@@ -134,9 +134,9 @@ module.exports = {
         // The start_url tells the browser where your application should start when it is launched
         start_url: '/v4',
         // The background_color property is used on the splash screen when the application is first launched
-        background_color: '#663399',
+        background_color: '#151515',
         // The theme_color sets the color of the tool bar, and may be reflected in the app's preview in task switchers.
-        theme_color: '#663399',
+        theme_color: '#151515',
         // Opens the web app to look and feel like a standalone native app
         display: 'standalone',
         // icon used for splash screen, on home screen

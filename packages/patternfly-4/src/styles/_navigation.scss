@@ -1,5 +1,11 @@
 .pf-c-page__header {
   background-color: #151515;
+  min-height: unset;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr auto;
+  }
+
   .pf-c-page__header-brand {
     background-color: #151515;
   }
@@ -13,6 +19,7 @@
     display: none;
     @media (max-width: 768px) {
       display: block;
+      position: relative !important;
     }
   }
 }
@@ -20,11 +27,19 @@
   box-shadow: none !important;
 }
 .pf4-site-header {
+  .pf-c-nav__scroll-button {
+    outline-offset: -4px;
+    height: 100%;
+    top: 0;
+  }
   .pf-c-nav__horizontal-list {
+    .pf-c-nav__item {
+      margin-right: 0;
+    }
     .pf-c-nav__link {
-      padding-top: 28px;
-      @media (max-width: 1024px) {
-        padding-top: var(--pf-global--spacer--md);
+      padding-top: 22px;
+      @media (max-width: 991px) {
+        padding-top: 10px;
       }
       padding-right: var(--pf-global--spacer--md);
       padding-left: var(--pf-global--spacer--md);

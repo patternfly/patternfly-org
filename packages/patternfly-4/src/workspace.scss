@@ -94,6 +94,9 @@ $block: '.pf4';
   .rightAlign {
     text-align: right;
   }
+  td {
+    word-break: break-word;
+  }
 }
 
 .ws-example {
@@ -173,7 +176,7 @@ $block: '.pf4';
   right: 0;
 }
 
-.ws-search {
+.pf-site-search {
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 2px;
@@ -195,7 +198,7 @@ $block: '.pf4';
   .pf-c-form__label {
     --pf-c-form__label--FontSize: var(--pf-global--FontSize--lg);
   }
-  input {
+  .pf-site-search-input {
     background: #151515;
     border: 0;
     color: #fff;

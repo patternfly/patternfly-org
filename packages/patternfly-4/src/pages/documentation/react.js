@@ -4,9 +4,9 @@ import SideNav from '../../components/_react/Documentation/SideNav';
 import SEO from '../../components/seo';
 import { Title, PageSection, PageSectionVariants } from '@patternfly/react-core';
 import { StyleSheet, css } from '@patternfly/react-styles';
-import packageJsonReactCore from '@patternfly/src-patternfly-react/packages/patternfly-4/react-core/package.json';
-import packageJsonReactCharts from '@patternfly/src-patternfly-react/packages/patternfly-4/react-charts/package.json';
-import packageJsonReactTable from '@patternfly/src-patternfly-react/packages/patternfly-4/react-table/package.json';
+import packageJsonReactCore from '@patternfly/react-core/package.json';
+import packageJsonReactCharts from '@patternfly/react-charts/package.json';
+import packageJsonReactTable from '@patternfly/react-table/package.json';
 import {
   global_Color_light_100 as heroTextColor
 } from '@patternfly/react-tokens';
