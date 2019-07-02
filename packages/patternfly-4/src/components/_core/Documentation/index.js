@@ -1,7 +1,6 @@
 import React from 'react';
 import SideNav from './SideNav';
 import Layout from '../../layout';
-import FullPageExampleLayout from '@siteComponents/FullPageExampleLayout';
 import { PageSection, PageSectionVariants } from '@patternfly/react-core';
 import { MDXRenderer } from 'gatsby-mdx';
 import AutoLinkHeader from '@content/AutoLinkHeader';
@@ -9,32 +8,34 @@ import Section from '../../section';
 import SEO from '../../seo';
 import './styles.scss';
 import Tokens from '../../css-variables';
+import Example from '../Example';
 
 export const CoreContext = React.createContext({});
 
 export default class Documentation extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isFull: false };
-  }
-
-  componentDidMount() {
-    // eslint-disable-next-line react/no-did-mount-set-state
-    this.setState({
-      isFull: window.location.pathname.indexOf('-full') > 0
-    });
   }
 
   render() {
     const { children, className = '', docs = '', heading = '', variablesRoot, data } = this.props;
-    const examples = React.Children.toArray(children);
+    let isFull = false;
+    let matchingChild = children;
+    if (typeof window !== 'undefined' && window.location.search.length) {
+      isFull = true;
+      // requesting full screen view of an example
+      const queryObject = Example.parseQueryString(window.location.search.substr(1));
+      matchingChild = React.Children.toArray(children).filter((child, i) => {
+        return encodeURI(child.props.heading) === queryObject.component;
+      });
+    }
     const changeHeadingLevel = (html, level) => {
       const modifiedHtml = html.replace(/<h2/g, `<${level} class="pf-u-mt-xl pf-u-mb-sm"`).replace(/h2>/g, `${level}>`);
       return modifiedHtml;
     };
     const changeTableResponsiveness = html => html.replace(/<table>/g, '<table class="pf-m-grid">')
     const HTML_DOCS = { __html: changeTableResponsiveness(changeHeadingLevel(docs, 'h4')) };
-    return !this.state.isFull ? (
+    return !isFull ? (
       <CoreContext.Provider value={{ coreClass: className || '' }}>
         <Layout sideNav={<SideNav />}>
           <SEO title="HTML" />
@@ -71,12 +72,7 @@ export default class Documentation extends React.Component {
       </CoreContext.Provider>
     ) : (
       <CoreContext.Provider value={{ coreClass: className || '' }}>
-        <FullPageExampleLayout>
-          <div className={className}>
-            <h1 className="pf-screen-reader">{this.props.heading} full example</h1>
-            {children}
-          </div>
-        </FullPageExampleLayout>
+        {matchingChild}
       </CoreContext.Provider>
     );
   }

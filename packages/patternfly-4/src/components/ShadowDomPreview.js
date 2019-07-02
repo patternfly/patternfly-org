@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import exampleStyles from '!raw!../../_repos/example-styles.css';
 import { Location } from '@reach/router';
 import queryString from 'query-string';
+import Header from '../components/header';
 
 const styles = `
   .ws-example { 
@@ -47,19 +48,24 @@ const ShadowDomPreview = ({ children, className, isReact, isFull, ...props }) =>
             return children;
           }
           return (
-            <ShadowDOM.div {...props}>
-              <html>
-                <head>
-                  <style type="text/css" dangerouslySetInnerHTML={{__html: exampleStyles}} />
-                  {isReact && !isFull && <style type="text/css">{styles}</style>}
-                </head>
-                <body>
-                  <div className={children ? `ws-example ${className}` : className}>
-                    {children}
-                  </div>
-                </body>
-              </html>
-            </ShadowDOM.div>
+            <>
+              {isFull && (
+                <Header siteTitle="Full Page Example" />
+              )}
+              <ShadowDOM.div {...props}>
+                <html style={isFull ? { height: '100vh' } : undefined}>
+                  <head>
+                    <style type="text/css" dangerouslySetInnerHTML={{__html: exampleStyles}} />
+                    {isReact && !isFull && <style type="text/css">{styles}</style>}
+                  </head>
+                  <body style={{backgroundColor: 'transparent'}}>
+                    <div className={children ? `ws-example ${className}` : className} style={isFull ? { height: '100%' } : undefined}>
+                      {children}
+                    </div>
+                  </body>
+                </html>
+              </ShadowDOM.div>
+            </>
           )
         }}
     </Location>

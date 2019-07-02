@@ -26,17 +26,17 @@ export default class Preview extends React.Component {
     let preview;
 
     if (typeof window !== 'undefined' && window.location.search.length) {
-      preview = <div>
+      return (
         <CoreContext.Consumer>
           {({ coreClass }) => (
-            <ShadowDomPreview className={`${background} ${coreClass} ${className}`}>
-              <div dangerouslySetInnerHTML={output} />
+            <ShadowDomPreview className={`${background} ${coreClass} ${className}`} isFull>
+              <div dangerouslySetInnerHTML={output} style={{height: '100%'}} />
             </ShadowDomPreview>
           )}
         </CoreContext.Consumer>
-      </div>;
+      );
     } else if (!fullPageOnly) {
-      preview = <div>
+      return (
         <CoreContext.Consumer>
           {({ coreClass }) => (
             <ShadowDomPreview className={`${background} ${coreClass} ${className}`}>
@@ -46,15 +46,13 @@ export default class Preview extends React.Component {
             </ShadowDomPreview>
           )}
         </CoreContext.Consumer>
-      </div>;
+      )
     } else {
-      preview = <LinkPreview name={heading} path={fullPath} />;
+      return (
+        <div className={`Preview ${viewport}`}>
+          <LinkPreview name={heading} path={fullPath} />;
+        </div>
+      )
     }
-
-    return (
-      <div className={`Preview ${viewport}`}>
-        {preview}
-      </div>
-    );
   }
 }
