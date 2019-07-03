@@ -7,12 +7,12 @@ import {
   PageSectionVariants
 } from '@patternfly/react-core';
 import { MDXRenderer } from 'gatsby-mdx';
+import axios from 'axios';
 
 // https://github.com/topheman/npm-registry-browser/blob/master/NOTES.md#api-proxy-for-development
 const getDistTag = pack => {
-  return fetch(`https://cors-anywhere.herokuapp.com/https://registry.npmjs.org/${pack}`,
-              { headers: {"x-requested-with": "hello"} })
-    .then(res => res.json());
+  return axios.get(`https://cors-anywhere.herokuapp.com/https://registry.npmjs.org/${pack}`,
+    { headers: {"X-Requested-With": "XMLHttpRequest"} });
 }
 
 class Versions extends React.Component {
@@ -33,9 +33,7 @@ class Versions extends React.Component {
     super(props);
     Object.keys(this.state).forEach(pack => {
       getDistTag(pack)
-        .then(data => this.setState({
-          [pack]: { versions: data['dist-tags'] }
-        }));
+        .then(({ data }) => this.setState({[pack]: { versions: data['dist-tags'] }}));
     });
   }
 
