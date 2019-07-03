@@ -10,10 +10,9 @@ import { MDXRenderer } from 'gatsby-mdx';
 import axios from 'axios';
 
 // https://github.com/topheman/npm-registry-browser/blob/master/NOTES.md#api-proxy-for-development
-const getDistTag = pack => {
-  return axios.get(`https://cors-anywhere.herokuapp.com/https://registry.npmjs.org/${pack}`,
-    { headers: {"X-Requested-With": "XMLHttpRequest"} });
-}
+const headers = { headers: {
+  "Accept": "application/vnd.npm.install-v1+json; q=1.0, application/json; q=0., */*",
+  "X-Requested-With": "XMLHttpRequest"} };
 
 class Versions extends React.Component {
   state = {
@@ -32,7 +31,7 @@ class Versions extends React.Component {
   constructor(props) {
     super(props);
     Object.keys(this.state).forEach(pack => {
-      getDistTag(pack)
+      axios.get(`https://cors-anywhere.herokuapp.com/https://registry.npmjs.org/${pack}`, headers)
         .then(({ data }) => this.setState({[pack]: { versions: data['dist-tags'] }}));
     });
   }
