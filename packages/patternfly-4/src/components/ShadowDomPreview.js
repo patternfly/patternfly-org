@@ -53,17 +53,11 @@ const ShadowDomPreview = ({ children, className, isReact, isFull, ...props }) =>
                 <Header siteTitle="Full Page Example" />
               )}
               <ShadowDOM.div {...props}>
-                <html style={isFull ? { height: '100vh', width: '100vw' } : undefined}>
-                  <head>
-                    <style type="text/css" dangerouslySetInnerHTML={{__html: exampleStyles}} />
-                    {isReact && !isFull && <style type="text/css">{styles}</style>}
-                  </head>
-                  <body style={{backgroundColor: 'transparent'}}>
-                    <div className={children ? `ws-example ${className}` : className} style={isFull ? { height: '100%' } : undefined}>
-                      {children}
-                    </div>
-                  </body>
-                </html>
+                <style type="text/css" dangerouslySetInnerHTML={{__html: exampleStyles}} />
+                {isReact && !isFull && <style type="text/css">{styles}</style>}
+                <div className={children ? `ws-example ${className}` : className} style={isFull ? { height: '100%' } : undefined}>
+                  {children}
+                </div>
               </ShadowDOM.div>
             </>
           )
