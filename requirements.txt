@@ -1,0 +1,4 @@
+boto3==1.9.152
+pathlib==1.0.1
+typing==3.6.6
+wood==1.0.3

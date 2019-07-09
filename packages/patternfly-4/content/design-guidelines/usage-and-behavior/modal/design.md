@@ -5,22 +5,23 @@ path: "/design-guidelines/usage-and-behavior/modal"
 Use modal dialogs load and display important information without navigating away from the current page.
 
 ## Primary elements
-![Modal](img/modal.png)
+![Modal](./img/modal.png)
 
 1. **Backdrop**
 2. **Modal box**
-3. **Title:** concisely convey the purpose of the modal.
+3. **Title:** Concisely convey the purpose of the modal.
 4. **Close**
 5. **Content area**
-6. **Buttons:** enable a user to confirm, submit, or exit. Modal dialogs can include multiple action buttons, but should be limited to one primary button
+6. **Buttons:** Enable a user to confirm, submit, or exit. Modal dialogs can include multiple action buttons, but should be limited to one primary button
 
 ## Usage
 ### When to use
 Use a modal dialog when information is critical and requires user input or attention.
 Use modals to:
-* [Validate user decisions](#confirmation-dialog)
+
+* [Validate user decisions](#get-confirmation)
 * [Report errors](#report-errors)
-* [Provide the result of a task or state of an application](#Provide-the-result-of-a-task-or-state-of-an-application)
+* [Provide the result of a task or state of an application](#provide-the-result-of-a-task-or-state-of-an-application)
 * [Get required user input](#get-required-user-input)
 
 ### When not to use
@@ -33,20 +34,20 @@ Use a confirmation dialog to validate user decisions and communicate consequence
 **Note:** Since confirmation dialogs disrupt user task flow, do not provide confirmation dialogs for actions that are easily reversed or insignificant.
 
 ##### Confirm a non-destructive action
-![Modal](img/confirm-non-destructive-action.png)
+![Modal](./img/confirm-non-destructive-action.png)
 Provide buttons on confirmation dialogs that make it simple for users to understand and confirm their choices. When choosing button labels, use descriptive verbs that clearly indicate the consequence of a selection, like Delete, Save, or Create. Avoid vague labels like OK or Done.
 
 Ambiguous title and button labels make it more difficult for the user to understand their options and make a decision. Descriptive title and button labels make it easy for the user to scan the content and make a decision quickly.
 
 ##### Confirm a destructive action
-![Modal](img/confirm-destructive-action.png)
+![Modal](./img/confirm-destructive-action.png)
 If an action is difficult or impossible to undo, a warning icon can be incorporated into the modal to add emphasis. If an action will seriously impact the system and cannot be undone, use a destructive style button. Otherwise, use a primary button.
 
 Sometimes it is necessary to require an additional confirmation with a destructive action. An example using a form field can be seen below. In order for the destructive action to become actionable, the user needs to type in a word or phrase to make the button active.
-![Modal](img/2-step-confirm-destructive-action.png)
+![Modal](./img/2-step-confirm-destructive-action.png)
 
 #### Report errors
-![Modal](img/error-dialog.png)
+![Modal](./img/error-dialog.png)
 Use error dialogs to inform users of problems interrupting normal or expected behavior.
 An error message should be actionable, human readable, and answer the following questions:
 * What is the problem?
@@ -59,7 +60,7 @@ Never blame the user. Use passive voice where appropriate to avoid assigning bla
 * ✅ We didn’t recognize that password.
 
 #### Provide the result of a task or state of an application
-![Modal](img/passive-dialog.png)
+![Modal](./img/passive-dialog.png)
 Use passive dialogs to communicate critical information like the status of an application or result of an action. The content of a passive dialog should be important, immediately relevant, and either lead to or require action on the user’s part.
 
 Some usage examples include:
@@ -80,7 +81,7 @@ Sometimes users may need to provide additional input in order to complete an act
 
 * If the modal needs to convey the importance of information visually, icons can be added.
 
-See our [content guidelines](/design-guidelines/content/) for additional guidance.
+See our [content guidelines](/design-guidelines/content/writing) for additional guidance.
 
 #### Icon use in modal dialogs
 
@@ -89,7 +90,7 @@ See our [content guidelines](/design-guidelines/content/) for additional guidanc
 | <i class="fas fa-exclamation-triangle"></i> | **Warning:** Caution/ Warning | Use on confirmation dialogs or passive dialogs to indicate a higher level of urgency and importance. |
 | <i class="fas fa-exclamation-circle"></i>   | **Critical Warning:** Information will be deleted/permanent action  | Use on confirmation dialogs or passive dialogs to indicate the highest level of urgency and importance. |
 | <i class="fas fa-times-circle"></i>  | **Error:** Alert the user that there has been a critical failure/error  | Use on error dialogs to indicate a problem. |
-| <i class="fas fa-info-circle"></i> | **Acknowledgement:** Informs the user of an action or result  | Use on confirmation or passive dialogs to indicate a lower level of urgency. |
+| <i class="fas fa-info-circle"></i> | **Acknowledgement:** Inform the user of an action or result  | Use on confirmation or passive dialogs to indicate a lower level of urgency. |
 
 ## Components and demos used
 The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use-cases. We’ll explore several examples in this documentation.

@@ -94,6 +94,9 @@ $block: '.pf4';
   .rightAlign {
     text-align: right;
   }
+  td {
+    word-break: break-word;
+  }
 }
 
 .ws-example {
@@ -168,9 +171,72 @@ $block: '.pf4';
   background-color: #282d33 !important;
 }
 
-.ws-search {
+.pf-c-page__header-brand-toggle {
+  position: absolute;
+  right: 0;
+}
+
+.pf-site-search {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 2px;
+  padding-left: 0;
+  width: 150px;
+  background: transparent;
+  transition: 250ms;
+
+  @media (max-width: 768px) {
+    width: 100px;
+  }
+
+  &:focus-within {
+    background: #fff;
+    .search-icon {
+      color: darken(#d2d3d5, 15%);
+    }
+  }
   .pf-c-form__label {
     --pf-c-form__label--FontSize: var(--pf-global--FontSize--lg);
+  }
+  .pf-site-search-input {
+    background: #151515;
+    border: 0;
+    color: #fff;
+    padding-left: 25px;
+    &:focus {
+      outline-offset: 2px;
+    }
+    &::placeholder {
+      color: #d2d3d5;
+    }
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: #d2d3d5;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: #d2d3d5;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: #d2d3d5;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: #d2d3d5;
+    }
+  }
+  .search-icon {
+    position: absolute;
+    display: inline-block;
+    color: #d2d3d5;
+    &:before {
+      margin-top: 6px;
+      font-family: "Font Awesome 5 Free";
+      content: "\f002";
+      font-weight: 900;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smooth: antialiased;
+    }
   }
 }
 

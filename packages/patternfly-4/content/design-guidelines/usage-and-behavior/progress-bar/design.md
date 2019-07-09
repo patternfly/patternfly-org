@@ -5,14 +5,14 @@ path: "/design-guidelines/usage-and-behavior/progress-bar"
 Progress bars inform users about the status of ongoing processes, such as loading an app, submitting a form, or saving updates. Progress bars can also inform users about their progress through a tutorial or a series of steps to reach completion.
 
 ## Primary elements
-![progress-bar](img/progress-bar-callouts.png)
+![progress-bar](./img/progress-bar-callouts.png)
 
 Progress bars are composed of four elements:
 
-1. **Title**: concisely conveys the task the user or system is working to complete
-2. **Track**: a visual guide to describe to the user what it takes to meet full task completion
-3. **Value of progress**: a value that helps the user understand how much progress has been made 
-4. **Indicator**: an animated indicator along the track that draws the user's eye to the progress bar and demonstrates the user’s progress towards completion
+1. **Title:** Concisely conveys the task the user or system is working to complete
+2. **Track:** A visual guide to describe to the user what it takes to meet full task completion
+3. **Value of progress:** A value that helps the user understand how much progress has been made
+4. **Indicator:** An animated indicator along the track that draws the user's eye to the progress bar and demonstrates the user’s progress towards completion
 
 ## Usage
 Use a progress bar to visually indicate an extended operation that needs to be completed by a user or system.
@@ -20,7 +20,7 @@ Use a progress bar to visually indicate an extended operation that needs to be c
 Without a progress bar marking their progress towards completion a user could become lost about how much effort or time it will take to complete a given process. Progress bars solve the problem of helping users understand how much of a process has been completed.
 
 ### When to use
-![progress-bar](img/progress_bar_blue_animated.gif)
+![progress-bar](./img/progress_bar_blue_animated.gif)
 
 **Determinate progress bar**
 
@@ -52,31 +52,31 @@ Do not use a progress bar when a spinner should be used instead. A spinner shoul
 Do not use a spinner and a progress bar together. Use one progress measure at a time.
 
 ## Using progress bars in your designs
-![progress-bar](img/progress-bar-do-dont.png)
+![progress-bar](./img/progress-bar-do-dont.png)
 
 The Do state demonstrates that the progress bar should be placed in alignment with relevant context. The Don’t state demonstrates that the progress bar should not be used without a descriptive title and a percentage of completion when possible. The progress bar should be placed within the user’s line of sight as a guide.
 
 **How to use a progress bar in a table**
 
-![progress-bar](img/progress-bar-in-table.png)
+![progress-bar](./img/progress-bar-in-table.png)
 
 If the progress bar records the progress of multiple line items, keep the progress bar in-line with line item it pertains to.
 
 **How to use a progress bar in a dashboard**
 
-![progress-bar](img/progress-bar-in-dashboard.png)
+![progress-bar](./img/progress-bar-in-dashboard.png)
 
 On the dashboard view use a progress bar to track the trends within the card components on the page.
 
 **How to use a progress bar when a file is downloading**
 
-![progress-bar](img/progress-bar-file-downloading.png)
+![progress-bar](./img/progress-bar-file-downloading.png)
 
 When a file is downloading use the toast notification component and a progress bar to demonstrate the progress achieved.
 
 **How to use a progress bar in a wizard**
 
-![progress-bar](img/progress-bar-wizard.png)
+![progress-bar](./img/progress-bar-wizard.png)
 
 Use a progress bar in a wizard to demonstrate to the user where they are in the flow.
 
@@ -85,22 +85,22 @@ Styling for the progress bar should follow accessibility guidelines. The styling
 
 A blue progress bar represents a process in progress.
 
-![progressbar](img/progress-bar-blue.png)
+![progressbar](./img/progress-bar-blue.png)
 
 A red progress bar represents a process that has failed, and the accompanying the times-circle icon demonstrates the error that has occurred in the process.
 
-![progressbar](img/progress-bar-error-message.png)
+![progressbar](./img/progress-bar-error-message.png)
 
 A green progress bar represents the successful completion of a process, and the accompanying the check-circle icon demonstrates the error that has occurred in the process.
 
-![progressbar](img/progress-bar-success.png)
+![progressbar](./img/progress-bar-success.png)
 
 ## Content
 Titles should clearly describe the process that is being measure. Try to keep titles between 1 and 3 words.  An example of a title could be “Downloading Your Application.” Insert in “Your Application” the application name.
 
 Do not provide any other supporting copy to the progress bar that would require the user to read about how to use the progress bar. A progress bar should be self-explanatory if you implement labels 1 through 4 that are detailed in the article above.
 
-See our [content guidelines](/design-guidelines/content/) for additional guidance.
+See our [content guidelines](/design-guidelines/content/writing) for additional guidance.
 
 ## Components and demos used
 The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use-cases. We’ll explore several examples in this documentation.

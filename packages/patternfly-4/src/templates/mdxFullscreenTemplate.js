@@ -5,7 +5,7 @@ import './template.scss';
 
 const MdxFullscreenTemplate = ({ data }) => {
   return (
-    <MDXRenderer>
+    <MDXRenderer isFull>
       {data.mdx.code.body}
     </MDXRenderer>
   );

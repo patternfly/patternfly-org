@@ -27,7 +27,6 @@ function correctBaseUrl(_baseurl) {
 module.exports = function (grunt) {
   // load all grunt tasks
   require('matchdep').filterDev(['grunt-*', '!grunt-cli']).forEach(grunt.loadNpmTasks);
-  grunt.loadNpmTasks('grunt-sync');
 
   var config = {
     site: '_site',
@@ -192,7 +191,7 @@ module.exports = function (grunt) {
     http: {
       pattern_status: {
         options: {
-           url: 'https://patternfly.github.io/patternfly-design/status/pattern-status.json'
+          url: 'https://www.patternfly.org/patternfly-design/status/pattern-status.json'
         },
         dest: '_build/_data/pattern-status.json'
       }
@@ -316,7 +315,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean',
       'reposUpdate',
-      'http:pattern_status',
+      // 'http:pattern_status',
       'copy:components',
       'sync:patternflyDist',
       'buildConfig:' + target,

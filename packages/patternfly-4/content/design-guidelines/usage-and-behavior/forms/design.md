@@ -10,29 +10,29 @@ A form is a group of elements used to collect information from a user. Forms can
 Most forms will contain the following basic elements:
 
 *Form elements*
-![Form elements](img/form-elements.png)
+![Form elements](./img/form-elements.png)
 
-1. [Labels](#labeling) - Field labels can be aligned to the top or left of the field depending on the layout of your page and the amount of space you have to work with.
+1. [Labels](#labeling): Field labels can be aligned to the top or left of the field depending on the layout of your page and the amount of space you have to work with.
 
-2. [Text input/text area](/design-guidelines/usage-and-behavior/data-input) - provides an area for users to input free-form text.
+2. [Text input/text area](/design-guidelines/usage-and-behavior/data-input): Provides an area for users to input free-form text.
 
-3. [Data input](#choose-the-right-data-input) - provides a way for users to submit any information that is not free-form text.
+3. [Data input](#choose-the-right-data-input): Provides a way for users to submit any information that is not free-form text.
 
-4. [Help](#provide-the-right-kind-of-help) - provides contextual assistance like popovers, placeholder text, or helper text, in any area where the user might need additional information to provide the right input.
+4. [Help](#provide-the-right-kind-of-help): Provides contextual assistance like popovers, placeholder text, or helper text, in any area where the user might need additional information to provide the right input.
 
-5. [Errors and validation](#provide-errors-and-validation) - ensures that the correct information is collected before the form can be submitted to the system.
+5. [Errors and validation](#provide-errors-and-validation): Ensures that the correct information is collected before the form can be submitted to the system.
 
-6. Buttons - enable a user to submit or exit a form. Button placement depends on the type of form you're presenting to the user.
+6. **Buttons:** Enable a user to submit or exit a form. Button placement depends on the type of form you're presenting to the user.
 
 7. [Required field indicator](#indicating-required-fields)
 
 <!--When using forms in a modal, align buttons to the right edge of the input field. Place the primary button on the far right and the secondary button to the left.
 
-![Buttons on a modal](img/modal-button.png)
+![Buttons on a modal](./img/modal-button.png)
 
 When using full page forms, align buttons to the left, placing the primary button on the left and secondary on the right.
 
-![Buttons on a full page](img/fullpage-button.png)-->
+![Buttons on a full page](./img/fullpage-button.png)-->
 
 
 ## Designing forms
@@ -43,13 +43,14 @@ Always provide labels for text and data input so users understand what informati
 * Whichever approach you use, we recommend that you maintain consistency throughout an application.
 
 **General guidelines**
+*  Use sentence-style capitalization for all text elements, **except**: product names and proper nouns. Sentence style capitalizes only the first word of each sentence and proper nouns, like names.
 * Always provide a label for input components.
 * Labels should clearly state the required input.
 * Do not use a colon after the label name.
 
 **Top-aligned labels**
 
-![Aligned to the top](img/top-aligned.png)
+![Aligned to the top](./img/top-aligned.png)
 
 Use top-aligned labels by default. Top-aligned labels provide a consistent left edge and close proximity between label and input. Top-aligned labels also offer the most horizontal area for long labels.
 
@@ -62,7 +63,7 @@ When to use:
 
 **Left-aligned labels**
 
-![Aligned to the left](img/left-aligned.png)
+![Aligned to the left](./img/left-aligned.png)
 
 Left-aligned labels provide a strong vertical edge and help users to scan for context.
 
@@ -81,11 +82,11 @@ Checkboxes and radio buttons have a different labeling convention, where the lab
 ### Indicating required fields
 A required field should be indicated with an asterisk ( * ) to the right of the field label.
 
-![Required field image](img/required-field.png)
+![Required field image](./img/required-field.png)
 
-If **all fields** on a form are required, do not use an asterisk for every field. Instead, provide a message at the top of the form stating, "All fields are required." If all field are optional, the message should state, "All fields are optional."
+If **all fields** on a form are required, do not use an asterisk for every field. Instead, provide a message at the top of the form stating, "All fields are required." If all fields are optional, the message should state, "All fields are optional."
 
-![All required](img/all-required.png)
+![All required](./img/all-required.png)
 
 ### Provide the right data input
 PatternFly provides a variety of input components that enable a user to make a selection. Each component was created to serve a specific use case.
@@ -120,7 +121,7 @@ Learn more about data input variations in the [data input design guidelines](/de
 
 Use a **popover** for longer (2 sentences or more) explanations, content that requires formatting like numbered or bulleted lists, or content that requires you to include buttons, links, or images.
 
-![Popovers](img/infotip-left.png)
+![Popovers](./img/infotip-left.png)
 
   **DO**
 
@@ -131,13 +132,13 @@ Use a **popover** for longer (2 sentences or more) explanations, content that re
   **DON'T**
 
   * Don’t use popovers to compensate for bad design or rely on them to explain a graphic or word choice.
-  * **Never** hide critical information in an popover. Don’t put any information into an popover that a user will always need to complete their task.
+  * **Never** hide critical information in a popover. Don’t put any information into a popover that a user will always need to complete their task.
 
 **Helper text**
 
 Helper text is text below a form field that helps a user provide the right information, like _Enter a unique name_. Use helper text for information that a user needs to know in order to enter the correct information. For context or background information that is “nice to have,” use an infotip.
 
-![Helper text](img/helper-text.png)
+![Helper text](./img/helper-text.png)
 
   **DO**
 
@@ -159,7 +160,7 @@ For example, placeholder text for a date might be _e.g. YYYY-MM-DD_.
 
 Use placeholder text when the requested data type might be unfamiliar or the field requires the user to provide data in a specific format.
 
-![Placeholder text](img/placeholdertext.png)
+![Placeholder text](./img/placeholdertext.png)
 
   **DO**
 
@@ -187,7 +188,7 @@ Some common use cases include:
 * A user leaving a required field blank
 * A user leaving a required field incomplete
 
-![Inline error](img/validation-example.png)
+![Inline error](./img/validation-example.png)
 
 When an error occurs, inline errors will replace any existing [helper text](#provide-the-right-kind-of-help) until the error is fixed.
 
@@ -202,17 +203,17 @@ Notifications should describe the error and help users solve the problem.
 ### Use progressive disclosure
 Use progressive disclosure to hide and show fields based on the users’ selection. This approach keeps the workflow short and allows the user to focus on only the fields relevant to them. It also avoids using color to indicate whether or not a field is available, making it suitable for colorblind users.
 
-![Progressive disclosure](img/progressive-disclosure2.png)
+![Progressive disclosure](./img/progressive-disclosure2.png)
 
 <!-- ### Form examples
 **In a card**
-![Card example](img/card-example.png)
+![Card example](./img/card-example.png)
 
 **In a modal**
-![Modal example](img/modal-example.png)
+![Modal example](./img/modal-example.png)
 
 **As a wizard**
-![Wizard](img/wizard-example.png)-->
+![Wizard](./img/wizard-example.png)-->
 ### Enabling and disabling buttons
 * For short forms like wizards, disable submit buttons until all conditions required to complete the form are met - this reduces the need to return validation errors due to incomplete submissions.
 * For long scrolling forms, do not disable the submit button - the missing field and submit button might not be visible on the screen at the same time.
@@ -265,7 +266,7 @@ The PatternFly components listed can be used in a number of ways to build forms 
 **React components**
 * [Form](/documentation/react/components/form)
 * [Button](/documentation/react/components/button)
-* [Checkbox](documentation/react/components/checkbox)
+* [Checkbox](/documentation/react/components/checkbox)
 * [Dropdown](/documentation/react/components/dropdown)
 * [Progress](/documentation/react/components/progress)
 * [Radio](/documentation/react/components/radio)

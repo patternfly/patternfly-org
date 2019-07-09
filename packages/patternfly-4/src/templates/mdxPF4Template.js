@@ -36,25 +36,11 @@ for (let i = 1; i <= 6; i++) {
 }
 
 const MdxPF4Template = ({ data }) => {
-  // Exported components in the folder (i.e. src/components/Alerts/[Alert, AlertIcon, AlertBody])
-  // We *should* use the MDXRenderer scope to get the names of these, but that's pretty difficult
-  const propComponents = data.metadata ? data.metadata.edges
-    .map(edge => edge.node.name)
-    .filter(name => name) // Some HOCs don't get docgenned properly (like TabContent)
-    .filter(name => data.mdx.code.body.indexOf(name) !== -1)
-    : [];
-
-  // Finally, the props for each relevant component!
-  const props = data.metadata ? data.metadata.edges
-    .filter(edge => propComponents.indexOf(edge.node.name) !== -1)
-    .map(edge => { return { name: edge.node.name, props: edge.node.props } })
-    : [];
-
   const cssPrefix = data.mdx.frontmatter.cssPrefix;
   let section = data.mdx.frontmatter.section;
   if (!section)
     section = 'component';
-
+  
   return (
     <Layout sideNav={<SideNav />} className="ws-documentation">
       <SEO title="React" />
@@ -72,7 +58,7 @@ const MdxPF4Template = ({ data }) => {
         }
         <Section>
           <AutoLinkHeader anchorOnly className="pf-site-toc">Examples</AutoLinkHeader>
-          {props.length > 0 && <AutoLinkHeader anchorOnly className="pf-site-toc">Props</AutoLinkHeader>}
+          {data.props && <AutoLinkHeader anchorOnly className="pf-site-toc">Props</AutoLinkHeader>}
           {cssPrefix && <AutoLinkHeader anchorOnly className="pf-site-toc">CSS Variables</AutoLinkHeader>}
         </Section>
         <Section title="Examples" headingLevel="h3">
@@ -86,10 +72,10 @@ const MdxPF4Template = ({ data }) => {
         </Section>
       </PageSection>
 
-      {props.length > 0 && 
+      {data.props && 
         <PageSection>
           <Section title="Props" headingLevel="h3">	
-            {props.map(component =>
+            {data.props.nodes.map(component =>
               <PropsTable
                 name={component.name}
                 description={component.description}
@@ -115,7 +101,7 @@ const MdxPF4Template = ({ data }) => {
 // We want component metadata from gatsby-transformer-react-docgen-typescript
 // for ALL components in that folder
 export const pageQuery = graphql`
-query GetComponent($fileAbsolutePath: String!, $pathRegex: String!, $reactUrl: String!) {
+query GetComponent($fileAbsolutePath: String!, $propComponents: [String]!, $reactUrl: String!) {
   mdx(fileAbsolutePath: { eq: $fileAbsolutePath }) {
     code {
       body
@@ -126,22 +112,24 @@ query GetComponent($fileAbsolutePath: String!, $pathRegex: String!, $reactUrl: S
       cssPrefix
     }
   }
-  metadata: allComponentMetadata(filter: {path: {regex: $pathRegex}}) {
-    edges {
-      node {
-        path
+  props: allComponentMetadata(filter: { name: { in: $propComponents } }) {
+    nodes {
+      path
+      name
+      description
+      props {
         name
         description
-        props {
+        required
+        type {
           name
-          description
-          required
-          type {
-            name
-          }
-          defaultValue {
-            value
-          }
+        }
+        tsType {
+          name
+          raw
+        }
+        defaultValue {
+          value
         }
       }
     }

@@ -1,5 +1,3 @@
-// Copies build outputs from patternfly 3 and patternfly 4 and combines it into the out directory
-
 const fs = require('fs-extra');
 const path = require('path');
 const copy = require('recursive-copy');
@@ -11,6 +9,7 @@ const build_root = 'out/';
 const pf3_root = 'out/v3/';
 const pf4_root = 'out/v4/';
 
+// Copies build outputs from patternfly 3 and patternfly 4 and combines it into the out directory
 fs.removeSync(build_root);
 console.log(`Removed ${build_root} dir`);
 
@@ -29,6 +28,7 @@ fs.copySync(pf3_build, pf3_root);
 console.log(`Copied pf3 build into ${build_root}`);
 
 // Use v4's 404
+<<<<<<< HEAD
 const path404 = path.join(pf3_root, '404.html');
 fs.removeSync(path404);
 const page404 = `
@@ -121,3 +121,7 @@ copy('out/v3', 'out', options)
   .catch(function(error) {
       return console.error('Copy failed: ' + error);
   });
+=======
+fs.copySync(path.join(__dirname, '404.html'), path.join(build_root, '404.html'));
+console.log(`Replaced 404 page at ${build_root}`);
+>>>>>>> origin/master
