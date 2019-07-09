@@ -38,7 +38,7 @@ const IndexPage = () => (
       <Grid>
         <GridItem sm={12} md={6} mdOffset={3} className="pf-u-py-2xl pf-u-text-align-center">
           <Title size="4xl" id="AboutPatternFly4" className="pf-u-mb-md">About PatternFly 4</Title>
-          <Title size="lg">We provide tools like design documentation, components, and code examples to make it possible for anyone to design and build responsive, accessible user experiences.</Title>
+          <Text component={TextVariants.p}>We provide tools like design documentation, components, and code examples to make it possible for anyone to design and build responsive, accessible user experiences.</Text>
         </GridItem>
       </Grid>
     </PageSection>

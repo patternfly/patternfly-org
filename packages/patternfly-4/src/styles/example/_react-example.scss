@@ -1,9 +1,5 @@
-
 // additional react workspace styles
-@import '../_repos/react-*/**/*.scss';
-
-// additional core workspace styles
-@import './components/_core/Preview/styles.scss';
+@import '../../../_repos/patternfly-react/packages/patternfly-4/react-*/**/*.scss';
 
 // react Toolbar, ToolbarGroup, ToolbarItem, ToolbarSection all inject this css using emotion for some reason
 // https://github.com/patternfly/patternfly-react/blob/master/packages/patternfly-4/react-core/src/layouts/Toolbar/Toolbar.js#L7
@@ -33,10 +29,3 @@
 .pf-l-toolbar__item .pf-l-toolbar:not(:last-child) {
   margin-right: var(--pf-l-toolbar__item--MarginRight); 
 }
-
-$pf-global--image-path: "/assets/images";
-$pf-global--font-path: "/assets/fonts";
-$fa-font-path: "/assets/fonts/webfonts";
-$pf-global--fonticon-path: "/assets/pficon";
-@import '../../../node_modules/@patternfly/patternfly/patternfly.scss';
-@import '../../../node_modules/@patternfly/patternfly/patternfly-addons.scss';
