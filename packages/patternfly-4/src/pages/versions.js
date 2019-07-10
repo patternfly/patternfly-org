@@ -4,9 +4,13 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import {
   PageSection,
-  PageSectionVariants
+  PageSectionVariants,
+  Split,
+  SplitItem,
+  Title
 } from '@patternfly/react-core';
 import { MDXRenderer } from 'gatsby-mdx';
+import { sections } from '../versions';
 import axios from 'axios';
 
 // https://github.com/topheman/npm-registry-browser/blob/master/NOTES.md#api-proxy-for-development
@@ -16,8 +20,10 @@ const headers = { headers: {
 
 class Versions extends React.Component {
   state = {
+    '@patternfly/patternfly': {},
     '@patternfly/react-core': {},
     '@patternfly/react-charts': {},
+    '@patternfly/react-icons': {},
     '@patternfly/react-inline-edit-extension': {},
     '@patternfly/react-integration': {},
     '@patternfly/react-styled-system': {},
@@ -25,7 +31,6 @@ class Versions extends React.Component {
     '@patternfly/react-tokens': {},
     '@patternfly/react-topology': {},
     '@patternfly/react-virtualized-extension': {},
-    '@patternfly/react-icons': {},
   };
 
   constructor(props) {
@@ -58,19 +63,25 @@ class Versions extends React.Component {
             <Layout>
               <SEO title="Versions" />
               <PageSection>
-                {Object.entries(this.state).map(([key, val]) => (
-                <p key={key}>{key} {JSON.stringify(val.versions ? val.versions : `https://registry.npmjs.org/${key}`)}</p>
-                ))}
+                <p>PatternFly is available as a set of NPM packages periodically released. The releases are listed below.</p>
+                <Split gutter="md">
+                  {Object.entries(sections).reverse().map(([section, releases]) =>
+                    <SplitItem>
+                      <Title>{section}</Title>
+                      <ul>
+                        {releases.map(release => 
+                          <li key={release.name}>{release.name} ({release.date})</li>
+                        )}
+                      </ul>
+                    </SplitItem>
+                  )}
+                </Split>
               </PageSection>
-              <PageSection variant={PageSectionVariants.light}>
-                <h1>PatternFly-Next Release Notes</h1>
-                <MDXRenderer>
-                  {coreNotes.code.body}
-                </MDXRenderer>
-                <h1>PatternFly-React Release Notes</h1>
-                <MDXRenderer>
-                  {reactNotes.code.body}
-                </MDXRenderer>
+              <PageSection>
+                <p>If you're feeling brave, you can try our latest prereleases.</p>
+                {Object.entries(this.state).map(([key, val]) => 
+                  <p key={key}>{key} {val.versions ? val.versions.prerelease || val.versions.latest : `https://registry.npmjs.org/${key}`}</p>
+                )}
               </PageSection>
             </Layout>
         )}} />

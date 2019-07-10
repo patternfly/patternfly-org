@@ -18,15 +18,19 @@ import {
   ToolbarGroup,
   ToolbarItem,
   Form,
-  TextInput
+  TextInput,
+  Dropdown,
+  DropdownToggle,
+  DropdownItem,
 } from '@patternfly/react-core';
 import { Location } from '@reach/router';
 import brandImg from '../images/PatternFly_logo.svg';
 import Banner from './banner';
+import { sections } from '../versions';
 import './layout.scss';
 
 // Set initial state
-let state = { isBannerOpen: true };
+let state = { isBannerOpen: true, isExpanded: false };
 
 class Layout extends React.Component {
 
@@ -47,6 +51,10 @@ class Layout extends React.Component {
       isBannerOpen: false
     })
   };
+
+  onToggle = () => {
+    this.setState({isExpanded: !this.state.isExpanded});
+  }
 
   componentDidMount() {
     // eslint-disable-next-line no-undef
@@ -112,6 +120,18 @@ class Layout extends React.Component {
       const PageToolbar = (
         <Toolbar>
           <ToolbarGroup>
+            <ToolbarItem style={{marginRight: '24px'}}>
+              <Dropdown
+                onSelect={this.onSelect}
+                toggle={<DropdownToggle onToggle={this.onToggle}>Version</DropdownToggle>}
+                isOpen={this.state.isExpanded}
+                dropdownItems={Object.values(sections).flat(1).map(release =>
+                  <DropdownItem key={release.name} component={Link}>
+                    {release.name} ({release.date})
+                  </DropdownItem>
+                )}
+              />
+            </ToolbarItem>
             <ToolbarItem>
               <Form className="ws-search pf-site-search" onSubmit={event => { event.preventDefault(); return false; }}>
                 <TextInput
@@ -144,7 +164,7 @@ class Layout extends React.Component {
       return (
         <Location>
           {({ location }) => (
-            <>
+            <React.Fragment>
             {isBannerOpen && location.pathname === '/v4/' && <Banner onClose={this.closeBanner} />}
             <Header siteTitle={data.site.siteMetadata.title} />
             <Page isManagedSidebar={sideNav !== null} header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} /> : null}>
@@ -154,7 +174,7 @@ class Layout extends React.Component {
               {this.props.children}
             </Page>
             <Footer></Footer>
-          </>
+          </React.Fragment>
         )}
         </Location>
       )
