@@ -5,15 +5,11 @@ import Img from 'gatsby-image';
 import './LinkPreview.scss';
 
 const LinkPreview = ({ data, name, path }) => {
-  const filenamePath = path => path
+  const filenamePath = path => path ? path
     .replace(data.site.pathPrefix, '')
     .replace('?', '/?')
     .replace(/ /g, '%20')
-    .replace(/\//g, '!');
-
-  const encodePath = path => path
-    .replace('?', '/?')
-    .replace(/ /g, '%20');
+    .replace(/\//g, '!') : '';
 
   return (
     <Location>
@@ -27,7 +23,7 @@ const LinkPreview = ({ data, name, path }) => {
         if (previewScreenshot && previewScreenshot.length > 0) {
           return (
             <div className="Preview__body">
-              <a href={encodePath(path)} target="_blank" rel="noopener noreferrer">
+              <a href={path} target="_blank" rel="noopener noreferrer">
                 <div className="preview-container">
                   <Img
                     fluid={previewScreenshot[0].node.childImageSharp.fluid}
@@ -47,7 +43,7 @@ const LinkPreview = ({ data, name, path }) => {
           return (
             <div className="Preview__body">
               This Preview can only be accessed in&nbsp;
-              <a href={encodePath(path)} target="_blank" rel="noopener noreferrer">
+              <a href={path} target="_blank" rel="noopener noreferrer">
                 full page mode
               </a>.
             </div>
