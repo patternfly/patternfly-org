@@ -1,9 +1,10 @@
 import React from 'react';
-import ShadowDOM from 'react-shadow';
+import root from 'react-shadow';
 import PropTypes from 'prop-types';
 import exampleStyles from '!raw!../../_repos/example-styles.css';
 import { Location } from '@reach/router';
 import queryString from 'query-string';
+import Helmet from 'react-helmet';
 
 const styles = `
   .ws-example { 
@@ -13,19 +14,28 @@ const styles = `
 `;
 
 const propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   className: PropTypes.string,
   isReact: PropTypes.bool,
   isFull: PropTypes.bool
 };
 
 const defaultProps = {
+  children: null,
   className: '',
   isReact: false,
   isFull: false
 };
 
-const ShadowDomPreview = ({ children, className, isReact, isFull, ...props }) => {
+const ShadowDomPreview = ({ children, className, isReact, isFull, html, ...props }) => {
+  // strip: 
+  // html :root
+  // :root
+  // html
+  const noRootStyles = exampleStyles
+    .replace(/html\s:root/g, '.ws-example')
+    .replace(/html/g, '.ws-example')
+    .replace(/:root/g, '.ws-example');
   return (
     <Location>
         {({ location }) => {
@@ -47,19 +57,24 @@ const ShadowDomPreview = ({ children, className, isReact, isFull, ...props }) =>
             return children;
           }
           return (
-            <ShadowDOM.div {...props}>
-              <html>
-                <head>
-                  <style type="text/css" dangerouslySetInnerHTML={{__html: exampleStyles}} />
-                  {isReact && !isFull && <style type="text/css">{styles}</style>}
-                </head>
-                <body>
-                  <div className={children ? `ws-example ${className}` : className}>
+            <>
+              {isFull && (
+                <Helmet>
+                  <title>Full Page Example</title>
+                </Helmet>
+              )}
+              <root.div className="shadow-dom-outer">
+                <style>{noRootStyles}</style>
+                {isReact && !isFull && <style>{styles}</style>}
+                {html ? (
+                  <div dangerouslySetInnerHTML={{ __html: html }} className={className} style={isFull ? { height: '100vh' } : undefined} {...props} />
+                ) : (
+                  <div className={children ? `ws-example ${className}` : className} style={isFull ? { height: '100vh' } : undefined} {...props}>
                     {children}
                   </div>
-                </body>
-              </html>
-            </ShadowDOM.div>
+                )}
+              </root.div>
+            </>
           )
         }}
     </Location>

@@ -5,16 +5,14 @@
   "author": "Red Hat",
   "private": true,
   "scripts": {
-    "build": "node --max_old_space_size=4096 ./node_modules/.bin/gatsby build --prefix-paths",
-    "build:root": "gatsby build",
+    "build": "yarn compile-examples-css && node --max_old_space_size=4096 ./node_modules/.bin/gatsby build --prefix-paths",
+    "build:root": "node --max_old_space_size=4096 ./node_modules/.bin/gatsby build",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "format": "prettier --write \"src/**/*.js\"",
     "clean": "gatsby clean",
-    "repos": "node scripts/clean.js && yarn patternfly-styles.js && yarn compile-examples-css",
-    "patternfly-styles": "node ./scripts/copyStyles.js",
     "preview-screenshots": "node ./scripts/previewScreenshots.js",
-    "compile-examples-css": "node-sass --importer ../../node_modules/node-sass-glob-importer/dist/cli.js -o _repos src/styles/example/example-styles.scss"
+    "compile-examples-css": "node-sass --output-style compressed --importer ../../node_modules/node-sass-glob-importer/dist/cli.js -o _repos src/styles/example/example-styles.scss"
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",

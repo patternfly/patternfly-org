@@ -10,4 +10,4 @@ $pf-global--font-path: "/assets/fonts";
 $fa-font-path: "/assets/fonts/webfonts";
 $pf-global--fonticon-path: "/assets/pficon";
 @import '../../../_repos/patternfly-next/src/patternfly/patternfly.scss';
-@import '../../../_repos/patternfly-next/src/patternfly/patternfly-addons.scss';
+@import '../../../_repos/patternfly-next/src/patternfly/utilities/**/*.scss';
