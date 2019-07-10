@@ -5,7 +5,7 @@
   "author": "Red Hat",
   "scripts": {
     "prebuild": "bundle install",
-    "build": "grunt build:production --baseurl=/",
+    "build": "grunt build:production --baseurl=/v3",
     "dev": "grunt serve"
   },
   "license": "Apache-2.0",
