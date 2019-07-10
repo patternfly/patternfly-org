@@ -2,14 +2,14 @@
 path: "/design-guidelines/usage-and-behavior/lists-and-tables"
 ---
 # Lists and tables
-PatternFly offers two components for displaying large data sets: the data list and the data table. While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
+PatternFly offers two components for displaying large data sets: [data list](https://www.patternfly.org/v4/documentation/react/components/datalist/) and [table](https://www.patternfly.org/v4/documentation/react/components/table/). While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
 
 Use [data lists](#data-lists) when:
 * A flexible layout is more important than arranging information in a grid
 * You want to include active content like a chart
 * Content displayed may vary between rows
 
-Use a [data table](#data-tables) when:
+Use a [tables](#tables) when:
 * Users will want to consume data as a grid (i.e. structured rows and columns)
 * You want column headers
 
@@ -28,10 +28,10 @@ PatternFly supports several variations of the data list component.
 Use a data list when the information you want to display is not easily structured into a tabular format, you want a more flexible layout within rows, or you plan to embed rich content like a chart or an image into a row.
 
 #### When not to use
-The data list is not recommended for displaying content that is better presented in tabular format with well defined columns and headings. Instead, use a data table.
+The data list is not recommended for displaying content that is better presented in tabular format with well defined columns and headings. Instead, use a table.
 
 #### Alternative solutions
-Alternative to a data list include [data tables](#data-tables) or card views. Card views and data lists have similar properties, but information in a card view is chunked into a grid of individual cards. In choosing between a data list and a card view, consider the type of data that will be displayed and the format that best suits that data. If you cannot easily fit all of the data that needs to be displayed into a card, a data list might be a better solution.
+Alternative to a data list include [tables](#tables) or card views. Card views and data lists have similar properties, but information in a card view is chunked into a grid of individual cards. In choosing between a data list and a card view, consider the type of data that will be displayed and the format that best suits that data. If you cannot easily fit all of the data that needs to be displayed into a card, a data list might be a better solution.
 
 #### How to use
 Think of each row in a data list as a container for some formatted content. In PatternFly 4, data list rows can accept any [layout](/documentation/react/layouts/bullseye) supported by the design system as long as all rows apply the same layout. Here are some common layouts that may be useful in a data list:
@@ -66,13 +66,13 @@ The expandable list adds an expansion panel to every row to reveal more details 
 #### When to use
 Use an expandable data list when you have more information than will comfortably fit inside a row, or you want to provide a way for advanced users to access information that is not applicable to all users.
 
-## Data tables
-* **Standard data table:** Combines the styling of a list view with behaviors that are commonly associated with a table (sometimes referred to as a hybrid list)
-* **Compact data table:** Maximizes the amount of data that can be displayed in a small space
+## Tables
+* **Standard table:** Combines the styling of a list view with behaviors that are commonly associated with a table (sometimes referred to as a hybrid list)
+* **Compact table:** Maximizes the amount of data that can be displayed in a small space
 
-### Standard data table
+### Standard table
 
-![standard data table](./img/standard-data-table.png)
+![standard table](./img/standard-data-table.png)
 
 1. **[Toolbar](/design-guidelines/usage-and-behavior/toolbar):** Sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
 2. **Select all:** When present, selects all items in a table. If pagination is being used, this will only select items on the current page.
@@ -83,7 +83,7 @@ Use an expandable data list when you have more information than will comfortably
 7. **Pagination footer:** When present, provides navigation to additional pages
 
 #### When to use
-Use a standard data table when the information you want to display fits into a structured, tabular format (i.e. has distinct rows and columns).
+Use a standard table when the information you want to display fits into a structured, tabular format (i.e. has distinct rows and columns).
 
 #### When not to use
 Do not use for less structured or variably structured data that cannot be easily organized into columns. In these situations, use a [data list](#data-lists).
@@ -91,17 +91,17 @@ Do not use for less structured or variably structured data that cannot be easily
 #### How to use
 Consider the structure of the data you want to display and organize that information into columns. Columns will typically have column headers. Every row within a table must have a consistent format. If the table row includes actions, they should always be placed in the rightmost column(s).
 
-### Compact data table
+### Compact table
 
-![compact data table](./img/compact-data-table.png)
+![compact table](./img/compact-data-table.png)
 
 #### When to use
-Use a compact data table when you want to show as much data per page as possible and readability is a secondary concern.
+Use a compact table when you want to show as much data per page as possible and readability is a secondary concern.
 
 
-### Expandable data table
+### Expandable table
 
-![expandable data table](./img/expandable-data-table.png)
+![expandable table](./img/expandable-data-table.png)
 
 1. **Expansion:** Expands the row
 2. **Expansion panel:** Contains details associated with a row
@@ -109,9 +109,9 @@ Use a compact data table when you want to show as much data per page as possible
 #### When to use
 Use when you have more information than will comfortably fit inside a row or you want to provide a way for advanced users to access information that is not applicable to all users.
 
-### Compound-expandable data table
+### Compound-expandable table
 
-![compound expandable data table](./img/compound-expandable-data-table.png)
+![compound expandable table](./img/compound-expandable-data-table.png)
 
 1. **Expandable cell:** A cell that can be clicked to reveal more detail about an item. If the expansion for an item is already open, clicking on a different cell will close the current item and open a new one.
 2. **Expansion panel:** Contains details associated with an expandable item.
@@ -119,15 +119,15 @@ Use when you have more information than will comfortably fit inside a row or you
 #### When to use
 Use a compound expandable list when you want multiple expansion panels that relate to specific table columns where it would not make sense to combine all of this information into a single, simple expansion.
 
-## Data tables on mobile
-The PatternFly 4 data table is designed to be fully responsive. When columns no longer fit within the width of the viewport, columns are stacked so that data in each row is displayed as sets of attribute-value pairs.
+## Tables on mobile
+The PatternFly 4 table is designed to be fully responsive. When columns no longer fit within the width of the viewport, columns are stacked so that data in each row is displayed as sets of attribute-value pairs.
 
-![mobile data table](./img/Mobile-data-table-example.png)
+![mobile table](./img/Mobile-data-table-example.png)
 
 ## Sorting by columns
-Sorting by columns is possible for any data table variation. Enabling the component within a table eases the ability to scan and read through the content. This option is favored over adding sorting functionality to the toolbar.
+Sorting by columns is possible for any table variation. Enabling the component within a table eases the ability to scan and read through the content. This option is favored over adding sorting functionality to the toolbar.
 
-![sortable data table](img/sortable-data-table.png)
+![sortable table](img/sortable-data-table.png)
 
 1. **Sorted column:** When a column is being sorted by, the column header will turn blue and the sort icon will represent the direction of the sort. Subsequent clicks on the sortable column header will toggle the direction of the sort.
 2. **Hovered sort:** When a column is sortable, the sort icon will appear to the right of the column header. Upon hover, the  icon will change to a darker grey indicating that the icon is actionable.
@@ -147,16 +147,15 @@ Lists or a tables should be placed in the body of a page. The width should be se
 
 ![table in a page](./img/data-table-example.png)
 
-In this example, a data table is positioned in the body of a page in a card.
+In this example, a table is positioned in the body of a page in a card.
 
 ## Components and demos used
 
 **HTML/CSS**
 
 * [Data list](/documentation/core/components/datalist)
-* [Data table](/documentation/core/components/table)
+* [Table](/documentation/core/components/table)
 
 **React**
 * [Data list](/documentation/react/components/datalist)
-* [Data table](/documentation/react/components/table)
-
+* [Table](/documentation/react/components/table)
