@@ -21,8 +21,8 @@ const options = {
 function fileNameFromUrl(url) {
   return url
     .replace('patternfly-4/', 'documentation/react/')
-    .replace(/http.*\.(org|sh)/, '')
-    .replace(/\//g, '!');
+    .replace(/http.*\.(org|sh)\/v4/, '')
+    .replace(/[^A-Za-z]+/g, '');
 }
 
 function adjustSourcePath(url) {
