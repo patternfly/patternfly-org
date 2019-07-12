@@ -10,7 +10,6 @@ import {
   Title
 } from '@patternfly/react-core';
 import { MDXRenderer } from 'gatsby-mdx';
-import { sections } from '../versions';
 import axios from 'axios';
 
 // https://github.com/topheman/npm-registry-browser/blob/master/NOTES.md#api-proxy-for-development
@@ -31,6 +30,7 @@ class Versions extends React.Component {
     '@patternfly/react-tokens': {},
     '@patternfly/react-topology': {},
     '@patternfly/react-virtualized-extension': {},
+    sections: {},
   };
 
   constructor(props) {
@@ -39,6 +39,8 @@ class Versions extends React.Component {
       axios.get(`https://cors-anywhere.herokuapp.com/https://registry.npmjs.org/${pack}`, headers)
         .then(({ data }) => this.setState({[pack]: { versions: data['dist-tags'] }}));
     });
+    axios.get('/versions.json')
+      .then(({ data }) => this.setState({ sections: data }));
   }
 
   render() {
@@ -59,13 +61,14 @@ class Versions extends React.Component {
         render={data => {
           const reactNotes = data.allMdx.nodes.find(node => node.fileAbsolutePath.indexOf('patternfly-react') >= 0)
           const coreNotes = data.allMdx.nodes.find(node => node.fileAbsolutePath.indexOf('patternfly-next') >= 0)
+        console.log('sections', this.state.sections)
           return (
             <Layout>
               <SEO title="Versions" />
               <PageSection>
                 <p>PatternFly is available as a set of NPM packages periodically released. The releases are listed below.</p>
                 <Split gutter="md">
-                  {Object.entries(sections).reverse().map(([section, releases]) =>
+                  {Object.entries(this.state.sections).reverse().filter(([_section, releases]) => releases).map(([section, releases]) =>
                     <SplitItem>
                       <Title>{section}</Title>
                       <ul>
@@ -79,7 +82,7 @@ class Versions extends React.Component {
               </PageSection>
               <PageSection>
                 <p>If you're feeling brave, you can try our latest prereleases.</p>
-                {Object.entries(this.state).map(([key, val]) => 
+                  {Object.entries(this.state).filter(([key, val]) => key.startsWith('@')).map(([key, val]) => 
                   <p key={key}>{key} {val.versions ? val.versions.prerelease || val.versions.latest : `https://registry.npmjs.org/${key}`}</p>
                 )}
               </PageSection>

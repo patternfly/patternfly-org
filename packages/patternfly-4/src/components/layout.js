@@ -26,11 +26,11 @@ import {
 import { Location } from '@reach/router';
 import brandImg from '../images/PatternFly_logo.svg';
 import Banner from './banner';
-import { sections } from '../versions';
+import axios from 'axios';
 import './layout.scss';
 
 // Set initial state
-let state = { isBannerOpen: true, isExpanded: false };
+let state = { isBannerOpen: true, isExpanded: false, sections: {} };
 
 class Layout extends React.Component {
 
@@ -39,6 +39,8 @@ class Layout extends React.Component {
 
     // Retrieve the last state
     this.state = state;
+    axios.get('/versions.json')
+      .then(({ data }) => this.setState({ sections: data }));
   }
 
   componentWillUnmount() {
@@ -76,7 +78,7 @@ class Layout extends React.Component {
 
   render() {
     const { tertiaryNav, sideNav } = this.props;
-    const { isBannerOpen } = this.state;
+    const { isBannerOpen, isExpanded, sections } = this.state;
 
     return (<StaticQuery query={graphql`
       query SiteTitleQuery {
@@ -117,20 +119,21 @@ class Layout extends React.Component {
           }}
         </Location>
       );
+      const dropdownItems = Object.values(sections).flat(1).map(release =>
+        <DropdownItem key={release.name} component={Link} to={`/${release.date}`}>
+          {release.name} ({release.date})
+        </DropdownItem>
+      );
       const PageToolbar = (
         <Toolbar>
           <ToolbarGroup>
             <ToolbarItem style={{marginRight: '24px'}}>
               <Dropdown
                 onSelect={this.onSelect}
-                toggle={<DropdownToggle onToggle={this.onToggle}>Version</DropdownToggle>}
-                isOpen={this.state.isExpanded}
-                dropdownItems={Object.values(sections).flat(1).map(release =>
-                  <DropdownItem key={release.name} component={Link}>
-                    {release.name} ({release.date})
-                  </DropdownItem>
-                )}
-              />
+                toggle={<DropdownToggle onToggle={this.onToggle}>{'Version'}</DropdownToggle>}
+                isOpen={isExpanded}
+                dropdownItems={dropdownItems}
+                />
             </ToolbarItem>
             <ToolbarItem>
               <Form className="ws-search pf-site-search" onSubmit={event => { event.preventDefault(); return false; }}>
