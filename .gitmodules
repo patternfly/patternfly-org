@@ -4,3 +4,14 @@
 [submodule "packages/patternfly-4/_repos/patternfly-next"]
 	path = packages/patternfly-4/_repos/patternfly-next
 	url = https://github.com/patternfly/patternfly-next.git
+[submodule "packages/patternfly-3/repos/patternfly-core"]
+	path = packages/patternfly-3/repos/patternfly-core
+	url = https://github.com/patternfly/patternfly.git
+	branch = master-dist
+[submodule "packages/patternfly-3/repos/angular-patternfly"]
+	path = packages/patternfly-3/repos/angular-patternfly
+	url = https://github.com/patternfly/angular-patternfly.git
+	branch = master-dist
+[submodule "packages/patternfly-3/repos/patternfly-design"]
+	path = packages/patternfly-3/repos/patternfly-design
+	url = https://github.com/patternfly/patternfly-design.git

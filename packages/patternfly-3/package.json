@@ -5,7 +5,7 @@
   "author": "Red Hat",
   "scripts": {
     "prebuild": "bundle install",
-    "build": "grunt build:production --baseurl=/",
+    "build": "grunt build:production --baseurl=/v3",
     "dev": "grunt serve"
   },
   "license": "Apache-2.0",
@@ -71,7 +71,23 @@
       "grunt-jekyll",
       "grunt-sync",
       "font-awesome",
-      "patternfly"
+      "patternfly",
+      "angular-patternfly",
+      "animate.css",
+      "bootstrap",
+      "bootstrap-combobox",
+      "bootstrap-datepicker",
+      "bootstrap-select",
+      "clipboard",
+      "datatables",
+      "font-awesome",
+      "google-code-prettify",
+      "jquery-match-height",
+      "jquery.scrollto",
+      "patternfly",
+      "patternfly-bootstrap-combobox",
+      "patternfly-bootstrap-treeview",
+      "wowjs"
     ]
   }
 }

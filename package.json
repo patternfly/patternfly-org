@@ -13,9 +13,9 @@
     "combine-sites": "node ./scripts/combine-sites",
     "copy-assets": "node ./scripts/copy-assets",
     "clean": "rm -rf out && yarn clean:pf3",
-    "clean:pf3": "rm -rf packages/patternfly-3/_site && rm -rf packages/patternfly-3/_build && rm -rf packages/patternfly-3/repos",
+    "clean:pf3": "rm -rf packages/patternfly-3/_site && rm -rf packages/patternfly-3/_build",
     "clean:pf4": "rm -rf packages/patternfly-4/public",
-    "start:prod": "http-server ./out -p 8384 -o",
+    "start:prod": "http-server ./out -o -a localhost",
     "start:pf3": "lerna run dev --scope=@patternfly/org-patternfly-3 --stream",
     "start:pf4": "lerna run develop --scope=@patternfly/org-patternfly-4 --stream"
   },
@@ -24,7 +24,9 @@
     "fs-extra": "7.0.1",
     "http-server": "^0.11.1",
     "lerna": "^3.10.6",
-    "surge": "^0.20.4"
+    "recursive-copy": "^2.0.10",
+    "surge": "^0.20.4",
+    "through2": "^3.0.1"
   },
   "description": "Documentation for PatternFly",
   "repository": {
