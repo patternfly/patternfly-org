@@ -73,9 +73,8 @@ const styles = {
       display: block;
     }
     button {
-      font-size: 13px;
       @media only screen and (min-width: 770px) and (max-width: 840px) {
-        font-size: 12px;
+        font-size: 13px;
       }
     }
   `,
@@ -178,9 +177,9 @@ class IconCard extends React.Component {
           <div>Indicates that a user may create or add something.</div>
         </div>
         <div css={styles.copyButtons}>
-          <Box><Button variant="link" onClick={this.onDownloadSvg}><DownloadIcon /> Download SVG</Button></Box>
-          <Box><Button variant="link" onClick={this.onCopyHtml}><ClipboardIcon /> Copy HTML</Button></Box>
-          <Box><Button variant="link" onClick={this.onCopyReact}><ClipboardIcon /> Copy React</Button></Box>
+          <Box><Button variant="link" onClick={this.onDownloadSvg}>Download SVG</Button></Box>
+          <Box><Button variant="link" onClick={this.onCopyHtml}>Copy HTML</Button></Box>
+          <Box><Button variant="link" onClick={this.onCopyReact}>Copy React</Button></Box>
         </div>
       </div>
     );
