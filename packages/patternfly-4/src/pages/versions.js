@@ -30,7 +30,7 @@ class Versions extends React.Component {
     '@patternfly/react-tokens': {},
     '@patternfly/react-topology': {},
     '@patternfly/react-virtualized-extension': {},
-    sections: null
+    sections: require('../../static/versions.json')
   };
 
   componentDidMount() {
@@ -38,8 +38,10 @@ class Versions extends React.Component {
       axios.get(`https://cors-anywhere.herokuapp.com/https://registry.npmjs.org/${pack}`, headers)
         .then(({ data }) => this.setState({[pack]: { versions: data['dist-tags'] }}));
     });
-    axios.get('/versions.json')
-      .then(({ data }) => this.setState({ sections: data }));
+    if (typeof window !== 'undefined') {
+      axios.get('/versions.json')
+        .then(({ data }) => this.setState({ sections: data }));
+    }
   }
 
   render() {

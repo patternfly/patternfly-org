@@ -29,16 +29,17 @@ import Banner from './banner';
 import axios from 'axios';
 import './layout.scss';
 
-// Set initial state
-let state = { isBannerOpen: true, isExpanded: false, sections: {} };
-
 class Layout extends React.Component {
 
   constructor(props) {
     super(props);
 
     // Retrieve the last state
-    this.state = state;
+    this.state = {
+      isBannerOpen: sessionStorage.getItem('pf4-banner-closed') || false,
+      isExpanded: false,
+      sections: require('../../static/versions.json')
+    };
   }
 
   componentDidMount() {
@@ -50,11 +51,11 @@ class Layout extends React.Component {
         inputSelector: '#global-search-input',
         debug: false // Set debug to true if you want to inspect the dropdown
       });
+      axios.get('/versions.json')
+        .then(({ data }) => this.setState({ sections: data }));
     } else {
       console.warn('Search has failed to load');
     }
-    axios.get('/versions.json')
-      .then(({ data }) => this.setState({ sections: data }));
   }
 
   componentWillUnmount() {
@@ -67,6 +68,7 @@ class Layout extends React.Component {
   }
 
   closeBanner = () => {
+    sessionStorage.setItem('pf4-banner-closed', true);
     this.setState({
       isBannerOpen: false
     })
