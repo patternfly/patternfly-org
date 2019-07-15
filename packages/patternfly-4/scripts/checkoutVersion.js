@@ -10,11 +10,9 @@ const group = Object.values(sections)
 console.log('Checking out resources for', group);
 
 // replace versions in package.json
-console.log('Replacing versions in package.json');
+console.log('Installing new versions in package.json');
 Object.entries(group.versions).forEach(([key, value]) => packageJson.dependencies[key] = value)
 fs.writeFileSync(path.resolve(__dirname, '../package.json'), JSON.stringify(packageJson, null, 2))
-
-console.log('Installing versions');
 console.log(execSync('yarn').toString());
 
 // checkout right submodules
@@ -23,6 +21,5 @@ execSync(`cd _repos/patternfly-react && git checkout @patternfly/react-core@${gr
 execSync(`cd _repos/patternfly-next && git checkout v${group.versions['@patternfly/patternfly']}`);
 
 // set env var for prefix path
-console.log('Changing path prefix');
-execSync(`export PATH_PREFIX=${group.date}`);
+console.log(`TODO: export PATH_PREFIX=${group.date}`);
 
