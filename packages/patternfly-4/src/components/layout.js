@@ -36,7 +36,7 @@ class Layout extends React.Component {
 
     // Retrieve the last state
     this.state = {
-      isBannerOpen: sessionStorage.getItem('pf4-banner-closed') || false,
+      isBannerOpen: false,
       isExpanded: false,
       sections: require('../../static/versions.json')
     };
@@ -51,6 +51,7 @@ class Layout extends React.Component {
         inputSelector: '#global-search-input',
         debug: false // Set debug to true if you want to inspect the dropdown
       });
+      this.setState({ isBannerOpen: sessionStorage.getItem('pf4-banner-closed') });
       axios.get('/versions.json')
         .then(({ data }) => this.setState({ sections: data }));
     } else {
