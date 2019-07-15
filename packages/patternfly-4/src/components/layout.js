@@ -170,7 +170,7 @@ class Layout extends React.Component {
         <Location>
           {({ location }) => (
             <React.Fragment>
-            {isBannerOpen && location.pathname === '/v4/' && <Banner onClose={this.closeBanner} />}
+            {isBannerOpen && <Banner onClose={this.closeBanner} />}
             <Header siteTitle={data.site.siteMetadata.title} />
             <Page isManagedSidebar={sideNav !== null} header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} /> : null}>
               {tertiaryNav && <PageSection variant={PageSectionVariants.light}>

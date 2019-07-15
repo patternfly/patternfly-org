@@ -21,8 +21,9 @@ const ignore = [
   `**/CHANGELOG.*`,
 ];
 
+console.log('prefix', process.env.PATH_PREFIX);
 module.exports = {
-  pathPrefix: '/v4',
+  pathPrefix: process.env.PATH_PREFIX || '/v4',
   siteMetadata: {
     title: 'PatternFly 4',
     description: 'Documentation for PatternFly 4',
@@ -118,7 +119,7 @@ module.exports = {
         // short_name is used on the user's home screen, launcher, or other places where space may be limited
         short_name: 'PatternFly',
         // The start_url tells the browser where your application should start when it is launched
-        start_url: '/v4',
+        start_url: process.env.pathPrefix || '/v4',
         // The background_color property is used on the splash screen when the application is first launched
         background_color: '#151515',
         // The theme_color sets the color of the tool bar, and may be reflected in the app's preview in task switchers.
