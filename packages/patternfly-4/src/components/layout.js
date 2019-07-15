@@ -39,23 +39,6 @@ class Layout extends React.Component {
 
     // Retrieve the last state
     this.state = state;
-    axios.get('/versions.json')
-      .then(({ data }) => this.setState({ sections: data }));
-  }
-
-  componentWillUnmount() {
-    // Remember state for the next mount
-    state = this.state;
-  }
-
-  closeBanner = () => {
-    this.setState({
-      isBannerOpen: false
-    })
-  };
-
-  onToggle = () => {
-    this.setState({isExpanded: !this.state.isExpanded});
   }
 
   componentDidMount() {
@@ -70,10 +53,27 @@ class Layout extends React.Component {
     } else {
       console.warn('Search has failed to load');
     }
+    axios.get('/versions.json')
+      .then(({ data }) => this.setState({ sections: data }));
+  }
+
+  componentWillUnmount() {
+    // Remember state for the next mount
+    state = this.state;
   }
 
   onLogoClick = () => {
     navigate('/');
+  }
+
+  closeBanner = () => {
+    this.setState({
+      isBannerOpen: false
+    })
+  };
+
+  onToggle = () => {
+    this.setState({isExpanded: !this.state.isExpanded});
   }
 
   render() {
@@ -119,11 +119,13 @@ class Layout extends React.Component {
           }}
         </Location>
       );
-      const dropdownItems = Object.values(sections).flat(1).map(release =>
-        <DropdownItem key={release.name} component={Link} to={`/${release.date}`}>
-          {release.name} ({release.date})
-        </DropdownItem>
-      );
+      const dropdownItems = Object.values(sections)
+        .reduce((acc, cur) => acc.concat(cur), [])
+        .map(release =>
+          <DropdownItem key={release.name} component={Link} to={`/${release.date}`}>
+            {release.name} ({release.date})
+          </DropdownItem>
+        );
       const PageToolbar = (
         <Toolbar>
           <ToolbarGroup>

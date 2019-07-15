@@ -30,12 +30,11 @@ class Versions extends React.Component {
     '@patternfly/react-tokens': {},
     '@patternfly/react-topology': {},
     '@patternfly/react-virtualized-extension': {},
-    sections: {},
+    sections: null
   };
 
-  constructor(props) {
-    super(props);
-    Object.keys(this.state).forEach(pack => {
+  componentDidMount() {
+    Object.keys(this.state).filter(pack => pack.startsWith('@')).forEach(pack => {
       axios.get(`https://cors-anywhere.herokuapp.com/https://registry.npmjs.org/${pack}`, headers)
         .then(({ data }) => this.setState({[pack]: { versions: data['dist-tags'] }}));
     });
@@ -61,19 +60,20 @@ class Versions extends React.Component {
         render={data => {
           const reactNotes = data.allMdx.nodes.find(node => node.fileAbsolutePath.indexOf('patternfly-react') >= 0)
           const coreNotes = data.allMdx.nodes.find(node => node.fileAbsolutePath.indexOf('patternfly-next') >= 0)
-        console.log('sections', this.state.sections)
           return (
             <Layout>
               <SEO title="Versions" />
               <PageSection>
                 <p>PatternFly is available as a set of NPM packages periodically released. The releases are listed below.</p>
                 <Split gutter="md">
-                  {Object.entries(this.state.sections).reverse().filter(([_section, releases]) => releases).map(([section, releases]) =>
-                    <SplitItem>
-                      <Title>{section}</Title>
+                  {this.state.sections && Object.entries(this.state.sections).map(([section, releases]) =>
+                    <SplitItem key={section}>
+                      <Title size="h1">{section}</Title>
                       <ul>
                         {releases.map(release => 
-                          <li key={release.name}>{release.name} ({release.date})</li>
+                          <li key={release.name}>
+                            <a href={`/${release.date}`}>{release.name} ({release.date})</a>
+                          </li>
                         )}
                       </ul>
                     </SplitItem>
