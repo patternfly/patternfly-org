@@ -21,7 +21,7 @@ const ignore = [
   `**/CHANGELOG.*`,
 ];
 
-const pathPrefix = process.env.PATH_PREFIX || 'v4';
+const pathPrefix = `/${process.env.PATH_PREFIX || 'v4'}`;
 
 console.log('prefix', pathPrefix);
 module.exports = {

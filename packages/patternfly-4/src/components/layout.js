@@ -22,6 +22,7 @@ import {
   Dropdown,
   DropdownToggle,
   DropdownItem,
+  DropdownSeparator,
 } from '@patternfly/react-core';
 import { Location } from '@reach/router';
 import brandImg from '../images/PatternFly_logo.svg';
@@ -59,11 +60,6 @@ class Layout extends React.Component {
     }
   }
 
-  componentWillUnmount() {
-    // Remember state for the next mount
-    state = this.state;
-  }
-
   onLogoClick = () => {
     navigate('/');
   }
@@ -86,6 +82,7 @@ class Layout extends React.Component {
     return (<StaticQuery query={graphql`
       query SiteTitleQuery {
         site {
+          pathPrefix
           siteMetadata {
             title
           }
@@ -122,20 +119,29 @@ class Layout extends React.Component {
           }}
         </Location>
       );
-      const dropdownItems = Object.values(sections)
-        .reduce((acc, cur) => acc.concat(cur), [])
-        .map(release =>
-          <DropdownItem key={release.name} component={Link} to={`/${release.date}`}>
-            {release.name} ({release.date})
-          </DropdownItem>
-        );
+      const versions = Object.values(sections).reduce((acc, cur) => acc.concat(cur), []);
+      const curVersion = versions.find(v => data.site.pathPrefix.includes(v.date));
+      let dropdownItems = versions.map((release, index) =>
+        <DropdownItem key={release.name} component={Link} to={index === 0 ? '/v4' : `/${release.date}`}>
+          {index === 0 ? 'Latest' : release.name} ({release.date})
+        </DropdownItem>
+      );
+      dropdownItems = dropdownItems.concat([
+        <DropdownSeparator key="separator" />,
+        <DropdownItem key="versions" component={Link} to={`/versions`}>
+          All Versions
+        </DropdownItem>
+      ]);
       const PageToolbar = (
         <Toolbar>
           <ToolbarGroup>
             <ToolbarItem style={{marginRight: '24px'}}>
               <Dropdown
                 onSelect={this.onSelect}
-                toggle={<DropdownToggle onToggle={this.onToggle}>{'Version'}</DropdownToggle>}
+                toggle={
+                  <DropdownToggle onToggle={this.onToggle}>
+                    {curVersion ? `${curVersion.name} (${curVersion.date})` : 'Development'}
+                  </DropdownToggle>}
                 isOpen={isExpanded}
                 dropdownItems={dropdownItems}
                 />

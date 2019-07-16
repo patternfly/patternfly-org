@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
+import SideNav from '../../../components/_react/Documentation/SideNav';
 import Layout from '../../../components/layout';
 import SEO from '../../../components/seo';
 import {
@@ -28,12 +29,14 @@ class Notes extends React.Component {
         `}
         render={data => {
           return (
-            <Layout>
-              <SEO title="Release Notes" />
-              <PageSection>
-                {data.allMdx.nodes.length > 0
-                  ? <MDXRenderer>{data.allMdx.nodes[0].code.body}</MDXRenderer>
-                  : 'No release notes.'}
+            <Layout sideNav={<SideNav />}>
+              <SEO title="React Release Notes" />
+              <PageSection className="markdown-body">
+                <div className="pf-c-content">
+                  {data.allMdx.nodes.length > 0
+                    ? <MDXRenderer>{data.allMdx.nodes[0].code.body}</MDXRenderer>
+                    : 'No release notes.'}
+                </div>
               </PageSection>
             </Layout>
         )}} />
