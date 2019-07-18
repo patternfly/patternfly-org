@@ -7,6 +7,7 @@ import posed from 'react-pose';
 import copy from 'clipboard-copy';
 import { saveAs } from 'file-saver';
 import ReactDOM from 'react-dom';
+import { DownloadIcon, ClipboardIcon } from '../../../node_modules/@patternfly/react-icons';
 
 const styles = {
   iconCell: css`
@@ -68,6 +69,14 @@ const styles = {
   copyButtons: css`
     display: flex;
     margin-left: -16px;
+    @media only screen and (max-width: 499px) {
+      display: block;
+    }
+    button {
+      @media only screen and (min-width: 770px) and (max-width: 840px) {
+        font-size: 13px;
+      }
+    }
   `,
   scaleDown: css`transform: scale(.7);`,
   openContainer: css`display: flex;`,
