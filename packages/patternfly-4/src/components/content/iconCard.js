@@ -202,10 +202,10 @@ class IconCard extends React.Component {
               <button className="pf-c-button pf-m-plain" aria-label="Close" onClick={this.toggleBody}>
                 <i className="fas fa-times" aria-hidden="true"></i>
               </button>
-              <h1 className="pf-c-title pf-m-xl" id="popover-bottom-header" style={{marginTop: 0}}>
+              <h1 className="pf-c-title pf-m-xl" id={name + "-popover-bottom-header"} style={{marginTop: 0}}>
                 {name}
               </h1>
-              <div className="pf-c-popover__body" id="popover-bottom-body">
+              <div className="pf-c-popover__body" id={name + "-popover-bottom-body"}>
                 {popoverBody}
               </div>
             </div>
