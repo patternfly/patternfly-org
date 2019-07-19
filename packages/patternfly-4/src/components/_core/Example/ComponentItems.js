@@ -23,23 +23,6 @@ export default class ComponentItems extends React.Component {
     this.state = { isFull: false, codeView: 'source' };
   }
 
-  componentDidMount() {
-    let showComponent = true;
-    if (window.location.search !== '') {
-      // specific component was requested - make sure it matches
-      const queryObject = ComponentItems.parseQueryString(window.location.search.substr(1));
-      if (queryObject.component !== encodeURI(this.props.heading)) {
-        showComponent = false;
-      }
-    }
-
-    // eslint-disable-next-line react/no-did-mount-set-state
-    this.setState({
-      isFull: window.location.pathname.indexOf('-full') > 0,
-      showComponent
-    });
-  }
-
   showView(codeView) {
     this.setState(prevState => ({
       codeView

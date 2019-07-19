@@ -40,7 +40,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `react-pages`,
-        path: `${__dirname}/_repos/react-core`,
+        path: `${__dirname}/_repos/patternfly-react/packages/patternfly-4/react-core`,
         ignore: ignore.concat(`**/*.json`, `**/index.*`)
       }
     },
@@ -48,7 +48,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `react-pages`,
-        path: `${__dirname}/_repos/react-charts`,
+        path: `${__dirname}/_repos/patternfly-react/packages/patternfly-4/react-charts`,
         ignore: ignore.concat(`**/*.json`, `**/index.*`)
       }
     },
@@ -56,7 +56,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `react-pages`,
-        path: `${__dirname}/_repos/react-table`,
+        path: `${__dirname}/_repos/patternfly-react/packages/patternfly-4/react-table`,
         ignore: ignore.concat(`**/*.json`, `**/index.*`)
       }
     },
@@ -64,7 +64,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `core-pages`,
-        path: `${__dirname}/_repos/core/src`,
+        path: `${__dirname}/_repos/patternfly-next/src`,
         ignore: [`**/*.scss`, `**/*.md`]
       }
     },
@@ -93,12 +93,6 @@ module.exports = {
     {
       // Our custom plugin for *.js?x *.ts?x files to get prop types
       resolve: require.resolve(`${__dirname}/plugins/gatsby-transformer-react-docgen-typescript`),
-    },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
     },
     {
       resolve: `gatsby-mdx`,

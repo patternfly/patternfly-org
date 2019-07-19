@@ -19,3 +19,17 @@
     --pf-c-form__label--FontSize: var(--pf-global--FontSize--lg);
   }
 }
+
+.table-css-vars {
+  tbody:first-of-type {
+    @media only screen and (max-width: 1450px) {
+      border-color: #f8f8f8 !important;
+    }
+  }
+
+  tr:not(.pf-c-table__expandable-row) {
+    @media only screen and (max-width: 1450px) {
+      border-bottom-color: #f8f8f8 !important;
+    }
+  }
+}

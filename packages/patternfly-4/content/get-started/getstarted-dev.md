@@ -77,10 +77,10 @@ If you need to overwrite any elements, we recommend extending the variables foun
 
 When you install PatternFly 4, the package includes:
 
-  * A single file for the entire compiled library: `node_modules/@patternfly/patternfly/patternfly.css`
-  * Individual files with each component compiled separately: `node_modules/@patternfly/patternfly/<ComponentName>/styles.css`
-  * A single file for the entire library's source (Sass): `node_modules/@patternfly/patternfly/patternfly.scss`
-  * Individual files for each component's source (Sass): `node_modules/@patternfly/patternfly/<ComponentName>/styles.scss`
+  * A single file for the entire compiled library: ```node_modules/@patternfly/patternfly/patternfly.css```
+  * Individual files with each component compiled separately: ```node_modules/@patternfly/patternfly/<ComponentName>/styles.css```
+  * A single file for the entire library's source (Sass): ```node_modules/@patternfly/patternfly/patternfly.scss```
+  * Individual files for each component's source (Sass): ```node_modules/@patternfly/patternfly/<ComponentName>/styles.scss```
 
 Use these files to consume the library. The recommended consumption approach will vary from project to project.
 
@@ -97,7 +97,7 @@ Use these files to consume the library. The recommended consumption approach wil
 
   This will ensure that PatternFly 4 styles take precedence over anything that currently resides in your application.
 
-4. If you want to use PatternFly 4 utilities in your project, find the utilities file,  ```patternfly-addons.css```
+4. If you want to use PatternFly utilities in your project, find the utilities file,  ```patternfly-addons.css```
 
 5. Copy ```patternfly-addons.css``` into your project’s CSS directory.
 

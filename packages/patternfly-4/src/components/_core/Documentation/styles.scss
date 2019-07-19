@@ -61,7 +61,7 @@
 
   code {
     color: #282d33;
-    white-space: nowrap;
+    white-space: normal;
   }
 
   mark {
@@ -82,6 +82,7 @@
 
       > code {
         white-space: normal;
+        word-break: break-all;
       }
     }
   }

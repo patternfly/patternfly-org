@@ -8,17 +8,17 @@ The about modal stores the version number(s) of the application as well as any a
 
 ![Modal](./img/about-modal.png)
 
-1. **Backdrop**: blurs any interface elements in the background to bring the modal content into focus
+1. **Backdrop:** Blurs any interface elements in the background to bring the modal content into focus
 2. **Modal**
-3. **Branding**: provides logo and branding for the product. Substitute your own logotype by providing an SVG that can be scaled proportionately to fit the space.
+3. **Branding:** Provides logo and branding for the product. Substitute your own logotype by providing an SVG that can be scaled proportionately to fit the space.
 4. **Product title**
 5. **Close button**
-6. **Content**: Label and version
+6. **Content:** Label and version
     * When version and build information are both shown: Version 6.3 (Build 5)
     * When version only: Version 6.3
     * When build only: Build 5
-7. **Modal image**: The modal image should be the same as the [background image](/documentation/react/components/backgroundimage) you use for your application.
-8. **Trademark and copyright information**: Optionally include legal text. Suggested format for copyright -  Copyright (c) 2018 Company
+7. **Modal image:** The modal image should be the same as the [background image](/documentation/react/components/backgroundimage) you use for your application.
+8. **Trademark and copyright information:** Optionally include legal text. Suggested format for copyright -  Copyright (c) 2018 Company
 
 ## Usage
 Use the about modal to provide information about the product including the product name, logo, version numbers, and any appropriate legal text.

@@ -64,18 +64,22 @@ export default function ContentTemplate ({
   let SideNav;
   const { mdx, allGetStartedNavigationJson, allDesignGuidelinesNavigationJson, allContributeNavigationJson } = data;
   const { frontmatter } = mdx;
+  let title;
 
   if (frontmatter.path.indexOf('/get-started') > -1 ) {
     SideNav = navBuilder(allGetStartedNavigationJson.edges);
+    title = 'Get started';
   } else if (frontmatter.path.indexOf('/design-guidelines') > -1 ) {
     SideNav = navBuilder(allDesignGuidelinesNavigationJson.edges);
+    title = 'Design guidelines';
   } else if (frontmatter.path.indexOf('/contribute') > -1 ) {
     SideNav = navBuilder(allContributeNavigationJson.edges);
+    title = 'Contribute';
   }
 
   return (
     <Layout sideNav={SideNav}>
-      <SEO title="Docs" keywords={['gatsby', 'application', 'react']} />
+      <SEO title={title} keywords={['gatsby', 'application', 'react']} />
       <PageSection className="pageSectionStyles markdown-body" variant={PageSectionVariants.light}>
         <PatternFlyThemeProvider>
           <TextContent>

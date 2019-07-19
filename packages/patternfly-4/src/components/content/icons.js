@@ -1,9 +1,9 @@
 import React from 'react';
-import { Gallery, Form, TextInput } from '@patternfly/react-core';
+import { Gallery, Form, TextInput, Button, Title, EmptyState, EmptyStateVariant, EmptyStateIcon, EmptyStateBody } from '@patternfly/react-core';
 import * as icons from '@patternfly/react-icons';
 import IconCard from './iconCard';
 import paramCase from 'param-case';
-import coreIcons from '../../../_repos/core/src/icons/definitions/pf-icons.json';
+import coreIcons from '../../../_repos/patternfly-next/src/icons/definitions/pf-icons.json';
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
 import './icons.scss';
@@ -59,6 +59,16 @@ class Icons extends React.Component {
           return <IconCard key={id} id={id} icon={Icon} name={name} />;
         })}
         </Gallery>
+        {filteredIcons.length == 0 &&  <EmptyState variant={EmptyStateVariant.full}>
+          <EmptyStateIcon icon={icons.SearchIcon}/>
+          <Title headingLevel="h5" size="2xl">
+            No results found for "{ searchValue }".
+          </Title>
+          <EmptyStateBody>
+            We couldn't find any icons that matched your search. Try entering a new search term to find what you're looking for.
+          </EmptyStateBody>
+        </EmptyState>
+        }
     </>
   );
   }
