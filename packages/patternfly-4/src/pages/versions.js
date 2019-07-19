@@ -46,50 +46,32 @@ class Versions extends React.Component {
 
   render() {
     return (
-      <StaticQuery
-        query={graphql`
-          {
-            allMdx(filter: {fileAbsolutePath: {glob: "**/RELEASE-NOTES.md"}}) {
-              nodes {
-                fileAbsolutePath
-                code {
-                  body
-                }
-              }
-            }
-          }
-        `}
-        render={data => {
-          const reactNotes = data.allMdx.nodes.find(node => node.fileAbsolutePath.indexOf('patternfly-react') >= 0)
-          const coreNotes = data.allMdx.nodes.find(node => node.fileAbsolutePath.indexOf('patternfly-next') >= 0)
-          return (
-            <Layout>
-              <SEO title="Versions" />
-              <PageSection>
-                <p>PatternFly is available as a set of NPM packages periodically released. The releases are listed below.</p>
-                <Split gutter="md">
-                  {this.state.sections && Object.entries(this.state.sections).map(([section, releases]) =>
-                    <SplitItem key={section}>
-                      <Title size="h1">{section}</Title>
-                      <ul>
-                        {releases.map(release => 
-                          <li key={release.name}>
-                            <a href={`/${release.date}`}>{release.name} ({release.date})</a>
-                          </li>
-                        )}
-                      </ul>
-                    </SplitItem>
+      <Layout>
+        <SEO title="Versions" />
+        <PageSection>
+          <p>PatternFly is available as a set of NPM packages periodically released. The releases are listed below.</p>
+          <Split gutter="md">
+            {this.state.sections && Object.entries(this.state.sections).map(([section, releases]) =>
+              <SplitItem key={section}>
+                <Title size="h1">{section}</Title>
+                <ul>
+                  {releases.map(release => 
+                    <li key={release.name}>
+                      <a href={`/${release.latest ? 'v4' : release.date}`}>{release.name} ({release.date})</a>
+                    </li>
                   )}
-                </Split>
-              </PageSection>
-              <PageSection>
-                <p>If you're feeling brave, you can try our latest prereleases.</p>
-                  {Object.entries(this.state).filter(([key, val]) => key.startsWith('@')).map(([key, val]) => 
-                  <p key={key}>{key} {val.versions ? val.versions.prerelease || val.versions.latest : `https://registry.npmjs.org/${key}`}</p>
-                )}
-              </PageSection>
-            </Layout>
-        )}} />
+                </ul>
+              </SplitItem>
+            )}
+          </Split>
+        </PageSection>
+        <PageSection>
+          <p>If you're feeling brave, you can try our latest prereleases.</p>
+            {Object.entries(this.state).filter(([key, val]) => key.startsWith('@')).map(([key, val]) => 
+            <p key={key}>{key} {val.versions ? val.versions.prerelease || val.versions.latest : `https://registry.npmjs.org/${key}`}</p>
+          )}
+        </PageSection>
+      </Layout>
     );
   }
 }

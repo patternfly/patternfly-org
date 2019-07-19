@@ -120,10 +120,14 @@ class Layout extends React.Component {
         </Location>
       );
       const versions = Object.values(sections).reduce((acc, cur) => acc.concat(cur), []);
-      const curVersion = versions.find(v => data.site.pathPrefix.includes(v.date));
-      let dropdownItems = versions.map((release, index) =>
-        <DropdownItem key={release.name} component={Link} to={index === 0 ? '/v4' : `/${release.date}`}>
-          {index === 0 ? 'Latest' : release.name} ({release.date})
+      let curVersion = versions.find(v => data.site.pathPrefix.includes(v.date));
+      let dropdownItems = versions.map(release =>
+        <DropdownItem
+          key={release.name}
+          component="a"
+          href={`/${release.latest ? 'v4' : release.date}`}
+        >
+          {release.latest ? 'Latest' : release.name} ({release.date})
         </DropdownItem>
       );
       dropdownItems = dropdownItems.concat([
@@ -140,7 +144,7 @@ class Layout extends React.Component {
                 onSelect={this.onSelect}
                 toggle={
                   <DropdownToggle onToggle={this.onToggle}>
-                    {curVersion ? `${curVersion.name} (${curVersion.date})` : 'Development'}
+                    {curVersion ? `${curVersion.latest ? 'Latest' : curVersion.name} (${curVersion.date})` : 'Development'}
                   </DropdownToggle>}
                 isOpen={isExpanded}
                 dropdownItems={dropdownItems}

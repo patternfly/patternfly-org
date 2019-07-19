@@ -3,6 +3,7 @@
     {
       "name": "Albatross",
       "date": "2019-07-02",
+      "latest": true,
       "versions": {
         "@patternfly/patternfly": "2.17.0",
         "@patternfly/react-charts": "4.4.7",
