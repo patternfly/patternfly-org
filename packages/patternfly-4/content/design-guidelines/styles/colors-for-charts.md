@@ -520,7 +520,7 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
 ## The system
 Although the system may seem complex, it is completely customizable. The idea is that you can put together your desired colors and amount of colors and the system will still sort them correctly. Here’s how the system works:
 
-<img src={theSystem} />
+<img alt = "chart color system example" src={theSystem} />
 
 In this instance, there are only four base colors, therefore four color families. The order begins by going through each base color. Next, it alternates between the lightest and darkest values of each family. Finally, if you still need more colors, it alternates between the second lightest and second darkest colors of each family. In variable-terms: #1a-d base colors, #2a-d [color]-100/[color]-500 alternating, #3a-d [color]-500/[color]-100 alternating, #4a-d [color]-200/[color]-400 alternating, and #5a-d [color]-400/[color]-200 alternating. No matter the colors inputted, the process will remain the same.
 
@@ -546,4 +546,4 @@ If the set of data includes more than six variables, we recommend applying the m
 
 You can also use the color order system with one color family. This creates a monochromatic effect. It works using the same logic and order. We recommend using this system for charts with nested variables. The order begins by going through each base color, then lightest, darkest, second lightest, and ending with second darkest. In variable-terms: #1 [color]-300 (base color), #2 [color]-100, #3 [color]-500, #4 [color]-200, #5 [color]-400. The hues will always follow this order.
 
-<img src={oneFamily} />
+<img alt = "monochromatic chart color system example" src={oneFamily} />
