@@ -22,10 +22,13 @@
     "@patternfly/react-charts": "4.7.0",
     "@patternfly/react-core": "3.75.0",
     "@patternfly/react-icons": "3.10.13",
+    "@patternfly/react-inline-edit-extension": "2.9.47",
     "@patternfly/react-styled-system": "3.5.0",
     "@patternfly/react-styles": "3.5.6",
     "@patternfly/react-table": "2.14.21",
     "@patternfly/react-tokens": "2.6.12",
+    "@patternfly/react-topology": "2.6.18",
+    "@patternfly/react-virtualized-extension": "1.1.80",
     "@webcomponents/webcomponentsjs": "^2.2.10",
     "axios": "^0.19.0",
     "capture-website": "^0.4.0",
@@ -77,10 +80,7 @@
     "react-shadow": "^17.1.1",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
-    "to-string-loader": "^1.1.5",
-    "@patternfly/react-inline-edit-extension": "2.9.47",
-    "@patternfly/react-topology": "2.6.18",
-    "@patternfly/react-virtualized-extension": "1.1.80"
+    "to-string-loader": "^1.1.5"
   },
   "keywords": [
     "gatsby"
