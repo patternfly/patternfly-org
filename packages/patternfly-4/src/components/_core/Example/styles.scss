@@ -67,3 +67,20 @@
   border: none;
   outline: none;
 }
+
+.Example__info {
+  border-left: 3px solid rgb(115, 188, 247);
+  background-color: #fff;
+}
+
+.Example__info--intro {
+  background-color: #fff;
+}
+
+.Example__documentation--text {
+  padding: 16px;
+}
+
+.core-example-card {
+  box-shadow: unset;
+}

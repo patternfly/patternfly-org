@@ -13,8 +13,6 @@ import Tokens from '../components/css-variables';
 import PropsTable from '../components/_react/propsTable';
 import './template.scss';
 import './gettingStarted.scss';
-import '../styles/content/spacers.scss';
-import '../styles/content/colors.scss';
 
 const components = {
   code: class LiveEditWrapper extends React.Component {

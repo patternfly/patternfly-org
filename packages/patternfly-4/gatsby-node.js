@@ -6,7 +6,6 @@
 const path = require('path');
 const glob = require('glob');
 const navHelpers = require('./src/helpers/navHelpers');
-// const styleFinder = require('./scripts/find-react-styles');
 
 // Map to handlebars partial files for Core
 let partialsToLocationsMap = null;
@@ -56,7 +55,7 @@ exports.createPages = async ({ graphql, actions }) => {
       redirectInBrowser: true,
       toPath: t
     })
-    console.log('\nRedirecting: ' + f + ' to: ' + t);
+    // console.log('\nRedirecting: ' + f + ' to: ' + t);
   })
   await graphql(`
     {
@@ -201,7 +200,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }
     },
     // Core md loader (replace MDX's markdown loader)
     {
-      test: /\.md$/,
+      test: /\/docs\/.*\.md$/,
       loader: 'html-loader!markdown-loader'
     },
     ...nonMDRules

@@ -8,11 +8,14 @@ import coreIcons from '../../../_repos/patternfly-next/src/icons/definitions/pf-
 import { css, jsx } from '@emotion/core';
 import './icons.scss';
 
+// Get all the icons from react ending in `Icon`
 const allIcons = Object.entries(icons).filter(([name]) => name.endsWith('Icon'));
+// Filter the icons down to the ones that also exist in core
 let commonIcons = allIcons.filter(([name]) => {
   const hyphenName = paramCase(name.slice(0, -4));
   return Boolean(coreIcons[hyphenName]);
 });
+// sort the icons
 commonIcons = commonIcons.sort((a , b) => {
   return a[0] > b[0] ? 1 : -1;
 });

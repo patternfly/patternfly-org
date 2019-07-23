@@ -70,7 +70,7 @@ export default class Documentation extends React.Component {
                     <AutoLinkHeader anchorOnly className="pf-site-toc">Documentation</AutoLinkHeader>
                     {variablesRoot && <AutoLinkHeader anchorOnly className="pf-site-toc">CSS Variables</AutoLinkHeader>}
                   </Section>
-                  <Section title="Examples" headingLevel="h3">
+                  <Section title="Examples" headingLevel="h3" className={className}>
                     {children}
                   </Section>
                 </PageSection>

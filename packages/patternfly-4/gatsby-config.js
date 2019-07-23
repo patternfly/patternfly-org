@@ -98,15 +98,21 @@ module.exports = {
       resolve: `gatsby-mdx`,
       options: {
         extensions: ['.mdx', '.md'],
+        // Note: Using a string reference is currently not supported for gatsbyRemarkPlugins
+        // Use object with resolve key instead
         gatsbyRemarkPlugins: [
-          'gatsby-remark-autolink-headers',
+          {
+            resolve: 'gatsby-remark-autolink-headers'
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 700
             }
           },
-          'gatsby-remark-copy-linked-files'
+          {
+            resolve: 'gatsby-remark-copy-linked-files'
+          }
         ]
       }
     },

@@ -8,6 +8,7 @@ import AutoLinkHeader from '@content/AutoLinkHeader';
 import EditorToolbar from '../../example/editorToolbar';
 import { Editor } from 'react-live';
 import { Location } from '@reach/router';
+import { Card, CardHeader, CardBody, CardFooter } from '@patternfly/react-core';
 
 export default class Example extends React.Component {
   static parseQueryString(queryString) {
@@ -45,7 +46,9 @@ export default class Example extends React.Component {
       className = '',
       children,
       fullPageOnly,
-      minHeight
+      minHeight,
+      docs,
+      intro
     } = this.props;
     return (
       <Location>
@@ -64,6 +67,8 @@ export default class Example extends React.Component {
             }
           }
           
+          const htmlDocs = docs ? { __html: docs } : null;
+          const htmlIntro = intro ? { __html: intro } : null;
           const sourceOutput =
             typeof children === 'string' ? children : ReactDOMServer.renderToStaticMarkup(children).replace(/ "/g, '"');
           const indentedOutput = pretty(sourceOutput, { ocd: true });
@@ -85,13 +90,29 @@ export default class Example extends React.Component {
           const fullPath = location.href && `${location.href.substr(0, location.href.length - (endsWithSlash ? 1 : 0))}-full/?component=${heading}`;
           return (
             <div className="ws-live-demo">
-              <AutoLinkHeader size="lg" is="h4" className="ws-example-heading">{heading}</AutoLinkHeader>
-              {Boolean(description) && <p className="pf-c-content" dangerouslySetInnerHTML={{ __html: description }} />}
-              <Preview className={className} heading={heading} viewport={this.state.viewport} lights={this.state.lights} fullPageOnly={fullPageOnly} minHeight={minHeight}>
-                {children}
-              </Preview>
-              <ComponentItems children={children} className={css('example')} />
-              <EditorToolbar editor={editor} raw={indentedOutput} live={false} showMessage={false} fullPath={fullPath} showLights={false} onLightsChange={this.onLightsChange}/>
+              {htmlIntro && (
+                <div className="Example__documentation Example__info--intro">
+                  <p className="Example__documentation--text" dangerouslySetInnerHTML={htmlIntro} />
+                </div>
+              )}
+              <Card className="core-example-card">
+                <CardHeader><AutoLinkHeader size="lg" is="h4" className="ws-example-heading">{heading}</AutoLinkHeader></CardHeader>
+                <CardBody>
+                  {Boolean(description) && <p className="pf-c-content" dangerouslySetInnerHTML={{ __html: description }} />}
+                  <Preview className={className} heading={heading} viewport={this.state.viewport} lights={this.state.lights} fullPageOnly={fullPageOnly} minHeight={minHeight}>
+                    {children}
+                  </Preview>
+                </CardBody>
+                <CardFooter>
+                  <ComponentItems children={children} className={css('example')} />
+                  <EditorToolbar editor={editor} raw={indentedOutput} live={false} showMessage={false} fullPath={fullPath} showLights={false} onLightsChange={this.onLightsChange}/>
+                  {htmlDocs && (
+                    <div className="Example__documentation Example__info">
+                      <p className="Example__documentation--text" dangerouslySetInnerHTML={htmlDocs} />
+                    </div>
+                  )}
+                </CardFooter>
+              </Card>
             </div>
           );
         }}

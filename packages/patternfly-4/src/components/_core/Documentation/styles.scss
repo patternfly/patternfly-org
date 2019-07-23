@@ -46,6 +46,8 @@
 
 .Documentation__docsection {
   margin-top: var(--pf-global--spacer--md);
+  background-color: #fff;
+  padding: 16px;
 }
 
 .Documentation__docsection h2 {
@@ -108,4 +110,69 @@
     }
   }
 
+}
+
+.Example__documentation {
+  margin: 2rem 0;
+}
+
+.Example__documentation--text,
+.Example__documentation,
+.Documentation__docsection {
+  // font-size: 16px; 
+
+  ul,
+  ol {
+    margin: .5rem 0 .5rem 1rem;
+    list-style-position: outside;
+    list-style-type: disc;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    // font-size: 16px; 
+  }
+
+  table {
+    margin-bottom: 3rem;
+  }
+
+  table {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    td,
+    th,
+    tr {
+      padding: .5em;
+      vertical-align: top;
+      border: 1px solid #ccc;
+    }
+
+    tr:nth-child(even) {
+      background: #f1f1f1;
+    }
+  }
+
+  @at-root .Example__section code,
+  code {
+    padding: .25em .75em;
+    color: #004368;
+    white-space: nowrap;
+    background-color: #def3ff;
+    border-radius: .5em;
+    font-size: 13px;
+  }
+
+  mark {
+    background-color: #ffe995;
+  }
 }
