@@ -85,12 +85,12 @@ See our [content guidelines](/design-guidelines/content/writing) for additional 
 
 #### Icon use in modal dialogs
 
-| Icon  | Use case(s) | Usage |
-| ------------- | ------------- | ------------- |
-| <i class="fas fa-exclamation-triangle"></i> | **Warning:** Caution/ Warning | Use on confirmation dialogs or passive dialogs to indicate a higher level of urgency and importance. |
-| <i class="fas fa-exclamation-circle"></i>   | **Critical Warning:** Information will be deleted/permanent action  | Use on confirmation dialogs or passive dialogs to indicate the highest level of urgency and importance. |
-| <i class="fas fa-times-circle"></i>  | **Error:** Alert the user that there has been a critical failure/error  | Use on error dialogs to indicate a problem. |
-| <i class="fas fa-info-circle"></i> | **Acknowledgement:** Inform the user of an action or result  | Use on confirmation or passive dialogs to indicate a lower level of urgency. |
+| Icon | Use case(s) | Usage |
+| ------------- |-------------|-------------|
+| <i class="fas fa-exclamation-triangle" aria-label="warning"></i> | **Warning:** Caution/ Warning | Use on confirmation dialogs or passive dialogs to indicate a higher level of urgency and importance.|
+| <i class="fas fa-exclamation-circle" aria-label="critical warning"></i> | **Critical Warning:** Information will be deleted/permanent action  | Use on confirmation dialogs or passive dialogs to indicate the highest level of urgency and importance. |
+| <i class="fas fa-times-circle" aria-label="error"></i>| **Error:** Alert the user that there has been a critical failure/error. | Use on error dialogs to indicate a problem. |
+| <i class="fas fa-info-circle" aria-label="acknowledgement"></i> | **Acknowledgement:** Inform the user of an action or result  | Use on confirmation or passive dialogs to indicate a lower level of urgency. |
 
 ## Components and demos used
 The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use-cases. We’ll explore several examples in this documentation.
