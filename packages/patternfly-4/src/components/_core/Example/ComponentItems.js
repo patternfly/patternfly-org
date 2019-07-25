@@ -61,13 +61,13 @@ export default class ComponentItems extends React.Component {
       });
     }
 
-    if (!this.state.isFull) {
+    if (!this.state.isFull && navigationItems) {
       return (
-        navigationItems && (<div className="Example__section">
+        <div className="Example__section">
           <div className="Example__componentLink">
             <ul>{navigationItems}</ul>
           </div>
-        </div>)
+        </div>
       );
     }
     return null;
