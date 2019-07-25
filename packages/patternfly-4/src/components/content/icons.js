@@ -51,6 +51,7 @@ class Icons extends React.Component {
               id="primaryIconsSearch"
               name="primaryIconsSearch"
               placeholder="Search Icons"
+              aria-label="Search Icons"
               value={searchValue}
               onChange={this.handleSearchChange}
             />

@@ -34,19 +34,19 @@ Use our typographic styles to communicate visual hierarchy. A consistent and log
   <GridItem span={5}>
     <LineHeightTitle>
       <CheckCircleIcon color="#52A549" /> 
-      <span style={{color: '#52A549', marginLeft: '8px'}}>Correct</span>
+      <span style={{color: '#151515', marginLeft: '8px'}}>Correct</span>
     </LineHeightTitle>
     <div>Note how the line height space is included when laying out with spacer elements.</div>
-    <img style={{maxHeight: '170px', padding: '16px'}} src={correct} />
+    <img alt="correct line height space example" style={{maxHeight: '170px', padding: '16px'}} src={correct} />
   </GridItem>
   <GridItem span={2}></GridItem>
   <GridItem span={5}>
     <LineHeightTitle>
       <TimesCircleIcon color="#CC0000" /> 
-      <span style={{color: '#CC0000', marginLeft: '8px'}}>Incorrect</span>
+      <span style={{color: '#151515', marginLeft: '8px'}}>Incorrect</span>
     </LineHeightTitle>
     <div>Do not use the text itself to align with spacing elements when designing. Remember to always include the line height space.</div>
-    <img style={{maxHeight: '125px', padding: '16px'}} src={incorrect} />
+    <img alt="incorrect line height space example" style={{maxHeight: '125px', padding: '16px'}} src={incorrect} />
   </GridItem>
 </Grid>
 
