@@ -31,7 +31,7 @@ class Notes extends React.Component {
           return (
             <Layout sideNav={<SideNav />}>
               <SEO title="Core Release Notes" />
-              <PageSection className="markdown-body">
+              <PageSection className="markdown-body" variant={PageSectionVariants.light}>
                 <div className="pf-c-content">
                   {data.allMdx.nodes.length > 0
                     ? <MDXRenderer>{data.allMdx.nodes[0].code.body}</MDXRenderer>

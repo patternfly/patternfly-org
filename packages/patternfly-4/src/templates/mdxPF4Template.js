@@ -26,7 +26,7 @@ const components = {
       );
     }
   },
-  pre: React.Fragment
+  pre: React.Fragment,
 };
 for (let i = 1; i <= 6; i++) {
   components[`h${i}`] = props => {

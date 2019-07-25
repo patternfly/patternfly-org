@@ -17,6 +17,7 @@ console.log(execSync('yarn').toString());
 
 // checkout right submodules
 console.log('Checking out submodules');
+execSync('git submodule update --remote');
 execSync(`cd _repos/patternfly-react && git checkout @patternfly/react-core@${group.versions['@patternfly/react-core']}`);
 execSync(`cd _repos/patternfly-next && git checkout v${group.versions['@patternfly/patternfly']}`);
 
