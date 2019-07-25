@@ -3,6 +3,7 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview, LiveContext } from 'r
 import { css } from '@patternfly/react-styles';
 import EditorToolbar from '../example/editorToolbar';
 import ShadowDomPreview from '../ShadowDomPreview';
+import { CardBody, CardFooter } from '@patternfly/react-core';
 
 class LiveEdit extends React.Component {
   constructor(props) {
@@ -63,15 +64,18 @@ class LiveEdit extends React.Component {
         >
           {!noLive && (
             <LiveContext.Consumer>
-              {({ element: Element }) => Element && <ShadowDomPreview isReact><div className={css('example ws-preview', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')}><Element /></div></ShadowDomPreview>}
+              {({ element: Element }) => Element && <CardBody><ShadowDomPreview isReact><div className={css('example ws-preview', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')} style={{ padding: 0 }}><Element /></div></ShadowDomPreview></CardBody>}
             </LiveContext.Consumer>
           )}
-          <EditorToolbar
-            raw={this.code}
-            showLights={false}
-            editor={<div className={css('code')}><LiveEditor /></div>}
-            onLightsChange={this.onDarkModeChange} />
-          {!noLive && <LiveError />}
+          <CardFooter>
+            <EditorToolbar
+              raw={this.code}
+              showLights={false}
+              editor={<div className={css('code')}><LiveEditor /></div>}
+              onLightsChange={this.onDarkModeChange} />
+            {!noLive && <LiveError />}
+          </CardFooter>
+          <div className="ws-footer-spacer" />
         </LiveProvider>
       );
     }

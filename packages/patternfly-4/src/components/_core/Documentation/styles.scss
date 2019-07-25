@@ -44,12 +44,6 @@
   color: #292e34;
 }
 
-.Documentation__docsection {
-  margin-top: var(--pf-global--spacer--md);
-  background-color: #fff;
-  padding: 16px;
-}
-
 .Documentation__docsection h2 {
   margin-top: var(--pf-global--spacer--xl);
   margin-bottom: var(--pf-global--spacer--md);
@@ -119,8 +113,6 @@
 .Example__documentation--text,
 .Example__documentation,
 .Documentation__docsection {
-  // font-size: 16px; 
-
   ul,
   ol {
     margin: .5rem 0 .5rem 1rem;
@@ -138,7 +130,6 @@
 
   p {
     margin-bottom: 1rem;
-    // font-size: 16px; 
   }
 
   table {

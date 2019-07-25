@@ -2,6 +2,12 @@
 path: "/design-guidelines/styles/spacers"
 ---
 
+export default ({ children }) => (
+  <div className="spacers-page">
+    {children}
+  </div>
+)
+
 import { Link } from 'gatsby';
 import '../../../src/styles/content/spacers.scss';
 

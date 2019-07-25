@@ -96,7 +96,7 @@ export default class Example extends React.Component {
                 </div>
               )}
               <Card className="core-example-card">
-                <CardHeader><AutoLinkHeader size="lg" is="h4" className="ws-example-heading">{heading}</AutoLinkHeader></CardHeader>
+                <CardHeader><AutoLinkHeader size="lg" is="h4">{heading}</AutoLinkHeader></CardHeader>
                 <CardBody>
                   {Boolean(description) && <p className="pf-c-content" dangerouslySetInnerHTML={{ __html: description }} />}
                   <Preview className={className} heading={heading} viewport={this.state.viewport} lights={this.state.lights} fullPageOnly={fullPageOnly} minHeight={minHeight}>

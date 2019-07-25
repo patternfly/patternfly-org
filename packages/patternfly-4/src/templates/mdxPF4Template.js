@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { PageSection, PageSectionVariants } from '@patternfly/react-core';
+import { PageSection, PageSectionVariants, Card, CardHeader } from '@patternfly/react-core';
 import AutoLinkHeader from '@content/AutoLinkHeader';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from '../components/mdx-renderer';
@@ -29,7 +29,7 @@ const components = {
 for (let i = 1; i <= 6; i++) {
   components[`h${i}`] = props => {
     let inner = props.children.length > 0 ? props.children[1] : props.children;
-    return <AutoLinkHeader className='ws-linked-heading' is="h4" {...props}>{inner}</AutoLinkHeader>;
+    return <CardHeader><AutoLinkHeader size="lg" is="h4" {...props}>{inner}</AutoLinkHeader></CardHeader>;
   }
 }
 
@@ -62,9 +62,11 @@ const MdxPF4Template = ({ data }) => {
         <Section title="Examples" headingLevel="h3">
           <Section className="ws-live-demo">
             <MDXProvider components={components}>
-              <MDXRenderer>
-                {data.mdx.code.body}
-              </MDXRenderer>
+              <Card className="react-example-card">
+                <MDXRenderer>
+                  {data.mdx.code.body}
+                </MDXRenderer>
+              </Card>
             </MDXProvider>
           </Section>
         </Section>

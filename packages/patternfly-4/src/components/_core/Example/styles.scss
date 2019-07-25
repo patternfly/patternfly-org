@@ -22,7 +22,7 @@
 .Example__section {
   background-color: #fff;
   border: none;
-  padding: 0.5rem;
+  padding-bottom: var(--pf-global--spacer--md);
 
   .pf-p-secondary-nav__link {
     border: none;
@@ -68,19 +68,18 @@
   outline: none;
 }
 
-.Example__info {
-  border-left: 3px solid rgb(115, 188, 247);
-  background-color: #fff;
-}
-
-.Example__info--intro {
-  background-color: #fff;
-}
-
-.Example__documentation--text {
-  padding: 16px;
-}
-
 .core-example-card {
   box-shadow: unset;
+
+  .pf-c-card__header {
+    padding: var(--pf-global--spacer--md);
+    border-bottom: var(--pf-global--BorderWidth--sm) solid #f8f8f8;
+  }
+  .pf-c-card__body {
+    padding: 0;
+  }
+  .pf-c-card__footer {
+    padding: var(--pf-global--spacer--md);
+    border-top: var(--pf-global--BorderWidth--sm) solid #f8f8f8;
+  }
 }

@@ -35,13 +35,7 @@ div.ws-live-demo > .Preview * {
 
 .Preview__body {
   width: 100%;
-  padding: 1rem;
-  background-color: #fff;
-  border-top: none;
-  border-right: none;
-  border-bottom: 1px solid #f8f8f8;
-  border-left: none;
-  transition: width .2s ease-in-out;
+  padding: var(--pf-global--spacer--md);
 }
 
 .Preview__body.has-no-padding {

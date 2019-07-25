@@ -63,13 +63,11 @@ export default class ComponentItems extends React.Component {
 
     if (!this.state.isFull) {
       return (
-        <div className="Example__section">
-          {navigationItems && (
-            <div className="Example__componentLink">
-              Components and Layouts used: <ul>{navigationItems}</ul>
-            </div>
-          )}
-        </div>
+        navigationItems && (<div className="Example__section">
+          <div className="Example__componentLink">
+            <ul>{navigationItems}</ul>
+          </div>
+        </div>)
       );
     }
     return null;

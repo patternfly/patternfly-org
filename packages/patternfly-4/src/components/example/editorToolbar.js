@@ -81,6 +81,7 @@ class EditorToolbar extends React.Component {
             variant="plain"
             title="Toggle code"
             aria-label="Toggle code"
+            style={{ marginLeft: '-0.5rem' }}
           >
             <CodeIcon />
           </Button>

@@ -37,6 +37,9 @@ const styles = StyleSheet.create({
 });
 const isColorRegex = /^(#|rgb)/;
 
+// $& means the whole matched string
+const escapeRegExp = string => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
 class Tokens extends React.Component {
   constructor(props) {
     super(props);
@@ -134,9 +137,9 @@ class Tokens extends React.Component {
     const { exact } = this.props;
     let searchRE;
     if (exact && !searchChanged) {
-      searchRE = new RegExp(`^${searchValue}$`, 'i');
+      searchRE = new RegExp(`^${escapeRegExp(searchValue)}$`, 'i');
     } else {
-      searchRE = new RegExp(searchValue, 'i');
+      searchRE = new RegExp(escapeRegExp(searchValue), 'i');
     }
     const filteredTokens = dataRows.filter(c => {
       return searchRE.test(c[0]) || searchRE.test(c[1]) || searchRE.test(c[2]);

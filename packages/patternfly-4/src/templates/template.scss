@@ -69,3 +69,23 @@
     vertical-align: baseline;
   }
 }
+
+.react-example-card {
+  box-shadow: unset;
+
+  .pf-c-card__header {
+    padding: var(--pf-global--spacer--md);
+    border-bottom: var(--pf-global--BorderWidth--sm) solid #f8f8f8;
+  }
+  .pf-c-card__body {
+    padding: 0;
+  }
+  .pf-c-card__footer {
+    padding: var(--pf-global--spacer--md);
+    border-top: var(--pf-global--BorderWidth--sm) solid #f8f8f8;
+  }
+  .ws-footer-spacer {
+    height: var(--pf-global--spacer--lg);
+    background-color: #f8f8f8;
+  }
+}
