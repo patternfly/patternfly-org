@@ -77,7 +77,7 @@ class Documentation extends React.PureComponent {
                 <AutoLinkHeader size="md" is="h1" className="pf4-site-framework-title">{componentType}</AutoLinkHeader>
                 <AutoLinkHeader size="4xl" is="h2" className="pf-u-mt-sm pf-u-mb-md">{title}</AutoLinkHeader>
                 {Boolean(description) && (
-                  <p className="description pf-u-mb-md" dangerouslySetInnerHTML={makeDescription(description)} />
+                  <div className="description pf-u-mb-md" dangerouslySetInnerHTML={makeDescription(description)} />
                 )}
                 <Section title="Examples" headingLevel="h3">
                   {examples.map((exampleObj, i) => {

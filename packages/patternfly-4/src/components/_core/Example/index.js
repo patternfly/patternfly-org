@@ -66,9 +66,7 @@ export default class Example extends React.Component {
               );
             }
           }
-          
-          const htmlDocs = docs ? { __html: docs } : null;
-          const htmlIntro = intro ? { __html: intro } : null;
+
           const sourceOutput =
             typeof children === 'string' ? children : ReactDOMServer.renderToStaticMarkup(children).replace(/ "/g, '"');
           const indentedOutput = pretty(sourceOutput, { ocd: true });
@@ -90,25 +88,25 @@ export default class Example extends React.Component {
           const fullPath = location.href && `${location.href.substr(0, location.href.length - (endsWithSlash ? 1 : 0))}-full/?component=${heading}`;
           return (
             <div className="ws-live-demo">
-              {htmlIntro && (
+              {intro && (
                 <div className="Example__documentation Example__info--intro">
-                  <p className="Example__documentation--text" dangerouslySetInnerHTML={htmlIntro} />
+                  <div className="Example__documentation--text" dangerouslySetInnerHTML={{ __html: intro }} />
                 </div>
               )}
               <Card className="core-example-card">
                 <CardHeader><AutoLinkHeader size="lg" is="h4">{heading}</AutoLinkHeader></CardHeader>
                 <CardBody>
-                  {Boolean(description) && <p className="pf-c-content" dangerouslySetInnerHTML={{ __html: description }} />}
+                  {Boolean(description) && <div className="pf-c-content" dangerouslySetInnerHTML={{ __html: description }} />}
                   <Preview className={className} heading={heading} viewport={this.state.viewport} lights={this.state.lights} fullPageOnly={fullPageOnly} minHeight={minHeight}>
                     {children}
                   </Preview>
                 </CardBody>
                 <CardFooter>
                   <ComponentItems children={children} className={css('example')} />
-                  <EditorToolbar editor={editor} raw={indentedOutput} live={false} showMessage={false} fullPath={fullPath} showLights={false} onLightsChange={this.onLightsChange}/>
-                  {htmlDocs && (
+                  <EditorToolbar editor={editor} raw={indentedOutput} live={false} showMessage={false} fullPath={fullPath} showLights={false} onLightsChange={lights => this.onLightsChange(lights)}/>
+                  {docs && (
                     <div className="Example__documentation Example__info">
-                      <p className="Example__documentation--text" dangerouslySetInnerHTML={htmlDocs} />
+                      <div className="Example__documentation--text" dangerouslySetInnerHTML={{ __html: docs }} />
                     </div>
                   )}
                 </CardFooter>
