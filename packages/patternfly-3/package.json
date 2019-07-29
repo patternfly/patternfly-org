@@ -4,7 +4,8 @@
   "version": "3.49.0",
   "author": "Red Hat",
   "scripts": {
-    "prebuild": "bundle install && git submodule update --recursive --remote repos",
+    "prebuild": "bundle install",
+    "update": "git submodule update --recursive --remote repos",
     "build": "grunt build:production --baseurl=/v3",
     "dev": "grunt serve"
   },
