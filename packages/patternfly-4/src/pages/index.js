@@ -25,10 +25,10 @@ const IndexPage = () => (
           <TextContent>
             <img src={orb} alt="PatternFly logo" className="fadeInDown animated fadeInOne" />
             <Title size="4xl" className="pf-m-white pf4-site-c-hero fadeIn animated fadeInTwo">Build better experiences with repeatable, scalable design.</Title>
-            <Title size="xl" className="pf-m-white pf-u-mb-md pf-u-mb-3xl-on-md fadeInUp animated fadeInThree">PatternFly 4 is an open source design system built to drive consistency and unify teams.</Title>
+            <Title size="xl" className="pf-m-white pf-u-mb-md pf-u-mb-3xl-on-md fadeInUp animated fadeInThree">PatternFly is an open source design system built to drive consistency and unify teams.</Title>
             <div className="pf-u-display-flex pf-u-justify-content-center pf-u-flex-direction-column pf-u-flex-direction-row-on-md">
               <a href={withPrefix('/get-started/about')} type="button" className="pf-c-button pf4-c-button__cta-primary pf-u-mr-0 pf-u-mb-md pf-u-mb-0-on-md pf-u-mr-xl-on-md fadeIn animated fadeInFour" aria-label="Get started with PatternFly">Get started</a>
-              <a href="#AboutPatternFly4" type="button" className="pf-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour" aria-label="Why PatternFly 4">Why PatternFly 4</a>
+              <a href="#AboutPatternFly4" type="button" className="pf-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour" aria-label="Why PatternFly 4">Why PatternFly</a>
             </div>
           </TextContent>
         </GridItem>
@@ -37,7 +37,7 @@ const IndexPage = () => (
     <PageSection className="pf4-m-background-white">
       <Grid>
         <GridItem sm={12} md={6} mdOffset={3} className="pf-u-py-2xl pf-u-text-align-center">
-          <Title size="4xl" id="AboutPatternFly4" className="pf-u-mb-md">About PatternFly 4</Title>
+          <Title size="4xl" id="AboutPatternFly4" className="pf-u-mb-md">About PatternFly</Title>
           <Text component={TextVariants.p}>We provide tools like design documentation, components, and code examples to make it possible for anyone to design and build responsive, accessible user experiences.</Text>
         </GridItem>
       </Grid>
@@ -90,7 +90,7 @@ const IndexPage = () => (
           <Grid className="pf-m-white">
             <GridItem sm={12} md={5} mdOffset={1}>
               <TextContent>
-                <Title size="4xl" className="pf-u-mb-md pf-m-white">PatternFly 4 principles</Title>
+                <Title size="4xl" className="pf-u-mb-md pf-m-white">PatternFly principles</Title>
                 <Text component={TextVariants.h2}>Modular &amp; flexible</Text>
                 <Text component={TextVariants.p} className="pf-u-mb-3xl">Arrange self-contained components in any number of ways to build a variety of applications and interfaces. You can also use the CSS variable system to customize styles across a website or interface.</Text>
                 <Text component={TextVariants.h2}>Accessible</Text>
