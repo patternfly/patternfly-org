@@ -9,7 +9,7 @@ Use [data lists](#data-lists) when:
 * You want to include active content like a chart
 * Content displayed may vary between rows
 
-Use a [tables](#tables) when:
+Use [tables](#tables) when:
 * Users will want to consume data as a grid (i.e. structured rows and columns)
 * You want column headers
 
