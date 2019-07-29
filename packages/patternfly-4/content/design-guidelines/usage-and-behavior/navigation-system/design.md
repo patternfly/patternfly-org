@@ -16,7 +16,7 @@ Navigation is used to organize an application’s structure and content, making 
 3. [**Horizontal navigation**](#horizontal-navigation)
 4. **Menu icon button:** Provides a way for users to toggle vertical navigation
 5. [**Vertical navigation**](#vertical-navigation)
-6. [**Local navigation**](#Local-navigation---Tabs)
+6. [**Local navigation**](#local-navigation---tabs)
 7. [**Breadcrumbs**](#breadcrumbs)
 
 ## Usage
