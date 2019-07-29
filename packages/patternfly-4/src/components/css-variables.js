@@ -150,6 +150,7 @@ class Tokens extends React.Component {
             type="text"
             id="primaryIconsSearch"
             name="primaryIconsSearch"
+            aria-label="Search CSS Variables"
             placeholder="Search CSS Variables"
             value={searchValue}
             onChange={this.handleSearchChange}

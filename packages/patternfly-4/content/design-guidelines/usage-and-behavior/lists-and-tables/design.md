@@ -2,7 +2,7 @@
 path: "/design-guidelines/usage-and-behavior/lists-and-tables"
 ---
 # Lists and tables
-PatternFly offers two components for displaying large data sets: [data list](https://www.patternfly.org/v4/documentation/react/components/datalist/) and [table](https://www.patternfly.org/v4/documentation/react/components/table/). While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
+PatternFly offers two components for displaying large data sets: [data list](/documentation/react/components/datalist/) and [table](/documentation/react/components/table/). While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
 
 Use [data lists](#data-lists) when:
 * A flexible layout is more important than arranging information in a grid
