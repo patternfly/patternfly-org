@@ -261,6 +261,9 @@ $block: '.pf4';
   padding-right: 4px;
   margin-left: -20px;
 }
+.no-float {
+  float: unset;
+}
 h1 .anchor svg,
 h2 .anchor svg,
 h3 .anchor svg,
