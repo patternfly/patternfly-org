@@ -15,6 +15,10 @@ import { withPrefix } from 'gatsby';
 import { ArrowRightIcon } from '@patternfly/react-icons';
 import orb from '../images/PF4_logo.svg';
 import principles from '../images/PF4_WIREFRAME.png';
+import AutoLinkHeader from '@content/AutoLinkHeader';
+
+const aboutPatternFly = 'About PatternFly';
+const patternFlyPrinciples = 'PatternFly principles';
 
 const IndexPage = () => (
   <Layout>
@@ -28,7 +32,8 @@ const IndexPage = () => (
             <Title size="xl" className="pf-m-white pf-u-mb-md pf-u-mb-3xl-on-md fadeInUp animated fadeInThree">PatternFly is an open source design system built to drive consistency and unify teams.</Title>
             <div className="pf-u-display-flex pf-u-justify-content-center pf-u-flex-direction-column pf-u-flex-direction-row-on-md">
               <a href={withPrefix('/get-started/about')} type="button" className="pf-c-button pf4-c-button__cta-primary pf-u-mr-0 pf-u-mb-md pf-u-mb-0-on-md pf-u-mr-xl-on-md fadeIn animated fadeInFour" aria-label="Get started with PatternFly">Get started</a>
-              <a href="#AboutPatternFly4" type="button" className="pf-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour" aria-label="Why PatternFly 4">Why PatternFly</a>
+              <AutoLinkHeader anchorOnly text={aboutPatternFly} type="button" className="pf-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour" aria-label="Why PatternFly 4">Why PatternFly 4</AutoLinkHeader>
+
             </div>
           </TextContent>
         </GridItem>
@@ -37,7 +42,9 @@ const IndexPage = () => (
     <PageSection className="pf4-m-background-white">
       <Grid>
         <GridItem sm={12} md={6} mdOffset={3} className="pf-u-py-2xl pf-u-text-align-center">
-          <Title size="4xl" id="AboutPatternFly4" className="pf-u-mb-md">About PatternFly</Title>
+          <AutoLinkHeader is="h1" size="4xl" className="pf-u-mb-md" floatAnchor={false}>
+            {aboutPatternFly}
+          </AutoLinkHeader>
           <Text component={TextVariants.p}>We provide tools like design documentation, components, and code examples to make it possible for anyone to design and build responsive, accessible user experiences.</Text>
         </GridItem>
       </Grid>
@@ -90,7 +97,9 @@ const IndexPage = () => (
           <Grid className="pf-m-white">
             <GridItem sm={12} md={5} mdOffset={1}>
               <TextContent>
-                <Title size="4xl" className="pf-u-mb-md pf-m-white">PatternFly principles</Title>
+                <AutoLinkHeader is="h1" size="4xl" className="pf-u-mb-md pf-m-white">
+                  {patternFlyPrinciples}
+                </AutoLinkHeader>
                 <Text component={TextVariants.h2}>Modular &amp; flexible</Text>
                 <Text component={TextVariants.p} className="pf-u-mb-3xl">Arrange self-contained components in any number of ways to build a variety of applications and interfaces. You can also use the CSS variable system to customize styles across a website or interface.</Text>
                 <Text component={TextVariants.h2}>Accessible</Text>
