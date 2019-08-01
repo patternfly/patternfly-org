@@ -15,7 +15,7 @@ __Example__
 *I want to design and contribute a new design pattern that allows a user to favorite or like an item in a data list.*
 
 ### Enhancement
-Improve or update an existing PatternFly 4 component or design pattern.
+Improve or update an existing PatternFly component or design pattern.
 
 __Example__
 *I want to add a compact/expand toggle to the list view.*
@@ -35,13 +35,13 @@ Before you begin the contribution process, follow [these guidelines](/get-starte
 Follow these steps and this [template format](https://documentcloud.adobe.com/link/track?uri=urn%3Aaaid%3Ascds%3AUS%3A28fd970d-8b77-4008-b598-b2f629bda589) to submit your designs:
 
 __1. Create an issue__
-  - Navigate to the [PatternFly page](https://github.com/patternfly) on Github and go to the [PF4 Feature Board](https://github.com/orgs/patternfly/projects/3)
+  - Navigate to the [PatternFly page](https://github.com/patternfly) on Github and go to the [feature board](https://github.com/orgs/patternfly/projects/3)
   - Open an issue for a new feature or comment on an existing issue for an enhancement
 
 __2. Propose a design__
   - Create a proposal for the new pattern or enhancements (be sure to re-use existing components in the design when applicable)
   - Attach any design assets such as wireframes or mockups to help clarify the design intent and behavior
-  - Document all interactions within the desing clearly (you can leverage the PF4 Sketch library in addition to prototyping tools like InVision, Marvel, etc.)
+  - Document all interactions within the desing clearly (you can leverage the Sketch library in addition to prototyping tools like InVision, Marvel, etc.)
 
 __3. Submit your designs__
   - The PatternFly team will help you throughout this process. If accepted, you will be assigned a buddy to assist you throughout the rest of the process
