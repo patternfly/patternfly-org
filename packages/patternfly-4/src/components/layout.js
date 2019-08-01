@@ -18,15 +18,13 @@ import {
   ToolbarGroup,
   ToolbarItem,
   Form,
-  TextInput
+  TextInput,
+  DropdownItem,
 } from '@patternfly/react-core';
 import { Location } from '@reach/router';
 import brandImg from '../images/PatternFly_logo.svg';
 import Banner from './banner';
 import './layout.scss';
-
-// Set initial state
-let state = { isBannerOpen: true };
 
 class Layout extends React.Component {
 
@@ -34,19 +32,11 @@ class Layout extends React.Component {
     super(props);
 
     // Retrieve the last state
-    this.state = state;
+    this.state = {
+      isBannerOpen: false,
+      isExpanded: false
+    };
   }
-
-  componentWillUnmount() {
-    // Remember state for the next mount
-    state = this.state;
-  }
-
-  closeBanner = () => {
-    this.setState({
-      isBannerOpen: false
-    })
-  };
 
   componentDidMount() {
     // eslint-disable-next-line no-undef
@@ -57,6 +47,7 @@ class Layout extends React.Component {
         inputSelector: '#global-search-input',
         debug: false // Set debug to true if you want to inspect the dropdown
       });
+      this.setState({ isBannerOpen: sessionStorage.getItem('pf4-banner-closed') });
     } else {
       console.warn('Search has failed to load');
     }
@@ -66,13 +57,21 @@ class Layout extends React.Component {
     navigate('/');
   }
 
+  closeBanner = () => {
+    sessionStorage.setItem('pf4-banner-closed', true);
+    this.setState({
+      isBannerOpen: false
+    })
+  };
+
   render() {
     const { tertiaryNav, sideNav } = this.props;
-    const { isBannerOpen } = this.state;
+    const { isBannerOpen, sections } = this.state;
 
     return (<StaticQuery query={graphql`
       query SiteTitleQuery {
         site {
+          pathPrefix
           siteMetadata {
             title
           }
@@ -144,8 +143,8 @@ class Layout extends React.Component {
       return (
         <Location>
           {({ location }) => (
-            <>
-            {isBannerOpen && location.pathname === '/v4/' && <Banner onClose={this.closeBanner} />}
+            <React.Fragment>
+            {isBannerOpen && <Banner onClose={this.closeBanner} />}
             <Header siteTitle={data.site.siteMetadata.title} />
             <Page isManagedSidebar={sideNav !== null} header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} /> : null}>
               {tertiaryNav && <PageSection variant={PageSectionVariants.light}>
@@ -154,7 +153,7 @@ class Layout extends React.Component {
               {this.props.children}
             </Page>
             <Footer></Footer>
-          </>
+          </React.Fragment>
         )}
         </Location>
       )
