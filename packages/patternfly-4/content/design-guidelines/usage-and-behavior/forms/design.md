@@ -121,7 +121,7 @@ Learn more about data input variations in the [data input design guidelines](/de
 
 Use a **popover** for longer (2 sentences or more) explanations, content that requires formatting like numbered or bulleted lists, or content that requires you to include buttons, links, or images.
 
-![Popovers](./img/infotip-left.png)
+![Popovers](./img/popover.png)
 
   **DO**
 
