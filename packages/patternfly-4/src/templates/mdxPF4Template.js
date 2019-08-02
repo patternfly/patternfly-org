@@ -31,7 +31,7 @@ const components = {
 for (let i = 1; i <= 6; i++) {
   components[`h${i}`] = props => {
     let inner = props.children.length > 0 ? props.children[1] : props.children;
-    return <AutoLinkHeader className='ws-linked-heading' is="h4" {...props}>{inner}</AutoLinkHeader>;
+    return <AutoLinkHeader className='ws-linked-heading' is="h2" {...props}>{inner}</AutoLinkHeader>;
   }
 }
 
@@ -46,7 +46,7 @@ const MdxPF4Template = ({ data }) => {
       <SEO title="React" />
       <PageSection variant={PageSectionVariants.light} className="section-border pf-site-background-medium">
         <AutoLinkHeader size="md" is="h1" className="pf4-site-framework-title">React</AutoLinkHeader>
-        <AutoLinkHeader size="4xl" is="h2" className="pf-u-mt-sm pf-u-mb-md">
+        <AutoLinkHeader size="4xl" is="h2" id={`${data.mdx.frontmatter.title.replace(/ /g, '-')}-title`} className="pf-u-mt-sm pf-u-mb-md">
           {data.mdx.frontmatter.title}
         </AutoLinkHeader>
         {data.description &&
