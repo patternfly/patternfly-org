@@ -5,6 +5,7 @@
   "author": "Red Hat",
   "scripts": {
     "prebuild": "bundle install",
+    "update": "git submodule update --recursive --remote repos",
     "build": "grunt build:production --baseurl=/v3",
     "dev": "grunt serve"
   },
@@ -70,8 +71,6 @@
       "grunt-http",
       "grunt-jekyll",
       "grunt-sync",
-      "font-awesome",
-      "patternfly",
       "angular-patternfly",
       "animate.css",
       "bootstrap",
