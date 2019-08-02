@@ -1,7 +1,7 @@
 ---
 path: "/get-started/about"
 ---
-# About PatternFly 4
+# About PatternFly
 PatternFly is an open source design system created to enable consistency and usability across a wide range of applications and use cases. PatternFly provides clear standards, guidance, and tools that help designers and developers work together more efficiently and build better user experiences.
 
 ## Basic structure
@@ -55,7 +55,7 @@ For example, you might use a utility class to add additional spacing between ele
 <!-- This section is WIP ** we need to wait to see how this content gets included **
 
 Flexibility
-PatternFly 4 was built to be flexible and is scoped to work in tandem with other design systems. This means you’re able to use PatternFly 4 components alongside components from systems like Bootstrap, Material.io, or older versions of PatternFly.
+PatternFly was built to be flexible and is scoped to work in tandem with other design systems. This means you’re able to use PatternFly components alongside components from systems like Bootstrap, Material.io, or older versions of PatternFly.
 
 For example, our code is written like pf-c-alert
 alert
