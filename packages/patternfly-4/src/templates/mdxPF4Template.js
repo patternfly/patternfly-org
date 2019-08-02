@@ -61,7 +61,7 @@ const MdxPF4Template = ({ data }) => {
           {data.props && <AutoLinkHeader anchorOnly className="pf-site-toc">Props</AutoLinkHeader>}
           {cssPrefix && <AutoLinkHeader anchorOnly className="pf-site-toc">CSS Variables</AutoLinkHeader>}
         </Section>
-        <Section title="Examples" headingLevel="h3">
+        <Section title="Examples" headingLevel="h2">
           <Section className="ws-live-demo">
             <MDXProvider components={components}>
               <MDXRenderer>
@@ -74,7 +74,7 @@ const MdxPF4Template = ({ data }) => {
 
       {data.props && 
         <PageSection>
-          <Section title="Props" headingLevel="h3">	
+          <Section title="Props" headingLevel="h2">	
             {data.props.nodes.map(component =>
               <PropsTable
                 name={component.name}

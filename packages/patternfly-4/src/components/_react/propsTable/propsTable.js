@@ -45,7 +45,7 @@ export const PropsTable = ({ name, description: preface, props }) => {
     <Section
       name={name}
       title={`${name} Props`}
-      headingLevel="h4"
+      headingLevel="h3"
       preface={preface}
       description={`The ${name} component accepts the following props.`}
     >
