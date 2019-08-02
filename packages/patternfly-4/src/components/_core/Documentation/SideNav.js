@@ -43,7 +43,7 @@ class CoreSideNav extends React.Component {
       return accum;
     }, {});
 
-    const { components, layouts, demos, utilities } = allPages;
+    const { components, layouts, demos, utilities, experimental } = allPages;
 
     const searchRE = new RegExp(searchValue, 'i');
 
@@ -51,6 +51,7 @@ class CoreSideNav extends React.Component {
     const filteredLayouts = layouts.filter(c => searchRE.test(c.text));
     const filteredDemos = demos.filter(c => searchRE.test(c.text));
     const filteredUtilities = utilities.filter(c => searchRE.test(c.text));
+    const filteredExperimental = experimental.filter(c => searchRE.test(c.text));
 
     const SideNav = (
       <Location>
@@ -83,69 +84,21 @@ class CoreSideNav extends React.Component {
                       </Link>
                     </NavItem>
                   )})}
-              </NavExpandable>
-              <NavExpandable
-                title="Layouts"
-                isExpanded={currentPath.indexOf('/layouts/') > -1 || (searchValue && filteredLayouts.length > 0) || false}
-                isActive={currentPath.indexOf(/layouts/) > -1}
-              >
-                {filteredLayouts.map(navItem => {
-                    const { path, text } = navItem;
-                    const isFullPage = path.endsWith('-full');
-                    const pathWithSlash = path.endsWith('/') ? path : `${path}/`;
-                    const currentPathWithSlash = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
-                    if (isFullPage) {
-                      return null;
-                    }
-                    return (
-                    <NavItem
-                      key={path}
-                      isActive={currentPathWithSlash.endsWith(pathWithSlash)}
-                    >
-                      <Link to={path}>
-                        {text}
-                      </Link>
-                    </NavItem>
-                  )})}
-              </NavExpandable>
-              <NavExpandable
-                title="Utilities"
-                isExpanded={currentPath.indexOf('/utilities/') > -1 || (searchValue && filteredUtilities.length > 0) || false}
-                isActive={currentPath.indexOf(/utilities/) > -1}
-              >
-                {filteredUtilities.map(navItem => {
-                    const { path, text } = navItem;
-                    const isFullPage = path.endsWith('-full');
-                    const pathWithSlash = path.endsWith('/') ? path : `${path}/`;
-                    const currentPathWithSlash = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
-                    if (isFullPage) {
-                      return null;
-                    }
-                    return (
-                    <NavItem
-                      key={path}
-                      isActive={currentPathWithSlash.endsWith(pathWithSlash)}
-                    >
-                      <Link to={path}>
-                        {text}
-                      </Link>
-                    </NavItem>
-                  )})}
-              </NavExpandable>
-              <NavExpandable
-                title="Demos"
-                isExpanded={currentPath.indexOf('/demos/') > -1 || (searchValue && filteredDemos.length > 0) || false}
-                isActive={currentPath.indexOf(/demos/) > -1}
-              >
-                {filteredDemos.map(navItem => {
-                    const { path, text } = navItem;
-                    const isFullPage = path.endsWith('-full');
-                    const pathWithSlash = path.endsWith('/') ? path : `${path}/`;
-                    const currentPathWithSlash = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
-                    if (isFullPage) {
-                      return null;
-                    }
-                    return (
+                </NavExpandable>
+                <NavExpandable
+                  title="Layouts"
+                  isExpanded={currentPath.indexOf('/layouts/') > -1 || (searchValue && filteredLayouts.length > 0) || false}
+                  isActive={currentPath.indexOf(/layouts/) > -1}
+                >
+                  {filteredLayouts.map(navItem => {
+                      const { path, text } = navItem;
+                      const isFullPage = path.endsWith('-full');
+                      const pathWithSlash = path.endsWith('/') ? path : `${path}/`;
+                      const currentPathWithSlash = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
+                      if (isFullPage) {
+                        return null;
+                      }
+                      return (
                       <NavItem
                         key={path}
                         isActive={currentPathWithSlash.endsWith(pathWithSlash)}
@@ -154,8 +107,80 @@ class CoreSideNav extends React.Component {
                           {text}
                         </Link>
                       </NavItem>
+                    )})}
+                </NavExpandable>
+                <NavExpandable
+                  title="Utilities"
+                  isExpanded={currentPath.indexOf('/utilities/') > -1 || (searchValue && filteredUtilities.length > 0) || false}
+                  isActive={currentPath.indexOf(/utilities/) > -1}
+                >
+                  {filteredUtilities.map(navItem => {
+                      const { path, text } = navItem;
+                      const isFullPage = path.endsWith('-full');
+                      const pathWithSlash = path.endsWith('/') ? path : `${path}/`;
+                      const currentPathWithSlash = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
+                      if (isFullPage) {
+                        return null;
+                      }
+                      return (
+                      <NavItem
+                        key={path}
+                        isActive={currentPathWithSlash.endsWith(pathWithSlash)}
+                      >
+                        <Link to={path}>
+                          {text}
+                        </Link>
+                      </NavItem>
+                    )})}
+                </NavExpandable>
+                <NavExpandable
+                  title="Demos"
+                  isExpanded={currentPath.indexOf('/demos/') > -1 || (searchValue && filteredDemos.length > 0) || false}
+                  isActive={currentPath.indexOf(/demos/) > -1}
+                >
+                  {filteredDemos.map(navItem => {
+                      const { path, text } = navItem;
+                      const isFullPage = path.endsWith('-full');
+                      const pathWithSlash = path.endsWith('/') ? path : `${path}/`;
+                      const currentPathWithSlash = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
+                      if (isFullPage) {
+                        return null;
+                      }
+                      return (
+                        <NavItem
+                          key={path}
+                          isActive={currentPathWithSlash.endsWith(pathWithSlash)}
+                        >
+                          <Link to={path}>
+                            {text}
+                          </Link>
+                        </NavItem>
+                    )})}
+                </NavExpandable>
+                <NavExpandable
+                  title="Experimental"
+                  isExpanded={currentPath.indexOf('/experimental/') > -1 || (searchValue && filteredComponents.length > 0) || false}
+                  isActive={currentPath.indexOf(/experimental/) > -1}
+                >
+                  {filteredExperimental.map(navItem => {
+                    const { path, text } = navItem;
+                    const pathWithSlash = path.endsWith('/') ? path : `${path}/`;
+                    const currentPathWithSlash = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
+                    const isFullPage = path.endsWith('-full');
+                    if (isFullPage) {
+                      return null;
+                    }
+                    return (
+                    <NavItem
+                      key={path}
+                      isActive={currentPathWithSlash.endsWith(pathWithSlash)}
+                    >
+                      <Link to={path}>
+                        {text}
+                      </Link>
+                    </NavItem>
                   )})}
-              </NavExpandable>
+                </NavExpandable>
                 <NavItem isActive={currentPath.indexOf('/documentation/core/css-variables') > -1}>
                   <Link to="/documentation/core/css-variables/">Global CSS variables</Link>
                 </NavItem>

@@ -101,7 +101,7 @@ const MdxPF4Template = ({ data }) => {
 // We want component metadata from gatsby-transformer-react-docgen-typescript
 // for ALL components in that folder
 export const pageQuery = graphql`
-query GetComponent($fileAbsolutePath: String!, $propComponents: [String]!, $reactUrl: String!) {
+query GetComponent($fileAbsolutePath: String!, $propComponents: [String]!, $reactUrl: String!, $pathRegex: String!) {
   mdx(fileAbsolutePath: { eq: $fileAbsolutePath }) {
     code {
       body
@@ -112,7 +112,7 @@ query GetComponent($fileAbsolutePath: String!, $propComponents: [String]!, $reac
       cssPrefix
     }
   }
-  props: allComponentMetadata(filter: { name: { in: $propComponents } }) {
+  props: allComponentMetadata(filter: { name: { in: $propComponents }, path: { regex: $pathRegex } }) {
     nodes {
       path
       name
