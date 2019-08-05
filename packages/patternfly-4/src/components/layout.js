@@ -19,7 +19,6 @@ import {
   ToolbarItem,
   Form,
   TextInput,
-  DropdownItem,
 } from '@patternfly/react-core';
 import { Location } from '@reach/router';
 import brandImg from '../images/PatternFly_logo.svg';
@@ -33,8 +32,7 @@ class Layout extends React.Component {
 
     // Retrieve the last state
     this.state = {
-      isBannerOpen: false,
-      isExpanded: false
+      isBannerOpen: false
     };
   }
 
@@ -47,7 +45,7 @@ class Layout extends React.Component {
         inputSelector: '#global-search-input',
         debug: false // Set debug to true if you want to inspect the dropdown
       });
-      this.setState({ isBannerOpen: sessionStorage.getItem('pf4-banner-closed') });
+      this.setState({ isBannerOpen: !Boolean(sessionStorage.getItem('pf4-banner-closed')) });
     } else {
       console.warn('Search has failed to load');
     }
@@ -66,7 +64,7 @@ class Layout extends React.Component {
 
   render() {
     const { tertiaryNav, sideNav } = this.props;
-    const { isBannerOpen, sections } = this.state;
+    const { isBannerOpen } = this.state;
 
     return (<StaticQuery query={graphql`
       query SiteTitleQuery {
@@ -144,16 +142,16 @@ class Layout extends React.Component {
         <Location>
           {({ location }) => (
             <React.Fragment>
-            {isBannerOpen && <Banner onClose={this.closeBanner} />}
-            <Header siteTitle={data.site.siteMetadata.title} />
-            <Page isManagedSidebar={sideNav !== null} header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} /> : null}>
-              {tertiaryNav && <PageSection variant={PageSectionVariants.light}>
-                {tertiaryNav}
-              </PageSection>}
-              {this.props.children}
-            </Page>
-            <Footer></Footer>
-          </React.Fragment>
+              {isBannerOpen && <Banner onClose={this.closeBanner} />}
+              <Header siteTitle={data.site.siteMetadata.title} />
+              <Page isManagedSidebar={sideNav !== null} header={SiteHeader} sidebar={sideNav ? <PageSidebar nav={sideNav} /> : null}>
+                {tertiaryNav && <PageSection variant={PageSectionVariants.light}>
+                  {tertiaryNav}
+                </PageSection>}
+                {this.props.children}
+              </Page>
+              <Footer></Footer>
+            </React.Fragment>
         )}
         </Location>
       )
