@@ -14,8 +14,9 @@ const slugger = children => {
     .replace(whitespace, '-');
 };
 
-const AutoLinkHeader = ({ is: Component, children, text, id, size, anchorOnly, floatAnchor, ...props }) => {
-  const slug = slugger(text || children);
+const AutoLinkHeader = ({ is: Component, children, text, id, suffix = '', size, anchorOnly, floatAnchor, ...props }) => {
+  const slug = `${slugger(text || children)}${suffix}`;
+
   if (anchorOnly) {
     return <a href={`#${slug}`} {...props}>{children}</a>
   }
