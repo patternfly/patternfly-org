@@ -32,7 +32,7 @@ const IndexPage = () => (
             <Title size="xl" className="pf-m-white pf-u-mb-md pf-u-mb-3xl-on-md fadeInUp animated fadeInThree">PatternFly is an open source design system built to drive consistency and unify teams.</Title>
             <div className="pf-u-display-flex pf-u-justify-content-center pf-u-flex-direction-column pf-u-flex-direction-row-on-md">
               <a href={withPrefix('/get-started/about')} type="button" className="pf-c-button pf4-c-button__cta-primary pf-u-mr-0 pf-u-mb-md pf-u-mb-0-on-md pf-u-mr-xl-on-md fadeIn animated fadeInFour" aria-label="Get started with PatternFly">Get started</a>
-              <AutoLinkHeader anchorOnly text={aboutPatternFly} type="button" className="pf-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour" aria-label="Why PatternFly 4">Why PatternFly 4</AutoLinkHeader>
+              <AutoLinkHeader anchorOnly text={aboutPatternFly} type="button" className="pf-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour" aria-label="Why PatternFly">Why PatternFly</AutoLinkHeader>
 
             </div>
           </TextContent>
