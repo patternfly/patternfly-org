@@ -3,9 +3,10 @@ const reactDocgen = require('react-docgen');
 function isSource(node) {
   if (
     !node ||
-    node.relativePath.indexOf('/example') !== -1 ||
-    node.relativePath.indexOf('.docs') !== -1 ||
-    node.relativePath.indexOf('.md') !== -1
+    node.relativePath.indexOf('/example') >= 0 ||
+    node.relativePath.indexOf('.docs') >= 0 ||
+    node.relativePath.indexOf('.md') >= 0 ||
+    node.relativePath.indexOf('patternfly-3') >= 0
   )
     return false;
 
@@ -25,7 +26,11 @@ function isTSX(node) {
 }
 
 function isJSX(node) {
-  return node.internal.mediaType === `application/javascript` || node.internal.mediaType === `text/jsx`;
+  return (
+    node.internal.mediaType === `application/javascript` ||
+    node.internal.mediaType === `text/jsx` ||
+    node.extension === 'jsx'
+  );
 }
 
 function flattenProps(props) {

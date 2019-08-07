@@ -57,7 +57,7 @@ export default class Documentation extends React.Component {
                 <SEO title="HTML" />
                 <PageSection variant={PageSectionVariants.light} className="pf-site-background-medium">
                   <AutoLinkHeader size="md" is="h1" className="pf4-site-framework-title">HTML</AutoLinkHeader>
-                  <AutoLinkHeader size="4xl" is="h2" className="pf-u-mt-sm pf-u-mb-md">{heading}</AutoLinkHeader>
+                  <AutoLinkHeader size="4xl" is="h2" suffix="-title" className="pf-u-mt-sm pf-u-mb-md">{heading}</AutoLinkHeader>
                   {data && data.pageContext && data.pageContext.description &&
                     <Section className={className}>
                       <MDXRenderer>
