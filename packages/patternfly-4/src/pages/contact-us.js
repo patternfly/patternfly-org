@@ -4,14 +4,14 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { PageSection, PageSectionVariants } from '@patternfly/react-core';
 
-const BlogPage = () => (
+const ContactUsPage = () => (
   <Layout>
-    <SEO title="Blog" />
+    <SEO title="Contact us" />
     <PageSection variant={PageSectionVariants.light}>
-      <p>WIP</p>
+      <p>Contact us</p>
       <Link to="/">Go back to the homepage</Link>
     </PageSection>
   </Layout>
 );
 
-export default BlogPage;
+export default ContactUsPage;

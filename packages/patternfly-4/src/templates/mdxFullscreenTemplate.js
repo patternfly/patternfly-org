@@ -4,22 +4,18 @@ import { MDXRenderer } from '../components/mdx-renderer';
 import './template.scss';
 
 const MdxFullscreenTemplate = ({ data }) => {
-  return (
-    <MDXRenderer isFull>
-      {data.mdx.code.body}
-    </MDXRenderer>
-  );
+  return <MDXRenderer isFull>{data.mdx.code.body}</MDXRenderer>;
 };
 
 export const pageQuery = graphql`
-query GetFullscreenComponent($fileAbsolutePath: String!) {
-  mdx(fileAbsolutePath: { eq: $fileAbsolutePath }) {
-    rawBody
-    code {
-      body
+  query GetFullscreenComponent($fileAbsolutePath: String!) {
+    mdx(fileAbsolutePath: { eq: $fileAbsolutePath }) {
+      rawBody
+      code {
+        body
+      }
     }
   }
-}
-`
+`;
 
 export default MdxFullscreenTemplate;

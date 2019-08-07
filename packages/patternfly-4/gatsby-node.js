@@ -6,7 +6,6 @@
 const path = require('path');
 const glob = require('glob');
 const navHelpers = require('./src/helpers/navHelpers');
-// const styleFinder = require('./scripts/find-react-styles');
 const coreExperimental = require('./_repos/patternfly-next/experimental-features.js');
 
 // Map to handlebars partial files for Core
@@ -25,7 +24,7 @@ exports.onCreateNode = ({ node, actions }) => {
       .replace(/([A-Z])/g, ' $1')
       .trim();
 
-    label = corePathLabel.charAt(0) + corePathLabel.slice(1).toLowerCase();
+    const label = corePathLabel.charAt(0) + corePathLabel.slice(1).toLowerCase();
 
     createNodeField({
       node,
@@ -59,7 +58,7 @@ exports.createPages = async ({ graphql, actions }) => {
       redirectInBrowser: true,
       toPath: t
     })
-    console.log('\nRedirecting: ' + f + ' to: ' + t);
+    // console.log('\nRedirecting: ' + f + ' to: ' + t);
   })
 
   await graphql(`
@@ -95,7 +94,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `).then(result => {
     if (result.errors) {
-      return reject(result.errors);
+      return Promise.reject(result.errors);
     }
     const { pf4Docs, coreDocs, contentPages} = result.data;
 
@@ -169,7 +168,7 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 }
 
-exports.onCreateWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) => {
+exports.onCreateWebpackConfig = ({ stage, actions, plugins, getConfig }) => {
   if (partialsToLocationsMap === null) {
     partialsToLocationsMap = {};
     glob(path.resolve(__dirname, './_repos/patternfly-next/src/patternfly/**/*.hbs'), { ignore: '**/examples/**' }, (err, files) => {
