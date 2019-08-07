@@ -1,7 +1,6 @@
 const reactDocgen = require('react-docgen');
 
 function isSource(node) {
-  console.log('node', node.relativePath)
   if (
     !node ||
     node.relativePath.indexOf('/example') >= 0 ||
