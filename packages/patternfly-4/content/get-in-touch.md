@@ -6,9 +6,9 @@ import { ChatIcon, QuestionIcon, BlogIcon, MailBulkIcon } from '@patternfly/reac
 import { Grid, GridItem, Split, SplitItem } from '@patternfly/react-core';
 import AutoLinkHeader from '@content/AutoLinkHeader';
 
-import FooterUnderFoldLayout from './FooterUnderFoldLayout';
+import FooterUnderFoldLayout from '@content/footerUnderFoldLayout';
 
-export default FooterUnderFoldLayout
+export default FooterUnderFoldLayout;
 
 <AutoLinkHeader is="h1" className="pf-u-mb-lg">Get in touch</AutoLinkHeader>
 

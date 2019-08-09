@@ -152,7 +152,6 @@ module.exports = {
           failOnError: false
         }
       }
-    },
-    'gatsby-plugin-netlify-cache'
+    }
   ]
 }
