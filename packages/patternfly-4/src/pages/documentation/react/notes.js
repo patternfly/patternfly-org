@@ -1,13 +1,11 @@
 import React from 'react';
-import { StaticQuery, graphql, Link } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import SideNav from '../../../components/_react/Documentation/SideNav';
 import Layout from '../../../components/layout';
 import SEO from '../../../components/seo';
 import {
   PageSection,
-  PageSectionVariants,
-  Split,
-  SplitItem
+  PageSectionVariants
 } from '@patternfly/react-core';
 import { MDXRenderer } from 'gatsby-mdx';
 

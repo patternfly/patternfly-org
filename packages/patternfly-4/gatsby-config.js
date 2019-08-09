@@ -140,6 +140,18 @@ module.exports = {
         trackingId: 'UA-47523816-6',
         respectDNT: true
       }
+    },
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        test: /src\/.*\.js$|src\/.*\.jsx$/,
+        exclude: /(node_modules|.cache|public|_repos|.tmp|plugins)/,
+        stages: ['develop'],
+        options: {
+          emitWarning: true,
+          failOnError: false
+        }
+      }
     }
   ]
 }

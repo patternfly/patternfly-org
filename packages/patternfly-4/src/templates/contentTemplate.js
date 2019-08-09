@@ -1,5 +1,5 @@
-import React from "react";
-import { graphql, Link } from "gatsby";
+import React from 'react';
+import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import {
@@ -25,31 +25,26 @@ const navBuilder = navData => {
         return (
           <Nav className="pf-site-md-nav" aria-label="Nav">
             <NavList>
-              {navData.map(({ node }) => node.subNav ? (
-                <NavExpandable key={node.text} title={node.text} isExpanded={currentPath.indexOf(node.path) > -1} isActive={currentPath.indexOf(node.path) > -1}>
-                  {node.subNav.map(item => (
-                    <NavItem
-                      itemId={item.path}
-                      key={item.path}
-                      isActive={currentPath.indexOf(item.path) > -1}
-                    >
-                      <Link to={item.path}>
-                        {item.text}
-                      </Link>
-                    </NavItem>
-                  ))}
-                </NavExpandable>
-              ): (
-                <NavItem
-                  itemId={node.path}
-                  key={node.path}
-                  isActive={currentPath.indexOf(node.path) > -1}
-                >
-                  <Link to={node.path}>
-                    {node.text}
-                  </Link>
-                </NavItem>
-              ))}
+              {navData.map(({ node }) =>
+                node.subNav ? (
+                  <NavExpandable
+                    key={node.text}
+                    title={node.text}
+                    isExpanded={currentPath.indexOf(node.path) > -1}
+                    isActive={currentPath.indexOf(node.path) > -1}
+                  >
+                    {node.subNav.map(item => (
+                      <NavItem itemId={item.path} key={item.path} isActive={currentPath.indexOf(item.path) > -1}>
+                        <Link to={item.path}>{item.text}</Link>
+                      </NavItem>
+                    ))}
+                  </NavExpandable>
+                ) : (
+                  <NavItem itemId={node.path} key={node.path} isActive={currentPath.indexOf(node.path) > -1}>
+                    <Link to={node.path}>{node.text}</Link>
+                  </NavItem>
+                )
+              )}
             </NavList>
           </Nav>
         );
@@ -58,7 +53,7 @@ const navBuilder = navData => {
   );
 };
 
-export default function ContentTemplate ({
+export default function ContentTemplate({
   data // this prop will be injected by the GraphQL query below.
 }) {
   let SideNav;
@@ -66,13 +61,13 @@ export default function ContentTemplate ({
   const { frontmatter } = mdx;
   let title;
 
-  if (frontmatter.path.indexOf('/get-started') > -1 ) {
+  if (frontmatter.path.indexOf('/get-started') > -1) {
     SideNav = navBuilder(allGetStartedNavigationJson.edges);
     title = 'Get started';
-  } else if (frontmatter.path.indexOf('/design-guidelines') > -1 ) {
+  } else if (frontmatter.path.indexOf('/design-guidelines') > -1) {
     SideNav = navBuilder(allDesignGuidelinesNavigationJson.edges);
     title = 'Design guidelines';
-  } else if (frontmatter.path.indexOf('/contribute') > -1 ) {
+  } else if (frontmatter.path.indexOf('/contribute') > -1) {
     SideNav = navBuilder(allContributeNavigationJson.edges);
     title = 'Contribute';
   }
@@ -83,14 +78,12 @@ export default function ContentTemplate ({
       <PageSection className="pageSectionStyles markdown-body" variant={PageSectionVariants.light}>
         <PatternFlyThemeProvider>
           <TextContent>
-            <MDXRenderer>
-              {mdx.code.body}
-            </MDXRenderer>
+            <MDXRenderer>{mdx.code.body}</MDXRenderer>
           </TextContent>
         </PatternFlyThemeProvider>
       </PageSection>
     </Layout>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -132,4 +125,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

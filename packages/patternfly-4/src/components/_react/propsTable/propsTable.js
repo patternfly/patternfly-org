@@ -43,7 +43,6 @@ const renderType = prop => {
 export const PropsTable = ({ name, description: preface, props }) => {
   return (
     <Section
-      name={name}
       title={`${name} Props`}
       headingLevel="h4"
       preface={preface}

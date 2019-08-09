@@ -26,21 +26,24 @@ const components = {
       );
     }
   },
-  pre: React.Fragment,
+  pre: React.Fragment
 };
 for (let i = 1; i <= 6; i++) {
   components[`h${i}`] = props => {
     let inner = props.children.length > 0 ? props.children[1] : props.children;
-    return <AutoLinkHeader className='ws-linked-heading' is="h4" {...props}>{inner}</AutoLinkHeader>;
-  }
+    return (
+      <AutoLinkHeader className="ws-linked-heading" is="h4" {...props}>
+        {inner}
+      </AutoLinkHeader>
+    );
+  };
 }
 
 const MdxPF4Template = ({ data }) => {
   const cssPrefix = data.mdx.frontmatter.cssPrefix;
   let section = data.mdx.frontmatter.section;
-  if (!section)
-    section = 'component';
-  
+  if (!section) section = 'component';
+
   return (
     <Layout sideNav={<SideNav />} className="ws-documentation">
       <SEO title="React" />
@@ -49,48 +52,52 @@ const MdxPF4Template = ({ data }) => {
         <AutoLinkHeader size="4xl" is="h2" suffix="-title" className="pf-u-mt-sm pf-u-mb-md">
           {data.mdx.frontmatter.title}
         </AutoLinkHeader>
-        {data.description &&
+        {data.description && (
           <Section>
-            <MDXRenderer>
-              {data.description.code.body}
-            </MDXRenderer>
+            <MDXRenderer>{data.description.code.body}</MDXRenderer>
           </Section>
-        }
+        )}
         <Section>
-          <AutoLinkHeader anchorOnly className="pf-site-toc">Examples</AutoLinkHeader>
-          {data.props && <AutoLinkHeader anchorOnly className="pf-site-toc">Props</AutoLinkHeader>}
-          {cssPrefix && <AutoLinkHeader anchorOnly className="pf-site-toc">CSS Variables</AutoLinkHeader>}
+          <AutoLinkHeader anchorOnly className="pf-site-toc">
+            Examples
+          </AutoLinkHeader>
+          {data.props && (
+            <AutoLinkHeader anchorOnly className="pf-site-toc">
+              Props
+            </AutoLinkHeader>
+          )}
+          {cssPrefix && (
+            <AutoLinkHeader anchorOnly className="pf-site-toc">
+              CSS Variables
+            </AutoLinkHeader>
+          )}
         </Section>
         <Section title="Examples" headingLevel="h3">
           <Section className="ws-live-demo">
             <MDXProvider components={components}>
-              <MDXRenderer>
-                {data.mdx.code.body}
-              </MDXRenderer>
+              <MDXRenderer>{data.mdx.code.body}</MDXRenderer>
             </MDXProvider>
           </Section>
         </Section>
       </PageSection>
 
-      {data.props && 
+      {data.props && (
         <PageSection>
-          <Section title="Props" headingLevel="h3">	
-            {data.props.nodes.map(component =>
-              <PropsTable
-                name={component.name}
-                description={component.description}
-                props={component.props}
-              />
-            )}
+          <Section title="Props" headingLevel="h3">
+            {data.props.nodes.map(component => (
+              <PropsTable name={component.name} description={component.description} props={component.props} />
+            ))}
           </Section>
-        </PageSection>}
+        </PageSection>
+      )}
 
-      {cssPrefix && <PageSection variant={PageSectionVariants.light} className="pf-site-background-medium">
-        <Section title="CSS Variables" headingLevel="h3">
-          <Tokens variables={cssPrefix} />
-        </Section>
-      </PageSection>
-      }
+      {cssPrefix && (
+        <PageSection variant={PageSectionVariants.light} className="pf-site-background-medium">
+          <Section title="CSS Variables" headingLevel="h3">
+            <Tokens variables={cssPrefix} />
+          </Section>
+        </PageSection>
+      )}
     </Layout>
   );
 };
@@ -101,65 +108,65 @@ const MdxPF4Template = ({ data }) => {
 // We want component metadata from gatsby-transformer-react-docgen-typescript
 // for ALL components in that folder
 export const pageQuery = graphql`
-query GetComponent($fileAbsolutePath: String!, $propComponents: [String]!, $reactUrl: String!, $pathRegex: String!) {
-  mdx(fileAbsolutePath: { eq: $fileAbsolutePath }) {
-    code {
-      body
+  query GetComponent($fileAbsolutePath: String!, $propComponents: [String]!, $reactUrl: String!, $pathRegex: String!) {
+    mdx(fileAbsolutePath: { eq: $fileAbsolutePath }) {
+      code {
+        body
+      }
+      frontmatter {
+        title
+        section
+        cssPrefix
+      }
     }
-    frontmatter {
-      title
-      section
-      cssPrefix
-    }
-  }
-  props: allComponentMetadata(filter: { name: { in: $propComponents }, path: { regex: $pathRegex } }) {
-    nodes {
-      path
-      name
-      description
-      props {
+    props: allComponentMetadata(filter: { name: { in: $propComponents }, path: { regex: $pathRegex } }) {
+      nodes {
+        path
         name
         description
-        required
-        type {
+        props {
           name
-        }
-        tsType {
-          name
-          raw
-        }
-        defaultValue {
-          value
+          description
+          required
+          type {
+            name
+          }
+          tsType {
+            name
+            raw
+          }
+          defaultValue {
+            value
+          }
         }
       }
     }
-  }
-  description: mdx(frontmatter: {reactUrl: {eq: $reactUrl}}) {
-    code {
-      body
-    }
-  }
-  allGetStartedNavigationJson {
-    edges {
-      node {
-        text
-        path
+    description: mdx(frontmatter: { reactUrl: { eq: $reactUrl } }) {
+      code {
+        body
       }
     }
-  }
-  allDesignGuidelinesNavigationJson {
-    edges {
-      node {
-        text
-        path
-        subNav {
+    allGetStartedNavigationJson {
+      edges {
+        node {
           text
           path
         }
       }
     }
+    allDesignGuidelinesNavigationJson {
+      edges {
+        node {
+          text
+          path
+          subNav {
+            text
+            path
+          }
+        }
+      }
+    }
   }
-}
 `;
 
 export default MdxPF4Template;
