@@ -6,13 +6,17 @@ import { ChatIcon, QuestionIcon, BlogIcon, MailBulkIcon } from '@patternfly/reac
 import { Grid, GridItem, Split, SplitItem } from '@patternfly/react-core';
 import AutoLinkHeader from '@content/AutoLinkHeader';
 
+import FooterUnderFoldLayout from './FooterUnderFoldLayout';
+
+export default FooterUnderFoldLayout
+
 <AutoLinkHeader is="h1" className="pf-u-mb-lg">Get in touch</AutoLinkHeader>
 
 Get involved with the PatternFly community. Get answers to your questions and share your knowledge with others.
 
 We are here to help.
 
-<Grid sm={12} md={6} gutter className="pf-u-my-lg" style={{ maxWidth: '450px' }}>
+<Grid sm={12} md={6} gutter="sm" className="pf-u-my-lg" style={{ maxWidth: '450px' }}>
   <GridItem>
     <Split>
       <SplitItem style={{ marginRight: '12px' }}><h3><ChatIcon /></h3></SplitItem>
