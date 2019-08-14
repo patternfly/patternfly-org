@@ -10,7 +10,6 @@ import {
 import { navigate } from 'gatsby';
 import { Location } from '@reach/router';
 import './styles.scss';
-import { path } from '../../../../../node_modules/change-case';
 
 class SingleSelectInput extends React.Component {
   constructor(props) {

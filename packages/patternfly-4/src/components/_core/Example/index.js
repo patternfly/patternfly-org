@@ -5,7 +5,7 @@ import { css } from '@patternfly/react-styles';
 import Preview from '../Preview';
 import ComponentItems from './ComponentItems';
 import AutoLinkHeader from '@content/AutoLinkHeader';
-import EditorToolbar from '../../example/editorToolbar';
+import EditorToolbar from '../../editorToolbar';
 import { Editor } from 'react-live';
 import { Location } from '@reach/router';
 

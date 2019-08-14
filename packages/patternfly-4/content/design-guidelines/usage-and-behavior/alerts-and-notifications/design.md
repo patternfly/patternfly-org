@@ -27,6 +27,7 @@ The status area and alert title are coded to communicate the severity of an aler
 |Warning  |Orange (#F0AB00)  |fa-exclamation-triangle |Use to indicate that a non-critical error has occurred|
 |Critical |Red (#CC0000)     |fa-exclamation-circle | Use to indicate that a critical or blocking error has occurred
 |Success  |Green (#92D400)   |fa-check-circle | Use to indicate that a task or process has completed successfully
+|Default  |Cyan (#73C5C5)   |fa-bell | Use for generic messages with no associated severity
 
 ## Usage
 There are two primary use cases when alerts are used:

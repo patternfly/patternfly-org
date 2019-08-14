@@ -1,7 +1,7 @@
 import React from 'react';
 import { LiveProvider, LiveEditor, LiveError, LivePreview, LiveContext } from 'react-live';
 import { css } from '@patternfly/react-styles';
-import EditorToolbar from '../example/editorToolbar';
+import EditorToolbar from '../editorToolbar';
 import ShadowDomPreview from '../ShadowDomPreview';
 
 class LiveEdit extends React.Component {
