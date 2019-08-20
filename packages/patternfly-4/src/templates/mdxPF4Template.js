@@ -32,7 +32,7 @@ for (let i = 1; i <= 6; i++) {
   components[`h${i}`] = props => {
     let inner = props.children.length > 0 ? props.children[1] : props.children;
     return (
-      <AutoLinkHeader className="ws-linked-heading" is="h4" {...props}>
+      <AutoLinkHeader className="ws-linked-heading" is="h2" {...props}>
         {inner}
       </AutoLinkHeader>
     );
@@ -72,7 +72,7 @@ const MdxPF4Template = ({ data }) => {
             </AutoLinkHeader>
           )}
         </Section>
-        <Section title="Examples" headingLevel="h3">
+        <Section title="Examples" headingLevel="h2">
           <Section className="ws-live-demo">
             <MDXProvider components={components}>
               <MDXRenderer>{data.mdx.code.body}</MDXRenderer>
@@ -83,7 +83,7 @@ const MdxPF4Template = ({ data }) => {
 
       {data.props && (
         <PageSection>
-          <Section title="Props" headingLevel="h3">
+          <Section title="Props" headingLevel="h2">
             {data.props.nodes.map(component => (
               <PropsTable name={component.name} description={component.description} props={component.props} />
             ))}
