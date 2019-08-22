@@ -10,7 +10,7 @@ A form is a group of elements used to collect information from a user. Forms can
 Most forms will contain the following basic elements:
 
 *Form elements*
-![elements of a form](./img/form-elements.png) 
+![elements of a form](./img/form-elements.png)
 
 1. [Labels](#labeling): Field labels can be aligned to the top or left of the field depending on the layout of your page and the amount of space you have to work with.
 
@@ -120,8 +120,6 @@ Learn more about data input variations in the [data input design guidelines](/de
 **Popovers**
 
 Use a **popover** for longer (2 sentences or more) explanations, content that requires formatting like numbered or bulleted lists, or content that requires you to include buttons, links, or images.
-
-![Popovers](./img/infotip-left.png)
 
   **DO**
 
