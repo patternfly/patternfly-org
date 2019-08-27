@@ -90,7 +90,7 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
             </GridItem>
             <GridItem span={12}>
                 <div class="chart-colors-gallery--information">
-                <div>#A2D99C</div>
+                <div>#BDE2B9</div>
                 <div class="css-var-text">Global CSS Variable</div>
                 <div><code>--pf-chart-color-green-100</code></div>
                 </div>
@@ -104,7 +104,7 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
             </GridItem>
             <GridItem span={12}>
                 <div class="chart-colors-gallery--information">
-                <div>#88D080</div>
+                <div>#7CC674</div>
                 <div class="css-var-text">Global CSS Variable</div>
                 <div><code>--pf-chart-color-green-200</code></div>
                 </div>
@@ -118,7 +118,7 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
             </GridItem>
             <GridItem span={12}>
                 <div class="chart-colors-gallery--information">
-                <div>#6EC664</div>
+                <div>#4CB140</div>
                 <div class="css-var-text">Global CSS Variable</div>
                 <div><code>--pf-chart-color-green-300</code></div>
                 </div>
@@ -132,7 +132,7 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
             </GridItem>
             <GridItem span={12}>
                 <div class="chart-colors-gallery--information">
-                <div>#509149</div>
+                <div>#38812F</div>
                 <div class="css-var-text">Global CSS Variable</div>
                 <div><code>--pf-chart-color-green-400</code></div>
                 </div>
@@ -146,7 +146,7 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
             </GridItem>
             <GridItem span={12}>
                 <div class="chart-colors-gallery--information">
-                <div>#3B6C37</div>
+                <div>#23511E</div>
                 <div class="css-var-text">Global CSS Variable</div>
                 <div><code>--pf-chart-color-green-500</code></div>
                 </div>
@@ -162,7 +162,7 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
             </GridItem>
             <GridItem span={12}>
                 <div class="chart-colors-gallery--information">
-                <div>#8BB4B9</div>
+                <div>#A2D9D9</div>
                 <div class="css-var-text">Global CSS Variable</div>
                 <div><code>--pf-chart-color-cyan-100</code></div>
                 </div>
@@ -176,7 +176,7 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
             </GridItem>
             <GridItem span={12}>
                 <div class="chart-colors-gallery--information">
-                <div>#5C969D</div>
+                <div>#73C5C5</div>
                 <div class="css-var-text">Global CSS Variable</div>
                 <div><code>--pf-chart-color-cyan-200</code></div>
                 </div>
@@ -190,7 +190,7 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
             </GridItem>
             <GridItem span={12}>
                 <div class="chart-colors-gallery--information">
-                <div>#2E7981</div>
+                <div>#009596</div>
                 <div class="css-var-text">Global CSS Variable</div>
                 <div><code>--pf-chart-color-cyan-300</code></div>
                 </div>
@@ -204,7 +204,7 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
             </GridItem>
             <GridItem span={12}>
                 <div class="chart-colors-gallery--information">
-                <div>#015C65</div>
+                <div>#005F60</div>
                 <div class="css-var-text">Global CSS Variable</div>
                 <div><code>--pf-chart-color-cyan-400</code></div>
                 </div>
@@ -218,7 +218,7 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
             </GridItem>
             <GridItem span={12}>
                 <div class="chart-colors-gallery--information">
-                <div>#00434B</div>
+                <div>#003737</div>
                 <div class="css-var-text">Global CSS Variable</div>
                 <div><code>--pf-chart-color-cyan-500</code></div>
                 </div>
@@ -234,9 +234,9 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
             </GridItem>
             <GridItem span={12}>
                 <div class="chart-colors-gallery--information">
-                <div>#CBC0FF</div>
+                <div>#B2B0EA</div>
                 <div class="css-var-text">Global CSS Variable</div>
-                <div><code>--pf-chart-color-purple-500</code></div>
+                <div><code>--pf-chart-color-purple-100</code></div>
                 </div>
             </GridItem>
         </Grid>
@@ -248,7 +248,7 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
             </GridItem>
             <GridItem span={12}>
                 <div class="chart-colors-gallery--information">
-                <div>#B1A3FF</div>
+                <div>#8481DD</div>
                 <div class="css-var-text">Global CSS Variable</div>
                 <div><code>--pf-chart-color-purple-200</code></div>
                 </div>
@@ -262,7 +262,7 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
             </GridItem>
             <GridItem span={12}>
                 <div class="chart-colors-gallery--information">
-                <div>#A18FFF</div>
+                <div>#5752D1</div>
                 <div class="css-var-text">Global CSS Variable</div>
                 <div><code>--pf-chart-color-purple-300</code></div>
                 </div>
@@ -276,7 +276,7 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
             </GridItem>
             <GridItem span={12}>
                 <div class="chart-colors-gallery--information">
-                <div>#8476D1</div>
+                <div>#3C3D99</div>
                 <div class="css-var-text">Global CSS Variable</div>
                 <div><code>--pf-chart-color-purple-400</code></div>
                 </div>
@@ -290,7 +290,7 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
             </GridItem>
             <GridItem span={12}>
                 <div class="chart-colors-gallery--information">
-                <div>#6753AC</div>
+                <div>#2A265F</div>
                 <div class="css-var-text">Global CSS Variable</div>
                 <div><code>--pf-chart-color-purple-500</code></div>
                 </div>
