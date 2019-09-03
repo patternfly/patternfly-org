@@ -59,7 +59,7 @@ export default class Documentation extends React.Component {
                   <AutoLinkHeader size="md" is="h1" className="pf4-site-framework-title">HTML</AutoLinkHeader>
                     <AutoLinkHeader size="4xl" is="h2" suffix="-title" className="pf-u-mt-sm pf-u-mb-md">
                       {heading}
-                      <Label isCompact>Experimental</Label>
+                      <Label className="pf-u-ml-md" isCompact>Experimental</Label>
                     </AutoLinkHeader>
                   {data && data.pageContext && data.pageContext.description &&
                     <Section className={className}>
