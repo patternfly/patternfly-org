@@ -10,6 +10,15 @@ Development setup requires yarn. If you do not already have yarn installed on yo
 
 ### Build
 
+Clone the repo and submodules:
+
+    git clone --recurse-submodules
+
+Note: If repo is cloned without submodules, use the following commands to update submodules:
+
+    git submodule init
+    git submodule update
+
 Install the site dependencies and build it using yarn:
 
     yarn install

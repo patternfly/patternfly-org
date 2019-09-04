@@ -50,7 +50,7 @@ export default class Documentation extends React.Component {
             return modifiedHtml;
           };
           const changeTableResponsiveness = html => html.replace(/<table>/g, '<table class="pf-m-grid">')
-          const HTML_DOCS = { __html: changeTableResponsiveness(changeHeadingLevel(docs, 'h4')) };
+          const HTML_DOCS = { __html: changeTableResponsiveness(changeHeadingLevel(docs, 'h3')) };
           return !isFull ? (
             <CoreContext.Provider value={{ coreClass: className || '' }}>
               <Layout sideNav={<SideNav />}>
@@ -88,7 +88,7 @@ export default class Documentation extends React.Component {
                   </Section>
                 </PageSection>
                 <PageSection variant={PageSectionVariants.light} className="pf-site-background-medium">
-                  <Section title="Documentation" headingLevel="h3">
+                  <Section title="Documentation" headingLevel="h2">
                     <div className="Documentation Documentation__docsection" dangerouslySetInnerHTML={HTML_DOCS} />
                   </Section>
                 </PageSection>

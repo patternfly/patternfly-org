@@ -33,7 +33,7 @@ Use our typographic styles to communicate visual hierarchy. A consistent and log
 <Grid>
   <GridItem span={5}>
     <LineHeightTitle>
-      <CheckCircleIcon color="#52A549" /> 
+      <CheckCircleIcon color="#52A549" />
       <span style={{color: '#151515', marginLeft: '8px'}}>Correct</span>
     </LineHeightTitle>
     <div>Note how the line height space is included when laying out with spacer elements.</div>
@@ -42,7 +42,7 @@ Use our typographic styles to communicate visual hierarchy. A consistent and log
   <GridItem span={2}></GridItem>
   <GridItem span={5}>
     <LineHeightTitle>
-      <TimesCircleIcon color="#CC0000" /> 
+      <TimesCircleIcon color="#CC0000" />
       <span style={{color: '#151515', marginLeft: '8px'}}>Incorrect</span>
     </LineHeightTitle>
     <div>Do not use the text itself to align with spacing elements when designing. Remember to always include the line height space.</div>
