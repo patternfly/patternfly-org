@@ -1,7 +1,7 @@
 import React from 'react';
 import SideNav from './SideNav';
 import Layout from '../../layout';
-import { PageSection, PageSectionVariants, Label } from '@patternfly/react-core';
+import { Alert, Tooltip, TooltipPosition, PageSection, PageSectionVariants, Label } from '@patternfly/react-core';
 import { MDXRenderer } from 'gatsby-mdx';
 import AutoLinkHeader from '@content/AutoLinkHeader';
 import Section from '../../section';
@@ -57,10 +57,20 @@ export default class Documentation extends React.Component {
                 <SEO title="HTML" />
                 <PageSection variant={PageSectionVariants.light} className="pf-site-background-medium">
                   <AutoLinkHeader size="md" is="h1" className="pf4-site-framework-title">HTML</AutoLinkHeader>
-                    <AutoLinkHeader size="4xl" is="h2" suffix="-title" className="pf-u-mt-sm pf-u-mb-md">
+                    <AutoLinkHeader size="4xl" is="h2" suffix="-title" className="pf-u-mt-sm pf-u-mb-md" style={{ display: 'flex', alignItems: 'center' }}>
                       {heading}
-                      <Label className="pf-u-ml-md" isCompact>Experimental</Label>
+                        <Tooltip
+                          position={TooltipPosition.right}
+                          content={
+                            <div>This is an experimental featuer in the early stages of testing. It's not intended for production use.</div>
+                          }
+                        >
+                          <Label className="pf-u-ml-md pf-u-mt-xs" isCompact>Experimental feature</Label>
+                        </Tooltip>
                     </AutoLinkHeader>
+                    <Alert isInline variant="warning" title="Experimental feature" style={{ width: '800px', marginBottom: 'var(--pf-global--spacer--md)' }}>
+                      This experimental feature has been deprecated and will be removed in a future release. We recommend you avoid or move away from using this feature in your projects.
+                    </Alert>
                   {data && data.pageContext && data.pageContext.description &&
                     <Section className={className}>
                       <MDXRenderer>
