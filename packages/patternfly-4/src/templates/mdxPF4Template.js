@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { PageSection, PageSectionVariants } from '@patternfly/react-core';
+import { Alert, PageSection, PageSectionVariants } from '@patternfly/react-core';
 import AutoLinkHeader from '@content/AutoLinkHeader';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from '../components/mdx-renderer';
@@ -40,10 +40,10 @@ for (let i = 1; i <= 6; i++) {
 }
 
 const MdxPF4Template = ({ data }) => {
-  const cssPrefix = data.mdx.frontmatter.cssPrefix;
+  const { cssPrefix } = data.mdx.frontmatter;
+  const { optIn } = data.mdx.fields;
   let section = data.mdx.frontmatter.section;
   if (!section) section = 'component';
-
   return (
     <Layout sideNav={<SideNav />} className="ws-documentation">
       <SEO title="React" />
@@ -52,6 +52,16 @@ const MdxPF4Template = ({ data }) => {
         <AutoLinkHeader size="4xl" is="h2" suffix="-title" className="pf-u-mt-sm pf-u-mb-md">
           {data.mdx.frontmatter.title}
         </AutoLinkHeader>
+        {optIn && (
+          <Alert
+            variant="info"
+            title="Opt-in feature"
+            className="pf-u-my-md"
+            isInline
+          >
+            {optIn}
+          </Alert>
+        )}
         {data.description && (
           <Section>
             <MDXRenderer>{data.description.code.body}</MDXRenderer>
@@ -117,6 +127,9 @@ export const pageQuery = graphql`
         title
         section
         cssPrefix
+      }
+      fields {
+        optIn
       }
     }
     props: allComponentMetadata(filter: { name: { in: $propComponents }, path: { regex: $pathRegex } }) {
