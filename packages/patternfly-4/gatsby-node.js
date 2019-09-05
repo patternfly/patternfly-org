@@ -17,6 +17,14 @@ const coreExperimentalRE = new RegExp(coreExperimental.map(c => c.name.toLowerCa
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
   const isSitePage = node.internal.type === 'SitePage';
+  const isMdx = node.internal.type === 'Mdx';
+  if (isMdx) {
+    createNodeField({
+      node,
+      name: 'optIn',
+      value: (node.frontmatter && node.frontmatter.optIn) || ''
+    });
+  }
   if (isSitePage && coreComponentPathRegEx.test(node.path)) {
     const corePathLabel = node.component
       .split('/')
