@@ -147,7 +147,7 @@ Multiple lines on the same chart allow the user to visualize relationships betwe
 
 1. **Line:** Line charts can optionally visually represent data points as dots on the line. If so, the same interaction that occurs when hovering over one in an [Area chart](#area-chart) will occur in line charts. For line colors, we recommend using the [Colors for charts](/design-guidelines/styles/chart-colors).
 
-### React component
+#### React component
 [Line chart](/documentation/react/charts/chartline)
 
 ### Pie chart
@@ -165,7 +165,7 @@ A pie chart may be the wrong choice when you need to compare categories to one a
 1. **Pie chart fill:** We recommend that fill colors should be based on the [Colors for charts](/design-guidelines/styles/chart-colors).
 2. **Legend:** Each variable on the legend should report their current value.
 
-### React component
+#### React component
 [Pie chart](/documentation/react/charts/chartpie)
 
 ### Sparkline
