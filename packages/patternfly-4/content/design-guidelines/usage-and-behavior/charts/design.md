@@ -180,7 +180,7 @@ Sparklines are commonly used in tables, reports, and dashboards. A common use ca
 
 1. **Axis:** We recommend that sparklines are shown without an x or y-axis. Depending on space, a label can be placed underneath or to the left of the sparkline.
 
-### React component
+#### React component
 [Sparkline](/documentation/react/charts/chartarea/#sparkline-chart)
 
 ### Charts in cards
