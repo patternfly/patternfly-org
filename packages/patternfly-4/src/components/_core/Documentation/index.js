@@ -31,7 +31,7 @@ export default class Documentation extends React.Component {
   }
 
   render() {
-    const { children, className = '', docs = '', heading = '', variablesRoot, data, section } = this.props;
+    const { children, className = '', docs = '', heading = '', variablesRoot, data, section = '' } = this.props;
     const { isFull } = this.state;
 
     return (
@@ -60,11 +60,9 @@ export default class Documentation extends React.Component {
                     <AutoLinkHeader size="4xl" is="h2" suffix="-title" className="pf-u-mt-sm pf-u-mb-md" style={{ display: 'flex', alignItems: 'center' }}>
                       {heading}
                     </AutoLinkHeader>
-                    { section === 'experimental' &&
                       <Alert isInline variant="info" title="Experimental feature" style={{ width: '800px', marginBottom: 'var(--pf-global--spacer--md)' }}>
                         This is an experimental feature in the early stages of testing. It's not intended for production use.
                       </Alert>
-                    }
                     <Alert isInline variant="warning" title="Experimental feature" style={{ width: '800px', marginBottom: 'var(--pf-global--spacer--md)' }}>
                       This experimental feature has been deprecated and will be removed in a future release. We recommend you avoid or move away from using this feature in your projects.
                     </Alert>
