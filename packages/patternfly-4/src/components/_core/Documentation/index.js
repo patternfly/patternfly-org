@@ -1,7 +1,7 @@
 import React from 'react';
 import SideNav from './SideNav';
 import Layout from '../../layout';
-import { Alert, Tooltip, TooltipPosition, PageSection, PageSectionVariants, Label } from '@patternfly/react-core';
+import { Alert, PageSection, PageSectionVariants } from '@patternfly/react-core';
 import { MDXRenderer } from 'gatsby-mdx';
 import AutoLinkHeader from '@content/AutoLinkHeader';
 import Section from '../../section';
@@ -31,7 +31,7 @@ export default class Documentation extends React.Component {
   }
 
   render() {
-    const { children, className = '', docs = '', heading = '', variablesRoot, data } = this.props;
+    const { children, className = '', docs = '', heading = '', variablesRoot, data, section } = this.props;
     const { isFull } = this.state;
 
     return (
@@ -59,15 +59,11 @@ export default class Documentation extends React.Component {
                   <AutoLinkHeader size="md" is="h1" className="pf4-site-framework-title">HTML</AutoLinkHeader>
                     <AutoLinkHeader size="4xl" is="h2" suffix="-title" className="pf-u-mt-sm pf-u-mb-md" style={{ display: 'flex', alignItems: 'center' }}>
                       {heading}
-                        <Tooltip
-                          position={TooltipPosition.right}
-                          content={
-                            <div>This is an experimental featuer in the early stages of testing. It's not intended for production use.</div>
-                          }
-                        >
-                          <Label className="pf-u-ml-md pf-u-mt-xs" isCompact>Experimental feature</Label>
-                        </Tooltip>
                     </AutoLinkHeader>
+                    
+                    <Alert isInline variant="info" title="Experimental feature" style={{ width: '800px', marginBottom: 'var(--pf-global--spacer--md)' }}>
+                      This is an experimental feature in the early stages of testing. It's not intended for production use.
+                    </Alert>
                     <Alert isInline variant="warning" title="Experimental feature" style={{ width: '800px', marginBottom: 'var(--pf-global--spacer--md)' }}>
                       This experimental feature has been deprecated and will be removed in a future release. We recommend you avoid or move away from using this feature in your projects.
                     </Alert>
