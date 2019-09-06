@@ -59,7 +59,7 @@ export default class Documentation extends React.Component {
                   <AutoLinkHeader size="md" is="h1" className="pf4-site-framework-title">HTML</AutoLinkHeader>
                   <AutoLinkHeader size="4xl" is="h2" suffix="-title" className="pf-u-mt-sm pf-u-mb-md">{heading}</AutoLinkHeader>
                   {location.pathname.indexOf('experimental') >= 0 &&
-                    <Alert isInline variant="info" title="Experimental feature" style={{ width: '800px', marginBottom: 'var(--pf-global--spacer--md)' }}>
+                    <Alert isInline variant="info" title="Experimental feature" style={{ marginBottom: 'var(--pf-global--spacer--md)' }}>
                       This is an experimental feature in the early stages of testing. It's not intended for production use.
                     </Alert>
                   }
