@@ -39,8 +39,23 @@ for (let i = 1; i <= 6; i++) {
   };
 }
 
+const getWarning = state => {
+  switch(state) {
+    case 'early':
+      return "This is an experimental feature in the early stages of testing. It's not intended for production use.";
+    case 'deprecated':
+      return "This experimental feature has been deprecated and will be removed in a future release. We recommend you avoid or move away from using this feature in your projects.";
+    default:
+      return (
+        <React.Fragment>
+This experimental feature has been promoted to a <a href={`../../components/${state}`}>production-level component</a> and will be removed in a future release. Use the production-ready version of this feature instead."
+        </React.Fragment>
+      );
+  }
+}
+
 const MdxPF4Template = ({ data }) => {
-  const { cssPrefix } = data.mdx.frontmatter;
+  const { cssPrefix, stage } = data.mdx.frontmatter;
   const { optIn } = data.mdx.fields;
   let section = data.mdx.frontmatter.section;
   if (!section) section = 'component';
@@ -60,6 +75,17 @@ const MdxPF4Template = ({ data }) => {
             isInline
           >
             {optIn}
+          </Alert>
+        )}
+        {stage && (
+          <Alert
+            variant={stage === 'early' ? 'info' : 'warning'}
+            title="Experimental feature"
+            className="pf-u-my-md"
+            style={{ marginBottom: 'var(--pf-global--spacer--md)' }}
+            isInline
+          >
+            {getWarning(stage)}
           </Alert>
         )}
         {data.description && (
@@ -127,6 +153,7 @@ export const pageQuery = graphql`
         title
         section
         cssPrefix
+        stage
       }
       fields {
         optIn

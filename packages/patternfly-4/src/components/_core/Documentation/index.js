@@ -1,7 +1,7 @@
 import React from 'react';
 import SideNav from './SideNav';
 import Layout from '../../layout';
-import { PageSection, PageSectionVariants } from '@patternfly/react-core';
+import { Alert, PageSection, PageSectionVariants } from '@patternfly/react-core';
 import { MDXRenderer } from 'gatsby-mdx';
 import AutoLinkHeader from '@content/AutoLinkHeader';
 import Section from '../../section';
@@ -58,6 +58,11 @@ export default class Documentation extends React.Component {
                 <PageSection variant={PageSectionVariants.light} className="pf-site-background-medium">
                   <AutoLinkHeader size="md" is="h1" className="pf4-site-framework-title">HTML</AutoLinkHeader>
                   <AutoLinkHeader size="4xl" is="h2" suffix="-title" className="pf-u-mt-sm pf-u-mb-md">{heading}</AutoLinkHeader>
+                  {location.pathname.indexOf('experimental') >= 0 &&
+                    <Alert isInline variant="info" title="Experimental feature" style={{ marginBottom: 'var(--pf-global--spacer--md)' }}>
+                      This is an experimental feature in the early stages of testing. It's not intended for production use.
+                    </Alert>
+                  }
                   {data && data.pageContext && data.pageContext.description &&
                     <Section className={className}>
                       <MDXRenderer>
