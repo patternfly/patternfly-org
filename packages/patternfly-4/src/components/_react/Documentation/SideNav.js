@@ -50,6 +50,14 @@ class SideNav extends React.Component {
           to: e.node.path,
           label: e.node.context.title
         }));
+    
+    const experimentalRoutes = data.experimentalPages && 
+      data.experimentalPages.edges
+        .filter(e => e.node.context.title && !e.node.context.fullscreen)
+        .map(e => ({
+          to: e.node.path,
+          label: e.node.context.title
+        }));
 
     const isActiveTest = (currentPath, path) => {
       const pathWithSlash = path.endsWith('/') ? path : `${path}/`;
@@ -130,6 +138,22 @@ class SideNav extends React.Component {
                   </NavItem>
                 ))}
               </NavExpandable>
+              <NavExpandable
+                title="Experimental"
+                isExpanded={currentPath.indexOf('/experimental/') > -1}
+                isActive={currentPath.indexOf(/experimental/) > -1}
+              >
+                {experimentalRoutes.map(item => (
+                  <NavItem
+                    key={item.to}
+                    isActive={isActiveTest(currentPath, item.to)}
+                  >
+                    <Link to={item.to}>
+                      {item.label}
+                    </Link>
+                  </NavItem>
+                ))}
+              </NavExpandable>
               <NavItem isActive={currentPath.indexOf('/documentation/react/css-variables') > -1}>
                 <Link to="/documentation/react/css-variables/">Global CSS variables</Link>
               </NavItem>
@@ -196,6 +220,20 @@ export default props => (
         }
         demoPages: allSitePage(
           filter: { path: { glob: "/documentation/react/demos/**" } },
+          sort: { fields: path }
+        ) {
+          edges {
+            node {
+              path
+              context {
+                title
+                fullscreen
+              }
+            }
+          }
+        }
+        experimentalPages: allSitePage(
+          filter: { path: { glob: "/documentation/react/experimental/**" } },
           sort: { fields: path }
         ) {
           edges {
