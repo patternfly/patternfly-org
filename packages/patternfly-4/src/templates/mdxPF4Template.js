@@ -82,6 +82,7 @@ const MdxPF4Template = ({ data }) => {
             variant={stage === 'early' ? 'info' : 'warning'}
             title="Experimental feature"
             className="pf-u-my-md"
+            style={{ width: '800px', marginBottom: 'var(--pf-global--spacer--md)' }}
             isInline
           >
             {getWarning(stage)}
