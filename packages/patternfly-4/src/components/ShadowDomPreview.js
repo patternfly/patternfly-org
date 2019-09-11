@@ -69,13 +69,13 @@ const ShadowDomPreview = ({ children, className, isReact, isFull, html, ...props
               {html ? (
                 <div
                   dangerouslySetInnerHTML={{ __html: html }}
-                  className={className}
+                  className={`pf-m-redhat-font ${className}`}
                   style={isFull ? { height: '100vh' } : undefined}
                   {...props}
                 />
               ) : (
                 <div
-                  className={children ? `ws-example ${className}` : className}
+                  className={children ? `ws-example pf-m-redhat-font ${className}` : `pf-m-redhat-font ${className}`}
                   style={isFull ? { height: '100vh' } : undefined}
                   {...props}
                 >
