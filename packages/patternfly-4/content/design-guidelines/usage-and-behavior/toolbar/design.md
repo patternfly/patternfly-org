@@ -2,7 +2,7 @@
 path: "/design-guidelines/usage-and-behavior/toolbar"
 ---
 # Toolbar
-Toolbars can be included to allow a user to manage and manipulate a data set. Data can be presented in any valid presentation, a table, a list, or a data visualization (chart), for example . The PatternFly Toolbar component is a flexible layout system that accommodates a variety of configurations that can be adapted to your specific needs.
+Toolbars can be included to allow a user to manage and manipulate a data set. Data can be presented in any valid presentation, a table, a list, or a data visualization (chart), for example. The PatternFly Toolbar component is a flexible layout system that accommodates a variety of configurations that can be adapted to your specific needs.
 
 ## Elements
 
@@ -65,16 +65,16 @@ separate the groups visually.
 **1. Bulk selector:** A Bulk selector can be added when you want to give users the ability to select multiple items within a page. Besides allowing the user to select and deselect all items on a page, other application specific options can be added in the dropdown. Bulk selection allows the user to select or deselect all items on a page and provide an indeterminate state that notifies the user when only some items are selected. Bulk selectors should always be the left-most element in a toolbar. When providing a bulk selector in a list view, it should be aligned with the checkboxes.
 
 
-**2. Filter group:** PatternFly supports a variety of common filter types that can be used alone or in combination to construct a custom filter. You may consider placing filters inside of a toggle group to make you toolbar responsive. See Filters [link to the Filter documentation] for more information about available filters.
+**2. Filter group:** PatternFly supports a variety of common filter types that can be used alone or in combination to construct a custom filter. You may consider placing filters inside of a toggle group to make you toolbar responsive. See [Filters](/design-guidelines/usage-and-behavior/filters) for more information about available filters.
 
 
 **3. Icon button group:** Actions or settings that are represented by icons can be added in an Icon button group. In the example, Sort and Export are represented as icons.
 
 
-**4. Action button group:** Any global actions that apply to selected data items are included left-aligned following filter and icon buttons. These may be placed within an overflow menu to collapse the group as the viewport shrinks. No more than two items should be exposed as buttons. Button labels should be limited in length to preserve horizontal space.
+**4. Action button group:** Any global actions that apply to selected data items are included left-aligned following filter and icon buttons. These may be placed within an overflow menu component to collapse the group as the viewport shrinks. No more than two items should be exposed as buttons. Button labels should be limited in length to preserve horizontal space.
 
 
-**5. Pagination:** When pagination is supported, a pagination component will be included. Pagination will always be right aligned in the toolbar. If pagination is not supported, substitute the item count for pagination control. For example, report “17 items” to represent the total number of items or “10 of 17 items” to indicate that 10 items were returned as the result of a filter event.
+**5. Pagination:** When pagination is supported, a Pagination component will be included. Pagination will always be right aligned in the toolbar. If pagination is not supported, substitute the item count for pagination control. For example, report “17 items” to represent the total number of items or “10 of 17 items” to indicate that 10 items were returned as the result of a filter event.
 
 ## Usage
 ### Order of toolbar elements
@@ -139,14 +139,14 @@ The toolbar adapts to smaller viewport sizes by collapsing or hiding elements th
 
 ## Related components and demos
 **Core HTML/CSS**
-* [Toolbar (experimental)](#)
-* [Overflow menu (experimental)](#)
+* [Data Toolbar (experimental)](/documentation/core/experimental/DataToolbar)
+* [Overflow menu (experimental)](/documentation/core/experimental/OverflowMenu)
 * [Chip](/documentation/core/components/chip)
 * [Chip group](/documentation/core/components/chipgroup)
 * [Pagination](/documentation/core/components/pagination)
 
 **React**
-* [Toolbar (experimental)](#)
-* [Overflow menu (experimental)](#)
+* [Data Toolbar (experimental)](/documentation/react/experimental/DataToolbar)
+* Overflow menu (experimental) - under development
 * [Chip group](/documentation/react/components/chipgroup)
 * [Pagination](/documentation/react/components/pagination)
