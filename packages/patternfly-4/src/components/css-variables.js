@@ -65,11 +65,7 @@ class Tokens extends React.Component {
           return;
         }
       }
-      dataRows.push([
-        key,
-        token.name,
-        token.value,
-      ]);
+      dataRows.push([key, token.name, token.value]);
       return;
     }, []);
     const dataRowsSorted = dataRows.sort((a, b) => {
@@ -98,27 +94,40 @@ class Tokens extends React.Component {
     const rows = [];
     dataRows.forEach(dataRow => {
       let toPush = [];
-      rows.push(toPush.concat([
-        <span key={dataRow[1]} className={css(styles.tokenCell)}>{dataRow[1]}</span>,
-        <span key ={dataRow[0]} className={css(styles.tokenCell)}>{dataRow[0]}</span>,
-        <span key={dataRow[2]}>
-          {isColorRegex.test(dataRow[2]) && <span key={dataRow[2] + 'ic'} className={css(styles.color)} style={{backgroundColor: dataRow[2]}} />}
-          <span key={dataRow[2] + 'i'} className={css(styles.value)}>{dataRow[2]}</span>
-        </span>
-      ]));
+      rows.push(
+        toPush.concat([
+          <span key={dataRow[1]} className={css(styles.tokenCell)}>
+            {dataRow[1]}
+          </span>,
+          <span key={dataRow[0]} className={css(styles.tokenCell)}>
+            {dataRow[0]}
+          </span>,
+          <span key={dataRow[2]}>
+            {isColorRegex.test(dataRow[2]) && (
+              <span key={dataRow[2] + 'ic'} className={css(styles.color)} style={{ backgroundColor: dataRow[2] }} />
+            )}
+            <span key={dataRow[2] + 'i'} className={css(styles.value)}>
+              {dataRow[2]}
+            </span>
+          </span>
+        ])
+      );
     }, []);
     return rows;
   };
 
   onSort(_event, index, direction) {
-    const sortedRows = this.state.dataRows.sort((a, b) => a[index] < b[index] ? -1 : a[index] > b[index] ? 1 : 0);
+    const sortedRows = this.state.dataRows.sort((a, b) => (a[index] < b[index] ? -1 : a[index] > b[index] ? 1 : 0));
     this.setState({
       sortBy: {
         index,
         direction
       },
-      rows: direction === SortByDirection.asc ? this.processToComponents(sortedRows) : this.processToComponents(sortedRows.reverse())
-    })
+      rows:
+        direction === SortByDirection.asc
+          ? this.processToComponents(sortedRows)
+          : this.processToComponents(sortedRows.reverse())
+    });
   }
 
   handleSearchChange = (checked, event) => {
@@ -145,7 +154,13 @@ class Tokens extends React.Component {
 
     return (
       <>
-        <Form className="search-css-vars ws-search" onSubmit={event => { event.preventDefault(); return false; }}>
+        <Form
+          className="search-css-vars ws-search"
+          onSubmit={event => {
+            event.preventDefault();
+            return false;
+          }}
+        >
           <TextInput
             type="text"
             id="primaryIconsSearch"
@@ -156,7 +171,15 @@ class Tokens extends React.Component {
             onChange={this.handleSearchChange}
           />
         </Form>
-        <Table className="table-css-vars pf-m-grid-2xl" variant="compact" aria-label="CSS Variables" sortBy={sortBy} onSort={this.onSort} cells={columns} rows={filteredRows}>
+        <Table
+          className="table-css-vars pf-m-grid-2xl"
+          variant="compact"
+          aria-label="CSS Variables"
+          sortBy={sortBy}
+          onSort={this.onSort}
+          cells={columns}
+          rows={filteredRows}
+        >
           <TableHeader />
           <TableBody />
         </Table>

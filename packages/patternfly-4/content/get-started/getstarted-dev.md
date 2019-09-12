@@ -2,7 +2,7 @@
 path: "/get-started/developers"
 ---
 # Develop with PatternFly
-Before you begin, check out our [overview of PatternFly 4](/get-started/about) to get acquainted with the basic elements of the design system.
+Before you begin, check out our [overview of PatternFly](/get-started/about) to get acquainted with the basic elements of the design system.
 
 **Before you begin, install a package manager:**
 
@@ -75,7 +75,7 @@ Each of the three modules (layouts, components, and utilities) delivers a Sass f
 
 If you need to overwrite any elements, we recommend extending the variables found in the .scss files, rather than manually overwriting the CSS.
 
-When you install PatternFly 4, the package includes:
+When you install PatternFly, the package includes:
 
   * A single file for the entire compiled library: ```node_modules/@patternfly/patternfly/patternfly.css```
   * Individual files with each component compiled separately: ```node_modules/@patternfly/patternfly/<ComponentName>/styles.css```
@@ -85,7 +85,7 @@ When you install PatternFly 4, the package includes:
 Use these files to consume the library. The recommended consumption approach will vary from project to project.
 
 ### Configure your project
-1. Navigate to the patternfly-next package you just installed and find the PatternFly 4 CSS stylesheet, ```patternfly.css```
+1. Navigate to the patternfly-next package you just installed and find the PatternFly CSS stylesheet, ```patternfly.css```
 
 2. Copy ```patternfly.css``` to your project's CSS directory.
 
@@ -95,7 +95,7 @@ Use these files to consume the library. The recommended consumption approach wil
   <link rel="stylesheet" href="css/patternfly.css">
   ```
 
-  This will ensure that PatternFly 4 styles take precedence over anything that currently resides in your application.
+  This will ensure that PatternFly styles take precedence over anything that currently resides in your application.
 
 4. If you want to use PatternFly utilities in your project, find the utilities file,  ```patternfly-addons.css```
 
@@ -110,15 +110,15 @@ Use these files to consume the library. The recommended consumption approach wil
 ### Using styles
 **Typography**
 
-PatternFly 4 uses the Overpass font family. Overpass can be utilized in two different ways:
+PatternFly uses the Overpass font family. Overpass can be utilized in two different ways:
 
-  * **Built into PatternFly 4**
+  * **Built into PatternFly**
 
-  By default, Overpass is included as part of the PatternFly 4 distributed CSS file. You do not need to do anything with your configuration to use this font family.
+  By default, Overpass is included as part of the PatternFly distributed CSS file. You do not need to do anything with your configuration to use this font family.
 
   * **Used as a CDN**
 
-  If you wish to use the CDN for Overpass rather than the default approach, you need to update the ```sass-utilities/scss-variables.scss``` file and build PatternFly 4 as part of your build process.
+  If you wish to use the CDN for Overpass rather than the default approach, you need to update the ```sass-utilities/scss-variables.scss``` file and build PatternFly as part of your build process.
 
   To use the CDN vs the standard build, update the ```sass-utilities/scss-variables.scss``` file as follows:
 
@@ -128,15 +128,15 @@ PatternFly 4 uses the Overpass font family. Overpass can be utilized in two diff
 
 **Icons**
 
-PatternFly 4 uses Font Awesome 5. Font Awesome 5 can be utilized in two different ways:
+PatternFly uses Font Awesome 5. Font Awesome 5 can be utilized in two different ways:
 
-  * **Built into PatternFly 4**
+  * **Built into PatternFly**
 
-  By default, Overpass is included as part of the PatternFly 4 distributed CSS file. You do not need to do anything with your configuration to use this font family.
+  By default, Overpass is included as part of the PatternFly distributed CSS file. You do not need to do anything with your configuration to use this font family.
 
   * **Used as a CDN**
 
-  If you wish to use the CDN for Font Awesome 5 rather than the default approach, you need to update the ```utilities/variables.scss``` file (from source ```node_modules/@patternfly/patternfly-next/```) and build PatternFly 4 as part of your build process.
+  If you wish to use the CDN for Font Awesome 5 rather than the default approach, you need to update the ```utilities/variables.scss``` file (from source ```node_modules/@patternfly/patternfly-next/```) and build PatternFly as part of your build process.
 
   To use the CDN vs the standard build, update the ```sass-utilities/scss-variables.scss``` file as follows:
 

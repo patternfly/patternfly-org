@@ -9,6 +9,7 @@ const ignore = [
   `**/utils`,
   `**/test-helpers`,
   /.*react-styles.*/,
+  /.*react-styled-system.*/,
   /.*react-docs.*/,
   /.*react-integration.*/,
   `**/\..*`, // dotfiles
@@ -40,23 +41,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `react-pages`,
-        path: `${__dirname}/_repos/patternfly-react/packages/patternfly-4/react-core`,
-        ignore: ignore.concat(`**/*.json`, `**/index.*`)
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `react-pages`,
-        path: `${__dirname}/_repos/patternfly-react/packages/patternfly-4/react-charts`,
-        ignore: ignore.concat(`**/*.json`, `**/index.*`)
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `react-pages`,
-        path: `${__dirname}/_repos/patternfly-react/packages/patternfly-4/react-table`,
+        path: `${__dirname}/_repos/patternfly-react`,
         ignore: ignore.concat(`**/*.json`, `**/index.*`)
       }
     },
@@ -66,6 +51,13 @@ module.exports = {
         name: `core-pages`,
         path: `${__dirname}/_repos/patternfly-next/src`,
         ignore: [`**/*.scss`, `**/*.md`]
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `core-pages`,
+        path: `${__dirname}/_repos/patternfly-next/RELEASE-NOTES.md`,
       }
     },
     {
@@ -147,6 +139,18 @@ module.exports = {
       options: {
         trackingId: 'UA-47523816-6',
         respectDNT: true
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        test: /src\/.*\.js$|src\/.*\.jsx$/,
+        exclude: /(node_modules|.cache|public|_repos|.tmp|plugins)/,
+        stages: ['develop'],
+        options: {
+          emitWarning: true,
+          failOnError: false
+        }
       }
     }
   ]

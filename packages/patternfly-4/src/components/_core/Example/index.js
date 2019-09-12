@@ -5,7 +5,7 @@ import { css } from '@patternfly/react-styles';
 import Preview from '../Preview';
 import ComponentItems from './ComponentItems';
 import AutoLinkHeader from '@content/AutoLinkHeader';
-import EditorToolbar from '../../example/editorToolbar';
+import EditorToolbar from '../../editorToolbar';
 import { Editor } from 'react-live';
 import { Location } from '@reach/router';
 
@@ -85,7 +85,7 @@ export default class Example extends React.Component {
           const fullPath = location.href && `${location.href.substr(0, location.href.length - (endsWithSlash ? 1 : 0))}-full/?component=${heading}`;
           return (
             <div className="ws-live-demo">
-              <AutoLinkHeader size="lg" is="h4" className="ws-example-heading">{heading}</AutoLinkHeader>
+              <AutoLinkHeader size="lg" is="h2" className="ws-example-heading">{heading}</AutoLinkHeader>
               {Boolean(description) && <p className="pf-c-content" dangerouslySetInnerHTML={{ __html: description }} />}
               <Preview className={className} heading={heading} viewport={this.state.viewport} lights={this.state.lights} fullPageOnly={fullPageOnly} minHeight={minHeight}>
                 {children}

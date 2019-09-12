@@ -1,8 +1,9 @@
 import React from 'react';
 import { Title } from '@patternfly/react-core';
 import { GoLink } from 'react-icons/go';
+import { css } from '@patternfly/react-styles';
 
-const slugger = (children, id) => {
+const slugger = children => {
   const value = Array.isArray(children) ? children.join('') : children;
   const whitespace = /\s/g;
   const specials = /[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g;
@@ -13,15 +14,16 @@ const slugger = (children, id) => {
     .replace(whitespace, '-');
 };
 
-const AutoLinkHeader = ({ is: Component, children, id, size, anchorOnly, ...props }) => {
-  const slug = slugger(children, id);
+const AutoLinkHeader = ({ is: Component, children, text, id, suffix = '', size, anchorOnly, floatAnchor, ...props }) => {
+  const slug = `${slugger(text || children)}${suffix}`;
+
   if (anchorOnly) {
     return <a href={`#${slug}`} {...props}>{children}</a>
   }
   if (!size) {
     return (
       <Component id={id || slug} {...props}>
-          <a href={`#${slug}`} className="anchor">
+          <a href={`#${slug}`} className={css('anchor', !floatAnchor && 'no-float')}>
           <GoLink size="16" style={{ verticalAlign: 'middle' }} />
         </a>
         {children}
@@ -30,7 +32,7 @@ const AutoLinkHeader = ({ is: Component, children, id, size, anchorOnly, ...prop
   }
   return (
     <Title size={size} id={id || slug} headingLevel={Component} {...props}>
-      <a href={`#${slug}`} className="anchor">
+      <a href={`#${slug}`} className={css('anchor', !floatAnchor && 'no-float')}>
         <GoLink size="16" style={{ verticalAlign: 'middle' }} />
       </a>
       {children}
@@ -38,6 +40,6 @@ const AutoLinkHeader = ({ is: Component, children, id, size, anchorOnly, ...prop
   )
 };
 
-AutoLinkHeader.defaultProps = { is: 'h2' };
+AutoLinkHeader.defaultProps = { is: 'h2', floatAnchor: true };
 
 export default AutoLinkHeader;

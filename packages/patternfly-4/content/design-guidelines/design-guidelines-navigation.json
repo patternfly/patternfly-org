@@ -42,12 +42,20 @@
         "path": "/design-guidelines/usage-and-behavior/buttons-and-links"
       },
       {
+        "text": "Card view",
+        "path": "/design-guidelines/usage-and-behavior/card-view"
+      },
+      {
         "text": "Charts",
         "path": "/design-guidelines/usage-and-behavior/charts"
       },
       {
         "text": "Data input",
         "path": "/design-guidelines/usage-and-behavior/data-input"
+      },
+      {
+        "text": "Embedded assistance",
+        "path": "/design-guidelines/usage-and-behavior/embedded-assistance"
       },
       {
         "text": "Empty state",

@@ -1,0 +1,97 @@
+{
+  "Releases": [
+    {
+      "name": "2019.07",
+      "date": "2019-09-10",
+      "latest": true,
+      "versions": {
+        "@patternfly/patternfly": "2.31.6",
+        "@patternfly/react-charts": "4.7.9",
+        "@patternfly/react-core": "3.104.0",
+        "@patternfly/react-styles": "3.5.22",
+        "@patternfly/react-table": "2.20.15",
+        "@patternfly/react-tokens": "2.6.26",
+        "@patternfly/react-topology": "2.8.34",
+        "@patternfly/react-icons": "3.14.2",
+        "@patternfly/react-virtualized-extension": "1.2.23",
+        "@patternfly/react-inline-edit-extension": "2.11.35"
+      }
+    },
+    {
+      "name": "2019.06",
+      "date": "2019-08-16",
+      "versions": {
+        "@patternfly/patternfly": "2.26.1",
+        "@patternfly/react-charts": "4.7.9",
+        "@patternfly/react-core": "3.87.3",
+        "@patternfly/react-styles": "3.5.13",
+        "@patternfly/react-table": "2.17.5",
+        "@patternfly/react-tokens": "2.6.16",
+        "@patternfly/react-topology": "2.7.31",
+        "@patternfly/react-icons": "3.10.14",
+        "@patternfly/react-virtualized-extension": "1.1.117",
+        "@patternfly/react-inline-edit-extension": "2.10.5"
+      }
+    },
+    {
+      "name": "2019.05",
+      "date": "2019-07-25",
+      "versions": {
+        "@patternfly/patternfly": "2.23.0",
+        "@patternfly/react-charts": "4.7.1",
+        "@patternfly/react-core": "3.75.2",
+        "@patternfly/react-icons": "3.10.14",
+        "@patternfly/react-inline-edit-extension": "2.9.49",
+        "@patternfly/react-styles": "3.5.7",
+        "@patternfly/react-table": "2.14.23",
+        "@patternfly/react-tokens": "2.6.13",
+        "@patternfly/react-topology": "2.6.20",
+        "@patternfly/react-virtualized-extension": "1.1.82"
+      }
+    },
+    {
+      "name": "2019.04",
+      "date": "2019-07-02",
+      "versions": {
+        "@patternfly/patternfly": "2.17.0",
+        "@patternfly/react-charts": "4.4.7",
+        "@patternfly/react-core": "3.58.1",
+        "@patternfly/react-icons": "3.10.6",
+        "@patternfly/react-inline-edit-extension": "2.9.12",
+        "@patternfly/react-styles": "3.4.6",
+        "@patternfly/react-table": "2.13.43",
+        "@patternfly/react-tokens": "2.6.5",
+        "@patternfly/react-topology": "2.4.21",
+        "@patternfly/react-virtualized-extension": "1.1.45"
+      }
+    },
+    {
+      "name": "2019.03",
+      "date": "2019-06-11",
+      "versions": {
+        "@patternfly/patternfly": "2.17.0",
+        "@patternfly/react-charts": "4.1.5",
+        "@patternfly/react-core": "3.58.1",
+        "@patternfly/react-icons": "3.9.5",
+        "@patternfly/react-inline-edit-extension": "2.7.7",
+        "@patternfly/react-styles": "3.3.3",
+        "@patternfly/react-table": "2.11.1",
+        "@patternfly/react-tokens": "2.5.5"
+      }
+    },
+    {
+      "name": "2019.02",
+      "date": "2019-06-05",
+      "versions": {
+        "@patternfly/patternfly": "2.17.0",
+        "@patternfly/react-charts": "3.6.5",
+        "@patternfly/react-core": "3.34.2",
+        "@patternfly/react-icons": "3.9.3",
+        "@patternfly/react-inline-edit-extension": "2.5.2",
+        "@patternfly/react-styles": "3.2.3",
+        "@patternfly/react-table": "2.9.2",
+        "@patternfly/react-tokens": "2.5.3"
+      }
+    }
+  ]
+}

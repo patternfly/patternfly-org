@@ -6,15 +6,25 @@
 const path = require('path');
 const glob = require('glob');
 const navHelpers = require('./src/helpers/navHelpers');
-// const styleFinder = require('./scripts/find-react-styles');
+const coreExperimental = require('./_repos/patternfly-next/experimental-features.js');
 
 // Map to handlebars partial files for Core
 let partialsToLocationsMap = null;
 
+const coreComponentPathRegEx = /\/documentation\/core\/.*/;
+const coreExperimentalRE = new RegExp(coreExperimental.map(c => c.name.toLowerCase()).join('|'));
+
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
-  const coreComponentPathRegEx = /\/documentation\/core\/.*/;
   const isSitePage = node.internal.type === 'SitePage';
+  const isMdx = node.internal.type === 'Mdx';
+  if (isMdx) {
+    createNodeField({
+      node,
+      name: 'optIn',
+      value: (node.frontmatter && node.frontmatter.optIn) || ''
+    });
+  }
   if (isSitePage && coreComponentPathRegEx.test(node.path)) {
     const corePathLabel = node.component
       .split('/')
@@ -22,7 +32,7 @@ exports.onCreateNode = ({ node, actions }) => {
       .replace(/([A-Z])/g, ' $1')
       .trim();
 
-    label = corePathLabel.charAt(0) + corePathLabel.slice(1).toLowerCase();
+    const label = corePathLabel.charAt(0) + corePathLabel.slice(1).toLowerCase();
 
     createNodeField({
       node,
@@ -56,8 +66,9 @@ exports.createPages = async ({ graphql, actions }) => {
       redirectInBrowser: true,
       toPath: t
     })
-    console.log('\nRedirecting: ' + f + ' to: ' + t);
+    // console.log('\nRedirecting: ' + f + ' to: ' + t);
   })
+
   await graphql(`
     {
       pf4Docs: allMdx(filter: {fileAbsolutePath: {glob: "**/packages/patternfly-4/react-*/**"} }) {
@@ -78,11 +89,6 @@ exports.createPages = async ({ graphql, actions }) => {
           absolutePath
           base
           name
-          childMdx {
-            code {
-              body
-            }
-          }
         }
       }
       contentPages: allMdx(filter: {fileAbsolutePath: {glob: "**/patternfly-4/content/**"}, frontmatter: {path: {ne: null}}}) {
@@ -96,7 +102,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `).then(result => {
     if (result.errors) {
-      return reject(result.errors);
+      return Promise.reject(result.errors);
     }
     const { pf4Docs, coreDocs, contentPages} = result.data;
 
@@ -139,22 +145,25 @@ exports.createPages = async ({ graphql, actions }) => {
             fileAbsolutePath: node.fileAbsolutePath, // Helps us get the markdown
             propComponents: node.frontmatter.propComponents || [], // Helps us get the docgenned props
             reactUrl: componentName, // Helps us get the description
+            pathRegex: node.frontmatter.section === 'experimental' ? '/.*/experimental/.*/' : '/^((?!experimental).)*$/', // Since experimental components have same class names
           }
         });
       }
     });
 
     coreDocs.nodes.forEach(node => {
-      const shortenedPath = node.relativePath.split('/').slice(1, 3).join('/').toLowerCase();
+      let shortenedPath = node.relativePath.split('/').slice(1, 3).join('/').toLowerCase();
+      const componentName = shortenedPath.split('/').pop();
+
+      if (coreExperimentalRE.test(componentName)) {
+        shortenedPath = `experimental/${componentName}`;
+      }
       const examplePath = `/documentation/core/${shortenedPath}`;
 
       // console.log(`creating core doc page (${shortenedPath}):`, examplePath);
       actions.createPage({
         path: examplePath,
         component: path.resolve(__dirname, node.absolutePath),
-        context: {
-          description: node.childMdx,
-        }
       });
 
       // also create a full demo page for each component
@@ -167,7 +176,7 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 }
 
-exports.onCreateWebpackConfig = ({ stage, loaders, actions, plugins, getConfig }) => {
+exports.onCreateWebpackConfig = ({ stage, actions, plugins, getConfig }) => {
   if (partialsToLocationsMap === null) {
     partialsToLocationsMap = {};
     glob(path.resolve(__dirname, './_repos/patternfly-next/src/patternfly/**/*.hbs'), { ignore: '**/examples/**' }, (err, files) => {
