@@ -14,10 +14,10 @@
   $familyName: 'RedHatText',
   $style: 'normal',
   $relative: true,
-  $fontLocation: '../static/assets/webfonts'
+  $fontLocation: '../static/assets/fonts'
   ) {
 
-  $filePath: '../static/assets/webfonts/' + $familyName + '/' + $familyName + '-' + $weightName;
+  $filePath: '../static/assets/fonts/' + $familyName + '/' + $familyName + '-' + $weightName;
 
   @if $relative == false {
     $filePath: $fontLocation +  '/' + $familyName +  '/' + $familyName + '-' + $weightName;
