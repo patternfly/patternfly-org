@@ -70,5 +70,6 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-# Generated files
+# Generated / copied over files
 _repos/example-styles.css
+static/assets

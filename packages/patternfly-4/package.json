@@ -5,15 +5,16 @@
   "author": "Red Hat",
   "private": true,
   "scripts": {
-    "build": "yarn build:css && node --max_old_space_size=4096 ./node_modules/.bin/gatsby build --prefix-paths",
+    "build": "yarn copy-assets && yarn build:css && node --max_old_space_size=4096 ./node_modules/.bin/gatsby build --prefix-paths",
     "build:css": "node-sass --output-style compressed --importer ../../node_modules/node-sass-glob-importer/dist/cli.js -o _repos src/styles/example/example-styles.scss",
     "build:root": "node --max_old_space_size=4096 ./node_modules/.bin/gatsby build",
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
+    "develop": "yarn copy-assets && yarn build:css && gatsby develop",
+    "start": "yarn develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "lint": "eslint src",
     "clean": "gatsby clean",
-    "preview-screenshots": "node ./scripts/previewScreenshots.js"
+    "preview-screenshots": "node ./scripts/previewScreenshots.js",
+    "copy-assets": "node ./scripts/copy-assets"
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
