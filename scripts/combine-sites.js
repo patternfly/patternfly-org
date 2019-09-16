@@ -27,6 +27,21 @@ console.log(`Created ${pf3_root} dir`);
 fs.copySync(pf3_build, pf3_root);
 console.log(`Copied pf3 build into ${build_root}`);
 
+// main index page
+const indexPath = path.join(build_root, 'index.html');
+const indexPage = `
+<!DOCTYPE HTML>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="0; url=/v4/">
+<script>
+  window.location.href = "/v4/"
+</script>
+<title>Page Redirection</title>
+If you are not redirected automatically, follow the <a href='/v4/'>link</a>
+`;
+fs.writeFileSync(indexPath, indexPage);
+console.log(`created main index page at ${indexPath}`);
+
 // Use v4's 404
 const path404 = path.join(pf3_root, '404.html');
 fs.removeSync(path404);
@@ -77,18 +92,13 @@ const options = {
     overwrite: true,
     filter: [
         '**/*.html',
+        '!index.html',
         '!components/**/*'
     ],
     transform: function(src, dest, stats) {
         if (src.endsWith('404.html') || path.extname(src) !== '.html') { return null; }
-        let redirectPath;
-        if (src.endsWith('index.html')) {
-          // remove 'out' at beginning and 'index.html' at end
-          redirectPath = src.slice(3, src.length - 10);
-        } else {
-          // keep the html file name
-          redirectPath = src.slice(3);
-        }
+        // keep the html file name
+        const redirectPath = src.slice(3);
         return through(function(chunk, enc, done)  {
             // var output = chunk.toString().toUpperCase();
             const output = `<!DOCTYPE HTML>

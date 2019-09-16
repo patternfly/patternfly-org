@@ -59,6 +59,7 @@ const MdxPF4Template = ({ data }) => {
   const { optIn } = data.mdx.fields;
   let section = data.mdx.frontmatter.section;
   if (!section) section = 'component';
+  const hasProps = data.props && data.props.nodes && data.props.nodes.length > 0;
   return (
     <Layout sideNav={<SideNav />} className="ws-documentation">
       <SEO title="React" />
@@ -97,7 +98,7 @@ const MdxPF4Template = ({ data }) => {
           <AutoLinkHeader anchorOnly className="pf-site-toc">
             Examples
           </AutoLinkHeader>
-          {data.props && (
+          {hasProps && (
             <AutoLinkHeader anchorOnly className="pf-site-toc">
               Props
             </AutoLinkHeader>
@@ -117,7 +118,7 @@ const MdxPF4Template = ({ data }) => {
         </Section>
       </PageSection>
 
-      {data.props && (
+      {hasProps && (
         <PageSection>
           <Section title="Props" headingLevel="h2">
             {data.props.nodes.map(component => (
