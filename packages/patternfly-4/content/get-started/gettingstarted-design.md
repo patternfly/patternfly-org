@@ -21,7 +21,7 @@ The design kit works with Sketch libraries.
 1. Access the [PatternFly template file](https://sketch.cloud/s/R9k28) on Sketch cloud.
 2. Click **Download Document** to open the file. Then, click **File** →  **Save as template**.
 
-![sketch-cloud](./img/sketch-cloud.png)
+![sketch-cloud](./Img/sketch-cloud.png)
 
 ### Add the symbol library
 3. Access the [PatternFly design library](https://sketch.cloud/s/gb1ka) on Sketch cloud.
