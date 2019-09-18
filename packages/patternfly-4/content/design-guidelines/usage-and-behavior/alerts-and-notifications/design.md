@@ -12,7 +12,7 @@ Alerts are used to communicate status information to the user without blocking o
 
 1. **Status area:** Use an icon and color to indicate status or severity of the alert.
 2. **Alert title:** Include a short descriptive message. Long message text will wrap. Text color is coded to match alert type.
-3. **Close (optional):** Dismiss the alert. Note that toast alerts must always have a Close action.
+3. **Close (optional):** Dismiss the alert. Required for toast alerts and optional for inline alerts.
 4. **Action (optional):** An action can be placed inside of an alert. Only a single action is supported. Note that the alert can include a close button or a single action, but not both.
 5. **Description (optional):** If a longer message is required, it can be included within the Description field.
 
@@ -49,7 +49,7 @@ Inline alerts are synchronous and appear as the result of a user action or upon 
 
 ![inline notification placement](./img/inline-notification.png)
 
-For notifications with a severity of info or warning a close button is always recommended. If Close is not included, the alert will dismiss only when the condition raising it has been cleared.
+An inline alert should never block the user from interacting with other content on a page. For notifications with a severity of info or warning it should be possible to dismiss an inline alert by clicking the Close button on the alert. If Close is not included, the alert will dismiss only when the condition raising it has been cleared.
 
 In addition to static message content and links, interactive elements may optionally be included in the body of an inline alert when the user is being asked for some input or feedback.
 
