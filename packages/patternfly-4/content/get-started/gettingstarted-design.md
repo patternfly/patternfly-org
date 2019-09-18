@@ -21,7 +21,7 @@ The design kit works with Sketch libraries.
 1. Access the [PatternFly template file](https://sketch.cloud/s/R9k28) on Sketch cloud.
 2. Click **Download Document** to open the file. Then, click **File** →  **Save as template**.
 
-![sketch-cloud](./img/sketch-cloud.png)
+![sketch-cloud](./Img/sketch-cloud.png)
 
 ### Add the symbol library
 3. Access the [PatternFly design library](https://sketch.cloud/s/gb1ka) on Sketch cloud.
@@ -52,7 +52,7 @@ From the top toolbar in Sketch, select Insert → Symbols → Patternfly 4 to ad
 
 PatternFly symbols are designed to be as flexible and adaptable as possible. As such, designers should avoid detaching symbols from the library. However, there are rare instances where this may be necessary. Just know that once a symbol is detached, that symbol will no longer automatically update with new releases.
 
-![Symbol-library](./img/symbol-library.png)
+![Symbol-library](./Img/symbol-library.png)
 
 ## Using the design kit
 It’s important to understand some specific aspects about the design kit and the assets contained inside to make the most of the design system.
@@ -75,7 +75,7 @@ For some components, you will have the option to customize them to your need by 
 
 Layer styles are color selections for symbols in Sketch.
 
-![layer-styles](./img/layer-styles.png)
+![layer-styles](./Img/layer-styles.png)
 
 Colors in PatternFly are carefully considered, and custom layer styles are discouraged. There are specific color options to choose from for backgrounds, borders, icons and states, as well as an expansive color library for other elements that do not necessarily fit into a certain category.
 
