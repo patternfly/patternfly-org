@@ -50,8 +50,6 @@ In a standard wizard the user moves through the wizard sequentially, a step at a
 * Wizard steps are skippable if the user configures them to be
 * The user can jump to steps directly if the user clicks on a step in the nav (if the step is not disabled)
 
-### In-page Wizard
-
 ### Wizard with sub-steps
 Sub-steps can be added to the sidebar. Use sub-steps when there is a hierarchical relationship between a group of steps, if a primary step contains too much content to be displayed on one page, or when there is a set of optional settings that make sense to group together where the user need not visit each page.
 
@@ -105,7 +103,7 @@ A wizard may be embedded in a page as shown below.
 ![wizard in a page](./img/wizard-in-page.png)
 
 Note that when a wizard is embedded into a page, the wizard title and description are placed within the page header. The same standards that were defined for usage of the title and description for modal wizards should be applied here.
- 
+
 When a wizard is placed in the context of a page, it allows some freedom that is not available using the standard modal approach.
 
 * Modals may be opened from the wizard to examine required information or perform subtask that are related to, but not part of, the wizard workflow.
@@ -139,6 +137,7 @@ You should keep the following in mind while designing your wizard screens:
 ## Related components and demos
 **Core HTML/CSS**
 * [Wizard](/documentation/core/components/wizard)
+* [Wizard (demo)](/documentation/core/demos/wizard)
 
 **React**
 * [Wizard](/documentation/react/components/wizard)
