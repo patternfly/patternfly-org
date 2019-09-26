@@ -6,13 +6,13 @@ Alerts are used when the system wants to notify the user about some status or ot
 
 ## Elements
 ### Alert
-Alerts are used to communicate status information to the user without blocking other actions through the user interface. There are two styles that can be applied to an alert depending on whether it is intended as an [inline](#inline-alerts) or [toast](#toast-alerts) alert. Regardless of the styling, the basic elements of all alerts are consistent.
+Alerts are used to communicate status information to the user without blocking other actions through the user interface. There are two styles that can be applied to an alert depending on whether it is intended as an [inline](#inline-alerts) or [toast](#toast-alerts) alert. Regardless of the styling, the basic elements of all alerts are consistent. Since toast alerts should always be dismissable, only a subset of variations should be used.
 
 ![alert types](./img/alert-types-2.png)
 
 1. **Status area:** Use an icon and color to indicate status or severity of the alert.
 2. **Alert title:** Include a short descriptive message. Long message text will wrap. Text color is coded to match alert type.
-3. **Close (optional):** Dismiss the alert.
+3. **Close (optional):** Dismiss the alert. Required for toast alerts and optional for inline alerts.
 4. **Action (optional):** An action can be placed inside of an alert. Only a single action is supported. Note that the alert can include a close button or a single action, but not both.
 5. **Description (optional):** If a longer message is required, it can be included within the Description field.
 
@@ -21,13 +21,13 @@ The status area and alert title are coded to communicate the severity of an aler
 
 ![alert colors](./img/alert-status.png)
 
-|Type     |Color    |Icon    |Usage      |
+|Type     |Color (background/ icon & title)    |Icon    |Usage      |
 |---------|---------|--------|--------------|
-|Info     |Blue (#39A5DC)    |fa-info-circle|Use for general informational messages (default)|
-|Warning  |Orange (#F0AB00)  |fa-exclamation-triangle |Use to indicate that a non-critical error has occurred|
-|Critical |Red (#CC0000)     |fa-exclamation-circle | Use to indicate that a critical or blocking error has occurred
-|Success  |Green (#92D400)   |fa-check-circle | Use to indicate that a task or process has completed successfully
-|Default  |Cyan (#73C5C5)   |fa-bell | Use for generic messages with no associated severity
+|Info     |Blue (#73bcf7/ #004368)    |fa-info-circle|Use for general informational messages (default)|
+|Warning  |Orange (#F0AB00/ #795600)  |fa-exclamation-triangle |Use to indicate that a non-critical error has occurred|
+|Critical |Red (#c9190b/ #a30000)     |fa-exclamation-circle | Use to indicate that a critical or blocking error has occurred
+|Success  |Green (#92D400/ #486b00)   |fa-check-circle | Use to indicate that a task or process has completed successfully
+|Default  |Cyan (#73C5C5/ #004368)   |fa-bell | Use for generic messages with no associated severity
 
 ## Usage
 There are two primary use cases when alerts are used:
@@ -49,7 +49,7 @@ Inline alerts are synchronous and appear as the result of a user action or upon 
 
 ![inline notification placement](./img/inline-notification.png)
 
-For notifications with a severity of info or warning a close button is always recommended. If Close is not included, the alert will dismiss only when the condition raising it has been cleared.
+An inline alert should never block the user from interacting with other content on a page. For notifications with a severity of info or warning it should be possible to dismiss an inline alert by clicking the Close button on the alert. If Close is not included, the alert will dismiss only when the condition raising it has been cleared.
 
 In addition to static message content and links, interactive elements may optionally be included in the body of an inline alert when the user is being asked for some input or feedback.
 
