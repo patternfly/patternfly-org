@@ -107,7 +107,7 @@ Note that when a wizard is embedded into a page, the wizard title and descriptio
 When a wizard is placed in the context of a page, it allows some freedom that is not available using the standard modal approach.
 
 * Modals may be opened from the wizard to examine required information or perform subtask that are related to, but not part of, the wizard workflow.
-* User use can navigation away from the wizard to look up information or perform some prerequisite task.
+* User can navigate away from the wizard to look up information or perform some prerequisite task.
 
 Be aware that anytime the user navigates aways from the wizard, there is a risk that any information entered up until that point will be lost. At a minimum, we recommend opening a modal alert when the user tries to do this warning of potential data loss and confirming that they want to leave the wizard. Optionally you should consider including a "Save as draft" feature that will allow work in progress to be saved and recalled upon returning to the wizard.
 
