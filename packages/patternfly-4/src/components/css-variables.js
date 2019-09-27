@@ -77,7 +77,7 @@ class Tokens extends React.Component {
       searchChanged: false,
       columns: columns.concat([
         { title: 'Variables', transforms: [sortable] },
-        { title: 'React Tokens', transforms: [sortable] },
+        { title: 'React tokens', transforms: [sortable] },
         { title: 'Value', transforms: [sortable] }
       ]),
       dataRows: dataRowsSorted,
@@ -165,8 +165,8 @@ class Tokens extends React.Component {
             type="text"
             id="primaryIconsSearch"
             name="primaryIconsSearch"
-            aria-label="Search CSS Variables"
-            placeholder="Search CSS Variables"
+            aria-label="Search CSS variables"
+            placeholder="Search CSS variables"
             value={searchValue}
             onChange={this.handleSearchChange}
           />
@@ -174,7 +174,7 @@ class Tokens extends React.Component {
         <Table
           className="table-css-vars pf-m-grid-2xl"
           variant="compact"
-          aria-label="CSS Variables"
+          aria-label="CSS variables"
           sortBy={sortBy}
           onSort={this.onSort}
           cells={columns}

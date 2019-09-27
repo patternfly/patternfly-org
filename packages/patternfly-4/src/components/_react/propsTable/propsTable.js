@@ -43,7 +43,7 @@ const renderType = prop => {
 export const PropsTable = ({ name, description: preface, props }) => {
   return (
     <Section
-      title={`${name} Props`}
+      title={`${name} props`}
       headingLevel="h3"
       preface={preface}
       description={`The ${name} component accepts the following props.`}
