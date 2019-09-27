@@ -14,8 +14,6 @@ import './styles.scss';
 class SingleSelectInput extends React.Component {
   constructor(props) {
     super(props);
-    console.log(`props.reactPath: ${props.reactPath}`);
-    console.log(`props.corePath: ${props.corePath}`);
     this.options = [
       { value: 'React', isPlaceholder: props.reactActive, onClick: () => setTimeout(() => { navigate(props.reactPath) }, 1) },
       { value: 'HTML', isPlaceholder: props.coreActive, onClick: () => setTimeout(() => { navigate(props.corePath) }, 1) }
