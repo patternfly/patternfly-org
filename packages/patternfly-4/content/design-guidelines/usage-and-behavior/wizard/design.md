@@ -19,7 +19,7 @@ Wizards can be modal or placed within the content area of a page.
 ### Modal wizards
 ![modal wizard](./img/wizard-progressive-step3-new.png)
 
-The modal wizard lives in a modal dialog. The width and height of the modal is variable and should be sized to comfortably fit the contents of the wizard at typical desktop screen resolutions. In most cases, the modal wizard is recommended as it will keep users focused on the task at hand. Users must either complete all of the steps of the wizard or cancel before navigating elsewhere within an application.
+The modal wizard lives in a modal dialog. If necessary, the default width and height of the modal can be overridden to increase that available content area. In most cases, the modal wizard is recommended as it will keep users focused on the task at hand. Users must either complete all of the steps of the wizard or cancel before navigating elsewhere within an application.
 
 ### In-page wizards
 ![in page wizard](./img/wizard-in-page.png)
