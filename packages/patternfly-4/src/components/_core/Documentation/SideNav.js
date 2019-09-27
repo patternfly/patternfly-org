@@ -185,7 +185,7 @@ class CoreSideNav extends React.Component {
                   <Link to="/documentation/core/css-variables/">Global CSS variables</Link>
                 </NavItem>
                 <NavItem isActive={currentPath.indexOf('/documentation/core/notes') > -1}>
-                  <Link to="/documentation/core/notes/">Release Notes</Link>
+                  <Link to="/documentation/core/notes/">Release notes</Link>
                 </NavItem>
               </NavList>
             </Nav>

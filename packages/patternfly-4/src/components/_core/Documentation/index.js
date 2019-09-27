@@ -73,7 +73,7 @@ export default class Documentation extends React.Component {
                   <Section>
                     <AutoLinkHeader anchorOnly className="pf-site-toc">Examples</AutoLinkHeader>
                     <AutoLinkHeader anchorOnly className="pf-site-toc">Documentation</AutoLinkHeader>
-                    {variablesRoot && <AutoLinkHeader anchorOnly className="pf-site-toc">CSS Variables</AutoLinkHeader>}
+                    {variablesRoot && <AutoLinkHeader anchorOnly className="pf-site-toc">CSS variables</AutoLinkHeader>}
                   </Section>
                   <Section title="Examples" headingLevel="h3">
                     {children}
@@ -85,7 +85,7 @@ export default class Documentation extends React.Component {
                   </Section>
                 </PageSection>
                 {variablesRoot && <PageSection variant={PageSectionVariants.light} className="pf-site-background-medium">
-                  <Section title="CSS Variables" headingLevel="h3">
+                  <Section title="CSS variables" headingLevel="h3">
                     <Tokens variables={variablesRoot} />
                   </Section>
                 </PageSection>}

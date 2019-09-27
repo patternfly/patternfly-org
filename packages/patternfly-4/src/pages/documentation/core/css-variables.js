@@ -50,7 +50,7 @@ const CoreTokens = ({ location }) => (
           </div>
      </PageSection>
     <PageSection variant={PageSectionVariants.light}>
-      <Section title="Global CSS Variables" size="3xl" headingLevel="h1">
+      <Section title="Global CSS variables" size="3xl" headingLevel="h1">
         <Tokens
           sideNav={<SideNav />}
           variables="pf-global"

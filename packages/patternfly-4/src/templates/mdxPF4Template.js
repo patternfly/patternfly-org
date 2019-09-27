@@ -105,7 +105,7 @@ const MdxPF4Template = ({ data }) => {
           )}
           {cssPrefix && (
             <AutoLinkHeader anchorOnly className="pf-site-toc">
-              CSS Variables
+              CSS variables
             </AutoLinkHeader>
           )}
         </Section>
@@ -130,7 +130,7 @@ const MdxPF4Template = ({ data }) => {
 
       {cssPrefix && (
         <PageSection variant={PageSectionVariants.light} className="pf-site-background-medium">
-          <Section title="CSS Variables" headingLevel="h3">
+          <Section title="CSS variables" headingLevel="h3">
             <Tokens variables={cssPrefix} />
           </Section>
         </PageSection>
