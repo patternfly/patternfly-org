@@ -14,6 +14,8 @@ import './styles.scss';
 class SingleSelectInput extends React.Component {
   constructor(props) {
     super(props);
+    console.log(`props.reactPath: ${props.reactPath}`);
+    console.log(`props.corePath: ${props.corePath}`);
     this.options = [
       { value: 'React', isPlaceholder: props.reactActive, onClick: () => setTimeout(() => { navigate(props.reactPath) }, 1) },
       { value: 'HTML', isPlaceholder: props.coreActive, onClick: () => setTimeout(() => { navigate(props.corePath) }, 1) }
@@ -94,8 +96,8 @@ const Switcher = ({ data }) => (
       const activeCore = currentPath.indexOf('/documentation/core') > -1;
       const reactPath = activeReact ? currentPath : currentPath.replace('core', 'react');
       const corePath = activeCore ? currentPath : currentPath.replace('react', 'core');
-      const validReactPath = verifyPath(reactPath, data.reactPages) || '/documentation/react/components/aboutmodal';
-      const validCorePath = verifyPath(corePath, data.corePages) || '/documentation/core/components/aboutmodalbox';
+      const validReactPath = verifyPath(reactPath, data.reactPages) || '/documentation/react';
+      const validCorePath = verifyPath(corePath, data.corePages) || '/documentation/core';
       return (
         <Bullseye className="pf-site-switcher-group pf-u-ml-lg">
           <Title className="pf-site-switcher-group__title pf-u-mb-sm" size="md">FRAMEWORK</Title>
@@ -111,7 +113,7 @@ export default props => (
     query={graphql`
       query IndexForSwitcher {
         corePages: allSitePage(
-          filter: { path: { glob: "/documentation/core/*/**" } },
+          filter: { path: { regex: "/\/documentation\/core\/.+/" } },
           sort: { fields: path }
         ) {
           edges {
@@ -121,7 +123,7 @@ export default props => (
           }
         }
         reactPages: allSitePage(
-          filter: { path: { glob: "/documentation/react/*/**" } },
+          filter: { path: { regex: "/\/documentation\/react\/.+/" } },
           sort: { fields: path }
         ) {
           edges {
