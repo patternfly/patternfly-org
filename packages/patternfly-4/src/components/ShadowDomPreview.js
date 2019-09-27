@@ -5,7 +5,7 @@ import exampleStyles from '!raw!../../_repos/example-styles.css';
 import { Location } from '@reach/router';
 import queryString from 'query-string';
 import Helmet from 'react-helmet';
-import classNames from 'classNames';
+import { css } from '@patternfly/react-styles';
 
 const styles = `
   .ws-example { 
@@ -70,13 +70,13 @@ const ShadowDomPreview = ({ children, className, isReact, isFull, html, ...props
               {html ? (
                 <div
                   dangerouslySetInnerHTML={{ __html: html }}
-                  className={classNames('pf-m-redhat-font', className)}
+                  className={css('pf-m-redhat-font', className)}
                   style={isFull ? { height: '100vh' } : undefined}
                   {...props}
                 />
               ) : (
                 <div
-                  className={classNames('pf-m-redhat-font', className)}
+                  className={css('pf-m-redhat-font', className)}
                   style={isFull ? { height: '100vh' } : undefined}
                   {...props}
                 >
