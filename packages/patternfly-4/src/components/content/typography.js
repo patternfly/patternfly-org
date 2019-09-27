@@ -41,10 +41,153 @@ export const styles = {
     height: ${size}px;
     background-color: ${backgroundColor};
     border: ${showBorder ? '1px solid #3e9dd0' : 'none'};
-  `)
+  `),
+  spacingItemStyle: css`
+    border-color: #3E9DD0;
+    border-width: 1px;
+    border-style: solid;
+  `,
+  spacingTitleStyle: css`
+    color: #004368;
+    font-size: 14px;
+  `
 };
 
-export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontSize, variableName, lineHeight}) => (
+export const PfStyledText = ({ children, variableName, fontWeight, lineHeight, fontFamily, ...rest }) => (
+  <StyledText fontFamily={fontFamily} fontWeight={fontWeight} fontSize={`var(${variableName})`} lineHeight={lineHeight}>
+    {children || <>Design is where science and art break even.</>}
+  </StyledText>
+);
+
+export const HeroTitle = ({ children, asGrid }) => {
+  const styleProps = {
+    fontWeight: "400",
+    variableName: "--pf-global--FontSize--2xl",
+    fontSize: "24px",
+    lineHeight: "1.3",
+    fontFamily: "RedHatDisplay"
+  };
+  return asGrid ? (
+    <TypographyGrid 
+      title="Hero title*" 
+      note="*Not to be used in content block (Landing pages, login, etc.)" 
+      {...styleProps}
+    />
+  ) : (
+    <PfStyledText {...styleProps}>{children}</PfStyledText>
+  )
+};
+
+export const SecondLevelTitle = ({ children, asGrid }) => {
+  const styleProps = {
+    fontWeight: "400",
+    fontSize: "20px",
+    variableName: "--pf-global--FontSize--xl",
+    lineHeight: "1.3",
+    fontFamily: "RedHatDisplay"
+  };
+  return asGrid ? (
+    <TypographyGrid 
+      title="Second level title" 
+      {...styleProps}
+    />
+  ) : (
+    <PfStyledText {...styleProps}>{children}</PfStyledText>
+  )
+};
+
+export const ThirdLevelTitle = ({ children, asGrid }) => {
+  const styleProps = {
+    fontWeight: "400",
+    fontSize: "18px",
+    variableName: "--pf-global--FontSize--lg",
+    lineHeight: "1.5",
+    fontFamily: "RedHatDisplay"
+  };
+  return asGrid ? (
+    <TypographyGrid 
+      title="Third level title" 
+      {...styleProps}
+    />
+  ) : (
+    <PfStyledText {...styleProps}>{children}</PfStyledText>
+  )
+};
+
+export const FourthLevelTitle = ({ children, asGrid }) => {
+  const styleProps = {
+    fontWeight: "700",
+    fontSize: "16px",
+    variableName: "--pf-global--FontSize--md",
+    lineHeight: "1.5",
+    fontFamily: "RedHatDisplay"
+  };
+  return asGrid ? (
+    <TypographyGrid 
+      title="Fourth level title" 
+      {...styleProps}
+    />
+  ) : (
+    <PfStyledText {...styleProps}>{children}</PfStyledText>
+  )
+};
+
+export const BodyText = ({ children, asGrid }) => {
+  const styleProps = {
+    fontWeight: "400",
+    fontSize: "16px",
+    variableName: "--pf-global--FontSize--md",
+    lineHeight: "1.5",
+    fontFamily: "RedHatText"
+  };
+  return asGrid ? (
+    <TypographyGrid 
+      title="Body" 
+      {...styleProps}
+    />
+  ) : (
+    <PfStyledText {...styleProps}>{children}</PfStyledText>
+  )
+};
+
+export const SmallText = ({ children, asGrid }) => {
+  const styleProps = {
+    fontWeight: "400",
+    fontSize: "14px",
+    variableName: "--pf-global--FontSize--sm",
+    lineHeight: "1.5",
+    fontFamily: "RedHatText"
+  };
+  return asGrid ? (
+    <TypographyGrid 
+      title="Small text" 
+      {...styleProps}
+    />
+  ) : (
+    <PfStyledText {...styleProps}>{children}</PfStyledText>
+  )
+};
+
+export const TinyText = ({ children, asGrid }) => {
+  const styleProps = {
+    fontWeight: "400",
+    fontSize: "12px",
+    variableName: "--pf-global--FontSize--xs",
+    lineHeight: "1.5",
+    fontFamily: "RedHatText"
+  };
+  return asGrid ? (
+    <TypographyGrid 
+      title="Tiny text*" 
+      note="*Not to be used in content block (Only used with data visualizations when 14px is not small enough.)" 
+      {...styleProps}
+    />
+  ) : (
+    <PfStyledText {...styleProps}>{children}</PfStyledText>
+  )
+};
+
+export const TypographyGrid = ({title, note, symbol, fontWeight, fontSize, variableName, lineHeight, fontFamily}) => (
   <>
     <h3>{title} {symbol && <span css={styles.gridTitleSymbol}>{symbol}</span>}</h3>
     <Grid gutter="sm" css={[styles.gridRowCenter, styles.typographyGrid]}>
@@ -52,27 +195,27 @@ export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontS
         <table css={styles.tableTypography} className="pf-c-table pf-m-compact" aria-label="typography usage guidelines breakout">
           <tbody>
             <tr>
-              <td className="pf-u-pr-sm">Font Family:</td>
-              <td>Overpass {fontWeight === '400' ? '(Regular/400)' : '(Semibold/500)'}</td>
+              <td className="pf-u-pr-sm">Font family:</td>
+              <td>{fontFamily} {fontWeight}</td>
             </tr>
             <tr>
-              <td>Font Size:</td>
-              <td>{fontSize}px</td>
-            </tr>
-            <tr>
-              <td>Line Height:</td>
+              <td>Line height:</td>
               <td>{lineHeight}</td>
             </tr>
             <tr>
-              <td>Global CSS variable:</td>
+              <td>Font size:</td>
+              <td>{fontSize}</td>
+            </tr>
+            <tr>
+              <td>Font size CSS variable:</td>
               <td><span css={styles.variableName}>{variableName}</span></td>
             </tr>
           </tbody>
         </table>
       </GridItem>
       <GridItem span={12} sm={6}>
-        <StyledText fontWeight={fontWeight} fontSize={fontSize} lineHeight={lineHeight} className="pf4-site-typography-grid">
-          {children}
+        <StyledText fontFamily={fontFamily} fontWeight={fontWeight} fontSize={`var(${variableName})`} lineHeight={lineHeight}>
+          Design is where science and art break even.
         </StyledText>
       </GridItem>
       {note && <GridItem span={12}><div css={styles.textColor}>{note}</div></GridItem>}
@@ -80,37 +223,13 @@ export const TypographyGrid = ({children, title, note, symbol, fontWeight, fontS
   </>
 );
 
-export const TypographyGridLegend = ({children}) => (
-  <Grid css={[styles.gridRowCenter, styles.typographyGrid]}>
-    {children}
-  </Grid>
-);
-
-export const TypographyGridLegendItem = ({symbol, children}) => (
-  <>
-    <GridItem span={1}>
-      <span css={styles.textColor}>{symbol}</span>
-    </GridItem>
-    <GridItem span={3}>
-      <StyledText fontWeight="400" fontSize="14" lineHeight="1.3">
-        <span css={styles.textColor}>Special Use Case</span>
-      </StyledText>
-    </GridItem>
-    <GridItem span={8}>
-      <StyledText fontWeight="400" fontSize="14" lineHeight="1.3">
-        <span>{children}</span>
-      </StyledText>
-    </GridItem>
-  </>
-);
-
-export const LineHeightTitle = ({children}) => (
+export const LineHeightTitle = ({ children }) => (
   <div css={styles.lineHeightTitle}>{children}</div>
 );
 
 export const SpacingContentItem = ({children, fontWeight, fontSize, lineHeight}) => (
   <div css={styles.spacingContentItem}>
-    <StyledText fontWeight={fontWeight} fontSize={fontSize} lineHeight={lineHeight} className="pf4-site-typography-grid">
+    <StyledText fontWeight={fontWeight} fontSize={fontSize} lineHeight={lineHeight}>
       {children}
     </StyledText>
   </div>

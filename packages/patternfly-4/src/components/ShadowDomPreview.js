@@ -5,6 +5,7 @@ import exampleStyles from '!raw!../../_repos/example-styles.css';
 import { Location } from '@reach/router';
 import queryString from 'query-string';
 import Helmet from 'react-helmet';
+import { css } from '@patternfly/react-styles';
 
 const styles = `
   .ws-example { 
@@ -33,9 +34,9 @@ const ShadowDomPreview = ({ children, className, isReact, isFull, html, ...props
   // :root
   // html
   const noRootStyles = exampleStyles
-    .replace(/html\s:root/g, '.ws-example')
-    .replace(/html/g, '.ws-example')
-    .replace(/:root/g, '.ws-example');
+    .replace(/html\s:root/g, '.ignore-this')
+    .replace(/html/g, '.ignore-this')
+    .replace(/:root/g, '.ignore-this');
   return (
     <Location>
       {({ location }) => {
@@ -69,13 +70,13 @@ const ShadowDomPreview = ({ children, className, isReact, isFull, html, ...props
               {html ? (
                 <div
                   dangerouslySetInnerHTML={{ __html: html }}
-                  className={className}
+                  className={css('pf-m-redhat-font', className)}
                   style={isFull ? { height: '100vh' } : undefined}
                   {...props}
                 />
               ) : (
                 <div
-                  className={children ? `ws-example ${className}` : className}
+                  className={css('pf-m-redhat-font', className)}
                   style={isFull ? { height: '100vh' } : undefined}
                   {...props}
                 >

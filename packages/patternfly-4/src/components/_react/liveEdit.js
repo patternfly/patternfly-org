@@ -63,7 +63,7 @@ class LiveEdit extends React.Component {
         >
           {!noLive && (
             <LiveContext.Consumer>
-              {({ element: Element }) => Element && <ShadowDomPreview isReact><div className={css('example ws-preview', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')}><Element /></div></ShadowDomPreview>}
+              {({ element: Element }) => Element && <ShadowDomPreview isReact><div className={css('example ws-preview ws-example', this.darkMode ? 'pf-t-dark pf-m-opaque-200' : '')}><Element /></div></ShadowDomPreview>}
             </LiveContext.Consumer>
           )}
           <EditorToolbar
