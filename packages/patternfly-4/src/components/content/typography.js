@@ -59,9 +59,10 @@ export const PfStyledText = ({ children, variableName, fontWeight, lineHeight, f
   </StyledText>
 );
 
-export const HeroTitle = ({ children, asGrid }) => {
+export const FirstLevelTitle = ({ children, asGrid }) => {
   const styleProps = {
     fontWeight: "400",
+    fontWeightText: "400 (medium)",
     variableName: "--pf-global--FontSize--2xl",
     fontSize: "24px",
     lineHeight: "1.3",
@@ -69,7 +70,7 @@ export const HeroTitle = ({ children, asGrid }) => {
   };
   return asGrid ? (
     <TypographyGrid 
-      title="Hero title*" 
+      title="First level title*" 
       note="*Not to be used in content block (Landing pages, login, etc.)" 
       {...styleProps}
     />
@@ -81,6 +82,7 @@ export const HeroTitle = ({ children, asGrid }) => {
 export const SecondLevelTitle = ({ children, asGrid }) => {
   const styleProps = {
     fontWeight: "400",
+    fontWeightText: "400 (medium)",
     fontSize: "20px",
     variableName: "--pf-global--FontSize--xl",
     lineHeight: "1.3",
@@ -99,6 +101,7 @@ export const SecondLevelTitle = ({ children, asGrid }) => {
 export const ThirdLevelTitle = ({ children, asGrid }) => {
   const styleProps = {
     fontWeight: "400",
+    fontWeightText: "400 (medium)",
     fontSize: "18px",
     variableName: "--pf-global--FontSize--lg",
     lineHeight: "1.5",
@@ -117,6 +120,7 @@ export const ThirdLevelTitle = ({ children, asGrid }) => {
 export const FourthLevelTitle = ({ children, asGrid }) => {
   const styleProps = {
     fontWeight: "700",
+    fontWeightText: "700 (bold)",
     fontSize: "16px",
     variableName: "--pf-global--FontSize--md",
     lineHeight: "1.5",
@@ -135,6 +139,7 @@ export const FourthLevelTitle = ({ children, asGrid }) => {
 export const BodyText = ({ children, asGrid }) => {
   const styleProps = {
     fontWeight: "400",
+    fontWeightText: "400 (regular)*",
     fontSize: "16px",
     variableName: "--pf-global--FontSize--md",
     lineHeight: "1.5",
@@ -143,6 +148,7 @@ export const BodyText = ({ children, asGrid }) => {
   return asGrid ? (
     <TypographyGrid 
       title="Body" 
+      note="*Some components use RedHatText at 700 font weight, which is RedHatText Medium (i.e. alerts, navigation)" 
       {...styleProps}
     />
   ) : (
@@ -153,6 +159,7 @@ export const BodyText = ({ children, asGrid }) => {
 export const SmallText = ({ children, asGrid }) => {
   const styleProps = {
     fontWeight: "400",
+    fontWeightText: "400 (regular)",
     fontSize: "14px",
     variableName: "--pf-global--FontSize--sm",
     lineHeight: "1.5",
@@ -171,6 +178,7 @@ export const SmallText = ({ children, asGrid }) => {
 export const TinyText = ({ children, asGrid }) => {
   const styleProps = {
     fontWeight: "400",
+    fontWeightText: "400 (regular)",
     fontSize: "12px",
     variableName: "--pf-global--FontSize--xs",
     lineHeight: "1.5",
@@ -187,7 +195,7 @@ export const TinyText = ({ children, asGrid }) => {
   )
 };
 
-export const TypographyGrid = ({title, note, symbol, fontWeight, fontSize, variableName, lineHeight, fontFamily}) => (
+export const TypographyGrid = ({title, note, symbol, fontWeight, fontWeightText, fontSize, variableName, lineHeight, fontFamily}) => (
   <>
     <h3>{title} {symbol && <span css={styles.gridTitleSymbol}>{symbol}</span>}</h3>
     <Grid gutter="sm" css={[styles.gridRowCenter, styles.typographyGrid]}>
@@ -196,7 +204,11 @@ export const TypographyGrid = ({title, note, symbol, fontWeight, fontSize, varia
           <tbody>
             <tr>
               <td className="pf-u-pr-sm">Font family:</td>
-              <td>{fontFamily} {fontWeight}</td>
+              <td>{fontFamily}</td>
+            </tr>
+            <tr>
+              <td>Font weight:</td>
+              <td>{fontWeightText}</td>
             </tr>
             <tr>
               <td>Line height:</td>

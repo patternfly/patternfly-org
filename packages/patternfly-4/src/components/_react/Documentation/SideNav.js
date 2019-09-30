@@ -74,6 +74,15 @@ class SideNav extends React.Component {
           <Nav className="pf-site-vertical-navigation" aria-label="Nav">
             <Switcher />
             <NavList>
+              <NavItem isActive={currentPath.indexOf('/documentation/react/notes') > -1}>
+                <Link to="/documentation/react/notes/">Release Notes</Link>
+              </NavItem>
+              <NavItem isActive={currentPath.indexOf('/documentation/react/css-variables') > -1}>
+                <Link to="/documentation/react/css-variables/">Global CSS variables</Link>
+              </NavItem>
+              <NavItem isActive={currentPath.indexOf('/documentation/react/red-hat-font') > -1}>
+                <Link to="/documentation/react/red-hat-font/">Red Hat font</Link>
+              </NavItem>
               <NavExpandable
                 title="Components"
                 isExpanded={currentPath.indexOf('/components/') > -1}
@@ -154,12 +163,6 @@ class SideNav extends React.Component {
                   </NavItem>
                 ))}
               </NavExpandable>
-              <NavItem isActive={currentPath.indexOf('/documentation/react/css-variables') > -1}>
-                <Link to="/documentation/react/css-variables/">Global CSS variables</Link>
-              </NavItem>
-              <NavItem isActive={currentPath.indexOf('/documentation/react/notes') > -1}>
-                <Link to="/documentation/react/notes/">Release notes</Link>
-              </NavItem>
             </NavList>
           </Nav>
           );

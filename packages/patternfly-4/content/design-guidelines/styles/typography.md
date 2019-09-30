@@ -3,7 +3,7 @@ path: "/design-guidelines/styles/typography"
 ---
 import { Button, Grid, GridItem, Alert } from '@patternfly/react-core';
 import { CheckCircleIcon, TimesCircleIcon } from '@patternfly/react-icons';
-import { styles, TypographyGrid, LineHeightTitle, SpacingContentItem, Spacer, HeroTitle, SecondLevelTitle, ThirdLevelTitle, FourthLevelTitle, BodyText, SmallText, TinyText } from '@content/typography';
+import { styles, TypographyGrid, LineHeightTitle, SpacingContentItem, Spacer, FirstLevelTitle, SecondLevelTitle, ThirdLevelTitle, FourthLevelTitle, BodyText, SmallText, TinyText } from '@content/typography';
 import correct from './typography_correct_spacing.png';
 import incorrect from './typography_incorrect_spacing.png';
 import { Link } from 'gatsby';
@@ -19,7 +19,7 @@ import { css, jsx } from '@emotion/core';
     title="Opt-in feature"
     className="pf-u-my-md"
     isInline
-  >In a future breaking-change release, the font will default to the Red Hat font. You can opt-in and update to use the Red Hat font now by wrapping your application with the ".pf-m-redhat-font" class. For more information visit the <Link to="/design-guidelines/styles/red-hat-font">Red Hat font</Link> page.</Alert>
+  >In a future breaking-change release, the font will default to the Red Hat font. You can opt-in and update to use the Red Hat font now by wrapping your application with the ".pf-m-redhat-font" class. For more information visit the <Link to="/documentation/react/red-hat-font">Red Hat font</Link> page.</Alert>
 </ShadowDomPreview>
 
 ## Our font family
@@ -30,7 +30,7 @@ We use Red Hat Display and Red Hat Text.
 ## Usage guidelines
 Use our typographic styles to communicate visual hierarchy. A consistent and logical hierarchy provides a clear pattern for users, making it easier to quickly scan and understand information on a page.
 
-<HeroTitle asGrid />
+<FirstLevelTitle asGrid />
 <SecondLevelTitle asGrid />
 <ThirdLevelTitle asGrid />
 <FourthLevelTitle asGrid />
@@ -74,11 +74,11 @@ Use our typographic styles to communicate visual hierarchy. A consistent and log
 <Grid>
   <GridItem span={12}>
     <div css={styles.spacingItemStyle}>
-      <div css={styles.spacingTitleStyle}>Hero title</div>  
+      <div css={styles.spacingTitleStyle}>First level title</div>  
     </div>
     <Spacer size="8" color="8"/>
     <div css={styles.spacingItemStyle}>
-      <HeroTitle>Design is a journey of discovery</HeroTitle>
+      <FirstLevelTitle>Design is a journey of discovery</FirstLevelTitle>
     </div>
     <Spacer size="16" color="16" />
     <div css={styles.spacingItemStyle}>
