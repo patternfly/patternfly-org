@@ -26,7 +26,8 @@ const components = {
       );
     }
   },
-  pre: React.Fragment
+  pre: React.Fragment,
+  p: props => <p {...props} style={{ marginBottom: '16px' }} />
 };
 for (let i = 1; i <= 6; i++) {
   components[`h${i}`] = props => {
