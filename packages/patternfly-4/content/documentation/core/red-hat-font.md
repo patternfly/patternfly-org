@@ -11,9 +11,9 @@ Available in [v2.18.0](https://github.com/patternfly/patternfly-next/releases/ta
 
 ## To opt-in to the new font
 
-PatternFly has introduced two new fonts - Red Hat Text and Red Hat Display which replace the current Overpass font. These new fonts are feature characteristics which improve the performance and legibility at any type size. They are also designed to support more browsers than the current Overpass font. For Red Hat applications this font will also be used consistently across sales, marketing, support, and documentation.
+PatternFly has introduced two new fonts - Red Hat Text and Red Hat Display which replace the current Overpass font. These new fonts are feature characteristics which improve the performance and legibility at any type size. They are also designed to support more browsers than the current Overpass font.
 
-The new font will be available in parallel with the current Overpass font to give teams an easier transition period. Product teams/stakeholders will need to determine the most appropriate migration period for their application.
+The new font will be available in parallel with the current Overpass font to give teams an easier transition period.
 
 Simply add the class `.pf-m-redhat-font` to an element that wraps your application (ideally `<html>` or `<body>`) to adopt the CSS changes that introduce the Red Hat font into PatternFly.
 
