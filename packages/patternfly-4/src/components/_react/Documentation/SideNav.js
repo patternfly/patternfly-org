@@ -74,15 +74,21 @@ class SideNav extends React.Component {
           <Nav className="pf-site-vertical-navigation" aria-label="Nav">
             <Switcher />
             <NavList>
-              <NavItem isActive={currentPath.indexOf('/documentation/react/notes') > -1}>
-                <Link to="/documentation/react/notes/">Release Notes</Link>
-              </NavItem>
-              <NavItem isActive={currentPath.indexOf('/documentation/react/css-variables') > -1}>
-                <Link to="/documentation/react/css-variables/">Global CSS variables</Link>
-              </NavItem>
-              <NavItem isActive={currentPath.indexOf('/documentation/react/red-hat-font') > -1}>
-                <Link to="/documentation/react/red-hat-font/">Red Hat font</Link>
-              </NavItem>
+              <NavExpandable
+                title="Overview"
+                isExpanded={currentPath.indexOf('/overview/') > -1}
+                isActive={currentPath.indexOf('/overview/') > -1}
+              >
+                <NavItem isActive={currentPath.indexOf('/documentation/react/overview/notes') > -1}>
+                  <Link to="/documentation/react/overview/notes/">Release Notes</Link>
+                </NavItem>
+                <NavItem isActive={currentPath.indexOf('/documentation/react/overview/css-variables') > -1}>
+                  <Link to="/documentation/react/overview/css-variables/">Global CSS variables</Link>
+                </NavItem>
+                <NavItem isActive={currentPath.indexOf('/documentation/react/overview/red-hat-font') > -1}>
+                  <Link to="/documentation/react/overview/red-hat-font/">Red Hat font</Link>
+                </NavItem>
+              </NavExpandable>
               <NavExpandable
                 title="Components"
                 isExpanded={currentPath.indexOf('/components/') > -1}

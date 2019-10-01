@@ -1,5 +1,5 @@
 ---
-path: "/documentation/react/red-hat-font/"
+path: "/documentation/react/overview/red-hat-font/"
 ---
 # Red Hat font in PatternFly
 

@@ -61,15 +61,21 @@ class CoreSideNav extends React.Component {
             <Nav className="pf-site-vertical-navigation" aria-label="Nav">
               <Switcher />
               <NavList>
-                <NavItem isActive={currentPath.indexOf('/documentation/core/notes') > -1}>
-                  <Link to="/documentation/core/notes/">Release Notes</Link>
-                </NavItem>
-                <NavItem isActive={currentPath.indexOf('/documentation/core/css-variables') > -1}>
-                  <Link to="/documentation/core/css-variables/">Global CSS variables</Link>
-                </NavItem>
-                <NavItem isActive={currentPath.indexOf('/documentation/core/red-hat-font') > -1}>
-                  <Link to="/documentation/core/red-hat-font/">Red Hat font</Link>
-                </NavItem>
+                <NavExpandable
+                  title="Overview"
+                  isExpanded={currentPath.indexOf('/overview/') > -1}
+                  isActive={currentPath.indexOf('/overview/') > -1}
+                >
+                  <NavItem isActive={currentPath.indexOf('/documentation/core/overview/notes') > -1}>
+                    <Link to="/documentation/core/overview/notes/">Release Notes</Link>
+                  </NavItem>
+                  <NavItem isActive={currentPath.indexOf('/documentation/core/overview/css-variables') > -1}>
+                    <Link to="/documentation/core/overview/css-variables/">Global CSS variables</Link>
+                  </NavItem>
+                  <NavItem isActive={currentPath.indexOf('/documentation/core/overview/red-hat-font') > -1}>
+                    <Link to="/documentation/core/overview/red-hat-font/">Red Hat font</Link>
+                  </NavItem>
+                </NavExpandable>
                 <NavExpandable
                   title="Components"
                   isExpanded={currentPath.indexOf('/components/') > -1 || (searchValue && filteredComponents.length > 0) || false}

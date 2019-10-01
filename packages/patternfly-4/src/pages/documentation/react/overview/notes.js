@@ -1,8 +1,8 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import SideNav from '../../../components/_react/Documentation/SideNav';
-import Layout from '../../../components/layout';
-import SEO from '../../../components/seo';
+import SideNav from '../../../../components/_react/Documentation/SideNav';
+import Layout from '../../../../components/layout';
+import SEO from '../../../../components/seo';
 import {
   PageSection,
   PageSectionVariants

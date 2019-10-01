@@ -1,5 +1,5 @@
 ---
-path: "/documentation/core/red-hat-font/"
+path: "/documentation/core/overview/red-hat-font/"
 ---
 # Red Hat font in PatternFly
 
