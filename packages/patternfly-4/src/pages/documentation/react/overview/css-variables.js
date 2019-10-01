@@ -1,13 +1,13 @@
 import React from 'react'
-import SideNav from '../../../components/_core/Documentation/SideNav';
-import Tokens from '../../../components/css-variables';
-import Layout from '../../../components/layout';
-import SEO from '../../../components/seo';
-import Section from '../../../components/section';
+import SideNav from '../../../../components/_react/Documentation/SideNav';
+import Tokens from '../../../../components/css-variables';
+import Layout from '../../../../components/layout';
+import SEO from '../../../../components/seo';
+import Section from '../../../../components/section';
 import { PageSection, PageSectionVariants } from '@patternfly/react-core';
-import '../../../templates/template.scss';
+import '../../../../templates/template.scss';
 
-const CoreTokens = ({ location }) => (
+const ReactTokens = ({ location }) => (
   <Layout sideNav={<SideNav />}>
     <SEO title="Global CSS Variables" />
     <PageSection className="markdown-body" variant={PageSectionVariants.light}>
@@ -61,4 +61,4 @@ const CoreTokens = ({ location }) => (
   </Layout>
 )
 
-export default CoreTokens;
+export default ReactTokens;
