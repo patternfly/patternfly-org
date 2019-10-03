@@ -91,12 +91,12 @@ A red progress bar represents a process that has failed, and the accompanying th
 
 ![progressbar](./img/progress-bar-error-message.png)
 
-A green progress bar represents the successful completion of a process, and the accompanying the check-circle icon demonstrates the error that has occurred in the process.
+A green progress bar represents the successful completion of a process, and the accompanying check-circle icon demonstrates the error that has occurred in the process.
 
 ![progressbar](./img/progress-bar-success.png)
 
 ## Content
-Titles should clearly describe the process that is being measure. Try to keep titles between 1 and 3 words.  An example of a title could be “Downloading Your Application.” Insert in “Your Application” the application name.
+Titles should clearly describe the process that is being measured. Try to keep titles between 1 and 3 words.  An example of a title could be “Downloading Your Application.” Insert in “Your Application” the application name.
 
 Do not provide any other supporting copy to the progress bar that would require the user to read about how to use the progress bar. A progress bar should be self-explanatory if you implement labels 1 through 4 that are detailed in the article above.
 
