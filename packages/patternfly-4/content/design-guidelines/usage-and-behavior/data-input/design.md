@@ -97,7 +97,7 @@ Provide a switch to allow users to instantly toggle between an enabled or disabl
 * Don’t use a switch if the options you’re presenting to the user are anything other than “on” or “off.” Instead, use radio buttons.
 
 ## Usage: Bound-entry controls
-Use bound-entry controls to enable users to enter special data types, such as dates, times, and other numeric data. Bound-entry controls constrain user input and combine keyboard and mouse interaction. These controls are designed to only allow valid inputs. As a result, field should be is unnecessary.
+Use bound-entry controls to enable users to enter special data types, such as dates, times, and other numeric data. Bound-entry controls constrain user input and combine keyboard and mouse interaction. These controls are designed to only allow valid inputs. As a result, field validation should be unnecessary.
 
 Datepicker and Slider components coming soon!
 

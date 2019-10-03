@@ -83,8 +83,11 @@ Note that once changes have been committed, the steps sidebar is hidden and the 
 Once the changes initiated by the wizard are completed, a final confirmation screen should be displayed. Again, this can leverage an empty state pattern to present a success (or failure) message to users.
 
 ![completion screen](./img/completion-screen.png)
+
 1. **Completion message:** Provide appropriate messaging to inform the user about the outcome of the wizard.
+
 2. **Primary action:** In most cases this will be a navigational button to close the wizard and take the user to a page where they can see the results of their changes, e.g. a new project that was created. If there is no appropriate destination or if results will be seen on the current page, make the primary action Close.
+
 3. **Secondary action(s) (optional):** If the primary action is other than Close, include a Close button here to close the wizard and return to the prior page. Other secondary actions can also be included. See [Empty state](/design-guidelines/usage-and-behavior/empty-state) for button placement.
 
 In some cases the result of a wizard is to dispatch a task to the background to execute changes in the back end. In these circumstances, we recommend that you provide a navigation link to monitor task progress and/or simply a Close button.
