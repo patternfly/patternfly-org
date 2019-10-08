@@ -20,7 +20,7 @@ import CoreSideNav from '../components/_core/Documentation/SideNav';
 import './template.scss';
 
 const components = {
-  a: props => <a {...props} href={props.href ? props.href.toLowerCase() : props.href} />
+  a: props => <a {...props} href={props.href} />
 };
 
 const navBuilder = navData => {

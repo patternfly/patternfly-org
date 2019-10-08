@@ -196,7 +196,7 @@ Links that direct users to an external site should be followed by the [fa-extern
 
   ![#truncation4](./img/truncation4@2x.jpg)
 
-- In any container holding a string, if there is not sufficient room for the full spelling or hyphenated word, consider abbreviating the text. See [Common Abbreviations](ecommon-abbreviations) for examples, or reference the [Chicago Manual of Style](http://www.chicagomanualofstyle.org/16/ch10/ch10_toc.html). Do not truncate text in column headings.
+- In any container holding a string, if there is not sufficient room for the full spelling or hyphenated word, consider abbreviating the text. See [Common Abbreviations](#common-abbreviations) for examples, or reference the [Chicago Manual of Style](http://www.chicagomanualofstyle.org/16/ch10/ch10_toc.html). Do not truncate text in column headings.
 
   ![#truncation5](./img/truncation5@2x.jpg)
 
