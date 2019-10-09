@@ -59,10 +59,10 @@ export const PropsTable = ({ name, description: preface, props }) => {
         <Body>
           {props.map(prop => (
             <Row key={prop.name}>
-              <TD>{prop.name}</TD>
-              <TD>{renderType(prop)}</TD>
+              <TD nowrap="nowrap">{prop.name}</TD>
+              <TD nowrap="nowrap">{renderType(prop)}</TD>
               <TD align="center">{prop.required && <ExclamationCircleIcon />}</TD>
-              <TD>{prop.defaultValue ? prop.defaultValue.value : ''}</TD>
+              <TD nowrap="nowrap">{prop.defaultValue ? prop.defaultValue.value : ''}</TD>
               <TD>{prop.description}</TD>
             </Row>
           ))}
