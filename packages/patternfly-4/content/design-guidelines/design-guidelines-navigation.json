@@ -86,6 +86,10 @@
         "path": "/design-guidelines/usage-and-behavior/navigation-system"
       },
       {
+        "text": "Pagination",
+        "path": "/design-guidelines/usage-and-behavior/pagination"
+      },
+      {
         "text": "Progress bar",
         "path": "/design-guidelines/usage-and-behavior/progress-bar"
       },
