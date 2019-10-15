@@ -7,6 +7,7 @@ Pagination is used when you want to break up data into multiple pages. It is typ
 ![top-bottom-pagination](./img/top-bottom-pagination.png)
 
 **1. Top pagination:** Pagination is always right-aligned in the toolbar. If pagination is required, we recommend using pagination both above and below content views.
+
 **2. Bottom pagination:** Pagination should be shown below the content view as well.
 
 ## Full pagination
@@ -17,12 +18,14 @@ Desktop full pagination in toolbar
 ![full-pagination](./img/full-pagination.png)
 
 **1. Items in view:** Selects the item count per page (how many total items are listed per page).
+
 **2. Full pager:** Gives the user all pagination options necessary including page-back and page-forward, page-first and page-last, and a manual option to type in the page number.
 
 Mobile full pagination in toolbar
 ![mobile-pagination](./img/mobile-pagination.png)
 
 **1. Items in view:** Pagination controls are hidden in the top toolbar at this screen size. Only the item count is shown to indicate items that are currently in view.
+
 **2. Full pager:** In the bottom toolbar, this gives the user all pagination options necessary including page-back and page-forward, page-first and page-last, and a manual option to type in the page number.
 
 ## Compact pagination
@@ -33,6 +36,7 @@ Desktop compact pagination in toolbar
 ![compact-pagination](./img/compact-pagination.png)
 
 **1. Items in view:** Selects the item count per page (how many total items are listed per page), as seen in full pagination.
+
 **2. Compact pager:** This supplies the user with page-back and page-next controls only.
 
 ## Related components and demos
