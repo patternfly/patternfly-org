@@ -49,8 +49,12 @@ The attribute-value filter gives the user the ability to specify an attribute-va
 ![image7](./img/attribute-value-date-picker.png)
 
 The following elements can be used in an attribute-value (textbox) filter.
+
 1. **Attribute selector:** A select list that allows the user to select the attribute that they want to filter against.
-2. **Value selector:** The value selector can be any data input component that is used to pass a value to the filter. Common components used for value selection include:
+
+2. **Value selector:** The value selector can be any data input component that is used to pass a value to the filter. 
+
+Common components used for value selection include:
   * A **search field** for entering a value from the keyboard. Use when you will enter the value as unbounded data (e.g. a name).
   * A **single select** for selecting a value from a predefined list.
   * A **checkbox select** for selecting multiple values from a predefined list. Multiple values will be combined using a logical OR operation. Items that meet both values will be shown higher in the results list.
@@ -75,7 +79,9 @@ Faceted filtering is useful when items can be described by categories according 
 ![image8](./img/faceted.png)
 
 The following elements can be used in a faceted (checkbox) filter.
+
 1. **Facets:** In this example, Status and Vendor represent different facets, or categories.
+
 2. **Values:** The checkboxes represent values that one might filter on.
 
 **Note:** Consider adding an “Other” option to attribute lists where items may not fall under any of the specified values.
@@ -97,7 +103,9 @@ Type-ahead filters are useful when there is a large number of items to select fr
 ![image10](./img/type-ahead-multi.png)
 
 The following elements can be used in a type-ahead filter.
+
 1. **Single select:** Single select type-ahead filters can handle one input. Users may scroll through the dropdown list or type in the box to find the desired option.
+
 2. **Multi select:** Multi select type-ahead filters can handle multiple selections. Users may scroll through the dropdown list and select multiple options, or type in the box to find the desired options. Values will be shown in the input field as filter chips.
 
 #### When to use
@@ -170,7 +178,7 @@ You can create a complex faceted filter by incorporating elements such as a sear
 ![image15](./img/faceted-complex.png)
 
 #### When to use
-Use a complex faceted filter when you have limited space and multiple attributes with a variety of input types, for example, and search field and checkbox selects.
+Use a complex faceted filter when you have limited space and multiple attributes with a variety of input types, for example, search field and checkbox selects.
 
 #### Behavior
 Filter queries are applied when the user selects or deselects an item in the list, or types a query in the input field and presses Enter.

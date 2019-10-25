@@ -72,7 +72,9 @@ Single sign-on (SSO) allows a user to log in once and access multiple applicatio
 ![Multi-factor-login-validation-options](./img/sso-single-step.png "Multi-factor-login-validation-options")
 
 **Additional SSO elements**
+
 1. **Title**
+
 2. **Supported services:** Provides a logo for all supported services logos
 
 #### Social Login

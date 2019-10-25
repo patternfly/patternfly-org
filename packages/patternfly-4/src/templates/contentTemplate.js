@@ -13,8 +13,15 @@ import {
 } from '@patternfly/react-core';
 import { PatternFlyThemeProvider } from '@patternfly/react-styled-system';
 import { Location } from '@reach/router';
+import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from '../components/mdx-renderer';
+import ReactSideNav from '../components/_react/Documentation/SideNav';
+import CoreSideNav from '../components/_core/Documentation/SideNav';
 import './template.scss';
+
+const components = {
+  a: props => <a {...props} href={props.href} />
+};
 
 const navBuilder = navData => {
   return (
@@ -70,6 +77,12 @@ export default function ContentTemplate({
   } else if (frontmatter.path.indexOf('/contribute') > -1) {
     SideNav = navBuilder(allContributeNavigationJson.edges);
     title = 'Contribute';
+  } else if (frontmatter.path.indexOf('/documentation/react') > -1) {
+    SideNav = <ReactSideNav />;
+    title = 'React';
+  } else if (frontmatter.path.indexOf('/documentation/core') > -1) {
+    SideNav = <CoreSideNav />;
+    title = 'HTML';
   }
 
   return (
@@ -78,7 +91,9 @@ export default function ContentTemplate({
       <PageSection className="pageSectionStyles markdown-body" variant={PageSectionVariants.light}>
         <PatternFlyThemeProvider>
           <TextContent>
-            <MDXRenderer>{mdx.code.body}</MDXRenderer>
+            <MDXProvider components={components}>
+              <MDXRenderer>{mdx.code.body}</MDXRenderer>
+            </MDXProvider>
           </TextContent>
         </PatternFlyThemeProvider>
       </PageSection>

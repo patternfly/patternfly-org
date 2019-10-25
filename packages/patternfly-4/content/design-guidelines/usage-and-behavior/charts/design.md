@@ -24,16 +24,17 @@ Use charts to visualize data in an application. The type of chart you use will d
   - [Donut utilization with threshold](#donut-chart---utilization-with-threshold)
 - [Line chart](#line-chart): use to compare several data sets, or to show data over a period of time
 - [Pie chart](#pie-chart): show percentages or proportional data
+- [Sparkline](#sparkline): understand trends and patterns
 
 
 ### Area chart
 An area chart is used to provide metrics for a single data point. While similar to a line chart in both form and function, it offers an area fill for visual emphasis. The area fill below the line also functions to indicate cumulative data.
 
 #### Usage
-The most common use case for area charts is to show trending over a continuous scale (usually time). Use this instead of a line chart when you need to provide more visual emphasis than a simple line chart would offer. It is possible to stack area charts to compare more than one continuous data sets. See [Line charts](#line-chart) for more information about them.
+The most common use case for area charts is to show trending over a continuous scale (usually time). Use this instead of a line chart when you need to provide more visual emphasis than a simple line chart would offer. It is possible to stack area charts to compare more than one continuous data sets. Stacking area charts will put more emphasis on the difference between the data sets visualized. See [Line charts](#line-chart) for more information about them.
 
 #### Example
-![Area chart](./img/areachart.png)
+![Area chart](./img/area-chart.png)
 
 1. **Data area fill:** The area fill is presented below the data line. Data area fills use colors that conform with the [Colors for charts](/design-guidelines/styles/chart-colors).
 2. **Chart tooltip:** Use the chart tooltip to drill into the data related to any data point provided on your area chart.
@@ -134,7 +135,7 @@ For donut charts, don’t try to represent more than six categories. We recommen
 
 ### Line chart
 
-A line chart plot a series of discrete data samples that are good for showing continuous data and trend information. Sample values on the line can be measured and extracted.
+A line chart plots a series of discrete data samples that are good for showing continuous data and trend information. Sample values on the line can be measured and extracted.
 
 #### Usage
 The most common use case for line charts is to compare several data sets over a period of time. They can be used to project trends into the past or future. A best fit line is created and extended in both directions to do so, but the validity of the projection is not certain. If you want to show and compare categorical data, you may consider using a bar chart.
@@ -146,7 +147,7 @@ Multiple lines on the same chart allow the user to visualize relationships betwe
 
 1. **Line:** Line charts can optionally visually represent data points as dots on the line. If so, the same interaction that occurs when hovering over one in an [Area chart](#area-chart) will occur in line charts. For line colors, we recommend using the [Colors for charts](/design-guidelines/styles/chart-colors).
 
-### React component
+#### React component
 [Line chart](/documentation/react/charts/chartline)
 
 ### Pie chart
@@ -164,13 +165,29 @@ A pie chart may be the wrong choice when you need to compare categories to one a
 1. **Pie chart fill:** We recommend that fill colors should be based on the [Colors for charts](/design-guidelines/styles/chart-colors).
 2. **Legend:** Each variable on the legend should report their current value.
 
-### React component
+#### React component
 [Pie chart](/documentation/react/charts/chartpie)
+
+### Sparkline
+
+A sparkline is a small chart that helps users to analyze data and understand trends and patterns.
+
+#### Usage
+Sparklines are commonly used in tables, reports, and dashboards. A common use case is displaying utilization in an environment over time. Sparklines help to show trends in a series of values or to highlight maximum and minimum values. We recommend using sparklines alone without an axis and placing the name of the item being visualized underneath the chart. 
+
+#### Example
+![Sparkline](./img/sparkline.png)
+
+1. **Axis:** We recommend that sparklines are shown without an x or y-axis. Depending on space, a label can be placed underneath or to the left of the sparkline.
+
+#### React component
+[Sparkline](/documentation/react/charts/chartarea/#sparkline-chart)
 
 ### Charts in cards
 If a chart lives in a card, the title of that chart will be placed on the header of that card instead of the chart. The rest of the chart guidelines should be followed for the chart itself.
 
 ![Chart on card](./img/chartoncard.png)
+![Sparkline on card](./img/sparkline-card.png)
 
 ### Brush and zoom
 The brush and zoom properties allow for magnification of an area, bar, line or stack chart. If desired, more advanced features can be added through [Victory](https://formidable.com/open-source/victory/guides/brush-and-zoom/).

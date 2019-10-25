@@ -30,3 +30,6 @@ github.io
 out
 
 lerna-debug.log
+
+# IDE - VSCode
+.vscode

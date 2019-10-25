@@ -17,6 +17,14 @@ const coreExperimentalRE = new RegExp(coreExperimental.map(c => c.name.toLowerCa
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
   const isSitePage = node.internal.type === 'SitePage';
+  const isMdx = node.internal.type === 'Mdx';
+  if (isMdx) {
+    createNodeField({
+      node,
+      name: 'optIn',
+      value: (node.frontmatter && node.frontmatter.optIn) || ''
+    });
+  }
   if (isSitePage && coreComponentPathRegEx.test(node.path)) {
     const corePathLabel = node.component
       .split('/')
@@ -45,9 +53,9 @@ exports.createPages = async ({ graphql, actions }) => {
     { f: '/contribute', t: '/contribute/about/' },
     { f: '/design-guidelines', t: '/design-guidelines/styles/colors/' },
     { f: '/design-guidelines/styles', t: '/design-guidelines/styles/colors/' },
-    { f: '/documentation/core', t: '/documentation/core/components/aboutmodalbox/'},
+    { f: '/documentation/core', t: '/documentation/core/overview/notes/'},
     { f: '/documentation/core/demos', t: '/documentation/core/demos/aboutmodal/'},
-    { f: '/documentation/react', t: '/documentation/react/components/aboutmodal/'},
+    { f: '/documentation/react', t: '/documentation/react/overview/notes/'},
     { f: '/documentation/react/components', t: '/documentation/react/components/aboutmodal/'},
     { f: '/documentation/react/layouts', t: '/documentation/react/layouts/bullseye/'},
     { f: '/documentation/react/demos', t: '/documentation/react/demos/pagelayout/'}
@@ -96,7 +104,7 @@ exports.createPages = async ({ graphql, actions }) => {
     if (result.errors) {
       return Promise.reject(result.errors);
     }
-    const { pf4Docs, coreDocs, contentPages} = result.data;
+    const { pf4Docs, coreDocs, contentPages } = result.data;
 
     contentPages.nodes.forEach(node => {
       // console.log(`creating content page (mdx): ${node.frontmatter.path}`);

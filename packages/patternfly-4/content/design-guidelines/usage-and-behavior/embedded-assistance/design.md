@@ -33,7 +33,7 @@ Always provide a way for users to access the full set of documentation for your 
 ![Forms of embedded assistance](./img/ea-forms.png)
 
 1. [Persistent text](#persistent-text)
-2. [Hints](*hints)
+2. [Hints](#hints)
 3. [Popover hints](#popover-hints)
 4. [Popovers](#popovers)
 5. [Tooltips](#tooltips)

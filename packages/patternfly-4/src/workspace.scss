@@ -7,9 +7,6 @@
 @import './styles/homepage.scss';
 @import './styles/search.scss';
 
-// Fontpath
-$pf-global--font-path: "./assets/webfonts" !default;
-
 $block: '.pf4';
 
 .pf-c-page__header {
@@ -285,4 +282,8 @@ h4 .anchor:focus svg,
 h5 .anchor:focus svg,
 h6 .anchor:focus svg {
   visibility: visible;
+}
+
+.QSIPopOver iframe {
+  height: 100%;
 }

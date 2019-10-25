@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { PageSection, PageSectionVariants } from '@patternfly/react-core';
+import { Alert, PageSection, PageSectionVariants } from '@patternfly/react-core';
 import AutoLinkHeader from '@content/AutoLinkHeader';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from '../components/mdx-renderer';
@@ -26,7 +26,8 @@ const components = {
       );
     }
   },
-  pre: React.Fragment
+  pre: React.Fragment,
+  p: props => <p {...props} style={{ marginBottom: '16px' }} />
 };
 for (let i = 1; i <= 6; i++) {
   components[`h${i}`] = props => {
@@ -39,11 +40,27 @@ for (let i = 1; i <= 6; i++) {
   };
 }
 
+const getWarning = state => {
+  switch(state) {
+    case 'early':
+      return "This is an experimental feature in the early stages of testing. It's not intended for production use.";
+    case 'deprecated':
+      return "This experimental feature has been deprecated and will be removed in a future release. We recommend you avoid or move away from using this feature in your projects.";
+    default:
+      return (
+        <React.Fragment>
+This experimental feature has been promoted to a <a href={`../../components/${state}`}>production-level component</a> and will be removed in a future release. Use the production-ready version of this feature instead."
+        </React.Fragment>
+      );
+  }
+}
+
 const MdxPF4Template = ({ data }) => {
-  const cssPrefix = data.mdx.frontmatter.cssPrefix;
+  const { cssPrefix, stage } = data.mdx.frontmatter;
+  const { optIn } = data.mdx.fields;
   let section = data.mdx.frontmatter.section;
   if (!section) section = 'component';
-
+  const hasProps = data.props && data.props.nodes && data.props.nodes.length > 0;
   return (
     <Layout sideNav={<SideNav />} className="ws-documentation">
       <SEO title="React" />
@@ -52,6 +69,27 @@ const MdxPF4Template = ({ data }) => {
         <AutoLinkHeader size="4xl" is="h2" suffix="-title" className="pf-u-mt-sm pf-u-mb-md">
           {data.mdx.frontmatter.title}
         </AutoLinkHeader>
+        {optIn && (
+          <Alert
+            variant="info"
+            title="Opt-in feature"
+            className="pf-u-my-md"
+            isInline
+          >
+            {optIn}
+          </Alert>
+        )}
+        {stage && (
+          <Alert
+            variant={stage === 'early' ? 'info' : 'warning'}
+            title="Experimental feature"
+            className="pf-u-my-md"
+            style={{ marginBottom: 'var(--pf-global--spacer--md)' }}
+            isInline
+          >
+            {getWarning(stage)}
+          </Alert>
+        )}
         {data.description && (
           <Section>
             <MDXRenderer>{data.description.code.body}</MDXRenderer>
@@ -61,14 +99,14 @@ const MdxPF4Template = ({ data }) => {
           <AutoLinkHeader anchorOnly className="pf-site-toc">
             Examples
           </AutoLinkHeader>
-          {data.props && (
+          {hasProps && (
             <AutoLinkHeader anchorOnly className="pf-site-toc">
               Props
             </AutoLinkHeader>
           )}
           {cssPrefix && (
             <AutoLinkHeader anchorOnly className="pf-site-toc">
-              CSS Variables
+              CSS variables
             </AutoLinkHeader>
           )}
         </Section>
@@ -81,7 +119,7 @@ const MdxPF4Template = ({ data }) => {
         </Section>
       </PageSection>
 
-      {data.props && (
+      {hasProps && (
         <PageSection>
           <Section title="Props" headingLevel="h2">
             {data.props.nodes.map(component => (
@@ -93,7 +131,7 @@ const MdxPF4Template = ({ data }) => {
 
       {cssPrefix && (
         <PageSection variant={PageSectionVariants.light} className="pf-site-background-medium">
-          <Section title="CSS Variables" headingLevel="h3">
+          <Section title="CSS variables" headingLevel="h3">
             <Tokens variables={cssPrefix} />
           </Section>
         </PageSection>
@@ -117,6 +155,10 @@ export const pageQuery = graphql`
         title
         section
         cssPrefix
+        stage
+      }
+      fields {
+        optIn
       }
     }
     props: allComponentMetadata(filter: { name: { in: $propComponents }, path: { regex: $pathRegex } }) {

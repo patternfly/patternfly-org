@@ -54,6 +54,23 @@ The React library provides a collection of React components you can use to build
   yarn add @patternfly/react-core
   ```
 
+### Pre-requisites
+* It's strongly advised to use the PatternFly Base CSS in your whole project, or some components may diverge in appearance:
+
+  ```
+  import '@patternfly/react-core/dist/styles/base.css';
+  ```
+
+### Example Component Usage
+* All css related to each component is provided within it. There is no component level CSS to import.
+
+  ```
+  import { Button } from '@patternfly/react-core';
+  ```
+  ```
+  export default <Button variant="primary">Button</Button>;
+  ```
+
 **Configurations**
 * [TypeScript](https://github.com/patternfly/patternfly-react-seed/blob/master/tsconfig.json)
 * [Webpack](https://github.com/patternfly/patternfly-react-seed/blob/master/webpack.common.js)
