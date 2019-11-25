@@ -1,0 +1,1 @@
+// no-op to allow `require.resolve('gatsby-theme-patternfly-org')`

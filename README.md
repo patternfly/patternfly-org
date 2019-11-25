@@ -42,4 +42,4 @@ You can test the full production build:
 
 ### Deploy
 
-The site is deployed using GitHub pages to the patternfly/patternfly.github.io repository. A CNAME file is added to the root which associates the GitHub pages url with https://www.patternfly.org
+The site is deployed first to a staging S3 bucket at staging.patternfly.org, and then to another bucket at patternfly.org.

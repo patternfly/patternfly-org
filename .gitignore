@@ -10,26 +10,19 @@
 
 # Ignore local nodejs packages
 node_modules
-
-# Ignore node files
-*.man
-nodevars.bat
-npm
-npm.cmd
+bower_components
 
 # Ignore generated files
 patternfly.spec
 _build
 *.map
-=======
 _site
 .DS_Store
-bower_components
-source/assets/css
-github.io
 out
-
-lerna-debug.log
+coverage
+public
+static
+.cache
 
 # IDE - VSCode
 .vscode
