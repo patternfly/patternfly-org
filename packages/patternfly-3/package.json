@@ -1,15 +1,13 @@
 {
-  "name": "@patternfly/org-patternfly-3",
+  "name": "patternfly-org-3",
   "private": true,
   "version": "3.49.0",
   "author": "Red Hat",
   "scripts": {
-    "prebuild": "bundle install",
-    "update": "git submodule update --recursive --remote repos",
     "build": "grunt build:production --baseurl=/v3",
-    "dev": "grunt serve"
+    "develop": "grunt serve"
   },
-  "license": "Apache-2.0",
+  "license": "MIT",
   "devDependencies": {
     "connect": "3.6.6",
     "connect-livereload": "0.3.2",

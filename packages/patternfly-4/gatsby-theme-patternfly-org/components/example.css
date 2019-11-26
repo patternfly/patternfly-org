@@ -1,0 +1,86 @@
+.ws-example {
+  background-color: white;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.ws-example-heading {
+  padding: var(--pf-global--spacer--md);
+  border-bottom: var(--pf-global--BorderWidth--sm) solid #f8f8f8;
+}
+
+.ws-preview {
+  padding: 1rem;
+  background-color: white;
+  border-bottom: 1px solid #f8f8f8;
+  transition: width .2s ease-in-out;
+}
+
+.ws-code {
+  padding: .25em .75em;
+  white-space: nowrap;
+  font-size: var(--pf-global--FontSize--md);
+}
+
+.ws-editor {
+  font-size: 16px;
+}
+
+.ws-editor .token.punctuation,
+.ws-editor .token.operator {
+  color: #c9190b;
+}
+
+.ws-preview-fullscreen {
+  position: relative;
+  pointer-events: none;
+  width: 1280px;
+  height: 800px;
+  transform-origin: top left;
+  /* transform: scale added in JS based on parent element width */
+}
+
+.ws-preview-container {
+  position: relative;
+  display: block;
+}
+
+.ws-preview__thumbnail-link {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.ws-preview__thumbnail-link::before,
+.ws-preview__thumbnail-link::after {
+  position: absolute;
+  z-index: 500;
+  transition: .2s;
+  opacity: 0;
+}
+
+.ws-preview__thumbnail-link:hover::before,
+.ws-preview__thumbnail-link:hover::after {
+  opacity: 1;
+}
+
+.ws-preview__thumbnail-link::before {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  background-color: rgba(0,0,0,.5);
+}
+
+.ws-preview__thumbnail-link::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Font Awesome 5 Free";
+  content: "\f35d";
+  font-size: 52px;
+  color: rgba(255,255,255,.4);
+}
+

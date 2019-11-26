@@ -1,7 +1,0 @@
-#!/bin/bash
-
-echo "Building static files using jekyll..."
-export LD_LIBRARY_PATH=/opt/rh/mysql55/root/usr/lib64:/opt/rh/ror40/root/usr/lib64:/opt/rh/ruby200/root/usr/lib64
-export PATH=~/.gem/bin:/opt/rh/ruby200/root/usr/bin:$PATH
-gem install bundle
-cd $OPENSHIFT_REPO_DIR && bundle install && bundle exec jekyll build -s source -d php

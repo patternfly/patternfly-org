@@ -1,0 +1,6 @@
+.ws-top-nav.pf-c-nav__horizontal-list .pf-c-nav__link {
+  padding-top: 22px;
+  padding-right: var(--pf-global--spacer--md);
+  padding-left: var(--pf-global--spacer--md);
+  color: var(--pf-global--Color--light-100);
+}
