@@ -1,0 +1,15 @@
+{
+  "npmClient": "yarn",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "command": {
+    "publish": {
+      "message": "chore(release): releasing packages [ci skip]",
+      "conventionalCommits": true
+    }
+  },
+  "packages": ["packages/patternfly-4/gatsby-theme-patternfly-org"],
+  "version": "independent"
+}
