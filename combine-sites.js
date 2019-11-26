@@ -10,7 +10,7 @@ const v4_to = `${outDir}/v4`;
 const writeRedirect = (file, to) => {
   fs.ensureFileSync(file);
   fs.writeFileSync(file,
-    `<!DOCTYPE HTML>
+`<!DOCTYPE HTML>
 <meta charset="UTF-8">
 <meta http-equiv="refresh" content="0; url=${to}">
 <script>
@@ -18,8 +18,7 @@ const writeRedirect = (file, to) => {
 </script>
 <title>Page Redirection</title>
 If you are not redirected automatically, click <a href='${to}'>here.</a>
-`
-  );
+`);
 }
 
 // Clean last build
@@ -30,17 +29,20 @@ fs.copySync(v3_from, v3_to);
 console.log(`Copied pf3 build into ${v3_to}`);
 
 // Copy PF4 files into /v4
-fs.copySync(v4_from, v4_to)
+fs.copySync(v4_from, v4_to);
+
 console.log(`Copied pf4 build into ${v4_to}`);
 
 // Write static files
 writeRedirect(`${outDir}/index.html`, '/v4/');
 writeRedirect(`${outDir}/404.html`, '/v4/404/');
-fs.writeFileSync(`${outDir}/robots.txt`, `User-agent: *
+fs.writeFileSync(`${outDir}/robots.txt`,
+`User-agent: *
 Allow: /
 Sitemap: https://www.patternfly.org/sitemap.xml
 Host: https://www.patternfly.org`);
-fs.writeFileSync(`${outDir}/sitemap.xml`, `<?xml version="1.0" encoding="UTF-8"?>
+fs.writeFileSync(`${outDir}/sitemap.xml`,
+`<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://www.patternfly.org/v3/sitemap.xml</loc>
