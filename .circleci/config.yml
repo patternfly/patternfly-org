@@ -174,7 +174,7 @@ jobs:
         - *js_deps_cache_key
     - run:
         name: Combine sites
-        command: node combine-sites.js
+        command: node combine-sites.js --skip-redirects --skip-v3
     - run:
         name: Check size of docs
         command: du -sh public
@@ -208,6 +208,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y -qq python-pip libpython-dev
           pip install --user awscli
+    - run:
+        name: Combine sites
+        command: node combine-sites.js
+    - run:
+        name: Check size of docs
+        command: du -sh public
     - run:
         name: Sync to staging
         command: .circleci/upload-staging.sh

@@ -25,8 +25,10 @@ If you are not redirected automatically, click <a href='${to}'>here.</a>
 fs.removeSync(outDir);
 
 // Copy PF3 files into /v3
-fs.copySync(v3_from, v3_to);
-console.log(`Copied pf3 build into ${v3_to}`);
+if (!process.argv.includes('--skip-v3')) {
+  fs.copySync(v3_from, v3_to);
+  console.log(`Copied pf3 build into ${v3_to}`);
+}
 
 // Copy PF4 files into /v4
 fs.copySync(v4_from, v4_to);
@@ -54,12 +56,14 @@ fs.writeFileSync(`${outDir}/sitemap.xml`,
 console.log('Wrote 4 static files');
 
 // Write PF3 redirects
-const redirectPaths = glob.sync(
-  `${v3_to}/**/*.html`,
-  { ignore: [`${v3_to}/components/**`, `${v3_to}/*.html`] }
-);
+if (!process.argv.includes('--skip-redirects')) {
+  const redirectPaths = glob.sync(
+    `${v3_to}/**/*.html`,
+    { ignore: [`${v3_to}/components/**`, `${v3_to}/*.html`] }
+  );
 
-redirectPaths.forEach(file => {
-  writeRedirect(file.replace(v3_to, outDir), file.replace(outDir, ''))
-});
-console.log(`Wrote ${redirectPaths.length} redirects`);
+  redirectPaths.forEach(file => {
+    writeRedirect(file.replace(v3_to, outDir), file.replace(outDir, ''))
+  });
+  console.log(`Wrote ${redirectPaths.length} redirects`);
+}
