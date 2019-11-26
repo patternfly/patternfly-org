@@ -117,7 +117,7 @@ jobs:
     - *attach_workspace
     - restore_cache:
         keys:
-        - node_modules/
+        - *js_deps_cache_key
     - *install_node
     - *install_yarn
     - run:
@@ -134,8 +134,7 @@ jobs:
     - *attach_workspace
     - restore_cache:
         keys:
-        - node_modules/
-        - packages/patternfly-3/node_modules
+        - *js_deps_cache_key
     - run:
         name: Install v3 deps
         command: |
