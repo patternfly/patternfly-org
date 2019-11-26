@@ -243,14 +243,6 @@ module.exports = {
         `
       }
     },
-    {
-      resolve: 'gatsby-plugin-s3',
-      options: {
-        bucketName: 'patternfly-org-preview',
-        protocol: 'https',
-        hostname: 'www.patternfly.org'
-      },
-    },
     // We used to use service workers pre-refactor in gatsby-plugin-offline.
     // We don't need service workers except for a high Lighthouse score. Kill them.
     'gatsby-plugin-remove-serviceworker',

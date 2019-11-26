@@ -170,6 +170,12 @@ jobs:
     steps:
     - *attach_workspace
     - run:
+        name: Combine sites
+        command: node combine-sites.js
+    - run:
+        name: Check size of docs
+        command: du -sh public
+    - run:
         name: Upload docs
         command: .circleci/upload-preview.sh
   test_org_a11y:

@@ -18,7 +18,6 @@ _build
 *.map
 _site
 .DS_Store
-out
 coverage
 public
 static

@@ -34,7 +34,6 @@
     "gatsby-cli": "2.8.8",
     "gatsby-plugin-google-analytics": "^2.1.24",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
-    "gatsby-plugin-s3": "^0.3.2",
     "gatsby-plugin-sitemap": "^2.2.19",
     "gatsby-remark-copy-linked-files": "^2.1.28",
     "gatsby-source-filesystem": "^2.1.22",
