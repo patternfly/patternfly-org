@@ -5,6 +5,7 @@ version: 2
 references:
   js_deps_paths: &js_deps_paths
   - node_modules/
+  - packages/patternfly-3/node_modules/
   - packages/patternfly-4/node_modules/
   - packages/patternfly-4/gatsby-theme-patternfly-org/node_modules/
   - packages/patternfly-4/node_modules/
@@ -31,14 +32,18 @@ workflows:
     - build_org:
         requires:
         - install
+    - build_v3:
+        requires:
+        - install
     - upload_previews:
         requires:
         - build_react
         - build_next
         - build_org
-    - test_org_a11y:
-        requires:
-        - build_org
+        - build_v3
+    # - test_org_a11y:
+    #     requires:
+    #     - build_org
     - deploy:
         requires:
         - build_react
@@ -85,7 +90,7 @@ jobs:
     - persist_to_workspace:
         root: ~/project
         paths: 
-        - patternfly-org-demo/patternfly-next/public/
+        - packages/patternfly-4/patternfly-next/public/
   build_react:
     docker:
     - image: circleci/node:12
@@ -100,7 +105,27 @@ jobs:
     - persist_to_workspace:
         root: ~/project
         paths: 
-        - patternfly-org-demo/patternfly-react/packages/patternfly-4/react-docs/public/
+        - packages/patternfly-4/patternfly-react/packages/patternfly-4/react-docs/public/
+  build_v3:
+    docker:
+    - image: circleci/ruby:latest-node
+    steps:
+    - *attach_workspace
+    - restore_cache:
+        keys:
+        - *js_deps_cache_key
+    - run:
+        name: Install v3 deps
+        command: |
+          cd packages/patternfly-3
+          bundle install
+    - run:
+        name: Build v3 docs
+        command: yarn build:org:v3
+    - persist_to_workspace:
+        root: ~/project
+        paths: 
+        - packages/patternfly-3/_site
   build_org:
     machine:
       image: circleci/classic:latest
@@ -131,8 +156,8 @@ jobs:
     - persist_to_workspace:
         root: ~/project
         paths: 
-        - patternfly-org-demo/public/
-        - patternfly-org-demo/.cache/
+        - packages/patternfly-4/public/
+        - packages/patternfly-4/.cache/
   upload_previews:
     docker:
     - image: circleci/node:12
@@ -153,7 +178,7 @@ jobs:
         name: Test a11y
         command: yarn test:org || true
     - store_artifacts:
-        path: patternfly-org-demo/coverage/
+        path: packages/patternfly-4/coverage/
   deploy:
     docker:
     - image: circleci/node:12
@@ -176,4 +201,4 @@ jobs:
         command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
     - run:
         name: Deploy to NPM
-        command: yarn semantic-release
+        command: yarn run lerna publish --yes

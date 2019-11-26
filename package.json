@@ -20,6 +20,7 @@
     "serve:org": "yarn workspace patternfly-org-4 serve",
     "serve:org:prefix": "yarn workspace patternfly-org-4 serve:prefix",
     "test:org": "yarn workspace patternfly-org-4 test:a11y:ci",
+    "build:org:v3": "yarn workspace patternfly-org-3 build",
     "start:pf3": "yarn workspace patternfly-org-3 develop",
     "start:pf4": "yarn develop:org"
   },
