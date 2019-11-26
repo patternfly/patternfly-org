@@ -67,6 +67,7 @@ workflows:
         - build_react
         - build_next
         - build_org
+        - build_v3
         filters:
           branches:
             only: master
@@ -116,7 +117,7 @@ jobs:
     - *attach_workspace
     - restore_cache:
         keys:
-        - *js_deps_cache_key
+        - node_modules/
     - *install_node
     - *install_yarn
     - run:
@@ -133,7 +134,8 @@ jobs:
     - *attach_workspace
     - restore_cache:
         keys:
-        - *js_deps_cache_key
+        - node_modules/
+        - packages/patternfly-3/node_modules
     - run:
         name: Install v3 deps
         command: |
