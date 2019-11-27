@@ -10,6 +10,9 @@
       "conventionalCommits": true
     }
   },
-  "packages": ["packages/patternfly-4/gatsby-theme-patternfly-org"],
+  "packages": [
+    "packages/patternfly-4",
+    "packages/patternfly-4/gatsby-theme-patternfly-org"
+  ],
   "version": "independent"
 }
