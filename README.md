@@ -20,7 +20,6 @@ Note: If repo is cloned without submodules, use the following commands to update
 Install the site dependencies and build it using yarn:
 
     yarn install
-    yarn prebuild
 
 The packages/patternfly-3 site is generated using [Jekyll](http://jekyllrb.com/).
 The packages/patternfly-4 site is generated using [Gatsby](https://www.gatsbyjs.org/).
