@@ -228,4 +228,4 @@ jobs:
           git config user.email patternfly-build@redhat.com
     - run:
         name: Deploy to NPM
-        command: yarn run lerna publish --yes
+        command: .circleci/release.sh
