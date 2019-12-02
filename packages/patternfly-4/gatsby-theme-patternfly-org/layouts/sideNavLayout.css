@@ -103,8 +103,11 @@
 .pf-site-search:focus-within {
   background: #fff;
 }
+.pf-site-search svg path {
+  fill: var(--pf-global--Color--light-100);
+}
 .pf-site-search:focus-within svg path {
-  fill: #aaacb0;
+  fill: #fff;
 }
 .pf-site-search .pf-c-form__label {
   --pf-c-form__label--FontSize: var(--pf-global--FontSize--lg);
@@ -123,5 +126,21 @@
 .pf-site-search #global-search-input::-moz-placeholder,
 .pf-site-search #global-search-input:-ms-input-placeholder,
 .pf-site-search #global-search-input:-ms-input-placeholder {
-  color: #d2d3d5;
+  color: var(--pf-global--Color--light-100);
+}
+
+.ws-org-version-toggle {
+  color: var(--pf-global--Color--light-100);
+}
+.ws-org-version-toggle::before {
+  border: none;
+}
+.ws-org-version-toggle:hover {
+  border-bottom: 1px solid #fff;
+}
+.ws-org-version-toggle-expanded::before {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid #fff;
 }

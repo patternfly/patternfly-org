@@ -53,6 +53,7 @@
     {
       "name": "2019.07",
       "date": "2019-09-10",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "2.31.6",
         "@patternfly/react-charts": "4.7.9",
@@ -69,6 +70,7 @@
     {
       "name": "2019.06",
       "date": "2019-08-13",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "2.26.1",
         "@patternfly/react-charts": "4.7.9",
@@ -85,6 +87,7 @@
     {
       "name": "2019.05",
       "date": "2019-07-24",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "2.23.0",
         "@patternfly/react-charts": "4.7.1",
@@ -101,6 +104,7 @@
     {
       "name": "2019.04",
       "date": "2019-07-02",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "2.17.0",
         "@patternfly/react-charts": "4.4.7",
@@ -117,6 +121,7 @@
     {
       "name": "2019.03",
       "date": "2019-06-11",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "2.17.0",
         "@patternfly/react-charts": "4.1.5",
@@ -131,6 +136,7 @@
     {
       "name": "2019.02",
       "date": "2019-06-05",
+      "hidden": true,
       "versions": {
         "@patternfly/patternfly": "2.17.0",
         "@patternfly/react-charts": "3.6.5",

@@ -4,37 +4,43 @@
  *
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
-import React, { useEffect } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import React, { useEffect, useState, useContext } from 'react';
+import { graphql, useStaticQuery, withPrefix } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
-import { Page, PageHeader, PageSidebar, Toolbar, ToolbarGroup, ToolbarItem, Form, TextInput, Brand } from '@patternfly/react-core';
-import { SearchIcon } from '@patternfly/react-icons';
+import { Page, PageHeader, PageSidebar, Toolbar, ToolbarGroup, ToolbarItem, Form, TextInput, Brand, Dropdown, DropdownToggle, DropdownItem, DropdownGroup } from '@patternfly/react-core';
+import { SearchIcon, CaretDownIcon } from '@patternfly/react-icons';
 import SideNav from '../components/sideNav';
 import TopNav from '../components/topNav';
 import Banner from '../components/banner';
 import Footer from '../components/footer';
 import logo from '../images/logo.svg';
+import GlobalContext from '../components/globalContext';
 import './sideNavLayout.css';
 
 // ParityComponent: aboutmodal <=> aboutmodalbox
-const SideNavLayout = ({ children, location, context, hideSideNav = false, showBanner = false, parityComponent }) => {
-  let docSearchInit = false;
-  // Initialize Algogia
+const SideNavLayout = ({
+  children,
+  location,
+  context,
+  parityComponent,
+  hideSideNav = false,
+  showBanner = false
+}) => {
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const versions = useContext(GlobalContext).getVersions();
   useEffect(() => {
-    if (!docSearchInit && typeof window !== 'undefined' && window.docsearch) {
+    if (typeof window !== 'undefined' && window.docsearch) {
       window.docsearch({
         apiKey: '06941733239da4f8617d272cf2ed4d5c',
         indexName: 'patternfly',
         inputSelector: '#global-search-input',
         debug: false // Set debug to true if you want to inspect the dropdown
       });
-      docSearchInit = true;
-    } else {
-      console.warn('Search has failed to load');
+      console.log('docsearch done');
     }
-  });
-
+  }, []);
+  
   // Put queries for Top and Side navs here for performance
   // We should consider passing down the `sitePlugin` data in pageContext
   // rather than fetching the GraphQL here
@@ -113,11 +119,54 @@ const SideNavLayout = ({ children, location, context, hideSideNav = false, showB
           sideNavContexts={sideNav}
           parityComponent={parityComponent} />}
         className="ws-page-sidebar" />;
-  
+
+  const latestVersion = versions.Releases.find(version => version.latest);
+  const dropdownToggle = (
+    <DropdownToggle
+      className={`ws-org-version-toggle${isDropdownOpen ? '-expanded': ''}`}
+      onToggle={() => setDropdownOpen(!isDropdownOpen)}
+      iconComponent={CaretDownIcon}
+      >
+      {!versions.Releases.map(version => version.name).includes(withPrefix(''))
+        ? `Release ${latestVersion.name}`
+        : withPrefix('')}
+    </DropdownToggle>
+  );
+  const dropdownItems = [
+    <DropdownGroup key="latest" label="Latest">
+      <DropdownItem>
+        Release {latestVersion.name}
+      </DropdownItem>
+    </DropdownGroup>,
+    <DropdownGroup key="Previous" label="Previous releases">
+      {Object.values(versions.Releases)
+        .filter(version => !version.hidden && !version.latest)
+        .map(version =>
+          <DropdownItem
+            key={version.name}
+            component={
+              <a href={`/${location.pathname.replace(withPrefix(''), `${version.name}/`)}`}
+                className="pf-c-nav__link">
+                Release {version.name}
+              </a>
+            } />
+        )}
+    </DropdownGroup>
+  ];
+
   const PageToolbar = pageSource === 'org'
     ? (
       <Toolbar>
         <ToolbarGroup>
+          <ToolbarItem>
+            <Dropdown
+              className="ws-org-version-switcher"
+              onSelect={() => setDropdownOpen(!isDropdownOpen)}
+              toggle={dropdownToggle}
+              isOpen={isDropdownOpen}
+              dropdownItems={dropdownItems}
+            />
+          </ToolbarItem>
           <ToolbarItem>
             {/* We can afford to use style tags because this is only on the site ONCE */}
             <Form

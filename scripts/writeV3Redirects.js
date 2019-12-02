@@ -1,12 +1,8 @@
 const fs = require('fs-extra');
 const glob = require('glob');
 
-const v3_from = 'packages/patternfly-3/_site';
-const v4_from = 'packages/patternfly-4/public';
-
-const outDir = 'public';
+const outDir = 'build/patternfly-org';
 const v3_to = `${outDir}/v3`;
-const v4_to = `${outDir}/v4`;
 const writeRedirect = (file, to) => {
   fs.ensureFileSync(file);
   fs.writeFileSync(file,
@@ -20,20 +16,6 @@ const writeRedirect = (file, to) => {
 If you are not redirected automatically, click <a href='${to}'>here.</a>
 `);
 }
-
-// Clean last build
-fs.removeSync(outDir);
-
-// Copy PF3 files into /v3
-if (!process.argv.includes('--skip-v3')) {
-  fs.copySync(v3_from, v3_to);
-  console.log(`Copied pf3 build into ${v3_to}`);
-}
-
-// Copy PF4 files into /v4
-fs.copySync(v4_from, v4_to);
-
-console.log(`Copied pf4 build into ${v4_to}`);
 
 // Write static files
 writeRedirect(`${outDir}/index.html`, '/v4/');
