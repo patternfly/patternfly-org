@@ -224,7 +224,7 @@ jobs:
         command: node writeV3Redirects.js
     - run:
         name: Write prefixed version
-        command: node writeVersionPrefix.js
+        command: node scripts/writeVersionPrefix.js
     - run:
         name: Check size of docs
         command: du -sh build/patternfly-org/*
