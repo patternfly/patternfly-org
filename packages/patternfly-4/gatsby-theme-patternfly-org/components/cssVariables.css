@@ -1,0 +1,10 @@
+.ws-color-box {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  border: 1px solid #72767b;
+}
+
+.ws-td-text {
+  font-size: 14px;
+}

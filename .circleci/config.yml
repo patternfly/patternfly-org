@@ -1,29 +1,233 @@
 version: 2
+
+# Adapted from https://github.com/circleci/circleci-docs/blob/master/.circleci/config.yml
+# I'd love to find docs on this syntax.
+references:
+  js_deps_paths: &js_deps_paths
+  - node_modules/
+  - packages/patternfly-3/node_modules/
+  - packages/patternfly-4/node_modules/
+  - packages/patternfly-4/gatsby-theme-patternfly-org/node_modules/
+  - packages/patternfly-4/node_modules/
+  - packages/patternfly-4/patternfly-next/node_modules/
+  - packages/patternfly-4/patternfly-react/packages/patternfly-4/react-docs/node_modules/
+  # Excluded: react-docs/plugins
+  js_deps_cache_key: &js_deps_cache_key
+    js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
+  attach_workspace: &attach_workspace
+    attach_workspace:
+      at: ~/project
+  install_node: &install_node
+    run:
+      name: Install node@12 (need right version for `yarn`)
+      command: |
+        set +e             
+        curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
+        export NVM_DIR="/opt/circleci/.nvm"
+        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+        nvm install v12
+        nvm alias default v12
+        
+        # Each step uses the same `$BASH_ENV`, so need to modify it
+        echo 'export NVM_DIR="/opt/circleci/.nvm"' >> $BASH_ENV
+        echo "[ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\"" >> $BASH_ENV
+  install_yarn: &install_yarn
+    run:
+      name: Install yarn
+      command: curl -o- -L https://yarnpkg.com/install.sh | bash
+
+workflows:
+  version: 2
+  install_build_deploy:
+    jobs:
+    - install
+    - build_next:
+        requires:
+        - install
+    - build_react:
+        requires:
+        - install
+    - build_org:
+        requires:
+        - install
+    - build_v3:
+        requires:
+        - install
+    - upload_previews:
+        requires:
+        - build_react
+        - build_next
+        - build_org
+        - build_v3
+    # - test_org_a11y:
+    #     requires:
+    #     - build_org
+    - deploy:
+        requires:
+        - build_react
+        - build_next
+        - build_org
+        - build_v3
+        filters:
+          branches:
+            only: master
 jobs:
-  build:
-    branches:
-        ignore:
-          - master
+  install:
     docker:
-      # Use an old ruby version that works
-      - image: circleci/ruby:2.4.1-jessie-node
-    working_directory: ~/repo
+    - image: circleci/node:12
     steps:
-      - checkout
-      - run:
-          name: Update Node.js and npm
-          command: |
-            curl -sSL "https://nodejs.org/dist/v8.15.0/node-v8.15.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v8.15.0-linux-x64/bin/node
-            curl https://www.npmjs.com/install.sh | sudo bash
-      - run:
-          name: Install with yarn 1.7.0
-          command: |
-            curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.7.0
-            export PATH=$HOME/.yarn/bin:$PATH
-            yarn install
-      - run:
-          name: Build Site
-          command: yarn build
-      - run:
-          name: Deploy Docs
-          command: if [ -n "$CIRCLE_PULL_REQUEST" ]; then .circleci/upload_preview.sh; fi
+    - checkout
+    - run:
+        name: Pull Submodules
+        command: |
+          git submodule init
+          git submodule update
+    - persist_to_workspace:
+        root: ~/project
+        paths: 
+        - "*"
+    - restore_cache:
+        keys:
+        - *js_deps_cache_key
+    - run:
+        name: Conditional install
+        command: if [ ! -d node_modules ]; then yarn install --frozen-lockfile; fi
+    - save_cache:
+        paths: *js_deps_paths
+        key: *js_deps_cache_key
+  build_next:
+    docker:
+    - image: circleci/node:12
+    steps:
+    - *attach_workspace
+    - restore_cache:
+        keys:
+        - *js_deps_cache_key
+    - run:
+        name: Build patternfly-next docs
+        command: yarn build:next
+    - persist_to_workspace:
+        root: ~/project
+        paths: 
+        - build
+  build_react:
+    machine:
+      image: circleci/classic:latest
+    steps:
+    - *attach_workspace
+    - restore_cache:
+        keys:
+        - *js_deps_cache_key
+    - *install_node
+    - *install_yarn
+    - run:
+        name: Build patternfly-react docs
+        command: ~/.yarn/bin/yarn build:react
+    - persist_to_workspace:
+        root: ~/project
+        paths: 
+        - build
+  build_v3:
+    docker:
+    - image: circleci/ruby:latest-node
+    steps:
+    - *attach_workspace
+    - restore_cache:
+        keys:
+        - *js_deps_cache_key
+    - run:
+        name: Install v3 deps
+        command: |
+          cd packages/patternfly-3
+          bundle install
+    - run:
+        name: Build v3 docs
+        command: yarn build:org:v3
+    - persist_to_workspace:
+        root: ~/project
+        paths: 
+        - build
+  build_org:
+    machine:
+      image: circleci/classic:latest
+    steps:
+    - *attach_workspace
+    - restore_cache:
+        keys:
+        - *js_deps_cache_key
+    - *install_node
+    - *install_yarn
+    - run:
+        name: Build patternfly.org docs
+        command: ~/.yarn/bin/yarn build:org:prefix
+    - persist_to_workspace:
+        root: ~/project
+        paths: 
+        - build
+  upload_previews:
+    docker:
+    - image: circleci/node:12
+    steps:
+    - *attach_workspace
+    - restore_cache:
+        keys:
+        - *js_deps_cache_key
+    - run:
+        name: Write redirects
+        command: node scripts/writeV3Redirects.js --skip-v3
+    - run:
+        name: Check size of docs
+        command: du -sh build/*
+    - run:
+        name: Upload docs
+        command: .circleci/upload-preview.sh
+  test_org_a11y:
+    docker:
+    - image: circleci/node:12-browsers
+    steps:
+    - *attach_workspace
+    - restore_cache:
+        keys:
+        - *js_deps_cache_key
+    - run:
+        name: Test a11y
+        command: yarn test:org || true
+    - store_artifacts:
+        path: packages/patternfly-4/coverage/
+  deploy:
+    docker:
+    - image: circleci/node:12
+    steps:
+    - *attach_workspace
+    - restore_cache:
+        keys:
+        - *js_deps_cache_key
+    - run:
+        name: Install AWS CLI
+        command: |
+          sudo apt-get update
+          sudo apt-get install -y -qq python-pip libpython-dev
+          pip install --user awscli
+    - run:
+        name: Write redirects
+        command: node scripts/writeV3Redirects.js
+    - run:
+        name: Write prefixed version
+        command: node scripts/writeVersionPrefix.js
+    - run:
+        name: Check size of docs
+        command: du -sh build/patternfly-org/*
+    - run:
+        name: Sync to staging
+        command: .circleci/upload-staging.sh
+    - run:
+        name: Avoid Unknown Host for github.com
+        command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+    - run:
+        name: Set git user
+        command: |
+          git config user.name patternfly-build
+          git config user.email patternfly-build@redhat.com
+    - run:
+        name: Deploy to NPM
+        command: .circleci/release.sh

@@ -1,0 +1,65 @@
+.pf-c-card:not(.small-card-icon) {
+  border: 2px solid #d2d2d2;
+  box-shadow: unset;
+  height: 277px;
+}
+.pf-c-card__head {
+  position: relative;
+}
+.pf-c-card__head:first-child {
+  padding-top: 24px !important;
+}
+.pf-c-card__head:not(:last-child) {
+  padding-bottom: 24px !important;
+}
+.pf-c-card__head .pf-c-card.small-card-icon {
+  position: absolute;
+  left: -2px;
+  padding: 8px 18px;
+  background-color: #fff;
+}
+.pf-c-card__head div.level {
+  margin-left: auto;
+  font-size: 12px;
+  color: #737679;
+}
+.pf-c-card__head div.level > svg {
+  margin-right: 8px;
+}
+
+.pf-c-card__body {
+  font-size: 14px;
+}
+.pf-c-card__body .pf-org-card-body__time {
+  color: #737679;
+  font-size: 12px;
+  padding-bottom: 12px;
+}
+.pf-c-card__body .pf-org-card-body__time > svg {
+  margin-right: 8px;
+}
+.pf-c-card__footer .pf-c-button.pf-m-link {
+  padding-left: 0;
+  font-weight: bold;
+}
+.pf-c-card__footer .pf-c-button.pf-m-link > svg {
+  margin-left: 8px;
+}
+.level-beginner {
+  color: #5ba352;
+}
+.level-intermediate {
+  color: #f0ab00;
+}
+.level-advanced {
+  color: #a30000;
+}
+.training-basics {
+  color: #ec7a08;
+}
+.training-components {
+  color: #a18fff;
+}
+.training-charts {
+  color: #6ec664
+}

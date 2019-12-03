@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/patternfly/patternfly-org.svg?branch=master)](https://travis-ci.org/patternfly/patternfly-org)
-
 # patternfly-org
 
 The PatternFly Org is the source for the official documentation for PatternFly 3 and PatternFly 4.
@@ -22,7 +20,6 @@ Note: If repo is cloned without submodules, use the following commands to update
 Install the site dependencies and build it using yarn:
 
     yarn install
-    yarn prebuild
 
 The packages/patternfly-3 site is generated using [Jekyll](http://jekyllrb.com/).
 The packages/patternfly-4 site is generated using [Gatsby](https://www.gatsbyjs.org/).
@@ -42,4 +39,4 @@ You can test the full production build:
 
 ### Deploy
 
-The site is deployed using GitHub pages to the patternfly/patternfly.github.io repository. A CNAME file is added to the root which associates the GitHub pages url with https://www.patternfly.org
+The site is deployed first to a staging S3 bucket at staging.patternfly.org, and then to another bucket at patternfly.org.

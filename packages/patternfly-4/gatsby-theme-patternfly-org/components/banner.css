@@ -1,0 +1,6 @@
+@media (max-width: 916px) {
+  #ws-banner-text {
+    display: none;
+    visibility: hidden;
+  }
+}
