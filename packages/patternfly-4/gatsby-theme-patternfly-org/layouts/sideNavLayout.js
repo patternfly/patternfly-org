@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 import React, { useEffect, useState, useContext } from 'react';
-import { graphql, useStaticQuery, withPrefix } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 import { Page, PageHeader, PageSidebar, Toolbar, ToolbarItem, Form, TextInput, Brand, Dropdown, DropdownToggle, DropdownItem, DropdownGroup } from '@patternfly/react-core';
@@ -135,7 +135,12 @@ const SideNavLayout = ({
     <DropdownItem
       key={version.name}
       component={
-        <a href={version.latest ? withPrefix('') : location.pathname.replace(withPrefix(''), `/${version.name}/`)}
+        <a href={location.pathname.replace(
+            location.pathname.split('/')[1],
+            version.latest
+              ? 'v4'
+              : version.name
+            )}
           className="pf-c-nav__link">
           Release {version.name}
         </a>

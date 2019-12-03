@@ -2,6 +2,7 @@
 import React from 'react';
 import staticVersions from 'gatsby-theme-patternfly-org/versions.json';
 
+const initialVersions = {...staticVersions};
 let versions = staticVersions;
 
 if (typeof window !== 'undefined' && window.fetch) {
@@ -15,6 +16,6 @@ function getVersions() {
 }
 
 export default React.createContext({
-  initialVersions: staticVersions,
+  initialVersions,
   getVersions
 });

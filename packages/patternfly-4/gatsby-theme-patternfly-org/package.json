@@ -25,12 +25,5 @@
     "prismjs": "^1.17.1",
     "react-helmet": "^5.2.1",
     "react-live": "^2.2.0"
-  },
-  "devDependencies": {
-    "@semantic-release/git": "^7.0.18",
-    "@semantic-release/npm": "^5.3.4"
-  },
-  "scripts": {
-    "semantic-release": "semantic-release"
   }
 }
