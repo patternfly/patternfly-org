@@ -311,7 +311,6 @@ export const pageQuery = graphql`
         name
         props {
           name
-          description
           required
           type {
             name
