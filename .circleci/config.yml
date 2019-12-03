@@ -174,7 +174,7 @@ jobs:
         - *js_deps_cache_key
     - run:
         name: Write redirects
-        command: node writeV3Redirects.js --skip-v3
+        command: node scripts/writeV3Redirects.js --skip-v3
     - run:
         name: Check size of docs
         command: du -sh build/*
