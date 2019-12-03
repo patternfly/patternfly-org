@@ -28,7 +28,8 @@ const SideNavLayout = ({
   showBanner = false
 }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const versions = useContext(GlobalContext).getVersions();
+  const { initialVersion, getVersions } = useContext(GlobalContext);
+  const versions = getVersions();
   useEffect(() => {
     if (typeof window !== 'undefined' && window.docsearch) {
       window.docsearch({
@@ -126,14 +127,14 @@ const SideNavLayout = ({
       onToggle={() => setDropdownOpen(!isDropdownOpen)}
       iconComponent={CaretDownIcon}
       >
-      Release {withPrefix('').substr(1) || 'Dev'}
+      Release {initialVersion.name}
     </DropdownToggle>
   );
   const getDropdownItem = version => (
     <DropdownItem
       key={version.name}
       component={
-        <a href={location.pathname.replace(withPrefix(''), `/${version.latest ? 'v4' : version.name}/`)}
+        <a href={version.latest ? withPrefix('') : location.pathname.replace(withPrefix(''), `/${version.name}/`)}
           className="pf-c-nav__link">
           Release {version.name}
         </a>
