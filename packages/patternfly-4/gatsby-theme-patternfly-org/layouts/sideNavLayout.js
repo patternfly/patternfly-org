@@ -28,7 +28,8 @@ const SideNavLayout = ({
   showBanner = false
 }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const { initialVersion, getVersions } = useContext(GlobalContext);
+  const { initialVersions, getVersions } = useContext(GlobalContext);
+  const initialVersion = initialVersions.Releases.find(release => release.latest);
   const versions = getVersions();
   useEffect(() => {
     if (typeof window !== 'undefined' && window.docsearch) {
