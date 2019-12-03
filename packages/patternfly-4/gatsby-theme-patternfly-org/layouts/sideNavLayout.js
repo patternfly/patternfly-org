@@ -37,7 +37,6 @@ const SideNavLayout = ({
         inputSelector: '#global-search-input',
         debug: false // Set debug to true if you want to inspect the dropdown
       });
-      console.log('docsearch done');
     }
   }, []);
   
@@ -127,30 +126,26 @@ const SideNavLayout = ({
       onToggle={() => setDropdownOpen(!isDropdownOpen)}
       iconComponent={CaretDownIcon}
       >
-      {!versions.Releases.map(version => version.name).includes(withPrefix(''))
-        ? `Release ${latestVersion.name}`
-        : withPrefix('')}
+      Release {withPrefix('')}
     </DropdownToggle>
+  );
+  const getDropdownItem = version => (
+    <DropdownItem
+      component={
+        <a href={`/${location.pathname.replace(withPrefix(''), `${version.name}/`)}`}
+          className="pf-c-nav__link">
+          Release {version.name}
+        </a>
+      } />
   );
   const dropdownItems = [
     <DropdownGroup key="latest" label="Latest">
-      <DropdownItem>
-        Release {latestVersion.name}
-      </DropdownItem>
+      {getDropdownItem(latestVersion)}
     </DropdownGroup>,
     <DropdownGroup key="Previous" label="Previous releases">
       {Object.values(versions.Releases)
         .filter(version => !version.hidden && !version.latest)
-        .map(version =>
-          <DropdownItem
-            key={version.name}
-            component={
-              <a href={`/${location.pathname.replace(withPrefix(''), `${version.name}/`)}`}
-                className="pf-c-nav__link">
-                Release {version.name}
-              </a>
-            } />
-        )}
+        .map(getDropdownItem)}
     </DropdownGroup>
   ];
 
