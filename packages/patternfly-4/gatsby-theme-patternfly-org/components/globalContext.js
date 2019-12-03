@@ -15,6 +15,6 @@ function getVersions() {
 }
 
 export default React.createContext({
-  initialVersion: staticVersions,
+  initialVersions: staticVersions,
   getVersions
 });
