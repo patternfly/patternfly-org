@@ -23,9 +23,9 @@ fi
 DEPLOY_DOMAIN_NEXT="https://${DEPLOY_SUBDOMAIN}-next.surge.sh"
 DEPLOY_DOMAIN_REACT="https://${DEPLOY_SUBDOMAIN}-react.surge.sh"
 DEPLOY_DOMAIN_ORG="https://${DEPLOY_SUBDOMAIN}-org.surge.sh"
-npx surge --project packages/patternfly-4/patternfly-next/public/ --domain ${DEPLOY_DOMAIN_NEXT}
-npx surge --project packages/patternfly-4/patternfly-react/packages/patternfly-4/react-docs/public/ --domain ${DEPLOY_DOMAIN_REACT}
-npx surge --project public --domain ${DEPLOY_DOMAIN_ORG}
+npx surge --project build/patternfly-next --domain ${DEPLOY_DOMAIN_NEXT}
+npx surge --project build/patternfly-react --domain ${DEPLOY_DOMAIN_REACT}
+npx surge --project build/patternfly-org --domain ${DEPLOY_DOMAIN_ORG}
 
 if [ -n "${PR_NUM}" ] && [ -z "${ALREADY_DEPLOYED}" ] # Leave a Github comment
 then

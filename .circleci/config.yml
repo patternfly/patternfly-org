@@ -109,7 +109,7 @@ jobs:
     - persist_to_workspace:
         root: ~/project
         paths: 
-        - packages/patternfly-4/patternfly-next/public/
+        - build
   build_react:
     machine:
       image: circleci/classic:latest
@@ -126,7 +126,7 @@ jobs:
     - persist_to_workspace:
         root: ~/project
         paths: 
-        - packages/patternfly-4/patternfly-react/packages/patternfly-4/react-docs/public/
+        - build
   build_v3:
     docker:
     - image: circleci/ruby:latest-node
@@ -146,7 +146,7 @@ jobs:
     - persist_to_workspace:
         root: ~/project
         paths: 
-        - packages/patternfly-3/_site
+        - build
   build_org:
     machine:
       image: circleci/classic:latest
@@ -163,8 +163,7 @@ jobs:
     - persist_to_workspace:
         root: ~/project
         paths: 
-        - packages/patternfly-4/public/
-        - packages/patternfly-4/.cache/
+        - build
   upload_previews:
     docker:
     - image: circleci/node:12
@@ -174,11 +173,11 @@ jobs:
         keys:
         - *js_deps_cache_key
     - run:
-        name: Combine sites
-        command: node combine-sites.js --skip-redirects --skip-v3
+        name: Write redirects
+        command: node scripts/writeV3Redirects.js --skip-v3
     - run:
         name: Check size of docs
-        command: du -sh public
+        command: du -sh build/*
     - run:
         name: Upload docs
         command: .circleci/upload-preview.sh
@@ -204,21 +203,6 @@ jobs:
         keys:
         - *js_deps_cache_key
     - run:
-        name: Install AWS CLI
-        command: |
-          sudo apt-get update
-          sudo apt-get install -y -qq python-pip libpython-dev
-          pip install --user awscli
-    - run:
-        name: Combine sites
-        command: node combine-sites.js
-    - run:
-        name: Check size of docs
-        command: du -sh public
-    - run:
-        name: Sync to staging
-        command: .circleci/upload-staging.sh
-    - run:
         name: Avoid Unknown Host for github.com
         command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
     - run:
@@ -229,3 +213,22 @@ jobs:
     - run:
         name: Deploy to NPM
         command: .circleci/release.sh
+    - run:
+        name: Install AWS CLI
+        command: |
+          sudo apt-get update
+          sudo apt-get install -y -qq python-pip libpython-dev
+          pip install --user awscli
+    - run:
+        name: Write redirects
+        command: node writeV3Redirects.js
+    - run:
+        name: Write prefixed version
+        command: node scripts/writeVersionPrefix.js
+    - run:
+        name: Check size of docs
+        command: du -sh build/patternfly-org/*
+    - run:
+        name: Sync to staging
+        command: .circleci/upload-staging.sh
+
