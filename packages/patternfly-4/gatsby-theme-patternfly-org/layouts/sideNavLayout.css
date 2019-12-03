@@ -129,6 +129,9 @@
   color: var(--pf-global--Color--light-100);
 }
 
+.ws-org-version-switcher {
+  margin-right: 8px;
+}
 .ws-org-version-toggle {
   color: var(--pf-global--Color--light-100);
 }

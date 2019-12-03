@@ -8,7 +8,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { graphql, useStaticQuery, withPrefix } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
-import { Page, PageHeader, PageSidebar, Toolbar, ToolbarGroup, ToolbarItem, Form, TextInput, Brand, Dropdown, DropdownToggle, DropdownItem, DropdownGroup } from '@patternfly/react-core';
+import { Page, PageHeader, PageSidebar, Toolbar, ToolbarItem, Form, TextInput, Brand, Dropdown, DropdownToggle, DropdownItem, DropdownGroup } from '@patternfly/react-core';
 import { SearchIcon, CaretDownIcon } from '@patternfly/react-icons';
 import SideNav from '../components/sideNav';
 import TopNav from '../components/topNav';
@@ -126,13 +126,14 @@ const SideNavLayout = ({
       onToggle={() => setDropdownOpen(!isDropdownOpen)}
       iconComponent={CaretDownIcon}
       >
-      Release {withPrefix('')}
+      Release {withPrefix('').substr(1) || 'Dev'}
     </DropdownToggle>
   );
   const getDropdownItem = version => (
     <DropdownItem
+      key={version.name}
       component={
-        <a href={`/${location.pathname.replace(withPrefix(''), `${version.name}/`)}`}
+        <a href={location.pathname.replace(withPrefix(''), `/${version.latest ? 'v4' : version.name}/`)}
           className="pf-c-nav__link">
           Release {version.name}
         </a>
@@ -152,49 +153,47 @@ const SideNavLayout = ({
   const PageToolbar = pageSource === 'org'
     ? (
       <Toolbar>
-        <ToolbarGroup>
-          <ToolbarItem>
-            <Dropdown
-              className="ws-org-version-switcher"
-              onSelect={() => setDropdownOpen(!isDropdownOpen)}
-              toggle={dropdownToggle}
-              isOpen={isDropdownOpen}
-              dropdownItems={dropdownItems}
-            />
-          </ToolbarItem>
-          <ToolbarItem>
-            {/* We can afford to use style tags because this is only on the site ONCE */}
-            <Form
-              onSubmit={event => {
-                event.preventDefault();
-                return false;
-              }}
+        <ToolbarItem>
+          <Dropdown
+            className="ws-org-version-switcher"
+            onSelect={() => setDropdownOpen(!isDropdownOpen)}
+            toggle={dropdownToggle}
+            isOpen={isDropdownOpen}
+            dropdownItems={dropdownItems}
+          />
+        </ToolbarItem>
+        <ToolbarItem>
+          {/* We can afford to use style tags because this is only on the site ONCE */}
+          <Form
+            onSubmit={event => {
+              event.preventDefault();
+              return false;
+            }}
+            style={{
+              position: 'relative',
+            }}
+            className="pf-site-search"
+          >
+            <TextInput
+              type="text"
+              id="global-search-input"
+              name="global-search-input"
+              placeholder="Search"
               style={{
-                position: 'relative',
+                color: '#fff',
+                backgroundColor: 'var(--pf-global--BackgroundColor--dark-100)',
+                border: 0,
+                paddingLeft: '26px'
               }}
-              className="pf-site-search"
-            >
-              <TextInput
-                type="text"
-                id="global-search-input"
-                name="global-search-input"
-                placeholder="Search"
-                style={{
-                  color: '#fff',
-                  backgroundColor: 'var(--pf-global--BackgroundColor--dark-100)',
-                  border: 0,
-                  paddingLeft: '26px'
-                }}
-              />
-              <SearchIcon
-                style={{
-                  position: 'absolute',
-                  top: '10px',
-                  left: '4px'
-                }} />
-            </Form>
-          </ToolbarItem>
-        </ToolbarGroup>
+            />
+            <SearchIcon
+              style={{
+                position: 'absolute',
+                top: '10px',
+                left: '4px'
+              }} />
+          </Form>
+        </ToolbarItem>
       </Toolbar>
     )
     : undefined;
