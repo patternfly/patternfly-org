@@ -152,13 +152,6 @@ class Footer extends React.Component {
                       >
                         Mailing list
                       </NavItem>
-                      <NavItem
-                        to="https://blog.patternfly.org/"
-                        target="top"
-                        aria-label="View the Patternfly Blog"
-                      >
-                        Blog
-                      </NavItem>
                     </NavList>
                   </Nav>
                 </GridItem>

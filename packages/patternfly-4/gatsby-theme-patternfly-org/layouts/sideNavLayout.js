@@ -231,7 +231,7 @@ const SideNavLayout = ({
   // Wrap in a div to force scrolling the same content
   // TODO: SEO
   return (
-    <div className="ws-site-root">
+    <div>
       <Helmet>
         <title>{title}</title>
       </Helmet>

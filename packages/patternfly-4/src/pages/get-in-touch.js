@@ -1,6 +1,6 @@
 import React from 'react';
 import SideNavLayout from 'gatsby-theme-patternfly-org/layouts/sideNavLayout';
-import { ChatIcon, QuestionIcon, BlogIcon, MailBulkIcon } from '@patternfly/react-icons';
+import { ChatIcon, QuestionIcon, CatalogIcon, MailBulkIcon } from '@patternfly/react-icons';
 import { Grid, GridItem, PageSection, PageSectionVariants, Split, SplitItem } from '@patternfly/react-core';
 import AutoLinkHeader from 'gatsby-theme-patternfly-org/components/autoLinkHeader';
 import "./get-in-touch.css";
@@ -47,10 +47,10 @@ const GetInTouch = ({ location }) => (
         </GridItem>
         <GridItem>
           <Split>
-            <SplitItem style={{ marginRight: '12px' }}><h3><BlogIcon /></h3></SplitItem>
+            <SplitItem style={{ marginRight: '12px' }}><h3><CatalogIcon /></h3></SplitItem>
             <SplitItem isFilled>
               <h3 className="ws-title">Read the latest</h3>
-              <a href="https://blog.patternfly.org/" target="_blank" rel="noopener noreferrer">PatternFly blog</a>
+              <a href="https://medium.com/patternfly" target="_blank" rel="noopener noreferrer">PatternFly Medium</a>
             </SplitItem>
           </Split>
         </GridItem>
