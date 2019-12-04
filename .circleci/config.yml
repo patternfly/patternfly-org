@@ -18,9 +18,9 @@ references:
     js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}-check
   next_build_cache_key: &next_build_cache_key
     next-build-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
-  react_build_cache_key: &next_build_cache_key
+  react_build_cache_key: &react_build_cache_key
     react-build-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
-  org_build_cache_key: &next_build_cache_key
+  org_build_cache_key: &org_build_cache_key
     org-build-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
   attach_workspace: &attach_workspace
     attach_workspace:
