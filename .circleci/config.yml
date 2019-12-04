@@ -20,9 +20,9 @@ references:
   js_deps_cache_key_check: &js_deps_cache_key_check
     js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}-check
   v3_js_deps_cache_key: &v3_js_deps_cache_key
-    v3-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "packages/patternfly-3/yarn.lock"}}
+    v3-js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "packages/patternfly-3/yarn.lock"}}
   v3_ruby_deps_cache_key: &v3_ruby_deps_cache_key
-    v3-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "packages/patternfly-3/Gemfile.lock"}}
+    v3-ruby-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "packages/patternfly-3/Gemfile.lock"}}
   next_build_cache_key: &next_build_cache_key
     next-build-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
   react_build_cache_key: &react_build_cache_key
@@ -120,6 +120,8 @@ jobs:
     - restore_cache:
         keys:
         - *js_deps_cache_key
+    - restore_cache:
+        keys:
         - *next_build_cache_key
     - run:
         name: Build patternfly-next docs
@@ -139,6 +141,8 @@ jobs:
     - restore_cache:
         keys:
         - *js_deps_cache_key
+    - restore_cache:
+        keys:
         - *react_build_cache_key
     - *install_node
     - *install_yarn
@@ -160,6 +164,8 @@ jobs:
     - restore_cache:
         keys:
         - *v3_js_deps_cache_key
+    - restore_cache:
+        keys:
         - *v3_ruby_deps_cache_key
     - run:
         name: Install v3 deps
@@ -188,6 +194,8 @@ jobs:
     - restore_cache:
         keys:
         - *js_deps_cache_key
+    - restore_cache:
+        keys:
         - *org_build_cache_key
     - *install_node
     - *install_yarn
