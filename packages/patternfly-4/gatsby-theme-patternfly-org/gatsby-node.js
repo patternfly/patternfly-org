@@ -298,6 +298,12 @@ exports.onCreateWebpackConfig = ({ actions, stage, getConfig, loaders }) => {
   const options = babelLoader.options;
   options.cacheDirectory = '.cache/babel';
   options.cacheCompression = false;
+
+  const cssRule = config.module.rules.find(
+    rule => rule.oneOf
+  );
+  console.log('cssRule0',  cssRule[0]);
+  console.log('cssRule1',  cssRule[1]);
   config.module.rules = [
     // Omit the default rule where test === '\.jsx?$'
     ...config.module.rules.filter(

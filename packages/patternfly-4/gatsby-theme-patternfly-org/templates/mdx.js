@@ -17,6 +17,7 @@ import { SideNavLayout, TrainingLayout } from '../layouts';
 import { AutoLinkHeader, Example, CSSVariables, PropsTable, commonComponents } from '../components';
 import { getId , slugger, capitalize} from '../helpers';
 import versions from '../versions.json';
+import '../globalStyles';
 import './mdx.css';
 
 const getExperimentalWarning = (state, componentName) => {

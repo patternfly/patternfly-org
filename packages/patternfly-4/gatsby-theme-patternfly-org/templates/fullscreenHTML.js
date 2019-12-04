@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import '../globalStyles';
 import './fullscreen.css';
 
 const FullscreenHTMLTemplate = ({ pageContext }) => (
