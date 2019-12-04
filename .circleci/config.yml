@@ -226,7 +226,7 @@ jobs:
     - run:
         name: Write redirects
         command: |
-            npm i -g glob
+            sudo npm i -g glob
             node scripts/writeV3Redirects.js --skip-v3
     - run:
         name: Remove v3 (for size)
