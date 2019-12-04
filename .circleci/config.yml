@@ -5,17 +5,24 @@ version: 2
 references:
   js_deps_paths: &js_deps_paths
   - node_modules/
-  - packages/patternfly-3/node_modules/
   - packages/patternfly-4/node_modules/
   - packages/patternfly-4/gatsby-theme-patternfly-org/node_modules/
   - packages/patternfly-4/node_modules/
   - packages/patternfly-4/patternfly-next/node_modules/
   - packages/patternfly-4/patternfly-react/packages/patternfly-4/react-docs/node_modules/
+  v3_js_deps_paths: &v3_js_deps_paths
+  - packages/patternfly-3/node_modules
+  v3_ruby_deps_paths: &v3_ruby_deps_paths
+  - packages/patternfly-3/.bundle
   # Excluded: react-docs/plugins
   js_deps_cache_key: &js_deps_cache_key
     js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
   js_deps_cache_key_check: &js_deps_cache_key_check
     js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}-check
+  v3_js_deps_cache_key: &v3_js_deps_cache_key
+    v3-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "packages/patternfly-3/yarn.lock"}}
+  v3_ruby_deps_cache_key: &v3_ruby_deps_cache_key
+    v3-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "packages/patternfly-3/Gemfile.lock"}}
   next_build_cache_key: &next_build_cache_key
     next-build-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
   react_build_cache_key: &react_build_cache_key
@@ -152,13 +159,20 @@ jobs:
     - *attach_workspace
     - restore_cache:
         keys:
-        - *js_deps_cache_key
+        - *v3_js_deps_cache_key
+        - *v3_ruby_deps_cache_key
     - run:
         name: Install v3 deps
         command: |
           cd packages/patternfly-3
           bundle install
           yarn install
+    - save_cache:
+        paths: packages/patternfly-3/.bundle
+        key: *v3_ruby_deps_paths
+    - save_cache:
+        paths: packages/patternfly-3/node_modules
+        key: *v3_js_deps_paths
     - run:
         name: Build v3 docs
         command: yarn build:org:v3

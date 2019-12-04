@@ -19,7 +19,7 @@
     "build:org": "yarn workspace patternfly-org-4 build",
     "build:org:prefix": "yarn workspace patternfly-org-4 build:prefix && yarn copy:org:v4",
     "copy:org:v4": "shx mkdir -p build/patternfly-org && shx cp -r packages/patternfly-4/public build/patternfly-org/v4",
-    "build:org:v3": "yarn workspace patternfly-org-3 build && yarn copy:org:v3",
+    "build:org:v3": "cd packages/patternfly-3 && yarn run build && cd ../.. && yarn copy:org:v3",
     "copy:org:v3": "shx mkdir -p build/patternfly-org && shx cp -r packages/patternfly-3/_site build/patternfly-org/v3",
     "clean": "lerna run clean && shx rm -rf build",
     "clean:org": "yarn workspace patternfly-org-4 clean && shx rm -rf build/patternfly-org",
