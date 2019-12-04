@@ -223,15 +223,15 @@ jobs:
     - image: circleci/node:12
     steps:
     - *attach_workspace
-    - restore_cache:
-        keys:
-        - *js_deps_cache_key
     - run:
         name: Write redirects
         command: node scripts/writeV3Redirects.js --skip-v3
     - run:
+        name: Remove v3 (for size)
+        command: rm -rf build/patternfly-org/v3
+    - run:
         name: Check size of docs
-        command: du -sh build/*
+        command: du -sh build/* build/patternfly-org/*
     - run:
         name: Upload docs
         command: .circleci/upload-preview.sh
@@ -270,7 +270,7 @@ jobs:
         command: node scripts/writeVersionPrefix.js
     - run:
         name: Check size of docs
-        command: du -sh build/patternfly-org/*
+        command: du -sh build/* build/patternfly-org/*
     - run:
         name: Sync to staging
         command: .circleci/upload-staging.sh
