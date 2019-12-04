@@ -7,22 +7,22 @@
   "scripts": {
     "develop:next": "yarn workspace @patternfly/patternfly gatsby develop -p 8001",
     "build:next": "yarn workspace @patternfly/patternfly build:site && yarn copy:next",
-    "copy:next": "shx mkdir -p build && shx cp -r packages/patternfly-4/patternfly-next/public build/patternfly-next",
-    "clean:next": "yarn workspace @patternfly/patternfly clean && shx rm -rf build/patternfly-next",
+    "copy:next": "mkdir -p build && cp -r packages/patternfly-4/patternfly-next/public build/patternfly-next",
+    "clean:next": "yarn workspace @patternfly/patternfly clean && rm -rf build/patternfly-next",
     "serve:next": "yarn workspace @patternfly/patternfly gatsby serve  -p 8001",
     "develop:react": "yarn workspace @patternfly/react-docs develop -p 8002",
     "build:react": "yarn workspace @patternfly/react-docs build:ram && yarn copy:react",
-    "copy:react": "shx mkdir -p build && shx cp -r packages/patternfly-4/patternfly-react/packages/patternfly-4/react-docs/public build/patternfly-react",
-    "clean:react": "yarn workspace @patternfly/react-docs clean && shx rm -rf build/patternfly-react",
+    "copy:react": "mkdir -p build && cp -r packages/patternfly-4/patternfly-react/packages/patternfly-4/react-docs/public build/patternfly-react",
+    "clean:react": "yarn workspace @patternfly/react-docs clean && rm -rf build/patternfly-react",
     "serve:react": "yarn workspace @patternfly/react-docs gatsby serve  -p 8002",
     "develop:org": "yarn workspace patternfly-org-4 develop -p 8003",
     "build:org": "yarn workspace patternfly-org-4 build",
     "build:org:prefix": "yarn workspace patternfly-org-4 build:prefix && yarn copy:org:v4",
-    "copy:org:v4": "shx mkdir -p build/patternfly-org && shx cp -r packages/patternfly-4/public build/patternfly-org/v4",
-    "build:org:v3": "yarn workspace patternfly-org-3 build && yarn copy:org:v3",
-    "copy:org:v3": "shx mkdir -p build/patternfly-org && shx cp -r packages/patternfly-3/_site build/patternfly-org/v3",
-    "clean": "lerna run clean && shx rm -rf build",
-    "clean:org": "yarn workspace patternfly-org-4 clean && shx rm -rf build/patternfly-org",
+    "copy:org:v4": "mkdir -p build/patternfly-org && cp -r packages/patternfly-4/public build/patternfly-org/v4",
+    "build:org:v3": "cd packages/patternfly-3 && yarn run build && cd ../.. && yarn copy:org:v3",
+    "copy:org:v3": "mkdir -p build/patternfly-org && cp -r packages/patternfly-3/_site build/patternfly-org/v3",
+    "clean": "lerna run clean && rm -rf build",
+    "clean:org": "yarn workspace patternfly-org-4 clean && rm -rf build/patternfly-org",
     "serve:org": "yarn workspace patternfly-org-4 serve",
     "serve:org:prefix": "yarn workspace patternfly-org-4 serve:prefix",
     "test:org": "yarn workspace patternfly-org-4 test:a11y:ci",
@@ -31,7 +31,6 @@
   },
   "workspaces": {
     "packages": [
-      "packages/patternfly-3",
       "packages/patternfly-4",
       "packages/patternfly-4/gatsby-theme-patternfly-org",
       "packages/patternfly-4/patternfly-next",
@@ -43,9 +42,7 @@
     ]
   },
   "devDependencies": {
-    "fs-extra": "^8.1.0",
     "glob": "^7.1.6",
-    "lerna": "^3.19.0",
-    "shx": "^0.3.2"
+    "lerna": "^3.19.0"
   }
 }

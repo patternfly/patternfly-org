@@ -5,11 +5,6 @@
   "author": "Red Hat",
   "license": "MIT",
   "peerDependencies": {
-    "@patternfly/patternfly": "*",
-    "@patternfly/react-core": "*",
-    "@patternfly/react-icons": "*",
-    "@patternfly/react-table": "*",
-    "@patternfly/react-tokens": "*",
     "gatsby": ">=2.6.0"
   },
   "dependencies": {
