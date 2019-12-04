@@ -1,10 +1,14 @@
-const fs = require('fs-extra');
+const fs = require('fs');
+const path = require('path');
 const glob = require('glob');
 
 const outDir = 'build/patternfly-org';
 const v3_to = `${outDir}/v3`;
 const writeRedirect = (file, to) => {
-  fs.ensureFileSync(file);
+  const parentFolder = path.dirname(file);
+  if (!fs.existsSync(parentFolder)) {
+    fs.mkdirSync(path.dirname(file), {recursive: true});
+  }
   fs.writeFileSync(file,
 `<!DOCTYPE HTML>
 <meta charset="UTF-8">
