@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { Nav, NavList, NavItem } from '@patternfly/react-core';
 import './topNav.css';
 
-const TopNav = ({ location, context, navItems }) => {
+export const TopNav = ({ location, context, navItems }) => {
   return (
     <Nav aria-label="Nav">
       <NavList variant="horizontal" className="ws-top-nav">
@@ -23,5 +23,3 @@ const TopNav = ({ location, context, navItems }) => {
   );
 }
   
-
-export default TopNav;

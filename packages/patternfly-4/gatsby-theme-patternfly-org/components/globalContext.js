@@ -15,7 +15,7 @@ function getVersions() {
   return versions;
 }
 
-export default React.createContext({
+export const GlobalContext = React.createContext({
   initialVersions,
   getVersions
 });

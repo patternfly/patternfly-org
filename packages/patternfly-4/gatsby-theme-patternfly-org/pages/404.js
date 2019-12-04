@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { PageSection, Title } from '@patternfly/react-core';
-import SideNavLayout from '../layouts/sideNavLayout';
+import { SideNavLayout } from '../layouts/sideNavLayout/sideNavLayout';
 
 const Page404 = ({ location }) => {
   return (

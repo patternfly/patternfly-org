@@ -238,8 +238,8 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
             actions.createPage({
               path: pagePath,
               component: source === 'core'
-                ? path.resolve(__dirname, './templates/fullscreenHtml.js')
-                : path.resolve(__dirname, './templates/fullscreenMdx.js'),
+                ? path.resolve(__dirname, './templates/fullscreenHTML.js')
+                : path.resolve(__dirname, './templates/fullscreenMDX.js'),
               context: {
                 // To exclude fullscreen pages from sitemap
                 isFullscreen: true,
@@ -288,6 +288,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       pluginOptions: SitePluginOptions
     }
   `;
+
   actions.createTypes(sideNavTypeDefs);
 }
 

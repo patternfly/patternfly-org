@@ -1,7 +1,7 @@
 import React from 'react';
 import { Title } from '@patternfly/react-core';
 import { LinkIcon } from '@patternfly/react-icons';
-import { slugger } from '../helpers/slugger';
+import { slugger } from '../../helpers/slugger';
 import './autoLinkHeader.css';
 
 // "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl"
@@ -14,7 +14,7 @@ const sizes = {
   h6: 'sm'
 }
 
-const AutoLinkHeader = ({
+export const AutoLinkHeader = ({
   id,
   size,
   headingLevel,
@@ -36,5 +36,3 @@ const AutoLinkHeader = ({
     </Title>
   )
 };
-
-export default AutoLinkHeader;

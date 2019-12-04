@@ -13,16 +13,9 @@ import {
   PageSection,
   Title
 } from '@patternfly/react-core';
-import SideNavLayout from '../layouts/sideNavLayout';
-import TrainingLayout from '../layouts/trainingLayout';
-import AutoLinkHeader from '../components/autoLinkHeader';
-import Example from '../components/example';
-import CSSVariables from '../components/cssVariables';
-import PropsTable from '../components/propsTable';
-import { commonComponents } from '../components/commonComponents';
-import { getId } from '../helpers/getId';
-import { slugger } from '../helpers/slugger';
-import { capitalize } from '../helpers/capitalize';
+import { SideNavLayout, TrainingLayout } from '../layouts';
+import { AutoLinkHeader, Example, CSSVariables, PropsTable, commonComponents } from '../components';
+import { getId , slugger, capitalize} from '../helpers';
 import versions from '../versions.json';
 import './mdx.css';
 
@@ -54,7 +47,7 @@ const getSourceTitle = source => {
   }
 }
 
-export default ({ data, location, pageContext }) => {
+const MDXTemplate = ({ data, location, pageContext }) => {
   if (location.state && location.state.trainingType && location.state.katacodaId) {
     return (
       <TrainingLayout
@@ -272,6 +265,8 @@ export default ({ data, location, pageContext }) => {
       </SideNavLayout>
   );
 }
+
+export default MDXTemplate;
 
 export const pageQuery = graphql`
   query MdxDocsPage($id: String!, $designId: String!, $propComponents: [String]!) {

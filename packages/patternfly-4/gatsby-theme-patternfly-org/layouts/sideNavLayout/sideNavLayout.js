@@ -10,16 +10,12 @@ import { Helmet } from 'react-helmet';
 
 import { Page, PageHeader, PageSidebar, Toolbar, ToolbarItem, Form, TextInput, Brand, Dropdown, DropdownToggle, DropdownItem, DropdownGroup } from '@patternfly/react-core';
 import { SearchIcon, CaretDownIcon } from '@patternfly/react-icons';
-import SideNav from '../components/sideNav';
-import TopNav from '../components/topNav';
-import Banner from '../components/banner';
-import Footer from '../components/footer';
-import logo from '../images/logo.svg';
-import GlobalContext from '../components/globalContext';
+import { SideNav, TopNav,  Banner, Footer, GlobalContext } from '../../components';
+import logo from '../logo.svg';
 import './sideNavLayout.css';
 
 // ParityComponent: aboutmodal <=> aboutmodalbox
-const SideNavLayout = ({
+export const SideNavLayout = ({
   children,
   location,
   context,
@@ -245,5 +241,3 @@ const SideNavLayout = ({
     </div>
   );
 }
-
-export default SideNavLayout;

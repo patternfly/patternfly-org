@@ -3,7 +3,7 @@ title: Global CSS variables
 section: overview
 ---
 
-import CSSVariables from '../components/cssVariables';
+import { CSSVariables } from '../components/cssVariables/cssVariables';
 
 
 ## About CSS variables

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button, Form, TextContent, Text } from '@patternfly/react-core';
 import { CopyIcon, AsleepIcon, ExternalLinkAltIcon, CodepenIcon } from '@patternfly/react-icons';
-import { copy } from '../helpers/copy';
+import { copy } from '../../helpers/copy';
 import './exampleToolbar.css';
 
-export default class ExampleToolbar extends React.Component {
+export class ExampleToolbar extends React.Component {
   constructor(props) {
     super(props);
     this.toCopy = props.code;
