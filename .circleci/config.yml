@@ -105,7 +105,7 @@ jobs:
         - *js_deps_cache_key_check
     - run:
         name: Conditional install
-        command: if [ ! -d cached ]; then yarn install --frozen-lockfile && touch cached; fi
+        command: if [ ! -f cached ]; then yarn install --frozen-lockfile && touch cached; fi
     - save_cache:
         paths: cached
         key: *js_deps_cache_key_check
