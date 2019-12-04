@@ -29,7 +29,7 @@ export const Example = props => {
   const supportedLangs = getSupportedLanguages(props.className);
   const initialLang = supportedLangs[0];
   const initialCode = props.children.toString();
-  const { noLive, title = 'no title', isFullscreen = false, location, hideDarkMode, children, navSection, componentName } = props;
+  const { noLive, title = 'no title', isFullscreen = false, location, children, navSection, componentName } = props;
 
   // https://reactjs.org/docs/hooks-overview.html#state-hook
   const [editorCode, setEditorCode] = React.useState(initialLang === 'html' ? html : initialCode);

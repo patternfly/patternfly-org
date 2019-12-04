@@ -123,7 +123,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
               variant={experimentalStage === 'early' ? 'info' : 'warning'}
               title="Experimental feature"
               className="pf-u-my-md"
-              style={{ marginBottom: 'var(--pf-global--spacer--md)' }}
+              style={{ marginBottom: '1rem' }}
               isInline
             >
               {getExperimentalWarning(experimentalStage)}

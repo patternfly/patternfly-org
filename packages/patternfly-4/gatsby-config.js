@@ -1,9 +1,8 @@
 const path = require('path');
 
-console.log( process.env.VERSION_PREFIX || '/v4')
 module.exports = {
   // For production build
-  pathPrefix: process.env.VERSION_PREFIX || '/v4',
+  pathPrefix: '/v4',
   siteMetadata: {
     title: 'PatternFly 4',
     // For SEO
