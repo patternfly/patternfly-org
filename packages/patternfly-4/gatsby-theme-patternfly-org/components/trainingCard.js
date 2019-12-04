@@ -11,7 +11,7 @@ class TrainingCard extends React.Component {
   }
   render() {
     return (
-      <Card isCompact>
+      <Card className="ws-org-training-card" isCompact>
         <CardHead>
           <Card className="small-card-icon">
             {this.props.trainingType === 'htmlcss' || this.props.trainingType === 'react' ? (
