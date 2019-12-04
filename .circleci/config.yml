@@ -168,11 +168,11 @@ jobs:
           bundle install
           yarn install
     - save_cache:
-        paths: packages/patternfly-3/.bundle
-        key: *v3_ruby_deps_paths
+        paths: *v3_ruby_deps_paths
+        key: *v3_ruby_deps_cache_key
     - save_cache:
-        paths: packages/patternfly-3/node_modules
-        key: *v3_js_deps_paths
+        paths: *v3_js_deps_paths
+        key: *v3_js_deps_cache_key
     - run:
         name: Build v3 docs
         command: yarn build:org:v3
