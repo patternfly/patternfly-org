@@ -42,7 +42,6 @@
     ]
   },
   "devDependencies": {
-    "fs-extra": "^8.1.0",
     "glob": "^7.1.6",
     "lerna": "^3.19.0"
   }

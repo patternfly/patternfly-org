@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
 const outDir = 'build/patternfly-org';
 const v3_to = `${outDir}/v3`;
@@ -43,7 +42,7 @@ console.log('Wrote 4 static files');
 
 // Write PF3 redirects
 if (!process.argv.includes('--skip-v3')) {
-  const redirectPaths = glob.sync(
+  const redirectPaths = require('glob').sync(
     `${v3_to}/**/*.html`,
     { ignore: [`${v3_to}/components/**`, `${v3_to}/*.html`] }
   );
