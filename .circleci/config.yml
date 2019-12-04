@@ -1,7 +1,7 @@
 version: 2
 
 # Adapted from https://github.com/circleci/circleci-docs/blob/master/.circleci/config.yml
-# I'd love to find docs on this syntax.
+# Syntax: https://blog.daemonl.com/2016/02/yaml.html
 references:
   js_deps_paths: &js_deps_paths
   - node_modules/
@@ -14,6 +14,14 @@ references:
   # Excluded: react-docs/plugins
   js_deps_cache_key: &js_deps_cache_key
     js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
+  js_deps_cache_key_check: &js_deps_cache_key_check
+    js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}-check
+  next_build_cache_key: &next_build_cache_key
+    next-build-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
+  react_build_cache_key: &next_build_cache_key
+    react-build-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
+  org_build_cache_key: &next_build_cache_key
+    org-build-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
   attach_workspace: &attach_workspace
     attach_workspace:
       at: ~/project
@@ -35,7 +43,6 @@ references:
     run:
       name: Install yarn
       command: curl -o- -L https://yarnpkg.com/install.sh | bash
-
 workflows:
   version: 2
   install_build_deploy:
@@ -88,10 +95,13 @@ jobs:
         - "*"
     - restore_cache:
         keys:
-        - *js_deps_cache_key
+        - *js_deps_cache_key_check
     - run:
         name: Conditional install
-        command: if [ ! -d node_modules ]; then yarn install --frozen-lockfile; fi
+        command: if [ ! -d cached ]; then yarn install --frozen-lockfile && touch cached; fi
+    - save_cache:
+        paths: cached
+        key: *js_deps_cache_key_check
     - save_cache:
         paths: *js_deps_paths
         key: *js_deps_cache_key
@@ -103,9 +113,13 @@ jobs:
     - restore_cache:
         keys:
         - *js_deps_cache_key
+        - *next_build_cache_key
     - run:
         name: Build patternfly-next docs
         command: yarn build:next
+    - save_cache:
+        paths: packages/patternfly-4/patternfly-next/.cache
+        key: *next_build_cache_key
     - persist_to_workspace:
         root: ~/project
         paths: 
@@ -118,11 +132,15 @@ jobs:
     - restore_cache:
         keys:
         - *js_deps_cache_key
+        - *react_build_cache_key
     - *install_node
     - *install_yarn
     - run:
         name: Build patternfly-react docs
         command: ~/.yarn/bin/yarn build:react
+    - save_cache:
+        paths: packages/patternfly-4/patternfly-react/packages/patternfly-4/react-docs/.cache
+        key: *react_build_cache_key
     - persist_to_workspace:
         root: ~/project
         paths: 
@@ -140,6 +158,7 @@ jobs:
         command: |
           cd packages/patternfly-3
           bundle install
+          yarn install
     - run:
         name: Build v3 docs
         command: yarn build:org:v3
@@ -155,11 +174,15 @@ jobs:
     - restore_cache:
         keys:
         - *js_deps_cache_key
+        - *org_build_cache_key
     - *install_node
     - *install_yarn
     - run:
         name: Build patternfly.org docs
         command: ~/.yarn/bin/yarn build:org:prefix
+    - save_cache:
+        paths: packages/patternfly-4/.cache
+        key: *org_build_cache_key
     - persist_to_workspace:
         root: ~/project
         paths: 

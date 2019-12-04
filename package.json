@@ -31,7 +31,6 @@
   },
   "workspaces": {
     "packages": [
-      "packages/patternfly-3",
       "packages/patternfly-4",
       "packages/patternfly-4/gatsby-theme-patternfly-org",
       "packages/patternfly-4/patternfly-next",
