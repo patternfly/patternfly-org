@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import { LiveProvider, LivePreview } from 'react-live';
 import { useMDXScope } from 'gatsby-plugin-mdx/context';
 import { transformCode } from '../helpers/transformCode';
-import '../globalStyles';
 import './fullscreen.css';
 
 const FullscreenWrapper = ({ children }) => (

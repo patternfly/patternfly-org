@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "develop:next": "yarn workspace @patternfly/patternfly dev -p 8001",
-    "build:next": "yarn workspace @patternfly/patternfly build:site && yarn copy:next",
+    "build:next": "yarn workspace @patternfly/patternfly build && yarn copy:next",
     "copy:next": "mkdir -p build && cp -r packages/patternfly-4/patternfly-next/public build/patternfly-next",
     "clean:next": "yarn workspace @patternfly/patternfly clean && rm -rf build/patternfly-next",
     "serve:next": "yarn workspace @patternfly/patternfly serve -p 8001",
