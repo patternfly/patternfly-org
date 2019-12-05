@@ -63,23 +63,6 @@
     width: 100px;
   }
 }
-.colors-theme--color-secondary-200 {
-  height: 65px;
-  width: 65px;
-  background-color: var(--pf-global--secondary-color--200);
-}
-@media screen and (min-width: 768px) {
-  .colors-theme--color-secondary-200 {
-    height: 85px;
-    width: 85px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .colors-theme--color-secondary-200 {
-    height: 100px;
-    width: 100px;
-  }
-}
 
 .colors-theme--color-text-100 {
   height: 65px;
