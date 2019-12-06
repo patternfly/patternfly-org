@@ -297,7 +297,7 @@ exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
   
   // Use caching for babel loader
   const babelLoader = config.module.rules.find(rule => rule.test && rule.test.test('a.js'));
-  babelLoader.exclude = /node_modules|@patternfly/;
+  babelLoader.exclude = /node_modules(?!(\/gatsby-theme-patternfly-org))|@patternfly/;
   const options = babelLoader.use[0].options;
   options.cacheDirectory = '.cache/babel-loader';
   options.cacheCompression = false;
