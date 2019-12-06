@@ -125,6 +125,7 @@ module.exports = {
           '**/styles',
           '**/build',
           '**/utils',
+          '**/public',
           '**/test-helpers',
           /.*react-styles.*/,
           /.*react-docs.*/,
