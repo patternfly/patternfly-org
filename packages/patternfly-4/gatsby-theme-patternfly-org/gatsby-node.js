@@ -4,7 +4,6 @@ const { extractExamples } = require('./helpers/extractExamples');
 const { extractTableOfContents } = require('./helpers/extractTableOfContents');
 const { createHandlebars } = require('./helpers/createHandlebars');
 const { slugger } = require('./helpers/slugger');
-const webpack = require('webpack');
 
 // Add map PR-related environment variables to GraphQL
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
@@ -238,8 +237,8 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
             actions.createPage({
               path: pagePath,
               component: source === 'core'
-                ? path.resolve(__dirname, './templates/fullscreenHtml.js')
-                : path.resolve(__dirname, './templates/fullscreenMdx.js'),
+                ? path.resolve(__dirname, './templates/fullscreenHTML.js')
+                : path.resolve(__dirname, './templates/fullscreenMDX.js'),
               context: {
                 // To exclude fullscreen pages from sitemap
                 isFullscreen: true,
@@ -288,63 +287,36 @@ exports.createSchemaCustomization = ({ actions }) => {
       pluginOptions: SitePluginOptions
     }
   `;
+
   actions.createTypes(sideNavTypeDefs);
 }
 
-exports.onCreateWebpackConfig = ({ actions, loaders, getConfig }) => {
-  config.module.rules = [
-    // Omit the default rule where test === '\.jsx?$'
-    ...config.module.rules.filter(
-      rule => String(rule.test) !== String(/\.jsx?$/)
-    ),
-    // Recreate it with custom exclude filter
-    {
-      // Called without any arguments, `loaders.js()` will return an
-      // object like:
-      // {
-      //   options: undefined,
-      //   loader: '/path/to/node_modules/gatsby/dist/utils/babel-loader.js',
-      // }
-      // Unless you're replacing Babel with a different transpiler, you probably
-      // want this so that Gatsby will apply its required Babel
-      // presets/plugins.  This will also merge in your configuration from
-      // `babel.config.js`.
-      ...loaders.js(),
-      test: /\.jsx?$/,
-      // Exclude all node_modules from transpilation, except for 'swiper' and 'dom7'
-      exclude: modulePath =>
-        /node_modules/.test(modulePath) &&
-        !/node_modules\/(swiper|dom7)/.test(modulePath),
-    },
-  ]
-  // This will completely replace the webpack config with the modified object.
-  actions.replaceWebpackConfig(config)
-}
-
-exports.onCreateWebpackConfig = ({ actions, stage, getConfig, loaders }) => {
+exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
+  console.log(stage);
   const config = getConfig();
-  const babelLoader = loaders.js();
-  const options = babelLoader.options;
-  options.cacheDirectory = '.cache/babel';
+  
+  // Use caching for babel loader
+  const babelLoader = config.module.rules.find(rule => rule.test && rule.test.test('a.js'));
+  babelLoader.exclude = /node_modules|@patternfly/;
+  const options = babelLoader.use[0].options;
+  options.cacheDirectory = '.cache/babel-loader';
   options.cacheCompression = false;
-  config.module.rules = [
-    // Omit the default rule where test === '\.jsx?$'
-    ...config.module.rules.filter(
-      rule => String(rule.test) !== String(/\.jsx?$/)
-    ),
-    // Recreate it with custom exclude filter
-    {
-      ...babelLoader,
-      test: /\.js$/,
-      // Exclude all node_modules from transpilation
-      exclude: modulePath => /node_modules|@patternfly/.test(modulePath),
-    },
-  ];
+
+  // Exclude CSS-in-JS styles included from React. They override
+  // the patternfly.css styles which we would rather have.
+  const cssRules = config.module.rules.find(rule => rule.oneOf);
+  const cssRule = cssRules.oneOf.find(rule => rule.test.test('a.css'));
+  cssRule.exclude = /react-styles\/css\/.*\.css/;
+  config.module.rules.push({
+    test: /react-styles\/css\/.*\.css/,
+    use: 'null-loader'
+  });
 
   if (stage === 'build-javascript') {
     // Turn off source-maps because dist sizes are huge
     config.devtool = false;
   } else if (stage === 'develop') {
+    // Speed up dev environment
     config.devtool = 'cheap-source-map';
     config.optimization = {
       removeAvailableModules: false,
@@ -352,14 +324,6 @@ exports.onCreateWebpackConfig = ({ actions, stage, getConfig, loaders }) => {
       splitChunks: false,
     };
   }
-  // Exclude CSS-in-JS styles included from React. They override
-  // the patternfly.css styles which we would rather have.
-  config.plugins.push(
-    new webpack.NormalModuleReplacementPlugin(
-      /react-styles\/css\/.*\.css/,
-      path.resolve(__dirname, './empty.css')
-    )
-  );
 
   actions.replaceWebpackConfig(config);
 };

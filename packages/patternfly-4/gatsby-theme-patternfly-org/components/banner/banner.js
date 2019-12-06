@@ -3,7 +3,7 @@ import { Button } from '@patternfly/react-core';
 import { TimesIcon, ArrowRightIcon } from '@patternfly/react-icons';
 import './banner.css';
 
-const Banner = () => {
+export const Banner = () => {
   const initialBannerOpen = typeof window !== 'undefined' && sessionStorage && !sessionStorage.getItem('pf4-banner-closed');
   const [ isBannerOpen, setBannerOpen ] = React.useState(initialBannerOpen);
   
@@ -36,5 +36,3 @@ const Banner = () => {
     </div>
   );
 }
-
-export default Banner;

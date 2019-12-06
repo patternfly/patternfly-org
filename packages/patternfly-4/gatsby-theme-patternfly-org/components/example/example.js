@@ -1,15 +1,13 @@
 import React, { useLayoutEffect } from 'react';
 import { LiveProvider, LiveEditor, LivePreview, LiveError } from 'react-live';
 import { useMDXScope } from 'gatsby-plugin-mdx/context';
-import ExampleToolbar from './exampleToolbar';
-import AutoLinkHeader from './autoLinkHeader';
+import { ExampleToolbar } from './exampleToolbar';
+import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
 import { getParameters } from 'codesandbox/lib/api/define';
-import 'prismjs/themes/prism-coy.css';
-import { slugger } from '../helpers/slugger';
-import './example.css';
-import { transformCode } from '../helpers/transformCode';
-import { getStaticParams, getReactParams } from '../helpers/codesandbox';
+import { slugger, transformCode, getStaticParams, getReactParams } from '../../helpers';
 import Prism from 'prismjs';
+import 'prismjs/themes/prism-coy.css';
+import './example.css';
 
 const getSupportedLanguages = className => {
   if (typeof className === 'string') {
@@ -24,14 +22,14 @@ const getSupportedLanguages = className => {
 }
 
 // This component uses hooks in order to call useMDXScope()
-const Example = props => {
+export const Example = props => {
   const html = props.html
     ? props.html
     : 'This is a hbs code block, but no html trickled down from gatsby-node.js to mdx.js to example.js';
   const supportedLangs = getSupportedLanguages(props.className);
   const initialLang = supportedLangs[0];
   const initialCode = props.children.toString();
-  const { noLive, title = 'no title', isFullscreen = false, location, hideDarkMode, children, navSection, componentName } = props;
+  const { noLive, title = 'no title', isFullscreen = false, location, children, navSection, componentName } = props;
 
   // https://reactjs.org/docs/hooks-overview.html#state-hook
   const [editorCode, setEditorCode] = React.useState(initialLang === 'html' ? html : initialCode);
@@ -143,5 +141,3 @@ const Example = props => {
     </div>
   );
 }
-
-export default Example;

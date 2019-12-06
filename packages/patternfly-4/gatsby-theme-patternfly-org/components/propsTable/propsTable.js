@@ -18,7 +18,7 @@ const renderType = prop => {
   return '';
 };
 
-const PropsTable = props => {
+export const PropsTable = props => {
   const columns = [
     { title: 'Name' },
     { title: 'Type' },
@@ -51,5 +51,3 @@ const PropsTable = props => {
     </Table>
   );
 }
-
-export default PropsTable;

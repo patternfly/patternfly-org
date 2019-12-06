@@ -1,15 +1,15 @@
-.ws-sideNav-category,
-.ws-sideNav-link {
+.ws-sideNav-list .ws-sideNav-category,
+.ws-sideNav-list .ws-sideNav-link {
   color: #151515;
   font-weight: 500;
   line-height: 27px;
 }
 
-.ws-sideNav-category {
+.ws-sideNav-list .ws-sideNav-category {
   font-size: 18px;
 }
 
-.ws-sideNav-category > .pf-c-nav__link {
+.ws-sideNav-list .ws-sideNav-category > .pf-c-nav__link {
   border-left: 4px solid transparent;
   padding: 8px 16px;
 }
@@ -53,7 +53,7 @@
   background-color: transparent !important;
 }
 
-.ws-org-context-switcher-dropdown {
+.ws-org-context-switcher .ws-org-context-switcher-dropdown {
   display: block;
   /* Same as right/bottom as side nav items padding */
   margin: 6px var(--pf-c-nav__list-link--PaddingRight) var(--pf-c-nav__list-link--PaddingBottom) 0;

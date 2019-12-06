@@ -1,8 +1,7 @@
 import React from 'react';
-import SideNavLayout from 'gatsby-theme-patternfly-org/layouts/sideNavLayout';
+import { SideNavLayout } from 'gatsby-theme-patternfly-org/layouts';
 import { ChatIcon, QuestionIcon, BlogIcon, MailBulkIcon } from '@patternfly/react-icons';
 import { Grid, GridItem, PageSection, PageSectionVariants, Split, SplitItem } from '@patternfly/react-core';
-import AutoLinkHeader from 'gatsby-theme-patternfly-org/components/autoLinkHeader';
 import "./get-in-touch.css";
 
 const GetInTouch = ({ location }) => (

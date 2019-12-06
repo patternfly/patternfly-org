@@ -1,5 +1,5 @@
 import versions from '../versions.json';
-import overpass from './fonts';
+import { overpass } from './fonts';
 
 // TODO: Use a template that has our assets.
 export const getStaticParams = (title, html) => ({
