@@ -34,7 +34,7 @@ Help users understand why there is no data to display and explain what they can 
 
 **Configuration is required**
 
-In this situation, a user may need to take steps to configure, connect, or enable something in order to view associated information or take advantage of features.
+In this situation, a user may need to take steps to configure, connect, or enable something in order to view associated information or take advantage of features.test
 
 ![Configuration is required](./img/config.png)
 
