@@ -44,6 +44,7 @@ By default, icons should be grey, except when it is a status icon or you have a 
 ### Title and body
 
 **Tone and voice**
+
 When writing your empty state, stick to PatternFly voice guidelines. Use concise and straightforward voice. It should be conversational, while still professional. 
 
 It is OK to use “you” and “your” (eg: Add a source to your app), but never assign blame to the user (eg: You didn’t add a source to your app.) 
@@ -55,11 +56,13 @@ There is also no need to be overly mannerly, so avoid using please, unless the u
 ![Please](./img/please.jpg)
 
 **Level of detail**
+
 When landing on your empty state, the user should understand the situation and know what to do from there. Include at least one sentence, even if it is a filtered situation, and at least two when there is more explanation needed. 
 
 ![Detail](./img/level-of-detail.jpg)
 
 **Sentence case**
+
 Empty states should follow sentence case rules. Only the first word in any phrase or sentence should be capitalized (whether it is in the body or in a button or link), unless a proper noun is included in the phrase/sentence.
 Every sentence in a body should end with a full stop. Headers should not end in full stops though.
 
@@ -81,6 +84,7 @@ The only time there should be a stand-alone link button, with nothing linked in 
 ### Alignment
 
 **Full page empty state**
+
 When an empty state appears in a full page, the empty state should be placed 64px away from the top of the area they are in, and be horizontally centered with a minimum padding of 24px on all remaining sides.
 
 ![Full page empty state](./img/desktop-page-es.jpg)
@@ -90,11 +94,13 @@ Mobile in-page empty states should be 48px away from the top and have a minimum 
 ![Mobile page empty state](./img/mobile-page-es.jpg)
 
 **In-table, card or wizard empty states**
+
 Empty states within a table, card or wizard should always be horizontally and vertically centered on their background, and have an outside padding of 24px on all sides.
 
 ![In table empty state](./img/table-es.jpg)
 
 ### Toolbars or filters in empty states
+
 No toolbars or filters should be shown when a user is in a full page empty state as the user will have no items to perform any actions on.
 
 ![Toolbar usage](./img/toolbar.jpg)
