@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.50.9](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.50.8...patternfly-org-4@3.50.9) (2019-12-09)
+
+
+### Bug Fixes
+
+* **docs:** removed Blog masthead/footer links, pointed Get in touch page to Medium ([#1574](https://github.com/patternfly/patternfly-org/issues/1574)) ([a081fb9](https://github.com/patternfly/patternfly-org/commit/a081fb97d39af0f2b01b59c5554ade0d33c76c47))
+
+
+
+
+
 ## [3.50.8](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.50.7...patternfly-org-4@3.50.8) (2019-12-06)
 
 **Note:** Version bump only for package patternfly-org-4
