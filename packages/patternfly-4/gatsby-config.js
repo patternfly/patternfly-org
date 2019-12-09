@@ -78,10 +78,6 @@ module.exports = {
           {
             text: 'Get in touch',
             path: '/get-in-touch'
-          },
-          {
-            text: 'Blog',
-            path: 'https://blog.patternfly.org/'
           }
         ]
       }
