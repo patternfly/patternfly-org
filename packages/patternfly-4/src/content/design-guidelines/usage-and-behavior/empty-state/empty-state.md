@@ -14,7 +14,7 @@ PatternFly offers three empty state variations; a small empty state, a large emp
 ![Empty state elements](./img/empty-state.jpg)
 
 1. **[Icon/image](#icons):** Display associated object icons here.
-2. **[Icons](#Title-and-body):** Provide a concise explanation.
+2. **[Title](#Title-and-body):** Provide a concise explanation.
 3. **[Body](#Title-and-body):** Provide additional information that helps a user understand why the space is empty, what they can do to move forward, and the value or benefit that is gained by taking the next step.
 4. **[Primary button](#Primary-and-secondary-buttons):** Primary call to action.
 5. **[Secondary buttons (optional)](#Primary-and-secondary-buttons):**  Alternative options for the user. There can be more than one secondary action.
