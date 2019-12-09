@@ -9,10 +9,9 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 import { Page, PageHeader, Brand, Breadcrumb, BreadcrumbItem } from '@patternfly/react-core';
-import { Location } from '@reach/router';
-import logo from '../images/logo.svg';
+import logo from '../logo.svg';
 
-const TrainingLayout = ({ trainingType, katacodaId, location }) => {
+export const TrainingLayout = ({ trainingType, katacodaId, location }) => {
   const data = useStaticQuery(graphql`
   {
     site {
@@ -81,5 +80,3 @@ const TrainingLayout = ({ trainingType, katacodaId, location }) => {
     </div>
   );
 }
-
-export default TrainingLayout;

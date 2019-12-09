@@ -1,5 +1,4 @@
 import React from "react";
-import "./footer.css";
 import {
   Grid,
   GridItem,
@@ -13,10 +12,11 @@ import {
 } from "@patternfly/react-core";
 import { Link } from "gatsby";
 import { GithubIcon, TwitterIcon } from "@patternfly/react-icons";
-import patternflyLogo from "../images/l_pf-reverse-164x11.png";
-import redhatLogo from "../images/RHLogo.png";
+import patternflyLogo from "./l_pf-reverse-164x11.png";
+import redhatLogo from "./RHLogo.png";
+import "./footer.css";
 
-class Footer extends React.Component {
+export class Footer extends React.Component {
   render() {
     return (
       <React.Fragment>
@@ -249,5 +249,3 @@ class Footer extends React.Component {
     );
   }
 }
-
-export default Footer;

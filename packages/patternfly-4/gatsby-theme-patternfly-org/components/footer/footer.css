@@ -1,4 +1,4 @@
-.ws-org-pfsite-l-footer {
+.ws-org-pfsite-l-footer.pf-c-page__main-section {
   font-family: "RedHatText";
   font-weight: 300;
   background-color: #1a1a1a !important;
@@ -13,7 +13,7 @@
   color: #fff;
   text-transform: uppercase;
 }
-.ws-org-pfsite-l-footer-column {
+.ws-org-pfsite-l-footer .ws-org-pfsite-l-footer-column {
   background-color: #333;
   height: 100%;
 }
@@ -100,7 +100,7 @@
   padding: 1rem !important;
   background: #151515 !important;
 }
-.ws-org-pfsite-l-footer-dark > * {
+.pf-c-page__main-section.ws-org-pfsite-l-footer-dark > * {
   font-family: "RedHatDisplay";
   font-weight: 300;
   font-size: 12px;

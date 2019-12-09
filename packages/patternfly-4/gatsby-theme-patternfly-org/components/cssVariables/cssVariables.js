@@ -6,7 +6,7 @@ import './cssVariables.css';
 
 const isColorRegex = /^(#|rgb)/;
 
-export default class CSSVariables extends React.Component {
+export class CSSVariables extends React.Component {
   constructor(props) {
     super(props);
     // Ensure array in case of multiple prefixes

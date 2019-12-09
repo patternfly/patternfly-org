@@ -4,7 +4,7 @@
   margin-bottom: 25px;
 }
 
-.ws-example-heading {
+.ws-example .ws-example-heading {
   padding: var(--pf-global--spacer--md);
   border-bottom: var(--pf-global--BorderWidth--sm) solid #f8f8f8;
 }
