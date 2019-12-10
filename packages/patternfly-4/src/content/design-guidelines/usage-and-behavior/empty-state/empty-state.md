@@ -177,7 +177,7 @@ If the success state appears in a full-page, you can choose to use the extra lar
 ![Success full-page](./img/xl-success.jpg)
 
 ## Addition or creation 
-In some situations, users may need to add or create something in order to view associated information. Let them know what they need to add and guide them with calls-to-action to lead them the right way.
+In some situations, users may need to add or create something to view associated information. Let them know what they need to add and guide them with calls-to-action to lead them the right way.
 
 ![Addition or creation](./img/add-or-create.jpg)
 
