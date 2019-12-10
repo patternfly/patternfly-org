@@ -86,15 +86,16 @@ If you have more than one actionable link, there are two options depending on ho
 
 ![Primary button two ctas](./img/two-ctas-primary.jpg) 
 
-2. **Link button underneath the body:** if your first call to action was in the body.
+2. **Link button underneath the body:** if your first call to action was in the body
 
 ![In body two ctas](./img/two-ctas-body.jpg)
 
 There are only two situations where a stand-alone link button (with nothing linked in the body) can be used:
 1. **Filtering or search situation:** when a user has filtered for something in a table, and is prompted to "clear all filters" or "include" other items in their search
-2. **Multiple primary calls-to-action:** when there are multiple primary actions the user can take and they are all equally important
 
 ![Solo link cta](./img/solo-link.jpg)
+
+2. **Multiple primary calls-to-action:** when there are multiple primary actions the user can take and they are all equally important
 
 ### Alignment
 
@@ -108,9 +109,9 @@ Mobile in-page empty states should be 48px away from the top and have a minimum 
 
 ![Mobile page empty state](./img/mobile-page-es.jpg)
 
-**In-table, card or wizard empty states**
+**In-table, card, or wizard empty states**
 
-Empty states within a table, card or wizard should always be horizontally and vertically centered on their background, with an outside padding of 24px on all sides.
+Empty states within a table, card, or wizard should always be horizontally and vertically centered on their background, with an outside padding of 24px on all sides.
 
 
 ![In table empty state](./img/table-es.jpg)
@@ -144,7 +145,7 @@ Help users understand why there is no data to display and explain what they can 
 
 ![No data to show](./img/no-data.jpg)
 
-### Configuration is required
+### Required configuration
 
 In this situation, a user may need to take steps to configure, connect, or enable something in order to view associated information or take advantage of features.
 
@@ -180,6 +181,13 @@ If the success state appears in a full-page, you can choose to use the extra lar
 In some situations, users may need to add or create something to view associated information. Let them know what they need to add and guide them with calls-to-action to lead them the right way.
 
 ![Addition or creation](./img/add-or-create.jpg)
+
+## Related components and demos
+**HTML/CSS**
+* [Empty state](/documentation/core/components/emptystate)
+
+**React**
+* [Empty state](/documentation/react/components/emptystate)
 
 
 <!-- ## Variations
