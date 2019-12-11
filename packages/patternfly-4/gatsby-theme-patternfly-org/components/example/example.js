@@ -117,6 +117,7 @@ export const Example = props => {
                 className="ws-preview__thumbnail-link"
                 href={fullscreenLink}
                 target="_blank"
+                aria-label="Open fullscreen example"
               >
                 <div style={previewContainerStyle}>
                   {Preview}
