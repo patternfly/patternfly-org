@@ -51,6 +51,7 @@ export const Example = props => {
     const html = Prism.highlight(children, Prism.languages.javascript, 'javascript');
     return <pre dangerouslySetInnerHTML={{ __html: html }} />;
   }
+  const exampleName = title.replace(/-/g, ' ').replace(/  /g, '-');
   const fullscreenLink = `${location.pathname}/${slugger(title.toLowerCase())}`;
   const scope = useMDXScope();
   const codeBoxParams = getParameters(
@@ -97,7 +98,7 @@ export const Example = props => {
   return (
     <div className="ws-example">
       <AutoLinkHeader size="h4" headingLevel="h3" className="ws-example-heading">
-        {title.replace(/-/g, ' ').replace(/  /g, '-')}
+        {exampleName}
       </AutoLinkHeader>
       <LiveProvider
         scope={scope}
@@ -117,7 +118,7 @@ export const Example = props => {
                 className="ws-preview__thumbnail-link"
                 href={fullscreenLink}
                 target="_blank"
-                aria-label="Open fullscreen example"
+                aria-label={`Open fullscreen ${exampleName} example`}
               >
                 <div style={previewContainerStyle}>
                   {Preview}
