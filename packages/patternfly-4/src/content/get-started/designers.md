@@ -16,17 +16,28 @@ The design kit works with Sketch libraries.
  To use it, you need to install [Sketch](https://www.sketch.com/) version 47 or above. For users who do not have access to Sketch, a subset of functionality from our Sketch files, like symbols and fonts, can be imported and used in the free design tool, [Figma](https://www.figma.com/). Learn more about importing Sketch files in [the Figma documentation](https://help.figma.com/article/81-import).
 
 ### Download the template file
-1. Access the [PatternFly template file](https://sketch.cloud/s/R9k28) on Sketch cloud.
+1. Access the [PatternFly template file](https://sketch.cloud/s/nwY34) on Sketch cloud.
 2. Click **Download Document** to open the file. Then, click **File** →  **Save as template**.
 
 ![sketch-cloud](./img/sketch-cloud.png)
 
 ### Add the symbol library
-3. Access the [PatternFly design library](https://sketch.cloud/s/gb1ka) on Sketch cloud.
+3. Access the [PatternFly design library](https://sketch.cloud/s/7do0P) on Sketch cloud.
 4. Click Add library to Sketch on the bottom right to add the library. You'll be prompted with a modal. Click Add library to Sketch again. Sketch will show you the library in your preferences window.
 
 ### Download the font
-5. PatternFly currently uses the Overpass font. To download it, go to https://overpassfont.org/ and select **Desktop OTF files**.
+5. PatternFly currently uses Red Hat Text and Red Hat Display. To download these fonts, go to https://github.com/RedHatOfficial/RedHatFont and download the whole repository. Then select **all files in the "TTF" folder** and double-click. This will install them onto your computer locally..
+
+### Looking for the Overpass design kit?
+
+We still host the Patternfly 4 Overpass library and template files on Sketch Cloud, although support for updating these files ceased in October. This means that any updates that come along with PatternFly releases will not be mirrored in this kit.
+
+You are able to access them here:
+1. [Add the symbol library](https://sketch.cloud/s/gb1ka)
+    - Make sure you download the Overpass font at https://overpassfont.org/ and select **Desktop OTF files**.
+2. [Download the template file](https://sketch.cloud/s/R9k28)
+
+If you’d like to avoid out-of-date designs, we recommend moving to our Red Hat font and using the design kit supplied there!
 
 ## What's in the design kit?
 
@@ -62,7 +73,7 @@ It’s important to understand some specific aspects about the design kit and th
 ### Spacers
 The layout for all visual elements in Patternfly is determined by spacers. The spacers are used as padding between elements to ensure consistent layout and placement of components into a design that adhere to PatternFly guidelines. All symbols in the symbol library and templates have been made using spacers which are built-in to ensure correct use of elements.
 
-The [template library](https://sketch.cloud/s/R9k28) also contains examples of spacer use to clarify where elements should be placed within a given page or design.  These templates have been created in a way that reduces a user’s need to think about spacers. An example of a Login form template can be seen here with different sized spacers - demonstrated by their different colors - used to separate each symbol/component within the layout.
+The [template library](https://sketch.cloud/s/nwY34) also contains examples of spacer use to clarify where elements should be placed within a given page or design.  These templates have been created in a way that reduces a user’s need to think about spacers. An example of a Login form template can be seen here with different sized spacers - demonstrated by their different colors - used to separate each symbol/component within the layout.
 
 To see more information about spacers and their use please click [here](/design-guidelines/styles/spacers).
 
@@ -80,7 +91,7 @@ Colors in PatternFly are carefully considered, and custom layer styles are disco
 Note that there is a difference between regular color options and chart color fill options. When changing a color in a chart, you should only use the colors in the chart fill “dropdown”, which includes fills for donut charts, line charts and regular bar charts. When changing the color of other elements, you should use the general color palette if the component does not fit into the other offered category options.
 
 ### Text styles
-Currently, all PatternFly text styles use Overpass font. If you have not done so already, make sure to download [here](https://overpassfont.org/) before starting your designs.
+Currently, all PatternFly text styles use Red Hat Text and Red Hat Display fonts. If you have not done so already, make sure to download according to the instructions [above](#download-the-font) before starting your designs.
 
 When inserting text into your design, always assign it a text style by selecting the text item, followed by selecting a text style from the appearance menu on the right toolbar.
 
@@ -125,6 +136,6 @@ Adjustments and bug fixes are made to the kit on a regular basis. When we make a
 
 We recommend that you keep your kit as up to date as possible. Once a change is accepted, you will not be able to revert to the previous version.
 
-Please note that the Patternfly template will NOT be automatically updated as the symbol library is. Therefore, we have added a date to the top of the artboard on the “About this document” page to track the most recently updated version. Every time this template file is updated, you will need to re-download and re-save this as a template.
+Please note that the Patternfly template will NOT be automatically updated as the symbol library is. Every time this template file is updated, you will need to re-download and re-save this as a template. We have added [release notes](https://github.com/patternfly/patternfly-design-kit/blob/master/RELEASE%20NOTES.md) to the [design-kit-repo](https://github.com/patternfly/patternfly-design-kit/) that document additions and edits to the design kit. This is a good place to start to review what has been added to the template file.
 
 Did you use the old versions of the symbols that were updated in files already? No problem -  you will receive another notification in the top right of that specific Sketch file that will allow you to update them.
