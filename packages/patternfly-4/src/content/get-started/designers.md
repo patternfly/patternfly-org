@@ -33,6 +33,7 @@ The design kit works with Sketch libraries.
 We still host the Patternfly 4 Overpass library and template files on Sketch Cloud, although support for updating these files ceased in October. This means that any updates that come along with PatternFly releases will not be mirrored in this kit.
 
 You are able to access them here:
+
 1. [Add the symbol library](https://sketch.cloud/s/gb1ka)
     - Make sure you download the Overpass font at https://overpassfont.org/ and select **Desktop OTF files**.
 2. [Download the template file](https://sketch.cloud/s/R9k28)
