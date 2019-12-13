@@ -29,7 +29,6 @@ export const PropsTable = props => {
 
   return (
     <Table
-      className="pf-m-grid-2xl"
       variant="compact"
       aria-label={props.caption}
       cells={columns}

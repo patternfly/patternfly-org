@@ -94,7 +94,7 @@ export const Example = props => {
         darkMode ? ' pf-t-dark pf-m-opaque-200' : ''}${
         isFullscreen ? ' ws-preview-fullscreen' : ' ws-preview'}`} />
   );
-
+  
   return (
     <div className="ws-example">
       <AutoLinkHeader size="h4" headingLevel="h3" className="ws-example-heading">
@@ -137,7 +137,8 @@ export const Example = props => {
           isFullscreen={isFullscreen}
           fullscreenLink={fullscreenLink}
           code={editorCode}
-          codeBoxParams={codeBoxParams} />
+          codeBoxParams={codeBoxParams} 
+          componentName={props.componentName}/>
         <LiveError />
       </LiveProvider>
     </div>

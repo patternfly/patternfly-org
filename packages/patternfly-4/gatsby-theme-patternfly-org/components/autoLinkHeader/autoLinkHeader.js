@@ -29,7 +29,7 @@ export const AutoLinkHeader = ({
       size={sizes[size]}
       headingLevel={headingLevel || size}
       {...props}>
-      <a href={`#${slug}`} className="ws-heading-anchor" tabIndex="-1" aria-label="Heading anchor icon">
+      <a href={`#${slug}`} className="ws-heading-anchor" tabIndex="-1" >
         <LinkIcon style={{ height: '0.5em', width: '0.5em', verticalAlign: 'middle' }} />
       </a>
       {children}
