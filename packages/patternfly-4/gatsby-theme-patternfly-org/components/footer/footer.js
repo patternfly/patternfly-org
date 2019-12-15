@@ -81,6 +81,15 @@ export class Footer extends React.Component {
                       >
                         PatternFly 3
                       </NavItem>
+                      <li className="pf-c-nav__item">
+                        <Link
+                          className="pf-c-nav__link"
+                          to={"/privacy-statement"}
+                          aria-label="PatternFly 4 privacy policy"
+                        >
+                          Privacy statement
+                        </Link>
+                      </li>
                     </NavList>
                   </Nav>
                 </GridItem>
