@@ -19,8 +19,6 @@ The design kit is a collection of Sketch assets that make it easy for designers 
 1. Access the [PatternFly template file](https://sketch.cloud/s/nwY34) on Sketch cloud.
 2. Click **Download Document** to open the file. Then, click **File** →  **Save as template**.
 
-![sketch-cloud](./img/sketch-cloud.png)
-
 ### Add the symbol library
 3. Access the [PatternFly design library](https://sketch.cloud/s/7do0P) on Sketch cloud.
 4. Click Add library to Sketch on the bottom right to add the library. You'll be prompted with a modal. Click Add library to Sketch again. Sketch will show you the library in your preferences window.
