@@ -11,9 +11,9 @@ Whether you are converting from a PatternFly 3 application or starting fresh wit
 ## Getting the design kit
 
 ### Before you begin
-The design kit works with Sketch libraries.
+The design kit is a collection of Sketch assets that make it easy for designers to create hi-fi mockups that accurately represent PatternFly components and layouts. It works with Sketch libraries.
 
- To use it, you need to install [Sketch](https://www.sketch.com/) version 47 or above. For users who do not have access to Sketch, a subset of functionality from our Sketch files, like symbols and fonts, can be imported and used in the free design tool, [Figma](https://www.figma.com/). Learn more about importing Sketch files in [the Figma documentation](https://help.figma.com/article/81-import).
+ To use it, you need to install [Sketch](https://www.sketch.com/) version 47 or above. For users who do not have access to Sketch (non-Mac users), a subset of functionality from our Sketch files, like symbols and fonts, can be imported and used in the free design tool, [Figma](https://www.figma.com/). Learn more about importing Sketch files in [the Figma documentation](https://help.figma.com/article/81-import).
 
 ### Download the template file
 1. Access the [PatternFly template file](https://sketch.cloud/s/nwY34) on Sketch cloud.
@@ -26,7 +26,7 @@ The design kit works with Sketch libraries.
 4. Click Add library to Sketch on the bottom right to add the library. You'll be prompted with a modal. Click Add library to Sketch again. Sketch will show you the library in your preferences window.
 
 ### Download the font
-5. PatternFly currently uses Red Hat Text and Red Hat Display. To download these fonts, go to https://github.com/RedHatOfficial/RedHatFont and download the whole repository. Then select **all files in the "TTF" folder** and double-click. This will install them onto your computer locally..
+5. PatternFly currently uses Red Hat Text and Red Hat Display. To download these fonts, go to https://github.com/RedHatOfficial/RedHatFont and download the whole repository. Then select **all files in the "TTF" folder** and double-click. This will install them onto your computer locally.
 
 ### Looking for the Overpass design kit?
 
