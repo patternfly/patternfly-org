@@ -105,10 +105,10 @@ const MDXTemplate = ({ data, location, pageContext }) => {
       )}
       {!hideTOC && (
         <React.Fragment>
-          <label className="ws-framework-title pf-c-title">
+          <label className="ws-framework-title pf-c-title" aria-hidden>
             {getSourceTitle(source)}
           </label>
-          <Title size="4xl" className="ws-page-title">{title}</Title>
+          <Title size="4xl" className="ws-page-title" aria-labeledby={`${getSourceTitle(source)} ${title}`}>{title}</Title>
           {optIn && (
             <Alert
               variant="info"

@@ -53,6 +53,7 @@ export class ExampleToolbar extends React.Component {
               variant="plain"
               title={`Toggle ${componentName} ${lang} code`}
               aria-label={`Toggle ${componentName} ${lang} code`}
+              aria-expanded={codeOpen}
             >
               {lang === 'hbs'
                 ? <svg

@@ -7,8 +7,7 @@ import {
   NavList,
   PageSection,
   Text,
-  TextVariants,
-  Title
+  TextVariants
 } from "@patternfly/react-core";
 import { Link } from "gatsby";
 import { GithubIcon, TwitterIcon } from "@patternfly/react-icons";
