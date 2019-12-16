@@ -54,7 +54,7 @@ The following elements can be used in an attribute-value (textbox) filter.
 
 1. **Attribute selector:** A select list that allows the user to select the attribute that they want to filter against.
 
-2. **Value selector:** The value selector can be any data input component that is used to pass a value to the filter. 
+2. **Value selector:** The value selector can be any data input component that is used to pass a value to the filter.
 
 Common components used for value selection include:
   * A **search field** for entering a value from the keyboard. Use when you will enter the value as unbounded data (e.g. a name).
@@ -185,27 +185,6 @@ Use a complex faceted filter when you have limited space and multiple attributes
 #### Behavior
 Filter queries are applied when the user selects or deselects an item in the list, or types a query in the input field and presses Enter.
 
-
-
-## Related components and demos
-**HTML/CSS**
-* [Badges](/documentation/core/components/badge)
-* [Check](/documentation/core/components/check)
-* [Chip](/documentation/core/components/chip)
-* [Chip group](/documentation/core/components/chipgroup)
-* [Input group](/documentation/core/components/inputgroup)
-* [Options menus](/documentation/core/components/optionsmenu)
-* [Select](/documentation/core/components/select)
-* [Toolbar](/documentation/core/components/toolbar)
-
-**React**
-* [Badges](/documentation/react/components/badge)
-* [Checkbox](/documentation/react/components/checkbox)
-* [Chip group](/documentation/react/components/chipgroup)
-* [Toolbar demo](/documentation/react/demos/toolbardemo)
-
-
-
 ## Usage
 ### Layout considerations
 Filters may be included in a toolbar and are usually left aligned. There may be more than one filter used in a single toolbar, and in some cases, custom filters may make up a full toolbar. Filters may also be used alone outside of a toolbar.
@@ -231,3 +210,18 @@ Filter hint text in input fields should read “Filter by [attribute]...” and 
 
 ### Clearing filters
 The option to clear all filters will be displayed after the last filter chip. It should read “Clear filters” in sentence case. When clicked, it should remove all applied filters and collapse the toolbar back into a single row.
+
+## Related components and demos
+**HTML/CSS**
+* [Badges](/documentation/core/components/badge)
+* [Chip](/documentation/core/components/chip)
+* [Chip group](/documentation/core/components/chipgroup)
+* [Input group](/documentation/core/components/inputgroup)
+* [Options menus](/documentation/core/components/optionsmenu)
+* [Select](/documentation/core/components/select)
+* [Data Toolbar (experimental)](/documentation/core/experimental/toolbar)
+
+**React**
+* [Badges](/documentation/react/components/badge)
+* [Chip group](/documentation/react/components/chipgroup)
+* [Data Toolbar (experimental)](/documentation/react/experimental/toolbar)
