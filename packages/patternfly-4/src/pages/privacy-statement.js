@@ -163,7 +163,8 @@ const PrivacyStatement = ({ location }) => (
       <h2 className="pf-u-mb-lg ws-title">How to Contact Us</h2>
       <hr/>
 
-      <p className="ws-mdx-p">If you have any questions about any of these practices or PatternFly's use of your personal information, please feel free to contact us on any of the channels listed on this page: <a href="https://www.patternfly.org/v4/get-in-touch">https://www.patternfly.org/v4/get-in-touch</a>.</p>
+      <p className="ws-mdx-p">If you have any questions about any of these practices or PatternFly's use of your personal information, please feel free to contact us on any of the channels listed on this page:<p>
+      </p><a href="https://www.patternfly.org/v4/get-in-touch">https://www.patternfly.org/v4/get-in-touch</a>.</p>
       <p className="ws-mdx-p">PatternFly will work with you to resolve any concerns you may have about this Statement.</p>
       
       <h2 className="pf-u-mb-lg ws-title">Changes to this Privacy Statement</h2>
