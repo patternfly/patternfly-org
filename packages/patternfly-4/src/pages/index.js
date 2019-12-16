@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import SideNavLayout from 'gatsby-theme-patternfly-org/layouts/sideNavLayout';
+import { SideNavLayout } from 'gatsby-theme-patternfly-org/layouts';
 import {
   Grid,
   GridItem,
@@ -14,7 +14,7 @@ import {
 import { ArrowRightIcon } from '@patternfly/react-icons';
 import orb from '../images/pf4-logo.svg';
 import principles from '../images/pf4-wireframe.png';
-import AutoLinkHeader from 'gatsby-theme-patternfly-org/components/autoLinkHeader';
+import { AutoLinkHeader } from 'gatsby-theme-patternfly-org/components/autoLinkHeader/autoLinkHeader';
 import './homepage.css';
 
 const aboutPatternFly = 'About PatternFly';

@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Nav, NavList, NavExpandable, DropdownToggle, DropdownItem, Dropdown } from '@patternfly/react-core';
 import { CaretDownIcon } from '@patternfly/react-icons';
-import { capitalize } from '../helpers/capitalize';
-import { slugger } from '../helpers/slugger';
+import { slugger, capitalize } from '../../helpers';
 import "./sideNav.css";
 
 const renderNavItem = node => (
@@ -19,7 +18,14 @@ const renderNavItem = node => (
   </li>
 );
 
-const SideNav = ({ location, context, allPages, sideNavContexts, pageSource, parityComponent }) => {
+export const SideNav = ({
+  location,
+  context,
+  allPages,
+  sideNavContexts,
+  pageSource,
+  parityComponent
+}) => {
   const [isDropdownOpen, setDropdownOpen] = React.useState(false);
   
   // The `context` property worked hard to get here
@@ -112,5 +118,3 @@ const SideNav = ({ location, context, allPages, sideNavContexts, pageSource, par
     </Nav>
   )
 }
-
-export default SideNav;

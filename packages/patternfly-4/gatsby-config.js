@@ -1,9 +1,8 @@
 const path = require('path');
 
-console.log( process.env.VERSION_PREFIX || '/v4')
 module.exports = {
   // For production build
-  pathPrefix: process.env.VERSION_PREFIX || '/v4',
+  pathPrefix: '/v4',
   siteMetadata: {
     title: 'PatternFly 4',
     // For SEO
@@ -79,10 +78,6 @@ module.exports = {
           {
             text: 'Get in touch',
             path: '/get-in-touch'
-          },
-          {
-            text: 'Blog',
-            path: 'https://blog.patternfly.org/'
           }
         ]
       }
@@ -126,6 +121,7 @@ module.exports = {
           '**/styles',
           '**/build',
           '**/utils',
+          '**/public',
           '**/test-helpers',
           /.*react-styles.*/,
           /.*react-docs.*/,

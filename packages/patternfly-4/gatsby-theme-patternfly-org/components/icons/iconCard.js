@@ -1,11 +1,11 @@
 import React from 'react';
-import { Button, Bullseye, GalleryItem, Popover, TextContent, Text } from '@patternfly/react-core';
-import { copy } from '../helpers/copy';
+import { Button, Bullseye, GalleryItem,  TextContent, Text } from '@patternfly/react-core';
+import { copy } from '../../helpers/copy';
 import { saveAs } from 'file-saver';
 import ReactDOM from 'react-dom';
 import './iconCard.css';
 
-class IconCard extends React.Component {
+export class IconCard extends React.Component {
   constructor(props) {
     super(props);
     this.iconRef = React.createRef();
@@ -108,7 +108,7 @@ class IconCard extends React.Component {
       </div>
     );
     return (
-      <>
+      <React.Fragment>
         <GalleryItem onClick={this.toggleBody}>
           <div className="ws-content-iconCell" style={{height: '100%'}} ref={this.galleryItemRef}>
             <div>
@@ -144,10 +144,7 @@ class IconCard extends React.Component {
             </div>
           </div>
         </GalleryItem>
-      </>
+      </React.Fragment>
     );
   }
-
 }
-
-export default IconCard;

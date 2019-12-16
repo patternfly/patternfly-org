@@ -12,7 +12,7 @@ glob.sync(path.join(__dirname, '../build/patternfly-org/v4/**'))
 
     let contents = fs.readFileSync(file, 'utf8');
     if (file.endsWith('.js') || file.endsWith('.html')) {
-      contents = contents.replace(/\/v4/g, '/' + version);
+      contents = contents.replace(/\/v4/g, `/${version}`);
     }
 
     fs.ensureFileSync(newPath);

@@ -1,5 +1,5 @@
 // Export absolute paths for font files, to be used in place of relative paths for codesandbox
-const overpass = `
+export const overpass = `
   @font-face {
     font-family: "overpass";
     font-style: normal;
@@ -162,5 +162,3 @@ const overpass = `
     src: url("https://unpkg.com/@patternfly/patternfly@2.40.13/assets/fonts/overpass-mono-webfont/overpass-mono-bold.eot?#iefix") format("embedded-opentype"), url("https://unpkg.com/@patternfly/patternfly@2.40.13/assets/fonts/overpass-mono-webfont/overpass-mono-bold.woff2") format("woff2"), url("https://unpkg.com/@patternfly/patternfly@2.40.13/assets/fonts/overpass-mono-webfont/overpass-mono-bold.woff") format("woff"), url("https://unpkg.com/@patternfly/patternfly@2.40.13/assets/fonts/overpass-mono-webfont/overpass-mono-bold.ttf") format("truetype");
   }
 `;
-
-export default overpass;

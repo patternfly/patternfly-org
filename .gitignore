@@ -10,7 +10,9 @@
 
 # Ignore local nodejs packages
 node_modules
-bower_components
+
+# Ruby packages
+.bundle
 
 # Ignore generated files
 patternfly.spec

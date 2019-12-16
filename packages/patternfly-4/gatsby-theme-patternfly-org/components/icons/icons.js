@@ -1,7 +1,7 @@
 import React from 'react';
 import { Gallery, Form, TextInput, Title, EmptyState, EmptyStateVariant, EmptyStateIcon, EmptyStateBody } from '@patternfly/react-core';
 import * as icons from '@patternfly/react-icons';
-import IconCard from './iconCard';
+import { IconCard } from './iconCard';
 import paramCase from 'param-case';
 import coreIcons from './pf-icons.json';
 import './icons.css';
@@ -20,7 +20,7 @@ commonIcons = commonIcons.sort((a , b) => {
 //   return !coreIcons[hyphenName];
 // });
 
-class Icons extends React.Component {
+export class Icons extends React.Component {
   state = {
     searchValue: ''
   };
@@ -72,5 +72,3 @@ class Icons extends React.Component {
   }
 
 }
-
-export default Icons;

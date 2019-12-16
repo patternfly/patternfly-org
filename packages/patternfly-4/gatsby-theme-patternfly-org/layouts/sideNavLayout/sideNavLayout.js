@@ -10,16 +10,13 @@ import { Helmet } from 'react-helmet';
 
 import { Page, PageHeader, PageSidebar, Toolbar, ToolbarItem, Form, TextInput, Brand, Dropdown, DropdownToggle, DropdownItem, DropdownGroup } from '@patternfly/react-core';
 import { SearchIcon, CaretDownIcon } from '@patternfly/react-icons';
-import SideNav from '../components/sideNav';
-import TopNav from '../components/topNav';
-import Banner from '../components/banner';
-import Footer from '../components/footer';
-import logo from '../images/logo.svg';
-import GlobalContext from '../components/globalContext';
+import { SideNav, TopNav,  Banner, Footer } from '../../components';
+import staticVersions from 'gatsby-theme-patternfly-org/versions.json';
+import logo from '../logo.svg';
 import './sideNavLayout.css';
 
 // ParityComponent: aboutmodal <=> aboutmodalbox
-const SideNavLayout = ({
+export const SideNavLayout = ({
   children,
   location,
   context,
@@ -27,21 +24,6 @@ const SideNavLayout = ({
   hideSideNav = false,
   showBanner = false
 }) => {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const { initialVersions, getVersions } = useContext(GlobalContext);
-  const initialVersion = initialVersions.Releases.find(release => release.latest);
-  const versions = getVersions();
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.docsearch) {
-      window.docsearch({
-        apiKey: '06941733239da4f8617d272cf2ed4d5c',
-        indexName: 'patternfly',
-        inputSelector: '#global-search-input',
-        debug: false // Set debug to true if you want to inspect the dropdown
-      });
-    }
-  }, []);
-  
   // Put queries for Top and Side navs here for performance
   // We should consider passing down the `sitePlugin` data in pageContext
   // rather than fetching the GraphQL here
@@ -109,6 +91,29 @@ const SideNavLayout = ({
   const { title } = data.site.siteMetadata;
   const { num, url } = data.prInfo;
   const { topNavItems, sideNav, context: pageSource } = data.sitePlugin.pluginOptions;
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const initialVersion = staticVersions.Releases.find(release => release.latest);
+  let versions = {...staticVersions};
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    if (window.docsearch) {
+      window.docsearch({
+        apiKey: '06941733239da4f8617d272cf2ed4d5c',
+        indexName: 'patternfly',
+        inputSelector: '#global-search-input',
+        debug: false // Set debug to true if you want to inspect the dropdown
+      });
+    }
+    if (window.fetch && pageSource === 'org') {
+      fetch('/versions.json')
+        .then(data => data.json())
+        .then(json => versions = json)
+        .catch(); // No big deal for core/react
+    }
+  }, []);
+
   const SideBar = hideSideNav
     ? undefined
     : <PageSidebar
@@ -245,5 +250,3 @@ const SideNavLayout = ({
     </div>
   );
 }
-
-export default SideNavLayout;
