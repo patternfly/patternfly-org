@@ -41,7 +41,7 @@ export class ExampleToolbar extends React.Component {
   }
 
   render() {
-    const { editor, fullscreenLink, codeBoxParams, supportedLangs, onDarkmodeChange, isFullscreen, hideDarkMode } = this.props;
+    const { editor, fullscreenLink, codeBoxParams, supportedLangs, onDarkmodeChange, isFullscreen, hideDarkMode, componentName } = this.props;
     const { codeOpen, showCopyMessage } = this.state;
     return (
       <React.Fragment>
@@ -51,8 +51,9 @@ export class ExampleToolbar extends React.Component {
               key={lang}
               onClick={() => this.onLanguageChange(lang)}
               variant="plain"
-              title={`Toggle ${lang} code`}
-              aria-label={`Toggle ${lang} code`}
+              title={`Toggle ${componentName} ${lang} code`}
+              aria-label={`Toggle ${componentName} ${lang} code`}
+              aria-expanded={codeOpen}
             >
               {lang === 'hbs'
                 ? <svg
@@ -75,7 +76,7 @@ export class ExampleToolbar extends React.Component {
           <Button
             onClick={this.onCopy}
             variant="plain"
-            aria-label="Copy code"
+            aria-label={`Copy ${componentName} code`}
           >
             <CopyIcon />
           </Button>
@@ -90,14 +91,14 @@ export class ExampleToolbar extends React.Component {
           }
           {codeBoxParams &&
             <Form
-              aria-label="Open in CodeSandbox"
+              aria-label={`Open ${componentName} example in CodeSandbox`}
               action="https://codesandbox.io/api/v1/sandboxes/define"
               method="POST"
               target="_blank"
               style={{display: "inline-block"}}
             >
               <Button
-                aria-label="Open in CodeSandbox"
+                aria-label={`Open ${componentName} example in CodeSandbox`}
                 variant="plain"
                 type="submit"
               >
@@ -113,7 +114,7 @@ export class ExampleToolbar extends React.Component {
               target="_blank"
               rel="noopener noreferrer"
               variant="plain"
-              aria-label="Open in new window"
+              aria-label={`Open ${componentName} example in new window`} //add component?
             >
               <ExternalLinkAltIcon />
             </Button>

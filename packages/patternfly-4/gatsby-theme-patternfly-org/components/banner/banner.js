@@ -27,7 +27,7 @@ export const Banner = () => {
             </a>
           </div>
           <div className="pf-u-mr-xl">
-            <Button variant="plain" aria-label="Action" onClick={closeBanner}>
+            <Button variant="plain" aria-label="Close banner" onClick={closeBanner}>
               <TimesIcon />
             </Button>
           </div>
