@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardHead, CardHeader, CardBody, CardFooter, Button } from "@patternfly/react-core";
 import { ArrowRightIcon, CubesIcon, ClockIcon, RunningIcon, PuzzlePieceIcon, ChartBarIcon } from '@patternfly/react-icons';
-import { Link } from 'gatsby';
+import { NoPrefixLink } from '../noPrefixLink/noPrefixLink';
 import { Location } from '@reach/router';
 import { capitalize } from '../../helpers/capitalize';
 import './trainingCard.css';
@@ -48,7 +48,7 @@ export const TrainingCard = ({
     <CardFooter>
     <Location>
       {({ location }) => (
-        <Link
+        <NoPrefixLink
           to={location.pathname}
           state={{ trainingType, katacodaId }} // To show embedded tutorial
         >
@@ -56,7 +56,7 @@ export const TrainingCard = ({
             Start
             <ArrowRightIcon />
           </Button>
-        </Link>
+        </NoPrefixLink>
       )}
     </Location>
     </CardFooter>

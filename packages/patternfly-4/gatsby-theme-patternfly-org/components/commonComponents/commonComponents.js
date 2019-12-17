@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { NoPrefixLink } from '../noPrefixLink/noPrefixLink';
 import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
 import { Example } from '../example/example';
 import './commonComponents.css';
@@ -11,15 +11,8 @@ export const commonComponents = {
   p: (props) => <p className="ws-p" {...props} />,
   ul: (props) => <ul className="ws-ul" {...props} />,
   ul: (props) => <ul className="ws-ul" {...props} />,
-  a: (props) => {
-   // https://www.gatsbyjs.org/docs/gatsby-link/#reminder-use-link-only-for-internal-links
-    if (props.href.includes('//') || props.href.startsWith("#")) {
-      return <a {...props} />;
-    }
-    // Basically "withoutPrefix" since links are already prefixed coming into here
-    return <Link to={props.href.replace('v4/', '')} {...props} />;
-  },
-  // Matching up with commonComponents.css pf-c-content copy
+  a: NoPrefixLink,
+  // Matching up with commonComponents.css pf-c-content
   ul: (props) => <ul className="ws-ul" {...props} />,
   ol: (props) => <ol className="ws-ol" {...props} />,
   li: (props) => <li className="ws-li" {...props} />,

@@ -12,7 +12,6 @@
     "clean": "gatsby clean",
     "develop": "yarn build:static && gatsby develop",
     "serve": "gatsby serve",
-    "serve:prefix": "gatsby serve --prefix-paths",
     "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4",
     "test:a11y:ci": "start-server-and-test serve:prefix http://localhost:9000/v4 test:a11y"
   },
