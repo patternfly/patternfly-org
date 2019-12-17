@@ -11,6 +11,7 @@ import {
   Grid,
   GridItem,
   PageSection,
+  SkipToContent,
   Title
 } from '@patternfly/react-core';
 import { SideNavLayout, TrainingLayout } from '../layouts';
@@ -104,10 +105,10 @@ const MDXTemplate = ({ data, location, pageContext }) => {
       )}
       {!hideTOC && (
         <React.Fragment>
-          <Title size="md" className="ws-framework-title">
+          <label id="source-label" className="ws-framework-title pf-c-title" aria-hidden>
             {getSourceTitle(source)}
-          </Title>
-          <Title size="4xl" className="ws-page-title">{title}</Title>
+          </label>
+          <Title id="component-title" size="4xl" className="ws-page-title" aria-labelledby="source-label component-title">{title}</Title>
           {optIn && (
             <Alert
               variant="info"
@@ -243,13 +244,15 @@ const MDXTemplate = ({ data, location, pageContext }) => {
   );
 
   return (
+    <React.Fragment>
+      <SkipToContent href="#main-content">Skip to Content</SkipToContent>
       <SideNavLayout
         location={location}
         context={source}
         parityComponent={parityComponent}
         showBanner={showBanner}
       >
-        <PageSection className="ws-section">
+        <PageSection id="main-content" className="ws-section">
 
           <TableOfContents />
 
@@ -263,6 +266,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
           {cssPrefix && <CSSVariablesSection />}
         </PageSection>
       </SideNavLayout>
+    </React.Fragment>
   );
 }
 
