@@ -13,7 +13,7 @@ Before you begin, check out our [overview of PatternFly](/get-started/about) to 
 * [Use npm](https://nodejs.org/en/download)
 * [Use Yarn](https://yarnpkg.com/en/docs/getting-started)
 
-### Get started with:
+**Get started with:**
 
 * [React](#react)
 * [HTML/CSS](#htmlcss)
