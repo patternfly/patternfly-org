@@ -202,7 +202,7 @@ The brush and zoom properties allow for magnification of an area, bar, line or s
 2. **Magnified chart:** The portion selected will appear above the full chart view.
 
 ### Interactive chart legends
-For charts that have more than one data set graphed, interactive legends can be used to highlight or isolate certain data sets.  This would work well for [line](#line-chart), [area](#area-chart), or [stacked](#stacked-bar-chart) type of charts where overlap of data sets could occur.
+For charts that have more than one data set graphed, interactive legends can be used to highlight or isolate certain data sets.  This would work well for [line](#line-chart), [area](#area-chart), or [stacked](#stacked-bar-charts) type of charts where overlap of data sets could occur.
 
 #### Example
 On hover
