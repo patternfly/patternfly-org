@@ -92,8 +92,9 @@ export const SideNavLayout = ({
   const { num, url } = data.prInfo;
   const { topNavItems, sideNav, context: pageSource } = data.sitePlugin.pluginOptions;
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [versions, setVersions] = useState({...staticVersions});
   const initialVersion = staticVersions.Releases.find(release => release.latest);
-  let versions = {...staticVersions};
+
   useEffect(() => {
     if (typeof window === 'undefined') {
       return;
@@ -109,7 +110,7 @@ export const SideNavLayout = ({
     if (window.fetch && pageSource === 'org') {
       fetch('/versions.json')
         .then(data => data.json())
-        .then(json => versions = json)
+        .then(json => setVersions(json))
         .catch(); // No big deal for core/react
     }
   }, []);

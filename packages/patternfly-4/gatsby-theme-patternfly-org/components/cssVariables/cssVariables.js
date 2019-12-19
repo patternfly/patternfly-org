@@ -77,9 +77,8 @@ export class CSSVariables extends React.Component {
           onChange={this.onFilterChange}
         />
         <Table
-          className="pf-m-grid-2xl"
           variant="compact"
-          aria-label="CSS Variables"
+          aria-label={`CSS Variables for prefixes ${this.prefix.join(' ')}`}
           sortBy={this.state.sortBy}
           onSort={this.onSort}
           cells={this.columns}

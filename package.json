@@ -24,7 +24,7 @@
     "clean": "lerna run clean && rm -rf build",
     "clean:org": "yarn workspace patternfly-org-4 clean && rm -rf build/patternfly-org",
     "serve:org": "yarn workspace patternfly-org-4 serve -p 8003",
-    "serve:org:prefix": "yarn workspace patternfly-org-4 serve:prefix",
+    "serve:org:prefix": "yarn workspace patternfly-org-4 serve -p 8003 --prefix-paths",
     "test:org": "yarn workspace patternfly-org-4 test:a11y:ci",
     "start:pf3": "yarn workspace patternfly-org-3 develop",
     "start:pf4": "yarn develop:org"

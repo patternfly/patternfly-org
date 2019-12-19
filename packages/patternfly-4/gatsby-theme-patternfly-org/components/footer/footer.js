@@ -7,8 +7,7 @@ import {
   NavList,
   PageSection,
   Text,
-  TextVariants,
-  Title
+  TextVariants
 } from "@patternfly/react-core";
 import { Link } from "gatsby";
 import { GithubIcon, TwitterIcon } from "@patternfly/react-icons";
@@ -30,12 +29,11 @@ export class Footer extends React.Component {
             >
               <Grid className="pf-u-py-xl">
                 <GridItem sm={6} md={4} className="pf-u-ml-md pf-u-ml-0-on-md">
-                  <Title
-                    size="md"
-                    className="ws-org-pfsite-footer-menu-list-title"
+                  <p
+                    className="pf-c-title ws-org-pfsite-footer-menu-list-title"
                   >
                     QUICKLINKS
-                  </Title>
+                  </p>
                   <Nav aria-label="Quick Links" className="pf-m-white">
                     <NavList className="pf-c-nav__list-footer">
                       <li className="pf-c-nav__item">
@@ -89,12 +87,11 @@ export class Footer extends React.Component {
                   md={4}
                   className="pf-u-mt-lg pf-u-mt-0-on-sm pf-u-ml-md pf-u-ml-0-on-md"
                 >
-                  <Title
-                    size="md"
-                    className="ws-org-pfsite-footer-menu-list-title"
+                  <p
+                    className="pf-c-title ws-org-pfsite-footer-menu-list-title"
                   >
                     CONTRIBUTE
-                  </Title>
+                  </p>
                   <Nav aria-label="Contribute">
                     <NavList className="pf-c-nav__list-footer">
                       <li className="pf-c-nav__item">
@@ -130,12 +127,11 @@ export class Footer extends React.Component {
                   md={4}
                   className="pf-u-mt-lg pf-u-mt-0-on-md pf-u-ml-md pf-u-ml-0-on-md"
                 >
-                  <Title
-                    size="md"
+                  <p
                     className="ws-org-pfsite-footer-menu-list-title"
                   >
                     STAY IN TOUCH
-                  </Title>
+                  </p>
                   <Nav aria-label="Stay in touch" className="pf-m-white">
                     <NavList className="pf-c-nav__list-footer">
                       <NavItem
