@@ -7,10 +7,10 @@ import { capitalize } from '../../helpers/capitalize';
 import './trainingCard.css';
 
 const getTrainingIcon = trainingType => {
-  if (['htmlcss', 'react'].includes(trainingType)) {
+  if (['html-css', 'react'].includes(trainingType)) {
     return <CubesIcon className="training-basics" />;
   }
-  else if (trainingType === 'reactcomponents') {
+  else if (trainingType === 'react-components') {
     return <PuzzlePieceIcon className="training-components" />;
   }
 
