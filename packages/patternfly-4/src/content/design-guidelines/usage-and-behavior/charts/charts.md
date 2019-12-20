@@ -14,7 +14,7 @@ Use charts to visualize data in an application. The type of chart you use will d
 
 1. **Title:** Titles should be left-aligned and appear above your chart.
 2. **Axis labels and scale values:**  We recommend using tick marks to clearly mark scale values on the y-axis. The text for axis labels and scale values should be 12px font in standard text color. All scale values should be equally distributed across the axis and the axis label should fall outside the scale values, centered with the axis line.
-3. **Legends:** We recommend using legends when charts include more than one variable and therefore use more than one color. If space is not available to display names of horizontal and vertical axes, a legend must be added instead. The legend should list the colors that each variable obtains and the name of the variable. The text on the legend should be 14px size and standard text color. They can either be placed left-aligned to the right of the chart or centered below the chart.
+3. **Legends:** We recommend using legends when charts include more than one variable and therefore use more than one color. When datasets are overlapping, an [interactive legend](#interactive-chart-legends) can be used. If space is not available to display names of horizontal and vertical axes, a legend must be added instead. The legend should list the colors that each variable obtains and the name of the variable. The text on the legend should be 14px size and standard text color. They can either be placed left-aligned to the right of the chart or centered below the chart.
 4. **Chart tooltip:** A tooltip will appear on hover over certain elements of a chart, like bars in a bar chart or segments in a donut chart. Chart tooltips should display the specific values related to the element the user is hovering over.
 
 ## Chart types
@@ -200,3 +200,19 @@ The brush and zoom properties allow for magnification of an area, bar, line or s
 
 1. **Window:** Click and drag to create a window around the section of the chart that you want to zoom in on
 2. **Magnified chart:** The portion selected will appear above the full chart view.
+
+### Interactive chart legends
+For charts that have more than one data set graphed, interactive legends can be used to highlight or isolate certain data sets.  This would work well for [line](#line-chart), [area](#area-chart), or [stacked](#stacked-bar-charts) type of charts where overlap of data sets could occur.
+
+#### Example
+On hover
+![On hover](./img/interactive-legend-hover.png)
+
+1. **Legend:** When a user hovers over a legend label, all the other legend labels’ opacity are lowered.
+2. **Chart:** The corresponding data of the hovered legend item, would be highlighted by having the other data sets’ opacity lowered.
+
+On click
+![On click](./img/interactive-legend-hide.png)
+
+1. **Legend:** When a user clicks on a legend label, it becomes disabled and the color swatch would be replaced with an eye-slashed icon.
+2. **Chart:** The corresponding data would be made hidden from view.
