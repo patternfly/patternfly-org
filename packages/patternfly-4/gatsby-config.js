@@ -32,9 +32,7 @@ module.exports = {
             { section: 'components' },
             { section: 'demos' },
             { section: 'experimental' },
-            { section: 'inline table' },
             { section: 'layouts' },
-            { section: 'virtual scroll' },
           ],
           get_started: [
             { text: 'About', path: '/get-started/about' },
@@ -126,6 +124,8 @@ module.exports = {
           /.*react-styles.*/,
           /.*react-docs.*/,
           /.*react-integration.*/,
+          /.*react-inline-edit-extension.*/,
+          /.*react-virtualized-extension.*/,
           // eslint-disable-next-line no-useless-escape
           '**/\..*', // dotfiles
           '**/*.d.ts',
