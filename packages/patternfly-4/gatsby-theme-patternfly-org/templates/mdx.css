@@ -342,3 +342,18 @@ p ~ .ws-toc {
 
 
 /* Special designer styles */
+@media screen and (min-width: 768px) {
+  .ws-p {
+    max-width: 680px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ws-p img {
+    max-width: calc(100vw - 418px);
+  }
+}
+@media screen and (min-width: 1404px) {
+  .ws-p img {
+    max-width: 990px;
+  }
+}
