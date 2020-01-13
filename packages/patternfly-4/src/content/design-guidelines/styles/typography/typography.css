@@ -90,3 +90,22 @@
   color: #004368;
   font-size: 14px;
 }
+
+#our-font-family ~ h3.ws-title + div {
+  border: 1px solid #D2D2D2;
+  background: #FFF;
+  padding: 8px;
+  margin: 16px 0;
+  display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  #our-font-family ~ .pf-l-grid.pf-m-gutter {
+    max-width: 680px;
+  }
+
+  #line-height + div,
+  #spacing ~ div {
+      max-width: 680px;
+  }
+}
