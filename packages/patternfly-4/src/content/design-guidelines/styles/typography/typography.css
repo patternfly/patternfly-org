@@ -100,12 +100,10 @@
 }
 
 @media screen and (min-width: 768px) {
-  #our-font-family ~ .pf-l-grid.pf-m-gutter {
-    max-width: 680px;
-  }
-
-  #line-height + div,
-  #spacing ~ div {
+  #our-font-family ~ .pf-l-grid.pf-m-gutter,
+  #our-font-family ~ #line-height + div,
+  #our-font-family ~ #line-height + div + .pf-l-grid,
+  #our-font-family ~ #spacing ~ div {
       max-width: 680px;
   }
 }

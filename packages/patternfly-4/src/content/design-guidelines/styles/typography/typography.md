@@ -45,7 +45,7 @@ Use our typographic styles to communicate visual hierarchy. A consistent and log
 <div style={{marginBottom: '32px'}}>When laying out text-based content, you need to factor in line-height when measuring spacing. Line height is a relative number used in CSS that represents a ratio to the text size. For example, body text uses a line height of 1.5. Body text size is 16px. 16*1.5 = 24px line height. So, when creating designs in design software, you must include the 24px line height as a part of the text.</div>
 
 <Grid>
-  <GridItem span={5}>
+  <GridItem span={12}>
     <LineHeightTitle>
       <CheckCircleIcon color="#52A549" />
       <span style={{color: '#151515', marginLeft: '8px'}}>Correct</span>
@@ -53,8 +53,7 @@ Use our typographic styles to communicate visual hierarchy. A consistent and log
     <div>Note how the line height space is included when laying out with spacer elements.</div>
     <img alt="correct line height space example" style={{maxHeight: '170px', padding: '16px'}} src={correct} />
   </GridItem>
-  <GridItem span={2}></GridItem>
-  <GridItem span={5}>
+  <GridItem span={12}>
     <LineHeightTitle>
       <TimesCircleIcon color="#CC0000" />
       <span style={{color: '#151515', marginLeft: '8px'}}>Incorrect</span>
