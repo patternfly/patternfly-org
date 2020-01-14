@@ -365,7 +365,8 @@ p ~ .ws-toc {
 @media screen and (min-width: 1404px) {
   .ws-p img,
   img,
-  .ws-example {
+  .ws-example,
+  .pf-c-alert.pf-m-inline.pf-m-info.pf-u-my-md {
     max-width: 990px;
   }
 }
