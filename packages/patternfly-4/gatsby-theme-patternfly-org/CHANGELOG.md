@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.16](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.2.15...gatsby-theme-patternfly-org@1.2.16) (2020-01-14)
+
+
+### Bug Fixes
+
+* **docs:** added max-width to text & images ([#1616](https://github.com/patternfly/patternfly-org/issues/1616)) ([bdd5ad5](https://github.com/patternfly/patternfly-org/commit/bdd5ad5cbe316da75be86124a45b2c7b18a21da0))
+
+
+
+
+
 ## [1.2.15](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.2.14...gatsby-theme-patternfly-org@1.2.15) (2019-12-19)
 
 **Note:** Version bump only for package gatsby-theme-patternfly-org
