@@ -74,6 +74,8 @@
 
 .ws-content-demo {
   background-color: #fff;
+  flex-wrap: wrap;
+  max-width: 680px;
 }
 
 .ws-content-border {

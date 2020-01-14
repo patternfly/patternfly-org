@@ -342,3 +342,36 @@ p ~ .ws-toc {
 
 
 /* Special designer styles */
+@media screen and (min-width: 768px) {
+  .ws-p,
+  #props + .pf-c-table,
+  .pf-c-form-control,
+  .pf-c-form-control + .pf-c-table,
+  .ws-content-p,
+  .ws-content-border,
+  .ws-ol,
+  .ws-ul,
+  .ws-table,
+  .pf-c-table {
+    max-width: 680px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ws-p img,
+  img {
+    max-width: calc(100vw - 418px);
+  }
+}
+@media screen and (min-width: 1404px) {
+  .ws-p img,
+  img,
+  .ws-example,
+  .pf-c-alert.pf-m-inline.pf-m-info.pf-u-my-md {
+    max-width: 990px;
+  }
+}
+@media screen and (min-width: 1646px) {
+  #chart-colors ~ .pf-l-grid {
+    max-width: 1226px;
+  }
+}

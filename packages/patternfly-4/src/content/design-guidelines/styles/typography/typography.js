@@ -82,8 +82,11 @@ export const styleProps = {
 export const TypographyGrid = ({title, note, symbol, fontWeight, fontWeightText, fontSize, variableName, lineHeight, fontFamily}) => (
   <React.Fragment>
     <h3 className="ws-title">{title} {symbol && <span className="ws-typography-gridTitleSymbol">{symbol}</span>}</h3>
+    <StyledText fontFamily={fontFamily} fontWeight={fontWeight} fontSize={`var(${variableName})`} lineHeight={lineHeight}>
+      Design is where science and art break even.
+    </StyledText>
     <Grid gutter="sm">
-      <GridItem span={12} sm={6}>
+      <GridItem span={12}>
         <table className="pf-c-table pf-m-compact ws-typography-tableTypography" aria-label="typography usage guidelines breakout">
           <tbody>
             <tr>
@@ -108,11 +111,6 @@ export const TypographyGrid = ({title, note, symbol, fontWeight, fontWeightText,
             </tr>
           </tbody>
         </table>
-      </GridItem>
-      <GridItem span={12} sm={6}>
-        <StyledText fontFamily={fontFamily} fontWeight={fontWeight} fontSize={`var(${variableName})`} lineHeight={lineHeight}>
-          Design is where science and art break even.
-        </StyledText>
       </GridItem>
       {note && <GridItem span={12}><div className="ws-typography-textColor">{note}</div></GridItem>}
     </Grid>
