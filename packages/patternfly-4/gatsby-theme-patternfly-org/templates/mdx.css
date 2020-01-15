@@ -344,15 +344,14 @@ p ~ .ws-toc {
 /* Special designer styles */
 @media screen and (min-width: 768px) {
   .ws-p,
-  #props + .pf-c-table,
-  .pf-c-form-control,
-  .pf-c-form-control + .pf-c-table,
   .ws-content-p,
   .ws-content-border,
   .ws-ol,
   .ws-ul,
   .ws-table,
-  .pf-c-table {
+  .pf-c-table,
+  #component-title,
+  #component-title + p {
     max-width: 680px;
   }
 }
@@ -366,7 +365,12 @@ p ~ .ws-toc {
   .ws-p img,
   img,
   .ws-example,
-  .pf-c-alert.pf-m-inline.pf-m-info.pf-u-my-md {
+  .pf-c-alert.pf-m-inline.pf-m-info.pf-u-my-md,
+  #props,
+  #props + .pf-c-table,
+  #css-variables,
+  .pf-c-form-control,
+  .pf-c-form-control + .pf-c-table {
     max-width: 990px;
   }
 }
