@@ -356,21 +356,24 @@ p ~ .ws-toc {
   }
 }
 @media screen and (min-width: 768px) {
-  .ws-p img,
-  img {
+  img,
+  #props,
+  #props + .pf-c-table,
+  #css-variables,
+  #css-variables + .pf-c-form-control,
+  #css-variables + .pf-c-form-control + .pf-c-table {
     max-width: calc(100vw - 418px);
   }
 }
 @media screen and (min-width: 1404px) {
-  .ws-p img,
   img,
   .ws-example,
   .pf-c-alert.pf-m-inline.pf-m-info.pf-u-my-md,
   #props,
   #props + .pf-c-table,
   #css-variables,
-  .pf-c-form-control,
-  .pf-c-form-control + .pf-c-table {
+  #css-variables + .pf-c-form-control,
+  #css-variables + .pf-c-form-control + .pf-c-table {
     max-width: 990px;
   }
 }
