@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.50.20](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.50.19...patternfly-org-4@3.50.20) (2020-01-15)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## [3.50.19](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.50.18...patternfly-org-4@3.50.19) (2020-01-14)
+
+
+### Bug Fixes
+
+* **docs:** added max-width to text & images ([#1616](https://github.com/patternfly/patternfly-org/issues/1616)) ([bdd5ad5](https://github.com/patternfly/patternfly-org/commit/bdd5ad5cbe316da75be86124a45b2c7b18a21da0))
+
+
+
+
+
 ## [3.50.18](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.50.17...patternfly-org-4@3.50.18) (2019-12-20)
 
 **Note:** Version bump only for package patternfly-org-4

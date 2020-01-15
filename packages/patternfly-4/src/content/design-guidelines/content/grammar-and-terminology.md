@@ -53,8 +53,10 @@ showTitle: true
 ## Capitalization
 
 ### Sentence style
-Use sentence-style capitalization for all text elements, **except:**
-* Product names and proper nouns
+Use sentence-style capitalization for all text elements, **except the following:**
+* Product names (Red Hat Virtualization, PatternFly, Red Hat CloudForms)
+* Proper nouns (individual, organization, or location)
+* Acronyms and initialisms (RHEL, URL, TCP/IP)
 
 Sentence style capitalizes only the first word of each sentence and proper nouns, like names.
 
