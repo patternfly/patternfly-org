@@ -8,19 +8,19 @@ showTitle: true
 Empty states are UI screens that don't have any content on them, but content will populate once a user takes a certain action. Use an empty state to educate users and guide them with positive and proactive next steps in any situation where there is no data or information to display.
 
 PatternFly offers three empty state variations; a small empty state, a large empty state, and an extra large empty state. 
-* The small empty state should be used inside tables, wizards, modals, or cards, where the empty state is "inside a container," as seen in the [no data to show](#No-data-to-show) use case example. 
-* The large empty state should be used in a full-page empty state, as seen in the [addition or creation](#Addition-or-creation) use case example. 
+* The small empty state should be used inside tables, wizards, modals, or cards, where the empty state is "inside a container," as seen in the [no data to show](#no-data-to-show) use case example. 
+* The large empty state should be used in a full-page empty state, as seen in the [addition or creation](#addition-or-creation) use case example. 
 * The extra large empty state variation should only be used in special instances, specifically for [first-use or get started](#first-use-or-get-started) states, as well as for full-page [congratulatory](#success) states, seen in those use case examples.
 
-Below is an example of a large empty state inside a full-page outlining, all the elements inside an empty state.
+Below is an example of a large empty state inside a full-page, outlining all the elements inside an empty state.
 
 ![Empty state elements](./img/empty-state.jpg)
 
 1. **[Icon/image](#icons):** Display associated object icons here.
-2. **[Title](#Title-and-body):** Provide a concise explanation.
-3. **[Body](#Title-and-body):** Provide additional information that helps a user understand why the space is empty, what they can do to move forward, and the value or benefit that is gained by taking the next step.
-4. **[Primary button](#Primary-and-secondary-buttons):** Primary call-to-action.
-5. **[Secondary buttons (optional)](#Primary-and-secondary-buttons):**  Alternative options for the user. There can be more than one secondary action.
+2. **[Title](#title-and-body):** Provide a concise explanation.
+3. **[Body](#title-and-body):** Provide additional information that helps a user understand why the space is empty, what they can do to move forward, and the value or benefit that is gained by taking the next step.
+4. **[Primary button](#primary-and-secondary-buttons):** Primary call-to-action.
+5. **[Secondary buttons (optional)](#primary-and-secondary-buttons):**  Alternative options for the user. There can be more than one secondary action.
 
 ## Design guidelines
 
@@ -38,6 +38,7 @@ Here is when you should use each icon:
 |![Error](./img/error.png) |Error  |Red (#C9190B) |fa-exclamation-circle |Use when there is an inability to get data, there is backend failure, or an error has occurred
 |![Success](./img/success.png) |Success |Green (#486b00) |fa-check-circle |Use to indicate that a task or process has been completed successfully
 |![Add](./img/add.png) |Addition or creation |Grey (#8A8D90) |fa-plus-circle |Use when something needs to be added or created
+
 
 You should always try to use an icon in your empty state, unless there is an empty state where an icon does not match any of the situations mentioned above, or if an icon does not fit into the layout.
 
@@ -82,15 +83,17 @@ Buttons in empty states are used to highlight next steps a user can take when th
 ![In body cta](./img/one-cta-body.jpg)
 
 If you have more than one actionable link, there are two options depending on how your primary call-to-action is presented:
+
 1. **Link button underneath the primary button:** if your primary call-to-action was in a primary button format
 
 ![Primary button two ctas](./img/two-ctas-primary.jpg) 
 
-2. **Link button underneath the body:** if your first call to action was in the body
+2. **Link button underneath the body:** if your first call-to-action was in the body
 
 ![In body two ctas](./img/two-ctas-body.jpg)
 
 There are only two situations where a stand-alone link button (with nothing linked in the body) can be used:
+
 1. **Filtering or search situation:** when a user has filtered for something in a table, and is prompted to "clear all filters" or "include" other items in their search
 
 ![Solo link cta](./img/solo-link.jpg)
@@ -125,10 +128,10 @@ No toolbars or filters should be shown when a user is in a full-page empty state
 
 ## Usage
 There are several common use cases for empty states:
-* [First use or get started](#first-use-or-get-started)
+* [First-use or get started](#first-use-or-get-started)
 * [No data to show](#no-data-to-show)
 * [Required configuration](#required-configuration)
-* [User not entitled or does not have access](#User-not-entitled-or-does-not-have-access)
+* [User not entitled or does not have access](#user-not-entitled-or-does-not-have-access)
 * [Back-end failure](#back-end-failure)
 * [Success](#success)
 * [Addition or creation](#addition-or-creation)
