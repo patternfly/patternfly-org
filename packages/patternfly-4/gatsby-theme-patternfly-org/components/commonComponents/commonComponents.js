@@ -23,6 +23,7 @@ export const commonComponents = {
   dt: (props) => <dt className="ws-dt" {...props} />,
   code: (props) => <code className="ws-code" {...props} />,
   table: (props) => <table className="ws-table" {...props} />,
+  img: (props) => <img className="ws-img" {...props} />,
   // th: (props) => <th className="ws-th" {...props} />,
   // tr: (props) => <tr className="ws-tr" {...props} />,
   // tbody: (props) => <tbody className="ws-tbody" {...props} />,

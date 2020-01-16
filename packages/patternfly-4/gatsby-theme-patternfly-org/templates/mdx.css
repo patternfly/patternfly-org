@@ -344,29 +344,37 @@ p ~ .ws-toc {
 /* Special designer styles */
 @media screen and (min-width: 768px) {
   .ws-p,
-  #props + .pf-c-table,
-  .pf-c-form-control,
-  .pf-c-form-control + .pf-c-table,
   .ws-content-p,
   .ws-content-border,
   .ws-ol,
   .ws-ul,
   .ws-table,
-  .pf-c-table {
+  .pf-c-table,
+  #component-title,
+  #component-title + p {
     max-width: 680px;
   }
-}
-@media screen and (min-width: 768px) {
-  .ws-p img,
-  img {
+
+  .ws-img,
+  #props,
+  #props ~ .pf-c-table,
+  #css-variables,
+  #props ~ .pf-c-form-control {
     max-width: calc(100vw - 418px);
+  }
+
+  #icons ~ .ws-table td .ws-img {
+    max-width: 30px;
   }
 }
 @media screen and (min-width: 1404px) {
-  .ws-p img,
-  img,
+  .ws-img,
   .ws-example,
-  .pf-c-alert.pf-m-inline.pf-m-info.pf-u-my-md {
+  .pf-c-alert.pf-m-inline.pf-m-info.pf-u-my-md,
+  #props,
+  #props ~ .pf-c-table,
+  #css-variables,
+  #props ~ .pf-c-form-control {
     max-width: 990px;
   }
 }
