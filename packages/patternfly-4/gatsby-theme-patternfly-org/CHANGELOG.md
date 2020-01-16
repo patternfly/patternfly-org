@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.17](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.2.16...gatsby-theme-patternfly-org@1.2.17) (2020-01-16)
+
+
+### Bug Fixes
+
+* **docs:** added max-width for text & images ([71a8b57](https://github.com/patternfly/patternfly-org/commit/71a8b57ba6611bb7b539374c3bb4966a0df3ef3c))
+* **docs:** fixed icon sizes on Empty State, fixed Charts tables width ([1584438](https://github.com/patternfly/patternfly-org/commit/15844382dcd01795c57b3b807eb8c2626963a80c))
+* **docs:** increased component tables to 990px max-width, added max-width to component description ([7fd8c35](https://github.com/patternfly/patternfly-org/commit/7fd8c356d90fc32c34e2595765d2041c986199af))
+* **docs:** increased specificity on component table selectors, fixed css variables search bar width ([23404d5](https://github.com/patternfly/patternfly-org/commit/23404d5f1fa5b715ac5906939d74d0be982cf5e4))
+* **docs:** set max-width on MD paragraphs & images ([cd17fab](https://github.com/patternfly/patternfly-org/commit/cd17fab860b687e058b284f4d6c5deb830705610))
+
+
+
+
+
 ## [1.2.16](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.2.15...gatsby-theme-patternfly-org@1.2.16) (2020-01-14)
 
 

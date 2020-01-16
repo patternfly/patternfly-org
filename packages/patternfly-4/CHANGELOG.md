@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.50.21](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.50.20...patternfly-org-4@3.50.21) (2020-01-16)
+
+
+### Bug Fixes
+
+* **docs:** added max-width for text & images ([71a8b57](https://github.com/patternfly/patternfly-org/commit/71a8b57ba6611bb7b539374c3bb4966a0df3ef3c))
+* **docs:** added max-width to text and images ([3964e54](https://github.com/patternfly/patternfly-org/commit/3964e54cc446de720edc5a13f8f9091efc5808a6))
+* **docs:** fixed icon sizes on Empty State, fixed Charts tables width ([1584438](https://github.com/patternfly/patternfly-org/commit/15844382dcd01795c57b3b807eb8c2626963a80c))
+* **docs:** increased component tables to 990px max-width, added max-width to component description ([7fd8c35](https://github.com/patternfly/patternfly-org/commit/7fd8c356d90fc32c34e2595765d2041c986199af))
+* **docs:** increased specificity on component table selectors, fixed css variables search bar width ([23404d5](https://github.com/patternfly/patternfly-org/commit/23404d5f1fa5b715ac5906939d74d0be982cf5e4))
+* **docs:** set max-width on MD paragraphs & images ([cd17fab](https://github.com/patternfly/patternfly-org/commit/cd17fab860b687e058b284f4d6c5deb830705610))
+
+
+
+
+
 ## [3.50.20](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.50.19...patternfly-org-4@3.50.20) (2020-01-15)
 
 **Note:** Version bump only for package patternfly-org-4
