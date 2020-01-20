@@ -272,6 +272,12 @@ jobs:
         name: Check size of docs
         command: du -sh build/* build/patternfly-org/*
     - run:
+        name: Set AWS credentials
+        command: |
+            aws configure set aws_access_key_id ${AWS_ACCESS_KEY}
+            aws configure set aws_secret_access_key ${AWS_SECRET_KEY}
+            aws configure set region ${AWS_REGION}
+    - run:
         name: Sync to staging
         command: .circleci/upload-staging.sh
     - run:

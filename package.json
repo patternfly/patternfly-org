@@ -18,7 +18,7 @@
     "develop:org": "yarn workspace patternfly-org-4 develop -p 8003",
     "build:org": "yarn workspace patternfly-org-4 build",
     "build:org:prefix": "yarn workspace patternfly-org-4 build:prefix && yarn copy:org:v4",
-    "copy:org:v4": "mkdir -p build/patternfly-org && cp -r packages/patternfly-4/public build/patternfly-org/v4",
+    "copy:org:v4": "mkdir -p build/patternfly-org && cp -r packages/patternfly-4/public/ build/patternfly-org/v4",
     "build:org:v3": "cd packages/patternfly-3 && yarn run build && cd ../.. && yarn copy:org:v3",
     "copy:org:v3": "mkdir -p build/patternfly-org && cp -r packages/patternfly-3/_site build/patternfly-org/v3",
     "clean": "lerna run clean && rm -rf build",
