@@ -37,7 +37,7 @@ export const getStaticParams = (title, html) => ({
 });
 
 // TODO: Make React examples work and use a template that has our assets.
-export const getReactParams = (title, code) => {
+export const getReactParams = (title, code, scope) => {
   let toRender = 'Example';
   const classNameMatch = /class (\w+) /.exec(code);
   const equalityMatch = /(\w+) =/.exec(code);
@@ -46,6 +46,14 @@ export const getReactParams = (title, code) => {
   } else if (equalityMatch) {
     toRender = equalityMatch[1];
     code = code.replace(/(\w+) =/, `const ${toRender} =`)
+  }
+
+  // import avatarImg from './examples/avatarImg.svg';
+  const svgRegex = /import\s+(\w[\w\d]*).*\.svg['"]/g;
+  let match;
+  while ((match = svgRegex.exec(code))) {
+    const svgToken = match[1];
+    code = code.replace(match[0], `const ${svgToken} = "${scope[svgToken]}"`);
   }
 
   const dependencies = {};

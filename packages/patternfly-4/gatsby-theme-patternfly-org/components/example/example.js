@@ -57,7 +57,7 @@ export const Example = props => {
   const codeBoxParams = getParameters(
     props.html
     ? getStaticParams(props.title, html)
-    : getReactParams(props.title, editorCode));
+    : getReactParams(props.title, editorCode, scope));
 
   const className = `ws-${props.source}-${navSection[0]}-${componentName}`;
   const id = `${className}-${slugger(title)}`;
