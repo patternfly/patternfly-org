@@ -1,6 +1,5 @@
 import React from 'react';
 import { Table, TableHeader, TableBody } from '@patternfly/react-table';
-import { ExclamationCircleIcon } from '@patternfly/react-icons';
 
 const renderType = prop => {
   if (prop.type) {
@@ -38,7 +37,7 @@ export const PropsTable = props => {
           row.name,
           renderType(row),
           <div>
-            {row.required && <ExclamationCircleIcon />}
+            {row.required ? 'Yes' : 'No'}
           </div>,
           row.defaultValue && row.defaultValue.value,
           row.description
