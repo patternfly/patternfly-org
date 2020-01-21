@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.19](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.2.18...gatsby-theme-patternfly-org@1.2.19) (2020-01-21)
+
+
+### Bug Fixes
+
+* for required field. We now will display if the property is required or not using 'Yes || No' ([#1637](https://github.com/patternfly/patternfly-org/issues/1637)) ([7c8c277](https://github.com/patternfly/patternfly-org/commit/7c8c277a948885e2e970143fd21650a69b76c529))
+
+
+
+
+
 ## [1.2.18](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.2.17...gatsby-theme-patternfly-org@1.2.18) (2020-01-21)
 
 **Note:** Version bump only for package gatsby-theme-patternfly-org
