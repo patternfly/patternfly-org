@@ -84,7 +84,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
       parityComponent = `${navSection}/${coreComponentName}`;
     }
   }
-  if (enableQualtrics) {
+  if (enableQualtrics && typeof window !== 'undefined') {
     require('./qualtrics');
   }
 
