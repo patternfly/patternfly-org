@@ -366,6 +366,10 @@ p ~ .ws-toc {
   #icons ~ .ws-table td .ws-img {
     max-width: 30px;
   }
+
+  .ws-section .ws-preview-html .pf-c-table {
+    max-width: none;
+  }
 }
 @media screen and (min-width: 1404px) {
   .ws-img,
