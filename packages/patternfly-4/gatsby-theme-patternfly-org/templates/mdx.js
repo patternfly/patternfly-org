@@ -17,6 +17,7 @@ import {
 import { SideNavLayout, TrainingLayout } from '../layouts';
 import { AutoLinkHeader, Example, CSSVariables, PropsTable, commonComponents } from '../components';
 import { getId , slugger, capitalize} from '../helpers';
+import { qualtrics } from './qualtrics';
 import versions from '../versions.json';
 import './mdx.css';
 
@@ -59,7 +60,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
   }
   const { cssPrefix, hideTOC, experimentalStage, optIn, hideDarkMode, showTitle, releaseNoteTOC } = data.doc.frontmatter;
   const { componentName, navSection } = data.doc.fields;
-  const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner } = pageContext;
+  const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner, enableQualtrics } = pageContext;
   const props = data.props && data.props.nodes && propComponents
     ? propComponents
       .filter(name => name !== '') // Filter default entry we make for GraphQL schema
@@ -83,6 +84,9 @@ const MDXTemplate = ({ data, location, pageContext }) => {
     else if (source === 'react' && coreComponentName) {
       parityComponent = `${navSection}/${coreComponentName}`;
     }
+  }
+  if (enableQualtrics) {
+    qualtrics();
   }
 
   // TODO: Stop hiding TOC in design pages

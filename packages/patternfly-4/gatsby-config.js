@@ -17,6 +17,7 @@ module.exports = {
         context: 'org',
         hiddenPages: ['withOuia'], // By title
         showBanner: true, // PF3 banner
+        enableQualtrics: true, // Qualtrics patternfly.org survey
         sideNav: {
           core: [
             { section: 'overview' },

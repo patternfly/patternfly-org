@@ -1,7 +1,7 @@
 const React = require('react');
 // https://www.gatsbyjs.org/docs/ssr-apis
 
-exports.onRenderBody = ({ setHtmlAttributes, setPostBodyComponents, setHeadComponents }) => {
+exports.onRenderBody = ({ setHtmlAttributes, setPostBodyComponents }) => {
   // Always en-us
   setHtmlAttributes({
     lang: 'en-us'
@@ -13,9 +13,5 @@ exports.onRenderBody = ({ setHtmlAttributes, setPostBodyComponents, setHeadCompo
   setPostBodyComponents([
     <script key="algogia-script" type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" />,
     <link key="algogia-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-  ]);
-  // QUALTRICS WEBSITE FEEDBACK SNIPPET
-  setHeadComponents([
-      <script type="text/javascript" src="/surveys/qualtrics.js" />
   ]);
 }
