@@ -17,7 +17,6 @@ import {
 import { SideNavLayout, TrainingLayout } from '../layouts';
 import { AutoLinkHeader, Example, CSSVariables, PropsTable, commonComponents } from '../components';
 import { getId , slugger, capitalize} from '../helpers';
-import { qualtrics } from './qualtrics';
 import versions from '../versions.json';
 import './mdx.css';
 
@@ -86,7 +85,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
     }
   }
   if (enableQualtrics) {
-    qualtrics();
+    require('./qualtrics');
   }
 
   // TODO: Stop hiding TOC in design pages
