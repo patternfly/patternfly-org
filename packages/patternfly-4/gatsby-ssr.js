@@ -16,6 +16,6 @@ exports.onRenderBody = ({ setHtmlAttributes, setPostBodyComponents, setHeadCompo
   ]);
   // QUALTRICS WEBSITE FEEDBACK SNIPPET
   setHeadComponents([
-      <script type="text/javascript" src="qualtrics.js"/>
+      <script type="text/javascript" src="/surveys/qualtrics.js" />
   ]);
 }
