@@ -89,11 +89,11 @@ p ~ .ws-toc {
 .ws-table:not(.pf-c-table) tr > code {
   white-space: normal;
 }
-.pf-c-table {
+.ws-section .pf-c-table {
   margin-bottom: 0;
 }
-.pf-c-table td,
-.pf-c-table th:not(.pf-c-table__sort) {
+.ws-section .pf-c-table td,
+.ws-section .pf-c-table th:not(.pf-c-table__sort) {
   border: none;
 }
 .ws-table:not(.pf-c-table) {
@@ -349,7 +349,7 @@ p ~ .ws-toc {
   .ws-ol,
   .ws-ul,
   .ws-table,
-  .pf-c-table,
+  .ws-section .pf-c-table,
   #component-title,
   #component-title + p {
     max-width: 680px;
@@ -370,7 +370,7 @@ p ~ .ws-toc {
 @media screen and (min-width: 1404px) {
   .ws-img,
   .ws-example,
-  .pf-c-alert.pf-m-inline.pf-m-info.pf-u-my-md,
+  .ws-section .pf-c-alert.pf-m-inline.pf-m-info.pf-u-my-md,
   #props,
   #props ~ .pf-c-table,
   #css-variables,
