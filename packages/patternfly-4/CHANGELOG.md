@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.50.27](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.50.26...patternfly-org-4@3.50.27) (2020-01-27)
+
+
+### Bug Fixes
+
+* **icons:** add icon disclaimer ([#1644](https://github.com/patternfly/patternfly-org/issues/1644)) ([809da10](https://github.com/patternfly/patternfly-org/commit/809da10234c6747f34b82469618ffc866470e811))
+
+
+
+
+
 ## [3.50.26](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.50.25...patternfly-org-4@3.50.26) (2020-01-24)
 
 **Note:** Version bump only for package patternfly-org-4
