@@ -14,4 +14,3 @@ exports.onRenderBody = ({ setHtmlAttributes, setPostBodyComponents }) => {
     <script key="algogia-script" type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" />,
     <link key="algogia-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   ]);
-}
