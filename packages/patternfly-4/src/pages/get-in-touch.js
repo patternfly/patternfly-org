@@ -5,7 +5,9 @@ import { Grid, GridItem, PageSection, PageSectionVariants, Split, SplitItem } fr
 import "./get-in-touch.css";
 
 const GetInTouch = ({ location }) => {
-  require("../qualtrics.js");
+  if (typeof window !== 'undefined') {
+    require('../qualtrics.js');
+  }
   return (
   <SideNavLayout location={location} hideSideNav>
     <PageSection
