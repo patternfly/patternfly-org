@@ -34,7 +34,9 @@ export const PropsTable = props => {
       caption={props.caption}
       rows={props.rows.map(row => ({
         cells: [
-          row.name,
+          <div className='pf-m-fit-content'>
+            {row.name}
+          </div>,
           renderType(row),
           <div>
             {row.required ? 'Yes' : 'No'}
