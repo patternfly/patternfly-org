@@ -59,7 +59,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
   }
   const { cssPrefix, hideTOC, experimentalStage, optIn, hideDarkMode, showTitle, releaseNoteTOC } = data.doc.frontmatter;
   const { componentName, navSection } = data.doc.fields;
-  const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner, enableQualtrics } = pageContext;
+  const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner } = pageContext;
   const props = data.props && data.props.nodes && propComponents
     ? propComponents
       .filter(name => name !== '') // Filter default entry we make for GraphQL schema
@@ -83,9 +83,6 @@ const MDXTemplate = ({ data, location, pageContext }) => {
     else if (source === 'react' && coreComponentName) {
       parityComponent = `${navSection}/${coreComponentName}`;
     }
-  }
-  if (enableQualtrics && typeof window !== 'undefined') {
-    require('./qualtrics');
   }
 
   // TODO: Stop hiding TOC in design pages

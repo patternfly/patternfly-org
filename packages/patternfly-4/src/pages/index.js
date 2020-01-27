@@ -20,7 +20,9 @@ import './homepage.css';
 const aboutPatternFly = 'About PatternFly';
 const patternFlyPrinciples = 'PatternFly principles';
 
-const IndexPage = ({ location }) => (
+const IndexPage = ({ location }) => {
+  require("../qualtrics.js");
+  return (
   <SideNavLayout location={location} hideSideNav>
     <PageSection
       variant={PageSectionVariants.light}
@@ -220,6 +222,6 @@ const IndexPage = ({ location }) => (
       </Grid>
     </PageSection>
   </SideNavLayout>
-);
+)};
 
 export default IndexPage;

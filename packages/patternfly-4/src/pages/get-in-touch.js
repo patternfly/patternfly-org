@@ -4,7 +4,9 @@ import { ChatIcon, QuestionIcon, CatalogIcon, MailBulkIcon } from '@patternfly/r
 import { Grid, GridItem, PageSection, PageSectionVariants, Split, SplitItem } from '@patternfly/react-core';
 import "./get-in-touch.css";
 
-const GetInTouch = ({ location }) => (
+const GetInTouch = ({ location }) => {
+  require("../qualtrics.js");
+  return (
   <SideNavLayout location={location} hideSideNav>
     <PageSection
       variant={PageSectionVariants.light}
@@ -56,6 +58,6 @@ const GetInTouch = ({ location }) => (
       </Grid>
     </PageSection>
   </SideNavLayout>
-);
+)};
 
 export default GetInTouch;
