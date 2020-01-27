@@ -383,3 +383,8 @@ p ~ .ws-toc {
     max-width: 1226px;
   }
 }
+
+/* Qualtrics surveys */
+.QSIPopOver iframe {
+  height: 100%;
+}
