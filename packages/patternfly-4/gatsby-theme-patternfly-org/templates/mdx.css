@@ -89,13 +89,6 @@ p ~ .ws-toc {
 .ws-table:not(.pf-c-table) tr > code {
   white-space: normal;
 }
-.ws-section .pf-c-table {
-  margin-bottom: 0;
-}
-.ws-section .pf-c-table td,
-.ws-section .pf-c-table th:not(.pf-c-table__sort) {
-  border: none;
-}
 .ws-table:not(.pf-c-table) {
   margin: 0;
   padding: 0;
@@ -349,7 +342,6 @@ p ~ .ws-toc {
   .ws-ol,
   .ws-ul,
   .ws-table,
-  .ws-section .pf-c-table,
   #component-title,
   #component-title + p {
     max-width: 680px;
@@ -359,26 +351,31 @@ p ~ .ws-toc {
   #props,
   #props ~ .pf-c-table,
   #css-variables,
-  #props ~ .pf-c-form-control {
+  #props ~ .pf-c-form-control,
+  #css-variables ~ .pf-c-table,
+  #css-variables ~ .pf-c-form-control,
+  #global-css-variables ~ .pf-c-table,
+  #global-css-variables ~ .pf-c-form-control {
     max-width: calc(100vw - 418px);
   }
 
   #icons ~ .ws-table td .ws-img {
     max-width: 30px;
   }
-
-  .ws-section .ws-preview-html .pf-c-table {
-    max-width: none;
-  }
 }
 @media screen and (min-width: 1404px) {
   .ws-img,
   .ws-example,
-  .ws-section .pf-c-alert.pf-m-inline.pf-m-info.pf-u-my-md,
+  #component-title + .pf-c-alert,
+  .ws-page-title + .pf-c-alert,
   #props,
   #props ~ .pf-c-table,
   #css-variables,
-  #props ~ .pf-c-form-control {
+  #css-variables ~ .pf-c-table,
+  #props ~ .pf-c-form-control,
+  #css-variables ~ .pf-c-form-control,
+  #global-css-variables ~ .pf-c-table,
+  #global-css-variables ~ .pf-c-form-control {
     max-width: 990px;
   }
 }

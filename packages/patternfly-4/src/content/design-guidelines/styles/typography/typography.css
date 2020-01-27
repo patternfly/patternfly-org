@@ -20,10 +20,6 @@
   background-color: transparent !important;
 }
 
-.ws-typography-tableTypography td {
-  border-style: hidden;
-}
-
 .ws-typography-tableTypography tr > td:first-child {
   padding-left: 0 !important;
 }
