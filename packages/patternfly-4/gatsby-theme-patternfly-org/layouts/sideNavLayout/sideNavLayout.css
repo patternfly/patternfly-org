@@ -87,7 +87,7 @@
   background: transparent;
   transition: 250ms;
 }
-.pf-c-page__header-brand-toggle {
+.ws-page-header .pf-c-page__header-brand-toggle {
   display: none;
   visibility: hidden;
 }
@@ -95,7 +95,7 @@
   .pf-site-search {
     width: 100px;
   }
-  .pf-c-page__header-brand-toggle {
+  .ws-page-header .pf-c-page__header-brand-toggle {
     display: block;
     visibility: visible;
   }
