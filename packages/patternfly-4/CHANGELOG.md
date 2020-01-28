@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.50.29](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.50.28...patternfly-org-4@3.50.29) (2020-01-28)
+
+
+### Bug Fixes
+
+* **docs:** added override rule for Table examples in docs ([116e5a4](https://github.com/patternfly/patternfly-org/commit/116e5a4c065080abbf526482370e106ceb910980))
+* **docs:** namespaced gatsby theme styles to not overflow into full screen examples ([fbc9da3](https://github.com/patternfly/patternfly-org/commit/fbc9da3068297a9889ad27b00d6d2476eb2fb1a7))
+* **docs:** removed unused non-scoped table styles ([8f746a0](https://github.com/patternfly/patternfly-org/commit/8f746a029870004de0ae173fe3b26877df4cbebe))
+* **docs:** replaced .ws-section rules with more specific rules ([76e51ea](https://github.com/patternfly/patternfly-org/commit/76e51eac9722c7257d8569499f21a8e8a83eafda))
+
+
+
+
+
 ## [3.50.28](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.50.27...patternfly-org-4@3.50.28) (2020-01-27)
 
 **Note:** Version bump only for package patternfly-org-4
