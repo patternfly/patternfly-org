@@ -139,7 +139,7 @@ jobs:
         - *react_build_cache_key
     - run:
         name: Build patternfly-react docs
-        command: ~/.yarn/bin/yarn build:react
+        command: yarn build:react
     - save_cache:
         paths: *react_build_cache_paths
         key: *react_build_cache_key
@@ -191,7 +191,7 @@ jobs:
         - *org_build_cache_key
     - run:
         name: Build patternfly.org docs
-        command: ~/.yarn/bin/yarn build:org:prefix
+        command: yarn build:org:prefix
     - save_cache:
         paths: *org_build_cache_paths
         key: *org_build_cache_key
