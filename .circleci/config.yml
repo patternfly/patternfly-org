@@ -41,24 +41,6 @@ references:
   attach_workspace: &attach_workspace
     attach_workspace:
       at: ~/project
-  install_node: &install_node
-    run:
-      name: Install node@12 (need right version for `yarn`)
-      command: |
-        set +e             
-        curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
-        export NVM_DIR="/opt/circleci/.nvm"
-        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-        nvm install v12
-        nvm alias default v12
-        
-        # Each step uses the same `$BASH_ENV`, so need to modify it
-        echo 'export NVM_DIR="/opt/circleci/.nvm"' >> $BASH_ENV
-        echo "[ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\"" >> $BASH_ENV
-  install_yarn: &install_yarn
-    run:
-      name: Install yarn
-      command: curl -o- -L https://yarnpkg.com/install.sh | bash
 workflows:
   version: 2
   install_build_deploy:
@@ -124,6 +106,7 @@ jobs:
   build_next:
     docker:
     - image: circleci/node:12
+    resource_class: large
     steps:
     - *attach_workspace
     - restore_cache:
@@ -143,8 +126,9 @@ jobs:
         paths: 
         - build
   build_react:
-    machine:
-      image: circleci/classic:latest
+    docker:
+    - image: circleci/node:12
+    resource_class: xlarge
     steps:
     - *attach_workspace
     - restore_cache:
@@ -153,8 +137,6 @@ jobs:
     - restore_cache:
         keys:
         - *react_build_cache_key
-    - *install_node
-    - *install_yarn
     - run:
         name: Build patternfly-react docs
         command: ~/.yarn/bin/yarn build:react
@@ -196,8 +178,9 @@ jobs:
         paths: 
         - build
   build_org:
-    machine:
-      image: circleci/classic:latest
+    docker:
+    - image: circleci/node:12
+    resource_class: xlarge
     steps:
     - *attach_workspace
     - restore_cache:
@@ -206,8 +189,6 @@ jobs:
     - restore_cache:
         keys:
         - *org_build_cache_key
-    - *install_node
-    - *install_yarn
     - run:
         name: Build patternfly.org docs
         command: ~/.yarn/bin/yarn build:org:prefix
