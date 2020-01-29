@@ -72,6 +72,10 @@ p ~ .ws-toc {
   font-size: var(--pf-global--FontSize--md);
 }
 
+.ws-p + .ws-code {
+  margin-bottom: var(--pf-c-content--MarginBottom);
+}
+
 /* Table styles */
 .ws-table {
   width: 100%;
