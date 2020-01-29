@@ -147,3 +147,18 @@
   border-top: none;
   border-bottom: 2px solid #fff;
 }
+
+/* Hide version switcher on mobile */
+@media screen and (max-width: 768px) {
+  .ws-page-header {
+      grid-template-columns: 3fr 1fr;
+  }
+      
+  .ws-page-header .pf-c-page__header-brand-link {
+      justify-content: center;
+  }
+  
+  .ws-page-header .pf-l-toolbar__item:first-child {
+    display: none;
+  }
+}
