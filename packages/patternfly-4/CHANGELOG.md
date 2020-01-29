@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.50.32](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.50.31...patternfly-org-4@3.50.32) (2020-01-29)
+
+
+### Bug Fixes
+
+* **docs:** hide version switcher on mobile ([#1656](https://github.com/patternfly/patternfly-org/issues/1656)) ([855acab](https://github.com/patternfly/patternfly-org/commit/855acab3cd120ef46cc27ae7a31096af1b38e194))
+
+
+
+
+
 ## [3.50.31](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.50.30...patternfly-org-4@3.50.31) (2020-01-29)
 
 **Note:** Version bump only for package patternfly-org-4
