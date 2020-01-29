@@ -366,6 +366,10 @@ p ~ .ws-toc {
   #icons ~ .ws-table td .ws-img {
     max-width: 30px;
   }
+
+  #all-icons ~ .ws-p {
+    max-width: none;
+  }
 }
 @media screen and (min-width: 1404px) {
   .ws-img,
@@ -386,6 +390,13 @@ p ~ .ws-toc {
 @media screen and (min-width: 1646px) {
   #chart-colors ~ .pf-l-grid {
     max-width: 1226px;
+  }
+}
+
+@media screen and (min-width: 1072px) {
+  #chart-colors ~ .ws-img:not([src$=".gif"]),
+  #chart-colors ~ .ws-p > .ws-img:not([src$=".gif"])  {
+    max-width: 654px;
   }
 }
 
