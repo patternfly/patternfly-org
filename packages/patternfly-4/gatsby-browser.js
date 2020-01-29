@@ -1,1 +1,1 @@
-import '@patternfly/react-docs/gatsby-browser'
+import '@patternfly/react-docs/gatsby-browser';
