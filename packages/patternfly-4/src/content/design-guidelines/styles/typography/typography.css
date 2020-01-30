@@ -6,6 +6,10 @@
   margin-top: 40px;
 }
 
+#usage-guidelines ~ h3.ws-title {
+  margin-top: 24px;
+}
+
 .table-typography {
   background-color: transparent;
 }

@@ -83,3 +83,7 @@
   padding: 0;
   border: 1px solid #3e9dd0;
 }
+
+.ws-content-p + .ws-content-border {
+  margin-top: 24px;
+}

@@ -72,6 +72,10 @@ p ~ .ws-toc {
   font-size: var(--pf-global--FontSize--md);
 }
 
+.ws-p + .ws-code {
+  margin-bottom: var(--pf-c-content--MarginBottom);
+}
+
 /* Table styles */
 .ws-table {
   width: 100%;
@@ -362,6 +366,11 @@ p ~ .ws-toc {
   #icons ~ .ws-table td .ws-img {
     max-width: 30px;
   }
+
+  p.ws-icons-page,
+  .ws-icons-page ~ .ws-p {
+    max-width: none;
+  }
 }
 @media screen and (min-width: 1404px) {
   .ws-img,
@@ -382,6 +391,13 @@ p ~ .ws-toc {
 @media screen and (min-width: 1646px) {
   #chart-colors ~ .pf-l-grid {
     max-width: 1226px;
+  }
+}
+
+@media screen and (min-width: 1072px) {
+  #chart-colors ~ .ws-img:not([src$=".gif"]),
+  #chart-colors ~ .ws-p > .ws-img:not([src$=".gif"])  {
+    max-width: 654px;
   }
 }
 
