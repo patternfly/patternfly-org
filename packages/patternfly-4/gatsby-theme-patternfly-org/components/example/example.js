@@ -94,7 +94,7 @@ export const Example = props => {
         darkMode ? ' pf-t-dark pf-m-opaque-200' : ''}${
         isFullscreen ? ' ws-preview-fullscreen' : ' ws-preview'}`} />
   );
-  
+
   return (
     <div className="ws-example">
       <AutoLinkHeader size="h4" headingLevel="h3" className="ws-example-heading">
@@ -106,8 +106,7 @@ export const Example = props => {
         transformCode={code => transformCode(code, editorLang, html)}
         disabled={isFullscreen || editorLang === 'hbs'}
         theme={{
-          /* disable theme so we can use the global one imported in gatsby-browser.js */
-          plain: {},
+          plain: { pointerEvents: 'all' },
           styles: []
         }}
       >
@@ -128,7 +127,7 @@ export const Example = props => {
           : Preview}
 
         <ExampleToolbar
-          editor={<LiveEditor className="ws-editor"/>}
+          editor={<LiveEditor className="ws-editor" />}
           supportedLangs={supportedLangs}
           onLanguageChange={onLanguageChange}
           onDarkmodeChange={() => setDarkMode(!darkMode)}
