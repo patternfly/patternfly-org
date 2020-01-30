@@ -367,7 +367,8 @@ p ~ .ws-toc {
     max-width: 30px;
   }
 
-  #all-icons ~ .ws-p {
+  p.ws-icons-page,
+  .ws-icons-page ~ .ws-p {
     max-width: none;
   }
 }

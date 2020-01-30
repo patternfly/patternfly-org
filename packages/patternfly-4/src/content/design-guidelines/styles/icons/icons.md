@@ -9,7 +9,7 @@ import { CheckCircleIcon, TimesCircleIcon } from '@patternfly/react-icons';
 import { Icons } from 'gatsby-theme-patternfly-org/components/icons/icons';
 
 
-If you're a developer, [check out our getting started page](/get-started/developers#using-styles) to learn more about how to get and use our icon set.
+<p class="ws-icons-page">If you're a developer, <a href="/get-started/developers#using-styles">check out our getting started page</a> to learn more about how to get and use our icon set.</p>
 
 ## All icons
 PatternFly uses custom icons and selections from [FontAwesome](https://fontawesome.com/icons). PatternFly icons are two dimensional and flat. Most of the icons are gray with the exception of icons that require color or emphasis. 
