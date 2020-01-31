@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.26](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.2.25...gatsby-theme-patternfly-org@1.2.26) (2020-01-31)
+
+
+### Bug Fixes
+
+* **sidebar:** adjust spacing so content in masthead and sidebar align ([cd50a9e](https://github.com/patternfly/patternfly-org/commit/cd50a9eb3fa474d189904f7dd8f70c68e918c194))
+
+
+
+
+
 ## [1.2.25](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.2.24...gatsby-theme-patternfly-org@1.2.25) (2020-01-30)
 
 **Note:** Version bump only for package gatsby-theme-patternfly-org
