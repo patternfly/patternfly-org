@@ -68,7 +68,7 @@ p ~ .ws-toc {
   background-color: #fff;
   padding: 1px 8px;
   border: 1px solid #ededed;
-  white-space: normal;
+  white-space: pre-wrap;
   font-size: var(--pf-global--FontSize--md);
 }
 

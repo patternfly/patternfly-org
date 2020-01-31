@@ -16,12 +16,6 @@
   transition: width .2s ease-in-out;
 }
 
-.ws-code {
-  padding: .25em .75em;
-  white-space: nowrap;
-  font-size: var(--pf-global--FontSize--md);
-}
-
 .ws-editor {
   font-size: 16px;
 }
