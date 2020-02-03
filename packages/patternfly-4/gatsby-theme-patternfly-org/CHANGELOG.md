@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.29](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.2.28...gatsby-theme-patternfly-org@1.2.29) (2020-02-03)
+
+
+### Bug Fixes
+
+* **examples:** fix html-formatter for HTML not starting with < ([#1667](https://github.com/patternfly/patternfly-org/issues/1667)) ([d7afb4b](https://github.com/patternfly/patternfly-org/commit/d7afb4b5f885a466d87efcd9ba38549e2dfcdbc0))
+
+
+
+
+
 ## [1.2.28](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.2.27...gatsby-theme-patternfly-org@1.2.28) (2020-02-03)
 
 **Note:** Version bump only for package gatsby-theme-patternfly-org

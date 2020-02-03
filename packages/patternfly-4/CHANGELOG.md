@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.50.38](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.50.37...patternfly-org-4@3.50.38) (2020-02-03)
+
+
+### Bug Fixes
+
+* **examples:** fix html-formatter for HTML not starting with < ([#1667](https://github.com/patternfly/patternfly-org/issues/1667)) ([d7afb4b](https://github.com/patternfly/patternfly-org/commit/d7afb4b5f885a466d87efcd9ba38549e2dfcdbc0))
+
+
+
+
+
 ## [3.50.37](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.50.36...patternfly-org-4@3.50.37) (2020-02-03)
 
 **Note:** Version bump only for package patternfly-org-4
