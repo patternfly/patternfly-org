@@ -322,6 +322,9 @@ export const pageQuery = graphql`
           defaultValue {
             value
           }
+          deprecated
+          hide
+          annotatedType
         }
       }
     }
