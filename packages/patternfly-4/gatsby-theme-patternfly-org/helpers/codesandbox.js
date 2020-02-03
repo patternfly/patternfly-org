@@ -26,6 +26,9 @@ export const getStaticParams = (title, html) => ({
     'package.json': {
       content: {},
     },
+    'style.css': {
+      content: ''
+    },
     'fonts.css': {
       content: overpass
     },
