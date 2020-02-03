@@ -27,7 +27,7 @@ module.exports = {
         try {
           const html = hbsInstance.compile(node.value)({});
           // Add rendered HTML to make fullscreen page from
-          examples[id] = render(html).replace(/\t/g, '  ');
+          examples[id] = render(` ${html} `).replace(/\t/g, '  ');
         }
         catch(error) {
           console.error(`\x1b[31m${fileName}: ${error} for PatternFly example ${id}\x1b[0m`)
