@@ -106,7 +106,7 @@ export const Example = props => {
         transformCode={code => transformCode(code, editorLang, html)}
         disabled={isFullscreen || editorLang === 'hbs'}
         theme={{
-          plain: { pointerEvents: 'all' },
+          plain: isFullscreen ? { pointerEvents: 'auto' } : {},
           styles: []
         }}
       >
