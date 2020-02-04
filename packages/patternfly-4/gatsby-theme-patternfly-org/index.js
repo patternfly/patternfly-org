@@ -48,7 +48,7 @@ exports.mdxTypeDefs = `
     defaultValue: defaultValue
     hide: Boolean
     deprecated: Boolean
-    annontatedType: String
+    annotatedType: String
   }
   type ComponentMetadata implements Node @dontInfer {
     name: String!
