@@ -4,7 +4,7 @@ import { useMDXScope } from 'gatsby-plugin-mdx/context';
 import { ExampleToolbar } from './exampleToolbar';
 import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
 import { getParameters } from 'codesandbox/lib/api/define';
-import { slugger, transformCode, getStaticParams, getReactParams } from '../../helpers';
+import { slugger, transformCode, getStaticParams, getReactParams, getExampleClassName, getExampleId } from '../../helpers';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism-coy.css';
 import './example.css';
@@ -59,8 +59,8 @@ export const Example = props => {
     ? getStaticParams(props.title, html)
     : getReactParams(props.title, editorCode, scope));
 
-  const className = `ws-${props.source}-${navSection[0]}-${componentName}`;
-  const id = `${className}-${slugger(title)}`;
+  const className = getExampleClassName(props.source, navSection[0], componentName);
+  const id = getExampleId(props.source, navSection[0], componentName, title);
 
   // https://reactjs.org/docs/hooks-effect.html
   if (isFullscreen) {
