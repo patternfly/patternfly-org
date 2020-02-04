@@ -195,7 +195,7 @@ module.exports = {
     },
     // Our custom plugin for *.js?x *.ts?x files to get prop types
     {
-      resolve: path.resolve(__dirname, './patternfly-react/packages/patternfly-4/react-docs/plugins/gatsby-transformer-react-docgen-typescript')
+      resolve: 'gatsby-transformer-react-docgen-typescript'
     },
     // The plugin for package.json files (to get version numbers)
     'gatsby-transformer-json',

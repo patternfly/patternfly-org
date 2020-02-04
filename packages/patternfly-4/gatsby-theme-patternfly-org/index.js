@@ -46,6 +46,9 @@ exports.mdxTypeDefs = `
     type: TypeType
     tsType: TsType
     defaultValue: defaultValue
+    hide: Boolean
+    deprecated: Boolean
+    annontatedType: String
   }
   type ComponentMetadata implements Node @dontInfer {
     name: String!
