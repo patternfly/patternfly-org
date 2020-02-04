@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.2 (2020-02-04)
+
+**Note:** Version bump only for package gatsby-transformer-react-docgen-typescript
+
+
+
+
+
 ## [0.2.1](https://github.com/patternfly/patternfly-react/compare/gatsby-transformer-react-docgen-typescript@0.2.0...gatsby-transformer-react-docgen-typescript@0.2.1) (2019-11-12)
 
 **Note:** Version bump only for package gatsby-transformer-react-docgen-typescript
