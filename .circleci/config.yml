@@ -106,7 +106,6 @@ jobs:
   build_next:
     docker:
     - image: circleci/node:12
-    resource_class: large
     steps:
     - *attach_workspace
     - restore_cache:
@@ -128,7 +127,7 @@ jobs:
   build_react:
     docker:
     - image: circleci/node:12
-    resource_class: xlarge
+    resource_class: medium
     steps:
     - *attach_workspace
     - restore_cache:
@@ -180,7 +179,7 @@ jobs:
   build_org:
     docker:
     - image: circleci/node:12
-    resource_class: xlarge
+    resource_class: medium
     steps:
     - *attach_workspace
     - restore_cache:
