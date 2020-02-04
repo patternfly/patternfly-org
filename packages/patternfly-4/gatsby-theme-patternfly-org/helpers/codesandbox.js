@@ -10,12 +10,14 @@ export const getStaticParams = (title, html) => ({
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="fonts.css" />
   <!-- Include latest PatternFly CSS via CDN -->
   <link 
     rel="stylesheet" 
     href="https://unpkg.com/@patternfly/patternfly/patternfly.css" 
     crossorigin="anonymous"
   >
+  <link rel="stylesheet" href="style.css" />
   <title>PatternFly-Next ${title} CodeSandbox Example</title>
 </head>
 <body>
@@ -25,6 +27,9 @@ export const getStaticParams = (title, html) => ({
     },
     'package.json': {
       content: {},
+    },
+    'style.css': {
+      content: ''
     },
     'fonts.css': {
       content: overpass
