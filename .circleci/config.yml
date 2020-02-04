@@ -179,7 +179,7 @@ jobs:
   build_org:
     docker:
     - image: circleci/node:12
-    resource_class: medium
+    resource_class: large
     steps:
     - *attach_workspace
     - restore_cache:
