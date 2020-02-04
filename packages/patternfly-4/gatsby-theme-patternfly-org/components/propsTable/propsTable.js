@@ -2,7 +2,10 @@ import React from 'react';
 import { Table, TableHeader, TableBody } from '@patternfly/react-table';
 
 const renderType = prop => {
-  if (prop.type) {
+  if (prop.annotatedType) {
+    return prop.annotatedType;
+  }
+  else if (prop.type) {
     // JS prop
     return prop.type.name;
   } else if (prop.tsType) {
@@ -32,19 +35,22 @@ export const PropsTable = props => {
       aria-label={props.caption}
       cells={columns}
       caption={props.caption}
-      rows={props.rows.map(row => ({
-        cells: [
-          <div className='pf-m-fit-content'>
-            {row.name}
-          </div>,
-          renderType(row),
-          <div>
-            {row.required ? 'Yes' : 'No'}
-          </div>,
-          row.defaultValue && row.defaultValue.value,
-          row.description
-        ]
-      }))}
+      rows={props.rows
+        .filter(row => !row.hide)
+        .map(row => ({
+          cells: [
+            <div className='pf-m-fit-content'>
+              {row.deprecated && 'Deprecated: '}
+              {row.name}
+            </div>,
+            renderType(row),
+            <div>
+              {row.required ? 'Yes' : 'No'}
+            </div>,
+            row.defaultValue && row.defaultValue.value,
+            row.description
+          ]
+        }))}
     >
       <TableHeader />
       <TableBody />
