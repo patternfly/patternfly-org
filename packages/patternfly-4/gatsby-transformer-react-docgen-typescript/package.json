@@ -4,7 +4,6 @@
   "version": "0.2.2",
   "author": "Red Hat",
   "license": "MIT",
-  "private": true,
   "dependencies": {
     "react-docgen": "^5.1.0"
   },
