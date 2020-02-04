@@ -1,6 +1,15 @@
 const visit = require('unist-util-visit');
-var { render } = require('html-formatter');
+const { render } = require('html-formatter');
 const { getId } = require('./getId');
+const { slugger } = require('./slugger');
+
+function getExampleClassName(source, componentType, componentName) {
+  return `ws-${source}-${componentType}-${componentName}`;
+}
+
+function getExampleId(source, componentType, componentName, exampleTitle) {
+  return `ws-${source}-${componentType}-${componentName}-${slugger(exampleTitle)}`;
+}
 
 module.exports = {
   // Map example page urls to HTML
@@ -42,6 +51,8 @@ module.exports = {
 
     return examples;
   },
+  getExampleClassName,
+  getExampleId
 }
 
 // TODO: Write some tests for example MDXAsts
