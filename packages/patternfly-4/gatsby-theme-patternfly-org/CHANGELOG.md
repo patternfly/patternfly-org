@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.2.30...gatsby-theme-patternfly-org@1.3.0) (2020-02-04)
+
+
+### Features
+
+* **codesandbox:** add empty style.css ([#1668](https://github.com/patternfly/patternfly-org/issues/1668)) ([237a473](https://github.com/patternfly/patternfly-org/commit/237a4732308b4546617f796411528a403ef505b9))
+
+
+
+
+
 ## [1.2.30](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.2.29...gatsby-theme-patternfly-org@1.2.30) (2020-02-04)
 
 **Note:** Version bump only for package gatsby-theme-patternfly-org
