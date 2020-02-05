@@ -1,4 +1,5 @@
 ---
 coreComponentName: 'drawer'
+reactComponentName: 'drawer'
 ---
-This demo shows the use and positioning of the [Drawer component](/documentation/core/components/drawer) in a page.
+The *Drawer* is a sliding panel that enters from the right edge of the viewport. It can be configured to either overlay content on a page or create a sidebar by pushing that content to the left.

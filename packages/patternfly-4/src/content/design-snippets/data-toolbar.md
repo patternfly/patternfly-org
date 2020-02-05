@@ -1,4 +1,5 @@
 ---
 coreComponentName: 'datatoolbar'
+reactComponentName: 'datatoolbar'
 ---
-This demonstrates the construction of an attribute-value filter using the [Data toolbar](/documentation/core/components/datatoolbar) component. Related design guidelines: [Filters](/design-guidelines/usage-and-behavior/filters)
+The *Data Toolbar* component provides a flexible system for creating responsive toolbars that manage the data displayed in a list, table, or any other data view. Toolbar configurations can be customized to support a variety of use cases. Related design guidelines: [Filters](/design-guidelines/usage-and-behavior/toolbar)
