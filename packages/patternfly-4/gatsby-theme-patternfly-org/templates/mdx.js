@@ -20,23 +20,6 @@ import { getId , slugger, capitalize} from '../helpers';
 import versions from '../versions.json';
 import './mdx.css';
 
-const getExperimentalWarning = (state, componentName) => {
-  switch(state) {
-    case 'promoted':
-      return (
-        <p>
-          This experimental feature has been promoted to a <Link href={`../../components/${componentName}`}>production-level component</Link> and will be removed in a future release.
-          Use the production-ready version of this feature instead.
-        </p>
-      );
-    case 'deprecated':
-      return 'This experimental feature has been deprecated and will be removed in a future release. We recommend you avoid or move away from using this feature in your projects.';
-    case 'early':
-    default:
-      return "This is an experimental feature in the early stages of testing. It's not intended for production use.";
-  }
-}
-
 const getSourceTitle = source => {
   switch(source) {
     case 'core':
@@ -57,7 +40,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
         katacodaId={location.state.katacodaId} />
     );
   }
-  const { cssPrefix, hideTOC, experimentalStage, optIn, hideDarkMode, showTitle, releaseNoteTOC } = data.doc.frontmatter;
+  const { cssPrefix, hideTOC, beta, optIn, hideDarkMode, showTitle, releaseNoteTOC } = data.doc.frontmatter;
   const { componentName, navSection } = data.doc.fields;
   const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner } = pageContext;
   const props = data.props && data.props.nodes && propComponents
@@ -73,9 +56,9 @@ const MDXTemplate = ({ data, location, pageContext }) => {
       })
       .filter(Boolean)
     : [];
-  
+
   let parityComponent = undefined;
-  if (data.designDoc && ['components', 'experimental', 'utilities'].includes(navSection)) {
+  if (data.designDoc && ['components', 'beta', 'utilities'].includes(navSection)) {
     const { reactComponentName, coreComponentName } = data.designDoc.frontmatter;
     if (source === 'core' && reactComponentName) {
       parityComponent = `${navSection}/${reactComponentName}`;
@@ -119,15 +102,15 @@ const MDXTemplate = ({ data, location, pageContext }) => {
               {optIn}
             </Alert>
           )}
-          {experimentalStage && (
+          {beta && (
             <Alert
-              variant={experimentalStage === 'early' ? 'info' : 'warning'}
-              title="Experimental feature"
+              variant={'info'}
+              title="Beta"
               className="pf-u-my-md"
               style={{ marginBottom: '1rem' }}
               isInline
             >
-              {getExperimentalWarning(experimentalStage)}
+              This is a beta feature, it is not yet intended for production use. Beta features may require minor adjustments as we receive feedback on them.
             </Alert>
           )}
           {data.designDoc && (
@@ -164,7 +147,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
                           )}
                         </CardHeader>
                         <CardBody>
-                          Released on {releaseDate}. 
+                          Released on {releaseDate}.
                         </CardBody>
                       </Card>
                     </GridItem>
@@ -280,7 +263,7 @@ export const pageQuery = graphql`
         cssPrefix
         hideTOC
         optIn
-        experimentalStage
+        beta
         hideDarkMode
         showTitle
         releaseNoteTOC
@@ -309,6 +292,7 @@ export const pageQuery = graphql`
       nodes {
         name
         props {
+          beta
           name
           required
           description

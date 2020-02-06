@@ -24,14 +24,14 @@ module.exports = {
             { section: 'layouts' },
             { section: 'utilities' },
             { section: 'demos' },
-            { section: 'experimental' },
+            { section: 'beta' },
           ],
           react: [
             { section: 'overview' },
             { section: 'charts' },
             { section: 'components' },
             { section: 'demos' },
-            { section: 'experimental' },
+            { section: 'beta' },
             { section: 'layouts' },
           ],
           get_started: [
@@ -228,7 +228,7 @@ module.exports = {
               siteUrl
             }
           }
-        
+
           allSitePage(filter: {context: {isFullscreen: {ne: true}}}) {
             edges {
               node {

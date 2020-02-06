@@ -24,6 +24,7 @@ export const PropsTable = props => {
   const columns = [
     { title: 'Name' },
     { title: 'Type' },
+    { title: 'Beta' },
     { title: 'Required' },
     { title: 'Default' },
     { title: 'Description' }
@@ -44,6 +45,9 @@ export const PropsTable = props => {
               {row.name}
             </div>,
             renderType(row),
+            <div>
+              {row.beta ? 'Beta' : ''}
+            </div>,
             <div>
               {row.required ? 'Yes' : 'No'}
             </div>,

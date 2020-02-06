@@ -9,7 +9,7 @@ exports.mdxTypeDefs = `
     cssPrefix: String
     hideTOC: Boolean
     optIn: String
-    experimentalStage: String
+    beta: Boolean
     propComponents: [String]
     hideDarkMode: Boolean
     reactComponentName: String
@@ -40,6 +40,7 @@ exports.mdxTypeDefs = `
     value: String
   }
   type PropsType @dontInfer {
+    beta: Boolean
     name: String!
     description: String
     required: Boolean

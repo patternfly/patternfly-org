@@ -52,6 +52,11 @@ const annotations = [
     type: 'Boolean'
   },
   {
+    regex: /@beta/,
+    name: 'beta',
+    type: 'Boolean'
+  },
+  {
     regex: /@propType (\w+|['"](.+)['"])\s*/,
     name: 'annotatedType',
     type: 'String'
@@ -60,6 +65,7 @@ const annotations = [
 
 function addAnnotations(prop) {
   // Prop looks like this: {
+  //   "beta": null,
   //   "required": false,
   //   "name": "className",
   //   "description": "Additional css classes",
@@ -139,6 +145,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       value: String
     }
     type PropsType @noInfer {
+      beta: Boolean
       name: String!
       description: String
       required: Boolean
