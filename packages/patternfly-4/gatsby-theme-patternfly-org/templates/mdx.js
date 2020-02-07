@@ -105,12 +105,12 @@ const MDXTemplate = ({ data, location, pageContext }) => {
           {beta && (
             <Alert
               variant={'info'}
-              title="Beta"
+              title="Beta feature"
               className="pf-u-my-md"
               style={{ marginBottom: '1rem' }}
               isInline
             >
-              This is a beta feature, it is not yet intended for production use. Beta features may require minor adjustments as we receive feedback on them.
+              This Beta component is currently under review, so please join in and give us your feedback at https://forum.patternfly.org/
             </Alert>
           )}
           {data.designDoc && (
