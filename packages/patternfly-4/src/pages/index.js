@@ -37,7 +37,7 @@ const IndexPage = ({ location }) => {
             <Title size="4xl" className="pf-m-white pf4-site-c-hero fadeIn animated fadeInTwo">
               Build better experiences with repeatable, scalable design.
             </Title>
-            <Title size="xl" className="pf-m-white pf-u-mb-md pf-u-mb-3xl-on-md fadeInUp animated fadeInThree">
+            <Title size="xl" headingLevel="h2" className="pf-m-white pf-u-mb-md pf-u-mb-3xl-on-md fadeInUp animated fadeInThree">
               PatternFly is an open source design system built to drive consistency and unify teams.
             </Title>
             <div className="pf-u-display-flex pf-u-justify-content-center pf-u-flex-direction-column pf-u-flex-direction-row-on-md">

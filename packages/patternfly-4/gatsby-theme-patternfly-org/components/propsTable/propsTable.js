@@ -41,6 +41,7 @@ export const PropsTable = props => {
           cells: [
             <div className='pf-m-fit-content'>
               {row.deprecated && 'Deprecated: '}
+              {row.beta && 'Beta: '}
               {row.name}
             </div>,
             renderType(row),
