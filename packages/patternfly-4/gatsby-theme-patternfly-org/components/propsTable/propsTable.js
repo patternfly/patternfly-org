@@ -1,4 +1,5 @@
 import React from 'react';
+import { Badge } from '@patternfly/react-core';
 import { Table, TableHeader, TableBody } from '@patternfly/react-table';
 
 const renderType = prop => {
@@ -41,8 +42,8 @@ export const PropsTable = props => {
           cells: [
             <div className='pf-m-fit-content'>
               {row.deprecated && 'Deprecated: '}
-              {row.beta && 'Beta: '}
               {row.name}
+              {row.beta && <Badge className="ws-beta-badge pf-u-ml-sm">Beta</Badge>}
             </div>,
             renderType(row),
             <div>
