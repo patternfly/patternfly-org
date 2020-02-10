@@ -1,5 +1,6 @@
 import React, { useLayoutEffect } from 'react';
 import { LiveProvider, LiveEditor, LivePreview, LiveError } from 'react-live';
+import { Badge } from '@patternfly/react-core';
 import { useMDXScope } from 'gatsby-plugin-mdx/context';
 import { ExampleToolbar } from './exampleToolbar';
 import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
@@ -29,7 +30,7 @@ export const Example = props => {
   const supportedLangs = getSupportedLanguages(props.className);
   const initialLang = supportedLangs[0];
   const initialCode = props.children.toString();
-  const { noLive, title = 'no title', isFullscreen = false, location, children, navSection, componentName } = props;
+  const { noLive, title = 'no title', isFullscreen = false, isBeta = false, location, children, navSection, componentName } = props;
 
   // https://reactjs.org/docs/hooks-overview.html#state-hook
   const [editorCode, setEditorCode] = React.useState(initialLang === 'html' ? html : initialCode);
@@ -97,7 +98,7 @@ export const Example = props => {
 
   return (
     <div className="ws-example">
-      <AutoLinkHeader size="h4" headingLevel="h3" className="ws-example-heading">
+      <AutoLinkHeader metaText={isBeta ? <Badge className="ws-beta-badge pf-u-ml-xs">Beta</Badge> : null} size="h4" headingLevel="h3" className="ws-example-heading">
         {exampleName}
       </AutoLinkHeader>
       <LiveProvider
@@ -136,7 +137,7 @@ export const Example = props => {
           isFullscreen={isFullscreen}
           fullscreenLink={fullscreenLink}
           code={editorCode}
-          codeBoxParams={codeBoxParams} 
+          codeBoxParams={codeBoxParams}
           componentName={props.componentName}/>
         <LiveError />
       </LiveProvider>

@@ -78,3 +78,8 @@
   color: rgba(255,255,255,.4);
 }
 
+.pf-c-badge.ws-beta-badge {
+  --pf-c-badge--m-unread--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-badge--m-unread--Color: var(--pf-global--primary-color--100);
+  border: 1px solid var(--pf-global--primary-color--100);
+}
