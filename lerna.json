@@ -15,5 +15,6 @@
     "packages/patternfly-4/gatsby-theme-patternfly-org",
     "packages/patternfly-4/gatsby-transformer-react-docgen-typescript"
   ],
+  "useWorkspaces": true,
   "version": "independent"
 }
