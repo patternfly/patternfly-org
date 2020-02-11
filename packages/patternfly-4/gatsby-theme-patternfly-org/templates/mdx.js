@@ -42,7 +42,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
   }
   const { cssPrefix, hideTOC, beta, optIn, hideDarkMode, showTitle, releaseNoteTOC } = data.doc.frontmatter;
   const { componentName, navSection } = data.doc.fields;
-  const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner } = pageContext;
+  const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner, sourceLink } = pageContext;
   const props = data.props && data.props.nodes && propComponents
     ? propComponents
       .filter(name => name !== '') // Filter default entry we make for GraphQL schema
@@ -226,8 +226,10 @@ const MDXTemplate = ({ data, location, pageContext }) => {
     </MDXProvider>
   );
 
+  console.log('sourceLink', sourceLink);
   return (
     <React.Fragment>
+      {sourceLink}
       <SkipToContent href="#main-content">Skip to Content</SkipToContent>
       <SideNavLayout
         location={location}
@@ -236,7 +238,6 @@ const MDXTemplate = ({ data, location, pageContext }) => {
         showBanner={showBanner}
       >
         <PageSection id="main-content" className="ws-section">
-
           <TableOfContents />
 
           {/* Wrap in div for :last-child CSS selectors */}
@@ -245,8 +246,8 @@ const MDXTemplate = ({ data, location, pageContext }) => {
           </div>
 
           {props.length > 0 && <PropsSection />}
-
           {cssPrefix && <CSSVariablesSection />}
+          {sourceLink && <a href={sourceLink}>View page source on Github</a>}
         </PageSection>
       </SideNavLayout>
     </React.Fragment>

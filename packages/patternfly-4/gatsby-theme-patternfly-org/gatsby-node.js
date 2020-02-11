@@ -196,6 +196,19 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
       .forEach(node => {
         const { componentName, slug, navSection = null, title, source, propComponents = [''] } = node.fields;
         const fileRelativePath = path.relative(__dirname, node.absolutePath || node.fileAbsolutePath);
+        let sourceLink = 'https://github.com/patternfly/';
+        if (source === 'react') {
+          sourceLink += 'patternfly-react';
+        } else if (source === 'core') {
+          sourceLink += 'patternfly-next';
+        } else {
+          sourceLink += 'patternfly-org';
+        }
+        sourceLink += '/blob/master';
+        sourceLink += fileRelativePath
+          .replace(/\.\./g, '')
+          .replace(/\\/g, '/')
+          .replace(/patternfly-(react|next)\//, '');
         // Process the MDX AST to dynamically create a TOC and per-example fullscreen pages
         const tableOfContents = extractTableOfContents(node.mdxAST);
         const examples = extractExamples(node.mdxAST, hbsInstance, fileRelativePath);
@@ -225,7 +238,9 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
             // To render static example HTML from patternfly-next
             htmlExamples: source === 'core' ? examples : undefined,
             // To hide the banner for core/React sites
-            showBanner
+            showBanner,
+            // To link each MD file back to Github
+            sourceLink,
           }
         });
 
