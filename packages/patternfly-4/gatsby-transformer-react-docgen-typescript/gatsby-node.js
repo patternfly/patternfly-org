@@ -156,6 +156,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type ComponentMetadata implements Node @noInfer {
       name: String!
+      description: String
       props: [PropsType]
     }
   `;

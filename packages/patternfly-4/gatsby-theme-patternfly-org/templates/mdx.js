@@ -42,7 +42,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
   }
   const { cssPrefix, hideTOC, beta, optIn, hideDarkMode, showTitle, releaseNoteTOC } = data.doc.frontmatter;
   const { componentName, navSection } = data.doc.fields;
-  const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner } = pageContext;
+  const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner, sourceLink } = pageContext;
   const props = data.props && data.props.nodes && propComponents
     ? propComponents
       .filter(name => name !== '') // Filter default entry we make for GraphQL schema
@@ -178,11 +178,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
 
   const PropsSection = () => (
     <React.Fragment>
-      <AutoLinkHeader
-        size="h2"
-        id="props"
-        className="ws-h2"
-      >
+      <AutoLinkHeader id="props" size="h2" className="ws-h2">
         Props
       </AutoLinkHeader>
       {props.map(component => (
@@ -196,11 +192,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
 
   const CSSVariablesSection = () => (
     <React.Fragment>
-      <AutoLinkHeader
-        size="h2"
-        id="css-variables"
-        className="ws-h2"
-      >
+      <AutoLinkHeader id="css-variables" size="h2" className="ws-h2">
         CSS Variables
       </AutoLinkHeader>
       <CSSVariables prefix={cssPrefix} />
@@ -226,6 +218,20 @@ const MDXTemplate = ({ data, location, pageContext }) => {
     </MDXProvider>
   );
 
+  const FeedbackSection = () => {
+    const issueBody = encodeURIComponent(`\n\n\nProblem is in [this file.](${sourceLink})`);
+    const issueLink = sourceLink.replace(/\/blob\/master\/.*/, `/issues/new?title=&body=${issueBody}`);
+
+    return (
+      <React.Fragment>
+        <AutoLinkHeader id="feedback" size="h2" className="ws-h2">
+          Feedback
+        </AutoLinkHeader>
+        <a href={sourceLink} target="_blank">View page source on Github</a> / <a href={issueLink} target="_blank">Report an issue on Github</a>
+      </React.Fragment>
+    );
+  }
+
   return (
     <React.Fragment>
       <SkipToContent href="#main-content">Skip to Content</SkipToContent>
@@ -236,7 +242,6 @@ const MDXTemplate = ({ data, location, pageContext }) => {
         showBanner={showBanner}
       >
         <PageSection id="main-content" className="ws-section">
-
           <TableOfContents />
 
           {/* Wrap in div for :last-child CSS selectors */}
@@ -245,8 +250,8 @@ const MDXTemplate = ({ data, location, pageContext }) => {
           </div>
 
           {props.length > 0 && <PropsSection />}
-
           {cssPrefix && <CSSVariablesSection />}
+          {sourceLink && <FeedbackSection />}
         </PageSection>
       </SideNavLayout>
     </React.Fragment>
