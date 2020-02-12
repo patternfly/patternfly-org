@@ -130,7 +130,8 @@ const MDXTemplate = ({ data, location, pageContext }) => {
               {getExperimentalWarning(experimentalStage)}
             </Alert>
           )}
-          {data.designDoc && (
+          {/* Design docs should not apply to demos and overview */}
+          {data.designDoc && !['overview', 'demos'].includes(navSection) && (
             <MDXRenderer>
               {data.designDoc.body}
             </MDXRenderer>
