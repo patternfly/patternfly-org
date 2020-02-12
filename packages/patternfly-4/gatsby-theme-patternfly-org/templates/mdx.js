@@ -171,11 +171,6 @@ const MDXTemplate = ({ data, location, pageContext }) => {
               CSS Variables
             </a>
           )}
-          {!releaseNoteTOC && sourceLink && (
-            <a href="#feedback" className="ws-toc">
-              Feedback
-            </a>
-          )}
         </React.Fragment>
       )}
     </React.Fragment>
