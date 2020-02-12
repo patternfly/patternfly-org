@@ -2,4 +2,4 @@
 coreComponentName: 'grid'
 reactComponentName: 'grid'
 ---
-Use a *Grid* to layout content on a fixed-size 12 column grid. 
+Use a **Grid** to layout content on a fixed-size 12 column grid.
