@@ -198,16 +198,17 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
         const fileRelativePath = path.relative(__dirname, node.absolutePath || node.fileAbsolutePath);
         let sourceLink = 'https://github.com/patternfly/';
         if (source === 'react') {
-          sourceLink += 'patternfly-react';
+          sourceLink += 'patternfly-react/blob/master/';
         } else if (source === 'core') {
-          sourceLink += 'patternfly-next';
+          sourceLink += 'patternfly-next/blob/master/';
+        } else if (source === 'shared') {
+          sourceLink += 'patternfly-org/blob/master/packages/patternfly-4/gatsby-theme-patternfly-org/';
         } else {
-          sourceLink += 'patternfly-org';
+          sourceLink += 'patternfly-org/blob/master/packages/patternfly-4/';
         }
-        sourceLink += '/blob/master';
         sourceLink += fileRelativePath
-          .replace(/\.\./g, '')
           .replace(/\\/g, '/')
+          .replace(/\.\.\//g, '')
           .replace(/patternfly-(react|next)\//, '');
         // Process the MDX AST to dynamically create a TOC and per-example fullscreen pages
         const tableOfContents = extractTableOfContents(node.mdxAST);

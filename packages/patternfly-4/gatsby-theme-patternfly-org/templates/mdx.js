@@ -171,6 +171,11 @@ const MDXTemplate = ({ data, location, pageContext }) => {
               CSS Variables
             </a>
           )}
+          {!releaseNoteTOC && sourceLink && (
+            <a href="#feedback" className="ws-toc">
+              Feedback
+            </a>
+          )}
         </React.Fragment>
       )}
     </React.Fragment>
@@ -178,11 +183,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
 
   const PropsSection = () => (
     <React.Fragment>
-      <AutoLinkHeader
-        size="h2"
-        id="props"
-        className="ws-h2"
-      >
+      <AutoLinkHeader id="props" size="h2" className="ws-h2">
         Props
       </AutoLinkHeader>
       {props.map(component => (
@@ -196,11 +197,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
 
   const CSSVariablesSection = () => (
     <React.Fragment>
-      <AutoLinkHeader
-        size="h2"
-        id="css-variables"
-        className="ws-h2"
-      >
+      <AutoLinkHeader id="css-variables" size="h2" className="ws-h2">
         CSS Variables
       </AutoLinkHeader>
       <CSSVariables prefix={cssPrefix} />
@@ -226,10 +223,22 @@ const MDXTemplate = ({ data, location, pageContext }) => {
     </MDXProvider>
   );
 
-  console.log('sourceLink', sourceLink);
+  const FeedbackSection = () => {
+    const issueBody = encodeURIComponent(`\n\n\nProblem is in [this file.](${sourceLink})`);
+    const issueLink = sourceLink.replace(/\/blob\/master\/.*/, `/issues/new?title=&body=${issueBody}`);
+
+    return (
+      <React.Fragment>
+        <AutoLinkHeader id="feedback" size="h2" className="ws-h2">
+          Feedback
+        </AutoLinkHeader>
+        <a href={sourceLink} target="_blank">View page source on Github</a> / <a href={issueLink} target="_blank">Report an issue on Github</a>
+      </React.Fragment>
+    );
+  }
+
   return (
     <React.Fragment>
-      {sourceLink}
       <SkipToContent href="#main-content">Skip to Content</SkipToContent>
       <SideNavLayout
         location={location}
@@ -247,7 +256,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
 
           {props.length > 0 && <PropsSection />}
           {cssPrefix && <CSSVariablesSection />}
-          {sourceLink && <a href={sourceLink}>View page source on Github</a>}
+          {sourceLink && <FeedbackSection />}
         </PageSection>
       </SideNavLayout>
     </React.Fragment>
