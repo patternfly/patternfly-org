@@ -113,7 +113,8 @@ const MDXTemplate = ({ data, location, pageContext }) => {
               This Beta component is currently under review, so please join in and give us your feedback at https://forum.patternfly.org/
             </Alert>
           )}
-          {data.designDoc && (
+          {/* Design docs should not apply to demos and overview */}
+          {data.designDoc && !['overview', 'demos'].includes(navSection) && (
             <MDXRenderer>
               {data.designDoc.body}
             </MDXRenderer>
