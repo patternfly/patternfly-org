@@ -38,12 +38,12 @@ export const PropsTable = props => {
       caption={props.caption}
       rows={props.rows
         .filter(row => !row.hide)
-        .map(row => ({
+        .map((row, idx) => ({
           cells: [
             <div className='pf-m-fit-content'>
               {row.deprecated && 'Deprecated: '}
               {row.name}
-              {row.beta && <Badge className="ws-beta-badge pf-u-ml-sm">Beta</Badge>}
+              {row.beta && <Badge key={`${row.name}-${idx}`} className="ws-beta-badge pf-u-ml-sm">Beta</Badge>}
             </div>,
             renderType(row),
             <div>
