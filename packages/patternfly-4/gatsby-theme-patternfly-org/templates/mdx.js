@@ -252,7 +252,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
 
           {props.length > 0 && <PropsSection />}
           {cssPrefix && <CSSVariablesSection />}
-          {sourceLink && <FeedbackSection />}
+          {/* {sourceLink && <FeedbackSection />} */}
         </PageSection>
       </SideNavLayout>
     </React.Fragment>
