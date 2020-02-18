@@ -405,3 +405,10 @@ p ~ .ws-toc {
 .QSIPopOver iframe {
   height: 100%;
 }
+
+/* Qualtrics surveys mobile version */
+@media only screen and (max-width: 850px) {
+  .SI_0CH3xsOyZbQrc9L_PopOverContainer[style]{
+    top: calc(70vh / 2) !important;
+  }
+}
