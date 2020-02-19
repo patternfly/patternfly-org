@@ -24,14 +24,12 @@ module.exports = {
             { section: 'layouts' },
             { section: 'utilities' },
             { section: 'demos' },
-            { section: 'beta' },
           ],
           react: [
             { section: 'overview' },
             { section: 'charts' },
             { section: 'components' },
             { section: 'demos' },
-            { section: 'beta' },
             { section: 'layouts' },
           ],
           get_started: [
