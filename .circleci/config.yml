@@ -91,9 +91,9 @@ workflows:
         - build_next
         - build_org
         - build_v3
-        filters:
-          branches:
-            only: master
+        # filters:
+        #   branches:
+        #     only: master
 jobs:
   install:
     docker:
