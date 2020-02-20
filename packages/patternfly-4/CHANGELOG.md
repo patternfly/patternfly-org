@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.52.1](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.52.0...patternfly-org-4@3.52.1) (2020-02-20)
+
+
+### Bug Fixes
+
+* **docs:** updated beta tags to only display on non-beta components where there is not already a component-level alert ([9a94331](https://github.com/patternfly/patternfly-org/commit/9a943311196f326375caf48e9c1823139900467f))
+* **file upload:** moved File upload under Components sidenav ([6a50672](https://github.com/patternfly/patternfly-org/commit/6a506728cf120252f5556ee25810e16af64f756a))
+* **keys:** use unique keys for beta badge in props table ([0d399de](https://github.com/patternfly/patternfly-org/commit/0d399de6ea6c6677cf0dd376906db09a4e9a692a))
+* **qualtrics:** fixed survey for mobile devices ([1ed91a1](https://github.com/patternfly/patternfly-org/commit/1ed91a1d2bb3d882915a94a9aeac2c7a7151de57))
+* **SimpleList:** fixed Simple list title ([4d0a86c](https://github.com/patternfly/patternfly-org/commit/4d0a86ca1af49678f5ff40ca45af88e17faea65f))
+
+
+
+
+
 # [3.52.0](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.51.2...patternfly-org-4@3.52.0) (2020-02-10)
 
 
