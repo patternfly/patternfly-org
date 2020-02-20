@@ -110,7 +110,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
               style={{ marginBottom: '1rem' }}
               isInline
             >
-              This Beta component is currently under review, so please join in and give us your feedback at https://forum.patternfly.org/
+              This Beta component is currently under review, so please join in and give us your feedback on the <a href="https://forum.patternfly.org/">PatternFly forum</a>
             </Alert>
           )}
           {/* Design docs should not apply to demos and overview */}

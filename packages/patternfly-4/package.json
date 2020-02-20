@@ -16,7 +16,7 @@
     "test:a11y:ci": "start-server-and-test serve:prefix http://localhost:9000/v4 test:a11y"
   },
   "dependencies": {
-    "@patternfly/patternfly": "2.56.3",
+    "@patternfly/patternfly": "2.65.2",
     "eslint-config-react-app": "^5.0.2",
     "gatsby": "2.18.6",
     "gatsby-cli": "2.8.15",
