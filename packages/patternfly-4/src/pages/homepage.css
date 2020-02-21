@@ -61,6 +61,23 @@
   font-size: 36px;
 }
 
+#patternfly-principles {
+  margin-bottom: 24px;
+}
+
+.ws-get-started {
+  padding-left: 0 !important;
+  padding-right: 35px !important;
+}
+
+.ws-get-started + .ws-get-started {
+  padding-right: 0 !important;
+}
+
+.ws-get-started-btn {
+  padding: 20px 25px;
+}
+
 .pf4-c-background-lines {
   width: 100%;
   max-width: 100%;
