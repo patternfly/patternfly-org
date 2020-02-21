@@ -218,26 +218,24 @@ const IndexPage = ({ location }) => {
                     </Text>
                   </GridItem>
                 </Grid>
-                <div className="pf-u-pb-md ws-get-started">
+                <div className="pf-u-pb-md ws-get-started ws-get-started-dev">
                   <Link
                     to="/get-started/developers"
-                    className="pf-m-white pf4-c-link__text ws-mdx-a"
-                    aria-label="Get started for developer"
-                    >
-                    <Button variant="secondary" className="ws-get-started-btn">
-                      Get started for developers
-                    </Button>
+                    className="pf-c-button pf4-c-button__cta-outline animated ws-mdx-a"
+                    aria-label="Get started for developers"
+                    type="button"
+                  >
+                    Get started for developers
                   </Link>
                 </div>
                 <div className="pf-u-pb-md ws-get-started">
                   <Link
                     to="/get-started/designers"
-                    className="pf-m-white pf4-c-link__text ws-mdx-a"
+                    className="pf-c-button pf4-c-button__cta-outline animated ws-mdx-a"
                     aria-label="Get started for designers"
+                    type="button"
                   >
-                    <Button variant="secondary" className="ws-get-started-btn">
-                      Get started for designers
-                    </Button>
+                    Get started for designers
                   </Link>
                 </div>
               </TextContent>

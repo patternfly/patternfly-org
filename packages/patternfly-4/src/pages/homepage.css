@@ -62,20 +62,15 @@
 }
 
 #patternfly-principles {
-  margin-bottom: 24px;
+  margin-bottom: 64px;
 }
 
 .ws-get-started {
-  padding-left: 0 !important;
-  padding-right: 35px !important;
+  display: inline-block;
 }
 
-.ws-get-started + .ws-get-started {
-  padding-right: 0 !important;
-}
-
-.ws-get-started-btn {
-  padding: 20px 25px;
+.ws-get-started-dev {
+  margin-right: 32px;
 }
 
 .pf4-c-background-lines {
