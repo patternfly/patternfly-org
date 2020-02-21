@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.2](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.0...gatsby-theme-patternfly-org@1.4.2) (2020-02-21)
+
+
+### Bug Fixes
+
+* **keys:** use unique keys for beta badge in props table ([0d399de](https://github.com/patternfly/patternfly-org/commit/0d399de6ea6c6677cf0dd376906db09a4e9a692a))
+* **qualtrics:** fixed survey for mobile devices ([1ed91a1](https://github.com/patternfly/patternfly-org/commit/1ed91a1d2bb3d882915a94a9aeac2c7a7151de57))
+
+
+
+
+
 # [1.4.0](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.3.2...gatsby-theme-patternfly-org@1.4.0) (2020-02-10)
 
 
