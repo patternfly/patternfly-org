@@ -72,6 +72,7 @@
 .ws-page-sidebar#page-sidebar {
   color: white;
   box-shadow: none;
+  min-height: calc(100vh - 500px);
 }
 
 .ws-page-sidebar  .pf-c-nav {
