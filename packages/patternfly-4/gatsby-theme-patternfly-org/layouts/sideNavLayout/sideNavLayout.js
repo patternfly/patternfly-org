@@ -10,7 +10,7 @@ import { Helmet } from 'react-helmet';
 
 import { Page, PageHeader, PageSidebar, Toolbar, ToolbarItem, Form, TextInput, Brand, Dropdown, DropdownToggle, DropdownItem, DropdownGroup } from '@patternfly/react-core';
 import { SearchIcon, CaretDownIcon } from '@patternfly/react-icons';
-import { SideNav, TopNav,  Banner, Footer } from '../../components';
+import { SideNav, TopNav,  Banner, Footer, GdprBanner } from '../../components';
 import staticVersions from 'gatsby-theme-patternfly-org/versions.json';
 import logo from '../logo.svg';
 import './sideNavLayout.css';
@@ -22,7 +22,8 @@ export const SideNavLayout = ({
   context,
   parityComponent,
   hideSideNav = false,
-  showBanner = false
+  showBanner = false,
+  showGdprBanner = false
 }) => {
   // Put queries for Top and Side navs here for performance
   // We should consider passing down the `sitePlugin` data in pageContext
@@ -243,6 +244,10 @@ export const SideNavLayout = ({
       </Helmet>
       {showBanner && (
         <Banner />
+      )}
+      {console.log('sidenav/sidenav: ',showGdprBanner)}
+      {showGdprBanner && (
+        <GdprBanner />
       )}
       <Page isManagedSidebar header={Header} sidebar={SideBar}>
         {children}
