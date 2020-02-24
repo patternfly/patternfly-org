@@ -61,16 +61,30 @@
   font-size: 36px;
 }
 
-#patternfly-principles {
-  margin-bottom: 64px;
+.ws-get-started:hover {
+  color: var(--pf-global--Color--light-200);
 }
 
-.ws-get-started {
-  display: inline-block;
+.ws-pf-principle .pf-l-flex {
+  align-items: flex-start;
+  flex-wrap: nowrap;
 }
 
-.ws-get-started-dev {
-  margin-right: 32px;
+.ws-pf-principle .pf-l-flex > div:first-child {
+  margin-right: 64px;
+  flex-shrink: 0;
+  width: 93px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .ws-pf-principle .pf-l-flex {
+    flex-wrap: wrap;
+  }
+  
+  .ws-pf-principle .ws-principles-img {
+    margin-bottom: 24px;
+  }
 }
 
 .pf4-c-background-lines {
