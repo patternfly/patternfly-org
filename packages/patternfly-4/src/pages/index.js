@@ -165,7 +165,7 @@ const IndexPage = ({ location }) => {
     </PageSection>
     <PageSection variant={PageSectionVariants.darker} className="pf4-c-background-image-principles ws-homepage-main-section">
       <Grid gutter="md" className="pf-u-py-3xl">
-        <GridItem sm={12} md={6} mdOffset={3}>
+        <GridItem span={12}>
           <TextContent>
             <Text component={TextVariants.h1} className="pf-u-mb-4xl pf-m-white pf-u-text-align-center" id="patternfly-principles">
               {patternFlyPrinciples}
