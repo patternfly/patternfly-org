@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { SideNavLayout } from 'gatsby-theme-patternfly-org/layouts';
 import {
+  Flex,
+  FlexItem,
   Grid,
   GridItem,
   PageSection,
@@ -13,7 +15,9 @@ import {
 } from '@patternfly/react-core';
 import { ArrowRightIcon } from '@patternfly/react-icons';
 import orb from '../images/pf4-logo.svg';
-import principles from '../images/pf4-wireframe.png';
+import accessible from '../images/accessible.svg';
+import modular from '../images/modular.svg';
+import scale from '../images/scale.svg';
 import { AutoLinkHeader } from 'gatsby-theme-patternfly-org/components/autoLinkHeader/autoLinkHeader';
 import './homepage.css';
 
@@ -94,7 +98,6 @@ const IndexPage = ({ location }) => {
                     color, content, and more.
                   </Text>
                   <Text
-                    component={TextVariants.a}
                     aria-label="view design guidelines"
                     className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
@@ -110,7 +113,6 @@ const IndexPage = ({ location }) => {
                     regardless of screen size.
                   </Text>
                   <Text
-                    component={TextVariants.a}
                     aria-label="view layouts"
                     className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
@@ -126,7 +128,6 @@ const IndexPage = ({ location }) => {
                     create a solution for almost any UI problem.
                   </Text>
                   <Text
-                    component={TextVariants.a}
                     aria-label="view components"
                     className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
@@ -142,7 +143,6 @@ const IndexPage = ({ location }) => {
                     combined to solve common design problems.
                   </Text>
                   <Text
-                    component={TextVariants.a}
                     aria-label="view demos"
                     className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
@@ -165,61 +165,95 @@ const IndexPage = ({ location }) => {
     </PageSection>
     <PageSection variant={PageSectionVariants.darker} className="pf4-c-background-image-principles ws-homepage-main-section">
       <Grid gutter="md" className="pf-u-py-3xl">
-        <GridItem sm={12}>
-          <Grid className="pf-m-white">
-            <GridItem sm={12} md={5} mdOffset={1}>
-              <TextContent>
-                <Text component={TextVariants.h1} className="pf-u-mb-4xl pf-m-white" id="patternfly-principles">
-                  {patternFlyPrinciples}
-                </Text>
-                <Text component={TextVariants.h2}>Modular &amp; flexible</Text>
-                <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
-                  Arrange self-contained components in any number of ways to build a variety of applications and
-                  interfaces. You can also use the CSS variable system to customize styles across a website or
-                  interface.
-                </Text>
-                <Text component={TextVariants.h2}>Accessible</Text>
-                <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
-                  Take advantage of accessible markup and guidance. Because building applications that work for
-                  everyone, regardless of ability, is just the right thing to do.
-                </Text>
-                <Text component={TextVariants.h2}>Built for teams, built to scale</Text>
-                <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
-                  Unify design and development with a set of clear guidelines and tools to help streamline communication
-                  and build more consistent user experiences.
-                </Text>
-                <div className="pf-u-pb-md">
-                  <Link
-                    to="/get-started/developers"
-                    className="pf-m-white pf4-c-link__text ws-mdx-a"
-                    aria-label="Get started for developer"
-                    >
-                      Get started for developers <ArrowRightIcon />
-                  </Link>
-                </div>
-                <div className="pf-u-pb-md">
-                    <Link
-                      to="/get-started/designers"
-                      className="pf-m-white pf4-c-link__text ws-mdx-a"
-                      aria-label="Get started for designers"
-                    >
-                      Get started for designers <ArrowRightIcon />
-                    </Link>
-                </div>
-              </TextContent>
-            </GridItem>
-            <GridItem
-              sm={12}
-              md={5}
-              className="pf-u-mt-lg pf-u-mt-0-on-sm pf-u-text-align-center pf-u-text-align-right-on-md pf-u-text-align-right-on-md"
+        <GridItem span={12}>
+          <TextContent>
+            <Text component={TextVariants.h1} className="pf-u-mb-4xl pf-m-white pf-u-text-align-center" id="patternfly-principles">
+              {patternFlyPrinciples}
+            </Text>
+          </TextContent>
+        </GridItem>
+      </Grid>
+      <Grid className="pf-m-white" gutter="lg">
+        <GridItem span={12} md={10} mdOffset={1} lg={9} lgOffset={2}>
+          <TextContent>
+            <Grid>
+              <GridItem span={12} lg={11} className="ws-pf-principle">
+                <Flex>
+                  <FlexItem>
+                    <img
+                      className="ws-principles-img"
+                      src={modular}
+                      alt="PatternFly 4 modular"
+                    />
+                  </FlexItem>
+                  <FlexItem>
+                    <Text component={TextVariants.h2}>Modular &amp; flexible</Text>
+                    <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
+                      Arrange self-contained components in any number of ways to build a variety of applications and
+                      interfaces. You can also use the CSS variable system to customize styles across a website or
+                      interface.
+                    </Text>
+                  </FlexItem>
+                </Flex>
+              </GridItem>
+              <GridItem span={12} lg={11} className="ws-pf-principle">
+                <Flex>
+                  <FlexItem>
+                    <img
+                    className="ws-principles-img"
+                    src={accessible}
+                    alt="PatternFly 4 accessible"
+                  />
+                  </FlexItem>
+                  <FlexItem>
+                    <Text component={TextVariants.h2}>Accessible</Text>
+                    <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
+                      Take advantage of accessible markup and guidance. Because building applications that work for
+                      everyone, regardless of ability, is just the right thing to do.
+                    </Text>
+                  </FlexItem>
+                </Flex>
+              </GridItem>
+              <GridItem span={12} lg={11} className="ws-pf-principle">
+                <Flex>
+                  <FlexItem>
+                    <img
+                      className="ws-principles-img"
+                      src={scale}
+                      alt="PatternFly 4 scale"
+                    />
+                    </FlexItem>
+                    <FlexItem>
+                    <Text component={TextVariants.h2}>Built for teams, built to scale</Text>
+                    <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
+                      Unify design and development with a set of clear guidelines and tools to help streamline communication
+                      and build more consistent user experiences.
+                    </Text>
+                  </FlexItem>
+                </Flex>
+              </GridItem>
+            </Grid>
+          </TextContent>
+          <div className="pf-u-pb-md">
+            <Text
+              aria-label="get started developers"
+              className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
             >
-              <img
-                src={principles}
-                alt="PatternFly 4 principles image"
-                className="pf4-c-image__principles pf-u-ml-lg-on-md"
-              />
-            </GridItem>
-          </Grid>
+              <Link to="/get-started/developers" className="pf-m-white ws-get-started">
+                Get started for developers <ArrowRightIcon />
+              </Link>
+            </Text>
+          </div>
+          <div className="pf-u-pb-md">
+            <Text
+              aria-label="get started designers"
+              className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
+            >
+              <Link to="/get-started/designers" className="pf-m-white ws-get-started">
+                Get started for designers <ArrowRightIcon />
+              </Link>
+            </Text>
+          </div>
         </GridItem>
       </Grid>
     </PageSection>
