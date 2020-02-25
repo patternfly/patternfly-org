@@ -183,7 +183,6 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
     const hbsInstance = createHandlebars(result.data.partials.nodes);
     const hiddenTitles = (pluginOptions.hiddenPages || []).map(title => title.toLowerCase());
     const { showBanner = false, showGdprBanner = false } = pluginOptions;
-    console.log('showGdprBanner: ', showGdprBanner);
     // Create 404 page
     actions.createPage({
       path: '/404',

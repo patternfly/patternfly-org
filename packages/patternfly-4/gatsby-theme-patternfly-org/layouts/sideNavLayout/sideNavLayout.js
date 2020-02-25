@@ -245,7 +245,6 @@ export const SideNavLayout = ({
       {showBanner && (
         <Banner />
       )}
-      {console.log('sidenav/sidenav: ',showGdprBanner, 'showBanner: ', showBanner)}
       {showGdprBanner && (
         <GdprBanner />
       )}
