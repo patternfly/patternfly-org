@@ -13,21 +13,23 @@ export const GdprBanner = () => {
   }
 
   return (
-    <div id="ws-gdpr-banner" className="pf-l-flex">
-      {isBannerOpen && (
-        <React.Fragment>
-          <div className="pf-u-my-md">
-            <p id="ws-gdpr-banner-text" className="pf-u-ml-xl">
-              We use cookies on our websites to deliver our online services. Details about how we use cookies and how you may disable them are set out in our <a href="https://www.redhat.com/en/about/privacy-policy">Privacy Statement</a>. By using this website you agree to our use of cookies.
-            </p>
-          </div>
-          <div className="pf-u-mr-xl">
-            <Button variant="plain" aria-label="Close banner" onClick={closeBanner}>
-              <TimesIcon />
-            </Button>
-          </div>
-        </React.Fragment>
-      )}
+    <div className="ws-gdpr-banner-container pf-l-flex">
+      <div id="ws-gdpr-banner" className="pf-l-flex">
+        {isBannerOpen && (
+          <React.Fragment>
+            <div className="pf-u-my-md">
+              <p id="ws-gdpr-banner-text" className="pf-u-ml-xl">
+                We use cookies on our websites to deliver our online services. Details about how we use cookies and how you may disable them are set out in our <a href="https://www.redhat.com/en/about/privacy-policy">Privacy Statement</a>. By using this website you agree to our use of cookies.
+              </p>
+            </div>
+            <div className="pf-u-mr-xl">
+              <Button variant="plain" aria-label="Close banner" onClick={closeBanner}>
+                <TimesIcon />
+              </Button>
+            </div>
+          </React.Fragment>
+        )}
+      </div>
     </div>
   );
 }
