@@ -243,6 +243,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
         showBanner={showBanner}
         showGdprBanner={showGdprBanner}
       >
+        {console.log('showGdprBanner: ', showGdprBanner, 'showBanner: ', showBanner)}
         <PageSection id="main-content" className="ws-section">
           <TableOfContents />
 

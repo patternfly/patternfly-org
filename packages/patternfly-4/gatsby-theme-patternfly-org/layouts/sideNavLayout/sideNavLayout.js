@@ -23,7 +23,7 @@ export const SideNavLayout = ({
   parityComponent,
   hideSideNav = false,
   showBanner = false,
-  showGdprBanner = true
+  showGdprBanner = false
 }) => {
   // Put queries for Top and Side navs here for performance
   // We should consider passing down the `sitePlugin` data in pageContext
@@ -245,7 +245,7 @@ export const SideNavLayout = ({
       {showBanner && (
         <Banner />
       )}
-      {console.log('sidenav/sidenav: ',showGdprBanner)}
+      {console.log('sidenav/sidenav: ',showGdprBanner, 'showBanner: ', showBanner)}
       {showGdprBanner && (
         <GdprBanner />
       )}
