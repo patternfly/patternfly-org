@@ -162,3 +162,15 @@
     display: none;
   }
 }
+/* serves as the main page container */
+.ws-side-nav-layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* tells .pf-c-page to consume the available space left over from the banners/footers */
+.ws-page {
+  flex: 1 1;
+  height: auto;
+}
