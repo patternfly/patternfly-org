@@ -13,6 +13,7 @@ import { SearchIcon, CaretDownIcon } from '@patternfly/react-icons';
 import SideNav from '../components/sideNav';
 import TopNav from '../components/topNav';
 import Banner from '../components/banner';
+import GdprBanner from '../components/gdprBanner';
 import Footer from '../components/footer';
 import logo from '../images/logo.svg';
 import GlobalContext from '../components/globalContext';
@@ -25,7 +26,8 @@ const SideNavLayout = ({
   context,
   parityComponent,
   hideSideNav = false,
-  showBanner = false
+  showBanner = false,
+  showGdprBanner = false
 }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const { initialVersions, getVersions } = useContext(GlobalContext);
@@ -237,6 +239,9 @@ const SideNavLayout = ({
       </Helmet>
       {showBanner && (
         <Banner />
+      )}
+      {showGdprBanner && (
+        <GdprBanner />
       )}
       <Page isManagedSidebar header={Header} sidebar={SideBar}>
         {children}

@@ -5,7 +5,7 @@ import { SideNavLayout } from '../layouts/sideNavLayout/sideNavLayout';
 
 const Page404 = ({ location }) => {
   return (
-    <SideNavLayout location={location} hideSideNav>
+    <SideNavLayout location={location} hideSideNav showGdprBanner={true}>
       <PageSection className="ws-section" style={{ height: '70vh' }}>
         <Title size="2xl">404</Title>
         <Title size="lg">Page not found</Title>

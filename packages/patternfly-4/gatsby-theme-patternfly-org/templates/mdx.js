@@ -42,7 +42,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
   }
   const { cssPrefix, hideTOC, beta, optIn, hideDarkMode, showTitle, releaseNoteTOC } = data.doc.frontmatter;
   const { componentName, navSection } = data.doc.fields;
-  const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner, sourceLink } = pageContext;
+  const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner, showGdprBanner, sourceLink } = pageContext;
   const props = data.props && data.props.nodes && propComponents
     ? propComponents
       .filter(name => name !== '') // Filter default entry we make for GraphQL schema
@@ -241,6 +241,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
         context={source}
         parityComponent={parityComponent}
         showBanner={showBanner}
+        showGdprBanner={showGdprBanner}
       >
         <PageSection id="main-content" className="ws-section">
           <TableOfContents />
