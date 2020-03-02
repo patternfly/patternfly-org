@@ -27,7 +27,8 @@ const SideNavLayout = ({
   parityComponent,
   hideSideNav = false,
   showBanner = false,
-  showGdprBanner = false
+  showGdprBanner = false,
+  pageTitle = ''
 }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const { initialVersions, getVersions } = useContext(GlobalContext);
@@ -235,7 +236,7 @@ const SideNavLayout = ({
   return (
     <div>
       <Helmet>
-        <title>{title}</title>
+        <title>{title} - {pageTitle}</title>
       </Helmet>
       {showBanner && (
         <Banner />

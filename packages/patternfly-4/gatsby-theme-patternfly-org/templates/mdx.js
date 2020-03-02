@@ -242,6 +242,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
         parityComponent={parityComponent}
         showBanner={showBanner}
         showGdprBanner={showGdprBanner}
+        pageTitle={pageContext.title}
       >
         <PageSection id="main-content" className="ws-section">
           <TableOfContents />
