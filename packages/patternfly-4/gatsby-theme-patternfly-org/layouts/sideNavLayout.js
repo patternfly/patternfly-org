@@ -236,7 +236,7 @@ const SideNavLayout = ({
   return (
     <div>
       <Helmet>
-        <title>{title} - {pageTitle}</title>
+        <title>{title}{pageTitle ? `- ${pageTitle}` : ``}</title>
       </Helmet>
       {showBanner && (
         <Banner />
