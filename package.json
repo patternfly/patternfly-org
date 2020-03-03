@@ -12,7 +12,7 @@
     "serve:next": "yarn workspace @patternfly/patternfly serve -p 8001",
     "develop:react": "yarn workspace @patternfly/react-docs develop -p 8002",
     "build:react": "yarn workspace @patternfly/react-docs build:ram && yarn copy:react",
-    "copy:react": "mkdir -p build && cp -r packages/patternfly-4/patternfly-react/packages/patternfly-4/react-docs/public build/patternfly-react",
+    "copy:react": "mkdir -p build && cp -r packages/patternfly-4/patternfly-react/packages/react-docs/public build/patternfly-react",
     "clean:react": "yarn workspace @patternfly/react-docs clean && rm -rf build/patternfly-react",
     "serve:react": "yarn workspace @patternfly/react-docs serve -p 8002",
     "develop:org": "yarn workspace patternfly-org-4 develop -p 8003",

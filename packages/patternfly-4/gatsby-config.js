@@ -150,7 +150,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'react', // This goes in URLs
-        path:`${path.resolve(__dirname)}/patternfly-react/packages/patternfly-4/react-docs/src/training.md`
+        path:`${path.resolve(__dirname)}/patternfly-react/packages/react-docs/src/training.md`
       }
     },
     // Org docs
