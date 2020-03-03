@@ -108,7 +108,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'react', // This goes in URLs
-        path: `${path.resolve(__dirname)}/patternfly-react/packages/patternfly-4`,
+        path: `${path.resolve(__dirname)}/patternfly-react/packages`,
         /* Files we never care to pull data from
          * Matched by https://github.com/paulmillr/chokidar */
          ignore: [
