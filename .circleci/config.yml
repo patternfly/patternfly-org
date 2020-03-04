@@ -9,7 +9,7 @@ references:
   - packages/patternfly-4/gatsby-theme-patternfly-org/node_modules/
   - packages/patternfly-4/node_modules/
   - packages/patternfly-4/patternfly-next/node_modules/
-  - packages/patternfly-4/patternfly-react/packages/patternfly-4/react-docs/node_modules/
+  - packages/patternfly-4/patternfly-react/packages/react-docs/node_modules/
   v3_js_deps_paths: &v3_js_deps_paths
   - packages/patternfly-3/node_modules
   v3_ruby_deps_paths: &v3_ruby_deps_paths
@@ -18,8 +18,8 @@ references:
   - packages/patternfly-4/patternfly-next/.cache
   - packages/patternfly-4/patternfly-next/public
   react_build_cache_paths: &react_build_cache_paths
-  - packages/patternfly-4/patternfly-react/packages/patternfly-4/react-docs/.cache
-  - packages/patternfly-4/patternfly-react/packages/patternfly-4/react-docs/public
+  - packages/patternfly-4/patternfly-react/packages/react-docs/.cache
+  - packages/patternfly-4/patternfly-react/packages/react-docs/public
   org_build_cache_paths: &org_build_cache_paths
   - packages/patternfly-4/.cache
   - packages/patternfly-4/public
