@@ -2912,15 +2912,15 @@
   resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-2.40.13.tgz#d1aa7de123dd63972951a67ecc0a6e04117f85db"
   integrity sha512-2s9mHRQ117u+6XZJnodtaYpc/dcknWT+7ZRRtmAQ2Qx25iIYG4KT43/SYu0+8KlTEB/UP9e97ZG8WkuhNlK/7Q==
 
-"@patternfly/patternfly@2.65.2":
-  version "2.65.2"
-  resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-2.65.2.tgz#d59359d8ed45f55ea466b0976328aeb2324cd2de"
-  integrity sha512-Q0Hi1JF7wuhs9fpYhItT2ZNv+JVqo1VvFEKvtjBQsPJdhCl9t7YAyOhTce4QK0ORj47lnVP3mw+1sjIWY0SPlA==
-
 "@patternfly/patternfly@2.65.3":
   version "2.65.3"
   resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-2.65.3.tgz#0856d6ca13d971f18b1d7889a60a73eb78cad3c8"
   integrity sha512-pOmj1r6nOU8WOI0y6s0vfILG8dLxxhDpzBCYUtnx+i8bqq3Ci6F1tekGqs0AfjAR1+OF5lfJEb+dhixs0Z8yrg==
+
+"@patternfly/patternfly@2.68.3":
+  version "2.68.3"
+  resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-2.68.3.tgz#fd2b8b92618cd9adde714d46f33ae050d7a3d4f0"
+  integrity sha512-ZsANYyp/AVRaSWAFBnKuoyvVoA1tMT7hh1jHpua0sQYjN4ocuN89MNcNdAJhdawt1Bh+p9OEtDgl4vfKQbJ9RQ==
 
 "@patternfly/react-catalog-view-extension@^1.4.23":
   version "1.4.23"
