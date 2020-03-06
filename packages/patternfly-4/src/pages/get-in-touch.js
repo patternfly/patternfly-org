@@ -9,7 +9,7 @@ const GetInTouch = ({ location }) => {
     require('../qualtrics.js');
   }
   return (
-  <SideNavLayout location={location} hideSideNav showGdprBanner={true}>
+  <SideNavLayout location={location} hideSideNav showGdprBanner={true} pageTitle="Get in touch">
     <PageSection
       variant={PageSectionVariants.light}
       className="ws-section ws-get-in-touch"
