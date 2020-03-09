@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.6](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.5...gatsby-theme-patternfly-org@1.4.6) (2020-03-09)
+
+
+### Bug Fixes
+
+* **docs:** set min-height on sidebar ([66bf6c5](https://github.com/patternfly/patternfly-org/commit/66bf6c5910999175bea056b473af69a99014c59f))
+
+
+
+
+
 ## [1.4.5](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.4...gatsby-theme-patternfly-org@1.4.5) (2020-03-09)
 
 **Note:** Version bump only for package gatsby-theme-patternfly-org

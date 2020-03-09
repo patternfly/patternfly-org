@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.52.8](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.52.7...patternfly-org-4@3.52.8) (2020-03-09)
+
+
+### Bug Fixes
+
+* **docs:** set min-height on sidebar ([66bf6c5](https://github.com/patternfly/patternfly-org/commit/66bf6c5910999175bea056b473af69a99014c59f))
+
+
+
+
+
 ## [3.52.7](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.52.6...patternfly-org-4@3.52.7) (2020-03-09)
 
 **Note:** Version bump only for package patternfly-org-4
