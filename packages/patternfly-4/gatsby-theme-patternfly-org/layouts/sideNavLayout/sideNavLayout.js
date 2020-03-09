@@ -239,7 +239,7 @@ export const SideNavLayout = ({
   // Wrap in a div to force scrolling the same content
   // TODO: SEO
   return (
-    <div>
+    <div className="ws-side-nav-layout">
       <Helmet>
       <title>{title}{pageTitle && ` - ${pageTitle}`}</title>
       </Helmet>
@@ -249,7 +249,7 @@ export const SideNavLayout = ({
       {showGdprBanner && (
         <GdprBanner />
       )}
-      <Page isManagedSidebar header={Header} sidebar={SideBar}>
+      <Page isManagedSidebar header={Header} sidebar={SideBar} className="ws-page">
         {children}
       </Page>
       <Footer />
