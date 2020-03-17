@@ -133,6 +133,9 @@ jobs:
         keys:
         - *next_build_cache_key
     - run:
+        name: Invalidate Environment Variable Cache
+        command: rm packages/patternfly-4/patternfly-next/.cache/redux.state
+    - run:
         name: Build patternfly-next docs
         command: yarn build:next
     - save_cache:
@@ -153,11 +156,14 @@ jobs:
     - restore_cache:
         keys:
         - *react_build_cache_key
+    - run:
+        name: Invalidate Environment Variable Cache
+        command: rm packages/patternfly-4/patternfly-react/packages/react-docs/.cache/redux.state
     - *install_node
     - *install_yarn
     - run:
         name: Build patternfly-react docs
-        command: ~/.yarn/bin/yarn  build:react
+        command: ~/.yarn/bin/yarn build:react
     - save_cache:
         paths: *react_build_cache_paths
         key: *react_build_cache_key
@@ -206,6 +212,9 @@ jobs:
     - restore_cache:
         keys:
         - *org_build_cache_key
+    - run:
+        name: Invalidate Environment Variable Cache
+        command: rm packages/patternfly-4/.cache/redux.state
     - *install_node
     - *install_yarn
     - run:
