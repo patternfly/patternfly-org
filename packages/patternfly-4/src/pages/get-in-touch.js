@@ -1,7 +1,7 @@
 import React from 'react';
 import { SideNavLayout } from 'gatsby-theme-patternfly-org/layouts';
 import { ChatIcon, QuestionIcon, CatalogIcon, MailBulkIcon } from '@patternfly/react-icons';
-import { Grid, GridItem, PageSection, PageSectionVariants, Split, SplitItem } from '@patternfly/react-core';
+import { Grid, GridItem, PageSection, PageSectionVariants, Split, SplitItem, Title } from '@patternfly/react-core';
 import "./get-in-touch.css";
 
 const GetInTouch = ({ location }) => {
@@ -20,12 +20,12 @@ const GetInTouch = ({ location }) => {
 
       <p className="ws-mdx-p">We are here to help.</p>
 
-      <Grid sm={12} md={6} gutter="sm" class="pf-u-my-lg pf-l-grid pf-m-all-12-col-on-sm pf-m-all-6-col-on-md pf-m-gutter" style={{ maxWidth: '450px' }}>
+      <Grid sm={12} md={6} gutter="sm" className="pf-u-my-lg pf-l-grid pf-m-all-12-col-on-sm pf-m-all-6-col-on-md pf-m-gutter" style={{ maxWidth: '450px' }}>
         <GridItem>
           <Split>
             <SplitItem style={{ marginRight: '12px' }}><h3><ChatIcon /></h3></SplitItem>
             <SplitItem isFilled>
-              <h3 className="ws-title">Chat with us</h3>
+              <Title size="lg" className="ws-title" headingLevel="h2">Chat with us</Title>
               <a href="https://patternfly.slack.com" target="_blank" rel="noopener noreferrer">Slack</a>
             </SplitItem>
           </Split>
@@ -34,7 +34,7 @@ const GetInTouch = ({ location }) => {
           <Split>
             <SplitItem style={{ marginRight: '12px' }}><h3><MailBulkIcon /></h3></SplitItem>
             <SplitItem isFilled>
-              <h3 className="ws-title">Stay in the loop</h3>
+              <Title size="lg" className="ws-title" headingLevel="h2">Stay in the loop</Title>
               <a href="https://www.redhat.com/mailman/listinfo/patternfly" target="_blank" rel="noopener noreferrer">PatternFly mailing list</a>
             </SplitItem>
           </Split>
@@ -43,7 +43,7 @@ const GetInTouch = ({ location }) => {
           <Split>
             <SplitItem style={{ marginRight: '12px' }}><h3><QuestionIcon /></h3></SplitItem>
             <SplitItem isFilled>
-              <h3 className="ws-title">Ask a question</h3>
+              <Title size="lg" className="ws-title" headingLevel="h2">Ask a question</Title>
               <a href="https://forum.patternfly.org/" target="_blank" rel="noopener noreferrer">PatternFly forum</a>
             </SplitItem>
           </Split>
@@ -52,7 +52,7 @@ const GetInTouch = ({ location }) => {
           <Split>
             <SplitItem style={{ marginRight: '12px' }}><h3><CatalogIcon /></h3></SplitItem>
             <SplitItem isFilled>
-              <h3 className="ws-title">Read the latest</h3>
+              <Title size="lg" className="ws-title" headingLevel="h2">Read the latest</Title>
               <a href="https://medium.com/patternfly" target="_blank" rel="noopener noreferrer">PatternFly Medium</a>
             </SplitItem>
           </Split>

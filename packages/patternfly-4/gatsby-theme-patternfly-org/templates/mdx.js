@@ -73,7 +73,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
     <React.Fragment>
       {showTitle && (
         <React.Fragment>
-          <Title size="4xl" className="ws-page-title">{title}</Title>
+          <Title size="4xl" headingLevel="h1" className="ws-page-title">{title}</Title>
           {optIn && (
             <Alert
               variant="info"
@@ -91,7 +91,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
           <label id="source-label" className="ws-framework-title pf-c-title" aria-hidden>
             {getSourceTitle(source)}
           </label>
-          <Title id="component-title" size="4xl" className="ws-page-title" aria-labelledby="source-label component-title">{title}</Title>
+          <Title headingLevel="h1" id="component-title" size="4xl" className="ws-page-title" aria-labelledby="source-label component-title">{title}</Title>
           {optIn && (
             <Alert
               variant="info"
@@ -179,7 +179,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
 
   const PropsSection = () => (
     <React.Fragment>
-      <AutoLinkHeader id="props" size="h2" className="ws-h2">
+      <AutoLinkHeader headingLevel="h2" id="props" size="h2" className="ws-h2">
         Props
       </AutoLinkHeader>
       {props.map(component => (
@@ -193,7 +193,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
 
   const CSSVariablesSection = () => (
     <React.Fragment>
-      <AutoLinkHeader id="css-variables" size="h2" className="ws-h2">
+      <AutoLinkHeader headingLevel="h2" id="css-variables" size="h2" className="ws-h2">
         CSS Variables
       </AutoLinkHeader>
       <CSSVariables prefix={cssPrefix} />
@@ -225,7 +225,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
 
     return (
       <React.Fragment>
-        <AutoLinkHeader id="feedback" size="h2" className="ws-h2">
+        <AutoLinkHeader headingLevel="h2" id="feedback" size="h2" className="ws-h2">
           Feedback
         </AutoLinkHeader>
         <a href={sourceLink} target="_blank">View page source on Github</a> / <a href={issueLink} target="_blank">Report an issue on Github</a>
