@@ -158,7 +158,7 @@ jobs:
         - *react_build_cache_key
     - run:
         name: Invalidate Environment Variable Cache
-        command: rm packages/patternfly-4/patternfly-react/.cache/redux.state
+        command: rm packages/patternfly-4/patternfly-react/packages/react-docs/.cache/redux.state
     - *install_node
     - *install_yarn
     - run:
