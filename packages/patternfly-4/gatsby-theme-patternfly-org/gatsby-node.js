@@ -7,13 +7,13 @@ const { slugger } = require('./helpers/slugger');
 
 // Add map PR-related environment variables to GraphQL
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
-  const num = process.env.CIRCLE_PR_NUMBER || process.env.PR_NUMBER;
-  const url = process.env.CIRCLE_PULL_REQUEST;
+  const num = process.env.CIRCLE_PR_NUMBER || process.env.PR_NUMBER || '';
+  const url = process.env.CIRCLE_PULL_REQUEST || '';
   // Docs https://www.gatsbyjs.org/docs/actions/#createNode
   actions.createNode({
     name: 'PR_INFO',
-    num: num || '',
-    url: url || '',
+    num,
+    url,
     id: createNodeId('PR_INFO'),
     parent: null,
     children: [],
