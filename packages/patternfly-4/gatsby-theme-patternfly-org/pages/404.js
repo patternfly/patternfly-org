@@ -7,8 +7,7 @@ const Page404 = ({ location }) => {
   return (
     <SideNavLayout location={location} hideSideNav showGdprBanner={true}>
       <PageSection className="ws-section" style={{ height: '70vh' }}>
-        <Title size="2xl">404</Title>
-        <Title size="lg">Page not found</Title>
+        <Title size="2xl" headingLevel="h1">404 - Page not found</Title>
         <p><Link to="/">Go home.</Link></p>
       </PageSection>
     </SideNavLayout>
