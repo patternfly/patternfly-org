@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-patternfly-org",
-  "description": "A unified PatternFly-next and PatternFly-react Gatsby theme.",
+  "description": "A unified PatternFly and PatternFly-React Gatsby theme.",
   "version": "1.4.8",
   "author": "Red Hat",
   "license": "MIT",

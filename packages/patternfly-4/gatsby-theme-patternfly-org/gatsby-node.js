@@ -114,7 +114,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       addedFileFieldsToSchema = true;
     }
     if (node.extension === 'hbs') {
-      // Partial name has always come from file name in patternfly-next
+      // Partial name has always come from file name in patternfly
       createNodeField({
         node,
         name: 'name',
@@ -199,7 +199,7 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
         if (source === 'react') {
           sourceLink += 'patternfly-react/blob/master/';
         } else if (source === 'core') {
-          sourceLink += 'patternfly-next/blob/master/';
+          sourceLink += 'patternfly/blob/master/';
         } else if (source === 'shared') {
           sourceLink += 'patternfly-org/blob/master/packages/patternfly-4/gatsby-theme-patternfly-org/';
         } else {
@@ -235,7 +235,7 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
             title,
             // For top of TOC, dynamic classNames in Example.js, and some feature flags
             source,
-            // To render static example HTML from patternfly-next
+            // To render static example HTML from patternfly
             htmlExamples: source === 'core' ? examples : undefined,
             // To hide the banner for core/React sites
             showBanner,

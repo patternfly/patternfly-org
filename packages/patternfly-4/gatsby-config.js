@@ -84,7 +84,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'core', // This goes in URLs
-        path: `${path.resolve(__dirname)}/patternfly-next/src/patternfly`
+        path: require.resolve('@patternfly/patternfly/package.json').replace('package.json', 'site/docs')
       }
     },
     // Core release notes
@@ -92,7 +92,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'core', // This goes in URLs
-        path: `${path.resolve(__dirname)}/patternfly-next/RELEASE-NOTES.md`
+        path: require.resolve('@patternfly/patternfly/RELEASE-NOTES.md')
       }
     },
     // Core training
@@ -100,7 +100,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'core', // This goes in URLs
-        path: `${path.resolve(__dirname)}/patternfly-next/src/site/training.md`
+        path: require.resolve('@patternfly/patternfly/site/training.md')
       }
     },
     // React docs

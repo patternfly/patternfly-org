@@ -13,7 +13,3 @@
 	path = packages/patternfly-4/patternfly-react
 	url = https://github.com/patternfly/patternfly-react.git
 	branch = gatsby-theme-patternfly-org
-[submodule "packages/patternfly-4/patternfly-next"]
-	path = packages/patternfly-4/patternfly-next
-	url = https://github.com/patternfly/patternfly-next.git
-	branch = gatsby-theme-patternfly-org
