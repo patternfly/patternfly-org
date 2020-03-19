@@ -8,15 +8,11 @@ references:
   - packages/patternfly-4/node_modules/
   - packages/patternfly-4/gatsby-theme-patternfly-org/node_modules/
   - packages/patternfly-4/node_modules/
-  - packages/patternfly-4/patternfly-next/node_modules/
   - packages/patternfly-4/patternfly-react/packages/react-docs/node_modules/
   v3_js_deps_paths: &v3_js_deps_paths
   - packages/patternfly-3/node_modules
   v3_ruby_deps_paths: &v3_ruby_deps_paths
   - packages/patternfly-3/.bundle
-  next_build_cache_paths: &next_build_cache_paths
-  - packages/patternfly-4/patternfly-next/.cache
-  - packages/patternfly-4/patternfly-next/public
   react_build_cache_paths: &react_build_cache_paths
   - packages/patternfly-4/patternfly-react/packages/react-docs/.cache
   - packages/patternfly-4/patternfly-react/packages/react-docs/public
@@ -32,8 +28,6 @@ references:
     v3-js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "packages/patternfly-3/yarn.lock"}}
   v3_ruby_deps_cache_key: &v3_ruby_deps_cache_key
     v3-ruby-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "packages/patternfly-3/Gemfile.lock"}}
-  next_build_cache_key: &next_build_cache_key
-    next-build-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
   react_build_cache_key: &react_build_cache_key
     react-build-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
   org_build_cache_key: &org_build_cache_key
@@ -64,9 +58,6 @@ workflows:
   install_build_deploy:
     jobs:
     - install
-    - build_next:
-        requires:
-        - install
     - build_react:
         requires:
         - install
@@ -79,7 +70,6 @@ workflows:
     - upload_previews:
         requires:
         - build_react
-        - build_next
         - build_org
         - build_v3
     # - test_org_a11y:
@@ -88,7 +78,6 @@ workflows:
     - deploy:
         requires:
         - build_react
-        - build_next
         - build_org
         - build_v3
         filters:
@@ -121,30 +110,6 @@ jobs:
     - save_cache:
         paths: *js_deps_paths
         key: *js_deps_cache_key
-  build_next:
-    docker:
-    - image: circleci/node:12
-    steps:
-    - *attach_workspace
-    - restore_cache:
-        keys:
-        - *js_deps_cache_key
-    - restore_cache:
-        keys:
-        - *next_build_cache_key
-    - run:
-        name: Invalidate Environment Variable Cache
-        command: rm packages/patternfly-4/patternfly-next/.cache/redux.state
-    - run:
-        name: Build patternfly-next docs
-        command: yarn build:next
-    - save_cache:
-        paths: *next_build_cache_paths
-        key: *next_build_cache_key
-    - persist_to_workspace:
-        root: ~/project
-        paths: 
-        - build
   build_react:
     machine:
       image: circleci/classic:latest
@@ -158,7 +123,7 @@ jobs:
         - *react_build_cache_key
     - run:
         name: Invalidate Environment Variable Cache
-        command: rm packages/patternfly-4/patternfly-react/packages/react-docs/.cache/redux.state
+        command: rm -f packages/patternfly-4/patternfly-react/packages/react-docs/.cache/redux.state
     - *install_node
     - *install_yarn
     - run:
@@ -214,7 +179,7 @@ jobs:
         - *org_build_cache_key
     - run:
         name: Invalidate Environment Variable Cache
-        command: rm packages/patternfly-4/.cache/redux.state
+        command: rm -f packages/patternfly-4/.cache/redux.state
     - *install_node
     - *install_yarn
     - run:

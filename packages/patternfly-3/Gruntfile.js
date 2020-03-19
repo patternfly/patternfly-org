@@ -104,7 +104,7 @@ module.exports = function (grunt) {
           // Copy resources from git repos
           {
             expand: true,
-            cwd: 'repos/patternfly/tests/pages/_includes/widgets',
+            cwd: 'repos/patternfly-3/tests/pages/_includes/widgets',
             src: ['**'],
             dest: '<%= config.build %>/_includes/widgets'
           },
@@ -121,7 +121,7 @@ module.exports = function (grunt) {
           // Copy resources from git repos
           {
             expand: true,
-            cwd: 'repos/patternfly/dist',
+            cwd: 'repos/patternfly-3/dist',
             src: ['**'],
             dest: '<%= config.build %>/components/patternfly/dist'
           },
@@ -274,7 +274,7 @@ module.exports = function (grunt) {
         tasks: ['sync:design']
       },
       examples: {
-        files: ['repos/patternfly/tests/pages/_includes/widgets',
+        files: ['repos/patternfly-3/tests/pages/_includes/widgets',
                 'repos/angular-patternfly/dist/docs/partials'],
         tasks: ['sync:examples']
       },

@@ -18,7 +18,7 @@ export const getStaticParams = (title, html) => ({
     crossorigin="anonymous"
   >
   <link rel="stylesheet" href="style.css" />
-  <title>PatternFly-Next ${title} CodeSandbox Example</title>
+  <title>PatternFly ${title} CodeSandbox Example</title>
 </head>
 <body>
   ${html}

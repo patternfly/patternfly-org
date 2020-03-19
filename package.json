@@ -5,11 +5,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "develop:next": "yarn workspace @patternfly/patternfly dev -p 8001",
-    "build:next": "yarn workspace @patternfly/patternfly build && yarn copy:next",
-    "copy:next": "mkdir -p build && cp -r packages/patternfly-4/patternfly-next/public build/patternfly-next",
-    "clean:next": "yarn workspace @patternfly/patternfly clean && rm -rf build/patternfly-next",
-    "serve:next": "yarn workspace @patternfly/patternfly serve -p 8001",
     "develop:react": "yarn workspace @patternfly/react-docs develop -p 8002",
     "build:react": "yarn workspace @patternfly/react-docs build:ram && yarn copy:react",
     "copy:react": "mkdir -p build && cp -r packages/patternfly-4/patternfly-react/packages/react-docs/public build/patternfly-react",
@@ -34,11 +29,7 @@
       "packages/patternfly-4",
       "packages/patternfly-4/gatsby-theme-patternfly-org",
       "packages/patternfly-4/gatsby-transformer-react-docgen-typescript",
-      "packages/patternfly-4/patternfly-next",
       "packages/patternfly-4/patternfly-react/packages/react-docs"
-    ],
-    "nohoist": [
-      "**/@patternfly/patternfly"
     ]
   },
   "devDependencies": {
