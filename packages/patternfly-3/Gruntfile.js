@@ -6,7 +6,8 @@ var connect = require('connect'),
     open = require('open'),
     _ = require('lodash'),
     yaml = require('js-yaml'),
-    packageJson = require('./package.json');
+    packageJson = require('./package.json'),
+    path = require('path');
 
 
 function correctBaseUrl(_baseurl) {
@@ -57,13 +58,13 @@ module.exports = function (grunt) {
         files: [
           {
             expand: true,
-            cwd: 'repos/patternfly-design/pattern-library',
+            cwd: 'node_modules/src-design/pattern-library',
             src: ['**/design/**', '!**/documents/**'],
             dest: '<%= config.build %>/_includes/pattern-library'
           },
           {
             expand: true,
-            cwd: 'repos/patternfly-design/pattern-library',
+            cwd: 'node_modules/src-design/pattern-library',
             src: ['**/design/**', '!**/documents/**', '!**/*.md'],
             dest: '<%= config.build %>/pattern-library',
             rename: function(dest, src) {
@@ -72,7 +73,7 @@ module.exports = function (grunt) {
           },
           {
             expand: true,
-            cwd: 'repos/patternfly-design/pattern-library',
+            cwd: 'node_modules/src-design/pattern-library',
             src: ['**/site.md'],
             dest: '<%= config.build %>/pattern-library',
             rename: function(dest, src) {
@@ -81,19 +82,19 @@ module.exports = function (grunt) {
           },
           {
             expand: true,
-            cwd: 'repos/patternfly-design/styles',
+            cwd: 'node_modules/src-design/styles',
             src: ['**/*.md'],
             dest: '<%= config.build %>/_includes/styles'
           },
           {
             expand: true,
-            cwd: 'repos/patternfly-design/styles',
+            cwd: 'node_modules/src-design/styles',
             src: ['**/!(*.md)'],
             dest: '<%= config.build %>/styles'
           },
           {
             expand: true,
-            cwd: 'repos/patternfly-design/styles/icons',
+            cwd: 'node_modules/src-design/styles/icons',
             src: ['icons.json'],
             dest: '<%= config.build %>/_data'
           }
@@ -104,13 +105,13 @@ module.exports = function (grunt) {
           // Copy resources from git repos
           {
             expand: true,
-            cwd: 'repos/patternfly-3/tests/pages/_includes/widgets',
+            cwd: 'node_modules/src-core/tests/pages/_includes/widgets',
             src: ['**'],
             dest: '<%= config.build %>/_includes/widgets'
           },
           {
             expand: true,
-            cwd: 'repos/angular-patternfly/dist/docs/partials',
+            cwd: 'node_modules/src-angular/dist/docs/partials',
             src: ['**'],
             dest: '<%= config.build %>/_includes/angular-partials'
           }
@@ -121,13 +122,13 @@ module.exports = function (grunt) {
           // Copy resources from git repos
           {
             expand: true,
-            cwd: 'repos/patternfly-3/dist',
+            cwd: 'node_modules/src-core/dist',
             src: ['**'],
             dest: '<%= config.build %>/components/patternfly/dist'
           },
           {
             expand: true,
-            cwd: 'repos/angular-patternfly/dist',
+            cwd: 'node_modules/src-angular/dist',
             src: ['**'],
             dest: '<%= config.build %>/components/angular-patternfly/dist'
           }
@@ -140,11 +141,18 @@ module.exports = function (grunt) {
           {
             expand: true,
             cwd: 'node_modules',
-            src: [
-              '**/*'
-            ],
+            src: ['**/*'],
             filter: function(filepath) { // this filter is 5x faster as the corresponding glob
-              if (! grunt.file.isFile(filepath)) {
+              let shouldCopy = false;
+              for (let package of packageJson.workspaces.nohoist) {
+                if (
+                  filepath.includes(path.join('node_modules', package) &&
+                  !filepath.includes(path.join('node_modules', 'src'))
+                )) {
+                  shouldCopy = true;
+                }
+              }
+              if (!grunt.file.isFile(filepath) || !shouldCopy) {
                 return false;
               }
               var fileparts = filepath.split('/');
@@ -270,12 +278,12 @@ module.exports = function (grunt) {
         tasks: ['jekyll:staging']
       },
       design: {
-        files: ['repos/patternfly-design/**/*'],
+        files: ['node_modules/src-design/**/*'],
         tasks: ['sync:design']
       },
       examples: {
-        files: ['repos/patternfly-3/tests/pages/_includes/widgets',
-                'repos/angular-patternfly/dist/docs/partials'],
+        files: ['node_modules/src-core/tests/pages/_includes/widgets',
+                'node_modules/src-angular/dist/docs/partials'],
         tasks: ['sync:examples']
       },
       livereload: {
@@ -323,7 +331,7 @@ module.exports = function (grunt) {
       'sync:examples',
       'less',
       'cssmin',
-      //'csscount',
+      // 'csscount',
       'uglify',
     ]);
   });
