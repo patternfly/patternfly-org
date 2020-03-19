@@ -1,6 +1,6 @@
 [submodule "packages/patternfly-3/repos/patternfly"]
 	path = packages/patternfly-3/repos/patternfly
-	url = https://github.com/patternfly/patternfly.git
+	url = https://github.com/patternfly/patternfly-3.git
 	branch = master-dist
 [submodule "packages/patternfly-3/repos/angular-patternfly"]
 	path = packages/patternfly-3/repos/angular-patternfly
