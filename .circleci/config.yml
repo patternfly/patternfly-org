@@ -201,8 +201,8 @@ jobs:
         name: Write redirects
         command: node scripts/writeV3Redirects.js --skip-v3
     - run:
-        name: Remove v3 (for size)
-        command: rm -rf build/patternfly-org/v3
+        name: Move v3 (for size)
+        command: mkdir build/patternfly-org-3 && mv build/patternfly-org/v3 build/patternfly-org-3/v3
     - run:
         name: Check size of docs
         command: du -sh build/* build/patternfly-org/*

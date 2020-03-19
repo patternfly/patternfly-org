@@ -1,14 +1,3 @@
-[submodule "packages/patternfly-3/repos/patternfly-3"]
-	path = packages/patternfly-3/repos/patternfly-3
-	url = https://github.com/patternfly/patternfly-3.git
-	branch = master-dist
-[submodule "packages/patternfly-3/repos/angular-patternfly"]
-	path = packages/patternfly-3/repos/angular-patternfly
-	url = https://github.com/patternfly/angular-patternfly.git
-	branch = master-dist
-[submodule "packages/patternfly-3/repos/patternfly-design"]
-	path = packages/patternfly-3/repos/patternfly-design
-	url = https://github.com/patternfly/patternfly-design.git
 [submodule "packages/patternfly-4/patternfly-react"]
 	path = packages/patternfly-4/patternfly-react
 	url = https://github.com/patternfly/patternfly-react.git
