@@ -33,7 +33,7 @@ then
   # PR api requires comments be made on specific files of specific commits
   GITHUB_PR_COMMENTS="https://api.github.com/repos/${USERNAME}/${REPONAME}/issues/${PR_NUM}/comments"
   echo "Adding github PR comment ${GITHUB_PR_COMMENTS}"
-  curl -H "Authorization: token ${GH_PR_TOKEN}" --request POST ${GITHUB_PR_COMMENTS} --data '{"body":React preview: '${DEPLOY_DOMAIN_REACT}'\nOrg preview v3: '${DEPLOY_DOMAIN_ORG_V3}'/v3\nOrg preview: '${DEPLOY_DOMAIN_ORG}'"}'
+  curl -H "Authorization: token ${GH_PR_TOKEN}" --request POST ${GITHUB_PR_COMMENTS} --data '{"body":React preview: '${DEPLOY_DOMAIN_REACT}'\nOrg preview v3: '${DEPLOY_DOMAIN_ORG_V3}'/v3https://github.com/patternfly/patternfly-org/pull/1729\nOrg preview: '${DEPLOY_DOMAIN_ORG}'"}'
 else
-  echo "Already deployed ${DEPLOY_DOMAIN_REACT} and ${DEPLOY_DOMAIN_ORG}"
+  echo "Already deployed ${DEPLOY_DOMAIN_REACT} ${DEPLOY_DOMAIN_ORG} ${DEPLOY_DOMAIN_ORG_V3}"
 fi
