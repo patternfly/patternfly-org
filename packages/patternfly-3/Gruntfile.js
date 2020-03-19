@@ -143,18 +143,19 @@ module.exports = function (grunt) {
             cwd: 'node_modules',
             src: ['**/*'],
             filter: function(filepath) { // this filter is 5x faster as the corresponding glob
-              let shouldCopy = false;
-              for (let package of packageJson.workspaces.nohoist) {
-                if (
-                  filepath.includes(path.join('node_modules', package) &&
-                  !filepath.includes(path.join('node_modules', 'src'))
-                )) {
-                  shouldCopy = true;
-                }
-              }
-              if (!grunt.file.isFile(filepath) || !shouldCopy) {
+              if (!grunt.file.isFile(filepath) || filepath.includes(path.join('node_modules', 'src-'))) {
                 return false;
               }
+
+
+              var isNotHoisted = packageJson.workspaces.nohoist
+                .filter(package => filepath.includes(path.join('node_modules', package)))
+                .length > 0;
+
+              if (!isNotHoisted) {
+                return false;
+              }
+
               var fileparts = filepath.split('/');
               if (fileparts[2] == 'node_modules') {
                 return false;
