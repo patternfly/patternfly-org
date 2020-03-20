@@ -38,7 +38,7 @@ const IndexPage = ({ location }) => {
         <GridItem sm={12} md={8} mdOffset={2} lg={6} lgOffset={3} className="pf-u-py-2xl pf-u-text-align-center">
           <TextContent>
             <img src={orb} alt="PatternFly logo" className="fadeInDown animated fadeInOne" />
-            <Title size="4xl" className="pf-m-white pf4-site-c-hero fadeIn animated fadeInTwo">
+            <Title headingLevel="h1" size="4xl" className="pf-m-white pf4-site-c-hero fadeIn animated fadeInTwo">
               Build better experiences with repeatable, scalable design.
             </Title>
             <Title size="xl" headingLevel="h2" className="pf-m-white pf-u-mb-md pf-u-mb-3xl-on-md fadeInUp animated fadeInThree">
@@ -69,7 +69,7 @@ const IndexPage = ({ location }) => {
     <PageSection variant={PageSectionVariants.light} className="ws-homepage-main-section">
       <Grid>
         <GridItem sm={12} md={6} mdOffset={3} className="pf-u-py-2xl pf-u-text-align-center" id="about-patternfly-section">
-          <AutoLinkHeader size="h1" className="ws-title pf-u-mb-md">
+          <AutoLinkHeader size="h1" headingLevel="h2" className="ws-title pf-u-mb-md">
             {aboutPatternFly}
           </AutoLinkHeader>
           <Text component={TextVariants.p} className="ws-mdx-p">

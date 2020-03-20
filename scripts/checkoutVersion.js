@@ -20,7 +20,6 @@ function execWithLog(command) {
 }
 
 execWithLog('git pull --recurse-submodules');
-execWithLog(`cd packages/patternfly-4/patternfly-next && git merge v${version.versions['@patternfly/patternfly']}`);
 execWithLog(`cd packages/patternfly-4/patternfly-react && git merge @patternfly/react-core@${version.versions['@patternfly/react-core']}`);
 
 Object.entries(version.versions).forEach(([key, val]) => {
