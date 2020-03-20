@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.10](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.9...gatsby-theme-patternfly-org@1.4.10) (2020-03-20)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
 ## [1.4.9](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.8...gatsby-theme-patternfly-org@1.4.9) (2020-03-19)
 
 **Note:** Version bump only for package gatsby-theme-patternfly-org
