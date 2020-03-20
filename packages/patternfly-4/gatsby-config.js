@@ -1,9 +1,17 @@
+const fs = require('fs');
 const path = require('path');
 
 // We only want MD files.
 // Matched by https://github.com/micromatch/anymatch
 const reactIgnore = [
-  filePath => !['md', 'tsx'].includes(path.extname(filePath)),
+  '**/*.test.*',
+  filePath => {
+    if (fs.existsSync(filePath) && fs.lstatSync(filePath).isFile()) {
+      return !['.md', '.tsx'].includes(path.extname(filePath));
+    }
+
+    return false;
+  },
   '**/README.md',
   '**/CHANGELOG.md',
   '**/__snapshots__',
@@ -90,7 +98,7 @@ module.exports = {
         ]
       }
     },
-    // Core docs
+    // Core docs (MD + HBS)
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -114,7 +122,7 @@ module.exports = {
         path: require.resolve('@patternfly/patternfly/site/training.md')
       }
     },
-    // React docs
+    // React docs (MD + TSX)
     {
       resolve: 'gatsby-source-filesystem',
       options: {
