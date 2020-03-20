@@ -20,10 +20,8 @@ else
   DEPLOY_SUBDOMAIN=`echo "${REPONAME}-pr-${BRANCH}" | tr '[\/|\.]' '-' | cut -c1-253`
 fi
 
-DEPLOY_DOMAIN_REACT="https://${DEPLOY_SUBDOMAIN}-react.surge.sh"
 DEPLOY_DOMAIN_ORG="https://${DEPLOY_SUBDOMAIN}-org.surge.sh"
 DEPLOY_DOMAIN_ORG_V3="https://${DEPLOY_SUBDOMAIN}-org-v3.surge.sh"
-npx surge --project build/patternfly-react --domain ${DEPLOY_DOMAIN_REACT}
 npx surge --project build/patternfly-org --domain ${DEPLOY_DOMAIN_ORG}
 npx surge --project build/patternfly-org-3 --domain ${DEPLOY_DOMAIN_ORG_V3}
 
@@ -33,7 +31,9 @@ then
   # PR api requires comments be made on specific files of specific commits
   GITHUB_PR_COMMENTS="https://api.github.com/repos/${USERNAME}/${REPONAME}/issues/${PR_NUM}/comments"
   echo "Adding github PR comment ${GITHUB_PR_COMMENTS}"
-  curl -H "Authorization: token ${GH_PR_TOKEN}" --request POST ${GITHUB_PR_COMMENTS} --data '{"body":React preview: '${DEPLOY_DOMAIN_REACT}'\nOrg preview v3: '${DEPLOY_DOMAIN_ORG_V3}'/v3\nOrg preview: '${DEPLOY_DOMAIN_ORG}'"}'
+  JSON_FMT='{"body":"v3 preview: %s\nv4 preview: %s"}'
+  PR_JSON=$(printf "$JSON_FMT" "$DEPLOY_DOMAIN_ORG_V3" "$DEPLOY_DOMAIN_ORG")
+  curl -H "Authorization: token ${GH_PR_TOKEN}" --request POST ${GITHUB_PR_COMMENTS} --data ${PR_JSON}
 else
   echo "Already deployed ${DEPLOY_DOMAIN_REACT} ${DEPLOY_DOMAIN_ORG} ${DEPLOY_DOMAIN_ORG_V3}"
 fi

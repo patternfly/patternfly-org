@@ -1,7 +1,8 @@
 const fs = require('fs-extra');
 const exec = require('child_process').execSync;
 const versions = require('gatsby-theme-patternfly-org/versions.json');
-const packageJsonOrg = require('patternfly-org-4/package.json');
+const packageJsonOrgPath = 'patternfly-org-4/package.json';
+const packageJsonOrg = require(packageJsonOrgPath);
 
 const versionToCheckout = process.argv[2] || '';
 const version = versions.Releases.find(({ name }) => name === versionToCheckout);
@@ -19,15 +20,13 @@ function execWithLog(command) {
   console.log(exec(command).toString());
 }
 
-execWithLog('git pull --recurse-submodules');
-execWithLog(`cd packages/patternfly-4/patternfly-react && git merge @patternfly/react-core@${version.versions['@patternfly/react-core']}`);
-
 Object.entries(version.versions).forEach(([key, val]) => {
   if (packageJsonOrg.dependencies[key]) {
-    packageJsonOrg.dependencies[key] = `^${val}`;
+    packageJsonOrg.dependencies[key] = val;
   }
 });
-fs.writeFileSync(require.resolve('patternfly-org-4/package.json'), JSON.stringify(packageJsonOrg, null, 2));
+fs.writeFileSync(require.resolve(packageJsonOrgPath), JSON.stringify(packageJsonOrg, null, 2));
+console.log('Updated', packageJsonOrgPath)
 
 execWithLog('yarn install');
 // TODO: git tag

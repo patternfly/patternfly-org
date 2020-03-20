@@ -1,4 +1,0 @@
-[submodule "packages/patternfly-4/patternfly-react"]
-	path = packages/patternfly-4/patternfly-react
-	url = https://github.com/patternfly/patternfly-react.git
-	branch = gatsby-theme-patternfly-org
