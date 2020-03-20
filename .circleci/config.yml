@@ -75,6 +75,9 @@ jobs:
         root: ~/project
         paths: 
         - "*"
+    - restore_cache:
+        keys:
+        - *js_deps_cache_key
     - run:
         name: Conditional install
         command: if [ ! -f node_modules ]; then yarn install --frozen-lockfile; fi
