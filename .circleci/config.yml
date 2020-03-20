@@ -9,7 +9,6 @@ references:
   - packages/patternfly-4/gatsby-theme-patternfly-org/node_modules/
   - packages/patternfly-4/node_modules/
   - packages/patternfly-4/patternfly-react/packages/react-docs/node_modules/
-  v3_js_deps_paths: &v3_js_deps_paths
   - packages/patternfly-3/node_modules
   v3_ruby_deps_paths: &v3_ruby_deps_paths
   - packages/patternfly-3/.bundle
@@ -20,8 +19,6 @@ references:
     js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
   js_deps_cache_key_check: &js_deps_cache_key_check
     js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}-check
-  v3_js_deps_cache_key: &v3_js_deps_cache_key
-    v3-js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "packages/patternfly-3/yarn.lock"}}
   v3_ruby_deps_cache_key: &v3_ruby_deps_cache_key
     v3-ruby-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "packages/patternfly-3/Gemfile.lock"}}
   v4_build_cache_key: &v4_build_cache_key
@@ -37,7 +34,7 @@ references:
         curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
         export NVM_DIR="/opt/circleci/.nvm"
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-        nvm install v12
+        nvm install v12js_deps_cache_key
         nvm alias default v12
         
         # Each step uses the same `$BASH_ENV`, so need to modify it
@@ -106,7 +103,7 @@ jobs:
     - *attach_workspace
     - restore_cache:
         keys:
-        - *v3_js_deps_cache_key
+        - *js_deps_cache_key
     - restore_cache:
         keys:
         - *v3_ruby_deps_cache_key
@@ -115,13 +112,9 @@ jobs:
         command: |
           cd packages/patternfly-3
           bundle install
-          yarn install
     - save_cache:
         paths: *v3_ruby_deps_paths
         key: *v3_ruby_deps_cache_key
-    - save_cache:
-        paths: *v3_js_deps_paths
-        key: *v3_js_deps_cache_key
     - run:
         name: Build v3 docs
         command: yarn build:v3

@@ -19,6 +19,7 @@
     "gatsby-transformer-json": "^2.2.20",
     "handlebars": "^4.2.0",
     "html-formatter": "0.1.9",
+    "null-loader": "^3.0.0",
     "prismjs": "^1.17.1",
     "react-helmet": "^5.2.1",
     "react-live": "^2.2.0"

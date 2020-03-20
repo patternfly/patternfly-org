@@ -8,7 +8,7 @@
     "develop": "yarn develop:v4",
     "develop:v4": "yarn workspace patternfly-org-4 develop -p 8003",
     "build:v3": "yarn build:v3:prefix",
-    "build:v3:prefix": "cd packages/patternfly-3 && yarn run build && cd ../.. && yarn copy:v3",
+    "build:v3:prefix": "yarn workspace patternfly-org-3 build && yarn copy:v3",
     "build:v4": "yarn workspace patternfly-org-4 build",
     "build:v4:prefix": "yarn workspace patternfly-org-4 build:prefix && yarn copy:v4",
     "copy:v3": "mkdir -p build/patternfly-org && cp -r packages/patternfly-3/_site build/patternfly-org/v3",
@@ -17,7 +17,7 @@
     "serve": "yarn workspace patternfly-org-4 serve -p 8003",
     "serve:prefix": "yarn workspace patternfly-org-4 serve -p 8003 --prefix-paths",
     "test:v4": "yarn workspace patternfly-org-4 test:a11y:ci",
-    "start": "yarn start:pf4",
+    "start": "yarn start:v4",
     "start:v3": "yarn workspace patternfly-org-3 develop",
     "start:v4": "yarn develop:v4",
     "uninstall": "find . -name node_modules | xargs rm -rf"
