@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "glob": "^7.1.6",
-    "lerna": "^3.19.0"
+    "lerna": "^3.19.0",
+    "surge": "^0.21.3"
   }
 }

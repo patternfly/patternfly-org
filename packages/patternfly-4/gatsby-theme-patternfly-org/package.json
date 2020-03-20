@@ -23,8 +23,5 @@
     "prismjs": "^1.17.1",
     "react-helmet": "^5.2.1",
     "react-live": "^2.2.0"
-  },
-  "devDependencies": {
-    "surge": "^0.21.3"
   }
 }
