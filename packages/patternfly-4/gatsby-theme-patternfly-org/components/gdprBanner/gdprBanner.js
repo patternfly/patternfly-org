@@ -27,5 +27,5 @@ export const GdprBanner = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
