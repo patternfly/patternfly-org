@@ -127,7 +127,7 @@ jobs:
         command: rm -f packages/patternfly-4/.cache/redux.state
     - run:
         name: Build patternfly.org docs
-        command: ~/.yarn/bin/yarn build:v4
+        command: yarn build:v4
     - save_cache:
         paths: *v4_build_cache_paths
         key: *v4_build_cache_key
