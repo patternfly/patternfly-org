@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@patternfly/patternfly": "2.69.1",
+    "@patternfly/react-tokens": "2.8.9",
     "eslint-config-react-app": "^5.0.2",
     "gatsby": "2.18.6",
     "gatsby-cli": "2.8.15",
