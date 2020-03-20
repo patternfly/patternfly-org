@@ -314,6 +314,7 @@ exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
   const config = getConfig();
 
   // Compile patternfly examples under node_modules
+  // https://github.com/gatsbyjs/gatsby/blob/9d5371adc3e40e9af4dec0e35a3ad18a238fedaf/packages/gatsby/src/utils/webpack-utils.ts#L312
   const babelRule = config.module.rules.find(rule => rule.test && rule.test.test && rule.test.test('a.js'));
   const oldIncludeFn = babelRule.include.bind({});
   const reactDepRegex = /node_modules\/@patternfly\/react-[\w-]+\/src/;
