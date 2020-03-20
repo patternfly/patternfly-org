@@ -34,7 +34,7 @@ references:
         curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
         export NVM_DIR="/opt/circleci/.nvm"
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-        nvm install v12js_deps_cache_key
+        nvm install v12
         nvm alias default v12
         
         # Each step uses the same `$BASH_ENV`, so need to modify it
@@ -59,9 +59,6 @@ workflows:
         requires:
         - build_v4
         - build_v3
-    # - test_org_a11y:
-    #     requires:
-    #     - build_v4
     - deploy:
         requires:
         - build_v4
@@ -75,11 +72,6 @@ jobs:
     - image: circleci/node:12
     steps:
     - checkout
-    - run:
-        name: Pull Submodules
-        command: |
-          git submodule init
-          git submodule update
     - persist_to_workspace:
         root: ~/project
         paths: 
@@ -154,19 +146,6 @@ jobs:
         root: ~/project
         paths: 
         - build
-  test_org_a11y:
-    docker:
-    - image: circleci/node:12-browsers
-    steps:
-    - *attach_workspace
-    - restore_cache:
-        keys:
-        - *js_deps_cache_key
-    - run:
-        name: Test a11y
-        command: yarn test:v4 || true
-    - store_artifacts:
-        path: packages/patternfly-4/coverage/
   deploy:
     docker:
     - image: circleci/node:12
