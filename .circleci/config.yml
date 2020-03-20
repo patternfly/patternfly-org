@@ -102,7 +102,7 @@ jobs:
         command: yarn build:v3
     - run:
         name: Upload docs to surge.sh
-        command: node .circleci/upload-preview.js packages/patternfly-3/_site
+        command: node .circleci/upload-preview.js build/patternfly-org v3
     - persist_to_workspace:
         root: ~/project
         paths: 
