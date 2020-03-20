@@ -17,8 +17,6 @@ references:
   - packages/patternfly-4/public
   js_deps_cache_key: &js_deps_cache_key
     js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
-  js_deps_cache_key_check: &js_deps_cache_key_check
-    js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}-check
   v3_ruby_deps_cache_key: &v3_ruby_deps_cache_key
     v3-ruby-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "packages/patternfly-3/Gemfile.lock"}}
   v4_build_cache_key: &v4_build_cache_key
@@ -44,6 +42,7 @@ references:
     run:
       name: Install yarn
       command: curl -o- -L https://yarnpkg.com/install.sh | bash
+
 workflows:
   version: 2
   install_build_deploy:
@@ -68,36 +67,17 @@ workflows:
             only: master
 jobs:
   install:
-    machine:
-      image: circleci/classic:latest
+    docker:
+    - image: circleci/node:12
     steps:
     - checkout
     - persist_to_workspace:
         root: ~/project
         paths: 
         - "*"
-    - restore_cache:
-        keys:
-        - *js_deps_cache_key_check
     - run:
         name: Conditional install
-        command: |
-          if [ ! -f cached ];
-          then
-            set +e
-            curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
-            export NVM_DIR="/opt/circleci/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-            nvm install v12
-            nvm alias default v12
-            curl -o- -L https://yarnpkg.com/install.sh | bash
-          
-            yarn install --frozen-lockfile
-            touch cached;
-          fi
-    - save_cache:
-        paths: cached
-        key: *js_deps_cache_key_check
+        command: if [ ! -f node_modules ]; then yarn install --frozen-lockfile; fi
     - save_cache:
         paths: *js_deps_paths
         key: *js_deps_cache_key
