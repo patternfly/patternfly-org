@@ -115,7 +115,7 @@ jobs:
         - build
   build_v4:
     machine:
-      image: circleci/classic:latest
+      image: circleci/node:12
     steps:
     - *attach_workspace
     - restore_cache:
@@ -127,8 +127,6 @@ jobs:
     - run:
         name: Invalidate Environment Variable Cache
         command: rm -f packages/patternfly-4/.cache/redux.state
-    - *install_node
-    - *install_yarn
     - run:
         name: Build patternfly.org docs
         command: ~/.yarn/bin/yarn build:v4
