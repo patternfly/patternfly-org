@@ -68,8 +68,8 @@ workflows:
             only: master
 jobs:
   install:
-    docker:
-    - image: circleci/node:12
+    machine:
+      image: circleci/classic:latest
     steps:
     - checkout
     - persist_to_workspace:
@@ -81,7 +81,20 @@ jobs:
         - *js_deps_cache_key_check
     - run:
         name: Conditional install
-        command: if [ ! -f cached ]; then yarn install --frozen-lockfile && touch cached; fi
+        command: |
+          if [ ! -f cached ];
+          then
+            set +e
+            curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
+            export NVM_DIR="/opt/circleci/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            nvm install v12
+            nvm alias default v12
+            curl -o- -L https://yarnpkg.com/install.sh | bash
+          
+            yarn install --frozen-lockfile
+            touch cached;
+          fi
     - save_cache:
         paths: cached
         key: *js_deps_cache_key_check
