@@ -131,7 +131,7 @@ jobs:
         key: *v4_build_cache_key
     - run:
         name: Upload docs to surge.sh
-        command: node .circleci/upload-preview.js packages/patternfly-4/public
+        command: node .circleci/upload-preview.js build/patternfly-org v4
     - persist_to_workspace:
         root: ~/project
         paths: 

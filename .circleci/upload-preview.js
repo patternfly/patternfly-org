@@ -10,6 +10,7 @@ const prnum = process.env.CIRCLE_PR_NUMBER;
 const prbranch = process.env.CIRCLE_BRANCH;
 
 const uploadFolder = process.argv[2];
+const uploadName = process.argv[3] || uploadFolder;
 if (!uploadFolder) {
   console.log('Usage: upload-preview uploadFolder');
   process.exit(1);
@@ -18,16 +19,7 @@ if (!uploadFolder) {
 const uploadFolderName = path.basename(uploadFolder);
 let uploadURL = `${repo}${prnum ? `-pr-${prnum || prbranch}` : ''}`.replace(/[\/|\.]/g, '-');
 
-if (uploadFolderName === '_site') {
-  uploadURL += '-v3';
-}
-else if (uploadFolderName === 'public') {
-  uploadURL += `-v4`;
-}
-else {
-  uploadURL += `-${uploadFolderName}`;
-}
-
+uploadURL += `-${uploadName}`;
 uploadURL += '.surge.sh';
 
 publishFn({
@@ -61,10 +53,10 @@ if (prnum) {
         commentBody += '\n';
       }
 
-      if (uploadFolderName === '_site') {
+      if (uploadName === '-v3') {
         commentBody += tryAddComment(`PF3 preview: https://${uploadURL}/v3`, commentBody);
       }
-      else if (uploadFolderName === 'public') {
+      else if (uploadName === '-v4') {
         commentBody += tryAddComment(`PF4 preview: https://${uploadURL}/v4`, commentBody);
       }
       else if (uploadFolderName === 'coverage') {
