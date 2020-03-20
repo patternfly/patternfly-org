@@ -135,7 +135,7 @@ jobs:
     - *install_yarn
     - run:
         name: Build patternfly.org docs
-        command: ~/.yarn/bin/yarn build:v4:prefix
+        command: ~/.yarn/bin/yarn build:v4
     - save_cache:
         paths: *v4_build_cache_paths
         key: *v4_build_cache_key
