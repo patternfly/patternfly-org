@@ -23,9 +23,6 @@ references:
     v3-ruby-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "packages/patternfly-3/Gemfile.lock"}}
   v4_build_cache_key: &v4_build_cache_key
     org-build-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
-  attach_workspace: &attach_workspace
-    attach_workspace:
-      at: ~/project
   install_node: &install_node
     run:
       name: Install node@12 (need right version for `yarn`)
@@ -73,10 +70,6 @@ jobs:
     - image: circleci/node:12
     steps:
     - checkout
-    - persist_to_workspace:
-        root: ~/project
-        paths: 
-        - "*"
     - restore_cache:
         keys:
         - *js_deps_cache_check_key
@@ -93,7 +86,7 @@ jobs:
     docker:
     - image: circleci/ruby:latest-node
     steps:
-    - *attach_workspace
+    - checkout
     - restore_cache:
         keys:
         - *js_deps_cache_key
@@ -119,10 +112,10 @@ jobs:
         paths: 
         - build
   build_v4:
-    machine:
-      image: circleci/node:12
+    docker:
+    - image: circleci/node:12
     steps:
-    - *attach_workspace
+    - checkout
     - restore_cache:
         keys:
         - *js_deps_cache_key
@@ -149,7 +142,9 @@ jobs:
     docker:
     - image: circleci/node:12
     steps:
-    - *attach_workspace
+    - checkout
+    - attach_workspace:
+        at: ~/project
     - restore_cache:
         keys:
         - *js_deps_cache_key
