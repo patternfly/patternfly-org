@@ -81,9 +81,9 @@ export const styleProps = {
 export const TypographyGrid = ({title, note, symbol, fontWeight, fontWeightText, fontSize, variableName, lineHeight, fontFamily}) => (
   <React.Fragment>
     <h3 className="ws-title">{title} {symbol && <span className="ws-typography-gridTitleSymbol">{symbol}</span>}</h3>
-    <StyledText fontFamily={fontFamily} fontWeight={fontWeight} fontSize={`var(${variableName})`} lineHeight={lineHeight}>
+    <PfStyledText fontFamily={fontFamily} fontWeight={fontWeight} fontSize={variableName} lineHeight={lineHeight}>
       Design is where science and art break even.
-    </StyledText>
+    </PfStyledText>
     <Grid gutter="sm">
       <GridItem span={12}>
         <table className="pf-c-table pf-m-compact ws-typography-tableTypography" aria-label="typography usage guidelines breakout">
@@ -122,9 +122,9 @@ export const LineHeightTitle = ({ children }) => (
 
 export const SpacingContentItem = ({children, fontWeight, fontSize, lineHeight}) => (
   <div>
-    <StyledText fontWeight={fontWeight} fontSize={fontSize} lineHeight={lineHeight}>
+    <PfStyledText fontWeight={fontWeight} fontSize={fontSize} lineHeight={lineHeight}>
       {children}
-    </StyledText>
+    </PfStyledText>
   </div>
 );
 
@@ -148,9 +148,3 @@ export const Spacer = ({color, size, description, showBorder}) => {
     </div>
   )
 };
-
-const Dummy = () => (
-  <div>dummy</div>
-)
-
-export default Dummy;

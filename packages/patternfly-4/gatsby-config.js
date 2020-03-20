@@ -1,16 +1,9 @@
-const fs = require('fs');
 const path = require('path');
 
 // We only want MD files.
 // Matched by https://github.com/micromatch/anymatch
 const reactIgnore = [
-  filePath => {
-    if (fs.existsSync(filePath) && fs.lstatSync(filePath).isFile()) {
-      return !filePath.endsWith('.md');
-    }
-
-    return false;
-  },
+  filePath => !['md', 'tsx'].includes(path.extname(filePath)),
   '**/README.md',
   '**/CHANGELOG.md',
   '**/__snapshots__',

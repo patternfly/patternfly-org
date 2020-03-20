@@ -312,15 +312,15 @@ exports.createSchemaCustomization = ({ actions }) => {
 
 exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
   const config = getConfig();
-  
-  // Use caching for babel loader
-  const babelLoader = config.module.rules.find(rule => rule.test && rule.test.test('a.js'));
-  delete babelLoader.include;
 
-  babelLoader.exclude = [/node_modules(?!\/(gatsby-theme-patternfly-org|gatsby-plugin-mdx|@patternfly))/, /dist/];
-  const options = babelLoader.use[0].options;
-  options.cacheDirectory = '.cache/babel-loader';
-  options.cacheCompression = false;
+  // Compile patternfly examples under node_modules
+  const babelRule = config.module.rules.find(rule => rule.test && rule.test.test && rule.test.test('a.js'));
+  const oldIncludeFn = babelRule.include.bind({});
+  const reactDepRegex = /node_modules\/@patternfly\/react-[\w-]+\/src/;
+  babelRule.include = modulePath => reactDepRegex.test(modulePath) ? true : oldIncludeFn(modulePath);
+  // Use caching for babel loader
+  babelRule.use[0].options.cacheDirectory = '.cache/babel-loader';
+  babelRule.use[0].options.cacheCompression = false;
 
   // Exclude CSS-in-JS styles included from React. They override
   // the patternfly.css styles which we would rather have.
@@ -335,6 +335,12 @@ exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
   if (stage === 'build-javascript') {
     // Turn off source-maps because dist sizes are huge
     config.devtool = false;
+    // Compile patternfly examples under node_modules
+    const babelVendorRule = config.module.rules.find(rule => rule.test && rule.test.test && rule.test.test('a.js') && rule !== babelRule);
+    const oldExcludeFn = babelVendorRule.exclude.bind({});
+    babelVendorRule.exclude = modulePath => reactDepRegex.test(modulePath) ? true : oldExcludeFn(modulePath);
+    babelVendorRule.use[0].options.cacheDirectory = '.cache/babel-loader';
+    babelVendorRule.use[0].options.cacheCompression = false;
   } else if (stage === 'develop') {
     // Speed up dev environment
     config.devtool = 'cheap-source-map';
