@@ -52,7 +52,7 @@ workflows:
   install_build_deploy:
     jobs:
     - install
-    - build_org:
+    - build_v4:
         requires:
         - install
     - build_v3:
@@ -60,16 +60,14 @@ workflows:
         - install
     - upload_previews:
         requires:
-        - build_react
-        - build_org
+        - build_v4
         - build_v3
     # - test_org_a11y:
     #     requires:
-    #     - build_org
+    #     - build_v4
     - deploy:
         requires:
-        - build_react
-        - build_org
+        - build_v4
         - build_v3
         filters:
           branches:
@@ -126,12 +124,15 @@ jobs:
         key: *v3_js_deps_cache_key
     - run:
         name: Build v3 docs
-        command: yarn build:v4:v3
+        command: yarn build:v3
+    - run:
+        name: Upload docs to surge.sh
+        command: node .circleci/upload-preview.js packages/patternfly-3/_site
     - persist_to_workspace:
         root: ~/project
         paths: 
         - build
-  build_org:
+  build_v4:
     machine:
       image: circleci/classic:latest
     steps:
@@ -153,27 +154,13 @@ jobs:
     - save_cache:
         paths: *v4_build_cache_paths
         key: *v4_build_cache_key
+    - run:
+        name: Upload docs to surge.sh
+        command: node .circleci/upload-preview.js packages/patternfly-4/public
     - persist_to_workspace:
         root: ~/project
         paths: 
         - build
-  upload_previews:
-    docker:
-    - image: circleci/node:12
-    steps:
-    - *attach_workspace
-    - run:
-        name: Write redirects
-        command: node scripts/writeV3Redirects.js --skip-v3
-    - run:
-        name: Move v3 (for size)
-        command: mkdir build/patternfly-org-3 && mv build/patternfly-org/v3 build/patternfly-org-3/v3
-    - run:
-        name: Check size of docs
-        command: du -sh build/* build/patternfly-org/*
-    - run:
-        name: Upload docs
-        command: .circleci/upload-preview.sh
   test_org_a11y:
     docker:
     - image: circleci/node:12-browsers

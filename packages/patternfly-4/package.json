@@ -12,38 +12,27 @@
     "clean": "gatsby clean",
     "develop": "yarn build:static && gatsby develop",
     "serve": "gatsby serve",
-    "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4",
-    "test:a11y:ci": "start-server-and-test serve:prefix http://localhost:9000/v4 test:a11y"
+    "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4"
   },
   "dependencies": {
     "@patternfly/patternfly": "2.69.1",
-    "@patternfly/react-catalog-view-extension": "1.4.29",
-    "@patternfly/react-charts": "5.3.12",
-    "@patternfly/react-core": "3.146.0",
     "@patternfly/react-docs": "4.20.42",
-    "@patternfly/react-styled-system": "3.8.10",
-    "@patternfly/react-table": "2.28.10",
-    "@patternfly/react-topology": "2.14.29",
     "eslint-config-react-app": "^5.0.2",
-    "gatsby": "2.18.6",
-    "gatsby-cli": "2.8.15",
-    "gatsby-plugin-google-analytics": "^2.1.24",
+    "gatsby": "2.20.2",
+    "gatsby-cli": "2.11.0",
+    "gatsby-plugin-google-analytics": "^2.2.0",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
-    "gatsby-plugin-sitemap": "^2.2.19",
-    "gatsby-remark-copy-linked-files": "^2.1.28",
-    "gatsby-source-filesystem": "^2.1.22",
+    "gatsby-plugin-sitemap": "^2.3.0",
+    "gatsby-remark-copy-linked-files": "^2.2.0",
+    "gatsby-source-filesystem": "^2.2.1",
     "gatsby-theme-patternfly-org": "^1.4.9",
-    "gatsby-transformer-json": "^2.2.15",
+    "gatsby-transformer-json": "^2.3.0",
     "gatsby-transformer-react-docgen-typescript": "^0.2.6",
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   },
   "devDependencies": {
-    "@patternfly/patternfly-a11y": "^0.0.9",
-    "fs-extra": "^8.1.0",
-    "jaeger-client": "^3.17.1",
-    "shx": "^0.3.2",
-    "start-server-and-test": "^1.5.0",
-    "webpack-bundle-analyzer": "3.6.0"
+    "@patternfly/patternfly-a11y": "^0.0.17",
+    "fs-extra": "^8.1.0"
   }
 }

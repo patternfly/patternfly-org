@@ -311,12 +311,13 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 
 exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
-  console.log(stage);
   const config = getConfig();
   
   // Use caching for babel loader
   const babelLoader = config.module.rules.find(rule => rule.test && rule.test.test('a.js'));
-  babelLoader.exclude = /node_modules(?!\/(gatsby-theme-patternfly-org|@patternfly))/;
+  delete babelLoader.include;
+
+  babelLoader.exclude = [/node_modules(?!\/(gatsby-theme-patternfly-org|gatsby-plugin-mdx|@patternfly))/, /dist/];
   const options = babelLoader.use[0].options;
   options.cacheDirectory = '.cache/babel-loader';
   options.cacheCompression = false;

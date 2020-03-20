@@ -1,11 +1,10 @@
 import React from 'react';
 import { Grid, GridItem } from '@patternfly/react-core';
-import { StyledText } from '@patternfly/react-styled-system';
 
-export const PfStyledText = ({ children, variableName, fontWeight, lineHeight, fontFamily, ...rest }) => (
-  <StyledText fontFamily={fontFamily} fontWeight={fontWeight} fontSize={`var(${variableName})`} lineHeight={lineHeight}>
-    {children || <>Design is where science and art break even.</>}
-  </StyledText>
+export const PfStyledText = ({ children, variableName, fontWeight, lineHeight, fontFamily }) => (
+  <div style={{ fontFamily, fontWeight, fontSize: `var(${variableName})`, lineHeight }}>
+    {children || 'Design is where science and art break even.'}
+  </div>
 );
 
 export const TitleLevel = ({ asGrid, styleProps, children, title = '', note = '' }) => {

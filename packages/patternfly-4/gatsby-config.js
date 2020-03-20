@@ -1,11 +1,21 @@
+const fs = require('fs');
 const path = require('path');
 
-/* Files we never care to pull data from
- * Matched by https://github.com/paulmillr/chokidar */
+// We only want MD files.
+// Matched by https://github.com/micromatch/anymatch
 const reactIgnore = [
-  '!**/*.md',
-  '**/README.*',
-  '**/CHANGELOG.*'
+  filePath => {
+    if (fs.existsSync(filePath) && fs.lstatSync(filePath).isFile()) {
+      return !filePath.endsWith('.md');
+    }
+
+    return false;
+  },
+  '**/README.md',
+  '**/CHANGELOG.md',
+  '**/__snapshots__',
+  '**/__tests__',
+  '**/dist'
 ];
 
 module.exports = {
@@ -116,7 +126,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'react', // This goes in URLs
-        path: require.resolve('@patternfly/react-catalog-view-extension/package.json').replace('package.json', ''),
+        path: require.resolve('@patternfly/react-catalog-view-extension/package.json').replace('package.json', 'src'),
         ignore: reactIgnore
       }
     },
@@ -124,7 +134,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'react', // This goes in URLs
-        path: require.resolve('@patternfly/react-charts/package.json').replace('package.json', ''),
+        path: require.resolve('@patternfly/react-charts/package.json').replace('package.json', 'src'),
         ignore: reactIgnore
       }
     },
@@ -132,7 +142,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'react', // This goes in URLs
-        path: require.resolve('@patternfly/react-core/package.json').replace('package.json', ''),
+        path: require.resolve('@patternfly/react-core/package.json').replace('package.json', 'src'),
         ignore: reactIgnore
       }
     },
@@ -140,7 +150,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'react', // This goes in URLs
-        path: require.resolve('@patternfly/react-table/package.json').replace('package.json', ''),
+        path: require.resolve('@patternfly/react-table/package.json').replace('package.json', 'src'),
         ignore: reactIgnore
       }
     },
@@ -148,7 +158,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'react', // This goes in URLs
-        path: require.resolve('@patternfly/react-topology/package.json').replace('package.json', ''),
+        path: require.resolve('@patternfly/react-topology/package.json').replace('package.json', 'src'),
         ignore: reactIgnore
       }
     },
