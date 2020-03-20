@@ -17,6 +17,8 @@ references:
   - packages/patternfly-4/public
   js_deps_cache_key: &js_deps_cache_key
     js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
+  js_deps_cache_check_key: &js_deps_cache_check_key
+    js-deps-check-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
   v3_ruby_deps_cache_key: &v3_ruby_deps_cache_key
     v3-ruby-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "packages/patternfly-3/Gemfile.lock"}}
   v4_build_cache_key: &v4_build_cache_key
@@ -77,10 +79,13 @@ jobs:
         - "*"
     - restore_cache:
         keys:
-        - *js_deps_cache_key
+        - *js_deps_cache_check_key
     - run:
         name: Conditional install
-        command: if [ ! -f node_modules ]; then yarn install --frozen-lockfile; fi
+        command: if [ ! -f cached ]; then yarn install --frozen-lockfile && touch cached; fi
+    - save_cache:
+        paths: cached
+        key: *js_deps_cache_check_key
     - save_cache:
         paths: *js_deps_paths
         key: *js_deps_cache_key
