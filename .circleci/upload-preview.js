@@ -53,10 +53,10 @@ if (prnum) {
         commentBody += '\n';
       }
 
-      if (uploadName === '-v3') {
+      if (uploadName === 'v3') {
         commentBody += tryAddComment(`PF3 preview: https://${uploadURL}/v3`, commentBody);
       }
-      else if (uploadName === '-v4') {
+      else if (uploadName === 'v4') {
         commentBody += tryAddComment(`PF4 preview: https://${uploadURL}/v4`, commentBody);
       }
       else if (uploadFolderName === 'coverage') {
