@@ -8,7 +8,7 @@ Development setup requires yarn. If you do not already have yarn installed on yo
 
 ### Live Reload Server
 
-A local [Gatsby](https://www.gatsbyjs.org/) development server be started with:
+A local [Gatsby](https://www.gatsbyjs.org/) development server can be started with:
 
     yarn start
 
