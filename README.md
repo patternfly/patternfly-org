@@ -2,41 +2,50 @@
 
 The PatternFly Org is the source for the official documentation for PatternFly 3 and PatternFly 4.
 
-## Development Setup
+## Development
 
 Development setup requires yarn. If you do not already have yarn installed on your system, see https://yarnpkg.com/en/.
 
-### Build
-
-Clone the repo and submodules:
-
-    git clone --recurse-submodules
-
-Note: If repo is cloned without submodules, use the following commands to update submodules:
-
-    git submodule init
-    git submodule update
-
-Install the site dependencies and build it using yarn:
-
-    yarn install
-
-The packages/patternfly-3 site is generated using [Jekyll](http://jekyllrb.com/).
-The packages/patternfly-4 site is generated using [Gatsby](https://www.gatsbyjs.org/).
-
 ### Live Reload Server
 
-A local development server can be quickly fired up for PatternFly 3 or PatternFly 4 by using either of these commands:
+A local [Gatsby](https://www.gatsbyjs.org/) development server can be started with:
 
-    yarn start:pf3
-    yarn start:pf4
+    yarn start
 
-### Testing production build
+Takes 1m26s to load http://localhost:8003 on a 2015 Macbook.
 
-You can test the full production build:
-    yarn build
-    yarn start:prod
+An old grunt development server can be with:
+
+    yarn start:v3
+
+Takes 13s to load http://localhost:9002 on a 2015 Macbook.
+
+### Build
+
+Install the [Gatsby](https://www.gatsbyjs.org/) site dependencies and build it using yarn:
+
+    yarn install
+    yarn build:v4
+
+Takes 38s to install + 3m18s to build. Subsequent runs with cache take 1m10s on a 2015 Macbook.
+
+You can build the old /v3 [Jekyll](http://jekyllrb.com/) site using yarn:
+
+    yarn install
+    yarn build:v3
+
+Takes 13s on a 2015 Macbook.
 
 ### Deploy
 
-The site is deployed first to a staging S3 bucket at staging.patternfly.org, and then to another bucket at patternfly.org.
+When you submit a PR, previews should be automatically generated for you and uploaded as PR comments. This takes between 5-10 minutes.
+
+When the PR is merged to master, the site is first deployed to a [staging S3 bucket.](https://staging.patternfly.org)
+
+When PatternFly does a release (currently every 3 weeks) this bucket is copied to https://patternfly.org.
+
+### Old submodules
+
+You might have a dirty file tree with old submodules and folders lying around. You can remove these with:
+
+    git clean -dfx
