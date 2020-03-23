@@ -243,10 +243,10 @@ export const SideNavLayout = ({
       <Helmet>
         <title>{title}{pageTitle && ` - ${pageTitle}`}</title>
       </Helmet>
-      <React.Fragment>
+      <div id="ws-page-banners">
         {showBanner && <Banner />}
         {showGdprBanner && <GdprBanner />}
-      </React.Fragment>
+      </div>
       <Page isManagedSidebar header={Header} sidebar={SideBar} className="ws-page">
         {children}
       </Page>
