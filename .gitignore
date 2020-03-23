@@ -13,7 +13,7 @@ node_modules
 
 # Ruby packages
 .bundle
-packages/patternfly-3/vendor
+packages/v3/vendor
 
 # Ignore generated files
 patternfly.spec

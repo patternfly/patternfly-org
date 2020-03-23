@@ -201,9 +201,9 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
         } else if (source === 'core') {
           sourceLink += 'patternfly/blob/master/';
         } else if (source === 'shared') {
-          sourceLink += 'patternfly-org/blob/master/packages/patternfly-4/gatsby-theme-patternfly-org/';
+          sourceLink += 'patternfly-org/blob/master/packages/gatsby-theme-patternfly-org/';
         } else {
-          sourceLink += 'patternfly-org/blob/master/packages/patternfly-4/';
+          sourceLink += 'patternfly-org/blob/master/packages/v4/';
         }
         sourceLink += fileRelativePath
           .replace(/\\/g, '/')
