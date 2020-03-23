@@ -1,4 +1,23 @@
+const fs = require('fs');
 const path = require('path');
+
+// We only want MD files.
+// Matched by https://github.com/micromatch/anymatch
+const reactIgnore = [
+  '**/*.test.*',
+  filePath => {
+    if (fs.existsSync(filePath) && fs.lstatSync(filePath).isFile()) {
+      return !['.md', '.tsx'].includes(path.extname(filePath));
+    }
+
+    return false;
+  },
+  '**/README.md',
+  '**/CHANGELOG.md',
+  '**/__snapshots__',
+  '**/__tests__',
+  '**/dist'
+];
 
 module.exports = {
   // For production build
@@ -6,7 +25,7 @@ module.exports = {
   siteMetadata: {
     title: 'PatternFly 4',
     // For SEO
-    description: 'Documentation for PatternFly 4',
+    description: 'PatternFly 4 Documentation',
     // For Gatsby plugin sitemap
     siteUrl: 'https://www.patternfly.org'
   },
@@ -79,7 +98,7 @@ module.exports = {
         ]
       }
     },
-    // Core docs
+    // Core docs (MD + HBS)
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -103,38 +122,45 @@ module.exports = {
         path: require.resolve('@patternfly/patternfly/site/training.md')
       }
     },
-    // React docs
+    // React docs (MD + TSX)
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'react', // This goes in URLs
-        path: `${path.resolve(__dirname)}/patternfly-react/packages`,
-        /* Files we never care to pull data from
-         * Matched by https://github.com/paulmillr/chokidar */
-         ignore: [
-          '**/dist',
-          '**/helpers',
-          '**/scripts',
-          '**/styles',
-          '**/build',
-          '**/utils',
-          '**/public',
-          '**/test-helpers',
-          /.*react-styles.*/,
-          /.*react-docs.*/,
-          /.*react-integration.*/,
-          /.*react-inline-edit-extension.*/,
-          /.*react-virtualized-extension.*/,
-          // eslint-disable-next-line no-useless-escape
-          '**/\..*', // dotfiles
-          '**/*.d.ts',
-          '**/*.test.*',
-          '**/index.*',
-          '**/tsconfig.*',
-          '**/tslint.*',
-          '**/README.*',
-          '**/CHANGELOG.*'
-        ]
+        path: require.resolve('@patternfly/react-catalog-view-extension/package.json').replace('package.json', 'src'),
+        ignore: reactIgnore
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'react', // This goes in URLs
+        path: require.resolve('@patternfly/react-charts/package.json').replace('package.json', 'src'),
+        ignore: reactIgnore
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'react', // This goes in URLs
+        path: require.resolve('@patternfly/react-core/package.json').replace('package.json', 'src'),
+        ignore: reactIgnore
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'react', // This goes in URLs
+        path: require.resolve('@patternfly/react-table/package.json').replace('package.json', 'src'),
+        ignore: reactIgnore
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'react', // This goes in URLs
+        path: require.resolve('@patternfly/react-topology/package.json').replace('package.json', 'src'),
+        ignore: reactIgnore
       }
     },
     // React release notes
@@ -142,7 +168,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'react', // This goes in URLs
-        path: `${path.resolve(__dirname)}/patternfly-react/RELEASE-NOTES.md`
+        path: require.resolve('@patternfly/react-docs/RELEASE-NOTES.md')
       }
     },
     // React training
@@ -150,7 +176,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'react', // This goes in URLs
-        path:`${path.resolve(__dirname)}/patternfly-react/packages/react-docs/src/training.md`
+        path: require.resolve('@patternfly/react-docs/src/training.md')
       }
     },
     // Org docs
@@ -158,21 +184,21 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'contribute', // This goes in URLs
-        path: `${path.resolve(__dirname)}/src/content/contribute`
+        path: path.join(__dirname, '/src/content/contribute')
       }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'get-started', // This goes in URLs
-        path: `${path.resolve(__dirname)}/src/content/get-started`
+        path: path.join(__dirname, '/src/content/get-started')
       }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'design-guidelines', // This goes in URLs
-        path: `${path.resolve(__dirname)}/src/content/design-guidelines`
+        path: path.join(__dirname, '/src/content/design-guidelines')
       }
     },
     // Shared pages
@@ -189,7 +215,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'design-snippets', // We DON'T create pages from these
-        path: `${path.resolve(__dirname)}/src/content/design-snippets`
+        path: path.join(__dirname, '/src/content/design-snippets')
       }
     },
     // Our custom plugin for *.js?x *.ts?x files to get prop types

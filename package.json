@@ -5,36 +5,32 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "develop:react": "yarn workspace @patternfly/react-docs develop -p 8002",
-    "build:react": "yarn workspace @patternfly/react-docs build:ram && yarn copy:react",
-    "copy:react": "mkdir -p build && cp -r packages/patternfly-4/patternfly-react/packages/react-docs/public build/patternfly-react",
-    "clean:react": "yarn workspace @patternfly/react-docs clean && rm -rf build/patternfly-react",
-    "serve:react": "yarn workspace @patternfly/react-docs serve -p 8002",
-    "develop:org": "yarn workspace patternfly-org-4 develop -p 8003",
-    "build:org": "yarn workspace patternfly-org-4 build",
-    "build:org:prefix": "yarn workspace patternfly-org-4 build:prefix && yarn copy:org:v4",
-    "copy:org:v4": "mkdir -p build/patternfly-org && cp -r packages/patternfly-4/public/ build/patternfly-org/v4 && cp -r build/patternfly-org/v4/assets build/patternfly-org/assets",
-    "build:org:v3": "cd packages/patternfly-3 && yarn run build && cd ../.. && yarn copy:org:v3",
-    "copy:org:v3": "mkdir -p build/patternfly-org && cp -r packages/patternfly-3/_site build/patternfly-org/v3",
+    "develop": "yarn develop:v4",
+    "develop:v4": "yarn workspace patternfly-org-4 develop -p 8003",
+    "build": "yarn build:v4",
+    "build:v3": "yarn workspace patternfly-org-3 build && yarn copy:v3",
+    "build:v4": "yarn workspace patternfly-org-4 build:prefix && yarn copy:v4",
+    "copy:v3": "mkdir -p build/patternfly-org && cp -r packages/patternfly-3/_site build/patternfly-org/v3",
+    "copy:v4": "mkdir -p build/patternfly-org && cp -r packages/patternfly-4/public/ build/patternfly-org/v4 && cp -r build/patternfly-org/v4/assets build/patternfly-org/assets",
     "clean": "lerna run clean && rm -rf build",
-    "clean:org": "yarn workspace patternfly-org-4 clean && rm -rf build/patternfly-org",
-    "serve:org": "yarn workspace patternfly-org-4 serve -p 8003",
-    "serve:org:prefix": "yarn workspace patternfly-org-4 serve -p 8003 --prefix-paths",
-    "test:org": "yarn workspace patternfly-org-4 test:a11y:ci",
-    "start:pf3": "yarn workspace patternfly-org-3 develop",
-    "start:pf4": "yarn develop:org"
+    "serve": "yarn workspace patternfly-org-4 serve -p 8003 --prefix-paths",
+    "test:v4": "yarn workspace patternfly-org-4 test:a11y:ci",
+    "start": "yarn start:v4",
+    "start:v3": "yarn workspace patternfly-org-3 develop",
+    "start:v4": "yarn develop:v4",
+    "uninstall": "find . -name node_modules | xargs rm -rf"
   },
   "workspaces": {
     "packages": [
       "packages/patternfly-3",
       "packages/patternfly-4",
       "packages/patternfly-4/gatsby-theme-patternfly-org",
-      "packages/patternfly-4/gatsby-transformer-react-docgen-typescript",
-      "packages/patternfly-4/patternfly-react/packages/react-docs"
+      "packages/patternfly-4/gatsby-transformer-react-docgen-typescript"
     ]
   },
   "devDependencies": {
     "glob": "^7.1.6",
-    "lerna": "^3.19.0"
+    "lerna": "^3.19.0",
+    "surge": "^0.21.3"
   }
 }
