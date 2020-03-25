@@ -14,7 +14,7 @@ import { Link } from "gatsby";
 import { GithubIcon, TwitterIcon } from "@patternfly/react-icons";
 import redhatLogo from "./RHLogo.png";
 import "./footer.css";
-import logo from './logo.svg';
+import logo from '../../layouts/logo.svg';
 
 export class Footer extends React.Component {
   render() {
@@ -157,7 +157,9 @@ export class Footer extends React.Component {
             <GridItem sm={12} md={4}>
               <Grid className="pf-u-pt-xl ws-org-pfsite-l-footer-column">
                 <GridItem className="pf-u-px-xl">
-                  <a class="pf-c-page__header-brand-link pf-c-brand ws-org-pfsite-footer-menu-about-logo pf-u-pb-md" href="/"><Brand src={logo} alt="Patternfly Logo" /></a>
+                  <a class="pf-c-page__header-brand-link pf-c-brand ws-org-pfsite-footer-menu-about-logo pf-u-pb-md" href="/">
+                    <Brand src={logo} alt="Patternfly Logo" />
+                  </a>
                   <p className="ws-org-pfsite-footer-menu-about-description">
                     PatternFly is an open source design system built to drive
                     consistency and unify teams. We provide tools like design
