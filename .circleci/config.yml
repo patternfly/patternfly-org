@@ -172,7 +172,7 @@ jobs:
         command: .circleci/upload-staging.sh
     - run:
         name: Avoid Unknown Host for github.com
-        command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+        command: mkdir -p ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
     - run:
         name: Set git user
         command: |
