@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.52.13](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.52.12...patternfly-org-4@3.52.13) (2020-03-31)
+
+
+### Bug Fixes
+
+* **docs:** fix broken datatoolbar links in bulk selection docs ([#1751](https://github.com/patternfly/patternfly-org/issues/1751)) ([bc732a4](https://github.com/patternfly/patternfly-org/commit/bc732a48b37a342f91628e0b4a1f6e8d0dabef38))
+
+
+
+
+
 ## [3.52.12](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.52.11...patternfly-org-4@3.52.12) (2020-03-20)
 
 **Note:** Version bump only for package patternfly-org-4
