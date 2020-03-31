@@ -15,6 +15,7 @@
     "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4"
   },
   "dependencies": {
+    "@patternfly/patternfly": "2.71.2",
     "@patternfly/react-docs": "4.21.6",
     "gatsby": "2.20.2",
     "gatsby-cli": "2.11.0",
