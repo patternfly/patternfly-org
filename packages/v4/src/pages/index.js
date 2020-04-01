@@ -20,7 +20,6 @@ import modular from '../images/modular.svg';
 import scale from '../images/scale.svg';
 import { AutoLinkHeader } from 'gatsby-theme-patternfly-org/components/autoLinkHeader/autoLinkHeader';
 import './homepage.css';
-import '../qualtrics.css';
 
 const aboutPatternFly = 'About PatternFly';
 const patternFlyPrinciples = 'PatternFly principles';

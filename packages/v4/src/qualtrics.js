@@ -1,3 +1,5 @@
+import './qualtrics.css';
+
 (function () {
   if (typeof window.QSI === 'undefined') {
     window.QSI = {};
