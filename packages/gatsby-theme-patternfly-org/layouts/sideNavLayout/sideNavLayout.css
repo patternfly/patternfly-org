@@ -174,3 +174,11 @@
   flex: 1 1;
   height: auto;
 }
+
+.ws-switcher-divider {
+  padding: 0 16px;
+}
+
+.ws-patternfly-3 > svg {
+  margin-left: 8px;
+}
