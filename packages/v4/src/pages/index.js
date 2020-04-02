@@ -25,9 +25,6 @@ const aboutPatternFly = 'About PatternFly';
 const patternFlyPrinciples = 'PatternFly principles';
 
 const IndexPage = ({ location }) => {
-  if (typeof window !== 'undefined') {
-    require('../qualtrics.js');
-  }
   return (
   <SideNavLayout location={location} hideSideNav showGdprBanner={false} showBanner={true}>
     <PageSection
