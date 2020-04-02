@@ -255,6 +255,7 @@ export const SideNavLayout = ({
         <title>{title}{pageTitle && ` - ${pageTitle}`}</title>
       </Helmet>
       <div id="ws-page-banners">
+        {showBanner && <Banner />}
         {showGdprBanner && <GdprBanner />}
       </div>
       <Page isManagedSidebar header={Header} sidebar={SideBar} className="ws-page">
