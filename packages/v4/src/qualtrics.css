@@ -1,9 +1,0 @@
-@media screen and (min-width: 851px) {
-  body {
-    overflow: auto !important;
-  }
-
-  .QSIPopOverShadowBox {
-    display: none !important;
-  }
-}
