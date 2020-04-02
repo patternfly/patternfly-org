@@ -168,7 +168,6 @@ export const SideNavLayout = ({
     <DropdownItem
       key="PatternFly 3"
       className="ws-patternfly-3"
-      component="a"
       target="_blank"
       href="https://www.patternfly.org/v3"
     >
