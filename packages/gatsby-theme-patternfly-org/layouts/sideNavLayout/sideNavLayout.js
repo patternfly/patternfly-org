@@ -9,7 +9,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 import { Page, PageHeader, PageSidebar, Toolbar, ToolbarItem, Form, TextInput, Brand, Dropdown, DropdownToggle, DropdownItem, DropdownGroup, Divider } from '@patternfly/react-core';
-import { SearchIcon, CaretDownIcon, ArrowIcon } from '@patternfly/react-icons';
+import { SearchIcon, CaretDownIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
 import { SideNav, TopNav,  Banner, Footer, GdprBanner } from '../../components';
 import staticVersions from 'gatsby-theme-patternfly-org/versions.json';
 import logo from '../logo.svg';
@@ -172,7 +172,7 @@ export const SideNavLayout = ({
       href="https://www.patternfly.org/v3"
     >
       PatternFly 3
-      <ArrowIcon/>
+      <ExternalLinkAltIcon />
     </DropdownItem>
   ];
 
