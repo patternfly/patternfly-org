@@ -24,7 +24,7 @@ import './colors.css';
     </ColorSwatch>
   </GridItem>
   <GridItem span={6}>
-    <img width="480px" src="colors1.png" />
+    <img width="480px" src="patternfly-blue.png" alt="PatternFly blue colors" />
   </GridItem>
 </Grid>
 
@@ -46,7 +46,7 @@ import './colors.css';
     </ColorSwatch>
   </GridItem>
   <GridItem span={6}>
-    <img width="480px" src="colors2.png" />
+    <img width="480px" src="patternfly-typography.png" alt="PatternFly typography colors" />
   </GridItem>
 </Grid>
 
@@ -76,7 +76,7 @@ import './colors.css';
     </ColorSwatch>
   </GridItem>
   <GridItem span={6}>
-    <img width="480px" src="colors2.png" />
+    <img width="480px" src="patternfly-background.png" alt="PatternFly background colors" />
   </GridItem>
 </Grid>
 
@@ -88,7 +88,7 @@ import './colors.css';
     Status and state colors are important when communicating data and action aspects through the UI with the user. Our status colors cover a variety of statuses including default, danger, success, information, and warning.
   </GridItem>
   <GridItem span={6} rowSpan={5}>
-    <img width="480px" src="colors3.png" />
+    <img width="480px" src="patternfly-status.png" alt="PatternFly status colors" />
   </GridItem>
   <GridItem span={3}>
     <h3>Danger</h3>
@@ -175,7 +175,7 @@ import './colors.css';
     </ColorSwatch>
   </GridItem>
   <GridItem span={6}>
-    <img width="480px" src="colors4.png" />
+    <img width="480px" src="patternfly-shadows.png" alt="PatternFly shadows" />
   </GridItem>
 </Grid>
 

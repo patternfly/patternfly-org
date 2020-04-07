@@ -70,7 +70,13 @@ export function ColorFamily({
   return (
     <React.Fragment>
       <dl className="pf-c-accordion pf-u-p-0">
-        <dt className="pf-c-accordion__toggle" onClick={expandAll}>
+        <dt
+          className={css(
+            'pf-c-accordion__toggle',
+            expanded.length === familyTokens.length && 'pf-m-expanded'
+          )}
+          onClick={expandAll}
+        >
           <h3 className="pf-c-title pf-m-xl">
             <AngleRightIcon className="pf-c-accordion__toggle-icon ws-color-family-toggle" />
             {title}
@@ -112,7 +118,7 @@ export function ColorFamily({
               </dt>
               {isExpanded && (
                 <dd className={`${tokenClass} ws-color-family-content`}>
-                  <label>CSS variables</label>
+                  <label className="ws-color-family-label">CSS variables</label>
                   {Object.values(tokens)
                     .filter(t => t.value === token.value)
                     .filter(t => t.name.startsWith('--pf-global'))

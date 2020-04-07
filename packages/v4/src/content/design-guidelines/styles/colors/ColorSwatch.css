@@ -1,10 +1,10 @@
 .ws-color-swatch {
   display: flex;
-  height: 44px;
   margin-top: var(--pf-global--spacer--md);
 }
 
 .ws-color-swatch > svg {
+  flex: 0 0 44px;
   margin-right: var(--pf-global--spacer--md);
   border-radius: 50%;
 }
@@ -17,10 +17,8 @@
 
 .ws-color-swatch-description {
   display: flex;
-  height: 44px;
-  align-items: stretch;
-  align-content: space-between;
   flex-direction: column;
+  align-content: space-between;
 }
 
 .ws-color-swatch-description-label {
@@ -49,5 +47,6 @@
 }
 
 .ws-color-swatch-popover-code {
+  white-space: nowrap;
   margin-bottom: var(--pf-global--spacer--md);
 }
