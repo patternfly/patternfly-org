@@ -88,7 +88,7 @@ export function ColorFamily({
             'pf-c-accordion__toggle',
             isExpanded && 'pf-m-expanded'
           );
-          const itemStyle = { background: `var(${token.name})` };
+          const itemStyle = { background: `var(${token.name})`, fontSize: 'var(--pf-global--FontSize--sm)' };
           if (family === 'shadows') {
             itemStyle.marginBottom = '1rem';
           }
