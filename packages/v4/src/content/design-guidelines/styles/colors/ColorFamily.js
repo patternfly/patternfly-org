@@ -84,16 +84,31 @@ export function ColorFamily({
         </dt>
         {familyTokens.map(token => {
           const isExpanded = expanded.includes(token.name);
+          const isShadows = family === 'shadows';
           const tokenClass = css(
             'pf-c-accordion__toggle',
+            'ws-color-family-toggle',
             isExpanded && 'pf-m-expanded'
           );
           const itemStyle = { background: `var(${token.name})`, fontSize: 'var(--pf-global--FontSize--sm)' };
-          if (family === 'shadows') {
+          if (isShadows) {
             itemStyle.marginBottom = '1rem';
+            itemStyle.boxShadow = `var(${token.name})`;
           }
           else if (getContrastRatio(token.value, '#151515') <= 4.5) {
             itemStyle.color = tokens.global_palette_black_100.value;
+          }
+          const expandedStyle = {};
+          if (isExpanded) {
+            const borderLeftWidth = 'var(--pf-c-accordion__toggle--m-expanded--BorderWidth)';
+            const borderColor = !isShadows ? `var(${token.name})` : 'var(--pf-c-accordion__toggle--BorderLeftColor)';
+            const borderStyle = 'solid';
+            itemStyle.borderLeftWidth = borderLeftWidth;
+            itemStyle.borderColor = borderColor;
+            itemStyle.borderStyle = borderStyle;
+            expandedStyle.borderLeftWidth = borderLeftWidth;
+            expandedStyle.borderColor = borderColor;
+            expandedStyle.borderStyle = borderStyle;
           }
 
           return (
@@ -102,7 +117,7 @@ export function ColorFamily({
                 className={tokenClass}
                 style={itemStyle}
                 onClick={() => expand(token.name)}
-                id={token.value.replace('#', 'color-')}
+                id={!isShadows ? token.value.replace('#', 'color-') : token.name.replace('--pf-global--BoxShadow--', '')}
               >
                 <div>
                   <AngleRightIcon className="pf-c-accordion__toggle-icon ws-color-family-toggle-icon" />
@@ -110,14 +125,14 @@ export function ColorFamily({
                     .replace(palettePrefix, '')
                     .replace('--pf-global--BoxShadow--', 'box shadow ')}
                 </div>
-                {family !== 'shadows' && (
+                {!isShadows && (
                   <div className="ws-color-family-color">
                     #{normalizeColor(token.value.toUpperCase())}
                   </div>
                 )}
               </dt>
               {isExpanded && (
-                <dd className={`${tokenClass} ws-color-family-content`}>
+                <dd className={`${tokenClass} ws-color-family-content`} style={expandedStyle}>
                   <label className="ws-color-family-label">CSS variables</label>
                   {Object.values(tokens)
                     .filter(t => t.value === token.value)

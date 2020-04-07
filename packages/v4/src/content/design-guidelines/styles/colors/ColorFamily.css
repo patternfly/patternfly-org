@@ -22,3 +22,8 @@
   margin-top: var(--pf-global--spacer--md);
   margin-bottom: var(--pf-global--spacer--sm);
 }
+
+.ws-color-family-toggle.pf-c-accordion__toggle::before {
+  content: none;
+  width: 0;
+}
