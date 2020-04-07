@@ -47,8 +47,8 @@ export function ColorFamily({
     ? [tokens.global_BoxShadow_lg, tokens.global_BoxShadow_md, tokens.global_BoxShadow_sm]
     : Object.values(tokens)
         .filter(token => token.name.includes(`${palettePrefix}${family}`));
-  if (family === 'grey') {
-    familyTokens = familyTokens.unshift(tokens.global_palette_white);
+  if (family === 'black') {
+    familyTokens.unshift(tokens.global_palette_white);
   }
 
   const expandAll = () => {
@@ -78,7 +78,7 @@ export function ColorFamily({
           onClick={expandAll}
         >
           <h3 className="pf-c-title pf-m-xl">
-            <AngleRightIcon className="pf-c-accordion__toggle-icon ws-color-family-toggle" />
+            <AngleRightIcon className="pf-c-accordion__toggle-icon ws-color-family-toggle-icon" />
             {title}
           </h3>
         </dt>
@@ -105,13 +105,13 @@ export function ColorFamily({
                 id={token.value.replace('#', 'color-')}
               >
                 <div>
-                  <AngleRightIcon className="pf-c-accordion__toggle-icon ws-color-family-toggle" />
+                  <AngleRightIcon className="pf-c-accordion__toggle-icon ws-color-family-toggle-icon" />
                   {token.name
                     .replace(palettePrefix, '')
                     .replace('--pf-global--BoxShadow--', 'box shadow ')}
                 </div>
                 {family !== 'shadows' && (
-                  <div>
+                  <div className="ws-color-family-color">
                     #{normalizeColor(token.value.toUpperCase())}
                   </div>
                 )}

@@ -1,18 +1,24 @@
 /* Specificity YAY */
-.pf-c-accordion__toggle-icon.ws-color-family-toggle {
+.pf-c-accordion__toggle-icon.ws-color-family-toggle-icon {
   font-size: var(--pf-global--FontSize--xs);
   margin-right: var(--pf-c-accordion__toggle--PaddingLeft)
 }
 
+.ws-color-family-color {
+  font-family: var(--pf-global--FontFamily--monospace);
+}
+
+/* Specificity YAY */
 .pf-c-accordion__toggle.ws-color-family-content {
   font-size: var(--pf-global--FontSize--xs);
   display: inline-block;
-  margin-bottom: var(--pf-global--spacer--sm);
+  padding-bottom: var(--pf-global--spacer--lg);
 }
 
 .pf-c-accordion__toggle > .ws-color-family-label {
+  display: inline-block;
   font-size: var(--pf-global--FontSize--sm);
   font-weight: bold;
   margin-top: var(--pf-global--spacer--md);
-  margin-bottom: var(--pf-global--spacer--md);
+  margin-bottom: var(--pf-global--spacer--sm);
 }

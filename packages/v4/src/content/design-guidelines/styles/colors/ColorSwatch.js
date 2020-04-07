@@ -57,7 +57,7 @@ export function ColorSwatch({
           viewBox="0 0 44 44"
           style={isBoxShadow ? { boxShadow: `var(${color})` } : {}}
         >
-          <circle cx="22" cy="22" r="22" style={{ fill: isBoxShadow ? 'white' : `var(${color})`, stroke: '#f1f1f1' }} />
+          <circle cx="22" cy="22" r="22" style={{ fill: isBoxShadow ? 'white' : `var(${color})`, stroke: 'var(--pf-global--palette--black-300)' }} />
           {label === 'Hover' && handSVG}
         </svg>
       </Popover>
