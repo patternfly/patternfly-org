@@ -1,0 +1,10 @@
+/* Specificity YAY */
+.pf-c-accordion__toggle-icon.ws-color-family-toggle {
+  font-size: var(--pf-global--FontSize--xs);
+  margin-right: var(--pf-c-accordion__toggle--PaddingLeft)
+}
+
+.pf-c-accordion__toggle.ws-color-family-content {
+  font-size: var(--pf-global--FontSize--xs);
+  display: inline-block;
+}

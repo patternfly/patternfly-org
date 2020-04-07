@@ -16,6 +16,7 @@ exports.mdxTypeDefs = `
     coreComponentName: String
     showTitle: Boolean
     releaseNoteTOC: Boolean
+    hideSource: Boolean
   }
   type MdxFields @dontInfer {
     slug: String!

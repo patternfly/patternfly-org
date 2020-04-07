@@ -40,7 +40,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
         katacodaId={location.state.katacodaId} />
     );
   }
-  const { cssPrefix, hideTOC, beta, optIn, hideDarkMode, showTitle, releaseNoteTOC } = data.doc.frontmatter;
+  const { cssPrefix, hideTOC, beta, optIn, hideDarkMode, showTitle, releaseNoteTOC, hideSource } = data.doc.frontmatter;
   const { componentName, navSection } = data.doc.fields;
   const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner, showGdprBanner, sourceLink } = pageContext;
   const props = data.props && data.props.nodes && propComponents
@@ -88,9 +88,11 @@ const MDXTemplate = ({ data, location, pageContext }) => {
       )}
       {!hideTOC && (
         <React.Fragment>
-          <label id="source-label" className="ws-framework-title pf-c-title" aria-hidden>
-            {getSourceTitle(source)}
-          </label>
+          {!hideSource && (
+            <label id="source-label" className="ws-framework-title pf-c-title" aria-hidden>
+              {getSourceTitle(source)}
+            </label>
+          )}
           <Title headingLevel="h1" id="component-title" size="4xl" className="ws-page-title" aria-labelledby="source-label component-title">{title}</Title>
           {optIn && (
             <Alert
@@ -275,6 +277,7 @@ export const pageQuery = graphql`
         hideDarkMode
         showTitle
         releaseNoteTOC
+        hideSource
       }
       fields {
         navSection
