@@ -1,5 +1,5 @@
 import React from 'react';
-import * as tokens from '@patternfly/react-tokens';
+import tokens from '@patternfly/react-tokens/dist/variables/esm/patternfly_variables';
 import { Popover } from '@patternfly/react-core';
 import { normalizeColor } from './helpers';
 import './ColorSwatch.css';
@@ -27,7 +27,7 @@ export function ColorSwatch({
   children
 }) {
   const isBoxShadow = color.includes('BoxShadow');
-  const token = Object.values(tokens).find(token => token.name === color);
+  const token = tokens[":root"].find(token => token.property === color);
   const popoverContent = (
     <div className="ws-color-swatch-popover">
       <label className="ws-color-swatch-popover-label">Global CSS variable</label>
@@ -73,7 +73,7 @@ export function ColorSwatch({
       </Popover>
       <div className="ws-color-swatch-description">
         <label className="ws-color-swatch-description-label">
-          {label || token && token.value} {caption && `(${caption})`}
+          {label || token && `#${normalizeColor(token.value)}`} {caption && `(${caption})`}
         </label>
         <code className="ws-color-swatch-description-code">
           {color}

@@ -1,5 +1,5 @@
 import React from 'react';
-import * as tokens from '@patternfly/react-tokens';
+import tokens from '@patternfly/react-tokens/dist/variables/esm/patternfly_variables';
 import AngleRightIcon from '@patternfly/react-icons/dist/js/icons/angle-right-icon';
 import { css } from '@patternfly/react-styles';
 import { normalizeColor, getContrastRatio } from './helpers';
@@ -14,18 +14,18 @@ export function ColorFamily({
   const [expanded, setExpanded] = React.useState([]);
 
   const familyTokens = family === 'shadows'
-    ? [tokens.global_BoxShadow_lg, tokens.global_BoxShadow_md, tokens.global_BoxShadow_sm]
-    : Object.values(tokens)
-        .filter(token => token.name.includes(`${palettePrefix}${family}`));
+    ? tokens[':root'].filter(token => /--pf-global--BoxShadow--(sm|md|lg)$/.test(token.property))
+    : tokens[':root'].filter(token => token.property.includes(`${palettePrefix}${family}`));
   if (family === 'black') {
-    familyTokens.unshift(tokens.global_palette_white);
+    const whiteToken = tokens[':root'].find(token => token.property === '--pf-global--palette--white');
+    familyTokens.unshift(whiteToken);
   }
 
   const expandAll = () => {
     if (expanded.length > 0) {
       setExpanded([]);
     } else {
-      setExpanded(familyTokens.map(token => token.name));
+      setExpanded(familyTokens.map(token => token.property));
     }
   };
 
@@ -54,25 +54,25 @@ export function ColorFamily({
           </h3>
         </dt>
         {familyTokens.map(token => {
-          const isExpanded = expanded.includes(token.name);
+          const isExpanded = expanded.includes(token.property);
           const isShadows = family === 'shadows';
           const tokenClass = css(
             'pf-c-accordion__toggle',
             'ws-color-family-toggle',
             isExpanded && 'pf-m-expanded'
           );
-          const itemStyle = { background: `var(${token.name})`, fontSize: 'var(--pf-global--FontSize--sm)' };
+          const itemStyle = { background: `var(${token.property})`, fontSize: 'var(--pf-global--FontSize--sm)' };
           if (isShadows) {
             itemStyle.marginBottom = '1rem';
-            itemStyle.boxShadow = `var(${token.name})`;
+            itemStyle.boxShadow = `var(${token.property})`;
           }
           else if (getContrastRatio(token.value, '#151515') <= 4.5) {
-            itemStyle.color = tokens.global_palette_black_100.value;
+            itemStyle.color = '#fafafa';
           }
           const expandedStyle = {};
           if (isExpanded) {
             const borderLeftWidth = 'var(--pf-c-accordion__toggle--m-expanded--BorderWidth)';
-            const borderColor = !isShadows ? `var(${token.name})` : 'var(--pf-c-accordion__toggle--BorderLeftColor)';
+            const borderColor = !isShadows ? `var(${token.property})` : 'var(--pf-c-accordion__toggle--BorderLeftColor)';
             const borderStyle = 'solid';
             itemStyle.borderLeftWidth = borderLeftWidth;
             itemStyle.borderColor = borderColor;
@@ -83,16 +83,16 @@ export function ColorFamily({
           }
 
           return (
-            <React.Fragment key={token.name}>
+            <React.Fragment key={token.property}>
               <dt
                 className={`${tokenClass} ws-color-family-accordion-toggle`}
                 style={itemStyle}
-                onClick={() => expand(token.name)}
-                id={!isShadows ? token.value.replace('#', 'color-') : token.name.replace('--pf-global--BoxShadow--', '')}
+                onClick={() => expand(token.property)}
+                id={!isShadows ? token.value.replace('#', 'color-') : token.property.replace('--pf-global--BoxShadow--', '')}
               >
                 <div>
                   <AngleRightIcon className="pf-c-accordion__toggle-icon ws-color-family-toggle-icon" />
-                  {token.name
+                  {token.property
                     .replace(palettePrefix, '')
                     .replace('--pf-global--BoxShadow--', 'box shadow ')}
                 </div>
@@ -105,10 +105,9 @@ export function ColorFamily({
               {isExpanded && (
                 <dd className={`${tokenClass} ws-color-family-content`} style={expandedStyle}>
                   <label className="ws-color-family-label">CSS variables</label>
-                  {Object.values(tokens)
+                  {tokens[':root']
                     .filter(t => t.value === token.value)
-                    .filter(t => t.name.startsWith('--pf-global'))
-                    .map(t => t.name)
+                    .map(t => t.property)
                     .sort()
                     .map(tokenName => 
                       <div key={tokenName}>{tokenName}</div>
