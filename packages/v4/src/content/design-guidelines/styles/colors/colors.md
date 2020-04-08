@@ -92,56 +92,56 @@ import './colors.css';
   </GridItem>
   <GridItem xl={6} lg={12}>
     <h3>Danger</h3>
-    <ColorSwatch color="--pf-global--danger-color--300">
+    <ColorSwatch color="--pf-global--danger-color--300" caption="alert icon">
       This color is used as the icon color for the danger alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--danger-color--200">
+    <ColorSwatch color="--pf-global--danger-color--200" caption="alert title">
       This color is used as the title color for the danger alert as well as the background color for the danger button.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--danger-color--100">
+    <ColorSwatch color="--pf-global--danger-color--100" caption="alert icon background">
       This color is most commonly used as an indication of danger or error for components, such as alerts and form inputs.
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12} />
   <GridItem xl={6} lg={12}>
     <h3>Default</h3>
-    <ColorSwatch color="--pf-global--default-color--300">
+    <ColorSwatch color="--pf-global--default-color--300" caption="alert title and icon">
       This color is used as the icon and title color for the default alert component.
     </ColorSwatch>
     <ColorSwatch color="--pf-global--default-color--200">
       This color is used as the background and icon color for the default inline alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--default-color--100">
+    <ColorSwatch color="--pf-global--default-color--100" caption="alert icon background">
       This color is used as the icon background color for the default alert component.
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12} />
   <GridItem xl={6} lg={12}>
     <h3>Info</h3>
-    <ColorSwatch color="--pf-global--info-color--200">
+    <ColorSwatch color="--pf-global--info-color--200" caption="alert title and icon">
       This color is used as the icon and title color for the info alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--info-color--100">
+    <ColorSwatch color="--pf-global--info-color--100" caption="alert icon background">
       This color is used as the icon background color for the info alert component as well as the background and icon color for the info inline alert component.
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12} />
   <GridItem xl={6} lg={12}>
     <h3>Success</h3>
-    <ColorSwatch color="--pf-global--success-color--200">
+    <ColorSwatch color="--pf-global--success-color--200" caption="alert title and icon">
       This color is used as an indication of success for components, such as alerts and forms. It is used as the icon and title color for the success alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--success-color--100">
+    <ColorSwatch color="--pf-global--success-color--100" caption="alert icon background">
       This color is most commonly used as an indication of success for components, such as alerts and forms. It is used as the background color for the success alert component as well as the background and icon color for the success inline alert component.
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12} />
   <GridItem xl={6} lg={12}>
     <h3>Warning</h3>
-    <ColorSwatch color="--pf-global--warning-color--200">
+    <ColorSwatch color="--pf-global--warning-color--200" caption="alert title and icon">
       This color is used as the icon and title color for the warning alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--warning-color--100">
+    <ColorSwatch color="--pf-global--warning-color--100" caption="alert icon background">
       This color is used as the icon background color for the warning alert component as well as the background and icon color for the warning inline alert component.
     </ColorSwatch>
   </GridItem>

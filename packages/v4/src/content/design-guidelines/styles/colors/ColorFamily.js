@@ -2,40 +2,10 @@ import React from 'react';
 import * as tokens from '@patternfly/react-tokens';
 import AngleRightIcon from '@patternfly/react-icons/dist/js/icons/angle-right-icon';
 import { css } from '@patternfly/react-styles';
+import { normalizeColor, getContrastRatio } from './helpers';
 import './ColorFamily.css';
 
 const palettePrefix = '--pf-global--palette--';
-
-function normalizeColor(color) {
-  if (color.startsWith('#')) {
-    const hex = color.substr(1);
-    return hex.length === 3 ? hex.split('').map(char => char.repeat(2)).join('') : hex;
-  }
-}
-
-function normalizeLuminance(val) {
-  val = parseInt(val, 16) / 255;
-  return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4);
-}
-
-function getRelativeLuminance(color) {
-  // https://www.w3.org/TR/WCAG21/relative-luminance.xml
-  const r = normalizeLuminance(color.substr(0, 2));
-  const g = normalizeLuminance(color.substr(2, 2));
-  const b = normalizeLuminance(color.substr(4, 2));
-  return (0.2126 * r) + (0.7152 * g) + (0.0722 * b);
-}
-
-function getContrastRatio(c1, c2) {
-  // https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio
-  c1 = normalizeColor(c1);
-  c2 = normalizeColor(c2);
-
-  const l1 = getRelativeLuminance(c1);
-  const l2 = getRelativeLuminance(c2);
-
-  return (l1 + 0.05) / (l2 + 0.05);
-}
 
 export function ColorFamily({
   title,
@@ -73,6 +43,7 @@ export function ColorFamily({
         <dt
           className={css(
             'pf-c-accordion__toggle',
+            'ws-color-family-accordion-toggle',
             expanded.length === familyTokens.length && 'pf-m-expanded'
           )}
           onClick={expandAll}
@@ -114,7 +85,7 @@ export function ColorFamily({
           return (
             <React.Fragment key={token.name}>
               <dt
-                className={tokenClass}
+                className={`${tokenClass} ws-color-family-accordion-toggle`}
                 style={itemStyle}
                 onClick={() => expand(token.name)}
                 id={!isShadows ? token.value.replace('#', 'color-') : token.name.replace('--pf-global--BoxShadow--', '')}

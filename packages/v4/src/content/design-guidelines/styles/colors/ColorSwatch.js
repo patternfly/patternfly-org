@@ -1,6 +1,7 @@
 import React from 'react';
 import * as tokens from '@patternfly/react-tokens';
 import { Popover } from '@patternfly/react-core';
+import { normalizeColor } from './helpers';
 import './ColorSwatch.css';
 
 const handSVG = (
@@ -22,6 +23,7 @@ const handSVG = (
 export function ColorSwatch({
   label,
   color,
+  caption,
   children
 }) {
   const isBoxShadow = color.includes('BoxShadow');
@@ -32,11 +34,19 @@ export function ColorSwatch({
       <code className="ws-color-swatch-description-code ws-color-swatch-popover-code">
         {color}
       </code>
-      <p><a href={token.value.replace('#', '#color-')}>See all global CSS color variables</a></p>
+      <p>
+        <a href={token.value.replace('#', '#color-')}>
+          See all global CSS color variables
+        </a>
+      </p>
       {token && (
         <React.Fragment>
-          <label className="ws-color-swatch-popover-label">Hex value</label>
-          <p>{token.value.toUpperCase()}</p>
+          <label className="ws-color-swatch-popover-label">
+            {isBoxShadow ? 'Value' : 'Hex value'}
+          </label>
+          <p>
+            {isBoxShadow ? token.value : `#${normalizeColor(token.value)}`}
+          </p>
         </React.Fragment>
       )}
       <label className="ws-color-swatch-popover-label">Usage</label>
@@ -63,7 +73,7 @@ export function ColorSwatch({
       </Popover>
       <div className="ws-color-swatch-description">
         <label className="ws-color-swatch-description-label">
-          {label || token && token.value.toUpperCase()}
+          {label || token && token.value} {caption && `(${caption})`}
         </label>
         <code className="ws-color-swatch-description-code">
           {color}
