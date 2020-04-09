@@ -102,7 +102,6 @@ import './colors.css';
       This color is most commonly used as an indication of danger or error for components, such as alerts and form inputs.
     </ColorSwatch>
   </GridItem>
-  <GridItem xl={6} lg={12} />
   <GridItem xl={6} lg={12}>
     <h3>Default</h3>
     <ColorSwatch color="--pf-global--default-color--300" caption="alert title and icon">
@@ -115,7 +114,6 @@ import './colors.css';
       This color is used as the icon background color for the default alert component.
     </ColorSwatch>
   </GridItem>
-  <GridItem xl={6} lg={12} />
   <GridItem xl={6} lg={12}>
     <h3>Info</h3>
     <ColorSwatch color="--pf-global--info-color--200" caption="alert title and icon">
@@ -125,7 +123,6 @@ import './colors.css';
       This color is used as the icon background color for the info alert component as well as the background and icon color for the info inline alert component.
     </ColorSwatch>
   </GridItem>
-  <GridItem xl={6} lg={12} />
   <GridItem xl={6} lg={12}>
     <h3>Success</h3>
     <ColorSwatch color="--pf-global--success-color--200" caption="alert title and icon">
