@@ -70,9 +70,9 @@ export function ColorFamily({
             itemStyle.color = '#fafafa';
           }
           const expandedStyle = {};
-          if (isExpanded) {
+          if (isExpanded && !isShadows) {
             const borderLeftWidth = 'var(--pf-c-accordion__toggle--m-expanded--BorderWidth)';
-            const borderColor = isShadows ? '#fff' : `var(${token.property})`;
+            const borderColor = `var(${token.property})`;
             const borderStyle = 'solid';
             itemStyle.borderLeftWidth = borderLeftWidth;
             itemStyle.borderColor = borderColor;

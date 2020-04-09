@@ -87,7 +87,7 @@ import './colors.css';
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
     Status and state colors are important when communicating data and action aspects through the UI with the user. Our status colors cover a variety of statuses including default, danger, success, information, and warning.
   </GridItem>
-  <GridItem xl={6} lg={12} rowSpan={5}>
+  <GridItem xl={6} lg={12} rowSpan={6}>
     <img width="480px" src="patternfly-status.png" alt="PatternFly status colors" />
   </GridItem>
   <GridItem xl={6} lg={12}>
@@ -132,7 +132,6 @@ import './colors.css';
       This color is most commonly used as an indication of success for components, such as alerts and forms. It is used as the background color for the success alert component as well as the background and icon color for the success inline alert component.
     </ColorSwatch>
   </GridItem>
-  <GridItem xl={6} lg={12} />
   <GridItem xl={6} lg={12}>
     <h3>Warning</h3>
     <ColorSwatch color="--pf-global--warning-color--200" caption="alert title and icon">
@@ -142,7 +141,6 @@ import './colors.css';
       This color is used as the icon background color for the warning alert component as well as the background and icon color for the warning inline alert component.
     </ColorSwatch>
   </GridItem>
-  <GridItem xl={6} lg={12} />
   <GridItem xl={6} lg={12}>
     <h3>Disabled</h3>
     <ColorSwatch color="--pf-global--disabled-color--100">
