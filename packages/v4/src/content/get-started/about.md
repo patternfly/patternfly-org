@@ -64,7 +64,7 @@ For example, you might use a utility class to add additional spacing between ele
 | Edge | latest |
 
 
-If you encounter an issue with an earlier browser version that requires additional support, feel free to [contact us](/get-in-touch) and we will take a look.
+If you encounter an issue with an earlier browser version and have a question about whether or not that behavior should be supported, please feel free to contact us.
 
 <!-- This section is WIP ** we need to wait to see how this content gets included **
 
