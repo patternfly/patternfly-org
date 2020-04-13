@@ -16,7 +16,7 @@ export class CSSVariables extends React.Component {
     const initialRows = Object.entries(tokensModule)
       .filter(([_key, val]) => {
         for (let i = 0; i < this.prefix.length; i++) {
-          if (val.name.includes(this.prefix[i])) {
+          if (val.name && val.name.includes(this.prefix[i])) {
             return true;
           }
         }
