@@ -115,7 +115,8 @@ Checkboxes and radio buttons have a different labeling convention, where the opt
 ### Required fields
 A required field should be indicated with an asterisk ( * ) to the right of the field label.
 
-![Example of field with required field indication](./img/required-field.png)
+<img src="required-field.png" alt="Example of field with required field indication" width="444">
+
 
 
 If **all fields** on a form are required, do not use an asterisk for every field. Instead, provide a message at the top of the form stating, "All fields are required." If all fields are optional, the message should state, "All fields are optional."
@@ -163,8 +164,8 @@ Helper text is permanent text below a form field that helps a user provide the r
 #### Popovers
 Popovers are content boxes that are used for fields that might require additional background or explanation. You can also use a popover to link to external help pages or other related information. In forms, popovers are indicated by an unfilled question mark circle that a user can click on to reveal the information. They should be placed to the right of a form label. 
 
-![Example of popover content box used in a form field](./img/popover.png)
- 
+
+ <img src="popover.png" alt="Example of popover content box used in a form field" width="411">
 
 **Usage**
 * You may use popovers for content that requires formatting like numbered or bulleted lists.
@@ -201,7 +202,7 @@ Validation on submission is performed when the user attempts to submit a form. I
 For validation on submission, use an [inline alert](design-guidelines/usage-and-behavior/alerts-and-notifications#inline-alerts) along with field level errors wherever possible to make it simple for the user to quickly identify areas that need to be fixed.
 Notifications should describe the error and help users solve the problem.
 
-![Example of errors after validation on submission, including an inline alert at the top, and field level errors](./img/error-validation.png)
+<img src="error-validation.png" alt="Example of errors after validation on submission, including an inline alert at the top, and field level errors" width="459">
 
 ## Form formatting
 ### Spacing
@@ -250,13 +251,13 @@ Similar to an in-page form, forms in wizards should be aligned to the left of th
 
 Additionally, error validation for a form in a wizard’s page should occur when or by the time the user clicks the “Next” button. You should not wait until the user has completed the whole wizard before telling them where possible errors lie.
 
-![Example of form in an in-page wizard](./img/wizard-form.png)
+<img src="wizard-form.png" alt="Example of form in an in-page wizard" width="1319">
 
 
 ### Forms in a modal
 Forms in a modal should be horizontally centered with the modal background and fill up the modal width, leaving 24px between the form contents, and the modal background edges.
 
-![Example of form in a modal](./img/modal-form.png)
+<img src="modal-form.png" alt="Example of form in a modal" width="384">
 
 ### Multi-column forms
 Multi-column forms are forms that can have multiple inputs on a single form line. You can create a multi-column form using any of the [layouts](/documentation/core/layouts/bullseye) offered in PatternFly, such as the [Grid](/documentation/core/layouts/grid) or [Flex](/documentation/core/layouts/flex) layouts.
@@ -269,13 +270,12 @@ If you do decide to group certain columns together, they should be organized so 
 * City, State, Zip code
 * Credit card number, Expiration date, Security code
 
-
-![Example of correct and incorrect multi-column forms](./img/multi-column-eg.png)
+<img src="multi-column-eg.png" alt="Example of correct and incorrect multi-column forms" width="1275">
 
 
 You should never have multi-column forms that read like a book, where you finish the left side of the form first, then move on to the right side. The form itself should still be filled from top to button and should not have two unrelated fields on the same line.
 
-![Visual of how multi-column forms should be read and presented](./img/multi-column-read.png)
+<img src="multi-column-read.png" alt="Visual of how multi-column forms should be read and presented" width="1275">
 
 ## Related components and demos
 The PatternFly components listed can be used in a number of ways to build forms to suit specific needs or use cases.
