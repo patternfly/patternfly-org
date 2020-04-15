@@ -115,9 +115,7 @@ Checkboxes and radio buttons have a different labeling convention, where the opt
 ### Required fields
 A required field should be indicated with an asterisk ( * ) to the right of the field label.
 
-<img src="./img/required-field.png" alt="Example of field with required field indication" width="444">
-
-
+![Example of field with required field indication](./img/required-field.png)
 
 If **all fields** on a form are required, do not use an asterisk for every field. Instead, provide a message at the top of the form stating, "All fields are required." If all fields are optional, the message should state, "All fields are optional."
 
