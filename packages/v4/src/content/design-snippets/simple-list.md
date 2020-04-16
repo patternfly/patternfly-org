@@ -1,0 +1,4 @@
+---
+reactComponentName: 'simplelist'
+coreComponentName: 'simplelist'
+---

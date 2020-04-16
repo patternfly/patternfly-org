@@ -1,0 +1,4 @@
+---
+reactComponentName: 'fileupload'
+coreComponentName: 'fileupload'
+---
