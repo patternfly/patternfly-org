@@ -15968,7 +15968,7 @@ sprintf-js@~1.0.2:
 
 "src-design@github:patternfly/patternfly-design":
   version "0.0.0"
-  resolved "https://codeload.github.com/patternfly/patternfly-design/tar.gz/1db11dd4b0d83bc638ec51fd3a5d88342bc76b17"
+  resolved "https://codeload.github.com/patternfly/patternfly-design/tar.gz/680329c6537ef31924d452026409275feaf97a61"
   dependencies:
     handlebars "^4.0.6"
     rx "^4.1.0"
