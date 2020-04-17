@@ -48,4 +48,9 @@ PatternFly 4 styles provide a default starting point. You can use the variable s
 
 ## Global CSS variables
 
-<CSSVariables prefix="global" />
+<CSSVariables prefix="patternfly_variables" />
+
+## Chart CSS variables
+
+<CSSVariables prefix="patternfly_charts" />
+
