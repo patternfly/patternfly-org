@@ -54,7 +54,17 @@ For example, you might use a utility class to add additional spacing between ele
 
 [**View utilities**](/documentation/core/utilities/accessibility) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
+## Supported browsers
 
+| Browser | Version |
+| --- | --- |
+| Chrome | latest |
+| Firefox | latest |
+| Safari | latest |
+| Edge | latest |
+
+
+If you encounter an issue with an earlier browser version and have a question about whether or not that behavior should be supported, please feel free to contact us.
 
 <!-- This section is WIP ** we need to wait to see how this content gets included **
 

@@ -26,17 +26,6 @@ When you focus on these major content elements, you’re able to clarify the pur
 
 Replace any remaining placeholder text with real words. You’ll get better feedback from your team, stakeholders, and user test participants.
 
-During this stage, it's also useful to pull all content out of the wireframes and catalog it using a spreadsheet or doc. This step is especially important when you are working with a larger team and content is reviewed and collaborated on by multiple people.
-
-![Copy doc example](./img/copydoc.png)
-
-This approach provides several benefits:
-* It decouples the words from the design and allows you to focus on the text.
-* It makes it easier to collaborate and get feedback from your team.
-* It's easier to track and share feedback.
-* It enables you to share a single source of truth with your design team so you always have the most updated version of the copy consolidated in one place.
-* It makes it easier to organize and review content for items that have more than one state or can change based on user input.
-
 **High fidelity mockups**
 
 If you design with real content from the beginning, by the time you create high fidelity mockups, you’ll already have two rounds of content feedback under your belt and can focus on refinement.

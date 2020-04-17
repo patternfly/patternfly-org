@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.16](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.15...gatsby-theme-patternfly-org@1.4.16) (2020-04-13)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [1.4.15](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.14...gatsby-theme-patternfly-org@1.4.15) (2020-04-09)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [1.4.14](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.13...gatsby-theme-patternfly-org@1.4.14) (2020-04-03)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [1.4.13](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.12...gatsby-theme-patternfly-org@1.4.13) (2020-04-02)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [1.4.12](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.11...gatsby-theme-patternfly-org@1.4.12) (2020-04-01)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [1.4.11](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.10...gatsby-theme-patternfly-org@1.4.11) (2020-03-31)
+
+
+### Bug Fixes
+
+* **gdpr-banner:** fix layout on statically rendered pages ([89c2268](https://github.com/patternfly/patternfly-org/commit/89c22684332d53220d5b8b435eba6e3fbe200d3d))
+* **logo:** change footer logo to use svg ([#1746](https://github.com/patternfly/patternfly-org/issues/1746)) ([2d3e8cb](https://github.com/patternfly/patternfly-org/commit/2d3e8cb3bfe51ccb3df698d156871a24a4f79728))
+
+
+
+
+
 ## [1.4.10](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.9...gatsby-theme-patternfly-org@1.4.10) (2020-03-20)
 
 **Note:** Version bump only for package gatsby-theme-patternfly-org

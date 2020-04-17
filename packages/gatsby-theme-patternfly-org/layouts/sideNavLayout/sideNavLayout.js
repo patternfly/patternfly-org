@@ -8,8 +8,8 @@ import React, { useEffect, useState, useContext } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
-import { Page, PageHeader, PageSidebar, Toolbar, ToolbarItem, Form, TextInput, Brand, Dropdown, DropdownToggle, DropdownItem, DropdownGroup } from '@patternfly/react-core';
-import { SearchIcon, CaretDownIcon } from '@patternfly/react-icons';
+import { Page, PageHeader, PageSidebar, Toolbar, ToolbarItem, Form, TextInput, Brand, Dropdown, DropdownToggle, DropdownItem, DropdownGroup, Divider } from '@patternfly/react-core';
+import { SearchIcon, CaretDownIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
 import { SideNav, TopNav,  Banner, Footer, GdprBanner } from '../../components';
 import staticVersions from 'gatsby-theme-patternfly-org/versions.json';
 import logo from '../logo.svg';
@@ -142,14 +142,14 @@ export const SideNavLayout = ({
   const getDropdownItem = version => (
     <DropdownItem
       key={version.name}
+      href={location.pathname.replace(
+        location.pathname.split('/')[1],
+        version.latest
+          ? 'v4'
+          : version.name
+        )}
       component={
-        <a href={location.pathname.replace(
-            location.pathname.split('/')[1],
-            version.latest
-              ? 'v4'
-              : version.name
-            )}
-          className="pf-c-nav__link">
+        <a className="pf-c-nav__link">
           Release {version.name}
         </a>
       } />
@@ -161,8 +161,19 @@ export const SideNavLayout = ({
     <DropdownGroup key="Previous" label="Previous releases">
       {Object.values(versions.Releases)
         .filter(version => !version.hidden && !version.latest)
+        .slice(0,3)
         .map(getDropdownItem)}
-    </DropdownGroup>
+    </DropdownGroup>,
+    <Divider className="ws-switcher-divider"/>,
+    <DropdownItem
+      key="PatternFly 3"
+      className="ws-patternfly-3"
+      target="_blank"
+      href="https://www.patternfly.org/v3"
+    >
+      PatternFly 3
+      <ExternalLinkAltIcon />
+    </DropdownItem>
   ];
 
   const PageToolbar = pageSource === 'org'

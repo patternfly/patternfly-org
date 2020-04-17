@@ -1,0 +1,37 @@
+/* Specificity YAY */
+.pf-c-accordion__toggle-icon.ws-color-family-toggle-icon {
+  font-size: var(--pf-global--FontSize--xs);
+  margin-right: var(--pf-c-accordion__toggle--PaddingLeft)
+}
+
+/* Specificity YAY */
+.pf-c-accordion__toggle.ws-color-family-content {
+  font-size: var(--pf-global--FontSize--xs);
+  display: inline-block;
+  padding-bottom: var(--pf-global--spacer--lg);
+}
+
+/* Specificity YAY */
+.pf-c-accordion__toggle.ws-color-family-content:hover,
+.pf-c-accordion__toggle.ws-color-family-accordion-toggle:hover {
+  background-color: unset;
+}
+
+.ws-color-family-accordion-toggle {
+  cursor: pointer;
+}
+
+.pf-c-accordion__toggle > .ws-color-family-label {
+  display: inline-block;
+  font-size: var(--pf-global--FontSize--sm);
+  font-weight: bold;
+  margin-top: var(--pf-global--spacer--md);
+  margin-bottom: var(--pf-global--spacer--sm);
+}
+
+/* Specificity YAY */
+.ws-color-family-toggle.pf-c-accordion__toggle::before,
+.ws-color-family-accordion-toggle.pf-c-accordion__toggle::before {
+  content: none;
+  width: 0;
+}
