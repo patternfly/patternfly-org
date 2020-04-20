@@ -48,9 +48,13 @@ PatternFly 4 styles provide a default starting point. You can use the variable s
 
 ## Global CSS variables
 
-<CSSVariables prefix="patternfly_variables" />
+<CSSVariables prefix="patternfly_variables" selector=":root" hideSelectorColumn />
+
+## Font type CSS variables
+
+<CSSVariables prefix="patternfly_variables" selector=".pf-m-redhat-font" />
 
 ## Chart CSS variables
 
-<CSSVariables prefix="patternfly_charts" />
+<CSSVariables prefix="patternfly_charts" hideSelectorColumn />
 

@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  TextInput,
-  debounce,
-  SimpleList,
-  SimpleListItem
-} from "@patternfly/react-core";
+import { debounce } from "@patternfly/react-core";
 import {
   Table,
   TableHeader,
@@ -15,41 +10,37 @@ import {
 } from "@patternfly/react-table";
 import * as tokensModule from "@patternfly/react-tokens/dist/variables/js";
 import global_spacer_md from "@patternfly/react-tokens/dist/js/global_spacer_md";
-import { LevelUpAltIcon } from "@patternfly/react-icons";
+import LevelUpAltIcon from "@patternfly/react-icons/dist/js/icons/level-up-alt-icon";
+import { CSSSearch } from './cssSearch';
+
 import "./cssVariables.css";
 
 const isColorRegex = /^(#|rgb)/;
 
 const mappingAsList = (property, values) => (
-  <SimpleList>
+  <div>
     <div
       style={{
-        paddingLeft: `calc(${global_spacer_md.value})`
+        padding: `4px 0 4px calc(${global_spacer_md.value})`
       }}
     >
-      <SimpleListItem
-        style={{ display: "inline" }}
-        componentProps={{ style: { display: "inline", width: "auto" } }}
-      >
+      <span style={{ paddingLeft: '16px' }}>
         {property}
-      </SimpleListItem>
+      </span>
     </div>
     {values.map((entry, index) => (
       <div
         style={{
-          paddingLeft: `calc(${global_spacer_md.value} * ${index + 3})`
+          padding: `4px 0 4px calc(${global_spacer_md.value} * ${index + 3})`
         }}
       >
         <LevelUpAltIcon style={{ transform: 'rotate(90deg)' }} />
-        <SimpleListItem
-          style={{ display: "inline" }}
-          componentProps={{ style: { display: "inline", width: "auto" } }}
-        >
+        <span style={{ paddingLeft: '16px' }}>
           {entry}
-        </SimpleListItem>
+        </span>
       </div>
     ))}
-  </SimpleList>
+  </div>
 );
 
 export class CSSVariables extends React.Component {
@@ -58,15 +49,10 @@ export class CSSVariables extends React.Component {
     // Ensure array in case of multiple prefixes
     this.prefix =
       typeof props.prefix === "string" ? [props.prefix] : props.prefix;
-
     const applicableFiles = Object.entries(tokensModule)
       .filter(([key, val]) => {
         for (let i = 0; i < this.prefix.length; i++) {
-          if (this.prefix[i] === "global") {
-            if (key === "patternfly_variables" || key === "patternfly_charts") {
-              return true;
-            }
-          } else if (
+          if (
             key === this.prefix[i].replace("pf-", "").replace(/-+/g, "_")
           ) {
             return true;
@@ -75,21 +61,29 @@ export class CSSVariables extends React.Component {
         return false;
       })
       .sort(([key1], [key2]) => key1.localeCompare(key2))
-      .map(([key, val]) => val);
+      .map(([key, val]) => {
+        if (props.selector) {
+          return {
+            [props.selector]: val[props.selector]
+          }
+        }
+        return val;
+      });
 
-    this.columns = [
+    this.columns = props.hideSelectorColumn ? [] : [
       {
         title: "Selector",
         transforms: [sortable],
         cellFormatters: [expandable]
-      },
+      }
+    ];
+    this.columns = this.columns.concat([
       { title: "Variable", transforms: [sortable] },
       { title: "React Token", transforms: [sortable] },
       { title: "Value", transforms: [sortable] }
-    ];
+    ]);
 
     this.state = {
-      filterValue: "",
       applicableFiles,
       rows: this.getFilteredRows(applicableFiles),
       sortBy: {
@@ -118,37 +112,38 @@ export class CSSVariables extends React.Component {
             (val.values && searchRE.test(JSON.stringify(val.values)));
           if (passes) {
             const rowKey = `${selector}_${val.property}`;
-            filteredRows.push({
-              isOpen: val.values ? false : undefined,
-              cells: [
-                selector,
-                val.property,
-                val.token,
-                <div key={rowKey}>
-                  <div
-                    key={`${rowKey}_1`}
-                    className="pf-l-flex pf-m-space-items-sm"
-                  >
-                    {isColorRegex.test(val.value) && (
-                      <div
-                        key={`${rowKey}_2`}
-                        className="pf-l-flex pf-m-column pf-m-align-self-center"
-                      >
-                        <span
-                          className="ws-color-box"
-                          style={{ backgroundColor: val.value }}
-                        />
-                      </div>
-                    )}
+            let cells = this.props.hideSelectorColumn ? [] : [selector];
+            cells = cells.concat([
+              val.property,
+              val.token,
+              <div key={rowKey}>
+                <div
+                  key={`${rowKey}_1`}
+                  className="pf-l-flex pf-m-space-items-sm"
+                >
+                  {isColorRegex.test(val.value) && (
                     <div
-                      key={`${rowKey}_3`}
-                      className="pf-l-flex pf-m-column pf-m-align-self-center ws-td-text"
+                      key={`${rowKey}_2`}
+                      className="pf-l-flex pf-m-column pf-m-align-self-center"
                     >
-                      {val.value}
+                      <span
+                        className="ws-color-box"
+                        style={{ backgroundColor: val.value }}
+                      />
                     </div>
+                  )}
+                  <div
+                    key={`${rowKey}_3`}
+                    className="pf-l-flex pf-m-column pf-m-align-self-center ws-td-text"
+                  >
+                    {val.value}
                   </div>
                 </div>
-              ]
+              </div>
+            ]);
+            filteredRows.push({
+              isOpen: val.values ? false : undefined,
+              cells
             });
             rowNumber += 1;
             if (val.values) {
@@ -178,26 +173,12 @@ export class CSSVariables extends React.Component {
     });
   }
 
-  onFilterChange = (_change, event) => {
-    this.setState(
-      {
-        filterValue: event.target.value
-      },
-      () => this.getDebouncedFiltedRows(this.state.filterValue)
-    );
-  };
-
   getDebouncedFiltedRows = debounce(value => {
     const searchRE = new RegExp(value, "i");
     this.setState({
       rows: this.getFilteredRows(this.state.applicableFiles, searchRE)
     });
   }, 500);
-
-  handleChange = e => {
-    let input = e.target.value.toLowerCase();
-    this.setDisplayedContacts(input);
-  };
 
   onSort = (_event, index, direction) => {
     const sortedRows = this.state.rows.sort((a, b) =>
@@ -216,13 +197,7 @@ export class CSSVariables extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <TextInput
-          type="text"
-          aria-label="Filter CSS Variables"
-          placeholder="Filter CSS Variables"
-          value={this.state.filterValue}
-          onChange={this.onFilterChange}
-        />
+        <CSSSearch getDebouncedFiltedRows={this.getDebouncedFiltedRows} />
         <Table
           variant="compact"
           aria-label={`CSS Variables for prefixes ${this.prefix.join(" ")}`}
@@ -234,7 +209,6 @@ export class CSSVariables extends React.Component {
         >
           <TableHeader />
           <TableBody />
-          <TableHeader />
         </Table>
       </React.Fragment>
     );
