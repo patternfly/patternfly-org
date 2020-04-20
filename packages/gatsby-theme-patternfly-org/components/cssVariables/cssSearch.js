@@ -14,7 +14,7 @@ export class CSSSearch extends React.Component {
       {
         filterValue: event.target.value
       },
-      () => this.props.getDebouncedFiltedRows(this.state.filterValue)
+      () => this.props.getDebouncedFilteredRows(this.state.filterValue)
     );
   };
 

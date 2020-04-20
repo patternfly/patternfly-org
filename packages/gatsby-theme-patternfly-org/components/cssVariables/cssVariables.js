@@ -43,6 +43,24 @@ const mappingAsList = (property, values) => (
   </div>
 );
 
+const flattenList = files => {
+  let list = [];
+  files.forEach(file => {
+    Object.entries(file).forEach(([selector, values]) => {
+      values.forEach(val => {
+        list.push({
+          selector,
+          property: val.property,
+          token: val.token,
+          value: val.value,
+          values: val.values
+        });
+      });
+    });
+  });
+  return list;
+};
+
 export class CSSVariables extends React.Component {
   constructor(props) {
     super(props);
@@ -70,6 +88,8 @@ export class CSSVariables extends React.Component {
         return val;
       });
 
+    this.flatList = flattenList(applicableFiles);
+
     this.columns = props.hideSelectorColumn ? [] : [
       {
         title: "Selector",
@@ -84,8 +104,8 @@ export class CSSVariables extends React.Component {
     ]);
 
     this.state = {
-      applicableFiles,
-      rows: this.getFilteredRows(applicableFiles),
+      searchRE: '',
+      rows: this.getFilteredRows(),
       sortBy: {
         index: 0,
         direction: "asc" // a-z
@@ -93,74 +113,71 @@ export class CSSVariables extends React.Component {
     };
 
     this.getFilteredRows = this.getFilteredRows.bind(this);
-    this.getDebouncedFiltedRows = this.getDebouncedFiltedRows.bind(this);
+    this.getDebouncedFilteredRows = this.getDebouncedFilteredRows.bind(this);
     this.onCollapse = this.onCollapse.bind(this);
   }
 
-  getFilteredRows = (applicableFiles, searchRE) => {
+  getFilteredRows = (searchRE) => {
     let filteredRows = [];
     let rowNumber = -1;
-    applicableFiles.forEach(file => {
-      Object.entries(file).forEach(([selector, values]) => {
-        values.forEach(val => {
-          const passes =
-            searchRE === undefined ||
-            searchRE.test(selector) ||
-            searchRE.test(val.property) ||
-            searchRE.test(val.token) ||
-            searchRE.test(val.value) ||
-            (val.values && searchRE.test(JSON.stringify(val.values)));
-          if (passes) {
-            const rowKey = `${selector}_${val.property}`;
-            let cells = this.props.hideSelectorColumn ? [] : [selector];
-            cells = cells.concat([
-              val.property,
-              val.token,
-              <div key={rowKey}>
+    this.flatList.forEach(row => {
+      const { selector, property, token, value, values} = row;
+      const passes =
+        !searchRE ||
+        searchRE.test(selector) ||
+        searchRE.test(property) ||
+        searchRE.test(token) ||
+        searchRE.test(value) ||
+        (values && searchRE.test(JSON.stringify(values)));
+      if (passes) {
+        const rowKey = `${selector}_${property}`;
+        let cells = this.props.hideSelectorColumn ? [] : [selector];
+        cells = cells.concat([
+          property,
+          token,
+          <div key={rowKey}>
+            <div
+              key={`${rowKey}_1`}
+              className="pf-l-flex pf-m-space-items-sm"
+            >
+              {isColorRegex.test(value) && (
                 <div
-                  key={`${rowKey}_1`}
-                  className="pf-l-flex pf-m-space-items-sm"
+                  key={`${rowKey}_2`}
+                  className="pf-l-flex pf-m-column pf-m-align-self-center"
                 >
-                  {isColorRegex.test(val.value) && (
-                    <div
-                      key={`${rowKey}_2`}
-                      className="pf-l-flex pf-m-column pf-m-align-self-center"
-                    >
-                      <span
-                        className="ws-color-box"
-                        style={{ backgroundColor: val.value }}
-                      />
-                    </div>
-                  )}
-                  <div
-                    key={`${rowKey}_3`}
-                    className="pf-l-flex pf-m-column pf-m-align-self-center ws-td-text"
-                  >
-                    {val.value}
-                  </div>
+                  <span
+                    className="ws-color-box"
+                    style={{ backgroundColor: value }}
+                  />
                 </div>
+              )}
+              <div
+                key={`${rowKey}_3`}
+                className="pf-l-flex pf-m-column pf-m-align-self-center ws-td-text"
+              >
+                {value}
               </div>
-            ]);
-            filteredRows.push({
-              isOpen: val.values ? false : undefined,
-              cells
-            });
-            rowNumber += 1;
-            if (val.values) {
-              filteredRows.push({
-                parent: rowNumber,
-                fullWidth: true,
-                cells: [
-                  {
-                    title: mappingAsList(val.property, val.values)
-                  }
-                ]
-              });
-              rowNumber += 1;
-            }
-          }
+            </div>
+          </div>
+        ]);
+        filteredRows.push({
+          isOpen: values ? false : undefined,
+          cells
         });
-      });
+        rowNumber += 1;
+        if (values) {
+          filteredRows.push({
+            parent: rowNumber,
+            fullWidth: true,
+            cells: [
+              {
+                title: mappingAsList(property, values)
+              }
+            ]
+          });
+          rowNumber += 1;
+        }
+      }
     });
     return filteredRows;
   };
@@ -173,31 +190,42 @@ export class CSSVariables extends React.Component {
     });
   }
 
-  getDebouncedFiltedRows = debounce(value => {
+  getDebouncedFilteredRows = debounce(value => {
     const searchRE = new RegExp(value, "i");
     this.setState({
-      rows: this.getFilteredRows(this.state.applicableFiles, searchRE)
+      searchRE,
+      rows: this.getFilteredRows(searchRE)
     });
   }, 500);
 
   onSort = (_event, index, direction) => {
-    const sortedRows = this.state.rows.sort((a, b) =>
-      a[index] < b[index] ? -1 : a[index] > b[index] ? 1 : 0
-    );
+    this.flatList = this.flatList.sort((a, b) => {
+      const indexToColMap = {
+        '1': 'selector',
+        '2': 'property',
+        '3': 'token',
+        '4': 'value'
+      };
+      const column = indexToColMap[index];
+      if (direction === SortByDirection.asc) {
+        return a[column] < b[column] ? -1 : a[column] > b[column] ? 1 : 0;
+      } else {
+        return a[column] > b[column] ? -1 : a[column] < b[column] ? 1 : 0;
+      }
+    });
     this.setState({
       sortBy: {
         index,
         direction
       },
-      rows:
-        direction === SortByDirection.asc ? sortedRows : sortedRows.reverse()
+      rows: this.getFilteredRows(this.state.searchRE)
     });
   };
 
   render() {
     return (
       <React.Fragment>
-        <CSSSearch getDebouncedFiltedRows={this.getDebouncedFiltedRows} />
+        <CSSSearch getDebouncedFilteredRows={this.getDebouncedFilteredRows} />
         <Table
           variant="compact"
           aria-label={`CSS Variables for prefixes ${this.prefix.join(" ")}`}
