@@ -120,7 +120,7 @@ jobs:
         - *v4_build_cache_key
     - run:
         name: Invalidate Environment Variable Cache
-        command: rm -f packages/v4/.cache/redux.state
+        command: rm -rf packages/v4/.cache/redux
     - *install_node
     - *install_yarn
     - run:
