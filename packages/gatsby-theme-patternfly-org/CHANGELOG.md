@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.18](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.17...gatsby-theme-patternfly-org@1.4.18) (2020-04-21)
+
+
+### Bug Fixes
+
+* **example:** code toggle persistency ([752ba30](https://github.com/patternfly/patternfly-org/commit/752ba308572d9f511ff786b4e91ae5f178fb6f7e))
+
+
+
+
+
 ## [1.4.17](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.16...gatsby-theme-patternfly-org@1.4.17) (2020-04-20)
 
 **Note:** Version bump only for package gatsby-theme-patternfly-org
