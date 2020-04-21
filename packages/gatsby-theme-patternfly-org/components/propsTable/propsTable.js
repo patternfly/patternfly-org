@@ -36,6 +36,7 @@ export const PropsTable = props => {
       aria-label={props.caption}
       cells={columns}
       caption={props.caption}
+      gridBreakPoint="grid-lg"
       rows={props.rows
         .filter(row => !row.hide)
         .map((row, idx) => ({

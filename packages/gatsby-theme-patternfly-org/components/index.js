@@ -2,6 +2,7 @@ export * from './autoLinkHeader/autoLinkHeader';
 export * from './banner/banner';
 export * from './commonComponents/commonComponents';
 export * from './cssVariables/cssVariables';
+export * from './cssVariables/cssSearch';
 export * from './example/example';
 export * from './footer/footer';
 export * from './gdprBanner/gdprBanner';
