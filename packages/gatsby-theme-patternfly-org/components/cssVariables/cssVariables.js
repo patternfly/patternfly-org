@@ -67,17 +67,9 @@ export class CSSVariables extends React.Component {
     // Ensure array in case of multiple prefixes
     this.prefix =
       typeof props.prefix === "string" ? [props.prefix] : props.prefix;
+    const prefixTokens = this.prefix.map(prefix => prefix.replace("pf-", "").replace(/-+/g, "_"));
     const applicableFiles = Object.entries(tokensModule)
-      .filter(([key, val]) => {
-        for (let i = 0; i < this.prefix.length; i++) {
-          if (
-            key === this.prefix[i].replace("pf-", "").replace(/-+/g, "_")
-          ) {
-            return true;
-          }
-        }
-        return false;
-      })
+      .filter(([key, val]) => prefixTokens.includes(key))
       .sort(([key1], [key2]) => key1.localeCompare(key2))
       .map(([key, val]) => {
         if (props.selector) {
@@ -90,18 +82,16 @@ export class CSSVariables extends React.Component {
 
     this.flatList = flattenList(applicableFiles);
 
-    this.columns = props.hideSelectorColumn ? [] : [
-      {
-        title: "Selector",
-        transforms: [sortable],
-        cellFormatters: [expandable]
-      }
-    ];
-    this.columns = this.columns.concat([
+    this.columns = [
+      ...props.hideSelectorColumn ? [] : [{
+         title: "Selector",
+         transforms: [sortable],
+         cellFormatters: [expandable]
+      }],
       { title: "Variable", transforms: [sortable] },
       { title: "React Token", transforms: [sortable] },
       { title: "Value", transforms: [sortable] }
-    ]);
+    ]
 
     this.state = {
       searchRE: '',
@@ -111,10 +101,6 @@ export class CSSVariables extends React.Component {
         direction: "asc" // a-z
       }
     };
-
-    this.getFilteredRows = this.getFilteredRows.bind(this);
-    this.getDebouncedFilteredRows = this.getDebouncedFilteredRows.bind(this);
-    this.onCollapse = this.onCollapse.bind(this);
   }
 
   getFilteredRows = (searchRE) => {
@@ -131,8 +117,8 @@ export class CSSVariables extends React.Component {
         (values && searchRE.test(JSON.stringify(values)));
       if (passes) {
         const rowKey = `${selector}_${property}`;
-        let cells = this.props.hideSelectorColumn ? [] : [selector];
-        cells = cells.concat([
+        const cells = [
+          ...this.props.hideSelectorColumn ? [] : [selector],
           property,
           token,
           <div key={rowKey}>
@@ -159,7 +145,7 @@ export class CSSVariables extends React.Component {
               </div>
             </div>
           </div>
-        ]);
+        ];
         filteredRows.push({
           isOpen: values ? false : undefined,
           cells
@@ -182,13 +168,13 @@ export class CSSVariables extends React.Component {
     return filteredRows;
   };
 
-  onCollapse(event, rowKey, isOpen) {
+  onCollapse = (event, rowKey, isOpen) => {
     const { rows } = this.state;
     rows[rowKey].isOpen = isOpen;
     this.setState({
       rows
     });
-  }
+  };
 
   getDebouncedFilteredRows = debounce(value => {
     const searchRE = new RegExp(value, "i");
@@ -234,6 +220,7 @@ export class CSSVariables extends React.Component {
           cells={this.columns}
           rows={this.state.rows}
           onCollapse={this.onCollapse}
+          gridBreakPoint="grid-lg"
         >
           <TableHeader />
           <TableBody />
