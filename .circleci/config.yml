@@ -40,7 +40,7 @@ references:
   install_yarn: &install_yarn
     run:
       name: Install yarn
-      command: sudo apt-get install yarn
+      command: curl -o- -L https://yarnpkg.com/install.sh | bash
 
 workflows:
   version: 2
