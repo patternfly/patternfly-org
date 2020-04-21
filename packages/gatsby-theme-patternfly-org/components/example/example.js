@@ -41,7 +41,9 @@ export const Example = props => {
 
   const onLanguageChange = newLang => {
     setEditorLang(newLang);
-    setEditorCode(newLang === 'html' ? html : initialCode);
+    if (editorLang !== 'html' && newLang === 'html') {
+      setEditorCode(html);
+    }
   }
 
   if (editorLang === 'unknown') {
@@ -128,7 +130,7 @@ export const Example = props => {
           : Preview}
 
         <ExampleToolbar
-          editor={<LiveEditor className="ws-editor" />}
+          editor={<LiveEditor className="ws-editor" onChange={code => setEditorCode(code)} />}
           supportedLangs={supportedLangs}
           onLanguageChange={onLanguageChange}
           onDarkmodeChange={() => setDarkMode(!darkMode)}
