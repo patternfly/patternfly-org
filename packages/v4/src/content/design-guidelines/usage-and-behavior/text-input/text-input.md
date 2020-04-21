@@ -9,7 +9,7 @@ Use text input to gather free-form text from a user.
 
 ## Elements
 
-<img src="./img/textinput-elements.png" alt="Text input elements" width=“488”/>
+<img src="./img/textinput-elements.png" alt="Text input elements" width="488"/>
 
 1. **Label:** Indicates what you want the user to input in the text field.
 2. **Input field:** Area for user to type in their text input.
@@ -42,6 +42,6 @@ For more information about how to provide help content, see  the [forms design g
 ### Errors and validation
 Wherever possible, use inline errors to notify users that something has gone wrong. Inline errors help should be short and help users quickly identify and understand what they need to fix and why.
 
-<img src="./img/error.png" alt="error and validation example" width=“320”/>
+<img src="./img/error.png" alt="error and validation example" width="320"/>
 
 For more information about how to provide errors and validation, see  the [forms design guidelines](/design-guidelines/usage-and-behavior/forms#errors-and-validation).
