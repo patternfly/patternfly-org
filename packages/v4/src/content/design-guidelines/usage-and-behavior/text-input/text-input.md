@@ -21,7 +21,6 @@ Use text input to gather free-form text from a user.
 * When a value is too long to be fully displayed in a text field, use [truncation](/design-guidelines/content/grammar-and-terminology#truncation).
 * Provide a [text area](/documentation/react/components/textarea) for input anticipated to be longer than a single line.
 * Pre-populate fields with known values when possible, like a default IP address, for example.
-* When presented in a form, the initial input field is usually the first input field required. The primary input field should receive focus when the form is presented to the user.
 
 ### Help
 **Placeholder text**
@@ -35,12 +34,12 @@ Use text input to gather free-form text from a user.
 
 **Popovers**
 
-[Popovers](/design-guidelines/usage-and-behavior/forms#popovers) provide context around a text or input field. Popovers are represented with an unfilled question icon and displayed when the user clicks on the icon.
+[Popovers](/design-guidelines/usage-and-behavior/forms#popovers) provide context around a text or input field. Popovers are represented with an unfilled question mark con (fa-question-circle) and displayed when the user clicks on the icon.
 
 For more information about how to provide help content, see  the [forms design guidelines](/design-guidelines/usage-and-behavior/forms#user-help).
 
 ### Errors and validation
-Wherever possible, use inline errors to notify users that something has gone wrong. Inline errors help should be short and help users quickly identify and understand what they need to fix and why.
+Wherever possible, use inline errors to notify users where there is an issue with their input. Inline errors help should be short and help users quickly identify and understand what they need to fix and why.
 
 <img src="./img/error.png" alt="error and validation example" width="320"/>
 
