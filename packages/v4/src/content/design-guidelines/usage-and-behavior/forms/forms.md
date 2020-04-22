@@ -13,10 +13,11 @@ A form is a group of elements used to collect information from a user. Forms can
 <img src="./img/form-elements.png" alt="Example of a form with four typical form elements listed later" width="459"/>
 
 Most forms will contain the following basic elements:
-* **[Labels](#labels):** Labels let users know what information they should submit in each form field.
-* **[Text input/text area](/design-guidelines/usage-and-behavior/text-input):** These areas provide spaces for users to enter text.
-* **[Data inputs](#data-inputs):** Data input provides a way for users to submit any information that is not freeform text, such as checkboxes, radio buttons, and dropdowns.
-* **[Buttons](#buttons):** Buttons enable a user to submit or exit a form.
+
+1. **[Labels](#labels):** Labels let users know what information they should submit in each form field.
+2. **[Text input/text area](/design-guidelines/usage-and-behavior/text-input):** These areas provide spaces for users to enter text.
+3. **[Data inputs](#data-inputs):** Data input provides a way for users to submit any information that is not freeform text, such as checkboxes, radio buttons, and dropdowns.
+4. **[Buttons](#buttons):** Buttons enable a user to submit or exit a form.
 
 ## Designing forms
 ### Form Content
