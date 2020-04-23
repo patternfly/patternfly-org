@@ -11,7 +11,7 @@ const renderNavItem = node => (
       to={node.path}
       state={{ context: node.context }} // For keeping context on shared pages
       className="pf-c-nav__link ws-sideNav-link"
-      activeClassName="pf-m-active"
+      activeClassName="pf-m-current"
       >
       {node.text}
     </Link>
@@ -69,21 +69,24 @@ export const SideNav = ({
       <DropdownItem
         key={key}
         component={
-          <Link to={`/documentation/${key}/${parityComponent || 'overview/release-notes'}`}
-            className="pf-c-nav__link">
+          <Link
+            className="ws-org-context-switcher-link"
+            to={`/documentation/${key}/${parityComponent || 'overview/release-notes'}`}
+          >
             {value}
           </Link>
         } />
     );
+
   return (
-    <Nav aria-label="Side Nav">
+    <Nav aria-label="Side Nav" theme="light">
       {/* debug */}
       {/* <p>context: {context}</p>
       <p>pageSource: {pageSource}</p>
       <p>parityComponent: {parityComponent}</p> */}
       {Object.keys(contextSwitcher).includes(context) && (
         <div className="ws-org-context-switcher">
-          <label className="">FRAMEWORK</label>
+          <label>FRAMEWORK</label>
           <Dropdown
             className="ws-org-context-switcher-dropdown"
             onSelect={() => setDropdownOpen(!isDropdownOpen)}
@@ -93,17 +96,18 @@ export const SideNav = ({
           />
         </div>
       )}
-      <NavList className="ws-sideNav-list">
+      <NavList className="ws-side-nav-list">
         {sideNavItems.map(navItem => {
           const { section } = navItem;
+          const isActive = location.pathname.includes(`/${slugger(section)}/`);
           if (section && allNavItems[section]) {
             return (
               <NavExpandable
                 key={section}
                 title={capitalize(section)}
-                isActive={location.pathname.includes(`/${slugger(section)}/`)}
-                isExpanded={location.pathname.includes(`/${slugger(section)}/`)}
-                className="ws-sideNav-category"
+                isActive={isActive}
+                isExpanded={isActive}
+                className="ws-side-nav-group"
               >
                 {allNavItems[section]
                   .filter(node => node.source === context || node.source === 'shared')

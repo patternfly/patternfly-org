@@ -1,19 +1,43 @@
-@media screen and (max-width: 768px) {
+.ws-page-header {
+  /* Per designer request */
+  min-height: 70px !important;
+}
+
+.ws-page-header .pf-c-page__header-brand-toggle {
+  display: none;
+  visibility: hidden;
+}
+
+@media (max-width: 1200px) {
+  .pf-site-search {
+    width: 100px;
+  }
+  .ws-page-header .pf-c-page__header-brand-toggle {
+    display: block;
+    visibility: visible;
+  }
+}
+/* Hide version switcher on mobile */
+@media screen and (max-width: 1200px) {
+  .ws-page-header {
+    grid-template-columns: 3fr 1fr;
+  }
+      
+  .ws-page-header .pf-c-page__header-brand-link {
+    justify-content: center;
+  }
+  
+  .ws-org-version-switcher {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
   .ws-page-header .algolia-autocomplete #global-search-input ~ .ds-dropdown-menu {
     right: 0 !important;
     width: 500px;
     max-width: calc(100vw - 32px);
     min-width: 288px;
   }
-}
-
-.ws-page-sidebar#page-sidebar {
-  color: white;
-  box-shadow: none;
-}
-
-.ws-page-sidebar  .pf-c-nav {
-  margin-top: 16px;
 }
 
 .pf-site-search {
@@ -73,7 +97,6 @@
   border-bottom: 2px solid #fff;
 }
 
-
 /* serves as the main page container */
 .ws-side-nav-layout {
   height: 100%;
@@ -93,4 +116,12 @@
 
 .ws-patternfly-3 > svg {
   margin-left: 8px;
+}
+
+.ws-page-sidebar {
+  box-shadow: none !important;
+}
+
+.ws-page-sidebar > .pf-c-page__sidebar-body {
+  padding-top: var(--pf-global--spacer--md);
 }

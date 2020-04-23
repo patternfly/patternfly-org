@@ -120,6 +120,8 @@ export const SideNavLayout = ({
   const SideBar = hideSideNav
     ? undefined
     : <PageSidebar
+        className="ws-page-sidebar"
+        theme="light"
         nav={<SideNav
           location={location}
           context={context}
@@ -127,7 +129,7 @@ export const SideNavLayout = ({
           allPages={data.allSitePage.nodes}
           sideNavContexts={sideNav}
           parityComponent={parityComponent} />}
-        className="ws-page-sidebar" />;
+          />;
 
   const latestVersion = versions.Releases.find(version => version.latest);
   const dropdownToggle = (
@@ -142,14 +144,13 @@ export const SideNavLayout = ({
   const getDropdownItem = version => (
     <DropdownItem
       key={version.name}
-      href={location.pathname.replace(
-        location.pathname.split('/')[1],
-        version.latest
-          ? 'v4'
-          : version.name
-        )}
       component={
-        <a className="pf-c-nav__link">
+        <a
+          href={location.pathname.replace(
+            location.pathname.split('/')[1],
+            version.latest ? 'v4' : version.name
+          )}
+        >
           Release {version.name}
         </a>
       } />
@@ -164,7 +165,7 @@ export const SideNavLayout = ({
         .slice(0,3)
         .map(getDropdownItem)}
     </DropdownGroup>,
-    <Divider className="ws-switcher-divider"/>,
+    <Divider key="divider" className="ws-switcher-divider"/>,
     <DropdownItem
       key="PatternFly 3"
       className="ws-patternfly-3"

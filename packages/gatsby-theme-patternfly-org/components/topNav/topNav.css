@@ -1,3 +1,4 @@
+/* Don't bother with specifity war */
 .ws-top-nav-link.pf-c-nav__link {
   color: var(--pf-global--BackgroundColor--light-100);
 }
@@ -26,33 +27,4 @@
 .ws-top-nav-link.pf-c-nav__link.pf-m-current::before {
   transition: transform .5s;
   transform: scaleX(1);
-}
-
-.ws-page-header .pf-c-page__header-brand-toggle {
-  display: none;
-  visibility: hidden;
-}
-
-@media (max-width: 1200px) {
-  .pf-site-search {
-    width: 100px;
-  }
-  .ws-page-header .pf-c-page__header-brand-toggle {
-    display: block;
-    visibility: visible;
-  }
-}
-/* Hide version switcher on mobile */
-@media screen and (max-width: 1200px) {
-  .ws-page-header {
-    grid-template-columns: 3fr 1fr;
-  }
-      
-  .ws-page-header .pf-c-page__header-brand-link {
-    justify-content: center;
-  }
-  
-  .ws-org-version-switcher {
-    display: none;
-  }
 }
