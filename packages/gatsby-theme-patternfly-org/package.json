@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-patternfly-org",
   "description": "A unified PatternFly and PatternFly-React Gatsby theme.",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "publishConfig": {
     "access": "public",
     "tag": "prerelease-v4"
