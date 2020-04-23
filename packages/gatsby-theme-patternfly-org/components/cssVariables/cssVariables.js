@@ -8,7 +8,7 @@ import {
   SortByDirection,
   expandable
 } from "@patternfly/react-table";
-import * as tokensModule from "@patternfly/react-tokens/dist/variables/js";
+import * as tokensModule from "@patternfly/react-tokens/dist/js";
 import global_spacer_md from "@patternfly/react-tokens/dist/js/global_spacer_md";
 import LevelUpAltIcon from "@patternfly/react-icons/dist/js/icons/level-up-alt-icon";
 import { CSSSearch } from './cssSearch';
@@ -30,6 +30,7 @@ const mappingAsList = (property, values) => (
     </div>
     {values.map((entry, index) => (
       <div
+        key={index}
         style={{
           padding: `4px 0 4px calc(${global_spacer_md.value} * ${index + 3})`
         }}
@@ -47,10 +48,10 @@ const flattenList = files => {
   let list = [];
   files.forEach(file => {
     Object.entries(file).forEach(([selector, values]) => {
-      values.forEach(val => {
+      Object.values(values).forEach(val => {
         list.push({
           selector,
-          property: val.property,
+          property: val.name,
           token: val.token,
           value: val.value,
           values: val.values

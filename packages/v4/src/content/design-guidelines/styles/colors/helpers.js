@@ -30,3 +30,6 @@ export function getContrastRatio(c1, c2) {
   return (l1 + 0.05) / (l2 + 0.05);
 }
 
+export function tokenName(cssVar) {
+  return cssVar.substr(5).replace(/-+/g, '_');
+}
