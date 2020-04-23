@@ -59,9 +59,7 @@ workflows:
         - build_v3
         filters:
           branches:
-            only:
-              - master
-              - v4
+            only: v4
 jobs:
   install:
     docker:
