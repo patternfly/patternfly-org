@@ -1,7 +1,7 @@
 {
   "name": "patternfly-org-3",
   "private": true,
-  "version": "3.49.0",
+  "version": "4.0.0",
   "author": "Red Hat",
   "scripts": {
     "build": "grunt build:production --baseurl=/v3",

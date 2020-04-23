@@ -8313,6 +8313,27 @@ gatsby-telemetry@^1.2.5:
     stack-utils "1.0.2"
     uuid "3.4.0"
 
+gatsby-theme-patternfly-org@^1.4.16:
+  version "1.4.18"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-patternfly-org/-/gatsby-theme-patternfly-org-1.4.18.tgz#bc7507faf46905f8ff0d7b66b39ddbd3009bcf9e"
+  integrity sha512-LPMwRZRaJCUrNabni6qqgcgPBt5FgR8QGOhfdDXvJ/+f2gvxqqUQe6Y56O052L7lZWz+CuDTHu/aPHsDKpgAww==
+  dependencies:
+    "@mdx-js/mdx" "^1.1.5"
+    "@mdx-js/react" "^1.1.5"
+    codesandbox "^2.1.10"
+    file-saver "^1.3.8"
+    gatsby-plugin-manifest "2.2.48"
+    gatsby-plugin-mdx "^1.1.0"
+    gatsby-plugin-react-helmet "^3.2.0"
+    gatsby-source-filesystem "^2.2.1"
+    gatsby-transformer-json "^2.3.0"
+    handlebars "^4.2.0"
+    html-formatter "0.1.9"
+    null-loader "^3.0.0"
+    prismjs "^1.17.1"
+    react-helmet "^5.2.1"
+    react-live "^2.2.0"
+
 gatsby-transformer-json@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-2.3.0.tgz#bbca35c7907fd5aa6e390fe25358df12b3906a5f"
@@ -8320,6 +8341,13 @@ gatsby-transformer-json@^2.3.0:
   dependencies:
     "@babel/runtime" "^7.8.7"
     bluebird "^3.7.2"
+
+gatsby-transformer-react-docgen-typescript@^0.2.5:
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-react-docgen-typescript/-/gatsby-transformer-react-docgen-typescript-0.2.7.tgz#fb7ce6ba7d21530aaf1682beef2a1eebe70fe6d0"
+  integrity sha512-eG8P8KCTRpsm6M4eMm/iYrwl2+4z7PmlQYn8+Cra03B1Ncw8AY4vqDtl60RqClL+4FUFG6hrGXDm+QeYKWKkig==
+  dependencies:
+    react-docgen "^5.1.0"
 
 gatsby@2.20.2:
   version "2.20.2"
