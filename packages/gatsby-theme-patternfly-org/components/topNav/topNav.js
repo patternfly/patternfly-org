@@ -5,8 +5,8 @@ import './topNav.css';
 
 export const TopNav = ({ location, context, navItems }) => {
   return (
-    <Nav aria-label="Nav" className="pf-m-scrollable pf-m-horizontal">
-      <NavList variant="horizontal" className="ws-top-nav-list">
+    <Nav aria-label="Nav">
+      <NavList className="ws-top-nav-list" variant="horizontal">
         {navItems.map(({ path, text, contexts }) => (
           <NavItem
             key={path}
