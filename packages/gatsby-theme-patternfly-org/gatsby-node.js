@@ -313,16 +313,6 @@ exports.createSchemaCustomization = ({ actions }) => {
 exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
   const config = getConfig();
 
-  // Compile patternfly examples under node_modules
-  // https://github.com/gatsbyjs/gatsby/blob/9d5371adc3e40e9af4dec0e35a3ad18a238fedaf/packages/gatsby/src/utils/webpack-utils.ts#L312
-  const babelRule = config.module.rules.find(rule => rule.test && rule.test.test && rule.test.test('a.js'));
-  const oldIncludeFn = babelRule.include.bind({});
-  const reactDepRegex = /node_modules\/@patternfly\/react-[\w-]+\/src/;
-  babelRule.include = modulePath => reactDepRegex.test(modulePath) ? true : oldIncludeFn(modulePath);
-  // Use caching for babel loader
-  babelRule.use[0].options.cacheDirectory = '.cache/babel-loader';
-  babelRule.use[0].options.cacheCompression = false;
-
   // Exclude CSS-in-JS styles included from React. They override
   // the patternfly.css styles which we would rather have.
   const cssRules = config.module.rules.find(rule => rule.oneOf);
@@ -333,13 +323,36 @@ exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
     use: 'null-loader'
   });
 
+  // Gatsby's webpack config is not very performant. Unfortunately we have to muck
+  // around with it because it slows builds down 5-10x and we still need to compile
+  // some node_module code (mainly our src/**/examples/*.md). The key to performance
+  // is to properly include/exclude which JS files we transpile with babel-loader.
+  // https://github.com/gatsbyjs/gatsby/blob/gatsby%402.21.0/packages/gatsby/src/utils/webpack-utils.ts#L304
+  const jsRules = config.module.rules.filter(rule => rule.test && rule.test.test && rule.test.test('a.js'));
+  const babelRule = jsRules[0];
+  const oldIncludeFn = babelRule.include.bind({});
+  // This is for example MD/JS files
+  const reactDepRegex = /node_modules\/@patternfly\/react-[\w-]+\/src\/.*\.(md|js)/;
+  const reactDistRegex = /react-[\w-]+\/dist|react-styles\/css/;
+  const alreadyCJSRegex = /node_modules\/(victory|lodash|regenerate-unicode-properties|css-loader|d3-\w+|babel-runtime|react-is|dom-helpers|gatsby-core-utils|gatsby-plugin-mdx\/loaders)/;
+  babelRule.include = modulePath => reactDepRegex.test(modulePath) || oldIncludeFn(modulePath);
+  babelRule.exclude = modulePath => reactDistRegex.test(modulePath) || alreadyCJSRegex.test(modulePath);
+  // Use caching for babel loader 
+  babelRule.use[0].options.cacheDirectory = '.cache/babel-loader';
+  babelRule.use[0].options.cacheCompression = false;
+
   if (stage === 'build-javascript') {
     // Turn off source-maps because dist sizes are huge
     config.devtool = false;
-    // Compile patternfly examples under node_modules
-    const babelVendorRule = config.module.rules.find(rule => rule.test && rule.test.test && rule.test.test('a.js') && rule !== babelRule);
-    const oldExcludeFn = babelVendorRule.exclude.bind({});
-    babelVendorRule.exclude = modulePath => reactDepRegex.test(modulePath) ? true : oldExcludeFn(modulePath);
+
+    // Tweak Gatsby vendor babel-loader to exclude more
+    const babelVendorRule = jsRules[1];
+    const oldExcludeFn = babelVendorRule.exclude.bind({})
+    babelVendorRule.exclude = modulePath => reactDepRegex.test(modulePath)
+      || reactDistRegex.test(modulePath)
+      || alreadyCJSRegex.test(modulePath)
+      || oldExcludeFn(modulePath);
+    
     babelVendorRule.use[0].options.cacheDirectory = '.cache/babel-loader';
     babelVendorRule.use[0].options.cacheCompression = false;
   } else if (stage === 'develop') {
