@@ -20,9 +20,7 @@ The following button styles, shown in order of visual hierarchy, can be used in 
 * [Link button](#link-button)
 * [Icon button](#icon-button)
 
-
-![buttons](./img/buttons.png)
-
+<img src="./img/buttons.png" alt="Images of all button types" width="607"/>
 
 You don't need to use these buttons in the order that their labels imply. For example, you don't always need to use the secondary button as the second button in your designs. The most important thing is to establish a visual hierarchy between any buttons in your designs. There are, however, some best practices to keep in mind.
 
@@ -32,7 +30,7 @@ Danger buttons are the most prominent of all the button options. Use danger butt
 
 _Example of a danger button in a modal_
 
-![danger button](./img/danger.png)
+<img src="./img/danger.png" alt="Example of danger button used in a modal" width="521"/>
 
 #### Primary button ####
 
@@ -40,11 +38,11 @@ A primary button is the most prominent button on a page, used for the most impor
 
 _Example of a primary button inside a toolbar_
 
-![primary button 1](./img/prim_ex_1.png)
+<img src="./img/prim_ex_1.png" alt="Example of a primary button inside a toolbar" width="990"/>
 
 _Example of a primary button inside an empty state_
 
-![primary button 2](./img/prim_ex_2.png)
+<img src="./img/prim_ex_2.png" alt="Example of a primary button inside an empty state" width="656"/>
 
 #### Secondary button ####
 
@@ -52,7 +50,7 @@ Secondary buttons are buttons with less visual prominence than primary buttons. 
 
 _Example of secondary buttons in data lists_
 
-![secondary button](./img/sec_ex.png)
+<img src="./img/sec_ex.png" alt="Example of secondary buttons in data lists" width="986"/>
 
 #### Tertiary button ####
 
@@ -62,7 +60,7 @@ In this example, you can see a tertiary button used to show a possible â€œEditâ€
 
 _Example of tertiary button on a page_
 
-![tertiary button](./img/tert_edit.png)
+<img src="./img/tert_edit.png" alt="Example of tertiary button on a page" width="990"/>
 
 #### Link button ####
 
@@ -73,18 +71,18 @@ Links buttons are labeled buttons with no background or border. Link buttons can
 
 While all link buttons lack borders, they can still vary in appearance. Link buttons that navigate users to another page within the same window should be presented as stand-alone text. Link buttons that navigate users to an external page may include an icon on the left or right of the text to further emphasize the action. For example, you could add an external link icon to show that clicking on it will navigate users externally to another website or application.
 
-![link with left icon](./img/link-left.png) 
-![link with right icon](./img/link-right.png)
+<img src="./img/link-left.png" alt="Example of link button with icon on the left" width="143"/>
+<img src="./img/link-right.png" alt="Example of link button with icon on the right" width="143"/>
 
 You might use a link button instead of a secondary button format to create greater visual hierarchy between two buttons. Examples include using text buttons as cancel buttons in modals or wizards, as well as for secondary actions in empty states. 
 
 _Example of a link button in a modal_
 
-![link modal](./img/link_modal.png)
+<img src="./img/link_modal.png" alt="Example of a link button in a modal" width="446"/>
 
 _Example of link buttons in an empty state_
 
-![empty state links](./img/empty_state_links.png)
+<img src="./img/empty_state_links.png" alt="Example of link buttons in an empty state" width="640"/>
 
 #### Icon button ####
 
@@ -92,7 +90,7 @@ Icon buttons are useful in places where space is limited. For example, if you ha
 
 For example, this toolbar uses an export icon as an action button due to limited space.
 
-![icon button](./img/icon_button.png)
+<img src="./img/icon_button.png" alt="Example of kebab used as an icon button inside a toolbar" width="990"/>
 
 <!--  ### Using buttons in your designs
 We recommend aligning buttons to different elements or areas on the screen depending on the content being provided. The recommended alignment simplifies scanning and helps users complete and submit form content more quickly.  
@@ -123,24 +121,24 @@ Follow these guidelines for buttons in wizards:
 * The **Back** button should always be a secondary button. 
 * The **Cancel** button should always be a text button.
 
-![wizard](./img/wizard.png)
+<img src="./img/wizard.png" alt="Example of buttons in a wizard" width="898"/>
 
 Always use link buttons in the following cases:
 * For cancel buttons in wizards or modals
 
-  ![link modal](./img/link_modal.png)
+     <img src="./img/link_modal.png" alt="Example of link button used in modal" width="446"/>
 
 * For more actions in empty states
 
-  ![link empty](./img/link_empty.png)
+    <img src="./img/link_empty.png" alt="Example of a link button in an empty state" width="600"/>
 
 * For action buttons in tables
-
-  ![link table](./img/link_table.png)
+ 
+    <img src="./img/link_table.png" alt="Example of link buttons in a table" width="990"/>
 
 * For action buttons in alerts
 
-  ![link alert](./img/link_alert.png)
+    <img src="./img/link_alert.png" alt="Example of link button in an alert" width="309"/>
 
 ## Button placement
 
@@ -155,27 +153,27 @@ The standard spacing between each button is 16px, even for danger buttons. If bu
 
 _Standard spacing_
 
-![button spacing](./img/button_16px.png)
+<img src="./img/button_16px.png" alt="Standard button spacing with spacers" width="214"/>
 
 _Stacked spacing_
 
-![button stacked](./img/button_stacked.png)
+<img src="./img/button_stacked.png" alt="Stacked button spacing with spacers" width="222"/>
 
 Currently, the only exception to this is in wizards, where the **Cancel** button is spaced 48px away from the primary and secondary **Next** and **Back** buttons, and 24px away if stacked.
 
 _Wizard spacing_
 
-![button wizard](./img/button_wizard.png)
+<img src="./img/button_wizard.png" alt="Wizard button spacing with spacers" width="304"/>
 
 _Wizard stacked spacing_
 
-![button wizard stacked](./img/button_wizard_stacked.png)
+<img src="./img/button_wizard_stacked.png" alt="Stacked wizard button spacing with spacers" width="121"/>
 
 If you have a specific use case where buttons need to be spaced further away from the rest, the button groups action list allows for customization as needed.
 
 _Action group spacing_
 
-![button action group](./img/button_action_group.png)
+<img src="./img/button_action_group.png" alt="Action group spacing with spacers" width="416"/>
 
 ## Buttons and overflow menus
 
@@ -183,11 +181,11 @@ There are cases where you will have multiple buttons next to each other, like in
 
 _Buttons appear in the toolbar_
 
-![overflow toolbar before](./img/overflow_1.png)
+<img src="./img/overflow_1.png" alt="Pre-over flow menu in toolbar, where all actions appear in the toolbar itself" width="990"/>
 
 _Buttons placed in overflow menu due to limited space, with primary button persisting_
 
-![overflow toolbar after](./img/overflow_2.png)
+<img src="./img/overflow_2.png" alt="Post-overflow menu in toolbar, where toolbar has become smaller in width, prompting an overflow menu for secondary actions, while primary button persists in the toolbar itself" width="972"/>
 
 ## Content
 
