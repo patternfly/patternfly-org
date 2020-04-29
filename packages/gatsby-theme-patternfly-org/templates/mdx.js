@@ -122,7 +122,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
             </MDXRenderer>
           )}
           {releaseNoteTOC && (
-            <Grid gutter="sm" className="ws-release-notes-toc">
+            <Grid hasGutter className="ws-release-notes-toc">
               {versions.Releases
                 .filter(version => (
                   tableOfContents.some(header => header.includes(version.name))))
