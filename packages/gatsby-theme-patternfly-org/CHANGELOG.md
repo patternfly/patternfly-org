@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.4](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.3...gatsby-theme-patternfly-org@4.0.4) (2020-04-29)
+
+
+### Bug Fixes
+
+* **css:** hasGutter updated ([#1824](https://github.com/patternfly/patternfly-org/issues/1824)) ([d651ea5](https://github.com/patternfly/patternfly-org/commit/d651ea5e95044fbcedd13bed6d0bc70c9d872504))
+
+
+
+
+
 ## [4.0.3](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.2...gatsby-theme-patternfly-org@4.0.3) (2020-04-27)
 
 
