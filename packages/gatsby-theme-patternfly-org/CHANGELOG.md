@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.6](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.5...gatsby-theme-patternfly-org@4.0.6) (2020-05-01)
+
+
+### Bug Fixes
+
+* **css-variables:** remove font type temporarily ([#1831](https://github.com/patternfly/patternfly-org/issues/1831)) ([517f23a](https://github.com/patternfly/patternfly-org/commit/517f23aa2916e8ce9bda7f0fb10d15a1ad5f8da7))
+
+
+
+
+
 ## [4.0.5](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.4...gatsby-theme-patternfly-org@4.0.5) (2020-05-01)
 
 
