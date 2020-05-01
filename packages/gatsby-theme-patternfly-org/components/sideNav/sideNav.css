@@ -26,4 +26,4 @@
   font-size: 14px;
 }
 
-
+.ws-page-sidebar .pf-c-nav { --pf-c-nav__link--before--BorderBottomWidth: 0; }
