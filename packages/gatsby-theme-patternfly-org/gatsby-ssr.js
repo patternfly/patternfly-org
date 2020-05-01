@@ -20,7 +20,5 @@ exports.onRenderBody = ({ setHtmlAttributes }) => {
   setHtmlAttributes({
     // Always en-us
     lang: 'en-us',
-    // Always use new Red Hat font
-    className: 'pf-m-redhat-font'
   });
 }
