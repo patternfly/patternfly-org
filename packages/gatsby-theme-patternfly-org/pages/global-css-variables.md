@@ -56,5 +56,5 @@ PatternFly 4 styles provide a default starting point. You can use the variable s
 
 ## Font type CSS variables
 
-<CSSVariables prefix="patternfly_variables" selector=".pf-m-redhat-font" />
+<CSSVariables prefix="patternfly_variables" selector=".pf-m-overpass-font" />
 
