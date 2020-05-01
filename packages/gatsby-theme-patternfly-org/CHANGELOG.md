@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.5](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.4...gatsby-theme-patternfly-org@4.0.5) (2020-05-01)
+
+
+### Bug Fixes
+
+* **css:** remove small lines in sideNav and footer ([#1829](https://github.com/patternfly/patternfly-org/issues/1829)) ([94f4c3f](https://github.com/patternfly/patternfly-org/commit/94f4c3fe9b67edbd74acac426538d5d19f27d521))
+
+
+
+
+
 ## [4.0.4](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.3...gatsby-theme-patternfly-org@4.0.4) (2020-04-29)
 
 
