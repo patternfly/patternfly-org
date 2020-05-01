@@ -53,8 +53,3 @@ PatternFly 4 styles provide a default starting point. You can use the variable s
 ## Chart CSS variables
 
 <CSSVariables prefix="patternfly_charts" hideSelectorColumn />
-
-## Font type CSS variables
-
-<CSSVariables prefix="patternfly_variables" selector=".pf-m-overpass-font" />
-
