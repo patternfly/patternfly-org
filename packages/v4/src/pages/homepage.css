@@ -56,9 +56,16 @@
   color: var(--pf-global--Color--light-100)!important;
 }
 
-#about-patternfly,
+#hello-were-patternfly + .ws-mdx-p {
+  margin-bottom: 8px;
+}
+
 #patternfly-principles {
   font-size: 36px;
+}
+
+#flyer-fundamentals .ws-heading-anchor {
+  color: var(--pf-global--Color--100);
 }
 
 .ws-get-started:hover {
