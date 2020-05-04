@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.9](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.8...gatsby-theme-patternfly-org@4.0.9) (2020-05-04)
+
+
+### Bug Fixes
+
+* **css:** side-nav-link colors ([#1834](https://github.com/patternfly/patternfly-org/issues/1834)) ([fbe6752](https://github.com/patternfly/patternfly-org/commit/fbe675241b1b4bdaea8226e5a53aa3866118ebc3))
+
+
+
+
+
 ## [4.0.8](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.7...gatsby-theme-patternfly-org@4.0.8) (2020-05-04)
 
 
