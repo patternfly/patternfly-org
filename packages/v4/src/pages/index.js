@@ -72,7 +72,7 @@ const IndexPage = ({ location }) => {
             {aboutPatternFly}
           </AutoLinkHeader>
           <Text component={TextVariants.p} className="ws-mdx-p">
-            We think quality product experiences should be easy to build and easy to scale. So we provide the tools to make that happen. 
+            We think quality product experiences should be easy to build and easy to scale, so we provide the tools to make that happen. 
           </Text>
           <Text component={TextVariants.p} className="ws-mdx-p">
             From documentation and components to code examples and tutorials, PatternFly has it all—and our community of Flyers help make it better every day.
@@ -123,7 +123,7 @@ const IndexPage = ({ location }) => {
                 <div className="pf-u-pb-2xl">
                   <Text component={TextVariants.h2}>Build things your way</Text>
                   <Text component={TextVariants.p} className="ws-mdx-p">
-                    Components are like building blocks. Designed to be flexible and modular, you can mix and match to create a solution for almost any UI problem.
+                    Components are like building blocks. Designed to be flexible and modular, you can mix and match components to create a solution for almost any UI problem.
                   </Text>
                   <Text
                     aria-label="view components"
@@ -189,7 +189,7 @@ const IndexPage = ({ location }) => {
                   <FlexItem>
                     <Text component={TextVariants.h2}>Make it flexible.</Text>
                     <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
-                      We can’t be set in our ways. Open source thrives on variety, and our resources do too. Our components can be arranged in any number of ways, and our CSS variable system can be used for all kinds of customization.
+                      Open source thrives on variety, and our resources do, too. Our components can be arranged in any number of ways, and our CSS variable system can be used for all kinds of customization.
                     </Text>
                   </FlexItem>
                 </Flex>
