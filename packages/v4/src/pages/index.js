@@ -189,7 +189,7 @@ const IndexPage = ({ location }) => {
                   <FlexItem>
                     <Text component={TextVariants.h2}>Make it flexible.</Text>
                     <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
-                      Open source thrives on variety, and our resources do, too. Our components can be arranged in any number of ways, and our CSS variable system can be used for all kinds of customization.
+                      Open source thrives on variety, and our resources do too. Our components can be arranged in any number of ways, and our CSS variable system can be used for all kinds of customization.
                     </Text>
                   </FlexItem>
                 </Flex>
