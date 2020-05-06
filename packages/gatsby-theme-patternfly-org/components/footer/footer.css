@@ -38,10 +38,9 @@
   a:last-of-type {
   margin-right: 0;
 }
-@media (max-width: 992px) {
-  .ws-org-pfsite-l-footer-column .ws-org-pfsite-footer-menu-social-links {
-    margin-bottom: 16px;
-  }
+.ws-org-pfsite-l-footer-column .ws-org-pfsite-footer-menu-social-links {
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 @media (max-width: 768px) {
   .ws-org-pfsite-l-footer-column .ws-org-pfsite-footer-menu-social-links {

@@ -161,11 +161,7 @@ export class Footer extends React.Component {
                     <Brand src={logo} alt="Patternfly Logo" />
                   </a>
                   <p className="ws-org-pfsite-footer-menu-about-description">
-                    PatternFly is an open source design system built to drive
-                    consistency and unify teams. We provide tools like design
-                    documentation, components, and code examples to make it
-                    possible for anyone to design and build responsive,
-                    accessible web applications.
+                    PatternFly is an open source design system built to drive consistency and unify teams. From documentation and components to code examples and tutorials, PatternFly is a place where design and development can thrive. We’re on a mission to help teams build consistent, accessible, and scalable enterprise product experiences—the open source way.
                   </p>
                 </GridItem>
                 <GridItem className="ws-org-pfsite-footer-menu-social-links pf-u-px-xl">

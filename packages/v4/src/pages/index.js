@@ -18,11 +18,13 @@ import orb from '../images/pf4-logo.svg';
 import accessible from '../images/accessible.svg';
 import modular from '../images/modular.svg';
 import scale from '../images/scale.svg';
+import consistent from '../images/consistent.svg';
+import open from '../images/open.svg';
 import { AutoLinkHeader } from 'gatsby-theme-patternfly-org/components/autoLinkHeader/autoLinkHeader';
 import './homepage.css';
 
-const aboutPatternFly = 'About PatternFly';
-const patternFlyPrinciples = 'PatternFly principles';
+const aboutPatternFly = `Hello, we're PatternFly.`;
+const patternFlyPrinciples = 'Flyer fundamentals';
 
 const IndexPage = ({ location }) => {
   return (
@@ -36,7 +38,7 @@ const IndexPage = ({ location }) => {
           <TextContent>
             <img src={orb} alt="PatternFly logo" className="fadeInDown animated fadeInOne" />
             <Title headingLevel="h1" size="4xl" className="pf-m-white pf4-site-c-hero fadeIn animated fadeInTwo">
-              Build better experiences with repeatable, scalable design.
+              Build scalable experiences in the open.
             </Title>
             <Title size="xl" headingLevel="h2" className="pf-m-white pf-u-mb-md pf-u-mb-3xl-on-md fadeInUp animated fadeInThree">
               PatternFly is an open source design system built to drive consistency and unify teams.
@@ -50,14 +52,14 @@ const IndexPage = ({ location }) => {
               >
                 Get started
               </Link>
-              <a
-                href="#about-patternfly"
+              <Link
+                to="/contribute/about"
                 type="button"
                 className="pf-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour"
-                aria-label="Why PatternFly"
+                aria-label="Contribute to PatternFly"
               >
-                Why PatternFly
-              </a>
+                Contribute
+              </Link>
             </div>
           </TextContent>
         </GridItem>
@@ -70,8 +72,10 @@ const IndexPage = ({ location }) => {
             {aboutPatternFly}
           </AutoLinkHeader>
           <Text component={TextVariants.p} className="ws-mdx-p">
-            We provide tools like design documentation, components, and code examples to make it possible for anyone to
-            design and build responsive, accessible user experiences.
+            We think quality product experiences should be easy to build and easy to scale, so we provide the tools to make that happen. 
+          </Text>
+          <Text component={TextVariants.p} className="ws-mdx-p">
+            From documentation and components to code examples and tutorials, PatternFly has it all—and our community of Flyers help make it better every day.
           </Text>
         </GridItem>
       </Grid>
@@ -89,10 +93,9 @@ const IndexPage = ({ location }) => {
             >
               <TextContent>
                 <div className="pf-u-pb-2xl">
-                  <Text component={TextVariants.h2}>Make better decisions with clear guidance</Text>
+                  <Text component={TextVariants.h2}>We guide, you decide</Text>
                   <Text component={TextVariants.p} className="ws-mdx-p">
-                    Design guidelines supply the foundation of the system. Get acquainted with our approach to icons,
-                    color, content, and more.
+                    PatternFly’s foundation is made of design guidelines, so help is always there when you need it. Check out our approach to icons, color, content, and more.
                   </Text>
                   <Text
                     aria-label="view design guidelines"
@@ -104,10 +107,9 @@ const IndexPage = ({ location }) => {
                   </Text>
                 </div>
                 <div className="pf-u-pb-2xl">
-                  <Text component={TextVariants.h2}>Stay aligned with layouts</Text>
+                  <Text component={TextVariants.h2}>Lay it out</Text>
                   <Text component={TextVariants.p} className="ws-mdx-p">
-                    A layout provides a fully responsive page structure that keeps your components organized and aligned
-                    regardless of screen size.
+                    A layout provides a fully responsive page structure that keeps your components organized and aligned regardless of screen size.
                   </Text>
                   <Text
                     aria-label="view layouts"
@@ -119,10 +121,9 @@ const IndexPage = ({ location }) => {
                   </Text>
                 </div>
                 <div className="pf-u-pb-2xl">
-                  <Text component={TextVariants.h2}>Start building with components</Text>
+                  <Text component={TextVariants.h2}>Build things your way</Text>
                   <Text component={TextVariants.p} className="ws-mdx-p">
-                    Components are like building blocks. Designed to be flexible and modular, you can mix and match to
-                    create a solution for almost any UI problem.
+                    Components are like building blocks. Designed to be flexible and modular, you can mix and match components to create a solution for almost any UI problem.
                   </Text>
                   <Text
                     aria-label="view components"
@@ -134,10 +135,9 @@ const IndexPage = ({ location }) => {
                   </Text>
                 </div>
                 <div className="pf-u-pb-2xl">
-                  <Text component={TextVariants.h2}>Get inspired with demos</Text>
+                  <Text component={TextVariants.h2}>See it in action</Text>
                   <Text component={TextVariants.p} className="ws-mdx-p">
-                    Explore working examples of common UI elements like forms to see how components and layouts can be
-                    combined to solve common design problems.
+                    Components are better together. Demos show how multiple components can be used in a single design. They also provide  some useful starter code, so the days of creating complex layouts from scratch are over.
                   </Text>
                   <Text
                     aria-label="view demos"
@@ -162,10 +162,13 @@ const IndexPage = ({ location }) => {
     </PageSection>
     <PageSection variant={PageSectionVariants.darker} className="pf4-c-background-image-principles ws-homepage-main-section">
       <Grid gutter="md" className="pf-u-py-3xl">
-        <GridItem span={12}>
+        <GridItem sm={12} md={6} mdOffset={3} className="pf-u-text-align-center">
           <TextContent>
             <Text component={TextVariants.h1} className="pf-u-mb-4xl pf-m-white pf-u-text-align-center" id="patternfly-principles">
               {patternFlyPrinciples}
+            </Text>
+            <Text component={TextVariants.p} className="ws-mdx-p">
+              Every Flyer is unique, with different ideas and opinions. But there are some things we all agree on. These are our Flyer fundamentals.
             </Text>
           </TextContent>
         </GridItem>
@@ -184,11 +187,9 @@ const IndexPage = ({ location }) => {
                     />
                   </FlexItem>
                   <FlexItem>
-                    <Text component={TextVariants.h2}>Modular &amp; flexible</Text>
+                    <Text component={TextVariants.h2}>Make it flexible.</Text>
                     <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
-                      Arrange self-contained components in any number of ways to build a variety of applications and
-                      interfaces. You can also use the CSS variable system to customize styles across a website or
-                      interface.
+                      Open source thrives on variety, and our resources do too. Our components can be arranged in any number of ways, and our CSS variable system can be used for all kinds of customization.
                     </Text>
                   </FlexItem>
                 </Flex>
@@ -203,10 +204,26 @@ const IndexPage = ({ location }) => {
                   />
                   </FlexItem>
                   <FlexItem>
-                    <Text component={TextVariants.h2}>Accessible</Text>
+                    <Text component={TextVariants.h2}>Make it accessible.</Text>
                     <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
-                      Take advantage of accessible markup and guidance. Because building applications that work for
-                      everyone, regardless of ability, is just the right thing to do.
+                      Building applications that work for everyone, regardless of ability, is just the right thing to do. Our accessible markup and guidance is geared towards creating experiences that people of all abilities can enjoy.
+                    </Text>
+                  </FlexItem>
+                </Flex>
+              </GridItem>
+              <GridItem span={12} lg={11} className="ws-pf-principle">
+                <Flex>
+                  <FlexItem>
+                    <img
+                      className="ws-principles-img"
+                      src={consistent}
+                      alt="PatternFly 4 consistent"
+                    />
+                    </FlexItem>
+                    <FlexItem>
+                    <Text component={TextVariants.h2}>Make it consistent.</Text>
+                    <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
+                      The best product experiences stem from teamwork. Our clear guidelines and tools help streamline communication so that all teams can create unified applications and interfaces.
                     </Text>
                   </FlexItem>
                 </Flex>
@@ -221,10 +238,26 @@ const IndexPage = ({ location }) => {
                     />
                     </FlexItem>
                     <FlexItem>
-                    <Text component={TextVariants.h2}>Built for teams, built to scale</Text>
+                    <Text component={TextVariants.h2}>Make it scalable.</Text>
                     <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
-                      Unify design and development with a set of clear guidelines and tools to help streamline communication
-                      and build more consistent user experiences.
+                    Helping teams work productively at scale is at the heart of everything we do. Our components are designed for enterprise IT applications used in businesses of all sizes.
+                    </Text>
+                  </FlexItem>
+                </Flex>
+              </GridItem>
+              <GridItem span={12} lg={11} className="ws-pf-principle">
+                <Flex>
+                  <FlexItem>
+                    <img
+                      className="ws-principles-img"
+                      src={open}
+                      alt="PatternFly 4 open"
+                    />
+                    </FlexItem>
+                    <FlexItem>
+                    <Text component={TextVariants.h2}>Make it open.</Text>
+                    <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
+                      We're focused on shaping the future of open source design and development, and we can't do this alone. So we work as an open source community, where everyone is free to share their ideas and contribute their work.
                     </Text>
                   </FlexItem>
                 </Flex>
