@@ -5,8 +5,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [4.0.13](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.0.12...patternfly-org-4@4.0.13) (2020-05-18)
 
-**Note:** Version bump only for package patternfly-org-4
-
 
 
 
