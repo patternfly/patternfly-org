@@ -42,6 +42,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+## [1.4.21](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.20...gatsby-theme-patternfly-org@1.4.21) (2020-05-11)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [1.4.20](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.19...gatsby-theme-patternfly-org@1.4.20) (2020-05-11)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
 ## [1.4.20](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.19...gatsby-theme-patternfly-org@1.4.20) (2020-05-11)
 
 **Note:** Version bump only for package gatsby-theme-patternfly-org
