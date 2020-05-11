@@ -142,14 +142,14 @@ export const SideNavLayout = ({
   const getDropdownItem = version => (
     <DropdownItem
       key={version.name}
-      href={location.pathname.replace(
-        location.pathname.split('/')[1],
-        version.latest
-          ? 'v4'
-          : version.name
-        )}
       component={
-        <a className="pf-c-nav__link">
+        <a
+          className="pf-c-nav__link"
+          href={location.pathname.replace(
+            location.pathname.split('/')[1],
+            version.latest ? 'v4' : version.name
+          )}
+        >
           Release {version.name}
         </a>
       } />
