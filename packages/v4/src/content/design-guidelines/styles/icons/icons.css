@@ -45,6 +45,19 @@
   text-align: center;
 }
 
+.ws-icon-size-examples .ws-icons-appLauncher .pf-c-app-launcher__menu {
+  position: static;
+}
+
+.ws-icon-size-examples .ws-icons-appLauncher {
+  width: 100%;
+}
+
+.ws-icon-size-examples .ws-icons-appLauncher .pf-c-app-launcher__toggle,
+.ws-icon-size-examples .ws-icons-appLauncher .pf-c-app-launcher__group:first-child {
+  display: none;
+}
+
 .ws-icon-size-examples .pf-c-card__body:first-child {
   padding: 16px;
   padding-top: 8px;

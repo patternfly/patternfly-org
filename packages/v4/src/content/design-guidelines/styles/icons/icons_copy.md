@@ -2,7 +2,7 @@
 title: Icons
 section: styles
 ---
-import { Alert, Button, Card, CardBody, Divider, Dropdown, DropdownToggle, EmptyState, EmptyStateIcon, Flex, FlexItem, FlexModifiers, Grid, GridItem, SimpleList, SimpleListItem, SimpleListGroup, Title } from '@patternfly/react-core';
+import { Alert, ApplicationLauncher, ApplicationLauncherGroup, ApplicationLauncherItem, Button, Card, CardBody, Divider, Dropdown, DropdownToggle, EmptyState, EmptyStateIcon, Flex, FlexItem, FlexModifiers, Grid, GridItem, SimpleList, SimpleListItem, SimpleListGroup, Title } from '@patternfly/react-core';
 import { CaretDownIcon, CheckCircleIcon, TimesCircleIcon, FilterIcon, StarIcon } from '@patternfly/react-icons';
 import { Icons } from 'gatsby-theme-patternfly-org/components/icons/icons';
 import { IconRecommendations } from './IconRecommendations';
@@ -64,51 +64,33 @@ import './icons.css';
   <GridItem xl={6} lg={12}>
     <Card className="ws-icon-size-examples">
       <CardBody>
-        <Grid>
-          <GridItem span={12}>
-            <p><b>Small icons</b></p>
-          </GridItem>
-          <GridItem span={4}>
+        <p><b>Small icons</b></p>
+        <Flex  breakpointMods={[{modifier: FlexModifiers['align-items-flex-start']}]}>
+          <FlexItem>
             <Dropdown
-              toggle={<DropdownToggle id="toggle-id" iconComponent={CaretDownIcon}>Dropdown</DropdownToggle>}
+              toggle={<DropdownToggle id="toggle-id">Dropdown</DropdownToggle>}
             />
-          </GridItem>
-          <GridItem span={8}>
-            <Card>
-              <CardBody>
-                <SimpleList>
-                  <SimpleListGroup title="Favorites">
-                    <SimpleListItem>OpenShift <StarIcon /></SimpleListItem>
-                    <SimpleListItem>Github <StarIcon /></SimpleListItem>
-                  </SimpleListGroup>
-                </SimpleList>
-              </CardBody>
-            </Card>
-          </GridItem>
-          <GridItem span={12}>
-            <p><b>Medium icons</b></p>
-          </GridItem>
-          <GridItem span={12}>
-            <Alert variant="default" isInline title="Default inline alert title"/>
-          </GridItem>
-          <GridItem span={12}>
-            <p><b>Large icons</b></p>
-          </GridItem>
-          <GridItem span={12}>
-            <Alert variant="success" title="Success alert title 4" />
-          </GridItem>
-          <GridItem span={12}>
-            <p><b>X-large icons</b></p>
-          </GridItem>
-          <GridItem span={12}>
-            <EmptyState variant={EmptyStateVariant.lg}>
-              <EmptyStateIcon icon={CubesIcon} />
-              <Title headingLevel="h5" size="xl">
-                This is a large empty state
-              </Title>
-            </EmptyState>
-          </GridItem>
-        </Grid>
+          </FlexItem>
+          <FlexItem breakpointMods={[{modifier: FlexModifiers.grow}]}>
+            <ApplicationLauncher isOpen={true} favorites={['openshift']} isGrouped className="ws-icons-appLauncher" onFavorite={()=>null} items={[
+              <ApplicationLauncherGroup label="Favorites" key="Favorites">
+                <ApplicationLauncherItem isFavorite key="item 1" id="openshift">OpenShift</ApplicationLauncherItem>
+                <ApplicationLauncherItem key="item 2" id="github">Github</ApplicationLauncherItem>
+              </ApplicationLauncherGroup>
+            ]} />
+          </FlexItem>
+        </Flex>
+        <p><b>Medium icons</b></p>
+        <Alert variant="default" isInline title="Default inline alert title"/>
+        <p><b>Large icons</b></p>
+        <Alert variant="success" title="Success alert title 4" />
+        <p><b>X-large icons</b></p>
+        <EmptyState variant={EmptyStateVariant.lg}>
+          <EmptyStateIcon icon={CubesIcon} />
+          <Title headingLevel="h5" size="xl">
+            This is a large empty state
+          </Title>
+        </EmptyState>
       </CardBody>
     </Card>
   </GridItem>
