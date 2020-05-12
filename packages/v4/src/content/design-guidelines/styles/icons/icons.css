@@ -1,0 +1,62 @@
+.pf-c-divider.ws-icons-divider {
+  margin: 48px 0;
+}
+
+.ws-icon-recommendations tbody {
+  vertical-align: top;
+}
+
+.ws-icons-recommendations .ws-recommendations-entry:not(:last-child) {
+  padding-bottom: 16px;
+}
+
+.ws-icons-recommendations .ws-recommendations-icon {
+  width: 24px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+#icon-sizes,
+#icon-colors,
+#all-icons,
+#updated-icon-recommendations {
+  margin-bottom: 24px;
+}
+
+#ws-icons-table td[column="Icon"] svg {
+  cursor: pointer;
+}
+
+#all-icons ~ .ws-p > .ws-code {
+  margin-left: 8px;
+}
+
+.ws-icons-gridtext .ws-icon-sizes-sm {
+  margin-top: 24px;
+}
+
+.ws-icons-gridtext .ws-icon-sizes .ws-p {
+  margin-bottom: 8px;
+}
+
+.ws-icons-gridtext .ws-icon-sizes .ws-icon-size {
+  width: 54px;
+  margin-right: 24px;
+  text-align: center;
+}
+
+.ws-icon-size-examples .pf-c-card__body:first-child {
+  padding: 16px;
+  padding-top: 8px;
+}
+
+.ws-icon-size-examples .ws-p {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 992px) {
+  #iconsSearch {
+    width: 400px;
+  }
+}
