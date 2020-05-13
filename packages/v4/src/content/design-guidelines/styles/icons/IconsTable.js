@@ -28,16 +28,18 @@ import {
 } from '@patternfly/react-table';
 import { iconsData } from './iconsData';
 import { saveAs } from 'file-saver';
+import { css } from '@patternfly/react-styles';
+import styles from '@patternfly/react-styles/css/components/Table/table';
 
 export class IconsTable extends React.Component {
   state = {
     searchValue: '',
     columns: [
       'Icon',
-      { title: 'Name', transforms: [sortable] },
+      { title: 'Name', transforms: [sortable], props: { className: css(styles.modifiers.fitContent)} },
       'Style',
       { title: 'Type', transforms: [sortable] },
-      'React',
+      { title: 'React', props: { className: css(styles.modifiers.fitContent)} },
       { title: 'Contextual usage', transforms: [sortable] }
     ],
     sortBy: {}
