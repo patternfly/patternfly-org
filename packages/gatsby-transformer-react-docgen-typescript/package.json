@@ -9,7 +9,7 @@
   "author": "Red Hat",
   "license": "MIT",
   "dependencies": {
-    "react-docgen": "^5.1.0"
+    "react-docgen": "^5.3.0"
   },
   "peerDependencies": {
     "gatsby": ">=2"
