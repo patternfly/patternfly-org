@@ -38,9 +38,16 @@ Use text input to gather free-form text from a user.
 
 For more information about how to provide help content, see  the [forms design guidelines](/design-guidelines/usage-and-behavior/forms#user-help).
 
+### Input groups
+
+Input groups allow users to group multiple input types into one control. An example of this is adding buttons to one or both sides of a text input, including in a search field and an email input field. View more examples in the [input group documentation](/documentation/react/components/inputgroup).
+
+<img src="./img/input-group.png" alt="Example of input groups" width="496"/>
+
 ### Errors and validation
 Wherever possible, use inline errors to notify users where there is an issue with their input. Inline errors help should be short and help users quickly identify and understand what they need to fix and why.
 
 <img src="./img/error.png" alt="error and validation example" width="320"/>
 
 For more information about how to provide errors and validation, see  the [forms design guidelines](/design-guidelines/usage-and-behavior/forms#errors-and-validation).
+
