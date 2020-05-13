@@ -47,7 +47,7 @@ A toggle group can be used when you want to collapse a set of items into an over
 ![Toolbar with expanded toggle group](./img/mobile-expanded.png)
 
 ### Overflow menus
-An overflow menu is a component that can be used in a toolbar (or elsewhere) to group a number of actions that should be collapsed into a kabob at a certain breakpoint. In the toolbar, the overflow menu will commonly be used to group a set of actions that are intended to collapse into the kabob at smaller viewport sizes.
+An overflow menu is a component that can be used in a toolbar (or elsewhere) to group a number of actions that should be collapsed into a kebab at a certain breakpoint. In the toolbar, the overflow menu will commonly be used to group a set of actions that are intended to collapse into the kebab at smaller viewport sizes.
 
 ![toolbar with overflow menu](./img/basic-toolbar-nocallout.png)
 

@@ -86,7 +86,7 @@ _Example of link buttons in an empty state_
 
 #### Icon button ####
 
-Icon buttons are useful in places where space is limited. For example, if you have too many actions within a menu, you could use a kabob icon to indicate more actions, or an export icon for exporting data. You can also use this button type for actions that are commonly associated with icons, like an exit icon to close a window or a hamburger icon to open a menu.
+Icon buttons are useful in places where space is limited. For example, if you have too many actions within a menu, you could use a kebab icon to indicate more actions, or an export icon for exporting data. You can also use this button type for actions that are commonly associated with icons, like an exit icon to close a window or a hamburger icon to open a menu.
 
 For example, this toolbar uses an export icon as an action button due to limited space.
 
@@ -177,7 +177,7 @@ _Action group spacing_
 
 ## Buttons and overflow menus
 
-There are cases where you will have multiple buttons next to each other, like in a toolbar. When the space shrinks (e.g., switching from desktop to mobile view), you can have the buttons collapse into a kabob overflow menu. Additionally, you can choose to make the primary action persist or have all options collapse into the kabob.
+There are cases where you will have multiple buttons next to each other, like in a toolbar. When the space shrinks (e.g., switching from desktop to mobile view), you can have the buttons collapse into a kebab overflow menu. Additionally, you can choose to make the primary action persist or have all options collapse into the kebab.
 
 _Buttons appear in the toolbar_
 
