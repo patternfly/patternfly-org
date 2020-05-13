@@ -108,15 +108,19 @@ import './icons.css';
 
 <p>If you’re a designer, these icons are the same set as the ones in the <a href="https://www.patternfly.org/v4/get-started/designers">PatternFly Sketch Design Kit</a>. It is possible to use any FontAwesome icon as long it follows the guidelines above.</p>
 
-<p>If you’re looking to copy HTML for an icon:</p>
-<p>Use this for 'pficon' icons: <code>&lt;i className="pf-icon [insert-icon-name]"&gt;&lt;/i&gt;</code></p>
-<p>Use this for 'fa' solid icons: <code>&lt;i className="fas [insert-icon-name]"&gt;&lt;/i&gt;</code></p>
-<p>Use this for 'fa' regular icons: <code>&lt;i className="far [insert-icon-name]"&gt;&lt;/i&gt;</code></p>
+<p>If you’re looking to copy HTML for an icon:
+<br/>
+Use this for 'pficon' icons: <code>&lt;i className="pf-icon [insert-icon-name]"&gt;&lt;/i&gt;</code>
+<br />
+Use this for 'fa' solid icons: <code>&lt;i className="fas [insert-icon-name]"&gt;&lt;/i&gt;</code>
+<br />
+Use this for 'fa' regular icons: <code>&lt;i className="far [insert-icon-name]"&gt;&lt;/i&gt;</code>
+<br />
+<small>Note: Be sure to read <a href="/get-started/developers#using-styles" className="pf-m-link">how to get started with icons</a> when using 'fa' regular icons</small></p>
 
-<small>Note: Be sure to read <a href="/get-started/developers#using-styles" className="pf-m-link">how to get started with icons</a> when using 'fa' regular icons</small>
+<p>If you're looking to copy React for an icon:
 
-If you're looking to copy React for an icon:
-Use this for 'pficon' icons: <code>import { [insert-icon-name] } from '@patternfly/react-icons'</code>
+Use this for 'pficon' icons: <code>import { [insert-icon-name] } from '@patternfly/react-icons'</code></p>
 
 <!-- <Icons /> -->
 <IconsTable />
