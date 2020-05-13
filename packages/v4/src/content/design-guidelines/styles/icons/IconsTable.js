@@ -84,26 +84,31 @@ export class IconsTable extends React.Component {
     const SearchIcon = icons.SearchIcon;
     const searchRE = new RegExp(searchValue, 'i');
     const iconRows = iconsData
-      .filter(({ React_name: ReactName }) => icons[ReactName])
       .map(({Style, Name, React_name: ReactName, Type, Contextual_usage}) => {
-      const Icon = icons[ReactName] ? icons[ReactName] : undefined;
-      return {
-        cells: [
-          {
-            title: Icon ? <Tooltip content="Download SVG" position={TooltipPosition.bottom}><Icon onClick={this.onDownloadSvg} /></Tooltip> : ReactName,
-            props: { column: 'Icon' }
-          },
-          Name,
-          Style,
-          Type,
-          ReactName,
-          {
-            title: Contextual_usage,
-            props: { column: 'Contextual usage' }
-          }
-        ]
-      }
-    });
+        const Icon = icons[ReactName];
+        return {
+          cells: [
+            {
+              title: <Tooltip content="Download SVG" position={TooltipPosition.bottom}><Icon onClick={this.onDownloadSvg} /></Tooltip>,
+              props: { column: 'Icon' }
+            },
+            {
+              title: Name,
+              props: { column: 'Name' }
+            },
+            Style,
+            {
+              title: Type,
+              props: { column: 'Type' }
+            },
+            ReactName,
+            {
+              title: Contextual_usage,
+              props: { column: 'Contextual usage' }
+            }
+          ]
+        }
+      });
 
     let filteredRows = iconRows.filter(row => {
       return row.cells.some(cell => {
@@ -115,11 +120,11 @@ export class IconsTable extends React.Component {
     })
 
     if (direction) {
-      const sortedRows = filteredRows.sort((a, b) => (
-        a.cells[index].title < b.cells[index].title
+      const sortedRows = filteredRows.sort((a, b) => {
+        return a.cells[index].title < b.cells[index].title
           ? -1
           : a.cells[index].title > b.cells[index].title
-            ? 1 : 0));
+            ? 1 : 0});
       filteredRows = direction === SortByDirection.asc ? sortedRows : sortedRows.reverse();
     }
     

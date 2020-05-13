@@ -31,7 +31,7 @@ export const iconsData = [
     "Style": "fas",
     "Name": "fa-angle-right",
     "React_name": "AngleRightIcon",
-    "Type": "Framework\n",
+    "Type": "Framework",
     "Contextual_usage": "Indicates expandable elements such as accordions, progressive disclosures, or expandable lists are currently collapsed. Clicking this will expand the element. \nAlso indicates the ability to navigate to the next page in a multipage data set."
   },
   {
@@ -51,14 +51,14 @@ export const iconsData = [
   {
     "Style": "fas",
     "Name": "fa-arrow-circle-down",
-    "React_name": "ArrowCircleDown",
+    "React_name": "ArrowCircleDownIcon",
     "Type": "Status",
     "Contextual_usage": "Represents status: an item (such as a VM) is down"
   },
   {
     "Style": "fas",
     "Name": "fa-arrow-circle-up",
-    "React_name": "ArrowCircleUp",
+    "React_name": "ArrowCircleUpIcon",
     "Type": "Status",
     "Contextual_usage": "Represents status: an item (such as a VM) is up"
   },
@@ -499,14 +499,14 @@ export const iconsData = [
   {
     "Style": "pf-icon",
     "Name": "pf-icon-openshift",
-    "React_name": "OpenShiftIcon",
+    "React_name": "OpenshiftIcon",
     "Type": "Brands",
     "Contextual_usage": "Represents brand: OpenShift"
   },
   {
     "Style": "pf-icon",
     "Name": "pf-icon-openstack",
-    "React_name": "OpenStackIcon",
+    "React_name": "OpenstackIcon",
     "Type": "Brands",
     "Contextual_usage": "Represents brand: OpenStack"
   },
@@ -702,7 +702,7 @@ export const iconsData = [
   {
     "Style": "fab",
     "Name": "fa-google",
-    "React_name": "Googleicon",
+    "React_name": "GoogleIcon",
     "Type": "Brands",
     "Contextual_usage": "Represents brand: Google"
   },
