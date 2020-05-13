@@ -674,7 +674,7 @@ export const iconsData = [
   {
     "Style": "far",
     "Name": "fa-window-restore",
-    "React_name": "WindowRestoreIcon",
+    "React_name": "OutlinedWindowRestoreIcon",
     "Type": "Action",
     "Contextual_usage": "Indicates the ability to open link in a new window"
   },
