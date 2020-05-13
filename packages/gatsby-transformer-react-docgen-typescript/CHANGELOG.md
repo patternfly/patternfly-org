@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.2](https://github.com/patternfly/patternfly-org/compare/gatsby-transformer-react-docgen-typescript@4.0.1...gatsby-transformer-react-docgen-typescript@4.0.2) (2020-05-13)
+
+
+### Bug Fixes
+
+* **react-docgen:** handle multiple exported components ([#1843](https://github.com/patternfly/patternfly-org/issues/1843)) ([55ae164](https://github.com/patternfly/patternfly-org/commit/55ae16457b07243a44f3e68b3be40c9759a01985))
+
+
+
+
+
 ## [4.0.1](https://github.com/patternfly/patternfly-org/compare/gatsby-transformer-react-docgen-typescript@0.2.7...gatsby-transformer-react-docgen-typescript@4.0.1) (2020-04-23)
 
 **Note:** Version bump only for package gatsby-transformer-react-docgen-typescript
