@@ -37,6 +37,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+## [3.52.35](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.52.34...patternfly-org-4@3.52.35) (2020-05-13)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
 ## [3.52.34](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@3.52.33...patternfly-org-4@3.52.34) (2020-05-13)
 
 **Note:** Version bump only for package patternfly-org-4
