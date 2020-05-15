@@ -49,6 +49,10 @@
   position: static;
 }
 
+.ws-icon-size-examples .ws-login-icons {
+  max-width: 100%;
+}
+
 .ws-icon-size-examples .ws-icons-appLauncher {
   width: 100%;
 }

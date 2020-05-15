@@ -82,13 +82,7 @@ import './icons.css';
         <p><b>Medium icons</b></p>
         <Alert variant="default" isInline title="Default inline alert title"/>
         <p><b>Large icons</b></p>
-        <Flex>
-          <FlexItem><GoogleIcon size="lg"/></FlexItem>
-          <FlexItem><GithubIcon size="lg"/></FlexItem>
-          <FlexItem><DropboxIcon size="lg"/></FlexItem>
-          <FlexItem><FacebookIcon size="lg"/></FlexItem>
-          <FlexItem><GitlabIcon size="lg"/></FlexItem>
-        </Flex>
+        <img src="login_icons.png" alt="Log in icons" className="ws-login-icons" />
         <p><b>X-large icons</b></p>
         <EmptyState variant={EmptyStateVariant.lg}>
           <EmptyStateIcon icon={CubesIcon} />
