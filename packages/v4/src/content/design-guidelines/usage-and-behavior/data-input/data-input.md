@@ -50,7 +50,7 @@ You can use headings to label a group of checkboxes. The placement of headings w
 
 <img src="./img/group-checkbox.png" alt="Example of a group of checkboxes" width="443"/>
 
-You also have the option to nest other controls underneath a checkbox. The nested options would be enabled or disabled when the user selects or deselects a checkbox.
+You also have the option to use progressive disclosure by nesting other controls underneath a checkbox. The nested options would be enabled or disabled when the user selects or deselects a checkbox.
 
 <img src="./img/nested-controls-checkbox.png" alt="Example of nested control checkboxes" width="459"/>
 
@@ -84,7 +84,8 @@ Radio buttons allow users to select **one item** from a list of options.
 * A default option should always be selected for the user. If the user selects a different option, the default option should be automatically deselected.
 * To enable the user to select a null option, provide a radio button with the label “None.”
 * Use radio buttons if you’re presenting 5 or fewer options to the user. If you’re presenting more than 5 options, use a [single select list](#single-select). 
-* If space is limited, you can also use radio buttons to nest other controls.
+* If space is limited, you can also use progressive disclosure by nesting other controls underneath a radio button.
+
 
     <img src="./img/nested-controls-radio.png" alt="Example of nested control with radio buttons" width="465"/>
 
@@ -115,7 +116,7 @@ Checkbox select lists allow users to select one or more options from a known lis
 <img src="./img/checkbox-select.png" alt="Example of checkbox select in a toolbar" width="585"/>
 
 ### Multiple select 
-Multiple select lists allow users to select one or more options from a list, with the selected options marked with a blue check. It differs from the checkbox select in that each option selected by the user appears in the top display area as chips. Once the number of selections reaches a certain number (which you can decide on), the regular chips will be replaced by a gray chip indicating how many more items were selected (for example, 1 more). 
+Multiple select lists allow users to select one or more options from a list, with the selected options marked with a blue check. It differs from the checkbox select in that each option selected by the user appears in the top display area as chips. Once the number of selections reaches a certain number (the default is 3, but you may choose to change this based on your use case), the regular chips will be replaced by a gray chip indicating how many more items were selected (for example, 1 more). 
 
 <img src="./img/selectlist-multi.png" alt="Example of multiple select list" width="585"/>
 
