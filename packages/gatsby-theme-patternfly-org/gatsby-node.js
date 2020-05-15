@@ -356,8 +356,6 @@ exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
     babelVendorRule.use[0].options.cacheDirectory = '.cache/babel-loader';
     babelVendorRule.use[0].options.cacheCompression = false;
   } else if (stage === 'develop') {
-    // Speed up dev environment
-    config.devtool = 'cheap-source-map';
     config.optimization = {
       removeAvailableModules: false,
       removeEmptyChunks: false,

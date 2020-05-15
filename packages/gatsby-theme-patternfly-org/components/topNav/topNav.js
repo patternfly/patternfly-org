@@ -5,8 +5,8 @@ import './topNav.css';
 
 export const TopNav = ({ location, context, navItems }) => {
   return (
-    <Nav aria-label="Nav">
-      <NavList className="ws-top-nav-list" variant="horizontal">
+    <Nav aria-label="Nav" variant="horizontal">
+      <NavList>
         {navItems.map(({ path, text, contexts }) => (
           <NavItem
             key={path}

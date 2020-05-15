@@ -11,7 +11,17 @@ exports.onRenderBody = ({ setHtmlAttributes, setPostBodyComponents }) => {
     className: 'pf-m-redhat-font'
   });
   setPostBodyComponents([
-    <script key="algogia-script" type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" />,
-    <link key="algogia-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    <script
+      key="algogia-script"
+      crossOrigin="true"
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
+    />,
+    <link
+      key="algogia-css"
+      crossOrigin="true"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" 
+    />
   ]);
 }
