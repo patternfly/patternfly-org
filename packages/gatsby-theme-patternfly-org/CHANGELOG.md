@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.10](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.21...gatsby-theme-patternfly-org@4.0.10) (2020-05-15)
+
+
+### Bug Fixes
+
+* **css:** hasGutter updated ([#1824](https://github.com/patternfly/patternfly-org/issues/1824)) ([d651ea5](https://github.com/patternfly/patternfly-org/commit/d651ea5e95044fbcedd13bed6d0bc70c9d872504))
+* **css:** remove small lines in sideNav and footer ([#1829](https://github.com/patternfly/patternfly-org/issues/1829)) ([94f4c3f](https://github.com/patternfly/patternfly-org/commit/94f4c3fe9b67edbd74acac426538d5d19f27d521))
+* **css:** side-nav-link colors ([#1833](https://github.com/patternfly/patternfly-org/issues/1833)) ([2f33a27](https://github.com/patternfly/patternfly-org/commit/2f33a27ad580f11fbbc61b27a4a99f7b60edf52d))
+* **css:** side-nav-link colors ([#1834](https://github.com/patternfly/patternfly-org/issues/1834)) ([fbe6752](https://github.com/patternfly/patternfly-org/commit/fbe675241b1b4bdaea8226e5a53aa3866118ebc3))
+* **css-variables:** remove font type temporarily ([#1831](https://github.com/patternfly/patternfly-org/issues/1831)) ([517f23a](https://github.com/patternfly/patternfly-org/commit/517f23aa2916e8ce9bda7f0fb10d15a1ad5f8da7))
+
+
+### Performance Improvements
+
+* **webpack:** tweak babel-loader include/excludes ([#1822](https://github.com/patternfly/patternfly-org/issues/1822)) ([b5aaf36](https://github.com/patternfly/patternfly-org/commit/b5aaf36fe8a40e2673b00f85b0dd6a15ca0a6cd5))
+
+
+
+
+
 ## [1.4.21](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@1.4.20...gatsby-theme-patternfly-org@1.4.21) (2020-05-11)
 
 **Note:** Version bump only for package gatsby-theme-patternfly-org
