@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardHead, CardHeader, CardBody, CardFooter, Button } from "@patternfly/react-core";
+import { Card, CardTitle, CardHeader, CardBody, CardFooter, Button } from "@patternfly/react-core";
 import { ArrowRightIcon, CubesIcon, ClockIcon, RunningIcon, PuzzlePieceIcon, ChartBarIcon } from '@patternfly/react-icons';
 import { NoPrefixLink } from '../noPrefixLink/noPrefixLink';
 import { Location } from '@reach/router';
@@ -26,7 +26,7 @@ export const TrainingCard = ({
   katacodaId
 }) => (
   <Card className="ws-org-training-card" isCompact>
-    <CardHead>
+    <CardHeader>
       <Card className="small-card-icon">
         {getTrainingIcon(trainingType)}
       </Card>
@@ -34,10 +34,10 @@ export const TrainingCard = ({
         <RunningIcon className={`level-${level}`} />
         {capitalize(level)}
       </div>
-    </CardHead>
-    <CardHeader>
-      {title}
     </CardHeader>
+    <CardTitle>
+      {title}
+    </CardTitle>
     <CardBody>
       <div className="pf-org-card-body__time">
         <ClockIcon />

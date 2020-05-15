@@ -4,23 +4,36 @@
  *
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
-import { Page, PageHeader, PageSidebar, Toolbar, ToolbarItem, Form, TextInput, Brand, Dropdown, DropdownToggle, DropdownItem, DropdownGroup, Divider } from '@patternfly/react-core';
+import {
+  Page,
+  PageHeader,
+  PageSidebar,
+  PageHeaderTools,
+  PageHeaderToolsItem,
+  Form,
+  TextInput,
+  Brand,
+  Dropdown,
+  DropdownToggle,
+  DropdownItem,
+  DropdownGroup,
+  Divider
+} from '@patternfly/react-core';
 import { SearchIcon, CaretDownIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
 import { SideNav, TopNav,  Banner, Footer, GdprBanner } from '../../components';
 import staticVersions from 'gatsby-theme-patternfly-org/versions.json';
 import logo from '../logo.svg';
 import './sideNavLayout.css';
 
-// ParityComponent: aboutmodal <=> aboutmodalbox
 export const SideNavLayout = ({
   children,
   location,
   context,
-  parityComponent,
+  parityComponent, // aboutmodal <=> aboutmodalbox
   hideSideNav = false,
   showBanner = false,
   showGdprBanner = false,
@@ -136,8 +149,7 @@ export const SideNavLayout = ({
     <DropdownToggle
       className={`ws-org-version-toggle${isDropdownOpen ? '-expanded': ''}`}
       onToggle={() => setDropdownOpen(!isDropdownOpen)}
-      iconComponent={CaretDownIcon}
-      >
+    >
       Release {initialVersion.name}
     </DropdownToggle>
   );
@@ -145,14 +157,12 @@ export const SideNavLayout = ({
     <DropdownItem
       key={version.name}
       component={
-        <a
-          className="pf-c-nav__link"
-          href={location.pathname.replace(
+        <a href={location.pathname.replace(
             location.pathname.split('/')[1],
             version.latest ? 'v4' : version.name
           )}
         >
-          Release {version.name}
+          {`Release ${version.name}`}
         </a>
       } />
   );
@@ -178,10 +188,10 @@ export const SideNavLayout = ({
     </DropdownItem>
   ];
 
-  const PageToolbar = pageSource === 'org'
+  const PageTools = pageSource === 'org'
     ? (
-      <Toolbar>
-        <ToolbarItem>
+      <PageHeaderTools>
+        <PageHeaderToolsItem>
           <Dropdown
             className="ws-org-version-switcher"
             onSelect={() => setDropdownOpen(!isDropdownOpen)}
@@ -189,8 +199,8 @@ export const SideNavLayout = ({
             isOpen={isDropdownOpen}
             dropdownItems={dropdownItems}
           />
-        </ToolbarItem>
-        <ToolbarItem>
+        </PageHeaderToolsItem>
+        <PageHeaderToolsItem>
           {/* We can afford to use style tags because this is only on the site ONCE */}
           <Form
             onSubmit={event => {
@@ -221,8 +231,8 @@ export const SideNavLayout = ({
                 left: '4px'
               }} />
           </Form>
-        </ToolbarItem>
-      </Toolbar>
+        </PageHeaderToolsItem>
+      </PageHeaderTools>
     )
     : undefined;
 
@@ -236,7 +246,7 @@ export const SideNavLayout = ({
   const Header = (
     <PageHeader
       className="ws-page-header"
-      toolbar={PageToolbar}
+      headerTools={PageTools}
       logo={headerTitle}
       logoProps={{
         href: url || '/'
