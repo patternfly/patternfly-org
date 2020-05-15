@@ -115,12 +115,12 @@ export const SideNavLayout = ({
       return;
     }
     if (window.docsearch) {
-      // window.docsearch({
-      //   apiKey: '06941733239da4f8617d272cf2ed4d5c',
-      //   indexName: 'patternfly',
-      //   inputSelector: '#global-search-input',
-      //   debug: false // Set debug to true if you want to inspect the dropdown
-      // });
+      window.docsearch({
+        apiKey: '06941733239da4f8617d272cf2ed4d5c',
+        indexName: 'patternfly',
+        inputSelector: '#global-search-input',
+        debug: false // Set debug to true if you want to inspect the dropdown
+      });
     }
     if (window.fetch && pageSource === 'org') {
       fetch('/versions.json')
@@ -157,8 +157,7 @@ export const SideNavLayout = ({
     <DropdownItem
       key={version.name}
       component={
-        <a
-          href={location.pathname.replace(
+        <a href={location.pathname.replace(
             location.pathname.split('/')[1],
             version.latest ? 'v4' : version.name
           )}
