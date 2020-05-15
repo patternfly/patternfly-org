@@ -1,7 +1,7 @@
 import React from 'react';
-import tokens from '@patternfly/react-tokens/dist/variables/esm/patternfly_variables';
+import tokens from '@patternfly/react-tokens/dist/esm/patternfly_variables';
 import { Popover } from '@patternfly/react-core';
-import { normalizeColor } from './helpers';
+import { normalizeColor, tokenName } from './helpers';
 import './ColorSwatch.css';
 
 const handSVG = (
@@ -27,7 +27,7 @@ export function ColorSwatch({
   children
 }) {
   const isBoxShadow = color.includes('BoxShadow');
-  const token = tokens[":root"].find(token => token.property === color);
+  const token = tokens[":root"][tokenName(color)];
   const popoverContent = (
     <div className="ws-color-swatch-popover">
       <label className="ws-color-swatch-popover-label">Global CSS variable</label>

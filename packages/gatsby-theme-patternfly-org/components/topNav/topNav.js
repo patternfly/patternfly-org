@@ -6,16 +6,13 @@ import './topNav.css';
 export const TopNav = ({ location, context, navItems }) => {
   return (
     <Nav aria-label="Nav">
-      <NavList variant="horizontal" className="ws-top-nav">
+      <NavList className="ws-top-nav-list" variant="horizontal">
         {navItems.map(({ path, text, contexts }) => (
           <NavItem
             key={path}
             isActive={location.pathname.includes(path) || (contexts || []).includes(context)}
           >
-            {path.includes('//')
-              ? <a href={path} target="_blank">{text}</a>
-              : <Link to={path}>{text}</Link>
-            }
+            <Link className="ws-top-nav-link" to={path}>{text}</Link>
           </NavItem>
         ))}
       </NavList>

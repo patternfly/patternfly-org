@@ -12,7 +12,7 @@ import './colors.css';
 <Divider />
 
 ## Primary colors
-<Grid gutter="md">
+<Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
     <h3>PatternFly blue</h3>
     Primary colors are the colors displayed most frequently across your application screens and components. Our primary colors are used within a variety of components and are typically applied to default or active states and hover states.
@@ -31,7 +31,7 @@ import './colors.css';
 <Divider className="ws-colors-divider" />
 
 ## Typography and iconography colors
-<Grid gutter="md">
+<Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
     <h3>Text and icons</h3>
     Typography and iconography colors are extremely similar because they can both be used in the same context, such as a link button. We have multiple shades of text colors on light and dark backgrounds so that you can emphasize hierarchy.
@@ -53,7 +53,7 @@ import './colors.css';
 <Divider className="ws-colors-divider" />
 
 ## Background colors
-<Grid gutter="md">
+<Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
     Background colors are used throughout components and can be used for certain screens depending on the use case. The light colors can be interchangeable for full-screen backgrounds. The dark background colors are strictly used within components.
     <ColorSwatch color="--pf-global--BackgroundColor--200">
@@ -83,7 +83,7 @@ import './colors.css';
 <Divider className="ws-colors-divider" />
 
 ## Status and state colors
-<Grid gutter="md">
+<Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
     Status and state colors are important when communicating data and action aspects through the UI with the user. Our status colors cover a variety of statuses including default, danger, success, information, and warning.
   </GridItem>
@@ -158,7 +158,7 @@ import './colors.css';
 <Divider className="ws-colors-divider" />
 
 ## Shadows
-<Grid gutter="md">
+<Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
     Shadows provide specifics about depth, direction of movement, and surface edges. Depending on the surface’s elevation and relationships to other surfaces, the type of shadow will change.
     <ColorSwatch label="Large" color="--pf-global--BoxShadow--lg">
@@ -192,7 +192,7 @@ Make sure that, on hover, link texts provides ample contrast from both backgroun
 ## Color palette
 Our palettes are created as a system designed to reinforce application content and workflows. Bright colors are reserved for specific interactions such as reinforcing status and are used sparingly. Our palettes are simple and consolidated to allow them to be easily deployed and versatile for any situation.
 
-<Grid gutter="md">
+<Grid hasGutter>
   <GridItem xl2RowSpan={1} xl2={4} xl={6} xlRowSpan={2} sm={12}>
     <ColorFamily title="Grey family" family="black" />
   </GridItem>

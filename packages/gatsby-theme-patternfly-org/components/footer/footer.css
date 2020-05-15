@@ -129,3 +129,5 @@
 .ws-org-pfsite-site-copyright {
   white-space: nowrap;
 }
+
+.ws-org-pfsite-l-footer .pf-c-nav { --pf-c-nav__link--before--BorderBottomWidth: 0; }

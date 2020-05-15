@@ -97,36 +97,40 @@ async function onCreateNode({ node, actions, loadNodeContent, createNodeId, crea
   if (!canParse(node)) return;
 
   const sourceText = await loadNodeContent(node);
-  let parsed = null;
+  let parsedComponents = null;
   try {
-    parsed = reactDocgen.parse(sourceText, null, null, {
-      filename: node.absolutePath
-    });
+    parsedComponents = reactDocgen.parse(
+      sourceText,
+      reactDocgen.resolver.findAllExportedComponentDefinitions,
+      null,
+      { filename: node.absolutePath }
+    );
   } catch (err) {
     // eslint-disable-next-line no-console
     // console.warn('No component found in', node.absolutePath);
   }
 
-  // TabContent.tsx is being a pain so check for parsed.displayName
-  if (parsed && parsed.displayName) {
-    const metadataNode = {
-      name: parsed.displayName,
-      relativePath: node.relativePath,
-      description: parsed.description,
-      props: flattenProps(parsed.props).map(addAnnotations),
-      path: node.relativePath,
-      basePath: node.relativePath.split('/')[0],
-      id: createNodeId(`${node.id}react-docgen${node.relativePath}`),
-      children: [],
-      parent: node.id,
-      internal: {
-        contentDigest: createContentDigest(node),
-        type: `ComponentMetadata`
-      }
-    };
-    actions.createNode(metadataNode);
-    actions.createParentChildLink({ parent: node, child: metadataNode });
-  }
+  (parsedComponents || [])
+    .filter(parsed => parsed && parsed.displayName) // TabContent.tsx is being a pain so check for parsed.displayName
+    .forEach(parsed => {
+      const metadataNode = {
+        name: parsed.displayName,
+        relativePath: node.relativePath,
+        description: parsed.description,
+        props: flattenProps(parsed.props).map(addAnnotations),
+        path: node.relativePath,
+        basePath: node.relativePath.split('/')[0],
+        id: createNodeId(`${node.id}react-docgen${node.relativePath}`),
+        children: [],
+        parent: node.id,
+        internal: {
+          contentDigest: createContentDigest(node),
+          type: `ComponentMetadata`
+        }
+      };
+      actions.createNode(metadataNode);
+      actions.createParentChildLink({ parent: node, child: metadataNode });
+    });
 }
 
 exports.onCreateNode = onCreateNode;
