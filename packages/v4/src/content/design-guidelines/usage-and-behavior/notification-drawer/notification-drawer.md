@@ -89,12 +89,12 @@ When the notification drawer is being used, notifications will undergo the follo
 
 ## Related components and demos
 
-#### HTML/CSS
+#### React
 * [Notification drawer](documentation/react/components/notificationdrawer)
 * [Notification badge](documentation/react/components/notificationbadge)
 * [Drawer](documentation/react/components/drawer)
 
-#### React
+#### HTML/CSS
 * [Notification drawer](documentation/core/components/notificationdrawer)
 * [Notification badge](documentation/core/components/notificationbadge)
 * [Drawer](documentation/core/components/drawer)
