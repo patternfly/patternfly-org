@@ -1,120 +1,173 @@
 ---
-title: Data input
+title: Selection controls
 section: usage and behavior
 hideTOC: true
 showTitle: true
 ---
 
-Data input controls allow the user to provide information by selecting from a known set of options or a constrained format/value range.  
+Selection controls allow the user to provide information by selecting from a known set of options or a constrained format/value range.
 
-**Selection controls:** [Checkboxes](#checkbox), [Radio buttons](#radio-buttons), [Select lists](#select-lists), [Switch](#switch)
+**Selection controls:** 
+[Switch](#switch), [Checkboxes](#checkboxes), [Radio buttons](#radio-buttons), [Select lists](#select-lists). 
 
-**Bound-entry controls:** Bound entry controls like [date picker](#Datepicker) and [slider](#slider) are _in progress and coming soon_ to PatternFly 4.
+## Usage
+Selection controls enable users to select from a predetermined set of options. Choose controls based on the following considerations:
 
-## Usage: Selection controls
-Use selection controls to enable users to select from a predetermined set of options. Choose controls based on the the following considerations:
 * How many options do you have to present to the user?
 * How many items does the user need to be able to select?
 
-### Checkbox
-Use checkboxes to allow users to choose **one or more items** from a list of possible choices.
+### Switch
+A switch allows users to instantly toggle between an enabled or disabled state. It is assumed that when a user toggles a switch, the change will save automatically without the need for additional action (like clicking a “Save” button).
 
-![Checkboxes](./img/checkbox-vertical.png)
+<img src="./img/switch.png" alt="Examples of switch buttons" width="244"/>
 
-You can also use a single checkbox to allow a user enable or disable a feature or setting.
+**General guidelines**
+*  Add a label in front of your switch to specify what is being switched on or off (example, wi-fi, bluetooth).
+* Don’t use a switch if the options you’re presenting to the user are anything other than “on” or “off.” Instead, use radio buttons. 
+* Depending on your use case, you may want to add labels to your switches for added clarity, like “on” and “off” to indicate to the user what setting they’ve switched to.
 
-![One checkbox](./img/one-checkbox.png)
 
-**When not to use**
-* Don't use checkboxes for lists that are longer than 5 items. Instead, use a [select list](#select-lists).
-* Don't use checkboxes for lists where the user can only select one mutually exclusive option. Instead, use [radio buttons](#radio-buttons).
+### Checkboxes
+Checkboxes allow users to choose **one or more items** from a list of options.
+
+<img src="./img/checkbox-horizontal.png" alt="Example of form question with checkboxes aligned horizontally" width="312"/>
+
+You can also use a single checkbox to allow a user to enable or disable a feature or setting, along with a save button. 
+
+<img src="./img/one-checkbox.png" alt="Example of single checkbox" width="173"/>
+
+**General guidelines**
+
+* Use checkboxes if you’re presenting 5 or fewer options to the user. If you’re presenting more than 5 options, use a [select list](/design-guidelines/usage-and-behavior/data-input#select-lists) instead.
+* Use checkboxes if the user can select multiple options. If the user can only select one option, then use radio buttons. 
+
 
 **Labeling and alignment**
-Checkbox labels fall to the right of the checkbox control.
 
-You can use headings to label a group of checkboxes. Placement of headings will depend on the layout of other content in the form or on the page you’re designing. The checkbox control should always be aligned with the left edge of other controls or input fields in the form or on the page.
+Checkbox labels fall to the right of the checkbox control. If placed vertically, all checkbox controls should be aligned with the left edge of other controls or input fields in the form or on the page. 
 
-![Grouped checkboxes](./img/group-checkbox.png)
+You can use headings to label a group of checkboxes. The placement of headings will depend on the layout of other content in the form or on the page you’re designing. For more information on how to arrange checkboxes, see the [forms documentation](/design-guidelines/usage-and-behavior/forms#data-input-arrangement).
 
-Whenever possible, arrange the checkboxes in a vertical list.
+<img src="./img/group-checkbox.png" alt="Example of a group of checkboxes" width="443"/>
 
-![Vertical checkboxes](./img/vertical.png)
+You also have the option to use progressive disclosure by nesting other controls underneath a checkbox. The nested options would be enabled or disabled when the user selects or deselects a checkbox.
 
-If you have space constraints (and your labels are short) you can also use a multi-column grid.
+<img src="./img/nested-controls-checkbox.png" alt="Example of nested control checkboxes" width="459"/>
 
-![Horizontal checkboxes](./img/horizontal.png)
+#### When to use switches versus checkboxes
 
-You can nest other controls underneath a checkbox. Enable and disable nested options when the user selects or de-selects a checkbox.
+The main difference between a switch and a checkbox is that a switch changes an option and saves it simultaneously, while checkboxes require a separate action such as pressing a “Submit” or “Save” button to save the selection. 
 
-![Nested checkbox](./img/nested-controls.png)
+**Here are some guidelines for when to use a switch versus a checkbox:**
+
+* Use checkboxes when the options do not save automatically and require the user to perform an additional action to save changes (in this case, pressing the “Save changes” button).
+
+    <img src="./img/switch-check-1.png" alt="Example 1 of do and don'ts for checkbox vs switch usee " width="661"/>
+
+* Use a switch for situations where you are turning a series of one or more independent options on or off.
+
+    <img src="./img/switch-check-2.png" alt="Example 2 of do and don'ts for checkbox vs switch usee " width="661"/>
+
+* Use checkboxes when you may have an intermediate state where you can select all, none, or some actions.
+
+    <img src="./img/switch-check-3.png" alt="Example 3 of do and don'ts for checkbox vs switch usee " width="661"/>
+
 
 ### Radio buttons
-Use radio buttons to allow users to select **one item** from a list of possible choices.
+Radio buttons allow users to select **one item** from a list of options.
 
-![Radio buttons](./img/radio.png)
+<img src="./img/radio.png" alt="Example of radio button options" width="187"/>
 
-* Use radio buttons when a user needs to make one mutually exclusive choice. Only one option can be selected at a time.
-* A default option should always be selected for the user. If the user selects a different option, the default option is deselected.
+**General guidelines**
+
+*  Use radio buttons when a user needs to make one mutually exclusive choice, and only one option can be selected at a time.
+* A default option should always be selected for the user. If the user selects a different option, the default option should be automatically deselected.
 * To enable the user to select a null option, provide a radio button with the label “None.”
+* Use radio buttons if you’re presenting 5 or fewer options to the user. If you’re presenting more than 5 options, use a [single select list](#single-select). 
+* If space is limited, you can also use progressive disclosure by nesting other controls underneath a radio button.
 
-**When not to use**
-Do not use a radio button when you have more than 5 options to provide to the user. Instead, use a [select list](#select-lists).  
+    <img src="./img/nested-controls-radio.png" alt="Example of nested control with radio buttons" width="465"/>
+
 
 **Labeling and alignment**
-Radio button labels fall to the right of the radio button control.
 
-Arrange radio buttons vertically or horizontally depending on space considerations. Vertically arranged radio buttons are easier to scan and are the preferred arrangement.
+Radio button labels fall to the right of the radio button control. You can use headings to label a group of radio buttons. The placement of headings will depend on the layout of other content in the form or on the page you’re designing. For more information on how to arrange radio buttons, see the [forms documentation](/design-guidelines/usage-and-behavior/forms#data-input-arrangement).
 
-![Vertical radio buttons](./img/vertical-radio.png)
-
-![Horizontal radio buttons](./img/horizontal-radio.png)
-
-If necessary, you can use radio buttons to nest other controls.
-
-![Nested radio buttons](./img/nested-radio.png)
 
 ### Select lists
-Use a select list to enable users to select one or more items from a list. Select lists should also be used when options are dynamic or variable.
+Select lists enable users to select one or more items from a list. Select lists should also be used when options are dynamic or variable. 
 
-PatternFly offers several variations of select list:
-* Single select enables users to select a single, mutually exclusive option.
+PatternFly offers several variations of select lists:
+* [Single select](#single-select)
+* [Checkbox select](#checkbox-select)
+* [Multiple select](#multiple-select)
+* [Typeahead](#typeahead)
+* [Form select](#form-select)
 
-![Single select](./img/selectlist.png)
+#### Single select 
+Single select lists allow users to select a single, mutually exclusive option. When the user selects an option from the list, the selection appears in the toggle.
 
-* Multi-select enables users to select one or more options.
+<img src="./img/single-select.png" alt="Example single select interaction" width="496"/>
 
-![Multi-select](./img/selectlist-multi.png)
+#### Checkbox select
+Checkbox select lists allow users to select one or more options from a known list of options, using checkboxes as a selection method. You may choose to have a badge display in the toggle to show how many items have been selected. A common use case for checkbox select lists is in a toolbar filter for a table or page, for example. 
 
-* Typeahead is available for all select lists when you have lists with more than ten options. Typeahead enables users to type into an input field to narrow the list of available options that is displayed.
+<img src="./img/checkbox-select.png" alt="Example of checkbox select in a toolbar" width="585"/>
 
-![Typeahead](./img/typeahead.png)
+#### Multiple select 
+Multiple select lists allow users to select one or more options from a list, with the selected options marked with a blue check. It differs from the checkbox select in that each option selected by the user appears in the top display area as chips. Once the number of selections reaches a certain number (the default is 3, but you may choose to change this based on your use case), the regular chips will be replaced by a gray chip indicating how many more items were selected (for example, 1 more). 
 
-When providing fewer than five options, you can use [radio buttons](#radio-buttons) or [checkboxes](#checkbox) to display all options to the user simultaneously if you don’t have any space constraints.
+<img src="./img/selectlist-multi.png" alt="Example of multiple select list" width="585"/>
 
-### Switch
-Provide a switch to allow users to instantly toggle between an enabled or disabled state.
+#### When to use checkbox select versus multiple select 
+Both the checkbox select and multiple select lists allow users to select multiple options from a list. However, there are some points to take into consideration when deciding which one to use.
 
-![Switch](./img/switch.png)
+**Use checkbox select when:**
+* Horizontal space is limited.
+* It is not crucial for the user to see their selections in the toggle itself.
+* Using a select list inside a toolbar. Toolbars have limited space, and the user will already be able to see their selection as chips below the filter itself.  
 
-* Label your switch with the affected attribute or capability.
-* Don’t use a switch if the options you’re presenting to the user are anything other than “on” or “off.” Instead, use radio buttons.
+<img src="./img/suggested-checkbox.png" alt="Example for using a checkbox select" width="990"/>
 
-## Usage: Bound-entry controls
-Use bound-entry controls to enable users to enter special data types, such as dates, times, and other numeric data. Bound-entry controls constrain user input and combine keyboard and mouse interaction. These controls are designed to only allow valid inputs. As a result, field validation should be unnecessary.
+**Use multiple select when:**
+* Horizontal space is not limited
+* It is useful for the user to see their selections from the toggle itself.
+* In a form, where a user may benefit from being able to quickly scan their inputs before submitting
 
-Datepicker and Slider components coming soon!
+<img src="./img/suggested-multiselect.png" alt="Example for using a multiple select inside a form" width="518"/>
 
-<!-- ### Datepicker
-![Datepicker](./img/datepicker.png)
+#### Typeahead
+Typeahead allows users to narrow a displayed list of options by typing into the input field. Type ahead is  recommended for lists with more than ten options and is available for single and multiple select lists. Although the typeahead within toggle functionality does not exist for the checkbox select, there is an option to add a typeahead capability within the menu of items if needed, as seen in this [grouped checkbox input with filtering](/documentation/react/components/select#grouped-checkbox-input-with-filtering) example.
 
-### Slider
-![Slider](./img/slider.png) -->
+<img src="./img/typeahead.png" alt="Visual of a typeahead being used" width="361"/>
 
-## Errors and validation
-In general, data input controls should work to help users avoid input errors. Do your best to disable options that might result in an error, and provide input components that help the user provide accurate data in the correct format. For example, a datepicker is better than a text field when asking users to provide a date because it helps to enforce the appropriate syntax.
+When providing fewer than 5 options, you can use [radio buttons](#radio-buttons) or [checkboxes](#checkboxes) to display all options to the user simultaneously if you don’t have any space constraints.
 
-For situations where you do need to provide validation and errors, it is best to provide inline errors as soon as a field leaves focus.
+#### Form select
+A form select is a native select created by the browser, and it’s typically used within forms. If your use case only calls for simple selects, you may opt to use a [form select](/documentation/react/components/formselect). But if your use case requires more customization and capability, use a PatternFly [custom select list](/documentation/react/components/select). Just keep in mind that you should not use custom selects and form selects together in the same context, in order to maintain visual consistency in the UI.
 
-![Error](./img/input-error.png)
 
-For more information about providing validation and errors for data input, see the [forms design guidelines](/design-guidelines/usage-and-behavior/forms#provide-errors-and-validation).
+## Related components and demos
+**HTML/CSS**
+* [Switch](/documentation/core/components/switch)
+* [Check](/documentation/core/components/check)
+* [Radio](/documentation/core/components/radio)
+* [Select](/documentation/core/components/select)
+* [Form control](/documentation/core/components/formcontrol)
+
+**React**
+* [Switch](/documentation/react/components/switch)
+* [Checkbox](/documentation/react/components/checkbox)
+* [Radio](/documentation/react/components/radio)
+* [Select](/documentation/react/components/select)
+* [Form select](/documentation/react/components/formselect)
+
+
+
+
+
+
+
+
+
+
