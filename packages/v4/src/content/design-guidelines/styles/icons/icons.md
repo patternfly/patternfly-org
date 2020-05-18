@@ -62,7 +62,7 @@ import './icons.css';
     No matter the size of the icon, when icons are next to text, they should be center-aligned horizontally. An example of this alignment in a component is a <a href="design-guidelines/usage-and-behavior/buttons-and-links#link-button">link button</a>. If icons are stacked, they should also be center-aligned vertically.
     <Grid>
       <GridItem span={6} className="ws-icon-alignment ws-icon-alignment-correct">
-        <span className="ws-correct-alignment"><CheckCircleIcon/><strong>Correct alignment</strong></span>
+        <div className="ws-correct-alignment"><CheckCircleIcon/><strong>Correct alignment</strong></div>
         <Flex>
           <FlexItem><TagIcon size="sm"/></FlexItem>
           <FlexItem>Small icon with text</FlexItem>
@@ -77,7 +77,7 @@ import './icons.css';
         </Flex>
       </GridItem>
       <GridItem span={6} className="ws-icon-alignment ws-icon-alignment-incorrect">
-        <span className="ws-incorrect-alignment"><ExclamationCircleIcon/><strong>Incorrect alignment</strong></span>
+        <div className="ws-incorrect-alignment"><ExclamationCircleIcon/><strong>Incorrect alignment</strong></div>
         <Flex>
           <FlexItem><TagIcon size="sm"/></FlexItem>
           <FlexItem>Small icon with text</FlexItem>

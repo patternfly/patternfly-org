@@ -2,6 +2,10 @@
   margin: 48px 0;
 }
 
+.pf-c-divider.ws-icons-divider:first-of-type {
+  margin-top:8px;
+}
+
 .ws-icon-recommendations tbody {
   vertical-align: top;
 }
@@ -72,11 +76,36 @@
   margin-bottom: 8px;
 }
 
-.ws-correct-alignment {
+.ws-icon-sizes-xl {
+  margin-bottom: 24px;
+}
+
+.ws-icon-alignment {
+  margin-top: 16px;
+}
+
+.ws-correct-alignment,
+.ws-incorrect-alignment {
+  margin-bottom: 16px;
+}
+
+.ws-icon-alignment svg {
+  margin-right: 8px;
+}
+
+.ws-correct-alignment svg {
+  color: var(--pf-global--success-color--100);
+}
+
+.ws-correct-alignment strong {
   color: var(--pf-global--success-color--200);
 }
 
-.ws-incorrect-alignment {
+.ws-incorrect-alignment svg {
+  color: var(--pf-global--danger-color--100);
+}
+
+.ws-incorrect-alignment strong {
   color: var(--pf-global--danger-color--200);
 }
 
