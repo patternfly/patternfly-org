@@ -29,7 +29,7 @@ import './icons.css';
       </FlexItem>
       <FlexItem>
         <p>Small (10px)</p>
-        <code>-pf-global-icon-FonSize-sm</code>
+        <code>--pf-global--icon--FontSize—sm</code>
       </FlexItem>
     </Flex>
     <Flex className="ws-icon-sizes ws-icon-sizes-md" breakpointMods={[{modifier: FlexModifiers['align-items-flex-start']}]}>
@@ -38,7 +38,7 @@ import './icons.css';
       </FlexItem>
       <FlexItem>
         <p>Medium (18px)</p>
-        <code>-pf-global-icon-FonSize-md</code>
+        <code>--pf-global--icon--FontSize—md</code>
       </FlexItem>
     </Flex>
     <Flex className="ws-icon-sizes ws-icon-sizes-lg" breakpointMods={[{modifier: FlexModifiers['align-items-flex-start']}]}>
@@ -47,7 +47,7 @@ import './icons.css';
       </FlexItem>
       <FlexItem>
         <p>Large (24px)</p>
-        <code>-pf-global-icon-FonSize-lg</code>
+        <code>--pf-global--icon--FontSize—lg</code>
       </FlexItem>
     </Flex>
     <Flex className="ws-icon-sizes ws-icon-sizes-xl" breakpointMods={[{modifier: FlexModifiers['align-items-flex-start']}]}>
@@ -56,44 +56,13 @@ import './icons.css';
       </FlexItem>
       <FlexItem>
         <p>X-large (54px)</p>
-        <code>-pf-global-icon-FonSize-xl</code>
+        <code>--pf-global--icon--FontSize—xl</code>
       </FlexItem>
     </Flex>
     No matter the size of the icon, when icons are next to text, they should be center-aligned horizontally. An example of this alignment in a component is a <a href="design-guidelines/usage-and-behavior/buttons-and-links#link-button">link button</a>. If icons are stacked, they should also be center-aligned vertically.
-    <Grid>
-      <GridItem span={6} className="ws-icon-alignment ws-icon-alignment-correct">
-        <div className="ws-correct-alignment"><CheckCircleIcon/><strong>Correct alignment</strong></div>
-        <Flex>
-          <FlexItem><TagIcon size="sm"/></FlexItem>
-          <FlexItem>Small icon with text</FlexItem>
-        </Flex>
-        <Flex>
-          <FlexItem><OutlinedCalendarAltIcon size="md"/></FlexItem>
-          <FlexItem>Medium icon with text</FlexItem>
-        </Flex>
-        <Flex>
-          <FlexItem><GithubIcon size="lg"/></FlexItem>
-          <FlexItem>Large icon with text</FlexItem>
-        </Flex>
-      </GridItem>
-      <GridItem span={6} className="ws-icon-alignment ws-icon-alignment-incorrect">
-        <div className="ws-incorrect-alignment"><ExclamationCircleIcon/><strong>Incorrect alignment</strong></div>
-        <Flex>
-          <FlexItem><TagIcon size="sm"/></FlexItem>
-          <FlexItem>Small icon with text</FlexItem>
-        </Flex>
-        <Flex>
-          <FlexItem><OutlinedCalendarAltIcon size="md"/></FlexItem>
-          <FlexItem>Medium icon with text</FlexItem>
-        </Flex>
-        <Flex>
-          <FlexItem><GithubIcon size="lg"/></FlexItem>
-          <FlexItem>Large icon with text</FlexItem>
-        </Flex>
-      </GridItem>
-    </Grid>
+    <img src="icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" />
   </GridItem>
-  <GridItem xl={6} lg={12}>
+  <GridItem xl={5} xlOffset={7} lg={12}>
     <Card className="ws-icon-size-examples">
       <CardBody>
         <p><b>Small icons</b></p>
@@ -117,7 +86,7 @@ import './icons.css';
         <p><b>Large icons</b></p>
         <img src="login_icons.png" alt="Log in icons" className="ws-login-icons" />
         <p><b>X-large icons</b></p>
-        <EmptyState variant={EmptyStateVariant.lg}>
+        <EmptyState variant={EmptyStateVariant.lg} className="ws-icons-empty-state">
           <EmptyStateIcon icon={CubesIcon} />
           <Title headingLevel="h5" size="xl">
             This is a large empty state

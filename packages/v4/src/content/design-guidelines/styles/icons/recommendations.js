@@ -352,14 +352,14 @@ const recommendationsArray = [
       iconType: "old",
       reactIcon: "CogsIcon"
     },
-    {
-      style: "",
-      iconName: "sliders-v (PRO only, NOT free)",
-      type: "",
-      iconUsage: "",
-      iconType: "old",
-      reactIcon: ""
-    },
+    // {
+    //   style: "",
+    //   iconName: "sliders-v (PRO only, NOT free)",
+    //   type: "",
+    //   iconUsage: "",
+    //   iconType: "old",
+    //   reactIcon: ""
+    // },
     {
       style: "",
       iconName: "pficon-settings",
@@ -424,11 +424,11 @@ const recommendationsArray = [
   [
     {
       style: "",
-      iconName: "",
+      iconName: "pficon-error-circle-o",
       type: "",
       iconUsage: "",
       iconType: "old",
-      reactIcon: ""
+      reactIcon: "ErrorCircleOIcon"
     },
     {
       style: "fas",

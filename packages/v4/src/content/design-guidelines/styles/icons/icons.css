@@ -82,31 +82,12 @@
 
 .ws-icon-alignment {
   margin-top: 16px;
+  max-width: 480px;
 }
 
-.ws-correct-alignment,
-.ws-incorrect-alignment {
-  margin-bottom: 16px;
-}
-
-.ws-icon-alignment svg {
-  margin-right: 8px;
-}
-
-.ws-correct-alignment svg {
-  color: var(--pf-global--success-color--100);
-}
-
-.ws-correct-alignment strong {
-  color: var(--pf-global--success-color--200);
-}
-
-.ws-incorrect-alignment svg {
-  color: var(--pf-global--danger-color--100);
-}
-
-.ws-incorrect-alignment strong {
-  color: var(--pf-global--danger-color--200);
+.ws-icons-empty-state.pf-c-empty-state {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 @media screen and (min-width: 992px) {
