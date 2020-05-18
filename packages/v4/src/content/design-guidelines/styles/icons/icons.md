@@ -3,7 +3,14 @@ title: Icons
 section: styles
 ---
 import { Alert, ApplicationLauncher, ApplicationLauncherGroup, ApplicationLauncherItem, Button, Card, CardBody, Divider, Dropdown, DropdownToggle, EmptyState, EmptyStateIcon, Flex, FlexItem, FlexModifiers, Grid, GridItem, LoginPage, Title } from '@patternfly/react-core';
-import { CaretDownIcon, CheckCircleIcon, TimesCircleIcon, StarIcon, GoogleIcon, GithubIcon, DropboxIcon, FacebookIcon, GitlabIcon } from '@patternfly/react-icons';
+import CaretDownIcon from '@patternfly/react-icons/dist/js/icons/caret-down-icon';
+import CheckCircleIcon from '@patternfly/react-icons/dist/js/icons/check-circle-icon';
+import ExclamationCircleIcon from '@patternfly/react-icons/dist/js/icons/exclamation-circle-icon';
+import GithubIcon from '@patternfly/react-icons/dist/js/icons/github-icon';
+import OutlinedCalendarAltIcon from '@patternfly/react-icons/dist/js/icons/outlined-calendar-alt-icon';
+import StarIcon from '@patternfly/react-icons/dist/js/icons/star-icon';
+import TagIcon from '@patternfly/react-icons/dist/js/icons/tag-icon';
+import TimesCircleIcon from '@patternfly/react-icons/dist/js/icons/times-circle-icon';
 import { IconRecommendations } from './IconRecommendations';
 import { IconsTable } from './IconsTable';
 import './icons.css';
@@ -52,12 +59,38 @@ import './icons.css';
         <code>-pf-global-icon-FonSize-xl</code>
       </FlexItem>
     </Flex>
-    No matter the size of the icon, when icons are next to text, they should be center-aligned horizontally. An example of this alignment in a component is a <a href="">link button</a>. If icons are stacked, they should also be center-aligned vertically.
+    No matter the size of the icon, when icons are next to text, they should be center-aligned horizontally. An example of this alignment in a component is a <a href="design-guidelines/usage-and-behavior/buttons-and-links#link-button">link button</a>. If icons are stacked, they should also be center-aligned vertically.
     <Grid>
-      <GridItem>
-        <CheckCircleIcon/> Correct alignment
+      <GridItem span={6} className="ws-icon-alignment ws-icon-alignment-correct">
+        <span className="ws-correct-alignment"><CheckCircleIcon/><strong>Correct alignment</strong></span>
+        <Flex>
+          <FlexItem><TagIcon size="sm"/></FlexItem>
+          <FlexItem>Small icon with text</FlexItem>
+        </Flex>
+        <Flex>
+          <FlexItem><OutlinedCalendarAltIcon size="md"/></FlexItem>
+          <FlexItem>Medium icon with text</FlexItem>
+        </Flex>
+        <Flex>
+          <FlexItem><GithubIcon size="lg"/></FlexItem>
+          <FlexItem>Large icon with text</FlexItem>
+        </Flex>
       </GridItem>
-      <GridItem></GridItem>
+      <GridItem span={6} className="ws-icon-alignment ws-icon-alignment-incorrect">
+        <span className="ws-incorrect-alignment"><ExclamationCircleIcon/><strong>Incorrect alignment</strong></span>
+        <Flex>
+          <FlexItem><TagIcon size="sm"/></FlexItem>
+          <FlexItem>Small icon with text</FlexItem>
+        </Flex>
+        <Flex>
+          <FlexItem><OutlinedCalendarAltIcon size="md"/></FlexItem>
+          <FlexItem>Medium icon with text</FlexItem>
+        </Flex>
+        <Flex>
+          <FlexItem><GithubIcon size="lg"/></FlexItem>
+          <FlexItem>Large icon with text</FlexItem>
+        </Flex>
+      </GridItem>
     </Grid>
   </GridItem>
   <GridItem xl={6} lg={12}>
