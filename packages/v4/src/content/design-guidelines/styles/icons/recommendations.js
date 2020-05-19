@@ -26,7 +26,7 @@ const recommendationsArray = [
       type: "",
       iconUsage: "Not included in Font Awesome Free",
       iconType: "old",
-      reactIcon: ""
+      reactIcon: "svg"
     },
     {
       style: "fas",
@@ -42,9 +42,9 @@ const recommendationsArray = [
       style: "",
       iconName: "fa-arrow-circle-o-up",
       type: "",
-      iconUsage: "Not included in Font Awesome Free",
+      iconUsage: "",
       iconType: "old",
-      reactIcon: ""
+      reactIcon: "svg"
     },
     {
       style: "fas",
@@ -98,7 +98,7 @@ const recommendationsArray = [
       type: "",
       iconUsage: "Not included in Font Awesome Free",
       iconType: "old",
-      reactIcon: ""
+      reactIcon: "svg"
     },
     {
       style: "fas",
@@ -204,7 +204,7 @@ const recommendationsArray = [
       type: "",
       iconUsage: "",
       iconType: "old",
-      reactIcon: ""
+      reactIcon: "svg"
     },
     {
       style: "far",
@@ -366,7 +366,7 @@ const recommendationsArray = [
       type: "",
       iconUsage: "",
       iconType: "old",
-      reactIcon: ""
+      reactIcon: "svg"
     },
     {
       style: "fas",
@@ -550,11 +550,11 @@ const recommendationsArray = [
   [
     {
       style: "",
-      iconName: "pf-icon pf-icon-history",
+      iconName: "pf-icon-history",
       type: "",
       iconUsage: "",
       iconType: "old",
-      reactIcon: ""
+      reactIcon: "svg"
     },
     {
       style: "fas",
@@ -634,7 +634,7 @@ const recommendationsArray = [
       type: "",
       iconUsage: "Used to reference an SSH key or something similar",
       iconType: "old",
-      reactIcon: ""
+      reactIcon: "svg"
     },
     {
       style: "fas",
@@ -908,7 +908,7 @@ const recommendationsArray = [
       type: "",
       iconUsage: "",
       iconType: "old",
-      reactIcon: ""
+      reactIcon: "svg"
     },
     {
       style: "fas",
@@ -944,7 +944,7 @@ const recommendationsArray = [
       type: "",
       iconUsage: "",
       iconType: "old",
-      reactIcon: ""
+      reactIcon: "svg"
     },
     {
       style: "fas",
@@ -962,7 +962,7 @@ const recommendationsArray = [
       type: "",
       iconUsage: "",
       iconType: "old",
-      reactIcon: ""
+      reactIcon: "svg"
     },
     {
       style: "fas",
@@ -980,7 +980,7 @@ const recommendationsArray = [
       type: "",
       iconUsage: "",
       iconType: "old",
-      reactIcon: ""
+      reactIcon: "svg"
     },
     {
       style: "fas",
@@ -998,7 +998,7 @@ const recommendationsArray = [
       type: "",
       iconUsage: "",
       iconType: "old",
-      reactIcon: ""
+      reactIcon: "svg"
     },
     {
       style: "fas",

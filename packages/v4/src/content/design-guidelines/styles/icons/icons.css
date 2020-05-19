@@ -90,6 +90,12 @@
   padding-bottom: 0;
 }
 
+.ws-icon-svg {
+  height: 16px;
+  width: 16px;
+  vertical-align: -0.125em;
+}
+
 @media screen and (min-width: 992px) {
   #iconsSearch {
     width: 400px;
