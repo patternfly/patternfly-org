@@ -967,8 +967,8 @@ export const iconsData = [
   },
   {
     "Style": "pf-icon",
-    "Name": "pf-icon-running",
-    "React_name": "RunningIcon",
+    "Name": "pficon-on-running",
+    "React_name": "OnRunningIcon",
     "Type": "Status",
     "Contextual_usage": "Represents status: an item is running or active"
   },

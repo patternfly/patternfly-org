@@ -1211,24 +1211,24 @@ const recommendationsArray = [
       reactIcon: "ShareSquareIcon"
     }
   ],
-  [
-    {
-      style: "",
-      iconName: "pficon-on-running",
-      type: "",
-      iconUsage: "",
-      iconType: "old",
-      reactIcon: "OnRunningIcon"
-    },
-    {
-      style: "",
-      iconName: "pf-icon-running",
-      type: "Status",
-      iconUsage: "Represents status: an item is running or active",
-      iconType: "new",
-      reactIcon: ""
-    }
-  ],
+  // [
+  //   {
+  //     style: "",
+  //     iconName: "pficon-on-running",
+  //     type: "",
+  //     iconUsage: "",
+  //     iconType: "old",
+  //     reactIcon: "OnRunningIcon"
+  //   },
+  //   {
+  //     style: "",
+  //     iconName: "pf-icon-running",
+  //     type: "Status",
+  //     iconUsage: "Represents status: an item is running or active",
+  //     iconType: "new",
+  //     reactIcon: ""
+  //   }
+  // ],
   [
     {
       style: "",
