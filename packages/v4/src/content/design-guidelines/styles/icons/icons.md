@@ -2,6 +2,7 @@
 title: Icons
 section: styles
 ---
+import { Link } from 'gatsby';
 import { Alert, ApplicationLauncher, ApplicationLauncherGroup, ApplicationLauncherItem, Button, Card, CardBody, Divider, Dropdown, DropdownToggle, EmptyState, EmptyStateIcon, Flex, FlexItem, FlexModifiers, Grid, GridItem, LoginPage, Title } from '@patternfly/react-core';
 import CaretDownIcon from '@patternfly/react-icons/dist/js/icons/caret-down-icon';
 import CheckCircleIcon from '@patternfly/react-icons/dist/js/icons/check-circle-icon';
@@ -17,7 +18,7 @@ import './icons.css';
 
 <Divider className="ws-icons-divider" />
 
-<p class="ws-icons-page">If you're a developer, check out our <a href="/get-started/developers#using-styles">getting started</a> page to learn more about how to get and use our icon set.</p>
+<p class="ws-icons-page">If you're a developer, check out our <Link to="/get-started/developers#using-styles">getting started</Link> page to learn more about how to get and use our icon set.</p>
 
 ## Icon sizes
 <Grid gutter="md">
@@ -59,7 +60,7 @@ import './icons.css';
         <code>--pf-global--icon--FontSize—xl</code>
       </FlexItem>
     </Flex>
-    No matter the size of the icon, when icons are next to text, they should be center-aligned horizontally. An example of this alignment in a component is a <a href="design-guidelines/usage-and-behavior/buttons-and-links#link-button">link button</a>. If icons are stacked, they should also be center-aligned vertically.
+    No matter the size of the icon, when icons are next to text, they should be center-aligned horizontally. An example of this alignment in a component is a <Link to="design-guidelines/usage-and-behavior/buttons-and-links#link-button">link button</Link>. If icons are stacked, they should also be center-aligned vertically.
     <img src="icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" />
   </GridItem>
   <GridItem xl={5} xlOffset={7} lg={12}>
@@ -100,7 +101,7 @@ import './icons.css';
 <Divider className="ws-icons-divider" />
 
 ## Icon colors
-Visit our <a href="/design-guidelines/styles/colors" className="pf-m-link">colors page</a> to learn more about icon colors.
+Visit our <Link to="/design-guidelines/styles/colors" className="pf-m-link">colors page</Link> to learn more about icon colors.
 
 <Divider className="ws-icons-divider" />
 
@@ -113,7 +114,7 @@ If you’re looking to copy HTML for an icon:<br/>
 Use this for 'pficon' icons: `<i className="pf-icon [insert-icon-name]"></i>`<br />
 Use this for 'fa' solid icons: `<i className="fas [insert-icon-name]"></i>`<br />
 Use this for 'fa' regular icons: `<i className="far [insert-icon-name]"></i>`<br />
-<small>Note: Be sure to read <a href="/get-started/developers#using-styles" className="pf-m-link">how to get started with icons</a> when using 'fa' regular icons</small>
+<small>Note: Be sure to read <Link to="/get-started/developers#using-styles" className="pf-m-link">how to get started with icons</Link> when using 'fa' regular icons</small>
 
 If you're looking to copy React for an icon:<br />
 Use this for 'pficon' icons: `import { [insert-icon-name] } from '@patternfly/react-icons'`
