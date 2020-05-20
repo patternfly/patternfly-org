@@ -28,7 +28,7 @@ The notification drawer is a place where users can view and manage asynchronous 
 
 **4. Notification:** Each notification has a status icon, message text, and is time stamped. The message text may include embedded links. Unread messages are displayed in bold-faced type. Single clicking a notification (or selecting the Mark as read action from the menu) marks it as read.
 
-**5. Time stamp:** Time stamps can be displayed either in relative or absolute time. Relative time is good for events that are more recent. We recommend that any notification less than an hour old have a relative time stamp, i.e, 20 seconds ago, 5 minutes ago, 59 minutes ago, and that older events switch to absolute time for better precision, e.g., June 20 2019 12:45PM The switchover point between relative and absolute time may be tuned to your application.
+**5. Time stamp:** Time stamps can be displayed either in relative or absolute time. Relative time is good for events that are more recent. We recommend that any notification less than an hour old have a relative time stamp, for example 20 seconds ago, 5 minutes ago, etc., and that older events switch to absolute time for better precision, June 20 2019 12:45 PM, for example. The switchover point between relative and absolute time may be tuned to your application.
 
 **6. Inline actions (optional):** Actions that apply to the current notification, only. Standard actions include **Mark as read** and **Clear**. This menu may be customized as required by the application.
 
@@ -41,14 +41,14 @@ If you want to sort notifications by category, collapsible headers may be used t
 
 **2. Unread badge (optional):** A badge will report the number of unread notifications in each category. If there are no unread notifications, the badge is hidden.
 
-**3.Global actions (optional):** For the grouped drawer, the global actions menu should further clarify what content the actions apply to. Standard menu items include (the menu may be customized according to the needs of your application):
+**3. Global actions (optional):** For the grouped drawer, the global actions menu should further clarify what content the actions apply to. Standard menu items include (the menu may be customized according to the needs of your application):
 
 - **Mark all read** - marks all notifications in the drawer as read.
 - **Clear all** - clears all notifications from the drawer.
 - **Mark current category read** - marks all notifications in the currently opened category as read.
 - **Clear current category** - clears all notifications from the currently opened category.
 - **Unclear last** - unclears that last cleared or set of cleared notifications (if supported).
-- **Settings** - open notification settings.
+- **Settings** - opens notification settings.
 
 ### Placement in a page
 
