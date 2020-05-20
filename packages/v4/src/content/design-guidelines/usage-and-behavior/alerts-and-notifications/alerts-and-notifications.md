@@ -53,75 +53,74 @@ There are three ways that the system can communicate notifications to the users.
 |[Modal alerts](#modal-alerts) |Use when you must interrupt the task at hand until the user takes action. |Overlay the UI and prevent further user actions until the user closes the modal. |Remain until the user dismisses the modal.
 
 ### Inline alerts
-Inline alerts are synchronous and appear as the result of a user action or upon loading a page. They insert an alert at the top of the content area, push down other content, and will persist until the user closes them or navigates away from the page.
+Inline alerts are synchronous and appear as the result of a user action or upon loading a page. They insert themselves into the content area, push down other content, and will persist until the user closes them or navigates away from the page.
 
 ![inline notification placement](./img/inline-notification.png)
 
-An inline alert should never block the user from interacting with other content on a page. It should be possible to dismiss informational alerts by clicking the Close button on the alert. If Close is not included, the alert will dismiss only when the condition raising it has been cleared.
-
-In addition to static message content and links, interactive elements may optionally be included in the body of an inline alert when the user is being asked for some input or feedback.
-
-<img src="./img/inline-interactive-alert.png" alt="interactive inline alert" width="798">
-
 #### When to use
 Use an inline alert when you want to return feedback as the result of a user action within a page while allowing the user to continue working. Common uses for inline alerts include form validation or warning messages that should not interrupt the user’s flow.
+
+An inline alert should never block the user from interacting with other content on a page. For informational alerts, the user should be able to dismiss the alert by clicking the Close button on the alert. For error conditions, we recommend that the alert is dismissed only when the condition raising it has been cleared.
+
+In addition to static message content and links, interactive elements may optionally be included in the body of an inline alert to ask the user for further input or feedback.
+
+<img src="./img/inline-interactive-alert.png" alt="interactive inline alert" width="798">
 
 #### When not to use
 Do not use inline alerts to reflect the status of an asynchronous operation. In this case, a Toast Alert should be used.
 
 #### Alternative solutions
-If the user must take action to address a situation before proceeding consider using a modal. Inline alerts are preferred to a modal when the problem can be corrected on the current page, however.
-
-#### Behavior
-Inline alerts should only be inserted into a page in response to a user action as part of a page refresh. If the user dismisses the alert by clicking the Close button, the alert should disappear and the content of the page should animate up to fill the vacated space.
+If the user must take action to address a situation before proceeding consider using a [modal](design-guidelines/usage-and-behavior/modal). Inline alerts are preferred to a modal when the problem can be corrected on the current page, however.
 
 ### Toast alerts
-Toast alerts enter from the right edge of the screen and remain until they time out or until the user dismisses them.
+Toast alerts enter from the right edge of the screen and remain until they time out or until the user dismisses them. Toast alerts overlay other content on the page.
 
 ![toast notification placement](./img/toast-notification.png)
 
-Single toast alerts appears in the upper right, below the page header, and animates from the right. Toast alerts overlay other content on the page.
-
-Toast alerts should be used to draw attention to an event that is being added to the notification drawer, when in use. Note: when the notification drawer is open, and new notifications appear, they should appear at the top of the notification list and not generate a toast alert.
-
-
-Actions and links may be used in alerts, but only as a shortcut or redundant means to navigate or invoke the action. A toast alert should never be used as the only means for taking actions on an alert event. Toast notifications must always have a close button so the user can dismiss them.
-
 #### When to use
-Use toast alerts when you want to report an asynchronous event without interrupting the user’s current workflow.
+Use toast alerts when you want to report an asynchronous event without interrupting the user’s current workflow. Actions and links may be used in alerts, but only as a shortcut or redundant means to navigate or invoke the action. A toast alert should never be used as the only means for taking actions on an alert event.
+
+Toast notifications must always have a close button so the user can dismiss them. You may also include an optional time-out to dismiss the alert automatically after a period of time. Eight (8) seconds is a recommended timeout. Alerts should not dismiss while the user is hovering over them.
 
 #### When not to use
 Do not use a toast alert when an event requires immediate action or for synchronous events like form validation.
 
-#### Behavior
-Transient toast alerts automatically dismiss after a period of time. Eight (8) seconds is a recommended timeout, but alerts should remain visible if the user is hovering over them.
-
 ### Stacking multiple alerts
 Multiple alerts will stack. The most recent alert should appear at the top and others will push down. When alerts are deleted, any space above will be filled by pushing remaining alerts up in the stack order.
 
-An Alert Group component allows a set of alerts to be properly positioned and stacked as shown below.
+An [Alert Group](documentation/react/components/alertgroup) component allows a set of alerts to be properly positioned and stacked as shown below.
 
-![alert group](./img/alert-group.png)
-
-### Modal alerts
-When a condition occurs that requires immediate action, a modal message dialog is recommended.
-
-![modal notification](./img/modal-notification.png)
-
-For more information about designing modal messages see the [message dialog design guidelines](/design-guidelines/usage-and-behavior/modal).
+![alert group](./img/toast-notification-multiple.png)
 
 ## Content guidelines
 Message text should be succinct and clearly state what the issue or problem is. Embedded links should navigate the user to the location where they can take action.
 
-Alert notifications present special challenges for accessibility. Screen readers will announce the arrival and message content of an incoming toast alert, but user focus will not be placed there. This will make it difficult for these users to directly act on the alerts itself. Therefore we recommend that any message containing actions be descriptive of how the action can be performed in the application. Messages that contain links should specify the location in text as well as including a simple text link. For example, a simple notification message might take the form:
+Toast alerts present special challenges for accessibility. Screen readers will announce the arrival and message content of an incoming toast alert, but user focus will not be placed there. This will make it difficult for these users to directly act on the alerts itself. Therefore, we recommend that any message containing actions be descriptive of how the can navigate to perform the action in the application. Messages that contain links should specify the location in text as well as including a simple text link. For example, a simple notification message might take the form:
 
-![non-accessible toast notification](./img/notification-not-accessible.png)
+<img src="./img/Notification-content-not-accessible.png" alt="Non-accessible alert example" width="615">
 
 A more accessible version of this message would look like this:
 
-![non-accessible toast notification](./img/notification-accessible.png)
+<img src="./img/Notification-content-accessible.png" alt="Non-accessible alert example" width="615">
 
 While this is more verbose, it has the advantage of being usable for both sighted and non-sighted users by providing instructions to screen reader users about where they can go to complete the action.
+
+## Examples
+
+#### Toast alerts
+Toast alerts always stack in the upper right of a page.
+
+<img src="./img/toast-alerts-desktop.png" alt="toast alerts in a page" width="990">
+
+
+#### Inline alerts
+If an alert message applies globally to the content on a page, place the alert in the page header area just below the title.
+
+<img src="./img/Inline-alert-page-level.png" alt="global inline alert in a page" width="990">
+
+But if the alert applies only to specific content, you might consider placing the alert inline with page content so the user can more easily find the problem.
+
+<img src="./img/Inline-alert-specific-context.png" alt="inline alert inline with content" width="990">
 
 ## Related components and demos
 **HTML/CSS**
