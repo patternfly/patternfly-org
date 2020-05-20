@@ -6,9 +6,9 @@ import {
   Title, 
   Button,
   ButtonVariant,
-  DataToolbar,
-  DataToolbarContent,
-  DataToolbarItem,
+  Toolbar,
+  ToolbarContent,
+  ToolbarItem,
   EmptyState, 
   EmptyStateVariant, 
   EmptyStateIcon, 
@@ -130,9 +130,9 @@ export class IconsTable extends React.Component {
     
     return (
       <React.Fragment>
-        <DataToolbar id="data-toolbar">
-          <DataToolbarContent>
-            <DataToolbarItem>
+        <Toolbar id="data-toolbar">
+          <ToolbarContent>
+            <ToolbarItem>
               <InputGroup>
                 <TextInput
                   name="iconsSearch"
@@ -146,12 +146,12 @@ export class IconsTable extends React.Component {
                   <SearchIcon />
                 </Button>
               </InputGroup>
-            </DataToolbarItem>
-            <DataToolbarItem breakpointMods={[{modifier:"align-right"}]}>
+            </ToolbarItem>
+            <ToolbarItem breakpointMods={[{modifier:"align-right"}]}>
               <b>{filteredRows.length} items</b>
-            </DataToolbarItem>
-          </DataToolbarContent>
-        </DataToolbar>
+            </ToolbarItem>
+          </ToolbarContent>
+        </Toolbar>
         <Divider />
         <Table
           aria-label="Sortable Table"
