@@ -97,7 +97,8 @@
 }
 
 @media screen and (min-width: 992px) {
-  #iconsSearch {
+  #iconsSearch,
+  #recommendedIconsSearch {
     width: 400px;
   }
 }

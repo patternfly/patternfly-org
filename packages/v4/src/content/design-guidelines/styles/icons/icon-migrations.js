@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 const recommendationsArray = [
   [
@@ -806,7 +807,7 @@ const recommendationsArray = [
     },
     {
       style: "",
-      iconName: "-",
+      iconName: "N/A",
       type: "",
       iconUsage: "These icons remain the PatternFly font, but their use is now obsolete",
       iconType: "new",
@@ -1310,11 +1311,11 @@ const recommendationsArray = [
     },
     {
       style: "",
-      iconName: "Use PF Spinner component",
+      iconName: <span>Use <Link to="documentation/react/components/spinner">PF Spinner component</Link></span>,
       type: "",
       iconUsage: "Indicates the ability to move a horizontally-oriented component via drag and drop",
       iconType: "new",
-      reactIcon: "n/a"
+      reactIcon: "PF-Spinner-Component"
     }
   ]
 ];
