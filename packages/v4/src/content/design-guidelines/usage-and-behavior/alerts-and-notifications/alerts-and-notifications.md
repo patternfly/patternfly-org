@@ -129,3 +129,4 @@ But if the alert applies only to specific content, you might consider placing th
 
 **React**
 * [Alert](/documentation/react/components/alert)
+* [Alert group](/documentation/react/components/alertgroup)
