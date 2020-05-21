@@ -168,7 +168,7 @@ export class IconRecommendations extends React.Component {
           className="ws-icons-recommendations"
           sortBy={sortBy}
           onSort={this.onSort}
-          // variant={TableVariant.compact}
+          variant={TableVariant.compact}
         >
           <TableHeader />
           <TableBody />

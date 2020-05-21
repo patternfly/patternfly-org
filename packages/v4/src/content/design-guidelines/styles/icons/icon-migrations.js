@@ -807,7 +807,7 @@ const recommendationsArray = [
     },
     {
       style: "",
-      iconName: "N/A",
+      iconName: "n/a",
       type: "",
       iconUsage: "These icons remain the PatternFly font, but their use is now obsolete",
       iconType: "new",
@@ -1311,7 +1311,7 @@ const recommendationsArray = [
     },
     {
       style: "",
-      iconName: <span>Use <Link to="documentation/react/components/spinner">PF Spinner component</Link></span>,
+      iconName: <span>Use <Link to="/documentation/react/components/spinner">PF Spinner component</Link></span>,
       type: "",
       iconUsage: "Indicates the ability to move a horizontally-oriented component via drag and drop",
       iconType: "new",

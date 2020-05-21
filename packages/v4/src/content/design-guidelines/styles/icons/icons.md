@@ -3,7 +3,7 @@ title: Icons
 section: styles
 ---
 import { Link } from 'gatsby';
-import { Alert, ApplicationLauncher, ApplicationLauncherGroup, ApplicationLauncherItem, Button, Card, CardBody, Divider, Dropdown, DropdownToggle, EmptyState, EmptyStateIcon, Flex, FlexItem, FlexModifiers, Grid, GridItem, LoginPage, Title } from '@patternfly/react-core';
+import { Card, CardBody, Divider, Flex, FlexItem, FlexModifiers, Grid, GridItem } from '@patternfly/react-core';
 import CaretDownIcon from '@patternfly/react-icons/dist/js/icons/caret-down-icon';
 import CheckCircleIcon from '@patternfly/react-icons/dist/js/icons/check-circle-icon';
 import ExclamationCircleIcon from '@patternfly/react-icons/dist/js/icons/exclamation-circle-icon';
@@ -67,32 +67,20 @@ import './icons.css';
     <Card className="ws-icon-size-examples">
       <CardBody>
         <p><b>Small icons</b></p>
-        <Flex  breakpointMods={[{modifier: FlexModifiers['align-items-flex-start']}]}>
+        <Flex breakpointMods={[{modifier: FlexModifiers['align-items-flex-start']}]}>
           <FlexItem>
-            <Dropdown
-              toggle={<DropdownToggle id="toggle-id">Dropdown</DropdownToggle>}
-            />
+            <img src="sm-icons-2.png" alt="Small icons" className="ws-sm-icons" />
           </FlexItem>
           <FlexItem breakpointMods={[{modifier: FlexModifiers.grow}]}>
-            <ApplicationLauncher isOpen={true} favorites={['openshift']} isGrouped className="ws-icons-appLauncher" onFavorite={()=>null} items={[
-              <ApplicationLauncherGroup label="Favorites" key="Favorites">
-                <ApplicationLauncherItem isFavorite key="item 1" id="openshift">OpenShift</ApplicationLauncherItem>
-                <ApplicationLauncherItem key="item 2" id="github">Github</ApplicationLauncherItem>
-              </ApplicationLauncherGroup>
-            ]} />
+            <img src="sm-icons.png" alt="Small icons" className="ws-sm-icons" />
           </FlexItem>
         </Flex>
         <p><b>Medium icons</b></p>
-        <Alert variant="default" isInline title="Default inline alert title"/>
+        <img src="md-icons.png" alt="Medium icons" className="ws-md-icons" />
         <p><b>Large icons</b></p>
-        <img src="login_icons.png" alt="Log in icons" className="ws-login-icons" />
+        <img src="lg-icons.png" alt="Large icons" className="ws-lg-icons" />
         <p><b>X-large icons</b></p>
-        <EmptyState variant={EmptyStateVariant.lg} className="ws-icons-empty-state">
-          <EmptyStateIcon icon={CubesIcon} />
-          <Title headingLevel="h5" size="xl">
-            This is a large empty state
-          </Title>
-        </EmptyState>
+        <img src="xl-icons.png" alt="Extra large icons" className="ws-xl-icons" />
       </CardBody>
     </Card>
   </GridItem>
@@ -106,7 +94,9 @@ Visit our <Link to="/design-guidelines/styles/colors" className="pf-m-link">colo
 <Divider className="ws-icons-divider" />
 
 ## All icons
-PatternFly uses custom icons and selections from <a href="https://fontawesome.com/icons">FontAwesome</a>. PatternFly icons are two dimensional and flat. Navigate to FontAwesome’s website to download SVGs of any ‘fa’ icons. Click on any single pf-icon in the table to download it as an SVG. Download all icon SVGs <a href="#">here</a>.
+PatternFly uses custom icons and selections from <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome Free</a>. PatternFly icons are two dimensional and flat. Navigate to Font Awesome’s website to download SVGs of any ‘fa’ icons within their free set. Proper attribution should be given as outlined on the Font Awesome site.
+
+Click on any single icon in the table to download it as an SVG. Download all icon SVGs <a href="#">here</a>.
 
 If you’re a designer, these icons are the same set as the ones in the <a href="https://www.patternfly.org/v4/get-started/designers">PatternFly Sketch Design Kit</a>. It is possible to use any FontAwesome icon as long it follows the guidelines above.
 
