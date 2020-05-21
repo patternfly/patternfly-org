@@ -26,7 +26,7 @@ import {
   sortable,
   SortByDirection
 } from '@patternfly/react-table';
-import { iconsData } from './iconsData';
+import { iconsData } from './icons';
 import { saveAs } from 'file-saver';
 import { css } from '@patternfly/react-styles';
 import styles from '@patternfly/react-styles/css/components/Table/table';
