@@ -26,7 +26,8 @@ Use our typographic styles to communicate visual hierarchy. A consistent and log
   title="First level title*"
   note="*Not to be used in content block (Landing pages, login, etc.)"
   styleProps={styleProps.first} />
-<TitleLevel asGrid title="Second level title" styleProps = {styleProps.second} />
+{console.log(styleProps)}
+<TitleLevel asGrid title="Second level title" styleProps={styleProps.second} />
 <TitleLevel asGrid title="Third level title" styleProps={styleProps.third} />
 <TitleLevel asGrid title="Fourth level title" styleProps = {styleProps.fourth} />
 <TitleLevel
