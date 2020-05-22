@@ -34,7 +34,7 @@ The status icon, background, and alert title are coded to communicate the severi
 |Critical |fa-exclamation-circle | Use to indicate that a critical or blocking error has occurred
 |Success  |fa-check-circle | Use to indicate that a task or process has completed successfully
 
-For more information about exact colors used to represent status and severity, visit the [Colors](./styles/colors#status-and-state-colors) page.
+For more information about exact colors used to represent status and severity, visit the [Colors](/design-guidelines/styles/colors#status-and-state-colors) page.
 
 
 ## Usage
@@ -110,7 +110,7 @@ While this is more verbose, it has the advantage of being usable for both sighte
 #### Toast alerts
 Toast alerts always stack in the upper right of a page.
 
-<img src="./img/toast-alerts-desktop.png" alt="toast alerts in a page" width="990"/>
+<img src="./img/Toast-alerts-desktop.png" alt="toast alerts in a page" width="990"/>
 
 
 #### Inline alerts
