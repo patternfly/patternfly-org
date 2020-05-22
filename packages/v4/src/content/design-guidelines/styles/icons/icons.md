@@ -1,6 +1,7 @@
 ---
 title: Icons
 section: styles
+hideSource: true
 ---
 import { Link } from 'gatsby';
 import { Card, CardBody, Divider, Flex, FlexItem, FlexModifiers, Grid, GridItem } from '@patternfly/react-core';
