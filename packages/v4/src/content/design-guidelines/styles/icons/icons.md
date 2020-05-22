@@ -60,19 +60,17 @@ import './icons.css';
         <code>--pf-global--icon--FontSize—xl</code>
       </FlexItem>
     </Flex>
-    No matter the size of the icon, when icons are next to text, they should be center-aligned horizontally. An example of this alignment in a component is a <Link to="design-guidelines/usage-and-behavior/buttons-and-links#link-button">link button</Link>. If icons are stacked, they should also be center-aligned vertically.
-    <div><img src="icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" /></div>
   </GridItem>
-  <GridItem xl={5} xlOffset={7} lg={12}>
+  <GridItem xl={5} xlOffset={7} lg={12} xlRowSpan={2} >
     <Card className="ws-icon-size-examples">
       <CardBody>
         <p><b>Small icons</b></p>
         <Flex breakpointMods={[{modifier: FlexModifiers['align-items-flex-start']}]}>
           <FlexItem>
-            <img src="sm-icons-2.png" alt="Small icons" className="ws-sm-icons" />
+            <img src="sm-icons-1.png" alt="Small icons" className="ws-sm-icons ws-sm-icons-1" />
           </FlexItem>
           <FlexItem breakpointMods={[{modifier: FlexModifiers.grow}]}>
-            <img src="sm-icons.png" alt="Small icons" className="ws-sm-icons" />
+            <img src="sm-icons-2.png" alt="Small icons" className="ws-sm-icons ws-sm-icons-2" />
           </FlexItem>
         </Flex>
         <p><b>Medium icons</b></p>
@@ -83,6 +81,10 @@ import './icons.css';
         <img src="xl-icons.png" alt="Extra large icons" className="ws-xl-icons" />
       </CardBody>
     </Card>
+  </GridItem>
+  <GridItem xl={6} lg={12} className="ws-icons-gridtext ws-icons-alignment-section">
+    No matter the size of the icon, when icons are next to text, they should be center-aligned horizontally. An example of this alignment in a component is a <Link to="design-guidelines/usage-and-behavior/buttons-and-links#link-button">link button</Link>. If icons are stacked, they should also be center-aligned vertically.
+    <div><img src="icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" /></div>
   </GridItem>
 </Grid>
 

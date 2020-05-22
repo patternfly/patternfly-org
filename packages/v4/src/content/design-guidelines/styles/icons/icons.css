@@ -6,6 +6,26 @@
   margin-top:8px;
 }
 
+.ws-sm-icons-1 {
+  width: 170px;
+}
+
+.ws-sm-icons-2 {
+  width: 200px;
+}
+
+.ws-md-icons {
+  width: 600px;
+}
+
+.ws-lg-icons {
+  width: 650px;
+}
+
+.ws-xl-icons {
+  width: 300px;
+}
+
 .ws-icon-recommendations tbody {
   vertical-align: top;
 }
@@ -33,6 +53,12 @@
 
 #all-icons ~ .ws-p > .ws-code {
   margin-left: 8px;
+}
+
+@media screen and (max-width: 1079px) {
+  .ws-icons-alignment-section {
+    margin-top: 24px;
+  }
 }
 
 .ws-icons-gridtext .ws-icon-sizes-sm {

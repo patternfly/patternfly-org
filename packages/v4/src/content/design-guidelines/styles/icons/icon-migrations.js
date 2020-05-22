@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 const recommendationsArray = [
   [
@@ -1311,7 +1310,7 @@ const recommendationsArray = [
     },
     {
       style: "",
-      iconName: <span>Use <Link to="/documentation/react/components/spinner">PF Spinner component</Link></span>,
+      iconName: <span>Use <a to="/documentation/react/components/spinner">PF Spinner component</a></span>,
       type: "",
       iconUsage: "Indicates the ability to move a horizontally-oriented component via drag and drop",
       iconType: "new",
