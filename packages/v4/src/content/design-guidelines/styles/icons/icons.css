@@ -83,6 +83,7 @@
 .ws-icon-alignment {
   margin-top: 16px;
   max-width: 480px;
+  width: 100%;
 }
 
 .ws-icons-empty-state.pf-c-empty-state {

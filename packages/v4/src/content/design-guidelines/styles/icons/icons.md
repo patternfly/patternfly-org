@@ -61,7 +61,7 @@ import './icons.css';
       </FlexItem>
     </Flex>
     No matter the size of the icon, when icons are next to text, they should be center-aligned horizontally. An example of this alignment in a component is a <Link to="design-guidelines/usage-and-behavior/buttons-and-links#link-button">link button</Link>. If icons are stacked, they should also be center-aligned vertically.
-    <img src="icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" />
+    <div><img src="icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" /></div>
   </GridItem>
   <GridItem xl={5} xlOffset={7} lg={12}>
     <Card className="ws-icon-size-examples">
@@ -94,7 +94,7 @@ Visit our <Link to="/design-guidelines/styles/colors" className="pf-m-link">colo
 <Divider className="ws-icons-divider" />
 
 ## All icons
-PatternFly uses custom icons and selections from <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome Free</a>. PatternFly icons are two dimensional and flat. Navigate to Font Awesome’s website to download SVGs of any ‘fa’ icons within their free set. Proper attribution should be given as outlined on the Font Awesome site.
+PatternFly uses custom icons and selections from <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome Free</a>. PatternFly icons are mostly two dimensional and flat. Navigate to Font Awesome’s website to download SVGs of any additional ‘fa’ icons within their free set. Proper attribution should be given as outlined on the Font Awesome site.
 
 Click on any single icon in the table to download it as an SVG. Download all icon SVGs <a href="#">here</a>.
 

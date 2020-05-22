@@ -149,7 +149,7 @@ export const iconsData = [
   {
     "Style": "far",
     "Name": "fa-clock",
-    "React_name": "ClockIcon",
+    "React_name": "OutlinedClockIcon",
     "Type": "Framework",
     "Contextual_usage": "Represents a time interval"
   },
@@ -184,7 +184,7 @@ export const iconsData = [
   {
     "Style": "far",
     "Name": "fa-comments",
-    "React_name": "CommentsIcon",
+    "React_name": "OutlinedCommentsIcon",
     "Type": "Framework",
     "Contextual_usage": "Indicates availability of commenting"
   },
