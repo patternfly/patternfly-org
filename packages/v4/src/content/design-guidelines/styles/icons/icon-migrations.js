@@ -863,7 +863,7 @@ const recommendationsArray = [
       style: "far",
       iconName: "fa-question-circle",
       type: "Framework",
-      iconUsage: "Indicates the availability of contextual help or a help system",
+      iconUsage: "Indicates the availability of contextual help",
       iconType: "new",
       reactIcon: "OutlinedQuestionCircleIcon"
     },
@@ -871,7 +871,7 @@ const recommendationsArray = [
       style: "fas",
       iconName: "fa-question-circle",
       type: "Framework",
-      iconUsage: "Indicates the availability of contextual help or a help system",
+      iconUsage: "Indicates the availability of a help system in the masthead",
       iconType: "new",
       reactIcon: "QuestionCircleIcon"
     }

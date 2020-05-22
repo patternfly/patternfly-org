@@ -102,14 +102,18 @@ export class IconRecommendations extends React.Component {
           const SpinnerComponent = reactIcon === 'PF-Spinner-Component';
           
           (columnName === 'iconUsage')
-            ? cellObj.title = cellLine
-            : cellObj.title.push(<div className={`${css(styles.modifiers.fitContent)} ws-recommendations-entry`} key={`${name}-${index}`}><span className="ws-recommendations-icon">
-              {Icon && <Icon />}
-              {iconSvg}
-              {SpinnerComponent && <Spinner size='md' />}
-            </span>{icon}</div>);
-            return null;
-        })
+            ? cellObj.title.push(<div className="ws-recommendations-entry" key={`${name}-${index}`}>{cellLine}</div>)
+            : cellObj.title.push(<div className={`${css(styles.modifiers.fitContent)} ws-recommendations-entry`} key={`${name}-${index}`}>
+              <span className="ws-recommendations-icon">
+                {Icon && <Icon />}
+                {iconSvg}
+                {SpinnerComponent && <Spinner size='md' />}
+              </span>
+              {icon}
+            </div>);
+
+          return null;
+        });
         return cellObj;
       });
       return cells;
