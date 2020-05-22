@@ -11,7 +11,7 @@ Alerts are used when the system wants to notify the user about some status or ot
 ### Alert
 Alerts are used to communicate status information to the user without blocking other actions through the user interface. There are two styles that can be applied to an alert depending on whether it is intended as an [inline](#inline-alerts) or [toast](#toast-alerts) alert. Regardless of the styling, the basic elements of all alerts are consistent.
 
-<img src="./img/alert-types.png" alt="Alert types" width="868">
+<img src="./img/alert-types.png" alt="Alert types" width="868"/>
 
 Toast alerts should always be dismissable, whereas inline alerts can be both dismissable and non-dismissable
 
@@ -24,7 +24,7 @@ Toast alerts should always be dismissable, whereas inline alerts can be both dis
 #### Communicating status
 The status icon, background, and alert title are coded to communicate the severity of an alert.
 
-<img src="./img/alert-status.png" alt="alert styles" width="700">
+<img src="./img/alert-status.png" alt="alert styles" width="700"/>
 
 |Type     |Icon    |Usage      |
 |---------|--------|--------------|
@@ -64,7 +64,7 @@ An inline alert should never block the user from interacting with other content 
 
 In addition to static message content and links, interactive elements may optionally be included in the body of an inline alert to ask the user for further input or feedback.
 
-<img src="./img/inline-interactive-alert.png" alt="interactive inline alert" width="798">
+<img src="./img/inline-interactive-alert.png" alt="interactive inline alert" width="798"/>
 
 #### When not to use
 Do not use inline alerts to reflect the status of an asynchronous operation. In this case, a Toast Alert should be used.
@@ -97,11 +97,11 @@ Message text should be succinct and clearly state what the issue or problem is. 
 
 Toast alerts present special challenges for accessibility. Screen readers will announce the arrival and message content of an incoming toast alert, but user focus will not be placed there. This will make it difficult for these users to directly act on the alerts itself. Therefore, we recommend that any message containing actions be descriptive of how the can navigate to perform the action in the application. Messages that contain links should specify the location in text as well as including a simple text link. For example, a simple notification message might take the form:
 
-<img src="./img/Notification-content-not-accessible.png" alt="Non-accessible alert example" width="615">
+<img src="./img/Notification-content-not-accessible.png" alt="Non-accessible alert example" width="615"/>
 
 A more accessible version of this message would look like this:
 
-<img src="./img/Notification-content-accessible.png" alt="Non-accessible alert example" width="615">
+<img src="./img/Notification-content-accessible.png" alt="Non-accessible alert example" width="615"/>
 
 While this is more verbose, it has the advantage of being usable for both sighted and non-sighted users by providing instructions to screen reader users about where they can go to complete the action.
 
@@ -110,17 +110,17 @@ While this is more verbose, it has the advantage of being usable for both sighte
 #### Toast alerts
 Toast alerts always stack in the upper right of a page.
 
-<img src="./img/toast-alerts-desktop.png" alt="toast alerts in a page" width="990">
+<img src="./img/toast-alerts-desktop.png" alt="toast alerts in a page" width="990"/>
 
 
 #### Inline alerts
 If an alert message applies globally to the content on a page, place the alert in the page header area just below the title.
 
-<img src="./img/Inline-alert-page-level.png" alt="global inline alert in a page" width="990">
+<img src="./img/Inline-alert-page-level.png" alt="global inline alert in a page" width="990"/>
 
 But if the alert applies only to specific content, you might consider placing the alert inline with page content so the user can more easily find the problem.
 
-<img src="./img/Inline-alert-specific-context.png" alt="inline alert inline with content" width="990">
+<img src="./img/Inline-alert-specific-context.png" alt="inline alert inline with content" width="990"/>
 
 ## Related components and demos
 **HTML/CSS**
