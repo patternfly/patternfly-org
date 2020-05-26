@@ -6,7 +6,6 @@ export * from './cssVariables/cssSearch';
 export * from './example/example';
 export * from './footer/footer';
 export * from './gdprBanner/gdprBanner';
-export * from './icons/icons';
 export * from './propsTable/propsTable';
 export * from './sideNav/sideNav';
 export * from './topNav/topNav';
