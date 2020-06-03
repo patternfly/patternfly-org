@@ -64,7 +64,7 @@ An inline alert should never block the user from interacting with other content 
 
 In addition to static message content and links, interactive elements may optionally be included in the body of an inline alert to ask the user for further input or feedback.
 
-<img src="./img/inline-interactive-alert.png" alt="interactive inline alert" width="798"/>
+<img src="./img/inline-interactive-alert.png" alt="interactive inline alert" width="698"/>
 
 #### When not to use
 Do not use inline alerts to reflect the status of an asynchronous operation. In this case, a Toast Alert should be used.
