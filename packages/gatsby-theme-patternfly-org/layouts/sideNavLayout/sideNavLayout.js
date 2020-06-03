@@ -36,6 +36,7 @@ export const SideNavLayout = ({
   parityComponent, // aboutmodal <=> aboutmodalbox
   hideSideNav = false,
   showGdprBanner = false,
+  showFooter = false,
   pageTitle = ''
 }) => {
   // Put queries for Top and Side navs here for performance
@@ -271,7 +272,7 @@ export const SideNavLayout = ({
       <Page isManagedSidebar header={Header} sidebar={SideBar} className="ws-page">
         {children}
       </Page>
-      <Footer />
+      {showFooter && <Footer />}
     </div>
   );
 }

@@ -36,6 +36,7 @@ module.exports = {
         context: 'org',
         hiddenPages: ['withOuia'], // By title
         showGdprBanner: false, // GDPR banner
+        showFooter: true, // Footer
         sideNav: {
           core: [
             { section: 'overview' },
