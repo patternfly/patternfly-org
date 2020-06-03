@@ -13,14 +13,16 @@ The toolbar is a container for holding a variety of elements (toolbar items and 
 
 ![toolbar](./img/basic-toolbar-nocallout.png)
 
-All items should be centered vertically within the height.
+All items should be centered vertically within the toolbar.
 
 ### Toolbar items and groups
-Toolbar items are individual components that can be placed inside of a toolbar. Buttons, select lists, and pagination controls are examples of items. Often, it makes sense to group sets of like items to create desired associations and to enable items to respond together to changes in viewport width.
+Toolbar items are individual components that can be placed inside of a toolbar. Often, it makes sense to group sets of like items to create desired associations and to enable items to respond together to changes in viewport width. The default spacing between items and groups is 16px, bit this can be modified, if required.
 
 Below are examples of: a group of icons, a group of buttons, a group of icons and buttons.
 
 ![toolbar items and groups](./img/items-and-groups.png)
+
+**Update this example to show correct spacing of items and groups**
 
 Items within a group have 16px spacing between them. Items that are made up of multiple parts (for example the filter dropdown and input group) are treated as one item in regards to the spacing.
 
