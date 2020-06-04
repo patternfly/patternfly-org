@@ -9,13 +9,11 @@ Alerts are used when the system wants to notify the user about some status or ot
 
 ## Elements
 ### Alert
-Alerts are used to communicate status information to the user without blocking other actions through the user interface. There are two styles that can be applied to an alert depending on whether it is intended as an [inline](#inline-alerts) or [toast](#toast-alerts) alert. Regardless of the styling, the basic elements of all alerts are consistent.
+Alerts are used to communicate status information to the user without blocking other actions through the user interface. There are two styles that can be applied to an alert depending on whether it is intended as an [inline](#inline-alerts) or [toast](#toast-alerts) alert. Toast alerts should always be dismissable, whereas inline alerts can be both dismissable and non-dismissable. Other elements are consistent between alert types.
 
 <img src="./img/alert-types.png" alt="Alert types" width="868"/>
 
-Toast alerts should always be dismissable, whereas inline alerts can be both dismissable and non-dismissable
-
-1. **Status area:** Use an icon and color to indicate status or severity of the alert.
+1. **Status area:** Icon and color indicate the status or severity of the alert.
 2. **Alert title:** Include a short descriptive message. Long message text will wrap. Text color is coded to match alert type.
 3. **Close (optional):** Dismiss the alert. Required for toast alerts and optional for inline alerts.
 4. **Actions (optional):** One or more actions can be placed inside of an alert.
@@ -48,7 +46,7 @@ There are three ways that the system can communicate notifications to the users.
 
 |           |Usage     |UI placement     |Persistence
 |-----------|----------|-----------------|---------------|
-|[Inline alerts](#inline-alerts)|Use for notifications that are a direct response to a user action, eg., clicking the Submit button, and can be informational or that identify actions required on that page before the user can continue. |Appear at the top of the content area and push other content down. | Persist until the user dismisses them or navigates away from the page.
+|[Inline alerts](#inline-alerts)|Use for notifications that are a direct response to a user action, like clicking the Submit button on a form, and can be informational or that identify actions required on that page before the user can continue. |Appear at the top of the content area and push other content down. | Persist until the user dismisses them or navigates away from the page.
 |[Toast alerts](#toast-alerts) |Use to present a system notification that should not interrupt the user’s current workflow. |Enter from the right edge of the screen and overlay content. |Remain until they time out, or the user dismisses them.
 |[Modal alerts](#modal-alerts) |Use when you must interrupt the task at hand until the user takes action. |Overlay the UI and prevent further user actions until the user closes the modal. |Remain until the user dismisses the modal.
 
@@ -64,7 +62,7 @@ An inline alert should never block the user from interacting with other content 
 
 In addition to static message content and links, interactive elements may optionally be included in the body of an inline alert to ask the user for further input or feedback.
 
-<img src="./img/inline-interactive-alert.png" alt="interactive inline alert" width="698"/>
+<img src="./img/inline-interactive-alert.png" alt="interactive inline alert" width="439"/>
 
 #### When not to use
 Do not use inline alerts to reflect the status of an asynchronous operation. In this case, a Toast Alert should be used.
