@@ -182,7 +182,7 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
     }
     const hbsInstance = createHandlebars(result.data.partials.nodes);
     const hiddenTitles = (pluginOptions.hiddenPages || []).map(title => title.toLowerCase());
-    const { showBanner = false, showGdprBanner = false } = pluginOptions;
+    const { showBanner = false, showGdprBanner = false, showFooter = false } = pluginOptions;
     // Create 404 page
     actions.createPage({
       path: '/404',
@@ -241,6 +241,8 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
             showBanner,
             // To hide the GDPR banner
             showGdprBanner,
+            // To hide the footer
+            showFooter,
             // To link each MD file back to Github
             sourceLink,
           }

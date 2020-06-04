@@ -24,7 +24,7 @@ import {
   Divider
 } from '@patternfly/react-core';
 import { SearchIcon, CaretDownIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
-import { SideNav, TopNav,  Banner, Footer, GdprBanner } from '../../components';
+import { SideNav, TopNav,  Footer, GdprBanner } from '../../components';
 import staticVersions from 'gatsby-theme-patternfly-org/versions.json';
 import logo from '../logo.svg';
 import './sideNavLayout.css';
@@ -35,8 +35,8 @@ export const SideNavLayout = ({
   context,
   parityComponent, // aboutmodal <=> aboutmodalbox
   hideSideNav = false,
-  showBanner = false,
   showGdprBanner = false,
+  showFooter = false,
   pageTitle = ''
 }) => {
   // Put queries for Top and Side navs here for performance
@@ -267,13 +267,12 @@ export const SideNavLayout = ({
         <title>{title}{pageTitle && ` - ${pageTitle}`}</title>
       </Helmet>
       <div id="ws-page-banners">
-        {showBanner && <Banner />}
         {showGdprBanner && <GdprBanner />}
       </div>
       <Page isManagedSidebar header={Header} sidebar={SideBar} className="ws-page">
         {children}
       </Page>
-      <Footer />
+      {showFooter && <Footer />}
     </div>
   );
 }
