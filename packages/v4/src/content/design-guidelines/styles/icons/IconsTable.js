@@ -147,7 +147,7 @@ export class IconsTable extends React.Component {
                 </Button>
               </InputGroup>
             </ToolbarItem>
-            <ToolbarItem breakpointMods={[{modifier:"align-right"}]}>
+            <ToolbarItem alignment={{ default: 'alignRight' }}>
               <b>{filteredRows.length} items</b>
             </ToolbarItem>
           </ToolbarContent>
