@@ -10,7 +10,7 @@ _Charts are only available in React_
 Use charts to visualize data in an application. The type of chart you use will depend on your use case and the type of data you need to display.
 
 ## Elements
-![Chart](./img/axis-labels.png)
+<img src=“./img/axis-labels.png” alt=“Chart with axis labels” width="713"/> 
 
 1. **Title:** Titles should be left-aligned and appear above your chart.
 2. **Axis labels and scale values:**  We recommend using tick marks to clearly mark scale values on the y-axis. The text for axis labels and scale values should be 12px font in standard text color. All scale values should be equally distributed across the axis and the axis label should fall outside the scale values, centered with the axis line.
@@ -21,9 +21,10 @@ Use charts to visualize data in an application. The type of chart you use will d
 - [Area charts](#area-chart): use to show trending over a continuous scale (usually time)
 - [Bar charts](#bar-chart): great way to show and compare categorical data
   - [Stacked bar charts](#stacked-bar-charts)
+- [Bullet charts](#bullet-chart): use as an extension to the bar chart to measure data with thresholds and static ranges
 - [Donut charts](#donut-chart): use to show the relationship of a set of values to a whole or progress completion as a percentages
   - [Donut utilization](#donut-chart---utilization): use to show utilization for an object as a percentages
-  - [Donut utilization with threshold](#donut-chart---utilization-with-threshold)
+  - [Donut utilization with threshold](#donut-chart---utilization-with-threshold): use to show utilization for an object in relation to threshold values
 - [Line chart](#line-chart): use to compare several data sets, or to show data over a period of time
 - [Pie chart](#pie-chart): show percentages or proportional data
 - [Sparkline](#sparkline): understand trends and patterns
@@ -36,7 +37,8 @@ An area chart is used to provide metrics for a single data point. While similar 
 The most common use case for area charts is to show trending over a continuous scale (usually time). Use this instead of a line chart when you need to provide more visual emphasis than a simple line chart would offer. It is possible to stack area charts to compare more than one continuous data sets. Stacking area charts will put more emphasis on the difference between the data sets visualized. See [Line charts](#line-chart) for more information about them.
 
 #### Example
-![Area chart](./img/area-chart.png)
+<img src=“./img/area-chart.png” alt=“Area chart” width="489"/> 
+
 
 1. **Data area fill:** The area fill is presented below the data line. Data area fills use colors that conform with the [Colors for charts](/design-guidelines/styles/colors-for-charts).
 2. **Chart tooltip:** Use the chart tooltip to drill into the data related to any data point provided on your area chart.
@@ -56,9 +58,9 @@ Since bar charts differentiate by length, we recommend that in most cases they b
 The orientation of bar charts is dependent on the data and space at hand. Any bar chart should be able to be displayed in either direction if applicable.
 
 #### Example
-![Horizontal bar chart](./img/horizbarchart.png)
+<img src=“./img/horizontal-bar-chart.png” alt="Horizontal bar chart” width="737"/>
 
-![Vertical bar chart](./img/vertbarchart.png)
+<img src=“./img/vertical-bar-chart.png” alt="Vertical bar chart” width="559"/>
 
 1. **Bar:** All bars should be the same width. The height of the bar represents its value. The spacing between bars should be equal as well, mimicking the axis value spacing. For recommendations on fill colors, see [Colors for charts](/design-guidelines/styles/colors-for-charts).
 
@@ -70,14 +72,28 @@ The orientation of bar charts is dependent on the data and space at hand. Any ba
 Stacked bar charts describe totals while allowing a degree of internal breakdown of the data. An advantage of stacked bar charts is the order of the stack can be swapped without changing the overall total. These can be illustrated vertically and horizontally depending on available space and the data being described.
 
 #### Example
-![Horizontal stacked bar chart](./img/horizstackedbarchart.png)
+<img src=“./img/horizontal-stacked-bar-chart.png” alt="Horizontal stacked bar chart” width="690"/>
 
-![Vertical stacked bar chart](./img/vertstackedbarchart.png)
+<img src=“./img/vertical-stacked-bar-chart.png” alt="Vertical stacked bar chart” width="663"/>
 
 1. **Stacked bar:** The first series name is represented by the topmost stacked bar, and the last series name is represented by the bottommost stacked bar. For recommendations on series colors, see [Colors for charts](/design-guidelines/styles/colors-for-charts).
 
 #### React component
 [Stacked bar chart](/documentation/react/charts/chartstack)
+
+### Bullet chart
+A bullet chart can be thought of as an extension to a bar chart where it measures a dynamic value with thresholds and target values. While similar to [donut utilization charts](#donut-chart---utilization), bullet charts can show underages and overages of data (below 0% and above 100%), be visualized horizontally or vertically, and are capable of packing in a lot of information in a compact space. 
+
+#### Usage
+Bullet charts are most often used to measure sets of performance data or utilization. They can be used for similar use cases as [donut utilization with threshold](#donut-chart---utilization-with-threshold) charts. For example, a user can use a bullet chart to measure values of a set compared to the whole, while also illustrating related thresholds, target values, and underages or overages. 
+
+When deciding which to use, consider the type of data you are dealing with and the importance of tracking underages or overages of data. Also consider the amount of space you have to visualize the data and the surrounding information. Bullet charts consolidate the data and therefore take up less space than donut charts would. They fit very well within text-dense areas, since they can be horizontally or visually illustrated. Bullet charts can also measure data by percentages or integer values, which donut charts cannot.
+
+#### Example
+<img src=“./img/bullet-chart.png” alt="Bullet chart” width="633"/>
+
+#### React component
+[Bullet chart](/documentation/react/charts/chartbullet)
 
 ### Donut chart
 These are the most common use cases for donut charts:
@@ -93,7 +109,7 @@ In donut charts, you can choose to use percentages or integer values to compare 
 For donut charts, don’t try to represent more than six categories. We recommend using the [Colors for charts](/design-guidelines/styles/colors-for-charts) guidelines to represent your data when thresholds are not present.
 
 #### Example
-![Donut chart](./img/donut-chart.png)
+<img src=“./img/donut-chart.png” alt="Donut chart” width="501"/>
 
 1. **Segment fill:** We recommend using [Colors for charts] (/design-guidelines/styles/colors-for-charts) for different items within the donut chart.
 2. **Segment padding:**  Always provide 3px of padding between segments.
@@ -105,9 +121,9 @@ For donut charts, don’t try to represent more than six categories. We recommen
 [Donut chart](/documentation/react/charts/chartdonut)
 
 ### Donut chart - Utilization
-![Donut utilization](./img/donut-utilization.png) ![Donut utilization hover](./img/donut-utilization-hover.png)
+<img src=“./img/donut-utilization.png alt="Donut utilization" width="404"/><img src=“./img/donut-utilization-hover.png alt="Donut utilization hover" width="404"/>
 
-![Donut utilization 2](./img/donut-utilization-2.png)
+<img src=“./img/donut-utilization-2.png alt="Donut utilization 2" width="404"/>
 
 1. **Unused segment fill:** The unused area of the donut chart will always remain at #EDEDED.
 2. **Used segment fill:** We recommend using #0066cc for the used area of the donut chart. See [Colors for charts](/design-guidelines/styles/colors-for-charts) for other recommended color options.
@@ -118,7 +134,7 @@ For donut charts, don’t try to represent more than six categories. We recommen
 [Donut utilization](/documentation/react/charts/chartdonututilization)
 
 ### Donut chart - Utilization with threshold
-![Donut utilization with threshold](./img/donut-utilization-with-threshold.png)
+<img src=“./img/donut-utilization-with-threshold.png alt="Donut utilization with threshold" width="906"/>
 
 1. **Threshold segment fill:** The outer segments of the chart are static and represent the thresholds for your use case. The example diagrams show utilization thresholds for a database and are used to let users know when they move from a safe zone into a danger zone. For threshold segments, use incremental shades of  grey starting at #EDEDED then to #D2D2D2 then to #BBBBBB. Provide 3px of padding between each segment.
 2. **Utilization segment fill:** This dynamic chart is a concentric circle within the donut thresholds and will represent the data set. For this chart, we recommend using the following colors:
@@ -127,7 +143,7 @@ For donut charts, don’t try to represent more than six categories. We recommen
   - #C9190B once the data set has hit the danger threshold
 3. **Legend:** The utilization segment color swatch will change in accordance to the chart.
 
-![Donut utilization with threshold hover](./img/donut-utilization-with-threshold-hover.png)
+<img src=“./img/donut-utilization-with-threshold-hover.png alt="Donut utilization with threshold hover" width="1018"/>
 
 4. **Chart tooltip:** Chart tooltips appear on hover for both threshold segments and utilization segments. We recommend stating the threshold name, the segment name, and the value being represented. For example, if the threshold being met is “Danger,” and the segment represents “Storage capacity,” and the value being represented is 92%, your chart tooltip would state, “Danger: Storage capacity: 92%.” We recommend stating the threshold name “at” the percentage the threshold begins (ex. Warning at 60%).
 
@@ -145,7 +161,7 @@ The most common use case for line charts is to compare several data sets over a 
 Multiple lines on the same chart allow the user to visualize relationships between varying data sets, such as correlated events, similarities or unexpected differences. We recommend displaying no more than 6 lines on a single graph to avoid confusion.
 
 #### Example
-![Line chart](./img/linechart.png)
+<img src=“./img/line-chart.png alt="Line chart" width="1499"/>
 
 1. **Line:** Line charts can optionally visually represent data points as dots on the line. If so, the same interaction that occurs when hovering over one in an [Area chart](#area-chart) will occur in line charts. For line colors, we recommend using the [Colors for charts](/design-guidelines/styles/colors-for-charts).
 
@@ -162,7 +178,7 @@ It makes sense to choose a pie chart when you need to compare a set of values to
 A pie chart may be the wrong choice when you need to compare categories to one another, because it can be difficult to distinguish small differences between segments. If you wish to compare values to each other, the [Bar chart](#bar-chart) may be a more effective pattern.
 
 #### Example
-![Pie chart](./img/piechart.png)
+<img src=“./img/pie-chart.png alt="Pie chart" width="428"/>
 
 1. **Pie chart fill:** We recommend that fill colors should be based on the [Colors for charts](/design-guidelines/styles/colors-for-charts).
 2. **Legend:** Each variable on the legend should report their current value.
@@ -178,7 +194,7 @@ A sparkline is a small chart that helps users to analyze data and understand tre
 Sparklines are commonly used in tables, reports, and dashboards. A common use case is displaying utilization in an environment over time. Sparklines help to show trends in a series of values or to highlight maximum and minimum values. We recommend using sparklines alone without an axis and placing the name of the item being visualized underneath the chart. 
 
 #### Example
-![Sparkline](./img/sparkline.png)
+<img src=“./img/sparkline.png alt="Sparkline" width="628"/>
 
 1. **Axis:** We recommend that sparklines are shown without an x or y-axis. Depending on space, a label can be placed underneath or to the left of the sparkline.
 
@@ -188,15 +204,15 @@ Sparklines are commonly used in tables, reports, and dashboards. A common use ca
 ### Charts in cards
 If a chart lives in a card, the title of that chart will be placed on the header of that card instead of the chart. The rest of the chart guidelines should be followed for the chart itself.
 
-![Chart on card](./img/chartoncard.png)
-![Sparkline on card](./img/sparkline-card.png)
+<img src=“./img/chart-on-a-card.png alt="Chart on a card" width="416"/>
+<img src=“./img/sparkline-card.png alt="Sparkline on a card" width="482"/>
 
 ### Brush and zoom
 The brush and zoom properties allow for magnification of an area, bar, line or stack chart. If desired, more advanced features can be added through [Victory](https://formidable.com/open-source/victory/guides/brush-and-zoom/).
 
 #### Example
 
-![Brush and zoom](./img/brush-and-zoom.png)
+<img src=“./img/brush-and-zoom.png alt="Brush and zoom" width="1575"/>
 
 1. **Window:** Click and drag to create a window around the section of the chart that you want to zoom in on
 2. **Magnified chart:** The portion selected will appear above the full chart view.
@@ -206,13 +222,13 @@ For charts that have more than one data set graphed, interactive legends can be 
 
 #### Example
 On hover
-![On hover](./img/interactive-legend-hover.png)
+<img src=“./img/interactive-legend-hover.png alt="Interactive legend on hover" width="1499"/>
 
 1. **Legend:** When a user hovers over a legend label, all the other legend labels’ opacity are lowered.
 2. **Chart:** The corresponding data of the hovered legend item, would be highlighted by having the other data sets’ opacity lowered.
 
 On click
-![On click](./img/interactive-legend-hide.png)
+<img src=“./img/interactive-legend-hide.png alt="Interactive legend hidden" width="1499"/>
 
 1. **Legend:** When a user clicks on a legend label, it becomes disabled and the color swatch would be replaced with an eye-slashed icon.
 2. **Chart:** The corresponding data would be made hidden from view.
