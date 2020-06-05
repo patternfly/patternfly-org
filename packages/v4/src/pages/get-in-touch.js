@@ -23,7 +23,7 @@ const GetInTouch = ({ location }) => {
             <SplitItem style={{ marginRight: '12px' }}><h3><ChatIcon /></h3></SplitItem>
             <SplitItem isFilled>
               <Title size="lg" className="ws-title" headingLevel="h2">Chat with us</Title>
-              <a href="https://patternfly.slack.com" target="_blank" rel="noopener noreferrer">Slack</a>
+              <a href="https://slack.patternfly.org/" target="_blank" rel="noopener noreferrer">Slack</a>
             </SplitItem>
           </Split>
         </GridItem>
