@@ -4,7 +4,7 @@ section: styles
 hideSource: true
 ---
 import { Link } from 'gatsby';
-import { Card, CardBody, Divider, Flex, FlexItem, FlexModifiers, Grid, GridItem } from '@patternfly/react-core';
+import { Card, CardBody, Divider, Flex, FlexItem, Grid, GridItem } from '@patternfly/react-core';
 import CaretDownIcon from '@patternfly/react-icons/dist/js/icons/caret-down-icon';
 import CheckCircleIcon from '@patternfly/react-icons/dist/js/icons/check-circle-icon';
 import ExclamationCircleIcon from '@patternfly/react-icons/dist/js/icons/exclamation-circle-icon';
@@ -25,7 +25,7 @@ import './icons.css';
 <Grid gutter="md">
   <GridItem xl={6} lg={12} className="ws-icons-gridtext">
     Medium icons are used as our base size across our system as a whole and we recommend using this base size within your applications. Small, large and x-large icons are used sparingly across PatternFly components. Here is a full complete list of icon sizes:
-    <Flex className="ws-icon-sizes ws-icon-sizes-sm" breakpointMods={[{modifier: FlexModifiers['align-items-flex-start']}]}>
+    <Flex className="ws-icon-sizes ws-icon-sizes-sm" alignItems={{ default: 'alignItemsFlexStart' }}>
       <FlexItem className="ws-icon-size">
         <CheckCircleIcon size="sm" />
       </FlexItem>
@@ -34,7 +34,7 @@ import './icons.css';
         <code>--pf-global--icon--FontSize—sm</code>
       </FlexItem>
     </Flex>
-    <Flex className="ws-icon-sizes ws-icon-sizes-md" breakpointMods={[{modifier: FlexModifiers['align-items-flex-start']}]}>
+    <Flex className="ws-icon-sizes ws-icon-sizes-md" alignItems={{ default: 'alignItemsFlexStart' }}>
       <FlexItem className="ws-icon-size">
         <CheckCircleIcon size="md" />
       </FlexItem>
@@ -43,7 +43,7 @@ import './icons.css';
         <code>--pf-global--icon--FontSize—md</code>
       </FlexItem>
     </Flex>
-    <Flex className="ws-icon-sizes ws-icon-sizes-lg" breakpointMods={[{modifier: FlexModifiers['align-items-flex-start']}]}>
+    <Flex className="ws-icon-sizes ws-icon-sizes-lg" alignItems={{ default: 'alignItemsFlexStart' }}>
       <FlexItem className="ws-icon-size">
         <CheckCircleIcon size="lg" />
       </FlexItem>
@@ -52,7 +52,7 @@ import './icons.css';
         <code>--pf-global--icon--FontSize—lg</code>
       </FlexItem>
     </Flex>
-    <Flex className="ws-icon-sizes ws-icon-sizes-xl" breakpointMods={[{modifier: FlexModifiers['align-items-flex-start']}]}>
+    <Flex className="ws-icon-sizes ws-icon-sizes-xl" alignItems={{ default: 'alignItemsFlexStart' }}>
       <FlexItem className="ws-icon-size">
         <CheckCircleIcon size="xl" />
       </FlexItem>
@@ -66,11 +66,11 @@ import './icons.css';
     <Card className="ws-icon-size-examples">
       <CardBody>
         <p><b>Small icons</b></p>
-        <Flex breakpointMods={[{modifier: FlexModifiers['align-items-flex-start']}]}>
+        <Flex alignItems={{ default: 'alignItemsFlexStart' }}>
           <FlexItem>
             <img src="sm-icons-1.png" alt="Small icons" className="ws-sm-icons ws-sm-icons-1" />
           </FlexItem>
-          <FlexItem breakpointMods={[{modifier: FlexModifiers.grow}]}>
+          <FlexItem grow={{ default: 'grow' }}>
             <img src="sm-icons-2.png" alt="Small icons" className="ws-sm-icons ws-sm-icons-2" />
           </FlexItem>
         </Flex>
