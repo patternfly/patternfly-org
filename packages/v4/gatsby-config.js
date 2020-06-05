@@ -114,6 +114,13 @@ module.exports = {
         path: require.resolve('@patternfly/patternfly/RELEASE-NOTES.md')
       }
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'core', // This goes in URLs
+        path: require.resolve('@patternfly/patternfly/UPGRADE-GUIDE.md')
+      }
+    },
     // Core training
     {
       resolve: 'gatsby-source-filesystem',
@@ -169,6 +176,13 @@ module.exports = {
       options: {
         name: 'react', // This goes in URLs
         path: require.resolve('@patternfly/react-docs/RELEASE-NOTES.md')
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'react', // This goes in URLs
+        path: require.resolve('@patternfly/react-docs/UPGRADE-GUIDE.md')
       }
     },
     // React training
