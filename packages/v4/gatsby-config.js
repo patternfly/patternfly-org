@@ -118,7 +118,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'core', // This goes in URLs
-        path: require.resolve('@patternfly/patternfly/UPGRADE-GUIDE.md')
+        path: path.join(__dirname, 'CORE-UPGRADE-GUIDE.md')
       }
     },
     // Core training
