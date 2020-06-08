@@ -10,7 +10,7 @@ _Charts are only available in React_
 Use charts to visualize data in an application. The type of chart you use will depend on your use case and the type of data you need to display.
 
 ## Elements
-<img src=“./img/axis-labels.png” alt=“Chart with axis labels” width="713"/> 
+<img src="./img/axis-labels.png" alt="Chart with axis labels" width="713"/> 
 
 1. **Title:** Titles should be left-aligned and appear above your chart.
 2. **Axis labels and scale values:**  We recommend using tick marks to clearly mark scale values on the y-axis. The text for axis labels and scale values should be 12px font in standard text color. All scale values should be equally distributed across the axis and the axis label should fall outside the scale values, centered with the axis line.
@@ -112,7 +112,7 @@ For donut charts, don’t try to represent more than six categories. We recommen
 
 1. **Segment fill:** We recommend using [Colors for charts] (/design-guidelines/styles/colors-for-charts) for different items within the donut chart.
 2. **Segment padding:**  Always provide 3px of padding between segments.
-3. **Chart tooltip:** A tooltip will appear upon hover that states the name of the segment and corresponding value. For example, if the segment represents “Bugs,” and the value being represented is 25, your chart tooltip would state, “Bugs: 25.”
+3. **Chart tooltip:** A tooltip will appear upon hover that states the name of the segment and corresponding value. For example, if the segment represents "Bugs," and the value being represented is 25, your chart tooltip would state, "Bugs: 25."
 4. **Label:** When the Donut Chart is contained within a dashboard card, there is a label defining what the Donut Chart represents. The label may also represent the total value of the data set. If this optional representation is chosen, it should follow the format of [total numeric value] + [data set label]. The total numeric value should be rounded to two decimal places or less (14 characters max) and should be styled using 24px font in standard text color. The data set label cannot contain more than 24 characters and should be styled using 14px font in secondary text color. They are to be centered within the donut and styled as shown. If the label exceeds the max character count, place it outside of the donut and leave the center empty.
 5. **Legend:** In order to be compliant with accessibility guidelines, a legend is necessary. Each variable on the legend should report their current value.
 
@@ -127,7 +127,7 @@ For donut charts, don’t try to represent more than six categories. We recommen
 1. **Unused segment fill:** The unused area of the donut chart will always remain at #EDEDED.
 2. **Used segment fill:** We recommend using #0066cc for the used area of the donut chart. See [Colors for charts](/design-guidelines/styles/colors-for-charts) for other recommended color options.
 3. **Utilization label:** Both percentages and whole numbers can be used to represent the utilization.
-4. **Chart tooltip:** Since this is a utilization donut chart, the tooltip will display the percentage of data utilized. Chart tooltips only appear on hover over the utilization segment of the chart. We recommend stating the segment name and the utilization value being captured. For example, if the user is tracking GBps utilization, the chart tooltip would state “GBps utilization: 75%.”
+4. **Chart tooltip:** Since this is a utilization donut chart, the tooltip will display the percentage of data utilized. Chart tooltips only appear on hover over the utilization segment of the chart. We recommend stating the segment name and the utilization value being captured. For example, if the user is tracking GBps utilization, the chart tooltip would state "GBps utilization: 75%."
 
 #### React component
 [Donut utilization](/documentation/react/charts/chartdonututilization)
@@ -144,7 +144,7 @@ For donut charts, don’t try to represent more than six categories. We recommen
 
 <img src="./img/donut-utilization-with-threshold-hover.png" alt="Donut utilization with threshold hover" width="1018"/>
 
-4. **Chart tooltip:** Chart tooltips appear on hover for both threshold segments and utilization segments. We recommend stating the threshold name, the segment name, and the value being represented. For example, if the threshold being met is “Danger,” and the segment represents “Storage capacity,” and the value being represented is 92%, your chart tooltip would state, “Danger: Storage capacity: 92%.” We recommend stating the threshold name “at” the percentage the threshold begins (ex. Warning at 60%).
+4. **Chart tooltip:** Chart tooltips appear on hover for both threshold segments and utilization segments. We recommend stating the threshold name, the segment name, and the value being represented. For example, if the threshold being met is "Danger," and the segment represents "Storage capacity," and the value being represented is 92%, your chart tooltip would state, "Danger: Storage capacity: 92%." We recommend stating the threshold name "at" the percentage the threshold begins (ex. Warning at 60%).
 
 #### React component
 [Donut utilization](/documentation/react/charts/chartdonututilization/#donut-utilization-threshold-examples)
