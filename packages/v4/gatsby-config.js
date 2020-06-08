@@ -118,7 +118,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'core', // This goes in URLs
-        path: path.join(__dirname, 'CORE-UPGRADE-GUIDE.md')
+        path: path.join(__dirname, 'UPGRADE-GUIDE.md')
       }
     },
     // Core training
