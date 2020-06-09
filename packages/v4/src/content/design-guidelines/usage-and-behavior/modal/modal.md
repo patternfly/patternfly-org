@@ -8,7 +8,7 @@ showTitle: true
 Use modal dialogs load and display important information without navigating away from the current page.
 
 ## Primary elements
-![Modal](./img/modal.png)
+<img src="./img/modal.png" alt="Modal" width="756"/>
 
 1. **Backdrop**
 2. **Modal box**
