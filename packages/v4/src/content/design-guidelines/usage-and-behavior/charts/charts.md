@@ -58,7 +58,7 @@ The orientation of bar charts is dependent on the data and space at hand. Any ba
 
 #### Example
 <img src="./img/horizontal-bar-chart.png" alt="Horizontal bar chart" width="737"/>
-<br>
+<br/>
 <img src="./img/vertical-bar-chart.png" alt="Vertical bar chart" width="559"/>
 
 1. **Bar:** All bars should be the same width. The height of the bar represents its value. The spacing between bars should be equal as well, mimicking the axis value spacing. For recommendations on fill colors, see [Colors for charts](/design-guidelines/styles/colors-for-charts).
@@ -72,7 +72,7 @@ Stacked bar charts describe totals while allowing a degree of internal breakdown
 
 #### Example
 <img src="./img/horizontal-stacked-bar-chart.png" alt="Horizontal stacked bar chart" width="690"/>
-<br>
+<br/>
 <img src="./img/vertical-stacked-bar-chart.png" alt="Vertical stacked bar chart" width="663"/>
 
 1. **Stacked bar:** The first series name is represented by the topmost stacked bar, and the last series name is represented by the bottommost stacked bar. For recommendations on series colors, see [Colors for charts](/design-guidelines/styles/colors-for-charts).
