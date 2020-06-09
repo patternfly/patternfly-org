@@ -13,76 +13,48 @@ The toolbar is a container for holding a variety of elements (toolbar items and 
 
 ![toolbar](./img/basic-toolbar-nocallout.png)
 
-All items should be centered vertically within the toolbar.
+**Update to show padding**
+
+All items should be centered vertically within the toolbar. There is a 24px of padding before and after the toolbar content.
 
 ### Toolbar items and groups
-Toolbar items are individual components that can be placed inside of a toolbar. Often, it makes sense to group sets of like items to create desired associations and to enable items to respond together to changes in viewport width. The default spacing between items and groups is 16px, bit this can be modified, if required.
-
-Below are examples of: a group of icons, a group of buttons, a group of icons and buttons.
-
-![toolbar items and groups](./img/items-and-groups.png)
-
-**Update this example to show correct spacing of items and groups**
-
-Items within a group have 16px spacing between them. Items that are made up of multiple parts (for example the filter dropdown and input group) are treated as one item in regards to the spacing.
+Toolbar items are individual components that can be placed inside of a toolbar. Often, it makes sense to group sets of like items to create desired associations and to enable items to respond together to changes in viewport width. The default spacing between items and groups is 16px, but this can be modified, if required.
 
 
-### Multiple Groups
+#### Common toolbar items and groups
 
-A toolbar can have more than one group of items. Between groups there should be 24px of spacing.
-
-Below is a group of icons next to a group of buttons. Note the cyan 24px spacer between them.
-
-![multiple groups](./img/multiple-groups.png)
-
-A single item that doesn't belong to a larger group is treated as a group on its own. It uses a 24px spacer on either side.
-
-Below is a single button next to a group of icons.
-
-![single item as group](./img/single-item-as-group.png)
+| Element | Description |
+| ----------------------- | ------------------------------------------------ |
+| **Bulk selector** | A Bulk selector can be added when you want to give users the ability to select multiple items within a page. Besides allowing the user to select and deselect all items on a page, other application specific options can be added in the dropdown. Bulk selection allows the user to select or deselect all items on a page and provide an indeterminate state that notifies the user when only some items are selected. Bulk selectors should always be the left-most element in a toolbar and has a 24px spacer to its right. |
+| **Search filter** |A search filter combines an attribute selector with a search field to perform attribute-vale searches. See the [Filters](design-guidelines/usage-and-behavior/filters) documentation for more details. |
+| **Filter group** | A filter group combines multiple select filters into a single group. See [Filters](/design-guidelines/usage-and-behavior/filters) for more information about available filters.|
+| **Icon button group** | Actions or settings that are represented by icons can be added in an Icon button group. In the example, Sort and Export are represented as icons. |
+| **Button group** | Any global actions that apply to selected data items are included left-aligned following filter and icon buttons. These may be placed within an [overflow menu](#Overflow-menus) component to collapse the group as the viewport shrinks. No more than two items should be exposed as buttons. Button labels should be limited in length to preserve horizontal space. |
+| **Pagination** | When pagination is supported, a Pagination component will be included. Pagination will always be right aligned in the toolbar. If pagination is not used, substitute the item count for pagination control. For example, report “17 items” to represent the total number of items or “10 of 17 items” to indicate that 10 items were returned as the result of a filter event. |
+| **Overflow menu** |An overflow menu is a component that can be used in a toolbar (or elsewhere) to group a number of actions that should be collapsed into a kebab at a certain breakpoint. In the toolbar, the overflow menu will commonly be used to group a set of actions that are intended to collapse into the kebab at smaller viewport sizes. |
 
 ### Toggle groups
 A toggle group can be used when you want to collapse a set of items into an overlay panel at a certain breakpoint. This allows complex toolbars with multiple items and groups of items to be responsive. A toggle group is useful for containing filter controls, for example. When the toolbar responds to adapt to a mobile viewport, the contents contained in a toggle group will collapse into an overlay panel that can be toggled by clicking the Filter icon.
 
 ![Toolbar with toggle group](./img/mobile-basic.png)
 
-![Toolbar with expanded toggle group](./img/mobile-expanded.png)
 
-### Overflow menus
-An overflow menu is a component that can be used in a toolbar (or elsewhere) to group a number of actions that should be collapsed into a kebab at a certain breakpoint. In the toolbar, the overflow menu will commonly be used to group a set of actions that are intended to collapse into the kebab at smaller viewport sizes.
-
-![toolbar with overflow menu](./img/basic-toolbar-nocallout.png)
-
-![toolbar with overflow collapsed](./img/mobile-basic-copy.png)
-
-In the above example, when the viewport size is reduced both the filter controls, contained in a toggle group, and the global actions, contained in an overflow menu, collapse to minimize the space required by the toolbar.
 
 ### Vertical dividers
 When you have a large toolbar containing many groups of items, use a vertical divider to further
 separate the groups visually.
 
 ![toolbar with divider](./img/toolbar-with-divider.png)
+**Update to show correct spacing**
 
-## Common toolbar items and groups
-
-![common toolbar items](./img/toolbar.png)
-
-**1. Bulk selector:** A Bulk selector can be added when you want to give users the ability to select multiple items within a page. Besides allowing the user to select and deselect all items on a page, other application specific options can be added in the dropdown. Bulk selection allows the user to select or deselect all items on a page and provide an indeterminate state that notifies the user when only some items are selected. Bulk selectors should always be the left-most element in a toolbar. When providing a bulk selector in a list view, it should be aligned with the checkboxes.
-
-
-**2. Filter group:** PatternFly supports a variety of common filter types that can be used alone or in combination to construct a custom filter. You may consider placing filters inside of a toggle group to make you toolbar responsive. See [Filters](/design-guidelines/usage-and-behavior/filters) for more information about available filters.
-
-
-**3. Icon button group:** Actions or settings that are represented by icons can be added in an Icon button group. In the example, Sort and Export are represented as icons.
-
-
-**4. Action button group:** Any global actions that apply to selected data items are included left-aligned following filter and icon buttons. These may be placed within an overflow menu component to collapse the group as the viewport shrinks. No more than two items should be exposed as buttons. Button labels should be limited in length to preserve horizontal space.
-
-
-**5. Pagination:** When pagination is supported, a Pagination component will be included. Pagination will always be right aligned in the toolbar. If pagination is not supported, substitute the item count for pagination control. For example, report “17 items” to represent the total number of items or “10 of 17 items” to indicate that 10 items were returned as the result of a filter event.
 
 ## Usage
 ### Order of toolbar elements
+
+![common toolbar items](./img/toolbar.png)
+
+**Update this example to show correct spacing of items and groups**
+
 Within the toolbar, layouts may vary depending on the use case.
 * When used, bulk selection should be the left-most element.
 * Filters and global actions may follow.
@@ -141,6 +113,16 @@ The toolbar adapts to smaller viewport sizes by collapsing or hiding elements th
 
 ![responsive1](./img/responsive-closed.png)
 ![responsive2](./img/responsive-open.png)
+
+![Toolbar with expanded toggle group](./img/mobile-expanded.png)
+
+![toolbar with overflow menu](./img/basic-toolbar-nocallout.png)
+
+![toolbar with overflow collapsed](./img/mobile-basic-copy.png)
+
+In the above example, when the viewport size is reduced both the filter controls, contained in a toggle group, and the global actions, contained in an overflow menu, collapse to minimize the space required by the toolbar.
+
+**Update this. Where did the sort icon come from?**
 
 ## Related components and demos
 **Core HTML/CSS**
