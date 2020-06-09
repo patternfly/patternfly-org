@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.22](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.0.21...patternfly-org-4@4.0.22) (2020-06-09)
+
+
+### Bug Fixes
+
+* **docs:** updated recommended icon table - pf-icon-spinner row text & link ([af26992](https://github.com/patternfly/patternfly-org/commit/af269924a6fcf0f67df5a8d3f958b053aa39fea2))
+
+
+
+
+
 ## [4.0.21](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.0.20...patternfly-org-4@4.0.21) (2020-06-08)
 
 **Note:** Version bump only for package patternfly-org-4
