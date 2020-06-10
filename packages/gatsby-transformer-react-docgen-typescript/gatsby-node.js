@@ -106,6 +106,7 @@ function addComponentMetadata(node, sourceText) {
     .filter(parsed => parsed && parsed.displayName) // TabContent.tsx is being a pain so check for parsed.displayName
     .forEach(parsed => {
       // TODO: also find interfaces it extends to map back to interface metadata in other files
+      // OR have it added as a `propComponent` in the MD file and just make a new table
       const metadataNode = {
         name: parsed.displayName,
         relativePath: node.relativePath,
