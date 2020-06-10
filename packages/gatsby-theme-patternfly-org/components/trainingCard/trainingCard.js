@@ -8,13 +8,13 @@ import './trainingCard.css';
 
 const getTrainingIcon = trainingType => {
   if (['html-css', 'react'].includes(trainingType)) {
-    return <CubesIcon className="training-basics" />;
+    return <CubesIcon className="pf-org__training-basics" />;
   }
   else if (trainingType === 'react-components') {
-    return <PuzzlePieceIcon className="training-components" />;
+    return <PuzzlePieceIcon className="pf-org__training-components" />;
   }
 
-  return <ChartBarIcon className="training-charts" />;
+  return <ChartBarIcon className="pf-org__training-charts" />;
 }
 
 export const TrainingCard = ({
@@ -25,13 +25,13 @@ export const TrainingCard = ({
   description,
   katacodaId
 }) => (
-  <Card className="ws-org-training-card" isCompact>
+  <Card className="pf-org__card" isCompact>
     <CardHeader>
-      <Card className="small-card-icon">
+      <Card className="pf-org__card-small">
         {getTrainingIcon(trainingType)}
       </Card>
-      <div className="level">
-        <RunningIcon className={`level-${level}`} />
+      <div className="pf-org__level">
+        <RunningIcon className={`pf-org__level-${level}`} />
         {capitalize(level)}
       </div>
     </CardHeader>
@@ -39,7 +39,7 @@ export const TrainingCard = ({
       {title}
     </CardTitle>
     <CardBody>
-      <div className="pf-org-card-body__time">
+      <div className="pf-org__time">
         <ClockIcon />
         {time}
       </div>

@@ -126,7 +126,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'core', // This goes in URLs
-        path: require.resolve('@patternfly/patternfly/site/training.md')
+        path: '/training/core-training'
       }
     },
     // React docs (MD + TSX)
@@ -190,7 +190,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'react', // This goes in URLs
-        path: require.resolve('@patternfly/react-docs/src/training.md')
+        path: '/training/react-training'
       }
     },
     // Org docs
