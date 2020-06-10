@@ -56,7 +56,8 @@ There are three ways that the system can communicate notifications to the users.
 Inline alerts are synchronous and appear as the result of a user action or upon loading a page. They insert themselves into the content area, push down other content, and will persist until the user closes them or navigates away from the page.
 
 ![inline notification placement](./img/inline-notification.png)
-See a [high-fidelity example](#Inline-alert-placement) of inline alert placement below.
+
+See a [high-fidelity example of inline alert placement](#inline-alert-placement) below.
 
 #### When to use
 Use an inline alert when you want to return feedback as the result of a user action within a page while allowing the user to continue working. Common uses for inline alerts include form validation or warning messages that should not interrupt the user’s flow.
@@ -77,7 +78,8 @@ If the user must take action to address a situation before proceeding consider u
 Toast alerts enter from the right edge of the screen and remain until they time out or until the user dismisses them. Toast alerts overlay other content on the page.
 
 ![toast notification placement](./img/toast-notification.png)
-See a [high-fidelity example](#Toast-alert-placement) of toast alert placement below.
+
+See a [high-fidelity example of toast alert placement](#toast-alert-placement) below.
 
 #### When to use
 Use toast alerts when you want to report an asynchronous event without interrupting the user’s current workflow. Actions and links may be used in alerts, but only as a shortcut or redundant means to navigate or invoke the action. A toast alert should never be used as the only means for taking actions on an alert event.
