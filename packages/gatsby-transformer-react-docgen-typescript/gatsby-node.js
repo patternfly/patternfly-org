@@ -1,18 +1,14 @@
 const reactDocgen = require('react-docgen');
+const ts = require('typescript');
 
 function isSource(node) {
-  if (
-    !node ||
-    node.relativePath.indexOf('/example') !== -1 ||
-    node.relativePath.indexOf('.docs') !== -1 ||
-    node.relativePath.indexOf('.md') !== -1
-  )
+  if (!node || node.relativePath.includes('/example'))
     return false;
 
   return true;
 }
 
-function canParse(node) {
+function isComponentCode(node) {
   return node && (isTSX(node) || isJSX(node)) && isSource(node);
 }
 
@@ -92,11 +88,7 @@ function addAnnotations(prop) {
   return prop;
 }
 
-// Docs https://www.gatsbyjs.org/docs/actions/#createNode
-async function onCreateNode({ node, actions, loadNodeContent, createNodeId, createContentDigest }) {
-  if (!canParse(node)) return;
-
-  const sourceText = await loadNodeContent(node);
+function addComponentMetadata(node, sourceText) {
   let parsedComponents = null;
   try {
     parsedComponents = reactDocgen.parse(
@@ -113,6 +105,7 @@ async function onCreateNode({ node, actions, loadNodeContent, createNodeId, crea
   (parsedComponents || [])
     .filter(parsed => parsed && parsed.displayName) // TabContent.tsx is being a pain so check for parsed.displayName
     .forEach(parsed => {
+      // TODO: also find interfaces it extends to map back to interface metadata in other files
       const metadataNode = {
         name: parsed.displayName,
         relativePath: node.relativePath,
@@ -131,6 +124,43 @@ async function onCreateNode({ node, actions, loadNodeContent, createNodeId, crea
       actions.createNode(metadataNode);
       actions.createParentChildLink({ parent: node, child: metadataNode });
     });
+}
+
+function addInterfaceMetadata(node, sourceText) {
+  const node = ts.createSourceFile(
+    'ouia.d.ts',   // fileName
+    sourceText,
+    ts.ScriptTarget.Latest // langugeVersion
+  );
+  
+  function getText(node) {
+    return sourceText.substring(node.pos, node.end);
+  }
+  
+  node.statements
+    .filter(statement => statement.kind === ts.SyntaxKind.InterfaceDeclaration)
+    .forEach(statement => {
+      console.log('interface', statement.name.escapedText);
+  
+      // TODO: Create nodes
+      statement.members.map(member => ({
+        name: member.name.escapedText,
+        description: member.jsDoc
+          ? member.jsDoc.map(doc => doc.comment).join('\n')
+          : null,
+        required: member.questionToken === undefined,
+        type: getText(member.type).trim()
+      }));
+    });
+}
+
+// Docs https://www.gatsbyjs.org/docs/actions/#createNode
+async function onCreateNode({ node, actions, loadNodeContent, createNodeId, createContentDigest }) {
+  if (!isComponentCode(node) && !isDTS(node)) return;
+
+  const sourceText = await loadNodeContent(node);
+  addComponentMetadata(node, sourceText);
+  addInterfaceMetadata(node, sourceText);
 }
 
 exports.onCreateNode = onCreateNode;
