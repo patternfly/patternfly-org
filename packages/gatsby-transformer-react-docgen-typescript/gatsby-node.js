@@ -150,6 +150,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type PropsType @noInfer {
       beta: Boolean
+      katacodaBroken: Boolean
       name: String!
       description: String
       required: Boolean

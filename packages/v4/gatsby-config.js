@@ -126,7 +126,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'core', // This goes in URLs
-        path: '/training/core-training'
+        path: path.join(__dirname, '/src/content/training/core-training.md')
       }
     },
     // React docs (MD + TSX)
@@ -190,7 +190,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'react', // This goes in URLs
-        path: '/training/react-training'
+        path: path.join(__dirname, '/src/content/training/react-training.md')
       }
     },
     // Org docs

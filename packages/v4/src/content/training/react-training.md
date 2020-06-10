@@ -1,6 +1,7 @@
 ---
 title: Training
 section: overview
+katacodaBroken: true
 ---
 
 import { Gallery, GalleryItem } from '@patternfly/react-core';

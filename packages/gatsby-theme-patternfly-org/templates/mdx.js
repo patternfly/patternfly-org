@@ -40,7 +40,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
         katacodaId={location.state.katacodaId} />
     );
   }
-  const { cssPrefix, hideTOC, beta, optIn, hideDarkMode, showTitle, releaseNoteTOC, hideSource } = data.doc.frontmatter;
+  const { cssPrefix, hideTOC, beta, katacodaBroken, optIn, hideDarkMode, showTitle, releaseNoteTOC, hideSource } = data.doc.frontmatter;
   const { componentName, navSection } = data.doc.fields;
   const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner, showGdprBanner, showFooter, sourceLink } = pageContext;
   const props = data.props && data.props.nodes && propComponents
@@ -113,6 +113,17 @@ const MDXTemplate = ({ data, location, pageContext }) => {
               isInline
             >
               This Beta component is currently under review, so please join in and give us your feedback on the <a href="https://forum.patternfly.org/">PatternFly forum</a>
+            </Alert>
+          )}
+          {katacodaBroken && (
+            <Alert
+              variant={'danger'}
+              title="Katacoda is going through maintenance"
+              className="pf-u-my-md"
+              style={{ marginBottom: '1rem' }}
+              isInline
+            >
+              We're sorry to inform you that our training modules are going through maintenance. Hopefully this won't take long, so check back soon.
             </Alert>
           )}
           {/* Design docs should not apply to demos and overview */}
@@ -275,6 +286,7 @@ export const pageQuery = graphql`
         hideTOC
         optIn
         beta
+        katacodaBroken
         hideDarkMode
         showTitle
         releaseNoteTOC
@@ -305,6 +317,7 @@ export const pageQuery = graphql`
         name
         props {
           beta
+          katacodaBroken
           name
           required
           description

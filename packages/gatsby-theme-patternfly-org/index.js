@@ -10,6 +10,7 @@ exports.mdxTypeDefs = `
     hideTOC: Boolean
     optIn: String
     beta: Boolean
+    katacodaBroken: Boolean
     propComponents: [String]
     hideDarkMode: Boolean
     reactComponentName: String
@@ -42,6 +43,7 @@ exports.mdxTypeDefs = `
   }
   type PropsType @dontInfer {
     beta: Boolean
+    katacodaBroken: Boolean
     name: String!
     description: String
     required: Boolean
