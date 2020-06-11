@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.26](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.0.25...patternfly-org-4@4.0.26) (2020-06-11)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
 ## [4.0.25](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.0.24...patternfly-org-4@4.0.25) (2020-06-11)
 
 **Note:** Version bump only for package patternfly-org-4
