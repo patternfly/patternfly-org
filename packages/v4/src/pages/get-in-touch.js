@@ -11,7 +11,7 @@ const GetInTouch = ({ location }) => {
       variant={PageSectionVariants.light}
       className="ws-section ws-get-in-touch"
     >
-      <h1 className="pf-u-mb-lg ws-title">Get in touch</h1>
+      <Title size="xl" className="pf-u-mb-lg ws-title" headingLevel="h1">Get in touch</Title>
 
       <p className="ws-mdx-p">Get involved with the PatternFly community. Get answers to your questions and share your knowledge with others.</p>
 
