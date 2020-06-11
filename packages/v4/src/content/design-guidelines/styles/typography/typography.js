@@ -25,73 +25,62 @@ export const styleProps = {
     fontWeightText: "400 (medium)",
     variableName: "--pf-global--FontSize--2xl",
     fontSize: "24px",
-    lineHeight: "1.3",
-    fontFamily: "RedHatDisplay"
+    lineHeight: "1.3"
   },
   second: {
     fontWeight: "400",
     fontWeightText: "400 (medium)",
     fontSize: "20px",
     variableName: "--pf-global--FontSize--xl",
-    lineHeight: "1.3",
-    fontFamily: "RedHatDisplay"
+    lineHeight: "1.3"
   },
   third: {
     fontWeight: "400",
     fontWeightText: "400 (medium)",
     fontSize: "18px",
     variableName: "--pf-global--FontSize--lg",
-    lineHeight: "1.5",
-    fontFamily: "RedHatDisplay"
+    lineHeight: "1.5"
   },
   fourth: {
     fontWeight: "700",
     fontWeightText: "700 (bold)",
     fontSize: "16px",
     variableName: "--pf-global--FontSize--md",
-    lineHeight: "1.5",
-    fontFamily: "RedHatDisplay"
+    lineHeight: "1.5"
   },
   body: {
     fontWeight: "400",
     fontWeightText: "400 (regular)*",
     fontSize: "16px",
     variableName: "--pf-global--FontSize--md",
-    lineHeight: "1.5",
-    fontFamily: "RedHatText"
+    lineHeight: "1.5"
   },
   small: {
     fontWeight: "400",
     fontWeightText: "400 (regular)",
     fontSize: "14px",
     variableName: "--pf-global--FontSize--sm",
-    lineHeight: "1.5",
-    fontFamily: "RedHatText"
+    lineHeight: "1.5"
   },
   tiny: {
     fontWeight: "400",
     fontWeightText: "400 (regular)",
     fontSize: "12px",
     variableName: "--pf-global--FontSize--xs",
-    lineHeight: "1.5",
-    fontFamily: "RedHatText"
+    lineHeight: "1.5"
   }
 }
 
 export const TypographyGrid = ({title, note, symbol, fontWeight, fontWeightText, fontSize, variableName, lineHeight, fontFamily}) => (
   <React.Fragment>
     <h3 className="ws-title">{title} {symbol && <span className="ws-typography-gridTitleSymbol">{symbol}</span>}</h3>
-    <PfStyledText fontFamily={fontFamily} fontWeight={fontWeight} fontSize={variableName} lineHeight={lineHeight}>
+    <PfStyledText fontFamily={fontFamily} fontWeight={fontWeight} variableName={variableName} lineHeight={lineHeight}>
       Design is where science and art break even.
     </PfStyledText>
     <Grid gutter="sm">
       <GridItem span={12}>
         <table className="pf-c-table pf-m-compact ws-typography-tableTypography" aria-label="typography usage guidelines breakout">
           <tbody>
-            <tr>
-              <td className="pf-u-pr-sm">Font family:</td>
-              <td>{fontFamily}</td>
-            </tr>
             <tr>
               <td>Font weight:</td>
               <td>{fontWeightText}</td>

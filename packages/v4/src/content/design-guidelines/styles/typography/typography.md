@@ -3,7 +3,6 @@ title: Typography
 section: styles
 hideTOC: true
 showTitle: true
-optIn: In a future breaking-change release, the font will default to the Red Hat font. You can opt-in and update to use the Red Hat font now by wrapping your application with the ".pf-m-redhat-font" class. For more information visit the Red Hat font page.
 ---
 
 import { Button, Grid, GridItem } from '@patternfly/react-core';
@@ -14,7 +13,7 @@ import incorrect from './typography_incorrect_spacing.png';
 import './typography.css';
 
 ## Our font family
-We use Red Hat Display and Red Hat Text.
+We use Red Hat Text.
 
 <Button style={{borderRadius: '0px', fontWeight: '600', paddingTop: '12px', paddingBottom: '12px', paddingLeft: '24px', paddingRight: '24px'}} variant="primary" component="a" href="https://github.com/RedHatOfficial/RedHatFont" target="_blank">DOWNLOAD</Button>
 
@@ -26,7 +25,7 @@ Use our typographic styles to communicate visual hierarchy. A consistent and log
   title="First level title*"
   note="*Not to be used in content block (Landing pages, login, etc.)"
   styleProps={styleProps.first} />
-<TitleLevel asGrid title="Second level title" styleProps = {styleProps.second} />
+<TitleLevel asGrid title="Second level title" styleProps={styleProps.second} />
 <TitleLevel asGrid title="Third level title" styleProps={styleProps.third} />
 <TitleLevel asGrid title="Fourth level title" styleProps = {styleProps.fourth} />
 <TitleLevel
