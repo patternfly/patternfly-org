@@ -24,6 +24,10 @@ function isJSX(node) {
   return node.internal.mediaType === `application/javascript` || node.internal.mediaType === `text/jsx`;
 }
 
+function isDTS(node) {
+  return node.extension === 'd.ts'
+}
+
 function flattenProps(props) {
   const res = [];
   if (props) {
@@ -101,9 +105,11 @@ function addComponentMetadata(node, sourceText) {
     // eslint-disable-next-line no-console
     // console.warn('No component found in', node.absolutePath);
   }
+  const interfaces = [];
 
   (parsedComponents || [])
     .filter(parsed => parsed && parsed.displayName) // TabContent.tsx is being a pain so check for parsed.displayName
+    .concat(interfaces) 
     .forEach(parsed => {
       // TODO: also find interfaces it extends to map back to interface metadata in other files
       // OR have it added as a `propComponent` in the MD file and just make a new table
@@ -152,6 +158,10 @@ function addInterfaceMetadata(node, sourceText) {
         required: member.questionToken === undefined,
         type: getText(member.type).trim()
       }));
+      interfaces.push({
+        name: statement.name.escapedText,
+        props
+      });
     });
 }
 
