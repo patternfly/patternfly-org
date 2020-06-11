@@ -69,6 +69,11 @@ It’s important to understand some specific aspects about the design kit and th
 * [Layers styles](#layer-styles)
 * [Text styles](#text-styles)
 
+### Sketch design training
+There’s a lot to learn when it comes to making smart use of the Sketch template and library. Whether you are new to PatternFly, new to Sketch, or even an experienced Sketch user, just looking to see how other designers use the application, the Sketch design training is a great place to start when using the design kit.
+
+[**Start Sketch design training**](https://patternflyt-training.thinkific.com/courses/pf-sketch-e-training) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+
 ### Spacers
 The layout for all visual elements in Patternfly is determined by spacers. The spacers are used as padding between elements to ensure consistent layout and placement of components into a design that adhere to PatternFly guidelines. All symbols in the symbol library and templates have been made using spacers which are built-in to ensure correct use of elements.
 
