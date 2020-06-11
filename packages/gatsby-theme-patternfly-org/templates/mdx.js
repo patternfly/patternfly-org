@@ -118,12 +118,12 @@ const MDXTemplate = ({ data, location, pageContext }) => {
           {katacodaBroken && (
             <Alert
               variant={'danger'}
-              title="Katacoda is going through maintenance"
+              title="Down for maintenance"
               className="pf-u-my-md"
               style={{ marginBottom: '1rem' }}
               isInline
             >
-              We're sorry to inform you that our training modules are going through maintenance. Hopefully this won't take long, so check back soon.
+              We'll be up and running in a bit, so check back soon. Thanks!
             </Alert>
           )}
           {/* Design docs should not apply to demos and overview */}
