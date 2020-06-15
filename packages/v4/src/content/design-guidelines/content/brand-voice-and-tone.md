@@ -1,5 +1,5 @@
 ---
-title: Voice
+title: Brand voice and tone
 section: content
 hideTOC: true
 showTitle: true
@@ -45,7 +45,7 @@ To reflect the Red Hat voice in UX copy for Red Hat products, we have UX voice t
 	<td>Inventive</td>
     </tr>
 </table>
-<br>
+<br />
 
 You can’t *tell* your users what your voice is. You need to *show* them who you are in your writing. One way to do this is with “Voice Do and Don’t” charts. This is what Red Hat's UX copy voice charts look like:
 
@@ -64,7 +64,7 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
     </tr>
 </table>
 
-<br> 
+<br /> 
 
 **Voice trait**: Approachable
 
@@ -95,10 +95,10 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
         <td>Don’t rely on inside jokes, colloquial expressions, culture-specific examples, or other alienating language to get your point across.</td>
     </tr>
 </table>
-<br>
+<br />
 Don’t use “I” too much. Make the user the star of every story you tell.
-<br>
-<br>
+<br />
+
 
 **Voice trait**: Inventive
 
@@ -110,11 +110,11 @@ Don’t use “I” too much. Make the user the star of every story you tell.
         <th><center>Don't</th>
     </tr>
     <tr>
-        <td>Deliver concepts and ideas with an air of confident simplicity. <br><br>Add real-world, global-friendly examples.</td>
-        <td>Don’t belittle others or make jokes at their expense. We can laugh at ourselves but not at our users. <br><br>Don’t use others as examples of what not to do.</td>
+        <td>Deliver concepts and ideas with an air of confident simplicity. <br /><br />Add real-world, global-friendly examples.</td>
+        <td>Don’t belittle others or make jokes at their expense. We can laugh at ourselves but not at our users. <br /><br />Don’t use others as examples of what not to do.</td>
     </tr>
 </table>
-<br>
+<br />
 When crafting your brand voice, consider your company or team values (if you have them) and align your voice traits accordingly.
 
 If you’re contributing PatternFly content (such as website copy or documentation), keep the above voice traits in mind. If you’re adopting PatternFly as part of another organization, you should go through a similar process to document the attributes of your own brand voice. 

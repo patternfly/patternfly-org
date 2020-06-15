@@ -55,7 +55,7 @@ Focus on what the user needs to do in order to complete the task or reach their 
         <td>To access this file, adjust your user settings.</td>
     </tr>
 </table>
-<br>
+<br />
 
 ## Lead with the benefit
 Users want to know why they should do something. What’s in it for them? They typically focus on the beginning of a sentence, so make your instruction worth it by starting with the outcome—in other words, the benefit.
@@ -70,7 +70,7 @@ Users want to know why they should do something. What’s in it for them? They t
         <td>To learn more about email, install this extension.</td>
     </tr>
 </table>
-<br>
+<br />
 
 ## Sound like a person
 Jargon, bizpeak, and formal language make you sound more like a brochure than a human. Users need to relate to your brand and like you before they can trust you. Talk with them as people using familiar, conversational words.
@@ -85,7 +85,7 @@ Jargon, bizpeak, and formal language make you sound more like a brochure than a 
         <td>Open source is great for collaboration.</td>
     </tr>
 </table>
-<br>
+<br />
 
 ## Be clear and concise
 Dr. Seuss says it best: “So the writer who breeds more words than he needs, is making a chore for the reader who reads.” Use plain language, and don’t use more words than you need. Chunk content into short, related sections, and avoid long paragraphs or strings of text.
@@ -100,7 +100,7 @@ Dr. Seuss says it best: “So the writer who breeds more words than he needs, is
         <td>Notify your administrator. </td>
     </tr>
 </table>
-<br>
+<br />
 
 ## Be consistent
 Stick with the same terminology to describe actions and objects across the entire user experience. Using two terms interchangeably—even when they mean the same thing—can confuse users.
