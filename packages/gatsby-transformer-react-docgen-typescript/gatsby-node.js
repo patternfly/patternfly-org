@@ -24,10 +24,6 @@ function isJSX(node) {
   return node.internal.mediaType === `application/javascript` || node.internal.mediaType === `text/jsx`;
 }
 
-function isDTS(node) {
-  return node.extension === 'd.ts'
-}
-
 function flattenProps(props) {
   const res = [];
   if (props) {
@@ -105,7 +101,7 @@ function addComponentMetadata(node, sourceText) {
     // eslint-disable-next-line no-console
     // console.warn('No component found in', node.absolutePath);
   }
-  const interfaces = [];
+  const interfaces = addInterfaceMetadata(node, sourceText);
 
   (parsedComponents || [])
     .filter(parsed => parsed && parsed.displayName) // TabContent.tsx is being a pain so check for parsed.displayName
@@ -135,7 +131,7 @@ function addComponentMetadata(node, sourceText) {
 
 function addInterfaceMetadata(node, sourceText) {
   const node = ts.createSourceFile(
-    'ouia.d.ts',   // fileName
+    node.absolutePath,   // fileName
     sourceText,
     ts.ScriptTarget.Latest // langugeVersion
   );
@@ -163,11 +159,12 @@ function addInterfaceMetadata(node, sourceText) {
         props
       });
     });
+    return interfaces;
 }
 
 // Docs https://www.gatsbyjs.org/docs/actions/#createNode
 async function onCreateNode({ node, actions, loadNodeContent, createNodeId, createContentDigest }) {
-  if (!isComponentCode(node) && !isDTS(node)) return;
+  if (!isComponentCode(node)) return;
 
   const sourceText = await loadNodeContent(node);
   addComponentMetadata(node, sourceText);
