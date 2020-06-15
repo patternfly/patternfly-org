@@ -91,7 +91,7 @@ function addAnnotations(prop) {
 }
 
 
-function addComponentMetadata(node, sourceText) {
+function getComponentMetadata(node, sourceText) {
   let parsedComponents = null;
   try {
     parsedComponents = reactDocgen.parse(
@@ -105,10 +105,10 @@ function addComponentMetadata(node, sourceText) {
     // console.warn('No component found in', node.absolutePath);
   }
 
-  const interfaces = addInterfaceMetadata(node, sourceText);
+  const interfaces = getInterfaceMetadata(node, sourceText);
 
   (parsedComponents || [])
-    .filter(parsed => parsed && parsed.displayName) // TabContent.tsx is being a pain so check for parsed.displayName
+    // .filter(parsed => parsed && parsed.displayName) // TabContent.tsx is being a pain so check for parsed.displayName
     .concat(interfaces) 
     .forEach(parsed => {
       // TODO: also find interfaces it extends to map back to interface metadata in other files
@@ -131,9 +131,10 @@ function addComponentMetadata(node, sourceText) {
       actions.createNode(metadataNode);
       actions.createParentChildLink({ parent: node, child: metadataNode });
     });
+    return (parsedComponents || []).filter(parsed => parsed && parsed.displayName);
 }
 
-function addInterfaceMetadata(fileNode, sourceText) {
+function getInterfaceMetadata(fileNode, sourceText) {
   const ast = ts.createSourceFile(
     fileNode.absolutePath,   // fileName
     sourceText,
@@ -143,6 +144,8 @@ function addInterfaceMetadata(fileNode, sourceText) {
   function getText(node) {
     return sourceText.substring(node.pos, node.end);
   }
+
+  const interfaces = [];
   
   ast.statements
     .filter(statement => statement.kind === ts.SyntaxKind.InterfaceDeclaration)
@@ -150,7 +153,7 @@ function addInterfaceMetadata(fileNode, sourceText) {
       console.log('interface', statement.name.escapedText);
   
       // TODO: Create nodes
-      statement.members.map(member => ({
+      const props = statement.members.map(member => ({
         name: member.name.escapedText,
         description: member.jsDoc
           ? member.jsDoc.map(doc => doc.comment).join('\n')
@@ -174,9 +177,33 @@ async function onCreateNode({ node, actions, loadNodeContent, createNodeId, crea
   if (!isComponentCode(node)) return;
 
   const sourceText = await loadNodeContent(node);
-  addComponentMetadata(node, sourceText);
-  addInterfaceMetadata(node, sourceText);
-  console.log(sourceText)
+  // const theNodeID = await createNodeId(node);
+  const componentMeta = getComponentMetadata(node, sourceText);
+  const interfaceMeta = getInterfaceMetadata(node, sourceText);
+
+  componentMeta
+    .concat(interfaceMeta) 
+    .forEach(parsed => {
+      // TODO: add an interface as a `propComponent` in an MD file
+      const metadataNode = {
+        name: parsed.displayName,
+        relativePath: node.relativePath,
+        description: parsed.description,
+        props: flattenProps(parsed.props).map(addAnnotations),
+        path: node.relativePath,
+        basePath: node.relativePath.split('/')[0],
+        id: createNodeId(`${node.id}react-docgen${node.relativePath}`),
+        children: [],
+        parent: node.id,
+        internal: {
+          contentDigest: createContentDigest(node),
+          type: `ComponentMetadata`
+        }
+      };
+      actions.createNode(metadataNode);
+      actions.createParentChildLink({ parent: node, child: metadataNode });
+    });
+  // console.log(sourceText)
 
 }
 
