@@ -24,6 +24,8 @@ function isJSX(node) {
   return node.internal.mediaType === `application/javascript` || node.internal.mediaType === `text/jsx`;
 }
 
+console.log("you are here")
+
 function flattenProps(props) {
   const res = [];
   if (props) {
@@ -88,6 +90,7 @@ function addAnnotations(prop) {
   return prop;
 }
 
+
 function addComponentMetadata(node, sourceText) {
   let parsedComponents = null;
   try {
@@ -101,6 +104,7 @@ function addComponentMetadata(node, sourceText) {
     // eslint-disable-next-line no-console
     // console.warn('No component found in', node.absolutePath);
   }
+
   const interfaces = addInterfaceMetadata(node, sourceText);
 
   (parsedComponents || [])
@@ -129,9 +133,9 @@ function addComponentMetadata(node, sourceText) {
     });
 }
 
-function addInterfaceMetadata(node, sourceText) {
-  const node = ts.createSourceFile(
-    node.absolutePath,   // fileName
+function addInterfaceMetadata(fileNode, sourceText) {
+  const ast = ts.createSourceFile(
+    fileNode.absolutePath,   // fileName
     sourceText,
     ts.ScriptTarget.Latest // langugeVersion
   );
@@ -140,7 +144,7 @@ function addInterfaceMetadata(node, sourceText) {
     return sourceText.substring(node.pos, node.end);
   }
   
-  node.statements
+  ast.statements
     .filter(statement => statement.kind === ts.SyntaxKind.InterfaceDeclaration)
     .forEach(statement => {
       console.log('interface', statement.name.escapedText);
@@ -159,8 +163,11 @@ function addInterfaceMetadata(node, sourceText) {
         props
       });
     });
+    // console.log(interfaces);
     return interfaces;
 }
+
+console.log("hello")
 
 // Docs https://www.gatsbyjs.org/docs/actions/#createNode
 async function onCreateNode({ node, actions, loadNodeContent, createNodeId, createContentDigest }) {
@@ -169,6 +176,8 @@ async function onCreateNode({ node, actions, loadNodeContent, createNodeId, crea
   const sourceText = await loadNodeContent(node);
   addComponentMetadata(node, sourceText);
   addInterfaceMetadata(node, sourceText);
+  console.log(sourceText)
+
 }
 
 exports.onCreateNode = onCreateNode;
