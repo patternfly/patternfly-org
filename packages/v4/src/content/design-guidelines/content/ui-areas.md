@@ -6,7 +6,7 @@ showTitle: true
 ---
 
 # UI areas
-When designing for different UI areas, don't forget about your words. Keep these best practices in mind so that you can deliver the right content along with your design.
+When designing for different UI areas, don't forget about your words. Keep these best practices in mind so that you can deliver the right content in your design.
 
 ## Onboarding flows and tours
 

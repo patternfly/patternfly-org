@@ -5,7 +5,7 @@ hideTOC: true
 showTitle: true
 ---
 # Sentence structure
-Use the second person "you/your" whenever you can. This way, the focus is on the user, and the product interaction feels more like a conversation.
+Use the second person "you/your" whenever you can. This way, your focus is on the user, and the product interaction feels more like a conversation.
 
 Use the first person "I" when the user is agreeing to something. For example, a user can check a box reading, “I agree to the terms and conditions.”
 

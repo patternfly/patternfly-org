@@ -6,7 +6,7 @@ showTitle: true
 ---
 
 # Writing for all audiences
-UX copy should be accessible by everyone. When you write, consider all users’ abilities (physical, cognitive, and more). Refer to the [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG21/) for accessibility compliance information.
+UX copy should be accessible by everyone, so consider all users’ abilities (physical, cognitive, and more) when you write. Refer to the [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG21/) for accessibility compliance information.
 
 Here are a few best practices for making your UX copy more accessible:
 
