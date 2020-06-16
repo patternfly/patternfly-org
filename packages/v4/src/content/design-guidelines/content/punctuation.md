@@ -6,7 +6,7 @@ showTitle: true
 ---
 # Punctuation
 ## Ampersand
-Avoid using ampersands; use "and" instead.
+Avoid using ampersands, and use "and" instead.
 
 ## Referring to text in the UI
 Use bold text (not quotation marks) when referring to an element or text in the UI.

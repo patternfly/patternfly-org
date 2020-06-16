@@ -5,7 +5,7 @@ hideTOC: true
 showTitle: true
 ---
 # Capitalization
-Keep your capitalization consistent. Follow whatever capitalization rules your company enforces for your products.
+Keep your capitalization consistent, and follow the capitalization rules your company enforces for your products.
 
 Sentence case capitalizes only the first word of each sentence and proper nouns. On PatternFly, we use sentence case capitalization for all text elements, except the following:
 - Product names (Red Hat Virtualization, PatternFly, Red Hat CloudForms)

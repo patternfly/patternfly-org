@@ -23,7 +23,7 @@ Does the product you’re designing for have a default truncation scheme? For ex
 
 ![#truncation1](./img/truncation3@2x.jpg)
 
-If the product doesn't have a default truncation scheme, think about how the product's users are apt to name objects. Is it more likely that the unique part of the name will be at the beginning or end of the string? Based on the answer, you should either truncate at the end of the string (abcdef...) or in the middle of the string (abc...ghi). To decide on a method, ask yourself, *Which part of the string that is not truncated is more likely to differentiate the item?*
+If the product doesn't have a default truncation scheme, think about how the product's users are apt to name objects. Is it more likely that the unique part of the name will be at the beginning or end of the string? Based on the answer, you should either truncate at the end of the string (abcdef...) or in the middle of the string (abc...ghi). To decide on a method, ask yourself: *Which part of the string that is not truncated is more likely to differentiate the item?*
 
 ## Additional truncation guidelines
 - Indicate truncated text with an ellipsis (…). If the text is part of a link, the ellipsis should also be part of the link.
