@@ -57,8 +57,8 @@ If users are interested in how long ago an event occurred, use a relative timest
 
 <table align="center" style="margin: 0px auto; table-layout:fixed;">
     <tr>
-        <th><center>Time frame</th>
-        <th><center>Usage</th>
+        <th><center>Time frame</center></th>
+        <th><center>Usage</center></th>
     </tr>
     <tr>
         <td>0–60 seconds</td>
@@ -93,8 +93,8 @@ In a UI, use numerals instead of written numbers.
 
 <table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
     <tr>
-        <th><center>Before</th>
-        <th><center>After</th>
+        <th><center>Before</center></th>
+        <th><center>After</center></th>
     </tr>
     <tr>
         <td>Your transaction will be complete in three business days.</td>

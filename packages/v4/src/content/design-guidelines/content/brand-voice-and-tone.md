@@ -28,8 +28,8 @@ To reflect the Red Hat voice in UX copy for Red Hat products, we have UX voice t
 
 <table align="center" style="margin: 0px auto; table-layout:fixed;">
     <tr>
-        <th><center>Red Hat voice traits</th>
-        <th><center>UX voice traits</th>
+        <th><center>Red Hat voice traits</center></th>
+        <th><center>UX voice traits</center></th>
     </tr>
     <tr>
         <td>Helpful but humble (not arrogant)</td>
@@ -55,8 +55,8 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 
 <table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
     <tr>
-        <th><center>Do</th>
-        <th><center>Don't</th>
+        <th><center>Do</center></th>
+        <th><center>Don't</center></th>
     </tr>
     <tr>
         <td>Write how you speak, but add extra polish. Be clear and concise for users of all skills and abilities. Focus on comprehension and use plain language.</td>
@@ -72,8 +72,8 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 
 <table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
     <tr>
-        <th><center>Do</th>
-        <th><center>Don't</th>
+        <th><center>Do</center></th>
+        <th><center>Don't</center></th>
     </tr>
     <tr>
         <td>Say what you mean. Be direct and transparent with descriptive, specific language. </td>
@@ -87,8 +87,8 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 
 <table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
     <tr>
-        <th><center>Do</th>
-        <th><center>Don't</th>
+        <th><center>Do</center></th>
+        <th><center>Don't</center></th>
     </tr>
     <tr>
         <td>Deliver content in a way that includes everyone. Use “you” and the active voice to put emphasis on the user and power in their hands. </td>
@@ -106,8 +106,8 @@ Don’t use “I” too much. Make the user the star of every story you tell.
 
 <table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
     <tr>
-        <th><center>Do</th>
-        <th><center>Don't</th>
+        <th><center>Do</center></th>
+        <th><center>Don't</center></th>
     </tr>
     <tr>
         <td>Deliver concepts and ideas with an air of confident simplicity. <br /><br />Add real-world, global-friendly examples.</td>
