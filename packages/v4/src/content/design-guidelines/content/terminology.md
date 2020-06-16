@@ -94,7 +94,7 @@ This is a list of common UI terms and their usage.
 ## Abbreviations and acronyms
 Use abbreviations that users are familiar with, and write out uncommon abbreviations. Abbreviate units of measurement, and use abbreviations consistently.
 
-<table align="center; style="margin: 0px auto; table-layout:fixed;">
+<table align="center; margin: 0px auto; table-layout:fixed;">
     <tr>
         <th>Abbreviation</th>
         <th>Usage</th>
