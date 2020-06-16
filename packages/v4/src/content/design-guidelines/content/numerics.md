@@ -63,25 +63,32 @@ If users are interested in how long ago an event occurred, use a relative timest
     <tr>
         <td>0–60 seconds</td>
         <td>Just now</td>
-</tr>
+</tr> 
+<tr>
          <td>1–60 minutes</td>
 	        <td>4 minutes ago</td>
-          </tr>
+          </tr> 
+          <tr>
 	         <td>1–24 hours</td>
 	          <td>4 hours ago</td>
-            </tr>
+            </tr> 
+            <tr>
 	           <td>Yesterday</td>
 	            <td>1 day ago</td>
-    </tr>
+    </tr> 
+    <tr>
     <td>1–30 days ago</td>
      <td>24 days ago</td>
-     </tr>
+     </tr> 
+     <tr>
      <td>1 month–1 year ago</td>
       <td>4 months ago</td>
-      </tr>
+      </tr> 
+      <tr>
       <td>1 year+</td>
        <td>21 Jan 2020</td>
-       </tr>
+       </tr> 
+       <tr>
        <td>Exact date and time</td>
         <td>21 Jan 2020, 23:33 UTC</td>
         </tr>
