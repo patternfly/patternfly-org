@@ -5,7 +5,6 @@ hideTOC: true
 showTitle: true
 ---
 
-# UI areas
 When designing for different UI areas, don't forget about your words. Keep these best practices in mind so that you can deliver the right content in your design.
 
 ## Onboarding flows and tours
@@ -27,7 +26,7 @@ In onboarding flows, your UX copy is never strictly to tell a user how something
         </center></td>
     </tr>
 </table>
-
+<br />
 
 **Be conversational**: Imagine that you’re sitting beside the user and walking them through the product. Avoid jargon and be casual.
 
@@ -41,7 +40,7 @@ In onboarding flows, your UX copy is never strictly to tell a user how something
         <td>Create accessible and intuitive interfaces with Flyer Fact’s components, layouts, and documentation.</td>
     </tr>
 </table>
-
+<br />
 
 **Empathize with the user**: Learning new things can be scary, so don’t stuff your onboarding flow with exclamation marks, and avoid telling the user how hard you worked on the new tool or how excited you are. Instead, understand that the user might be a little intimidated. Focus on giving them information and guidance in a straightforward way.
 
@@ -55,7 +54,7 @@ In onboarding flows, your UX copy is never strictly to tell a user how something
         <td>Flyer Fact has a new look. Let’s explore what you can do.</td>
     </tr>
 </table>
-
+<br />
 
 ## Error messages
 An error message is a message indicating something went wrong. A user usually sees an error message when they attempt to perform an action but cannot continue because something isn’t right.
@@ -72,6 +71,7 @@ An error message is a message indicating something went wrong. A user usually se
         <td>The password is incorrect.</td>
     </tr>
 </table>
+<br /> 
 
 **Give users a next step**: A user should never feel stuck. If they’re hit with an error, give them the information they need to continue with their task.
 
@@ -98,7 +98,7 @@ An error message is a message indicating something went wrong. A user usually se
         <td>Your task is outdated. To keep it active, update its version.</td>
     </tr>
 </table>
-
+<br />
 
 **Include the right amount of description**: Tell your user what is wrong. An error without an explanation can add to their frustration and prevent them from finding a solution.
 
@@ -112,6 +112,7 @@ An error message is a message indicating something went wrong. A user usually se
         <td>To send this email, turn on your email permissions in user settings.</td>
     </tr>
 </table>
+<br /> 
 
 However, don’t include too much information. The user doesn’t need to know exactly what is going on behind the scenes. Only give them information about what went wrong and what they can do next.
 
@@ -125,6 +126,7 @@ However, don’t include too much information. The user doesn’t need to know e
         <td>Only 1 record can be saved. To continue, remove one of your records.</td>
     </tr>
 </table>
+<br /> 
 
 For more information on designing and writing for different UI areas, visit PatternFly's design documents:
 

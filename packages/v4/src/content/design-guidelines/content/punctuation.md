@@ -4,7 +4,7 @@ section: content
 hideTOC: true
 showTitle: true
 ---
-# Punctuation
+
 ## Ampersand
 Avoid using ampersands, and use "and" instead.
 
@@ -21,6 +21,7 @@ Use bold text (not quotation marks) when referring to an element or text in the 
         <td>Add user to the <b>Group title</b> team</td>
     </tr>
 </table>
+<br /> 
 
 ## Commas
 When a conjunction connects two independent clauses, a comma should precede it. Also put a comma before “and” if it’s the Oxford comma.
@@ -43,6 +44,7 @@ Ellipses (...) are commonly used when information is omitted. You might use elli
         <td>They said, “...I think the PatternFly community is great.”</td>
     </tr>
 </table>
+<br /> 
 
 Ellipses can also be used in more creative contexts to signify someone’s thoughts or speech, like a pause for thinking.
 
@@ -85,7 +87,7 @@ To more accurately capture human expression, use an exclamation mark after just 
         <td>Congratulations! You created an account.</td>
     </tr>
 </table>
-
+<br />
 
 ## Parallel structure
 All items in a list or series should be of the same part of speech.
@@ -100,6 +102,7 @@ All items in a list or series should be of the same part of speech.
         <td>Remember these important tips: Write clearly; conduct research; use correct spelling and grammar.</td>
     </tr>
 </table>
+<br />
 
 ## Quotation marks
 Use double quotation marks (“Example”) for quotes and article titles. Use single quotation marks (‘Example’) for quotes or article titles within double quotation marks.

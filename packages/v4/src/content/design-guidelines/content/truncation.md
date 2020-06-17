@@ -4,7 +4,7 @@ section: content
 hideTOC: true
 showTitle: true
 ---
-# Truncation
+
 Use truncation whenever the string overflows the container and you don't want multiple lines of text.
 
 Examples:

@@ -5,10 +5,7 @@ hideTOC: true
 showTitle: true
 ---
 
-# Numerics
-
 ## Date and time
-
 If you can, let users customize how their date and time format is displayed in the interface.  
 
 These date and time standards are based in American English, but date and time is formatted differently depending on language.
@@ -96,7 +93,7 @@ If users are interested in how long ago an event occurred, use a relative timest
 </table>
 
 ## Numbers and currency
-In a UI, use numerals instead of written numbers.
+In a UI, use numerals instead of written numbers. 
 
 <table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
     <tr>
@@ -108,6 +105,13 @@ In a UI, use numerals instead of written numbers.
         <td>Your transaction will be complete in 3 business days.</td>
     </tr>
 </table>
+<br />
+
+For larger numbers, add a comma after every 3 digits from the right. 
+
+Example: 
+<br/> 
+1,000
 
 For currencies that use the symbol "$" alone, modify with the first two letters of the ISO code:
 - US$1,500 (United States)

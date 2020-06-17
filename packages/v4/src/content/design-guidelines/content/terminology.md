@@ -5,9 +5,7 @@ hideTOC: true
 showTitle: true
 ---
 
-# Terminology
-
-This is a list of common UI terms and their usage.
+Here's a list of common UI terms and their usage.
 
 **Add**: (v.) Use to describe adding an existing item to an existing list, group, view, or other container element.
 - Opposite: Remove

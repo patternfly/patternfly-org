@@ -4,7 +4,7 @@ section: content
 hideTOC: true
 showTitle: true
 ---
-# UX writing best practices
+
 Treat words as part of your design, not something added at the end. UX copy needs to be rooted in user information and context so that it can contribute to an effective, intuitive, and human-centric product experience. 
 
 You’ll also be able to uncover design issues at the very beginning. If a design is too difficult to explain with words, then it might still need some work. By the time you create high-fidelity mockups, you’ll already have a few rounds of content feedback under your belt and can focus on refinement. Work across teams to fine-tune your copy and align your words with voice and tone standards.

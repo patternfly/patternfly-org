@@ -4,7 +4,7 @@ section: content
 hideTOC: true
 showTitle: true
 ---
-# Brand voice and tone
+
 In a business context, brand is the identity of a company that people recognize based on an emotional and psychological connection as well as factual information.
 
 All your UX copy should align with your company’s brand, contributing to a consistent and authentic experience across every content channel users interact with.
@@ -48,8 +48,7 @@ To reflect the Red Hat voice in UX copy for Red Hat products, we have UX voice t
 	<td>Inventive</td>
     </tr>
 </table>
-
-
+<br />
 You can’t *tell* your users what your voice is. You need to *show* them who you are in your writing. One way to do this is with “Voice Do and Don’t” charts. This is what Red Hat's UX copy voice charts look like:
 
 **Voice trait**: Friendly
@@ -66,7 +65,7 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
         <td>Don’t include fluff or long sentences that run on and on.</td>
     </tr>
 </table>
-
+<br />
 
 **Voice trait**: Approachable
 
@@ -82,7 +81,7 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
         <td>Don’t use jargon, idioms, bizspeak, or formal language.</td>
     </tr>
 </table> 
-
+<br />
 **Voice trait**: Collaborative
 
 **Description**: We embody Red Hat’s open source mission with our collaborative working style and our sense of community.
@@ -94,13 +93,10 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
     </tr>
     <tr>
         <td>Deliver content in a way that includes everyone. Use “you” and the active voice to put emphasis on the user and power in their hands. </td>
-        <td>Don’t rely on inside jokes, colloquial expressions, culture-specific examples, or other alienating language to get your point across.</td>
+        <td>Don’t rely on inside jokes, colloquial expressions, culture-specific examples, or other alienating language to get your point across.<br />Don’t use “I” too much. Make the user the star of every story you tell.</td>
     </tr>
 </table>
-
-Don’t use “I” too much. Make the user the star of every story you tell.
-
-
+<br />
 
 **Voice trait**: Inventive
 
@@ -116,7 +112,7 @@ Don’t use “I” too much. Make the user the star of every story you tell.
         <td>Don’t belittle others or make jokes at their expense. We can laugh at ourselves but not at our users. <br /><br />Don’t use others as examples of what not to do.</td>
     </tr>
 </table>
-
+<br />
 When crafting your brand voice, consider your company or team values (if you have them) and align your voice traits accordingly.
 
 If you’re contributing PatternFly content (such as website copy or documentation), keep the above voice traits in mind. If you’re adopting PatternFly as part of another organization, you should go through a similar process to document the attributes of your own brand voice. 
