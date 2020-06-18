@@ -13,7 +13,7 @@ import incorrect from './typography_incorrect_spacing.png';
 import './typography.css';
 
 ## Our font family
-We use Red Hat Text.
+We use Red Hat Display and Red Hat Text.
 
 <Button style={{borderRadius: '0px', fontWeight: '600', paddingTop: '12px', paddingBottom: '12px', paddingLeft: '24px', paddingRight: '24px'}} variant="primary" component="a" href="https://github.com/RedHatOfficial/RedHatFont" target="_blank">DOWNLOAD</Button>
 
