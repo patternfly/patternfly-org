@@ -5,7 +5,7 @@ hideTOC: true
 showTitle: true
 ---
 
-Welcome to the PatternFly style guide: a place for UX professionals like you to learn about designing with words.
+Welcome to the PatternFly content style guide: a place for UX professionals like you to learn about designing with words.
 
 The words in a user interface, commonly referred to as "UX copy" or "microcopy," are just as important as the components or layouts. UX copy is another element of design, and it can drive better UX decisions and guide users to succeed.
 

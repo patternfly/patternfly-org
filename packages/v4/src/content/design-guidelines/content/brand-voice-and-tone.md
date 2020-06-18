@@ -8,7 +8,7 @@ showTitle: true
 In a business context, brand is the identity of a company that people recognize based on an emotional and psychological connection as well as factual information.
 
 All your UX copy should align with your company’s brand, contributing to a consistent and authentic experience across every content channel users interact with.
-To keep your UX copy aligned with your brand, consider style, voice, and tone:
+To keep your UX copy on-brand, consider style, voice, and tone:
 
 - **Style** is the way you use grammar, punctuation, and syntax. It’s influenced by how your words work together and what effect your writing has on the user. 
 
@@ -49,6 +49,7 @@ To reflect the Red Hat voice in UX copy for Red Hat products, we have UX voice t
     </tr>
 </table>
 <br />
+
 You can’t *tell* your users what your voice is. You need to *show* them who you are in your writing. One way to do this is with “Voice Do and Don’t” charts. This is what Red Hat's UX copy voice charts look like:
 
 **Voice trait**: Friendly
@@ -82,6 +83,7 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
     </tr>
 </table> 
 <br />
+
 **Voice trait**: Collaborative
 
 **Description**: We embody Red Hat’s open source mission with our collaborative working style and our sense of community.

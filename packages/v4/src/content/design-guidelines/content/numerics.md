@@ -110,7 +110,7 @@ In a UI, use numerals instead of written numbers.
 For larger numbers, add a comma after every 3 digits from the right. 
 
 Example: 
-<br/> 
+
 1,000
 
 For currencies that use the symbol "$" alone, modify with the first two letters of the ISO code:

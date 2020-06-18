@@ -5,7 +5,7 @@ hideTOC: true
 showTitle: true
 ---
 
-When designing for different UI areas, don't forget about your words. Keep these best practices in mind so that you can deliver the right content in your design.
+When designing for different UI areas, don't forget about your words. Keep these best practices in mind so that you can deliver the right content in the right context at the right time.
 
 ## Onboarding flows and tours
 
@@ -21,8 +21,8 @@ In onboarding flows, your UX copy is never strictly to tell a user how something
         <th><center>After</center></th>
     </tr>
     <tr>
-        <td>We introduced a new feature for designing called Flyer Fact. Discover how it works by taking a tour to learn more. <center>OK | Cancel</center></td>
-        <td>Create consistency and design faster with Flyer Fact.<center>Start tour | Not now
+        <td>We introduced a new feature for designing called Flyer Fact. Discover how it works by taking a tour to learn more. <center><br />OK | Cancel</center></td>
+        <td>Create consistency and design faster with Flyer Fact.<center><br />Start tour | Not now
         </center></td>
     </tr>
 </table>
@@ -85,6 +85,7 @@ An error message is a message indicating something went wrong. A user usually se
         <td>Your list has the maximum number of items. To continue customizing, remove one item.</td>
     </tr>
 </table>
+<br /> 
 
 **Avoid jargon**: Error messages are frustrating enough without technical terms that users might not understand. Avoid jargon and use terms that are familiar to your users.
 
