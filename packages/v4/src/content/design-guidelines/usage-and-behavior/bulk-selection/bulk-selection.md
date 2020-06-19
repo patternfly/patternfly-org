@@ -18,7 +18,7 @@ The bulk selector is created using a Split button and is always located as the l
 
 **2. Checkbox:** The state of the checkbox reflects the current selection state of the list, table, or card grid.
 
-![blulk selector checkbox](./img/bulk-select-checkbox.png)
+<img src="./img/bulk-select-checkbox" alt="Bulk Selector Checkbox States" width="527"/>
 
 **3. Items selected:** This text always reflects the total number of items selected. If pagination is in use, it will reflect the items selected across all pages.
 
