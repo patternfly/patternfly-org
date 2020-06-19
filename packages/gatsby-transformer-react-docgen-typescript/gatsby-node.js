@@ -135,6 +135,7 @@ function getComponentMetadata(node, sourceText) {
 }
 
 function getInterfaceMetadata(fileNode, sourceText) {
+
   const ast = ts.createSourceFile(
     fileNode.absolutePath,   // fileName
     sourceText,
@@ -170,13 +171,14 @@ function getInterfaceMetadata(fileNode, sourceText) {
     return interfaces;
 }
 
-console.log("hello")
+// console.log("hello")
 
 // Docs https://www.gatsbyjs.org/docs/actions/#createNode
 async function onCreateNode({ node, actions, loadNodeContent, createNodeId, createContentDigest }) {
   if (!isComponentCode(node)) return;
 
   const sourceText = await loadNodeContent(node);
+  // console.log(sourceText)
   // const theNodeID = await createNodeId(node);
   const componentMeta = getComponentMetadata(node, sourceText);
   const interfaceMeta = getInterfaceMetadata(node, sourceText);
@@ -203,7 +205,7 @@ async function onCreateNode({ node, actions, loadNodeContent, createNodeId, crea
       actions.createNode(metadataNode);
       actions.createParentChildLink({ parent: node, child: metadataNode });
     });
-  // console.log(sourceText)
+  console.log(sourceText)
 
 }
 
