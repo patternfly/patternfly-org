@@ -26,10 +26,10 @@ Let’s consider how we use the Red Hat brand voice in our UX copy. If Red Hat w
 ## Voice traits
 To reflect the Red Hat voice in UX copy for Red Hat products, we have UX voice traits. Each voice trait is an extension of the Red Hat voice.
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;">
+<table>
     <tr>
-        <th><center>Red Hat voice traits</center></th>
-        <th><center>UX voice traits</center></th>
+        <th><center><strong>Red Hat voice traits</strong></center></th>
+        <th><center><strong>UX voice traits</strong></center></th>
     </tr>
     <tr>
         <td>Helpful but humble (not arrogant)</td>
@@ -58,8 +58,8 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 
 <table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
     <tr>
-        <th><center>Do</center></th>
-        <th><center>Don't</center></th>
+        <th><center><strong>Do</strong></center></th>
+        <th><center><strong>Don't</strong></center></th>
     </tr>
     <tr>
         <td>Write how you speak, but add extra polish. Be clear and concise for users of all skills and abilities. Focus on comprehension and use plain language.</td>
@@ -68,14 +68,16 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 </table>
 <br />
 
+
+
 **Voice trait**: Approachable
 
 **Description**: People are comfortable engaging with us. We’re open to listening and changing our ways when better ideas come along.
 
 <table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
     <tr>
-        <th><center>Do</center></th>
-        <th><center>Don't</center></th>
+        <th><center><strong>Do</strong></center></th>
+        <th><center><strong>Don't</strong></center></th>
     </tr>
     <tr>
         <td>Say what you mean. Be direct and transparent with descriptive, specific language. </td>
@@ -90,8 +92,8 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 
 <table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
     <tr>
-        <th><center>Do</center></th>
-        <th><center>Don't</center></th>
+        <th><center><strong>Do</strong></center></th>
+        <th><center><strong>Don't</strong></center></th>
     </tr>
     <tr>
         <td>Deliver content in a way that includes everyone. Use “you” and the active voice to put emphasis on the user and power in their hands. </td>
@@ -106,8 +108,8 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 
 <table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
     <tr>
-        <th><center>Do</center></th>
-        <th><center>Don't</center></th>
+        <th><center><strong>Do</strong></center></th>
+        <th><center><strong>Don't</strong></center></th>
     </tr>
     <tr>
         <td>Deliver concepts and ideas with an air of confident simplicity. <br /><br />Add real-world, global-friendly examples.</td>

@@ -24,7 +24,10 @@ As a PatternFly community, our goal with this style guide is to help UX professi
 With that said, we recognize that the *PatternFly* way is not the *only* way. This guide isn’t meant to:
 - Overrule another style guide.
 - Provide a complete list of all writing rules across all channels.
-- Serve as hard requirements that everyone must follow.
+- Serve as hard requirements that everyone must follow. 
+
+## Additional resources 
+You can find additional UX writing guidance for specific components in [PatternFly's usage and behavior guidelines.](https://www.patternfly.org/v4/design-guidelines/styles/colors)
 
 ## Contribute
 In true Flyer fashion, we keep this style guide open. Contribute your ideas through [GitHub](https://github.com/patternfly/patternfly-org/pulls).
