@@ -105,33 +105,7 @@ function getComponentMetadata(node, sourceText) {
     // console.warn('No component found in', node.absolutePath);
   }
 
-  const interfaces = getInterfaceMetadata(node, sourceText);
-
-  (parsedComponents || [])
-    // .filter(parsed => parsed && parsed.displayName) // TabContent.tsx is being a pain so check for parsed.displayName
-    .concat(interfaces) 
-    .forEach(parsed => {
-      // TODO: also find interfaces it extends to map back to interface metadata in other files
-      // OR have it added as a `propComponent` in the MD file and just make a new table
-      const metadataNode = {
-        name: parsed.displayName,
-        relativePath: node.relativePath,
-        description: parsed.description,
-        props: flattenProps(parsed.props).map(addAnnotations),
-        path: node.relativePath,
-        basePath: node.relativePath.split('/')[0],
-        id: createNodeId(`${node.id}react-docgen${node.relativePath}`),
-        children: [],
-        parent: node.id,
-        internal: {
-          contentDigest: createContentDigest(node),
-          type: `ComponentMetadata`
-        }
-      };
-      actions.createNode(metadataNode);
-      actions.createParentChildLink({ parent: node, child: metadataNode });
-    });
-    return (parsedComponents || []).filter(parsed => parsed && parsed.displayName);
+  return (parsedComponents || []).filter(parsed => parsed && parsed.displayName);
 }
 
 function getInterfaceMetadata(fileNode, sourceText) {
@@ -143,7 +117,10 @@ function getInterfaceMetadata(fileNode, sourceText) {
   );
   
   function getText(node) {
-    return sourceText.substring(node.pos, node.end);
+    if (!node || !node.pos || !node.end) {
+      return undefined;
+    }
+    return sourceText.substring(node.pos, node.end).trim();
   }
 
   const interfaces = [];
@@ -151,27 +128,27 @@ function getInterfaceMetadata(fileNode, sourceText) {
   ast.statements
     .filter(statement => statement.kind === ts.SyntaxKind.InterfaceDeclaration)
     .forEach(statement => {
-      console.log('interface', statement.name.escapedText);
-  
-      // TODO: Create nodes
-      const props = statement.members.map(member => ({
-        name: member.name.escapedText,
-        description: member.jsDoc
-          ? member.jsDoc.map(doc => doc.comment).join('\n')
-          : null,
-        required: member.questionToken === undefined,
-        type: getText(member.type).trim()
-      }));
+      const props = statement.members.map(member => {
+        return {
+          name: (member.name && member.name.escapedText) || member.parameters && `[${getText(member.parameters[0])}]` || 'Unknown',
+          description: member.jsDoc
+            ? member.jsDoc.map(doc => doc.comment).join('\n')
+            : null,
+          required: member.questionToken === undefined,
+          tsType: {
+            raw: getText(member.type).trim()
+          }
+        };
+      });
+
       interfaces.push({
-        name: statement.name.escapedText,
+        displayName: statement.name.escapedText,
         props
       });
     });
     // console.log(interfaces);
     return interfaces;
 }
-
-// console.log("hello")
 
 // Docs https://www.gatsbyjs.org/docs/actions/#createNode
 async function onCreateNode({ node, actions, loadNodeContent, createNodeId, createContentDigest }) {
@@ -191,10 +168,12 @@ async function onCreateNode({ node, actions, loadNodeContent, createNodeId, crea
         name: parsed.displayName,
         relativePath: node.relativePath,
         description: parsed.description,
-        props: flattenProps(parsed.props).map(addAnnotations),
+        // React-docgen gives props as an object like { propName: { propDetails } }
+        // Our interface (and what Gatsby uses) gives props as an array like [ { name: propName, ...propDetails } ]
+        props: Array.isArray(parsed.props) ? parsed.props : flattenProps(parsed.props).map(addAnnotations),
         path: node.relativePath,
         basePath: node.relativePath.split('/')[0],
-        id: createNodeId(`${node.id}react-docgen${node.relativePath}`),
+        id: createNodeId(`${node.id}${parsed.displayName}react-docgen${node.relativePath}`),
         children: [],
         parent: node.id,
         internal: {
