@@ -28,7 +28,7 @@ const patternFlyPrinciples = 'Flyer fundamentals';
 
 const IndexPage = ({ location }) => {
   return (
-  <SideNavLayout location={location} hideSideNav showGdprBanner={false} showBanner={true}>
+  <SideNavLayout location={location} hideSideNav showGdprBanner={true} showBanner={true}>
     <PageSection
       variant={PageSectionVariants.light}
       className="pf4-c-background-image pf-u-display-flex pf-u-justify-content-center pf-u-align-items-center ws-homepage-main-section"

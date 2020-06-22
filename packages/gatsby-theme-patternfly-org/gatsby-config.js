@@ -17,6 +17,8 @@ module.exports = {
         display: 'standalone',
         // icon used for splash screen, on home screen
         icon: require.resolve('gatsby-theme-patternfly-org/images/patternfly-logo.svg'),
+        // GDPR banner
+        showGdprBanner: true,
       },
     },
   ]
