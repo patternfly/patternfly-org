@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.18](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.17...gatsby-theme-patternfly-org@4.0.18) (2020-06-22)
+
+
+### Bug Fixes
+
+* **site nav:** removed custom styling from PageHeader that were causing PF brand logo to float towards the center, search box to have black box below it at certain widths, and nav items to be squished at exactly 1200px width ([#1904](https://github.com/patternfly/patternfly-org/issues/1904)) ([edc6432](https://github.com/patternfly/patternfly-org/commit/edc643287a55323b5e55bd6ca4ae1d4431eae198))
+
+
+
+
+
 ## [4.0.17](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.16...gatsby-theme-patternfly-org@4.0.17) (2020-06-22)
 
 **Note:** Version bump only for package gatsby-theme-patternfly-org
