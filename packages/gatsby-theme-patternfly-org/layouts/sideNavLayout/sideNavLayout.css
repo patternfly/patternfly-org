@@ -19,14 +19,6 @@
 }
 /* Hide version switcher on mobile */
 @media screen and (max-width: 1200px) {
-  .ws-page-header {
-    grid-template-columns: 3fr 1fr;
-  }
-      
-  .ws-page-header .pf-c-page__header-brand-link {
-    justify-content: center;
-  }
-  
   .ws-org-version-switcher {
     display: none;
   }
