@@ -24,8 +24,6 @@ function isJSX(node) {
   return node.internal.mediaType === `application/javascript` || node.internal.mediaType === `text/jsx`;
 }
 
-console.log("you are here")
-
 function flattenProps(props) {
   const res = [];
   if (props) {
@@ -113,7 +111,7 @@ function getInterfaceMetadata(fileNode, sourceText) {
   const ast = ts.createSourceFile(
     fileNode.absolutePath,   // fileName
     sourceText,
-    ts.ScriptTarget.Latest // langugeVersion
+    ts.ScriptTarget.Latest // languageVersion
   );
   
   function getText(node) {
@@ -146,7 +144,6 @@ function getInterfaceMetadata(fileNode, sourceText) {
         props
       });
     });
-    // console.log(interfaces);
     return interfaces;
 }
 
@@ -155,8 +152,6 @@ async function onCreateNode({ node, actions, loadNodeContent, createNodeId, crea
   if (!isComponentCode(node)) return;
 
   const sourceText = await loadNodeContent(node);
-  // console.log(sourceText)
-  // const theNodeID = await createNodeId(node);
   const componentMeta = getComponentMetadata(node, sourceText);
   const interfaceMeta = getInterfaceMetadata(node, sourceText);
 
@@ -184,7 +179,6 @@ async function onCreateNode({ node, actions, loadNodeContent, createNodeId, crea
       actions.createNode(metadataNode);
       actions.createParentChildLink({ parent: node, child: metadataNode });
     });
-  console.log(sourceText)
 
 }
 
