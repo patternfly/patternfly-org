@@ -47,8 +47,8 @@ Focus on what the user needs to do in order to complete the task or reach their 
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>Your user settings do not allow you to access this file.</td>
@@ -62,8 +62,8 @@ Users want to know why they should do something. What’s in it for them? They t
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>Install this extension to learn more about email.</td>
@@ -77,8 +77,8 @@ Jargon, bizpeak, and formal language make you sound more like a brochure than a 
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>Utilizing the open source phenomenon allows you to leverage collaborative communications.</td>
@@ -92,8 +92,8 @@ Dr. Seuss says it best: “So the writer who breeds more words than he needs, is
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>Make the decision to send a notification to your administrator.</td>
@@ -107,8 +107,8 @@ Stick with the same terminology to describe actions and objects across the entir
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>Log in to your account only. Never sign in to your friend’s account.</td>

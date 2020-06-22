@@ -10,8 +10,8 @@ An error message is a message indicating something went wrong. A user typically 
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>You entered the wrong password.</td>
@@ -24,8 +24,8 @@ An error message is a message indicating something went wrong. A user typically 
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>Your list already has the maximum number of items. You are not able to continue customizing.</td>
@@ -38,8 +38,8 @@ An error message is a message indicating something went wrong. A user typically 
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>Error code 5959: Outdated version information. Task termination pending.</td>
@@ -52,8 +52,8 @@ An error message is a message indicating something went wrong. A user typically 
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>An error occurred. The email cannot be sent.</td>
@@ -66,8 +66,8 @@ However, don’t include too much information. The user doesn’t need to know e
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>Your information cannot be saved. Our system is currently designed to accommodate 1 record per user. The system memory is unable to store more at this time.</td>

@@ -12,8 +12,8 @@ In product tours, your UX copy is never strictly to tell a user *how* something 
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>We introduced a new feature for designing called Flyer Fact. Discover how it works by taking a tour to learn more. <center><br />OK | Cancel</center></td>
@@ -27,8 +27,8 @@ In product tours, your UX copy is never strictly to tell a user *how* something 
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>There are three major areas of Flyer Fact: components, layouts, and documentation. These are for designers to utilize in order to build user experiences that serve the needs of their users.</td>
@@ -41,8 +41,8 @@ In product tours, your UX copy is never strictly to tell a user *how* something 
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>We are so excited to announce the Flyer Fact redesign! We can’t wait to show you around.</td>

@@ -13,8 +13,8 @@ Use bold text (not quotation marks) when referring to an element or text in the 
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>Add user to the “Group title” team </td>
@@ -36,8 +36,8 @@ Ellipses (...) are commonly used when information is omitted. You might use elli
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before ellipses</center></th>
-        <th><center>After ellipses</center></th>
+        <th><center><strong>Before ellipses</strong></center></th>
+        <th><center><strong>After ellipses</strong></center></th>
     </tr>
     <tr>
         <td>They said, “For many reasons, I think the PatternFly community is great.”</td>
@@ -79,8 +79,8 @@ To more accurately capture human expression, use an exclamation mark after just 
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>Congratulations on creating an account!</td>
@@ -94,8 +94,8 @@ All items in a list or series should be of the same part of speech.
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>Remember these important tips: Write clearly; conduct research; spelling and grammar.</td>

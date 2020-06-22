@@ -13,8 +13,8 @@ Try to avoid using third person "he/she/they/it." Third person sounds formal and
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>Users can simplify their designs with PatternFly.</td>
@@ -29,8 +29,8 @@ The active voice is when the subject of the sentence performs the action. The pa
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>The book is being read by Matt.</td>
@@ -43,8 +43,8 @@ There are some occasions when the [passive voice is appropriate](https://writing
 
 <table style="table-layout: fixed" tr width="80%">
     <tr>
-        <th><center>Before</center></th>
-        <th><center>After</center></th>
+        <th><center><strong>Before</strong></center></th>
+        <th><center><strong>After</strong></center></th>
     </tr>
     <tr>
         <td>You entered the wrong password.</td>
