@@ -11,7 +11,7 @@ Use the first person "I" when the user is agreeing to something. For example, a 
 
 Try to avoid using third person "he/she/they/it." Third person sounds formal and disconnected from the user.
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
+<table style="table-layout: fixed" tr width="80%">
     <tr>
         <th><center>Before</center></th>
         <th><center>After</center></th>
@@ -27,7 +27,7 @@ Use the active voice whenever possible. The active voice makes a sentence shorte
 
 The active voice is when the subject of the sentence performs the action. The passive voice is when the subject of the sentence receives the action.
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
+<table style="table-layout: fixed" tr width="80%">
     <tr>
         <th><center>Before</center></th>
         <th><center>After</center></th>
@@ -41,7 +41,7 @@ The active voice is when the subject of the sentence performs the action. The pa
 
 There are some occasions when the [passive voice is appropriate](https://writing.wisc.edu/handbook/style/ccs_activevoice/), like when you don’t wish to point out a subject or when you want to emphasize an action. Also, use the passive voice to avoid assigning blame to a user, especially in error messages.
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
+<table style="table-layout: fixed" tr width="80%">
     <tr>
         <th><center>Before</center></th>
         <th><center>After</center></th>

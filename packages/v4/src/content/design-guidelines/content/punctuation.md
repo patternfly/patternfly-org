@@ -11,7 +11,7 @@ Avoid using ampersands, and use "and" instead.
 ## Referring to text in the UI
 Use bold text (not quotation marks) when referring to an element or text in the UI.
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
+<table style="table-layout: fixed" tr width="80%">
     <tr>
         <th><center>Before</center></th>
         <th><center>After</center></th>
@@ -34,7 +34,7 @@ Examples:
 ## Ellipses (...)
 Ellipses (...) are commonly used when information is omitted. You might use ellipses when you cannot fit all words onto a line or when you remove less relevant information (like in a quote).
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
+<table style="table-layout: fixed" tr width="80%">
     <tr>
         <th><center>Before ellipses</center></th>
         <th><center>After ellipses</center></th>
@@ -77,7 +77,7 @@ Use exclamation marks sparingly. Don’t use one to generate excitement; only us
 
 To more accurately capture human expression, use an exclamation mark after just a few words, not after a long sentence.
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
+<table style="table-layout: fixed" tr width="80%">
     <tr>
         <th><center>Before</center></th>
         <th><center>After</center></th>
@@ -92,7 +92,7 @@ To more accurately capture human expression, use an exclamation mark after just 
 ## Parallel structure
 All items in a list or series should be of the same part of speech.
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
+<table style="table-layout: fixed" tr width="80%">
     <tr>
         <th><center>Before</center></th>
         <th><center>After</center></th>
@@ -103,6 +103,9 @@ All items in a list or series should be of the same part of speech.
     </tr>
 </table>
 <br />
+
+## Parentheses 
+Do not use parentheses to indicate a possible plural of something, like "Account(s)." If a user can select one thing or multiple things, use the plural form.
 
 ## Quotation marks
 Use double quotation marks (“Example”) for quotes and article titles. Use single quotation marks (‘Example’) for quotes or article titles within double quotation marks.

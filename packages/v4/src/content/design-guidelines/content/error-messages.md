@@ -8,7 +8,7 @@ An error message is a message indicating something went wrong. A user typically 
 
 **Don’t blame users**. A user should never feel like the error is their fault. Avoid language like “You did something wrong.”
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
+<table style="table-layout: fixed" tr width="80%">
     <tr>
         <th><center>Before</center></th>
         <th><center>After</center></th>
@@ -22,7 +22,7 @@ An error message is a message indicating something went wrong. A user typically 
 
 **Give users a next step**: A user should never feel stuck. If they’re hit with an error, give them the information they need to continue with their task.
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
+<table style="table-layout: fixed" tr width="80%">
     <tr>
         <th><center>Before</center></th>
         <th><center>After</center></th>
@@ -36,7 +36,7 @@ An error message is a message indicating something went wrong. A user typically 
 
 **Avoid jargon**: Error messages are frustrating enough without technical terms that users might not understand. Avoid jargon and use terms that are familiar to your users.
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
+<table style="table-layout: fixed" tr width="80%">
     <tr>
         <th><center>Before</center></th>
         <th><center>After</center></th>
@@ -50,7 +50,7 @@ An error message is a message indicating something went wrong. A user typically 
 
 **Include the right amount of description**: Tell your user what is wrong. An error without an explanation can add to their frustration and prevent them from finding a solution.
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
+<table style="table-layout: fixed" tr width="80%">
     <tr>
         <th><center>Before</center></th>
         <th><center>After</center></th>
@@ -64,7 +64,7 @@ An error message is a message indicating something went wrong. A user typically 
 
 However, don’t include too much information. The user doesn’t need to know exactly what is going on behind the scenes. Only give them information about what went wrong and what they can do next.
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
+<table style="table-layout: fixed" tr width="80%">
     <tr>
         <th><center>Before</center></th>
         <th><center>After</center></th>

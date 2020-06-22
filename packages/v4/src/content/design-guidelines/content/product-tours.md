@@ -10,7 +10,7 @@ In product tours, your UX copy is never strictly to tell a user *how* something 
 
 **Focus on the user’s goals**: Emphasize what the user can do with the product.
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
+<table style="table-layout: fixed" tr width="80%">
     <tr>
         <th><center>Before</center></th>
         <th><center>After</center></th>
@@ -25,7 +25,7 @@ In product tours, your UX copy is never strictly to tell a user *how* something 
 
 **Be conversational**: Imagine that you’re sitting beside the user and walking them through the product. Avoid jargon and be casual.
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
+<table style="table-layout: fixed" tr width="80%">
     <tr>
         <th><center>Before</center></th>
         <th><center>After</center></th>
@@ -39,7 +39,7 @@ In product tours, your UX copy is never strictly to tell a user *how* something 
 
 **Empathize with the user**: Learning new things can be scary, so don’t stuff your onboarding flow with exclamation marks, and avoid telling the user how hard you worked on the new tool or how excited you are. Instead, understand that the user might be a little intimidated. Focus on giving them information and guidance in a straightforward way.
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
+<table style="table-layout: fixed" tr width="80%">
     <tr>
         <th><center>Before</center></th>
         <th><center>After</center></th>

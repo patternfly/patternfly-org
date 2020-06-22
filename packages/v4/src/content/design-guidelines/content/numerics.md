@@ -52,7 +52,7 @@ Using **absolute** or **relative** timestamps will depend on the context. If you
 
 If users are interested in how long ago an event occurred, use a relative timestamp. When reporting relative time, follow these examples:
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;">
+<table style="table-layout: fixed" tr width="80%">
     <tr>
         <th><center>Time frame</center></th>
         <th><center>Usage</center></th>
@@ -95,7 +95,7 @@ If users are interested in how long ago an event occurred, use a relative timest
 ## Numbers and currency
 In a UI, use numerals instead of written numbers. 
 
-<table align="center" style="margin: 0px auto; table-layout:fixed;" tr width="80%">
+<table style="table-layout: fixed" tr width="80%">
     <tr>
         <th><center>Before</center></th>
         <th><center>After</center></th>
