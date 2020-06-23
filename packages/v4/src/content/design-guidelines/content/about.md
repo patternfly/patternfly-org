@@ -1,5 +1,5 @@
 ---
-title: Welcome
+title: About
 section: content
 hideTOC: true
 showTitle: true
