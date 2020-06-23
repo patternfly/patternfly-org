@@ -1,5 +1,5 @@
 ---
-title: Writing for all audiences
+title: About
 section: content
 hideTOC: true
 showTitle: true
