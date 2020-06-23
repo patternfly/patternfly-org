@@ -1,34 +1,35 @@
 ---
-title: About
+title: Welcome
 section: content
 hideTOC: true
 showTitle: true
 ---
 
-UX copy should be accessible by everyone, so consider all users’ abilities (physical, cognitive, and more) when you write. Refer to the [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG21/) for accessibility compliance information.
+Welcome to the PatternFly content style guide: a place for UX professionals like you to learn about designing with words.
 
-Here are a few best practices for making your UX copy more accessible:
+The words in a user interface, commonly referred to as "UX copy" or "microcopy," are just as important as the components or layouts. UX copy is another element of design, and it can drive better UX decisions and guide users to succeed.
 
-- Avoid directional language, like “Use the button to the left." It will not help a user who is working with a screen reader.
-- Use proper heading levels (H1, H2) to articulate the page content’s organization.
-- Do not identify items by color, like “Click the blue button.”
-- Use plain language and short sentences.
-- Use common contractions (for example, "it’s” and "you’re") in areas that sound most natural to you. Contractions are great for maintaining a casual voice and tone and for making your [UX copy more accessible](https://help.blackboard.com/Accessibility/Write_Accessible_Content). UX copy should make a product interaction feel, look, and sound more human. Contractions help you get there.
-- Be clear and concise.
+> I’ve come to believe that language is one of the most powerful design tools we have.
 
-Use the following guidelines when writing text that is only visible to a screen reader, like an aria-label that describes an icon button:
+*— [n.k. feinberg, New York Times](https://open.nytimes.com/to-design-better-products-consider-the-language-f17b923f8bae)*
 
-- Avoid redundancy. Screen readers will announce the name of the component or element as well as associated property and state when the HTML is defined correctly.
-- Make sure labels for elements like buttons or links make sense when pulled out of the context. Use descriptive hyperlinks instead of raw links or vague linked text, like “Click here.”
-- When you define an aria-label for an element that also has associated visible text in the UI, ensure the aria-label begins with the same text that appears in the UI to avoid confusion with screen reader users who have vision.
-- Avoid unnecessary capitalization.
-- Avoid leet speak that uses numbers or special characters in place of letters (like "a11y" for accessibility).
+Anyone involved in UX—researchers, designers, developers, content strategists, and more—can use this guide for building better product experiences with content design and strategy.
 
-Accessibility and localization/translation are closely related. If you create accessible UX copy, you’re most likely making localization and translation easier too.  Keep these additional guidelines in mind when writing for global users:
+## Style guide goal
+As a PatternFly community, our goal with this style guide is to help UX professionals:
+- Create clarity and consistency across products and applications.
+- Make products sound more conversational and human.
+- Use written content to create unified, on-brand experiences for all users.
 
-- Avoid idioms like “cross your fingers.” They don’t make sense in all languages.
-- Avoid vague terms like “stuff” or “kind of.” They can be translated incorrectly.
-- Use humor sparingly. It generally doesn’t translate well.
-- Avoid culture-specific or location-specific references and examples. They won’t resonate with all users.
-- Avoid adding words to an image. They make translation harder.
-- Translated text can be a drastically different length than the text you originally provide. Ensure the text you use can be 50% shorter or 50% longer with no negative impact on design.
+With that said, we recognize that the *PatternFly* way is not the *only* way. This guide isn’t meant to:
+- Overrule another style guide.
+- Provide a complete list of all writing rules across all channels.
+- Serve as hard requirements that everyone must follow. 
+
+## Additional resources 
+- PatternFly’s [usage and behavior documentation](https://www.patternfly.org/v4/design-guidelines/styles/colors) contains UX writing guidelines for specific components. 
+
+- For content and terminology guidance that’s not included in this guide, check out [IBM's online developer style guide](https://www.ibm.com/developerworks/library/styleguidelines/index.html) and [Merriam-Webster's online dictionary.](https://www.merriam-webster.com/) 
+
+## Contribute
+In true Flyer fashion, we keep this style guide open. Contribute your ideas through [GitHub.](https://github.com/patternfly/patternfly-org/pulls)
