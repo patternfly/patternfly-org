@@ -50,7 +50,7 @@ Use our typographic styles to communicate visual hierarchy. A consistent and log
       <span style={{color: '#151515', marginLeft: '8px'}}>Correct</span>
     </LineHeightTitle>
     <div>Note how the line height space is included when laying out with spacer elements.</div>
-    <img alt="correct line height space example" style={{maxHeight: '113px', padding: '16px'}} src={correct} />
+    <img alt="correct line height space example" style={{maxHeight: '158px', padding: '16px'}} src={correct} />
   </GridItem>
   <GridItem span={12}>
     <LineHeightTitle>
@@ -58,7 +58,7 @@ Use our typographic styles to communicate visual hierarchy. A consistent and log
       <span style={{color: '#151515', marginLeft: '8px'}}>Incorrect</span>
     </LineHeightTitle>
     <div>Do not use the text itself to align with spacing elements when designing. Remember to always include the line height space.</div>
-    <img alt="incorrect line height space example" style={{maxHeight: '78px', padding: '16px'}} src={incorrect} />
+    <img alt="incorrect line height space example" style={{maxHeight: '124px', padding: '16px'}} src={incorrect} />
   </GridItem>
 </Grid>
 
