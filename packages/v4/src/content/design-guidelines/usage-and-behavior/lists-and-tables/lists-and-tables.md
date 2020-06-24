@@ -17,7 +17,10 @@ Use [tables](#tables) when:
 * You want column headers.
 
 ## Data lists
-PatternFly supports several variations of the data list component.
+PatterFly supports two main types of data lists
+
+1. **[Compact data list](#compact-data-list)**
+2. **[Basic data list](#basic-data-list)**
 
 ### How to use
 Think of each row in a data list as a container for some formatted content. In PatternFly 4, data list rows can accept any [layout](/documentation/react/layouts/bullseye) supported by the design system as long as all rows apply the same layout. Here are some common layouts that may be useful in a data list:
@@ -27,7 +30,7 @@ Think of each row in a data list as a container for some formatted content. In P
 * **[Split](/documentation/react/layouts/split):** When you want to distribute content evenly with a main content area in the center.
 
 ### Data list capabilities
-Every [compact](#when-to-use-compact-vs-basic-spacing) or [basic](#when-to-use-compact-vs-basic-spacing) data list can be extended with these functionalities.
+Every [compact or basic data list](#when-to-use-compact-vs-basic-spacing) can be extended with these functionalities.
 
 * **[Actionable data list](#actionable-data-list)**
 * **[Expandable data list](#expandable-data-list)**
@@ -77,11 +80,16 @@ Use an expandable data list when you have more information than will comfortably
 
 ## Tables
 
+PatterFly supports two main types of data 
+
+1. **[Compact data list](#compact-data-list)**
+2. **[Basic data list](#basic-data-list)**
+
 ### How to use
 Consider the structure of the data you want to display and organize that information into columns. Columns will typically have column headers. Every row within a table must have a consistent format. If the table row includes actions, they should always be placed in the rightmost column(s).
 
 ### Table capabilities
-Every [compact](#when-to-use-compact-vs-basic-spacing) or [basic](#when-to-use-compact-vs-basic-spacing) table can be extended with these functionalities. 
+Every [compact or basic table ](#when-to-use-compact-vs-basic-spacing) can be extended with these functionalities. 
 
 * **[Expandable data table](#expandable-data-table)**
 * **[Compound expandable table](#compound-expandable-table)**
@@ -138,9 +146,9 @@ Sorting by columns is possible for any table variation. Enabling the component w
 
 <img src="./img/sortable-data-table.png"  alt="Sortable data table"  width="1161"/> 
 
-1. **Sorted column:** When a column is being sorted by, the column header will turn [blue](/design-guidelines/styles/colors#typography-and-iconography-colors) and the sort icon will represent the direction of the sort. Subsequent clicks on the sortable column header will toggle the direction of the sort.
-2. **Hovered sort:** When a column is sortable, the sort icon will appear to the right of the column header. Upon hover, the  icon will change to a [darker grey](/design-guidelines/styles/colors#typography-and-iconography-colors) indicating that the icon is actionable.
-3. **Sortable column:** When a column is sortable, the sort icon will appear to the right of the column header in a [light grey](/design-guidelines/styles/colors#typography-and-iconography-colors) color. Sorting will not become active until the user selects the column header. This triggers the arrow to point upwards and the content to be sorted in ascending order.
+1. **Sortable column:** When a column is sortable, the sort icon will appear to the right of the column header in a [light grey](/design-guidelines/styles/colors#typography-and-iconography-colors) color. Sorting will not become active until the user selects the column header. This triggers the arrow to point upwards and the content to be sorted in ascending order.
+3. **Hovered sort:** When a column is sortable, the sort icon will appear to the right of the column header. Upon hover, the  icon will change to a [darker grey](/design-guidelines/styles/colors#typography-and-iconography-colors) indicating that the icon is actionable.
+2. **Sorted column:** When a column is being sorted by, the column header will turn [blue](/design-guidelines/styles/colors#typography-and-iconography-colors) and the sort icon will represent the direction of the sort. Subsequent clicks on the sortable column header will toggle the direction of the sort.
 
 ### When to use
 The default sort order for a table should support the primary use case for the application. All columns in a table do not require sort functionality. That is, you can disable the header sort function on some columns and enable it on others.
@@ -152,13 +160,16 @@ If a table contains these two attributes: (System Name | Last Sync) you may want
 If a table contains these three attributes: (System Name | Last Sync | Severity) you may want to show the system with the highest Severity because that is the system the user should tend to first.
 
 ## When to use compact vs. basic spacing
+Whether to use a table/data list with compact or basic spacing is up to you and your use case. However, here is some guidance for when to use which option. You can see examples of each option for comparison. 
 
-<img src="./img/compact-vs-basic-spacing.png"  alt="Compact vs. basic spacing"  width="1237"/> 
+<img src="./img/compact-spacing.png"  alt="Compact spacing"  width="1190"/> 
 
 Use compact spacing when:
 * You need to show as much data as possible on one page.
 * You need to show data in a small space. For example in modal or wizard.
 * You need to minimize paging.
+
+<img src="./img/basic-spacing.png"  alt="Basic spacing"  width="1190"/> 
 
 Use basic spacing when:
 * You don’t have to display a lot of data on one page.
@@ -170,7 +181,7 @@ The PatternFly 4 table is designed to be fully responsive. When columns no longe
 <img src="./img/Mobile-data-table-example.png"  alt="Mobile data table"  width="375"/> 
 
 ## Using lists and tables in a page
-Lists or a tables should be placed in the body of a page. The width should be set by the containing element.
+Lists and tables should be placed in the body of a page. The width should be set by the containing element.
 
 <img src="./img/data-table-example.png"  alt="Compact data table example"  width="1501"/> 
 
