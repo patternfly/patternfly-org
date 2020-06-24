@@ -1,50 +1,44 @@
 ---
-title: Embedded assistance
+title: On-screen help
 section: usage and behavior
 hideTOC: true
 showTitle: true
 ---
 
-Use embedded assistance to provide additional help for users in context. Embedded assistance should be provided in a way that enables the user to find the information they need at the moment they need it while completing a particular step or task.
+Use on-screen help to provide additional assistance for users in context. On-screen help should be provided in a way that enables the user to find the information they need at the moment they need it, while completing a particular step or task.
 
 ## Principles
 **Use thoughtfully and sparingly**
 
-Never use embedded assistance as a substitute for usable and intuitive design.
-Embedded assistance should work to support and augment good user experience design.
+Never use on-screen help as a substitute for usable and intuitive design. On-screen help should work to support good user experience design.
 
 **Assume intermediate proficiency**
 
-Assume that the bulk of a users’ time in an application will be spent at a level of competency or proficiency rather than expert or novice.
-* Aim to defer novice information and reduce expert-level complexity.
+Assume the user has an intermediate level of proficiency in using your application.  As such, avoid making assistance too novice level or too reliant upon expert-level knowledge.
 
 **Keep your content hierarchy in mind**
 
-Plan content hierarchy to provide the right content in the right place at the right time. You can think about content hierarchy in three levels:
-* Level 1: critical information a user must have in order to complete a main task. Level 1 information should be available persistently with titles, headers, inline descriptions, and labels.
-* Level 2:  information that supports users with additional context as they complete their tasks. This information is nice to have, but not critical to task completion and likely only needed by a subset of users. Level 2 content can be provided using progressive disclosure methods like popovers, popover hints, or tooltips.
-* Level 3:  information that enables users to find and access external resources like support or documentation.
+Plan your content hierarchy to provide the right content in the right place at the right time. You can think about content hierarchy in three levels:
 
-**Don’t forget the docs**
-
-Always provide a way for users to access the full set of documentation for your user interface.
-* Links to full documentation should always open in a new tab or window
-* Links to doc should be provided in the application masthead. In cases where the global product masthead is not suitable for a doc set (ie, for a platform containing multiple application bundles that don’t share a single doc set), doc links can be provided in the navigation.
+* **Level 1: critical information a user must have in order to complete a main task.** This information should be available persistently through titles, headers, inline descriptions, and labels.
+* **Level 2: information that supports users with additional context as they complete their tasks.** This information is nice to have, but not critical to task completion and is likely needed by just a subset of users. Provide Level 2 content using progressive disclosure methods like popovers or tooltips.
+* **Level 3: information that enables users to find and access external resources like support or documentation.**
 
 
-## Forms of embedded assistance and how to use them
-![Forms of embedded assistance](./img/ea-forms.png)
+## Forms of on-screen help and how to use them
+
+<img src="./img/help-elements.png" alt="Example of on-screen help"  width=“990”/>
+
 
 1. [Persistent text](#persistent-text)
 2. [Hints](#hints)
-3. [Popover hints](#popover-hints)
-4. [Popovers](#popovers)
+3. [Popovers](#popovers)
 5. [Tooltips](#tooltips)
 
 ### Persistent text
 Persistently available text like titles, headers, descriptions, and labels enables the user to understand where they are, what they are doing, and what they need to do to use the interface and complete their task.
 
-![Persistent text](./img/persistent-text.png)
+<img src="./img/persistent-text.png" alt="Image of highlighted examples of persistent text on a page"  width=“990”/>
 
 **Usage**
 
@@ -61,61 +55,91 @@ When crafting persistent text, target users with an intermediate level of profic
 ### Hints
 Hints provide a one-step reminder, explanation, or call to action for a page or modal.
 
-![Hints](./img/hint.png)
+<img src="./img/hints.png" alt="Example of a hint in a full-page"  width=“990”/>
 
 **Usage**
 
-A hint should be used to provide information that can help the user understand an interaction or prerequisite step that needs to be performed and might not be obvious, or to help the user get more out of the interface.
-
-### Popover hints
-Popover hints offer another method to provide contextual help where the user needs it. Hints anticipate and answer a question for the user.
-
-![Popover hints](./img/popover-hint.png)
-
-**Usage**
-
-Use popover hints when there is no obvious UI element to add an information icon to. For example, you may want to address a common question users have regarding an entire page or table.
-
-Hint text should adopt link button styling and always be preceded by an information icon. Clicking on the link text should trigger a popover that provides an answer to the question being posed in the hint text.
-
+Use hints to help the user get more out of the interface. Hints can provide information about an interaction or prerequisite step that might not be obvious otherwise. 
 
 ### Popovers
 Popovers provide helpful contextual information at the moment users need it.
 
-![Popovers](./img/popover.png)
+<img src="./img/popovers-1.png" alt="Example of popover in a form" width=“990”/>
 
 **Usage**
 
-Use popovers to anticipate and answer questions for the user, help explain unfamiliar terms, or provide context around a task.
+Use popovers to anticipate and answer questions for the user, help explain unfamiliar terms, or provide context around a task. You may also link to further information inside a popover.
 
-Always use a popover with an information icon when using the pattern to define a term or explain a concept.
+Always use a question-circle icon when using the popover pattern to define a term or explain a concept. When in the UI, the default icon color is grey. Once the user hovers or clicks over the icon to open the popover, the icon turns black.
 
-Popovers are triggered on a click and dismissed in one of the following ways:
+<img src="./img/popovers-colors.png" alt="Popover icon colors depending on state"  width=“481”/>
+
+You may also use popovers with link text. For example, when there is no obvious UI element to add a popover to, you may pose a question, preceded with a question-circle icon to alert the user that they can find more information by clicking on it. 
+
+Popover text should adopt link button styling and always be preceded by a question-circle icon, which should be blue, following the link button styling. Clicking on the link text should trigger a popover that provides an answer to the question posed in the hint text.
+
+<img src="./img/popovers-2.png" alt="Popover link text in UI"  width=“990”/>
+
+Popovers are triggered by a click and dismissed in one of the following ways:
+
 * The user clicks the exit icon
 * The user clicks an action button inside the popover
 * The user clicks anywhere on the screen outside the popover
 
 Never hide critical information in a popover. Critical information is any information the user *must have and will always need* in order to complete a task.
 
-**Examples**
+**Common use cases**
 * On form field labels
 * On titles, headers, other kinds of labels
+* In a table column header
 
 
 ### Tooltips
 Use tooltips to define new or unfamiliar UI elements that aren’t described directly in the user interface, or to get additional data from a data point or element in a chart or table.
 
-![Tooltips](./img/tooltip.png)
+<img src="./img/tooltips.png" alt="Example of tooltip in a table"  width=“990”/>
 
 **Usage**
 
-* Tooltips should provide new and valuable information. Never use a tooltip to repeat information that is already available in the UI.
-* Don’t use tooltips with information icons to present contextual information in forms and other areas. Instead, use a popover.
+* Tooltips should provide new and valuable information. Never use a tooltip to repeat information already available in the UI.
+* Don’t use tooltips with question-circle icons to present contextual information in forms and other areas. Instead, use a popover.
 
-**Examples**
-* Icon tooltips
-* Chart tooltips
+**Common use cases**
 
+* On icons
+* In charts
+
+**Guidelines**
+
+* Keep your tooltips clear and concise. Use the fewest number of words you can without sacrificing meaning.
+* If the tooltip is a full sentence, end it with a period.
+* If information is needed for a user to complete a task (like a password character requirement), don’t hide it in a tooltip. Display it on the page instead.
+
+**Accessibility**
+
+Every time a user with a screen reader tabs into a field with a tooltip, the tooltip will be read out to them. 
+
+**When to use a tooltip versus a popover**
+
+Both tooltips and popovers allow users to get more information in context. However, they differ in two ways:
+ 
+ 1. Tooltips are used for identification purposes, while popovers are used for added description or information in context. 
+ 2. Tooltips appear on hover, while popovers appear on click
+
+**Use tooltips for:**
+
+* Short descriptions of an item or to identify an item, like an icon button
+* Content that is no longer than 1 or 2 lines
+
+<img src="./img/use-tooltips.png" alt="Examples of tooltip use"  width=“990”/>
+
+**Use popovers for:**
+
+* Longer descriptions
+* Formatted text
+* When you would like your in-context help to include pictures, actions, or links
+
+<img src="./img/use-popovers.png" alt="Examples of popover use"  width=“990”/>
 
 ## Related components and demos
 **HTML/CSS**
