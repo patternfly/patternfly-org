@@ -27,7 +27,9 @@ Plan your content hierarchy to provide the right content in the right place at t
 
 ## Forms of on-screen help and how to use them
 
+
 <img src="./img/help-elements.png" alt="Example of on-screen help"  width="990"/>
+
 
 1. [Persistent text](#persistent-text)
 2. [Hints](#hints)
@@ -38,6 +40,7 @@ Plan your content hierarchy to provide the right content in the right place at t
 Persistently available text like titles, headers, descriptions, and labels enables the user to understand where they are, what they are doing, and what they need to do to use the interface and complete their task.
 
 <img src="./img/persistent-text.png" alt="Image of highlighted examples of persistent text on a page"  width="990"/>
+
 
 **Usage**
 
@@ -56,11 +59,13 @@ Hints provide a one-step reminder, explanation, or call to action for a page or 
 
 <img src="./img/hints.png" alt="Example of a hint in a full-page"  width="990"/>
 
+
 **Usage**
 
 Use hints to help the user get more out of the interface. Hints can provide information about an interaction or prerequisite step that might not be obvious otherwise. 
 
 ### Popovers
+
 Popovers provide helpful contextual information at the moment users need it.
 
 <img src="./img/popovers-1.png" alt="Example of popover in a form" width="990"/>
@@ -78,6 +83,7 @@ You may also use popovers with link text. For example, when there is no obvious 
 Popover text should adopt link button styling and always be preceded by a question-circle icon, which should be blue, following the link button styling. Clicking on the link text should trigger a popover that provides an answer to the question posed in the hint text.
 
 <img src="./img/popovers-2.png" alt="Popover link text in UI"  width="990"/>
+
 
 Popovers are triggered by a click and dismissed in one of the following ways:
 
@@ -98,18 +104,16 @@ Use tooltips to define new or unfamiliar UI elements that aren’t described dir
 
 <img src="./img/tooltips.png" alt="Example of tooltip in a table"  width="990"/>
 
-**Usage**
 
+**Usage**
 * Tooltips should provide new and valuable information. Never use a tooltip to repeat information already available in the UI.
 * Don’t use tooltips with question-circle icons to present contextual information in forms and other areas. Instead, use a popover.
 
 **Common use cases**
-
 * On icons
 * In charts
 
 **Guidelines**
-
 * Keep your tooltips clear and concise. Use the fewest number of words you can without sacrificing meaning.
 * If the tooltip is a full sentence, end it with a period.
 * If information is needed for a user to complete a task (like a password character requirement), don’t hide it in a tooltip. Display it on the page instead.
@@ -118,7 +122,7 @@ Use tooltips to define new or unfamiliar UI elements that aren’t described dir
 
 Every time a user with a screen reader tabs into a field with a tooltip, the tooltip will be read out to them. 
 
-**When to use a tooltip versus a popover**
+### When to use a tooltip versus a popover**
 
 Both tooltips and popovers allow users to get more information in context. However, they differ in two ways:
  
@@ -126,7 +130,6 @@ Both tooltips and popovers allow users to get more information in context. Howev
  2. Tooltips appear on hover, while popovers appear on click
 
 **Use tooltips for:**
-
 * Short descriptions of an item or to identify an item, like an icon button
 * Content that is no longer than 1 or 2 lines
 
