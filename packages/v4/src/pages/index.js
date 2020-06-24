@@ -28,20 +28,20 @@ const patternFlyPrinciples = 'Flyer fundamentals';
 
 const IndexPage = ({ location }) => {
   return (
-  <SideNavLayout location={location} hideSideNav showGdprBanner={false} showBanner={true}>
+  <SideNavLayout location={location} hideSideNav showGdprBanner={true} showBanner={true}>
     <PageSection
       variant={PageSectionVariants.light}
-      className="pf4-c-background-image pf-u-display-flex pf-u-justify-content-center pf-u-align-items-center ws-homepage-main-section"
+      className="pf4-c-background-image ws-homepage-main-section"
     >
       <Grid>
         <GridItem sm={12} md={8} mdOffset={2} lg={6} lgOffset={3} className="pf-u-py-2xl pf-u-text-align-center">
           <TextContent>
             <img src={orb} alt="PatternFly logo" className="fadeInDown animated fadeInOne" />
             <Title headingLevel="h1" size="4xl" className="pf-m-white pf4-site-c-hero fadeIn animated fadeInTwo">
-              Build scalable experiences in the open.
+              Build scalable experiences in the&nbsp;open.
             </Title>
             <Title size="xl" headingLevel="h2" className="pf-m-white pf-u-mb-md pf-u-mb-3xl-on-md fadeInUp animated fadeInThree">
-              PatternFly is an open source design system built to drive consistency and unify teams.
+              PatternFly is an open source design system built to drive consistency and&nbsp;unify&nbsp;teams.
             </Title>
             <div className="pf-u-display-flex pf-u-justify-content-center pf-u-flex-direction-column pf-u-flex-direction-row-on-md">
               <Link

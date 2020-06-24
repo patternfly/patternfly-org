@@ -81,16 +81,16 @@ export const styleProps = {
 export const TypographyGrid = ({title, note, symbol, fontWeight, fontWeightText, fontSize, variableName, lineHeight, fontFamily}) => (
   <React.Fragment>
     <h3 className="ws-title">{title} {symbol && <span className="ws-typography-gridTitleSymbol">{symbol}</span>}</h3>
-    <PfStyledText fontFamily={fontFamily} fontWeight={fontWeight} fontSize={variableName} lineHeight={lineHeight}>
+    <PfStyledText fontFamily={fontFamily} fontWeight={fontWeight} variableName={variableName} lineHeight={lineHeight}>
       Design is where science and art break even.
     </PfStyledText>
     <Grid gutter="sm">
       <GridItem span={12}>
         <table className="pf-c-table pf-m-compact ws-typography-tableTypography" aria-label="typography usage guidelines breakout">
           <tbody>
-            <tr>
-              <td className="pf-u-pr-sm">Font family:</td>
-              <td>{fontFamily}</td>
+            <tr>	
+              <td className="pf-u-pr-sm">Font family:</td>	
+              <td>{fontFamily}</td>	
             </tr>
             <tr>
               <td>Font weight:</td>
