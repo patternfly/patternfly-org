@@ -71,7 +71,7 @@ Use popovers to anticipate and answer questions for the user, help explain unfam
 
 Always use a question-circle icon when using the popover pattern to define a term or explain a concept. When in the UI, the default icon color is grey. Once the user hovers or clicks over the icon to open the popover, the icon turns black.
 
-<img src="./img/popovers-colors.png" alt="Popover icon colors depending on state"  width="481">
+<img src="./img/popovers-colors.png" alt="Popover icon colors depending on state"  width="481"/>
 
 You may also use popovers with link text. For example, when there is no obvious UI element to add a popover to, you may pose a question, preceded with a question-circle icon to alert the user that they can find more information by clicking on it. 
 
