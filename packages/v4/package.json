@@ -1,7 +1,7 @@
 {
   "name": "patternfly-org-4",
   "private": true,
-  "version": "4.0.35",
+  "version": "4.0.36",
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
@@ -24,7 +24,7 @@
     "gatsby-source-filesystem": "^2.2.1",
     "gatsby-theme-patternfly-org": "^4.0.20",
     "gatsby-transformer-json": "^2.3.0",
-    "gatsby-transformer-react-docgen-typescript": "^4.0.4",
+    "gatsby-transformer-react-docgen-typescript": "^4.0.5",
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   },
