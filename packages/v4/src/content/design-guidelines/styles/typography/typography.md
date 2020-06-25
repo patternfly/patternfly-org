@@ -31,7 +31,7 @@ Use our typographic styles to communicate visual hierarchy. A consistent and log
 <TitleLevel
   asGrid
   title="Body*"
-  note="*Some components use RedHatText at 700 font weight, which is RedHatText Medium (i.e. alerts, navigation)"
+  note="*Some components use RedHatText at 700 font weight, which is RedHatText Medium (e.g. alerts, navigation)"
   styleProps = {styleProps.body} />
 <TitleLevel asGrid title="Small text" styleProps = {styleProps.small} />
 <TitleLevel 
