@@ -139,7 +139,7 @@ Both tooltips and popovers allow users to get more information in context. Howev
 
 * Longer descriptions
 * Formatted text
-* When you would like your in-context help to include pictures, actions, or links
+* When you would like your in-context help to include pictures, actions, or links. 
 
 <img src="./img/use-popovers.png" alt="Examples of popover use"  width="990"/>
 
