@@ -122,7 +122,7 @@ Use tooltips to define new or unfamiliar UI elements that aren’t described dir
 
 Every time a user with a screen reader tabs into a field with a tooltip, the tooltip will be read out to them. 
 
-### When to use a tooltip versus a popover**
+### When to use a tooltip versus a popover
 
 Both tooltips and popovers allow users to get more information in context. However, they differ in two ways:
  
@@ -139,7 +139,7 @@ Both tooltips and popovers allow users to get more information in context. Howev
 
 * Longer descriptions
 * Formatted text
-* When you would like your in-context help to include pictures, actions, or links. 
+* When you would like your in-context help to include pictures, actions, or links 
 
 <img src="./img/use-popovers.png" alt="Examples of popover use"  width="990"/>
 
