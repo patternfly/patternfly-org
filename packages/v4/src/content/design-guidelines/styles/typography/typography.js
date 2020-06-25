@@ -45,8 +45,8 @@ export const styleProps = {
     fontFamily: "RedHatDisplay"
   },
   fourth: {
-    fontWeight: "700",
-    fontWeightText: "700 (bold)",
+    fontWeight: "400",
+    fontWeightText: "400 (medium)",
     fontSize: "16px",
     variableName: "--pf-global--FontSize--md",
     lineHeight: "1.5",
