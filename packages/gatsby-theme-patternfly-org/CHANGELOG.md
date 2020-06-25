@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.20](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.19...gatsby-theme-patternfly-org@4.0.20) (2020-06-25)
+
+
+### Bug Fixes
+
+* **docs:** removed Opt-in section on Red Hat font pages ([a8b8396](https://github.com/patternfly/patternfly-org/commit/a8b8396a5d215c65c857a34de9df2b05958653a8))
+
+
+
+
+
 ## [4.0.19](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.18...gatsby-theme-patternfly-org@4.0.19) (2020-06-24)
 
 **Note:** Version bump only for package gatsby-theme-patternfly-org
