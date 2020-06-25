@@ -153,12 +153,11 @@ async function onCreateNode({ node, actions, loadNodeContent, createNodeId, crea
 
   const sourceText = await loadNodeContent(node);
   const componentMeta = getComponentMetadata(node, sourceText);
-  const interfaceMeta = getInterfaceMetadata(node, sourceText);
+  const interfaceMeta = isTSX(node) ? getInterfaceMetadata(node, sourceText) : [];
 
   componentMeta
     .concat(interfaceMeta) 
     .forEach(parsed => {
-      // TODO: add an interface as a `propComponent` in an MD file
       const metadataNode = {
         name: parsed.displayName,
         relativePath: node.relativePath,
