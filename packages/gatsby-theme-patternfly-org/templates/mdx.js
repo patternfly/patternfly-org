@@ -6,7 +6,7 @@ import {
   Alert,
   Badge,
   Card,
-  CardHeader,
+  CardTitle,
   CardBody,
   Grid,
   GridItem,
@@ -150,18 +150,18 @@ const MDXTemplate = ({ data, location, pageContext }) => {
                   return releaseTitle && (
                     <GridItem sm={6} md={4} key={version.name}>
                       <Card>
-                        <CardHeader>
+                        <CardTitle>
                           {releaseTitle && (
-                            <a key={version.name} href={`#${slugger(releaseTitle)}`}>
-                              <Title size="2xl" headingLevel="h2" >
+                            <Title size="2xl" headingLevel="h2" >
+                              <a key={version.name} href={`#${slugger(releaseTitle)}`}>
                                 Release {version.name}
-                              </Title>
-                            </a>
+                              </a>
+                            </Title>
                           )}
                           {version.latest && (
                             <Badge>Latest</Badge>
                           )}
-                        </CardHeader>
+                        </CardTitle>
                         <CardBody>
                           Released on {releaseDate}.
                         </CardBody>
