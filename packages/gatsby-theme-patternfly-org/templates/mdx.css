@@ -48,6 +48,7 @@ p ~ .ws-toc {
 
 .ws-release-notes-toc .pf-c-card__header .pf-c-badge {
   vertical-align: middle;
+  line-height: var(--pf-global--LineHeight--md);
 }
 
 .ws-release-notes-toc .pf-c-card__body {
