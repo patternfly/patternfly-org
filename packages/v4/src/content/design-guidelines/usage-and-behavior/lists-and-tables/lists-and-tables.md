@@ -17,7 +17,7 @@ Use [tables](#tables) when:
 * You want column headers.
 
 ## Data lists
-PatterFly supports two main types of data lists
+PatterFly supports two main types of data lists:
 
 1. **[Compact data list](#compact-data-list)**
 2. **[Basic data list](#basic-data-list)**
@@ -45,10 +45,13 @@ Every [compact or basic data list](#when-to-use-compact-vs-basic-spacing) can be
 3. **Inline actions:** These actions apply only to the current row/item.
 
 #### When to use
-Use a data list when the information you want to display is not easily structured into a tabular format, you want a more flexible layout within rows, or you plan to embed rich content like a chart or an image into a row.
+Use a data list when:
+* The information you want to display is not easily structured into a tabular format.
+* You want a more flexible layout within rows.
+* You plan to embed rich content like a chart or an image into a row.
 
 #### When not to use
-The data list is not recommended for displaying content that is better presented in tabular format with well defined columns and headings. Instead, use a table.
+The data list is not recommended for displaying content that is better presented in tabular format with well defined columns and headings. Instead, use a [table](#tables).
 
 ### Basic data list
 The example shows a data list with a [basic spacing](#when-to-use-compact-vs-basic-spacing) around the data. 
@@ -81,10 +84,12 @@ The expandable list adds an expansion panel to every row to reveal more details 
 2. **Expansion panel:** A container that is revealed when the expansion is open. It can accept any supported layout to present additional content to the user.
 
 #### When to use
-Use an expandable data list when you have more information than will comfortably fit inside a row, or you want to provide a way for advanced users to access information that is not applicable to all users.
+Use an expandable data list when:
+* You have more information than will comfortably fit inside a row.
+* You want to provide a way for advanced users to access information that is not applicable to all users.
 
 ## Tables
-PatterFly supports two main types of tables 
+PatterFly supports two main types of tables: 
 
 1. **[Compact table](#compact-table)**
 2. **[Basic table](#basic-table)**
@@ -119,7 +124,7 @@ Use a [compact table](#compact-table) when you want to show as much data per pag
 <img src="./img/basic-data-table.png"  alt="Basic table"  width="1241"/> 
 
 #### When to use
-Use a basic table when the information you want to display fits into a structured, tabular format (i.e. has distinct rows and columns).
+Use a basic table when the information you want to display fits into a structured, tabular format (in other words, has distinct rows and columns).
 
 #### When not to use
 Do not use for less structured or variably structured data that cannot be easily organized into columns. In these situations, use a [data list](#data-lists).
@@ -133,7 +138,9 @@ Do not use for less structured or variably structured data that cannot be easily
 2. **Expansion panel:** Contains details associated with a row
 
 #### When to use
-Use when you have more information than will comfortably fit inside a row or you want to provide a way for advanced users to access information that is not applicable to all users.
+Use expandable table rows when: 
+* You have more information than will comfortably fit inside a row. 
+* You want to provide a way for advanced users to access information that is not applicable to all users.
 
 ### Compound-expandable table
 
@@ -143,10 +150,13 @@ Use when you have more information than will comfortably fit inside a row or you
 2. **Expansion panel:** Contains details associated with an expandable item.
 
 #### When to use
-Use a compound expandable list when you want multiple expansion panels that relate to specific table columns where it would not make sense to combine all of this information into a single, simple expansion.
+Use a compound expandable table when:
+* You want multiple expansion panels that relate to specific table columns. 
+* It would not make sense to combine all of this information into a single, simple expansion.
+
 
 ## Sorting by columns
-Sorting by columns is possible for any table variation. Enabling the component within a table eases the ability to scan and read through the content. This option is favored over adding sorting functionality to the toolbar.
+Sorting by columns is possible for any table variation. Enabling the component within a table eases the ability to scan and read through the content. This option is favored over adding sorting functionality to the [toolbar](/design-guidelines/usage-and-behavior/toolbar).
 
 <img src="./img/sortable-data-table.png"  alt="Sortable table"  width="1161"/> 
 
@@ -159,7 +169,6 @@ The default sort order for a table should support the primary use case for the a
 
 ### Example
 If a table contains these two attributes: (System Name | Last Sync) you may want to show the most recently synced system at the top of the table (in other words, it is the default sort column), because a primary use case for this table is verifying that you have successfully connected or troubleshot the system’s connection to Cloud Services.
-
 
 If a table contains these three attributes: (System Name | Last Sync | Severity) you may want to show the system with the highest Severity because that is the system the user should tend to first.
 
