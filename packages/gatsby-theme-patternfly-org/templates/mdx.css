@@ -34,11 +34,6 @@ p ~ .ws-toc {
 }
 
 .ws-release-notes-toc .pf-c-card__header {
-  color: #0066CC;
-  font-family: RedHatDisplay;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 32px;
   padding-bottom: 4px;
 }
 
@@ -49,6 +44,8 @@ p ~ .ws-toc {
 .ws-release-notes-toc .pf-c-card__header .pf-c-badge {
   vertical-align: middle;
   line-height: var(--pf-global--LineHeight--md);
+  font-family: var(--pf-global--FontFamily--sans-serif);
+  flex-shrink: 0;
 }
 
 .ws-release-notes-toc .pf-c-card__body {

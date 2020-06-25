@@ -153,7 +153,9 @@ const MDXTemplate = ({ data, location, pageContext }) => {
                         <CardHeader>
                           {releaseTitle && (
                             <a key={version.name} href={`#${slugger(releaseTitle)}`}>
-                              Release {version.name}
+                              <Title size="2xl" headingLevel="h2" >
+                                Release {version.name}
+                              </Title>
                             </a>
                           )}
                           {version.latest && (
