@@ -81,8 +81,7 @@ export class CSSVariables extends React.Component {
         return val;
       });
 
-      console.log('applicableFiles', applicableFiles)
-      this.flatList = flattenList(applicableFiles);
+    this.flatList = flattenList(applicableFiles);
 
     this.columns = [
       ...props.hideSelectorColumn ? [] : [{
