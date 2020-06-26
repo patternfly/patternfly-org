@@ -104,9 +104,9 @@ See our [content guidelines](/design-guidelines/content/writing) for additional 
 
 | Icon | Use case(s) | Usage |
 | ------------- |-------------|-------------|
-| <span color: rgb(240, 171, 0)> <i class="fas fa-exclamation-triangle" aria-label="warning"></i> </span> | **Warning:** Caution/ Warning | Use on confirmation dialogs or passive dialogs to indicate a higher level of urgency and importance.|
-| <span color: rgb(201, 25, 11)> <i class="fas fa-exclamation-circle" aria-label="critical warning"></i> </span> | **Critical Warning:** Information will be deleted/permanent action  | Use on confirmation dialogs or passive dialogs to indicate the highest level of urgency and importance. |
-| <span color: rgb(43, 154, 243)> <i class="fas fa-info-circle" aria-label="acknowledgement"></i> </span> | **Acknowledgement:** Inform the user of an action or result  | Use on confirmation or passive dialogs to indicate a lower level of urgency. |
+| <span style="color: rgb(240, 171, 0)"> <i class="fas fa-exclamation-triangle" aria-label="warning" /> </span> | **Warning:** Caution/ Warning | Use on confirmation dialogs or passive dialogs to indicate a higher level of urgency and importance.|
+| <span style="color: rgb(201, 25, 11)"> <i class="fas fa-exclamation-circle" aria-label="critical warning" /> </span> | **Critical Warning:** Information will be deleted/permanent action  | Use on confirmation dialogs or passive dialogs to indicate the highest level of urgency and importance. |
+| <span style="color: rgb(43, 154, 243)"> <i class="fas fa-info-circle" aria-label="acknowledgement" /> </span> | **Acknowledgement:** Inform the user of an action or result  | Use on confirmation or passive dialogs to indicate a lower level of urgency. |
 
 ## Components and demos used
 The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use cases. We’ll explore several examples in this documentation.
