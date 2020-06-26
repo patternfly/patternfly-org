@@ -56,10 +56,7 @@ export const SideNav = ({
     ? { core: 'HTML', react: 'React'}
     : {};
   const dropdownToggle = (
-    <DropdownToggle
-      onToggle={() => setDropdownOpen(!isDropdownOpen)}
-      iconComponent={CaretDownIcon}
-      >
+    <DropdownToggle onToggle={() => setDropdownOpen(!isDropdownOpen)}>
       {contextSwitcher[context]}
     </DropdownToggle>
   );

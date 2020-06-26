@@ -48,11 +48,11 @@ const flattenList = files => {
   let list = [];
   files.forEach(file => {
     Object.entries(file).forEach(([selector, values]) => {
-      Object.values(values).forEach(val => {
+      Object.entries(values).forEach(([key, val]) => {
         list.push({
           selector,
           property: val.name,
-          token: val.token,
+          token: key,
           value: val.value,
           values: val.values
         });
@@ -81,7 +81,8 @@ export class CSSVariables extends React.Component {
         return val;
       });
 
-    this.flatList = flattenList(applicableFiles);
+      console.log('applicableFiles', applicableFiles)
+      this.flatList = flattenList(applicableFiles);
 
     this.columns = [
       ...props.hideSelectorColumn ? [] : [{
