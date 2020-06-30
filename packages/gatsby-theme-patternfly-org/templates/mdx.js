@@ -42,6 +42,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
   }
   const { cssPrefix, hideTOC, beta, katacodaBroken, optIn, hideDarkMode, showTitle, releaseNoteTOC, hideSource } = data.doc.frontmatter;
   const { componentName, navSection } = data.doc.fields;
+  console.log(componentName, navSection, data, location, pageContext);
   const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner, showGdprBanner, showFooter, sourceLink } = pageContext;
   const props = data.props && data.props.nodes && propComponents
     ? propComponents

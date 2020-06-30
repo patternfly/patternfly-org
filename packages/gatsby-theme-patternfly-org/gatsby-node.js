@@ -197,9 +197,25 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
       component: path.resolve(__dirname, './pages/404.js')
     });
     // Create our per-MDX file pages
-    result.data.docs.nodes
-      .concat(result.data.pages.nodes)
-      .filter(node => !hiddenTitles.includes(node.fields.title.toLowerCase()))
+    Object.entries(
+      
+      result.data.docs.nodes
+        .concat(result.data.pages.nodes)
+        .filter(node => !hiddenTitles.includes(node.fields.title.toLowerCase()))
+
+        .reduce((acc, cur) => {
+          if (!acc[cur.fields.navSection]) {
+            acc[cur.fields.navSection] = {};
+          }
+          if (!acc[cur.fields.navSection][cur.fields.componentName]) {
+            acc[cur.fields.navSection][cur.fields.componentName] = [];
+          }
+          acc[cur.fields.navSection][cur.fields.componentName].push(cur);
+          console.log(acc);
+          return acc;
+        }, {})
+    )
+
       .forEach(node => {
         const { componentName, slug, navSection = null, title, source, propComponents = [''], wrapperTag } = node.fields;
         const fileRelativePath = path.relative(__dirname, node.absolutePath || node.fileAbsolutePath);
