@@ -22,7 +22,7 @@ Use [tables](#tables) when:
 Think of each row in a data list as a container for some formatted content. In PatternFly 4, data list rows can accept any [layout](/documentation/react/layouts/bullseye) supported by the design system as long as all rows apply the same layout. Here are some common layouts that may be useful in a data list:
 
 * **[Grid](/documentation/react/layouts/grid):** When you want to display content in a responsive grid.
-* **[Level](/documentation/react/layouts/level):** When you want to justify content evenly over the width of the row.
+* **[Level](/documentation/react/layouts/level):** When you want to justify content evenly over the width of the row. It also vertically aligns items in the center of the row.
 * **[Split](/documentation/react/layouts/split):** When you want to distribute content evenly with a main content area in the center.
 * **[Flex](/documentation/react/layouts/flex#component-title):** When you want a custom layout and more control over the alignment and spacing provided in the other layouts.
 
