@@ -142,14 +142,14 @@ The toolbar adapts to smaller viewport sizes by collapsing or hiding elements th
 
 ## Related components and demos
 **Core HTML/CSS**
-* <a href="https://www.patternfly.org/v4/documentation/core/components/datatoolbar#component-title">Data Toolbar (beta)</a>
-* [Overflow menu (beta)](/documentation/core/components/overflowmenu#component-title)
+* [Data Toolbar (beta)](/documentation/core/components/datatoolbar/#component-title)
+* [Overflow menu (beta)](/documentation/core/components/overflowmenu/#component-title)
 * [Chip](/documentation/core/components/chip)
 * [Chip group](/documentation/core/components/chipgroup)
 * [Pagination](/documentation/core/components/pagination)
 
 **React**
-* <a href="https://www.patternfly.org/v4/documentation/react/components/datatoolbar#component-title">Data Toolbar (beta)</a>
-* [Overflow menu (beta)](/documentation/react/components/overflowmenu#component-title)
+* [Data Toolbar (beta)](/documentation/react/components/datatoolbar/#component-title)
+* [Overflow menu (beta)](/documentation/react/components/overflowmenu/#component-title)
 * [Chip group](/documentation/react/components/chipgroup)
 * [Pagination](/documentation/react/components/pagination)

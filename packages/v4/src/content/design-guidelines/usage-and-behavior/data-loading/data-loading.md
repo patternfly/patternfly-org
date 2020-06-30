@@ -45,4 +45,4 @@ Spinners are centered within the container AND the viewport by default in all us
 * [Spinner](/documentation/core/components/spinner#component-title)
 
 **React**
-* [Spinner](/documentation/react/components/spinner#component-title)
+* [Spinner](/documentation/react/components/spinner/#component-title)

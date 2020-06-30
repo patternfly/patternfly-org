@@ -92,7 +92,7 @@ import './icons.css';
 <Divider className="ws-icons-divider" />
 
 ## Icon colors
-Visit our [colors page](/design-guidelines/styles/colors) to learn more about icon colors.
+Visit our <a href="https://www.patternfly.org/v4/design-guidelines/styles/colors">colors page</a> to learn more about icon colors.
 
 <Divider className="ws-icons-divider" />
 
