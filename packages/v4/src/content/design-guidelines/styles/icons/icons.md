@@ -19,7 +19,7 @@ import './icons.css';
 
 <Divider className="ws-icons-divider" />
 
-<p class="ws-icons-page">If you're a developer, check out our [getting started](/get-started/developers#using-styles) page to learn more about how to get and use our icon set.</p>
+<p class="ws-icons-page">If you're a developer, check out our <a href="https://www.patternfly.org/v4/get-started/developers#using-styles">getting started</a> page to learn more about how to get and use our icon set.</p>
 
 ## Icon sizes
 <Grid gutter="md">
@@ -84,7 +84,7 @@ import './icons.css';
     </Card>
   </GridItem>
   <GridItem xl={6} lg={12} className="ws-icons-gridtext ws-icons-alignment-section">
-    No matter the size of the icon, when icons are next to text, they should be center-aligned horizontally. An example of this alignment in a component is a [link button](/design-guidelines/usage-and-behavior/buttons-and-links#link-button). If icons are stacked, they should also be center-aligned vertically.
+    No matter the size of the icon, when icons are next to text, they should be center-aligned horizontally. An example of this alignment in a component is a <a href="https://www.patternfly.org/v4/design-guidelines/usage-and-behavior/buttons-and-links#link-button">link button</a>. If icons are stacked, they should also be center-aligned vertically.
     <div><img src="icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" /></div>
   </GridItem>
 </Grid>
@@ -107,7 +107,7 @@ If you’re looking to copy HTML for an icon:<br/>
 Use this for 'pficon' icons: `<i className="pf-icon [insert-icon-name]"></i>`<br />
 Use this for 'fa' solid icons: `<i className="fas [insert-icon-name]"></i>`<br />
 Use this for 'fa' regular icons: `<i className="far [insert-icon-name]"></i>`<br />
-<small>Note: Be sure to read [how to get started with icons](/get-started/developers#using-styles) when using 'fa' regular icons</small>
+<small>Note: Be sure to read <a href="https://www.patternfly.org/v4/get-started/developers#using-styles">how to get started with icons</a> when using 'fa' regular icons</small>
 
 If you're looking to copy React for an icon:<br />
 Use this for 'pficon' icons: `import { [insert-icon-name] } from '@patternfly/react-icons'`
