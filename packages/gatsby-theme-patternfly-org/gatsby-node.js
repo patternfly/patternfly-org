@@ -31,10 +31,7 @@ const makeSlug = (source, section, componentName) => {
   let url = '';
 
   // We know these belong in the "documentation" section of the site
-  if (['react', 'core',].includes(source)) {
-    url += `/documentation/${source}`;
-  }
-  else if (source === 'shared') {
+  if (['react', 'core', 'shared'].includes(source)) {
     url += '/documentation';
   }
   else if (!source.includes('pages-')) {
@@ -140,6 +137,23 @@ const fullscreenPages = {};
 
 exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
   {
+    components: allMdx(filter: {fields: {source: {in: ["core", "react"]}}}) {
+      group(field: frontmatter___title) {
+        nodes {
+          id
+          fileAbsolutePath
+          mdxAST
+          fields {
+            slug
+            source
+            navSection
+            title
+            propComponents
+            componentName
+          }
+        }
+      }
+    }
     docs: allMdx(filter: { fields: { source: { ne: "design-snippets" } } }) {
       nodes {
         id
@@ -197,25 +211,9 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
       component: path.resolve(__dirname, './pages/404.js')
     });
     // Create our per-MDX file pages
-    Object.entries(
-      
-      result.data.docs.nodes
-        .concat(result.data.pages.nodes)
-        .filter(node => !hiddenTitles.includes(node.fields.title.toLowerCase()))
-
-        .reduce((acc, cur) => {
-          if (!acc[cur.fields.navSection]) {
-            acc[cur.fields.navSection] = {};
-          }
-          if (!acc[cur.fields.navSection][cur.fields.componentName]) {
-            acc[cur.fields.navSection][cur.fields.componentName] = [];
-          }
-          acc[cur.fields.navSection][cur.fields.componentName].push(cur);
-          console.log(acc);
-          return acc;
-        }, {})
-    )
-
+    result.data.docs.nodes
+      .concat(result.data.pages.nodes)
+      .filter(node => !hiddenTitles.includes(node.fields.title.toLowerCase()))
       .forEach(node => {
         const { componentName, slug, navSection = null, title, source, propComponents = [''], wrapperTag } = node.fields;
         const fileRelativePath = path.relative(__dirname, node.absolutePath || node.fileAbsolutePath);
@@ -301,6 +299,12 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
           );
         }
       });
+
+    // results.data.components.groups
+    //   .filter(group => !hiddenTitles.includes(group.nodes[0].fields.title.toLowerCase()))
+    //   .forEach(group => {
+        
+    //   })
   });
 
 // https://www.gatsbyjs.org/docs/schema-customization/
