@@ -61,7 +61,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const source = parent.sourceInstanceName;
     const componentName = path.basename(node.fileAbsolutePath, '.md');
 
-    let { section = 'root', title, propComponents = [''] } = node.frontmatter;
+    let { section = 'root', title, propComponents = [''], wrapperTag = 'main' } = node.frontmatter;
     // Source determines sideNav context and some features like context switcher
     createNodeField({
       node,
@@ -99,6 +99,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       node,
       name: 'propComponents',
       value: propComponents
+    });
+    // Fullscreen pages which have their own `<main>` should NOT be wrapped in another `<main>`
+    createNodeField({
+      node,
+      name: 'wrapperTag',
+      value: wrapperTag
     });
   } else if (node.internal.type === 'File') {
     if (!addedFileFieldsToSchema) {
@@ -145,6 +151,7 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
           title
           propComponents
           componentName
+          wrapperTag
         }
       }
     }
@@ -193,7 +200,7 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
       .concat(result.data.pages.nodes)
       .filter(node => !hiddenTitles.includes(node.fields.title.toLowerCase()))
       .forEach(node => {
-        const { componentName, slug, navSection = null, title, source, propComponents = [''] } = node.fields;
+        const { componentName, slug, navSection = null, title, source, propComponents = [''], wrapperTag } = node.fields;
         const fileRelativePath = path.relative(__dirname, node.absolutePath || node.fileAbsolutePath);
         let sourceLink = 'https://github.com/patternfly/';
         if (source === 'react') {
@@ -264,7 +271,9 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
                 // For page title
                 title: `${source === 'core' ? 'HTML' : 'React'} - ${title} ${key.replace(/-/g, ' ')}`,
                 // The HTML or JSX to render
-                code: example
+                code: example,
+                // The tag to use as a wrapper
+                wrapperTag
               }
             });
           });

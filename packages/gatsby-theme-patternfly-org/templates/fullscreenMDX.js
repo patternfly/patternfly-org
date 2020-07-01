@@ -5,25 +5,24 @@ import { useMDXScope } from 'gatsby-plugin-mdx/context';
 import { transformCode } from '../helpers/transformCode';
 import './fullscreen.css';
 
-const FullscreenWrapper = ({ children }) => (
-  <main className="ws-site-root">
-    {children}
-  </main> 
-);
-
-const FullscreenMDXTemplate = ({ pageContext }) => (
-  <React.Fragment>
-    <Helmet>
-      <title>{pageContext.title}</title>
-    </Helmet>
+const FullscreenMDXTemplate = ({ pageContext }) => {
+  const { wrapperTag: WrapperTag, title, code } = pageContext;
+  return (
     <LiveProvider
       scope={useMDXScope()}
-      code={pageContext.code}
-      transformCode={code => transformCode(code, 'jsx')}
+      code={code}
+      transformCode={c => transformCode(c, 'jsx')}
     >
-      <LivePreview Component={FullscreenWrapper} />
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
+      <LivePreview Component={({ children }) => (
+        <WrapperTag className="ws-site-root">
+          {children}
+        </WrapperTag>
+      )} />
     </LiveProvider>
-  </React.Fragment>
-);
+  );
+}
 
 export default FullscreenMDXTemplate;
