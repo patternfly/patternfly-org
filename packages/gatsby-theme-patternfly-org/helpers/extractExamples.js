@@ -24,21 +24,31 @@ module.exports = {
 
     visit(mdxAST, 'code', node => {
       let id = 'no-id';
+      let wrapperTag;
       if (node.meta) {
         if (node.meta.includes('noLive')) {
           // Don't create fullscreen pages for non-live code
           return;
         }
-        const match = node.meta.match(/title=(\S*)/);
+
+        let match = node.meta.match(/title=(\S*)/);
         if (match) {
           id = getId(match[1]);
         }
+        match = node.meta.match(/wrapperTag=(\S*)/);
+        if (match) {
+          wrapperTag = match[1].toLowerCase();
+        }
       }
+
       if (node.lang === 'hbs') {
         try {
           const html = hbsInstance.compile(node.value)({});
           // Add rendered HTML to make fullscreen page from
-          examples[id] = render(` ${html} `).replace(/\t/g, '  ');
+          examples[id] = {
+            code: render(` ${html} `).replace(/\t/g, '  '),
+            wrapperTag
+          };
         }
         catch(error) {
           console.error(`\x1b[31m${fileName}: ${error} for PatternFly example ${id}\x1b[0m`)
@@ -47,7 +57,10 @@ module.exports = {
       else if (node.lang === 'js') {
         node.lang = 'jsx';
         // Add rendered MDX body to make fullscreen page from
-        examples[id] = node.value;
+        examples[id] = {
+          code: node.value,
+          wrapperTag
+        };
       }
     });
 
