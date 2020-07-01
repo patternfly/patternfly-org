@@ -137,7 +137,7 @@ const fullscreenPages = {};
 
 exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
   {
-    components: allMdx(filter: {fields: {source: {in: ["core", "react"]}}}) {
+    components: allMdx(filter: {fields: {navSection: {eq: "components"}}}) {
       group(field: frontmatter___title) {
         nodes {
           id
@@ -154,7 +154,7 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
         }
       }
     }
-    docs: allMdx(filter: { fields: { source: { ne: "design-snippets" } } }) {
+    docs: allMdx(filter: { fields: { source: { ne: "design-snippets" }, navSection: {ne: "components"} } }) {
       nodes {
         id
         fileAbsolutePath
@@ -300,11 +300,92 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
         }
       });
 
-    // results.data.components.groups
-    //   .filter(group => !hiddenTitles.includes(group.nodes[0].fields.title.toLowerCase()))
-    //   .forEach(group => {
+    // Component grouped data
+    results.data.components.groups
+      .filter(group => !hiddenTitles.includes(group.nodes[0].fields.title.toLowerCase()))
+      .forEach(group => {
+        const { componentName, slug, navSection = null, title, source, propComponents = [''] } = node.fields;
+        const fileRelativePath = path.relative(__dirname, node.absolutePath || node.fileAbsolutePath);
+        let sourceLink = 'https://github.com/patternfly/';
+        if (source === 'react') {
+          sourceLink += 'patternfly-react/blob/master/';
+        } else if (source === 'core') {
+          sourceLink += 'patternfly/blob/master/';
+        } else if (source === 'shared') {
+          sourceLink += 'patternfly-org/blob/master/packages/gatsby-theme-patternfly-org/';
+        } else {
+          sourceLink += 'patternfly-org/blob/master/packages/v4/';
+        }
+        sourceLink += fileRelativePath
+          .replace(/\\/g, '/')
+          .replace(/\.\.\//g, '')
+          .replace(/patternfly-(react|next)\//, '');
+        // Process the MDX AST to dynamically create a TOC and per-example fullscreen pages
+        const tableOfContents = extractTableOfContents(node.mdxAST);
+        const examples = extractExamples(node.mdxAST, hbsInstance, fileRelativePath);
+
+        // Not a huge fan of this component mapping disaster
+        const designNode = result.data.designSnippets.nodes.find(
+          node => node.frontmatter[`${source}ComponentName`] === componentName
+        );
         
-    //   })
+        // Create our dynamic templated pages
+        actions.createPage({
+          path: slug,
+          component: node.absolutePath || path.resolve(__dirname, `./templates/mdx.js`),
+          context: {
+            // Required by template to fetch more MDX/React docgen data from GraphQL
+            id: node.id,
+            designId: designNode ? designNode.id : 'undefined',
+            propComponents,
+            // For dynamic TOC on templated page
+            tableOfContents,
+            // For sideNav GraphQL query and dynamic classNames in Example.js
+            navSection,
+            // For top of TOC
+            title,
+            // For top of TOC, dynamic classNames in Example.js, and some feature flags
+            source,
+            // To render static example HTML from patternfly
+            htmlExamples: source === 'core' ? examples : undefined,
+            // To hide the banner for core/React sites
+            showBanner,
+            // To hide the GDPR banner
+            showGdprBanner,
+            // To hide the footer
+            showFooter,
+            // To link each MD file back to Github
+            sourceLink,
+          }
+        });
+
+        // Create per-example fullscreen pages for documentation pages
+        if (['core', 'react'].includes(source)) {
+          Object.entries(examples).forEach(([key, example]) => {
+            const pagePath = `${slug}/${key}`;
+            fullscreenPages[pagePath] = true;
+            actions.createPage({
+              path: pagePath,
+              component: source === 'core'
+                ? path.resolve(__dirname, './templates/fullscreenHTML.js')
+                : path.resolve(__dirname, './templates/fullscreenMDX.js'),
+              context: {
+                // To exclude fullscreen pages from sitemap
+                isFullscreen: true,
+                // For page title
+                title: `${source === 'core' ? 'HTML' : 'React'} - ${title} ${key.replace(/-/g, ' ')}`,
+                // The HTML or JSX to render
+                code: example
+              }
+            });
+          });
+          
+          fs.writeFileSync(
+            '.cache/fullscreenPages.json',
+            JSON.stringify(Object.keys(fullscreenPages).sort(), null, 2),
+          );
+        }
+      })
   });
 
 // https://www.gatsbyjs.org/docs/schema-customization/
