@@ -19,7 +19,7 @@ Use [tables](#tables) when:
 ## Data lists
 
 ### How to use
-Think of each row in a data list as a container for some formatted content. In PatternFly 4, data list rows can accept any [layout](/documentation/react/layouts/bullseye) supported by the design system as long as all rows apply the same layout. Here are some common layouts that may be useful in a data list:
+Think of each row in a data list as a container for some formatted content. In PatternFly, data list rows can accept any [layout](/documentation/react/layouts/bullseye) supported by the design system as long as all rows apply the same layout. Here are some common layouts that may be useful in a data list:
 
 * **[Grid](/documentation/react/layouts/grid):** When you want to display content in a responsive grid.
 * **[Level](/documentation/react/layouts/level):** When you want to justify content evenly over the width of the row. It also vertically aligns items in the center of the row.
@@ -42,8 +42,12 @@ The elements mentioned below are similar for a data list with compact or default
 <img src="./img/compact-list.png"  alt="Compact data list"  width="1174"/> 
 
 1. **[Toolbar](/design-guidelines/usage-and-behavior/toolbar):** The toolbar sits above the list and contains controls for manipulating list data. Common actions include filtering, sorting, and pagination.
-2. **Row:** Row height may be variable and sizes to the content. Rows in a data list may take any supported layout.
-3. **Inline actions:** These actions apply only to the current row/item.
+2. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](#/design-guidelines/usage-and-behavior/bulk-selection) for more information.
+3. **Row:** Row height may be variable and sizes to the content. Rows in a data list may take any supported layout.
+4. **Inline actions:** These actions apply only to the current row/item.
+5. **Select checkbox:** Selects this row.
+6. **Global actions:** Actions that apply to all selected items.
+7. **Pagination footer:** When present, provides navigation to additional pages.
 
 ### When to use data list vs. table
 Use a data list when:
@@ -66,10 +70,11 @@ Every data list can be extended with these functionalities:
 ### Actionable data list
 The actionable data list provides checkboxes that enable users to select one or more rows and act on that selection using options in the [toolbar](/design-guidelines/usage-and-behavior/toolbar).
 
-<img src="./img/actionable-list.png"  alt="Actionable list"  width="1174"/> 
+<img src="./img/actionable-list.png"  alt="Actionable list"  width="1172"/> 
 
-1. **Checkbox:** Enables a user to select a row
-2. **Global actions:** Actions that can be applied to all selected items
+1. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](#/design-guidelines/usage-and-behavior/bulk-selection) for more information. 
+2. **Checkbox:** Enables a user to select a row.
+3. **Global actions:** Actions that can be applied to all selected items.
 
 #### When to use and when not
 Use an actionable data list when:
@@ -83,7 +88,7 @@ The expandable list adds an expansion panel to every row to reveal more details 
 
 <img src="./img/expandable-list.png"  alt="Expandable data list"  width="1174"/> 
 
-1. **Expansion caret:** Toggles the expansion open and closed
+1. **Expansion caret:** Toggles the expansion open and closed.
 2. **Expansion panel:** A container that is revealed when the expansion is open. It can accept any supported layout to present additional content to the user.
 
 #### When to use
@@ -112,7 +117,7 @@ The elements mentioned below are similar for a table with compact or default spa
 <img src="./img/compact-data-table.png"  alt="Compact table"  width="1187"/> 
 
 1. **[Toolbar](/design-guidelines/usage-and-behavior/toolbar):** Sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
-2. **[Select all](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page.
+2. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](#/design-guidelines/usage-and-behavior/bulk-selection) for more information.
 3. **Column headers:** Should align with the content they contain. If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on one column at a time. See [sorting by columns](#sorting-by-columns) for more information on the sort component.
 4. **Select checkbox:** Selects this row
 5. **Global actions:** Actions that apply to all selected items
@@ -132,6 +137,7 @@ Every table can be extended with these functionalities:
 
 * **[Expandable table](#expandable-table)**
 * **[Compound expandable table](#compound-expandable-table)**
+* **[Actionable table](#actionable-table)**
 * **[Sortable table](#sorting-by-columns)**
 
 ### Expandable table
@@ -158,6 +164,21 @@ Use a compound expandable table when:
 * You want multiple expansion panels that relate to specific table columns. 
 * It would not make sense to combine all of this information into a single, simple expansion.
 
+### Actionable table
+The actionable table provides checkboxes that enable users to select one or more rows and act on that selection using options in the [toolbar](/design-guidelines/usage-and-behavior/toolbar).
+
+<img src="./img/actionable-table.png"  alt="Actionable table"  width="1174"/> 
+
+1. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](#/design-guidelines/usage-and-behavior/bulk-selection) for more information. 
+2. **Checkbox:** Enables a user to select a row.
+3. **Global actions:** Actions that can be applied to all selected items.
+
+#### When to use and when not
+Use an actionable table when:
+* You need to enable a user to select and act on multiple items in the table.
+
+Don't use an actionable table when:
+* Actions are restricted to a single row or object. In this case, place actions inline within the row.
 
 ### Sorting by columns
 Sorting by columns is possible for any table variation. Enabling the component within a table eases the ability to scan and read through the content. This option is favored over adding sorting functionality to the [toolbar](/design-guidelines/usage-and-behavior/toolbar).
@@ -192,8 +213,12 @@ Use default spacing when:
 * You don’t have to display a lot of data on one page.
 * You use many visual indicators that are placed in columns, such as icons or charts. 
 
+### Examples
+
+
+
 ## Tables on mobile
-The PatternFly 4 table is designed to be fully responsive. When columns no longer fit within the width of the viewport, columns are stacked so that data in each row is displayed as sets of attribute-value pairs.
+The PatternFly table is designed to be fully responsive. When columns no longer fit within the width of the viewport, columns are stacked so that data in each row is displayed as sets of attribute-value pairs.
 
 <img src="./img/Mobile-data-table-example.png"  alt="Mobile data table"  width="375"/> 
 
