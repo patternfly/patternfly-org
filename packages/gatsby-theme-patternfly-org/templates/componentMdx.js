@@ -281,8 +281,8 @@ const MDXTemplate = ({ data, location, pageContext }) => {
 export default MDXTemplate;
 
 export const pageQuery = graphql`
-  query ComponentMdxDocsPage($id: [String!], $designId: String!, $propComponents: [String]!) {
-    doc: allMdx(filter: {id: {in: $id}}) {
+  query ComponentMdxDocsPage($id: [String!], $designId: [String!], $propComponents: [String]!) {
+    doc: allMdx(filter: { id: { in: $id }}) {
       nodes {
         body
         frontmatter {
@@ -303,11 +303,13 @@ export const pageQuery = graphql`
         }
       }
     }
-    designDoc: mdx(id: { eq: $designId }) {
-      body
-      frontmatter {
-        reactComponentName
-        coreComponentName
+    designDoc: allMdx(filter: { id: { in: $designId }}) {
+      nodes {
+        body
+        frontmatter {
+          reactComponentName
+          coreComponentName
+        }
       }
     }
     partials: allFile(filter: { fields: { name: { ne: null } } }) {

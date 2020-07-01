@@ -301,47 +301,101 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
       });
 
     // Component grouped data
-    results.data.components.groups
-      .filter(group => !hiddenTitles.includes(group.nodes[0].fields.title.toLowerCase()))
-      .forEach(group => {
-        const { componentName, slug, navSection = null, title, source, propComponents = [''] } = node.fields;
-        const fileRelativePath = path.relative(__dirname, node.absolutePath || node.fileAbsolutePath);
-        let sourceLink = 'https://github.com/patternfly/';
-        if (source === 'react') {
-          sourceLink += 'patternfly-react/blob/master/';
-        } else if (source === 'core') {
-          sourceLink += 'patternfly/blob/master/';
-        } else if (source === 'shared') {
-          sourceLink += 'patternfly-org/blob/master/packages/gatsby-theme-patternfly-org/';
-        } else {
-          sourceLink += 'patternfly-org/blob/master/packages/v4/';
-        }
-        sourceLink += fileRelativePath
-          .replace(/\\/g, '/')
-          .replace(/\.\.\//g, '')
-          .replace(/patternfly-(react|next)\//, '');
-        // Process the MDX AST to dynamically create a TOC and per-example fullscreen pages
-        const tableOfContents = extractTableOfContents(node.mdxAST);
-        const examples = extractExamples(node.mdxAST, hbsInstance, fileRelativePath);
+    result.data.components.group
+      .filter(component => !hiddenTitles.includes(component.nodes[0].fields.title.toLowerCase()))
+      .forEach(component => {
+        const componentData = {
+          ids: [],
+          propComponents: []
+        };
+        component.nodes.forEach(node => {
+          const { componentName, slug, navSection = null, title, source, propComponents = [''] } = node.fields;
+          const fileRelativePath = path.relative(__dirname, node.absolutePath || node.fileAbsolutePath);
+          let sourceLink = 'https://github.com/patternfly/';
+          if (source === 'react') {
+            sourceLink += 'patternfly-react/blob/master/';
+          } else if (source === 'core') {
+            sourceLink += 'patternfly/blob/master/';
+          } else if (source === 'shared') {
+            sourceLink += 'patternfly-org/blob/master/packages/gatsby-theme-patternfly-org/';
+          } else {
+            sourceLink += 'patternfly-org/blob/master/packages/v4/';
+          }
+          sourceLink += fileRelativePath
+            .replace(/\\/g, '/')
+            .replace(/\.\.\//g, '')
+            .replace(/patternfly-(react|next)\//, '');
+          // Process the MDX AST to dynamically create a TOC and per-example fullscreen pages
+          const tableOfContents = extractTableOfContents(node.mdxAST);
+          const examples = extractExamples(node.mdxAST, hbsInstance, fileRelativePath);
 
-        // Not a huge fan of this component mapping disaster
-        const designNode = result.data.designSnippets.nodes.find(
-          node => node.frontmatter[`${source}ComponentName`] === componentName
-        );
+          // Not a huge fan of this component mapping disaster
+          const designNode = result.data.designSnippets.nodes.find(
+            node => node.frontmatter[`${source}ComponentName`] === componentName
+          );
+
+          // Update componentData object with this node's data
+          componentData[source] = {
+            id: node.id,
+            designId: designNode ? designNode.id : 'undefined',
+            propComponents,
+            tableOfContents,
+            title,
+            htmlExamples: source === 'core' ? examples : undefined,
+            showBanner,
+            showGdprBanner,
+            showFooter,
+            sourceLink
+          };
+          componentData.ids.push(node.id);
+          componentData.propComponents = componentData.propComponents.concat(...propComponents);
+          if (!componentData.slug) {
+            componentData.slug = slug.replace(/\/(core|react)\//, '/');
+          }
+          
+          // Create per-example fullscreen pages for documentation pages
+          if (['core', 'react'].includes(source)) {
+            Object.entries(examples).forEach(([key, example]) => {
+              const pagePath = `${slug}/${key}`;
+              fullscreenPages[pagePath] = true;
+              actions.createPage({
+                path: pagePath,
+                component: source === 'core'
+                  ? path.resolve(__dirname, './templates/fullscreenHTML.js')
+                  : path.resolve(__dirname, './templates/fullscreenMDX.js'),
+                context: {
+                  // To exclude fullscreen pages from sitemap
+                  isFullscreen: true,
+                  // For page title
+                  title: `${source === 'core' ? 'HTML' : 'React'} - ${title} ${key.replace(/-/g, ' ')}`,
+                  // The HTML or JSX to render
+                  code: example
+                }
+              });
+            });
+            
+            fs.writeFileSync(
+              '.cache/fullscreenPages.json',
+              JSON.stringify(Object.keys(fullscreenPages).sort(), null, 2),
+            );
+          }
+        });
         
         // Create our dynamic templated pages
         actions.createPage({
-          path: slug,
-          component: node.absolutePath || path.resolve(__dirname, `./templates/mdx.js`),
+          path: componentData.slug,
+          component: path.resolve(__dirname, `./templates/componentMdx.js`),
+          context: componentData
+          /*
           context: {
             // Required by template to fetch more MDX/React docgen data from GraphQL
-            id: node.id,
+            id: ids,
             designId: designNode ? designNode.id : 'undefined',
             propComponents,
             // For dynamic TOC on templated page
             tableOfContents,
             // For sideNav GraphQL query and dynamic classNames in Example.js
-            navSection,
+            navSection: "components",
             // For top of TOC
             title,
             // For top of TOC, dynamic classNames in Example.js, and some feature flags
@@ -357,34 +411,11 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
             // To link each MD file back to Github
             sourceLink,
           }
+          */
         });
+        
+        console.log(componentData);
 
-        // Create per-example fullscreen pages for documentation pages
-        if (['core', 'react'].includes(source)) {
-          Object.entries(examples).forEach(([key, example]) => {
-            const pagePath = `${slug}/${key}`;
-            fullscreenPages[pagePath] = true;
-            actions.createPage({
-              path: pagePath,
-              component: source === 'core'
-                ? path.resolve(__dirname, './templates/fullscreenHTML.js')
-                : path.resolve(__dirname, './templates/fullscreenMDX.js'),
-              context: {
-                // To exclude fullscreen pages from sitemap
-                isFullscreen: true,
-                // For page title
-                title: `${source === 'core' ? 'HTML' : 'React'} - ${title} ${key.replace(/-/g, ' ')}`,
-                // The HTML or JSX to render
-                code: example
-              }
-            });
-          });
-          
-          fs.writeFileSync(
-            '.cache/fullscreenPages.json',
-            JSON.stringify(Object.keys(fullscreenPages).sort(), null, 2),
-          );
-        }
       })
   });
 
