@@ -18,6 +18,7 @@ exports.mdxTypeDefs = `
     showTitle: Boolean
     releaseNoteTOC: Boolean
     hideSource: Boolean
+    wrapperTag: String
   }
   type MdxFields @dontInfer {
     slug: String!
@@ -26,6 +27,7 @@ exports.mdxTypeDefs = `
     title: String
     propComponents: [String]
     componentName: String
+    wrapperTag: String
   }
   type Mdx implements Node @dontInfer {
     frontmatter: MdxFrontmatter

@@ -56,6 +56,7 @@ let addedFileFieldsToSchema = false;
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   if (node.internal.type === 'Mdx') {
+    // ENSURE TYPES ADDED IN `index.js`
     // Parent comes from gatsby-source-filesystem definition in gatsby-config.js
     const parent = getNode(node.parent);
     const source = parent.sourceInstanceName;
@@ -104,7 +105,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       node,
       name: 'wrapperTag',
-      value: wrapperTag
+      value: wrapperTag.toLowerCase()
     });
   } else if (node.internal.type === 'File') {
     if (!addedFileFieldsToSchema) {
