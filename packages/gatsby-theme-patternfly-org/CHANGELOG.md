@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.1](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.2.0...gatsby-theme-patternfly-org@4.2.1) (2020-07-01)
+
+
+### Bug Fixes
+
+* **html:** pass code ([4550687](https://github.com/patternfly/patternfly-org/commit/455068743a097354795196b5d5e0190982752555))
+
+
+
+
+
 # [4.2.0](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.21...gatsby-theme-patternfly-org@4.2.0) (2020-07-01)
 
 
