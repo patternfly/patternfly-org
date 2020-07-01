@@ -26,14 +26,14 @@ The compact modal dialog uses a spacing of 24px. Use this for smaller modals tha
 #### Large
 <img src="./img/large.png" alt="Large" width="756"/>
 
-The compact modal dialog uses a spacing of 32px. Use this for larger modals that contain a lot of content (code previews, forms, tables...).
+The large modal dialog uses a spacing of 32px. Use this for larger modals that contain a lot of content (code previews, forms, tables...).
 
 ## Usage
 ### When to use
 Use a modal dialog when information is critical and requires user input or attention.
 Use modals to:
 
-* [Validate user decisions](#get-confirmation)
+* [Validate user decisions](#validate-user-decisions)
 * [Report errors](#report-errors)
 * [Provide the result of a task or state of an application](#provide-the-result-of-a-task-or-state-of-an-application)
 * [Get required user input](#get-required-user-input)
@@ -42,7 +42,7 @@ Use modals to:
 Modal dialogs interrupt user task flow and should be avoided for any information that is not critical to user success.
 
 ### Types of modals
-#### Get confirmation
+#### Validate user decisions
 Use a confirmation dialog to validate user decisions and communicate consequences. Confirmation dialogs need to clearly restate the action the user is trying to take and explicitly outline the consequences of that action. They should be clear, concise, and direct. Give the user the important information first—additional detail like “Are you sure?” clutters your message and can be distracting.
 
 Depending on your design template, follow this format for confirmation dialogs:
