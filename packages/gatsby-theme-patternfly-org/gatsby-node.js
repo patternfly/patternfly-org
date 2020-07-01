@@ -272,9 +272,9 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
                 // For page title
                 title: `${source === 'core' ? 'HTML' : 'React'} - ${title} ${key.replace(/-/g, ' ')}`,
                 // The HTML or JSX to render
-                code: example,
+                code: example.code,
                 // The tag to use as a wrapper
-                wrapperTag
+                wrapperTag: example.wrapperTag || wrapperTag
               }
             });
           });
