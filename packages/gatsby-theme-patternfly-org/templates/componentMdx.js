@@ -40,9 +40,9 @@ const MDXTemplate = ({ data, location, pageContext }) => {
         katacodaId={location.state.katacodaId} />
     );
   }
+  console.log('DATAAAA:__  ', data, location, pageContext);
   const { cssPrefix, hideTOC, beta, katacodaBroken, optIn, hideDarkMode, showTitle, releaseNoteTOC, hideSource } = data.doc.frontmatter;
   const { componentName, navSection } = data.doc.fields;
-  console.log(componentName, navSection, data, location, pageContext);
   const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner, showGdprBanner, showFooter, sourceLink } = pageContext;
   const props = data.props && data.props.nodes && propComponents
     ? propComponents
@@ -57,17 +57,6 @@ const MDXTemplate = ({ data, location, pageContext }) => {
       })
       .filter(Boolean)
     : [];
-
-  let parityComponent = undefined;
-  if (data.designDoc && ['components', 'beta', 'utilities'].includes(navSection)) {
-    const { reactComponentName, coreComponentName } = data.designDoc.frontmatter;
-    if (source === 'core' && reactComponentName) {
-      parityComponent = `${navSection}/${reactComponentName}`;
-    }
-    else if (source === 'react' && coreComponentName) {
-      parityComponent = `${navSection}/${coreComponentName}`;
-    }
-  }
 
   // TODO: Stop hiding TOC in design pages
   const TableOfContents = () => (
@@ -281,8 +270,8 @@ const MDXTemplate = ({ data, location, pageContext }) => {
 export default MDXTemplate;
 
 export const pageQuery = graphql`
-  query ComponentMdxDocsPage($id: [String!], $designId: [String!], $propComponents: [String]!) {
-    doc: allMdx(filter: { id: { in: $id }}) {
+  query ComponentMdxDocsPage($ids: [String!], $designIds: [String!], $propComponents: [String]!) {
+    doc: allMdx(filter: { id: { in: $ids }}) {
       nodes {
         body
         frontmatter {
@@ -303,7 +292,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    designDoc: allMdx(filter: { id: { in: $designId }}) {
+    designDoc: allMdx(filter: { id: { in: $designIds }}) {
       nodes {
         body
         frontmatter {

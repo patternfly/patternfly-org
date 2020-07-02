@@ -304,10 +304,13 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
     result.data.components.group
       .filter(component => !hiddenTitles.includes(component.nodes[0].fields.title.toLowerCase()))
       .forEach(component => {
+        console.log('CLEARNING COMPONENT DATA');
         const componentData = {
           ids: [],
+          designIds: [],
           propComponents: []
         };
+        console.log(componentData);
         component.nodes.forEach(node => {
           const { componentName, slug, navSection = null, title, source, propComponents = [''] } = node.fields;
           const fileRelativePath = path.relative(__dirname, node.absolutePath || node.fileAbsolutePath);
@@ -333,11 +336,12 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
           const designNode = result.data.designSnippets.nodes.find(
             node => node.frontmatter[`${source}ComponentName`] === componentName
           );
+          const designId = designNode ? designNode.id : 'undefined';
 
           // Update componentData object with this node's data
           componentData[source] = {
             id: node.id,
-            designId: designNode ? designNode.id : 'undefined',
+            designId,
             propComponents,
             tableOfContents,
             title,
@@ -348,6 +352,7 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
             sourceLink
           };
           componentData.ids.push(node.id);
+          componentData.designIds.push(designId);
           componentData.propComponents = componentData.propComponents.concat(...propComponents);
           if (!componentData.slug) {
             componentData.slug = slug.replace(/\/(core|react)\//, '/');
@@ -380,41 +385,15 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
             );
           }
         });
+
+        console.log(componentData);
         
         // Create our dynamic templated pages
         actions.createPage({
           path: componentData.slug,
           component: path.resolve(__dirname, `./templates/componentMdx.js`),
           context: componentData
-          /*
-          context: {
-            // Required by template to fetch more MDX/React docgen data from GraphQL
-            id: ids,
-            designId: designNode ? designNode.id : 'undefined',
-            propComponents,
-            // For dynamic TOC on templated page
-            tableOfContents,
-            // For sideNav GraphQL query and dynamic classNames in Example.js
-            navSection: "components",
-            // For top of TOC
-            title,
-            // For top of TOC, dynamic classNames in Example.js, and some feature flags
-            source,
-            // To render static example HTML from patternfly
-            htmlExamples: source === 'core' ? examples : undefined,
-            // To hide the banner for core/React sites
-            showBanner,
-            // To hide the GDPR banner
-            showGdprBanner,
-            // To hide the footer
-            showFooter,
-            // To link each MD file back to Github
-            sourceLink,
-          }
-          */
         });
-        
-        console.log(componentData);
 
       })
   });
