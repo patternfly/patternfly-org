@@ -9,7 +9,7 @@ const renderNavItem = node => (
   <li key={node.path} className="pf-c-nav__item ws-sideNav-item">
     <Link
       to={node.path}
-      state={{ context: node.context }} // For keeping context on shared pages
+      // state={{ context: node.context }} // For keeping context on shared pages
       className="pf-c-nav__link ws-sideNav-link"
       activeClassName="pf-m-current"
       >
@@ -18,16 +18,27 @@ const renderNavItem = node => (
   </li>
 );
 
+const combineCoreReactNavs = (arr1, arr2) => (
+  [...arr1, ...arr2].reduce((acc, cur) => {
+    const hasNavItem = acc.some(navItem => (
+        navItem.section === cur.section &&
+        navItem.path === cur.path &&
+        navItem.text === cur.text
+    ));
+    if (!hasNavItem) {
+        acc.push(cur);
+    }
+    return acc;
+  },[])
+);
+
 export const SideNav = ({
   location,
   context,
   allPages,
   sideNavContexts,
-  pageSource,
-  parityComponent
+  pageSource
 }) => {
-  const [isDropdownOpen, setDropdownOpen] = React.useState(false);
-  
   // The `context` property worked hard to get here
   if (context === 'shared') {
     context = pageSource;
@@ -48,56 +59,21 @@ export const SideNav = ({
 
     return accum;
   }, {});
+  console.log('sideNavContexts: ', sideNavContexts);
 
-  const sideNavItems = sideNavContexts[context.replace(/-/g, '_')] || [];
-
-  // TODO: Get a better design and get rid of this thing.
-  const contextSwitcher = pageSource === 'org'
-    ? { core: 'HTML', react: 'React'}
-    : {};
-  const dropdownToggle = (
-    <DropdownToggle onToggle={() => setDropdownOpen(!isDropdownOpen)}>
-      {contextSwitcher[context]}
-    </DropdownToggle>
-  );
-  const dropdownItems = Object.entries(contextSwitcher)
-    .filter(([key]) => key !== context) // Doesn't make sense to be able to switch from "core" to "core"
-    .map(([key, value]) =>
-      <DropdownItem
-        key={key}
-        component={
-          <Link
-            className="ws-org-context-switcher-link"
-            to={`/documentation/${key}/${parityComponent || 'overview/release-notes'}`}
-          >
-            {value}
-          </Link>
-        } />
-    );
+  const sideNavItems = ['react', 'core'].includes(context)
+    ? combineCoreReactNavs(sideNavContexts.react, sideNavContexts.core)
+    : sideNavContexts[context.replace(/-/g, '_')] || [];
 
   return (
     <Nav aria-label="Side Nav" theme="light">
-      {/* debug */}
-      {/* <p>context: {context}</p>
-      <p>pageSource: {pageSource}</p>
-      <p>parityComponent: {parityComponent}</p> */}
-      {Object.keys(contextSwitcher).includes(context) && (
-        <div className="ws-org-context-switcher">
-          <label>FRAMEWORK</label>
-          <Dropdown
-            className="ws-org-context-switcher-dropdown"
-            onSelect={() => setDropdownOpen(!isDropdownOpen)}
-            toggle={dropdownToggle}
-            isOpen={isDropdownOpen}
-            dropdownItems={dropdownItems}
-          />
-        </div>
-      )}
       <NavList className="ws-side-nav-list">
         {sideNavItems.map(navItem => {
           const { section } = navItem;
           const isActive = location.pathname.includes(`/${slugger(section)}/`);
+          console.log(sideNavItems, section, allNavItems, allNavItems[section]);
           if (section && allNavItems[section]) {
+            console.log('YES');
             return (
               <NavExpandable
                 key={section}

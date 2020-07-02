@@ -33,7 +33,7 @@ export const SideNavLayout = ({
   children,
   location,
   context,
-  parityComponent, // aboutmodal <=> aboutmodalbox
+  // parityComponent, // aboutmodal <=> aboutmodalbox
   hideSideNav = false,
   showGdprBanner = false,
   showFooter = false,
@@ -103,6 +103,7 @@ export const SideNavLayout = ({
     }
   }
   `);
+
   const { title } = data.site.siteMetadata;
   const { num, url } = data.prInfo;
   const { topNavItems, sideNav, context: pageSource } = data.sitePlugin.pluginOptions;
@@ -141,8 +142,9 @@ export const SideNavLayout = ({
           pageSource={pageSource}
           allPages={data.allSitePage.nodes}
           sideNavContexts={sideNav}
-          parityComponent={parityComponent} />}
-          />;
+          // parityComponent={parityComponent}
+        />}
+      />;
 
   const latestVersion = versions.Releases.find(version => version.latest);
   const dropdownToggle = (

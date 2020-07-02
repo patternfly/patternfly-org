@@ -40,12 +40,12 @@ const MDXTemplate = ({ data, location, pageContext }) => {
         katacodaId={location.state.katacodaId} />
     );
   }
-  console.log('DATAAAA:__  ', data, location, pageContext);
+
   const combinedComponent = data.doc.nodes.map((node, idx) => {
     const { cssPrefix, hideTOC, beta, katacodaBroken, optIn, hideDarkMode, showTitle, releaseNoteTOC, hideSource } = node.frontmatter;
     const { componentName, navSection, source } = node.fields;
     const { title, tableOfContents, htmlExamples, propComponents = [''], showBanner, showGdprBanner, showFooter, sourceLink } = pageContext[source];
-    console.log('SOURCE: ', source);
+
     const props = data.props && data.props.nodes && propComponents
       ? propComponents
         .filter(name => name !== '') // Filter default entry we make for GraphQL schema
@@ -119,9 +119,11 @@ const MDXTemplate = ({ data, location, pageContext }) => {
               </Alert>
             )}
             {/* Design docs should not apply to demos and overview */}
-            {data.designDoc && !['overview', 'demos'].includes(navSection) && console.log(data.designDoc.nodes[idx]) && (
+            {data.designDoc && !['overview', 'demos'].includes(navSection) && (
               <MDXRenderer>
-                {data.designDoc.nodes[idx].body}
+                {data.designDoc.nodes.map(node => (
+                  node.body
+                ))}
               </MDXRenderer>
             )}
             {releaseNoteTOC && (
@@ -255,16 +257,17 @@ const MDXTemplate = ({ data, location, pageContext }) => {
       </React.Fragment>
     );
   });
+
   return (
     <React.Fragment>
       <SkipToContent href="#main-content">Skip to Content</SkipToContent>
       <SideNavLayout
         location={location}
-        // context={source}
+        context={pageContext.source}
         // showBanner={showBanner}
         // showGdprBanner={showGdprBanner}
         // showFooter={showFooter}
-        pageTitle={pageContext[source].title}
+        pageTitle={pageContext.title}
       >
         <PageSection id="main-content" className="ws-section">
           {combinedComponent}

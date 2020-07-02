@@ -345,6 +345,7 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
             tableOfContents,
             title,
             htmlExamples: source === 'core' ? examples : undefined,
+            navSection: "components",
             showBanner,
             showGdprBanner,
             showFooter,
@@ -355,6 +356,8 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
           componentData.designIds.push(designId);
           componentData.propComponents = componentData.propComponents.concat(...propComponents);
           componentData.slug = componentData.slug || slug.replace(/\/(core|react)\//, '/');
+          componentData.source = componentData.source || source;
+          componentData.navSection = componentData.navSection || "components";
           
           // Create per-example fullscreen pages for documentation pages
           if (['core', 'react'].includes(source)) {
