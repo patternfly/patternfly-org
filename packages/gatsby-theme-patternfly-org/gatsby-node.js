@@ -304,13 +304,12 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
     result.data.components.group
       .filter(component => !hiddenTitles.includes(component.nodes[0].fields.title.toLowerCase()))
       .forEach(component => {
-        console.log('CLEARNING COMPONENT DATA');
         const componentData = {
           ids: [],
           designIds: [],
           propComponents: []
         };
-        console.log(componentData);
+        
         component.nodes.forEach(node => {
           const { componentName, slug, navSection = null, title, source, propComponents = [''] } = node.fields;
           const fileRelativePath = path.relative(__dirname, node.absolutePath || node.fileAbsolutePath);
@@ -349,14 +348,13 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
             showBanner,
             showGdprBanner,
             showFooter,
+            source,
             sourceLink
           };
           componentData.ids.push(node.id);
           componentData.designIds.push(designId);
           componentData.propComponents = componentData.propComponents.concat(...propComponents);
-          if (!componentData.slug) {
-            componentData.slug = slug.replace(/\/(core|react)\//, '/');
-          }
+          componentData.slug = componentData.slug || slug.replace(/\/(core|react)\//, '/');
           
           // Create per-example fullscreen pages for documentation pages
           if (['core', 'react'].includes(source)) {
@@ -385,8 +383,6 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
             );
           }
         });
-
-        console.log(componentData);
         
         // Create our dynamic templated pages
         actions.createPage({

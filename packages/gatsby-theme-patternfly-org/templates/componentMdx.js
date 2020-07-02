@@ -41,230 +41,237 @@ const MDXTemplate = ({ data, location, pageContext }) => {
     );
   }
   console.log('DATAAAA:__  ', data, location, pageContext);
-  const { cssPrefix, hideTOC, beta, katacodaBroken, optIn, hideDarkMode, showTitle, releaseNoteTOC, hideSource } = data.doc.frontmatter;
-  const { componentName, navSection } = data.doc.fields;
-  const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner, showGdprBanner, showFooter, sourceLink } = pageContext;
-  const props = data.props && data.props.nodes && propComponents
-    ? propComponents
-      .filter(name => name !== '') // Filter default entry we make for GraphQL schema
-      .map(name => {
-        const propTable = data.props.nodes.find(node => node.name === name);
-        if (!propTable) {
-          console.warn(`PropComponent "${name}" specified in frontmatter, but not found at runtime.`);
-        }
+  const combinedComponent = data.doc.nodes.map((node, idx) => {
+    const { cssPrefix, hideTOC, beta, katacodaBroken, optIn, hideDarkMode, showTitle, releaseNoteTOC, hideSource } = node.frontmatter;
+    const { componentName, navSection, source } = node.fields;
+    const { title, tableOfContents, htmlExamples, propComponents = [''], showBanner, showGdprBanner, showFooter, sourceLink } = pageContext[source];
+    console.log('SOURCE: ', source);
+    const props = data.props && data.props.nodes && propComponents
+      ? propComponents
+        .filter(name => name !== '') // Filter default entry we make for GraphQL schema
+        .map(name => {
+          const propTable = data.props.nodes.find(node => node.name === name);
+          if (!propTable) {
+            console.warn(`PropComponent "${name}" specified in frontmatter, but not found at runtime.`);
+          }
 
-        return propTable;
-      })
-      .filter(Boolean)
-    : [];
+          return propTable;
+        })
+        .filter(Boolean)
+      : [];
 
-  // TODO: Stop hiding TOC in design pages
-  const TableOfContents = () => (
-    <React.Fragment>
-      {showTitle && (
-        <React.Fragment>
-          <Title size="4xl" headingLevel="h1" className="ws-page-title">{title}</Title>
-          {optIn && (
-            <Alert
-              variant="info"
-              title="Opt-in feature"
-              className="pf-u-my-md"
-              isInline
-            >
-              {optIn}
-            </Alert>
-          )}
-        </React.Fragment>
-      )}
-      {!hideTOC && (
-        <React.Fragment>
-          {!hideSource && (
-            <label id="source-label" className="ws-framework-title pf-c-title" aria-hidden>
-              {getSourceTitle(source)}
-            </label>
-          )}
-          <Title headingLevel="h1" id="component-title" size="4xl" className="ws-page-title" aria-labelledby="source-label component-title">{title}</Title>
-          {optIn && (
-            <Alert
-              variant="info"
-              title="Opt-in feature"
-              className="pf-u-my-md"
-              isInline
-            >
-              {optIn}
-            </Alert>
-          )}
-          {beta && (
-            <Alert
-              variant={'info'}
-              title="Beta feature"
-              className="pf-u-my-md"
-              style={{ marginBottom: '1rem' }}
-              isInline
-            >
-              This Beta component is currently under review, so please join in and give us your feedback on the <a href="https://forum.patternfly.org/">PatternFly forum</a>
-            </Alert>
-          )}
-          {katacodaBroken && (
-            <Alert
-              variant={'danger'}
-              title="Down for maintenance"
-              className="pf-u-my-md"
-              style={{ marginBottom: '1rem' }}
-              isInline
-            >
-              We'll be up and running in a bit, so check back soon. Thanks!
-            </Alert>
-          )}
-          {/* Design docs should not apply to demos and overview */}
-          {data.designDoc && !['overview', 'demos'].includes(navSection) && (
-            <MDXRenderer>
-              {data.designDoc.body}
-            </MDXRenderer>
-          )}
-          {releaseNoteTOC && (
-            <Grid hasGutter className="ws-release-notes-toc">
-              {versions.Releases
-                .filter(version => (
-                  tableOfContents.some(header => header.includes(version.name))))
-                .slice(0, 6)                         // limit to newest releases
-                .map(version => {
-                  const [year, month, day] = version.date.split('-');
-                  const releaseDate = new Date(+year, +month - 1, +day)
-                    .toLocaleDateString('us-EN', {
-                      month: 'long',
-                      day: 'numeric',
-                      year: 'numeric'
-                    });
-                  const releaseTitle = tableOfContents.find(heading => heading.includes(version.name));
-                  return releaseTitle && (
-                    <GridItem sm={6} md={4} key={version.name}>
-                      <Card>
-                        <CardTitle>
-                          {releaseTitle && (
-                            <Title size="2xl" headingLevel="h2" >
-                              <a key={version.name} href={`#${slugger(releaseTitle)}`}>
-                                Release {version.name}
-                              </a>
-                            </Title>
-                          )}
-                          {version.latest && (
-                            <Badge>Latest</Badge>
-                          )}
-                        </CardTitle>
-                        <CardBody>
-                          Released on {releaseDate}.
-                        </CardBody>
-                      </Card>
-                    </GridItem>
-                  );
-                })
-              }
-            </Grid>
-          )}
-          {!releaseNoteTOC && tableOfContents.map(heading => (
-            <a key={heading} href={`#${slugger(heading)}`} className="ws-toc">
-              {heading}
-            </a>
-          ))}
-          {!releaseNoteTOC && props.length > 0 && (
-            <a href="#props" className="ws-toc">
-              Props
-            </a>
-          )}
-          {!releaseNoteTOC && cssPrefix && (
-            <a href="#css-variables" className="ws-toc">
-              CSS Variables
-            </a>
-          )}
-        </React.Fragment>
-      )}
-    </React.Fragment>
-  );
-
-  const PropsSection = () => (
-    <React.Fragment>
-      <AutoLinkHeader headingLevel="h2" id="props" size="h2" className="ws-h2">
-        Props
-      </AutoLinkHeader>
-      {props.map(component => (
-        <PropsTable
-          key={component.name}
-          caption={`${component.name} properties`}
-          rows={component.props} />
-      ))}
-    </React.Fragment>
-  );
-
-  const CSSVariablesSection = () => (
-    <React.Fragment>
-      <AutoLinkHeader headingLevel="h2" id="css-variables" size="h2" className="ws-h2">
-        CSS Variables
-      </AutoLinkHeader>
-      <CSSVariables prefix={cssPrefix} />
-    </React.Fragment>
-  );
-
-  const MDXContent = () => (
-    <MDXProvider components={{
-      ...commonComponents,
-      code: props =>
-        <Example
-          location={location}
-          source={source}
-          html={props.title && htmlExamples && htmlExamples[getId(props.title)]}
-          hideDarkMode={hideDarkMode}
-          navSection={navSection}
-          componentName={componentName}
-          {...props} />
-    }}>
-      <MDXRenderer>
-        {data.doc.body}
-      </MDXRenderer>
-    </MDXProvider>
-  );
-
-  const FeedbackSection = () => {
-    const issueBody = encodeURIComponent(`\n\n\nProblem is in [this file.](${sourceLink})`);
-    const issueLink = sourceLink.replace(/\/blob\/master\/.*/, `/issues/new?title=&body=${issueBody}`);
-
-    return (
+    // TODO: Stop hiding TOC in design pages
+    const TableOfContents = () => (
       <React.Fragment>
-        <AutoLinkHeader headingLevel="h2" id="feedback" size="h2" className="ws-h2">
-          Feedback
-        </AutoLinkHeader>
-        <a href={sourceLink} target="_blank">View page source on Github</a> / <a href={issueLink} target="_blank">Report an issue on Github</a>
+        {showTitle && (
+          <React.Fragment>
+            <Title size="4xl" headingLevel="h1" className="ws-page-title">{title}</Title>
+            {optIn && (
+              <Alert
+                variant="info"
+                title="Opt-in feature"
+                className="pf-u-my-md"
+                isInline
+              >
+                {optIn}
+              </Alert>
+            )}
+          </React.Fragment>
+        )}
+        {!hideTOC && (
+          <React.Fragment>
+            {!hideSource && (
+              <label id="source-label" className="ws-framework-title pf-c-title" aria-hidden>
+                {getSourceTitle(source)}
+              </label>
+            )}
+            <Title headingLevel="h1" id="component-title" size="4xl" className="ws-page-title" aria-labelledby="source-label component-title">{title}</Title>
+            {optIn && (
+              <Alert
+                variant="info"
+                title="Opt-in feature"
+                className="pf-u-my-md"
+                isInline
+              >
+                {optIn}
+              </Alert>
+            )}
+            {beta && (
+              <Alert
+                variant={'info'}
+                title="Beta feature"
+                className="pf-u-my-md"
+                style={{ marginBottom: '1rem' }}
+                isInline
+              >
+                This Beta component is currently under review, so please join in and give us your feedback on the <a href="https://forum.patternfly.org/">PatternFly forum</a>
+              </Alert>
+            )}
+            {katacodaBroken && (
+              <Alert
+                variant={'danger'}
+                title="Down for maintenance"
+                className="pf-u-my-md"
+                style={{ marginBottom: '1rem' }}
+                isInline
+              >
+                We'll be up and running in a bit, so check back soon. Thanks!
+              </Alert>
+            )}
+            {/* Design docs should not apply to demos and overview */}
+            {data.designDoc && !['overview', 'demos'].includes(navSection) && console.log(data.designDoc.nodes[idx]) && (
+              <MDXRenderer>
+                {data.designDoc.nodes[idx].body}
+              </MDXRenderer>
+            )}
+            {releaseNoteTOC && (
+              <Grid hasGutter className="ws-release-notes-toc">
+                {versions.Releases
+                  .filter(version => (
+                    tableOfContents.some(header => header.includes(version.name))))
+                  .slice(0, 6)                         // limit to newest releases
+                  .map(version => {
+                    const [year, month, day] = version.date.split('-');
+                    const releaseDate = new Date(+year, +month - 1, +day)
+                      .toLocaleDateString('us-EN', {
+                        month: 'long',
+                        day: 'numeric',
+                        year: 'numeric'
+                      });
+                    const releaseTitle = tableOfContents.find(heading => heading.includes(version.name));
+                    return releaseTitle && (
+                      <GridItem sm={6} md={4} key={version.name}>
+                        <Card>
+                          <CardTitle>
+                            {releaseTitle && (
+                              <Title size="2xl" headingLevel="h2" >
+                                <a key={version.name} href={`#${slugger(releaseTitle)}`}>
+                                  Release {version.name}
+                                </a>
+                              </Title>
+                            )}
+                            {version.latest && (
+                              <Badge>Latest</Badge>
+                            )}
+                          </CardTitle>
+                          <CardBody>
+                            Released on {releaseDate}.
+                          </CardBody>
+                        </Card>
+                      </GridItem>
+                    );
+                  })
+                }
+              </Grid>
+            )}
+            {!releaseNoteTOC && tableOfContents.map(heading => (
+              <a key={heading} href={`#${slugger(heading)}`} className="ws-toc">
+                {heading}
+              </a>
+            ))}
+            {!releaseNoteTOC && props.length > 0 && (
+              <a href="#props" className="ws-toc">
+                Props
+              </a>
+            )}
+            {!releaseNoteTOC && cssPrefix && (
+              <a href="#css-variables" className="ws-toc">
+                CSS Variables
+              </a>
+            )}
+          </React.Fragment>
+        )}
       </React.Fragment>
     );
-  }
 
+    const PropsSection = () => (
+      <React.Fragment>
+        <AutoLinkHeader headingLevel="h2" id="props" size="h2" className="ws-h2">
+          Props
+        </AutoLinkHeader>
+        {props.map(component => (
+          <PropsTable
+            key={component.name}
+            caption={`${component.name} properties`}
+            rows={component.props} />
+        ))}
+      </React.Fragment>
+    );
+
+    const CSSVariablesSection = () => (
+      <React.Fragment>
+        <AutoLinkHeader headingLevel="h2" id="css-variables" size="h2" className="ws-h2">
+          CSS Variables
+        </AutoLinkHeader>
+        <CSSVariables prefix={cssPrefix} />
+      </React.Fragment>
+    );
+
+    const MDXContent = () => (
+      <MDXProvider components={{
+        ...commonComponents,
+        code: props =>
+          <Example
+            location={location}
+            source={source}
+            html={props.title && htmlExamples && htmlExamples[getId(props.title)]}
+            hideDarkMode={hideDarkMode}
+            navSection={navSection}
+            componentName={componentName}
+            {...props} />
+      }}>
+        <MDXRenderer>
+          {node.body}
+        </MDXRenderer>
+      </MDXProvider>
+    );
+
+    // const FeedbackSection = () => {
+    //   const issueBody = encodeURIComponent(`\n\n\nProblem is in [this file.](${sourceLink})`);
+    //   const issueLink = sourceLink.replace(/\/blob\/master\/.*/, `/issues/new?title=&body=${issueBody}`);
+
+    //   return (
+    //     <React.Fragment>
+    //       <AutoLinkHeader headingLevel="h2" id="feedback" size="h2" className="ws-h2">
+    //         Feedback
+    //       </AutoLinkHeader>
+    //       <a href={sourceLink} target="_blank">View page source on Github</a> / <a href={issueLink} target="_blank">Report an issue on Github</a>
+    //     </React.Fragment>
+    //   );
+    // }
+
+    return (
+      <React.Fragment key={`${componentName}-${idx}`}>
+        <TableOfContents />
+
+        {/* Wrap in div for :last-child CSS selectors */}
+        <div>
+          <MDXContent />
+        </div>
+
+        {props.length > 0 && <PropsSection />}
+        {cssPrefix && <CSSVariablesSection />}
+        {/* {sourceLink && <FeedbackSection />} */}
+      </React.Fragment>
+    );
+  });
   return (
     <React.Fragment>
       <SkipToContent href="#main-content">Skip to Content</SkipToContent>
       <SideNavLayout
         location={location}
-        context={source}
-        parityComponent={parityComponent}
-        showBanner={showBanner}
-        showGdprBanner={showGdprBanner}
-        showFooter={showFooter}
-        pageTitle={pageContext.title}
+        // context={source}
+        // showBanner={showBanner}
+        // showGdprBanner={showGdprBanner}
+        // showFooter={showFooter}
+        pageTitle={pageContext[source].title}
       >
         <PageSection id="main-content" className="ws-section">
-          <TableOfContents />
-
-          {/* Wrap in div for :last-child CSS selectors */}
-          <div>
-            <MDXContent />
-          </div>
-
-          {props.length > 0 && <PropsSection />}
-          {cssPrefix && <CSSVariablesSection />}
-          {/* {sourceLink && <FeedbackSection />} */}
-        </PageSection>
+          {combinedComponent}
+          </PageSection>
       </SideNavLayout>
     </React.Fragment>
-  );
+  )
 }
 
 export default MDXTemplate;
