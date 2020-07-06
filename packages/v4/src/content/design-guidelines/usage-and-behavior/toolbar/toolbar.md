@@ -83,14 +83,17 @@ The basic toolbar is sufficient for most cases. The example above shows the tool
 
 **Toolbar with pagination**
 <img src="./img/basic-toolbar-pagination.png"  alt="basic toolbar with pagination"  width="1210"/>
+
 When pagination is used, the pagination component replaces the item count. It should be the right-most element. Here, the toolbar is shown with both full and compact pagination options.
 
 **Toolbar with an icon group**
 <img src="./img/basic-toolbar-icons.png"  alt="basic toolbar with an icon group"  width="1210"/>
+
 To save space, you may represent some actions as icons. Use an icon group to provide the proper spacing between icons. Here, sort and export actions are represented as icons. The icon group should always be placed after the filters and before any global actions represented by buttons, if they exist.
 
 **Custom toolbar**
 <img src="./img/custom-toolbar.png"  alt="custom toolbar layout"  width="1210"/>
+
 The Toolbar component is extremely flexible and you can create custom toolbar layouts by working with items, groups, and spacers. Here, a custom toolbar with three labeled filters is created by paring a text label and a Select component. Items are spaced by 16px by default but here the spacing to the right of each Select filter has been modified to 24px to help better group each filter with its related label.
 
 ### Placement in a page
