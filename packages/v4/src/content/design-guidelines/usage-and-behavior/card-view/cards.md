@@ -37,6 +37,7 @@ Use a card:
 
 <img src="./img/dashboard.png"  alt="card view with charts"  width="990"/> 
 <br />
+<br />
 Do NOT use a card to show a dense amount of repetitive, related content. Use a list or table view instead.
 
 
