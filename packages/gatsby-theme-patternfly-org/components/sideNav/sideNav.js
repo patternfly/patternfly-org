@@ -59,7 +59,6 @@ export const SideNav = ({
 
     return accum;
   }, {});
-  console.log('sideNavContexts: ', sideNavContexts);
 
   const sideNavItems = ['react', 'core'].includes(context)
     ? combineCoreReactNavs(sideNavContexts.react, sideNavContexts.core)
@@ -71,9 +70,7 @@ export const SideNav = ({
         {sideNavItems.map(navItem => {
           const { section } = navItem;
           const isActive = location.pathname.includes(`/${slugger(section)}/`);
-          console.log(sideNavItems, section, allNavItems, allNavItems[section]);
           if (section && allNavItems[section]) {
-            console.log('YES');
             return (
               <NavExpandable
                 key={section}
@@ -83,7 +80,7 @@ export const SideNav = ({
                 className="ws-side-nav-group"
               >
                 {allNavItems[section]
-                  .filter(node => node.source === context || node.source === 'shared')
+                  .filter(node => node.source === context || node.source === 'shared' || node.source === 'react' || node.source === 'core')
                   .map(renderNavItem)}
               </NavExpandable>
             );

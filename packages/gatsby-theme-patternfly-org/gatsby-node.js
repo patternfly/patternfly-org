@@ -358,6 +358,7 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
           componentData.slug = componentData.slug || slug.replace(/\/(core|react)\//, '/');
           componentData.source = componentData.source || source;
           componentData.navSection = componentData.navSection || "components";
+          componentData.title = title;
           
           // Create per-example fullscreen pages for documentation pages
           if (['core', 'react'].includes(source)) {
