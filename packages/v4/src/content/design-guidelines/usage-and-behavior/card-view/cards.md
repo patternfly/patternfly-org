@@ -37,12 +37,8 @@ Use a card:
 
 <img src="./img/dashboard.png"  alt="card view with charts"  width="990"/> 
 
-Do NOT use a card:
-- Behind a component, like a data table or a list, when it's the only section on the page. (But when there are both cards and tables on the page, you can separate the page using cards.) 
-- If there will be only a single card on your page with a component in it, like a table or a list. Instead, add a component to your page without putting it in a card.
-- To show a dense amount of repetitive, related content. Use a list or table view instead.
+Do NOT use a card to show a dense amount of repetitive, related content. Use a list or table view instead.
 
-<img src="./img/table-no-card.png"  alt="table view"  width="990"/> 
 
 ## Card views 
 A **card view** is a grid of cards that displays a small to moderate amount of content. 
