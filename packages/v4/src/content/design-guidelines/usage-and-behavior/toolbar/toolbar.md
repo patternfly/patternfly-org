@@ -56,7 +56,7 @@ A search filter is intended to be used with a filter group as shown below when y
 ### Toggle groups
 A toggle group can be used when you want to collapse a set of items into an overlay panel at a certain breakpoint. This allows complex toolbars with multiple items and groups of items to be responsive. A toggle group is useful for containing filter controls, for example. When the toolbar responds to adapt to a mobile viewport, the contents contained in a toggle group will collapse into an overlay panel that can be toggled by clicking the Filter icon.
 
-![Toolbar with toggle group](./img/mobile-basic.png)
+<img src="./img/toggle-group.png" alt="toolbar with filters hidden in a toggle group" width="514" />
 
 ### Vertical dividers
 When you have a large toolbar containing many groups of items, use a vertical divider to further separate the groups visually.
@@ -105,22 +105,19 @@ For simple list and table views that are placed inside of an enclosing card, the
 
 Note that there should be no spacers on the left and right edges of the toolbar as the toolbar provides its own padding.
 
-## The toolbar on mobile devices
+## The toolbar on mobile
 
-The toolbar adapts to smaller viewport sizes by collapsing or hiding elements that take significant space, including filters and actions. On mobile devices, when used, pagination will be available from the footer, only.
+The toolbar adapts to smaller viewport sizes by collapsing or hiding elements that take significant space, including filters and actions. On mobile devices, when used, pagination will be available from the footer, only. When designing toolbars to be responsive:
 
-![responsive1](./img/responsive-closed.png)
-![responsive2](./img/responsive-open.png)
+* Place filter controls in a [Toggle group](#Toggle-groups) so they will be hidden in a collapsible panel at mobile breakpoints.
+* Use an [Overflow menu](#Overflow-menu) to collapse actions into a kabob menu.
 
-![Toolbar with expanded toggle group](./img/mobile-expanded.png)
+The following is an example of a complex toolbar optimized for mobile.
 
-![toolbar with overflow menu](./img/basic-toolbar-nocallout.png)
+<img src="./img/toolbar-filters-mobile.png"  alt="toolbar with filters and actions hidden on mobile"  width="1308"/>
 
-![toolbar with overflow collapsed](./img/mobile-basic-copy.png)
+Here, the search filter and filter group containing three drop-down filters are placed in a toggle group that collapsed when the screen shrinks to mobile size. The two action button are part of an overflow menu that collapses to a single kabob menu. The bulk selector and sort icon button are implemented as toolbar items that remain visible at all breakpoints.
 
-In the above example, when the viewport size is reduced both the filter controls, contained in a toggle group, and the global actions, contained in an overflow menu, collapse to minimize the space required by the toolbar.
-
-**Update this. Where did the sort icon come from?**
 
 ## Related components and demos
 **Core HTML/CSS**
