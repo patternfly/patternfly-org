@@ -36,7 +36,7 @@ Use a card:
 - To make media such as images and videos easier to scan.  
 
 <img src="./img/dashboard.png"  alt="card view with charts"  width="990"/> 
-
+<br />
 Do NOT use a card to show a dense amount of repetitive, related content. Use a list or table view instead.
 
 
