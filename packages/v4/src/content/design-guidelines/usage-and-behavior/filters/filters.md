@@ -219,9 +219,9 @@ The option to clear all filters will be displayed after the last filter chip. It
 * [Input group](/documentation/core/components/inputgroup)
 * [Options menus](/documentation/core/components/optionsmenu)
 * [Select](/documentation/core/components/select)
-* [Data Toolbar (beta)](/documentation/core/components/toolbar#component-title)
+* [Toolbar](/documentation/core/components/toolbar)
 
 **React**
 * [Badges](/documentation/react/components/badge)
 * [Chip group](/documentation/react/components/chipgroup)
-* [Data Toolbar (beta)](/documentation/react/components/toolbar)
+* [Toolbar](/documentation/react/components/toolbar)

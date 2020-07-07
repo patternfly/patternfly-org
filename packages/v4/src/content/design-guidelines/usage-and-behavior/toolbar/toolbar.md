@@ -142,14 +142,14 @@ The toolbar adapts to smaller viewport sizes by collapsing or hiding elements th
 
 ## Related components and demos
 **Core HTML/CSS**
-* [Data Toolbar (beta)](/documentation/core/components/toolbar#component-title)
-* [Overflow menu (beta)](/documentation/core/components/overflowmenu/#component-title)
+* [Toolbar](/documentation/core/components/toolbar)
+* [Overflow menu](/documentation/core/components/overflowmenu)
 * [Chip](/documentation/core/components/chip)
 * [Chip group](/documentation/core/components/chipgroup)
 * [Pagination](/documentation/core/components/pagination)
 
 **React**
-* [Data Toolbar (beta)](/documentation/react/components/toolbar)
-* [Overflow menu (beta)](/documentation/react/components/overflowmenu/#component-title)
+* [Toolbar](/documentation/react/components/toolbar)
+* [Overflow menu](/documentation/react/components/overflowmenu)
 * [Chip group](/documentation/react/components/chipgroup)
 * [Pagination](/documentation/react/components/pagination)

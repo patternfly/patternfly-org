@@ -55,9 +55,9 @@ Note: To hide integrated bulk selection and enable selection control from the to
 
 ### Core HTML/CSS
 * [Split button](/documentation/core/components/dropdown#split-button-checkbox)
-* [Data toolbar (beta)](/documentation/core/components/datatoolbar)
+* [Toolbar](/documentation/core/components/toolbar)
 
 ### React
 * [Split button](/documentation/react/components/dropdown#split-button)
-* [Data toolbar (beta)](/documentation/react/components/datatoolbar)
+* [Toolbar](/documentation/react/components/toolbar)
 * [Bulk select table demo](/documentation/react/demos/bulkselecttable)
