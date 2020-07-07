@@ -24,7 +24,7 @@ Think of each row in a data list as a container for some formatted content. In P
 * **[Grid](/documentation/react/layouts/grid):** When you want to display content in a responsive grid.
 * **[Level](/documentation/react/layouts/level):** When you want to justify content evenly over the width of the row. It also vertically aligns items in the center of the row.
 * **[Split](/documentation/react/layouts/split):** When you want to distribute content evenly with a main content area in the center.
-* **[Flex](/documentation/react/layouts/flex#component-title):** When you want a custom layout and more control over the alignment and spacing provided in the other layouts.
+* **[Flex](/documentation/react/layouts/flex):** When you want a custom layout and more control over the alignment and spacing provided in the other layouts.
 
 ### Compact and default data list
 PatterFly supports two main types of data lists:
@@ -39,13 +39,13 @@ See [when to use compact vs. default spacing](#when-to-use-compact-vs-default-sp
 ### Data list elements
 The elements mentioned below are similar for a data list with compact or default spacing. The example shows a data list with a compact spacing. See [when to use compact vs. default spacing](#when-to-use-compact-vs-default-spacing) for more information about the styling and usage. 
 
-<img src="./img/compact-list.png"  alt="Compact data list"  width="1174"/> 
+<img src="./img/compact-list.png"  alt="Compact data list"  width="1188"/> 
 
 1. **[Toolbar](/design-guidelines/usage-and-behavior/toolbar):** The toolbar sits above the list and contains controls for manipulating list data. Common actions include filtering, sorting, and pagination.
 2. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](#/design-guidelines/usage-and-behavior/bulk-selection) for more information.
 3. **Row:** Row height may be variable and sizes to the content. Rows in a data list may take any supported layout.
-4. **Inline actions:** These actions apply only to the current row/item.
-5. **Select checkbox:** Selects this row.
+4. **Select checkbox:** Selects this row.
+5. **Inline actions:** These actions apply only to the current row/item.
 6. **Global actions:** Actions that apply to all selected items.
 7. **Pagination footer:** When present, provides navigation to additional pages.
 
@@ -114,7 +114,7 @@ See [when to use compact vs. default spacing](#when-to-use-compact-vs-default-sp
 ### Table elements
 The elements mentioned below are similar for a table with compact or default spacing. The example shows a table with a compact spacing. See [when to use compact vs. default spacing](#when-to-use-compact-vs-default-spacing) for more information about the styling and usage. 
 
-<img src="./img/compact-data-table.png"  alt="Compact table"  width="1187"/> 
+<img src="./img/compact-data-table.png"  alt="Compact table"  width="1186"/> 
 
 1. **[Toolbar](/design-guidelines/usage-and-behavior/toolbar):** Sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
 2. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](#/design-guidelines/usage-and-behavior/bulk-selection) for more information.
@@ -142,7 +142,7 @@ Every table can be extended with these functionalities:
 
 ### Expandable table
 
-<img src="./img/expandable-data-table.png"  alt="Expandable table"  width="1174"/> 
+<img src="./img/expandable-data-table.png"  alt="Expandable table"  width="1175"/> 
 
 1. **Expansion:** Expands the row
 2. **Expansion panel:** Contains details associated with a row
@@ -200,22 +200,37 @@ If a table contains these three attributes: (System Name | Last Sync | Severity)
 ## When to use compact vs. default spacing
 Whether to use a table/data list with compact or default spacing is up to you and your use case. However, here is some guidance for when to use which option. You can see examples of each option for comparison. 
 
-<img src="./img/compact-spacing.png"  alt="Compact spacing"  width="1190"/> 
+### Compact spacing 
+A table or data list may sometimes need to be compact to make more rows visible at a time. The more rows you can see, the less you need to use [pagination](/design-guidelines/usage-and-behavior/pagination). Compact spacing is recommended for data with a simple structure. See an [example](#Compact-spacing) below. 
 
 Use compact spacing when:
 * You need to show as much data as possible on one page.
 * You need to show data in a small space. For example in modal or wizard.
 * You need to minimize paging.
+* Readability is a secondary concern.
 
-<img src="./img/default-spacing.png"  alt="Default spacing"  width="1190"/> 
+<img src="./img/compact-spacing.png"  alt="Compact spacing"  width="1162"/> 
+
+Example: 
+* You can see more data on one page. 
+* You have a good overview about the structure of data.
+* The structure of data is simple, informative and have less visual elements. 
+
+### Default spacing 
+A table or data list may sometimes need more space for rich graphical data. See an [example](#Default-spacing) below.
 
 Use default spacing when:
 * You don’t have to display a lot of data on one page.
-* You use many visual indicators that are placed in columns, such as icons or charts. 
+* You use many visual indicators that are placed in columns, such as icons or charts.
+* You don't have to minimize paging.
+* Readability is a primary concern. 
 
-### Examples
+<img src="./img/default-spacing.png"  alt="Default spacing"  width="1162"/> 
 
-
+Example:
+* You can see less data on one page. 
+* You will need a pagination to see more rows.
+* Data structure includes many visual elements. 
 
 ## Tables on mobile
 The PatternFly table is designed to be fully responsive. When columns no longer fit within the width of the viewport, columns are stacked so that data in each row is displayed as sets of attribute-value pairs.
@@ -227,7 +242,7 @@ Lists and tables should be placed in the body of a page. The width should be set
 
 <img src="./img/data-table-example.png"  alt="Compact data table example"  width="1501"/> 
 
-In this example, a table is positioned in the body of a page.
+In this example, a table is positioned in the body of a page in a card.
 
 ## Components and demos used
 
