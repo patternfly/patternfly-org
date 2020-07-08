@@ -3,7 +3,8 @@ import { Helmet } from 'react-helmet';
 import './fullscreen.css';
 
 const FullscreenHTMLTemplate = ({ pageContext }) => {
-  const { wrapperTag: WrapperTag, title, code } = pageContext;
+  const { title, code } = pageContext;
+  const WrapperTag = pageContext.wrapperTag || 'main';
   return (
     <WrapperTag className="ws-site-root">
       <Helmet>

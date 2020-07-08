@@ -24,8 +24,8 @@ const getSupportedLanguages = className => {
 
 // This component uses hooks in order to call useMDXScope()
 export const Example = props => {
-  const html = props.html
-    ? props.html
+  const html = (props.html && props.html.code)
+    ? props.html.code
     : 'This is a hbs code block, but no html trickled down from gatsby-node.js to mdx.js to example.js';
   const supportedLangs = getSupportedLanguages(props.className);
   const initialLang = supportedLangs[0];

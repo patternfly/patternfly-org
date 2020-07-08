@@ -212,7 +212,8 @@ const MDXTemplate = ({ data, location, pageContext }) => {
     const MDXContent = () => (
       <MDXProvider components={{
         ...commonComponents,
-        code: props =>
+        code: props => {
+          return (
           <Example
             location={location}
             source={source}
@@ -221,6 +222,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
             navSection={navSection}
             componentName={componentName}
             {...props} />
+          )}
       }}>
         <MDXRenderer>
           {node.body}
