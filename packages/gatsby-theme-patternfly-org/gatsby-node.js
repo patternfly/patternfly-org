@@ -150,6 +150,7 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
             title
             propComponents
             componentName
+            wrapperTag
           }
         }
       }
@@ -311,7 +312,7 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
         };
         
         component.nodes.forEach(node => {
-          const { componentName, slug, navSection = null, title, source, propComponents = [''] } = node.fields;
+          const { componentName, slug, navSection = null, title, source, propComponents = [''], wrapperTag } = node.fields;
           const fileRelativePath = path.relative(__dirname, node.absolutePath || node.fileAbsolutePath);
           let sourceLink = 'https://github.com/patternfly/';
           if (source === 'react') {
