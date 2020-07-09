@@ -3,6 +3,7 @@ import { Title } from '@patternfly/react-core';
 import { LinkIcon } from '@patternfly/react-icons';
 import { slugger } from '../../helpers/slugger';
 import './autoLinkHeader.css';
+import { uniqueId } from "lodash";
 
 // "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl"
 const sizes = {
@@ -23,10 +24,10 @@ export const AutoLinkHeader = ({
   ...props
 }) => {
   const slug = slugger(children);
-
+  
   return (
     <Title
-      id={slug}
+      id={uniqueId(slug + '-')}
       size={sizes[size]}
       headingLevel={headingLevel || size}
       {...props}>
