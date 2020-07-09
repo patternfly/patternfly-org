@@ -23,10 +23,10 @@ export const AutoLinkHeader = ({
   ...props
 }) => {
   const slug = slugger(children);
-
+  
   return (
     <Title
-      id={slug}
+      id={_.uniqueId(slug + '-')}
       size={sizes[size]}
       headingLevel={headingLevel || size}
       {...props}>
