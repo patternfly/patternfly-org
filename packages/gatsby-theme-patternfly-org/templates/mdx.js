@@ -123,7 +123,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
               style={{ marginBottom: '1rem' }}
               isInline
             >
-              We'll be up and running in a bit, so check back soon. Thanks!
+              The embedded version of our tutorials are broken, but you can still access our tutorials on <a href="https://www.katacoda.com/patternfly">Katacoda.com</a>
             </Alert>
           )}
           {/* Design docs should not apply to demos and overview */}
