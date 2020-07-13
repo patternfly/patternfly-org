@@ -116,7 +116,7 @@ Should you use a wizard or a form to solve this problem? How do you write a good
 How do you write great microcopy and text for your user interface? Read our content guidelines for general principles, guidance on voice, and a style guide to help you with everything from capitalization to date and time formats.
 View content guidelines
 
-[**View content guidelines**](https://www.patternfly.org/v4/design-guidelines/content/writing) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**View content guidelines**](https://www.patternfly.org/v4/design-guidelines/content/about) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 
 
