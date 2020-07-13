@@ -23,8 +23,8 @@ Cards are flexible, and you can customize them in a variety of ways:
 
 ## Card types 
 PatternFly supports two types of cards: 
-1. **Compact (recommended)**: Compact cards use 16px spacing with an 8px spacer between the header and body and 16px between the body and footer.
-2. **Large**: Large cards use 24px spacing with a 16px spacer between the header and body and 24px between the body and footer.  
+1. **Compact (recommended):** Compact cards use 16px spacing with an 8px spacer between the header and body and 16px between the body and footer.
+2. **Standard:** Standard cards use 24px spacing with a 16px spacer between the header and body and 24px between the body and footer.
 
 <img src="./img/card-types.png"  alt="compact and standard card types"  width="779"/> 
 
@@ -116,20 +116,3 @@ If your card view has multiple pages, add a footer with pagination.
 Related components and demos: 
 - [HTML/CSS card view](https://www.patternfly.org/v4/documentation/core/demos/cardview) 
 - [React card view](https://www.patternfly.org/v4/documentation/react/components/card)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
