@@ -9,6 +9,8 @@ import { TrainingCard } from 'gatsby-theme-patternfly-org/components';
 
 ## Fundamentals
 
+These are fundamentals.
+
 <Gallery gutter="md">
   <GalleryItem>
     <TrainingCard
