@@ -119,7 +119,7 @@ export const SideNavLayout = ({
         apiKey: '06941733239da4f8617d272cf2ed4d5c',
         indexName: 'patternfly',
         inputSelector: '#global-search-input',
-        debug: false, // Set debug to true if you want to inspect the dropdown
+        debug: true, // Set debug to true if you want to inspect the dropdown
         /*
         handleSelected: function(input, event, suggestion, datasetNumber, context) {
           // Prevents the default behavior on click and rather opens the suggestion
@@ -224,6 +224,7 @@ export const SideNavLayout = ({
             action="#"
             onSubmit={event => {
               event.preventDefault();
+              console.log('form');
               const inputField = document.activeElement;
               inputField.blur();
               return false;
@@ -243,6 +244,11 @@ export const SideNavLayout = ({
                 backgroundColor: 'var(--pf-global--BackgroundColor--dark-100)',
                 border: 0,
                 paddingLeft: '26px'
+              }}
+              onBlur={event => {
+                event.preventDefault();
+                event.stopPropagation();
+                console.log('input');
               }}
             />
             <SearchIcon
