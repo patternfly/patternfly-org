@@ -1,5 +1,5 @@
 ---
-title: Card
+title: Cards
 section: usage and behavior
 hideTOC: true
 showTitle: true
@@ -111,7 +111,7 @@ Only include meaningful images on your cards (don’t add them for decoration). 
 ### Bottom pagination 
 If your card view has multiple pages, add a footer with pagination. 
 
-<img src="./img/card-view-bottom-toolbar.png"  alt="card view with sticky bottom toolbar"  width="1440"/> 
+<img src="./img/card-view-sticky-toolbar.png"  alt="card view with sticky bottom toolbar"  width="1440"/> 
 
 Related components and demos: 
 - [HTML/CSS card view](https://www.patternfly.org/v4/documentation/core/demos/cardview) 
