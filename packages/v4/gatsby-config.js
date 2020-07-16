@@ -252,7 +252,8 @@ module.exports = {
               ignoreFileExtensions: []
             }
           },
-        ]
+        ],
+        rehypePlugins: [require('gatsby-theme-patternfly-org/helpers/codeTitleTransformer')]
       }
     },
     // For Algogia global doc search
