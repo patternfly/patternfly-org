@@ -38,7 +38,7 @@ module.exports = {
         else {
           // Starting from node, look up for h3s
           let startLooking = false;
-          for(let i = parent.children.length - 1; i > 0; i--) {
+          for (let i = parent.children.length - 1; i > 0; i--) {
             const child = parent.children[i];
             if (child === node) {
               startLooking = true;
@@ -50,7 +50,7 @@ module.exports = {
                 child.children && 
                 child.children[0].value
               ) {
-                id = child.children[0].value;
+                id = getId(child.children[0].value);
                 break;
               }
             }

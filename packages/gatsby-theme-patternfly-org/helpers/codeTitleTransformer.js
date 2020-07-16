@@ -7,7 +7,7 @@ function exampleCaptions() {
         return;
       }
       const codeNode = node.children[0];
-      if (codeNode.tagName !== 'code') {
+      if (codeNode.tagName !== 'code' || codeNode.properties.title) {
         return;
       }
       let title = 'Untitled example';
@@ -28,9 +28,6 @@ function exampleCaptions() {
             title = child.children[0].value;
             parent.children.splice(i, 1);
             break;
-          }
-          else {
-            parent.children.splice(i, 1);
           }
         }
       }
