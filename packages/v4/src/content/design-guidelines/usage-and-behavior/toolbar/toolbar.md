@@ -9,7 +9,7 @@ Toolbars can be included to allow a user to manage and manipulate a data set. Da
 
 ## Elements
 
-The toolbar is a container for holding a variety of elements (toolbar items and groups) that are used to manipulate a set of data. All items should be centered vertically within the toolbar. There is a 24px of padding before and after the toolbar content.
+The toolbar is a container for holding a variety of elements (toolbar items and groups) that are used to manipulate a set of data. All items should be centered vertically within the toolbar.
 
 <img src="./img/toolbar-spacing.png"  alt="basic toolbar with 16px spacing"  width="1210"/>
 
@@ -28,7 +28,7 @@ Toolbar items are individual components that can be placed inside of a toolbar. 
 #### Search filter
 <img src="./img/search-filter.png" alt="search filter" width="355" />
 
-A search filter is intended to be used with a filter group as shown below when you want to include a single search field together with one or more select filters. It include an 8px spacer to the right of the item to enforce association with other filters. See the [Filters](design-guidelines/usage-and-behavior/filters) documentation for more information about using filters.
+A search filter is intended to be used with a filter group as shown below when you want to include a single search field together with one or more select filters. It includes an 8px spacer to the right of the item to enforce association with other filters. See the [Filters](design-guidelines/usage-and-behavior/filters) documentation for more information about using filters.
 
 <img src="./img/toolbar-multiple-filters.png" alt="toolbar with a search filter and filter group" width="1210" />
 
@@ -84,7 +84,7 @@ The basic toolbar is sufficient for most cases. The example above shows the tool
 **Toolbar with pagination**
 <img src="./img/basic-toolbar-pagination.png"  alt="basic toolbar with pagination"  width="1210"/>
 
-When pagination is used, the pagination component replaces the item count. It should be the right-most element. Here, the toolbar is shown with both full and compact pagination options.
+When pagination is used, the pagination component replaces the item count. It should be the right-most element. Here, the toolbar is shown with both full and compact pagination options. Compact pagination consumes less horizontal space and is the recommend choice unless your application requires more precise control over paging options (like the ability to navigate to a specific page).
 
 **Toolbar with an icon group**
 <img src="./img/basic-toolbar-icons.png"  alt="basic toolbar with an icon group"  width="1210"/>
@@ -119,7 +119,7 @@ The following is an example of a complex toolbar optimized for mobile.
 
 <img src="./img/toolbar-filters-mobile.png"  alt="toolbar with filters and actions hidden on mobile"  width="1308"/>
 
-Here, the search filter and filter group containing three drop-down filters are placed in a toggle group that collapsed when the screen shrinks to mobile size. The two action button are part of an overflow menu that collapses to a single kabob menu. The bulk selector and sort icon button are implemented as toolbar items that remain visible at all breakpoints.
+Here, the search filter and filter group containing three drop-down filters are placed in a toggle group that collapsed when the screen shrinks to mobile size. The two action buttons are part of an overflow menu that collapses to a single kabob menu. The bulk selector and sort icon button are implemented as toolbar items that remain visible at all breakpoints.
 
 
 ## Related components and demos
