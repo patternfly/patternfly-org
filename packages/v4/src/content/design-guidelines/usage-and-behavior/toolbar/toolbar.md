@@ -84,7 +84,7 @@ The basic toolbar is sufficient for most cases. The example above shows the tool
 **Toolbar with pagination**
 <img src="./img/basic-toolbar-pagination.png"  alt="basic toolbar with pagination"  width="1210"/>
 
-When pagination is used, the pagination component replaces the item count. It should be the right-most element. Here, the toolbar is shown with both full and compact pagination options. Compact pagination consumes less horizontal space and is the recommend choice unless your application requires more precise control over paging options (like the ability to navigate to a specific page).
+When pagination is used, the pagination component replaces the item count. It should be the right-most element. Here, the toolbar is shown with both full and compact pagination options. Compact pagination consumes less horizontal space and is the recommended choice unless your application requires more precise control over paging options (like the ability to navigate to a specific page).
 
 **Toolbar with an icon group**
 <img src="./img/basic-toolbar-icons.png"  alt="basic toolbar with an icon group"  width="1210"/>
