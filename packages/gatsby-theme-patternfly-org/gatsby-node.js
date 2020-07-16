@@ -62,7 +62,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const source = parent.sourceInstanceName;
     const componentName = path.basename(node.fileAbsolutePath, '.md');
 
-    let { section = 'root', id: title, propComponents = [''], wrapperTag = 'main' } = node.frontmatter;
+    let { section = 'root', id, title, propComponents = [''], wrapperTag = 'main' } = node.frontmatter;
+    title = id || title;
     // Source determines sideNav context and some features like context switcher
     createNodeField({
       node,
@@ -219,7 +220,7 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => graphql(`
           .replace(/patternfly-(react|next)\//, '');
         // Process the MDX AST to dynamically create a TOC and per-example fullscreen pages
         const tableOfContents = extractTableOfContents(node.mdxAST);
-        const examples = extractExamples(node.mdxAST);
+        const examples = extractExamples(node.mdxAST, hbsInstance, fileRelativePath);
 
         // Not a huge fan of this component mapping disaster
         const designNode = result.data.designSnippets.nodes.find(
