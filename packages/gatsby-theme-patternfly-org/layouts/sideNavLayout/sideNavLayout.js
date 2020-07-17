@@ -221,7 +221,7 @@ export const SideNavLayout = ({
         <PageHeaderToolsItem>
           {/* We can afford to use style tags because this is only on the site ONCE */}
           <Form
-            action="#"
+            action=""
             onSubmit={event => {
               event.preventDefault();
               console.log('form');
