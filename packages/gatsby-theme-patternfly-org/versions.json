@@ -1,9 +1,26 @@
 {
   "Releases": [
     {
+      "name": "2020.09",
+      "date": "2020-07-17",
+      "latest": true,
+      "versions": {
+        "@patternfly/patternfly": "4.23.3",
+        "@patternfly/react-catalog-view-extension": "4.5.1",
+        "@patternfly/react-charts": "6.6.0",
+        "@patternfly/react-core": "4.32.1",
+        "@patternfly/react-icons": "4.5.0",
+        "@patternfly/react-inline-edit-extension": "4.5.28",
+        "@patternfly/react-styles": "4.5.0",
+        "@patternfly/react-table": "4.12.1",
+        "@patternfly/react-tokens": "4.6.0",
+        "@patternfly/react-topology": "4.4.30",
+        "@patternfly/react-virtualized-extension": "4.5.20"
+      }
+    },
+    {
       "name": "2020.08",
       "date": "2020-06-24",
-      "latest": true,
       "versions": {
         "@patternfly/patternfly": "4.16.7",
         "@patternfly/react-catalog-view-extension": "4.4.8",
