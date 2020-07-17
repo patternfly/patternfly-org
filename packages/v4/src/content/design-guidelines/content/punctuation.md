@@ -64,13 +64,27 @@ Use an **en dash ( – )** to separate numbers in a series.
 Example:
 We plan on having 100–150 attendees.
 
-Use a **hyphen ( - )** for compound adjectives or words, names, and titles. You should also use a hyphen for certain prefixes, like “ex.”
+Use a **hyphen ( - )**  if it's part of a term (such as "walk-through") or someone's name (such as "Mary-Jane").  
 
-Examples:
-- My name is Mary-Jane.
-- They write high-quality content.
-- She is self-assured.
-- He is my ex-husband.
+Use a **hyphen ( - )** for a compound adjective that comes before the noun it modifies, but omit the hyphen if the first adjective ends in "-ly."  
+
+Examples: 
+- I like when my documentation is up to date. 
+- I write up-to-date documentation. 
+- He is a highly talented writer. 
+- She is a high-quality job candidate.    
+
+Do NOT use a **hyphen ( - )** for most prefixes, specifically the following: 
+
+- auto- (autopopulate; autoloading)
+- Pre- (prerequisite) 
+- Re-  (recreate)
+- Sub- (submerge)
+
+Exception: Use a hyphen ( - ) for prefixes when adding a modifer prefix like “non," such as "non-Red Hatter."
+
+Unsure about hyphenation for other terms? Refer to [Merriam-Webster's online dictionary](https://www.merriam-webster.com/)
+
 
 ## Exclamation mark
 Use exclamation marks sparingly. Don’t use one to generate excitement; only use an exclamation mark if the user is actually experiencing something exciting. You can also use an exclamation mark for something cautionary, like “Stop!” or “Watch out!”
