@@ -1,6 +1,7 @@
 import React, { useLayoutEffect } from 'react';
 import { LiveProvider, LiveEditor, LivePreview, LiveError } from 'react-live';
 import { Badge } from '@patternfly/react-core';
+import * as PatternflyReactCore from '@patternfly/react-core';
 import { useMDXScope } from 'gatsby-plugin-mdx/context';
 import { ExampleToolbar } from './exampleToolbar';
 import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
@@ -30,7 +31,7 @@ export const Example = props => {
   const supportedLangs = getSupportedLanguages(props.className);
   const initialLang = supportedLangs[0];
   const initialCode = props.children.toString();
-  const { noLive, title = 'no title', isFullscreen = false, isBeta = false, location, children, navSection, componentName } = props;
+  const { noLive, title = 'Untitled example', isFullscreen = false, isBeta = false, location, children, navSection, componentName } = props;
 
   // https://reactjs.org/docs/hooks-overview.html#state-hook
   const [editorCode, setEditorCode] = React.useState(initialLang === 'html' ? html : initialCode);
@@ -56,7 +57,10 @@ export const Example = props => {
   }
   const exampleName = title.replace(/-/g, ' ').replace(/  /g, '-');
   const fullscreenLink = `${location.pathname}/${slugger(title.toLowerCase())}`;
-  const scope = useMDXScope();
+  const scope = {
+    ...PatternflyReactCore,
+    ...useMDXScope()
+  };
   const codeBoxParams = getParameters(
     props.html
     ? getStaticParams(props.title, html)

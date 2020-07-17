@@ -62,7 +62,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const source = parent.sourceInstanceName;
     const componentName = path.basename(node.fileAbsolutePath, '.md');
 
-    let { section = 'root', title, propComponents = [''], wrapperTag = 'main' } = node.frontmatter;
+    let { section = 'root', id, title, propComponents = [''], wrapperTag = 'main' } = node.frontmatter;
+    title = id || title;
     // Source determines sideNav context and some features like context switcher
     createNodeField({
       node,
