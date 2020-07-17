@@ -33,6 +33,7 @@ module.exports = {
 
         let match = node.meta.match(/title=(\S*)/);
         if (match) {
+          console.log('match', match);
           id = getId(match[1]);
         }
         match = node.meta.match(/wrapperTag=(\S*)/);
