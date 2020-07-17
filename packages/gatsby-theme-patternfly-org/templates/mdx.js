@@ -222,7 +222,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
         <Example
           location={location}
           source={source}
-          html={props.title && htmlExamples && htmlExamples[getId(props.title)].code}
+          html={props.title && htmlExamples && htmlExamples[getId(props.title)] && htmlExamples[getId(props.title)].code}
           hideDarkMode={hideDarkMode}
           navSection={navSection}
           componentName={componentName}
