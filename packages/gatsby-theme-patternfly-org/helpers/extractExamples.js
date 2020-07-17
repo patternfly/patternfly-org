@@ -33,32 +33,34 @@ module.exports = {
 
         let match = node.meta.match(/title=(\S*)/);
         if (match) {
+          console.log('match', match);
           id = getId(match[1]);
-        }
-        else {
-          // Starting from node, look up for h3s
-          let startLooking = false;
-          for (let i = parent.children.length - 1; i > 0; i--) {
-            const child = parent.children[i];
-            if (child === node) {
-              startLooking = true;
-            }
-            else if (startLooking) {
-              if (
-                child.type === 'heading' &&
-                child.depth === 3 &&
-                child.children && 
-                child.children[0].value
-              ) {
-                id = getId(child.children[0].value);
-                break;
-              }
-            }
-          }
         }
         match = node.meta.match(/wrapperTag=(\S*)/);
         if (match) {
           wrapperTag = match[1].toLowerCase();
+        }
+      }
+
+      if (id === 'no-id') {
+        // Starting from node, look up for h3s
+        let startLooking = false;
+        for (let i = parent.children.length - 1; i >= 0; i--) {
+          const child = parent.children[i];
+          if (child === node) {
+            startLooking = true;
+          }
+          else if (startLooking) {
+            if (
+              child.type === 'heading' &&
+              child.depth === 3 &&
+              child.children && 
+              child.children[0].value
+            ) {
+              id = getId(child.children[0].value);
+              break;
+            }
+          }
         }
       }
 

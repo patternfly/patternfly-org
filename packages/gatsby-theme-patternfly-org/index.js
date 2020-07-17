@@ -4,7 +4,8 @@
 // We can't include these in gatsby-node since we aren't gatsby-mdx
 exports.mdxTypeDefs = `
   type MdxFrontmatter @dontInfer {
-    title: String!
+    id: String!
+    title: String
     section: String
     cssPrefix: String
     hideTOC: Boolean
