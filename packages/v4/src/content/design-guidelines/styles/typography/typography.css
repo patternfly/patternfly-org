@@ -107,3 +107,7 @@
       max-width: 680px;
   }
 }
+
+.ws-spacing-values > div > div:last-child {
+  margin-left: var(--pf-global--spacer--sm);
+}

@@ -65,7 +65,7 @@ Use our typographic styles to communicate visual hierarchy. A consistent and log
 ## Spacing
 <div style={{marginBottom: '32px'}}>The spacing of the content comes into play with line height too. It represents the margins that are padded on top and bottom of the text itself. When creating specs, it is important to use these spacers to communicate the appropriate spacing for each type of text.</div>
 
-<div style={{display: 'flex', marginBottom: '32px'}}>
+<div style={{display: 'flex', marginBottom: '32px'}} className="ws-spacing-values">
   <Spacer size="8" color="8" description="8px" />
   <Spacer size="16" color="16" description="16px" />
   <Spacer size="24" color="24" description="24px" />
