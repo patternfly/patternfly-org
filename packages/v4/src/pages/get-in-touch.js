@@ -6,7 +6,7 @@ import "./get-in-touch.css";
 
 const GetInTouch = ({ location }) => {
   return (
-  <SideNavLayout location={location} hideSideNav showGdprBanner={true} pageTitle="Get in touch">
+  <SideNavLayout location={location} hideSideNav showGdprBanner={true} pageTitle="Get in touch" showFooter={true}>
     <PageSection
       variant={PageSectionVariants.light}
       className="ws-section ws-get-in-touch"
