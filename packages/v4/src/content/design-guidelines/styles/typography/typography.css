@@ -10,6 +10,10 @@
   margin-top: 24px;
 }
 
+.ws-typography-code-font + div {
+  font-family: var(--pf-global--FontFamily--monospace) !important;
+}
+
 .table-typography {
   background-color: transparent;
 }
