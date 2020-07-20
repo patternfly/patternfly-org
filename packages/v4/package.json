@@ -5,6 +5,7 @@
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
+    "build": "webpack --mode production",
     "develop": "webpack-dev-server --mode development",
     "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4"
   },

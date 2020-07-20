@@ -18,7 +18,7 @@ module.exports = (_env, argv) => {
   return {
     entry: './src/app.js',
     output: {
-      path: path.resolve('dist'),
+      path: path.resolve('public'),
       filename: '[name].[contenthash:8].bundle.js'
     },
     devtool: isDev ? 'cheap-module-source-map' : 'source-map',
@@ -52,7 +52,7 @@ module.exports = (_env, argv) => {
               plugins: [
                 '@babel/plugin-transform-react-jsx',
                 '@babel/plugin-proposal-class-properties',
-                ...(isDev && [require.resolve('react-refresh/babel')])
+                ...(isDev ? [require.resolve('react-refresh/babel')] : [])
               ],
             }
           },
