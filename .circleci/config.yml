@@ -90,8 +90,8 @@ jobs:
         paths: 
         - build
   build_v4:
-    machine:
-      image: circleci/node:12
+    docker:
+    - image: circleci/node:12
     steps:
     - checkout
     - restore_cache:
