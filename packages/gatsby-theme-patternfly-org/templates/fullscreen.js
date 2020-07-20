@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { LiveProvider, LivePreview } from 'react-live';
-import { useMDXScope } from 'gatsby-plugin-mdx/context';
 import * as PatternflyReactCore from '@patternfly/react-core';
 import { transformCode } from '../helpers/transformCode';
 import './fullscreen.css';
@@ -9,8 +8,7 @@ import './fullscreen.css';
 const FullscreenMDXTemplate = ({ pageContext }) => {
   const { wrapperTag: WrapperTag, title, code } = pageContext;
   const scope = {
-    ...PatternflyReactCore,
-    ...useMDXScope()
+    ...PatternflyReactCore
   };
   return (
     <LiveProvider

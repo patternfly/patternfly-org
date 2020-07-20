@@ -5,7 +5,7 @@ katacodaBroken: true
 ---
 
 import { Gallery, GalleryItem } from '@patternfly/react-core';
-import { TrainingCard } from 'gatsby-theme-patternfly-org/components';
+import { TrainingCard } from 'theme-patternfly-org/components';
 
 ## Fundamentals
 

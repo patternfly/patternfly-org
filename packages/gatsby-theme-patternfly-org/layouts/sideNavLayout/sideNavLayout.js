@@ -1,11 +1,4 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
 import React, { useEffect, useState } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 import {
@@ -25,7 +18,7 @@ import {
 } from '@patternfly/react-core';
 import { SearchIcon, CaretDownIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
 import { SideNav, TopNav,  Footer, GdprBanner } from '../../components';
-import staticVersions from 'gatsby-theme-patternfly-org/versions.json';
+import staticVersions from 'theme-patternfly-org/versions.json';
 import logo from '../logo.svg';
 import './sideNavLayout.css';
 
@@ -42,69 +35,9 @@ export const SideNavLayout = ({
   // Put queries for Top and Side navs here for performance
   // We should consider passing down the `sitePlugin` data in pageContext
   // rather than fetching the GraphQL here
-  const data = useStaticQuery(graphql`
-  {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    prInfo: envVars(name: { eq: "PR_INFO" }) {
-      num
-      url
-    }
-    allSitePage(filter: { context: { navSection: { ne: null } } },
-                sort: { fields: context___title }) {
-      nodes {
-        path
-        context {
-          title
-          navSection
-          source
-        }
-      }
-    }
-    sitePlugin(name: { eq: "gatsby-theme-patternfly-org" }) {
-      pluginOptions {
-        context
-        topNavItems {
-          text
-          path
-          contexts
-        }
-        sideNav {
-          core {
-            section
-            text
-            path
-          }
-          react {
-            section
-            text
-            path
-          }
-          get_started {
-            section
-            text
-            path
-          }
-          design_guidelines {
-            section
-            text
-            path
-          }
-          contribute {
-            section
-            text
-            path
-          }
-        }
-      }
-    }
-  }
-  `);
-  const { title } = data.site.siteMetadata;
-  const { num, url } = data.prInfo;
+  const data = {};
+  const title = 'title';
+  const { num, url } = { num: 0, url: 'github.com' };
   const { topNavItems, sideNav, context: pageSource } = data.sitePlugin.pluginOptions;
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [versions, setVersions] = useState({...staticVersions});

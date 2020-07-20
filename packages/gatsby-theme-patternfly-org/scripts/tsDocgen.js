@@ -147,7 +147,6 @@ function getInterfaceMetadata(fileNode, sourceText) {
     return interfaces;
 }
 
-// Docs https://www.gatsbyjs.org/docs/actions/#createNode
 async function onCreateNode({ node, actions, loadNodeContent, createNodeId, createContentDigest }) {
   if (!isComponentCode(node)) return;
 
@@ -162,8 +161,6 @@ async function onCreateNode({ node, actions, loadNodeContent, createNodeId, crea
         name: parsed.displayName,
         relativePath: node.relativePath,
         description: parsed.description,
-        // React-docgen gives props as an object like { propName: { propDetails } }
-        // Our interface (and what Gatsby uses) gives props as an array like [ { name: propName, ...propDetails } ]
         props: Array.isArray(parsed.props) ? parsed.props : flattenProps(parsed.props).map(addAnnotations),
         path: node.relativePath,
         basePath: node.relativePath.split('/')[0],

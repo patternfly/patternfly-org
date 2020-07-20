@@ -1,7 +1,4 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
-import { MDXProvider } from '@mdx-js/react';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 import {
   Alert,
   Badge,
@@ -31,7 +28,7 @@ const getSourceTitle = source => {
   }
 }
 
-const MDXTemplate = ({ data, location, pageContext }) => {
+export const MDXTemplate = ({ data, location, pageContext }) => {
   if (location.state && location.state.trainingType && location.state.katacodaId) {
     return (
       <TrainingLayout
@@ -45,7 +42,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
   const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner, showGdprBanner, showFooter, sourceLink } = pageContext;
   const props = data.props && data.props.nodes && propComponents
     ? propComponents
-      .filter(name => name !== '') // Filter default entry we make for GraphQL schema
+      .filter(name => name !== '')
       .map(name => {
         const propTable = data.props.nodes.find(node => node.name === name);
         if (!propTable) {
@@ -216,22 +213,9 @@ const MDXTemplate = ({ data, location, pageContext }) => {
   );
 
   const MDXContent = () => (
-    <MDXProvider components={{
-      ...commonComponents,
-      code: props =>
-        <Example
-          location={location}
-          source={source}
-          html={props.title && htmlExamples && htmlExamples[getId(props.title)] && htmlExamples[getId(props.title)].code}
-          hideDarkMode={hideDarkMode}
-          navSection={navSection}
-          componentName={componentName}
-          {...props} />
-    }}>
-      <MDXRenderer>
-        {data.doc.body}
-      </MDXRenderer>
-    </MDXProvider>
+    <div>
+      MDX Content
+    </div>
   );
 
   const FeedbackSection = () => {
@@ -276,68 +260,3 @@ const MDXTemplate = ({ data, location, pageContext }) => {
     </React.Fragment>
   );
 }
-
-export default MDXTemplate;
-
-export const pageQuery = graphql`
-  query MdxDocsPage($id: String!, $designId: String!, $propComponents: [String]!) {
-    doc: mdx(id: { eq: $id }) {
-      body
-      frontmatter {
-        cssPrefix
-        hideTOC
-        optIn
-        beta
-        katacodaBroken
-        hideDarkMode
-        showTitle
-        releaseNoteTOC
-        hideSource
-      }
-      fields {
-        navSection
-        componentName
-      }
-    }
-    designDoc: mdx(id: { eq: $designId }) {
-      body
-      frontmatter {
-        reactComponentName
-        coreComponentName
-      }
-    }
-    partials: allFile(filter: { fields: { name: { ne: null } } }) {
-      nodes {
-        fields {
-          name
-          partial
-        }
-      }
-    }
-    props: allComponentMetadata(filter: { name: { in: $propComponents, ne: null } }) {
-      nodes {
-        name
-        props {
-          beta
-          katacodaBroken
-          name
-          required
-          description
-          type {
-            name
-          }
-          tsType {
-            name
-            raw
-          }
-          defaultValue {
-            value
-          }
-          deprecated
-          hide
-          annotatedType
-        }
-      }
-    }
-  }
-`;

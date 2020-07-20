@@ -2,7 +2,6 @@ import React, { useLayoutEffect } from 'react';
 import { LiveProvider, LiveEditor, LivePreview, LiveError } from 'react-live';
 import { Badge } from '@patternfly/react-core';
 import * as PatternflyReactCore from '@patternfly/react-core';
-import { useMDXScope } from 'gatsby-plugin-mdx/context';
 import { ExampleToolbar } from './exampleToolbar';
 import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
 import { getParameters } from 'codesandbox/lib/api/define';
@@ -23,11 +22,7 @@ const getSupportedLanguages = className => {
   return ['unknown'];
 }
 
-// This component uses hooks in order to call useMDXScope()
 export const Example = props => {
-  const html = props.html
-    ? props.html
-    : 'This is a hbs code block, but no html trickled down from gatsby-node.js to mdx.js to example.js';
   const supportedLangs = getSupportedLanguages(props.className);
   const initialLang = supportedLangs[0];
   const initialCode = props.children.toString();
@@ -58,8 +53,7 @@ export const Example = props => {
   const exampleName = title.replace(/-/g, ' ').replace(/  /g, '-');
   const fullscreenLink = `${location.pathname}/${slugger(title.toLowerCase())}`;
   const scope = {
-    ...PatternflyReactCore,
-    ...useMDXScope()
+    ...PatternflyReactCore
   };
   const codeBoxParams = getParameters(
     props.html
