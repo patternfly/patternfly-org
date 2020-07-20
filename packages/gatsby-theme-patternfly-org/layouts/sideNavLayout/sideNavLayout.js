@@ -36,7 +36,7 @@ export const SideNavLayout = ({
   // We should consider passing down the `sitePlugin` data in pageContext
   // rather than fetching the GraphQL here
   const data = {};
-  const { title } = 'title';
+  const title = 'title';
   const { num, url } = { num: 0, url: 'github.com' };
   const { topNavItems, sideNav, context: pageSource } = data.sitePlugin.pluginOptions;
   const [isDropdownOpen, setDropdownOpen] = useState(false);
