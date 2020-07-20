@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link } from 'theme-patternfly-org/components';
 import { Nav, NavList, NavExpandable, DropdownToggle, DropdownItem, Dropdown } from '@patternfly/react-core';
-import { CaretDownIcon } from '@patternfly/react-icons';
 import { slugger, capitalize } from '../../helpers';
 import "./sideNav.css";
 

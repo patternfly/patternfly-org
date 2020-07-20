@@ -10,7 +10,7 @@ import {
     Text,
     TextVariants
 } from "@patternfly/react-core";
-import { Link } from "gatsby";
+import { Link } from 'theme-patternfly-org/components';
 import { GithubIcon, TwitterIcon } from "@patternfly/react-icons";
 import redhatLogo from "./RHLogo.png";
 import "./footer.css";

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link } from 'theme-patternfly-org/components';
 import { SideNavLayout } from 'theme-patternfly-org/layouts';
 import {
   Flex,

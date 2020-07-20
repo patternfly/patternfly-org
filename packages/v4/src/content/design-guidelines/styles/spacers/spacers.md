@@ -4,7 +4,7 @@ section: styles
 hideTOC: true
 showTitle: true
 ---
-import { Link } from 'gatsby';
+import { Link } from 'theme-patternfly-org/components';
 import './spacers.css';
 
 

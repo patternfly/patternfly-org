@@ -4,7 +4,7 @@ section: styles
 hideSource: true
 ---
 import { Alert, Grid, GridItem, Divider } from '@patternfly/react-core';
-import { Link } from 'gatsby';
+import { Link } from 'theme-patternfly-org/components';
 import { ColorSwatch } from './ColorSwatch';
 import { ColorFamily } from './ColorFamily';
 import './colors.css';

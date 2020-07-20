@@ -9,3 +9,4 @@ export * from './propsTable/propsTable';
 export * from './sideNav/sideNav';
 export * from './topNav/topNav';
 export * from './trainingCard/trainingCard';
+export * from './link/link';
