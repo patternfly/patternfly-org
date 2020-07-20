@@ -7,11 +7,12 @@ export const PfStyledText = ({ children, variableName, fontWeight, lineHeight, f
   </div>
 );
 
-export const TitleLevel = ({ asGrid, styleProps, children, title = '', note = '' }) => {
+export const TitleLevel = ({ asGrid, styleProps, children, title = '', note = '', className = '' }) => {
   return asGrid ? (
     <TypographyGrid 
       title={title} 
       note={note}
+      className={className}
       {...styleProps}
     />
   ) : (
@@ -86,9 +87,9 @@ export const styleProps = {
   }
 }
 
-export const TypographyGrid = ({title, note, symbol, fontWeight, fontWeightText, fontSize, variableName, lineHeight, fontFamily}) => (
+export const TypographyGrid = ({title, note, symbol, fontWeight, fontWeightText, fontSize, variableName, lineHeight, fontFamily, className}) => (
   <React.Fragment>
-    <h3 className="ws-title">{title} {symbol && <span className="ws-typography-gridTitleSymbol">{symbol}</span>}</h3>
+    <h3 className={className ? `ws-title ${className}` : 'ws-title'}>{title} {symbol && <span className="ws-typography-gridTitleSymbol">{symbol}</span>}</h3>
     <PfStyledText fontFamily={fontFamily} fontWeight={fontWeight} variableName={variableName} lineHeight={lineHeight}>
       Design is where science and art break even.
     </PfStyledText>
