@@ -1,5 +1,4 @@
 export * from './autoLinkHeader/autoLinkHeader';
-export * from './commonComponents/commonComponents';
 export * from './cssVariables/cssVariables';
 export * from './cssVariables/cssSearch';
 export * from './example/example';

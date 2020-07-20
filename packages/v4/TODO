@@ -2,7 +2,7 @@
 - [ ] Manifest w/ favicons for mobile
   - theme_color: '#151515'
   - icon: require.resolve('gatsby-theme-patternfly-org/images/patternfly-logo.svg')
-- [ ] <html lang="en-us">
+- [x] <html lang="en-us">
 - [ ] root tag heights 100%
 - [ ] Sitemap
 - [ ] CLI + hot reload

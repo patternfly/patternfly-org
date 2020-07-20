@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "develop": "yarn develop:v4",
-    "develop:v4": "yarn workspace patternfly-org-4 develop -p 8003",
+    "develop:v4": "yarn workspace patternfly-org-4 develop",
     "build": "yarn build:v4",
     "build:v3": "yarn workspace patternfly-org-3 build && yarn copy:v3",
     "build:v4": "yarn workspace patternfly-org-4 build:prefix && yarn copy:v4",

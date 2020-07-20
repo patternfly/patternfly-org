@@ -5,12 +5,14 @@
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
+    "develop": "webpack-dev-server --mode development",
     "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4"
   },
   "dependencies": {
     "@patternfly/react-docs": "5.6.5",
     "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react-dom": "^16.8.0",
+    "theme-patternfly-org": "0.0.1"
   },
   "devDependencies": {
     "@patternfly/patternfly-a11y": "^0.0.17",
