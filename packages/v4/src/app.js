@@ -7,7 +7,7 @@ import '../patternfly-docs.css.js';
 
 function App() {
   return (
-    <Router>
+    <Router basepath={process.env.NODE_ENV === 'production' ? '/v4' : '/'}>
       <HomePage path="/" layoutOptions={LayoutOptions} />
       <GetInTouchPage path="/get-in-touch" layoutOptions={LayoutOptions} />
     </Router>

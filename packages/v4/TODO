@@ -24,3 +24,4 @@
       href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" 
     />
   ]);
+- [x] Path prefix of `/v4`

@@ -103,7 +103,7 @@ module.exports = (_env, argv) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './src/index.html'
+        template: './src/index.html',
       }),
       new MiniCssExtractPlugin({
         filename: '[name].[contenthash].css',
@@ -116,6 +116,9 @@ module.exports = (_env, argv) => {
           { from: path.join(pfDir, 'assets/images/'), to: 'assets/images/' },
           { from: path.join(pfDir, 'assets/fonts/'), to: 'assets/fonts/' }
         ]
+      }),
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': isDev ? '"development"' : '"production"'
       }),
       ...(isDev
         ? [
