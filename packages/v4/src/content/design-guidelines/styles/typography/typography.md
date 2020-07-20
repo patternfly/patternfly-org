@@ -39,7 +39,8 @@ Use typography to create visual hierarchy. A consistent and logical hierarchy ma
   title="Tiny text*"
   note="*Not to be used in content blocks (only used with data visualizations when 14px is not small enough)"
   styleProps = {styleProps.tiny} />
-  <TitleLevel 
+<TitleLevel
+  className="ws-typography-code-font"
   asGrid 
   title="Code*"
   note="*Used for code blocks "
