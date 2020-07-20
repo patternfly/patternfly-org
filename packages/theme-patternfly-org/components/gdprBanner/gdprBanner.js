@@ -4,11 +4,11 @@ import { TimesIcon } from '@patternfly/react-icons';
 import './gdprBanner.css';
 
 export const GdprBanner = () => {
-  const initialBannerOpen = typeof window !== 'undefined' && sessionStorage && !sessionStorage.getItem('gdpr-banner-closed');
+  const initialBannerOpen = typeof window !== 'undefined' && localStorage && !localStorage.getItem('gdpr-banner-closed');
   const [ isBannerOpen, setBannerOpen ] = React.useState(initialBannerOpen);
   
   const closeBanner = () => {
-    sessionStorage.setItem('gdpr-banner-closed', 'true');
+    localStorage.setItem('gdpr-banner-closed', 'true');
     setBannerOpen(false);
   }
 

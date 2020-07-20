@@ -26,9 +26,8 @@ import './home.css';
 const aboutPatternFly = `Hello, we're PatternFly.`;
 const patternFlyPrinciples = 'Flyer fundamentals';
 
-export const HomePage = ({ location }) => {
-  return (
-  <SideNavLayout location={location} hideSideNav showGdprBanner={true} showBanner={true} showFooter={true}>
+export const HomePage = ({ location, layoutOptions }) => (
+  <SideNavLayout location={location} hasGdprBanner {...layoutOptions}>
     <PageSection
       variant={PageSectionVariants.light}
       className="pf4-c-background-image ws-homepage-main-section"
@@ -38,10 +37,10 @@ export const HomePage = ({ location }) => {
           <TextContent>
             <img src={orb} alt="PatternFly logo" className="fadeInDown animated fadeInOne" />
             <Title headingLevel="h1" size="4xl" className="pf-m-white pf4-site-c-hero fadeIn animated fadeInTwo">
-              Build scalable experiences in the&nbsp;open.
+              Build scalable experiences in the open.
             </Title>
             <Title size="xl" headingLevel="h2" className="pf-m-white pf-u-mb-md pf-u-mb-3xl-on-md fadeInUp animated fadeInThree">
-              PatternFly is an open source design system built to drive consistency and&nbsp;unify&nbsp;teams.
+              PatternFly is an open source design system built to drive consistency and unify teams.
             </Title>
             <div className="pf-u-display-flex pf-u-justify-content-center pf-u-flex-direction-column pf-u-flex-direction-row-on-md">
               <Link
@@ -288,4 +287,4 @@ export const HomePage = ({ location }) => {
       </Grid>
     </PageSection>
   </SideNavLayout>
-)};
+);

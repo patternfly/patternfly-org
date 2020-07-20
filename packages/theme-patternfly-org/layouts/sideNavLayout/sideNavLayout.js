@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
-
 import {
   Page,
   PageHeader,
@@ -16,76 +14,16 @@ import {
   DropdownGroup,
   Divider
 } from '@patternfly/react-core';
-import { SearchIcon, CaretDownIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
-import { SideNav, TopNav,  Footer, GdprBanner } from '../../components';
-import staticVersions from 'theme-patternfly-org/versions.json';
+import { SearchIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
+import { SideNav, TopNav, Footer, GdprBanner } from '../../components';
+import staticVersions from '../../versions.json';
 import logo from '../logo.svg';
 import './sideNavLayout.css';
 
-export const SideNavLayout = ({
-  children,
-  location,
-  context,
-  parityComponent, // aboutmodal <=> aboutmodalbox
-  hideSideNav = false,
-  showGdprBanner = false,
-  showFooter = false,
-  pageTitle = ''
-}) => {
-  // Put queries for Top and Side navs here for performance
-  // We should consider passing down the `sitePlugin` data in pageContext
-  // rather than fetching the GraphQL here
-  const data = {};
-  const title = 'title';
-  const { num, url } = { num: 0, url: 'github.com' };
-  const { topNavItems, sideNav, context: pageSource } = data.sitePlugin.pluginOptions;
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const [versions, setVersions] = useState({...staticVersions});
+const getHeaderTools = (versions, hasVersionSwitcher, hasSearch) => {
   const initialVersion = staticVersions.Releases.find(release => release.latest);
-
-  useEffect(() => {
-    if (typeof window === 'undefined') {
-      return;
-    }
-    if (window.docsearch) {
-      window.docsearch({
-        apiKey: '06941733239da4f8617d272cf2ed4d5c',
-        indexName: 'patternfly',
-        inputSelector: '#global-search-input',
-        debug: false // Set debug to true if you want to inspect the dropdown
-      });
-    }
-    if (window.fetch && pageSource === 'org') {
-      fetch('/versions.json')
-        .then(data => data.json())
-        .then(json => setVersions(json))
-        .catch(); // No big deal for core/react
-    }
-  }, []);
-
-  const SideBar = hideSideNav
-    ? undefined
-    : <PageSidebar
-        className="ws-page-sidebar"
-        theme="light"
-        nav={<SideNav
-          location={location}
-          context={context}
-          pageSource={pageSource}
-          allPages={data.allSitePage.nodes}
-          sideNavContexts={sideNav}
-          parityComponent={parityComponent} />}
-          />;
-
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
   const latestVersion = versions.Releases.find(version => version.latest);
-  const dropdownToggle = (
-    <DropdownToggle
-      className={`ws-org-version-toggle${isDropdownOpen ? '-expanded': ''}`}
-      onToggle={() => setDropdownOpen(!isDropdownOpen)}
-    >
-      Release {initialVersion.name}
-    </DropdownToggle>
-  );
   const getDropdownItem = version => (
     <DropdownItem
       key={version.name}
@@ -99,40 +37,48 @@ export const SideNavLayout = ({
         </a>
       } />
   );
-  const dropdownItems = [
-    <DropdownGroup key="latest" label="Latest">
-      {getDropdownItem(latestVersion)}
-    </DropdownGroup>,
-    <DropdownGroup key="Previous" label="Previous releases">
-      {Object.values(versions.Releases)
-        .filter(version => !version.hidden && !version.latest)
-        .slice(0,3)
-        .map(getDropdownItem)}
-    </DropdownGroup>,
-    <Divider key="divider" className="ws-switcher-divider"/>,
-    <DropdownItem
-      key="PatternFly 3"
-      className="ws-patternfly-3"
-      target="_blank"
-      href="https://www.patternfly.org/v3"
-    >
-      PatternFly 3
-      <ExternalLinkAltIcon />
-    </DropdownItem>
-  ];
 
-  const PageTools = pageSource === 'org'
-    ? (
-      <PageHeaderTools>
+  return (
+    <PageHeaderTools>
+      {hasVersionSwitcher && (
         <PageHeaderToolsItem>
           <Dropdown
             className="ws-org-version-switcher"
             onSelect={() => setDropdownOpen(!isDropdownOpen)}
-            toggle={dropdownToggle}
+            toggle={(
+              <DropdownToggle
+                className={`ws-org-version-toggle${isDropdownOpen ? '-expanded': ''}`}
+                onToggle={() => setDropdownOpen(!isDropdownOpen)}
+              >
+                Release {initialVersion.name}
+              </DropdownToggle>
+            )}
             isOpen={isDropdownOpen}
-            dropdownItems={dropdownItems}
+            dropdownItems={[
+              <DropdownGroup key="latest" label="Latest">
+                {getDropdownItem(latestVersion)}
+              </DropdownGroup>,
+              <DropdownGroup key="Previous" label="Previous releases">
+                {Object.values(versions.Releases)
+                  .filter(version => !version.hidden && !version.latest)
+                  .slice(0,3)
+                  .map(getDropdownItem)}
+              </DropdownGroup>,
+              <Divider key="divider" className="ws-switcher-divider"/>,
+              <DropdownItem
+                key="PatternFly 3"
+                className="ws-patternfly-3"
+                target="_blank"
+                href="https://www.patternfly.org/v3"
+              >
+                PatternFly 3
+                <ExternalLinkAltIcon />
+              </DropdownItem>
+            ]}
           />
         </PageHeaderToolsItem>
+      )}
+      {hasSearch && (
         <PageHeaderToolsItem>
           {/* We can afford to use style tags because this is only on the site ONCE */}
           <Form
@@ -165,47 +111,77 @@ export const SideNavLayout = ({
               }} />
           </Form>
         </PageHeaderToolsItem>
-      </PageHeaderTools>
-    )
-    : undefined;
+      )}
+    </PageHeaderTools>
+  );
+}
 
-  let headerTitle = title;
-  if (pageSource === 'org') {
-    headerTitle = <Brand src={logo} alt="Patternfly Logo" />;
-  } else if (num) {
-    headerTitle = `PR #${num}`;
-  }
-  
+export const SideNavLayout = ({
+  children,
+  location,
+  hideSideNav = false,
+  hasGdprBanner = false,
+  hasFooter = false,
+  hasSearch = false,
+  hasVersionSwitcher = false,
+  sideNavItems,
+  idPages,
+  topNavItems = [],
+  prnum = null,
+  prurl
+}) => {
+  const [versions, setVersions] = useState({ ...staticVersions });
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    if (hasSearch && window.docsearch) {
+      window.docsearch({
+        apiKey: '06941733239da4f8617d272cf2ed4d5c',
+        indexName: 'patternfly',
+        inputSelector: '#global-search-input',
+        debug: false // Set debug to true if you want to inspect the dropdown
+      });
+    }
+    if (hasVersionSwitcher && window.fetch) {
+      fetch('/versions.json')
+        .then(d => d.json())
+        .then(json => setVersions(json))
+        .catch(); // No big deal for core/react
+    }
+  }, []);
+
+  const SideBar = !hideSideNav && (
+    <PageSidebar
+      className="ws-page-sidebar"
+      theme="light"
+      nav={<SideNav location={location} sideNavItems={sideNavItems} idPages={idPages} />}
+    />
+  );
+
   const Header = (
     <PageHeader
       className="ws-page-header"
-      headerTools={PageTools}
-      logo={headerTitle}
-      logoProps={{
-        href: url || '/'
-      }}
+      headerTools={(hasSearch || hasVersionSwitcher) && getHeaderTools(versions, hasSearch, hasVersionSwitcher)}
+      logo={prnum ? `PR #${prnum}` : <Brand src={logo} alt="Patternfly Logo" />}
+      logoProps={{ href: prurl || '/' }}
       showNavToggle={!hideSideNav}
-      topNav={<TopNav
-        location={location}
-        context={context}
-        navItems={topNavItems} />}
+      topNav={<TopNav location={location} navItems={topNavItems} />}
     />
   );
 
   // Wrap in a div to force scrolling the same content
   // TODO: SEO
   return (
-    <div className="ws-side-nav-layout">
-      <Helmet>
-        <title>{title}{pageTitle && ` - ${pageTitle}`}</title>
-      </Helmet>
+    <div className="ws-page-layout">
       <div id="ws-page-banners">
-        {showGdprBanner && <GdprBanner />}
+        {hasGdprBanner && <GdprBanner />}
       </div>
-      <Page isManagedSidebar header={Header} sidebar={SideBar} className="ws-page">
+      <Page className="ws-page" header={Header} sidebar={SideBar} isManagedSidebar>
         {children}
       </Page>
-      {showFooter && <Footer />}
+      {hasFooter && <Footer />}
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from '@reach/router';
 import { HomePage, GetInTouchPage } from './pages';
-import * as LayoutOptions from '../patternfly-docs.config.js';
+import LayoutOptions from '../patternfly-docs.config.js';
 import '../patternfly-docs.css.js';
 
 function App() {
