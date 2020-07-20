@@ -47,15 +47,15 @@ workflows:
   install_build_deploy:
     jobs:
     - install
-    # - build_v4:
-    #     requires:
-    #     - install
+    - build_v4:
+        requires:
+        - install
     - build_v3:
         requires:
         - install
     - deploy:
         requires:
-        # - build_v4
+        - build_v4
         - build_v3
         filters:
           branches:
