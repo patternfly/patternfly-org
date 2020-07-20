@@ -1,5 +1,5 @@
 import React from 'react';
-import { SideNavLayout } from 'gatsby-theme-patternfly-org/layouts';
+import { SideNavLayout } from 'theme-patternfly-org/layouts';
 import { ChatIcon, QuestionIcon, CatalogIcon, MailBulkIcon } from '@patternfly/react-icons';
 import { Grid, GridItem, PageSection, PageSectionVariants, Split, SplitItem, Title } from '@patternfly/react-core';
 import "./get-in-touch.css";

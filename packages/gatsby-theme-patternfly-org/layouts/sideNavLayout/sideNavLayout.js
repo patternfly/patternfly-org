@@ -25,7 +25,7 @@ import {
 } from '@patternfly/react-core';
 import { SearchIcon, CaretDownIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
 import { SideNav, TopNav,  Footer, GdprBanner } from '../../components';
-import staticVersions from 'gatsby-theme-patternfly-org/versions.json';
+import staticVersions from 'theme-patternfly-org/versions.json';
 import logo from '../logo.svg';
 import './sideNavLayout.css';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { SideNavLayout } from 'gatsby-theme-patternfly-org/layouts';
+import { SideNavLayout } from 'theme-patternfly-org/layouts';
 import {
   Flex,
   FlexItem,
@@ -20,7 +20,7 @@ import modular from '../images/modular.svg';
 import scale from '../images/scale.svg';
 import consistent from '../images/consistent.svg';
 import open from '../images/open.svg';
-import { AutoLinkHeader } from 'gatsby-theme-patternfly-org/components/autoLinkHeader/autoLinkHeader';
+import { AutoLinkHeader } from 'theme-patternfly-org/components/autoLinkHeader/autoLinkHeader';
 import './homepage.css';
 
 const aboutPatternFly = `Hello, we're PatternFly.`;
