@@ -3,8 +3,8 @@ id: Punctuation
 section: UX writing
 ---
 
-## Ampersand
-Avoid using ampersands, and use "and" instead.
+## Ampersand (&)
+Avoid using ampersands (&), and use "and" instead.
 
 ## Referring to text in the UI
 Use bold text (not quotation marks) when referring to an element or text in the UI.
