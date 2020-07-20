@@ -75,6 +75,14 @@ export const styleProps = {
     variableName: "--pf-global--FontSize--xs",
     lineHeight: "1.5",
     fontFamily: "RedHatText"
+  },
+  code: {
+    fontWeight: "400",
+    fontWeightText: "400 (regular)",
+    fontSize: "16px",
+    variableName: "--pf-global--FontSize--md",
+    lineHeight: "1.5",
+    fontFamily: "Liberation Mono"
   }
 }
 
