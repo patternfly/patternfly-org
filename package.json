@@ -25,8 +25,7 @@
     "packages": [
       "packages/v3",
       "packages/v4",
-      "packages/gatsby-theme-patternfly-org",
-      "packages/gatsby-transformer-react-docgen-typescript"
+      "packages/theme-patternfly-org"
     ]
   },
   "devDependencies": {
