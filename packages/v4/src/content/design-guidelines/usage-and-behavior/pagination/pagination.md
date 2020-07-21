@@ -8,7 +8,7 @@ Pagination splits data across multiple pages, typically within a table, list, or
 
 Add pagination above and below content views so users can easily navigate as they read through listed items on a page.
 
-![top-bottom-pagination](./img/top-bottom-pagination.png)
+<img src="./img/full-page.png" alt="Example of pagination on full page table" width="990"/>
 
 **1. Top pagination:** Always right-align pagination in the top toolbar, above content views.
 
@@ -24,7 +24,7 @@ Desktop and mobile views connect with the same breakpoint specifications. On mob
 
 Desktop full pagination in toolbar
 
-![full-pagination](./img/full-pagination.png)
+<img src="./img/full-pagination.png" alt="Example of full pagination" width="990"/>
 
 **1. Items in view:** Allows the user to select the item count (number of listed items) per page.
 
@@ -32,7 +32,7 @@ Desktop full pagination in toolbar
 
 Mobile full pagination in toolbar
 
-![mobile-pagination](./img/mobile-pagination.png)
+<img src="./img/mobile-pagination.png" alt="Example of pagination on mobile table view" width="375"/>
 
 **1. Items in view:** At this screen size, the top toolbar only shows the item count to indicate items currently in view. It hides all other pagination controls. 
 
@@ -44,7 +44,7 @@ Compact pagination fits more actions into top toolbars with limited space. Choos
 
 Desktop compact pagination in toolbar
 
-![compact-pagination](./img/compact-pagination.png)
+<img src="./img/compact-pagination.png" alt="Example of compact pagination" width="990"/>
 
 **1. Items in view:** Allows the user to select the item count (number of listed items) per page, as seen in full pagination.
 
