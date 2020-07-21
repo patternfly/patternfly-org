@@ -75,7 +75,7 @@ For example, if a body of text uses a line height of 1.5 and the body text size 
 <div style={{marginBottom: '32px'}}>Spacing represents margins above and below text. Use spacers to provide appropriate spacing for each type of text. Text leading should be 1.5 times larger than text size.
 </div>
 
-<div style={{display: 'flex', marginBottom: '32px'}}>
+<div className="pf-l-flex pf-m-space-items-md pf-m-column pf-m-row-on-sm pf-u-mb-xl">
   <Spacer size="8" color="8" description="8px" />
   <Spacer size="16" color="16" description="16px" />
   <Spacer size="24" color="24" description="24px" />
