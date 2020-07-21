@@ -128,7 +128,8 @@ export const SideNavLayout = ({
   idPages,
   topNavItems = [],
   prnum = null,
-  prurl
+  prurl,
+  pathPrefix
 }) => {
   const [versions, setVersions] = useState({ ...staticVersions });
 
@@ -165,7 +166,7 @@ export const SideNavLayout = ({
       className="ws-page-header"
       headerTools={(hasSearch || hasVersionSwitcher) && getHeaderTools(versions, hasSearch, hasVersionSwitcher)}
       logo={prnum ? `PR #${prnum}` : <Brand src={logo} alt="Patternfly Logo" />}
-      logoProps={{ href: prurl || '/' }}
+      logoProps={{ href: prurl || pathPrefix }}
       showNavToggle={!hideSideNav}
       topNav={<TopNav location={location} navItems={topNavItems} />}
     />

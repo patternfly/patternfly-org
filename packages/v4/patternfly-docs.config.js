@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/v4',
   hasGdprBanner: true,
   hasFooter: true,
   hasSearch: true,

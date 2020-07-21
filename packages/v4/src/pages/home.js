@@ -39,13 +39,12 @@ export const HomePage = ({ location, layoutOptions }) => (
             <Title headingLevel="h1" size="4xl" className="pf-m-white pf4-site-c-hero fadeIn animated fadeInTwo">
               Build scalable experiences in the open.
             </Title>
-            <Title size="xl" headingLevel="h2" className="pf-m-white pf-u-mb-md pf-u-mb-3xl-on-md fadeInUp animated fadeInThree">
+            <Text className="pf-c-title pf-m-xl pf-m-white pf-u-mb-md pf-u-mt-lg pf-u-mb-3xl-on-md fadeInUp animated fadeInThree">
               PatternFly is an open source design system built to drive consistency and unify teams.
-            </Title>
+            </Text>
             <div className="pf-u-display-flex pf-u-justify-content-center pf-u-flex-direction-column pf-u-flex-direction-row-on-md">
               <Link
                 to="/get-started/about"
-                type="button"
                 className="pf-c-button pf4-c-button__cta-primary pf-u-mr-0 pf-u-mb-md pf-u-mb-0-on-md pf-u-mr-xl-on-md fadeIn animated fadeInFour"
                 aria-label="Get started with PatternFly"
               >
@@ -53,7 +52,6 @@ export const HomePage = ({ location, layoutOptions }) => (
               </Link>
               <Link
                 to="/contribute/about"
-                type="button"
                 className="pf-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour"
                 aria-label="Contribute to PatternFly"
               >
@@ -150,10 +148,10 @@ export const HomePage = ({ location, layoutOptions }) => (
               </TextContent>
             </GridItem>
             <GridItem sm={12} md={6}>
-              <div type="image/svg+xml" className="pf4-c-image__laptop" aria-label="laptop image" />
-              <div type="image/svg+xml" className="pf4-c-image__phone" aria-label="phone image" />
-              <div type="image/svg+xml" className="pf4-c-image__screen" aria-label="screen image" />
-              <div type="image/svg+xml" className="pf4-c-image__desktop" aria-label="desktop image" />
+              <div className="pf4-c-image__laptop" aria-hidden />
+              <div className="pf4-c-image__phone" aria-hidden />
+              <div className="pf4-c-image__screen" aria-hidden />
+              <div className="pf4-c-image__desktop" aria-hidden />
             </GridItem>
           </Grid>
         </GridItem>
@@ -163,9 +161,9 @@ export const HomePage = ({ location, layoutOptions }) => (
       <Grid gutter="md" className="pf-u-py-3xl">
         <GridItem sm={12} md={6} mdOffset={3} className="pf-u-text-align-center">
           <TextContent>
-            <Text component={TextVariants.h1} className="pf-u-mb-4xl pf-m-white pf-u-text-align-center" id="patternfly-principles">
+            <Title headingLevel="h2" size="4xl" className="pf-u-mb-4xl pf-m-white pf-u-text-align-center" id="patternfly-principles">
               {patternFlyPrinciples}
-            </Text>
+            </Title>
             <Text component={TextVariants.p} className="ws-mdx-p">
               Every Flyer is unique, with different ideas and opinions. But there are some things we all agree on. These are our Flyer fundamentals.
             </Text>
@@ -182,7 +180,7 @@ export const HomePage = ({ location, layoutOptions }) => (
                     <img
                       className="ws-principles-img"
                       src={modular}
-                      alt="PatternFly 4 modular"
+                      aria-hidden
                     />
                   </FlexItem>
                   <FlexItem>
@@ -199,7 +197,7 @@ export const HomePage = ({ location, layoutOptions }) => (
                     <img
                     className="ws-principles-img"
                     src={accessible}
-                    alt="PatternFly 4 accessible"
+                    aria-hidden
                   />
                   </FlexItem>
                   <FlexItem>
@@ -216,7 +214,7 @@ export const HomePage = ({ location, layoutOptions }) => (
                     <img
                       className="ws-principles-img"
                       src={consistent}
-                      alt="PatternFly 4 consistent"
+                      aria-hidden
                     />
                     </FlexItem>
                     <FlexItem>
@@ -233,7 +231,7 @@ export const HomePage = ({ location, layoutOptions }) => (
                     <img
                       className="ws-principles-img"
                       src={scale}
-                      alt="PatternFly 4 scale"
+                      aria-hidden
                     />
                     </FlexItem>
                     <FlexItem>
@@ -250,7 +248,7 @@ export const HomePage = ({ location, layoutOptions }) => (
                     <img
                       className="ws-principles-img"
                       src={open}
-                      alt="PatternFly 4 open"
+                      aria-hidden
                     />
                     </FlexItem>
                     <FlexItem>
