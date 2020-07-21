@@ -4,4 +4,4 @@ export * from './copy';
 export * from './getId';
 export * from './slugger';
 export * from './transformCode';
-export { getExampleClassName, getExampleId } from './extractExamples';
+export { getExampleClassName, getExampleId } from './extractExampleHelpers';
