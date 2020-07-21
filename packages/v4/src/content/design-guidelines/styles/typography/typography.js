@@ -147,7 +147,7 @@ export const Spacer = ({color, size, description, showBorder}) => {
     backgroundColor = '#1b8793';
   }
   return (
-    <div style={{display: "flex", padding: description ? "15px" : "0px"}}>
+    <div className="pf-l-flex pf-m-space-items-md pf-m-align-items-center">
       {description && <div>{description}</div>}
       <div className={`
         ws-typography-spacerBox-size-${size}
