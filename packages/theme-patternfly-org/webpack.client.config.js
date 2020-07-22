@@ -38,13 +38,14 @@ const clientConfig = (env, argv) => {
     plugins: [
       new CopyPlugin({
         patterns: [
+          // versions.json will later be copied to the root www dir
           { from: path.join(__dirname, 'versions.json'), to: 'versions.json' },
           { from: path.join(pfDir, 'assets/images/'), to: 'assets/images/' },
           { from: path.join(pfDir, 'assets/fonts/'), to: 'assets/fonts/' }
         ]
       }),
-      ...getHtmlWebpackPlugins(getRoutes(false), isProd),
-      ...(env.analyze ? [new BundleAnalyzerPlugin()] : [])
+      ...getHtmlWebpackPlugins(getRoutes(false), isProd), // Create an HTML page per route
+      ...(env.analyze ? [new BundleAnalyzerPlugin()] : []) // webpack --env analyze
     ]
   };
 }

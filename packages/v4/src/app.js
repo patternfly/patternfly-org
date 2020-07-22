@@ -10,9 +10,11 @@ const isProd = process.env.NODE_ENV === 'production';
 const isPrerender = process.env.PRERENDER;
 
 if (!isProd) {
+  // Ignore `pathPrefix` in dev mode
   LayoutOptions.pathPrefix = '';
 }
 
+// Export for SSR
 export const App = () => (
   <ConfigContext.Provider value={LayoutOptions}>
     <Router basepath={LayoutOptions.pathPrefix} id="ws-router">
@@ -23,6 +25,7 @@ export const App = () => (
   </ConfigContext.Provider>
 );
 
+// Don't use ReactDOM in SSR
 if (!isPrerender) {
   const renderFn = isProd ? ReactDOM.hydrate : ReactDOM.render;
   renderFn(<App />, document.getElementById('root'));

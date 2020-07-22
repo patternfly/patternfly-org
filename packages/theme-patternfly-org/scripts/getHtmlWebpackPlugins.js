@@ -3,8 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const prerender = require('./prerender');
 const { googleAnalyticsID } = require(`${process.cwd()}/patternfly-docs.config`);
 
-module.exports = (routes, isProd) => {
-  return Object.entries(routes).map(([url, { title }]) => 
+module.exports = (routes, isProd) =>
+  Object.entries(routes).map(([url, { title }]) => 
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../template.ejs'),
       filename: `${url}/index.html`.replace(/^\/+/, ''),
@@ -17,4 +17,3 @@ module.exports = (routes, isProd) => {
       inject: false
     }),
   );
-}

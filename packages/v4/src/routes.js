@@ -1,3 +1,4 @@
+// This module is shared between NodeJS and babelled ES5
 module.exports = canRequireJSX => ({
   '/': {
     Component: canRequireJSX && require('./pages/home').default

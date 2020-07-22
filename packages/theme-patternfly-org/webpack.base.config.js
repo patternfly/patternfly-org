@@ -94,13 +94,13 @@ module.exports = (_env, argv) => {
         chunkFilename: '[name].[contenthash].css',
       }),
       new webpack.DefinePlugin({
-        'process.env.NODE_ENV': isProd ? '"production"' : '"development"'
+        'process.env.NODE_ENV': isProd ? "'production'" : "'development'"
       }),
       ...(isProd
         ? [
-          new webpack.HashedModuleIdsPlugin(),
+          new webpack.HashedModuleIdsPlugin(), // Hashes based on module content
           new CleanWebpackPlugin(),
-          new SizePlugin(),
+          new SizePlugin()
         ]
         : [
           new ReactRefreshWebpackPlugin()
