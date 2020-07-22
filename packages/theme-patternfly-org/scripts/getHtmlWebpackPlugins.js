@@ -11,7 +11,7 @@ module.exports = (routes, isProd) =>
       title: `PatternFly 4${title ? `- ${title}` : ''}`,
       templateParameters: {
         prerendering: isProd ? prerender(url) : 'Loading...',
-        googleAnalyticsID
+        googleAnalyticsID: isProd ? googleAnalyticsID || false
       },
       scriptLoading: 'defer',
       inject: false
