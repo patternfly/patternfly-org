@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '@reach/router';
+import { Link } from '../link/link';
 import { Nav, NavList, NavExpandable } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { slugger, capitalize } from '../../helpers';
