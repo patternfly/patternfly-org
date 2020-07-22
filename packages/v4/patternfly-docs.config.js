@@ -1,5 +1,6 @@
 module.exports = {
   pathPrefix: '/v4',
+  googleAnalyticsID: 'UA-47523816-6',
   hasGdprBanner: true,
   hasFooter: true,
   hasSearch: true,

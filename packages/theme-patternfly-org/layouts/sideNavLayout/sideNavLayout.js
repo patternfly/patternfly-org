@@ -137,6 +137,10 @@ export const SideNavLayout = ({
   pathPrefix
 }) => {
   const [versions, setVersions] = useState({ ...staticVersions });
+  if (typeof window !== 'undefined' && window.ga) {
+    window.ga('set', 'page', location.pathname);
+    window.ga('send', 'pageview');
+  }
 
   useEffect(() => {
     if (typeof window === 'undefined') {
