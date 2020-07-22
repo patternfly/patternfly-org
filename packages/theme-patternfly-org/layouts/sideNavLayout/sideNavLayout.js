@@ -155,7 +155,7 @@ export const SideNavLayout = ({
       });
     }
     if (hasVersionSwitcher && window.fetch) {
-      fetch(`${pathPrefix}/versions.json`)
+      fetch('/versions.json')
         .then(d => d.json())
         .then(json => setVersions(json))
         .catch(); // No big deal for core/react
