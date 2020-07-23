@@ -3,14 +3,14 @@
   - theme_color: '#151515'
   - icon: require.resolve('gatsby-theme-patternfly-org/images/patternfly-logo.svg')
 - [x] <html lang="en-us">
-- [ ] root tag heights 100%
+- [x] root tag heights 100%
 - [ ] Sitemap
-- [ ] CLI + hot reload
+- [ ] CLI
 
 
 # Org
-- [ ] GA trackingId: 'UA-47523816-6' + respectDNT (gatsby-plugin-google-analytics)
-- [ ] setPostBodyComponents([
+- [x] GA trackingId: 'UA-47523816-6' + respectDNT (gatsby-plugin-google-analytics)
+- [x] setPostBodyComponents([
     <script
       key="algogia-script"
       crossOrigin="true"

@@ -1,31 +1,18 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SizePlugin = require('size-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
 
-const pfDir = path.dirname(require.resolve('@patternfly/patternfly/package.json'));
 // Don't include PatternFly styles twice
 const reactCSSRegex = /(react-[\w-]+\/dist|react-styles\/css)\/.*\.css$/;
 
 module.exports = (_env, argv) => {
-  const isDev = argv.mode === 'development'
+  const isProd = argv.mode === 'production';
 
   return {
-    entry: './src/app.js',
-    output: {
-      path: path.resolve('public'),
-      filename: '[name].[contenthash:8].bundle.js'
-    },
-    devtool: isDev ? 'cheap-module-source-map' : 'source-map',
-    devServer: {
-      historyApiFallback: true,
-      port: 8003
-    },
+    devtool: isProd ? 'source-map' : 'cheap-module-source-map',
     resolve: {
       extensions: [ '.tsx', '.ts', '.js', '.jsx' ],
     },
@@ -52,7 +39,7 @@ module.exports = (_env, argv) => {
               plugins: [
                 '@babel/plugin-transform-react-jsx',
                 '@babel/plugin-proposal-class-properties',
-                ...(isDev ? [require.resolve('react-refresh/babel')] : [])
+                ...(isProd ? [] : [require.resolve('react-refresh/babel')])
               ],
             }
           },
@@ -64,7 +51,7 @@ module.exports = (_env, argv) => {
             {
               loader: MiniCssExtractPlugin.loader,
               options: {
-                hmr: isDev,
+                hmr: isProd,
               },
             },
             {
@@ -102,49 +89,24 @@ module.exports = (_env, argv) => {
       ]
     },
     plugins: [
-      new HtmlWebpackPlugin({
-        template: './src/index.html',
-      }),
       new MiniCssExtractPlugin({
         filename: '[name].[contenthash].css',
         chunkFilename: '[name].[contenthash].css',
       }),
-      new webpack.HashedModuleIdsPlugin(),
-      new CopyPlugin({
-        patterns: [
-          { from: path.join(__dirname, 'versions.json'), to: 'versions.json' },
-          { from: path.join(pfDir, 'assets/images/'), to: 'assets/images/' },
-          { from: path.join(pfDir, 'assets/fonts/'), to: 'assets/fonts/' }
-        ]
-      }),
       new webpack.DefinePlugin({
-        'process.env.NODE_ENV': isDev ? '"development"' : '"production"'
+        'process.env.NODE_ENV': isProd ? "'production'" : "'development'"
       }),
-      ...(isDev
+      ...(isProd
         ? [
-          new ReactRefreshWebpackPlugin()
+          new webpack.HashedModuleIdsPlugin(), // Hashes based on module content
+          new CleanWebpackPlugin(),
+          new SizePlugin()
         ]
         : [
-          new CleanWebpackPlugin(),
-          new SizePlugin(),
-          // new BundleAnalyzerPlugin(),
+          new ReactRefreshWebpackPlugin()
         ]
-      ),
+      )
     ],
-    optimization: {
-      splitChunks: {
-        minSize: 1500, // MTU
-        cacheGroups: {
-          vendors: {
-            test: /[\\/]node_modules[\\/]/,
-            chunks: 'all',
-            priority: 1,
-          }
-        },
-      },
-      minimize: isDev ? false : true,
-      runtimeChunk: 'single',
-    },
-    stats: 'minimal',
+    stats: isProd ? 'normal' : 'minimal'
   };
 }

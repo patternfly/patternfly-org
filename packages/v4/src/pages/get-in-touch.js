@@ -4,9 +4,9 @@ import { ChatIcon, QuestionIcon, CatalogIcon, MailBulkIcon } from '@patternfly/r
 import { Grid, GridItem, PageSection, PageSectionVariants, Split, SplitItem, Title } from '@patternfly/react-core';
 import "./get-in-touch.css";
 
-export const GetInTouchPage = ({ location }) => {
+export default ({ location, layoutOptions }) => {
   return (
-  <SideNavLayout location={location} hideSideNav showGdprBanner={true} pageTitle="Get in touch" showFooter={true}>
+  <SideNavLayout location={location} {...layoutOptions}>
     <PageSection
       variant={PageSectionVariants.light}
       className="ws-section ws-get-in-touch"

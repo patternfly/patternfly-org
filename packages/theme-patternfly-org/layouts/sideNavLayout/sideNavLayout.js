@@ -20,7 +20,12 @@ import staticVersions from '../../versions.json';
 import logo from '../logo.svg';
 import './sideNavLayout.css';
 
-const getHeaderTools = (versions, hasVersionSwitcher, hasSearch) => {
+const HeaderTools = ({
+  versions,
+  hasVersionSwitcher,
+  hasSearch,
+  pathPrefix
+}) => {
   const initialVersion = staticVersions.Releases.find(release => release.latest);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const latestVersion = versions.Releases.find(version => version.latest);
@@ -30,7 +35,7 @@ const getHeaderTools = (versions, hasVersionSwitcher, hasSearch) => {
       component={
         <a href={location.pathname.replace(
             location.pathname.split('/')[1],
-            version.latest ? 'v4' : version.name
+            version.latest ? pathPrefix : version.name
           )}
         >
           {`Release ${version.name}`}
@@ -132,6 +137,10 @@ export const SideNavLayout = ({
   pathPrefix
 }) => {
   const [versions, setVersions] = useState({ ...staticVersions });
+  if (typeof window !== 'undefined' && window.ga) {
+    window.ga('set', 'page', location.pathname);
+    window.ga('send', 'pageview');
+  }
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -164,9 +173,13 @@ export const SideNavLayout = ({
   const Header = (
     <PageHeader
       className="ws-page-header"
-      headerTools={(hasSearch || hasVersionSwitcher) && getHeaderTools(versions, hasSearch, hasVersionSwitcher)}
+      headerTools={(hasSearch || hasVersionSwitcher) && <HeaderTools
+        versions={versions}
+        hasVersionSwitcher={hasVersionSwitcher}
+        hasSearch={hasSearch}
+        pathPrefix={pathPrefix} />}
       logo={prnum ? `PR #${prnum}` : <Brand src={logo} alt="Patternfly Logo" />}
-      logoProps={{ href: prurl || pathPrefix }}
+      logoProps={{ href: prurl || pathPrefix || '/' }}
       showNavToggle={!hideSideNav}
       topNav={<TopNav location={location} navItems={topNavItems} />}
     />
