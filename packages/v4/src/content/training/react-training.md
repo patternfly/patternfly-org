@@ -1,5 +1,5 @@
 ---
-title: Training
+id: Training
 section: overview
 katacodaBroken: true
 ---

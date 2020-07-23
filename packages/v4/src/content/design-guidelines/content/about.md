@@ -1,8 +1,6 @@
 ---
-title: About
+id: About
 section: content
-hideTOC: true
-showTitle: true
 ---
 
 Welcome to the PatternFly content style guide: a place for UX professionals like you to learn about designing with words.

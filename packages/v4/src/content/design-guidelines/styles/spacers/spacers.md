@@ -1,10 +1,7 @@
 ---
-title: Spacers
+id: Spacers
 section: styles
-hideTOC: true
-showTitle: true
 ---
-import { Link } from 'theme-patternfly-org/components';
 import './spacers.css';
 
 
@@ -94,7 +91,7 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
   </div>
 </div>
 
-<Link to="/documentation/overview/global-css-variables">Click here for all variables</Link>
+<a href="/documentation/overview/global-css-variables">Click here for all variables</a>
 <div class="pf-u-display-flex ws-content-demo pf-u-my-3xl pf-u-p-xl">
   <div class="pf-u-display-flex pf-u-flex-direction-column pf-u-mb-xl">
     <div class="h4 ws-content-correct">
@@ -182,4 +179,4 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
   b. They still use the same text styling, however.
 </p>
 
-<p class="pf-u-my-3xl ws-content-p">For more information about line height and typography, go to the <Link to="/design-guidelines/styles/typography">typography page</Link>.</p>
+<p class="pf-u-my-3xl ws-content-p">For more information about line height and typography, go to the <a href="/design-guidelines/styles/typography">typography page</a>.</p>

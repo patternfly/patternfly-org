@@ -1,8 +1,6 @@
 ---
-title: Capitalization
+id: Capitalization
 section: content
-hideTOC: true
-showTitle: true
 ---
 
 Keep your capitalization consistent, and follow the capitalization rules your company enforces for your products.

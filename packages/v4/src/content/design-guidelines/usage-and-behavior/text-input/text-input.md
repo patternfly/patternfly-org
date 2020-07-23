@@ -1,8 +1,6 @@
 ---
-title: Text input
-section: usage and behavior
-hideTOC: true
-showTitle: true
+id: Text input
+section: components
 ---
 
 Use text input to gather free-form text from a user.

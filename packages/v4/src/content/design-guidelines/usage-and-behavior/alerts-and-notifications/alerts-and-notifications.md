@@ -1,8 +1,6 @@
 ---
-title: Alerts and notifications
-section: usage and behavior
-hideTOC: true
-showTitle: true
+id: Alert
+section: components
 ---
 
 Alerts are used when the system wants to notify the user about some status or other event. These guidelines talk about how to properly use different types of alerts in your designs.

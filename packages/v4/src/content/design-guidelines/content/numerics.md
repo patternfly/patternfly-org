@@ -1,8 +1,6 @@
 ---
-title: Numerics
+id: Numerics
 section: content
-hideTOC: true
-showTitle: true
 ---
 
 ## Date and time

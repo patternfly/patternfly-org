@@ -1,8 +1,6 @@
 ---
-title: Brand voice and tone
+id: Brand voice and tone
 section: content
-hideTOC: true
-showTitle: true
 ---
 
 In a business context, brand is the identity of a company that people recognize based on an emotional and psychological connection as well as factual information.

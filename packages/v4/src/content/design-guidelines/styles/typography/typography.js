@@ -7,11 +7,12 @@ export const PfStyledText = ({ children, variableName, fontWeight, lineHeight, f
   </div>
 );
 
-export const TitleLevel = ({ asGrid, styleProps, children, title = '', note = '' }) => {
+export const TitleLevel = ({ asGrid, styleProps, children, title = '', note = '', className = '' }) => {
   return asGrid ? (
     <TypographyGrid 
       title={title} 
       note={note}
+      className={className}
       {...styleProps}
     />
   ) : (
@@ -75,12 +76,20 @@ export const styleProps = {
     variableName: "--pf-global--FontSize--xs",
     lineHeight: "1.5",
     fontFamily: "RedHatText"
+  },
+  code: {
+    fontWeight: "400",
+    fontWeightText: "400 (regular)",
+    fontSize: "16px",
+    variableName: "--pf-global--FontSize--md",
+    lineHeight: "1.5",
+    fontFamily: "Liberation Mono"
   }
 }
 
-export const TypographyGrid = ({title, note, symbol, fontWeight, fontWeightText, fontSize, variableName, lineHeight, fontFamily}) => (
+export const TypographyGrid = ({title, note, symbol, fontWeight, fontWeightText, fontSize, variableName, lineHeight, fontFamily, className}) => (
   <React.Fragment>
-    <h3 className="ws-title">{title} {symbol && <span className="ws-typography-gridTitleSymbol">{symbol}</span>}</h3>
+    <h3 className={className ? `ws-title ${className}` : 'ws-title'}>{title} {symbol && <span className="ws-typography-gridTitleSymbol">{symbol}</span>}</h3>
     <PfStyledText fontFamily={fontFamily} fontWeight={fontWeight} variableName={variableName} lineHeight={lineHeight}>
       Design is where science and art break even.
     </PfStyledText>
@@ -138,7 +147,7 @@ export const Spacer = ({color, size, description, showBorder}) => {
     backgroundColor = '#1b8793';
   }
   return (
-    <div style={{display: "flex", padding: description ? "15px" : "0px"}}>
+    <div className="pf-l-flex pf-m-space-items-md pf-m-align-items-center">
       {description && <div>{description}</div>}
       <div className={`
         ws-typography-spacerBox-size-${size}

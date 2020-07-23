@@ -1,8 +1,6 @@
 ---
-title: Sentence structure
+id: Sentence structure
 section: content
-hideTOC: true
-showTitle: true
 ---
 
 Use the second person "you/your" whenever you can. This way, your focus is on the user, and the product interaction feels more like a conversation.

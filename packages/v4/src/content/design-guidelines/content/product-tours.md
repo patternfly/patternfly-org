@@ -1,8 +1,6 @@
 ---
-title: Product tours
+id: Product tours
 section: content
-hideTOC: true
-showTitle: true
 ---
 A product tour, also referred to as an "onboarding flow," is a series of dialog boxes or pop-ups that introduce a new tool or a tool redesign to users.
 

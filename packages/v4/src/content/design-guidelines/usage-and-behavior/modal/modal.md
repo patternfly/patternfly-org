@@ -1,8 +1,6 @@
 ---
-title: Modal dialog
-section: usage and behavior
-hideTOC: true
-showTitle: true
+id: Modal
+section: components
 ---
 
 Use modal dialogs to load and display important information without navigating away from the current page.

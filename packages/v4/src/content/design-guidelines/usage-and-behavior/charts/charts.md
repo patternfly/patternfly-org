@@ -1,8 +1,6 @@
 ---
-title: Charts
-section: usage and behavior
-hideTOC: true
-showTitle: true
+id: Charts
+section: styles
 ---
 
 _Charts are only available in React_
@@ -58,7 +56,9 @@ The orientation of bar charts is dependent on the data and space at hand. Any ba
 
 #### Example
 <img src="./img/horizontal-bar-chart.png" alt="Horizontal bar chart" width="737"/>
+
 <br/>
+
 <img src="./img/vertical-bar-chart.png" alt="Vertical bar chart" width="559"/>
 
 1. **Bar:** All bars should be the same width. The height of the bar represents its value. The spacing between bars should be equal as well, mimicking the axis value spacing. For recommendations on fill colors, see [Colors for charts](/design-guidelines/styles/colors-for-charts).
@@ -72,7 +72,9 @@ Stacked bar charts describe totals while allowing a degree of internal breakdown
 
 #### Example
 <img src="./img/horizontal-stacked-bar-chart.png" alt="Horizontal stacked bar chart" width="690"/>
+
 <br/>
+
 <img src="./img/vertical-stacked-bar-chart.png" alt="Vertical stacked bar chart" width="663"/>
 
 1. **Stacked bar:** The first series name is represented by the topmost stacked bar, and the last series name is represented by the bottommost stacked bar. For recommendations on series colors, see [Colors for charts](/design-guidelines/styles/colors-for-charts).
@@ -120,7 +122,9 @@ For donut charts, don’t try to represent more than six categories. We recommen
 [Donut chart](/documentation/react/charts/chartdonut)
 
 ### Donut chart - Utilization
-<img src="./img/donut-utilization.png" alt="Donut utilization" width="404"/><img src="./img/donut-utilization-hover.png" alt="Donut utilization hover" width="404"/>
+<img src="./img/donut-utilization.png" alt="Donut utilization" width="404"/>
+
+<img src="./img/donut-utilization-hover.png" alt="Donut utilization hover" width="404"/>
 
 <img src="./img/donut-utilization-2.png" alt="Donut utilization 2" width="404"/>
 
@@ -204,6 +208,7 @@ Sparklines are commonly used in tables, reports, and dashboards. A common use ca
 If a chart lives in a card, the title of that chart will be placed on the header of that card instead of the chart. The rest of the chart guidelines should be followed for the chart itself.
 
 <img src="./img/chart-on-a-card.png" alt="Chart on a card" width="416"/>
+
 <img src="./img/sparkline-card.png" alt="Sparkline on a card" width="482"/>
 
 ### Brush and zoom

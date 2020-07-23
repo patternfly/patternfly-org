@@ -1,8 +1,6 @@
 ---
-title: Toolbar
-section: usage and behavior
-hideTOC: true
-showTitle: true
+id: Toolbar
+section: components
 ---
 
 Toolbars can be included to allow a user to manage and manipulate a data set. Data can be presented in any valid presentation, a table, a list, or a data visualization (chart), for example. The PatternFly Toolbar component is a flexible layout system that accommodates a variety of configurations that can be adapted to your specific needs.
@@ -142,14 +140,14 @@ The toolbar adapts to smaller viewport sizes by collapsing or hiding elements th
 
 ## Related components and demos
 **Core HTML/CSS**
-* [Data Toolbar (beta)](/documentation/core/beta/datatoolbar)
-* [Overflow menu (beta)](/documentation/core/beta/overflowmenu)
+* [Toolbar](/documentation/core/components/toolbar)
+* [Overflow menu](/documentation/core/components/overflowmenu)
 * [Chip](/documentation/core/components/chip)
 * [Chip group](/documentation/core/components/chipgroup)
 * [Pagination](/documentation/core/components/pagination)
 
 **React**
-* [Data Toolbar (beta)](/documentation/react/beta/datatoolbar)
-* [Overflow menu (beta)](/documentation/react/beta/overflowmenu)
+* [Toolbar](/documentation/react/components/toolbar)
+* [Overflow menu](/documentation/react/components/overflowmenu)
 * [Chip group](/documentation/react/components/chipgroup)
 * [Pagination](/documentation/react/components/pagination)

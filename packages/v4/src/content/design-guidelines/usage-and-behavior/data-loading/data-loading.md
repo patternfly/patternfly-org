@@ -1,8 +1,6 @@
 ---
-title: Data loading
-section: usage and behavior
-hideTOC: true
-showTitle: true
+id: Spinner
+section: components
 ---
 
 Data loading patterns are used to inform users that objects are loading on the screen even though they have yet to appear. A component that we use to demonstrate data loading is a spinner.
@@ -42,7 +40,7 @@ Spinners are centered within the container AND the viewport by default in all us
 
 ## Related components and demos
 **HTML/CSS**
-* [Spinner](/documentation/core/beta/spinner)
+* [Spinner](/documentation/core/components/spinner#component-title)
 
 **React**
-* [Spinner](/documentation/react/beta/spinner)
+* [Spinner](/documentation/react/components/spinner/#component-title)
