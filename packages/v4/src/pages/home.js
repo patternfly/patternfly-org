@@ -26,7 +26,7 @@ import './home.css';
 const aboutPatternFly = `Hello, we're PatternFly.`;
 const patternFlyPrinciples = 'Flyer fundamentals';
 
-export default ({ location, layoutOptions, children }) => (
+export default ({ location, layoutOptions }) => (
   <SideNavLayout location={location} {...layoutOptions}>
     <PageSection
       variant={PageSectionVariants.light}
