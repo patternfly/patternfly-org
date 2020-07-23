@@ -4,42 +4,51 @@ section: usage and behavior
 hideTOC: true
 showTitle: true
 ---
-Pagination is used when you want to break up data into multiple pages. It is typically used within a table, list or card view.  If you choose to use infinite scrolling, then pagination would not be necessary. 
+Pagination splits data across multiple pages, typically within a table, list, or card view. If you use infinite scrolling, you don't need to use pagination.
 
-![top-bottom-pagination](./img/top-bottom-pagination.png)
+Add pagination above and below content views so users can easily navigate as they read through listed items on a page.
 
-**1. Top pagination:** Pagination is always right-aligned in the toolbar. If pagination is required, we recommend using pagination both above and below content views.
+<img src="./img/full-page.png" alt="Example of pagination on full page table" width="990"/>
 
-**2. Bottom pagination:** Pagination should be shown below the content view as well.
+**1. Top pagination:** Always right-align pagination in the top toolbar, above content views.
+
+**2. Bottom pagination:** Right-align pagination below content views, too.
 
 ## Full pagination
 
-If you do not have to worry about spatial limitations within the top toolbar, we recommend you use full pagination. By adding this to your toolbar, you will have to limit the other actions added in the toolbar on desktop and tablet views. The full variation does condense into only an item count upon mobile.
+Use full pagination unless you're restricted to a narrow workspace, then use <a href="#compact-pagination">compact pagination</a>. Full pagination occupies more toolbar territory, so you'll have limited room for other items like bulk selectors, buttons, filters, or input fields. 
+
+[Overflow menus](http://patternfly.org/v4/design-guidelines/usage-and-behavior/toolbar#overflow-menus) allow you to incorporate these toolbar actions using less horizontal space. Toolbar actions automatically form into an overflow menu at specific breaking points. Learn how to customize these breakpoints in our [Toolbar](/design-guidelines/usage-and-behavior/toolbar) documentation.
+
+Desktop and mobile views connect with the same breakpoint specifications. On mobile, full pagination condenses to an item count. As a toolbar item, you can add and keep the item count in two ways: in both desktop and mobile views, or just in mobile view.
 
 Desktop full pagination in toolbar
-![full-pagination](./img/full-pagination.png)
 
-**1. Items in view:** Selects the item count per page (how many total items are listed per page).
+<img src="./img/full-pagination.png" alt="Example of full pagination" width="990"/>
 
-**2. Full pager:** Gives the user all pagination options necessary including page-back and page-forward, page-first and page-last, and a manual option to type in the page number.
+**1. Items in view:** Allows the user to select the item count (number of listed items) per page.
+
+**2. Full pager:** Supplies all necessary pagination options including page-back and page-forward, page-first and page-last, and a manual option to type in a desired page number.
 
 Mobile full pagination in toolbar
-![mobile-pagination](./img/mobile-pagination.png)
 
-**1. Items in view:** Pagination controls are hidden in the top toolbar at this screen size. Only the item count is shown to indicate items that are currently in view.
+<img src="./img/mobile-pagination.png" alt="Example of pagination on mobile table view" width="375"/>
 
-**2. Full pager:** In the bottom toolbar, this gives the user all pagination options necessary including page-back and page-forward, page-first and page-last, and a manual option to type in the page number.
+**1. Items in view:** At this screen size, the top toolbar only shows the item count to indicate items currently in view. It hides all other pagination controls. 
+
+**2. Full pager:** Supplies the same pagination options as the desktop full pager, but in the bottom toolbar.
 
 ## Compact pagination
 
-We recommend using the compact pagination variation when you do have spatial limitations within the top toolbar. This variation allows for many more actions to be placed within the toolbar. The compact variation also condenses into only an item count upon mobile.
+Compact pagination fits more actions into top toolbars with limited space. Choose this compact variation when your top toolbar contains many items or looks overcrowded. As with full pagination, the compact variation condenses to an item count for mobile views.
 
 Desktop compact pagination in toolbar
-![compact-pagination](./img/compact-pagination.png)
 
-**1. Items in view:** Selects the item count per page (how many total items are listed per page), as seen in full pagination.
+<img src="./img/compact-pagination.png" alt="Example of compact pagination" width="990"/>
 
-**2. Compact pager:** This supplies the user with page-back and page-next controls only.
+**1. Items in view:** Allows the user to select the item count (number of listed items) per page, as seen in full pagination.
+
+**2. Compact pager:** Supplies the user with page-back and page-next controls only.
 
 ## Related components and demos
 **Core HTML/CSS**
