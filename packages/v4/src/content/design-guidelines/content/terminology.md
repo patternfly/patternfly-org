@@ -1,8 +1,6 @@
 ---
-title: Terminology
+id: Terminology
 section: content
-hideTOC: true
-showTitle: true
 ---
 
 Here's a list of common UI terms and their usage.

@@ -1,8 +1,6 @@
 ---
-title: Writing for all audiences
+id: Writing for all audiences
 section: content
-hideTOC: true
-showTitle: true
 ---
 
 UX copy should be accessible by everyone, so consider all users’ abilities (physical, cognitive, and more) when you write. Refer to the [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG21/) for accessibility compliance information.

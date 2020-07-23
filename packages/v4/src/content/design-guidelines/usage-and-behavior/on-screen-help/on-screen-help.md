@@ -1,8 +1,6 @@
 ---
-title: On-screen help
-section: usage and behavior
-hideTOC: true
-showTitle: true
+id: Popover
+section: components
 ---
 
 Use on-screen help to provide additional assistance for users in context. On-screen help should be provided in a way that enables the user to find the information they need at the moment they need it, while completing a particular step or task.

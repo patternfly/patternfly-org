@@ -1,8 +1,6 @@
 ---
-title: Error messages
+id: Error messages
 section: content
-hideTOC: true
-showTitle: true
 ---
 An error message is a message indicating something went wrong. A user typically sees an error message when they attempt to perform an action but cannot continue because something isn’t right.
 

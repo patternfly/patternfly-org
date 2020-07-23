@@ -1,8 +1,6 @@
 ---
-title: Forms
-section: usage and behavior
-hideTOC: true
-showTitle: true
+id: Form
+section: components
 ---
 
 A form is a group of elements used to collect information from a user. Forms can appear in a variety of contexts, like inside a page, in a modal, or in a wizard, depending on the use case.  Some form examples include a log-in form, a registration form, a settings configuration form, or a survey.

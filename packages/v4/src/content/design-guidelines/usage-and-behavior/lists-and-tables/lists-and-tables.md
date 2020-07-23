@@ -1,8 +1,6 @@
 ---
-title: Lists and tables
-section: usage and behavior
-hideTOC: true
-showTitle: true
+id: Data list
+section: components
 ---
 
 PatternFly offers two components for displaying large data sets: [data list](/documentation/react/components/datalist/) and [table](/documentation/react/components/table/). While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
@@ -130,7 +128,7 @@ The PatternFly 4 table is designed to be fully responsive. When columns no longe
 ## Sorting by columns
 Sorting by columns is possible for any table variation. Enabling the component within a table eases the ability to scan and read through the content. This option is favored over adding sorting functionality to the toolbar.
 
-![sortable table](img/sortable-data-table.png)
+![sortable table](./img/sortable-data-table.png)
 
 1. **Sorted column:** When a column is being sorted by, the column header will turn blue and the sort icon will represent the direction of the sort. Subsequent clicks on the sortable column header will toggle the direction of the sort.
 2. **Hovered sort:** When a column is sortable, the sort icon will appear to the right of the column header. Upon hover, the  icon will change to a darker grey indicating that the icon is actionable.

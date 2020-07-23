@@ -1,8 +1,6 @@
 ---
-title: Pagination
-section: usage and behavior
-hideTOC: true
-showTitle: true
+id: Pagination
+section: components
 ---
 Pagination splits data across multiple pages, typically within a table, list, or card view. If you use infinite scrolling, you don't need to use pagination.
 

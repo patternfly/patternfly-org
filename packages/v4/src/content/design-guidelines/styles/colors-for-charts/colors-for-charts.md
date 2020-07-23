@@ -1,8 +1,6 @@
 ---
-title: Colors for charts
+id: Colors for charts
 section: styles
-hideTOC: true
-showTitle: true
 ---
 
 import theSystem from './thesystem.gif';
