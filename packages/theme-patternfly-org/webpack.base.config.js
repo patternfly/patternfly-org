@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SizePlugin = require('size-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 // Don't include PatternFly styles twice
 const reactCSSRegex = /(react-[\w-]+\/dist|react-styles\/css)\/.*\.css$/;
@@ -95,6 +96,25 @@ module.exports = (_env, argv) => {
       }),
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': isProd ? "'production'" : "'development'"
+      }),
+      new FaviconsWebpackPlugin({
+        logo: path.resolve(__dirname, 'images/patternfly-logo.svg'),
+        favicons: {
+          cache: true,
+          background: '#4F5255',
+          theme_color: '#151515',
+          icons: {
+            android: true,
+            appleIcon: true,
+            appleStartup: false,
+            coast: false,
+            favicons: true,
+            firefox: false,
+            windows: false,
+            yandex: false
+          },
+          start_url: '/'
+        }
       }),
       ...(isProd
         ? [

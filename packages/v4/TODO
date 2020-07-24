@@ -1,7 +1,7 @@
 # Theme
-- [ ] Manifest w/ favicons for mobile
+- [x] Manifest w/ favicons for mobile
   - theme_color: '#151515'
-  - icon: require.resolve('gatsby-theme-patternfly-org/images/patternfly-logo.svg')
+  - icon: require.resolve('theme-patternfly-org/images/patternfly-logo.svg')
 - [x] <html lang="en-us">
 - [x] root tag heights 100%
 - [ ] Sitemap
