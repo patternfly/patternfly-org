@@ -86,7 +86,7 @@ Don't use an actionable data list when:
 ### Expandable data list
 The expandable list adds an expansion panel to every row to reveal more details about the item.
 
-<img src="./img/expandable-list.png"  alt="Expandable data list"  width="1174"/> 
+<img src="./img/expandable-list.png"  alt="Expandable data list"  width="1190"/> 
 
 1. **Expansion caret:** Toggles the expansion open and closed.
 2. **Expansion panel:** A container that is revealed when the expansion is open. It can accept any supported layout to present additional content to the user.
@@ -154,7 +154,7 @@ Use expandable table rows when:
 
 ### Compound-expandable table
 
-<img src="./img/compound-expandable-data-table.png"  alt="Compound expandable table"  width="1188"/> 
+<img src="./img/compound-expandable-data-table.png"  alt="Compound expandable table"  width="1189"/> 
 
 1. **Expandable cell:** A cell that can be clicked to reveal more detail about an item. If the expansion for an item is already open, clicking on a different cell will close the current item and open a new one.
 2. **Expansion panel:** Contains details associated with an expandable item.
