@@ -139,7 +139,7 @@ As filters are applied, the value will be displayed as a filter chip. Each filte
 
 Filter chips may be used to show Boolean relationships between different attribute-value pairs. Individual filter chips can be removed by clicking the ‘x’ in each chip, and entire filter groups can be removed using the group ‘x’.
 
-<img src="./img/attribte-value-multi-chips.png" alt="Attribute value multi chips" width="1210"/>
+<img src="./img/attribute-value-multi-chips.png" alt="Attribute value multi chips" width="1210"/>
 
 <img src="./img/faceted-combo-chips.png" alt="Faceted combo chips" width="1210"/>
 
