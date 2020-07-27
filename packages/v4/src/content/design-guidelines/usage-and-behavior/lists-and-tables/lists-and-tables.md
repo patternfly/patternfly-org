@@ -154,7 +154,7 @@ Use expandable table rows when:
 
 ### Compound-expandable table
 
-<img src="./img/compound-expandable-data-table.png"  alt="Compound expandable table"  width="1236"/> 
+<img src="./img/compound-expandable-data-table.png"  alt="Compound expandable table"  width="1188"/> 
 
 1. **Expandable cell:** A cell that can be clicked to reveal more detail about an item. If the expansion for an item is already open, clicking on a different cell will close the current item and open a new one.
 2. **Expansion panel:** Contains details associated with an expandable item.
@@ -240,7 +240,7 @@ The PatternFly table is designed to be fully responsive. When columns no longer 
 ## Using lists and tables in a page
 Lists and tables should be placed in the body of a page. The width should be set by the containing element.
 
-<img src="./img/data-table-example.png"  alt="Compact data table example"  width="1501"/> 
+<img src="./img/data-table-example.png"  alt="Compact data table example"  width="1500"/> 
 
 In this example, a table is positioned in the body of a page in a card.
 
