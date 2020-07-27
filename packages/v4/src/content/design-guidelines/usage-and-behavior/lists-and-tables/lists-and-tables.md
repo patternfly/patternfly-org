@@ -142,7 +142,7 @@ Every table can be extended with these functionalities:
 
 ### Expandable table
 
-<img src="./img/expandable-data-table.png"  alt="Expandable table"  width="1175"/> 
+<img src="./img/expandable-data-table.png"  alt="Expandable table"  width="1189"/> 
 
 1. **Expansion:** Expands the row
 2. **Expansion panel:** Contains details associated with a row
