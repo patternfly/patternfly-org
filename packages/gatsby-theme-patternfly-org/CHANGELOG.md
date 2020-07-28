@@ -3,6 +3,176 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.8](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.2.7...gatsby-theme-patternfly-org@4.2.8) (2020-07-20)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [4.2.7](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.2.6...gatsby-theme-patternfly-org@4.2.7) (2020-07-17)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [4.2.6](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.2.5...gatsby-theme-patternfly-org@4.2.6) (2020-07-17)
+
+
+### Bug Fixes
+
+* **example:** h3s for react ([#1963](https://github.com/patternfly/patternfly-org/issues/1963)) ([47b39b9](https://github.com/patternfly/patternfly-org/commit/47b39b99706325f3c211e34847c6c1dd11ff6677))
+
+
+
+
+
+## [4.2.5](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.2.4...gatsby-theme-patternfly-org@4.2.5) (2020-07-17)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [4.2.4](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.2.3...gatsby-theme-patternfly-org@4.2.4) (2020-07-10)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [4.2.3](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.2.2...gatsby-theme-patternfly-org@4.2.3) (2020-07-09)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [4.2.2](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.2.1...gatsby-theme-patternfly-org@4.2.2) (2020-07-09)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [4.2.1](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.2.0...gatsby-theme-patternfly-org@4.2.1) (2020-07-01)
+
+
+### Bug Fixes
+
+* **html:** pass code ([4550687](https://github.com/patternfly/patternfly-org/commit/455068743a097354795196b5d5e0190982752555))
+
+
+
+
+
+# [4.2.0](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.21...gatsby-theme-patternfly-org@4.2.0) (2020-07-01)
+
+
+### Features
+
+* **theme:** force minor bump ([7b6bf57](https://github.com/patternfly/patternfly-org/commit/7b6bf57587ee577f5e78ca8bc2276993b3ea4a8f))
+
+
+
+
+
+## [4.0.21](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.20...gatsby-theme-patternfly-org@4.0.21) (2020-06-25)
+
+
+### Bug Fixes
+
+* **release:** fixes for Org bump ([#1912](https://github.com/patternfly/patternfly-org/issues/1912)) ([e5b0f06](https://github.com/patternfly/patternfly-org/commit/e5b0f067c78fc9f92203dd0a91b544c922dd7c05))
+
+
+
+
+
+## [4.0.20](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.19...gatsby-theme-patternfly-org@4.0.20) (2020-06-25)
+
+
+### Bug Fixes
+
+* **docs:** removed Opt-in section on Red Hat font pages ([a8b8396](https://github.com/patternfly/patternfly-org/commit/a8b8396a5d215c65c857a34de9df2b05958653a8))
+
+
+
+
+
+## [4.0.19](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.18...gatsby-theme-patternfly-org@4.0.19) (2020-06-24)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [4.0.18](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.17...gatsby-theme-patternfly-org@4.0.18) (2020-06-22)
+
+
+### Bug Fixes
+
+* **site nav:** removed custom styling from PageHeader that were causing PF brand logo to float towards the center, search box to have black box below it at certain widths, and nav items to be squished at exactly 1200px width ([#1904](https://github.com/patternfly/patternfly-org/issues/1904)) ([edc6432](https://github.com/patternfly/patternfly-org/commit/edc643287a55323b5e55bd6ca4ae1d4431eae198))
+
+
+
+
+
+## [4.0.17](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.16...gatsby-theme-patternfly-org@4.0.17) (2020-06-22)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [4.0.16](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.15...gatsby-theme-patternfly-org@4.0.16) (2020-06-22)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [4.0.15](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.14...gatsby-theme-patternfly-org@4.0.15) (2020-06-11)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [4.0.14](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.13...gatsby-theme-patternfly-org@4.0.14) (2020-06-05)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [4.0.13](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.12...gatsby-theme-patternfly-org@4.0.13) (2020-06-03)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
+## [4.0.12](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.11...gatsby-theme-patternfly-org@4.0.12) (2020-06-02)
+
+**Note:** Version bump only for package gatsby-theme-patternfly-org
+
+
+
+
+
 ## [4.0.11](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.0.10...gatsby-theme-patternfly-org@4.0.11) (2020-05-15)
 
 

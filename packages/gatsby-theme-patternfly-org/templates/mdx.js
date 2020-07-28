@@ -6,7 +6,7 @@ import {
   Alert,
   Badge,
   Card,
-  CardHeader,
+  CardTitle,
   CardBody,
   Grid,
   GridItem,
@@ -40,9 +40,9 @@ const MDXTemplate = ({ data, location, pageContext }) => {
         katacodaId={location.state.katacodaId} />
     );
   }
-  const { cssPrefix, hideTOC, beta, optIn, hideDarkMode, showTitle, releaseNoteTOC, hideSource } = data.doc.frontmatter;
+  const { cssPrefix, hideTOC, beta, katacodaBroken, optIn, hideDarkMode, showTitle, releaseNoteTOC, hideSource } = data.doc.frontmatter;
   const { componentName, navSection } = data.doc.fields;
-  const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner, showGdprBanner, sourceLink } = pageContext;
+  const { title, source, tableOfContents, htmlExamples, propComponents = [''], showBanner, showGdprBanner, showFooter, sourceLink } = pageContext;
   const props = data.props && data.props.nodes && propComponents
     ? propComponents
       .filter(name => name !== '') // Filter default entry we make for GraphQL schema
@@ -115,6 +115,17 @@ const MDXTemplate = ({ data, location, pageContext }) => {
               This Beta component is currently under review, so please join in and give us your feedback on the <a href="https://forum.patternfly.org/">PatternFly forum</a>
             </Alert>
           )}
+          {katacodaBroken && (
+            <Alert
+              variant={'danger'}
+              title="Down for maintenance"
+              className="pf-u-my-md"
+              style={{ marginBottom: '1rem' }}
+              isInline
+            >
+              The embedded version of our tutorials are broken, but you can still access our tutorials on <a href="https://www.katacoda.com/patternfly">Katacoda.com</a>
+            </Alert>
+          )}
           {/* Design docs should not apply to demos and overview */}
           {data.designDoc && !['overview', 'demos'].includes(navSection) && (
             <MDXRenderer>
@@ -139,16 +150,18 @@ const MDXTemplate = ({ data, location, pageContext }) => {
                   return releaseTitle && (
                     <GridItem sm={6} md={4} key={version.name}>
                       <Card>
-                        <CardHeader>
+                        <CardTitle>
                           {releaseTitle && (
-                            <a key={version.name} href={`#${slugger(releaseTitle)}`}>
-                              Release {version.name}
-                            </a>
+                            <Title size="2xl" headingLevel="h2" >
+                              <a key={version.name} href={`#${slugger(releaseTitle)}`}>
+                                Release {version.name}
+                              </a>
+                            </Title>
                           )}
                           {version.latest && (
                             <Badge>Latest</Badge>
                           )}
-                        </CardHeader>
+                        </CardTitle>
                         <CardBody>
                           Released on {releaseDate}.
                         </CardBody>
@@ -209,7 +222,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
         <Example
           location={location}
           source={source}
-          html={props.title && htmlExamples && htmlExamples[getId(props.title)]}
+          html={props.title && htmlExamples && htmlExamples[getId(props.title)] && htmlExamples[getId(props.title)].code}
           hideDarkMode={hideDarkMode}
           navSection={navSection}
           componentName={componentName}
@@ -244,6 +257,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
         parityComponent={parityComponent}
         showBanner={showBanner}
         showGdprBanner={showGdprBanner}
+        showFooter={showFooter}
         pageTitle={pageContext.title}
       >
         <PageSection id="main-content" className="ws-section">
@@ -274,6 +288,7 @@ export const pageQuery = graphql`
         hideTOC
         optIn
         beta
+        katacodaBroken
         hideDarkMode
         showTitle
         releaseNoteTOC
@@ -304,6 +319,7 @@ export const pageQuery = graphql`
         name
         props {
           beta
+          katacodaBroken
           name
           required
           description

@@ -35,8 +35,8 @@ module.exports = {
       options: {
         context: 'org',
         hiddenPages: ['withOuia'], // By title
-        showBanner: true, // PF3 banner
-        showGdprBanner: false, // GDPR banner
+        showGdprBanner: true, // GDPR banner
+        showFooter: true, // Footer
         sideNav: {
           core: [
             { section: 'overview' },
@@ -114,12 +114,19 @@ module.exports = {
         path: require.resolve('@patternfly/patternfly/RELEASE-NOTES.md')
       }
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'core', // This goes in URLs
+        path: path.join(__dirname, 'UPGRADE-GUIDE.md')
+      }
+    },
     // Core training
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'core', // This goes in URLs
-        path: require.resolve('@patternfly/patternfly/site/training.md')
+        path: path.join(__dirname, '/src/content/training/core-training.md')
       }
     },
     // React docs (MD + TSX)
@@ -171,12 +178,19 @@ module.exports = {
         path: require.resolve('@patternfly/react-docs/RELEASE-NOTES.md')
       }
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'react', // This goes in URLs
+        path: require.resolve('@patternfly/react-docs/UPGRADE-GUIDE.md')
+      }
+    },
     // React training
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'react', // This goes in URLs
-        path: require.resolve('@patternfly/react-docs/src/training.md')
+        path: path.join(__dirname, '/src/content/training/react-training.md')
       }
     },
     // Org docs
@@ -238,7 +252,8 @@ module.exports = {
               ignoreFileExtensions: []
             }
           },
-        ]
+        ],
+        rehypePlugins: [require('gatsby-theme-patternfly-org/helpers/codeTitleTransformer')]
       }
     },
     // For Algogia global doc search

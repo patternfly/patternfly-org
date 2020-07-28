@@ -2,28 +2,32 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { LiveProvider, LivePreview } from 'react-live';
 import { useMDXScope } from 'gatsby-plugin-mdx/context';
+import * as PatternflyReactCore from '@patternfly/react-core';
 import { transformCode } from '../helpers/transformCode';
 import './fullscreen.css';
 
-const FullscreenWrapper = ({ children }) => (
-  <main className="ws-site-root">
-    {children}
-  </main> 
-);
-
-const FullscreenMDXTemplate = ({ pageContext }) => (
-  <React.Fragment>
-    <Helmet>
-      <title>{pageContext.title}</title>
-    </Helmet>
+const FullscreenMDXTemplate = ({ pageContext }) => {
+  const { wrapperTag: WrapperTag, title, code } = pageContext;
+  const scope = {
+    ...PatternflyReactCore,
+    ...useMDXScope()
+  };
+  return (
     <LiveProvider
-      scope={useMDXScope()}
-      code={pageContext.code}
-      transformCode={code => transformCode(code, 'jsx')}
+      scope={scope}
+      code={code}
+      transformCode={c => transformCode(c, 'jsx')}
     >
-      <LivePreview Component={FullscreenWrapper} />
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
+      <LivePreview Component={({ children }) => (
+        <WrapperTag className="ws-site-root">
+          {children}
+        </WrapperTag>
+      )} />
     </LiveProvider>
-  </React.Fragment>
-);
+  );
+}
 
 export default FullscreenMDXTemplate;

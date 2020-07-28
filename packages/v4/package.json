@@ -1,7 +1,7 @@
 {
   "name": "patternfly-org-4",
   "private": true,
-  "version": "4.0.14",
+  "version": "4.1.19",
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
@@ -15,21 +15,18 @@
     "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4"
   },
   "dependencies": {
-    "@patternfly/react-docs": "5.3.0",
-    "dagre": "0.8.2",
-    "gatsby": "2.20.29",
-    "gatsby-cli": "2.11.15",
+    "@patternfly/react-docs": "5.6.3",
+    "gatsby": "2.21.0",
     "gatsby-plugin-google-analytics": "^2.2.0",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sitemap": "^2.3.0",
     "gatsby-remark-copy-linked-files": "^2.2.0",
     "gatsby-source-filesystem": "^2.2.1",
-    "gatsby-theme-patternfly-org": "^4.0.11",
+    "gatsby-theme-patternfly-org": "^4.2.8",
     "gatsby-transformer-json": "^2.3.0",
-    "gatsby-transformer-react-docgen-typescript": "^4.0.3",
+    "gatsby-transformer-react-docgen-typescript": "^4.0.5",
     "react": "^16.8.0",
-    "react-dom": "^16.8.0",
-    "webcola": "3.4.0"
+    "react-dom": "^16.8.0"
   },
   "devDependencies": {
     "@patternfly/patternfly-a11y": "^0.0.17",

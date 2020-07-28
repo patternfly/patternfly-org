@@ -147,7 +147,7 @@ export class IconsTable extends React.Component {
                 </Button>
               </InputGroup>
             </ToolbarItem>
-            <ToolbarItem breakpointMods={[{modifier:"align-right"}]}>
+            <ToolbarItem alignment={{ default: 'alignRight' }}>
               <b>{filteredRows.length} items</b>
             </ToolbarItem>
           </ToolbarContent>
@@ -170,10 +170,11 @@ export class IconsTable extends React.Component {
           <EmptyState variant={EmptyStateVariant.full}>
             <EmptyStateIcon icon={icons.SearchIcon}/>
             <Title headingLevel="h5" size="2xl">
-              No results found for "{ searchValue }".
+              No results found for "{ searchValue }"
             </Title>
             <EmptyStateBody>
-              We couldn't find any icons that matched your search. Try entering a new search term to find what you're looking for.
+            We couldn't find any icons that matched your search. If none of the icons listed fit 
+            your use case, you may use any additional 'fa' icons within <a href="https://fontawesome.com/icons?d=gallery&amp;m=free">Font Awesome's free set</a>.
             </EmptyStateBody>
           </EmptyState>
         )}

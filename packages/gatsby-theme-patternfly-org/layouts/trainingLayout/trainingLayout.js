@@ -59,7 +59,7 @@ export const TrainingLayout = ({ trainingType, katacodaId, location }) => {
         href: url || '/'
       }}
       showNavToggle
-      toolbar={Breadcrumbs}
+      headerTools={Breadcrumbs}
     />
   );
 
