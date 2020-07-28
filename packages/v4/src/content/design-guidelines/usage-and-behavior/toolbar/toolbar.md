@@ -40,7 +40,7 @@ A search filter is intended to be used with a filter group as shown below when y
 #### Button group
 <img src="./img/button-group.png" alt="button group" width="205" />
 
- Any global actions that apply to selected data items are included left-aligned following filter and icon buttons. No more than two items should be exposed as buttons. If you have more than two items, use an [overflow menu](#Overflow-menus) component to save space.
+ Any global actions that apply to selected data items are included left-aligned following filter and icon buttons. No more than two items should be exposed as buttons. If you have more than two items, use an [overflow menu](#overflow-menus) component to save space.
 
  #### Overflow menu
  <img src="./img/overflow-menu.png" alt="button group" width="357" />
@@ -112,8 +112,8 @@ Note that there should be no spacers on the left and right edges of the toolbar 
 
 The toolbar adapts to smaller viewport sizes by collapsing or hiding elements that take significant space, including filters and actions. On mobile devices, when used, pagination will be available from the footer, only. When designing toolbars to be responsive:
 
-* Place filter controls in a [Toggle group](#Toggle-groups) so they will be hidden in a collapsible panel at mobile breakpoints.
-* Use an [Overflow menu](#Overflow-menu) to collapse actions into a kabob menu.
+* Place filter controls in a [Toggle group](#toggle-groups) so they will be hidden in a collapsible panel at mobile breakpoints.
+* Use an [Overflow menu](#overflow-menu) to collapse actions into a kabob menu.
 
 The following is an example of a complex toolbar optimized for mobile.
 
