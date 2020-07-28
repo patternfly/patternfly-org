@@ -7,8 +7,8 @@ const slugger = children => {
     .toLowerCase()
     .trim()
     .replace(/index$/, '')
-    .replace(/[^A-Za-z0-9.-~]/g, '')
-    .replace(/\s/g, '-');
+    .replace(/\s/g, '-')
+    .replace(/[^A-Za-z0-9.-~]/g, '');
 }
 
 const makeSlug = (source, section, id) => {
