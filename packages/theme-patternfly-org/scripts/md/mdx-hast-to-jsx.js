@@ -98,7 +98,7 @@ ${exportName}.Component = () => (
 
 function serializeElement(node, options) {
   const { indent, exportName } = options;
-  const {type, props} = toH(
+  const { type, props } = toH(
     fakeReactCreateElement,
     Object.assign({}, node, {children: []}),
     {prefix: false}
@@ -141,10 +141,9 @@ function serializeComponent(node, options) {
 }
 
 function serializeText(node, options, parentNode) {
-  const preserveNewlines = options.preserveNewlines;
   // Don't wrap newlines unless specifically instructed to by the flag,
   // to avoid issues like React warnings caused by text nodes in tables.
-  const shouldPreserveNewlines = preserveNewlines || parentNode.tagName === 'p';
+  const shouldPreserveNewlines = options.preserveNewlines || parentNode.tagName === 'p';
 
   if (node.value === '\n' && !shouldPreserveNewlines) {
     return node.value;

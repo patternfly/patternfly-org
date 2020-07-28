@@ -7,7 +7,7 @@ const slugger = children => {
     .toLowerCase()
     .trim()
     .replace(/index$/, '')
-    .replace(/[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g, '')
+    .replace(/[^A-Za-z0-9.-~]/g, '')
     .replace(/\s/g, '-');
 }
 

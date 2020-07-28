@@ -1,5 +1,6 @@
 const visit = require('unist-util-visit');
 
+// This transforms headers in markdown to AutoLinkHeader JSX components
 function anchorHeader() {
   return tree => {
     visit(tree, 'element', node => {

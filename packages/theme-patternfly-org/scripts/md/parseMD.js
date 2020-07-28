@@ -49,17 +49,6 @@ function toReactComponent(mdFilePath, source) {
         sourceRepo = 'patternfly-react';
       }
 
-      // const props = propComponents
-      //   .filter(name => name !== '') // Filter default entry we make for GraphQL schema
-      //   .map(name => {
-      //     const propTable = data.props.nodes.find(node => node.name === name);
-      //     if (!propTable) {
-      //       console.warn(`PropComponent "${name}" specified in frontmatter, but not found at runtime.`);
-      //     }
-
-      //     return propTable;
-      //   })
-      //   .filter(Boolean);
       pageData = {
         slug,
         source,
