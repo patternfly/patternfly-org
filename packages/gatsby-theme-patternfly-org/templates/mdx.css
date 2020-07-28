@@ -33,21 +33,20 @@ p ~ .ws-toc {
   height: 100%;
 }
 
-.ws-release-notes-toc .pf-c-card__header {
-  color: #0066CC;
-  font-family: RedHatDisplay;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 32px;
+.ws-release-notes-toc .pf-c-card__title {
   padding-bottom: 4px;
 }
 
-.ws-release-notes-toc .pf-c-card__header a {
+.ws-release-notes-toc .pf-c-card__title .pf-c-title {
+  display: inline;
+}
+
+.ws-release-notes-toc .pf-c-card__title a {
   margin-right: 8px;
 }
 
-.ws-release-notes-toc .pf-c-card__header .pf-c-badge {
-  vertical-align: middle;
+.ws-release-notes-toc .pf-c-card__title .pf-c-badge {
+  vertical-align: text-top;
 }
 
 .ws-release-notes-toc .pf-c-card__body {

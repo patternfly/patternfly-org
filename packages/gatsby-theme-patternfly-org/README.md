@@ -80,3 +80,4 @@ gatsby-theme-patternfly-org
 ```
 
 The highlights of this plugin are `gatsby-node.js`, `mdx.js`, and `sideNavLayout.js`. Each file has been documented.
+

@@ -22,23 +22,55 @@ module.exports = {
       return examples;
     }
 
-    visit(mdxAST, 'code', node => {
+    visit(mdxAST, 'code', (node, _index, parent) => {
       let id = 'no-id';
+      let wrapperTag;
       if (node.meta) {
         if (node.meta.includes('noLive')) {
           // Don't create fullscreen pages for non-live code
           return;
         }
-        const match = node.meta.match(/title=(\S*)/);
+
+        let match = node.meta.match(/title=(\S*)/);
         if (match) {
           id = getId(match[1]);
         }
+        match = node.meta.match(/wrapperTag=(\S*)/);
+        if (match) {
+          wrapperTag = match[1].toLowerCase();
+        }
       }
+
+      if (id === 'no-id') {
+        // Starting from node, look up for h3s
+        let startLooking = false;
+        for (let i = parent.children.length - 1; i >= 0; i--) {
+          const child = parent.children[i];
+          if (child === node) {
+            startLooking = true;
+          }
+          else if (startLooking) {
+            if (
+              child.type === 'heading' &&
+              child.depth === 3 &&
+              child.children && 
+              child.children[0].value
+            ) {
+              id = getId(child.children[0].value);
+              break;
+            }
+          }
+        }
+      }
+
       if (node.lang === 'hbs') {
         try {
           const html = hbsInstance.compile(node.value)({});
           // Add rendered HTML to make fullscreen page from
-          examples[id] = render(` ${html} `).replace(/\t/g, '  ');
+          examples[id] = {
+            code: render(` ${html} `).replace(/\t/g, '  '),
+            wrapperTag
+          };
         }
         catch(error) {
           console.error(`\x1b[31m${fileName}: ${error} for PatternFly example ${id}\x1b[0m`)
@@ -47,7 +79,10 @@ module.exports = {
       else if (node.lang === 'js') {
         node.lang = 'jsx';
         // Add rendered MDX body to make fullscreen page from
-        examples[id] = node.value;
+        examples[id] = {
+          code: node.value,
+          wrapperTag
+        };
       }
     });
 
