@@ -111,11 +111,6 @@ function mdxAstToMdxHast() {
           type: 'import'
         });
       },
-      export(h, node) {
-        return Object.assign({}, node, {
-          type: 'export'
-        });
-      },
       comment(h, node) {
         return Object.assign({}, node, {
           type: 'comment'

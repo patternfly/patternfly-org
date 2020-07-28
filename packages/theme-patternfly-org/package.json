@@ -32,6 +32,7 @@
     "remark-footnotes": "^1.0.0",
     "remark-frontmatter": "^2.0.0",
     "remark-mdx": "2.0.0-next.6",
+    "remark-mdxjs": "2.0.0-next.6",
     "remark-parse": "^8.0.3",
     "remark-squeeze-paragraphs": "^4.0.0",
     "size-plugin": "^2.0.1",

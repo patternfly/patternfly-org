@@ -81,7 +81,10 @@ function toReactComponent(mdFilePath, source) {
     // remark-mdx removes auto-link support
     // this adds it back ONLY for links which are easily differentiable from JSX 
     .use(require('./auto-link-url'))
+    // Support for JSX in MD
     .use(require('remark-mdx'))
+    // Support for import/exports in MD
+    .use(require('remark-mdxjs'))
     // Insert footnotes
     .use(require('remark-footnotes'))
     // Remove whitespace

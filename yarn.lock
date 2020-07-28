@@ -1957,6 +1957,11 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.14.tgz#e3c14aef1c721b79ca7afa4d54ed7b5817a973c7"
   integrity sha512-JyhjH3ffP4KQuqnUSBSSF28mToGGSc2jFI0XIXSEqiN+FaPlgzOSd3U350gXi8FYQxXzEygHCOtzOIfTjFf+4w==
 
+"@mdx-js/util@^2.0.0-next.6":
+  version "2.0.0-next.6"
+  resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-2.0.0-next.6.tgz#e2bbe57d8560cbad321f50f27b36c2965b0e93cd"
+  integrity sha512-WaCNu40TRnJ1MQbGY9pU4SHpr7DoKwXfOA3yuetquDgI3UiZgE8oys6CMB+3hU8HEXGT8z0QBxd2GW3FV3bL8g==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -12180,6 +12185,17 @@ remark-mdx@2.0.0-next.6:
     stringify-entities "^3.0.1"
     strip-indent "^3.0.0"
     unist-util-stringify-position "^2.0.3"
+
+remark-mdxjs@2.0.0-next.6:
+  version "2.0.0-next.6"
+  resolved "https://registry.yarnpkg.com/remark-mdxjs/-/remark-mdxjs-2.0.0-next.6.tgz#9188fc2004b7a9c067fcfc891fbd59603957d3e7"
+  integrity sha512-PQYJ5+0u9hqoxrvHjO3hg6lSM/hadbX2xKE6JsMsveubVw1m7C9f+yL/6v8nJZ1RBUtO8YvGtRYBrf6QW01Ssw==
+  dependencies:
+    "@babel/core" "7.10.5"
+    "@babel/helper-plugin-utils" "7.10.4"
+    "@babel/plugin-proposal-object-rest-spread" "7.10.4"
+    "@babel/plugin-syntax-jsx" "7.10.4"
+    "@mdx-js/util" "^2.0.0-next.6"
 
 remark-parse@8.0.3, remark-parse@^8.0.3:
   version "8.0.3"
