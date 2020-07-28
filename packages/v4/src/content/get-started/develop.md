@@ -1,7 +1,6 @@
 ---
+id: Develop
 title: Develop with PatternFly
-hideTOC: true
-showTitle: true
 ---
 import './get-started.css';
 
