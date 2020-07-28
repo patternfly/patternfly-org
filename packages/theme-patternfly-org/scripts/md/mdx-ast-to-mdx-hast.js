@@ -8,8 +8,8 @@ const camelCaseCSS = require('camelcase-css');
 
 let srcCounter = 0;
 
+// Adapted from https://github.com/mdx-js/mdx/blob/next/packages/mdx/mdx-ast-to-mdx-hast.js
 function mdxAstToMdxHast() {
-  
   return (tree, file) => {
     const srcImports = [];
 

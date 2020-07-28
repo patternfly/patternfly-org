@@ -8,6 +8,7 @@ const { capitalize } = require('theme-patternfly-org/helpers/capitalize');
 
 const jsxParser = acorn.Parser.extend(jsx());
 
+// Adapted from https://github.com/mdx-js/mdx/blob/next/packages/mdx/mdx-hast-to-jsx.js
 function toJSX(node, parentNode = {}, options = {}) {
   options.indent = options.indent ||2;
   if (node.type === 'root') {
