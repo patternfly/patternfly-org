@@ -23,7 +23,7 @@ GEM
       jekyll (~> 3.3)
     jekyll-watch (1.5.1)
       listen (~> 3.0)
-    json (2.0.2)
+    json (2.3.0)
     kramdown (1.17.0)
     liquid (4.0.3)
     listen (3.2.1)
