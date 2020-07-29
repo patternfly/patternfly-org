@@ -44,7 +44,7 @@ const clientConfig = (env, argv) => {
           { from: path.join(pfDir, 'assets/fonts/'), to: 'assets/fonts/' }
         ]
       }),
-      ...getHtmlWebpackPlugins(getRoutes(false), isProd), // Create an HTML page per route
+      ...getHtmlWebpackPlugins(getRoutes(false).routes, isProd), // Create an HTML page per route
       ...(env.analyze ? [new BundleAnalyzerPlugin()] : []) // webpack --env analyze
     ]
   };

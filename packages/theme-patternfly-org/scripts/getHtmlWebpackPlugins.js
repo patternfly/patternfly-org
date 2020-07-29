@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const prerender = require('./prerender');
 const { googleAnalyticsID } = require(`${process.cwd()}/patternfly-docs.config`);
 
 module.exports = (routes, isProd) =>
@@ -10,7 +9,7 @@ module.exports = (routes, isProd) =>
       filename: `${url}/index.html`.replace(/^\/+/, ''),
       title: `PatternFly 4${title ? ` • ${title}` : ''}`,
       templateParameters: {
-        prerendering: isProd ? prerender(url) : 'Loading...',
+        prerendering: isProd ? require('./prerender')(url) : 'Loading...',
         googleAnalyticsID: isProd ? googleAnalyticsID : false
       },
       scriptLoading: 'defer',

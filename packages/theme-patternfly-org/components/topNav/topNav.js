@@ -3,7 +3,7 @@ import { Link } from 'theme-patternfly-org/components';
 import { Nav, NavList, NavItem } from '@patternfly/react-core';
 import './topNav.css';
 
-export const TopNav = ({ location,  navItems }) => {
+export const TopNav = ({ location, navItems }) => {
   if (navItems.length === 0) {
     return null;
   }
