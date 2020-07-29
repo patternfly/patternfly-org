@@ -160,10 +160,11 @@ export const SideNavLayout = ({
       });
     }
     if (hasVersionSwitcher && window.fetch) {
-      fetch('/versions.json')
-        .then(d => d.json())
-        .then(json => setVersions(json))
-        .catch(); // No big deal for core/react
+      fetch('/versions.json').then(res => {
+        if (res.ok) {
+          setVersions(res.json());
+        }
+      });
     }
   }, []);
 
