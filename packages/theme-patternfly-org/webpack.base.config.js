@@ -71,6 +71,9 @@ module.exports = (_env, argv) => {
               loader: 'url-loader',
               options: {
                 limit: 8192,
+                fallback: 'file-loader',
+                name: '[name]-[contenthash:5].[ext]',
+                outputPath: 'images/'
               },
             }
           ]

@@ -15,6 +15,7 @@ const clientConfig = (env, argv) => {
     entry: './src/app.js',
     output: {
       path: path.resolve('public'),
+      publicPath: '/',
       filename: '[name].[contenthash:8].bundle.js'
     },
     devServer: {
