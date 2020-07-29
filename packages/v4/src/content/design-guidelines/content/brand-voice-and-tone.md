@@ -54,7 +54,7 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 
 **Description**: Our #1 focus is the user. We make them feel welcome and create a sense of belonging and understanding.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Do</strong></center></th>
         <th><center><strong>Don't</strong></center></th>
@@ -72,7 +72,7 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 
 **Description**: People are comfortable engaging with us. We’re open to listening and changing our ways when better ideas come along.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Do</strong></center></th>
         <th><center><strong>Don't</strong></center></th>
@@ -88,7 +88,7 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 
 **Description**: We embody Red Hat’s open source mission with our collaborative working style and our sense of community.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Do</strong></center></th>
         <th><center><strong>Don't</strong></center></th>
@@ -104,7 +104,7 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 
 **Description**: We have a fearless edge, challenging the assumption that UX is for a niche group of techies. We’re also not afraid to share our ideas and welcome new ones.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Do</strong></center></th>
         <th><center><strong>Don't</strong></center></th>
