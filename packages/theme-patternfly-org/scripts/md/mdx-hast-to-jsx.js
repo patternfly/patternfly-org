@@ -1,7 +1,8 @@
-const {serializeTags} = require('remark-mdx/lib/serialize/mdx-element');
+const path = require('path');
+const { serializeTags } = require('remark-mdx/lib/serialize/mdx-element');
 const serializeMdxExpression = require('remark-mdx/lib/serialize/mdx-expression');
 const toH = require('hast-to-hyperscript');
-const {toTemplateLiteral} = require('@mdx-js/util');
+const { toTemplateLiteral } = require('@mdx-js/util');
 const acorn = require('acorn');
 const jsx = require('acorn-jsx');
 const { capitalize } = require('theme-patternfly-org/helpers/capitalize');
@@ -30,10 +31,6 @@ function toJSX(node, parentNode = {}, options = {}) {
 
   if (node.type === 'mdxBlockElement' || node.type === 'mdxSpanElement') {
     return serializeComponent(node, options, parentNode);
-  }
-
-  if (node.type === 'import') {
-    return serializeEsSyntax(node);
   }
 }
 
@@ -64,8 +61,8 @@ function serializeRoot(node, options) {
   }
 
   const importStatements = groups.import
-    .map(childNode => toJSX(childNode, node))
-    .map(imp => imp.replace(/(['"])\./g, (_, match) => `${match}${getRelPath()}`))
+    .map(node => node.value)
+    .map(imp => imp.replace(/(['"])\./g, (_, match) => `${match}${getRelPath()}${path.sep}\.`))
     .join('\n')
 
   // https://astexplorer.net/#/gist/9c531dd372dfc57e194c13c2889d31c3/03f2d6e889db1a733c6a079554e8af7784863739
@@ -150,10 +147,6 @@ function serializeText(node, options, parentNode) {
   }
 
   return toTemplateLiteral(node.value);
-}
-
-function serializeEsSyntax(node) {
-  return node.value;
 }
 
 function serializeChildren(node, options) {

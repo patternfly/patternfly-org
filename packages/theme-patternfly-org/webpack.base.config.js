@@ -73,6 +73,7 @@ module.exports = (_env, argv) => {
                 limit: 8192,
                 fallback: 'file-loader',
                 name: '[name]-[contenthash:5].[ext]',
+                publicPath: '/images',
                 outputPath: 'images/'
               },
             }
