@@ -41,7 +41,7 @@ A search filter is intended to be used with a filter group as shown below when y
 #### Button group
 <img src="./img/button-group.png" alt="button group" width="205" />
 
- Any global actions that apply to selected data items are included left-aligned following filter and icon buttons. No more than two items should be exposed as buttons. If you have more than two items, use an [overflow menu](#overflow-menus) component to save space.
+ Any global actions that apply to selected data items are included left-aligned following filter and icon buttons. No more than two items should be exposed as buttons. If you have more than two items, use an [overflow menu](#overflow-menu) component to save space.
 
  #### Overflow menu
  <img src="./img/overflow-menu.png" alt="button group" width="357" />
