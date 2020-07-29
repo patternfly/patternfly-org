@@ -142,7 +142,7 @@ Every table can be extended with these functionalities:
 
 ### Expandable table
 
-<img src="./img/expandable-data-table.png"  alt="Expandable table"  width="1189"/> 
+<img src="./img/expandable-data-table.png"  alt="Expandable table"  width="1186"/> 
 
 1. **Expansion:** Expands the row
 2. **Expansion panel:** Contains details associated with a row
@@ -151,6 +151,13 @@ Every table can be extended with these functionalities:
 Use expandable table rows when: 
 * You have more information than will comfortably fit inside a row. 
 * You want to provide a way for advanced users to access information that is not applicable to all users.
+
+Use a dark blue line for expanded rows when: 
+* You expanded a single row. 
+* You expanded more rows, and you selected one of them. It means that this row is active.
+
+Use a light blue line for expanded rows when: 
+* You have a selectable table with selectable rows, and you expanded more rows, but you didn't select them to be active.
 
 ### Compound-expandable table
 
