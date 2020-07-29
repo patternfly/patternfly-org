@@ -46,8 +46,6 @@ export const MDXTemplate = ({
     </React.Fragment>
   );
 
-  console.log('designSnippet', designSnippet)
-  console.log('sources', sources)
 
   const isSinglePage = Object.keys(sources).length === 1;
 
@@ -65,8 +63,8 @@ export const MDXTemplate = ({
           <Title size="4xl" headingLevel="h1" className="ws-page-title">
             {id}
           </Title>
-          {designSnippet ? <designSnippet.Component /> : null}
-          {isSinglePage ? null : (
+          {designSnippet && React.createElement(designSnippet.Component)}
+          {!isSinglePage && (
             <ul>
               {Object.keys(sources)
                 .map(source => (
@@ -79,7 +77,10 @@ export const MDXTemplate = ({
               }
             </ul>
           )}
-          {children}
+          {isSinglePage
+            ? React.createElement(Object.values(sources)[0].Component)
+            : children
+          }
         </PageSection>
       </SideNavLayout>
     </React.Fragment>
