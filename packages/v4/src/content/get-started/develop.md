@@ -1,6 +1,7 @@
 ---
 id: Develop
 title: Develop with PatternFly
+section: get-started
 ---
 import './get-started.css';
 
