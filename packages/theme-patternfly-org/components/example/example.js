@@ -1,4 +1,5 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from '@reach/router';
 import { LiveProvider, LiveEditor, LivePreview, LiveError } from 'react-live';
 import { Badge } from '@patternfly/react-core';
 import * as reactCoreModule from '@patternfly/react-core';
@@ -39,26 +40,25 @@ export const Example = ({
   if (supportedLangs === []) {
     noLive = true;
   }
-  const initialLang = supportedLangs[0];
-  const initialCode = code;
+  const editorLang = supportedLangs[0];
+  if (!editorLang) {
+    // Inline code
+    return <code className="ws-code">{code}</code>;
+  } else if (noLive) {
+    // Code block
+    const html = Prism.highlight(code, Prism.languages.javascript, 'javascript');
+    return <pre dangerouslySetInnerHTML={{ __html: html }} />;
+  }
 
   // https://reactjs.org/docs/hooks-overview.html#state-hook
-  const [editorCode, setEditorCode] = React.useState(initialCode);
-  const [editorLang, setEditorLang] = React.useState(initialLang);
+  const [editorCode, setEditorCode] = React.useState(code);
   const [darkMode, setDarkMode] = React.useState(false);
   const [previewStyle, setPreviewStyle] = React.useState({});
   const [previewContainerStyle, setPreviewContainerStyle] = React.useState({ height: '437.5px' });
+  const location = useLocation();
 
-  if (!editorLang) {
-     // Inline code
-    return <code className="ws-code">{editorCode}</code>;
-  } else if (noLive) {
-    // Code block
-    const html = Prism.highlight(editorCode, Prism.languages.javascript, 'javascript');
-    return <pre dangerouslySetInnerHTML={{ __html: html }} />;
-  }
   const exampleName = title.replace(/-/g, ' ').replace(/  /g, '-');
-  const fullscreenLink = `${window.location.pathname}/${slugger(title)}`;
+  const fullscreenLink = `${location.pathname}/${slugger(title)}`;
   const scope = {
     ...liveContext,
     // These 2 are in the bundle anyways for the site since we dogfood
@@ -75,7 +75,7 @@ export const Example = ({
 
   // https://reactjs.org/docs/hooks-effect.html
   if (isFullscreen) {
-    useLayoutEffect(() => {
+    useEffect(() => {
       const handleResize = () => {
         const resizeWidth = Math.min(
           document.getElementsByClassName('ws-example')[0].clientWidth,

@@ -2,10 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { googleAnalyticsID } = require(`${process.cwd()}/patternfly-docs.config`);
 
-module.exports = (routes, isProd) =>
+module.exports = (routes, isProd) => 
   Object.entries(routes).map(([url, { title }]) => 
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../template.ejs'),
+      template: path.resolve(__dirname, '../templates/html.ejs'),
       filename: `${url}/index.html`.replace(/^\/+/, ''),
       title: `PatternFly 4${title ? ` • ${title}` : ''}`,
       templateParameters: {
@@ -15,4 +15,14 @@ module.exports = (routes, isProd) =>
       scriptLoading: 'defer',
       inject: false
     }),
+  ).concat(
+    // Sitemap
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, '../templates/sitemap.ejs'),
+      filename: 'sitemap.xml',
+      templateParameters: {
+        urls: Object.keys(routes)
+      },
+      inject: false
+    })
   );
