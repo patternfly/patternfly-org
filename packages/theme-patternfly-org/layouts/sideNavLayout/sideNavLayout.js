@@ -162,7 +162,7 @@ export const SideNavLayout = ({
     if (hasVersionSwitcher && window.fetch) {
       fetch('/versions.json').then(res => {
         if (res.ok) {
-          setVersions(res.json());
+          res.json().then(json => setVersions(json));
         }
       });
     }
