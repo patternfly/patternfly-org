@@ -1,5 +1,5 @@
 module.exports = {
-  transformCode: (code, language, html) => {
+  transformCode: (code, language) => {
     if (typeof code !== 'string') {
       return;
     }
@@ -11,8 +11,7 @@ module.exports = {
         .replace(/export default/gm, '') // inline export
     }
     // HTML/HBS
-    const transformed = language === 'hbs' ? html : code;
-    return `<div className="ws-preview-html" dangerouslySetInnerHTML={{ __html: "${transformed
+    return `<div className="ws-preview-html" dangerouslySetInnerHTML={{ __html: "${code
       .replace(/"/g, '\\"')
       .replace(/\n/g, '')}"}} />`;;
   }

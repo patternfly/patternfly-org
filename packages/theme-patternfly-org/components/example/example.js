@@ -1,7 +1,9 @@
 import React, { useLayoutEffect } from 'react';
 import { LiveProvider, LiveEditor, LivePreview, LiveError } from 'react-live';
 import { Badge } from '@patternfly/react-core';
-import * as PatternflyReactCore from '@patternfly/react-core';
+import * as reactCoreModule from '@patternfly/react-core';
+import * as reactTableModule from '@patternfly/react-table';
+import { css } from '@patternfly/react-styles';
 import { ExampleToolbar } from './exampleToolbar';
 import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
 import { getParameters } from 'codesandbox/lib/api/define';
@@ -10,58 +12,66 @@ import Prism from 'prismjs';
 import 'prismjs/themes/prism-coy.css';
 import './example.css';
 
-const getSupportedLanguages = className => {
-  if (typeof className === 'string') {
-    if (className.includes('-js')) {
-      return ['jsx'];
-    }
-    else if (className.includes('-hbs')) {
-      return ['html', 'hbs'];
-    }
+const getSupportedLanguages = lang => {
+  if (lang.includes('js')) {
+    return ['jsx'];
   }
-  return ['unknown'];
+  else if (lang.includes('html')) {
+    return ['html'];
+  }
+  return [];
 }
 
-export const Example = props => {
-  const supportedLangs = getSupportedLanguages(props.className);
+// Props come from mdx-ast-to-mdx-hast.js
+export const Example = ({
+  code,
+  lang = '',
+  source = 'core',
+  noLive,
+  title = 'Untitled',
+  isFullscreen,
+  isBeta,
+  componentName,
+  section,
+  liveContext
+}) => {
+  const supportedLangs = getSupportedLanguages(lang);
+  if (supportedLangs === []) {
+    noLive = true;
+  }
   const initialLang = supportedLangs[0];
-  const initialCode = props.children.toString();
-  const { noLive, title = 'Untitled example', isFullscreen = false, isBeta = false, location, children, navSection, componentName } = props;
+  const initialCode = code;
 
   // https://reactjs.org/docs/hooks-overview.html#state-hook
-  const [editorCode, setEditorCode] = React.useState(initialLang === 'html' ? html : initialCode);
+  const [editorCode, setEditorCode] = React.useState(initialCode);
   const [editorLang, setEditorLang] = React.useState(initialLang);
   const [darkMode, setDarkMode] = React.useState(false);
   const [previewStyle, setPreviewStyle] = React.useState({});
   const [previewContainerStyle, setPreviewContainerStyle] = React.useState({ height: '437.5px' });
 
-  const onLanguageChange = newLang => {
-    setEditorLang(newLang);
-    if (editorLang !== 'html' && newLang === 'html') {
-      setEditorCode(html);
-    }
-  }
-
-  if (editorLang === 'unknown') {
+  if (!editorLang) {
      // Inline code
-    return <code className="ws-code">{children}</code>;
+    return <code className="ws-code">{editorCode}</code>;
   } else if (noLive) {
     // Code block
-    const html = Prism.highlight(children, Prism.languages.javascript, 'javascript');
+    const html = Prism.highlight(editorCode, Prism.languages.javascript, 'javascript');
     return <pre dangerouslySetInnerHTML={{ __html: html }} />;
   }
   const exampleName = title.replace(/-/g, ' ').replace(/  /g, '-');
-  const fullscreenLink = `${location.pathname}/${slugger(title.toLowerCase())}`;
+  const fullscreenLink = `${window.location.pathname}/${slugger(title)}`;
   const scope = {
-    ...PatternflyReactCore
+    ...liveContext,
+    // These 2 are in the bundle anyways for the site since we dogfood
+    ...reactCoreModule,
+    ...reactTableModule,
   };
   const codeBoxParams = getParameters(
-    props.html
-    ? getStaticParams(props.title, html)
-    : getReactParams(props.title, editorCode, scope));
+    lang === 'html'
+    ? getStaticParams(title, code)
+    : getReactParams(title, editorCode, scope));
 
-  const className = getExampleClassName(props.source, navSection[0], componentName);
-  const id = getExampleId(props.source, navSection[0], componentName, title);
+  const className = getExampleClassName(source, section[0], componentName);
+  const id = getExampleId(source, section[0], componentName, title);
 
   // https://reactjs.org/docs/hooks-effect.html
   if (isFullscreen) {
@@ -91,21 +101,28 @@ export const Example = props => {
     <LivePreview
       id={id}
       style={previewStyle}
-      className={`${className} ${
-        darkMode ? ' pf-t-dark pf-m-opaque-200' : ''}${
-        isFullscreen ? ' ws-preview-fullscreen' : ' ws-preview'}`} />
+      className={css(
+        className,
+        darkMode && 'pf-t-dark pf-m-opaque-200',
+        isFullscreen ? ' ws-preview-fullscreen' : ' ws-preview'
+      )} />
   );
 
   return (
     <div className="ws-example">
-      <AutoLinkHeader metaText={isBeta ? <Badge className="ws-beta-badge pf-u-ml-xs">Beta</Badge> : null} size="h4" headingLevel="h3" className="ws-example-heading">
+      <AutoLinkHeader
+        metaText={isBeta && <Badge className="ws-beta-badge pf-u-ml-xs">Beta</Badge>}
+        size="h4"
+        headingLevel="h3"
+        className="ws-example-heading"
+      >
         {exampleName}
       </AutoLinkHeader>
       <LiveProvider
         scope={scope}
         code={editorCode}
-        transformCode={code => transformCode(code, editorLang, html)}
-        disabled={isFullscreen || editorLang === 'hbs'}
+        transformCode={code => transformCode(code, editorLang)}
+        disabled={isFullscreen}
         theme={{
           plain: isFullscreen ? { pointerEvents: 'auto' } : {},
           styles: []
@@ -128,9 +145,8 @@ export const Example = props => {
           : Preview}
 
         <ExampleToolbar
-          editor={<LiveEditor className="ws-editor" onChange={code => setEditorCode(code)} />}
+          editor={<LiveEditor className="ws-editor" onChange={setEditorCode} />}
           supportedLangs={supportedLangs}
-          onLanguageChange={onLanguageChange}
           onDarkmodeChange={() => setDarkMode(!darkMode)}
           // Dark mode is permanently hidden per patternfly.org design
           hideDarkMode={true}
@@ -138,7 +154,7 @@ export const Example = props => {
           fullscreenLink={fullscreenLink}
           code={editorCode}
           codeBoxParams={codeBoxParams}
-          componentName={props.componentName}/>
+          componentName={componentName}/>
         <LiveError />
       </LiveProvider>
     </div>
