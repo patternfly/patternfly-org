@@ -1,3 +1,5 @@
-export const capitalize = word => {
-  return word.substr(0, 1).toUpperCase() + word.substr(1);
-}
+const { capitalize } = require('@patternfly/react-core/dist/js/helpers/util');
+
+module.exports = {
+  capitalize
+};

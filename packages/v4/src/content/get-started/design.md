@@ -1,7 +1,6 @@
 ---
+id: Design
 title: Design with PatternFly
-hideTOC: true
-showTitle: true
 ---
 import './get-started.css';
 
