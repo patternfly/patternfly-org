@@ -1,0 +1,10 @@
+.ws-toc {
+  top: 0;
+  order: 1;
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
+}
+
+.ws-toc-item {
+  display: block;
+}

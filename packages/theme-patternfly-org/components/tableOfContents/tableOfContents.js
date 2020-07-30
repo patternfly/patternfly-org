@@ -5,10 +5,12 @@ import {
   CardTitle,
   CardBody,
   Grid,
-  GridItem
+  GridItem,
+  Title
 } from '@patternfly/react-core';
 import { slugger } from '../../helpers';
 import versions from '../../versions.json';
+import './tableOfContents.css';
 
 const ReleaseNotesTOC = () => (
   <Grid hasGutter className="ws-release-notes-toc">
@@ -58,11 +60,18 @@ export const TableOfContents = ({
     return <ReleaseNotesTOC />;
   }
 
-  return items
-    .map(heading => (
-      <a key={heading} href={`#${slugger(heading)}`} className="ws-toc">
-        {heading}
-      </a>
-    ))
-    .filter(Boolean);
+  return (
+    <nav className="ws-toc">
+      <Title headingLevel="h2" size="sm">
+        Table of contents
+      </Title>
+      {items
+        .filter(Boolean)
+        .map(heading => (
+          <a key={heading} href={`#${slugger(heading)}`} className="ws-toc-item">
+            {heading}
+          </a>
+        ))}
+    </nav>
+  );
 }

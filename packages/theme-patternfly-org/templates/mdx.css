@@ -15,16 +15,6 @@
   color: #06c;
 }
 
-.ws-toc {
-  margin-bottom: var(--pf-global--spacer--lg);
-  margin-right: var(--pf-global--spacer--lg);
-  display: inline-block;
-}
-
-p ~ .ws-toc {
-  margin-top: var(--pf-global--spacer--lg);
-}
-
 .ws-release-notes-toc {
   margin-bottom: var(--pf-global--spacer--lg);
 }
@@ -398,4 +388,13 @@ p ~ .ws-toc {
   #chart-colors ~ .ws-p > .ws-img:not([src$=".gif"])  {
     max-width: 654px;
   }
+}
+
+.ws-mdx-child {
+  display: flex;
+  align-items: flex-start;
+}
+
+.ws-mdx-content {
+  flex-grow: 1;
 }

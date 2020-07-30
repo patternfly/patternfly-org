@@ -75,8 +75,7 @@ export const MDXChildTemplate = ({
   if (propComponents && propComponents.length > 0 && !toc.includes('Props')) {
     toc.push('Props');
   }
-  // Create dynamic component for @reach/router
-  const RoutedComponent = () => (
+  const InlineAlerts = (
     <React.Fragment>
       {optIn && (
         <InlineAlert title="Opt-in feature">
@@ -93,34 +92,44 @@ export const MDXChildTemplate = ({
           The embedded version of our tutorials are broken, but you can still access our tutorials on <a href="https://www.katacoda.com/patternfly">Katacoda.com</a>.
         </InlineAlert>
       )}
-      {toc && <TableOfContents items={toc} />}
-      <Component />
-      {cssPrefix && cssPrefix.length > 0 && (
-        <React.Fragment>
-          <AutoLinkHeader headingLevel="h2" id="props" size="h2" className="ws-h2">
-            CSS Variables
-          </AutoLinkHeader>
-          <CSSVariables prefix={cssPrefix} />
-        </React.Fragment>
-      )}
-      {false && (
-        <React.Fragment>
-          <AutoLinkHeader headingLevel="h2" id="props" size="h2" className="ws-h2">
-            Props
-          </AutoLinkHeader>
-          {props.map(component => (
-            <PropsTable
-              key={component.name}
-              caption={`${component.name} properties`}
-              rows={component.props} />
-          ))}
-        </React.Fragment>
-      )}
-      {sourceLink && (
-        <a href={sourceLink} target="_blank">View source on Github.</a>
-      )}
     </React.Fragment>
   );
-  RoutedComponent.displayName = `Routed${Component.displayName}`;
-  return <RoutedComponent key={source} path={source} default={source === 'react'} />;
+  // Create dynamic component for @reach/router
+  const ChildComponent = () => (
+    <div className="ws-mdx-child">
+      {toc && toc.length > 1 && (
+        <TableOfContents items={toc} />
+      )}
+      <div>
+        {InlineAlerts}
+        <Component />
+        {cssPrefix && cssPrefix.length > 0 && (
+          <React.Fragment>
+            <AutoLinkHeader headingLevel="h2" id="props" size="h2" className="ws-h2">
+              CSS Variables
+            </AutoLinkHeader>
+            <CSSVariables prefix={cssPrefix} />
+          </React.Fragment>
+        )}
+        {false && (
+          <React.Fragment>
+            <AutoLinkHeader headingLevel="h2" id="props" size="h2" className="ws-h2">
+              Props
+            </AutoLinkHeader>
+            {props.map(component => (
+              <PropsTable
+                key={component.name}
+                caption={`${component.name} properties`}
+                rows={component.props} />
+            ))}
+          </React.Fragment>
+        )}
+        {sourceLink && (
+          <a href={sourceLink} target="_blank">View source on Github.</a>
+        )}
+      </div>
+    </div>
+  );
+  ChildComponent.displayName = `Routed${Component.displayName}`;
+  return <ChildComponent key={source} path={source} default={source === 'react'} />;
 }
