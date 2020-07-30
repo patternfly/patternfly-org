@@ -395,6 +395,7 @@
   align-items: flex-start;
 }
 
-.ws-mdx-content {
-  flex-grow: 1;
+.ws-source-tabs.pf-c-tabs::before {
+  border: none;
+  border-width: 0; 
 }

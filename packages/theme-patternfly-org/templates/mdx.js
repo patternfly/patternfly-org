@@ -1,7 +1,9 @@
 import React from 'react';
-import { PageSection, SkipToContent, Title } from '@patternfly/react-core';
+import { PageSection, SkipToContent, Title, Tabs, Tab } from '@patternfly/react-core';
+import { useLocation } from '@reach/router';
 import { SideNavLayout } from '../layouts';
 import { AutoLinkHeader, CSSVariables, PropsTable, TableOfContents, Link } from '../components';
+import { capitalize } from '../helpers';
 import './mdx.css';
 
 const InlineAlert = ({
@@ -28,6 +30,7 @@ export const MDXTemplate = ({
   children
 }) => {
   const isSinglePage = Object.keys(sources).length === 1;
+  const { pathname } = useLocation();
 
   return (
     <React.Fragment>
@@ -39,17 +42,24 @@ export const MDXTemplate = ({
           </Title>
           {designSnippet && React.createElement(designSnippet.Component)}
           {!isSinglePage && (
-            <ul>
+            <Tabs
+              activeKey={pathname.split('/').pop()}
+              className="ws-source-tabs"
+            >
               {Object.keys(sources)
                 .map(source => (
-                  <li key={source}>
-                    <Link to={source}>
-                      {source}
-                    </Link>
-                  </li>
+                  <Tab
+                    key={source}
+                    eventKey={source}
+                    title={(
+                      <Link to={source}>
+                        {capitalize(source.replace(/-/g, ' '))}
+                      </Link>
+                    )}
+                  />
                 ))
               }
-            </ul>
+            </Tabs>
           )}
           {isSinglePage
             ? React.createElement(Object.values(sources)[0].Component)
@@ -100,7 +110,7 @@ export const MDXChildTemplate = ({
       {toc && toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
-      <div>
+      <div className="ws-mdx-content">
         {InlineAlerts}
         <Component />
         {cssPrefix && cssPrefix.length > 0 && (
@@ -130,6 +140,6 @@ export const MDXChildTemplate = ({
       </div>
     </div>
   );
-  ChildComponent.displayName = `Routed${Component.displayName}`;
+  ChildComponent.displayName = `Route${Component.displayName}`;
   return <ChildComponent key={source} path={source} default={source === 'react'} />;
 }

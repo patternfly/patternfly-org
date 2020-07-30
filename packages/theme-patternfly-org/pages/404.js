@@ -6,8 +6,12 @@ import { SideNavLayout } from '../layouts/sideNavLayout/sideNavLayout';
 const Page404 = () => (
   <SideNavLayout>
     <PageSection className="ws-section" style={{ height: '70vh' }}>
-      <Title size="2xl" headingLevel="h1">404 - Page not found</Title>
-      <p><Link to="/">Go home.</Link></p>
+      <Title size="xl" className="pf-u-mb-lg ws-title" headingLevel="h1">
+        404 - Page not found
+      </Title>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+      </ul>
     </PageSection>
   </SideNavLayout>
 );

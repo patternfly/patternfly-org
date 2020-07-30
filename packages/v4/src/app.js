@@ -25,7 +25,7 @@ export const App = () => (
       {Object.entries(LayoutOptions.routes).map(([path, props]) => {
         const { Component } = props;
         if (Component) {
-          return <Component key={path} path={path} />;
+          return <Component key={path} path={path} default={path === '/404'} />;
         }
         const { sources, designSnippet, id } = props;
         return (
