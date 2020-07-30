@@ -9,7 +9,7 @@ function plugin({ beginMarker = '<!--', endMarker = '-->' } = {}) {
     const trimmed = value.trimRight();
     const endIndex = trimmed.indexOf(endMarker);
     if (trimmed.startsWith(beginMarker) && endIndex >= 1) {
-      eat(value.substr(0, endIndex));
+      eat(value.substr(0, endIndex + endMarker.length));
     }
     return true;
   }

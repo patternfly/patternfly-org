@@ -66,24 +66,24 @@ import './icons.css';
         <p><b>Small icons</b></p>
         <Flex alignItems={{ default: 'alignItemsFlexStart' }}>
           <FlexItem>
-            <img src="sm-icons-1.png" alt="Small icons" className="ws-sm-icons ws-sm-icons-1" />
+            <img src="./sm-icons-1.png" alt="Small icons" className="ws-sm-icons ws-sm-icons-1" />
           </FlexItem>
           <FlexItem grow={{ default: 'grow' }}>
-            <img src="sm-icons-2.png" alt="Small icons" className="ws-sm-icons ws-sm-icons-2" />
+            <img src="./sm-icons-2.png" alt="Small icons" className="ws-sm-icons ws-sm-icons-2" />
           </FlexItem>
         </Flex>
         <p><b>Medium icons</b></p>
-        <img src="md-icons.png" alt="Medium icons" className="ws-md-icons" />
+        <img src="./md-icons.png" alt="Medium icons" className="ws-md-icons" />
         <p><b>Large icons</b></p>
-        <img src="lg-icons.png" alt="Large icons" className="ws-lg-icons" />
+        <img src="./lg-icons.png" alt="Large icons" className="ws-lg-icons" />
         <p><b>X-large icons</b></p>
-        <img src="xl-icons.png" alt="Extra large icons" className="ws-xl-icons" />
+        <img src="./xl-icons.png" alt="Extra large icons" className="ws-xl-icons" />
       </CardBody>
     </Card>
   </GridItem>
   <GridItem xl={6} lg={12} className="ws-icons-gridtext ws-icons-alignment-section">
     No matter the size of the icon, when icons are next to text, they should be center-aligned horizontally. An example of this alignment in a component is a <a href="/design-guidelines/usage-and-behavior/buttons-and-links#link-button">link button</a>. If icons are stacked, they should also be center-aligned vertically.
-    <div><img src="icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" /></div>
+    <div><img src="./icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" /></div>
   </GridItem>
 </Grid>
 

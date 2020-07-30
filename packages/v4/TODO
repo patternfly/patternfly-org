@@ -4,7 +4,7 @@
   - icon: require.resolve('theme-patternfly-org/images/patternfly-logo.svg')
 - [x] <html lang="en-us">
 - [x] root tag heights 100%
-- [ ] Sitemap
+- [x] Sitemap
 - [ ] CLI
 
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import {
   Page,
   PageHeader,
@@ -15,7 +15,9 @@ import {
   Divider
 } from '@patternfly/react-core';
 import { SearchIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
+import { useLocation } from '@reach/router';
 import { SideNav, TopNav, Footer, GdprBanner } from '../../components';
+import ConfigContext from '../../helpers/configContext';
 import staticVersions from '../../versions.json';
 import logo from '../logo.svg';
 import './sideNavLayout.css';
@@ -123,19 +125,22 @@ const HeaderTools = ({
 
 export const SideNavLayout = ({
   children,
-  location,
-  hideSideNav = false,
-  hasGdprBanner = false,
-  hasFooter = false,
-  hasSearch = false,
-  hasVersionSwitcher = false,
-  sideNavItems,
-  idPages,
-  topNavItems = [],
-  prnum = null,
-  prurl,
-  pathPrefix
 }) => {
+  const {
+    hideSideNav,
+    hasGdprBanner,
+    hasFooter,
+    hasSearch,
+    hasVersionSwitcher,
+    sideNavItems,
+    topNavItems,
+    prnum,
+    prurl,
+    pathPrefix,
+    // BONUS prop passed from app.js
+    groupedRoutes
+  } = useContext(ConfigContext);
+  const location = useLocation();
   const [versions, setVersions] = useState({ ...staticVersions });
   if (typeof window !== 'undefined' && window.ga) {
     window.ga('set', 'page', location.pathname);
@@ -155,10 +160,11 @@ export const SideNavLayout = ({
       });
     }
     if (hasVersionSwitcher && window.fetch) {
-      fetch('/versions.json')
-        .then(d => d.json())
-        .then(json => setVersions(json))
-        .catch(); // No big deal for core/react
+      fetch('/versions.json').then(res => {
+        if (res.ok) {
+          res.json().then(json => setVersions(json));
+        }
+      });
     }
   }, []);
 
@@ -166,7 +172,7 @@ export const SideNavLayout = ({
     <PageSidebar
       className="ws-page-sidebar"
       theme="light"
-      nav={<SideNav location={location} sideNavItems={sideNavItems} idPages={idPages} />}
+      nav={<SideNav location={location} navItems={sideNavItems} groupedRoutes={groupedRoutes} />}
     />
   );
 

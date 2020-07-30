@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SizePlugin = require('size-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const { pathPrefix } = require(`${process.cwd()}/patternfly-docs.config`);
 
 // Don't include PatternFly styles twice
 const reactCSSRegex = /(react-[\w-]+\/dist|react-styles\/css)\/.*\.css$/;
@@ -13,6 +14,9 @@ module.exports = (_env, argv) => {
   const isProd = argv.mode === 'production';
 
   return {
+    output: {
+      publicPath: isProd ? `${pathPrefix}/` : '/'
+    },
     devtool: isProd ? 'source-map' : 'cheap-module-source-map',
     resolve: {
       extensions: [ '.tsx', '.ts', '.js', '.jsx' ],
@@ -71,6 +75,9 @@ module.exports = (_env, argv) => {
               loader: 'url-loader',
               options: {
                 limit: 8192,
+                fallback: 'file-loader',
+                name: '[name]-[contenthash:5].[ext]',
+                outputPath: 'images/'
               },
             }
           ]

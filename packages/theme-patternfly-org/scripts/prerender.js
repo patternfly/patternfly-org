@@ -12,9 +12,10 @@ module.exports = url => {
     pathname: url
   };
   
+  console.log('prerender', url);
   const string = ReactDOMServer.renderToString(
-    React.createElement(ServerLocation, {url},
-      React.createElement(app.App, { url })
+    React.createElement(ServerLocation, { url },
+      React.createElement(app.App)
     )
   );
 

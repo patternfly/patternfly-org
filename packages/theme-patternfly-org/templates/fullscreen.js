@@ -1,24 +1,28 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { LiveProvider, LivePreview } from 'react-live';
-import * as PatternflyReactCore from '@patternfly/react-core';
+import * as reactCoreModule from '@patternfly/react-core';
+import * as reactTableModule from '@patternfly/react-table';
 import { transformCode } from '../helpers/transformCode';
 import './fullscreen.css';
 
-const FullscreenMDXTemplate = ({ pageContext }) => {
-  const { wrapperTag: WrapperTag, title, code } = pageContext;
+export const FullscreenTemplate = ({
+  wrapperTag: WrapperTag,
+  code,
+  liveContext,
+  lang
+}) => {
   const scope = {
-    ...PatternflyReactCore
+    ...liveContext,
+    // These 2 are in the bundle anyways for the site since we dogfood
+    ...reactCoreModule,
+    ...reactTableModule,
   };
   return (
     <LiveProvider
       scope={scope}
       code={code}
-      transformCode={c => transformCode(c, 'jsx')}
+      transformCode={c => transformCode(c, lang)}
     >
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
       <LivePreview Component={({ children }) => (
         <WrapperTag className="ws-site-root">
           {children}
@@ -27,5 +31,3 @@ const FullscreenMDXTemplate = ({ pageContext }) => {
     </LiveProvider>
   );
 }
-
-export default FullscreenMDXTemplate;

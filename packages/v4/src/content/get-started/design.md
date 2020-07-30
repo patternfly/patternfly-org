@@ -1,6 +1,7 @@
 ---
 id: Design
 title: Design with PatternFly
+section: get-started
 ---
 import './get-started.css';
 

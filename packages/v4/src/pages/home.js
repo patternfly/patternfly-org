@@ -26,8 +26,8 @@ import './home.css';
 const aboutPatternFly = `Hello, we're PatternFly.`;
 const patternFlyPrinciples = 'Flyer fundamentals';
 
-export default ({ location, layoutOptions }) => (
-  <SideNavLayout location={location} {...layoutOptions}>
+const HomePage = () => (
+  <SideNavLayout>
     <PageSection
       variant={PageSectionVariants.light}
       className="pf4-c-background-image ws-homepage-main-section"
@@ -286,3 +286,5 @@ export default ({ location, layoutOptions }) => (
     </PageSection>
   </SideNavLayout>
 );
+
+export default HomePage;
