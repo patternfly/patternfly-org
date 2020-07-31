@@ -42,7 +42,7 @@ The elements mentioned below are similar for a data list with compact or default
 <img src="./img/compact-list.png"  alt="Compact data list"  width="1188"/> 
 
 1. **[Toolbar](/design-guidelines/usage-and-behavior/toolbar):** The toolbar sits above the list and contains controls for manipulating list data. Common actions include filtering, sorting, and pagination.
-2. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](#/design-guidelines/usage-and-behavior/bulk-selection) for more information.
+2. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/design-guidelines/usage-and-behavior/bulk-selection) for more information.
 3. **Row:** Row height may be variable and sizes to the content. Rows in a data list may take any supported layout.
 4. **Select checkbox:** Selects this row.
 5. **Inline actions:** These actions apply only to the current row/item.
@@ -72,7 +72,7 @@ The actionable data list provides checkboxes that enable users to select one or 
 
 <img src="./img/actionable-list.png"  alt="Actionable list"  width="1172"/> 
 
-1. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](#/design-guidelines/usage-and-behavior/bulk-selection) for more information. 
+1. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/design-guidelines/usage-and-behavior/bulk-selection) for more information. 
 2. **Checkbox:** Enables a user to select a row.
 3. **Global actions:** Actions that can be applied to all selected items.
 
@@ -117,7 +117,7 @@ The elements mentioned below are similar for a table with compact or default spa
 <img src="./img/compact-data-table.png"  alt="Compact table"  width="1186"/> 
 
 1. **[Toolbar](/design-guidelines/usage-and-behavior/toolbar):** Sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
-2. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](#/design-guidelines/usage-and-behavior/bulk-selection) for more information.
+2. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/design-guidelines/usage-and-behavior/bulk-selection) for more information.
 3. **Column headers:** Should align with the content they contain. If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on one column at a time. See [sorting by columns](#sorting-by-columns) for more information on the sort component.
 4. **Select checkbox:** Selects this row
 5. **Global actions:** Actions that apply to all selected items
@@ -177,7 +177,7 @@ The actionable table provides checkboxes that enable users to select one or more
 
 <img src="./img/actionable-table.png"  alt="Actionable table"  width="1174"/> 
 
-1. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](#/design-guidelines/usage-and-behavior/bulk-selection) for more information. 
+1. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/design-guidelines/usage-and-behavior/bulk-selection) for more information. 
 2. **Checkbox:** Enables a user to select a row.
 3. **Global actions:** Actions that can be applied to all selected items.
 
@@ -209,7 +209,7 @@ If a table contains these three attributes: (System Name | Last Sync | Severity)
 Whether to use a table/data list with compact or default spacing is up to you and your use case. However, here is some guidance for when to use which option. You can see examples of each option for comparison. 
 
 ### Compact spacing 
-A table or data list may sometimes need to be compact to make more rows visible at a time. The more rows you can see, the less you need to use [pagination](/design-guidelines/usage-and-behavior/pagination). Compact spacing is recommended for data with a simple structure. See an [example](#Compact-spacing) below. 
+A table or data list may sometimes need to be compact to make more rows visible at a time. The more rows you can see, the less you need to use [pagination](/design-guidelines/usage-and-behavior/pagination). Compact spacing is recommended for data with a simple structure. See an example below. 
 
 Use compact spacing when:
 * You need to show as much data as possible on one page.
@@ -225,7 +225,7 @@ Example:
 * The structure of data is simple, informative and have less visual elements. 
 
 ### Default spacing 
-A table or data list may sometimes need more space for rich graphical data. See an [example](#Default-spacing) below.
+A table or data list may sometimes need more space for rich graphical data. See an example below.
 
 Use default spacing when:
 * You don’t have to display a lot of data on one page.
