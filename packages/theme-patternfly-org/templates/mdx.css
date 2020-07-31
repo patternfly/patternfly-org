@@ -338,6 +338,7 @@
 
 .ws-mdx-child {
   display: flex;
+  height: 100%;
 }
 
 .ws-mdx-content {

@@ -120,9 +120,7 @@ const MDXChildTemplate = ({
 export const MDXTemplate = ({
   id,
   designSnippet,
-  sources = {},
-  path,
-  children
+  sources = {}
 }) => {
   const sourceKeys = Object.keys(sources).sort(sortSources);
   const isSinglePage = sourceKeys.length === 1;
@@ -170,7 +168,7 @@ export const MDXTemplate = ({
         </PageSection>
         {!isSinglePage && (
           <PageSection id="main-content" className="ws-child-section">
-            <Router primary={false}>
+            <Router className="pf-u-h-100" primary={false}>
               {Object.values(sources).map(MDXChildTemplate)}
             </Router>
           </PageSection>
