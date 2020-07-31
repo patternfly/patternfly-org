@@ -49,4 +49,13 @@ sourceMD(
   'react'
 );
 
+const reactChartsMDPath = require
+  .resolve('@patternfly/react-charts/package.json')
+  .replace('package.json', 'src');
+
+sourceMD(
+  glob.sync(path.join(reactChartsMDPath, '/**/examples/*.md')),
+  'react'
+);
+
 writeIndex();
