@@ -50,12 +50,12 @@ const MDXChildTemplate = ({
   katacodaBroken,
   cssPrefix
 }) => {
-  const cssVarsTitle = cssPrefix && cssPrefix.length > 0 && 'CSS variables';
-  const propsTitle = propComponents && propComponents.length > 0 && 'Props';
+  const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
+  const propsTitle = propComponents.length > 0 && 'Props';
   if (cssVarsTitle && !toc.includes(cssVarsTitle)) {
     toc.push(cssVarsTitle);
   }
-  if (false && !toc.includes(propsTitle)) {
+  if (propsTitle && !toc.includes(propsTitle)) {
     toc.push(propsTitle);
   }
   const InlineAlerts = (
@@ -94,12 +94,12 @@ const MDXChildTemplate = ({
             <CSSVariables prefix={cssPrefix} />
           </React.Fragment>
         )}
-        {false && (
+        {propsTitle && (
           <React.Fragment>
             <AutoLinkHeader size="h2" className="ws-h2" id="props">
               {propsTitle}
             </AutoLinkHeader>
-            {props.map(component => (
+            {propComponents.map(component => (
               <PropsTable
                 key={component.name}
                 caption={`${component.name} properties`}
@@ -113,7 +113,7 @@ const MDXChildTemplate = ({
       </div>
     </div>
   );
-  ChildComponent.displayName = `Route${Component.displayName}`;
+  ChildComponent.displayName = `MDXChildTemplate${Component.displayName}`;
   return <ChildComponent key={source} path={source} default={source === 'react'} />;
 }
 

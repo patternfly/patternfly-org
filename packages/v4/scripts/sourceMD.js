@@ -1,6 +1,6 @@
 const path = require('path');
 const glob = require('glob');
-const { sourceMD, writeIndex } = require('theme-patternfly-org/scripts/md/parseMD');
+const { sourceMD, sourceProps, writeIndex } = require('theme-patternfly-org/scripts/md/parseMD');
 
 // Source org md
 sourceMD(
@@ -33,22 +33,19 @@ sourceMD(
   'core'
 );
 
-// Source react md
-const reactMDPath = require
+// Source react props
+const reactPath = require
   .resolve('@patternfly/react-core/package.json')
   .replace('package.json', 'src');
 
-sourceMD(
-  glob.sync(path.join(reactMDPath, '/**/examples/*.md')),
+sourceProps(
+  glob.sync(path.join(reactPath, '/**/*.tsx'), { ignore: '**/*.test.tsx' }),
   'react'
 );
 
-const reactTableMDPath = require
-  .resolve('@patternfly/react-table/package.json')
-  .replace('package.json', 'src');
-
+// Source react md
 sourceMD(
-  glob.sync(path.join(reactTableMDPath, '/**/examples/*.md')),
+  glob.sync(path.join(reactPath, '/**/examples/*.md')),
   'react'
 );
 
