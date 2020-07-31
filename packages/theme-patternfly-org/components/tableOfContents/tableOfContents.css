@@ -2,7 +2,6 @@
   top: var(--pf-global--spacer--md);
   order: 1;
   position: sticky;
-  position: -webkit-sticky; /* Safari */
   background-color: var(--pf-global--BackgroundColor--100);
   padding-left: var(--pf-global--spacer--sm);
   align-self: flex-start;

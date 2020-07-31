@@ -62,11 +62,7 @@
 .pf-site-search #global-search-input:focus {
   outline-offset: 2px;
 }
-.pf-site-search #global-search-input::placeholder,
-.pf-site-search #global-search-input::-webkit-input-placeholder,
-.pf-site-search #global-search-input::-moz-placeholder,
-.pf-site-search #global-search-input:-ms-input-placeholder,
-.pf-site-search #global-search-input:-ms-input-placeholder {
+.pf-site-search #global-search-input::placeholder {
   color: var(--pf-global--Color--light-100);
 }
 
