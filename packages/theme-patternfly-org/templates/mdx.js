@@ -1,7 +1,10 @@
 import React from 'react';
 import { PageSection, SkipToContent, Title } from '@patternfly/react-core';
+import { css } from '@patternfly/react-styles';
+import { Router, useLocation } from '@reach/router';
 import { SideNavLayout } from '../layouts';
 import { AutoLinkHeader, CSSVariables, PropsTable, TableOfContents, Link } from '../components';
+import { capitalize } from '../helpers';
 import './mdx.css';
 
 const InlineAlert = ({
@@ -20,48 +23,23 @@ const InlineAlert = ({
   </Alert>
 );
 
-export const MDXTemplate = ({
-  id,
-  designSnippet,
-  sources = {},
-  path,
-  children
-}) => {
-  const isSinglePage = Object.keys(sources).length === 1;
+const sourceOrder = {
+  react: 1,
+  'design-guidelines': 2
+};
+const defaultOrder = 99;
 
-  return (
-    <React.Fragment>
-      <SkipToContent href="#main-content">Skip to Content</SkipToContent>
-      <SideNavLayout>
-        <PageSection id="main-content" className="ws-section">
-          <Title size="4xl" headingLevel="h1" className="ws-page-title">
-            {id}
-          </Title>
-          {designSnippet && React.createElement(designSnippet.Component)}
-          {!isSinglePage && (
-            <ul>
-              {Object.keys(sources)
-                .map(source => (
-                  <li key={source}>
-                    <Link to={source}>
-                      {source}
-                    </Link>
-                  </li>
-                ))
-              }
-            </ul>
-          )}
-          {isSinglePage
-            ? React.createElement(Object.values(sources)[0].Component)
-            : children
-          }
-        </PageSection>
-      </SideNavLayout>
-    </React.Fragment>
-  );
+const sortSources = (s1, s2) => {
+  const s1Index = sourceOrder[s1] || defaultOrder;
+  const s2Index = sourceOrder[s2] || defaultOrder;
+  if (s1Index === defaultOrder && s2Index === defaultOrder) {
+    return s1.localeCompare(s2);
+  }
+
+  return s1Index > s2Index ? 1 : -1;
 }
 
-export const MDXChildTemplate = ({
+const MDXChildTemplate = ({
   Component,
   source,
   propComponents,
@@ -72,11 +50,15 @@ export const MDXChildTemplate = ({
   katacodaBroken,
   cssPrefix
 }) => {
-  if (propComponents && propComponents.length > 0 && !toc.includes('Props')) {
-    toc.push('Props');
+  const cssVarsTitle = cssPrefix && cssPrefix.length > 0 && 'CSS variables';
+  const propsTitle = propComponents && propComponents.length > 0 && 'Props';
+  if (cssVarsTitle && !toc.includes(cssVarsTitle)) {
+    toc.push(cssVarsTitle);
   }
-  // Create dynamic component for @reach/router
-  const RoutedComponent = () => (
+  if (false && !toc.includes(propsTitle)) {
+    toc.push(propsTitle);
+  }
+  const InlineAlerts = (
     <React.Fragment>
       {optIn && (
         <InlineAlert title="Opt-in feature">
@@ -93,34 +75,105 @@ export const MDXChildTemplate = ({
           The embedded version of our tutorials are broken, but you can still access our tutorials on <a href="https://www.katacoda.com/patternfly">Katacoda.com</a>.
         </InlineAlert>
       )}
-      {toc && <TableOfContents items={toc} />}
-      <Component />
-      {cssPrefix && cssPrefix.length > 0 && (
-        <React.Fragment>
-          <AutoLinkHeader headingLevel="h2" id="props" size="h2" className="ws-h2">
-            CSS Variables
-          </AutoLinkHeader>
-          <CSSVariables prefix={cssPrefix} />
-        </React.Fragment>
-      )}
-      {false && (
-        <React.Fragment>
-          <AutoLinkHeader headingLevel="h2" id="props" size="h2" className="ws-h2">
-            Props
-          </AutoLinkHeader>
-          {props.map(component => (
-            <PropsTable
-              key={component.name}
-              caption={`${component.name} properties`}
-              rows={component.props} />
-          ))}
-        </React.Fragment>
-      )}
-      {sourceLink && (
-        <a href={sourceLink} target="_blank">View source on Github.</a>
-      )}
     </React.Fragment>
   );
-  RoutedComponent.displayName = `Routed${Component.displayName}`;
-  return <RoutedComponent key={source} path={source} default={source === 'react'} />;
+  // Create dynamic component for @reach/router
+  const ChildComponent = () => (
+    <div className="ws-mdx-child">
+      {toc && toc.length > 1 && (
+        <TableOfContents items={toc} />
+      )}
+      <div className="ws-mdx-content">
+        {InlineAlerts}
+        <Component />
+        {cssVarsTitle && (
+          <React.Fragment>
+            <AutoLinkHeader size="h2" className="ws-h2" id="css-variables">
+              {cssVarsTitle}
+            </AutoLinkHeader>
+            <CSSVariables prefix={cssPrefix} />
+          </React.Fragment>
+        )}
+        {false && (
+          <React.Fragment>
+            <AutoLinkHeader size="h2" className="ws-h2" id="props">
+              {propsTitle}
+            </AutoLinkHeader>
+            {props.map(component => (
+              <PropsTable
+                key={component.name}
+                caption={`${component.name} properties`}
+                rows={component.props} />
+            ))}
+          </React.Fragment>
+        )}
+        {sourceLink && (
+          <a href={sourceLink} target="_blank">View source on Github.</a>
+        )}
+      </div>
+    </div>
+  );
+  ChildComponent.displayName = `Route${Component.displayName}`;
+  return <ChildComponent key={source} path={source} default={source === 'react'} />;
+}
+
+export const MDXTemplate = ({
+  id,
+  designSnippet,
+  sources = {}
+}) => {
+  const sourceKeys = Object.keys(sources).sort(sortSources);
+  const isSinglePage = sourceKeys.length === 1;
+  const { pathname } = useLocation();
+  let activeSource = pathname.split('/').pop();
+  if (!sourceKeys.includes(activeSource)) {
+    activeSource = 'react';
+  }
+
+  return (
+    <React.Fragment>
+      <SkipToContent href="#main-content">Skip to Content</SkipToContent>
+      <SideNavLayout>
+        <PageSection
+          id={isSinglePage ? 'main-content' : 'nav-content'}
+          className="ws-first-section"
+          type={isSinglePage ? 'default' : 'nav'}
+        >
+          <Title size="4xl" headingLevel="h1" className="ws-page-title">
+            {id}
+          </Title>
+          {designSnippet && React.createElement(designSnippet.Component)}
+          {!isSinglePage && (
+            <div className="pf-c-tabs ws-source-tabs">
+              <ul className="pf-c-tabs__list">
+                {sourceKeys.map(source => (
+                  <li
+                    key={source}
+                    className={css(
+                      'pf-c-tabs__item',
+                      activeSource === source && 'pf-m-current'
+                    )}
+                  >
+                    <Link className="pf-c-tabs__link" to={source}>
+                      {capitalize(source.replace(/-/g, ' '))}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {isSinglePage && (
+            React.createElement(Object.values(sources)[0].Component)
+          )}
+        </PageSection>
+        {!isSinglePage && (
+          <PageSection id="main-content" className="ws-child-section">
+            <Router className="pf-u-h-100" primary={false}>
+              {Object.values(sources).map(MDXChildTemplate)}
+            </Router>
+          </PageSection>
+        )}
+      </SideNavLayout>
+    </React.Fragment>
+  );
 }

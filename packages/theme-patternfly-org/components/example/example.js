@@ -32,7 +32,7 @@ export const Example = ({
   title = 'Untitled',
   isFullscreen,
   isBeta,
-  componentName,
+  id,
   section,
   liveContext
 }) => {
@@ -70,8 +70,6 @@ export const Example = ({
     ? getStaticParams(title, code)
     : getReactParams(title, editorCode, scope));
 
-  const className = getExampleClassName(source, section[0], componentName);
-  const id = getExampleId(source, section[0], componentName, title);
 
   // https://reactjs.org/docs/hooks-effect.html
   if (isFullscreen) {
@@ -99,12 +97,12 @@ export const Example = ({
 
   const Preview = (
     <LivePreview
-      id={id}
+      id={getExampleId(source, section[0], id, title)}
       style={previewStyle}
       className={css(
-        className,
+        getExampleClassName(source, section[0], id),
         darkMode && 'pf-t-dark pf-m-opaque-200',
-        isFullscreen ? ' ws-preview-fullscreen' : ' ws-preview'
+        isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview'
       )} />
   );
 
@@ -154,7 +152,7 @@ export const Example = ({
           fullscreenLink={fullscreenLink}
           code={editorCode}
           codeBoxParams={codeBoxParams}
-          componentName={componentName}/>
+          componentName={id}/>
         <LiveError />
       </LiveProvider>
     </div>

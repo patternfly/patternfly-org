@@ -20,7 +20,7 @@ sourceMD(
 
 sourceMD(
   glob.sync(path.join(__dirname, '../src/content/design-guidelines/**/*.md')),
-  'usage-and-behavior'
+  'design-guidelines'
 );
 
 // Source core md

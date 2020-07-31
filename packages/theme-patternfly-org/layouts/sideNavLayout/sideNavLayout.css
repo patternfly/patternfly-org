@@ -62,11 +62,7 @@
 .pf-site-search #global-search-input:focus {
   outline-offset: 2px;
 }
-.pf-site-search #global-search-input::placeholder,
-.pf-site-search #global-search-input::-webkit-input-placeholder,
-.pf-site-search #global-search-input::-moz-placeholder,
-.pf-site-search #global-search-input:-ms-input-placeholder,
-.pf-site-search #global-search-input:-ms-input-placeholder {
+.pf-site-search #global-search-input::placeholder {
   color: var(--pf-global--Color--light-100);
 }
 
@@ -100,6 +96,12 @@
 .ws-page {
   flex: 1 1;
   height: auto;
+}
+
+/* Needed for sticky tabs */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/position#sticky */
+.pf-c-page__main {
+  overflow: visible;
 }
 
 .ws-switcher-divider {

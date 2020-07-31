@@ -1,28 +1,22 @@
-.ws-section {
-  background-color: #fafafa;
-  padding: 32px 64px 64px;
+.ws-first-section {
+  padding: 32px 32px 0 32px;
 }
 
 @media (max-width: 767px) {
-  .ws-section {
+  .ws-first-section {
     padding: 16px;
     padding-top: 16px;
   }
 }
 
+.ws-child-section {
+  padding: 0;
+  background-color: var(--pf-global--BackgroundColor--100);
+}
+
 .ws-framework-title {
   font-weight: var(--pf-global--FontWeight--normal);
   color: #06c;
-}
-
-.ws-toc {
-  margin-bottom: var(--pf-global--spacer--lg);
-  margin-right: var(--pf-global--spacer--lg);
-  display: inline-block;
-}
-
-p ~ .ws-toc {
-  margin-top: var(--pf-global--spacer--lg);
 }
 
 .ws-release-notes-toc {
@@ -337,65 +331,20 @@ p ~ .ws-toc {
     grid-column: 2; } }
 
 
-/* Special designer styles */
-@media screen and (min-width: 768px) {
-  .ws-p,
-  .ws-content-p,
-  .ws-content-border,
-  .ws-ol,
-  .ws-ul,
-  .ws-table,
-  #component-title,
-  #component-title + p {
-    max-width: 680px;
-  }
-
-  .ws-img,
-  #props,
-  #props ~ .pf-c-table,
-  #css-variables,
-  #props ~ .pf-c-form-control,
-  #css-variables ~ .pf-c-table,
-  #css-variables ~ .pf-c-form-control,
-  #global-css-variables ~ .pf-c-table,
-  #global-css-variables ~ .pf-c-form-control {
-    max-width: calc(100vw - 418px);
-  }
-
-  #icons ~ .ws-table td .ws-img {
-    max-width: 30px;
-  }
-
-  p.ws-icons-page,
-  .ws-icons-page ~ .ws-p {
-    max-width: none;
-  }
-}
-@media screen and (min-width: 1404px) {
-  .ws-img,
-  .ws-example,
-  #component-title + .pf-c-alert,
-  .ws-page-title + .pf-c-alert,
-  #props,
-  #props ~ .pf-c-table,
-  #css-variables,
-  #css-variables ~ .pf-c-table,
-  #props ~ .pf-c-form-control,
-  #css-variables ~ .pf-c-form-control,
-  #global-css-variables ~ .pf-c-table,
-  #global-css-variables ~ .pf-c-form-control {
-    max-width: 990px;
-  }
-}
-@media screen and (min-width: 1646px) {
-  #chart-colors ~ .pf-l-grid {
-    max-width: 1226px;
-  }
+.ws-source-tabs.pf-c-tabs::before {
+  border: none;
+  border-width: 0;
 }
 
-@media screen and (min-width: 1072px) {
-  #chart-colors ~ .ws-img:not([src$=".gif"]),
-  #chart-colors ~ .ws-p > .ws-img:not([src$=".gif"])  {
-    max-width: 654px;
-  }
+.ws-mdx-child {
+  display: flex;
+  height: 100%;
+}
+
+.ws-mdx-content {
+  padding-right: 32px;
+  padding-left: 32px;
+  padding-top: 48px;
+  background-color: var(--pf-global--BackgroundColor--200);
+  flex-grow: 1;
 }

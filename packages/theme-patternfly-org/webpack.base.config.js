@@ -56,11 +56,24 @@ module.exports = (_env, argv) => {
             {
               loader: MiniCssExtractPlugin.loader,
               options: {
-                hmr: isProd,
+                hmr: isProd
               },
             },
             {
-              loader: 'css-loader',
+              loader: 'css-loader'
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                ident: 'postcss',
+                plugins: [
+                  require('autoprefixer')({
+                    env: '>0.25%, not ie 11, not op_mini all',
+                    flexbox: false,
+                    grid: false
+                  })
+                ]
+              }
             }
           ]
         },

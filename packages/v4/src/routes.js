@@ -8,6 +8,10 @@ module.exports = canRequireJSX => {
       Component: canRequireJSX && require('./pages/get-in-touch').default,
       title: 'Get in touch'
     },
+    '/404': {
+      Component: canRequireJSX && require('theme-patternfly-org/pages/404').default,
+      title: '404 Error'
+    },
     ...(canRequireJSX
       ? Object.values(require('./generated')).reduce((acc, val) => {
         acc[val.slug] = val;

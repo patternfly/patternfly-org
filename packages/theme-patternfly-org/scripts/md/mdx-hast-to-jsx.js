@@ -90,6 +90,7 @@ ${exportName}.Component = () => (
   <React.Fragment>${childNodes.replace(/\n\s*\n/g, '\n')}
   </React.Fragment>
 );
+${exportName}.Component.displayName = '${exportName}';
 `;
 }
 

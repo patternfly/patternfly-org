@@ -9,12 +9,15 @@ const NavItem = ({ text, href }) => (
   <li key={href + text} className="pf-c-nav__item">
     <Link
       to={href}
-      getProps={({ isCurrent }) => ({
-        className: css(
-          'pf-c-nav__link',
-          isCurrent && 'pf-m-current'
-        )
-      })}
+      getProps={({ isCurrent, href, location }) => {
+        const { pathname } = location;
+        return {
+          className: css(
+            'pf-c-nav__link',
+            (isCurrent || pathname.startsWith(href + '/')) && 'pf-m-current'
+          )
+        }}
+      }
     >
       {text}
     </Link>

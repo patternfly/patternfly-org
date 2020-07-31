@@ -90,7 +90,6 @@ export class CSSVariables extends React.Component {
          cellFormatters: [expandable]
       }],
       { title: "Variable", transforms: [sortable] },
-      { title: "React Token", transforms: [sortable] },
       { title: "Value", transforms: [sortable] }
     ]
 
@@ -113,7 +112,6 @@ export class CSSVariables extends React.Component {
         !searchRE ||
         searchRE.test(selector) ||
         searchRE.test(property) ||
-        searchRE.test(token) ||
         searchRE.test(value) ||
         (values && searchRE.test(JSON.stringify(values)));
       if (passes) {
@@ -121,7 +119,6 @@ export class CSSVariables extends React.Component {
         const cells = [
           ...this.props.hideSelectorColumn ? [] : [selector],
           property,
-          token,
           <div key={rowKey}>
             <div
               key={`${rowKey}_1`}
@@ -190,8 +187,7 @@ export class CSSVariables extends React.Component {
       const indexToColMap = {
         '1': 'selector',
         '2': 'property',
-        '3': 'token',
-        '4': 'value'
+        '3': 'value'
       };
       const column = indexToColMap[index];
       if (direction === SortByDirection.asc) {
