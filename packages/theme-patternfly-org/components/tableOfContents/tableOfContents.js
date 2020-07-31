@@ -61,16 +61,16 @@ export const TableOfContents = ({
   }
 
   return (
-    <nav className="ws-toc pf-u-m-md">
-      <Title headingLevel="h2" size="md">
+    <nav className="ws-toc">
+      <Title headingLevel="h2" size="lg">
         Table of contents
       </Title>
       <ul>
         {items
           .filter(Boolean)
           .map(heading => (
-            <li>
-              <a key={heading} href={`#${slugger(heading)}`} className="ws-toc-item pf-u-mt-md pf-u-mb-md">
+            <li key={heading} >
+              <a href={`#${slugger(heading)}`} className="ws-toc-item">
                 {heading}
               </a>
             </li>

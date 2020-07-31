@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageSection, SkipToContent, Title, Tabs, Tab } from '@patternfly/react-core';
-import { useLocation } from '@reach/router';
+import { useLocation, useMatch } from '@reach/router';
 import { SideNavLayout } from '../layouts';
 import { AutoLinkHeader, CSSVariables, PropsTable, TableOfContents, Link } from '../components';
 import { capitalize } from '../helpers';
@@ -22,6 +22,23 @@ const InlineAlert = ({
   </Alert>
 );
 
+const sourceOrder = {
+  react: 1,
+  'design-guidelines': 2
+};
+const defaultOrder = 99;
+
+const sortSources = (s1, s2) => {
+  const s1Index = sourceOrder[s1] || defaultOrder;
+  const s2Index = sourceOrder[s2] || defaultOrder;
+  if (s1Index === defaultOrder && s2Index === defaultOrder) {
+    return s1.localeCompare(s2);
+  }
+
+  return s1Index > s2Index ? 1 : -1;
+}
+  
+
 export const MDXTemplate = ({
   id,
   designSnippet,
@@ -29,43 +46,51 @@ export const MDXTemplate = ({
   path,
   children
 }) => {
-  const isSinglePage = Object.keys(sources).length === 1;
-  const { pathname } = useLocation();
+  const sourceKeys = Object.keys(sources).sort(sortSources);
+  const isSinglePage = sourceKeys.length === 1;
+  console.log('sourceKeys', sourceKeys)
+  let activeSource = path.split('/').pop();
+  if (!sourceKeys.includes(activeSource)) {
+    activeSource = 'react';
+  }
 
   return (
     <React.Fragment>
       <SkipToContent href="#main-content">Skip to Content</SkipToContent>
       <SideNavLayout>
-        <PageSection id="main-content" className="ws-section">
+        <PageSection
+          id={isSinglePage ? 'main-content' : 'nav-content'}
+          className="ws-first-section"
+          type={isSinglePage ? 'default' : 'nav'}
+        >
           <Title size="4xl" headingLevel="h1" className="ws-page-title">
             {id}
           </Title>
           {designSnippet && React.createElement(designSnippet.Component)}
           {!isSinglePage && (
-            <Tabs
-              activeKey={pathname.split('/').pop()}
-              className="ws-source-tabs"
-            >
-              {Object.keys(sources)
-                .map(source => (
-                  <Tab
-                    key={source}
-                    eventKey={source}
-                    title={(
-                      <Link to={source}>
-                        {capitalize(source.replace(/-/g, ' '))}
-                      </Link>
-                    )}
-                  />
-                ))
-              }
+            <Tabs activeKey={activeSource} className="ws-source-tabs">
+              {sourceKeys.map(source => (
+                <Tab
+                  key={source}
+                  eventKey={source}
+                  title={(
+                    <Link to={source}>
+                      {capitalize(source.replace(/-/g, ' '))}
+                    </Link>
+                  )}
+                />
+              ))}
             </Tabs>
           )}
-          {isSinglePage
-            ? React.createElement(Object.values(sources)[0].Component)
-            : children
-          }
+          {isSinglePage && (
+            React.createElement(Object.values(sources)[0].Component)
+          )}
         </PageSection>
+        {!isSinglePage && (
+          <PageSection id="main-content" className="ws-child-section">
+            {children}
+          </PageSection>
+        )}
       </SideNavLayout>
     </React.Fragment>
   );
