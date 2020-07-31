@@ -1,5 +1,5 @@
 .ws-first-section {
-  padding: 32px 0 0 32px;
+  padding: 32px 32px 0 32px;
 }
 
 @media (max-width: 767px) {
@@ -345,4 +345,5 @@
   padding-left: 32px;
   padding-top: 48px;
   background-color: var(--pf-global--BackgroundColor--200);
+  flex-grow: 1;
 }

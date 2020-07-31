@@ -72,10 +72,13 @@ export const MDXTemplate = ({
             <div className="pf-c-tabs ws-source-tabs">
               <ul className="pf-c-tabs__list">
                 {sourceKeys.map(source => (
-                  <li className={css(
-                    'pf-c-tabs__item',
-                    activeSource === source && 'pf-m-current'
-                  )}>
+                  <li
+                    key={source}
+                    className={css(
+                      'pf-c-tabs__item',
+                      activeSource === source && 'pf-m-current'
+                    )}
+                  >
                     <Link className="pf-c-tabs__link" to={source}>
                       {capitalize(source.replace(/-/g, ' '))}
                     </Link>
@@ -109,8 +112,13 @@ export const MDXChildTemplate = ({
   katacodaBroken,
   cssPrefix
 }) => {
-  if (propComponents && propComponents.length > 0 && !toc.includes('Props')) {
-    toc.push('Props');
+  const cssVarsTitle = cssPrefix && cssPrefix.length > 0 && 'CSS variables';
+  const propsTitle = propComponents && propComponents.length > 0 && 'Props';
+  if (cssVarsTitle && !toc.includes(cssVarsTitle)) {
+    toc.push(cssVarsTitle);
+  }
+  if (false && !toc.includes(propsTitle)) {
+    toc.push(propsTitle);
   }
   const InlineAlerts = (
     <React.Fragment>
@@ -140,18 +148,18 @@ export const MDXChildTemplate = ({
       <div className="ws-mdx-content">
         {InlineAlerts}
         <Component />
-        {cssPrefix && cssPrefix.length > 0 && (
+        {cssVarsTitle && (
           <React.Fragment>
-            <AutoLinkHeader headingLevel="h2" id="props" size="h2" className="ws-h2">
-              CSS Variables
+            <AutoLinkHeader size="h2" className="ws-h2" id="css-variables">
+              {cssVarsTitle}
             </AutoLinkHeader>
             <CSSVariables prefix={cssPrefix} />
           </React.Fragment>
         )}
         {false && (
           <React.Fragment>
-            <AutoLinkHeader headingLevel="h2" id="props" size="h2" className="ws-h2">
-              Props
+            <AutoLinkHeader size="h2" className="ws-h2" id="props">
+              {propsTitle}
             </AutoLinkHeader>
             {props.map(component => (
               <PropsTable
