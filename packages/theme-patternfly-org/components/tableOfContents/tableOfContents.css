@@ -4,7 +4,6 @@
   position: sticky;
   position: -webkit-sticky; /* Safari */
   background-color: var(--pf-global--BackgroundColor--100);
-  flex-grow: 1;
   padding-left: var(--pf-global--spacer--sm);
   align-self: flex-start;
 }

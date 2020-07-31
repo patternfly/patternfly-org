@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageSection, SkipToContent, Title, Tabs, Tab } from '@patternfly/react-core';
-import { useLocation, useMatch } from '@reach/router';
+import { useLocation } from '@reach/router';
 import { SideNavLayout } from '../layouts';
 import { AutoLinkHeader, CSSVariables, PropsTable, TableOfContents, Link } from '../components';
 import { capitalize } from '../helpers';
@@ -48,8 +48,8 @@ export const MDXTemplate = ({
 }) => {
   const sourceKeys = Object.keys(sources).sort(sortSources);
   const isSinglePage = sourceKeys.length === 1;
-  console.log('sourceKeys', sourceKeys)
-  let activeSource = path.split('/').pop();
+  const { pathname } = useLocation();
+  let activeSource = pathname.split('/').pop();
   if (!sourceKeys.includes(activeSource)) {
     activeSource = 'react';
   }
