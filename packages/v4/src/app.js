@@ -21,7 +21,7 @@ LayoutOptions.groupedRoutes = groupedRoutes;
 // Export for SSR
 export const App = () => (
   <ConfigContext.Provider value={LayoutOptions}>
-    <Router basepath={LayoutOptions.pathPrefix} id="ws-router" primary={false}>
+    <Router basepath={LayoutOptions.pathPrefix} id="ws-router">
       {Object.entries(LayoutOptions.routes).map(([path, props]) => {
         const { Component } = props;
         if (Component) {
@@ -31,14 +31,12 @@ export const App = () => (
         return (
           <MDXTemplate
             key={path}
-            path={path}
+            path={path + '/*'}
             layoutOptions={LayoutOptions}
             designSnippet={designSnippet}
             id={id}
             sources={sources}
-          >
-            {Object.values(sources).map(MDXChildTemplate)}
-          </MDXTemplate>
+          />
         );
       })}
     </Router>

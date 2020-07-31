@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageSection, SkipToContent, Title } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
-import { useLocation } from '@reach/router';
+import { Router, useLocation } from '@reach/router';
 import { SideNavLayout } from '../layouts';
 import { AutoLinkHeader, CSSVariables, PropsTable, TableOfContents, Link } from '../components';
 import { capitalize } from '../helpers';
@@ -38,70 +38,8 @@ const sortSources = (s1, s2) => {
 
   return s1Index > s2Index ? 1 : -1;
 }
-  
 
-export const MDXTemplate = ({
-  id,
-  designSnippet,
-  sources = {},
-  path,
-  children
-}) => {
-  const sourceKeys = Object.keys(sources).sort(sortSources);
-  const isSinglePage = sourceKeys.length === 1;
-  const { pathname } = useLocation();
-  let activeSource = pathname.split('/').pop();
-  if (!sourceKeys.includes(activeSource)) {
-    activeSource = 'react';
-  }
-
-  return (
-    <React.Fragment>
-      <SkipToContent href="#main-content">Skip to Content</SkipToContent>
-      <SideNavLayout>
-        <PageSection
-          id={isSinglePage ? 'main-content' : 'nav-content'}
-          className="ws-first-section"
-          type={isSinglePage ? 'default' : 'nav'}
-        >
-          <Title size="4xl" headingLevel="h1" className="ws-page-title">
-            {id}
-          </Title>
-          {designSnippet && React.createElement(designSnippet.Component)}
-          {!isSinglePage && (
-            <div className="pf-c-tabs ws-source-tabs">
-              <ul className="pf-c-tabs__list">
-                {sourceKeys.map(source => (
-                  <li
-                    key={source}
-                    className={css(
-                      'pf-c-tabs__item',
-                      activeSource === source && 'pf-m-current'
-                    )}
-                  >
-                    <Link className="pf-c-tabs__link" to={source}>
-                      {capitalize(source.replace(/-/g, ' '))}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-          {isSinglePage && (
-            React.createElement(Object.values(sources)[0].Component)
-          )}
-        </PageSection>
-        {!isSinglePage && (
-          <PageSection id="main-content" className="ws-child-section">
-            {children}
-          </PageSection>
-        )}
-      </SideNavLayout>
-    </React.Fragment>
-  );
-}
-
-export const MDXChildTemplate = ({
+const MDXChildTemplate = ({
   Component,
   source,
   propComponents,
@@ -177,4 +115,67 @@ export const MDXChildTemplate = ({
   );
   ChildComponent.displayName = `Route${Component.displayName}`;
   return <ChildComponent key={source} path={source} default={source === 'react'} />;
+}
+
+export const MDXTemplate = ({
+  id,
+  designSnippet,
+  sources = {},
+  path,
+  children
+}) => {
+  const sourceKeys = Object.keys(sources).sort(sortSources);
+  const isSinglePage = sourceKeys.length === 1;
+  const { pathname } = useLocation();
+  let activeSource = pathname.split('/').pop();
+  if (!sourceKeys.includes(activeSource)) {
+    activeSource = 'react';
+  }
+
+  return (
+    <React.Fragment>
+      <SkipToContent href="#main-content">Skip to Content</SkipToContent>
+      <SideNavLayout>
+        <PageSection
+          id={isSinglePage ? 'main-content' : 'nav-content'}
+          className="ws-first-section"
+          type={isSinglePage ? 'default' : 'nav'}
+        >
+          <Title size="4xl" headingLevel="h1" className="ws-page-title">
+            {id}
+          </Title>
+          {designSnippet && React.createElement(designSnippet.Component)}
+          {!isSinglePage && (
+            <div className="pf-c-tabs ws-source-tabs">
+              <ul className="pf-c-tabs__list">
+                {sourceKeys.map(source => (
+                  <li
+                    key={source}
+                    className={css(
+                      'pf-c-tabs__item',
+                      activeSource === source && 'pf-m-current'
+                    )}
+                  >
+                    <Link className="pf-c-tabs__link" to={source}>
+                      {capitalize(source.replace(/-/g, ' '))}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {isSinglePage && (
+            React.createElement(Object.values(sources)[0].Component)
+          )}
+        </PageSection>
+        {!isSinglePage && (
+          <PageSection id="main-content" className="ws-child-section">
+            <Router primary={false}>
+              {Object.values(sources).map(MDXChildTemplate)}
+            </Router>
+          </PageSection>
+        )}
+      </SideNavLayout>
+    </React.Fragment>
+  );
 }
