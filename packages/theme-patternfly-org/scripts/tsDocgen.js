@@ -1,40 +1,6 @@
+const fs = require('fs');
 const reactDocgen = require('react-docgen');
 const ts = require('typescript');
-
-function isSource(node) {
-  if (!node || node.relativePath.includes('/example'))
-    return false;
-
-  return true;
-}
-
-function isComponentCode(node) {
-  return node && (isTSX(node) || isJSX(node)) && isSource(node);
-}
-
-function isTSX(node) {
-  return (
-    node.internal.mediaType === `application/typescript` ||
-    node.internal.mediaType === `text/tsx` ||
-    node.extension === 'tsx'
-  );
-}
-
-function isJSX(node) {
-  return node.internal.mediaType === `application/javascript` || node.internal.mediaType === `text/jsx`;
-}
-
-function flattenProps(props) {
-  const res = [];
-  if (props) {
-    Object.entries(props).forEach(([key, value]) => {
-      value.name = key;
-      res.push(value);
-    });
-  }
-
-  return res;
-}
 
 const annotations = [
   {
@@ -51,34 +17,14 @@ const annotations = [
     regex: /@beta/,
     name: 'beta',
     type: 'Boolean'
-  },
-  {
-    regex: /@propType (\w+|['"](.+)['"])\s*/,
-    name: 'annotatedType',
-    type: 'String'
-  },
+  }
 ];
 
 function addAnnotations(prop) {
-  // Prop looks like this: {
-  //   "beta": null,
-  //   "required": false,
-  //   "name": "className",
-  //   "description": "Additional css classes",
-  //   "defaultValue": {
-  //     "value": "''"
-  //   },
-  //   "tsType": {
-  //     "name": "string",
-  //     "raw": null
-  //   },
-  //   "type": null
-  // },
   if (prop.description) {
     annotations.forEach(({ regex, name }) => {
       const match = prop.description.match(regex);
       if (match) {
-        console.log(prop.description.replace(regex, ''))
         prop.description = prop.description.replace(regex, '').trim();
         prop[name] = match[2] || match[1] || true;
       }
@@ -88,28 +34,26 @@ function addAnnotations(prop) {
   return prop;
 }
 
-
-function getComponentMetadata(node, sourceText) {
+function getComponentMetadata(filename, sourceText) {
   let parsedComponents = null;
   try {
     parsedComponents = reactDocgen.parse(
       sourceText,
       reactDocgen.resolver.findAllExportedComponentDefinitions,
       null,
-      { filename: node.absolutePath }
+      { filename }
     );
   } catch (err) {
     // eslint-disable-next-line no-console
-    // console.warn('No component found in', node.absolutePath);
+    // console.warn('No component found in', filename);
   }
 
   return (parsedComponents || []).filter(parsed => parsed && parsed.displayName);
 }
 
-function getInterfaceMetadata(fileNode, sourceText) {
-
+function getInterfaceMetadata(filename, sourceText) {
   const ast = ts.createSourceFile(
-    fileNode.absolutePath,   // fileName
+    filename,
     sourceText,
     ts.ScriptTarget.Latest // languageVersion
   );
@@ -126,89 +70,76 @@ function getInterfaceMetadata(fileNode, sourceText) {
   ast.statements
     .filter(statement => statement.kind === ts.SyntaxKind.InterfaceDeclaration)
     .forEach(statement => {
-      const props = statement.members.map(member => {
-        return {
-          name: (member.name && member.name.escapedText) || member.parameters && `[${getText(member.parameters[0])}]` || 'Unknown',
+      const props = statement.members.reduce((acc, member) => {
+        const name = (member.name && member.name.escapedText)
+          || (member.parameters && `[${getText(member.parameters[0])}]`)
+          || 'Unknown';
+        acc[name] = {
           description: member.jsDoc
             ? member.jsDoc.map(doc => doc.comment).join('\n')
             : null,
           required: member.questionToken === undefined,
-          tsType: {
+          type: {
             raw: getText(member.type).trim()
           }
         };
-      });
+        return acc;
+      }, {});
 
       interfaces.push({
         displayName: statement.name.escapedText,
         props
       });
     });
-    return interfaces;
+  return interfaces;
 }
 
-async function onCreateNode({ node, actions, loadNodeContent, createNodeId, createContentDigest }) {
-  if (!isComponentCode(node)) return;
+function normalizeProp([
+  name,
+  {
+    required,
+    annotatedType,
+    type,
+    tsType,
+    description,
+    defaultValue
+  }
+]) {
+  const res = {
+    name,
+    type: annotatedType
+      || (type && type.name)
+      || (tsType && (tsType.raw || tsType.name))
+      || 'No type info',
+    description
+  };
+  if (required) {
+    res.required = true;
+  }
+  if (defaultValue && defaultValue.value) {
+    res.defaultValue = defaultValue.value;
+  }
 
-  const sourceText = await loadNodeContent(node);
-  const componentMeta = getComponentMetadata(node, sourceText);
-  const interfaceMeta = isTSX(node) ? getInterfaceMetadata(node, sourceText) : [];
-
-  componentMeta
-    .concat(interfaceMeta) 
-    .forEach(parsed => {
-      const metadataNode = {
-        name: parsed.displayName,
-        relativePath: node.relativePath,
-        description: parsed.description,
-        props: Array.isArray(parsed.props) ? parsed.props : flattenProps(parsed.props).map(addAnnotations),
-        path: node.relativePath,
-        basePath: node.relativePath.split('/')[0],
-        id: createNodeId(`${node.id}${parsed.displayName}react-docgen${node.relativePath}`),
-        children: [],
-        parent: node.id,
-        internal: {
-          contentDigest: createContentDigest(node),
-          type: `ComponentMetadata`
-        }
-      };
-      actions.createNode(metadataNode);
-      actions.createParentChildLink({ parent: node, child: metadataNode });
-    });
-
+  return res;
 }
 
-exports.onCreateNode = onCreateNode;
+function tsDocgen(file) {
+  const sourceText = fs.readFileSync(file, 'utf8');
+  const componentMeta = getComponentMetadata(file, sourceText); // Array of components with props
+  const interfaceMeta = getInterfaceMetadata(file, sourceText); // Array of interfaces with props
 
-// Add types fetched in `mdx.js` query in case no files are passed to infer from
-exports.createSchemaCustomization = ({ actions }) => {
-  const typeDefs = `
-    type TypeType @noInfer {
-      name: String
-    }
-    type TsType @noInfer {
-      name: String
-      raw: String
-    }
-    type defaultValue @noInfer {
-      value: String
-    }
-    type PropsType @noInfer {
-      beta: Boolean
-      katacodaBroken: Boolean
-      name: String!
-      description: String
-      required: Boolean
-      type: TypeType
-      tsType: TsType
-      defaultValue: defaultValue
-      ${annotations.map(({ name, type }) => `${name}: ${type}`).join('\n')}
-    }
-    type ComponentMetadata implements Node @noInfer {
-      name: String!
-      description: String
-      props: [PropsType]
-    }
-  `;
-  actions.createTypes(typeDefs);
+  return componentMeta
+    .concat(interfaceMeta)
+    .map(parsed => ({
+      name: parsed.displayName,
+      description: parsed.description || '',
+      props: Object.entries(parsed.props || {})
+        .map(normalizeProp)
+        .map(addAnnotations)
+        .sort((p1, p2) => p1.name.localeCompare(p2.name))
+    }));
 }
+
+module.exports = {
+  tsDocgen
+};

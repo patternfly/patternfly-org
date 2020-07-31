@@ -7,8 +7,10 @@ const vfileReport = require('vfile-reporter');
 const yaml = require('js-yaml'); // https://github.com/nodeca/js-yaml
 const { makeSlug } = require('../../helpers/slugger');
 const { extractTableOfContents } = require('../../helpers/extractTableOfContents');
+const { tsDocgen } = require('../tsDocgen');
 
 const outputBase = path.join(process.cwd(), `src/generated`);
+const tsDocs = {};
 
 function toReactComponent(mdFilePath, source) {
   // vfiles allow for nicer error messages and have native `unified` support
@@ -49,20 +51,32 @@ function toReactComponent(mdFilePath, source) {
         sourceRepo = 'patternfly-react';
       }
 
+      const propComponents = [...new Set(frontmatter.propComponents || [])]
+        .filter(propComponent => {
+          if (tsDocs[propComponent]) {
+            return true;
+          }
+          console.warn('Prop component', propComponent, 'missing from tsDocgen');
+          return false;
+        })
+        .map(propComponent => tsDocs[propComponent])
+
+      const normalizedPath = relPath
+        .replace('node_modules/@patternfly/patternfly/docs', 'src/patternfly')
+        .replace(/node_modules\/@patternfly\/react-([\w-])/, (_, match) => `packages/react-${match}`)
+        .replace(/\.\.\//g, '');
+      const sourceLink = `https://github.com/patternfly/${sourceRepo}/blob/master/${normalizedPath}`;
+
       pageData = {
         slug,
         source,
-        propComponents: frontmatter.propComponents,
-        sourceLink: `https://github.com/patternfly/${sourceRepo}/blob/master/${relPath
-          .replace('node_modules/@patternfly/patternfly/docs', 'src/patternfly')
-          .replace(/node_modules\/@patternfly\/react-([\w-])/, (_, match) => `packages/react-${match}`)
-          .replace(/\.\.\//g, '')
-        }`,
+        propComponents,
+        sourceLink,
         section: frontmatter.section || 'components',
         id: frontmatter.id,
         title: frontmatter.title || frontmatter.id,
         toc,
-        cssPrefix: frontmatter.cssPrefix
+        cssPrefix: frontmatter.cssPrefix || []
       };
     })
     // Delete HTML comments
@@ -117,6 +131,15 @@ const index = [];
 const cjsRoutes = {};
 
 module.exports = {
+  sourceProps(files) {
+    files
+      .map(tsDocgen)
+      .flat()
+      .filter(({ hide }) => !hide)
+      .forEach(({ name, description, props }) => {
+        tsDocs[name] = { name, description, props };
+      });
+  },
   sourceMD(files, source) {
     files.forEach(file => {
       const { jsx, pageData, outPath } = toReactComponent(file, source);
