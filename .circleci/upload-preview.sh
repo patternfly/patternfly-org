@@ -15,4 +15,4 @@ aws s3 sync build/patternfly-org s3://patternfly-org-preview --include "*" \
     --exclude "sw.js" \
     --cache-control "public, max-age=31536000, immutable"
 
-aws cloudfront create-invalidation --distribution-id E3A9GI373KZKU2 --paths "/*"
+aws cloudfront create-invalidation --distribution-id E2IXSH9IWFQCUC --paths "/*"
