@@ -1,5 +1,6 @@
 import React from 'react';
-import { PageSection, SkipToContent, Title, Tabs, Tab } from '@patternfly/react-core';
+import { PageSection, SkipToContent, Title } from '@patternfly/react-core';
+import { css } from '@patternfly/react-styles';
 import { useLocation } from '@reach/router';
 import { SideNavLayout } from '../layouts';
 import { AutoLinkHeader, CSSVariables, PropsTable, TableOfContents, Link } from '../components';
@@ -68,19 +69,20 @@ export const MDXTemplate = ({
           </Title>
           {designSnippet && React.createElement(designSnippet.Component)}
           {!isSinglePage && (
-            <Tabs activeKey={activeSource} className="ws-source-tabs">
-              {sourceKeys.map(source => (
-                <Tab
-                  key={source}
-                  eventKey={source}
-                  title={(
-                    <Link to={source}>
+            <div className="pf-c-tabs ws-source-tabs">
+              <ul className="pf-c-tabs__list">
+                {sourceKeys.map(source => (
+                  <li className={css(
+                    'pf-c-tabs__item',
+                    activeSource === source && 'pf-m-current'
+                  )}>
+                    <Link className="pf-c-tabs__link" to={source}>
                       {capitalize(source.replace(/-/g, ' '))}
                     </Link>
-                  )}
-                />
-              ))}
-            </Tabs>
+                  </li>
+                ))}
+              </ul>
+            </div>
           )}
           {isSinglePage && (
             React.createElement(Object.values(sources)[0].Component)

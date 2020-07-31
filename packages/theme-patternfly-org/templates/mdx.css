@@ -331,10 +331,6 @@
     grid-column: 2; } }
 
 
-.ws-source-tabs {
-  margin-top: var(--pf-global--spacer--md);
-}
-
 .ws-source-tabs.pf-c-tabs::before {
   border: none;
   border-width: 0;
