@@ -9,10 +9,10 @@ const NavItem = ({ text, href }) => (
   <li key={href + text} className="pf-c-nav__item">
     <Link
       to={href}
-      getProps={({ isCurrent }) => ({
+      getProps={({ isPartiallyCurrent }) => ({
         className: css(
           'pf-c-nav__link',
-          isCurrent && 'pf-m-current'
+          isPartiallyCurrent && 'pf-m-current'
         )
       })}
     >
