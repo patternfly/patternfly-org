@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "generate": "node scripts/sourceMD.js",
+    "analyze": "yarn build --env analyze",
     "build": "yarn generate && webpack --config webpack.server.config.js --mode production && webpack --mode production",
     "clean": "rm -rf .cache public size-plugin.json",
     "develop": "yarn generate && webpack-dev-server --mode development",
