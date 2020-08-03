@@ -18,6 +18,7 @@ const serverConfig = () => {
       })
     ],
     optimization: {
+      splitChunks: false,
       minimize: false // Faster build, easier debugging
     },
     externals: ['react', 'react-dom', '@reach/router'] // Load in prerender.js instead
