@@ -5,6 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "analyze": "yarn workspace patternfly-org-4 analyze",
     "develop": "yarn develop:v4",
     "develop:v4": "yarn workspace patternfly-org-4 develop",
     "build": "yarn build:v4",

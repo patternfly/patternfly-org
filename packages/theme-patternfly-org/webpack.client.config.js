@@ -45,7 +45,7 @@ const clientConfig = (env, argv) => {
         ]
       }),
       ...getHtmlWebpackPlugins(getRoutes(false).routes, isProd), // Create an HTML page per route
-      ...(env.analyze ? [new BundleAnalyzerPlugin()] : []) // webpack --env analyze
+      ...(env === 'analyze' ? [new BundleAnalyzerPlugin()] : []) // webpack --env analyze
     ]
   };
 }

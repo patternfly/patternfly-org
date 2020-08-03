@@ -6,13 +6,16 @@
   "license": "MIT",
   "scripts": {
     "generate": "node scripts/sourceMD.js",
-    "build": "yarn generate && webpack --config webpack.server.config.js --mode production && webpack --mode production",
+    "analyze": "yarn build --env analyze",
+    "build": "yarn generate && yarn build:server && yarn build:client",
+    "build:server": "webpack --mode production --config webpack.server.config.js",
+    "build:client": "webpack --mode production",
     "clean": "rm -rf .cache public size-plugin.json",
     "develop": "yarn generate && webpack-dev-server --mode development",
     "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4"
   },
   "dependencies": {
-    "@patternfly/react-docs": "5.6.24",
+    "@patternfly/react-docs": "5.6.28",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "theme-patternfly-org": "0.0.1"

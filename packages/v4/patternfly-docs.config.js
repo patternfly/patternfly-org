@@ -10,6 +10,7 @@ module.exports = {
     { section: 'styles' },
     { section: 'content' },
     { section: 'components' },
+    { section: 'charts' },
     { section: 'demos' },
     { section: 'layouts' },
     { section: 'contribute' },
