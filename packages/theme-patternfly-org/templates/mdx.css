@@ -342,10 +342,7 @@
 }
 
 .ws-mdx-content {
-  padding-right: 32px;
-  padding-left: 32px;
-  padding-top: 48px;
+  padding: 48px 32px 48px 32px;
   background-color: var(--pf-global--BackgroundColor--200);
   flex-grow: 1;
-  margin-bottom: 48px;
 }
