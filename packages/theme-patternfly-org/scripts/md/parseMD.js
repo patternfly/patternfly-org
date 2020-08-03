@@ -141,6 +141,9 @@ module.exports = {
       });
   },
   sourceMD(files, source) {
+    if (!Array.isArray(files)) {
+      files = [files];
+    }
     files.forEach(file => {
       const { jsx, pageData, outPath } = toReactComponent(file, source);
   

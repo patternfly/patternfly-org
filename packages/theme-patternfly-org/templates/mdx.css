@@ -347,4 +347,5 @@
   padding-top: 48px;
   background-color: var(--pf-global--BackgroundColor--200);
   flex-grow: 1;
+  margin-bottom: 48px;
 }

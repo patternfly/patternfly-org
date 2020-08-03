@@ -7,7 +7,9 @@ module.exports = {
   hasVersionSwitcher: true,
   sideNavItems: [
     { section: 'get-started' },
+    { section: 'overview' },
     { section: 'styles' },
+    { section: 'usage-and-behavior' },
     { section: 'content' },
     { section: 'components' },
     { section: 'charts' },
