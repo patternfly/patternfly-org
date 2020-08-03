@@ -1,6 +1,6 @@
 ---
 id: Filters
-section: styles
+section: usage-and-behavior
 ---
 
 ## About

@@ -1,5 +1,5 @@
 ---
-title: Global CSS variables
+id: Global CSS variables
 section: overview
 ---
 

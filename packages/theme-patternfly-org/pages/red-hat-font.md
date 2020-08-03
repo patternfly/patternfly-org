@@ -1,5 +1,5 @@
 ---
-title: Red Hat font
+id: Red Hat font
 section: overview
 ---
 
