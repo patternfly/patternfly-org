@@ -49,6 +49,16 @@ sourceMD(
   'react'
 );
 
+// Source charts props
+const reactChartsPath = require
+  .resolve('@patternfly/react-charts/package.json')
+  .replace('package.json', 'src');
+
+sourceProps(
+  glob.sync(path.join(reactChartsPath, '/**/*.tsx'), { ignore: '**/*.test.tsx' }),
+  'react'
+);
+
 const reactChartsMDPath = require
   .resolve('@patternfly/react-charts/package.json')
   .replace('package.json', 'src');
