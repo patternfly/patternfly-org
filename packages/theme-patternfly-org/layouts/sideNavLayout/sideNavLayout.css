@@ -45,13 +45,6 @@
   border-bottom: 2px solid #fff;
 }
 
-/* serves as the main page container */
-.ws-side-nav-layout {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
 /* tells .pf-c-page to consume the available space left over from the banners/footers */
 .ws-page {
   flex: 1 1;
