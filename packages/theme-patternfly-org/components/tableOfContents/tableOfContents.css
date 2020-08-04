@@ -17,6 +17,10 @@
   }
 }
 
+.ws-toc-list ul {
+  padding-left: 16px;
+}
+
 .ws-toc-item {
   display: block;
   margin-top: var(--pf-global--spacer--md);

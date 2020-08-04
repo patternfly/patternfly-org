@@ -3,7 +3,7 @@ import { PageSection, SkipToContent, Title } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { Router, useLocation } from '@reach/router';
 import { SideNavLayout } from '../layouts';
-import { AutoLinkHeader, CSSVariables, PropsTable, TableOfContents, Link, AccordionHeader } from '../components';
+import { CSSVariables, PropsTable, TableOfContents, Link, AccordionHeader } from '../components';
 import { capitalize } from '../helpers';
 import './mdx.css';
 
