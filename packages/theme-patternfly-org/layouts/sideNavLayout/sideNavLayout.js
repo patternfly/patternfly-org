@@ -187,8 +187,8 @@ export const SideNavLayout = ({
       </div>
       <Page className="ws-page" header={Header} sidebar={SideBar} isManagedSidebar>
         {children}
+        {hasFooter && <Footer />}
       </Page>
-      {hasFooter && <Footer />}
     </div>
   );
 }

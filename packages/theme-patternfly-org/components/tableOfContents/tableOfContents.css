@@ -1,3 +1,5 @@
+/* Needed for sticky tabs */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/position#sticky */
 .ws-toc {
   top: var(--pf-global--spacer--md);
   order: 1;

@@ -58,12 +58,6 @@
   height: auto;
 }
 
-/* Needed for sticky tabs */
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/position#sticky */
-.pf-c-page__main {
-  overflow: visible;
-}
-
 .ws-switcher-divider {
   padding: 0 16px;
 }
@@ -74,6 +68,7 @@
 
 .ws-page-sidebar {
   box-shadow: none !important;
+  overflow-y: scroll;
 }
 
 .ws-page-sidebar > .pf-c-page__sidebar-body {
