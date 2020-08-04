@@ -8,6 +8,8 @@
   padding-left: var(--pf-global--spacer--sm);
   align-self: flex-start;
   min-width: 280px;
+  max-height: calc(100vh - 76px);
+  overflow-y: auto;
 }
 
 @media (max-width: 1450px) {
