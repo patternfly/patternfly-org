@@ -86,14 +86,6 @@ const MDXChildTemplate = ({
       <div className="ws-mdx-content">
         {InlineAlerts}
         <Component />
-        {cssVarsTitle && (
-          <React.Fragment>
-            <AutoLinkHeader size="h2" className="ws-h2" id="css-variables">
-              {cssVarsTitle}
-            </AutoLinkHeader>
-            <CSSVariables prefix={cssPrefix} />
-          </React.Fragment>
-        )}
         {propsTitle && (
           <React.Fragment>
             <AutoLinkHeader size="h2" className="ws-h2" id="props">
@@ -105,6 +97,14 @@ const MDXChildTemplate = ({
                 caption={`${component.name} properties`}
                 rows={component.props} />
             ))}
+          </React.Fragment>
+        )}
+        {cssVarsTitle && (
+          <React.Fragment>
+            <AutoLinkHeader size="h2" className="ws-h2" id="css-variables">
+              {cssVarsTitle}
+            </AutoLinkHeader>
+            <CSSVariables prefix={cssPrefix} />
           </React.Fragment>
         )}
         {sourceLink && (
@@ -157,7 +157,9 @@ export const MDXTemplate = ({
                     )}
                   >
                     <Link className="pf-c-tabs__link" to={source}>
-                      {capitalize(source.replace(/-/g, ' '))}
+                      {source === 'html'
+                        ? 'HTML'
+                        : capitalize(source.replace(/-/g, ' '))}
                     </Link>
                   </li>
                 ))}
