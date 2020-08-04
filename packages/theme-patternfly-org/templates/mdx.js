@@ -3,7 +3,7 @@ import { PageSection, SkipToContent, Title } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { Router, useLocation } from '@reach/router';
 import { SideNavLayout } from '../layouts';
-import { AutoLinkHeader, CSSVariables, PropsTable, TableOfContents, Link } from '../components';
+import { AutoLinkHeader, CSSVariables, PropsTable, TableOfContents, Link, AccordionHeader } from '../components';
 import { capitalize } from '../helpers';
 import './mdx.css';
 
@@ -52,11 +52,11 @@ const MDXChildTemplate = ({
 }) => {
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
   const propsTitle = propComponents.length > 0 && 'Props';
-  if (cssVarsTitle && !toc.includes(cssVarsTitle)) {
-    toc.push(cssVarsTitle);
-  }
   if (propsTitle && !toc.includes(propsTitle)) {
     toc.push(propsTitle);
+  }
+  if (cssVarsTitle && !toc.includes(cssVarsTitle)) {
+    toc.push(cssVarsTitle);
   }
   const InlineAlerts = (
     <React.Fragment>
@@ -87,25 +87,19 @@ const MDXChildTemplate = ({
         {InlineAlerts}
         <Component />
         {propsTitle && (
-          <React.Fragment>
-            <AutoLinkHeader size="h2" className="ws-h2" id="props">
-              {propsTitle}
-            </AutoLinkHeader>
+          <AccordionHeader title={propsTitle} titleId="props">
             {propComponents.map(component => (
               <PropsTable
                 key={component.name}
                 caption={`${component.name} properties`}
                 rows={component.props} />
             ))}
-          </React.Fragment>
+          </AccordionHeader>
         )}
         {cssVarsTitle && (
-          <React.Fragment>
-            <AutoLinkHeader size="h2" className="ws-h2" id="css-variables">
-              {cssVarsTitle}
-            </AutoLinkHeader>
+          <AccordionHeader title={cssVarsTitle} titleId="css-variables">
             <CSSVariables prefix={cssPrefix} />
-          </React.Fragment>
+          </AccordionHeader>
         )}
         {sourceLink && (
           <a href={sourceLink} target="_blank">View source on Github.</a>
@@ -136,7 +130,6 @@ export const MDXTemplate = ({
       <SideNavLayout>
         <PageSection
           id={isSinglePage ? 'main-content' : 'nav-content'}
-          className="ws-first-section"
           type={isSinglePage ? 'default' : 'nav'}
         >
           <Title size="4xl" headingLevel="h1" className="ws-page-title">

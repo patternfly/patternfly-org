@@ -10,3 +10,4 @@ export * from './topNav/topNav';
 export * from './trainingCard/trainingCard';
 export * from './link/link';
 export * from './tableOfContents/tableOfContents';
+export * from './accordionHeader/accordionHeader';
