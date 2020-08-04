@@ -34,6 +34,7 @@ sourceMD(
 );
 
 // Core MD
+// TODO: Fix "id: Master Detail" to "id: Primary detail"
 const coreDocsPath = require
   .resolve('@patternfly/patternfly/package.json')
   .replace('package.json', 'docs');
@@ -58,6 +59,13 @@ sourceMD(
   glob.sync(path.join(reactCorePath, '/**/examples/*.md')),
   'react'
 );
+
+// TODO: Fix react demo imports
+// TODO: Fix "id: Master Detail" to "id: Primary detail"
+// sourceMD(
+//   glob.sync(path.join(reactCorePath, '/**/demos/**/*.md')),
+//   'react'
+// );
 
 // Charts props
 const reactChartsPath = require

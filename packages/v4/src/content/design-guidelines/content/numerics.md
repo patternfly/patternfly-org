@@ -1,6 +1,6 @@
 ---
 id: Numerics
-section: content
+section: guidelines
 ---
 
 ## Date and time

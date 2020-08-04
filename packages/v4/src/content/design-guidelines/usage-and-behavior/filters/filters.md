@@ -1,6 +1,6 @@
 ---
 id: Filters
-section: usage-and-behavior
+section: guidelines
 ---
 
 ## About

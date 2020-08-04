@@ -1,6 +1,6 @@
 ---
 id: Truncation
-section: content
+section: guidelines
 ---
 
 Use truncation whenever the string overflows the container and you don't want multiple lines of text.

@@ -1,6 +1,6 @@
 ---
 id: Colors
-section: styles
+section: guidelines
 ---
 import { Alert, Grid, GridItem, Divider } from '@patternfly/react-core';
 import { ColorSwatch } from './ColorSwatch';

@@ -11,7 +11,7 @@ const slugger = children => {
     .replace(/[^A-Za-z0-9.\-~]/g, '');
 }
 
-const makeSlug = (source, section, id) => {
+const makeSlug = (source, section, id, noSource) => {
   let url = '';
 
   if (!source.includes('pages-')) {
@@ -26,7 +26,7 @@ const makeSlug = (source, section, id) => {
     url += `/${slugger(id)}`;
   }
 
-  if (source && !source.includes('pages-')) {
+  if (source && !source.includes('pages-') && !noSource) {
     url += `/${source}`;
   }
 

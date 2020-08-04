@@ -1,6 +1,6 @@
 ---
 id: UX writing best practices
-section: content
+section: guidelines
 ---
 
 Treat words as part of your design, not something added at the end. UX copy needs to be rooted in user information and context so that it can contribute to an effective, intuitive, and human-centric product experience. 

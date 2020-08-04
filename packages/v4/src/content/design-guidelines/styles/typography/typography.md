@@ -1,6 +1,6 @@
 ---
 id: Typography
-section: styles
+section: guidelines
 ---
 
 import { Button, Grid, GridItem } from '@patternfly/react-core';

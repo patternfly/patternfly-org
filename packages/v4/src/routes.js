@@ -1,3 +1,5 @@
+const { makeSlug } = require('theme-patternfly-org/helpers/slugger');
+
 // This module is shared between NodeJS and babelled ES5
 module.exports = canRequireJSX => {
   const routes = {
@@ -31,7 +33,7 @@ module.exports = canRequireJSX => {
       accum[section][id] = accum[section][id] || {
         id,
         designSnippet: null,
-        slug: `/documentation/${section}/${id.replace(/\s+/g, '-').toLowerCase()}`,
+        slug: makeSlug(source, section, id, true),
         sources: {}
       };
 
@@ -50,17 +52,17 @@ module.exports = canRequireJSX => {
     .forEach(([_section, ids]) => {
       Object.entries(ids).forEach(([_id, pageData]) => {
         const { designSnippet, slug, sources } = pageData;
-        // Add grouped route
-        routes[slug] = pageData;
-        // Remove route for design-snippets
-        if (designSnippet) {
-          delete routes[designSnippet.slug];
-        }
         // Remove source routes for `app.js`
         if (canRequireJSX) {
           Object.entries(sources).forEach(([_source, { slug }]) => {
             delete routes[slug];
           });
+        }
+        // Add grouped route
+        routes[slug] = pageData;
+        // Remove route for design-snippets
+        if (designSnippet) {
+          delete routes[designSnippet.slug];
         }
       })
     });

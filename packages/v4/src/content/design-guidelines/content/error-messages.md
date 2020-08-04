@@ -1,6 +1,6 @@
 ---
 id: Error messages
-section: content
+section: guidelines
 ---
 An error message is a message indicating something went wrong. A user typically sees an error message when they attempt to perform an action but cannot continue because something isn’t right.
 
