@@ -15,3 +15,7 @@
 .ws-accordion-header .pf-c-accordion__expanded-content-body::before {
   content: none;
 }
+
+.ws-accordion-header-toggle .ws-h2 {
+  text-decoration: underline;
+}
