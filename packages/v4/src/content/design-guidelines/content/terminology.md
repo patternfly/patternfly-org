@@ -46,7 +46,7 @@ Here's a list of common UI terms and their usage.
 
 **Log in**: (v.) Use to describe logging in.
 - Opposite: Log out
-- Notes: Use “log in to,” not “log into.”
+- Notes: Use *log in to,* not *log into.*
 
 **Login**: (adj.) Use to describe something related to the act of logging in to an application, like a login page.
 - Notes: The noun *Login* can also be used as an alternative for *Username*, but *Username* is recommended.
@@ -56,7 +56,10 @@ Here's a list of common UI terms and their usage.
 
 **Modify**: Do not use. See *Edit*.
 
-**New**: Do not use. See *Add* or *Create*.
+**New**: Do not use. See *Add* or *Create*. 
+
+**OK**: (adj.) Use to collect confirmation or understanding from the user. 
+- Notes: Do not use *Okay,* *O.K.,* *Ok,* or *ok* in the UI.
 
 **Open**: (v.) Use to describe launching something (like system preferences).
 - Opposite: Close
@@ -83,7 +86,7 @@ Here's a list of common UI terms and their usage.
 
 **View**: (v.) Use to describe accessing another page to see details. (n.) Use to represent an arrangement of data in the interface (like a list view).
 
-**Notes**: Do not use interchangeably with *Show* or *Expand*.
+- Notes: Do not use interchangeably with *Show* or *Expand*.
 
 **Username**: (n.) Usually a unique ID (like ssmith123).
 
