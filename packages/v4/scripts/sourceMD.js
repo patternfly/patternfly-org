@@ -40,7 +40,7 @@ const coreDocsPath = require
 
 sourceMD(
   glob.sync(path.join(coreDocsPath, '/**/examples/*.md'), { ignore: path.join(coreDocsPath, '/pages/**') }),
-  'core'
+  'html'
 );
 
 // React props
@@ -83,7 +83,7 @@ sourceMD(
 const corePath = require.resolve('@patternfly/patternfly/package.json');
 sourceMD(
   corePath.replace('package.json', 'RELEASE-NOTES.md'),
-  'core'
+  'html'
 );
 const reactDocsPath = require.resolve('@patternfly/react-docs/package.json');
 // TODO: parse the `{...props}` string in the file correctly
@@ -95,7 +95,7 @@ const reactDocsPath = require.resolve('@patternfly/react-docs/package.json');
 // Upgrade guides
 sourceMD(
   corePath.replace('package.json', 'UPGRADE-GUIDE.md'),
-  'core'
+  'html'
 );
 sourceMD(
   reactDocsPath.replace('package.json', 'UPGRADE-GUIDE.md'),
