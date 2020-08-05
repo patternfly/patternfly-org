@@ -23,16 +23,20 @@ const sortSources = ({ source: s1 }, { source: s2 }) => {
   return s1Index > s2Index ? 1 : -1;
 }
 
-const MDXChildTemplate = ({
-  Component,
-  source,
-  propComponents,
-  sourceLink,
-  toc,
-  optIn,
-  beta,
-  cssPrefix
-}, index) => {
+const MDXChildTemplate = (
+  {
+    Component,
+    source,
+    propComponents,
+    sourceLink,
+    toc,
+    optIn,
+    beta,
+    cssPrefix
+  },
+  index = 0,
+  array = []
+) => {
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
   const propsTitle = propComponents.length > 0 && 'Props';
   if (propsTitle && !toc.includes(propsTitle)) {
@@ -61,7 +65,12 @@ const MDXChildTemplate = ({
       {toc && toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
-      <div className="ws-mdx-content">
+      <div
+        className={css(
+          'ws-mdx-content',
+          array.length > 1 && 'pf-u-pt-xl pf-u-pl-xl'
+        )}
+      >
         {InlineAlerts}
         <Component />
         {propsTitle && (

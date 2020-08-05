@@ -344,7 +344,7 @@
 }
 
 .ws-mdx-content {
-  padding: 48px 32px 48px 32px;
+  padding: 0 32px 48px 0;
   background-color: var(--pf-global--BackgroundColor--200);
   flex-grow: 1;
 }
