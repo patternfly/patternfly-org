@@ -2,11 +2,10 @@
 id: Training
 section: get-started
 source: react
-katacodaBroken: true
 ---
 
 import { Gallery, GalleryItem } from '@patternfly/react-core';
-import { TrainingCard } from 'theme-patternfly-org/components';
+import { TrainingCard } from '../trainingCard/trainingCard';
 
 ## Fundamentals
 

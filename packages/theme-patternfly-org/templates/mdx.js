@@ -3,25 +3,9 @@ import { PageSection, SkipToContent, Title } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { Router, useLocation } from '@reach/router';
 import { SideNavLayout } from '../layouts';
-import { CSSVariables, PropsTable, TableOfContents, Link, AccordionHeader } from '../components';
+import { CSSVariables, PropsTable, TableOfContents, Link, AccordionHeader, InlineAlert } from '../components';
 import { capitalize } from '../helpers';
 import './mdx.css';
-
-const InlineAlert = ({
-  title,
-  variant = 'info',
-  children
-}) => (
-  <Alert
-    variant={variant}
-    title={title}
-    className="pf-u-my-md"
-    style={{ marginBottom: '1rem' }}
-    isInline
-  >
-    {children}
-  </Alert>
-);
 
 const sourceOrder = {
   react: 1,
@@ -68,11 +52,6 @@ const MDXChildTemplate = ({
       {beta && (
         <InlineAlert title="Beta feature">
           This Beta component is currently under review, so please join in and give us your feedback on the <a href="https://forum.patternfly.org/">PatternFly forum</a>.
-        </InlineAlert>
-      )}
-      {katacodaBroken && (
-        <InlineAlert variant="danger" title="Down for maintenance">
-          The embedded version of our tutorials are broken, but you can still access our tutorials on <a href="https://www.katacoda.com/patternfly">Katacoda.com</a>.
         </InlineAlert>
       )}
     </React.Fragment>

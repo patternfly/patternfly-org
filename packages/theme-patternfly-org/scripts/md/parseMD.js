@@ -69,14 +69,16 @@ function toReactComponent(mdFilePath, source) {
       const sourceLink = `https://github.com/patternfly/${sourceRepo}/blob/master/${normalizedPath}`;
 
       pageData = {
-        slug,
+        id: frontmatter.id,
+        section: frontmatter.section || 'components',
         source,
+        slug,
+        title: frontmatter.title || frontmatter.id,
         propComponents,
         sourceLink,
-        section: frontmatter.section || 'components',
-        id: frontmatter.id,
-        title: frontmatter.title || frontmatter.id,
         toc,
+        optIn: frontmatter.optIn,
+        beta: frontmatter.beta,
         cssPrefix: frontmatter.cssPrefix || []
       };
     })
