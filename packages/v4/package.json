@@ -10,7 +10,7 @@
     "build": "yarn generate && yarn build:server && yarn build:client",
     "build:server": "webpack --mode production --config webpack.server.config.js",
     "build:client": "webpack --mode production",
-    "clean": "rm -rf .cache public size-plugin.json",
+    "clean": "rm -rf .cache public size-plugin.json src/generated",
     "develop": "yarn generate && webpack-dev-server --mode development",
     "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4"
   },
