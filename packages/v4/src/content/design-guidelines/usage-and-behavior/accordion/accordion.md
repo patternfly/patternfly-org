@@ -1,0 +1,4 @@
+---
+id: Accordion
+section: components
+---

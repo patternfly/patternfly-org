@@ -1,0 +1,4 @@
+---
+id: Badge
+section: components
+---
