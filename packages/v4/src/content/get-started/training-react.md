@@ -1,6 +1,7 @@
 ---
 id: Training
-section: overview
+section: get-started
+source: react
 katacodaBroken: true
 ---
 

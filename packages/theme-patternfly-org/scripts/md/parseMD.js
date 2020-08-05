@@ -40,6 +40,7 @@ function toReactComponent(mdFilePath, source) {
       if (!frontmatter.hideTOC) {
         toc = extractTableOfContents(tree);
       }
+      source = frontmatter.source || source;
       const slug = makeSlug(source, frontmatter.section, frontmatter.id);
       outPath = path.join(outputBase, `${slug}.js`);
 
