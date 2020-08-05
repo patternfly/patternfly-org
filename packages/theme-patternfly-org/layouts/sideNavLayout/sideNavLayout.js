@@ -45,23 +45,9 @@ const HeaderTools = ({
   return (
     <PageHeaderTools>
       {hasSearch && (
-        <PageHeaderToolsItem>
-          {/* We can afford to use style tags because this is only on the site ONCE */}
-          <Form
-            onSubmit={event => {
-              event.preventDefault();
-              return false;
-            }}
-            className="pf-site-search"
-          >
-            <TextInput
-              type="text"
-              id="global-search-input"
-              name="global-search-input"
-              placeholder="Search"
-            />
-            <SearchIcon className="global-search-icon" />
-          </Form>
+        <PageHeaderToolsItem className="ws-global-search">
+          <TextInput id="global-search-input" placeholder="Search" />
+          <SearchIcon className="global-search-icon" />
         </PageHeaderToolsItem>
       )}
       {hasVersionSwitcher && (
@@ -106,16 +92,16 @@ const HeaderTools = ({
   );
 }
 
-function attachDocSearch(algogia, timeout) {
+function attachDocSearch(algolia, timeout) {
   if (window.docsearch) {
     return window.docsearch({
       inputSelector: '#global-search-input',
       debug: false,
-      ...algogia
+      ...algolia
     });
   }
   else {
-    setTimeout(() => attachDocSearch(algogia, timeout), timeout);
+    setTimeout(() => attachDocSearch(algolia, timeout), timeout);
   }
 }
 
@@ -125,7 +111,7 @@ export const SideNavLayout = ({
   const {
     hasGdprBanner,
     hasFooter,
-    algogia,
+    algolia,
     hasVersionSwitcher,
     sideNavItems,
     topNavItems,
@@ -146,8 +132,8 @@ export const SideNavLayout = ({
     if (typeof window === 'undefined') {
       return;
     }
-    if (algogia) {
-      attachDocSearch(algogia, 1000);
+    if (algolia) {
+      attachDocSearch(algolia, 1000);
     }
     if (hasVersionSwitcher && window.fetch) {
       fetch('/versions.json').then(res => {
@@ -169,15 +155,15 @@ export const SideNavLayout = ({
   const Header = (
     <PageHeader
       className="ws-page-header"
-      headerTools={(algogia || hasVersionSwitcher) && <HeaderTools
+      headerTools={(algolia || hasVersionSwitcher) && <HeaderTools
         versions={versions}
-        hasSearch={algogia}
+        hasSearch={algolia}
         hasVersionSwitcher={hasVersionSwitcher}
         pathPrefix={pathPrefix} />}
       logo={prnum ? `PR #${prnum}` : <Brand src={logo} alt="Patternfly Logo" />}
       logoProps={{ href: prurl || pathPrefix || '/' }}
       showNavToggle
-      topNav={<TopNav location={location} navItems={topNavItems} />}
+      topNav={topNavItems.length > 0 && <TopNav location={location} navItems={topNavItems} />}
     />
   );
 
