@@ -9,7 +9,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
 
 ## Fundamentals
 
-<Gallery gutter="md">
+<Gallery hasGutter>
   <GalleryItem>
     <TrainingCard
       trainingType="html-css"

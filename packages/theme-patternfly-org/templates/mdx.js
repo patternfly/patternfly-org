@@ -89,7 +89,10 @@ const MDXChildTemplate = (
           </AccordionHeader>
         )}
         {sourceLink && (
-          <a href={sourceLink} target="_blank">View source on Github.</a>
+          <React.Fragment>
+            <br />
+            <a href={sourceLink} target="_blank">View source on Github</a>
+          </React.Fragment>
         )}
       </div>
     </div>
