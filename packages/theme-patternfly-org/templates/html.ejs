@@ -4,6 +4,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <%= htmlWebpackPlugin.tags.headTags %>
+  </head>
+  <body>
+    <div id="root">
+      <%= prerendering %>
+    </div>
+    <%= htmlWebpackPlugin.tags.bodyTags %>
+    <% if (algogia) { %>
+    <script>
+    function attachDocSearch() {
+      if (document.querySelector('<%= algogia.inputSelector %>')) {
+        window.docsearch(<%= JSON.stringify(algogia) %>);
+        return;
+      }
+      else {
+        setTimeout(attachDocSearch, 1000);
+      }
+    }
+    </script>
+    <script
+      async
+      crossorigin
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
+      onload="attachDocSearch()"
+    ></script>
     <link
       href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" 
       crossorigin
@@ -11,18 +36,7 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     >
-  </head>
-  <body>
-    <div id="root">
-      <%= prerendering %>
-    </div>
-    <%= htmlWebpackPlugin.tags.bodyTags %>
-    <script
-      async
-      crossorigin
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
-    ></script>
+    <% } %>
     <% if (googleAnalyticsID) { %>
     <script>
       if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {

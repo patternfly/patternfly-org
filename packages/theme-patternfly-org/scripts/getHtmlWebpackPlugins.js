@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { googleAnalyticsID } = require(`${process.cwd()}/patternfly-docs.config`);
+const { googleAnalyticsID, algogia } = require(`${process.cwd()}/patternfly-docs.config`);
 
 module.exports = (routes, isProd) => 
   Object.entries(routes).map(([url, { title }]) => 
@@ -10,7 +10,13 @@ module.exports = (routes, isProd) =>
       title: `PatternFly 4${title ? ` • ${title}` : ''}`,
       templateParameters: {
         prerendering: isProd ? require('./prerender')(url) : 'Loading...',
-        googleAnalyticsID: isProd ? googleAnalyticsID : false
+        // Don't use GA in dev mode
+        googleAnalyticsID: isProd ? googleAnalyticsID : false,
+        algogia: {
+          inputSelector: '#global-search-input',
+          debug: !isProd,
+          ...algogia
+        }
       },
       scriptLoading: 'defer',
       inject: false
