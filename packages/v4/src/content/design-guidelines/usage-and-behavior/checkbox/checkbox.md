@@ -1,0 +1,4 @@
+---
+id: Checkbox
+section: components
+---

@@ -1,0 +1,4 @@
+---
+id: Banner
+section: components
+---

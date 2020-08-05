@@ -1,0 +1,4 @@
+---
+id: Hint
+section: components
+---

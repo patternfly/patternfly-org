@@ -1,0 +1,4 @@
+---
+id: Switch
+section: components
+---
