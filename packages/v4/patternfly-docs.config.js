@@ -7,7 +7,6 @@ module.exports = {
   },
   hasGdprBanner: true,
   hasFooter: true,
-  hasSearch: true,
   hasVersionSwitcher: true,
   sideNavItems: [
     { section: 'get-started' },
