@@ -106,13 +106,26 @@ const HeaderTools = ({
   );
 }
 
+function attachDocSearch(algogia, timeout) {
+  if (window.docsearch) {
+    return window.docsearch({
+      inputSelector: '#global-search-input',
+      debug: false,
+      ...algogia
+    });
+  }
+  else {
+    setTimeout(() => attachDocSearch(algogia, timeout), timeout);
+  }
+}
+
 export const SideNavLayout = ({
   children,
 }) => {
   const {
     hasGdprBanner,
     hasFooter,
-    hasSearch,
+    algogia,
     hasVersionSwitcher,
     sideNavItems,
     topNavItems,
@@ -133,18 +146,8 @@ export const SideNavLayout = ({
     if (typeof window === 'undefined') {
       return;
     }
-    if (hasSearch) {
-      // Give docsearch script 3s to load
-      setTimeout(() => {
-        if (typeof window.docsearch === 'function') {
-          window.docsearch({
-            apiKey: '06941733239da4f8617d272cf2ed4d5c',
-            indexName: 'patternfly',
-            inputSelector: '#global-search-input',
-            debug: false // Set debug to true if you want to inspect the dropdown
-          });
-        }
-      }, 3000);
+    if (algogia) {
+      attachDocSearch(algogia, 1000);
     }
     if (hasVersionSwitcher && window.fetch) {
       fetch('/versions.json').then(res => {
@@ -166,9 +169,9 @@ export const SideNavLayout = ({
   const Header = (
     <PageHeader
       className="ws-page-header"
-      headerTools={(hasSearch || hasVersionSwitcher) && <HeaderTools
+      headerTools={(algogia || hasVersionSwitcher) && <HeaderTools
         versions={versions}
-        hasSearch={hasSearch}
+        hasSearch={algogia}
         hasVersionSwitcher={hasVersionSwitcher}
         pathPrefix={pathPrefix} />}
       logo={prnum ? `PR #${prnum}` : <Brand src={logo} alt="Patternfly Logo" />}

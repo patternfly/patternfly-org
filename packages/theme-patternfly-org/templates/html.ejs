@@ -4,24 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <%= htmlWebpackPlugin.tags.headTags %>
-    <link
-      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" 
-      crossorigin
-      rel="preload"
-      as="style"
-    >
   </head>
   <body>
     <div id="root">
       <%= prerendering %>
     </div>
     <%= htmlWebpackPlugin.tags.bodyTags %>
+    <% if (algogia) { %>
     <script
       async
       crossorigin
       type="module"
       src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
     ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" 
+      crossorigin
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    >
+    <% } %>
     <% if (googleAnalyticsID) { %>
     <script>
       if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {

@@ -1,9 +1,8 @@
 import React from 'react';
-import { Card, CardTitle, CardHeader, CardBody, CardFooter, Button } from "@patternfly/react-core";
+import { Card, CardTitle, CardHeader, CardBody, CardFooter, Button } from '@patternfly/react-core';
 import { ArrowRightIcon, CubesIcon, ClockIcon, RunningIcon, PuzzlePieceIcon, ChartBarIcon } from '@patternfly/react-icons';
-import { Link } from '../link/link';
-import { Location } from '@reach/router';
-import { capitalize } from '../../helpers/capitalize';
+import { Link } from 'theme-patternfly-org/components/link/link';
+import { capitalize } from 'theme-patternfly-org/helpers/capitalize';
 import './trainingCard.css';
 
 const getTrainingIcon = trainingType => {
@@ -46,19 +45,12 @@ export const TrainingCard = ({
       {description}
     </CardBody>
     <CardFooter>
-    <Location>
-      {({ location }) => (
-        <Link
-          to={location.pathname}
-          state={{ trainingType, katacodaId }} // To show embedded tutorial
-        >
-          <Button variant="link">
-            Start
-            <ArrowRightIcon />
-          </Button>
-        </Link>
-      )}
-    </Location>
+    <Link to={`https://www.katacoda.com/patternfly/courses/${trainingType}/${katacodaId}`} target="_blank">
+      <Button variant="link">
+        Start
+        <ArrowRightIcon />
+      </Button>
+    </Link>
     </CardFooter>
   </Card>
 );

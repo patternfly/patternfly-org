@@ -3,25 +3,9 @@ import { PageSection, SkipToContent, Title } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { Router, useLocation } from '@reach/router';
 import { SideNavLayout } from '../layouts';
-import { CSSVariables, PropsTable, TableOfContents, Link, AccordionHeader } from '../components';
+import { CSSVariables, PropsTable, TableOfContents, Link, AccordionHeader, InlineAlert } from '../components';
 import { capitalize } from '../helpers';
 import './mdx.css';
-
-const InlineAlert = ({
-  title,
-  variant = 'info',
-  children
-}) => (
-  <Alert
-    variant={variant}
-    title={title}
-    className="pf-u-my-md"
-    style={{ marginBottom: '1rem' }}
-    isInline
-  >
-    {children}
-  </Alert>
-);
 
 const sourceOrder = {
   react: 1,
@@ -29,7 +13,7 @@ const sourceOrder = {
 };
 const defaultOrder = 99;
 
-const sortSources = (s1, s2) => {
+const sortSources = ({ source: s1 }, { source: s2 }) => {
   const s1Index = sourceOrder[s1] || defaultOrder;
   const s2Index = sourceOrder[s2] || defaultOrder;
   if (s1Index === defaultOrder && s2Index === defaultOrder) {
@@ -39,17 +23,20 @@ const sortSources = (s1, s2) => {
   return s1Index > s2Index ? 1 : -1;
 }
 
-const MDXChildTemplate = ({
-  Component,
-  source,
-  propComponents,
-  sourceLink,
-  toc,
-  optIn,
-  beta,
-  katacodaBroken,
-  cssPrefix
-}) => {
+const MDXChildTemplate = (
+  {
+    Component,
+    source,
+    propComponents,
+    sourceLink,
+    toc,
+    optIn,
+    beta,
+    cssPrefix
+  },
+  index = 0,
+  array = []
+) => {
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
   const propsTitle = propComponents.length > 0 && 'Props';
   if (propsTitle && !toc.includes(propsTitle)) {
@@ -70,11 +57,6 @@ const MDXChildTemplate = ({
           This Beta component is currently under review, so please join in and give us your feedback on the <a href="https://forum.patternfly.org/">PatternFly forum</a>.
         </InlineAlert>
       )}
-      {katacodaBroken && (
-        <InlineAlert variant="danger" title="Down for maintenance">
-          The embedded version of our tutorials are broken, but you can still access our tutorials on <a href="https://www.katacoda.com/patternfly">Katacoda.com</a>.
-        </InlineAlert>
-      )}
     </React.Fragment>
   );
   // Create dynamic component for @reach/router
@@ -83,7 +65,12 @@ const MDXChildTemplate = ({
       {toc && toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
-      <div className="ws-mdx-content">
+      <div
+        className={css(
+          'ws-mdx-content',
+          array.length > 1 && 'pf-u-pt-xl pf-u-pl-xl'
+        )}
+      >
         {InlineAlerts}
         <Component />
         {propsTitle && (
@@ -102,13 +89,16 @@ const MDXChildTemplate = ({
           </AccordionHeader>
         )}
         {sourceLink && (
-          <a href={sourceLink} target="_blank">View source on Github.</a>
+          <React.Fragment>
+            <br />
+            <a href={sourceLink} target="_blank">View source on Github</a>
+          </React.Fragment>
         )}
       </div>
     </div>
   );
   ChildComponent.displayName = `MDXChildTemplate${Component.displayName}`;
-  return <ChildComponent key={source} path={source} default={source === 'react'} />;
+  return <ChildComponent key={source} path={source} default={index === 0} />;
 }
 
 export const MDXTemplate = ({
@@ -116,12 +106,13 @@ export const MDXTemplate = ({
   designSnippet,
   sources = {}
 }) => {
-  const sourceKeys = Object.keys(sources).sort(sortSources);
+  const sourceValues = Object.values(sources).sort(sortSources);
+  const sourceKeys = sourceValues.map(v => v.source);
   const isSinglePage = sourceKeys.length === 1;
   const { pathname } = useLocation();
   let activeSource = pathname.split('/').pop();
   if (!sourceKeys.includes(activeSource)) {
-    activeSource = 'react';
+    activeSource = sourceKeys[0];
   }
 
   return (
@@ -160,13 +151,13 @@ export const MDXTemplate = ({
             </div>
           )}
           {isSinglePage && (
-            <MDXChildTemplate {...Object.values(sources)[0]} />
+            <MDXChildTemplate {...sourceValues[0]} />
           )}
         </PageSection>
         {!isSinglePage && (
           <PageSection id="main-content" className="ws-child-section">
             <Router className="pf-u-h-100" primary={false}>
-              {Object.values(sources).map(MDXChildTemplate)}
+              {sourceValues.map(MDXChildTemplate)}
             </Router>
           </PageSection>
         )}

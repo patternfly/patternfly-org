@@ -55,7 +55,7 @@ const ReleaseNotesTOC = () => (
 const renderItem = item => {
   if (Array.isArray(item)) {
     return (
-      <ul key={item[0]}>
+      <ul key={item.join('-')}>
         {item.map(renderItem)}
       </ul>
     );

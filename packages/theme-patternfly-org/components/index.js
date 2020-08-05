@@ -7,7 +7,7 @@ export * from './gdprBanner/gdprBanner';
 export * from './propsTable/propsTable';
 export * from './sideNav/sideNav';
 export * from './topNav/topNav';
-export * from './trainingCard/trainingCard';
 export * from './link/link';
 export * from './tableOfContents/tableOfContents';
 export * from './accordionHeader/accordionHeader';
+export * from './inlineAlert/inlineAlert';

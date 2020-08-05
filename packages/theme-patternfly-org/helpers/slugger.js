@@ -14,10 +14,6 @@ const slugger = children => {
 const makeSlug = (source, section, id, noSource) => {
   let url = '';
 
-  if (!source.includes('pages-')) {
-    url += `/documentation`;
-  }
-
   if (section) {
     url += `/${slugger(section)}`
   }
