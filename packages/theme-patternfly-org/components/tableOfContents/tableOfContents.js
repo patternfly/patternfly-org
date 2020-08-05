@@ -52,6 +52,24 @@ const ReleaseNotesTOC = () => (
   </Grid>
 );
 
+const renderItem = item => {
+  if (Array.isArray(item)) {
+    return (
+      <ul key={item[0]}>
+        {item.map(renderItem)}
+      </ul>
+    );
+  }
+
+  return (
+    <li key={item}>
+      <a href={`#${slugger(item)}`} className="ws-toc-item">
+        {item}
+      </a>
+    </li>
+  );
+}
+
 export const TableOfContents = ({
   releaseNoteTOC,
   items
@@ -65,16 +83,8 @@ export const TableOfContents = ({
       <Title headingLevel="h2" size="lg">
         Table of contents
       </Title>
-      <ul>
-        {items
-          .filter(Boolean)
-          .map(heading => (
-            <li key={heading} >
-              <a href={`#${slugger(heading)}`} className="ws-toc-item">
-                {heading}
-              </a>
-            </li>
-          ))}
+      <ul className="ws-toc-list">
+        {items.map(renderItem)}
       </ul>
     </nav>
   );

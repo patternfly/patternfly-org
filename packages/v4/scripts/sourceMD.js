@@ -34,13 +34,14 @@ sourceMD(
 );
 
 // Core MD
+// TODO: Fix "id: Master Detail" to "id: Primary detail"
 const coreDocsPath = require
   .resolve('@patternfly/patternfly/package.json')
   .replace('package.json', 'docs');
 
 sourceMD(
   glob.sync(path.join(coreDocsPath, '/**/examples/*.md'), { ignore: path.join(coreDocsPath, '/pages/**') }),
-  'core'
+  'html'
 );
 
 // React props
@@ -58,6 +59,13 @@ sourceMD(
   glob.sync(path.join(reactCorePath, '/**/examples/*.md')),
   'react'
 );
+
+// TODO: Fix react demo imports
+// TODO: Fix "id: Master Detail" to "id: Primary detail"
+// sourceMD(
+//   glob.sync(path.join(reactCorePath, '/**/demos/**/*.md')),
+//   'react'
+// );
 
 // Charts props
 const reactChartsPath = require
@@ -83,7 +91,7 @@ sourceMD(
 const corePath = require.resolve('@patternfly/patternfly/package.json');
 sourceMD(
   corePath.replace('package.json', 'RELEASE-NOTES.md'),
-  'core'
+  'html'
 );
 const reactDocsPath = require.resolve('@patternfly/react-docs/package.json');
 // TODO: parse the `{...props}` string in the file correctly
@@ -95,7 +103,7 @@ const reactDocsPath = require.resolve('@patternfly/react-docs/package.json');
 // Upgrade guides
 sourceMD(
   corePath.replace('package.json', 'UPGRADE-GUIDE.md'),
-  'core'
+  'html'
 );
 sourceMD(
   reactDocsPath.replace('package.json', 'UPGRADE-GUIDE.md'),

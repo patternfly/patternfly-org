@@ -9,8 +9,23 @@ module.exports = {
     }
 
     visit(mdxAST, 'heading', node => {
-      if (node.depth === 2 && node.children.length > 0) { // ## h2 headings
-        toc.push(node.children[0].value);
+      if (node.children.length > 0) {
+        const text = node.children[0].value;
+        // ## h2 headings
+        if (node.depth === 2) {
+          toc.push(text);
+        }
+        // ### h3 headings
+        else if (node.depth === 3) {
+          // Only need to support up to h3s, so this array structure works fine
+          const lastTOC = toc[toc.length - 1];
+          if (!Array.isArray(lastTOC)) {
+            toc.push([text]);
+          }
+          else {
+            lastTOC.push(text);
+          }
+        }
       }
     });
 

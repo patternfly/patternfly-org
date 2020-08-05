@@ -1,6 +1,6 @@
 ---
-id: About
-section: content
+id: Content
+section: guidelines
 ---
 
 import './content.css';

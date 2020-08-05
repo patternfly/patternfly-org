@@ -1,6 +1,6 @@
 ---
 id: Punctuation
-section: content
+section: guidelines
 ---
 
 ## Ampersand

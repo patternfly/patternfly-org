@@ -1,6 +1,6 @@
 ---
 id: Capitalization
-section: content
+section: guidelines
 ---
 
 Keep your capitalization consistent, and follow the capitalization rules your company enforces for your products.

@@ -1,6 +1,6 @@
 ---
-id: Charts
-section: usage-and-behavior
+id: About
+section: charts
 ---
 
 _Charts are only available in React_

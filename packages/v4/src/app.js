@@ -17,6 +17,8 @@ if (!isProd) {
 const { routes, groupedRoutes } = getRoutes(true);
 LayoutOptions.routes = routes;
 LayoutOptions.groupedRoutes = groupedRoutes;
+console.log('routes', routes)
+console.log('groupedRoutes', groupedRoutes)
 
 // Export for SSR
 export const App = () => (

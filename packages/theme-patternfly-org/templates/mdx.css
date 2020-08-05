@@ -1,11 +1,11 @@
-.ws-first-section {
+.pf-c-page__main > section:first-child {
   padding: 32px 32px 0 32px;
+  flex-grow: 1;
 }
 
 @media (max-width: 767px) {
-  .ws-first-section {
+  .pf-c-page__main > section:first-child {
     padding: 16px;
-    padding-top: 16px;
   }
 }
 

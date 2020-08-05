@@ -1,6 +1,6 @@
 ---
 id: Sentence structure
-section: content
+section: guidelines
 ---
 
 Use the second person "you/your" whenever you can. This way, your focus is on the user, and the product interaction feels more like a conversation.

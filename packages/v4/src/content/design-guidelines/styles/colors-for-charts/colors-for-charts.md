@@ -1,6 +1,6 @@
 ---
 id: Colors for charts
-section: styles
+section: guidelines
 ---
 
 import theSystem from './thesystem.gif';

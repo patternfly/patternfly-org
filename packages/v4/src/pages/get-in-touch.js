@@ -2,15 +2,11 @@ import React from 'react';
 import { SideNavLayout } from 'theme-patternfly-org/layouts';
 import { ChatIcon, QuestionIcon, CatalogIcon, MailBulkIcon } from '@patternfly/react-icons';
 import { Grid, GridItem, PageSection, PageSectionVariants, Split, SplitItem, Title } from '@patternfly/react-core';
-import "./get-in-touch.css";
 
 const GetInTouchPage = () => (
   <SideNavLayout>
-    <PageSection
-      variant={PageSectionVariants.light}
-      className="ws-section ws-get-in-touch"
-    >
-      <Title size="xl" className="pf-u-mb-lg ws-title" headingLevel="h1">Get in touch</Title>
+    <PageSection variant={PageSectionVariants.light}>
+      <Title size="4xl" className="pf-u-mb-lg ws-page-title" headingLevel="h1">Get in touch</Title>
 
       <p className="ws-mdx-p">Get involved with the PatternFly community. Get answers to your questions and share your knowledge with others.</p>
 

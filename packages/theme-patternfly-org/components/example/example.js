@@ -27,7 +27,7 @@ const getSupportedLanguages = lang => {
 export const Example = ({
   code,
   lang = '',
-  source = 'core',
+  source,
   noLive,
   title = 'Untitled',
   isFullscreen,

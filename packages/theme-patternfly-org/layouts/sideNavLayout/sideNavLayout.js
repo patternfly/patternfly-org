@@ -35,18 +35,35 @@ const HeaderTools = ({
     <DropdownItem
       key={version.name}
       component={
-        <a href={location.pathname.replace(
-            location.pathname.split('/')[1],
-            version.latest ? pathPrefix : version.name
-          )}
-        >
+        <a href={version.latest ? pathPrefix : `/${version.name}`}>
           {`Release ${version.name}`}
         </a>
-      } />
+      }
+    />
   );
 
   return (
     <PageHeaderTools>
+      {hasSearch && (
+        <PageHeaderToolsItem>
+          {/* We can afford to use style tags because this is only on the site ONCE */}
+          <Form
+            onSubmit={event => {
+              event.preventDefault();
+              return false;
+            }}
+            className="pf-site-search"
+          >
+            <TextInput
+              type="text"
+              id="global-search-input"
+              name="global-search-input"
+              placeholder="Search"
+            />
+            <SearchIcon className="global-search-icon" />
+          </Form>
+        </PageHeaderToolsItem>
+      )}
       {hasVersionSwitcher && (
         <PageHeaderToolsItem>
           <Dropdown
@@ -85,40 +102,6 @@ const HeaderTools = ({
           />
         </PageHeaderToolsItem>
       )}
-      {hasSearch && (
-        <PageHeaderToolsItem>
-          {/* We can afford to use style tags because this is only on the site ONCE */}
-          <Form
-            onSubmit={event => {
-              event.preventDefault();
-              return false;
-            }}
-            style={{
-              position: 'relative',
-            }}
-            className="pf-site-search"
-          >
-            <TextInput
-              type="text"
-              id="global-search-input"
-              name="global-search-input"
-              placeholder="Search"
-              style={{
-                color: '#fff',
-                backgroundColor: 'var(--pf-global--BackgroundColor--dark-100)',
-                border: 0,
-                paddingLeft: '26px'
-              }}
-            />
-            <SearchIcon
-              style={{
-                position: 'absolute',
-                top: '10px',
-                left: '4px'
-              }} />
-          </Form>
-        </PageHeaderToolsItem>
-      )}
     </PageHeaderTools>
   );
 }
@@ -127,7 +110,6 @@ export const SideNavLayout = ({
   children,
 }) => {
   const {
-    hideSideNav,
     hasGdprBanner,
     hasFooter,
     hasSearch,
@@ -151,13 +133,18 @@ export const SideNavLayout = ({
     if (typeof window === 'undefined') {
       return;
     }
-    if (hasSearch && window.docsearch) {
-      window.docsearch({
-        apiKey: '06941733239da4f8617d272cf2ed4d5c',
-        indexName: 'patternfly',
-        inputSelector: '#global-search-input',
-        debug: false // Set debug to true if you want to inspect the dropdown
-      });
+    if (hasSearch) {
+      // Give docsearch script 3s to load
+      setTimeout(() => {
+        if (typeof window.docsearch === 'function') {
+          window.docsearch({
+            apiKey: '06941733239da4f8617d272cf2ed4d5c',
+            indexName: 'patternfly',
+            inputSelector: '#global-search-input',
+            debug: false // Set debug to true if you want to inspect the dropdown
+          });
+        }
+      }, 3000);
     }
     if (hasVersionSwitcher && window.fetch) {
       fetch('/versions.json').then(res => {
@@ -168,7 +155,7 @@ export const SideNavLayout = ({
     }
   }, []);
 
-  const SideBar = !hideSideNav && (
+  const SideBar = (
     <PageSidebar
       className="ws-page-sidebar"
       theme="light"
@@ -181,12 +168,12 @@ export const SideNavLayout = ({
       className="ws-page-header"
       headerTools={(hasSearch || hasVersionSwitcher) && <HeaderTools
         versions={versions}
-        hasVersionSwitcher={hasVersionSwitcher}
         hasSearch={hasSearch}
+        hasVersionSwitcher={hasVersionSwitcher}
         pathPrefix={pathPrefix} />}
       logo={prnum ? `PR #${prnum}` : <Brand src={logo} alt="Patternfly Logo" />}
       logoProps={{ href: prurl || pathPrefix || '/' }}
-      showNavToggle={!hideSideNav}
+      showNavToggle
       topNav={<TopNav location={location} navItems={topNavItems} />}
     />
   );
@@ -200,8 +187,8 @@ export const SideNavLayout = ({
       </div>
       <Page className="ws-page" header={Header} sidebar={SideBar} isManagedSidebar>
         {children}
+        {hasFooter && <Footer />}
       </Page>
-      {hasFooter && <Footer />}
     </div>
   );
 }

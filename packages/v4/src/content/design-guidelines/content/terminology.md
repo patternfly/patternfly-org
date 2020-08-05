@@ -1,6 +1,6 @@
 ---
 id: Terminology
-section: content
+section: guidelines
 ---
 
 Here's a list of common UI terms and their usage.

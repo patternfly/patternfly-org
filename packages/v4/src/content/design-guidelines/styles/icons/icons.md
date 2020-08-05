@@ -1,6 +1,6 @@
 ---
 id: Icons
-section: styles
+section: guidelines
 ---
 import { Card, CardBody, Divider, Flex, FlexItem, Grid, GridItem } from '@patternfly/react-core';
 import CaretDownIcon from '@patternfly/react-icons/dist/js/icons/caret-down-icon';

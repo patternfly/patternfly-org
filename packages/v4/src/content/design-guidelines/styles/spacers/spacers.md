@@ -1,6 +1,6 @@
 ---
 id: Spacers
-section: styles
+section: guidelines
 ---
 import './spacers.css';
 
