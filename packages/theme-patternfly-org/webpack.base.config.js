@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SizePlugin = require('size-plugin');
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { pathPrefix } = require(`${process.cwd()}/patternfly-docs.config`);
 
@@ -17,6 +16,7 @@ module.exports = (_env, argv) => {
     output: {
       publicPath: isProd ? `${pathPrefix}/` : '/'
     },
+    mode: isProd ? 'production' : 'development',
     devtool: isProd ? 'source-map' : 'cheap-module-source-map',
     resolve: {
       extensions: [ '.tsx', '.ts', '.js', '.jsx' ],
@@ -43,8 +43,7 @@ module.exports = (_env, argv) => {
               }]],
               plugins: [
                 '@babel/plugin-transform-react-jsx',
-                '@babel/plugin-proposal-class-properties',
-                ...(isProd ? [] : [require.resolve('react-refresh/babel')])
+                '@babel/plugin-proposal-class-properties'
               ],
             }
           },
@@ -143,7 +142,6 @@ module.exports = (_env, argv) => {
           new SizePlugin()
         ]
         : [
-          new ReactRefreshWebpackPlugin()
         ]
       )
     ],

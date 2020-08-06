@@ -9,3 +9,7 @@
 .ws-td-text {
   font-size: 14px !important;
 }
+
+.ws-css-property {
+  padding: 4px 16px 4px var(--pf-global--spacer--md);
+}

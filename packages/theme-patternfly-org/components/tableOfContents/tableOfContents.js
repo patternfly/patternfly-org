@@ -52,17 +52,17 @@ const ReleaseNotesTOC = () => (
   </Grid>
 );
 
-const renderItem = item => {
+const renderItem = (item, index) => {
   if (Array.isArray(item)) {
     return (
-      <ul key={item.join('-')}>
+      <ul key={index}>
         {item.map(renderItem)}
       </ul>
     );
   }
 
   return (
-    <li key={item}>
+    <li key={index}>
       <a href={`#${slugger(item)}`} className="ws-toc-item">
         {item}
       </a>

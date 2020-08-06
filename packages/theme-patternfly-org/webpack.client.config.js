@@ -23,14 +23,7 @@ const clientConfig = (env, argv) => {
     },
     optimization: {
       splitChunks: {
-        minSize: 1500, // MTU
-        cacheGroups: {
-          vendors: {
-            test: /[\\/]node_modules[\\/]/,
-            chunks: 'all',
-            priority: 1,
-          }
-        },
+        chunks: 'all'
       },
       minimize: isProd ? true : false,
       runtimeChunk: 'single',
@@ -45,7 +38,14 @@ const clientConfig = (env, argv) => {
         ]
       }),
       ...getHtmlWebpackPlugins(getRoutes(false).routes, isProd), // Create an HTML page per route
-      ...(env === 'analyze' ? [new BundleAnalyzerPlugin()] : []) // webpack --env analyze
+      ...(env === 'analyze'
+        ? [
+          new BundleAnalyzerPlugin({
+            generateStatsFile: true,
+            statsFilename: 'webpack.stats.json'
+          })
+        ]
+        : []) // webpack --env analyze
     ]
   };
 }
