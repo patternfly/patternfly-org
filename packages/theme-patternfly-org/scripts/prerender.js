@@ -24,12 +24,13 @@ function removeTimers() {
   setImmediate = immediate;
 }
 
+// This function is effectively synchronous because it mutates global.setTimeout
+// Only allow one copy at a time to run
 async function prerender(url) {
   url = `${pathPrefix}${url}`;
   global.history = {};
   global.location = { pathname: url };
 
-  console.log('prerender', url);
   // react-charts depends on victory-core which uses d3-timer to create an
   // animation event loop using setInterval. This event loop will cause Node.js
   // to hang if we prerender charts pages, so just replace with calls that resolve instantly.
@@ -45,6 +46,7 @@ async function prerender(url) {
   await ssrPrepass(WrappedApp);
   const string = ReactDOMServer.renderToString(WrappedApp);
   addTimers();
+  console.log('prendered', url);
 
   return string;
 }
