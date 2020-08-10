@@ -66,6 +66,7 @@ Examples:
 </td>
         <td>“Sources” is only capitalized when it directly refers to a subsection, feature, or location in the UI.<br /><br />Always write buttons in sentence case.
 </td>
+</tr>
 </table>
 
 ##Capitalization for tools outside your product portfolio
