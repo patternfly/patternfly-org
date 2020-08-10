@@ -110,7 +110,7 @@ export const MDXTemplate = ({
   const sourceKeys = sourceValues.map(v => v.source);
   const isSinglePage = sourceKeys.length === 1;
   const { pathname } = useLocation();
-  let activeSource = pathname.split('/').pop();
+  let activeSource = pathname.replace(/\/$/, '').split('/').pop();
   if (!sourceKeys.includes(activeSource)) {
     activeSource = sourceKeys[0];
   }
