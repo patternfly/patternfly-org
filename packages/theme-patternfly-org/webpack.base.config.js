@@ -1,13 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SizePlugin = require('size-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { pathPrefix } = require(`${process.cwd()}/patternfly-docs.config`);
-
-// Don't include PatternFly styles twice
-const reactCSSRegex = /(react-[\w-]+\/dist|react-styles\/css)\/.*\.css$/;
 
 module.exports = (_env, argv) => {
   const isProd = argv.mode === 'production';
@@ -49,38 +45,6 @@ module.exports = (_env, argv) => {
           },
         },
         {
-          test: /\.css$/,
-          exclude: reactCSSRegex,
-          use: [
-            {
-              loader: MiniCssExtractPlugin.loader,
-              options: {
-                hmr: isProd
-              },
-            },
-            {
-              loader: 'css-loader'
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                ident: 'postcss',
-                plugins: [
-                  require('autoprefixer')({
-                    env: '>0.25%, not ie 11, not op_mini all',
-                    flexbox: false,
-                    grid: false
-                  })
-                ]
-              }
-            }
-          ]
-        },
-        {
-          test: reactCSSRegex,
-          use: 'null-loader'
-        },
-        {
           test: /\.(png|jpg|gif|svg)$/,
           use: [
             {
@@ -109,10 +73,6 @@ module.exports = (_env, argv) => {
       ]
     },
     plugins: [
-      new MiniCssExtractPlugin({
-        filename: '[name].[contenthash].css',
-        chunkFilename: '[name].[contenthash].css',
-      }),
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': isProd ? "'production'" : "'development'"
       }),

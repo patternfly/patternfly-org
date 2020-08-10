@@ -1,5 +1,6 @@
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
+const ssrPrepass = require('react-ssr-prepass');
 const { ServerLocation } = require('@reach/router');
 const { pathPrefix } = require(`${process.cwd()}/patternfly-docs.config`);
 const oldSetTimeout = setTimeout;
@@ -23,7 +24,7 @@ function removeTimers() {
   setImmediate = immediate;
 }
 
-module.exports = url => {
+async function prerender(url) {
   url = `${pathPrefix}${url}`;
   global.history = {};
   global.location = { pathname: url };
@@ -35,13 +36,19 @@ module.exports = url => {
   removeTimers();
   // react, react-dom, and @reach/router are all EXCLUDED from the ssr-bundle.js
   // The versions imported above are used instead, which allows us to use <ServerLocation>
-  const app = require(`${process.cwd()}/.cache/ssr-build/ssr-bundle`);
-  const string = ReactDOMServer.renderToString(
-    React.createElement(ServerLocation, { url },
-      React.createElement(app.App)
-    )
+  const { App } = require(`${process.cwd()}/.cache/ssr-build/main`);
+  const WrappedApp = React.createElement(ServerLocation, { url },
+    React.createElement(App)
   );
+  // ReactDOMServer currently cannot render promises. This addon crawls the react tree and
+  // resolve promises to something renderable until React adds official support for it.
+  await ssrPrepass(WrappedApp);
+  const string = ReactDOMServer.renderToString(WrappedApp);
   addTimers();
 
   return string;
 }
+
+module.exports = {
+  prerender
+};

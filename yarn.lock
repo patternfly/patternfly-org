@@ -12053,6 +12053,13 @@ react-simple-code-editor@^0.10.0:
   resolved "https://registry.yarnpkg.com/react-simple-code-editor/-/react-simple-code-editor-0.10.0.tgz#73e7ac550a928069715482aeb33ccba36efe2373"
   integrity sha512-bL5W5mAxSW6+cLwqqVWY47Silqgy2DKDTR4hDBrLrUqC5BXc29YVx17l2IZk5v36VcDEq1Bszu2oHm1qBwKqBA==
 
+react-ssr-prepass@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-ssr-prepass/-/react-ssr-prepass-1.2.1.tgz#ba867bbe60714f42977dbe1ef9b8ff469b950602"
+  integrity sha512-8hMhx9zXyEZ+t4oI0chPInxm/HpjrmvNuZxI5TmIXbORYmIV2CnK4WVPTdm/7Iq+3/6RAiNxTNZSQyUu5irX4Q==
+  dependencies:
+    object-is "^1.1.2"
+
 react-virtualized@^9.21.1:
   version "9.21.2"
   resolved "https://registry.yarnpkg.com/react-virtualized/-/react-virtualized-9.21.2.tgz#02e6df65c1e020c8dbf574ec4ce971652afca84e"
