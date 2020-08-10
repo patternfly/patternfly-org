@@ -5,6 +5,7 @@ import ConfigContext from '../../helpers/configContext';
 export const Link = ({
   href,
   to,
+  onMouseOver = () => {},
   ...props
 }) => {
   let url = href || to || '';
@@ -12,7 +13,15 @@ export const Link = ({
     return <a href={url} {...props} />;
   }
   else if (url.startsWith('/')) {
-    const { pathPrefix } = React.useContext(ConfigContext);
+    const { pathPrefix, routes } = React.useContext(ConfigContext);
+    const route = routes[url];
+    if (route) {
+      // Preload on hover
+      props.onMouseOver = () => {
+        Object.values(route.sources).forEach(({ preload }) => preload());
+        onMouseOver();
+      };
+    }
     url = `${pathPrefix}/${url.substr(1)}`;
   }
   return <ReachLink to={url} {...props} />;

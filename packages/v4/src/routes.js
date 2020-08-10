@@ -19,6 +19,7 @@ const routes = {
 
 for (let route in routes) {
   const pageData = routes[route];
+  pageData.preload = pageData.Component;
   pageData.Component = lazy(pageData.Component);
 }
 
