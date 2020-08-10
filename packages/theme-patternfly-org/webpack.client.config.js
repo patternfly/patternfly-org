@@ -26,7 +26,16 @@ const clientConfig = async (env, argv) => {
     },
     optimization: {
       splitChunks: {
-        chunks: 'all'
+        chunks: 'all',
+        // https://webpack.js.org/plugins/mini-css-extract-plugin/#extracting-all-css-in-a-single-file
+        cacheGroups: {
+          styles: {
+            name: 'styles',
+            test: /\.css$/,
+            chunks: 'all',
+            enforce: true
+          }
+        },
       },
       minimize: isProd ? true : false,
       runtimeChunk: 'single',

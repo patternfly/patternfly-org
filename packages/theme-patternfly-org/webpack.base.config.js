@@ -101,10 +101,9 @@ module.exports = (_env, argv) => {
           new CleanWebpackPlugin(),
           new SizePlugin()
         ]
-        : [
-        ]
+        : []
       )
     ],
-    stats: isProd ? 'normal' : 'minimal'
+    stats: 'minimal'
   };
 }
