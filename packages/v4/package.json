@@ -1,7 +1,7 @@
 {
   "name": "patternfly-org-4",
   "private": true,
-  "version": "4.1.23",
+  "version": "4.1.24",
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
