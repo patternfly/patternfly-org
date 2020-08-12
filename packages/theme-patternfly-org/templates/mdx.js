@@ -103,7 +103,6 @@ const MDXChildTemplate = (
 
 export const MDXTemplate = ({
   id,
-  designSnippet,
   sources = {}
 }) => {
   const sourceValues = Object.values(sources).sort(sortSources);
@@ -126,9 +125,6 @@ export const MDXTemplate = ({
           <Title size="4xl" headingLevel="h1" className="ws-page-title">
             {id}
           </Title>
-          {designSnippet &&
-            <designSnippet.Component />
-          }
           {!isSinglePage && (
             <div className="pf-c-tabs ws-source-tabs">
               <ul className="pf-c-tabs__list">

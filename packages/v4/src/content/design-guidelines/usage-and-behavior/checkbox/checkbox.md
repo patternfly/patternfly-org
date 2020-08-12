@@ -1,4 +1,0 @@
----
-id: Checkbox
-section: components
----

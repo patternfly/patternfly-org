@@ -1,4 +1,0 @@
----
-id: Table
-section: components
----

@@ -1,4 +1,0 @@
----
-id: Brand
-section: components
----

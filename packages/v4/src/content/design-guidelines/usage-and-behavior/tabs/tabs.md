@@ -1,4 +1,0 @@
----
-id: Tabs
-section: components
----

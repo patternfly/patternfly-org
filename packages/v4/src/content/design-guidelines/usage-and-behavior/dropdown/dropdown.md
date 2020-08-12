@@ -1,4 +1,0 @@
----
-id: Dropdown
-section: components
----

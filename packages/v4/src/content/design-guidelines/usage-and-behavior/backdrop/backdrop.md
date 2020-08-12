@@ -1,4 +1,0 @@
----
-id: Backdrop
-section: components
----
