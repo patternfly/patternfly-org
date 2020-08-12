@@ -1,4 +1,0 @@
----
-id: Page
-section: components
----

@@ -1,4 +1,0 @@
----
-id: Breadcrumb
-section: components
----

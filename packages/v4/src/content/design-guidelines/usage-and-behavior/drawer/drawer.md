@@ -1,4 +1,0 @@
----
-id: Drawer
-section: components
----

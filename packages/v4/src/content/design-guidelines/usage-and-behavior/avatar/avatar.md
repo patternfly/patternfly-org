@@ -1,4 +1,0 @@
----
-id: Avatar
-section: components
----

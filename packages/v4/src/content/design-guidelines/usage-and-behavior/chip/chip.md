@@ -1,4 +1,0 @@
----
-id: Chip
-section: components
----

@@ -1,4 +1,0 @@
----
-id: List
-section: components
----

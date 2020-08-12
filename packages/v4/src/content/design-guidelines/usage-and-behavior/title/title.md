@@ -1,4 +1,0 @@
----
-id: Title
-section: components
----
