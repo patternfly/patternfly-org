@@ -32,18 +32,12 @@ module.exports = canRequireJSX => {
       accum[section] = accum[section] || {};
       accum[section][id] = accum[section][id] || {
         id,
-        designSnippet: null,
         slug: makeSlug(source, section, id, true),
         sources: {}
       };
 
       pageData.slug = slug;
-      if (source === 'design-snippets') {
-        accum[section][id].designSnippet = pageData;
-      }
-      else {
-        accum[section][id].sources[source] = pageData;
-      }
+      accum[section][id].sources[source] = pageData;
 
       return accum;
     }, {});
@@ -51,7 +45,7 @@ module.exports = canRequireJSX => {
   Object.entries(groupedRoutes)
     .forEach(([_section, ids]) => {
       Object.entries(ids).forEach(([_id, pageData]) => {
-        const { designSnippet, slug, sources } = pageData;
+        const { slug, sources } = pageData;
         // Remove source routes for `app.js`
         if (canRequireJSX) {
           Object.entries(sources).forEach(([_source, { slug }]) => {
@@ -60,10 +54,6 @@ module.exports = canRequireJSX => {
         }
         // Add grouped route
         routes[slug] = pageData;
-        // Remove route for design-snippets
-        if (designSnippet) {
-          delete routes[designSnippet.slug];
-        }
       })
     });
 

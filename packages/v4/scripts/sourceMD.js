@@ -14,11 +14,6 @@ sourceMD(
 );
 
 sourceMD(
-  glob.sync(path.join(__dirname, '../src/content/design-snippets/**/*.md')),
-  'design-snippets'
-);
-
-sourceMD(
   glob.sync(path.join(__dirname, '../src/content/design-guidelines/**/*.md')),
   'design-guidelines'
 );

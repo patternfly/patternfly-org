@@ -29,13 +29,12 @@ export const App = () => (
         if (Component) {
           return <Component key={path} path={path} default={path === '/404'} />;
         }
-        const { sources, designSnippet, id } = props;
+        const { sources, id } = props;
         return (
           <MDXTemplate
             key={path}
             path={path + '/*'}
             layoutOptions={LayoutOptions}
-            designSnippet={designSnippet}
             id={id}
             sources={sources}
           />
