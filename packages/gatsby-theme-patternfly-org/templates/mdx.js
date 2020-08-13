@@ -6,7 +6,7 @@ import {
   Alert,
   Badge,
   Card,
-  CardHeader,
+  CardTitle,
   CardBody,
   Grid,
   GridItem,
@@ -123,7 +123,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
               style={{ marginBottom: '1rem' }}
               isInline
             >
-              We'll be up and running in a bit, so check back soon. Thanks!
+              The embedded version of our tutorials are broken, but you can still access our tutorials on <a href="https://www.katacoda.com/patternfly">Katacoda.com</a>
             </Alert>
           )}
           {/* Design docs should not apply to demos and overview */}
@@ -150,16 +150,18 @@ const MDXTemplate = ({ data, location, pageContext }) => {
                   return releaseTitle && (
                     <GridItem sm={6} md={4} key={version.name}>
                       <Card>
-                        <CardHeader>
+                        <CardTitle>
                           {releaseTitle && (
-                            <a key={version.name} href={`#${slugger(releaseTitle)}`}>
-                              Release {version.name}
-                            </a>
+                            <Title size="2xl" headingLevel="h2" >
+                              <a key={version.name} href={`#${slugger(releaseTitle)}`}>
+                                Release {version.name}
+                              </a>
+                            </Title>
                           )}
                           {version.latest && (
                             <Badge>Latest</Badge>
                           )}
-                        </CardHeader>
+                        </CardTitle>
                         <CardBody>
                           Released on {releaseDate}.
                         </CardBody>
@@ -220,7 +222,7 @@ const MDXTemplate = ({ data, location, pageContext }) => {
         <Example
           location={location}
           source={source}
-          html={props.title && htmlExamples && htmlExamples[getId(props.title)]}
+          html={props.title && htmlExamples && htmlExamples[getId(props.title)] && htmlExamples[getId(props.title)].code}
           hideDarkMode={hideDarkMode}
           navSection={navSection}
           componentName={componentName}

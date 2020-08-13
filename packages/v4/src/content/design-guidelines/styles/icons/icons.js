@@ -778,6 +778,13 @@ export const iconsData = [
   },
   {
     "Style": "pf-icon",
+    "Name": "pf-icon-attention-bell",
+    "React_name": "AttentionBellIcon",
+    "Type": "Status",
+    "Contextual_usage": "Represents status: attention. Exclusively used in the notification badge component within the masthead."
+  },
+  {
+    "Style": "pf-icon",
     "Name": "pf-icon-automation",
     "React_name": "AutomationIcon",
     "Type": "Object",

@@ -251,7 +251,7 @@ export const SideNavLayout = ({
       logoProps={{
         href: url || '/'
       }}
-      showNavToggle
+      showNavToggle={!hideSideNav}
       topNav={<TopNav
         location={location}
         context={context}

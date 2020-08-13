@@ -19,7 +19,7 @@ import './icons.css';
 
 <Divider className="ws-icons-divider" />
 
-<p class="ws-icons-page">If you're a developer, check out our <Link to="/get-started/developers#using-styles">getting started</Link> page to learn more about how to get and use our icon set.</p>
+<p class="ws-icons-page">If you're a developer, check out our <a href="https://www.patternfly.org/v4/get-started/developers#using-styles">getting started</a> page to learn more about how to get and use our icon set.</p>
 
 ## Icon sizes
 <Grid gutter="md">
@@ -84,7 +84,7 @@ import './icons.css';
     </Card>
   </GridItem>
   <GridItem xl={6} lg={12} className="ws-icons-gridtext ws-icons-alignment-section">
-    No matter the size of the icon, when icons are next to text, they should be center-aligned horizontally. An example of this alignment in a component is a <Link to="design-guidelines/usage-and-behavior/buttons-and-links#link-button">link button</Link>. If icons are stacked, they should also be center-aligned vertically.
+    No matter the size of the icon, when icons are next to text, they should be center-aligned horizontally. An example of this alignment in a component is a <a href="https://www.patternfly.org/v4/design-guidelines/usage-and-behavior/buttons-and-links#link-button">link button</a>. If icons are stacked, they should also be center-aligned vertically.
     <div><img src="icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" /></div>
   </GridItem>
 </Grid>
@@ -92,22 +92,22 @@ import './icons.css';
 <Divider className="ws-icons-divider" />
 
 ## Icon colors
-Visit our <Link to="/design-guidelines/styles/colors" className="pf-m-link">colors page</Link> to learn more about icon colors.
+Visit our <a href="https://www.patternfly.org/v4/design-guidelines/styles/colors">colors page</a> to learn more about icon colors.
 
 <Divider className="ws-icons-divider" />
 
 ## All icons
-PatternFly uses custom icons and selections from <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome Free</a>. PatternFly icons are mostly two dimensional and flat. Navigate to Font Awesome’s website to download SVGs of any additional ‘fa’ icons within their free set. Proper attribution should be given as outlined on the Font Awesome site.
+PatternFly uses custom icons and selections from <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome Free</a> which are listed below. PatternFly icons are mostly two dimensional and flat. If none of the PatternFly offered icons fit your use case, you may use any additional ‘fa’ icons within Font Awesome's free set. Simply download your chosen icon's SVG and give the icon proper attribution as outlined on the <a href="https://fontawesome.com/license/freeFont"> Font Awesome site</a>.
 
 Click on any single icon in the table to download it as an SVG. Download all icon SVGs <a href="https://patternfly-org.s3.us-east-2.amazonaws.com/patternfly-icons.zip">here</a>.
 
-If you’re a designer, these icons are the same set as the ones in the <a href="https://www.patternfly.org/v4/get-started/designers">PatternFly Sketch Design Kit</a>. It is possible to use any FontAwesome icon as long it follows the guidelines above.
+If you’re a designer, these icons are the same set as the ones in the <a href="https://www.patternfly.org/v4/get-started/designers">PatternFly Sketch Design Kit</a>. **As mentioned above, if none of these icons fit your use case, you may use any <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome Free</a> icon as long it follows the guidelines above.**
 
 If you’re looking to copy HTML for an icon:<br/>
 Use this for 'pficon' icons: `<i className="pf-icon [insert-icon-name]"></i>`<br />
 Use this for 'fa' solid icons: `<i className="fas [insert-icon-name]"></i>`<br />
 Use this for 'fa' regular icons: `<i className="far [insert-icon-name]"></i>`<br />
-<small>Note: Be sure to read <Link to="/get-started/developers#using-styles" className="pf-m-link">how to get started with icons</Link> when using 'fa' regular icons</small>
+<small>Note: Be sure to read <a href="https://www.patternfly.org/v4/get-started/developers#using-styles">how to get started with icons</a> when using 'fa' regular icons</small>
 
 If you're looking to copy React for an icon:<br />
 Use this for 'pficon' icons: `import { [insert-icon-name] } from '@patternfly/react-icons'`

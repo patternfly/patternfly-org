@@ -35,7 +35,7 @@ module.exports = {
       options: {
         context: 'org',
         hiddenPages: ['withOuia'], // By title
-        showGdprBanner: false, // GDPR banner
+        showGdprBanner: true, // GDPR banner
         showFooter: true, // Footer
         sideNav: {
           core: [
@@ -252,7 +252,8 @@ module.exports = {
               ignoreFileExtensions: []
             }
           },
-        ]
+        ],
+        rehypePlugins: [require('gatsby-theme-patternfly-org/helpers/codeTitleTransformer')]
       }
     },
     // For Algogia global doc search

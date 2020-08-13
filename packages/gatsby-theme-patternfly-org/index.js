@@ -4,7 +4,8 @@
 // We can't include these in gatsby-node since we aren't gatsby-mdx
 exports.mdxTypeDefs = `
   type MdxFrontmatter @dontInfer {
-    title: String!
+    id: String!
+    title: String
     section: String
     cssPrefix: String
     hideTOC: Boolean
@@ -18,6 +19,7 @@ exports.mdxTypeDefs = `
     showTitle: Boolean
     releaseNoteTOC: Boolean
     hideSource: Boolean
+    wrapperTag: String
   }
   type MdxFields @dontInfer {
     slug: String!
@@ -26,6 +28,7 @@ exports.mdxTypeDefs = `
     title: String
     propComponents: [String]
     componentName: String
+    wrapperTag: String
   }
   type Mdx implements Node @dontInfer {
     frontmatter: MdxFrontmatter

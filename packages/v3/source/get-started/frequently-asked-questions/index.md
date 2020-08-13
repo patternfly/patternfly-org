@@ -29,7 +29,7 @@ layout: page
 There are two parts to PatternFly that will help you efficiently design and develop enterprise web applications. First, our [widget library]({{site.baseurl}}/pattern-library/widgets/) implements enterprise-optimized visual styling for common web UI widgets. This is supported with a downloadable library of HTML mark-up, CSS styling, and code samples built on top of the [Bootstrap 3](http://getbootstrap.com/) framework. Second, our [pattern library]({{site.baseurl}}/pattern-library/) includes a set of interaction patterns that offer consistent solutions to common user interaction problems.
 
 ## <a name="support"></a>Which browsers does PatternFly support?
-PF3 supports [the same browsers as BS3](https://getbootstrap.com/docs/3.3/getting-started/#support) with the exception of Internet Explorer 8-9. PatternFly 4 supports the latest two versions of Edge, Safari, Firefox and Chrome.
+PF3 supports [the same browsers as BS3](https://getbootstrap.com/docs/3.3/getting-started/#support) with the exception of Internet Explorer 8-9. PatternFly 4 supports the latest version of Edge, Safari, Firefox and Chrome.
 
 ## <a name="implementations"></a>What JS framework implementations does PatternFly offer?
 PatternFly-Core is HTML/CSS and jQuery. In addition, PatternFly 3 (our current version) supports various JS framework implementations including [Angular-PatternFly](https://github.com/patternfly/angular-patternfly) (Angular 1.x), [PatternFly-ng](https://github.com/patternfly/patternfly-ng) (Angular 6.x+), and [PatternFly-React](https://github.com/patternfly/patternfly-react). PatternFly will continue to support the PF3 framework implementations by:
