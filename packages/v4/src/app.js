@@ -64,5 +64,8 @@ export const App = () => (
 // Don't use ReactDOM in SSR
 if (!isPrerender) {
   // Hydrate is broken with <Suspense> nodes. See enableSuspenseServerRenderer.
+  // Instead of using a custom build of React, for now just rerender the whole tree
+  // into the root. We can just put the homepage in the main bundle using `SyncComponent`
+  // in routes.js
   ReactDOM.render(<App />, document.getElementById('root'));
 }

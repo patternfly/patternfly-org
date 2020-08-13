@@ -2,16 +2,18 @@ const generatedRoutes = require('./generated');
 const { makeSlug } = require('theme-patternfly-org/helpers/slugger');
 const { lazy } = require('react');
 
+const isClient = Boolean(process.env.NODE_ENV);
+
 const routes = {
   '/': {
-    Component: () => import(/* webpackChunkName: "home" */ './pages/home'),
+    SyncComponent: isClient && require('./pages/home').default,
   },
   '/get-in-touch': {
     Component: () => import(/* webpackChunkName: "get-in-touch" */ './pages/get-in-touch'),
     title: 'Get in touch'
   },
   '/404': {
-    Component: () => import(/* webpackChunkName: "404" */ 'theme-patternfly-org/pages/404'),
+    SyncComponent: isClient && require('theme-patternfly-org/pages/404').default,
     title: '404 Error'
   },
   ...generatedRoutes
@@ -19,8 +21,13 @@ const routes = {
 
 for (let route in routes) {
   const pageData = routes[route];
-  pageData.preload = pageData.Component;
-  pageData.Component = lazy(pageData.Component);
+  if (pageData.Component) {
+    pageData.preload = pageData.Component;
+    pageData.Component = lazy(pageData.Component);
+  }
+  else if (pageData.SyncComponent) {
+    pageData.Component = pageData.SyncComponent;
+  }
 }
 
 // Group routes by section, id
