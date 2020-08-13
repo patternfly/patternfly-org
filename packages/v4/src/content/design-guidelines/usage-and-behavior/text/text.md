@@ -1,4 +1,0 @@
----
-id: Text
-section: components
----

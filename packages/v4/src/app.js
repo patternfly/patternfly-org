@@ -38,26 +38,22 @@ const AppRoute = ({ child, ...props }) => (
 // Export for SSR
 export const App = () => (
   <ConfigContext.Provider value={LayoutOptions}>
-    <SkipToContent href="#main-content">Skip to Content</SkipToContent>
-      <Router basepath={LayoutOptions.pathPrefix} id="ws-router">
-          {Object.entries(LayoutOptions.routes).map(([path, props]) => {
-            const { Component } = props;
-            if (Component) {
-              return (
-                <AppRoute key={path} path={path} default={path === '/404'} child={<Component />} />
-              );
-            }
-            const { sources, designSnippet, id } = props;
-            return (
-              <AppRoute key={path} path={path + '/*'} child={<MDXTemplate
-                layoutOptions={LayoutOptions}
-                designSnippet={designSnippet}
-                id={id}
-                sources={sources}
-              />} />
-            );
-          })}
-      </Router>
+    <Router basepath={LayoutOptions.pathPrefix} id="ws-router">
+      {Object.entries(LayoutOptions.routes).map(([path, props]) => {
+        const { Component } = props;
+        if (Component) {
+          return <AppRoute key={path} path={path} default={path === '/404'} child={<Component />} />;
+        }
+        const { sources, id } = props;
+        return (
+          <AppRoute key={path} path={path + '/*'} child={<MDXTemplate
+            layoutOptions={LayoutOptions}
+            id={id}
+            sources={sources}
+          />} />
+        );
+      })}
+    </Router>
   </ConfigContext.Provider>
 );
 

@@ -1,4 +1,0 @@
----
-id: Divider
-section: components
----

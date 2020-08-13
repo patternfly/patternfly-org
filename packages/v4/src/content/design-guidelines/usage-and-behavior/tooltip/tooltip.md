@@ -1,4 +1,0 @@
----
-id: Tooltip
-section: components
----

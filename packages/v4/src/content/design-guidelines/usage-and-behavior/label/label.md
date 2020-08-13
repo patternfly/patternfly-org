@@ -1,4 +1,0 @@
----
-id: Label
-section: components
----

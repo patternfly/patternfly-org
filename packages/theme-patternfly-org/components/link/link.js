@@ -15,10 +15,10 @@ export const Link = ({
   else if (url.startsWith('/')) {
     const { pathPrefix, routes } = React.useContext(ConfigContext);
     const route = routes[url];
-    if (route) {
+    if (route && route.sources) {
       // Preload on hover
       props.onMouseOver = () => {
-        Object.values(route.sources).forEach(({ preload }) => preload());
+        Object.values(route.sources).forEach(({ preload = () => {} }) => preload());
         onMouseOver();
       };
     }
