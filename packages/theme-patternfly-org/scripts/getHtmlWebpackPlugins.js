@@ -38,8 +38,7 @@ module.exports = async (routes, isProd) => {
       // Add pages for sources
       ...sources.map(source => [source.slug, source])
     ])
-    .flat()
-    .map(([url, { title, id }]) => [url, { title: title || id }]);
+    .flat();
 
   for (const [url, { title }] of titledRoutes) {
     res.push(await getHtmlWebpackPlugin(url, isProd, title));

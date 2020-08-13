@@ -168,6 +168,7 @@ module.exports = {
         fs.outputFileSync(outPath, jsx);
         routes[pageData.slug] = {
           id: pageData.id,
+          title: pageData.title || pageData.id,
           section: pageData.section,
           source: pageData.source
         };

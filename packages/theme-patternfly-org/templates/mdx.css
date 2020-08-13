@@ -53,9 +53,8 @@
   line-height: 24px;
 }
 
-.ws-page-title {
-  margin-top: var(--pf-global--spacer--sm);
-  margin-bottom: var(--pf-global--spacer--lg);
+#ws-page-title {
+  padding-bottom: var(--pf-global--spacer--lg);
 }
 
 .ws-code {
