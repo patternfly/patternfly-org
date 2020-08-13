@@ -5,7 +5,7 @@ hideTOC: true
 showTitle: true
 ---
 
-Use a bulk selection pattern when you want to select or deselect multiple items in a content view (list, table, or card grid). The bulk selector uses a [Split button](/documentation/react/components/dropdown#split-button) component to control selection from the [Toolbar](/documentation/react/beta/datatoolbar). Besides controlling selection, the bulk selector reflects the selection status of the related component (partially selected, all items selected, or no items selected).
+Use a bulk selection pattern when you want to select or deselect multiple items in a content view (list, table, or card grid). The bulk selector uses a [Split button](/documentation/react/components/dropdown#split-button) component to control selection from the [Toolbar](/documentation/react/toolbar). Besides controlling selection, the bulk selector reflects the selection status of the related component (partially selected, all items selected, or no items selected).
 
 ## Bulk selector
 The bulk selector is created using a Split button and is always located as the leftmost item in a toolbar.
@@ -16,7 +16,7 @@ The bulk selector is created using a Split button and is always located as the l
 
 **2. Checkbox:** The state of the checkbox reflects the current selection state of the list, table, or card grid.
 
-<img src="./img/bulk-select-checkbox" alt="Bulk Selector Checkbox States" width="518"/>
+<img src="./img/bulk-select-checkbox.png" alt="Bulk Selector Checkbox States" width="518"/>
 
 **3. Items selected:** This text always reflects the total number of items selected. If pagination is in use, it will reflect the items selected across all pages.
 
