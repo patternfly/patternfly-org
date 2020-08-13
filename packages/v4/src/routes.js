@@ -38,36 +38,44 @@ const groupedRoutes = Object.entries(routes)
     accum[section] = accum[section] || {};
     accum[section][id] = accum[section][id] || {
       id,
-      designSnippet: null,
       slug: makeSlug(source, section, id, true),
-      sources: {}
+      sources: []
     };
 
     pageData.slug = slug;
-    if (source === 'design-snippets') {
-      accum[section][id].designSnippet = pageData;
-    }
-    else {
-      accum[section][id].sources[source] = pageData;
-    }
+    accum[section][id].sources.push(pageData);
 
     return accum;
   }, {});
 
+const sourceOrder = {
+  react: 1,
+  'design-guidelines': 2
+};
+const defaultOrder = 99;
+
+const sortSources = ({ source: s1 }, { source: s2 }) => {
+  const s1Index = sourceOrder[s1] || defaultOrder;
+  const s2Index = sourceOrder[s2] || defaultOrder;
+  if (s1Index === defaultOrder && s2Index === defaultOrder) {
+    return s1.localeCompare(s2);
+  }
+
+  return s1Index > s2Index ? 1 : -1;
+}
+
 Object.entries(groupedRoutes)
   .forEach(([_section, ids]) => {
     Object.entries(ids).forEach(([_id, pageData]) => {
-      const { designSnippet, slug, sources } = pageData;
+      const { slug } = pageData;
       // Remove source routes for `app.js`
-      Object.entries(sources).forEach(([_source, { slug }]) => {
+      pageData.sources.forEach(({ slug }) => {
         delete routes[slug];
       });
+      // Sort sources for tabs
+      pageData.sources = pageData.sources.sort(sortSources);
       // Add grouped route
       routes[slug] = pageData;
-      // Remove route for design-snippets
-      if (designSnippet) {
-        delete routes[designSnippet.slug];
-      }
     })
   });
 

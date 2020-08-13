@@ -36,7 +36,7 @@ module.exports = async (routes, isProd) => {
     .map(([url, { sources = [], ...props }]) => [
       [url, props],
       // Add pages for sources
-      ...(Object.values(sources).map(source => [source.slug, source]))
+      ...sources.map(source => [source.slug, source])
     ])
     .flat()
     .map(([url, { title, id }]) => [url, { title: title || id }]);

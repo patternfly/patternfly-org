@@ -1,27 +1,10 @@
 import React from 'react';
-import { PageSection, SkipToContent, Title } from '@patternfly/react-core';
+import { PageSection, Title } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { Router, useLocation } from '@reach/router';
-import { SideNavLayout } from '../layouts';
 import { CSSVariables, PropsTable, TableOfContents, Link, AccordionHeader, InlineAlert } from '../components';
 import { capitalize } from '../helpers';
 import './mdx.css';
-
-const sourceOrder = {
-  react: 1,
-  'design-guidelines': 2
-};
-const defaultOrder = 99;
-
-const sortSources = ({ source: s1 }, { source: s2 }) => {
-  const s1Index = sourceOrder[s1] || defaultOrder;
-  const s2Index = sourceOrder[s2] || defaultOrder;
-  if (s1Index === defaultOrder && s2Index === defaultOrder) {
-    return s1.localeCompare(s2);
-  }
-
-  return s1Index > s2Index ? 1 : -1;
-}
 
 const MDXChildTemplate = (
   {
@@ -34,8 +17,7 @@ const MDXChildTemplate = (
     beta,
     cssPrefix = []
   },
-  index = 0,
-  array = []
+  index = 0
 ) => {
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
   const propsTitle = propComponents.length > 0 && 'Props';
@@ -65,12 +47,7 @@ const MDXChildTemplate = (
       {toc && toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
-      <div
-        className={css(
-          'ws-mdx-content',
-          array.length > 1 && 'pf-u-pt-xl pf-u-pl-xl'
-        )}
-      >
+      <div className="ws-mdx-content">
         {InlineAlerts}
         <Component />
         {propsTitle && (
@@ -103,10 +80,9 @@ const MDXChildTemplate = (
 
 export const MDXTemplate = ({
   id,
-  sources = {}
+  sources = []
 }) => {
-  const sourceValues = Object.values(sources).sort(sortSources);
-  const sourceKeys = sourceValues.map(v => v.source);
+  const sourceKeys = sources.map(v => v.source);
   const isSinglePage = sourceKeys.length === 1;
   const { pathname } = useLocation();
   let activeSource = pathname.replace(/\/$/, '').split('/').pop();
@@ -120,7 +96,7 @@ export const MDXTemplate = ({
         id={isSinglePage ? 'main-content' : 'nav-content'}
         type={isSinglePage ? 'default' : 'nav'}
       >
-        <Title size="4xl" headingLevel="h1" className="ws-page-title">
+        <Title size="4xl" headingLevel="h1" id="ws-page-title">
           {id}
         </Title>
         {!isSinglePage && (
@@ -145,13 +121,13 @@ export const MDXTemplate = ({
           </div>
         )}
         {isSinglePage && (
-          <MDXChildTemplate {...sourceValues[0]} />
+          <MDXChildTemplate {...sources[0]} />
         )}
       </PageSection>
       {!isSinglePage && (
         <PageSection id="main-content" className="ws-child-section">
           <Router className="pf-u-h-100" primary={false}>
-            {sourceValues.map(MDXChildTemplate)}
+            {sources.map(MDXChildTemplate)}
           </Router>
         </PageSection>
       )}
