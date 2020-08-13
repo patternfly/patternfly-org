@@ -5,20 +5,18 @@ hideTOC: true
 showTitle: true
 ---
 
-
-
-Use a bulk selection pattern when you want to select or deselect multiple items in a content view (list, table, or card grid). The bulk selector uses a <a href="https://www.patternfly.org/v4/documentation/react/components/dropdown#split-button">Split button</a> component to control selection from the <a href="https://www.patternfly.org/v4/documentation/react/components/toolbar#component-title">Toolbar</a>. Besides controlling selection, the bulk selector reflects the selection status of the related component (partially selected, all items selected, or no items selected).
+Use a bulk selection pattern when you want to select or deselect multiple items in a content view (list, table, or card grid). The bulk selector uses a [Split button](/documentation/react/components/dropdown#split-button) component to control selection from the [Toolbar](/documentation/react/components/toolbar). Besides controlling selection, the bulk selector reflects the selection status of the related component (partially selected, all items selected, or no items selected).
 
 ## Bulk selector
 The bulk selector is created using a Split button and is always located as the leftmost item in a toolbar.
 
-![bulk selector](./img/bulk-selector.png)
+<img src="./img/bulk-selector.png" alt="Bulk selector" width="1449"/>
 
 **1. Bulk selector:** The bulk selector uses a split button to combine a selection checkbox with a dropdown menu.
 
 **2. Checkbox:** The state of the checkbox reflects the current selection state of the list, table, or card grid.
 
-![blulk selector checkbox](./img/bulk-select-checkbox.png)
+<img src="./img/bulk-select-checkbox.png" alt="Bulk Selector Checkbox States" width="518"/>
 
 **3. Items selected:** This text always reflects the total number of items selected. If pagination is in use, it will reflect the items selected across all pages.
 
@@ -33,7 +31,7 @@ Additional menu items can be added to select items that match some predetermined
 ### Bulk selection from the toolbar
 The example below shows a bulk selector placed in a toolbar above a table using pagination.
 
-![bulk selection from toolbar](./img/bulk-selection-example.png)
+<img src="./img/bulk-selection-example.png" alt="Bulk selection from toolbar" width="1210"/>
 
 There are 50 total items in this dataset spread across 10 pages (5 items per page), but only the first page has been selected and therefore partial selection is reflected in the checkbox. The user may select (or deselect) additional items either through the use of the bulk selection checkbox, the bulk selection menu, or by clicking on the checkbox at the front of a row. The selected items count will update whenever selection is changed.
 
@@ -43,7 +41,7 @@ Bulk selection is often used to select multiple items and perform an action on t
 ### Integrated bulk selection for tables
 Tables are unique to other view in that they include integrated bulk selection by default. Below is an example of a PatternFly table component with integrated bulk selection in the header row.
 
-![integrated bulk selection in a table](./img/bulk-selection-no-toolbar.png)
+<img src="./img/bulk-selection-no-toolbar.png" alt="Integrated bulk selection in a table" width="1210"/>
 
 **1. Bulk selection checkbox:** A checkbox in the header row of a table will select (or deselect) all items in the table or all items on the current page if pagination is in use.
 
@@ -54,10 +52,10 @@ Note: To hide integrated bulk selection and enable selection control from the to
 ## Related components and demos
 
 ### Core HTML/CSS
-* [Split button](/documentation/core/components/dropdown#split-button-checkbox)
-* [Toolbar](/documentation/core/components/toolbar)
+* [Split button](/documentation/core/components/dropdown#split-button)
+* [Data toolbar (beta)](/documentation/react/components/toolbar)
 
 ### React
 * [Split button](/documentation/react/components/dropdown#split-button)
-* [Toolbar](/documentation/react/components/toolbar)
+* [Data toolbar (beta)](/documentation/react/components/toolbar)
 * [Bulk select table demo](/documentation/react/demos/bulkselecttable)
