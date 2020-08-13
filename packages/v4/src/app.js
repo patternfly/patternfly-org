@@ -63,6 +63,6 @@ export const App = () => (
 
 // Don't use ReactDOM in SSR
 if (!isPrerender) {
-  const renderFn = isProd ? ReactDOM.hydrate : ReactDOM.render;
-  renderFn(<App />, document.getElementById('root'));
+  // Hydrate is broken with <Suspense> nodes. See enableSuspenseServerRenderer.
+  ReactDOM.render(<App />, document.getElementById('root'));
 }
