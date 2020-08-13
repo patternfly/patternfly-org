@@ -11,32 +11,41 @@ Consistent capitalization adds clarity and consistency across your products' UIs
 
 * **Title case**: Title case capitalizes the first letter of each word in a sentence except for smaller words like articles and conjunctions that have fewer than four letters. 
 
-    <br />Example: "PatternFly Design Resources With Tips and Best Practices"
-    <br />Hyperlinked articles in a UI are not displayed as titles. Instead, the copy typically reads something like, "Learn more about [tool name]."
-<br />
+    <br>Example: "PatternFly Design Resources With Tips and Best Practices"
+    
+    <br>
+    Hyperlinked articles in a UI are not displayed as titles. Instead, the copy typically reads something like, "Learn more about [tool name]."
+<br>
+
 * **Sentence case**: Sentence case only capitalizes the first letter of the first word in a title, heading, subtitle, or subheading except for proper nouns, product names, acronyms, and initialisms.
-    <br />Example: “PatternFly’s design resources with tips and best practices”
+
+    <br>
+    Example: “PatternFly’s design resources with tips and best practices”
 
 ## Capitalization across PatternFly
+
 Follow these guidelines for **PatternFly content**, including documentation, UX copy, blog articles, and more. 
 
 * Use **sentence case** for page titles, menu/navigation items, headings, subtitles, and subheadings across PatternFly. Capitalize proper nouns, product names, acronyms, and initialisms.  
-    <br />Example: “Introduction to HTML and table components”  
-<br />
+    <br>Example: “Introduction to HTML and table components”  
+<br>
 
 * Write all components in **lowercase** unless they start a sentence. 
-    <br />Example: "Card, button, and banner components are my favorites."  
-    <br />**Note**: “React” is always capitalized, even when referring to a component (“React component”). It’s the official name of a JavaScript library, and it’s written as a proper noun across the [react.js org site](https://reactjs.org/).
+    <br>Example: "Card, button, and banner components are my favorites."<br>
+    **Note**: “React” is always capitalized, even when referring to a component (“React component”). It’s the official name of a JavaScript library, and it’s written as a proper noun across the [react.js org site](https://reactjs.org/).
 
 ## Capitalization across products
+
 Follow these guidelines for **product UX copy**, including menu items, titles, messages, and more.
 
 Each company handles UI capitalization differently, so align with your own company’s rules when designing your UIs. If you’re designing UIs for Red Hat products, follow these rules: 
 
 * Write menu/navigation items and their corresponding page titles in **title case**. 
-<br />
+<br>
+
 * Write products, services, and features in **title case**.
-<br />
+<br>
+
 * Write all other areas (like button text, form field labels, and empty state headings) in **sentence case**. 
 
 Capitalize **Red Hat feature names** when they’re used as proper nouns or when they refer to a capitalized UI term (like a navigation item). Write them in lowercase when they’re used to describe generic concepts.
@@ -51,30 +60,32 @@ Examples:
     <tr>
         <td><center>Compliance</center></td>
         <td>“Check your system compliance using Red Hat Insights Compliance.”</td>
-        <td>The first “compliance” is lowercase since it refers to compliance as a concept. <br /><br />The second “compliance” refers to a specific feature offered on cloud.redhat.com.
+        <td>The first “compliance” is lowercase since it refers to compliance as a concept. <br><br>The second “compliance” refers to a specific feature offered on cloud.redhat.com.
 </td>
 </tr> 
 <tr>
          <td><center>User Access</center></td>
 	        <td>“Manage user access for your organization using the User Access feature.”</td>
-            <td>The first “user access” is lowercase because it refers to user access as a concept. <br /><br />The second “user access” is capitalized because it refers to the User Access feature offered on cloud.redhat.com.
+            <td>The first “user access” is lowercase because it refers to user access as a concept. <br><br>The second “user access” is capitalized because it refers to the User Access feature offered on cloud.redhat.com.
 </td>
 </tr>
     <tr>
         <td><center>Sources</center></td>
-        <td>"Add a source by going to <b>Settings</b> > <b>Sources</b>." <br /><br />"Check the <b>Sources</b> table for status." <br /><br />Button text: "Add source"
+        <td>"Add a source by going to <b>Settings</b> > <b>Sources</b>." <br><br>"Check the <b>Sources</b> table for status." <br><br>Button text: "Add source"
 </td>
-        <td>“Sources” is only capitalized when it directly refers to a subsection, feature, or location in the UI.<br /><br />Always write buttons in sentence case.
+        <td>“Sources” is only capitalized when it directly refers to a subsection, feature, or location in the UI.<br><br>Always write buttons in sentence case.
 </td>
 </tr>
 </table>
 
-##Capitalization for tools outside your product portfolio
+## Capitalization for tools outside your product portfolio
+
 If you’re referencing tools outside your company’s product portfolio, write the product names as they appear in the respective company’s documentation. 
 
 For example, if you’re referencing a product in AWS and Amazon capitalizes it, capitalize it in your writing.
 
-##Capitalization for breadcrumb trails
+## Capitalization for breadcrumb trails
+
 Usually, page titles appear in a breadcrumb trail. If all page titles are in title case, they should appear in title case in the breadcrumb trail. If all page titles are in sentence case, they should also appear in sentence case in the breadcrumb trail. 
 
 However, breadcrumb trails aren’t limited to page titles alone. If a name entered by a user (such as “vagrant-host”) is included in the breadcrumb trail, then use the same case that the name appears in.
