@@ -5,14 +5,14 @@
   order: 1;
   position: sticky;
   background-color: var(--pf-global--BackgroundColor--100);
-  padding-left: var(--pf-global--spacer--sm);
+  padding-left: var(--pf-global--spacer--md);
   align-self: flex-start;
   min-width: 280px;
   max-height: calc(100vh - 76px);
   overflow-y: auto;
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1300px) {
   .ws-toc {
     display: none;
     visibility: hidden;
@@ -20,7 +20,7 @@
 }
 
 .ws-toc-list ul {
-  padding-left: 16px;
+  padding-left: var(--pf-global--spacer--md);
 }
 
 .ws-toc-item {

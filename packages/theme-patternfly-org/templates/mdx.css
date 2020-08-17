@@ -1,5 +1,5 @@
-.pf-c-page__main > section:first-child {
-  padding: 32px 32px 0 32px;
+#nav-content {
+  padding: var(--pf-global--spacer--lg) var(--pf-global--spacer--lg) 0 var(--pf-global--spacer--lg);
 }
 .pf-c-page__main > section.pf-c-page__main-section:first-child {
   flex-grow: 1;
@@ -11,7 +11,7 @@
   }
 }
 
-.ws-child-section {
+#main-content {
   padding: 0;
   background-color: var(--pf-global--BackgroundColor--100);
 }
@@ -343,7 +343,7 @@
 }
 
 .ws-mdx-content {
-  padding: 0 32px 48px 0;
+  padding: var(--pf-global--spacer--lg);
   background-color: var(--pf-global--BackgroundColor--200);
   flex-grow: 1;
 }

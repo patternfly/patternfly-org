@@ -96,7 +96,7 @@ export const MDXTemplate = ({
         id={isSinglePage ? 'main-content' : 'nav-content'}
         type={isSinglePage ? 'default' : 'nav'}
       >
-        <Title size="4xl" headingLevel="h1" id="ws-page-title">
+        <Title size="4xl" headingLevel="h1" id="ws-page-title" className={isSinglePage ? 'pf-u-p-lg' : ''}>
           {title}
         </Title>
         {!isSinglePage && (
@@ -125,7 +125,7 @@ export const MDXTemplate = ({
         )}
       </PageSection>
       {!isSinglePage && (
-        <PageSection id="main-content" className="ws-child-section">
+        <PageSection id="main-content">
           <Router className="pf-u-h-100" primary={false}>
             {sources.map(MDXChildTemplate)}
           </Router>
