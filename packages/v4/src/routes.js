@@ -1,12 +1,12 @@
 const generatedRoutes = require('./generated');
 const { makeSlug } = require('theme-patternfly-org/helpers/slugger');
-const { lazy } = require('react');
+const { asyncComponentFactory } = require('theme-patternfly-org/helpers/asyncComponentFactory');
 
 const isClient = Boolean(process.env.NODE_ENV);
 
 const routes = {
   '/': {
-    SyncComponent: isClient && require('./pages/home').default,
+    SyncComponent: isClient && require('./pages/home').default
   },
   '/get-in-touch': {
     Component: () => import(/* webpackChunkName: "get-in-touch" */ './pages/get-in-touch'),
@@ -21,12 +21,11 @@ const routes = {
 
 for (let route in routes) {
   const pageData = routes[route];
-  if (pageData.Component) {
-    pageData.preload = pageData.Component;
-    pageData.Component = lazy(pageData.Component);
-  }
-  else if (pageData.SyncComponent) {
+  if (pageData.SyncComponent) {
     pageData.Component = pageData.SyncComponent;
+  }
+  else if (pageData.Component) {
+    pageData.Component = asyncComponentFactory(route, pageData);
   }
 }
 
@@ -50,7 +49,7 @@ const groupedRoutes = Object.entries(routes)
 
 const sourceOrder = {
   react: 1,
-  'design-guidelines': 2
+  html: 2
 };
 const defaultOrder = 99;
 
@@ -66,7 +65,7 @@ const sortSources = ({ source: s1 }, { source: s2 }) => {
 
 Object.entries(groupedRoutes)
   .forEach(([_section, ids]) => {
-    Object.entries(ids).forEach(([_id, pageData]) => {
+    Object.values(ids).forEach(pageData => {
       const { slug } = pageData;
       // Remove source routes for `app.js`
       pageData.sources.forEach(({ slug }) => {

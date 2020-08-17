@@ -1,10 +1,9 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from '@reach/router';
 import { SideNavLayout } from 'theme-patternfly-org/layouts';
 import { MDXTemplate } from 'theme-patternfly-org/templates/mdx';
 import { routes, groupedRoutes } from './routes';
-import { PageSection, SkipToContent } from '@patternfly/react-core';
 import LayoutOptions from '../patternfly-docs.config.js';
 import ConfigContext from 'theme-patternfly-org/helpers/configContext';
 import '../patternfly-docs.css.js';
@@ -21,19 +20,9 @@ LayoutOptions.groupedRoutes = groupedRoutes;
 
 const AppRoute = ({ child, ...props }) => (
   <SideNavLayout {...props}>
-    {isPrerender
-      ? child
-      : (
-        <Suspense fallback={
-          <PageSection id="main-content">
-            <div style={{ height: '100vh' }} />
-          </PageSection>
-        }>
-          {child}
-        </Suspense>
-      )}
+    {child}
   </SideNavLayout>
-)
+);
 
 // Export for SSR
 export const App = () => (
@@ -63,5 +52,6 @@ if (!isPrerender) {
   // Instead of using a custom build of React, for now just rerender the whole tree
   // into the root. We can just put the homepage in the main bundle using `SyncComponent`
   // in routes.js
-  ReactDOM.render(<App />, document.getElementById('root'));
+  const renderFn = isProd ? ReactDOM.hydrate : ReactDOM.render;
+  renderFn(<App />, document.getElementById('root'));
 }

@@ -15,7 +15,11 @@ const serverConfig = () => {
     plugins: [
       new webpack.DefinePlugin({
         'process.env.PRERENDER': true // In app.js don't call ReactDOM.render
-      })
+      }),
+      new webpack.NormalModuleReplacementPlugin(
+        /d3-timer/, // This stops prerender from hanging in `yarn build:client`
+        res => res.request = require.resolve('theme-patternfly-org/helpers/d3-timer.js')
+      )
     ],
     optimization: {
       splitChunks: false,
@@ -29,7 +33,8 @@ const serverConfig = () => {
         }
       ]
     },
-    externals: ['react', 'react-dom', '@reach/router'] // Load in prerender.js instead
+    // Load in prerender.js instead
+    externals: ['react', 'react-dom', '@reach/router']
   };
 }
 

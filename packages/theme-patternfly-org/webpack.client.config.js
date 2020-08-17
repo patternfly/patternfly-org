@@ -4,14 +4,14 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const baseConfig = require('./webpack.base.config');
-const getHtmlWebpackPlugins = require('./scripts/getHtmlWebpackPlugins');
+const { getHtmlWebpackPlugins } = require('./scripts/getHtmlWebpackPlugins');
 const { routes } = require(path.join(process.cwd(), 'src/routes'));
 
 const pfDir = path.dirname(require.resolve('@patternfly/patternfly/package.json'));
 // Don't include PatternFly styles twice
 const reactCSSRegex = /(react-[\w-]+\/dist|react-styles\/css)\/.*\.css$/;
 
-const clientConfig = async (env, argv) => {
+const clientConfig = (env, argv) => {
   const isProd = argv.mode === 'production';
 
   return {
@@ -89,7 +89,7 @@ const clientConfig = async (env, argv) => {
           { from: path.join(pfDir, 'assets/fonts/'), to: 'assets/fonts/' }
         ]
       }),
-      ...(await getHtmlWebpackPlugins(routes, isProd)), // Create an HTML page per route
+      ...getHtmlWebpackPlugins(routes, isProd), // Create an HTML page per route
       ...(env === 'analyze'
         ? [
           new BundleAnalyzerPlugin({
