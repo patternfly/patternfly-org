@@ -9,7 +9,7 @@ const routes = {
     SyncComponent: isClient && require('./pages/home').default
   },
   '/get-in-touch': {
-    Component: () => import(/* webpackChunkName: "get-in-touch/" */ './pages/get-in-touch'),
+    Component: () => import(/* webpackChunkName: "get-in-touch/" */ './pages/get-in-touch/index'),
     title: 'Get in touch'
   },
   '/404': {
