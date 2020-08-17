@@ -43,6 +43,8 @@ function compile(options = {}) {
 function serializeRoot(node, options) {
   const { getRelPath, getPageData } = options;
   const pageData = {...getPageData()};
+  // Save some kb
+  delete pageData.toc;
   const exportName = pageData.slug.replace(/[\/-](.)?/g, (_, match) => capitalize(match)) + 'Docs';
   options.exportName = exportName;
   const groups = {

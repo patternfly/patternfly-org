@@ -36,7 +36,6 @@ function toReactComponent(mdFilePath, source) {
       if (!frontmatter.id) {
         file.fail('id attribute is required in frontmatter for PatternFly docs');
       }
-      // Create TOC and pageData
       if (!frontmatter.hideTOC) {
         toc = extractTableOfContents(tree);
       }
@@ -169,6 +168,7 @@ module.exports = {
         routes[pageData.slug] = {
           id: pageData.id,
           title: pageData.title || pageData.id,
+          toc: pageData.toc || [],
           section: pageData.section,
           source: pageData.source
         };
@@ -177,7 +177,7 @@ module.exports = {
   },
   writeIndex() {
     const stringifyRoute = ([route, pageData]) => `'${route}': {\n    ${Object.entries(pageData)
-      .map(([key, val]) => `${key}: '${val}'`)
+      .map(([key, val]) => `${key}: ${JSON.stringify(val)}`)
       .concat(`Component: () => import(/* webpackChunkName: "${route.substr(1)}/" */ '.${route}')`)
       .join(',\n    ')}\n  }`;
 

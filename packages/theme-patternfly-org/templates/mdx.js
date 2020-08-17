@@ -79,7 +79,7 @@ const MDXChildTemplate = (
 }
 
 export const MDXTemplate = ({
-  id,
+  title,
   sources = []
 }) => {
   const sourceKeys = sources.map(v => v.source);
@@ -97,7 +97,7 @@ export const MDXTemplate = ({
         type={isSinglePage ? 'default' : 'nav'}
       >
         <Title size="4xl" headingLevel="h1" id="ws-page-title">
-          {id}
+          {title}
         </Title>
         {!isSinglePage && (
           <div className="pf-c-tabs ws-source-tabs">

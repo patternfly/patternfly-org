@@ -29,11 +29,16 @@ const clientConfig = async (env, argv) => {
         chunks: 'all',
         // https://webpack.js.org/plugins/mini-css-extract-plugin/#extracting-all-css-in-a-single-file
         cacheGroups: {
-          styles: {
-            name: 'styles',
+          // We need patternfly.css to come before our styles because of selector specificity
+          vendorStyles: {
+            name: 'vendor-styles',
+            test: /[\\/]node_modules[\\/].*\.css$/,
+            priority: 2
+          },
+          mainStyles: {
+            name: 'main-styles',
             test: /\.css$/,
-            chunks: 'all',
-            enforce: true
+            priority: 1
           }
         },
       },

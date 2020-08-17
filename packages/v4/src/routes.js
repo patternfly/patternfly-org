@@ -33,10 +33,11 @@ for (let route in routes) {
 const groupedRoutes = Object.entries(routes)
   .filter(([_slug, { id, section }]) => id && section)
   .reduce((accum, [slug, pageData]) => {
-    const { section, id, source } = pageData;
+    const { section, id, title, source } = pageData;
     accum[section] = accum[section] || {};
     accum[section][id] = accum[section][id] || {
       id,
+      title,
       slug: makeSlug(source, section, id, true),
       sources: []
     };

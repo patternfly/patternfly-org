@@ -33,11 +33,11 @@ export const App = () => (
         if (Component) {
           return <AppRoute key={path} path={path} default={path === '/404'} child={<Component />} />;
         }
-        const { sources, id } = props;
+        const { title, sources } = props;
         return (
           <AppRoute key={path} path={path + '/*'} child={<MDXTemplate
             layoutOptions={LayoutOptions}
-            id={id}
+            title={title}
             sources={sources}
           />} />
         );
