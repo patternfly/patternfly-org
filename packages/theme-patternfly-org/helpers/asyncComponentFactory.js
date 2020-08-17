@@ -1,15 +1,6 @@
 const React = require('react');
 
-const isClient = typeof window !== 'undefined';
-if (isClient) {
-  window.asyncComponentFactoryCache = {};
-  window.asyncComponentFactoryCacheLoad = comp => {
-    window.asyncComponentFactoryCache[location.pathname] = comp;
-  };
-}
-const cache = isClient
-  ? window.asyncComponentFactoryCache
-  : {};
+const cache = {};
 
 function asyncComponentFactory(route, pageData) {
   const { Component } = pageData;
