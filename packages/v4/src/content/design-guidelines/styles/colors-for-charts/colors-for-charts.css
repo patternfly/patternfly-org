@@ -722,3 +722,11 @@
 .ws-content-chart-colors-gallery--information>*>code {
 	font-size: 10px!important
 }
+
+.ws-chart-colors-gridtext {
+	max-width: 680px;
+  }
+
+.pf-c-divider.ws-chart-colors-divider {
+	margin-top: var(--pf-c-content--h2--MarginTop);
+  }

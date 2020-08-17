@@ -7,9 +7,13 @@ showTitle: true
 
 import theSystem from './thesystem.gif';
 import oneFamily from './onefamily.gif';
-import { Alert, Gallery, GalleryItem, Grid, GridItem } from '@patternfly/react-core';
+import { Alert, Grid, GridItem, Divider } from '@patternfly/react-core';
+import { Link } from 'gatsby';
+import { ColorSwatch } from './ColorSwatch';
+import { ColorFamily } from './ColorFamily';
 import './colors-for-charts.css';
 
+<Divider />
 
 ## Chart colors
 
@@ -522,33 +526,64 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
     </GridItem>
 </Grid>
 
+<Divider className="ws-chart-colors-divider" />
+
 ## The system
-Although the system may seem complex, it is completely customizable. The idea is that you can put together your desired colors and amount of colors and the system will still sort them correctly. Here’s how the system works:
 
-<img alt="chart color system example" src={theSystem} />
+<Grid hasGutter>
+  <GridItem xl={6} lg={12} className="ws-chart-colors-gridtext">
+    <h3>How it works</h3>
+    Although the system may seem complex, it is completely customizable. The idea is that you can put together your desired colors and amount of colors and the system will still sort them correctly. Here’s how the system works:
 
-In this instance, there are only four base colors, therefore four color families. The order begins by going through each base color. Next, it alternates between the lightest and darkest values of each family. Finally, if you still need more colors, it alternates between the second lightest and second darkest colors of each family. In variable-terms: #1a-d base colors, #2a-d [color]-100/[color]-500 alternating, #3a-d [color]-500/[color]-100 alternating, #4a-d [color]-200/[color]-400 alternating, and #5a-d [color]-400/[color]-200 alternating. No matter the colors inputted, the process will remain the same.
+    In this instance, there are only four base colors, therefore four color families. The order begins by going through each base color. Next, it alternates between the lightest and darkest values of each family. Finally, if you still need more colors, it alternates between the second lightest and second darkest colors of each family. In variable-terms: #1a-d base colors, #2a-d [color]-100/[color]-500 alternating, #3a-d [color]-500/[color]-100 alternating, #4a-d [color]-200/[color]-400 alternating, and #5a-d [color]-400/[color]-200 alternating. No matter the colors inputted, the process will remain the same.
+  </GridItem>
+  <GridItem xl={6} lg={12}>
+    <img width="480px" src={theSystem} alt="Chart color system example" />
+  </GridItem>
+</Grid>
 
-### Chart with few variables (1-6)
+<Divider className="ws-chart-colors-divider" />
 
-If you are dealing with data that includes six or less variables, we recommend using the base colors to represent each. For example, if you collected data on how many sales were made per product at your organization during one period of time, it could look like this if plotted using a bar chart.
+## Use cases
 
-![Chart with few variables](fewvariables.png)
+<Grid hasGutter>
+  <GridItem xl={6} lg={12} className="ws-chart-colors-gridtext">
+    <h3>Chart with few variables (1-6)</h3>
+    If you are dealing with data that includes six or less variables, we recommend using the base colors to represent each. For example, if you collected data on how many sales were made per product at your organization during one period of time, it could look like this if plotted using a bar chart.
+  </GridItem>
+  <GridItem xl={6} lg={12}>
+    <img width="480px" src="fewvariables.png" alt="Few variables examples" />
+  </GridItem>
+</Grid>
 
-### Chart with nested (grouped) variables
+<Grid hasGutter>
+  <GridItem xl={6} lg={12} className="ws-chart-colors-gridtext">
+    <h3>Chart with nested (grouped) variables</h3>
+    If you have a set of data that includes grouped variables, we recommend using the color families to represent each. Grouped variables would include a set of parents and children variables. Each group would use a color family that would be represented in the same order as the base colors are listed. So, depending on the amount of nested variables you have, the first color family would be blue, then green, cyan, etc. The colors would start over if there are more than 6 groups, returning back to the blue family. An example of this type of data would be quarterly sales broken down by geographical locations.
+  </GridItem>
+  <GridItem xl={6} lg={12}>
+    <img width="480px" src="nestedvariables.png" alt="Nested variables example" />
+  </GridItem>
+</Grid>
 
-If you have a set of data that includes grouped variables, we recommend using the color families to represent each. Grouped variables would include a set of parents and children variables. Each group would use a color family that would be represented in the same order as the base colors are listed. So, depending on the amount of nested variables you have, the first color family would be blue, then green, cyan, etc. The colors would start over if there are more than 6 groups, returning back to the blue family. An example of this type of data would be quarterly sales broken down by geographical locations.
+<Grid hasGutter>
+  <GridItem xl={6} lg={12} className="ws-chart-colors-gridtext">
+    <h3>Chart with many variables (>7)</h3>
+    If the set of data includes more than six variables, we recommend applying the multichromatic order system, which uses all of the colors in the color system, to the data. This includes a mix of base colors and colors from their family. An example of this type of data would be the cost of living expenses during a period of time.
+  </GridItem>
+  <GridItem xl={6} lg={12}>
+    <img width="480px" src="manyvariables.png" alt="Many variables example" />
+  </GridItem>
+</Grid>
 
-![Chart with nested variables](nestedvariables.png)
+<Divider className="ws-chart-colors-divider" />
 
-### Chart with many variables (>6)
-
-If the set of data includes more than six variables, we recommend applying the multichromatic order system, which uses all of the colors in the color system, to the data. This includes a mix of base colors and colors from their family. An example of this type of data would be the cost of living expenses during a period of time.
-
-![Chart with many variables](manyvariables.png)
-
-## Using the system with one color family
-
-You can also use the color order system with one color family. This creates a monochromatic effect. It works using the same logic and order. We recommend using this system for charts with nested variables. The order begins by going through each base color, then lightest, darkest, second lightest, and ending with second darkest. In variable-terms: #1 [color]-300 (base color), #2 [color]-100, #3 [color]-500, #4 [color]-200, #5 [color]-400. The hues will always follow this order.
-
-<img alt="monochromatic chart color system example" src={oneFamily} />
+<Grid hasGutter>
+  <GridItem xl={6} lg={12} className="ws-chart-colors-gridtext">
+    <h3>Using the system with one color family</h3>
+    You can also use the color order system with one color family. This creates a monochromatic effect. It works using the same logic and order. We recommend using this system for charts with nested variables. The order begins by going through each base color, then lightest, darkest, second lightest, and ending with second darkest. In variable-terms: #1 [color]-300 (base color), #2 [color]-100, #3 [color]-500, #4 [color]-200, #5 [color]-400. The hues will always follow this order.
+  </GridItem>
+  <GridItem xl={6} lg={12}>
+    <img width="480px" src={oneFamily} alt="Monochromatic chart color system example" />
+  </GridItem>
+</Grid>
