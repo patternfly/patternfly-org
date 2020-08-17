@@ -1,6 +1,6 @@
 const React = require('react');
 
-const isClient = Boolean(process.env.NODE_ENV);
+const isClient = typeof window !== 'undefined';
 if (isClient) {
   window.asyncComponentFactoryCache = {};
   window.asyncComponentFactoryCacheLoad = comp => {
