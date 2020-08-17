@@ -178,7 +178,7 @@ module.exports = {
   writeIndex() {
     const stringifyRoute = ([route, pageData]) => `'${route}': {\n    ${Object.entries(pageData)
       .map(([key, val]) => `${key}: '${val}'`)
-      .concat(`Component: () => import(/* webpackChunkName: "${route.substr(1)}" */ '.${route}')`)
+      .concat(`Component: () => import(/* webpackChunkName: "${route.substr(1)}/" */ '.${route}')`)
       .join(',\n    ')}\n  }`;
 
     const indexContent = `module.exports = {\n  ${Object.entries(routes)

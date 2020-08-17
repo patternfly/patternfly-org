@@ -11,14 +11,14 @@ const pfDir = path.dirname(require.resolve('@patternfly/patternfly/package.json'
 // Don't include PatternFly styles twice
 const reactCSSRegex = /(react-[\w-]+\/dist|react-styles\/css)\/.*\.css$/;
 
-const clientConfig = (env, argv) => {
+const clientConfig = async (env, argv) => {
   const isProd = argv.mode === 'production';
 
   return {
     entry: './src/app.js',
     output: {
       path: path.resolve('public'),
-      filename: '[name].[contenthash:8].bundle.js'
+      filename: '[name].[contenthash].bundle.js',
     },
     devServer: {
       historyApiFallback: true,
@@ -89,7 +89,7 @@ const clientConfig = (env, argv) => {
           { from: path.join(pfDir, 'assets/fonts/'), to: 'assets/fonts/' }
         ]
       }),
-      ...getHtmlWebpackPlugins(routes, isProd), // Create an HTML page per route
+      ...await getHtmlWebpackPlugins(routes, isProd), // Create an HTML page per route
       ...(env === 'analyze'
         ? [
           new BundleAnalyzerPlugin({

@@ -10,7 +10,8 @@ module.exports = (_env, argv) => {
 
   return {
     output: {
-      publicPath: isProd ? `${pathPrefix}/` : '/'
+      publicPath: isProd ? `${pathPrefix}/` : '/',
+      hashDigestLength: 8
     },
     mode: isProd ? 'production' : 'development',
     devtool: isProd ? 'source-map' : 'cheap-module-source-map',
@@ -50,9 +51,9 @@ module.exports = (_env, argv) => {
             {
               loader: 'url-loader',
               options: {
-                limit: 8192,
+                limit: 1024,
                 fallback: 'file-loader',
-                name: '[name]-[contenthash:5].[ext]',
+                name: '[name]-[contenthash].[ext]',
                 outputPath: 'images/'
               },
             }

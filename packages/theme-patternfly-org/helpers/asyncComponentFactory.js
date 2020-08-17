@@ -1,24 +1,34 @@
 const React = require('react');
 
-const cache = {};
+const isClient = Boolean(process.env.NODE_ENV);
+if (isClient) {
+  window.asyncComponentFactoryCache = {};
+  window.asyncComponentFactoryCacheLoad = comp => {
+    window.asyncComponentFactoryCache[location.pathname] = comp;
+  };
+}
+const cache = isClient
+  ? window.asyncComponentFactoryCache
+  : {};
 
 function asyncComponentFactory(route, pageData) {
   const { Component } = pageData;
 
-  class Res extends React.Component {
+  class AsyncComponent extends React.Component {
     state = {
       isLoaded: false
     };
     static preload() {
       return Component().then(res => {
         cache[route] = res.default;
+        return res.default;
       });
     }
     render() {
       if (cache[route]) {
         return React.createElement(cache[route]);
       }
-      Res.preload().then(() => this.setState({ isLoaded: true }));
+      AsyncComponent.preload().then(() => this.setState({ isLoaded: true }));
 
       // Simple loading state
       return React.createElement('div',
@@ -27,9 +37,9 @@ function asyncComponentFactory(route, pageData) {
       );
     }
   }
-  Res.displayName = route.replace(/\//g, '.');
+  AsyncComponent.displayName = route.replace(/\//g, '.');
 
-  return Res;
+  return AsyncComponent;
 }
 
 module.exports = {

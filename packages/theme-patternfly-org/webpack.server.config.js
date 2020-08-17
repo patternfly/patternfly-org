@@ -7,7 +7,6 @@ const serverConfig = () => {
   return {
     entry: './src/app.js',
     output: {
-      // filename: 'ssr-bundle.js', // Need consistent name to import in `prerender.js`
       path: path.resolve('.cache/ssr-build'), // Don't bloat `public` dir
 			libraryTarget: 'commonjs2' // Use module.exports
     },
