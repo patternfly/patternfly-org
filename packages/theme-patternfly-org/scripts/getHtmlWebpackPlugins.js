@@ -7,8 +7,8 @@ async function getHtmlWebpackPlugin(url, isProd, title) {
   return new HtmlWebpackPlugin({
     template: path.resolve(__dirname, '../templates/html.ejs'),
     filename: `${url}/index.html`.replace(/^\/+/, ''),
-    title: `PatternFly 4${title ? ` • ${title}` : ''}`,
     templateParameters: {
+      title: `PatternFly 4${title ? ` • ${title}` : ''}`,
       prerendering: isProd ? await prerender(url) : 'Loading...',
       // Don't use GA in dev mode
       googleAnalyticsID: isProd ? googleAnalyticsID : false,

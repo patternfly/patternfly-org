@@ -12,7 +12,7 @@
   overflow-y: auto;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1450px) {
   .ws-toc {
     display: none;
     visibility: hidden;
