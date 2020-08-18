@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as ReachLink, navigate } from '@reach/router';
+import { Link as ReachLink, navigate, useLocation } from '@reach/router';
 import ConfigContext from '../../helpers/configContext';
 
 const Promiseany = (Promise.any || function ($) {
@@ -26,6 +26,9 @@ export const Link = ({
   }
   else if (url.startsWith('/')) {
     const { pathPrefix, routes } = React.useContext(ConfigContext);
+    const location = useLocation();
+    url = `${pathPrefix}/${url.substr(1)}`;
+
     const route = routes[url];
     if (route && route.sources) {
       // Preload on hover
@@ -37,13 +40,14 @@ export const Link = ({
       };
       props.onClick = ev => {
         ev.preventDefault();
-        Promiseany([
-          preloadPromise,
-          new Promise(res => setTimeout(res, 500))
-        ]).then(() => navigate(url));
+        if (url !== location.pathname) {
+          Promiseany([
+            preloadPromise,
+            new Promise(res => setTimeout(res, 500))
+          ]).then(() => navigate(url));
+        }
       };
     }
-    url = `${pathPrefix}/${url.substr(1)}`;
   }
   return <ReachLink to={url} {...props} />;
 }

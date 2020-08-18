@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'theme-patternfly-org/components';
 import { PageSection, Title } from '@patternfly/react-core';
-import { SideNavLayout } from '../layouts/sideNavLayout/sideNavLayout';
 
 const Page404 = () => (
   <PageSection className="ws-section">
