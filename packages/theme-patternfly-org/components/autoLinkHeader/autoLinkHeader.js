@@ -22,7 +22,8 @@ export const AutoLinkHeader = ({
   metaText,
   ...props
 }) => {
-  const slug = slugger(children);
+  // Add extra # to prevent chrome bug where anchor links don't work
+  const slug = `#${slugger(children)}`;
 
   return (
     <Title
