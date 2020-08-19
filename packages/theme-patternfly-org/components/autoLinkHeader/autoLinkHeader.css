@@ -4,8 +4,10 @@
   margin-left: -12px;
 }
 
-.ws-heading-anchor svg {
+.ws-heading-anchor-icon {
   visibility: hidden;
+  height: 0.5em;
+  width: 0.5em;
 }
 h1:hover .ws-heading-anchor svg,
 h2:hover .ws-heading-anchor svg,

@@ -25,19 +25,18 @@ export const Link = ({
     return <a href={url} {...props} />;
   }
   else if (url.startsWith('/')) {
-    const { pathPrefix, routes } = React.useContext(ConfigContext);
+    const { pathPrefix, getAsyncComponent } = React.useContext(ConfigContext);
     const location = useLocation();
     url = `${pathPrefix}/${url.substr(1)}`;
 
-    const route = routes[url];
-    if (route && route.sources) {
+    const Component = getAsyncComponent(url);
+    if (Component) {
       // Preload on hover
       props.onMouseOver = () => {
-        preloadPromise = Object.values(route.sources)
-          .map(({ Component }) => Component.preload())
-          [0];
+        preloadPromise = Component.preload();
         onMouseOver();
       };
+      // Wait up to an extra 500ms on click
       props.onClick = ev => {
         ev.preventDefault();
         if (url !== location.pathname) {

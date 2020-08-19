@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router } from '@reach/router';
 import { SideNavLayout } from 'theme-patternfly-org/layouts';
 import { MDXTemplate } from 'theme-patternfly-org/templates/mdx';
-import { routes, groupedRoutes } from './routes';
+import { routes, groupedRoutes, getAsyncComponent } from './routes';
 import LayoutOptions from '../patternfly-docs.config.js';
 import ConfigContext from 'theme-patternfly-org/helpers/configContext';
 import '../patternfly-docs.css.js';
@@ -17,6 +17,7 @@ if (!isProd) {
 }
 LayoutOptions.routes = routes;
 LayoutOptions.groupedRoutes = groupedRoutes;
+LayoutOptions.getAsyncComponent = getAsyncComponent;
 
 const AppRoute = ({ child, ...props }) => (
   <SideNavLayout {...props}>
@@ -36,6 +37,7 @@ export const App = () => (
         const { title, sources } = props;
         return (
           <AppRoute key={path} path={path + '/*'} child={<MDXTemplate
+            path={path}
             layoutOptions={LayoutOptions}
             title={title}
             sources={sources}
@@ -48,10 +50,16 @@ export const App = () => (
 
 // Don't use ReactDOM in SSR
 if (!isPrerender) {
-  // Hydrate is broken with <Suspense> nodes. See enableSuspenseServerRenderer.
-  // Instead of using a custom build of React, for now just rerender the whole tree
-  // into the root. We can just put the homepage in the main bundle using `SyncComponent`
-  // in routes.js
-  const renderFn = isProd ? ReactDOM.hydrate : ReactDOM.render;
-  renderFn(<App />, document.getElementById('root'));
+  function render() {
+    const renderFn = isProd ? ReactDOM.hydrate : ReactDOM.render;
+    renderFn(<App />, document.getElementById('root'));
+  }
+  // On first load, await promise for the current page to avoid flashing a "Loading..." state
+  const Component = getAsyncComponent(null, LayoutOptions.pathPrefix);
+  if (Component) {
+    Component.preload().then(render);
+  }
+  else {
+    render();
+  }
 }

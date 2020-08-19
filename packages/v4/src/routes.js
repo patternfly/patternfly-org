@@ -29,6 +29,9 @@ for (let route in routes) {
   }
 }
 
+// Save a copy of all routes for path matching on first load
+const allRoutes = Object.assign({}, routes);
+
 // Group routes by section, id
 const groupedRoutes = Object.entries(routes)
   .filter(([_slug, { id, section }]) => id && section)
@@ -79,8 +82,35 @@ Object.entries(groupedRoutes)
     })
   });
 
+function getAsyncComponent(url, pathPrefix) {
+  if (!url) {
+    url = typeof window !== 'undefined' && (
+      // Normalize path for matching
+      window.location.pathname
+        .replace(/\/$/, '')
+        .replace(pathPrefix, '')
+        || '/'
+      );
+  }
+  let res;
+
+  if (allRoutes[url]) {
+    res = allRoutes[url].Component;
+  }
+  else if (routes[url]) {
+    res = routes[url].sources[0].Component;
+  }
+
+  if (res && res.preload) {
+    return res;
+  }
+
+  return null;
+}
+
 // This module is shared between NodeJS and babelled ES5
 module.exports = {
   routes,
-  groupedRoutes
+  groupedRoutes,
+  getAsyncComponent
 };

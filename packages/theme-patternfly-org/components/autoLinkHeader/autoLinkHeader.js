@@ -22,8 +22,7 @@ export const AutoLinkHeader = ({
   metaText,
   ...props
 }) => {
-  // Add extra # to prevent chrome bug where anchor links don't work
-  const slug = `#${slugger(children)}`;
+  const slug = slugger(children);
 
   return (
     <Title
@@ -31,8 +30,8 @@ export const AutoLinkHeader = ({
       size={sizes[size]}
       headingLevel={headingLevel || size}
       {...props}>
-      <a href={`#${slug}`} className="ws-heading-anchor" tabIndex="-1"  aria-hidden>
-        <LinkIcon style={{ height: '0.5em', width: '0.5em', verticalAlign: 'middle' }} />
+      <a href={`#${slug}`} className="ws-heading-anchor" tabIndex="-1" aria-hidden>
+        <LinkIcon className="ws-heading-anchor-icon" style={{ verticalAlign: 'middle' }} />
       </a>
       {children} {metaText}
     </Title>

@@ -80,7 +80,8 @@ const MDXChildTemplate = (
 
 export const MDXTemplate = ({
   title,
-  sources = []
+  sources = [],
+  path
 }) => {
   const sourceKeys = sources.map(v => v.source);
   const isSinglePage = sourceKeys.length === 1;
@@ -110,7 +111,7 @@ export const MDXTemplate = ({
                     activeSource === source && 'pf-m-current'
                   )}
                 >
-                  <Link className="pf-c-tabs__link" to={source}>
+                  <Link className="pf-c-tabs__link" to={`${path}/${source}`}>
                     {source === 'html'
                       ? 'HTML'
                       : capitalize(source.replace(/-/g, ' '))}
