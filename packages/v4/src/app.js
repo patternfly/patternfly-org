@@ -52,10 +52,9 @@ export const App = () => (
 if (!isPrerender) {
   if (typeof location !== 'undefined') {
     // Remove trailing '/'
-    const trailingSlashRegex = /\/([#?].*)?$/;
+    const trailingSlashRegex = /\/$/;
     if (location.pathname !== '/' && trailingSlashRegex.test(location.pathname)) {
-      location.pathname = location.pathname
-      .replace(trailingSlashRegex, (_, match) => match || '');
+      location.pathname = location.pathname.replace(trailingSlashRegex, (_, match) => match || '');
     }
   }
   function render() {

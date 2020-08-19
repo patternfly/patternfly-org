@@ -32,7 +32,7 @@ const ReleaseNotesTOC = () => (
               <CardTitle>
                 {releaseTitle && (
                   <Title size="2xl" headingLevel="h2" >
-                    <a key={version.name} href={`##${slugger(releaseTitle)}`}>
+                    <a key={version.name} href={`#${slugger(releaseTitle)}`}>
                       Release {version.name}
                     </a>
                   </Title>
@@ -63,7 +63,7 @@ const renderItem = (item, index) => {
 
   return (
     <li key={index}>
-      <a href={`##${slugger(item)}`} className="ws-toc-item">
+      <a href={`#${slugger(item)}`} className="ws-toc-item" onClick={ev => console.log('clicked', ev.target)}>
         {item}
       </a>
     </li>
