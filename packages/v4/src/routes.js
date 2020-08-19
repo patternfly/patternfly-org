@@ -1,3 +1,4 @@
+// This module is shared between NodeJS and babelled ES5
 const generatedRoutes = require('./generated');
 const { makeSlug } = require('theme-patternfly-org/helpers/slugger');
 const { asyncComponentFactory } = require('theme-patternfly-org/helpers/asyncComponentFactory');
@@ -83,15 +84,11 @@ Object.entries(groupedRoutes)
   });
 
 function getAsyncComponent(url, pathPrefix) {
-  if (!url) {
-    url = typeof window !== 'undefined' && (
-      // Normalize path for matching
-      window.location.pathname
-        .replace(/\/$/, '')
-        .replace(pathPrefix, '')
-        || '/'
-      );
+  if (!url && typeof window !== 'undefined') {
+    url = window.location.pathname.replace(/\/$/, '') || '/';
   }
+  // Normalize path for matching
+  url = url.replace(pathPrefix, '');
   let res;
 
   if (allRoutes[url]) {
@@ -108,7 +105,6 @@ function getAsyncComponent(url, pathPrefix) {
   return null;
 }
 
-// This module is shared between NodeJS and babelled ES5
 module.exports = {
   routes,
   groupedRoutes,

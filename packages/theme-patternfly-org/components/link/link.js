@@ -29,7 +29,7 @@ export const Link = ({
     const location = useLocation();
     url = `${pathPrefix}/${url.substr(1)}`;
 
-    const Component = getAsyncComponent(url);
+    const Component = getAsyncComponent(url, pathPrefix);
     if (Component) {
       // Preload on hover
       props.onMouseOver = () => {
