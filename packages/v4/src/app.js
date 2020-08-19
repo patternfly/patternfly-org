@@ -50,13 +50,6 @@ export const App = () => (
 
 // Don't use ReactDOM in SSR
 if (!isPrerender) {
-  if (typeof location !== 'undefined') {
-    // Remove trailing '/'
-    const trailingSlashRegex = /\/$/;
-    if (location.pathname !== '/' && trailingSlashRegex.test(location.pathname)) {
-      location.pathname = location.pathname.replace(trailingSlashRegex, (_, match) => match || '');
-    }
-  }
   function render() {
     const renderFn = isProd ? ReactDOM.hydrate : ReactDOM.render;
     renderFn(<App />, document.getElementById('root'));
