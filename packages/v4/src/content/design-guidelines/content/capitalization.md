@@ -5,7 +5,7 @@ hideTOC: true
 showTitle: true
 ---
 
-Consistent capitalization adds clarity and consistency across your products' UIs.
+Consistent capitalization adds clarity and unity across your products' UIs.
 
 ## Capitalization types
 
