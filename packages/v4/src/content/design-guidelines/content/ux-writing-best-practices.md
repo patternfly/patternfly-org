@@ -1,8 +1,6 @@
 ---
-title: UX writing best practices
-section: content
-hideTOC: true
-showTitle: true
+id: UX writing best practices
+section: guidelines
 ---
 
 Treat words as part of your design, not something added at the end. UX copy needs to be rooted in user information and context so that it can contribute to an effective, intuitive, and human-centric product experience. 
@@ -45,7 +43,7 @@ Users carry around a lot of baggage, so it’s important to know where they’re
 ## Use positive, action-oriented language
 Focus on what the user needs to do in order to complete the task or reach their goal.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Before</strong></center></th>
         <th><center><strong>After</strong></center></th>
@@ -60,7 +58,7 @@ Focus on what the user needs to do in order to complete the task or reach their 
 ## Lead with the benefit
 Users want to know why they should do something. What’s in it for them? They typically focus on the beginning of a sentence, so make your instruction worth it by starting with the outcome—in other words, the benefit.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Before</strong></center></th>
         <th><center><strong>After</strong></center></th>
@@ -75,7 +73,7 @@ Users want to know why they should do something. What’s in it for them? They t
 ## Sound like a person
 Jargon, bizpeak, and formal language make you sound more like a brochure than a human. Users need to relate to your brand and like you before they can trust you. Talk with them as people using familiar, conversational words.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Before</strong></center></th>
         <th><center><strong>After</strong></center></th>
@@ -90,7 +88,7 @@ Jargon, bizpeak, and formal language make you sound more like a brochure than a 
 ## Be clear and concise
 Dr. Seuss says it best: “So the writer who breeds more words than he needs, is making a chore for the reader who reads.” Use plain language, and don’t use more words than you need. Chunk content into short, related sections, and avoid long paragraphs or strings of text.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Before</strong></center></th>
         <th><center><strong>After</strong></center></th>
@@ -105,7 +103,7 @@ Dr. Seuss says it best: “So the writer who breeds more words than he needs, is
 ## Be consistent
 Stick with the same terminology to describe actions and objects across the entire user experience. Using two terms interchangeably—even when they mean the same thing—can confuse users.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Before</strong></center></th>
         <th><center><strong>After</strong></center></th>

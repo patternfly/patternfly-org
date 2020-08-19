@@ -1,8 +1,6 @@
 ---
-title: Truncation
-section: content
-hideTOC: true
-showTitle: true
+id: Truncation
+section: guidelines
 ---
 
 Use truncation whenever the string overflows the container and you don't want multiple lines of text.

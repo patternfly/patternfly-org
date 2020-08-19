@@ -1,8 +1,6 @@
 ---
-title: Numerics
-section: content
-hideTOC: true
-showTitle: true
+id: Numerics
+section: guidelines
 ---
 
 ## Date and time
@@ -52,7 +50,7 @@ Using **absolute** or **relative** timestamps will depend on the context. If you
 
 If users are interested in how long ago an event occurred, use a relative timestamp. When reporting relative time, follow these examples:
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Time frame</strong></center></th>
         <th><center><strong>Usage</strong></center></th>
@@ -95,7 +93,7 @@ If users are interested in how long ago an event occurred, use a relative timest
 ## Numbers and currency
 In a UI, use numerals instead of written numbers. 
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Before</strong></center></th>
         <th><center><strong>After</strong></center></th>

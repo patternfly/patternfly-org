@@ -1,8 +1,6 @@
 ---
-title: Filters
-section: usage and behavior
-hideTOC: true
-showTitle: true
+id: Filters
+section: guidelines
 ---
 
 ## About
