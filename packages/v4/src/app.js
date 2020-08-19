@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from '@reach/router';
-import { MDXTemplate, MDXChildTemplate } from 'theme-patternfly-org/templates/mdx';
-import getRoutes from './routes';
+import { SideNavLayout } from 'theme-patternfly-org/layouts';
+import { MDXTemplate } from 'theme-patternfly-org/templates/mdx';
+import { routes, groupedRoutes, getAsyncComponent } from './routes';
 import LayoutOptions from '../patternfly-docs.config.js';
 import ConfigContext from 'theme-patternfly-org/helpers/configContext';
 import '../patternfly-docs.css.js';
@@ -14,11 +15,15 @@ if (!isProd) {
   // Ignore `pathPrefix` in dev mode
   LayoutOptions.pathPrefix = '';
 }
-const { routes, groupedRoutes } = getRoutes(true);
 LayoutOptions.routes = routes;
 LayoutOptions.groupedRoutes = groupedRoutes;
-console.log('routes', routes)
-console.log('groupedRoutes', groupedRoutes)
+LayoutOptions.getAsyncComponent = getAsyncComponent;
+
+const AppRoute = ({ child, ...props }) => (
+  <SideNavLayout {...props}>
+    {child}
+  </SideNavLayout>
+);
 
 // Export for SSR
 export const App = () => (
@@ -27,17 +32,16 @@ export const App = () => (
       {Object.entries(LayoutOptions.routes).map(([path, props]) => {
         const { Component } = props;
         if (Component) {
-          return <Component key={path} path={path} default={path === '/404'} />;
+          return <AppRoute key={path} path={path} default={path === '/404'} child={<Component />} />;
         }
-        const { sources, id } = props;
+        const { title, sources } = props;
         return (
-          <MDXTemplate
-            key={path}
-            path={path + '/*'}
+          <AppRoute key={path} path={path + '/*'} child={<MDXTemplate
+            path={path}
             layoutOptions={LayoutOptions}
-            id={id}
+            title={title}
             sources={sources}
-          />
+          />} />
         );
       })}
     </Router>
@@ -46,6 +50,16 @@ export const App = () => (
 
 // Don't use ReactDOM in SSR
 if (!isPrerender) {
-  const renderFn = isProd ? ReactDOM.hydrate : ReactDOM.render;
-  renderFn(<App />, document.getElementById('root'));
+  function render() {
+    const renderFn = isProd ? ReactDOM.hydrate : ReactDOM.render;
+    renderFn(<App />, document.getElementById('root'));
+  }
+  // On first load, await promise for the current page to avoid flashing a "Loading..." state
+  const Component = getAsyncComponent(null, LayoutOptions.pathPrefix);
+  if (Component) {
+    Component.preload().then(render);
+  }
+  else {
+    render();
+  }
 }

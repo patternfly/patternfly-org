@@ -1,41 +1,23 @@
 import React from 'react';
-import { PageSection, SkipToContent, Title } from '@patternfly/react-core';
+import { PageSection, Title } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { Router, useLocation } from '@reach/router';
-import { SideNavLayout } from '../layouts';
 import { CSSVariables, PropsTable, TableOfContents, Link, AccordionHeader, InlineAlert } from '../components';
-import { capitalize } from '../helpers';
+import { capitalize, getTitle } from '../helpers';
 import './mdx.css';
-
-const sourceOrder = {
-  react: 1,
-  'design-guidelines': 2
-};
-const defaultOrder = 99;
-
-const sortSources = ({ source: s1 }, { source: s2 }) => {
-  const s1Index = sourceOrder[s1] || defaultOrder;
-  const s2Index = sourceOrder[s2] || defaultOrder;
-  if (s1Index === defaultOrder && s2Index === defaultOrder) {
-    return s1.localeCompare(s2);
-  }
-
-  return s1Index > s2Index ? 1 : -1;
-}
 
 const MDXChildTemplate = (
   {
     Component,
     source,
-    propComponents,
+    propComponents = [],
     sourceLink,
-    toc,
+    toc = [],
     optIn,
     beta,
-    cssPrefix
+    cssPrefix = []
   },
-  index = 0,
-  array = []
+  index = 0
 ) => {
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
   const propsTitle = propComponents.length > 0 && 'Props';
@@ -65,12 +47,7 @@ const MDXChildTemplate = (
       {toc && toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
-      <div
-        className={css(
-          'ws-mdx-content',
-          array.length > 1 && 'pf-u-pt-xl pf-u-pl-xl'
-        )}
-      >
+      <div className="ws-mdx-content">
         {InlineAlerts}
         <Component />
         {propsTitle && (
@@ -102,62 +79,63 @@ const MDXChildTemplate = (
 }
 
 export const MDXTemplate = ({
-  id,
-  sources = {}
+  title,
+  sources = [],
+  path
 }) => {
-  const sourceValues = Object.values(sources).sort(sortSources);
-  const sourceKeys = sourceValues.map(v => v.source);
+  const sourceKeys = sources.map(v => v.source);
   const isSinglePage = sourceKeys.length === 1;
   const { pathname } = useLocation();
-  let activeSource = pathname.split('/').pop();
+  let activeSource = pathname.replace(/\/$/, '').split('/').pop();
   if (!sourceKeys.includes(activeSource)) {
     activeSource = sourceKeys[0];
   }
 
+  if (typeof document !== 'undefined') {
+    document.title = getTitle(title);
+  }
+
   return (
     <React.Fragment>
-      <SkipToContent href="#main-content">Skip to Content</SkipToContent>
-      <SideNavLayout>
-        <PageSection
-          id={isSinglePage ? 'main-content' : 'nav-content'}
-          type={isSinglePage ? 'default' : 'nav'}
-        >
-          <Title size="4xl" headingLevel="h1" className="ws-page-title">
-            {id}
-          </Title>
-          {!isSinglePage && (
-            <div className="pf-c-tabs ws-source-tabs">
-              <ul className="pf-c-tabs__list">
-                {sourceKeys.map(source => (
-                  <li
-                    key={source}
-                    className={css(
-                      'pf-c-tabs__item',
-                      activeSource === source && 'pf-m-current'
-                    )}
-                  >
-                    <Link className="pf-c-tabs__link" to={source}>
-                      {source === 'html'
-                        ? 'HTML'
-                        : capitalize(source.replace(/-/g, ' '))}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-          {isSinglePage && (
-            <MDXChildTemplate {...sourceValues[0]} />
-          )}
-        </PageSection>
+      <PageSection
+        id={isSinglePage ? 'main-content' : 'nav-content'}
+        type={isSinglePage ? 'default' : 'nav'}
+      >
+        <Title size="4xl" headingLevel="h1" id="ws-page-title" className={isSinglePage ? 'pf-u-p-lg' : ''}>
+          {title}
+        </Title>
         {!isSinglePage && (
-          <PageSection id="main-content" className="ws-child-section">
-            <Router className="pf-u-h-100" primary={false}>
-              {sourceValues.map(MDXChildTemplate)}
-            </Router>
-          </PageSection>
+          <div className="pf-c-tabs ws-source-tabs">
+            <ul className="pf-c-tabs__list">
+              {sourceKeys.map(source => (
+                <li
+                  key={source}
+                  className={css(
+                    'pf-c-tabs__item',
+                    activeSource === source && 'pf-m-current'
+                  )}
+                >
+                  <Link className="pf-c-tabs__link" to={`${path}/${source}`}>
+                    {source === 'html'
+                      ? 'HTML'
+                      : capitalize(source.replace(/-/g, ' '))}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         )}
-      </SideNavLayout>
+        {isSinglePage && (
+          <MDXChildTemplate {...sources[0]} />
+        )}
+      </PageSection>
+      {!isSinglePage && (
+        <PageSection id="main-content">
+          <Router className="pf-u-h-100" primary={false}>
+            {sources.map(MDXChildTemplate)}
+          </Router>
+        </PageSection>
+      )}
     </React.Fragment>
   );
 }

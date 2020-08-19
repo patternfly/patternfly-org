@@ -15,8 +15,6 @@ import { IconRecommendations } from './IconRecommendations';
 import { IconsTable } from './IconsTable';
 import './icons.css';
 
-<Divider className="ws-icons-divider" />
-
 <p class="ws-icons-page">If you're a developer, check out our <a href="/get-started/developers#using-styles">getting started</a> page to learn more about how to get and use our icon set.</p>
 
 ## Icon sizes

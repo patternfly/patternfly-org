@@ -7,7 +7,6 @@ const serverConfig = () => {
   return {
     entry: './src/app.js',
     output: {
-      filename: 'ssr-bundle.js', // Need consistent name to import in `prerender.js`
       path: path.resolve('.cache/ssr-build'), // Don't bloat `public` dir
 			libraryTarget: 'commonjs2' // Use module.exports
     },
@@ -15,13 +14,26 @@ const serverConfig = () => {
     plugins: [
       new webpack.DefinePlugin({
         'process.env.PRERENDER': true // In app.js don't call ReactDOM.render
-      })
+      }),
+      new webpack.NormalModuleReplacementPlugin(
+        /d3-timer/, // This stops prerender from hanging in `yarn build:client`
+        res => res.request = require.resolve('theme-patternfly-org/helpers/d3-timer.js')
+      )
     ],
     optimization: {
       splitChunks: false,
       minimize: false // Faster build, easier debugging
     },
-    externals: ['react', 'react-dom', '@reach/router'] // Load in prerender.js instead
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          use: 'null-loader'
+        }
+      ]
+    },
+    // Load in prerender.js instead
+    externals: ['react', 'react-dom', '@reach/router']
   };
 }
 

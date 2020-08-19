@@ -36,7 +36,6 @@ function toReactComponent(mdFilePath, source) {
       if (!frontmatter.id) {
         file.fail('id attribute is required in frontmatter for PatternFly docs');
       }
-      // Create TOC and pageData
       if (!frontmatter.hideTOC) {
         toc = extractTableOfContents(tree);
       }
@@ -66,21 +65,36 @@ function toReactComponent(mdFilePath, source) {
         .replace('node_modules/@patternfly/patternfly/docs', 'src/patternfly')
         .replace(/node_modules\/@patternfly\/react-([\w-])/, (_, match) => `packages/react-${match}`)
         .replace(/\.\.\//g, '');
-      const sourceLink = `https://github.com/patternfly/${sourceRepo}/blob/master/${normalizedPath}`;
 
       pageData = {
         id: frontmatter.id,
         section: frontmatter.section || 'components',
         source,
         slug,
-        title: frontmatter.title || frontmatter.id,
-        propComponents,
-        sourceLink,
-        toc,
-        optIn: frontmatter.optIn,
-        beta: frontmatter.beta,
-        cssPrefix: frontmatter.cssPrefix || []
+        sourceLink: `https://github.com/patternfly/${
+          sourceRepo}/blob/master/${
+          normalizedPath}`
       };
+      if (frontmatter.title) {
+        pageData.title = frontmatter.title;
+      }
+      if (propComponents.length > 0) {
+        pageData.propComponents = propComponents;
+      }
+      if (toc.length > 0) {
+        pageData.toc = toc;
+      }
+      if (frontmatter.optIn) {
+        pageData.optIn = frontmatter.optIn;
+      }
+      if (frontmatter.beta) {
+        pageData.beta = frontmatter.beta;
+      }
+      if (frontmatter.cssPrefix) {
+        pageData.cssPrefix = Array.isArray(frontmatter.cssPrefix)
+          ? frontmatter.cssPrefix
+          : [frontmatter.cssPrefix];
+      }
     })
     // Delete HTML comments
     .use(require('./remove-comments'))
@@ -130,8 +144,7 @@ function toReactComponent(mdFilePath, source) {
   };
 }
 
-const index = [];
-const cjsRoutes = {};
+const routes = {};
 
 module.exports = {
   sourceProps(files) {
@@ -152,10 +165,10 @@ module.exports = {
   
       if (jsx) {
         fs.outputFileSync(outPath, jsx);
-        index.push(path.relative(outputBase, outPath));
-        cjsRoutes[pageData.slug] = {
+        routes[pageData.slug] = {
           id: pageData.id,
-          title: pageData.title,
+          title: pageData.title || pageData.id,
+          toc: pageData.toc || [],
           section: pageData.section,
           source: pageData.source
         };
@@ -163,9 +176,14 @@ module.exports = {
     });
   },
   writeIndex() {
-    const indexContent = index.map(file => `export * from './${file}';`).join('\n');
+    const stringifyRoute = ([route, pageData]) => `'${route}': {\n    ${Object.entries(pageData)
+      .map(([key, val]) => `${key}: ${JSON.stringify(val)}`)
+      .concat(`Component: () => import(/* webpackChunkName: "${route.substr(1)}/index" */ '.${route}')`)
+      .join(',\n    ')}\n  }`;
+
+    const indexContent = `module.exports = {\n  ${Object.entries(routes)
+        .map(stringifyRoute)
+        .join(',\n  ')}\n};`;
     fs.outputFileSync(path.join(outputBase, 'index.js'), indexContent);
-    const indexCJSContent = `module.exports = ${JSON.stringify(cjsRoutes, null, 2)};`;
-    fs.outputFileSync(path.join(outputBase, 'index.cjs.js'), indexCJSContent);
   }
 };

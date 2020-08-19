@@ -1,22 +1,19 @@
 const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SizePlugin = require('size-plugin');
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { pathPrefix } = require(`${process.cwd()}/patternfly-docs.config`);
-
-// Don't include PatternFly styles twice
-const reactCSSRegex = /(react-[\w-]+\/dist|react-styles\/css)\/.*\.css$/;
 
 module.exports = (_env, argv) => {
   const isProd = argv.mode === 'production';
 
   return {
     output: {
-      publicPath: isProd ? `${pathPrefix}/` : '/'
+      publicPath: isProd ? `${pathPrefix}/` : '/',
+      hashDigestLength: 8
     },
+    mode: isProd ? 'production' : 'development',
     devtool: isProd ? 'source-map' : 'cheap-module-source-map',
     resolve: {
       extensions: [ '.tsx', '.ts', '.js', '.jsx' ],
@@ -43,43 +40,10 @@ module.exports = (_env, argv) => {
               }]],
               plugins: [
                 '@babel/plugin-transform-react-jsx',
-                '@babel/plugin-proposal-class-properties',
-                ...(isProd ? [] : [require.resolve('react-refresh/babel')])
+                '@babel/plugin-proposal-class-properties'
               ],
             }
           },
-        },
-        {
-          test: /\.css$/,
-          exclude: reactCSSRegex,
-          use: [
-            {
-              loader: MiniCssExtractPlugin.loader,
-              options: {
-                hmr: isProd
-              },
-            },
-            {
-              loader: 'css-loader'
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                ident: 'postcss',
-                plugins: [
-                  require('autoprefixer')({
-                    env: '>0.25%, not ie 11, not op_mini all',
-                    flexbox: false,
-                    grid: false
-                  })
-                ]
-              }
-            }
-          ]
-        },
-        {
-          test: reactCSSRegex,
-          use: 'null-loader'
         },
         {
           test: /\.(png|jpg|gif|svg)$/,
@@ -87,9 +51,9 @@ module.exports = (_env, argv) => {
             {
               loader: 'url-loader',
               options: {
-                limit: 8192,
+                limit: 1024,
                 fallback: 'file-loader',
-                name: '[name]-[contenthash:5].[ext]',
+                name: '[name].[contenthash].[ext]',
                 outputPath: 'images/'
               },
             }
@@ -110,10 +74,6 @@ module.exports = (_env, argv) => {
       ]
     },
     plugins: [
-      new MiniCssExtractPlugin({
-        filename: '[name].[contenthash].css',
-        chunkFilename: '[name].[contenthash].css',
-      }),
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': isProd ? "'production'" : "'development'"
       }),
@@ -142,11 +102,9 @@ module.exports = (_env, argv) => {
           new CleanWebpackPlugin(),
           new SizePlugin()
         ]
-        : [
-          new ReactRefreshWebpackPlugin()
-        ]
+        : []
       )
     ],
-    stats: isProd ? 'normal' : 'minimal'
+    stats: 'minimal'
   };
 }

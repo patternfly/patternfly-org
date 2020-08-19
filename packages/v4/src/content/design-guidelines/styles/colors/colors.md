@@ -7,8 +7,6 @@ import { ColorSwatch } from './ColorSwatch';
 import { ColorFamily } from './ColorFamily';
 import './colors.css';
 
-<Divider />
-
 ## Primary colors
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">

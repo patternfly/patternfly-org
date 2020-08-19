@@ -43,6 +43,8 @@ function compile(options = {}) {
 function serializeRoot(node, options) {
   const { getRelPath, getPageData } = options;
   const pageData = {...getPageData()};
+  // Save some kb
+  delete pageData.toc;
   const exportName = pageData.slug.replace(/[\/-](.)?/g, (_, match) => capitalize(match)) + 'Docs';
   options.exportName = exportName;
   const groups = {
@@ -82,15 +84,19 @@ function serializeRoot(node, options) {
 import { AutoLinkHeader, Example, Link as PatternflyThemeLink } from 'theme-patternfly-org/components';
 ${importStatements}
 
-export const ${exportName} = ${JSON.stringify(pageData, null, 2)};
-${exportName}.liveContext = {
+const pageData = ${JSON.stringify(pageData, null, 2)};
+${importSpecifiers
+  ? `pageData.liveContext = {
   ${importSpecifiers}
-};
-${exportName}.Component = () => (
+};`
+  : ''}
+const Component = () => (
   <React.Fragment>${childNodes.replace(/\n\s*\n/g, '\n')}
   </React.Fragment>
 );
-${exportName}.Component.displayName = '${exportName}';
+Component.displayName = '${exportName}';
+
+export default Component;
 `;
 }
 
@@ -117,7 +123,7 @@ function serializeElement(node, options) {
 
   return `
 ${indentText}<${type}${
-  type === 'Example' ? ` {...${exportName}}` : ''}${
+  type === 'Example' ? ` {...pageData}` : ''}${
   type === 'img' && srcImport ? ` src={${srcImport}}` : ''}${
   spread ? ` {...${spread}}` : ''}>
 ${indentText}  ${content}

@@ -67,7 +67,7 @@
   color: var(--pf-global--Color--light-100);
 }
 .ws-org-version-toggle::before {
-  border: none;
+  content: none !important;
 }
 .ws-org-version-toggle:hover {
   border-bottom: 1px solid #fff;
