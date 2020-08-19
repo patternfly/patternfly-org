@@ -53,9 +53,9 @@ if (!isPrerender) {
   if (typeof location !== 'undefined') {
     // Remove trailing '/'
     const trailingSlashRegex = /\/([#?].*)?$/;
-    if (trailingSlashRegex.test(location.pathname)) {
+    if (location.pathname !== '/' && trailingSlashRegex.test(location.pathname)) {
       location.pathname = location.pathname
-        .replace(trailingSlashRegex, (_, match) => match || '');
+      .replace(trailingSlashRegex, (_, match) => match || '');
     }
   }
   function render() {
