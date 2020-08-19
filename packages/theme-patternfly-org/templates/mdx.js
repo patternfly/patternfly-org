@@ -3,7 +3,7 @@ import { PageSection, Title } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { Router, useLocation } from '@reach/router';
 import { CSSVariables, PropsTable, TableOfContents, Link, AccordionHeader, InlineAlert } from '../components';
-import { capitalize } from '../helpers';
+import { capitalize, getTitle } from '../helpers';
 import './mdx.css';
 
 const MDXChildTemplate = (
@@ -89,6 +89,10 @@ export const MDXTemplate = ({
   let activeSource = pathname.replace(/\/$/, '').split('/').pop();
   if (!sourceKeys.includes(activeSource)) {
     activeSource = sourceKeys[0];
+  }
+
+  if (typeof document !== 'undefined') {
+    document.title = getTitle(title);
   }
 
   return (

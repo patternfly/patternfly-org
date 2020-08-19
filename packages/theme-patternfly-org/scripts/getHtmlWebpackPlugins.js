@@ -2,13 +2,14 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { googleAnalyticsID, algolia } = require(`${process.cwd()}/patternfly-docs.config`);
 const { prerender } = require('./prerender');
+const { getTitle } = require('../helpers/getTitle');
 
 async function getHtmlWebpackPlugin(url, isProd, title) {
   return new HtmlWebpackPlugin({
     template: path.resolve(__dirname, '../templates/html.ejs'),
     filename: `${url}/index.html`.replace(/^\/+/, ''),
     templateParameters: {
-      title: `PatternFly 4${title ? ` • ${title}` : ''}`,
+      title: getTitle(title),
       prerendering: isProd ? await prerender(url) : 'Loading...',
       // Don't use GA in dev mode
       googleAnalyticsID: isProd ? googleAnalyticsID : false,
