@@ -6,19 +6,19 @@ import { CSSVariables, PropsTable, TableOfContents, Link, AccordionHeader, Inlin
 import { capitalize, getTitle } from '../helpers';
 import './mdx.css';
 
-const MDXChildTemplate = (
-  {
-    Component,
-    source,
+const MDXChildTemplate = ({
+  Component,
+  source,
+  toc = [],
+  index = 0
+}) => {
+  const {
     propComponents = [],
     sourceLink,
-    toc = [],
+    cssPrefix = [],
     optIn,
-    beta,
-    cssPrefix = []
-  },
-  index = 0
-) => {
+    beta
+  } = Component.getPageData();
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
   const propsTitle = propComponents.length > 0 && 'Props';
   if (propsTitle && !toc.includes(propsTitle)) {
@@ -132,7 +132,12 @@ export const MDXTemplate = ({
       {!isSinglePage && (
         <PageSection id="main-content">
           <Router className="pf-u-h-100" primary={false}>
-            {sources.map(MDXChildTemplate)}
+            {sources
+              .map((source, index) => {
+                source.index = index;
+                return source;
+              })
+              .map(MDXChildTemplate)}
           </Router>
         </PageSection>
       )}

@@ -95,6 +95,7 @@ const Component = () => (
   </React.Fragment>
 );
 Component.displayName = '${exportName}';
+Component.pageData = pageData;
 
 export default Component;
 `;

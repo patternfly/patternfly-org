@@ -15,6 +15,9 @@ function asyncComponentFactory(route, pageData) {
         return res.default;
       });
     }
+    static getPageData() {
+      return cache[route] ? cache[route].pageData : {};
+    }
     render() {
       if (cache[route]) {
         return React.createElement(cache[route]);
