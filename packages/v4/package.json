@@ -5,32 +5,25 @@
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
-    "build": "yarn build:static && yarn build:ram",
-    "build:prefix": "yarn build:static && yarn build:ram --prefix-paths",
-    "build:ram": "node --max-old-space-size=8192 ./node_modules/.bin/gatsby build",
-    "build:static": "node ./copyAssets.js",
-    "clean": "gatsby clean",
-    "develop": "yarn build:static && gatsby develop",
-    "serve": "gatsby serve",
+    "generate": "node scripts/sourceMD.js",
+    "analyze": "yarn build --env analyze",
+    "build": "yarn generate && yarn build:server && yarn build:client",
+    "build:server": "webpack --mode production --config webpack.server.config.js",
+    "build:client": "webpack --mode production",
+    "clean": "rm -rf .cache public size-plugin.json src/generated",
+    "develop": "yarn generate && webpack-dev-server --mode development",
     "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4"
   },
   "dependencies": {
-    "@patternfly/react-docs": "5.8.7",
-    "gatsby": "2.21.0",
-    "gatsby-plugin-google-analytics": "^2.2.0",
-    "gatsby-plugin-remove-serviceworker": "^1.0.0",
-    "gatsby-plugin-sitemap": "^2.3.0",
-    "gatsby-remark-copy-linked-files": "^2.2.0",
-    "gatsby-source-filesystem": "^2.2.1",
-    "gatsby-theme-patternfly-org": "^4.2.10",
-    "gatsby-transformer-json": "^2.3.0",
-    "gatsby-transformer-react-docgen-typescript": "^4.0.5",
+    "@patternfly/react-docs": "5.6.28",
     "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react-dom": "^16.8.0",
+    "theme-patternfly-org": "0.0.1"
   },
   "devDependencies": {
     "@patternfly/patternfly-a11y": "^0.0.17",
     "eslint-config-react-app": "^5.0.2",
-    "fs-extra": "^9.0.0"
+    "fs-extra": "^9.0.0",
+    "glob": "^7.1.6"
   }
 }

@@ -1,15 +1,11 @@
 ---
-title: Colors
-section: styles
-hideSource: true
+id: Colors
+section: guidelines
 ---
 import { Alert, Grid, GridItem, Divider } from '@patternfly/react-core';
-import { Link } from 'gatsby';
 import { ColorSwatch } from './ColorSwatch';
 import { ColorFamily } from './ColorFamily';
 import './colors.css';
-
-<Divider />
 
 ## Primary colors
 <Grid hasGutter>
@@ -24,7 +20,7 @@ import './colors.css';
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
-    <img width="480px" src="patternfly-blue.png" alt="PatternFly blue colors" />
+    <img width="480px" src="./patternfly-blue.png" alt="PatternFly blue colors" />
   </GridItem>
 </Grid>
 
@@ -46,7 +42,7 @@ import './colors.css';
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
-    <img width="480px" src="patternfly-typography.png" alt="PatternFly typography colors" />
+    <img width="480px" src="./patternfly-typography.png" alt="PatternFly typography colors" />
   </GridItem>
 </Grid>
 
@@ -76,7 +72,7 @@ import './colors.css';
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
-    <img width="480px" src="patternfly-background.png" alt="PatternFly background colors" />
+    <img width="480px" src="./patternfly-background.png" alt="PatternFly background colors" />
   </GridItem>
 </Grid>
 
@@ -88,7 +84,7 @@ import './colors.css';
     Status and state colors are important when communicating data and action aspects through the UI with the user. Our status colors cover a variety of statuses including default, danger, success, information, and warning.
   </GridItem>
   <GridItem xl={6} lg={12} rowSpan={6}>
-    <img width="480px" src="patternfly-status.png" alt="PatternFly status colors" />
+    <img width="480px" src="./patternfly-status.png" alt="PatternFly status colors" />
   </GridItem>
   <GridItem xl={6} lg={12}>
     <h3>Danger</h3>
@@ -172,7 +168,7 @@ import './colors.css';
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
-    <img width="480px" src="patternfly-shadows.png" alt="PatternFly shadows" />
+    <img width="480px" src="./patternfly-shadows.png" alt="PatternFly shadows" />
   </GridItem>
 </Grid>
 

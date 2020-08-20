@@ -1,0 +1,84 @@
+/* Page layout */
+/* tells .pf-c-page to consume the available space left over from the banners/footers */
+.ws-page {
+  flex: 1 1;
+}
+
+.ws-switcher-divider {
+  padding: 0 16px;
+}
+
+.ws-patternfly-3 > svg {
+  margin-left: 8px;
+}
+
+.ws-page-sidebar {
+  box-shadow: none !important;
+  overflow-y: scroll;
+}
+
+.ws-page-sidebar > .pf-c-page__sidebar-body {
+  padding-top: var(--pf-global--spacer--md);
+}
+
+/* Search */
+.ws-global-search {
+  padding: 0 0 2px 0;
+  transition: 250ms;
+  /* For icon */
+  position: relative;
+}
+#global-search-input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  /* For icon */
+  padding-left: 32px;
+}
+.global-search-icon {
+  position: absolute;
+  top: 10px;
+  left: 4px;
+}
+#global-search-input,
+#global-search-input::placeholder {
+  color: #fff;
+}
+#global-search-input:focus {
+  outline-offset: 2px;
+}
+
+/* TODO: PageHeaderTools on small viewports */
+@media (max-width: 670px) {
+  .ws-global-search {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media (max-width: 430px) {
+  .ws-page-header > .pf-c-page__header-brand > .pf-c-page__header-brand-link {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+/* Version toggle */
+.ws-org-version-toggle {
+  color: var(--pf-global--Color--light-100);
+}
+.ws-org-version-toggle::before {
+  content: none !important;
+}
+.ws-org-version-toggle:hover {
+  border-bottom: 1px solid #fff;
+}
+.ws-org-version-toggle-expanded::before {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid #fff;
+}
+/* For tiny (200px) viewports */
+.ws-org-version-switcher .pf-c-dropdown__toggle  >.pf-c-dropdown__toggle-text {
+  white-space: normal;
+}
