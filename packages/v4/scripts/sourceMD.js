@@ -43,15 +43,26 @@ sourceMD(
 const reactCorePath = require
   .resolve('@patternfly/react-core/package.json')
   .replace('package.json', 'src');
+const reactTablePath = require
+  .resolve('@patternfly/react-table/package.json')
+  .replace('package.json', 'src');
 
 sourceProps(
   glob.sync(path.join(reactCorePath, '/**/*.tsx'), { ignore: '**/*.test.tsx' }),
+  'react'
+);
+sourceProps(
+  glob.sync(path.join(reactTablePath, '/**/*.tsx'), { ignore: '**/*.test.tsx' }),
   'react'
 );
 
 // React MD
 sourceMD(
   glob.sync(path.join(reactCorePath, '/**/examples/*.md')),
+  'react'
+);
+sourceMD(
+  glob.sync(path.join(reactTablePath, '/**/examples/*.md')),
   'react'
 );
 
