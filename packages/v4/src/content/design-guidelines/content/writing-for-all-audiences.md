@@ -1,6 +1,6 @@
 ---
 id: Writing for all audiences
-section: guidelines
+section: UX writing
 ---
 
 UX copy should be accessible by everyone, so consider all users’ abilities (physical, cognitive, and more) when you write. Refer to the [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG21/) for accessibility compliance information.
