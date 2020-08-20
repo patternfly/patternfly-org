@@ -1,8 +1,6 @@
 ---
-title: Typography
-section: styles
-hideTOC: true
-showTitle: true
+id: Typography
+section: guidelines
 ---
 
 import { Button, Grid, GridItem } from '@patternfly/react-core';

@@ -1,8 +1,6 @@
 ---
-title: Product tours
-section: content
-hideTOC: true
-showTitle: true
+id: Product tours
+section: guidelines
 ---
 A product tour, also referred to as an "onboarding flow," is a series of dialog boxes or pop-ups that introduce a new tool or a tool redesign to users.
 
@@ -10,7 +8,7 @@ In product tours, your UX copy is never strictly to tell a user *how* something 
 
 **Focus on the user’s goals**: Emphasize what the user can do with the product.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Before</strong></center></th>
         <th><center><strong>After</strong></center></th>
@@ -25,7 +23,7 @@ In product tours, your UX copy is never strictly to tell a user *how* something 
 
 **Be conversational**: Imagine that you’re sitting beside the user and walking them through the product. Avoid jargon and be casual.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Before</strong></center></th>
         <th><center><strong>After</strong></center></th>
@@ -39,7 +37,7 @@ In product tours, your UX copy is never strictly to tell a user *how* something 
 
 **Empathize with the user**: Learning new things can be scary, so don’t stuff your onboarding flow with exclamation marks, and avoid telling the user how hard you worked on the new tool or how excited you are. Instead, understand that the user might be a little intimidated. Focus on giving them information and guidance in a straightforward way.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Before</strong></center></th>
         <th><center><strong>After</strong></center></th>

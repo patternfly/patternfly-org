@@ -1,0 +1,4 @@
+---
+id: Skeleton
+section: components
+---

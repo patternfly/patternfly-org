@@ -1,0 +1,30 @@
+/* Needed for sticky tabs */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/position#sticky */
+.ws-toc {
+  top: var(--pf-global--spacer--md);
+  order: 1;
+  position: sticky;
+  background-color: var(--pf-global--BackgroundColor--100);
+  padding-left: var(--pf-global--spacer--md);
+  align-self: flex-start;
+  min-width: 280px;
+  max-height: calc(100vh - 76px);
+  overflow-y: auto;
+}
+
+@media (max-width: 1450px) {
+  .ws-toc {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.ws-toc-list ul {
+  padding-left: var(--pf-global--spacer--md);
+}
+
+.ws-toc-item {
+  display: block;
+  margin-top: var(--pf-global--spacer--md);
+  margin-bottom: var(--pf-global--spacer--md);
+}

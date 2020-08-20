@@ -1,8 +1,6 @@
 ---
-title: Sentence structure
-section: content
-hideTOC: true
-showTitle: true
+id: Sentence structure
+section: guidelines
 ---
 
 Use the second person "you/your" whenever you can. This way, your focus is on the user, and the product interaction feels more like a conversation.
@@ -11,7 +9,7 @@ Use the first person "I" when the user is agreeing to something. For example, a 
 
 Try to avoid using third person "he/she/they/it." Third person sounds formal and disconnected from the user.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Before</strong></center></th>
         <th><center><strong>After</strong></center></th>
@@ -27,7 +25,7 @@ Use the active voice whenever possible. The active voice makes a sentence shorte
 
 The active voice is when the subject of the sentence performs the action. The passive voice is when the subject of the sentence receives the action.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Before</strong></center></th>
         <th><center><strong>After</strong></center></th>
@@ -41,7 +39,7 @@ The active voice is when the subject of the sentence performs the action. The pa
 
 There are some occasions when the [passive voice is appropriate](https://writing.wisc.edu/handbook/style/ccs_activevoice/), like when you don’t wish to point out a subject or when you want to emphasize an action. Also, use the passive voice to avoid assigning blame to a user, especially in error messages.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Before</strong></center></th>
         <th><center><strong>After</strong></center></th>

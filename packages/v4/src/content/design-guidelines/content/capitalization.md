@@ -1,8 +1,6 @@
 ---
-title: Capitalization
-section: content
-hideTOC: true
-showTitle: true
+id: Capitalization
+section: guidelines
 ---
 
 Consistent capitalization adds clarity and unity across your products' UIs.

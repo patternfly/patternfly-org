@@ -1,8 +1,6 @@
 ---
-title: Colors for charts
-section: styles
-hideTOC: true
-showTitle: true
+id: Colors for charts
+section: guidelines
 ---
 
 import theSystem from './thesystem.gif';
@@ -533,19 +531,19 @@ In this instance, there are only four base colors, therefore four color families
 
 If you are dealing with data that includes six or less variables, we recommend using the base colors to represent each. For example, if you collected data on how many sales were made per product at your organization during one period of time, it could look like this if plotted using a bar chart.
 
-![Chart with few variables](fewvariables.png)
+![Chart with few variables](./fewvariables.png)
 
 ### Chart with nested (grouped) variables
 
 If you have a set of data that includes grouped variables, we recommend using the color families to represent each. Grouped variables would include a set of parents and children variables. Each group would use a color family that would be represented in the same order as the base colors are listed. So, depending on the amount of nested variables you have, the first color family would be blue, then green, cyan, etc. The colors would start over if there are more than 6 groups, returning back to the blue family. An example of this type of data would be quarterly sales broken down by geographical locations.
 
-![Chart with nested variables](nestedvariables.png)
+![Chart with nested variables](./nestedvariables.png)
 
 ### Chart with many variables (>6)
 
 If the set of data includes more than six variables, we recommend applying the multichromatic order system, which uses all of the colors in the color system, to the data. This includes a mix of base colors and colors from their family. An example of this type of data would be the cost of living expenses during a period of time.
 
-![Chart with many variables](manyvariables.png)
+![Chart with many variables](./manyvariables.png)
 
 ## Using the system with one color family
 

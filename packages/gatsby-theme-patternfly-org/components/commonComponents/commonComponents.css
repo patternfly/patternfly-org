@@ -1,8 +1,0 @@
-#examples ~ table td,
-#examples ~ table th,
-#examples ~ table tr {
-  padding: .5em;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  vertical-align: top;
-}

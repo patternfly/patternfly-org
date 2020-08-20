@@ -1,14 +1,12 @@
 ---
-title: Error messages
-section: content
-hideTOC: true
-showTitle: true
+id: Error messages
+section: guidelines
 ---
 An error message is a message indicating something went wrong. A user typically sees an error message when they attempt to perform an action but cannot continue because something isn’t right.
 
 **Don’t blame users**. A user should never feel like the error is their fault. Avoid language like “You did something wrong.”
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Before</strong></center></th>
         <th><center><strong>After</strong></center></th>
@@ -22,7 +20,7 @@ An error message is a message indicating something went wrong. A user typically 
 
 **Give users a next step**: A user should never feel stuck. If they’re hit with an error, give them the information they need to continue with their task.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Before</strong></center></th>
         <th><center><strong>After</strong></center></th>
@@ -36,7 +34,7 @@ An error message is a message indicating something went wrong. A user typically 
 
 **Avoid jargon**: Error messages are frustrating enough without technical terms that users might not understand. Avoid jargon and use terms that are familiar to your users.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Before</strong></center></th>
         <th><center><strong>After</strong></center></th>
@@ -50,7 +48,7 @@ An error message is a message indicating something went wrong. A user typically 
 
 **Include the right amount of description**: Tell your user what is wrong. An error without an explanation can add to their frustration and prevent them from finding a solution.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Before</strong></center></th>
         <th><center><strong>After</strong></center></th>
@@ -64,7 +62,7 @@ An error message is a message indicating something went wrong. A user typically 
 
 However, don’t include too much information. The user doesn’t need to know exactly what is going on behind the scenes. Only give them information about what went wrong and what they can do next.
 
-<table style="table-layout: fixed" tr width="80%">
+<table class="ws-content-table">
     <tr>
         <th><center><strong>Before</strong></center></th>
         <th><center><strong>After</strong></center></th>
