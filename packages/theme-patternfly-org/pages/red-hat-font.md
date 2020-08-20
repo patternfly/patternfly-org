@@ -1,6 +1,6 @@
 ---
 id: Red Hat font
-section: overview
+section: get-started
 ---
 
 PR - [https://github.com/patternfly/patternfly-next/pull/1813](https://github.com/patternfly/patternfly-next/pull/1813)
