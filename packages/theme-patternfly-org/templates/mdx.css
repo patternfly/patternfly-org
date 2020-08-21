@@ -350,7 +350,11 @@
 }
 
 .ws-mdx-content {
+  flex-grow: 1;
   padding: var(--pf-global--spacer--xl);
   background-color: var(--pf-global--BackgroundColor--200);
-  flex-grow: 1;
+}
+
+.ws-mdx-content-content {
+  max-width: 832px;
 }
