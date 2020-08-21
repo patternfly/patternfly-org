@@ -61,7 +61,7 @@ const HomePage = () => (
         </GridItem>
       </Grid>
     </PageSection>
-    <PageSection variant={PageSectionVariants.light} className="ws-homepage-main-section">
+    <PageSection variant={PageSectionVariants.light} className="ws-homepage-gray ws-homepage-main-section">
       <Grid>
         <GridItem sm={12} md={6} mdOffset={3} className="pf-u-py-2xl pf-u-text-align-center" id="about-patternfly-section">
           <AutoLinkHeader size="h1" headingLevel="h2" className="ws-title pf-u-mb-md">
@@ -76,7 +76,7 @@ const HomePage = () => (
         </GridItem>
       </Grid>
     </PageSection>
-    <PageSection variant={PageSectionVariants.light} className="pf4-c-background-lines ws-homepage-main-section">
+    <PageSection variant={PageSectionVariants.light} className="ws-homepage-gray pf4-c-background-lines ws-homepage-main-section">
       <Grid gutter="md" className="pf-u-pb-3xl-on-sm">
         <GridItem sm={12}>
           <Grid>
