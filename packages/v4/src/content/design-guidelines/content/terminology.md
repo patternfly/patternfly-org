@@ -1,6 +1,6 @@
 ---
 id: Terminology
-section: guidelines
+section: UX writing
 ---
 
 Here's a list of common UI terms and their usage.
@@ -93,57 +93,17 @@ Here's a list of common UI terms and their usage.
 ## Abbreviations and acronyms
 Use abbreviations that users are familiar with, and write out uncommon abbreviations. Abbreviate units of measurement, and use abbreviations consistently.
 
-<table align="center; margin: 0px auto; table-layout:fixed;">
-    <tr>
-        <th>Abbreviation</th>
-        <th>Usage</th>
-    </tr>
-    <tr>
-        <td>CSS</td>
-        <td>Stands for <i>Cascading Style Sheets</i>. Write <i>CSS</i> in all caps.</td>
-  </tr>
-    <tr>
-        <td>e.g., i.e., and etc.</td>
-        <td>Use sparingly. These terms aren’t easily understood by everyone, especially users whose native language is not rooted in Latin. Write out their meaning instead:<ul><li>e.g. – for example</li><li>i.e. – in other words</li><li>etc. – and more/so on</li></ul></td>
-</tr>
-<tr>
-	<td>HTML</td>
-	<td>Stands for <i>Hypertext Markup Language</i>. Write <i>HTML</i> in all caps.</td>
-</tr>
-<tr>
-	<td>JS</td>
-	<td>Stands for <i>JavaScript</i>. Write <i>JS</i> in all caps.</td>
-</tr>
-<tr>
-	<td>K8</td>
-	<td>Stands for <i>Kubernetes</i>. </td>
-    </tr>
-<tr>
-	<td>KVM</td>
-	<td>Refers to a kernel-based virtual machine. Write <i>KVM</i> in all caps.</td>
-    </tr>
-<tr>
-	<td>sysadmin</td>
-	<td>Avoid using abbreviations like <i>sysadmin</i> and <i>SysAdmin</i> because they’re too informal and not always easily understood. <i>System</i> should be singular (not <i>Systems administrator</i>) because it can include both a single system and multiple systems, similar to <i>brain surgeon</i>, who works on more than one brain. Taken from Red Hat Corporate Style Guide.</td>
-    </tr>
-<tr>
-	<td>U.S.</td>
-	<td>As a noun, use <i>United States</i> unless there are space constraints. As an adjective, use <i>U.S.</i> (for example, <i>U.S. soldier</i>). As part of an organization, use <i>U.S.</i> Taken from Red Hat Corporate Style Guide.</td>
-    </tr>
-<tr>
-	<td>URL</td>
-	<td>Stands for <i>Uniform Resource Locator</i>. Write <i>URL</i> in all caps.</td>
-    </tr>
-<tr>
-	<td>VM</td>
-	<td>Refers to a virtual machine. OK to abbreviate as long as you've spelled it out once in the first occurrence and as long as <i>VM</i> won't be confused with other terms that share that acronym. Taken from Red Hat Corporate Style Guide.</td>
-    </tr>
-<tr>
-	<td>N/A</td>
-	<td>Refers to <i>data not available</i>. Applies to tables, list views, card views, and more.</td>
-</tr>
-<tr>
-	<td> -- </td>
-	<td>Refers to <i>data not applicable</i>, meaning data will never be available for the object (unlike <i>N/A</i>).</td>
-    </tr>
-</table>
+| **Abbreviation** | **Usage** |
+|------------------|:---------:|
+| CSS | Stands for <i>Cascading Style Sheets</i>. Write <i>CSS</i> in all caps. |
+| e.g., i.e., and etc. | Use sparingly. These terms aren’t easily understood by everyone, especially users whose native language is not rooted in Latin. Write out their meaning instead:<ul><li>e.g. – for example</li><li>i.e. – in other words</li><li>etc. – and more/so on</li></ul> |
+| HTML | Stands for <i>Hypertext Markup Language</i>. Write <i>HTML</i> in all caps. |
+| JS | Stands for <i>JavaScript</i>. Write <i>JS</i> in all caps. |
+| K8 | Stands for <i>Kubernetes</i>. |
+| KVM | Refers to a kernel-based virtual machine. Write <i>KVM</i> in all caps. |
+| sysadmin | Avoid using abbreviations like <i>sysadmin</i> and <i>SysAdmin</i> because they’re too informal and not always easily understood. <i>System</i> should be singular (not <i>Systems administrator</i>) because it can include both a single system and multiple systems, similar to <i>brain surgeon</i>, who works on more than one brain.<br />Takenfrom Red Hat Corporate Style Guide. |
+| U.S. | As a noun, use <i>United States</i> unless there are space constraints. As an adjective, use <i>U.S.</i> (for example, <i>U.S. soldier</i>). As part of an organization, use <i>U.S.</i><br />Takenfrom Red Hat Corporate Style Guide. | 
+| URL | Stands for <i>Uniform Resource Locator</i>. Write <i>URL</i> in all caps. |
+| VM | Refers to a virtual machine. OK to abbreviate as long as you've spelled it out once in the first occurrence and as long as <i>VM</i> won't be confused with other terms that share that acronym.<br />Takenfrom Red Hat Corporate Style Guide. |
+| N/A | Refers to <i>data not available</i>. Applies to tables, list views, card views, and more. |
+| -- | Refers to <i>data not applicable</i>, meaning data will never be available for the object (unlike <i>N/A</i>). |

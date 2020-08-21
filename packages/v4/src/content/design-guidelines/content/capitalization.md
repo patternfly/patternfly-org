@@ -1,6 +1,6 @@
 ---
 id: Capitalization
-section: guidelines
+section: UX writing
 ---
 
 Consistent capitalization adds clarity and unity across your products' UIs.
@@ -62,48 +62,13 @@ Each company handles UI capitalization differently, so align with your own compa
 
 Capitalize <b>Red Hat feature names</b> when they’re used as proper nouns or when they refer to a capitalized UI term (like a navigation item). Write them in lowercase when they’re used to describe generic concepts.
 
-Examples: 
-<table style="table-layout: fixed" tr width="80%">
-    <tr>
-        <th><center><strong>Feature&nbsp;name</strong></center></th>
-        <th><center><strong>UI text</strong></center></th>
-        <th><center><strong>Reasoning</strong></center></th>
-    </tr>
-    <tr>
-        <td><center>Compliance</center></td>
-        <td>“Check your system compliance using Red Hat Insights Compliance.”</td>
-        <td>The first “compliance” is lowercase since it refers to compliance as a concept. 
-        <br />
-        <br />
-        The second “compliance” refers to a specific feature offered on cloud.redhat.com.
-</td>
-</tr> 
-<tr>
-         <td><center>User Access</center></td>
-	        <td>“Manage user access for your organization using the User Access feature.”</td>
-            <td>The first “user access” is lowercase because it refers to user access as a concept. 
-            <br />
-            <br />
-            The second “user access” is capitalized because it refers to the User Access feature offered on cloud.redhat.com.
-</td>
-</tr>
-    <tr>
-        <td><center>Sources</center></td>
-        <td>"Add a source by going to <b>Settings</b> > <b>Sources</b>." 
-        <br />
-        <br />
-        "Check the <b>Sources</b> table for status." 
-        <br />
-        <br />
-        Button text: "Add source"
-</td>
-        <td>“Sources” is only capitalized when it directly refers to a subsection, feature, or location in the UI.
-        <br />
-        <br />
-        Always write buttons in sentence case.
-</td>
-</tr>
-</table>
+Examples:
+
+| **Feature name** | **UI text**  | **Reasoning**    |
+|:----------------:|:------------:|:----------------:|
+| Compliance   | “Check your system compliance using Red Hat Insights Compliance.”                                                  | The first “compliance” is lowercase since it refers to compliance as a concept. The second “compliance” refers to a specific feature offered on cloud.redhat.com.                                     |
+| User Access  | “Manage user access for your organization using the User Access feature.”                                          | The first “user access” is lowercase because it refers to user access as a concept. The second “user access” is capitalized because it refers to the User Access feature offered on cloud.redhat.com. |
+| Sources      | “Add a source by going to **Settings > Sources.**” "Check the **Sources** table for status." Button text: "Add source" | “Sources” is only capitalized when it directly refers to a subsection, feature, or location in the UI. Always write buttons in sentence case.                                                         |
 
 ## Capitalization for tools outside your product portfolio
 

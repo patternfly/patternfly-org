@@ -48,29 +48,31 @@ const MDXChildTemplate = ({
         <TableOfContents items={toc} />
       )}
       <div className="ws-mdx-content">
-        {InlineAlerts}
-        <Component />
-        {propsTitle && (
-          <AccordionHeader title={propsTitle} titleId="props">
-            {propComponents.map(component => (
-              <PropsTable
-                key={component.name}
-                caption={`${component.name} properties`}
-                rows={component.props} />
-            ))}
-          </AccordionHeader>
-        )}
-        {cssVarsTitle && (
-          <AccordionHeader title={cssVarsTitle} titleId="css-variables">
-            <CSSVariables prefix={cssPrefix} />
-          </AccordionHeader>
-        )}
-        {sourceLink && (
-          <React.Fragment>
-            <br />
-            <a href={sourceLink} target="_blank">View source on Github</a>
-          </React.Fragment>
-        )}
+        <div className="ws-mdx-content-content">
+          {InlineAlerts}
+          <Component />
+          {propsTitle && (
+            <AccordionHeader title={propsTitle} titleId="props">
+              {propComponents.map(component => (
+                <PropsTable
+                  key={component.name}
+                  caption={`${component.name} properties`}
+                  rows={component.props} />
+              ))}
+            </AccordionHeader>
+          )}
+          {cssVarsTitle && (
+            <AccordionHeader title={cssVarsTitle} titleId="css-variables">
+              <CSSVariables prefix={cssPrefix} />
+            </AccordionHeader>
+          )}
+          {sourceLink && (
+            <React.Fragment>
+              <br />
+              <a href={sourceLink} target="_blank">View source on Github</a>
+            </React.Fragment>
+          )}
+        </div>
       </div>
     </div>
   );
