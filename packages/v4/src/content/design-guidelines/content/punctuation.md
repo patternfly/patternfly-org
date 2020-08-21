@@ -1,6 +1,6 @@
 ---
 id: Punctuation
-section: guidelines
+section: UX writing
 ---
 
 ## Ampersand
@@ -9,17 +9,9 @@ Avoid using ampersands, and use "and" instead.
 ## Referring to text in the UI
 Use bold text (not quotation marks) when referring to an element or text in the UI.
 
-<table class="ws-content-table">
-    <tr>
-        <th><center><strong>Before</strong></center></th>
-        <th><center><strong>After</strong></center></th>
-    </tr>
-    <tr>
-        <td>Add user to the “Group title” team </td>
-        <td>Add user to the <b>Group title</b> team</td>
-    </tr>
-</table>
-<br /> 
+| Before                             | After                            |
+|------------------------------------|----------------------------------|
+| Add user to the “Group title” team | Add user to the **Group title** team |
 
 ## Commas
 When a conjunction connects two independent clauses, a comma should precede it. Also put a comma before “and” if it’s the Oxford comma.
@@ -32,17 +24,9 @@ Examples:
 ## Ellipses (...)
 Ellipses (...) are commonly used when information is omitted. You might use ellipses when you cannot fit all words onto a line or when you remove less relevant information (like in a quote).
 
-<table class="ws-content-table">
-    <tr>
-        <th><center><strong>Before ellipses</strong></center></th>
-        <th><center><strong>After ellipses</strong></center></th>
-    </tr>
-    <tr>
-        <td>They said, “For many reasons, I think the PatternFly community is great.”</td>
-        <td>They said, “...I think the PatternFly community is great.”</td>
-    </tr>
-</table>
-<br /> 
+|**Before ellipses**  | **After ellipses** |
+|:-------------------:|:------------------:|
+| They said, “For many reasons, I think the PatternFly community is great.” | They said, “...I think the PatternFly community is great.” |
 
 Ellipses can also be used in more creative contexts to signify someone’s thoughts or speech, like a pause for thinking.
 
@@ -75,32 +59,16 @@ Use exclamation marks sparingly. Don’t use one to generate excitement; only us
 
 To more accurately capture human expression, use an exclamation mark after just a few words, not after a long sentence.
 
-<table class="ws-content-table">
-    <tr>
-        <th><center><strong>Before</strong></center></th>
-        <th><center><strong>After</strong></center></th>
-    </tr>
-    <tr>
-        <td>Congratulations on creating an account!</td>
-        <td>Congratulations! You created an account.</td>
-    </tr>
-</table>
-<br />
+|**Before**  | **After** |
+|:----------:|:---------:|
+| Congratulations on creating an account! | Congratulations! You created an account. |
 
 ## Parallel structure
 All items in a list or series should be of the same part of speech.
 
-<table class="ws-content-table">
-    <tr>
-        <th><center><strong>Before</strong></center></th>
-        <th><center><strong>After</strong></center></th>
-    </tr>
-    <tr>
-        <td>Remember these important tips: Write clearly; conduct research; spelling and grammar.</td>
-        <td>Remember these important tips: Write clearly; conduct research; use correct spelling and grammar.</td>
-    </tr>
-</table>
-<br />
+|**Before**  | **After** |
+|:----------:|:---------:|
+| Remember these important tips: Write clearly; conduct research; spelling and grammar. | Remember these important tips: Write clearly; conduct research; use correct spelling and grammar. |
 
 ## Parentheses 
 Do not use parentheses to indicate a possible plural of something, like "Account(s)." If a user can select one thing or multiple things, use the plural form.

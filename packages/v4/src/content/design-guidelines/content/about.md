@@ -1,6 +1,6 @@
 ---
-id: Content
-section: guidelines
+id: About
+section: UX writing
 ---
 
 import './content.css';

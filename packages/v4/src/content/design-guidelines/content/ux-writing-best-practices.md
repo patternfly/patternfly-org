@@ -1,6 +1,6 @@
 ---
 id: UX writing best practices
-section: guidelines
+section: UX writing
 ---
 
 Treat words as part of your design, not something added at the end. UX copy needs to be rooted in user information and context so that it can contribute to an effective, intuitive, and human-centric product experience. 
@@ -43,76 +43,37 @@ Users carry around a lot of baggage, so it’s important to know where they’re
 ## Use positive, action-oriented language
 Focus on what the user needs to do in order to complete the task or reach their goal.
 
-<table class="ws-content-table">
-    <tr>
-        <th><center><strong>Before</strong></center></th>
-        <th><center><strong>After</strong></center></th>
-    </tr>
-    <tr>
-        <td>Your user settings do not allow you to access this file.</td>
-        <td>To access this file, adjust your user settings.</td>
-    </tr>
-</table>
-<br />
+|**Before**  | **After** |
+|:----------:|:---------:|
+| Your user settings do not allow you to access this file. | To access this file, adjust your user settings. |
 
 ## Lead with the benefit
 Users want to know why they should do something. What’s in it for them? They typically focus on the beginning of a sentence, so make your instruction worth it by starting with the outcome—in other words, the benefit.
 
-<table class="ws-content-table">
-    <tr>
-        <th><center><strong>Before</strong></center></th>
-        <th><center><strong>After</strong></center></th>
-    </tr>
-    <tr>
-        <td>Install this extension to learn more about email.</td>
-        <td>To learn more about email, install this extension.</td>
-    </tr>
-</table>
-<br />
+|**Before**  | **After** |
+|:----------:|:---------:|
+| Install this extension to learn more about email. | To learn more about email, install this extension. |
 
 ## Sound like a person
 Jargon, bizpeak, and formal language make you sound more like a brochure than a human. Users need to relate to your brand and like you before they can trust you. Talk with them as people using familiar, conversational words.
 
-<table class="ws-content-table">
-    <tr>
-        <th><center><strong>Before</strong></center></th>
-        <th><center><strong>After</strong></center></th>
-    </tr>
-    <tr>
-        <td>Utilizing the open source phenomenon allows you to leverage collaborative communications.</td>
-        <td>Open source is great for collaboration.</td>
-    </tr>
-</table>
-<br />
+|**Before**  | **After** |
+|:----------:|:---------:|
+| Utilizing the open source phenomenon allows you to leverage collaborative communications. | Open source is great for collaboration. |
 
 ## Be clear and concise
 Dr. Seuss says it best: “So the writer who breeds more words than he needs, is making a chore for the reader who reads.” Use plain language, and don’t use more words than you need. Chunk content into short, related sections, and avoid long paragraphs or strings of text.
 
-<table class="ws-content-table">
-    <tr>
-        <th><center><strong>Before</strong></center></th>
-        <th><center><strong>After</strong></center></th>
-    </tr>
-    <tr>
-        <td>Make the decision to send a notification to your administrator.</td>
-        <td>Notify your administrator. </td>
-    </tr>
-</table>
-<br />
+|**Before**  | **After** |
+|:----------:|:---------:|
+| Make the decision to send a notification to your administrator. | Notify your administrator. |
 
 ## Be consistent
 Stick with the same terminology to describe actions and objects across the entire user experience. Using two terms interchangeably—even when they mean the same thing—can confuse users.
 
-<table class="ws-content-table">
-    <tr>
-        <th><center><strong>Before</strong></center></th>
-        <th><center><strong>After</strong></center></th>
-    </tr>
-    <tr>
-        <td>Log in to your account only. Never sign in to your friend’s account.</td>
-        <td>Log in to your account only. Never log in to your friend’s account.</td>
-    </tr>
-</table>
+|**Before**  | **After** |
+|:----------:|:---------:|
+| Log in to your account only. Never sign in to your friend’s account. | Log in to your account only. Never log in to your friend’s account. |
 
 ## Align with your brand
 As mentioned in the brand section, make sure your UX copy reflects your brand voice. UX copy is not just for adding clarity and guiding users through the interface. You’re also creating a user experience with your words, making a product interaction sound, feel, and look like a human conversation.
