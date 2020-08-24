@@ -26,7 +26,6 @@ export const Link = ({
   }
   else if (url.startsWith('/')) {
     const { pathPrefix, getAsyncComponent } = React.useContext(ConfigContext);
-    const location = useLocation();
     url = `${pathPrefix}/${url.substr(1)}`;
 
     const Component = getAsyncComponent(url, pathPrefix);
@@ -39,7 +38,7 @@ export const Link = ({
       // Wait up to an extra 500ms on click
       props.onClick = ev => {
         ev.preventDefault();
-        if (url !== location.pathname) {
+        if (typeof window !== 'undefined' && url !== location.pathname) {
           Promiseany([
             preloadPromise,
             new Promise(res => setTimeout(res, 500))
