@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router } from '@reach/router';
+import { Router, useLocation } from '@reach/router';
 import { SideNavLayout } from 'theme-patternfly-org/layouts';
+import { Footer } from 'theme-patternfly-org/components';
 import { MDXTemplate } from 'theme-patternfly-org/templates/mdx';
 import { routes, groupedRoutes, getAsyncComponent } from './routes';
 import LayoutOptions from '../patternfly-docs.config.js';
@@ -19,32 +20,43 @@ LayoutOptions.routes = routes;
 LayoutOptions.groupedRoutes = groupedRoutes;
 LayoutOptions.getAsyncComponent = getAsyncComponent;
 
-const AppRoute = ({ child, ...props }) => (
-  <SideNavLayout {...props}>
-    {child}
-  </SideNavLayout>
-);
+const AppRoute = ({ child }) => {
+  const location = useLocation();
+  if (typeof window !== 'undefined' && window.ga) {
+    window.ga('set', 'page', location.pathname);
+    window.ga('send', 'pageview');
+  }
+
+  return (
+    <React.Fragment>
+      {child}
+      {LayoutOptions.hasFooter && <Footer />}
+    </React.Fragment>
+  );
+}
 
 // Export for SSR
 export const App = () => (
   <ConfigContext.Provider value={LayoutOptions}>
-    <Router basepath={LayoutOptions.pathPrefix} id="ws-router">
-      {Object.entries(LayoutOptions.routes).map(([path, props]) => {
-        const { Component } = props;
-        if (Component) {
-          return <AppRoute key={path} path={path} default={path === '/404'} child={<Component />} />;
-        }
-        const { title, sources } = props;
-        return (
-          <AppRoute key={path} path={path + '/*'} child={<MDXTemplate
-            path={path}
-            layoutOptions={LayoutOptions}
-            title={title}
-            sources={sources}
-          />} />
-        );
-      })}
-    </Router>
+    <SideNavLayout>
+      <Router basepath={LayoutOptions.pathPrefix} id="ws-router">
+        {Object.entries(LayoutOptions.routes).map(([path, props]) => {
+          const { Component } = props;
+          if (Component) {
+            return <AppRoute key={path} path={path} default={path === '/404'} child={<Component />} />;
+          }
+          const { title, sources } = props;
+          return (
+            <AppRoute key={path} path={path + '/*'} child={<MDXTemplate
+              path={path}
+              layoutOptions={LayoutOptions}
+              title={title}
+              sources={sources}
+            />} />
+          );
+        })}
+      </Router>
+    </SideNavLayout>
   </ConfigContext.Provider>
 );
 

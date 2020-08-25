@@ -5,7 +5,6 @@ import {
   PageSidebar,
   PageHeaderTools,
   PageHeaderToolsItem,
-  Form,
   TextInput,
   Brand,
   Dropdown,
@@ -15,8 +14,7 @@ import {
   Divider
 } from '@patternfly/react-core';
 import { SearchIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
-import { useLocation } from '@reach/router';
-import { SideNav, TopNav, Footer, GdprBanner } from '../../components';
+import { SideNav, TopNav, GdprBanner } from '../../components';
 import ConfigContext from '../../helpers/configContext';
 import staticVersions from '../../versions.json';
 import logo from '../logo.svg';
@@ -105,12 +103,9 @@ function attachDocSearch(algolia, timeout) {
   }
 }
 
-export const SideNavLayout = ({
-  children,
-}) => {
+export const SideNavLayout = ({ children }) => {
   const {
     hasGdprBanner,
-    hasFooter,
     algolia,
     hasVersionSwitcher,
     sideNavItems,
@@ -121,12 +116,7 @@ export const SideNavLayout = ({
     // BONUS prop passed from app.js
     groupedRoutes
   } = useContext(ConfigContext);
-  const location = useLocation();
   const [versions, setVersions] = useState({ ...staticVersions });
-  if (typeof window !== 'undefined' && window.ga) {
-    window.ga('set', 'page', location.pathname);
-    window.ga('send', 'pageview');
-  }
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -148,7 +138,7 @@ export const SideNavLayout = ({
     <PageSidebar
       className="ws-page-sidebar"
       theme="light"
-      nav={<SideNav location={location} navItems={sideNavItems} groupedRoutes={groupedRoutes} />}
+      nav={<SideNav navItems={sideNavItems} groupedRoutes={groupedRoutes} />}
     />
   );
 
@@ -163,7 +153,7 @@ export const SideNavLayout = ({
       logo={prnum ? `PR #${prnum}` : <Brand src={logo} alt="Patternfly Logo" />}
       logoProps={{ href: prurl || pathPrefix || '/' }}
       showNavToggle
-      topNav={topNavItems.length > 0 && <TopNav location={location} navItems={topNavItems} />}
+      topNav={topNavItems.length > 0 && <TopNav navItems={topNavItems} />}
     />
   );
 
@@ -176,7 +166,6 @@ export const SideNavLayout = ({
       </div>
       <Page className="ws-page" header={Header} sidebar={SideBar} isManagedSidebar>
         {children}
-        {hasFooter && <Footer />}
       </Page>
     </div>
   );
