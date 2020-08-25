@@ -21,6 +21,8 @@ const serverConfig = () => {
       )
     ],
     optimization: {
+      removeAvailableModules: false,
+      removeEmptyChunks: false,
       splitChunks: false,
       minimize: false // Faster build, easier debugging
     },
