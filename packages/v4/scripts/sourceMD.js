@@ -38,6 +38,10 @@ sourceMD(
   glob.sync(path.join(coreDocsPath, '/**/examples/*.md'), { ignore: path.join(coreDocsPath, '/pages/**') }),
   'html'
 );
+sourceMD(
+  glob.sync(path.join(coreDocsPath, '/**/demos/**/*.md'), { ignore: path.join(coreDocsPath, '/pages/**') }),
+  'html'
+);
 
 // React props
 const reactCorePath = require
@@ -62,7 +66,15 @@ sourceMD(
   'react'
 );
 sourceMD(
+  glob.sync(path.join(reactCorePath, '/**/demos/**/*.md')),
+  'react'
+);
+sourceMD(
   glob.sync(path.join(reactTablePath, '/**/examples/*.md')),
+  'react'
+);
+sourceMD(
+  glob.sync(path.join(reactTablePath, '/**/demos/*.md')),
   'react'
 );
 
