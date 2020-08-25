@@ -86,7 +86,7 @@ function toReactComponent(mdFilePath, source) {
       // Temporarily override section for Demo tabs until we port this upstream
       if (frontmatter.section === 'demos' && routes[slug.replace('demos', 'components')]) {
         pageData.section = 'components';
-        pageData.source = `${source}-demo`;
+        pageData.source = `${source}-demos`;
         pageData.slug = makeSlug(pageData.source, pageData.section, pageData.id);
         outPath = path.join(outputBase, `${pageData.slug}.js`);
       }
