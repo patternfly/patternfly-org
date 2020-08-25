@@ -52,18 +52,28 @@ const ReleaseNotesTOC = () => (
   </Grid>
 );
 
+// Chrome does not jump until ALL network requests finish.
+// We have to force it to...
+function onClickItem(id) {
+  const referencedElement = document.getElementById(id);
+  if (referencedElement) {
+    referencedElement.scrollIntoView();
+  }
+}
+
 const renderItem = (item, index) => {
   if (Array.isArray(item)) {
     return (
-      <ul key={index}>
+      <ul key={index} className="ws-toc-sublist">
         {item.map(renderItem)}
       </ul>
     );
   }
 
+  const slug = slugger(item);
   return (
-    <li key={index}>
-      <a href={`#${slugger(item)}`} className="ws-toc-item" onClick={ev => console.log('clicked', ev.target)}>
+    <li key={index} className="ws-toc-item">
+      <a href={`#${slug}`} className="ws-toc-link" onClick={() => onClickItem(slug)}>
         {item}
       </a>
     </li>
@@ -77,6 +87,8 @@ export const TableOfContents = ({
   if (releaseNoteTOC) {
     return <ReleaseNotesTOC />;
   }
+
+  const [activeItem, setActiveItem] = React.useState(items[0]);
 
   return (
     <nav className="ws-toc">
