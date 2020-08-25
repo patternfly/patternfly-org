@@ -38,9 +38,14 @@ function toReactComponent(mdFilePath, source) {
         file.fail('id attribute is required in frontmatter for PatternFly docs');
       }
       else if (frontmatter.id === 'Forms') {
-        // Temporary override section until https://github.com/patternfly/patternfly/pull/3428
+        // Temporarily override section until https://github.com/patternfly/patternfly/pull/3428
         // lands in react-docs
         frontmatter.id = 'Form';
+      }
+      if (frontmatter.section === 'overview') {
+        // Temporarily override section until last org release and backport to core/react
+        // Affected pages are release notes and upgrade guides
+        frontmatter.section = 'get-started';
       }
       if (!frontmatter.hideTOC) {
         toc = extractTableOfContents(tree);
