@@ -8,6 +8,7 @@ import {
   GridItem,
   Title
 } from '@patternfly/react-core';
+import { css } from '@patternfly/react-styles';
 import { slugger } from '../../helpers';
 import versions from '../../versions.json';
 import './tableOfContents.css';
@@ -52,34 +53,6 @@ const ReleaseNotesTOC = () => (
   </Grid>
 );
 
-// Chrome does not jump until ALL network requests finish.
-// We have to force it to...
-function onClickItem(id) {
-  const referencedElement = document.getElementById(id);
-  if (referencedElement) {
-    referencedElement.scrollIntoView();
-  }
-}
-
-const renderItem = (item, index) => {
-  if (Array.isArray(item)) {
-    return (
-      <ul key={index} className="ws-toc-sublist">
-        {item.map(renderItem)}
-      </ul>
-    );
-  }
-
-  const slug = slugger(item);
-  return (
-    <li key={index} className="ws-toc-item">
-      <a href={`#${slug}`} className="ws-toc-link" onClick={() => onClickItem(slug)}>
-        {item}
-      </a>
-    </li>
-  );
-}
-
 export const TableOfContents = ({
   releaseNoteTOC,
   items
@@ -89,6 +62,73 @@ export const TableOfContents = ({
   }
 
   const [activeItem, setActiveItem] = React.useState(items[0]);
+  React.useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    const scrollableElement = document.getElementById('ws-page-main');
+    const titleElement = document.getElementById('ws-page-title');
+    const scrollElements = Array.from(scrollableElement.getElementsByClassName('ws-heading'))
+      .map(e => ({
+        y: e.offsetTop - titleElement.offsetHeight,
+        text: e.innerText
+      }))
+      .sort((e1, e2) => e2.y - e1.y);
+    function scrollSpy() {
+      const scrollPosition = scrollableElement.scrollTop;
+      window.requestAnimationFrame(() => {
+        for (const { y, text } of scrollElements) {
+          if (scrollPosition > y) {
+            setActiveItem(text);
+            return;
+          }
+        }
+      });
+    }
+    if (scrollableElement) {
+      scrollSpy();
+      scrollableElement.addEventListener('scroll', scrollSpy);
+    }
+
+    return () => scrollableElement.removeEventListener('scroll', scrollSpy);
+  }, []);
+
+  function onClickItem(ev, id, item) {
+    ev.preventDefault(); // Don't use client-side routing
+    // Chrome does not jump until ALL network requests finish.
+    // We have to force it to...
+    const referencedElement = document.getElementById(id);
+    if (referencedElement) {
+      referencedElement.scrollIntoView();
+    }
+    setActiveItem(item);
+  }
+
+  function renderItem(item, index) {
+    if (Array.isArray(item)) {
+      return (
+        <ul key={index} className="ws-toc-sublist">
+          {item.map(renderItem)}
+        </ul>
+      );
+    }
+  
+    const slug = slugger(item);
+    return (
+      <li key={index} className="ws-toc-item">
+        <a
+          href={`#${slug}`}
+          className={css(
+            'ws-toc-link', 
+            item === activeItem && 'ws-toc-link--current'
+          )}
+          onClick={ev => onClickItem(ev, slug, item)}
+        >
+          {item}
+        </a>
+      </li>
+    );
+  }
 
   return (
     <nav className="ws-toc">

@@ -162,7 +162,13 @@ export const SideNavLayout = ({ children }) => {
       <div id="ws-page-banners">
         {hasGdprBanner && <GdprBanner />}
       </div>
-      <Page id="ws-page" header={Header} sidebar={SideBar} isManagedSidebar>
+      <Page
+        id="ws-page"
+        mainContainerId="ws-page-main"
+        header={Header}
+        sidebar={SideBar}
+        isManagedSidebar
+      >
         {children}
       </Page>
     </React.Fragment>

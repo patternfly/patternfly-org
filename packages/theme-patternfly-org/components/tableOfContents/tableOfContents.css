@@ -1,7 +1,8 @@
 .ws-toc {
-  top: var(--pf-global--spacer--sm);
+  top: 0;
   order: 1;
   position: sticky;
+  padding-top: var(--pf-global--spacer--xl);
   padding-left: var(--pf-global--spacer--md);
   align-self: flex-start;
   min-width: 280px;
