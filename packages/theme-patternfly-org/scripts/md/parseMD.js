@@ -38,7 +38,8 @@ function toReactComponent(mdFilePath, source) {
         file.fail('id attribute is required in frontmatter for PatternFly docs');
       }
       else if (frontmatter.id === 'Forms') {
-        // Temporarily override section for Demo tabs until we port this upstream
+        // Temporary override section until https://github.com/patternfly/patternfly/pull/3428
+        // lands in react-docs
         frontmatter.id = 'Form';
       }
       if (!frontmatter.hideTOC) {
