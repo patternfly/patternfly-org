@@ -2,7 +2,7 @@ import React from 'react';
 import { PageSection, Title } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { Router, useLocation } from '@reach/router';
-import { CSSVariables, PropsTable, TableOfContents, Link, AccordionHeader, InlineAlert } from '../components';
+import { CSSVariables, PropsTable, TableOfContents, Link, AutoLinkHeader, InlineAlert } from '../components';
 import { capitalize, getTitle } from '../helpers';
 import './mdx.css';
 
@@ -52,19 +52,25 @@ const MDXChildTemplate = ({
           {InlineAlerts}
           <Component />
           {propsTitle && (
-            <AccordionHeader title={propsTitle} titleId="props">
+            <React.Fragment>
+              <AutoLinkHeader size="h2" className="ws-h2" id="props">
+                {propsTitle}
+              </AutoLinkHeader>
               {propComponents.map(component => (
                 <PropsTable
                   key={component.name}
                   caption={`${component.name} properties`}
                   rows={component.props} />
               ))}
-            </AccordionHeader>
+            </React.Fragment>
           )}
           {cssVarsTitle && (
-            <AccordionHeader title={cssVarsTitle} titleId="css-variables">
+            <React.Fragment>
+              <AutoLinkHeader size="h2" className="ws-h2" id="css-variables">
+                {cssVarsTitle}
+              </AutoLinkHeader>
               <CSSVariables prefix={cssPrefix} />
-            </AccordionHeader>
+            </React.Fragment>
           )}
           {sourceLink && (
             <React.Fragment>
