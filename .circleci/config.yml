@@ -41,7 +41,7 @@ workflows:
         - build_v3
         filters:
           branches:
-            only: feat/org-redesign
+            only: master
 jobs:
   install:
     docker:

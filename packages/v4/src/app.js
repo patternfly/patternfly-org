@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, useLocation } from '@reach/router';
 import { SideNavLayout } from 'theme-patternfly-org/layouts';
+import { Footer } from 'theme-patternfly-org/components';
 import { MDXTemplate } from 'theme-patternfly-org/templates/mdx';
 import { routes, groupedRoutes, getAsyncComponent } from './routes';
 import LayoutOptions from '../patternfly-docs.config.js';
@@ -26,7 +27,12 @@ const AppRoute = ({ child }) => {
     window.ga('send', 'pageview');
   }
 
-  return child;
+  return (
+    <React.Fragment>
+      {child}
+      {LayoutOptions.hasFooter && <Footer />}
+    </React.Fragment>
+  );
 }
 
 // Export for SSR

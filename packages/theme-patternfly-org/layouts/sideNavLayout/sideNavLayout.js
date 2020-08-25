@@ -14,7 +14,7 @@ import {
   Divider
 } from '@patternfly/react-core';
 import { SearchIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
-import { SideNav, TopNav, Footer, GdprBanner } from '../../components';
+import { SideNav, TopNav, GdprBanner } from '../../components';
 import ConfigContext from '../../helpers/configContext';
 import staticVersions from '../../versions.json';
 import logo from '../logo.svg';
@@ -106,7 +106,6 @@ function attachDocSearch(algolia, timeout) {
 export const SideNavLayout = ({ children }) => {
   const {
     hasGdprBanner,
-    hasFooter,
     algolia,
     hasVersionSwitcher,
     sideNavItems,
@@ -167,7 +166,6 @@ export const SideNavLayout = ({ children }) => {
       </div>
       <Page className="ws-page" header={Header} sidebar={SideBar} isManagedSidebar>
         {children}
-        {hasFooter && <Footer />}
       </Page>
     </div>
   );
