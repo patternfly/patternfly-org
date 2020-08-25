@@ -11,13 +11,12 @@ module.exports = (_env, argv) => {
   return {
     output: {
       publicPath: isProd ? `${pathPrefix}/` : '/',
+      pathinfo: false, // https://webpack.js.org/guides/build-performance/#output-without-path-info,
       hashDigestLength: 8
     },
+    amd: false,
     mode: isProd ? 'production' : 'development',
-    devtool: isProd ? 'source-map' : 'cheap-module-source-map',
-    resolve: {
-      extensions: [ '.tsx', '.ts', '.js', '.jsx' ],
-    },
+    devtool: isProd ? false : 'cheap-module-source-map',
     module: {
       rules: [
         {

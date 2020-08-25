@@ -11,6 +11,7 @@ const { tsDocgen } = require('../tsDocgen');
 
 const outputBase = path.join(process.cwd(), `src/generated`);
 const tsDocs = {};
+const routes = {};
 
 function toReactComponent(mdFilePath, source) {
   // vfiles allow for nicer error messages and have native `unified` support
@@ -35,6 +36,11 @@ function toReactComponent(mdFilePath, source) {
       // Fail early
       if (!frontmatter.id) {
         file.fail('id attribute is required in frontmatter for PatternFly docs');
+      }
+      else if (frontmatter.id === 'Forms') {
+        // Temporary override section until https://github.com/patternfly/patternfly/pull/3428
+        // lands in react-docs
+        frontmatter.id = 'Form';
       }
       if (!frontmatter.hideTOC) {
         toc = extractTableOfContents(tree);
@@ -75,6 +81,15 @@ function toReactComponent(mdFilePath, source) {
           sourceRepo}/blob/master/${
           normalizedPath}`
       };
+
+      pageData.id = pageData.id.replace('Forms', 'Form');
+      // Temporarily override section for Demo tabs until we port this upstream
+      if (frontmatter.section === 'demos' && routes[slug.replace('demos', 'components')]) {
+        pageData.section = 'components';
+        pageData.source = `${source}-demos`;
+        pageData.slug = makeSlug(pageData.source, pageData.section, pageData.id);
+        outPath = path.join(outputBase, `${pageData.slug}.js`);
+      }
       if (frontmatter.title) {
         pageData.title = frontmatter.title;
       }
@@ -94,6 +109,9 @@ function toReactComponent(mdFilePath, source) {
         pageData.cssPrefix = Array.isArray(frontmatter.cssPrefix)
           ? frontmatter.cssPrefix
           : [frontmatter.cssPrefix];
+      }
+      if (frontmatter.katacodaBroken) {
+        pageData.katacodaBroken = frontmatter.katacodaBroken;
       }
     })
     // Delete HTML comments
@@ -143,8 +161,6 @@ function toReactComponent(mdFilePath, source) {
     outPath
   };
 }
-
-const routes = {};
 
 module.exports = {
   sourceProps(files) {
