@@ -12,6 +12,7 @@
 }
 
 #main-content {
+  flex: 1;
   padding: 0;
   background-color: var(--pf-global--BackgroundColor--100);
 }
