@@ -2,6 +2,7 @@
 id: Training
 section: get-started
 source: html
+katacodaBroken: true
 ---
 
 import { Gallery, GalleryItem } from '@patternfly/react-core';

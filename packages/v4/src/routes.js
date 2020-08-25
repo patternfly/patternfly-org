@@ -54,9 +54,12 @@ const groupedRoutes = Object.entries(routes)
 
 const sourceOrder = {
   react: 1,
-  html: 2
+  'react-demos': 2,
+  html: 3,
+  'html-demos': 4,
+  'design-guidelines': 99
 };
-const defaultOrder = 99;
+const defaultOrder = 50;
 
 const sortSources = ({ source: s1 }, { source: s2 }) => {
   const s1Index = sourceOrder[s1] || defaultOrder;

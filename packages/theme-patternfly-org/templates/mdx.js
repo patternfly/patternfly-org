@@ -1,6 +1,7 @@
 import React from 'react';
 import { PageSection, Title } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
+import { ExternalLinkAltIcon } from '@patternfly/react-icons';
 import { Router, useLocation } from '@reach/router';
 import { CSSVariables, PropsTable, TableOfContents, Link, AutoLinkHeader, InlineAlert } from '../components';
 import { capitalize, getTitle } from '../helpers';
@@ -17,7 +18,8 @@ const MDXChildTemplate = ({
     sourceLink,
     cssPrefix = [],
     optIn,
-    beta
+    beta,
+    katacodaBroken
   } = Component.getPageData();
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
   const propsTitle = propComponents.length > 0 && 'Props';
@@ -37,6 +39,11 @@ const MDXChildTemplate = ({
       {beta && (
         <InlineAlert title="Beta feature">
           This Beta component is currently under review, so please join in and give us your feedback on the <a href="https://forum.patternfly.org/">PatternFly forum</a>.
+        </InlineAlert>
+      )}
+      {katacodaBroken && (
+        <InlineAlert variant="warning" title="Down for maintenance">
+          The embedded version of our tutorials are broken, but you can still access our tutorials on <a href="https://www.katacoda.com/patternfly">Katacoda.com <ExternalLinkAltIcon /></a>.
         </InlineAlert>
       )}
     </React.Fragment>
@@ -124,9 +131,7 @@ export const MDXTemplate = ({
                   )}
                 >
                   <Link className="pf-c-tabs__link" to={`${path}/${source}`}>
-                    {source === 'html'
-                      ? 'HTML'
-                      : capitalize(source.replace(/-/g, ' '))}
+                    {capitalize(source.replace('html', 'HTML').replace(/-/g, ' '))}
                   </Link>
                 </li>
               ))}

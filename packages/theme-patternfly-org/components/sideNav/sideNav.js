@@ -24,11 +24,7 @@ const NavItem = ({ text, href }) => (
   </li>
 );
 
-export const SideNav = ({
-  location = typeof window !== 'undefined' ? window.location : { pathname: '/' },
-  groupedRoutes = {},
-  navItems = []
-}) => {
+export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
   React.useEffect(() => {
     if (typeof window === 'undefined') {
       return;
@@ -56,6 +52,7 @@ export const SideNav = ({
             });
           }
           else {
+            // Use global.location in SSR or just normal "location" client-side
             const isActive = location.pathname.includes(`/${slugger(section)}/`);
             return (
               <NavExpandable
