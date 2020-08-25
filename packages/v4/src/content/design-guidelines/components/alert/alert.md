@@ -1,6 +1,7 @@
 ---
 id: Alert
 section: components
+related: ['Alert', 'Alert group']
 ---
 
 **Alerts** are used to notify the user about a change in status or other event.
@@ -125,14 +126,3 @@ A more accessible version of this message would look like this:
 <img src="./img/Notification-content-accessible.png" alt="Non-accessible alert example" width="615"/>
 
 While this is more verbose, it has the advantage of being usable for both sighted and non-sighted users by providing instructions to screen reader users about where they can go to complete the action.
-
-
-
-## Related components and demos
-**HTML/CSS**
-* [Alert](/documentation/core/components/alert)
-* [Alert group](/documentation/core/components/alertgroup)
-
-**React**
-* [Alert](/documentation/react/components/alert)
-* [Alert group](/documentation/react/components/alertgroup)

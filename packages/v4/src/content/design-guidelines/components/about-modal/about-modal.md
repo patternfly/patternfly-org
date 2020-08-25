@@ -1,6 +1,7 @@
 ---
 id: About modal
 section: components
+related: ['About modal', 'Backdrop', 'Background image', 'Button']
 ---
 
 The **about modal** displays information about an application like product version number(s), as well as any appropriate legal text.
@@ -31,19 +32,3 @@ Use the about modal to provide information about the product including the produ
 Provide access to the about modal using a help icon in the application masthead. Clicking the help icon will launch a dropdown menu. The help menu should always include an option labeled "About" that launches the about modal.
 
 <img src="./img/about-dropdown.png" alt="About modal dropdown" width="1500"/>
-
-<!--Learn more about how to create and organize a masthead in the [masthead design guidelines](/design-guidelines/usage-and-behavior/).-->
-
-## Related components and demos
-**HTML/CSS**
-* [About modal](/documentation/core/demos/aboutmodal)
-* [About modal box](/documentation/core/components/aboutmodalbox)
-* [Backdrop](/documentation/core/components/backdrop)
-* [Background image](/documentation/core/components/backgroundimage)
-* [Button](/documentation/core/components/button)
-
-**React**
-* [About modal](/documentation/react/components/aboutmodal)
-* [Background image](/documentation/react/components/backgroundimage)
-* [Brand](/documentation/react/components/brand)
-* [Button](/documentation/react/components/button)

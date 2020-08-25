@@ -151,12 +151,3 @@ You should keep the following in mind while designing your wizard screens:
 * Keep step labels short. The title at the top of each screen may be used to elaborate on the step label, but in all cases there should be a direct relationship between the step label and the screen title.
 * The last step should always be labeled review.
 * Default button labels for wizard navigation are: Next, Back, and Finish. If you are replacing the default button labels, keep them short and action oriented, e.g. “Create network.”
-
-
-## Related components and demos
-**Core HTML/CSS**
-* [Wizard](/documentation/core/components/wizard)
-* [Wizard (demo)](/documentation/core/demos/wizard)
-
-**React**
-* [Wizard](/documentation/react/components/wizard)

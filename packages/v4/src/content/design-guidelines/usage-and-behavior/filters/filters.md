@@ -1,6 +1,15 @@
 ---
 id: Filters
 section: guidelines
+related: [
+  'Badge',
+  'Chip',
+  'Chip group',
+  'Input group',
+  'Options menu',
+  'Select',
+  'Toolbar'
+]
 ---
 
 ## About
@@ -210,18 +219,3 @@ Filter hint text in input fields should read “Filter by [attribute]...” and 
 
 ### Clearing filters
 The option to clear all filters will be displayed after the last filter chip. It should read “Clear filters” in sentence case. When clicked, it should remove all applied filters and collapse the toolbar back into a single row.
-
-## Related components and demos
-**HTML/CSS**
-* [Badges](/documentation/core/components/badge)
-* [Chip](/documentation/core/components/chip)
-* [Chip group](/documentation/core/components/chipgroup)
-* [Input group](/documentation/core/components/inputgroup)
-* [Options menus](/documentation/core/components/optionsmenu)
-* [Select](/documentation/core/components/select)
-* [Toolbar](/documentation/core/components/toolbar)
-
-**React**
-* [Badges](/documentation/react/components/badge)
-* [Chip group](/documentation/react/components/chipgroup)
-* [Toolbar](/documentation/react/components/toolbar)

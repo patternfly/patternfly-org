@@ -47,10 +47,3 @@ Desktop compact pagination in toolbar
 **1. Items in view:** Allows the user to select the item count (number of listed items) per page, as seen in full pagination.
 
 **2. Compact pager:** Supplies the user with page-back and page-next controls only.
-
-## Related components and demos
-**Core HTML/CSS**
-* [Pagination](/documentation/core/components/pagination)
-
-**React**
-* [Pagination](/documentation/react/components/pagination)
