@@ -4,7 +4,6 @@
   top: var(--pf-global--spacer--md);
   order: 1;
   position: sticky;
-  background-color: var(--pf-global--BackgroundColor--100);
   padding-left: var(--pf-global--spacer--md);
   align-self: flex-start;
   min-width: 280px;

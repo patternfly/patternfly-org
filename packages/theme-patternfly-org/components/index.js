@@ -9,5 +9,4 @@ export * from './sideNav/sideNav';
 export * from './topNav/topNav';
 export * from './link/link';
 export * from './tableOfContents/tableOfContents';
-export * from './accordionHeader/accordionHeader';
 export * from './inlineAlert/inlineAlert';
