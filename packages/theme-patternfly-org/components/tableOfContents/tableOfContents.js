@@ -68,7 +68,8 @@ export const TableOfContents = ({
     }
     const scrollableElement = document.getElementById('ws-page-main');
     const titleElement = document.getElementById('ws-page-title');
-    const scrollElements = Array.from(scrollableElement.getElementsByClassName('ws-heading'))
+    const htmlElements = scrollableElement.querySelectorAll('h2.ws-heading,h3.ws-heading');
+    const scrollElements = Array.from(htmlElements)
       .map(e => ({
         y: e.offsetTop - titleElement.offsetHeight,
         text: e.innerText
