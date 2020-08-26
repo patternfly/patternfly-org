@@ -10,7 +10,6 @@ module.exports = {
   hasVersionSwitcher: true,
   sideNavItems: [
     { section: 'get-started' },
-    { section: 'overview' },
     { section: 'guidelines' },
     { section: 'UX writing' },
     { section: 'components' },
