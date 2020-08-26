@@ -185,14 +185,6 @@ In some situations, users may need to add or create something to view associated
 
 ![Addition or creation](./img/add-or-create.jpg)
 
-## Related components and demos
-**HTML/CSS**
-* [Empty state](/documentation/core/components/emptystate)
-
-**React**
-* [Empty state](/documentation/react/components/emptystate)
-
-
 <!-- ## Variations
 
 Empty states are most commonly presented in data lists, data tables, card views, or as a full-page.

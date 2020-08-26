@@ -1,6 +1,7 @@
 ---
 id: Toolbar
 section: components
+related: ['Overflow menu', 'Pagination']
 ---
 
 The **Toolbar** component provides a flexible system for creating responsive toolbars that manage the data displayed in a list, table, or any other data view. Toolbar configurations can be customized to support a variety of use cases.
@@ -121,15 +122,3 @@ The following is an example of a complex toolbar optimized for mobile.
 <img src="./img/toolbar-filters-mobile.png"  alt="toolbar with filters and actions hidden on mobile"  width="1308"/>
 
 Here, the search filter and filter group containing three drop-down filters are placed in a toggle group that collapsed when the screen shrinks to mobile size. The two action buttons are part of an overflow menu that collapses to a single kabob menu. The bulk selector and sort icon button are implemented as toolbar items that remain visible at all breakpoints.
-
-
-## Related components and demos
-**Core HTML/CSS**
-* [Toolbar](/documentation/core/components/toolbar)
-* [Overflow menu](/documentation/core/components/overflowmenu)
-* [Pagination](/documentation/core/components/pagination)
-
-**React**
-* [Toolbar](/documentation/react/components/toolbar)
-* [Overflow menu](/documentation/react/components/overflowmenu)
-* [Pagination](/documentation/react/components/pagination)
