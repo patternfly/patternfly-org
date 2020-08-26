@@ -6,10 +6,8 @@
   background-size: contain;
   width: 100%;
   max-width: 100%;
-  height: 100%;
   background-repeat: no-repeat;
-  /* background-image: url("../images/homeHeroLines.svg"), linear-gradient(to bottom, #004080, #0066cc); */
-  background-image: none,linear-gradient(180deg,#004080,#06c);
+  background-image: none, linear-gradient(180deg,#004080,#06c);
   background-size: cover;
 }
 
