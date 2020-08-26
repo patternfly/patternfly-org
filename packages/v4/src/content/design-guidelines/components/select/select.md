@@ -1,6 +1,12 @@
 ---
 id: Select
 section: components
+related: [
+  'Switch',
+  'Checkbox',
+  'Radio',
+  'Form control'
+]
 ---
 
 Use a **select** to choose one or more values from a list.
@@ -145,29 +151,3 @@ When providing fewer than 5 options, you can use [radio buttons](#radio-buttons)
 
 #### Form select
 A form select is a native select created by the browser, and it’s typically used within forms. If your use case only calls for simple selects, you may opt to use a [form select](/documentation/react/components/formselect). But if your use case requires more customization and capability, use a PatternFly [custom select list](/documentation/react/components/select). Just keep in mind that you should not use custom selects and form selects together in the same context, in order to maintain visual consistency in the UI.
-
-
-## Related components and demos
-**HTML/CSS**
-* [Switch](/documentation/core/components/switch)
-* [Check](/documentation/core/components/check)
-* [Radio](/documentation/core/components/radio)
-* [Select](/documentation/core/components/select)
-* [Form control](/documentation/core/components/formcontrol)
-
-**React**
-* [Switch](/documentation/react/components/switch)
-* [Checkbox](/documentation/react/components/checkbox)
-* [Radio](/documentation/react/components/radio)
-* [Select](/documentation/react/components/select)
-* [Form select](/documentation/react/components/formselect)
-
-
-
-
-
-
-
-
-
-

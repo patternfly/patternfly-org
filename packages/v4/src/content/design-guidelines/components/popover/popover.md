@@ -1,6 +1,11 @@
 ---
 id: Popover
 section: components
+related: [
+  'Button',
+  'Content',
+  'Tooltip'
+]
 ---
 
 Use a **popover** to display content in a new window that overlays the current page. Unlike a modal, a popover does not block the current page. By default clicking anywhere outside of the popover will dismiss it.
@@ -142,16 +147,3 @@ Both tooltips and popovers allow users to get more information in context. Howev
 * When you would like your in-context help to include pictures, actions, or links 
 
 <img src="./img/use-popovers.png" alt="Examples of popover use"  width="990"/>
-
-## Related components and demos
-**HTML/CSS**
-* [Button](/documentation/core/components/button)
-* [Content](/documentation/core/components/content)
-* [Popover](/documentation/core/components/popover)
-* [Tooltip](/documentation/core/components/tooltip)
-
-**React**
-* [Popover](/documentation/react/components/popover)
-* [Tooltip](/documentation/react/components/tooltip)
-* [Button](/documentation/react/components/button)
-* [Text](/documentation/react/components/text)

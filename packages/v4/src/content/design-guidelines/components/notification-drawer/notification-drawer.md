@@ -1,6 +1,7 @@
 ---
 id: Notification drawer
 section: components
+related: ['Notification drawer', 'Notification badge', 'Drawer']
 ---
 
 The **Notification Drawer** uses the [Drawer component](/documentation/core/components/drawer) to provide a place for viewing and managing incoming notifications.
@@ -86,15 +87,3 @@ When the notification drawer is being used, notifications will undergo the follo
 4. Notifications will remain in the drawer until either the user takes an action to clear them or they expire based on policies established by the application.
 
 5. Clearing a notification removes it from the drawer but does not delete it from the system. Depending on application requirements, notifications may be retained in an audit log or similar location after they have been removed from the drawer. Applications may consider supporting an Unclear action to restore the last cleared notification.
-
-## Related components and demos
-
-#### HTML/CSS
-* [Notification drawer](documentation/core/components/notificationdrawer)
-* [Notification badge](documentation/core/components/notificationbadge)
-* [Drawer](documentation/core/components/drawer)
-
-#### React
-* [Notification drawer](documentation/react/components/notificationdrawer)
-* [Notification badge](documentation/react/components/notificationbadge)
-* [Drawer](documentation/react/components/drawer)

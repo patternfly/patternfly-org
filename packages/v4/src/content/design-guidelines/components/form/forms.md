@@ -1,6 +1,25 @@
 ---
 id: Form
 section: components
+related: [
+  'Form',
+  'Button',
+  'Checkbox',
+  'Content',
+  'Dropdown',
+  'Form control',
+  'Input group',
+  'Popover',
+  'Progress',
+  'Radio',
+  'Switch',
+  'Tooltip',
+  'Select',
+  'Switch',
+  'Text area',
+  'Text',
+  'Text input'
+]
 ---
 
 A **Form** is a group of elements used to collect information from a user.
@@ -268,34 +287,3 @@ If you do decide to group certain columns together, they should be organized so 
 You should never have multi-column forms that read like a book, where you finish the left side of the form first, then move on to the right side. The form itself should still be filled from top to button and should not have two unrelated fields on the same line.
 
 <img src="./img/multi-column-read.png" alt="Visual of how multi-column forms should be read and presented" width="990"/>
-
-## Related components and demos
-The PatternFly components listed can be used in a number of ways to build forms to suit specific needs or use cases.
-
-**HTML/CSS components**
-* [Form](/documentation/core/components/form)
-* [Button](/documentation/core/components/button)
-* [Check](/documentation/core/components/check)
-* [Content](/documentation/core/components/content)
-* [Dropdown](/documentation/core/components/dropdown)
-* [Form control](/documentation/core/components/formcontrol)
-* [Input group](/documentation/core/components/inputgroup)
-* [Popover](/documentation/core/components/popover)
-* [Progress](/documentation/core/components/progress)
-* [Switch](/documentation/core/components/switch)
-* [Tooltip](/documentation/core/components/tooltip)
-
-**React components**
-* [Form](/documentation/react/components/form)
-* [Button](/documentation/react/components/button)
-* [Checkbox](/documentation/react/components/checkbox)
-* [Dropdown](/documentation/react/components/dropdown)
-* [Progress](/documentation/react/components/progress)
-* [Radio](/documentation/react/components/radio)
-* [Select](/documentation/react/components/select)
-* [Switch](/documentation/react/components/switch)
-* [Text area](/documentation/react/components/textarea)
-* [Text](/documentation/react/components/text)
-* [Popover](/documentation/react/components/popover)
-* [Text input](/documentation/react/components/textinput)
-* [Tooltip](/documentation/react/components/tooltip)
