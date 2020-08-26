@@ -73,7 +73,7 @@ export const TableOfContents = ({
       // When we hide h3s for long TOCs we don't want to track them
       .filter(e => items.flat().includes(e.innerText))
       .map(e => ({
-        y: e.offsetTop - titleElement.offsetHeight,
+        y: e.offsetTop - titleElement ? titleElement.offsetHeight : 0,
         text: e.innerText
       }))
       .sort((e1, e2) => e2.y - e1.y);

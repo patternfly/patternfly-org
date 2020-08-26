@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from '../link/link';
 import { Nav, NavList, NavExpandable, capitalize } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
+import { Location } from '@reach/router';
+import ConfigContext from '../../helpers/configContext';
 import { slugger } from '../../helpers';
 import './sideNav.css';
 
@@ -25,6 +27,7 @@ const NavItem = ({ text, href }) => (
 );
 
 export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
+  const { pathPrefix } = React.useContext(ConfigContext);
   React.useEffect(() => {
     if (typeof window === 'undefined') {
       return;
@@ -43,34 +46,34 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
   return (
     <Nav aria-label="Side Nav" theme="light">
       <NavList className="ws-side-nav-list">
-        {navItems.map(({ section, text, href }) => {
-          if (!section) {
-            // Single nav item
-            return NavItem({
+        {navItems.map(({ section, text, href }) => section
+          ? (
+            <Location key={section}>
+              {({ location }) => {
+                const isActive = location.pathname.startsWith(`${pathPrefix}/${slugger(section)}`);
+
+                return (
+                  <NavExpandable
+                    title={capitalize(section.replace(/-/g, ' '))}
+                    isActive={isActive}
+                    isExpanded={isActive}
+                    className="ws-side-nav-group"
+                  >
+                    {Object.entries(groupedRoutes[section] || {})
+                      .map(([id, { slug }]) => ({ text: id, href: slug }))
+                      .sort(({ text: text1 }, { text: text2 }) => text1.localeCompare(text2))
+                      .map(NavItem)
+                    }
+                  </NavExpandable>
+                );
+              }}
+            </Location>
+          )
+          : NavItem({
               text: text || capitalize(href.replace(/\//g, '').replace(/-/g, ' ')),
               href: href
-            });
-          }
-          else {
-            // Use global.location in SSR or just normal "location" client-side
-            const isActive = location.pathname.includes(`/${slugger(section)}/`);
-            return (
-              <NavExpandable
-                key={section}
-                title={capitalize(section.replace(/-/g, ' '))}
-                isActive={isActive}
-                isExpanded={isActive}
-                className="ws-side-nav-group"
-              >
-                {Object.entries(groupedRoutes[section] || {})
-                  .map(([id, { slug }]) => ({ text: id, href: slug }))
-                  .sort(({ text: text1 }, { text: text2 }) => text1.localeCompare(text2))
-                  .map(NavItem)
-                }
-              </NavExpandable>
-            );
-          }
-        })}
+            })
+        )}
       </NavList>
     </Nav>
   );
