@@ -1,10 +1,11 @@
 .ws-toc {
   top: 0;
   order: 1;
+  flex-grow: 1;
   position: sticky;
-  padding: var(--pf-global--spacer--xl) var(--pf-global--spacer--md) var(--pf-global--spacer--md) 0;
+  padding: var(--pf-global--spacer--xl) var(--pf-global--spacer--lg) var(--pf-global--spacer--lg) var(--pf-global--spacer--2xl);
   align-self: flex-start;
-  min-width: 280px;
+  width: 280px;
   max-height: calc(100vh - 76px);
   overflow-y: auto;
 }

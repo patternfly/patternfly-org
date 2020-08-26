@@ -67,7 +67,7 @@ export const TableOfContents = ({
       return;
     }
     const scrollableElement = document.getElementById('ws-page-main');
-    const titleElement = document.getElementById('nav-content');
+    const titleElement = document.getElementById('nav-content') || document.getElementById('ws-page-title');
     const htmlElements = scrollableElement.querySelectorAll('h2.ws-heading,h3.ws-heading');
     const scrollElements = Array.from(htmlElements)
       // When we hide h3s for long TOCs we don't want to track them
@@ -116,13 +116,23 @@ export const TableOfContents = ({
     }
   
     const slug = slugger(item);
+    const isActive = item === activeItem;
+    const ref = React.useRef();
+    if (isActive && ref.current) {
+      const bounding = ref.current.getBoundingClientRect();
+      if (bounding.y < 76 || bounding.y > window.innerHeight - bounding.height) {
+        ref.current.scrollIntoView(true);
+      }
+    }
+
     return (
       <li key={index} className="ws-toc-item">
         <a
+          ref={ref}
           href={`#${slug}`}
           className={css(
             'ws-toc-link', 
-            item === activeItem && 'ws-toc-link--current'
+            isActive && 'ws-toc-link--current'
           )}
           onClick={ev => onClickItem(ev, slug, item)}
         >
