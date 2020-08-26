@@ -2,8 +2,7 @@
   top: 0;
   order: 1;
   position: sticky;
-  padding-top: var(--pf-global--spacer--xl);
-  padding-left: var(--pf-global--spacer--md);
+  padding: var(--pf-global--spacer--xl) var(--pf-global--spacer--md) var(--pf-global--spacer--md) 0;
   align-self: flex-start;
   min-width: 280px;
   max-height: calc(100vh - 76px);
