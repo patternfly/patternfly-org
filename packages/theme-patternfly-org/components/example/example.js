@@ -63,7 +63,7 @@ export const Example = ({
   const location = useLocation();
 
   const exampleName = title.replace(/-/g, ' ').replace(/  /g, '-');
-  const fullscreenLink = `${location.pathname}/${location.pathname.endsWith(source) ? '' : source}/${slugger(title)}`;
+  const fullscreenLink = `${location.pathname.replace(/\/$/, '')}${location.pathname.endsWith(source) ? '' : `/${source}`}/${slugger(title)}`;
   const scope = {
     ...liveContext,
     // These 2 are in the bundle anyways for the site since we dogfood
