@@ -65,7 +65,7 @@ Capitalize <b>Red Hat feature names</b> when they’re used as proper nouns or w
 Examples:
 
 | **Feature name** | **UI text**  | **Reasoning**    |
-|:----------------:|:------------:|:----------------:|
+|------------------|--------------|------------------|
 | Compliance   | “Check your system compliance using Red Hat Insights Compliance.”                                                  | The first “compliance” is lowercase since it refers to compliance as a concept. The second “compliance” refers to a specific feature offered on cloud.redhat.com.                                     |
 | User Access  | “Manage user access for your organization using the User Access feature.”                                          | The first “user access” is lowercase because it refers to user access as a concept. The second “user access” is capitalized because it refers to the User Access feature offered on cloud.redhat.com. |
 | Sources      | “Add a source by going to **Settings > Sources.**” "Check the **Sources** table for status." Button text: "Add source" | “Sources” is only capitalized when it directly refers to a subsection, feature, or location in the UI. Always write buttons in sentence case.                                                         |

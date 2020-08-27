@@ -57,8 +57,7 @@
 }
 
 .ws-toc-link.ws-toc-link--current,
-.ws-toc-link:hover,
-.ws-toc-link:focus {
+.ws-toc-link:hover {
   text-decoration: none;
   --ws-toc-link--Color: var(--pf-global--primary-color--100);
 }
