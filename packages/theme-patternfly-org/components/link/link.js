@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as ReachLink, navigate, useLocation } from '@reach/router';
+import { Link as ReachLink, navigate } from '@reach/router';
 import ConfigContext from '../../helpers/configContext';
 
 const Promiseany = (Promise.any || function ($) {
