@@ -1,7 +1,11 @@
 /* Page layout */
 /* tells .pf-c-page to consume the available space left over from the banners/footers */
-.ws-page {
-  flex: 1 1;
+#ws-router {
+  display: flex;
+  flex-direction: column;
+}
+#ws-router > section:first-of-type:not(#nav-content) {
+  flex: 1;
 }
 
 .ws-switcher-divider {

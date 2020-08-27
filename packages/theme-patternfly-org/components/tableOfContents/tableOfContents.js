@@ -8,6 +8,7 @@ import {
   GridItem,
   Title
 } from '@patternfly/react-core';
+import { css } from '@patternfly/react-styles';
 import { slugger } from '../../helpers';
 import versions from '../../versions.json';
 import './tableOfContents.css';
@@ -52,30 +53,93 @@ const ReleaseNotesTOC = () => (
   </Grid>
 );
 
-const renderItem = (item, index) => {
-  if (Array.isArray(item)) {
-    return (
-      <ul key={index}>
-        {item.map(renderItem)}
-      </ul>
-    );
-  }
-
-  return (
-    <li key={index}>
-      <a href={`#${slugger(item)}`} className="ws-toc-item" onClick={ev => console.log('clicked', ev.target)}>
-        {item}
-      </a>
-    </li>
-  );
-}
-
 export const TableOfContents = ({
   releaseNoteTOC,
   items
 }) => {
   if (releaseNoteTOC) {
     return <ReleaseNotesTOC />;
+  }
+
+  const [activeItem, setActiveItem] = React.useState(items[0]);
+  React.useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    const scrollableElement = document.getElementById('ws-page-main');
+    const titleElement = document.getElementById('nav-content') || document.getElementById('ws-page-title');
+    const htmlElements = scrollableElement.querySelectorAll('h2.ws-heading,h3.ws-heading');
+    const scrollElements = Array.from(htmlElements)
+      // When we hide h3s for long TOCs we don't want to track them
+      .filter(e => items.flat().includes(e.innerText))
+      .map(e => ({
+        y: e.offsetTop - titleElement.offsetHeight,
+        text: e.innerText
+      }))
+      .sort((e1, e2) => e2.y - e1.y);
+    function scrollSpy() {
+      const scrollPosition = scrollableElement.scrollTop;
+      window.requestAnimationFrame(() => {
+        for (const { y, text } of scrollElements) {
+          if (scrollPosition >= y) {
+            return setActiveItem(text);
+          }
+        }
+      });
+    }
+    if (scrollableElement) {
+      scrollSpy();
+      scrollableElement.addEventListener('scroll', scrollSpy);
+    }
+
+    return () => scrollableElement.removeEventListener('scroll', scrollSpy);
+  }, []);
+
+  function onClickItem(ev, id, item) {
+    ev.preventDefault(); // Don't use client-side routing
+    // Chrome does not jump until ALL network requests finish.
+    // We have to force it to...
+    const referencedElement = document.getElementById(id);
+    if (referencedElement) {
+      referencedElement.scrollIntoView();
+    }
+    setActiveItem(item);
+  }
+
+  function renderItem(item, index) {
+    if (Array.isArray(item)) {
+      return (
+        <ul key={index} className="ws-toc-sublist">
+          {item.map(renderItem)}
+        </ul>
+      );
+    }
+  
+    const slug = slugger(item);
+    const isActive = item === activeItem;
+    const ref = React.useRef();
+    if (isActive && ref.current) {
+      const bounding = ref.current.getBoundingClientRect();
+      if (bounding.y < 76 || bounding.y > window.innerHeight - bounding.height) {
+        ref.current.scrollIntoView(true);
+      }
+    }
+
+    return (
+      <li key={index} className="ws-toc-item">
+        <a
+          ref={ref}
+          href={`#${slug}`}
+          className={css(
+            'ws-toc-link', 
+            isActive && 'ws-toc-link--current'
+          )}
+          onClick={ev => onClickItem(ev, slug, item)}
+        >
+          {item}
+        </a>
+      </li>
+    );
   }
 
   return (

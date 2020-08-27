@@ -20,7 +20,7 @@ export const AutoLinkHeader = ({
   headingLevel,
   children,
   metaText,
-  ...props
+  className
 }) => {
   const slug = slugger(children);
 
@@ -29,7 +29,8 @@ export const AutoLinkHeader = ({
       id={slug}
       size={sizes[size]}
       headingLevel={headingLevel || size}
-      {...props}>
+      className={`ws-heading ${className}`}
+    >
       <a href={`#${slug}`} className="ws-heading-anchor" tabIndex="-1" aria-hidden>
         <LinkIcon className="ws-heading-anchor-icon" style={{ verticalAlign: 'middle' }} />
       </a>
