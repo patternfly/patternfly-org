@@ -111,5 +111,6 @@ function getAsyncComponent(url, pathPrefix) {
 module.exports = {
   routes,
   groupedRoutes,
+  allRoutes,
   getAsyncComponent
 };

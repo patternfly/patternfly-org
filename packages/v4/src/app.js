@@ -4,9 +4,10 @@ import { Router, useLocation } from '@reach/router';
 import { SideNavLayout } from 'theme-patternfly-org/layouts';
 import { Footer } from 'theme-patternfly-org/components';
 import { MDXTemplate } from 'theme-patternfly-org/templates/mdx';
-import { routes, groupedRoutes, getAsyncComponent } from './routes';
+import { routes, groupedRoutes, allRoutes, getAsyncComponent } from './routes';
 import LayoutOptions from '../patternfly-docs.config.js';
 import ConfigContext from 'theme-patternfly-org/helpers/configContext';
+import { slugger } from 'theme-patternfly-org/helpers/slugger';
 import '../patternfly-docs.css.js';
 
 const isProd = process.env.NODE_ENV === 'production';
@@ -37,34 +38,61 @@ const AppRoute = ({ child }) => {
 
 const SideNavRouter = () => (
   <SideNavLayout>
-    <Router>
-      {Object.entries(LayoutOptions.routes).map(([path, props]) => {
-        const { Component } = props;
-        if (Component) {
-          return <AppRoute key={path} path={path} default={path === '/404'} child={<Component />} />;
-        }
-        const { title, sources } = props;
-        return (
-          <AppRoute key={path} path={path + '/*'} child={<MDXTemplate
-            path={path}
-            layoutOptions={LayoutOptions}
-            title={title}
-            sources={sources}
-          />} />
-        );
-      })}
+    <Router id="ws-page-content-router">
+      {Object.entries(LayoutOptions.routes)
+        .map(([path, { Component, title, sources }]) => Component
+          ? <AppRoute key={path} path={path} default={path === '/404'} child={<Component />} />
+          : (
+            <AppRoute key={path} path={path + '/*'} child={<MDXTemplate
+              path={path}
+              layoutOptions={LayoutOptions}
+              title={title}
+              sources={sources}
+            />} />
+          )
+        )
+      }
     </Router>
   </SideNavLayout>
 );
 
-const AboutModalFull = () => <div>hey im a fs preview</div>
+const FullscreenComponent = ({ Component, title }) => {
+  const [isLoaded, setIsLoaded] = React.useState(false);
+  React.useEffect(() => {
+    Component.preload().then(() => setIsLoaded(true));
+  }, []);
+  const { examples = {} } = Component.getPageData();
+  const Example = examples[title];
+  return isLoaded ? <Example isFullscreen={false} isFullscreenPreview /> : <Component /> // ;
+};
 
 // Export for SSR
 export const App = () => (
   <ConfigContext.Provider value={LayoutOptions}>
     <Router basepath={LayoutOptions.pathPrefix} id="ws-router">
       <SideNavRouter path="/*" />
-      <AboutModalFull path="/components/about-modal/basic" />
+      {Object.entries(allRoutes)
+        .map(([path, { toc = [], Component }]) => {
+          // Use TOC for fullscreen pages
+          const exampleIndex = toc.indexOf('Examples');
+          let examples = exampleIndex === -1 ? [] : toc[exampleIndex + 1];
+          examples = Array.isArray(examples) ? examples : [];
+          return examples.map(title => ({
+            path: `${path}/${slugger(title)}`,
+            title,
+            Component
+          }));
+        })
+        .flat()
+        .map(({ path, title, Component }) =>
+          <FullscreenComponent
+            key={path}
+            path={path}
+            Component={Component}
+            title={title}
+          />
+        )
+      }
     </Router>
   </ConfigContext.Provider>
 );

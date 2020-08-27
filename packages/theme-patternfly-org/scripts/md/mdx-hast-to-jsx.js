@@ -11,7 +11,8 @@ const jsxParser = acorn.Parser.extend(jsx());
 
 // Adapted from https://github.com/mdx-js/mdx/blob/next/packages/mdx/mdx-hast-to-jsx.js
 function toJSX(node, parentNode = {}, options = {}) {
-  options.indent = options.indent ||2;
+  options.examples = options.examples || {};
+  options.indent = options.indent || 2;
   if (node.type === 'root') {
     return serializeRoot(node, options);
   }
@@ -34,19 +35,18 @@ function toJSX(node, parentNode = {}, options = {}) {
   }
 }
 
-function compile(options = {}) {
-  this.Compiler = function (tree) {
+function compile(options = { }) {
+  this.Compiler = function(tree) {
     return toJSX(tree, {}, options);
   }
 }
 
 function serializeRoot(node, options) {
-  const { getRelPath, getPageData } = options;
+  const { getRelPath, getPageData, examples } = options;
   const pageData = {...getPageData()};
   // Save some kb
   delete pageData.toc;
   const exportName = pageData.slug.replace(/[\/-](.)?/g, (_, match) => capitalize(match)) + 'Docs';
-  options.exportName = exportName;
   const groups = {
     import: [],
     rest: []
@@ -80,29 +80,37 @@ function serializeRoot(node, options) {
     .map(childNode => toJSX(childNode, node, options))
     .join('');
 
-  return `import React from 'react';
+  let res = `import React from 'react';
 import { AutoLinkHeader, Example, Link as PatternflyThemeLink } from 'theme-patternfly-org/components';
 ${importStatements}
-
 const pageData = ${JSON.stringify(pageData, null, 2)};
-${importSpecifiers
-  ? `pageData.liveContext = {
-  ${importSpecifiers}
-};`
-  : ''}
-const Component = () => (
+`;
+  if (importSpecifiers) {
+    res += `pageData.liveContext = {\n${
+      '  ' + importSpecifiers
+    }\n};\n`
+  }
+  if (examples) {
+    res += `pageData.examples = {\n${
+      '  ' + Object.entries(examples)
+        .map(([key, val]) => `'${key}': ${val}`)
+        .join(',\n  ')
+    }\n};\n`;
+  }
+  res += `\nconst Component = () => (
   <React.Fragment>${childNodes.replace(/\n\s*\n/g, '\n')}
   </React.Fragment>
 );
 Component.displayName = '${exportName}';
 Component.pageData = pageData;
 
-export default Component;
-`;
+export default Component;\n`;
+
+  return res;
 }
 
 function serializeElement(node, options) {
-  const { indent, exportName } = options;
+  const { indent, examples } = options;
   const { type, props } = toH(
     fakeReactCreateElement,
     Object.assign({}, node, {children: []}),
@@ -121,14 +129,28 @@ function serializeElement(node, options) {
     : JSON.stringify(props);
 
   const indentText = '  '.repeat(indent);
+  let res = '\n';
+  const isFullscreenExample = type === 'Example' && !props.noLive;
+  res += `${indentText}<${type}`;
+  if (isFullscreenExample) {
+    res += ` {...pageData} isFullscreenPreview={isFullscreenPreview}`;
+  }
+  else if (type === 'img' && srcImport) {
+    res += ` src={${srcImport}}`;
+  }
+  if (spread) {
+    res += ` {...${spread}}`;
+  }
+  res += `>\n${indentText}  ${content}`;
+  res += `\n${indentText}</${type}>`;
+  if (isFullscreenExample) {
+    examples[props.title] = `({ isFullscreenPreview }) => ${res}`;
+    res = `\n${indentText}{React.createElement(pageData.examples[${
+      JSON.stringify(props.title)
+    }])}`;
+  }
 
-  return `
-${indentText}<${type}${
-  type === 'Example' ? ` {...pageData}` : ''}${
-  type === 'img' && srcImport ? ` src={${srcImport}}` : ''}${
-  spread ? ` {...${spread}}` : ''}>
-${indentText}  ${content}
-${indentText}</${type}>`;
+  return res;
 }
 
 function serializeComponent(node, options) {
