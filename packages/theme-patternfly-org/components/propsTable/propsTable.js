@@ -1,17 +1,23 @@
 import React from 'react';
 import { Badge } from '@patternfly/react-core';
-import { Table, TableHeader, TableBody } from '@patternfly/react-table';
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  fitContent,
+  cellWidth
+} from '@patternfly/react-table';
 
 export const PropsTable = ({
   caption,
   rows
 }) => {
   const columns = [
-    { title: 'Name' },
-    { title: 'Type' },
-    { title: 'Required' },
-    { title: 'Default' },
-    { title: 'Description' }
+    { title: 'Name', transforms: [cellWidth(15)] },
+    { title: 'Type', transforms: [cellWidth(15)] },
+    { title: 'Required', transforms: [fitContent] },
+    { title: 'Default', transforms: [] },
+    { title: 'Description', transforms: [] }
   ];
 
   return (
@@ -24,19 +30,24 @@ export const PropsTable = ({
       gridBreakPoint="grid-lg"
       rows={rows.map((row, idx) => ({
         cells: [
-          <div className='pf-m-fit-content'>
+          <div className="pf-m-break-word">
             {row.deprecated && 'Deprecated: '}
             {row.name}
-            {row.beta &&
+            {row.beta && (
               <Badge key={`${row.name}-${idx}`} className="ws-beta-badge pf-u-ml-sm">
                 Beta
-              </Badge>}
+              </Badge>
+            )}
           </div>,
-          row.type,
+          <div className="pf-m-break-word">
+            {row.type}
+          </div>,
           <div>
             {row.required ? 'Yes' : 'No'}
           </div>,
-          row.defaultValue,
+          <div className="pf-m-break-word">
+            {row.defaultValue}
+          </div>,
           row.description
         ]
       }))}

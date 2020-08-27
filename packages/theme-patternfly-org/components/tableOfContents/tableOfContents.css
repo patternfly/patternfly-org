@@ -1,12 +1,11 @@
-/* Needed for sticky tabs */
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/position#sticky */
 .ws-toc {
-  top: var(--pf-global--spacer--md);
+  top: 0;
   order: 1;
+  flex-grow: 1;
   position: sticky;
-  padding-left: var(--pf-global--spacer--md);
+  padding: var(--pf-global--spacer--xl) var(--pf-global--spacer--lg) var(--pf-global--spacer--lg) var(--pf-global--spacer--2xl);
   align-self: flex-start;
-  min-width: 280px;
+  width: 280px;
   max-height: calc(100vh - 76px);
   overflow-y: auto;
 }
@@ -18,12 +17,53 @@
   }
 }
 
-.ws-toc-list ul {
-  padding-left: var(--pf-global--spacer--md);
+.ws-toc-list {
+  position: relative;
+  margin-top: var(--pf-global--spacer--sm);
 }
 
-.ws-toc-item {
+.ws-toc-list::before,
+.ws-toc-link--current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+} 
+
+.ws-toc-list::before {
+  left: 1px;
+  width: var(--pf-global--BorderWidth--sm);
+  background-color: var(--pf-global--BorderColor--100);
+}
+
+.ws-toc-link {
+  position: relative;
   display: block;
-  margin-top: var(--pf-global--spacer--md);
-  margin-bottom: var(--pf-global--spacer--md);
+  color: var(--ws-toc-link--Color, var(--pf-global--Color--300));
+  font-size: var(--pf-global--FontSize--sm);
+  /* not sure if you need this? */
+  /*
+  padding-top: var(--pf-global--spacer--xs);
+  padding-bottom: var(--pf-global--spacer--xs);
+  */
+  padding-left: var(--ws-toc-link--PaddingLeft, var(--pf-global--spacer--md));
+  margin: var(--pf-global--spacer--sm) 0;
+}
+
+.ws-toc-link--current::after {
+  width: var(--pf-global--BorderWidth--md);
+  background-color: var(--ws-toc-link--Color);
+}
+
+.ws-toc-link.ws-toc-link--current,
+.ws-toc-link:hover,
+.ws-toc-link:focus {
+  text-decoration: none;
+  --ws-toc-link--Color: var(--pf-global--primary-color--100);
+}
+
+.ws-toc-sublist {
+  --ws-toc-link--Color: var(--pf-global--Color--200);
+  --ws-toc-link--PaddingLeft: var(--pf-global--spacer--lg);
 }

@@ -4,6 +4,8 @@
   background-color: #1a1a1a !important;
   padding: 48px;
   padding-top: 32px;
+  /* Hide long overflowing tocs */
+  z-index: 1;
 }
 .ws-org-pfsite-l-footer .ws-org-pfsite-footer-menu-list-title {
   margin: 0;
@@ -102,6 +104,8 @@
 .pf-c-page .pf-c-page__main-section.ws-org-pfsite-l-footer-dark {
   /* disables the default flex-grow: 1 for the last .pf-c-page__main-section in a block */
   flex-grow: 0;
+  /* Hide long overflowing tocs */
+  z-index: 1;
 }
 .pf-c-page__main-section.ws-org-pfsite-l-footer-dark > * {
   font-weight: 300;

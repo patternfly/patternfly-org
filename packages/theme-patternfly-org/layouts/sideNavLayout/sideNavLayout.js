@@ -157,16 +157,20 @@ export const SideNavLayout = ({ children }) => {
     />
   );
 
-  // Wrap in a div to force scrolling the same content
-  // TODO: SEO
   return (
-    <div className="ws-page-layout">
+    <React.Fragment>
       <div id="ws-page-banners">
         {hasGdprBanner && <GdprBanner />}
       </div>
-      <Page className="ws-page" header={Header} sidebar={SideBar} isManagedSidebar>
+      <Page
+        id="ws-page"
+        mainContainerId="ws-page-main"
+        header={Header}
+        sidebar={SideBar}
+        isManagedSidebar
+      >
         {children}
       </Page>
-    </div>
+    </React.Fragment>
   );
 }
