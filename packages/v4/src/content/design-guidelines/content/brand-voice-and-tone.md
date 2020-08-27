@@ -25,7 +25,7 @@ Let’s consider how we use the Red Hat brand voice in our UX copy. If Red Hat w
 To reflect the Red Hat voice in UX copy for Red Hat products, we have UX voice traits. Each voice trait is an extension of the Red Hat voice.
 
 | **Red Hat voice traits**               | **UX voice traits** |
-|:--------------------------------------:|:-------------------:|
+|----------------------------------------|---------------------|
 | Helpful but humble (not arrogant)      | Friendly            |
 | Authentic but adaptable (not stubborn) | Approachable        |
 | Open but ordered (not chaotic)         | Collaborative       |
@@ -38,7 +38,7 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 **Description**: Our #1 focus is the user. We make them feel welcome and create a sense of belonging and understanding.
 
 | **Do** | **Don't** |
-|:------:|:---------:|
+|--------|-----------|
 | Be clear and concise for users of all skills and abilities. | Don’t include fluff or long sentences that run on and on. |
 | Write how you speak, but add extra polish.                  ||
 | Focus on comprehension and use plain language.              ||
@@ -48,7 +48,7 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 **Description**: People are comfortable engaging with us. We’re open to listening and changing our ways when better ideas come along.
 
 | **Do** | **Don't** |
-|:------:|:---------:|
+|--------|-----------|
 | Say what you mean.                                             | Don’t use jargon, idioms, bizspeak, or formal language. |
 | Be direct and transparent with descriptive, specific language. ||
 **Voice trait**: Collaborative
@@ -56,7 +56,7 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 **Description**: We embody Red Hat’s open source mission with our collaborative working style and our sense of community.
 
 | **Do** | **Don't** |
-|:------:|:---------:|
+|--------|-----------|
 | Deliver content in a way that includes everyone.                                     | Don’t rely on inside jokes, colloquial expressions, culture-specific examples, or other alienating language to get your point across. |
 | Use “you” and the active voice to put emphasis on the user and power in their hands. | Don’t use “I” too much. Make the user the star of every story you tell. |
 
@@ -65,7 +65,7 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 **Description**: We have a fearless edge, challenging the assumption that UX is for a niche group of techies. We’re also not afraid to share our ideas and welcome new ones.
 
 | **Do** | **Don't** |
-|:------:|:---------:|
+|--------|-----------|
 | Deliver concepts and ideas with an air of confident simplicity. | Don’t belittle others or make jokes at their expense. We can laugh at ourselves but not at our users. |
 | Add real-world, global-friendly examples.                       | Don’t use others as examples of what not to do.                                                       |
 

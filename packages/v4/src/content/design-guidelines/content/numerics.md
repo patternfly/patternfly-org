@@ -51,7 +51,7 @@ Using **absolute** or **relative** timestamps will depend on the context. If you
 If users are interested in how long ago an event occurred, use a relative timestamp. When reporting relative time, follow these examples:
 
 | **Time frame**      | **Usage**              |
-|:-------------------:|:----------------------:|
+|---------------------|------------------------|
 | 0–60 seconds        | Just now               |
 | 1–60 minutes        | 4 minutes ago          |
 | 1–24 hours          | 4 hours ago            |
@@ -65,7 +65,7 @@ If users are interested in how long ago an event occurred, use a relative timest
 In a UI, use numerals instead of written numbers. 
 
 |**Before**  | **After** |
-|:----------:|:---------:|
+|------------|-----------|
 | Your transaction will be complete in three business days. | Your transaction will be complete in 3 business days. |
 
 For larger numbers, add a comma after every 3 digits from the right. 

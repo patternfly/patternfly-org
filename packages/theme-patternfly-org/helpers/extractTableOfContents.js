@@ -31,7 +31,7 @@ module.exports = {
 
     // Per-design, we don't want the TOC to be too long
     // https://docs.google.com/spreadsheets/d/19V4PH0fUqhVWKTFx7MOnekgNfoQmMnmnmmhK38GzqRY
-    if (toc.flat().length > 15) {
+    if (toc.flat().length > 25) {
       // In those cases just use the top-level items
       toc = toc.filter(item => !Array.isArray(item));
     }
