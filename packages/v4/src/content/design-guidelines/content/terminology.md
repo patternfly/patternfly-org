@@ -94,7 +94,7 @@ Here's a list of common UI terms and their usage.
 Use abbreviations that users are familiar with, and write out uncommon abbreviations. Abbreviate units of measurement, and use abbreviations consistently.
 
 | **Abbreviation** | **Usage** |
-|------------------|:---------:|
+|------------------|-----------|
 | CSS | Stands for <i>Cascading Style Sheets</i>. Write <i>CSS</i> in all caps. |
 | e.g., i.e., and etc. | Use sparingly. These terms aren’t easily understood by everyone, especially users whose native language is not rooted in Latin. Write out their meaning instead:<ul><li>e.g. – for example</li><li>i.e. – in other words</li><li>etc. – and more/so on</li></ul> |
 | HTML | Stands for <i>Hypertext Markup Language</i>. Write <i>HTML</i> in all caps. |
