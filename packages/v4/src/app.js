@@ -35,28 +35,37 @@ const AppRoute = ({ child }) => {
   );
 }
 
+const SideNavRouter = () => (
+  <SideNavLayout>
+    <Router>
+      {Object.entries(LayoutOptions.routes).map(([path, props]) => {
+        const { Component } = props;
+        if (Component) {
+          return <AppRoute key={path} path={path} default={path === '/404'} child={<Component />} />;
+        }
+        const { title, sources } = props;
+        return (
+          <AppRoute key={path} path={path + '/*'} child={<MDXTemplate
+            path={path}
+            layoutOptions={LayoutOptions}
+            title={title}
+            sources={sources}
+          />} />
+        );
+      })}
+    </Router>
+  </SideNavLayout>
+);
+
+const AboutModalFull = () => <div>hey im a fs preview</div>
+
 // Export for SSR
 export const App = () => (
   <ConfigContext.Provider value={LayoutOptions}>
-    <SideNavLayout>
-      <Router basepath={LayoutOptions.pathPrefix} id="ws-router">
-        {Object.entries(LayoutOptions.routes).map(([path, props]) => {
-          const { Component } = props;
-          if (Component) {
-            return <AppRoute key={path} path={path} default={path === '/404'} child={<Component />} />;
-          }
-          const { title, sources } = props;
-          return (
-            <AppRoute key={path} path={path + '/*'} child={<MDXTemplate
-              path={path}
-              layoutOptions={LayoutOptions}
-              title={title}
-              sources={sources}
-            />} />
-          );
-        })}
-      </Router>
-    </SideNavLayout>
+    <Router basepath={LayoutOptions.pathPrefix} id="ws-router">
+      <SideNavRouter path="/*" />
+      <AboutModalFull path="/components/about-modal/basic" />
+    </Router>
   </ConfigContext.Provider>
 );
 
