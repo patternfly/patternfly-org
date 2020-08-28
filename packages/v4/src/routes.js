@@ -1,6 +1,6 @@
 // This module is shared between NodeJS and babelled ES5
 const generatedRoutes = require('./generated');
-const { makeSlug } = require('theme-patternfly-org/helpers/slugger');
+const { makeSlug, slugger } = require('theme-patternfly-org/helpers/slugger');
 const { asyncComponentFactory } = require('theme-patternfly-org/helpers/asyncComponentFactory');
 
 const isClient = Boolean(process.env.NODE_ENV);
@@ -132,8 +132,27 @@ function getAsyncComponent(url, pathPrefix) {
   return null;
 }
 
+const fullscreenRoutes = Object.entries(allRoutes)
+  .reduce((acc, val) => {
+    const [path, { toc = [], Component }] = val;
+    // Use TOC for fullscreen pages
+    const exampleIndex = toc.indexOf('Examples');
+    let examples = exampleIndex === -1 ? [] : toc[exampleIndex + 1];
+    examples = Array.isArray(examples) ? examples : [];
+    examples.forEach(title => {
+      const slug = `${path}/${slugger(title)}`;
+      acc[slug] = {
+        title,
+        Component,
+        isFullscreen: true
+      };
+    })
+    return acc;
+  }, {});
+
 module.exports = {
   routes,
   groupedRoutes,
+  fullscreenRoutes,
   getAsyncComponent
 };

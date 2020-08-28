@@ -5,6 +5,7 @@ import { Badge } from '@patternfly/react-core';
 import * as reactCoreModule from '@patternfly/react-core';
 import * as reactTableModule from '@patternfly/react-table';
 import { css } from '@patternfly/react-styles';
+import { Link } from '../link/link';
 import { ExampleToolbar } from './exampleToolbar';
 import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
 import { getParameters } from 'codesandbox/lib/api/define';
@@ -31,11 +32,15 @@ export const Example = ({
   noLive,
   title = 'Untitled',
   isFullscreen,
+  isFullscreenPreview,
   isBeta,
   id,
   section,
   liveContext
 }) => {
+  if (isFullscreenPreview) {
+    isFullscreen = false;
+  }
   const supportedLangs = getSupportedLanguages(lang);
   if (supportedLangs === []) {
     noLive = true;
@@ -58,7 +63,7 @@ export const Example = ({
   const location = useLocation();
 
   const exampleName = title.replace(/-/g, ' ').replace(/  /g, '-');
-  const fullscreenLink = `${location.pathname}/${slugger(title)}`;
+  const fullscreenLink = `${location.pathname.replace(/\/$/, '')}${location.pathname.endsWith(source) ? '' : `/${source}`}/${slugger(title)}`;
   const scope = {
     ...liveContext,
     // These 2 are in the bundle anyways for the site since we dogfood
@@ -102,9 +107,22 @@ export const Example = ({
       className={css(
         getExampleClassName(source, section[0], id),
         darkMode && 'pf-t-dark pf-m-opaque-200',
-        isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview'
+        !isFullscreenPreview && (isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview'),
+        isFullscreenPreview && 'pf-u-h-100'
       )} />
   );
+
+  if (isFullscreenPreview) {
+    return (
+      <LiveProvider
+        scope={scope}
+        code={editorCode}
+        transformCode={code => transformCode(code, editorLang)}
+      >
+        {Preview}
+      </LiveProvider>
+    );
+  }
 
   return (
     <div className="ws-example">
