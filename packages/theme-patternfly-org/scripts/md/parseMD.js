@@ -145,7 +145,7 @@ function toReactComponent(mdFilePath, source) {
     // Add custom PatternFly doc design things
     .use(require('./anchor-header'))
     .use(require('./styled-tags'))
-    // Transform HAST object to JSX string, 
+    // Transform HAST object to JSX string
     .use(require('./mdx-hast-to-jsx'), {
       getRelPath: () => path.relative(path.dirname(outPath), vfile.dirname), // for imports
       getPageData: () => pageData // For @reach/router routing
@@ -181,20 +181,22 @@ module.exports = {
     if (!Array.isArray(files)) {
       files = [files];
     }
-    files.forEach(file => {
-      const { jsx, pageData, outPath } = toReactComponent(file, source);
-  
-      if (jsx) {
-        fs.outputFileSync(outPath, jsx);
-        routes[pageData.slug] = {
-          id: pageData.id,
-          title: pageData.title || pageData.id,
-          toc: pageData.toc || [],
-          section: pageData.section,
-          source: pageData.source
-        };
-      }
-    });
+    files
+      .filter(file => !path.basename(file).startsWith('_'))
+      .forEach(file => {
+        const { jsx, pageData, outPath } = toReactComponent(file, source);
+    
+        if (jsx) {
+          fs.outputFileSync(outPath, jsx);
+          routes[pageData.slug] = {
+            id: pageData.id,
+            title: pageData.title || pageData.id,
+            toc: pageData.toc || [],
+            section: pageData.section,
+            source: pageData.source
+          };
+        }
+      });
   },
   writeIndex() {
     const stringifyRoute = ([route, pageData]) => `'${route}': {\n    ${Object.entries(pageData)
