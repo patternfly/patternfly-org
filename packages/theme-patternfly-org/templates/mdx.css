@@ -22,8 +22,6 @@
   flex: 1;
   padding: 0;
   background-color: var(--pf-global--BackgroundColor--light-200);
-  display: flex;
-  flex-direction: column;
 }
 
 .ws-mdx-child {
