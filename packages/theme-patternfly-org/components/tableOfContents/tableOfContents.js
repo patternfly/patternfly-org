@@ -67,7 +67,7 @@ export const TableOfContents = ({
       return;
     }
     const scrollableElement = document.getElementById('ws-page-main');
-    const titleElement = document.getElementById('nav-content') || document.getElementById('ws-page-title');
+    const titleElement = document.getElementById('nav-content');
     const htmlElements = scrollableElement.querySelectorAll('h2.ws-heading,h3.ws-heading');
     const scrollElements = Array.from(htmlElements)
       // When we hide h3s for long TOCs we don't want to track them

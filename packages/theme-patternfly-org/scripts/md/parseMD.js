@@ -17,7 +17,7 @@ function toReactComponent(mdFilePath, source) {
   // vfiles allow for nicer error messages and have native `unified` support
   const vfile = toVfile.readSync(mdFilePath);
 
-  const relPath = path.relative(process.cwd(), vfile.path);
+  const relPath = path.relative(path.join(process.cwd(), '../..'), vfile.path);
 
   let jsx;
   let outPath;

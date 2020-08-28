@@ -1,12 +1,19 @@
 #nav-content {
   padding: var(--pf-global--spacer--xl) var(--pf-global--spacer--xl) 0 var(--pf-global--spacer--xl);
 }
-.pf-c-page__main > section.pf-c-page__main-section:first-child {
+
+#ws-page-content-router {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#ws-page-content-router > section.pf-c-page__main-section:first-child {
   flex-grow: 1;
 }
 
 @media (max-width: 767px) {
-  .pf-c-page__main > section:first-child {
+  #ws-page-content-router > section:first-child {
     padding: 16px;
   }
 }
@@ -15,13 +22,12 @@
   flex: 1;
   padding: 0;
   background-color: var(--pf-global--BackgroundColor--light-200);
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
 }
 
-.ws-framework-title {
-  font-weight: var(--pf-global--FontWeight--normal);
-  color: #06c;
+.ws-mdx-child {
+  display: flex;
 }
 
 .ws-release-notes-toc {
