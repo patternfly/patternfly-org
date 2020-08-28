@@ -4,10 +4,9 @@ import { Router, useLocation } from '@reach/router';
 import { SideNavLayout } from 'theme-patternfly-org/layouts';
 import { Footer } from 'theme-patternfly-org/components';
 import { MDXTemplate } from 'theme-patternfly-org/templates/mdx';
-import { routes, groupedRoutes, allRoutes, getAsyncComponent } from './routes';
+import { routes, groupedRoutes, fullscreenRoutes, getAsyncComponent } from './routes';
 import LayoutOptions from '../patternfly-docs.config.js';
 import ConfigContext from 'theme-patternfly-org/helpers/configContext';
-import { slugger } from 'theme-patternfly-org/helpers/slugger';
 import '../patternfly-docs.css.js';
 
 const isProd = process.env.NODE_ENV === 'production';
@@ -71,20 +70,8 @@ export const App = () => (
   <ConfigContext.Provider value={LayoutOptions}>
     <Router basepath={LayoutOptions.pathPrefix} id="ws-router">
       <SideNavRouter path="/*" />
-      {Object.entries(allRoutes)
-        .map(([path, { toc = [], Component }]) => {
-          // Use TOC for fullscreen pages
-          const exampleIndex = toc.indexOf('Examples');
-          let examples = exampleIndex === -1 ? [] : toc[exampleIndex + 1];
-          examples = Array.isArray(examples) ? examples : [];
-          return examples.map(title => ({
-            path: `${path}/${slugger(title)}`,
-            title,
-            Component
-          }));
-        })
-        .flat()
-        .map(({ path, title, Component }) =>
+      {Object.entries(fullscreenRoutes)
+        .map(([path, { title, Component }]) =>
           <FullscreenComponent
             key={path}
             path={path}
