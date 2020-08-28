@@ -146,7 +146,7 @@ export const Example = ({
         {/* We need this container for fullscreen example styling and popout */}
         {isFullscreen
           ? <div className="ws-preview">
-              <Link
+              <a
                 className="ws-preview__thumbnail-link"
                 href={fullscreenLink}
                 target="_blank"
@@ -155,7 +155,7 @@ export const Example = ({
                 <div style={previewContainerStyle}>
                   {Preview}
                 </div>
-              </Link>
+              </a>
             </div>
           : Preview}
 
