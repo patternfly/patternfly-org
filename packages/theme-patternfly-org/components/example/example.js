@@ -107,7 +107,8 @@ export const Example = ({
       className={css(
         getExampleClassName(source, section[0], id),
         darkMode && 'pf-t-dark pf-m-opaque-200',
-        !isFullscreenPreview && (isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview')
+        !isFullscreenPreview && (isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview'),
+        isFullscreenPreview && 'pf-u-h-100'
       )} />
   );
 
