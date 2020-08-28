@@ -1,5 +1,5 @@
 ---
-id: Tab content
+id: 
 section: components
 ---
 

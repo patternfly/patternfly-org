@@ -41,6 +41,7 @@ const groupedRoutes = Object.entries(routes)
     accum[section] = accum[section] || {};
     accum[section][id] = accum[section][id] || {
       id,
+      section,
       title,
       slug: makeSlug(source, section, id, true),
       sources: []
@@ -71,14 +72,37 @@ const sortSources = ({ source: s1 }, { source: s2 }) => {
   return s1Index > s2Index ? 1 : -1;
 }
 
+const getDefaultDesignGuidelines = ({ id, section, slug, title }) => {
+  const Component = () => require('theme-patternfly-org/templates/design-guidelines').DesignGuidelineTemplate
+  const pageData = {
+    id,
+    section,
+    slug: `${slug}/design-guidelines`,
+    source: 'design-guidelines',
+    title,
+    Component
+  };
+
+  Component.getPageData = () => pageData;
+
+  return pageData;
+}
+
 Object.entries(groupedRoutes)
   .forEach(([_section, ids]) => {
     Object.values(ids).forEach(pageData => {
-      const { slug } = pageData;
+      const { slug, section } = pageData;
       // Remove source routes for `app.js`
       pageData.sources.forEach(({ slug }) => {
         delete routes[slug];
       });
+      // Add design guidelines if doesn't exist
+      if (
+        ['components', 'charts', 'layouts'].includes(section) &&
+        !pageData.sources.map(({ source }) => source).includes('design-guidelines')
+      ) {
+        pageData.sources.push(getDefaultDesignGuidelines(pageData));
+      }
       // Sort sources for tabs
       pageData.sources = pageData.sources.sort(sortSources);
       // Add grouped route
