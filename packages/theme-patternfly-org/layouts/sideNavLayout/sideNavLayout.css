@@ -39,7 +39,8 @@
   /* For icon */
   padding-left: 32px;
 }
-.global-search-icon {
+#global-search-input + .global-search-icon,
+.algolia-autocomplete + .global-search-icon {
   position: absolute;
   top: 10px;
   left: 4px;

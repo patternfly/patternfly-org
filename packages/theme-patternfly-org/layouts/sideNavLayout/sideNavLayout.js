@@ -28,6 +28,8 @@ const HeaderTools = ({
 }) => {
   const initialVersion = staticVersions.Releases.find(release => release.latest);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [isSearchExpanded, setSearchExpanded] = useState(false);
+  const toggleSearch = () => setSearchExpanded(!isSearchExpanded);
   const latestVersion = versions.Releases.find(version => version.latest);
   const getDropdownItem = version => (
     <DropdownItem
@@ -44,8 +46,8 @@ const HeaderTools = ({
     <PageHeaderTools>
       {hasSearch && (
         <PageHeaderToolsItem className="ws-global-search">
-          <TextInput id="global-search-input" placeholder="Search" />
-          <SearchIcon className="global-search-icon" />
+          {isSearchExpanded && <TextInput id="global-search-input" placeholder="Search" />}
+          <SearchIcon className="global-search-icon" onClick={toggleSearch} />
         </PageHeaderToolsItem>
       )}
       {hasVersionSwitcher && (
@@ -91,7 +93,8 @@ const HeaderTools = ({
 }
 
 function attachDocSearch(algolia, timeout) {
-  if (window.docsearch) {
+  const hasSearchInput = document.getElementById('global-search-input');
+  if (window.docsearch && hasSearchInput) {
     return window.docsearch({
       inputSelector: '#global-search-input',
       debug: false,
