@@ -1,4 +1,4 @@
-.ws-content-table {
+.ws-content-table > table {
   table-layout: fixed;
-  width: 80%;
+  width: 100%;
 }

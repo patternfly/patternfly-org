@@ -50,6 +50,8 @@ Using **absolute** or **relative** timestamps will depend on the context. If you
 
 If users are interested in how long ago an event occurred, use a relative timestamp. When reporting relative time, follow these examples:
 
+<div class="ws-content-table">
+
 | **Time frame**      | **Usage**              |
 |---------------------|------------------------|
 | 0–60 seconds        | Just now               |
@@ -61,12 +63,18 @@ If users are interested in how long ago an event occurred, use a relative timest
 | 1 year+             | 21 Jan 2020            |
 | Exact date and time | 21 Jan 2020, 23:33 UTC |
 
+</div>
+
 ## Numbers and currency
 In a UI, use numerals instead of written numbers. 
+
+<div class="ws-content-table">
 
 |**Before**  | **After** |
 |------------|-----------|
 | Your transaction will be complete in three business days. | Your transaction will be complete in 3 business days. |
+
+</div>
 
 For larger numbers, add a comma after every 3 digits from the right. 
 
