@@ -14,7 +14,7 @@ import {
   DropdownGroup,
   Divider
 } from '@patternfly/react-core';
-import { SearchIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
+import { SearchIcon, ExternalLinkAltIcon, TimesIcon } from '@patternfly/react-icons';
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import ConfigContext from '../../helpers/configContext';
 import staticVersions from '../../versions.json';
@@ -30,7 +30,6 @@ const HeaderTools = ({
   const initialVersion = staticVersions.Releases.find(release => release.latest);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isSearchExpanded, setSearchExpanded] = useState(false);
-  const expandSearch = () => !isSearchExpanded && setSearchExpanded(true);
   const latestVersion = versions.Releases.find(version => version.latest);
   const getDropdownItem = version => (
     <DropdownItem
@@ -46,11 +45,22 @@ const HeaderTools = ({
   return (
     <PageHeaderTools>
       {hasSearch && (
-        <PageHeaderToolsItem className="ws-global-search">
-          <Button className="ws-global-search-button" variant="plain" aria-label="Expand search" onClick={expandSearch}>
-            <SearchIcon className="global-search-icon" />
-          </Button>
-          {isSearchExpanded && <TextInput id="global-search-input" placeholder="Search" />}
+        <PageHeaderToolsItem className={`ws-global-search ${isSearchExpanded ? '' : 'ws-hide-search-input'}`}>
+          <TextInput id="global-search-input"  placeholder="Search" autoFocus />
+          {isSearchExpanded
+            ? (
+              <React.Fragment>
+                <SearchIcon className="global-search-icon" />
+                <Button variant="plain" className="ws-collapse-search" onClick={() => setSearchExpanded(false)}>
+                  <TimesIcon />
+                </Button>
+              </React.Fragment>
+            ) : (
+              <Button variant="plain" onClick={() => setSearchExpanded(true)}>
+                <SearchIcon className="global-search-icon" />
+              </Button>
+            )
+          }
         </PageHeaderToolsItem>
       )}
       {hasVersionSwitcher && (
@@ -96,8 +106,7 @@ const HeaderTools = ({
 }
 
 function attachDocSearch(algolia, timeout) {
-  const hasSearchInput = document.getElementById('global-search-input');
-  if (window.docsearch && hasSearchInput) {
+  if (window.docsearch) {
     return window.docsearch({
       inputSelector: '#global-search-input',
       debug: false,

@@ -39,13 +39,20 @@
   /* For icon */
   padding-left: 32px;
 }
-.ws-hide-search .algolia-autocomplete {
+.ws-hide-search-input .algolia-autocomplete {
+  display: none !important;
   width: 0;
 }
-#global-search-input + .ws-global-search-button,
-.algolia-autocomplete + .ws-global-search-button {
+.algolia-autocomplete {
+  width: auto;
+}
+.ws-collapse-search {
+  position: relative;
+  top: 4px;
+}
+.ws-global-search > .global-search-icon {
   position: absolute;
-  top: 10px;
+  top: 14px;
   left: 4px;
 }
 #global-search-input,
