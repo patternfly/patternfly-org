@@ -30,6 +30,12 @@ const HeaderTools = ({
   const initialVersion = staticVersions.Releases.find(release => release.latest);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isSearchExpanded, setSearchExpanded] = useState(false);
+  const expandAndFocusSearch = () => {
+    if (!isSearchExpanded) {
+      setSearchExpanded(true);
+      setTimeout(() => document.getElementById('global-search-input').focus(), 0);
+    }
+  }
   const latestVersion = versions.Releases.find(version => version.latest);
   const getDropdownItem = version => (
     <DropdownItem
@@ -46,7 +52,7 @@ const HeaderTools = ({
     <PageHeaderTools>
       {hasSearch && (
         <PageHeaderToolsItem className={`ws-global-search ${isSearchExpanded ? '' : 'ws-hide-search-input'}`}>
-          <TextInput id="global-search-input"  placeholder="Search" autoFocus />
+          <TextInput id="global-search-input"  placeholder="Search" />
           {isSearchExpanded
             ? (
               <React.Fragment>
@@ -56,7 +62,7 @@ const HeaderTools = ({
                 </Button>
               </React.Fragment>
             ) : (
-              <Button variant="plain" onClick={() => setSearchExpanded(true)}>
+              <Button variant="plain" onClick={expandAndFocusSearch}>
                 <SearchIcon className="global-search-icon" />
               </Button>
             )
@@ -106,7 +112,8 @@ const HeaderTools = ({
 }
 
 function attachDocSearch(algolia, timeout) {
-  if (window.docsearch) {
+  const hasGlobalSearchInput = document.getElementById('global-search-input');
+  if (window.docsearch && hasGlobalSearchInput) {
     return window.docsearch({
       inputSelector: '#global-search-input',
       debug: false,
