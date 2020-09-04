@@ -11,6 +11,7 @@ async function getHtmlWebpackPlugin(url, isProd, title, isFullscreen) {
     filename: `${url}/index.html`.replace(/^\/+/, ''),
     templateParameters: {
       title: getTitle(title),
+      // Don't prerender fullscreen pages (expensive!)
       prerendering: (isProd && !isFullscreen) ? await prerender(url) : 'Loading...',
       // Don't use GA in dev mode
       googleAnalyticsID: isProd ? googleAnalyticsID : false,
