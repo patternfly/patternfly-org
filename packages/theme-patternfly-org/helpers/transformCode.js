@@ -1,5 +1,5 @@
 module.exports = {
-  transformCode: (code, language) => {
+  transformCode: (code, language, isFullscreenOnly) => {
     if (typeof code !== 'string') {
       return;
     }
@@ -11,7 +11,7 @@ module.exports = {
         .replace(/export default/gm, '') // inline export
     }
     // HTML/HBS
-    return `<div className="ws-preview-html" dangerouslySetInnerHTML={{ __html: "${code
+    return `<div className="ws-preview-html${isFullscreenOnly ? ' pf-u-h-100' : ''}" dangerouslySetInnerHTML={{ __html: "${code
       .replace(/"/g, '\\"')
       .replace(/\n/g, '')}"}} />`;;
   }
