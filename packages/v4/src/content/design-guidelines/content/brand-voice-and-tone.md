@@ -24,6 +24,8 @@ Let’s consider how we use the Red Hat brand voice in our UX copy. If Red Hat w
 ## Voice traits
 To reflect the Red Hat voice in UX copy for Red Hat products, we have UX voice traits. Each voice trait is an extension of the Red Hat voice.
 
+<div class="ws-content-table">
+
 | **Red Hat voice traits**               | **UX voice traits** |
 |----------------------------------------|---------------------|
 | Helpful but humble (not arrogant)      | Friendly            |
@@ -31,11 +33,15 @@ To reflect the Red Hat voice in UX copy for Red Hat products, we have UX voice t
 | Open but ordered (not chaotic)         | Collaborative       |
 | Brave but balanced (not reckless)      | Inventive           |
 
+</div>
+
 You can’t *tell* your users what your voice is. You need to *show* them who you are in your writing. One way to do this is with “Voice Do and Don’t” charts. This is what Red Hat's UX copy voice charts look like:
 
 **Voice trait**: Friendly
 
 **Description**: Our #1 focus is the user. We make them feel welcome and create a sense of belonging and understanding.
+
+<div class="ws-content-table">
 
 | **Do** | **Don't** |
 |--------|-----------|
@@ -43,31 +49,46 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 | Write how you speak, but add extra polish.                  ||
 | Focus on comprehension and use plain language.              ||
 
+</div>
+
 **Voice trait**: Approachable
 
 **Description**: People are comfortable engaging with us. We’re open to listening and changing our ways when better ideas come along.
+
+<div class="ws-content-table">
 
 | **Do** | **Don't** |
 |--------|-----------|
 | Say what you mean.                                             | Don’t use jargon, idioms, bizspeak, or formal language. |
 | Be direct and transparent with descriptive, specific language. ||
+
+</div>
+
 **Voice trait**: Collaborative
 
 **Description**: We embody Red Hat’s open source mission with our collaborative working style and our sense of community.
+
+<div class="ws-content-table">
 
 | **Do** | **Don't** |
 |--------|-----------|
 | Deliver content in a way that includes everyone.                                     | Don’t rely on inside jokes, colloquial expressions, culture-specific examples, or other alienating language to get your point across. |
 | Use “you” and the active voice to put emphasis on the user and power in their hands. | Don’t use “I” too much. Make the user the star of every story you tell. |
 
+</div>
+
 **Voice trait**: Inventive
 
 **Description**: We have a fearless edge, challenging the assumption that UX is for a niche group of techies. We’re also not afraid to share our ideas and welcome new ones.
+
+<div class="ws-content-table">
 
 | **Do** | **Don't** |
 |--------|-----------|
 | Deliver concepts and ideas with an air of confident simplicity. | Don’t belittle others or make jokes at their expense. We can laugh at ourselves but not at our users. |
 | Add real-world, global-friendly examples.                       | Don’t use others as examples of what not to do.                                                       |
+
+</div>
 
 When crafting your brand voice, consider your company or team values (if you have them) and align your voice traits accordingly.
 
