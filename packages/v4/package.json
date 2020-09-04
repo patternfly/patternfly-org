@@ -12,7 +12,8 @@
     "build:client": "webpack --mode production",
     "clean": "rm -rf .cache public size-plugin.json src/generated",
     "develop": "yarn generate && webpack-dev-server --mode development",
-    "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4"
+    "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4",
+    "screenshots": "node ../theme-patternfly-org/scripts/writeScreenshots"
   },
   "dependencies": {
     "@patternfly/react-docs": "5.8.19",

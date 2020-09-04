@@ -17,6 +17,7 @@
     "serve": "yarn serve:v4",
     "serve:v4": "serve build/patternfly-org",
     "test:v4": "yarn workspace patternfly-org-4 test:a11y:ci",
+    "screenshots": "yarn workspace patternfly-org-4 screenshots",
     "start": "yarn start:v4",
     "start:v3": "yarn workspace patternfly-org-3 develop",
     "start:v4": "yarn develop:v4",

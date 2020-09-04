@@ -5,7 +5,7 @@ const { Cluster } = require('puppeteer-cluster');
 const sharp = require('sharp');
 const { fullscreenRoutes } = require(path.join(process.cwd(), 'src/routes'));
 
-const urlPrefix = "http://localhost:5000/v4";
+const urlPrefix = process.argv[2];
 const screenshotBase = path.join(process.cwd(), 'src/generated');
 sharp.cache(false);
 
@@ -16,6 +16,7 @@ async function writeScreenshot({ page, data: { title, url } }) {
     height: 1080,
   });
   await page.goto(url);
+  await page.waitForSelector('.pf-u-h-100');
   const outfile = path.join(
     screenshotBase,
     url.replace(`${urlPrefix}/`, '') + '.jpg'
