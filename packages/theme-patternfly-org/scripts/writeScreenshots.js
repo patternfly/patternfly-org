@@ -10,9 +10,6 @@ const screenshotBase = path.join(process.cwd(), 'src/generated');
 sharp.cache(false);
 
 async function writeScreenshot({ page, data: { title, url } }) {
-  if (url.includes('table/react-demos')) {
-    debugger;
-  }
   // Default viewport is 800x600
   await page.setViewport({
     width: 1920,
