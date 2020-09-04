@@ -124,7 +124,7 @@ export const Example = ({
                 target="_blank"
                 aria-label={`Open fullscreen ${exampleName} example`}
               >
-                <img src={thumbnail || missingThumbnail} />
+                <img height="450px" src={thumbnail || missingThumbnail} />
               </a>
             </div>
           : <LivePreview
