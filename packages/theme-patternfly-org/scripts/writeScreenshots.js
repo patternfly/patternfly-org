@@ -3,9 +3,13 @@ const os = require('os');
 const fs = require('fs-extra');
 const { Cluster } = require('puppeteer-cluster');
 const sharp = require('sharp');
-const { fullscreenRoutes } = require(path.join(process.cwd(), 'src/routes'));
+const { fullscreenRoutes } = require(path.join(process.cwd(), 'src/routes.js'));
 
 const urlPrefix = process.argv[2];
+if (!urlPrefix) {
+  console.error('Usage: node writeSreenshots <http://url-prefix>');
+  process.exit(1);
+}
 const screenshotBase = path.join(process.cwd(), 'src/generated');
 sharp.cache(false);
 
@@ -19,16 +23,13 @@ async function writeScreenshot({ page, data: { title, url } }) {
   await page.waitForSelector('.pf-u-h-100');
   const outfile = path.join(
     screenshotBase,
-    url.replace(`${urlPrefix}/`, '') + '.jpg'
+    url.replace(`${urlPrefix}/`, '') + '.png'
   );
   fs.ensureDirSync(path.dirname(outfile));
   await page.screenshot({ path: outfile });
   // Resize since max-width allowed for thumbnails in CSS is 800px
   let buffer = await sharp(outfile)
-    .resize(800, 450, {
-      fit: sharp.fit.inside,
-      withoutEnlargement: true,
-    })
+    .resize(800, 450)
     .toBuffer();
   // Overwrite old file
   await sharp(buffer).toFile(outfile);

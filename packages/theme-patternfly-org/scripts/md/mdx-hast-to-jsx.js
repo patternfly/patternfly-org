@@ -67,7 +67,7 @@ function serializeRoot(node, options) {
   const thumbnailFolder = path.join(path.dirname(getOutPath()), pageData.source);
   const thumbnails = fs.existsSync(thumbnailFolder) ? fs.readdirSync(thumbnailFolder) : [];
   const thumbnailImports = thumbnails.map(img =>
-    `import srcImport${path.basename(img, '.jpg').replace(/-/g, '')} from './${pageData.source}/${img}';`)
+    `import srcImport${path.basename(img, '.png').replace(/-/g, '')} from './${pageData.source}/${img}';`)
 
   const importStatements = groups.import
     .map(node => node.value)
