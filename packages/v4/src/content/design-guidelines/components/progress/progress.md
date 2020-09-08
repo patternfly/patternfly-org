@@ -104,12 +104,3 @@ Titles should clearly describe the process that is being measured. Try to keep t
 Do not provide any other supporting copy to the progress bar that would require the user to read about how to use the progress bar. A progress bar should be self-explanatory if you implement labels 1 through 4 that are detailed in the article above.
 
 See our [content guidelines](/design-guidelines/content/writing) for additional guidance.
-
-## Components and demos used
-The PatternFly components listed in the following sections can be used in a number of ways to suit specific needs or use-cases. We’ll explore several examples in this documentation.
-
-**HTML/CSS components**
-* [Progress](/documentation/core/components/progress)
-
-**React components**
-* [Progress](/documentation/react/components/progress)
