@@ -27,13 +27,6 @@ An element can be a component, like a button, or something smaller that you want
 
 You can use one or more images to identify the elements you’re describing._
 
-## Components and demos used
-_Provide a list of every PatternFly component that can be used or included in this design pattern._
-**Core components and demos**
-[ComponentName](/documentation/core/components/componentname), [DemoName](/documentation/core/demos/demomname)
-
-**React components and demos**
-[ComponentName](/documentation/react/components/componentname), [DemoName](/documentation/react/demos/demoname)
 
 ## Usage
 _(Required)

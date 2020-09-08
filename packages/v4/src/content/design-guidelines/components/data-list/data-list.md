@@ -1,6 +1,7 @@
 ---
 id: Data list
 section: components
+related: ['Table']
 ---
 
 A **data list** is used to display large data sets when you need a flexible layout or need to include interactive content like charts.
@@ -251,14 +252,3 @@ Lists and tables should be placed in the body of a page. The width should be set
 <img src="./img/data-table-example.png"  alt="Compact data table example"  width="1500"/> 
 
 In this example, a table is positioned in the body of a page in a card.
-
-## Components and demos used
-
-**HTML/CSS**
-
-* [Data list](/documentation/core/components/datalist)
-* [Table](/documentation/core/components/table)
-
-**React**
-* [Data list](/documentation/react/components/datalist)
-* [Table](/documentation/react/components/table)
