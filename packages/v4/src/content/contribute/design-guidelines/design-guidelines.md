@@ -187,7 +187,7 @@ On GitHub, create a pull request to submit your changes:
 
 3. Change your PR name and/or add a comment to your PR if you need to.
 4. Attach all of your image files to this PR so that they can be updated in the original document, merged back into the main branch, and uploaded back to Sketch Cloud for future access.
-5. Tag [mmenestr](https://github.com/mmenestret/mmenestret.github.io) to initiate a final review. 
+5. Tag [mmenestr](https://github.com/mmenestr) to initiate a final review. 
 6. Submit the PR.  
 
 If your PR has merge conflicts in Github:
