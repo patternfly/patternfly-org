@@ -1,27 +1,21 @@
 ---
-title: Punctuation
-section: content
-hideTOC: true
-showTitle: true
+id: Punctuation
+section: UX writing
 ---
 
-## Ampersand (&)
-Avoid using ampersands (&), and use "and" instead.
+## Ampersand
+Avoid using ampersands, and use "and" instead.
 
 ## Referring to text in the UI
 Use bold text (not quotation marks) when referring to an element or text in the UI.
 
-<table style="table-layout: fixed" tr width="80%">
-    <tr>
-        <th><center><strong>Before</strong></center></th>
-        <th><center><strong>After</strong></center></th>
-    </tr>
-    <tr>
-        <td>Add user to the “Group title” team </td>
-        <td>Add user to the <b>Group title</b> team</td>
-    </tr>
-</table>
-<br /> 
+<div class="ws-content-table">
+
+| Before                             | After                                |
+|------------------------------------|--------------------------------------|
+| Add user to the “Group title” team | Add user to the **Group title** team |
+
+</div>
 
 ## Commas
 When a conjunction connects two independent clauses, a comma should precede it. Also put a comma before “and” if it’s the Oxford comma.
@@ -34,17 +28,13 @@ Examples:
 ## Ellipses (...)
 Ellipses (...) are commonly used when information is omitted. You might use ellipses when you cannot fit all words onto a line or when you remove less relevant information (like in a quote).
 
-<table style="table-layout: fixed" tr width="80%">
-    <tr>
-        <th><center><strong>Before ellipses</strong></center></th>
-        <th><center><strong>After ellipses</strong></center></th>
-    </tr>
-    <tr>
-        <td>They said, “For many reasons, I think the PatternFly community is great.”</td>
-        <td>They said, “...I think the PatternFly community is great.”</td>
-    </tr>
-</table>
-<br /> 
+<div class="ws-content-table">
+
+|**Before ellipses**  | **After ellipses** |
+|---------------------|--------------------|
+| They said, “For many reasons, I think the PatternFly community is great.” | They said, “...I think the PatternFly community is great.” |
+
+</div>
 
 Ellipses can also be used in more creative contexts to signify someone’s thoughts or speech, like a pause for thinking.
 
@@ -64,59 +54,37 @@ Use an **en dash ( – )** to separate numbers in a series.
 Example:
 We plan on having 100–150 attendees.
 
-Use a **hyphen ( - )**  if it's part of a term (such as "walk-through") or someone's name (such as "Mary-Jane").  
+Use a **hyphen ( - )** for compound adjectives or words, names, and titles. You should also use a hyphen for certain prefixes, like “ex.”
 
-Use a **hyphen ( - )** for a compound adjective that comes before the noun it modifies, but omit the hyphen if the first adjective ends in "-ly."  
-
-Examples: 
-- I like when my documentation is up to date. 
-- I write up-to-date documentation. 
-- He is a highly talented writer. 
-- She is a high-quality job candidate.    
-
-Do NOT use a **hyphen ( - )** for most prefixes, specifically the following: 
-
-- auto- (autopopulate; autoloading)
-- Pre- (prerequisite) 
-- Re-  (recreate)
-- Sub- (submerge)
-
-Exception: Use a hyphen ( - ) for prefixes when adding a modifer prefix like “non," such as "non-Red Hatter."
-
-Unsure about hyphenation for other terms? Refer to [Merriam-Webster's online dictionary](https://www.merriam-webster.com/)
-
+Examples:
+- My name is Mary-Jane.
+- They write high-quality content.
+- She is self-assured.
+- He is my ex-husband.
 
 ## Exclamation mark
 Use exclamation marks sparingly. Don’t use one to generate excitement; only use an exclamation mark if the user is actually experiencing something exciting. You can also use an exclamation mark for something cautionary, like “Stop!” or “Watch out!”
 
 To more accurately capture human expression, use an exclamation mark after just a few words, not after a long sentence.
 
-<table style="table-layout: fixed" tr width="80%">
-    <tr>
-        <th><center><strong>Before</strong></center></th>
-        <th><center><strong>After</strong></center></th>
-    </tr>
-    <tr>
-        <td>Congratulations on creating an account!</td>
-        <td>Congratulations! You created an account.</td>
-    </tr>
-</table>
-<br />
+<div class="ws-content-table">
+
+|**Before**  | **After** |
+|------------|-----------|
+| Congratulations on creating an account! | Congratulations! You created an account. |
+
+</div>
 
 ## Parallel structure
 All items in a list or series should be of the same part of speech.
 
-<table style="table-layout: fixed" tr width="80%">
-    <tr>
-        <th><center><strong>Before</strong></center></th>
-        <th><center><strong>After</strong></center></th>
-    </tr>
-    <tr>
-        <td>Remember these important tips: Write clearly; conduct research; spelling and grammar.</td>
-        <td>Remember these important tips: Write clearly; conduct research; use correct spelling and grammar.</td>
-    </tr>
-</table>
-<br />
+<div class="ws-content-table">
+
+|**Before**  | **After** |
+|------------|-----------|
+| Remember these important tips: Write clearly; conduct research; spelling and grammar. | Remember these important tips: Write clearly; conduct research; use correct spelling and grammar. |
+
+</div>
 
 ## Parentheses 
 Do not use parentheses to indicate a possible plural of something, like "Account(s)." If a user can select one thing or multiple things, use the plural form.

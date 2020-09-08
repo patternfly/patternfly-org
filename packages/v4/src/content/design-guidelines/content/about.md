@@ -1,9 +1,9 @@
 ---
-title: About
-section: content
-hideTOC: true
-showTitle: true
+id: About
+section: UX writing
 ---
+
+import './content.css';
 
 Welcome to the PatternFly content style guide: a place for UX professionals like you to learn about designing with words.
 

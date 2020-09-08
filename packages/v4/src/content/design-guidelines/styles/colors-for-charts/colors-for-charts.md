@@ -1,6 +1,6 @@
 ---
-title: Colors for charts
-section: styles
+id: Colors for charts
+section: guidelines
 hideSource: true
 ---
 
@@ -434,6 +434,8 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
   </GridItem>
 </Grid>
 
+![Chart with few variables](./fewvariables.png)
+
 <Divider className="ws-chart-colors-divider" />
 
 ## Use cases
@@ -447,6 +449,8 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
     <img width="480px" src="fewvariables.png" alt="Few variables examples" />
   </GridItem>
 </Grid>
+
+![Chart with nested variables](./nestedvariables.png)
 
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-chart-colors-gridtext">
@@ -469,6 +473,8 @@ Colors for charts includes a recommended set of colors proposed for bar charts, 
 </Grid>
 
 <Divider className="ws-chart-colors-divider" />
+
+![Chart with many variables](./manyvariables.png)
 
 ## Using the system with one color family
 
