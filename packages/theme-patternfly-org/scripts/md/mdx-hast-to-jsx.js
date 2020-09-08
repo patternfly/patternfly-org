@@ -1,11 +1,13 @@
 const path = require('path');
+const fs = require('fs');
 const { serializeTags } = require('remark-mdx/lib/serialize/mdx-element');
 const serializeMdxExpression = require('remark-mdx/lib/serialize/mdx-expression');
 const toH = require('hast-to-hyperscript');
 const { toTemplateLiteral } = require('@mdx-js/util');
 const acorn = require('acorn');
 const jsx = require('acorn-jsx');
-const { capitalize } = require('theme-patternfly-org/helpers/capitalize');
+const { capitalize } = require('../../helpers/capitalize');
+const { slugger } = require('../../helpers/slugger');
 
 const jsxParser = acorn.Parser.extend(jsx());
 
@@ -42,7 +44,7 @@ function compile(options = { }) {
 }
 
 function serializeRoot(node, options) {
-  const { getRelPath, getPageData, examples } = options;
+  const { getOutPath, getRelPath, getPageData, examples } = options;
   const pageData = {...getPageData()};
   // Save some kb
   delete pageData.toc;
@@ -62,18 +64,25 @@ function serializeRoot(node, options) {
     groups[kind].push(child)
   }
 
+  const thumbnailFolder = path.join(path.dirname(getOutPath()), pageData.source);
+  const thumbnails = fs.existsSync(thumbnailFolder) ? fs.readdirSync(thumbnailFolder) : [];
+  const thumbnailImports = thumbnails.map(img =>
+    `import srcImport${path.basename(img, '.png').replace(/-/g, '')} from './${pageData.source}/${img}';`)
+
   const importStatements = groups.import
     .map(node => node.value)
     .map(imp => imp.replace(/(['"])\./g, (_, match) => `${match}${getRelPath()}${path.sep}\.`))
+    .concat(thumbnailImports)
     .join('\n')
 
   // https://astexplorer.net/#/gist/9c531dd372dfc57e194c13c2889d31c3/03f2d6e889db1a733c6a079554e8af7784863739
-  const importSpecifiers = jsxParser.parse(importStatements, { sourceType: 'module' }).body
+  options.importSpecifiers = jsxParser.parse(importStatements, { sourceType: 'module' }).body
     .map(node => node.specifiers)
     .flat(1)
     .map(spec => spec.local ? spec.local.name : null)
-    .filter(localName => !/srcImport\d+/.test(localName)) // Images in MD like [!img](./src)
-    .filter(Boolean)
+    .filter(Boolean);
+  const liveContext = options.importSpecifiers
+    .filter(localName => !/srcImport.*/.test(localName)) // Images in MD like [!img](./src)
     .join(',\n  ');
 
   const childNodes = groups.rest
@@ -85,9 +94,9 @@ import { AutoLinkHeader, Example, Link as PatternflyThemeLink } from 'theme-patt
 ${importStatements}
 const pageData = ${JSON.stringify(pageData, null, 2)};
 `;
-  if (importSpecifiers) {
+  if (liveContext) {
     res += `pageData.liveContext = {\n${
-      '  ' + importSpecifiers
+      '  ' + liveContext
     }\n};\n`
   }
   if (examples) {
@@ -130,10 +139,16 @@ function serializeElement(node, options) {
 
   const indentText = '  '.repeat(indent);
   let res = '\n';
-  const isFullscreenExample = type === 'Example' && !props.noLive;
+  const isFullscreenExample = type === 'Example'
+    && ['js', 'html'].includes(props.lang)
+    && !props.noLive;
   res += `${indentText}<${type}`;
   if (isFullscreenExample) {
-    res += ` {...pageData} isFullscreenPreview={isFullscreenPreview}`;
+    res += ' {...pageData} {...props}';
+    const thumbnailImport = `srcImport${slugger(props.title).replace(/-/g, '')}`;
+    if (options.importSpecifiers.includes(thumbnailImport)) {
+      res += ` thumbnail={${thumbnailImport}}`;
+    }
   }
   else if (type === 'img' && srcImport) {
     res += ` src={${srcImport}}`;
@@ -144,7 +159,8 @@ function serializeElement(node, options) {
   res += `>\n${indentText}  ${content}`;
   res += `\n${indentText}</${type}>`;
   if (isFullscreenExample) {
-    examples[props.title] = `({ isFullscreenPreview }) => ${res}`;
+    // Props lets us pass `isFullscreenPreview` to <Example> so it knows to take 100% height
+    examples[props.title] = `props => ${res}`;
     res = `\n${indentText}{React.createElement(pageData.examples[${
       JSON.stringify(props.title)
     }])}`;

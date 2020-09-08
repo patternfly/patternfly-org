@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs-extra');
 const unified = require('unified');
 const remove = require('unist-util-remove');
+const visit = require('unist-util-visit');
 const toVfile = require('to-vfile'); // https://github.com/vfile/vfile
 const vfileReport = require('vfile-reporter');
 const yaml = require('js-yaml'); // https://github.com/nodeca/js-yaml
@@ -145,8 +146,28 @@ function toReactComponent(mdFilePath, source) {
     // Add custom PatternFly doc design things
     .use(require('./anchor-header'))
     .use(require('./styled-tags'))
+    // Extract examples to create fullscreen page routes
+    // Needs to be run after mdx-ast-to-mdx-hast which parses meta properties
+    .use(() => tree => {
+      const isExample = node =>
+        node.type === 'element'
+        && node.tagName === 'Example'
+        && ['js', 'html'].includes(node.properties.lang)
+        && !node.properties.noLive;
+      visit(tree, isExample, node => {
+        if (node.properties.isFullscreen) {
+          pageData.fullscreenExamples = pageData.fullscreenExamples || [];
+          pageData.fullscreenExamples.push(node.title);
+        }
+        else {
+          pageData.examples = pageData.examples || [];
+          pageData.examples.push(node.title);
+        }
+      });
+    })
     // Transform HAST object to JSX string
     .use(require('./mdx-hast-to-jsx'), {
+      getOutPath: () => outPath,
       getRelPath: () => path.relative(path.dirname(outPath), vfile.dirname), // for imports
       getPageData: () => pageData // For @reach/router routing
     })
@@ -192,8 +213,10 @@ module.exports = {
             id: pageData.id,
             title: pageData.title || pageData.id,
             toc: pageData.toc || [],
+            ...(pageData.examples && { examples: pageData.examples }),
+            ...(pageData.fullscreenExamples && { fullscreenExamples: pageData.fullscreenExamples }),
             section: pageData.section,
-            source: pageData.source
+            source: pageData.source,
           };
         }
       });

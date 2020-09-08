@@ -47,14 +47,14 @@ The React library provides a collection of React components you can use to build
 
 ### Install and configure PatternFly React
 * Using npm, run the following command to install:
-  ```
+  ```sh
   npm install @patternfly/react-core --save
   ```
 
   **OR**
 
 * Using yarn, run the following command to install:
-  ```
+  ```sh
   yarn add @patternfly/react-core
   ```
 
@@ -69,7 +69,7 @@ The HTML/CSS library provides a collection of code samples you can use to build 
 
 ### Install
 Using npm, run the following commands to install:
-```
+```sh
 npm install @patternfly/patternfly --save
 ```
 
@@ -95,7 +95,7 @@ Use these files to consume the library. The recommended consumption approach wil
 
 3. In your HTML file, add the following line to the bottom of your list of CSS files to link to your new stylesheet:
 
-  ```
+  ```html noLive
   <link rel="stylesheet" href="css/patternfly.css">
   ```
 
@@ -107,7 +107,7 @@ Use these files to consume the library. The recommended consumption approach wil
 
 6. In your HTML file, add the following line to the bottom of your list of CSS files:
 
-  ```
+  ```html noLive
   <link rel="stylesheet" href="css/patternfly-addons.css">
   ```
 
@@ -126,7 +126,7 @@ PatternFly uses the Overpass font family. Overpass can be utilized in two differ
 
   To use the CDN vs the standard build, update the ```sass-utilities/scss-variables.scss``` file as follows:
 
-  ```
+  ```scss
   $pf-global--enable-font-overpass-cdn: true !default;
   ```
 
@@ -144,7 +144,7 @@ PatternFly uses Font Awesome 5. Font Awesome 5 can be utilized in two different 
 
   To use the CDN vs the standard build, update the ```sass-utilities/scss-variables.scss``` file as follows:
 
-  ```
+  ```scss
   $pf-global--enable-fontawesome-cdn: true !default;
   ```
 

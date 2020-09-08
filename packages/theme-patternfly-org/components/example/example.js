@@ -1,16 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useLocation } from '@reach/router';
 import { LiveProvider, LiveEditor, LivePreview, LiveError } from 'react-live';
 import { Badge } from '@patternfly/react-core';
 import * as reactCoreModule from '@patternfly/react-core';
 import * as reactTableModule from '@patternfly/react-table';
 import { css } from '@patternfly/react-styles';
-import { Link } from '../link/link';
 import { ExampleToolbar } from './exampleToolbar';
 import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
 import { getParameters } from 'codesandbox/lib/api/define';
 import { slugger, transformCode, getStaticParams, getReactParams, getExampleClassName, getExampleId } from '../../helpers';
 import Prism from 'prismjs';
+import missingThumbnail from './missing-thumbnail.jpg';
 import 'prismjs/themes/prism-coy.css';
 import './example.css';
 
@@ -33,6 +33,7 @@ export const Example = ({
   title = 'Untitled',
   isFullscreen,
   isFullscreenPreview,
+  thumbnail,
   isBeta,
   id,
   section,
@@ -58,71 +59,42 @@ export const Example = ({
   // https://reactjs.org/docs/hooks-overview.html#state-hook
   const [editorCode, setEditorCode] = React.useState(code);
   const [darkMode, setDarkMode] = React.useState(false);
-  const [previewStyle, setPreviewStyle] = React.useState({});
-  const [previewContainerStyle, setPreviewContainerStyle] = React.useState({ height: '437.5px' });
   const location = useLocation();
 
   const exampleName = title.replace(/-/g, ' ').replace(/  /g, '-');
-  const fullscreenLink = `${location.pathname.replace(/\/$/, '')}${location.pathname.endsWith(source) ? '' : `/${source}`}/${slugger(title)}`;
   const scope = {
     ...liveContext,
     // These 2 are in the bundle anyways for the site since we dogfood
     ...reactCoreModule,
     ...reactTableModule,
   };
-  const codeBoxParams = getParameters(
-    lang === 'html'
-    ? getStaticParams(title, code)
-    : getReactParams(title, editorCode, scope));
-
-
-  // https://reactjs.org/docs/hooks-effect.html
-  if (isFullscreen) {
-    useEffect(() => {
-      const handleResize = () => {
-        const resizeWidth = Math.min(
-          document.getElementsByClassName('ws-example')[0].clientWidth,
-          800
-        );
-
-        const scale = resizeWidth / 1280;
-
-        setPreviewStyle({ transform: `scale(${scale})` });
-        setPreviewContainerStyle({ height:`${scale * 800}px`, width:`${scale * 1280}px` });
-      }
-
-      if (!previewStyle.transform) {
-        handleResize();
-      }
-      window.addEventListener('resize', handleResize);
-
-      return () => window.removeEventListener('resize', handleResize);
-    });
-  }
-
-  const Preview = (
-    <LivePreview
-      id={getExampleId(source, section[0], id, title)}
-      style={previewStyle}
-      className={css(
-        getExampleClassName(source, section[0], id),
-        darkMode && 'pf-t-dark pf-m-opaque-200',
-        !isFullscreenPreview && (isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview'),
-        isFullscreenPreview && 'pf-u-h-100'
-      )} />
-  );
+  const previewId = getExampleId(source, section[0], id, title);
+  const className = getExampleClassName(source, section[0], id);
 
   if (isFullscreenPreview) {
+    // Fullscreen page example
     return (
       <LiveProvider
         scope={scope}
         code={editorCode}
-        transformCode={code => transformCode(code, editorLang)}
+        transformCode={code => transformCode(code, editorLang, true)}
       >
-        {Preview}
+        <LivePreview
+          id={previewId}
+          className={css(
+            className,
+            'pf-u-h-100'
+          )}
+        />
       </LiveProvider>
     );
   }
+
+  const codeBoxParams = getParameters(
+    lang === 'html'
+    ? getStaticParams(title, code)
+    : getReactParams(title, editorCode, scope));
+  const fullscreenLink = `${location.pathname.replace(/\/$/, '')}${location.pathname.endsWith(source) ? '' : `/${source}`}/${slugger(title)}`;
 
   return (
     <div className="ws-example">
@@ -144,7 +116,6 @@ export const Example = ({
           styles: []
         }}
       >
-        {/* We need this container for fullscreen example styling and popout */}
         {isFullscreen
           ? <div className="ws-preview">
               <a
@@ -153,12 +124,17 @@ export const Example = ({
                 target="_blank"
                 aria-label={`Open fullscreen ${exampleName} example`}
               >
-                <div style={previewContainerStyle}>
-                  {Preview}
-                </div>
+                <img height="450px" src={thumbnail || missingThumbnail} />
               </a>
             </div>
-          : Preview}
+          : <LivePreview
+              id={previewId}
+              className={css(
+                className,
+                darkMode && 'pf-t-dark pf-m-opaque-200',
+                isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview'
+              )} />
+        }
 
         <ExampleToolbar
           editor={<LiveEditor className="ws-editor" onChange={setEditorCode} />}

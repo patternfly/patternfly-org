@@ -1,4 +1,5 @@
 const visit = require('unist-util-visit');
+const remove = require('unist-util-remove');
 
 function exampleCaptions() {
   return tree => {
@@ -21,12 +22,12 @@ function exampleCaptions() {
             child.children[0].value
           ) {
             title = child.children[0].value;
-            parent.children.splice(i, 1);
+            parent.children[i].needsDeletion = true;
             break;
           }
           else {
             caption.unshift(child);
-            parent.children.splice(i, 1);
+            parent.children[i].needsDeletion = true;
           }
         }
       }
@@ -34,6 +35,7 @@ function exampleCaptions() {
       node.title = title;
       node.children = caption;
     });
+    remove(tree, node => node.needsDeletion);
   }
 }
 
