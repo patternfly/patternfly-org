@@ -118,7 +118,7 @@ Locate examples for reference and then construct image mockups to illustrate how
 
 If you need help creating images, you can request assistance from the PatternFly Visual Design team by emailing Gina Doyle at [gdoyle@redhat.com](mailto:gdoyle@redhat.com). Requesting assets in this way also helps ensure that these solutions can be built directly using PatternFly. 
 
-If new components or demos are required to address the topic, you can request them by filing an issue in the [patternfly-next](https://github.com/patternfly/patternfly-next) repo. 
+If new components or demos are required to address the topic, you can request them by filing an issue in the [patternfly](https://github.com/patternfly/patternfly) repo. 
 
 To ensure that imagery is consistent and maintainable, create all your image assets in Sketch: 
 
