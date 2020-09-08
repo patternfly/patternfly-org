@@ -80,12 +80,10 @@ sourceMD(
   'react'
 );
 
-// TODO: Fix react demo imports
-// TODO: Fix "id: Master Detail" to "id: Primary detail"
-// sourceMD(
-//   glob.sync(path.join(reactCorePath, '/**/demos/**/*.md')),
-//   'react'
-// );
+sourceMD(
+  glob.sync(path.join(reactCorePath, '/**/demos/**/*.md')),
+  'react'
+);
 
 // Charts props
 const reactChartsPath = require

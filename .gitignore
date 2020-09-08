@@ -31,4 +31,4 @@ build
 .vscode
 
 size-plugin.json
-generated
+**/generated/**/*.js

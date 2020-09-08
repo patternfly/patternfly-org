@@ -133,20 +133,20 @@ function getAsyncComponent(url, pathPrefix) {
 }
 
 const fullscreenRoutes = Object.entries(allRoutes)
+  .filter(([, { examples, fullscreenExamples }]) => examples || fullscreenExamples)
   .reduce((acc, val) => {
-    const [path, { toc = [], Component }] = val;
-    // Use TOC for fullscreen pages
-    const exampleIndex = toc.indexOf('Examples');
-    let examples = exampleIndex === -1 ? [] : toc[exampleIndex + 1];
-    examples = Array.isArray(examples) ? examples : [];
-    examples.forEach(title => {
-      const slug = `${path}/${slugger(title)}`;
-      acc[slug] = {
-        title,
-        Component,
-        isFullscreen: true
-      };
-    })
+    const [path, { Component, examples = [], fullscreenExamples = [] }] = val;
+    examples
+      .concat(fullscreenExamples)
+      .forEach(title => {
+        const slug = `${path}/${slugger(title)}`;
+        acc[slug] = {
+          title,
+          Component,
+          isFullscreen: true,
+          isFullscreenOnly: fullscreenExamples.includes(title)
+        };
+      });
     return acc;
   }, {});
 

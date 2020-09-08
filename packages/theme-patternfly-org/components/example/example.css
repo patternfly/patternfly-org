@@ -25,25 +25,11 @@
   color: #c9190b;
 }
 
-.ws-preview-fullscreen {
-  position: relative;
-  pointer-events: none;
-  width: 1280px;
-  height: 800px;
-  transform-origin: top left;
-  /* transform: scale added in JS based on parent element width */
-}
-
-.ws-preview-container {
-  position: relative;
-  display: block;
-}
-
 .ws-preview__thumbnail-link {
   position: relative;
-  display: inline-block;
   line-height: 0;
   overflow: hidden;
+  display: inline-block;
 }
 
 .ws-preview__thumbnail-link::before,
@@ -66,6 +52,16 @@
   left: 0;
   content: '';
   background-color: rgba(0,0,0,.5);
+}
+
+.ws-preview__thumbnail-link::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Font Awesome 5 Free";
+  content: "\f35d";
+  font-size: 52px;
+  color: rgba(255,255,255,.4);
 }
 
 .ws-preview__thumbnail-link::after {
