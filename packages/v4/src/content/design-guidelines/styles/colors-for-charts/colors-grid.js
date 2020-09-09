@@ -3,7 +3,7 @@ import { Grid, GridItem } from '@patternfly/react-core';
 
 const ColorsGrid = () => (
   <Grid>
-    <GridItem span={4}>
+    <GridItem sm={12} md={6} lg={4}>
       <h3 className="pf-c-title pf-m-xl ws-heading ws-title ws-h3">Blue family</h3>
       <Grid>
         <GridItem span={2}>
@@ -53,7 +53,7 @@ const ColorsGrid = () => (
         </GridItem>
       </Grid>
     </GridItem>
-    <GridItem span={4}>
+    <GridItem sm={12} md={6} lg={4}>
       <h3 className="pf-c-title pf-m-xl ws-heading ws-title ws-h3">Green family</h3>
       <Grid>
         <GridItem span={2}>
@@ -103,7 +103,7 @@ const ColorsGrid = () => (
         </GridItem>
       </Grid>
     </GridItem>
-    <GridItem span={4}>
+    <GridItem sm={12} md={6} lg={4}>
       <h3 className="pf-c-title pf-m-xl ws-heading ws-title ws-h3">Cyan family</h3>
       <Grid>
         <GridItem span={2}>
@@ -153,7 +153,7 @@ const ColorsGrid = () => (
         </GridItem>
       </Grid>
     </GridItem>
-    <GridItem span={4}>
+    <GridItem sm={12} md={6} lg={4}>
       <h3 className="pf-c-title pf-m-xl ws-heading ws-title ws-h3">Purple family</h3>
       <Grid>
         <GridItem span={2}>
@@ -203,7 +203,7 @@ const ColorsGrid = () => (
         </GridItem>
       </Grid>
     </GridItem>
-    <GridItem span={4}>
+    <GridItem sm={12} md={6} lg={4}>
       <h3 className="pf-c-title pf-m-xl ws-heading ws-title ws-h3">Gold family</h3>
       <Grid>
         <GridItem span={2}>
@@ -253,7 +253,7 @@ const ColorsGrid = () => (
         </GridItem>
       </Grid>
     </GridItem>
-    <GridItem span={4}>
+    <GridItem sm={12} md={6} lg={4}>
       <h3 className="pf-c-title pf-m-xl ws-heading ws-title ws-h3">Orange family</h3>
       <Grid>
         <GridItem span={2}>
@@ -303,7 +303,7 @@ const ColorsGrid = () => (
         </GridItem>
       </Grid>
     </GridItem>
-    <GridItem span={4}>
+    <GridItem sm={12} md={6} lg={4}>
       <h3 className="pf-c-title pf-m-xl ws-heading ws-title ws-h3">Red family</h3>
       <Grid>
         <GridItem span={2}>
@@ -353,7 +353,7 @@ const ColorsGrid = () => (
         </GridItem>
       </Grid>
     </GridItem>
-    <GridItem span={4}>
+    <GridItem sm={12} md={6} lg={4}>
       <h3 className="pf-c-title pf-m-xl ws-heading ws-title ws-h3">Grey family</h3>
       <Grid>
         <GridItem span={2}>
