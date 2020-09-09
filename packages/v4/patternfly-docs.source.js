@@ -29,7 +29,6 @@ sourceMD(
 );
 
 // Core MD
-// TODO: Fix "id: Master Detail" to "id: Primary detail"
 const coreDocsPath = require
   .resolve('@patternfly/patternfly/package.json')
   .replace('package.json', 'docs');
@@ -112,11 +111,10 @@ sourceMD(
   'html'
 );
 const reactDocsPath = require.resolve('@patternfly/react-docs/package.json');
-// TODO: parse the `{...props}` string in the file correctly
-// sourceMD(
-//   reactDocsPath.replace('package.json', 'RELEASE-NOTES.md'),
-//   'react'
-// );
+sourceMD(
+  reactDocsPath.replace('package.json', 'RELEASE-NOTES.md'),
+  'react'
+);
 
 // Upgrade guides
 sourceMD(

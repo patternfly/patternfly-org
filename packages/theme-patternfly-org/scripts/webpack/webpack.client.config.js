@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const baseConfig = require('./webpack.base.config');
-const { getHtmlWebpackPlugins } = require('./scripts/getHtmlWebpackPlugins');
+const { getHtmlWebpackPlugins } = require('./getHtmlWebpackPlugins');
 const SizePlugin = require('size-plugin');
 
 const pfDir = path.dirname(require.resolve('@patternfly/patternfly/package.json'));
@@ -97,7 +97,7 @@ const clientConfig = async (env, argv) => {
       new CopyPlugin({
         patterns: [
           // versions.json will later be copied to the root www dir
-          { from: path.join(__dirname, 'versions.json'), to: 'versions.json' },
+          { from: path.join(__dirname, '../../versions.json'), to: 'versions.json' },
           { from: path.join(pfDir, 'assets/images/'), to: 'assets/images/' },
           { from: path.join(pfDir, 'assets/fonts/'), to: 'assets/fonts/' }
         ]

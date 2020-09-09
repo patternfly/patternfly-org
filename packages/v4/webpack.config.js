@@ -1,1 +1,1 @@
-module.exports = require('theme-patternfly-org/webpack.client.config');
+module.exports = require('theme-patternfly-org/scripts/webpack/webpack.client.config');
