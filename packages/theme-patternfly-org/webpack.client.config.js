@@ -2,9 +2,11 @@ const path = require('path');
 const { merge } = require('webpack-merge');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const baseConfig = require('./webpack.base.config');
 const { getHtmlWebpackPlugins } = require('./scripts/getHtmlWebpackPlugins');
+const SizePlugin = require('size-plugin');
 
 const pfDir = path.dirname(require.resolve('@patternfly/patternfly/package.json'));
 // Don't include PatternFly styles twice
@@ -42,6 +44,12 @@ const clientConfig = async (env, argv) => {
         },
       },
       minimize: isProd ? true : false,
+      minimizer: [
+        new TerserPlugin({
+          cache: path.join(process.cwd(), '.cache/terser'),
+          ...(process.env.CI ? { parallel: 2 } : {})
+        }),
+      ],
       runtimeChunk: 'single',
     },
     module: {
@@ -53,7 +61,7 @@ const clientConfig = async (env, argv) => {
             {
               loader: MiniCssExtractPlugin.loader,
               options: {
-                hmr: isProd
+                hmr: !isProd
               },
             },
             {
@@ -62,14 +70,15 @@ const clientConfig = async (env, argv) => {
             {
               loader: 'postcss-loader',
               options: {
-                ident: 'postcss',
-                plugins: [
-                  require('autoprefixer')({
-                    env: '>0.25%, not ie 11, not op_mini all',
-                    flexbox: false,
-                    grid: false
-                  })
-                ]
+                postcssOptions: {
+                  plugins: [
+                    require('autoprefixer')({
+                      env: '>0.25%, not ie 11, not op_mini all',
+                      flexbox: false,
+                      grid: false
+                    })
+                  ]
+                }
               }
             }
           ]
@@ -94,6 +103,11 @@ const clientConfig = async (env, argv) => {
         ]
       }),
       ...await getHtmlWebpackPlugins(isProd), // Create an HTML page per route
+      ...(isProd
+        ? [
+          new SizePlugin()
+        ]
+        : []),
       ...(env === 'analyze'
         ? [
           new BundleAnalyzerPlugin({

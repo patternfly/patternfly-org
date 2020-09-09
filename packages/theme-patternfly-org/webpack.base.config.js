@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const SizePlugin = require('size-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { pathPrefix } = require(`${process.cwd()}/patternfly-docs.config`);
 
@@ -29,7 +28,7 @@ module.exports = (_env, argv) => {
           use: {
             loader: 'babel-loader',
             options: {
-              cacheDirectory: '.cache',
+              cacheDirectory: '.cache/babel',
               cacheCompression: false,
               presets: [['@babel/preset-env', {
                 loose: true,
@@ -45,7 +44,25 @@ module.exports = (_env, argv) => {
           },
         },
         {
-          test: /\.(png|jpg|gif|svg)$/,
+          test: /\.(png|jpe?g|webp)$/,
+          include: [
+            path.resolve(process.cwd(), 'src'),
+            path.resolve(__dirname), // Temporarily compile theme using webpack for development
+            /react-[\w-]+\/src\/.*\/examples/
+          ],
+          use: [
+            {
+              loader: 'responsive-loader',
+              options: {
+                adapter: require('responsive-loader/sharp'),
+                name: '[name].[contenthash].[ext]',
+                outputPath: 'images/'
+              },
+            }
+          ]
+        },
+        {
+          test: /\.(png|jpe?g|webp|gif|svg)$/,
           use: [
             {
               loader: 'url-loader',
@@ -79,6 +96,7 @@ module.exports = (_env, argv) => {
       new FaviconsWebpackPlugin({
         logo: path.resolve(__dirname, 'images/patternfly-logo.svg'),
         favicons: {
+          appDescription: 'Home of PatternFly Design.',
           cache: true,
           background: '#4F5255',
           theme_color: '#151515',
@@ -97,9 +115,7 @@ module.exports = (_env, argv) => {
       }),
       ...(isProd
         ? [
-          new webpack.HashedModuleIdsPlugin(), // Hashes based on module content
-          new CleanWebpackPlugin(),
-          new SizePlugin()
+          new CleanWebpackPlugin()
         ]
         : []
       )

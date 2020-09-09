@@ -46,4 +46,4 @@ Use the following command to update your configuration in the `src/patternfly/sa
 
 **Does your application need support for Internet Explorer 11?**
 
-You will need to [follow additional steps](https://github.com/patternfly/patternfly-next/wiki/IE11-Support) to enable support for this browser.
+You will need to [follow additional steps](https://github.com/patternfly/patternfly/wiki/IE11-Support) to enable support for this browser.
