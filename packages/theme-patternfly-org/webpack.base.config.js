@@ -45,7 +45,25 @@ module.exports = (_env, argv) => {
           },
         },
         {
-          test: /\.(png|jpg|gif|svg)$/,
+          test: /\.(png|jpe?g|webp)$/,
+          include: [
+            path.resolve(process.cwd(), 'src'),
+            path.resolve(__dirname), // Temporarily compile theme using webpack for development
+            /react-[\w-]+\/src\/.*\/examples/
+          ],
+          use: [
+            {
+              loader: 'responsive-loader',
+              options: {
+                adapter: require('responsive-loader/sharp'),
+                name: '[name].[contenthash].[ext]',
+                outputPath: 'images/'
+              },
+            }
+          ]
+        },
+        {
+          test: /\.(png|jpe?g|webp|gif|svg)$/,
           use: [
             {
               loader: 'url-loader',

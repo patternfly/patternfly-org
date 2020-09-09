@@ -67,13 +67,12 @@ export const TableOfContents = ({
       return;
     }
     const scrollableElement = document.getElementById('ws-page-main');
-    const titleElement = document.getElementById('nav-content');
     const htmlElements = scrollableElement.querySelectorAll('h2.ws-heading,h3.ws-heading');
     const scrollElements = Array.from(htmlElements)
       // When we hide h3s for long TOCs we don't want to track them
       .filter(e => items.flat().includes(e.innerText))
       .map(e => ({
-        y: e.offsetTop - (titleElement ? titleElement.offsetHeight : 0),
+        y: e.offsetTop - scrollableElement.offsetTop,
         text: e.innerText
       }))
       .sort((e1, e2) => e2.y - e1.y);

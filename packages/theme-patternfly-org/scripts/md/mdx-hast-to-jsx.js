@@ -151,7 +151,7 @@ function serializeElement(node, options) {
     }
   }
   else if (type === 'img' && srcImport) {
-    res += ` src={${srcImport}}`;
+    res += ` src={${srcImport}.src} width={${srcImport}.width + 'px'} height={${srcImport}.height + 'px'}`;
   }
   if (spread) {
     res += ` {...${spread}}`;
