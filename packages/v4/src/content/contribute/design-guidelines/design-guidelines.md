@@ -129,7 +129,7 @@ To ensure that imagery is consistent and maintainable, create all your image ass
 
         <img src="./image-2-high-fi.png"  alt="high-fi modal"  width="427"/> 
 
-        When creating high-fidelity mockups, you should first   look for existing examples in the [PF4-Components Sketch file](https://sketch.cloud/s/8Pamq). You can create new examples as needed by using the components found in that file. Next, export those images so that they can be added to your corresponding document page in the [Design Doc Assets file](https://sketch.cloud/s/ggDwz). You can make callouts or other customizations there as needed. 
+        When creating high-fidelity mockups, you should first look for existing examples in the [PatternFly template file](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89). You can create new examples as needed by using the components found in that file. Next, export those images so that they can be added to your corresponding document page in the [Design Doc Assets file](https://sketch.cloud/s/ggDwz). You can make callouts or other customizations there as needed. 
 
     - **Schematic mockups** convey placement of elements in a page. These are useful when the internal content is not important or relevant. Because they lack text and graphics, schematic mockups also scale well when placed in a document. The example below demonstrates how the positioning, rather than the content, of a toast alert is the focus. 
 
