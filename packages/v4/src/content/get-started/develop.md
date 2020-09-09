@@ -89,7 +89,7 @@ When you install PatternFly, the package includes:
 Use these files to consume the library. The recommended consumption approach will vary from project to project.
 
 ### Configure your project
-1. Navigate to the patternfly-next package you just installed and find the PatternFly CSS stylesheet, ```patternfly.css```
+1. Navigate to the patternfly package you just installed and find the PatternFly CSS stylesheet, ```patternfly.css```
 
 2. Copy ```patternfly.css``` to your project's CSS directory.
 
@@ -140,7 +140,7 @@ PatternFly uses Font Awesome 5. Font Awesome 5 can be utilized in two different 
 
   * **Used as a CDN**
 
-  If you wish to use the CDN for Font Awesome 5 rather than the default approach, you need to update the ```utilities/variables.scss``` file (from source ```node_modules/@patternfly/patternfly-next/```) and build PatternFly as part of your build process.
+  If you wish to use the CDN for Font Awesome 5 rather than the default approach, you need to update the ```utilities/variables.scss``` file (from source ```node_modules/@patternfly/patternfly/```) and build PatternFly as part of your build process.
 
   To use the CDN vs the standard build, update the ```sass-utilities/scss-variables.scss``` file as follows:
 

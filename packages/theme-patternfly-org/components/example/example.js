@@ -33,7 +33,7 @@ export const Example = ({
   title = 'Untitled',
   isFullscreen,
   isFullscreenPreview,
-  thumbnail,
+  thumbnail = missingThumbnail,
   isBeta,
   id,
   section,
@@ -124,7 +124,7 @@ export const Example = ({
                 target="_blank"
                 aria-label={`Open fullscreen ${exampleName} example`}
               >
-                <img height="450px" src={thumbnail || missingThumbnail} />
+                <img src={thumbnail.src} width={thumbnail.width} height={thumbnail.height} />
               </a>
             </div>
           : <LivePreview

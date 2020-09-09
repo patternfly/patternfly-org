@@ -3,11 +3,11 @@ id: Red Hat font
 section: get-started
 ---
 
-PR - [https://github.com/patternfly/patternfly-next/pull/1813](https://github.com/patternfly/patternfly-next/pull/1813)
+PR - [https://github.com/patternfly/patternfly/pull/1813](https://github.com/patternfly/patternfly/pull/1813)
 
-Full list of changes - [https://github.com/patternfly/patternfly-next/pull/1813/files](https://github.com/patternfly/patternfly-next/pull/1813/files)
+Full list of changes - [https://github.com/patternfly/patternfly/pull/1813/files](https://github.com/patternfly/patternfly/pull/1813/files)
 
-Available in [v2.18.0](https://github.com/patternfly/patternfly-next/releases/tag/v2.18.0)
+Available in [v2.18.0](https://github.com/patternfly/patternfly/releases/tag/v2.18.0)
 
 ## Global font changes
 
