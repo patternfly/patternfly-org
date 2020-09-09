@@ -179,15 +179,11 @@
 }
 
 .ws-content-css-var-text {
-	display: none;
-	visibility: hidden
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-css-var-text {
-		display: block;
-		visibility: visible
-	}
+	display: inline;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color: #ffffff;
+	border: 1px solid #ededed !important;
 }
 
 .ws-content-chart-colors-gallery--information {
