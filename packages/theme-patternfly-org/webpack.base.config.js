@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const SizePlugin = require('size-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { pathPrefix } = require(`${process.cwd()}/patternfly-docs.config`);
 
@@ -97,6 +96,7 @@ module.exports = (_env, argv) => {
       new FaviconsWebpackPlugin({
         logo: path.resolve(__dirname, 'images/patternfly-logo.svg'),
         favicons: {
+          appDescription: 'Home of PatternFly Design.',
           cache: true,
           background: '#4F5255',
           theme_color: '#151515',
@@ -115,9 +115,7 @@ module.exports = (_env, argv) => {
       }),
       ...(isProd
         ? [
-          new webpack.HashedModuleIdsPlugin(), // Hashes based on module content
-          new CleanWebpackPlugin(),
-          new SizePlugin()
+          new CleanWebpackPlugin()
         ]
         : []
       )
