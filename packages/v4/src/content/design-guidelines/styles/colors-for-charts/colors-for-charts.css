@@ -1,713 +1,189 @@
-.ws-content-chart-colors-gallery--blue-1 {
-	height: 65px;
-	width: 65px;
-	background-color: #8bc1f7
+.ws-content-chart-colors {
+	height: 44px;
+	width: 44px;
+	border-radius: 50%;
 }
 
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--blue-1 {
+/* @media screen and (min-width:768px) {
+	.ws-content-chart-colors {
 		height: 85px;
 		width: 85px
 	}
 }
 
 @media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--blue-1 {
+	.ws-content-chart-colors {
 		height: 100px;
 		width: 100px
 	}
+} */
+
+.ws-content-chart-colors-gallery--blue-1 {
+	background-color: #8bc1f7;
 }
 
 .ws-content-chart-colors-gallery--blue-2 {
-	height: 65px;
-	width: 65px;
-	background-color: #519de9
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--blue-2 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--blue-2 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #519de9;
 }
 
 .ws-content-chart-colors-gallery--blue-3 {
-	height: 65px;
-	width: 65px;
-	background-color: #06c
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--blue-3 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--blue-3 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #06c;
 }
 
 .ws-content-chart-colors-gallery--blue-4 {
-	height: 65px;
-	width: 65px;
-	background-color: #004b95
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--blue-4 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--blue-4 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #004b95;
 }
 
 .ws-content-chart-colors-gallery--blue-5 {
-	height: 65px;
-	width: 65px;
-	background-color: #002f5d
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--blue-5 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--blue-5 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #002f5d;
 }
 
 .ws-content-chart-colors-gallery--green-1 {
-	height: 65px;
-	width: 65px;
-	background-color: #bde2b9
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--green-1 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--green-1 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: hsl(114, 41%, 81%);
 }
 
 .ws-content-chart-colors-gallery--green-2 {
-	height: 65px;
-	width: 65px;
-	background-color: #7cc674
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--green-2 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--green-2 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #7cc674;
 }
 
 .ws-content-chart-colors-gallery--green-3 {
-	height: 65px;
-	width: 65px;
-	background-color: #4cb140
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--green-3 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--green-3 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #4cb140;
 }
 
 .ws-content-chart-colors-gallery--green-4 {
-	height: 65px;
-	width: 65px;
-	background-color: #38812f
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--green-4 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--green-4 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #38812f;
 }
 
 .ws-content-chart-colors-gallery--green-5 {
-	height: 65px;
-	width: 65px;
-	background-color: #23511e
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--green-5 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--green-5 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #23511e;
 }
 
 .ws-content-chart-colors-gallery--cyan-1 {
-	height: 65px;
-	width: 65px;
-	background-color: #a2d9d9
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--cyan-1 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--cyan-1 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #a2d9d9;
 }
 
 .ws-content-chart-colors-gallery--cyan-2 {
-	height: 65px;
-	width: 65px;
-	background-color: #73c5c5
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--cyan-2 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--cyan-2 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #73c5c5;
 }
 
 .ws-content-chart-colors-gallery--cyan-3 {
-	height: 65px;
-	width: 65px;
-	background-color: #009596
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--cyan-3 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--cyan-3 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #009596;
 }
 
 .ws-content-chart-colors-gallery--cyan-4 {
-	height: 65px;
-	width: 65px;
-	background-color: #005f60
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--cyan-4 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--cyan-4 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #005f60;
 }
 
 .ws-content-chart-colors-gallery--cyan-5 {
-	height: 65px;
-	width: 65px;
-	background-color: #003737
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--cyan-5 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--cyan-5 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #003737;
 }
 
 .ws-content-chart-colors-gallery--purple-1 {
-	height: 65px;
-	width: 65px;
-	background-color: #b2b0ea
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--purple-1 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--purple-1 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #b2b0ea;
 }
 
 .ws-content-chart-colors-gallery--purple-2 {
-	height: 65px;
-	width: 65px;
-	background-color: #8481dd
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--purple-2 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--purple-2 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #8481dd;
 }
 
 .ws-content-chart-colors-gallery--purple-3 {
-	height: 65px;
-	width: 65px;
-	background-color: #5752d1
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--purple-3 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--purple-3 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #5752d1;
 }
 
 .ws-content-chart-colors-gallery--purple-4 {
-	height: 65px;
-	width: 65px;
-	background-color: #3c3d99
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--purple-4 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--purple-4 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #3c3d99;
 }
 
 .ws-content-chart-colors-gallery--purple-5 {
-	height: 65px;
-	width: 65px;
-	background-color: #2a265f
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--purple-5 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--purple-5 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #2a265f;
 }
 
 .ws-content-chart-colors-gallery--gold-1 {
-	height: 65px;
-	width: 65px;
-	background-color: #f9e0a2
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--gold-1 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--gold-1 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #f9e0a2;
 }
 
 .ws-content-chart-colors-gallery--gold-2 {
-	height: 65px;
-	width: 65px;
-	background-color: #f6d173
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--gold-2 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--gold-2 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #f6d173;
 }
 
 .ws-content-chart-colors-gallery--gold-3 {
-	height: 65px;
-	width: 65px;
-	background-color: #f4c145
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--gold-3 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--gold-3 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #f4c145;
 }
 
 .ws-content-chart-colors-gallery--gold-4 {
-	height: 65px;
-	width: 65px;
-	background-color: #f0ab00
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--gold-4 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--gold-4 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #f0ab00;
 }
 
 .ws-content-chart-colors-gallery--gold-5 {
-	height: 65px;
-	width: 65px;
-	background-color: #c58c00
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--gold-5 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--gold-5 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #c58c00;
 }
 
 .ws-content-chart-colors-gallery--orange-1 {
-	height: 65px;
-	width: 65px;
-	background-color: #f4b678
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--orange-1 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--orange-1 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #f4b678;
 }
 
 .ws-content-chart-colors-gallery--orange-2 {
-	height: 65px;
-	width: 65px;
-	background-color: #ef9234
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--orange-2 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--orange-2 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #ef9234;
 }
 
 .ws-content-chart-colors-gallery--orange-3 {
-	height: 65px;
-	width: 65px;
-	background-color: #ec7a08
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--orange-3 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--orange-3 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #ec7a08;
 }
 
 .ws-content-chart-colors-gallery--orange-4 {
-	height: 65px;
-	width: 65px;
-	background-color: #c46100
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--orange-4 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--orange-4 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #c46100;
 }
 
 .ws-content-chart-colors-gallery--orange-5 {
-	height: 65px;
-	width: 65px;
-	background-color: #8f4700
+	background-color: #8f4700;
 }
 
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--orange-5 {
-		height: 85px;
-		width: 85px
-	}
+.ws-content-chart-colors-gallery--red-1 {
+	background-color: #c9190b;
 }
 
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--orange-5 {
-		height: 100px;
-		width: 100px
-	}
+.ws-content-chart-colors-gallery--red-2 {
+	background-color: #a30000;
+}
+
+.ws-content-chart-colors-gallery--red-3 {
+	background-color: #7d1007;
+}
+
+.ws-content-chart-colors-gallery--red-4 {
+	background-color: #470000;
+}
+
+.ws-content-chart-colors-gallery--red-5 {
+	background-color: #2c0000;
 }
 
 .ws-content-chart-colors-gallery--black-1 {
-	height: 65px;
-	width: 65px;
-	background-color: #d2d2d2
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--black-1 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--black-1 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #d2d2d2;
 }
 
 .ws-content-chart-colors-gallery--black-2 {
-	height: 65px;
-	width: 65px;
-	background-color: #bbb
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--black-2 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--black-2 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #bbb;
 }
 
 .ws-content-chart-colors-gallery--black-3 {
-	height: 65px;
-	width: 65px;
-	background-color: #8b8d8f
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--black-3 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--black-3 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #8b8d8f;
 }
 
 .ws-content-chart-colors-gallery--black-4 {
-	height: 65px;
-	width: 65px;
-	background-color: #72767b
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--black-4 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--black-4 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #72767b;
 }
 
 .ws-content-chart-colors-gallery--black-5 {
-	height: 65px;
-	width: 65px;
-	background-color: #4d5258
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-chart-colors-gallery--black-5 {
-		height: 85px;
-		width: 85px
-	}
-}
-
-@media screen and (min-width:1200px) {
-	.ws-content-chart-colors-gallery--black-5 {
-		height: 100px;
-		width: 100px
-	}
+	background-color: #4d5258;
 }
 
 .ws-content-css-var-text {
-	display: none;
-	visibility: hidden
-}
-
-@media screen and (min-width:768px) {
-	.ws-content-css-var-text {
-		display: block;
-		visibility: visible
-	}
+	display: inline;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color: #ffffff;
+	border: 1px solid #ededed !important;
 }
 
 .ws-content-chart-colors-gallery--information {
@@ -721,4 +197,12 @@
 
 .ws-content-chart-colors-gallery--information>*>code {
 	font-size: 10px!important
+}
+
+.ws-chart-colors-gridtext {
+	max-width: 680px;
+}
+
+.pf-c-divider.ws-chart-colors-divider {
+	margin-top: var(--pf-c-content--h2--MarginTop);
 }
