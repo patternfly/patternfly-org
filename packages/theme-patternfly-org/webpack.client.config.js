@@ -46,7 +46,7 @@ const clientConfig = async (env, argv) => {
       minimize: isProd ? true : false,
       minimizer: [
         new TerserPlugin({
-          cache: path.join(process.cwd(), '.cache'),
+          cache: path.join(process.cwd(), '.cache/terser'),
           ...(process.env.CI ? { parallel: 2 } : {})
         }),
       ],

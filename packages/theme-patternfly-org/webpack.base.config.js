@@ -28,7 +28,7 @@ module.exports = (_env, argv) => {
           use: {
             loader: 'babel-loader',
             options: {
-              cacheDirectory: '.cache',
+              cacheDirectory: '.cache/babel',
               cacheCompression: false,
               presets: [['@babel/preset-env', {
                 loose: true,
