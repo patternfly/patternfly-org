@@ -10,9 +10,13 @@ The **Notification badge** is intended to be used with a [Notification drawer](/
 <img src="./img/notification-badge.png" alt="basic notification drawer" width="598"/>
 
 **1. Icon:** the notification badge will be located in the masthead and display the 'fa-bell' icon in it's default state. Clicking the icon (or anywhere within the badge) will toggle the notification drawer open and closed.
+
 **2. Background:** In the default state, the background will change color to indicate that the notification drawer is opened. Optionally the background color can also convey status.
+
 **3. Unread status (optional):** Setting the background color to blue will indicate that one or more unread notifications are present in the drawer.
+
 **4. Attention status (optional):** Setting the background color to red will indicate that one or more notifications are present in the drawer that require immediate attention. In the attention state the icon also changes from 'fa-bell' to 'pf-icon-attention-bell'.
+
 **5. Count (optional):** When used, the count field will indicate the number of notifications in the notification drawer.
 
 ## Usage
