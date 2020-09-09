@@ -360,5 +360,5 @@
 }
 
 .ws-mdx-content-content {
-  width: 832px;
+  max-width: 832px;
 }
