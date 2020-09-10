@@ -6,7 +6,7 @@
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
-    "build": "node --max_old_space_size=4096 node_modules/.bin/theme-patternfly-org build all",
+    "build": "theme-patternfly-org build all",
     "build:analyze": "theme-patternfly-org build all --analyze",
     "build:server": "theme-patternfly-org build server",
     "build:client": "theme-patternfly-org build client",

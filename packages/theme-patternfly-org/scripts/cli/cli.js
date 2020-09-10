@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 const path = require('path');
+const { fork } = require('child_process');
 const program = require('commander');
-const { build } = require('./build');
 const { start } = require('./start');
-const serverConfig = require('../webpack/webpack.server.config');
 const clientConfig = require('../webpack/webpack.client.config');
 const { version } = require('../../package.json');
 
@@ -16,8 +15,11 @@ function getSource(options) {
 }
 
 function generate(options) {
+  const start = new Date();
   console.log('write source files to src/generated');
   getSource(options);
+  const duration = new Date() - start;
+  console.log('took %ss', duration / 1000);
 }
 
 program
@@ -40,7 +42,31 @@ program
     console.log('start webpack-dev-server');
     start(webpackClientConfig);
   });
- 
+
+async function execFile(file, args) {
+  const start = new Date();
+  return new Promise((res, rej) => {
+    const child = fork(path.join(__dirname, file), args);
+    function errorHandler(err) {
+      console.error(err);
+      rej();
+    };
+    function successHandler(code) {
+      if (code === 0) {
+        const duration = new Date() - start;
+        console.log('took %ss', duration / 1000);
+        res();
+      }
+      else {
+        console.error('Exited with', code);
+        rej();
+      }
+    }
+    child.on('error', errorHandler);
+    child.on('exit', successHandler);
+  });
+}
+
 program
   .command('build <server|client|all>')
   .option('-a, --analyze', 'use webpack-bundle-analyzer', false)
@@ -52,16 +78,12 @@ program
       : cmd;
     // console.log('build', cmd, options.parent.cssconfig);
     if (toBuild.includes('server')) {
-      console.log('load server webpack config');
-      const webpackServerConfig = await serverConfig(null, { mode: 'production' });
-      console.log('build server');
-      await build(webpackServerConfig);
+      // Need to fork since first webpack build puts pressure on GC
+      // Otherwise CircleCI will fail with 4GB RAM
+      await execFile('buildServer.js');
     }
     if (toBuild.includes('client')) {
-      console.log('load client webpack config');
-      const webpackClientConfig = await clientConfig(options.analyze ? 'analyze' : null, { mode: 'production' });
-      console.log('build client');
-      await build(webpackClientConfig);
+      await execFile('buildClient.js', options.analyze ? ['analyze'] : []);
     }
   });
 
