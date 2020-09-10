@@ -48,7 +48,7 @@ const clientConfig = async (env, argv) => {
       minimize: isProd ? true : false,
       minimizer: [
         new TerserPlugin({
-          // cache: path.join(process.cwd(), '.cache/terser'),
+          cache: path.join(process.cwd(), '.cache/terser'),
           ...(process.env.CI ? { parallel: 2 } : {})
         }),
       ],
@@ -69,20 +69,6 @@ const clientConfig = async (env, argv) => {
             {
               loader: 'css-loader'
             },
-            {
-              loader: 'postcss-loader',
-              options: {
-                postcssOptions: {
-                  plugins: [
-                    require('autoprefixer')({
-                      env: '>0.25%, not ie 11, not op_mini all',
-                      flexbox: false,
-                      grid: false
-                    })
-                  ]
-                }
-              }
-            }
           ]
         },
         {
