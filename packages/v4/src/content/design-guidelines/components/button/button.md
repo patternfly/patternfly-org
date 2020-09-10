@@ -3,7 +3,7 @@ id: Button
 section: components
 ---
 
-**Buttons** communicate and trigger actions a user can take in an application or website.
+**Buttons** communicate and trigger actions a user can take in an application or website and take the form of a box area or text that can be clicked or tapped
 
 A button refers to a box area or text that can be clicked or tapped.
 
@@ -230,4 +230,4 @@ _Buttons placed in overflow menu due to limited space, with primary button persi
 
 **Writing link labels**
 
-Use specific, action-focused labels that match what the user will see when they arrive at their location. For example, if you are sending a user to a dashboard, your link label might read _View dashboard_. For a link directing a user to a support forum, the label might read _Get help in the support forum_. See [PatternFly's content guidelines](/design-guidelines/content/writing) for additional guidance.
+Use specific, action-focused labels that match what the user will see when they arrive at their location. For example, if you are sending a user to a dashboard, your link label might read _View dashboard_. For a link directing a user to a support forum, the label might read _Get help in the support forum_. See [PatternFly's content guidelines](/ux-writing/ux-writing-best-practices) for additional guidance.
