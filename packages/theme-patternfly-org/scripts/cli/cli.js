@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const path = require('path');
-const { program } = require('commander');
+const program = require('commander');
 const { build } = require('./build');
 const { start } = require('./start');
 const serverConfig = require('../webpack/webpack.server.config');

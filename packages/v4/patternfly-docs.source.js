@@ -30,7 +30,7 @@ sourceMD(
 const coreDocsPath = require
   .resolve('@patternfly/patternfly/package.json')
   .replace('package.json', 'docs');
-const coreDocsIgnore = path.join(coreDocsPath, '/pages/**'); // Can be removed when Gatsby is dead
+const coreDocsIgnore = path.join(coreDocsPath, '/pages/**'); // Compatibility for old gatsby workspace
 sourceMD(
   glob.sync(path.join(coreDocsPath, '/**/examples/**/*.md'), { ignore: coreDocsIgnore }),
   'html'

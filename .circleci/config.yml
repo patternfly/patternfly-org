@@ -7,7 +7,7 @@ references:
   - node_modules/
   - packages/v3/node_modules/
   - packages/v4/node_modules/
-  - packages/v4/gatsby-theme-patternfly-org/node_modules/
+  - packages/v4/theme-patternfly-org/node_modules/
   - packages/v4/patternfly-react/packages/react-docs/node_modules/
   v3_ruby_deps_paths: &v3_ruby_deps_paths
   - packages/v3/.bundle
