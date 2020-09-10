@@ -1,9 +1,9 @@
 const webpack = require('webpack');
 
-async function build(options) {
+async function build(webpackConfig) {
   let compiler;
   try {
-    compiler = webpack(options);
+    compiler = webpack(webpackConfig);
   } catch (err) {
     if (err.name === "WebpackOptionsValidationError") {
       console.error(err.message);

@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 const path = require('path');
 const { program } = require('commander');
-const { version } = require('../../package.json');
 const { build } = require('./build');
+const { start } = require('./start');
 const serverConfig = require('../webpack/webpack.server.config');
 const clientConfig = require('../webpack/webpack.client.config');
+const { version } = require('../../package.json');
 
 function getConfig(options) {
   return require(path.join(process.cwd(), options.parent.config))
@@ -28,8 +29,11 @@ program
 program
   .command('start')
   .description('generates source files and runs webpack-dev-server')
-  .action((env, options) => {
-    console.log('start', env, options);
+  .action(async options => {
+    generate(options);
+    const webpackClientConfig = await clientConfig(null, { mode: 'development' });
+    console.log('start webpack-dev-server');
+    start(webpackClientConfig);
   });
  
 program

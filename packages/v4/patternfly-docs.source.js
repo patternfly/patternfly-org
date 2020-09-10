@@ -4,17 +4,17 @@ const { sourceMD, sourceProps, writeIndex } = require('theme-patternfly-org/scri
 
 // Content md
 sourceMD(
-  glob.sync(path.join(__dirname, '../src/content/contribute/**/*.md')),
+  glob.sync(path.join(__dirname, 'src/content/contribute/**/*.md')),
   'pages-contribute'
 );
 
 sourceMD(
-  glob.sync(path.join(__dirname, '../src/content/get-started/**/*.md')),
+  glob.sync(path.join(__dirname, 'src/content/get-started/**/*.md')),
   'pages-get-started'
 );
 
 sourceMD(
-  glob.sync(path.join(__dirname, '../src/content/design-guidelines/**/*.md')),
+  glob.sync(path.join(__dirname, 'src/content/design-guidelines/**/*.md')),
   'design-guidelines'
 );
 

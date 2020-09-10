@@ -19,11 +19,12 @@ const clientConfig = async (env, argv) => {
     entry: './src/app.js',
     output: {
       path: path.resolve('public'),
-      filename: '[name].[contenthash].bundle.js',
+      filename: '[name].[hash].bundle.js'
     },
     devServer: {
       historyApiFallback: true,
-      port: 8003
+      port: 8003,
+      quiet: true
     },
     optimization: {
       splitChunks: {
