@@ -6,7 +6,6 @@ const TerserPlugin = require('terser-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const baseConfig = require('./webpack.base.config');
 const { getHtmlWebpackPlugins } = require('./getHtmlWebpackPlugins');
-const SizePlugin = require('size-plugin');
 
 const pfDir = path.dirname(require.resolve('@patternfly/patternfly/package.json'));
 // Don't include PatternFly styles twice
@@ -93,7 +92,6 @@ const clientConfig = async (env, argv) => {
       ...await getHtmlWebpackPlugins(isProd), // Create an HTML page per route
       ...(isProd
         ? [
-          new SizePlugin()
         ]
         : []),
       ...(env === 'analyze'
