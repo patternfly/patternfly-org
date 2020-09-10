@@ -19,7 +19,8 @@ async function getHtmlWebpackPlugin(url, isProd, title, isFullscreen) {
       algolia
     },
     scriptLoading: 'defer',
-    inject: false
+    inject: false,
+    minify: false
   })
 }
 
@@ -33,7 +34,8 @@ async function getHtmlWebpackPlugins(isProd) {
       templateParameters: {
         urls: Object.keys(routes)
       },
-      inject: false
+      inject: false,
+      minify: false,
     })
   ];
 
