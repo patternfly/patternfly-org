@@ -39,7 +39,8 @@
   /* For icon */
   padding-left: 32px;
 }
-.ws-hide-search-input .algolia-autocomplete {
+.ws-hide-search-input .algolia-autocomplete,
+.ws-hide-search-input #global-search-input {
   display: none !important;
   width: 0;
 }
