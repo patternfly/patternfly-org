@@ -22,7 +22,6 @@
     "theme-patternfly-org": "0.0.1"
   },
   "devDependencies": {
-    "eslint-config-react-app": "^5.0.2",
     "fs-extra": "^9.0.0",
     "glob": "^7.1.6"
   }

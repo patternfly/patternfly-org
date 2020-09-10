@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { googleAnalyticsID, algolia } = require(`${process.cwd()}/patternfly-docs.config`);
-const { routes, fullscreenRoutes } = require(path.join(process.cwd(), 'src/routes'));
 const { prerender } = require('./prerender');
 const { getTitle } = require('../../helpers/getTitle');
 
@@ -25,6 +24,7 @@ async function getHtmlWebpackPlugin(url, isProd, title, isFullscreen) {
 }
 
 async function getHtmlWebpackPlugins(isProd) {
+  const { routes, fullscreenRoutes } = require(path.join(process.cwd(), 'src/routes'));
   const res = [
     // Sitemap
     new HtmlWebpackPlugin({
