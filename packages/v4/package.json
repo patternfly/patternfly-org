@@ -6,13 +6,12 @@
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
-    "generate": "node scripts/sourceMD.js",
-    "analyze": "yarn build --env analyze",
-    "build": "yarn generate && yarn build:server && yarn build:client",
-    "build:server": "webpack --mode production --config webpack.server.config.js",
-    "build:client": "webpack --mode production",
+    "build": "theme-patternfly-org build all",
+    "build:analyze": "theme-patternfly-org build all --analyze",
+    "build:server": "theme-patternfly-org build server",
+    "build:client": "theme-patternfly-org build client",
     "clean": "rm -rf .cache public size-plugin.json src/generated/**/*.js",
-    "develop": "yarn generate && webpack-dev-server --mode development",
+    "develop": "theme-patternfly-org start",
     "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4",
     "screenshots": "node ../theme-patternfly-org/scripts/writeScreenshots"
   },
@@ -23,7 +22,6 @@
     "theme-patternfly-org": "0.0.1"
   },
   "devDependencies": {
-    "eslint-config-react-app": "^5.0.2",
     "fs-extra": "^9.0.0",
     "glob": "^7.1.6"
   }

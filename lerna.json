@@ -12,8 +12,7 @@
   },
   "packages": [
     "packages/v4",
-    "packages/gatsby-theme-patternfly-org",
-    "packages/gatsby-transformer-react-docgen-typescript"
+    "packages/theme-patternfly-org"
   ],
   "version": "independent"
 }

@@ -1,6 +1,5 @@
 aws s3 rm --recursive s3://patternfly-org-staging
 # TODO: Proper S3 meta tags for redirects
-# https://www.gatsbyjs.org/docs/caching/
 aws s3 sync build/patternfly-org s3://patternfly-org-staging --exclude "*" \
     --include "*.html" \
     --include "*.json" \

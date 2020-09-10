@@ -22,7 +22,7 @@ module.exports = (_env, argv) => {
           test: /\.[tj]sx?$/,
           include: [
             path.resolve(process.cwd(), 'src'),
-            path.resolve(__dirname), // Temporarily compile theme using webpack for development
+            path.resolve(__dirname, '../..'), // Temporarily compile theme using webpack for development
             /react-[\w-]+\/src\/.*\/examples/
           ],
           use: {
@@ -47,7 +47,7 @@ module.exports = (_env, argv) => {
           test: /\.(png|jpe?g|webp)$/,
           include: [
             path.resolve(process.cwd(), 'src'),
-            path.resolve(__dirname), // Temporarily compile theme using webpack for development
+            path.resolve(__dirname, '../..'), // Temporarily compile theme using webpack for development
             /react-[\w-]+\/src\/.*\/examples/
           ],
           use: [
@@ -94,7 +94,7 @@ module.exports = (_env, argv) => {
         'process.env.NODE_ENV': isProd ? "'production'" : "'development'"
       }),
       new FaviconsWebpackPlugin({
-        logo: path.resolve(__dirname, 'images/patternfly-logo.svg'),
+        logo: path.resolve(__dirname, '../../images/patternfly-logo.svg'),
         favicons: {
           appDescription: 'Home of PatternFly Design.',
           cache: true,
