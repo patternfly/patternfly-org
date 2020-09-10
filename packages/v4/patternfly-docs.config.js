@@ -21,5 +21,5 @@ module.exports = {
   ],
   topNavItems: [],
   prnum: null,
-  prurl: null
+  prurl: null,
 };

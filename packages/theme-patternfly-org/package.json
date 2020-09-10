@@ -4,6 +4,9 @@
   "version": "0.0.1",
   "author": "Red Hat",
   "license": "MIT",
+  "bin": {
+    "theme-patternfly-org": "scripts/cli/cli.js"
+  },
   "dependencies": {
     "@babel/core": "^7.11.6",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
@@ -17,6 +20,7 @@
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "codesandbox": "^2.1.10",
+    "commander": "^4.0.0",
     "copy-webpack-plugin": "^6.1.0",
     "css-loader": "^4.3.0",
     "favicons-webpack-plugin": "^4.2.0",
@@ -28,9 +32,12 @@
     "null-loader": "^4.0.0",
     "postcss-loader": "^4.0.1",
     "prismjs": "^1.17.1",
+    "postcss": "^7.0.32",
     "puppeteer": "^5.2.1",
     "puppeteer-cluster": "^0.22.0",
+    "react": "^16.8.0",
     "react-docgen": "^5.3.0",
+    "react-dom": "^16.8.0",
     "react-live": "^2.2.0",
     "react-ssr-prepass": "^1.2.1",
     "remark-footnotes": "^1.0.0",
@@ -42,7 +49,6 @@
     "responsive-loader": "^2.1.1",
     "sharp": "^0.25.4",
     "serve": "^11.3.2",
-    "size-plugin": "^2.0.1",
     "to-vfile": "^6.1.0",
     "typescript": "^3.0.0",
     "unified": "^9.1.0",
@@ -55,9 +61,5 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.0.9"
-  },
-  "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
   }
 }

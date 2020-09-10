@@ -5,8 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const baseConfig = require('./webpack.base.config');
-const { getHtmlWebpackPlugins } = require('./scripts/getHtmlWebpackPlugins');
-const SizePlugin = require('size-plugin');
+const { getHtmlWebpackPlugins } = require('./getHtmlWebpackPlugins');
 
 const pfDir = path.dirname(require.resolve('@patternfly/patternfly/package.json'));
 // Don't include PatternFly styles twice
@@ -19,11 +18,13 @@ const clientConfig = async (env, argv) => {
     entry: './src/app.js',
     output: {
       path: path.resolve('public'),
-      filename: '[name].[contenthash].bundle.js',
+      filename: '[name].[hash].bundle.js'
     },
     devServer: {
       historyApiFallback: true,
-      port: 8003
+      port: 8003,
+      clientLogLevel: 'info',
+      stats: 'minimal'
     },
     optimization: {
       splitChunks: {
@@ -86,7 +87,7 @@ const clientConfig = async (env, argv) => {
         {
           test: reactCSSRegex,
           use: 'null-loader'
-        }
+        },
       ]
     },
     plugins: [
@@ -97,7 +98,7 @@ const clientConfig = async (env, argv) => {
       new CopyPlugin({
         patterns: [
           // versions.json will later be copied to the root www dir
-          { from: path.join(__dirname, 'versions.json'), to: 'versions.json' },
+          { from: path.join(__dirname, '../../versions.json'), to: 'versions.json' },
           { from: path.join(pfDir, 'assets/images/'), to: 'assets/images/' },
           { from: path.join(pfDir, 'assets/fonts/'), to: 'assets/fonts/' }
         ]
@@ -105,7 +106,6 @@ const clientConfig = async (env, argv) => {
       ...await getHtmlWebpackPlugins(isProd), // Create an HTML page per route
       ...(isProd
         ? [
-          new SizePlugin()
         ]
         : []),
       ...(env === 'analyze'
@@ -115,7 +115,7 @@ const clientConfig = async (env, argv) => {
             statsFilename: 'webpack.stats.json'
           })
         ]
-        : []) // webpack --env analyze
+        : [])
     ]
   };
 }

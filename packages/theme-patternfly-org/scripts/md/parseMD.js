@@ -32,6 +32,9 @@ function toReactComponent(mdFilePath, source) {
     // Extract frontmatter
     .use(() => (tree, file) => {
       const yamlNode = tree.children.shift();
+      if (!yamlNode) {
+        return file.info('no frontmatter, skipping');
+      }
       frontmatter = yaml.safeLoad(yamlNode.value);
 
       // Fail early
@@ -174,7 +177,9 @@ function toReactComponent(mdFilePath, source) {
     .process(vfile, (err, file) => {
       if (err) {
         console.error(vfileReport(err || file));
-        process.exit(2);
+        if (err.fatal) {
+          process.exit(2);
+        }
       } else {
         // console.log(relPath, '->', path.relative(process.cwd(), outPath));
         jsx = file.contents;
