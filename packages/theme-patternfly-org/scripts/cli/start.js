@@ -3,8 +3,8 @@ const webpack = require('webpack');
 
 function start(webpackConfig) {
   const { port } = webpackConfig.devServer;
-  let compiler = webpack(webpackConfig);
-  let server = new WebpackDevServer(compiler, webpackConfig.devServer);
+  const compiler = webpack(webpackConfig);
+  const server = new WebpackDevServer(compiler, webpackConfig.devServer);
 
   server.listen(port, 'localhost', err => {
     if (err) {

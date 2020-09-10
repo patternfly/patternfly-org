@@ -24,7 +24,8 @@ const clientConfig = async (env, argv) => {
     devServer: {
       historyApiFallback: true,
       port: 8003,
-      quiet: true
+      clientLogLevel: 'info',
+      stats: 'minimal'
     },
     optimization: {
       splitChunks: {

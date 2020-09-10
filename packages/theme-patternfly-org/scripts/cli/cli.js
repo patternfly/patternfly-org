@@ -27,6 +27,11 @@ program
   .option('-s, --source <path>', 'set source generation file path', './patternfly-docs.source.js');
 
 program
+  .command('generate')
+  .description('generates source files')
+  .action(options => generate(options));
+
+program
   .command('start')
   .description('generates source files and runs webpack-dev-server')
   .action(async options => {
