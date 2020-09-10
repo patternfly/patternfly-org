@@ -55,12 +55,12 @@ const HeaderTools = ({
             ? (
               <React.Fragment>
                 <SearchIcon className="global-search-icon" />
-                <Button variant="plain" className="ws-collapse-search" onClick={() => setSearchExpanded(false)}>
+                <Button aria-label="Expand search input" variant="plain" className="ws-collapse-search" onClick={() => setSearchExpanded(false)}>
                   <TimesIcon />
                 </Button>
               </React.Fragment>
             ) : (
-              <Button variant="plain" onClick={expandAndFocusSearch}>
+              <Button aria-label="Collapse search input" variant="plain" onClick={expandAndFocusSearch}>
                 <SearchIcon className="global-search-icon" />
               </Button>
             )
