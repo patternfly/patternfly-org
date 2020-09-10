@@ -28,7 +28,7 @@ Toolbar items are individual components that can be placed inside of a toolbar. 
 #### Search filter
 <img src="./img/search-filter.png" alt="search filter" width="355" />
 
-A search filter is intended to be used with a filter group as shown below when you want to include a single search field together with one or more select filters. It includes an 8px spacer to the right of the item to enforce association with other filters. See the [Filters](guidelines/filters) documentation for more information about using filters.
+A search filter is intended to be used with a filter group as shown below when you want to include a single search field together with one or more select filters. It includes an 8px spacer to the right of the item to enforce association with other filters. See the [Filters](/guidelines/filters) documentation for more information about using filters.
 
 <img src="./img/toolbar-multiple-filters.png" alt="toolbar with a search filter and filter group" width="1210" />
 
