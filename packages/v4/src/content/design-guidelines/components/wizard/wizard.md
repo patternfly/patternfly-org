@@ -3,8 +3,6 @@ id: Wizard
 section: components
 ---
 
-A **wizard** is a structured page used for breaking sequential workflows into a series of steps. Wizards can be presented in a modal dialog or occupy a full page view.
-
 Wizards provide a guided workflow that offers a path to complete a task, create an object or objects, or finish a series of steps for some other outcome. Wizards should incite trust in the user and guide them through an otherwise overwhelming experience.
 
 Use a wizard when
@@ -97,7 +95,7 @@ Once the changes initiated by the wizard are completed, a final confirmation scr
 
 2. **Primary action:** In most cases this will be a navigational button to close the wizard and take the user to a page where they can see the results of their changes, e.g. a new project that was created. If there is no appropriate destination or if results will be seen on the current page, make the primary action Close.
 
-3. **Secondary action(s) (optional):** If the primary action is other than Close, include a Close button here to close the wizard and return to the prior page. Other secondary actions can also be included. See [Empty state](/design-guidelines/usage-and-behavior/empty-state) for button placement.
+3. **Secondary action(s) (optional):** If the primary action is other than Close, include a Close button here to close the wizard and return to the prior page. Other secondary actions can also be included. See [Empty state](/components/empty-state/react) for button placement.
 
 In some cases the result of a wizard is to dispatch a task to the background to execute changes in the back end. In these circumstances, we recommend that you provide a navigation link to monitor task progress and/or simply a Close button.
 
