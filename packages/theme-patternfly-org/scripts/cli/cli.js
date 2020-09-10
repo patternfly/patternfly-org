@@ -43,9 +43,9 @@ program
  
 program
   .command('build <server|client|all>')
+  .option('-a, --analyze', 'use webpack-bundle-analyzer', false)
   .description('generates source files and runs webpack')
   .action(async (cmd, options) => {
-    const config = getConfig(options);
     generate(options);
     const toBuild = cmd === 'all'
       ? ['server', 'client']
@@ -59,7 +59,7 @@ program
     }
     if (toBuild.includes('client')) {
       console.log('load client webpack config');
-      const webpackClientConfig = await clientConfig(null, { mode: 'production' });
+      const webpackClientConfig = await clientConfig(options.analyze ? 'analyze' : null, { mode: 'production' });
       console.log('build client');
       await build(webpackClientConfig);
     }
