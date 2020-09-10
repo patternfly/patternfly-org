@@ -3,18 +3,17 @@ const glob = require('glob');
 const { sourceMD, sourceProps, writeIndex } = require('theme-patternfly-org/scripts/md/parseMD');
 
 // Content md
+const contentBase = path.join(__dirname, 'src/content');
 sourceMD(
-  glob.sync(path.join(__dirname, 'src/content/contribute/**/*.md')),
+  glob.sync(path.join(contentBase, 'contribute/**/*.md')),
   'pages-contribute'
 );
-
 sourceMD(
-  glob.sync(path.join(__dirname, 'src/content/get-started/**/*.md')),
+  glob.sync(path.join(contentBase, 'get-started/**/*.md')),
   'pages-get-started'
 );
-
 sourceMD(
-  glob.sync(path.join(__dirname, 'src/content/design-guidelines/**/*.md')),
+  glob.sync(path.join(contentBase, 'design-guidelines/**/*.md')),
   'design-guidelines'
 );
 
@@ -22,7 +21,6 @@ sourceMD(
 const themePagesPath = require
   .resolve('theme-patternfly-org/package.json')
   .replace('package.json', 'pages');
-
 sourceMD(
   glob.sync(path.join(themePagesPath, '*.md')),
   'pages-overview'
@@ -32,13 +30,13 @@ sourceMD(
 const coreDocsPath = require
   .resolve('@patternfly/patternfly/package.json')
   .replace('package.json', 'docs');
-
+const coreDocsIgnore = path.join(coreDocsPath, '/pages/**'); // Can be removed when Gatsby is dead
 sourceMD(
-  glob.sync(path.join(coreDocsPath, '/**/examples/*.md'), { ignore: path.join(coreDocsPath, '/pages/**') }),
+  glob.sync(path.join(coreDocsPath, '/**/examples/**/*.md'), { ignore: coreDocsIgnore }),
   'html'
 );
 sourceMD(
-  glob.sync(path.join(coreDocsPath, '/**/demos/**/*.md'), { ignore: path.join(coreDocsPath, '/pages/**') }),
+  glob.sync(path.join(coreDocsPath, '/**/demos/**/*.md'), { ignore: coreDocsIgnore }),
   'html'
 );
 
@@ -49,13 +47,20 @@ const reactCorePath = require
 const reactTablePath = require
   .resolve('@patternfly/react-table/package.json')
   .replace('package.json', 'src');
-
+const reactChartsPath = require
+  .resolve('@patternfly/react-charts/package.json')
+  .replace('package.json', 'src');
+const reactPropsIgnore = '**/*.test.tsx';
 sourceProps(
-  glob.sync(path.join(reactCorePath, '/**/*.tsx'), { ignore: '**/*.test.tsx' }),
+  glob.sync(path.join(reactCorePath, '/**/*.tsx'), { ignore: reactPropsIgnore }),
   'react'
 );
 sourceProps(
-  glob.sync(path.join(reactTablePath, '/**/*.tsx'), { ignore: '**/*.test.tsx' }),
+  glob.sync(path.join(reactTablePath, '/**/*.tsx'), { ignore: reactPropsIgnore }),
+  'react'
+);
+sourceProps(
+  glob.sync(path.join(reactChartsPath, '/**/*.tsx'), { ignore: reactPropsIgnore }),
   'react'
 );
 
@@ -64,65 +69,44 @@ sourceMD(
   glob.sync(path.join(reactCorePath, '/**/examples/*.md')),
   'react'
 );
-// Demos must come AFTER their components
 sourceMD(
   glob.sync(path.join(reactCorePath, '/**/demos/**/*.md')),
   'react'
 );
+
+// React-table MD
 sourceMD(
   glob.sync(path.join(reactTablePath, '/**/examples/*.md')),
   'react'
 );
-// Demos must come AFTER their components
 sourceMD(
   glob.sync(path.join(reactTablePath, '/**/demos/*.md')),
   'react'
 );
 
+// Charts MD (no demos yet)
 sourceMD(
-  glob.sync(path.join(reactCorePath, '/**/demos/**/*.md')),
-  'react'
-);
-
-// Charts props
-const reactChartsPath = require
-  .resolve('@patternfly/react-charts/package.json')
-  .replace('package.json', 'src');
-
-sourceProps(
-  glob.sync(path.join(reactChartsPath, '/**/*.tsx'), { ignore: '**/*.test.tsx' }),
-  'react'
-);
-
-// Charts MD
-const reactChartsMDPath = require
-  .resolve('@patternfly/react-charts/package.json')
-  .replace('package.json', 'src');
-
-sourceMD(
-  glob.sync(path.join(reactChartsMDPath, '/**/examples/*.md')),
+  glob.sync(path.join(reactChartsPath, '/**/examples/*.md')),
   'react'
 );
 
 // Release notes
-const corePath = require.resolve('@patternfly/patternfly/package.json');
 sourceMD(
-  corePath.replace('package.json', 'RELEASE-NOTES.md'),
+  require.resolve('@patternfly/patternfly/RELEASE-NOTES.md'),
   'html'
 );
-const reactDocsPath = require.resolve('@patternfly/react-docs/package.json');
 sourceMD(
-  reactDocsPath.replace('package.json', 'RELEASE-NOTES.md'),
+  require.resolve('@patternfly/react-docs/RELEASE-NOTES.md'),
   'react'
 );
 
 // Upgrade guides
 sourceMD(
-  corePath.replace('package.json', 'UPGRADE-GUIDE.md'),
+  require.resolve('@patternfly/patternfly/UPGRADE-GUIDE.md'),
   'html'
 );
 sourceMD(
-  reactDocsPath.replace('package.json', 'UPGRADE-GUIDE.md'),
+  require.resolve('@patternfly/react-docs/UPGRADE-GUIDE.md'),
   'react'
 );
 writeIndex();
