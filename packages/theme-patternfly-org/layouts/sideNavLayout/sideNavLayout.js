@@ -110,8 +110,7 @@ const HeaderTools = ({
 }
 
 function attachDocSearch(algolia, timeout) {
-  const hasGlobalSearchInput = document.getElementById('global-search-input');
-  if (window.docsearch && hasGlobalSearchInput) {
+  if (window.docsearch) {
     return window.docsearch({
       inputSelector: '#global-search-input',
       debug: false,
