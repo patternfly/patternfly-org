@@ -22,6 +22,7 @@
     "theme-patternfly-org": "0.0.1"
   },
   "devDependencies": {
+    "commander": "^6.1.0",
     "fs-extra": "^9.0.0",
     "glob": "^7.1.6"
   }
