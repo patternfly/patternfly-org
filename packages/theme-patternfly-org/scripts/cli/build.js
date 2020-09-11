@@ -34,7 +34,6 @@ async function build(webpackConfig) {
         console.warn(info.warnings.join('\n'));
       }
 
-      console.log('success!');
       res();
     })
   );

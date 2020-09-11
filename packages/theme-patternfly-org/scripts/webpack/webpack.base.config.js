@@ -2,14 +2,13 @@ const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const { pathPrefix } = require(`${process.cwd()}/patternfly-docs.config`);
 
 module.exports = (_env, argv) => {
   const isProd = argv.mode === 'production';
 
   return {
     output: {
-      publicPath: isProd ? `${pathPrefix}/` : '/',
+      publicPath: isProd ? `${argv.pathPrefix}/` : '/',
       pathinfo: false, // https://webpack.js.org/guides/build-performance/#output-without-path-info,
       hashDigestLength: 8
     },

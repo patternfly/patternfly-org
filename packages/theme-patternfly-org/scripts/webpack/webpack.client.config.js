@@ -103,11 +103,7 @@ const clientConfig = async (env, argv) => {
           { from: path.join(pfDir, 'assets/fonts/'), to: 'assets/fonts/' }
         ]
       }),
-      ...await getHtmlWebpackPlugins(isProd), // Create an HTML page per route
-      ...(isProd
-        ? [
-        ]
-        : []),
+      ...await getHtmlWebpackPlugins({ isProd, ...argv }), // Create an HTML page per route
       ...(env === 'analyze'
         ? [
           new BundleAnalyzerPlugin({

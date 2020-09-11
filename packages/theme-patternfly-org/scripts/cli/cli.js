@@ -7,11 +7,11 @@ const clientConfig = require('../webpack/webpack.client.config');
 const { version } = require('../../package.json');
 
 function getConfig(options) {
-  return require(path.join(process.cwd(), options.parent.config))
+  return require(path.join(process.cwd(), options.parent.config));
 }
 
 function getSource(options) {
-  return require(path.join(process.cwd(), options.parent.source))
+  return require(path.join(process.cwd(), options.parent.source));
 }
 
 function generate(options) {
@@ -54,7 +54,7 @@ async function execFile(file, args) {
     function successHandler(code) {
       if (code === 0) {
         const duration = new Date() - start;
-        console.log('took %ss', duration / 1000);
+        console.log('%s took %ss', file, duration / 1000);
         res();
       }
       else {
@@ -76,14 +76,16 @@ program
     const toBuild = cmd === 'all'
       ? ['server', 'client']
       : cmd;
+    const config = getConfig(options);
+    config.analyze = options.analyze;
     // console.log('build', cmd, options.parent.cssconfig);
     if (toBuild.includes('server')) {
       // Need to fork since first webpack build puts pressure on GC
       // Otherwise CircleCI will fail with 4GB RAM
-      await execFile('buildServer.js');
+      await execFile('buildServer.js', [JSON.stringify(config)]);
     }
     if (toBuild.includes('client')) {
-      await execFile('buildClient.js', options.analyze ? ['analyze'] : []);
+      await execFile('buildClient.js', [JSON.stringify(config)]);
     }
   });
 

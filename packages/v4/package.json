@@ -12,6 +12,7 @@
     "build:client": "theme-patternfly-org build client",
     "clean": "rm -rf .cache public size-plugin.json src/generated/**/*.js",
     "develop": "theme-patternfly-org start",
+    "generate": "theme-patternfly-org generate",
     "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4",
     "screenshots": "node ../theme-patternfly-org/scripts/writeScreenshots"
   },
