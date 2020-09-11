@@ -145,5 +145,16 @@ jobs:
             aws configure set aws_secret_access_key ${AWS_SECRET_KEY}
             aws configure set region ${AWS_REGION}
     - run:
-        name: Sync to preview
-        command: .circleci/upload-preview.sh
+        name: Sync to staging
+        command: .circleci/upload-staging.sh
+    - run:
+        name: Avoid Unknown Host for github.com
+        command: mkdir -p ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+    - run:
+        name: Set git user
+        command: |
+          git config user.name patternfly-build
+          git config user.email patternfly-build@redhat.com
+    - run:
+        name: Deploy to NPM
+        command: .circleci/release.sh
