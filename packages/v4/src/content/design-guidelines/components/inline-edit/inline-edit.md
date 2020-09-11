@@ -4,7 +4,8 @@ section: components
 ---
 
 Users can use inline edit to switch between a read-only view and an edit view of [description lists](/components/description-list), page text elements, or [tables](/components/table) as needed. In other words, inline editing saves the user from opening a modal window or redirecting to a separate edit page in which the user easily loses the context from the current view. 
-Usage
+
+## Usage
 
 Use inline edit when:
 * All editable elements can be viewed within the row or expanded row.
