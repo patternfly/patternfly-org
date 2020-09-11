@@ -223,14 +223,18 @@ function sourceMDFile(file, source) {
   }
 }
 
-const globs = [];
+const globs = {
+  props: [],
+  md: [],
+};
 
 module.exports = {
   sourceProps(glob, ignore) {
+    globs.props.push({ glob, ignore });
     sync(glob, { ignore }).forEach(sourcePropsFile);
   },
   sourceMD(glob, source, ignore) {
-    globs.push({ glob, source, ignore });
+    globs.md.push({ glob, source, ignore });
     sync(glob, { ignore }).forEach(file => sourceMDFile(file, source));
   },
   writeIndex() {
@@ -245,10 +249,18 @@ module.exports = {
     fs.outputFileSync(path.join(outputBase, 'index.js'), indexContent);
   },
   watchMD() {
-    globs.forEach(({ glob, source, ignore }) => {
-      const mdWatcher = chokidar.watch(glob, { ignored: ignore });
-      mdWatcher.on('add', file => sourceMDFile(file, source));
-      mdWatcher.on('change', file => sourceMDFile(file, source));
+    globs.props.forEach(({ glob, ignore }) => {
+      const mdWatcher = chokidar.watch(glob, { ignored: ignore, ignoreInitial: true });
+      mdWatcher.on('add', sourcePropsFile);
+      mdWatcher.on('change', sourcePropsFile);
+    });
+    globs.md.forEach(({ glob, source, ignore }) => {
+      const propWatcher = chokidar.watch(glob, { ignored: ignore, ignoreInitial: true });
+      propWatcher.on('add', file => {
+        sourceMDFile(file, source);
+        this.writeIndex();
+      });
+      propWatcher.on('change', file => sourceMDFile(file, source));
     });
   }
 };

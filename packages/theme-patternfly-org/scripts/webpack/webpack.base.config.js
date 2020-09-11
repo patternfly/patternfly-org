@@ -15,7 +15,6 @@ module.exports = (_env, argv) => {
       hashDigestLength: 8
     },
     amd: false, // We don't use any AMD modules, helps performance
-    parallelism: process.env.CI ? 2 : os.cpus().length, // Default is 100 which causes thrashing
     mode: isProd ? 'production' : 'development',
     devtool: isProd ? false : 'cheap-module-source-map',
     module: {
