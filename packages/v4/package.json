@@ -2,7 +2,7 @@
   "name": "patternfly-org-4",
   "description": "Documentation for PatternFly 4.",
   "private": true,
-  "version": "4.1.29",
+  "version": "4.2.0",
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
@@ -12,8 +12,9 @@
     "build:client": "theme-patternfly-org build client",
     "clean": "rm -rf .cache public size-plugin.json src/generated/**/*.js",
     "develop": "theme-patternfly-org start",
+    "generate": "theme-patternfly-org generate",
     "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4",
-    "screenshots": "node ../theme-patternfly-org/scripts/writeScreenshots"
+    "screenshots": "theme-patternfly-org screenshots"
   },
   "dependencies": {
     "@patternfly/react-docs": "5.8.19",
