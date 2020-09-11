@@ -33,7 +33,7 @@ A **Form** is a group of elements used to collect information from a user.
 Most forms will contain the following basic elements:
 
 1. **[Labels](#labels):** Labels let users know what information they should submit in each form field.
-2. **[Text input/text area](/text-input/design-guidelines):** These areas provide spaces for users to enter text.
+2. **[Text input/text area](/components/text-input/design-guidelines):** These areas provide spaces for users to enter text.
 3. **[Data inputs](#data-inputs):** Data input provides a way for users to submit any information that is not freeform text, such as checkboxes, radio buttons, and dropdowns.
 4. **[Buttons](#buttons):** Buttons enable a user to submit or exit a form.
 
