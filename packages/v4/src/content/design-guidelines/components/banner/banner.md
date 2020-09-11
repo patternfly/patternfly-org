@@ -14,12 +14,12 @@ PatternFly offers five different banner types detailed below.
  
 |Type     |Background color    |Text color  | Usage
 |---------|---------------|----------------| ------------------ |
-|Default  |Grey <br>(--pf-global--BackgroundColor--dark-400) | Black |Use for generic messages with no associated severity
-|Info     |Blue <br>(--pf-global--info-color--100)|Black| Use for general information messages |
-|Danger  |Red <br>(--pf-global--danger-color--100) |White| Use for high severity messages
-|Success|Green <br>(--pf-global--success-color--100) | White | Use for positive, success messages|
-|Warning |Orange <br>(--pf-global—warning-color--100) | Black | Use for warning or medium severity messages |
-</br>
+|Default  |Grey <br />(--pf-global--BackgroundColor--dark-400) | Black |Use for generic messages with no associated severity
+|Info     |Blue <br />(--pf-global--info-color--100)|Black| Use for general information messages |
+|Danger  |Red <br />(--pf-global--danger-color--100) |White| Use for high severity messages
+|Success|Green <br />(--pf-global--success-color--100) | White | Use for positive, success messages|
+|Warning |Orange <br />(--pf-global—warning-color--100) | Black | Use for warning or medium severity messages |
+<br />
 Patternfly suggests that users adopt one of these five colors, as they’ve been tested against their text colors for accessibility. However, if colors outside of these suggestions are used, we encourage using discretion when selecting the inner text color.
  
 ### Placement
