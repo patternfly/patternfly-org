@@ -6,8 +6,6 @@ related: ['About modal', 'Backdrop', 'Background image', 'Button']
 
 The **about modal** displays information about an application like product version number(s), as well as any appropriate legal text.
 
-The about modal stores the version number(s) of the application as well as any appropriate legal text.
-
 ## Primary elements
 
 <img src="./img/about-modal.png" alt="About modal" width="1500"/>
@@ -21,7 +19,7 @@ The about modal stores the version number(s) of the application as well as any a
     * When version and build information are both shown: Version 6.3 (Build 5)
     * When version only: Version 6.3
     * When build only: Build 5
-7. **Modal image:** The modal image should be the same as the [background image](/documentation/react/components/backgroundimage) you use for your application.
+7. **Modal image:** The modal image should be the same as the [background image](/components/background-image) you use for your application.
 8. **Trademark and copyright information:** Optionally include legal text. Suggested format for copyright -  Copyright (c) 2018 Company
 
 ## Usage

@@ -3,9 +3,7 @@ id: Empty state
 section: components
 ---
 
-Use an **empty state** component when there is no data or other information to show. It can also be used to communicate completion or other status at the end of a sequential task. An empty state may include a call to action to guide the user on what to do next.
-
-Empty states are UI screens that don't have any content on them, but content will populate once a user takes a certain action. Use an empty state to educate users and guide them with positive and proactive next steps in any situation where there is no data or information to display.
+Use an **empty state** component when there is no data or other information to show on the screen. Empty states can be used to communicate completion or other status at the end of a sequential task, and may include a call to action to guide the user on what to do next.
 
 PatternFly offers three empty state variations; a small empty state, a large empty state, and an extra large empty state. 
 * The small empty state should be used inside tables, wizards, modals, or cards, where the empty state is "inside a container," as seen in the [no data to show](#no-data-to-show) use case example. 
@@ -50,7 +48,7 @@ By default, icons should be grey, except when it is a status icon or you have a 
 
 **Tone and voice**
 
-Pay close attention to voice and tone in your empty state. Your voice is the personality that’s reflected in your writing, while your tone is the approach you take that’s appropriate for the context of your content. Tone encompasses the audience emotions that need to be accounted for and the resulting approach you must take. To help you stay consistent, refer to the [PatternFly voice guidelines ](/design-guidelines/content/voice-and-tone) as needed. In this case, you should use concise and straightforward voice. It should be conversational, while still professional.
+Pay close attention to voice and tone in your empty state. Your voice is the personality that’s reflected in your writing, while your tone is the approach you take that’s appropriate for the context of your content. Tone encompasses the audience emotions that need to be accounted for and the resulting approach you must take. To help you stay consistent, refer to the [PatternFly voice guidelines ](/ux-writing/brand-voice-and-tone) as needed. In this case, you should use concise and straightforward voice. It should be conversational, while still professional.
 
 It is OK to use “you” and “your” but never assign blame to the user.
 

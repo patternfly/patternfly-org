@@ -3,9 +3,7 @@ id: Login page
 section: components
 ---
 
-The **login page** allows a user to gain access to an application by entering their username and password or by authenticating using a social media login. Related design guideline: [Login](/design-guidelines/usage-and-behavior/login)
-
-The login page allows a user to gain access to an application by entering their username and password or by authenticating using a social media login.
+The **login page** allows a user to gain access to an application by entering their username and password or by authenticating using a social media login. Related design guideline: [Login](/components/login-page/design-guidelines)
 
 ## Elements
 
@@ -15,7 +13,7 @@ The login page allows a user to gain access to an application by entering their 
 
 2. **Language selector (optional)**
 
-3. **Required fields:** Username and password are both required fields. Some applications may require additional fields like a specific server or geo-location. When additional fields are required, they should be placed directly below the password field. The login card will expand to accommodate additional fields. Try to limit the total number of additional fields to three or less. Also, you may use [progressive disclosure](https://www.patternfly.org/v4/design-guidelines/usage-and-behavior/forms#use-progressive-disclosure) if the field value has dependency on the previous relevant field.
+3. **Required fields:** Username and password are both required fields. Some applications may require additional fields like a specific server or geo-location. When additional fields are required, they should be placed directly below the password field. The login card will expand to accommodate additional fields. Try to limit the total number of additional fields to three or less. Also, you may use [progressive disclosure](/components/form/design-guidelines#use-progressive-disclosure) if the field value has dependency on the previous relevant field.
 
 4. **Checkbox (optional):** Located under the required (and any additional) fields, and labeled based on the needs of the application.
 
@@ -27,7 +25,7 @@ The login page allows a user to gain access to an application by entering their 
 
 8. **Forgot password/username link (optional):** Takes users to a page where they can recover their password and/or username.
 
-9. **[Background image](documentation/react/components/backgroundimage/):** Any background image can be used for your application; it will automatically have a gradient applied to it to aid readability.
+9. **[Background image](/components/background-image):** Any background image can be used for your application; it will automatically have a gradient applied to it to aid readability.
 
 10. **Logotype:** Provides an area for product logo.
 
