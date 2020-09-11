@@ -100,12 +100,12 @@ module.exports = (_env, argv) => {
     },
     plugins: [
       new webpack.DefinePlugin({
-        'process.env.NODE_ENV': isProd ? "'production'" : "'development'",
-        'process.env.pathPrefix': isProd ? JSON.stringify(argv.pathPrefix) : "''",
+        'process.env.NODE_ENV': JSON.stringify(argv.mode),
+        'process.env.pathPrefix': JSON.stringify(isProd ? argv.pathPrefix : ''),
         'process.env.algolia': JSON.stringify(argv.algolia),
-        'process.env.hasGdprBanner': argv.hasGdprBanner ? 'true' : 'false',
-        'process.env.hasFooter': argv.hasFooter ? 'true' : 'false',
-        'process.env.hasVersionSwitcher': argv.hasVersionSwitcher ? 'true' : 'false',
+        'process.env.hasGdprBanner': JSON.stringify(argv.hasGdprBanner),
+        'process.env.hasFooter': JSON.stringify(argv.hasFooter),
+        'process.env.hasVersionSwitcher': JSON.stringify(argv.hasVersionSwitcher),
         'process.env.sideNavItems': JSON.stringify(argv.sideNavItems),
         'process.env.topNavItems': JSON.stringify(argv.topNavItems),
         'process.env.prnum': JSON.stringify(process.env.CIRCLE_PR_NUMBER || process.env.PR_NUMBER || ''),
