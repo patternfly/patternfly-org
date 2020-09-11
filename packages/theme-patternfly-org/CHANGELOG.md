@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2020-09-11)
+
+
+### Bug Fixes
+
+* **nav:** fix sidenav jumping on navigate ([#2048](https://github.com/patternfly/patternfly-org/issues/2048)) ([5010e38](https://github.com/patternfly/patternfly-org/commit/5010e38ebe135fc64de369a5272fdffe3bd51a79))
+* **overview:** remove overview ([#2054](https://github.com/patternfly/patternfly-org/issues/2054)) ([98c372a](https://github.com/patternfly/patternfly-org/commit/98c372aae7ff1052f16f17c6955bcf52ce9f152a))
+* **toc:** fix scrollspy ([#2058](https://github.com/patternfly/patternfly-org/issues/2058)) ([3f6ac88](https://github.com/patternfly/patternfly-org/commit/3f6ac88f6fc387eb0fccd0530873db550c7422a7))
+
+
+### Features
+
+* **toc:** redesign ([#2055](https://github.com/patternfly/patternfly-org/issues/2055)) ([d964cfb](https://github.com/patternfly/patternfly-org/commit/d964cfb08f51367c7d3229305019f21d7637bb40))
+
+
+
+
+
 ## [4.2.10](https://github.com/patternfly/patternfly-org/compare/gatsby-theme-patternfly-org@4.2.9...gatsby-theme-patternfly-org@4.2.10) (2020-08-17)
 
 **Note:** Version bump only for package gatsby-theme-patternfly-org

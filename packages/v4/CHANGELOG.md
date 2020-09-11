@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.1](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.1.29...patternfly-org-4@4.2.1) (2020-09-11)
+
+
+### Bug Fixes
+
+* **nav:** fix sidenav jumping on navigate ([#2048](https://github.com/patternfly/patternfly-org/issues/2048)) ([5010e38](https://github.com/patternfly/patternfly-org/commit/5010e38ebe135fc64de369a5272fdffe3bd51a79))
+* **overview:** remove overview ([#2054](https://github.com/patternfly/patternfly-org/issues/2054)) ([98c372a](https://github.com/patternfly/patternfly-org/commit/98c372aae7ff1052f16f17c6955bcf52ce9f152a))
+
+
+
+
+
 ## [4.1.29](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.1.28...patternfly-org-4@4.1.29) (2020-08-19)
 
 **Note:** Version bump only for package patternfly-org-4
