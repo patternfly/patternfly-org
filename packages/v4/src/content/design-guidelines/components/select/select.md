@@ -44,7 +44,7 @@ You can also use a single checkbox to allow a user to enable or disable a featur
 
 **General guidelines**
 
-* Use checkboxes if you’re presenting 5 or fewer options to the user. If you’re presenting more than 5 options, use a [select list](/design-guidelines/usage-and-behavior/data-input#select-lists) instead.
+* Use checkboxes if you’re presenting 5 or fewer options to the user. If you’re presenting more than 5 options, use a [select list](/components/select/design-guidelines#select-lists) instead.
 * Use checkboxes if the user can select multiple options. If the user can only select one option, then use radio buttons. 
 
 
@@ -52,7 +52,7 @@ You can also use a single checkbox to allow a user to enable or disable a featur
 
 Checkbox labels fall to the right of the checkbox control. If placed vertically, all checkbox controls should be aligned with the left edge of other controls or input fields in the form or on the page. 
 
-You can use headings to label a group of checkboxes. The placement of headings will depend on the layout of other content in the form or on the page you’re designing. For more information on how to arrange checkboxes, see the [forms documentation](/design-guidelines/usage-and-behavior/forms#data-input-arrangement).
+You can use headings to label a group of checkboxes. The placement of headings will depend on the layout of other content in the form or on the page you’re designing. For more information on how to arrange checkboxes, see the [forms documentation](/components/form/design-guidelines#data-input-arrangement).
 
 <img src="./img/group-checkbox.png" alt="Example of a group of checkboxes" width="443"/>
 
@@ -97,7 +97,7 @@ Radio buttons allow users to select **one item** from a list of options.
 
 **Labeling and alignment**
 
-Radio button labels fall to the right of the radio button control. You can use headings to label a group of radio buttons. The placement of headings will depend on the layout of other content in the form or on the page you’re designing. For more information on how to arrange radio buttons, see the [forms documentation](/design-guidelines/usage-and-behavior/forms#data-input-arrangement).
+Radio button labels fall to the right of the radio button control. You can use headings to label a group of radio buttons. The placement of headings will depend on the layout of other content in the form or on the page you’re designing. For more information on how to arrange radio buttons, see the [forms documentation](/components/form/design-guidelines#data-input-arrangement).
 
 
 ### Select lists
@@ -143,11 +143,11 @@ Both the checkbox select and multiple select lists allow users to select multipl
 <img src="./img/suggested-multiselect.png" alt="Example for using a multiple select inside a form" width="518"/>
 
 #### Typeahead
-Typeahead allows users to narrow a displayed list of options by typing into the input field. Type ahead is  recommended for lists with more than ten options and is available for single and multiple select lists. Although the typeahead within toggle functionality does not exist for the checkbox select, there is an option to add a typeahead capability within the menu of items if needed, as seen in this [grouped checkbox input with filtering](/documentation/react/components/select#grouped-checkbox-input-with-filtering) example.
+Typeahead allows users to narrow a displayed list of options by typing into the input field. Type ahead is  recommended for lists with more than ten options and is available for single and multiple select lists. Although the typeahead within toggle functionality does not exist for the checkbox select, there is an option to add a typeahead capability within the menu of items if needed, as seen in this [grouped checkbox input with filtering](/components/select#grouped-checkbox-input-with-filtering) example.
 
 <img src="./img/typeahead.png" alt="Visual of a typeahead being used" width="361"/>
 
 When providing fewer than 5 options, you can use [radio buttons](#radio-buttons) or [checkboxes](#checkboxes) to display all options to the user simultaneously if you don’t have any space constraints.
 
 #### Form select
-A form select is a native select created by the browser, and it’s typically used within forms. If your use case only calls for simple selects, you may opt to use a [form select](/documentation/react/components/formselect). But if your use case requires more customization and capability, use a PatternFly [custom select list](/documentation/react/components/select). Just keep in mind that you should not use custom selects and form selects together in the same context, in order to maintain visual consistency in the UI.
+A form select is a native select created by the browser, and it’s typically used within forms. If your use case only calls for simple selects, you may opt to use a [form select](/components/form-select). But if your use case requires more customization and capability, use a PatternFly [custom select list](/components/select). Just keep in mind that you should not use custom selects and form selects together in the same context, in order to maintain visual consistency in the UI.

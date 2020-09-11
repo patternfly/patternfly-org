@@ -103,4 +103,4 @@ Titles should clearly describe the process that is being measured. Try to keep t
 
 Do not provide any other supporting copy to the progress bar that would require the user to read about how to use the progress bar. A progress bar should be self-explanatory if you implement labels 1 through 4 that are detailed in the article above.
 
-See our [content guidelines](/design-guidelines/content/writing) for additional guidance.
+See our [content guidelines](/ux-writing/about) for additional guidance.

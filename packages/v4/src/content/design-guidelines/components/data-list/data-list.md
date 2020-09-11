@@ -6,7 +6,7 @@ related: ['Table']
 
 A **data list** is used to display large data sets when you need a flexible layout or need to include interactive content like charts.
 
-PatternFly offers two components for displaying large data sets: [data list](/documentation/react/components/datalist/) and [table](/documentation/react/components/table/). While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
+PatternFly offers two components for displaying large data sets: [data list](/components/data-list) and [table](/components/table). While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
 
 Use [data lists](#data-lists) when:
 * A flexible layout is more important than arranging information in a grid.
@@ -20,12 +20,12 @@ Use [tables](#tables) when:
 ## Data lists
 
 ### How to use
-Think of each row in a data list as a container for some formatted content. In PatternFly, data list rows can accept any [layout](/documentation/react/layouts/bullseye) supported by the design system as long as all rows apply the same layout. Here are some common layouts that may be useful in a data list:
+Think of each row in a data list as a container for some formatted content. In PatternFly, data list rows can accept any [layout](/layouts/bullseye) supported by the design system as long as all rows apply the same layout. Here are some common layouts that may be useful in a data list:
 
-* **[Grid](/documentation/react/layouts/grid):** When you want to display content in a responsive grid.
-* **[Level](/documentation/react/layouts/level):** When you want to justify content evenly over the width of the row. It also vertically aligns items in the center of the row.
-* **[Split](/documentation/react/layouts/split):** When you want to distribute content evenly with a main content area in the center.
-* **[Flex](/documentation/react/layouts/flex):** When you want a custom layout and more control over the alignment and spacing provided in the other layouts.
+* **[Grid](/layouts/grid):** When you want to display content in a responsive grid.
+* **[Level](/layouts/level):** When you want to justify content evenly over the width of the row. It also vertically aligns items in the center of the row.
+* **[Split](/layouts/split):** When you want to distribute content evenly with a main content area in the center.
+* **[Flex](/layouts/flex):** When you want a custom layout and more control over the alignment and spacing provided in the other layouts.
 
 ### Compact and default data list
 PatterFly supports two main types of data lists:
@@ -42,8 +42,8 @@ The elements mentioned below are similar for a data list with compact or default
 
 <img src="./img/compact-list.png"  alt="Compact data list"  width="1188"/> 
 
-1. **[Toolbar](/design-guidelines/usage-and-behavior/toolbar):** The toolbar sits above the list and contains controls for manipulating list data. Common actions include filtering, sorting, and pagination.
-2. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/design-guidelines/usage-and-behavior/bulk-selection) for more information.
+1. **[Toolbar](/components/toolbar/design-guidelines):** The toolbar sits above the list and contains controls for manipulating list data. Common actions include filtering, sorting, and pagination.
+2. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information.
 3. **Row:** Row height may be variable and sizes to the content. Rows in a data list may take any supported layout.
 4. **Select checkbox:** Selects this row.
 5. **Inline actions:** These actions apply only to the current row/item.
@@ -60,7 +60,7 @@ Don't use a data list:
 * For displaying content that is better presented in tabular format with well defined columns and headings. Instead, use a [table](#tables).
 
 ### Alternative solutions
-Alternative to a data list include [tables](#tables) or [card views](/design-guidelines/usage-and-behavior/card-view). Card views and data lists have similar properties, but information in a card view is chunked into a grid of individual cards. In choosing between a data list and a card view, consider the type of data that will be displayed and the format that best suits that data. If you cannot easily fit all of the data that needs to be displayed into a card, a data list might be a better solution.
+Alternative to a data list include [tables](#tables) or [card views](/components/card/design-guidelines). Card views and data lists have similar properties, but information in a card view is chunked into a grid of individual cards. In choosing between a data list and a card view, consider the type of data that will be displayed and the format that best suits that data. If you cannot easily fit all of the data that needs to be displayed into a card, a data list might be a better solution.
 
 ### Data list capabilities
 Every data list can be extended with these functionalities:
@@ -69,11 +69,11 @@ Every data list can be extended with these functionalities:
 * **[Expandable data list](#expandable-data-list)**
 
 ### Actionable data list
-The actionable data list provides checkboxes that enable users to select one or more rows and act on that selection using options in the [toolbar](/design-guidelines/usage-and-behavior/toolbar).
+The actionable data list provides checkboxes that enable users to select one or more rows and act on that selection using options in the [toolbar](/components/toolbar/design-guidelines).
 
 <img src="./img/actionable-list.png"  alt="Actionable list"  width="1172"/> 
 
-1. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/design-guidelines/usage-and-behavior/bulk-selection) for more information. 
+1. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information. 
 2. **Checkbox:** Enables a user to select a row.
 3. **Global actions:** Actions that can be applied to all selected items.
 
@@ -117,8 +117,8 @@ The elements mentioned below are similar for a table with compact or default spa
 
 <img src="./img/compact-data-table.png"  alt="Compact table"  width="1186"/> 
 
-1. **[Toolbar](/design-guidelines/usage-and-behavior/toolbar):** Sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
-2. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/design-guidelines/usage-and-behavior/bulk-selection) for more information.
+1. **[Toolbar](/components/toolbar/design-guidelines):** Sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
+2. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information.
 3. **Column headers:** Should align with the content they contain. If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on one column at a time. See [sorting by columns](#sorting-by-columns) for more information on the sort component.
 4. **Select checkbox:** Selects this row
 5. **Global actions:** Actions that apply to all selected items
@@ -174,11 +174,11 @@ Use a compound expandable table when:
 * It would not make sense to combine all of this information into a single, simple expansion.
 
 ### Actionable table
-The actionable table provides checkboxes that enable users to select one or more rows and act on that selection using options in the [toolbar](/design-guidelines/usage-and-behavior/toolbar).
+The actionable table provides checkboxes that enable users to select one or more rows and act on that selection using options in the [toolbar](/components/toolbar/design-guidelines).
 
 <img src="./img/actionable-table.png"  alt="Actionable table"  width="1174"/> 
 
-1. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/design-guidelines/usage-and-behavior/bulk-selection) for more information. 
+1. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information. 
 2. **Checkbox:** Enables a user to select a row.
 3. **Global actions:** Actions that can be applied to all selected items.
 
@@ -190,13 +190,13 @@ Don't use an actionable table when:
 * Actions are restricted to a single row or object. In this case, place actions inline within the row.
 
 ### Sorting by columns
-Sorting by columns is possible for any table variation. Enabling the component within a table eases the ability to scan and read through the content. This option is favored over adding sorting functionality to the [toolbar](/design-guidelines/usage-and-behavior/toolbar).
+Sorting by columns is possible for any table variation. Enabling the component within a table eases the ability to scan and read through the content. This option is favored over adding sorting functionality to the [toolbar](/components/toolbar/design-guidelines).
 
 <img src="./img/sortable-data-table.png"  alt="Sortable table"  width="1161"/> 
 
-1. **Sortable column:** When a column is sortable, the sort icon will appear to the right of the column header in a [light grey](/design-guidelines/styles/colors#typography-and-iconography-colors) color. Sorting will not become active until the user selects the column header. This triggers the arrow to point upwards and the content to be sorted in ascending order.
-3. **Hovered sort:** When a column is sortable, the sort icon will appear to the right of the column header. Upon hover, the  icon will change to a [darker grey](/design-guidelines/styles/colors#typography-and-iconography-colors) indicating that the icon is actionable.
-2. **Sorted column:** When a column is being sorted by, the column header will turn [blue](/design-guidelines/styles/colors#typography-and-iconography-colors) and the sort icon will represent the direction of the sort. Subsequent clicks on the sortable column header will toggle the direction of the sort.
+1. **Sortable column:** When a column is sortable, the sort icon will appear to the right of the column header in a [light grey](/guidelines/colors#typography-and-iconography-colors) color. Sorting will not become active until the user selects the column header. This triggers the arrow to point upwards and the content to be sorted in ascending order.
+3. **Hovered sort:** When a column is sortable, the sort icon will appear to the right of the column header. Upon hover, the  icon will change to a [darker grey](/guidelines/colors#typography-and-iconography-colors) indicating that the icon is actionable.
+2. **Sorted column:** When a column is being sorted by, the column header will turn [blue](/guidelines/colors#typography-and-iconography-colors) and the sort icon will represent the direction of the sort. Subsequent clicks on the sortable column header will toggle the direction of the sort.
 
 #### When to use
 The default sort order for a table should support the primary use case for the application. All columns in a table do not require sort functionality. That is, you can disable the header sort function on some columns and enable it on others.
@@ -210,7 +210,7 @@ If a table contains these three attributes: (System Name | Last Sync | Severity)
 Whether to use a table/data list with compact or default spacing is up to you and your use case. However, here is some guidance for when to use which option. You can see examples of each option for comparison. 
 
 ### Compact spacing 
-A table or data list may sometimes need to be compact to make more rows visible at a time. The more rows you can see, the less you need to use [pagination](/design-guidelines/usage-and-behavior/pagination). Compact spacing is recommended for data with a simple structure. See an example below. 
+A table or data list may sometimes need to be compact to make more rows visible at a time. The more rows you can see, the less you need to use [pagination](/components/pagination/design-guidelines). Compact spacing is recommended for data with a simple structure. See an example below. 
 
 Use compact spacing when:
 * You need to show as much data as possible on one page.

@@ -88,7 +88,7 @@ import './icons.css';
 <Divider className="ws-icons-divider" />
 
 ## Icon colors
-Visit our <a href="/design-guidelines/styles/colors" className="pf-m-link">colors page</a> to learn more about icon colors.
+Visit our <a href="/guidelines/colors" className="pf-m-link">colors page</a> to learn more about icon colors.
 
 <Divider className="ws-icons-divider" />
 

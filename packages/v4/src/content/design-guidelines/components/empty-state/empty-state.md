@@ -50,7 +50,7 @@ By default, icons should be grey, except when it is a status icon or you have a 
 
 **Tone and voice**
 
-Pay close attention to voice and tone in your empty state. Your voice is the personality that’s reflected in your writing, while your tone is the approach you take that’s appropriate for the context of your content. Tone encompasses the audience emotions that need to be accounted for and the resulting approach you must take. To help you stay consistent, refer to the [PatternFly voice guidelines ](/design-guidelines/content/voice-and-tone) as needed. In this case, you should use concise and straightforward voice. It should be conversational, while still professional.
+Pay close attention to voice and tone in your empty state. Your voice is the personality that’s reflected in your writing, while your tone is the approach you take that’s appropriate for the context of your content. Tone encompasses the audience emotions that need to be accounted for and the resulting approach you must take. To help you stay consistent, refer to the [PatternFly voice guidelines ](/ux-writing/brand-voice-and-tone) as needed. In this case, you should use concise and straightforward voice. It should be conversational, while still professional.
 
 It is OK to use “you” and “your” but never assign blame to the user.
 

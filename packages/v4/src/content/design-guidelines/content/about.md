@@ -27,7 +27,7 @@ With that said, we recognize that the *PatternFly* way is not the *only* way. Th
 - Serve as hard requirements that everyone must follow. 
 
 ## Additional resources 
-- PatternFly’s [usage and behavior documentation](https://www.patternfly.org/v4/design-guidelines/styles/colors) contains UX writing guidelines for specific components. 
+- PatternFly’s [usage and behavior documentation](https://www.patternfly.org/v4/guidelines/colors) contains UX writing guidelines for specific components. 
 
 - For content and terminology guidance that’s not included in this guide, check out [IBM's online developer style guide](https://www.ibm.com/developerworks/library/styleguidelines/index.html) and [Merriam-Webster's online dictionary.](https://www.merriam-webster.com/) 
 

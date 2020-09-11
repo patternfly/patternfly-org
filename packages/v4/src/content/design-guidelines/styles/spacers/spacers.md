@@ -91,7 +91,7 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
   </div>
 </div>
 
-<a href="/documentation/overview/global-css-variables">Click here for all variables</a>
+<a href="/get-started/global-css-variables">Click here for all variables</a>
 <div class="pf-u-display-flex ws-content-demo pf-u-my-3xl pf-u-p-xl">
   <div class="pf-u-display-flex pf-u-flex-direction-column pf-u-mb-xl">
     <div class="h4 ws-content-correct">

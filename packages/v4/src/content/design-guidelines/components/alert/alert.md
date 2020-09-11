@@ -33,7 +33,7 @@ The status icon, background, and alert title are coded to communicate the severi
 |Critical |fa-exclamation-circle | Use to indicate that a critical or blocking error has occurred
 |Success  |fa-check-circle | Use to indicate that a task or process has completed successfully
 
-For more information about exact colors used to represent status and severity, visit the [Colors](/design-guidelines/styles/colors#status-and-state-colors) page.
+For more information about exact colors used to represent status and severity, visit the [Colors](/guidelines/colors#status-and-state-colors) page.
 
 
 ## Usage
@@ -73,7 +73,7 @@ In addition to static message content and links, interactive elements may option
 Do not use inline alerts to reflect the status of an asynchronous operation. In this case, a Toast Alert should be used.
 
 #### Alternative solutions
-If the user must take action to address a situation before proceeding consider using a [modal](design-guidelines/usage-and-behavior/modal). Inline alerts are preferred to a modal when the problem can be corrected on the current page, however.
+If the user must take action to address a situation before proceeding consider using a [modal](/components/modal/design-guidelines). Inline alerts are preferred to a modal when the problem can be corrected on the current page, however.
 
 ### Toast alerts
 Toast alerts enter from the right edge of the screen and remain until they time out or until the user dismisses them. Toast alerts overlay other content on the page.

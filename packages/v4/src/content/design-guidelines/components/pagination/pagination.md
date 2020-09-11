@@ -16,7 +16,7 @@ Add pagination above and below content views so users can easily navigate as the
 
 Use full pagination unless you're restricted to a narrow workspace, then use <a href="#compact-pagination">compact pagination</a>. Full pagination occupies more toolbar territory, so you'll have limited room for other items like bulk selectors, buttons, filters, or input fields. 
 
-[Overflow menus](http://patternfly.org/v4/design-guidelines/usage-and-behavior/toolbar#overflow-menus) allow you to incorporate these toolbar actions using less horizontal space. Toolbar actions automatically form into an overflow menu at specific breaking points. Learn how to customize these breakpoints in our [Toolbar](/design-guidelines/usage-and-behavior/toolbar) documentation.
+[Overflow menus](http://patternfly.org/v4/components/toolbar/design-guidelines#overflow-menus) allow you to incorporate these toolbar actions using less horizontal space. Toolbar actions automatically form into an overflow menu at specific breaking points. Learn how to customize these breakpoints in our [Toolbar](/components/toolbar/design-guidelines) documentation.
 
 Desktop and mobile views connect with the same breakpoint specifications. On mobile, full pagination condenses to an item count. As a toolbar item, you can add and keep the item count in two ways: in both desktop and mobile views, or just in mobile view.
 
