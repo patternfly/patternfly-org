@@ -23,8 +23,7 @@ related: [
 ---
 
 A **Form** is a group of elements used to collect information from a user.
-
-A form is a group of elements used to collect information from a user. Forms can appear in a variety of contexts, like inside a page, in a modal, or in a wizard, depending on the use case.  Some form examples include a log-in form, a registration form, a settings configuration form, or a survey.
+ Forms can appear in a variety of contexts, like inside a page, in a modal, or in a wizard, depending on the use case.  Some form examples include a log-in form, a registration form, a settings configuration form, or a survey.
 
 [View form demos](/documentation/core/demos/basicforms)
 
@@ -34,7 +33,7 @@ A form is a group of elements used to collect information from a user. Forms can
 Most forms will contain the following basic elements:
 
 1. **[Labels](#labels):** Labels let users know what information they should submit in each form field.
-2. **[Text input/text area](/design-guidelines/usage-and-behavior/text-input):** These areas provide spaces for users to enter text.
+2. **[Text input/text area](/components/text-input/design-guidelines):** These areas provide spaces for users to enter text.
 3. **[Data inputs](#data-inputs):** Data input provides a way for users to submit any information that is not freeform text, such as checkboxes, radio buttons, and dropdowns.
 4. **[Buttons](#buttons):** Buttons enable a user to submit or exit a form.
 
@@ -66,18 +65,17 @@ PatternFly provides a variety of input components that enable a user to make a s
 
 
 #### Switch
-Use a switch to toggle between two different states.
+Use a [switch](/components/switch/design-guidelines) to toggle between two different states.
 
 #### Radio buttons
-Use radio buttons when users can only choose one option from a list of two or more mutually exclusive options. Selecting a different radio button will automatically deselect the previously selected option. If you have more than 5 options to present to the user, use a select list.
+Use [radio buttons](/components/radio/design-guidelines) when users can only choose one option from a list of two or more mutually exclusive options. Selecting a different radio button will automatically deselect the previously selected option. If you have more than 5 options to present to the user, use a select list.
 
 #### Checkboxes
-Use checkboxes to enable users to select any number of items from a list. The user could select all of the available options, some of them, or none. If you have more than 5 options to present to the user, use a select list.
+Use [checkboxes](/components/checkbox/design-guidelines) to enable users to select any number of items from a list. The user could select all of the available options, some of them, or none. If you have more than 5 options to present to the user, use a select list.
 
 #### Select lists
-Use a select list to enable users to select one or more options from a list of options. Select lists can be configured to enable users to select one option (single select) or multiple options (multi-select) depending on the use case. Use a select list when you have more than 5 options to present to a user.
+Use a [select list](/components/select/design-guidelines) to enable users to select one or more options from a list of options. Select lists can be configured to enable users to select one option (single select) or multiple options (multi-select) depending on the use case. Use a select list when you have more than 5 options to present to a user.
 
-Learn more about data input variations in the [data input design guidelines](/design-guidelines/usage-and-behavior/data-input/).
 
 #### Data input arrangement
 Arrange radio buttons and checkboxes vertically or horizontally depending on space considerations.  We suggest the following:
@@ -188,8 +186,6 @@ Popovers are content boxes that are used for fields that might require additiona
 * Use popovers for content that requires you to include buttons, links, or images. 
 * **Do not** hide critical information inside a popover that users would need in order to complete their task. 
 
-For more information on user help, see our [embedded assistance guidelines](/design-guidelines/usage-and-behavior/embedded-assistance).
-
 ### Use progressive disclosure
 Use progressive disclosure to hide and show fields based on the users’ selection. This approach keeps the workflow short and allows the user to focus on only the fields relevant to them. It also avoids using color to indicate whether or not a field is available, making it suitable for visually impaired users.
 
@@ -213,21 +209,21 @@ Some common use cases include:
 ### Validation on submission
 Validation on submission is performed when the user attempts to submit a form. In this scenario, the user completes the form in its entirety and the page is reloaded with any errors detected. 
 
-For validation on submission, use an [inline alert](design-guidelines/usage-and-behavior/alerts-and-notifications#inline-alerts) along with field level errors wherever possible to make it simple for the user to quickly identify areas that need to be fixed.
+For validation on submission, use an [inline alert](/components/alert/design-guidelines#inline-alerts) along with field level errors wherever possible to make it simple for the user to quickly identify areas that need to be fixed.
 Notifications should describe the error and help users solve the problem.
 
 <img src="./img/error-validation.png" alt="Example of errors after validation on submission, including an inline alert at the top, and field level errors" width="459"/>
 
 ## Form formatting
 ### Spacing
-There should always be 24px spacing underneath every form input. If there is helper text, the 24px spacing should start after the helper text. Additionally, the spacing between data inputs like checkboxes and radio buttons, for example, should also be 24px when on the same line and 24px when the options are presented on top of one another. For more spacing information, read the [PatternFly spacer guidelines](/design-guidelines/styles/spacers#considering-line-height-and-padding).
+There should always be 24px spacing underneath every form input. If there is helper text, the 24px spacing should start after the helper text. Additionally, the spacing between data inputs like checkboxes and radio buttons, for example, should also be 24px when on the same line and 24px when the options are presented on top of one another. For more spacing information, read the [PatternFly spacer guidelines](/guidelines/spacers).
 
 <img src="./img/form-spacing.png" alt="Basic form example with spacers to demonstrate how form elements should be spaced" width="460"/>
 
 
 ### Buttons
 #### Placement
-Buttons to submit the form should always be placed to the bottom left of the form and be left-aligned with all the form fields. Buttons should be placed 16px apart, no matter where the form is placed. This includes when the form is inside a page, inside a wizard, or on a card. This solves for a number of issues outlined in the [Buttons documentation page](/design-guidelines/usage-and-behavior/buttons-and-links#button-placement). 
+Buttons to submit the form should always be placed to the bottom left of the form and be left-aligned with all the form fields. Buttons should be placed 16px apart, no matter where the form is placed. This includes when the form is inside a page, inside a wizard, or on a card. This solves for a number of issues outlined in the [Buttons documentation page](/components/button/design-guidelines#button-placement). 
 
 Buttons for other actions outside of submitting or cancelling the form may be placed elsewhere depending on your use case.
 
@@ -271,7 +267,7 @@ Forms in a modal should be horizontally centered with the modal background and f
 <img src="./img/modal-form.png" alt="Example of form in a modal" width="384"/>
 
 ### Multi-column forms
-Multi-column forms are forms that can have multiple inputs on a single form line. You can create a multi-column form using any of the [layouts](/documentation/core/layouts/bullseye) offered in PatternFly, such as the [Grid](/documentation/core/layouts/grid) or [Flex](/documentation/core/layouts/flex) layouts.
+Multi-column forms are forms that can have multiple inputs on a single form line. You can create a multi-column form using any of the [layouts](/layouts/bullseye/) offered in PatternFly, such as the [Grid](/layouts/grid) or [Flex](/layouts/flex) layouts.
 
 #### Usage
 Multi-column forms can be useful when you have limited vertical space. However, as a general rule, PatternFly recommends only using multi-column forms if you have extra space and avoiding them otherwise. They can be more confusing to the user and increase the chances of a user missing out on a form field.
