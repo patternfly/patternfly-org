@@ -5,6 +5,7 @@ const program = require('commander');
 const { start } = require('./start');
 const clientConfig = require('../webpack/webpack.client.config');
 const { version } = require('../../package.json');
+const { sourceMD, sourceProps, writeIndex, watchMD } = require('theme-patternfly-org/scripts/md/parseMD');
 
 function getConfig(options) {
   return require(path.join(process.cwd(), options.parent.config));
@@ -17,7 +18,8 @@ function getSource(options) {
 function generate(options) {
   const start = new Date();
   console.log('write source files to src/generated');
-  getSource(options);
+  getSource(options)(sourceMD, sourceProps);
+  writeIndex();
   const duration = new Date() - start;
   console.log('generating took %ss', duration / 1000);
 }
@@ -37,9 +39,10 @@ program
   .command('start')
   .description('generates source files and runs webpack-dev-server')
   .action(async options => {
-    generate(options);
+    generate(options, true);
     const webpackClientConfig = await clientConfig(null, { mode: 'development', ...getConfig(options) });
     console.log('start webpack-dev-server');
+    watchMD();
     start(webpackClientConfig);
   });
 
