@@ -5,19 +5,19 @@ related: ['Notification drawer', 'Page']
 ---
 The **Notification badge** is intended to be used with a [Notification drawer](/components/notification-drawer) as a visible indicator to alert the user about incoming notifications.
 
-## Notification badge elements
+## Elements
 
 <img src="./img/notification-badge.png" alt="basic notification drawer" width="598"/>
 
-**1. Icon:** the notification badge will be located in the masthead and display the 'fa-bell' icon in it's default state. Clicking the icon (or anywhere within the badge) will toggle the notification drawer open and closed.
+1. **Icon:** the notification badge will be located in the masthead and display the 'fa-bell' icon in it's default state. Clicking the icon (or anywhere within the badge) will toggle the notification drawer open and closed.
 
-**2. Background:** In the default state, the background will change color to indicate that the notification drawer is opened. Optionally the background color can also convey status.
+2. **Background:** In the default state, the background will change color to indicate that the notification drawer is opened. Optionally the background color can also convey status.
 
-**3. Unread status (optional):** Setting the background color to blue will indicate that one or more unread notifications are present in the drawer.
+3. **Unread status (optional):** Setting the background color to blue will indicate that one or more unread notifications are present in the drawer.
 
-**4. Attention status (optional):** Setting the background color to red will indicate that one or more notifications are present in the drawer that require immediate attention. In the attention state the icon also changes from 'fa-bell' to 'pf-icon-attention-bell'.
+4. **Attention status (optional):** Setting the background color to red will indicate that one or more notifications are present in the drawer that require immediate attention. In the attention state the icon also changes from 'fa-bell' to 'pf-icon-attention-bell'.
 
-**5. Count (optional):** When used, the count field will indicate the number of notifications in the notification drawer.
+5. **Count (optional):** When used, the count field will indicate the number of notifications in the notification drawer.
 
 ## Usage
 A notification badge must always be used when the notification drawer is present. Dependent on the capabilities and needs of your application, best practices for using the badge are as follows:
@@ -26,4 +26,4 @@ A notification badge must always be used when the notification drawer is present
 
 * Reporting a count of notifications is useful in most cases to give the user an indication of the volume of notifications present. This is especially helpful if unread status is not reported as it gives some indication of new arrivals.
 
-* The Attention state will typically be used to report critical errors, i.e. notifications with a severity set to 'error'. Again, this should only be used when such conditions are infrequent and truly indicate that immediate attention is required.
+* The Attention state will typically be used to report critical errors, in other words notifications with a severity set to 'error'. Again, this should only be used when such conditions are infrequent and truly indicate that immediate attention is required.
