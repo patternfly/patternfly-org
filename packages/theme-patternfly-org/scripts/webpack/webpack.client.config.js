@@ -15,7 +15,6 @@ const clientConfig = async (env, argv) => {
   const isProd = argv.mode === 'production';
 
   return {
-    entry: './src/app.js',
     output: {
       path: path.resolve('public'),
       filename: '[name].[hash].bundle.js'

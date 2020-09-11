@@ -3,7 +3,6 @@ import { Link } from '../link/link';
 import { Nav, NavList, NavExpandable, capitalize } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { Location } from '@reach/router';
-import ConfigContext from '../../helpers/configContext';
 import { slugger } from '../../helpers';
 import './sideNav.css';
 

@@ -8,6 +8,7 @@ module.exports = (_env, argv) => {
   const isProd = argv.mode === 'production';
 
   return {
+    entry: path.resolve(__dirname, '../../app.js'),
     output: {
       publicPath: isProd ? `${argv.pathPrefix}/` : '/',
       pathinfo: false, // https://webpack.js.org/guides/build-performance/#output-without-path-info,
@@ -90,10 +91,26 @@ module.exports = (_env, argv) => {
         }
       ]
     },
+    resolve: {
+      // Allow importing client routes
+      alias: {
+        'client-styles': path.resolve(process.cwd(), 'patternfly-docs.css.js'),
+        './routes-client': path.resolve(process.cwd(), 'patternfly-docs.routes.js'),
+        './routes-generated': path.resolve(process.cwd(), 'src/generated/index.js'),
+      }
+    },
     plugins: [
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': isProd ? "'production'" : "'development'",
-        'process.env.pathPrefix': isProd ? JSON.stringify(argv.pathPrefix) : "''"
+        'process.env.pathPrefix': isProd ? JSON.stringify(argv.pathPrefix) : "''",
+        'process.env.algolia': JSON.stringify(argv.algolia),
+        'process.env.hasGdprBanner': argv.hasGdprBanner ? 'true' : 'false',
+        'process.env.hasFooter': argv.hasFooter ? 'true' : 'false',
+        'process.env.hasVersionSwitcher': argv.hasVersionSwitcher ? 'true' : 'false',
+        'process.env.sideNavItems': JSON.stringify(argv.sideNavItems),
+        'process.env.topNavItems': JSON.stringify(argv.topNavItems),
+        'process.env.prnum': JSON.stringify(process.env.CIRCLE_PR_NUMBER || process.env.PR_NUMBER || ''),
+        'process.env.prurl': JSON.stringify(process.env.CIRCLE_PULL_REQUEST || ''),
       }),
       new FaviconsWebpackPlugin({
         logo: path.resolve(__dirname, '../../images/patternfly-logo.svg'),

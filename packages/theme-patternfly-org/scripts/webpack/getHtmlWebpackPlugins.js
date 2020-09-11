@@ -33,7 +33,7 @@ async function getHtmlWebpackPlugin({
 
 async function getHtmlWebpackPlugins(options) {
   const { isProd } = options;
-  const { routes, fullscreenRoutes } = require(path.join(process.cwd(), 'src/routes'));
+  const { routes, fullscreenRoutes } = require('../../routes');
   const res = [
     // Sitemap
     new HtmlWebpackPlugin({

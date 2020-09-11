@@ -38,8 +38,7 @@ program
   .description('generates source files and runs webpack-dev-server')
   .action(async options => {
     generate(options);
-    const config = getConfig(options);
-    const webpackClientConfig = await clientConfig(null, { mode: 'development', port: config.port });
+    const webpackClientConfig = await clientConfig(null, { mode: 'development', ...getConfig(options) });
     console.log('start webpack-dev-server');
     start(webpackClientConfig);
   });

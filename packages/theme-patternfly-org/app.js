@@ -5,16 +5,7 @@ import { SideNavLayout } from 'theme-patternfly-org/layouts';
 import { Footer } from 'theme-patternfly-org/components';
 import { MDXTemplate } from 'theme-patternfly-org/templates/mdx';
 import { routes, groupedRoutes, fullscreenRoutes, getAsyncComponent } from './routes';
-import LayoutOptions from '../patternfly-docs.config.js';
-import ConfigContext from 'theme-patternfly-org/helpers/configContext';
-import '../patternfly-docs.css.js';
-
-const isProd = process.env.NODE_ENV === 'production';
-const isPrerender = process.env.PRERENDER;
-
-LayoutOptions.routes = routes;
-LayoutOptions.groupedRoutes = groupedRoutes;
-LayoutOptions.getAsyncComponent = getAsyncComponent;
+import 'client-styles';
 
 const AppRoute = ({ child }) => {
   const location = useLocation();
@@ -26,25 +17,24 @@ const AppRoute = ({ child }) => {
   return (
     <React.Fragment>
       {child}
-      {LayoutOptions.hasFooter && <Footer />}
+      {process.env.hasFooter && <Footer />}
     </React.Fragment>
   );
 }
 
 const SideNavRouter = () => (
-  <SideNavLayout>
+  <SideNavLayout groupedRoutes={groupedRoutes}>
     <Router id="ws-page-content-router">
-      {Object.entries(LayoutOptions.routes)
+      {Object.entries(routes)
         .map(([path, { Component, title, sources }]) => Component
           ? <AppRoute key={path} path={path} default={path === '/404'} child={<Component />} />
-          : (
-            <AppRoute key={path} path={path + '/*'} child={<MDXTemplate
-              path={path}
-              layoutOptions={LayoutOptions}
-              title={title}
-              sources={sources}
-            />} />
-          )
+          : <AppRoute key={path} path={path + '/*'} child={
+              <MDXTemplate
+                path={path}
+                title={title}
+                sources={sources}
+              />
+            }/>
         )
       }
     </Router>
@@ -63,23 +53,23 @@ const FullscreenComponent = ({ Component, title }) => {
 
 // Export for SSR
 export const App = () => (
-  <ConfigContext.Provider value={LayoutOptions}>
-    <Router basepath={process.env.pathPrefix} id="ws-router">
-      <SideNavRouter path="/*" />
-      {Object.entries(fullscreenRoutes)
-        .map(([path, { title, Component }]) =>
-          <FullscreenComponent
-            key={path}
-            path={path}
-            Component={Component}
-            title={title}
-          />
-        )
-      }
-    </Router>
-  </ConfigContext.Provider>
+  <Router basepath={process.env.pathPrefix} id="ws-router">
+    <SideNavRouter path="/*" />
+    {Object.entries(fullscreenRoutes)
+      .map(([path, { title, Component }]) =>
+        <FullscreenComponent
+          key={path}
+          path={path}
+          Component={Component}
+          title={title}
+        />
+      )
+    }
+  </Router>
 );
 
+const isProd = process.env.NODE_ENV === 'production';
+const isPrerender = process.env.PRERENDER;
 // Don't use ReactDOM in SSR
 if (!isPrerender) {
   function render() {
