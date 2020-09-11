@@ -6,7 +6,6 @@ const { start } = require('./start');
 const clientConfig = require('../webpack/webpack.client.config');
 const { version } = require('../../package.json');
 const { sourceMD, sourceProps, writeIndex, watchMD } = require('../md/parseMD');
-const { writeScreenshots } = require('../writeScreenshots');
 
 function getConfig(options) {
   return require(path.join(process.cwd(), options.parent.config));
@@ -97,7 +96,10 @@ program
   .command('screenshots')
   .option('-u, --urlPrefix', 'where fullscreen pages are hosted', 'http://localhost:5000/v4')
   .description('updates screenshots for generated components')
-  .action(writeScreenshots);
+  .action(options => {
+    const { writeScreenshots } = require('../writeScreenshots');
+    writeScreenshots(options);
+  });
 
 
 program.parse(process.argv);
