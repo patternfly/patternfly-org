@@ -22,4 +22,5 @@ module.exports = {
   topNavItems: [],
   prnum: null,
   prurl: null,
+  port: 8003
 };

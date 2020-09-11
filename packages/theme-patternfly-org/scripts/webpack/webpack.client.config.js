@@ -22,7 +22,7 @@ const clientConfig = async (env, argv) => {
     },
     devServer: {
       historyApiFallback: true,
-      port: 8003,
+      port: argv.port,
       clientLogLevel: 'info',
       stats: 'minimal'
     },
