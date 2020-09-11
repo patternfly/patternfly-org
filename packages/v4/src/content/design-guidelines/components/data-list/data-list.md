@@ -8,7 +8,7 @@ A **data list** is used to display large data sets when you need a flexible layo
 
 PatternFly offers two components for displaying large data sets: data lists and [tables](/components/table/design-guidelines). While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
 
-Use [data lists](#data-lists) when:
+Use data lists when:
 * A flexible layout is more important than arranging information in a grid.
 * You want to include active content like a chart.
 * Content displayed may vary between rows.
@@ -24,10 +24,10 @@ Think of each row in a data list as a container for some formatted content. In P
 ### Compact and default data lists
 PatterFly supports two main types of data lists:
 
-1. **[Compact data list](#compact-and-default-data-list):** when you want to show as much data per page as possible.
-2. **[Default data list](#compact-and-default-data-list):** when you don’t have to minimize paging.
+1. **[Compact data list](#compact-spacing):** when you want to show as much data per page as possible.
+2. **[Default data list](#default-spacing):** when you don’t have to minimize paging.
 
-See [when to use compact vs. default spacing](#when-to-use-compact-vs-default-spacing) for more information about the styling and usage.
+See [when to use compact vs. default spacing](#compact-vs-default-spacing) for more information about the styling and usage.
 
 <img src="./img/compact-and-default-list.png"  alt="Compact and default data list"  width="824"/> 
 
@@ -37,7 +37,7 @@ The elements mentioned below are similar for a data list with compact or default
 <img src="./img/compact-list.png"  alt="Compact data list"  width="1188"/> 
 
 1. **[Toolbar](/components/toolbar/design-guidelines):** The toolbar sits above the list and contains controls for manipulating list data. Common actions include filtering, sorting, and pagination.
-2. **[Bulk selection](/components/table/react-demos):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/components/table/react-demos) for more information.
+2. **[Bulk selection](/components/table/design-guidelines):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/components/table/design-guidelines) for more information.
 3. **Row:** Row height may be variable and sizes to the content. Rows in a data list may take any supported layout.
 4. **Select checkbox:** Selects this row.
 5. **Inline actions:** These actions apply only to the current row/item.
@@ -49,8 +49,8 @@ The elements mentioned below are similar for a data list with compact or default
 ### Data list capabilities
 Every data list can be extended with these functionalities:
 
-* **[Actionable data list](#actionable-data-list)**
-* **[Expandable data list](#expandable-data-list)**
+* **[Actionable data list](/components/data-list/design-guidelines#actionable-data-list)**
+* **[Expandable data list](/components/data-list/design-guidelines#expandable-data-list)**
 
 ### Actionable data list
 The actionable data list provides checkboxes that enable users to select one or more rows and act on that selection using options in the [toolbar](/components/toolbar/design-guidelines).
@@ -129,4 +129,4 @@ A data list may sometimes need more space for rich graphical data. See an exampl
 * The content would be better presented in tabular format with well defined columns and headings.
 
 ### Alternative solutions
-Alternative to a data list include [tables](/components/table) or [card views](/components/card/design-guidelines#card-views). Card views and data lists have similar properties, but information in a card view is chunked into a grid of individual cards. In choosing between a data list and a card view, consider the type of data that will be displayed and the format that best suits that data. If you cannot easily fit all of the data that needs to be displayed into a card, a data list might be a better solution.
+Alternative to a data list include [tables](/components/table/design-guidelines) or [card views](/components/card/design-guidelines#card-views). Card views and data lists have similar properties, but information in a card view is chunked into a grid of individual cards. In choosing between a data list and a card view, consider the type of data that will be displayed and the format that best suits that data. If you cannot easily fit all of the data that needs to be displayed into a card, a data list might be a better solution.

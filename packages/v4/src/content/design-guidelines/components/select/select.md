@@ -18,7 +18,6 @@ PatternFly offers several variations of select lists:
 * [Checkbox select](#checkbox-select)
 * [Multiple select](#multiple-select)
 * [Typeahead](#typeahead)
-* [Form select](#form-select)
 
 #### Single select 
 Single select lists allow users to select a single, mutually exclusive option. When the user selects an option from the list, the selection appears in the toggle.

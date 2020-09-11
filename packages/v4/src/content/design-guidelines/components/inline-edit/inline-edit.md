@@ -2,6 +2,12 @@
 id: Inline edit
 section: components
 ---
+
+Users can use inline edit to switch between a read-only view and an edit view of [description lists](/components/description-list), page text elements, or [tables](/components/table) as needed. In other words, inline editing saves the user from opening a modal window or redirecting to a separate edit page in which the user easily loses the context from the current view. 
+Usage
+
+Use inline edit when:
+* All editable elements can be viewed within the row or expanded row.
 * The data needs to be updated frequently.
  
 Don’t use inline edit when:
@@ -10,13 +16,13 @@ Don’t use inline edit when:
 <img src="./img/inline-edit.gif"  alt="inline edit animation"  width="640"/>
  
 PatternFly supports two types of inline editing:
-1. **[Page inline edit](#page-inline-edit):** enables the user to edit a [specific field](#field-specific-edit) in a details page or in a [full page](#full-page-edit).
-2. **[Table inline edit](#table-inline-edit):** enables the user to [edit elements in a row](#row-editing).
+1. **[Page inline edit](/components/inline-edit/design-guidelines#page-inline-edit):** enables the user to edit a [specific field](/components/inline-edit/design-guidelines#table-inline-edit) in a details page or in a [full page](/components/inline-edit/design-guidelines#full-page-edit).
+2. **[Table inline edit](/components/inline-edit/design-guidelines#table-inline-edit):** enables the user to [edit elements in a row](/components/inline-edit/design-guidelines#row-editing).
  
 ## Page inline edit
 There are two types of inline edit for forms:
-* **[Field-specific edit](#field-specific-edit):** allows users to make changes to one field at a time
-* **[Full page edit](#full-page-edit):** allows users to make multiple changes at a time, in a larger area with more fields
+* **[Field-specific edit](/components/inline-edit/design-guidelines#field-specific-edit):** allows users to make changes to one field at a time
+* **[Full page edit](/components/inline-edit/design-guidelines#full-page-edit):** allows users to make multiple changes at a time, in a larger area with more fields
  
 ### Elements
  
@@ -54,7 +60,7 @@ Any editing is triggered by an edit link for the whole section. All edits should
  
 ## Table inline edit
 There is one type of inline edit for tables:
-* **[Row edit](#row-editing):** allows for making changes to one editable row in the table
+* **[Row edit](/components/inline-edit/design-guidelines#row-editing):** allows for making changes to one editable row in the table
  
 ### Elements
  
@@ -70,7 +76,7 @@ There is one type of inline edit for tables:
 8. **Toggle:** pencil toggle indicates the edit action
  
 ### Row editing
-Row editing allows a user to edit items that are visible in the table by having a [pencil toggle](/components/inline-edit#inline-edit-toggle) pinned to the right side, with the [kebab](/components/dropdown#with-kebab). 
+Row editing allows a user to edit items that are visible in the table by having a pencil toggle pinned to the right side, with the [kebab](/components/dropdown#with-kebab). 
  
 #### When to use
 Use row editing when:

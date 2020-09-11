@@ -41,5 +41,5 @@ Spinners are centered within the container AND the viewport by default in all us
 - You do not know what the populated data may look like. For example, if you are loading a form (as they are not all structured the same).
 - When it is likely it will fail or show an empty state while waiting for actions to complete.
 
-**Show a [skeleton](/components/skeleton/design-guidelines) when:**
+**Show a [skeleton](/components/skeleton/react) when:**
 - You know what the populated data is going to look like (even if it results in an empty state).

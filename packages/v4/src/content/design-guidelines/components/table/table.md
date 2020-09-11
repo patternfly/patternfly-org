@@ -6,7 +6,7 @@ A **table** is used to display large data sets that can be easily laid out in a 
 
 PatternFly offers two components for displaying large data sets: [data lists](/components/data-list/design-guidelines) and tables. While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
 
-Use [tables](#tables) when:
+Use tables when:
 * Users will want to consume data as a grid (in other words, structured rows and columns).
 * You want column headers.
 
@@ -17,10 +17,10 @@ Consider the structure of the data you want to display and organize that informa
 ### Compact and default tables
 PatterFly supports two main types of tables:
 
-1. **[Compact table](#compact-and-default-table):** when you want to show as much data per page as possible.
-2. **[Default table](#compact-and-default-table):** when you don’t have to minimize paging.
+1. **[Compact table](/components/table/design-guidelines#compact-spacing):** when you want to show as much data per page as possible.
+2. **[Default table](/components/table/design-guidelines#default-spacing):** when you don’t have to minimize paging.
 
-See [when to use compact vs. default spacing](#when-to-use-compact-vs-default-spacing) for more information about the styling and usage.
+See [when to use compact vs. default spacing](#compact-vs-default-spacing) for more information about the styling and usage.
 
 <img src="./img/compact-and-default-table.png"  alt="Compact and default table"  width="857"/> 
 
@@ -164,4 +164,4 @@ In this example, a table is positioned in the body of a page in a card.
 * The information you want to display fits into a structured, tabular format (in other words, has distinct rows and columns).
 
 **Don't use a table**: 
-* For less structured or variably structured data that cannot be easily organized into columns. In these situations, use a [data list](#data-lists).
+* For less structured or variably structured data that cannot be easily organized into columns. In these situations, use a [data list](/components/data-lists).

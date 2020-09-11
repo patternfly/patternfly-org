@@ -30,23 +30,26 @@ Vertical navigation is hierarchical global navigation that displays navigation o
 * You expect your application to be used on mobile devices
 
 #### Variations
-  * **Simple vertical navigation**
 
-    <img src="./img/single-level.png" alt="Example of simple vertical navigation" width="634"/>
+**Simple vertical navigation**
 
-    Use a simple, single-level vertical navigation when you only have one level of navigation to display.
+Use a simple, single-level vertical navigation when you only have one level of navigation to display.
 
-  * **Grouped navigation**
+<img src="./img/single-level.png" alt="Example of simple vertical navigation" width="634"/>
 
-    <img src="./img/two-level.png" alt="Example of grouped vertical navigation" width="634"/>
+**Grouped navigation**
 
-    When you have a small amount of secondary navigation items, you can group your items and display them persistently beneath the primary navigation items.
+When you have a small amount of secondary navigation items, you can group your items and display them persistently beneath the primary navigation items.
 
-  * **Expandable vertical navigation**
+<img src="./img/two-level.png" alt="Example of grouped vertical navigation" width="634"/>
 
-    <img src="./img/expandable-nav.png" alt="Example of expandable vertical navigation" width="634"/>
+**Expandable vertical navigation**
 
-    When you have a large number of secondary navigation items, you can use an expandable navigation to collapse and expand options as needed.
+When you have a large number of secondary navigation items, you can use an expandable navigation to collapse and expand options as needed.
+
+<img src="./img/expandable-nav.png" alt="Example of expandable vertical navigation" width="634"/>
+
+
 
 ### Horizontal navigation
 
