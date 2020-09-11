@@ -15,7 +15,6 @@ import {
 } from '@patternfly/react-core';
 import { SearchIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
 import { SideNav, TopNav, GdprBanner } from '../../components';
-import ConfigContext from '../../helpers/configContext';
 import staticVersions from '../../versions.json';
 import logo from '../logo.svg';
 import './sideNavLayout.css';
@@ -103,19 +102,16 @@ function attachDocSearch(algolia, timeout) {
   }
 }
 
-export const SideNavLayout = ({ children }) => {
-  const {
-    hasGdprBanner,
-    algolia,
-    hasVersionSwitcher,
-    sideNavItems,
-    topNavItems,
-    prnum,
-    prurl,
-    pathPrefix,
-    // BONUS prop passed from app.js
-    groupedRoutes
-  } = useContext(ConfigContext);
+export const SideNavLayout = ({ children, groupedRoutes }) => {
+  const pathPrefix = process.env.pathPrefix;
+  const algolia = process.env.algolia;
+  const hasGdprBanner = process.env.hasGdprBanner;
+  const hasVersionSwitcher = process.env.hasVersionSwitcher;
+  const sideNavItems = process.env.sideNavItems;
+  const topNavItems = process.env.topNavItems;
+  const prnum = process.env.prnum;
+  const prurl = process.env.prurl;
+
   const [versions, setVersions] = useState({ ...staticVersions });
 
   useEffect(() => {
@@ -151,7 +147,7 @@ export const SideNavLayout = ({ children }) => {
         hasVersionSwitcher={hasVersionSwitcher}
         pathPrefix={pathPrefix} />}
       logo={prnum ? `PR #${prnum}` : <Brand src={logo} alt="Patternfly Logo" />}
-      logoProps={{ href: prurl || pathPrefix || '/' }}
+      logoProps={{ href: prurl || pathPrefix }}
       showNavToggle
       topNav={topNavItems.length > 0 && <TopNav navItems={topNavItems} />}
     />

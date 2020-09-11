@@ -1,22 +1,11 @@
 // This module is shared between NodeJS and babelled ES5
-const generatedRoutes = require('./generated');
 const { makeSlug, slugger } = require('theme-patternfly-org/helpers/slugger');
 const { asyncComponentFactory } = require('theme-patternfly-org/helpers/asyncComponentFactory');
-
-const isClient = Boolean(process.env.NODE_ENV);
+const clientRoutes = require('./routes-client'); // Webpack replaces this import
+const generatedRoutes = require('./routes-generated'); // Webpack replaces this import
 
 const routes = {
-  '/': {
-    SyncComponent: isClient && require('./pages/home').default
-  },
-  '/get-in-touch': {
-    Component: () => import(/* webpackChunkName: "get-in-touch/index" */ './pages/get-in-touch'),
-    title: 'Get in touch'
-  },
-  '/404': {
-    SyncComponent: isClient && require('theme-patternfly-org/pages/404').default,
-    title: '404 Error'
-  },
+  ...clientRoutes,
   ...generatedRoutes
 };
 
@@ -110,12 +99,12 @@ Object.entries(groupedRoutes)
     })
   });
 
-function getAsyncComponent(url, pathPrefix) {
+function getAsyncComponent(url) {
   if (!url && typeof window !== 'undefined') {
     url = window.location.pathname.replace(/\/$/, '') || '/';
   }
   // Normalize path for matching
-  url = url.replace(pathPrefix, '');
+  url = url.replace(process.env.pathPrefix, '');
   let res;
 
   if (allRoutes[url]) {

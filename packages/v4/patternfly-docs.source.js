@@ -1,112 +1,113 @@
 const path = require('path');
-const glob = require('glob');
-const { sourceMD, sourceProps, writeIndex } = require('theme-patternfly-org/scripts/md/parseMD');
 
-// Content md
-const contentBase = path.join(__dirname, 'src/content');
-sourceMD(
-  glob.sync(path.join(contentBase, 'contribute/**/*.md')),
-  'pages-contribute'
-);
-sourceMD(
-  glob.sync(path.join(contentBase, 'get-started/**/*.md')),
-  'pages-get-started'
-);
-sourceMD(
-  glob.sync(path.join(contentBase, 'design-guidelines/**/*.md')),
-  'design-guidelines'
-);
+module.exports = (sourceMD, sourceProps) => {
+  // Content md
+  const contentBase = path.join(__dirname, 'src/content');
+  sourceMD(
+    path.join(contentBase, 'contribute/**/*.md'),
+    'pages-contribute'
+  );
+  sourceMD(
+    path.join(contentBase, 'get-started/**/*.md'),
+    'pages-get-started'
+  );
+  sourceMD(
+    path.join(contentBase, 'design-guidelines/**/*.md'),
+    'design-guidelines'
+  );
 
-// Theme pages
-const themePagesPath = require
-  .resolve('theme-patternfly-org/package.json')
-  .replace('package.json', 'pages');
-sourceMD(
-  glob.sync(path.join(themePagesPath, '*.md')),
-  'pages-overview'
-);
+  // Theme pages
+  const themePagesPath = require
+    .resolve('theme-patternfly-org/package.json')
+    .replace('package.json', 'pages');
+  sourceMD(
+    path.join(themePagesPath, '*.md'),
+    'pages-overview'
+  );
 
-// Core MD
-const coreDocsPath = require
-  .resolve('@patternfly/patternfly/package.json')
-  .replace('package.json', 'docs');
-const coreDocsIgnore = path.join(coreDocsPath, '/pages/**'); // Compatibility for old gatsby workspace
-sourceMD(
-  glob.sync(path.join(coreDocsPath, '/**/examples/**/*.md'), { ignore: coreDocsIgnore }),
-  'html'
-);
-sourceMD(
-  glob.sync(path.join(coreDocsPath, '/**/demos/**/*.md'), { ignore: coreDocsIgnore }),
-  'html'
-);
+  // Core MD
+  const coreDocsPath = require
+    .resolve('@patternfly/patternfly/package.json')
+    .replace('package.json', 'docs');
+  const coreDocsIgnore = path.join(coreDocsPath, '/pages/**'); // Compatibility for old gatsby workspace
+  sourceMD(
+    path.join(coreDocsPath, '/**/examples/**/*.md'),
+    'html',
+    coreDocsIgnore
+  );
+  sourceMD(
+    path.join(coreDocsPath, '/**/demos/**/*.md'),
+    'html',
+    coreDocsIgnore
+  );
 
-// React props
-const reactCorePath = require
-  .resolve('@patternfly/react-core/package.json')
-  .replace('package.json', 'src');
-const reactTablePath = require
-  .resolve('@patternfly/react-table/package.json')
-  .replace('package.json', 'src');
-const reactChartsPath = require
-  .resolve('@patternfly/react-charts/package.json')
-  .replace('package.json', 'src');
-const reactPropsIgnore = '**/*.test.tsx';
-sourceProps(
-  glob.sync(path.join(reactCorePath, '/**/*.tsx'), { ignore: reactPropsIgnore }),
-  'react'
-);
-sourceProps(
-  glob.sync(path.join(reactTablePath, '/**/*.tsx'), { ignore: reactPropsIgnore }),
-  'react'
-);
-sourceProps(
-  glob.sync(path.join(reactChartsPath, '/**/*.tsx'), { ignore: reactPropsIgnore }),
-  'react'
-);
+  // React props
+  const reactCorePath = require
+    .resolve('@patternfly/react-core/package.json')
+    .replace('package.json', 'src');
+  const reactTablePath = require
+    .resolve('@patternfly/react-table/package.json')
+    .replace('package.json', 'src');
+  const reactChartsPath = require
+    .resolve('@patternfly/react-charts/package.json')
+    .replace('package.json', 'src');
+  const reactPropsIgnore = '**/*.test.tsx';
+  sourceProps(
+    path.join(reactCorePath, '/**/*.tsx'),
+    reactPropsIgnore
+  );
+  sourceProps(
+    path.join(reactTablePath, '/**/*.tsx'),
+    reactPropsIgnore
+  );
+  sourceProps(
+    path.join(reactChartsPath, '/**/*.tsx'),
+    reactPropsIgnore
+  );
 
-// React MD
-sourceMD(
-  glob.sync(path.join(reactCorePath, '/**/examples/*.md')),
-  'react'
-);
-sourceMD(
-  glob.sync(path.join(reactCorePath, '/**/demos/**/*.md')),
-  'react'
-);
+  // React MD
+  sourceMD(
+    path.join(reactCorePath, '/**/examples/*.md'),
+    'react'
+  );
+  sourceMD(
+    path.join(reactCorePath, '/**/demos/**/*.md'),
+    'react'
+  );
 
-// React-table MD
-sourceMD(
-  glob.sync(path.join(reactTablePath, '/**/examples/*.md')),
-  'react'
-);
-sourceMD(
-  glob.sync(path.join(reactTablePath, '/**/demos/*.md')),
-  'react'
-);
+  // React-table MD
+  sourceMD(
+    path.join(reactTablePath, '/**/examples/*.md'),
+    'react'
+  );
+  sourceMD(
+    path.join(reactTablePath, '/**/demos/*.md'),
+    'react'
+  );
 
-// Charts MD (no demos yet)
-sourceMD(
-  glob.sync(path.join(reactChartsPath, '/**/examples/*.md')),
-  'react'
-);
+  // Charts MD (no demos yet)
+  sourceMD(
+    path.join(reactChartsPath, '/**/examples/*.md'),
+    'react'
+  );
 
-// Release notes
-sourceMD(
-  require.resolve('@patternfly/patternfly/RELEASE-NOTES.md'),
-  'html'
-);
-sourceMD(
-  require.resolve('@patternfly/react-docs/RELEASE-NOTES.md'),
-  'react'
-);
+  // Release notes
+  sourceMD(
+    require.resolve('@patternfly/patternfly/RELEASE-NOTES.md'),
+    'html'
+  );
+  sourceMD(
+    require.resolve('@patternfly/react-docs/RELEASE-NOTES.md'),
+    'react'
+  );
 
-// Upgrade guides
-sourceMD(
-  require.resolve('@patternfly/patternfly/UPGRADE-GUIDE.md'),
-  'html'
-);
-sourceMD(
-  require.resolve('@patternfly/react-docs/UPGRADE-GUIDE.md'),
-  'react'
-);
-writeIndex();
+  // Upgrade guides
+  sourceMD(
+    require.resolve('@patternfly/patternfly/UPGRADE-GUIDE.md'),
+    'html'
+  );
+  sourceMD(
+    require.resolve('@patternfly/react-docs/UPGRADE-GUIDE.md'),
+    'react'
+  );
+}

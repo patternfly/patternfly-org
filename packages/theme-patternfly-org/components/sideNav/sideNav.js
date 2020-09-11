@@ -3,7 +3,6 @@ import { Link } from '../link/link';
 import { Nav, NavList, NavExpandable, capitalize } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { Location } from '@reach/router';
-import ConfigContext from '../../helpers/configContext';
 import { slugger } from '../../helpers';
 import './sideNav.css';
 
@@ -27,7 +26,6 @@ const NavItem = ({ text, href }) => (
 );
 
 export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
-  const { pathPrefix } = React.useContext(ConfigContext);
   React.useEffect(() => {
     if (typeof window === 'undefined') {
       return;
@@ -50,7 +48,7 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
           ? (
             <Location key={section}>
               {({ location }) => {
-                const isActive = location.pathname.startsWith(`${pathPrefix}/${slugger(section)}`);
+                const isActive = location.pathname.startsWith(`${process.env.pathPrefix}/${slugger(section)}`);
 
                 return (
                   <NavExpandable

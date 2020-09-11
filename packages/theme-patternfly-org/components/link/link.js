@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link as ReachLink, navigate } from '@reach/router';
-import ConfigContext from '../../helpers/configContext';
+import { getAsyncComponent } from '../../routes';
 
 const Promiseany = (Promise.any || function ($) {
   return new Promise(function (D, E, A, L) {
@@ -25,26 +25,27 @@ export const Link = ({
     return <a href={url} {...props} />;
   }
   else if (url.startsWith('/')) {
-    const { pathPrefix, getAsyncComponent } = React.useContext(ConfigContext);
-    url = `${pathPrefix}/${url.substr(1)}`;
+    url = `${process.env.pathPrefix}/${url.substr(1)}`;
 
-    const Component = getAsyncComponent(url, pathPrefix);
-    if (Component) {
-      // Preload on hover
-      props.onMouseOver = () => {
-        preloadPromise = Component.preload();
-        onMouseOver();
-      };
-      // Wait up to an extra 500ms on click
-      props.onClick = ev => {
-        ev.preventDefault();
-        if (typeof window !== 'undefined' && url !== location.pathname) {
-          Promiseany([
-            preloadPromise,
-            new Promise(res => setTimeout(res, 500))
-          ]).then(() => navigate(url));
-        }
-      };
+    if (!process.env.PRERENDER) {
+      const Component = getAsyncComponent(url);
+      if (Component) {
+        // Preload on hover
+        props.onMouseOver = () => {
+          preloadPromise = Component.preload();
+          onMouseOver();
+        };
+        // Wait up to an extra 500ms on click before showing 'Loading...'
+        props.onClick = ev => {
+          ev.preventDefault();
+          if (typeof window !== 'undefined' && url !== location.pathname) {
+            Promiseany([
+              preloadPromise,
+              new Promise(res => setTimeout(res, 500))
+            ]).then(() => navigate(url));
+          }
+        };
+      }
     }
   }
   return <ReachLink to={url} {...props} />;

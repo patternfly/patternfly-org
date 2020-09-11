@@ -15,14 +15,13 @@ const clientConfig = async (env, argv) => {
   const isProd = argv.mode === 'production';
 
   return {
-    entry: './src/app.js',
     output: {
       path: path.resolve('public'),
       filename: '[name].[hash].bundle.js'
     },
     devServer: {
       historyApiFallback: true,
-      port: 8003,
+      port: argv.port,
       clientLogLevel: 'info',
       stats: 'minimal'
     },
@@ -103,11 +102,7 @@ const clientConfig = async (env, argv) => {
           { from: path.join(pfDir, 'assets/fonts/'), to: 'assets/fonts/' }
         ]
       }),
-      ...await getHtmlWebpackPlugins(isProd), // Create an HTML page per route
-      ...(isProd
-        ? [
-        ]
-        : []),
+      ...await getHtmlWebpackPlugins({ isProd, ...argv }), // Create an HTML page per route
       ...(env === 'analyze'
         ? [
           new BundleAnalyzerPlugin({
