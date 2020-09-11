@@ -110,12 +110,12 @@ Object.entries(groupedRoutes)
     })
   });
 
-function getAsyncComponent(url, pathPrefix) {
+function getAsyncComponent(url) {
   if (!url && typeof window !== 'undefined') {
     url = window.location.pathname.replace(/\/$/, '') || '/';
   }
   // Normalize path for matching
-  url = url.replace(pathPrefix, '');
+  url = url.replace(process.env.pathPrefix, '');
   let res;
 
   if (allRoutes[url]) {

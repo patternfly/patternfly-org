@@ -12,10 +12,6 @@ import '../patternfly-docs.css.js';
 const isProd = process.env.NODE_ENV === 'production';
 const isPrerender = process.env.PRERENDER;
 
-if (!isProd) {
-  // Ignore `pathPrefix` in dev mode
-  LayoutOptions.pathPrefix = '';
-}
 LayoutOptions.routes = routes;
 LayoutOptions.groupedRoutes = groupedRoutes;
 LayoutOptions.getAsyncComponent = getAsyncComponent;
@@ -68,7 +64,7 @@ const FullscreenComponent = ({ Component, title }) => {
 // Export for SSR
 export const App = () => (
   <ConfigContext.Provider value={LayoutOptions}>
-    <Router basepath={LayoutOptions.pathPrefix} id="ws-router">
+    <Router basepath={process.env.pathPrefix} id="ws-router">
       <SideNavRouter path="/*" />
       {Object.entries(fullscreenRoutes)
         .map(([path, { title, Component }]) =>
@@ -91,7 +87,7 @@ if (!isPrerender) {
     renderFn(<App />, document.getElementById('root'));
   }
   // On first load, await promise for the current page to avoid flashing a "Loading..." state
-  const Component = getAsyncComponent(null, LayoutOptions.pathPrefix);
+  const Component = getAsyncComponent(null);
   if (Component) {
     Component.preload().then(render);
   }

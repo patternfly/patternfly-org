@@ -19,7 +19,7 @@ function generate(options) {
   console.log('write source files to src/generated');
   getSource(options);
   const duration = new Date() - start;
-  console.log('took %ss', duration / 1000);
+  console.log('generating took %ss', duration / 1000);
 }
 
 program

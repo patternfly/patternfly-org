@@ -25,10 +25,10 @@ export const Link = ({
     return <a href={url} {...props} />;
   }
   else if (url.startsWith('/')) {
-    const { pathPrefix, getAsyncComponent } = React.useContext(ConfigContext);
-    url = `${pathPrefix}/${url.substr(1)}`;
+    const { getAsyncComponent } = React.useContext(ConfigContext);
+    url = `${process.env.pathPrefix}/${url.substr(1)}`;
 
-    const Component = getAsyncComponent(url, pathPrefix);
+    const Component = getAsyncComponent(url);
     if (Component) {
       // Preload on hover
       props.onMouseOver = () => {

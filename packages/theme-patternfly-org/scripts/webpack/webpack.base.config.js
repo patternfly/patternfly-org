@@ -1,3 +1,4 @@
+const os = require('os');
 const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -12,7 +13,8 @@ module.exports = (_env, argv) => {
       pathinfo: false, // https://webpack.js.org/guides/build-performance/#output-without-path-info,
       hashDigestLength: 8
     },
-    amd: false,
+    amd: false, // We don't use any AMD modules, helps performance
+    parallelism: process.env.CI ? 2 : os.cpus().length, // Default is 100 which causes thrashing
     mode: isProd ? 'production' : 'development',
     devtool: isProd ? false : 'cheap-module-source-map',
     module: {
@@ -90,7 +92,8 @@ module.exports = (_env, argv) => {
     },
     plugins: [
       new webpack.DefinePlugin({
-        'process.env.NODE_ENV': isProd ? "'production'" : "'development'"
+        'process.env.NODE_ENV': isProd ? "'production'" : "'development'",
+        'process.env.pathPrefix': isProd ? JSON.stringify(argv.pathPrefix) : "''"
       }),
       new FaviconsWebpackPlugin({
         logo: path.resolve(__dirname, '../../images/patternfly-logo.svg'),
