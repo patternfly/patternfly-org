@@ -29,7 +29,7 @@ With that said, we recognize that the *PatternFly* way is not the *only* way. Th
 ## Additional resources 
 - PatternFly’s [usage and behavior documentation](https://www.patternfly.org/v4/design-guidelines/styles/colors) contains UX writing guidelines for specific components. 
 
-- For content and terminology guidance that’s not included in this guide, check out [IBM's online developer style guide](https://www.ibm.com/developerworks/library/styleguidelines/index.html) and [Merriam-Webster's online dictionary.](https://www.merriam-webster.com/) 
+- For content and terminology guidance that’s not included in this guide, check out [IBM Carbon’s UX content guidelines](https://www.carbondesignsystem.com/guidelines/content/overview) and [Merriam-Webster’s online dictionary](https://www.merriam-webster.com/). In cases where advice differs, default to PatternFly if you’re writing for Red Hat interfaces.
 
 ## Contribute
 In true Flyer fashion, we keep this style guide open. Contribute your ideas through [GitHub.](https://github.com/patternfly/patternfly-org/pulls)
