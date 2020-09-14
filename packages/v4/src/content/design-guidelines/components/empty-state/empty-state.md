@@ -12,7 +12,7 @@ PatternFly offers three empty state variations; a small empty state, a large emp
 
 Below is an example of a large empty state inside a full-page, outlining all the elements inside an empty state.
 
-<img src="./img/empty-state.png" alt="empty state example" width="990"/> 
+<img src="./img/empty-state.png" alt="empty state example"/> 
 
 1. **[Icon/image](#icons):** Display associated object icons here.
 2. **[Title](#title-and-body):** Provide a concise explanation.
@@ -52,52 +52,52 @@ Pay close attention to voice and tone in your empty state. Your voice is the per
 
 It is OK to use “you” and “your” but never assign blame to the user.
 
-<img src="./img/accusatory.png" alt="do's and dont's of accusatory" width="771"/> 
+<img src="./img/accusatory.png" alt="do's and dont's of accusatory" height="344"/> 
 
 There is also no need to be overly mannerly, so avoid using please, unless the user is being inconvenienced. 
 
-<img src="./img/please.png" alt="do's and dont's of please" width="771"/> 
+<img src="./img/please.png" alt="do's and dont's of please" height="344"/> 
 
 **Level of detail**
 
 In your empty state, state what isn't there, and then give the user a next step.  Empty states should not be used to describe in detail how to use the page—the design should be intuitive enough without extensive written explanation. Include at least one sentence, even if it seems like a straightforward explanation, and at least two when there may be more explanation needed.
 
-<img src="./img/level-of-detail.png" alt="do's and dont's of level of detail" width="771"/> 
+<img src="./img/level-of-detail.png" alt="do's and dont's of level of detail" height="344"/> 
 
 **Sentence case**
 
 Empty states should follow sentence case rules. Only the first word in any phrase or sentence should be capitalized (whether it is in the body or in a button or link), unless a proper noun is included in the phrase/sentence.
 Every sentence in a body should end with a period. Headers should not end in a period though.
 
-<img src="./img/sentence-case.png" alt="do's and dont's of level of sentence case" width="771"/> 
+<img src="./img/sentence-case.png" alt="do's and dont's of level of sentence case" height="344"/> 
 
 ### Primary and secondary buttons
 Buttons in empty states are used to highlight next steps a user can take when they reach your page. There are multiple ways to set up calls-to-action. You can have a call-to-action presented as a primary button, or within the body. If you have a singular call-to-action on your page, it is preferable for it to be presented in primary button format as it places bigger emphasis on the call-to-action. However, there may be a specific reason why you may need it embedded in the body.
 
 1. **Call-to-action as a primary button**
 
-    <img src="./img/one-ctas-primary.png" alt="Example of call to action as primary button" width="600"/> 
+    <img src="./img/one-ctas-primary.png" alt="Example of call to action as primary button" height="303"/> 
 
 2. **Call-to-action in body**
 
-    <img src="./img/one-cta-body.png" alt="Example of call to action in empty state body" width="600"/> 
+    <img src="./img/one-cta-body.png" alt="Example of call to action in empty state body" height="235"/> 
 
 <br />
 If you have more than one actionable link, there are two options depending on how your primary call-to-action is presented:
 
 1. **Link button underneath the primary button:** if your primary call-to-action was in a primary button format
 
-    <img src="./img/two-ctas-primary.png" alt="Example of call two call to action" width="600"/> 
+    <img src="./img/two-ctas-primary.png" alt="Example of call two call to action" height="347"/> 
 
 2. **Link button underneath the body:** if your first call-to-action was in the body
 
-    <img src="./img/two-ctas-body.png" alt="Example of two calls to action" width="600"/> 
+    <img src="./img/two-ctas-body.png" alt="Example of two calls to action" height="303"/> 
 
 There are only two situations where a stand-alone link button (with nothing linked in the body) can be used:
 
 1. **Filtering or search situation:** when a user has filtered for something in a table, and is prompted to "clear all filters" or "include" other items in their search
 
-    <img src="./img/solo-link.png" alt="Example of call to action solo link" width="393"/> 
+    <img src="./img/solo-link.png" alt="Example of call to action solo link" height="303"/> 
 
 2. **Multiple primary calls-to-action:** when there are multiple primary actions the user can take and they are all equally important
 
@@ -107,23 +107,23 @@ There are only two situations where a stand-alone link button (with nothing link
 
 When an empty state appears on a full-page,  it  should be 64px away from the top, and horizontally centered with a minimum padding of 24px on all remaining sides.
 
- <img src="./img/desktop-page-es.png" alt="Example of full page spacing and alignment" width="990"/> 
+ <img src="./img/desktop-page-es.png" alt="Example of full page spacing and alignment"/> 
 
 Mobile in-page empty states should be 48px away from the top and have a minimum of 16px padding on the remaining sides.
 
- <img src="./img/mobile-page-es.png" alt="Example of mobile spacing" width="375"/> 
+ <img src="./img/mobile-page-es.png" alt="Example of mobile spacing" height="525"/> 
 
 **In-table, card, or wizard empty states**
 
 Empty states within a table, card, or wizard should always be horizontally and vertically centered on their background, with an outside padding of 24px on all sides.
 
- <img src="./img/table-es.png" alt="Example of empty state in table" width="990"/> 
+ <img src="./img/table-es.png" alt="Example of empty state in table"/> 
 
 ### Toolbars or filters in empty states
 
 No toolbars or filters should be shown when a user is in a full-page empty state as the user will have no items to perform any actions on.
 
- <img src="./img/toolbar.png" alt="Example of toolbars and filters in empty states" width="990"/> 
+ <img src="./img/toolbar.png" alt="Example of toolbars and filters in empty states"/> 
 
 
 ## Usage
@@ -140,31 +140,31 @@ There are several common use cases for empty states:
 
 In a first-use situation, there is nothing to display because the user has not created or added anything yet. Use this opportunity to educate users about how to get started and introduce any associated value or benefit to taking action. This empty state should be displayed in the extra large empty state variation.
 
- <img src="./img/xl-getstarted.png" alt="Example of get started empty state" width="990"/> 
+ <img src="./img/xl-getstarted.png" alt="Example of get started empty state"/> 
 
 ### No data to show
 
 Help users understand why there is no data to display and explain what they can do to move forward. For example, there may be no data to show because the user has a series of filters applied and the system cannot locate a match. It’s also possible that there is no data because all issues are resolved or all tasks are complete.
 
-<img src="./img/no-data.png" alt="Example of no data empty state" width="990"/> 
+<img src="./img/no-data.png" alt="Example of no data empty state"/> 
 
 ### Required configuration
 
 In this situation, a user may need to take steps to configure, connect, or enable something in order to view associated information or take advantage of features.
 
-<img src="./img/configuration.png" alt="Example of configuration empty state" width="990"/> 
+<img src="./img/configuration.png" alt="Example of configuration empty state"/> 
 
 ### User not entitled or does not have access
 
 Help users understand why they are not able to view content and provide next steps.
 
-<img src="./img/access-denied.png" alt="Example of access denied empty state" width="990"/> 
+<img src="./img/access-denied.png" alt="Example of access denied empty state"/> 
 
 ### Back-end failure
 
 Provide the user with information about the error that is easy to understand, and provide clear next steps they can take to resolve the issue.
 
-<img src="./img/backend-failure.png" alt="Example of backend failureempty state" width="990"/> 
+<img src="./img/backend-failure.png" alt="Example of backend failureempty state"/> 
 
 ### Success
 
@@ -172,18 +172,18 @@ Let the user know they've successfully completed a process. For example, you mig
  
 When the success state appears in a table or wizard, it should use the standard empty state variation.
 
-<img src="./img/success-table.png" alt="Example of success table empty state" width="990"/> 
+<img src="./img/success-table.png" alt="Example of success table empty state"/> 
 
-<img src="./img/success-wizard.png" alt="Example of success table empty state" width="990"/> 
+<img src="./img/success-wizard.png" alt="Example of success table empty state"/> 
 
 If the success state appears in a full-page, you can choose to use the extra large empty state variation to fill up the page.
 
-<img src="./img/xl-success.png" alt="Example of success full page" width="990"/> 
+<img src="./img/xl-success.png" alt="Example of success full page"/> 
 
 ## Addition or creation 
 In some situations, users may need to add or create something to view associated information. Let them know what they need to add and guide them with calls-to-action to lead them the right way.
 
-<img src="./img/add-or-create.png" alt="Example of add empty state" width="990"/> 
+<img src="./img/add-or-create.png" alt="Example of add empty state"/> 
 
 <!-- ## Variations
 
