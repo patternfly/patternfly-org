@@ -37,7 +37,7 @@ The elements mentioned below are similar for a data list with compact or default
 <img src="./img/compact-list.png"  alt="Compact data list"  width="1188"/> 
 
 1. **[Toolbar](/components/toolbar/design-guidelines):** The toolbar sits above the list and contains controls for manipulating list data. Common actions include filtering, sorting, and pagination.
-2. **[Bulk selection](/components/table/design-guidelines):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/components/table/design-guidelines) for more information.
+2. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information.
 3. **Row:** Row height may be variable and sizes to the content. Rows in a data list may take any supported layout.
 4. **Select checkbox:** Selects this row.
 5. **Inline actions:** These actions apply only to the current row/item.
@@ -57,7 +57,7 @@ The actionable data list provides checkboxes that enable users to select one or 
 
 <img src="./img/actionable-list.png"  alt="Actionable list"  width="1172"/> 
 
-1. **[Bulk selection](/components/table/react-demos):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/components/table/react-demos) for more information. 
+1. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information. 
 2. **Checkbox:** Enables a user to select a row.
 3. **Global actions:** Actions that can be applied to all selected items.
 

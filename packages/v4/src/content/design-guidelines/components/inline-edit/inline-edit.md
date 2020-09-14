@@ -14,7 +14,7 @@ Use inline edit when:
 Don’t use inline edit when:
 * The editing is the primary function of the view. For example, in an edit modal.
 
-<img src="./img/inline-edit.gif"  alt="inline edit animation"  width="640"/>
+![Gif of inline edit in action](./img/inline-edit.gif)
  
 PatternFly supports two types of inline editing:
 1. **[Page inline edit](/components/inline-edit/design-guidelines#page-inline-edit):** enables the user to edit a [specific field](/components/inline-edit/design-guidelines#table-inline-edit) in a details page or in a [full page](/components/inline-edit/design-guidelines#full-page-edit).

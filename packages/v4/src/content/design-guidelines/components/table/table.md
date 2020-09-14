@@ -30,7 +30,7 @@ The elements mentioned below are similar for a table with compact or default spa
 <img src="./img/compact-data-table.png"  alt="Compact table"  width="1186"/> 
 
 1. **[Toolbar](/components/toolbar/design-guidelines):** Sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
-2. **[Bulk selection](/components/table/react-demos):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/components/table/react-demos) for more information.
+2. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information.
 3. **Column headers:** Should align with the content they contain. If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on one column at a time. See [sorting by columns](#sorting-by-columns) for more information on the sort component.
 4. **Select checkbox:** Selects this row
 5. **Global actions:** Actions that apply to all selected items
@@ -83,7 +83,7 @@ The actionable table provides checkboxes that enable users to select one or more
 
 <img src="./img/actionable-table.png"  alt="Actionable table"  width="1174"/> 
 
-1. **[Bulk selection](/components/table/react-demos):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/components/table/react-demos) for more information. 
+1. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information. 
 2. **Checkbox:** Enables a user to select a row.
 3. **Global actions:** Actions that can be applied to all selected items.
 
