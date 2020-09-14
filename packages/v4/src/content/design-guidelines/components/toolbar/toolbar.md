@@ -13,7 +13,7 @@ Toolbars can be included to allow a user to manage and manipulate a data set. Da
 
 The toolbar is a container for holding a variety of elements (toolbar items and groups) that are used to manipulate a set of data. All items should be centered vertically within the toolbar.
 
-<img src="./img/toolbar-spacing.png"  alt="basic toolbar with 16px spacing"  width="1210"/>
+<img src="./img/toolbar-spacing.png"  alt="basic toolbar with 16px spacing" />
 
 Toolbar items are individual components that can be placed inside of a toolbar. Often, it makes sense to group sets of like items to create desired associations and to enable items to respond together to changes in viewport width. The default spacing between items and groups is 16px, but this can be modified, if required. The following are some toolbar items and groups that come with special spacing considerations.
 
@@ -32,7 +32,7 @@ Toolbar items are individual components that can be placed inside of a toolbar. 
 
 A search filter is intended to be used with a filter group as shown below when you want to include a single search field together with one or more select filters. It includes an 8px spacer to the right of the item to enforce association with other filters. See the [Filters](design-guidelines/usage-and-behavior/filters) documentation for more information about using filters.
 
-<img src="./img/toolbar-multiple-filters.png" alt="toolbar with a search filter and filter group" width="1210" />
+<img src="./img/toolbar-multiple-filters.png" alt="toolbar with a search filter and filter group" />
 
 #### Icon button group
 <img src="./img/icon-button-group.png" alt="icon button group" width="303" />
@@ -63,7 +63,7 @@ A toggle group can be used when you want to collapse a set of items into an over
 ### Vertical dividers
 When you have a large toolbar containing many groups of items, use a vertical divider to further separate the groups visually.
 
-<img src="./img/toolbar-with-divider.png" alt="toolbar with divider" width="1211" />
+<img src="./img/toolbar-with-divider.png" alt="toolbar with divider" />
 
 ## Usage
 The PatternFly toolbar is designed to be very flexible and allow a variety of combinations of items and groups as outlined above. The following are some guidelines that should be followed in laying out your toolbar.
@@ -75,7 +75,7 @@ The PatternFly toolbar is designed to be very flexible and allow a variety of co
 
 ### Examples
 **Basic toolbar**
-<img src="./img/basic-toolbar-items.png"  alt="toolbar with standard items"  width="1210"/>
+<img src="./img/basic-toolbar-items.png"  alt="toolbar with standard items" />
 
 The basic toolbar is sufficient for most cases. The example above shows the toolbar with default spacing. It includes the following elements:
 1. **Bulk selector:** The bulk selector supports selection of multiple items in a list, table, or card grid. It is always the leftmost item.
@@ -84,17 +84,17 @@ The basic toolbar is sufficient for most cases. The example above shows the tool
 4. **Item count**: When a filter is applied, the item count will be updated to represent the filtered subset of items. For example, “10 of 17 items.” The item count should be the right-most element.
 
 **Toolbar with pagination**
-<img src="./img/basic-toolbar-pagination.png"  alt="basic toolbar with pagination"  width="1210"/>
+<img src="./img/basic-toolbar-pagination.png"  alt="basic toolbar with pagination" />
 
 When pagination is used, the pagination component replaces the item count. It should be the right-most element. Here, the toolbar is shown with both full and compact pagination options. Compact pagination consumes less horizontal space and is the recommended choice unless your application requires more precise control over paging options (like the ability to navigate to a specific page).
 
 **Toolbar with an icon group**
-<img src="./img/basic-toolbar-icons.png"  alt="basic toolbar with an icon group"  width="1210"/>
+<img src="./img/basic-toolbar-icons.png"  alt="basic toolbar with an icon group" />
 
 To save space, you may represent some actions as icons. Use an icon group to provide the proper spacing between icons. Here, sort and export actions are represented as icons. The icon group should always be placed after the filters and before any global actions represented by buttons, if they exist.
 
 **Custom toolbar**
-<img src="./img/custom-toolbar.png"  alt="custom toolbar layout"  width="1210"/>
+<img src="./img/custom-toolbar.png"  alt="custom toolbar layout" />
 
 The Toolbar component is extremely flexible and you can create custom toolbar layouts by working with items, groups, and spacers. Here, a custom toolbar with three labeled filters is created by paring a text label and a Select component. Items are spaced by 16px by default but here the spacing to the right of each Select filter has been modified to 24px to help better group each filter with its related label.
 
@@ -119,6 +119,6 @@ The toolbar adapts to smaller viewport sizes by collapsing or hiding elements th
 
 The following is an example of a complex toolbar optimized for mobile.
 
-<img src="./img/toolbar-filters-mobile.png"  alt="toolbar with filters and actions hidden on mobile"  width="1308"/>
+<img src="./img/toolbar-filters-mobile.png"  alt="toolbar with filters and actions hidden on mobile" />
 
 Here, the search filter and filter group containing three drop-down filters are placed in a toggle group that collapsed when the screen shrinks to mobile size. The two action buttons are part of an overflow menu that collapses to a single kabob menu. The bulk selector and sort icon button are implemented as toolbar items that remain visible at all breakpoints.

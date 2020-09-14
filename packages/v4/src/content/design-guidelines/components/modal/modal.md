@@ -9,7 +9,7 @@ related: ['Button']
 Use modal dialogs to load and display important information without navigating away from the current page.
 
 ## Primary elements
-<img src="./img/modal.png" alt="Modal" width="756"/>
+<img src="./img/modal.png" alt="Modal" />
 
 1. **Backdrop**
 2. **Modal box**
@@ -20,12 +20,12 @@ Use modal dialogs to load and display important information without navigating a
 
 ### Spacing
 #### Compact
-<img src="./img/compact.png" alt="Compact" width="756"/> 
+<img src="./img/compact.png" alt="Compact" /> 
 
 The compact modal dialog uses a spacing of 24px. Use this for smaller modals that don’t contain much content.
 
 #### Large
-<img src="./img/large.png" alt="Large" width="756"/>
+<img src="./img/large.png" alt="Large" />
 
 The large modal dialog uses a spacing of 32px. Use this for larger modals that contain a lot of content (code previews, forms, tables...).
 
@@ -54,22 +54,22 @@ Depending on your design template, follow this format for confirmation dialogs:
 **Note:** Since confirmation dialogs disrupt user task flow, do not provide confirmation dialogs for actions that are easily reversed or insignificant.
 
 ##### Confirm a non-destructive action
-<img src="./img/confirm-non-destructive-action.png" alt="Confirm a non-destructive action" width="1100"/>
+<img src="./img/confirm-non-destructive-action.png" alt="Confirm a non-destructive action" />
 
 Provide buttons on confirmation dialogs that make it simple for users to understand and confirm their choices. When choosing button labels, use descriptive verbs that clearly indicate the consequence of a selection, like Delete, Save, or Create. Avoid vague labels like OK or Done.
 
 Ambiguous title and button labels make it more difficult for the user to understand their options and make a decision. Descriptive title and button labels make it easy for the user to scan the content and make a decision quickly.
 
 ##### Confirm a destructive action
-<img src="./img/confirm-destructive-action.png" alt="Confirm a destructive action" width="1100"/>
+<img src="./img/confirm-destructive-action.png" alt="Confirm a destructive action" />
 
 If an action is difficult or impossible to undo, a warning icon can be incorporated into the modal to add emphasis. If an action will seriously impact the system and cannot be undone, use a destructive style button. Otherwise, use a primary button.
 
 Sometimes it is necessary to require an additional confirmation with a destructive action. An example using a form field can be seen below. In order for the destructive action to become actionable, the user needs to type in a word or phrase to make the button active.
-<img src="./img/2-step-confirm-destructive-action.png" alt="2 step confirm a destructive action" width="1100"/>
+<img src="./img/2-step-confirm-destructive-action.png" alt="2 step confirm a destructive action" />
 
 #### Report errors
-<img src="./img/error-dialog.png" alt="Error dialog" width="1100"/>
+<img src="./img/error-dialog.png" alt="Error dialog" />
 
 Use error dialogs to inform users of problems interrupting normal or expected behavior.
 An error message should be actionable, human readable, and answer the following questions:
@@ -83,7 +83,7 @@ Never blame the user. Use passive voice where appropriate to avoid assigning bla
 * ✅ We didn’t recognize that password.
 
 #### Provide the result of a task or state of an application
-<img src="./img/passive-dialog.png" alt="Passive dialog" width="1100"/>
+<img src="./img/passive-dialog.png" alt="Passive dialog" />
 
 Use passive dialogs to communicate critical information like the status of an application or result of an action. The content of a passive dialog should be important, immediately relevant, and either lead to or require action on the user’s part.
 

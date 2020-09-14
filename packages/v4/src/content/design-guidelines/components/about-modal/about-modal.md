@@ -8,7 +8,7 @@ The **about modal** displays information about an application like product versi
 
 ## Primary elements
 
-<img src="./img/about-modal.png" alt="About modal" width="1500"/>
+<img src="./img/about-modal.png" alt="About modal" />
 
 1. **Backdrop:** Blurs any interface elements in the background to bring the modal content into focus
 2. **Modal**
@@ -29,4 +29,4 @@ Use the about modal to provide information about the product including the produ
 
 Provide access to the about modal using a help icon in the application masthead. Clicking the help icon will launch a dropdown menu. The help menu should always include an option labeled "About" that launches the about modal.
 
-<img src="./img/about-dropdown.png" alt="About modal dropdown" width="1500"/>
+<img src="./img/about-dropdown.png" alt="About modal dropdown" />

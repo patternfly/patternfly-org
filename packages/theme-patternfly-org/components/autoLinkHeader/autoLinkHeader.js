@@ -1,6 +1,7 @@
 import React from 'react';
 import { Title } from '@patternfly/react-core';
 import { LinkIcon } from '@patternfly/react-icons';
+import { Link } from '../link/link';
 import { slugger } from '../../helpers/slugger';
 import './autoLinkHeader.css';
 
@@ -31,9 +32,9 @@ export const AutoLinkHeader = ({
       headingLevel={headingLevel || size}
       className={`ws-heading ${className}`}
     >
-      <a href={`#${slug}`} className="ws-heading-anchor" tabIndex="-1" aria-hidden>
+      <Link href={`#${slug}`} className="ws-heading-anchor" tabIndex="-1" aria-hidden>
         <LinkIcon className="ws-heading-anchor-icon" style={{ verticalAlign: 'middle' }} />
-      </a>
+      </Link>
       {children} {metaText}
     </Title>
   )
