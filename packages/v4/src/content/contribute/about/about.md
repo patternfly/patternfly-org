@@ -3,7 +3,12 @@ id: About
 section: contribute
 ---
 
-The PatternFly open source community depends on contributions to help our design system grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new design patterns and ideas, help identify bugs in code, and more. With your help, we can stay on top of the latest and greatest implementation solutions. Continue reading to learn how you can start contributing today.
+The PatternFly open source community depends on contributions to help our design system grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new design patterns and ideas, help identify bugs in code, and more. With your help, we can stay on top of the latest and greatest implementation solutions.  
+
+PatternFly has a few repos you can contribute to: 
+- [patternfly](https://github.com/patternfly/patternfly) and [patternfly-react](https://github.com/patternfly/patternfly-react): Main repos for code contributions 
+- [patternfly-design](https://github.com/patternfly/patternfly-design): Main repo for design contributions 
+- [patternfly.org](https://github.com/patternfly/patternfly-org): Main repo for PatternFly website content and documentation contributions
 
 ## Process
 The following is an overview of the contribution process. As a contributor, you are not expected to complete all of these stages. We appreciate your contribution at whichever step you decide to begin with.

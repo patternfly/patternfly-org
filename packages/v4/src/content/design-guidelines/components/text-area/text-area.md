@@ -2,6 +2,5 @@
 id: Text area
 section: components
 ---
-
-We’re working on some guidelines for this component.
-If you have any questions in the meantime, feel free to [get in touch with us.](/get-in-touch)
+The **text area** component is used for entering a paragraph of text that is longer than one line.
+Text areas are commonly used in [forms](/components/form).
