@@ -21,7 +21,7 @@ Use a progress bar to visually indicate an extended operation that needs to be c
 Without a progress bar marking their progress towards completion a user could become lost about how much effort or time it will take to complete a given process. Progress bars solve the problem of helping users understand how much of a process has been completed.
 
 ### When to use
-![progress-bar](./img/progress_bar_blue_animated.gif)
+<img src="./img/progress_bar_blue_animated.gif" width="500" height="300" />
 
 **Determinate progress bar**
 
