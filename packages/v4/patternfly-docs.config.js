@@ -9,6 +9,7 @@ module.exports = {
   hasGdprBanner: true,
   hasFooter: true,
   hasVersionSwitcher: true,
+  hasDesignGuidelines: true,
   sideNavItems: [
     { section: 'get-started' },
     { section: 'guidelines' },

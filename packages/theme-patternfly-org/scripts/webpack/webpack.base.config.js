@@ -5,12 +5,24 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = (_env, argv) => {
-  const isProd = argv.mode === 'production';
+  const {
+    pathPrefix = '',
+    mode,
+    algolia = {},
+    hasGdprBanner = false,
+    hasFooter = false,
+    hasVersionSwitcher = false,
+    hasDesignGuidelines = false,
+    sideNavItems = [],
+    topNavItems = [],
+  } = argv;
+
+  const isProd = mode === 'production';
 
   return {
     entry: path.resolve(__dirname, '../../app.js'),
     output: {
-      publicPath: isProd ? `${argv.pathPrefix}/` : '/',
+      publicPath: isProd ? `${pathPrefix}/` : '/',
       pathinfo: false, // https://webpack.js.org/guides/build-performance/#output-without-path-info,
       hashDigestLength: 8
     },
@@ -96,18 +108,27 @@ module.exports = (_env, argv) => {
         'client-styles': path.resolve(process.cwd(), 'patternfly-docs.css.js'),
         './routes-client': path.resolve(process.cwd(), 'patternfly-docs.routes.js'),
         './routes-generated': path.resolve(process.cwd(), 'src/generated/index.js'),
-      }
+      },
+      modules: [
+        'node_modules',
+        ...module.paths,
+      ]
+    },
+    // Use this module's node_modules first (for use in Core/React workspaces)
+    resolveLoader: {
+      modules: module.paths,
     },
     plugins: [
       new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(argv.mode),
-        'process.env.pathPrefix': JSON.stringify(isProd ? argv.pathPrefix : ''),
-        'process.env.algolia': JSON.stringify(argv.algolia),
-        'process.env.hasGdprBanner': JSON.stringify(argv.hasGdprBanner),
-        'process.env.hasFooter': JSON.stringify(argv.hasFooter),
-        'process.env.hasVersionSwitcher': JSON.stringify(argv.hasVersionSwitcher),
-        'process.env.sideNavItems': JSON.stringify(argv.sideNavItems),
-        'process.env.topNavItems': JSON.stringify(argv.topNavItems),
+        'process.env.NODE_ENV': JSON.stringify(mode),
+        'process.env.pathPrefix': JSON.stringify(isProd ? pathPrefix : ''),
+        'process.env.algolia': JSON.stringify(algolia),
+        'process.env.hasGdprBanner': JSON.stringify(hasGdprBanner),
+        'process.env.hasFooter': JSON.stringify(hasFooter),
+        'process.env.hasVersionSwitcher': JSON.stringify(hasVersionSwitcher),
+        'process.env.hasDesignGuidelines': JSON.stringify(hasDesignGuidelines),
+        'process.env.sideNavItems': JSON.stringify(sideNavItems),
+        'process.env.topNavItems': JSON.stringify(topNavItems),
         'process.env.prnum': JSON.stringify(process.env.CIRCLE_PR_NUMBER || process.env.PR_NUMBER || ''),
         'process.env.prurl': JSON.stringify(process.env.CIRCLE_PULL_REQUEST || ''),
       }),

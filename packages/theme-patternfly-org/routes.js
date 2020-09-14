@@ -88,7 +88,8 @@ Object.entries(groupedRoutes)
       // Add design guidelines if doesn't exist
       if (
         ['components', 'charts', 'layouts', 'demos'].includes(section) &&
-        !pageData.sources.map(({ source }) => source).includes('design-guidelines')
+        !pageData.sources.map(({ source }) => source).includes('design-guidelines') &&
+        process.env.hasDesignGuidelines
       ) {
         pageData.sources.push(getDefaultDesignGuidelines(pageData));
       }
