@@ -1,19 +1,26 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { googleAnalyticsID, algolia } = require(`${process.cwd()}/patternfly-docs.config`);
 const { prerender } = require('./prerender');
 const { getTitle } = require('../../helpers/getTitle');
 
 const templateDir = path.join(__dirname, '../../templates');
 
-async function getHtmlWebpackPlugin(url, isProd, title, isFullscreen) {
+async function getHtmlWebpackPlugin({
+  isProd,
+  googleAnalyticsID,
+  algolia,
+  pathPrefix = '',
+  url,
+  title,
+  isFullscreen
+}) {
   return new HtmlWebpackPlugin({
     template: path.join(templateDir, 'html.ejs'),
     filename: `${url}/index.html`.replace(/^\/+/, ''),
     templateParameters: {
       title: getTitle(title),
       // Don't prerender fullscreen pages (expensive!)
-      prerendering: (isProd && !isFullscreen) ? await prerender(url) : 'Loading...',
+      prerendering: (isProd && !isFullscreen) ? await prerender(url, pathPrefix) : 'Loading...',
       // Don't use GA in dev mode
       googleAnalyticsID: isProd ? googleAnalyticsID : false,
       algolia
@@ -24,8 +31,9 @@ async function getHtmlWebpackPlugin(url, isProd, title, isFullscreen) {
   })
 }
 
-async function getHtmlWebpackPlugins(isProd) {
-  const { routes, fullscreenRoutes } = require(path.join(process.cwd(), 'src/routes'));
+async function getHtmlWebpackPlugins(options) {
+  const { isProd } = options;
+  const { routes, fullscreenRoutes } = require('../../routes');
   const res = [
     // Sitemap
     new HtmlWebpackPlugin({
@@ -41,7 +49,7 @@ async function getHtmlWebpackPlugins(isProd) {
 
   if (!isProd) {
     // Only render the index page in dev mode and rely on historyApiFallback
-    res.push(await getHtmlWebpackPlugin('', isProd, 'Dev', false));
+    res.push(await getHtmlWebpackPlugin({ isProd, url: '', pathPrefix: '', title: 'Dev' }));
     return res;
   }
 
@@ -55,7 +63,7 @@ async function getHtmlWebpackPlugins(isProd) {
     .flat();
 
   for (const [url, { title, isFullscreen }] of titledRoutes) {
-    res.push(await getHtmlWebpackPlugin(url, isProd, title, isFullscreen));
+    res.push(await getHtmlWebpackPlugin({ url, title, isFullscreen, ...options }));
   }
 
   console.log('done prerendering');

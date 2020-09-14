@@ -6,8 +6,6 @@ related: ['About modal', 'Backdrop', 'Background image', 'Button']
 
 The **about modal** displays information about an application like product version number(s), as well as any appropriate legal text.
 
-The about modal stores the version number(s) of the application as well as any appropriate legal text.
-
 ## Primary elements
 
 <img src="./img/about-modal.png" alt="About modal" width="1500"/>

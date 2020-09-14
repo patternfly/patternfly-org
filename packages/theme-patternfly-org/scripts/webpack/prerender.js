@@ -5,11 +5,10 @@ const ssrPrepass = require('react-ssr-prepass');
 // react, react-dom, and @reach/router are all EXCLUDED from the ssr-bundle.js
 // The versions imported above are used instead, which allows us to use <ServerLocation>
 // const ssrPrepass = require('react-ssr-prepass');
-const { pathPrefix } = require(`${process.cwd()}/patternfly-docs.config`);
 
 // This function is effectively synchronous because it mutates global.setTimeout
 // Only allow one copy at a time to run
-async function prerender(url) {
+async function prerender(url, pathPrefix) {
   url = `${pathPrefix}${url}`;
   global.history = {};
   global.location = { pathname: url };

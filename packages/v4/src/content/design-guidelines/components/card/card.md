@@ -3,9 +3,7 @@ id: Card
 section: components
 ---
 
-A **card** is a flexible element for containing any kind of content. Cards are used on dashboards, in data displays (e.g. Card View), or for positioning content on a page. 
-
-A **card** is a square or rectangular container of related information. Cards symbolize units of information, and each one acts as an entry point for users to access more details. For example, in dashboards and catalog views, cards function as a preview of a detailed page.  
+A **card** is a square or rectangular container that can contain any kind of content. Cards symbolize units of information, and each one acts as an entry point for users to access more details. For example, in dashboards and catalog views, cards function as a preview of a detailed page. Cards may also be used in data displays (e.g. Card View), or for positioning content on a page.  
 
 A card usually consists of  3 parts: 
 

@@ -3,9 +3,7 @@ id: Empty state
 section: components
 ---
 
-Use an **empty state** component when there is no data or other information to show. It can also be used to communicate completion or other status at the end of a sequential task. An empty state may include a call to action to guide the user on what to do next.
-
-Empty states are UI screens that don't have any content on them, but content will populate once a user takes a certain action. Use an empty state to educate users and guide them with positive and proactive next steps in any situation where there is no data or information to display.
+Use an **empty state** component when there is no data or other information to show on the screen. Empty states can be used to communicate completion or other status at the end of a sequential task, and may include a call to action to guide the user on what to do next.
 
 PatternFly offers three empty state variations; a small empty state, a large empty state, and an extra large empty state. 
 * The small empty state should be used inside tables, wizards, modals, or cards, where the empty state is "inside a container," as seen in the [no data to show](#no-data-to-show) use case example. 

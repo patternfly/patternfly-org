@@ -4,9 +4,7 @@ section: components
 related: ['Alert', 'Alert group']
 ---
 
-**Alerts** are used to notify the user about a change in status or other event.
-
-Alerts are used when the system wants to notify the user about some status or other event. These guidelines talk about how to properly use different types of alerts in your designs.
+**Alerts** are used to notify the user about a change in status or other event. These guidelines talk about how to properly use different types of alerts in your designs.
 
 ## Elements
 ### Alert
@@ -93,7 +91,7 @@ Do not use a toast alert when an event requires immediate action or for synchron
 ### Stacking multiple alerts
 Multiple alerts will stack. The most recent alert should appear at the top and others will push down. When alerts are deleted, any space above will be filled by pushing remaining alerts up in the stack order.
 
-An [Alert Group](documentation/react/components/alertgroup) component allows a set of alerts to be properly positioned and stacked as shown below.
+An [Alert Group](/components/alert-group) component allows a set of alerts to be properly positioned and stacked as shown below.
 
 ![alert group](./img/toast-notification-multiple.png)
 

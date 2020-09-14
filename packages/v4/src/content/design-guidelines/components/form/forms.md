@@ -23,8 +23,7 @@ related: [
 ---
 
 A **Form** is a group of elements used to collect information from a user.
-
-A form is a group of elements used to collect information from a user. Forms can appear in a variety of contexts, like inside a page, in a modal, or in a wizard, depending on the use case.  Some form examples include a log-in form, a registration form, a settings configuration form, or a survey.
+ Forms can appear in a variety of contexts, like inside a page, in a modal, or in a wizard, depending on the use case.  Some form examples include a log-in form, a registration form, a settings configuration form, or a survey.
 
 [View form demos](/components/form/html-demos)
 
@@ -66,16 +65,16 @@ PatternFly provides a variety of input components that enable a user to make a s
 
 
 #### Switch
-Use a switch to toggle between two different states.
+Use a [switch](/components/switch/design-guidelines) to toggle between two different states.
 
 #### Radio buttons
-Use radio buttons when users can only choose one option from a list of two or more mutually exclusive options. Selecting a different radio button will automatically deselect the previously selected option. If you have more than 5 options to present to the user, use a select list.
+Use [radio buttons](/components/radio/design-guidelines) when users can only choose one option from a list of two or more mutually exclusive options. Selecting a different radio button will automatically deselect the previously selected option. If you have more than 5 options to present to the user, use a select list.
 
 #### Checkboxes
-Use checkboxes to enable users to select any number of items from a list. The user could select all of the available options, some of them, or none. If you have more than 5 options to present to the user, use a select list.
+Use [checkboxes](/components/checkbox/design-guidelines) to enable users to select any number of items from a list. The user could select all of the available options, some of them, or none. If you have more than 5 options to present to the user, use a select list.
 
 #### Select lists
-Use a select list to enable users to select one or more options from a list of options. Select lists can be configured to enable users to select one option (single select) or multiple options (multi-select) depending on the use case. Use a select list when you have more than 5 options to present to a user.
+Use a [select list](/components/select/design-guidelines) to enable users to select one or more options from a list of options. Select lists can be configured to enable users to select one option (single select) or multiple options (multi-select) depending on the use case. Use a select list when you have more than 5 options to present to a user.
 
 Learn more about data input variations in the [data input design guidelines](/components/select/design-guidelines).
 
@@ -227,7 +226,7 @@ There should always be 24px spacing underneath every form input. If there is hel
 
 ### Buttons
 #### Placement
-Buttons to submit the form should always be placed to the bottom left of the form and be left-aligned with all the form fields. Buttons should be placed 16px apart, no matter where the form is placed. This includes when the form is inside a page, inside a wizard, or on a card. This solves for a number of issues outlined in the [Buttons documentation page](/components/buttons/design-guidelines#button-placement). 
+Buttons to submit the form should always be placed to the bottom left of the form and be left-aligned with all the form fields. Buttons should be placed 16px apart, no matter where the form is placed. This includes when the form is inside a page, inside a wizard, or on a card. This solves for a number of issues outlined in the [Buttons documentation page](/components/button/design-guidelines#button-placement). 
 
 Buttons for other actions outside of submitting or cancelling the form may be placed elsewhere depending on your use case.
 
