@@ -150,15 +150,17 @@ function serializeElement(node, options) {
       res += ` thumbnail={${thumbnailImport}}`;
     }
   }
-  else if (type === 'img' && srcImport) {
-    res += ` src={${srcImport}.src}`;
-    if (!props.width) {
-      res += ` width={${srcImport}.width}`;
-      res += ` height={${srcImport}.height}`;
-    }
-    else {
-      props.width = props.width.replace('px', '');
-      res += ` height={${srcImport}.height * ${props.width} / ${srcImport}.width}`;
+  else if (type === 'img') {
+    res += ` src={${srcImport}}`;
+    if (/\.(png|jpe?g|webp)$/.test(srcImport)) {
+      if (!props.width) {
+        res += ` width={${srcImport}.width}`;
+        res += ` height={${srcImport}.height}`;
+      }
+      else {
+        props.width = props.width.replace('px', '');
+        res += ` height={${srcImport}.height * ${props.width} / ${srcImport}.width}`;
+      }
     }
   }
   if (spread) {
