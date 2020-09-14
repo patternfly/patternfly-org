@@ -7,7 +7,14 @@ const CopyPlugin = require('copy-webpack-plugin');
 const baseConfig = require('./webpack.base.config');
 const { getHtmlWebpackPlugins } = require('./getHtmlWebpackPlugins');
 
-const pfDir = path.dirname(require.resolve('@patternfly/patternfly/package.json'));
+let pfDir;
+try {
+  pfDir = path.dirname(require.resolve('@patternfly/patternfly/package.json'));
+}
+catch {
+  // Inside core workspace
+  pfDir = path.join(process.cwd(), 'dist/assets');
+}
 // Don't include PatternFly styles twice
 const reactCSSRegex = /(react-[\w-]+\/dist|react-styles\/css)\/.*\.css$/;
 
