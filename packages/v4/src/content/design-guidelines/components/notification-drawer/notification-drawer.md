@@ -36,26 +36,27 @@ If you want to sort notifications by category, collapsible headers may be used t
 
 <img src="./img/Complex-Notification-Drawer.png" alt="grouped notification drawer" width="724"/>
 
-**1. Notification group:** Notifications can be grouped by category. You may have any number of categories, however more than 3-4 categories is not recommended. Each category header will have a name. Clicking on the header will expand the category (and collapse the current category).
+1. **Notification group:** Notifications can be grouped by category. You may have any number of categories, however more than 3-4 categories is not recommended. Each category header will have a name. Clicking on the header will expand the category (and collapse the current category).
 
-**2. Unread badge (optional):** A badge will report the number of unread notifications in each category. If there are no unread notifications, the badge is hidden.
+2. **Unread badge (optional):** A badge will report the number of unread notifications in each category. If there are no unread notifications, the badge is hidden.
 
-**3. Global actions (optional):** For the grouped drawer, the global actions menu should further clarify what content the actions apply to. Standard menu items include (the menu may be customized according to the needs of your application):
+3. **Global actions (optional):** For the grouped drawer, the global actions menu should further clarify what content the actions apply to. Standard menu items include (the menu may be customized according to the needs of your application):
 
-- **Mark all read** - marks all notifications in the drawer as read.
-- **Clear all** - clears all notifications from the drawer.
-- **Mark current category read** - marks all notifications in the currently opened category as read.
-- **Clear current category** - clears all notifications from the currently opened category.
-- **Unclear last** - unclears that last cleared or set of cleared notifications (if supported).
-- **Settings** - opens notification settings.
+  - **Mark all read** - marks all notifications in the drawer as read.
+  - **Clear all** - clears all notifications from the drawer.
+  - **Mark current category read** - marks all notifications in the currently opened category as read.
+  - **Clear current category** - clears all notifications from the currently opened category.
+  - **Unclear last** - unclears that last cleared or set of cleared notifications (if supported).
+  - **Settings** - opens notification settings.
 
 ### Placement in a page
 
 <img src="./img/Notification-drawer-in-page.png" alt="notification drawer placement" width="825"/>
 
-**1. Notification badge:** Whenever the notification drawer is used, a [Notification badge](/components/notification-badge) must be placed in the masthead. Clicking on the badge will toggle the drawer open or closed. Depending on options supported in the application, the badge can also be used to display the number of notifications in the drawer and whether there are unread or critical notifications needing attention. See the [Notification badge](components/notification-badge) usage guidelines for more information about these options.
 
-**2. Drawer:** The notification drawer lives in slide-out panel that overlays page content and is anchored to the right-hand edge of the viewport.
+1. **Notification badge:** Whenever the notification drawer is used, a [Notification badge](/components/notification-badge) must be placed in the masthead. Clicking on the badge will toggle the drawer open or closed. Depending on options supported in the application, the badge can also be used to display the number of notifications in the drawer and whether there are unread or critical notifications needing attention. See the [Notification badge](/components/notification-badge) usage guidelines for more information about these options.
+
+2. **Drawer:** The notification drawer lives in slide-out panel that overlays page content and is anchored to the right-hand edge of the viewport.
 
 
 ## Usage
