@@ -28,14 +28,14 @@ To maintain consistency, icons have been mapped to specific empty state scenario
 Here is when you should use each icon:
 
 |       |Type |Color |Icon |Usage |
-|-----------|---------|--------|--------------|------------------|
-| <img src="./img/rocket.png" alt="rocket icon" width="54"/> |First use or get started |Grey (#8A8D90) |fa-rocket | Use in a get started  page or in situations where it is the user’s initial interaction with your platform/application. You may decide to replace this icon with something else if you already have an application specific graphic or illustration to use here
-| <img src="./img/search.png" alt="search icon" width="54"/> |Search |Grey (#8A8D90)|fa-search |Use when there is no data to show
-| <img src="./img/config.png" alt="configuration icon" width="54"/> |Configuration |Grey (#8A8D90) |fa-wrench |Use when configuration is required or there is a configuration issue
-| <img src="./img/lock.png" alt="lock icon" width="54"/> |No access |Grey (#8A8D90) |fa-lock | Use when the user is not entitled or the user role does not have access
-| <img src="./img/error.png" alt="error icon" width="54"/> |Error  |Red (#C9190B) |fa-exclamation-circle |Use when there is an inability to get data, there is backend failure, or an error has occurred
-| <img src="./img/success.png" alt="success icon" width="54"/> |Success |Green (#486b00) |fa-check-circle |Use to indicate that a task or process has been completed successfully
-| <img src="./img/add.png" alt="add icon" width="54"/> |Addition or creation |Grey (#8A8D90) |fa-plus-circle |Use when something needs to be added or created
+|---------------|------|-----|-----------|------------|
+| <img src="./img/rocket.png" alt="rocket icon" width="200"/> |First use or get started |Grey (#8A8D90) |fa-rocket | Use in a get started  page or in situations where it is the user’s initial interaction with your platform/application. You may decide to replace this icon with something else if you already have an application specific graphic or illustration to use here
+| <img src="./img/search.png" alt="search icon" width="200"/> |Search |Grey (#8A8D90)|fa-search |Use when there is no data to show
+| <img src="./img/config.png" alt="configuration icon" width="200"/> |Configuration |Grey (#8A8D90) |fa-wrench |Use when configuration is required or there is a configuration issue
+| <img src="./img/lock.png" alt="lock icon" width="200"/> |No access |Grey (#8A8D90) |fa-lock | Use when the user is not entitled or the user role does not have access
+| <img src="./img/error.png" alt="error icon" width="200"/> |Error  |Red (#C9190B) |fa-exclamation-circle |Use when there is an inability to get data, there is backend failure, or an error has occurred
+| <img src="./img/success.png" alt="success icon" width="200"/> |Success |Green (#486b00) |fa-check-circle |Use to indicate that a task or process has been completed successfully
+| <img src="./img/add.png" alt="add icon" width="200"/> |Addition or creation |Grey (#8A8D90) |fa-plus-circle |Use when something needs to be added or created
 
 
 You should always try to use an icon in your empty state, unless there is an empty state where an icon does not match any of the situations mentioned above, or if an icon does not fit into the layout.
