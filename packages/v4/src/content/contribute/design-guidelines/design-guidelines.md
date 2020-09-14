@@ -34,7 +34,7 @@ Before you can contribute content, you’ll need to set up your code editor and 
 4. Once you created your account and logged in, go to the [patternfly-org GitHub repo](https://www.github.com/patternfly/patternfly-org).  
 5. In the top right-corner under your GitHub icon, click **Fork**. 
 
-<img src="./image-1-fork.png"  alt="fork button in PatternFly-org repo"  width="1600"/>    
+<img src="./image-1-fork.png" alt="fork button in PatternFly-org repo" />    
 
 6. Add a folder on your computer to store the repo content. For example, you can create a _GitHub_repos_ folder in Documents to store the patternfly-org repo content. 
 
@@ -127,27 +127,27 @@ To ensure that imagery is consistent and maintainable, create all your image ass
 
     - **High-fidelity mockups** are used to show component details or in any situation where understanding design specifics is important. When describing a design, add numbered callouts to point to specific elements. If you’re only pointing to one element, use an arrow to point to the element instead.  
 
-        <img src="./image-2-high-fi.png"  alt="high-fi modal"  width="427"/> 
+        <img src="./image-2-high-fi.png" alt="high-fi modal" /> 
 
         When creating high-fidelity mockups, you should first look for existing examples in the [PatternFly template file](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89). You can create new examples as needed by using the components found in that file. Next, export those images so that they can be added to your corresponding document page in the [Design Doc Assets file](https://sketch.cloud/s/ggDwz). You can make callouts or other customizations there as needed. 
 
     - **Schematic mockups** convey placement of elements in a page. These are useful when the internal content is not important or relevant. Because they lack text and graphics, schematic mockups also scale well when placed in a document. The example below demonstrates how the positioning, rather than the content, of a toast alert is the focus. 
 
-     <img src="./image-3-schematic.png"  alt="schematic modal"  width="559"/> 
+     <img src="./image-3-schematic.png" alt="schematic modal" /> 
 
 When finished, your organization should look like this:
 
-<img src="./image-4-organization.png"  alt="Sketch artboards with corresponding images"  width="1600"/> 
+<img src="./image-4-organization.png" alt="Sketch artboards with corresponding images" /> 
 
 ## Step 8: Export and add image assets 
 
 To ensure high-quality images in the final documentation, export sketch images as PNG x2.  
 
-<img src="./image-5-export.png"  alt="Sketch export screen"  width="474"/> 
+<img src="./image-5-export.png" alt="Sketch export screen" /> 
 
 Exporting as PNG x2 ensures better image quality, but it also doubles physical size (WxL). To maintain good image quality while restricting image width to the original artboard width, add images to Markdown using the following HTML tag: 
 
-`<img src="./filename.png"  alt="accessibility text describing the image"  width="width of the sketch artboard"/>`  
+`<img src="./filename.png" alt="accessibility text describing the image" width="width of the sketch artboard ONLY IF LESS THAN 832px"/>`  
 
 The image should display in the visual designer of the Markdown tool you’re using. If the example does not display, there might be a problem with your code. Check that the element is correct and did not turn into normal quotations while copy/pasting. 
 
@@ -157,11 +157,11 @@ Once you’re finished making changes, stage them in Visual Studio Code:
 
 1. When you've completed all changes, click on the numbered bubble in the toolbar’s code icon.  
 
-<img src="./image-6-bubble.png"  alt="changes bubble in Microsoft Visual Studio Code"  width="96"/>  
+<img src="./image-6-bubble.png" alt="changes bubble in Microsoft Visual Studio Code" />  
 
 2. In the **Changes** tab, right-click and select **Stage all changes**. 
 
-<img src="./image-7-stage.png"  alt="stage changes option in Microsoft Visual Studio Code"  width="786"/> 
+<img src="./image-7-stage.png" alt="stage changes option in Microsoft Visual Studio Code" /> 
 
 3. Return to your Terminal application to commit the changes: 
 
@@ -177,11 +177,11 @@ On GitHub, create a pull request to submit your changes:
 
 1. Go to the patternfly-org repo pulls and click **Compare & pull request**.  
 
-<img src="./image-8-yellow-bar.png"  alt="Compare & pull request option in GitHub"  width="512"/> 
+<img src="./image-8-yellow-bar.png" alt="Compare & pull request option in GitHub" /> 
 
 2. On the resulting page, make sure that the arrow points towards the base repository and away from the head repository. 
 
-<img src="./image-9-pr.png"  alt="creating a pull request screen in GitHub"  width="1600"/> 
+<img src="./image-9-pr.png" alt="creating a pull request screen in GitHub" /> 
 
 3. Change your PR name and/or add a comment to your PR if you need to.
 4. Attach all of your image files to this PR so that they can be updated in the original document, merged back into the main branch, and uploaded back to Sketch Cloud for future access.
@@ -197,6 +197,6 @@ If your PR has merge conflicts in Github:
 5. Type `git rebase --continue` and press **Enter**.
 6. Type `git push --force origin <name of your PR>` and press **Enter**. 
 
-<img src="./image-10-conflicts.png"  alt="code conflicts in Microsoft Visual Studio Code"  width="512"/> 
+<img src="./image-10-conflicts.png" alt="code conflicts in Microsoft Visual Studio Code" /> 
 
 7. Upon merging the pull request, new content will become live on the website in the next release. 

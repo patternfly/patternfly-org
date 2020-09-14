@@ -17,12 +17,25 @@ export const Link = ({
   href,
   to,
   onMouseOver = () => {},
+  onClick,
   ...props
 }) => {
   let preloadPromise;
   let url = href || to || '';
-  if (url.includes('//') || url.startsWith("#")) {
-    return <a href={url} {...props} />;
+  if (url.startsWith('#') && !onClick) {
+    onClick = ev => {
+      ev.preventDefault(); // Don't use client-side routing
+      // Chrome does not jump until ALL network requests finish.
+      // We have to force it to...
+      const referencedElement = document.getElementById(url.replace('#', ''));
+      if (referencedElement) {
+        referencedElement.scrollIntoView();
+      }
+      window.location.hash = url;
+    };
+  }
+  if (url.includes('//') || url.startsWith('#')) {
+    return <a href={url} onClick={onClick} {...props} />;
   }
   else if (url.startsWith('/')) {
     url = `${process.env.pathPrefix}/${url.substr(1)}`;

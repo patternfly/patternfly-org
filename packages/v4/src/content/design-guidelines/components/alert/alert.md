@@ -10,7 +10,7 @@ related: ['Alert', 'Alert group']
 ### Alert
 Alerts are used to communicate status information to the user without blocking other actions through the user interface. There are two styles that can be applied to an alert depending on whether it is intended as an [inline](#inline-alerts) or [toast](#toast-alerts) alert. Toast alerts should always be dismissable, whereas inline alerts can be both dismissable and non-dismissable. Other elements are consistent between alert types.
 
-<img src="./img/alert-types.png" alt="Alert types" width="868"/>
+<img src="./img/alert-types.png" alt="Alert types" />
 
 1. **Status area:** Icon and color indicate the status or severity of the alert.
 2. **Alert title:** Include a short descriptive message. Long message text will wrap. Text color is coded to match alert type.
@@ -49,7 +49,7 @@ There are three ways that the system can communicate notifications to the users.
 |-----------|----------|-----------------|---------------|
 |[Inline alerts](#inline-alerts)|Use for notifications that are a direct response to a user action, like clicking the Submit button on a form, and can be informational or that identify actions required on that page before the user can continue. |Appear at the top of the content area and push other content down. | Persist until the user dismisses them or navigates away from the page.
 |[Toast alerts](#toast-alerts) |Use to present a system notification that should not interrupt the user’s current workflow. |Enter from the right edge of the screen and overlay content. |Remain until they time out, or the user dismisses them.
-|[Modal alerts](#modal-alerts) |Use when you must interrupt the task at hand until the user takes action. |Overlay the UI and prevent further user actions until the user closes the modal. |Remain until the user dismisses the modal.
+|Modal alerts |Use when you must interrupt the task at hand until the user takes action. |Overlay the UI and prevent further user actions until the user closes the modal. |Remain until the user dismisses the modal.
 
 ### Inline alerts
 Inline alerts are synchronous and appear as the result of a user action or upon loading a page. They insert themselves into the content area, push down other content, and will persist until the user closes them or navigates away from the page.
@@ -100,18 +100,18 @@ An [Alert Group](/components/alert-group) component allows a set of alerts to be
 #### Toast alert placement
 Toast alerts always stack in the upper right of a page.
 
-<img src="./img/Toast-alerts-desktop.png" alt="toast alerts in a page" width="990"/>
+<img src="./img/Toast-alerts-desktop.png" alt="toast alerts in a page" />
 
 
 #### Inline alert placement
 If an alert message applies globally to the content on a page, place the alert in the page header area just below the title.
 
-<img src="./img/Inline-alert-page-level.png" alt="global inline alert in a page" width="990"/>
+<img src="./img/Inline-alert-page-level.png" alt="global inline alert in a page" />
 
 
 But if the alert applies only to specific content, you might consider placing the alert inline with page content to call attention to the error.
 
-<img src="./img/Inline-alert-specific-context.png" alt="inline alert inline with content" width="990"/>
+<img src="./img/Inline-alert-specific-context.png" alt="inline alert inline with content" />
 
 ## Accessibility considerations
 
