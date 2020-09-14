@@ -9,6 +9,8 @@ const yaml = require('js-yaml'); // https://github.com/nodeca/js-yaml
 const { makeSlug } = require('../../helpers/slugger');
 const { extractTableOfContents } = require('../../helpers/extractTableOfContents');
 const { tsDocgen } = require('../tsDocgen');
+const { sync } = require('glob');
+const chokidar = require('chokidar');
 
 const outputBase = path.join(process.cwd(), `src/generated`);
 const tsDocs = {};
@@ -193,38 +195,47 @@ function toReactComponent(mdFilePath, source) {
   };
 }
 
+function sourcePropsFile(file) {
+  tsDocgen(file)
+    .filter(({ hide }) => !hide)
+    .forEach(({ name, description, props }) => {
+      tsDocs[name] = { name, description, props };
+    });
+}
+
+function sourceMDFile(file, source) {
+  if (path.basename(file).startsWith('_')) {
+    return;
+  }
+  const { jsx, pageData, outPath } = toReactComponent(file, source);
+
+  if (jsx) {
+    fs.outputFileSync(outPath, jsx);
+    routes[pageData.slug] = {
+      id: pageData.id,
+      title: pageData.title || pageData.id,
+      toc: pageData.toc || [],
+      ...(pageData.examples && { examples: pageData.examples }),
+      ...(pageData.fullscreenExamples && { fullscreenExamples: pageData.fullscreenExamples }),
+      section: pageData.section,
+      source: pageData.source,
+    };
+  }
+}
+
+const globs = {
+  props: [],
+  md: [],
+};
+
 module.exports = {
-  sourceProps(files) {
-    files
-      .map(tsDocgen)
-      .flat()
-      .filter(({ hide }) => !hide)
-      .forEach(({ name, description, props }) => {
-        tsDocs[name] = { name, description, props };
-      });
+  sourceProps(glob, ignore) {
+    globs.props.push({ glob, ignore });
+    sync(glob, { ignore }).forEach(sourcePropsFile);
   },
-  sourceMD(files, source) {
-    if (!Array.isArray(files)) {
-      files = [files];
-    }
-    files
-      .filter(file => !path.basename(file).startsWith('_'))
-      .forEach(file => {
-        const { jsx, pageData, outPath } = toReactComponent(file, source);
-    
-        if (jsx) {
-          fs.outputFileSync(outPath, jsx);
-          routes[pageData.slug] = {
-            id: pageData.id,
-            title: pageData.title || pageData.id,
-            toc: pageData.toc || [],
-            ...(pageData.examples && { examples: pageData.examples }),
-            ...(pageData.fullscreenExamples && { fullscreenExamples: pageData.fullscreenExamples }),
-            section: pageData.section,
-            source: pageData.source,
-          };
-        }
-      });
+  sourceMD(glob, source, ignore) {
+    globs.md.push({ glob, source, ignore });
+    sync(glob, { ignore }).forEach(file => sourceMDFile(file, source));
   },
   writeIndex() {
     const stringifyRoute = ([route, pageData]) => `'${route}': {\n    ${Object.entries(pageData)
@@ -236,5 +247,20 @@ module.exports = {
         .map(stringifyRoute)
         .join(',\n  ')}\n};`;
     fs.outputFileSync(path.join(outputBase, 'index.js'), indexContent);
+  },
+  watchMD() {
+    globs.props.forEach(({ glob, ignore }) => {
+      const mdWatcher = chokidar.watch(glob, { ignored: ignore, ignoreInitial: true });
+      mdWatcher.on('add', sourcePropsFile);
+      mdWatcher.on('change', sourcePropsFile);
+    });
+    globs.md.forEach(({ glob, source, ignore }) => {
+      const propWatcher = chokidar.watch(glob, { ignored: ignore, ignoreInitial: true });
+      propWatcher.on('add', file => {
+        sourceMDFile(file, source);
+        this.writeIndex();
+      });
+      propWatcher.on('change', file => sourceMDFile(file, source));
+    });
   }
 };

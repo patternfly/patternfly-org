@@ -14,7 +14,7 @@ Use a **popover** to display content in a new window that overlays the current p
 
 Popovers provide helpful contextual information at the moment users need it.
 
-<img src="./img/popovers-1.png" alt="Example of popover in a form" width="990"/>
+<img src="./img/popovers-1.png" alt="Example of popover in a form" />
 
 Use popovers to anticipate and answer questions for the user, help explain unfamiliar terms, or provide context around a task. You may also link to further information inside a popover.
 
@@ -26,7 +26,7 @@ You may also use popovers with link text. For example, when there is no obvious 
 
 Popover text should adopt link button styling and always be preceded by a question-circle icon, which should be blue, following the link button styling. Clicking on the link text should trigger a popover that provides an answer to the question posed in the hint text.
 
-<img src="./img/popovers-2.png" alt="Popover link text in UI"  width="990"/>
+<img src="./img/popovers-2.png" alt="Popover link text in UI" />
 
 
 Popovers are triggered by a click and dismissed in one of the following ways:
@@ -53,7 +53,7 @@ Both tooltips and popovers allow users to get more information in context. Howev
 * Short descriptions of an item or to identify an item, like an icon button
 * Content that is no longer than 1 or 2 lines
 
-<img src="./img/use-tooltips.png" alt="Examples of tooltip use"  width="990"/>
+<img src="./img/use-tooltips.png" alt="Examples of tooltip use" />
 
 **Use popovers for:**
 

@@ -16,16 +16,18 @@ function mdxAstToMdxHast() {
     function imageHandler(h, node) {
       const { src, ...rest } = node.props || {};
       const srcImport = `srcImport${srcCounter++}`;
+      const url = node.url || src;
       const props = {
         src: srcImport,
         alt: node.alt,
         title: node.title,
+        isResponsive: /\.(png|jpe?g|webp)$/.test(url),
         ...rest
       };
       // Add import statement
       srcImports.push({
         type: 'import',
-        value: `import ${srcImport} from '${(node.url || src).replace(/'/g, "\\'")}';`
+        value: `import ${srcImport} from '${url.replace(/'/g, "\\'")}';`
       });
     
       return h(node, 'img', props);
@@ -127,7 +129,7 @@ function mdxAstToMdxHast() {
           properties.title = node.title;
         }
   
-        if (href && href.startsWith('/')) {
+        if (href) {
           properties.to = href;
           
           return Object.assign({}, node, {

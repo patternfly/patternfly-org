@@ -5,7 +5,6 @@ const baseConfig = require('./webpack.base.config');
 
 const serverConfig = () => {
   return {
-    entry: './src/app.js',
     output: {
       path: path.resolve('.cache/ssr-build'), // Don't bloat `public` dir
 			libraryTarget: 'commonjs2' // Use module.exports

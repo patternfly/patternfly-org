@@ -1,3 +1,4 @@
+// This module is shared between NodeJS and babelled ES5
 module.exports = {
   pathPrefix: '/v4',
   googleAnalyticsID: 'UA-47523816-6',
@@ -20,6 +21,5 @@ module.exports = {
     { href: '/get-in-touch' },
   ],
   topNavItems: [],
-  prnum: null,
-  prurl: null,
+  port: 8003,
 };

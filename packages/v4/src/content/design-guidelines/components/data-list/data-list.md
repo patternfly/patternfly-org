@@ -29,12 +29,12 @@ PatterFly supports two main types of data lists:
 
 See [when to use compact vs. default spacing](#compact-vs-default-spacing) for more information about the styling and usage.
 
-<img src="./img/compact-and-default-list.png"  alt="Compact and default data list"  width="824"/> 
+<img src="./img/compact-and-default-list.png" alt="Compact and default data list" /> 
 
 ### Data list elements
 The elements mentioned below are similar for a data list with compact or default spacing. This example shows a data list with compact spacing. 
 
-<img src="./img/compact-list.png"  alt="Compact data list"  width="1188"/> 
+<img src="./img/compact-list.png" alt="Compact data list" /> 
 
 1. **[Toolbar](/components/toolbar/design-guidelines):** The toolbar sits above the list and contains controls for manipulating list data. Common actions include filtering, sorting, and pagination.
 2. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information.
@@ -55,7 +55,7 @@ Every data list can be extended with these functionalities:
 ### Actionable data list
 The actionable data list provides checkboxes that enable users to select one or more rows and act on that selection using options in the [toolbar](/components/toolbar/design-guidelines).
 
-<img src="./img/actionable-list.png"  alt="Actionable list"  width="1172"/> 
+<img src="./img/actionable-list.png" alt="Actionable list" /> 
 
 1. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information. 
 2. **Checkbox:** Enables a user to select a row.
@@ -72,7 +72,7 @@ The actionable data list provides checkboxes that enable users to select one or 
 ### Expandable data list
 The expandable list adds an expansion panel to every row to reveal more details about the item.
 
-<img src="./img/expandable-list.png"  alt="Expandable data list"  width="1190"/> 
+<img src="./img/expandable-list.png" alt="Expandable data list" /> 
 
 1. **Expansion caret:** Toggles the expansion open and closed.
 2. **Expansion panel:** A container that is revealed when the expansion is open. It can accept any supported layout to present additional content to the user.
@@ -90,7 +90,6 @@ Whether to use a data list with compact or default spacing is up to you and your
 A data list may sometimes need to be compact to make more rows visible at a time. The more rows you can see, the less you need to use [pagination](/components/pagination/design-guidelines). Compact spacing is recommended for data with a simple structure. See an example below. 
 
 **Use compact spacing when:**
-
 * You need to show as much data as possible on one page.
 * You need to show data in a small space. For example in modal or wizard.
 * You need to minimize paging.

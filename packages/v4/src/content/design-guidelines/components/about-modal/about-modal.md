@@ -6,11 +6,9 @@ related: ['About modal', 'Backdrop', 'Background image', 'Button']
 
 The **about modal** displays information about an application like product version number(s), as well as any appropriate legal text.
 
-The about modal stores the version number(s) of the application as well as any appropriate legal text.
-
 ## Primary elements
 
-<img src="./img/about-modal.png" alt="About modal" width="1500"/>
+<img src="./img/about-modal.png" alt="About modal" />
 
 1. **Backdrop:** Blurs any interface elements in the background to bring the modal content into focus
 2. **Modal**
@@ -21,7 +19,7 @@ The about modal stores the version number(s) of the application as well as any a
     * When version and build information are both shown: Version 6.3 (Build 5)
     * When version only: Version 6.3
     * When build only: Build 5
-7. **Modal image:** The modal image should be the same as the [background image](/documentation/react/components/backgroundimage) you use for your application.
+7. **Modal image:** The modal image should be the same as the [background image](/components/background-image) you use for your application.
 8. **Trademark and copyright information:** Optionally include legal text. Suggested format for copyright -  Copyright (c) 2018 Company
 
 ## Usage
@@ -31,4 +29,4 @@ Use the about modal to provide information about the product including the produ
 
 Provide access to the about modal using a help icon in the application masthead. Clicking the help icon will launch a dropdown menu. The help menu should always include an option labeled "About" that launches the about modal.
 
-<img src="./img/about-dropdown.png" alt="About modal dropdown" width="1500"/>
+<img src="./img/about-dropdown.png" alt="About modal dropdown" />

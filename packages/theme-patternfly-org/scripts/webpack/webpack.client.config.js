@@ -7,7 +7,14 @@ const CopyPlugin = require('copy-webpack-plugin');
 const baseConfig = require('./webpack.base.config');
 const { getHtmlWebpackPlugins } = require('./getHtmlWebpackPlugins');
 
-const pfDir = path.dirname(require.resolve('@patternfly/patternfly/package.json'));
+let pfDir;
+try {
+  pfDir = path.dirname(require.resolve('@patternfly/patternfly/package.json'));
+}
+catch {
+  // Inside core workspace
+  pfDir = path.join(process.cwd(), 'dist/assets');
+}
 // Don't include PatternFly styles twice
 const reactCSSRegex = /(react-[\w-]+\/dist|react-styles\/css)\/.*\.css$/;
 
@@ -15,14 +22,13 @@ const clientConfig = async (env, argv) => {
   const isProd = argv.mode === 'production';
 
   return {
-    entry: './src/app.js',
     output: {
       path: path.resolve('public'),
       filename: '[name].[hash].bundle.js'
     },
     devServer: {
       historyApiFallback: true,
-      port: 8003,
+      port: argv.port,
       clientLogLevel: 'info',
       stats: 'minimal'
     },
@@ -103,11 +109,7 @@ const clientConfig = async (env, argv) => {
           { from: path.join(pfDir, 'assets/fonts/'), to: 'assets/fonts/' }
         ]
       }),
-      ...await getHtmlWebpackPlugins(isProd), // Create an HTML page per route
-      ...(isProd
-        ? [
-        ]
-        : []),
+      ...await getHtmlWebpackPlugins({ isProd, ...argv }), // Create an HTML page per route
       ...(env === 'analyze'
         ? [
           new BundleAnalyzerPlugin({
