@@ -137,7 +137,7 @@ A required field should be indicated with an asterisk ( * ) to the right of the 
 
 If **all fields** on a form are required, do not use an asterisk for every field. Instead, provide a message at the top of the form stating, "All fields are required." If all fields are optional, the message should state, "All fields are optional."
 
-<img src="./img/required-optional-forms.png" alt="Example of two forms with indication at the top of whether all fields are required or all fields are optional" width="983"/>
+<img src="./img/required-optional-forms.png" alt="Example of two forms with indication at the top of whether all fields are required or all fields are optional" />
 
 
 ### User help
@@ -227,7 +227,7 @@ Buttons to submit the form should always be placed to the bottom left of the for
 
 Buttons for other actions outside of submitting or cancelling the form may be placed elsewhere depending on your use case.
 
-<img src="./img/button-placement.png" alt="Examples of right button placement and  wrong button placement" width="983"/>
+<img src="./img/button-placement.png" alt="Examples of right button placement and  wrong button placement" />
 
 #### Button accessibility
 There are times where multiple forms may live on the same page, which means that there may be multiple submit buttons. Although fully sighted individuals can easily identify which button submits which form, this is not the case for screen reader users who would not be able to identify between actions that are labeled the same. For that reason, it is critical to incorporate the name of the form, or some type of unique context, into the accessible name that's used for the submit button. For example, if there was a form titled "Create account,” the submit button could read "Submit form.” However, the accessible name could be "Submit create account form" so that the submit button can be distinguished from another in the same document. This will allow the user to have more context, helping fill the gaps for any element that may have multiple instances on the same page.
@@ -244,7 +244,7 @@ There are times where multiple forms may live on the same page, which means that
 #### Placement
 Forms in a page should be left and top aligned in the content area of a page. There should be a minimum of 24px padding around the contents of the form and the neighboring elements.
 
-<img src="./img/page-form.png" alt="Example of form in a page" width="990"/>
+<img src="./img/page-form.png" alt="Example of form in a page" />
 
 #### Width
 Generally, it is up to you to decide how wide you want your form to be, but here are some guidelines and recommendations:
@@ -259,7 +259,7 @@ Similar to an in-page form, forms in wizards should be aligned to the left of th
 
 Additionally, error validation for a form in a wizard’s page should occur when or by the time the user clicks the “Next” button. You should not wait until the user has completed the whole wizard before telling them where possible errors lie.
 
-<img src="./img/wizard-form.png" alt="Example of form in an in-page wizard" width="990"/>
+<img src="./img/wizard-form.png" alt="Example of form in an in-page wizard" />
 
 ### Forms in a modal
 Forms in a modal should be horizontally centered with the modal background and fill up the modal width, leaving 24px between the form contents, and the modal background edges.
@@ -277,9 +277,9 @@ If you do decide to group certain columns together, they should be organized so 
 * City, State, Zip code
 * Credit card number, Expiration date, Security code
 
-<img src="./img/multi-column-eg.png" alt="Example of correct and incorrect multi-column forms" width="990"/>
+<img src="./img/multi-column-eg.png" alt="Example of correct and incorrect multi-column forms" />
 
 
 You should never have multi-column forms that read like a book, where you finish the left side of the form first, then move on to the right side. The form itself should still be filled from top to button and should not have two unrelated fields on the same line.
 
-<img src="./img/multi-column-read.png" alt="Visual of how multi-column forms should be read and presented" width="990"/>
+<img src="./img/multi-column-read.png" alt="Visual of how multi-column forms should be read and presented" />

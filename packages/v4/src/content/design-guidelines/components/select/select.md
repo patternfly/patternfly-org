@@ -133,7 +133,7 @@ Both the checkbox select and multiple select lists allow users to select multipl
 * It is not crucial for the user to see their selections in the toggle itself.
 * Using a select list inside a toolbar. Toolbars have limited space, and the user will already be able to see their selection as chips below the filter itself.  
 
-<img src="./img/suggested-checkbox.png" alt="Example for using a checkbox select" width="990"/>
+<img src="./img/suggested-checkbox.png" alt="Example for using a checkbox select" />
 
 **Use multiple select when:**
 * Horizontal space is not limited

@@ -20,13 +20,13 @@ Avoid using a wizard for simple data entry tasks in which a basic form would suf
 Wizards can be modal or placed within the content area of a page.
 
 ### Modal wizards
-<img src="./img/modal-wizard.png" alt="Modal wizard" width="990"/>
+<img src="./img/modal-wizard.png" alt="Modal wizard" />
 
 
 The modal wizard lives in a modal dialog. If necessary, the default width and height of the modal can be overridden to increase that available content area. In most cases, the modal wizard is recommended as it will keep users focused on the task at hand. Users must either complete all of the steps of the wizard or cancel before navigating elsewhere within an application.
 
 ### In-page wizards
-<img src="./img/wizard-in-page.png" alt="In-page wizard" width="990"/>
+<img src="./img/wizard-in-page.png" alt="In-page wizard" />
 
 
 Wizards can also be added to the content area of a page. This will allow greater flexibility in navigating to other locations in your application while within a wizard flow, but it also places greater responsibility on the system to manage state.
@@ -35,7 +35,7 @@ Wizards can also be added to the content area of a page. This will allow greater
 Except where noted, modal and in-page wizards have the same elements and behaviors. For the sake of simplicity, all screens here show the modal wizard.
 
 ### Simple wizard
-<img src="./img/standard-wizard.png" alt="Simple wizard" width="990"/>
+<img src="./img/standard-wizard.png" alt="Simple wizard" />
 
 
 1. **Header (modal wizard only):** Modal wizards always have a header area that minimally contains the wizard title and a close button. The title should be action oriented and reflect the intended outcome of the wizard, e.g. "Create resource." You may optionally also include a description below the wizard title.
@@ -58,7 +58,7 @@ In a standard wizard the user moves through the wizard sequentially, a step at a
 ### Wizard with sub-steps
 Sub-steps can be added to the sidebar. Use sub-steps when there is a hierarchical relationship between a group of steps, if a primary step contains too much content to be displayed on one page, or when there is a set of optional settings that make sense to group together where the user need not visit each page.
 
-<img src="./img/wizard-with-substeps.png" alt="Wizard with substeps" width="990"/>
+<img src="./img/wizard-with-substeps.png" alt="Wizard with substeps" />
 
 
 1. **Sub-steps:** Sub-steps are always nested inside of a major step.
@@ -72,7 +72,7 @@ Sub-steps can be added to the sidebar. Use sub-steps when there is a hierarchica
 ### Review and completion
 The last step in a wizard should always be a Review step. This should include a summary of what the user has input so the user may confirm them before committing their changes.
 
-<img src="./img/review-screen.png" alt="Review screen" width="990"/>
+<img src="./img/review-screen.png" alt="Review screen" />
 
 
 1. **Review step**
@@ -80,7 +80,7 @@ The last step in a wizard should always be a Review step. This should include a 
 
 If it will take a long time (more than a few seconds) for changes to be applied, a progress screen is recommended. This can be constructed from a variation of the [empty state](/design-guidelines/usage-and-behavior/empty-state) pattern by embedding a progress bar and appropriate messaging within the body of the wizard.
 
-<img src="./img/progress-screen.png" alt="Progress screen" width="990"/>
+<img src="./img/progress-screen.png" alt="Progress screen" />
 
 
 1. **Progress message:** Include a progress bar with appropriate messaging using an empty state pattern.
@@ -90,7 +90,7 @@ Note that once changes have been committed, the steps sidebar is hidden and the 
 
 Once the changes initiated by the wizard are completed, a final confirmation screen should be displayed. Again, this can leverage an empty state pattern to present a success (or failure) message to users.
 
-<img src="./img/completion-screen.png" alt="Completion screen" width="990"/>
+<img src="./img/completion-screen.png" alt="Completion screen" />
 
 
 1. **Completion message:** Provide appropriate messaging to inform the user about the outcome of the wizard.
@@ -104,7 +104,7 @@ In some cases the result of a wizard is to dispatch a task to the background to 
 ### Mobile considerations
 When viewing a wizard on a mobile device, the steps sidebar will be hidden and collapse into a drop down menu panel as shown below.
 
-<img src="./img/mobile-wizard.png" alt="Mobile wizard" width="990"/>
+<img src="./img/mobile-wizard.png" alt="Mobile wizard" />
 
 
 ## Usage
@@ -112,7 +112,7 @@ When viewing a wizard on a mobile device, the steps sidebar will be hidden and c
 ### In-page wizard
 A wizard may be embedded in a page as shown below.
 
-<img src="./img/wizard-in-page.png" alt="In-page wizard" width="990"/>
+<img src="./img/wizard-in-page.png" alt="In-page wizard" />
 
 
 Note that when a wizard is embedded into a page, the wizard title and description are placed within the page header. The same standards that were defined for usage of the title and description for modal wizards should be applied here.
@@ -129,17 +129,17 @@ A progressive wizard takes the same form as the standard wizard or wizard with s
 
 Here is an example...
 
-<img src="./img/wizard-progressive-step1.png" alt="Wizard progressive step 1" width="990"/>
+<img src="./img/wizard-progressive-step1.png" alt="Wizard progressive step 1" />
 
 
 Step 1: The user is presented with a Get started screen where they can specify what they want to do.
 
-<img src="./img/wizard-progressive-step2-new.png" alt="Wizard progressive step 2" width="990"/>
+<img src="./img/wizard-progressive-step2-new.png" alt="Wizard progressive step 2" />
 
 
 Step 2: Based on their choice to create a new object, they are presented with a second set of options. But the remaining steps are still unknown.
 
-<img src="./img/wizard-progressive-step3-new.png" alt="Wizard progressive step 3" width="990"/>
+<img src="./img/wizard-progressive-step3-new.png" alt="Wizard progressive step 3" />
 
 
 Step 3: After the choose “Quick create” and click Next, they can now be presented with a full set of steps. It should be possible to revisit either of the first two steps making different choices and steps shown should update accordingly.

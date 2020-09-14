@@ -127,7 +127,7 @@ function mdxAstToMdxHast() {
           properties.title = node.title;
         }
   
-        if (href && href.startsWith('/')) {
+        if (href) {
           properties.to = href;
           
           return Object.assign({}, node, {

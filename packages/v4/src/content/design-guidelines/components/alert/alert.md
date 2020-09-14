@@ -10,7 +10,7 @@ related: ['Alert', 'Alert group']
 ### Alert
 Alerts are used to communicate status information to the user without blocking other actions through the user interface. There are two styles that can be applied to an alert depending on whether it is intended as an [inline](#inline-alerts) or [toast](#toast-alerts) alert. Toast alerts should always be dismissable, whereas inline alerts can be both dismissable and non-dismissable. Other elements are consistent between alert types.
 
-<img src="./img/alert-types.png" alt="Alert types" width="868"/>
+<img src="./img/alert-types.png" alt="Alert types" />
 
 1. **Status area:** Icon and color indicate the status or severity of the alert.
 2. **Alert title:** Include a short descriptive message. Long message text will wrap. Text color is coded to match alert type.
@@ -100,18 +100,18 @@ An [Alert Group](/components/alert-group) component allows a set of alerts to be
 #### Toast alert placement
 Toast alerts always stack in the upper right of a page.
 
-<img src="./img/Toast-alerts-desktop.png" alt="toast alerts in a page" width="990"/>
+<img src="./img/Toast-alerts-desktop.png" alt="toast alerts in a page" />
 
 
 #### Inline alert placement
 If an alert message applies globally to the content on a page, place the alert in the page header area just below the title.
 
-<img src="./img/Inline-alert-page-level.png" alt="global inline alert in a page" width="990"/>
+<img src="./img/Inline-alert-page-level.png" alt="global inline alert in a page" />
 
 
 But if the alert applies only to specific content, you might consider placing the alert inline with page content to call attention to the error.
 
-<img src="./img/Inline-alert-specific-context.png" alt="inline alert inline with content" width="990"/>
+<img src="./img/Inline-alert-specific-context.png" alt="inline alert inline with content" />
 
 ## Accessibility considerations
 

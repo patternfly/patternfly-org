@@ -151,7 +151,15 @@ function serializeElement(node, options) {
     }
   }
   else if (type === 'img' && srcImport) {
-    res += ` src={${srcImport}.src} width={${srcImport}.width + 'px'} height={${srcImport}.height + 'px'}`;
+    res += ` src={${srcImport}.src}`;
+    if (!props.width) {
+      res += ` width={${srcImport}.width}`;
+      res += ` height={${srcImport}.height}`;
+    }
+    else {
+      props.width = props.width.replace('px', '');
+      res += ` height={${srcImport}.height * ${props.width} / ${srcImport}.width}`;
+    }
   }
   if (spread) {
     res += ` {...${spread}}`;
