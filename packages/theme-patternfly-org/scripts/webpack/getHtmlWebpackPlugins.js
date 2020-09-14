@@ -32,7 +32,7 @@ async function getHtmlWebpackPlugin({
 }
 
 async function getHtmlWebpackPlugins(options) {
-  const { isProd } = options;
+  const { isProd, url, title } = options;
   const { routes, fullscreenRoutes } = require('../../routes');
   const res = [
     // Sitemap
@@ -49,7 +49,7 @@ async function getHtmlWebpackPlugins(options) {
 
   if (!isProd) {
     // Only render the index page in dev mode and rely on historyApiFallback
-    res.push(await getHtmlWebpackPlugin({ isProd, url: '', pathPrefix: '', title: 'Dev' }));
+    res.push(await getHtmlWebpackPlugin({ isProd, url: '', title: 'Dev', ...options }));
     return res;
   }
 
