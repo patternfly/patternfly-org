@@ -3,9 +3,7 @@ id: Button
 section: components
 ---
 
-**Buttons** communicate and trigger actions a user can take in an application or website and take the form of a box area or text that can be clicked or tapped
-
-A button refers to a box area or text that can be clicked or tapped.
+**Buttons** communicate and trigger actions a user can take in an application or website and take the form of a box area or text that can be clicked or tapped.
 
 ## Usage
 
@@ -222,12 +220,17 @@ _Buttons placed in overflow menu due to limited space, with primary button persi
 
 **Writing button labels**
 
-* Button labels should be specific and clearly communicate their associated action.
-* Always use verbs or verb phrases.
-* To avoid wrapping, aim for short labels when possible (1–3 words)
-* Avoid the use of articles (e.g., write “Add source” instead of “Add a source”)
-* Avoid long button labels that might risk wrapping.
+* Be specific and clearly communicate the button's action. 
+* Screen readers may read buttons to users out of context, so button text should be unique and easily understood on its own. Refer to [PatternFly's accessibility guide](/get-started/accessibility-guide) for more information. 
+* Use simple verbs or verb phrases.
+* To avoid wrapping, aim for short labels when possible (1–3 words).
+* Avoid using articles (for example, write “Add source” instead of “Add a source”).
+* Avoid punctuation on buttons. 
+* To call a user's attention to a button or to add clarity to the button's action, you can add an icon to the button. 
+* Do not create icons on buttons using punctuation (for example, "+"). Instead, refer to [PatternFly's icons page](/guidelines/icons) for any icons you place on buttons.
+
 
 **Writing link labels**
 
-Use specific, action-focused labels that match what the user will see when they arrive at their location. For example, if you are sending a user to a dashboard, your link label might read _View dashboard_. For a link directing a user to a support forum, the label might read _Get help in the support forum_. See [PatternFly's content guidelines](/ux-writing/ux-writing-best-practices) for additional guidance.
+Use specific, action-focused labels that match what the user will see when they arrive at their location. For example, if you are sending a user to a dashboard, your link label might read _View dashboard_. For a link directing a user to a support forum, the label might read _Get help in the support forum_. See [PatternFly's content guidelines](/ux-writing/about) for additional guidance.
+
