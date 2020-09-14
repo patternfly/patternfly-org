@@ -3,9 +3,7 @@ id: Button
 section: components
 ---
 
-**Buttons** communicate and trigger actions a user can take in an application or website and take the form of a box area or text that can be clicked or tapped
-
-A button refers to a box area or text that can be clicked or tapped.
+**Buttons** communicate and trigger actions a user can take in an application or website and take the form of a box area or text that can be clicked or tapped.
 
 ## Usage
 
