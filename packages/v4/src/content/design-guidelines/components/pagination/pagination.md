@@ -2,8 +2,6 @@
 id: Pagination
 section: components
 ---
-Pagination splits data across multiple pages, typically within a table, list, or card view. If you use infinite scrolling, you don't need to use pagination.
-
 Add pagination above and below content views so users can easily navigate as they read through listed items on a page.
 
 <img src="./img/full-page.png" alt="Example of pagination on full page table" />
@@ -16,7 +14,7 @@ Add pagination above and below content views so users can easily navigate as the
 
 Use full pagination unless you're restricted to a narrow workspace, then use <a href="#compact-pagination">compact pagination</a>. Full pagination occupies more toolbar territory, so you'll have limited room for other items like bulk selectors, buttons, filters, or input fields. 
 
-[Overflow menus](http://patternfly.org/v4/design-guidelines/usage-and-behavior/toolbar#overflow-menus) allow you to incorporate these toolbar actions using less horizontal space. Toolbar actions automatically form into an overflow menu at specific breaking points. Learn how to customize these breakpoints in our [Toolbar](/design-guidelines/usage-and-behavior/toolbar) documentation.
+[Overflow menus](/components/toolbar/design-guidelines#overflow-menu) allow you to incorporate these toolbar actions using less horizontal space. Toolbar actions automatically form into an overflow menu at specific breaking points. Learn how to customize these breakpoints in our [Toolbar](/components/toolbar/design-guidelines) documentation.
 
 Desktop and mobile views connect with the same breakpoint specifications. On mobile, full pagination condenses to an item count. As a toolbar item, you can add and keep the item count in two ways: in both desktop and mobile views, or just in mobile view.
 
