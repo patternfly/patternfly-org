@@ -21,9 +21,9 @@
     <link
       href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" 
       crossorigin
-      rel="preload"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'; this.onload=null;"
     >
     <% } %>
     <% if (googleAnalyticsID) { %>
