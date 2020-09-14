@@ -17,10 +17,10 @@ The Notification drawer is a place where users can view and manage notifications
 2. **Unread count (optional):** If unread notifications exist, report the number of unread notifications. Otherwise leave blank.
 
 3. **Global actions (optional):** This menu contains actions that can be applied against all notifications in the drawer. The following are standard menu items. This menu may be added according to the needs of your application.
-  - **Mark all read** - marks all notifications in the drawer as read.
-  - **Clear all** - clears all notifications from the drawer.
-  - **Unclear last** - unclears that last cleared or set of cleared notifications (if supported).
-  - **Settings** - open notification settings.
+    - **Mark all read** - marks all notifications in the drawer as read.
+    - **Clear all** - clears all notifications from the drawer.
+    - **Unclear last** - unclears that last cleared or set of cleared notifications (if supported).
+    - **Settings** - open notification settings.
 
 
 4. **Close button:** Closes the drawer.
@@ -42,12 +42,12 @@ If you want to sort notifications by category, collapsible headers may be used t
 
 3. **Global actions (optional):** For the grouped drawer, the global actions menu should further clarify what content the actions apply to. Standard menu items include (the menu may be customized according to the needs of your application):
 
-  - **Mark all read** - marks all notifications in the drawer as read.
-  - **Clear all** - clears all notifications from the drawer.
-  - **Mark current category read** - marks all notifications in the currently opened category as read.
-  - **Clear current category** - clears all notifications from the currently opened category.
-  - **Unclear last** - unclears that last cleared or set of cleared notifications (if supported).
-  - **Settings** - opens notification settings.
+    - **Mark all read** - marks all notifications in the drawer as read.
+    - **Clear all** - clears all notifications from the drawer.
+    - **Mark current category read** - marks all notifications in the currently opened category as read.
+    - **Clear current category** - clears all notifications from the currently opened category.
+    - **Unclear last** - unclears that last cleared or set of cleared notifications (if supported).
+    - **Settings** - opens notification settings.
 
 ### Placement in a page
 
