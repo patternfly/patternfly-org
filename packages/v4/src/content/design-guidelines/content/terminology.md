@@ -10,6 +10,7 @@ Here's a list of common UI terms and their usage.
 - Notes: If the object being added is not readily apparent from the context, consider adding a noun (like “Add user”). If you’re creating a new object, do not use *Add*. See *Create*.
 
 **Cancel**: (v.) Use to describe ending an action in progress or ending an action where changes could be lost (like in a form).
+- Notes: Use *canceling* instead of *cancelling*. Use *canceled* instead of *cancelled*.
 
 **Change**: Do not use. See *Edit*.
 
@@ -41,6 +42,9 @@ Here's a list of common UI terms and their usage.
 
 **Hide**: (v.) Use to describe hiding something that is displayed in the interface.
 - Opposite: Show
+
+**Home page**: (n.) Use to describe the main page of a website.
+- Notes: Write *home page* as two words, not one.
 
 **Log in**: (v.) Use to describe logging in.
 - Opposite: Log out
