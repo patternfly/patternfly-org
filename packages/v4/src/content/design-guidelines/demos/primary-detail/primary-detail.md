@@ -44,11 +44,11 @@ Use a primary-detail layout when viewing details from an item in a large list or
 ## Responsive behavior
 Mobile views show a primary-detail layout’s primary component only. Details show on a new page upon clicking, but the “primary item title” will appear as a header with clear navigation back to the primary component. The viewport will switch to mobile view at a defined breakpoint, usually when it drops below 2x (which is the typical mobile width).  
  
-<img src="./img/card-view-mobile-layout.png"  alt="primary-detail with card view on mobile"  width="750"/> 
+<img src="./img/card-view-mobile-layout.png"  alt="primary-detail with card view on mobile"  width="375"/> 
  
 In tablet/dt screens, the primary component may switch to its mobile view—while still maintaining a side-by-side view with the detail drawer—earlier than the typical mobile breakpoint. 
  
-<img src="./img/side-by-side-mobile.png"  alt="primary-detail with side-by-side view on mobile"  width="750"/> 
+<img src="./img/side-by-side-mobile.png"  alt="primary-detail with side-by-side view on mobile"  width="375"/> 
  
 If the primary and detail components are the same width or take up the same portion of the screen, then both will resize until they reach the mobile view’s defined breakpoint.
  
@@ -59,7 +59,7 @@ Row selection differs from bulk/checkbox selection, and both selection types ope
  
 When checkbox select and row select are both available in a primary-detail layout, the details pane will populate an empty state and guide users to either make an action in the toolbar or clear the selected checkboxes to return to the selected row’s detail view. This empty state should show to alleviate confusion for the different select states when both are present in a table.
  
-<img src="./img/primary-detail-bulk-selection.png"  alt="primary-detail with two items selected"  width="3000"/> 
+<img src="./img/primary-detail-bulk-selection.png"  alt="primary-detail with two items selected"  width="990"/> 
  
 Here are some other best practices to keep in mind:
 - There needs to be a **selected** state for the primary item (row or card) currently populating the details pane.
