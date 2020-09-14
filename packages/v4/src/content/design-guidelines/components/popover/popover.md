@@ -33,7 +33,7 @@ Plan your content hierarchy to provide the right content in the right place at t
 ## Forms of on-screen help and how to use them
 
 
-<img src="./img/help-elements.png" alt="Example of on-screen help"  width="990"/>
+<img src="./img/help-elements.png" alt="Example of on-screen help" />
 
 
 1. [Persistent text](#persistent-text)
@@ -44,7 +44,7 @@ Plan your content hierarchy to provide the right content in the right place at t
 ### Persistent text
 Persistently available text like titles, headers, descriptions, and labels enables the user to understand where they are, what they are doing, and what they need to do to use the interface and complete their task.
 
-<img src="./img/persistent-text.png" alt="Image of highlighted examples of persistent text on a page"  width="990"/>
+<img src="./img/persistent-text.png" alt="Image of highlighted examples of persistent text on a page" />
 
 
 **Usage**
@@ -62,7 +62,7 @@ When crafting persistent text, target users with an intermediate level of profic
 ### Hints
 Hints provide a one-step reminder, explanation, or call to action for a page or modal.
 
-<img src="./img/hints.png" alt="Example of a hint in a full-page"  width="990"/>
+<img src="./img/hints.png" alt="Example of a hint in a full-page" />
 
 
 **Usage**
@@ -73,7 +73,7 @@ Use hints to help the user get more out of the interface. Hints can provide info
 
 Popovers provide helpful contextual information at the moment users need it.
 
-<img src="./img/popovers-1.png" alt="Example of popover in a form" width="990"/>
+<img src="./img/popovers-1.png" alt="Example of popover in a form" />
 
 **Usage**
 
@@ -87,7 +87,7 @@ You may also use popovers with link text. For example, when there is no obvious 
 
 Popover text should adopt link button styling and always be preceded by a question-circle icon, which should be blue, following the link button styling. Clicking on the link text should trigger a popover that provides an answer to the question posed in the hint text.
 
-<img src="./img/popovers-2.png" alt="Popover link text in UI"  width="990"/>
+<img src="./img/popovers-2.png" alt="Popover link text in UI" />
 
 
 Popovers are triggered by a click and dismissed in one of the following ways:
@@ -107,7 +107,7 @@ Never hide critical information in a popover. Critical information is any inform
 ### Tooltips
 Use tooltips to define new or unfamiliar UI elements that aren’t described directly in the user interface, or to get additional data from a data point or element in a chart or table.
 
-<img src="./img/tooltips.png" alt="Example of tooltip in a table"  width="990"/>
+<img src="./img/tooltips.png" alt="Example of tooltip in a table" />
 
 
 **Usage**
@@ -138,7 +138,7 @@ Both tooltips and popovers allow users to get more information in context. Howev
 * Short descriptions of an item or to identify an item, like an icon button
 * Content that is no longer than 1 or 2 lines
 
-<img src="./img/use-tooltips.png" alt="Examples of tooltip use"  width="990"/>
+<img src="./img/use-tooltips.png" alt="Examples of tooltip use" />
 
 **Use popovers for:**
 
@@ -146,4 +146,4 @@ Both tooltips and popovers allow users to get more information in context. Howev
 * Formatted text
 * When you would like your in-context help to include pictures, actions, or links 
 
-<img src="./img/use-popovers.png" alt="Examples of popover use"  width="990"/>
+<img src="./img/use-popovers.png" alt="Examples of popover use" />

@@ -137,7 +137,7 @@ For donut charts, don’t try to represent more than six categories. We recommen
 [Donut utilization](/documentation/react/charts/chartdonututilization)
 
 ### Donut chart - Utilization with threshold
-<img src="./img/donut-utilization-with-threshold.png" alt="Donut utilization with threshold" width="906"/>
+<img src="./img/donut-utilization-with-threshold.png" alt="Donut utilization with threshold" />
 
 1. **Threshold segment fill:** The outer segments of the chart are static and represent the thresholds for your use case. The example diagrams show utilization thresholds for a database and are used to let users know when they move from a safe zone into a danger zone. For threshold segments, use incremental shades of  grey starting at #EDEDED then to #D2D2D2 then to #BBBBBB. Provide 3px of padding between each segment.
 2. **Utilization segment fill:** This dynamic chart is a concentric circle within the donut thresholds and will represent the data set. For this chart, we recommend using the following colors:
@@ -146,7 +146,7 @@ For donut charts, don’t try to represent more than six categories. We recommen
   - #C9190B once the data set has hit the danger threshold
 3. **Legend:** The utilization segment color swatch will change in accordance to the chart.
 
-<img src="./img/donut-utilization-with-threshold-hover.png" alt="Donut utilization with threshold hover" width="1018"/>
+<img src="./img/donut-utilization-with-threshold-hover.png" alt="Donut utilization with threshold hover" />
 
 4. **Chart tooltip:** Chart tooltips appear on hover for both threshold segments and utilization segments. We recommend stating the threshold name, the segment name, and the value being represented. For example, if the threshold being met is "Danger," and the segment represents "Storage capacity," and the value being represented is 92%, your chart tooltip would state, "Danger: Storage capacity: 92%." We recommend stating the threshold name "at" the percentage the threshold begins (ex. Warning at 60%).
 
@@ -164,7 +164,7 @@ The most common use case for line charts is to compare several data sets over a 
 Multiple lines on the same chart allow the user to visualize relationships between varying data sets, such as correlated events, similarities or unexpected differences. We recommend displaying no more than 6 lines on a single graph to avoid confusion.
 
 #### Example
-<img src="./img/line-chart.png" alt="Line chart" width="1499"/>
+<img src="./img/line-chart.png" alt="Line chart" />
 
 1. **Line:** Line charts can optionally visually represent data points as dots on the line. If so, the same interaction that occurs when hovering over one in an [Area chart](#area-chart) will occur in line charts. For line colors, we recommend using the [Colors for charts](/design-guidelines/styles/colors-for-charts).
 
@@ -216,7 +216,7 @@ The brush and zoom properties allow for magnification of an area, bar, line or s
 
 #### Example
 
-<img src="./img/brush-and-zoom.png" alt="Brush and zoom" width="1575"/>
+<img src="./img/brush-and-zoom.png" alt="Brush and zoom" />
 
 1. **Window:** Click and drag to create a window around the section of the chart that you want to zoom in on
 2. **Magnified chart:** The portion selected will appear above the full chart view.
@@ -226,13 +226,13 @@ For charts that have more than one data set graphed, interactive legends can be 
 
 #### Example
 On hover
-<img src="./img/interactive-legend-hover.png" alt="Interactive legend on hover" width="1499"/>
+<img src="./img/interactive-legend-hover.png" alt="Interactive legend on hover" />
 
 1. **Legend:** When a user hovers over a legend label, all the other legend labels’ opacity are lowered.
 2. **Chart:** The corresponding data of the hovered legend item, would be highlighted by having the other data sets’ opacity lowered.
 
 On click
-<img src="./img/interactive-legend-hide.png" alt="Interactive legend hidden" width="1499"/>
+<img src="./img/interactive-legend-hide.png" alt="Interactive legend hidden" />
 
 1. **Legend:** When a user clicks on a legend label, it becomes disabled and the color swatch would be replaced with an eye-slashed icon.
 2. **Chart:** The corresponding data would be made hidden from view.

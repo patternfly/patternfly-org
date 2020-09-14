@@ -35,12 +35,12 @@ PatterFly supports two main types of data lists:
 
 See [when to use compact vs. default spacing](#when-to-use-compact-vs-default-spacing) for more information about the styling and usage.
 
-<img src="./img/compact-and-default-list.png"  alt="Compact and default data list"  width="824"/> 
+<img src="./img/compact-and-default-list.png" alt="Compact and default data list" /> 
 
 ### Data list elements
 The elements mentioned below are similar for a data list with compact or default spacing. The example shows a data list with a compact spacing. See [when to use compact vs. default spacing](#when-to-use-compact-vs-default-spacing) for more information about the styling and usage. 
 
-<img src="./img/compact-list.png"  alt="Compact data list"  width="1188"/> 
+<img src="./img/compact-list.png" alt="Compact data list" /> 
 
 1. **[Toolbar](/design-guidelines/usage-and-behavior/toolbar):** The toolbar sits above the list and contains controls for manipulating list data. Common actions include filtering, sorting, and pagination.
 2. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/design-guidelines/usage-and-behavior/bulk-selection) for more information.
@@ -71,7 +71,7 @@ Every data list can be extended with these functionalities:
 ### Actionable data list
 The actionable data list provides checkboxes that enable users to select one or more rows and act on that selection using options in the [toolbar](/design-guidelines/usage-and-behavior/toolbar).
 
-<img src="./img/actionable-list.png"  alt="Actionable list"  width="1172"/> 
+<img src="./img/actionable-list.png" alt="Actionable list" /> 
 
 1. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/design-guidelines/usage-and-behavior/bulk-selection) for more information. 
 2. **Checkbox:** Enables a user to select a row.
@@ -87,7 +87,7 @@ Don't use an actionable data list when:
 ### Expandable data list
 The expandable list adds an expansion panel to every row to reveal more details about the item.
 
-<img src="./img/expandable-list.png"  alt="Expandable data list"  width="1190"/> 
+<img src="./img/expandable-list.png" alt="Expandable data list" /> 
 
 1. **Expansion caret:** Toggles the expansion open and closed.
 2. **Expansion panel:** A container that is revealed when the expansion is open. It can accept any supported layout to present additional content to the user.
@@ -110,12 +110,12 @@ PatterFly supports two main types of tables:
 
 See [when to use compact vs. default spacing](#when-to-use-compact-vs-default-spacing) for more information about the styling and usage.
 
-<img src="./img/compact-and-default-table.png"  alt="Compact and default table"  width="857"/> 
+<img src="./img/compact-and-default-table.png" alt="Compact and default table"  width="857"/> 
 
 ### Table elements
 The elements mentioned below are similar for a table with compact or default spacing. The example shows a table with a compact spacing. See [when to use compact vs. default spacing](#when-to-use-compact-vs-default-spacing) for more information about the styling and usage. 
 
-<img src="./img/compact-data-table.png"  alt="Compact table"  width="1186"/> 
+<img src="./img/compact-data-table.png" alt="Compact table" /> 
 
 1. **[Toolbar](/design-guidelines/usage-and-behavior/toolbar):** Sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
 2. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/design-guidelines/usage-and-behavior/bulk-selection) for more information.
@@ -143,7 +143,7 @@ Every table can be extended with these functionalities:
 
 ### Expandable table
 
-<img src="./img/expandable-data-table.png"  alt="Expandable table"  width="1186"/> 
+<img src="./img/expandable-data-table.png" alt="Expandable table" /> 
 
 1. **Expansion:** Expands the row
 2. **Expansion panel:** Contains details associated with a row. See [expanded panel coloring](#expanded-panel-coloring) for more information.
@@ -163,7 +163,7 @@ Use a light blue line for expanded rows:
 
 ### Compound-expandable table
 
-<img src="./img/compound-expandable-data-table.png"  alt="Compound expandable table"  width="1189"/> 
+<img src="./img/compound-expandable-data-table.png" alt="Compound expandable table" /> 
 
 1. **Expandable cell:** A cell that can be clicked to reveal more detail about an item. If the expansion for an item is already open, clicking on a different cell will close the current item and open a new one.
 2. **Expansion panel:** Contains details associated with an expandable item.
@@ -176,7 +176,7 @@ Use a compound expandable table when:
 ### Actionable table
 The actionable table provides checkboxes that enable users to select one or more rows and act on that selection using options in the [toolbar](/design-guidelines/usage-and-behavior/toolbar).
 
-<img src="./img/actionable-table.png"  alt="Actionable table"  width="1174"/> 
+<img src="./img/actionable-table.png" alt="Actionable table" /> 
 
 1. **[Bulk selection](/design-guidelines/usage-and-behavior/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/design-guidelines/usage-and-behavior/bulk-selection) for more information. 
 2. **Checkbox:** Enables a user to select a row.
@@ -192,7 +192,7 @@ Don't use an actionable table when:
 ### Sorting by columns
 Sorting by columns is possible for any table variation. Enabling the component within a table eases the ability to scan and read through the content. This option is favored over adding sorting functionality to the [toolbar](/design-guidelines/usage-and-behavior/toolbar).
 
-<img src="./img/sortable-data-table.png"  alt="Sortable table"  width="1161"/> 
+<img src="./img/sortable-data-table.png" alt="Sortable table" /> 
 
 1. **Sortable column:** When a column is sortable, the sort icon will appear to the right of the column header in a [light grey](/design-guidelines/styles/colors#typography-and-iconography-colors) color. Sorting will not become active until the user selects the column header. This triggers the arrow to point upwards and the content to be sorted in ascending order.
 3. **Hovered sort:** When a column is sortable, the sort icon will appear to the right of the column header. Upon hover, the  icon will change to a [darker grey](/design-guidelines/styles/colors#typography-and-iconography-colors) indicating that the icon is actionable.
@@ -218,7 +218,7 @@ Use compact spacing when:
 * You need to minimize paging.
 * Readability is a secondary concern.
 
-<img src="./img/compact-spacing.png"  alt="Compact spacing"  width="1162"/> 
+<img src="./img/compact-spacing.png" alt="Compact spacing" /> 
 
 Example: 
 * You can see more data on one page. 
@@ -234,7 +234,7 @@ Use default spacing when:
 * You don't have to minimize paging.
 * Readability is a primary concern. 
 
-<img src="./img/default-spacing.png"  alt="Default spacing"  width="1162"/> 
+<img src="./img/default-spacing.png" alt="Default spacing" /> 
 
 Example:
 * You can see less data on one page. 
@@ -244,11 +244,11 @@ Example:
 ## Tables on mobile
 The PatternFly table is designed to be fully responsive. When columns no longer fit within the width of the viewport, columns are stacked so that data in each row is displayed as sets of attribute-value pairs.
 
-<img src="./img/Mobile-data-table-example.png"  alt="Mobile data table"  width="375"/> 
+<img src="./img/Mobile-data-table-example.png" alt="Mobile data table"  width="375"/> 
 
 ## Using lists and tables in a page
 Lists and tables should be placed in the body of a page. The width should be set by the containing element.
 
-<img src="./img/data-table-example.png"  alt="Compact data table example"  width="1500"/> 
+<img src="./img/data-table-example.png" alt="Compact data table example" /> 
 
 In this example, a table is positioned in the body of a page in a card.
