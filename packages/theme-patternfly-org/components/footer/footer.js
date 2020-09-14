@@ -47,7 +47,7 @@ export const Footer = () => (
                   <li className="pf-c-nav__item">
                     <Link
                       className="pf-c-nav__link"
-                      to="/components/aboutmodal"
+                      to="/components/about-modal"
                       aria-label="PatternFly 4 components"
                     >
                       Components

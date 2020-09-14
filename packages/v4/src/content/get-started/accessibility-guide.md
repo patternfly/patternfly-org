@@ -43,22 +43,22 @@ If you use PatternFly, or contribute to PatternFly as a designer or developer, t
 
 | Guideline  | Link  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- |
-| Semantic html structures are used to accurately communicate purpose and relationship of UI elements | [WCAG 1.3.1](//www.w3.org/WAI/WCAG21/quickref/#info-and-relationships) | `design` | `html` | `css` |  |
-| Color is not the only method of communication. Providing meaning through color is supplementary to providing meaning with text | [WCAG 1.4.1](//www.w3.org/WAI/WCAG21/quickref/#use-of-color) | `design` | `html` | `css` |  |
-| Colors used provide sufficient contrast | [WCAG 1.4.3](//www.w3.org/WAI/WCAG21/quickref/#contrast-minimum) and [1.4.11](//www.w3.org/WAI/WCAG21/quickref/#non-text-contrast) |  |  | `css` |  |
-| Font sizes can scale up to 200% without loss of content or functionality, and up to 400% without needing to scroll in more than one direction.  | [WCAG&nbsp;1.4.4](//www.w3.org/WAI/WCAG21/quickref/#resize-text) and [1.4.10](//www.w3.org/WAI/WCAG21/quickref/#reflow) |  |  | `css` |  |
-| Styles that affect text spacing (line height, space between paragraphs, letter spacing, and word spacing) can be increased without loss of content or functionality | [WCAG 1.4.12](//www.w3.org/WAI/WCAG21/quickref/#text-spacing) |  |  | `css` |  |
-| Contents that appear on hover and focus are dismissable, hoverable, and persistent | [WCAG 1.4.13](//www.w3.org/WAI/WCAG21/quickref/#content-on-hover-or-focus) |  | `html` | `css` | `js` |
-| All functionality is keyboard accessible | [WCAG 2.1.1](//www.w3.org/WAI/WCAG21/quickref/#keyboard) and [2.1.2](//www.w3.org/WAI/WCAG21/quickref/#no-keyboard-trap) |  | `html` |  |  |
-| Order of elements in the HTML and in the layout follow a logical order | [WCAG 1.3.2](//www.w3.org/WAI/WCAG21/quickref/#meaningful-sequence) and [2.4.3](//www.w3.org/WAI/WCAG21/quickref/#focus-order) | `design` | `html` | `css` |  |
-| Elements with focus are clearly visible | [WCAG 2.4.7](//www.w3.org/WAI/WCAG21/quickref/#focus-visible) |  |  | `css` |  |
+| Semantic html structures are used to accurately communicate purpose and relationship of UI elements | [WCAG 1.3.1](//www.w3.org/WAI/WCAG21/quickref#info-and-relationships) | `design` | `html` | `css` |  |
+| Color is not the only method of communication. Providing meaning through color is supplementary to providing meaning with text | [WCAG 1.4.1](//www.w3.org/WAI/WCAG21/quickref#use-of-color) | `design` | `html` | `css` |  |
+| Colors used provide sufficient contrast | [WCAG 1.4.3](//www.w3.org/WAI/WCAG21/quickref#contrast-minimum) and [1.4.11](//www.w3.org/WAI/WCAG21/quickref#non-text-contrast) |  |  | `css` |  |
+| Font sizes can scale up to 200% without loss of content or functionality, and up to 400% without needing to scroll in more than one direction.  | [WCAG&nbsp;1.4.4](//www.w3.org/WAI/WCAG21/quickref#resize-text) and [1.4.10](//www.w3.org/WAI/WCAG21/quickref#reflow) |  |  | `css` |  |
+| Styles that affect text spacing (line height, space between paragraphs, letter spacing, and word spacing) can be increased without loss of content or functionality | [WCAG 1.4.12](//www.w3.org/WAI/WCAG21/quickref#text-spacing) |  |  | `css` |  |
+| Contents that appear on hover and focus are dismissable, hoverable, and persistent | [WCAG 1.4.13](//www.w3.org/WAI/WCAG21/quickref#content-on-hover-or-focus) |  | `html` | `css` | `js` |
+| All functionality is keyboard accessible | [WCAG 2.1.1](//www.w3.org/WAI/WCAG21/quickref#keyboard) and [2.1.2](//www.w3.org/WAI/WCAG21/quickref#no-keyboard-trap) |  | `html` |  |  |
+| Order of elements in the HTML and in the layout follow a logical order | [WCAG 1.3.2](//www.w3.org/WAI/WCAG21/quickref#meaningful-sequence) and [2.4.3](//www.w3.org/WAI/WCAG21/quickref#focus-order) | `design` | `html` | `css` |  |
+| Elements with focus are clearly visible | [WCAG 2.4.7](//www.w3.org/WAI/WCAG21/quickref#focus-visible) |  |  | `css` |  |
 | Flashing content | [WCAG 2.3.1](//www.w3.org/WAI/WCAG21/quickref/?showtechniques=231#three-flashes-or-below-threshold) |  |  | `css` |  |
-| Functionality that uses complex gestures can also be operated with a single pointer without a path based gesture | [WCAG 2.5.1](//www.w3.org/WAI/WCAG21/quickref/#pointer-gestures) | `design` |  |  |  |
-| Pointer events can be cancelled  | [WCAG 2.5.2](//www.w3.org/WAI/WCAG21/quickref/#pointer-cancellation) | | | | `js` |
-| Visible labels of UI components are either the same as the accessible name or used in the beginning of the accessible name | [WCAG 2.5.3](//www.w3.org/WAI/WCAG21/quickref/#label-in-name) |  | `html` |  |  |
-| The target area for clickable elements is at least 44 by 44 [CSS pixels](//www.w3.org/TR/WCAG21/#dfn-css-pixels) | [WCAG 2.5.5 (AAA)](//www.w3.org/WAI/WCAG21/quickref/#target-size)* |  |  | `css` |  |
-| An accessible name is provided for all elements | [WCAG 4.1.2](//www.w3.org/WAI/WCAG21/quickref/#name-role-value) | `design` | `html` |  |  |
-| Status messages can be programmatically determined through role or properties | [WCAG 4.1.3](//www.w3.org/WAI/WCAG21/quickref/#status-messages) |  | `html` |  |  |
+| Functionality that uses complex gestures can also be operated with a single pointer without a path based gesture | [WCAG 2.5.1](//www.w3.org/WAI/WCAG21/quickref#pointer-gestures) | `design` |  |  |  |
+| Pointer events can be cancelled  | [WCAG 2.5.2](//www.w3.org/WAI/WCAG21/quickref#pointer-cancellation) | | | | `js` |
+| Visible labels of UI components are either the same as the accessible name or used in the beginning of the accessible name | [WCAG 2.5.3](//www.w3.org/WAI/WCAG21/quickref#label-in-name) |  | `html` |  |  |
+| The target area for clickable elements is at least 44 by 44 [CSS pixels](//www.w3.org/TR/WCAG21#dfn-css-pixels) | [WCAG 2.5.5 (AAA)](//www.w3.org/WAI/WCAG21/quickref#target-size)* |  |  | `css` |  |
+| An accessible name is provided for all elements | [WCAG 4.1.2](//www.w3.org/WAI/WCAG21/quickref#name-role-value) | `design` | `html` |  |  |
+| Status messages can be programmatically determined through role or properties | [WCAG 4.1.3](//www.w3.org/WAI/WCAG21/quickref#status-messages) |  | `html` |  |  |
 
 *WCAG 2.5.5 is included for reference only. This guideline suggests a size that is larger than what PatternFly requires.
 
@@ -68,11 +68,11 @@ If you consume PatternFly in your product, these are the items that are outside 
 
 | Guideline  | Link  |  |  |
 | --- | --- | --- | --- |
-| Skip to main links | [WCAG 2.4.1](//www.w3.org/WAI/WCAG21/quickref/#bypass-blocks) |  | `development` |
-| Page Titles | [WCAG 2.4.2](//www.w3.org/WAI/WCAG21/quickref/#page-titled) |  | `development` |
-| Links — If more than one link has the same label, it should also have the same url. Screen reader users can access the list of links that are on a page, which pulls the links out of context. If you have links with different URLs but the same label, then add additional text to provide context to the screen reader user. | [WCAG&nbsp;2.4.4](//www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context) | `design`  | `development` |
+| Skip to main links | [WCAG 2.4.1](//www.w3.org/WAI/WCAG21/quickref#bypass-blocks) |  | `development` |
+| Page Titles | [WCAG 2.4.2](//www.w3.org/WAI/WCAG21/quickref#page-titled) |  | `development` |
+| Links — If more than one link has the same label, it should also have the same url. Screen reader users can access the list of links that are on a page, which pulls the links out of context. If you have links with different URLs but the same label, then add additional text to provide context to the screen reader user. | [WCAG&nbsp;2.4.4](//www.w3.org/WAI/WCAG21/quickref#link-purpose-in-context) | `design`  | `development` |
 | Landmarks — Use landmark roles to clearly identify regions that communicate page structure. If more than one landmark role occurs in the page, use aria-label to differentiate the landmark elements | [ARIA11](//www.w3.org/TR/WCAG20-TECHS/ARIA11.html) | `design`  | `development` |
-| Headings — Heading text should be descriptive. Correct heading levels should be used to communicate the outline of the page. | [WCAG 2.4.10](//www.w3.org/WAI/WCAG21/quickref/#section-headings) and [H42](//www.w3.org/TR/WCAG20-TECHS/H42.html) | `design`  | `development` |
+| Headings — Heading text should be descriptive. Correct heading levels should be used to communicate the outline of the page. | [WCAG 2.4.10](//www.w3.org/WAI/WCAG21/quickref#section-headings) and [H42](//www.w3.org/TR/WCAG20-TECHS/H42.html) | `design`  | `development` |
 | Contents — Should be meaningful, clear, and concise |  | `design` |  |
 
 ## Guidelines and references
@@ -87,7 +87,7 @@ These are guidelines that we have defined for PatternFly.
 
 #### Experience parity
 
-- There should be parity between the screen reader contents and visibly rendered contents (refer to the [first Note for aria-hidden](//www.w3.org/TR/wai-aria/#aria-hidden)).
+- There should be parity between the screen reader contents and visibly rendered contents (refer to the [first Note for aria-hidden](//www.w3.org/TR/wai-aria#aria-hidden)).
 - There should be parity among all input types: touch, mouse, and keyboard.
   - Don’t optimize the experience for one input type at the expense of another.
   - Contents that a user can interact with using a mouse are also accessible using touch or keyboard.
@@ -110,8 +110,8 @@ The [WCAG 2.0 techniques](//www.w3.org/TR/WCAG20-TECHS/Overview.html#contents) p
 
 - #### Landmark roles
 
-  - Screen reader users can navigate to sections of a page when [landmark roles](//www.w3.org/TR/wai-aria-1.1/#landmark_roles) are used. Whenever a landmark role is used more than once, provide a name using `aria-label` or `aria-labelledby` to provide context for that landmark. ([ARIA6](//www.w3.org/TR/WCAG20-TECHS/ARIA6.html), [ARIA16](//www.w3.org/TR/WCAG20-TECHS/ARIA16.html))
-  - While [`toolbar`](//www.w3.org/TR/wai-aria-1.1/#toolbar) is not a landmark role, the same rule applies to this role.
+  - Screen reader users can navigate to sections of a page when [landmark roles](//www.w3.org/TR/wai-aria-1.1#landmark_roles) are used. Whenever a landmark role is used more than once, provide a name using `aria-label` or `aria-labelledby` to provide context for that landmark. ([ARIA6](//www.w3.org/TR/WCAG20-TECHS/ARIA6.html), [ARIA16](//www.w3.org/TR/WCAG20-TECHS/ARIA16.html))
+  - While [`toolbar`](//www.w3.org/TR/wai-aria-1.1#toolbar) is not a landmark role, the same rule applies to this role.
 
 - #### Icons
 

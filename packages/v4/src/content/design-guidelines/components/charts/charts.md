@@ -151,7 +151,7 @@ For donut charts, don’t try to represent more than six categories. We recommen
 4. **Chart tooltip:** Chart tooltips appear on hover for both threshold segments and utilization segments. We recommend stating the threshold name, the segment name, and the value being represented. For example, if the threshold being met is "Danger," and the segment represents "Storage capacity," and the value being represented is 92%, your chart tooltip would state, "Danger: Storage capacity: 92%." We recommend stating the threshold name "at" the percentage the threshold begins (ex. Warning at 60%).
 
 #### React component
-[Donut utilization](/charts/donut-utilization-chart/#donut-utilization-threshold-examples)
+[Donut utilization](/charts/donut-utilization-chart#donut-utilization-threshold-examples)
 
 
 ### Line chart

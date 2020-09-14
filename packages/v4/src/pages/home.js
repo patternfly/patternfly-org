@@ -122,7 +122,7 @@ const HomePage = () => (
                     aria-label="view components"
                     className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
-                    <Link to="/components/aboutmodal">
+                    <Link to="/components/about-modal">
                       View components <ArrowRightIcon />
                     </Link>
                   </Text>
