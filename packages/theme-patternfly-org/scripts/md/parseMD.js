@@ -85,7 +85,7 @@ function toReactComponent(mdFilePath, source) {
 
       pageData = {
         id: frontmatter.id,
-        section: frontmatter.section || 'components',
+        section: frontmatter.section || '',
         source,
         slug,
         sourceLink: `https://github.com/patternfly/${
@@ -256,11 +256,12 @@ module.exports = {
     });
     globs.md.forEach(({ glob, source, ignore }) => {
       const propWatcher = chokidar.watch(glob, { ignored: ignore, ignoreInitial: true });
-      propWatcher.on('add', file => {
+      function onMDFileChange(file) {
         sourceMDFile(file, source);
         this.writeIndex();
-      });
-      propWatcher.on('change', file => sourceMDFile(file, source));
+      }
+      propWatcher.on('add', onMDFileChange);
+      propWatcher.on('change', onMDFileChange);
     });
   }
 };

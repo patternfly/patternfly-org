@@ -1,4 +1,4 @@
-const { build } = require('./build');
+const { buildWebpack } = require('./build');
 const serverConfig = require('../webpack/webpack.server.config');
 
 const options = JSON.parse(process.argv[2]);
@@ -12,7 +12,7 @@ async function buildServer() {
   };
   const webpackServerConfig = await serverConfig(null, webpackArgv);
   console.log('build server');
-  await build(webpackServerConfig);
+  await buildWebpack(webpackServerConfig);
 }
 
 buildServer();

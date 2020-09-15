@@ -1,4 +1,4 @@
-const { build } = require('./build');
+const { buildWebpack } = require('./build');
 const clientConfig = require('../webpack/webpack.client.config');
 
 const options = JSON.parse(process.argv[2]);
@@ -12,7 +12,7 @@ async function buildClient() {
   };
   const webpackClientConfig = await clientConfig(options.analyze && 'analyze', webpackArgv);
   console.log('build client');
-  await build(webpackClientConfig);
+  await buildWebpack(webpackClientConfig);
 }
 
 buildClient();
