@@ -228,6 +228,18 @@ const globs = {
   md: [],
 };
 
+function writeIndex() {
+  const stringifyRoute = ([route, pageData]) => `'${route}': {\n    ${Object.entries(pageData)
+    .map(([key, val]) => `${key}: ${JSON.stringify(val)}`)
+    .concat(`Component: () => import(/* webpackChunkName: "${route.substr(1)}/index" */ '.${route}')`)
+    .join(',\n    ')}\n  }`;
+
+  const indexContent = `module.exports = {\n  ${Object.entries(routes)
+      .map(stringifyRoute)
+      .join(',\n  ')}\n};`;
+  fs.outputFileSync(path.join(outputBase, 'index.js'), indexContent);
+}
+
 module.exports = {
   sourceProps(glob, ignore) {
     globs.props.push({ glob, ignore });
@@ -237,17 +249,7 @@ module.exports = {
     globs.md.push({ glob, source, ignore });
     sync(glob, { ignore }).forEach(file => sourceMDFile(file, source));
   },
-  writeIndex() {
-    const stringifyRoute = ([route, pageData]) => `'${route}': {\n    ${Object.entries(pageData)
-      .map(([key, val]) => `${key}: ${JSON.stringify(val)}`)
-      .concat(`Component: () => import(/* webpackChunkName: "${route.substr(1)}/index" */ '.${route}')`)
-      .join(',\n    ')}\n  }`;
-
-    const indexContent = `module.exports = {\n  ${Object.entries(routes)
-        .map(stringifyRoute)
-        .join(',\n  ')}\n};`;
-    fs.outputFileSync(path.join(outputBase, 'index.js'), indexContent);
-  },
+  writeIndex,
   watchMD() {
     globs.props.forEach(({ glob, ignore }) => {
       const mdWatcher = chokidar.watch(glob, { ignored: ignore, ignoreInitial: true });
@@ -258,7 +260,7 @@ module.exports = {
       const propWatcher = chokidar.watch(glob, { ignored: ignore, ignoreInitial: true });
       function onMDFileChange(file) {
         sourceMDFile(file, source);
-        this.writeIndex();
+        writeIndex();
       }
       propWatcher.on('add', onMDFileChange);
       propWatcher.on('change', onMDFileChange);
