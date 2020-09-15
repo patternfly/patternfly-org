@@ -147,7 +147,7 @@ export const SideNavLayout = ({ children, groupedRoutes }) => {
         hasVersionSwitcher={hasVersionSwitcher}
         pathPrefix={pathPrefix} />}
       logo={prnum ? `PR #${prnum}` : <Brand src={logo} alt="Patternfly Logo" />}
-      logoProps={{ href: prurl || pathPrefix }}
+      logoProps={{ href: prurl || pathPrefix || '/' }}
       showNavToggle
       topNav={topNavItems.length > 0 && <TopNav navItems={topNavItems} />}
     />
