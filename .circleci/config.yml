@@ -124,6 +124,17 @@ jobs:
         keys:
         - *js_deps_cache_key
     - run:
+        name: Avoid Unknown Host for github.com
+        command: mkdir -p ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+    - run:
+        name: Set git user
+        command: |
+          git config user.name patternfly-build
+          git config user.email patternfly-build@redhat.com
+    - run:
+        name: Deploy to NPM
+        command: .circleci/release.sh
+    - run:
         name: Install AWS CLI
         command: |
           sudo apt-get update
@@ -147,14 +158,3 @@ jobs:
     - run:
         name: Sync to staging
         command: .circleci/upload-staging.sh
-    - run:
-        name: Avoid Unknown Host for github.com
-        command: mkdir -p ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
-    - run:
-        name: Set git user
-        command: |
-          git config user.name patternfly-build
-          git config user.email patternfly-build@redhat.com
-    - run:
-        name: Deploy to NPM
-        command: .circleci/release.sh
