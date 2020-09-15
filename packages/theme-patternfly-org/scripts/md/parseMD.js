@@ -148,9 +148,6 @@ function toReactComponent(mdFilePath, source) {
     .use(() => tree => remove(tree, 'export'))
     // Comments aren't very useful in generated files no one wants to look at
     .use(() => tree => remove(tree, 'comment'))
-    // Add custom PatternFly doc design things
-    .use(require('./anchor-header'))
-    .use(require('./styled-tags'))
     // Extract examples to create fullscreen page routes
     // Needs to be run after mdx-ast-to-mdx-hast which parses meta properties
     .use(() => tree => {
@@ -170,6 +167,9 @@ function toReactComponent(mdFilePath, source) {
         }
       });
     })
+    // Add custom PatternFly doc design things
+    .use(require('./anchor-header'))
+    .use(require('./styled-tags'))
     // Transform HAST object to JSX string
     .use(require('./mdx-hast-to-jsx'), {
       getOutPath: () => outPath,
