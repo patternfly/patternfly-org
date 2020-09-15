@@ -1,9 +1,33 @@
 const visit = require('unist-util-visit');
 const remove = require('unist-util-remove');
+const { parseJSXAttributes } = require('./jsxAttributes');
+
+function isExample(node, file) {
+  if (node.type !== 'code' || !['js', 'html'].includes(node.lang)) {
+    return false;
+  }
+  if (node.meta) {
+    let properties = {};
+    try {
+      Object.entries(parseJSXAttributes(`<Component ${node.meta} />`))
+        .forEach(([key, val]) => {
+          properties[key] = val;
+        }); 
+    }
+    catch (error) {
+      file.fail(`Error parsing "${node.meta}": ${error}`);
+    }
+    if (properties.noLive) {
+      return false;
+    }
+  }
+
+  return true;
+}
 
 function exampleCaptions() {
-  return tree => {
-    visit(tree, 'code', (node, _index, parent) => {
+  return (tree, file) => {
+    visit(tree, node => isExample(node, file), (node, _index, parent) => {
       let title = 'Untitled example';
       let caption = [];
 
