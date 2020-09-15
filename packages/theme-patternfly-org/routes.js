@@ -23,8 +23,10 @@ for (let route in routes) {
 const allRoutes = Object.assign({}, routes);
 
 // Group routes by section, id
+const isNull = o => o === null || o === undefined;
+
 const groupedRoutes = Object.entries(routes)
-  .filter(([_slug, { id, section }]) => id && section)
+  .filter(([_slug, { id, section }]) => !isNull(id) && !isNull(section))
   .reduce((accum, [slug, pageData]) => {
     const { section, id, title, source } = pageData;
     accum[section] = accum[section] || {};
