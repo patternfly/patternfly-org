@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.11](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.10...patternfly-org-4@4.2.11) (2020-09-15)
+
+
+### Bug Fixes
+
+* **icons:** hide AnsibeTowerIcon, show AnsibleTowerIcon ([#2110](https://github.com/patternfly/patternfly-org/issues/2110)) ([9c6dcc2](https://github.com/patternfly/patternfly-org/commit/9c6dcc267465bb056da72dc69d3e5ee33d890e1a))
+
+
+
+
+
 ## [4.2.10](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.9...patternfly-org-4@4.2.10) (2020-09-14)
 
 **Note:** Version bump only for package patternfly-org-4
