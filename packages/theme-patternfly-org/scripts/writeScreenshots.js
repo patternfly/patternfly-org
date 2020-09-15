@@ -17,7 +17,9 @@ async function writeScreenshot({ page, data: { url, urlPrefix } }) {
   await page.goto(url);
   await page.waitForSelector('.pf-u-h-100');
   // Wait extra 300ms
-  await page.waitFor(300);
+  await new Promise(resolve => {
+    setTimeout(resolve, 300);
+  });
   const outfile = path.join(
     screenshotBase,
     url.replace(`${urlPrefix}/`, '') + '.png'

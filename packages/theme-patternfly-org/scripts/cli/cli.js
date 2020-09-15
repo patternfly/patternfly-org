@@ -30,7 +30,7 @@ program
 
 program
   .command('screenshots')
-  .option('-u, --urlPrefix', 'where fullscreen pages are hosted', 'http://localhost:5000/v4')
+  .option('-u, --urlPrefix <prefix>', 'where fullscreen pages are hosted', 'http://localhost:5000/v4')
   .description('updates screenshots for generated components')
   .action(options => {
     const { writeScreenshots } = require('../writeScreenshots');
