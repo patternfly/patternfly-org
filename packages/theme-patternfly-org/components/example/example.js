@@ -37,7 +37,8 @@ export const Example = ({
   isBeta,
   id,
   section,
-  liveContext
+  liveContext,
+  children,
 }) => {
   if (isFullscreenPreview) {
     isFullscreen = false;
@@ -98,14 +99,17 @@ export const Example = ({
 
   return (
     <div className="ws-example">
-      <AutoLinkHeader
-        metaText={isBeta && <Badge className="ws-beta-badge pf-u-ml-xs">Beta</Badge>}
-        size="h4"
-        headingLevel="h3"
-        className="ws-example-heading"
-      >
-        {exampleName}
-      </AutoLinkHeader>
+      <div className="ws-example-header">
+        <AutoLinkHeader
+          metaText={isBeta && <Badge className="ws-beta-badge pf-u-ml-xs">Beta</Badge>}
+          size="h4"
+          headingLevel="h3"
+          className="ws-example-heading"
+        >
+          {exampleName}
+        </AutoLinkHeader>
+        {children}
+      </div>
       <LiveProvider
         scope={scope}
         code={editorCode}

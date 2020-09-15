@@ -22,12 +22,12 @@ function exampleCaptions() {
             child.children[0].value
           ) {
             title = child.children[0].value;
-            parent.children[i].needsDeletion = true;
+            child.needsDeletion = true;
             break;
           }
           else {
-            caption.unshift(child);
-            parent.children[i].needsDeletion = true;
+            caption.unshift(Object.assign({}, child));
+            child.needsDeletion = true;
           }
         }
       }
