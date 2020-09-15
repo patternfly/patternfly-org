@@ -15,10 +15,10 @@ import 'prismjs/themes/prism-coy.css';
 import './example.css';
 
 const getSupportedLanguages = lang => {
-  if (lang.includes('js')) {
+  if (['js', 'javascript'].includes(lang)) {
     return ['jsx'];
   }
-  else if (lang.includes('html')) {
+  else if (lang === 'html') {
     return ['html'];
   }
   return [];
