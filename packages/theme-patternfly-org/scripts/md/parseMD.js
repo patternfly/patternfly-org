@@ -85,7 +85,7 @@ function toReactComponent(mdFilePath, source) {
 
       pageData = {
         id: frontmatter.id,
-        section: frontmatter.section || 'components',
+        section: frontmatter.section || '',
         source,
         slug,
         sourceLink: `https://github.com/patternfly/${
