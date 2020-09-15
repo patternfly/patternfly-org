@@ -89,6 +89,15 @@ module.exports = (_env, argv) => {
           ]
         },
         {
+          test: /\.(pdf)$/,
+          use: {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[contenthash].[ext]',
+            }
+          }
+        },
+        {
           test: /.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
           use: [
             {
