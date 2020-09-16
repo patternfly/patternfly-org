@@ -39,9 +39,17 @@
   /* For icon */
   padding-left: 32px;
 }
-.global-search-icon {
+.ws-hide-search-input .algolia-autocomplete,
+.ws-hide-search-input #global-search-input {
+  display: none !important;
+}
+.ws-collapse-search {
+  position: relative;
+  top: 4px;
+}
+.ws-global-search > .global-search-icon {
   position: absolute;
-  top: 10px;
+  top: 14px;
   left: 4px;
 }
 #global-search-input,
