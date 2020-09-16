@@ -117,6 +117,7 @@ module.exports = (_env, argv) => {
         'client-styles': path.resolve(process.cwd(), 'patternfly-docs.css.js'),
         './routes-client': path.resolve(process.cwd(), 'patternfly-docs.routes.js'),
         './routes-generated': path.resolve(process.cwd(), 'src/generated/index.js'),
+        'buble': '@philpl/buble', // https://github.com/FormidableLabs/react-live#what-bundle-size-can-i-expect
       },
       modules: [
         'node_modules',

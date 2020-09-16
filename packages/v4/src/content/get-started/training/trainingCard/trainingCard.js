@@ -1,6 +1,11 @@
 import React from 'react';
 import { Card, CardTitle, CardHeader, CardBody, CardFooter, Button } from '@patternfly/react-core';
-import { ExternalLinkAltIcon, CubesIcon, ClockIcon, RunningIcon, PuzzlePieceIcon, ChartBarIcon } from '@patternfly/react-icons';
+import ExternalLinkAltIcon from '@patternfly/react-icons/dist/js/icons/external-link-alt-icon';
+import CubesIcon from '@patternfly/react-icons/dist/js/icons/cubes-icon';
+import ClockIcon from '@patternfly/react-icons/dist/js/icons/clock-icon';
+import RunningIcon from '@patternfly/react-icons/dist/js/icons/running-icon';
+import PuzzlePieceIcon from '@patternfly/react-icons/dist/js/icons/puzzle-piece-icon';
+import ChartBarIcon from '@patternfly/react-icons/dist/js/icons/chart-bar-icon';
 import { Link } from 'theme-patternfly-org/components/link/link';
 import { capitalize } from 'theme-patternfly-org/helpers/capitalize';
 import './trainingCard.css';
