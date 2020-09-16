@@ -1,6 +1,6 @@
 import React from 'react';
 import { Title } from '@patternfly/react-core';
-import { LinkIcon } from '@patternfly/react-icons';
+import LinkIcon from '@patternfly/react-icons/dist/js/icons/link-icon';
 import { Link } from '../link/link';
 import { slugger } from '../../helpers/slugger';
 import './autoLinkHeader.css';

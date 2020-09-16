@@ -39,12 +39,10 @@ const clientConfig = async (env, argv) => {
         cacheGroups: {
           // We need patternfly.css to come before our styles because of selector specificity
           vendorStyles: {
-            name: 'vendor-styles',
             test: /[\\/]node_modules[\\/].*\.css$/,
             priority: 2
           },
           mainStyles: {
-            name: 'main-styles',
             test: /\.css$/,
             priority: 1
           }

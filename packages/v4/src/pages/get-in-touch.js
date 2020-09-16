@@ -1,5 +1,8 @@
 import React from 'react';
-import { ChatIcon, QuestionIcon, CatalogIcon, MailBulkIcon } from '@patternfly/react-icons';
+import ChatIcon from '@patternfly/react-icons/dist/js/icons/chat-icon';
+import QuestionIcon from '@patternfly/react-icons/dist/js/icons/question-icon';
+import CatalogIcon from '@patternfly/react-icons/dist/js/icons/catalog-icon';
+import MailBulkIcon from '@patternfly/react-icons/dist/js/icons/mail-bulk-icon';
 import { Grid, GridItem, PageSection, PageSectionVariants, Split, SplitItem, Title } from '@patternfly/react-core';
 
 const GetInTouchPage = () => (

@@ -1,6 +1,9 @@
 import React from 'react';
 import { Button, Form, TextContent, Text } from '@patternfly/react-core';
-import { CopyIcon, AsleepIcon, ExternalLinkAltIcon, CodepenIcon } from '@patternfly/react-icons';
+import CopyIcon from '@patternfly/react-icons/dist/js/icons/copy-icon';
+import AsleepIcon from '@patternfly/react-icons/dist/js/icons/asleep-icon';
+import ExternalLinkAltIcon from '@patternfly/react-icons/dist/js/icons/external-link-alt-icon';
+import CodepenIcon from '@patternfly/react-icons/dist/js/icons/codepen-icon';
 import { copy } from '../../helpers/copy';
 import './exampleToolbar.css';
 
