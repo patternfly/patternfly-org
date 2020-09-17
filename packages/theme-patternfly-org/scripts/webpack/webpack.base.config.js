@@ -38,6 +38,9 @@ module.exports = (_env, argv) => {
             path.resolve(__dirname, '../..'), // Temporarily compile theme using webpack for development
             /react-[\w-]+\/src\/.*\/examples/
           ],
+          exclude: [
+            path.resolve(__dirname, '../../node_modules'), // Temporarily compile theme using webpack for development
+          ],
           use: {
             loader: 'babel-loader',
             options: {
@@ -58,35 +61,26 @@ module.exports = (_env, argv) => {
         },
         {
           test: /\.(png|jpe?g|webp)$/,
-          include: [
-            path.resolve(process.cwd(), 'src'),
-            path.resolve(__dirname, '../..'), // Temporarily compile theme using webpack for development
-            /react-[\w-]+\/src\/.*\/examples/
-          ],
-          use: [
-            {
-              loader: 'responsive-loader',
-              options: {
-                adapter: require('responsive-loader/sharp'),
-                name: '[name].[contenthash].[ext]',
-                outputPath: 'images/'
-              },
-            }
-          ]
+          use: {
+            loader: 'responsive-loader',
+            options: {
+              adapter: require('responsive-loader/sharp'),
+              name: '[name].[contenthash].[ext]',
+              outputPath: 'images/'
+            },
+          }
         },
         {
-          test: /\.(png|jpe?g|webp|gif|svg)$/,
-          use: [
-            {
-              loader: 'url-loader',
-              options: {
-                limit: 1024,
-                fallback: 'file-loader',
-                name: '[name].[contenthash].[ext]',
-                outputPath: 'images/'
-              },
-            }
-          ]
+          test: /\.(gif|svg)$/,
+          use: {
+            loader: 'url-loader',
+            options: {
+              limit: 1024,
+              fallback: 'file-loader',
+              name: '[name].[contenthash].[ext]',
+              outputPath: 'images/'
+            },
+          }
         },
         {
           test: /\.(pdf)$/,
