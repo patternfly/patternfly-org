@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.14](https://gh-redallen/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.12...theme-patternfly-org@0.1.14) (2020-09-17)
+
+
+### Bug Fixes
+
+* **react:** build ([#2132](https://gh-redallen/patternfly/patternfly-org/issues/2132)) ([a3a7085](https://gh-redallen/patternfly/patternfly-org/commits/a3a70856921eeedc175e60824c3ecb5534dafe8b))
+
+
+
+
+
 ## [0.1.13](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.12...theme-patternfly-org@0.1.13) (2020-09-16)
 
 **Note:** Version bump only for package theme-patternfly-org
