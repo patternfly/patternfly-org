@@ -72,20 +72,22 @@ const clientConfig = async (env, argv) => {
             {
               loader: 'css-loader'
             },
-            {
-              loader: 'postcss-loader',
-              options: {
-                postcssOptions: {
-                  plugins: [
-                    require('autoprefixer')({
-                      env: '>0.25%, not ie 11, not op_mini all',
-                      flexbox: false,
-                      grid: false
-                    })
-                  ]
+            ...(!isProd ? [] : [
+              {
+                loader: 'postcss-loader',
+                options: {
+                  postcssOptions: {
+                    plugins: [
+                      require('autoprefixer')({
+                        env: '>0.25%, not ie 11, not op_mini all',
+                        flexbox: false,
+                        grid: false
+                      })
+                    ]
+                  }
                 }
               }
-            }
+            ])
           ]
         },
         {
