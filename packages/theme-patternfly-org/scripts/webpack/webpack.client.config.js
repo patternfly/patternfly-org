@@ -19,6 +19,7 @@ catch {
 const staticDir = path.join(process.cwd(), 'static/');
 // Don't include PatternFly styles twice
 const reactCSSRegex = /(react-[\w-]+\/dist|react-styles\/css)\/.*\.css$/;
+const reactJSRegex = /react-([^\\/]*)[\\/]dist[\\/].*\.js$/
 
 const clientConfig = async (env, argv) => {
   const isProd = argv.mode === 'production';
@@ -47,7 +48,18 @@ const clientConfig = async (env, argv) => {
           mainStyles: {
             test: /\.css$/,
             priority: 1
-          }
+          },
+          ...(!isProd && {
+            // This speeds up reloads 2x in React, doesn't affect org's
+            reactPackage: {
+              test: reactJSRegex,
+              name(module, _chunks, cacheGroupKey) {
+                const package = module.identifier().match(reactJSRegex)[1];
+                return `${cacheGroupKey}-${package}`;
+              },
+              priority: 3
+            }
+          })
         },
       },
       minimize: isProd ? true : false,
