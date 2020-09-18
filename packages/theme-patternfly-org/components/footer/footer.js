@@ -96,7 +96,7 @@ export const Footer = () => (
                   <li className="pf-c-nav__item">
                     <Link
                       className="pf-c-nav__link"
-                      to={"/get-started/designers"}
+                      to="/get-started/design"
                       aria-label="How to contribute as a Designer"
                     >
                       Designers
@@ -105,7 +105,7 @@ export const Footer = () => (
                   <li className="pf-c-nav__item">
                     <Link
                       className="pf-c-nav__link"
-                      to={"/get-started/developers"}
+                      to="/get-started/develop"
                       aria-label="How to contribute as a Developer"
                     >
                       Developers
