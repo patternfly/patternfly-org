@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.20](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.19...patternfly-org-4@4.2.20) (2020-09-18)
+
+
+### Bug Fixes
+
+* **bulk-select:** add back bulk selection guidelines ([#2133](https://github.com/patternfly/patternfly-org/issues/2133)) ([fc81948](https://github.com/patternfly/patternfly-org/commit/fc8194898c81c2f709523a9e0d48156400468e74))
+
+
+
+
+
 ## [4.2.19](https://gh-redallen/patternfly/patternfly-org/compare/patternfly-org-4@4.2.17...patternfly-org-4@4.2.19) (2020-09-17)
 
 **Note:** Version bump only for package patternfly-org-4
