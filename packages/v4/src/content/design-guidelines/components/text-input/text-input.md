@@ -3,7 +3,7 @@ id: Text input
 section: components
 ---
 
-Use text input to gather free-form text from a user.
+Use **text input** to gather free-form text from a user.
 
 ## Elements
 
@@ -32,15 +32,9 @@ Use text input to gather free-form text from a user.
 
 **Popovers**
 
-[Popovers](/components/popover/design-guidelines) provide context around a text or input field. Popovers are represented with an unfilled question mark con (fa-question-circle) and displayed when the user clicks on the icon.
+[Popovers](/components/form/design-guidelines#popovers) provide context around a text or input field. Popovers are represented with an unfilled question mark con (fa-question-circle) and displayed when the user clicks on the icon.
 
 For more information about how to provide help content, see  the [forms design guidelines](/components/form/design-guidelines#user-help).
-
-### Input groups
-
-Input groups allow users to group multiple input types into one control. An example of this is adding buttons to one or both sides of a text input, including in a search field and an email input field. View more examples in the [input group documentation](/components/input-group).
-
-<img src="./img/input-group.png" alt="Example of input groups" width="496"/>
 
 ### Errors and validation
 Wherever possible, use inline errors to notify users where there is an issue with their input. Inline errors help should be short and help users quickly identify and understand what they need to fix and why.

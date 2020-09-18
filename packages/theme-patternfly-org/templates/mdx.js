@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageSection, Title } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
-import { ExternalLinkAltIcon } from '@patternfly/react-icons';
+import ExternalLinkAltIcon from '@patternfly/react-icons/dist/js/icons/external-link-alt-icon';
 import { Router, useLocation } from '@reach/router';
 import { CSSVariables, PropsTable, TableOfContents, Link, AutoLinkHeader, InlineAlert } from '../components';
 import { capitalize, getTitle } from '../helpers';

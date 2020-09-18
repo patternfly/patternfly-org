@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import {
+  Button,
   Page,
   PageHeader,
   PageSidebar,
@@ -13,7 +14,9 @@ import {
   DropdownGroup,
   Divider
 } from '@patternfly/react-core';
-import { SearchIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
+import SearchIcon from '@patternfly/react-icons/dist/js/icons/search-icon';
+import ExternalLinkAltIcon from '@patternfly/react-icons/dist/js/icons/external-link-alt-icon';
+import TimesIcon from '@patternfly/react-icons/dist/js/icons/times-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
 import logo from '../logo.svg';
@@ -27,6 +30,11 @@ const HeaderTools = ({
 }) => {
   const initialVersion = staticVersions.Releases.find(release => release.latest);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [isSearchExpanded, setSearchExpanded] = useState(false);
+  const expandAndFocusSearch = () => {
+    setSearchExpanded(true);
+    setTimeout(() => document.getElementById('global-search-input').focus(), 0);
+  }
   const latestVersion = versions.Releases.find(version => version.latest);
   const getDropdownItem = version => (
     <DropdownItem
@@ -42,9 +50,22 @@ const HeaderTools = ({
   return (
     <PageHeaderTools>
       {hasSearch && (
-        <PageHeaderToolsItem className="ws-global-search">
-          <TextInput id="global-search-input" placeholder="Search" />
-          <SearchIcon className="global-search-icon" />
+        <PageHeaderToolsItem className={`ws-global-search ${isSearchExpanded ? '' : 'ws-hide-search-input'}`}>
+          <TextInput id="global-search-input"  placeholder="Search" />
+          {isSearchExpanded
+            ? (
+              <React.Fragment>
+                <SearchIcon className="global-search-icon" />
+                <Button aria-label="Expand search input" variant="plain" className="ws-collapse-search" onClick={() => setSearchExpanded(false)}>
+                  <TimesIcon />
+                </Button>
+              </React.Fragment>
+            ) : (
+              <Button aria-label="Collapse search input" variant="plain" onClick={expandAndFocusSearch}>
+                <SearchIcon className="global-search-icon" />
+              </Button>
+            )
+          }
         </PageHeaderToolsItem>
       )}
       {hasVersionSwitcher && (
@@ -147,7 +168,7 @@ export const SideNavLayout = ({ children, groupedRoutes }) => {
         hasVersionSwitcher={hasVersionSwitcher}
         pathPrefix={pathPrefix} />}
       logo={prnum ? `PR #${prnum}` : <Brand src={logo} alt="Patternfly Logo" />}
-      logoProps={{ href: prurl || pathPrefix }}
+      logoProps={{ href: prurl || pathPrefix || '/' }}
       showNavToggle
       topNav={topNavItems.length > 0 && <TopNav navItems={topNavItems} />}
     />

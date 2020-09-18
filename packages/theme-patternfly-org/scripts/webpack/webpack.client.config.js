@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const { merge } = require('webpack-merge');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -15,6 +16,7 @@ catch {
   // Inside core workspace
   pfDir = path.join(process.cwd(), 'dist/assets');
 }
+const staticDir = path.join(process.cwd(), 'static/');
 // Don't include PatternFly styles twice
 const reactCSSRegex = /(react-[\w-]+\/dist|react-styles\/css)\/.*\.css$/;
 
@@ -39,12 +41,10 @@ const clientConfig = async (env, argv) => {
         cacheGroups: {
           // We need patternfly.css to come before our styles because of selector specificity
           vendorStyles: {
-            name: 'vendor-styles',
             test: /[\\/]node_modules[\\/].*\.css$/,
             priority: 2
           },
           mainStyles: {
-            name: 'main-styles',
             test: /\.css$/,
             priority: 1
           }
@@ -106,7 +106,8 @@ const clientConfig = async (env, argv) => {
           // versions.json will later be copied to the root www dir
           { from: path.join(__dirname, '../../versions.json'), to: 'versions.json' },
           { from: path.join(pfDir, 'assets/images/'), to: 'assets/images/' },
-          { from: path.join(pfDir, 'assets/fonts/'), to: 'assets/fonts/' }
+          { from: path.join(pfDir, 'assets/fonts/'), to: 'assets/fonts/' },
+          ...(fs.existsSync(staticDir) ? [{ from: staticDir, to: '' }] : [])
         ]
       }),
       ...await getHtmlWebpackPlugins({ isProd, ...argv }), // Create an HTML page per route

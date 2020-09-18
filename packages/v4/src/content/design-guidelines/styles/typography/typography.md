@@ -4,7 +4,8 @@ section: guidelines
 ---
 
 import { Button, Grid, GridItem } from '@patternfly/react-core';
-import { CheckCircleIcon, TimesCircleIcon } from '@patternfly/react-icons';
+import CheckCircleIcon from '@patternfly/react-icons/dist/js/icons/check-circle-icon';
+import TimesCircleIcon from '@patternfly/react-icons/dist/js/icons/times-circle-icon';
 import { TypographyGrid, LineHeightTitle, SpacingContentItem, Spacer, TitleLevel, styleProps } from './typography';
 import correct from './typography_correct_spacing.png';
 import incorrect from './typography_incorrect_spacing.png';

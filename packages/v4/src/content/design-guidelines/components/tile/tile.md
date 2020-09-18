@@ -2,6 +2,12 @@
 id: Tile
 section: components
 ---
+**Tiles** are a form of selection that can be used in place of [radio buttons](/components/radio) and are commonly used in [forms](/components/form).
 
-We’re working on some guidelines for this component.
-If you have any questions in the meantime, feel free to [get in touch with us.](/get-in-touch)
+## Usage
+
+Tiles can be used as a selection method when:
+* The selection requires more attention or has high importance.
+* The selection options include extensive information like a longer description or icon.
+
+

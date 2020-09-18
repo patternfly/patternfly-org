@@ -152,7 +152,7 @@ function serializeElement(node, options) {
   }
   else if (type === 'img') {
     res += ` src={${srcImport}}`;
-    if (/\.(png|jpe?g|webp)$/.test(srcImport)) {
+    if (props.isResponsive) {
       if (!props.width) {
         res += ` width={${srcImport}.width}`;
         res += ` height={${srcImport}.height}`;

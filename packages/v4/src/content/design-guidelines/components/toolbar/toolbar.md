@@ -4,8 +4,6 @@ section: components
 related: ['Overflow menu', 'Pagination']
 ---
 
-The **Toolbar** component provides a flexible system for creating responsive toolbars that manage the data displayed in a list, table, or any other data view. Toolbar configurations can be customized to support a variety of use cases.
-
 Toolbars can be included to allow a user to manage and manipulate a data set. Data can be presented in any valid presentation, a table, a list, or a data visualization (chart), for example. The PatternFly Toolbar component is a flexible layout system that accommodates a variety of configurations that can be adapted to your specific needs.
 
 

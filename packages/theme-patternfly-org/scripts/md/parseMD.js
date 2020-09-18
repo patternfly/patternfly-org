@@ -85,7 +85,7 @@ function toReactComponent(mdFilePath, source) {
 
       pageData = {
         id: frontmatter.id,
-        section: frontmatter.section || 'components',
+        section: frontmatter.section || '',
         source,
         slug,
         sourceLink: `https://github.com/patternfly/${
@@ -148,9 +148,6 @@ function toReactComponent(mdFilePath, source) {
     .use(() => tree => remove(tree, 'export'))
     // Comments aren't very useful in generated files no one wants to look at
     .use(() => tree => remove(tree, 'comment'))
-    // Add custom PatternFly doc design things
-    .use(require('./anchor-header'))
-    .use(require('./styled-tags'))
     // Extract examples to create fullscreen page routes
     // Needs to be run after mdx-ast-to-mdx-hast which parses meta properties
     .use(() => tree => {
@@ -170,6 +167,9 @@ function toReactComponent(mdFilePath, source) {
         }
       });
     })
+    // Add custom PatternFly doc design things
+    .use(require('./anchor-header'))
+    .use(require('./styled-tags'))
     // Transform HAST object to JSX string
     .use(require('./mdx-hast-to-jsx'), {
       getOutPath: () => outPath,
@@ -228,6 +228,18 @@ const globs = {
   md: [],
 };
 
+function writeIndex() {
+  const stringifyRoute = ([route, pageData]) => `'${route}': {\n    ${Object.entries(pageData)
+    .map(([key, val]) => `${key}: ${JSON.stringify(val)}`)
+    .concat(`Component: () => import(/* webpackChunkName: "${route.substr(1)}/index" */ '.${route}')`)
+    .join(',\n    ')}\n  }`;
+
+  const indexContent = `module.exports = {\n  ${Object.entries(routes)
+      .map(stringifyRoute)
+      .join(',\n  ')}\n};`;
+  fs.outputFileSync(path.join(outputBase, 'index.js'), indexContent);
+}
+
 module.exports = {
   sourceProps(glob, ignore) {
     globs.props.push({ glob, ignore });
@@ -237,17 +249,7 @@ module.exports = {
     globs.md.push({ glob, source, ignore });
     sync(glob, { ignore }).forEach(file => sourceMDFile(file, source));
   },
-  writeIndex() {
-    const stringifyRoute = ([route, pageData]) => `'${route}': {\n    ${Object.entries(pageData)
-      .map(([key, val]) => `${key}: ${JSON.stringify(val)}`)
-      .concat(`Component: () => import(/* webpackChunkName: "${route.substr(1)}/index" */ '.${route}')`)
-      .join(',\n    ')}\n  }`;
-
-    const indexContent = `module.exports = {\n  ${Object.entries(routes)
-        .map(stringifyRoute)
-        .join(',\n  ')}\n};`;
-    fs.outputFileSync(path.join(outputBase, 'index.js'), indexContent);
-  },
+  writeIndex,
   watchMD() {
     globs.props.forEach(({ glob, ignore }) => {
       const mdWatcher = chokidar.watch(glob, { ignored: ignore, ignoreInitial: true });
@@ -256,11 +258,12 @@ module.exports = {
     });
     globs.md.forEach(({ glob, source, ignore }) => {
       const propWatcher = chokidar.watch(glob, { ignored: ignore, ignoreInitial: true });
-      propWatcher.on('add', file => {
+      function onMDFileChange(file) {
         sourceMDFile(file, source);
-        this.writeIndex();
-      });
-      propWatcher.on('change', file => sourceMDFile(file, source));
+        writeIndex();
+      }
+      propWatcher.on('add', onMDFileChange);
+      propWatcher.on('change', onMDFileChange);
     });
   }
 };

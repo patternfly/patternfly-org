@@ -6,26 +6,21 @@ related: ['Page', 'Breadcrumb', 'Tabs']
 
 **Navigation** is used to organize an application’s structure and content, making it easy to find information and accomplish tasks. Navigation communicates relationships, context, and actions a user can take within an application.
 
-Navigation is used to organize an application’s structure and content, making it easy to find information and accomplish tasks. Navigation communicates relationships, context, and actions a user can take within an application.
-
 ## Elements
-![Navigation system elements](./img/nav-elements.png)
 
-![Navigation system elements](./img/nav-elements2.png)
-
-![Navigation system elements](./img/nav-elements3.png)
+<img src="./img/nav-elements.png" alt="Examples of different navigations offered by PatternFly" width="990"/>
 
 1. **Masthead**
-2. [**Context selector** (optional)](#context-selector): Enables a user to switch between different application contexts, like administration and monitoring
-3. [**Horizontal navigation**](#horizontal-navigation)
-4. **Menu icon button:** Provides a way for users to toggle vertical navigation
-5. [**Vertical navigation**](#vertical-navigation)
-6. [**Local navigation**](#local-navigation---tabs)
-7. [**Breadcrumbs**](#breadcrumbs)
+2. [**Horizontal navigation**](#horizontal-navigation)
+3. **Menu icon button:** Provides a way for users to toggle vertical navigation
+4. [**Vertical navigation**](#vertical-navigation)
+5. [**Tertiary navigation**](#tertiary-navigation)
 
 ## Usage
+
 ### Vertical navigation
-![Vertical nav](./img/single-level.png)
+
+<img src="./img/single-level.png" alt="Example of simple vertical navigation" width="634"/>
 
 Vertical navigation is hierarchical global navigation that displays navigation options from top to bottom on the left side of a screen. PatternFly vertical navigation can be collapsed to provide additional screen real estate by using a menu icon button at the top left.
 
@@ -35,24 +30,30 @@ Vertical navigation is hierarchical global navigation that displays navigation o
 * You expect your application to be used on mobile devices
 
 #### Variations
-  * **Simple vertical navigation**
-  ![Single level](./img/single-level.png)
-  Use a simple, single-level vertical navigation when you only have one level of navigation to display.
 
-  * **Grouped navigation**
-  ![Two level nav](./img/two-level.png)
+**Simple vertical navigation**
 
-  When you have a small amount of secondary navigation items, you can group your items and display them persistently beneath the primary navigation items.
+Use a simple, single-level vertical navigation when you only have one level of navigation to display.
 
-  * **Expandable vertical navigation**
+<img src="./img/single-level.png" alt="Example of simple vertical navigation" width="634"/>
 
-  ![Expandable nav](./img/expandable.png)
+**Grouped navigation**
 
-  When you have a large number of secondary navigation items, you can use an expandable navigation to collapse and expand options as needed.
+When you have a small amount of secondary navigation items, you can group your items and display them persistently beneath the primary navigation items.
+
+<img src="./img/two-level.png" alt="Example of grouped vertical navigation" width="634"/>
+
+**Expandable vertical navigation**
+
+When you have a large number of secondary navigation items, you can use an expandable navigation to collapse and expand options as needed.
+
+<img src="./img/expandable-nav.png" alt="Example of expandable vertical navigation" width="634"/>
+
+
 
 ### Horizontal navigation
 
-![Horizontal nav](./img/horizontal-nav.png)
+<img src="./img/horizontal-nav.png" alt="Example of horizontal navigation" width="990"/>
 
 Horizontal navigation is global navigation that displays navigation items from left to right in the application's masthead.
 
@@ -60,22 +61,8 @@ Horizontal navigation is global navigation that displays navigation items from l
 * You have less than five primary navigation items
 * You have only one level of navigation and no secondary navigation items
 
-### Local navigation - Tabs
-![Local navigation](./img/local.png)
+### Tertiary navigation
+
+<img src="./img/tertiary-nav.png" alt="Example of tertiary navigation" width="708"/>
+
 While global navigation controls what users are seeing at the application-level, local navigation provides more granular navigation specific to a particular page or window in the application. For example, a user might use global navigation to get to a settings page, and then use local navigation to access privacy and general user settings.
-
-### Context selector
-
-![Context selector](./img/context-selector.png)
-
-Use a context selector in addition to your global navigation when the data or resources you need to show in the interface need to change depending on the users’ context.
-
-### Breadcrumbs
-
-![Breadcrumbs](./img/breadcrumb.png)
-
-Breadcrumbs act as a resource to help users navigate more efficiently and provide context to help users understand where they are in the application hierarchy. Use breadcrumbs in addition to your global navigation to display a user's location in the application.
-
-#### When to use
-* Use breadcrumbs when the primary global navigation items are not always exposed.
-* Never use breadcrumbs as a replacement for global navigation.
