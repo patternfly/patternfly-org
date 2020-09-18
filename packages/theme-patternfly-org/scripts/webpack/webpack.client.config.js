@@ -40,26 +40,32 @@ const clientConfig = async (env, argv) => {
         chunks: 'all',
         // https://webpack.js.org/plugins/mini-css-extract-plugin/#extracting-all-css-in-a-single-file
         cacheGroups: {
-          // We need patternfly.css to come before our styles because of selector specificity
           vendorStyles: {
             test: /[\\/]node_modules[\\/].*\.css$/,
-            priority: 2
+            priority: 10
           },
           mainStyles: {
             test: /\.css$/,
-            priority: 1
+            priority: 9
           },
+          // This speeds up reloads 2x in React and doesn't affect org's reload times
           ...(!isProd && {
-            // This speeds up reloads 2x in React, doesn't affect org's
             reactPackage: {
               test: reactJSRegex,
               name(module, _chunks, cacheGroupKey) {
                 const package = module.identifier().match(reactJSRegex)[1];
                 return `${cacheGroupKey}-${package}`;
               },
-              priority: 3
-            }
-          })
+              reuseExistingChunk: true,
+              priority: 5
+            },
+          }),
+          defaultVendors: {
+            test: /[\\/]node_modules[\\/]/,
+            enforce: true,
+            reuseExistingChunk: true,
+            priority: 3
+          },
         },
       },
       minimize: isProd ? true : false,

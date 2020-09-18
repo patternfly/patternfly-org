@@ -6,8 +6,8 @@
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
+    "analyze": "theme-patternfly-org build all --analyze",
     "build": "theme-patternfly-org build all",
-    "build:analyze": "theme-patternfly-org build all --analyze",
     "build:server": "theme-patternfly-org build server",
     "build:client": "theme-patternfly-org build client",
     "clean": "rm -rf .cache public size-plugin.json src/generated/**/*.js",
