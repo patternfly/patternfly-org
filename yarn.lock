@@ -2132,30 +2132,30 @@
   dependencies:
     "@types/node" ">= 8"
 
-"@patternfly/patternfly@4.36.1":
-  version "4.36.1"
-  resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-4.36.1.tgz#ec2d744caf47e9adc9192b86bff03372257067bc"
-  integrity sha512-BaSPQN6nqQAfeC+oL2ul8yu0M31qbN1amLaosDwQR3NwHoracKTNdlzEkyHlBc4ar8c2kbC+rIznKzEwTJcNTA==
+"@patternfly/patternfly@4.42.2":
+  version "4.42.2"
+  resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-4.42.2.tgz#236d87bd85f00cb7a16d0c2956638ecedc3fa6ef"
+  integrity sha512-VLDhNko4D09sKcnzWEzMr8T8z9btqAYpuK0ntWMsAwi+/C9XsKyaxPioxuEsm7PeuW6OU0neEzSDYMSUnwrMBQ==
 
-"@patternfly/react-catalog-view-extension@^4.8.27":
-  version "4.8.27"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-catalog-view-extension/-/react-catalog-view-extension-4.8.27.tgz#7b33700d7721ebb0378daec74b1d2e486f267a13"
-  integrity sha512-7GiziPoTLqx1AHyxFdVJDnTfykqK94UEVSAeXySELMIeFVBtBbhBx/r6YcWBmO3d9GieP8LyQhHutz3oSX237w==
+"@patternfly/react-catalog-view-extension@^4.8.31":
+  version "4.8.31"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-catalog-view-extension/-/react-catalog-view-extension-4.8.31.tgz#9b35a22c1604a325196c3c2cd02a9f4260960e11"
+  integrity sha512-IVkxKUVKaxTbp7A4+6LpsFUKjyQmRdBpuHXKjpu7xu33o3BtaLQ7vu+qKFIwUpFjeGUyFOAdzL84EvX64qf1fw==
   dependencies:
-    "@patternfly/patternfly" "4.36.1"
-    "@patternfly/react-core" "^4.49.0"
-    "@patternfly/react-styles" "^4.7.4"
+    "@patternfly/patternfly" "4.42.2"
+    "@patternfly/react-core" "^4.50.2"
+    "@patternfly/react-styles" "^4.7.5"
     classnames "^2.2.5"
     patternfly "^3.59.4"
 
-"@patternfly/react-charts@^6.9.7":
-  version "6.9.7"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-charts/-/react-charts-6.9.7.tgz#42712fa63ade73185f41bec108c27926170d6766"
-  integrity sha512-Tih2BwItghbE9P2jACmmKHJGn3x3XahTHBQ321zhvZQOebVt3oJeaUlV6TTniC8Dx/qXqo+vFNbl2zilxMq/GA==
+"@patternfly/react-charts@^6.9.8":
+  version "6.9.8"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-charts/-/react-charts-6.9.8.tgz#0c0359b502b1610938048a0d63233aed4d90dffc"
+  integrity sha512-r+wysnGdk82oXNDMX/9DkBayjLZ3fgorkiqLDr0EQQiJkVSAcIcPd1Ei3I1AlvZPbRUPS9a7C2rP98+mxEZtxQ==
   dependencies:
-    "@patternfly/patternfly" "4.36.1"
-    "@patternfly/react-styles" "^4.7.4"
-    "@patternfly/react-tokens" "^4.9.7"
+    "@patternfly/patternfly" "4.42.2"
+    "@patternfly/react-styles" "^4.7.5"
+    "@patternfly/react-tokens" "^4.9.8"
     hoist-non-react-statics "^3.3.0"
     lodash "^4.17.19"
     tslib "^1.11.1"
@@ -2176,83 +2176,83 @@
     victory-voronoi-container "^35.0.7"
     victory-zoom-container "^35.0.7"
 
-"@patternfly/react-core@^4.49.0":
-  version "4.49.0"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-4.49.0.tgz#74d6fdd0b7568a1cfd4a8ce4fb84f9f5edac9e5b"
-  integrity sha512-IjoZKsbF14VKiEHMW42vJ4mmRLWQ54TMxydFVVwlRNQ8/8uy9l0Td/2TnB2BP9GY39+g+UKvQ+nD5ahJB23SHw==
+"@patternfly/react-core@^4.50.2":
+  version "4.50.2"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-4.50.2.tgz#b66d9bd8804994af70c2d80ce43a0dee6b90de5c"
+  integrity sha512-EAzrgsNivoYJb+Zk0YGKgr24J4qqY8dnPt96NJKhEcSRmVeqJEvL6Uhd1xJF1hRKQ5Bzrn/Lp66C+u5fgmnUBw==
   dependencies:
-    "@patternfly/react-icons" "^4.7.5"
-    "@patternfly/react-styles" "^4.7.4"
-    "@patternfly/react-tokens" "^4.9.7"
+    "@patternfly/react-icons" "^4.7.6"
+    "@patternfly/react-styles" "^4.7.5"
+    "@patternfly/react-tokens" "^4.9.8"
     focus-trap "4.0.2"
     react-dropzone "9.0.0"
     tippy.js "5.1.2"
     tslib "^1.11.1"
 
-"@patternfly/react-docs@5.8.33":
-  version "5.8.33"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-docs/-/react-docs-5.8.33.tgz#a9aee8f2e8f7df1ea9318e2ed043f91d8b661cd3"
-  integrity sha512-wvUIhpXAudjT13v9UHhSzdF6tSRRlm8nFnH1+fyKGGi+KZ2LDJOuGOOeL5kyKHEX1fTQYMqoVbXzglVcKGW9Zw==
+"@patternfly/react-docs@5.8.40":
+  version "5.8.40"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-docs/-/react-docs-5.8.40.tgz#ff25fa10d7f2d30af8d3c33aa83ad37b556e32f7"
+  integrity sha512-1b5GoFAxm105EQ8kgtIYkKwi1pFFgC6muTPqv2bH5hdYlxk2GFEVpgAjB4cInPehDg9O+xBv8kWK1ZzXXOfVJw==
   dependencies:
-    "@patternfly/patternfly" "4.36.1"
-    "@patternfly/react-catalog-view-extension" "^4.8.27"
-    "@patternfly/react-charts" "^6.9.7"
-    "@patternfly/react-core" "^4.49.0"
-    "@patternfly/react-icons" "^4.7.5"
-    "@patternfly/react-inline-edit-extension" "^4.5.83"
-    "@patternfly/react-styles" "^4.7.4"
-    "@patternfly/react-table" "^4.16.16"
-    "@patternfly/react-tokens" "^4.9.7"
-    "@patternfly/react-topology" "^4.5.9"
-    "@patternfly/react-virtualized-extension" "^4.5.72"
+    "@patternfly/patternfly" "4.42.2"
+    "@patternfly/react-catalog-view-extension" "^4.8.31"
+    "@patternfly/react-charts" "^6.9.8"
+    "@patternfly/react-core" "^4.50.2"
+    "@patternfly/react-icons" "^4.7.6"
+    "@patternfly/react-inline-edit-extension" "^4.5.87"
+    "@patternfly/react-styles" "^4.7.5"
+    "@patternfly/react-table" "^4.16.20"
+    "@patternfly/react-tokens" "^4.9.8"
+    "@patternfly/react-topology" "^4.5.14"
+    "@patternfly/react-virtualized-extension" "^4.5.76"
 
-"@patternfly/react-icons@^4.7.5":
-  version "4.7.5"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-4.7.5.tgz#d2a6eb681aac7ad673d46d6ff18e985aa5eff84c"
-  integrity sha512-3uWQkLnEzrO2Uf+ZlIvV19cXsWvY916mP2H+2D+tpu2XJ8oMkRXtODvqBun3BjPiDEGVUHr2PoxRYbkfFFKS2Q==
+"@patternfly/react-icons@^4.7.6":
+  version "4.7.6"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-4.7.6.tgz#d5f19192912284fc334abb034bc08967b4245f22"
+  integrity sha512-B1+gVqe4zS+xQGrQh09z846rWxS6JNAs7PpQJYPEJ1SLzLOwy5wEaOK67im9dD6niEJifJqCcbacCNtVZjlWag==
 
-"@patternfly/react-inline-edit-extension@^4.5.83":
-  version "4.5.83"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-inline-edit-extension/-/react-inline-edit-extension-4.5.83.tgz#03f9fb49b4592c54d57fb528ae659aecbf100e7d"
-  integrity sha512-3Oggug4QnJV4tJUMOp7sZgs951aLcIwUwAXIMT7M8KkLJxxV99sJHM/UuTKNS0speab9DtT4E/lDVAQt28cc+w==
+"@patternfly/react-inline-edit-extension@^4.5.87":
+  version "4.5.87"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-inline-edit-extension/-/react-inline-edit-extension-4.5.87.tgz#ad796efc4b2bd39cfde6dfbef4f589da309f20e0"
+  integrity sha512-vyf69xF8TgRP8jR83i/15jLiGTC8Lduc3Vm0hs0jX1p3B5U+O9kSDMSRdIyUM9m3zvNeOEQPRiiCeSr4GnLd0w==
   dependencies:
-    "@patternfly/react-core" "^4.49.0"
-    "@patternfly/react-icons" "^4.7.5"
-    "@patternfly/react-styles" "^4.7.4"
-    "@patternfly/react-table" "^4.16.16"
+    "@patternfly/react-core" "^4.50.2"
+    "@patternfly/react-icons" "^4.7.6"
+    "@patternfly/react-styles" "^4.7.5"
+    "@patternfly/react-table" "^4.16.20"
     reactabular-table "^8.14.0"
 
-"@patternfly/react-styles@^4.7.4":
-  version "4.7.4"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-4.7.4.tgz#08e7f9adbc80ed738765041d33b49e70208d96e5"
-  integrity sha512-y8guIKv87j5LqxCVUXLXtuTizdVPjE5z3xEJWuoO6fWviwYqlo/LiJdCZIF5sefTH+hYp7q9kbr6dA+OBVYVSg==
+"@patternfly/react-styles@^4.7.5":
+  version "4.7.5"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-4.7.5.tgz#b5d7161c0c75b54974b7a4db5a69ab30f6dbcb45"
+  integrity sha512-xom9hI2QzztT5pxByTFj2h3E0s4zD/+wVVLqvugl98cy8bCNpfo97OftfDCxBSV0MuhFDMs8/zr9QJUcq/O8Lw==
 
-"@patternfly/react-table@^4.16.16":
-  version "4.16.16"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-4.16.16.tgz#310467a705c0059ea1e498ce016dcee8b43316c1"
-  integrity sha512-VknCnEtx3dAvb3aSTLw4fkAuMFuKFKVY+SbXczDSioHRwUSked5GjKrxPPBABchN+V4UN8iUezTtqf/0rdIYIw==
+"@patternfly/react-table@^4.16.20":
+  version "4.16.20"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-4.16.20.tgz#43e1f855e6cde5fb39b7ce1a6e63c989abadf242"
+  integrity sha512-EBxTnlmEMUcIoL8r1i4sBGB2y1IY1ym9zc47TniC+huC+jWDgxLy2866N/GA+GHtuBT3aPR/0WtziWCD/To8QQ==
   dependencies:
-    "@patternfly/patternfly" "4.36.1"
-    "@patternfly/react-core" "^4.49.0"
-    "@patternfly/react-icons" "^4.7.5"
-    "@patternfly/react-styles" "^4.7.4"
-    "@patternfly/react-tokens" "^4.9.7"
+    "@patternfly/patternfly" "4.42.2"
+    "@patternfly/react-core" "^4.50.2"
+    "@patternfly/react-icons" "^4.7.6"
+    "@patternfly/react-styles" "^4.7.5"
+    "@patternfly/react-tokens" "^4.9.8"
     lodash "^4.17.19"
     tslib "^1.11.1"
 
-"@patternfly/react-tokens@^4.9.7":
-  version "4.9.7"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-4.9.7.tgz#1c483a42f45167ec4d5914257be8e2e7cb3b8db4"
-  integrity sha512-nU4Nh29IkuzvLsGh05pAPCO3zGSMvXyDJ5PiDw36HmkKh86WVA8TF5o0AfuYKnaNnAaL4vMo5pU+/W41viAT+w==
+"@patternfly/react-tokens@^4.9.8":
+  version "4.9.8"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-4.9.8.tgz#260079b01359bcaf23875890e412f3c6e87e0202"
+  integrity sha512-HBbtQHlWl3/B9KrS1fI3/k6sXDowfTsmw0zKuHXWjG552l0ApOrDmzh120Q7m6cvvkFv/Cw6XRwtJIDZBCEiyg==
 
-"@patternfly/react-topology@^4.5.9":
-  version "4.5.9"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-topology/-/react-topology-4.5.9.tgz#88ff9b3460054d002993186079986c6042b2247a"
-  integrity sha512-1ljJN3wxe/6uZ++JcIJtL7P9WUi1gxcUmkei/d44YJkZLiRRr5tpwvxFtRPT85imQa+tP8rSxIYH4Fwl7b5/ig==
+"@patternfly/react-topology@^4.5.14":
+  version "4.5.14"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-topology/-/react-topology-4.5.14.tgz#3187e3bbe781a9c738de14de860db63feb90e3b1"
+  integrity sha512-Gq+IPAi0PiE+AS/CIUF+uA2p963qKBGVZ+LlV56FdcvnyUtwIoAGz+28L4ifJnTmCCA88WlqPdXdfO23hM2FTg==
   dependencies:
-    "@patternfly/react-core" "^4.49.0"
-    "@patternfly/react-icons" "^4.7.5"
-    "@patternfly/react-styles" "^4.7.4"
+    "@patternfly/react-core" "^4.50.2"
+    "@patternfly/react-icons" "^4.7.6"
+    "@patternfly/react-styles" "^4.7.5"
     "@types/d3" "^5.7.2"
     "@types/d3-force" "^1.2.1"
     "@types/dagre" "0.7.42"
@@ -2268,14 +2268,14 @@
     tslib "^1.11.1"
     webcola "3.4.0"
 
-"@patternfly/react-virtualized-extension@^4.5.72":
-  version "4.5.72"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-virtualized-extension/-/react-virtualized-extension-4.5.72.tgz#2d8248e8f078b095b0615b2c31d5c13cdc63ff6e"
-  integrity sha512-bYRpdpYIBZQaj50sdKzsGQUlXX8BgQTSftHV0nnTVILYn0epiPZbQHGUDir8q/uKOEFr+L22oAtb8SAyfoocGw==
+"@patternfly/react-virtualized-extension@^4.5.76":
+  version "4.5.76"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-virtualized-extension/-/react-virtualized-extension-4.5.76.tgz#b0a56070958573364827264dbd6adb52421dac3a"
+  integrity sha512-gsSIXPGwIHpIQI54cGiAMoEGJ9PRL2hYUnvsKF32utbJJn9vGJy4nlbgA3QmTSAWMdEdeyfdaDAxVowCW0AuIA==
   dependencies:
-    "@patternfly/react-core" "^4.49.0"
-    "@patternfly/react-icons" "^4.7.5"
-    "@patternfly/react-styles" "^4.7.4"
+    "@patternfly/react-core" "^4.50.2"
+    "@patternfly/react-icons" "^4.7.6"
+    "@patternfly/react-styles" "^4.7.5"
     linear-layout-vector "0.0.1"
     react-virtualized "^9.21.1"
     tslib "^1.11.1"
