@@ -103,7 +103,7 @@ If you’re looking to copy HTML for an icon:<br/>
 Use this for 'pficon' icons: `<i className="pf-icon [insert-icon-name]"></i>`<br />
 Use this for 'fa' solid icons: `<i className="fas [insert-icon-name]"></i>`<br />
 Use this for 'fa' regular icons: `<i className="far [insert-icon-name]"></i>`<br />
-<small>Note: Be sure to read <a href="/get-started/developers#using-styles" className="pf-m-link">how to get started with icons</a> when using 'fa' regular icons</small>
+<small>Note: Be sure to read <a href="/get-started/develop#using-styles" className="pf-m-link">how to get started with icons</a> when using 'fa' regular icons</small>
 
 If you're looking to copy React for an icon:<br />
 Use this for 'pficon' icons: `import { [insert-icon-name] } from '@patternfly/react-icons'`
