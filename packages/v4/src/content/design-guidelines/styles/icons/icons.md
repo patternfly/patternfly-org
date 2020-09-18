@@ -15,7 +15,7 @@ import { IconRecommendations } from './IconRecommendations';
 import { IconsTable } from './IconsTable';
 import './icons.css';
 
-<p class="ws-icons-page">If you're a developer, check out our <a href="https://www.patternfly.org/v4/get-started/developers#using-styles">getting started</a> page to learn more about how to get and use our icon set.</p>
+<p class="ws-icons-page">If you're a developer, check out our <a href="/get-started/develop#using-styles">getting started</a> page to learn more about how to get and use our icon set.</p>
 
 ## Icon sizes
 <Grid gutter="md">
@@ -88,7 +88,7 @@ import './icons.css';
 <Divider className="ws-icons-divider" />
 
 ## Icon colors
-Visit our <a href="/design-guidelines/styles/colors" className="pf-m-link">colors page</a> to learn more about icon colors.
+Visit our <a href="/guidelines/colors" className="pf-m-link">colors page</a> to learn more about icon colors.
 
 <Divider className="ws-icons-divider" />
 
@@ -97,7 +97,7 @@ PatternFly uses custom icons and selections from <a href="https://fontawesome.co
 
 Click on any single icon in the table to download it as an SVG. Download all icon SVGs <a href="https://patternfly-org.s3.us-east-2.amazonaws.com/patternfly-icons.zip">here</a>.
 
-If you’re a designer, these icons are the same set as the ones in the <a href="https://www.patternfly.org/v4/get-started/designers">PatternFly Sketch Design Kit</a>. It is possible to use any FontAwesome icon as long it follows the guidelines above.
+If you’re a designer, these icons are the same set as the ones in the <a href="/get-started/design">PatternFly Sketch Design Kit</a>. It is possible to use any FontAwesome icon as long it follows the guidelines above.
 
 If you’re looking to copy HTML for an icon:<br/>
 Use this for 'pficon' icons: `<i className="pf-icon [insert-icon-name]"></i>`<br />

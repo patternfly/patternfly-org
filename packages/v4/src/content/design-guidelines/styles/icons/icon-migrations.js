@@ -1313,7 +1313,7 @@ const recommendationsArray = [
       style: "",
       iconName: "",
       type: "",
-      iconUsage: <span>Use the animated <Link to="/documentation/react/components/spinner">PatternFly Spinner component</Link> to indicate that something is "loading" or in the middle of processing</span>,
+      iconUsage: <span>Use the animated <Link to="/components/spinner">PatternFly Spinner component</Link> to indicate that something is "loading" or in the middle of processing</span>,
       iconType: "new",
       reactIcon: "PF-Spinner-Component"
     }

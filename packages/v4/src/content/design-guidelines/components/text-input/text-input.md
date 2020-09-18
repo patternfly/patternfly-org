@@ -17,7 +17,7 @@ Use **text input** to gather free-form text from a user.
 ## Usage
 * Be sure to size input fields appropriately to anticipate the longest likely value (if a maximum character length is known).
 * When a value is too long to be fully displayed in a text field, use [truncation](/ux-writing/truncation).
-* Provide a [text area](/components/text-area/react) for input anticipated to be longer than a single line.
+* Provide a [text area](/components/text-area) for input anticipated to be longer than a single line.
 * Pre-populate fields with known values when possible, like a default IP address, for example.
 
 ### Help

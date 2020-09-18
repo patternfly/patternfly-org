@@ -19,10 +19,6 @@ Layouts are generic tools that allow you to structure and organize the content o
 ### Demos
 Demos use components and layouts in combination to show you how to build more complex structures and application views.
 
-[**View components, layouts, and demos in HTML/CSS**](/documentation/core/overview/release-notes) <i className="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
-
-[**View components, layouts, and demos in React**](/documentation/react/overview/release-notes) <i className="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
-
 ## Design guidelines
 ### Styles
 Style guidelines define foundational elements of the design system, like color, typography, and spacing.
@@ -33,7 +29,7 @@ Usage and behavior guidelines communicate standards and best practices for commo
 ### Content
 Content guidelines provide principles and best practices around writing for user experience along with general voice and style guidance.
 
-[**View design guidelines**](/design-guidelines/styles/colors) <i className="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**View design guidelines**](/guidelines/colors) <i className="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 ## Additional tools
 ### CSS variables
@@ -45,14 +41,12 @@ Global variables define and enforce style elements (like global values for color
 **Component variables**
 Component variables are used to define custom properties at the component level. Component variables are always defined by global variables.
 
-[**Learn more and view CSS variables**](/documentation/overview/global-css-variables) <i className="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**Learn more and view CSS variables**](/get-started/global-css-variables) <i className="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 ### Utilities
 Utilities are a set of classes that enable you to further customize and modify elements in your project without having to write any custom CSS.
 
 For example, you might use a utility class to add additional spacing between elements, align content in a layout, or even add a box shadow to an element.
-
-[**View utilities**](/documentation/core/utilities/accessibility) <i className="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 ## Supported browsers
 

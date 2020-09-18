@@ -25,7 +25,7 @@ related: [
 A **Form** is a group of elements used to collect information from a user.
  Forms can appear in a variety of contexts, like inside a page, in a modal, or in a wizard, depending on the use case.  Some form examples include a log-in form, a registration form, a settings configuration form, or a survey.
 
-[View form demos](/documentation/core/demos/basicforms)
+[View form demos](/components/form/html-demos)
 
 ## Form elements
 <img src="./img/form-elements.png" alt="Example of a form with four typical form elements listed later" width="459"/>
@@ -76,6 +76,7 @@ Use [checkboxes](/components/checkbox/design-guidelines) to enable users to sele
 #### Select lists
 Use a [select list](/components/select/design-guidelines) to enable users to select one or more options from a list of options. Select lists can be configured to enable users to select one option (single select) or multiple options (multi-select) depending on the use case. Use a select list when you have more than 5 options to present to a user.
 
+Learn more about data input variations in the [data input design guidelines](/components/select/design-guidelines).
 
 #### Data input arrangement
 Arrange radio buttons and checkboxes vertically or horizontally depending on space considerations.  We suggest the following:
@@ -186,6 +187,8 @@ Popovers are content boxes that are used for fields that might require additiona
 * Use popovers for content that requires you to include buttons, links, or images. 
 * **Do not** hide critical information inside a popover that users would need in order to complete their task. 
 
+For more information on user help, see our [embedded assistance guidelines](/components/popover/design-guidelines).
+
 ### Use progressive disclosure
 Use progressive disclosure to hide and show fields based on the users’ selection. This approach keeps the workflow short and allows the user to focus on only the fields relevant to them. It also avoids using color to indicate whether or not a field is available, making it suitable for visually impaired users.
 
@@ -216,7 +219,7 @@ Notifications should describe the error and help users solve the problem.
 
 ## Form formatting
 ### Spacing
-There should always be 24px spacing underneath every form input. If there is helper text, the 24px spacing should start after the helper text. Additionally, the spacing between data inputs like checkboxes and radio buttons, for example, should also be 24px when on the same line and 24px when the options are presented on top of one another. For more spacing information, read the [PatternFly spacer guidelines](/guidelines/spacers).
+There should always be 24px spacing underneath every form input. If there is helper text, the 24px spacing should start after the helper text. Additionally, the spacing between data inputs like checkboxes and radio buttons, for example, should also be 24px when on the same line and 24px when the options are presented on top of one another. For more spacing information, read the [PatternFly spacer guidelines](/guidelines/spacers#considering-line-height-and-padding).
 
 <img src="./img/form-spacing.png" alt="Basic form example with spacers to demonstrate how form elements should be spaced" width="460"/>
 
@@ -267,7 +270,7 @@ Forms in a modal should be horizontally centered with the modal background and f
 <img src="./img/modal-form.png" alt="Example of form in a modal" width="384"/>
 
 ### Multi-column forms
-Multi-column forms are forms that can have multiple inputs on a single form line. You can create a multi-column form using any of the [layouts](/layouts/bullseye/) offered in PatternFly, such as the [Grid](/layouts/grid) or [Flex](/layouts/flex) layouts.
+Multi-column forms are forms that can have multiple inputs on a single form line. You can create a multi-column form using any of the [layouts](/layouts/bullseye) offered in PatternFly, such as the [Grid](/layouts/grid) or [Flex](/layouts/flex) layouts.
 
 #### Usage
 Multi-column forms can be useful when you have limited vertical space. However, as a general rule, PatternFly recommends only using multi-column forms if you have extra space and avoiding them otherwise. They can be more confusing to the user and increase the chances of a user missing out on a form field.

@@ -13,7 +13,7 @@ Whether you are converting from a PatternFly 3 application or starting fresh wit
 ### Before you begin
 The design kit is a collection of Sketch assets that make it easy for designers to create hi-fi mockups that accurately represent PatternFly components and layouts. It works with Sketch libraries.
 
- To use it, you need to install [Sketch](https://www.sketch.com/) version 47 or above. For users who do not have access to Sketch (non-Mac users), a subset of functionality from our Sketch files, like symbols and fonts, can be imported and used in the free design tool, [Figma](https://www.figma.com/). Learn more about importing Sketch files in [the Figma documentation](https://help.figma.com/article/81-import).
+To use it, you need to install [Sketch](https://www.sketch.com/) version 47 or above. For users who do not have access to Sketch (non-Mac users), a subset of functionality from our Sketch files, like symbols and fonts, can be imported and used in the free design tool, [Figma](https://www.figma.com/). Learn more about importing Sketch files in [the Figma documentation](https://help.figma.com/hc/en-us/articles/360041003114-Import-files-into-Figma).
 
 ### Download the template file
 1. Access the [PatternFly template file](https://sketch.cloud/s/nwY34) on Sketch cloud.
@@ -79,7 +79,7 @@ The layout for all visual elements in Patternfly is determined by spacers. The s
 
 The [template library](https://sketch.cloud/s/nwY34) also contains examples of spacer use to clarify where elements should be placed within a given page or design.  These templates have been created in a way that reduces a user’s need to think about spacers. An example of a Login form template can be seen here with different sized spacers - demonstrated by their different colors - used to separate each symbol/component within the layout.
 
-To see more information about spacers and their use please click [here](/design-guidelines/styles/spacers).
+To see more information about spacers and their use please click [here](/guidelines/spacers).
 
 ### Layer styles
 Symbols in the symbol are organized by component; after selecting a component, you’ll see the variations and states of that component.
@@ -105,34 +105,30 @@ PatternFly offers a variety of resources to help you make the most of the design
 ### Style guidelines
 What typography should you be using? What about colors? Spacing? Check out styles to learn everything you need to know about our foundational design elements.
 
-[**View styles**](/design-guidelines/styles/colors) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**View styles**](/guidelines/colors) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 ### Get familiar with usage and behavior guidelines.
 Should you use a wizard or a form to solve this problem? How do you write a good button label? Which navigation makes the most sense? Check out our design guidelines to choose and use the right components for your use case.
 
-[**Usage and behavior guidelines**](/design-guidelines/usage-and-behavior/about-modal) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**Usage and behavior guidelines**](/components/about-modal/design-guidelines) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 ### Content guidelines
 How do you write great microcopy and text for your user interface? Read our content guidelines for general principles, guidance on voice, and a style guide to help you with everything from capitalization to date and time formats.
 View content guidelines
 
-[**View content guidelines**](https://www.patternfly.org/v4/design-guidelines/content/about) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**View content guidelines**](/ux-writing/about) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 
 
 ### Start building with components.
 What does a toolbar look like? What about a filter chip? Components are the building blocks of the design system. Check out individual component pages to view examples, understand states and behaviors, and check out the code samples (if you’re into that kind of thing).
 
-[**View HTML/CSS components**](/documentation/core/components/aboutmodalbox) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
-
-[**View React components**](/documentation/react/components/aboutmodal) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**View components**](/components/about-modal) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 ### Still feeling unsure?
- See all the pieces working together with demos.
+See all the pieces working together with demos.
 
-[**View HTML/CSS demos**](/documentation/core/demos/aboutmodal) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
-
-[**View React demos**](/documentation/react/demos/bulkselecttable) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**View demos**](/demos/primary-detail) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 
 ## Staying up to date
@@ -140,6 +136,6 @@ Adjustments and bug fixes are made to the kit on a regular basis. When we make a
 
 We recommend that you keep your kit as up to date as possible. Once a change is accepted, you will not be able to revert to the previous version.
 
-Please note that the Patternfly template will NOT be automatically updated as the symbol library is. Every time this template file is updated, you will need to re-download and re-save this as a template. We have added [release notes](https://github.com/patternfly/patternfly-design-kit/blob/master/RELEASE%20NOTES.md) to the [design-kit-repo](https://github.com/patternfly/patternfly-design-kit/) that document additions and edits to the design kit. This is a good place to start to review what has been added to the template file.
+Please note that the Patternfly template will NOT be automatically updated as the symbol library is. Every time this template file is updated, you will need to re-download and re-save this as a template. We have added [release notes](https://github.com/patternfly/patternfly-design-kit/blob/master/PatternFly%20release%20notes.md) to the [design-kit-repo](https://github.com/patternfly/patternfly-design-kit/) that document additions and edits to the design kit. This is a good place to start to review what has been added to the template file.
 
 Did you use the old versions of the symbols that were updated in files already? No problem -  you will receive another notification in the top right of that specific Sketch file that will allow you to update them.

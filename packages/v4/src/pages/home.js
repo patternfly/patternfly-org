@@ -94,7 +94,7 @@ const HomePage = () => (
                     aria-label="view design guidelines"
                     className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
-                    <Link to="/design-guidelines/styles/colors">
+                    <Link to="/guidelines/colors">
                       View design guidelines <ArrowRightIcon />
                     </Link>
                   </Text>
@@ -108,7 +108,7 @@ const HomePage = () => (
                     aria-label="view layouts"
                     className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
-                    <Link to="/documentation/react/layouts/bullseye">
+                    <Link to="/layouts/bullseye">
                       View layouts <ArrowRightIcon />
                     </Link>
                   </Text>
@@ -122,7 +122,7 @@ const HomePage = () => (
                     aria-label="view components"
                     className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
-                    <Link to="/documentation/react/components/aboutmodal">
+                    <Link to="/components/about-modal">
                       View components <ArrowRightIcon />
                     </Link>
                   </Text>
@@ -136,7 +136,7 @@ const HomePage = () => (
                     aria-label="view demos"
                     className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
-                    <Link to="/documentation/react/demos/bulkselecttable">
+                    <Link to="/demos/primary-detail">
                       View demos <ArrowRightIcon />
                     </Link>
                   </Text>
@@ -262,7 +262,7 @@ const HomePage = () => (
             aria-label="get started developers"
             className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
           >
-            <Link to="/get-started/developers" className="pf-m-white ws-get-started">
+            <Link to="/get-started/develop" className="pf-m-white ws-get-started">
               Get started for developers <ArrowRightIcon />
             </Link>
           </Text>
@@ -272,7 +272,7 @@ const HomePage = () => (
             aria-label="get started designers"
             className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
           >
-            <Link to="/get-started/designers" className="pf-m-white ws-get-started">
+            <Link to="/get-started/design" className="pf-m-white ws-get-started">
               Get started for designers <ArrowRightIcon />
             </Link>
           </Text>
