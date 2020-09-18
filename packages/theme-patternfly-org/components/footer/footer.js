@@ -47,7 +47,7 @@ export const Footer = () => (
                   <li className="pf-c-nav__item">
                     <Link
                       className="pf-c-nav__link"
-                      to={"/documentation/react/components/aboutmodal"}
+                      to="/components/about-modal"
                       aria-label="PatternFly 4 components"
                     >
                       Components
@@ -56,7 +56,7 @@ export const Footer = () => (
                   <li className="pf-c-nav__item">
                     <Link
                       className="pf-c-nav__link"
-                      to={"/documentation/react/layouts/bullseye"}
+                      to="/layouts/bullseye"
                       aria-label="PatternFly 4 layouts"
                     >
                       Layouts
@@ -65,7 +65,7 @@ export const Footer = () => (
                   <li className="pf-c-nav__item">
                     <Link
                       className="pf-c-nav__link"
-                      to={"/design-guidelines/styles/colors"}
+                      to="/guidelines/colors"
                       aria-label="PatternFly 4 styles"
                     >
                       Styles

@@ -3,7 +3,7 @@ id: Spinner
 section: components
 ---
 
-**Spinners** are used to indicate to users that an action is in progress. For actions that may take a long time use a [progress bar](/components/progress/react) in place of a Spinner.
+**Spinners** are used to indicate to users that an action is in progress. For actions that may take a long time use a [Progress Bar](/components/progress) in place of a Spinner.
 
 ## Usage
 
@@ -13,7 +13,7 @@ Spinners are used to demonstrate data loading. Spinners are offered in different
 
 Use a spinner when the data you are dealing with is unknown in both quantity and shape. Spinners are also good to use when in progress of loading a screen that may not have any data, for example an [empty state screen or failed outcome](/components/empty-state). A common use case for spinners is within a table view, where the spinner can take up the area of the table before it loads.
 
-Do not use a spinner to replace a [progress bar](/components/progress/react). Spinners are vague in their promises of results to the user and are best to use when the expected wait time is between 1-5 seconds. Do not use a spinner if the loading process is less than 1 second. For experiences longer than 5 seconds, use a progress bar.
+Do not use a spinner to replace a [progress bar](/components/progress). Spinners are vague in their promises of results to the user and are best to use when the expected wait time is between 1-5 seconds. Do not use a spinner if the loading process is less than 1 second. For experiences longer than 5 seconds, use a progress bar.
 
 ## Spinner in context
 
