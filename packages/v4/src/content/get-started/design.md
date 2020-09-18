@@ -42,7 +42,7 @@ If you’d like to avoid out-of-date designs, we recommend moving to our Red Hat
 
 ### The template file
 
-The template file contains complex components and demos like charts and forms that make it faster and easier for you to add common design patterns to your wireframes. To view template examples click [here](documentation/core/demos/aboutmodal).
+The template file contains complex components and demos like charts and forms that make it faster and easier for you to add common design patterns to your wireframes. To view template examples click [here](/components/about-modal/html-demos).
 
 The contents of the template file are organized alphabetically by component or demo name. If you want to use any of the artboards in the template file to create custom designs, you should follow these rules:
 1. Unhide “padding” group (this group contains all of the spacers we use to create the design)

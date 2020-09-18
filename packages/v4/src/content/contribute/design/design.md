@@ -30,7 +30,7 @@ __Example__
 
 ## Lifecycle
 
-Before you begin the contribution process, follow [these guidelines](/get-started/designers) to get your environment setup.
+Before you begin the contribution process, follow [these guidelines](/get-started/design) to get your environment setup.
 
 Follow these steps and this [template format](https://documentcloud.adobe.com/link/track?uri=urn%3Aaaid%3Ascds%3AUS%3A28fd970d-8b77-4008-b598-b2f629bda589) to submit your designs:
 
