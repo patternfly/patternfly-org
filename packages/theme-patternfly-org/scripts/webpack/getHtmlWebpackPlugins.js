@@ -32,7 +32,7 @@ async function getHtmlWebpackPlugin({
 }
 
 async function getHtmlWebpackPlugins(options) {
-  const { isProd, url, title } = options;
+  const { isProd } = options;
   const { routes, fullscreenRoutes } = require('../../routes');
   const res = [
     // Sitemap
@@ -40,7 +40,9 @@ async function getHtmlWebpackPlugins(options) {
       template: path.join(templateDir, 'sitemap.ejs'),
       filename: 'sitemap.xml',
       templateParameters: {
-        urls: Object.keys(routes)
+        urls: Object.entries(routes)
+          .map(([path, { sources }]) => sources ? sources.map(source => source.slug) : path)
+          .flat()
       },
       inject: false,
       minify: false,
