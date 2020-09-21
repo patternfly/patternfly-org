@@ -11,7 +11,7 @@ Here are a few best practices for making your UX copy more accessible:
 
 - Avoid directional language, like “Use the button to the left." It doesn't account for users with different screen layouts (desktop vs. mobile) or users working with screen readers. 
 - Use proper heading levels (H1, H2) to articulate the page content’s organization.
-- Do not identify items by color, like “Click the blue button.”
+- Do not identify items by color, like “Click the blue button.” 
 - Use plain language and short sentences.
 - Use common contractions (for example, "it’s” and "you’re") in areas that sound most natural to you. Contractions are great for maintaining a casual voice and tone and for making your [UX copy more accessible](https://help.blackboard.com/Accessibility/Write_Accessible_Content). UX copy should make a product interaction feel, look, and sound more human. Contractions help you get there.
 - Be clear and concise.

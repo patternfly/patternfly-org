@@ -5,7 +5,7 @@ hideTOC: true
 showTitle: true
 ---
 
-This page focuses on how to write units and symbols in an interface. For guidance on displaying numeric values like date, time, and currency, see our [Numerics](/design-guidelines/content/numerics) page.
+This page focuses on how to write units and symbols in an interface. For guidance on writing and displaying numeric values like date, time, and currency, see our [Numerics](/design-guidelines/content/numerics) page.
 
 Use consistent formatting, terminology, and symbols to display units of measure in your UI. Units of measure and symbols often appear when describing quantitative values including:
 
