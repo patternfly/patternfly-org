@@ -30,6 +30,7 @@ const clientConfig = async (env, argv) => {
       filename: '[name].[hash].bundle.js'
     },
     devServer: {
+      hot: true,
       historyApiFallback: true,
       port: argv.port,
       clientLogLevel: 'info',
@@ -87,7 +88,7 @@ const clientConfig = async (env, argv) => {
               loader: MiniCssExtractPlugin.loader,
               options: {
                 hmr: !isProd
-              },
+              }
             },
             {
               loader: 'css-loader'
@@ -115,7 +116,7 @@ const clientConfig = async (env, argv) => {
       ]
     },
     plugins: [
-      new MiniCssExtractPlugin({
+      new MiniCssExtractPlugin(!isProd ? {} : {
         filename: '[name].[contenthash].css',
         chunkFilename: '[name].[contenthash].css',
       }),
