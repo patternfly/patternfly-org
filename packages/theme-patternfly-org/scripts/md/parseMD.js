@@ -43,13 +43,8 @@ function toReactComponent(mdFilePath, source) {
       if (!frontmatter.id) {
         file.fail('id attribute is required in frontmatter for PatternFly docs');
       }
-      else if (frontmatter.id === 'Forms') {
-        // Temporarily override section until https://github.com/patternfly/patternfly/pull/3428
-        // lands in react-docs
-        frontmatter.id = 'Form';
-      }
       if (frontmatter.section === 'overview') {
-        // Temporarily override section until last org release and backport to core/react
+        // Temporarily override section until https://github.com/patternfly/patternfly-react/pull/4862 is in react-docs
         // Affected pages are release notes and upgrade guides
         frontmatter.section = 'get-started';
       }
@@ -92,10 +87,9 @@ function toReactComponent(mdFilePath, source) {
           sourceRepo}/blob/master/${
           normalizedPath}`
       };
-
-      pageData.id = pageData.id.replace('Forms', 'Form');
       // Temporarily override section for Demo tabs until we port this upstream
       if (frontmatter.section === 'demos' && routes[slug.replace('demos', 'components')]) {
+        // Temporarily override section until https://github.com/patternfly/patternfly-react/pull/4862 is in react-docs
         pageData.section = 'components';
         pageData.source = `${source}-demos`;
         pageData.slug = makeSlug(pageData.source, pageData.section, pageData.id);
