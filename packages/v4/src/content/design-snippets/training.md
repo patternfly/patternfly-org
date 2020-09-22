@@ -1,4 +1,0 @@
----
-reactComponentName: 'training'
-coreComponentName: 'training'
----
