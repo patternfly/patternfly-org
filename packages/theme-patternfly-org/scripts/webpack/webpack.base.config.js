@@ -51,6 +51,7 @@ module.exports = (_env, argv) => {
                 corejs: 3,
                 useBuiltIns: 'entry',
                 exclude: ['transform-regenerator', 'transform-async-to-generator'],
+                modules: false
               }]],
               plugins: [
                 '@babel/plugin-transform-react-jsx',
