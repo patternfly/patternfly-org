@@ -1,8 +1,6 @@
 ---
-title: Numerics
-section: content
-hideTOC: true
-showTitle: true
+id: Numerics
+section: UX writing
 ---
 
 This page provides best practices for expressing values including:
@@ -13,7 +11,7 @@ This page provides best practices for expressing values including:
 See our [Units and symbols](/design-guidelines/content/units-and-symbols) page to learn how to use numeric units and symbols in your UI.
 
 ## Date and time
-All date and time formats should be localizable, not hard-coded. When building localizable date and time formats, development teams should share the same library, using a resource like [moment.js](http://momentjs.com/).  
+All date and time formats should be localizable, not hard-coded. When building localizable date and time formats, development teams should share the same library by using a resource like [moment.js](http://momentjs.com/).  
 
 These date and time standards are based in American English, but date and time formats will vary once they're localized, depending on locale.
 
@@ -111,7 +109,7 @@ Some instances may call for a currency's ISO three-digit numeric code. This code
 | United States  | Dollar   | USD             | 840          |
 | China          | Yuan     | CNY             | 156          |
 | European Union | Euro     | EUR             | 978          |
-| United Kingdom | Pound    | GPB             | 826          |
+| United Kingdom | Pound    | GBP             | 826          |
 
 
 (Taken from the Red Hat Corporate Style Guide)
