@@ -14,7 +14,7 @@ PatternFly is an open source design system created to enable consistency and usa
 Components, like buttons and alerts, can be assembled together to build applications.
 
 ### Layouts
-Layouts are generic tools that allow you to structure and organize the content on your pages.
+Layouts are containers that allow you position components on pages.
 
 ### Demos
 Demos use components and layouts in combination to show you how to build more complex structures and application views.
