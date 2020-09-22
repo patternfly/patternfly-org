@@ -1,36 +1,29 @@
 {
   "name": "patternfly-org-4",
+  "description": "Documentation for PatternFly 4.",
   "private": true,
-  "version": "4.1.28",
+  "version": "4.2.25",
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
-    "build": "yarn build:static && yarn build:ram",
-    "build:prefix": "yarn build:static && yarn build:ram --prefix-paths",
-    "build:ram": "node --max-old-space-size=8192 ./node_modules/.bin/gatsby build",
-    "build:static": "node ./copyAssets.js",
-    "clean": "gatsby clean",
-    "develop": "yarn build:static && gatsby develop",
-    "serve": "gatsby serve",
-    "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4"
+    "analyze": "theme-patternfly-org build all --analyze",
+    "build": "theme-patternfly-org build all",
+    "build:server": "theme-patternfly-org build server",
+    "build:client": "theme-patternfly-org build client",
+    "clean": "rm -rf .cache public size-plugin.json src/generated/**/*.js",
+    "develop": "theme-patternfly-org start",
+    "generate": "theme-patternfly-org generate",
+    "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4",
+    "screenshots": "theme-patternfly-org screenshots"
   },
   "dependencies": {
-    "@patternfly/react-docs": "5.8.7",
-    "gatsby": "2.21.0",
-    "gatsby-plugin-google-analytics": "^2.2.0",
-    "gatsby-plugin-remove-serviceworker": "^1.0.0",
-    "gatsby-plugin-sitemap": "^2.3.0",
-    "gatsby-remark-copy-linked-files": "^2.2.0",
-    "gatsby-source-filesystem": "^2.2.1",
-    "gatsby-theme-patternfly-org": "^4.2.10",
-    "gatsby-transformer-json": "^2.3.0",
-    "gatsby-transformer-react-docgen-typescript": "^4.0.5",
+    "@patternfly/react-docs": "5.8.40",
     "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react-dom": "^16.8.0",
+    "theme-patternfly-org": "^0.1.19"
   },
   "devDependencies": {
-    "@patternfly/patternfly-a11y": "^0.0.17",
-    "eslint-config-react-app": "^5.0.2",
-    "fs-extra": "^9.0.0"
+    "fs-extra": "^9.0.0",
+    "glob": "^7.1.6"
   }
 }

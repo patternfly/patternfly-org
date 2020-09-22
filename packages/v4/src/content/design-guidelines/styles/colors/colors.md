@@ -1,21 +1,19 @@
 ---
-title: Colors
-section: styles
-hideSource: true
+id: Colors
+section: guidelines
 ---
 import { Alert, Grid, GridItem, Divider } from '@patternfly/react-core';
-import { Link } from 'gatsby';
 import { ColorSwatch } from './ColorSwatch';
 import { ColorFamily } from './ColorFamily';
 import './colors.css';
-
-<Divider />
 
 ## Primary colors
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
     <h3>PatternFly blue</h3>
-    Primary colors are the colors displayed most frequently across your application screens and components. Our primary colors are used within a variety of components and are typically applied to default or active states and hover states.
+    <p>
+      Primary colors are the colors displayed most frequently across your application screens and components. Our primary colors are used within a variety of components and are typically applied to default or active states and hover states.
+    </p>
     <ColorSwatch label="Default" color="--pf-global--primary-color--100">
       This color is most commonly used as as default or active state for many components including badges and spinners.
     </ColorSwatch>
@@ -24,7 +22,7 @@ import './colors.css';
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
-    <img width="480px" src="patternfly-blue.png" alt="PatternFly blue colors" />
+    <img width="480px" src="./patternfly-blue.png" alt="PatternFly blue colors" />
   </GridItem>
 </Grid>
 
@@ -34,7 +32,9 @@ import './colors.css';
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
     <h3>Text and icons</h3>
-    Typography and iconography colors are extremely similar because they can both be used in the same context, such as a link button. We have multiple shades of text colors on light and dark backgrounds so that you can emphasize hierarchy.
+    <p>
+      Typography and iconography colors are extremely similar because they can both be used in the same context, such as a link button. We have multiple shades of text colors on light and dark backgrounds so that you can emphasize hierarchy.
+    </p>
     <ColorSwatch color="--pf-global--Color--100">
       This color is used as a standard text and icon color as well as a hover state color for icon buttons. It is most commonly used as a text color for many components and application screens.
     </ColorSwatch>
@@ -46,7 +46,7 @@ import './colors.css';
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
-    <img width="480px" src="patternfly-typography.png" alt="PatternFly typography colors" />
+    <img width="480px" src="./patternfly-typography.png" alt="PatternFly typography colors" />
   </GridItem>
 </Grid>
 
@@ -55,7 +55,9 @@ import './colors.css';
 ## Background colors
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
-    Background colors are used throughout components and can be used for certain screens depending on the use case. The light colors can be interchangeable for full-screen backgrounds. The dark background colors are strictly used within components.
+    <p>
+      Background colors are used throughout components and can be used for certain screens depending on the use case. The light colors can be interchangeable for full-screen backgrounds. The dark background colors are strictly used within components.
+    </p>
     <ColorSwatch color="--pf-global--BackgroundColor--200">
       This color is most commonly used as a secondary background color for full application screens and hover backgrounds.
     </ColorSwatch>
@@ -76,7 +78,7 @@ import './colors.css';
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
-    <img width="480px" src="patternfly-background.png" alt="PatternFly background colors" />
+    <img width="480px" src="./patternfly-background.png" alt="PatternFly background colors" />
   </GridItem>
 </Grid>
 
@@ -88,7 +90,7 @@ import './colors.css';
     Status and state colors are important when communicating data and action aspects through the UI with the user. Our status colors cover a variety of statuses including default, danger, success, information, and warning.
   </GridItem>
   <GridItem xl={6} lg={12} rowSpan={6}>
-    <img width="480px" src="patternfly-status.png" alt="PatternFly status colors" />
+    <img width="480px" src="./patternfly-status.png" alt="PatternFly status colors" />
   </GridItem>
   <GridItem xl={6} lg={12}>
     <h3>Danger</h3>
@@ -160,7 +162,9 @@ import './colors.css';
 ## Shadows
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
-    Shadows provide specifics about depth, direction of movement, and surface edges. Depending on the surface’s elevation and relationships to other surfaces, the type of shadow will change.
+    <p>
+      Shadows provide specifics about depth, direction of movement, and surface edges. Depending on the surface’s elevation and relationships to other surfaces, the type of shadow will change.
+    </p>
     <ColorSwatch label="Large" color="--pf-global--BoxShadow--lg">
       This variable is used to indicate a large shadow for many components, such as alerts and modals.
     </ColorSwatch>
@@ -172,7 +176,7 @@ import './colors.css';
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
-    <img width="480px" src="patternfly-shadows.png" alt="PatternFly shadows" />
+    <img width="480px" src="./patternfly-shadows.png" alt="PatternFly shadows" />
   </GridItem>
 </Grid>
 

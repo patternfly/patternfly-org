@@ -60,6 +60,8 @@ If users are interested in duration, the amount of time it takes for an event to
 
 If users are interested in how long ago an event occurred, use a relative timestamp. When reporting relative time, follow these examples:
 
+<div class="ws-content-table">
+  
 | **Time frame**      | **Usage**              |
 |---------------------|------------------------|
 | 0-60 seconds        | Just now               |
@@ -71,14 +73,20 @@ If users are interested in how long ago an event occurred, use a relative timest
 | 1 year+             | 07 Jan 2020            |
 | Exact date and time | 07 Jan 2020, 23:33 UTC |
 
+</div>
+
 ## Numbers and currency
 In a UI, use numerals instead of written numbers. 
 
+<div class="ws-content-table">
+  
 | **Before**      | **After**              |
 |---------------------|------------------------|
 | Your transaction will be complete in three business days.      | Your transaction will be complete in 3 business days.              |
 
 Never hard-code number formatting. Currency symbols, comma placements, and decimal placements vary by locale.
+
+</div>
 
 For larger numbers, American English uses the comma as the thousand separator, added every 3 digits from the right. For consistency, write your text with this formatting. The number will look different after localization.  
 

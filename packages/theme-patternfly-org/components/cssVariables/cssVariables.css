@@ -1,0 +1,15 @@
+.ws-color-box {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  border: 1px solid #72767b;
+  border-radius: 9px;
+}
+
+.ws-td-text {
+  font-size: 14px !important;
+}
+
+.ws-css-property {
+  padding: 4px 16px 4px var(--pf-global--spacer--md);
+}
