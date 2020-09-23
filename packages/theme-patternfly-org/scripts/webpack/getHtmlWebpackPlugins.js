@@ -57,12 +57,13 @@ async function getHtmlWebpackPlugins(options) {
 
   const titledRoutes = Object.entries(routes)
     .concat(Object.entries(fullscreenRoutes))
-    .map(([url, { sources = [], ...props }]) => [
-      [url, props],
+    .map(([url, { sources = [], title, isFullscreen }]) => [
+      [url, { title, isFullscreen }],
       // Add pages for sources
       ...sources.map(source => [source.slug, source])
     ])
-    .flat();
+    .flat()
+    .sort();
 
   for (const [url, { title, isFullscreen }] of titledRoutes) {
     res.push(await getHtmlWebpackPlugin({ url, title, isFullscreen, ...options }));

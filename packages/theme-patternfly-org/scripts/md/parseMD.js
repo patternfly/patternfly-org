@@ -56,10 +56,10 @@ function toReactComponent(mdFilePath, source) {
       outPath = path.join(outputBase, `${slug}.js`);
 
       let sourceRepo = 'patternfly-org';
-      if (source === 'html') {
+      if (source.includes('html')) {
         sourceRepo = 'patternfly';
       }
-      else if (source === 'react') {
+      else if (source.includes('react')) {
         sourceRepo = 'patternfly-react';
       }
 

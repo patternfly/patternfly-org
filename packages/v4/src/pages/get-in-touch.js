@@ -19,7 +19,7 @@ const GetInTouchPage = () => (
           <SplitItem style={{ marginRight: '12px' }}><ChatIcon /></SplitItem>
           <SplitItem isFilled>
             <Title size="lg" className="ws-title" headingLevel="h2">Chat with us</Title>
-            <a href="https://slack.patternfly.org/" target="_blank" rel="noopener noreferrer">Slack</a>
+            <a href="//slack.patternfly.org/" target="_blank" rel="noopener noreferrer">Slack</a>
           </SplitItem>
         </Split>
       </GridItem>
@@ -28,7 +28,7 @@ const GetInTouchPage = () => (
           <SplitItem style={{ marginRight: '12px' }}><MailBulkIcon /></SplitItem>
           <SplitItem isFilled>
             <Title size="lg" className="ws-title" headingLevel="h2">Stay in the loop</Title>
-            <a href="https://www.redhat.com/mailman/listinfo/patternfly" target="_blank" rel="noopener noreferrer">PatternFly mailing list</a>
+            <a href="//www.redhat.com/mailman/listinfo/patternfly" target="_blank" rel="noopener noreferrer">PatternFly mailing list</a>
           </SplitItem>
         </Split>
       </GridItem>
@@ -37,7 +37,7 @@ const GetInTouchPage = () => (
           <SplitItem style={{ marginRight: '12px' }}><QuestionIcon /></SplitItem>
           <SplitItem isFilled>
             <Title size="lg" className="ws-title" headingLevel="h2">Ask a question</Title>
-            <a href="https://forum.patternfly.org/" target="_blank" rel="noopener noreferrer">PatternFly forum</a>
+            <a href="//forum.patternfly.org/" target="_blank" rel="noopener noreferrer">PatternFly forum</a>
           </SplitItem>
         </Split>
       </GridItem>
@@ -46,7 +46,7 @@ const GetInTouchPage = () => (
           <SplitItem style={{ marginRight: '12px' }}><CatalogIcon /></SplitItem>
           <SplitItem isFilled>
             <Title size="lg" className="ws-title" headingLevel="h2">Read the latest</Title>
-            <a href="https://medium.com/patternfly" target="_blank" rel="noopener noreferrer">PatternFly Medium</a>
+            <a href="//medium.com/patternfly" target="_blank" rel="noopener noreferrer">PatternFly Medium</a>
           </SplitItem>
         </Split>
       </GridItem>

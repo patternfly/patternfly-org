@@ -15,7 +15,9 @@ import { IconRecommendations } from './IconRecommendations';
 import { IconsTable } from './IconsTable';
 import './icons.css';
 
-<p class="ws-icons-page">If you're a developer, check out our <a href="/get-started/develop#using-styles">getting started</a> page to learn more about how to get and use our icon set.</p>
+<p class="ws-icons-page">
+  If you're a developer, check out our [getting started](/get-started/develop#using-styles) page to learn more about how to get and use our icon set.
+</p>
 
 ## Icon sizes
 <Grid gutter="md">
@@ -80,7 +82,7 @@ import './icons.css';
     </Card>
   </GridItem>
   <GridItem xl={6} lg={12} className="ws-icons-gridtext ws-icons-alignment-section">
-    No matter the size of the icon, when icons are next to text, they should be center-aligned horizontally. An example of this alignment in a component is a <a href="/design-guidelines/usage-and-behavior/buttons-and-links#link-button">link button</a>. If icons are stacked, they should also be center-aligned vertically.
+    No matter the size of the icon, when icons are next to text, they should be center-aligned horizontally. An example of this alignment in a component is a [link button.](/components/button/design-guidelines#button-types) If icons are stacked, they should also be center-aligned vertically.
     <div><img src="./icon_alignment.png" alt="Icon alignment" className="ws-icon-alignment" /></div>
   </GridItem>
 </Grid>
@@ -88,7 +90,7 @@ import './icons.css';
 <Divider className="ws-icons-divider" />
 
 ## Icon colors
-Visit our <a href="/guidelines/colors" className="pf-m-link">colors page</a> to learn more about icon colors.
+Visit our [colors page](/guidelines/colors) to learn more about icon colors.
 
 <Divider className="ws-icons-divider" />
 
@@ -97,13 +99,13 @@ PatternFly uses custom icons and selections from <a href="https://fontawesome.co
 
 Click on any single icon in the table to download it as an SVG. Download all icon SVGs <a href="https://patternfly-org.s3.us-east-2.amazonaws.com/patternfly-icons.zip">here</a>.
 
-If you’re a designer, these icons are the same set as the ones in the <a href="/get-started/design">PatternFly Sketch Design Kit</a>. It is possible to use any FontAwesome icon as long it follows the guidelines above.
+If you’re a designer, these icons are the same set as the ones in the [PatternFly Sketch Design Kit.](/get-started/design) It is possible to use any FontAwesome icon as long it follows the guidelines above.
 
 If you’re looking to copy HTML for an icon:<br/>
 Use this for 'pficon' icons: `<i className="pf-icon [insert-icon-name]"></i>`<br />
 Use this for 'fa' solid icons: `<i className="fas [insert-icon-name]"></i>`<br />
 Use this for 'fa' regular icons: `<i className="far [insert-icon-name]"></i>`<br />
-<small>Note: Be sure to read <a href="/get-started/develop#using-styles" className="pf-m-link">how to get started with icons</a> when using 'fa' regular icons</small>
+<small>Note: Be sure to read [how to get started with icons](/get-started/develop#using-styles) when using 'fa' regular icons</small>
 
 If you're looking to copy React for an icon:<br />
 Use this for 'pficon' icons: `import { [insert-icon-name] } from '@patternfly/react-icons'`
