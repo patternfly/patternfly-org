@@ -92,4 +92,4 @@ PatternFly is built on top of [Bootstrap 3][1] and is licensed [Apache 2.0][2]. 
 </div>
 
 [1]: http://getbootstrap.com/
-[2]: http://www.apache.org/licenses/LICENSE-2.0.html -->
+[2]: http://www.apache.org/licenses/LICENSE-2.0.html

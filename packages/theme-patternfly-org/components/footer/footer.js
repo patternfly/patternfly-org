@@ -134,14 +134,14 @@ export const Footer = () => (
               <Nav aria-label="Stay in touch" className="pf-m-white">
                 <NavList className="pf-c-nav__list-footer">
                   <NavItem
-                    to="https://forum.patternfly.org"
+                    to="//forum.patternfly.org"
                     target="top"
                     aria-label="Visit the PatternFly 4 forum"
                   >
                     Forum
                   </NavItem>
                   <NavItem
-                    to="https://www.redhat.com/mailman/listinfo/patternfly"
+                    to="//redhat.com/mailman/listinfo/patternfly"
                     target="top"
                     aria-label="Join the PatternFly 4 mailing list"
                   >
@@ -165,7 +165,7 @@ export const Footer = () => (
             <GridItem className="ws-org-pfsite-footer-menu-social-links pf-u-px-xl">
               <Text
                 component={TextVariants.a}
-                href="https://github.com/patternfly/patternfly"
+                href="//github.com/patternfly/patternfly"
                 target="top"
                 aria-label="Link to PatternFly GitHub page"
               >
@@ -173,7 +173,7 @@ export const Footer = () => (
               </Text>
               <Text
                 component={TextVariants.a}
-                href="https://twitter.com/patternfly_des"
+                href="//twitter.com/patternfly_des"
                 target="top"
                 aria-label="Link to PatternFly Twitter page"
               >
@@ -189,7 +189,7 @@ export const Footer = () => (
         <GridItem md={2} mdOffset={1}>
           <Text
             component={TextVariants.a}
-            href="https://www.redhat.com"
+            href="//www.redhat.com"
             target="top"
             aria-label="Visit Red Hat.com"
           >
@@ -209,7 +209,7 @@ export const Footer = () => (
         <GridItem md={4} lg={5} className="pf-u-ml-xl-on-xl">
           <Text
             component={TextVariants.a}
-            href="https://www.redhat.com/en/about/privacy-policy"
+            href="//www.redhat.com/en/about/privacy-policy"
             target="top"
             aria-label="Privacy statement"
           >
@@ -217,7 +217,7 @@ export const Footer = () => (
           </Text>
           <Text
             component={TextVariants.a}
-            href="https://www.redhat.com/en/about/terms-use"
+            href="//www.redhat.com/en/about/terms-use"
             target="top"
             aria-label="Terms of use"
           >
@@ -225,7 +225,7 @@ export const Footer = () => (
           </Text>
           <Text
             component={TextVariants.a}
-            href="https://www.redhat.com/en/about/all-policies-guidelines"
+            href="//www.redhat.com/en/about/all-policies-guidelines"
             target="top"
             aria-label="All policies and guidelines"
           >
