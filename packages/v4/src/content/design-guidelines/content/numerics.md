@@ -8,7 +8,7 @@ This page provides best practices for expressing values including:
 - Date and time
 - Numbers and currency
 
-See our [Units and symbols](/design-guidelines/content/units-and-symbols) page to learn how to use numeric units and symbols in your UI.
+See our [Units and symbols](https://www.patternfly.org/v4/ux-writing/units-and-symbols) page to learn how to use numeric units and symbols in your UI.
 
 ## Date and time
 All date and time formats should be localizable, not hard-coded. When building localizable date and time formats, development teams should share the same library by using a resource like [moment.js](http://momentjs.com/).  
@@ -108,8 +108,6 @@ For other currencies, use their three-letter ISO code wherever possible. You may
 - GPB 1,500 or €1,500 (Euro)
 - JPY 1,500 or ¥1,500 (Japanese Yen)
 
-Generally, we don't provide currency conversions.
-
 Some instances may call for a currency's ISO three-digit numeric code. This code is useful when currency codes should be understood in countries that don't use Latin scripts, or for computerized systems:
 
 | **Country**        | **Currency** | **Alphabetic code** | **Numeric code** |
@@ -119,5 +117,6 @@ Some instances may call for a currency's ISO three-digit numeric code. This code
 | European Union | Euro     | EUR             | 978          |
 | United Kingdom | Pound    | GBP             | 826          |
 
+Generally, we don't provide currency conversions.
 
 (Taken from the Red Hat Corporate Style Guide)

@@ -22,7 +22,7 @@ Use the following guidelines when writing text that is only visible to a screen 
 - Avoid unnecessary capitalization.
 - Avoid leet speak that uses numbers or special characters in place of letters (like "a11y" for accessibility).
 
-Localize your content to align with different regional and cultural expectations. Keep your source content (copy and code) as clear and consistent as possible to not only drive better translation, but also improve product quality, lower costs, and increase reuse.
+Localize your content to align with different regional and cultural expectations and keep your source content (copy and code) as clear and consistent as possible. Source content created with these goals in mind yields better translations, improves product quality, lowers costs, and increases reuse.
 
 Keep these additional guidelines in mind when writing for global users:
 

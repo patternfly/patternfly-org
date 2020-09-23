@@ -3,7 +3,7 @@ id: Units and symbols
 section: UX writing
 ---
 
-This page focuses on how to write units and symbols in an interface. For guidance on writing and displaying numeric values like date, time, and currency, see our [Numerics](/design-guidelines/content/numerics) resource.
+This page focuses on how to write units and symbols in an interface. For guidance on writing and displaying numeric values like date, time, and currency, see our [Numerics](https://www.patternfly.org/v4/ux-writing/numerics) resource.
 
 Use consistent formatting, terminology, and symbols to display units of measure in your UI. Units of measure and symbols often appear when describing quantitative values including:
 
@@ -12,7 +12,7 @@ Use consistent formatting, terminology, and symbols to display units of measure 
 - Data bandwidth
 - Currency
 
-When providing quantitative values in your UI, default to the International System of Units (SI units), so that your units of measure can be understood by global users. Use the following base units and symbols to describe different quantities:
+When providing quantitative values in your UI, use the International System of Units (SI units), so that your units of measure can be understood by global users. Use the following base units and symbols to describe different quantities:
 - Length: meter (m)
 - Mass: kilogram (kg)
 - Electric current: ampere (A)
@@ -81,7 +81,7 @@ Data transfer rates can be measured in binary or metric units. Always align this
 
 ## Currency
 
-Wherever possible, display currency in three-letter code according to [ISO Standard 4217](https://www.iso.org/iso-4217-currency-codes.html). See our [Numerics](https://www.patternfly.org/v4/design-guidelines/content/numerics#numbers-and-currency) page for more information about writing currency.
+Wherever possible, display currency in three-letter code according to [ISO Standard 4217](https://www.iso.org/iso-4217-currency-codes.html). See our [Numerics](https://www.patternfly.org/v4/ux-writing/numerics#numbers-and-currency) page for more information about writing currency.
 
 ## Writing units of measure
 
@@ -94,8 +94,8 @@ Follow these general best practices for writing units of measure:
 | Display the full name of each unit unless space is limited.                                                                                                                | Write "6 seconds ago" instead of "6s ago."                                                                                                                                                                                                                                |
 | Don't make unit symbols plural.                                                                                                                                            | Write "60 cm," not "60 cms."                                                                                                                                                                                                                                              |
 | Don't punctuate unit symbols unless they end a sentence.                                                                                                                   | "60 cm doesn't end this sentence, so 'cm' isn't followed by a period."                                                                                                                                                                                                   |
-| Write SI unit symbols in lowercase, unless a symbol is named after a person or proper noun, then capitalize its first letter. | Write "W" for watt. <br><br>Write "Hz" for hertz.</br></br> |
-| Don't mix symbols or apply mathematical operations to unit names.                                                                                                          | Write "kg/m<sup>3</sup>" instead of "kilogram/m<sup>3</sup>." <br><br>Write "kg · m<sup>-3</sup>" instead of "kilogram/cubic meter."</br>  <br>Use "kilogram per cubic meter" instead of "kg/cubic meter," "kilogram per meter<sup>3</sup>," or "kg per m<sup>3</sup>."</br></br> |
+| Write SI unit symbols in lowercase, unless a symbol is named after a person or proper noun, then capitalize its first letter. | Write "W" for watt.  <br /><br />Write "Hz" for hertz. |
+| Don't mix symbols or apply mathematical operations to unit names.                                                                                                          | Write "kg/m<sup>3</sup>" instead of "kilogram/m<sup>3</sup>."  <br /><br />Write "kg · m<sup>-3</sup>" instead of "kilogram/cubic meter."  <br /><br />Use "kilogram per cubic meter" instead of "kg/cubic meter," "kilogram per meter<sup>3</sup>," or "kg per m<sup>3</sup>." |
 | Use parentheses to display a secondary unit of measure.                                                                                                | "10°C (50°F)"                                                                                                                                                                                                                                                             |
 | Clearly express units for two or more related quantities. If necessary, you can include the unit after each numeral.                                                        | "6 to 8 inches" or "6 inches to 8 inches"                                                                                                                                                                                                                                 |
 | Use symbols to display derived units of measure (units formed using a calculation).                                                                                        | "38 mph, 27 ft/s<sup>2</sup>"                                                                                                                                                                                                                                                        |
