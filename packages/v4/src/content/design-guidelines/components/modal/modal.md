@@ -4,6 +4,9 @@ section: components
 related: ['Button']
 ---
 
+import CheckIcon from '@patternfly/react-icons/dist/js/icons/check-icon';
+import TimesIcon from '@patternfly/react-icons/dist/js/icons/times-icon';
+
 **Modals** load and display important information without navigating away from the current page.
 
 ## Primary elements
@@ -76,9 +79,9 @@ An error message should be actionable, human readable, and answer the following 
 * How can I fix it?
 
 Never blame the user. Use passive voice where appropriate to avoid assigning blame.
-* ⛔ You put in the wrong password.
-* ✅ That password wasn’t recognized OR
-* ✅ We didn’t recognize that password.
+* <TimesIcon /> You put in the wrong password.
+* <CheckIcon /> That password wasn’t recognized OR
+* <CheckIcon /> We didn’t recognize that password.
 
 #### Provide the result of a task or state of an application
 <img src="./img/passive-dialog.png" alt="Passive dialog" />
