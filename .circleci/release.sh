@@ -35,6 +35,7 @@ then
     curl -H "Authorization: token ${GH_PR_TOKEN}" --request POST "${GITHUB_PR_COMMENTS}" --data "${JSON}"
   fi
 elif grep -i "No changed packages to publish" lena-output.txt;
+then
   echo "No changed packages to publish"
 else
   echo "Failed lerna publish"
