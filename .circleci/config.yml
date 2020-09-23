@@ -14,7 +14,6 @@ references:
   - packages/v3/vendor
   v4_build_cache_paths: &v4_build_cache_paths
   - packages/v4/.cache
-  - packages/v4/public
   js_deps_cache_key: &js_deps_cache_key
     js-deps-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
   js_deps_cache_check_key: &js_deps_cache_check_key
