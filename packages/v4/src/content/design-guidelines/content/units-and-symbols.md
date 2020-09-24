@@ -3,7 +3,7 @@ id: Units and symbols
 section: UX writing
 ---
 
-This page focuses on how to write units and symbols in an interface. For guidance on writing and displaying numeric values like date, time, and currency, see our [Numerics](https://www.patternfly.org/v4/ux-writing/numerics) resource.
+This page focuses on how to write units and symbols in an interface. For guidance on writing and displaying numeric values like date, time, and currency, see our [Numerics](/ux-writing/numerics) resource.
 
 Use consistent formatting, terminology, and symbols to display units of measure in your UI. Units of measure and symbols often appear when describing quantitative values including:
 
@@ -81,7 +81,7 @@ Data transfer rates can be measured in binary or metric units. Always align this
 
 ## Currency
 
-Wherever possible, display currency in three-letter code according to [ISO Standard 4217](https://www.iso.org/iso-4217-currency-codes.html). See our [Numerics](https://www.patternfly.org/v4/ux-writing/numerics#numbers-and-currency) page for more information about writing currency.
+Wherever possible, display currency in three-letter code according to [ISO Standard 4217](https://www.iso.org/iso-4217-currency-codes.html). See our [Numerics](/ux-writing/numerics#numbers-and-currency) page for more information about writing currency.
 
 ## Writing units of measure
 

@@ -8,7 +8,7 @@ This page provides best practices for expressing values including:
 - Date and time
 - Numbers and currency
 
-See our [Units and symbols](https://www.patternfly.org/v4/ux-writing/units-and-symbols) page to learn how to use numeric units and symbols in your UI.
+See our [Units and symbols](/ux-writing/units-and-symbols) page to learn how to use numeric units and symbols in your UI.
 
 ## Date and time
 All date and time formats should be localizable, not hard-coded. When building localizable date and time formats, development teams should share the same library by using a resource like [moment.js](http://momentjs.com/).  
