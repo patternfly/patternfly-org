@@ -34,7 +34,7 @@ then
     echo "Adding github PR comment ${GITHUB_PR_COMMENTS} ${JSON}"
     curl -H "Authorization: token ${GH_PR_TOKEN}" --request POST "${GITHUB_PR_COMMENTS}" --data "${JSON}"
   fi
-elif grep -i "No changed packages to publish" lena-output.txt;
+elif grep -i "No changed packages to publish" lerna-output.txt;
 then
   echo "No changed packages to publish"
 else
