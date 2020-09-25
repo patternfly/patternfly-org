@@ -19,6 +19,7 @@ module.exports = {
     { section: 'demos' },
     { section: 'layouts' },
     { section: 'contribute' },
+    { href: '/community' },
     { href: '/get-in-touch' },
   ],
   topNavItems: [],

@@ -9,6 +9,10 @@ module.exports = {
     Component: () => import(/* webpackChunkName: "get-in-touch/index" */ './src/pages/get-in-touch'),
     title: 'Get in touch'
   },
+  '/community': {
+      Component: () => import('./src/pages/community'),
+      title: 'Community'
+  },
   '/404': {
     SyncComponent: isClient && require('theme-patternfly-org/pages/404').default,
     title: '404 Error'
