@@ -7,35 +7,28 @@ Consistent capitalization adds clarity and creates unity across your products' U
 
 ## Capitalization types
 
-<ul>
-<li><b>Title case</b>: Title case capitalizes only the first letter of each word in a sentence except for smaller words like articles and conjunctions that have fewer than four letters.
-<br />
-<br />
+
+**Title case** capitalizes only the first letter of each word in a sentence except for smaller words like articles and conjunctions that have fewer than four letters.
+
 Example: "PatternFly Design Resources With Tips and Best Practices"
-<br />
-<br />
-Hyperlinked articles in a UI are not displayed as titles. Instead, the copy typically reads something like, "Learn more about [tool name]." </li>
-<br />
-<li><b>Sentence case</b>: Sentence case only capitalizes the first letter of the first word in a title, heading, subtitle, or subheading except for proper nouns, product names, acronyms, and initialisms.
-<br />
-<br />
-Example: “PatternFly’s design resources with tips and best practices” </li>
-</ul>
+
+Hyperlinked articles in a UI are not displayed as titles. Instead, the copy typically reads something like, "Learn more about [tool name]." 
+
+**Sentence case** only capitalizes the first letter of the first word in a title, heading, subtitle, or subheading except for proper nouns, product names, acronyms, and initialisms.
+
+Example: “PatternFly’s design resources with tips and best practices” 
+
 
 ## Capitalization across PatternFly
 
-Follow these guidelines for <b>PatternFly content</b>, including documentation, UX copy, blog articles, and more. 
+Follow these guidelines for **PatternFly content**, including documentation, UX copy, blog articles, and more. 
 
-
-- Use **sentence case** for page titles, menu/navigation items, headings, subtitles, and subheadings across PatternFly. Capitalize proper nouns, product names, acronyms, and initialisms.  
-<br />
-Example: “Introduction to HTML and table components” </li>  
-<br />
+- Use **sentence case** for page titles, menu items, navigation items, headings, subtitles, and subheadings across PatternFly. 
+- Capitalize proper nouns, product names, acronyms, and initialisms.  
 - Write all components in **lowercase** unless they start a sentence. 
-<br />
-Example: "Card, button, and banner components are my favorites."
-<br />
-<br />
+
+  Example: "Card, button, and banner components are my favorites."
+
 **Note**: “React” is always capitalized, even when referring to a component (“React component”). It’s the official name of a JavaScript library, and it’s written as a proper noun across the <a href="https://reactjs.org/">react.js org site</a>.  
 
 On PatternFly's website, all navigation items, button text, and headings are written in sentence case:  
@@ -56,7 +49,7 @@ If you’re designing UIs for Red Hat products, follow these rules:
 2. **Menu**: Menu items are in sentence case.
 
 <br /> 
-Capitalize <b>Red Hat feature names</b> when they’re used as proper nouns or when they refer to a capitalized UI term (like a navigation item). Write them in lowercase when they’re used to describe generic concepts.
+Capitalize **Red Hat feature names** when they’re used as proper nouns or when they refer to a capitalized UI term (like a navigation item). Write them in lowercase when they’re used to describe generic concepts. 
 
 Examples:
 
