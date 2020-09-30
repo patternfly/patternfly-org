@@ -78,7 +78,7 @@
 }
 
 /* Table styles */
-/* .ws-table {
+.ws-table {
   width: 100%;
   margin-bottom: var(--pf-global--spacer--md);
 }
@@ -88,7 +88,7 @@
   padding: var(--pf-global--spacer--sm);
   vertical-align: top;
   border-bottom: var(--pf-global--BorderWidth--sm) solid #e0e0e0;
-} */
+}
 /* Undo patternfly reset to respect MD table styles */
 .ws-table td[align="center"],
 .ws-table th[align="center"] {
@@ -103,7 +103,7 @@
 .ws-table tr > code {
   white-space: normal;
 }
-/* .ws-table {
+.ws-table {
   padding: 0;
   color: #151515;
 }
@@ -141,7 +141,7 @@
   height: inherit;
   font-weight: 400;
   vertical-align: baseline;
-} */
+}
 
 /*
  * Copied from pf-c-content.

@@ -165,7 +165,7 @@ function toReactComponent(mdFilePath, source) {
     .use(require('./anchor-header'))
     .use(require('./styled-tags'))
     // Transform HAST object to JSX string
-    .use(require('./mdx-hast-to-jsx').compiler, {
+    .use(require('./mdx-hast-to-jsx'), {
       getOutPath: () => outPath,
       getRelPath: () => path.relative(path.dirname(outPath), vfile.dirname), // for imports
       getPageData: () => pageData // For @reach/router routing
