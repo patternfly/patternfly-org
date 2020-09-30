@@ -7,9 +7,9 @@ UX copy should be accessible by everyone, so consider all users’ abilities (ph
 
 Here are a few best practices for making your UX copy more accessible:
 
-- Avoid directional language, like “Use the button to the left." It will not help a user who is working with a screen reader.
+- Avoid directional language, like “Use the button to the left." It doesn't account for users with different screen layouts (desktop vs. mobile) or users working with screen readers. 
 - Use proper heading levels (H1, H2) to articulate the page content’s organization.
-- Do not identify items by color, like “Click the blue button.”
+- Do not identify items by color, like “Click the blue button.” 
 - Use plain language and short sentences.
 - Use common contractions (for example, "it’s” and "you’re") in areas that sound most natural to you. Contractions are great for maintaining a casual voice and tone and for making your [UX copy more accessible](https://help.blackboard.com/Accessibility/Write_Accessible_Content). UX copy should make a product interaction feel, look, and sound more human. Contractions help you get there.
 - Be clear and concise.
@@ -22,7 +22,9 @@ Use the following guidelines when writing text that is only visible to a screen 
 - Avoid unnecessary capitalization.
 - Avoid leet speak that uses numbers or special characters in place of letters (like "a11y" for accessibility).
 
-Accessibility and localization/translation are closely related. If you create accessible UX copy, you’re most likely making localization and translation easier too.  Keep these additional guidelines in mind when writing for global users:
+Localize your content to align with different regional and cultural expectations and keep your source content (copy and code) as clear and consistent as possible. Source content created with these goals in mind yields better translations, improves product quality, lowers costs, and increases reuse.
+
+Keep these additional guidelines in mind when writing for global users:
 
 - Avoid idioms like “cross your fingers.” They don’t make sense in all languages.
 - Avoid vague terms like “stuff” or “kind of.” They can be translated incorrectly.
