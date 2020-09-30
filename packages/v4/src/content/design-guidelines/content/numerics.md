@@ -3,17 +3,10 @@ id: Numerics
 section: UX writing
 ---
 
-This page provides best practices for expressing values including:
-
-- Date and time
-- Numbers and currency
-
-See our [Units and symbols](/ux-writing/units-and-symbols) page to learn how to use numeric units and symbols in your UI.
-
 ## Date and time
 All date and time formats should be localizable, not hard-coded. When building localizable date and time formats, development teams should share the same library by using a resource like [moment.js](http://momentjs.com/).  
 
-These date and time standards are based in American English, but date and time formats will vary once they're localized, depending on locale.
+These date and time standards are based in American English, but date and time formats will vary once they're localized.
 
 For applications or websites that are accessed globally, use DD Month YYYY.
 
@@ -25,7 +18,7 @@ When you represent the date as a numeric value or label, use the [ISO Standard 8
 
 Example: Write January 7, 2020 as 2020-01-07.
 
-Whenever possible, write out the full name of the month. If space is limited, use the month’s 3-letter abbreviation:
+Whenever possible, write out the full name of the month. If space is limited, use the month’s three-letter abbreviation:
 
 - Jan
 - Feb
@@ -56,7 +49,7 @@ Examples:
 
 Using **absolute** or **relative** timestamps will depend on the context. If your user is primarily interested in understanding the exact date and time that an event occurred, use an absolute timestamp.
 
-If users are interested in duration, the amount of time it takes for an event to occur or the amount of time between events, use an absolute timestamp formatted as HH:MM:SS.
+If users are interested in duration, the amount of time it takes for an event to occur, or the amount of time between events, use an absolute timestamp formatted as HH:MM:SS.
 
 If users are interested in how long ago an event occurred, use a relative timestamp. When reporting relative time, follow these examples:
 
@@ -102,13 +95,13 @@ For currencies that use the symbol "$" alone, modify with the first two letters 
 - HK$1,500 (Hong Kong)
 - CA$1,500 (Canada)
 
-For other currencies, use their three-letter ISO code wherever possible. You may use national currency symbols, but some users may not be familiar with them. When in doubt, default to ISO. 
+For other currencies, use their three-letter ISO code wherever possible. You can use national currency symbols, but some users may not be familiar with them. When in doubt, default to ISO. 
 
 - EUR 1,500 or £1,500 (British pound)
 - GPB 1,500 or €1,500 (Euro)
 - JPY 1,500 or ¥1,500 (Japanese Yen)
 
-Some instances may call for a currency's ISO three-digit numeric code. This code is useful when currency codes should be understood in countries that don't use Latin scripts, or for computerized systems:
+Use a currency's ISO three-digit numeric code when writing for computerized systems or for countries that don't use Latin scripts.
 
 | **Country**        | **Currency** | **Alphabetic code** | **Numeric code** |
 |----------------|----------|-----------------|--------------|
