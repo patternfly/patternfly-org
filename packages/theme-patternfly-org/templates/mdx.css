@@ -185,7 +185,9 @@
 .ws-blockquote:not(:last-child),
 .ws-small:not(:last-child),
 .ws-pre:not(:last-child),
-.ws-hr:not(:last-child) {
+.ws-hr:not(:last-child),
+.ws-table:not(:last-child),
+.ws-content-table:not(:last-child) {
   margin-bottom: var(--pf-c-content--MarginBottom); }
 .ws-h1,
 .ws-h2,

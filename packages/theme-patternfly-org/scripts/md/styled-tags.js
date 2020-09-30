@@ -40,10 +40,16 @@ function styledTags() {
                 .forEach(th => {
                   th.properties.role = 'columnheader';
                   th.properties.scope = 'col';
-                  const colName = (th.children[0] && th.children[0].type === 'text')
-                    ? th.children[0].value
-                    : null;
+                  let colName = '';
+                  visit(th, 'text', node2 => colName += node2.value);
                   columnHeaders.push(colName);
+                  // Need to wrap in div for css-grid stuffs
+                  th.children = [{
+                    type: 'element',
+                    tagName: 'div',
+                    properties: {},
+                    children: th.children
+                  }];
                 });
             }
             else if (child.tagName === 'tbody') {
@@ -59,6 +65,13 @@ function styledTags() {
                       if (columnHeaders[i]) {
                         td.properties['data-label'] = columnHeaders[i];
                       }
+                      // Need to wrap in div for css-grid stuffs
+                      td.children = [{
+                        type: 'element',
+                        tagName: 'div',
+                        properties: {},
+                        children: td.children
+                      }];
                     });
                 });
             }
