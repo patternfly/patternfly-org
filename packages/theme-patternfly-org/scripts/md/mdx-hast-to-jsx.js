@@ -37,7 +37,7 @@ function toJSX(node, parentNode = {}, options = {}) {
   }
 }
 
-function compile(options = { }) {
+function compiler(options = { }) {
   this.Compiler = function(tree) {
     return toJSX(tree, {}, options);
   }
@@ -91,6 +91,7 @@ function serializeRoot(node, options) {
 
   let res = `import React from 'react';
 import { AutoLinkHeader, Example, Link as PatternflyThemeLink } from 'theme-patternfly-org/components';
+import { Table as PatternflyThemeTable, TableBody as PatternflyThemeTableBody, TableHeader as PatternflyThemeTableHeader } from '@patternfly/react-table';
 ${importStatements}
 const pageData = ${JSON.stringify(pageData, null, 2)};
 `;
@@ -133,6 +134,12 @@ function serializeElement(node, options) {
   if (type === 'img') {
     delete props.src;
   }
+  const cells = node.properties.cells;
+  const rows = node.properties.rows;
+  if (type === 'PatternflyThemeTable') {
+    delete props.cells;
+    delete props.rows;
+  }
   const spread = Object.keys(props).length === 0
     ? null
     : JSON.stringify(props);
@@ -162,6 +169,12 @@ function serializeElement(node, options) {
         res += ` height={${srcImport}.height * ${props.width} / ${srcImport}.width}`;
       }
     }
+  }
+  else if (type === 'PatternflyThemeTable') {
+    res += ` cells={[${cells.map(cell => `{ title: <React.Fragment>${cell.join('')}</React.Fragment> }`).join(',\n')}]}`;
+    res += ` rows={[${rows.map(row => `{
+      cells: [${row.map(arr => `{ title: <React.Fragment>${arr.join('')}</React.Fragment> }`)}]
+    }`).join(',\n')}]}`;
   }
   if (spread) {
     res += ` {...${spread}}`;
@@ -231,4 +244,7 @@ function fakeReactCreateElement(name, props) {
   }
 }
 
-module.exports = compile;
+module.exports = {
+  compiler,
+  toJSX
+};
