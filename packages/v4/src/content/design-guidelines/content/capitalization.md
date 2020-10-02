@@ -37,17 +37,18 @@ On PatternFly's website, all navigation items, button text, and headings are wri
 
 ## Capitalization across Red Hat UIs
 
-If you’re designing UIs for Red Hat products, follow these rules: 
+Similar to PatternFly, sentence case is the standard across Red Hat products. However, capitalization will vary depending on each product area's context. In general, follow these guidelines:
 
 - Write navigation items and their corresponding page titles in **title case**.
-- Write products, services, and features in **title case**. 
-- Write all other areas (like menu items, button text, form field labels, and empty state headings) in **sentence case**. 
+- Write all other areas (like menu items, button text, form field labels, and empty state headings) in **sentence case**.  
+- Capitalize proper nouns, acronyms, initialisms, product names, services, and features.
 
 <img src="./img/user-menu-example.png" alt="title case navigation items and sentence case menu items" width="750px"/>   
 
 1. **Navigation**: Navigation items are in title case. 
 2. **Menu**: Menu items are in sentence case.
 
+Keep in mind that the main goal is consistency. If you need to use different capitalization standards depending on what you're designing, that's OK. Just be sure to keep the capitalization within your product area consistent.   
 <br /> 
 Capitalize **Red Hat feature names** when they’re used as proper nouns or when they refer to a capitalized UI term (like a navigation item). Write them in lowercase when they’re used to describe generic concepts. 
 
