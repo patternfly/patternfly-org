@@ -22,7 +22,7 @@ Headings should cascade levels without skipping––always progress from level 
 
 Example:
 
-![An example of how different headings cascade in design documentation. We removed the body copy between them for easy comparions between levels. It reads: "Menu (H1), Vertical navigation (H2), When to use (H3)."](./img/desguidelines1.png)
+> ![An example of how different headings cascade in design documentation. We removed the body copy between them for easy comparison between levels. It reads: "Menu (H1), Vertical navigation (H2), When to use (H3)."](./img/desguidelines1.png)
 
 ## Formatting 
 
@@ -33,7 +33,7 @@ Always write headings in sentence case. Write component names in lowercase.
 
 Example: 
 
-"Usage guidelines for card views"
+> "Usage guidelines for card views"
 
 ### Bolds and italics
 
@@ -65,19 +65,19 @@ Use numbered callouts to call out multiple areas in your image, then use a corre
 
 Example:
 
-![Two call outs highlight multiple items on a toolbar.](./img/desguidelines2.png)
+> ![Two callouts highlight multiple items on a toolbar.](./img/desguidelines2.png)
 
-**1. Items in view:** Allows the user to select the item count (number of listed items) per page, as seen in full pagination
+> **1. Items in view:** Allows the user to select the item count (number of listed items) per page, as seen in full pagination
 
-**2. Compact pager:** Supplies the user with page-back and page-next controls only
+> **2. Compact pager:** Supplies the user with page-back and page-next controls only
 
-Avoid using a callout to highlight a single item, unless you're pointing our a small part of a large view, or the item isn't clearly shown in your image. Use a blank, unnumbered callout to mark the area, then bold it in your explanation.
+Avoid using a callout to highlight a single item, unless you're pointing out a small part of a large view, or the item isn't clearly shown in your image. Use a blank, unnumbered callout to mark the area, then bold it in your explanation.
 
 Example:
 
-![#A single call out highlights the login button on a large screen.](./img/desguidelines3.png)
+> ![#A single callout highlights the login button on a large screen.](./img/desguidelines3.png)
 
-Always write your **login button** as two words: "Log in."
+> Always write your **login button** as two words: "Log in."
 
 ## Style, voice, and tone
 
@@ -91,11 +91,11 @@ When writing design guidelines, use:
 - Direct language and sentence structure.
 - Full words to introduce examples, instead of their abbreviations ("for example" instead of "e.g."), as seen on our [terms list](/ux-writing/terminology/).
 - Descriptive hyperlinks (not "click here").
-Descriptive language instead of directional language (up, down, left, right) to refer to elements in your document.
+- Descriptive language instead of directional language (up, down, left, right) to refer to elements in your document.
 
 ## Design guidelines template
 
-Use this template asa guide to structure your document. Depending on your content, you might have different sections and headings.
+Use this template as a guide to structure your document. Depending on your content, you might have different sections and headings.
 
 ### Design guideline name
 
@@ -103,7 +103,7 @@ Title your page with your component or pattern name. Begin with a short 1-2 sent
 
 Example:
 
-"**Pagination** splits data across multiple pages, typically within a table, list, or card view. If you use infinite scrolling, you don't need to use pagination."
+> "**Pagination** splits data across multiple pages, typically within a table, list, or card view. If you use infinite scrolling, you don't need to use pagination."
 
 ### Elements
 
@@ -124,9 +124,3 @@ Content guidance includes:
 - Editorial guidelines for labeling and message text.
 - Length restrictions and what to do when text overflows.
 - Localization considerations.
-
-### Related components and demos
-
-Provide a bulleted list of links to related components and demos.
-
-
