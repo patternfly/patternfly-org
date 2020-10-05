@@ -37,7 +37,7 @@ Example:
 
 ### Bolds and italics
 
-**Bold** componennt names when you first introduce them.
+**Bold** component names when you first introduce them.
 
 Example: A **card** is a square or rectangle container of related information.
 
