@@ -25,10 +25,6 @@ Search input can act as a basic filter for the user to type a string in and filt
 ### Search input as a find function
 Another way to use search input is as a find function. This would mean that the value entered within the field would then be compared to each result, and only matches would be highlighted.
 
-<img src="./img/search-input-navigation-table.png" alt="Search input with navigation in a basic table" width="1500"/>
-
-### Find specifics
-
 <img src="./img/search-input-navigation-2-table.png" alt="Search input with active navigation in a basic table" width="1500"/>
 
 1. **Field input:** The user’s input immediately starts matching to values as they begin typing.
