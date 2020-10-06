@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.23](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.22...theme-patternfly-org@0.1.23) (2020-10-06)
+
+
+### Bug Fixes
+
+* **link:** update twitter link to patternfly ([#2174](https://github.com/patternfly/patternfly-org/issues/2174)) ([f08af49](https://github.com/patternfly/patternfly-org/commit/f08af49eb205369cab863ce49c352dacbf45b1d3))
+
+
+
+
+
 ## [0.1.22](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.21...theme-patternfly-org@0.1.22) (2020-09-23)
 
 
