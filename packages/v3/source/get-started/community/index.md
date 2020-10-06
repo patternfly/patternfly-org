@@ -30,7 +30,7 @@ Whenever possible, provide a link to the design documentation or specification t
 
  [1]: http://contributor-covenant.org/
  [2]: https://slack.patternfly.org/
- [3]: https://twitter.com/patternfly_des
+ [3]: https://twitter.com/patternfly
  [4]: http://blog.patternfly.org/
  [5]: https://www.redhat.com/mailman/listinfo/patternfly
  [6]: https://www.redhat.com/archives/patternfly/

@@ -173,7 +173,7 @@ export const Footer = () => (
               </Text>
               <Text
                 component={TextVariants.a}
-                href="//twitter.com/patternfly_des"
+                href="//twitter.com/patternfly"
                 target="top"
                 aria-label="Link to PatternFly Twitter page"
               >
