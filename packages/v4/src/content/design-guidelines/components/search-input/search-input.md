@@ -11,10 +11,6 @@ Use a search input when you want to either filter down or locate values from a d
 
 Search input can act as a basic filter for the user to type a string in and filter down a list of values. 
 
-<img src="./img/search-input-default-table.png" alt="Search input in a basic table" width="1500"/>
-
-### Filtering specifics
-
 <img src="./img/search-input-active-table.png" alt="Search input active in a basic table" width="1500"/>
 
 1. **Field input:** The user’s input immediately starts filtering down the list as the user types. There is no need for them to press enter. 
