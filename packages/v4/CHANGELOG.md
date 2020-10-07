@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.38](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.37...patternfly-org-4@4.2.38) (2020-10-07)
+
+
+### Bug Fixes
+
+* **docs:** fixed MD sourcing to display React docs & React demos tabs correctly ([#2183](https://github.com/patternfly/patternfly-org/issues/2183)) ([c3929a0](https://github.com/patternfly/patternfly-org/commit/c3929a08653d38545ed93587465a3391d7d5ed9e))
+
+
+
+
+
 ## [4.2.37](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.36...patternfly-org-4@4.2.37) (2020-10-07)
 
 **Note:** Version bump only for package patternfly-org-4
