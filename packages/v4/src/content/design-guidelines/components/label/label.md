@@ -3,7 +3,6 @@ id: Label
 section: components
 ---
 
-# Labels
 Use a label when you want to highlight an element on a page to draw attention to it or make it more searchable. Labels can also be used to tag items of the same category.
 
 Do not use a label if you want to show a count. Instead, use a [badge](https://www.patternfly.org/v4/components/badge/react).
@@ -11,10 +10,10 @@ Do not use a label if you want to show a count. Instead, use a [badge](https://w
 ## Usage
 Labels are easily customized to fit different use cases. There are two main types of labels:
 1. Unfilled
-![unfilled-labels](img/unfilled-labels.png)
+<img src="./img/unfilled-labels.png" alt="Unfilled labels" width="646"/>
 
 2. Filled
-![filled-labels](img/filled-labels.png)
+<img src="./img/filled-labels.png" alt="Filled labels" width="646"/>
 
 Use the filled option to add more visual prominence to a label.
 
@@ -25,7 +24,7 @@ While you may use other colors for your labels, we recommend using the ones prov
 ## Label features
 You can further customize labels by making them dismissable, adding icons, or making them clickable links. You can use any combination of these features in a single label.
 
-![label-features](img/label-features.png)
+<img src="./img/label-features.png" alt="Examples of different types of labels" width="180"/>
 
 1. **Dismissible labels** can be dismissed by clicking on the “x”
 2. **Add an icon** to the left of the text for added clarification
@@ -33,18 +32,22 @@ You can further customize labels by making them dismissable, adding icons, or ma
 
 **When to use dismissable labels**
 For labels that are easily removed or dismissed, use a dismissable label. A common use case for dismissable labels is when users can edit labels.
-![edit-labels](img/edit-labels.png)
+
+<img src="./img/edit-labels.png" alt="Example of dismissable labels" width="646"/>
 
 **When to use labels with icons**
 Optionally add an icon to your label in cases where additional visual information is helpful. You can also use them to distinguish labels of the same color if needed.
-![labels-with-icons](img/labels-with-icons.png)
+
+<img src="./img/labels-with-icons.png" alt="Example of labels with icons" width="336"/>
 
 **When to use clickable labels**
 You can also make labels clickable. A common use case for clickable labels is when a user may want to filter by a specific label. You can also use label links to redirect users to a new page.
-![dismissable-label](img/dismissable-label.png)
+
+<img src="./img/clickable-label.png" alt="Example of a clickable label" width="219"/>
 
 ## Labels in context
 Labels can be used almost anywhere in a UI, but are commonly used in table views and catalogs.
-![table-view](img/table-view.png)
 
-![catalog-view](img/catalog-view.png)
+<img src="./img/table-view.png" alt="Example labels in a table" width="1209"/>
+
+<img src="./img/catalog-view.png" alt="Example labels in a catalog" width="1290"/>
