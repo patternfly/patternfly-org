@@ -1,3 +1,8 @@
+---
+id: Label
+section: components
+---
+
 # Labels
 Use a label when you want to highlight an element on a page to draw attention to it or make it more searchable. Labels can also be used to tag items of the same category.
 
