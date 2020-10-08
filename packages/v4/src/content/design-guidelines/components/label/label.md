@@ -3,7 +3,7 @@ id: Label
 section: components
 ---
 
-Use a label when you want to highlight an element on a page to draw attention to it or make it more searchable. Labels can also be used to tag items of the same category.
+Use a **label** when you want to highlight an element on a page to draw attention to it or make it more searchable. Labels can also be used to tag items of the same category.
 
 Do not use a label if you want to show a count. Instead, use a [badge](https://www.patternfly.org/v4/components/badge/react).
 
