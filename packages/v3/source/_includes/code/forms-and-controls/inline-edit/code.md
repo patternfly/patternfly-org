@@ -16,9 +16,9 @@
 <div class="collapse in" id="markup-2">
 <pre class="prettyprint">{% capture markup_include %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
-<script src="components/bootstrap-datepicker/dist/esm/bootstrap-datepicker.js"></script>
+<script src="components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
 <script src="components/patternfly-bootstrap-combobox/js/bootstrap-combobox.js"></script>
-<script src="components/bootstrap-select/dist/esm/bootstrap-select.js"></script>
+<script src="components/bootstrap-select/dist/js/bootstrap-select.js"></script>
 
 {% include widgets/forms/inline-edit-for-form.html %}
 {% endcapture %}{{ markup_include | xml_escape }}</pre>
