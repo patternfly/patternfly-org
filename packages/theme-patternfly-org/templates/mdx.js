@@ -63,7 +63,7 @@ const MDXChildTemplate = ({
   );
   // Create dynamic component for @reach/router
   const ChildComponent = () => (
-    <div className="ws-mdx-child">
+    <div className="pf-u-display-flex">
       {toc.length > 1 && (
         <TableOfContents items={toc} />
       )}

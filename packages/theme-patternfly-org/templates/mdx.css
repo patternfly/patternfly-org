@@ -24,10 +24,6 @@
   background-color: var(--pf-global--BackgroundColor--light-200);
 }
 
-.ws-mdx-child {
-  display: flex;
-}
-
 .ws-release-notes-toc {
   margin-bottom: var(--pf-global--spacer--lg);
 }
@@ -349,10 +345,6 @@
 .ws-source-tabs.pf-c-tabs::before {
   border: none;
   border-width: 0;
-}
-
-.ws-mdx-child {
-  display: flex;
 }
 
 .ws-mdx-content {
