@@ -11,13 +11,13 @@ PatternFly is an open source design system created to enable consistency and usa
 ## Basic structure
 
 ### Components
-Components, like buttons and alerts, can be assembled together to build applications.
+Components are like building blocks. Designed to be flexible and modular, you can mix and match components to create a solution for almost any UI problem.
 
 ### Layouts
-Layouts are generic tools that allow you to structure and organize the content on your pages.
+A layout provides a fully responsive page structure that keeps your components organized and aligned regardless of screen size.
 
 ### Demos
-Demos use components and layouts in combination to show you how to build more complex structures and application views.
+Components are better together. Demos show how multiple components can be used in a single design. They also provide  some useful starter code, so the days of creating complex layouts from scratch are over.
 
 ## Design guidelines
 ### Styles
@@ -26,7 +26,7 @@ Style guidelines define foundational elements of the design system, like color, 
 ### Usage and behavior
 Usage and behavior guidelines communicate standards and best practices for common design patterns like navigation, dashboards, or forms.
 
-### Content
+### UX writing
 Content guidelines provide principles and best practices around writing for user experience along with general voice and style guidance.
 
 [**View design guidelines**](/guidelines/colors) <i className="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
