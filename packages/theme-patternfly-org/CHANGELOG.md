@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.25](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.24...theme-patternfly-org@0.1.25) (2020-10-09)
+
+
+### Bug Fixes
+
+* **toc:** fix long TOC ([#2190](https://github.com/patternfly/patternfly-org/issues/2190)) ([3752439](https://github.com/patternfly/patternfly-org/commit/3752439d80d580f365abab4eefbd7baa56f0dd9f))
+
+
+
+
+
 ## [0.1.24](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.23...theme-patternfly-org@0.1.24) (2020-10-06)
 
 **Note:** Version bump only for package theme-patternfly-org

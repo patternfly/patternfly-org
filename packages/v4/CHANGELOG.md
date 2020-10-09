@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.39](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.38...patternfly-org-4@4.2.39) (2020-10-09)
+
+
+### Bug Fixes
+
+* **toc:** fix long TOC ([#2190](https://github.com/patternfly/patternfly-org/issues/2190)) ([3752439](https://github.com/patternfly/patternfly-org/commit/3752439d80d580f365abab4eefbd7baa56f0dd9f))
+
+
+
+
+
 ## [4.2.38](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.37...patternfly-org-4@4.2.38) (2020-10-07)
 
 
