@@ -4,7 +4,7 @@ import { css } from '@patternfly/react-styles';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/js/icons/external-link-alt-icon';
 import { Router, useLocation } from '@reach/router';
 import { CSSVariables, PropsTable, TableOfContents, Link, AutoLinkHeader, InlineAlert } from '../components';
-import { capitalize, getTitle } from '../helpers';
+import { capitalize, getTitle, slugger } from '../helpers';
 import './mdx.css';
 
 const MDXChildTemplate = ({
@@ -24,10 +24,23 @@ const MDXChildTemplate = ({
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
   const propsTitle = propComponents.length > 0 && 'Props';
   if (propsTitle && !toc.includes(propsTitle)) {
-    toc.push(propsTitle);
+    toc.push({ text: propsTitle });
   }
   if (cssVarsTitle && !toc.includes(cssVarsTitle)) {
-    toc.push(cssVarsTitle);
+    toc.push({ text: cssVarsTitle });
+  }
+  // We don't add `id`s in anchor-header.js for items where id === slugger(text)
+  // in order to save ~10KB bandwidth.
+  if (toc.length > 1) {
+    const ensureID = tocItem => {
+      if (Array.isArray(tocItem)) {
+        tocItem.forEach(ensureID);
+      }
+      else if (!tocItem.id) {
+        tocItem.id = slugger(tocItem.text)
+      }
+    }
+    ensureID(toc);
   }
   const InlineAlerts = (
     <React.Fragment>
@@ -51,7 +64,7 @@ const MDXChildTemplate = ({
   // Create dynamic component for @reach/router
   const ChildComponent = () => (
     <div className="ws-mdx-child">
-      {toc && toc.length > 1 && (
+      {toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
       <div className="ws-mdx-content">

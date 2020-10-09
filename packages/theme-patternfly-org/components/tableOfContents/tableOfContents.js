@@ -37,14 +37,14 @@ export const TableOfContents = ({ items }) => {
   }, []);
 
   function onClickItem(ev, item) {
-    ev.preventDefault(); // Don't use client-side routing
+    ev.preventDefault(); // Don't use client-side routing or scrolling into view
     // Chrome does not jump until ALL network requests finish.
     // We have to force it to...
     const referencedElement = document.getElementById(item.id);
     if (referencedElement) {
       referencedElement.scrollIntoView();
     }
-    setActiveItemId(item.id);
+    history.pushState({}, '', `#${item.id}`);
   }
 
   function renderItem(item, index) {
