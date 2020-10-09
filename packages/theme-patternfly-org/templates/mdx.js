@@ -23,10 +23,10 @@ const MDXChildTemplate = ({
   } = Component.getPageData();
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
   const propsTitle = propComponents.length > 0 && 'Props';
-  if (propsTitle && !toc.includes(propsTitle)) {
+  if (propsTitle && !toc.find(item => item.text === propsTitle)) {
     toc.push({ text: propsTitle });
   }
-  if (cssVarsTitle && !toc.includes(cssVarsTitle)) {
+  if (cssVarsTitle && !toc.find(item => item.text === cssVarsTitle)) {
     toc.push({ text: cssVarsTitle });
   }
   // We don't add `id`s in anchor-header.js for items where id === slugger(text)
