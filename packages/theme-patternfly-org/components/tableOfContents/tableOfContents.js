@@ -1,87 +1,29 @@
 import React from 'react';
-import {
-  Badge,
-  Card,
-  CardTitle,
-  CardBody,
-  Grid,
-  GridItem,
-  Title
-} from '@patternfly/react-core';
+import { Title } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
-import { slugger } from '../../helpers';
-import versions from '../../versions.json';
 import './tableOfContents.css';
 
-const ReleaseNotesTOC = () => (
-  <Grid hasGutter className="ws-release-notes-toc">
-    {versions.Releases
-      .filter(version => toc.some(header => header.includes(version.name)))
-      .slice(0, 6) // limit to newest releases
-      .map(version => {
-        const [year, month, day] = version.date.split('-');
-        const releaseDate = new Date(+year, +month - 1, +day)
-          .toLocaleDateString('us-EN', {
-            month: 'long',
-            day: 'numeric',
-            year: 'numeric'
-          });
-        const releaseTitle = toc.find(heading => heading.includes(version.name));
-        return releaseTitle && (
-          <GridItem sm={6} md={4} key={version.name}>
-            <Card>
-              <CardTitle>
-                {releaseTitle && (
-                  <Title size="2xl" headingLevel="h2" >
-                    <a key={version.name} href={`#${slugger(releaseTitle)}`}>
-                      Release {version.name}
-                    </a>
-                  </Title>
-                )}
-                {version.latest && (
-                  <Badge>Latest</Badge>
-                )}
-              </CardTitle>
-              <CardBody>
-                Released on {releaseDate}.
-              </CardBody>
-            </Card>
-          </GridItem>
-        );
-      })
-    }
-  </Grid>
-);
-
-export const TableOfContents = ({
-  releaseNoteTOC,
-  items
-}) => {
-  if (releaseNoteTOC) {
-    return <ReleaseNotesTOC />;
-  }
-
-  const [activeItem, setActiveItem] = React.useState(items[0]);
+export const TableOfContents = ({ items }) => {
+  const [activeItemId, setActiveItemId] = React.useState(items[0].id);
   React.useEffect(() => {
     if (typeof window === 'undefined') {
       return;
     }
     const scrollableElement = document.getElementById('ws-page-main');
     const htmlElements = scrollableElement.querySelectorAll('h2.ws-heading,h3.ws-heading');
-    const scrollElements = Array.from(htmlElements)
-      // When we hide h3s for long TOCs we don't want to track them
-      .filter(e => items.flat().includes(e.innerText))
-      .map(e => ({
-        y: e.offsetTop - scrollableElement.offsetTop,
-        text: e.innerText
-      }))
-      .sort((e1, e2) => e2.y - e1.y);
+
     function scrollSpy() {
       const scrollPosition = scrollableElement.scrollTop;
       window.requestAnimationFrame(() => {
-        for (const { y, text } of scrollElements) {
+        const scrollElements = Array.from(htmlElements)
+          .map(e => ({
+            y: e.offsetTop - scrollableElement.offsetTop,
+            id: e.id
+          }))
+          .sort((e1, e2) => e2.y - e1.y);
+        for (const { y, id } of scrollElements) {
           if (scrollPosition >= y) {
-            return setActiveItem(text);
+            return setActiveItemId(id);
           }
         }
       });
@@ -94,15 +36,15 @@ export const TableOfContents = ({
     return () => scrollableElement.removeEventListener('scroll', scrollSpy);
   }, []);
 
-  function onClickItem(ev, id, item) {
-    ev.preventDefault(); // Don't use client-side routing
+  function onClickItem(ev, item) {
+    ev.preventDefault(); // Don't use client-side routing or scrolling into view
     // Chrome does not jump until ALL network requests finish.
     // We have to force it to...
-    const referencedElement = document.getElementById(id);
+    const referencedElement = document.getElementById(item.id);
     if (referencedElement) {
       referencedElement.scrollIntoView();
     }
-    setActiveItem(item);
+    history.pushState({}, '', `#${item.id}`);
   }
 
   function renderItem(item, index) {
@@ -114,8 +56,7 @@ export const TableOfContents = ({
       );
     }
   
-    const slug = slugger(item);
-    const isActive = item === activeItem;
+    const isActive = item.id === activeItemId;
     const ref = React.useRef();
     if (isActive && ref.current) {
       const bounding = ref.current.getBoundingClientRect();
@@ -128,14 +69,14 @@ export const TableOfContents = ({
       <li key={index} className="ws-toc-item">
         <a
           ref={ref}
-          href={`#${slug}`}
+          href={`#${item.id}`}
           className={css(
             'ws-toc-link', 
             isActive && 'ws-toc-link--current'
           )}
-          onClick={ev => onClickItem(ev, slug, item)}
+          onClick={ev => onClickItem(ev, item)}
         >
-          {item}
+          {item.text}
         </a>
       </li>
     );

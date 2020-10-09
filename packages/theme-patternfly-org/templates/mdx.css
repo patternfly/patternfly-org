@@ -24,10 +24,6 @@
   background-color: var(--pf-global--BackgroundColor--light-200);
 }
 
-.ws-mdx-child {
-  display: flex;
-}
-
 .ws-release-notes-toc {
   margin-bottom: var(--pf-global--spacer--lg);
 }
@@ -351,20 +347,12 @@
   border-width: 0;
 }
 
-.ws-mdx-child {
-  display: flex;
-}
-
 .ws-mdx-content {
+  flex-grow: 1;
   padding: var(--pf-global--spacer--xl);
 }
 
-/* When TOC is active, have a constant width so TOC doesn't "jump" between pages */
-@media (min-width: 1449px) {
-  .ws-mdx-content-content {
-    width: 832px;
-  }
-}
+/* Design asked for this. A nice side effect is that the TOC doesn't "jump" between pages */
 .ws-mdx-content-content {
   max-width: 832px;
 }

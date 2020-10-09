@@ -1,5 +1,5 @@
 import React from 'react';
-import tokens from '@patternfly/react-tokens/dist/js/patternfly_variables';
+import tokens from '@patternfly/react-tokens/dist/esm/patternfly_variables';
 import { Popover } from '@patternfly/react-core';
 import { normalizeColor, tokenName } from './helpers';
 import './ColorSwatch.css';

@@ -8,9 +8,9 @@ import {
   SortByDirection,
   expandable
 } from "@patternfly/react-table";
-import * as tokensModule from "@patternfly/react-tokens/dist/js/componentIndex";
-import global_spacer_md from "@patternfly/react-tokens/dist/js/global_spacer_md";
-import LevelUpAltIcon from "@patternfly/react-icons/dist/js/icons/level-up-alt-icon";
+import * as tokensModule from "@patternfly/react-tokens/dist/esm/componentIndex";
+import global_spacer_md from "@patternfly/react-tokens/dist/esm/global_spacer_md";
+import LevelUpAltIcon from "@patternfly/react-icons/dist/esm/icons/level-up-alt-icon";
 import { CSSSearch } from './cssSearch';
 
 import "./cssVariables.css";

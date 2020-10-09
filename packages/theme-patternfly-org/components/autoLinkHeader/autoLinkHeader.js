@@ -1,6 +1,6 @@
 import React from 'react';
 import { Title } from '@patternfly/react-core';
-import LinkIcon from '@patternfly/react-icons/dist/js/icons/link-icon';
+import LinkIcon from '@patternfly/react-icons/dist/esm/icons/link-icon';
 import { Link } from '../link/link';
 import { slugger } from '../../helpers/slugger';
 import './autoLinkHeader.css';
@@ -23,7 +23,7 @@ export const AutoLinkHeader = ({
   metaText,
   className
 }) => {
-  const slug = slugger(children);
+  const slug = id || slugger(children);
 
   return (
     <Title

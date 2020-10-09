@@ -1,10 +1,10 @@
 import React from 'react';
 import { PageSection, Title } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
-import ExternalLinkAltIcon from '@patternfly/react-icons/dist/js/icons/external-link-alt-icon';
+import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Router, useLocation } from '@reach/router';
 import { CSSVariables, PropsTable, TableOfContents, Link, AutoLinkHeader, InlineAlert } from '../components';
-import { capitalize, getTitle } from '../helpers';
+import { capitalize, getTitle, slugger } from '../helpers';
 import './mdx.css';
 
 const MDXChildTemplate = ({
@@ -23,11 +23,24 @@ const MDXChildTemplate = ({
   } = Component.getPageData();
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
   const propsTitle = propComponents.length > 0 && 'Props';
-  if (propsTitle && !toc.includes(propsTitle)) {
-    toc.push(propsTitle);
+  if (propsTitle && !toc.find(item => item.text === propsTitle)) {
+    toc.push({ text: propsTitle });
   }
-  if (cssVarsTitle && !toc.includes(cssVarsTitle)) {
-    toc.push(cssVarsTitle);
+  if (cssVarsTitle && !toc.find(item => item.text === cssVarsTitle)) {
+    toc.push({ text: cssVarsTitle });
+  }
+  // We don't add `id`s in anchor-header.js for items where id === slugger(text)
+  // in order to save ~10KB bandwidth.
+  if (toc.length > 1) {
+    const ensureID = tocItem => {
+      if (Array.isArray(tocItem)) {
+        tocItem.forEach(ensureID);
+      }
+      else if (!tocItem.id) {
+        tocItem.id = slugger(tocItem.text)
+      }
+    }
+    ensureID(toc);
   }
   const InlineAlerts = (
     <React.Fragment>
@@ -50,8 +63,8 @@ const MDXChildTemplate = ({
   );
   // Create dynamic component for @reach/router
   const ChildComponent = () => (
-    <div className="ws-mdx-child">
-      {toc && toc.length > 1 && (
+    <div className="pf-u-display-flex">
+      {toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
       <div className="ws-mdx-content">
@@ -82,7 +95,7 @@ const MDXChildTemplate = ({
           {sourceLink && (
             <React.Fragment>
               <br />
-              <a href={sourceLink} target="_blank">View source on Github</a>
+              <a href={sourceLink} target="_blank">View source on GitHub</a>
             </React.Fragment>
           )}
         </div>

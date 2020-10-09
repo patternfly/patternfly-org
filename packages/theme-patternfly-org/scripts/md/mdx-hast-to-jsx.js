@@ -161,6 +161,7 @@ function serializeElement(node, options) {
         props.width = props.width.replace('px', '');
         res += ` height={${srcImport}.height * ${props.width} / ${srcImport}.width}`;
       }
+      delete props.isResponsive;
     }
   }
   if (spread) {

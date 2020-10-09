@@ -12,7 +12,7 @@ import {
   Text,
   TextVariants
 } from '@patternfly/react-core';
-import ArrowRightIcon from '@patternfly/react-icons/dist/js/icons/arrow-right-icon';
+import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
 import orb from '../images/pf4-logo.svg';
 import accessible from '../images/accessible.svg';
 import modular from '../images/modular.svg';

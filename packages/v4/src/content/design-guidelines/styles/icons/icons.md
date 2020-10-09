@@ -3,14 +3,14 @@ id: Icons
 section: guidelines
 ---
 import { Card, CardBody, Divider, Flex, FlexItem, Grid, GridItem } from '@patternfly/react-core';
-import CaretDownIcon from '@patternfly/react-icons/dist/js/icons/caret-down-icon';
-import CheckCircleIcon from '@patternfly/react-icons/dist/js/icons/check-circle-icon';
-import ExclamationCircleIcon from '@patternfly/react-icons/dist/js/icons/exclamation-circle-icon';
-import GithubIcon from '@patternfly/react-icons/dist/js/icons/github-icon';
-import OutlinedCalendarAltIcon from '@patternfly/react-icons/dist/js/icons/outlined-calendar-alt-icon';
-import StarIcon from '@patternfly/react-icons/dist/js/icons/star-icon';
-import TagIcon from '@patternfly/react-icons/dist/js/icons/tag-icon';
-import TimesCircleIcon from '@patternfly/react-icons/dist/js/icons/times-circle-icon';
+import CaretDownIcon from '@patternfly/react-icons/dist/esm/icons/caret-down-icon';
+import CheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/check-circle-icon';
+import ExclamationCircleIcon from '@patternfly/react-icons/dist/esm/icons/exclamation-circle-icon';
+import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
+import OutlinedCalendarAltIcon from '@patternfly/react-icons/dist/esm/icons/outlined-calendar-alt-icon';
+import StarIcon from '@patternfly/react-icons/dist/esm/icons/star-icon';
+import TagIcon from '@patternfly/react-icons/dist/esm/icons/tag-icon';
+import TimesCircleIcon from '@patternfly/react-icons/dist/esm/icons/times-circle-icon';
 import { IconRecommendations } from './IconRecommendations';
 import { IconsTable } from './IconsTable';
 import './icons.css';
