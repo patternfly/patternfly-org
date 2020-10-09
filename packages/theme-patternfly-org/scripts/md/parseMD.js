@@ -7,7 +7,6 @@ const toVfile = require('to-vfile'); // https://github.com/vfile/vfile
 const vfileReport = require('vfile-reporter');
 const yaml = require('js-yaml'); // https://github.com/nodeca/js-yaml
 const { makeSlug } = require('../../helpers/slugger');
-const { extractTableOfContents } = require('../../helpers/extractTableOfContents');
 const { tsDocgen } = require('../tsDocgen');
 const { sync } = require('glob');
 const chokidar = require('chokidar');
@@ -26,7 +25,6 @@ function toReactComponent(mdFilePath, source) {
   let outPath;
   let pageData = {};
   let frontmatter = {};
-  let toc = [];
 
   unified()
     .use(require('remark-parse'))
@@ -47,9 +45,6 @@ function toReactComponent(mdFilePath, source) {
         // Temporarily override section until https://github.com/patternfly/patternfly-react/pull/4862 is in react-docs
         // Affected pages are release notes and upgrade guides
         frontmatter.section = 'get-started';
-      }
-      if (!frontmatter.hideTOC) {
-        toc = extractTableOfContents(tree);
       }
       source = frontmatter.source || source;
       const slug = makeSlug(source, frontmatter.section, frontmatter.id);
@@ -85,7 +80,8 @@ function toReactComponent(mdFilePath, source) {
         slug,
         sourceLink: `https://github.com/patternfly/${
           sourceRepo}/blob/master/${
-          normalizedPath}`
+          normalizedPath}`,
+        hideTOC: frontmatter.hideTOC || false
       };
       // Temporarily override section for Demo tabs until we port this upstream
       if (frontmatter.section === 'demos' && routes[slug.replace('demos', 'components')]) {
@@ -100,9 +96,6 @@ function toReactComponent(mdFilePath, source) {
       }
       if (propComponents.length > 0) {
         pageData.propComponents = propComponents;
-      }
-      if (toc.length > 0) {
-        pageData.toc = toc;
       }
       if (frontmatter.optIn) {
         pageData.optIn = frontmatter.optIn;
@@ -162,7 +155,12 @@ function toReactComponent(mdFilePath, source) {
       });
     })
     // Add custom PatternFly doc design things
-    .use(require('./anchor-header'))
+    .use(require('./anchor-header'), toc => {
+      if (!pageData.hideTOC && toc.length > 0) {
+        pageData.toc = toc;
+      }
+      delete pageData.hideTOC;
+    })
     .use(require('./styled-tags'))
     // Transform HAST object to JSX string
     .use(require('./mdx-hast-to-jsx'), {

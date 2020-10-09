@@ -1,6 +1,6 @@
 import React from 'react';
-import tokens from '@patternfly/react-tokens/dist/js/patternfly_variables';
-import AngleRightIcon from '@patternfly/react-icons/dist/js/icons/angle-right-icon';
+import tokens from '@patternfly/react-tokens/dist/esm/patternfly_variables';
+import AngleRightIcon from '@patternfly/react-icons/dist/esm/icons/angle-right-icon';
 import { css } from '@patternfly/react-styles';
 import { normalizeColor, getContrastRatio } from './helpers';
 import './ColorFamily.css';
