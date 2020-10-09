@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.40](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.39...patternfly-org-4@4.2.40) (2020-10-09)
+
+
+### Bug Fixes
+
+* **get-started/about:** tweak sentence about layouts ([#2156](https://github.com/patternfly/patternfly-org/issues/2156)) ([f2edc77](https://github.com/patternfly/patternfly-org/commit/f2edc77450f0d1a01c8ce56dc3686617c4c89bf7))
+
+
+
+
+
 ## [4.2.39](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.38...patternfly-org-4@4.2.39) (2020-10-09)
 
 
