@@ -424,7 +424,7 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
     <div class="collapse" id="bootstrap-datepicker-markup">
       <pre class="prettyprint">
 &lt;input type="text" class="form-control bootstrap-datepicker"&gt;
-&lt;script src="/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"&gt;&lt;/script&gt;
+&lt;script src="/components/bootstrap-datepicker/dist/esm/bootstrap-datepicker.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   // Initialize Boostrap-datepicker
   $('.bootstrap-datepicker').datepicker({
@@ -470,7 +470,7 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
   &lt;option&gt;Relish&lt;/option&gt;
   &lt;option disabled&gt;Onions&lt;/option&gt;
 &lt;/select&gt;
-&lt;script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"&gt;&lt;/script&gt;
+&lt;script src="/components/bootstrap-select/dist/esm/bootstrap-select.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   // Initialize Boostrap-select
    $('.selectpicker').selectpicker();
@@ -495,7 +495,7 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
 &lt;script&gt;
   jQuery(".bootstrap-switch").bootstrapSwitch();
 &lt;/script&gt;
-&lt;script src="/components/bootstrap-switch/dist/js/bootstrap-switch.min.js"&gt;&lt;/script&gt;
+&lt;script src="/components/bootstrap-switch/dist/esm/bootstrap-switch.min.js"&gt;&lt;/script&gt;
 </pre>
     </div>
   </div>
@@ -516,7 +516,7 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
 &lt;script&gt;
     $(".bootstrap-touchspin").TouchSpin();
 &lt;/script&gt;
-&lt;script src="/components/bootstrap-touchspin/dist/js/jquery.bootstrap-touchspin.min.js"&gt;&lt;/script&gt;
+&lt;script src="/components/bootstrap-touchspin/dist/esm/jquery.bootstrap-touchspin.min.js"&gt;&lt;/script&gt;
 </pre>
     </div>
   </div>
@@ -901,7 +901,7 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
   <div class="section" id="fixed-height-accordion">
     <h3>Fixed Height Accordion (Collapse)</h3>
     <p>Same markup as Accordion but in a fixed height container. The content of the collapse areas scroll rather than expanding the outer accordion container.</p>
-    <p><strong>Note:</strong> Setting the collapse areas to scroll rather than expand requires <a href="https://github.com/patternfly/patternfly/blob/master/dist/js/patternfly.min.js">patternfly.min.js</a>, initialization via <code>initCollapseHeights()</code></p>
+    <p><strong>Note:</strong> Setting the collapse areas to scroll rather than expand requires <a href="https://github.com/patternfly/patternfly/blob/master/dist/esm/patternfly.min.js">patternfly.min.js</a>, initialization via <code>initCollapseHeights()</code></p>
     <div class="pf-example">
       <div class="panel-group" id="fixed-accordion" style="height: 350px; width:240px;">
         <div class="panel panel-default">
@@ -1616,7 +1616,7 @@ Bootstrap JavaScript modular. PatternFly also uses <a href="http://c3js.org/" ta
   <div class="section" id="popover">
     <h3>Popover</h3>
     <p>See <a href="http://getbootstrap.com/javascript/#popovers">http://getbootstrap.com/javascript/#popovers</a> for complete popover documentation.</p>
-    <p><strong>Note:</strong> Displaying the close (X) icon in popovers requires <a href="https://github.com/patternfly/patternfly/blob/master/dist/js/patternfly.min.js">patternfly.min.js</a>, initialization via <code>popover<strong>s</strong>()</code> (note the "s"), and adding data attribute <strong>data-close="true"</strong>
+    <p><strong>Note:</strong> Displaying the close (X) icon in popovers requires <a href="https://github.com/patternfly/patternfly/blob/master/dist/esm/patternfly.min.js">patternfly.min.js</a>, initialization via <code>popover<strong>s</strong>()</code> (note the "s"), and adding data attribute <strong>data-close="true"</strong>
       to the trigger element.
     </p>
     <div class="pf-example">

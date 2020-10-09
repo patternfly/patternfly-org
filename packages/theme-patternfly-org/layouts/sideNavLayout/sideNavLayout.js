@@ -14,9 +14,9 @@ import {
   DropdownGroup,
   Divider
 } from '@patternfly/react-core';
-import SearchIcon from '@patternfly/react-icons/dist/js/icons/search-icon';
-import ExternalLinkAltIcon from '@patternfly/react-icons/dist/js/icons/external-link-alt-icon';
-import TimesIcon from '@patternfly/react-icons/dist/js/icons/times-icon';
+import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
+import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
+import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
 import logo from '../logo.svg';

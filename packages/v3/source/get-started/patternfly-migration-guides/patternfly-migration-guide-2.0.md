@@ -11,7 +11,7 @@ There are three major changes that you should know about:
 
   * We don&#8217;t support Internet Explorer 8 anymore.
   * We&#8217;ve split the CSS into two files (`patternfly.*css` and `patternfly-additions.*css`) to avoid a limitation of Internet Explorer 9, where [only 4095 selectors are recognized in a single stylesheet][2].
-  * We&#8217;ve moved `components/boostrap-select/bootstrap-select.min.js` to `components/boostrap-select/dist/js/bootstrap-select.min.js`.
+  * We&#8217;ve moved `components/boostrap-select/bootstrap-select.min.js` to `components/boostrap-select/dist/esm/bootstrap-select.min.js`.
 
 ## Get PatternFly 2.0
 
@@ -53,7 +53,7 @@ We&#8217;ve split PatternFly styles into two style sheets. The links to the styl
 
 If you are using [Boostrap Select][4] you should change the path to javascript. It&#8217;ll look something like this:
 
-<pre class="prettyprint">&lt;script src="PATH_TO_PATTERNFLY/components/bootstrap-select/dist/js/bootstrap-select.min.js"&gt;&lt;/script&gt;</pre>
+<pre class="prettyprint">&lt;script src="PATH_TO_PATTERNFLY/components/bootstrap-select/dist/esm/bootstrap-select.min.js"&gt;&lt;/script&gt;</pre>
 
 ## Dependency Upgrades
 
