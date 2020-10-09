@@ -356,6 +356,7 @@
 }
 
 .ws-mdx-content {
+  flex-grow: 1;
   padding: var(--pf-global--spacer--xl);
 }
 

@@ -82,7 +82,7 @@ const MDXChildTemplate = ({
           {sourceLink && (
             <React.Fragment>
               <br />
-              <a href={sourceLink} target="_blank">View source on Github</a>
+              <a href={sourceLink} target="_blank">View source on GitHub</a>
             </React.Fragment>
           )}
         </div>

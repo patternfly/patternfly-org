@@ -23,7 +23,7 @@ export const AutoLinkHeader = ({
   metaText,
   className
 }) => {
-  const slug = slugger(children);
+  const slug = id || slugger(children);
 
   return (
     <Title
