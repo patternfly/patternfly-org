@@ -28,23 +28,23 @@ You can further customize labels by making them dismissable, adding icons, or ma
 
 <img src="./img/label-features.png" alt="Examples of different types of labels" width="180"/>
 
-1. **Dismissible labels:** can be dismissed by clicking on the “x”
+1. **Dismissible label:** can be dismissed by clicking on the “x”
 2. **Label with icon:** can be used to further clarify the label
-3. **Clickable labels:** have a hover state to show interactiveness
+3. **Clickable label:** have a hover state to show interactiveness
 
-### **When to use dismissable labels**
+### When to use dismissable labels
 
 For labels that are easily removed or dismissed, use a dismissable label. A common use case for dismissable labels is when users can edit labels.
 
 <img src="./img/edit-labels.png" alt="Example of dismissable labels" width="646"/>
 
-### **When to use labels with icons**
+### When to use labels with icons
 
 Optionally add an icon to your label in cases where additional visual information is helpful. You can also use them to distinguish labels of the same color if needed.
 
 <img src="./img/labels-with-icons.png" alt="Example of labels with icons" width="336"/>
 
-### **When to use clickable labels**
+### When to use clickable labels
 
 You can also make labels clickable. A common use case for clickable labels is when a user may want to filter by a specific label. You can also use label links to redirect users to a new page.
 
