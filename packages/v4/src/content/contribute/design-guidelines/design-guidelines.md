@@ -99,12 +99,12 @@ _Note: Items not ending in a file extension are folder names._
 Design guideline documents are located in **content** &gt; **design-guidelines**, shown in bold above. There are seven subfolders:
 
 1. **Charts**: Guidelines for different chart types
-2. **Componentss**: Component design guidelines (most likely what you will be updating)
+2. **Components**: Component design guidelines (most likely what you will be updating)
 3. **Content**: Guidelines for UX-Writing, and writing microcopy
 4. **Demos**: Guidelines for demos
 5. **Layouts**: Guidelines for layout types
 6. **Styles**: Visual design resources and styles
-7. **Usage and Behabior**: Interaction design patterns
+7. **Usage and Behavior**: Interaction design patterns
 
 All folder and Markdown file names should be in lowercase with dashes in place of spaces. Image file names should be descriptive. Include the name of the pattern and, if possible, the defining feature of the image. Avoid giving images generic names, such as "image13copy.png.” 
 
