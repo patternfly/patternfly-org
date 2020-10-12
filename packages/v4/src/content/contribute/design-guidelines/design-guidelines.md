@@ -74,35 +74,37 @@ If you're creating a new file, name it **[design].md** in Visual Studio Code, re
 To edit or add an existing file, locate the existing page in Visual Studio Code instead of creating a new .md file or folder. 
 
 Design guidelines are stored with other website content in the patternfly-org GitHub repo. Files in this repo adhere to the following file structure:  
-
-- **content**  
-
-    - contribute 
-    - **design-guidelines** 
-
-        - **content** 
-        - **styles** 
-        - **usage-and-behavior** 
-        
-            - &lt;**topic-name**&gt;
-
-                - **img**  
-
-                    - &lt;**image-1.png**&gt; 
-                    - &lt;**image-2.png**&gt;
-
-                - **design.md** 
-        
-    - documentation 
-    - get-started 
+- **packages**
+    - **v4**
+        - **src**
+            - **content**  
+                - contribute
+                - **design-guidelines** 
+                    - charts
+                    - **components**
+                        - &lt;**topic-name**&gt;
+                            - **img**
+                                - &lt;**image-1.png**&gt; 
+                                - &lt;**image-2.png**&gt;
+                            - **design.md**
+                    - content
+                    - demos
+                    - layouts
+                    - styles
+                    - usage-and-behavior
+     
 
 _Note: Items not ending in a file extension are folder names._
 
-Design guideline documents are located in **content** &gt; **design-guidelines**, shown in bold above. There are three subfolders: 
+Design guideline documents are located in **content** &gt; **design-guidelines**, shown in bold above. There are seven subfolders:
 
-1. **Content**: Guidelines for writing microcopy
-2. **Styles**: Visual design resources and styles
-3. **Usage and behavior**: Interaction design patterns 
+1. **Charts**: Guidelines for different chart types
+2. **Components**: Component design guidelines (most likely what you will be updating)
+3. **Content**: Guidelines for UX-Writing, and writing microcopy
+4. **Demos**: Guidelines for demos
+5. **Layouts**: Guidelines for layout types
+6. **Styles**: Visual design resources and styles
+7. **Usage and Behavior**: Interaction design patterns
 
 All folder and Markdown file names should be in lowercase with dashes in place of spaces. Image file names should be descriptive. Include the name of the pattern and, if possible, the defining feature of the image. Avoid giving images generic names, such as "image13copy.png.” 
 
