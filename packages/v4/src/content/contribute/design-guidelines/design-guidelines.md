@@ -74,27 +74,19 @@ If you're creating a new file, name it **[design].md** in Visual Studio Code, re
 To edit or add an existing file, locate the existing page in Visual Studio Code instead of creating a new .md file or folder. 
 
 Design guidelines are stored with other website content in the patternfly-org GitHub repo. Files in this repo adhere to the following file structure:  
-
-- **content**  
-
-    - contribute 
-    - **design-guidelines** 
-
-        - **content** 
-        - **styles** 
-        - **usage-and-behavior** 
-        
-            - &lt;**topic-name**&gt;
-
-                - **img**  
-
-                    - &lt;**image-1.png**&gt; 
-                    - &lt;**image-2.png**&gt;
-
-                - **design.md** 
-        
-    - documentation 
-    - get-started 
+- **packages**
+    - **v4**
+        - **src**
+            - **content**  
+                - contribute
+                - **design-guidelines** 
+                    - charts
+                    - **components**
+                        - &lt;**topic-name**&gt;
+                            - **img**
+                                - &lt;**image-1.png**&gt; 
+                                - &lt;**image-2.png**&gt;
+                            - **design.md**
 
 _Note: Items not ending in a file extension are folder names._
 
