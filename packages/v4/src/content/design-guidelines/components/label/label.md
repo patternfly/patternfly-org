@@ -10,9 +10,11 @@ Do not use a label if you want to show a count. Instead, use a [badge](https://w
 ## Usage
 Labels are easily customized to fit different use cases. There are two main types of labels:
 1. Unfilled
+
 <img src="./img/unfilled-labels.png" alt="Unfilled labels" width="646"/>
 
 2. Filled
+
 <img src="./img/filled-labels.png" alt="Filled labels" width="646"/>
 
 Use the filled option to add more visual prominence to a label.
@@ -26,23 +28,23 @@ You can further customize labels by making them dismissable, adding icons, or ma
 
 <img src="./img/label-features.png" alt="Examples of different types of labels" width="180"/>
 
-1. **Dismissible labels** can be dismissed by clicking on the “x”
-2. **Add an icon** to the left of the text for added clarification
-3. **Clickable labels** have a hover state to show interactiveness
+1. **Dismissible labels:** can be dismissed by clicking on the “x”
+2. **Label with icon:** can be used to further clarify the label
+3. **Clickable labels:** have a hover state to show interactiveness
 
-**When to use dismissable labels**
+### **When to use dismissable labels**
 
 For labels that are easily removed or dismissed, use a dismissable label. A common use case for dismissable labels is when users can edit labels.
 
 <img src="./img/edit-labels.png" alt="Example of dismissable labels" width="646"/>
 
-**When to use labels with icons**
+### **When to use labels with icons**
 
 Optionally add an icon to your label in cases where additional visual information is helpful. You can also use them to distinguish labels of the same color if needed.
 
 <img src="./img/labels-with-icons.png" alt="Example of labels with icons" width="336"/>
 
-**When to use clickable labels**
+### **When to use clickable labels**
 
 You can also make labels clickable. A common use case for clickable labels is when a user may want to filter by a specific label. You can also use label links to redirect users to a new page.
 
