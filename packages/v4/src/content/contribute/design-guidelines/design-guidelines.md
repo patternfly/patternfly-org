@@ -101,7 +101,7 @@ Design guideline documents are located in **content** &gt; **design-guidelines**
 1. **Charts**: Guidelines for different chart types
 2. **Componentss**: Component design guidelines (most likely what you will be updating)
 3. **Content**: Guidelines for UX-Writing, and writing microcopy
-4. **demos**: Guidelines for demos
+4. **Demos**: Guidelines for demos
 5. **Layouts**: Guidelines for layout types
 6. **Styles**: Visual design resources and styles
 7. **Usage and Behabior**: Interaction design patterns
