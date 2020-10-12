@@ -102,7 +102,8 @@ export const iconsData = [
     "Name": "fa-bell",
     "React_name": "BellIcon",
     "Type": "Framework\nStatus",
-    "Contextual_usage": "Indicates the ability to open a notification drawer.\nRepresents status: default notification"
+    "Contextual_usage": "Indicates the ability to open a notification drawer.\nRepresents status: default notification",
+    color: 'var(--pf-global--primary-color--100)'
   },
   {
     "Style": "fas",
@@ -137,7 +138,8 @@ export const iconsData = [
     "Name": "fa-check-circle",
     "React_name": "CheckCircleIcon",
     "Type": "Status",
-    "Contextual_usage": "Indicates the ability to commit edited changes. \nAlso represents status: OK in content views such as a tables"
+    "Contextual_usage": "Indicates the ability to commit edited changes. \nAlso represents status: OK in content views such as a tables",
+    color: 'var(--pf-global--success-color--100)'
   },
   {
     "Style": "fas",
@@ -256,14 +258,16 @@ export const iconsData = [
     "Name": "fa-exclamation-circle",
     "React_name": "ExclamationCircleIcon",
     "Type": "Status",
-    "Contextual_usage": "Represents alert status: danger, major error or critical error"
+    "Contextual_usage": "Represents alert status: danger, major error or critical error",
+    color: 'var(--pf-global--danger-color--100)'
   },
   {
     "Style": "fas",
     "Name": "fa-exclamation-triangle",
     "React_name": "ExclamationTriangleIcon",
     "Type": "Status",
-    "Contextual_usage": "Represents alert status: warning"
+    "Contextual_usage": "Represents alert status: warning",
+    color: 'var(--pf-global--warning-color--100)'
   },
   {
     "Style": "fas",
@@ -361,7 +365,8 @@ export const iconsData = [
     "Name": "fa-info-circle",
     "React_name": "InfoCircleIcon",
     "Type": "Status",
-    "Contextual_usage": "Represents alert status: information"
+    "Contextual_usage": "Represents alert status: information",
+    color: 'var(--pf-global--info-color--100)'
   },
   {
     "Style": "fas",
