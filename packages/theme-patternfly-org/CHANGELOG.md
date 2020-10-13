@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.26](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.25...theme-patternfly-org@0.1.26) (2020-10-13)
+
+
+### Bug Fixes
+
+* **docs:** replaced fragments with divs to fix prerendering issue on icons page ([#2202](https://github.com/patternfly/patternfly-org/issues/2202)) ([602619a](https://github.com/patternfly/patternfly-org/commit/602619aba3967fb1d338a93d377644bae5499229))
+
+
+
+
+
 ## [0.1.25](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.24...theme-patternfly-org@0.1.25) (2020-10-09)
 
 
