@@ -10,7 +10,7 @@ import './colors.css';
 ## Primary colors
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
-    <h3>PatternFly blue</h3>
+    ### PatternFly blue
     <p>
       Primary colors are the colors displayed most frequently across your application screens and components. Our primary colors are used within a variety of components and are typically applied to default or active states and hover states.
     </p>
@@ -31,7 +31,7 @@ import './colors.css';
 ## Typography and iconography colors
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
-    <h3>Text and icons</h3>
+    ### Text and icons
     <p>
       Typography and iconography colors are extremely similar because they can both be used in the same context, such as a link button. We have multiple shades of text colors on light and dark backgrounds so that you can emphasize hierarchy.
     </p>

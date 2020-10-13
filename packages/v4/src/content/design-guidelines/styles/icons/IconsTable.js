@@ -130,7 +130,7 @@ export class IconsTable extends React.Component {
     
     return (
       <div>
-        <Toolbar id="data-toolbar">
+        <Toolbar id="data-toolbar-table">
           <ToolbarContent>
             <ToolbarItem>
               <InputGroup>

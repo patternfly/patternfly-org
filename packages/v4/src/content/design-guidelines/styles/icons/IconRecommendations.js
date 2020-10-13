@@ -142,7 +142,7 @@ export class IconRecommendations extends React.Component {
     
     return (
       <div>
-        <Toolbar id="data-toolbar">
+        <Toolbar id="data-toolbar-recs">
           <ToolbarContent>
             <ToolbarItem>
               <InputGroup>

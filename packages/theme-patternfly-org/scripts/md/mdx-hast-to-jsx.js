@@ -132,6 +132,7 @@ function serializeElement(node, options) {
   const srcImport = node.properties.src;
   if (type === 'img') {
     delete props.src;
+    delete props.isResponsive;
   }
   const spread = Object.keys(props).length === 0
     ? null
@@ -152,7 +153,7 @@ function serializeElement(node, options) {
   }
   else if (type === 'img') {
     res += ` src={${srcImport}}`;
-    if (props.isResponsive) {
+    if (node.properties.isResponsive) {
       if (!props.width) {
         res += ` width={${srcImport}.width}`;
         res += ` height={${srcImport}.height}`;
@@ -161,7 +162,6 @@ function serializeElement(node, options) {
         props.width = props.width.replace('px', '');
         res += ` height={${srcImport}.height * ${props.width} / ${srcImport}.width}`;
       }
-      delete props.isResponsive;
     }
   }
   if (spread) {
