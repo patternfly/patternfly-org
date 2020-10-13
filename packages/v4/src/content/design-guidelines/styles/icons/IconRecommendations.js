@@ -141,8 +141,8 @@ export class IconRecommendations extends React.Component {
     }
     
     return (
-      <React.Fragment>
-        <Toolbar id="data-toolbar">
+      <div>
+        <Toolbar id="data-toolbar-recs">
           <ToolbarContent>
             <ToolbarItem>
               <InputGroup>
@@ -189,7 +189,7 @@ export class IconRecommendations extends React.Component {
             </EmptyStateBody>
           </EmptyState>
         )}
-      </React.Fragment>
+      </div>
     );
   }
 }

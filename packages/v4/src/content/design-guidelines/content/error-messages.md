@@ -74,9 +74,10 @@ However, don’t include too much information. The user doesn’t need to know e
 </div> 
 <br /> 
 
-<div class="ws-content-table"> 
 
 **Lead with the benefit**. When providing users with a resolution, start the sentence with their goal ("the benefit"), followed by what they need to do to continue.  
+
+<div class="ws-content-table"> 
 
 | **Before**                      | **After**                  |
 |:-------------------------------:|:--------------------------:|
