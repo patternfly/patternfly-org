@@ -15,14 +15,14 @@ import { IconRecommendations } from './IconRecommendations';
 import { IconsTable } from './IconsTable';
 import './icons.css';
 
-<p class="ws-icons-page">
-  If you're a developer, check out our [getting started](/get-started/develop#using-styles) page to learn more about how to get and use our icon set.
-</p>
+If you're a developer, check out our [getting started](/get-started/develop#using-styles) page to learn more about how to get and use our icon set.
 
 ## Icon sizes
 <Grid gutter="md">
   <GridItem xl={6} lg={12} className="ws-icons-gridtext">
-    Medium icons are used as our base size across our system as a whole and we recommend using this base size within your applications. Small, large and x-large icons are used sparingly across PatternFly components. Here is a full complete list of icon sizes:
+    <p>
+      Medium icons are used as our base size across our system as a whole and we recommend using this base size within your applications. Small, large and x-large icons are used sparingly across PatternFly components. Here is a complete list of icon sizes:
+    </p>
     <Flex className="ws-icon-sizes ws-icon-sizes-sm" alignItems={{ default: 'alignItemsFlexStart' }}>
       <FlexItem className="ws-icon-size">
         <CheckCircleIcon size="sm" />

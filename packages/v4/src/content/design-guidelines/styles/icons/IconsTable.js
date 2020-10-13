@@ -129,8 +129,8 @@ export class IconsTable extends React.Component {
     }
     
     return (
-      <React.Fragment>
-        <Toolbar id="data-toolbar">
+      <div>
+        <Toolbar id="data-toolbar-table">
           <ToolbarContent>
             <ToolbarItem>
               <InputGroup>
@@ -178,7 +178,7 @@ export class IconsTable extends React.Component {
             </EmptyStateBody>
           </EmptyState>
         )}
-      </React.Fragment>
+      </div>
     );
   }
 }
