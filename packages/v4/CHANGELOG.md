@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.43](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.42...patternfly-org-4@4.2.43) (2020-10-13)
+
+
+### Bug Fixes
+
+* **docs:** replaced fragments with divs to fix prerendering issue on icons page ([#2202](https://github.com/patternfly/patternfly-org/issues/2202)) ([602619a](https://github.com/patternfly/patternfly-org/commit/602619aba3967fb1d338a93d377644bae5499229))
+
+
+
+
+
 ## [4.2.42](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.41...patternfly-org-4@4.2.42) (2020-10-12)
 
 **Note:** Version bump only for package patternfly-org-4
