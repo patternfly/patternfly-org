@@ -78,37 +78,91 @@ export class IconsTable extends React.Component {
     saveAs(blob, filename);
   };
 
+  buildIconRow = iconRowObj => {
+    const iconRowArr = Array.isArray(iconRowObj)
+      ? iconRowObj
+      : [iconRowObj];
+    const iconTitle = [];
+    const nameTitle = [];
+    const style = [];
+    const typeTitle = [];
+    const reactName = [];
+    const usageTitle = [];
+    const wrapInDiv = str => <div>{str}</div>;
+
+    iconRowArr.forEach(({
+      Style,
+      Name,
+      React_name: ReactName,
+      Type,
+      Contextual_usage,
+      color
+    }) => {
+      const Icon = icons[ReactName];
+      iconTitle.push(<div><Tooltip content="Download SVG" position={TooltipPosition.bottom}><Icon onClick={this.onDownloadSvg} color={color} /></Tooltip></div>);
+      nameTitle.push(wrapInDiv(Name));
+      style.push(wrapInDiv(Style));
+      typeTitle.push(wrapInDiv(Type));
+      reactName.push(wrapInDiv(ReactName));
+      usageTitle.push(wrapInDiv(Contextual_usage));
+    });
+    
+    return {
+      cells: [
+        {
+          title: iconTitle,
+          props: { column: 'Icon' }
+        },
+        {
+          title: nameTitle,
+          props: { column: 'Name' }
+        },
+        {
+          title: style,
+          props: { column: 'Style' }
+        },
+        {
+          title: typeTitle,
+          props: { column: 'Type' }
+        },
+        {
+          title: reactName,
+          props: { column: 'React' }
+        },
+        {
+          title: usageTitle,
+          props: { column: 'Contextual usage' }
+        }
+      ]
+    }
+  }
+
+  // TODO: convert into cells array
+  // buildMultipleIconRow = iconsArr => {
+  //   const combinedProperties = iconsArr.reduce((acc, cur) => {
+  //     for (let key in cur) {
+  //       acc[key] = acc[key].push(<div>{cur[key]}</div>);
+  //     }
+  //     return acc;
+  //   }, {
+  //     "Style": [],
+  //     "Name": [],
+  //     "React_name": [],
+  //     "Type": [],
+  //     "Contextual_usage": [],
+  //     color: []
+  //   });
+
+  // }
+
   render() {
     const { searchValue, columns, sortBy } = this.state;
     const { direction, index } = sortBy;
     const SearchIcon = icons.SearchIcon;
     const searchRE = new RegExp(searchValue, 'i');
-    const iconRows = iconsData
-      .map(({Style, Name, React_name: ReactName, Type, Contextual_usage, color}) => {
-        const Icon = icons[ReactName];
-        return {
-          cells: [
-            {
-              title: <Tooltip content="Download SVG" position={TooltipPosition.bottom}><Icon onClick={this.onDownloadSvg} color={color} /></Tooltip>,
-              props: { column: 'Icon' }
-            },
-            {
-              title: Name,
-              props: { column: 'Name' }
-            },
-            Style,
-            {
-              title: Type,
-              props: { column: 'Type' }
-            },
-            ReactName,
-            {
-              title: Contextual_usage,
-              props: { column: 'Contextual usage' }
-            }
-          ]
-        }
-      });
+    const iconRows = iconsData.map(iconData => this.buildIconRow(iconData));
+
+    console.log('iconRows: ', iconRows);
 
     let filteredRows = iconRows.filter(row => {
       return row.cells.some(cell => {

@@ -139,6 +139,7 @@ export class IconRecommendations extends React.Component {
             ? 1 : 0});
       filteredRows = direction === SortByDirection.asc ? sortedRows : sortedRows.reverse();
     }
+    console.log('recommendations filtered rows: ',filteredRows);
     
     return (
       <div>

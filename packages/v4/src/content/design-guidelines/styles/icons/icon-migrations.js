@@ -1338,3 +1338,5 @@ export const iconRecommendations = recommendationsArray.map(recGroup => (
     iconUsage: []
   })
 ))
+
+console.log('iconRecommendations',iconRecommendations);

@@ -13,6 +13,7 @@ import TagIcon from '@patternfly/react-icons/dist/esm/icons/tag-icon';
 import TimesCircleIcon from '@patternfly/react-icons/dist/esm/icons/times-circle-icon';
 import { IconRecommendations } from './IconRecommendations';
 import { IconsTable } from './IconsTable';
+import { CombinedIconsTable } from './combinedIconsTable.js';
 import './icons.css';
 
 If you're a developer, check out our [getting started](/get-started/develop#using-styles) page to learn more about how to get and use our icon set.
@@ -110,7 +111,8 @@ Use this for 'fa' regular icons: `<i className="far [insert-icon-name]"></i>`<br
 If you're looking to copy React for an icon:<br />
 Use this for 'pficon' icons: `import { [insert-icon-name] } from '@patternfly/react-icons'`
 
-<IconsTable />
+<!-- <IconsTable /> -->
+<CombinedIconsTable isAllIconsTable />
 
 <Divider className="ws-icons-divider" />
 
