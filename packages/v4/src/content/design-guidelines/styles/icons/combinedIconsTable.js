@@ -63,28 +63,34 @@ const iconSvgs = {
 };
 
 const allIconRows = allIcons.map((rowObj, idx) => {
+  console.log(rowObj);
+  const { reactIcon, Name, Style, Type, React_name: ReactName, color } = rowObj;
   const columnNames = Object.keys(rowObj).filter(key => key !== 'color');
   const cells = columnNames.map(columnName => { // old
     const cellObj = {
       title: [],
       key: `${columnName}-${idx}`
     }; 
-    rowObj[columnName].map((cellLine, index) => {
-      console.log(cellLine);
-      const Icon = icons[cellLine];
-      const SpinnerComponent = cellLine === 'PF-Spinner-Component';
-      
-      (columnName !== 'reactIcon')
-        ? cellObj.title.push(<div className="ws-recommendations-entry" key={`${name}-${index}`}>{cellLine}</div>)
-        : cellObj.title.push(<div className={`${css(styles.modifiers.fitContent)} ws-recommendations-entry`} key={`${name}-${index}`}>
-          <span className="ws-recommendations-icon">
-            {Icon && <Icon />}
-            {SpinnerComponent && <Spinner size='md' />}
-          </span>
-        </div>);
+    
+    rowObj[columnName].map((cellText, index) => {
+      const isIconColumn = columnName === 'reactIcon';
+      const Icon = isIconColumn ? icons[cellText] : null;
 
-      return null;
-    });
+      if (isIconColumn) console.log(cellText, Icon);
+      const SpinnerComponent = cellText === 'PF-Spinner-Component';
+      
+      cellObj.title.push(
+        <div className={`ws-recommendations-entry`} key={`${name}-${index}`}>
+          {!isIconColumn
+            ? cellText
+            : (<span className="ws-recommendations-icon">
+                {Icon && <Icon color={color} />}
+                {SpinnerComponent && <Spinner size='md' />}
+              </span>)
+          }
+        </div>
+      );
+    })
     return cellObj;
   });
   return cells;
