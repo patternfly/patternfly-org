@@ -111,28 +111,32 @@ const iconsArray = [
     "Contextual_usage": "Indicates the ability to collapse a navigation menu",
     color: ''
   }],
-  [{
-    "Style": "fas",
-    "Name": "fa-bell",
-    "React_name": "BellIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates the ability to open a notification drawer.\nRepresents status: default notification",
-  },
-  {
-    "Style": "fas",
-    "Name": "",
-    "React_name": "BellIcon",
-    "Type": "Status",
-    "Contextual_usage": "Indicates the ability to open a notification drawer.\nRepresents status: default notification",
-    color: 'var(--pf-global--primary-color--100)'
-  },
-  {
-    "Style": "pf-icon",
-    "Name": "",
-    "React_name": "AttentionBellIcon",
-    "Type": "",
-    "Contextual_usage": "Represents status: attention",
-  }],
+  [
+    {
+      "Style": "fas",
+      "Name": "fa-bell",
+      "React_name": "BellIcon",
+      "Type": "Framework",
+      "Contextual_usage": "Indicates the ability to open a notification drawer.\nRepresents status: default notification",
+      color: ''
+    },
+    {
+      "Style": "fas",
+      "Name": "",
+      "React_name": "BellIcon",
+      "Type": "Status",
+      "Contextual_usage": "Indicates the ability to open a notification drawer.\nRepresents status: default notification",
+      color: 'var(--pf-global--primary-color--100)'
+    },
+    {
+      "Style": "pf-icon",
+      "Name": "",
+      "React_name": "AttentionBellIcon",
+      "Type": "",
+      "Contextual_usage": "Represents status: attention",
+      color: ''
+    }
+  ],
   [{
     "Style": "fas",
     "Name": "fa-bug",
@@ -1386,7 +1390,8 @@ const iconsArray = [
     "Name": "pf-icon-zone",
     "React_name": "ZoneIcon",
     "Type": "Object",
-    "Contextual_usage": "Represents a zone; a grouping of servers based on geographic location, network location, or function"
+    "Contextual_usage": "Represents a zone; a grouping of servers based on geographic location, network location, or function",
+    color: ''
   }]
 ];
 

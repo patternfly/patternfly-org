@@ -75,6 +75,7 @@ const allIconRows = allIcons.map((rowObj, idx) => {
     rowObj[columnName].map((cellText, index) => {
       const isIconColumn = columnName === 'reactIcon';
       const Icon = isIconColumn ? icons[cellText] : null;
+      const iconColor = isIconColumn ? color[index] : null;
 
       if (isIconColumn) console.log(cellText, Icon);
       const SpinnerComponent = cellText === 'PF-Spinner-Component';
@@ -84,7 +85,7 @@ const allIconRows = allIcons.map((rowObj, idx) => {
           {!isIconColumn
             ? cellText
             : (<span className="ws-recommendations-icon">
-                {Icon && <Icon color={color} />}
+                {Icon && <Icon color={iconColor} />}
                 {SpinnerComponent && <Spinner size='md' />}
               </span>)
           }
