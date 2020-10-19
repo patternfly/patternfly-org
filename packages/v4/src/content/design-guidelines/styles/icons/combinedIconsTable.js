@@ -62,8 +62,24 @@ const iconSvgs = {
   'pficon-settings': pficonSettings
 };
 
-const allIconRows = allIcons.map((rowObj, idx) => {
+console.log('allIcons:',allIcons);
+console.log('iconRecommendations',iconRecommendations);
+
+const filterRows = (rowsArr, searchTerm) => rowsArr.filter(
+  row => Object.values(row).some(
+    rowLine => rowLine.some(
+      cell => cell?.props?.children
+        ? cell.props.children.includes(search)
+        : Object.values(cell).some(objVal => objVal.includes(search))
+    )
+  )
+);
+
+const allIconRows = allIcons
+.filter(rowObj => Object.values(rowObj).some(colValues => colValues.some(value => value.includes('St'))))
+.map((rowObj, idx) => {
   console.log(rowObj);
+  const filteredRows = Object.values(temp1).some(colValues => colValues.some(value => value.includes('St')))
   const { reactIcon, Name, Style, Type, React_name: ReactName, color } = rowObj;
   const columnNames = Object.keys(rowObj).filter(key => key !== 'color');
   const cells = columnNames.map(columnName => { // old
@@ -77,7 +93,6 @@ const allIconRows = allIcons.map((rowObj, idx) => {
       const Icon = isIconColumn ? icons[cellText] : null;
       const iconColor = isIconColumn ? color[index] : null;
 
-      if (isIconColumn) console.log(cellText, Icon);
       const SpinnerComponent = cellText === 'PF-Spinner-Component';
       
       cellObj.title.push(
@@ -177,7 +192,6 @@ export const CombinedIconsTable = ({isRecommendationsTable = false, isAllIconsTa
   };
 
   // TODO: make dynamic
-  console.log('isAllIconsTable', isAllIconsTable);
   const iconRows = isAllIconsTable
     ? allIconRows
     : recIconRows;
