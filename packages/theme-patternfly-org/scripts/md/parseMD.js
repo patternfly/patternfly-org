@@ -123,7 +123,6 @@ function toReactComponent(mdFilePath, source) {
     .use(() => (tree, file) => {
       visit(tree, 'mdxBlockElement', node => {
         if (node.children[0] && node.children[0].type === 'paragraph') {
-          console.log(file.path)
           const newChildren = node.children[0].children;
           node.children.shift();
           node.children = newChildren.concat(node.children);

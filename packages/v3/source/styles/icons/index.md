@@ -53,7 +53,6 @@ Search for an icon: <span class="icon-search-container"><input type="text" id="i
   var clipboard = new Clipboard('td', {
     text: function (trigger) {
       var icon = trigger.querySelector('.pficon, .fa');
-      console.log(icon)
       if (icon) {
         var content = window.getComputedStyle(icon, ':before').getPropertyValue('content')
         return content.replace(/"/g, '');
