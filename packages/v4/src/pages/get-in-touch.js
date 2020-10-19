@@ -3,10 +3,10 @@ import ChatIcon from '@patternfly/react-icons/dist/esm/icons/chat-icon';
 import QuestionIcon from '@patternfly/react-icons/dist/esm/icons/question-icon';
 import CatalogIcon from '@patternfly/react-icons/dist/esm/icons/catalog-icon';
 import MailBulkIcon from '@patternfly/react-icons/dist/esm/icons/mail-bulk-icon';
-import { Grid, GridItem, PageSection, PageSectionVariants, Split, SplitItem, Title } from '@patternfly/react-core';
+import { Grid, GridItem, PageSection, Split, SplitItem, Title } from '@patternfly/react-core';
 
 const GetInTouchPage = () => (
-  <PageSection variant={PageSectionVariants.light}>
+  <PageSection id="main-content" variant="light" style={{ padding: 'var(--pf-global--spacer--xl)' }}>
     <Title size="4xl" className="pf-u-mb-lg ws-page-title" headingLevel="h1">Get in touch</Title>
 
     <p className="ws-mdx-p">Get involved with the PatternFly community. Get answers to your questions and share your knowledge with others.</p>

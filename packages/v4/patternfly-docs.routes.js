@@ -10,7 +10,7 @@ module.exports = {
     title: 'Get in touch'
   },
   '/404': {
-    SyncComponent: isClient && require('theme-patternfly-org/pages/404').default,
+    SyncComponent: isClient && require('theme-patternfly-org/pages/404/index').default,
     title: '404 Error'
   }
 };
