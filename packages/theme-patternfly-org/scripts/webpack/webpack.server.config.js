@@ -30,6 +30,11 @@ const serverConfig = () => {
         {
           test: /\.css$/,
           use: 'null-loader'
+        },
+        {
+          test: /\.js$/,
+          include: /[\\/]node_modules[\\/]novnc-core/,
+          use: 'null-loader'
         }
       ]
     },
