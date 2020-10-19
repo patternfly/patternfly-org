@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.27](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.26...theme-patternfly-org@0.1.27) (2020-10-19)
+
+
+### Bug Fixes
+
+* **novnc:** use null-loader for SSR ([#2210](https://github.com/patternfly/patternfly-org/issues/2210)) ([592f875](https://github.com/patternfly/patternfly-org/commit/592f8758baad98996589c0805847a156a1a7eab8))
+
+
+
+
+
 ## [0.1.26](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.25...theme-patternfly-org@0.1.26) (2020-10-13)
 
 
