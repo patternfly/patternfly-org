@@ -2,7 +2,7 @@
 id: Line chart
 section: charts
 ---
-A **line chart** plots a series of discrete data samples that are good for showing continuous data and trend information. Sample values on the line can be measured and extracted.
+A **Line chart** plots a series of discrete data samples that are good for showing continuous data and trend information. Sample values on the line can be measured and extracted.
 
 ## Usage
 The most common use case for line charts is to compare several data sets over a period of time. They can be used to project trends into the past or future. A best fit line is created and extended in both directions to do so, but the validity of the projection is not certain. If you want to show and compare categorical data, you may consider using a bar chart.

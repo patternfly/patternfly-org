@@ -3,7 +3,7 @@ id: Sparkline chart
 section: charts
 ---
 
-A **sparkline** is a small chart that helps users to analyze data and understand trends and patterns.
+A **Sparkline** is a small chart that helps users to analyze data and understand trends and patterns.
 
 ## Usage
 Sparklines are commonly used in tables, reports, and dashboards. A common use case is displaying utilization in an environment over time. Sparklines help to show trends in a series of values or to highlight maximum and minimum values. We recommend using sparklines alone without an axis and placing the name of the item being visualized underneath the chart. 

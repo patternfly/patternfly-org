@@ -19,7 +19,7 @@ Use charts to visualize data in an application. The type of chart you use will d
 - [Area charts](/charts/area-chart/design-guidelines): use to show trending over a continuous scale (usually time)
 - [Bar charts](/charts/bar-chart/design-guidelines): great way to show and compare categorical data
   - [Stacked bar charts](/charts/stacked-chart/design-guidelines)
-- [Bullet charts](/charts/bullet-chart): use as an extension to the bar chart to measure data with thresholds and static ranges
+- [Bullet charts](/charts/bullet-chart/design-guidelines): use as an extension to the bar chart to measure data with thresholds and static ranges
 - [Donut charts](/charts/donut-chart/design-guidelines): use to show the relationship of a set of values to a whole or progress completion as a percentages
   - [Donut utilization](/charts/donut-utilization-chart/design-guidelines): use to show utilization for an object as a percentages
   - [Donut utilization with threshold](/charts/donut-utilization-chart/design-guidelines#donut-chart---utilization-with-threshold): use to show utilization for an object in relation to threshold values

@@ -2,7 +2,7 @@
 id: Donut utilization chart
 section: charts
 ---
-A **donut utlization chart** is a donut chart used specifically to show utilization metrics. 
+A **Donut utlization chart** is a donut chart used specifically to show utilization metrics. 
 
 ## Usage
 ### Donut chart - Utilization
