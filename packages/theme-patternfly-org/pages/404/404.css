@@ -12,5 +12,5 @@ div.ws-404-button-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: var(--pf-global--spacer--lg);
+  padding: var(--pf-global--spacer--xl);
 }
