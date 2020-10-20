@@ -30,7 +30,7 @@ import {
 import { css } from '@patternfly/react-styles';
 import styles from '@patternfly/react-styles/css/components/Table/table';
 // TODO: Remove these into props
-import { iconRecommendations } from './icon-migrations';
+import { recommendationsArray } from './icon-migrations';
 import { iconsArray } from './icons-all';
 // End remove
 import { saveAs } from 'file-saver';
@@ -74,6 +74,25 @@ const iconSvgs = {
 //       )
 //   )
 // );
+
+const iconRecommendations = recommendationsArray.map(recGroup => (
+  recGroup.reduce((acc, cur) => {
+    acc[cur.iconType].push({
+      name: cur.iconName,
+      icon: cur.iconName,
+      style: cur.style,
+      reactIcon: cur.reactIcon
+    });
+    if (cur.iconType === 'new') {
+      acc['iconUsage'].push(<div>{cur.iconUsage}</div>);
+    }
+    return acc;
+  }, {
+    old: [],
+    new: [],
+    iconUsage: []
+  })
+));
 
 const filterRows = (rowsArr, searchTerm) => rowsArr.filter(row => (
   row.some(rowObj => Object.values(rowObj).some(val => val.includes(searchTerm)))
