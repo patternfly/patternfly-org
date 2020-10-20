@@ -15,4 +15,10 @@ async function buildServer() {
   await buildWebpack(webpackServerConfig);
 }
 
-buildServer();
+buildServer()
+  .catch(err => {
+    console.error(err);
+    process.exit(2);
+  })
+  .then();
+

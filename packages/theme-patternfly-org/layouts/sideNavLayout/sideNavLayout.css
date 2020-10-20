@@ -26,13 +26,13 @@
 }
 
 /* Search */
-.ws-global-search {
+#ws-global-search-wrapper {
   padding: 0 0 2px 0;
   transition: 250ms;
   /* For icon */
   position: relative;
 }
-#global-search-input {
+#ws-global-search {
   background-color: transparent;
   border: none;
   width: 100%;
@@ -40,29 +40,29 @@
   padding-left: 32px;
 }
 .ws-hide-search-input .algolia-autocomplete,
-.ws-hide-search-input #global-search-input {
+.ws-hide-search-input #ws-global-search {
   display: none !important;
 }
 .ws-collapse-search {
   position: relative;
   top: 4px;
 }
-.ws-global-search > .global-search-icon {
+#ws-global-search-wrapper > .global-search-icon {
   position: absolute;
   top: 14px;
   left: 4px;
 }
-#global-search-input,
-#global-search-input::placeholder {
+#ws-global-search,
+#ws-global-search::placeholder {
   color: #fff;
 }
-#global-search-input:focus {
+#ws-global-search:focus {
   outline-offset: 2px;
 }
 
 /* TODO: PageHeaderTools on small viewports */
 @media (max-width: 670px) {
-  .ws-global-search {
+  #ws-global-search-wrapper {
     display: none;
     visibility: hidden;
   }

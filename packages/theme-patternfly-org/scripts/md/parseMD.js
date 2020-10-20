@@ -120,10 +120,9 @@ function toReactComponent(mdFilePath, source) {
     // Support for JSX in MD
     .use(require('remark-mdx'))
     // remark-mdx leaves paragraphs as normal MD, but inside MDX we expect it not to.
-    .use(() => (tree, file) => {
+    .use(() => tree => {
       visit(tree, 'mdxBlockElement', node => {
         if (node.children[0] && node.children[0].type === 'paragraph') {
-          console.log(file.path)
           const newChildren = node.children[0].children;
           node.children.shift();
           node.children = newChildren.concat(node.children);

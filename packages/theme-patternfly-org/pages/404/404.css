@@ -1,0 +1,16 @@
+#ws-404-search-wrapper {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.ws-404-card-header {
+  padding: 1.5rem;
+}
+
+div.ws-404-button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: var(--pf-global--spacer--xl);
+}

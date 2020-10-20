@@ -49,7 +49,7 @@ async function execFile(file, args) {
     const child = fork(path.join(__dirname, file), args);
     function errorHandler(err) {
       console.error(err);
-      rej();
+      process.exit(1);
     };
     function successHandler(code) {
       if (code === 0) {
@@ -58,8 +58,7 @@ async function execFile(file, args) {
         res();
       }
       else {
-        console.error('Exited with', code);
-        rej();
+        process.exit(code);
       }
     }
     child.on('error', errorHandler);
