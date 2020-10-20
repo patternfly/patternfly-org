@@ -132,7 +132,6 @@ export class IconRecommendations extends React.Component {
       const sortedRows = filteredRows.sort((a, b) => {
         const cellA = a[index].title[0].key.toLowerCase();
         const cellB = b[index].title[0].key.toLowerCase();
-        console.log(index, direction, cellA,cellB);
         return cellA < cellB
           ? -1
           : cellA > cellB

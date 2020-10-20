@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Button,
   Page,
@@ -33,7 +33,7 @@ const HeaderTools = ({
   const [isSearchExpanded, setSearchExpanded] = useState(false);
   const expandAndFocusSearch = () => {
     setSearchExpanded(true);
-    setTimeout(() => document.getElementById('global-search-input').focus(), 0);
+    setTimeout(() => document.getElementById('ws-global-search').focus(), 0);
   }
   const latestVersion = versions.Releases.find(version => version.latest);
   const getDropdownItem = version => (
@@ -50,8 +50,8 @@ const HeaderTools = ({
   return (
     <PageHeaderTools>
       {hasSearch && (
-        <PageHeaderToolsItem className={`ws-global-search ${isSearchExpanded ? '' : 'ws-hide-search-input'}`}>
-          <TextInput id="global-search-input"  placeholder="Search" />
+        <PageHeaderToolsItem id="ws-global-search-wrapper" className={isSearchExpanded ? '' : 'ws-hide-search-input'}>
+          <TextInput id="ws-global-search" placeholder="Search" />
           {isSearchExpanded
             ? (
               <React.Fragment>
@@ -110,16 +110,21 @@ const HeaderTools = ({
   );
 }
 
-function attachDocSearch(algolia, timeout) {
+// https://github.com/algolia/autocomplete.js#global-options
+export function attachDocSearch(algolia, inputSelector, timeout) {
   if (window.docsearch) {
     return window.docsearch({
-      inputSelector: '#global-search-input',
-      debug: false,
+      inputSelector,
+      autocompleteOptions: {
+        hint: false,
+        appendTo: `${inputSelector}-wrapper`,
+      },
+      debug: process.env.NODE_ENV !== 'production',
       ...algolia
     });
   }
   else {
-    setTimeout(() => attachDocSearch(algolia, timeout), timeout);
+    setTimeout(() => attachDocSearch(algolia, inputSelector, timeout), timeout);
   }
 }
 
@@ -140,7 +145,7 @@ export const SideNavLayout = ({ children, groupedRoutes }) => {
       return;
     }
     if (algolia) {
-      attachDocSearch(algolia, 1000);
+      attachDocSearch(algolia, '#ws-global-search', 1000);
     }
     if (hasVersionSwitcher && window.fetch) {
       fetch('/versions.json').then(res => {
