@@ -74,21 +74,14 @@
 }
 
 /* Table styles */
-.ws-table {
-  width: 100%;
-  margin-bottom: var(--pf-global--spacer--md);
-}
-.ws-table td,
-.ws-table th,
-.ws-table tr {
-  padding: var(--pf-global--spacer--sm);
-  vertical-align: top;
-  border-bottom: var(--pf-global--BorderWidth--sm) solid #e0e0e0;
-}
 /* Undo patternfly reset to respect MD table styles */
 .ws-table td[align="center"],
 .ws-table th[align="center"] {
   text-align: center;
+}
+.ws-table td[align="left"],
+.ws-table th[align="left"] {
+  text-align: left;
 }
 .ws-table td[align="right"],
 .ws-table th[align="right"] {
@@ -98,45 +91,6 @@
 .ws-table th > code,
 .ws-table tr > code {
   white-space: normal;
-}
-.ws-table {
-  padding: 0;
-  color: #151515;
-}
-.ws-table thead {
-  font-size: 16px;
-  white-space: nowrap;
-  vertical-align: top;
-}
-.ws-table th {
-  padding: 16px 16px 16px 32px;
-  font-size: 14px;
-  line-height: 21px;
-  color: #151515;
-}
-@media only screen and (max-width: 992px) {
-  .ws-table th {
-    padding-left: 16px;
-  }
-}
-.ws-table td {
-  padding: 32px 16px 32px 32px;
-  font-size: 16px;
-}
-@media only screen and (max-width: 992px) {
-  .ws-table td {
-    padding: 16px;
-  }
-}
-.ws-table tr {
-  height: 1px;
-  border-bottom: 1px solid #d2d2d2;
-}
-.ws-table tr > * {
-  position: relative;
-  height: inherit;
-  font-weight: 400;
-  vertical-align: baseline;
 }
 
 /*
@@ -227,7 +181,9 @@
 .ws-blockquote:not(:last-child),
 .ws-small:not(:last-child),
 .ws-pre:not(:last-child),
-.ws-hr:not(:last-child) {
+.ws-hr:not(:last-child),
+.ws-table:not(:last-child),
+.ws-content-table:not(:last-child) {
   margin-bottom: var(--pf-c-content--MarginBottom); }
 .ws-h1,
 .ws-h2,
