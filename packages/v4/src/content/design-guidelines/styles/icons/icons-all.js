@@ -1,1418 +1,1273 @@
-const iconsArray = [
+export const iconsArray = [
   [{
-    "Style": "fas",
-    "Name": "fa-angle-double-left",
-    "React_name": "AngleDoubleLeftIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates the ability to navigate to the first page of a multi-page data set",
-    color: ''
+    style: "fas",
+    name: "fa-angle-double-left",
+    reactIcon: "AngleDoubleLeftIcon",
+    type: "Framework",
+    iconUsage: "Indicates the ability to navigate to the first page of a multi-page data set"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-angle-double-right",
-    "React_name": "AngleDoubleRightIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates the ability to navigate to the last page of a multi-page data set",
-    color: ''
+    style: "fas",
+    name: "fa-angle-double-right",
+    reactIcon: "AngleDoubleRightIcon",
+    type: "Framework",
+    iconUsage: "Indicates the ability to navigate to the last page of a multi-page data set"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-angle-down",
-    "React_name": "AngleDownIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates expandable components such as accordions, progressive disclosures, or expandable lists are currently expanded. Clicking this will collapse the component.",
-    color: ''
+    style: "fas",
+    name: "fa-angle-down",
+    reactIcon: "AngleDownIcon",
+    type: "Framework",
+    iconUsage: "Indicates expandable components such as accordions, progressive disclosures, or expandable lists are currently expanded. Clicking this will collapse the component."
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-angle-left",
-    "React_name": "AngleLeftIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates the ability to navigate to the previous page of a multi-page data set",
-    color: ''
+    style: "fas",
+    name: "fa-angle-left",
+    reactIcon: "AngleLeftIcon",
+    type: "Framework",
+    iconUsage: "Indicates the ability to navigate to the previous page of a multi-page data set"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-angle-right",
-    "React_name": "AngleRightIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates expandable elements such as accordions, progressive disclosures, or expandable lists are currently collapsed. Clicking this will expand the element. \nAlso indicates the ability to navigate to the next page in a multipage data set.",
-    color: ''
+    style: "fas",
+    name: "fa-angle-right",
+    reactIcon: "AngleRightIcon",
+    type: "Framework",
+    iconUsage: "Indicates expandable elements such as accordions, progressive disclosures, or expandable lists are currently collapsed. Clicking this will expand the element. \nAlso indicates the ability to navigate to the next page in a multipage data set."
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-angle-up",
-    "React_name": "AngleUpIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates expandable table rows (on mobile) are currently expanded. Clicking this will collapse the component.",
-    color: ''
+    style: "fas",
+    name: "fa-angle-up",
+    reactIcon: "AngleUpIcon",
+    type: "Framework",
+    iconUsage: "Indicates expandable table rows (on mobile) are currently expanded. Clicking this will collapse the component."
   }],
   [{
-    "Style": "",
-    "Name": "ansible",
-    "React_name": "AnsibleTowerIcon",
-    "Type": "Brand",
-    "Contextual_usage": "Represents \"Ansible Tower\"",
-    color: ''
+    style: "",
+    name: "ansible",
+    reactIcon: "AnsibleTowerIcon",
+    type: "Brand",
+    iconUsage: "Represents \"Ansible Tower\""
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-arrow-circle-down",
-    "React_name": "ArrowCircleDownIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: an item (such as a VM) is down",
-    color: ''
+    style: "fas",
+    name: "fa-arrow-circle-down",
+    reactIcon: "ArrowCircleDownIcon",
+    type: "Status",
+    iconUsage: "Represents status: an item (such as a VM) is down"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-arrow-circle-up",
-    "React_name": "ArrowCircleUpIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: an item (such as a VM) is up",
-    color: ''
+    style: "fas",
+    name: "fa-arrow-circle-up",
+    reactIcon: "ArrowCircleUpIcon",
+    type: "Status",
+    iconUsage: "Represents status: an item (such as a VM) is up"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-arrows-alt-v",
-    "React_name": "ArrowsAltVIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates the availability of a sorting function in a table header",
-    color: ''
+    style: "fas",
+    name: "fa-arrows-alt-v",
+    reactIcon: "ArrowsAltVIcon",
+    type: "Framework",
+    iconUsage: "Indicates the availability of a sorting function in a table header"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-arrow-right",
-    "React_name": "ArrowRightIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates the ability to take an action or navigate to another page. Is paired with text",
-    color: ''
+    style: "fas",
+    name: "fa-arrow-right",
+    reactIcon: "ArrowRightIcon",
+    type: "Framework",
+    iconUsage: "Indicates the ability to take an action or navigate to another page. Is paired with text"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-balance-scale",
-    "React_name": "BalanceScaleIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: an item needs rebalancing",
-    color: ''
+    style: "fas",
+    name: "fa-balance-scale",
+    reactIcon: "BalanceScaleIcon",
+    type: "Status",
+    iconUsage: "Represents status: an item needs rebalancing"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-ban",
-    "React_name": "BanIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: an item is disabled, canceled, terminated or is not ready",
-    color: ''
+    style: "fas",
+    name: "fa-ban",
+    reactIcon: "BanIcon",
+    type: "Status",
+    iconUsage: "Represents status: an item is disabled, canceled, terminated or is not ready"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-bars",
-    "React_name": "BarsIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates the ability to collapse a navigation menu",
-    color: ''
+    style: "fas",
+    name: "fa-bars",
+    reactIcon: "BarsIcon",
+    type: "Framework",
+    iconUsage: "Indicates the ability to collapse a navigation menu"
   }],
   [
     {
-      "Style": "fas",
-      "Name": "fa-bell",
-      "React_name": "BellIcon",
-      "Type": "Framework",
-      "Contextual_usage": "Indicates the ability to open a notification drawer.\nRepresents status: default notification",
-      color: ''
+      style: "fas",
+      name: "fa-bell",
+      reactIcon: "BellIcon",
+      type: "Framework",
+      iconUsage: "Indicates the ability to open a notification drawer.\nRepresents status: default notification"
     },
     {
-      "Style": "fas",
-      "Name": "",
-      "React_name": "BellIcon",
-      "Type": "Status",
-      "Contextual_usage": "Indicates the ability to open a notification drawer.\nRepresents status: default notification",
+      style: "fas",
+      name: "",
+      reactIcon: "BellIcon",
+      type: "Status",
+      iconUsage: "Indicates the ability to open a notification drawer.\nRepresents status: default notification",
       color: 'var(--pf-global--primary-color--100)'
     },
     {
-      "Style": "pf-icon",
-      "Name": "",
-      "React_name": "AttentionBellIcon",
-      "Type": "",
-      "Contextual_usage": "Represents status: attention",
-      color: ''
+      style: "pf-icon",
+      name: "",
+      reactIcon: "AttentionBellIcon",
+      type: "",
+      iconUsage: "Represents status: attention"
     }
   ],
   [{
-    "Style": "fas",
-    "Name": "fa-bug",
-    "React_name": "BugIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: there is a bug present",
-    color: ''
+    style: "fas",
+    name: "fa-bug",
+    reactIcon: "BugIcon",
+    type: "Status",
+    iconUsage: "Represents status: there is a bug present"
   }],
   [{
-    "Style": "far",
-    "Name": "fa-calendar-alt",
-    "React_name": "OutlinedCalendarAltIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates a date picker function is available",
-    color: ''
+    style: "far",
+    name: "fa-calendar-alt",
+    reactIcon: "OutlinedCalendarAltIcon",
+    type: "Framework",
+    iconUsage: "Indicates a date picker function is available"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-caret-down",
-    "React_name": "CaretDownIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates the ability to acces option panels for components like drop-downs, filters and page ranges",
-    color: ''
+    style: "fas",
+    name: "fa-caret-down",
+    reactIcon: "CaretDownIcon",
+    type: "Framework",
+    iconUsage: "Indicates the ability to acces option panels for components like drop-downs, filters and page ranges"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-check",
-    "React_name": "CheckIcon",
-    "Type": "Action\nStatus",
-    "Contextual_usage": "",
-    color: ''
+    style: "fas",
+    name: "fa-check",
+    reactIcon: "CheckIcon",
+    type: "Action\nStatus",
+    iconUsage: ""
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-check-circle",
-    "React_name": "CheckCircleIcon",
-    "Type": "Status",
-    "Contextual_usage": "Indicates the ability to commit edited changes. \nAlso represents status: OK in content views such as a tables",
+    style: "fas",
+    name: "fa-check-circle",
+    reactIcon: "CheckCircleIcon",
+    type: "Status",
+    iconUsage: "Indicates the ability to commit edited changes. \nAlso represents status: OK in content views such as a tables",
     color: 'var(--pf-global--success-color--100)'
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-clipboard-check",
-    "React_name": "ClipboardCheckIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents orders or tasks",
-    color: ''
+    style: "fas",
+    name: "fa-clipboard-check",
+    reactIcon: "ClipboardCheckIcon",
+    type: "Object",
+    iconUsage: "Represents orders or tasks"
   }],
   [{
-    "Style": "far",
-    "Name": "fa-clock",
-    "React_name": "OutlinedClockIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Represents a time interval",
-    color: ''
+    style: "far",
+    name: "fa-clock",
+    reactIcon: "OutlinedClockIcon",
+    type: "Framework",
+    iconUsage: "Represents a time interval"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-code",
-    "React_name": "CodeIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents code",
-    color: ''
+    style: "fas",
+    name: "fa-code",
+    reactIcon: "CodeIcon",
+    type: "Object",
+    iconUsage: "Represents code"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-code-branch",
-    "React_name": "CodeBranchIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents code branch",
-    color: ''
+    style: "fas",
+    name: "fa-code-branch",
+    reactIcon: "CodeBranchIcon",
+    type: "Object",
+    iconUsage: "Represents code branch"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-cog",
-    "React_name": "CogIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates availability of configurable settings",
-    color: ''
+    style: "fas",
+    name: "fa-cog",
+    reactIcon: "CogIcon",
+    type: "Action",
+    iconUsage: "Indicates availability of configurable settings"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-columns",
-    "React_name": "ColumnsIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to manage columns for a table view",
-    color: ''
+    style: "fas",
+    name: "fa-columns",
+    reactIcon: "ColumnsIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to manage columns for a table view"
   }],
   [{
-    "Style": "far",
-    "Name": "fa-comments",
-    "React_name": "OutlinedCommentsIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates availability of commenting",
-    color: ''
+    style: "far",
+    name: "fa-comments",
+    reactIcon: "OutlinedCommentsIcon",
+    type: "Framework",
+    iconUsage: "Indicates availability of commenting"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-compress",
-    "React_name": "CompressIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to compress an item. Should toggle with fa-expand",
-    color: ''
+    style: "fas",
+    name: "fa-compress",
+    reactIcon: "CompressIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to compress an item. Should toggle with fa-expand"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-compress-arrows-alt",
-    "React_name": "CompressArrowsAltIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to compress an item (alt concept). Should toggle with fa-expand-arrows-alt",
-    color: ''
+    style: "fas",
+    name: "fa-compress-arrows-alt",
+    reactIcon: "CompressArrowsAltIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to compress an item (alt concept). Should toggle with fa-expand-arrows-alt"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-copy",
-    "React_name": "CopyIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the availability of a copy to clipboard function",
-    color: ''
+    style: "fas",
+    name: "fa-copy",
+    reactIcon: "CopyIcon",
+    type: "Action",
+    iconUsage: "Indicates the availability of a copy to clipboard function"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-cube",
-    "React_name": "CubeIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a container",
-    color: ''
+    style: "fas",
+    name: "fa-cube",
+    reactIcon: "CubeIcon",
+    type: "Object",
+    iconUsage: "Represents a container"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-cubes",
-    "React_name": "CubesIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a Kubernetes pod(s)",
-    color: ''
+    style: "fas",
+    name: "fa-cubes",
+    reactIcon: "CubesIcon",
+    type: "Object",
+    iconUsage: "Represents a Kubernetes pod(s)"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-database",
-    "React_name": "DatabaseIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a database",
-    color: ''
+    style: "fas",
+    name: "fa-database",
+    reactIcon: "DatabaseIcon",
+    type: "Object",
+    iconUsage: "Represents a database"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-desktop",
-    "React_name": "DesktopIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a desktop, workstation or terminal",
-    color: ''
+    style: "fas",
+    name: "fa-desktop",
+    reactIcon: "DesktopIcon",
+    type: "Object",
+    iconUsage: "Represents a desktop, workstation or terminal"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-download",
-    "React_name": "DownloadIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates a download function is available",
-    color: ''
+    style: "fas",
+    name: "fa-download",
+    reactIcon: "DownloadIcon",
+    type: "Action",
+    iconUsage: "Indicates a download function is available"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-ellipsis-v",
-    "React_name": "EllipsisVIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates a contextual menu of actions or additional actions is available",
-    color: ''
+    style: "fas",
+    name: "fa-ellipsis-v",
+    reactIcon: "EllipsisVIcon",
+    type: "Framework",
+    iconUsage: "Indicates a contextual menu of actions or additional actions is available"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-exclamation-circle",
-    "React_name": "ExclamationCircleIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents alert status: danger, major error or critical error",
+    style: "fas",
+    name: "fa-exclamation-circle",
+    reactIcon: "ExclamationCircleIcon",
+    type: "Status",
+    iconUsage: "Represents alert status: danger, major error or critical error",
     color: 'var(--pf-global--danger-color--100)'
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-exclamation-triangle",
-    "React_name": "ExclamationTriangleIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents alert status: warning",
+    style: "fas",
+    name: "fa-exclamation-triangle",
+    reactIcon: "ExclamationTriangleIcon",
+    type: "Status",
+    iconUsage: "Represents alert status: warning",
     color: 'var(--pf-global--warning-color--100)'
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-expand",
-    "React_name": "ExpandIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to expand an item. Should toggle with fa-compress",
-    color: ''
+    style: "fas",
+    name: "fa-expand",
+    reactIcon: "ExpandIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to expand an item. Should toggle with fa-compress"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-expand-arrows-alt",
-    "React_name": "ExpandArrowsAltIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to expand an item (alt concept). Should toggle with fa-compress-arrows-alt",
-    color: ''
+    style: "fas",
+    name: "fa-expand-arrows-alt",
+    reactIcon: "ExpandArrowsAltIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to expand an item (alt concept). Should toggle with fa-compress-arrows-alt"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-external-link-alt",
-    "React_name": "ExternalLinkAltIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the link navigates to an external site",
-    color: ''
+    style: "fas",
+    name: "fa-external-link-alt",
+    reactIcon: "ExternalLinkAltIcon",
+    type: "Action",
+    iconUsage: "Indicates the link navigates to an external site"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-filter",
-    "React_name": "FilterIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to filter search results or datasets",
-    color: ''
+    style: "fas",
+    name: "fa-filter",
+    reactIcon: "FilterIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to filter search results or datasets"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-flag",
-    "React_name": "FlagIcon",
-    "Type": "Object\nAction",
-    "Contextual_usage": "Represents a message\nAlso indicates the ability to access a messages",
-    color: ''
+    style: "fas",
+    name: "fa-flag",
+    reactIcon: "FlagIcon",
+    type: "Object\nAction",
+    iconUsage: "Represents a message\nAlso indicates the ability to access a messages"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-folder",
-    "React_name": "FolderIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Represents a collapsed hierarchical group. \nIndicates the ability to expand the group.",
-    color: ''
+    style: "fas",
+    name: "fa-folder",
+    reactIcon: "FolderIcon",
+    type: "Framework",
+    iconUsage: "Represents a collapsed hierarchical group. \nIndicates the ability to expand the group."
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-folder-open",
-    "React_name": "FolderOpenIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Represents an expanded hierarchical group. \nIndicates the ability to collapse the group.",
-    color: ''
+    style: "fas",
+    name: "fa-folder-open",
+    reactIcon: "FolderOpenIcon",
+    type: "Framework",
+    iconUsage: "Represents an expanded hierarchical group. \nIndicates the ability to collapse the group."
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-grip-horizontal",
-    "React_name": "GripHorizontalIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates the ability to move a vertically-oriented component via drag and drop",
-    color: ''
+    style: "fas",
+    name: "fa-grip-horizontal",
+    reactIcon: "GripHorizontalIcon",
+    type: "Framework",
+    iconUsage: "Indicates the ability to move a vertically-oriented component via drag and drop"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-grip-vertical",
-    "React_name": "GripVerticalIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates the ability to move a horizontally-oriented component via drag and drop",
-    color: ''
+    style: "fas",
+    name: "fa-grip-vertical",
+    reactIcon: "GripVerticalIcon",
+    type: "Framework",
+    iconUsage: "Indicates the ability to move a horizontally-oriented component via drag and drop"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-history",
-    "React_name": "HistoryIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: restarting",
-    color: ''
+    style: "fas",
+    name: "fa-history",
+    reactIcon: "HistoryIcon",
+    type: "Status",
+    iconUsage: "Represents status: restarting"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-undo",
-    "React_name": "UndoIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to undo an a step in a historical log",
-    color: ''
+    style: "fas",
+    name: "fa-undo",
+    reactIcon: "UndoIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to undo an a step in a historical log"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-hdd",
-    "React_name": "OutlinedHddIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a single node or host",
-    color: ''
+    style: "fas",
+    name: "fa-hdd",
+    reactIcon: "OutlinedHddIcon",
+    type: "Object",
+    iconUsage: "Represents a single node or host"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-home",
-    "React_name": "HomeIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates a link to a default/home page",
-    color: ''
+    style: "fas",
+    name: "fa-home",
+    reactIcon: "HomeIcon",
+    type: "Framework",
+    iconUsage: "Indicates a link to a default/home page"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-info-circle",
-    "React_name": "InfoCircleIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents alert status: information",
+    style: "fas",
+    name: "fa-info-circle",
+    reactIcon: "InfoCircleIcon",
+    type: "Status",
+    iconUsage: "Represents alert status: information",
     color: 'var(--pf-global--info-color--100)'
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-key",
-    "React_name": "KeyIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents an SSH key or similar security concepts",
-    color: ''
-  }],
-  [{
-    "Style": "fas",
-    "Name": "fa-list",
-    "React_name": "ListIcon",
-    "Type": "View Type",
-    "Contextual_usage": "Represents data view content in a list format.",
-    color: ''
-  }],
-  [{
-    "Style": "fas",
-    "Name": "fa-lock",
-    "React_name": "LockIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: locked",
-    color: ''
-  }],
-  [{
-    "Style": "fas",
-    "Name": "fa-lock-open",
-    "React_name": "LockOpenIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: unlocked",
-    color: ''
-  }],
-  [{
-    "Style": "fas",
-    "Name": "fa-long-arrow-alt-down",
-    "React_name": "LongArrowAltDownIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Represents the largest-to-smallest, highest-to-lowest or last-to-first (descending) sort order for any data type in a data table column. Clicking this will toggle the sort to ascending.",
-    color: ''
-  }],
-  [{
-    "Style": "fas",
-    "Name": "fa-long-arrow-alt-up",
-    "React_name": "LongArrowAltUpIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Represents the smallest-to-largest, lowest-to-highest or first-to-last (ascending) sort order for any data type in a data table column. Clicking this will toggle the sort to descending.",
-    color: ''
-  }],
-  [{
-    "Style": "fas",
-    "Name": "fa-map-marker",
-    "React_name": "MapMarkerIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Represents a locale",
-    color: ''
-  }],
-  [{
-    "Style": "fas",
-    "Name": "fa-memory",
-    "React_name": "MemoryIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents the memory on a device",
-    color: ''
-  }],
-  [{
-    "Style": "fas",
-    "Name": "fa-microchip",
-    "React_name": "MicrochipIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents the CPU of a device",
-    color: ''
-  }],
-  [{
-    "Style": "fas",
-    "Name": "fa-minus",
-    "React_name": "MinusIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to remove an item",
-    color: ''
-  }],
-  [{
-    "Style": "fas",
-    "Name": "fa-minus-circle",
-    "React_name": "MinusCircleIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to remove an item (alt concept)",
-    color: ''
-  }],
-  [{
-    "Style": "fas",
-    "Name": "fa-pause",
-    "React_name": "PauseIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to pause. Should toggle with fa-play",
-    color: ''
-  }],
-  [{
-    "Style": "fas",
-    "Name": "fa-pause-circle",
-    "React_name": "PauseCircleIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: an interruption and/or stoppage of a process",
-    color: ''
+    style: "fas",
+    name: "fa-key",
+    reactIcon: "KeyIcon",
+    type: "Object",
+    iconUsage: "Represents an SSH key or similar security concepts"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-pencil-alt",
-    "React_name": "PencilAltIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to edit an item",
-    color: ''
+    style: "fas",
+    name: "fa-list",
+    reactIcon: "ListIcon",
+    type: "View Type",
+    iconUsage: "Represents data view content in a list format."
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-plus",
-    "React_name": "PlusIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to add an item; not for creating completely new objects (see pficon-circle-add)",
-    color: ''
+    style: "fas",
+    name: "fa-lock",
+    reactIcon: "LockIcon",
+    type: "Status",
+    iconUsage: "Represents status: locked"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-plus-circle",
-    "React_name": "PlusCircleIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to create an item",
-    color: ''
+    style: "fas",
+    name: "fa-lock-open",
+    reactIcon: "LockOpenIcon",
+    type: "Status",
+    iconUsage: "Represents status: unlocked"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-add-circle-o",
-    "React_name": "AddCircleOIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to create an item. Use this if there are many instances of this icon in a UI (data list, table, etc) to reduce visual noise.",
-    color: ''
+    style: "fas",
+    name: "fa-long-arrow-alt-down",
+    reactIcon: "LongArrowAltDownIcon",
+    type: "Framework",
+    iconUsage: "Represents the largest-to-smallest, highest-to-lowest or last-to-first (descending) sort order for any data type in a data table column. Clicking this will toggle the sort to ascending."
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-power-off",
-    "React_name": "PowerOffIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: powered on",
-    color: ''
+    style: "fas",
+    name: "fa-long-arrow-alt-up",
+    reactIcon: "LongArrowAltUpIcon",
+    type: "Framework",
+    iconUsage: "Represents the smallest-to-largest, lowest-to-highest or first-to-last (ascending) sort order for any data type in a data table column. Clicking this will toggle the sort to descending."
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-off",
-    "React_name": "OffIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: powered off",
-    color: ''
+    style: "fas",
+    name: "fa-map-marker",
+    reactIcon: "MapMarkerIcon",
+    type: "Framework",
+    iconUsage: "Represents a locale"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-openshift",
-    "React_name": "OpenshiftIcon",
-    "Type": "Brands",
-    "Contextual_usage": "Represents brand: OpenShift",
-    color: ''
+    style: "fas",
+    name: "fa-memory",
+    reactIcon: "MemoryIcon",
+    type: "Object",
+    iconUsage: "Represents the memory on a device"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-openstack",
-    "React_name": "OpenstackIcon",
-    "Type": "Brands",
-    "Contextual_usage": "Represents brand: OpenStack",
-    color: ''
+    style: "fas",
+    name: "fa-microchip",
+    reactIcon: "MicrochipIcon",
+    type: "Object",
+    iconUsage: "Represents the CPU of a device"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-play",
-    "React_name": "PlayIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to start or resume. Should toggle with fa-pause",
-    color: ''
+    style: "fas",
+    name: "fa-minus",
+    reactIcon: "MinusIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to remove an item"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-print",
-    "React_name": "PrintIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the availability of a print function",
-    color: ''
+    style: "fas",
+    name: "fa-minus-circle",
+    reactIcon: "MinusCircleIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to remove an item (alt concept)"
   }],
   [{
-    "Style": "far",
-    "Name": "fa-question-circle",
-    "React_name": "OutlinedQuestionCircleIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates the availability of contextual help",
-    color: ''
+    style: "fas",
+    name: "fa-pause",
+    reactIcon: "PauseIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to pause. Should toggle with fa-play"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-question-circle",
-    "React_name": "QuestionCircleIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates the availability of a help system in the masthead",
-    color: ''
+    style: "fas",
+    name: "fa-pause-circle",
+    reactIcon: "PauseCircleIcon",
+    type: "Status",
+    iconUsage: "Represents status: an interruption and/or stoppage of a process"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-redo",
-    "React_name": "RedoIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to refresh. Please use the animated spinner to indicate that something is “loading” or in the middle of processing",
-    color: ''
+    style: "fas",
+    name: "fa-pencil-alt",
+    reactIcon: "PencilAltIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to edit an item"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-search",
-    "React_name": "SearchIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates that that user may perform a search",
-    color: ''
+    style: "fas",
+    name: "fa-plus",
+    reactIcon: "PlusIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to add an item; not for creating completely new objects (see pficon-circle-add)"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-search-minus",
-    "React_name": "SearchMinusIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to zoom out",
-    color: ''
+    style: "fas",
+    name: "fa-plus-circle",
+    reactIcon: "PlusCircleIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to create an item"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-search-plus",
-    "React_name": "SearchPlusIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to zoom in",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-add-circle-o",
+    reactIcon: "AddCircleOIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to create an item. Use this if there are many instances of this icon in a UI (data list, table, etc) to reduce visual noise."
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-share-square",
-    "React_name": "ShareSquareIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to share via various methods with others",
-    color: ''
+    style: "fas",
+    name: "fa-power-off",
+    reactIcon: "PowerOffIcon",
+    type: "Status",
+    iconUsage: "Represents status: powered on"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-sort-amount-down",
-    "React_name": "SortAmountDownIcon",
-    "Type": "Action",
-    "Contextual_usage": "Represents the largest-to-smallest, highest-to-lowest or last-to-first (descending) sort order for any data type.",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-off",
+    reactIcon: "OffIcon",
+    type: "Status",
+    iconUsage: "Represents status: powered off"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-sort-amount-down-alt",
-    "React_name": "SortAmountDownAltIcon",
-    "Type": "Action",
-    "Contextual_usage": "Represents the smallest-to-largest, lowest-to-highest or first-to-last (ascending) sort order for any data type.",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-openshift",
+    reactIcon: "OpenshiftIcon",
+    type: "Brands",
+    iconUsage: "Represents brand: OpenShift"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-sync-alt",
-    "React_name": "SyncAltIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the availability of a sync action",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-openstack",
+    reactIcon: "OpenstackIcon",
+    type: "Brands",
+    iconUsage: "Represents brand: OpenStack"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-tag",
-    "React_name": "TagIcon",
-    "Type": "Object",
-    "Contextual_usage": "Indicates the abiltiy to access or create a set of tags",
-    color: ''
+    style: "fas",
+    name: "fa-play",
+    reactIcon: "PlayIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to start or resume. Should toggle with fa-pause"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-table",
-    "React_name": "TableIcon",
-    "Type": "View Type",
-    "Contextual_usage": "Represents data view content in a table format",
-    color: ''
+    style: "fas",
+    name: "fa-print",
+    reactIcon: "PrintIcon",
+    type: "Action",
+    iconUsage: "Indicates the availability of a print function"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-tachometer-alt",
-    "React_name": "TachometerAltIcon",
-    "Type": "View Type",
-    "Contextual_usage": "Represents data view content in a dashboard",
-    color: ''
+    style: "far",
+    name: "fa-question-circle",
+    reactIcon: "OutlinedQuestionCircleIcon",
+    type: "Framework",
+    iconUsage: "Indicates the availability of contextual help"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-th",
-    "React_name": "ThIcon",
-    "Type": "View Type",
-    "Contextual_usage": "Represents data view content in a small card format",
-    color: ''
+    style: "fas",
+    name: "fa-question-circle",
+    reactIcon: "QuestionCircleIcon",
+    type: "Framework",
+    iconUsage: "Indicates the availability of a help system in the masthead"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-th-large",
-    "React_name": "ThLargeIcon",
-    "Type": "View Type",
-    "Contextual_usage": "Represents data view content in a large card format",
-    color: ''
+    style: "fas",
+    name: "fa-redo",
+    reactIcon: "RedoIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to refresh. Please use the animated spinner to indicate that something is “loading” or in the middle of processing"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-thumbtack",
-    "React_name": "ThumbtackIcon",
-    "Type": "Framework",
-    "Contextual_usage": "Indicates the ability to pin an item",
-    color: ''
+    style: "fas",
+    name: "fa-search",
+    reactIcon: "SearchIcon",
+    type: "Action",
+    iconUsage: "Indicates that that user may perform a search"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-times",
-    "React_name": "TimesIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to close a modal or other panel. Also indicates the ability to clear existing data, such as filter criteria or labels",
-    color: ''
+    style: "fas",
+    name: "fa-search-minus",
+    reactIcon: "SearchMinusIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to zoom out"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-times-circle",
-    "React_name": "TimesCircleIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to close the about modal",
-    color: ''
+    style: "fas",
+    name: "fa-search-plus",
+    reactIcon: "SearchPlusIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to zoom in"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-trash",
-    "React_name": "TrashIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to delete",
-    color: ''
+    style: "fas",
+    name: "fa-share-square",
+    reactIcon: "ShareSquareIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to share via various methods with others"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-user",
-    "React_name": "UserIcon",
-    "Type": "Object\nFramework",
-    "Contextual_usage": "Represents a user (in a dataset, paired with a username). \nIndicates the availability of a user profile (in the masthead, paired with a username)",
-    color: ''
+    style: "fas",
+    name: "fa-sort-amount-down",
+    reactIcon: "SortAmountDownIcon",
+    type: "Action",
+    iconUsage: "Represents the largest-to-smallest, highest-to-lowest or last-to-first (descending) sort order for any data type."
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-users",
-    "React_name": "UsersIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents multiple users, a user grouping or project",
-    color: ''
+    style: "fas",
+    name: "fa-sort-amount-down-alt",
+    reactIcon: "SortAmountDownAltIcon",
+    type: "Action",
+    iconUsage: "Represents the smallest-to-largest, lowest-to-highest or first-to-last (ascending) sort order for any data type."
   }],
   [{
-    "Style": "far",
-    "Name": "fa-window-restore",
-    "React_name": "OutlinedWindowRestoreIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to open link in a new window",
-    color: ''
+    style: "fas",
+    name: "fa-sync-alt",
+    reactIcon: "SyncAltIcon",
+    type: "Action",
+    iconUsage: "Indicates the availability of a sync action"
   }],
   [{
-    "Style": "fas",
-    "Name": "fa-wrench",
-    "React_name": "WrenchIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: in preparation for maintenance",
-    color: ''
+    style: "fas",
+    name: "fa-tag",
+    reactIcon: "TagIcon",
+    type: "Object",
+    iconUsage: "Indicates the abiltiy to access or create a set of tags"
   }],
   [{
-    "Style": "fab",
-    "Name": "fa-github",
-    "React_name": "GithubIcon",
-    "Type": "Brands",
-    "Contextual_usage": "Represents brand: GitHub",
-    color: ''
+    style: "fas",
+    name: "fa-table",
+    reactIcon: "TableIcon",
+    type: "View Type",
+    iconUsage: "Represents data view content in a table format"
   }],
   [{
-    "Style": "fab",
-    "Name": "fa-gitlab",
-    "React_name": "GitlabIcon",
-    "Type": "Brands",
-    "Contextual_usage": "Represents brand: GitLab",
-    color: ''
+    style: "fas",
+    name: "fa-tachometer-alt",
+    reactIcon: "TachometerAltIcon",
+    type: "View Type",
+    iconUsage: "Represents data view content in a dashboard"
   }],
   [{
-    "Style": "fab",
-    "Name": "fa-google",
-    "React_name": "GoogleIcon",
-    "Type": "Brands",
-    "Contextual_usage": "Represents brand: Google",
-    color: ''
+    style: "fas",
+    name: "fa-th",
+    reactIcon: "ThIcon",
+    type: "View Type",
+    iconUsage: "Represents data view content in a small card format"
   }],
   [{
-    "Style": "fab",
-    "Name": "fa-stack-overflow",
-    "React_name": "StackOverflowIcon",
-    "Type": "Brands",
-    "Contextual_usage": "Represents brand: Stack Overflow",
-    color: ''
+    style: "fas",
+    name: "fa-th-large",
+    reactIcon: "ThLargeIcon",
+    type: "View Type",
+    iconUsage: "Represents data view content in a large card format"
   }],
   [{
-    "Style": "fab",
-    "Name": "fa-facebook-square",
-    "React_name": "FacebookSquareIcon",
-    "Type": "Brands",
-    "Contextual_usage": "Represents brand: Facebook",
-    color: ''
+    style: "fas",
+    name: "fa-thumbtack",
+    reactIcon: "ThumbtackIcon",
+    type: "Framework",
+    iconUsage: "Indicates the ability to pin an item"
   }],
   [{
-    "Style": "fab",
-    "Name": "fa-twitter",
-    "React_name": "TwitterIcon",
-    "Type": "Brands",
-    "Contextual_usage": "Represents brand: Twitter",
-    color: ''
+    style: "fas",
+    name: "fa-times",
+    reactIcon: "TimesIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to close a modal or other panel. Also indicates the ability to clear existing data, such as filter criteria or labels"
   }],
   [{
-    "Style": "fab",
-    "Name": "fa-windows",
-    "React_name": "WindowsIcon",
-    "Type": "Brands",
-    "Contextual_usage": "Represents brand: Windows",
-    color: ''
+    style: "fas",
+    name: "fa-times-circle",
+    reactIcon: "TimesCircleIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to close the about modal"
   }],
   [{
-    "Style": "fab",
-    "Name": "fa-linkedin",
-    "React_name": "LinkedinIcon",
-    "Type": "Brands",
-    "Contextual_usage": "Represents brand: LinkedIn",
-    color: ''
+    style: "fas",
+    name: "fa-trash",
+    reactIcon: "TrashIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to delete"
   }],
   [{
-    "Style": "fab",
-    "Name": "fa-linux",
-    "React_name": "LinuxIcon",
-    "Type": "Brands",
-    "Contextual_usage": "Represents brand: Linux",
-    color: ''
+    style: "fas",
+    name: "fa-user",
+    reactIcon: "UserIcon",
+    type: "Object\nFramework",
+    iconUsage: "Represents a user (in a dataset, paired with a username). \nIndicates the availability of a user profile (in the masthead, paired with a username)"
   }],
   [{
-    "Style": "fab",
-    "Name": "fa-dropbox",
-    "React_name": "DropboxIcon",
-    "Type": "Brands",
-    "Contextual_usage": "Represents brand: Dropbox",
-    color: ''
+    style: "fas",
+    name: "fa-users",
+    reactIcon: "UsersIcon",
+    type: "Object",
+    iconUsage: "Represents multiple users, a user grouping or project"
   }],
   [{
-    "Style": "fab",
-    "Name": "fa-drupal",
-    "React_name": "DrupalIcon",
-    "Type": "Brands",
-    "Contextual_usage": "Represents brand: Drupal",
-    color: ''
+    style: "far",
+    name: "fa-window-restore",
+    reactIcon: "OutlinedWindowRestoreIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to open link in a new window"
   }],
   [{
-    "Style": "fab",
-    "Name": "fa-js",
-    "React_name": "JsIcon",
-    "Type": "Brands",
-    "Contextual_usage": "Represents brand: js",
-    color: ''
+    style: "fas",
+    name: "fa-wrench",
+    reactIcon: "WrenchIcon",
+    type: "Status",
+    iconUsage: "Represents status: in preparation for maintenance"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-asleep",
-    "React_name": "AsleepIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents an item is asleep or in power suspended mode",
-    color: ''
+    style: "fab",
+    name: "fa-github",
+    reactIcon: "GithubIcon",
+    type: "Brands",
+    iconUsage: "Represents brand: GitHub"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-attention-bell",
-    "React_name": "AttentionBellIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: attention. Exclusively used in the notification badge component within the masthead.",
-    color: ''
+    style: "fab",
+    name: "fa-gitlab",
+    reactIcon: "GitlabIcon",
+    type: "Brands",
+    iconUsage: "Represents brand: GitLab"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-automation",
-    "React_name": "AutomationIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a process-automation object",
-    color: ''
+    style: "fab",
+    name: "fa-google",
+    reactIcon: "GoogleIcon",
+    type: "Brands",
+    iconUsage: "Represents brand: Google"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-blueprint",
-    "React_name": "BlueprintIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a blueprint",
-    color: ''
+    style: "fab",
+    name: "fa-stack-overflow",
+    reactIcon: "StackOverflowIcon",
+    type: "Brands",
+    iconUsage: "Represents brand: Stack Overflow"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-build",
-    "React_name": "BuildIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a build",
-    color: ''
+    style: "fab",
+    name: "fa-facebook-square",
+    reactIcon: "FacebookSquareIcon",
+    type: "Brands",
+    iconUsage: "Represents brand: Facebook"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-builder-image",
-    "React_name": "BuilderImageIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a builder image",
-    color: ''
+    style: "fab",
+    name: "fa-twitter",
+    reactIcon: "TwitterIcon",
+    type: "Brands",
+    iconUsage: "Represents brand: Twitter"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-bundle",
-    "React_name": "BundleIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a package; used in Satellite, Cockpit, and Composer to indicate a generic package or rpm",
-    color: ''
+    style: "fab",
+    name: "fa-windows",
+    reactIcon: "WindowsIcon",
+    type: "Brands",
+    iconUsage: "Represents brand: Windows"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-catalog",
-    "React_name": "CatalogIcon",
-    "Type": "Object",
-    "Contextual_usage": "Indicates the availability of a catalog or library",
-    color: ''
+    style: "fab",
+    name: "fa-linkedin",
+    reactIcon: "LinkedinIcon",
+    type: "Brands",
+    iconUsage: "Represents brand: LinkedIn"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-cloud-security",
-    "React_name": "CloudSecurityIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents cloud security",
-    color: ''
+    style: "fab",
+    name: "fa-linux",
+    reactIcon: "LinuxIcon",
+    type: "Brands",
+    iconUsage: "Represents brand: Linux"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-cloud-tenant",
-    "React_name": "CloudTenantIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a cloud tenant",
-    color: ''
+    style: "fab",
+    name: "fa-dropbox",
+    reactIcon: "DropboxIcon",
+    type: "Brands",
+    iconUsage: "Represents brand: Dropbox"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-cluster",
-    "React_name": "ClusterIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a cluster or server",
-    color: ''
+    style: "fab",
+    name: "fa-drupal",
+    reactIcon: "DrupalIcon",
+    type: "Brands",
+    iconUsage: "Represents brand: Drupal"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-connected",
-    "React_name": "ConnectedIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents an item's power is on and is “up”; this is a more active alternative to “pficon-on”",
-    color: ''
+    style: "fab",
+    name: "fa-js",
+    reactIcon: "JsIcon",
+    type: "Brands",
+    iconUsage: "Represents brand: js"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-degraded",
-    "React_name": "DegradedIcon",
-    "Type": "Status",
-    "Contextual_usage": "Volume replication is degraded",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-asleep",
+    reactIcon: "AsleepIcon",
+    type: "Status",
+    iconUsage: "Represents an item is asleep or in power suspended mode"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-disconnected",
-    "React_name": "DisconnectedIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents an item's power is off and is “down”; this is a more active alternative to “pficon-off”",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-attention-bell",
+    reactIcon: "AttentionBellIcon",
+    type: "Status",
+    iconUsage: "Represents status: attention. Exclusively used in the notification badge component within the masthead."
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-domain",
-    "React_name": "DomainIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a domain",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-automation",
+    reactIcon: "AutomationIcon",
+    type: "Object",
+    iconUsage: "Represents a process-automation object"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-enhancement",
-    "React_name": "EnhancementIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: enhancement advisory is present",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-blueprint",
+    reactIcon: "BlueprintIcon",
+    type: "Object",
+    iconUsage: "Represents a blueprint"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-enterprise",
-    "React_name": "EnterpriseIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents an enterprise",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-build",
+    reactIcon: "BuildIcon",
+    type: "Object",
+    iconUsage: "Represents a build"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-export",
-    "React_name": "ExportIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to export a file or other data",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-builder-image",
+    reactIcon: "BuilderImageIcon",
+    type: "Object",
+    iconUsage: "Represents a builder image"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-flavor",
-    "React_name": "FlavorIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a flavor",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-bundle",
+    reactIcon: "BundleIcon",
+    type: "Object",
+    iconUsage: "Represents a package; used in Satellite, Cockpit, and Composer to indicate a generic package or rpm"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-image",
-    "React_name": "ImageIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents an image",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-catalog",
+    reactIcon: "CatalogIcon",
+    type: "Object",
+    iconUsage: "Indicates the availability of a catalog or library"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-import",
-    "React_name": "ImportIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to import a file or other data",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-cloud-security",
+    reactIcon: "CloudSecurityIcon",
+    type: "Object",
+    iconUsage: "Represents cloud security"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-in-progress",
-    "React_name": "InProgressIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents running a determinite action",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-cloud-tenant",
+    reactIcon: "CloudTenantIcon",
+    type: "Object",
+    iconUsage: "Represents a cloud tenant"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-infrastructure",
-    "React_name": "InfrastructureIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents an infrastructure",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-cluster",
+    reactIcon: "ClusterIcon",
+    type: "Object",
+    iconUsage: "Represents a cluster or server"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-integration",
-    "React_name": "IntegrationIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents an integration of two or more objects",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-connected",
+    reactIcon: "ConnectedIcon",
+    type: "Status",
+    iconUsage: "Represents an item's power is on and is “up”; this is a more active alternative to “pficon-on”"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-migration",
-    "React_name": "MigrationIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents an item such as a VM is currently migrating",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-degraded",
+    reactIcon: "DegradedIcon",
+    type: "Status",
+    iconUsage: "Volume replication is degraded"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-middleware",
-    "React_name": "MiddlewareIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents middleware",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-disconnected",
+    reactIcon: "DisconnectedIcon",
+    type: "Status",
+    iconUsage: "Represents an item's power is off and is “down”; this is a more active alternative to “pficon-off”"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-monitoring",
-    "React_name": "MonitoringIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents monitoring",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-domain",
+    reactIcon: "DomainIcon",
+    type: "Object",
+    iconUsage: "Represents a domain"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-network",
-    "React_name": "NetworkIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents network",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-enhancement",
+    reactIcon: "EnhancementIcon",
+    type: "Status",
+    iconUsage: "Represents status: enhancement advisory is present"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-network-range",
-    "React_name": "PficonNetworkRangeIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents network range",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-enterprise",
+    reactIcon: "EnterpriseIcon",
+    type: "Object",
+    iconUsage: "Represents an enterprise"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pficon-on-running",
-    "React_name": "OnRunningIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: an item is running or active",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-export",
+    reactIcon: "ExportIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to export a file or other data"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-optimize",
-    "React_name": "OptimizeIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to optimize an item or a process",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-flavor",
+    reactIcon: "FlavorIcon",
+    type: "Object",
+    iconUsage: "Represents a flavor"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-pending",
-    "React_name": "PendingIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: pending; currently waiting on contingencies",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-image",
+    reactIcon: "ImageIcon",
+    type: "Object",
+    iconUsage: "Represents an image"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-private",
-    "React_name": "PrivateIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: private; cannot access with current credentials",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-import",
+    reactIcon: "ImportIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to import a file or other data"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-port",
-    "React_name": "PortIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a port or route",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-in-progress",
+    reactIcon: "InProgressIcon",
+    type: "Status",
+    iconUsage: "Represents running a determinite action"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-process-automation",
-    "React_name": "ProcessAutomationIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents process automation",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-infrastructure",
+    reactIcon: "InfrastructureIcon",
+    type: "Object",
+    iconUsage: "Represents an infrastructure"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-regions",
-    "React_name": "RegionsIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a region",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-integration",
+    reactIcon: "IntegrationIcon",
+    type: "Object",
+    iconUsage: "Represents an integration of two or more objects"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-registry",
-    "React_name": "RegistryIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a registry",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-migration",
+    reactIcon: "MigrationIcon",
+    type: "Status",
+    iconUsage: "Represents an item such as a VM is currently migrating"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-replicator",
-    "React_name": "ReplicatorIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a replicator",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-middleware",
+    reactIcon: "MiddlewareIcon",
+    type: "Object",
+    iconUsage: "Represents middleware"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-repository",
-    "React_name": "RepositoryIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a repository",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-monitoring",
+    reactIcon: "MonitoringIcon",
+    type: "Object",
+    iconUsage: "Represents monitoring"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-resource-pool",
-    "React_name": "ResourcePoolIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a resource pool",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-network",
+    reactIcon: "NetworkIcon",
+    type: "Object",
+    iconUsage: "Represents network"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-resources-almost-empty",
-    "React_name": "ResourcesAlmostEmptyIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: almost empty",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-network-range",
+    reactIcon: "PficonNetworkRangeIcon",
+    type: "Object",
+    iconUsage: "Represents network range"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-resources-almost-full",
-    "React_name": "ResourcesAlmostFullIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: is almost full",
-    color: ''
+    style: "pf-icon",
+    name: "pficon-on-running",
+    reactIcon: "OnRunningIcon",
+    type: "Status",
+    iconUsage: "Represents status: an item is running or active"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-resources-full",
-    "React_name": "ResourcesFullIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: is full",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-optimize",
+    reactIcon: "OptimizeIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to optimize an item or a process"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-route",
-    "React_name": "RouteIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a route",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-pending",
+    reactIcon: "PendingIcon",
+    type: "Status",
+    iconUsage: "Represents status: pending; currently waiting on contingencies"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-satellite",
-    "React_name": "PficonSatelliteIcon",
-    "Type": "Brands",
-    "Contextual_usage": "Represents brand: Satellite",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-private",
+    reactIcon: "PrivateIcon",
+    type: "Status",
+    iconUsage: "Represents status: private; cannot access with current credentials"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-save",
-    "React_name": "SaveIcon",
-    "Type": "Action",
-    "Contextual_usage": "Indicates the ability to save a file or other object",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-port",
+    reactIcon: "PortIcon",
+    type: "Object",
+    iconUsage: "Represents a port or route"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-security",
-    "React_name": "SecurityIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: security advisory is present",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-process-automation",
+    reactIcon: "ProcessAutomationIcon",
+    type: "Object",
+    iconUsage: "Represents process automation"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-server-group",
-    "React_name": "ServerGroupIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a server group",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-regions",
+    reactIcon: "RegionsIcon",
+    type: "Object",
+    iconUsage: "Represents a region"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-service",
-    "React_name": "ServiceIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a Kubernetes service",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-registry",
+    reactIcon: "RegistryIcon",
+    type: "Object",
+    iconUsage: "Represents a registry"
   }],
   [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-services",
-    "React_name": "ServicesIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents services",
-    color: ''
-  }],
-  [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-service-catalog",
-    "React_name": "ServiceCatalogIcon",
-    "Type": "Object",
-    "Contextual_usage": "Indicates availability of a catalog/library to browse",
-    color: ''
-  }],
-  [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-storage-domain",
-    "React_name": "StorageDomainIcon",
-    "Type": "Object",
-    "Contextual_usage": "Indicates a storage domain",
-    color: ''
-  }],
-  [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-template",
-    "React_name": "PficonTemplateIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a template; includes contents or instructions used to generate one or more instances of a final output",
-    color: ''
-  }],
-  [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-tenant",
-    "React_name": "TenantIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a tenant",
-    color: ''
-  }],
-  [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-topology",
-    "React_name": "TopologyIcon",
-    "Type": "View type",
-    "Contextual_usage": "Represents data view content in a topology format",
-    color: ''
-  }],
-  [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-trend-down",
-    "React_name": "TrendDownIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: downward trend",
-    color: ''
-  }],
-  [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-trend-up",
-    "React_name": "TrendUpIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: upward trend",
-    color: ''
-  }],
-  [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-unknown",
-    "React_name": "UnknownIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: unknown",
-    color: ''
-  }],
-  [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-vcenter",
-    "React_name": "PficonVcenterIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a vcenter",
-    color: ''
-  }],
-  [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-virtual-machine",
-    "React_name": "VirtualMachineIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a virtual machine",
-    color: ''
-  }],
-  [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-volume",
-    "React_name": "VolumeIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a volume",
-    color: ''
-  }],
-  [{
-    "Style": "pf-icon",
-    "Name": "pf-icon-zone",
-    "React_name": "ZoneIcon",
-    "Type": "Object",
-    "Contextual_usage": "Represents a zone; a grouping of servers based on geographic location, network location, or function",
-    color: ''
+    style: "pf-icon",
+    name: "pf-icon-replicator",
+    reactIcon: "ReplicatorIcon",
+    type: "Object",
+    iconUsage: "Represents a replicator"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-repository",
+    reactIcon: "RepositoryIcon",
+    type: "Object",
+    iconUsage: "Represents a repository"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-resource-pool",
+    reactIcon: "ResourcePoolIcon",
+    type: "Object",
+    iconUsage: "Represents a resource pool"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-resources-almost-empty",
+    reactIcon: "ResourcesAlmostEmptyIcon",
+    type: "Status",
+    iconUsage: "Represents status: almost empty"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-resources-almost-full",
+    reactIcon: "ResourcesAlmostFullIcon",
+    type: "Status",
+    iconUsage: "Represents status: is almost full"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-resources-full",
+    reactIcon: "ResourcesFullIcon",
+    type: "Status",
+    iconUsage: "Represents status: is full"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-route",
+    reactIcon: "RouteIcon",
+    type: "Object",
+    iconUsage: "Represents a route"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-satellite",
+    reactIcon: "PficonSatelliteIcon",
+    type: "Brands",
+    iconUsage: "Represents brand: Satellite"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-save",
+    reactIcon: "SaveIcon",
+    type: "Action",
+    iconUsage: "Indicates the ability to save a file or other object"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-security",
+    reactIcon: "SecurityIcon",
+    type: "Status",
+    iconUsage: "Represents status: security advisory is present"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-server-group",
+    reactIcon: "ServerGroupIcon",
+    type: "Object",
+    iconUsage: "Represents a server group"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-service",
+    reactIcon: "ServiceIcon",
+    type: "Object",
+    iconUsage: "Represents a Kubernetes service"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-services",
+    reactIcon: "ServicesIcon",
+    type: "Object",
+    iconUsage: "Represents services"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-service-catalog",
+    reactIcon: "ServiceCatalogIcon",
+    type: "Object",
+    iconUsage: "Indicates availability of a catalog/library to browse"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-storage-domain",
+    reactIcon: "StorageDomainIcon",
+    type: "Object",
+    iconUsage: "Indicates a storage domain"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-template",
+    reactIcon: "PficonTemplateIcon",
+    type: "Object",
+    iconUsage: "Represents a template; includes contents or instructions used to generate one or more instances of a final output"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-tenant",
+    reactIcon: "TenantIcon",
+    type: "Object",
+    iconUsage: "Represents a tenant"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-topology",
+    reactIcon: "TopologyIcon",
+    type: "View type",
+    iconUsage: "Represents data view content in a topology format"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-trend-down",
+    reactIcon: "TrendDownIcon",
+    type: "Status",
+    iconUsage: "Represents status: downward trend"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-trend-up",
+    reactIcon: "TrendUpIcon",
+    type: "Status",
+    iconUsage: "Represents status: upward trend"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-unknown",
+    reactIcon: "UnknownIcon",
+    type: "Status",
+    iconUsage: "Represents status: unknown"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-vcenter",
+    reactIcon: "PficonVcenterIcon",
+    type: "Object",
+    iconUsage: "Represents a vcenter"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-virtual-machine",
+    reactIcon: "VirtualMachineIcon",
+    type: "Object",
+    iconUsage: "Represents a virtual machine"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-volume",
+    reactIcon: "VolumeIcon",
+    type: "Object",
+    iconUsage: "Represents a volume"
+  }],
+  [{
+    style: "pf-icon",
+    name: "pf-icon-zone",
+    reactIcon: "ZoneIcon",
+    type: "Object",
+    iconUsage: "Represents a zone; a grouping of servers based on geographic location, network location, or function"
   }]
 ];
 
-export const allIcons = iconsArray.map(recGroup => (
-  recGroup.reduce((acc, cur) => {
-    for (let key in cur) {
-      acc[key].push(cur[key]);
-      if (key === 'React_name') {
-        acc.reactIcon.push(cur[key]);
-      }
-    }
-    return acc;
-  }, {
-    reactIcon: [],
-    Name: [],
-    Style: [],
-    Type: [],
-    React_name: [],
-    Contextual_usage: [],
-    color: []
-  })
-));
+// export const allIcons = iconsArray.map(recGroup => (
+//   recGroup.reduce((acc, cur) => {
+//     for (let key in cur) {
+//       acc[key].push(cur[key]);
+//       if (key === 'React_name') {
+//         acc.reactIcon.push(cur[key]);
+//       }
+//     }
+//     return acc;
+//   }, {
+//     reactIcon: [],
+//     name: [],
+//     style: [],
+//     name: [],
+//     reactIcon: [],
+//     typetual_usage: [],
+//     iconUsage,
+//     color: []
+//   })
+// ));
 
-console.log('allIcons:', allIcons);
+const buildColumnsObj = tableColumnsArr => (
+  tableColumnsArr.reduce((obj, columnName) => {
+    obj[columnName] = [];
+    return obj;
+  }, {})
+);
+
+const buildAllIcons = (arr, columnsNamesArr) => {
+  const columnNamesObj = buildColumnsObj(columnsNamesArr);
+  console.log('columnNamesObj',columnNamesObj)
+  return arr.map(recGroup => (
+    recGroup.reduce((acc, cur) => {
+      // const { style = '', name = '', reactIcon = '', type = '', iconUsage = '', color = '' } = cur;
+      columnsNamesArr.forEach(name => acc[name].push(cur[name]));
+      acc.reactName.push(cur.reactIcon);
+      return acc;
+    }, columnNamesObj)
+    
+  ))
+};
+
+// export const allIcons = buildAllIcons(iconsArray, ['reactIcon', 'name', 'style', 'reactName', 'type', 'iconUsage', 'color']);
+
+// console.log('allIcons:', allIcons);

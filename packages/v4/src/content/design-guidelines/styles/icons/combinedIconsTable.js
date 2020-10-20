@@ -31,7 +31,7 @@ import { css } from '@patternfly/react-styles';
 import styles from '@patternfly/react-styles/css/components/Table/table';
 // TODO: Remove these into props
 import { iconRecommendations } from './icon-migrations';
-import { allIcons } from './icons-all';
+import { iconsArray } from './icons-all';
 // End remove
 import { saveAs } from 'file-saver';
 import faArrowCircleODown from './fa-arrow-circle-o-down.svg';
@@ -62,24 +62,52 @@ const iconSvgs = {
   'pficon-settings': pficonSettings
 };
 
-console.log('allIcons:',allIcons);
-console.log('iconRecommendations',iconRecommendations);
+// console.log('allIcons:',allIcons);
+// console.log('iconRecommendations',iconRecommendations);
 
-const filterRows = (rowsArr, searchTerm) => rowsArr.filter(
-  row => Object.values(row).some(
-    rowLine => rowLine.some(
-      cell => cell?.props?.children
-        ? cell.props.children.includes(search)
-        : Object.values(cell).some(objVal => objVal.includes(search))
-    )
-  )
+// const filterRows = (rowsArr, searchTerm) => rowsArr.filter(
+//   row => Object.values(row).some(
+//     rowLine => rowLine.some(
+//       cell => cell?.props?.children
+//         ? cell.props.children.includes(searchTerm)
+//         : cell.includes(searchTerm)
+//       )
+//   )
+// );
+
+const filterRows = (rowsArr, searchTerm) => rowsArr.filter(row => (
+  row.some(rowObj => Object.values(rowObj).some(val => val.includes(searchTerm)))
+));
+
+// New
+const buildColumnsObj = tableColumnsArr => (
+  tableColumnsArr.reduce((obj, columnName) => {
+    obj[columnName] = [];
+    return obj;
+  }, {})
 );
 
-const allIconRows = allIcons
-.filter(rowObj => Object.values(rowObj).some(colValues => colValues.some(value => value.includes('St'))))
+const buildAllIconsRows = (arr, columnsNamesArr, searchTerm = '') => {
+  const filteredRows = filterRows(arr, searchTerm);
+  return filteredRows.map(recGroupArr => {
+    const newObj = buildColumnsObj(columnsNamesArr);
+    return recGroupArr.reduce((acc, cur) => {
+      columnsNamesArr.map(name => {
+        name !== 'reactName' && newObj[name].push(cur[name] || ' ');
+        name === 'reactIcon' && newObj.reactName.push(cur[name]);
+      });
+      return newObj;
+    }, '')
+  })
+};
+
+const buildAllIcons = searchTerm => buildAllIconsRows(iconsArray, ['reactIcon', 'name', 'style', 'type', 'reactName', 'iconUsage', 'color'], searchTerm);
+// END NEW
+
+const buildAllIconRows = searchTerm => buildAllIcons(searchTerm)
+// .filter(rowObj => Object.values(rowObj).some(colValues => colValues.some(value => value.includes('St'))))
 .map((rowObj, idx) => {
   console.log(rowObj);
-  const filteredRows = Object.values(temp1).some(colValues => colValues.some(value => value.includes('St')))
   const { reactIcon, Name, Style, Type, React_name: ReactName, color } = rowObj;
   const columnNames = Object.keys(rowObj).filter(key => key !== 'color');
   const cells = columnNames.map(columnName => { // old
@@ -112,7 +140,10 @@ const allIconRows = allIcons
   return cells;
 });
 
-const recIconRows = iconRecommendations.map((rowObj, idx) => {
+// console.log('NEW ALL ICONS', newAllIcons);
+// console.log('ALL ICON ROWS', allIconRows);
+
+const buildRecIconRows = searchTerm => filterRows(iconRecommendations, searchTerm).map((rowObj, idx) => {
   const columnNames = Object.keys(rowObj);
   const cells = columnNames.map(columnName => { // old
     const cellObj = {
@@ -193,8 +224,8 @@ export const CombinedIconsTable = ({isRecommendationsTable = false, isAllIconsTa
 
   // TODO: make dynamic
   const iconRows = isAllIconsTable
-    ? allIconRows
-    : recIconRows;
+    ? buildAllIconRows(searchValue)
+    : buildRecIconRows(searchValue);
   console.log('iconRows: ', iconRows);
 
   // TODO: Make dynamic
@@ -242,7 +273,7 @@ export const CombinedIconsTable = ({isRecommendationsTable = false, isAllIconsTa
             </InputGroup>
           </ToolbarItem>
           <ToolbarItem alignment={{ default: 'alignRight' }}>
-            <b>{filteredRows.length} items</b>
+            <b>{iconRows.length} items</b>
           </ToolbarItem>
         </ToolbarContent>
       </Toolbar>
@@ -264,7 +295,7 @@ export const CombinedIconsTable = ({isRecommendationsTable = false, isAllIconsTa
         <TableBody />
       </Table>
 
-      {filteredRows.length === 0 && (
+      {iconRows.length === 0 && (
         <EmptyState variant={EmptyStateVariant.full}>
           <EmptyStateIcon icon={icons.SearchIcon}/>
           <Title headingLevel="h5" size="2xl">
