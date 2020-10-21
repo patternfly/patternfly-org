@@ -994,6 +994,13 @@ export const iconsData = [
   },
   {
     "Style": "pf-icon",
+    "Name": "pf-icon-module",
+    "React_name": "ModuleIcon",
+    "Type": "Object",
+    "Contextual_usage": "Represents a module"
+  },
+  {
+    "Style": "pf-icon",
     "Name": "pf-icon-monitoring",
     "React_name": "MonitoringIcon",
     "Type": "Object",
@@ -1015,10 +1022,10 @@ export const iconsData = [
   },
   {
     "Style": "pf-icon",
-    "Name": "pficon-on-running",
-    "React_name": "OnRunningIcon",
+    "Name": "pf-icon-running",
+    "React_name": "RunningIcon",
     "Type": "Status",
-    "Contextual_usage": "Represents status: an item is running or active"
+    "Contextual_usage": "Represents status: running"
   },
   {
     "Style": "pf-icon",
@@ -1026,6 +1033,13 @@ export const iconsData = [
     "React_name": "OptimizeIcon",
     "Type": "Action",
     "Contextual_usage": "Indicates the ability to optimize an item or a process"
+  },
+  {
+    "Style": "pf-icon",
+    "Name": "pf-icon-package",
+    "React_name": "PackageIcon",
+    "Type": "Object",
+    "Contextual_usage": "Represents a package"
   },
   {
     "Style": "pf-icon",
