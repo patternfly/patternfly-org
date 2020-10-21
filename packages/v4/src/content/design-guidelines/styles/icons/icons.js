@@ -101,34 +101,26 @@ export const iconsData = [
     "Style": "fas",
     "Name": "fa-bell",
     "React_name": "BellIcon",
-    "Type": "Framework\nStatus",
-    "Contextual_usage": "Indicates the ability to open a notification drawer.\nRepresents status: default notification",
-    color: 'var(--pf-global--primary-color--100)'
+    "Type": "Framework",
+    "Contextual_usage": "Indicates the ability to open a notification drawer.",
+    removeBorder: true
   },
-  [
-    {
-      "Style": "fas",
-      "Name": "fa-bell",
-      "React_name": "BellIcon",
-      "Type": "Framework",
-      "Contextual_usage": "Indicates the ability to open a notification drawer.\nRepresents status: default notification",
-    },
-    {
-      "Style": "fas",
-      "Name": "fa-bell",
-      "React_name": "BellIcon",
-      "Type": "Status",
-      "Contextual_usage": "Indicates the ability to open a notification drawer.\nRepresents status: default notification",
-      color: 'var(--pf-global--primary-color--100)'
-    },
-    {
-      "Style": "fas",
-      "Name": "fa-bell",
-      "React_name": "BellIcon",
-      "Type": "Framework\nStatus",
-      "Contextual_usage": "Indicates the ability to open a notification drawer.\nRepresents status: default notification",
-    },
-  ],
+  {
+    "Style": "",
+    "Name": "fa-bell",
+    "React_name": "BellIcon",
+    "Type": "Status",
+    "Contextual_usage": "Represents status: default notification",
+    color: 'var(--pf-global--primary-color--100)',
+    removeBorder: true
+  },
+  {
+    "Style": "pf-icon",
+    "Name": "pf-icon-attention-bell",
+    "React_name": "AttentionBellIcon",
+    "Type": "",
+    "Contextual_usage": "Represents status: attention"
+  },
   {
     "Style": "fas",
     "Name": "fa-bug",
@@ -804,13 +796,6 @@ export const iconsData = [
     "React_name": "AsleepIcon",
     "Type": "Status",
     "Contextual_usage": "Represents an item is asleep or in power suspended mode"
-  },
-  {
-    "Style": "pf-icon",
-    "Name": "pf-icon-attention-bell",
-    "React_name": "AttentionBellIcon",
-    "Type": "Status",
-    "Contextual_usage": "Represents status: attention. Exclusively used in the notification badge component within the masthead."
   },
   {
     "Style": "pf-icon",
