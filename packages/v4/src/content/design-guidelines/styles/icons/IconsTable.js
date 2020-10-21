@@ -145,8 +145,6 @@ export class IconsTable extends React.Component {
         return this.buildRows(row);
       })
 
-    console.log(iconRows);
-
     let filteredRows = iconRows.filter(row => {
       const isSearchMatch = row =>row.cells.some(cell => {
         const searchField = typeof cell.title === 'string'
