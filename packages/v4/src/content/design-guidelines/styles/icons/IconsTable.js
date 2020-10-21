@@ -160,6 +160,8 @@ export class IconsTable extends React.Component {
 
     if (direction) {
       const sortedRows = filteredRows.sort((a, b) => {
+        a = Array.isArray(a) ? a[0] : a;
+        b = Array.isArray(b) ? b[0] : b;
         return a.cells[index].title < b.cells[index].title
           ? -1
           : a.cells[index].title > b.cells[index].title
