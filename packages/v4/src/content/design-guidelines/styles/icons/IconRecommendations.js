@@ -112,7 +112,7 @@ export class IconRecommendations extends React.Component {
     const { direction, index } = sortBy;
     const SearchIcon = icons.SearchIcon;
     const iconRecommendations = this.buildRecommendationRows(searchValue);
-    const iconRows = iconRecommendations.map((rowObj, idx) => {
+    let iconRows = iconRecommendations.map((rowObj, idx) => {
       const columnNames = Object.keys(rowObj);
       const cells = columnNames.map(columnName => { // old
         const cellObj = {
