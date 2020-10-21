@@ -103,14 +103,14 @@ export const iconsArray = [
       name: "fa-bell",
       reactIcon: "BellIcon",
       type: "Framework",
-      iconUsage: "Indicates the ability to open a notification drawer.\nRepresents status: default notification"
+      iconUsage: "Indicates the ability to open a notification drawer."
     },
     {
-      style: "fas",
+      style: "",
       name: "",
       reactIcon: "BellIcon",
       type: "Status",
-      iconUsage: "Indicates the ability to open a notification drawer.\nRepresents status: default notification",
+      iconUsage: "Represents status: default notification",
       color: 'var(--pf-global--primary-color--100)'
     },
     {

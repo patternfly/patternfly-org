@@ -30,8 +30,13 @@
   vertical-align: top;
 }
 
+#ws-icons-table .ws-icons-entry:not(:last-child),
 .ws-icons-recommendations .ws-recommendations-entry:not(:last-child) {
   padding-bottom: 16px;
+}
+
+#ws-icons-table .ws-icons-entry:not(:last-child) {
+  min-height: 37px;
 }
 
 .ws-icons-recommendations .ws-recommendations-icon {
@@ -47,7 +52,7 @@
   margin-bottom: 24px;
 }
 
-#ws-icons-table td[column="Icon"] svg {
+#ws-icons-table td[data-label="Icon"] svg {
   cursor: pointer;
 }
 
