@@ -102,13 +102,18 @@ export class IconsTable extends React.Component {
     const SearchIcon = icons.SearchIcon;
     const searchRE = new RegExp(searchValue, 'i');
     const iconRows = iconsData
-      .map(({Style, Name, React_name: ReactName, Type, Contextual_usage, removeBorder, color}) => {
-        const Icon = icons[ReactName];
+      .map(({Style = ' ', Name = ' ', React_name: ReactName = ' ', Type = ' ', Contextual_usage = ' ', removeBorder, color}) => {
+        const hasIcon = ReactName !== ' ';
+        const Icon = hasIcon
+          ? icons[ReactName]
+          : null;
         return {
           removeBorder,
           cells: [
             {
-              title: <Tooltip content="Download SVG" position={TooltipPosition.bottom}><Icon onClick={this.onDownloadSvg} color={color} /></Tooltip>,
+              title: hasIcon
+                ? (<Tooltip content="Download SVG" position={TooltipPosition.bottom}><Icon onClick={this.onDownloadSvg} color={color} /></Tooltip>)
+                : ' ',
               props: { column: 'Icon' }
             },
             {
