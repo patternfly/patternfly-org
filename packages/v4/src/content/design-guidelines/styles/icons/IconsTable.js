@@ -78,49 +78,90 @@ export class IconsTable extends React.Component {
     saveAs(blob, filename);
   };
 
+  customRowWrapper = ({
+    trRef,
+    rowProps,
+    ...props
+  }) => {
+    const removeBorder = props.row.removeBorder;
+    const customStyle = {
+      borderBottom: 'none'
+    }
+    return (
+      <tr
+        {...props}
+        ref={trRef}
+        style={removeBorder ? customStyle : {}}
+      />
+    );
+  }
+
+  buildRows = ({Style = ' ', Name = ' ', React_name: ReactName = ' ', Type = ' ', Contextual_usage = ' ', color}, removeBorder = false) => {
+    const hasIcon = ReactName !== ' ';
+    const Icon = hasIcon
+      ? icons[ReactName]
+      : null;
+    return {
+      removeBorder,
+      cells: [
+        {
+          title: hasIcon
+            ? (<Tooltip content="Download SVG" position={TooltipPosition.bottom}><Icon onClick={this.onDownloadSvg} color={color} /></Tooltip>)
+            : ' ',
+          props: { column: 'Icon' }
+        },
+        {
+          title: Name,
+          props: { column: 'Name' }
+        },
+        Style,
+        {
+          title: Type,
+          props: { column: 'Type' }
+        },
+        ReactName,
+        {
+          title: Contextual_usage,
+          props: { column: 'Contextual usage' }
+        }
+      ]
+    }
+  };
+
   render() {
     const { searchValue, columns, sortBy } = this.state;
     const { direction, index } = sortBy;
     const SearchIcon = icons.SearchIcon;
     const searchRE = new RegExp(searchValue, 'i');
     const iconRows = iconsData
-      .map(({Style, Name, React_name: ReactName, Type, Contextual_usage}) => {
-        const Icon = icons[ReactName];
-        return {
-          cells: [
-            {
-              title: <Tooltip content="Download SVG" position={TooltipPosition.bottom}><Icon onClick={this.onDownloadSvg} /></Tooltip>,
-              props: { column: 'Icon' }
-            },
-            {
-              title: Name,
-              props: { column: 'Name' }
-            },
-            Style,
-            {
-              title: Type,
-              props: { column: 'Type' }
-            },
-            ReactName,
-            {
-              title: Contextual_usage,
-              props: { column: 'Contextual usage' }
-            }
-          ]
+      .map(row => {
+        if (Array.isArray(row)) {
+          const lastIdx = row.length - 1;
+          return row.map((subRow, idx) => idx < lastIdx
+            ? this.buildRows(subRow, true)
+            : this.buildRows(subRow, false)
+          )
         }
-      });
+        return this.buildRows(row);
+      })
 
     let filteredRows = iconRows.filter(row => {
-      return row.cells.some(cell => {
+      const isSearchMatch = row =>row.cells.some(cell => {
         const searchField = typeof cell.title === 'string'
           ? cell.title
           : cell;
         return searchRE.test(searchField);
       })
+
+      return Array.isArray(row)
+        ? row.some(subRow => isSearchMatch(subRow))
+        : isSearchMatch(row)
     })
 
     if (direction) {
       const sortedRows = filteredRows.sort((a, b) => {
+        a = Array.isArray(a) ? a[0] : a;
+        b = Array.isArray(b) ? b[0] : b;
         return a.cells[index].title < b.cells[index].title
           ? -1
           : a.cells[index].title > b.cells[index].title
@@ -158,9 +199,10 @@ export class IconsTable extends React.Component {
           sortBy={sortBy}
           onSort={this.onSort}
           cells={columns}
-          rows={filteredRows}
+          rows={filteredRows.flat()}
           variant={TableVariant.compact}
           id="ws-icons-table"
+          rowWrapper={this.customRowWrapper}
         >
           <TableHeader />
           <TableBody />

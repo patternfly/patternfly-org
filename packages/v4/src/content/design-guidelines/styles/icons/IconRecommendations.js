@@ -27,7 +27,7 @@ import {
 } from '@patternfly/react-table';
 import { css } from '@patternfly/react-styles';
 import styles from '@patternfly/react-styles/css/components/Table/table';
-import { iconRecommendations } from './icon-migrations';
+import { recommendationsArray } from './icon-migrations';
 import faArrowCircleODown from './fa-arrow-circle-o-down.svg';
 import faArrowCircleOUp from './fa-arrow-circle-o-up.svg';
 import faClockO from './fa-clock-o.svg';
@@ -83,12 +83,36 @@ export class IconRecommendations extends React.Component {
     });
   }
 
+  buildRecommendationRows = (searchTerm) => recommendationsArray.filter(recGroup => recGroup
+    .some(obj => Object.values(obj).some(val => {
+      const cellText = val?.props?.children ? val.props.children : val;
+      return cellText.indexOf(searchTerm) > -1;
+    })))
+    .map(iconRow => iconRow
+      .reduce((acc, cur) => {
+        acc[cur.iconType].push({
+          name: cur.iconName,
+          icon: cur.iconName,
+          style: cur.style,
+          reactIcon: cur.reactIcon
+        });
+        if (cur.iconType === 'new') {
+          acc['iconUsage'].push(<div>{cur.iconUsage}</div>);
+        }
+        return acc;
+      }, {
+        old: [],
+        new: [],
+        iconUsage: []
+      })
+    );
+
   render() {
     const { searchValue, columns, sortBy } = this.state;
     const { direction, index } = sortBy;
     const SearchIcon = icons.SearchIcon;
-    const searchRE = new RegExp(searchValue, 'i');
-    const iconRows = iconRecommendations.map((rowObj, idx) => {
+    const iconRecommendations = this.buildRecommendationRows(searchValue);
+    let iconRows = iconRecommendations.map((rowObj, idx) => {
       const columnNames = Object.keys(rowObj);
       const cells = columnNames.map(columnName => { // old
         const cellObj = {
@@ -119,24 +143,15 @@ export class IconRecommendations extends React.Component {
       return cells;
     });
 
-    let filteredRows = iconRows.filter(row => {
-      return row.some(cell => {
-        const searchField = Array.isArray(cell.title)
-          ? cell.title.reduce((acc, cur) => acc += (cur.key.split('-').slice(0, -1).join('-') + ' '), '').trim()
-          : cell.title.props.children;
-        return searchRE.test(searchField);
-      })
-    })
-
     if (direction) {
-      const sortedRows = filteredRows.sort((a, b) => {
+      const sortedRows = iconRows.sort((a, b) => {
         const cellA = a[index].title[0].key.toLowerCase();
         const cellB = b[index].title[0].key.toLowerCase();
         return cellA < cellB
           ? -1
           : cellA > cellB
             ? 1 : 0});
-      filteredRows = direction === SortByDirection.asc ? sortedRows : sortedRows.reverse();
+      iconRows = direction === SortByDirection.asc ? sortedRows : sortedRows.reverse();
     }
     
     return (
@@ -159,7 +174,7 @@ export class IconRecommendations extends React.Component {
               </InputGroup>
             </ToolbarItem>
             <ToolbarItem alignment={{ default: 'alignRight' }}>
-              <b>{filteredRows.length} items</b>
+              <b>{iconRows.length} items</b>
             </ToolbarItem>
           </ToolbarContent>
         </Toolbar>
@@ -167,7 +182,7 @@ export class IconRecommendations extends React.Component {
         <Table
           aria-label="Updated icons table"
           cells={columns}
-          rows={filteredRows}
+          rows={iconRows}
           className="ws-icons-recommendations"
           sortBy={sortBy}
           onSort={this.onSort}
@@ -177,7 +192,7 @@ export class IconRecommendations extends React.Component {
           <TableBody />
         </Table>
 
-        {filteredRows.length === 0 && (
+          {iconRows.length === 0 && (
           <EmptyState variant={EmptyStateVariant.full}>
             <EmptyStateIcon icon={icons.SearchIcon}/>
             <Title headingLevel="h5" size="2xl">
