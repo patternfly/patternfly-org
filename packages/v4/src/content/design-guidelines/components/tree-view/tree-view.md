@@ -63,7 +63,7 @@ Add checkboxes to a tree view if you’re selecting multiple items or applying m
 
 ### Adding badges to a tree view
 
-Add badges to a tree view if you want to show the number of items inside. Don’t use it for displaying different information. The last item in a tree will not have a badge because it has 0 children. 
+Add badges to a tree view if you want to show the number of items inside. Don’t use it for displaying different information. Items without children can't have badges as they don't contain anything.
 
 <img src="./img/with-badges.png" width="332" />
 
