@@ -5,7 +5,7 @@ section: components
 
 A **tree view** is a structure that displays data in a hierarchical view. It can be used in a [dropdown](/components/dropdown), [drawer](/components/drawer), [primary-detail](/demos/primary-detail), [modal](/components/modal), or [wizard](/components/wizard).
 
-A default tree view provides a tree structure with items and an arrow to expand or collapse child items. Every tree view can be extended with these [optional elements](#tree-view-capabilities).
+A default tree view provides a tree structure with items and arrows to expand or collapse child items. Every tree view can be extended with these [optional capabilities](#tree-view-capabilities).
 
 ## Tree view elements
 
@@ -13,11 +13,11 @@ A default tree view consists of 5 elements:
 
 <img src="./img/tree-view-elements.png" width="332" />
 
-1. **Expand/collapse button:** A button that allows you to expand or collapse child nodes 
+1. **Expand/collapse:** An option to expand or collapse parent nodes to reveal child nodes 
 2. **Parent node:** A node that contains other items (for example, a folder that contains multiple documents)
 3. **Child node:** A node within the parent node (for example, a document within a folder)
-4. **Leaf node:** The last item in a tree, which doesn't have any child nodes
-5. **Truncation indicator:** A control that automatically shortens long names 
+4. **Leaf node:** A node without children
+5. **Truncation indicator:** Ellipses indicating truncated text for longer names that don't fit in the node width
 
 ## Usage
 
@@ -34,8 +34,8 @@ Use a tree view when:
 * You need to display hierarchies that have more than 2 levels.
 
 Don’t use a tree view when: 
-* The items are not structured hierarchically. Use the [data list](/components/data-list) instead. 
-* You select 1  item from a small set. Instead, use [select lists](/), [radio buttons](/components/radio), [checkboxes](/components/checkbox), or a [dropdown](/components/dropdown).
+* The items are not structured hierarchically. Use the [simple list](/components/simple-list) instead. 
+* You select 1 item from a small set. Instead, use [select lists](/components/select), [radio buttons](/components/radio), [checkboxes](/components/checkbox), or a [dropdown](/components/dropdown).
 * You need to see an overview of a large amount of data.
 * You need to compare two large sets of data. Use [charts](/charts/about) for a better view. 
 * The hierarchy is too deep and includes hundreds of items.
@@ -69,13 +69,13 @@ Add badges to a tree view if you want to show the number of items inside. Don’
 
 ### Adding icons to a tree view
 
-Add icons to a tree view if you’re visually representing the type of items in a tree. For example, the folder system. Apply icons on all items in a tree to keep consistency. We don’t recommend to use icons and checkboxes at the same time due to large indentation and loss of space. 
+Add icons to a tree view if you want to visually representing the type of items in a tree. For example, a folder system. If you choose to add icons to a tree view, apply the icons on all items in a tree, to maintain consistency. We don’t recommend using icons and checkboxes at the same time due to the large indentation and loss of space it would result in. 
 
 <img src="./img/with-icons.png" width="332" />
 
 ### Adding action items to a tree view
 
-Add action items to a tree view if you’re triggering some type of action above the items. These actions appear on hover to avoid overcrowding the tree view. We recommend using 1 type of action across the whole tree and the maximum of actions for 1 item is 1.
+Add action items to a tree view if you’re triggering some type of action above the items. These actions appear on hover to avoid overcrowding the tree view. We recommend using 1 type of action across the whole tree and to limit the maximum of actions for 1 item to 1.
 
 <img src="./img/with-action-items.png" width="632" />
 
