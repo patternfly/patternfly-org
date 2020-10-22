@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'theme-patternfly-org/components';
 
-const recommendationsArray = [
+export const recommendationsArray = [
   [
     {
       style: "",
@@ -1212,24 +1212,24 @@ const recommendationsArray = [
       reactIcon: "ShareSquareIcon"
     }
   ],
-  // [
-  //   {
-  //     style: "",
-  //     iconName: "pficon-on-running",
-  //     type: "",
-  //     iconUsage: "",
-  //     iconType: "old",
-  //     reactIcon: "OnRunningIcon"
-  //   },
-  //   {
-  //     style: "",
-  //     iconName: "pf-icon-running",
-  //     type: "Status",
-  //     iconUsage: "Represents status: an item is running or active",
-  //     iconType: "new",
-  //     reactIcon: ""
-  //   }
-  // ],
+  [
+    {
+      style: "",
+      iconName: "pficon-on-running",
+      type: "",
+      iconUsage: "",
+      iconType: "old",
+      reactIcon: "OnRunningIcon"
+    },
+    {
+      style: "",
+      iconName: "pf-icon-running",
+      type: "Status",
+      iconUsage: "Represents status: an item is running or active",
+      iconType: "new",
+      reactIcon: "RunningIcon"
+    }
+  ],
   [
     {
       style: "",
@@ -1319,22 +1319,3 @@ const recommendationsArray = [
     }
   ]
 ];
-
-export const iconRecommendations = recommendationsArray.map(recGroup => (
-  recGroup.reduce((acc, cur) => {
-    acc[cur.iconType].push({
-      name: cur.iconName,
-      icon: cur.iconName,
-      style: cur.style,
-      reactIcon: cur.reactIcon
-    });
-    if (cur.iconType === 'new') {
-      acc['iconUsage'].push(<div>{cur.iconUsage}</div>);
-    }
-    return acc;
-  }, {
-    old: [],
-    new: [],
-    iconUsage: []
-  })
-))
