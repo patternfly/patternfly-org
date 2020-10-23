@@ -6,7 +6,7 @@ A **context selector** can be used in addition to global navigation when the dat
 
 ## Usage
 
-Context selectors enable a user to switch between different application contexts. They can be placed at many levels of an application’s information architecture and may have different behavior expectations based on the level of the IA it is placed in. They can be placed in a page masthead, at the top of vertical navigations, or at the top of a page, depending on your website or product's navigation and preference.
+Context selectors enable a user to switch between different application contexts. They can be placed at many levels of an application’s information architecture and may have different behavior expectations based on the level it is placed in. They can be placed in a page masthead, at the top of vertical navigations, or at the top of a page, depending on your website or product's navigation and preference.
  
 Context selectors differ from filters in that a filter takes an overall set of content and reduces it to a subset of content.  In comparison, a context selector takes a set of content and changes it to a different set of content.
 
@@ -49,7 +49,7 @@ It is recommended that a page-level context selector be placed at the top of the
 <img src="./img/tertiary-lower.png" alt="Example of a context selector with page impact, placed at the top of a page" width="990"/>
 
 ## Actions in a context selector
-If your context selector has a lot of options,you may opt to add a search bar at the top of the menu, divided by a separator.
+If your context selector has a lot of options, you may opt to add a search bar at the top of the menu, divided by a separator.
 
 <img src="./img/search.png" alt="Example of a context selector with a search bar at the top" width="312"/>
 
