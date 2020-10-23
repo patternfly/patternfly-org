@@ -5,6 +5,8 @@ section: components
 
 A **card** is a square or rectangular container that can contain any kind of content. Cards symbolize units of information, and each one acts as an entry point for users to access more details. For example, in dashboards and catalog views, cards function as a preview of a detailed page. Cards may also be used in data displays (e.g. Card View), or for positioning content on a page.  
 
+## Elements
+
 A card usually consists of  3 parts: 
 
 <img src="./img/card.png" alt="3 parts of a card" width="394"/>  
@@ -19,14 +21,13 @@ Cards are flexible, and you can customize them in a variety of ways:
 - A card can contain only a header and a body. 
 - A card can contain a header with an image, a body, and footer. 
 
-## Card types 
 PatternFly supports two types of cards: 
 1. **Compact (recommended):** Compact cards use 16px spacing with an 8px spacer between the header and body and 16px between the body and footer.
 2. **Standard:** Standard cards use 24px spacing with a 16px spacer between the header and body and 24px between the body and footer.
 
 <img src="./img/card-types.png" alt="compact and standard card types" /> 
 
-## Usage 
+## Card usage
 Use a card:
 - To visually group content or distinguish information from the rest of a page’s content. Examples include dashboards and catalog views. 
 - To organize content in layouts with multiple columns or grids.  
@@ -39,12 +40,11 @@ Use a card:
 Do NOT use a card to show a dense amount of repetitive, related content. Use a list or table view instead.
 
 
-## Card views 
+## Card view usage
 A **card view** is a grid of cards that displays a small to moderate amount of content. 
 
 <img src="./img/card-view.png" alt="card view" /> 
 
-### Usage 
 Use a card view to:
 - Display items in a data set that are best identified by a graphic or other visual representation.
 - Make information easier to visualize and compare. 
