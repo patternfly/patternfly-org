@@ -5,6 +5,10 @@ import CatalogIcon from '@patternfly/react-icons/dist/js/icons/catalog-icon';
 import MailBulkIcon from '@patternfly/react-icons/dist/js/icons/mail-bulk-icon';
 import { Grid, GridItem, PageSection, PageSectionVariants, Split, SplitItem, Title } from '@patternfly/react-core';
 import './community.css';
+import communityPageHeader from './community-page-header.svg';
+import community1 from './community-1.svg';
+import community2 from './community-2.svg';
+import community3 from './community-3.svg';
 
 const CommunityPage = () => (
   <PageSection variant={PageSectionVariants.light}>
@@ -14,7 +18,7 @@ const CommunityPage = () => (
 
       <Grid sm={12} md={6} gutter="sm" className="pf-u-my-lg pf-l-grid pf-m-all-12-col-on-sm pf-m-all-6-col-on-md pf-m-gutter">
         <GridItem>
-          <p>Image</p>
+          <img src={communityPageHeader} alt="Website collaboration" />
         </GridItem>
         <GridItem>
           <Title size="3xl" className="ws-title" headingLevel="h3">Who we are</Title>
@@ -27,7 +31,7 @@ const CommunityPage = () => (
 
       <Grid sm={12} md={4} className="pf-u-my-lg pf-l-grid pf-m-all-12-col-on-sm pf-m-all-4-col-on-md pf-u-text-align-center ws-building-grid">
         <GridItem>
-          <p>Icon</p>
+          <img src={community1} alt="Globe" className="ws-community-grid-img" />
           <Title size="xl" className="ws-title" headingLevel="h4">Building global connections</Title>
           <p className="ws-mdx-p">
             Flyers may be spread all over the globe, but we make sure to come together once a month to share updates and collect feedback. All meetings are recorded and published on <a href="https://www.youtube.com/channel/UCqLT0IEvYmb8z__9IFLSVyQ">PatternFly’s YouTube channel</a>, and you can join PatternFly’s mailing list for the invites.
@@ -37,7 +41,7 @@ const CommunityPage = () => (
           </Title>
         </GridItem>
         <GridItem>
-          <p>Icon</p>
+          <img src={community2} alt="Map" className="ws-community-grid-img" />
           <Title size="xl" className="ws-title" headingLevel="h4">Building PatternFly roadmaps</Title>
           <p className="ws-mdx-p">
             To stay on top of all changes and keep everyone informed, we regularly update PatternFly roadmaps. This gives us an opportunity to share what Flyers are working on and what updates we’re planning.
@@ -47,7 +51,7 @@ const CommunityPage = () => (
           </Title>
         </GridItem>
         <GridItem>
-          <p>Icon</p>
+        <img src={community3} alt="Figure of a person" className="ws-community-grid-img" />
           <Title size="xl" className="ws-title" headingLevel="h4">Building accessible experiences</Title>
           <p className="ws-mdx-p">
             A community isn’t really a community unless everyone is included, so accessible UX is important to us. We regularly test and audit PatternFly’s accessibility and share guidance whenever we can.

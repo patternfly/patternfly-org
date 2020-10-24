@@ -26,3 +26,8 @@
 .ws-community-page .ws-get-in-touch {
   margin-top: var(--pf-global--spacer--lg);
 }
+
+.ws-community-grid-img {
+  max-width: 300px;
+  margin: 0 auto;
+}
