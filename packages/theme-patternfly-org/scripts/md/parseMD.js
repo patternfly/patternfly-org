@@ -14,6 +14,7 @@ const chokidar = require('chokidar');
 const outputBase = path.join(process.cwd(), `src/generated`);
 const tsDocs = {};
 const routes = {};
+let exitCode = 0;
 
 function toReactComponent(mdFilePath, source) {
   // vfiles allow for nicer error messages and have native `unified` support
@@ -63,7 +64,7 @@ function toReactComponent(mdFilePath, source) {
           if (tsDocs[propComponent]) {
             return true;
           }
-          console.warn('Prop component', propComponent, 'missing from tsDocgen');
+          file.message(`Prop component ${propComponent} missing from tsDocgen`);
           return false;
         })
         .map(propComponent => tsDocs[propComponent])
@@ -180,12 +181,13 @@ function toReactComponent(mdFilePath, source) {
     })
     .process(vfile, (err, file) => {
       if (err) {
-        console.error(vfileReport(err || file));
-        if (err.fatal) {
-          process.exit(2);
-        }
+        console.error(vfileReport(err));
+        exitCode = 2;
       } else {
         // console.log(relPath, '->', path.relative(process.cwd(), outPath));
+        if (file.messages.length > 0) {
+          console.log(vfileReport(file));
+        }
         jsx = file.contents;
       }
     });
@@ -237,9 +239,11 @@ function writeIndex() {
     .join(',\n    ')}\n  }`;
 
   const indexContent = `module.exports = {\n  ${Object.entries(routes)
-      .map(stringifyRoute)
-      .join(',\n  ')}\n};`;
+    .map(stringifyRoute)
+    .join(',\n  ')}\n};`;
   fs.outputFileSync(path.join(outputBase, 'index.js'), indexContent);
+
+  return exitCode;
 }
 
 module.exports = {

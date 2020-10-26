@@ -5,6 +5,7 @@ const all = require('mdast-util-to-hast/lib/all');
 const { parseJSXAttributes } = require('./jsxAttributes');
 const styleToObject = require('style-to-object');
 const camelCaseCSS = require('camelcase-css');
+const { getExampleIdentifier } = require('../../helpers/codesandbox');
 
 let srcCounter = 0;
 
@@ -95,12 +96,20 @@ function mdxAstToMdxHast() {
             Object.entries(parseJSXAttributes(`<Component ${node.meta} />`))
               .forEach(([key, val]) => {
                 properties[key] = val;
-              }); 
+              });
           }
           catch(error) {
             file.fail(`Error parsing "${node.meta}": ${error}`);
           }
         }
+
+        if (node.lang === 'js' && !(node.meta && node.meta.noLive)) {
+          const [_, identifier] = getExampleIdentifier(properties.code);
+          if (!identifier) {
+            file.message(`Must have valid example identifier for JS example ${node.title}`);
+          }
+        }
+
         return Object.assign({}, node, {
           type: 'element',
           tagName: 'Example',
