@@ -106,7 +106,7 @@ function mdxAstToMdxHast() {
         if (node.lang === 'js' && !(node.meta && node.meta.noLive)) {
           const [_, identifier] = getExampleIdentifier(properties.code);
           if (!identifier) {
-            file.fail(`Must have valid example identifier for JS example ${node.title}`);
+            file.message(`Must have valid example identifier for JS example ${node.title}`);
           }
         }
 
