@@ -1,8 +1,5 @@
 import React from 'react';
-import ChatIcon from '@patternfly/react-icons/dist/js/icons/chat-icon';
-import QuestionIcon from '@patternfly/react-icons/dist/js/icons/question-icon';
-import CatalogIcon from '@patternfly/react-icons/dist/js/icons/catalog-icon';
-import MailBulkIcon from '@patternfly/react-icons/dist/js/icons/mail-bulk-icon';
+import { Link } from 'theme-patternfly-org/components';
 import { Grid, GridItem, PageSection, PageSectionVariants, Split, SplitItem, Title } from '@patternfly/react-core';
 import './community.css';
 import communityPageHeader from './community-page-header.svg';
@@ -37,7 +34,9 @@ const CommunityPage = () => (
             Flyers may be spread all over the globe, but we make sure to come together once a month to share updates and collect feedback. All meetings are recorded and published on <a href="https://www.youtube.com/channel/UCqLT0IEvYmb8z__9IFLSVyQ">PatternFly’s YouTube channel</a>, and you can join PatternFly’s mailing list for the invites.
           </p>
           <Title size="xl" className="ws-title" headingLevel="h4">
-            <a href="https://www.patternfly.org/v4/get-in-touch"><strong>Join PatternFly's mailing list</strong></a>
+          <Link to="/get-in-touch">
+            <strong>Join PatternFly's mailing list</strong>
+          </Link>
           </Title>
         </GridItem>
         <GridItem>
@@ -57,7 +56,9 @@ const CommunityPage = () => (
             A community isn’t really a community unless everyone is included, so accessible UX is important to us. We regularly test and audit PatternFly’s accessibility and share guidance whenever we can.
           </p>
           <Title size="xl" className="ws-title" headingLevel="h4">
-            <a href="https://www.patternfly.org/v4/get-started/accessibility-guide"><strong>Read our accessibility guide</strong></a>
+          <Link to="/get-started/accessibility-guide">
+            <strong>Read our accessibility guide</strong>
+          </Link>
           </Title>
         </GridItem>
       </Grid>
@@ -70,7 +71,9 @@ const CommunityPage = () => (
       <Title size="4xl" className="pf-u-mb-lg ws-page-title pf-u-text-align-center ws-keep-growing" headingLevel="h2">Let's keep growing</Title>
       <p className="ws-mdx-p pf-u-text-align-center">The PatternFly community is never finished growing, and we want to keep it that way. Feel free to contribute whenever — we’re always open.</p>
 
-      <p className="ws-mdx-p pf-u-text-align-center ws-get-in-touch"><a href="https://www.patternfly.org/v4/get-in-touch"><strong>Get in touch</strong></a></p>
+      <p className="ws-mdx-p pf-u-text-align-center ws-get-in-touch">
+        <Link to="/get-in-touch"><strong>Get in touch</strong></Link>
+      </p>
 
     </div>
   </PageSection>
