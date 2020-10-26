@@ -7,6 +7,7 @@ const styleToObject = require('style-to-object');
 const camelCaseCSS = require('camelcase-css');
 const { getExampleIdentifier } = require('../../helpers/codesandbox');
 const { capitalize } = require('../../helpers/capitalize');
+const { transformCode } = require('../../helpers/transformCode');
 
 let srcCounter = 0;
 
@@ -105,9 +106,9 @@ function mdxAstToMdxHast() {
         }
 
         if (node.lang === 'js' && !(node.meta && node.meta.noLive)) {
-          const [_, identifier] = getExampleIdentifier(properties.code);
+          const [_, identifier] = getExampleIdentifier(transformCode(properties.code));
           if (!identifier) {
-            const elementRegex = /^\s*([0-9A-Za-z_$]+)\s*=/m;
+            const elementRegex = /^([0-9A-Za-z_$]+)\s*=/m;
             const elementMatch = properties.code.match(elementRegex);
             if (elementMatch) {
               file.message(`"${elementMatch[1]}" must have function body logic or be plain JSX`, node.position);
