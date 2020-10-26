@@ -1,5 +1,9 @@
 const versions  = require('../versions.json');
 const overpass = require('./fonts');
+const acorn = require('acorn');
+const jsx = require('acorn-jsx');
+const jsxParser = acorn.Parser.extend(jsx());
+
 // TODO: Use a template that has our assets.
 const getStaticParams = (title, html) => ({
   files: {
@@ -40,31 +44,24 @@ const getStaticParams = (title, html) => ({
   template: 'static',
 });
 
-const classRegex = /^class ([0-9A-Za-z_$]+)/;
-const functionRegex = /^function ([0-9A-Za-z_$]+)/;
-const closureArrowRegex = /^([0-9A-Za-z_$]+)\s*=\s*\(\s*\)\s*=>\s*{/;
-
 // Allow 3 formats for example identifiers
+// 1. class Example {}
+// 2. function Example() { return <jsx /> }
+// 3. Example = () => { [some logic] return <jsx />; }
 function getExampleIdentifier(code) {
-  // 1. class Example {}
-  const classMatch = code.match(classRegex);
-  if (classMatch) {
-    return [code, classMatch[1], true];
-  }
-  // 2. function Example() { return <jsx /> }
-  const functionMatch = code.match(functionRegex);
-  if (functionMatch) {
-    return [code, functionMatch[1], true];
-  }
-  // 3. Example = () => { [some logic] return <jsx />; }
-  // While technically an arrow function could take args, we won't support it
-  const closureArrowMatch = code.match(closureArrowRegex);
-  if (closureArrowMatch) {
-    code = code.replace(closureArrowRegex, `const ${closureArrowMatch[1]} = () =>`)
-    return [code, closureArrowMatch[1]];
+  const declaration = jsxParser.parse(code, { sourceType: 'module' })
+    .body
+    .find(node => ['ClassDeclaration', 'FunctionDeclaration', 'ExpressionStatement'].includes(node.type));
+  if (!declaration || !declaration.id) {
+    return [code, null];
   }
 
-  return [code, null];
+  return [
+    declaration.type === 'ExpressionStatement'
+      ? `const ${code}`
+      : code,
+    declaration.id.name
+  ];
 }
 
 // TODO: Make React examples work and use a template that has our assets.
