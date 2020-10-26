@@ -13,8 +13,8 @@ const CommunityPage = () => (
       <Title size="4xl" className="pf-u-mb-lg ws-page-title" headingLevel="h2">Community</Title>
       <p className="ws-mdx-p">At the core of PatternFly is our community of people—in other words, our Flyers. Together, we celebrate creativity and foster a sense of teamwork and unity.</p>
 
-      <Grid sm={12} md={6} gutter="sm" className="pf-u-my-lg pf-l-grid pf-m-all-12-col-on-sm pf-m-all-6-col-on-md pf-m-gutter">
-        <GridItem>
+      <Grid sm={12} md={6} gutter="sm" className="pf-l-grid pf-m-all-12-col-on-sm pf-m-all-6-col-on-md pf-m-gutter pf-u-mt-3xl">
+        <GridItem className="pf-u-pr-xl">
           <img src={communityPageHeader} alt="Website collaboration" />
         </GridItem>
         <GridItem>
@@ -23,7 +23,7 @@ const CommunityPage = () => (
         </GridItem>
       </Grid>
 
-      <Title size="3xl" className="pf-u-mb-sm ws-page-title" headingLevel="h3">What we're building</Title>
+      <Title size="3xl" className="pf-u-mb-sm ws-page-title pf-u-mt-3xl" headingLevel="h3">What we're building</Title>
       <p className="ws-mdx-p">Our work extends beyond products and apps. We’re always exploring new ways we can welcome ideas and build better experiences for the very people who make PatternFly what it is today. </p>
 
       <Grid sm={12} md={4} className="pf-u-my-lg pf-l-grid pf-m-all-12-col-on-sm pf-m-all-4-col-on-md pf-u-text-align-center ws-building-grid">
@@ -35,7 +35,7 @@ const CommunityPage = () => (
           </p>
           <Title size="xl" className="ws-title" headingLevel="h4">
           <Link to="/get-in-touch">
-            <strong>Join PatternFly's mailing list</strong>
+            <strong>Join our mailing list</strong>
           </Link>
           </Title>
         </GridItem>
@@ -63,12 +63,12 @@ const CommunityPage = () => (
         </GridItem>
       </Grid>
 
-      <Title size="3xl" className="pf-u-mb-sm ws-page-title" headingLevel="h3">Creating new communities</Title>
+      <Title size="3xl" className="pf-u-mb-sm ws-page-title pf-u-mt-3xl" headingLevel="h3">Creating new communities</Title>
       <p className="ws-mdx-p">Sometimes Flyers branch out and build groups of their own, which is how new communities are born. While PatternFly communities are separate from PatternFly and not supported as part of the design system, we still love seeing our Flyers forming new groups and developing their visions into actions.</p>
       <br/>
       <p className="ws-mdx-p"><a href="https://patternfly.github.io/patternfly-elements/"><strong>PatternFly Elements:</strong></a> PatternFly Elements is a community created by Red Hat's web-based developers. It focuses on creating web components for use across Red Hat's sites and SaaS products and features theming options available for your own brand library.</p>
 
-      <Title size="4xl" className="pf-u-mb-lg ws-page-title pf-u-text-align-center ws-keep-growing" headingLevel="h2">Let's keep growing</Title>
+      <Title size="4xl" className="pf-u-mb-lg ws-page-title pf-u-text-align-center ws-keep-growing pf-u-mt-3xl" headingLevel="h2">Let's keep growing</Title>
       <p className="ws-mdx-p pf-u-text-align-center">The PatternFly community is never finished growing, and we want to keep it that way. Feel free to contribute whenever — we’re always open.</p>
 
       <p className="ws-mdx-p pf-u-text-align-center ws-get-in-touch">
