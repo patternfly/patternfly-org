@@ -1,8 +1,7 @@
-import versions from '../versions.json';
-import { overpass } from './fonts';
-
+const versions  = require('../versions.json');
+const overpass = require('./fonts');
 // TODO: Use a template that has our assets.
-export const getStaticParams = (title, html) => ({
+const getStaticParams = (title, html) => ({
   files: {
     'index.html': {
       content: `<!DOCTYPE html>
@@ -41,17 +40,34 @@ export const getStaticParams = (title, html) => ({
   template: 'static',
 });
 
-// TODO: Make React examples work and use a template that has our assets.
-export const getReactParams = (title, code, scope) => {
-  let toRender = 'Example';
-  const classNameMatch = /class (\w+) /.exec(code);
-  const equalityMatch = /(\w+) =/.exec(code);
-  if (classNameMatch) {
-    toRender = classNameMatch[1];
-  } else if (equalityMatch) {
-    toRender = equalityMatch[1];
-    code = code.replace(/(\w+) =/, `const ${toRender} =`)
+// Support 3 formats for example identifiers
+function getExampleIdentifier(code) {
+  // 1. class Example {}
+  const classMatch = code.match(/^class ([0-9A-Za-z_$]+)/m);
+  if (classMatch) {
+    return [code, classMatch[1]];
   }
+  // 2. function Example() { return <jsx /> }
+  const functionMatch = code.match(/^function ([0-9A-Za-z_$]+)/m);
+  if (functionMatch) {
+    return [code, functionMatch[1]];
+  }
+  // 3. Example = () => <jsx />
+  // While technically an arrow function could take args, we won't support it
+  const constFnRegex = /^([0-9A-Za-z_$]+)\s*=\s*\(\s*\)\s*=>/m;
+  const constFnMatch = code.match(constFnRegex);
+  if (constFnMatch) {
+    code = code.replace(constFnRegex, `const ${constFnMatch[1]} = () =>`)
+    return [code, constFnMatch[1]];
+  }
+
+  return [code, null];
+}
+
+// TODO: Make React examples work and use a template that has our assets.
+function getReactParams(title, code, scope) {
+  let [code2, toRender] = getExampleIdentifier(code);
+  code = code2;
 
   // import avatarImg from './examples/avatarImg.svg';
   const svgRegex = /import\s+(\w[\w\d]*).*\.svg['"]/g;
@@ -61,7 +77,9 @@ export const getReactParams = (title, code, scope) => {
     code = code.replace(match[0], `const ${svgToken} = "${scope[svgToken]}"`);
   }
 
-  const dependencies = {};
+  const dependencies = {
+    '@patternfly/react-core': versions.Releases[0].versions['@patternfly/react-core']
+  };
 
   Object.entries(versions.Releases[0].versions)
     .filter(([pkg]) => code.includes(pkg))
@@ -113,3 +131,9 @@ ReactDOM.render(<${toRender} />, rootElement);`
     },
   }
 }
+
+module.exports = {
+  getReactParams,
+  getStaticParams,
+  getExampleIdentifier
+};
