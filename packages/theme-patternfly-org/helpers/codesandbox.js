@@ -40,9 +40,9 @@ const getStaticParams = (title, html) => ({
   template: 'static',
 });
 
-const classRegex = /^[\t ]*class ([0-9A-Za-z_$]+)/m;
-const functionRegex = /^[\t ]*function ([0-9A-Za-z_$]+)/m;
-const closureArrowRegex = /^[\t ]*([0-9A-Za-z_$]+)\s*=\s*\(\s*\)\s*=>\s*{/m;
+const classRegex = /^class ([0-9A-Za-z_$]+)/;
+const functionRegex = /^function ([0-9A-Za-z_$]+)/;
+const closureArrowRegex = /^([0-9A-Za-z_$]+)\s*=\s*\(\s*\)\s*=>\s*{/;
 
 // Allow 3 formats for example identifiers
 function getExampleIdentifier(code) {

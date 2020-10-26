@@ -9,10 +9,11 @@ module.exports = {
         .replace(/^\s*import\s+{[\s\S]+?}\s+from.*/gm, '') // multi line import
         .replace(/^\s*export.*;/gm, '') // single line export
         .replace(/export default/gm, '') // inline export
+        .trim(); // pretty
     }
     // HTML/HBS
     return `<div className="ws-preview-html${isFullscreenOnly ? ' pf-u-h-100' : ''}" dangerouslySetInnerHTML={{ __html: "${code
       .replace(/"/g, '\\"')
-      .replace(/\n/g, '')}"}} />`;;
+      .replace(/\n/g, '')}"}} />`;
   }
 }
