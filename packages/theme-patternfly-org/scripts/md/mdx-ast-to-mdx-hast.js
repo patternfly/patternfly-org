@@ -105,30 +105,29 @@ function mdxAstToMdxHast() {
         }
 
         if (node.lang === 'js' && !(node.meta && node.meta.noLive)) {
-          const [_, identifier] = getExampleIdentifier(properties.code);
-          if (!identifier) {
-            const elementRegex = /^([0-9A-Za-z_$]+)\s*=/m;
-            const elementMatch = properties.code.match(elementRegex);
-            if (elementMatch) {
-              file.message(`"${elementMatch[1]}" must have function body logic or be plain JSX`, node.position);
+          const [_, identifier, declaration] = getExampleIdentifier(properties.code);
+          if (
+            declaration.type === 'ExpressionStatement' &&
+            declaration.expression.type === 'JSXElement'
+          ) {
+            // Create identifier from title
+            const ident = capitalize(
+              node.title
+                .replace(/^[^A-Za-z]/, '')
+                .replace(/\s+([a-z])?/g, (_, match) => match ? capitalize(match) : '')
+                .replace(/[^A-Za-z0-9_]/g, '')
+            );
+            const jsxStartRegex = /^[\t ]*</m;
+            const jsxStartMatch = properties.code.match(jsxStartRegex);
+            if (jsxStartMatch) {
+              properties.code = properties.code.replace(jsxStartRegex, `${ident} = () => <`);
             }
             else {
-              // Create identifier from title
-              const identifier = capitalize(
-                node.title
-                  .replace(/^[^A-Za-z]/, '')
-                  .replace(/\s+([a-z])?/g, (_, match) => match ? capitalize(match) : '')
-                  .replace(/[^A-Za-z0-9_]/g, '')
-              );
-              const jsxStartRegex = /^[\t ]*</m;
-              const jsxStartMatch = properties.code.match(jsxStartRegex);
-              if (jsxStartMatch) {
-                properties.code = properties.code.replace(jsxStartRegex, `${identifier} = () => <`);
-              }
-              else {
-                file.message(`Expected JSX in live example ${node.title}`, node.position);
-              }
+              file.message(`Expected JSX in live example ${node.title}`, node.position);
             }
+          }
+          else if (!identifier) {
+            file.message(`Example "${node.title}" must be a class, named block statement, or plain JSX`, node.position);
           }
         }
 

@@ -45,23 +45,30 @@ const getStaticParams = (title, html) => ({
 });
 
 // Allow 3 formats for example identifiers
-// 1. class Example {}
-// 2. function Example() { return <jsx /> }
-// 3. Example = () => { [some logic] return <jsx />; }
 function getExampleIdentifier(code) {
   const declaration = jsxParser.parse(code, { sourceType: 'module' })
     .body
     .find(node => ['ClassDeclaration', 'FunctionDeclaration', 'ExpressionStatement'].includes(node.type));
-  if (!declaration || !declaration.id) {
-    return [code, null];
+  if (declaration) {
+    // 1. Example = () => { [some logic] return <jsx />; }
+    if (declaration.type === 'ExpressionStatement') {
+      if (
+        declaration.expression.type === 'AssignmentExpression' &&
+        declaration.expression.right.body &&
+        declaration.expression.right.body.type === 'BlockStatement'
+      ) {
+        return [`const ${code}`, declaration.expression.left.name, declaration];
+      }
+    }
+    // 2. class Example {}
+    // 3. function Example() { return <jsx /> }
+    else {
+      return [code, declaration.id.name, declaration];
+    }
   }
 
-  return [
-    declaration.type === 'ExpressionStatement'
-      ? `const ${code}`
-      : code,
-    declaration.id.name
-  ];
+  return [code, null, declaration];
+}turn [code, null];
 }
 
 // TODO: Make React examples work and use a template that has our assets.
