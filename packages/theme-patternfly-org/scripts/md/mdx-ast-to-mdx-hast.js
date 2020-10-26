@@ -105,7 +105,7 @@ function mdxAstToMdxHast() {
         }
 
         if (node.lang === 'js' && !(node.meta && node.meta.noLive)) {
-          const [_, identifier] = getExampleIdentifier(properties.code, 'jsx');
+          const [_, identifier] = getExampleIdentifier(properties.code);
           if (!identifier) {
             const elementRegex = /^([0-9A-Za-z_$]+)\s*=/m;
             const elementMatch = properties.code.match(elementRegex);

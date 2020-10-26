@@ -135,5 +135,5 @@ ReactDOM.render(<${toRender} />, rootElement);`
 module.exports = {
   getReactParams,
   getStaticParams,
-  getExampleIdentifier,
+  getExampleIdentifier
 };
