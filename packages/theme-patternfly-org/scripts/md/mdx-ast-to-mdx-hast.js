@@ -6,6 +6,7 @@ const { parseJSXAttributes } = require('./jsxAttributes');
 const styleToObject = require('style-to-object');
 const camelCaseCSS = require('camelcase-css');
 const { getExampleIdentifier } = require('../../helpers/codesandbox');
+const { capitalize } = require('../../helpers/capitalize');
 
 let srcCounter = 0;
 
@@ -106,7 +107,28 @@ function mdxAstToMdxHast() {
         if (node.lang === 'js' && !(node.meta && node.meta.noLive)) {
           const [_, identifier] = getExampleIdentifier(properties.code);
           if (!identifier) {
-            file.message(`Must have valid example identifier for JS example ${node.title}`);
+            const elementRegex = /^\s*([0-9A-Za-z_$]+)\s*=/m;
+            const elementMatch = properties.code.match(elementRegex);
+            if (elementMatch) {
+              file.message(`"${elementMatch[1]}" must have function body logic or be plain JSX`, node.position);
+            }
+            else {
+              // Create identifier from title
+              const identifier = capitalize(
+                node.title
+                  .replace(/^[^A-Za-z]/, '')
+                  .replace(/\s+([a-z])?/g, (_, match) => match ? capitalize(match) : '')
+                  .replace(/[^A-Za-z0-9_]/g, '')
+              );
+              const jsxStartRegex = /^[\t ]*</m;
+              const jsxStartMatch = properties.code.match(jsxStartRegex);
+              if (jsxStartMatch) {
+                properties.code = properties.code.replace(jsxStartRegex, `${identifier} = () => <`);
+              }
+              else {
+                file.message(`Expected JSX in live example ${node.title}`, node.position);
+              }
+            }
           }
         }
 
