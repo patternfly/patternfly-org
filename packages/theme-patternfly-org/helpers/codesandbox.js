@@ -40,25 +40,28 @@ const getStaticParams = (title, html) => ({
   template: 'static',
 });
 
-// Support 3 formats for example identifiers
+const classRegex = /^[\t ]*class ([0-9A-Za-z_$]+)/m;
+const functionRegex = /^[\t ]*function ([0-9A-Za-z_$]+)/m;
+const closureArrowRegex = /^[\t ]*([0-9A-Za-z_$]+)\s*=\s*\(\s*\)\s*=>\s*{/m;
+
+// Allow 3 formats for example identifiers
 function getExampleIdentifier(code) {
   // 1. class Example {}
-  const classMatch = code.match(/^class ([0-9A-Za-z_$]+)/m);
+  const classMatch = code.match(classRegex);
   if (classMatch) {
-    return [code, classMatch[1]];
+    return [code, classMatch[1], true];
   }
   // 2. function Example() { return <jsx /> }
-  const functionMatch = code.match(/^function ([0-9A-Za-z_$]+)/m);
+  const functionMatch = code.match(functionRegex);
   if (functionMatch) {
-    return [code, functionMatch[1]];
+    return [code, functionMatch[1], true];
   }
-  // 3. Example = () => <jsx />
+  // 3. Example = () => { [some logic] return <jsx />; }
   // While technically an arrow function could take args, we won't support it
-  const constFnRegex = /^([0-9A-Za-z_$]+)\s*=\s*\(\s*\)\s*=>/m;
-  const constFnMatch = code.match(constFnRegex);
-  if (constFnMatch) {
-    code = code.replace(constFnRegex, `const ${constFnMatch[1]} = () =>`)
-    return [code, constFnMatch[1]];
+  const closureArrowMatch = code.match(closureArrowRegex);
+  if (closureArrowMatch) {
+    code = code.replace(closureArrowRegex, `const ${closureArrowMatch[1]} = () =>`)
+    return [code, closureArrowMatch[1]];
   }
 
   return [code, null];
