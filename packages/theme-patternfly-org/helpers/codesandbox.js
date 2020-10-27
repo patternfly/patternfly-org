@@ -2,7 +2,6 @@ const versions  = require('../versions.json');
 const overpass = require('./fonts');
 const acorn = require('acorn');
 const jsx = require('acorn-jsx');
-const jsxParser = acorn.Parser.extend(jsx());
 
 // TODO: Use a template that has our assets.
 const getStaticParams = (title, html) => ({
@@ -46,7 +45,7 @@ const getStaticParams = (title, html) => ({
 
 // Allow 3 formats for example identifiers
 function getExampleIdentifier(code) {
-  const declaration = jsxParser.parse(code, { sourceType: 'module' })
+  const declaration = acorn.Parser.extend(jsx()).parse(code, { sourceType: 'module' })
     .body
     .find(node => ['ClassDeclaration', 'FunctionDeclaration', 'ExpressionStatement'].includes(node.type));
   if (declaration) {
