@@ -70,8 +70,14 @@ function getExampleIdentifier(code) {
 
 // TODO: Make React examples work and use a template that has our assets.
 function getReactParams(title, code, scope) {
-  let [code2, toRender] = getExampleIdentifier(code);
-  code = code2;
+  let [code2, toRender] = [code, null];
+  try {
+    [code2, toRender] = getExampleIdentifier(code);
+    code = code2;
+  }
+  catch (err) {
+    // Ignore
+  }
 
   // import avatarImg from './examples/avatarImg.svg';
   const svgRegex = /import\s+(\w[\w\d]*).*\.svg['"]/g;
