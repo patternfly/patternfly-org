@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.32](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.31...theme-patternfly-org@0.1.32) (2020-10-27)
+
+
+### Bug Fixes
+
+* **codesandbox:** syntax ([0bc81e6](https://github.com/patternfly/patternfly-org/commit/0bc81e64aa361a743c2e86bb0f429e430f8f259a))
+
+
+
+
+
 ## [0.1.31](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.30...theme-patternfly-org@0.1.31) (2020-10-26)
 
 **Note:** Version bump only for package theme-patternfly-org
