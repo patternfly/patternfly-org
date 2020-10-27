@@ -1,6 +1,4 @@
-const acorn = require('acorn');
-const jsx = require('acorn-jsx');
-const jsxParser = acorn.Parser.extend(jsx());
+const { jsxParser } = require('../../helpers/acorn');
 
 module.exports = {
   parseJSXAttributes: jsx => {

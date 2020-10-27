@@ -4,12 +4,10 @@ const { serializeTags } = require('remark-mdx/lib/serialize/mdx-element');
 const serializeMdxExpression = require('remark-mdx/lib/serialize/mdx-expression');
 const toH = require('hast-to-hyperscript');
 const { toTemplateLiteral } = require('@mdx-js/util');
-const acorn = require('acorn');
-const jsx = require('acorn-jsx');
 const { capitalize } = require('../../helpers/capitalize');
 const { slugger } = require('../../helpers/slugger');
+const { jsxParser } = require('../../helpers/acorn');
 
-const jsxParser = acorn.Parser.extend(jsx());
 
 // Adapted from https://github.com/mdx-js/mdx/blob/next/packages/mdx/mdx-hast-to-jsx.js
 function toJSX(node, parentNode = {}, options = {}) {
