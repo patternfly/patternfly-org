@@ -1,8 +1,6 @@
 const versions  = require('../versions.json');
 const overpass = require('./fonts');
-const acorn = require('acorn');
-const jsx = require('acorn-jsx');
-const jsxParser = acorn.Parser.extend(jsx());
+const { jsxParser } = require('../helpers/acorn');
 
 // TODO: Use a template that has our assets.
 const getStaticParams = (title, html) => ({

@@ -1,9 +1,6 @@
-const { Parser } = require('acorn');
-const jsx = require('acorn-jsx');
-const classFields = require('acorn-class-fields');
 const { generate, baseGenerator } = require('astring');
+const { jsxParser } = require('./acorn');
 
-const jsxParser = Parser.extend(jsx(), classFields);
 const generator = Object.assign({}, baseGenerator, {
   JSXElement(node, state) {
     state.write('React.createElement(');
