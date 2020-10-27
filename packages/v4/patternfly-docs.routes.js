@@ -10,7 +10,7 @@ module.exports = {
     title: 'Get in touch'
   },
   '/community': {
-      Component: () => import('./src/pages/community'),
+      Component: () => import(/* webpackChunkName: "community/index" */ './src/pages/community'),
       title: 'Community'
   },
   '/404': {
