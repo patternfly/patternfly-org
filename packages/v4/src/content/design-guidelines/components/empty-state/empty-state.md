@@ -3,14 +3,17 @@ id: Empty state
 section: components
 ---
 
-Use an **empty state** component when there is no data or other information to show on the screen. Empty states can be used to communicate completion or other status at the end of a sequential task, and may include a call to action to guide the user on what to do next.
+Use an **empty state** component when there is no data or other information to show on the screen. Empty states can be used to communicate completion or other status at the end of a sequential task, and may include a call to action to guide the user on what to do next.  They may also be used to educate users and guide them with positive and proactive next steps in any situation where there is no data or information to display.  View example use cases in the [use case examples](#use-case-examples) section.
 
-PatternFly offers three empty state variations; a small empty state, a large empty state, and an extra large empty state. 
-* The small empty state should be used inside tables, wizards, modals, or cards, where the empty state is "inside a container," as seen in the [no data to show](#no-data-to-show) use case example. 
-* The large empty state should be used in a full-page empty state, as seen in the [addition or creation](#addition-or-creation) use case example. 
-* The extra large empty state variation should only be used in special instances, specifically for [first-use or get started](#first-use-or-get-started) states, as well as for full-page [congratulatory](#success) states, seen in those use case examples.
+## Usage 
+PatternFly offers four empty state variations; an extra small empty state, a small empty state, a large empty state, and an extra large empty state. 
+* The **extra small empty state** should be used inside cards, or when there are space constraints, as seen in the second [no access](#user-not-entitled-or-does-not-have-access) use case example. 
+* The **small empty state** should be used inside tables, wizards, modals, or cards, where the empty state is "inside a container," as seen in the [no data to show](#no-data-to-show) use case example. 
+* The **large empty state** should be used in a full-page empty state, as seen in the [addition or creation](#addition-or-creation) use case example. 
+* The **extra large empty state** variation should only be used in special instances, specifically for [first-use or get started](#first-use-or-get-started) states, as well as for full-page [congratulatory](#success) states, seen in those use case examples.
 
-Below is an example of a large empty state inside a full-page, outlining all the elements inside an empty state.
+## Elements
+Below is an example of a large empty state inside a full-page, outlining all the elements inside an empty state. The other empty state variations are made up of the same elements, and only differ in their spacing and text sizes.
 
 <img src="./img/empty-state.png" alt="empty state example" width="990"/> 
 
@@ -37,8 +40,7 @@ Here is when you should use each icon:
 | <img src="./img/success.png" alt="success icon" width="200"/> |Success |Green (#486b00) |fa-check-circle |Use to indicate that a task or process has been completed successfully
 | <img src="./img/add.png" alt="add icon" width="200"/> |Addition or creation |Grey (#8A8D90) |fa-plus-circle |Use when something needs to be added or created
 
-
-You should always try to use an icon in your empty state, unless there is an empty state where an icon does not match any of the situations mentioned above, or if an icon does not fit into the layout.
+You should always try to use an icon in your empty state, unless there is an empty state where an icon does not match any of the situations mentioned above, or if an icon does not fit into a given layout. For example, you may want to omit the icon when using an extra small empty state inside of a card, due to space limitations.
 
 **Color**
 
@@ -126,7 +128,7 @@ No toolbars or filters should be shown when a user is in a full-page empty state
  <img src="./img/toolbar.png" alt="Example of toolbars and filters in empty states" width="990"/> 
 
 
-## Usage
+## Use case examples
 There are several common use cases for empty states:
 * [First-use or get started](#first-use-or-get-started)
 * [No data to show](#no-data-to-show)
@@ -156,9 +158,11 @@ In this situation, a user may need to take steps to configure, connect, or enabl
 
 ### User not entitled or does not have access
 
-Help users understand why they are not able to view content and provide next steps.
+Help users understand why they are not able to view content and provide next steps. This can be particularly useful when users do not have the permissions to view a page’s content, or to view specific content in a dashboard.
 
-<img src="./img/access-denied.png" alt="Example of access denied empty state" width="990"/> 
+<img src="./img/access-denied.png" alt="Example of access denied empty state" width="990"/>
+
+<img src="./img/xs-no-access.png" alt="Example of extra small empty state used in a card, inside of a dashboard" width="990"/> 
 
 ### Back-end failure
 
