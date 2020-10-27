@@ -105,29 +105,34 @@ function mdxAstToMdxHast() {
         }
 
         if (node.lang === 'js' && !(node.meta && node.meta.noLive)) {
-          const [_, identifier, declaration] = getExampleIdentifier(properties.code);
-          if (
-            declaration.type === 'ExpressionStatement' &&
-            declaration.expression.type === 'JSXElement'
-          ) {
-            // Create identifier from title
-            const ident = capitalize(
-              node.title
-                .replace(/^[^A-Za-z]/, '')
-                .replace(/\s+([a-z])?/g, (_, match) => match ? capitalize(match) : '')
-                .replace(/[^A-Za-z0-9_]/g, '')
-            );
-            const jsxStartRegex = /^[\t ]*</m;
-            const jsxStartMatch = properties.code.match(jsxStartRegex);
-            if (jsxStartMatch) {
-              properties.code = properties.code.replace(jsxStartRegex, `${ident} = () => <`);
+          try {
+            const [_, identifier, declaration] = getExampleIdentifier(properties.code);
+            if (
+              declaration.type === 'ExpressionStatement' &&
+              declaration.expression.type === 'JSXElement'
+            ) {
+              // Create identifier from title
+              const ident = capitalize(
+                node.title
+                  .replace(/^[^A-Za-z]/, '')
+                  .replace(/\s+([a-z])?/g, (_, match) => match ? capitalize(match) : '')
+                  .replace(/[^A-Za-z0-9_]/g, '')
+              );
+              const jsxStartRegex = /^[\t ]*</m;
+              const jsxStartMatch = properties.code.match(jsxStartRegex);
+              if (jsxStartMatch) {
+                properties.code = properties.code.replace(jsxStartRegex, `${ident} = () => <`);
+              }
+              else {
+                file.message(`Expected JSX in live example ${node.title}`, node.position);
+              }
             }
-            else {
-              file.message(`Expected JSX in live example ${node.title}`, node.position);
+            else if (!identifier) {
+              file.message(`Example "${node.title}" must be a class, named block statement, or plain JSX`, node.position);
             }
           }
-          else if (!identifier) {
-            file.message(`Example "${node.title}" must be a class, named block statement, or plain JSX`, node.position);
+          catch (err) {
+            file.message(`Example "${node.title}" has invalid JSX: ${err.toString()}`)
           }
         }
 
