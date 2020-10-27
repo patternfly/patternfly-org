@@ -68,7 +68,6 @@ function getExampleIdentifier(code) {
   }
 
   return [code, null, declaration];
-}turn [code, null];
 }
 
 // TODO: Make React examples work and use a template that has our assets.
