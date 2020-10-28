@@ -184,7 +184,7 @@ If the success state appears in a full-page, you can choose to use the extra lar
 
 <img src="./img/xl-success.png" alt="Example of success full page" width="990"/> 
 
-## Addition or creation 
+### Addition or creation 
 In some situations, users may need to add or create something to view associated information. Let them know what they need to add and guide them with calls-to-action to lead them the right way.
 
 <img src="./img/add-or-create.png" alt="Example of add empty state" width="990"/> 
