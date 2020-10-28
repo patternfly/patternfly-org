@@ -18,7 +18,6 @@
 
 .ws-page-sidebar {
   box-shadow: none !important;
-  overflow-y: scroll;
 }
 
 .ws-page-sidebar > .pf-c-page__sidebar-body {
