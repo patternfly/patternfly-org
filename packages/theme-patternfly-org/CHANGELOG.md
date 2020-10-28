@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.36](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.35...theme-patternfly-org@0.1.36) (2020-10-28)
+
+
+### Bug Fixes
+
+* **sidenav:** hide scrollbar unless there is overflow ([#2235](https://github.com/patternfly/patternfly-org/issues/2235)) ([101c74a](https://github.com/patternfly/patternfly-org/commit/101c74a98d105c0ac854dc72e92d5b0d3bceae31))
+
+
+
+
+
 ## [0.1.35](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.34...theme-patternfly-org@0.1.35) (2020-10-28)
 
 **Note:** Version bump only for package theme-patternfly-org
