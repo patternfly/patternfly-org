@@ -118,13 +118,18 @@ function mdxAstToMdxHast() {
                   .replace(/\s+([a-z])?/g, (_, match) => match ? capitalize(match) : '')
                   .replace(/[^A-Za-z0-9_]/g, '')
               );
-              const jsxStartRegex = /^[\t ]*</m;
-              const jsxStartMatch = properties.code.match(jsxStartRegex);
-              if (jsxStartMatch) {
-                properties.code = properties.code.replace(jsxStartRegex, `${ident} = () => <`);
+              const { expression } = declaration;
+              const jsxBlock = properties.code.substring(expression.start, expression.end);
+              if (jsxBlock.includes('\n')) {
+                // Make pretty
+                properties.code = properties.code.replace(jsxBlock, `${ident} = () => (\n  ${
+                  jsxBlock
+                    .replace(/\n/g, '\n  ')
+                    .replace(/;[ \t]*$/, '')
+                  }\n)`);
               }
               else {
-                file.message(`Expected JSX in live example ${node.title}`, node.position);
+                properties.code = properties.code.replace(jsxBlock, `${ident} = () => ${jsxBlock}`);
               }
             }
             else if (!identifier) {
