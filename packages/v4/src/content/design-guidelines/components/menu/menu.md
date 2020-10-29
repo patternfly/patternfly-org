@@ -20,7 +20,7 @@ An actions menu is used for presenting a list of actions or links.
 4. **Descriptions (optional):** Descriptive text may be added below each menu item. This should only be used when the menu item label by itself may not be clear to all users. Keep descriptive text to two lines or less.
 
 ### Option select menus
-Use an option select menu when you want to persist the selected items. This is typically the case for select menus or settings menus that allow users to select between multiple options. See the [Select](/components/select) and [Options menu](/components/option-menu) components for more details. You may present a single or multiple groups of options within the same menu.
+Use an option select menu when you want to persist the selected items. This is typically the case for select menus or settings menus that allow users to select between multiple options. See the [Select](/components/select) and [Options menu](/components/options-menu) components for more details. You may present a single or multiple groups of options within the same menu.
 
 <img src="./img/option-select-menu.png" alt="option select menus" width="863"/>
 
@@ -63,7 +63,7 @@ Any action that can be represented as an icon button can be placed in one or mor
 
 ## Usage
 
-| When you want to... |                     |
+| **When you want to...** |                     |
 | ------------------- | ------------------- |
 | Expose a list of actions in a dropdown menu | Use an actions menu with actions and/or links. Add icons in front of menu items only if they will help to make items more recognizable. Include descriptive text for menu items that may require further definition. |
 | Create logical groupings of menu items... | Use separators to group items. Include group headings if you don’t feel like the meaning of the groups will be obvious. |
