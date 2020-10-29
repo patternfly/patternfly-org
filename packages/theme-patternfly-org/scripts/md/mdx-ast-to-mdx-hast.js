@@ -5,8 +5,7 @@ const all = require('mdast-util-to-hast/lib/all');
 const { parseJSXAttributes } = require('./jsxAttributes');
 const styleToObject = require('style-to-object');
 const camelCaseCSS = require('camelcase-css');
-const { getExampleIdentifier } = require('../../helpers/codesandbox');
-const { capitalize } = require('../../helpers/capitalize');
+const { getExampleDeclaration, prettyExampleCode } = require('../../helpers/codesandbox');
 
 let srcCounter = 0;
 
@@ -103,36 +102,25 @@ function mdxAstToMdxHast() {
             file.fail(`Error parsing "${node.meta}": ${error}`);
           }
         }
-
         if (node.lang === 'js' && !(node.meta && node.meta.noLive)) {
           try {
-            const [_, identifier, declaration] = getExampleIdentifier(properties.code);
+            const declaration = getExampleDeclaration(properties.code);
             if (
               declaration.type === 'ExpressionStatement' &&
               declaration.expression.type === 'JSXElement'
             ) {
-              // Create identifier from title
-              const ident = capitalize(
-                node.title
-                  .replace(/^[^A-Za-z]/, '')
-                  .replace(/\s+([a-z])?/g, (_, match) => match ? capitalize(match) : '')
-                  .replace(/[^A-Za-z0-9_]/g, '')
-              );
-              const { expression } = declaration;
-              const jsxBlock = properties.code.substring(expression.start, expression.end);
-              if (jsxBlock.includes('\n')) {
-                // Make pretty
-                properties.code = properties.code.replace(jsxBlock, `${ident} = () => (\n  ${
-                  jsxBlock
-                    .replace(/\n/g, '\n  ')
-                    .replace(/;[ \t]*$/, '')
-                  }\n)`);
-              }
-              else {
-                properties.code = properties.code.replace(jsxBlock, `${ident} = () => ${jsxBlock}`);
-              }
+              // Lone JSX
+              properties.code = prettyExampleCode(node.title, properties.code, declaration);
             }
-            else if (!identifier) {
+            else if (
+              !declaration ||
+              // Allow Example = () => {...}
+              declaration.type === 'ExpressionStatement' && !(
+                declaration.expression.type === 'AssignmentExpression' &&
+                declaration.expression.right.body &&
+                declaration.expression.right.body.type === 'BlockStatement'
+              )
+            ) {
               file.message(`Example "${node.title}" must be a class, named block statement, or plain JSX`, node.position);
             }
           }

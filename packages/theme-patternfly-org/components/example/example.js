@@ -93,8 +93,9 @@ export const Example = ({
 
   const codeBoxParams = getParameters(
     lang === 'html'
-    ? getStaticParams(title, code)
-    : getReactParams(title, editorCode, scope));
+      ? getStaticParams(title, code)
+      : getReactParams(title, editorCode, scope)
+  );
   const fullscreenLink = `${location.pathname.replace(/\/$/, '')}${location.pathname.endsWith(source) ? '' : `/${source}`}/${slugger(title)}`;
 
   return (
