@@ -26,7 +26,6 @@
 
 /* Search */
 #ws-global-search-wrapper {
-  padding: 0 0 2px 0;
   transition: 250ms;
   /* For icon */
   position: relative;
@@ -34,21 +33,21 @@
 #ws-global-search {
   background-color: transparent;
   border: none;
-  width: 100%;
   /* For icon */
   padding-left: 32px;
+  width: 200px;
 }
 .ws-hide-search-input .algolia-autocomplete,
 .ws-hide-search-input #ws-global-search {
   display: none !important;
 }
-.ws-collapse-search {
-  position: relative;
-  top: 4px;
+.ws-toggle-search {
+  /* Search icon is taller than it is wide */
+  margin-top: 2px;
 }
 #ws-global-search-wrapper > .global-search-icon {
   position: absolute;
-  top: 14px;
+  top: 12px;
   left: 4px;
 }
 #ws-global-search,

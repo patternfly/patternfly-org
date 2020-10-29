@@ -31,10 +31,6 @@ const HeaderTools = ({
   const initialVersion = staticVersions.Releases.find(release => release.latest);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isSearchExpanded, setSearchExpanded] = useState(false);
-  const expandAndFocusSearch = () => {
-    setSearchExpanded(true);
-    setTimeout(() => document.getElementById('ws-global-search').focus(), 0);
-  }
   const latestVersion = versions.Releases.find(version => version.latest);
   const getDropdownItem = version => (
     <DropdownItem
@@ -46,27 +42,33 @@ const HeaderTools = ({
       }
     />
   );
+  const searchRef = React.useRef();
 
   return (
     <PageHeaderTools>
       {hasSearch && (
         <PageHeaderToolsItem id="ws-global-search-wrapper" className={isSearchExpanded ? '' : 'ws-hide-search-input'}>
-          <TextInput id="ws-global-search" placeholder="Search" />
-          {isSearchExpanded
-            ? (
-              <React.Fragment>
-                <SearchIcon className="global-search-icon" />
-                <Button aria-label="Expand search input" variant="plain" className="ws-collapse-search" onClick={() => setSearchExpanded(false)}>
-                  <TimesIcon />
-                </Button>
-              </React.Fragment>
-            ) : (
-              <Button aria-label="Collapse search input" variant="plain" onClick={expandAndFocusSearch}>
-                <SearchIcon className="global-search-icon" />
-              </Button>
-            )
-          }
+          <TextInput id="ws-global-search" ref={searchRef} placeholder="Search" />
+          {isSearchExpanded && <SearchIcon className="global-search-icon" />}
         </PageHeaderToolsItem>
+      )}
+      {hasSearch && (
+        <Button
+          aria-label={`${isSearchExpanded ? 'Collapse' : 'Expand'} search input`}
+          variant="plain"
+          className="ws-toggle-search"
+          onClick={() => {
+            setSearchExpanded(!isSearchExpanded);
+            if (!isSearchExpanded) {
+              setTimeout(() => searchRef.current && searchRef.current.focus(), 0);
+            }
+          }}
+        >
+          {isSearchExpanded
+            ? <TimesIcon />
+            : <SearchIcon className="global-search-icon" />
+          }
+        </Button>
       )}
       {hasVersionSwitcher && (
         <PageHeaderToolsItem>
