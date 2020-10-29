@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.37](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.36...theme-patternfly-org@0.1.37) (2020-10-29)
+
+
+### Bug Fixes
+
+* **codesandbox:** allow more formats on frontend, restrict more on backend ([#2237](https://github.com/patternfly/patternfly-org/issues/2237)) ([1415fea](https://github.com/patternfly/patternfly-org/commit/1415fea898bc1930b261d206d287e7d6746e1196))
+
+
+
+
+
 ## [0.1.36](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.35...theme-patternfly-org@0.1.36) (2020-10-28)
 
 
