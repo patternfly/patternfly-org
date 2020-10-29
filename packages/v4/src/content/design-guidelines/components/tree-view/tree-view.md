@@ -34,11 +34,10 @@ Use a tree view when:
 * You need to display hierarchies that have more than 2 levels.
 
 Don’t use a tree view when: 
-* The items are not structured hierarchically. Use the [simple list](/components/simple-list) instead. 
-* You select 1 item from a small set. Instead, use [select lists](/components/select), [radio buttons](/components/radio), [checkboxes](/components/checkbox), or a [dropdown](/components/dropdown).
+* You select 1 item from a small set. Instead, use [simple list](/components/simple-list), [select lists](/components/select), [radio buttons](/components/radio), [checkboxes](/components/checkbox), or a [dropdown](/components/dropdown).
 * You need to see an overview of a large amount of data.
 * You need to compare two large sets of data. Use [charts](/charts/about) for a better view. 
-* The hierarchy is too deep and includes hundreds of items.
+* The hierarchy is too deep and includes hundreds of items. Instead, use [drilldown menu](/components/menu#drilldown).
 
 ## Tree view capabilities
 
