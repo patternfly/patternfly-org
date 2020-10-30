@@ -11,27 +11,15 @@ related: [
 
 **Select lists** enable users to select one or more items from a list. Select lists should also be used when options are dynamic or variable.
 
-## Elements and variations
+## Elements
 
-### Basic select
-A select component is a type of dropdown menu that consists of a toggle control to open and close a menu of actions or links. Selects differ from dropdowns in that they persist selection where dropdowns are typically used to present a list of actions or links.
+A select component consists of a toggle control to open and close a menu of actions or links. Selects differ from [dropdowns](/components/dropdown) in that they persist selection where dropdowns are typically used to present a list of actions or links.
 
 <img src="./img/basic-select.png" alt="basic select menu" width="303"/>
 
 1. **Toggle:** The toggle is used to open and close the menu. It takes on all of the behaviors of a button. The toggle label always reflects the currently selected item or may hold a placeholder if nothing is selected.
 
-2. **Menu:** The menu contains a list of options or values. Menus should optimally contain seven (7) or less items for easy scanning by the user. For longer menus, items may be grouped. See the [Menu component guidelines](/components/menu/design-guidelines) for more information about supported options, including use of icons, grouping, and descriptions. The Dropdown component includes many common built-in menu variants. It’s also possible to attach a custom menu by using the [Basic panel variant](/components/select/react#panel).
-
-### Select variations
-In addition to the basic dropdown shown above, you may apply the following variants to the dropdown toggle element.
-
-<img src="./img/select-variants.png" alt="dropdown variation" width="772"/>
-
-#### Checkbox select
-A checkbox select menu allows for selecting multiple values from a menu. A badge is used to reflect the number of current selections in the toggle in place of the names of the selected items.
-
-#### Typeahead select
-The typeahead select variation allows the user to type into the input field or pick a value from the list. As the user types, the list is filtered to reduce the number of choices. The typeahead select is available in single select or multiple select variations. When multi-select is supported, current selections are displayed in the toggle as chips.
+2. **Menu:** The menu contains a list of options or values. Menus should optimally present seven (7) or less items for easy scanning by the user. For longer menus, items may be grouped or scrolling may be exposed by limiting the height of the menu. See the [Menu component guidelines](/components/menu/design-guidelines) for more information about supported options, including use of icons, grouping, and descriptions. The Select component includes many common built-in menu variants. It’s also possible to attach a custom menu by using the [Basic panel variant](/components/select/react#panel).
 
 ## Usage
 

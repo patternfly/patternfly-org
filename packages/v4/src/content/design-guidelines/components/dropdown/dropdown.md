@@ -3,7 +3,7 @@ id: Dropdown
 section: components
 ---
 
-A **dropdown** component is used to present a menu of actions or links in a constrained space that will trigger a process or navigate to a new location. See Select component [link] if you want to make one or more selections from a list of items in a value list.
+A **Dropdown** is used to present a menu of actions or links in a constrained space that will trigger a process or navigate to a new location. See [Select component](/components/select/) if you want to make one or more selections from a list of items in a value list.
 
 ## Elements and variations
 ### Basic dropdown
