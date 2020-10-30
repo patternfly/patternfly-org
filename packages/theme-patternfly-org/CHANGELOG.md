@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.38...theme-patternfly-org@0.2.0) (2020-10-30)
+
+
+### Features
+
+* **SkipToContent:** Add skip to content to documentation ([#2240](https://github.com/patternfly/patternfly-org/issues/2240)) ([feb8a63](https://github.com/patternfly/patternfly-org/commit/feb8a635d8f302adc602256b82abcff500a5af0e))
+
+
+
+
+
 ## [0.1.38](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.37...theme-patternfly-org@0.1.38) (2020-10-29)
 
 **Note:** Version bump only for package theme-patternfly-org
