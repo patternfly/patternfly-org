@@ -46,7 +46,7 @@ const HomePage = () => (
               >
                 Get started
               </Link>
-              <a className="pf-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour" href="https://github.com/patternfly">
+              <a className="pf-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour" href="https://github.com/patternfly" target="_blank">
                 Github
               </a>
             </div>
