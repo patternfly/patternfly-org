@@ -12,11 +12,14 @@ import {
   DropdownToggle,
   DropdownItem,
   DropdownGroup,
-  Divider
+  Divider,
+  Text,
+  TextVariants
 } from '@patternfly/react-core';
 import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
+import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
 import logo from '../logo.svg';
@@ -46,6 +49,17 @@ const HeaderTools = ({
 
   return (
     <PageHeaderTools>
+      <PageHeaderToolsItem>
+        <Text
+          component={TextVariants.a}
+          href="//github.com/patternfly"
+          target="top"
+          aria-label="Link to PatternFly GitHub page"
+          className="ws-github-pageheader pf-u-mr-md"
+        >
+          <GithubIcon />
+        </Text>
+      </PageHeaderToolsItem>
       {hasSearch && (
         <PageHeaderToolsItem id="ws-global-search-wrapper" className={isSearchExpanded ? '' : 'ws-hide-search-input'}>
           <TextInput id="ws-global-search" ref={searchRef} placeholder="Search" />

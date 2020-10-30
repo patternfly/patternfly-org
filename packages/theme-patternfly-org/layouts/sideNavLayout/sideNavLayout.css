@@ -92,3 +92,7 @@
 .ws-org-version-switcher .pf-c-dropdown__toggle  >.pf-c-dropdown__toggle-text {
   white-space: normal;
 }
+
+.ws-github-pageheader {
+  color: var(--pf-global--Color--light-100) !important;
+}

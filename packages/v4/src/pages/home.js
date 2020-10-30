@@ -46,13 +46,9 @@ const HomePage = () => (
               >
                 Get started
               </Link>
-              <Link
-                to="/contribute/about"
-                className="pf-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour"
-                aria-label="Contribute to PatternFly"
-              >
-                Contribute
-              </Link>
+              <a className="pf-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour" href="https://github.com/patternfly">
+                Github
+              </a>
             </div>
           </TextContent>
         </GridItem>
