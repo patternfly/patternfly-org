@@ -12,6 +12,7 @@ module.exports = {
   hasDesignGuidelines: true,
   sideNavItems: [
     { section: 'get-started' },
+    { section: 'developer-resources' },
     { section: 'guidelines' },
     { section: 'UX writing' },
     { section: 'components' },

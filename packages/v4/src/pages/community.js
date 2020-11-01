@@ -61,7 +61,7 @@ const CommunityPage = () => (
             A community isn’t really a community unless everyone is included, so accessible UX is important to us. We regularly test and audit PatternFly’s accessibility and share guidance whenever we can.
           </p>
           <Title size="xl" className="ws-title" headingLevel="h4">
-          <Link to="/get-started/accessibility-guide">
+          <Link to="/developer-resources/accessibility-guide">
             <strong>Read our accessibility guide</strong>
           </Link>
           </Title>
