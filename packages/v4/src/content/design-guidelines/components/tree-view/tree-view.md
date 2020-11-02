@@ -37,7 +37,7 @@ Don’t use a tree view when:
 * You select 1 item from a small set. Instead, use [simple list](/components/simple-list), [select lists](/components/select), [radio buttons](/components/radio), [checkboxes](/components/checkbox), or a [dropdown](/components/dropdown).
 * You need to see an overview of a large amount of data.
 * You need to compare two large sets of data. Use [charts](/charts/about) for a better view. 
-* The hierarchy is too deep and includes hundreds of items. Instead, use [drilldown menu](/components/menu#drilldown).
+* The hierarchy is too deep and includes hundreds of items. Instead, use a [drill-down menu](/components/menu#drilldown).
 
 ## Tree view capabilities
 
@@ -68,9 +68,9 @@ Add badges to a tree view if you want to show the number of items inside. Don’
 
 ### Adding icons to a tree view
 
-Add icons to a tree view if you want to visually representing the type of items in a tree. For example, a folder system. If you choose to add icons to a tree view, apply the icons on all items in a tree, to maintain consistency. We don’t recommend using icons and checkboxes at the same time due to the large indentation and loss of space it would result in. 
+Add icons to a tree view if you want to visually representing the type of items in a tree. For example, a folder system. If you choose to add icons to a tree view, apply the icons on all items in a tree or leave the items without children empty, to maintain consistency. We don’t recommend using icons and checkboxes at the same time due to the large indentation and loss of space it would result in. 
 
-<img src="./img/with-icons.png" width="332" />
+<img src="./img/with-icons.png" width="761" />
 
 ### Adding action items to a tree view
 
@@ -83,11 +83,11 @@ Add action items to a tree view if you’re triggering some type of action above
 Tree views can be included in pages within these components: [dropdown](/components/dropdown), [drawer](/components/drawer), [primary-detail](/demos/primary-detail), [modal](/components/modal), or [wizard](/components/wizard). 
 
 ### Tree view in a wizard
-A tree view in a wizard allows users to apply multiple filters or select multiple items that are specific for the current step.
+A tree view in a wizard allows users to apply multiple filters or select multiple items that are specific to current step.
 
 <img src="./img/tree-view-wizard.png" width="1500" />
 
 ### Tree view in a primary-detail or drawer 
-A tree view in a [primary-detail](/demos/primary-detail) or [drawer](/components/drawer) allows users to switch content based on user's selection from a tree. 
+A tree view in a [primary-detail](/demos/primary-detail) or [drawer](/components/drawer) allows users to switch content based on their selection from a tree. 
 
 <img src="./img/tree-view-primary-detail.png" width="1500" />
