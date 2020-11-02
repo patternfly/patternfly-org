@@ -37,7 +37,7 @@ You may decide to group menu items to associate related items and/or to indicate
 
 1. **Group heading (optional):** Add a group heading when you want to name the group.
 
-2. **Separator:** Separators are horizontal dividers that help to group the menu items by clearly showing where one group ends and the next begins.
+2. **Separator (optional):** Separators are horizontal dividers that help to group the menu items by clearly showing where one group ends and the next begins. You should consider whether a separator is needed to create visually distinct groups. In the first example above, a separator is used to create separation between the two groups of items. In the second example, The separator is not needed because the titled checkbox groups create two clearly grouped set of options on their own.
 
 ### Multi-level fly-out menus
 Fly-out menus can be used when you want to expose sub-items from a parent node. PatternFly supports a single level fly-out, only.
@@ -65,10 +65,10 @@ Any action that can be represented as an icon button can be placed in one or mor
 
 | **When you want to...** |                     |
 | ------------------- | ------------------- |
-| Expose a list of actions in a dropdown menu | Use an actions menu with actions and/or links. Add icons in front of menu items only if they will help to make items more recognizable. Include descriptive text for menu items that may require further definition. |
+| Expose a list of actions | Use an actions menu with actions and/or links. Add icons in front of menu items only if they will help to make items more recognizable. Include descriptive text for menu items that may require further definition. |
 | Create logical groupings of menu items | Use separators to group items. Include group headings if you don’t feel like the meaning of the groups will be obvious. |
 | Expose a list of nested actions | Use a fly-out menu. Any optional attributes of basic menus, including icons, groups, and descriptions can also be applied to flyout menus.|
-| Select from a list of options in a dropdown menu | Use an options select menu for selecting between values rather than actions. Icons, descriptions, and groupings can be used with option select menus to improve recognition or create logical option groups. |
+| Select from a list of options | Use an options select menu for selecting between values rather than actions. Icons, descriptions, and groupings can be used with option select menus to improve recognition or create logical option groups. |
 
 ## Content guidelines
 In creating menu item labels, keep in mind the following guidelines:
