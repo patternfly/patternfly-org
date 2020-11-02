@@ -33,11 +33,11 @@ Use an option select menu when you want to persist the selected items. This is t
 ### Grouped menus
 You may decide to group menu items to associate related items and/or to indicate a hierarchy of items. Items may be grouped using group headings, separators, or both.
 
-<img src="./img/grouped-menu.png" alt="grouped menu" width="348"/>
+<img src="./img/grouped-menu.png" alt="grouped menu" width="630"/>
 
 1. **Group heading (optional):** Add a group heading when you want to name the group.
 
-2. **Separator (optional):** Separators are horizontal dividers that help to group the menu items by clearly showing where one group ends and the next begins. You should consider whether a separator is needed to create visually distinct groups. In the first example above, a separator is used to create separation between the two groups of items. In the second example, The separator is not needed because the titled checkbox groups create two clearly grouped set of options on their own.
+2. **Separator (optional):** Separators are horizontal dividers that help to group the menu items by clearly showing where one group ends and the next begins. You should consider whether a separator is needed to create visually distinct groups. In the first example above, a separator is used to create separation between the two groups of items. In the second example, the separator is not needed because the titled checkbox groups create two clearly grouped set of options on their own.
 
 ### Multi-level fly-out menus
 Fly-out menus can be used when you want to expose sub-items from a parent node. PatternFly supports a single level fly-out, only.
