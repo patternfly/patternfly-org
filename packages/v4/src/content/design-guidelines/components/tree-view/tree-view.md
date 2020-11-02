@@ -68,7 +68,7 @@ Add badges to a tree view if you want to show the number of items inside. Don’
 
 ### Adding icons to a tree view
 
-Add icons to a tree view if you want to visually representing the type of items in a tree. For example, a folder system. If you choose to add icons to a tree view, apply the icons on all items in a tree or leave the items without children empty, to maintain consistency. We don’t recommend using icons and checkboxes at the same time due to the large indentation and loss of space it would result in. 
+Add icons to a tree view if you want to visually representing the type of items in a tree. For example, a folder system. If you choose to add icons to a tree view, apply the icons on all items in a tree or leave the items without children iconless, to maintain consistency. We don’t recommend using icons and checkboxes at the same time due to the large indentation and loss of space it would result in. 
 
 <img src="./img/with-icons.png" width="761" />
 
@@ -83,7 +83,7 @@ Add action items to a tree view if you’re triggering some type of action above
 Tree views can be included in pages within these components: [dropdown](/components/dropdown), [drawer](/components/drawer), [primary-detail](/demos/primary-detail), [modal](/components/modal), or [wizard](/components/wizard). 
 
 ### Tree view in a wizard
-A tree view in a wizard allows users to apply multiple filters or select multiple items that are specific to current step.
+A tree view in a wizard allows users to apply multiple filters or select multiple items that are specific to their current step.
 
 <img src="./img/tree-view-wizard.png" width="1500" />
 
