@@ -29,17 +29,17 @@ PatternFly offers several variations of select lists:
 * [Multiple select](#multiple-select)
 * [Typeahead](#typeahead)
 
-#### Single select
+### Single select
 Single select lists allow users to select a single, mutually exclusive option. When the user selects an option from the list, the selection appears in the toggle.
 
 <img src="./img/single-select.png" alt="Example single select interaction" width="496"/>
 
-#### Checkbox select
+### Checkbox select
 Checkbox select lists allow users to select one or more options from a known list of options, using checkboxes as a selection method. You may choose to have a badge display in the toggle to show how many items have been selected. A common use case for checkbox select lists is in a toolbar filter for a table or page, for example.
 
 <img src="./img/checkbox-select.png" alt="Example of checkbox select in a toolbar" width="585"/>
 
-#### Multiple select
+### Multiple select
 Multiple select lists allow users to select one or more options from a list, with the selected options marked with a blue check. It differs from the checkbox select in that each option selected by the user appears in the top display area as chips. Once the number of selections reaches a certain number (the default is 3, but you may choose to change this based on your use case), the regular chips will be replaced by a gray chip indicating how many more items were selected (for example, 1 more).
 
 <img src="./img/selectlist-multi.png" alt="Example of multiple select list" width="585"/>
