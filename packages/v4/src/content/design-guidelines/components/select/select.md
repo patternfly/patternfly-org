@@ -9,7 +9,17 @@ related: [
 ]
 ---
 
-**Select lists** enable users to select one or more items from a list. Select lists should also be used when options are dynamic or variable. 
+**Select lists** enable users to select one or more items from a list. Select lists should also be used when options are dynamic or variable.
+
+## Elements
+
+A select component consists of a toggle control to open and close a menu of actions or links. Selects differ from [dropdowns](/components/dropdown) in that they persist selection where dropdowns are typically used to present a list of actions or links.
+
+<img src="./img/basic-select.png" alt="basic select menu" width="303"/>
+
+1. **Toggle:** The toggle is used to open and close the menu. It takes on all of the behaviors of a button. The toggle label always reflects the currently selected item or may hold a placeholder if nothing is selected.
+
+2. **Menu:** The menu contains a list of options or values. Menus should optimally present seven (7) or less items for easy scanning by the user. For longer menus, items may be grouped or scrolling may be exposed by limiting the height of the menu. See the [Menu component guidelines](/components/menu/design-guidelines) for more information about supported options, including use of icons, grouping, and descriptions. The Select component includes many common built-in menu variants. It’s also possible to attach a custom menu by using the [Basic panel variant](/components/select/react#panel).
 
 ## Usage
 
@@ -19,22 +29,22 @@ PatternFly offers several variations of select lists:
 * [Multiple select](#multiple-select)
 * [Typeahead](#typeahead)
 
-#### Single select 
+### Single select
 Single select lists allow users to select a single, mutually exclusive option. When the user selects an option from the list, the selection appears in the toggle.
 
 <img src="./img/single-select.png" alt="Example single select interaction" width="496"/>
 
-#### Checkbox select
-Checkbox select lists allow users to select one or more options from a known list of options, using checkboxes as a selection method. You may choose to have a badge display in the toggle to show how many items have been selected. A common use case for checkbox select lists is in a toolbar filter for a table or page, for example. 
+### Checkbox select
+Checkbox select lists allow users to select one or more options from a known list of options, using checkboxes as a selection method. You may choose to have a badge display in the toggle to show how many items have been selected. A common use case for checkbox select lists is in a toolbar filter for a table or page, for example.
 
 <img src="./img/checkbox-select.png" alt="Example of checkbox select in a toolbar" width="585"/>
 
-#### Multiple select 
-Multiple select lists allow users to select one or more options from a list, with the selected options marked with a blue check. It differs from the checkbox select in that each option selected by the user appears in the top display area as chips. Once the number of selections reaches a certain number (the default is 3, but you may choose to change this based on your use case), the regular chips will be replaced by a gray chip indicating how many more items were selected (for example, 1 more). 
+### Multiple select
+Multiple select lists allow users to select one or more options from a list, with the selected options marked with a blue check. It differs from the checkbox select in that each option selected by the user appears in the top display area as chips. Once the number of selections reaches a certain number (the default is 3, but you may choose to change this based on your use case), the regular chips will be replaced by a gray chip indicating how many more items were selected (for example, 1 more).
 
 <img src="./img/selectlist-multi.png" alt="Example of multiple select list" width="585"/>
 
-### When to use checkbox select versus multiple select 
+### When to use checkbox select versus multiple select
 Both the checkbox select and multiple select lists allow users to select multiple options from a list. However, there are some points to take into consideration when deciding which one to use.
 
 **Use checkbox select when:**
@@ -57,4 +67,3 @@ Typeahead allows users to narrow a displayed list of options by typing into the 
 <img src="./img/typeahead.png" alt="Visual of a typeahead being used" width="361"/>
 
 When providing fewer than 5 options, you can use [radio buttons](/components/radio/react) or [checkboxes](/components/checkbox/react) to display all options to the user simultaneously if you don’t have any space constraints.
-
