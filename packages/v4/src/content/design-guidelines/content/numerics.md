@@ -4,7 +4,7 @@ section: UX writing
 ---
 
 ## Date and time
-All date and time formats should be localizable, not hard-coded. When building localizable date and time formats, development teams should share the same library by using a resource like [moment.js](http://momentjs.com/).  
+All date and time formats should be localizable, not hard-coded. When building localizable date and time formats, development teams should share the same library by using resources like [date-fns](https://date-fns.org/) or [Day.js](https://day.js.org/).
 
 These date and time standards are based in American English, but date and time formats will vary once they're localized.
 
