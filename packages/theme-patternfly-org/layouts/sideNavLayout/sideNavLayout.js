@@ -14,7 +14,8 @@ import {
   DropdownGroup,
   Divider,
   Text,
-  TextVariants
+  TextVariants,
+  SkipToContent
 } from '@patternfly/react-core';
 import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
@@ -206,6 +207,7 @@ export const SideNavLayout = ({ children, groupedRoutes }) => {
         header={Header}
         sidebar={SideBar}
         isManagedSidebar
+        skipToContent={<SkipToContent href="#ws-page-main">Skip to content</SkipToContent>}
       >
         {children}
       </Page>

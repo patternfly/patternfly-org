@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.69](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.68...patternfly-org-4@4.2.69) (2020-11-04)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## [4.2.68](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.67...patternfly-org-4@4.2.68) (2020-11-03)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## [4.2.67](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.66...patternfly-org-4@4.2.67) (2020-11-03)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## [4.2.66](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.65...patternfly-org-4@4.2.66) (2020-11-02)
+
+
+### Bug Fixes
+
+* **docs:** fix double dashes where they've been replaced by em dashes ([#2247](https://github.com/patternfly/patternfly-org/issues/2247)) ([d4eaf53](https://github.com/patternfly/patternfly-org/commit/d4eaf5396d2b9ac0af789cfdb9c722b909cec294))
+
+
+
+
+
+## [4.2.65](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.64...patternfly-org-4@4.2.65) (2020-10-30)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
 ## [4.2.64](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.63...patternfly-org-4@4.2.64) (2020-10-29)
 
 **Note:** Version bump only for package patternfly-org-4

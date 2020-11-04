@@ -29,7 +29,7 @@ If you're a developer, check out our [getting started](/get-started/develop#usin
       </FlexItem>
       <FlexItem>
         <p>Small (10px)</p>
-        <code>--pf-global--icon--FontSize—sm</code>
+        <code>--pf-global--icon--FontSize--sm</code>
       </FlexItem>
     </Flex>
     <Flex className="ws-icon-sizes ws-icon-sizes-md" alignItems={{ default: 'alignItemsFlexStart' }}>
@@ -38,7 +38,7 @@ If you're a developer, check out our [getting started](/get-started/develop#usin
       </FlexItem>
       <FlexItem>
         <p>Medium (18px)</p>
-        <code>--pf-global--icon--FontSize—md</code>
+        <code>--pf-global--icon--FontSize--md</code>
       </FlexItem>
     </Flex>
     <Flex className="ws-icon-sizes ws-icon-sizes-lg" alignItems={{ default: 'alignItemsFlexStart' }}>
@@ -47,7 +47,7 @@ If you're a developer, check out our [getting started](/get-started/develop#usin
       </FlexItem>
       <FlexItem>
         <p>Large (24px)</p>
-        <code>--pf-global--icon--FontSize—lg</code>
+        <code>--pf-global--icon--FontSize--lg</code>
       </FlexItem>
     </Flex>
     <Flex className="ws-icon-sizes ws-icon-sizes-xl" alignItems={{ default: 'alignItemsFlexStart' }}>
@@ -56,7 +56,7 @@ If you're a developer, check out our [getting started](/get-started/develop#usin
       </FlexItem>
       <FlexItem>
         <p>X-large (54px)</p>
-        <code>--pf-global--icon--FontSize—xl</code>
+        <code>--pf-global--icon--FontSize--xl</code>
       </FlexItem>
     </Flex>
   </GridItem>
