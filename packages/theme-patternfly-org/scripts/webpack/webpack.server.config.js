@@ -14,10 +14,6 @@ const serverConfig = () => {
       new webpack.DefinePlugin({
         'process.env.PRERENDER': true // In app.js don't call ReactDOM.render
       }),
-      new webpack.NormalModuleReplacementPlugin(
-        /d3-timer/, // This stops prerender from hanging in `yarn build:client`
-        res => res.request = require.resolve('theme-patternfly-org/helpers/d3-timer.js')
-      )
     ],
     optimization: {
       removeAvailableModules: false,
@@ -31,12 +27,22 @@ const serverConfig = () => {
           test: /\.css$/,
           use: 'null-loader'
         },
+        // This does weird things to document
         {
-          test: /\.js$/,
-          include: /[\\/]node_modules[\\/]novnc-core/,
+          test: /novnc-core\/.*\.js/,
           use: 'null-loader'
         }
       ]
+    },
+    resolve: {
+      alias: {
+        // This stops prerender from hanging in `yarn build:client`
+        'd3-timer': 'theme-patternfly-org/helpers/d3-timer',
+        // The maintainer will not allow his bundle to be required from a node context
+        // https://github.com/xtermjs/xterm.js/pull/3134
+        'xterm':  'theme-patternfly-org/helpers/xterm',
+        'xterm-addon-fit':  'theme-patternfly-org/helpers/xterm-addon-fit',
+      },
     },
     // Load in prerender.js instead
     externals: ['react', 'react-dom', '@reach/router']
