@@ -21,7 +21,7 @@ While form control styles differ slightly depending on the component, they all u
 Status controls are the most prominent form control. Error, warning, and success variations should be used in real time to give users feedback on their inputs or selections.
 
 #### Error controls
-Use error controls when a user inputs incorrect information or selects an invalid option from a dropdown menu. Error indicators are often accompanied by helper text to further specify the user error. Read more on error messagin in the [forms guidelines](https://www.patternfly.org/v4/components/form/design-guidelines#errors-and-validation).
+Use error controls when a user inputs incorrect information or selects an invalid option from a dropdown menu. Error indicators are often accompanied by helper text to further specify the user error. Read more on error messaging in the [forms guidelines](https://www.patternfly.org/v4/components/form/design-guidelines#errors-and-validation).
 
 <img src="./img/formcontrol.gif" alt="Incorrect input gif" width="566px"/>
 
