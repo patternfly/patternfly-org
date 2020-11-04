@@ -10,7 +10,7 @@ Form control can be applied to various input components, including text boxes, d
 ## Control types
 While form control styles differ slightly depending on the component, they all use some combination of underlines, color, and icons to give users **feedback** on their inputs and selections. For example, if a user types an invalid string into a text box, the box changes state to indicate the error.
 
-<img src="./img/formControlTypes.png" alt="Form control types" />
+<img src="./img/formControlTypes.png" alt="Form control types" width="661px"/>
 
 1. **Default component:** State of the input component before any form control is applied.
 2. **Status area:** Icon and underline color indicate the status of the input or selection.
@@ -21,14 +21,14 @@ While form control styles differ slightly depending on the component, they all u
 Status controls are the most prominent form control. Error, warning, and success variations should be used in real time to give users feedback on their inputs or selections.
 
 #### Error controls
-Use error controls when a user inputs incorrect information or selects an invalid option from a dropdown menu. Error indicators are often accompanied by helper text to further specify the user error.
+Use error controls when a user inputs incorrect information or selects an invalid option from a dropdown menu. Error indicators are often accompanied by helper text to further specify the user error. Read more on error messagin in the [forms guidelines](https://www.patternfly.org/v4/components/form/design-guidelines#errors-and-validation).
 
-<img src="./img/formcontrol.gif" alt="Incorrect input gif" />
+<img src="./img/formcontrol.gif" alt="Incorrect input gif" width="566px"/>
 
 #### Success controls
 Use success controls to indicate valid user input for fields that require a specific form of input. In the example below, the name entered must be unique, so the success state indicates availability. Alternatively, an error control would be used to indicate a name that is already in use. **Only use success controls if the input must be validated.**
 
-<img src="./img/success_example.png" alt="Valid input example" />
+<img src="./img/success_example.png" alt="Valid input example" width="762px"/>
 
 ### Gray-out controls
 Input fields should be grayed out when the user cannot perform actions. Gray-out controls indicate that a field is either temporarily disabled, or permanently read-only.
@@ -38,19 +38,19 @@ Disable controls indicate dependency and can be used to guide the user in a sequ
 
 Use the disabled state when input is required in **all** use cases, but content depends on prior actions. Alternatively, if a previous action eliminates the need for an input entirely, the component should be hidden rather than disabled.
 
-<img src="./img/disable_example.png" alt="Disabled input example" />
+<img src="./img/disable_example.png" alt="Disabled input example" width="762px"/>
 
 #### Read only controls
 Use the read only state when an input will *never* be editable. This state differs slightly from the disabled state, as shown below.
 
-<img src="./img/greyedout.png" alt="Gray-out input" />
+<img src="./img/greyedout.png" alt="Gray-out input" width="644px"/>
 
 ### Custom icons
 Icons can be included within form fields to indicate the type of input required. The most common example is the Search field, shown below. All icons should be right-aligned within the input component.
 
-<img src="./img/search.png" alt="Search field" />
+<img src="./img/search.png" alt="Search field" width="644px" />
 
-As a designer, you can choose to design input components with *custom* icons. Make sure that whatever icon you choose informs the user about the type of input that field requires.
+As a designer, you can choose to design input components with custom icons. Make sure that whatever icon you choose informs the user about the type of input that field requires.
 
 ### General guidelines
 While form controls are useful in providing feedback on user input, they don't need to be implemented for every input instance. Only use form controls when it is essential to convey information to the user. For example, if any string is valid for a text input, or any selection in a list is acceptable, form controls are not necessary.
