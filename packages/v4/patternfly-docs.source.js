@@ -5,7 +5,7 @@ module.exports = (sourceMD, sourceProps) => {
   const contentBase = path.join(__dirname, 'src/content');
   sourceMD(path.join(contentBase, 'contribute/**/*.md'), 'pages-contribute');
   sourceMD(path.join(contentBase, 'get-started/**/*.md'), 'pages-get-started');
-  sourceMD(path.join(contentBase, 'developer-resources/**/*.md'), 'pages-developer-resources');
+  sourceMD(path.join(contentBase, 'developer-resources/**/*.md'), 'developer-resources');
   sourceMD(path.join(contentBase, 'design-guidelines/**/*.md'), 'design-guidelines');
 
   // Theme pages
@@ -18,9 +18,21 @@ module.exports = (sourceMD, sourceProps) => {
   const coreDocsPath = require
     .resolve('@patternfly/patternfly/package.json')
     .replace('package.json', 'docs');
-  const coreDocsIgnore = path.join(coreDocsPath, '/pages/**'); // Compatibility for old gatsby workspace
+  const coreDocsIgnore = [
+    path.join(coreDocsPath, '/pages/**'), // Compatibility for old gatsby workspace
+    path.join(coreDocsPath, '/utilities/**'),
+  ];
   sourceMD(path.join(coreDocsPath, '!(demos)/**/examples/**/*.md'), 'html', coreDocsIgnore);
   sourceMD(path.join(coreDocsPath, 'demos/**/*.md'), 'html-demos', coreDocsIgnore);
+  // Individually source Core css utilities
+  sourceMD(path.join(coreDocsPath, 'utilities/**/Accessibility.md'), 'Accessibility');
+  sourceMD(path.join(coreDocsPath, 'utilities/**/Alignment.md'), 'Alignment');
+  sourceMD(path.join(coreDocsPath, 'utilities/**/box-shadow.md'), 'box-shadow');
+  sourceMD(path.join(coreDocsPath, 'utilities/**/Display.md'), 'Display');
+  sourceMD(path.join(coreDocsPath, 'utilities/**/Flex.md'), 'Flex');
+  sourceMD(path.join(coreDocsPath, 'utilities/**/Float.md'), 'Float');
+  sourceMD(path.join(coreDocsPath, 'utilities/**/Sizing.md'), 'Sizing');
+  sourceMD(path.join(coreDocsPath, 'utilities/**/Spacing.md'), 'Spacing');
 
   // React props
   const reactCorePath = require

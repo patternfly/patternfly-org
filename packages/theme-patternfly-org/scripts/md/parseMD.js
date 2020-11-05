@@ -225,6 +225,7 @@ function sourceMDFile(file, source) {
       source: pageData.source,
     };
   }
+  if (source==='developer-resources') console.log(routes[pageData.slug]);
 }
 
 const globs = {
