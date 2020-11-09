@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.3...theme-patternfly-org@0.2.4) (2020-11-09)
+
+
+### Bug Fixes
+
+* **theme:** move react to peer dep ([#2259](https://github.com/patternfly/patternfly-org/issues/2259)) ([cf6f0b9](https://github.com/patternfly/patternfly-org/commit/cf6f0b92223d97eb5273f88f4ecddb8bee275614))
+
+
+
+
+
 ## [0.2.3](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.2...theme-patternfly-org@0.2.3) (2020-11-09)
 
 **Note:** Version bump only for package theme-patternfly-org
