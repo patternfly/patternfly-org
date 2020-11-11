@@ -26,7 +26,6 @@
 
 /* Search */
 #ws-global-search-wrapper {
-  transition: 250ms;
   /* For icon */
   position: relative;
 }
@@ -47,7 +46,7 @@
 }
 #ws-global-search-wrapper > .global-search-icon {
   position: absolute;
-  top: 12px;
+  top: 10px;
   left: 4px;
 }
 #ws-global-search,
@@ -91,4 +90,8 @@
 /* For tiny (200px) viewports */
 .ws-org-version-switcher .pf-c-dropdown__toggle  >.pf-c-dropdown__toggle-text {
   white-space: normal;
+}
+
+.ws-github-pageheader {
+  color: var(--pf-global--Color--light-100) !important;
 }

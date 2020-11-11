@@ -13,6 +13,7 @@ import {
   TextVariants
 } from '@patternfly/react-core';
 import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
+import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
 import orb from '../images/pf4-logo.svg';
 import accessible from '../images/accessible.svg';
 import modular from '../images/modular.svg';
@@ -46,13 +47,9 @@ const HomePage = () => (
               >
                 Get started
               </Link>
-              <Link
-                to="/contribute/about"
-                className="pf-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour"
-                aria-label="Contribute to PatternFly"
-              >
-                Contribute
-              </Link>
+              <a className="pf-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour" href="//github.com/patternfly" target="_blank">
+                <GithubIcon className="pf-u-mr-sm" />Github
+              </a>
             </div>
           </TextContent>
         </GridItem>

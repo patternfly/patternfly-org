@@ -179,7 +179,7 @@ export const Footer = () => (
             <GridItem className="ws-org-pfsite-footer-menu-social-links pf-u-px-xl">
               <Text
                 component={TextVariants.a}
-                href="//github.com/patternfly/patternfly"
+                href="//github.com/patternfly"
                 target="top"
                 aria-label="Link to PatternFly GitHub page"
               >
