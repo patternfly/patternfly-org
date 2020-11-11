@@ -51,15 +51,16 @@ const HeaderTools = ({
   return (
     <PageHeaderTools>
       <PageHeaderToolsItem>
-        <Text
-          component={TextVariants.a}
+        <Button
+          component="a"
+          variant="link"
           href="//github.com/patternfly"
           target="top"
           aria-label="Link to PatternFly GitHub page"
-          className="ws-github-pageheader pf-u-mr-md"
+          className="ws-github-pageheader"
         >
           <GithubIcon />
-        </Text>
+        </Button>
       </PageHeaderToolsItem>
       {hasSearch && (
         <PageHeaderToolsItem id="ws-global-search-wrapper" className={isSearchExpanded ? '' : 'ws-hide-search-input'}>
