@@ -1,6 +1,6 @@
 ---
 id: Global CSS variables
-section: get-started
+section: developer-resources
 ---
 
 import { CSSVariables } from '../components/cssVariables/cssVariables';

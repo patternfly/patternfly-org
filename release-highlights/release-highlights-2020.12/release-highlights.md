@@ -24,7 +24,7 @@ Label groups have similar properties to Chip groups. They can include an optiona
 
 ![label group](./img/label-group.png)
 
-See the [latest release notes](https://www.patternfly.org/v4/get-started/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 ### Web site changes
 Also with this release we are introducing a new website experience at [www.patternfly.org](http://www.patternfly.org). This update will make it easier to find content and browse examples.

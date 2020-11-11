@@ -1,6 +1,6 @@
 ---
 id: Training
-section: get-started
+section: developer-resources
 source: html
 katacodaBroken: true
 ---

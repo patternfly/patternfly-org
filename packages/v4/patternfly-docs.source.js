@@ -5,6 +5,7 @@ module.exports = (sourceMD, sourceProps) => {
   const contentBase = path.join(__dirname, 'src/content');
   sourceMD(path.join(contentBase, 'contribute/**/*.md'), 'pages-contribute');
   sourceMD(path.join(contentBase, 'get-started/**/*.md'), 'pages-get-started');
+  sourceMD(path.join(contentBase, 'developer-resources/**/*.md'), 'developer-resources');
   sourceMD(path.join(contentBase, 'design-guidelines/**/*.md'), 'design-guidelines');
 
   // Theme pages

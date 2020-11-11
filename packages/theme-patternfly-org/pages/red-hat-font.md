@@ -1,6 +1,6 @@
 ---
 id: Red Hat font
-section: get-started
+section: developer-resources
 ---
 
 PR - [https://github.com/patternfly/patternfly/pull/1813](https://github.com/patternfly/patternfly/pull/1813)

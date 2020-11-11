@@ -20,7 +20,7 @@ Here are a few best practices for creating accessible content:
 
 - Use proper heading levels (H1, H2) to articulate the page content’s organization. Headings are useful in identifying content changes, and machine translation recognizes each heading level as a new segment, which is important with text-laden pages. Headings are ranked hierarchically from H1 through H6, with H1 headings representing the most important idea on a page. 
 
- - Consistently [describe UI elements](https://www.patternfly.org/v4/get-started/accessibility-guide) in tooltips and product documentation. For example:  
+ - Consistently [describe UI elements](https://www.patternfly.org/v4/developer-resources/accessibility-guide) in tooltips and product documentation. For example:  
     - Kebab icon tooltip text: More options
     - Product documentation: Click **More options**. 
 
