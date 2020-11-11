@@ -50,18 +50,6 @@ const HeaderTools = ({
 
   return (
     <PageHeaderTools>
-      <PageHeaderToolsItem>
-        <Button
-          component="a"
-          variant="link"
-          href="//github.com/patternfly"
-          target="top"
-          aria-label="Link to PatternFly GitHub page"
-          className="ws-github-pageheader"
-        >
-          <GithubIcon />
-        </Button>
-      </PageHeaderToolsItem>
       {hasSearch && (
         <PageHeaderToolsItem id="ws-global-search-wrapper" className={isSearchExpanded ? '' : 'ws-hide-search-input'}>
           <TextInput id="ws-global-search" ref={searchRef} placeholder="Search" />
@@ -70,22 +58,34 @@ const HeaderTools = ({
       )}
       {hasSearch && (
         <Button
-          aria-label={`${isSearchExpanded ? 'Collapse' : 'Expand'} search input`}
-          variant="plain"
-          className="ws-toggle-search"
-          onClick={() => {
+        aria-label={`${isSearchExpanded ? 'Collapse' : 'Expand'} search input`}
+        variant="plain"
+        className="ws-toggle-search"
+        onClick={() => {
             setSearchExpanded(!isSearchExpanded);
             if (!isSearchExpanded) {
               setTimeout(() => searchRef.current && searchRef.current.focus(), 0);
             }
           }}
-        >
+          >
           {isSearchExpanded
             ? <TimesIcon />
             : <SearchIcon className="global-search-icon" />
           }
         </Button>
       )}
+      <PageHeaderToolsItem>
+        <Button
+          component="a"
+          variant="link"
+          href="//github.com/patternfly"
+          target="top"
+          aria-label="Link to PatternFly GitHub page"
+          className="ws-github-pageheader pf-u-mr-sm"
+        >
+          <GithubIcon />
+        </Button>
+      </PageHeaderToolsItem>
       {hasVersionSwitcher && (
         <PageHeaderToolsItem>
           <Dropdown
