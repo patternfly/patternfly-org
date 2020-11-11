@@ -19,6 +19,7 @@ module.exports = {
     { section: 'charts' },
     { section: 'demos' },
     { section: 'layouts' },
+    { section: 'utilities' },
     { section: 'contribute' },
     { href: '/community' }
   ],

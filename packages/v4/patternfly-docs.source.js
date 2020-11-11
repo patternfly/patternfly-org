@@ -18,21 +18,9 @@ module.exports = (sourceMD, sourceProps) => {
   const coreDocsPath = require
     .resolve('@patternfly/patternfly/package.json')
     .replace('package.json', 'docs');
-  const coreDocsIgnore = [
-    path.join(coreDocsPath, '/pages/**'), // Compatibility for old gatsby workspace
-    path.join(coreDocsPath, '/utilities/**'),
-  ];
+  const coreDocsIgnore = path.join(coreDocsPath, '/pages/**'); // Compatibility for old gatsby workspace
   sourceMD(path.join(coreDocsPath, '!(demos)/**/examples/**/*.md'), 'html', coreDocsIgnore);
   sourceMD(path.join(coreDocsPath, 'demos/**/*.md'), 'html-demos', coreDocsIgnore);
-  // Individually source Core css utilities
-  sourceMD(path.join(coreDocsPath, 'utilities/**/Accessibility.md'), 'Accessibility');
-  sourceMD(path.join(coreDocsPath, 'utilities/**/Alignment.md'), 'Alignment');
-  sourceMD(path.join(coreDocsPath, 'utilities/**/box-shadow.md'), 'box-shadow');
-  sourceMD(path.join(coreDocsPath, 'utilities/**/Display.md'), 'Display');
-  sourceMD(path.join(coreDocsPath, 'utilities/**/Flex.md'), 'Flex');
-  sourceMD(path.join(coreDocsPath, 'utilities/**/Float.md'), 'Float');
-  sourceMD(path.join(coreDocsPath, 'utilities/**/Sizing.md'), 'Sizing');
-  sourceMD(path.join(coreDocsPath, 'utilities/**/Spacing.md'), 'Spacing');
 
   // React props
   const reactCorePath = require
