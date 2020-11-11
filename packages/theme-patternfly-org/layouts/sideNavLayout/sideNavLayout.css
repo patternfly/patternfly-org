@@ -29,9 +29,6 @@
   /* For icon */
   position: relative;
 }
-#ws-global-search-wrapper:not(.ws-hide-search-input) {
-  margin-left: var(--pf-global--spacer--sm);
-}
 #ws-global-search {
   background-color: transparent;
   border: none;
