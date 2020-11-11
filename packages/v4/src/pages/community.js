@@ -6,6 +6,11 @@ import communityPageHeader from './community-page-header.svg';
 import community1 from './community-1.svg';
 import community2 from './community-2.svg';
 import community3 from './community-3.svg';
+import ChatIcon from '@patternfly/react-icons/dist/esm/icons/chat-icon';
+import QuestionIcon from '@patternfly/react-icons/dist/esm/icons/question-icon';
+import CatalogIcon from '@patternfly/react-icons/dist/esm/icons/catalog-icon';
+import MailBulkIcon from '@patternfly/react-icons/dist/esm/icons/mail-bulk-icon';
+import TwitterIcon from '@patternfly/react-icons/dist/esm/icons/twitter-icon';
 
 const CommunityPage = () => (
   <PageSection variant={PageSectionVariants.light}>
@@ -34,7 +39,7 @@ const CommunityPage = () => (
             Flyers may be spread all over the globe, but we make sure to come together once a month to share updates and collect feedback. All meetings are recorded and published on <a href="https://www.youtube.com/channel/UCqLT0IEvYmb8z__9IFLSVyQ">PatternFly’s YouTube channel</a>, and you can join PatternFly’s mailing list for the invites.
           </p>
           <Title size="xl" className="ws-title" headingLevel="h4">
-          <Link to="/get-in-touch">
+          <Link to="#get-in-touch">
             <strong>Join our mailing list</strong>
           </Link>
           </Title>
@@ -68,13 +73,56 @@ const CommunityPage = () => (
       <br/>
       <p><a href="https://patternfly.github.io/patternfly-elements/"><strong>PatternFly Elements:</strong></a> PatternFly Elements is a community created by Red Hat's web-based developers. It focuses on creating web components for use across Red Hat's sites and SaaS products and features theming options available for your own brand library.</p>
 
-      <Title size="4xl" className="pf-u-mb-lg ws-page-title pf-u-text-align-center ws-keep-growing pf-u-mt-3xl" headingLevel="h2">Let's keep growing</Title>
-      <p className="pf-u-text-align-center">The PatternFly community is never finished growing, and we want to keep it that way. Feel free to contribute whenever — we’re always open.</p>
+      <Title size="4xl" className="pf-u-mb-lg ws-page-title ws-keep-growing pf-u-mt-3xl" headingLevel="h2">Let's keep growing</Title>
+      <p>The PatternFly community is never finished growing, and we want to keep it that way. Feel free to reach out whenever — we’re always open.</p>
 
-      <p className="pf-u-text-align-center ws-get-in-touch">
-        <Link to="/get-in-touch"><strong>Get in touch</strong></Link>
-      </p>
-
+      <Grid sm={12} md={6} gutter="sm" className="pf-u-my-lg pf-l-grid pf-m-all-12-col-on-sm pf-m-all-6-col-on-md pf-m-gutter" style={{ maxWidth: '450px' }}>
+        <GridItem>
+          <Split>
+            <SplitItem style={{ marginRight: '12px' }}><ChatIcon /></SplitItem>
+            <SplitItem isFilled>
+              <Title size="lg" className="ws-title" headingLevel="h4">Chat with us</Title>
+              <a href="//slack.patternfly.org/" target="_blank" rel="noopener noreferrer">Slack</a>
+            </SplitItem>
+          </Split>
+        </GridItem>
+        <GridItem>
+          <Split>
+            <SplitItem style={{ marginRight: '12px' }}><MailBulkIcon /></SplitItem>
+            <SplitItem isFilled>
+              <Title size="lg" className="ws-title" headingLevel="h4">Stay in the loop</Title>
+              <a href="//www.redhat.com/mailman/listinfo/patternfly" target="_blank" rel="noopener noreferrer">PatternFly mailing list</a>
+            </SplitItem>
+          </Split>
+        </GridItem>
+        <GridItem>
+          <Split>
+            <SplitItem style={{ marginRight: '12px' }}><QuestionIcon /></SplitItem>
+            <SplitItem isFilled>
+              <Title size="lg" className="ws-title" headingLevel="h4">Ask a question</Title>
+              <a href="//forum.patternfly.org/" target="_blank" rel="noopener noreferrer">PatternFly forum</a>
+            </SplitItem>
+          </Split>
+        </GridItem>
+        <GridItem>
+          <Split>
+            <SplitItem style={{ marginRight: '12px' }}><CatalogIcon /></SplitItem>
+            <SplitItem isFilled>
+              <Title size="lg" className="ws-title" headingLevel="h4">Read the latest</Title>
+              <a href="//medium.com/patternfly" target="_blank" rel="noopener noreferrer">PatternFly Medium</a>
+            </SplitItem>
+          </Split>
+        </GridItem>
+        <GridItem>
+          <Split>
+            <SplitItem style={{ marginRight: '12px' }}><TwitterIcon /></SplitItem>
+            <SplitItem isFilled>
+              <Title size="lg" className="ws-title" headingLevel="h4">Send us a Tweet</Title>
+              <a href="//twitter.com/patternfly" target="_blank" rel="noopener noreferrer">PatternFly Twitter</a>
+            </SplitItem>
+          </Split>
+        </GridItem>
+      </Grid>
     </div>
   </PageSection>
 );

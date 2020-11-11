@@ -19,8 +19,7 @@ module.exports = {
     { section: 'demos' },
     { section: 'layouts' },
     { section: 'contribute' },
-    { href: '/community' },
-    { href: '/get-in-touch' },
+    { href: '/community' }
   ],
   topNavItems: [],
   port: 8003,
