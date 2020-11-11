@@ -6,7 +6,7 @@ export const DesignGuidelineTemplate = (
     We’re working on some guidelines for this component.
     {' '}If you have any questions in the meantime, feel free to
     {' '}
-    <Link to="/get-in-touch">
+    <Link to="/community#get-in-touch">
       get in touch with us.
     </Link>
   </React.Fragment>
