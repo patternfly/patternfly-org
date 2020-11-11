@@ -45,7 +45,7 @@ function toReactComponent(mdFilePath, source) {
       if (frontmatter.section === 'overview') {
         // Temporarily override section until https://github.com/patternfly/patternfly-react/pull/4862 is in react-docs
         // Affected pages are release notes and upgrade guides
-        frontmatter.section = 'get-started';
+        frontmatter.section = 'developer-resources';
       }
       source = frontmatter.source || source;
       const slug = makeSlug(source, frontmatter.section, frontmatter.id);
