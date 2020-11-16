@@ -48,6 +48,24 @@ const HeaderTools = ({
   );
   const searchRef = React.useRef();
 
+  useEffect(() => {
+    const handleSearchHotkeys = (event) => {
+      const tagName = event.target.tagName.toLowerCase();
+      if (
+        (event.code === 'Slash' || event.code === 'KeyS') &&
+        tagName !== 'input' &&
+        tagName !== 'textarea'
+      ) {
+        setSearchExpanded(true);
+        setTimeout(() => searchRef.current && searchRef.current.focus(), 0);
+      } else if (event.code === 'Escape' && event.target === searchRef.current) {
+        setSearchExpanded(false);
+      }
+    };
+    window.addEventListener('keyup', handleSearchHotkeys);
+    return () => window.removeEventListener('keyup', handleSearchHotkeys);
+  }, []);
+
   return (
     <PageHeaderTools>
       {hasSearch && (
