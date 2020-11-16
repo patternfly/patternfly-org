@@ -2,11 +2,11 @@
 id: Chip group
 section: components
 ---
-**Chip groups** are used to represent an attribute that has been assigned one or more values. An OR relationship is implied between values in the group. Chip groups are useful to express complex filters to a data set, for example.
+A **chip group** represents an attribute that has been assigned one or more values. An OR relationship is implied between values in the group. Chip groups are useful to express complex filters to a data set, for example.
 
 ## Elements
 
-Chip groups contain two elements in them.
+Chip groups contain two elements.
 
 <img src="./img/chip-group-elements.png" alt="Chip group elements" width="148" />
 

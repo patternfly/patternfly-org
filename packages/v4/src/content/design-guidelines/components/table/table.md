@@ -40,10 +40,10 @@ The elements mentioned below are similar for a table with compact or default spa
 ### Table capabilities
 Every table can be extended with these functionalities: 
 
-* **[Expandable table](#expandable-table)**
-* **[Compound expandable table](#compound-expandable-table)**
-* **[Actionable table](#actionable-table)**
-* **[Sortable table](#sorting-by-columns)**
+* [Expandable table](#expandable-table)
+* [Compound expandable table](#compound-expandable-table)
+* [Actionable table](#actionable-table)
+* [Sortable table](#sorting-by-columns)
 
 ### Expandable table
 

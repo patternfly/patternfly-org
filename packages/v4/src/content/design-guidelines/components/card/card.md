@@ -3,11 +3,11 @@ id: Card
 section: components
 ---
 
-A **card** is a square or rectangular container that can contain any kind of content. Cards symbolize units of information, and each one acts as an entry point for users to access more details. For example, in dashboards and catalog views, cards function as a preview of a detailed page. Cards may also be used in data displays (e.g. Card View), or for positioning content on a page.  
+A **card** is a square or rectangular container that can contain any kind of content. Cards symbolize units of information, and each one acts as an entry point for users to access more details. For example, in dashboards and catalog views, cards function as a preview of a detailed page. Cards may also be used in data displays like card views, or for positioning content on a page.  
 
 ## Elements
 
-A card usually consists of  3 parts: 
+A card usually consists of 3 parts: 
 
 <img src="./img/card.png" alt="3 parts of a card" width="394"/>  
 
@@ -16,10 +16,10 @@ A card usually consists of  3 parts:
 2. **Body**: Brief details about the group
 3. **Footer**: Links to access more information about the group 
 
-Cards are flexible, and you can customize them in a variety of ways:
-- A card can contain a header with an image, actions, and a body.
-- A card can contain only a header and a body. 
-- A card can contain a header with an image, a body, and footer. 
+Cards are flexible, and you can customize them in a variety of ways. A card can contain:
+- A header with an image, actions, and a body.
+- Only a header and a body. 
+- A header with an image, a body, and footer. 
 
 PatternFly supports two types of cards: 
 1. **Compact (recommended):** Compact cards use 16px spacing with an 8px spacer between the header and body and 16px between the body and footer.

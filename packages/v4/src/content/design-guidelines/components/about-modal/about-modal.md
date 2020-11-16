@@ -4,7 +4,7 @@ section: components
 related: ['About modal', 'Backdrop', 'Background image', 'Button']
 ---
 
-The **about modal** displays information about an application like product version number(s), as well as any appropriate legal text.
+An **about modal** displays information about an application like product version number(s), as well as any appropriate legal text.
 
 ## Primary elements
 
@@ -23,10 +23,10 @@ The **about modal** displays information about an application like product versi
 8. **Trademark and copyright information:** Optionally include legal text. Suggested format for copyright -  Copyright (c) 2018 Company
 
 ## Usage
-Use the about modal to provide information about the product including the product name, logo, version numbers, and any appropriate legal text.
+Use an about modal to provide information about a product including the product name, logo, version numbers, and any appropriate legal text.
 
 **Accessing the about modal**
 
-Provide access to the about modal using a help icon in the application masthead. Clicking the help icon will launch a dropdown menu. The help menu should always include an option labeled "About" that launches the about modal.
+Provide access to an about modal using a help icon in the application masthead. Clicking the help icon will launch a dropdown menu. The help menu should always include an option labeled "About" that launches the about modal.
 
 <img src="./img/about-dropdown.png" alt="About modal dropdown" />
