@@ -91,6 +91,9 @@ const generator = Object.assign({}, baseGenerator, {
     state.write('=');
     this[node.value.type](node.value, state);
     state.write(';');
+  },
+  JSXEmptyExpression(_node, state) {
+    state.write('null');
   }
 });
 
