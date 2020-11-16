@@ -25,6 +25,7 @@ const MDXChildTemplate = ({
   const propsTitle = propComponents.length > 0 && 'Props';
   if (propsTitle && !toc.find(item => item.text === propsTitle)) {
     toc.push({ text: propsTitle });
+    toc.push(propComponents.map(propComponent => ({ text: propComponent.name })));
   }
   if (cssVarsTitle && !toc.find(item => item.text === cssVarsTitle)) {
     toc.push({ text: cssVarsTitle });
@@ -79,7 +80,7 @@ const MDXChildTemplate = ({
               {propComponents.map(component => (
                 <PropsTable
                   key={component.name}
-                  caption={`${component.name} properties`}
+                  title={component.name}
                   rows={component.props} />
               ))}
             </React.Fragment>
