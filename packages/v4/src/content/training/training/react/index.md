@@ -1,8 +1,7 @@
 ---
-id: Training
-section: developer-resources
+id: About
+section: training
 source: react
-katacodaBroken: true
 ---
 
 import { Gallery, GalleryItem } from '@patternfly/react-core';
