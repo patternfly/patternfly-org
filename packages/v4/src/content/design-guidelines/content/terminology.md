@@ -74,6 +74,9 @@ _For Red Hat product terminology and documentation standards, see [Red Hat's sup
 - Opposite: Add
 - Notes: If what you’re removing is not readily apparent from the context, consider adding a noun (like “Remove file”).
 
+**Save** (v.) Use to describe preserving changes made by the user. 
+- Opposite: Cancel
+
 **Select**: (v.) Use to prompt the user to select an item from a list, group, view, or other container element.
 - Opposite: Deselect
 - Notes: Do not use *Choose* for this use case.
