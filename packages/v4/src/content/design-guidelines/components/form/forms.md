@@ -196,11 +196,17 @@ Use progressive disclosure to hide and show fields based on the users’ selecti
  <img src="./img/progressive-disclosure.png" alt="Example of progressive disclosure with one radio button selected to only show those inputs" width="562"/>
 
 ## Errors and validation
-When a form field submission results in an error, let users know as soon as possible. Always present error states on the form using field level errors whenever possible. The error state you can use will depend on whether validation happens on loss of focus or on submission. When an error occurs, any placeholder text will no longer be visible as it will be replaced by the user’s input. Additionally, field level errors will replace any existing helper text until the error is fixed. Therefore, it is important that your error message explains what the user can do to fix it, beyond stating that there is an error.
+When a form field submission results in an error, let users know as soon as possible. Always present error states on the form using field level errors whenever possible.
+
+Alternatively, you can also choose to emphasize errors using an inline error at the top of the form. Note that the inline error should always be a supplemental component, used *in addition* to field-level errors, and its message should generally describe the problem.
+
+When an error occurs, any placeholder text will no longer be visible as it will be replaced by the user’s input. Additionally, field level errors will replace any existing helper text until the error is fixed. Therefore, it is important that your error message not only points out the error, but also explains what the user can do to fix it.
 
 For example, instead of simply telling the user there is an “invalid input”,  error messages should specify the correct format to re-write the input in such as “Date format must be MM-YY-DD”.
 
  <img src="./img/error-message.png" alt="Visualized example for right vs. wrong way to write an input error" width="649"/>
+
+ There are two ways to validate errors: on **loss of focus** and **on submission**. The error state you use depends on whether validation happens on the client-side or the server-side.
 
 ### Validation on loss of focus
 Validation on loss of focus can be performed as soon as a field loses focus. It alerts users of errors or issues immediately after they complete their input, through inline validation, allowing users to quickly see and address issues.
@@ -213,10 +219,9 @@ Some common use cases include:
 ### Validation on submission
 Validation on submission is performed when the user attempts to submit a form. In this scenario, the user completes the form in its entirety and the page is reloaded with any errors detected. 
 
-For validation on submission, use an [inline alert](/components/alert/design-guidelines#inline-alerts) along with field level errors wherever possible to make it simple for the user to quickly identify areas that need to be fixed.
-Notifications should describe the error and help users solve the problem.
+For validation on submission, use an [inline alert](/components/alert/design-guidelines#inline-alerts) along with field level errors. This combination of error types should make it simple for the user to quickly identify areas that need to be fixed. The inline alert should be placed below the form's header and description, and should take on the width of the form. Inline alerts should describe the general error, but refrain from going into great detail.
 
-<img src="./img/error-validation.png" alt="Example of errors after validation on submission, including an inline alert at the top, and field level errors" width="459"/>
+<img src="./img/inline_error.png" alt="Example of errors after validation on submission, including an inline alert at the top, and field level errors" width="551"/>
 
 ## Form formatting
 ### Spacing
