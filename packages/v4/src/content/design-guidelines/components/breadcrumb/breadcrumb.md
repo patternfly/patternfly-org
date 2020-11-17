@@ -2,7 +2,7 @@
 id: Breadcrumb
 section: components
 ---
-**Breadcrumbs** act as a resource to help users navigate more efficiently and provide context to help users understand where they are in the application hierarchy. 
+A **breadcrumb** provides page context to help users navigate more efficiently and understand where they are in the application hierarchy.
 
 ## Usage
 
