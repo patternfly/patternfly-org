@@ -3,7 +3,7 @@ id: Inline edit
 section: components
 ---
 
-Users can use inline edit to switch between a read-only view and an edit view of [description lists](/components/description-list), page text elements, or [tables](/components/table) as needed. In other words, inline editing saves the user from opening a modal window or redirecting to a separate edit page in which the user easily loses the context from the current view. 
+An **inline edit** component allows users to switch between a read-only view and an edit view of [description lists](/components/description-list), page text elements, or [tables](/components/table) as needed. Inline editing saves the user from opening a modal window or redirecting to a separate edit page so that they can edit in context of their current view. 
 
 ## Usage
 
@@ -29,10 +29,10 @@ There are two types of inline edit for forms:
  
 <img src="./img/elements-form-inline-edit.png"  alt="Form inline edit elements"  width="785"/>
  
-1. **Toggle:** pencil toggle indicates the edit action
-2. **[Tooltip](/components/tooltip):** provide a short description of the inline edit toggle
-3. **Action group:** allows to save or cancel changes
-4. **Form elements:** for example [text input](/components/text-input) or [text area](/components/text-area). See [forms](/components/form) for more information about form elements.
+1. **Toggle:** Indicates the edit action
+2. **[Tooltip](/components/tooltip):** Provides a short description of the inline edit toggle
+3. **Action group:** Allows the user to save or cancel changes
+4. **Form elements:** Examples include [text input](/components/text-input) or [text area](/components/text-area). See [forms](/components/form) for more information about form elements.
  
 ### Field-specific edit
  
@@ -67,14 +67,14 @@ There is one type of inline edit for tables:
  
 <img src="./img/table-inline-edit-elements.png"  alt="Table inline edit elements"  width="1010"/>
  
-1. **Editable inactive row:** inactive row with read-only styling
-2. **Editable active row:** ability to edit form components is enabled
-3. **Disabled input field:** unclickable and unusable input field
-4. **Editable input field:** changes for this input are allowed
-5. **Active input:** selected input field with new content
-6. **Action group:** allows user to save or cancel changes
-7. **[Tooltip](/components/tooltip):** provides a short description of the inline edit toggle
-8. **Toggle:** pencil toggle indicates the edit action
+1. **Editable inactive row:** Inactive row with read-only styling
+2. **Editable active row:** Ability to edit form components is enabled
+3. **Disabled input field:** Unclickable and unusable input field
+4. **Editable input field:** Changes for this input are allowed
+5. **Active input:** Selected input field with new content
+6. **Action group:** Allows user to save or cancel changes
+7. **[Tooltip](/components/tooltip):** Provides a short description of the inline edit toggle
+8. **Toggle:** Indicates the edit action
  
 ### Row editing
 Row editing allows a user to edit items that are visible in the table by having a pencil toggle pinned to the right side, with the [kebab](/components/dropdown#with-kebab). 
@@ -86,14 +86,14 @@ Use row editing when:
  
 #### How to use
 Clicking the pencil icon toggles the particular table row into edit mode. In the edit mode:
-* The kebab is replaced with a ‘Check’ for saving and a ‘Close’ icon for canceling. Both icons should be grey until changes have begun to be made.
-* When changes have begun, the check icon turns blue to increase the visibility of the save action.
+* The kebab is replaced with a check icon for saving and a close icon for canceling. Both icons should be grey until changes have begun to be made.
+* Once changes begin, the check icon turns blue to increase the visibility of the save action.
 * **The check icon button** submits the changes and switches the row back to the read-only mode.
 * **The close icon** returns to read-only mode without saving new data.
  
 <img src="./img/row-editing.png"  alt="Row editing"  width="1210"/>
  
-If there are elements that are difficult to edit in a table, you can make them editable in a [modal](/components/modal), for example.
+Some are elements may be difficult to edit in a table. You can make them editable in a [modal](/components/modal) instead.
 
  
 

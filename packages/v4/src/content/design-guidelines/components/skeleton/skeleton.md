@@ -3,10 +3,10 @@ id: Skeleton
 section: components
 ---
 
-A **skeleton** is a type of loading state that allos you to expose content incrementally. For content that may take a long time to load, use a [progress bar](/components/progress/react) in place of a skeleton.
+A **skeleton** is a type of loading state that allows you to expose content incrementally. For content that may take a long time to load, use a [progress bar](/components/progress/react) in place of a skeleton.
 
 ## Usage 
-Skeleton loading should be progressive - it should load static text first, followed by variable elements of the UI.
+Skeleton loading should be progressive –– it should load static text first, followed by variable elements of the UI.
 
 ### When to use a skeleton vs. a loading spinner
 

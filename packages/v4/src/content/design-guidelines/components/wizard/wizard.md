@@ -3,7 +3,7 @@ id: Wizard
 section: components
 ---
 
-Wizards provide a guided workflow that offers a path to complete a task, create an object or objects, or finish a series of steps for some other outcome. Wizards should incite trust in the user and guide them through an otherwise overwhelming experience.
+A **wizard** provides a guided workflow that offers a path to complete a task, create an object or objects, or finish a series of steps for some other outcome. Wizards should incite trust in the user and guide them through an otherwise overwhelming experience.
 
 Use a wizard when
 
@@ -36,22 +36,22 @@ Except where noted, modal and in-page wizards have the same elements and behavio
 <img src="./img/standard-wizard.png" alt="Simple wizard" />
 
 
-1. **Header (modal wizard only):** Modal wizards always have a header area that minimally contains the wizard title and a close button. The title should be action oriented and reflect the intended outcome of the wizard, e.g. "Create resource." You may optionally also include a description below the wizard title.
-2. **Steps sidebar:** Enumerated steps are displayed in the sidebar. Steps can be fixed or updated as the user proceeds through the process (see Progressive Wizard).
+1. **Header (modal wizard only):** Modal wizards always have a header area that minimally contains the wizard title and a close button. The title should be action oriented and reflect the intended outcome of the wizard, such as "Create resource." You may optionally also include a description below the wizard title.
+2. **Steps sidebar:** Enumerated steps are displayed in the sidebar. Steps can be fixed or updated as the user proceeds through the process (see progressive wizard).
 3. **Visited step:** A step that has been already visited. In most cases users can click this step to return to a prior point in the flow.
 4. **Current step:** The current step is always highlighted.
 5. **Disabled step:** Steps that follow the current step are usually disabled to enforce the sequential flow.
 6. **Step title:** The Step title is unique to each step, and should reinforce the outcome of the individual step. It may match the Current step indicated in the steps sidebar, or as in the example image, it may be more verbose.
 7. **Body:** The contents of a step itself. Any valid form elements can be incorporated within the body. The size of the modal that contains the wizard can be adjusted based on the contents of the body section. If the height of the body section causes the bottom of the modal to push beyond the height of the viewport, a vertical scrollbar will appear. However it is recommended to break your workflow into small enough steps so that scrolling is not necessary on typical monitor sizes.
-8. **Button footer:** Buttons control the wizard flow. Default buttons are Next, Back, and Cancel. You may optionally add other actions, e.g. Skip to Finish or Start Over. There should only be one primary action in the footer and it should be the farthest left action.
+8. **Button footer:** Buttons control the wizard flow. Default buttons are "Next," "Back," and "Cancel." You may optionally add other actions, such as "Skip to finish" or "Start over." There should only be one primary action in the footer and it should be the farthest left action.
 
 #### Behavior
 In a standard wizard the user moves through the wizard sequentially, a step at a time. The Next button is always used to advance the wizard. In addition:
 
-* The Back button is disabled on the first page of the wizard.
-* To abandon the wizard, the user selects Cancel in the button footer or the Close button in the header. Closing the wizard will discard current changes, so it may be appropriate to insert a confirmation message before executing this operation.
-* Wizard steps are skippable if the user configures them to be
-* The user can jump to steps directly if the user clicks on a step in the nav (if the step is not disabled)
+* The "Back" button is disabled on the first page of the wizard.
+* To abandon the wizard, the user selects "Cancel" in the button footer or the "Close" button in the header. Closing the wizard will discard current changes, so it may be appropriate to insert a confirmation message before executing this operation.
+* Wizard steps are skippable if the user configures them to be.
+* The user can jump to steps directly if the user clicks on a step in the nav (if the step is not disabled).
 
 ### Wizard with sub-steps
 Sub-steps can be added to the sidebar. Use sub-steps when there is a hierarchical relationship between a group of steps, if a primary step contains too much content to be displayed on one page, or when there is a set of optional settings that make sense to group together where the user need not visit each page.
@@ -65,10 +65,10 @@ Sub-steps can be added to the sidebar. Use sub-steps when there is a hierarchica
 
 * You may force the user to execute sub-steps in order by disabling future steps. Or enable all steps if the user should be able to click freely between sub-steps.
 
-* Clicking Next or Back should navigate through the substeps as it would for the major steps.
+* Clicking "Next" or "Back" should navigate through the substeps as it would for the major steps.
 
 ### Review and completion
-The last step in a wizard should always be a Review step. This should include a summary of what the user has input so the user may confirm them before committing their changes.
+The last step in a wizard should always be a review step. This step should include a summary of what the user has input so the user may confirm them before committing their changes.
 
 <img src="./img/review-screen.png" alt="Review screen" />
 
@@ -95,7 +95,7 @@ Once the changes initiated by the wizard are completed, a final confirmation scr
 
 2. **Primary action:** In most cases this will be a navigational button to close the wizard and take the user to a page where they can see the results of their changes, e.g. a new project that was created. If there is no appropriate destination or if results will be seen on the current page, make the primary action Close.
 
-3. **Secondary action(s) (optional):** If the primary action is other than Close, include a Close button here to close the wizard and return to the prior page. Other secondary actions can also be included. See [Empty state](/components/empty-state) for button placement.
+3. **Secondary action(s) (optional):** If the primary action is other than Close, include a Close button here to close the wizard and return to the prior page. Other secondary actions can also be included. See [empty state guidelines](/components/empty-state) for button placement.
 
 In some cases the result of a wizard is to dispatch a task to the background to execute changes in the back end. In these circumstances, we recommend that you provide a navigation link to monitor task progress and/or simply a Close button.
 
@@ -125,7 +125,7 @@ Be aware that anytime the user navigates aways from the wizard, there is a risk 
 ### Progressive wizard
 A progressive wizard takes the same form as the standard wizard or wizard with substeps above but accommodates a situation where the exact number of steps is not known when the wizard is first loaded. Steps in the sidebar can be changed or added as the user progresses through the wizard.
 
-Here is an example...
+A walk-through of a progressive wizard might look like this:
 
 <img src="./img/wizard-progressive-step1.png" alt="Wizard progressive step 1" />
 
@@ -135,12 +135,12 @@ Step 1: The user is presented with a Get started screen where they can specify w
 <img src="./img/wizard-progressive-step2-new.png" alt="Wizard progressive step 2" />
 
 
-Step 2: Based on their choice to create a new object, they are presented with a second set of options. But the remaining steps are still unknown.
+Step 2: Based on their choice to create a new object, a user is presented with a second set of options. But the remaining steps are still unknown.
 
 <img src="./img/wizard-progressive-step3-new.png" alt="Wizard progressive step 3" />
 
 
-Step 3: After the choose “Quick create” and click Next, they can now be presented with a full set of steps. It should be possible to revisit either of the first two steps making different choices and steps shown should update accordingly.
+Step 3: After the user chooses “Quick create” and clicks "Next," they can now be presented with a full set of steps. It should be possible to revisit either of the first two steps making different choices and steps shown should update accordingly.
 
 
 ## Content
@@ -148,4 +148,4 @@ You should keep the following in mind while designing your wizard screens:
 
 * Keep step labels short. The title at the top of each screen may be used to elaborate on the step label, but in all cases there should be a direct relationship between the step label and the screen title.
 * The last step should always be labeled review.
-* Default button labels for wizard navigation are: Next, Back, and Finish. If you are replacing the default button labels, keep them short and action oriented, e.g. “Create network.”
+* Default button labels for wizard navigation are: "Next," "Back," and "Finish." If you are replacing the default button labels, keep them short and action oriented, such as “Create network.”

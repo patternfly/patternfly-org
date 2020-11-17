@@ -2,7 +2,7 @@
 id: Radio
 section: components
 ---
-**Radio buttons** are used to present the user with mutually exclusive choices. Radio buttons must always be presented in a group of two or more.
+A **radio button** is used to present the user with mutually exclusive choices. Always present radio buttons in groups of two or more.
 
 ## Usage
 Radio buttons allow users to select **one item** from a list of options.

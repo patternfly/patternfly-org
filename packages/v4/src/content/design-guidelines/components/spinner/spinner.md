@@ -3,7 +3,7 @@ id: Spinner
 section: components
 ---
 
-**Spinners** are used to indicate to users that an action is in progress. For actions that may take a long time use a [Progress Bar](/components/progress) in place of a Spinner.
+A **spinner** is used to indicate to users that an action is in progress. For actions that may take a long time, use a [progress bar](/components/progress) instead.
 
 ## Usage
 
@@ -39,7 +39,7 @@ Spinners are centered within the container AND the viewport by default in all us
 
 **Show a spinner when:**
 - You do not know what the populated data may look like. For example, if you are loading a form (as they are not all structured the same).
-- When it is likely it will fail or show an empty state while waiting for actions to complete.
+- Loading will likely fail or show an empty state while waiting for actions to complete.
 
 **Show a [skeleton](/components/skeleton/react) when:**
 - You know what the populated data is going to look like (even if it results in an empty state).

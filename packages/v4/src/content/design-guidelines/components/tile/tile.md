@@ -2,7 +2,7 @@
 id: Tile
 section: components
 ---
-**Tiles** are a form of selection that can be used in place of [radio buttons](/components/radio) and are commonly used in [forms](/components/form).
+A **tile** is a form of selection that can be used in place of a [radio button](/components/radio) and is commonly used in [forms](/components/form).
 
 ## Usage
 

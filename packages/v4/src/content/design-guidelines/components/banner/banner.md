@@ -3,9 +3,9 @@ id: Banner
 section: components
 ---
 
-**Banners** are one-line, full color, full width containers that can be used to communicate short snippets of information to users. They are un-intrusive, non-dismissible, and only support link buttons.
+A **banner** is a one-line, full color, full width container that can be used to communicate short snippets of information to users. Banners are un-intrusive, non-dismissible, and only support link buttons.
  
-For use cases requiring more than a single line of content or requiring important actions for the user to take, the flow should make use of the [inline alert](/components/alert/design-guidelines#inline-alerts) or  [hint pattern](/components/hint/design-guidelines) instead, as they allow for more flexibility around these use cases. 
+For use cases requiring more than a single line of content or requiring important actions for the user to take, the flow should make use of the [inline alert](/components/alert/design-guidelines#inline-alerts) or [hint pattern](/components/hint/design-guidelines) instead, as they allow for more flexibility around these use cases. 
  
 ## Usage
 PatternFly offers five different banner types detailed below.
@@ -25,11 +25,11 @@ PatternFly suggests that users adopt one of these five colors, as they’ve been
 ### Placement
  
 All banners should be a solid bar that spans the top and/or bottom of either:
-1. The full page, above the masthead
+1. The full page, above the masthead.
  
    <img src="./img/placement-1.png" alt="Example of banner placement above the masthead" width="990"/>
  
-2. the content area of the page, below the masthead
+2. The content area of the page, below the masthead.
  
    <img src="./img/placement-2.png" alt="Example of banner placement below the masthead, inside page content area" width="990"/>
  
@@ -43,13 +43,13 @@ The padding above and below a banner will depend on where you place it.
  
 <img src="./img/placement-1.png" alt="Padding when banner is placed above the masthead" width="990"/>
  
-**If you place your banner below the masthead and inside the page body,** there should be no padding on top of it, and in most cases, you should have 24px padding between the banner and whatever comes under it. The only exception is when you have breadcrumbs directly underneath the banner - in that case, the padding should be 16px.
+**If you place your banner below the masthead and inside the page body,** there should be no padding on top of it, and in most cases, you should have 24px padding between the banner and whatever comes under it. The only exception is when you have breadcrumbs directly underneath the banner –– in that case, the padding should be 16px.
  
 <img src="./img/placement-2.png" alt="Padding when banner is placed below the masthead" width="990"/>
  
 ### Examples
  
-Banners are flexible and can be used for any content. Below are some examples of possible use cases.
+Banners are flexible and can be used for any content, so they span several use cases.
  
 #### To indicate that an application/site is offline
  

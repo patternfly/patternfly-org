@@ -3,11 +3,11 @@ id: Button
 section: components
 ---
 
-**Buttons** communicate and trigger actions a user can take in an application or website and take the form of a box area or text that can be clicked or tapped.
+A **button** is a box area or text that communicates and triggers user actions when clicked or selected.
 
 ## Usage
 
-Buttons can be used to communicate and immediately trigger actions a user can take in an application, like submitting a form, cancelling a process, or creating a new object. Buttons can also be used to take a user to a new location, like another page inside of a web application, or an external site such as help or documentation. 
+Buttons can be used to communicate and immediately trigger actions a user can take in an application, like submitting a form, canceling a process, or creating a new object. Buttons can also be used to take a user to a new location, like another page inside of a web application, or an external site such as help or documentation. 
 
 ### Button types
 The following button styles, shown in order of visual hierarchy, can be used in your designs according to your needs. 
@@ -226,7 +226,7 @@ _Buttons placed in overflow menu due to limited space, with primary button persi
 * To avoid wrapping, aim for short labels when possible (1–3 words).
 * Avoid using articles (for example, write “Add source” instead of “Add a source”).
 * Avoid punctuation on buttons. 
-* To call a user's attention to a button or to add clarity to the button's action, you can add an icon to the button. 
+* To call a user's attention to a button or to clarify the button's action, you can add an icon to the button. 
 * Do not create icons on buttons using punctuation (for example, "+"). Instead, refer to [PatternFly's icons page](/guidelines/icons) for any icons you place on buttons.
 
 

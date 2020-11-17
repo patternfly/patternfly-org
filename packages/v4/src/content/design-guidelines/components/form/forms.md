@@ -22,7 +22,8 @@ related: [
 ]
 ---
 
-A **Form** is a group of elements used to collect information from a user.
+A **form** is a group of elements used to collect information from a user.
+
  Forms can appear in a variety of contexts, like inside a page, in a modal, or in a wizard, depending on the use case.  Some form examples include a log-in form, a registration form, a settings configuration form, or a survey.
 
 [View form demos](/components/form/html-demos)
@@ -101,7 +102,7 @@ Always provide labels for text and data input so that users understand what info
 * Saves horizontal space
 * Allows for more responsive designs
 * Assures closer proximity to text fields, aiding with wrapping when necessary 
-* Results in easier scanning of the form fields
+* Results in easier scanning of form fields
 
 Whichever approach you use, we recommend that you maintain consistency throughout an application.
 
@@ -226,7 +227,7 @@ There should always be 24px spacing underneath every form input. If there is hel
 
 ### Buttons
 #### Placement
-Buttons to submit the form should always be placed to the bottom left of the form and be left-aligned with all the form fields. Buttons should be placed 16px apart, no matter where the form is placed. This includes when the form is inside a page, inside a wizard, or on a card. This solves for a number of issues outlined in the [Buttons documentation page](/components/button/design-guidelines#button-placement). 
+Buttons to submit the form should always be placed to the bottom left of the form and be left-aligned with all the form fields. Buttons should be placed 16px apart, no matter where the form is placed. This includes when the form is inside a page, inside a wizard, or on a card. This solves for a number of issues outlined in the placement section of our [buttons guidelines](/components/button/design-guidelines#button-placement). 
 
 Buttons for other actions outside of submitting or cancelling the form may be placed elsewhere depending on your use case.
 
@@ -270,7 +271,7 @@ Forms in a modal should be horizontally centered with the modal background and f
 <img src="./img/modal-form.png" alt="Example of form in a modal" width="384"/>
 
 ### Multi-column forms
-Multi-column forms are forms that can have multiple inputs on a single form line. You can create a multi-column form using any of the [layouts](/layouts/bullseye) offered in PatternFly, such as the [Grid](/layouts/grid) or [Flex](/layouts/flex) layouts.
+Multi-column forms are forms that can have multiple inputs on a single form line. You can create a multi-column form using any of the [layouts](/layouts/bullseye) offered in PatternFly, such as the [grid](/layouts/grid) or [flex](/layouts/flex) layouts.
 
 #### Usage
 Multi-column forms can be useful when you have limited vertical space. However, as a general rule, PatternFly recommends only using multi-column forms if you have extra space and avoiding them otherwise. They can be more confusing to the user and increase the chances of a user missing out on a form field.

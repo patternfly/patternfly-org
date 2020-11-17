@@ -2,7 +2,9 @@
 id: Pagination
 section: components
 ---
-Add pagination above and below content views so users can easily navigate as they read through listed items on a page.
+A **pagination** component gives users more navigational capability on pages with content views.
+
+Add pagination above and below content views so that users can easily navigate as they read through listed items on a page.
 
 <img src="./img/full-page.png" alt="Example of pagination on full page table" />
 
