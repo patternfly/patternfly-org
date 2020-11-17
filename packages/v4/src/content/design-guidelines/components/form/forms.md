@@ -195,9 +195,9 @@ Use progressive disclosure to hide and show fields based on the users’ selecti
  <img src="./img/progressive-disclosure.png" alt="Example of progressive disclosure with one radio button selected to only show those inputs" width="562"/>
 
 ## Errors and validation
-When a form field submission results in an error, let users know as soon as possible. Always present error states on the form using field level errors whenever possible. The error state you can use will depend on whether validation happens on loss of focus or on submission. 
+When a form field submission results in an error, let users know as soon as possible. Always present error states on the form using field level errors whenever possible.
 
-Alternatively, you can also choose to emphasize errors using an inline error at the top of the form. Note that the inline error should always be a supplemental component, used *in addition* to field-level errors, and it's message should generally describe the problem.
+Alternatively, you can also choose to emphasize errors using an inline error at the top of the form. Note that the inline error should always be a supplemental component, used *in addition* to field-level errors, and its message should generally describe the problem.
 
 When an error occurs, any placeholder text will no longer be visible as it will be replaced by the user’s input. Additionally, field level errors will replace any existing helper text until the error is fixed. Therefore, it is important that your error message not only points out the error, but also explains what the user can do to fix it.
 
