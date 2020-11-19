@@ -2201,10 +2201,10 @@
     "@patternfly/react-tokens" "^4.9.18"
     date-fns "^2.16.1"
 
-"@patternfly/react-docs@5.10.71":
-  version "5.10.71"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-docs/-/react-docs-5.10.71.tgz#91483a719cf33347013471e2b794de41563320cf"
-  integrity sha512-CkcChD3v9kRMuEhUWWUAkMOLCTYJAJOuqa/cSGHm1CCkOUmblgpoHROC0ZDyqd+rMQXjFnJNKpn6u67fL7HIxw==
+"@patternfly/react-docs@5.10.72":
+  version "5.10.72"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-docs/-/react-docs-5.10.72.tgz#8ba03aeb76ae23c01b048a345ad39267879b1cfd"
+  integrity sha512-E48jD5wU+agQaBqD2yYBfzUWdRE3/UHnLl22GxtOYwFI5WXViDnLuvyWNObSjus6DCQ/ME7Elm6cLZhPs7sVBg==
   dependencies:
     "@patternfly/patternfly" "4.65.5"
     "@patternfly/react-catalog-view-extension" "^4.8.105"
