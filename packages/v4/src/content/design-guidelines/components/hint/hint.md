@@ -3,15 +3,16 @@ id: Hint
 section: components
 ---
 
-A **hint** provides a one-step reminder, explanation, or call to action for a page or modal.
+A **hint** is in-app messaging that provides a one-step reminder, explanation, or call to action for a page or modal. 
 
-## Usage
+## Usage 
 
-<img src="./img/hints.png" alt="Example of a hint in a full-page"  width="990"/>
+Use hints to share information about an interaction or prerequisite step that might not be immediately obvious to the user. 
 
-Use hints to help the user get more out of the interface. Hints can provide information about an interaction or prerequisite step that might not be obvious otherwise. 
+<img src="./img/hint-layout.png" alt="blue hint at the top of an application page" width="750"/> 
 
-### Other forms of on-screen help
+## Content 
+Use full sentences with punctuation.
+Include relevant links to documentation when necessary.   
 
-1. [Popovers](/components/popover/design-guidelines)
-2. [Tooltips](/components/tooltip/design-guidelines)
+For information on other forms of on-screen help, see [Tooltip](https://www.patternfly.org/v4/components/tooltip/design-guidelines) and [Popover](https://www.patternfly.org/v4/components/popover/design-guidelines).
