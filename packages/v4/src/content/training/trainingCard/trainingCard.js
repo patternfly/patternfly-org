@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardTitle, CardHeader, CardBody, CardFooter, Button } from '@patternfly/react-core';
-import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
+import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
 import CubesIcon from '@patternfly/react-icons/dist/esm/icons/cubes-icon';
 import ClockIcon from '@patternfly/react-icons/dist/esm/icons/clock-icon';
 import RunningIcon from '@patternfly/react-icons/dist/esm/icons/running-icon';
@@ -50,10 +50,10 @@ export const TrainingCard = ({
       {description}
     </CardBody>
     <CardFooter>
-    <Link to={`https://www.katacoda.com/patternfly/courses/${trainingType}/${katacodaId}`} target="_blank">
+    <Link to={`/training/${katacodaId}`} >
       <Button variant="link">
         Start
-        <ExternalLinkAltIcon />
+        <ArrowRightIcon />
       </Button>
     </Link>
     </CardFooter>

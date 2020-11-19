@@ -112,6 +112,9 @@ function toReactComponent(mdFilePath, source) {
       if (frontmatter.katacodaBroken) {
         pageData.katacodaBroken = frontmatter.katacodaBroken;
       }
+      if (frontmatter.katacodaLayout) {
+        pageData.katacodaLayout = frontmatter.katacodaLayout;
+      }
     })
     // Delete HTML comments
     .use(require('./remove-comments'))
@@ -223,6 +226,7 @@ function sourceMDFile(file, source) {
       ...(pageData.fullscreenExamples && { fullscreenExamples: pageData.fullscreenExamples }),
       section: pageData.section,
       source: pageData.source,
+      ...(pageData.katacodaLayout && { katacodaLayout: pageData.katacodaLayout })
     };
   }
 }

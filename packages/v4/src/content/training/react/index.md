@@ -17,7 +17,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Build your first PatternFly component."
-      katacodaId="react-basics"
+      katacodaId="patternfly-react-basics"
     />
   </GalleryItem>
   <GalleryItem>
@@ -27,7 +27,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="5 minutes"
       description="Learn how to customize components in PatternFly."
-      katacodaId="react-customize"
+      katacodaId="customize-patternfly"
     />
   </GalleryItem>
 </Gallery>
@@ -41,7 +41,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="intermediate"
       time="45 minutes"
       description="Build a React table with pagination."
-      katacodaId="table-intro"
+      katacodaId="table-component-beginner"
     />
   </GalleryItem>
   <GalleryItem>
@@ -51,7 +51,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="intermediate"
       time="30 minutes"
       description="Build a React toolbar that is filterable."
-      katacodaId="toolbar-filter"
+      katacodaId="toolbar-component-with-filter"
     />
   </GalleryItem>
   <GalleryItem>
@@ -61,7 +61,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="intermediate"
       time="30 minutes"
       description="Build and customize a React select component."
-      katacodaId="select"
+      katacodaId="select-component-beginner"
     />
   </GalleryItem>
 </Gallery>

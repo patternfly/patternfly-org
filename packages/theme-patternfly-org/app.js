@@ -7,17 +7,17 @@ import { MDXTemplate } from 'theme-patternfly-org/templates/mdx';
 import { routes, groupedRoutes, fullscreenRoutes, getAsyncComponent } from './routes';
 import 'client-styles';
 
-const AppRoute = ({ child }) => {
+const AppRoute = ({ child, katacodaLayout }) => {
   const location = useLocation();
   if (typeof window !== 'undefined' && window.ga) {
     window.ga('set', 'page', location.pathname);
     window.ga('send', 'pageview');
   }
-
+ console.log(katacodaLayout)
   return (
     <React.Fragment>
       {child}
-      {process.env.hasFooter && <Footer />}
+      {!katacodaLayout && process.env.hasFooter && <Footer />}
     </React.Fragment>
   );
 }
@@ -26,15 +26,15 @@ const SideNavRouter = () => (
   <SideNavLayout groupedRoutes={groupedRoutes}>
     <Router id="ws-page-content-router">
       {Object.entries(routes)
-        .map(([path, { Component, title, sources }]) => Component
-          ? <AppRoute key={path} path={path} default={path === '/404'} child={<Component />} />
+        .map(([path, { Component, title, sources, katacodaLayout }]) => Component
+          ? <AppRoute key={path} path={path} default={path === '/404'} child={<Component />} katacodaLayout={katacodaLayout} />
           : <AppRoute key={path} path={path + '/*'} child={
               <MDXTemplate
                 path={path}
                 title={title}
                 sources={sources}
               />
-            }/>
+            } katacodaLayout={katacodaLayout} />
         )
       }
     </Router>
