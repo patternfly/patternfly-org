@@ -13,7 +13,6 @@ const AppRoute = ({ child, katacodaLayout }) => {
     window.ga('set', 'page', location.pathname);
     window.ga('send', 'pageview');
   }
- console.log(katacodaLayout)
   return (
     <React.Fragment>
       {child}
