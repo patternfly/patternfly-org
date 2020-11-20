@@ -3,6 +3,7 @@ import './tutorials.css'
 
 const KatacodaExample = ({katacodaId}) => {
   React.useEffect(() => {
+    if (typeof window !== 'undefined') {
       const script = document.createElement('script');
       script.setAttribute('src', '//katacoda.com/embed.js');
       document.body.appendChild(script);
@@ -13,6 +14,7 @@ const KatacodaExample = ({katacodaId}) => {
       return () => {
         document.body.removeChild(script);
       }
+    }
   }, []);
   return (
     <div
