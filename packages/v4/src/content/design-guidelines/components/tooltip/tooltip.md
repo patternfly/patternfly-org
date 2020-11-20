@@ -19,7 +19,7 @@ Use tooltips to:
 <img src="./img/disabled-edit-button.png" alt= 'disabled edit button with a tooltip about access' width='306'/>
 
 ## Tooltips versus popovers
-Both tooltips and [popovers](https://www.patternfly.org/v4/components/popover/design-guidelines) provide more information in context for users. However, they’re different in a few ways:
+Both tooltips and [popovers](/components/popover/design-guidelines) provide more information in context for users. However, they’re different in a few ways:
 
 - Tooltips are used for identification purposes, while popovers are used for added description or information in context. 
 - Tooltips contain short descriptions or labels, while popovers contain longer descriptions, formatted text, and optional images or links.
@@ -35,7 +35,7 @@ Both tooltips and [popovers](https://www.patternfly.org/v4/components/popover/de
 ## Accessibility
 Every time a user with a screen reader tabs into a field with a tooltip, the screen reader reads the tooltip aloud.
 
-For information on other forms of on-screen help, see [Popover](https://www.patternfly.org/v4/components/popover/design-guidelines) and [Hint](https://www.patternfly.org/v4/components/hint/design-guidelines).
+For information on other forms of on-screen help, see [Popover](/components/popover/design-guidelines) and [Hint](/components/hint/design-guidelines).
 
 
 

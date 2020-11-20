@@ -36,7 +36,7 @@ To provide more information to a user without an accompanying UI element, you ca
 Use link button styling for the linked question, and add a blue question-circle icon before it. Clicking the link text triggers a popover, which answers the linked question. 
 
 ## Tooltips versus popovers
-Both [tooltips](https://www.patternfly.org/v4/components/tooltip/design-guidelines) and popovers provide more information in context for users. However, they’re different in a few ways:
+Both [tooltips](/components/tooltip/design-guidelines) and popovers provide more information in context for users. However, they’re different in a few ways:
 
 - Tooltips are used for identification purposes, while popovers are used for added description or information in context.  
 - Tooltips contain short descriptions or labels, while popovers contain longer descriptions, formatted text, and optional images or links.
@@ -48,4 +48,4 @@ Both [tooltips](https://www.patternfly.org/v4/components/tooltip/design-guidelin
 - Include relevant links to documentation when necessary.    
 - Use popovers for additional information. Don’t use popovers for information critical to a user completing a task, such as password character requirements.  
 
-For information on other forms of on-screen help, see [Tooltip](https://www.patternfly.org/v4/components/tooltip/design-guidelines) and [Hint](https://www.patternfly.org/v4/components/hint/design-guidelines).
+For information on other forms of on-screen help, see [Tooltip](/components/tooltip/design-guidelines) and [Hint](/components/hint/design-guidelines).

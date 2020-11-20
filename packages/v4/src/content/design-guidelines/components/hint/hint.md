@@ -15,4 +15,4 @@ Use hints to share information about an interaction or prerequisite step that mi
 Use full sentences with punctuation.
 Include relevant links to documentation when necessary.   
 
-For information on other forms of on-screen help, see [Tooltip](https://www.patternfly.org/v4/components/tooltip/design-guidelines) and [Popover](https://www.patternfly.org/v4/components/popover/design-guidelines).
+For information on other forms of on-screen help, see [Tooltip](/components/tooltip/design-guidelines) and [Popover](/components/popover/design-guidelines).
