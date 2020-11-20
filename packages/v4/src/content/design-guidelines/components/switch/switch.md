@@ -6,24 +6,26 @@ A **switch** toggles the state of a setting (between on and off). Switches and [
 
 ## Usage
 
-It is assumed that when a user toggles a switch, the change will save automatically without the need for additional action (like clicking a “Save” button).
+It is assumed that when a user toggles a switch, the change will save automatically without the need for additional action (like clicking a "Save" button).
 
 <img src="./img/switch.png" alt="Examples of switch buttons" width="244"/>
 
 **General guidelines**
 
 *  Add a label in front of your switch to specify what is being switched on or off (for example, wi-fi or bluetooth).
-* Don’t use a switch if the options you’re presenting to the user are anything other than “on” or “off.” Instead, use radio buttons. 
-* Depending on your use case, you may want to add labels to your switches for added clarity, like “on” and “off” to indicate to the user what setting they’ve switched to.
+* Don’t use a switch if the options you’re presenting to the user are anything other than “on” or “off.” Instead, use [radio buttons](/components/radio/design-guidelines). 
+* Depending on your use case, add labels to clarify between toggled settings, such as *On* and *Off*.
 
 
 ### When to use switches versus checkboxes
 
-The main difference between a switch and a checkbox is that a switch changes an option and saves it simultaneously, while checkboxes require a separate action such as pressing a “Submit” or “Save” button to save the selection. 
+A switch changes an option and saves it simultaneously, while checkboxes require a separate action to save the selection, such as pressing a “Submit” or “Save” button.
 
-**Here are some guidelines for when to use a switch versus a checkbox:**
+Use switches with labels by default unless space is limited, then use the checkmark version instead.
 
-* Use checkboxes when the options do not save automatically and require the user to perform an additional action to save changes (in this case, pressing the “Save changes” button).
+**Follow these guidelines for when to use a switch versus a checkbox:**
+
+* Use checkboxes when options do not save automatically and require the user to perform an additional action to save changes (in this case, pressing the “Save changes” button).
 
     <img src="./img/switch-check-1.png" alt="Example 1 of do and don'ts for checkbox vs switch usee " width="661"/>
 
