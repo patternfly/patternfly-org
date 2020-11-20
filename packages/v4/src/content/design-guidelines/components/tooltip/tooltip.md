@@ -12,7 +12,7 @@ Use tooltips to:
 
 - Provide additional information on a data point or element in a chart or table.   
 
-<img src="./img/bar-chart-tooltip.png" alt="bar chart with a tooltip for Asia Pacific” width="306"/> 
+<img src="./img/bar-chart.png" alt='bar chart with a tooltip for Asia Pacific' width='306'/> 
 
 - Define new or unfamiliar UI elements that aren’t described directly in the user interface.   
 
