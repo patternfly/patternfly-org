@@ -4,6 +4,8 @@ section: components
 ---
 A **tooltip** is in-app messaging used to identify elements on a page with short, clarifying text.
 
+For information on other forms of on-screen help, see [Popover](/components/popover/design-guidelines) and [Hint](/components/hint/design-guidelines). 
+
 ## Usage 
 Use tooltips to:
 - Provide labels for unlabeled icons.   
@@ -35,7 +37,6 @@ Both tooltips and [popovers](/components/popover/design-guidelines) provide more
 ## Accessibility
 Every time a user with a screen reader tabs into a field with a tooltip, the screen reader reads the tooltip aloud.
 
-For information on other forms of on-screen help, see [Popover](/components/popover/design-guidelines) and [Hint](/components/hint/design-guidelines).
 
 
 

@@ -17,6 +17,8 @@ Popovers are triggered by a click and dismissed in one of the following ways:
 
 <img src="./img/popover-example.png" alt="popover example with placeholder text for the title and informational text" width="300"/>
 
+For information on other forms of on-screen help, see [Tooltip](/components/tooltip/design-guidelines) and [Hint](/components/hint/design-guidelines).
+
 ## Usage
 Popovers are commonly used on form field labels, page titles or headings, or table column headings. Use popovers to: 
 - Anticipate and answer questions for the user.
@@ -47,5 +49,3 @@ Both [tooltips](/components/tooltip/design-guidelines) and popovers provide more
 - Write in full sentences with punctuation. 
 - Include relevant links to documentation when necessary.    
 - Use popovers for additional information. Don’t use popovers for information critical to a user completing a task, such as password character requirements.  
-
-For information on other forms of on-screen help, see [Tooltip](/components/tooltip/design-guidelines) and [Hint](/components/hint/design-guidelines).
