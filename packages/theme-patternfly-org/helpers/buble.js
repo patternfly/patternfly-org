@@ -53,9 +53,12 @@ const generator = Object.assign({}, baseGenerator, {
     this[node.expression.type](node.expression, state);
   },
   JSXText(node, state) {
+    if (node.value.trim() === '') {
+      node.value = null;
+    }
     if (node.value) {
       state.write(',"');
-      state.write(node.value.replace(/"/g, '\\"').replace(/\n/g, ' '));
+      state.write(node.value.replace(/"/g, '\\"'));
       state.write('"');
     }
   },
@@ -102,6 +105,7 @@ function transform(code) {
     allowReturnOutsideFunction: true
   });
   code = generate(ast, { generator });
+  console.log('code', code);
   return { code };
 }
 
