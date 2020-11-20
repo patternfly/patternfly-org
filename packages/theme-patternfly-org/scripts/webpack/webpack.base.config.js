@@ -3,6 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (_env, argv) => {
   const {
@@ -20,7 +21,14 @@ module.exports = (_env, argv) => {
   const isProd = mode === 'production';
 
   return {
-    entry: path.resolve(__dirname, '../../app.js'),
+    entry: {
+      "app": path.resolve(__dirname, '../../app.js'),
+      "editor.worker": 'monaco-editor/esm/vs/editor/editor.worker.js',
+      "json.worker": 'monaco-editor/esm/vs/language/json/json.worker',
+      "css.worker": 'monaco-editor/esm/vs/language/css/css.worker',
+      "html.worker": 'monaco-editor/esm/vs/language/html/html.worker',
+      "ts.worker": 'monaco-editor/esm/vs/language/typescript/ts.worker'
+    },
     output: {
       publicPath: isProd ? `${pathPrefix}/` : '/',
       pathinfo: false, // https://webpack.js.org/guides/build-performance/#output-without-path-info,
@@ -59,6 +67,29 @@ module.exports = (_env, argv) => {
               ],
             }
           },
+        },
+        {
+          test: /\.css$/,
+          include: path.resolve(__dirname, './node_modules/monaco-editor'),
+          use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /\.css$/,
+          include: [
+            path.resolve(process.cwd(), 'src'),
+            path.resolve(__dirname, './node_modules/@patternfly'),
+          ],
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                hmr: isProd
+              },
+            },
+            {
+              loader: 'css-loader'
+            }
+          ]
         },
         {
           test: /\.(png|jpe?g|webp)$/,
