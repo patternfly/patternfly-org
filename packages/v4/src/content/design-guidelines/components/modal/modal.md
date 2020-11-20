@@ -120,10 +120,9 @@ A modal is comprised of three main content sections:
 
 2. **Body text:** Body text provides additional information about an action’s consequence in three lines or less, typically concerning changes to a user’s workflow or access to information. If a modal’s headline fully communicates an action’s context and consequences, body text isn’t needed.
 
-3. **Buttons:** Buttons allow a user to answer the headline prompt or question. Write button labels as action-based verbs to clearly communicate their function and consequence, and keep them to 1–3 words. Often, verbs for buttons can be pulled directly from a modal’s headline to increase scannability. <br />
-Example headline: *Permanently delete database?*
-Example buttons: *Delete* and *Cancel* <br />
-
+3. **Buttons:** Buttons allow a user to answer the headline prompt or question. Write button labels as action-based verbs to clearly communicate their function and consequence, and keep them to 1–3 words. Often, verbs for buttons can be pulled directly from a modal’s headline to increase scannability. <br /><br />
+Example headline: *Permanently delete database?*<br />
+Example buttons: *Delete* and *Cancel* <br /><br />
 For more button guidance, see our [button label guidelines](/components/button/design-guidelines#content).
 
 For general content guidance to help write effective modal dialogs, see our [UX writing style guide](/ux-writing/about).
