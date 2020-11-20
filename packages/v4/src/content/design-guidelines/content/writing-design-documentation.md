@@ -93,8 +93,13 @@ When writing design guidelines, use:
 - Active voice, unless you're using passive voice for emphasis.
 - Direct language and sentence structure.
 - Full words to introduce examples, instead of their abbreviations ("for example" instead of "e.g."), as seen on our [terms list](/ux-writing/terminology/).
-- Descriptive hyperlinks (not "click here").
 - Descriptive language instead of directional language (up, down, left, right) to refer to elements in your document.
+- Descriptive hyperlinks (not "click here").
+
+If you're linking to other PatternFly pages, use relative URLs instead of full URLs.
+
+Relative URL: /components/tooltip/design-guidelines
+Full URL: https://www.patternfly.org/v4/components/tooltip/design-guidelines
 
 ## Design guidelines template
 
