@@ -164,7 +164,7 @@ export function attachDocSearch(algolia, inputSelector, timeout) {
   }
 }
 
-export const SideNavLayout = ({ children, groupedRoutes, pathName }) => {
+export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp }) => {
   const pathPrefix = process.env.pathPrefix;
   const algolia = process.env.algolia;
   const hasGdprBanner = process.env.hasGdprBanner;
@@ -175,7 +175,7 @@ export const SideNavLayout = ({ children, groupedRoutes, pathName }) => {
   const prurl = process.env.prurl;
 
   const [versions, setVersions] = useState({ ...staticVersions });
-  const [isNavOpen, setNavOpen] = useState(!pathName.startsWith(`${process.env.pathPrefix}/training`) || pathName === `${process.env.pathPrefix}/training/about`);
+  const [isNavOpen, setNavOpen] = useState(navOpenProp);
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -193,9 +193,7 @@ export const SideNavLayout = ({ children, groupedRoutes, pathName }) => {
     }
   }, []);
 
-  useEffect(() => {
-    setNavOpen(!pathName.startsWith(`${process.env.pathPrefix}/training`) || pathName === `${process.env.pathPrefix}/training/about`);
-  }, [pathName])
+  useEffect(() => setNavOpen(navOpenProp), [navOpenProp])
 
   const SideBar = (
     <PageSidebar
