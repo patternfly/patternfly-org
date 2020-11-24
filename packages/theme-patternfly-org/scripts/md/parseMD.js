@@ -42,11 +42,6 @@ function toReactComponent(mdFilePath, source) {
       if (!frontmatter.id) {
         file.fail('id attribute is required in frontmatter for PatternFly docs');
       }
-      if (frontmatter.section === 'overview') {
-        // Temporarily override section until https://github.com/patternfly/patternfly-react/pull/4862 is in react-docs
-        // Affected pages are release notes and upgrade guides
-        frontmatter.section = 'developer-resources';
-      }
       source = frontmatter.source || source;
       const slug = makeSlug(source, frontmatter.section, frontmatter.id);
       outPath = path.join(outputBase, `${slug}.js`);
@@ -114,6 +109,9 @@ function toReactComponent(mdFilePath, source) {
       }
       if (frontmatter.katacodaLayout) {
         pageData.katacodaLayout = frontmatter.katacodaLayout;
+      }
+      if (frontmatter.subsection) {
+        pageData.subsection = frontmatter.subsection;
       }
     })
     // Delete HTML comments
@@ -226,7 +224,8 @@ function sourceMDFile(file, source) {
       ...(pageData.fullscreenExamples && { fullscreenExamples: pageData.fullscreenExamples }),
       section: pageData.section,
       source: pageData.source,
-      ...(pageData.katacodaLayout && { katacodaLayout: pageData.katacodaLayout })
+      ...(pageData.katacodaLayout && { katacodaLayout: pageData.katacodaLayout }),
+      ...(pageData.subsection && { subsection: pageData.subsection })
     };
   }
 }

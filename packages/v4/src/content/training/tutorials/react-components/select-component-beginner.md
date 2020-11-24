@@ -1,6 +1,7 @@
 ---
 id: Select component beginner
 section: training
+subsection: react
 katacodaLayout: true
 ---
 

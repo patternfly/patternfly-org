@@ -1,6 +1,7 @@
 ---
 id: Pie chart
 section: training
+subsection: react
 katacodaLayout: true
 ---
 

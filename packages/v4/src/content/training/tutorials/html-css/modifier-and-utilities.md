@@ -1,6 +1,7 @@
 ---
 id: Modifiers and utilities
 section: training
+subsection: HTML
 katacodaLayout: true
 ---
 

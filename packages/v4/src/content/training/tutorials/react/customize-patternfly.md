@@ -1,6 +1,7 @@
 ---
 id: Customize PatternFly
 section: training
+subsection: react
 katacodaLayout: true
 ---
 

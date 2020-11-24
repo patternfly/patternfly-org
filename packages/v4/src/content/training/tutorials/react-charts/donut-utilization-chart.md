@@ -1,6 +1,7 @@
 ---
 id: Donut utilization chart
 section: training
+subsection: react
 katacodaLayout: true
 ---
 

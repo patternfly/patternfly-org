@@ -28,9 +28,10 @@ const isNull = o => o === null || o === undefined;
 const groupedRoutes = Object.entries(routes)
   .filter(([_slug, { id, section }]) => !isNull(id) && !isNull(section))
   .reduce((accum, [slug, pageData]) => {
-    const { section, id, title, source, katacodaLayout } = pageData;
+    const { section, subsection, id, title, source, katacodaLayout } = pageData;
     accum[section] = accum[section] || {};
-    accum[section][id] = accum[section][id] || {
+
+    const groupedItem = {
       id,
       section,
       title,
@@ -39,8 +40,17 @@ const groupedRoutes = Object.entries(routes)
       katacodaLayout
     };
 
+    if (subsection) {
+      accum[section][subsection] = accum[section][subsection] || {};
+      accum[section][subsection][id] = accum[section][subsection][id] || groupedItem;
+      accum[section][subsection][id].sources.push(pageData);
+    }
+    else {
+      accum[section][id] = accum[section][id] || groupedItem;
+      accum[section][id].sources.push(pageData);
+    }
+
     pageData.slug = slug;
-    accum[section][id].sources.push(pageData);
 
     return accum;
   }, {});
@@ -80,9 +90,18 @@ const getDefaultDesignGuidelines = ({ id, section, slug, title }) => {
   return pageData;
 }
 
-Object.entries(groupedRoutes)
-  .forEach(([_section, ids]) => {
-    Object.values(ids).forEach(pageData => {
+console.log('groupedRoutes', groupedRoutes);
+Object.values(groupedRoutes)
+  // Support subsections
+  .map(sections => Object.values(sections)[0].sources
+    ? sections
+    : Object.values(sections).reduce((acc, val) => {
+        Object.assign(acc, val);
+        return val;
+      }, {})
+  )
+  .forEach(section => {
+    Object.values(section).forEach(pageData => {
       const { slug, section } = pageData;
       // Remove source routes for `app.js`
       pageData.sources.forEach(({ slug }) => {

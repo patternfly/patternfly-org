@@ -1,6 +1,7 @@
 ---
 id: Table component beginner
 section: training
+subsection: react
 katacodaLayout: true
 ---
 

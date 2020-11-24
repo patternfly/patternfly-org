@@ -1,6 +1,7 @@
 ---
 id: Donut chart
 section: training
+subsection: react
 katacodaLayout: true
 ---
 

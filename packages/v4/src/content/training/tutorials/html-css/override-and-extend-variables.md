@@ -1,6 +1,7 @@
 ---
 id: Override and extend variables
 section: training
+subsection: HTML
 katacodaLayout: true
 ---
 

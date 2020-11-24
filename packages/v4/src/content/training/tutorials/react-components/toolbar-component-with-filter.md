@@ -1,6 +1,7 @@
 ---
 id: Toolbar component with filter
 section: training
+subsection: react
 katacodaLayout: true
 ---
 

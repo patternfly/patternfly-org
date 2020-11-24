@@ -1,6 +1,7 @@
 ---
 id: Variable naming principles
 section: training
+subsection: HTML
 katacodaLayout: true
 ---
 

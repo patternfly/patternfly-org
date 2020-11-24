@@ -1,6 +1,7 @@
 ---
 id: PatternFly React basics
 section: training
+subsection: react
 katacodaLayout: true
 ---
 

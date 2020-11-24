@@ -1,6 +1,7 @@
 ---
 id: Area chart
 section: training
+subsection: react
 katacodaLayout: true
 ---
 

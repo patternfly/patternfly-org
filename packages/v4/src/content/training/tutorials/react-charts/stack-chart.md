@@ -1,6 +1,7 @@
 ---
 id: Stack chart
 section: training
+subsection: react
 katacodaLayout: true
 ---
 

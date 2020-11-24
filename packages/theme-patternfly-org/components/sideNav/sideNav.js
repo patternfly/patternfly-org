@@ -25,6 +25,7 @@ const NavItem = ({ text, href }) => (
   </li>
 );
 
+
 export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
   React.useEffect(() => {
     if (typeof window === 'undefined') {
@@ -58,6 +59,12 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
                     className="ws-side-nav-group"
                   >
                     {Object.entries(groupedRoutes[section] || {})
+                      .map(([id, pageData]) => {
+                        if (!pageData.sources) {
+                          console.log('bad', id, pageData);
+                        }
+                        return [id, { slug: pageData.slug }];
+                      })
                       .map(([id, { slug }]) => ({ text: id, href: slug }))
                       .sort(({ text: text1 }, { text: text2 }) => text1.localeCompare(text2))
                       .map(NavItem)

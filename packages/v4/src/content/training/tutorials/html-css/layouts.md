@@ -1,6 +1,7 @@
 ---
 id: Layouts
 section: training
+subsection: HTML
 katacodaLayout: true
 ---
 

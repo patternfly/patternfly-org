@@ -1,6 +1,7 @@
 ---
 id: About
 section: training
+subsection: about
 source: react
 ---
 
