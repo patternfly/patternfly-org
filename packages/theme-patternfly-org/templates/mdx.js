@@ -128,10 +128,7 @@ export const MDXTemplate = ({
 
   return (
     <React.Fragment>
-      <PageSection
-        id={isSinglePage ? 'main-content' : 'nav-content'}
-        type={isSinglePage ? 'default' : 'nav'}
-      >
+      <PageSection id={isSinglePage ? 'main-content' : 'nav-content'}>
         {!katacodaLayout && <Title size="4xl" headingLevel="h1" id="ws-page-title" className={isSinglePage ? 'pf-u-p-lg' : ''}>
           {title}
         </Title>}

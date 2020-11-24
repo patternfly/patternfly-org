@@ -8,6 +8,14 @@
   width: 280px;
   max-height: calc(100vh - 76px);
   overflow-y: auto;
+  /* Hide TOC scrollbar IE, Edge & Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hide TOC scrollbar Chrome, Safari & Opera */
+.ws-toc::-webkit-scrollbar {
+  display: none;
 }
 
 @media (max-width: 1450px) {
