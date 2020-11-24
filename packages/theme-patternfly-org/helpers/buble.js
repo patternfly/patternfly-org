@@ -105,7 +105,6 @@ function transform(code) {
     allowReturnOutsideFunction: true
   });
   code = generate(ast, { generator });
-  console.log('code', code);
   return { code };
 }
 

@@ -91,7 +91,7 @@ Object.entries(groupedRoutes)
       if (
         ['components', 'charts', 'layouts', 'demos'].includes(section) &&
         !pageData.sources.map(({ source }) => source).includes('design-guidelines') &&
-        process.env.hasDesignGuidelines === 'true'
+        process.env.hasDesignGuidelines
       ) {
         pageData.sources.push(getDefaultDesignGuidelines(pageData));
       }
