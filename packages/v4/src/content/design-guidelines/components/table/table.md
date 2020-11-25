@@ -80,7 +80,7 @@ Every table can be extended with these functionalities:
 * It would not make sense to combine all of this information into a single, simple expansion.
 
 ### Actionable table
-The actionable table provides checkboxes or radio buttons that enable users to select one or more rows and optionally act on that selection using options in the [toolbar](/components/toolbar/design-guidelines), depending on the use case.
+The actionable table provides checkboxes or radio buttons that enable users to select one or more rows in a table. Users may then act on those selections using options in the [toolbar](/components/toolbar/design-guidelines),.
 
 <img src="./img/actionable-table.png"  alt="Actionable table"  width="1174"/> 
 
