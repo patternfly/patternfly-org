@@ -189,7 +189,7 @@ In some situations, users may need to add or create something to view associated
 
 <img src="./img/add-or-create.png" alt="Example of add empty state" width="990"/> 
 
-You may also use an extra-small empty state inside of a card to present the user with another meands of adding a new card/item to their card view. If used, we recommend using it **in addition to** a primary button in a toolbar, to ensure that the user is still able to perform the action no matter what page of the card view they are on. We also recommend placing the addition action card as the very first or as the very last card in the card view.
+You may also use an extra-small empty state inside of a card to present the user with another meands of adding a new card/item to their card view. If used, we recommend using it **in addition to** a primary button in a toolbar, to ensure that the user is still able to perform the action no matter what page of the card view they are on. The placement of the addition action card should be consistent with where a new card will be added, most likely the very first or the very last card in the card view.
 
 <img src="./img/add-card-empty-state.png" alt="Example of add empty state in card" width="990"/> 
 

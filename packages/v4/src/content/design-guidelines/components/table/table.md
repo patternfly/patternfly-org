@@ -49,7 +49,7 @@ Every table can be extended with these functionalities:
 
 <img src="./img/expandable-table.png"  alt="Expandable table"  width="1186"/> 
 
-1. **Expand all**: Expands every row at the same time.
+1. **Expand all (optional)**: Expands every row at the same time.
 2. **Expansion:** Expands single row.
 3. **Expansion panel:** Contains details associated with a row. See [expanded panel coloring](#expanded-panel-coloring) for more information.
 

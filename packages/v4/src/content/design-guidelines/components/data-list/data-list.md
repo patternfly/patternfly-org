@@ -53,13 +53,12 @@ Every data list can be extended with these functionalities:
 * **[Expandable data list](/components/data-list/design-guidelines#expandable-data-list)**
 
 ### Actionable data list
-The actionable data list provides checkboxes or radio buttons that enable users to select one or more rows in the list. Users may then act on those selections using options in the [toolbar](/components/toolbar/design-guidelines).
+The actionable data list provides checkboxes that enable users to select one or more rows in the list. Users may then act on those selections using options in the [toolbar](/components/toolbar/design-guidelines).
 
-<img src="./img/actionable-data-list.png" alt="Actionable list" /> 
+<img src="./img/actionable-list.png" alt="Actionable list" /> 
 
 1. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information. 
-2. **Checkbox:** Enables a user to select a row. Use when multiple rows can be selected at the same time.
-3. **Radio button:** Enables a user to select a row. Use when only one row can be selected at a time.
+2. **Checkbox:** Enables a user to select a row.
 3. **Global actions:** Actions that can be applied to **all** selected items. If actions in the data list are restricted to a single row or object, keep the actions at the individual row level, instead of in the toolbar.
 
 #### When to use
@@ -73,7 +72,7 @@ The expandable list adds an expansion panel to every row to reveal more details 
 
 <img src="./img/expandable-data-list.png" alt="Expandable data list" width="1241"/> 
 
-1. **Expand all:** Expands or collapses every row in the data list at the same time.
+1. **Expand all (optional):** Expands or collapses every row in the data list at the same time.
 2. **Expansion caret:** Toggles the expansion open and closed for the individual row.
 3. **Expansion panel:** A container that is revealed when the expansion is open. It can accept any supported layout to present additional content to the user.
 
