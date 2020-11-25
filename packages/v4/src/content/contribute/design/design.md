@@ -24,7 +24,7 @@ __Example__
 You may open an issue in our [patternfly-org repo](https://github.com/patternfly/patternfly-org) to propose a new design guideline page or update an existing guideline, and work with the PatternFly team and stakeholders to author and publish your new content. Visit the [Design guidelines page](https://www.patternfly.org/v4/contribute/design-guidelines) for detailed instructions about how to author and contribute design guideline content.
 
 ### PatternFly design kit
-The [PatternFly Design Kit](https://www.patternfly.org/v4/get-started/design) is a [Sketch](https://www.sketch.com/) library that makes it easy for designers to create high-fidelity mockups using PatternFly components.
+The [PatternFly Design Kit](https://www.patternfly.org/v4/get-started/design) is a [Sketch](https://www.sketch.com) library that makes it easy for designers to create high-fidelity mockups using PatternFly components.
 
 __Example__
 *I want to implement a new component in the PatternFly Sketch symbol library.*
