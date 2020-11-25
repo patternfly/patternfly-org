@@ -9,10 +9,10 @@ The PatternFly open source community depends on contributions to help our design
 PatternFly has a few repos you can contribute to:
 - [patternfly](https://github.com/patternfly/patternfly): For core HTML and CSS contributions. All component contributions should start in Core.
 - [patternfly-react](https://github.com/patternfly/patternfly-react): For React contributions.
-- [patternfly.org](https://github.com/patternfly/patternfly-org): For PatternFly website content and design documentation contributions.
+- [patternfly-org](https://github.com/patternfly/patternfly-org): For PatternFly website content and design documentation contributions.
 
 ## Requesting new features and enhancements
-PatternFly is built on the needs of our community of stakeholders. To request a new feature or an enhancement to an existing feature, the first step is to open a new issue in the [patternfly-design repo](https://github.com/patternfly/patternfly-design). Your issue should include:
+PatternFly is built on the needs of our community of stakeholders. To request a new feature or an enhancement to an existing feature, the first step is to open a new issue in the [patternfly-design repo](https://github.com/patternfly/patternfly-design/issues). Your issue should include:
 *    Requirements
 *    Use cases
 *    Preliminary designs (if available)
