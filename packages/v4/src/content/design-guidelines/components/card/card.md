@@ -101,6 +101,12 @@ If an action can be performed globally on multiple cards, or if it leads to mult
 2. Global actions are placed in the toolbar.
 3. The card’s checkbox allows a user to perform an action on multiple cards. When a user selects a card, the checkbox turns blue to indicate selection.
 
+#### Action card
+You may use an extra-small empty state inside of a card to present the user with another means of adding a new card/item to their card view. If used, we recommend using it **in addition to** a primary button in a toolbar, to ensure that the user is still able to perform the action no matter what page of the card view they are on. The placement of the action card should be consistent with where a new card will be added, most likely the very first or the very last card in the card view.
+
+<img src="./img/add-card-empty-state.png" alt="card view with addition card" /> 
+
+
 ### Images 
 Only include meaningful images on your cards (don’t add them for decoration). Images should help users identify specific content types. Place smaller images above the card’s header, and place larger images within the card’s body. 
 
