@@ -47,10 +47,11 @@ Every table can be extended with these functionalities:
 
 ### Expandable table
 
-<img src="./img/expandable-data-table.png"  alt="Expandable table"  width="1186"/> 
+<img src="./img/expandable-table.png"  alt="Expandable table"  width="1186"/> 
 
-1. **Expansion:** Expands the row
-2. **Expansion panel:** Contains details associated with a row. See [expanded panel coloring](#expanded-panel-coloring) for more information.
+1. **Expand all (optional)**: Expands every row at the same time.
+2. **Expansion:** Expands single row.
+3. **Expansion panel:** Contains details associated with a row. See [expanded panel coloring](#expanded-panel-coloring) for more information.
 
 #### When to use
 
@@ -79,20 +80,21 @@ Every table can be extended with these functionalities:
 * It would not make sense to combine all of this information into a single, simple expansion.
 
 ### Actionable table
-The actionable table provides checkboxes that enable users to select one or more rows and act on that selection using options in the [toolbar](/components/toolbar/design-guidelines).
+The actionable table provides checkboxes or radio buttons that enable users to select one or more rows in a table. Users may then act on those selections using options in the [toolbar](/components/toolbar/design-guidelines),.
 
 <img src="./img/actionable-table.png"  alt="Actionable table"  width="1174"/> 
 
-1. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information. 
-2. **Checkbox:** Enables a user to select a row.
-3. **Global actions:** Actions that can be applied to all selected items.
+1. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table with checkboxes. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information. 
+2. **Checkbox**: Enables a user to select a row. Use when multiple rows can be selected at the same time.
+3. **Radio button**: Enables a user to select a single row at a time. Use when only one row can be selected at a time.
+3. **Global actions:** Actions that can be applied to **all** selected items.  If actions in the table are restricted to a single row or object, keep the actions at the row kebab level, instead of in the toolbar.
 
 #### When to use and when not
 **Use an actionable table when:**
-* You need to enable a user to select and act on multiple items in the table.
+* You need to enable a user to select one or more items in the table, for example to make selections in a wizard, or to carry out actions in a full page table.
 
 **Don't use an actionable table when:**
-* Actions are restricted to a single row or object. In this case, place actions inline within the row.
+* Users can not take any actions on table items/rows.
 
 ### Sorting by columns
 Sorting by columns is possible for any table variation. Enabling the component within a table eases the ability to scan and read through the content. This option is favored over adding sorting functionality to the [toolbar](/components/toolbar/design-guidelines).
