@@ -27,6 +27,7 @@ export const TrainingCard = ({
   title,
   time,
   description,
+  subsection,
   katacodaId
 }) => (
   <Card className="pf-org__card" isCompact>
@@ -50,7 +51,7 @@ export const TrainingCard = ({
       {description}
     </CardBody>
     <CardFooter>
-    <Link to={`/training/${katacodaId}`} >
+    <Link to={`/training/${subsection}/${katacodaId}`} >
       <Button variant="link">
         Start
         <ArrowRightIcon />

@@ -35,17 +35,18 @@ const groupedRoutes = Object.entries(routes)
       id,
       section,
       title,
-      slug: makeSlug(source, section, id, true),
       sources: [],
       katacodaLayout
     };
 
     if (subsection) {
+      groupedItem.slug = makeSlug({ source, section, subsection, id, noSource: true }),
       accum[section][subsection] = accum[section][subsection] || {};
       accum[section][subsection][id] = accum[section][subsection][id] || groupedItem;
       accum[section][subsection][id].sources.push(pageData);
     }
     else {
+      groupedItem.slug = makeSlug({ source, section, id, noSource: true })
       accum[section][id] = accum[section][id] || groupedItem;
       accum[section][id].sources.push(pageData);
     }
@@ -97,7 +98,7 @@ Object.values(groupedRoutes)
     ? sections
     : Object.values(sections).reduce((acc, val) => {
         Object.assign(acc, val);
-        return val;
+        return acc;
       }, {})
   )
   .forEach(section => {

@@ -18,6 +18,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="20 minutes"
       description="Learn about components, layouts, and demos."
+      subsection="html"
       katacodaId="the-building-blocks-of-patternfly"
     />
   </GalleryItem>
@@ -28,6 +29,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="intermediate"
       time="20 minutes"
       description="Create and override component and global variables by following BEM naming principles."
+      subsection="html"
       katacodaId="variable-naming-principles"
     />
   </GalleryItem>
@@ -38,6 +40,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="15 minutes"
       description="Apply modifier and utility classes to create new variations."
+      subsection="html"
       katacodaId="modifiers-and-utilities"
     />
   </GalleryItem>
@@ -48,6 +51,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="25 minutes"
       description="Learn how to use all seven of PatternFly's layouts."
+      subsection="html"
       katacodaId="layouts"
     />
   </GalleryItem>
@@ -58,6 +62,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="advanced"
       time="25 minutes"
       description="Practice overriding and extending variables to create new designs."
+      subsection="html"
       katacodaId="override-and-extend-variables"
     />
   </GalleryItem>

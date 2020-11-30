@@ -7,10 +7,6 @@ const KatacodaExample = ({katacodaId}) => {
       const script = document.createElement('script');
       script.setAttribute('src', '//katacoda.com/embed.js');
       document.body.appendChild(script);
-      const outterContent = document.getElementsByClassName('ws-mdx-content')[0];
-      outterContent.setAttribute('style', 'padding: 0');
-      const innerContent = document.getElementsByClassName('ws-mdx-content-content')[0];
-      innerContent.setAttribute('style', 'max-width: none');
       return () => {
         document.body.removeChild(script);
       }

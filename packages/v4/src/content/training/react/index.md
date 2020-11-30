@@ -18,6 +18,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Build your first PatternFly component."
+      subsection="react"
       katacodaId="patternfly-react-basics"
     />
   </GalleryItem>
@@ -28,6 +29,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="5 minutes"
       description="Learn how to customize components in PatternFly."
+      subsection="react"
       katacodaId="customize-patternfly"
     />
   </GalleryItem>
@@ -42,6 +44,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="intermediate"
       time="45 minutes"
       description="Build a React table with pagination."
+      subsection="react"
       katacodaId="table-component-beginner"
     />
   </GalleryItem>
@@ -52,6 +55,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="intermediate"
       time="30 minutes"
       description="Build a React toolbar that is filterable."
+      subsection="react"
       katacodaId="toolbar-component-with-filter"
     />
   </GalleryItem>
@@ -62,6 +66,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="intermediate"
       time="30 minutes"
       description="Build and customize a React select component."
+      subsection="react"
       katacodaId="select-component-beginner"
     />
   </GalleryItem>
@@ -77,6 +82,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React area chart."
+      subsection="react"
       katacodaId="area-chart"
     />
   </GalleryItem>
@@ -87,6 +93,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React bar chart."
+      subsection="react"
       katacodaId="bar-chart"
     />
   </GalleryItem>
@@ -97,6 +104,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React bullet chart."
+      subsection="react"
       katacodaId="bullet-chart"
     />
   </GalleryItem>
@@ -107,6 +115,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React donut chart."
+      subsection="react"
       katacodaId="donut-chart"
     />
   </GalleryItem>
@@ -117,6 +126,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="12 minutes"
       description="Learn how to implement a React donut utilization chart."
+      subsection="react"
       katacodaId="donut-utilization-chart"
     />
   </GalleryItem>
@@ -127,6 +137,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React line chart."
+      subsection="react"
       katacodaId="line-chart"
     />
   </GalleryItem>
@@ -137,6 +148,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React pie chart."
+      subsection="react"
       katacodaId="pie-chart"
     />
   </GalleryItem>
@@ -147,6 +159,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React pie chart."
+      subsection="react"
       katacodaId="stack-chart"
     />
   </GalleryItem>
@@ -157,6 +170,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="12 minutes"
       description="Learn how to implement a React sparkline chart."
+      subsection="react"
       katacodaId="sparkline-chart"
     />
   </GalleryItem>
