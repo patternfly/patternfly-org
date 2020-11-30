@@ -91,7 +91,6 @@ const getDefaultDesignGuidelines = ({ id, section, slug, title }) => {
   return pageData;
 }
 
-console.log('groupedRoutes', groupedRoutes);
 Object.values(groupedRoutes)
   // Support subsections
   .map(sections => Object.values(sections)[0].sources

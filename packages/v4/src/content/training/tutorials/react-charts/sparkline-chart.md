@@ -1,7 +1,7 @@
 ---
 id: Sparkline chart
 section: training
-subsection: react
+subsection: charts
 katacodaLayout: true
 ---
 

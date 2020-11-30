@@ -1,7 +1,7 @@
 ---
 id: Bar chart
 section: training
-subsection: react
+subsection: charts
 katacodaLayout: true
 ---
 

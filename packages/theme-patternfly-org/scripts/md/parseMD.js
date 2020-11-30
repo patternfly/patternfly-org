@@ -43,12 +43,7 @@ function toReactComponent(mdFilePath, source) {
         file.fail('id attribute is required in frontmatter for PatternFly docs');
       }
       source = frontmatter.source || source;
-      let slug
-      if (frontmatter.subsection) {
-        slug = makeSlug({ source, section: frontmatter.section, subsection: frontmatter.subsection, id: frontmatter.id });
-      } else {
-        slug = makeSlug({ source, section: frontmatter.section, id: frontmatter.id });
-      }
+      const slug = makeSlug({ source, section: frontmatter.section, subsection: frontmatter.subsection, id: frontmatter.id });
       outPath = path.join(outputBase, `${slug}.js`);
 
       let sourceRepo = 'patternfly-org';

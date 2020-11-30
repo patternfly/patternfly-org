@@ -82,7 +82,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React area chart."
-      subsection="react"
+      subsection="charts"
       katacodaId="area-chart"
     />
   </GalleryItem>
@@ -93,7 +93,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React bar chart."
-      subsection="react"
+      subsection="charts"
       katacodaId="bar-chart"
     />
   </GalleryItem>
@@ -104,7 +104,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React bullet chart."
-      subsection="react"
+      subsection="charts"
       katacodaId="bullet-chart"
     />
   </GalleryItem>
@@ -115,7 +115,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React donut chart."
-      subsection="react"
+      subsection="charts"
       katacodaId="donut-chart"
     />
   </GalleryItem>
@@ -126,7 +126,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="12 minutes"
       description="Learn how to implement a React donut utilization chart."
-      subsection="react"
+      subsection="charts"
       katacodaId="donut-utilization-chart"
     />
   </GalleryItem>
@@ -137,7 +137,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React line chart."
-      subsection="react"
+      subsection="charts"
       katacodaId="line-chart"
     />
   </GalleryItem>
@@ -148,7 +148,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React pie chart."
-      subsection="react"
+      subsection="charts"
       katacodaId="pie-chart"
     />
   </GalleryItem>
@@ -159,7 +159,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React pie chart."
-      subsection="react"
+      subsection="charts"
       katacodaId="stack-chart"
     />
   </GalleryItem>
@@ -170,7 +170,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="12 minutes"
       description="Learn how to implement a React sparkline chart."
-      subsection="react"
+      subsection="charts"
       katacodaId="sparkline-chart"
     />
   </GalleryItem>

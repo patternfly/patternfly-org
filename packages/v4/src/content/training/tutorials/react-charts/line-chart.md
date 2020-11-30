@@ -1,7 +1,7 @@
 ---
 id: Line chart
 section: training
-subsection: react
+subsection: charts
 katacodaLayout: true
 ---
 
