@@ -93,10 +93,8 @@ const getDefaultDesignGuidelines = ({ id, section, slug, title }) => {
 
 Object.values(groupedRoutes)
   // Support subsections
-  .map(sections => Object.values(sections)[0].sources
-    ? sections
-    : Object.values(sections).reduce((acc, val) => {
-        Object.assign(acc, val);
+  .map(sections => Object.entries(sections).reduce((acc, [key, val]) => {
+        val.sources ? Object.assign(acc, {[key]: val}) : Object.assign(acc, val);
         return acc;
       }, {})
   )

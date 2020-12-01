@@ -1,7 +1,6 @@
 ---
 id: About
 section: training
-subsection: about
 source: html
 ---
 

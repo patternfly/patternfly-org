@@ -4,28 +4,19 @@ import { Nav, NavList, NavExpandable, capitalize } from '@patternfly/react-core'
 import { css } from '@patternfly/react-styles';
 import { Location } from '@reach/router';
 import { slugger } from '../../helpers';
+import { isUndefined } from 'lodash-es';
 import './sideNav.css';
 
 const NavObjectMap = ({ groupedRoutes, section }) => {
-  let isSubsection = false;
   const mapObject = Object.entries(groupedRoutes[section] || {}).map(
     ([id, pageData]) => {
       if (!pageData.sources) {
-        isSubsection = true;
         return [id, pageData]
       }
       return [id, { slug: pageData.slug }];
     }
   );
-  return isSubsection
-    ? mapObject
-        .map(([id, pageData]) => ({ subtitle: id, subsection: pageData}))
-        .sort(({ subtitle: subtitle1 }, {subtitle: subtitle2 }) => subtitle1.localeCompare(subtitle2))
-        .map(NavSubsection)
-    : mapObject
-        .map(([id, { slug }]) => ({ text: id, href: slug }))
-        .sort(({ text: text1 }, { text: text2 }) => text1.localeCompare(text2))
-        .map(NavItem);
+  return NavSection({ mapObject })
 };
 
 const NavItem = ({ text, href }) => (
@@ -47,13 +38,34 @@ const NavItem = ({ text, href }) => (
   </li>
 );
 
-// map the subsections in the section
-const NavSubsection = ({ subtitle, subsection }) => (
-    <React.Fragment key={`${Object.values(subsection)[0].section}-${subtitle}`}>
-      <h6 className="pf-c-nav__subsection-title">{capitalize(subtitle)}</h6>
-      {NavSubsectionItem({ subsection })}
+const NavSection = ({ mapObject }) => {
+  const items = 
+    mapObject
+      .filter(([, { slug }]) => !isUndefined(slug))
+      .map(([id, { slug }]) => ({ text: id, href: slug }))
+      .sort(({ text: text1 }, { text: text2 }) => text1.localeCompare(text2))
+      .map(NavItem)
+  const subsections = 
+    mapObject
+      .filter(([, { slug }]) => isUndefined(slug))
+      .map(([id, pageData]) => ({ subtitle: id, subsection: pageData}))
+      .sort(({ subtitle: subtitle1 }, {subtitle: subtitle2 }) => subtitle1.localeCompare(subtitle2))
+      .map(NavSubsection)
+  return (
+    <React.Fragment>
+      {items}
+      {subsections}
     </React.Fragment>
   )
+}
+
+// map the subsections in the section
+const NavSubsection = ({ subtitle, subsection }) => (
+  <React.Fragment key={`${Object.values(subsection)[0].section}-${subtitle}`}>
+    <h6 className="pf-c-nav__subsection-title">{capitalize(subtitle)}</h6>
+    {NavSubsectionItem({ subsection })}
+  </React.Fragment>
+)
 
 // map the items in the subsection
 const NavSubsectionItem = ({ subsection }) => (
