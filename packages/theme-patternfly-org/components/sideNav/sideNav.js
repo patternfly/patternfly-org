@@ -4,7 +4,6 @@ import { Nav, NavList, NavExpandable, capitalize } from '@patternfly/react-core'
 import { css } from '@patternfly/react-styles';
 import { Location } from '@reach/router';
 import { slugger } from '../../helpers';
-import { isUndefined } from 'lodash-es';
 import './sideNav.css';
 
 const NavItem = ({ text, href }) => (
@@ -58,7 +57,7 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
                     className="ws-side-nav-group"
                   >
                     {Object.entries(groupedRoutes[section] || {})
-                      .filter(([, { hideNavItem }]) => isUndefined(hideNavItem))
+                      .filter(([, { hideNavItem }]) => !Boolean(hideNavItem))
                       .map(([id, { slug }]) => ({ text: id, href: slug }))
                       .sort(({ text: text1 }, { text: text2 }) => text1.localeCompare(text2))
                       .map(NavItem)
