@@ -12,15 +12,16 @@ module.exports = {
   hasDesignGuidelines: true,
   sideNavItems: [
     { section: 'get-started' },
+    { section: 'developer-resources' },
     { section: 'guidelines' },
     { section: 'UX writing' },
     { section: 'components' },
     { section: 'charts' },
     { section: 'demos' },
     { section: 'layouts' },
+    { section: 'utilities' },
     { section: 'contribute' },
-    { href: '/community' },
-    { href: '/get-in-touch' },
+    { href: '/community' }
   ],
   topNavItems: [],
   port: 8003,

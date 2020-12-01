@@ -13,11 +13,14 @@ import {
   DropdownItem,
   DropdownGroup,
   Divider,
+  Text,
+  TextVariants,
   SkipToContent
 } from '@patternfly/react-core';
 import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
+import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
 import logo from '../logo.svg';
@@ -45,6 +48,24 @@ const HeaderTools = ({
   );
   const searchRef = React.useRef();
 
+  useEffect(() => {
+    const handleSearchHotkeys = (event) => {
+      const tagName = event.target.tagName.toLowerCase();
+      if (
+        (event.code === 'Slash' || event.code === 'KeyS') &&
+        tagName !== 'input' &&
+        tagName !== 'textarea'
+      ) {
+        setSearchExpanded(true);
+        setTimeout(() => searchRef.current && searchRef.current.focus(), 0);
+      } else if (event.code === 'Escape' && event.target === searchRef.current) {
+        setSearchExpanded(false);
+      }
+    };
+    window.addEventListener('keyup', handleSearchHotkeys);
+    return () => window.removeEventListener('keyup', handleSearchHotkeys);
+  }, []);
+
   return (
     <PageHeaderTools>
       {hasSearch && (
@@ -55,22 +76,34 @@ const HeaderTools = ({
       )}
       {hasSearch && (
         <Button
-          aria-label={`${isSearchExpanded ? 'Collapse' : 'Expand'} search input`}
-          variant="plain"
-          className="ws-toggle-search"
-          onClick={() => {
+        aria-label={`${isSearchExpanded ? 'Collapse' : 'Expand'} search input`}
+        variant="plain"
+        className="ws-toggle-search"
+        onClick={() => {
             setSearchExpanded(!isSearchExpanded);
             if (!isSearchExpanded) {
               setTimeout(() => searchRef.current && searchRef.current.focus(), 0);
             }
           }}
-        >
+          >
           {isSearchExpanded
             ? <TimesIcon />
             : <SearchIcon className="global-search-icon" />
           }
         </Button>
       )}
+      <PageHeaderToolsItem>
+        <Button
+          component="a"
+          variant="link"
+          href="//github.com/patternfly"
+          target="top"
+          aria-label="Link to PatternFly GitHub page"
+          className="ws-github-pageheader pf-u-mr-sm"
+        >
+          <GithubIcon />
+        </Button>
+      </PageHeaderToolsItem>
       {hasVersionSwitcher && (
         <PageHeaderToolsItem>
           <Dropdown

@@ -2,6 +2,7 @@
 id: Page
 section: components
 ---
+
 The **page** component is used to define the basic layout of a page with either vertical or horizontal navigation.
 
 ## Basic layouts
@@ -56,3 +57,4 @@ The masthead contains global properties such as logotype, navigation and setting
 * **Help:** The help item reveals a dropdown menu. The menu items may include documentation links available to users, links to customer support resources, and/or instructions on how to get support. If the application has an [About modal](/components/about-modal), it should also be accessed here . The help menu is represented by the `pficon-pf-help` icon.
 
 **4. User menu:** The user menu is always the right-most item in the masthead. It includes an [avatar](/components/avatar) and the username of the currently logged in user. The dropdown items may vary based on user settings and permissions available. Common items to include are: `User name`, `Account ID` or `Account management`. This section should always include a `Log out` option at the bottom of the dropdown list. If there is a need to allow users to change application display language, it should appear in this dropdown menu as well.
+

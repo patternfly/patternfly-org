@@ -3,7 +3,7 @@ id: Progress
 section: components
 ---
 
-Progress bars inform users about the status of ongoing processes, such as loading an app, submitting a form, or saving updates. Progress bars can also inform users about their progress through a tutorial or a series of steps to reach completion.
+A **progress bar** informs users about the status of ongoing processes, such as loading an app, submitting a form, or saving updates. Progress bars can also inform users about their progress through a tutorial or a series of steps to reach completion.
 
 ## Primary elements
 ![progress-bar](./img/progress-bar-callouts.png)
@@ -11,8 +11,8 @@ Progress bars inform users about the status of ongoing processes, such as loadin
 Progress bars are composed of four elements:
 
 1. **Title:** Concisely conveys the task the user or system is working to complete
-2. **Track:** A visual guide to describe to the user what it takes to meet full task completion
-3. **Value of progress:** A value that helps the user understand how much progress has been made
+2. **Track:** Describes the path to full task completion through a visual guide
+3. **Value of progress:** Helps the user understand how much progress has been made
 4. **Indicator:** An animated indicator along the track that draws the user's eye to the progress bar and demonstrates the user’s progress towards completion
 
 ## Usage
@@ -41,9 +41,9 @@ The indeterminate progress bar represents progress that cannot be measured, and,
 
 **Use cases that can be supported by progress bars**
 
-* When the user must complete a series of tasks and will want indication that they are making process
-* When the user needs indication that the system is progressing in loading, saving, and downloading
-* When a process needs to be reflected to a user that is happening in the background, especially when this may take a long time
+* The user must complete a series of tasks and will want indication that they are making process
+* The user needs indication that the system is progressing in loading, saving, and downloading
+* A process needs to be reflected to a user that is happening in the background, especially when it may take a long time
 
 ### When not to use
 Do not use an indeterminate progress bar to indicate measurable progress. Users need progress bars to represent measurable progress if at all possible. Use an indeterminate progress bar only if progress is not measurable.
@@ -55,7 +55,7 @@ Do not use a spinner and a progress bar together. Use one progress measure at a 
 ## Using progress bars in your designs
 ![progress-bar](./img/progress-bar-do-dont.png)
 
-The Do state demonstrates that the progress bar should be placed in alignment with relevant context. The Don’t state demonstrates that the progress bar should not be used without a descriptive title and a percentage of completion when possible. The progress bar should be placed within the user’s line of sight as a guide.
+The "Do" state demonstrates that the progress bar should be placed in alignment with relevant context. The "Don’t" state demonstrates that the progress bar should not be used without a descriptive title and a percentage of completion when possible. The progress bar should be placed within the user’s line of sight as a guide.
 
 **How to use a progress bar in a table**
 
@@ -67,13 +67,13 @@ If the progress bar records the progress of multiple line items, keep the progre
 
 ![progress-bar](./img/progress-bar-in-dashboard.png)
 
-On the dashboard view use a progress bar to track the trends within the card components on the page.
+On the dashboard view, use a progress bar to track the trends within the card components on the page.
 
 **How to use a progress bar when a file is downloading**
 
 ![progress-bar](./img/progress-bar-file-downloading.png)
 
-When a file is downloading use the toast notification component and a progress bar to demonstrate the progress achieved.
+When a file is downloading, use the toast notification component and a progress bar to demonstrate the progress achieved.
 
 **How to use a progress bar in a wizard**
 
@@ -97,8 +97,8 @@ A green progress bar represents the successful completion of a process, and the 
 ![progressbar](./img/progress-bar-success.png)
 
 ## Content
-Titles should clearly describe the process that is being measured. Try to keep titles between 1 and 3 words.  An example of a title could be “Downloading Your Application.” Insert in “Your Application” the application name.
+Titles should clearly describe the process that is being measured. Try to keep titles between 1 and 3 words.  An example of a title could be “Downloading your application,” with the application name inserted for "your application."
 
-Do not provide any other supporting copy to the progress bar that would require the user to read about how to use the progress bar. A progress bar should be self-explanatory if you implement labels 1 through 4 that are detailed in the article above.
+Do not provide any other supporting copy to the progress bar that would require the user to read about how to use it. A progress bar should be self-explanatory.
 
 See our [content guidelines](/ux-writing/about) for additional guidance.

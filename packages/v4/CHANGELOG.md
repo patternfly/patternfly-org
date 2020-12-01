@@ -3,6 +3,118 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.88](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.87...patternfly-org-4@4.2.88) (2020-11-30)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## [4.2.87](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.86...patternfly-org-4@4.2.87) (2020-11-25)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## [4.2.86](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.85...patternfly-org-4@4.2.86) (2020-11-24)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## [4.2.85](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.84...patternfly-org-4@4.2.85) (2020-11-20)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## [4.2.84](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.83...patternfly-org-4@4.2.84) (2020-11-19)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## [4.2.83](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.82...patternfly-org-4@4.2.83) (2020-11-19)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## [4.2.82](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.81...patternfly-org-4@4.2.82) (2020-11-17)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## [4.2.81](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.80...patternfly-org-4@4.2.81) (2020-11-17)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## [4.2.80](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.79...patternfly-org-4@4.2.80) (2020-11-17)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## [4.2.79](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.78...patternfly-org-4@4.2.79) (2020-11-16)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## [4.2.78](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.77...patternfly-org-4@4.2.78) (2020-11-16)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## [4.2.77](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.76...patternfly-org-4@4.2.77) (2020-11-12)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## [4.2.76](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.75...patternfly-org-4@4.2.76) (2020-11-11)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## [4.2.75](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.74...patternfly-org-4@4.2.75) (2020-11-11)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
 ## [4.2.74](https://github.com/patternfly/patternfly-org/compare/patternfly-org-4@4.2.73...patternfly-org-4@4.2.74) (2020-11-10)
 
 **Note:** Version bump only for package patternfly-org-4

@@ -2,7 +2,7 @@
 id: Search input
 section: components
 ---
-**Search input** is a type of input field. It can be used for various cases including search, find or filter. See [filter documentation](/guidelines/filters) for more information on using search input as a filter.
+A **search input** is a type of input field that can be user to search, find, or filter. See [filter guidelines](/guidelines/filters) for more information on using search input as a filter.
 
 ## Usage
 Use a search input when you want to either filter down or locate values from a dataset that match an inputted value.

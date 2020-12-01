@@ -21,7 +21,7 @@ The extra-small empty state can be used inside of a card or anyplace else you wa
 #### [Introduced sticky page sections](https://www.patternfly.org/v4/components/page/react-demos#sticky-section-group)
 This is a new feature added to the Page component that allows for defining sticky sections on a page. It will enable defining sticky headers, footers, toolbars, etc.
 
-See the [latest release notes](https://www.patternfly.org/v4/get-started/release-notes) for a more detailed list of changes.
+See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
 
 ### What we’re working on...

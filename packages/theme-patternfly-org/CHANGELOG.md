@@ -3,6 +3,65 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.11](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.10...theme-patternfly-org@0.2.11) (2020-11-30)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.2.10](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.9...theme-patternfly-org@0.2.10) (2020-11-24)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.2.9](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.8...theme-patternfly-org@0.2.9) (2020-11-19)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.2.8](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.7...theme-patternfly-org@0.2.8) (2020-11-16)
+
+
+### Bug Fixes
+
+* **buble:** allow JSXEmptyExpressions ([#2266](https://github.com/patternfly/patternfly-org/issues/2266)) ([ccad1b7](https://github.com/patternfly/patternfly-org/commit/ccad1b751d4bfa4d22466af061e640560c29e4ab))
+
+
+
+
+
+## [0.2.7](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.6...theme-patternfly-org@0.2.7) (2020-11-16)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.2.6](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.5...theme-patternfly-org@0.2.6) (2020-11-11)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.2.5](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.4...theme-patternfly-org@0.2.5) (2020-11-11)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
 ## [0.2.4](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.3...theme-patternfly-org@0.2.4) (2020-11-09)
 
 

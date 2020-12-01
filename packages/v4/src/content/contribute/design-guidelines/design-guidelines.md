@@ -127,7 +127,7 @@ To ensure that imagery is consistent and maintainable, create all your image ass
 3. Insert a new artboard for every unique image that you will create.
 4. Create your images. There are two types of images used within design guideline documents: 
 
-    - **High-fidelity mockups** are used to show component details or in any situation where understanding design specifics is important. When describing a design, add numbered callouts to point to specific elements. If you’re only pointing to one element, use an arrow to point to the element instead.  
+    - **High-fidelity mockups** are used to show component details or in any situation where understanding design specifics is important. When describing a design, add numbered callouts to point to specific elements. If you're only pointing to one element, add an unnumbered callout instead.
 
         <img src="./image-2-high-fi.png" alt="high-fi modal" /> 
 

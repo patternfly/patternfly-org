@@ -3,13 +3,13 @@ id: Notification badge
 section: components
 related: ['Notification drawer', 'Page']
 ---
-The **Notification badge** is intended to be used with a [Notification drawer](/components/notification-drawer) as a visible indicator to alert the user about incoming notifications.
+A **notification badge** is intended to be used with a [notification drawer](/components/notification-drawer) as a visible indicator to alert the user about incoming notifications.
 
 ## Elements
 
 <img src="./img/notification-badge.png" alt="basic notification drawer" width="598"/>
 
-1. **Icon:** the notification badge will be located in the masthead and display the 'fa-bell' icon in it's default state. Clicking the icon (or anywhere within the badge) will toggle the notification drawer open and closed.
+1. **Icon:** The notification badge will be located in the masthead and display the 'fa-bell' icon in it's default state. Clicking the icon (or anywhere within the badge) will toggle the notification drawer open and closed.
 
 2. **Background:** In the default state, the background will change color to indicate that the notification drawer is opened. Optionally the background color can also convey status.
 
@@ -20,9 +20,9 @@ The **Notification badge** is intended to be used with a [Notification drawer](/
 5. **Count (optional):** When used, the count field will indicate the number of notifications in the notification drawer.
 
 ## Usage
-A notification badge must always be used when the notification drawer is present. Dependent on the capabilities and needs of your application, best practices for using the badge are as follows:
+Always use a notification badge when a notification drawer is present. Dependent on the capabilities and needs of your application, best practices for using the badge are as follows:
 
-* Report the Unread state in the badge only when it's possible to mark notifications as read in the drawer and when arriving notifications are relatively infrequent. If unread notifications will be present most of the time, alerting the user in this way looses its effect and is potentially distracting.
+* Report the **Unread state in the badge only when it's possible to mark notifications as read in the drawer and when arriving notifications are relatively infrequent. If unread notifications will be present most of the time, alerting the user in this way looses its effect and is potentially distracting.
 
 * Reporting a count of notifications is useful in most cases to give the user an indication of the volume of notifications present. This is especially helpful if unread status is not reported as it gives some indication of new arrivals.
 

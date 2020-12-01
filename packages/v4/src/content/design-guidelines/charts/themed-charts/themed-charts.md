@@ -2,4 +2,4 @@
 id: Themed charts
 section: charts
 ---
-A **Themed chart** is a chart with different theme and color treatments applied to it. Themed charts can help visually distinguish between different categories and data collection points plotted on the graph.
+A **themed chart** is a chart with different theme and color treatments applied to it. Themed charts can help visually distinguish between different categories and data collection points plotted on the graph.

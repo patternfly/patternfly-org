@@ -1112,10 +1112,17 @@ export const iconsData = [
   },
   {
     "Style": "pf-icon",
+    "Name": "pf-icon-resources-empty",
+    "React_name": "ResourcesEmptyIcon",
+    "Type": "Status",
+    "Contextual_usage": "Represents status: is empty"
+  },
+  {
+    "Style": "pf-icon",
     "Name": "pf-icon-resources-almost-empty",
     "React_name": "ResourcesAlmostEmptyIcon",
     "Type": "Status",
-    "Contextual_usage": "Represents status: almost empty"
+    "Contextual_usage": "Represents status: is almost empty"
   },
   {
     "Style": "pf-icon",

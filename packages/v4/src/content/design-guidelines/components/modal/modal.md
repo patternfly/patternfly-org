@@ -7,7 +7,7 @@ related: ['Button']
 import CheckIcon from '@patternfly/react-icons/dist/esm/icons/check-icon';
 import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
 
-**Modals** load and display important information without navigating away from the current page.
+A **modal** loads and displays important information without navigating away from the current page.
 
 ## Primary elements
 <img src="./img/modal.png" alt="Modal" />

@@ -1,7 +1,7 @@
 ---
 id: Migrate
 title: Migration guide
-section: get-started
+section: developer-resources
 ---
 
 ## Design your migration strategy
