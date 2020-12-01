@@ -1,7 +1,7 @@
 ---
 id: Bullet chart
 section: training
-subsection: charts
+hideNavItem: true
 katacodaLayout: true
 ---
 

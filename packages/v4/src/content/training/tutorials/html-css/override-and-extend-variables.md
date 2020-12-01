@@ -1,7 +1,7 @@
 ---
 id: Override and extend variables
 section: training
-subsection: HTML
+hideNavItem: true
 katacodaLayout: true
 ---
 

@@ -1,75 +1,10 @@
 ---
-id: About
+id: React charts
 section: training
-source: react
 ---
 
 import { Gallery, GalleryItem } from '@patternfly/react-core';
-import { TrainingCard } from '../trainingCard/trainingCard';
-
-## Fundamentals
-
-<Gallery hasGutter>
-  <GalleryItem>
-    <TrainingCard
-      trainingType="react"
-      title="PatternFly React basics"
-      level="beginner"
-      time="10 minutes"
-      description="Build your first PatternFly component."
-      subsection="react"
-      katacodaId="patternfly-react-basics"
-    />
-  </GalleryItem>
-  <GalleryItem>
-    <TrainingCard
-      trainingType="react"
-      title="Customize PatternFly"
-      level="beginner"
-      time="5 minutes"
-      description="Learn how to customize components in PatternFly."
-      subsection="react"
-      katacodaId="customize-patternfly"
-    />
-  </GalleryItem>
-</Gallery>
-
-## Components
-<Gallery hasGutter>
-  <GalleryItem>
-    <TrainingCard
-      trainingType="react-components"
-      title="Table component: beginner"
-      level="intermediate"
-      time="45 minutes"
-      description="Build a React table with pagination."
-      subsection="react"
-      katacodaId="table-component-beginner"
-    />
-  </GalleryItem>
-  <GalleryItem>
-    <TrainingCard
-      trainingType="react-components"
-      title="Toolbar component with filter"
-      level="intermediate"
-      time="30 minutes"
-      description="Build a React toolbar that is filterable."
-      subsection="react"
-      katacodaId="toolbar-component-with-filter"
-    />
-  </GalleryItem>
-  <GalleryItem>
-    <TrainingCard
-      trainingType="react-components"
-      title="Select component: beginner"
-      level="intermediate"
-      time="30 minutes"
-      description="Build and customize a React select component."
-      subsection="react"
-      katacodaId="select-component-beginner"
-    />
-  </GalleryItem>
-</Gallery>
+import { TrainingCard } from './trainingCard/trainingCard';
 
 ## Charts
 
@@ -81,7 +16,6 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React area chart."
-      subsection="charts"
       katacodaId="area-chart"
     />
   </GalleryItem>
@@ -92,7 +26,6 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React bar chart."
-      subsection="charts"
       katacodaId="bar-chart"
     />
   </GalleryItem>
@@ -103,7 +36,6 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React bullet chart."
-      subsection="charts"
       katacodaId="bullet-chart"
     />
   </GalleryItem>
@@ -114,7 +46,6 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React donut chart."
-      subsection="charts"
       katacodaId="donut-chart"
     />
   </GalleryItem>
@@ -125,7 +56,6 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="12 minutes"
       description="Learn how to implement a React donut utilization chart."
-      subsection="charts"
       katacodaId="donut-utilization-chart"
     />
   </GalleryItem>
@@ -136,7 +66,6 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React line chart."
-      subsection="charts"
       katacodaId="line-chart"
     />
   </GalleryItem>
@@ -147,7 +76,6 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React pie chart."
-      subsection="charts"
       katacodaId="pie-chart"
     />
   </GalleryItem>
@@ -158,7 +86,6 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="10 minutes"
       description="Learn how to implement a React pie chart."
-      subsection="charts"
       katacodaId="stack-chart"
     />
   </GalleryItem>
@@ -169,7 +96,6 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="12 minutes"
       description="Learn how to implement a React sparkline chart."
-      subsection="charts"
       katacodaId="sparkline-chart"
     />
   </GalleryItem>

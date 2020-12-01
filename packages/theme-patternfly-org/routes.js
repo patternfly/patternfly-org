@@ -28,30 +28,20 @@ const isNull = o => o === null || o === undefined;
 const groupedRoutes = Object.entries(routes)
   .filter(([_slug, { id, section }]) => !isNull(id) && !isNull(section))
   .reduce((accum, [slug, pageData]) => {
-    const { section, subsection, id, title, source, katacodaLayout } = pageData;
+    const { section, id, title, source, katacodaLayout, hideNavItem } = pageData;
     accum[section] = accum[section] || {};
-
-    const groupedItem = {
+    accum[section][id] = accum[section][id] || {
       id,
       section,
       title,
+      slug: makeSlug(source, section, id, true),
       sources: [],
-      katacodaLayout
+      katacodaLayout,
+      hideNavItem
     };
 
-    if (subsection) {
-      groupedItem.slug = makeSlug({ source, section, subsection, id, noSource: true }),
-      accum[section][subsection] = accum[section][subsection] || {};
-      accum[section][subsection][id] = accum[section][subsection][id] || groupedItem;
-      accum[section][subsection][id].sources.push(pageData);
-    }
-    else {
-      groupedItem.slug = makeSlug({ source, section, id, noSource: true })
-      accum[section][id] = accum[section][id] || groupedItem;
-      accum[section][id].sources.push(pageData);
-    }
-
     pageData.slug = slug;
+    accum[section][id].sources.push(pageData);
 
     return accum;
   }, {});
@@ -91,15 +81,9 @@ const getDefaultDesignGuidelines = ({ id, section, slug, title }) => {
   return pageData;
 }
 
-Object.values(groupedRoutes)
-  // Support subsections
-  .map(sections => Object.entries(sections).reduce((acc, [key, val]) => {
-        val.sources ? Object.assign(acc, {[key]: val}) : Object.assign(acc, val);
-        return acc;
-      }, {})
-  )
-  .forEach(section => {
-    Object.values(section).forEach(pageData => {
+Object.entries(groupedRoutes)
+  .forEach(([_section, ids]) => {
+    Object.values(ids).forEach(pageData => {
       const { slug, section } = pageData;
       // Remove source routes for `app.js`
       pageData.sources.forEach(({ slug }) => {

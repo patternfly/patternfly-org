@@ -1,7 +1,7 @@
 ---
 id: PatternFly React basics
 section: training
-subsection: react
+hideNavItem: true
 katacodaLayout: true
 ---
 

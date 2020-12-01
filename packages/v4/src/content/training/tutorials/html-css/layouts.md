@@ -1,7 +1,7 @@
 ---
 id: Layouts
 section: training
-subsection: HTML
+hideNavItem: true
 katacodaLayout: true
 ---
 

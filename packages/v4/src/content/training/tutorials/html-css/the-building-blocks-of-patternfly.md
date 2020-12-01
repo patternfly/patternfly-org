@@ -1,7 +1,7 @@
 ---
 id: The building blocks of PatternFly
 section: training
-subsection: HTML
+hideNavItem: true
 katacodaLayout: true
 ---
 

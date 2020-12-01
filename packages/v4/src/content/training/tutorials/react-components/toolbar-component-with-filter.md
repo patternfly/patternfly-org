@@ -1,7 +1,7 @@
 ---
 id: Toolbar component with filter
 section: training
-subsection: react
+hideNavItem: true
 katacodaLayout: true
 ---
 

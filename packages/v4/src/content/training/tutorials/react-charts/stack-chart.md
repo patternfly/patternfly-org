@@ -1,7 +1,7 @@
 ---
 id: Stack chart
 section: training
-subsection: charts
+hideNavItem: true
 katacodaLayout: true
 ---
 

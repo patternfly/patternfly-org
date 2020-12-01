@@ -51,7 +51,7 @@ export const TrainingCard = ({
       {description}
     </CardBody>
     <CardFooter>
-    <Link to={`/training/${subsection}/${katacodaId}`} >
+    <Link to={`/training/${katacodaId}`} >
       <Button variant="link">
         Start
         <ArrowRightIcon />

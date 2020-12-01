@@ -1,7 +1,7 @@
 ---
 id: Donut utilization chart
 section: training
-subsection: charts
+hideNavItem: true
 katacodaLayout: true
 ---
 

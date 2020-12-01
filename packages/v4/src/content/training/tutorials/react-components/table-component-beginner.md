@@ -1,7 +1,7 @@
 ---
 id: Table component beginner
 section: training
-subsection: react
+hideNavItem: true
 katacodaLayout: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: Pie chart
 section: training
-subsection: charts
+hideNavItem: true
 katacodaLayout: true
 ---
 

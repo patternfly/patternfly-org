@@ -42,8 +42,13 @@ function toReactComponent(mdFilePath, source) {
       if (!frontmatter.id) {
         file.fail('id attribute is required in frontmatter for PatternFly docs');
       }
+      if (frontmatter.section === 'overview') {
+        // Temporarily override section until https://github.com/patternfly/patternfly-react/pull/4862 is in react-docs
+        // Affected pages are release notes and upgrade guides
+        frontmatter.section = 'developer-resources';
+      }
       source = frontmatter.source || source;
-      const slug = makeSlug({ source, section: frontmatter.section, subsection: frontmatter.subsection, id: frontmatter.id });
+      const slug = makeSlug(source, frontmatter.section, frontmatter.id);
       outPath = path.join(outputBase, `${slug}.js`);
 
       let sourceRepo = 'patternfly-org';
@@ -84,7 +89,7 @@ function toReactComponent(mdFilePath, source) {
         // Temporarily override section until https://github.com/patternfly/patternfly-react/pull/4862 is in react-docs
         pageData.section = 'components';
         pageData.source = `${source}-demos`;
-        pageData.slug = makeSlug({ source: pageData.source, section: pageData.section, id: pageData.id});
+        pageData.slug = makeSlug(pageData.source, pageData.section, pageData.id);
         outPath = path.join(outputBase, `${pageData.slug}.js`);
       }
       if (frontmatter.title) {
@@ -110,8 +115,8 @@ function toReactComponent(mdFilePath, source) {
       if (frontmatter.katacodaLayout) {
         pageData.katacodaLayout = frontmatter.katacodaLayout;
       }
-      if (frontmatter.subsection) {
-        pageData.subsection = frontmatter.subsection;
+      if (frontmatter.hideNavItem) {
+        pageData.hideNavItem = frontmatter.hideNavItem;
       }
     })
     // Delete HTML comments
@@ -225,7 +230,7 @@ function sourceMDFile(file, source) {
       section: pageData.section,
       source: pageData.source,
       ...(pageData.katacodaLayout && { katacodaLayout: pageData.katacodaLayout }),
-      ...(pageData.subsection && { subsection: pageData.subsection })
+      ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem })
     };
   }
 }
