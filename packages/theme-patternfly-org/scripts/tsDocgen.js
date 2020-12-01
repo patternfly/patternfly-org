@@ -45,7 +45,7 @@ function getComponentMetadata(filename, sourceText) {
     );
   } catch (err) {
     // eslint-disable-next-line no-console
-    // console.warn('No component found in', filename);
+    // console.warn(`No component found in ${filename}:`, err);
   }
 
   return (parsedComponents || []).filter(parsed => parsed && parsed.displayName);
