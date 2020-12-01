@@ -15,7 +15,7 @@ The basic layout of a page differs depending on whether your application uses ve
 
 ### Page with vertical navigation
 
-<img src="./img/page-vertical-nav.png" alt="page with vertical navigation" width="1596"/>
+<img src="./img/page-vertical-nav.png" alt="page with vertical navigation" width="832"/>
 
 **1. Masthead:** The masthead provides a consistent header for every page in your application.
 
@@ -31,14 +31,14 @@ The basic layout of a page differs depending on whether your application uses ve
 
 ### Page with horizontal navigation
 
-<img src="./img/page-horizontal-nav.png" alt="page with horizontal navigation" width="1596"/>
+<img src="./img/page-horizontal-nav.png" alt="page with horizontal navigation" width="832"/>
 
 When using a horizontal primary navigation, the left-hand sidebar is removed and the navigation is placed inline with other masthead elements. All other page elements remain the same.
 
 ## Masthead
 The masthead contains global properties such as logotype, navigation and settings in an organized fashion and it is accessible from all parts of the application. All pages should share a common masthead.
 
-<img src="./img/masthead.png" alt="masthead" width="1623"/>
+<img src="./img/masthead.png" alt="masthead" width="832"/>
 
 **1. Show/hide menu:**  provides a way for users to toggle vertical navigation. We recommend always having the menu icon visible when using vertical navigation. Show/hide menu is also used when application is being displayed in smaller viewport sizes, and it should stay visible in smaller viewport sizes.
 
