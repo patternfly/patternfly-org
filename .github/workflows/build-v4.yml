@@ -24,6 +24,9 @@ jobs:
   build-v3:
     runs-on: ubuntu-latest
     needs: install
+    env:
+      SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+      SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -47,16 +50,17 @@ jobs:
             packages/v3/vendor
           key: ${{ runner.os }}-bundle-${{ hashFiles('packages/v3/Gemfile.lock') }}
       - run: cd packages/v3 && bundle install
-        if: steps.bundle-cache.outputs.cache-hit != 'true'
+      - run: get clean -ndfx
+        # if: steps.bundle-cache.outputs.cache-hit != 'true'
       - run: cd packages/v3 && yarn build
       - run: yarn copy:v3
       - run: node .github/upload-preview.js build/patternfly-org v3
-        env:
-          SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
-          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
   build-v4:
     runs-on: ubuntu-latest
     needs: install
+    env:
+      SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+      SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -69,9 +73,6 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
       - run: yarn build:v4
       - run: node .github/upload-preview.js build/patternfly-org v4
-        env:
-          SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
-          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
   deploy:
     runs-on: ubuntu-latest
     needs:
