@@ -14,6 +14,8 @@ jobs:
       - run: yarn install --frozen-lockfile
         if: steps.yarn-cache.outputs.cache-hit != 'true'
   build-v4:
+    runs-on: ubuntu-latest
+    steps:
       - run: yarn lint:md
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
