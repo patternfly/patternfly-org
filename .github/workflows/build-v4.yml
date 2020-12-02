@@ -6,6 +6,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
       - uses: actions/cache@v2
         id: yarn-cache-check
         with:
@@ -18,17 +20,19 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
         if: steps.yarn-cache-check.outputs.cache-hit != 'true'
       - run: yarn install --frozen-lockfile
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        if: steps.yarn-cache-check.outputs.cache-hit != 'true'
   build-v3:
     runs-on: ubuntu-latest
     needs: install
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.6'
-      - run: bundle install
+      - run: cd packages/v3 && bundle install
       - uses: actions/cache@v2
         id: yarn-cache
         with:
@@ -41,6 +45,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - run: yarn install
-      - run: ls node_modules
+        with:
+          node-version: '12'
+      - uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
       - run: yarn build:v4
