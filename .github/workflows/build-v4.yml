@@ -49,7 +49,7 @@ jobs:
             packages/v3/.bundle
             packages/v3/vendor
           key: ${{ runner.os }}-bundle-${{ hashFiles('packages/v3/Gemfile.lock') }}
-      - run: cd packages/v3 && bundle install
+      - run: cd packages/v3 && bundle install --path=.
       - run: git clean -ndfx
         # if: steps.bundle-cache.outputs.cache-hit != 'true'
       - run: cd packages/v3 && yarn build
