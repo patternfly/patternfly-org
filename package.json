@@ -10,7 +10,6 @@
     "develop:v4": "yarn workspace patternfly-org-4 develop",
     "build": "yarn build:v4",
     "build:analyze": "yarn workspace patternfly-org-4 build:analyze && yarn copy:v4",
-    "build:v3": "yarn workspace patternfly-org-3 build && yarn copy:v3",
     "build:v4": "yarn workspace patternfly-org-4 build && yarn copy:v4",
     "copy:v3": "rm -rf build/patternfly-org/v3 && mkdir -p build/patternfly-org && cp -r packages/v3/_site build/patternfly-org/v3",
     "copy:v4": "rm -rf build/patternfly-org/v4 && mkdir -p build/patternfly-org && cp -r packages/v4/public/ build/patternfly-org/v4 && cp -r build/patternfly-org/v4/assets build/patternfly-org/assets",
