@@ -22,8 +22,8 @@ const AppRoute = ({ child, katacodaLayout }) => {
 }
 
 const SideNavRouter = () => {
-  const pathName = useLocation().pathname;
-  const navOpen = !routes[pathName].katacodaLayout;
+  const pathname = useLocation().pathname.replace(process.env.pathPrefix, '');
+  const navOpen = !routes[pathname] || !routes[pathname].katacodaLayout;
   return (
     <SideNavLayout groupedRoutes={groupedRoutes} navOpen={navOpen} >
       <Router id="ws-page-content-router">
