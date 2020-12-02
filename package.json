@@ -25,7 +25,6 @@
   },
   "workspaces": {
     "packages": [
-      "packages/v3",
       "packages/v4",
       "packages/theme-patternfly-org"
     ]
