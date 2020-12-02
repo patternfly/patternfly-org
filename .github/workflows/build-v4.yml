@@ -1,5 +1,5 @@
 name: build-v4
-on: [push,pull_request]
+on: [push]
 jobs:
   install:
     runs-on: ubuntu-latest
@@ -16,7 +16,6 @@ jobs:
   build-v4:
     runs-on: ubuntu-latest
     steps:
-      - run: yarn lint:md
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
       - uses: actions/cache@v2
