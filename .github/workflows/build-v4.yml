@@ -47,15 +47,19 @@ jobs:
         with:
           path: |
             packages/v3/.bundle
-            packages/v3/vendor
-          key: ${{ runner.os }}-bundle-${{ hashFiles('packages/v3/Gemfile.lock') }}
+            packages/v3/ruby
+          key: ${{ runner.os }}-bundle2-${{ hashFiles('packages/v3/Gemfile.lock') }}
       - run: cd packages/v3 && bundle install --path=.
-      - run: git clean -ndfx
-        # if: steps.bundle-cache.outputs.cache-hit != 'true'
+        if: steps.bundle-cache.outputs.cache-hit != 'true'
       - run: cd packages/v3 && yarn build
       - run: yarn copy:v3
+      - run: yarn global add @octokit/rest surge
       - run: node .github/upload-preview.js build/patternfly-org v3
-  build-v4:
+      - uses: actions/upload-artifact@v2
+        with:
+          name: build-v3
+          path: build/patternfly-org/v3
+   build-v4:
     runs-on: ubuntu-latest
     needs: install
     env:
@@ -73,7 +77,10 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
       - run: yarn build:v4
       - run: node .github/upload-preview.js build/patternfly-org v4
-  deploy:
+      - uses: actions/upload-artifact@v2
+        with:
+          name: build-v4
+          path: build/patternfly-org/v4
     runs-on: ubuntu-latest
     needs:
       - build-v3
@@ -88,4 +95,7 @@ jobs:
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+      # Downloads all artifacts
+      - uses: actions/download-artifact@v2
       - run: ls build/patternfly-org
+      - run: yarn 
