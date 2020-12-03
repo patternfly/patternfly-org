@@ -29,6 +29,7 @@
     ]
   },
   "devDependencies": {
+    "@octokit/rest": "^16.43.2",
     "glob": "^7.1.6",
     "lerna": "^3.19.0",
     "surge": "^0.21.3"
