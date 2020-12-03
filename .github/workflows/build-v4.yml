@@ -43,7 +43,7 @@ jobs:
             packages/v3/node_modules
           key: ${{ runner.os }}-yarn-v3-${{ hashFiles('packages/v3/yarn.lock') }}
       - run: cd packages/v3 && yarn install --frozen-lockfile && npm i
-        if: steps.yarn-v3outputs.cache-hit != 'true'
+        if: steps.yarn-v3.outputs.cache-hit != 'true'
       - uses: actions/cache@v2
         id: bundle-cache
         with:
