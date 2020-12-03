@@ -42,20 +42,7 @@ jobs:
             node_modules
             packages/v3/node_modules
           key: ${{ runner.os }}-yarn-v3-${{ hashFiles('packages/v3/yarn.lock') }}
-      - run: cd packages/v3 && yarn install --frozen-lockfile && npm i
-        if: steps.yarn-v3-cache.outputs.cache-hit != 'true'
-      - uses: actions/cache@v2
-        id: bundle-cache
-        with:
-          path: |
-            packages/v3/.bundle
-            packages/v3/vendor
-          key: ${{ runner.os }}-bundle2-${{ hashFiles('packages/v3/Gemfile.lock') }}
-      - run: |
-          cd packages/v3
-          bundle config path vendor/bundle
-          bundle install --jobs 4 --retry 3
-        if: steps.bundle-cache.outputs.cache-hit != 'true'
+      - run: bundle install --jobs 4 --retry 3
       - run: git clean -ndfx
       - run: cd packages/v3 && yarn build
       - run: yarn copy:v3
