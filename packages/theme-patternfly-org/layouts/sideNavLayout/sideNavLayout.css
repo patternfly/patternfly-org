@@ -16,8 +16,10 @@
   margin-left: 8px;
 }
 
-.ws-page-sidebar {
-  box-shadow: none !important;
+@media (min-width: 1200px) {
+  .ws-page-sidebar {
+    box-shadow: none !important;
+  }
 }
 
 .ws-page-sidebar > .pf-c-page__sidebar-body {
