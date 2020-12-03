@@ -54,7 +54,7 @@ jobs:
       - run: |
           cd packages/v3
           bundle config path vendor/bundle
-          bundle install --path=.
+          bundle install --jobs 4 --retry 3
         if: steps.bundle-cache.outputs.cache-hit != 'true'
       - run: git clean -ndfx
       - run: cd packages/v3 && yarn build
