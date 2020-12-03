@@ -60,7 +60,7 @@ async function getHtmlWebpackPlugins(options) {
     .map(([url, { sources = [], title, isFullscreen }]) => [
       [url, { title, isFullscreen }],
       // Add pages for sources
-      ...sources.map(source => [source.slug, source])
+      ...sources.slice(1).map(source => [source.slug, source])
     ])
     .flat()
     .sort();

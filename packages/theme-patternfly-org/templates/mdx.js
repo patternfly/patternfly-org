@@ -138,7 +138,7 @@ export const MDXTemplate = ({
         {!isSinglePage && (
           <div className="pf-c-tabs ws-source-tabs">
             <ul className="pf-c-tabs__list">
-              {sourceKeys.map(source => (
+              {sourceKeys.map((source, index) => (
                 <li
                   key={source}
                   className={css(
@@ -146,7 +146,7 @@ export const MDXTemplate = ({
                     activeSource === source && 'pf-m-current'
                   )}
                 >
-                  <Link className="pf-c-tabs__link" to={`${path}/${source}`}>
+                  <Link className="pf-c-tabs__link" to={`${path}${index === 0 ? '' : '/' + source}`}>
                     {capitalize(source.replace('html', 'HTML').replace(/-/g, ' '))}
                   </Link>
                 </li>
@@ -166,7 +166,8 @@ export const MDXTemplate = ({
                 source.index = index;
                 return source;
               })
-              .map(MDXChildTemplate)}
+              .map(MDXChildTemplate)
+            }
           </Router>
         </PageSection>
       )}

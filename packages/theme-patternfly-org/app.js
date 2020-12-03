@@ -29,14 +29,25 @@ const SideNavRouter = () => {
       <Router id="ws-page-content-router">
         {Object.entries(routes)
           .map(([path, { Component, title, sources, katacodaLayout }]) => Component
-            ? <AppRoute key={path} path={path} default={path === '/404'} child={<Component />} katacodaLayout={katacodaLayout} />
-            : <AppRoute key={path} path={path + '/*'} child={
-                <MDXTemplate
-                  path={path}
-                  title={title}
-                  sources={sources}
-                />
-              } katacodaLayout={katacodaLayout} />
+            ? <AppRoute
+                key={path}
+                path={path}
+                default={path === '/404'}
+                child={<Component />}
+                katacodaLayout={katacodaLayout}
+              />
+            : <AppRoute
+                key={path}
+                path={path + '/*'}
+                child={
+                  <MDXTemplate
+                    path={path}
+                    title={title}
+                    sources={sources}
+                  />
+                }
+                katacodaLayout={katacodaLayout}
+              />
           )
         }
       </Router>
