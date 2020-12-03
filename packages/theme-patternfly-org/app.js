@@ -7,39 +7,42 @@ import { MDXTemplate } from 'theme-patternfly-org/templates/mdx';
 import { routes, groupedRoutes, fullscreenRoutes, getAsyncComponent } from './routes';
 import 'client-styles';
 
-const AppRoute = ({ child }) => {
+const AppRoute = ({ child, katacodaLayout }) => {
   const location = useLocation();
   if (typeof window !== 'undefined' && window.ga) {
     window.ga('set', 'page', location.pathname);
     window.ga('send', 'pageview');
   }
-
   return (
     <React.Fragment>
       {child}
-      {process.env.hasFooter && <Footer />}
+      {!katacodaLayout && process.env.hasFooter && <Footer />}
     </React.Fragment>
   );
 }
 
-const SideNavRouter = () => (
-  <SideNavLayout groupedRoutes={groupedRoutes}>
-    <Router id="ws-page-content-router">
-      {Object.entries(routes)
-        .map(([path, { Component, title, sources }]) => Component
-          ? <AppRoute key={path} path={path} default={path === '/404'} child={<Component />} />
-          : <AppRoute key={path} path={path + '/*'} child={
-              <MDXTemplate
-                path={path}
-                title={title}
-                sources={sources}
-              />
-            }/>
-        )
-      }
-    </Router>
-  </SideNavLayout>
-);
+const SideNavRouter = () => {
+  const pathname = useLocation().pathname.replace(process.env.pathPrefix, '');
+  const navOpen = !routes[pathname] || !routes[pathname].katacodaLayout;
+  return (
+    <SideNavLayout groupedRoutes={groupedRoutes} navOpen={navOpen} >
+      <Router id="ws-page-content-router">
+        {Object.entries(routes)
+          .map(([path, { Component, title, sources, katacodaLayout }]) => Component
+            ? <AppRoute key={path} path={path} default={path === '/404'} child={<Component />} katacodaLayout={katacodaLayout} />
+            : <AppRoute key={path} path={path + '/*'} child={
+                <MDXTemplate
+                  path={path}
+                  title={title}
+                  sources={sources}
+                />
+              } katacodaLayout={katacodaLayout} />
+          )
+        }
+      </Router>
+    </SideNavLayout>
+  );
+}
 
 const FullscreenComponent = ({ Component, title }) => {
   const [isLoaded, setIsLoaded] = React.useState(false);

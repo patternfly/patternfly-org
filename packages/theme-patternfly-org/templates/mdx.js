@@ -19,7 +19,8 @@ const MDXChildTemplate = ({
     cssPrefix = [],
     optIn,
     beta,
-    katacodaBroken
+    katacodaBroken,
+    katacodaLayout
   } = Component.getPageData();
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
   const propsTitle = propComponents.length > 0 && 'Props';
@@ -68,8 +69,8 @@ const MDXChildTemplate = ({
       {toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
-      <div className="ws-mdx-content">
-        <div className="ws-mdx-content-content">
+      <div className={katacodaLayout? "ws-mdx-content-katacoda" : "ws-mdx-content"}>
+        <div className={katacodaLayout ? "" : "ws-mdx-content-content"}>
           {InlineAlerts}
           <Component />
           {propsTitle && (
@@ -93,7 +94,7 @@ const MDXChildTemplate = ({
               <CSSVariables prefix={cssPrefix} />
             </React.Fragment>
           )}
-          {sourceLink && (
+          {!katacodaLayout && sourceLink && (
             <React.Fragment>
               <br />
               <a href={sourceLink} target="_blank">View source on GitHub</a>
@@ -115,6 +116,7 @@ export const MDXTemplate = ({
   const sourceKeys = sources.map(v => v.source);
   const isSinglePage = sourceKeys.length === 1;
   const { pathname } = useLocation();
+  const { katacodaLayout } = sources[0].Component.getPageData();
   let activeSource = pathname.replace(/\/$/, '').split('/').pop();
   if (!sourceKeys.includes(activeSource)) {
     activeSource = sourceKeys[0];
@@ -130,9 +132,9 @@ export const MDXTemplate = ({
         id={isSinglePage ? 'main-content' : 'nav-content'}
         type={isSinglePage ? 'default' : 'nav'}
       >
-        <Title size="4xl" headingLevel="h1" id="ws-page-title" className={isSinglePage ? 'pf-u-p-lg' : ''}>
+        {!katacodaLayout && <Title size="4xl" headingLevel="h1" id="ws-page-title" className={isSinglePage ? 'pf-u-p-lg' : ''}>
           {title}
-        </Title>
+        </Title>}
         {!isSinglePage && (
           <div className="pf-c-tabs ws-source-tabs">
             <ul className="pf-c-tabs__list">
