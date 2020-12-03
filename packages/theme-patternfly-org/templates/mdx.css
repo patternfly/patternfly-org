@@ -312,3 +312,8 @@
 .ws-mdx-content-content {
   max-width: 832px;
 }
+
+.ws-mdx-content-katacoda {
+  flex-grow: 1;
+  padding: 0;
+}

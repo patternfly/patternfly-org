@@ -49,7 +49,6 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
             <Location key={section}>
               {({ location }) => {
                 const isActive = location.pathname.startsWith(`${process.env.pathPrefix}/${slugger(section)}`);
-
                 return (
                   <NavExpandable
                     title={capitalize(section.replace(/-/g, ' '))}
@@ -58,6 +57,7 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
                     className="ws-side-nav-group"
                   >
                     {Object.entries(groupedRoutes[section] || {})
+                      .filter(([, { hideNavItem }]) => !Boolean(hideNavItem))
                       .map(([id, { slug }]) => ({ text: id, href: slug }))
                       .sort(({ text: text1 }, { text: text2 }) => text1.localeCompare(text2))
                       .map(NavItem)

@@ -1,12 +1,10 @@
 ---
-id: Training
-section: developer-resources
-source: html
-katacodaBroken: true
+id: HTML
+section: training
 ---
 
 import { Gallery, GalleryItem } from '@patternfly/react-core';
-import { TrainingCard } from '../trainingCard/trainingCard';
+import { TrainingCard } from './trainingCard/trainingCard';
 
 ## Fundamentals
 
@@ -18,7 +16,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="20 minutes"
       description="Learn about components, layouts, and demos."
-      katacodaId="building-blocks"
+      katacodaId="the-building-blocks-of-patternfly"
     />
   </GalleryItem>
   <GalleryItem>
@@ -38,7 +36,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="beginner"
       time="15 minutes"
       description="Apply modifier and utility classes to create new variations."
-      katacodaId="modifier-utilities"
+      katacodaId="modifiers-and-utilities"
     />
   </GalleryItem>
   <GalleryItem>
@@ -58,7 +56,7 @@ import { TrainingCard } from '../trainingCard/trainingCard';
       level="advanced"
       time="25 minutes"
       description="Practice overriding and extending variables to create new designs."
-      katacodaId="override-extend-variables"
+      katacodaId="override-and-extend-variables"
     />
   </GalleryItem>
 </Gallery>
