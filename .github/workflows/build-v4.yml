@@ -84,6 +84,7 @@ jobs:
         with:
           name: build-v4
           path: build/patternfly-org/v4/
+  deploy:
     runs-on: ubuntu-latest
     needs:
       - build-v3
