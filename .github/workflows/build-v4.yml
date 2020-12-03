@@ -49,10 +49,14 @@ jobs:
         with:
           path: |
             packages/v3/.bundle
-            packages/v3/ruby
+            packages/v3/vendor
           key: ${{ runner.os }}-bundle2-${{ hashFiles('packages/v3/Gemfile.lock') }}
-      - run: cd packages/v3 && bundle install --path=.
+      - run: |
+          cd packages/v3
+          bundle config path vendor/bundle
+          bundle install --path=.
         if: steps.bundle-cache.outputs.cache-hit != 'true'
+      - run: git clean -ndfx
       - run: cd packages/v3 && yarn build
       - run: yarn copy:v3
       - run: node .github/upload-preview.js build/patternfly-org v3
