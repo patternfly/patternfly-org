@@ -57,6 +57,7 @@ jobs:
       - run: yarn copy:v3
       - run: node .github/upload-preview.js build/patternfly-org v3
       - uses: actions/upload-artifact@v2
+        id: upload-build-v3
         with:
           name: build-v3
           path: build/patternfly-org/v3/
@@ -79,6 +80,7 @@ jobs:
       - run: yarn build:v4
       - run: node .github/upload-preview.js build/patternfly-org v4
       - uses: actions/upload-artifact@v2
+        id: upload-build-v4
         with:
           name: build-v4
           path: build/patternfly-org/v4/
