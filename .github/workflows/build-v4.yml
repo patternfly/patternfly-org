@@ -61,43 +61,43 @@ jobs:
         with:
           name: build-v3
           path: build/patternfly-org/v3/
-   build-v4:
-    runs-on: ubuntu-latest
-    needs: install
-    env:
-      SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
-      SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12'
-      - uses: actions/cache@v2
-        id: yarn-cache
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
-      - run: yarn build:v4
-      - run: node .github/upload-preview.js build/patternfly-org v4
-      - uses: actions/upload-artifact@v2
-        id: upload-build-v4
-        with:
-          name: build-v4
-          path: build/patternfly-org/v4/
-    runs-on: ubuntu-latest
-    needs:
-      - build-v3
-      - build-v4
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12'
-      - uses: actions/cache@v2
-        id: yarn-cache
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
-      # Downloads all artifacts
-      - uses: actions/download-artifact@v2
-      - run: ls build/patternfly-org
+    build-v4:
+      runs-on: ubuntu-latest
+      needs: install
+      env:
+        SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+        SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-node@v1
+          with:
+            node-version: '12'
+        - uses: actions/cache@v2
+          id: yarn-cache
+          with:
+            path: '**/node_modules'
+            key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+        - run: yarn build:v4
+        - run: node .github/upload-preview.js build/patternfly-org v4
+        - uses: actions/upload-artifact@v2
+          id: upload-build-v4
+          with:
+            name: build-v4
+            path: build/patternfly-org/v4/
+      runs-on: ubuntu-latest
+      needs:
+        - build-v3
+        - build-v4
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-node@v1
+          with:
+            node-version: '12'
+        - uses: actions/cache@v2
+          id: yarn-cache
+          with:
+            path: '**/node_modules'
+            key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+        # Downloads all artifacts
+        - uses: actions/download-artifact@v2
+        - run: ls build/patternfly-org
