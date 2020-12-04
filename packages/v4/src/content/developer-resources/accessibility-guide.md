@@ -4,7 +4,7 @@ section: developer-resources
 ---
 import { AccessibilityDatalist } from './accessibility-datalist.js';
 
-# Accessibility
+## Accessibility
 When it comes to accessibility, there’s always room to improve. That’s why this guide is a work in progress. Your feedback can make it better, so tell us what you think.  
 
 Contribute to our [accessibility documentation](https://github.com/patternfly/patternfly-org) or [reach out to us](https://www.patternfly.org/v4/get-in-touch/)—we’d love to hear from you!
@@ -16,26 +16,31 @@ When it comes to product experiences, no one should get left behind. That's why 
 Accessibility is best achieved when considered early in the design and development process. So if you contribute to PatternFly or use it for your products, familiarize yourself with accessibility first.
 
 
-## Understanding users’ needs
+### Understanding users’ needs
 Great user experiences don’t just happen. They’re designed, tested, and refined with the user in mind. To develop inclusive products, it’s important to understand the varying needs of a wide range of users and consider the assistive tools and methods they use. 
 
 This section provides information to help you better understand and address the needs of these [different user groups](https://a11yproject.com/posts/myth-accessibility-is-blind-people/).
 
 **Note**: Some users might fall into multiple groups, and some might use tools created for a different group.
+<br />
+<br />
 
-**No vision:** Users with no vision rely on screen readers to access web sites and applications. Often, screen reader users will navigate a page by browsing specific elements, like headers, links, or form elements. 
+**No vision:** <br />Users with no vision rely on screen readers to access web sites and applications. Often, screen reader users will navigate a page by browsing specific elements, like headers, links, or form elements. 
 - **Tip:** Use semantic elements and check that labels are meaningful when pulled out of context.    
 
-**Low vision:** Users with low vision can have different needs depending on the nature of their visual impairment. Users may have difficulty with color differentiation, blurriness, or lack of vision in central or peripheral areas. 
+**Low vision:** <br />Users with low vision can have different needs depending on the nature of their visual impairment. Users may have difficulty with color differentiation, blurriness, or lack of vision in central or peripheral areas. 
 - **Tip:** These needs mean that interfaces should not rely on color to communicate information, palettes need to have sufficient contrast, and layouts should be responsive when font sizes are increased.
+<br />
 
-**Motor:** Users with poor motor control can use a range of devices to access contents. 
+**Motor:** <br />Users with poor motor control can use a range of devices to access contents. 
 - Users who rely on a keyboard need elements that are keyboard accessible and highly visible when in focus. 
 - Users who rely on a mouse or touch need target areas that are large enough to be hit easily.
+<br />
 
-**Cognitive:** Users who have difficulty processing information benefit from well-written content. 
+**Cognitive:** <br />Users who have difficulty processing information benefit from well-written content. 
 - Information should be clear, concise, and easy to scan. 
 - Consider visual hierarchy, chunk content into short, related sections, and avoid long paragraphs.
+<br />
 
 These are some of the main user groups, but it is not an exhaustive list. Often “the Persona Spectrum”, coined by Microsoft, can be used to understand related mismatches and motivations across a spectrum of permanent, temporary, and situational scenarios. 
 
@@ -46,9 +51,10 @@ While accessibility tends to focus on those with disabilities, everyone benefits
 - Closed captioning benefits those in crowded areas, those teaching children how to read, or those learning a new language. 
 
 There are plenty more examples we could include. Essentially, accessibility takes _all users_ into account.
+<br />
 
 
-## Experience parity
+### Experience parity
 
 The PatternFly community believes all abilities should be treated equally. In other words, there should be parity in the experience of all users—one user group shouldn't be prioritized over the other. 
 
@@ -68,13 +74,13 @@ When building accessible user experiences, solving for one can extend to many. H
 <br />
 
 
-# Accessibility and PatternFly
+## Accessibility and PatternFly
 
 As a design system, PatternFly provides accessible building blocks to work with. We do our best to cover all areas that are within our control and take at least some of the accessibility work off your hands.
 
 With constant enhancements to PatternFly, we maintain this accessibility through a combination of automated and manual testing. We use [aXe: The Accessibility Engine](https://www.deque.com/axe/) on our build to ensure that all components pass this accessibility audit before they’re added to PatternFly. 
 
-We regularly audit keyboard accessibility with both manual testing and integration tests. We’re also aiming to provide full support for Voice Over as our main screen reader, but we still test our components through NVDA. As part of our manual audit, every component is run through Voice Over to make sure they’ll be as accessible as possible in your products.
+We regularly audit keyboard accessibility with both manual testing and integration tests. We’re also aiming to provide full support for Voice Over as our main screen reader, but we still test our components through NVDA and JAWS. As part of our manual audit, every component is run through Voice Over to make sure they’ll be as accessible as possible in your products.
 
 Our goal is to meet [level AA in the Web Content Accessibility Guidelines 2.1](https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&levels=aaa). If you use PatternFly or contribute to PatternFly as a designer or developer, these are the items you can expect to be covered in PatternFly:
 
@@ -103,7 +109,7 @@ Our goal is to meet [level AA in the Web Content Accessibility Guidelines 2.1](h
 
 <br />
 
-# Accessibility Development Guide
+## Accessibility Development Guide
 
 To assess how accessible your applications or products are, consider these questions:
 - **Is it discoverable/perceivable by all users?** If you can see or click on it then it should be discoverable and perceivable by all users. You should determine if you can easily navigate to it by keyboard or by screen reader.
@@ -111,46 +117,21 @@ To assess how accessible your applications or products are, consider these quest
 - **Is it understandable?** If the element can be found and interacted with, it should be clear what this action does. If it’s a button, you should determine if it has visible text that would be clear out of context of the page. If it doesn’t have visible text, you should check if it has an aria-label or accessible name.
 
 Keep in mind that while PatternFly provides accessible components, we can't guarantee that your products will be accessible. There are a few items outside the scope of PatternFly, so you should keep these items in mind to ensure accessibility in anything you build: 
-
-
- 
-
-<!-- | Guideline  |
-| --- |
-<details>
-    <summary>
-    Skip to main links 
-  </summary>
-
-  A mechanism should be available to bypass blocks of content that are repeated on multiple Web pages.
-When keyboard-only users interact with your site, they use the tab key to jump from link to link. If you have a lot of links at the first of your page in your header or in a menu, they must tab through those every time they come to a new page just to get to the main content. Providing a skip to main content link allows them to easily bypass this.
-
-  </details> -->
+<br />
 
 
 <AccessibilityDatalist />
 
+<br />
 
-
-| Guideline  | Link  |  |  |
-| --- | --- | --- | --- |
-| Skip to main links | [WCAG 2.4.1](//www.w3.org/WAI/WCAG21/quickref#bypass-blocks) |  | `development` |
-| Page Titles | [WCAG 2.4.2](//www.w3.org/WAI/WCAG21/quickref#page-titled) |  | `development` |
-| Links — If more than one link has the same label, it should also have the same url. Screen reader users can access the list of links that are on a page, which pulls the links out of context. If you have links with different URLs but the same label, then add additional text to provide context to the screen reader user. | [WCAG&nbsp;2.4.4](//www.w3.org/WAI/WCAG21/quickref#link-purpose-in-context) | `design`  | `development` |
-| Landmarks — Use landmark roles to clearly identify regions that communicate page structure. If more than one landmark role occurs in the page, use aria-label to differentiate the landmark elements | [ARIA11](//www.w3.org/TR/WCAG20-TECHS/ARIA11.html) | `design`  | `development` |
-| Headings — Heading text should be descriptive. Correct heading levels should be used to communicate the outline of the page. | [WCAG 2.4.10](//www.w3.org/WAI/WCAG21/quickref#section-headings) and [H42](//www.w3.org/TR/WCAG20-TECHS/H42.html) | `design`  | `development` |
-| Contents — Should be meaningful, clear, and concise |  | `design` |  |
-
-
-## Techniques
+### Techniques
 The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#contents) provide examples on how to meet accessibility guidelines. The techniques listed below are adopted as standard within PatternFly for handling specific patterns.
 
-### Accessible names
 
 #### Labeling with Aria
 For sighted users, the context and visual appearance of an element can provide sufficient cues to determine the purpose. But in some situations, this isn’t the case. For example, the X often used in the top-right corner of pop-up divs (light boxes) to indicate the control for closing the div might not be clear to those using assistive technology. 
 
-[image]
+<img src="./Popover.png" alt="Popover example of close button" />
 
 Aria supplements HTML so that interactions and widgets commonly used in applications can be passed to assistive technologies when there is not otherwise a mechanism natively. 
 
@@ -166,7 +147,7 @@ Use [explicit linking](https://www.w3.org/TR/WCAG20-TECHS/H44.html) between `lab
 When a `label` element cannot accompany a form input element, provide the label using using `aria-label` or `aria-labelledby`. ([ARIA14](//www.w3.org/TR/WCAG20-TECHS/ARIA14.html)) In a single-field form, the submit button label can serve as the field label for sighted users ([G167](//www.w3.org/TR/WCAG20-TECHS/general.html#G167)) as well as assistive devices when using `aria-labelledby`
 
 
-**Icons**
+#### Icons
 Icons are _decorative_ if you can remove an icon without affecting the information that is presented on the page. Icons are _semantic_ when they provide information that otherwise isn't present, such as indicating status, indicating type of alert message, or replacing text as button labels. When an icon is semantic, the meaning must be provided in alternative ways to the user.
 
 Add `aria-hidden="true"` for all icons, either to the icon element or a parent element of the icon. This renders the icon as something that assistive devices can ignore. Additionally, follow these guidelines for semantic icons:
@@ -200,14 +181,14 @@ Add `aria-hidden="true"` for all icons, either to the icon element or a parent e
       </div>
       ```
 
-**Images**
+#### Images
 All images should have alt text so that assistive technology can provide an image description. This will help your site’s SEO, too. When an image contains words that are important to understanding the content, the alt text should include those words. This allows the alt text to play the same function on the page as the image. 
 
 **Note**: Alt text does not necessarily describe the visual characteristics of the image itself. It just needs to convey the same meaning as the image. 
 
 The exception to this practice is when images are primarily for presentation purposes and are not essential pieces of content. To signify that an image should be skipped by a screen reader, set the value of the alt attribute to an empty string, such as **alt=””**.
 
-### Trapping focus
+#### Trapping focus
 The recommended interaction pattern for the modal components like the modal or pop-over is to trap focus within the modal element of the component when it becomes visible.  
 
 - For keyboard-only users that use the tab key to navigate the interface, this means that focus cannot be shifted outside of the modal when using the tab key. Instead, when focus leaves the last focusable item, it should be placed on the first focusable item of the modal. 
@@ -217,7 +198,7 @@ Based on the [screen reader / browser combinations](https://www.patternfly.org/v
 
 <br />
 
-# Testing Your Accessibility
+## Testing Your Accessibility
 Many accessibility issues can be found by doing a few simple checks: 
 
 1. Validate your HTML. Structural, semantic HTML is the key starting point toward good accessibility practices. When a screen reader (or any sort of assistive device) scans a web page, it gets information about the Document Object Model (DOM), or the HTML structure of the page. No styles or JavaScript will be read by a screen reader. 
@@ -243,7 +224,7 @@ There are many tools you can use to validate your HTML, such as [W3C’s markup 
 
 <br />
 
-## Screen Readers
+### Screen Readers
 To truly test your accessibility, open up a screen reader of your choice (we use Voice Over). Just as front-end developers use their browser to see how their changes look, you should also open a screen reader to see how your accessibility looks. 
 
 Generally, screen readers access the DOM (Document Object Model), and they use browser APIs (Application Programming Interfaces) to get the information they need. In this way, a screen reader knows what to say when a set of list items begins and ends, and it typically announces, in advance, how many items are in the list. A screen reader can also traverse a page using heading navigation to speak the heading level. 
@@ -267,7 +248,7 @@ Here are a few aspects that can affect how screen readers communicate informatio
 
 <br />
 
-### Checklist for testing
+#### Checklist for testing
 These are some of the main areas we check for on the PatternFly team. We recommend that you check for these same areas in your applications, too. 
 
 **General questions**

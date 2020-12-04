@@ -11,9 +11,9 @@ import {
   DataListItemCells,
   Dropdown,
   DropdownItem,
-  DropdownPosition
+  DropdownPosition,
+  KebabToggle,
 } from '@patternfly/react-core';
-import CodeBranchIcon from '@patternfly/react-icons/dist/js/icons/code-branch-icon';
 import AngleDownIcon from '@patternfly/react-icons/dist/js/icons/angle-down-icon';
 import AngleRightIcon from '@patternfly/react-icons/dist/js/icons/angle-right-icon';
 
@@ -21,10 +21,13 @@ export class AccessibilityDatalist extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      expanded: ['ex-toggle1', 'ex-toggle3'],
+      expanded: [],
       isOpen1: false,
       isOpen2: false,
       isOpen3: false,
+      isOpen4: false,
+      isOpen5: false,
+      isOpen6: false,
       allExpanded: false
     };
 
@@ -36,7 +39,7 @@ export class AccessibilityDatalist extends React.Component {
         () => {
           if (this.state.allExpanded) {
             this.setState({
-              expanded: ['ex-toggle1', 'ex-toggle2', 'ex-toggle3']
+              expanded: ['ex-toggle1', 'ex-toggle2', 'ex-toggle3', 'ex-toggle4', 'ex-toggle5', 'ex-toggle6']
             });
           } else {
             this.setState({
@@ -63,6 +66,24 @@ export class AccessibilityDatalist extends React.Component {
         isOpen3: !prevState.isOpen3
       }));
     };
+
+    this.onSelect4 = event => {
+      this.setState(prevState => ({
+        isOpen4: !prevState.isOpen4
+      }));
+    };
+
+    this.onSelect5 = event => {
+      this.setState(prevState => ({
+        isOpen5: !prevState.isOpen5
+      }));
+    };
+
+    this.onSelect6 = event => {
+      this.setState(prevState => ({
+        isOpen6: !prevState.isOpen6
+      }));
+    };
   }
 
   render() {
@@ -75,14 +96,32 @@ export class AccessibilityDatalist extends React.Component {
     };
     return (
       <React.Fragment>
+        <br />
         <Button onClick={this.onToggleAll}>
           {this.state.allExpanded && <AngleDownIcon />}
           {!this.state.allExpanded && <AngleRightIcon />}
-          Expand/Collapse All
+          Toggle All
         </Button>
         <br />
         <br />
-        <DataList aria-label="Expandable data list example">
+        <DataList aria-label="Headings">
+          <DataListItem aria-labelledby="ex-item0">
+            <DataListItemRow>
+              <DataListItemCells
+                dataListCells={[
+                  <DataListCell key="primary content">
+                    <span id="ex-item1">Guideline</span>
+                  </DataListCell>,
+                  <DataListCell key="secondary content">
+                    <span>Link</span>
+                  </DataListCell>,
+                  <DataListCell key="secondary content 2">
+                    <span>Category</span>
+                  </DataListCell>
+                ]}
+              />
+            </DataListItemRow>
+          </DataListItem>
           <DataListItem aria-labelledby="ex-item1" isExpanded={this.state.expanded.includes('ex-toggle1')}>
             <DataListItemRow>
               <DataListToggle
@@ -94,44 +133,18 @@ export class AccessibilityDatalist extends React.Component {
               <DataListItemCells
                 dataListCells={[
                   <DataListCell isIcon key="icon">
-                    <CodeBranchIcon />
                   </DataListCell>,
                   <DataListCell key="primary content">
-                    <div id="ex-item1">Primary content</div>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                    <a href="#">link</a>
+                    <div id="ex-item1">Skip to main links</div>
                   </DataListCell>,
                   <DataListCell key="secondary content">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                    <a href="//www.w3.org/WAI/WCAG21/quickref#bypass-blocks">WCAG 2.4.1</a>
                   </DataListCell>,
                   <DataListCell key="secondary content 2">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                    <span>development</span>
                   </DataListCell>
                 ]}
               />
-              <DataListAction
-                aria-labelledby="ex-item1 ex-action1"
-                id="ex-action1"
-                aria-label="Actions"
-                isPlainButtonAction
-              >
-                <Dropdown
-                  isPlain
-                  position={DropdownPosition.right}
-                  isOpen={this.state.isOpen1}
-                  onSelect={this.onSelect1}
-                  // toggle={<KebabToggle onToggle={this.onToggle1} />}
-                  dropdownItems={[
-                    <DropdownItem key="link">Link</DropdownItem>,
-                    <DropdownItem key="action" component="button">
-                      Action
-                    </DropdownItem>,
-                    <DropdownItem key="disabled link" isDisabled>
-                      Disabled Link
-                    </DropdownItem>
-                  ]}
-                />
-              </DataListAction>
             </DataListItemRow>
             <DataListContent
               aria-label="Primary Content Details"
@@ -139,9 +152,10 @@ export class AccessibilityDatalist extends React.Component {
               isHidden={!this.state.expanded.includes('ex-toggle1')}
             >
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
+              A mechanism should be available to bypass blocks of content that are repeated on multiple Web pages. 
+              When keyboard-only users interact with your site, they use the tab key to jump from link to link. If you have a lot of links at the first of your page in your header or in a menu, they must tab through those every time they come to a new page just to get to the main content. Providing a skip to main content link allows them to easily bypass this.
               </p>
+
             </DataListContent>
           </DataListItem>
           <DataListItem aria-labelledby="ex-item2" isExpanded={this.state.expanded.includes('ex-toggle2')}>
@@ -155,53 +169,33 @@ export class AccessibilityDatalist extends React.Component {
               <DataListItemCells
                 dataListCells={[
                   <DataListCell isIcon key="icon">
-                    <CodeBranchIcon />
                   </DataListCell>,
                   <DataListCell key="secondary content">
-                    <div id="ex-item2">Secondary content</div>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                    <div id="ex-item2">Page Titles</div>
                   </DataListCell>,
                   <DataListCell key="secondary content 2">
-                    <span>Lorem ipsum dolor sit amet.</span>
+                    <a href="//www.w3.org/WAI/WCAG21/quickref#page-titled">WCAG 2.4.2</a>
                   </DataListCell>,
                   <DataListCell key="secondary content3">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                    <span>development</span>
                   </DataListCell>
                 ]}
               />
-              <DataListAction
-                aria-labelledby="ex-item2 ex-action2"
-                id="ex-action2"
-                aria-label="Actions"
-                isPlainButtonAction
-              >
-                <Dropdown
-                  isPlain
-                  position={DropdownPosition.right}
-                  isOpen={this.state.isOpen2}
-                  onSelect={this.onSelect2}
-                  // toggle={<KebabToggle onToggle={this.onToggle2} />}
-                  dropdownItems={[
-                    <DropdownItem key="link">Link</DropdownItem>,
-                    <DropdownItem key="action" component="button">
-                      Action
-                    </DropdownItem>,
-                    <DropdownItem key="disabled link" isDisabled>
-                      Disabled Link
-                    </DropdownItem>
-                  ]}
-                />
-              </DataListAction>
             </DataListItemRow>
             <DataListContent
               aria-label="Primary Content Details"
               id="ex-expand2"
               isHidden={!this.state.expanded.includes('ex-toggle2')}
             >
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
-              </p>
+              <div>
+                Descriptive titles help users find content, orient themselves within it, and navigate through it. Users can more quickly identify the content they need when accurate, descriptive titles appear in site maps or lists of search results. 
+                The title of each web page should:
+                  <ul>
+                    <li> Identify the subject of the web page. </li>
+                    <li> Make sense when read out of context, for example by a screen reader or in a site map or list of search results.</li>
+                    <li> Be short. </li>
+                  </ul>
+              </div>
             </DataListContent>
           </DataListItem>
           <DataListItem aria-labelledby="ex-item3" isExpanded={this.state.expanded.includes('ex-toggle3')}>
@@ -215,51 +209,134 @@ export class AccessibilityDatalist extends React.Component {
               <DataListItemCells
                 dataListCells={[
                   <DataListCell isIcon key="icon">
-                    <CodeBranchIcon />
                   </DataListCell>,
                   <DataListCell key="tertiary content">
-                    <div id="ex-item3">Tertiary content</div>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                    <div id="ex-item3">Links</div>
                   </DataListCell>,
                   <DataListCell key="secondary content">
-                    <span>Lorem ipsum dolor sit amet.</span>
+                    <a href="//www.w3.org/WAI/WCAG21/quickref#link-purpose-in-context">WCAG 2.4.4</a>
                   </DataListCell>,
                   <DataListCell key="secondary content 2">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                    <span>design, development</span>
                   </DataListCell>
                 ]}
               />
-              <DataListAction
-                aria-labelledby="ex-item3 ex-action3"
-                id="ex-action3"
-                aria-label="Actions"
-                isPlainButtonAction
-              >
-                <Dropdown
-                  isPlain
-                  position={DropdownPosition.right}
-                  isOpen={this.state.isOpen3}
-                  onSelect={this.onSelect3}
-                  // toggle={<KebabToggle onToggle={this.onToggle3} />}
-                  dropdownItems={[
-                    <DropdownItem key="link">Link</DropdownItem>,
-                    <DropdownItem key="action" component="button">
-                      Action
-                    </DropdownItem>,
-                    <DropdownItem key="disabled link" isDisabled>
-                      Disabled Link
-                    </DropdownItem>
-                  ]}
-                />
-              </DataListAction>
             </DataListItemRow>
             <DataListContent
               aria-label="Primary Content Details"
               id="ex-expand3"
               isHidden={!this.state.expanded.includes('ex-toggle3')}
-              hasNoPadding
             >
-              This expanded section has no padding.
+            <p>
+              If more than one link has the same label, it should also have the same URL. 
+              Screen reader users can access the list of links that are on a page, which pulls the links out of context. 
+              If you have links with different URLs but the same label, then add additional text to provide context to the screen reader user.
+            </p>
+            </DataListContent>
+          </DataListItem>
+          <DataListItem aria-labelledby="ex-item4" isExpanded={this.state.expanded.includes('ex-toggle4')}>
+            <DataListItemRow>
+              <DataListToggle
+                onClick={() => toggle('ex-toggle4')}
+                isExpanded={this.state.expanded.includes('ex-toggle4')}
+                id="ex-toggle4"
+                aria-controls="ex-expand4"
+              />
+              <DataListItemCells
+                dataListCells={[
+                  <DataListCell isIcon key="icon">
+                  </DataListCell>,
+                  <DataListCell key="tertiary content">
+                    <div id="ex-item3">Landmarks</div>
+                  </DataListCell>,
+                  <DataListCell key="secondary content">
+                    <a href="//www.w3.org/TR/WCAG20-TECHS/ARIA11.html">ARIA11</a>
+                  </DataListCell>,
+                  <DataListCell key="secondary content 2">
+                    <span>design, development</span>
+                  </DataListCell>
+                ]}
+              />
+            </DataListItemRow>
+            <DataListContent
+              aria-label="Primary Content Details"
+              id="ex-expand4"
+              isHidden={!this.state.expanded.includes('ex-toggle4')}
+            >
+            <p>
+              Use landmark roles to clearly identify regions that communicate page structure. If more than one landmark role occurs in the page, use aria-label to differentiate the landmark elements
+              Landmark roles programmatically identify sections of a page. Landmarks help assistive technology (AT) users orient themselves to a page and help them navigate easily to various sections of a page.
+              Whenever a landmark role is used more than once, provide a name using aria-label or aria-labelledby to provide context for that landmark. (ARIA6, ARIA16)
+              While toolbar is not a landmark role, the same rule applies to this role.
+            </p>
+            </DataListContent>
+          </DataListItem>
+          <DataListItem aria-labelledby="ex-item5" isExpanded={this.state.expanded.includes('ex-toggle5')}>
+            <DataListItemRow>
+              <DataListToggle
+                onClick={() => toggle('ex-toggle5')}
+                isExpanded={this.state.expanded.includes('ex-toggle5')}
+                id="ex-toggle5"
+                aria-controls="ex-expand"
+              />
+              <DataListItemCells
+                dataListCells={[
+                  <DataListCell isIcon key="icon">
+                  </DataListCell>,
+                  <DataListCell key="tertiary content">
+                    <div id="ex-item3">Headings</div>
+                  </DataListCell>,
+                  <DataListCell key="secondary content">
+                    <a href="//www.w3.org/WAI/WCAG21/quickref#section-headings">WCAG 2.4.10</a>
+                  </DataListCell>,
+                  <DataListCell key="secondary content 2">
+                    <span>design, development</span>
+                  </DataListCell>
+                ]}
+              />
+            </DataListItemRow>
+            <DataListContent
+              aria-label="Primary Content Details"
+              id="ex-expand5"
+              isHidden={!this.state.expanded.includes('ex-toggle5')}
+            >
+            <p>
+            Heading text should be descriptive. Correct heading levels should be used to communicate the outline and structure of the page.
+            A common practice is to use a single h1 for the primary headline or logo on a page, h2s to designate major sections, and h3's in supporting subsections
+            </p>
+            </DataListContent>
+          </DataListItem>
+          <DataListItem aria-labelledby="ex-item6" isExpanded={this.state.expanded.includes('ex-toggle6')}>
+            <DataListItemRow>
+              <DataListToggle
+                onClick={() => toggle('ex-toggle6')}
+                isExpanded={this.state.expanded.includes('ex-toggle6')}
+                id="ex-toggle6"
+                aria-controls="ex-expand"
+              />
+              <DataListItemCells
+                dataListCells={[
+                  <DataListCell isIcon key="icon">
+                  </DataListCell>,
+                  <DataListCell key="tertiary content">
+                    <div id="ex-item3">Contents</div>
+                  </DataListCell>,
+                  <DataListCell key="secondary content">
+                  </DataListCell>,
+                  <DataListCell key="secondary content 2">
+                    <span>design</span>
+                  </DataListCell>
+                ]}
+              />
+            </DataListItemRow>
+            <DataListContent
+              aria-label="Primary Content Details"
+              id="ex-expand5"
+              isHidden={!this.state.expanded.includes('ex-toggle6')}
+            >
+            <p>
+            Content should be meaningful, clear, and concise. Use simple language and formatting, as appropriate for the context.
+            </p>
             </DataListContent>
           </DataListItem>
         </DataList>
