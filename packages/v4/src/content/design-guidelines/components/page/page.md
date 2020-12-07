@@ -40,7 +40,7 @@ The masthead contains global properties such as logotype, navigation and setting
 
 <img src="./img/masthead.png" alt="masthead" width="832"/>
 
-**1. Show/hide menu:**  provides a way for users to toggle vertical navigation. We recommend always having the menu icon visible when using vertical navigation. Show/hide menu is also used when application is being displayed in smaller viewport sizes, and it should stay visible in smaller viewport sizes.
+**1. Show/hide menu:**  The `fa-bars` icon at the left of the masthead provides a way for users to show or hide the vertical navigation. It is not included when horizontal navigation is being used. At large viewport (desktop) sizes, navigation is shown, by default, and the user can click this icon to hide it and expand the content area. Once hidden, the user can click the icon again to reveal it. At small viewport (tablet and phone) sizes, the vertical navigation will be hidden by default and the user must use this control to open the menu.
 
 **2. Logotype:** The logotype area should clearly display the application name and the application logo if applicable. It is common to link the logotype to the application’s homepage. It is recommended to have the application name in .svg format for better performance.
 
