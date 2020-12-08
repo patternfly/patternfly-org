@@ -10,11 +10,11 @@ Add pagination above and below content views so that users can easily navigate a
 
 **1. Top pagination:** Always right-align pagination in the top toolbar, above content views.
 
-**2. Bottom pagination:** Right-align pagination below content views, too.
+**2. Bottom pagination:** Right-align pagination below content views, too. If you want the bottom pagination to be sticky so it does not scroll off the page when the content is taller that the viewport, place the pagination in a footer page section and apply the `pf-m-sticky-bottom` modifier section to create a sticky page footer.
 
 ## Full pagination
 
-Use full pagination unless you're restricted to a narrow workspace, then use <a href="#compact-pagination">compact pagination</a>. Full pagination occupies more toolbar territory, so you'll have limited room for other items like bulk selectors, buttons, filters, or input fields. 
+Use full pagination unless you're restricted to a narrow workspace, then use <a href="#compact-pagination">compact pagination</a>. Full pagination occupies more toolbar territory, so you'll have limited room for other items like bulk selectors, buttons, filters, or input fields.
 
 [Overflow menus](/components/toolbar/design-guidelines#overflow-menu) allow you to incorporate these toolbar actions using less horizontal space. Toolbar actions automatically form into an overflow menu at specific breaking points. Learn how to customize these breakpoints in our [Toolbar](/components/toolbar/design-guidelines) documentation.
 
@@ -32,7 +32,7 @@ Mobile full pagination in toolbar
 
 <img src="./img/mobile-pagination.png" alt="Example of pagination on mobile table view" width="375"/>
 
-**1. Items in view:** At this screen size, the top toolbar only shows the item count to indicate items currently in view. It hides all other pagination controls. 
+**1. Items in view:** At this screen size, the top toolbar only shows the item count to indicate items currently in view. It hides all other pagination controls.
 
 **2. Full pager:** Supplies the same pagination options as the desktop full pager, but in the bottom toolbar.
 
