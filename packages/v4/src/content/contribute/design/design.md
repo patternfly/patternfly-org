@@ -35,7 +35,7 @@ Before you begin the contribution process, follow [these guidelines](/get-starte
 Follow these steps and this [template format](https://documentcloud.adobe.com/link/track?uri=urn%3Aaaid%3Ascds%3AUS%3A28fd970d-8b77-4008-b598-b2f629bda589) to submit your designs:
 
 __1. Create an issue__
-  - Navigate to the [PatternFly page](https://github.com/patternfly) on Github and go to the [feature board](https://github.com/orgs/patternfly/projects/3)
+  - Navigate to the [PatternFly page](https://github.com/patternfly) on GitHub and go to the [feature board](https://github.com/orgs/patternfly/projects/3)
   - Open an issue for a new feature or comment on an existing issue for an enhancement
 
 __2. Propose a design__
