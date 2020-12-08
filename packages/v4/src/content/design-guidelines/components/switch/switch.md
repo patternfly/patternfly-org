@@ -12,7 +12,8 @@ It is assumed that when a user toggles a switch, the change will save automatica
 
 **General guidelines**
 
-*  Add a label in front of your switch to specify what is being switched on or off (for example, wi-fi or bluetooth).
+* Use switches with labels by default unless space is limited, then use a [switch without a label](/components/switch/react#without-label).
+* Add a label in front of your switch to specify what is being switched on or off (for example, wi-fi or bluetooth).
 * Don’t use a switch if the options you’re presenting to the user are anything other than “on” or “off.” Instead, use [radio buttons](/components/radio/design-guidelines). 
 * Depending on your use case, add labels to clarify between toggled settings, such as *On* and *Off*.
 
@@ -20,8 +21,6 @@ It is assumed that when a user toggles a switch, the change will save automatica
 ### When to use switches versus checkboxes
 
 A switch changes an option and saves it simultaneously, while checkboxes require a separate action to save the selection, such as pressing a “Submit” or “Save” button.
-
-Use switches with labels by default unless space is limited, then use the checkmark version instead.
 
 **Follow these guidelines for when to use a switch versus a checkbox:**
 
