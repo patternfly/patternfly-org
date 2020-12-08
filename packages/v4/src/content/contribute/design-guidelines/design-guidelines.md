@@ -190,7 +190,7 @@ On GitHub, create a pull request to submit your changes:
 5. Tag [mmenestr](https://github.com/mmenestr) to initiate a final review. 
 6. Submit the PR.  
 
-If your PR has merge conflicts in Github:
+If your PR has merge conflicts in GitHub:
 
 1. Return to your terminal and `type git fetch upstream` and press **Enter**. 
 2. Type `git rebase upstream/master` and ress **Enter**. 
