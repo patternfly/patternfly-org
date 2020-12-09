@@ -21,23 +21,26 @@ Use clipboard copy to allow users to quickly and easily copy content to their cl
 The clipboard copy component can be editable or read-only and both types can optionally be expandable.
 
 **Editable**
+
 An editable clipboard copy allows users to copy an editable text input box.
 
 <img src="./img/editable.png" alt="Example of an editable clipboard copy component" width="434"/>
 
 **Read-only**
+
 A read-only clipboard copy only allows the user to copy a predefined line of text that is not editable by the user.
 
 <img src="./img/read-only.png" alt="Example of a read-only clipboard copy component" width="434"/>
 
 **Expandable**
+
 An expandable clipboard copy allows for long lines of text to be stored in an expansion panel. Expanding the clipboard copy allows the user to view the full string that they can copy.
 
 <img src="./img/expandable.png" alt="Example of an expandable clipboard copy component" width="455"/>
 
 
 ### Clipboard copy in context
-Clipboard copy can be used almost anywhere in a UI. They are commonly used in forms and definition lists.
+Clipboard copy can be used almost anywhere in a UI. It is commonly used in forms and definition lists.
 
 **Clipboard copy in a form**
 
