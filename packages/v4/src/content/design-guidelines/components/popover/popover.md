@@ -11,9 +11,9 @@ related: [
 A **popover** is in-app messaging that provides more information on specific product areas. Popovers display content in a new window that overlays the current page. Unlike modals, popovers don’t block the current page. 
 
 Popovers are triggered by a click and dismissed in one of the following ways:
-- The user clicks the exit icon.
-- The user clicks an action button inside the popover.
-- The user clicks anywhere on the screen outside the popover. 
+- The user clicks the exit icon. 
+- The user clicks anywhere on the screen outside the popover.
+- The user clicks an action button inside the popover. (Note: This won't always close the popover; it depends on the action button.)
 
 <img src="./img/popover-example.png" alt="popover example with placeholder text for the title and informational text" width="300"/>
 
@@ -25,7 +25,7 @@ Popovers are commonly used on form field labels, page titles or headings, or tab
 - Help explain unfamiliar terms.
 - Provide context around a task.     
 
-<img src="./img/Popover-form.png" alt="popover for an email address form field explaining what the email address is used for" width="750"/>
+<img src="./img/popover-email.png" alt="popover for an email address form field explaining what the email address is used for" width="750"/>
 
 When using a popover to define a term or explain a concept, use a gray question-circle icon. Upon hover or click, the icon turns black.
 
