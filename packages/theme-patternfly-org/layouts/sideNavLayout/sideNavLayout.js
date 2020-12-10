@@ -164,7 +164,7 @@ export function attachDocSearch(algolia, inputSelector, timeout) {
   }
 }
 
-export const SideNavLayout = ({ children, groupedRoutes }) => {
+export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp }) => {
   const pathPrefix = process.env.pathPrefix;
   const algolia = process.env.algolia;
   const hasGdprBanner = process.env.hasGdprBanner;
@@ -175,6 +175,7 @@ export const SideNavLayout = ({ children, groupedRoutes }) => {
   const prurl = process.env.prurl;
 
   const [versions, setVersions] = useState({ ...staticVersions });
+  const [isNavOpen, setNavOpen] = useState(navOpenProp);
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -192,11 +193,14 @@ export const SideNavLayout = ({ children, groupedRoutes }) => {
     }
   }, []);
 
+  useEffect(() => setNavOpen(navOpenProp), [navOpenProp])
+
   const SideBar = (
     <PageSidebar
       className="ws-page-sidebar"
       theme="light"
       nav={<SideNav navItems={sideNavItems} groupedRoutes={groupedRoutes} />}
+      isNavOpen={isNavOpen}
     />
   );
 
@@ -211,6 +215,8 @@ export const SideNavLayout = ({ children, groupedRoutes }) => {
       logo={prnum ? `PR #${prnum}` : <Brand src={logo} alt="Patternfly Logo" />}
       logoProps={{ href: prurl || pathPrefix || '/' }}
       showNavToggle
+      isNavOpen={isNavOpen}
+      onNavToggle={() => setNavOpen(!isNavOpen)}
       topNav={topNavItems.length > 0 && <TopNav navItems={topNavItems} />}
     />
   );
@@ -225,7 +231,6 @@ export const SideNavLayout = ({ children, groupedRoutes }) => {
         mainContainerId="ws-page-main"
         header={Header}
         sidebar={SideBar}
-        isManagedSidebar
         skipToContent={<SkipToContent href="#ws-page-main">Skip to content</SkipToContent>}
       >
         {children}

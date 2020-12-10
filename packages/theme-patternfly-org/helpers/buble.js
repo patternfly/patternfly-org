@@ -53,10 +53,12 @@ const generator = Object.assign({}, baseGenerator, {
     this[node.expression.type](node.expression, state);
   },
   JSXText(node, state) {
-    node.value = node.value.trim();
+    if (node.value.trim() === '') {
+      node.value = null;
+    }
     if (node.value) {
       state.write(',"');
-      state.write(node.value.replace(/"/g, '\\"').replace(/\n/g, ''));
+      state.write(node.value.replace(/"/g, '\\"').replace(/^\s+/, '').replace(/\s*\n\s*/g, ''));
       state.write('"');
     }
   },

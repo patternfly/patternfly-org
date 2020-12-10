@@ -41,7 +41,7 @@ async function getHtmlWebpackPlugins(options) {
       filename: 'sitemap.xml',
       templateParameters: {
         urls: Object.entries(routes)
-          .map(([path, { sources }]) => sources ? sources.map(source => source.slug) : path)
+          .map(([path, { sources }]) => [path, ...(sources || []).slice(1).map(source => source.slug)])
           .flat()
       },
       inject: false,
@@ -60,7 +60,7 @@ async function getHtmlWebpackPlugins(options) {
     .map(([url, { sources = [], title, isFullscreen }]) => [
       [url, { title, isFullscreen }],
       // Add pages for sources
-      ...sources.map(source => [source.slug, source])
+      ...sources.slice(1).map(source => [source.slug, source])
     ])
     .flat()
     .sort();

@@ -28,14 +28,16 @@ const isNull = o => o === null || o === undefined;
 const groupedRoutes = Object.entries(routes)
   .filter(([_slug, { id, section }]) => !isNull(id) && !isNull(section))
   .reduce((accum, [slug, pageData]) => {
-    const { section, id, title, source } = pageData;
+    const { section, id, title, source, katacodaLayout, hideNavItem } = pageData;
     accum[section] = accum[section] || {};
     accum[section][id] = accum[section][id] || {
       id,
       section,
       title,
       slug: makeSlug(source, section, id, true),
-      sources: []
+      sources: [],
+      katacodaLayout,
+      hideNavItem
     };
 
     pageData.slug = slug;
@@ -91,7 +93,7 @@ Object.entries(groupedRoutes)
       if (
         ['components', 'charts', 'layouts', 'demos'].includes(section) &&
         !pageData.sources.map(({ source }) => source).includes('design-guidelines') &&
-        process.env.hasDesignGuidelines === 'true'
+        process.env.hasDesignGuidelines
       ) {
         pageData.sources.push(getDefaultDesignGuidelines(pageData));
       }

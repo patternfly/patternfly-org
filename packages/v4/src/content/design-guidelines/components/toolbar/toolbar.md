@@ -98,15 +98,15 @@ The Toolbar component is extremely flexible and you can create custom toolbar la
 
 ### Placement in a page
 
-The toolbar should live as close to possible to the content it controls. For a card view, the toolbar should be placed inside of the page header, above the card grid. This arrangement is also recommended if the user may switch between views (e.g. view as cards or as a list).
+The toolbar should live as close to possible to the content it controls. For a card view or similar views, the toolbar should be placed inside of the page header. This arrangement is also recommended if the user may switch between views (e.g. view as cards or as a list). You may optionally apply the `pf-m-sticky-top` modifier to the header section to create a sticky toolbar and prevent it from scrolling off the page.
 
 ![toolbar in page header](./img/toolbar-layout-cardview.png)
 
-For simple list and table views that are placed inside of an enclosing card, the toolbar should always appear above the data set to which it applies. Toolbars should stretch to the width of the data view to which it applies, with the elements aligned in a horizontal row.
+For list and table views that are placed inside of an enclosing card, the toolbar should always be placed inside the card and above the data set to which it applies.
 
 ![layout](./img/toolbar-layout.png)
 
-Note that there should be no spacers on the left and right edges of the toolbar as the toolbar provides its own padding.
+Toolbars should stretch to the width of the enclosing container, with the elements aligned in a horizontal row. There should be no spacers on the left and right edges of the toolbar as the toolbar provides its own padding.
 
 ## The toolbar on mobile
 
