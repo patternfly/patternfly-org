@@ -13,29 +13,63 @@ A **modal** displays important information to a user without requiring them to n
 
 <img src="./img/modal-call-outs.png" alt="An example of a modal in context with call outs to highlight each listed element" width="756"/>
 
-* **Backdrop**
-* **Modal box**
-* **Headline**
-* **Close icon**
-* **Content area**
-* **Buttons** 
+1. **Backdrop**
+2. **Modal box**
+3. **Headline**
+4. **Close icon**
+5. **Content area**
+6. **Buttons** 
 
-See the "[Content](#content)" section for information about writing modal copy.
+See the [Content](#content) section for information about writing modal copy.
 
 ## Spacing
 
 ### Compact (24px)
 
-<img src="./img/modal-compact.png" alt="A compact modal with 24px spacers" width="600" />
+<img src="./img/modal-compact.png" alt="A compact modal with 24px spacers" width="487" />
 
 
-Compact modals have 24px spacing and are best used for modals that contain small amounts of content. 
+Compact modals are best used to display small amounts of content. 
+
+Their primary spacing of 24px separates:
+
+- Each edge of the modal box from all modal content.
+- The content area from both buttons.
+
+A 16px spacing separates the modal's headline from the content area. 16px also separates each button.
 
 ### Large (32 px)
 
-<img src="./img/modal-large.png" alt="A large modal with 32px spacers" width="675" />
+<img src="./img/modal-large.png" alt="A large modal with 32px spacers" width="605" />
 
-Large modals have a 32px spacing to accommodate a larger content area for elements like code previews, forms, and tables.
+Large modals accommodate a larger content area for elements like code previews, forms, and tables.
+
+Their primary spacing of 32px separates:
+
+- Each edge of the modal box from all modal content.
+- The content area from both buttons.
+
+A 24px spacing separates the modal's headline from the content area, and a 16px spacing separates each button.
+
+## Placement
+
+A modal can be placed in two positions on a page:
+1. [Center-aligned (default)](/components/modal/html-demos/basic/): The modal appears horizontally and vertically aligned at the center of a page.
+2. [Top-aligned](/components/modal/html-demos/top-aligned/): The modal appears horizontally and vertically aligned at the top of a page.
+
+### Center-aligned modal (default)
+
+<img src="./img/center-aligned-modal.png" alt="A modal pictured in center alignment on a page" />
+
+Default to centering a modal horizontally and vertically on the page.
+
+### Top-aligned modal
+
+<img src="./img/top-aligned-modal.png" alt="A modal pictured in top alignment on a page" />
+
+Use a top-aligned modal when:
+- Your modal includes expanding content that makes it expand vertically.
+- You’d like to keep the information behind the modal more visible to the user. 
 
 ## Usage
 
@@ -67,13 +101,13 @@ Use a confirmation dialog to validate user decisions and communicate their conse
 
 #### Confirm a non-destructive action
 
-<img src="./img/non-destructive-confirmation-dialog.png" alt="A side-by-side comparison of unsuccessful and successful confirmaton dialogs for leaving a page without saving. The successful dialog explains the consequence of this action: All unsaved informaton will be lost." />
+<img src="./img/non-destructive-confirmation-dialog.png" alt="A side-by-side comparison of unsuccessful and successful confirmaton dialogs for leaving a page without saving. The successful dialog explains the consequence of this action: All unsaved informaton will be lost" />
 
 When confirming a non-destructive action, provide specific context about what will happen once a user confirms it.
 
 #### Confirm a destructive action
 
-<img src="./img/destructive-confirmation-dialog.png" alt="A side-by-side comparison of unsuccessful and successful destructive confirmaton dialogs for deleting a record. The successful dialog explains the consequence of deleting this record: Record name, location, and notes will be lost." />
+<img src="./img/destructive-confirmation-dialog.png" alt="A side-by-side comparison of unsuccessful and successful destructive confirmaton dialogs for deleting a record. The successful dialog explains the consequence of deleting this record: Record name, location, and notes will be lost" />
 
 Use a [primary button](/components/button/design-guidelines#primary-button) to confirm a destructive action. If the action carries serious consequences, then use a [danger button](/components/button/design-guidelines#danger-button) instead.
 
@@ -81,9 +115,9 @@ If an action is difficult or impossible to undo, add a warning icon beside the h
 
 If a destructive action has serious consequences, consider adding an additional step before its destructive button becomes active. Additional confirmation measures like [text input](/components/text-input/design-guidelines) fields safeguard a user from accidentally completing the action. 
 
-When a text input field is added to a confirmation dialog, the danger button will only become selectable once a user enters the entire word or phrase.
+When a text input field is added to a confirmation dialog, the danger button will only become enabled once a user enters the entire word or phrase.
 
-<img src="./img/multi-step-destructive-confirmation-dialog.png" alt="A multi-step destructive confirmation dialog's button activates only after a user types DELETE into the input field." />
+<img src="./img/destructive-confirmation-dialog-steps.png" alt="A multi-step destructive confirmation dialog's button activates only after a user types DELETE into the input field" />
 
 
 ### Error dialogs
@@ -110,6 +144,15 @@ Never use a passive dialog for non-critical information. Instead, use an [inline
 
 Users may need to provide additional input to complete an action. To accomplish this, use forms or other elements within the modal, like in a [modal wizard](/components/modal/react#with-wizard).
 
+## Modals with help
+
+<img src="./img/modal-with-help.png" alt="A modal's help icon icon opens the help popover when clicked" />
+
+Use a [modal with help](/components/modal#with-help) to make complex tasks easier to understand within a modal. If needed, you can link to further documentation in the popover.
+
+Help popovers at the modal level explain and provide documentation for an entire task. Only place a help icon at the modal level if its information applies to all content in the modal. If the information you'd like to include in a help popover is specific to a particular input, place the help icon at that input level instead.
+
+
 ## Content
 
 All modal content should be descriptive and specific so that users can scan, understand an action's context, and make a quick decision.
@@ -122,13 +165,15 @@ A modal is comprised of three main content sections:
 
 3. **Buttons:** Buttons allow a user to answer the headline prompt or question. Write button labels as action-based verbs to clearly communicate their function and consequence, and keep them to 1–3 words. Often, verbs for buttons can be pulled directly from a modal’s headline to increase scannability. <br /><br />
 Example headline: *Permanently delete database?*<br />
-Example buttons: *Delete* and *Cancel* <br /><br />
+Example buttons: *Delete* and *Cancel* <br />
 For more button guidance, see our [button label guidelines](/components/button/design-guidelines#content).
 
 For general content guidance to help write effective modal dialogs, see our [UX writing style guide](/ux-writing/about).
 
 
 #### Icon use in modal dialogs
+
+Icons are optional in modal dialogs. Use or omit them as your use case requires.
 
 | Icon | Use case(s) | Usage |
 | ------------- |-------------|-------------|
