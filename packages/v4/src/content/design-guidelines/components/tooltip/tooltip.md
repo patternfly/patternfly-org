@@ -10,15 +10,15 @@ For information on other forms of on-screen help, see [Popover](/components/popo
 Use tooltips to:
 - Provide labels for unlabeled icons.   
 
-<img src="./img/tooltip-kebab-icon.png" alt="kebab icon with a “More options” tooltip label" width="750"/>  
+<img src="./img/tooltip-kebab-icon.png" alt="kebab icon with a “More options” tooltip label" width="1500"/>  
 
 - Provide additional information on a data point or element in a chart or table.   
 
-<img src="./img/bar-chart.png" alt='bar chart with a tooltip for Asia Pacific' width='306'/> 
+<img src="./img/bar-chart.png" alt='bar chart with a tooltip for Asia Pacific' width='612'/> 
 
 - Define new or unfamiliar UI elements that aren’t described directly in the user interface. For example, you can use a tooltip on a disabled button.
 
-<img src="./img/tooltip-disabled-button.png" alt= 'disabled edit button with a tooltip about access' width='306'/>
+<img src="./img/tooltip-disabled-button.png" alt= 'disabled edit button with a tooltip about access' width='1500'/>
 
 ## Tooltips versus popovers
 Both tooltips and [popovers](/components/popover/design-guidelines) provide more information in context for users. However, they’re different in a few ways:

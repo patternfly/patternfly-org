@@ -25,7 +25,7 @@ Popovers are commonly used on form field labels, page titles or headings, or tab
 - Help explain unfamiliar terms.
 - Provide context around a task.     
 
-<img src="./img/popover-email.png" alt="popover for an email address form field explaining what the email address is used for" width="750"/>
+<img src="./img/popover-email.png" alt="popover for an email address form field explaining what the email address is used for" width="1500"/>
 
 When using a popover to define a term or explain a concept, use a gray question-circle icon. Upon hover or click, the icon turns black.
 
@@ -33,7 +33,7 @@ When using a popover to define a term or explain a concept, use a gray question-
 
 To provide more information to a user without an accompanying UI element, you can add a popover to a linked question.
 
-<img src="./img/popovers-2.png" alt="popover for a linked question" width="750"/>
+<img src="./img/popovers-2.png" alt="popover for a linked question" width="1500"/>
 
 Use link button styling for the linked question, and add a blue question-circle icon before it. Clicking the link text triggers a popover, which answers the linked question. 
 
