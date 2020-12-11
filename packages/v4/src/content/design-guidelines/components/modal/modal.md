@@ -24,52 +24,32 @@ See the [Content](#content) section for information about writing modal copy.
 
 ## Spacing
 
-### Compact (24px)
+<img src="./img/modal-basic.png" alt="A basic modal with 24px spacers between the modal box and content, and 16px spacers between the headline and content area, and between each button" width="487" />
 
-<img src="./img/modal-compact.png" alt="A compact modal with 24px spacers" width="487" />
-
-
-Compact modals are best used to display small amounts of content. 
-
-Their primary spacing of 24px separates:
+Basic modals use a primary spacing of 24px to separate:
 
 - Each edge of the modal box from all modal content.
 - The content area from both buttons.
 
 A 16px spacing separates the modal's headline from the content area. 16px also separates each button.
 
-### Large (32 px)
-
-<img src="./img/modal-large.png" alt="A large modal with 32px spacers" width="605" />
-
-Large modals accommodate a larger content area for elements like code previews, forms, and tables.
-
-Their primary spacing of 32px separates:
-
-- Each edge of the modal box from all modal content.
-- The content area from both buttons.
-
-A 24px spacing separates the modal's headline from the content area, and a 16px spacing separates each button.
-
 ## Placement
 
-A modal can be placed in two positions on a page:
-1. [Center-aligned (default)](/components/modal/html-demos/basic/): The modal appears horizontally and vertically aligned at the center of a page.
-2. [Top-aligned](/components/modal/html-demos/top-aligned/): The modal appears horizontally and vertically aligned at the top of a page.
+A modal can be aligned at the center or top of a page.
 
 ### Center-aligned modal (default)
 
-<img src="./img/center-aligned-modal.png" alt="A modal pictured in center alignment on a page" />
+A [center-aligned modal](/components/modal/html-demos/basic/) appears horizontally and vertically centered on a page, and should be used by default for most use cases.
 
-Default to centering a modal horizontally and vertically on the page.
+<img src="./img/center-aligned-modal.png" alt="A modal pictured in center alignment on a page" />
 
 ### Top-aligned modal
 
-<img src="./img/top-aligned-modal.png" alt="A modal pictured in top alignment on a page" />
+A [top-aligned modal](/components/modal/html-demos/top-aligned/) appears horizontally and vertically centered at the top of a page. 
 
-Use a top-aligned modal when:
-- Your modal includes expanding content that makes it expand vertically.
-- You’d like to keep the information behind the modal more visible to the user. 
+Use a top-aligned modal when your modal contains expanding content or when you'd like to keep content behind the modal visible to the user.
+
+<img src="./img/top-aligned-modal.png" alt="A modal pictured in top alignment on a page" />
 
 ## Usage
 
@@ -87,13 +67,15 @@ Don’t use a modal unless its information is vital to user success and worth di
 
 ## Types of modals
 
-Modals serve several functions in a UI and appear in three main types:
+Modals serve several functions in a UI and appear in four main types:
 
 * [Confirmation dialogs](#confirmation-dialogs)
 
 * [Error dialogs](#error-dialogs)
 
 * [Passive dialogs](#passive-dialogs)
+
+* [Input dialogs](#input-dialogs)
 
 ### Confirmation dialogs
 
@@ -122,7 +104,7 @@ When a text input field is added to a confirmation dialog, the danger button wil
 
 ### Error dialogs
 
-<img src="./img/error-dialog.png" alt="An example of a successful error dialog, with and without an error icon" />
+<img src="./img/error-dialog.png" alt="An example of a successful error dialog, with and without an optional error icon" />
 
 Use an error dialog to inform users of problems that interrupt normal or expected behavior. Briefly contextualize the problem and why it happened, then provide actionable steps toward a solution.
 
@@ -132,7 +114,7 @@ Error dialogs may use an error icon for visual emphasis.
 
 ### Passive dialogs
 
-<img src="./img/passive-dialog.png" alt="An example of a successful passive dialog, with and without a warning icon" />
+<img src="./img/passive-dialog.png" alt="An example of a successful passive dialog, with and without an optional warning icon" />
 
 Use a passive dialog to communicate critical and immediately relevant information like the status of an application or an action’s result. Passive dialog content should require or lead to user action.
 
@@ -140,15 +122,15 @@ Passive dialogs can also notify the user about the status or duration of a criti
 
 Never use a passive dialog for non-critical information. Instead, use an [inline alert](/components/alert/design-guidelines/#inline-alerts) or a [toast alert](/components/alert/design-guidelines/#toast-alerts).
 
-### Using dialogs to prompt user input
+### Input dialogs
 
 Users may need to provide additional input to complete an action. To accomplish this, use forms or other elements within the modal, like in a [modal wizard](/components/modal/react#with-wizard).
 
 ## Modals with help
 
-<img src="./img/modal-with-help.png" alt="A modal's help icon icon opens the help popover when clicked" />
+<img src="./img/modal-with-help.png" alt="A modal with help uses a help icon to open a help popover when clicked" />
 
-Use a [modal with help](/components/modal#with-help) to make complex tasks easier to understand within a modal. If needed, you can link to further documentation in the popover.
+Use a [modal with help](/components/modal#with-help) to make complex tasks easier to understand within a modal. If needed, link to further documentation in the help popover.
 
 Help popovers at the modal level explain and provide documentation for an entire task. Only place a help icon at the modal level if its information applies to all content in the modal. If the information you'd like to include in a help popover is specific to a particular input, place the help icon at that input level instead.
 
