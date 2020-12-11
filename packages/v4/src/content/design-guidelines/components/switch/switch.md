@@ -8,14 +8,21 @@ A **switch** toggles the state of a setting (between on and off). Switches and [
 
 It is assumed that when a user toggles a switch, the change will save automatically without the need for additional action (like clicking a "Save" button).
 
-<img src="./img/switch.png" alt="Examples of switch buttons" width="244"/>
+<img src="./img/switch.png" alt="A side-by-side comparison of a basic switch and a switch without a label. The basic switch uses both a form label and a switch label, while the switch without a label uses a form label and replaces the switch label with a checkmark inside the switch itself" width="487"/>
+
+1. **Form label:** Indicates what the switch turns on or off
+2. **Switch label:** Indicates whether the switch itself is turned on or off
+3. **Switch without label:** Indicates the state of a switch with a checkmark inside the switch itself, used in place of a switch label
+
+Both switch types display their state (on or off) through different methods and locations. A basic switch communicates its state with an exterior switch label added to its right, while a switch without a label uses a checkmark to communicate its state from inside the switch itself.
 
 **General guidelines**
 
-* Use switches with labels by default unless space is limited, then use a [switch without a label](/components/switch/react#without-label).
-* Add a label in front of your switch to specify what is being switched on or off (for example, wi-fi or bluetooth).
+* Use a basic switch by default unless space is limited, then use a [switch without a label](/components/switch/react#without-label).
+* Add a form label in front of your switch to specify what setting a switch turns on or off, such as *Wi-fi* or *Bluetooth*.
+* If you're using a basic switch, add switch labels to clarify between toggled settings, such as *On* and *Off*.
 * Don’t use a switch if the options you’re presenting to the user are anything other than “on” or “off.” Instead, use [radio buttons](/components/radio/design-guidelines). 
-* Depending on your use case, add labels to clarify between toggled settings, such as *On* and *Off*.
+
 
 
 ### When to use switches versus checkboxes
