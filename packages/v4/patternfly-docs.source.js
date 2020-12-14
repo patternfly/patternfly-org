@@ -33,14 +33,10 @@ module.exports = (sourceMD, sourceProps) => {
   const reactChartsPath = require
     .resolve('@patternfly/react-charts/package.json')
     .replace('package.json', 'src');
-  const reactDatetimePath = require
-  .resolve('@patternfly/react-datetime/package.json')
-  .replace('package.json', 'src');
   const reactPropsIgnore = '**/*.test.tsx';
   sourceProps(path.join(reactCorePath, '/**/*.tsx'), reactPropsIgnore);
   sourceProps(path.join(reactTablePath, '/**/*.tsx'), reactPropsIgnore);
   sourceProps(path.join(reactChartsPath, '/**/*.tsx'),reactPropsIgnore);
-  sourceProps(path.join(reactDatetimePath, '/**/*.tsx'),reactPropsIgnore);
 
   // React MD
   sourceMD(path.join(reactCorePath, '/**/examples/*.md'), 'react');
@@ -52,9 +48,6 @@ module.exports = (sourceMD, sourceProps) => {
 
   // Charts MD (no demos yet)
   sourceMD(path.join(reactChartsPath, '/**/examples/*.md'), 'react');
-
-  // Datetime MD (no demos yet)
-  sourceMD(path.join(reactDatetimePath, '/**/examples/*.md'), 'react');
 
   // Release notes
   sourceMD(require.resolve('@patternfly/patternfly/RELEASE-NOTES.md'), 'html');
