@@ -149,7 +149,7 @@ To ensure high-quality images in the final documentation, export sketch images a
 
 Exporting as PNG x2 ensures better image quality, but it also doubles physical size (WxL). To maintain good image quality while restricting image width to the original artboard width, add images to Markdown using the following HTML tag: 
 
-`img src="./img/filename.png" alt='accessibility text describing the image' width='width of the sketch artboard ONLY IF LESS THAN 832px'/`  
+<img src="./img/filename.png" alt="accessibility text describing the image" width="width of the sketch artboard ONLY IF LESS THAN 832px"/> 
 
 The image should display in the visual designer of the Markdown tool you’re using. If the example does not display, there might be a problem with your code. Check that the element is correct and did not turn into normal quotations while copy/pasting. 
 
