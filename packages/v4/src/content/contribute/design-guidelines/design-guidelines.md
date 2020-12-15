@@ -62,7 +62,7 @@ If you’re creating a new PR:
 
 If you’re editing an existing PR:
 
-1. Type git fetch upstream and press **Enter**.
+1. Type `git fetch upstream` and press **Enter**.
 2. Type `git checkout [name of your existing branch]` and press **Enter**. For example, if your existing branch name is iss2020, you would type `git checkout iss2020`. 
 3. If GitHub shows merge conflicts, type `git pull upstream master` and press **Enter**.
 4. Edit files by typing  `code .` and pressing **Enter**. This will open your Visual Studio Code (if this doesn’t work, you can manually open the VIsual Studio Code app). 
@@ -149,7 +149,7 @@ To ensure high-quality images in the final documentation, export sketch images a
 
 Exporting as PNG x2 ensures better image quality, but it also doubles physical size (WxL). To maintain good image quality while restricting image width to the original artboard width, add images to Markdown using the following HTML tag: 
 
-`<img src="./filename.png" alt="accessibility text describing the image" width="width of the sketch artboard ONLY IF LESS THAN 832px"/>`  
+`<img src="./img/filename.png" alt="accessibility text describing the image" width="width of the sketch artboard ONLY IF LESS THAN 832px"/>` 
 
 The image should display in the visual designer of the Markdown tool you’re using. If the example does not display, there might be a problem with your code. Check that the element is correct and did not turn into normal quotations while copy/pasting. 
 
@@ -165,7 +165,7 @@ Once you’re finished making changes, stage them in Visual Studio Code:
 
 <img src="./image-7-stage.png" alt="stage changes option in Microsoft Visual Studio Code" /> 
 
-3. Return to your Terminal application to commit the changes: 
+3. Return to your terminal application to commit the changes: 
 
     a. Type `git status` and press **Enter**. This should list the same files that were listed in your “changes” tab in VS. If there aren’t any errors, continue to the next step. 
     
