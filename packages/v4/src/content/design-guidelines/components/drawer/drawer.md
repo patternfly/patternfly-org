@@ -12,11 +12,11 @@ Drawers appear as a sliding panel that can be attached to the bottom or right ed
 
 In addition to primary-details, the drawer component is frequently used in [notification drawers](/components/notification-drawer) or terminal windows.
 
-## Splitter in a drawer
+### Splitter in a drawer
 
 A **splitter** allows you to create a layout with resizable panes. The orientation of a splitter can be set to **vertical** or **horizontal**.
 
 ### Usage
-Add a splitter to a [drawer](/components/drawer) or a [primary-detail](/demos/primary-detail) if you need to resize the width or height of a panel and give more space to a given content. It helps to prioritize the content you’re focusing on. A splitter resizes the width or height of a panel depending on the orientation of a splitter. If data shown in a drawer or primary detail has enough space, then you don’t need to use a splitter.
+Add a splitter to drawer if you need to resize the width or height of a panel and give more space to a given content. A splitter resizes the width or height of a panel depending on the orientation of a splitter. If data shown in a drawer has enough space, then you don’t need to use a splitter.
 
-<img src="./img/splitter-drawer-primary-detail.png" width="1562" />
+<img src="./img/splitter-drawer.png" width="1500" />
