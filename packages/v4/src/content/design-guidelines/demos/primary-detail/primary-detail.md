@@ -73,7 +73,6 @@ For [empty states](/components/empty-state), if the details pane is automaticall
 A **splitter** allows you to create a layout with resizable panes. The orientation of a splitter can be set to **vertical** or **horizontal**.
 
 ### Usage
-Add a splitter to a primary-detail if you need to resize the width or height of a panel and give more space to a given content.  It helps to prioritize the content you’re focusing on. A splitter resizes the width or height of a panel depending on the orientation of a splitter. If data shown in a primary-detail has enough space, then you don’t need to use a splitter.
+Add a splitter to a primary-detail if you need to resize the width or height of a panel and give more space to a given content. It helps to prioritize the content you’re focusing on. A splitter resizes the width or height of a panel depending on the orientation of a splitter. If data shown in a primary-detail has enough space, then you don’t need to use a splitter.
 
 <img src="./img/splitter-primary-detail.png" width="1500" />
- 
