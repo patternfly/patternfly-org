@@ -4,11 +4,11 @@ section: components
 related: ['Alert', 'Alert group']
 ---
 
-**Alerts** are used to notify the user about a change in status or other event. These guidelines talk about how to properly use different types of alerts in your designs.
+An **alert** is used to notify the user about a change in status or other event without blocking other actions in an interface. These guidelines talk about how to properly use different types of alerts in your designs.
 
 ## Elements
 ### Alert
-Alerts are used to communicate status information to the user without blocking other actions through the user interface. There are two styles that can be applied to an alert depending on whether it is intended as an [inline](#inline-alerts) or [toast](#toast-alerts) alert. Toast alerts should always be dismissable, whereas inline alerts can be both dismissable and non-dismissable. Other elements are consistent between alert types.
+Two styles can be applied to an alert depending on whether it is intended as an [inline](#inline-alerts) or [toast](#toast-alerts) alert. Toast alerts should always be dismissable, whereas inline alerts can be both dismissable and non-dismissable. Other elements are consistent between alert types.
 
 <img src="./img/alert-types.png" alt="Alert types" />
 
@@ -91,7 +91,7 @@ Do not use a toast alert when an event requires immediate action or for synchron
 ### Stacking multiple alerts
 Multiple alerts will stack. The most recent alert should appear at the top and others will push down. When alerts are deleted, any space above will be filled by pushing remaining alerts up in the stack order.
 
-An [Alert Group](/components/alert-group) component allows a set of alerts to be properly positioned and stacked as shown below.
+An [alert group](/components/alert-group) component allows a set of alerts to be properly positioned and stacked as shown below.
 
 ![alert group](./img/toast-notification-multiple.png)
 
@@ -123,4 +123,4 @@ A more accessible version of this message would look like this:
 
 <img src="./img/Notification-content-accessible.png" alt="Non-accessible alert example" width="615"/>
 
-While this is more verbose, it has the advantage of being usable for both sighted and non-sighted users by providing instructions to screen reader users about where they can go to complete the action.
+While this version is more verbose, it has the advantage of being usable for both sighted and non-sighted users by providing instructions to screen reader users about where they can go to complete the action.

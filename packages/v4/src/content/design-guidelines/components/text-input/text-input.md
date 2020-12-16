@@ -3,7 +3,7 @@ id: Text input
 section: components
 ---
 
-Use **text input** to gather free-form text from a user.
+A **text input** is used to gather free-form text from a user.
 
 ## Elements
 

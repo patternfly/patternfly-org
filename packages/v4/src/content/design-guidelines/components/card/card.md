@@ -3,9 +3,11 @@ id: Card
 section: components
 ---
 
-A **card** is a square or rectangular container that can contain any kind of content. Cards symbolize units of information, and each one acts as an entry point for users to access more details. For example, in dashboards and catalog views, cards function as a preview of a detailed page. Cards may also be used in data displays (e.g. Card View), or for positioning content on a page.  
+A **card** is a square or rectangular container that can contain any kind of content. Cards symbolize units of information, and each one acts as an entry point for users to access more details. For example, in dashboards and catalog views, cards function as a preview of a detailed page. Cards may also be used in data displays like card views, or for positioning content on a page.  
 
-A card usually consists of  3 parts: 
+## Elements
+
+A card usually consists of 3 parts: 
 
 <img src="./img/card.png" alt="3 parts of a card" width="394"/>  
 
@@ -14,19 +16,18 @@ A card usually consists of  3 parts:
 2. **Body**: Brief details about the group
 3. **Footer**: Links to access more information about the group 
 
-Cards are flexible, and you can customize them in a variety of ways:
-- A card can contain a header with an image, actions, and a body.
-- A card can contain only a header and a body. 
-- A card can contain a header with an image, a body, and footer. 
+Cards are flexible, and you can customize them in a variety of ways. A card can contain:
+- A header with an image, actions, and a body.
+- Only a header and a body. 
+- A header with an image, a body, and footer. 
 
-## Card types 
 PatternFly supports two types of cards: 
 1. **Compact (recommended):** Compact cards use 16px spacing with an 8px spacer between the header and body and 16px between the body and footer.
 2. **Standard:** Standard cards use 24px spacing with a 16px spacer between the header and body and 24px between the body and footer.
 
 <img src="./img/card-types.png" alt="compact and standard card types" /> 
 
-## Usage 
+## Card usage
 Use a card:
 - To visually group content or distinguish information from the rest of a page’s content. Examples include dashboards and catalog views. 
 - To organize content in layouts with multiple columns or grids.  
@@ -39,12 +40,11 @@ Use a card:
 Do NOT use a card to show a dense amount of repetitive, related content. Use a list or table view instead.
 
 
-## Card views 
+## Card view usage
 A **card view** is a grid of cards that displays a small to moderate amount of content. 
 
 <img src="./img/card-view.png" alt="card view" /> 
 
-### Usage 
 Use a card view to:
 - Display items in a data set that are best identified by a graphic or other visual representation.
 - Make information easier to visualize and compare. 
@@ -100,6 +100,12 @@ If an action can be performed globally on multiple cards, or if it leads to mult
 1. Upon hover, the card’s shadow expands.
 2. Global actions are placed in the toolbar.
 3. The card’s checkbox allows a user to perform an action on multiple cards. When a user selects a card, the checkbox turns blue to indicate selection.
+
+#### Action card
+You may use an extra-small empty state inside of a card to present the user with another means of adding a new card/item to their card view. If used, we recommend using it **in addition to** a primary button in a toolbar, to ensure that the user is still able to perform the action no matter what page of the card view they are on. The placement of the action card should be consistent with where a new card will be added, most likely the very first or the very last card in the card view.
+
+<img src="./img/add-card-empty-state.png" alt="card view with addition card" /> 
+
 
 ### Images 
 Only include meaningful images on your cards (don’t add them for decoration). Images should help users identify specific content types. Place smaller images above the card’s header, and place larger images within the card’s body. 

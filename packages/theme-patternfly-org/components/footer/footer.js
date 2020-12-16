@@ -134,6 +134,13 @@ export const Footer = () => (
               <Nav aria-label="Stay in touch" className="pf-m-white">
                 <NavList className="pf-c-nav__list-footer">
                   <NavItem
+                    to="//slack.patternfly.org"
+                    target="top"
+                    aria-label="Join the PatternFly 4 Slack"
+                  >
+                    Slack
+                  </NavItem>
+                  <NavItem
                     to="//forum.patternfly.org"
                     target="top"
                     aria-label="Visit the PatternFly 4 forum"
@@ -146,6 +153,13 @@ export const Footer = () => (
                     aria-label="Join the PatternFly 4 mailing list"
                   >
                     Mailing list
+                  </NavItem>
+                  <NavItem
+                    to="//medium.com/patternfly"
+                    target="top"
+                    aria-label="Read the PatternFly 4 blog"
+                  >
+                    PatternFly Medium
                   </NavItem>
                 </NavList>
               </Nav>
@@ -165,7 +179,7 @@ export const Footer = () => (
             <GridItem className="ws-org-pfsite-footer-menu-social-links pf-u-px-xl">
               <Text
                 component={TextVariants.a}
-                href="//github.com/patternfly/patternfly"
+                href="//github.com/patternfly"
                 target="top"
                 aria-label="Link to PatternFly GitHub page"
               >

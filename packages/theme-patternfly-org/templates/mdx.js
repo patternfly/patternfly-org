@@ -19,12 +19,14 @@ const MDXChildTemplate = ({
     cssPrefix = [],
     optIn,
     beta,
-    katacodaBroken
+    katacodaBroken,
+    katacodaLayout
   } = Component.getPageData();
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
   const propsTitle = propComponents.length > 0 && 'Props';
   if (propsTitle && !toc.find(item => item.text === propsTitle)) {
     toc.push({ text: propsTitle });
+    toc.push(propComponents.map(propComponent => ({ text: propComponent.name })));
   }
   if (cssVarsTitle && !toc.find(item => item.text === cssVarsTitle)) {
     toc.push({ text: cssVarsTitle });
@@ -67,8 +69,8 @@ const MDXChildTemplate = ({
       {toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
-      <div className="ws-mdx-content">
-        <div className="ws-mdx-content-content">
+      <div className={katacodaLayout? "ws-mdx-content-katacoda" : "ws-mdx-content"}>
+        <div className={katacodaLayout ? "" : "ws-mdx-content-content"}>
           {InlineAlerts}
           <Component />
           {propsTitle && (
@@ -79,7 +81,7 @@ const MDXChildTemplate = ({
               {propComponents.map(component => (
                 <PropsTable
                   key={component.name}
-                  caption={`${component.name} properties`}
+                  title={component.name}
                   rows={component.props} />
               ))}
             </React.Fragment>
@@ -92,7 +94,7 @@ const MDXChildTemplate = ({
               <CSSVariables prefix={cssPrefix} />
             </React.Fragment>
           )}
-          {sourceLink && (
+          {!katacodaLayout && sourceLink && (
             <React.Fragment>
               <br />
               <a href={sourceLink} target="_blank">View source on GitHub</a>
@@ -114,6 +116,7 @@ export const MDXTemplate = ({
   const sourceKeys = sources.map(v => v.source);
   const isSinglePage = sourceKeys.length === 1;
   const { pathname } = useLocation();
+  const { katacodaLayout } = sources[0].Component.getPageData();
   let activeSource = pathname.replace(/\/$/, '').split('/').pop();
   if (!sourceKeys.includes(activeSource)) {
     activeSource = sourceKeys[0];
@@ -129,13 +132,13 @@ export const MDXTemplate = ({
         id={isSinglePage ? 'main-content' : 'nav-content'}
         type={isSinglePage ? 'default' : 'nav'}
       >
-        <Title size="4xl" headingLevel="h1" id="ws-page-title" className={isSinglePage ? 'pf-u-p-lg' : ''}>
+        {!katacodaLayout && <Title size="4xl" headingLevel="h1" id="ws-page-title" className={isSinglePage ? 'pf-u-p-lg' : ''}>
           {title}
-        </Title>
+        </Title>}
         {!isSinglePage && (
           <div className="pf-c-tabs ws-source-tabs">
             <ul className="pf-c-tabs__list">
-              {sourceKeys.map(source => (
+              {sourceKeys.map((source, index) => (
                 <li
                   key={source}
                   className={css(
@@ -143,7 +146,7 @@ export const MDXTemplate = ({
                     activeSource === source && 'pf-m-current'
                   )}
                 >
-                  <Link className="pf-c-tabs__link" to={`${path}/${source}`}>
+                  <Link className="pf-c-tabs__link" to={`${path}${index === 0 ? '' : '/' + source}`}>
                     {capitalize(source.replace('html', 'HTML').replace(/-/g, ' '))}
                   </Link>
                 </li>
@@ -163,7 +166,8 @@ export const MDXTemplate = ({
                 source.index = index;
                 return source;
               })
-              .map(MDXChildTemplate)}
+              .map(MDXChildTemplate)
+            }
           </Router>
         </PageSection>
       )}

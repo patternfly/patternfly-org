@@ -2,7 +2,7 @@
 id: Donut utilization chart
 section: charts
 ---
-A **Donut utlization chart** is a donut chart used specifically to show utilization metrics. 
+A **donut utlization chart** is a donut chart used specifically to show utilization metrics. 
 
 ## Usage
 ### Donut chart - Utilization
@@ -13,7 +13,7 @@ A **Donut utlization chart** is a donut chart used specifically to show utilizat
 <img src="./img/donut-utilization-2.png" alt="Donut utilization 2" width="404"/>
 
 1. **Unused segment fill:** The unused area of the donut chart will always remain at #EDEDED.
-2. **Used segment fill:** We recommend using #0066cc for the used area of the donut chart. See [Colors for charts](/guidelines/colors-for-charts) for other recommended color options.
+2. **Used segment fill:** We recommend using #0066cc for the used area of the donut chart. See [colors for charts](/guidelines/colors-for-charts) for other recommended color options.
 3. **Utilization label:** Both percentages and whole numbers can be used to represent the utilization.
 4. **Chart tooltip:** Since this is a utilization donut chart, the tooltip will display the percentage of data utilized. Chart tooltips only appear on hover over the utilization segment of the chart. We recommend stating the segment name and the utilization value being captured. For example, if the user is tracking GBps utilization, the chart tooltip would state "GBps utilization: 75%."
 
@@ -29,4 +29,4 @@ A **Donut utlization chart** is a donut chart used specifically to show utilizat
 
 <img src="./img/donut-utilization-with-threshold-hover.png" alt="Donut utilization with threshold hover" />
 
-4. **Chart tooltip:** Chart tooltips appear on hover for both threshold segments and utilization segments. We recommend stating the threshold name, the segment name, and the value being represented. For example, if the threshold being met is "Danger," and the segment represents "Storage capacity," and the value being represented is 92%, your chart tooltip would state, "Danger: Storage capacity: 92%." We recommend stating the threshold name "at" the percentage the threshold begins (ex. Warning at 60%).
+4. **Chart tooltip:** Chart tooltips appear on hover for both threshold segments and utilization segments. We recommend stating the threshold name, the segment name, and the value being represented. For example, if the threshold being met is "Danger," and the segment represents "Storage capacity," and the value being represented is 92%, your chart tooltip would state, "Danger: Storage capacity: 92%." We recommend stating the threshold name "at" the percentage the threshold begins, so a threshold name might read, "Warning at 60%."

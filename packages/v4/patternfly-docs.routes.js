@@ -5,9 +5,9 @@ module.exports = {
   '/': {
     SyncComponent: isClient && require('./src/pages/home').default
   },
-  '/get-in-touch': {
-    Component: () => import(/* webpackChunkName: "get-in-touch/index" */ './src/pages/get-in-touch'),
-    title: 'Get in touch'
+  '/community': {
+    Component: () => import(/* webpackChunkName: "community/index" */ './src/pages/community'),
+    title: 'Community'
   },
   '/404': {
     SyncComponent: isClient && require('theme-patternfly-org/pages/404/index').default,

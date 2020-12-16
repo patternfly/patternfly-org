@@ -3,6 +3,232 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.15](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.14...theme-patternfly-org@0.2.15) (2020-12-15)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.2.14](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.13...theme-patternfly-org@0.2.14) (2020-12-14)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.2.13](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.12...theme-patternfly-org@0.2.13) (2020-12-08)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.2.12](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.11...theme-patternfly-org@0.2.12) (2020-12-03)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.2.11](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.10...theme-patternfly-org@0.2.11) (2020-11-30)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.2.10](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.9...theme-patternfly-org@0.2.10) (2020-11-24)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.2.9](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.8...theme-patternfly-org@0.2.9) (2020-11-19)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.2.8](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.7...theme-patternfly-org@0.2.8) (2020-11-16)
+
+
+### Bug Fixes
+
+* **buble:** allow JSXEmptyExpressions ([#2266](https://github.com/patternfly/patternfly-org/issues/2266)) ([ccad1b7](https://github.com/patternfly/patternfly-org/commit/ccad1b751d4bfa4d22466af061e640560c29e4ab))
+
+
+
+
+
+## [0.2.7](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.6...theme-patternfly-org@0.2.7) (2020-11-16)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.2.6](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.5...theme-patternfly-org@0.2.6) (2020-11-11)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.2.5](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.4...theme-patternfly-org@0.2.5) (2020-11-11)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.2.4](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.3...theme-patternfly-org@0.2.4) (2020-11-09)
+
+
+### Bug Fixes
+
+* **theme:** move react to peer dep ([#2259](https://github.com/patternfly/patternfly-org/issues/2259)) ([cf6f0b9](https://github.com/patternfly/patternfly-org/commit/cf6f0b92223d97eb5273f88f4ecddb8bee275614))
+
+
+
+
+
+## [0.2.3](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.2...theme-patternfly-org@0.2.3) (2020-11-09)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.2.2](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.1...theme-patternfly-org@0.2.2) (2020-11-04)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.2.1](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.0...theme-patternfly-org@0.2.1) (2020-11-04)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+# [0.2.0](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.38...theme-patternfly-org@0.2.0) (2020-10-30)
+
+
+### Features
+
+* **SkipToContent:** Add skip to content to documentation ([#2240](https://github.com/patternfly/patternfly-org/issues/2240)) ([feb8a63](https://github.com/patternfly/patternfly-org/commit/feb8a635d8f302adc602256b82abcff500a5af0e))
+
+
+
+
+
+## [0.1.38](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.37...theme-patternfly-org@0.1.38) (2020-10-29)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.1.37](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.36...theme-patternfly-org@0.1.37) (2020-10-29)
+
+
+### Bug Fixes
+
+* **codesandbox:** allow more formats on frontend, restrict more on backend ([#2237](https://github.com/patternfly/patternfly-org/issues/2237)) ([1415fea](https://github.com/patternfly/patternfly-org/commit/1415fea898bc1930b261d206d287e7d6746e1196))
+
+
+
+
+
+## [0.1.36](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.35...theme-patternfly-org@0.1.36) (2020-10-28)
+
+
+### Bug Fixes
+
+* **sidenav:** hide scrollbar unless there is overflow ([#2235](https://github.com/patternfly/patternfly-org/issues/2235)) ([101c74a](https://github.com/patternfly/patternfly-org/commit/101c74a98d105c0ac854dc72e92d5b0d3bceae31))
+
+
+
+
+
+## [0.1.35](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.34...theme-patternfly-org@0.1.35) (2020-10-28)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.1.34](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.33...theme-patternfly-org@0.1.34) (2020-10-27)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.1.33](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.32...theme-patternfly-org@0.1.33) (2020-10-27)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.1.32](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.31...theme-patternfly-org@0.1.32) (2020-10-27)
+
+
+### Bug Fixes
+
+* **codesandbox:** syntax ([0bc81e6](https://github.com/patternfly/patternfly-org/commit/0bc81e64aa361a743c2e86bb0f429e430f8f259a))
+
+
+
+
+
+## [0.1.31](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.30...theme-patternfly-org@0.1.31) (2020-10-26)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.1.30](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.29...theme-patternfly-org@0.1.30) (2020-10-26)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## [0.1.29](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.28...theme-patternfly-org@0.1.29) (2020-10-26)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
 ## [0.1.28](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.1.27...theme-patternfly-org@0.1.28) (2020-10-20)
 
 **Note:** Version bump only for package theme-patternfly-org

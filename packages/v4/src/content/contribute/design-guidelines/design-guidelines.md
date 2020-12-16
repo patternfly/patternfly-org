@@ -56,14 +56,14 @@ If you’re creating a new PR:
 
     a. Type `git fetch upstream` and press **Enter**. 
     
-    b. Create a new branch by typing `git checkout -b [name of your PR] upstream/master` and press **Enter**. For example, if your PR name is iss2020, you would type `git checkout -b iss2020 upstream/master`.  
+    b. Create a new branch by typing `git checkout -b [name of your branch] upstream/master` and press **Enter**. For example, if your branch name is iss2020, you would type `git checkout -b iss2020 upstream/master`.  
 
 3. Edit files by typing `code .` and then pressing **Enter**. This will open Visual Studio Code (if this doesn’t work, you can manually open the Visual Studio Code app).
 
 If you’re editing an existing PR:
 
-1. Type git fetch upstream and press **Enter**.
-2. Type `git checkout [name of your existing PR]` and press **Enter**. For example, if your existing PR name is iss2020, you would type `git checkout iss2020`. 
+1. Type `git fetch upstream` and press **Enter**.
+2. Type `git checkout [name of your existing branch]` and press **Enter**. For example, if your existing branch name is iss2020, you would type `git checkout iss2020`. 
 3. If GitHub shows merge conflicts, type `git pull upstream master` and press **Enter**.
 4. Edit files by typing  `code .` and pressing **Enter**. This will open your Visual Studio Code (if this doesn’t work, you can manually open the VIsual Studio Code app). 
 
@@ -127,7 +127,7 @@ To ensure that imagery is consistent and maintainable, create all your image ass
 3. Insert a new artboard for every unique image that you will create.
 4. Create your images. There are two types of images used within design guideline documents: 
 
-    - **High-fidelity mockups** are used to show component details or in any situation where understanding design specifics is important. When describing a design, add numbered callouts to point to specific elements. If you’re only pointing to one element, use an arrow to point to the element instead.  
+    - **High-fidelity mockups** are used to show component details or in any situation where understanding design specifics is important. When describing a design, add numbered callouts to point to specific elements. If you're only pointing to one element, add an unnumbered callout instead.
 
         <img src="./image-2-high-fi.png" alt="high-fi modal" /> 
 
@@ -149,7 +149,7 @@ To ensure high-quality images in the final documentation, export sketch images a
 
 Exporting as PNG x2 ensures better image quality, but it also doubles physical size (WxL). To maintain good image quality while restricting image width to the original artboard width, add images to Markdown using the following HTML tag: 
 
-`<img src="./filename.png" alt="accessibility text describing the image" width="width of the sketch artboard ONLY IF LESS THAN 832px"/>`  
+`<img src="./img/filename.png" alt="accessibility text describing the image" width="width of the sketch artboard ONLY IF LESS THAN 832px"/>` 
 
 The image should display in the visual designer of the Markdown tool you’re using. If the example does not display, there might be a problem with your code. Check that the element is correct and did not turn into normal quotations while copy/pasting. 
 
@@ -165,13 +165,13 @@ Once you’re finished making changes, stage them in Visual Studio Code:
 
 <img src="./image-7-stage.png" alt="stage changes option in Microsoft Visual Studio Code" /> 
 
-3. Return to your Terminal application to commit the changes: 
+3. Return to your terminal application to commit the changes: 
 
     a. Type `git status` and press **Enter**. This should list the same files that were listed in your “changes” tab in VS. If there aren’t any errors, continue to the next step. 
     
     b. Type  `git commit -m ‘title of your PR’` and press **Enter**. You can edit this title later in GitHub if necessary, but it must be placed between single quote marks ( ‘ ) for now. Be sure to type these single quote marks—copy/pasting them from this page won’t register correctly. 
     
-    c. Type `git push origin --set-upstream [name of your PR]` and press **Enter**. 
+    c. Type `git push origin --set-upstream [name of your branch]` and press **Enter**. 
 
 ## Step 10: Create a pull request 
 
@@ -185,19 +185,19 @@ On GitHub, create a pull request to submit your changes:
 
 <img src="./image-9-pr.png" alt="creating a pull request screen in GitHub" /> 
 
-3. Change your PR name and/or add a comment to your PR if you need to.
+3. Change your PR title and/or add a comment to your PR if you need to.
 4. Attach all of your image files to this PR so that they can be updated in the original document, merged back into the main branch, and uploaded back to Sketch Cloud for future access.
 5. Tag [mmenestr](https://github.com/mmenestr) to initiate a final review. 
 6. Submit the PR.  
 
-If your PR has merge conflicts in Github:
+If your PR has merge conflicts in GitHub:
 
 1. Return to your terminal and `type git fetch upstream` and press **Enter**. 
 2. Type `git rebase upstream/master` and ress **Enter**. 
 3. Solve the merge conflicts.
 4. Type `git add -A` and press **Enter**.
 5. Type `git rebase --continue` and press **Enter**.
-6. Type `git push --force origin <name of your PR>` and press **Enter**. 
+6. Type `git push --force origin <name of your branch>` and press **Enter**. 
 
 <img src="./image-10-conflicts.png" alt="code conflicts in Microsoft Visual Studio Code" /> 
 

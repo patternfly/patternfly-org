@@ -1,8 +1,10 @@
-import versions from '../versions.json';
-import { overpass } from './fonts';
+const versions  = require('../versions.json');
+const overpass = require('./fonts');
+const { jsxParser } = require('../helpers/acorn');
+const { capitalize } = require('./capitalize');
 
 // TODO: Use a template that has our assets.
-export const getStaticParams = (title, html) => ({
+const getStaticParams = (title, html) => ({
   files: {
     'index.html': {
       content: `<!DOCTYPE html>
@@ -41,16 +43,65 @@ export const getStaticParams = (title, html) => ({
   template: 'static',
 });
 
+// Allow 3 formats for example identifiers
+// 1. Example = () => { [some logic] return <jsx />; }
+// 2. class Example {}
+// 3. function Example() { return <jsx /> }
+const allowedIdentifiers = [
+  'ClassDeclaration',
+  'FunctionDeclaration',
+  'ExpressionStatement'
+];
+function getExampleDeclaration(code) {
+  return jsxParser.parse(code, { sourceType: 'module' })
+    .body
+    .find(node => allowedIdentifiers.includes(node.type));
+}
+
+function prettyExampleCode(title, code, declaration) {
+  // Create identifier from title
+  const ident = capitalize(
+    title
+      .replace(/^[^A-Za-z]/, '')
+      .replace(/\s+([a-z])?/g, (_, match) => match ? capitalize(match) : '')
+      .replace(/[^A-Za-z0-9_]/g, '')
+  );
+  const jsxBlock = code.substring(declaration.start, declaration.end);
+  if (jsxBlock.includes('\n')) {
+    // Make pretty
+    return code.replace(jsxBlock, `${ident} = () => (\n  ${
+      jsxBlock
+        .replace(/\n/g, '\n  ')
+        .replace(/;[ \t]*$/, '')
+      }\n)`);
+  }
+  else {
+    return code.replace(jsxBlock, `${ident} = () => ${jsxBlock}`);
+  }
+}
+
 // TODO: Make React examples work and use a template that has our assets.
-export const getReactParams = (title, code, scope) => {
-  let toRender = 'Example';
-  const classNameMatch = /class (\w+) /.exec(code);
-  const equalityMatch = /(\w+) =/.exec(code);
-  if (classNameMatch) {
-    toRender = classNameMatch[1];
-  } else if (equalityMatch) {
-    toRender = equalityMatch[1];
-    code = code.replace(/(\w+) =/, `const ${toRender} =`)
+function getReactParams(title, code, scope) {
+  let toRender = null;
+  try {
+    let declaration = getExampleDeclaration(code);
+    if (declaration.type === 'ExpressionStatement') {
+      if (!declaration.expression.left) {
+        code = prettyExampleCode(title, code, declaration);
+        declaration = getExampleDeclaration(code);
+      }
+      const jsxString = code.substring(declaration.start, declaration.end);
+      code = code.replace(jsxString, `const ${jsxString}`);
+      if (declaration.expression.type === 'AssignmentExpression') {
+        toRender = declaration.expression.left.name;
+      }
+    }
+    else if (declaration.id) {
+      toRender = declaration.id.name;
+    }
+  }
+  catch (err) {
+    // Ignore
   }
 
   // import avatarImg from './examples/avatarImg.svg';
@@ -61,7 +112,9 @@ export const getReactParams = (title, code, scope) => {
     code = code.replace(match[0], `const ${svgToken} = "${scope[svgToken]}"`);
   }
 
-  const dependencies = {};
+  const dependencies = {
+    '@patternfly/react-core': versions.Releases[0].versions['@patternfly/react-core']
+  };
 
   Object.entries(versions.Releases[0].versions)
     .filter(([pkg]) => code.includes(pkg))
@@ -113,3 +166,10 @@ ReactDOM.render(<${toRender} />, rootElement);`
     },
   }
 }
+
+module.exports = {
+  getReactParams,
+  getStaticParams,
+  getExampleDeclaration,
+  prettyExampleCode
+};

@@ -3,7 +3,7 @@ id: Login page
 section: components
 ---
 
-The **login page** allows a user to gain access to an application by entering their username and password or by authenticating using a social media login. Related design guideline: [Login](/components/login-page/design-guidelines)
+A **login page** allows a user to gain access to an application by entering their username and password or by authenticating using a social media login.
 
 ## Elements
 
@@ -83,7 +83,7 @@ Please refer to branding guidelines when using logos for social login page. Exam
 
 * [Facebook brand guidelines](https://en.facebookbrand.com/guidelines/brand)
 * [Twitter brand guidelines](https://about.twitter.com/en_us/company/brand-resources.html)
-* [Github brand guidelines](https://github.com/logos)
+* [GitHub brand guidelines](https://github.com/logos)
 * [Stack Exchange brand guidelines](https://stackexchange.com/legal/trademark-guidance)
 * [Google brand guidelines](https://developers.google.com/identity/branding-guidelines)
 * [LinkedIn brand guidelines](https://brand.linkedin.com/)

@@ -2,10 +2,10 @@
 id: Stack chart
 section: charts
 ---
-A **Stacked bar chart** describes totals while allowing a degree of internal breakdown of the data. They can be illustrated vertically and horizontally depending on available space and the data being described.
+A **stacked bar chart** describes totals while allowing a degree of internal breakdown of its data. Stacked bar charts can be illustrated vertically and horizontally depending on available space and the described data.
 
 ## Usage 
-An advantage of stacked bar charts is the order of the stack can be swapped without changing the overall total. These can be illustrated vertically and horizontally depending on available space and the data being described.
+An advantageous feature of stacked bar charts is the ability to reorder the stacked bars without changing the chart's overall total.
 
 #### Example
 <img src="./img/horizontal-stacked-bar-chart.png" alt="Horizontal stacked bar chart" width="690"/>
@@ -14,4 +14,4 @@ An advantage of stacked bar charts is the order of the stack can be swapped with
 
 <img src="./img/vertical-stacked-bar-chart.png" alt="Vertical stacked bar chart" width="663"/>
 
-1. **Stacked bar:** The first series name is represented by the topmost stacked bar, and the last series name is represented by the bottommost stacked bar. For recommendations on series colors, see [Colors for charts](/guidelines/colors-for-charts).
+1. **Stacked bar:** The first series name is represented by the topmost stacked bar, and the last series name is represented by the bottommost stacked bar. For recommendations on series colors, see [colors for charts](/guidelines/colors-for-charts).

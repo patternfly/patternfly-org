@@ -3,7 +3,9 @@ id: Terminology
 section: UX writing
 ---
 
-Here's a list of common UI terms and their usage.
+Here's a list of common UI terms and their usage. 
+
+_For Red Hat product terminology and documentation standards, see [Red Hat's supplementary style guide for Red Hat product documentation](https://redhat-documentation.github.io/supplementary-style-guide/#introduction)._
 
 **Add**: (v.) Use to describe adding an existing item to an existing list, group, view, or other container element.
 - Opposite: Remove
@@ -71,6 +73,9 @@ Here's a list of common UI terms and their usage.
 **Remove**: (v.) Use to describe removing an item from a list, group, view, or other container element without completely deleting it. Also see *Add* and *Delete*.
 - Opposite: Add
 - Notes: If what you’re removing is not readily apparent from the context, consider adding a noun (like “Remove file”).
+
+**Save** (v.) Use to describe preserving changes made by the user. 
+- Opposite: Cancel
 
 **Select**: (v.) Use to prompt the user to select an item from a list, group, view, or other container element.
 - Opposite: Deselect

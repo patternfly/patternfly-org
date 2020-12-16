@@ -5,6 +5,7 @@ const all = require('mdast-util-to-hast/lib/all');
 const { parseJSXAttributes } = require('./jsxAttributes');
 const styleToObject = require('style-to-object');
 const camelCaseCSS = require('camelcase-css');
+const { getExampleDeclaration, prettyExampleCode } = require('../../helpers/codesandbox');
 
 let srcCounter = 0;
 
@@ -95,12 +96,39 @@ function mdxAstToMdxHast() {
             Object.entries(parseJSXAttributes(`<Component ${node.meta} />`))
               .forEach(([key, val]) => {
                 properties[key] = val;
-              }); 
+              });
           }
           catch(error) {
             file.fail(`Error parsing "${node.meta}": ${error}`);
           }
         }
+        if (node.lang === 'js' && !(node.meta && node.meta.noLive)) {
+          try {
+            const declaration = getExampleDeclaration(properties.code);
+            if (
+              declaration.type === 'ExpressionStatement' &&
+              declaration.expression.type === 'JSXElement'
+            ) {
+              // Lone JSX
+              properties.code = prettyExampleCode(node.title, properties.code, declaration);
+            }
+            else if (
+              !declaration ||
+              // Allow Example = () => {...}
+              declaration.type === 'ExpressionStatement' && !(
+                declaration.expression.type === 'AssignmentExpression' &&
+                declaration.expression.right.body &&
+                declaration.expression.right.body.type === 'BlockStatement'
+              )
+            ) {
+              file.message(`Example "${node.title}" must be a class, named block statement, or plain JSX`, node.position);
+            }
+          }
+          catch (err) {
+            file.message(`Example "${node.title}" has invalid JSX: ${err.toString()}`)
+          }
+        }
+
         return Object.assign({}, node, {
           type: 'element',
           tagName: 'Example',

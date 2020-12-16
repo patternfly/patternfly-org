@@ -5,7 +5,7 @@ section: charts
 
 _Charts are only available in React_
 
-Use charts to visualize data in an application. The type of chart you use will depend on your use case and the type of data you need to display.
+A **chart** visualizes data in an application. The type of chart you use will depend on your use case and the type of data you need to display.
 
 ## Elements
 <img src="./img/axis-labels.png" alt="Chart with axis labels" width="713"/> 
@@ -16,16 +16,16 @@ Use charts to visualize data in an application. The type of chart you use will d
 4. **Chart tooltip:** A tooltip will appear on hover over certain elements of a chart, like bars in a bar chart or segments in a donut chart. [Chart tooltips](/charts/tooltip-chart) should display the specific values related to the element the user is hovering over. 
 
 ## Chart types
-- [Area charts](/charts/area-chart/design-guidelines): use to show trending over a continuous scale (usually time)
-- [Bar charts](/charts/bar-chart/design-guidelines): great way to show and compare categorical data
-  - [Stacked bar charts](/charts/stack-chart/design-guidelines)
-- [Bullet charts](/charts/bullet-chart/design-guidelines): use as an extension to the bar chart to measure data with thresholds and static ranges
-- [Donut charts](/charts/donut-chart/design-guidelines): use to show the relationship of a set of values to a whole or progress completion as a percentages
-  - [Donut utilization](/charts/donut-utilization-chart/design-guidelines): use to show utilization for an object as a percentages
-  - [Donut utilization with threshold](/charts/donut-utilization-chart/design-guidelines#donut-chart---utilization-with-threshold): use to show utilization for an object in relation to threshold values
-- [Line chart](/charts/line-chart/design-guidelines): use to compare several data sets, or to show data over a period of time
-- [Pie chart](/charts/pie-chart/design-guidelines): show percentages or proportional data
-- [Sparkline](/charts/sparkline-chart/design-guidelines): understand trends and patterns
+- [Area chart](/charts/area-chart/design-guidelines): Use to show trends over a continuous scale (usually time)
+- [Bar chart](/charts/bar-chart/design-guidelines): Use to show and compare categorical data
+  - [Stacked bar chart](/charts/stack-chart/design-guidelines)
+- [Bullet chart](/charts/bullet-chart/design-guidelines): Use as an extension to the bar chart to measure data with thresholds and static ranges
+- [Donut chart](/charts/donut-chart/design-guidelines): Use to show the relationship of a set of values to a whole, or progress completion as a percentage
+  - [Donut utilization](/charts/donut-utilization-chart/design-guidelines): Use to show utilization for an object as a percentage
+  - [Donut utilization with threshold](/charts/donut-utilization-chart/design-guidelines#donut-chart---utilization-with-threshold): Use to show utilization for an object in relation to threshold values
+- [Line chart](/charts/line-chart/design-guidelines): Use to compare several data sets, or to show data over a period of time
+- [Pie chart](/charts/pie-chart/design-guidelines): Use to show percentages or proportional data
+- [Sparkline](/charts/sparkline-chart/design-guidelines): Use to understand trends and patterns
 
 ## Charts in cards
 If a chart lives in a card, the title of that chart will be placed on the header of that card instead of the chart. The rest of the chart guidelines should be followed for the chart itself.
@@ -35,27 +35,27 @@ If a chart lives in a card, the title of that chart will be placed on the header
 <img src="./img/sparkline-card.png" alt="Sparkline on a card" width="482"/>
 
 ## Brush and zoom
-The brush and zoom properties allow for magnification of an area, bar, line or stack chart. If desired, more advanced features can be added through [Victory](https://formidable.com/open-source/victory/guides/brush-and-zoom/).
+The brush and zoom properties allow for magnification of an area, bar, line, or stack chart. If desired, more advanced features can be added through [Victory](https://formidable.com/open-source/victory/guides/brush-and-zoom/).
 
 ### Example
 
 <img src="./img/brush-and-zoom.png" alt="Brush and zoom" />
 
-1. **Window:** Click and drag to create a window around the section of the chart that you want to zoom in on
+1. **Window:** Click and drag to create a window around the section of the chart that you want to zoom in on.
 2. **Magnified chart:** The portion selected will appear above the full chart view.
 
 ## Interactive chart legends
-For charts that have more than one data set graphed, interactive legends can be used to highlight or isolate certain data sets.  This would work well for [line](#line-chart), [area](#area-chart), or [stacked](#stacked-bar-charts) type of charts where overlap of data sets could occur.
+For charts that graph more than one data set, use interactive legends to highlight or isolate certain data sets.  This would work well for [line](#line-chart), [area](#area-chart), or [stacked](#stacked-bar-charts) charts, where data sets can overlap.
 
 ### Example
 On hover
 <img src="./img/interactive-legend-hover.png" alt="Interactive legend on hover" />
 
-1. **Legend:** When a user hovers over a legend label, all the other legend labels’ opacity are lowered.
-2. **Chart:** The corresponding data of the hovered legend item, would be highlighted by having the other data sets’ opacity lowered.
+1. **Legend:** When a user hovers over a legend label, opacity lowers for all other legend labels.
+2. **Chart:** Data corresponding to the hovered legend label is highlighted since opacity lowers for all other data sets, too. 
 
 On click
 <img src="./img/interactive-legend-hide.png" alt="Interactive legend hidden" />
 
-1. **Legend:** When a user clicks on a legend label, it becomes disabled and the color swatch would be replaced with an eye-slashed icon.
-2. **Chart:** The corresponding data would be made hidden from view.
+1. **Legend:** When a user clicks on a legend label, it becomes disabled and the color swatch is replaced with an eye-slashed icon.
+2. **Chart:** Data corresponding to the clicked legend label is hidden from view.
