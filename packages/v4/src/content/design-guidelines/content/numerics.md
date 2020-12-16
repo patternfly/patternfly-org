@@ -3,55 +3,32 @@ id: Numerics
 section: UX writing
 ---
 
-## Date and time
+## Date and time formats
 All date and time formats should be localizable, not hard-coded. When building localizable date and time formats, development teams should share the same library by using resources like [date-fns](https://date-fns.org/) or [Day.js](https://day.js.org/).
 
-These date and time standards are based in American English, but date and time formats will vary once they're localized.
+PatternFly date and time formats follow the American standard. When localizing, use the appropriate format for the language locale and follow ISO standards.
 
-For applications or websites that are accessed globally, use DD Month YYYY.
+<div class="ws-content-table">
 
-Examples:
-- Tuesday, 07 January 2020
-- 07 January 2020
+| **Element** | **Description** | **Example** |
+|-------------|-------------|-------------|
+| Date | Use Month DD, YYYY | September 17, 2020 <br /><br />Sep 17, 2020 |
+| Date numeric value | When you represent the date as a numeric value or label, use MM-DD-YYYY. | 09-17-2020 |
+| Time | Display time in either 12-hour or 24-hour (UTC) time. | 12-hour: 3:00PM <br /><br />With seconds: 3:30:11 PM <br /><br />24-hour: 15:00 |
+| 12-hour time notation | This time convention divides the 24-hours of the day into 2 periods of 12 hours, AM and PM. <br /><br />12-hour time notation is the American standard. | 3:00PM |
+| 24-hour time notation | This time convention divides the day by 24 hours and runs from midnight to midnight. The hours are represented from 0 to 23. | 14:00 |
+| Date and time | Include the timestamp after the date and separate with a comma. | Thursday, 21 January 2019, 9:38:11 PM EST <br /><br />07 Jan 2019, 23:33 UTC |
+| Time zone | Display time in the user's time zone or in UTC. <br /><br />Use UTC when spanning multiple time zones. | Maintenance begins today at 14:00 UTC (2 PM EST). |
+| Day |Write out the full name of the day. If space is limited, use the day’s 3-letter abbreviation: <ul><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul> | Monday, 17 September 2020 <br /><br />Mon, 17 Sep 2020 |
+| Month | Write out the full name of the month. If space is limited, use the month’s 3-letter abbreviation. <ul><li>Jan</li><li>Feb</li><li>Mar</li><li>Apr</li><li>May</li><li>Jun</li><li>Jul</li><li>Aug</li><li>Sep</li><li>Oct</li><li>Nov</li><li>Dec</li></ul> | September 17, 2020 <br /><br />Sep 17, 2020 |
+| Duration | HH:MM:SS or HH:MM | 03:15:30 <br /><br />03:15<br /><br />00:15 |
+</div>
 
-When you represent the date as a numeric value or label, use the [ISO Standard 8601](https://www.iso.org/iso-8601-date-and-time-format.html): YYYY-MM-DD.
+## Absolute or relative time
 
-Example: Write January 7, 2020 as 2020-01-07.
+Using **absolute** or **relative** timestamps depends on the context. To represent the exact date and time that an event occurred, use an absolute timestamp following examples provided in the previous [table of date and time formats](#date-and-time-formats).
 
-Whenever possible, write out the full name of the month. If space is limited, use the month’s three-letter abbreviation:
-
-- Jan
-- Feb
-- Mar
-- Apr
-- May
-- Jun
-- Jul
-- Aug
-- Sep
-- Oct
-- Nov
-- Dec
-
-When adding a date/time in your copy, display it in UTC or the user's time zone. 
-
-UTC is recommended for cases where people may be collaborating across time zones (for instance, tracking incidents on a server). If you use UTC, show the user's estimate time zone in parentheses.
-
-Example: Maintenance begins today at 14:00 UTC (2 PM EST).
-
-When representing date and time, include the timestamp after the date and separate with a comma.
-
-Examples:
-- Tuesday, 07 January 2020, 9:38:11 PM EST
-- 07 Jan 2020, 23:33 UTC
-- 9:38:11 PM
-- 9:38 PM
-
-Using **absolute** or **relative** timestamps will depend on the context. If your user is primarily interested in understanding the exact date and time that an event occurred, use an absolute timestamp.
-
-If users are interested in duration, the amount of time it takes for an event to occur, or the amount of time between events, use an absolute timestamp formatted as HH:MM:SS.
-
-If users are interested in how long ago an event occurred, use a relative timestamp. When reporting relative time, follow these examples:
+To represent how long ago an event occurred, use a relative timestamp. When reporting relative time, follow these examples:
 
 <div class="ws-content-table">
   
@@ -69,26 +46,28 @@ If users are interested in how long ago an event occurred, use a relative timest
 </div>
 
 ## Numbers and currency
-In a UI, use numerals instead of written numbers. 
+Use numerals instead of written numbers. 
 
 <div class="ws-content-table">
   
 | **Before**      | **After**              |
 |---------------------|------------------------|
-| Your transaction will be complete in three business days.      | Your transaction will be complete in 3 business days.              |
-
-Never hard-code number formatting. Currency symbols, comma placements, and decimal placements vary by locale.
+| Your transaction will be complete in three business days. | Your transaction will be complete in 3 business days. |
+| You have a credit of two dollars. | You have a credit of US$2.00. |
 
 </div>
 
-For larger numbers, American English uses the comma as the thousand separator, added every 3 digits from the right. For consistency, write your text with this formatting. The number will look different after localization.  
+### Digit grouping
 
-Examples: 
+Use the American notation standard. Use a decimal comma to separate thousands.
 
-- United States: 1,000
-- Brazil: 1.000
+Examples:<br />
+1,000,000.00<br />
+1,000,000,000
 
-For currencies that use the symbol "$" alone, modify with the first two letters of their [three-letter ISO code](https://www.iso.org/iso-4217-currency-codes.html):
+### Currency
+
+For currencies that use the symbol "$" alone, add the first two letters of the ISO currency code.
 
 - US$1,500 (United States)
 - AU$1,500 (Australia)
@@ -111,5 +90,3 @@ Use a currency's ISO three-digit numeric code when writing for computerized syst
 | United Kingdom | Pound    | GBP             | 826          |
 
 Generally, we don't provide currency conversions.
-
-(Taken from the Red Hat Corporate Style Guide)
