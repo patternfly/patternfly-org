@@ -705,6 +705,13 @@ export const iconsData = [
     "Type": "Action",
     "Contextual_usage": "Indicates the ability to delete"
   },
+  {
+    "Style": "fas",
+    "Name": "fa-upload",
+    "React_name": "UploadIcon",
+    "Type": "Action",
+    "Contextual_usage": "Indicates an upload function is available"
+  },
   [
     {
       "Style": "fas",
