@@ -12,7 +12,7 @@ PatternFly has a few repos you can contribute to:
 - [patternfly-org](https://github.com/patternfly/patternfly-org): For PatternFly website content and design documentation contributions.
 
 ## Requesting new features and enhancements
-PatternFly is built on the needs of our community of stakeholders. To request a new feature or an enhancement to an existing feature, the first step is to open a new issue in the [patternfly-design repo](https://github.com/patternfly/patternfly-design/issues). Your issue should include:
+PatternFly is built on the needs of our community of stakeholders. To request a new feature or an enhancement to an existing feature, the first step is to open a new issue in the [patternfly-design repo](https://github.com/patternfly/patternfly-design/issues). Your issue should include the following:
 *    Requirements
 *    Use cases
 *    Preliminary designs (if available)
