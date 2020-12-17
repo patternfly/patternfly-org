@@ -12,13 +12,13 @@ PatternFly has a few repos you can contribute to:
 - [patternfly-org](https://github.com/patternfly/patternfly-org): For PatternFly website content and design documentation contributions.
 
 ## Requesting new features and enhancements
-PatternFly is built on the needs of our community of stakeholders. To request a new feature or an enhancement to an existing feature, the first step is to open a new issue in the [patternfly-design repo](https://github.com/patternfly/patternfly-design/issues). Your issue should include:
+PatternFly is built on the needs of our community of stakeholders. To request a new feature or an enhancement to an existing feature, the first step is to open a new issue in the [patternfly-design repo](https://github.com/patternfly/patternfly-design/issues). Your issue should include the following:
 *    Requirements
 *    Use cases
 *    Preliminary designs (if available)
 *    Project timelines (dates needed, etc.)
 
-The PF team will review and prioritize your issue, taking into account scope and technical constraints. If accepted, your feature request will be placed on the [PatternFly feature roadmap](https://github.com/orgs/patternfly/projects/4?fullscreen=true) and queued to the PatternFly design backlog. After this, the PatternFly design team will work with you to create a design proposal and facilitate reviews.
+The PatternFly team will review and prioritize your issue, taking into account scope and technical constraints. If accepted, your feature request will be placed on the [PatternFly feature roadmap](https://github.com/orgs/patternfly/projects/4?fullscreen=true) and queued to the PatternFly design backlog. After this, the PatternFly design team will work with you to create a design proposal and facilitate reviews.
 
 ### PatternFly feature lifecycle
 
