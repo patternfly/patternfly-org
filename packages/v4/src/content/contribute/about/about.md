@@ -5,40 +5,22 @@ section: contribute
 
 The PatternFly open source community depends on contributions to help our design system grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new design patterns and ideas, help identify bugs in code, and more. With your help, we can stay on top of the latest and greatest implementation solutions.  
 
-PatternFly has a few repos you can contribute to: 
-- [patternfly](https://github.com/patternfly/patternfly) and [patternfly-react](https://github.com/patternfly/patternfly-react): Main repos for code contributions 
-- [patternfly-design](https://github.com/patternfly/patternfly-design): Main repo for design contributions 
-- [patternfly.org](https://github.com/patternfly/patternfly-org): Main repo for PatternFly website content and documentation contributions
+## PatternFly on GitHub
+PatternFly has a few repos you can contribute to:
+- [patternfly](https://github.com/patternfly/patternfly): For core HTML and CSS contributions. All component contributions should start in Core.
+- [patternfly-react](https://github.com/patternfly/patternfly-react): For React contributions.
+- [patternfly-org](https://github.com/patternfly/patternfly-org): For PatternFly website content and design documentation contributions.
 
-## Process
-The following is an overview of the contribution process. As a contributor, you are not expected to complete all of these stages. We appreciate your contribution at whichever step you decide to begin with.
+## Requesting new features and enhancements
+PatternFly is built on the needs of our community of stakeholders. To request a new feature or an enhancement to an existing feature, the first step is to open a new issue in the [patternfly-design repo](https://github.com/patternfly/patternfly-design/issues). Your issue should include the following:
+*    Requirements
+*    Use cases
+*    Preliminary designs (if available)
+*    Project timelines (dates needed, etc.)
 
-__1. Discover__
-  - Create an issue that includes:
-    - Requirements
-    - Use cases
-    - Wireframes
-    - Documentation
-  - The PF team will review and prioritize your issue, taking into account scope and technical constraints
-    - If accepted, your feature request will be placed on the PatternFly roadmap and moved to design
+The PatternFly team will review and prioritize your issue, taking into account scope and technical constraints. If accepted, your feature request will be placed on the [PatternFly feature roadmap](https://github.com/orgs/patternfly/projects/4?fullscreen=true) and queued to the PatternFly design backlog. After this, the PatternFly design team will work with you to create a design proposal and facilitate reviews.
 
-
-__2. Design__
-  - Propose a design that includes
-    - Visual mockups
-    - Interaction documentation
-  - The PF team will review and prioritize the design and move it to implementation
-
-
-__3. Implement__
-  - Introduce any new styles to Core and follow up with PatternFly-React to define the behavior
-  - The PF team will review the implementation ensuring it satisfies the requirements
-
-
-__4. Document__
-  - Add the description of the component to the PF site
-  - Add the design guidelines of the component to the PF site
-  - The PF team will review the PR and make it available for consumption
+### PatternFly feature lifecycle
 
 ![Contribution guide](./about-flowchart.png)
 
