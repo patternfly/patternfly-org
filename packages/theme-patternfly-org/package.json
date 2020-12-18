@@ -1,7 +1,7 @@
 {
   "name": "theme-patternfly-org",
   "description": "A unified PatternFly and PatternFly-React theme.",
-  "version": "0.2.10",
+  "version": "0.2.15",
   "author": "Red Hat",
   "license": "MIT",
   "bin": {
@@ -46,7 +46,7 @@
     "prismjs": "^1.17.1",
     "puppeteer": "^5.3.1",
     "puppeteer-cluster": "^0.22.0",
-    "react-docgen": "^5.3.0",
+    "react-docgen": "^5.3.1",
     "react-live": "^2.2.0",
     "react-ssr-prepass": "^1.2.1",
     "remark-footnotes": "^1.0.0",

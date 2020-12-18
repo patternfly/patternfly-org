@@ -21,6 +21,7 @@ module.exports = {
     { section: 'layouts' },
     { section: 'utilities' },
     { section: 'contribute' },
+    { section: 'training' },
     { href: '/community' }
   ],
   topNavItems: [],

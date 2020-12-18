@@ -705,6 +705,13 @@ export const iconsData = [
     "Type": "Action",
     "Contextual_usage": "Indicates the ability to delete"
   },
+  {
+    "Style": "fas",
+    "Name": "fa-upload",
+    "React_name": "UploadIcon",
+    "Type": "Action",
+    "Contextual_usage": "Indicates an upload function is available"
+  },
   [
     {
       "Style": "fas",
@@ -1112,10 +1119,17 @@ export const iconsData = [
   },
   {
     "Style": "pf-icon",
+    "Name": "pf-icon-resources-empty",
+    "React_name": "ResourcesEmptyIcon",
+    "Type": "Status",
+    "Contextual_usage": "Represents status: is empty"
+  },
+  {
+    "Style": "pf-icon",
     "Name": "pf-icon-resources-almost-empty",
     "React_name": "ResourcesAlmostEmptyIcon",
     "Type": "Status",
-    "Contextual_usage": "Represents status: almost empty"
+    "Contextual_usage": "Represents status: is almost empty"
   },
   {
     "Style": "pf-icon",
