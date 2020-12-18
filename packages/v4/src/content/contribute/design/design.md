@@ -4,23 +4,16 @@ section: contribute
 ---
 
 ## Ways to contribute
-Whether you have an existing design or requirements for a new feature, the first step is to open a New Feature Request issue. Your request will be reviewed and placed on the PatternFly roadmap. After this, the PatternFly design team will work with you to complete your design proposal and facilitate reviews.
 
 As a designer, here are some of the contributions you can make:
 
-### New feature
-Work with PatternFly to design a new feature for your product and contribute it back to the system simultaneously.
+### New feature or enhancement
+Work with the PatternFly design team to design a new feature to be implemented in the PatternFly library.
 
 __Example__
 *I want to design and contribute a new design pattern that allows a user to favorite or like an item in a data list.*
 
-### Enhancement
-Improve or update an existing PatternFly component or design pattern.
-
-__Example__
-*I want to add a compact/expand toggle to the list view.*
-
-You may also open an issue to propose a new design guideline page or update an existing guideline, and work with the PatternFly team and stakeholders to author and publish your new content.
+The PatternFly design team is comprised of a small number of visual and interaction designers who define the visual look and feel of the PatternFly library and provide direction to developers when implementing new features and enhancements. The team works following an agile process. All work is tracked and managed via a [Zenhub project board](https://app.zenhub.com/workspaces/pf4-design-workspace-5b2142ff9499cb7cdaf1e632/board?repos=61041252&showPRs=false&showClosed=false&showLabels=false&showEstimates=false&showMilestones=false&showEpics=false). You can look at the Design Backlog column on the project board to see issues needing design help or [open a new issue](https://github.com/patternfly/patternfly-design/issues) to propose a design.
 
 ### Design guideline
 Design guidelines appear on the website and help designers to apply PatternFly components in their designs.  They are use case and solutions driven.
@@ -28,22 +21,14 @@ Design guidelines appear on the website and help designers to apply PatternFly c
 __Example__
 *I want to add guidelines for how to apply labels and tags to organize objects.*
 
-## Lifecycle
+You may open an issue in our [patternfly-org repo](https://github.com/patternfly/patternfly-org) to propose a new design guideline page or update an existing guideline, and work with the PatternFly team and stakeholders to author and publish your new content. Visit the [Design guidelines page](https://www.patternfly.org/v4/contribute/design-guidelines) for detailed instructions about how to author and contribute design guideline content.
 
-Before you begin the contribution process, follow [these guidelines](/get-started/design) to get your environment setup.
+### PatternFly design kit
+The [PatternFly design kit](https://www.patternfly.org/v4/get-started/design) is a [Sketch](https://www.sketch.com) library that makes it easy for designers to create high-fidelity mockups using PatternFly components.
 
-Follow these steps and this [template format](https://documentcloud.adobe.com/link/track?uri=urn%3Aaaid%3Ascds%3AUS%3A28fd970d-8b77-4008-b598-b2f629bda589) to submit your designs:
+__Example__
+*I want to implement a new component in the PatternFly Sketch symbol library.*
 
-__1. Create an issue__
-  - Navigate to the [PatternFly page](https://github.com/patternfly) on GitHub and go to the [feature board](https://github.com/orgs/patternfly/projects/3)
-  - Open an issue for a new feature or comment on an existing issue for an enhancement
+To open an issue or browse existing issues, visit the [patternfly-design-kit repo](https://github.com/patternfly/patternfly-design-kit/) on GitHub.
 
-__2. Propose a design__
-  - Create a proposal for the new pattern or enhancements (be sure to re-use existing components in the design when applicable)
-  - Attach any design assets such as wireframes or mockups to help clarify the design intent and behavior
-  - Document all interactions within the desing clearly (you can leverage the Sketch library in addition to prototyping tools like InVision, Marvel, etc.)
-
-__3. Submit your designs__
-  - The PatternFly team will help you throughout this process. If accepted, you will be assigned a buddy to assist you throughout the rest of the process
-
-![Design contribution lifecycle flowchart](./design-flowchart.png)
+**If you are interested in contributing to any of the projects above, feel free to reach out to us on the patternfly-design channel on [Slack](https://slack.patternfly.org/).**
