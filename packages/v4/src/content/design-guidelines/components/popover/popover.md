@@ -8,63 +8,44 @@ related: [
 ]
 ---
 
-A **popover** displays content in a new window that overlays the current page. Unlike a modal, a popover does not block the current page. By default, clicking anywhere outside of the popover will dismiss it.
+A **popover** is in-app messaging that provides more information on specific product areas. Popovers display content in a new window that overlays the current page. Unlike modals, popovers don’t block the current page. 
+
+Popovers are triggered by a click and dismissed in one of the following ways:
+- The user clicks the exit icon. 
+- The user clicks anywhere on the screen outside the popover.
+- The user clicks an action button inside the popover. (Note: This won't always close the popover; it depends on the action button.)
+
+<img src="./img/popover-example.png" alt="popover example with placeholder text for the title and informational text" width="300"/>
+
+For information on other forms of on-screen help, see [Tooltip](/components/tooltip/design-guidelines) and [Hint](/components/hint/design-guidelines).
 
 ## Usage
+Popovers are commonly used on form field labels, page titles or headings, or table column headings. Use popovers to: 
+- Anticipate and answer questions for the user.
+- Help explain unfamiliar terms.
+- Provide context around a task.     
 
-Popovers provide helpful contextual information at the moment users need it.
+<img src="./img/popover-email.png" alt="popover for an email address form field explaining what the email address is used for" width="1500"/>
 
-<img src="./img/popovers-1.png" alt="Example of popover in a form" />
-
-Use popovers to anticipate and answer questions for the user, help explain unfamiliar terms, or provide context around a task. You may also link to further information inside a popover.
-
-Always use a question-circle icon when using the popover pattern to define a term or explain a concept. When in the UI, the default icon color is grey. Once the user hovers or clicks over the icon to open the popover, the icon turns black.
+When using a popover to define a term or explain a concept, use a gray question-circle icon. Upon hover or click, the icon turns black.
 
 <img src="./img/popovers-colors.png" alt="Popover icon colors depending on state"  width="481"/>
 
-You may also use popovers with link text. For example, when there is no obvious UI element to add a popover to, you may pose a question, preceded with a question-circle icon to alert the user that they can find more information by clicking on it. 
+To provide more information to a user without an accompanying UI element, you can add a popover to a linked question.
 
-Popover text should adopt link button styling and always be preceded by a question-circle icon, which should be blue, following the link button styling. Clicking on the link text should trigger a popover that provides an answer to the question posed in the hint text.
+<img src="./img/popovers-2.png" alt="popover for a linked question" width="1500"/>
 
-<img src="./img/popovers-2.png" alt="Popover link text in UI" />
+Use link button styling for the linked question, and add a blue question-circle icon before it. Clicking the link text triggers a popover, which answers the linked question. 
 
+## Tooltips versus popovers
+Both [tooltips](/components/tooltip/design-guidelines) and popovers provide more information in context for users. However, they’re different in a few ways:
 
-Popovers are triggered by a click and dismissed in one of the following ways:
+- Tooltips are used for identification purposes, while popovers are used for added description or information in context.  
+- Tooltips contain short descriptions or labels, while popovers contain longer descriptions, formatted text, and optional images or links.
+- Tooltips appear on hover, while popovers appear on click.   
 
-* The user clicks the exit icon
-* The user clicks an action button inside the popover
-* The user clicks anywhere on the screen outside the popover
-
-Never hide critical information in a popover. Critical information is any information the user *must have and will always need* in order to complete a task.
-
-**Common use cases**
-* On form field labels
-* On titles, headers, other kinds of labels
-* In a table column header
-
-### When to use a tooltip versus a popover
-
-Both tooltips and popovers allow users to get more information in context. However, they differ in two ways:
- 
- 1. Tooltips are used for identification purposes, while popovers are used for added description or information in context. 
- 2. Tooltips appear on hover, while popovers appear on click
-
-**Use tooltips for:**
-* Short descriptions of an item or to identify an item, like an icon button
-* Content that is no longer than 1 or 2 lines
-
-<img src="./img/use-tooltips.png" alt="Examples of tooltip use" />
-
-**Use popovers for:**
-
-* Longer descriptions
-* Formatted text
-* When you would like your in-context help to include pictures, actions, or links 
-
-<img src="./img/use-popovers.png" alt="Examples of popover use"  width="990"/>
-
-
-### Other forms of on-screen help
-
-1. [Hints](/components/hint/design-guidelines)
-2. [Tooltips](/components/tooltip/design-guidelines)
+## Content
+- Popover copy is longer than tooltip copy, but it should still be concise. Aim for 1–3 sentences.  
+- Write in full sentences with punctuation. 
+- Include relevant links to documentation when necessary.    
+- Use popovers for additional information. Don’t use popovers for information critical to a user completing a task, such as password character requirements.  
