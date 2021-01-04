@@ -8,6 +8,7 @@ const publishFn = surge().publish();
 const ghrepo = process.env.GITHUB_REPOSITORY || '';
 const ghref = process.env.GIHUB_REF || '';
 console.log('ghrepo', ghrepo, 'ghref', ghref);
+console.dir(process.env);
 
 // From CircleCI
 const owner = process.env.CIRCLE_PROJECT_USERNAME || ghrepo.split('/')[0]; // patternfly

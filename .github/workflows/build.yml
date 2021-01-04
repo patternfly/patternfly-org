@@ -50,6 +50,8 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
       - run: yarn build:v3
+      - run: pwd
+      - run: mv build /github/workspace
       - run: node .github/upload-preview.js build/patternfly-org v3
   build-v4:
     runs-on: ubuntu-latest
@@ -69,6 +71,7 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
       - run: yarn build:v4
+      - run: mv build /github/workspace
       - run: node .github/upload-preview.js build/patternfly-org v4
         # - uses: actions/upload-artifact@v2
         #   id: upload-build-v4
@@ -92,4 +95,4 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
       # Downloads all artifacts
       # - uses: actions/download-artifact@v2
-      - run: ls build/patternfly-org
+      - run: ls /github/workspace/build/patternfly-org
