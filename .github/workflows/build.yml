@@ -27,6 +27,7 @@ jobs:
     env:
       SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
       SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+      GH_PR_TOKEN: ${{ secrets.GH_PR_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -43,22 +44,20 @@ jobs:
             packages/v3/node_modules
           key: ${{ runner.os }}-yarn-v3-${{ hashFiles('packages/v3/yarn.lock') }}
       - run: cd packages/v3 && bundle install --jobs 4 --retry 3
-      - run: cd packages/v3 && yarn install --frozen-lockfile
-      - run: git clean -ndfx
-      - run: cd packages/v3 && yarn build
-      - run: yarn copy:v3
-      - run: node .github/upload-preview.js build/patternfly-org v3
-      - uses: actions/upload-artifact@v2
-        id: upload-build-v3
+      - uses: actions/cache@v2
+        id: yarn-cache
         with:
-          name: build-v3
-          path: build/patternfly-org/v3/
+          path: '**/node_modules'
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+      - run: yarn build:v3
+      - run: node .github/upload-preview.js build/patternfly-org v3
   build-v4:
     runs-on: ubuntu-latest
     needs: install
     env:
       SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
       SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+      GH_PR_TOKEN: ${{ secrets.GH_PR_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
