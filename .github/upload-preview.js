@@ -6,7 +6,7 @@ const publishFn = surge().publish();
 
 // From github actions
 const ghrepo = process.env.GITHUB_REPOSITORY || '';
-const ghref = process.env.GIHUB_REF || '';
+const ghref = process.env.GITHUB_REF || '';
 console.log('ghrepo', ghrepo, 'ghref', ghref);
 console.dir(process.env);
 
