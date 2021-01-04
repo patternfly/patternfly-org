@@ -43,6 +43,7 @@ jobs:
             packages/v3/node_modules
           key: ${{ runner.os }}-yarn-v3-${{ hashFiles('packages/v3/yarn.lock') }}
       - run: cd packages/v3 && bundle install --jobs 4 --retry 3
+      - run: cd packages/v3 && yarn install --frozen-lockfile
       - run: git clean -ndfx
       - run: cd packages/v3 && yarn build
       - run: yarn copy:v3

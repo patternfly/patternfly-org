@@ -4,10 +4,16 @@ const octokit = new Octokit({ auth: process.env.GH_PR_TOKEN });
 const surge = require('surge');
 const publishFn = surge().publish();
 
-const owner = process.env.CIRCLE_PROJECT_USERNAME; // patternfly
-const repo = process.env.CIRCLE_PROJECT_REPONAME;
-const prnum = process.env.CIRCLE_PR_NUMBER;
-const prbranch = process.env.CIRCLE_BRANCH;
+// From github actions
+const ghrepo = process.env.GITHUB_REPOSITORY || '';
+const ghref = process.env.GIHUB_REF || '';
+console.log('hey', ghrepo, ghref);
+
+// From CircleCI
+const owner = process.env.CIRCLE_PROJECT_USERNAME || ghrepo.split('/')[0]; // patternfly
+const repo = process.env.CIRCLE_PROJECT_REPONAME || ghrepo.split('/')[1];
+const prnum = process.env.CIRCLE_PR_NUMBER || ghref.match(/pull\/(\d+)/)[1];
+const prbranch = process.env.CIRCLE_BRANCH || ghref.replace('refs/heads/', '');
 
 const uploadFolder = process.argv[2];
 const uploadName = process.argv[3] || uploadFolder;
