@@ -61,7 +61,7 @@ jobs:
         key: *js_deps_cache_key
   build_v3:
     docker:
-    - image: circleci/ruby:latest-node
+    - image: circleci/ruby:2-node
     steps:
     - checkout
     - restore_cache:
