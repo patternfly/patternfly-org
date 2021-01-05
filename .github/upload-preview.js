@@ -15,6 +15,7 @@ const owner = process.env.CIRCLE_PROJECT_USERNAME || ghrepo.split('/')[0]; // pa
 const repo = process.env.CIRCLE_PROJECT_REPONAME || ghrepo.split('/')[1];
 const prnum = process.env.CIRCLE_PR_NUMBER || (ghref.match(/pull\/(\d+)/) || [])[1];
 const prbranch = process.env.CIRCLE_BRANCH || ghref.replace('refs/heads/', '');
+console.log('prnum', prnum, 'prbranch', prbranch);
 
 const uploadFolder = process.argv[2];
 const uploadName = process.argv[3] || uploadFolder;

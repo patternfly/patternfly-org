@@ -18,14 +18,15 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
       - run: yarn install --frozen-lockfile
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
       # v4 build
       - run: yarn build:v4
       - run: node .github/upload-preview.js build/patternfly-org v4
       # v3 build
-      - run: cd packages/v3 && bundle install --jobs 4 --retry 3
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.6'
+      - run: cd packages/v3 && bundle install --jobs 4 --retry 3
       - run: yarn build:v3
       - run: node .github/upload-preview.js build/patternfly-org v3
       # deploy
