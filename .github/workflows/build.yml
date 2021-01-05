@@ -22,26 +22,34 @@ jobs:
         if: steps.yarn-cache.outputs.cache-hit != 'true'
       # v4 build
       - run: yarn build:v4
+        name: Build docs
       - run: node .github/upload-preview.js build/patternfly-org v4
+        name: Upload docs
       # v3 build
       - uses: actions/cache@v2
         id: v3-build-cache
+        name: Load v3 build from cache
         with:
           path: 'build/patternfly-org/v3'
-          key: ${{ runner.os }}-build-${{ hashFiles('packages/v3/**') }}
+          key: ${{ runner.os }}-build-${{ hashFiles('packages/v3/*', 'packages/v3/**') }}
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.6'
         if: steps.v3-build-cache.outputs.cache-hit != 'true'
       - run: cd packages/v3 && bundle install --jobs 4 --retry 3
+        name: Install v3 ruby deps
         if: steps.v3-build-cache.outputs.cache-hit != 'true'
       - run: yarn build:v3
+        name: Build v3 docs
         if: steps.v3-build-cache.outputs.cache-hit != 'true'
       # temporarily move v4 out of the way
       - run: mv build/patternfly-org/v4 build
+        name: Prep upload v3 docs
       - run: node .github/upload-preview.js build/patternfly-org v3
+        name: Upload v3 docs
       # deploy
       - run: mv build/v4 build/patternfly-org
+        name: Undo prep upload v3 docs
       - run: .github/release.sh
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -52,4 +60,6 @@ jobs:
       - run: node scripts/writeV3Redirects.js
       - run: node scripts/writeVersionPrefix.js
       - run: du -sh build/* build/patternfly-org/*
+        name: Check size of docs
       - run: .github/upload-staging.sh
+        name: Upload docs to staging
