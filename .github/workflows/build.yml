@@ -67,7 +67,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
       - run: node scripts/writeV3Redirects.js
       - run: node scripts/writeVersionPrefix.js
-      - run: du -sh build/* build/patternfly-org/*
+      - run: du -sh build/patternfly-org/*
         name: Check size of docs
       - run: .github/upload-staging.sh
         name: Upload docs to staging
