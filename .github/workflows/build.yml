@@ -32,5 +32,15 @@ jobs:
       - run: mv build/patternfly-org/v4 build
       - run: node .github/upload-preview.js build/patternfly-org v3
       # deploy
-      - run: mv build/v4 build/patternfly-org/v4
-      - run: ls build/patternfly-org/
+      - run: mv build/v4 build/patternfly-org
+      - run: .github/release.sh
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY}}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      - run: node scripts/writeV3Redirects.js
+      - run: node scripts/writeVersionPrefix.js
+      - run: du -sh build/* build/patternfly-org/*
+      - run: .github/upload-staging.sh

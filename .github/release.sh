@@ -1,8 +1,7 @@
 #!/bin/bash
-USERNAME=${CIRCLE_PROJECT_USERNAME}
-REPONAME=${CIRCLE_PROJECT_REPONAME}
 GIT_USERNAME="patternfly-build"
-REPO="github.com:${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git"
+GH_REPO=${GITHUB_REPOSITORY}
+REPO="github.com:${GH_REPO}.git"
 echo "Preparing release environment..."
 git config user.email "patternfly-build@redhat.com"
 git config user.name ${GIT_USERNAME}
@@ -28,10 +27,10 @@ then
   then
     # Use Issues api instead of PR api because
     # PR api requires comments be made on specific files of specific commits
-    GITHUB_PR_COMMENTS="https://api.github.com/repos/${USERNAME}/${REPONAME}/issues/${PR_NUM}/comments"
+    GH_PR_COMMENTS="https://api.github.com/repos/${GH_REPO}/issues/${PR_NUM}/comments"
     COMMENT=$(git log --author="patternfly-build" -1 --pretty=%B | tail -n +2 | python -c 'import json,sys; print(json.dumps(sys.stdin.read()))' | cut -d '"' -f 2)
     JSON="{\"body\":\"Your changes have been released in: ${COMMENT}Thanks for your contribution! :tada:\"}"
-    echo "Adding github PR comment ${GITHUB_PR_COMMENTS} ${JSON}"
+    echo "Adding github PR comment ${GH_PR_COMMENTS} ${JSON}"
     curl -H "Authorization: token ${GH_PR_TOKEN}" --request POST "${GITHUB_PR_COMMENTS}" --data "${JSON}"
   fi
 elif grep -i "No changed packages to publish" lerna-output.txt;

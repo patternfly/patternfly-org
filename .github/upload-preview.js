@@ -1,4 +1,4 @@
-const path = require('path');
+const path = requre('path');
 const { Octokit } = require('@octokit/rest')
 const octokit = new Octokit({ auth: process.env.GH_PR_TOKEN });
 const surge = require('surge');
@@ -14,8 +14,8 @@ console.dir(process.env);
 const owner = process.env.CIRCLE_PROJECT_USERNAME || ghrepo.split('/')[0]; // patternfly
 const repo = process.env.CIRCLE_PROJECT_REPONAME || ghrepo.split('/')[1];
 const prnum = process.env.CIRCLE_PR_NUMBER || (ghref.match(/pull\/(\d+)/) || [])[1];
-const prbranch = process.env.CIRCLE_BRANCH || ghref.replace('refs/heads/', '');
-console.log('prnum', prnum, 'prbranch', prbranch);
+const branch = process.env.CIRCLE_BRANCH || ghref.replace('refs/heads/', '');
+console.log('prnum', prnum, 'branch', branch);
 
 const uploadFolder = process.argv[2];
 const uploadName = process.argv[3] || uploadFolder;
@@ -25,7 +25,7 @@ if (!uploadFolder) {
 }
 
 const uploadFolderName = path.basename(uploadFolder);
-let uploadURL = `${repo}${prnum ? `-pr-${prnum || prbranch}` : ''}`.replace(/[\/|\.]/g, '-');
+let uploadURL = `${repo}-${prnum ? `pr-${prnum}` : branch}`.replace(/[\/|\.]/g, '-');
 
 uploadURL += `-${uploadName}`;
 uploadURL += '.surge.sh';
