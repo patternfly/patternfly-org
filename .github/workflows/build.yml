@@ -28,6 +28,9 @@ jobs:
           ruby-version: '2.6'
       - run: cd packages/v3 && bundle install --jobs 4 --retry 3
       - run: yarn build:v3
+      # temporarily move v4 out of the way
+      - run: mv build/patternfly-org/v4 build
       - run: node .github/upload-preview.js build/patternfly-org v3
       # deploy
+      - run: mv build/v4 build/patternfly-org/v4
       - run: ls build/patternfly-org/
