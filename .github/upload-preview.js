@@ -1,4 +1,4 @@
-const path = requre('path');
+const path = require('path');
 const { Octokit } = require('@octokit/rest')
 const octokit = new Octokit({ auth: process.env.GH_PR_TOKEN });
 const surge = require('surge');
