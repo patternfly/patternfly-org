@@ -17,6 +17,11 @@ const annotations = [
     regex: /@beta/,
     name: 'beta',
     type: 'Boolean'
+  },
+  {
+    regex: /@propType\s+(.*)/,
+    name: 'type',
+    type: 'String'
   }
 ];
 
@@ -26,7 +31,9 @@ function addAnnotations(prop) {
       const match = prop.description.match(regex);
       if (match) {
         prop.description = prop.description.replace(regex, '').trim();
-        prop[name] = match[2] || match[1] || true;
+        if (name) {
+          prop[name] = match[2] || match[1] || true;
+        }
       }
     })
   }
@@ -136,6 +143,7 @@ function tsDocgen(file) {
       props: Object.entries(parsed.props || {})
         .map(normalizeProp)
         .map(addAnnotations)
+        .filter(prop => !prop.hide)
         .sort((p1, p2) => p1.name.localeCompare(p2.name))
     }));
 }
@@ -143,3 +151,4 @@ function tsDocgen(file) {
 module.exports = {
   tsDocgen
 };
+

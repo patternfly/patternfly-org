@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.15...theme-patternfly-org@0.3.0) (2021-01-04)
+
+
+### Features
+
+* **docgen:** add [@prop](https://github.com/prop)Type and fix [@hide](https://github.com/hide) ([#2334](https://github.com/patternfly/patternfly-org/issues/2334)) ([e418ac6](https://github.com/patternfly/patternfly-org/commit/e418ac67f31017a6489dbeea5e964a42e6c97cbc))
+
+
+
+
+
 ## [0.2.15](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.14...theme-patternfly-org@0.2.15) (2020-12-15)
 
 **Note:** Version bump only for package theme-patternfly-org
