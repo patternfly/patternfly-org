@@ -7,34 +7,40 @@ The PatternFly Org is the source for the official documentation for PatternFly 3
 Development setup requires yarn. If you do not already have yarn installed on your system, see https://yarnpkg.com/en/.
 
 ### Live Reload Server
+#### New server
+You can install the NPM dependencies with:
 
-A local [Gatsby](https://www.gatsbyjs.org/) development server can be started with:
+    yarn install
+
+A local development server at http://localhost:8003 can be started with:
 
     yarn start
 
-Takes 1m26s to load http://localhost:8003 on a 2015 Macbook.
+#### Old server
+You can install the NPM dependencies with:
 
-An old grunt development server can be with:
+    yarn install
+
+And the Ruby dependencies with:
+
+    cd packages/v3
+    bundle install
+
+An old grunt development server for v3 at http://localhost:9002 can then be started with:
 
     yarn start:v3
 
-Takes 13s to load http://localhost:9002 on a 2015 Macbook.
-
 ### Build
 
-Install the [Gatsby](https://www.gatsbyjs.org/) site dependencies and build it using yarn:
+The new v4 site can be built with:
 
-    yarn install
     yarn build:v4
 
-Takes 38s to install + 3m18s to build. Subsequent runs with cache take 1m10s on a 2015 Macbook.
+The old v3 [Jekyll](http://jekyllrb.com/) site can be built with:
 
-You can build the old /v3 [Jekyll](http://jekyllrb.com/) site using yarn:
-
-    yarn install
     yarn build:v3
 
-Takes 13s on a 2015 Macbook.
+The static assets get copied to build/patternfly-org.
 
 ### Deploy
 
