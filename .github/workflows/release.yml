@@ -1,4 +1,4 @@
-name: deploy
+name: release
 on:
   push:
     branches:
@@ -10,7 +10,7 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-      - run: echo ${GH_TOKEN : -4}
+      - run: echo "${GH_TOKEN : -4}"
       - run: printenv
       - uses: actions/checkout@v2
       - run: .github/release.sh
