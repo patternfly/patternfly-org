@@ -1,5 +1,5 @@
 name: build-deploy
-on: [push,pull_request]
+on: [push,pull_request_target]
   #  push:
   #  pull_request:
   #    branches:
