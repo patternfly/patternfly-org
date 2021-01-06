@@ -12,7 +12,6 @@ jobs:
     steps:
       - run: printenv
       - uses: actions/checkout@v2
-      - run: .github/release.sh
 # Pending https://github.com/actions/runner/issues/646 we can make this a composite action.
 # COMMON BUILD -- if editing also edit release.yml
       - uses: actions/setup-node@v1
@@ -26,6 +25,7 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
       - run: yarn install --frozen-lockfile
         if: steps.yarn-cache.outputs.cache-hit != 'true'
+      - run: .github/release.sh # THIS IS THE ONLY LINE THAT IS DIFFERENT
       # v4 build
       - uses: actions/cache@v2
         id: v4-cache
