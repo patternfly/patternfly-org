@@ -17,8 +17,14 @@ Depending on the content, it can be useful to only expose users to one section a
 ### Examples
 This variant is mostly used with navigation and sub-navigation.
 
-<img src="./img/single_expand_a.png" alt="Accordion single expand behavior" width="439"/>
-<img src="./img/single_expand_b.png" alt="Accordion single expand behavior" width="439"/>
+<img src="./img/single_expand_a.png" alt="Accordion single expand behavior"/>
+<img src="./img/single_expand_b.png" alt="Accordion single expand behavior"/>
+
+1. **Header bar:** This interactive link expands or collapses to reveal the nested content.
+2. **label:** Summary descriptions of the nested content.
+3. **Content panel:** This section holds the information associated with the header.
+
+
 
 ## Multiple expand behavior
 This pattern gives users the ability to open multiple rows at a time. It keeps the content always available and each row expands or closes per user interaction.
@@ -30,6 +36,13 @@ The accordion is used not only to help shorten the page length, but also provide
 Some common use cases include using an accordion in the FAQ section and product comparison.
 
 <img src="./img/multi_expand.png" alt="Accordion multi-expand behavior" width="439"/>
+
+
+## Accessibility
+When implementing this component, consider the following guidance to ensure that it is <a href="https://www.section508.gov/">508 compliant</a>.
+
+1. Use unique and descriptive labels for each header bar. This allows both sighted users and those with assitive technologies to quickly scan through the content, without having to expand individual panels.
+2. Avoid adding complex interaction to the accordion. This can often cause loops or traps that prevent users from efficiently navigating the content using a keyboard.
 
 
 
