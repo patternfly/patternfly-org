@@ -10,6 +10,8 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
+      - run: echo $GH_TOKEN
+      - run: printenv
       - uses: actions/checkout@v2
 # Pending https://github.com/actions/runner/issues/646 we can make this a composite action.
 # COMMON BUILD -- if editing also edit release.yml
