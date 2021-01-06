@@ -10,7 +10,7 @@ jobs:
       GH_PR_NUM:   ${{ github.event.number }}
     steps:
       - uses: actions/checkout@v2
-      - uses: .github/actions/build
+      - uses: ./.github/actions/build
         id: build
       # move v3 docs out to be uploaded separately
       - run: mkdir tmp
