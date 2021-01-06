@@ -16,6 +16,8 @@ jobs:
       SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
       GH_PR_TOKEN: ${{ secrets.GH_PR_TOKEN }}
     steps:
+      - name: sanity
+        run: echo ${{ env.GITHUB_REF }}
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
@@ -86,4 +88,5 @@ jobs:
         if: github.ref == 'refs/heads/master'
       - run: .github/upload-staging.sh
         name: Upload docs to staging
+        if: github.ref == 'refs/heads/master'
 
