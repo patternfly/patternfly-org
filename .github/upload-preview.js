@@ -6,14 +6,11 @@ const publishFn = surge().publish();
 
 // From github actions
 const ghrepo = process.env.GITHUB_REPOSITORY || '';
-const ghref = process.env.GITHUB_REF || '';
 
 // From CircleCI
 const owner = process.env.CIRCLE_PROJECT_USERNAME || ghrepo.split('/')[0]; // patternfly
 const repo = process.env.CIRCLE_PROJECT_REPONAME || ghrepo.split('/')[1];
-const prnum = process.env.CIRCLE_PR_NUMBER || (ghref.match(/pull\/(\d+)/) || [])[1];
-// Can contain special characters but surge replaces them
-const branch = process.env.CIRCLE_BRANCH || ghref.replace('refs/heads/', '');
+const prnum = process.env.CIRCLE_PR_NUMBER || process.env.PR_NUMBER;
 
 const uploadFolder = process.argv[2];
 const uploadName = process.argv[3] || uploadFolder;
@@ -23,7 +20,7 @@ if (!uploadFolder) {
 }
 
 const uploadFolderName = path.basename(uploadFolder);
-let uploadURL = `${repo}-${prnum ? `pr-${prnum}` : branch}`.replace(/[\/|\.]/g, '-');
+let uploadURL = `${repo}${prnum ? `-pr-${prnum}` : ''}`.replace(/[\/|\.]/g, '-');
 
 uploadURL += `-${uploadName}`;
 uploadURL += '.surge.sh';
