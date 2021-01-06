@@ -1,0 +1,24 @@
+name: pr-preview
+on: pull_request_target
+jobs:
+  build-upload:
+    runs-on: ubuntu-latest
+    env:
+      SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+      SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+      GH_PR_TOKEN: ${{ secrets.GH_PR_TOKEN }}
+      GH_PR_NUM:   ${{ github.event.number }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: .github/actions/build
+        id: build
+      # move v3 docs out to be uploaded separately
+      - run: mkdir tmp
+      - run: mv build/patternfly-org/v3 tmp
+      - run: node .github/upload-preview.js build/patternfly-org v4
+        name: Upload docs
+      # only take the time to upload v3 if there's a change
+      - run: node .github/upload-preview.js tmp v3
+        name: Upload v3 docs
+        if: steps.build.v3-cache-hit != 'true'
+
