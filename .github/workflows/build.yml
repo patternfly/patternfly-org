@@ -22,7 +22,6 @@ jobs:
           echo ${{ github.ref }}
           echo $SURGE_LOGIN
           echo $SURGE_TOKEN
-          cat README.md
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
