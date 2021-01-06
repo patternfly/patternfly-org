@@ -64,26 +64,26 @@ jobs:
         # only take the time to upload v3 if there's a change
         if: steps.v3-artifact-cache.outputs.cache-hit != 'true'
       # deploy
-      #- run: mv build/v4 build/patternfly-org
-      #  name: Undo prep upload v3 docs
-      #- run: .github/release.sh
-      #  env:
-      #    GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      #  if: github.ref == 'refs/heads/master'
-      #- name: Configure AWS Credentials
-      #  uses: aws-actions/configure-aws-credentials@v1
-      #  with:
-      #    aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY}}
-      #    aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
-      #    aws-region: ${{ secrets.AWS_REGION }}
-      #  if: github.ref == 'refs/heads/master'
-      #- run: node scripts/writeV3Redirects.js
-      #  if: github.ref == 'refs/heads/master'
-      #- run: node scripts/writeVersionPrefix.js
-      #  if: github.ref == 'refs/heads/master'
-      #- run: du -sh build/patternfly-org/*
-      #  name: Check size of docs
-      #  if: github.ref == 'refs/heads/master'
-      #- run: .github/upload-staging.sh
-      #  name: Upload docs to staging
+      - run: mv build/v4 build/patternfly-org
+        name: Undo prep upload v3 docs
+      - run: .github/release.sh
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        if: github.ref == 'refs/heads/master'
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY}}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+        if: github.ref == 'refs/heads/master'
+      - run: node scripts/writeV3Redirects.js
+        if: github.ref == 'refs/heads/master'
+      - run: node scripts/writeVersionPrefix.js
+        if: github.ref == 'refs/heads/master'
+      - run: du -sh build/patternfly-org/*
+        name: Check size of docs
+        if: github.ref == 'refs/heads/master'
+      - run: .github/upload-staging.sh
+        name: Upload docs to staging
 
