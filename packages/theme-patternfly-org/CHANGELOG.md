@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.1 (2021-01-06)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
 # [0.3.0](https://github.com/patternfly/patternfly-org/compare/theme-patternfly-org@0.2.15...theme-patternfly-org@0.3.0) (2021-01-04)
 
 
