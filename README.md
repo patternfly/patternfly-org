@@ -54,4 +54,5 @@ When PatternFly does a release (currently every 3 weeks) this bucket is copied t
 
 You might have a dirty file tree with old submodules and folders lying around. You can remove these with:
 
-    git clean -dfx 
+    git clean -dfx
+
