@@ -1,0 +1,24 @@
+name: deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: .github/actions/build
+      - run: .github/release.sh
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY}}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      - run: node scripts/writeV3Redirects.js
+      - run: node scripts/writeVersionPrefix.js
+      - run: du -sh build/patternfly-org/*
+        name: Check size of docs
+      - run: .github/upload-staging.sh
+        name: Upload docs to staging
