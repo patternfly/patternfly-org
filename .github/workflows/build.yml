@@ -78,4 +78,4 @@ jobs:
         if: github.ref == 'refs/heads/master'
       - run: .github/upload-staging.sh
         name: Upload docs to staging
-        if: github.ref == 'refs/heads/master'
+
