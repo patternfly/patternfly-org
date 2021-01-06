@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN_REDALLEN }} # needs to be an admin token to get around branch protection
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - run: printenv
       - uses: actions/checkout@v2
