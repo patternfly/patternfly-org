@@ -1,5 +1,7 @@
 name: build-deploy
-on: [push]
+on:
+  - push
+  - pull_request
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
