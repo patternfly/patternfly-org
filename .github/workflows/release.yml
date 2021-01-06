@@ -7,6 +7,8 @@ jobs:
   build-deploy:
     if: "!contains(github.event.head_commit.message, 'ci skip')"
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - uses: actions/checkout@v2
 # Pending https://github.com/actions/runner/issues/646 we can make this a composite action.
