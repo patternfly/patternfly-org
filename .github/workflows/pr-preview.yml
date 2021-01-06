@@ -10,8 +10,8 @@ jobs:
       GH_PR_NUM:   ${{ github.event.number }}
     steps:
       - uses: actions/checkout@v2
-      - uses: ./.github/actions/build
-        id: build
+      - uses: ./.github/actions/build-docs
+        id: build-docs
       # move v3 docs out to be uploaded separately
       - run: mkdir tmp
       - run: mv build/patternfly-org/v3 tmp
@@ -20,5 +20,5 @@ jobs:
       # only take the time to upload v3 if there's a change
       - run: node .github/upload-preview.js tmp v3
         name: Upload v3 docs
-        if: steps.build.v3-cache-hit != 'true'
+        if: steps.build-docs.v3-cache-hit != 'true'
 
