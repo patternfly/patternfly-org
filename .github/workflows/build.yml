@@ -22,7 +22,10 @@ jobs:
           echo ${{ github.ref }}
           echo $SURGE_LOGIN
           echo $SURGE_TOKEN
+          echo $GH_PR_NUM
       - uses: actions/checkout@v2
+      - name: does this see changes
+        run: cat README.md
       - uses: actions/setup-node@v1
         with:
           node-version: '12'
