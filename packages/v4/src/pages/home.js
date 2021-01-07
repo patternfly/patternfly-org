@@ -34,7 +34,7 @@ const HomePage = () => (
           <TextContent>
             <img src={orb} alt="PatternFly logo" className="fadeInDown animated fadeInOne" />
             <Title headingLevel="h1" size="4xl" className="pf-m-white pf4-site-c-hero fadeIn animated fadeInTwo">
-              Build scalable experiences in the open.
+              Trill: scalable experiences in the open.
             </Title>
             <Text className="pf-c-title pf-m-xl pf-m-white pf-u-mb-md pf-u-mt-lg pf-u-mb-3xl-on-md fadeInUp animated fadeInThree">
               PatternFly is an open source design system built to drive consistency and unify teams.
