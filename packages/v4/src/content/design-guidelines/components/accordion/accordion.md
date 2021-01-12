@@ -35,7 +35,7 @@ The accordion is used not only to help shorten the page length, but also provide
 ### Examples
 Some common use cases include using an accordion in the FAQ section and product comparison.
 
-<img src="./img/multi_expand.png" alt="Accordion multi-expand behavior" width="439"/>
+<img src="./img/multi_expand.png" alt="Accordion multi-expand behavior"/>
 
 
 ## Accessibility
