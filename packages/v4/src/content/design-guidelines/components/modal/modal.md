@@ -7,111 +7,158 @@ related: ['Button']
 import CheckIcon from '@patternfly/react-icons/dist/esm/icons/check-icon';
 import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
 
-A **modal** loads and displays important information without navigating away from the current page.
+A **modal** displays important information to a user without requiring them to navigate to a new page.
 
 ## Primary elements
-<img src="./img/modal.png" alt="Modal" />
+
+<img src="./img/modal-call-outs.png" alt="An example of a modal in context with call outs to highlight each listed element" width="756"/>
 
 1. **Backdrop**
 2. **Modal box**
-3. **Title:** Concisely convey the purpose of the modal.
-4. **Close**
+3. **Headline**
+4. **Close icon**
 5. **Content area**
-6. **Buttons:** Enable a user to confirm, submit, or exit. Modal dialogs can include multiple action buttons, but should be limited to one primary button
+6. **Buttons** 
 
-### Spacing
-#### Compact
-<img src="./img/compact.png" alt="Compact" /> 
+See the [Content](#content) section for information about writing modal copy.
 
-The compact modal dialog uses a spacing of 24px. Use this for smaller modals that don’t contain much content.
+## Spacing
 
-#### Large
-<img src="./img/large.png" alt="Large" />
+<img src="./img/modal-basic.png" alt="A basic modal with 24px spacers between the modal box and content, and 16px spacers between the headline and content area, and between each button" width="487" />
 
-The large modal dialog uses a spacing of 32px. Use this for larger modals that contain a lot of content (code previews, forms, tables...).
+Basic modals use a primary spacing of 24px to separate:
+
+- Each edge of the modal box from all modal content.
+- The content area from both buttons.
+
+A 16px spacing separates the modal's headline from the content area. 16px also separates each button.
+
+## Placement
+
+A modal can be aligned at the center or top of a page.
+
+### Center-aligned modal (default)
+
+A [center-aligned modal](/components/modal/html-demos/basic/) appears horizontally and vertically centered on a page, and should be used by default for most use cases.
+
+<img src="./img/center-aligned-modal.png" alt="A modal pictured in center alignment on a page" />
+
+### Top-aligned modal
+
+A [top-aligned modal](/components/modal/html-demos/top-aligned/) appears horizontally and vertically centered at the top of a page. 
+
+Use a top-aligned modal when your modal contains expanding content or when you'd like to keep content behind the modal visible to the user.
+
+<img src="./img/top-aligned-modal.png" alt="A modal pictured in top alignment on a page" />
 
 ## Usage
-### When to use
-Use a modal dialog when information is critical and requires user input or attention.
-Use modals to:
 
-* [Validate user decisions](#validate-user-decisions)
-* [Report errors](#report-errors)
-* [Provide the result of a task or state of an application](#provide-the-result-of-a-task-or-state-of-an-application)
-* [Get required user input](#get-required-user-input)
+Use a modal to communicate critical information that requires user input or action. 
 
-### When not to use
-Modal dialogs interrupt user task flow and should be avoided for any information that is not critical to user success.
+Modals can:
 
-### Types of modals
-#### Validate user decisions
-Use a confirmation dialog to validate user decisions and communicate consequences. Confirmation dialogs need to clearly restate the action the user is trying to take and explicitly outline the consequences of that action. They should be clear, concise, and direct. Give the user the important information first—additional detail like “Are you sure?” clutters your message and can be distracting.
+* Validate user decisions.
+* Confirm non-destructive or destructive actions.
+* Report errors.
+* Share task results and statuses.
+* Prompt required user input.
 
-Depending on your design template, follow this format for confirmation dialogs:
-* **Headline:** A headline is usually phrased as a question. Include important keywords (like “permanent”) in the headline.
-* **Body text:** Body text gives information about the action’s consequence.
-* **Buttons:** Buttons allow a user to answer the headline question. These can simply be “yes” or “no,” but adding some context increases clarity—especially when skimming.
+Don’t use a modal unless its information is vital to user success and worth disrupting a user’s task flow.
 
-**Note:** Since confirmation dialogs disrupt user task flow, do not provide confirmation dialogs for actions that are easily reversed or insignificant.
+## Types of modals
 
-##### Confirm a non-destructive action
-<img src="./img/confirm-non-destructive-action.png" alt="Confirm a non-destructive action" />
+Modals serve several functions in a UI and appear in four main types:
 
-Provide buttons on confirmation dialogs that make it simple for users to understand and confirm their choices. When choosing button labels, use descriptive verbs that clearly indicate the consequence of a selection, like Delete, Save, or Create. Avoid vague labels like OK or Done.
+* [Confirmation dialogs](#confirmation-dialogs)
 
-Ambiguous title and button labels make it more difficult for the user to understand their options and make a decision. Descriptive title and button labels make it easy for the user to scan the content and make a decision quickly.
+* [Error dialogs](#error-dialogs)
 
-##### Confirm a destructive action
-<img src="./img/confirm-destructive-action.png" alt="Confirm a destructive action" />
+* [Passive dialogs](#passive-dialogs)
 
-If an action is difficult or impossible to undo, a warning icon can be incorporated into the modal to add emphasis. If an action will seriously impact the system and cannot be undone, use a destructive style button. Otherwise, use a primary button.
+* [Input dialogs](#input-dialogs)
 
-Sometimes it is necessary to require an additional confirmation with a destructive action. An example using a form field can be seen below. In order for the destructive action to become actionable, the user needs to type in a word or phrase to make the button active.
-<img src="./img/2-step-confirm-destructive-action.png" alt="2 step confirm a destructive action" />
+### Confirmation dialogs
 
-#### Report errors
-<img src="./img/error-dialog.png" alt="Error dialog" />
+Use a confirmation dialog to validate user decisions and communicate their consequences. Confirmation dialogs can confirm non-destructive and destructive actions.
 
-Use error dialogs to inform users of problems interrupting normal or expected behavior.
-An error message should be actionable, human readable, and answer the following questions:
-* What is the problem?
-* Why did it happen?
-* How can I fix it?
+#### Confirm a non-destructive action
 
-Never blame the user. Use passive voice where appropriate to avoid assigning blame.
-* <TimesIcon /> You put in the wrong password.
-* <CheckIcon /> That password wasn’t recognized OR
-* <CheckIcon /> We didn’t recognize that password.
+<img src="./img/non-destructive-confirmation-dialog.png" alt="A side-by-side comparison of unsuccessful and successful confirmaton dialogs for leaving a page without saving. The successful dialog explains the consequence of this action: All unsaved informaton will be lost" />
 
-#### Provide the result of a task or state of an application
-<img src="./img/passive-dialog.png" alt="Passive dialog" />
+When confirming a non-destructive action, provide specific context about what will happen once a user confirms it.
 
-Use passive dialogs to communicate critical information like the status of an application or result of an action. The content of a passive dialog should be important, immediately relevant, and either lead to or require action on the user’s part.
+#### Confirm a destructive action
 
-Some usage examples include:
-* Notifying a user that an operation may take a long time to complete
-* Notifying a user that a critical process is complete
+<img src="./img/destructive-confirmation-dialog.png" alt="A side-by-side comparison of unsuccessful and successful destructive confirmaton dialogs for deleting a record. The successful dialog explains the consequence of deleting this record: Record name, location, and notes will be lost" />
 
-**Note:** If information is not critical, don’t use a passive dialog. Instead, use inline notifications or toast notifications.
+Use a [primary button](/components/button/design-guidelines#primary-button) to confirm a destructive action. If the action carries serious consequences, then use a [danger button](/components/button/design-guidelines#danger-button) instead.
 
-#### Get required user input
-Sometimes users may need to provide additional input in order to complete an action. In this situation a form or other type of element may be incorporated into the modal. An example of this use case is the [modal wizard](/components/modal/react#with-wizard).
+If an action is difficult or impossible to undo, add a warning icon beside the headline. 
 
-### Content
-* Clearly restate the action the user is trying to take and explicitly outline the consequences of that action.
+If a destructive action has serious consequences, consider adding an additional step before its destructive button becomes active. Additional confirmation measures like [text input](/components/text-input/design-guidelines) fields safeguard a user from accidentally completing the action. 
 
-* Provide button labels that make it simple for users to understand and confirm their choices. Use descriptive verbs that clearly indicate the consequence of a selection, like Delete, Save, or Create. Avoid vague labels like OK or Done.
+When a text input field is added to a confirmation dialog, the danger button will only become enabled once a user enters the entire word or phrase.
 
-* Use descriptive title and button labels so the user can scan content and make a decision quickly. Ambiguous title and button labels make it more difficult for the user to understand their options and make a decision.
+<img src="./img/destructive-confirmation-dialog-steps.png" alt="A multi-step destructive confirmation dialog's button activates only after a user types DELETE into the input field" />
 
-* If the modal needs to convey the importance of information visually, icons can be added.
 
-See our [content guidelines](/ux-writing/about) for additional guidance.
+### Error dialogs
+
+<img src="./img/error-dialog.png" alt="An example of a successful error dialog, with and without an optional error icon" />
+
+Use an error dialog to inform users of problems that interrupt normal or expected behavior. Briefly contextualize the problem and why it happened, then provide actionable steps toward a solution.
+
+Learn more about writing error messages in our [error message guidelines](/ux-writing/error-messages).
+
+Error dialogs may use an error icon for visual emphasis.
+
+### Passive dialogs
+
+<img src="./img/passive-dialog.png" alt="An example of a successful passive dialog, with and without an optional warning icon" />
+
+Use a passive dialog to communicate critical and immediately relevant information like the status of an application or an action’s result. Passive dialog content should require or lead to user action.
+
+Passive dialogs can also notify the user about the status or duration of a critical process, especially if the process may take an unusual amount of time to complete.
+
+Never use a passive dialog for non-critical information. Instead, use an [inline alert](/components/alert/design-guidelines/#inline-alerts) or a [toast alert](/components/alert/design-guidelines/#toast-alerts).
+
+### Input dialogs
+
+Users may need to provide additional input to complete an action. To accomplish this, use forms or other elements within the modal, like in a [modal wizard](/components/modal/react#with-wizard).
+
+## Modals with help
+
+<img src="./img/modal-with-help.png" alt="A modal with help uses a help icon to open a help popover when clicked" />
+
+Use a [modal with help](/components/modal#with-help) to make complex tasks easier to understand within a modal. If needed, link to further documentation in the help popover.
+
+Help popovers at the modal level explain and provide documentation for an entire task. Only place a help icon at the modal level if its information applies to all content in the modal. If the information you'd like to include in a help popover is specific to a particular input, place the help icon at that input level instead.
+
+
+## Content
+
+All modal content should be descriptive and specific so that users can scan, understand an action's context, and make a quick decision.
+
+A modal is comprised of three main content sections:
+
+1. **Headline:** A headline introduces a modal’s purpose, usually as a question. Use important key words like “permanently” to contextualize an action and its impact.
+
+2. **Body text:** Body text provides additional information about an action’s consequence in three lines or less, typically concerning changes to a user’s workflow or access to information. If a modal’s headline fully communicates an action’s context and consequences, body text isn’t needed.
+
+3. **Buttons:** Buttons allow a user to answer the headline prompt or question. Write button labels as action-based verbs to clearly communicate their function and consequence, and keep them to 1–3 words. Often, verbs for buttons can be pulled directly from a modal’s headline to increase scannability. <br /><br />
+Example headline: *Permanently delete database?*<br />
+Example buttons: *Delete* and *Cancel* <br />
+For more button guidance, see our [button label guidelines](/components/button/design-guidelines#content).
+
+For general content guidance to help write effective modal dialogs, see our [UX writing style guide](/ux-writing/about).
+
 
 #### Icon use in modal dialogs
 
+Icons are optional in modal dialogs. Use or omit them as your use case requires.
+
 | Icon | Use case(s) | Usage |
 | ------------- |-------------|-------------|
-| <span style="color: rgb(240, 171, 0)"> <i class="fas fa-exclamation-triangle" aria-label="warning" /> </span> | **Warning:** Caution/ Warning | Use on confirmation dialogs or passive dialogs to indicate a higher level of urgency and importance.|
-| <span style="color: rgb(201, 25, 11)"> <i class="fas fa-exclamation-circle" aria-label="critical warning" /> </span> | **Critical Warning:** Information will be deleted/permanent action  | Use on confirmation dialogs or passive dialogs to indicate the highest level of urgency and importance. |
-| <span style="color: rgb(43, 154, 243)"> <i class="fas fa-info-circle" aria-label="acknowledgement" /> </span> | **Acknowledgement:** Inform the user of an action or result  | Use on confirmation or passive dialogs to indicate a lower level of urgency. |
+| <span style="color: rgb(240, 171, 0)"> <i class="fas fa-exclamation-triangle" aria-label="warning" /> </span> | **Warning:** Cautions or warns the user | Add to confirmation dialogs or passive dialogs to indicate a higher level of urgency and importance.|
+| <span style="color: rgb(201, 25, 11)"> <i class="fas fa-exclamation-circle" aria-label="critical warning" /> </span> | **Critical Warning:** Indicates a permanent action, or that information will be deleted upon action completion  | Add to confirmation dialogs or passive dialogs to indicate the highest level of urgency and importance.|
+| <span style="color: rgb(43, 154, 243)"> <i class="fas fa-info-circle" aria-label="acknowledgement" /> </span> | **Acknowledgement:** Informs the user of an action or result  | Add to confirmation or passive dialogs to indicate a lower level of urgency. |
