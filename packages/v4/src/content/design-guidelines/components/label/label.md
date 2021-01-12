@@ -42,7 +42,9 @@ For labels that are easily removed or dismissed, use a dismissable label. A comm
 
 Optionally add an icon to your label in cases where additional visual information is helpful. You can also use them to distinguish labels of the same color if needed.
 
-<img src="./img/labels-with-icons.png" alt="Example of labels with icons" width="336"/>
+<img src="./img/labels-with-icons.png" alt="Example of different colored labels with icons" width="336"/>
+
+<img src="./img/labels-with-icons2.png" alt="Example of labels of the same color with icons" width="328"/>
 
 ### When to use clickable labels
 
