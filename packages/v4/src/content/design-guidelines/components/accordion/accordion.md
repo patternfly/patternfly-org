@@ -20,9 +20,9 @@ This variant is mostly used with navigation and sub-navigation.
 <img src="./img/single_expand_a.png" alt="Accordion single expand behavior"/>
 <img src="./img/single_expand_b.png" alt="Accordion single expand behavior"/>
 
-1. **Header bar:** This interactive link expands or collapses to reveal the nested content.
-2. **label:** Summary descriptions of the nested content.
-3. **Content panel:** This section holds the information associated with the header.
+1. **Header:** Interactive link that expands or collapses to reveal the nested content.
+2. **Label:** Summary descriptions of the nested content.
+3. **Content panel:** Area that holds the information associated with the header.
 
 
 
