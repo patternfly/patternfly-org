@@ -9,7 +9,7 @@ An **accordion** is an interactive container that expands and collapses to hide 
 Accordions are one of many ways to handle large amounts of content. They are useful when you have a large amount of content, but limited space, with the header title giving an overview of the content that is hidden underneath it. Users can click or tap on the collapsed accordion to expand the content area and view additional details. Due to their high interaction cost, we recommend that you use them sparingly when you need an additional layer of structure to your content.
 
 ## Single expand behavior
-This pattern is used to bring focus to a single row at the time. It is ideal for content that is mutually exclusive and does not need to be shown all at once. Whenever a new row is expanded, the previous one closes. Another benefit of this is real-estate management.
+This pattern is used to bring focus to a single row at a time. It is ideal for content that is mutually exclusive and does not need to be shown all at once. Whenever a new row is expanded, the previous one closes. Another benefit of this is real-estate management.
 
 ### Use case
 Depending on the content, it can be useful to only expose users to one section at a time. This is particularly useful when working with forms. By default the first row is always open with all the others closed. Users can choose to close all rows, but only one can be opened at once.
