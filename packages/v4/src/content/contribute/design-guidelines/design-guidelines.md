@@ -122,7 +122,7 @@ If new components or demos are required to address the topic, you can request th
 
 To ensure that imagery is consistent and maintainable, create all your image assets in Sketch: 
 
-1. Download the latest version of the [Design Doc Assets file](https://sketch.cloud/s/ggDwz) from the Sketch Cloud. This file contains all of the assets needed to create and maintain images used within design documentation.
+1. Download the latest version of the [Design Doc Assets file](https://www.sketch.com/s/ab4570f9-ce05-4ee4-94b6-8ca86b3a8476) from the Sketch Cloud. This file contains all of the assets needed to create and maintain images used within design documentation.
 2. Open the file in Sketch and create a new page for keeping all your topic images. Name that page with the title of your documentation page—it will be used for displaying the topic in the navigation. If you’re modifying an existing topic, you can edit the existing page.
 3. Insert a new artboard for every unique image that you will create.
 4. Create your images. There are two types of images used within design guideline documents: 
@@ -131,7 +131,7 @@ To ensure that imagery is consistent and maintainable, create all your image ass
 
         <img src="./image-2-high-fi.png" alt="high-fi modal" /> 
 
-        When creating high-fidelity mockups, you should first look for existing examples in the [PatternFly template file](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89). You can create new examples as needed by using the components found in that file. Next, export those images so that they can be added to your corresponding document page in the [Design Doc Assets file](https://sketch.cloud/s/ggDwz). You can make callouts or other customizations there as needed. 
+        When creating high-fidelity mockups, you should first look for existing examples in the [PatternFly template file](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89). You can create new examples as needed by using the components found in that file. Next, export those images so that they can be added to your corresponding document page in the [Design Doc Assets file](https://www.sketch.com/s/ab4570f9-ce05-4ee4-94b6-8ca86b3a8476). You can make callouts or other customizations there as needed. 
 
     - **Schematic mockups** convey placement of elements in a page. These are useful when the internal content is not important or relevant. Because they lack text and graphics, schematic mockups also scale well when placed in a document. The example below demonstrates how the positioning, rather than the content, of a toast alert is the focus. 
 

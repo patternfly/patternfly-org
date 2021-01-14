@@ -16,11 +16,11 @@ The design kit is a collection of Sketch assets that make it easy for designers 
 To use it, you need to install [Sketch](https://www.sketch.com/) version 47 or above. For users who do not have access to Sketch (non-Mac users), a subset of functionality from our Sketch files, like symbols and fonts, can be imported and used in the free design tool, [Figma](https://www.figma.com/). Learn more about importing Sketch files in [the Figma documentation](https://help.figma.com/hc/en-us/articles/360041003114-Import-files-into-Figma).
 
 ### Download the template file
-1. Access the [PatternFly template file](https://sketch.cloud/s/nwY34) on Sketch cloud.
+1. Access the [PatternFly template file](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89) on Sketch cloud.
 2. Click **Download Document** to open the file. Then, click **File** →  **Save as template**.
 
 ### Add the symbol library
-3. Access the [PatternFly design library](https://sketch.cloud/s/7do0P) on Sketch cloud.
+3. Access the [PatternFly design library](https://www.sketch.com/s/2cf1063b-5283-4e0b-b8a6-cbb1ac07e29e) on Sketch cloud.
 4. Click Add library to Sketch on the bottom right to add the library. You'll be prompted with a modal. Click Add library to Sketch again. Sketch will show you the library in your preferences window.
 
 ### Download the font
@@ -32,9 +32,9 @@ We still host the Patternfly 4 Overpass library and template files on Sketch Clo
 
 You are able to access them here:
 
-1. [Add the symbol library](https://sketch.cloud/s/gb1ka)
+1. [Add the symbol library](https://www.sketch.com/s/92361fff-e23d-4d73-be75-3d9f8d43490a)
     - Make sure you download the Overpass font at https://overpassfont.org/ and select **Desktop OTF files**.
-2. [Download the template file](https://sketch.cloud/s/R9k28)
+2. [Download the template file](https://www.sketch.com/s/93349c0d-5087-4428-8424-be174d7e3f67)
 
 If you’d like to avoid out-of-date designs, we recommend moving to our Red Hat font and using the design kit supplied there!
 
@@ -77,7 +77,7 @@ There’s a lot to learn when it comes to making smart use of the Sketch templat
 ### Spacers
 The layout for all visual elements in Patternfly is determined by spacers. The spacers are used as padding between elements to ensure consistent layout and placement of components into a design that adhere to PatternFly guidelines. All symbols in the symbol library and templates have been made using spacers which are built-in to ensure correct use of elements.
 
-The [template library](https://sketch.cloud/s/nwY34) also contains examples of spacer use to clarify where elements should be placed within a given page or design.  These templates have been created in a way that reduces a user’s need to think about spacers. An example of a Login form template can be seen here with different sized spacers - demonstrated by their different colors - used to separate each symbol/component within the layout.
+The [template library](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89) also contains examples of spacer use to clarify where elements should be placed within a given page or design.  These templates have been created in a way that reduces a user’s need to think about spacers. An example of a Login form template can be seen here with different sized spacers - demonstrated by their different colors - used to separate each symbol/component within the layout.
 
 To see more information about spacers and their use please click [here](/guidelines/spacers).
 
