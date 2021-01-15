@@ -21,7 +21,7 @@ Design guidelines appear on the website and help designers to apply PatternFly c
 __Example__
 *I want to add guidelines for how to apply labels and tags to organize objects.*
 
-You may open an issue in our [patternfly-org repo](https://github.com/patternfly/patternfly-org) to propose a new design guideline page or update an existing guideline, and work with the PatternFly team and stakeholders to author and publish your new content. Visit the [Design guidelines page](https://www.patternfly.org/v4/contribute/design-guidelines) for detailed instructions about how to author and contribute design guideline content.
+You may open an issue in our [patternfly-org repo](https://github.com/patternfly/patternfly-org) to propose a new design guideline page or update an existing guideline, and work with the PatternFly team and stakeholders to author and publish your new content. Visit [Contributing to patternfly org for designers](https://github.com/patternfly/patternfly-org/wiki/Contributing-to-patternfly-org-for-designers) for detailed instructions about how to author and contribute design guideline content.
 
 ### PatternFly design kit
 The [PatternFly design kit](https://www.patternfly.org/v4/get-started/design) is a [Sketch](https://www.sketch.com) library that makes it easy for designers to create high-fidelity mockups using PatternFly components.
