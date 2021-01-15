@@ -175,7 +175,6 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   const prurl = process.env.prurl;
 
   const [versions, setVersions] = useState({ ...staticVersions });
-  const [isNavOpen, setNavOpen] = useState(navOpenProp);
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -193,14 +192,11 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
     }
   }, []);
 
-  useEffect(() => setNavOpen(navOpenProp), [navOpenProp])
-
   const SideBar = (
     <PageSidebar
       className="ws-page-sidebar"
       theme="light"
       nav={<SideNav navItems={sideNavItems} groupedRoutes={groupedRoutes} />}
-      isNavOpen={isNavOpen}
     />
   );
 
@@ -215,8 +211,6 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
       logo={prnum ? `PR #${prnum}` : <Brand src={logo} alt="Patternfly Logo" />}
       logoProps={{ href: prurl || pathPrefix || '/' }}
       showNavToggle
-      isNavOpen={isNavOpen}
-      onNavToggle={() => setNavOpen(!isNavOpen)}
       topNav={topNavItems.length > 0 && <TopNav navItems={topNavItems} />}
     />
   );
@@ -232,6 +226,8 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
         header={Header}
         sidebar={SideBar}
         skipToContent={<SkipToContent href="#ws-page-main">Skip to content</SkipToContent>}
+        isManagedSidebar
+        defaultManagedSidebarIsOpen={navOpenProp}
       >
         {children}
       </Page>
