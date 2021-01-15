@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.2.116 (2021-01-15)
+
+
+### Bug Fixes
+
+* **page:** fix nav collapsing on mobile ([#2357](https://github.com/patternfly/patternfly-org/issues/2357)) ([a48895f](https://github.com/patternfly/patternfly-org/commit/a48895f14b94a3135ec2ba9613512be1cbc2c251))
+
+
+
+
+
 ## 4.2.115 (2021-01-14)
 
 **Note:** Version bump only for package patternfly-org-4
