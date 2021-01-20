@@ -1,8 +1,8 @@
-const os = require('os');
 const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 module.exports = (_env, argv) => {
   const {
@@ -158,6 +158,7 @@ module.exports = (_env, argv) => {
           start_url: '/'
         }
       }),
+      new MonacoWebpackPlugin(),
       ...(isProd
         ? [
           new CleanWebpackPlugin()
