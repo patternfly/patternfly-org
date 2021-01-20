@@ -40,6 +40,7 @@
     "mdast-util-to-hast": "^9.1.0",
     "mdurl": "^1.0.0",
     "mini-css-extract-plugin": "^0.11.1",
+    "monaco-editor-webpack-plugin": "^2.1.0",
     "null-loader": "^4.0.0",
     "postcss": "^7.0.32",
     "postcss-loader": "^4.0.1",
