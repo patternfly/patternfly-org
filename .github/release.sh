@@ -29,7 +29,7 @@ then
     COMMENT=$(git log --author="patternfly-build" -1 --pretty=%B | tail -n +2 | python -c 'import json,sys; print(json.dumps(sys.stdin.read()))' | cut -d '"' -f 2)
     JSON="{\"body\":\"Your changes have been released in: ${COMMENT}Thanks for your contribution! :tada:\"}"
     echo "Adding github PR comment ${GH_PR_COMMENTS} ${JSON}"
-    curl -H "Authorization: token ${GH_PR_TOKEN}" --request POST "${GITHUB_PR_COMMENTS}" --data "${JSON}"
+    curl -H "Authorization: token ${GH_PR_TOKEN}" --request POST "${GH_PR_COMMENTS}" --data "${JSON}"
   fi
 elif grep -i "No changed packages to publish" lerna-output.txt;
 then
