@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2021-01-20)
+
+
+### Features
+
+* **theme:** add monaco-editor-webpack-plugin ([#2365](https://github.com/patternfly/patternfly-org/issues/2365)) ([3214073](https://github.com/patternfly/patternfly-org/commit/3214073844f05799c0f22f3f45f66f4422e27d71))
+
+
+
+
+
 ## 0.3.13 (2021-01-15)
 
 **Note:** Version bump only for package theme-patternfly-org
