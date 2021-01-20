@@ -49,6 +49,7 @@
     "puppeteer-cluster": "^0.22.0",
     "react-docgen": "^5.3.1",
     "react-live": "^2.2.0",
+    "react-monaco-editor": "^0.41.2",
     "react-ssr-prepass": "^1.2.1",
     "remark-footnotes": "^1.0.0",
     "remark-frontmatter": "^2.0.0",
