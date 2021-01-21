@@ -1,6 +1,6 @@
 #nav-content {
-  background-color: var(--pf-c-page__main-nav--BackgroundColor);
   padding-bottom: 0;
+  padding: var(--pf-global--spacer--xl) var(--pf-global--spacer--xl) 0 var(--pf-global--spacer--xl);
 }
 
 #ws-page-content-router {
@@ -14,7 +14,6 @@
 }
 
 #main-content {
-  flex: 1;
   background-color: var(--pf-global--BackgroundColor--light-200);
 }
 
