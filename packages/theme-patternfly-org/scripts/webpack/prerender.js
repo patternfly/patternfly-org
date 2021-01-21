@@ -10,8 +10,34 @@ const ssrPrepass = require('react-ssr-prepass');
 // Only allow one copy at a time to run
 async function prerender(url, pathPrefix) {
   url = `${pathPrefix}${url}`;
+  const location = { pathname: url };
+  // For @reach/router
   global.history = {};
-  global.location = { pathname: url };
+  global.location = location 
+  global.window = {
+    location,
+    // For virtualized-edit-extension
+    getBoundingClientRect: () => ({
+      height: 0,
+      width: 0
+    })
+  };
+  // For monaco
+  global.navigator = {
+    userAgent: '',
+    maxTouchPoints: 1
+  };
+  global.document = {
+    queryCommandSupported: () => true,
+    // For react-consoles
+    createElementNS: () => ({
+      download: {}
+    })
+  };
+  global.self = {
+    // For react-console
+    document: global.document
+  };
 
   console.log('prender', url);
   const { App } = require(`${process.cwd()}/.cache/ssr-build/main`);
