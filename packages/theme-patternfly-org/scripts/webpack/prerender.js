@@ -35,7 +35,7 @@ async function prerender(url, pathPrefix) {
     })
   };
   global.self = {
-    // For react-consoles
+    // For react-console
     document: global.document
   };
 
