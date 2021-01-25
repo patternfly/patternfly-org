@@ -196,8 +196,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
     <PageSidebar
       className="ws-page-sidebar"
       theme="light"
-      nav={<SideNav navItems={sideNavItems} groupedRoutes={groupedRoutes} onNavToggle={() => setNavOpen(!isNavOpen)} />}
-      isNavOpen={isNavOpen}
+      nav={<SideNav navItems={sideNavItems} groupedRoutes={groupedRoutes} />}
     />
   );
 
