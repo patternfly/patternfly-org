@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.3.2 (2021-01-25)
+
+
+### Bug Fixes
+
+* **docs:** add sidenav shadow on mobile, close sidenav on NavItem click on mobile ([#2306](https://github.com/patternfly/patternfly-org/issues/2306)) ([82535cb](https://github.com/patternfly/patternfly-org/commit/82535cb19af6ba2972964f1e2bc4bb772e847141))
+
+
+
+
+
 ## 4.3.1 (2021-01-21)
 
 **Note:** Version bump only for package patternfly-org-4
