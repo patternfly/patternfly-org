@@ -1,29 +1,37 @@
 import React from 'react';
 import { Link } from '../link/link';
-import { Nav, NavList, NavExpandable, capitalize } from '@patternfly/react-core';
+import { Nav, NavList, NavExpandable, PageContextConsumer, capitalize } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { Location } from '@reach/router';
 import { slugger } from '../../helpers';
 import './sideNav.css';
+import globalBreakpointXl from "@patternfly/react-tokens/dist/esm/global_breakpoint_xl";
 
-const NavItem = ({ text, href }) => (
-  <li key={href + text} className="pf-c-nav__item">
-    <Link
-      to={href}
-      getProps={({ isCurrent, href, location }) => {
-        const { pathname } = location;
-        return {
-          className: css(
-            'pf-c-nav__link',
-            (isCurrent || pathname.startsWith(href + '/')) && 'pf-m-current'
-          )
-        }}
-      }
-    >
-      {text}
-    </Link>
-  </li>
-);
+const NavItem = ({ text, href }) => {
+  const isMobileView = window.innerWidth < Number.parseInt(globalBreakpointXl.value, 10);
+  return (
+    <PageContextConsumer key={href + text}>
+      {({onNavToggle}) => (
+          <li key={href + text} className="pf-c-nav__item" onClick={() => isMobileView && onNavToggle()}>
+            <Link
+              to={href}
+              getProps={({ isCurrent, href, location }) => {
+                const { pathname } = location;
+                return {
+                  className: css(
+                    'pf-c-nav__link',
+                    (isCurrent || pathname.startsWith(href + '/')) && 'pf-m-current'
+                  )
+                }}
+              }
+            >
+              {text}
+            </Link>
+          </li>
+      )}
+    </PageContextConsumer>
+  )
+};
 
 export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
   React.useEffect(() => {
