@@ -1,7 +1,6 @@
 ---
 id: Usage and behavior
-section: Guidelines
-related: 
+section: guidelines
 ---
 
 ## Displaying structured data
