@@ -1,27 +1,27 @@
 # PatternFly Release Highlights
 ## Release 2021.01
 ----------------------------------------------------------
-### New features and enhancements
+## New features and enhancements
 
-#### [Horizontal collapsable Card](https://www.patternfly.org/v4/components/card/html-demos#horizontal-grid-expanded)
+### [Horizontal collapsable Card](https://www.patternfly.org/v4/components/card/html-demos#horizontal-grid-expanded)
 
 ![horizontal card demo](./img/horizontal-card.png)
 
 Demonstrates how to create a card layout with multiple columns and an expandable header. Additional examples include side-by-side layouts with an image and text. Currently available as an HTML/CSS demo, only.
 
-#### [Code editor](https://www.patternfly.org/v4/components/code-editor)
+### [Code editor](https://www.patternfly.org/v4/components/code-editor)
 
 ![code editor](./img/code-editor.png)
 
  Introduce native support for the Monaco code editor to format code for read-only display or for editing. Includes language appropriate syntax highlighting, a dark theme option, customizable actions.
 
- #### [Slider component](https://www.patternfly.org/v4/components/slider)
+ ### [Slider component](https://www.patternfly.org/v4/components/slider)
 
 ![slider examples](./img/slider.png)
 
  The Slider provides basic slider capability for entering numeric data. Both discrete and continuous sliders are supported. An optional value input field supports either direct entry from the keyboard or manipulation of the slider using the mouse or keyboard.
 
-#### [Number input](https://www.patternfly.org/v4/components/number-input)
+### [Number input](https://www.patternfly.org/v4/components/number-input)
 
 ![number input component](./img/number-input.png)
 
@@ -29,9 +29,9 @@ The Touchspin component has been renamed to Number input. This component is desi
 
 -----------------------------------------------------------------------------
 
-### What we’re working on...
+## What we’re working on...
 
-#### 2021.02 (February 19)
+### 2021.02 (February 19)
 
 * [Multi-level drill down menu](https://github.com/patternfly/patternfly-react/issues/5024) - introduces a drill-down menu component for displaying hierarchical data.
 
@@ -45,7 +45,7 @@ The Touchspin component has been renamed to Number input. This component is desi
 
 * [SVG Spinner](https://github.com/patternfly/patternfly-react/issues/5343) - introduce a new SVG spinner variant for smoother rendering and performance.
 
-#### 2021.03 (March 12)
+### 2021.03 (March 12)
 
 * [Jump links demo](https://github.com/patternfly/patternfly/issues/3560) - illustrate how jump links can be used in a sticky sidebar.
 
