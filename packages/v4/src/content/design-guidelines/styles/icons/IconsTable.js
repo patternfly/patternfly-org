@@ -38,7 +38,8 @@ export class IconsTable extends React.Component {
       'Icon',
       { title: 'Name', transforms: [sortable], props: { className: css(styles.modifiers.fitContent)} },
       'Style',
-      { title: 'Type', transforms: [sortable] },
+      'Type',
+      'Tooltip label', 
       { title: 'React', props: { className: css(styles.modifiers.fitContent)} },
       { title: 'Contextual usage', transforms: [sortable] }
     ],
@@ -96,7 +97,7 @@ export class IconsTable extends React.Component {
     );
   }
 
-  buildRows = ({Style = ' ', Name = ' ', React_name: ReactName = ' ', Type = ' ', Contextual_usage = ' ', color}, removeBorder = false) => {
+  buildRows = ({Style = ' ', Name = ' ', React_name: ReactName = ' ', Type = ' ', Contextual_usage = ' ', color, Label = ' '}, removeBorder = false) => {
     const hasIcon = ReactName !== ' ';
     const Icon = hasIcon
       ? icons[ReactName]
@@ -118,6 +119,10 @@ export class IconsTable extends React.Component {
         {
           title: Type,
           props: { column: 'Type' }
+        },
+        {
+          title: Label,
+          props: { column: 'Tooltip label' },
         },
         ReactName,
         {
