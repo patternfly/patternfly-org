@@ -55,10 +55,6 @@ module.exports = (sourceMD, sourceProps) => {
 
   // React-code-editor MD
   sourceMD(path.join(reactCodeEditorPath, '/**/examples/*.md'), 'react');
-<<<<<<< HEAD
-  sourceMD(path.join(reactCodeEditorPath, '/**/demos/*.md'), 'react-demos');
-=======
->>>>>>> eb85532b4a2a397d5df0b6a7e4b5b1d05d0b8cbf
 
   // Release notes
   sourceMD(require.resolve('@patternfly/patternfly/RELEASE-NOTES.md'), 'html');
