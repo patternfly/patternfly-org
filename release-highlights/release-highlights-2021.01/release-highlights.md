@@ -35,13 +35,13 @@ The Touchspin component has been renamed to Number input. This component is desi
 
 * [Multi-level drill down menu](https://github.com/patternfly/patternfly-react/issues/5024) - introduces a drill-down menu component for displaying hierarchical data.
 
-* [Attribute-value search input](https://github.com/patternfly/patternfly-design/issues/771) - add a new search input variant to support advanced searching or filtering use cases that require an attribute-value pair.
+* [Attribute-value search input](https://github.com/patternfly/patternfly-react/issues/5332) - add a new search input variant to support advanced searching or filtering use cases that require an attribute-value pair.
 
 * [Updated Label styling](https://github.com/patternfly/patternfly/issues/3810) - Update label styles to have better visibility against any background.
 
 * [Log viewer component](https://github.com/patternfly/patternfly-react/issues/5341) - introduce a native log viewer native beta component to display real-time streamed logs or static log data.
 
-* [Large/Marketing card variant](https://github.com/patternfly/patternfly/issues/3670) - introduce a card with larger spacing for marketing applications.
+* [Large/Marketing card variant](https://github.com/patternfly/patternfly-react/issues/5334) - introduce a card with larger spacing for marketing applications.
 
 * [SVG Spinner](https://github.com/patternfly/patternfly-react/issues/5343) - introduce a new SVG spinner variant for smoother rendering and performance.
 
@@ -51,7 +51,7 @@ The Touchspin component has been renamed to Number input. This component is desi
 
 * [New List variants](https://github.com/patternfly/patternfly-react/issues/5336) - Introduce new variants of the [List](https://www.patternfly.org/v4/components/list) component that include plain lists, lists with horizontal separators, and lists with icons for communicating static information in a standard `<li>`element.
 
-* [Expandable form sections](https://github.com/patternfly/patternfly/issues/3557) - these will be expandable nested sections useful for organizing information on long, complex forms.
+* [Expandable form sections](https://github.com/patternfly/patternfly-react/issues/5023) - these will be expandable nested sections useful for organizing information on long, complex forms.
 
 * [Stacked form elements](https://github.com/patternfly/patternfly-react/issues/5286) - Allows stacking of checkboxes, radios, text inputs, etc. in a single group.
 
