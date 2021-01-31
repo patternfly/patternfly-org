@@ -39,7 +39,7 @@ export class IconsTable extends React.Component {
       { title: 'Name', transforms: [sortable], props: { className: css(styles.modifiers.fitContent)} },
       'Style',
       'Type',
-      'Tooltip label', 
+      { title: 'Tooltip label', props: { style: { overflow: 'visible' } }}, 
       { title: 'React', props: { className: css(styles.modifiers.fitContent)} },
       { title: 'Contextual usage', transforms: [sortable] }
     ],
