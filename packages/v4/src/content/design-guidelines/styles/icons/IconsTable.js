@@ -39,9 +39,9 @@ export class IconsTable extends React.Component {
       { title: 'Name', transforms: [sortable], props: { className: css(styles.modifiers.fitContent)} },
       'Style',
       'Type',
-      { title: 'Tooltip label', props: { style: { overflow: 'visible' } }}, 
       { title: 'React', props: { className: css(styles.modifiers.fitContent)} },
-      { title: 'Contextual usage', transforms: [sortable] }
+      { title: 'Contextual usage', transforms: [sortable] },
+      { title: 'Tooltip label', props: { style: { overflow: 'visible' } }},
     ],
     sortBy: {}
   };
@@ -120,14 +120,14 @@ export class IconsTable extends React.Component {
           title: Type,
           props: { column: 'Type' }
         },
-        {
-          title: Label,
-          props: { column: 'Tooltip label' },
-        },
         ReactName,
         {
           title: Contextual_usage,
           props: { column: 'Contextual usage' }
+        },
+        {
+          title: Label,
+          props: { column: 'Tooltip label' },
         }
       ]
     }
