@@ -44,7 +44,7 @@ Maintain consistent form label alignment throughout your application or interfac
 
 #### Top-aligned labels
 
-<img src="./img/top-labels.png" alt="Top-aligned labels appear above their text input fields" width="323">
+<img src="./img/top-labels.png" alt="Top-aligned labels appear above their text input fields" width="323"/>
 
 Top-aligned labels are preferred over left-aligned labels because they provide a closer proximity between a label and its corresponding input and allow the most horizontal space to accommodate long label content. These characteristics support more responsive and scannable form design.
 
@@ -131,7 +131,7 @@ Reserve required fields for information vital to user success. Indicate a requir
 
 If all form fields are required, don’t use an asterisk for each one. Instead, provide a message at the top of the form: “All fields are required.” If all fields are optional, provide a similar message at the top of the form: “All fields are optional." 
 
-<img src="./img/required-optional-forms.png" alt="Example of two forms with an indication at the top of whether all fields are required or all fields are optional" />
+<img src="./img/required-optional-forms.png" alt="Example of two forms with an indication at the top of whether all fields are required or all fields are optional"/>
 
 
 ### User help
@@ -223,7 +223,7 @@ Validation on submission occurs when a user attempts to submit a form. In this s
 
 For validation on submission, supplement field level errors with anor validation on submission, use an [inline alert](/components/alert/design-guidelines#inline-alerts) to make it simple for the user to quickly identify and address areas that need attention. The inline alert should be placed below the form’s header and description, and it should equal the total width of the form. 
 
-<img src="./img/validation-submission.png" alt="Example of errors after validation on submission, including an inline alert at the top, and field level errors" />
+<img src="./img/validation-submission.png" alt="Example of errors after validation on submission, including an inline alert at the top, and field level errors"/>
 
 ## Spacing
 Forms may be placed in several contexts including on a page, in a wizard, or in a modal. Your chosen form placement may impact specific spacing considerations, but general form spacing requirements apply across these contexts.
@@ -240,13 +240,13 @@ Place submit or cancel buttons on the bottom left of a form, left-aligned with a
 
 For more guidance on button placement, see our [button guidelines](/components/button/design-guidelines#button-placement). 
 
-<img src="./img/button-placement.png" alt="Examples of correct button placement and incorrect button placement in a form" />
+<img src="./img/button-placement.png" alt="Examples of correct button placement and incorrect button placement in a form"/>
 
 ### Forms on a page
 
 Left and top align a form within a page’s content area. A minimum of 24px padding should separate the form from neighboring elements.
 
-<img src="./img/page-form.png" alt="Example of a form on a page" />
+<img src="./img/page-form.png" alt="Example of a form on a page"/>
 
 When placing a form on a page, its width is customizable to your use case and should reflect factors including:
 
@@ -262,7 +262,7 @@ Similar to an in-page form, forms in wizards should be left-aligned in the conte
 
 In a wizard, form error validation for a form in a wizard should occur when or by the time the user clicks the “Next” button. Don’t wait until the user has completed the whole wizard to notify them of possible errors and their location.
 
-<img src="./img/wizard-form.png" alt="Example of a form in an in-page wizard" />
+<img src="./img/wizard-form.png" alt="Example of a form in an in-page wizard"/>
 
 ### Forms in a modal
 Forms in a modal should be horizontally centered with the modal background and fill the modal width, leaving 24px between the form content and the modal background edges.
@@ -281,11 +281,11 @@ When grouping columns together in a multi-column form, organize them so that fie
 * City, State, ZIP code
 * Credit card number, Expiration date, Security code
 
-<img src="./img/multi-column-eg.png" alt="Example of correct and incorrect multi-column forms" />
+<img src="./img/multi-column-eg.png" alt="Example of correct and incorrect multi-column forms"/>
 
 Never design multi-column forms to read like a book, where the left column is completed first before moving on to the right. The form itself should still move and be filled from top to bottom, with related fields placed on the same line.
 
-<img src="./img/multi-column-read.png" alt="Example of how multi-column forms should be read and presented, demonstrated by arrows that follow a user's path of consumption" />
+<img src="./img/multi-column-read.png" alt="Example of how multi-column forms should be read and presented, demonstrated by arrows that follow a user's path of consumption"/>
 
 ## Content
 
