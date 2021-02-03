@@ -50,7 +50,7 @@ Top-aligned labels are preferred over left-aligned labels because they provide a
 
 #### Left-aligned labels
 
-<img src="./img/left-labels.png" alt="Left-aligned labels appear beside their text input fields" width="323">
+<img src="./img/left-labels.png" alt="Left-aligned labels appear beside their text input fields" width="323"/>
 
 Avoid using left-aligned labels unless you’re working with limited vertical space. 
 
