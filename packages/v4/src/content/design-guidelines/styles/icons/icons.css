@@ -47,6 +47,10 @@
   cursor: pointer;
 }
 
+#ws-icons-table [data-label="Type"] {
+  display: none;
+}
+
 #all-icons ~ .ws-p > .ws-code {
   margin-left: 8px;
 }
