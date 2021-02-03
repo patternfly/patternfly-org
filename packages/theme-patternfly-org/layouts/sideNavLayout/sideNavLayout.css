@@ -31,6 +31,10 @@
   /* For icon */
   position: relative;
 }
+#algolia-autocomplete-listbox-0 {
+  /* Fix search results overflowing page */
+  min-width: 480px !important;
+}
 #ws-global-search {
   background-color: transparent;
   border: none;
@@ -61,7 +65,8 @@
 
 /* TODO: PageHeaderTools on small viewports */
 @media (max-width: 670px) {
-  #ws-global-search-wrapper {
+  #ws-global-search-wrapper,
+  .ws-toggle-search {
     display: none;
     visibility: hidden;
   }
