@@ -31,7 +31,7 @@ export function ColorSwatch({
   const popoverContent = (
     <div className="ws-color-swatch-popover">
       <label className="ws-color-swatch-popover-label">Global CSS variable</label>
-      <code className="ws-color-swatch-description-code ws-color-swatch-popover-code">
+      <code className="ws-color-swatch-description-code ws-color-swatch-popover-code ws-code pf-u-font-size-xs">
         {color}
       </code>
       <p>
@@ -75,7 +75,7 @@ export function ColorSwatch({
         <label className="ws-color-swatch-description-label">
           {label || token && `#${normalizeColor(token.value)}`} {caption && `(${caption})`}
         </label>
-        <code className="ws-color-swatch-description-code">
+        <code className="ws-color-swatch-description-code ws-code pf-u-font-size-xs">
           {color}
         </code>
       </div>
