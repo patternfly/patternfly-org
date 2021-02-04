@@ -37,14 +37,6 @@
   background-color: transparent !important;
 }
 
-.ws-typography-variableName {
-  display: inline;
-  padding-left: 8px;
-  padding-right: 8px;
-  background-color: #ffffff;
-  border: 1px solid #ededed !important;
-}
-
 .ws-typography-gridTitleSymbol {
   font-size: 10px;
   vertical-align: text-bottom;

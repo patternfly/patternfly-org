@@ -39,7 +39,7 @@ Here are a few best practices for creating accessible content:
 
 ## Using accessible and global-friendly graphics
 - Verify that you have rights to use graphics without infringing on copyrights.
-- Include alt text for images that provide additional meaning or content to the page. If the image is decorative or if the alt text would be duplicated by adjacent text, then use an empty alt attribute instead, <code>`alt=""`</code>. An empty alt attribute communicates to screen readers that the image provides no additional content and can be ignored.
+- Include alt text for images that provide additional meaning or content to the page. If the image is decorative or if the alt text would be duplicated by adjacent text, then use an empty alt attribute instead, `alt=""`. An empty alt attribute communicates to screen readers that the image provides no additional content and can be ignored.
 - Select a text-free image and use callouts to caption the image. When localizing content, graphics containing text may require translation, and translating a static image requires graphic editing. Callouts are easier to localize.
 
 ## Writing for screen readers

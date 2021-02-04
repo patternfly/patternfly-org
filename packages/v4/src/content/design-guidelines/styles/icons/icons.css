@@ -55,6 +55,11 @@
   margin-left: 8px;
 }
 
+.ws-icon-code {
+  background: none;
+  border: none;
+}
+
 @media screen and (max-width: 1199px) {
   .ws-icons-alignment-section {
     margin-top: 24px;
