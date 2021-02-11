@@ -137,7 +137,7 @@ export const MDXTemplate = ({
         </Title>}
       </PageSection>
       {!isSinglePage && (
-        <PageNavigation>
+        <PageSection className="pf-m-light pf-u-pb-0 pf-u-pt-0">
           <div className="pf-c-tabs ws-source-tabs">
             <ul className="pf-c-tabs__list">
               {sourceKeys.map((source, index) => (
@@ -155,7 +155,7 @@ export const MDXTemplate = ({
               ))}
             </ul>
           </div>
-        </PageNavigation>
+        </PageSection>
       )}
       <PageSection id="main-content" className={isSinglePage ? 'pf-m-fill' : 'pf-m-light'}>
         {isSinglePage && (
