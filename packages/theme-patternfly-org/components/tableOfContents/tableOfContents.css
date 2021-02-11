@@ -3,11 +3,19 @@
   order: 1;
   flex-grow: 1;
   position: sticky;
-  padding: var(--pf-global--spacer--xl) var(--pf-global--spacer--lg) var(--pf-global--spacer--lg) var(--pf-global--spacer--2xl);
+  padding: 0 var(--pf-global--spacer--lg) var(--pf-global--spacer--lg) var(--pf-global--spacer--2xl);
   align-self: flex-start;
   width: 280px;
   max-height: calc(100vh - 76px);
   overflow-y: auto;
+  /* Hide TOC scrollbar IE, Edge & Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hide TOC scrollbar Chrome, Safari & Opera */
+.ws-toc::-webkit-scrollbar {
+  display: none;
 }
 
 @media (max-width: 1450px) {

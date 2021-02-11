@@ -15,10 +15,10 @@ Use tables when:
 Consider the structure of the data you want to display and organize that information into columns. Columns will typically have column headers. Every row within a table must have a consistent format. If the table row includes actions, they should always be placed in the rightmost column(s).
 
 ### Compact and default tables
-PatterFly supports two main types of tables:
+PatternFly supports two main types of tables:
 
-1. **[Compact table](/components/table/design-guidelines#compact-spacing):** when you want to show as much data per page as possible.
-2. **[Default table](/components/table/design-guidelines#default-spacing):** when you don’t have to minimize paging.
+1. **[Compact table](#compact-spacing):** when you want to show as much data per page as possible.
+2. **[Default table](#default-spacing):** when you don’t have to minimize paging.
 
 See [when to use compact vs. default spacing](#compact-vs-default-spacing) for more information about the styling and usage.
 
@@ -166,4 +166,4 @@ In this example, a table is positioned in the body of a page in a card.
 * The information you want to display fits into a structured, tabular format (in other words, has distinct rows and columns).
 
 **Don't use a table**: 
-* For less structured or variably structured data that cannot be easily organized into columns. In these situations, use a [data list](/components/data-lists).
+* For less structured or variably structured data that cannot be easily organized into columns. In these situations, use a [data lists](/components/data-list/design-guidelines).
