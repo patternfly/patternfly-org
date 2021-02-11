@@ -1,7 +1,3 @@
-#nav-content {
-  padding-bottom: 0;
-}
-
 #ws-page-content-router {
   display: flex;
   flex-direction: column;
