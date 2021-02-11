@@ -166,4 +166,4 @@ In this example, a table is positioned in the body of a page in a card.
 * The information you want to display fits into a structured, tabular format (in other words, has distinct rows and columns).
 
 **Don't use a table**: 
-* For less structured or variably structured data that cannot be easily organized into columns. In these situations, use a [data list](/components/data-lists).
+* For less structured or variably structured data that cannot be easily organized into columns. In these situations, use a [data lists](/components/data-list/design-guidelines).

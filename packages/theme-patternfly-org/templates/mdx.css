@@ -1,6 +1,5 @@
 #nav-content {
   padding-bottom: 0;
-  padding: var(--pf-global--spacer--xl) var(--pf-global--spacer--xl) 0 var(--pf-global--spacer--xl);
 }
 
 #ws-page-content-router {
@@ -9,11 +8,8 @@
   height: 100%;
 }
 
-#ws-page-content-router > section.pf-c-page__main-section:first-child {
-  flex-grow: 1;
-}
-
-#main-content {
+#main-content,
+.ws-docs-title {
   background-color: var(--pf-global--BackgroundColor--light-200);
 }
 
@@ -47,10 +43,6 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-}
-
-#ws-page-title {
-  padding-bottom: var(--pf-global--spacer--lg);
 }
 
 .ws-code {
@@ -295,10 +287,6 @@
 .ws-source-tabs.pf-c-tabs::before {
   border: none;
   border-width: 0;
-}
-
-.ws-mdx-content {
-  flex-grow: 1;
 }
 
 /* Design asked for this. A nice side effect is that the TOC doesn't "jump" between pages */

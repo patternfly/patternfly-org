@@ -98,12 +98,9 @@
 }
 
 .ws-org-pfsite-l-footer-dark {
-  padding: 1rem !important;
   background: #151515 !important;
 }
 .pf-c-page .pf-c-page__main-section.ws-org-pfsite-l-footer-dark {
-  /* disables the default flex-grow: 1 for the last .pf-c-page__main-section in a block */
-  flex-grow: 0;
   /* Hide long overflowing tocs */
   z-index: 1;
 }
