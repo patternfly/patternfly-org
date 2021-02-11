@@ -69,7 +69,7 @@ const MDXChildTemplate = ({
       {toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
-      <div className={katacodaLayout? "ws-mdx-content-katacoda" : "ws-mdx-content pf-m-fill"}>
+      <div className={katacodaLayout? "ws-mdx-content-katacoda" : "ws-mdx-content"}>
         <div className={katacodaLayout ? "" : "ws-mdx-content-content"}>
           {InlineAlerts}
           <Component />
