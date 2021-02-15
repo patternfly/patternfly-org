@@ -91,14 +91,11 @@ _For Red Hat product terminology and documentation standards, see [Red Hat's sup
 - Opposite: Hide
 - Notes: Do not use interchangeably with *View* or *Expand*.
 
-**Sign up**: (v.) Use to describe signing up for a web account, application, or service.
-- Notes: *Sign up* is two words as a verb and one word as a noun or adjective. See *Signup (n.)* and *Signup (adj.)*.
+**Sign up**: (v.) Use to describe signing up for a web account, application, service, or event.
+- Notes: *Sign up* is two words as a verb and one word as an adjective or noun. See *Signup*.
 
-**Signup**: (n.) Use to describe what a user submits to sign up, or to describe the result of their submission.
-- Example 1: *The signup will close two days before the event.* 
-- Example 2: *We need more signups for this research effort.*
-
-**Signup**: (adj.) Use to describe something related to the act of signing up for a web account, application, or service, like a signup page.
+**Signup**: (adj.) Use to describe something related to the act of signing up for a web account, application, service, or event, like a signup page.
+- Notes: The noun *Signup* can also be used to refer to a user signup submission (for example, "We need more signups for this event.").
 
 **View**: (v.) Use to describe accessing another page to see details. (n.) Use to represent an arrangement of data in the interface (like a list view).
 
