@@ -1,8 +1,8 @@
 {
   "Releases": [
     {
-      "name": "2021.01",
-      "date": "2021-01-27",
+      "name": "2021.02",
+      "date": "2021-02-16",
       "latest": true,
       "versions": {
         "@patternfly/patternfly": "4.87.2",
