@@ -13,7 +13,7 @@ Adds a new search input variant to support attribute-value searching or filterin
 
 ![label styles](./img/labels.png)
 
-Borders were added to filled labels to ensure that work well against either white or gray backgrounds.
+Borders were added to filled labels to ensure they work well against either white or gray backgrounds.
 
 ### [New card modifiers](https://patternfly-react-pr-5389.surge.sh/components/card#modifiers)
 
