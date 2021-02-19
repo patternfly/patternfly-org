@@ -31,6 +31,8 @@ A fully functional jump links React demo is now available to illustrate how jump
 
 ![form select with placeholder text](./img/form-select.png)
 
+You can now apply placeholder text styling to the default item in a form select component.
+
 ### [SVG Spinner](https://www.patternfly.org/v4/components/spinner)
 Introduce a new SVG-based spinner for smoother rendering and performance.
 
@@ -67,5 +69,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 * [Accordion for web used cases](https://github.com/patternfly/patternfly/issues/3865) - Introduce a variant of the Accordion component with larger spacing optimized for website presentation.
 
 * [Add help text support to definition list](https://github.com/patternfly/patternfly-react/issues/5482) - Add the ability to open pop-up help to an item in a definition list by clicking on its underlined label.
+
+* [Auto-complete search input](https://github.com/patternfly/patternfly/issues/3863) - Will introduce an option to add auto-complete behavior to the Search Input component.
 
 For a complete roadmap showing all items planned in future releases, see our [PatternFly Feature Roadmap](https://github.com/orgs/patternfly/projects/4?fullscreen=true) project board.
