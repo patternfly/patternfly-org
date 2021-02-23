@@ -5,7 +5,7 @@ section: components
 
 A **number input** provides a quick and effective way for users to enter and modify a numeric value. Similar to input groups, number inputs combine two input types into one control: A text input field with buttons on either side. When combined, these elements allow users to input numeric values in a responsive and scalable way.
 
-##Elements
+## Elements
 <img src="./img/number_input_anatomy.png" alt="Number input elements"/>
 
 **Label:** Indicates what value the user should input in the numeric field.
@@ -14,7 +14,7 @@ A **number input** provides a quick and effective way for users to enter and mod
 **Helper text:** Explains or provides additional context that helps the user provide the right information. This is an optional field.
 **Unit:** Provides a unit symbol for the value in the input field, when applicable. This is an optional field.
 
-##Usage
+## Usage
 **Use a number input when:**
 * Users need a quick and precise way to adjust values within defined parameters.
 * Users need to make small incremental changes that require few clicks.
@@ -39,16 +39,16 @@ Number inputs can function in one of two ways:
 1. **Default:** Buttons increase and decrease the numeric value within a given range.
 2. **With thresholds:** Buttons are disabled when the user reaches a certain threshold within a given range.
 
-##Default
+## Default
 A default number input allows users to input and modify a numeric value within a set range without disabling at certain thresholds. Use this variation when any value within your number input’s range is valid for your use case (for example, providing the number of storage drives associated with their computer or reporting their storage capacity).
 
-##With thresholds
+## With thresholds
 A number input with thresholds disables each button when a user’s numeric input passes a certain threshold. Use number inputs with thresholds to add maximum or minimum restrictions to user inputted values. 
 
 When adding thresholds to a number input, be sure to inform users with text to minimize their risk for input errors. If a number input for the number of storage drives has a maximum input value of 20, communicate this limit in helper text: <i>Maximum capacity 20</i>.
-<img src="./img/number_input_states.png" alt="Number input states"/>
+<img src="./img/with_threshold.png" alt="Number input with threshold"/>
 
-##Accessibility
+## Accessibility
 Consider the following guidance to ensure that your number input is 508 compliant:
 
 * Use clear and descriptive labels for each button and fields. Specific language makes it easier for users with assistive technology to understand the required value.
