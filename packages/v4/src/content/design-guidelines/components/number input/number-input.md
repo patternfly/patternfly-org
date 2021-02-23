@@ -33,7 +33,7 @@ Determine an increment size relative to your specific value range. Scale your in
 Include unit symbols to the right of the text input and increase button, depending on your use case. Always use a unit’s standard abbreviation or symbol. For a list of recommended symbols, see our Units and symbols page.
 <img src="./img/number_input_states.png" alt="Number input states"/>
 
-##Variations
+## Variations
 Number inputs can function in one of two ways:
 
 1. **Default:** Buttons increase and decrease the numeric value within a given range.
