@@ -6,7 +6,7 @@ section: components
 A **number input** provides a quick and effective way for users to enter and modify a numeric value. Similar to input groups, number inputs combine two input types into one control: A text input field with buttons on either side. When combined, these elements allow users to input numeric values in a responsive and scalable way.
 
 ## Elements
-<img src="./img/number_input_anatomy.png" alt="Number input elements"/>
+<img src="./img/number_input_anatomy.png" alt="Number input elements" width="50%"/>
 
 1. **Label:** Indicates what value the user should input in the numeric field.
 2. **Input field:** Area for the user to type in their numeric input.
@@ -27,11 +27,12 @@ A **number input** provides a quick and effective way for users to enter and mod
 * There is not enough space in the UI to account for the interaction between the input field and the buttons.
 
 **When using number inputs, follow these best practices:**
+
 Display a default numeric value in the input field that users can modify by typing directly into the input field or scale using the increase or decrease buttons.
 Keep labels concise and specific to effectively communicate what value the user should enter into the input field.
 Determine an increment size relative to your specific value range. Scale your increment size to accommodate for the types of values users will input in context.
 Include unit symbols to the right of the text input and increase button, depending on your use case. Always use a unit’s standard abbreviation or symbol. For a list of recommended symbols, see our Units and symbols page.
-<img src="./img/number_input_states.png" alt="Number input states"/>
+<img src="./img/number_input_states.png" alt="Number input states" width="50%"/>
 
 ## Variations
 Number inputs can function in one of two ways:
@@ -46,7 +47,7 @@ A default number input allows users to input and modify a numeric value within a
 A number input with thresholds disables each button when a user’s numeric input passes a certain threshold. Use number inputs with thresholds to add maximum or minimum restrictions to user inputted values. 
 
 When adding thresholds to a number input, be sure to inform users with text to minimize their risk for input errors. If a number input for the number of storage drives has a maximum input value of 20, communicate this limit in helper text: <i>Maximum capacity 20</i>.
-<img src="./img/with_threshold.png" alt="Number input with threshold"/>
+<img src="./img/with_threshold.png" alt="Number input with threshold" width="50%"/>
 
 ## Accessibility
 Consider the following guidance to ensure that your number input is 508 compliant:
