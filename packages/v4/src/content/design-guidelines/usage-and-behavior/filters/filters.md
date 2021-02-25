@@ -30,10 +30,10 @@ Filters consisting of multiple attributes include:
 * [Faceted filter](#faceted-filter)
 
 ## Variations for one attribute
-There are various ways to allow users to filter down content. These include [text entry filters](#text-entry-filters), [single selects](#single-select) and [checkbox select](#checkbox-select).
+There are various ways to allow users to filter down content. Filtering methods include [text entry filters](#text-entry-filters), [single selects](#single-select) and [checkbox select](#checkbox-select).
 
 ### Text entry filters
-A text entry filter provides the user with an input field to type in values that filter the view, whether or not their input is an exact match. There are two types of basic filters: One uses a [search input](#/components/search-input) component, the other uses an [input group](#/components/input-group) component.
+A text entry filter provides the user with an input field to type in values that filter the view, whether or not their input is an exact match. There are two types of basic filters: One uses a [search input](/components/search-input) component, the other uses an [input group](/components/input-group) component.
 
 <img src="./img/text-input.png" alt="text input filters" width="880"/>
 
@@ -58,7 +58,7 @@ Text entry filters support [chips](#filter-chip), but do not support [type-ahead
 <img src="./img/text-input-chips.png" alt="text input chips" width="880"/>
 
 ### Single select
-A single select provides the user with a fixed set of values from which they can only select one value. This filter type uses the [single select component](#/components/select/react#single). If the single select filter is the only filter in the toolbar, it should have an “All options” menu item by default as a way to reset the filter (unless a selection must be made at all times). This “All” option will be selected by default, acting as an equivalent of no filter selected. 
+A single select provides the user with a fixed set of values from which they can only select one value. This filter type uses the [single select component](/components/select/react#single). If the single select filter is the only filter in the toolbar, it should have an “All options” menu item by default as a way to reset the filter (unless a selection must be made at all times). This “All” option will be selected by default, acting as an equivalent of no filter selected. 
 
 <img src="./img/single-select.png" alt="single select list filter" width="880"/>
 
@@ -79,7 +79,7 @@ Single selects can include [type-aheads](#type-ahead) as an added feature.
 Stand alone single selects in a toolbar do not use badge counts or filter chips since only one selection can be made, and the selection will already be apparent in the toggle. 
 
 ### Checkbox select
-A checkbox select provides the user with a fixed set of values from which they can select multiple values. This filter type uses the [checkbox select component](#/components/select/react#checkbox-input).
+A checkbox select provides the user with a fixed set of values from which they can select multiple values. This filter type uses the [checkbox select component](/components/select/react#checkbox-input).
 
 <img src="./img/checkbox-select.png" alt="checkbox select"/>
 
@@ -103,7 +103,7 @@ Although **typeahead** is not supported for checkbox selects, you can add a sear
 <img src="./img/checkbox-search.png" alt="search in checkbox select" width="475" />
 
 ## Variations for multiple attributes
-There are multiple ways of combining variations for single attribute filters into multiple attribute filters, including [attribute-value filters](#attribute-value-filters), [filter groups](#filter-group), [toggle groups](#toggle-group).
+There are multiple ways of combining variations for single attribute filters into multiple attribute filters, including [attribute-value filters](#attribute-value-filters), [filter groups](#filter-group), [toggle groups](#toggle-group) and [faceted filters](#faceted-filter).
 
 ### Attribute-value filter
 The attribute-value filter gives users the ability to specify an attribute-value pair for filtering a data set.
@@ -120,7 +120,7 @@ The following elements make up an attribute-value (textbox) filter.
 1. **Attribute selector:** A select list that allows the user to select the attribute that they want to filter against.
 2. **Value selector:** A value selector that is used to pass a value to the filter. The value selector can be any data input component. Common components used for value selection include:
   
-    a. A **text entry field** for entering a value from the keyboard. Use when you will enter the value as unbounded data (e.g. a name). When the text entry field is a search input, the value will appear as a chip automatically, and the search will start being validated. When the text entry field is an [input group](#text-entry-filters), the value will appear as a chip and the search will be validated when the user presses the Enter key on their keyboard or the search button. 
+    a. A **text entry field** for entering a value from the keyboard. Use when you will enter the value as unbounded data (e.g. a name). When the text entry field is a search input, the value will appear as a chip automatically, and the search will start being validated. When the text entry field is an input group, the value will appear as a chip and the search will be validated when the user presses the Enter key on their keyboard or the search button. 
    
     b. A **single select** for selecting a value from a predefined list. This will work the same as a stand alone single select, however since any selection in an attribute filter will result in a chip, there is no need to have an “All” option as part of your menu, as users can reset their filters using the chips.
     
@@ -136,7 +136,7 @@ The value toggles behave as described in the [variations for one attribute](#var
 When using the attribute filter, a filter query is triggered whenever the user sets a new value. The following are triggers applicable to the variations of the attribute-value filter shown above.
 
 | Value selector | Trigger |
-| ------- | ------ |
+| ------------------ | ------ |
 | Search field | The user starts typing (for search input), presses the Enter key, or clicks the Search button (for input groups). |
 | Select lists | The user selects or deselects an item in the list. |
 | Date picker | The user selects a new date and/or time. |
@@ -154,7 +154,7 @@ Attribute-value filter features include [filter chips](#filter-chip), [badges](#
 **Type-ahead** allows the user to narrow down their search and is supported for all value selection types except checkbox selects. Although typeahead is **not supported** for checkbox selects, you can add a search input inside the menu, above the items the user can select from.
 
 ### Filter group
-A filter group is a set of filters that appear side by side in a toolbar. This filter type uses the [select list](#/components/select) component.
+A filter group is a set of filters that appear side by side in a toolbar. This filter type uses the [select list](/components/select) component.
 
 <img src="./img/filter-group.png" alt="filter group with single selects" />
 
@@ -178,8 +178,8 @@ Filter groups support [filter chips](#filter-chip), [badges](#badge-count), and 
 
 **Type-ahead** allows the user to narrow down their search and is supported for all value selection types except checkbox selects. Although typeahead is **not supported** for checkbox selects, you can add a search input inside the menu, above the items the user can select from.
 
-## Toggle group
-A toggle group filter allows users to select from a set of predefined different elements to filter something on. This filter uses the [toggle group](#/components/toggle-group) component — read more in the [toggle group guidelines](#/toggle-group/design-guidelines).
+### Toggle group
+A toggle group filter allows users to select from a set of predefined different elements to filter something on. This filter uses the [toggle group](/components/toggle-group) component — read more in the [toggle group guidelines](/toggle-group/design-guidelines).
 
 <img src="./img/toggle-group.png" alt="toggle group" width="541" />
 
@@ -192,8 +192,8 @@ Information will be shown to the user based on the toggles they select. If nothi
 #### Supported features
 Toggle groups do not use or support filter chips, badges, or type-ahead.
 
-## Faceted filter
-Faceted filtering is useful when items can be described by categories according to multiple dimensions or facets. This filter usually uses the [grouped checkbox select list](#/components/select#grouped-checkbox-input) component or the [single select](#/components/select#single) component.
+### Faceted filter
+Faceted filtering is useful when items can be described by categories according to multiple dimensions or facets. This filter usually uses the [grouped checkbox select list](/components/select#grouped-checkbox-input) component or the [single select](/components/select#single) component.
 
 <img src="./img/faceted-single.png" alt="facted filter with single selects" />
 
@@ -235,8 +235,8 @@ Different attributes can be added to different filters. These include:
 
 This table describes which features are **supported** for each filter type. Note that just because a feature is supported, does not mean it must be used in your filters. 
 
-|  | Filter chips | Type-ahead | Badge count (Number of selections)
-| ------- | ------ | ----- | -------| 
+|  | Filter chips | Type-ahead | Badge count
+| ----------------- | ------- | ------ | ------- | 
 | **Text entry**| Yes (if within an attribute filter) | Yes | No |
 | **Single select** | No | Yes | No |
 | **Checkbox select** | Yes | No (but you can have a search inside the menu) | Yes |
@@ -293,26 +293,25 @@ Use a type-ahead filter when:
 A filter query is triggered whenever a new value is set by the user. The following are triggers applicable to the variations of the type-ahead filter shown in the previous example.
 
 | Value selector | Trigger |
-| ------- | ------ |
+| ---------------- | ------ |
 | Search field | The user types in an input and/or presses the Enter key after typing in the input field. This action will create a filter for the first value shown in the filtered list. |
 | Select lists | The user selects or deselects an item in the list. |
 
 
 ## Layout considerations
-Filters may be included in a [toolbar](#/components/toolbar) and are usually left aligned. There may be more than one filter used in a single toolbar, and in some cases, custom filters may make up a full toolbar. Filters may also be used alone outside of a toolbar.
+Filters may be included in a [toolbar](/components/toolbar) and are usually left aligned. There may be more than one filter used in a single toolbar, and in some cases, custom filters may make up a full toolbar. Filters may also be used alone outside of a toolbar.
 
 ## Mobile considerations
-In responsive views, filters may be hidden within the filter icon. On click, the toolbar will expand to reveal the filter. If there are multiple filter elements, they will be collapsed into a single faceted filter. Read more about toolbars in mobile views in [the toolbar design guidelines](#/components/toolbar/design-guidelines#the-toolbar-on-mobile).
+In responsive views, filters may be hidden within the filter icon. On click, the toolbar will expand to reveal the filter. If there are multiple filter elements, they will be collapsed into a single faceted filter. Read more about toolbars in mobile views in [the toolbar design guidelines](/components/toolbar/design-guidelines#the-toolbar-on-mobile).
 
 <img src="./img/mobile.png" alt="mobile view" width="880" />
 
 ### Examples
 **Filter group in data list toolbar**
-
 <img src="./img/ex-datalist.png" alt="example of filter group in data list" width="880" />
 
-**Attribute filter in table toolbar**
 
+**Attribute filter in table toolbar**
 <img src="./img/ex-table.png" alt="example of attribute value filter in table " width="880" />
 
 ## Content
