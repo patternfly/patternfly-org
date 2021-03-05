@@ -137,9 +137,9 @@ When using the attribute filter, a filter query is triggered whenever the user s
 
 | Value selector &nbsp; &nbsp; &nbsp; &nbsp; | Trigger |
 | -------------------------------------------| ------ |
-| Search field | The user starts typing (for search input), presses the Enter key, or clicks the Search button (for input groups). |
-| Select lists | The user selects or deselects an item in the list. |
-| Date picker | The user selects a new date and/or time. |
+| Search field &nbsp; &nbsp;| The user starts typing (for search input), presses the Enter key, or clicks the Search button (for input groups). |
+| Select lists &nbsp; &nbsp; | The user selects or deselects an item in the list. |
+| Date picker &nbsp; &nbsp; | The user selects a new date and/or time. |
 
 #### When to use
 Use an attribute-value filter when users have multiple attributes to filter on. This filter should be used over a faceted filter when the attributes use different selection formats (for example, attribute A uses a single select, but attribute B uses a checkbox select).
@@ -292,10 +292,10 @@ Use a type-ahead filter when:
 #### Behavior
 A filter query is triggered whenever a new value is set by the user. The following are triggers applicable to the variations of the type-ahead filter shown in the previous example.
 
-| Value selector <img width=380/>| Trigger  <img width=500/>|
-| -------------------------| ---------- |
-| Search field | The user types in an input and/or presses the Enter key after typing in the input field. This action will create a filter for the first value shown in the filtered list. |
-| Select lists | The user selects or deselects an item in the list. |
+| Value selector &nbsp; &nbsp; | Trigger |
+| -----------------------------------------| ---------- |
+| Search field &nbsp; &nbsp; | The user types in an input and/or presses the Enter key after typing in the input field. This action will create a filter for the first value shown in the filtered list. |
+| Select lists &nbsp; &nbsp; | The user selects or deselects an item in the list. |
 
 
 ## Layout considerations
