@@ -87,10 +87,10 @@ A checkbox select provides the user with a fixed set of values from which they c
 The user is presented with a list of values to choose from. From this list, users may select or deselect one or more values at a time, with selections indicated by a blue checkbox preceding the value. The dropdown should remain open as the user makes selections until they click away or manually close it. Selected values will appear as chips underneath the filter, allowing the user to see their selections even when the toggle is collapsed.
 
 #### When to use
-Use a checkbox select for selecting multiple values from a predefined list. Multiple values will be combined using a logical “OR” operation. Items that meet multiple values will be shown higher in the results list.
+Use a checkbox select for selecting multiple values from a predefined list. Multiple values will be combined using a logical “OR” operation.
 
 #### Supported features
-Checkbox select add-on features include [filter chips](#filter-chip), and optionally, [badges](#badges). 
+Checkbox select supported features include [filter chips](#filter-chip), and optionally, [badges](#badge-count). 
 
 <img src="./img/checkbox-select-add.png" alt="add ons for checkbox select" width="880"/>
 
@@ -135,8 +135,8 @@ The value toggles behave as described in the [variations for one attribute](#var
 
 When using the attribute filter, a filter query is triggered whenever the user sets a new value. The following are triggers applicable to the variations of the attribute-value filter shown above.
 
-| Value selector | Trigger |
-| ------------------ | ------ |
+| Value selector &nbsp; &nbsp; | Trigger |
+| -------------------------- | ------ |
 | Search field | The user starts typing (for search input), presses the Enter key, or clicks the Search button (for input groups). |
 | Select lists | The user selects or deselects an item in the list. |
 | Date picker | The user selects a new date and/or time. |
@@ -169,7 +169,7 @@ Use a filter group when you only have a handful of attributes that you want to s
 #### Behavior
 Filter queries are applied when the user selects or deselects an item in the list or selects a date/time range. If the filter group is only made up of single selects, the selected filters will be shown inside each filter’s toggle. If the filter group contains multiple selects, the selected filters will be shown as chips underneath the filters. Additionally, you may also choose to display the selected number of items in each filter as a badge in their toggle. A clear filter action to the right of the filters will remove all applied filters.
 
-#### Supported and features
+#### Supported features
 Filter groups support [filter chips](#filter-chip), [badges](#badge-count), and [type-ahead](#type-ahead). 
 
 **Filter chips** are recommended for filter groups that have one or more checkbox selects. If the filter group only consists of single selects, there is no need to add filter chips as the count will always be one.
@@ -179,7 +179,7 @@ Filter groups support [filter chips](#filter-chip), [badges](#badge-count), and 
 **Type-ahead** allows the user to narrow down their search and is supported for all value selection types except checkbox selects. Although typeahead is **not supported** for checkbox selects, you can add a search input inside the menu, above the items the user can select from.
 
 ### Toggle group
-A toggle group filter allows users to select from a set of predefined different elements to filter something on. This filter uses the [toggle group](/components/toggle-group) component — read more in the [toggle group guidelines](/toggle-group/design-guidelines).
+A toggle group filter allows users to select from a set of predefined different elements to filter something on. This filter uses the [toggle group](/components/toggle-group) component.
 
 <img src="./img/toggle-group.png" alt="toggle group" width="541" />
 
@@ -187,7 +187,7 @@ A toggle group filter allows users to select from a set of predefined different 
 Use a toggle group filter when you have few filter options that you want users to filter from, without hiding the options in a select list. A common usage for toggle groups is for filtering a chart view, to include or remove a data point from view.
 
 #### Behavior
-Information will be shown to the user based on the toggles they select. If nothing is selected, everything will be shown. If something is selected, it means the information is being filtered on.
+Information will be shown to the user based on the toggles they select. If something is selected, it means the information is being filtered on.
 
 #### Supported features
 Toggle groups do not use or support filter chips, badges, or type-ahead.
@@ -195,9 +195,9 @@ Toggle groups do not use or support filter chips, badges, or type-ahead.
 ### Faceted filter
 Faceted filtering is useful when items can be described by categories according to multiple dimensions or facets. This filter usually uses the [grouped checkbox select list](/components/select#grouped-checkbox-input) component or the [single select](/components/select#single) component.
 
-<img src="./img/faceted-single.png" alt="facted filter with single selects" />
+<img src="./img/faceted-single.png" alt="faceted filter with single selects" />
 
-<img src="./img/faceted-grouped.png" alt="facted filter with checkbox" />
+<img src="./img/faceted-grouped.png" alt="faceted filter with checkbox" />
 
 The following elements can be used in a faceted (checkbox) filter:
 1. **Facets:** Different categories containing filter values, such as _Status_ or _Vendor_.
@@ -211,12 +211,12 @@ The following elements can be used in a faceted (checkbox) filter:
 Use a faceted filter when:
 * The user is browsing a set of items without robust knowledge of what is in the set.
 * The important characteristics of the items to be filtered are mostly traits with a small and discrete set of choices like color, status, availability, or distributer rather than arbitrary text or numeric values such as name, date created, or amount of available space.
-* The attributes to filter from are all checkbox select OR all single select.
+* The facets to filter from are all checkbox select OR all single select.
 
-**Do not use** a faceted filter when the important characteristics of the items are mostly open-ended values and/or have a mix of single and multiple select. Additionally, if space is limited, consider using an [attribute-value](#attribute-value) filter instead.
+**Do not use** a faceted filter when the important characteristics of the items are mostly open-ended values and/or have a mix of single and multiple select. Additionally, if space is limited, consider using an [attribute-value](#attribute-value-filter) filter instead.
 
 #### Behavior
-New filters are applied or removed as the user selects or deselects values using checkboxes. A badge count can optionally be added to the toggle to indicate the number of selections made in the filter. Selections will appear as chips underneath the filter.
+New filters are applied or removed as the user selects or deselects values using checkboxes. A badge count can optionally be added to the toggle to indicate the number of selections made in the filter. Selections will appear as chips underneath the filter. Note that there is an AND relationship between facets, and an OR relationship between values. 
 
 #### Supported features
 Faceted filters support [filter chips](#filter-chip), [badges](#badge-count), and [type-ahead](#type-ahead). 
@@ -235,7 +235,7 @@ Different attributes can be added to different filters. These include:
 
 This table describes which features are **supported** for each filter type. Note that just because a feature is supported, does not mean it must be used in your filters. 
 
-|  | Filter chips | Type-ahead | Badge count
+|  &nbsp; &nbsp; &nbsp; &nbsp; | Filter chips | Type-ahead | Badge count
 | ----------------- | ------- | ------ | ------- | 
 | **Text entry**| Yes (if within an attribute filter) | Yes | No |
 | **Single select** | No | Yes | No |
@@ -292,7 +292,7 @@ Use a type-ahead filter when:
 #### Behavior
 A filter query is triggered whenever a new value is set by the user. The following are triggers applicable to the variations of the type-ahead filter shown in the previous example.
 
-| Value selector | Trigger |
+| Value selector &nbsp; &nbsp;  | Trigger |
 | ---------------- | ------ |
 | Search field | The user types in an input and/or presses the Enter key after typing in the input field. This action will create a filter for the first value shown in the filtered list. |
 | Select lists | The user selects or deselects an item in the list. |
@@ -306,7 +306,7 @@ In responsive views, filters may be hidden within the filter icon. On click, the
 
 <img src="./img/mobile.png" alt="mobile view" width="880" />
 
-### Examples
+## Examples
 **Filter group in data list toolbar**
 <img src="./img/ex-datalist.png" alt="example of filter group in data list" width="880" />
 
