@@ -135,7 +135,7 @@ The value toggles behave as described in the [variations for one attribute](#var
 
 When using the attribute filter, a filter query is triggered whenever the user sets a new value. The following are triggers applicable to the variations of the attribute-value filter shown above.
 
-| Value selector &nbsp; &nbsp; | Trigger |
+| Value selector &nbsp; &nbsp; &nbsp; &nbsp; | Trigger |
 | -------------------------- | ------ |
 | Search field | The user starts typing (for search input), presses the Enter key, or clicks the Search button (for input groups). |
 | Select lists | The user selects or deselects an item in the list. |
@@ -292,7 +292,7 @@ Use a type-ahead filter when:
 #### Behavior
 A filter query is triggered whenever a new value is set by the user. The following are triggers applicable to the variations of the type-ahead filter shown in the previous example.
 
-| Value selector &nbsp; &nbsp;  | Trigger |
+| Value selector &nbsp; &nbsp; &nbsp; &nbsp;  | Trigger |
 | ---------------- | ------ |
 | Search field | The user types in an input and/or presses the Enter key after typing in the input field. This action will create a filter for the first value shown in the filtered list. |
 | Select lists | The user selects or deselects an item in the list. |
