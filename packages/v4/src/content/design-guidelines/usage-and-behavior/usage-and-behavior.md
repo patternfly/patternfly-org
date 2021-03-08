@@ -10,10 +10,10 @@ Tables are built from a standard tabular structure of rows and columns. Data lis
 
 |                         | [Table](/components/table) | [Data list](/components/data-list) |
 |------------------------ | :---: | :-------: |
-|You want to display data in a grid with column headings | <FONT COLOR="green">✔ | ⛔ |
-|Data does not easily fit into a grid or you want multiple lines of data in a row | ⛔ | <FONT COLOR="green">✔ |
-| You want to display non-text information like images or charts | <FONT COLOR="green">✔ [1] | <FONT COLOR="green">✔ |
-| All rows don’t have the same format | ⛔ | <FONT COLOR="green">✔ |
+|You want to display data in a grid with column headings | &lt;FONT COLOR="green"&gt;✔ | ⛔ |
+|Data does not easily fit into a grid or you want multiple lines of data in a row | ⛔ | &lt;FONT COLOR="green">✔ |
+| You want to display non-text information like images or charts | &lt;FONT COLOR="green">✔ [1] | &lt;FONT COLOR="green">✔ |
+| All rows don’t have the same format | ⛔ | &lt;FONT COLOR="green">✔ |
 
 **[1]** Tables will support inclusion of graphical objects within a cell, but this approach is only recommended when small graphical or media objects are needed.
 
@@ -23,11 +23,11 @@ Contextual help can include any on-screen elements intended to guide the user in
 
 |                 |[Tooltip](/components/tooltip) | [Popover](/components/popover) | [Hint](/components/hint) |
 |------------------------ | :---: | :-------: | :---------------: |
-|You want to provide a short (no more than 1-2 lines) explanation of new or unfamiliar UI elements as a simple text string that is only shown “on-demand.”|<FONT COLOR="green">✔|⛔ | ⛔ |
-|You want to include formatted text and/or interactive elements in your message body.|⛔|<FONT COLOR="green">✔|<FONT COLOR="green">✔
-|You want the information to persist until the user dismisses it.|⛔|<FONT COLOR="green">✔|<FONT COLOR="green">✔
-|You want the information to be announced by a screen reader whenever the user tabs to an element.|<FONT COLOR="green">✔|<FONT COLOR="orange">✔[1]|<FONT COLOR="green">✔
-|You want to present additional information that might not be necessary or relevant to all users.|⛔|<FONT COLOR="green">✔|<FONT COLOR="orange">✔[2]|
+|You want to provide a short (no more than 1-2 lines) explanation of new or unfamiliar UI elements as a simple text string that is only shown “on-demand.”|&lt;FONT COLOR="green">✔|⛔ | ⛔ |
+|You want to include formatted text and/or interactive elements in your message body.|⛔|&lt;FONT COLOR="green">✔|&lt;FONT COLOR="green">✔
+|You want the information to persist until the user dismisses it.|⛔|&lt;FONT COLOR="green">✔|&lt;FONT COLOR="green">✔
+|You want the information to be announced by a screen reader whenever the user tabs to an element.|&lt;FONT COLOR="green">✔|&lt;FONT COLOR="orange">✔[1]|&lt;FONT COLOR="green">✔
+|You want to present additional information that might not be necessary or relevant to all users.|⛔|&lt;FONT COLOR="green">✔|&lt;FONT COLOR="orange">✔[2]|
 
 **[1]** By default, popovers are only triggered when the user clicks on an element and therefore will not be read by a screen reader when tabbing through an interface. If a popover is triggered on hover (optional behavior), it will behave like a tooltip and its content will be displayed whenever the keyboard user tabs to the trigger element.
 
@@ -38,19 +38,19 @@ Progressive disclosure is the practice of hiding information or providing it onl
 
 | | [Accordion](components/accordion) | [Expandable section](expandable-section) | [Field groups](components/form)|
 |------------------------ | :---: | :-------: | :---------------: |
-|You want to group a list of actions, links, or other data into expandable groups.|<FONT COLOR="green">✔|⛔|⛔|
-|You want to hide advanced or seldomly used options within a form.|⛔|<FONT COLOR="green">✔|<FONT COLOR="green">✔|
-|You want to give the user the ability to show or hide chunks of information on a long scrolling page.|⛔|<FONT COLOR="green">✔|⛔
+|You want to group a list of actions, links, or other data into expandable groups.|&lt;FONT COLOR="green">✔|⛔|⛔|
+|You want to hide advanced or seldomly used options within a form.|⛔|&lt;FONT COLOR="green">✔|&lt;FONT COLOR="green">✔|
+|You want to give the user the ability to show or hide chunks of information on a long scrolling page.|⛔|&lt;FONT COLOR="green">✔|⛔
 
 ## Inputting data on forms
 Data input controls allow the user to input information into a form. There are two types of input controls for bound and unbound input. Bound input controls are constrained to only input data within a defined range. Examples of bound input controls include [sliders](/components/slider) and [number inputs](/components/number-input). Unbound controls do not enforce constraints on entry and include [text inputs](/components/text-input) and [text area](/component/text-area) controls.
 
 | | [Text input](/components/text-input) or [text area](/component/text-area) | [Number input](/components/number-input) | [Slider](/components/slider) |
 |------------------------ | :---: | :-------: | :---------------: |
-|You want to enter text from the keyboard. Possible values are alpha-numeric, unconstrained, or dependent on context.|<FONT COLOR="green">✔ [1]|⛔|⛔|
-|You want to constrain the input of numeric data to a specified range.|<FONT COLOR="orange">✔ [2]|<FONT COLOR="green">✔|<FONT COLOR="green">✔|
-|You want to optimize numeric data entry for direct manipulation by touch or using the mouse over the keyboard.|⛔|<FONT COLOR="green">✔|<FONT COLOR="green">✔|
-|It’s useful for users to visualize where numeric input falls within the range of possible values.|⛔|⛔|<FONT COLOR="green">✔|
+|You want to enter text from the keyboard. Possible values are alpha-numeric, unconstrained, or dependent on context.|&lt;FONT COLOR="green">✔ [1]|⛔|⛔|
+|You want to constrain the input of numeric data to a specified range.|&lt;FONT COLOR="orange">✔ [2]|&lt;FONT COLOR="green">✔|&lt;FONT COLOR="green">✔|
+|You want to optimize numeric data entry for direct manipulation by touch or using the mouse over the keyboard.|⛔|&lt;FONT COLOR="green">✔|&lt;FONT COLOR="green">✔|
+|It’s useful for users to visualize where numeric input falls within the range of possible values.|⛔|⛔|&lt;FONT COLOR="green">✔|
 
 **[1]** If data will always be constrained to a single line, use a text input, otherwise use a text area component for multi-line input.
 
@@ -62,9 +62,9 @@ Depending on the nature of options being presented, [checkbox](/component/checkb
 
 | | [Checkbox](/component/checkbox) | [Radio](/component/radio) | [Switch](/components/switch) |
 |------------------------ | :---: | :-------: | :---------------: |
-|The user wants to select one or more items from a list of items.|<FONT COLOR="green">✔|⛔|<FONT COLOR="orange">✔ [1]|
-|The user wants to select from a set of mutually exclusive options.|⛔|<FONT COLOR="green">✔|⛔|
-|The user wants to enable an option or feature.|<FONT COLOR="green">✔ [2]|<FONT COLOR="orange">✔ [3]|<FONT COLOR="green">✔|
+|The user wants to select one or more items from a list of items.|&lt;FONT COLOR="green">✔|⛔|&lt;FONT COLOR="orange">✔ [1]|
+|The user wants to select from a set of mutually exclusive options.|⛔|&lt;FONT COLOR="green">✔|⛔|
+|The user wants to enable an option or feature.|&lt;FONT COLOR="green">✔ [2]|&lt;FONT COLOR="orange">✔ [3]|&lt;FONT COLOR="green">✔|
 
 
 **[1]** Switches are sometimes used in place of checkboxes in this use case. The advantage of a switch is that it is more mobile friendly as it provides a larger touch target than the standard checkbox.
@@ -78,10 +78,10 @@ It’s important to display progress as a method of providing user feedback for 
 
 | | [Progress](/components/progress) | [Spinner](/components/spinner) | [Skeleton](/components/skeleton) |
 |------------------------ | :---: | :-------: | :---------------: |
-| The user is waiting for a process to complete, but the time left until completion is not known.|⛔|<FONT COLOR="green">✔|⛔|
-|The user is waiting for a process to complete, but the time left until completion is known.|<FONT COLOR="green">✔|<FONT COLOR="orange">✔ [1]|⛔|
-|The user is progressing through a step-by-step task and you want to reflect where they are in the process.|<FONT COLOR="green">✔|⛔|⛔|
-|The user is waiting for a page to load.|<FONT COLOR="orange">✔ [2]|<FONT COLOR="green">✔ [3]|<FONT COLOR="green">✔|
+| The user is waiting for a process to complete, but the time left until completion is not known.|⛔|&lt;FONT COLOR="green">✔|⛔|
+|The user is waiting for a process to complete, but the time left until completion is known.|&lt;FONT COLOR="green">✔|&lt;FONT COLOR="orange">✔ [1]|⛔|
+|The user is progressing through a step-by-step task and you want to reflect where they are in the process.|&lt;FONT COLOR="green">✔|⛔|⛔|
+|The user is waiting for a page to load.|&lt;FONT COLOR="orange">✔ [2]|&lt;FONT COLOR="green">✔ [3]|&lt;FONT COLOR="green">✔|
 
 
 **[1]** Although a spinner could be used in this situation, using a progress component is always the preferred method when it is possible to estimate the time to completion or the percentage of the task that is done.
@@ -95,11 +95,11 @@ It is often necessary to display more details about an object listed in a summar
 
 | | [Data list](/components/data-list) or [table](/components/table) row expansion | [Drawer](/components/drawer)| [Popover](/components/popover) |
 |------------------------ | :---: | :-------: | :---------------: |
-|You want to view details of multiple objects at the same time for comparison.|<FONT COLOR="green">✔|⛔|⛔|
-|Your detailed data is best presented in a horizontal format.|<FONT COLOR="green">✔|<FONT COLOR="green">✔ [1]|<FONT COLOR="green">✔|
-|Your detailed data is best presented in a vertical format.|⛔|<FONT COLOR="green">✔|<FONT COLOR="green">✔|
-|You have only a small amount of detailed data to show.|<FONT COLOR="orange">✔ [2]|<FONT COLOR="orange">✔|<FONT COLOR="green">✔|
-|You don’t want to cover other information while displaying details.|<FONT COLOR="green">✔|<FONT COLOR="green">✔ [3]|⛔|
+|You want to view details of multiple objects at the same time for comparison.|&lt;FONT COLOR="green">✔|⛔|⛔|
+|Your detailed data is best presented in a horizontal format.|&lt;FONT COLOR="green">✔|&lt;FONT COLOR="green">✔ [1]|&lt;FONT COLOR="green">✔|
+|Your detailed data is best presented in a vertical format.|⛔|&lt;FONT COLOR="green">✔|&lt;FONT COLOR="green">✔|
+|You have only a small amount of detailed data to show.|&lt;FONT COLOR="orange">✔ [2]|&lt;FONT COLOR="orange">✔|&lt;FONT COLOR="green">✔|
+|You don’t want to cover other information while displaying details.|&lt;FONT COLOR="green">✔|&lt;FONT COLOR="green">✔ [3]|⛔|
 
 **[1]** Drawers can be attached to either the left, right, or bottom edge of the parent container. To present horizontal data, use a bottom/horizontal drawer to create a top-bottom primary-detail view.
 
@@ -112,8 +112,8 @@ PatternFly provides three types of dropdown components for selecting between ite
 
 | | [Select](/components/select) | [Options menu](/components/options-menu) | [Dropdown](/components/dropdown) |
 |------------------------ | :---: | :-------: | :---------------: |
-|You want to select a value or multiple values from a list.|<FONT COLOR="green">✔|⛔|⛔|
-|You want to select filter terms from a list.|<FONT COLOR="green">✔|⛔|⛔|
-|You want to make the selected value visible when the menu is closed.|<FONT COLOR="green">✔|⛔|⛔|
-|You want to select options from one or more lists (sorting options, for example).|⛔|<FONT COLOR="green">✔|⛔|
-|You want to expose a list of commands or actions in a limited space.|⛔|⛔|<FONT COLOR="green">✔|
+|You want to select a value or multiple values from a list.|&lt;FONT COLOR="green">✔|⛔|⛔|
+|You want to select filter terms from a list.|&lt;FONT COLOR="green">✔|⛔|⛔|
+|You want to make the selected value visible when the menu is closed.|&lt;FONT COLOR="green">✔|⛔|⛔|
+|You want to select options from one or more lists (sorting options, for example).|⛔|&lt;FONT COLOR="green">✔|⛔|
+|You want to expose a list of commands or actions in a limited space.|⛔|⛔|&lt;FONT COLOR="green">✔|
