@@ -40,7 +40,7 @@ Number inputs can function in one of two ways:
 2. **With thresholds:** Buttons are disabled when the user reaches a certain threshold within a given range.
 
 ## Default
-A default number input allows users to input and modify a numeric value within a set range without disabling at certain thresholds. Use this variation when any value within your number input’s range is valid for your use case (for example, providing the number of storage drives associated with their computer or reporting their storage capacity).
+A default number input allows users to input and modify a numeric value without thresholds. Use this variation when any value within your number input’s range is valid for your use case (for example, providing the number of storage drives associated with their computer or reporting their storage capacity).
 
 ## With thresholds
 A number input with thresholds disables each button when a user’s numeric input passes a certain threshold. Use number inputs with thresholds to add maximum or minimum restrictions to user inputted values. 
