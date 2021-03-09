@@ -294,8 +294,8 @@ A filter query is triggered whenever a new value is set by the user. The followi
 
 | Value selector &nbsp; &nbsp; &nbsp; &nbsp; | Trigger |
 | -------------------------------------------| ------ |
-| Search field &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | The user types in an input and/or presses the Enter key after typing in the input field. This action will create a filter for the first value shown in the filtered list. |
-| Select lists &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | The user selects or deselects an item in the list. |
+| Search field &nbsp; &nbsp; &nbsp;| The user types in an input and/or presses the Enter key after typing in the input field. This action will create a filter for the first value shown in the filtered list. |
+| Select lists &nbsp; &nbsp; &nbsp; | The user selects or deselects an item in the list. |
 
 
 ## Layout considerations
