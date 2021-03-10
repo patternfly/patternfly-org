@@ -156,8 +156,6 @@ Attribute-value filter features include [filter chips](#filter-chip), [badges](#
 ### Filter group
 A filter group is a set of filters that appear side by side in a toolbar. This filter type uses the [select list](/components/select) component.
 
-<img src="./img/filter-group.png" alt="filter group with single selects" />
-
 <img src="./img/filter-group-2.png" alt="filter group with multiple selects" />
 
 1. **Filter group with only single select:** Filter group made up of single selects. When an option is selected, it is reflected in the toggle. The default selection should be “All _attribute-name_” to indicate that no filter has been applied. This option also allows users to clear whatever filter they may have applied.
@@ -272,7 +270,6 @@ Badges are used to indicate a count. In filters, badges can be used in the follo
 You may opt to use a badge in a checkbox select to indicate to the user how many items they have selected when the toggle is collapsed.
 
 <img src="./img/badge.png" alt="badge" />
-
 
 ### Type-ahead
 Adding type-ahead capabilities to your filters is useful when there is a large number of items to select from the filter dropdown. Users can quickly find the value they would like to filter by typing in the field. 
