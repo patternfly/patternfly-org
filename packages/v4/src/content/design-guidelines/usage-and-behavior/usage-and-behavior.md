@@ -34,19 +34,19 @@ Contextual help can include any on-screen elements intended to guide the user in
 **[2]** Hint could be used to convey information to advanced users (“pro-tips,” for example). However because a hint adds static content directly to the page, consider whether it’s important for this information to be shown at all times.
 
 ## Progressive disclosure
-Progressive disclosure is the practice of hiding information or providing it only when needed in order to simplify a user interface. PatternFly supports several components that can be used to progressively disclose information on a page. The [accordion](components/accordion) component allows content to be placed in stackable, expandable containers so that content can be hidden from view to simplify presentation and reduce the need for scrolling. [Expandable sections](expandable-section) allow designers to hide a single block of content or settings behind a show/hide link. [Expandable field groups](components/form) allow designers to group form elements into expandable containers.
+Progressive disclosure is the practice of hiding information or providing it only when needed in order to simplify a user interface. PatternFly supports several components that can be used to progressively disclose information on a page. The [accordion](/components/accordion) component allows content to be placed in stackable, expandable containers so that content can be hidden from view to simplify presentation and reduce the need for scrolling. [Expandable sections](/components/expandable-section) allow designers to hide a single block of content or settings behind a show/hide link. [Expandable field groups](/components/form) allow designers to group form elements into expandable containers.
 
-| | [Accordion](components/accordion) | [Expandable section](expandable-section) | [Field groups](components/form)|
+| | Accordion | Expandable section | Field groups|
 |------------------------ | :---: | :-------: | :---------------: |
 |You want to group a list of actions, links, or other data into expandable groups.|✔|⛔|⛔|
 |You want to hide advanced or seldomly used options within a form.|⛔|✔|✔|
 |You want to give the user the ability to show or hide chunks of information on a long scrolling page.|⛔|✔|⛔
 
 ## Inputting data on forms
-Data input controls allow the user to input information into a form. There are two types of input controls for bound and unbound input. Bound input controls are constrained to only input data within a defined range. Examples of bound input controls include [sliders](/components/slider) and [number inputs](/components/number-input). Unbound controls do not enforce constraints on entry and include [text inputs](/components/text-input) and [text area](/component/text-area) controls.
+Data input controls allow the user to input information into a form. There are two types of input controls for bound and unbound input. Bound input controls are constrained to only input data within a defined range. Examples of bound input controls include [sliders](/components/slider) and [number inputs](/components/number-input). Unbound controls do not enforce constraints on entry and include [text inputs](/components/text-input) and [text area](/components/text-area) controls.
 
-| | [Text input](/components/text-input) or [text area](/component/text-area) | [Number input](/components/number-input) | [Slider](/components/slider) |
-|------------------------ | :---: | :-------: | :---------------: |
+| | [Text input](/components/text-input) or [text area](/components/text-area) | [Number input](/components/number-input) | [Slider](/components/slider) |
+|------------------------ | --- | ------- | --------------- |
 |You want to enter text from the keyboard. Possible values are alpha-numeric, unconstrained, or dependent on context.|✔ [1]|⛔|⛔|
 |You want to constrain the input of numeric data to a specified range.|✔ [2]|✔|✔|
 |You want to optimize numeric data entry for direct manipulation by touch or using the mouse over the keyboard.|⛔|✔|✔|
@@ -57,10 +57,10 @@ Data input controls allow the user to input information into a form. There are t
 **[2]** It’s possible to use a standard text input for this use case and validate the entered value, but using either a number input or slider will be a more direct way to constrain the values that a user can input.
 
 ## Selecting between options on a form
-Depending on the nature of options being presented, [checkbox](/component/checkbox), [radio](/component/radio), or [switch](/components/switch) components may be used. Checkboxes are used to select one or more items from a list of options. Radio buttons are used to select from a set of mutually exclusive options. Switches indicate the state of a binary setting or object — on or off, enabled or disabled.
+Depending on the nature of options being presented, [checkbox](/components/checkbox), [radio](/components/radio), or [switch](/components/switch) components may be used. Checkboxes are used to select one or more items from a list of options. Radio buttons are used to select from a set of mutually exclusive options. Switches indicate the state of a binary setting or object — on or off, enabled or disabled.
 
 
-| | [Checkbox](/component/checkbox) | [Radio](/component/radio) | [Switch](/components/switch) |
+| | [Checkbox](/components/checkbox) | [Radio](/components/radio) | [Switch](/components/switch) |
 |------------------------ | :---: | :-------: | :---------------: |
 |The user wants to select one or more items from a list of items.|✔|⛔|✔ [1]|
 |The user wants to select from a set of mutually exclusive options.|⛔|✔|⛔|
