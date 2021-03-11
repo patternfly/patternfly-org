@@ -36,8 +36,8 @@ Contextual help can include any on-screen elements intended to guide the user in
 ## Progressive disclosure
 Progressive disclosure is the practice of hiding information or providing it only when needed in order to simplify a user interface. PatternFly supports several components that can be used to progressively disclose information on a page. The [accordion](/components/accordion) component allows content to be placed in stackable, expandable containers so that content can be hidden from view to simplify presentation and reduce the need for scrolling. [Expandable sections](/components/expandable-section) allow designers to hide a single block of content or settings behind a show/hide link. [Expandable field groups](/components/form) allow designers to group form elements into expandable containers.
 
-| | Accordion | Expandable section | Field groups|
-|------------------------ | :---: | :-------: | :---------------: |
+| | [Accordion](/components/accordion) | [Expandable section](/components/expandable-section) | [Field groups](/components/form)|
+|---- | :----: | :----: | :----: |
 |You want to group a list of actions, links, or other data into expandable groups.|✔|⛔|⛔|
 |You want to hide advanced or seldomly used options within a form.|⛔|✔|✔|
 |You want to give the user the ability to show or hide chunks of information on a long scrolling page.|⛔|✔|⛔
@@ -46,7 +46,7 @@ Progressive disclosure is the practice of hiding information or providing it onl
 Data input controls allow the user to input information into a form. There are two types of input controls for bound and unbound input. Bound input controls are constrained to only input data within a defined range. Examples of bound input controls include [sliders](/components/slider) and [number inputs](/components/number-input). Unbound controls do not enforce constraints on entry and include [text inputs](/components/text-input) and [text area](/components/text-area) controls.
 
 | | [Text input](/components/text-input) or [text area](/components/text-area) | [Number input](/components/number-input) | [Slider](/components/slider) |
-|------------------------ | --- | ------- | --------------- |
+|------------------------ | :----: | :----: | :----: |
 |You want to enter text from the keyboard. Possible values are alpha-numeric, unconstrained, or dependent on context.|✔ [1]|⛔|⛔|
 |You want to constrain the input of numeric data to a specified range.|✔ [2]|✔|✔|
 |You want to optimize numeric data entry for direct manipulation by touch or using the mouse over the keyboard.|⛔|✔|✔|
