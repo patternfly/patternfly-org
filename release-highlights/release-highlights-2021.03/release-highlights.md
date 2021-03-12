@@ -47,13 +47,9 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 ### 2021.05 (April 23)
 
-* [New List variants](https://github.com/patternfly/patternfly-react/issues/5336) - Introduce new variants of the [List](https://www.patternfly.org/v4/components/list) component that include plain lists, lists with horizontal separators, and lists with icons for communicating static information in a standard `<li>`element.
-
 * [Stacked form elements](https://github.com/patternfly/patternfly-react/issues/5286) - Allows stacking of checkboxes, radios, text inputs, etc. in a single group.
 
-* [Add help text support to definition list](https://github.com/patternfly/patternfly-react/issues/5482) - Add the ability to open pop-up help to an item in a definition list by clicking on its underlined label.
-
-* [Auto-complete search input](https://github.com/patternfly/patternfly/issues/3863) - Will introduce an option to add auto-complete behavior to the Search Input component.
+* [Auto-complete search input](https://github.com/patternfly/patternfly-react/issues/5499) - Will introduce an option to add auto-complete behavior to the Search Input component.
 
 * [Inline enhancement for Clipboard copy](https://github.com/patternfly/patternfly/issues/3906) - Add a thin variant to Clipboard copy for using inline with text.
 
