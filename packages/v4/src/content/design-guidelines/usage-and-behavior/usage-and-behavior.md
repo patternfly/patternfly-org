@@ -118,6 +118,8 @@ PatternFly provides three types of dropdown components for selecting between ite
 |You want to select options from one or more lists (sorting options, for example).|⛔|✔|⛔|
 |You want to expose a list of commands or actions in a limited space.|⛔|⛔|✔|
 
+### HTML Table
+
 <table class="ws-table pf-c-table pf-m-grid-lg" role="grid">
    <thead>
       <tr role="row">
