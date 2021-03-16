@@ -115,16 +115,16 @@ PatternFly provides three types of dropdown components for selecting between ite
 <table class="ws-table pf-c-table pf-m-grid-lg" role="grid">
    <thead>
       <tr role="row">
-         <th role="columnheader" scope="col">
+         <th class="pf-m-wrap" role="columnheader" scope="col">
             <div></div>
          </th>
-         <th align="center" role="columnheader" scope="col">
+         <th class="pf-m-wrap" align="center" role="columnheader" scope="col">
             <div><a href="/v4/components/select">Select</a></div>
          </th>
-         <th align="center" role="columnheader" scope="col">
+         <th class="pf-m-wrap" align="center" role="columnheader" scope="col">
             <div><a href="/v4/components/options-menu">Options menu</a></div>
          </th>
-         <th align="center" role="columnheader" scope="col">
+         <th class="pf-m-wrap" align="center" role="columnheader" scope="col">
             <div><a href="/v4/components/dropdown">Dropdown</a></div>
          </th>
       </tr>
