@@ -11,8 +11,8 @@ A **number input** provides a quick and effective way for users to enter and mod
 1. **Label:** Indicates what value the user should input in the numeric field.
 2. **Input field:** Area for the user to type in their numeric input.
 3. **Buttons:** Increase or decrease the value by set increments.
-4. **Helper text:** Explains or provides additional context that helps the user provide the right information. This is an optional field.
-5. **Unit:** Provides a unit symbol for the value in the input field, when applicable. This is an optional field.
+4. **Helper text (optional):** Explains or provides additional context that helps the user provide the right information.
+5. **Unit (optional):** Provides a unit symbol for the value in the input field, when applicable. 
 
 ## Usage
 **Use a number input when:**
