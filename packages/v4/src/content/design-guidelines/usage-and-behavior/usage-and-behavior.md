@@ -110,14 +110,6 @@ It is often necessary to display more details about an object listed in a summar
 ## Dropdown menus for actions and selections
 PatternFly provides three types of dropdown components for selecting between items in a menu. The [select](/components/select) component is used to select one or more values from a list. The [options menu](/components/options-menu) is similar to a select but is more often used for selecting between optional settings. [Dropdowns](/components/dropdown) are used to expose a list of possible actions.
 
-| | [Select](/components/select) | [Options menu](/components/options-menu) | [Dropdown](/components/dropdown) |
-|------------------------ | :---: | :-------: | :---------------: |
-|You want to select a value or multiple values from a list.|✔|⛔|⛔|
-|You want to select filter terms from a list.|✔|⛔|⛔|
-|You want to make the selected value visible when the menu is closed.|✔|⛔|⛔|
-|You want to select options from one or more lists (sorting options, for example).|⛔|✔|⛔|
-|You want to expose a list of commands or actions in a limited space.|⛔|⛔|✔|
-
 ### HTML Table
 
 <table class="ws-table pf-c-table pf-m-grid-lg" role="grid">
@@ -210,3 +202,11 @@ PatternFly provides three types of dropdown components for selecting between ite
       </tr>
    </tbody>
 </table>
+
+| | [Select](/components/select) | [Options menu](/components/options-menu) | [Dropdown](/components/dropdown) |
+|------------------------ | :---: | :-------: | :---------------: |
+|You want to select a value or multiple values from a list.|✔|⛔|⛔|
+|You want to select filter terms from a list.|✔|⛔|⛔|
+|You want to make the selected value visible when the menu is closed.|✔|⛔|⛔|
+|You want to select options from one or more lists (sorting options, for example).|⛔|✔|⛔|
+|You want to expose a list of commands or actions in a limited space.|⛔|⛔|✔|
