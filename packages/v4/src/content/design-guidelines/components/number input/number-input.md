@@ -30,7 +30,7 @@ A **number input** provides a quick and effective way for users to enter and mod
 * Display a default numeric value in the input field that users can modify by typing directly into the input field or scale using the increase or decrease buttons.
 * Keep labels concise and specific to effectively communicate what value the user should enter into the input field.
 * Determine an increment size relative to your specific value range. Scale your increment size to accommodate for the types of values users will input in context.
-**For example: If your range is from 0-10, have increments of 1, but if your range is from 0-100, have increments of 10.**
+For example: If your range is from 0-10, have increments of 1, but if your range is from 0-100, have increments of 10.
 * Include unit symbols to the right of the text input and increase button, depending on your use case. Always use a unit’s standard abbreviation or symbol. For a list of recommended symbols, see our <a href="https://www.patternfly.org/v4/ux-writing/units-and-symbols#writing-units-of-measure">Units and symbols page</a>.
 <img src="./img/number_input_states.png" alt="Number input states" width="740px"/>
 
@@ -47,6 +47,7 @@ A default number input allows users to input and modify a numeric value without 
 A number input with thresholds disables each button when a user’s numeric input passes a certain threshold. Use number inputs with thresholds to add maximum or minimum restrictions to user inputted values. 
 
 When adding thresholds to a number input, be sure to inform users with text to minimize their risk for input errors. If a number input for the number of storage drives has a maximum input value of 20, communicate this limit in helper text: <i>Maximum capacity 20</i>.
+
 <img src="./img/with_threshold.png" alt="Number input with threshold" width="474px"/>
 
 ## Accessibility
