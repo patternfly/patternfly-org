@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.3.21 (2021-03-17)
+
+
+### Bug Fixes
+
+* **buble:** perfect JSXText regex? ([#2413](https://github.com/patternfly/patternfly-org/issues/2413)) ([ab4f6de](https://github.com/patternfly/patternfly-org/commit/ab4f6defc873ae6e2536103f8bcd5f7996041ec9))
+
+
+
+
+
 ## 4.3.20 (2021-03-17)
 
 **Note:** Version bump only for package patternfly-org-4
