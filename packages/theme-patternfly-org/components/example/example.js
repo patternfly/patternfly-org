@@ -62,7 +62,6 @@ export const Example = ({
   const [darkMode, setDarkMode] = React.useState(false);
   const location = useLocation();
 
-  const exampleName = title.replace(/-/g, ' ').replace(/  /g, '-');
   const scope = {
     ...liveContext,
     // These 2 are in the bundle anyways for the site since we dogfood
@@ -107,7 +106,7 @@ export const Example = ({
           headingLevel="h3"
           className="ws-example-heading"
         >
-          {exampleName}
+          {title}
         </AutoLinkHeader>
         {children}
       </div>
@@ -127,7 +126,7 @@ export const Example = ({
                 className="ws-preview__thumbnail-link"
                 href={fullscreenLink}
                 target="_blank"
-                aria-label={`Open fullscreen ${exampleName} example`}
+                aria-label={`Open fullscreen ${title} example`}
               >
                 <img src={thumbnail.src} width={thumbnail.width} height={thumbnail.height} />
               </a>
