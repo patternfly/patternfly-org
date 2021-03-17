@@ -8,10 +8,10 @@
     "theme-patternfly-org": "scripts/cli/cli.js"
   },
   "dependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-proposal-class-properties": "^7.0.0",
-    "@babel/plugin-transform-react-jsx": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
+    "@babel/core": "^7.13.0",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-transform-react-jsx": "^7.12.0",
+    "@babel/preset-env": "^7.13.0",
     "@mdx-js/util": "^1.6.16",
     "@reach/router": "^1.3.4",
     "acorn": "^7.3.1",
@@ -39,7 +39,7 @@
     "lodash-es": "^4.17.15",
     "mdast-util-to-hast": "^9.1.0",
     "mdurl": "^1.0.0",
-    "mini-css-extract-plugin": "^0.11.1",
+    "mini-css-extract-plugin": "^1.3.9",
     "monaco-editor-webpack-plugin": "^2.1.0",
     "null-loader": "^4.0.0",
     "postcss": "^7.0.32",
