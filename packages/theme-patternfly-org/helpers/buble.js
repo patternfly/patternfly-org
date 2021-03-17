@@ -58,7 +58,7 @@ const generator = Object.assign({}, baseGenerator, {
     }
     if (node.value) {
       state.write(',"');
-      state.write(node.value.replace(/"/g, '\\"').replace(/^\s+/, '').replace(/\s*\n\s*/g, ''));
+      state.write(node.value.replace(/"/g, '\\"').replace(/\n\s*/g, ''));
       state.write('"');
     }
   },
@@ -105,9 +105,11 @@ function transform(code) {
     allowReturnOutsideFunction: true
   });
   code = generate(ast, { generator });
+  console.log(code);
   return { code };
 }
 
 module.exports = {
   transform
 };
+
