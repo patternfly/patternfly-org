@@ -136,7 +136,7 @@ If all form fields are required, don’t use an asterisk for each one. Instead, 
 
 ### User help
 
-There are three different methods for providing assistance within a form: Placeholder text, helper text, and popovers.
+There are three different methods for providing assistance within a form: [Placeholder text](#Placeholder-text), [helper text](#helper-text), and [popovers](#popovers).
 
 
 #### Placeholder text
@@ -152,7 +152,7 @@ Use placeholder text when:
 
 Never use placeholder text to replace field labels or communicate crucial information since it disappears as soon as a user begins typing in a field.
 
-Always precede placeholder text with “Example,” followed by a space so that users accessing the form with screen readers will know the difference between the form label and the provided placeholder text. Placeholder text that doesn’t use an actual example doesn’t need to be introduced as one.
+If your placeholder text shares an example, precede it with “Example,” followed by a space so that users accessing the form with screen readers will know the difference between the field label and the provided placeholder text. 
 
 Examples:
 
@@ -164,6 +164,8 @@ Examples:
 
 <img src="./img/placeholder-format.png" alt="Example of a date placeholder text inside text input field" width="323"/>
 
+For more information about writing effective placeholder text, see the [content](#content) section.
+
 #### Helper text
 
 <img src="./img/helper-text.png" alt="Example of helper text underneath the text input field" width="323"/>
@@ -172,20 +174,25 @@ Helper text is brief, permanent text below a form field that helps a user provid
 
 Align helper text with the specific input for which it offers assistance. If your helper text contains information about the label rather than the input field, place it with the label instead.
 
+For more information about writing effective helper text, see the [content](#content) section.
+
 #### Popovers
 
 Use a [popover](/components/popover/design-guidelines) for fields that might require additional background or explanation. Popovers may also link to external help pages or other related documentation. 
 
-In a form, indicate a popovers with an unfilled question mark circle that reveals information when clicked. Place popovers to the right of their corresponding form label.
+In a form, indicate a popover with an unfilled question mark circle that reveals information when clicked. Place popovers to the right of their corresponding form label.
 
  <img src="./img/popover.png" alt="Example of a popover used in a form field to provide additional context for where a user can find the required information" width="411"/>
 
  Use popovers to:
 
-* Provide content that requires formatting like numbered or bulleted lists, or that requires you to include additional elements like buttons, links, or images.
 * Guide users to where they can find essential information needed to complete a given form field.
 
+* Provide content that requires formatting like numbered or bulleted lists, or that requires you to include additional elements like buttons, links, or images.
+
 Never hide critical information inside a popover, since popovers only surface when a user triggers them.
+
+For more information about writing effective popovers, see the [content](#content) section.
 
 ### Progressive disclosure
 Use progressive disclosure to hide and show form fields based on a user’s selection to keep their workflow short and allow them to focus on fields relevant to them. Progressive disclosure also avoids using color to indicate whether or not a field is available, making forms more accessible for users with visual impairments.
@@ -205,7 +212,7 @@ After a form error occurs, users won’t have access to placeholder text (replac
 
 Example: Instead of “Invalid input,” provide an error message that includes the correct format to re-write the input: “Date format must be MM-DD-YYYY.”
 
- <img src="./img/error-message.png" alt="Visualized example for right vs. wrong way to write an input error. Do communicate specific format errors; don't just indicate and 'invalid input.'" width="649"/>
+ <img src="./img/error-message.png" alt="Visualized example for right vs. wrong way to write an input error. Do communicate specific format errors; don't just indicate an 'invalid input.'" width="649"/>
 
 Errors can be validated at two points in the workflow: On loss of focus or on submission. The error state you use depends on whether validation happens on the client side (loss of focus) or server side (on submission).
 
@@ -223,7 +230,9 @@ Validation on submission occurs when a user attempts to submit a form. In this s
 
 For validation on submission, supplement field level errors with anor validation on submission, use an [inline alert](/components/alert/design-guidelines#inline-alerts) to make it simple for the user to quickly identify and address areas that need attention. The inline alert should be placed below the form’s header and description, and it should equal the total width of the form. 
 
-<img src="./img/validation-submission.png" alt="Example of errors after validation on submission, including an inline alert at the top, and field level errors"/>
+<img src="./img/validation-submission.png" alt="Example of errors after validation on submission, including an inline alert at the top, and field level errors" width="794"/>
+
+Learn more about writing error messages in the [content](#content) section.
 
 ## Spacing
 Forms may be placed in several contexts including on a page, in a wizard, or in a modal. Your chosen form placement may impact specific spacing considerations, but general form spacing requirements apply across these contexts.
@@ -289,7 +298,9 @@ Never design multi-column forms to read like a book, where the left column is co
 
 ## Content
 
-When writing form content, use your understanding of the user’s task and context to plan your content hierarchy. As a user moves through a form, they input and select information based on the content provided, almost like a conversation. Forms combine several content types to guide users toward completion:
+When writing form content, use your understanding of the user’s task and context to plan your content hierarchy. As a user moves through a form, they input and select information based on the content provided, almost like a conversation. 
+
+Forms combine several content types to guide users toward completion:
 
 * Field labels
 * Placeholder text
@@ -302,11 +313,35 @@ Follow these general guidelines for each content type as you structure content w
 
 ### Field labels
 
-Include the most critical information about what data the user needs to provide. Each label should be unique and identify all the information being collected.
+Include the most critical information about what data the user needs to provide. Each label should be unique and identify all the information being collected. 
+
+Whenever possible, keep field labels under 5 words and avoid using the same field label more than once in the same form.
+
+Examples:
+
+* *Full name*
+* *Email*
+* *Phone number*
 
 ### Placeholder text
 
-Include formatting expectations to inform users about specifications needed to input successful information. 
+Include examples or formatting expectations to inform users about specifications needed to input information without errors. 
+
+If your placeholder text shares an example of a correct input, introduce it as an example so that users can distinguish impermanent examples from field labels and their own inputted text.
+
+Examples:
+* *Example, John Smith*
+* *Example, (555) 555-5555*
+
+Placeholder text that doesn’t give an example doesn’t need to be introduced as one. If your placeholder text simply communicates a field's required format, write the format without an introduction.
+
+Examples:
+* *MM-DD-YYYY*
+* *johnsmith@example.com*
+
+**Note:** Once users start typing, placeholder text disappears. Consider communicating crucial formatting requirements through helper text instead.
+
+
 
 See our [text input guidelines](/components/text-input/design-guidelines) for more specific guidance on writing placeholder text for text input fields.
 
@@ -320,13 +355,23 @@ Include background information and additional context as field-level help. Popov
 
 ### Error messages
 
-See our [UX writing style guide](/ux-writing/error-messages) for guidance on writing effective error messages.
+Error messages help users break down barriers between form errors and successful form submission. Whether you surface error messages on loss of focus or on submission, be sure to alert users to specific errors within their form and provide key actions they can use to fix them.
+
+If a user leaves a required field empty or incomplete, use a field level error message to communicate the error in as little words as possible: *Required* or *Required field*.
+
+If a user formats an input incorrectly, avoid unclear error messages like *Invalid input*. Instead, specify what constitutes a valid input.
+
+Examples:
+* *Date format must be MM-DD-YYYY*
+* *Enter a valid email: email@provider.com*
+
+For more error message guidance, see our [UX writing style guide](/ux-writing/error-messages).
 
 ### Buttons
 
-All button text should clearly and specifically communicate the action it triggers. Whenever possible, use specific verbs to write button text to communicate what a user accomplishes by submitting a form.
+All button text should clearly and specifically communicate the action it triggers. Whenever possible, use specific verbs to write button text that communicates what a user accomplishes by submitting a form.
 
-Example: Instead of *Submit form*, a submit button on a subscription form should read *Subscribe*.
+Example: Instead of *Submit*, a submit button on a subscription form should read *Subscribe*.
 
 For more button text guidance, see our [button content guidelines](/button/design-guidelines#content).
 
