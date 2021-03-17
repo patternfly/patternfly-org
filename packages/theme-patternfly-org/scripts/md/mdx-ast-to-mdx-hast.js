@@ -102,7 +102,7 @@ function mdxAstToMdxHast() {
             file.fail(`Error parsing "${node.meta}": ${error}`);
           }
         }
-        if (node.lang === 'js' && !(node.meta && node.meta.noLive)) {
+        if (node.lang === 'js' && !properties.noLive) {
           try {
             const declaration = getExampleDeclaration(properties.code);
             if (
