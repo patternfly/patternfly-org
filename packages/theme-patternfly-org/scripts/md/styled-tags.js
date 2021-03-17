@@ -38,6 +38,8 @@ function styledTags() {
               tr.children
                 .filter(child => child.tagName === 'th')
                 .forEach(th => {
+                  th.properties.className = th.properties.className || '';
+                  th.properties.className += ' pf-m-wrap';
                   th.properties.role = 'columnheader';
                   th.properties.scope = 'col';
                   let colName = '';
