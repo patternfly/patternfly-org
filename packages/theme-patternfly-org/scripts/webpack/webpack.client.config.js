@@ -86,9 +86,6 @@ const clientConfig = async (env, argv) => {
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
-              options: {
-                hmr: false
-              }
             },
             {
               loader: 'css-loader'
