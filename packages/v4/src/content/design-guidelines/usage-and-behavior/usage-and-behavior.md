@@ -110,93 +110,10 @@ It is often necessary to display more details about an object listed in a summar
 ## Dropdown menus for actions and selections
 PatternFly provides three types of dropdown components for selecting between items in a menu. The [select](/components/select) component is used to select one or more values from a list. The [options menu](/components/options-menu) is similar to a select but is more often used for selecting between optional settings. [Dropdowns](/components/dropdown) are used to expose a list of possible actions.
 
-<table class="ws-table pf-c-table pf-m-grid-lg" role="grid">
-   <thead>
-      <tr role="row">
-         <th class="pf-m-wrap" role="columnheader" scope="col">
-            <div></div>
-         </th>
-         <th class="pf-m-wrap" align="center" role="columnheader" scope="col">
-            <div><a href="/v4/components/select">Select</a></div>
-         </th>
-         <th class="pf-m-wrap" align="center" role="columnheader" scope="col">
-            <div><a href="/v4/components/options-menu">Options menu</a></div>
-         </th>
-         <th class="pf-m-wrap" align="center" role="columnheader" scope="col">
-            <div><a href="/v4/components/dropdown">Dropdown</a></div>
-         </th>
-      </tr>
-   </thead>
-   <tbody role="rowgroup">
-      <tr role="row">
-         <td role="cell">
-            <div>You want to select a value or multiple values from a list.</div>
-         </td>
-         <td align="center" role="cell" data-label="Select">
-            <div>✔</div>
-         </td>
-         <td align="center" role="cell" data-label="Options menu">
-            <div>⛔</div>
-         </td>
-         <td align="center" role="cell" data-label="Dropdown">
-            <div>⛔</div>
-         </td>
-      </tr>
-      <tr role="row">
-         <td role="cell">
-            <div>You want to select filter terms from a list.</div>
-         </td>
-         <td align="center" role="cell" data-label="Select">
-            <div>✔</div>
-         </td>
-         <td align="center" role="cell" data-label="Options menu">
-            <div>⛔</div>
-         </td>
-         <td align="center" role="cell" data-label="Dropdown">
-            <div>⛔</div>
-         </td>
-      </tr>
-      <tr role="row">
-         <td role="cell">
-            <div>You want to make the selected value visible when the menu is closed.</div>
-         </td>
-         <td align="center" role="cell" data-label="Select">
-            <div>✔</div>
-         </td>
-         <td align="center" role="cell" data-label="Options menu">
-            <div>⛔</div>
-         </td>
-         <td align="center" role="cell" data-label="Dropdown">
-            <div>⛔</div>
-         </td>
-      </tr>
-      <tr role="row">
-         <td role="cell">
-            <div>You want to select options from one or more lists (sorting options, for example).</div>
-         </td>
-         <td align="center" role="cell" data-label="Select">
-            <div>⛔</div>
-         </td>
-         <td align="center" role="cell" data-label="Options menu">
-            <div>✔</div>
-         </td>
-         <td align="center" role="cell" data-label="Dropdown">
-            <div>⛔</div>
-         </td>
-      </tr>
-      <tr role="row">
-         <td role="cell">
-            <div>You want to expose a list of commands or actions in a limited space.</div>
-         </td>
-         <td align="center" role="cell" data-label="Select">
-            <div>⛔</div>
-         </td>
-         <td align="center" role="cell" data-label="Options menu">
-            <div>⛔</div>
-         </td>
-         <td align="center" role="cell" data-label="Dropdown">
-            <div>✔</div>
-         </td>
-      </tr>
-   </tbody>
-</table>
+| | [Select](/components/select) | [Options menu](/components/options-menu) | [Dropdown](/components/dropdown) |
+|------------------------ | :---: | :-------: | :---------------: |
+|You want to select a value or multiple values from a list.|✔|⛔|⛔|
+|You want to select filter terms from a list.|✔|⛔|⛔|
+|You want to make the selected value visible when the menu is closed.|✔|⛔|⛔|
+|You want to select options from one or more lists (sorting options, for example).|⛔|✔|⛔|
+|You want to expose a list of commands or actions in a limited space.|⛔|⛔|✔|
