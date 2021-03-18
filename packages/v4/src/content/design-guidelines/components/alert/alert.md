@@ -6,12 +6,13 @@ related: ['Alert', 'Alert group']
 
 An **alert** is a notification that provides brief information to the user without blocking their workflow.
 
-There are two main types of alerts:
-- **Inline alerts**: Inline alerts communicate information about a specific user action on a page. An inline alert appears within the content area and disappears when the user closes it or navigates away from the page.
+There are two main types of alerts:  
+
+- **Inline alerts**: Inline alerts communicate information about a specific user action on a page. An inline alert appears within the content area and disappears when the user closes it or navigates away from the page.
 
 ![inline notification placement](./img/inline-notification.png)
 
-- **Toast alerts**: Toast alerts communicate information about an update, confirmation, or other activity. A toast alert overlys content in the upper-right corner of the page and disappears when it times out or when the user dismisses it.
+- **Toast alerts**: Toast alerts communicate information about an update, confirmation, or other activity. A toast alert overlys content in the upper-right corner of the page and disappears when it times out or when the user dismisses it.
 
 ![toast notification placement](./img/toast-notification.png)
 
@@ -20,10 +21,14 @@ Toast alerts are always dismissible, and inline alerts can be both dismissable a
 
 <img src="./img/alert-types.png" alt="Alert types" />
 
-1. **Status area**: The status area indicates the severity of the alert with a specific icon and color.
-2. **Alert title**: The alert title concisely communicates the alert’s main message. Its text color is coded to match the alert type.
-3. **Close button**: The close button is used to dismiss the alert. It’s required for toast alerts and optional for inline alerts.
-4. **Actions (optional)**: The actions area enables the user to take a specific action in relation to the alert. One or more actions can be placed inside of an alert.
+1. **Status area**: The status area indicates the severity of the alert with a specific icon and color.  
+
+2. **Alert title**: The alert title concisely communicates the alert’s main message. Its text color is coded to match the alert type. 
+
+3. **Close button**: The close button is used to dismiss the alert. It’s required for toast alerts and optional for inline alerts. 
+
+4. **Actions (optional)**: The actions area enables the user to take a specific action in relation to the alert. One or more actions can be placed inside of an alert. 
+
 5. **Description (optional)**: The description field communicates additional information to the user. It can also include a navigation link as an alternative to an action.
 
 ## Communicating severity
@@ -82,19 +87,9 @@ Toast alerts are commonly used in the following situations:
 - Informing the user that their action was completed with errors
 
 ## Content
-- Keep your toast alerts concise. If you can, use fragments instead of sentences.
 
-<div class="ws-content-table">
 
-| **Do** | **Don’t** |
-|--------|-----------|
-| Message sent| Your message has been sent.|
-
-</div>
-
-<br />
-
-- Avoid using “success” and “successfully.” They’re extraneous.
+- In inline alerts and toast alerts, avoid using “success” and “successfully.” They’re extraneous.
 
 <div class="ws-content-table">
 
@@ -104,9 +99,25 @@ Toast alerts are commonly used in the following situations:
 
 </div>
 
+<br /> 
+
+- Be concise. In one-list toast alerts, use fragments instead of sentences if possible.
+
+<div class="ws-content-table">
+
+| **Do** | **Don’t** |
+|--------|-----------|
+| Message sent| Your message has been sent.|
+
+</div> 
+
 <br />
 
-- In toast alerts containing links for further user action, include text that describes how the user can navigate through the UI to perform the action. Learn more about how this content best practice supports accessibility in the next section.
+- In toast alerts containing links, describe how the user can navigate through the UI to perform the action. Learn more about how descriptive text supports accessibility in the next section.
+
+| **Do** | **Don’t** |
+|--------|-----------|
+| From the **Settings** tab, click **View logs.**| **View logs**|
 
 ## Accessibility considerations
 Toast alerts present special challenges for accessibility. Screen readers announce the arrival and message content of an incoming toast alert, but user focus will not be placed there. This makes it difficult for these users to directly act on the alert itself.
@@ -118,7 +129,6 @@ For example, this toast alert is not accessible because it does not include text
 <img src="./img/alert-no-description.png" alt="alert without descriptive text" width="600px"/>
 
 This toast alert is accessible to sighted and non-sighted users because it includes text that explains to the user where to go within the UI to perform the action: 
-
 
 <img src="./img/alert-description.png" alt="alert with descriptive text" width="600px"/>
 
