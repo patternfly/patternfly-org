@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageSection, Title } from '@patternfly/react-core';
+import { PageSection, Title, PageNavigation, PageGroup, PageSectionVariants, Nav, NavList, NavItem } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Router, useLocation } from '@reach/router';
@@ -129,13 +129,15 @@ export const MDXTemplate = ({
   return (
     <React.Fragment>
       <PageSection
-        id={isSinglePage ? 'main-content' : 'nav-content'}
-        type={isSinglePage ? 'default' : 'nav'}
+        className={isSinglePage ? 'ws-docs-title' : ''}
+        variant={isSinglePage ? PageSectionVariants.default : PageSectionVariants.light}
       >
-        {!katacodaLayout && <Title size="4xl" headingLevel="h1" id="ws-page-title" className={isSinglePage ? 'pf-u-p-lg' : ''}>
+        {!katacodaLayout && <Title size="4xl" headingLevel="h1" id="ws-page-title">
           {title}
         </Title>}
-        {!isSinglePage && (
+      </PageSection>
+      {!isSinglePage && (
+        <PageSection className="pf-m-light pf-u-pb-0 pf-u-pt-0">
           <div className="pf-c-tabs ws-source-tabs">
             <ul className="pf-c-tabs__list">
               {sourceKeys.map((source, index) => (
@@ -153,13 +155,13 @@ export const MDXTemplate = ({
               ))}
             </ul>
           </div>
-        )}
+        </PageSection>
+      )}
+      <PageSection id="main-content" className={isSinglePage ? 'pf-m-fill' : 'pf-m-light'}>
         {isSinglePage && (
-          <MDXChildTemplate {...sources[0]} />
+            <MDXChildTemplate {...sources[0]} />
         )}
-      </PageSection>
-      {!isSinglePage && (
-        <PageSection id="main-content">
+        {!isSinglePage && (
           <Router className="pf-u-h-100" primary={false}>
             {sources
               .map((source, index) => {
@@ -169,8 +171,8 @@ export const MDXTemplate = ({
               .map(MDXChildTemplate)
             }
           </Router>
-        </PageSection>
-      )}
+        )}
+      </PageSection>
     </React.Fragment>
   );
 }

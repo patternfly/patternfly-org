@@ -27,10 +27,6 @@
 }
 
 .ws-color-swatch-description-code {
-  display: inline-block;
-  font-size: var(--pf-global--FontSize--xs);
-  padding-left: var(--pf-global--spacer--sm);
-  padding-right: var(--pf-global--spacer--sm);
   border: 2px solid #d1d1d1;
   background: var(--pf-global--palette--black-150);
 }

@@ -115,7 +115,7 @@ export const TypographyGrid = ({title, note, symbol, fontWeight, fontWeightText,
             </tr>
             <tr>
               <td>Font size CSS variable:</td>
-              <td><span className="ws-typography-variableName">{variableName}</span></td>
+              <td><code className="ws-code">{variableName}</code></td>
             </tr>
           </tbody>
         </table>

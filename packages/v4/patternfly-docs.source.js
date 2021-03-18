@@ -33,10 +33,14 @@ module.exports = (sourceMD, sourceProps) => {
   const reactChartsPath = require
     .resolve('@patternfly/react-charts/package.json')
     .replace('package.json', 'src');
+  const reactCodeEditorPath = require
+    .resolve('@patternfly/react-code-editor/package.json')
+    .replace('package.json', 'src');
   const reactPropsIgnore = '**/*.test.tsx';
   sourceProps(path.join(reactCorePath, '/**/*.tsx'), reactPropsIgnore);
   sourceProps(path.join(reactTablePath, '/**/*.tsx'), reactPropsIgnore);
   sourceProps(path.join(reactChartsPath, '/**/*.tsx'),reactPropsIgnore);
+  sourceProps(path.join(reactCodeEditorPath, '/**/*.tsx'),reactPropsIgnore);
 
   // React MD
   sourceMD(path.join(reactCorePath, '/**/examples/*.md'), 'react');
@@ -45,9 +49,12 @@ module.exports = (sourceMD, sourceProps) => {
   // React-table MD
   sourceMD(path.join(reactTablePath, '/**/examples/*.md'), 'react');
   sourceMD(path.join(reactTablePath, '/**/demos/*.md'), 'react-demos');
-
+  
   // Charts MD (no demos yet)
   sourceMD(path.join(reactChartsPath, '/**/examples/*.md'), 'react');
+
+  // React-code-editor MD
+  sourceMD(path.join(reactCodeEditorPath, '/**/examples/*.md'), 'react');
 
   // Release notes
   sourceMD(require.resolve('@patternfly/patternfly/RELEASE-NOTES.md'), 'html');
