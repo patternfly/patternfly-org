@@ -84,7 +84,7 @@ Toast alerts are commonly used in the following situations:
 ## Content
 - Keep your toast alerts concise. If you can, use fragments instead of sentences.
 
-<div class=“ws-content-table”>
+<div class="ws-content-table">
 
 | **Do** | **Don’t** |
 |--------|-----------|
@@ -96,7 +96,7 @@ Toast alerts are commonly used in the following situations:
 
 - Avoid using “success” and “successfully.” They’re extraneous.
 
-<div class=“ws-content-table”>
+<div class="ws-content-table">
 
 | **Do** | **Don’t** |
 |--------|-----------|
