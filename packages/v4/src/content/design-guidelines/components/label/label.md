@@ -42,11 +42,11 @@ For labels that are easily removed or dismissed, use a dismissable label. A comm
 
 Optionally add an icon to your label in cases where additional visual information is helpful.
 
-<img src="./img/labels-with-icons.png" alt="Example of different colored labels with icons" width="336"/>
+<img src="./img/labels-with-icons.png" alt="Example of different colored labels with icons" width="318"/>
 
 You can also use them to distinguish labels of the same color if needed.
 
-<img src="./img/labels-with-icons2.png" alt="Example of labels of the same color with icons" width="328"/>
+<img src="./img/labels-with-icons2.png" alt="Example of labels of the same color with icons" width="320"/>
 
 ### When to use clickable labels
 
@@ -59,4 +59,4 @@ Labels can be used almost anywhere in a UI, but are commonly used in table views
 
 <img src="./img/table-view.png" alt="Example labels in a table" width="1209"/>
 
-<img src="./img/catalog-view.png" alt="Example labels in a catalog" width="1290"/>
+<img src="./img/catalog-view.png" alt="Example labels in a catalog" width="1204"/>
