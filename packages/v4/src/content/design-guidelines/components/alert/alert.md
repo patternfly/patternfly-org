@@ -101,7 +101,7 @@ Toast alerts are commonly used in the following situations:
 
 <br /> 
 
-- Be concise. In one-list toast alerts, use fragments instead of sentences if possible.
+- Be concise. In one-line toast alerts, use fragments instead of sentences if possible.
 
 <div class="ws-content-table">
 
