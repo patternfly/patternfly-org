@@ -7,7 +7,7 @@ A **login page** allows a user to gain access to an application by entering thei
 
 ## Elements
 
-<img src="./img/elements.png" alt="Elements of a login page" width="990"/>
+<img src="./img/elements.png" alt="Elements of a login page" width="1500"/>
 
 1. **Title:** Located at the top of the login card. The title can be the product name or any other term that makes sense for your application. If the text is longer than the space allowed, it should wrap to the next line.
 
@@ -15,23 +15,25 @@ A **login page** allows a user to gain access to an application by entering thei
 
 3. **Required fields:** Username and password are both required fields. Some applications may require additional fields like a specific server or geo-location. When additional fields are required, they should be placed directly below the password field. The login card will expand to accommodate additional fields. Try to limit the total number of additional fields to three or less. Also, you may use [progressive disclosure](/components/form/design-guidelines#use-progressive-disclosure) if the field value has dependency on the previous relevant field.
 
-4. **Checkbox (optional):** Located under the required (and any additional) fields, and labeled based on the needs of the application.
+4. **Show/Hide password (optional):** Allows users to view and hide passwords on password fields.
 
-5. **Login button:** The button label should be “Log in.”
+5. **Checkbox (optional):** Located under the required (and any additional) fields, and labeled based on the needs of the application.
 
-6. **Social media buttons:** Displays available social login methods in the order from most frequently used to least frequently used. Logos that take up more than one line can wrap to a second line. Each logo should have a tooltip label on hover that states the application name.
+6. **Login button:** The button label should be “Log in.”
 
-7. **Sign up (optional):** Takes user to the sign up flow.
+7. **Social media buttons:** Displays available social login methods in the order from most frequently used to least frequently used. Logos that take up more than one line can wrap to a second line. Each logo should have a tooltip label on hover that states the application name.
 
-8. **Forgot password/username link (optional):** Takes users to a page where they can recover their password and/or username.
+8. **Sign up (optional):** Takes user to the sign up flow.
 
-9. **[Background image](/components/background-image):** Any background image can be used for your application; it will automatically have a gradient applied to it to aid readability.
+9. **Forgot password/username link (optional):** Takes users to a page where they can recover their password and/or username.
 
-10. **Logotype:** Provides an area for product logo.
+10. **[Background image](/components/background-image):** Any background image can be used for your application; it will automatically have a gradient applied to it to aid readability.
 
-11. **Description (optional):** Provides a description of the website or application.
+11. **Logotype:** Provides an area for product logo.
 
-12. **Links (optional):** Provides an area for additional links to pages where the user can get more information or access help.
+12. **Description (optional):** Provides a description of the website or application.
+
+13. **Links (optional):** Provides an area for additional links to pages where the user can get more information or access help.
 
 ## Usage
 
