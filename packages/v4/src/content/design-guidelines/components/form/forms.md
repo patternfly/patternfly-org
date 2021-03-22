@@ -345,7 +345,7 @@ See our [text input guidelines](/components/text-input/design-guidelines) for mo
 
 ### Helper text
 
-Use helper text to display critical secondary information that helps users input correct information on their first attempt. Describe any conditions for their inputted information to prevent unnecessary errors, like specifying that a name for a new file or asset must be a unique one.
+Use helper text to display critical secondary information that helps users input correct information on their first attempt. Describe any conditions for their inputted information to prevent unnecessary errors, like specifying that a name for a new asset must be a unique one.
 
 ### Popovers
 
