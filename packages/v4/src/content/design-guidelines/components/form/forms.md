@@ -228,7 +228,7 @@ Validate errors on loss of focus when:
 ### Error validation on submission
 Validation on submission occurs when a user attempts to submit a form. In this scenario, the user completes the form in its entirety and the page reloads with any errors detected.
 
-For validation on submission, supplement field level errors with anor validation on submission, use an [inline alert](/components/alert/design-guidelines#inline-alerts) to make it simple for the user to quickly identify and address areas that need attention. The inline alert should be placed below the form’s header and description, and it should equal the total width of the form. 
+For validation on submission, supplement field level errors with an [inline alert](/components/alert/design-guidelines#inline-alerts) to make it simple for the user to quickly identify and address areas that need attention. The inline alert should be placed below the form’s header and description, and it should equal the total width of the form. 
 
 <img src="./img/validation-submission.png" alt="Example of errors after validation on submission, including an inline alert at the top, and field level errors" width="794"/>
 
@@ -269,7 +269,7 @@ All input fields in your form will be the same length, except for in a [multi-co
 ### Forms in a wizard
 Similar to an in-page form, forms in wizards should be left-aligned in the content area and have a minimum of 24px padding separating its content from neighboring elements. 
 
-In a wizard, form error validation for a form in a wizard should occur when or by the time the user clicks the “Next” button. Don’t wait until the user has completed the whole wizard to notify them of possible errors and their location.
+In a wizard, form error validation should occur when or by the time the user clicks the “Next” button. Don’t wait until the user has completed the whole wizard to notify them of possible errors and their location.
 
 <img src="./img/wizard-form.png" alt="Example of a form in an in-page wizard"/>
 
@@ -313,9 +313,9 @@ Follow these general guidelines for each content type as you structure content w
 
 ### Field labels
 
-Include the most critical information about what data the user needs to provide. Each label should be unique and identify all the information being collected. 
+Use field labels to specify the most critical information about what data the user needs to provide. Each label should be unique and identify all the information being collected. 
 
-Whenever possible, keep field labels under 5 words and avoid using the same field label more than once in the same form.
+Whenever possible, keep field labels under five words and avoid using the same field label more than once in the same form.
 
 Examples:
 
@@ -325,9 +325,9 @@ Examples:
 
 ### Placeholder text
 
-Include examples or formatting expectations to inform users about specifications needed to input information without errors. 
+Use placeholder text to demonstrate correct inputs so that users are aware of formatting expectations and specifications needed to provide information without errors. 
 
-If your placeholder text shares an example of a correct input, introduce it as an example so that users can distinguish impermanent examples from field labels and their own inputted text.
+If your placeholder text demonstrates a correct input, introduce it as an example so that users can distinguish impermanent examples from field labels and their own inputted text.
 
 Examples:
 * *Example, John Smith*
@@ -339,23 +339,27 @@ Examples:
 * *MM-DD-YYYY*
 * *johnsmith@example.com*
 
-**Note:** Once users start typing, placeholder text disappears. Consider communicating crucial formatting requirements through helper text instead.
-
-
+**Note:** Once users start typing, placeholder text disappears. Consider communicating crucial formatting requirements or directions with helper text instead.
 
 See our [text input guidelines](/components/text-input/design-guidelines) for more specific guidance on writing placeholder text for text input fields.
 
 ### Helper text
 
-Include critical secondary information, the information a user must have in order to provide the right input. Let the user know any conditions for their inputted information to avoid any unnecessary errors, like specifying that an inputted name for a new asset must be a unique one.
+Use helper text to display critical secondary information that helps users input correct information on their first attempt. Describe any conditions for their inputted information to prevent unnecessary errors, like specifying that a name for a new file or asset must be a unique one.
 
 ### Popovers
 
-Include background information and additional context as field-level help. Popover content should help define unfamiliar terms or concepts that novice users may not know offhand.
+Use popovers to supply background information and additional context as field-level help. Popover content should help define unfamiliar terms or concepts that novice users may not know offhand. Popover content can also help users find required information, such as an account number, order number, or employee ID.
+
+Examples:
+- *Find your order number in your order confirmation email or at the top of your paper receipt.*
+- *You can find your employee ID number at the bottom of your employee ID card.*
+
+See our [popover guidelines](/components/popover/design-guidelines#content) for more information on writing effective popover content.
 
 ### Error messages
 
-Error messages help users break down barriers between form errors and successful form submission. Whether you surface error messages on loss of focus or on submission, be sure to alert users to specific errors within their form and provide key actions they can use to fix them.
+Use error messages to help users break down barriers between form errors and successful form submission. Whether you surface error messages on loss of focus or on submission, be sure to alert users to specific errors within their form and provide key actions they can use to fix them.
 
 If a user leaves a required field empty or incomplete, use a field level error message to communicate the error in as little words as possible: *Required* or *Required field*.
 
@@ -369,11 +373,11 @@ For more error message guidance, see our [UX writing style guide](/ux-writing/er
 
 ### Buttons
 
-All button text should clearly and specifically communicate the action it triggers. Whenever possible, use specific verbs to write button text that communicates what a user accomplishes by submitting a form.
+Use button text to clearly and specifically communicate the action it triggers. Whenever possible, use specific verbs to write button text that communicates what a user accomplishes by submitting a form.
 
 Example: Instead of *Submit*, a submit button on a subscription form should read *Subscribe*.
 
-For more button text guidance, see our [button content guidelines](/button/design-guidelines#content).
+For more button text guidance, see our [button content guidelines](/components/button/design-guidelines#content).
 
 ## Accessibility
 
