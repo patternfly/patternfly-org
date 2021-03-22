@@ -136,7 +136,7 @@ If all form fields are required, don’t use an asterisk for each one. Instead, 
 
 ### User help
 
-There are three different methods for providing assistance within a form: [Placeholder text](#Placeholder-text), [helper text](#helper-text), and [popovers](#popovers).
+There are three different methods for providing assistance within a form: [Placeholder text](#placeholder-text), [helper text](#helper-text), and [popovers](#popovers).
 
 
 #### Placeholder text
