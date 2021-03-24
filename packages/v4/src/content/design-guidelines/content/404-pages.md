@@ -28,7 +28,7 @@ Consider your 404 page as a flight path instead of a dead end. Use clear, inform
 
 | **Don't**                      | **Do**                  |
 |:-------------------------------:|:--------------------------:|
-| Error 404: Not found | 404: THat page no longer exists| 
+| Error 404: Not found | 404: That page no longer exists| 
 
 </div> 
 
