@@ -110,11 +110,17 @@ Toast alerts are commonly used in the following situations:
 
 <br />
 
-- In toast alerts containing links, describe how the user can navigate through the UI to perform the action. Learn more about how descriptive text supports accessibility in the next section.
+- In toast alerts containing links, describe how the user can navigate through the UI to perform the action. Learn more about how descriptive text supports accessibility in the next section. 
+
+<div class="ws-content-table">
 
 | **Do** | **Don’t** |
 |--------|-----------|
-| From the **Settings** tab, click **View logs.**| **View logs**|
+| From the **Settings** tab, click **View logs.**| **View logs**| 
+
+</div>  
+
+<br />
 
 ## Accessibility considerations
 Toast alerts present special challenges for accessibility. Screen readers announce the arrival and message content of an incoming toast alert, but user focus will not be placed there. This makes it difficult for these users to directly act on the alert itself.
