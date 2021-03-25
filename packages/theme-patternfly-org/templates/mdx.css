@@ -69,6 +69,10 @@
 .ws-table th[align="right"] {
   text-align: right;
 }
+.ws-content-table > .ws-table {
+  table-layout: fixed;
+  width: 100%;
+}
 .ws-table td > code, 
 .ws-table th > code,
 .ws-table tr > code {
