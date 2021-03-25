@@ -1,5 +1,5 @@
 ---
-id: 404 pages
+id: HTTP 404 pages
 section: UX writing
 ---
 
