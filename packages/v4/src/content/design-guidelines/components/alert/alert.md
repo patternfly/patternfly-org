@@ -21,15 +21,12 @@ Toast alerts are always dismissible, and inline alerts can be both dismissable a
 
 <img src="./img/alert-types.png" alt="Alert types" />
 
-1. **Status area**: The status area indicates the severity of the alert with a specific icon and color.  
+1. **Status area**: The status area indicates the severity of the alert with a specific icon and color.   
+2. **Alert title**: The alert title concisely communicates the alert’s main message. Its text color is coded to match the alert type.  
+3. **Close button**: The close button is used to dismiss the alert. It’s required for toast alerts and optional for inline alerts.  
+4. **Actions (optional)**: The actions area enables the user to take a specific action in relation to the alert. One or more actions can be placed inside of an alert.  
+5. **Description (optional)**: The description field communicates additional information to the user. It can also include a navigation link as an alternative to an action.
 
-2. **Alert title**: The alert title concisely communicates the alert’s main message. Its text color is coded to match the alert type. 
-
-3. **Close button**: The close button is used to dismiss the alert. It’s required for toast alerts and optional for inline alerts. 
-
-4. **Actions (optional)**: The actions area enables the user to take a specific action in relation to the alert. One or more actions can be placed inside of an alert. 
-
-5. **Description (optional)**: The description field communicates additional information to the user. It can also include a navigation link as an alternative to an action.
 
 ## Communicating severity
 The status icon, background, and alert title are coded to communicate the severity of an alert.
@@ -39,7 +36,7 @@ The status icon, background, and alert title are coded to communicate the severi
 |Type     |Icon    |Usage      |
 |---------|--------|--------------|
 |Default  |fa-bell | Use for generic messages with no associated severity
-|Information     |fa-info-circle|Use for general informational messages (default)|
+|Information     |fa-info-circle|Use for general informational messages|
 |Warning  |fa-exclamation-triangle |Use to indicate that a non-critical error has occurred|
 |Critical |fa-exclamation-circle | Use to indicate that a critical or blocking error has occurred
 |Success  |fa-check-circle | Use to indicate that a task or process has completed successfully
@@ -83,7 +80,7 @@ Toast alerts should always have a close button so that the user can dismiss them
 Toast alerts are commonly used in the following situations:
 - Confirming that a message sent
 - Confirming that an update was made
-- Informing the user that their action was completely successfully
+- Informing the user that their action was completed successfully
 - Informing the user that their action was completed with errors
 
 ## Content
