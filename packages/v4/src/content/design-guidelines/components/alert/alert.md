@@ -12,14 +12,14 @@ There are two main types of alerts:
 
 ![inline notification placement](./img/inline-notification.png)
 
-- **Toast alerts**: Toast alerts communicate information about an update, confirmation, or other activity. A toast alert overlys content in the upper-right corner of the page and disappears when it times out or when the user dismisses it.
+- **Toast alerts**: Toast alerts communicate information about an update, confirmation, or other activity. A toast alert overlays content in the upper-right corner of the page and disappears when it times out or when the user dismisses it.
 
 ![toast notification placement](./img/toast-notification.png)
 
 ## Elements
 Toast alerts are always dismissible, and inline alerts can be both dismissable and non-dismissible. Other elements are consistent between both alert types.
 
-<img src="./img/alert-types.png" alt="Alert types" />
+<img src="./img/alert-types.png" alt="Alert types" width="868" />
 
 1. **Status area**: The status area indicates the severity of the alert with a specific icon and color.   
 2. **Alert title**: The alert title concisely communicates the alert’s main message. Its text color is coded to match the alert type.  
@@ -108,7 +108,7 @@ Toast alerts are commonly used in the following situations:
 
 </div> 
 
-<br />
+<br /> 
 
 - In toast alerts containing links, describe how the user can navigate through the UI to perform the action. Learn more about how descriptive text supports accessibility in the next section. 
 
