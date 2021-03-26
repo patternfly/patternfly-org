@@ -91,7 +91,7 @@ Toast alerts are commonly used in the following situations:
 <div class="ws-content-table">
 
 | **Do** | **Don’t** |
-|--------|-----------|
+|:------:|:---------:|
 | Account created| Your account was successfully created.|
 
 </div>
@@ -103,7 +103,7 @@ Toast alerts are commonly used in the following situations:
 <div class="ws-content-table">
 
 | **Do** | **Don’t** |
-|--------|-----------|
+|:------:|:---------:|
 | Message sent| Your message has been sent.|
 
 </div> 
@@ -115,7 +115,7 @@ Toast alerts are commonly used in the following situations:
 <div class="ws-content-table">
 
 | **Do** | **Don’t** |
-|--------|-----------|
+|:------:|:---------:|
 | From the **Settings** tab, click **View logs.**| **View logs**| 
 
 </div>  
