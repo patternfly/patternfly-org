@@ -1,5 +1,5 @@
 module.exports = {
-  transformCode: (code, language, isFullscreenOnly) => {
+  transformCode(code, language, isFullscreenOnly) {
     if (typeof code !== 'string') {
       return;
     }
@@ -11,9 +11,11 @@ module.exports = {
         .replace(/export default/gm, '') // inline export
         .trim(); // pretty
     }
-    // HTML/HBS
-    return `<div className="ws-preview-html${isFullscreenOnly ? ' pf-u-h-100' : ''}" dangerouslySetInnerHTML={{ __html: "${code
+    // HTML
+    code = code
       .replace(/"/g, '\\"')
-      .replace(/\n/g, '')}"}} />`;
+      .trim()
+      .replace(/\n/g, '\\n');
+    return `<div className="ws-preview-html${isFullscreenOnly ? ' pf-u-h-100' : ''}" dangerouslySetInnerHTML={{ __html: "${code}" }} />`;
   }
 }
