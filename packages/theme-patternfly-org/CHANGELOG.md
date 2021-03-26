@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.33 (2021-03-26)
+
+
+### Bug Fixes
+
+* **transformCode:** fix line breaks in html to be <br> ([#2427](https://github.com/patternfly/patternfly-org/issues/2427)) ([78d23a8](https://github.com/patternfly/patternfly-org/commit/78d23a853015485a0fd4fd7c3a264a686d83e7a3))
+
+
+
+
+
 ## 0.4.32 (2021-03-26)
 
 **Note:** Version bump only for package theme-patternfly-org
