@@ -58,7 +58,7 @@ const generator = Object.assign({}, baseGenerator, {
     }
     if (node.value) {
       state.write(',"');
-      state.write(node.value.replace(/"/g, '\\"').replace(/\n\s*/g, ''));
+      state.write(node.value.replace(/"/g, '\\"').replace(/\n\s*/g, ' '));
       state.write('"');
     }
   },
