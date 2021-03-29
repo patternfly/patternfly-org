@@ -11,9 +11,9 @@ Effective 404 pages combine several elements to regroup, redirect, and empower l
 
 <img src="./img/404-page.png" alt="The PatternFly 404 page with added call outs to mark four main elements: Heading, next steps, suggested content, and a link to the home page." />
 
-1. **Heading:** Communicates what a 404 error is in plain language that users can understand. Avoid including “404” or “404 error” unless it’s clearly defined after: “404: That page no longer exists.”
+1. **Heading:** Communicates what a 404 error is in plain language that users can understand. Avoid including “404” or “404 error” unless it’s clearly defined after: “404: That page no longer exists.” Write 404 headings without end punctuation (no period), unless punctuated page headings align with your brand or product.
 
-2. **Next steps:** Define how users can proceed, typically by inviting them to search the site, explore suggested content, or both.
+2. **Next steps:** Define how users can proceed, typically by inviting them to search the site, explore suggested content, or both. Always write next steps in full sentences and punctuate accordingly.
 
 3. **Suggested content (optional):** Points users toward relevant pages such as onboarding information, reference guides, or FAQs.
 
@@ -22,19 +22,19 @@ Effective 404 pages combine several elements to regroup, redirect, and empower l
 ## Writing 404 page content
 Consider your 404 page as a flight path instead of a dead end. Use clear, informative microcopy to point users in the right direction.
 
-**Use understandable language.** Skip technical jargon by writing your 404 error message in plain and specific terms.
+**Use understandable language.** Skip technical jargon by writing your 404 heading in plain and specific terms.
 
 <div class="ws-content-table">
 
 | **Don't**                      | **Do**                  |
 |:-------------------------------:|:--------------------------:|
-| Error 404: Not found | 404: THat page no longer exists| 
+| Error 404: Not found | 404: That page no longer exists| 
 
 </div> 
 
 <br />
 
-**Avoid exclamations, colloquialisms, and excessive humor.** Write 404 error messages to be informative and repeatable. When users land on a page more than once, jokes grow stale. Steer clear of extraneous words like “Uh oh!” or “Oops!”.
+**Avoid exclamations, colloquialisms, and excessive humor.** Write 404 headings to be informative and repeatable. When users land on a page more than once, jokes grow stale. Steer clear of extraneous words like “Uh oh!” or “Oops!”.
 
 <div class="ws-content-table">
 
@@ -48,7 +48,7 @@ Consider your 404 page as a flight path instead of a dead end. Use clear, inform
 
 <br />
 
-**Avoid assigning blame to the user.** If your brand doesn’t use first-person plural (“we”) pronouns, use “that page” or “this page” as your subject instead.
+**Avoid assigning blame to the user.** If your brand doesn’t use first-person plural (“we”) pronouns, use “that page” or “this page” as your heading's subject instead.
 
 <div class="ws-content-table">
 
@@ -61,7 +61,7 @@ Consider your 404 page as a flight path instead of a dead end. Use clear, inform
 
 <br />
 
-**Turn error into opportunity.** Always provide a link back to your site’s home page, and consider including supplemental microcopy to encourage users to explore options beyond just going back to where they came from.
+**Turn error into opportunity.** Always provide a link back to your site’s home page, and include supplemental next steps below your heading to encourage users to explore options beyond just going back to where they came from.
 
 <div class="ws-content-table">
 
@@ -73,13 +73,13 @@ Consider your 404 page as a flight path instead of a dead end. Use clear, inform
 
 <br />
 
-**Channel your brand voice.** Bland, impersonal error messages can be frustrating. Infuse your 404 page with brand personality to support a more inviting site experience. 
+**Channel your brand voice.** Bland, impersonal error messages can be frustrating. Infuse your 404 page content with brand personality to support a more inviting site experience. 
 
 <div class="ws-content-table">
 
 | **Don't**                      | **Do**                  |
 |:-------------------------------:|:--------------------------:|
-| Error 404: Not found | 404: We couldn't find that page |
+| **Error 404: Not found**<br />Requested URL not found on this server. Please try again. | **404: We couldn't find that page**<br />Another page might have what you need, so try searching PatternFly. |
 
 </div>
 
