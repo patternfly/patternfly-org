@@ -26,9 +26,9 @@ Consider your 404 page as a flight path instead of a dead end. Use clear, inform
 
 <div class="ws-content-table">
 
-| **Don't**                      | **Do**                  |
+| **Do**                      | **Don't**                  |
 |:-------------------------------:|:--------------------------:|
-| Error 404: Not found | 404: That page no longer exists| 
+| 404: That page no longer exists | Error 404: Not found| 
 
 </div> 
 
@@ -38,11 +38,11 @@ Consider your 404 page as a flight path instead of a dead end. Use clear, inform
 
 <div class="ws-content-table">
 
-| **Don't**                      | **Do**                  |
+| **Do**                      | **Don't**                  |
 |:-------------------------------:|:--------------------------:|
-| Uh oh, spaghetti-o! We lost that one | We lost that page | 
-| Oops! We dropped the ball | We couldn't find that page | 
-| Huh, that's odd... | That page no longer exists | 
+| We lost that page | Uh oh, spaghetti-o! We lost that one | 
+| We couldn't find that page | Oops! We dropped the ball | 
+| That page no longer exists | Huh, that's odd... | 
 
 </div> 
 
@@ -52,10 +52,10 @@ Consider your 404 page as a flight path instead of a dead end. Use clear, inform
 
 <div class="ws-content-table">
 
-| **Don't**                      | **Do**                  |
+| **Do**                      | **Don't**                  |
 |:-------------------------------:|:--------------------------:|
-| Your search came up empty | We can't find that page |
-| The page you're trying to reach doesn't exist | That page no longer exists |
+| We can't find that page | Your search came up empty |
+| That page no longer exists | The page you're trying to reach doesn't exist |
 
 </div>
 
@@ -65,9 +65,9 @@ Consider your 404 page as a flight path instead of a dead end. Use clear, inform
 
 <div class="ws-content-table">
 
-| **Don't**                      | **Do**                  |
+| **Do**                      | **Don't**                  |
 |:-------------------------------:|:--------------------------:|
-| That page doesn't exist. | Another page might have what you need, so try searching PatternFly. |
+| Another page might have what you need, so try searching PatternFly. | That page doesn't exist. |
 
 </div>
 
@@ -77,9 +77,9 @@ Consider your 404 page as a flight path instead of a dead end. Use clear, inform
 
 <div class="ws-content-table">
 
-| **Don't**                      | **Do**                  |
+| **Do**                      | **Don't**                  |
 |:-------------------------------:|:--------------------------:|
-| **Error 404: Not found**<br />Requested URL not found on this server. Please try again. | **404: We couldn't find that page**<br />Another page might have what you need, so try searching PatternFly. |
+| **404: We couldn't find that page**<br />Another page might have what you need, so try searching PatternFly. | **Error 404: Not found**<br />Requested URL not found on this server. Please try again. |
 
 </div>
 
@@ -89,9 +89,9 @@ Consider your 404 page as a flight path instead of a dead end. Use clear, inform
 
 <div class="ws-content-table">
 
-| **Don't**                      | **Do**                  |
+| **Do**                      | **Don't**                  |
 |:-------------------------------:|:--------------------------:|
-| **404: Not all who wander are lost...**<br />But this page is. Search again or find your way back home. | **404: We lost that page** <br />Let's find you a better one. Try a new search or return home. |
+| **404: We lost that page**<br />Let's find you a better one. Try a new search or return home. | **404: Not all who wander are lost...**<br />But this page is. Search again or find your way back home. |
 
 </div>
 
