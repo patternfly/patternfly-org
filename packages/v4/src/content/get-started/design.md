@@ -9,7 +9,7 @@ Whether you are converting from a PatternFly 3 application or starting fresh wit
 
 ## Getting the design kit
 
-The PatternFly design kit was originally developed for [Sketch users](#Mac-users), but is now available for use through [any design application](#Non-mac-users).
+The PatternFly design kit was originally developed for [Sketch users](#mac-users), but is now available for use through [any design application](#non-mac-users).
 
 ### Mac users
 
