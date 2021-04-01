@@ -2,7 +2,7 @@
   "Releases": [
     {
       "name": "2021.04",
-      "date": "2021-03-31",
+      "date": "2021-04-01",
       "latest": true,
       "versions": {
         "@patternfly/patternfly": "4.96.2",
