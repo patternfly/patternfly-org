@@ -25,7 +25,7 @@ The design kit is a collection of Sketch assets that make it easy for designers 
 
 #### Add the symbol library
 4. Access the [PatternFly design library](https://www.sketch.com/s/2cf1063b-5283-4e0b-b8a6-cbb1ac07e29e) on Sketch cloud.
-5. Click **Add library to Sketch** on the bottom right to add the library. You'll be prompted with a modal. Click Add library to Sketch again. Sketch will show you the library in your preferences window.
+5. Click **Add library to Sketch** on the bottom right to add the library. You'll be prompted with a modal. Click **Add library to Sketch** again. Sketch will show you the library in your preferences window.
 
 ### Using other design tools
 
