@@ -17,7 +17,7 @@
     "screenshots": "theme-patternfly-org screenshots"
   },
   "dependencies": {
-    "@patternfly/react-docs": "5.16.18",
+    "@patternfly/react-docs": "5.17.3",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "theme-patternfly-org": "^0.4.35"
