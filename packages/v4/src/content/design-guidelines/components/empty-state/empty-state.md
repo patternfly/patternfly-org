@@ -36,13 +36,13 @@ There are several common uses for empty states:
 - Creation 
 
 ### Getting started 
-Getting started empty states appear when features haven’t been used yet. Use this type of empty state as an opportunity to briefly explain how to start using the feature and why. In your empty state message, state why the feature is beneficial to the user and provide a next step so that they can get started.   
+Getting started empty states appear when features haven’t been used yet. In your empty state message, explain why the feature is beneficial to the user and provide a next step so that they can get started.   
 
 Use the extra large empty state variation for getting started empty states. 
 
 <img src="./img/xl-getstarted.png" alt="extra large empty state with welcome message" width="1500px"/>  
 
-**Heading**: Welcome the user to the product. Keep in mind that the user might be a bit nervous, so veer away from exclamation points or other writing mechanics that make your tone sound excited.
+**Heading**: Welcome the user to the product. Keep in mind that the user might be a bit nervous, so avoid exclamation points or other writing mechanics that make your tone sound excited.
 
 <div class="ws-content-table">
 
@@ -82,7 +82,28 @@ In your empty state, explain that nothing was found and give the user a next ste
 
 Use the small empty state variation for no results empty states. 
 
-<img src="./img/no-data.png" alt="empty state showing no search results" width="1500px"/>  
+<img src="./img/no-data.png" alt="empty state showing no search results" width="1500px"/>    
+
+**Heading**: Briefly state that no results were found.
+
+<div class="ws-content-table">
+
+| **Do**                      | **Don't**                  |
+|:-------------------------------:|:--------------------------:|
+| No results found | Your search did not yield any results |
+
+</div>
+<br /> 
+
+**Body**: Explain what the user should do next so that they can continue searching for what they need.
+
+<div class="ws-content-table">
+
+| **Do**                      | **Don't**                  |
+|:-------------------------------:|:--------------------------:|
+| Adjust your filters and try again. | We did not find any results that matched your filters. |
+
+</div>
 
 ### Required configuration  
 Required configuration empty states appear when the user needs to configure, connect, or enable something before using a feature.  
@@ -293,13 +314,13 @@ Here is when you should use each icon:
 
 |       |Type |Color |Icon |Usage |
 |---------------|------|-----|-----------|------------|
-| <img src="./img/rocket.png" alt="rocket icon" width="35"/> |First use or get started |Gray (#8A8D90) |fa-rocket | Use in getting started empty states. You can replace this icon if you already have an application-specific graphic that you want to use instead
-| <img src="./img/search.png" alt="search icon" width="35"/> |Search |Gray (#8A8D90)|fa-search |Use when there is no data to show
-| <img src="./img/config.png" alt="configuration icon" width="35"/> |Configuration |Gray (#8A8D90) |fa-wrench |Use when configuration is required or there is a configuration issue
-| <img src="./img/lock.png" alt="lock icon" width="35"/> |No access |Gray (#8A8D90) |fa-lock | Use when the user is not entitled or the user role does not have access
-| <img src="./img/error.png" alt="error icon" width="35"/> |Error  |Red (#C9190B) |fa-exclamation-circle |Use when there is an inability to get data, there is backend failure, or an error has occurred
-| <img src="./img/success.png" alt="success icon" width="35"/> |Success |Green (#486b00) |fa-check-circle |Use to indicate that a task or process has been completed successfully
-| <img src="./img/add.png" alt="add icon" width="35"/> |Addition or creation |Gray (#8A8D90) |fa-plus-circle |Use when something needs to be added or created
+| <img src="./img/rocket.png" alt="rocket icon" width="35"/> |First use or get started |Gray (#8A8D90) |fa-rocket | Use in getting started empty states. You can replace this icon if you already have an application-specific graphic that you want to use instead.
+| <img src="./img/search.png" alt="search icon" width="35"/> |Search |Gray (#8A8D90)|fa-search |Use when there is no data to show.
+| <img src="./img/config.png" alt="configuration icon" width="35"/> |Configuration |Gray (#8A8D90) |fa-wrench |Use when configuration is required or there is a configuration issue.
+| <img src="./img/lock.png" alt="lock icon" width="35"/> |No access |Gray (#8A8D90) |fa-lock | Use when the user is not entitled or the user role does not have access.
+| <img src="./img/error.png" alt="error icon" width="35"/> |Error  |Red (#C9190B) |fa-exclamation-circle |Use when there is an inability to get data, there is backend failure, or an error has occurred.
+| <img src="./img/success.png" alt="success icon" width="35"/> |Success |Green (#486b00) |fa-check-circle |Use to indicate that a task or process has been completed successfully.
+| <img src="./img/add.png" alt="add icon" width="35"/> |Addition or creation |Gray (#8A8D90) |fa-plus-circle |Use when something needs to be added or created.
 
 ### Colors 
 Use color intentionally. If you’re not using a custom icon for a specific use case, an icon should be gray by default (except when it’s used as a status icon).
