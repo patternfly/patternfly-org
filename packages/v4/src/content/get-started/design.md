@@ -7,24 +7,33 @@ import './get-started.css';
 
 Whether you are converting from a PatternFly 3 application or starting fresh with the latest and greatest PatternFly design system, this document is intended to help provide designers with information regarding resources and support available.
 
-
 ## Getting the design kit
 
-### Before you begin
-The design kit is a collection of Sketch assets that make it easy for designers to create hi-fi mockups that accurately represent PatternFly components and layouts. It works with Sketch libraries.
+The PatternFly design kit was originally developed for [Sketch users](#sketch-users), but is now available for use through [any design tool](#using-other-design-tools).
 
-To use it, you need to install [Sketch](https://www.sketch.com/) version 47 or above. For users who do not have access to Sketch (non-Mac users), a subset of functionality from our Sketch files, like symbols and fonts, can be imported and used in the free design tool, [Figma](https://www.figma.com/). Learn more about importing Sketch files in [the Figma documentation](https://help.figma.com/hc/en-us/articles/360041003114-Import-files-into-Figma).
+### Sketch users
 
-### Download the template file
-1. Access the [PatternFly template file](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89) on Sketch cloud.
-2. Click **Download Document** to open the file. Then, click **File** →  **Save as template**.
+#### Before you begin
+The design kit is a collection of Sketch assets that make it easy for designers to create hi-fi mockups that accurately represent PatternFly components and layouts. It works with Sketch libraries. To use it, you need to install [Sketch version 68](https://www.sketch.com/) or above. 
 
-### Add the symbol library
-3. Access the [PatternFly design library](https://www.sketch.com/s/2cf1063b-5283-4e0b-b8a6-cbb1ac07e29e) on Sketch cloud.
-4. Click Add library to Sketch on the bottom right to add the library. You'll be prompted with a modal. Click Add library to Sketch again. Sketch will show you the library in your preferences window.
+#### Download the font
+1. PatternFly currently uses Red Hat Text and Red Hat Display. To download these fonts, go to https://github.com/RedHatOfficial/RedHatFont and download the whole repository. Then select all files in the "TTF" folder and double-click. This will install them onto your computer locally.
 
-### Download the font
-5. PatternFly currently uses Red Hat Text and Red Hat Display. To download these fonts, go to https://github.com/RedHatOfficial/RedHatFont and download the whole repository. Then select **all files in the "TTF" folder** and double-click. This will install them onto your computer locally.
+#### Download the template file
+2. Access the [PatternFly template file](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89) on Sketch cloud.
+3. Click **Download Document** to open the file. Then, click File → Save as template.
+
+#### Add the symbol library
+4. Access the [PatternFly design library](https://www.sketch.com/s/2cf1063b-5283-4e0b-b8a6-cbb1ac07e29e) on Sketch cloud.
+5. Click **Add library to Sketch** on the bottom right to add the library. You'll be prompted with a modal. Click **Add library to Sketch** again. Sketch will show you the library in your preferences window.
+
+### Using other design tools
+
+#### Before you begin
+For non-Sketch users, we have created a compatible version of the symbol library to fit with any design tool of choice. We recommend importing the SVG versions into your design tool. Download the SVG set in the patternfly-design-kit repo [here](https://github.com/patternfly/patternfly-design-kit/tree/master/Symbols-SVGs).
+
+#### Download the font
+PatternFly currently uses Red Hat Text and Red Hat Display. To download these fonts, go to https://github.com/RedHatOfficial/RedHatFont and download the whole repository. Then select all files in the "TTF" folder and double-click. This will install them onto your computer locally.
 
 ### Looking for the Overpass design kit?
 
