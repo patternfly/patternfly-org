@@ -16,7 +16,7 @@ This is an example of a large, full-page empty state with all empty state elemen
 4. **Primary button**: The primary button enables the user to take either the next step or a more general action, such as returning to the home page. 
 5. **Secondary buttons**: Secondary buttons enable the user to take alternative actions, such as accessing additional resources. 
 
-**Note**: Avoid including toolbars or filters in a full-page empty state because the user won’t have any items to search or filter. 
+**Note**: Don't include toolbars or filters in a full-page empty state because the user doesn't have any items to search or filter. 
 
 ## Usage 
 PatternFly offers four empty state variations: 
@@ -314,7 +314,7 @@ Here is when you should use each icon:
 
 |       |Type |Color |Icon |Usage |
 |---------------|------|-----|-----------|------------|
-| <img src="./img/rocket.png" alt="rocket icon" width="35"/> |First use or get started |Gray (#8A8D90) |fa-rocket | Use in getting started empty states. You can replace this icon if you already have an application-specific graphic that you want to use instead.
+| <img src="./img/rocket.png" alt="rocket icon" width="35px"/> |First use or get started |Gray (#8A8D90) |fa-rocket | Use in getting started empty states. You can replace this icon if you already have an application-specific graphic that you want to use instead.
 | <img src="./img/search.png" alt="search icon" width="35"/> |Search |Gray (#8A8D90)|fa-search |Use when there is no data to show.
 | <img src="./img/config.png" alt="configuration icon" width="35"/> |Configuration |Gray (#8A8D90) |fa-wrench |Use when configuration is required or there is a configuration issue.
 | <img src="./img/lock.png" alt="lock icon" width="35"/> |No access |Gray (#8A8D90) |fa-lock | Use when the user is not entitled or the user role does not have access.
@@ -343,7 +343,7 @@ Add a period at the end of full sentences in the body, but do not add a period a
 <img src="./img/sentence-case.png" alt="do and don’t examples for capitalization" width="771px"/> 
 
 ### Voice and tone
-Pay close attention to the [voice and tone](/ux-writing/brand-voice-and-tone) in your empty state. The voice you use in your empty state should align with your company’s unique brand voice. Your tone, on the other hand, should adjust depending on the context—consider the user’s emotions and adjust your approach accordingly. 
+Pay close attention to the [voice and tone](/ux-writing/brand-voice-and-tone) in your empty state. Your voice should align with your company’s unique brand voice. Your tone, on the other hand, should adjust depending on the context—consider the user’s emotions and adjust your approach accordingly. 
 
 It’s OK to use “you” and “your,” but never assign blame to the user. Also, avoid using “please” in an empty state. It’s extraneous and can make your message sound too formal.  
 
