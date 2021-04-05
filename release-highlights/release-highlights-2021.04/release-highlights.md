@@ -55,25 +55,25 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Inline enhancement for Clipboard copy](https://github.com/patternfly/patternfly-react/issues/5555) - Add a thin variant to Clipboard copy for using inline with text.
 
-* [Code block component](https://github.com/patternfly/patternfly-react/issues/5556) - introduce a read-only code block component that is lighter weight than the full code editor for displaying a block of code with optional actions.
+* [Code block component](https://github.com/patternfly/patternfly-react/issues/5556) - Introduce a read-only code block component that is lighter weight than the full code editor for displaying a block of code with optional actions.
 
-* [Optional item counts in select menu](https://github.com/patternfly/patternfly-react/issues/5557) - want to add optional item counts for checkbox filtering use cases.
+* [Optional item counts in select menu](https://github.com/patternfly/patternfly-react/issues/5557) - Will add optional item counts for checkbox filtering use cases.
 
-* [Slider: update API to match standard range input](https://github.com/patternfly/patternfly-react/issues/5464) - make the slider component mimic the API of a standard HTML range input.
+* [Slider: update API to match standard range input](https://github.com/patternfly/patternfly-react/issues/5464) - Make the slider component mimic the API of a standard HTML range input.
 
-* [Date and time range picker demo](https://github.com/patternfly/patternfly-react/issues/4737) - create a React demo to show how the Date picker and Time picker components can be used together to return a data and time range.
+* [Date and time range picker demo](https://github.com/patternfly/patternfly-react/issues/4737) - Create a React demo to show how the Date picker and Time picker components can be used together to return a data and time range.
 
-* [Add validation states to Select](https://github.com/patternfly/patternfly-react/issues/5579) - allow showing validation states (e.g. error, warning, success) for a Select component. Visual appearance will be equivalent to the same states displayed for text inputs.
+* [Add validation states to Select](https://github.com/patternfly/patternfly-react/issues/5579) - Allow showing validation states (e.g. error, warning, success) for a Select component. Visual appearance will be equivalent to the same states displayed for text inputs.
 
 ### 2021.06 (May 14)
 
-* [Log viewer component](https://github.com/patternfly/patternfly-react/issues/5341) - introduce a native log viewer native beta component to display real-time streamed logs or static log data.
+* [Log viewer component](https://github.com/patternfly/patternfly-react/issues/5341) - Introduce a native log viewer native beta component to display real-time streamed logs or static log data.
 
 * [Auto-complete search input](https://github.com/patternfly/patternfly-react/issues/5499) - Will introduce an option to add auto-complete behavior to the Search Input component.
 
 * [Update toggle group styling](https://github.com/patternfly/patternfly/issues/3951) - Update selected color for a set of toggle buttons to use a lighter blue.
 
-* [Add "view more" action to a Select menu](https://github.com/patternfly/patternfly/issues/3953) - add a view more action at the button of a select menu to enable incremental loading of long option lists.
+* [Add "view more" action to a Select menu](https://github.com/patternfly/patternfly/issues/3953) - Add a View more action at the button of a select menu to enable incremental loading of long option lists.
 
 
 
