@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.41 (2021-04-07)
+
+
+### Bug Fixes
+
+* **theme:** add missing chokidar dep ([50e40f1](https://github.com/patternfly/patternfly-org/commit/50e40f1a89c3c267460a1f76daadbea344661ffc))
+
+
+
+
+
 ## 0.4.40 (2021-04-07)
 
 
