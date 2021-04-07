@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.3.42 (2021-04-07)
+
+
+### Bug Fixes
+
+* **theme:** specify monaco-editor version ([54c06b8](https://github.com/patternfly/patternfly-org/commit/54c06b831df95a0983770271c3906309cc3ad7bc))
+
+
+
+
+
 ## 4.3.41 (2021-04-07)
 
 
