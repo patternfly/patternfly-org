@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.40 (2021-04-07)
+
+
+### Bug Fixes
+
+* **core:** resolve workspace dir correctly ([7f94b1e](https://github.com/patternfly/patternfly-org/commit/7f94b1ee7d46fd472f71754cf93386b5d94e746a))
+
+
+
+
+
 ## 0.4.39 (2021-04-05)
 
 **Note:** Version bump only for package theme-patternfly-org
