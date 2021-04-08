@@ -2460,7 +2460,7 @@
     tippy.js "5.1.2"
     tslib "1.13.0"
 
-"@patternfly/react-docs@5.17.17":
+"@patternfly/react-docs@5.17.7":
   version "5.17.7"
   resolved "https://registry.yarnpkg.com/@patternfly/react-docs/-/react-docs-5.17.7.tgz#d63dcc9b37e8dc1d77a2573a484d8c137b5df811"
   integrity sha512-kWOCxmbpJObmHs7TexKP7aRw+Peu3DUKGQ0LMPfxwc0eRns/S5nSxEhDclWvdAJV/SOz7sc8rzdiGDYcK6zLGQ==
