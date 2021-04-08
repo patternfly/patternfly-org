@@ -27,13 +27,13 @@ PatternFly offers four empty state variations:
 - **Extra large empty state**: Use an extra large empty state for special instances only, such as full-page success empty states or getting started empty states. 
 
 There are several common uses for empty states:  
-- Getting started
-- No results
-- Required configuration
-- User access
-- Back-end failure
-- Success
-- Creation 
+- [Getting started](#getting-started)
+- [No results](#no-results)
+- [Required configuration](#required-configuration)
+- [No access](#no-access)
+- [Back-end failure](#back-end-failure)
+- [Success](#success)
+- [Creation](#creation) 
 
 ### Getting started 
 Getting started empty states appear when features haven’t been used yet. In your empty state message, explain why the feature is beneficial to the user and provide a next step so that they can get started.   
@@ -314,19 +314,19 @@ Here is when you should use each icon:
 
 |       |Type |Color |Icon |Usage |
 |---------------|------|-----|-----------|------------|
-| <img src="./img/rocket.png" alt="rocket icon" width="35px"/> |First use or get started |Gray (#8A8D90) |fa-rocket | Use in getting started empty states. You can replace this icon if you already have an application-specific graphic that you want to use instead.
-| <img src="./img/search.png" alt="search icon" width="35"/> |Search |Gray (#8A8D90)|fa-search |Use when there is no data to show.
-| <img src="./img/config.png" alt="configuration icon" width="35"/> |Configuration |Gray (#8A8D90) |fa-wrench |Use when configuration is required or there is a configuration issue.
-| <img src="./img/lock.png" alt="lock icon" width="35"/> |No access |Gray (#8A8D90) |fa-lock | Use when the user is not entitled or the user role does not have access.
-| <img src="./img/error.png" alt="error icon" width="35"/> |Error  |Red (#C9190B) |fa-exclamation-circle |Use when there is an inability to get data, there is backend failure, or an error has occurred.
-| <img src="./img/success.png" alt="success icon" width="35"/> |Success |Green (#486b00) |fa-check-circle |Use to indicate that a task or process has been completed successfully.
-| <img src="./img/add.png" alt="add icon" width="35"/> |Addition or creation |Gray (#8A8D90) |fa-plus-circle |Use when something needs to be added or created.
+| <i class="fas fa-rocket" aria-hidden="true"></i> |First use or get started |Gray (#8A8D90) |fa-rocket | Use in getting started empty states. You can replace this icon if you already have an application-specific graphic that you want to use instead.
+| <i class="fas fa-search" aria-hidden="true"></i> |Search |Gray (#8A8D90)|fa-search |Use when there is no data to show.
+| <i class="fas configuration" aria-hidden="true"></i>|Configuration |Gray (#8A8D90) |fa-wrench |Use when configuration is required or there is a configuration issue.
+| <i class="fas fa-lock" aria-hidden="true"></i> |No access |Gray (#8A8D90) |fa-lock | Use when the user is not entitled or the user role does not have access.
+| <i class="fas fa-error" aria-hidden="true"></i>|Error  |Red (#C9190B) |fa-exclamation-circle |Use when there is an inability to get data, there is backend failure, or an error has occurred.
+| <i class="fas fa-success" aria-hidden="true"></i> |Success |Green (#486b00) |fa-check-circle |Use to indicate that a task or process has been completed successfully.
+| <i class="fas fa-add" aria-hidden="true"></i> |Addition or creation |Gray (#8A8D90) |fa-plus-circle |Use when something needs to be added or created.
 
 ### Colors 
 Use color intentionally. If you’re not using a custom icon for a specific use case, an icon should be gray by default (except when it’s used as a status icon).
 
 ## Content 
-Content varies depending on the type of empty state. For specific information on what content to use  for each empty state type, see the earlier **Usage** section. 
+Content varies depending on the type of empty state. For specific information on what content to use  for each empty state type, see the earlier [Usage](#usage) section. 
 
 Regardless of empty state variation and type, all empty states should have a specific level of detail, consistent capitalization and punctuation, and an intentional voice and tone.  
 
