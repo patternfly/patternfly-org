@@ -316,11 +316,11 @@ Here is when you should use each icon:
 |---------------|------|-----|-----------|------------|
 | <i class="fas fa-rocket" aria-hidden="true"></i> |First use or get started |Gray (#8A8D90) |fa-rocket | Use in getting started empty states. You can replace this icon if you already have an application-specific graphic that you want to use instead.
 | <i class="fas fa-search" aria-hidden="true"></i> |Search |Gray (#8A8D90)|fa-search |Use when there is no data to show.
-| <i class="fas configuration" aria-hidden="true"></i>|Configuration |Gray (#8A8D90) |fa-wrench |Use when configuration is required or there is a configuration issue.
+| <i class="fas fa-wrench" aria-hidden="true"></i>|Configuration |Gray (#8A8D90) |fa-wrench |Use when configuration is required or there is a configuration issue.
 | <i class="fas fa-lock" aria-hidden="true"></i> |No access |Gray (#8A8D90) |fa-lock | Use when the user is not entitled or the user role does not have access.
-| <i class="fas fa-error" aria-hidden="true"></i>|Error  |Red (#C9190B) |fa-exclamation-circle |Use when there is an inability to get data, there is backend failure, or an error has occurred.
-| <i class="fas fa-success" aria-hidden="true"></i> |Success |Green (#486b00) |fa-check-circle |Use to indicate that a task or process has been completed successfully.
-| <i class="fas fa-add" aria-hidden="true"></i> |Addition or creation |Gray (#8A8D90) |fa-plus-circle |Use when something needs to be added or created.
+| <i class="fas fa-exclamation-circle" aria-hidden="true"></i>|Error  |Red (#C9190B) |fa-exclamation-circle |Use when there is an inability to get data, there is backend failure, or an error has occurred.
+| <i class="fas fa-check-circle" aria-hidden="true"></i> |Success |Green (#486b00) |fa-check-circle |Use to indicate that a task or process has been completed successfully.
+| <i class="fas fa-plus-circle" aria-hidden="true"></i> |Addition or creation |Gray (#8A8D90) |fa-plus-circle |Use when something needs to be added or created.
 
 ### Colors 
 Use color intentionally. If you’re not using a custom icon for a specific use case, an icon should be gray by default (except when it’s used as a status icon).
