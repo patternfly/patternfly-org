@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base.config');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const serverConfig = () => {
   return {
@@ -45,11 +44,6 @@ const serverConfig = () => {
       new webpack.DefinePlugin({
         'process.env.PRERENDER': JSON.stringify(true) // In app.js don't call ReactDOM.render
       }),
-      /*
-      new BundleAnalyzerPlugin({
-        generateStatsFile: true
-      })
-      */
     ],
     // Load in prerender.js instead
     externals: ['react', 'react-dom', '@reach/router']

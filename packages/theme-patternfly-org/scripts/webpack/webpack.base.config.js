@@ -15,7 +15,7 @@ module.exports = (_env, argv) => {
     sideNavItems = [],
     topNavItems = [],
   } = argv;
-
+  
   const isProd = mode === 'production';
 
   return {
@@ -29,6 +29,7 @@ module.exports = (_env, argv) => {
     mode: isProd ? 'production' : 'development',
     devtool: false, //isProd ? false : 'cheap-module-source-map',
     module: {
+      unsafeCache: true,
       rules: [
         {
           test: /\.[tj]sx?$/,
@@ -65,7 +66,7 @@ module.exports = (_env, argv) => {
             loader: 'responsive-loader',
             options: {
               adapter: require('responsive-loader/sharp'),
-              name: '[name].[contenthash].[ext]',
+              name: isProd ? '[name].[contenthash].[ext]' : '[path][name].[ext]',
               outputPath: 'images/'
             },
           }
@@ -77,7 +78,7 @@ module.exports = (_env, argv) => {
             options: {
               limit: 1024,
               fallback: 'file-loader',
-              name: '[name].[contenthash].[ext]',
+              name: isProd ? '[name].[contenthash].[ext]' : '[path][name].[ext]',
               outputPath: 'images/'
             },
           }
@@ -87,7 +88,7 @@ module.exports = (_env, argv) => {
           use: {
             loader: 'file-loader',
             options: {
-              name: '[name].[contenthash].[ext]',
+              name: isProd ? '[name].[contenthash].[ext]' : '[path][name].[ext]',
             }
           }
         },
@@ -157,6 +158,6 @@ module.exports = (_env, argv) => {
       },
     },
     */
-    stats: 'normal'
+    stats: 'minimal'
   };
 }

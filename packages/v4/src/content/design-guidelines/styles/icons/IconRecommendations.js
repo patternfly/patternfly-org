@@ -15,7 +15,7 @@ import {
   EmptyStateBody,
   Spinner
 } from '@patternfly/react-core';
-const icons = require('@patternfly/react-icons/dist/esm');
+const icons = require('@patternfly/react-icons/dist/esm/icons/index.js');
 import './icons.css';
 import {
   Table,

@@ -8,6 +8,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const baseConfig = require('./webpack.base.config');
 const { getHtmlWebpackPlugins } = require('./getHtmlWebpackPlugins');
+const EagerImportsPlugin = require('eager-imports-webpack-plugin').default;
 
 let pfDir;
 try {
@@ -29,13 +30,11 @@ const clientConfig = async (env, argv) => {
   return {
     output: {
       path: path.resolve('public'),
-      filename: '[name].[contenthash].bundle.js'
+      filename: isProd ? '[name].[contenthash].bundle.js' : '[name].bundle.js'
     },
     devServer: {
       hot: false,
-      historyApiFallback: {
-        index: '/index.html'
-      },
+      historyApiFallback: true,
       port: argv.port
     },
     optimization: {
@@ -99,6 +98,7 @@ const clientConfig = async (env, argv) => {
             {
               loader: 'css-loader'
             },
+            /*
             {
               loader: 'postcss-loader',
               options: {
@@ -113,6 +113,7 @@ const clientConfig = async (env, argv) => {
                 }
               }
             }
+            */
           ]
         },
         {
@@ -126,20 +127,20 @@ const clientConfig = async (env, argv) => {
         'process.env.PRERENDER': JSON.stringify(false),
       }),
       new MiniCssExtractPlugin({
-        filename: '[name].[contenthash].css',
-        chunkFilename: '[name].[contenthash].css',
+        filename: isProd ? '[name].[contenthash].css' : '[name].css',
+        chunkFilename: isProd ? '[name].[contenthash].css' : '[name].css',
       }),
       new CopyPlugin({
         patterns: [
           // versions.json will later be copied to the root www dir
           { from: path.join(__dirname, '../../versions.json'), to: 'versions.json' },
           { from: path.join(pfDir, 'assets/images/'), to: 'assets/images/' },
-          { from: path.join(pfDir, 'assets/fonts/'), to: 'assets/fonts/' },
           ...(fs.existsSync(staticDir) ? [{ from: staticDir, to: '' }] : [])
         ]
       }),
       // Create an HTML page per route
       ...await getHtmlWebpackPlugins({ isProd: isProd && !isAnalyze, ...argv }),
+      ...(isProd ? [] : [new EagerImportsPlugin()]),
       ...(isAnalyze
         ? [
           new BundleAnalyzerPlugin({
