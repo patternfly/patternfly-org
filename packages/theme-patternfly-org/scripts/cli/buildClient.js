@@ -7,7 +7,7 @@ async function buildClient() {
   console.log('load client webpack config');
   
   const webpackArgv = {
-    mode: 'production',
+    //mode: 'production',
     ...options
   };
   const webpackClientConfig = await clientConfig(options.analyze && 'analyze', webpackArgv);

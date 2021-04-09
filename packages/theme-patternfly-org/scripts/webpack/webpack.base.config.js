@@ -1,13 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 module.exports = (_env, argv) => {
   const {
     pathPrefix = '',
-    mode,
+    mode = 'development',
     algolia = {},
     hasGdprBanner = false,
     hasFooter = false,
@@ -28,7 +27,7 @@ module.exports = (_env, argv) => {
     },
     amd: false, // We don't use any AMD modules, helps performance
     mode: isProd ? 'production' : 'development',
-    devtool: isProd ? false : 'cheap-module-source-map',
+    devtool: false, //isProd ? false : 'cheap-module-source-map',
     module: {
       rules: [
         {
@@ -138,26 +137,6 @@ module.exports = (_env, argv) => {
         'process.env.prnum': JSON.stringify(process.env.CIRCLE_PR_NUMBER || process.env.PR_NUMBER || ''),
         'process.env.prurl': JSON.stringify(process.env.CIRCLE_PULL_REQUEST || ''),
       }),
-      new FaviconsWebpackPlugin({
-        logo: path.resolve(__dirname, '../../images/patternfly-logo.svg'),
-        favicons: {
-          appDescription: 'Home of PatternFly Design.',
-          cache: true,
-          background: '#4F5255',
-          theme_color: '#151515',
-          icons: {
-            android: true,
-            appleIcon: true,
-            appleStartup: false,
-            coast: false,
-            favicons: true,
-            firefox: false,
-            windows: false,
-            yandex: false
-          },
-          start_url: '/'
-        }
-      }),
       new MonacoWebpackPlugin(),
       ...(isProd
         ? [
@@ -166,6 +145,18 @@ module.exports = (_env, argv) => {
         : []
       )
     ],
-    stats: 'minimal'
+    /*
+    cache: {
+      type: 'filesystem',
+      buildDependencies: {
+        config: [
+          __filename,
+          path.join(__dirname, 'webpack.client.config.js'),
+          path.join(__dirname, 'webpack.server.config.js'),
+        ],
+      },
+    },
+    */
+    stats: 'normal'
   };
 }
