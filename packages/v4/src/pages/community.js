@@ -69,8 +69,13 @@ const CommunityPage = () => (
       <Title size="3xl" className="pf-u-mb-sm ws-page-title pf-u-mt-3xl" headingLevel="h3">Creating new communities</Title>
       <p>Sometimes Flyers branch out and build groups of their own, which is how new communities are born. While PatternFly communities are separate from PatternFly and not supported as part of the design system, we still love seeing our Flyers forming new groups and developing their visions into actions.</p>
       <br/>
-      <p><a href="https://patternfly.github.io/patternfly-elements/"><strong>PatternFly Elements:</strong></a> PatternFly Elements is a community created by Red Hat's web-based developers. It focuses on creating web components for use across Red Hat's sites and SaaS products and features theming options available for your own brand library.</p>
 
+        <Title size="xl" className="pf-u-mb-sm ws-page-title pf-u-mt-xl" headingLevel="h4"><a href="https://patternfly.github.io/patternfly-elements/">PatternFly Elements</a></Title>
+        <p> PatternFly Elements is a community created by Red Hat's web-based developers. It focuses on creating web components for use across Red Hat's sites and SaaS products and features theming options available for your own brand library.</p>
+
+        <Title size="xl" className="pf-u-mb-sm ws-page-title pf-u-mt-xl" headingLevel="h4"><a href="https://github.com/patternfly-kotlin/patternfly-fritz2">PatternFly Fritz2</a></Title>
+        <p>PatternFly Fritz2 is a Kotlin implementation of PatternFly based on fritz2 targeting Kotlin/JS. The goal of this project is to provide all PatternFly components in Kotlin. This is done in a way that matches the reactive nature of fritz2. In particular, the components use stores, handlers, and other elements from the fritz2 API. To get a quick overview what this is all about head over to the <a href="https://patternfly-kotlin.github.io/patternfly-fritz2-showcase/#home">PatternFly Fritz2 showcase</a>.</p>
+      
       <Title size="4xl" className="pf-u-mb-lg ws-page-title ws-keep-growing pf-u-mt-3xl" headingLevel="h2">Let's keep growing</Title>
       <p>The PatternFly community is never finished growing, and we want to keep it that way. Feel free to reach out whenever — we’re always open.</p>
 
