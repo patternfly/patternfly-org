@@ -25,7 +25,7 @@ const serverConfig = () => {
         },
         // This does weird things to document
         {
-          test: /(novnc-core|@novnc\/novnc)\/.*\.js/,
+          test: /(novnc-core|@novnc[\\/]novnc)[\\/].*\.js/,
           use: 'null-loader'
         }
       ]

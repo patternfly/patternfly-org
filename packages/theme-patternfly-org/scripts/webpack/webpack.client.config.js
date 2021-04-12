@@ -20,7 +20,7 @@ catch {
 }
 const staticDir = path.join(process.cwd(), 'static/');
 // Don't include PatternFly styles twice
-const reactCSSRegex = /(react-[\w-]+\/dist|react-styles\/css)\/.*\.css$/;
+const reactCSSRegex = /(react-[\w-]+[\\/]dist|react-styles[\\/]css)[\\/].*\.css$/;
 const reactJSRegex = /react-([^\\/]*)[\\/]dist[\\/](esm|js)[\\/].*\.js$/
 
 const clientConfig = async (env, argv) => {
