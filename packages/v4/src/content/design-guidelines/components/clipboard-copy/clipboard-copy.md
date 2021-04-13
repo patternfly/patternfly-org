@@ -16,7 +16,6 @@ Clipboard copy has three main components.
 ## Usage
 Use clipboard copy to allow users to quickly and easily copy content to their clipboard to paste it in another location. Copy content can vary but is usually a line or block of text or code. This is useful for copying system generated key values, to both reduce user effort and the occurrence of entry errors, for example. The clipboard copy has a few features that can be used to customize the component to fit different use cases.
 
-
 ### Features
 The clipboard copy component can be editable or read-only and both types can optionally be expandable.
 
@@ -38,6 +37,15 @@ An expandable clipboard copy allows for long lines of text to be stored in an ex
 
 <img src="./img/expandable.png" alt="Example of an expandable clipboard copy component" width="455"/>
 
+**Inline compact**
+
+An inline compact clipboard copy is placed directly inline with other text or used on its own when you want a lighter weight clipboard copy treatment.
+
+<img src="./img/inline-one-action.png" alt="Example of an inline compact clipboard copy component with one action" width="355"/>
+
+An inline compact clipboard copy can include one or two action buttons next to it. The second action is customizable and optional.
+
+<img src="./img/inline-two-actions.png" alt="Example of an inline compact clipboard copy component with two actions" width="355"/>
 
 ### Clipboard copy in context
 Clipboard copy can be used almost anywhere in a UI. It is commonly used in forms and definition lists.
@@ -49,3 +57,11 @@ Clipboard copy can be used almost anywhere in a UI. It is commonly used in forms
 **Clipboard copy in a description list**
 
 <img src="./img/description-list.png" alt="Example of clipboard copy in a description list" width="629"/>
+
+**Inline compact clipboard copy for URLs**
+
+<img src="./img/clipboard-copy-url.png" alt="Example of an inline compact clipboard copy next to a URL" width="657"/>
+
+**Inline compact clipboard copy in context**
+
+<img src="./img/inline-in-context.png" alt="Example of an inline compact clipboard copy in context" width="448"/>
