@@ -37,15 +37,15 @@ An expandable clipboard copy allows for long lines of text to be stored in an ex
 
 <img src="./img/expandable.png" alt="Example of an expandable clipboard copy component" width="455"/>
 
-**Inline**
+**Inline compact**
 
-An inline clipboard copy is placed directly inline with other text or used on it's own when you want a lighter weight clipboard copy treatment.
+An inline compact clipboard copy is placed directly inline with other text or used on its own when you want a lighter weight clipboard copy treatment.
 
-<img src="./img/inline-one-action.png" alt="Example of an inline clipboard copy component with one action" width="355"/>
+<img src="./img/inline-one-action.png" alt="Example of an inline compact clipboard copy component with one action" width="355"/>
 
-An inline clipboard copy can include one or two actions buttons next to it. The second action is customizable and optional.
+An inline compact clipboard copy can include one or two action buttons next to it. The second action is customizable and optional.
 
-<img src="./img/inline-two-actions.png" alt="Example of an inline clipboard copy component with two actions" width="355"/>
+<img src="./img/inline-two-actions.png" alt="Example of an inline compact clipboard copy component with two actions" width="355"/>
 
 ### Clipboard copy in context
 Clipboard copy can be used almost anywhere in a UI. It is commonly used in forms and definition lists.
@@ -58,10 +58,10 @@ Clipboard copy can be used almost anywhere in a UI. It is commonly used in forms
 
 <img src="./img/description-list.png" alt="Example of clipboard copy in a description list" width="629"/>
 
-**Inline clipboard copy for URLs**
+**Inline compact clipboard copy for URLs**
 
-<img src="./img/clipboard-copy-url.png" alt="Example of clipboard copy next to a URL" width="629"/>
+<img src="./img/clipboard-copy-url.png" alt="Example of an inline compact clipboard copy next to a URL" width="657"/>
 
-**Inline clipboard copy in context**
+**Inline compact clipboard copy in context**
 
-<img src="./img/inline-in-context.png" alt="Example of an inline clipboard copy in context" width="448"/>
+<img src="./img/inline-in-context.png" alt="Example of an inline compact clipboard copy in context" width="448"/>
