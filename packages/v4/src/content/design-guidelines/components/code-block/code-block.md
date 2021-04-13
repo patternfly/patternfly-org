@@ -29,6 +29,6 @@ Code blocks can include multiple actions. By default the copy action is always p
 
 The secondary action can include the option to show a checkmark after the user has clicked the secondary action.
 
-##Usage
+## Usage
 
 The code block can be used any time two or more lines of code need to be copied and maintain its original formatting. The default action button that’s included in the code block is the copy to clipboard action button. Depending on the use case, the code block can include a second action button. Additional actions are customizable and optional. The code block also has the option to include a show more/less section if the code block is longer.
