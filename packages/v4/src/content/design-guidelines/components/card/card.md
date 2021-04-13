@@ -21,11 +21,16 @@ Cards are flexible, and you can customize them in a variety of ways. A card can 
 - Only a header and a body.
 - A header with an image, a body, and footer.
 
-PatternFly supports two types of cards:
+PatternFly supports three types of cards:
 1. **Compact (recommended):** Compact cards use 16px spacing with an 8px spacer between the header and body and 16px between the body and footer.
 2. **Standard:** Standard cards use 24px spacing with a 16px spacer between the header and body and 24px between the body and footer.
+3. **Large:**
 
 <img src="./img/card-types.png" alt="compact and standard card types" />
+
+**Add border treatments**
+
+**Add expandable cards**
 
 ## Card usage
 Use a card:
@@ -38,3 +43,5 @@ Use a card:
 <br />
 <br />
 Do NOT use a card to show a dense amount of repetitive, related content. Use a list or table view instead.
+
+## Standard card types
