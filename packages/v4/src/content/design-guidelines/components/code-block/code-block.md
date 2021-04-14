@@ -25,9 +25,9 @@ There is the option to include a show more/less section in the code block. The s
 
 <img src="./img/code-block-multiple-actions.png" alt="Code block with multiple actions" width="355"/>
 
-Code blocks can include multiple actions. By default the copy action is always present and other actions are optional and customizable.
+Code blocks can include multiple actions. By default, the copy action is always present and any other actions are optional and customizable.
 
-The secondary action can include the option to show a checkmark after the user has clicked the secondary action.
+The additional actions can include the option to show a checkmark after the user has clicked the action button. The checkmark can be used to indicate to the user that the action was successfully triggered.
 
 ## Usage
 
