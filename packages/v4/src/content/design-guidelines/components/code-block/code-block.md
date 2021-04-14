@@ -11,9 +11,9 @@ Code block has four main components.
 <img src="./img/code-block-structure.png" alt="Elements of the code block component" width="441"/>
 
 1. **Code snippet:**  the content that will be copied to the user’s clipboard.
-2. **[Action buttons]:(#Multiple-action-buttons)** completes an action when clicked. The copy button is always present but additional action buttons can be added on an as needed basis.
+2. **[Action buttons](#multiple-action-buttons):** completes an action when clicked. The copy button is always present but additional action buttons can be added on an as needed basis.
 3. **Tooltip:** informs users that clicking the button will copy the content to their clipboard, or that the content has successfully been copied.
-4. **[Show more/less (optional)]:(#Show-more/less)** expands and collapses the code snippet.
+4. **[Show more/less (optional)](#show-more/less):** expands and collapses the code snippet.
 
 ### Multiple action buttons
 
