@@ -1,6 +1,5 @@
 ## theme-patternfly-org
 
-
 ### Usage
 
 We publish this theme [on npm.](https://www.npmjs.com/package/theme-patternfly-org) Install it with your package manager.
