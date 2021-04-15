@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.51 (2021-04-15)
+
+
+### Bug Fixes
+
+* **theme:** touch README ([#2455](https://github.com/patternfly/patternfly-org/issues/2455)) ([96fc56d](https://github.com/patternfly/patternfly-org/commit/96fc56d8c620a162b8487b62bf9c4dc823401b13))
+
+
+
+
+
 ## 0.4.50 (2021-04-15)
 
 
