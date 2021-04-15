@@ -7,9 +7,9 @@ A **search input** is a type of input field that can be user to search, find, or
 ## Usage
 Use a search input when you want to either filter down or locate values from a dataset that match an inputted value.
 
-### Search input as a basic filter
+### Search input as a type-ahead filter
 
-Search input can act as a basic filter for the user to type a string in and filter down a list of values.
+A search input can act as a basic filter for narrowing a list of values as the user types. If you want a search field with an explicit submit button (not type-ahead), we recommend that you use an [input group](/components/input-group) with a search button to act as a basic text filter.
 
 <img src="./img/search-input-active-table.png" alt="Search input active in a basic table" width="1500"/>
 
