@@ -17,3 +17,5 @@ Provide or install the following dependencies:
 "@patternfly/react-table": "^2.22.28",
 "@patternfly/react-tokens": "^2.6.31",
 ```
+
+Setup config files to source content then `yarn theme-patternfly-org`.
