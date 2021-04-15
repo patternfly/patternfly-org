@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.3.50 (2021-04-15)
+
+
+### Bug Fixes
+
+* **theme:** touch README ([#2454](https://github.com/patternfly/patternfly-org/issues/2454)) ([f045977](https://github.com/patternfly/patternfly-org/commit/f045977bce597c2136a928ac6df302cd9fc66c4f))
+
+
+
+
+
 ## 4.3.49 (2021-04-15)
 
 **Note:** Version bump only for package patternfly-org-4
