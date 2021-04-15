@@ -98,14 +98,13 @@ const clientConfig = async (env, argv) => {
             {
               loader: 'css-loader'
             },
-            /*
             {
               loader: 'postcss-loader',
               options: {
                 postcssOptions: {
                   plugins: [
                     require('autoprefixer')({
-                      env: '>0.25%, not ie 11, not op_mini all',
+                      env: '>1%, not ie 11, not op_mini all',
                       flexbox: false,
                       grid: false
                     })
@@ -113,7 +112,6 @@ const clientConfig = async (env, argv) => {
                 }
               }
             }
-            */
           ]
         },
         {
@@ -134,6 +132,7 @@ const clientConfig = async (env, argv) => {
         patterns: [
           // versions.json will later be copied to the root www dir
           { from: path.join(__dirname, '../../versions.json'), to: 'versions.json' },
+          { from: path.join(__dirname, '../../static'), to: '' }, // favicons
           { from: path.join(pfDir, 'assets/images/'), to: 'assets/images/' },
           ...(fs.existsSync(staticDir) ? [{ from: staticDir, to: '' }] : [])
         ]

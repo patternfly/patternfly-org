@@ -27,9 +27,8 @@ module.exports = (_env, argv) => {
     },
     amd: false, // We don't use any AMD modules, helps performance
     mode: isProd ? 'production' : 'development',
-    devtool: false, //isProd ? false : 'cheap-module-source-map',
+    devtool: isProd ? false : 'cheap-module-source-map',
     module: {
-      unsafeCache: true,
       rules: [
         {
           test: /\.[tj]sx?$/,
@@ -146,18 +145,6 @@ module.exports = (_env, argv) => {
         : []
       )
     ],
-    /*
-    cache: {
-      type: 'filesystem',
-      buildDependencies: {
-        config: [
-          __filename,
-          path.join(__dirname, 'webpack.client.config.js'),
-          path.join(__dirname, 'webpack.server.config.js'),
-        ],
-      },
-    },
-    */
     stats: 'minimal'
   };
 }
