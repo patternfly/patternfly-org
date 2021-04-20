@@ -14,7 +14,9 @@ An application launcher has two main elements.
 
 ## Usage
 
-Application launchers are usually found within the masthead of a UI. They are commonly used when you want to allow a user to launch multiple applications from a common location. Use the external link icon to indicate when a link opens a new window. You can also use icons in the list. For longer lists, you can optionally add the ability to search the list and favorite items.
+Application launchers are usually found within the masthead of a UI. They are commonly used when you want to allow users to launch multiple applications from a common location. Use the external link icon to indicate when a link opens a new window. You can also use icons in the list.
+
+For longer lists, you can optionally add the ability to search the list and favorite items. Favoriting an item using the star icon allows users to pin items to the top of the menu in a separate Favorites section. The item will appear in the list twice: once in the Favorites section and once in its original location.
 
 
 ## Examples
