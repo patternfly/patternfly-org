@@ -14,7 +14,7 @@ try {
 }
 catch {
   // Inside core workspace
-  pfDir = path.join(process.cwd(), 'dist/assets');
+  pfDir = path.join(process.cwd(), 'dist');
 }
 const staticDir = path.join(process.cwd(), 'static/');
 // Don't include PatternFly styles twice
@@ -86,9 +86,6 @@ const clientConfig = async (env, argv) => {
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
-              options: {
-                hmr: false
-              }
             },
             {
               loader: 'css-loader'

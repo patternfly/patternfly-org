@@ -22,273 +22,379 @@ related: [
 ]
 ---
 
-A **form** is a group of elements used to collect information from a user.
+A **form** is a group of elements used to collect information from a user in a variety of contexts including in a modal, in a wizard, or on a page. Use cases for forms include tasks reliant on user-inputted information for completion like logging in, registering, configuring settings, or completing surveys.
 
- Forms can appear in a variety of contexts, like inside a page, in a modal, or in a wizard, depending on the use case.  Some form examples include a log-in form, a registration form, a settings configuration form, or a survey.
+Use forms to accomplish tasks reliant on user-inputted information like logging in, registering for accounts or services, configuring settings, or completing surveys.
 
-[View form demos](/components/form/html-demos)
+## Elements
 
-## Form elements
-<img src="./img/form-elements.png" alt="Example of a form with four typical form elements listed later" width="459"/>
+<img src="./img/form-elements.png" alt="Example of a form with four typical form elements called out corresponding to forthcoming elements list" width="459"/>
 
-Most forms will contain the following basic elements:
+Most forms contain four basic elements:
 
-1. **[Labels](#labels):** Labels let users know what information they should submit in each form field.
-2. **[Text input/text area](/components/text-input/design-guidelines):** These areas provide spaces for users to enter text.
-3. **[Data inputs](#data-inputs):** Data input provides a way for users to submit any information that is not freeform text, such as checkboxes, radio buttons, and dropdowns.
-4. **[Buttons](#buttons):** Buttons enable a user to submit or exit a form.
-
-## Designing forms
-### Form Content
-Think of a form as a conversation between your application and your user. Apply the following principles to organize and craft content for your forms:
-
-#### Focus on the task and context
-
-Be sure you understand what task your user is trying to accomplish with this form, and consider how they’re thinking about that task. Ask yourself: 
-* What are they trying to achieve?
-* What kinds of questions will they have?
-* Where might they get stuck?
-
-#### Form writing guidance
-Start by writing out the conversation you might have with someone if you were guiding them through the task. This exercise can help you organize your form, name your fields appropriately, better understand the context of the task, and write in a more natural way.
-
-**Use your understanding of context to plan your content hierarchy:**
-* **Include the most critical information in the field label.** Answer the most basic question first: What data do I need to provide here? The field label you choose will depend on the context of your form. Field labels should be unique and identify all the information that is being collected.
-* **Include critical secondary information as helper text.** Critical secondary information is information a user must have in order to provide the right input. For example, a user creating a name for a new asset may need to specify a unique name for that asset. Letting the user know this up front helps avoid unnecessary errors.
-* **Include background information/context as field-level help in a popover.** For example, you could use this type of help to define an unfamiliar term or concept that a novice user might not be familiar with. 
-**Never hide critical information in a popover.**
-* **Use natural language.** Again, think of a form as a conversation with your user. No one wants to have a conversation with a robot.
-
-### Data inputs
-PatternFly provides a variety of input components that enable a user to make a selection. Each component was created to serve a specific use case.
-
-<img src="./img/data-inputs.png" alt="Visual of four data input possibilities mentioned in this section" width="804"/>
-
-
-#### Switch
-Use a [switch](/components/switch/design-guidelines) to toggle between two different states.
-
-#### Radio buttons
-Use [radio buttons](/components/radio/design-guidelines) when users can only choose one option from a list of two or more mutually exclusive options. Selecting a different radio button will automatically deselect the previously selected option. If you have more than 5 options to present to the user, use a select list.
-
-#### Checkboxes
-Use [checkboxes](/components/checkbox/design-guidelines) to enable users to select any number of items from a list. The user could select all of the available options, some of them, or none. If you have more than 5 options to present to the user, use a select list.
-
-#### Select lists
-Use a [select list](/components/select/design-guidelines) to enable users to select one or more options from a list of options. Select lists can be configured to enable users to select one option (single select) or multiple options (multi-select) depending on the use case. Use a select list when you have more than 5 options to present to a user.
-
-Learn more about data input variations in the [data input design guidelines](/components/select/design-guidelines).
-
-#### Data input arrangement
-Arrange radio buttons and checkboxes vertically or horizontally depending on space considerations.  We suggest the following:
-
-* In cases where saving vertical space is important and there are three or fewer items, consider placing in a horizontal list.
-
-    <img src="./img/horizontal-list.png" alt="Example of Data inputs in horizontal list" width="466"/>
-    
-
-* In cases where there are more than three items and you want to make it easier to quickly scan the list of options, stack them vertically.
-
-    <img src="./img/vertical-list.png" alt="Example of Data inputs in vertical list" width="225"/>
-
-
- * If you have space constraints (and your labels are short) you can also use a multi-column grid.
-
-    <img src="./img/multicolumn-list.png" alt="Example of data inputs in multi-column grid" width="466"/>
-
+1. **Labels:** Indicate desired information for each field.
+2. **Text inputs:** Provide space for users to enter text.
+3. **Data inputs:** Allow users to enter information that is not freeform text using components like checkboxes, radio buttons, or dropdowns.
+4. **Buttons:** Enable a user to submit or exit a form.
 
 ### Labels
-Always provide labels for text and data input so that users understand what information is being requested of them. Labels can be aligned at the top or to the left of an input, although top alignment is preferable for the following reasons: 
-* Saves horizontal space
-* Allows for more responsive designs
-* Assures closer proximity to text fields, aiding with wrapping when necessary 
-* Results in easier scanning of form fields
+Always provide labels for text and data inputs so that users understand the information each form field asks of them. Default to top-aligned labels unless you’re working within limited vertical space, then use left-aligned labels. 
 
-Whichever approach you use, we recommend that you maintain consistency throughout an application.
+Maintain consistent form label alignment throughout your application or interface.
 
 #### Top-aligned labels
 
-<img src="./img/top-labels.png" alt="Example of label aligned to the top of the input box" width="444"/>
+<img src="./img/top-labels.png" alt="Top-aligned labels appear above their text input fields" width="323"/>
 
-Use top-aligned labels by default. Top-aligned labels provide a consistent left edge and close proximity between label and input. Top-aligned labels also offer the most horizontal area for long labels.
+Top-aligned labels are preferred over left-aligned labels because they provide a closer proximity between a label and its corresponding input and allow the most horizontal space to accommodate long label content. These characteristics support more responsive and scannable form design.
 
 #### Left-aligned labels
 
-<img src="./img/left-labels.png" alt="Example of label aligned to the left of the input box" width="444"/>
+<img src="./img/left-labels.png" alt="Left-aligned labels appear beside their text input fields" width="323"/>
+
+Avoid using left-aligned labels unless you’re working with limited vertical space. 
+
+To accommodate mobile views, left-aligned labels should responsively adjust to top alignment for smaller screens.
+
+For guidance on how to write effective form labels, see the [content](#content) section.
+
+### Text inputs
+
+Follow our [text input guidelines](/components/text-input/design-guidelines) for using text inputs in a form.
 
 
-Left-aligned labels are another available form option. They are useful for layouts with more horizontal space than vertical. However, as a general rule, they should be avoided in favor of top-aligned labels.
+### Data inputs
 
-To accommodate mobile viewports, left-aligned labels should responsively adjust to a top-aligned layout for smaller viewports.
+PatternFly provides a variety of input components that enable a user to make a selection. Each component supports a specific use case:
 
-#### Checkbox and radio button labels
-Checkboxes and radio buttons have a different labeling convention, where the option labels should be aligned to the right of the input control. 
+<img src="./img/data-inputs.png" alt="A visual representation of each data input type and their purpose: Switches for toggling between two states, radio buttons for choosing one option from multiple options, checkboxes for choosing any number of items from a list, and select lists for choosing one or more options from a list of more than five options" width="804"/>
 
-<img src="./img/radio-check.png" alt="Example of checkboxes and radio buttons aligned to the right of the input control" width="376"/>
 
-#### General labeling guidelines
-* Use sentence-style capitalization for all text elements except: product names, proper nouns and acronyms. Sentence-style capitalizes only the first word of each sentence and proper nouns, like names.
-* Always provide a label for input components.
-* Labels should clearly state the required input.
-* **Do not** use a colon after the label name.
+#### Switch
+
+Use a [switch](/components/switch/design-guidelines) to toggle between two different states in a form.
+
+#### Radio buttons
+
+Use [radio buttons](/components/radio/design-guidelines) when users can only choose one option from a list of two to five mutually exclusive options.  
+
+#### Checkboxes
+
+Use [checkboxes](/components/checkbox/design-guidelines) to enable users to select all, some, or none of the available options from a list of up to five items.
+
+#### Select lists
+
+Use a [select list](/components/select/design-guidelines) to enable users to select one or more options from a list of more than five items.
+
+#### Data input arrangement
+
+Data inputs can be arranged in three different ways depending on space considerations.
+
+1. **Horizontal placement:** Use when vertical space is scarce or to arrange three inputs or fewer.
+
+    <img src="./img/horizontal-list.png" alt="Example of data inputs arranged in a horizontal placement" width="466"/>
+    
+
+2. **Vertical placement:** Use when quick scanning is ideal or to arrange more than three inputs.
+
+    <img src="./img/vertical-list.png" alt="Example of data inputs arranged in a vertical placement" width="225"/>
+
+
+3. **Multi-column grid:** Use when space is constricted and labels are short.
+
+    <img src="./img/multicolumn-list.png" alt="Example of data inputs arranged in a multi-column grid" width="466"/>
+
+### Buttons
+
+Form submit buttons should be disabled until a user starts filling out the form or edits the form in any way. However, this recommendation varies according to a form’s context:
+
+* For short forms like wizards, disable submit buttons until all conditions required to submit the form are met. This setting reduces the need to return validation errors due to incomplete form submissions.
+* For long scrolling forms, don’t disable the submit button since the missing field and submit button may not be visible on the screen at the same time.
+* For a submitted form, disable the submit button while a user's responses are processing to avoid a duplicate submission.
+* For a processing form, use feedback messages and progress indicators like spinners or progress bars if the processing time might exceed user expectations.
+
+## User guidance
+
+Due to their interactive nature, forms often include features that help communicate field importance and guidance as users complete them. 
+
+Types of user guidance include:
+
+* **Required fields:** Call attention to input fields crucial to user success.
+* **User help:** Assists users in context through placeholder text, helper text, and popovers.
+* **Progressive disclosure:** Hides and shows fields based on user selections to simplify their workflow.
 
 ### Required fields
-A required field should be indicated with an asterisk ( * ) to the right of the field label.
+
+Reserve required fields for information vital to user success. Indicate a required field with an asterisk ( * ) to the right of its field label.
 
 <img src="./img/required-field.png" alt="Example of field with required field indication" width="444"/>
 
-If **all fields** on a form are required, do not use an asterisk for every field. Instead, provide a message at the top of the form stating, "All fields are required." If all fields are optional, the message should state, "All fields are optional."
+If all form fields are required, don’t use an asterisk for each one. Instead, provide a message at the top of the form: “All fields are required.” If all fields are optional, provide a similar message at the top of the form: “All fields are optional." 
 
-<img src="./img/required-optional-forms.png" alt="Example of two forms with indication at the top of whether all fields are required or all fields are optional" />
+<img src="./img/required-optional-forms.png" alt="Example of two forms with an indication at the top of whether all fields are required or all fields are optional"/>
 
 
 ### User help
-There are 3 different ways you can help a user with filling out a form: placeholder text, helper text, and popovers.
 
-<img src="./img/placeholder-helper.png" alt="Example of placeholder text and helper text used in the same input field" width="323"/>
+There are three different methods for providing assistance within a form: [Placeholder text](#placeholder-text), [helper text](#helper-text), and [popovers](#popovers).
 
 
 #### Placeholder text
-Placeholder text is text inside a form field that provides an example of the required or recommended format for text input. For example, placeholder text for a date might be “MM-DD-YYYY” to indicate the formatting order the date should be entered in. Note that it should not include crucial information, as it disappears as soon as a user starts typing. 
 
-For accessibility reasons, you should always precede placeholder text that is in example form with "Example," followed by a space like "Example, (555) 555-5555" for a phone number example or "Example, 491" for a security code example. This will ensure that users with screen readers will know the difference between the form label and the placeholder text. Placeholder text that does not use an actual example, like “MM-DD-YYYY,” does not need to be preceded with “Example.”
+<img src="./img/placeholder-text.png" alt="Example of a date placeholder text inside text input field" width="323"/>
 
-<img src="./img/placeholder-format.png" alt="Example of a date placeholder text inside text input field" width="323"/>
+Within a form field, placeholder text provides an example of the required or recommended format for text input. 
+
+Use placeholder text when:
+
+* The requested data type requires data to be inputted with specific format or syntax requirements.
+* The requested data type might be unfamiliar to the user.
+
+Never use placeholder text to replace field labels or communicate crucial information since it disappears as soon as a user begins typing in a field.
+
+If your placeholder text shares an example, precede it with “Example,” followed by a space so that users accessing the form with screen readers will know the difference between the field label and the provided placeholder text. 
+
+Examples:
+
+* *Example, John Smith*
+* *Example, (555) 555-5555*
+* *MM-DD-YYYY*
 
 <img src="./img/placeholder-example.png" alt="Example of a phone number placeholder text inside text input field" width="323"/>
 
+<img src="./img/placeholder-format.png" alt="Example of a date placeholder text inside text input field" width="323"/>
 
-**Usage**
-* Use placeholder text when the requested data type might be unfamiliar or the field requires the user to provide data in a specific format. 
-* Try to limit the usage of placeholder text to unfamiliar input types or specific syntax requirements (like a specific date format or number format). 
-* Keep placeholder text brief, and only use it when necessary. 
-* **Do not** use placeholder text as a replacement for field labels, or when the information is critical for users to see while they are filling out the field.
+For more information about writing effective placeholder text, see the [content](#content) section.
 
 #### Helper text
-Helper text is permanent text below a form field that helps a user provide the right information, like Enter a unique name. 
 
 <img src="./img/helper-text.png" alt="Example of helper text underneath the text input field" width="323"/>
 
-**Usage**
-* Helper text should be kept concise
-* Helper text should be specific to the input and not the label.
-* If there is specific information about the label it should be with the label. 
-* If needed, helper text can wrap to two lines, but it should never extend past the width of the input field.
-* Keep helper text concise and avoid exceeding the length of the input.
+Helper text is brief, permanent text below a form field that helps a user provide the right information specific to that input, like entering a unique project name or data point. Helper text may wrap to two lines, but it should never extend past the width of its corresponding input field.
 
+Align helper text with the specific input for which it offers assistance. If your helper text contains information about the label rather than the input field, place it with the label instead.
+
+For more information about writing effective helper text, see the [content](#content) section.
 
 #### Popovers
-Popovers are content boxes that are used for fields that might require additional background or explanation. You can also use a popover to link to external help pages or other related information. In forms, popovers are indicated by an unfilled question mark circle that a user can click on to reveal the information. They should be placed to the right of a form label. 
 
- <img src="./img/popover.png" alt="Example of popover content box used in a form field" width="411"/>
+Use a [popover](/components/popover/design-guidelines) for fields that might require additional background or explanation. Popovers may also link to external help pages or other related documentation. 
 
-**Usage**
-* You may use popovers for content that requires formatting like numbered or bulleted lists.
-* Use popovers to guide users as to where they can find the information needed.
-* Use popovers for content that requires you to include buttons, links, or images. 
-* **Do not** hide critical information inside a popover that users would need in order to complete their task. 
+In a form, indicate a popover with an unfilled question mark circle that reveals information when clicked. Place popovers to the right of their corresponding form label.
 
-For more information on user help, see our [embedded assistance guidelines](/components/popover/design-guidelines).
+ <img src="./img/popover.png" alt="Example of a popover used in a form field to provide additional context for where a user can find the required information" width="411"/>
 
-### Use progressive disclosure
-Use progressive disclosure to hide and show fields based on the users’ selection. This approach keeps the workflow short and allows the user to focus on only the fields relevant to them. It also avoids using color to indicate whether or not a field is available, making it suitable for visually impaired users.
+ Use popovers to:
 
- <img src="./img/progressive-disclosure.png" alt="Example of progressive disclosure with one radio button selected to only show those inputs" width="562"/>
+* Guide users to where they can find essential information needed to complete a given form field.
+
+* Provide content that requires formatting like numbered or bulleted lists, or that requires you to include additional elements like buttons, links, or images.
+
+Never hide critical information inside a popover, since popovers only surface when a user triggers them.
+
+For more information about writing effective popovers, see the [content](#content) section.
+
+### Progressive disclosure
+Use progressive disclosure to hide and show form fields based on a user’s selection to keep their workflow short and allow them to focus on fields relevant to them. Progressive disclosure also avoids using color to indicate whether or not a field is available, making forms more accessible for users with visual impairments.
+
+ <img src="./img/progressive-disclosure.png" alt="Example of progressive disclosure with one radio button selected to only show the inputs associated with that option" width="562"/>
 
 ## Errors and validation
-When a form field submission results in an error, let users know as soon as possible. Always present error states on the form using field level errors whenever possible.
 
-Alternatively, you can also choose to emphasize errors using an inline error at the top of the form. Note that the inline error should always be a supplemental component, used *in addition* to field-level errors, and its message should generally describe the problem.
+When a form field submission results in an error, let users know as soon as possible and as close as possible to the error. Default to presenting error states on a form using field level errors whenever possible. 
 
-When an error occurs, any placeholder text will no longer be visible as it will be replaced by the user’s input. Additionally, field level errors will replace any existing helper text until the error is fixed. Therefore, it is important that your error message not only points out the error, but also explains what the user can do to fix it.
+In some use cases, you may choose to use inline errors at the top of a form to emphasize errors within it. These inline errors should always be a supplemental component used in addition to field level errors. 
 
-For example, instead of simply telling the user there is an “invalid input”,  error messages should specify the correct format to re-write the input in such as “Date format must be MM-YY-DD”.
+After a form error occurs, users won’t have access to placeholder text (replaced by their input) or helper text (replaced by field level errors). Because these resources will be unavailable until the error is corrected, error messages should answer two essential questions:
 
- <img src="./img/error-message.png" alt="Visualized example for right vs. wrong way to write an input error" width="649"/>
+* What is the error?
+* What can the user do to fix it?
 
- There are two ways to validate errors: on **loss of focus** and **on submission**. The error state you use depends on whether validation happens on the client-side or the server-side.
+Example: Instead of “Invalid input,” provide an error message that includes the correct format to re-write the input: “Date format must be MM-DD-YYYY.”
 
-### Validation on loss of focus
-Validation on loss of focus can be performed as soon as a field loses focus. It alerts users of errors or issues immediately after they complete their input, through inline validation, allowing users to quickly see and address issues.
+ <img src="./img/error-message.png" alt="Visualized example for right vs. wrong way to write an input error. Do communicate specific format errors; don't just indicate an 'invalid input.'" width="649"/>
 
-Some common use cases include:
-* A user entering data in an invalid format.
-* A user leaving a required field blank.
-* A user leaving a required field incomplete.
+Errors can be validated at two points in the workflow: On loss of focus or on submission. The error state you use depends on whether validation happens on the client side (loss of focus) or server side (on submission).
 
-### Validation on submission
-Validation on submission is performed when the user attempts to submit a form. In this scenario, the user completes the form in its entirety and the page is reloaded with any errors detected. 
+### Error validation on loss of focus
+Validation on loss of focus occurs as soon as a field loses focus. It alerts users of errors immediately after they complete their input through inline validation, allowing them to quickly see and address issues.
 
-For validation on submission, use an [inline alert](/components/alert/design-guidelines#inline-alerts) along with field level errors. This combination of error types should make it simple for the user to quickly identify areas that need to be fixed. The inline alert should be placed below the form's header and description, and should take on the width of the form. Inline alerts should describe the general error, but refrain from going into great detail.
+Validate errors on loss of focus when:
 
-<img src="./img/inline_error.png" alt="Example of errors after validation on submission, including an inline alert at the top, and field level errors" width="551"/>
+* A user enters data in an invalid format.
+* A user leaves a required field blank.
+* A user leaves a required field incomplete.
 
-## Form formatting
-### Spacing
-There should always be 24px spacing underneath every form input. If there is helper text, the 24px spacing should start after the helper text. Additionally, the spacing between data inputs like checkboxes and radio buttons, for example, should also be 24px when on the same line and 24px when the options are presented on top of one another. For more spacing information, read the [PatternFly spacer guidelines](/guidelines/spacers#considering-line-height-and-padding).
+### Error validation on submission
+Validation on submission occurs when a user attempts to submit a form. In this scenario, the user completes the form in its entirety and the page reloads with any errors detected.
 
-<img src="./img/form-spacing.png" alt="Basic form example with spacers to demonstrate how form elements should be spaced" width="460"/>
+For validation on submission, supplement field level errors with an [inline alert](/components/alert/design-guidelines#inline-alerts) to make it simple for the user to quickly identify and address areas that need attention. The inline alert should be placed below the form’s header and description, and it should equal the total width of the form. 
+
+<img src="./img/validation-submission.png" alt="Example of errors after validation on submission, including an inline alert at the top, and field level errors" width="794"/>
+
+Learn more about writing error messages in the [content](#content) section.
+
+## Spacing
+Forms may be placed in several contexts including on a page, in a wizard, or in a modal. Your chosen form placement may impact specific spacing considerations, but general form spacing requirements apply across these contexts.
+
+### General spacing
+Always add 24px of spacing underneath each form input. If a form input includes helper text, this 24px spacing should start below the helper text. Spacing between data inputs like checkboxes and radio buttons should also be 24px when on the same line or stacked on one another. For more spacing information, consult the [PatternFly spacer guidelines](/guidelines/spacers#considering-line-height-and-padding).
+
+<img src="./img/form-spacing.png" alt="Basic form example with spacers to demonstrate how elements should be spaced within it" width="460"/>
 
 
-### Buttons
-#### Placement
-Buttons to submit the form should always be placed to the bottom left of the form and be left-aligned with all the form fields. Buttons should be placed 16px apart, no matter where the form is placed. This includes when the form is inside a page, inside a wizard, or on a card. This solves for a number of issues outlined in the placement section of our [buttons guidelines](/components/button/design-guidelines#button-placement). 
+### Button spacing
 
-Buttons for other actions outside of submitting or cancelling the form may be placed elsewhere depending on your use case.
+Place submit or cancel buttons on the bottom left of a form, left-aligned with all form fields. Buttons should be placed 16px apart in all contexts. Buttons for actions other than submitting or canceling the form may be placed elsewhere within a form depending on your use case. 
 
-<img src="./img/button-placement.png" alt="Examples of right button placement and  wrong button placement" />
+For more guidance on button placement, see our [button guidelines](/components/button/design-guidelines#button-placement). 
 
-#### Button accessibility
-There are times where multiple forms may live on the same page, which means that there may be multiple submit buttons. Although fully sighted individuals can easily identify which button submits which form, this is not the case for screen reader users who would not be able to identify between actions that are labeled the same. For that reason, it is critical to incorporate the name of the form, or some type of unique context, into the accessible name that's used for the submit button. For example, if there was a form titled "Create account,” the submit button could read "Submit form.” However, the accessible name could be "Submit create account form" so that the submit button can be distinguished from another in the same document. This will allow the user to have more context, helping fill the gaps for any element that may have multiple instances on the same page.
+<img src="./img/button-placement.png" alt="Examples of correct button placement and incorrect button placement in a form"/>
 
-#### Enabling and disabling buttons
-* Form submit buttons should be disabled until a user starts filling out the form or edits it in any way.
-* For short forms like wizards, disable submit buttons until all conditions required to complete the form are met — this reduces the need to return validation errors due to incomplete submissions.
-* For long scrolling forms, do not disable the submit button — the missing field and submit button might not be visible on the screen at the same time.
-* Once a user has submitted a form, disable the submit button while processing is taking place to avoid duplicate submission.
-* Use feedback messages and progress indicators like spinners or progress bars if the time to process the form might exceed users’ expectations.
+### Forms on a page
 
-### Forms in a page
+Left and top align a form within a page’s content area. A minimum of 24px padding should separate the form from neighboring elements.
 
-#### Placement
-Forms in a page should be left and top aligned in the content area of a page. There should be a minimum of 24px padding around the contents of the form and the neighboring elements.
+<img src="./img/page-form.png" alt="Example of a form on a page"/>
 
-<img src="./img/page-form.png" alt="Example of form in a page" />
+When placing a form on a page, its width is customizable to your use case and should reflect factors including:
 
-#### Width
-Generally, it is up to you to decide how wide you want your form to be, but here are some guidelines and recommendations:
-* The width of your form should generally reflect the length of the content that's being inputted.
-* Your form width should be as wide as the widest input field in the form. 
-* If your input fields are all very long, the maximum suggested width is 880 pixels. However, you should use your best judgement based on the context and content of the form. Having a form that is 880px wide is usually not necessary.
+* The length of inputted content.
+* The widest input field in the form.
 
-Note that all input fields in your form will be the same length. The only exception being in a [multi-column form](#multi-column-forms), where you may have two or more adjacent fields in a single line. In that case, the form inputs will share the available width on that line.
+To accommodate lengthy input fields, the maximum suggested width is 880px. Use your best judgement based on the context and content of your form –– 880px is typically too wide for most use cases.
 
-### Forms in wizard
-Similar to an in-page form, forms in wizards should be aligned to the left of the content area and have a minimum of 24px padding around its contents and the neighboring elements. This would look the same whether you are using an in-page wizard or a modal wizard.
+All input fields in your form will be the same length, except for in a [multi-column form](#multi-column-forms) where you may place two or more adjacent fields in a single line. In a multi-column form, form inputs will share available width on that line.
 
-Additionally, error validation for a form in a wizard’s page should occur when or by the time the user clicks the “Next” button. You should not wait until the user has completed the whole wizard before telling them where possible errors lie.
+### Forms in a wizard
+Similar to an in-page form, forms in wizards should be left-aligned in the content area and have a minimum of 24px padding separating its content from neighboring elements. 
 
-<img src="./img/wizard-form.png" alt="Example of form in an in-page wizard" />
+In a wizard, form error validation should occur when or by the time the user clicks the “Next” button. Don’t wait until the user has completed the whole wizard to notify them of possible errors and their location.
+
+<img src="./img/wizard-form.png" alt="Example of a form in an in-page wizard"/>
 
 ### Forms in a modal
-Forms in a modal should be horizontally centered with the modal background and fill up the modal width, leaving 24px between the form contents, and the modal background edges.
+Forms in a modal should be horizontally centered with the modal background and fill the modal width, leaving 24px between the form content and the modal background edges.
 
 <img src="./img/modal-form.png" alt="Example of form in a modal" width="384"/>
 
 ### Multi-column forms
-Multi-column forms are forms that can have multiple inputs on a single form line. You can create a multi-column form using any of the [layouts](/layouts/bullseye) offered in PatternFly, such as the [grid](/layouts/grid) or [flex](/layouts/flex) layouts.
 
-#### Usage
-Multi-column forms can be useful when you have limited vertical space. However, as a general rule, PatternFly recommends only using multi-column forms if you have extra space and avoiding them otherwise. They can be more confusing to the user and increase the chances of a user missing out on a form field.
+Multi-column forms are forms that allow multiple inputs to share a single form line. Single column forms are recommended over multi-column forms since multiple columns can lead to confusion and may not support an accessible experience for all users.
 
-If you do decide to group certain columns together, they should be organized so that field information on the same line is related to one another. Common cases for this include:
+If you choose to create a multi-column form, you may do so using any of the [layouts](/layouts/bullseye) offered in PatternFly including [grid](/layouts/grid) or [flex](/layouts/flex).
+
+When grouping columns together in a multi-column form, organize them so that field information on the same line relates to one another. Common cases for this input field grouping include:
+
 * First name, Middle initial, Last name
-* City, State, Zip code
+* City, State, ZIP code
 * Credit card number, Expiration date, Security code
 
-<img src="./img/multi-column-eg.png" alt="Example of correct and incorrect multi-column forms" />
+<img src="./img/multi-column-eg.png" alt="Example of correct and incorrect multi-column forms"/>
 
+Never design multi-column forms to read like a book, where the left column is completed first before moving on to the right. The form itself should still move and be filled from top to bottom, with related fields placed on the same line.
 
-You should never have multi-column forms that read like a book, where you finish the left side of the form first, then move on to the right side. The form itself should still be filled from top to button and should not have two unrelated fields on the same line.
+<img src="./img/multi-column-read.png" alt="Example of how multi-column forms should be read and presented, demonstrated by arrows that follow a user's path of consumption"/>
 
-<img src="./img/multi-column-read.png" alt="Visual of how multi-column forms should be read and presented" />
+## Content
+
+When writing form content, use your understanding of the user’s task and context to plan your content hierarchy. As a user moves through a form, they input and select information based on the content provided, almost like a conversation. 
+
+Forms combine several content types to guide users toward completion:
+
+* Field labels
+* Placeholder text
+* Helper text
+* Popovers
+* Error messages
+* Buttons
+
+Follow these general guidelines for each content type as you structure content within a form.
+
+### Field labels
+
+Use field labels to specify the most critical information about what data the user needs to provide. Each label should be unique and identify all the information being collected. 
+
+Whenever possible, keep field labels under five words and avoid using the same field label more than once in the same form.
+
+Examples:
+
+* *Full name*
+* *Email*
+* *Phone number*
+
+### Placeholder text
+
+Use placeholder text to demonstrate correct inputs so that users are aware of formatting expectations and specifications needed to provide information without errors. 
+
+If your placeholder text demonstrates a correct input, introduce it as an example so that users can distinguish impermanent examples from field labels and their own inputted text.
+
+Examples:
+* *Example, John Smith*
+* *Example, (555) 555-5555*
+
+Placeholder text that doesn’t give an example doesn’t need to be introduced as one. If your placeholder text simply communicates a field's required format, write the format without an introduction.
+
+Examples:
+* *MM-DD-YYYY*
+* *johnsmith@example.com*
+
+**Note:** Once users start typing, placeholder text disappears. Consider communicating crucial formatting requirements or directions with helper text instead.
+
+See our [text input guidelines](/components/text-input/design-guidelines) for more specific guidance on writing placeholder text for text input fields.
+
+### Helper text
+
+Use helper text to display critical secondary information that helps users input correct information on their first attempt. Describe any conditions for their inputted information to prevent unnecessary errors, like specifying that a name for a new asset must be a unique one.
+
+### Popovers
+
+Use popovers to supply background information and additional context as field-level help. Popover content should help define unfamiliar terms or concepts that novice users may not know offhand. Popover content can also help users find required information, such as an account number, order number, or employee ID.
+
+Examples:
+- *Find your order number in your order confirmation email or at the top of your paper receipt.*
+- *You can find your employee ID number at the bottom of your employee ID card.*
+
+See our [popover guidelines](/components/popover/design-guidelines#content) for more information on writing effective popover content.
+
+### Error messages
+
+Use error messages to help users break down barriers between form errors and successful form submission. Whether you surface error messages on loss of focus or on submission, be sure to alert users to specific errors within their form and provide key actions they can use to fix them.
+
+If a user leaves a required field empty or incomplete, use a field level error message to communicate the error in as little words as possible: *Required* or *Required field*.
+
+If a user formats an input incorrectly, avoid unclear error messages like *Invalid input*. Instead, specify what constitutes a valid input.
+
+Examples:
+* *Date format must be MM-DD-YYYY*
+* *Enter a valid email: email@provider.com*
+
+For more error message guidance, see our [UX writing style guide](/ux-writing/error-messages).
+
+### Buttons
+
+Use button text to clearly and specifically communicate the action it triggers. Whenever possible, use specific verbs to write button text that communicates what a user accomplishes by submitting a form.
+
+Example: Instead of *Submit*, a submit button on a subscription form should read *Subscribe*.
+
+For more button text guidance, see our [button content guidelines](/components/button/design-guidelines#content).
+
+## Accessibility
+
+This section highlights accessibility considerations to keep in mind when creating forms. For more accessibility guidance, see our [PatternFly accessibility guide](https://www.patternfly.org/v4/developer-resources/accessibility-guide).
+
+### Placeholder text
+
+Never write essential information in placeholder text. Screen readers like JAWS and NVDA don’t read it, nor is it widely supported among other assistive technologies. Additionally, placeholder text often shows in a low gray-on-white contrast, which may be inaccessible for users with visual impairments. Treat placeholder text as a visual supplement –– any crucial formatting requirements should be written in helper text so that users with assistive technology won’t miss it.
+
+### Multiple forms on a page
+
+Whenever possible, default to including one form per page. Placing multiple forms on the same page may cause unnecessary confusion.
+
+If multiple forms live on the same page, multiple submit buttons will, too. If both actions use the same button text, users accessing the page via screen reader won’t be able to distinguish between them. In this instance, descriptive button text is crucial to support successful form completion and submission for all users. 
+
+Use a form's action to specify its submit button text:
+
+* If submitting one form creates an account while the other signs the user up for a mailing list, write each action into unique button text: *Create account* and *Subscribe to mailing list*.
+
+* If form actions aren't easily distinguishable or difficult to fit into a button, consider separating them onto separate pages or incorporating their titles into their submit buttons: *Submit [form title] form*.

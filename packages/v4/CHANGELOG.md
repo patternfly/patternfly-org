@@ -3,6 +3,360 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.3.53 (2021-04-16)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.52 (2021-04-15)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.51 (2021-04-15)
+
+
+### Bug Fixes
+
+* **theme:** touch README ([#2455](https://github.com/patternfly/patternfly-org/issues/2455)) ([96fc56d](https://github.com/patternfly/patternfly-org/commit/96fc56d8c620a162b8487b62bf9c4dc823401b13))
+
+
+
+
+
+## 4.3.50 (2021-04-15)
+
+
+### Bug Fixes
+
+* **theme:** touch README ([#2454](https://github.com/patternfly/patternfly-org/issues/2454)) ([f045977](https://github.com/patternfly/patternfly-org/commit/f045977bce597c2136a928ac6df302cd9fc66c4f))
+
+
+
+
+
+## 4.3.49 (2021-04-15)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.48 (2021-04-14)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.47 (2021-04-13)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.46 (2021-04-13)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.45 (2021-04-12)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.44 (2021-04-12)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.43 (2021-04-08)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.42 (2021-04-07)
+
+
+### Bug Fixes
+
+* **theme:** specify monaco-editor version ([54c06b8](https://github.com/patternfly/patternfly-org/commit/54c06b831df95a0983770271c3906309cc3ad7bc))
+
+
+
+
+
+## 4.3.41 (2021-04-07)
+
+
+### Bug Fixes
+
+* **theme:** add missing chokidar dep ([50e40f1](https://github.com/patternfly/patternfly-org/commit/50e40f1a89c3c267460a1f76daadbea344661ffc))
+
+
+
+
+
+## 4.3.40 (2021-04-07)
+
+
+### Bug Fixes
+
+* **core:** resolve workspace dir correctly ([7f94b1e](https://github.com/patternfly/patternfly-org/commit/7f94b1ee7d46fd472f71754cf93386b5d94e746a))
+
+
+
+
+
+## 4.3.39 (2021-04-05)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.38 (2021-04-05)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.37 (2021-04-01)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.36 (2021-04-01)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.35 (2021-03-31)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.34 (2021-03-30)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.33 (2021-03-26)
+
+
+### Bug Fixes
+
+* **transformCode:** fix line breaks in html to be <br> ([#2427](https://github.com/patternfly/patternfly-org/issues/2427)) ([78d23a8](https://github.com/patternfly/patternfly-org/commit/78d23a853015485a0fd4fd7c3a264a686d83e7a3))
+
+
+
+
+
+## 4.3.32 (2021-03-26)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.31 (2021-03-25)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.30 (2021-03-25)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.29 (2021-03-24)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.28 (2021-03-23)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.27 (2021-03-22)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.26 (2021-03-22)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.25 (2021-03-19)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.24 (2021-03-18)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.23 (2021-03-18)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.22 (2021-03-17)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.21 (2021-03-17)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.20 (2021-03-17)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.19 (2021-03-15)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.18 (2021-03-10)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.17 (2021-03-10)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.16 (2021-03-04)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.15 (2021-02-19)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.14 (2021-02-17)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.13 (2021-02-16)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.3.12 (2021-02-11)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
 ## 4.3.11 (2021-02-04)
 
 **Note:** Version bump only for package patternfly-org-4

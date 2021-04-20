@@ -198,7 +198,7 @@ export const Footer = () => (
         </GridItem>
       </Grid>
     </PageSection>
-    <PageSection key="footer-2" className="ws-org-pfsite-l-footer-dark">
+    <PageSection key="footer-2" className="ws-org-pfsite-l-footer-dark pf-m-no-fill">
       <Grid className="pf-u-py-xl-on-sm pf-u-py-0-on-md pf-u-align-items-center">
         <GridItem md={2} mdOffset={1}>
           <Text
@@ -217,7 +217,7 @@ export const Footer = () => (
         </GridItem>
         <GridItem md={4} lg={3} xl={2}>
           <span className="ws-org-pfsite-site-copyright">
-            Copyright &copy; 2019 Red Hat, Inc.
+            Copyright &copy; 2021 Red Hat, Inc.
           </span>
         </GridItem>
         <GridItem md={4} lg={5} className="pf-u-ml-xl-on-xl">
