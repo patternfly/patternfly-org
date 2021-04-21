@@ -325,6 +325,20 @@ export const iconsData = [
   },
   {
     "Style": "fas",
+    "Name": "fa-eye",
+    "React_name": "EyeIcon",
+    "Type": "Object",
+    "Contextual_usage": "",
+  },
+  {
+    "Style": "fas",
+    "Name": "fa-eye-slash",
+    "React_name": "EyeSlashIcon",
+    "Type": "Object",
+    "Contextual_usage": "",
+  },
+  {
+    "Style": "fas",
     "Name": "fa-filter",
     "React_name": "FilterIcon",
     "Type": "Action",
