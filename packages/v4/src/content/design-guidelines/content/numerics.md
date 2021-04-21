@@ -14,7 +14,7 @@ PatternFly date and time formats follow the American standard. When localizing, 
 |-------------|-------------|-------------|
 | Date | Use Month DD, YYYY | September 17, 2020 <br /><br />Sep 17, 2020 |
 | Date numeric value | When you represent the date as a numeric value or label, use MM-DD-YYYY. | 09-17-2020 |
-| Time | Display time in either 12-hour or 24-hour (UTC) time. | 12-hour: 3:00PM <br /><br />With seconds: 3:30:11 PM <br /><br />24-hour: 15:00 |
+| Time | Display time in either 12-hour or 24-hour (UTC) time. | 12-hour: 3:00 PM <br /><br />With seconds: 3:30:11 PM <br /><br />24-hour: 15:00 |
 | 12-hour time notation | This time convention divides the 24 hours of the day into 2 periods of 12 hours, AM and PM. <br /><br />12-hour time notation is the American standard. | 3:00 PM |
 | 24-hour time notation | This time convention divides the day by 24 hours and runs from midnight to midnight. The hours are represented from 0 to 23. | 14:00 |
 | Date and time | Include the timestamp after the date. | Thursday, January 21, 2019 9:38:11 PM EST<br /><br />Thursday, 21 January 2019, 9:38:11 PM EST <br /><br />07 Jan 2019, 23:33 UTC |
