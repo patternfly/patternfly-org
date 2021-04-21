@@ -7,9 +7,7 @@ An **application launcher** is an optional utility menu item that allows a user 
 ## Elements
 An application launcher has two main elements.
 
-<img src="./img/elements.png" alt="Elements of the application launcher component" width="334"/>
-
-<img src="./img/elements2.png" alt="Additional elements of the application launcher component" width="334"/>
+<img src="./img/elements.png" alt="Elements of the application launcher component" width="692"/>
 
 1. **Icon:** used to open and close the menu.
 2. **Menu:** contains a list of links.
