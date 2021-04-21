@@ -328,14 +328,14 @@ export const iconsData = [
     "Name": "fa-eye",
     "React_name": "EyeIcon",
     "Type": "Framework",
-    "Contextual_usage": "Indicates the content of a component is currently obscured but can be revealed",
+    "Contextual_usage": "Indicates the content of a component is currently hidden but can be revealed",
   },
   {
     "Style": "fas",
     "Name": "fa-eye-slash",
     "React_name": "EyeSlashIcon",
     "Type": "Framework",
-    "Contextual_usage": "Indicates the content of a component is revealed but can be obscured",
+    "Contextual_usage": "Indicates the content of a component is revealed but can be hidden",
   },
   {
     "Style": "fas",
