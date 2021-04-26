@@ -51,7 +51,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 ### 2021.06 (May 14)
 
-* [Log viewer component](https://github.com/patternfly/patternfly-react/issues/5341) - Introduce a native log viewer native beta component to display real-time streamed logs or static log data.
+* [Log viewer component](https://github.com/patternfly/patternfly-react/issues/5341) - Introduce a native log viewer beta component to display real-time streamed logs or static log data.
 
 * [Update toggle group styling](https://github.com/patternfly/patternfly/issues/3951) - Update selected color for a set of toggle buttons to use a lighter blue.
 
