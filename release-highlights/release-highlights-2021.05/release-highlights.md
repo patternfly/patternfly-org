@@ -59,16 +59,16 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Composable dropdown menus](https://github.com/patternfly/patternfly-react/issues/5073) - Create a demo that shows how the Menu and Toggle Button components can be combined to create custom dropdown elements.
 
-* [Uncontrolled behavior for tabs]() - To be more developer friendly, the Tabs component will support uncontrolled behavior such that the developer does not need to control which tab is the active one.
+* [Uncontrolled behavior for tabs](https://github.com/patternfly/patternfly-react/issues/4458) - To be more developer friendly, the Tabs component will support uncontrolled behavior such that the developer does not need to control which tab is the active one.
 
 ### 2021.07 (June 4)
 
 * [Auto-complete search input](https://github.com/patternfly/patternfly-react/issues/5499) - Will introduce an option to add auto-complete behavior to the Search Input component.
 
-* [Add help text support to description list items]() - Add the ability to open help in a popover by clicking of a field label in a description list.
+* [Add help text support to description list items](https://github.com/patternfly/patternfly-react/issues/5482) - Add the ability to open help in a popover by clicking of a field label in a description list.
 
 * [Add "visited" styling for links](https://github.com/patternfly/patternfly/issues/3726) - add visited styling to optionally apply to links on a page.
 
-* [Add "view more" action to a Select menu](https://github.com/patternfly/patternfly/issues/3953) - Add a View more action at the button of a select menu to enable incremental loading of long option lists.
+* [Add "view more" action to a Select menu](https://github.com/patternfly/patternfly-react/issues/5647) - Add a View more action at the button of a select menu to enable incremental loading of long option lists.
 
 For a complete roadmap showing all items planned in future releases, see our [PatternFly Feature Roadmap](https://github.com/orgs/patternfly/projects/4?fullscreen=true) project board.
