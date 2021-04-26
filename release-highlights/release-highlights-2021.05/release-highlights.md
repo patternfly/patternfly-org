@@ -67,7 +67,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Add help text support to Description list items](https://github.com/patternfly/patternfly-react/issues/5482) - Add the ability to open help in a popover by clicking of a field label in a Description list.
 
-* [Add "visited" styling for links](https://github.com/patternfly/patternfly/issues/3726) - add visited styling to optionally apply to links on a page.
+* [Add "visited" styling for links](https://github.com/patternfly/patternfly/issues/3726) - Add visited styling to optionally apply to links on a page.
 
 * [Add "view more" action to a Select menu](https://github.com/patternfly/patternfly-react/issues/5647) - Add a View more action at the button of a select menu to enable incremental loading of long option lists.
 
