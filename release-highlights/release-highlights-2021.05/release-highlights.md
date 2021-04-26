@@ -25,7 +25,7 @@ Introduces a read-only code block component that is lighter weight than the full
 
 ![item counts in a select menu](./img/select-item-counts.png)
 
-Adds optional right-aligned item counts to a Select menu. This is useful for faceted filtering use cases where you many want to report the number of items matching each specific value.
+Adds optional right-aligned item counts to a Select menu. This is useful for faceted filtering use cases where you may want to report the number of items matching each specific value.
 
 ### [Add validated states to Select](https://www.patternfly.org/v4/components/select#validated)
 
