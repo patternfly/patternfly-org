@@ -325,6 +325,20 @@ export const iconsData = [
   },
   {
     "Style": "fas",
+    "Name": "fa-eye",
+    "React_name": "EyeIcon",
+    "Type": "Framework",
+    "Contextual_usage": "Indicates the content of a component is currently hidden but can be revealed",
+  },
+  {
+    "Style": "fas",
+    "Name": "fa-eye-slash",
+    "React_name": "EyeSlashIcon",
+    "Type": "Framework",
+    "Contextual_usage": "Indicates the content of a component is revealed but can be hidden",
+  },
+  {
+    "Style": "fas",
     "Name": "fa-filter",
     "React_name": "FilterIcon",
     "Type": "Action",
