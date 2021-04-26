@@ -63,7 +63,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 ### 2021.07 (June 4)
 
-* [Auto-complete search input](https://github.com/patternfly/patternfly-react/issues/5499) - Will introduce an option to add auto-complete behavior to the Search Input component.
+* [Auto-complete Search input](https://github.com/patternfly/patternfly-react/issues/5499) - Will introduce an option to add auto-complete behavior to the Search input component.
 
 * [Add help text support to description list items](https://github.com/patternfly/patternfly-react/issues/5482) - Add the ability to open help in a popover by clicking of a field label in a description list.
 
