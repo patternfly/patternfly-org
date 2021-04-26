@@ -69,6 +69,6 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Add "visited" styling for links](https://github.com/patternfly/patternfly/issues/3726) - Add visited styling to optionally apply to links on a page.
 
-* [Add "view more" action to a Select menu](https://github.com/patternfly/patternfly-react/issues/5647) - Add a View more action at the button of a select menu to enable incremental loading of long option lists.
+* [Add "view more" action to a Select menu](https://github.com/patternfly/patternfly-react/issues/5647) - Add a view more action to the button of a select menu to enable incremental loading of long option lists.
 
 For a complete roadmap showing all items planned in future releases, see our [PatternFly Feature Roadmap](https://github.com/orgs/patternfly/projects/4?fullscreen=true) project board.
