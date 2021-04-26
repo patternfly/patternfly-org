@@ -57,7 +57,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [New List variants](https://github.com/patternfly/patternfly-react/issues/5336) - Add new variants of the List component to include horizontal separators, icons and 'pf-m-plain' modifier.
 
-* [Composable dropdown menus](https://github.com/patternfly/patternfly-react/issues/5073) - Create a demo that shows how the Menu and Toggle Button components can be combined to create custom dropdown elements.
+* [Composable dropdown menus](https://github.com/patternfly/patternfly-react/issues/5073) - Create a demo that shows how the Menu and Menu toggle components can be combined to create custom dropdown elements.
 
 * [Uncontrolled behavior for tabs](https://github.com/patternfly/patternfly-react/issues/4458) - To be more developer friendly, the Tabs component will support uncontrolled behavior such that the developer does not need to control which tab is the active one.
 
