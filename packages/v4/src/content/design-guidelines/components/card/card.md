@@ -39,7 +39,12 @@ PatternFly offers two types of border treatments for cards:
 
 <img src="./img/card-borders.png" alt="cards with default and flat borders " width="452" />
 
-**Add expandable cards**
+### Expandable cards
+
+The Title element can be made expandable in situations where you want to hide the card content and reduce its footprint. In the collapsed state, only the card title is shown, and the user can click the expansion toggle to view the remainder of the card content.
+
+<img src="./img/expandable-card.png" alt="expandable card" width="1325" />
+
 
 ### Selectable cards
 It is often useful to make cards selectable. PatternFly supports two types of selectable cards.
@@ -63,17 +68,18 @@ Do NOT use a card to show a dense amount of repetitive, related content. Use a l
 
 A common use case for cards is when you want to present a catalog of items that the user can choose from. In this case, presenting a grid of cards can be a good solution. An example of cards used in a catalog view is shown below.
 
-<img src="./img/multi-select-cards.png" alt="cards with default and flat borders " width="1210" />
+<img src="./img/multi-select-cards.png" alt="cards in a catalog view " width="1210" />
 
 Note that this view uses a multi-select card so that bulk actions can be performed from the toolbar on a group of cards at once. For more information on cards used in a catalog or card view, see the [Card view design guidelines](/demos/card/design-guidelines).
 
 ### Cards in primary-detail views
 
+Selectable cards are usefull when you want to examine the details of an object represented by a card. Here, a details of different projects can be displayed in the details panel of a side-by-side primary-detail view.
+
+<img src="./img/single-select-cards.png" alt="cards in a side-by-side primary-detail view " width="1225" />
+
 ### Cards in dashboards
 
-<img src="./img/dashboard.png" alt="card view with charts" />
-<br />
-<br />
+Cards are often used in dashboards to visualize information. You should generally organize your dashboard such that each card displays a specific piece of information.
 
-
-#### Standard card types
+<img src="./img/dashboard.png" alt="card view in a dashboard with charts" width="1223"/>
