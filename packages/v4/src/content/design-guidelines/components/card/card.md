@@ -51,7 +51,7 @@ It is often useful to make cards selectable. PatternFly supports two types of se
 
 1. **Multi-select card:** Features a checkbox in the upper righthand corner, which users can select to indicate which cards to include in global actions.
 
-2. **Selectable card:** A selectable card has a raised appearance and a blue border treatment when selected.
+2. **Selectable card:** Features a raised appearance and blue border treatment when selected.
 
 <img src="./img/selectable-cards.png" alt="cards with default and flat borders " width="826" />
 
