@@ -4,7 +4,7 @@ section: demos
 ---
 
 
-A **card view** is a grid of cards in a gallery to facilitate browsing. Card views are typically used to present a summary of some data set where the user can drill-down from any card to see detailed content.
+A **card view** is a grid of cards in a gallery to facilitate browsing. Card views are typically used to present data set summaries, allowing users to drill down into any card to see more detailed content.
 
 <img src="./img/card-view.png" alt="card view" />
 
@@ -60,7 +60,7 @@ If an action can be performed globally on multiple cards, or if it leads to mult
 
 
 #### Action card
-You may use an extra-small empty state inside of a card to present the user with another means of adding a new card/item to their card view. If used, we recommend using it **in addition to** a primary button in a toolbar, to ensure that the user is still able to perform the action no matter what page of the card view they are on. The placement of the action card should be consistent with where a new card will be added, most likely the very first or the very last card in the card view.
+You may use an extra-small empty state inside a card to present users with another way to add more cards to the existing card view. We recommend using this feature **in addition to** a primary button in the toolbar, to ensure that the user is still able to perform the action from any page of the card view. Place the action card where a new card will be added, most likely in the very first or last card in the card view.
 
 <img src="./img/add-card-empty-state.png" alt="card view with addition card" />
 
