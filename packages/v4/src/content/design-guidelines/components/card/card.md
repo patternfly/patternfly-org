@@ -47,26 +47,27 @@ PatternFly supports three types of cards:
 PatternFly offers two types of border treatments for cards:
 
 1. **Default card:** By default, cards will have a thin (1px) drop shadow to differentiate them from the background of a page and give them a slightly raised appearance.
-2. **Flat card:** Flat cards have a 1 pixel gray border. Flat cards are recommended for use against a white background as the solid border will better differentiate the card from the page background.
+2. **Flat card:** Flat cards have a 1px gray border. Flat cards are recommended for use against a white background as the solid border will better differentiate the card from the page background.
 
 <img src="./img/card-borders.png" alt="cards with default and flat borders " width="452" />
 
 ### Expandable cards
 
-The Title element can be made expandable in situations where you want to hide the card content and reduce its footprint. In the collapsed state, only the card title is shown, and the user can click the expansion toggle to view the remainder of the card content.
+The header element can be made expandable in situations where you want to hide the card content and reduce its footprint. In the collapsed state, only the card title is shown, and the user can click the expansion toggle to view the rest of the card content.
 
 <img src="./img/expandable-card.png" alt="expandable card" width="1325" />
 
 
 ### Selectable cards
-It is often useful to make cards selectable. PatternFly supports two types of selectable cards.
+It is often useful to make cards selectable. PatternFly supports two types of selectable cards:
 
-1. **Multi-select card:** A multi-select card has a checkbox in the upper righthand corner. Users may select cards for performing global actions against by selecting the checkbox.
+1. **Multi-select card:** Features a checkbox in the upper righthand corner, which users can select to indicate which cards to include in global actions.
 
-2. **Selectable card:** A selectable card has a raised appearance and a blue border treatment when selected.
+2. **Selectable card:** Features a raised appearance and blue border treatment when selected.
 
 <img src="./img/selectable-cards.png" alt="cards with default and flat borders " width="826" />
 
+<<<<<<< HEAD
 ## Usage
 Use cards:
 - To visually group content or distinguish information from the rest of a page’s content. Examples include dashboards and catalog views.
@@ -80,7 +81,7 @@ Cards primarily appear in [catalog views](#Cards-in-catalog-views), [primary-det
 
 ### Cards in catalog views
 
-A common use case for cards is when you want to present a catalog of items that the user can choose from. In this case, presenting a grid of cards can be a good solution. An example of cards used in a catalog view is shown below.
+Use cards in a catalog view to present users with a series of selectable items, typically arranged into a grid.
 
 Note that this view uses a multi-select card so that bulk actions can be performed from the toolbar on a group of cards at once. For more information on cards used in a catalog or card view, see the [card view design guidelines](/demos/card-view/design-guidelines).
 
@@ -95,6 +96,6 @@ Use selectable cards when you want to present an overview of a set of objects an
 
 ### Cards in dashboards
 
-Cards are often used in dashboards to visualize information. You should generally organize your dashboard such that each card displays a specific piece of information.
+Use cards in a dashboard view to visualize information. Each card should display a different and specific piece of information, such as a bar chart, area chart, or other data type.
 
 <img src="./img/dashboard.png" alt="card view in a dashboard with charts" width="1223"/>
