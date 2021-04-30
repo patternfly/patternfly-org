@@ -35,7 +35,7 @@ PatternFly supports three types of cards:
 PatternFly offers two types of border treatments for cards:
 
 1. **Default card:** By default, cards will have a thin (1px) drop shadow to differentiate them from the background of a page and give them a slightly raised appearance.
-2. **Flat card:** Flat cards have a 1 pixel gray border. Flat cards are recommended for use against a white background as the solid border will better differentiate the card from the page background.
+2. **Flat card:** Flat cards have a 1px gray border. Flat cards are recommended for use against a white background as the solid border will better differentiate the card from the page background.
 
 <img src="./img/card-borders.png" alt="cards with default and flat borders " width="452" />
 
