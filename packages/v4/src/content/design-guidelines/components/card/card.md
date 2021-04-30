@@ -41,7 +41,7 @@ PatternFly offers two types of border treatments for cards:
 
 ### Expandable cards
 
-The Title element can be made expandable in situations where you want to hide the card content and reduce its footprint. In the collapsed state, only the card title is shown, and the user can click the expansion toggle to view the remainder of the card content.
+The header element can be made expandable in situations where you want to hide the card content and reduce its footprint. In the collapsed state, only the card title is shown, and the user can click the expansion toggle to view the rest of the card content.
 
 <img src="./img/expandable-card.png" alt="expandable card" width="1325" />
 
