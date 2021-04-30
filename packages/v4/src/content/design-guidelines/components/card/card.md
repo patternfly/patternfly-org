@@ -47,7 +47,7 @@ The Title element can be made expandable in situations where you want to hide th
 
 
 ### Selectable cards
-It is often useful to make cards selectable. PatternFly supports two types of selectable cards.
+It is often useful to make cards selectable. PatternFly supports two types of selectable cards:
 
 1. **Multi-select card:** A multi-select card has a checkbox in the upper righthand corner. Users may select cards for performing global actions against by selecting the checkbox.
 
