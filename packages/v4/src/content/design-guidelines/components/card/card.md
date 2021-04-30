@@ -66,7 +66,7 @@ Do NOT use a card to show a dense amount of repetitive, related content. Use a l
 
 ### Cards in catalog views
 
-A common use case for cards is when you want to present a catalog of items that the user can choose from. In this case, presenting a grid of cards can be a good solution. An example of cards used in a catalog view is shown below.
+Use cards in a catalog view to present users with a series of selectable items, typically arranged into a grid.
 
 <img src="./img/multi-select-cards.png" alt="cards in a catalog view " width="1210" />
 
