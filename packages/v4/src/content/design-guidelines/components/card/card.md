@@ -19,7 +19,7 @@ A card usually consists of 3 parts:
 Cards are flexible, and you can customize them in a variety of ways. A card can contain:
 - A header with an image, actions, and a body.
 - Only a header and a body.
-- A header with an image, a body, and footer.
+- A header with an image, a body, and a footer.
 
 ### Content spacing
 
