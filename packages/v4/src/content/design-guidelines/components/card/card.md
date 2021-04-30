@@ -80,6 +80,6 @@ Selectable cards are usefull when you want to examine the details of an object r
 
 ### Cards in dashboards
 
-Cards are often used in dashboards to visualize information. You should generally organize your dashboard such that each card displays a specific piece of information.
+Use cards in a dashboard view to visualize information. Each card should display a different and specific piece of information, such as a bar chart, area chart, or other data type.
 
 <img src="./img/dashboard.png" alt="card view in a dashboard with charts" width="1223"/>
