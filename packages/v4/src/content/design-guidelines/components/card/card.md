@@ -25,7 +25,7 @@ Cards are flexible, and you can customize them in a variety of ways. A card can 
 
 PatternFly supports three types of cards:
 1. **Compact (recommended):** Compact cards use 16px spacing with an 8px spacer between the header and body and 16px between the body and footer.
-2. **Standard:** Standard cards use 24px spacing with a 16px spacer between the header and body and 24px between the body and footer.
+2. **Standard:** Use 24px spacing with a 16px spacer between the header and body, and a 24px spacer between the body and footer.
 3. **Large:** Large cards use 32px spacing with a 24px spacer between the header and the body and 32px between the body and footer. Large cards are generally used for presenting marketing content or anyplace where a lower content density is desired.
 
 <img src="./img/card-types.png" alt="compact, standard, and large card types" />
