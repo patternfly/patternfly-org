@@ -4,7 +4,7 @@ section: demos
 ---
 
 
-A **card view** is a grid of cards in a gallery to facilitate browsing. Card views are typically used to present a summary of some data set where the user can drill-down from any card to see detailed content.
+A **card view** is a grid of cards in a gallery to facilitate browsing. Card views are typically used to present data set summaries, allowing users to drill down into any card to see more detailed content.
 
 <img src="./img/card-view.png" alt="card view" />
 
