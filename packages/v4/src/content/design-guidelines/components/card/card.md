@@ -57,7 +57,7 @@ It is often useful to make cards selectable. PatternFly supports two types of se
 
 ## Card usage
 Use a card:
-- To visually group content or distinguish information from the rest of a page’s content. Examples include dashboards and catalog views.
+- To visually group content or distinguish information from the rest of the content on a page, such as in a catalog view or dashboard.
 - To organize content in layouts with multiple columns or grids.  
 - To compare separate groups of information.  
 - To make media such as images and videos easier to scan.  
