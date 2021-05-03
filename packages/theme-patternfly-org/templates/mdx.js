@@ -53,7 +53,7 @@ const MDXChildTemplate = ({
       )}
       {beta && (
         <InlineAlert title="Beta feature">
-          This Beta component is currently under review. It is available for use in product with the caveat that user feedback could result in future breaking changes.
+          This Beta component is currently under review and is still open for further evolution. It is available for use in product.
           Beta components are considered for promotion on a quarterly basis. Please join in and give us your feedback or submit any questions on the <a href="https://forum.patternfly.org/">PatternFly forum</a> or via <a href="//slack.patternfly.org/" target="_blank" rel="noopener noreferrer">Slack</a>.
         </InlineAlert>
       )}
