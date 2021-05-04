@@ -67,7 +67,6 @@ It is often useful to make cards selectable. PatternFly supports two types of se
 
 <img src="./img/selectable-cards.png" alt="cards with default and flat borders " width="826" />
 
-<<<<<<< HEAD
 ## Usage
 Use cards:
 - To visually group content or distinguish information from the rest of a page’s content. Examples include dashboards and catalog views.
