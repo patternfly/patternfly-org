@@ -96,7 +96,6 @@ import './tableOfContents.css';
 
 export const TableOfContents = ({ items }) => {
   function renderItem(item, index) {
-    console.log(item);
     return Array.isArray(item)
       ? (
         <JumpLinksList key={index} className="ws-toc-sublist">
@@ -114,7 +113,7 @@ export const TableOfContents = ({ items }) => {
       <Title headingLevel="h2" size="lg">
         Table of contents
       </Title>
-      <JumpLinks isVertical scrollableSelector="#ws-page-main" className="ws-toc-list" offset={76}>
+      <JumpLinks isVertical scrollableSelector="#ws-page-main" className="ws-toc-list" offset={92}>
         {items.map(renderItem)}
       </JumpLinks>
     </nav>
