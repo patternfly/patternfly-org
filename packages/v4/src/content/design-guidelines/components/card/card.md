@@ -12,7 +12,7 @@ A card usually consists of four parts:
 <img src="./img/card.png" alt="4 parts of a card" width="394"/>  
 
 
-1. **Header:** Defines the contents of the card. Card headers can optionally contain images as well as the title of the card and an actions menu represented by the right-aligned kabob.
+1. **Header(optional):** When included, defines the contents of the card. Card headers can contain images as well as the title of the card and an actions menu represented by the right-aligned kabob.
 
 2. **Title(optional):** Communicates the title of the card if it's not included in the header.
 
@@ -76,7 +76,7 @@ Use cards:
 
 **Never** use a card to show a dense amount of repetitive, related content. Use a [data list](/components/data-list) or [table](/components/table) view instead.
 
-Cards primarily appear in [catalog views](#Cards-in-catalog-views), [primary-detail views](#Cards-in-primary-detail-views), and [dashboards](#Cards-in-dashboards).
+Cards primarily appear in [catalog views](#cards-in-catalog-views), [primary-detail views](#cards-in-primary-detail-views), and [dashboards](#cards-in-dashboards).
 
 ### Cards in catalog views
 
