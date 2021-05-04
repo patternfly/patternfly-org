@@ -14,12 +14,12 @@ PatternFly date and time formats follow the American standard. When localizing, 
 |-------------|-------------|-------------|
 | Date | Use Month DD, YYYY | September 17, 2020 <br /><br />Sep 17, 2020 |
 | Date numeric value | When you represent the date as a numeric value or label, use MM-DD-YYYY. | 09-17-2020 |
-| Time | Display time in either 12-hour or 24-hour (UTC) time. | 12-hour: 3:00PM <br /><br />With seconds: 3:30:11 PM <br /><br />24-hour: 15:00 |
-| 12-hour time notation | This time convention divides the 24-hours of the day into 2 periods of 12 hours, AM and PM. <br /><br />12-hour time notation is the American standard. | 3:00PM |
+| Time | Display time in either 12-hour or 24-hour (UTC) time. | 12-hour: 3:00 PM <br /><br />With seconds: 3:30:11 PM <br /><br />24-hour: 15:00 |
+| 12-hour time notation | This time convention divides the 24 hours of the day into 2 periods of 12 hours, AM and PM. <br /><br />12-hour time notation is the American standard. | 3:00 PM |
 | 24-hour time notation | This time convention divides the day by 24 hours and runs from midnight to midnight. The hours are represented from 0 to 23. | 14:00 |
-| Date and time | Include the timestamp after the date and separate with a comma. | Thursday, 21 January 2019, 9:38:11 PM EST <br /><br />07 Jan 2019, 23:33 UTC |
+| Date and time | Include the timestamp after the date. | Thursday, January 21, 2019 9:38:11 PM EST<br /><br />Thursday, 21 January 2019, 9:38:11 PM EST <br /><br />07 Jan 2019, 23:33 UTC |
 | Time zone | Display time in the user's time zone or in UTC. <br /><br />Use UTC when spanning multiple time zones. | Maintenance begins today at 14:00 UTC (2 PM EST). |
-| Day |Write out the full name of the day. If space is limited, use the day’s 3-letter abbreviation: <ul><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul> | Monday, 17 September 2020 <br /><br />Mon, 17 Sep 2020 |
+| Day |Write out the full name of the day. If space is limited, use the day’s 3-letter abbreviation: <ul><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul> | Monday, September 17, 2020 <br /><br />Mon, Sep 17, 2020 |
 | Month | Write out the full name of the month. If space is limited, use the month’s 3-letter abbreviation. <ul><li>Jan</li><li>Feb</li><li>Mar</li><li>Apr</li><li>May</li><li>Jun</li><li>Jul</li><li>Aug</li><li>Sep</li><li>Oct</li><li>Nov</li><li>Dec</li></ul> | September 17, 2020 <br /><br />Sep 17, 2020 |
 | Duration | HH:MM:SS or HH:MM | 03:15:30 <br /><br />03:15<br /><br />00:15 |
 </div>
