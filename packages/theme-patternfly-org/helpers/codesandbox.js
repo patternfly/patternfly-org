@@ -104,12 +104,21 @@ function getReactParams(title, code, scope) {
     // Ignore
   }
 
+  /*
   // import avatarImg from './examples/avatarImg.svg';
   const svgRegex = /import\s+(\w[\w\d]*).*\.svg['"]/g;
   let match;
   while ((match = svgRegex.exec(code))) {
     const svgToken = match[1];
     code = code.replace(match[0], `const ${svgToken} = "${scope[svgToken]}"`);
+  }
+  */
+
+  const reactRegex = /import\s*(\w*)\s*from\s*['"](\.\/images\/.*)['"]/g;
+  let reactMatch;
+  while ((reactMatch = reactRegex.exec(code))) {
+    const svgToken = reactMatch[1];
+    code = code.replace(reactMatch[0], `const ${svgToken} = "${scope[svgToken]}"`);
   }
 
   const dependencies = {
