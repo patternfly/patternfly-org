@@ -116,7 +116,7 @@ The PF icon set supports use of any FAS (font awesome solid) icons. Therefore, d
 1. [Hosting it yourself](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself)
 2. [Including via a package manager](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers)
 3. [Linking to a CDN](https://cdnjs.com/libraries/font-awesome)
-4. Use the SVG code directly from fontawesome.com (though this requires attribution)
+4. Use the SVG code directly from [fontawesome.com](https://fontawesome.com) (though this requires attribution)
 
 <IconsTable />
 
