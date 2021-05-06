@@ -110,7 +110,7 @@ Use this for 'fa' regular icons: `<i className="far [insert-icon-name]"></i>`<br
 If you're looking to copy React for an icon:<br />
 Use this for 'pficon' icons: `import { [insert-icon-name] } from '@patternfly/react-icons'`
 
-## Font Awesome solid (FAS) vs Font Awesome regular (FAR)
+### Font Awesome solid (FAS) vs Font Awesome regular (FAR)
 The PF icon set supports use of any FAS (font awesome solid) icons. Therefore, designers may use any FAS icon in their designs. If an FAR icon is needed, developers must include the FAR icon(s) themselves. There are a few ways of doing so:
 
 1. [Hosting it yourself](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself)
