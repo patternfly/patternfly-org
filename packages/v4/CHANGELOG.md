@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.3.61 (2021-05-07)
+
+
+### Bug Fixes
+
+* **JumpLinks:** use JumpLinks component on Org ([#2473](https://github.com/patternfly/patternfly-org/issues/2473)) ([1f0eb07](https://github.com/patternfly/patternfly-org/commit/1f0eb07a2825b0d848fea19fe57c19de22cd4040))
+
+
+
+
+
 ## 4.3.60 (2021-05-07)
 
 **Note:** Version bump only for package patternfly-org-4
