@@ -42,12 +42,11 @@ An expandable dual list contains a multi-leveled list of items for users to choo
 
 <img src="./img/expandable-dual.png" alt="basic dual list" width="880"/>
 
-1. **List labels:** label to distinguish between the list of available items to choose from, and the list of chosen items. These labels can be changed based on your use case. Keep these labels clear and concise. 
-2. **Available items list:** list of items that users can select/choose from. In this example, the list is multi-leveled, which means that items are grouped within folders.
-3. **Chosen items list:**  list of items that users have chosen from the available items list and moved into this list. In this case, when one item is moved to the chosen items, the folder that it was in also gets displayed. In this example, “Yellow” still displays inside a “Colors” folder after it has been moved to the chosen items.
-4. **Selected item:** visual state of item when it has been selected by a user. When a folder has a mix of selected and unselected items, the checkbox should have a mixed state. When all items in a folder are selected, the folder checkbox should have a selected state.
-5. **Number of items:**  indicator of how many items are selected, among the total items available in the list. In expandable lists, <u>only non-folder items are included in the item count.</u>
-6. **Badge (optional):** number of items inside the folder
+1. **Folder:** group of items that can be selected and moved from one list of options to the other. When a folder has a mix of selected and unselected items, the checkbox should have a mixed state. When all items in a folder are selected, the folder checkbox should have a selected state.
+2. **Item:** item within a folder that can be selected and moved.
+3. **Selected item:** visual state of an item when it has been selected by a user. 
+4. **Number of items:** indicator of how many items are selected, among the total items available in the list. <u>In expandable lists, only non-folder items are included in the item count.</u>
+5. **Badge (optional):** number of items inside a folder.
 
 ### Dual list behavior
 Users can select one or more items from the available list and use the arrows to move these items to the chosen list. Users can filter down the items by using the search input field.
