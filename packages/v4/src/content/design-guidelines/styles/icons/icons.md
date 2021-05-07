@@ -102,13 +102,21 @@ Click on any single icon in the table to download it as an SVG. Download all ico
 If you’re a designer, these icons are the same set as the ones in the [PatternFly Sketch Design Kit.](/get-started/design) It is possible to use any FontAwesome icon as long it follows the guidelines above.
 
 If you’re looking to copy HTML for an icon:<br/>
-Use this for 'pficon' icons: `<i className="pf-icon [insert-icon-name]"></i>`<br />
-Use this for 'fa' solid icons: `<i className="fas [insert-icon-name]"></i>`<br />
-Use this for 'fa' regular icons: `<i className="far [insert-icon-name]"></i>`<br />
+Use this for 'pficon' icons: `<i class="pf-icon [insert-icon-name]"></i>`<br />
+Use this for 'fa' solid icons: `<i class="fas [insert-icon-name]"></i>`<br />
+Use this for 'fa' regular icons: `<i class="far [insert-icon-name]"></i>`<br />
 <small>Note: Be sure to read [how to get started with icons](/get-started/develop#using-styles) when using 'fa' regular icons</small>
 
 If you're looking to copy React for an icon:<br />
 Use this for 'pficon' icons: `import { [insert-icon-name] } from '@patternfly/react-icons'`
+
+### Font Awesome solid (FAS) vs Font Awesome regular (FAR)
+The Font Awesome icons included with PatternFly core are FAS (Font Awesome solid) webfont icons. If you're using icons via `<i class="[fa, far, fas] [insert-icon-name]"></i>`, designers and developers may use any FAS icon in their designs. If a FAR icon is needed, developers must include the FAR icon(s) themselves. There are a few ways of doing so:
+
+1. [Hosting it yourself](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself)
+2. [Including via a package manager](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers)
+3. [Linking to a CDN](https://cdnjs.com/libraries/font-awesome)
+4. Use the SVG code directly from [fontawesome.com](https://fontawesome.com) (though this requires attribution)
 
 <IconsTable />
 
