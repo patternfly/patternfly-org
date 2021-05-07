@@ -102,9 +102,9 @@ Click on any single icon in the table to download it as an SVG. Download all ico
 If you’re a designer, these icons are the same set as the ones in the [PatternFly Sketch Design Kit.](/get-started/design) It is possible to use any FontAwesome icon as long it follows the guidelines above.
 
 If you’re looking to copy HTML for an icon:<br/>
-Use this for 'pficon' icons: `<i className="pf-icon [insert-icon-name]"></i>`<br />
-Use this for 'fa' solid icons: `<i className="fas [insert-icon-name]"></i>`<br />
-Use this for 'fa' regular icons: `<i className="far [insert-icon-name]"></i>`<br />
+Use this for 'pficon' icons: `<i class="pf-icon [insert-icon-name]"></i>`<br />
+Use this for 'fa' solid icons: `<i class="fas [insert-icon-name]"></i>`<br />
+Use this for 'fa' regular icons: `<i class="far [insert-icon-name]"></i>`<br />
 <small>Note: Be sure to read [how to get started with icons](/get-started/develop#using-styles) when using 'fa' regular icons</small>
 
 If you're looking to copy React for an icon:<br />
