@@ -118,7 +118,8 @@ function getReactParams(title, code, scope) {
   let reactMatch;
   while ((reactMatch = reactRegex.exec(code))) {
     const svgToken = reactMatch[1];
-    code = code.replace(reactMatch[0], `const ${svgToken} = "${scope[svgToken]}"`);
+    code = code.replace(reactMatch[0], `const ${svgToken} = "https://www.patternfly.org/v4${scope[svgToken]}"`);
+    console.log(svgToken, scope[svgToken], reactMatch, code);
   }
 
   const dependencies = {
