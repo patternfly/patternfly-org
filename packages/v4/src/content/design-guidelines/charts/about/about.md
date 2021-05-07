@@ -49,13 +49,15 @@ For charts that graph more than one data set, use interactive legends to highlig
 
 ### Example
 On hover
-<img src="./img/interactive-legend-hover.png" alt="Interactive legend on hover" />
+
+<img src="./img/interaction-legend-hover.png" alt="Interactive legend on hover" />
 
 1. **Legend:** When a user hovers over a legend label, opacity lowers for all other legend labels.
 2. **Chart:** Data corresponding to the hovered legend label is highlighted since opacity lowers for all other data sets, too. 
 
 On click
-<img src="./img/interactive-legend-hide.png" alt="Interactive legend hidden" />
+
+<img src="./img/interaction-legend-hide.png" alt="Interactive legend hidden" />
 
 1. **Legend:** When a user clicks on a legend label, it becomes disabled and the color swatch is replaced with an eye-slashed icon.
 2. **Chart:** Data corresponding to the clicked legend label is hidden from view.
