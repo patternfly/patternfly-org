@@ -11,4 +11,4 @@ Sparklines are commonly used in tables, reports, and dashboards. A common use ca
 ### Example
 <img src="./img/sparkline.png" alt="Sparkline" width="628"/>
 
-1. **Axis:** We recommend showing sparklines without an x or y-axis. Depending on space, a label can be placed underneath or to the left of the sparkline naming its visualized item.
+We recommend showing sparklines without an x or y-axis. Depending on space, a label can be placed underneath or to the left of the sparkline naming its visualized item.
