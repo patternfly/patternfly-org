@@ -10,19 +10,19 @@ A **time picker** allows users to select a time from a list of options. Time can
 
 <img src="./img/Time picker- elements.png" alt="Time picker elements" width="362"/>
 
-1. **Time field**: Displays a user’s selected time. Always fill the time field with a placeholder time format (HH:MM) or a pre-selected time before users select their time by entering the field, typing ahead, scrolling, and selecting their desired time from the menu. The time field should never be empty.
-2. **Time field in focused state**: Opens a menu list of time options. 
+1. **Time field**: Displays a user's selected time. Always fill the time field with a placeholder time format (HH:MM) or a pre-selected time. Users can choose a time by either typing in a time, or selecting one from the menu list of time options. The time field should never be empty.
+2. **Time field in focused state**: Indicates that menu list of time options is open.
 3. **Menu**: Contains a list of times in set increments, such as 12:00 AM to 11:30 PM in 30 minute increments.
-4. **Menu item in hovered state**
+4. **Menu item in hover state**
 5. **Menu item in disabled state**
 
 ## Usage
-Use time pickers to enable users to select or input a time for use cases like item filtration or scheduling in a form.
+Use time pickers to enable users to select or input a time. For example, in a toolbar for item filtration, or in a form for scheduling inputs.
 
 ### Single time selection
 A time picker allows users to select a single time. When a user enters a new time in the time field, the new time automatically replaces any placeholder or previously-selected value in that input field.
 
-Typically, time picker menus list selectable times in 30-minute increments. However, users can choose to forgo typeahead and menu selection by directly inputting desired times that don’t fall on 30-minute increments, such as 12:38 PM. 
+Typically, time picker menus list selectable times in 30-minute increments. However, users always have the option to input any desired times that don't fall on the suggested time increments. For example, a user could type in 12:38 PM despite the list of options only showing 12:30 PM and 1:00 PM options.
 
 For guidance on writing time formats for time pickers, see the [content](#time-format) section.
 
@@ -39,13 +39,13 @@ Until the user selects a start time, the end time field will be disabled.
 ### Date and time range selection
 Combine a date picker and time picker when you want users to select a range of times across multiple days. 
 
-For more information about using date and time pickers together, visit our [date-picker guidelines](components/date-picker).
+For more information about using date and time pickers together, visit our [date picker guidelines](/components/date-picker).
 
 ## Variations
 ### In a toolbar
-Use time pickers as a filter in a toolbar, though time pickers aren’t commonly used on their own. Most commonly, a time picker will accompany a date picker. 
+Use time pickers as filters in a toolbar. Note that time pickers aren't commonly used on their own, and will usually be accompanied by a [date picker](/components/date-picker)
 
-See the [date picker usage guidelines](components/date-picker)  to learn more about using date pickers and time pickers in a toolbar. 
+See the [date picker usage guidelines](/components/date-picker)  to learn more about using date pickers and time pickers in a toolbar. 
 
 ### In a form
 Use a time picker in a form to display basic scheduling options, typically for future events. In some use cases, you may preselect and display the most common time options users can choose from.
@@ -65,14 +65,14 @@ For some use cases, users may wish to customize their time display or selection 
 
 <img src="./img/time zone.png" alt="time zone" width="260"/>
 
-Learn more about formatting and displaying time zones in our [date and time guidelines](/content/numerics)
+Learn more about formatting and displaying time zones in our [date and time guidelines](/content/numerics).
 
 ## Content
 ### Time format
 
 Time formats are product-specific and often depend on user locale. To minimize confusion, choose one time format and keep it consistent. If one time picker displays HH:MM, be sure to repeat the same format throughout your interface.
 
-Learn more about date and time best practices in our [date and time guidelines](/content/numerics)
+Learn more about date and time best practices in our [date and time guidelines](/content/numerics).
 
 ### Placeholder text
 Always use placeholder text in time fields to provide an example of the accepted time format. Placeholder text will disappear after users begin inputting their own time.

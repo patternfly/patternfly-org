@@ -13,10 +13,10 @@ A **date picker** helps users select a specific date, time, or range of time-rel
 1. **Date fields**: Displays a user’s selected date. Always fill the date field with a placeholder date format (MM/DD/YYYY) or a pre-selected date before users make their selection via calendar or keyboard. The date field should never be empty.
 2. **Calendar icon**: Opens a calendar upon selection.
 3. **Selection arrows**: Allow users to navigate between months.
-4. **Calendar**: Allows users to select and navigate between days, months, years. Restricts selections by disabling certain dates.
+4. **Calendar**: Allows users to select and navigate between days, months, years. 
 5. **Selected date**
 6. **Current date (today’s date)**: Indicates the day users access the calendar. Always highlighted.
-7. **Hovered state**
+7. **Hover state**
 8. **Disabled state**
 
 ## Usage
@@ -25,24 +25,25 @@ Use date pickers to enable users to select or input a date for use cases like it
 ### Single date selection
 A date picker allows users to select a single date. When a user enters a new date by date field input or calendar selection, the new date automatically replaces any placeholder or previously-selected value in the date input field.
 
-TO DO (link) For more guidance on writing date formats, see the [content](#date-format) section.
+For more guidance on writing date formats, see the [content](#date-format) section.
 
 ### Date range selection
 Two date pickers can be used together to specify a date range. The first one functions as a start (“from”) date and the second one functions as an end (“to”) date. By default, when a user selects a start date, the end date will automatically display as the next calendar day.
 
 <img src="./img/Date range selection.png" alt="Date range selection - elements" width="482"/>
 
-**Selected start date**
-**Time range**
-**Selected end date**
+1. **Selected start date**
+2. **Time range**
+3. **Selected end date**
 
 ### Date and time range selection
 Combine a date picker and time picker when you want users to select a range of times across multiple days.
 
 **Behavior**
+
 When date pickers and time pickers are combined, each control’s behavior will remain the same. After users select the start date and time, the end date and time will be automatically set to the same hour of the next day.
 
-Depending on your use case, time pickers and date pickers can be arranged in two main ways: Horizontal alignment and vertical alignment (in this case labels are recommended).
+Depending on your use case, time pickers and date pickers can be arranged in two ways: Horizontal alignment and vertical alignment (in this case labels are recommended).
 
 **Horizontal**
 
@@ -50,30 +51,29 @@ Depending on your use case, time pickers and date pickers can be arranged in two
 
 For horizontally arranged date and time pickers, connect each combined date and time picker with "to" so that users know which date defines which point of the date range. Always arrange each date and time picker in chronological order from left to right, with the start picker on the left and the end picker on the right.
 
-**Vertical with labels**
+**Vertical**
 
 <img src="./img/Time and Date picker vertical with labels.png" alt="Example of a vertical date and time range selection with labels" width="242"/>
 
 For vertically arranged date and time pickers, always include field labels like "Starts" and "Ends" to indicate which picker corresponds to which point of the date range. Always arrange each date and time picker in chronological order from top to bottom, with the start picker on the top and the end picker below.
 
-#### ‘All day’ checkbox
-An ‘All day’ checkbox disables time pickers by indicating a user’s selection includes all hours of their selected date. Consider using an ‘All day’ checkbox to simplify combined date and time pickers for combined use cases where users only need to specify dates, or would like to select an entire day for an event.
+#### "All day" checkbox
+Consider using adding an "All day" checkbox to a date and time picker to simplify user input when selecting specific dates, or selecting and entire day for an event. Checking the "All day" checkbox will disable the time field and include all hours of their selected dates into their inputs.
 
-<img src="./img/Picker with All day checkbox.png" alt="Example of a vertical date and time range selection with 'All day' checkbox" width="680"/>
+<img src="./img/Picker with All day checkbox.png" alt="Example of a vertical date and time range selection with All day checkbox" width="750"/>
 
 ## Variations
 
 ### Toolbar
-Use date pickers in a toolbar to filter dates, mainly as past timestamps.
+Use date pickers in a toolbar to filter by date ranges.
 
-#### In toolbar attribute filter
-Date range fields in an attribute filter appear after selecting the Date range filter option which will push other content in the toolbar (in this case CTA button) to the right. The date(s) selected should display as chips under the filter.
+#### Date picker in attribute filter
+Date range fields can be added to an attribute filter as an attribute. Selecting the Date range attribute will display a date picker, and push other content in the toolbar to the right - in this case, the CTA button. The date(s) selected should display as chips under the filter.
 
 <img src="./img/In toolbar attribute filter.png" alt="Example of date picker in toolbar attribute filter" width="500"/>
 
-#### In toolbar filter group
-Use a date picker as its own date-range filter in a toolbar filter group when date-range filtering is a common action.
-Since horizontal space is limited in toolbar filter groups, use placeholder text to designate the range’s start and end dates.
+#### Date picker filter group
+Date pickers can be added to a toolbar as filters, placed next to other stand alone filters. Since horizontal space is limited in toolbar filter groups, use placeholder text to designate the range’s start and end dates.
 
 For more guidance on using filter groups, see our [toolbar design guidelines](/components/toolbar/design-guidelines).
 
@@ -112,7 +112,7 @@ Some use cases will call for more advanced scheduling options, such as schedulin
 ### Date Format
 Date formats are product-specific and often depend on user locale. To minimize confusion, choose one date format and keep it consistent. If one date picker displays MM/DD/YYYY, be sure to repeat the same date format throughout your interface.
 
-Learn more about recommended date and time conventions in our [date and time guidelines](/components/toolbar/design-guidelines). 
+Learn more about recommended date and time conventions in our [date and time guidelines](/content/numerics)
 
 ### Placeholder text
 Always use placeholder text in date fields to provide an example of the accepted date format. Placeholder text will disappear after users begin inputting their own date.
@@ -136,8 +136,8 @@ Use field level error messages to alert users when their inputted date or date f
 
 Examples:
 * Select a date within valid range.
-* Enter a valid date: MM/DD/YYYY.
+* Enter a valid date: *MM/DD/YYYY*. 
 
 <img src="./img/Error message date picker.png" alt="Date picker with error message" width="200"/>
 
-For more information about writing effective error messages, see our <a href="https://www.patternfly.org/v4/ux-writing/error-messages/">UX writing style guide</a>. .
+For more information about writing effective error messages, see our <a href="https://www.patternfly.org/v4/ux-writing/error-messages/">UX writing style guide</a>.
