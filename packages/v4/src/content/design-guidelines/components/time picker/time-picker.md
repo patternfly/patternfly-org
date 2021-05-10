@@ -30,7 +30,7 @@ For guidance on writing time formats for time pickers, see the [content](#time-f
 ### Time range selection
 Two time pickers can be used together to specify a time range. The first one functions as a start (“from”) time and the second one functions as an end (“to”) time. 
 
-<img src="./img/time range.png" alt="Time picker elements" width="300">
+<img src="./img/time range.png" alt="Time picker elements" width="300"/>
 
 Until the user selects a start time, the end time field will be disabled. 
 
