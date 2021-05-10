@@ -18,7 +18,7 @@ Do NOT use a card view to make a large amount of text-based content easier to sc
 ### Background colors for card views
 Card views can be placed on a white or a gray background, depending on your use case.
 
-**Use a white backgroun**d if your content view can change, such as when:
+**Use a white background** if your content view can change, such as when:
 - A card that opens an expandable panel on the right.
 - A card view that toggles into a table or list view.
 
@@ -37,16 +37,14 @@ Cards will size down appropriately based on the built-in CSS responsiveness beha
 You can customize card actions in a few ways. Depending on your use case, consider customizing inline actions, multiple inline actions, global actions, or action cards within your card view.
 
 #### Inline actions
-If an action can be performed on one card only, place the action in the card’s body or footer. You don’t need to include a checkbox because the actions are card-specific.
+If an action can be performed on one card only, place the action in the card’s body or footer.
 
 - If you have a few cards with single actions, use the [secondary button style](/components/button#variations).
-- If you have multiple cards with single actions, use a [link button](/components/button#variations).
+
+- If you have many cards with single actions, use a [link button](/components/button#variations).
 
 <img src="./img/few-multiple-actions.png" alt="few cards with multiple actions" />  
 
-Inline action cards are commonly used as navigation or drill-down indicators. In this case, present the user action on the card to differentiate this type of navigational card from a standard card. This way, users can easily distinguish the card types if your application includes both.   
-
-<img src="./img/inline-actions.png" alt="cards with inline actions" />
 
 #### Multiple inline actions
 If multiple actions can be performed on a single card, place those actions in a kebab. Position the kebab in the top-right corner of the card header.
@@ -64,11 +62,6 @@ You may use an extra-small empty state inside a card to present users with anoth
 
 <img src="./img/add-card-empty-state.png" alt="card view with addition card" />
 
-
-### Images
-Only include meaningful images on your cards (don’t add them for decoration). Images should help users identify specific content types. Place smaller images above the card’s header, and place larger images within the card’s body.
-
-<img src="./img/card-images.png" alt="card view with logo images in each card" />
 
 ### Bottom pagination
 If your card view has multiple pages, add a footer with [pagination](/components/pagination).
