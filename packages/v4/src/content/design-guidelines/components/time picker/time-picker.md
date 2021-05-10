@@ -39,15 +39,15 @@ Until the user selects a start time, the end time field will be disabled.
 ### Date and time range selection
 Combine a date picker and time picker when you want users to select a range of times across multiple days. 
 
-For more information about using date and time pickers together, visit our [date picker guidelines](/components/date-picker).
+For more information about using date and time pickers together, visit our [date picker guidelines](/components/date-picker/design-guidelines).
 
 ## Variations
-### In a toolbar
-Use time pickers as filters in a toolbar. Note that time pickers aren't commonly used on their own, and will usually be accompanied by a [date picker](/components/date-picker)
+### Time picker in a toolbar
+Use time pickers as filters in a toolbar. Note that time pickers aren't commonly used on their own, and will usually be accompanied by a [date picker](/components/date-picker).
 
-See the [date picker usage guidelines](/components/date-picker)  to learn more about using date pickers and time pickers in a toolbar. 
+See the [date picker usage guidelines](/components/date-picker/design-guidelines) to learn more about using date pickers and time pickers in a toolbar. 
 
-### In a form
+### Time picker in a form
 Use a time picker in a form to display basic scheduling options, typically for future events. In some use cases, you may preselect and display the most common time options users can choose from.
 
 <img src="./img/time picker in a form.png" alt="Time picker in a form" width="470"/>
@@ -58,7 +58,7 @@ Some use cases will call for more advanced scheduling options, such as schedulin
 <img src="./img/Advance scheduling - time.png" alt="Time picker in a form - modal" width="470"/>
 
 
-### With time zones
+### Time picker with time zones
 Use variable checkboxes, radio buttons, dropdowns, or input fields to help users select their intended time based on their desired or current time zone.
 
 For some use cases, users may wish to customize their time display or selection based on Universal Time Coordinated (UTC) or their own personal time zone. If applicable, add a time zone dropdown so that users can select their desired time zone from a series of options.
@@ -88,8 +88,7 @@ Use helper text to provide permanent guidance below the time field.
 
 <img src="./img/Helper text -time picker.png" alt="time picker with a helper text" width="200"/>
 
-For more information about writing effective inline help, see our 
-<a href="https://www.patternfly.org/v4/components/form/design-guidelines">form design guidelines</a>. 
+For more information about writing effective inline help, see our <a href="https://www.patternfly.org/v4/components/form/design-guidelines">form design guidelines</a>. 
 
 ### Error messages
 Use field level error messages to alert users when their inputted time or time format is invalid. Always specify what went wrong so that users can quickly identify the problem and fix it.
@@ -100,5 +99,4 @@ Examples:
 
 <img src="./img/Error message  time picker.png" alt="time picker with an error message" width="200"/>
 
-For more information about writing effective error messages, see our 
-<a href="https://www.patternfly.org/v4/ux-writing/error-messages/">UX writing style guide</a>.
+For more information about writing effective error messages, see our <a href="https://www.patternfly.org/v4/ux-writing/error-messages/">UX writing style guide</a>.

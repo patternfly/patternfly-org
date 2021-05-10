@@ -64,7 +64,7 @@ Consider using adding an "All day" checkbox to a date and time picker to simplif
 
 ## Variations
 
-### Toolbar
+### Date pickeeer in a toolbar
 Use date pickers in a toolbar to filter by date ranges.
 
 #### Date picker in attribute filter
@@ -98,7 +98,7 @@ Example:  If a user selects **Last month**  from the date-range dropdown, the da
 
 Once the date picker displays these prefilled values, users can edit each one. Upon customizing the date range, a user’s selected dropdown option will change from **Last month** to **Custom**.
 
-### Form
+### Date pickers in a form
 Use a date picker in a form to display basic scheduling options, typically for future events. In some use cases, you may preselect and display the most common date options users can choose from based on your app such as ‘Execute command now’ or ‘Don’t repeat execution’
 
 <img src="./img/Date picker in form.png" alt="Example of a date picker in a form - with other elements" width="300"/>
@@ -109,10 +109,10 @@ Some use cases will call for more advanced scheduling options, such as schedulin
 
 ## Content
 
-### Date Format
+### Date format
 Date formats are product-specific and often depend on user locale. To minimize confusion, choose one date format and keep it consistent. If one date picker displays MM/DD/YYYY, be sure to repeat the same date format throughout your interface.
 
-Learn more about recommended date and time conventions in our [date and time guidelines](/content/numerics)
+Learn more about recommended date and time conventions in our [date and time guidelines](/content/numerics).
 
 ### Placeholder text
 Always use placeholder text in date fields to provide an example of the accepted date format. Placeholder text will disappear after users begin inputting their own date.

@@ -4,7 +4,7 @@ section: components
 related: ["Date picker", "Time picker"]
 ---
 
-A **calendar month** component allows users to select and navigate between days/ months and/or years. This component is usually used with the date picker component, to display date options and selections. For more information about usage, view [date picker guidelines](/components/date-picker/design-guidelines).
+A **calendar month** component allows users to select and navigate between days, months and/or years. This component is usually used with the date picker component, to display date options and selections. For more information about usage, view [date picker guidelines](/components/date-picker/design-guidelines).
 
 ## Elements
 
