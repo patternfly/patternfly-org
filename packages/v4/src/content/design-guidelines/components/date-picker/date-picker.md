@@ -64,7 +64,7 @@ Consider using adding an "All day" checkbox to a date and time picker to simplif
 
 ## Variations
 
-### Date pickeeer in a toolbar
+### Date picker in a toolbar
 Use date pickers in a toolbar to filter by date ranges.
 
 #### Date picker in attribute filter
