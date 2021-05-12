@@ -3,45 +3,55 @@ const overpass = require('./fonts');
 const { jsxParser } = require('../helpers/acorn');
 const { capitalize } = require('./capitalize');
 
-// TODO: Use a template that has our assets.
-const getStaticParams = (title, html) => ({
-  files: {
-    'index.html': {
-      content: `<!DOCTYPE html>
-<html lang="en" class="pf-m-redhat-font">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="fonts.css" />
-  <!-- Include latest PatternFly CSS via CDN -->
-  <link 
-    rel="stylesheet" 
-    href="https://unpkg.com/@patternfly/patternfly/patternfly.css" 
-    crossorigin="anonymous"
-  >
-  <link rel="stylesheet" href="style.css" />
-  <title>PatternFly ${title} CodeSandbox Example</title>
-</head>
-<body>
-  ${html}
-</body>
-</html>`,
+const getStaticParams = (title, html) => {
+  const imgAssetRegex = /['"](\/assets\/images\/.*)['"]/g;
+  let imgAsset;
+  while ((imgAsset = imgAssetRegex.exec(html))) {
+    const imgName = imgAsset[1];
+    html = html.replace(imgName, `https://www.patternfly.org/v4${imgName}`);
+  }
+
+  return {
+    files: {
+      'index.html': {
+        content: `
+          <!DOCTYPE html>
+          <html lang="en" class="pf-m-redhat-font">
+            <head>
+              <meta charset="utf-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <link rel="stylesheet" href="fonts.css" />
+              <!-- Include latest PatternFly CSS via CDN -->
+              <link 
+                rel="stylesheet" 
+                href="https://unpkg.com/@patternfly/patternfly/patternfly.css" 
+                crossorigin="anonymous"
+              >
+              <link rel="stylesheet" href="style.css" />
+              <title>PatternFly ${title} CodeSandbox Example</title>
+            </head>
+            <body>
+              ${html}
+            </body>
+          </html>
+        `,
+      },
+      'package.json': {
+        content: {},
+      },
+      'style.css': {
+        content: ''
+      },
+      'fonts.css': {
+        content: overpass
+      },
+      'sandbox.config.json': {
+        content: { template: 'static' }
+      }
     },
-    'package.json': {
-      content: {},
-    },
-    'style.css': {
-      content: ''
-    },
-    'fonts.css': {
-      content: overpass
-    },
-    'sandbox.config.json': {
-      content: { template: 'static' }
-    }
-  },
-  template: 'static',
-});
+    template: 'static',
+  }
+};
 
 // Allow 3 formats for example identifiers
 // 1. Example = () => { [some logic] return <jsx />; }
@@ -104,22 +114,11 @@ function getReactParams(title, code, scope) {
     // Ignore
   }
 
-  /*
-  // import avatarImg from './examples/avatarImg.svg';
-  const svgRegex = /import\s+(\w[\w\d]*).*\.svg['"]/g;
-  let match;
-  while ((match = svgRegex.exec(code))) {
-    const svgToken = match[1];
-    code = code.replace(match[0], `const ${svgToken} = "${scope[svgToken]}"`);
-  }
-  */
-
-  const reactRegex = /import\s*(\w*)\s*from\s*['"](\.\/images\/.*)['"]/g;
-  let reactMatch;
-  while ((reactMatch = reactRegex.exec(code))) {
-    const svgToken = reactMatch[1];
-    code = code.replace(reactMatch[0], `const ${svgToken} = "https://www.patternfly.org/v4${scope[svgToken]}"`);
-    console.log(svgToken, scope[svgToken], reactMatch, code);
+  const imgImportRegex = /import\s*(\w*).*['"](.*)(\.(png|jpe?g|webp|gif|svg))/g;
+  let imgImportMatch;
+  while ((imgImportMatch = imgImportRegex.exec(code))) {
+    const imgName = regexMatch[1];
+    code = code.replace(imgImportMatch[0], `const ${imgName} = "https://www.patternfly.org/v4${scope[imgName]}"`);
   }
 
   const dependencies = {
@@ -133,20 +132,22 @@ function getReactParams(title, code, scope) {
   return {
     files: {
       'index.html': {
-        content: `<!DOCTYPE html>
-<html lang="en" class="pf-m-redhat-font">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>PatternFly-React ${title} CodeSandbox Example</title>
-  </head>
-<body>
-  <noscript>
-    You need to enable JavaScript to run this app.
-  </noscript>
-  <div id="root"></div>
-</body>
-</html>`,
+        content: `
+          <!DOCTYPE html>
+          <html lang="en" class="pf-m-redhat-font">
+            <head>
+              <meta charset="utf-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <title>PatternFly-React ${title} CodeSandbox Example</title>
+            </head>
+          <body>
+            <noscript>
+              You need to enable JavaScript to run this app.
+            </noscript>
+            <div id="root"></div>
+          </body>
+          </html>
+        `,
       },
       'index.js': {
         content: `import ReactDOM from 'react-dom';
