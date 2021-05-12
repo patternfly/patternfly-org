@@ -44,7 +44,7 @@
     "monaco-editor": "~0.21.0",
     "monaco-editor-webpack-plugin": "^2.1.0",
     "null-loader": "^4.0.0",
-    "postcss": "^7.0.32",
+    "postcss": "^8.2.10",
     "postcss-loader": "^4.0.1",
     "prismjs": "^1.17.1",
     "puppeteer": "^5.3.1",
