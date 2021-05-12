@@ -14,7 +14,10 @@ _For Red Hat product terminology and documentation standards, see [Red Hat's sup
 **Cancel**: (v.) Use to describe ending an action in progress or ending an action where changes could be lost (like in a form).
 - Notes: Use *canceling* instead of *cancelling*. Use *canceled* instead of *cancelled*.
 
-**Change**: Do not use. See *Edit*.
+**Change**: Do not use. See *Edit*. 
+
+**Click**: (v.) Use to prompt the user to click a button, radio button, link, or any other item that isn't part of a list, group, view, or other container element. 
+- Notes: Do not use interchangeably with *Select*. 
 
 **Close**: (v.) Use to describe shutting an open window (like a message dialog).
 - Opposite: Open
