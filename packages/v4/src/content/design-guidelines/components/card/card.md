@@ -25,7 +25,7 @@ Cards are flexible and customizable to your use case. Here are some different wa
 
 <img src="./img/card-variants.png" alt="three card variants" width="1202"/>
 
-1. The first version places an image in the header with a separate title. The View details action is located in the footer.
+1. The first version places an image in the header with a separate title. The **View details** action is located in the footer.
 
 2. In the second version, the title is moved to the header area to give a more compact footprint.
 
@@ -72,7 +72,7 @@ It is often useful to make cards selectable. PatternFly supports two types of se
 2. **Selectable card:** Features a raised appearance and blue border treatment when selected.
 
 ### Images
-Only include meaningful images on your cards (don’t add them for decoration). Images should help users identify specific content types. 
+Only include meaningful images on your cards (don’t add them for decoration). Images should help users identify specific content types.
 
 <img src="./img/card-images.png" alt="card view with logo images in each card" width="913"/>
 

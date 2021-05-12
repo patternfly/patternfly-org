@@ -13,7 +13,7 @@ Use a card view to:
 - Make information easier to visualize and compare.
 - Summarize a large number of objects at once within the same page.
 
-Do NOT use a card view to make a large amount of text-based content easier to scan. Use a table or list view instead.
+**Never** use a card view to make a large amount of text-based content easier to scan. Use a [table](/components/table) or [list](/components/data-list) view instead.
 
 ### Background colors for card views
 Card views can be placed on a white or a gray background, depending on your use case.
@@ -27,6 +27,8 @@ Card views can be placed on a white or a gray background, depending on your use 
 **Use a gray background** if the sole purpose of your content view is to display cards.
 
 <img src="./img/gray-background.png" alt="card view with gray background" />
+
+**Note:** Use the default border treatment (cards with drop shadows) for cards when placed on a gray background only. Flat cards should be used when placing cards on a white background.
 
 ### Card views on mobile
 Cards will size down appropriately based on the built-in CSS responsiveness behaviors. Most of the time, they’ll follow the grid layout, expanding and compressing at certain breakpoints. At the smallest mobile size, they take up almost the entire width of the screen.
@@ -58,7 +60,7 @@ If an action can be performed globally on multiple cards, or if it leads to mult
 
 
 #### Action card
-You may use an extra-small empty state inside a card to present users with another way to add more cards to the existing card view. We recommend using this feature **in addition to** a primary button in the toolbar, to ensure that the user is still able to perform the action from any page of the card view. Place the action card where a new card will be added, most likely in the very first or last card in the card view.
+You may use an extra-small empty state inside a card to present users with another way to add more cards to the existing card view. We recommend using this feature **in addition to** a primary button in the toolbar, to ensure that the user is still able to perform the action from any page of the card view. Place the action card where a new card will be added, most likely as the very first or last card in the card view.
 
 <img src="./img/add-card-empty-state.png" alt="card view with addition card" />
 
