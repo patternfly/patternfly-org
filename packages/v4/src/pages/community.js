@@ -70,7 +70,7 @@ const CommunityPage = () => (
       <p>Sometimes Flyers branch out and build groups of their own, which is how new communities are born. While PatternFly communities are separate from PatternFly and not supported as part of the design system, we still love seeing our Flyers forming new groups and developing their visions into actions.</p>
       <br/>
 
-        <Title size="xl" className="pf-u-mb-sm ws-page-title pf-u-mt-xl" headingLevel="h4"><a href="https://patternfly.github.io/patternfly-elements/">PatternFly Elements</a></Title>
+        <Title size="xl" className="pf-u-mb-sm ws-page-title pf-u-mt-xl" headingLevel="h4"><a href="https://patternflyelements.org">PatternFly Elements</a></Title>
         <p> PatternFly Elements is a community created by Red Hat's web-based developers. It focuses on creating web components for use across Red Hat's sites and SaaS products and features theming options available for your own brand library.</p>
 
         <Title size="xl" className="pf-u-mb-sm ws-page-title pf-u-mt-xl" headingLevel="h4"><a href="https://github.com/patternfly-kotlin/patternfly-fritz2">PatternFly Fritz2</a></Title>
