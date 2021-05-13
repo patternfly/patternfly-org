@@ -132,22 +132,20 @@ function getReactParams(title, code, scope) {
   return {
     files: {
       'index.html': {
-        content: `
-          <!DOCTYPE html>
-          <html lang="en" class="pf-m-redhat-font">
-            <head>
-              <meta charset="utf-8" />
-              <meta name="viewport" content="width=device-width, initial-scale=1" />
-              <title>PatternFly-React ${title} CodeSandbox Example</title>
-            </head>
-          <body>
-            <noscript>
-              You need to enable JavaScript to run this app.
-            </noscript>
-            <div id="root"></div>
-          </body>
-          </html>
-        `,
+        content: `<!DOCTYPE html>
+<html lang="en" class="pf-m-redhat-font">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PatternFly-React ${title} CodeSandbox Example</title>
+  </head>
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root" style="height:100%"></div>
+</body>
+</html>`,
       },
       'index.js': {
         content: `import ReactDOM from 'react-dom';

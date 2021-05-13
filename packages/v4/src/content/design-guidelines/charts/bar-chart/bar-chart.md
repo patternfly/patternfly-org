@@ -20,4 +20,4 @@ The orientation of bar charts is dependent on the data and space at hand. Any ba
 
 <img src="./img/vertical-bar-chart.png" alt="Vertical bar chart" width="559"/>
 
-1. **Bar:** A bar's height represents its value. All bars should be the same width, and the spacing between them should be equal, mimicking the spacing between axis values. For fill color recommendations, see [colors for charts](/guidelines/colors-for-charts).
+A bar's height represents its value. All bars should be the same width, and the spacing between them should be equal, mimicking the spacing between axis values. For fill color recommendations, see [colors for charts](/guidelines/colors-for-charts).

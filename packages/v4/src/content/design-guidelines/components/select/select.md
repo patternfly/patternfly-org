@@ -61,9 +61,32 @@ Both the checkbox select and multiple select lists allow users to select multipl
 
 <img src="./img/suggested-multiselect.png" alt="Example for using a multiple select inside a form" width="518"/>
 
-### Typeahead
+## Select list features
+
+### Select list with typeahead
 Typeahead allows users to narrow a displayed list of options by typing into the input field. Type ahead is  recommended for lists with more than ten options and is available for single and multiple select lists. Although the typeahead within toggle functionality does not exist for the checkbox select, there is an option to add a typeahead capability within the menu of items if needed, as seen in this [grouped checkbox input with filtering](/components/select/react#grouped-checkbox-input-with-filtering) example.
 
 <img src="./img/typeahead.png" alt="Visual of a typeahead being used" width="361"/>
 
 When providing fewer than 5 options, you can use [radio buttons](/components/radio/react) or [checkboxes](/components/checkbox/react) to display all options to the user simultaneously if you don’t have any space constraints.
+
+### Select list with count
+Select lists support the option of adding a number count to checkbox selects, both (1) as a badge in the toggle to indicate number of items selected, or (2) at the item level to indicate the number of items that match a certain filter option.
+
+<img src="./img/with-count.png" alt="select list with counts" width="253"/>
+
+### Select list with view more
+When a select list contains more than 20 items, and the processing load may be too big to load all options at once, you have the option to add a “View more” link at the bottom of the menu.
+When the user clicks View more, more options are loaded and “view more” is replaced with the next available set of options. 
+
+<img src="./img/with-viewmore.png" alt="select list with view more button" width="757"/>
+
+### Select lists with description
+Descriptive text may be added below each menu item, but only when the menu item label itself may not be clear to all users. Keep descriptive text to two lines or less.
+
+<img src="./img/with-description.png" alt="select list with description" width="210"/>
+
+### Select lists with favorites 
+Favoriting can be associated with any select list option. In this case, making an item a favorite will duplicate it at the top of the menu. This may be useful when you have a long list of possible options to choose from and want to allow the user to “pin” a subset of items to the top of the select list.
+
+<img src="./img/with-favorites.png" alt="select list with favorites" width="199"/>
