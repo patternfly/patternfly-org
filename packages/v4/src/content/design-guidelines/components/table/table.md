@@ -24,7 +24,7 @@ See [when to use compact vs. default spacing](#compact-vs-default-spacing) for m
 
 <img src="./img/compact-and-default-table.png"  alt="Compact and default table"  width="857"/>
 
-### Table elements
+## Table elements
 The elements mentioned below are similar for a table with compact or default spacing. This example shows a table with a compact spacing.
 
 <img src="./img/compact-data-table.png"  alt="Compact table"  width="1186"/>
@@ -37,7 +37,7 @@ The elements mentioned below are similar for a table with compact or default spa
 6. **Inline actions:** Actions that apply only to the current row/item
 7. **Pagination footer:** When present, provides navigation to additional pages
 
-### Table capabilities
+## Table capabilities
 Every table can be extended with these functionalities:
 
 * [Expandable table](#expandable-table)
