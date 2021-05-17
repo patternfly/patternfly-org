@@ -22,12 +22,12 @@ PatternFly supports two main types of tables:
 
 See [when to use compact vs. default spacing](#compact-vs-default-spacing) for more information about the styling and usage.
 
-<img src="./img/compact-and-default-table.png"  alt="Compact and default table"  width="857"/> 
+<img src="./img/compact-and-default-table.png"  alt="Compact and default table"  width="857"/>
 
-### Table elements
-The elements mentioned below are similar for a table with compact or default spacing. This example shows a table with a compact spacing. 
+## Table elements
+The elements mentioned below are similar for a table with compact or default spacing. This example shows a table with a compact spacing.
 
-<img src="./img/compact-data-table.png"  alt="Compact table"  width="1186"/> 
+<img src="./img/compact-data-table.png"  alt="Compact table"  width="1186"/>
 
 1. **[Toolbar](/components/toolbar/design-guidelines):** Sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
 2. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information.
@@ -37,17 +37,18 @@ The elements mentioned below are similar for a table with compact or default spa
 6. **Inline actions:** Actions that apply only to the current row/item
 7. **Pagination footer:** When present, provides navigation to additional pages
 
-### Table capabilities
-Every table can be extended with these functionalities: 
+## Table capabilities
+Every table can be extended with these functionalities:
 
 * [Expandable table](#expandable-table)
 * [Compound expandable table](#compound-expandable-table)
 * [Actionable table](#actionable-table)
 * [Sortable table](#sorting-by-columns)
+* [Table with favoriting](#table-with-favoriting)
 
 ### Expandable table
 
-<img src="./img/expandable-table.png"  alt="Expandable table"  width="1186"/> 
+<img src="./img/expandable-table.png"  alt="Expandable table"  width="1186"/>
 
 1. **Expand all (optional)**: Expands every row at the same time.
 2. **Expansion:** Expands single row.
@@ -56,7 +57,7 @@ Every table can be extended with these functionalities:
 #### When to use
 
 **Use expandable table rows when:**
-* You have more information than will comfortably fit inside a row. 
+* You have more information than will comfortably fit inside a row.
 * You want to provide a way for advanced users to access information that is not applicable to all users.
 
 #### Expanded panel coloring
@@ -69,22 +70,22 @@ Every table can be extended with these functionalities:
 
 ### Compound-expandable table
 
-<img src="./img/compound-expandable-data-table.png"  alt="Compound expandable table"  width="1189"/> 
+<img src="./img/compound-expandable-data-table.png"  alt="Compound expandable table"  width="1189"/>
 
 1. **Expandable cell:** A cell that can be clicked to reveal more detail about an item. If the expansion for an item is already open, clicking on a different cell will close the current item and open a new one.
 2. **Expansion panel:** Contains details associated with an expandable item.
 
 #### When to use
 **Use a compound expandable table when:**
-* You want multiple expansion panels that relate to specific table columns. 
+* You want multiple expansion panels that relate to specific table columns.
 * It would not make sense to combine all of this information into a single, simple expansion.
 
 ### Actionable table
 The actionable table provides checkboxes or radio buttons that enable users to select one or more rows in a table. Users may then act on those selections using options in the [toolbar](/components/toolbar/design-guidelines),.
 
-<img src="./img/actionable-table.png"  alt="Actionable table"  width="1174"/> 
+<img src="./img/actionable-table.png"  alt="Actionable table"  width="1174"/>
 
-1. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table with checkboxes. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information. 
+1. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table with checkboxes. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information.
 2. **Checkbox**: Enables a user to select a row. Use when multiple rows can be selected at the same time.
 3. **Radio button**: Enables a user to select a single row at a time. Use when only one row can be selected at a time.
 3. **Global actions:** Actions that can be applied to **all** selected items.  If actions in the table are restricted to a single row or object, keep the actions at the row kebab level, instead of in the toolbar.
@@ -99,7 +100,7 @@ The actionable table provides checkboxes or radio buttons that enable users to s
 ### Sorting by columns
 Sorting by columns is possible for any table variation. Enabling the component within a table eases the ability to scan and read through the content. This option is favored over adding sorting functionality to the [toolbar](/components/toolbar/design-guidelines).
 
-<img src="./img/sortable-data-table.png"  alt="Sortable table"  width="1161"/> 
+<img src="./img/sortable-data-table.png"  alt="Sortable table"  width="1161"/>
 
 1. **Sortable column:** When a column is sortable, the sort icon will appear to the right of the column header in a [light grey](/guidelines/colors#typography-and-iconography-colors) color. Sorting will not become active until the user selects the column header. This triggers the arrow to point upwards and the content to be sorted in ascending order.
 3. **Hovered sort:** When a column is sortable, the sort icon will appear to the right of the column header. Upon hover, the  icon will change to a [darker grey](/guidelines/colors#typography-and-iconography-colors) indicating that the icon is actionable.
@@ -113,11 +114,24 @@ If a table contains these two attributes: (System Name | Last Sync) you may want
 
 If a table contains these three attributes: (System Name | Last Sync | Severity) you may want to show the system with the highest Severity because that is the system the user should tend to first.
 
-### Compact vs. default spacing
-Whether to use a table/data list with compact or default spacing is up to you and your use case. However, here is some guidance for when to use which option. You can see examples of each option for comparison. 
+### Table with favoriting
+Adding the ability to favorite is possible for any table variation. Users can set their favorites by clicking the star icon in the favorites row. By default, the star is grey; when an item is favorited, the star becomes yellow. Clicking the star again will unfavorite the item. When an item is favorited or unfavorited, it does not move in the list unless sorting is on.
 
-#### Compact spacing 
-A table may sometimes need to be compact to make more rows visible at a time. The more rows you can see, the less you need to use [pagination](/components/pagination/design-guidelines). Compact spacing is recommended for data with a simple structure. See an example below. 
+<img src="./img/table-favoriting.png"  alt="Table with favoriting"  width="930"/>
+
+1. **Favorites column**: Allows users to favorite and unfavorite items in the table by clicking the item’s associated star icon.
+2. **Favorites column header (optional):** Allows users to sort by favorites.
+
+#### When to use
+**Use a table with favorites when:**
+* Users may want to easily access their most used/viewed items in a table.
+* You have a long list of items and want to favorite items by default for discoverability.
+
+### Compact vs. default spacing
+Whether to use a table/data list with compact or default spacing is up to you and your use case. However, here is some guidance for when to use which option. You can see examples of each option for comparison.
+
+#### Compact spacing
+A table may sometimes need to be compact to make more rows visible at a time. The more rows you can see, the less you need to use [pagination](/components/pagination/design-guidelines). Compact spacing is recommended for data with a simple structure. See an example below.
 
 **Use compact spacing when:**
 * You need to show as much data as possible on one page.
@@ -125,38 +139,38 @@ A table may sometimes need to be compact to make more rows visible at a time. Th
 * You need to minimize paging.
 * Readability is a secondary concern.
 
-<img src="./img/compact-spacing.png"  alt="Compact spacing"  width="1162"/> 
+<img src="./img/compact-spacing.png"  alt="Compact spacing"  width="1162"/>
 
 **Example:**
-* You can see more data on one page. 
+* You can see more data on one page.
 * You have a good overview about the structure of data.
-* The structure of data is simple, informative and have less visual elements. 
+* The structure of data is simple, informative and have less visual elements.
 
-#### Default spacing 
+#### Default spacing
 A table may sometimes need more space for rich graphical data. See an example below.
 
 **Use default spacing when:**
 * You don’t have to display a lot of data on one page.
 * You use many visual indicators that are placed in columns, such as icons or charts.
 * You don't have to minimize paging.
-* Readability is a primary concern. 
+* Readability is a primary concern.
 
-<img src="./img/default-spacing.png"  alt="Default spacing"  width="1162"/> 
+<img src="./img/default-spacing.png"  alt="Default spacing"  width="1162"/>
 
 **Example:**
-* You can see less data on one page. 
+* You can see less data on one page.
 * You will need a pagination to see more rows.
-* Data structure includes many visual elements. 
+* Data structure includes many visual elements.
 
 ## Tables on mobile
 The PatternFly table is designed to be fully responsive. When columns no longer fit within the width of the viewport, columns are stacked so that data in each row is displayed as sets of attribute-value pairs.
 
-<img src="./img/Mobile-data-table-example.png"  alt="Mobile data table"  width="375"/> 
+<img src="./img/Mobile-data-table-example.png"  alt="Mobile data table"  width="375"/>
 
 ## Using lists and tables in a page
 Lists and tables should be placed in the body of a page. The width should be set by the containing element.
 
-<img src="./img/data-table-example.png"  alt="Compact data table example"  width="1500"/> 
+<img src="./img/data-table-example.png"  alt="Compact data table example"  width="1500"/>
 
 In this example, a table is positioned in the body of a page in a card.
 
@@ -165,5 +179,5 @@ In this example, a table is positioned in the body of a page in a card.
 **Use a table when**:
 * The information you want to display fits into a structured, tabular format (in other words, has distinct rows and columns).
 
-**Don't use a table**: 
+**Don't use a table**:
 * For less structured or variably structured data that cannot be easily organized into columns. In these situations, use a [data lists](/components/data-list/design-guidelines).
