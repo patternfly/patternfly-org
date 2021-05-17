@@ -4,10 +4,15 @@ section: accessibility
 ---
 import { AccessibilityDatalist } from './accessibility-datalist.js';
 
+## General questions to consider
+
 To assess how accessible your applications or products are, consider these questions:
 - **Is it discoverable/perceivable by all users?** If you can see or click on it then it should be discoverable and perceivable by all users. You should determine if you can easily navigate to it by keyboard or by screen reader.
 - **Is it interactable?** If you can get to it, it should be easy to actually use once you’ve focused on the element. You should be able to interact with it by keyboard. (Ex: If it’s a button, can you press enter to initiate the action?) Also use a screen reader to ensure you can initiate the action.
 - **Is it understandable?** If the element can be found and interacted with, it should be clear what this action does. If it’s a button, you should determine if it has visible text that would be clear out of context of the page. If it doesn’t have visible text, you should check if it has an aria-label or accessible name.
+
+
+## What products should address
 
 Keep in mind that while PatternFly provides accessible components, we can't guarantee that your products will be accessible. There are a few items outside the scope of PatternFly, so you should keep these items in mind to ensure accessibility in anything you build: 
 <br />

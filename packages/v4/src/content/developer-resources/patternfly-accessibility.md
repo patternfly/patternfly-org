@@ -1,5 +1,5 @@
 ---
-id: Accessibility and PatternFly
+id: PatternFly's Accessibility
 section: accessibility
 ---
 
@@ -8,6 +8,8 @@ As a design system, PatternFly provides accessible building blocks to work with.
 With constant enhancements to PatternFly, we maintain this accessibility through a combination of automated and manual testing. We use [aXe: The Accessibility Engine](https://www.deque.com/axe/) on our build to ensure that all components pass this accessibility audit before they’re added to PatternFly. 
 
 We regularly audit keyboard accessibility with both manual testing and integration tests. We’re also aiming to provide full support for Voice Over as our main screen reader, but we still test our components through NVDA and JAWS. As part of our manual audit, every component is run through Voice Over to make sure they’ll be as accessible as possible in your products.
+
+## What PatternFly should address
 
 Our goal is to meet [level AA in the Web Content Accessibility Guidelines 2.1](https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize&levels=aaa). If you use PatternFly or contribute to PatternFly as a designer or developer, these are the items you can expect to be covered in PatternFly:
 

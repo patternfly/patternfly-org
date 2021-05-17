@@ -1,5 +1,5 @@
 ---
-id: Accessibility introduction
+id: Getting started with accessibility
 section: accessibility
 ---
 
@@ -22,24 +22,25 @@ This section provides information to help you better understand and address the 
 
 **Note**: Some users might fall into multiple groups, and some might use tools created for a different group.
 <br />
-<br />
 
-**No vision:** <br />Users with no vision rely on screen readers to access web sites and applications. Often, screen reader users will navigate a page by browsing specific elements, like headers, links, or form elements. 
-- **Tip:** Use semantic elements and check that labels are meaningful when pulled out of context.    
-<br />
-
-**Low vision:** <br />Users with low vision can have different needs depending on the nature of their visual impairment. Users may have difficulty with color differentiation, blurriness, or lack of vision in central or peripheral areas. 
-- **Tip:** These needs mean that interfaces should not rely on color to communicate information, palettes need to have sufficient contrast, and layouts should be responsive when font sizes are increased.
-<br />
-<br />
-
-**Motor:** <br />Users with poor motor control can use a range of devices to access contents. 
+### Motor
+Users with poor motor control can use a range of devices to access contents. **
 - Users who rely on a keyboard need elements that are keyboard accessible and highly visible when in focus. 
 - Users who rely on a mouse or touch need target areas that are large enough to be hit easily.
 <br />
+
+### No vision
+Users with no vision rely on screen readers to access web sites and applications. Often, screen reader users will navigate a page by browsing specific elements, like headers, links, or form elements. 
+- **Tip:** Use semantic elements and check that labels are meaningful when pulled out of context.    
+
+
+### Low vision
+Users with low vision can have different needs depending on the nature of their visual impairment. Users may have difficulty with color differentiation, blurriness, or lack of vision in central or peripheral areas. 
+- **Tip:** These needs mean that interfaces should not rely on color to communicate information, palettes need to have sufficient contrast, and layouts should be responsive when font sizes are increased.
 <br />
 
-**Cognitive:** <br />Users who have difficulty processing information benefit from well-written content. 
+### Cognitive 
+Users who have difficulty processing information benefit from well-written content. 
 - Information should be clear, concise, and easy to scan. 
 - Consider visual hierarchy, chunk content into short, related sections, and avoid long paragraphs.
 <br />
@@ -54,6 +55,8 @@ While accessibility tends to focus on those with disabilities, everyone benefits
 - Closed captioning benefits those in crowded areas, those teaching children how to read, or those learning a new language. 
 
 There are plenty more examples we could include. Essentially, accessibility takes _all users_ into account.
+
+<img src="./PF-a11y.png" alt="Accessibility spectrum example" />
 <br />
 <br />
 
