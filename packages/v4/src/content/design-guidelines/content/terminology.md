@@ -77,7 +77,7 @@ _For Red Hat product terminology and documentation standards, see [Red Hat's sup
 - Opposite: Add
 - Notes: If what you’re removing is not readily apparent from the context, consider adding a noun (like “Remove file”).
 
-**Save** (v.) Use to describe preserving changes made by the user. 
+**Save**: (v.) Use to describe preserving changes made by the user. 
 - Opposite: Cancel
 
 **Select**: (v.) Use to prompt the user to select an item from a list, group, view, or other container element.
@@ -93,6 +93,12 @@ _For Red Hat product terminology and documentation standards, see [Red Hat's sup
 **Show**: (v.) Use to describe displaying something that is hidden in the interface.
 - Opposite: Hide
 - Notes: Do not use interchangeably with *View* or *Expand*.
+
+**Sign up**: (v.) Use to describe signing up for a web account, application, service, or event.
+- Notes: *Sign up* is two words as a verb and one word as an adjective or noun. See *Signup*.
+
+**Signup**: (adj.) Use to describe something related to the act of signing up for a web account, application, service, or event, like a signup page.
+- Notes: The noun *Signup* can also be used to refer to a user signup submission (for example, "We need more signups for this event.").
 
 **View**: (v.) Use to describe accessing another page to see details. (n.) Use to represent an arrangement of data in the interface (like a list view).
 
