@@ -6,6 +6,7 @@
 ### [Log viewer component](https://www.patternfly.org/v4/components/log-viewer)
 
 ![log viewer](./img/log-viewer.png)
+
  Introduces a native log viewer beta component to display real-time streamed logs or static log data. The toolbar is fully customizable. Follow-on work planned to improve responsive behavior.
 
 ### [Toggle group re-styling](https://www.patternfly.org/v4/components/toggle-group)
