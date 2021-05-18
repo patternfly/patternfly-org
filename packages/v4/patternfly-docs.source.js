@@ -36,11 +36,15 @@ module.exports = (sourceMD, sourceProps) => {
   const reactCodeEditorPath = require
     .resolve('@patternfly/react-code-editor/package.json')
     .replace('package.json', 'src');
+  const reactLogViewerPath = require
+    .resolve('@patternfly/react-log-viewer/package.json')
+    .replace('package.json', 'src');
   const reactPropsIgnore = '**/*.test.tsx';
   sourceProps(path.join(reactCorePath, '/**/*.tsx'), reactPropsIgnore);
   sourceProps(path.join(reactTablePath, '/**/*.tsx'), reactPropsIgnore);
   sourceProps(path.join(reactChartsPath, '/**/*.tsx'),reactPropsIgnore);
   sourceProps(path.join(reactCodeEditorPath, '/**/*.tsx'),reactPropsIgnore);
+  sourceProps(path.join(reactLogViewerPath, '/**/*.tsx'), reactPropsIgnore);
 
   // React MD
   sourceMD(path.join(reactCorePath, '/**/examples/*.md'), 'react');
@@ -55,6 +59,9 @@ module.exports = (sourceMD, sourceProps) => {
 
   // React-code-editor MD
   sourceMD(path.join(reactCodeEditorPath, '/**/examples/*.md'), 'react');
+
+  // React-log-viewer MD
+  sourceMD(path.join(reactLogViewerPath, '/**/examples/*.md'), 'react');
 
   // Release notes
   sourceMD(require.resolve('@patternfly/patternfly/RELEASE-NOTES.md'), 'html');
