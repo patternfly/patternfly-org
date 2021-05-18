@@ -2460,10 +2460,10 @@
     tippy.js "5.1.2"
     tslib "1.13.0"
 
-"@patternfly/react-docs@5.18.30":
-  version "5.18.30"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-docs/-/react-docs-5.18.30.tgz#317b049607237defd15fdceeb52208408e278349"
-  integrity sha512-uLHjvo2y/pmIXSlk7rgBmVloCGtne4alzwp7cFFzXlFKiHeA8zmibcCneSyo/RXEiTR7KCig0f8mFAyKVy7OcA==
+"@patternfly/react-docs@5.18.31":
+  version "5.18.31"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-docs/-/react-docs-5.18.31.tgz#053ae2461900070ad943ddaacb0d917306d0771e"
+  integrity sha512-bq7MkGSEIJwdA1aJjbJ/o1WgVOXa09shPupx0Y7AkptG8ZsrisG+2Y9/5aSxXVTmYKKt54L1vO5ZbGPZdgHFQA==
   dependencies:
     "@patternfly/patternfly" "4.103.6"
     "@patternfly/react-catalog-view-extension" "^4.11.25"
@@ -2472,6 +2472,7 @@
     "@patternfly/react-core" "^4.121.1"
     "@patternfly/react-icons" "^4.10.7"
     "@patternfly/react-inline-edit-extension" "^4.6.108"
+    "@patternfly/react-log-viewer" "^4.1.2"
     "@patternfly/react-styles" "^4.10.7"
     "@patternfly/react-table" "^4.27.7"
     "@patternfly/react-tokens" "^4.11.8"
@@ -2492,6 +2493,16 @@
     "@patternfly/react-icons" "^4.10.7"
     "@patternfly/react-styles" "^4.10.7"
     "@patternfly/react-table" "^4.27.7"
+
+"@patternfly/react-log-viewer@^4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-log-viewer/-/react-log-viewer-4.1.2.tgz#b174af96c1ddd336658d14737866733a6dc4f649"
+  integrity sha512-zEG23BF69qdnBvdf2qSerxJ9zX+V0ewtqusyEHokKBjUcslu7E76V6e8ZiUVnxYtJLgvytuKeI8XmwbXwvo5Lg==
+  dependencies:
+    "@patternfly/react-core" "^4.121.1"
+    "@patternfly/react-icons" "^4.10.7"
+    "@patternfly/react-styles" "^4.10.7"
+    memoize-one "^5.1.0"
 
 "@patternfly/react-styles@^4.10.7":
   version "4.10.7"
@@ -10032,6 +10043,11 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
+
+memoize-one@^5.1.0:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/memoize-one/-/memoize-one-5.2.1.tgz#8337aa3c4335581839ec01c3d594090cebe8f00e"
+  integrity sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q==
 
 memory-fs@^0.4.1:
   version "0.4.1"
