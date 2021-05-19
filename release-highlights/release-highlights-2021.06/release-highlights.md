@@ -3,12 +3,6 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Log viewer component](https://www.patternfly.org/v4/components/log-viewer)
-
-![log viewer](./img/log-viewer.png)
-
- Introduces a native log viewer beta component to display real-time streamed logs or static log data. The toolbar is fully customizable. Follow-on work planned to improve responsive behavior.
-
 ### [Toggle group re-styling](https://www.patternfly.org/v4/components/toggle-group)
 
 ![restyled toggle group](./img/toggle-group.png)
@@ -30,6 +24,12 @@ We've added a view more action to the bottom of a select menu to enable incremen
 ![table with complex actions](./img/table-with-actions.png)
 
 We now support adding any type of actions to table rows. Formerly, only actions (kabob) menus were supported.
+
+### [Log viewer component (beta)](https://www.patternfly.org/v4/components/log-viewer)
+
+![log viewer](./img/log-viewer.png)
+
+ Introduces a native log viewer component to display real-time streamed logs or static log data. The toolbar is fully customizable. This is currently work in progress with a number of enhancements and improvements to be introduced over upcoming releases. With that in mind, you are encouraged to use this and provide feedback.
 
 See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
