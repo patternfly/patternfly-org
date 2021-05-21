@@ -5,7 +5,7 @@ section: components
 An **action list** is a group of actions with set spacing.
 
 ## Usage
-Action lists can be used in [toolbars](/components/toolbar), [modals](/components/modal), [forms](/components/form), [data list](/components/data-list), [wizards](/components/wizard) and more. Using an action list allows you to know what spacing to use for a group of actions, depending on your use case. Although in most cases there should be 16px of spacing between buttons, there are cases where you may want more separation, such as with cancel buttons in wizards which should be placed 48px away from the rest of the actions. Using an action list ensures that these spacing guidelines are maintained and followed. 
+Action lists can be used in [toolbars](/components/toolbar), [modals](/components/modal), [forms](/components/form), [data lists](/components/data-list), [wizards](/components/wizard) and more. Using an action list allows you to know what spacing to use for a group of actions, depending on your use case. Although in most cases there should be 16px of spacing between buttons, there are cases where you may want more separation, such as with cancel buttons in wizards which should be placed 48px away from the rest of the actions. Using an action list ensures that these spacing guidelines are maintained and followed. 
 
 Action lists are also designed to stack buttons correctly within the space they are in.
 
