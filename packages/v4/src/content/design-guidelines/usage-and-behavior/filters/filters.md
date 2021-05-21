@@ -291,6 +291,15 @@ A filter query is triggered whenever a new value is set by the user. The followi
 | Search field &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | The user types in an input and/or presses the Enter key after typing in the input field. This action will create a filter for the first value shown in the filtered list. |
 | Select lists &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | The user selects or deselects an item in the list. |
 
+## Filter validation
+If your filter has limitations, you may present an error state on your filter toggle to communicate these limitations to users. Examples of instances where you may want to use filter validation include:
+* In cases where free-form text input validation is needed
+* When there is a limit on how many filters a user can apply at a time
+* When there is a limit on how many options can be selected for one attribute
+
+When using error validation in a filter, include a tooltip on hover with an explanation of what went wrong. 
+
+<img src="./img/error-table.png" alt="Example of filter validation"/>
 
 ## Layout considerations
 Filters may be included in a [toolbar](/components/toolbar) and are usually left aligned. There may be more than one filter used in a single toolbar, and in some cases, custom filters may make up a full toolbar. Filters may also be used alone outside of a toolbar.
