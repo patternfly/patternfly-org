@@ -1,6 +1,7 @@
 ---
 id: Getting started with accessibility
 section: accessibility
+redirectFrom: /developer-resources/accessibility-guide
 ---
 
 When it comes to accessibility, there’s always room to improve. That’s why this guide is a work in progress. Your feedback can make it better, so tell us what you think.  
