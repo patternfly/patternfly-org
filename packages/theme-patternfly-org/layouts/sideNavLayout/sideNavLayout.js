@@ -51,10 +51,12 @@ const HeaderTools = ({
   useEffect(() => {
     const handleSearchHotkeys = (event) => {
       const tagName = event.target.tagName.toLowerCase();
+      const isContentEditable = event.target.contentEditable === 'true';
       if (
         (event.code === 'Slash' || event.code === 'KeyS') &&
         tagName !== 'input' &&
-        tagName !== 'textarea'
+        tagName !== 'textarea' &&
+        !isContentEditable
       ) {
         setSearchExpanded(true);
         setTimeout(() => searchRef.current && searchRef.current.focus(), 0);
