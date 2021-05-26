@@ -14,7 +14,7 @@ Many accessibility issues can be found by doing a few simple checks:
    - There are many tools you can use to validate your HTML, such as [W3C’s markup validation service](https://validator.w3.org/). 
 
 
-2. **Use an accessibility audit tool to check for violations.** If you are using PatternFly in your project, we recommend using [aXe: The Accessibility Engine](//www.deque.com/axe/) to check for accessibility violations locally. To make it even easier for you, we've created the [patternfly-a11y script](https://github.com/patternfly/patternfly-a11y) which reports any axe accessibility violations from a set of pages. A configuration file can be set to customize to specific needs like authentication, waiting for any specific items to finish loading (like a loading spinner), etc. When used as a report, it will give an output similar to the [following](http://a11y-os.surge.sh/). The UI should be built first in the CI workflow and then a job created to run the a11y script against that build. The a11y script assumes that there is a webserver running somewhere that is serving up the pages, i.e. in localhost:8000, that it can reach. If you want to test a step before deployment, you could follow the path of integrating axe with cypress. If you are contributing to PatternFly, refer to our [README.md](//github.com/patternfly/patternfly/blob/master/README.md#testing-for-accessibility) on how to run this tool.
+2. **Use an accessibility audit tool to check for violations.** If you are using PatternFly in your project, we recommend using [aXe: The Accessibility Engine](//www.deque.com/axe/) to check for accessibility violations locally. To make it even easier for you, we've created the [patternfly-a11y script](https://github.com/patternfly/patternfly-a11y) which reports any axe accessibility violations from a set of pages. A configuration file can be set to customize to specific needs like authentication, waiting for any specific items to finish loading (like a loading spinner), etc. When used as a report, it will give an output [similar to this example](http://a11y-os.surge.sh/). The UI should be built first in the CI workflow and then a job created to run the a11y script against that build. The a11y script assumes that there is a webserver running somewhere that is serving up the pages, i.e. in localhost:8000, that it can reach. If you want to test a step before deployment, you could follow the path of integrating axe with cypress. If you are contributing to PatternFly, refer to our [README.md](//github.com/patternfly/patternfly/blob/master/README.md#testing-for-accessibility) on how to run this tool.
 
 
 3. **Test keyboard accessibility, and check that these requirements are met:**
@@ -69,21 +69,20 @@ These are some of the main areas we check for on the PatternFly team. We recomme
 
 **General questions**
 
-<input type="checkbox" unchecked /> VO Rotor Navigation can discover all information <br/>
-<input type="checkbox" unchecked /> VO Shortcut Navigation can discover all information <br/>
-<input type="checkbox" unchecked /> VO Cursor Navigation can discover all information. (dependent on component and use case- easy way to navigate to component) <br/>
-<input type="checkbox" unchecked /> Tabbed Keyboard Navigation can discover all information
+<input type="checkbox" unchecked /> VO Rotor Navigation can discover all information. <br/>
+<input type="checkbox" unchecked /> VO Shortcut Navigation can discover all information. <br/>
+<input type="checkbox" unchecked /> VO Cursor Navigation can discover all information (dependent on component and use case- easy way to navigate to component). <br/>
+<input type="checkbox" unchecked /> Tabbed Keyboard Navigation can discover all information.
 - However, if content should be hidden from a screen reader, for instance, if it’s offscreen or just presentational, make sure that content is set to aria-hidden=”true”.  <br/>
 
 <input type="checkbox" unchecked /> Is it understandable and usable? <br/>
-  - <input type="checkbox" unchecked /> When you navigate to an item by keyboard or by screen reader, you can easily understand and use the item <br/>
-  - <input type="checkbox" unchecked /> Flow of information makes sense when navigating - screen readers navigate the page in DOM order, if you’ve used CSS to visually reposition elements, they may be announced in a nonsensical sequence. If you need something to appear earlier in the page, try to physically move it earlier in the DOM.
+  - <input type="checkbox" unchecked /> When you navigate to an item by keyboard or by screen reader, you can easily understand and use the item. <br/>
+  - <input type="checkbox" unchecked /> The flow of information makes sense when navigating. Screen readers navigate the page in DOM order. If you’ve used CSS to visually reposition elements, they may be announced in a nonsensical sequence. If you need something to appear earlier in the page, try to physically move it earlier in the DOM.
 
 **Accessibility points** <br />
-<input type="checkbox" unchecked /> **Structure:** Need to map the visual information architecture to the various rotor menus that exist by default. <br />
-- <input type="checkbox" unchecked /> **Check rotor:** are there good headings, landmarks, links, form controls, etc? Do they make sense, are descriptive but not overloading with info? <br />
-  - <input type="checkbox" unchecked /> Headings (check that heading levels convey structure/content and do not skip)
-    - A common practice is to use a single h1 for the primary headline or logo on a page, h2s to designate major sections, and h3's in supporting subsections <br />
+<input type="checkbox" unchecked /> **Structure:** The visual information architecture should map to the various rotor menus that exist by default. <br />
+- <input type="checkbox" unchecked /> **Check rotor:** Are there good headings, landmarks, links, form controls, etc? Do they make sense, are descriptive but not overloading with info? <br />
+  - <input type="checkbox" unchecked /> Headings: Check that heading levels convey structure/content and do not skip. A common practice is to use a single h1 for the primary headline or logo on a page, h2s for designating major sections, and h3s for supporting sections. <br />
   - <input type="checkbox" unchecked /> Links <br />
   - <input type="checkbox" unchecked /> Form Controls <br />
   - <input type="checkbox" unchecked /> Landmarks <br />
@@ -91,16 +90,16 @@ These are some of the main areas we check for on the PatternFly team. We recomme
 
 
 <input type="checkbox" unchecked /> **Labels:**
-- <input type="checkbox" unchecked /> **Link** labels should be unique unless they have the same url, should be descriptive/informative
-- <input type="checkbox" unchecked /> **Buttons, form controls**, etc.
-  - Go through form controls and check if they all have labels (accessible vs. good experience)
-  - **Expandable buttons** should have some indication that it has the expandable control
-- <input type="checkbox" unchecked /> **Form input** has to have some label even if not visible
-- <input type="checkbox" unchecked /> **Icons**: where you don’t visibly see text there should still be some kind of text for screen reader
+- <input type="checkbox" unchecked /> **Links:** Labels should be unique unless they have the same url. They should be descriptive/informative.
+- <input type="checkbox" unchecked /> **Buttons and form controls:**
+  - Go through form controls and check if they all have labels. (Remember that there is a difference between being accessible and having a good, accessible experience. Clear, descriptive labels help create a better experience.)
+  - **Expandable buttons:** There should be some indication that it has the expandable control.
+- <input type="checkbox" unchecked /> **Form inputs:** These inputs should have some label even if it's not visible.
+- <input type="checkbox" unchecked /> **Icons**: Where you don’t visibly see text there should still be some kind of text for screen reader.
 - <input type="checkbox" unchecked /> **Images**: Check all images for proper alt text. The exception to this practice is when images are primarily for presentation purposes and are not essential pieces of content. To signify that an image should be skipped by a screen reader, set the value of the alt attribute to an empty string, e.g., `alt=””`.
-- <input type="checkbox" unchecked /> **Landmark** regions have labels, more than one type of landmark and not the same (navigation, main, form, etc.)
-Section element shouldn’t be used unless it has a label
+- <input type="checkbox" unchecked /> **Landmarks:** Landmark regions should have labels when there is more than one type of landmark and they are not the same (navigation, main, form, etc.).
+Section element shouldn’t be used unless it has a label.
 - <input type="checkbox" unchecked /> **Tables**: Can you tell what the table is and what’s in it? (https://webaim.org/techniques/tables/)
-- <input type="checkbox" unchecked /> **Aria**: if there is visible text then there doesn’t need to be an `aria-label` (aria aids in description to screen reader users, doesn’t have to reiterate or override what might already be there, check that your aria is useful)
+- <input type="checkbox" unchecked /> **Aria**: If there is visible text then there doesn’t need to be an `aria-label`. (Aria aids in description to screen reader users. It doesn’t have to reiterate or override what might already be there so you should check that your aria is useful.)
   - It’s important to understand that ARIA can only affect the _semantics_ of an element; it has no effect on the _behavior_ of the element. 
   - For example, while you can make an element hidden to screen readers with `aria-hidden=”true”`, that does not change the focus behavior for that element. 

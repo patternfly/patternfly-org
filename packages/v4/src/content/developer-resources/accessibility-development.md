@@ -46,9 +46,14 @@ When a `label` element cannot accompany a form input element, provide the label 
 
 
 ### Icons
-Icons are _decorative_ if you can remove an icon without affecting the information that is presented on the page. Icons are _semantic_ when they provide information that otherwise isn't present, such as indicating status, indicating type of alert message, or replacing text as button labels. When an icon is semantic, the meaning must be provided in alternative ways to the user.
 
-Add `aria-hidden="true"` for all icons, either to the icon element or a parent element of the icon. This renders the icon as something that assistive devices can ignore. Additionally, follow these guidelines for semantic icons:
+Add `aria-hidden='true' for all icons, either to the icon element or a parent element of the icon. This renders the icon as something that assistive devices can ignore.
+
+When accessibility is concerned, there are two main categories of icons:
+- **Decorative icons** are icons that can be removed without affecting the page's information.
+- **Semantic icons** are icons that provide information that isn't present on the page. For example, semantic icons can represent status, indicate an alert message type, or replace text as button labels.
+
+The meaning of a semantic icon must be provided in alternative ways to the user. Additionally, follow these guidelines for semantic icons:
 
 - Add a label for the icon in tooltip text that displays on hover and on focus for focusable elements. 
 
