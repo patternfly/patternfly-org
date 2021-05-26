@@ -3,7 +3,7 @@ id: Testing your accessibility
 section: accessibility
 ---
 
-## General Testing
+## General testing
 
 Many accessibility issues can be found by doing a few simple checks: 
 
@@ -18,9 +18,9 @@ Many accessibility issues can be found by doing a few simple checks:
 
 
 3. **Test keyboard accessibility, and check that these requirements are met:**
-    - All functionality is keyboard accessible
+    - All functionality is keyboard accessible.
     - Elements in the HTML and in the layout follow a logical order.
-    - Elements with focus are clearly visible
+    - Elements with focus are clearly visible.
 
 
 4. **Disable styles**, then test the information architecture and presence of adequate text labels. The [WAVE browser extension from WebAIM](//wave.webaim.org/extension/) provides this feature if it isn't available in the browser you are using.
@@ -40,26 +40,26 @@ Many accessibility issues can be found by doing a few simple checks:
 
 
 
-## Screen Readers
-To truly test your accessibility, open up a screen reader of your choice (we use Voice Over). Just as front-end developers use their browser to see how their changes look, you should also open a screen reader to see how your accessibility looks. 
+## Screen readers
+Just as front-end developers use their browser to see how their changes look, you should use a screen reader to see how your accessibility looks (we use Voice Over). 
 
 Generally, screen readers access the DOM (Document Object Model), and they use browser APIs (Application Programming Interfaces) to get the information they need. In this way, a screen reader knows what to say when a set of list items begins and ends, and it typically announces, in advance, how many items are in the list. A screen reader can also traverse a page using heading navigation to speak the heading level. 
 
 Here are a few aspects that can affect how screen readers communicate information:
 
-- **Semantic HTML** - Semantics refers to the meaning of a piece of code. A semantic element clearly describes its meaning to both the browser and the developer. For example, `<div>` and `<span>` are non-semantic elements because it tells nothing about its contents. Examples of semantic elements include `<form>`, `<table>`, etc. which clearly define its contents. Screen readers expect semantic HTML when traversing the DOM so non-semantic elements that are not customized to be made accessible are highly likely to be inaccessible. Aria and other accessible attributes are meant to extend the functionality and meaning of native semantics, but at the core, your HTML should be semantic.
+- **Semantic HTML**: Semantics refers to the meaning of a piece of code. A semantic element clearly describes its meaning to both the browser and the developer. For example, `<div>` and `<span>` are non-semantic elements because they don't describe their contents. Examples of semantic elements include `<form>` and `<table>`, which clearly define their contents. Screen readers expect semantic HTML when traversing the DOM, so non-semantic elements that aren't customized to be made accessible are highly likely to be inaccessible. Aria and other accessible attributes are meant to extend the functionality and meaning of native semantics, but at the core, your HTML should be semantic.
 
-- **Headings** - A visual user can scan a page and fairly quickly understand the information architecture of the page. Visually impaired users have other methods of achieving this. One common method is the use of headings where a user will use the heading levels to determine the flow of information. Having headings that vary in size simply based on design and not functionality will likely confuse these users. Having a clear flow of sequential heading sizes based on headings and subheadings is significantly clearer to all users.
+- **Headings**: A visual user can scan a page and fairly quickly understand its information architecture. Visually impaired users have other methods of achieving this. One common method is using heading levels to determine the flow of information. Headings that vary in size simply based on design and not functionality will likely confuse these users. A clear flow of sequential heading sizes based on headings and subheadings is significantly clearer to all users.
 
-- **Accessible names for all elements** - When an element does not have visual text or when further explanation is necessary, a screen reader will not know what an item is or does. If you have an icon `<button>`, for example, the screen reader can only tell that it’s a button if it doesn’t have a label, not what the button does. Add a few more non-labeled buttons, and now all the screen reader sees are vague buttons with no understanding of what they do. See above section on labeling for more information.
+- **Accessible names for all elements**: When an element doesn't have visual text or when further explanation is necessary, a screen reader will not know what an item is or does. For example, if you have an icon `<button>`, and it doesn't have a label, the screen reader can only tell that it’s a button—it can't determine what the button does. Add a few more non-labeled buttons, and now all the screen reader sees are vague buttons with no understanding of what they do. For more information, see the labeling section.
 
-- **Links** - similar to the above point, links need clarity too and should always have a label. Without it, users have no idea where the links point to - would you click on a link if you had no idea where it went? If you have the same label for multiple links though, it needs to be the same URL. Links, buttons, and form controls should make sense out of context. If a user wants to look at all of the links available, they should be able to differentiate the available links. You shouldn’t have ten “Click here” links.
+- **Links**: Similar to buttons, links should alway have a label for clarity. Without the label, users have no idea where the links point to. If you have the same label for multiple links, each link must point to the same URL. Links, buttons, and form controls should make sense out of context. If a user wants to look at all of the links available, they should be able to differentiate the available links. You shouldn’t have multiple “Click here” links.
 
-- **Landmarks** - As mentioned earlier, landmarks help identify regions to communicate the structure of a page. There are a number of types of landmarks such as banners, navigation, main, form, etc. When there are more than one of the same role (for example, two navigation regions on the same page), these regions should be differentiated by an `aria-label`.
+- **Landmarks**: Landmarks help communicate the structure of a page by identifying regions. There are many types of landmarks, such as banners, navigation, main, and form. When there are more than one of the same role (for example, two navigation regions on the same page), these regions should be differentiated by an `aria-label`.
 
-- **Dynamic content** - One of the biggest accessibility concerns with dynamic content is the need to notify users that the content has changed. Sighted users benefit from highlighting or drawing visual attention to the changes. Non-sighted users need to be notified some other way, such as by loading a new page, sending the focus to the new content, or using ARIA live announcements.
+- **Dynamic content**: One of the biggest accessibility concerns with dynamic content is the need to notify users that the content has changed. Sighted users benefit from highlighting or drawing visual attention to the changes. Non-sighted users need to be notified in another way, such as loading a new page, sending the focus to the new content, or using ARIA live announcements.
 
-- **Unrelated announcements** from the OS outside of the web app - Other notifications can interrupt a user while interacting with a page. For example, "you received a new chat msg from xyz". This possibility should be considered when designing and developing for screen readers as it will impact their experience. This is why it's good to keep things like validation messages and alerts terse, as it makes it less likely that an announcement will be interrupted. 
+- **Unrelated notifications**: Notifications from the operating system outside of the web app can interrupt a user while interacting with a page (for example, "You received a new chat message."). Consider this possibility when designing and developing for screen readers, and keep any notification messaging concise to limit the interruption.
 
 
 <br />
@@ -69,33 +69,33 @@ These are some of the main areas we check for on the PatternFly team. We recomme
 
 **General questions**
 
-<input type="checkbox" unchecked /> VO Rotor Navigation can discover all information <br/>
-<input type="checkbox" unchecked /> VO Shortcut Navigation can discover all information <br/>
-<input type="checkbox" unchecked /> VO Cursor Navigation can discover all information. (dependent on component and use case- easy way to navigate to component) <br/>
-<input type="checkbox" unchecked /> Tabbed Keyboard Navigation can discover all information
+<input type="checkbox" unchecked /> VO Rotor Navigation can discover all information. <br/>
+<input type="checkbox" unchecked /> VO Shortcut Navigation can discover all information. <br/>
+<input type="checkbox" unchecked /> VO Cursor Navigation can discover all information (dependent on component and use case—easy way to navigate to component). <br/>
+<input type="checkbox" unchecked /> Tabbed Keyboard Navigation can discover all information.
 - However, if content should be hidden from a screen reader, for instance, if it’s offscreen or just presentational, make sure that content is set to aria-hidden=”true”.  <br/>
 
 <input type="checkbox" unchecked /> Is it understandable and usable? <br/>
-  - <input type="checkbox" unchecked /> When you navigate to an item by keyboard or by screen reader, you can easily understand and use the item <br/>
-  - <input type="checkbox" unchecked /> Flow of information makes sense when navigating - screen readers navigate the page in DOM order, if you’ve used CSS to visually reposition elements, they may be announced in a nonsensical sequence. If you need something to appear earlier in the page, try to physically move it earlier in the DOM.
+  - <input type="checkbox" unchecked /> When you navigate to an item by keyboard or by screen reader, you can easily understand and use the item. <br/>
+  - <input type="checkbox" unchecked /> The flow of information makes sense when navigating. Screen readers navigate the page in DOM order. If you used CSS to visually reposition elements, they might be announced in a nonsensical sequence. Instead, if you need something to appear earlier in the page, try to physically move it earlier in the DOM.
 
 **Accessibility points** <br />
 <input type="checkbox" unchecked /> **Structure:** Need to map the visual information architecture to the various rotor menus that exist by default. <br />
-- <input type="checkbox" unchecked /> **Check rotor:** are there good headings, landmarks, links, form controls, etc? Do they make sense, are descriptive but not overloading with info? <br />
+- <input type="checkbox" unchecked /> **Check rotor:** Are there good headings, landmarks, links, form controls, and other elements? Do they make sense, and are they descriptive without overloading information? <br />
   - <input type="checkbox" unchecked /> Headings (check that heading levels convey structure/content and do not skip)
     - A common practice is to use a single h1 for the primary headline or logo on a page, h2s to designate major sections, and h3's in supporting subsections <br />
   - <input type="checkbox" unchecked /> Links <br />
-  - <input type="checkbox" unchecked /> Form Controls <br />
+  - <input type="checkbox" unchecked /> Form controls <br />
   - <input type="checkbox" unchecked /> Landmarks <br />
   - <input type="checkbox" unchecked /> Tables <br />
 
 
 <input type="checkbox" unchecked /> **Labels:**
-- <input type="checkbox" unchecked /> **Link** labels should be unique unless they have the same url, should be descriptive/informative
+- <input type="checkbox" unchecked /> **Link** labels should be unique unless they have the same URL, and they should be descriptive/informative.
 - <input type="checkbox" unchecked /> **Buttons, form controls**, etc.
-  - Go through form controls and check if they all have labels (accessible vs. good experience)
-  - **Expandable buttons** should have some indication that it has the expandable control
-- <input type="checkbox" unchecked /> **Form input** has to have some label even if not visible
+  - Go through form controls and check if they all have labels (accessible vs. good experience).
+  - **Expandable buttons** should have some indication that it has the expandable control.
+- <input type="checkbox" unchecked /> **Form input** has to have some label even if it's not visible.
 - <input type="checkbox" unchecked /> **Icons**: where you don’t visibly see text there should still be some kind of text for screen reader
 - <input type="checkbox" unchecked /> **Images**: Check all images for proper alt text. The exception to this practice is when images are primarily for presentation purposes and are not essential pieces of content. To signify that an image should be skipped by a screen reader, set the value of the alt attribute to an empty string, e.g., `alt=””`.
 - <input type="checkbox" unchecked /> **Landmark** regions have labels, more than one type of landmark and not the same (navigation, main, form, etc.)

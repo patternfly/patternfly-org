@@ -7,8 +7,8 @@ import { AccessibilityDatalist } from './accessibility-datalist.js';
 ## General questions to consider
 
 To assess how accessible your applications or products are, consider these questions:
-- **Is it discoverable/perceivable by all users?** If you can see or click on it then it should be discoverable and perceivable by all users. You should determine if you can easily navigate to it by keyboard or by screen reader.
-- **Is it interactable?** If you can get to it, it should be easy to actually use once you’ve focused on the element. You should be able to interact with it by keyboard. (Ex: If it’s a button, can you press enter to initiate the action?) Also use a screen reader to ensure you can initiate the action.
+- **Is it discoverable/perceivable by all users?** If you can see or click on it, then it should be discoverable and perceivable by all users. You should determine if you can easily navigate to it by keyboard or by screen reader.
+- **Is it interactable?** If you can get to it, it should be easy to actually use once you’ve focused on the element. You should be able to interact with it by keyboard (for example, if it’s a button, can you press **Enter** to initiate the action?). Also use a screen reader to ensure you can initiate the action.
 - **Is it understandable?** If the element can be found and interacted with, it should be clear what this action does. If it’s a button, you should determine if it has visible text that would be clear out of context of the page. If it doesn’t have visible text, you should check if it has an aria-label or accessible name.
 
 
@@ -33,7 +33,7 @@ For sighted users, the context and visual appearance of an element can provide s
 
 Aria supplements HTML so that interactions and widgets commonly used in applications can be passed to assistive technologies when there is not otherwise a mechanism natively. 
 
-Only use labels when necessary to make it accessible. If there is visible text, then there doesn’t need to be an aria-label. Aria is meant to add context (through labeling or description) for screen reader users when there isn’t visible text, not override or reiterate what’s already there. If there is visible text, aria may reiterate or override the visible text so check that your aria is useful.
+Only use labels when necessary to make it accessible. If there is visible text, then there doesn’t need to be an aria-label. Aria is meant to add context (through labeling or description) for screen reader users when there isn’t visible text, not override or reiterate what’s already there. If there is visible text, aria might reiterate or override the visible text, so check that your aria is useful.
 
 It’s important to understand that aria can only affect the semantics of an element; it has no effect on the behavior of the element. For example, while you can make an element hidden to screen readers with `aria-hidden=”true”`, that does not change the focus behavior for that element.
 
@@ -87,7 +87,7 @@ All images should have alt text so that assistive technology can provide an imag
 The exception to this practice is when images are primarily for presentation purposes and are not essential pieces of content. To signify that an image should be skipped by a screen reader, set the value of the alt attribute to an empty string, such as **alt=””**.
 
 ### Trapping focus
-The recommended interaction pattern for the modal components like the modal or pop-over is to trap focus within the modal element of the component when it becomes visible.  
+The recommended interaction pattern for the modal components like the modal or popover is to trap focus within the modal element of the component when it becomes visible.  
 
 - For keyboard-only users that use the tab key to navigate the interface, this means that focus cannot be shifted outside of the modal when using the tab key. Instead, when focus leaves the last focusable item, it should be placed on the first focusable item of the modal. 
 - For screen reader users, the other contents on the page should be hidden from the screen reader.
