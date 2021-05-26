@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.78 (2021-05-26)
+
+
+### Bug Fixes
+
+* **hotkey:** check if content editable ([#2505](https://github.com/patternfly/patternfly-org/issues/2505)) ([42983bf](https://github.com/patternfly/patternfly-org/commit/42983bfbeb4f8deaa09a09c36def0b8ce6eb5c8b))
+
+
+
+
+
 ## 0.4.77 (2021-05-26)
 
 **Note:** Version bump only for package theme-patternfly-org
