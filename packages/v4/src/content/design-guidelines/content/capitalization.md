@@ -42,7 +42,7 @@ Similar to PatternFly, sentence case is the standard across Red Hat products. Ho
 - Write navigation items and their corresponding page titles in **title case**.
 - Write all other areas (such as menu items, button text, form field labels, and empty state headings) in **sentence case**.  
 - Capitalize proper nouns, acronyms, initialisms, product names, services, and features. 
-- Keep capitalization for custom resources in the same format of their creation. For example, if a custom resource was created in all lowercase letters, don't change any of the letters to uppercase. 
+- Keep capitalization for custom resources the same as the capitalization used during creation. For example, if a custom resource was created in all lowercase letters, don't change any of the letters to uppercase. 
 
 <img src="./img/user-menu-example.png" alt="title case navigation items and sentence case menu items" width="750px"/>   
 
