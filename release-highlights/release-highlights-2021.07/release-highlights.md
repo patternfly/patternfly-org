@@ -47,7 +47,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 ### 2021.08 (June 25)
 
-* [Auto-complete Search input](https://github.com/patternfly/patternfly-react/issues/5499) - Will introduce an option to add auto-complete behavior to the Search input component.
+* [Auto-complete Search input](https://github.com/patternfly/patternfly-react/issues/5499) - Introduce an option to add auto-complete behavior to the Search input component.
 
 * [Helper text for component](https://github.com/patternfly/patternfly-react/issues/5818) - Add the ability to include lists and icons in help text attached to a form field. Will be useful for password and name validation.
 
@@ -64,9 +64,9 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Expandable inline alert](https://github.com/patternfly/patternfly/issues/4056) - Add the option to hide the contents of an inline alert and expand it on-demand.
 
-* [Movable modal](https://github.com/patternfly/patternfly/issues/3789) - support repositioning a modal by clicking and dragging in the header area.
+* [Movable modal](https://github.com/patternfly/patternfly/issues/3789) - Support repositioning a modal by clicking and dragging in the header area.
 
-* [Editable label group](https://github.com/patternfly/patternfly-react/issues/5875) - allow inline editing of labels.
+* [Editable label group](https://github.com/patternfly/patternfly-react/issues/5875) - Allow inline editing of labels.
 
 
 For a complete roadmap showing all items planned in future releases, see our [PatternFly Feature Roadmap](https://github.com/orgs/patternfly/projects/4?fullscreen=true) project board.
