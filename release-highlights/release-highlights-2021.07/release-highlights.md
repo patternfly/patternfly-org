@@ -3,23 +3,40 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Toggle group re-styling](https://www.patternfly.org/v4/components/toggle-group)
+ ### [New list variants](https://www.patternfly.org/v4/components/list)
 
-![restyled toggle group](./img/toggle-group.png)
+  Adds new variants of the List component to include horizontal separators, lists with icons, and 'pf-m-plain' modifier.
 
- We updated the selected color for a set of toggle buttons to use a lighter blue. This better differentiates them from primary buttons when placed in a full page layout.
+  ### [Optional help text on description list items](https://www.patternfly.org/v4/components/description-list#term-help-text)
 
- * [New List variants](https://github.com/patternfly/patternfly-react/issues/5336) - Add new variants of the List component to include horizontal separators, icons and 'pf-m-plain' modifier.
+  ![description list with pop-up help](./img/description-list-help.png)
 
- * [Uncontrolled behavior for tabs](https://github.com/patternfly/patternfly-react/issues/4458) - To be more developer friendly, the Tabs component will support uncontrolled behavior such that the developer does not need to control which tab is the active one.
+   Added the ability to open help in a popover by clicking on a field label in a description list.
 
- * [Add help text support to Description list items](https://github.com/patternfly/patternfly-react/issues/5482) - Add the ability to open help in a popover by clicking of a field label in a Description list.
+  ### [Added a "danger" variant for secondary and link buttons](https://www.patternfly.org/v4/components/button)
 
- * [Add a "danger" variant for secondary and link buttons](https://github.com/patternfly/patternfly-react/issues/5578) - Allows danger (red button) styles for additional button types. Currently supported for primary buttons, only.
+ ![danger button variants](./img/danger-buttons.png)
 
- * [Allow wizard sub-steps to be collapsed](https://github.com/patternfly/patternfly-react/issues/5580) - Allows wizard sub-steps to be hidden and expanded on-demand to reduce clutter in wizards with many steps.
+  Introduces danger (red button) styles for additional button types.
 
- ### Filter-tree demo
+  ### [Wizard with expandable sub-steps](https://www.patternfly.org/v4/components/wizard#expandable-steps)
+
+ ![wizard with expandable sub-steps](./img/wizard-steps-expandable.png)
+
+  Allows wizard sub-steps to be hidden and expanded on-demand to reduce clutter in wizards with many steps.
+
+  ### [Filter-tree demo](https://www.patternfly.org/v4/demos/composable-menu#filter-tree-menu)
+
+  ![filter-tree](./img/filter-tree.png)
+
+  Using the composable menu component, we demonstrate how to place a tree-view inside of a dropdown to create a "filter-tree" pattern.
+
+ ### [Uncontrolled behavior for tabs](https://www.patternfly.org/v4/components/tabs#uncontrolled)
+ The Tabs component now supports uncontrolled behavior so that the developer does not need to control which tab is the active one.
+
+ ### [Tooltip: added entry delay](https://www.patternfly.org/v4/components/tooltip)
+
+ Added a 300ms default entry delay to tooltips to prevent immediate firing when passing the mouse over a page. This value can be changed via a prop.
 
 
 See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
