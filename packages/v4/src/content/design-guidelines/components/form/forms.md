@@ -381,7 +381,7 @@ For more button text guidance, see our [button content guidelines](/components/b
 
 ## Accessibility
 
-This section highlights accessibility considerations to keep in mind when creating forms. For more accessibility guidance, see our [PatternFly accessibility guide](https://www.patternfly.org/v4/developer-resources/accessibility-guide).
+This section highlights accessibility considerations to keep in mind when creating forms. For more accessibility guidance, see our [PatternFly accessibility guide](https://www.patternfly.org/v4/accessibility/accessibility-and-patternfly).
 
 ### Placeholder text
 
