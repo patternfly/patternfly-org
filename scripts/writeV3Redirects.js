@@ -23,6 +23,7 @@ If you are not redirected automatically, click <a href='${to}'>here.</a>
 // Write static files
 writeRedirect(`${outDir}/index.html`, '/v4/');
 writeRedirect(`${outDir}/404.html`, '/v4/404/');
+writeRedirect(`${outDir}/v4/developer-resources/accessibility-guide`, '/v4/accessibility/accessibility-fundamentals');
 fs.writeFileSync(`${outDir}/robots.txt`,
 `User-agent: *
 Allow: /

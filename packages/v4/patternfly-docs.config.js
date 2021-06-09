@@ -13,6 +13,7 @@ module.exports = {
   sideNavItems: [
     { section: 'get-started' },
     { section: 'developer-resources' },
+    { section: 'accessibility' },
     { section: 'guidelines' },
     { section: 'UX writing' },
     { section: 'components' },
