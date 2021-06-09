@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2021-06-09)
+
+
+### Features
+
+* **a11y guide:** Update accessibility documentation ([#2458](https://github.com/patternfly/patternfly-org/issues/2458)) ([3890819](https://github.com/patternfly/patternfly-org/commit/389081953138ca2f03ced2830d8e2e888a55634d))
+
+
+
+
+
 ## 0.4.84 (2021-06-08)
 
 **Note:** Version bump only for package theme-patternfly-org
