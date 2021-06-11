@@ -20,11 +20,11 @@ The design kit is a collection of Sketch assets that make it easy for designers 
 1. PatternFly currently uses Red Hat Text and Red Hat Display. To download these fonts, go to https://github.com/RedHatOfficial/RedHatFont and download the whole repository. Then select all files in the "TTF" folder and double-click. This will install them onto your computer locally.
 
 #### Download the template file
-2. Access the [PatternFly template file](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89) on Sketch cloud.
+2. Access the [PatternFly template file](https://sketch.cloud/s/44a22db8-9afa-411a-8160-e648790154dd) on Sketch cloud.
 3. Click **Download Document** to open the file. Then, click File → Save as template.
 
 #### Add the symbol library
-4. Access the [PatternFly design library](https://www.sketch.com/s/2cf1063b-5283-4e0b-b8a6-cbb1ac07e29e) on Sketch cloud.
+4. Access the [PatternFly design library](https://sketch.cloud/s/b49e7291-ce0e-492b-92ae-a2e81c469af6) on Sketch cloud.
 5. Click **Add library to Sketch** on the bottom right to add the library. You'll be prompted with a modal. Click **Add library to Sketch** again. Sketch will show you the library in your preferences window.
 
 ### Using other design tools
