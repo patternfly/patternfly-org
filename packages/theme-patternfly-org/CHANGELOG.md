@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.2 (2021-06-16)
+
+
+### Reverts
+
+* Revert "Updated broken library links (#2521)" (#2522) ([df80be3](https://github.com/patternfly/patternfly-org/commit/df80be3c78e6bbb90b4cd2b3b75c0a749c48ba0e)), closes [#2521](https://github.com/patternfly/patternfly-org/issues/2521) [#2522](https://github.com/patternfly/patternfly-org/issues/2522)
+
+
+
+
+
 ## 0.5.1 (2021-06-11)
 
 **Note:** Version bump only for package theme-patternfly-org
