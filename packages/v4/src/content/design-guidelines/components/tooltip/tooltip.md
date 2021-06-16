@@ -21,7 +21,7 @@ Use tooltips to:
 <img src="./img/tooltip-disabled-button.png" alt= 'disabled edit button with a tooltip about access' width='1500'/>
 
 ## Tooltip delay on hover
-By default, tooltips have a 1000 ms delay on hover. Although this is the recommended delay time, you may customize it. For example, if you have a tooltip on an icon, and you would like for it to appear immediately on hover, you may set the delay to 0 ms.
+By default, tooltips have a 300ms entry delay when hovering over an object. Although this is the recommended delay time, you may customize it via prop. For example, if you have a tooltip on an icon, and you would like for it to appear immediately on hover, you may set the delay to 0 ms.
 
 ## Tooltips versus popovers
 Both tooltips and [popovers](/components/popover/design-guidelines) provide more information in context for users. However, they’re different in a few ways:
