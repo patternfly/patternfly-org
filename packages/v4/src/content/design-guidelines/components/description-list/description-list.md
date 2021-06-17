@@ -34,4 +34,4 @@ Columns can be applied in both vertical and horizontal formats. By default, ther
 ### Term help text
 To provide help text about a term in the description list, you may add popovers indicated by a dotted underline on the label. This is recommended in detailed lists where you have many popovers and using a blue link or icon would clutter the page.
 
-<img src=".img/termhelptext.png" alt="Term help text" width="600"/>
+<img src="./img/termhelptext.png" alt="Term help text" width="600"/>
