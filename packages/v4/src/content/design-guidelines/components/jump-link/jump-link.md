@@ -6,7 +6,7 @@ section: components
 **Jump links** allow users to navigate to sections within a page.
 
 ## Usage
-Jump links provide a way to navigate through sections on a page without scrolling. The highlighted active section changes as the user scrolls to the next section. Each jump link section should match a section heading on the page.
+Jump links provide a way to navigate through section headings on a page without scrolling. The highlighted active section changes as the user scrolls to the next section.
 
 ## Elements
 
