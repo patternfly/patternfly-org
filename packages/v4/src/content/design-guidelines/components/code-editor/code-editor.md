@@ -28,7 +28,7 @@ Syntax highlighting will update automatically to adapt to the dark background. T
 ## Usage
 Use a code editor when you:
 1. Want the user to create or edit large blocks of code.
-2. Want to display large blocks of code (see [Displaying code in a code editor](https://docs.google.com/document/d/1mK5C_fflcFHbZak2D9QaUvUc6oLgpf8VwBcZulnVOjI/edit#heading=h.vd380d1q7bjm) for guidance on when to use a code editor over a [code block](/components/code-block)).
+2. Want to display large blocks of code (see [Displaying code in a code editor](#displaying-code-in-a-code-editor) for guidance on when to use a code editor over a [code block](/components/code-block)).
 
 ## Creating or editing with a code editor
 ### Using actions
