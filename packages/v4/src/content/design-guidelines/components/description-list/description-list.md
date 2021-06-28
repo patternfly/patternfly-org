@@ -22,9 +22,16 @@ Description lists can also be horizontally formatted so that the term and descri
 
 <img src="./img/horizontal.png" alt="Horizontal" width="600"/>
 
+## Additional features
+
 ### Columns
 Columns can be applied in both vertical and horizontal formats. By default, there will be 24px gutters within the column grid.
 
 <img src="./img/default2column.png" alt="Default with 2 columns" width="600"/>
 
 <img src="./img/horizontal2column.png" alt="Horizontal with 2 columns" width="600"/>
+
+### Term help text
+To provide help text about a term in the description list, you may add popovers indicated by a dotted underline on the label. This is recommended in detailed lists where you have many popovers and using a blue link or icon would clutter the page.
+
+<img src="./img/termhelptext.png" alt="Term help text" width="600"/>
