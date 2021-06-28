@@ -37,7 +37,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Auto-complete Search input](https://github.com/patternfly/patternfly-react/issues/5499) - Introduce an option to add auto-complete behavior to the Search input component.
 
-- [Disabled dropdown tooltip](https://github.com/patternfly/patternfly-react/issues/5826) - Allows a tooltip to be attached to a disabled dropdown menu item.
+- [Disabled dropdown tooltip](https://github.com/patternfly/patternfly-react/issues/5826) - Allow a tooltip to be attached to a disabled dropdown menu item.
 
 * [Password strength meter](https://github.com/patternfly/patternfly/issues/4018) - Add a demo to show how to add a password strength indicator to a password field.
 
@@ -49,10 +49,10 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 ### 2021.11 (August 27)
 
-* [Task drawer](https://github.com/patternfly/patternfly/issues/4186) and [task badge](https://github.com/patternfly/patternfly/issues/4185) - extends the notification drawer component to report and manage tasks as well as alerts.
+* [Task drawer](https://github.com/patternfly/patternfly/issues/4186) and [task badge](https://github.com/patternfly/patternfly/issues/4185) - Extend the notification drawer component to report and manage tasks as well as alerts.
 
-* [Compact tree-view](https://github.com/patternfly/patternfly/issues/4177) - adding a new variant of the tree view component that is better designed to work with dense content and confined spaces.
+* [Compact tree-view](https://github.com/patternfly/patternfly/issues/4177) - Add a new variant of the tree view component that is better designed to work with dense content and confined spaces.
 
-* [Expandable section: disclosure panel variant](https://github.com/patternfly/patternfly-react/issues/5931) - adding a new variant of the expandable section that includes a bordered panel (similar to an accordion) and is suitable for content-rich applications. 
+* [Expandable section: disclosure panel variant](https://github.com/patternfly/patternfly-react/issues/5931) - Add a new variant of the expandable section that includes a bordered panel (similar to an accordion) and is suitable for content-rich applications. 
 
 For a complete roadmap showing all items planned in future releases, see our [PatternFly Feature Roadmap](https://github.com/orgs/patternfly/projects/4?fullscreen=true) project board.
