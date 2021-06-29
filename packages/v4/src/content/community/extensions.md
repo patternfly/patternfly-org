@@ -1,5 +1,5 @@
 ---
-id: Extenstions
+id: Extensions
 section: community
 ---
 
