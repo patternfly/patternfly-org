@@ -1,5 +1,5 @@
 ---
-id: PatternFly's Accessibility
+id: PatternFly's accessibility
 section: accessibility
 ---
 
