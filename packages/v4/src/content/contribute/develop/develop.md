@@ -22,7 +22,7 @@ Pick an open issue in the [patternfly-react repo](https://github.com/patternfly/
 
 ## Detailed contribution instructions
 - [Core contribution guidelines](https://github.com/patternfly/patternfly#guidelines-for-css-development)
-- [React contribution guidelines](https://github.com/patternfly/patternfly-react/blob/master/CONTRIBUTING.md#contribution-process)
+- [React contribution guidelines](https://github.com/patternfly/patternfly-react/blob/main/CONTRIBUTING.md#contribution-process)
 
 ## Lifecycle
 ![Development contribution lifecycle flowchart](./developer-flowchart.png)

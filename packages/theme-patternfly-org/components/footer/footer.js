@@ -112,7 +112,7 @@ export const Footer = () => (
                     </Link>
                   </li>
                   <NavItem
-                    to="https://github.com/patternfly/patternfly/blob/master/CODE_OF_CONDUCT.md"
+                    to="https://github.com/patternfly/patternfly/blob/main/CODE_OF_CONDUCT.md"
                     target="top"
                     aria-label="PatternFly 4 Code of Conduct"
                   >
