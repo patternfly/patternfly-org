@@ -46,7 +46,7 @@ The static assets get copied to build/patternfly-org.
 
 When you submit a PR, previews should be automatically generated for you and uploaded as PR comments. This takes between 5-10 minutes.
 
-When the PR is merged to master, the site is first deployed to a [staging S3 bucket.](https://staging.patternfly.org)
+When the PR is merged to main, the site is first deployed to a [staging S3 bucket.](https://staging.patternfly.org)
 
 When PatternFly does a release (currently every 3 weeks) this bucket is copied to https://patternfly.org.
 

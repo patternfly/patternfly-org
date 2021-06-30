@@ -80,7 +80,7 @@ function toReactComponent(mdFilePath, source) {
         source,
         slug,
         sourceLink: `https://github.com/patternfly/${
-          sourceRepo}/blob/master/${
+          sourceRepo}/blob/main/${
           normalizedPath}`,
         hideTOC: frontmatter.hideTOC || false
       };
