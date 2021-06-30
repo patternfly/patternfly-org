@@ -88,7 +88,7 @@ Draggable data list rows can be added to any data list and allow you to customiz
 <img src="./img/datalistdraggable1.png" alt="Example of draggable date list" width="880"/> 
 
 1. **Drag icon:** To indicate a row is draggable, use the fa-grip icon. Use grip-vertical to indicate the ability to move a vertically-oriented component via drag and drop. Use grip-horizontal to move a horizontally-oriented component via drag and drop. For example, if you are selecting items to be dragged from two parallel lists.
-2. **Dragged row:** When dragging a row, it becomes slightly opaque and floats above the static rows to indicate that it is the one moving.
+2. **Dragged row:** When dragging a row, it becomes slightly less opaque and floats above the static rows to indicate that it is the one moving.
 
 <img src="./img/datalistdraggable2.png" alt="Example of draggable date list" width="880"/> 
 
@@ -133,7 +133,7 @@ A data list may sometimes need more space for rich graphical data. See an exampl
 * You will need a pagination to see more rows.
 * Data structure includes many visual elements.
 
-### When to use a data list vs. a table
+## When to use a data list vs. a table
 **Use a data list when**:
 * The information you want to display is not easily structured into a tabular format.
 * You want a more flexible layout within rows.
