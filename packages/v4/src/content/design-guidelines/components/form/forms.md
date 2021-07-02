@@ -113,6 +113,13 @@ Form submit buttons should be disabled until a user starts filling out the form 
 * For a submitted form, disable the submit button while a user's responses are processing to avoid a duplicate submission.
 * For a processing form, use feedback messages and progress indicators like spinners or progress bars if the processing time might exceed user expectations.
 
+## Form sections
+Form sections divide form fields into groups based on common information type, procedural relationships, and more. To distinguish between form sections, title them based on the reason you grouped their inputs together.
+
+Example: For a form section that collects a user's email, phone number, and preferred method of communication, add a title like **Contact information**.
+
+To view form sections in practice, see our [form sections demo](/components/form/#form-sections).
+
 ## User guidance
 
 Due to their interactive nature, forms often include features that help communicate field importance and guidance as users complete them. 
