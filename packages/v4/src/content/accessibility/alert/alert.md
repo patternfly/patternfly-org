@@ -37,11 +37,11 @@ Toast alerts present special challenges for accessibility. Screen readers announ
  
 For example, this toast alert is not accessible because it does not include text that explains to the user where to go within the UI to perform the action:
 
-<img src="./img/alert-no-description.png" alt="alert without descriptive text" width="600px"/>
+<img src="../../design-guidelines/components/alert/img/alert-no-description.png" alt="alert without descriptive text" width="600px"/>
 
 This toast alert is accessible to sighted and non-sighted users because it includes text that explains to the user where to go within the UI to perform the action:
 
-<img src="./img/alert-description.png" alt="alert with descriptive text" width="600px"/>
+<img src="../../design-guidelines/components/alert/img/alert-description.png" alt="alert with descriptive text" width="600px"/>
 
 <br/>
 <br/>
