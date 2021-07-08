@@ -9,6 +9,7 @@ Most frequently, breadcrumb consists of many links which will use **Tab** to nav
 
 
 In general, the breadcrumb component already has accessibility built in. However, if you would like to customize it, edit the following:
+
 | React component| Prop or attribute | Which HTML element it appears on in markup | Explanation | 
 |---|---|---|---|
-| Breadcrumb | aria-label | .pf-c-breadcrumb | Label added to the breadcrumb nav
+| Breadcrumb | aria-label | .pf-c-breadcrumb | Label added to the breadcrumb nav |
