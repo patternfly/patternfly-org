@@ -116,6 +116,7 @@ function normalizeProp([
     name,
     type: annotatedType
       || (type && type.name)
+      || (type && (type.raw || type.name))
       || (tsType && (tsType.raw || tsType.name))
       || 'No type info',
     description
