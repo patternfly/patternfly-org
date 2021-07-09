@@ -9,7 +9,7 @@ Keyboard users will be able to interact with the checkbox component by pressing 
 
 In general, the checkbox component already has accessibility built in. The **standalone input variant** will need special consideration.
 
-To make the checkbox **standalone input variant** accessible, add an `aria-label` with a label for the input.
+To make the checkbox **standalone input variant** accessible, add an `aria-label` with a label for the input. You can also use `aria-labelledby` to associate the checkbox with visible text on the page to explain the checkbox. 
 
 <br/>
 If you’d like to customize the checkbox component’s accessibility, edit the following:
