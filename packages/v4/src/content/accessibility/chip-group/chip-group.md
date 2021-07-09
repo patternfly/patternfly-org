@@ -1,3 +1,8 @@
+---
+id: Chip group
+section: components
+---
+
 A **chip group** represents an attribute that has been assigned one or more values. An OR relationship is implied between values in the group. Chip groups are useful to express complex filters to a data set, for example.
 
 Keyboard users will be able to press **Tab** to navigate through all interactive elements of the chip group (this will include close buttons, any overflow chips with tooltips,  view more buttons, etc). The screen reader experience, likewise, will mostly be based on native interaction expectations.
