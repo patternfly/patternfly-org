@@ -15,48 +15,50 @@ A toolbar is a container for holding a variety of elements (toolbar items and gr
 
 Toolbar items are individual components that can be placed inside of a toolbar. Often, it makes sense to group sets of like items to create desired associations and to enable items to respond together to changes in viewport width. The default spacing between items and groups is 16px, but this can be modified, if required. The following are some toolbar items and groups that come with special spacing considerations.
 
-#### Bulk selector
+### Bulk selector
 <img src="./img/bulk-selector.png" alt="bulk selector item" width="218" />
 
  A bulk selector can be added when you want to give users the ability to select multiple items within a page. Besides allowing the user to select and deselect all items on a page, other application specific options can be added in the dropdown. Bulk selection allows the user to select or deselect all items on a page and provide an indeterminate state that notifies the user when only some items are selected. Bulk selectors should always be the left-most element in a toolbar and has a 24px spacer to its right.
 
- #### Filter group
+ ### Filter group
  <img src="./img/filter-group.png" alt="filter group" width="355" />
 
   A filter group combines multiple select filters into a single group. See [filters](/guidelines/filters) for more information about using filter groups.
 
-#### Search filter
+### Search filter
 <img src="./img/search-filter.png" alt="search filter" width="355" />
 
 A search filter is intended to be used with a filter group as shown below when you want to include a single search field together with one or more select filters. It includes an 8px spacer to the right of the item to enforce association with other filters. See the [filters](/guidelines/filters) documentation for more information about using search filters.
 
 <img src="./img/toolbar-multiple-filters.png" alt="toolbar with a search filter and filter group" />
 
-#### Icon button group
+### Icon button group
 <img src="./img/icon-button-group.png" alt="icon button group" width="303" />
 
  Actions or settings that are represented by icons can be added in an icon button group.
 
-#### Button group
+### Button group
 <img src="./img/button-group.png" alt="button group" width="205" />
 
  Any global actions that apply to selected data items are included left-aligned following filter and icon buttons. No more than two items should be exposed as buttons. If you have more than two items, use an [overflow menu](#overflow-menu) component to save space.
 
- #### Overflow menu
+ ### Overflow menu
  <img src="./img/overflow-menu.png" alt="button group" width="357" />
 
  An overflow menu is a component that can be used in a toolbar (or elsewhere) to group a number of actions that should be collapsed into a kebab at a certain breakpoint. In the toolbar, the overflow menu will commonly be used to group a set of actions that are intended to collapse into the kebab at smaller viewport sizes.
 
-#### Pagination
+### Pagination
 <img src="./img/pagination.png" alt="pagination" width="432" />
 
  When pagination is supported, a pagination component will be included. Pagination will always be right aligned in the toolbar. If pagination is not used, substitute the item count for pagination control. For example, report “17 items” to represent the total number of items or “10 of 17 items” to indicate that 10 items were returned as the result of a filter event.
 
 
-### Toggle groups
-A toggle group can be used when you want to collapse a set of items into an overlay panel at a certain breakpoint. This allows complex toolbars with multiple items and groups of items to be responsive. A toggle group is useful for containing filter controls, for example. When the toolbar responds to adapt to a mobile viewport, the contents contained in a toggle group will collapse into an overlay panel that can be toggled by clicking the filter icon.
+### Toolbar toggle groups
+A [toolbar toggle group](/components/toolbar/html#toggle-group) can be used when you want to collapse a set of items into an overlay panel at a certain breakpoint for mobile applications. This allows complex toolbars with multiple items and groups of items to be responsive. A toolbar toggle group is useful for containing filter controls, for example. When the toolbar responds to adapt to a mobile viewport, the contents contained in a toggle group will collapse into an overlay panel that can be toggled by clicking the filter icon.
 
 <img src="./img/toggle-group.png" alt="toolbar with filters hidden in a toggle group" width="514" />
+
+Note: this should not be confused with the [toggle group component](/components/toggle-group) that is used for selecting between options on a page.
 
 ### Vertical dividers
 When you have a large toolbar containing many groups of items, use a vertical divider to further separate the groups visually.
@@ -64,7 +66,7 @@ When you have a large toolbar containing many groups of items, use a vertical di
 <img src="./img/toolbar-with-divider.png" alt="toolbar with divider" />
 
 ## Usage
-The PatternFly toolbar is designed to be very flexible and allow a variety of combinations of items and groups as outlined above. When laying out your toolbar, be sure to: 
+The PatternFly toolbar is designed to be very flexible and allow a variety of combinations of items and groups as outlined above. When laying out your toolbar, be sure to:
 
 * Align bulk selection as the left-most element, if used.
 * Align filters and global actions to the right of bulk selection, if used.
