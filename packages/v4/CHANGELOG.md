@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.4.19 (2021-07-09)
+
+
+### Bug Fixes
+
+* **tsdocgen:** interface normalizer ([#2586](https://github.com/patternfly/patternfly-org/issues/2586)) ([7550dc5](https://github.com/patternfly/patternfly-org/commit/7550dc5e9046794034ee7997acd157b493c19bae))
+
+
+
+
+
 ## 4.4.18 (2021-07-09)
 
 **Note:** Version bump only for package patternfly-org-4
