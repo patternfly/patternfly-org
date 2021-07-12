@@ -16,7 +16,7 @@ Consider using a **skip to content** component on your page so that assistive te
 ## To make a page accessible:
 - Use roles to identify the main region and the banner region of a page.
 - Use aria-expanded on to indicate the state of the visibility of expandable content.
-- Use a tab index of -1 to give the main region of a page programmatic focus.
+- Use a tabindex of -1, as an entire page component should not be focusable by tabbing (though individual components within it may be).
 - For every element that does not contain text, add an `aria-label` attribute that contains alternative text.
 - If using notifications in the masthead, refer to notification badge accessibility guidelines.
 
