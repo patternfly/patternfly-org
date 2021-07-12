@@ -11,3 +11,4 @@ A **skip to content** is a component that allows screen reader and keyboard user
 
 ## To make skip to content accessible:
 - Make sure the skip to content can be accessed with **Tab** 
+- Give the skip to content a tabindex of -1 so that it can receive programmatic focus for keyboard and screen reader users. For more info on this tabindex, see [the WebAIM page for tabindex](https://webaim.org/techniques/keyboard/tabindex#zero-negative-one).
