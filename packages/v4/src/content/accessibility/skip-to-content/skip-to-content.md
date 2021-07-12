@@ -9,6 +9,8 @@ A **skip to content** is a component that allows screen reader and keyboard user
 
 **Screen reader users** should also be able to navigate to skip to content using **Tab** and select it to skip past the navigation of a page.
 
+A skip to content does not trap tab focus. It is the first tabbable element on a page, but can be tabbed past and into the navigation of a page if the user prefers.
+
 ## To make skip to content accessible:
 - Make sure the skip to content can be accessed with **Tab** 
 - Give the skip to content a tabindex of -1 so that it can receive programmatic focus for keyboard and screen reader users. For more info on this tabindex, see [the WebAIM page for tabindex](https://webaim.org/techniques/keyboard/tabindex#zero-negative-one).
