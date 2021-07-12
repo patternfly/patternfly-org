@@ -1,7 +1,7 @@
 # PatternFly Beta Component Promotion Candidates
 ## For Release 2021.11
 
-### Action List
+### ActionList
 An action list is a group of actions with set spacing.
 
 ![action-list](./img/action-list.png)
@@ -12,13 +12,13 @@ This implementation includes resizable drawers, inline drawers, static drawers, 
 
 ![drawer](./img/drawer.png)
 
-### Inline Edit
+### InlineEdit
 An inline edit component allows users to switch between a read-only view and an edit view of description lists, page text elements, or tables as needed. Inline editing saves the user from opening a modal window or redirecting to a separate edit page so that they can edit in context of their current view.
 This implementation is only done in core and is consumed by other components, such as the inline edit variant of the table.
 
 ![inline-edit](./img/inline-edit.png)
 
-### Label Group
+### LabelGroup
 A label group is used when there are multiple labels to display at once. Label groups can be oriented either horizontally or vertically and can optionally be named and dismissable.
 
 ![label-group](./img/label-group.png)
@@ -45,11 +45,6 @@ combination of text inputs and select inputs in its cells. It also includes butt
 save or cancel changes.
 
 ![table-editable-rows](./img/table-editable-rows.png)
-
-### Tile
-A tile is a form of selection that can be used in place of a radio button and is commonly used in forms.
-
-![tile](./img/tile.png)
 
 ### ToggleGroup
 A toggle group is a group of controls that can be used to quickly switch between actions or states.
