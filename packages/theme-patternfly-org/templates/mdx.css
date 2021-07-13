@@ -78,6 +78,9 @@
 .ws-table tr > code {
   white-space: normal;
 }
+.ws-table tbody > tr > td {
+  vertical-align: top;
+}
 
 /*
  * Copied from pf-c-content.
