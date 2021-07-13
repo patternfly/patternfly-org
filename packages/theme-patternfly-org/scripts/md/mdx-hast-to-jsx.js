@@ -6,7 +6,7 @@ const toH = require('hast-to-hyperscript');
 const { toTemplateLiteral } = require('@mdx-js/util');
 const { capitalize } = require('../../helpers/capitalize');
 const { slugger } = require('../../helpers/slugger');
-const { jsxParser } = require('../../helpers/acorn');
+const { parse } = require('../../helpers/acorn');
 
 
 // Adapted from https://github.com/mdx-js/mdx/blob/next/packages/mdx/mdx-hast-to-jsx.js
@@ -74,7 +74,7 @@ function serializeRoot(node, options) {
     .join('\n')
 
   // https://astexplorer.net/#/gist/9c531dd372dfc57e194c13c2889d31c3/03f2d6e889db1a733c6a079554e8af7784863739
-  options.importSpecifiers = jsxParser.parse(importStatements, { sourceType: 'module' }).body
+  options.importSpecifiers = parse(importStatements).body
     .map(node => node.specifiers)
     .flat(1)
     .map(spec => spec.local ? spec.local.name : null)

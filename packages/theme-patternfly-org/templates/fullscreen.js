@@ -13,7 +13,7 @@ export const FullscreenTemplate = ({
 }) => {
   const scope = {
     ...liveContext,
-    // These 2 are in the bundle anyways for the site since we dogfood
+    // These 2 are in the bundle anyways since we dogfood
     ...reactCoreModule,
     ...reactTableModule,
   };

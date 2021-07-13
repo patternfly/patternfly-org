@@ -1,5 +1,5 @@
 const { generate, baseGenerator } = require('astring');
-const { jsxParser } = require('./acorn');
+const { parse } = require('./acorn');
 
 const generator = Object.assign({}, baseGenerator, {
   JSXElement(node, state) {
@@ -90,25 +90,97 @@ const generator = Object.assign({}, baseGenerator, {
   },
   FieldDefinition(node, state) {
     this[node.key.type](node.key, state);
-    state.write('=');
+    state.write(' = ');
     this[node.value.type](node.value, state);
     state.write(';');
   },
   JSXEmptyExpression(_node, state) {
     state.write('null');
-  }
+  },
+  // Class features
+  PropertyDefinition(node, state) {
+    this.FieldDefinition(node, state);
+  },
+  // Strip types.
+  TSTypeAnnotation() {},
+  TSTypeReference() {},
+  TSLiteralType() {},
+  TSTupleType() {},
+  TSOptionalType() {},
+  TSRestType() {},
+  TSArrayType() {},
+  TSIndexedAccessType() {},
+  TSFunctionType() {},
+  TSParenthesizedType() {},
+  TSUnionType() {},
+  TSIntersectionType() {},
+  TSConditionalType() {},
+  TSInferType() {},
+  TSImportType() {},
+  TSQualifiedName() {},
+  TSConstructorType() {},
+  TSConstructSignatureDeclaration() {},
+  TSTypeLiteral() {},
+  TSTypeAliasDeclaration() {},
+  TSInterfaceBody() {},
+  TSInterfaceDeclaration() {},
+  TSExpressionWithTypeArguments() {},
+  TSTypeParameter() {},
+  TSTypeParameterDeclaration() {},
+  TSTypeParameterInstantiation() {},
+  TSMethodSignature() {},
+  TSPropertySignature() {},
+  TSIndexSignature() {},
+  TSMappedType() {},
+  TSTypeParameter() {},
+  TSAsExpression() {},
+  TSNonNullExpression() {},
+  // Strip imports
+  ImportDeclaration() {},
 });
 
 function transform(code) {
-  const ast = jsxParser.parse(code, {
-    sourceType: 'module',
-    allowReturnOutsideFunction: true
-  });
+  const ast = parse(code)
+  // Create Function that returns React Component
+  // Create React component by returning last member of body
+  const lastStatement = ast.body[ast.body.length - 1];
+  if (lastStatement.type === 'ExpressionStatement') {
+    ast.body = [{
+      type: 'ReturnStatement',
+      argument: {
+        type: 'FunctionDeclaration',
+        id: {
+          type: 'Identifier',
+          name: 'PreviewComponent'
+        },
+        body: {
+          type: 'BlockStatement',
+          body: [
+            ...ast.body.slice(0, ast.body.length - 1),
+            {
+              type: 'ReturnStatement',
+              argument: lastStatement
+            }
+          ]
+        }
+      }
+    }];
+  } else {
+    ast.body = [
+      ...ast.body.slice(0, ast.body.length - 1),
+      {
+        type: 'ReturnStatement',
+        argument: lastStatement
+      }
+    ];
+  }
+
+  //console.log(ast)
   code = generate(ast, { generator });
-  return { code };
+  //console.log(code)
+  return code;
 }
 
 module.exports = {
   transform
 };
-

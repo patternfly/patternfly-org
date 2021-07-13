@@ -63,7 +63,7 @@ const allowedIdentifiers = [
   'ExpressionStatement'
 ];
 function getExampleDeclaration(code) {
-  return jsxParser.parse(code, { sourceType: 'module' })
+  return jsxParser.parse(code, { sourceType: 'module', ecmaVersion: 6 })
     .body
     .find(node => allowedIdentifiers.includes(node.type));
 }

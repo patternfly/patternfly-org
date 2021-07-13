@@ -1,35 +1,22 @@
 import React from 'react';
 import { useLocation } from '@reach/router';
-import { LiveProvider, LiveEditor, LivePreview, LiveError } from 'react-live';
-import { Badge } from '@patternfly/react-core';
+import { Badge, CodeBlock, CodeBlockCode } from '@patternfly/react-core';
 import * as reactCoreModule from '@patternfly/react-core';
 import * as reactTableModule from '@patternfly/react-table';
 import { css } from '@patternfly/react-styles';
+import { getParameters } from 'codesandbox/lib/api/define';
 import { ExampleToolbar } from './exampleToolbar';
 import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
-import { getParameters } from 'codesandbox/lib/api/define';
-import { slugger, transformCode, getStaticParams, getReactParams, getExampleClassName, getExampleId } from '../../helpers';
-import Prism from 'prismjs';
+import { slugger, getStaticParams, getReactParams, getExampleClassName, getExampleId, transformCode } from '../../helpers';
 import missingThumbnail from './missing-thumbnail.jpg';
-import 'prismjs/themes/prism-coy.css';
 import './example.css';
-
-const getSupportedLanguages = lang => {
-  if (['js', 'javascript'].includes(lang)) {
-    return ['jsx'];
-  }
-  else if (lang === 'html') {
-    return ['html'];
-  }
-  return [];
-}
 
 // Props come from mdx-ast-to-mdx-hast.js
 export const Example = ({
   code,
   lang = '',
   source,
-  noLive,
+  noLive = !['js', 'html'].includes(lang),
   title = 'Untitled',
   isFullscreen,
   isFullscreenPreview,
@@ -43,24 +30,25 @@ export const Example = ({
   if (isFullscreenPreview) {
     isFullscreen = false;
   }
-  const supportedLangs = getSupportedLanguages(lang);
-  if (supportedLangs === []) {
-    noLive = true;
-  }
-  const editorLang = supportedLangs[0];
-  if (!editorLang) {
+  if (!lang) {
     // Inline code
     return <code className="ws-code">{code}</code>;
   } else if (noLive) {
     // Code block
-    const html = Prism.highlight(code, Prism.languages.javascript, 'javascript');
-    return <pre dangerouslySetInnerHTML={{ __html: html }} />;
+    return (
+      <CodeBlock>
+        <CodeBlockCode>{code}</CodeBlockCode>
+      </CodeBlock>
+    );
+  } else if (lang === 'html') {
+    return <div
+      className={css('ws-preview-html', isFullscreen && 'pf-u-h-100')}
+      dangerouslySetInnerHTML={{ __html: "${code}" }}
+    />
   }
 
-  // https://reactjs.org/docs/hooks-overview.html#state-hook
   const [editorCode, setEditorCode] = React.useState(code);
-  const [darkMode, setDarkMode] = React.useState(false);
-  const location = useLocation();
+  const loc = useLocation();
 
   const scope = {
     ...liveContext,
@@ -68,25 +56,17 @@ export const Example = ({
     ...reactCoreModule,
     ...reactTableModule,
   };
+  const transformedCode = transformCode(editorCode);
+  const getPreviewComponent = new Function('React', ...Object.keys(scope), transformedCode);
+  const LivePreview = getPreviewComponent(React, ...Object.values(scope));
   const previewId = getExampleId(source, section[0], id, title);
   const className = getExampleClassName(source, section[0], id);
 
   if (isFullscreenPreview) {
-    // Fullscreen page example
     return (
-      <LiveProvider
-        scope={scope}
-        code={editorCode}
-        transformCode={code => transformCode(code, editorLang, true)}
-      >
-        <LivePreview
-          id={previewId}
-          className={css(
-            className,
-            'pf-u-h-100'
-          )}
-        />
-      </LiveProvider>
+      <div id={previewId} className={css(className, 'pf-u-h-100')}>
+        <LivePreview/>
+      </div>
     );
   }
 
@@ -95,7 +75,10 @@ export const Example = ({
       ? getStaticParams(title, code)
       : getReactParams(title, editorCode, scope)
   );
-  const fullscreenLink = `${location.pathname.replace(/\/$/, '')}${location.pathname.endsWith(source) ? '' : `/${source}`}/${slugger(title)}`;
+  const fullscreenLink = loc.pathname.replace(/\/$/, '')
+    + (loc.pathname.endsWith(source) ? '' : `/${source}`)
+    + '/'
+    + slugger(title);
 
   return (
     <div className="ws-example">
@@ -110,49 +93,33 @@ export const Example = ({
         </AutoLinkHeader>
         {children}
       </div>
-      <LiveProvider
-        scope={scope}
+      {isFullscreen
+        ? <div className="ws-preview">
+            <a
+              className="ws-preview__thumbnail-link"
+              href={fullscreenLink}
+              target="_blank"
+              aria-label={`Open fullscreen ${title} example`}
+            >
+              <img src={thumbnail.src} width={thumbnail.width} height={thumbnail.height} />
+            </a>
+          </div>
+        : <div
+            id={previewId}
+            className={css(className, isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview')}
+          >
+            <LivePreview />
+          </div>
+      }
+      <ExampleToolbar
+        lang={lang}
+        isFullscreen={isFullscreen}
+        fullscreenLink={fullscreenLink}
         code={editorCode}
-        transformCode={code => transformCode(code, editorLang)}
-        disabled={isFullscreen}
-        theme={{
-          plain: isFullscreen ? { pointerEvents: 'auto' } : {},
-          styles: []
-        }}
-      >
-        {isFullscreen
-          ? <div className="ws-preview">
-              <a
-                className="ws-preview__thumbnail-link"
-                href={fullscreenLink}
-                target="_blank"
-                aria-label={`Open fullscreen ${title} example`}
-              >
-                <img src={thumbnail.src} width={thumbnail.width} height={thumbnail.height} />
-              </a>
-            </div>
-          : <LivePreview
-              id={previewId}
-              className={css(
-                className,
-                darkMode && 'pf-t-dark pf-m-opaque-200',
-                isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview'
-              )} />
-        }
-
-        <ExampleToolbar
-          editor={<LiveEditor className="ws-editor" onChange={setEditorCode} />}
-          supportedLangs={supportedLangs}
-          onDarkmodeChange={() => setDarkMode(!darkMode)}
-          // Dark mode is permanently hidden per patternfly.org design
-          hideDarkMode={true}
-          isFullscreen={isFullscreen}
-          fullscreenLink={fullscreenLink}
-          code={editorCode}
-          codeBoxParams={codeBoxParams}
-          componentName={id}/>
-        <LiveError />
-      </LiveProvider>
+        setCode={setEditorCode}
+        codeBoxParams={codeBoxParams}
+        componentName={id}
+      />
     </div>
   );
 }
