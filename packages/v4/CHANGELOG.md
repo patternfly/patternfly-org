@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.4.21 (2021-07-13)
+
+
+### Bug Fixes
+
+* **workspace:** vertically align docs tables ([#2606](https://github.com/patternfly/patternfly-org/issues/2606)) ([42b578b](https://github.com/patternfly/patternfly-org/commit/42b578b3ba787d32fcb9181036c019acfe8509ea))
+
+
+
+
+
 ## 4.4.20 (2021-07-12)
 
 **Note:** Version bump only for package patternfly-org-4
