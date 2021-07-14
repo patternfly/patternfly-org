@@ -9,7 +9,7 @@ const jsxParser = Parser.extend(typescript, jsx(), classFields, staticClassFeatu
 module.exports = {
   parse(code) {
     return jsxParser.parse(code, {
-      ecmaVersion: 2017,
+      ecmaVersion: 2018,
       sourceType: 'module',
       allowReturnOutsideFunction: true
     });

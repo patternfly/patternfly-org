@@ -1,15 +1,18 @@
 import React from 'react';
 import { Button, Form, Tooltip } from '@patternfly/react-core';
 import { CodeEditor, CodeEditorControl, Language } from '@patternfly/react-code-editor';
-import { copy } from '../../helpers/copy';
+import { copy, convertToJSX } from '../../helpers';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import CodepenIcon from '@patternfly/react-icons/dist/esm/icons/codepen-icon';
 import CopyIcon from '@patternfly/react-icons/dist/esm/icons/copy-icon';
 import CodeIcon from '@patternfly/react-icons/dist/esm/icons/code-icon';
+import AngleDoubleRightIcon from '@patternfly/react-icons/dist/esm/icons/angle-double-right-icon';
 
 function getLanguage(lang) {
   if (lang === 'js') {
     return Language.javascript;
+  } else if (lang === 'ts') {
+    return Language.typescript;
   }
 
   return lang;
@@ -20,7 +23,6 @@ export const ExampleToolbar = ({
   codeBoxParams,
   lang,
   isFullscreen,
-  componentName,
   code,
   setCode
 }) => {
@@ -47,6 +49,7 @@ export const ExampleToolbar = ({
   const languageLabel = `Toggle ${lang.toUpperCase()} code`;
   const codesandboxLabel = 'Open example in CodeSandbox';
   const fullscreenLabel = 'Open example in new window';
+  const convertLabel = 'Convert example from Typescript to JavaScript';
   const customControls = isFullscreen ? null : (
     <React.Fragment>
       <CodeEditorControl
@@ -109,6 +112,18 @@ export const ExampleToolbar = ({
           rel="noopener noreferrer"
           aria-label={fullscreenLabel}
           toolTipText={fullscreenLabel}
+        />
+      }
+      {lang === 'ts' && 
+        <CodeEditorControl
+          icon={(
+            <React.Fragment>
+              {'TS '}<AngleDoubleRightIcon />{' JS'}
+            </React.Fragment>
+          )}
+          aria-label={convertLabel}
+          toolTipText={convertLabel}
+          onClick={() => setCode(convertToJSX(code).code)}
         />
       }
     </React.Fragment>

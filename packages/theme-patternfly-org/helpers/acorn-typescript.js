@@ -42,6 +42,14 @@ module.exports = Parser => class TSParser extends Parser {
     this.reservedWordsStrict = this.reservedWords
   }
 
+  finishNode(node, type) {
+    if (type.startsWith('TS')) {
+      // Hack to not need acorn-walk to detect TS
+      this.options.sourceType = 'ts';
+    }
+    return this.finishNodeAt.call(this, node, type, this.lastTokEnd, this.lastTokEndLoc);
+  }
+
   computeLocByOffset(offset) {
     // If `locations` option is off, do nothing for saving performance.
     if (this.options.locations) {

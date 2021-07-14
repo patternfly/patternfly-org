@@ -1,15 +1,45 @@
 import React from 'react';
 import { useLocation } from '@reach/router';
-import { Badge, CodeBlock, CodeBlockCode } from '@patternfly/react-core';
+import { Badge, CodeBlock, CodeBlockCode, debounce } from '@patternfly/react-core';
 import * as reactCoreModule from '@patternfly/react-core';
 import * as reactTableModule from '@patternfly/react-table';
 import { css } from '@patternfly/react-styles';
 import { getParameters } from 'codesandbox/lib/api/define';
 import { ExampleToolbar } from './exampleToolbar';
 import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
-import { slugger, getStaticParams, getReactParams, getExampleClassName, getExampleId, transformCode } from '../../helpers';
+import { slugger, getStaticParams, getReactParams, getExampleClassName, getExampleId, convertToReactComponent } from '../../helpers';
 import missingThumbnail from './missing-thumbnail.jpg';
 import './example.css';
+
+const errorComponent = err => <pre>{err.toString()}</pre>;
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { error: null, errorInfo: null };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    errorInfo._suppressLogging = true;
+    this.setState({
+      error: error,
+      errorInfo: errorInfo
+    });
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.children !== this.props.children) {
+      this.setState({ error: null, errorInfo: null });
+    }
+  }
+  
+  render() {
+    if (this.state.errorInfo) {
+      return errorComponent(this.state.error);
+    }
+    return this.props.children;
+  }  
+}
 
 // Props come from mdx-ast-to-mdx-hast.js
 export const Example = ({
@@ -56,16 +86,31 @@ export const Example = ({
     ...reactCoreModule,
     ...reactTableModule,
   };
-  const transformedCode = transformCode(editorCode);
-  const getPreviewComponent = new Function('React', ...Object.keys(scope), transformedCode);
-  const LivePreview = getPreviewComponent(React, ...Object.values(scope));
+  let livePreview;
+  try {
+    const { code: transformedCode, hasTS } = convertToReactComponent(editorCode);
+    if (hasTS) {
+      lang = 'ts';
+    } else {
+      lang = 'js';
+    }
+    const getPreviewComponent = new Function('React', ...Object.keys(scope), transformedCode);
+    const PreviewComponent = getPreviewComponent(React, ...Object.values(scope));
+    livePreview = (
+      <ErrorBoundary>
+        <PreviewComponent />
+      </ErrorBoundary>
+    );
+  } catch (err) {
+    livePreview = errorComponent(err);
+  }
   const previewId = getExampleId(source, section[0], id, title);
   const className = getExampleClassName(source, section[0], id);
 
   if (isFullscreenPreview) {
     return (
       <div id={previewId} className={css(className, 'pf-u-h-100')}>
-        <LivePreview/>
+        {livePreview}
       </div>
     );
   }
@@ -73,7 +118,7 @@ export const Example = ({
   const codeBoxParams = getParameters(
     lang === 'html'
       ? getStaticParams(title, code)
-      : getReactParams(title, editorCode, scope)
+      : getReactParams(title, code, scope)
   );
   const fullscreenLink = loc.pathname.replace(/\/$/, '')
     + (loc.pathname.endsWith(source) ? '' : `/${source}`)
@@ -108,7 +153,7 @@ export const Example = ({
             id={previewId}
             className={css(className, isFullscreen ? 'ws-preview-fullscreen' : 'ws-preview')}
           >
-            <LivePreview />
+            {livePreview}
           </div>
       }
       <ExampleToolbar
@@ -116,9 +161,8 @@ export const Example = ({
         isFullscreen={isFullscreen}
         fullscreenLink={fullscreenLink}
         code={editorCode}
-        setCode={setEditorCode}
+        setCode={debounce(setEditorCode, 300)}
         codeBoxParams={codeBoxParams}
-        componentName={id}
       />
     </div>
   );

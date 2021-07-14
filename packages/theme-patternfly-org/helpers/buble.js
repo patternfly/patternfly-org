@@ -1,7 +1,57 @@
 const { generate, baseGenerator } = require('astring');
 const { parse } = require('./acorn');
 
-const generator = Object.assign({}, baseGenerator, {
+const commonGenerator = {
+  ...baseGenerator,
+  // Strip types
+  TSTypeAnnotation() {},
+  TSTypeReference() {},
+  TSLiteralType() {},
+  TSTupleType() {},
+  TSOptionalType() {},
+  TSRestType() {},
+  TSArrayType() {},
+  TSIndexedAccessType() {},
+  TSFunctionType() {},
+  TSParenthesizedType() {},
+  TSUnionType() {},
+  TSIntersectionType() {},
+  TSConditionalType() {},
+  TSInferType() {},
+  TSImportType() {},
+  TSQualifiedName() {},
+  TSConstructorType() {},
+  TSConstructSignatureDeclaration() {},
+  TSTypeLiteral() {},
+  TSTypeAliasDeclaration() {},
+  TSInterfaceBody() {},
+  TSInterfaceDeclaration() {},
+  TSExpressionWithTypeArguments() {},
+  TSTypeParameter() {},
+  TSTypeParameterDeclaration() {},
+  TSTypeParameterInstantiation() {},
+  TSMethodSignature() {},
+  TSPropertySignature() {},
+  TSIndexSignature() {},
+  TSMappedType() {},
+  TSTypeParameter() {},
+  TSAsExpression() {},
+  TSNonNullExpression() {},
+  // Class features
+  FieldDefinition(node, state) {
+    this[node.key.type](node.key, state);
+    state.write(' = ');
+    this[node.value.type](node.value, state);
+    state.write(';');
+  },
+  PropertyDefinition(node, state) {
+    this.FieldDefinition(node, state);
+  },
+};
+
+// Stringify ES2017 TSX w/class members -> ES2017 w/o imports/exports so it can be `eval`ed
+const es2017Generator = {
+  ...commonGenerator,
   JSXElement(node, state) {
     state.write('React.createElement(');
     this.JSXOpeningElement(node.openingElement, state);
@@ -88,63 +138,131 @@ const generator = Object.assign({}, baseGenerator, {
       children: node.children
     }, state);
   },
-  FieldDefinition(node, state) {
-    this[node.key.type](node.key, state);
-    state.write(' = ');
-    this[node.value.type](node.value, state);
-    state.write(';');
-  },
   JSXEmptyExpression(_node, state) {
     state.write('null');
   },
-  // Class features
-  PropertyDefinition(node, state) {
-    this.FieldDefinition(node, state);
-  },
-  // Strip types.
-  TSTypeAnnotation() {},
-  TSTypeReference() {},
-  TSLiteralType() {},
-  TSTupleType() {},
-  TSOptionalType() {},
-  TSRestType() {},
-  TSArrayType() {},
-  TSIndexedAccessType() {},
-  TSFunctionType() {},
-  TSParenthesizedType() {},
-  TSUnionType() {},
-  TSIntersectionType() {},
-  TSConditionalType() {},
-  TSInferType() {},
-  TSImportType() {},
-  TSQualifiedName() {},
-  TSConstructorType() {},
-  TSConstructSignatureDeclaration() {},
-  TSTypeLiteral() {},
-  TSTypeAliasDeclaration() {},
-  TSInterfaceBody() {},
-  TSInterfaceDeclaration() {},
-  TSExpressionWithTypeArguments() {},
-  TSTypeParameter() {},
-  TSTypeParameterDeclaration() {},
-  TSTypeParameterInstantiation() {},
-  TSMethodSignature() {},
-  TSPropertySignature() {},
-  TSIndexSignature() {},
-  TSMappedType() {},
-  TSTypeParameter() {},
-  TSAsExpression() {},
-  TSNonNullExpression() {},
+  // Browsers can't `import`, `export`, or understand types yet. Let's strip them.
   // Strip imports
   ImportDeclaration() {},
-});
+  ImportExpression() {},
+  // Strip `export` part of exports
+  ExportDefaultDeclaration(node, state) {
+    this[node.declaration.type](node.declaration, state)
+  },
+  ExportNamedDeclaration(node, state) {
+    if (node.declaration) {
+      this[node.declaration.type](node.declaration, state)
+    }
+  },
+  ExportAllDeclaration() {},
+};
 
-function transform(code) {
-  const ast = parse(code)
+// Stringify ES2017 TSX w/class members -> ES2017 JSX w/class members
+const es2017GeneratorJSX = {
+  ...commonGenerator,
+  // <div></div>
+  JSXElement(node, state) {
+    state.write('<');
+    this[node.openingElement.type](node.openingElement, state);
+    if (node.closingElement) {
+      state.write('>');
+      for (var i = 0; i < node.children.length; i++) {
+        var child = node.children[i];
+        this[child.type](child, state);
+      }
+      state.write('</');
+      this[node.closingElement.type](node.closingElement, state);
+      state.write('>');
+    } else {
+      state.write(' />');
+    }
+  },
+  // <div>
+  JSXOpeningElement(node, state) {
+    this[node.name.type](node.name, state);
+    for (var i = 0; i < node.attributes.length; i++) {
+      var attr = node.attributes[i];
+      this[attr.type](attr, state);
+    }
+  },
+  // </div>
+  JSXClosingElement(node, state) {
+    this[node.name.type](node.name, state);
+  },
+  // div
+  JSXIdentifier(node, state) {
+    state.write(node.name);
+  },
+  // Member.Expression
+  JSXMemberExpression(node, state) {
+    this[node.object.type](node.object, state);
+    state.write('.');
+    this[node.property.type](node.property, state);
+  },
+  // attr="something"
+  JSXAttribute(node, state) {
+    state.write(' ');
+    this[node.name.type](node.name, state);
+    state.write('=');
+    this[node.value.type](node.value, state);
+  },
+  // namespaced:attr="something"
+  JSXNamespacedName(node, state) {
+    this[node.namespace.type](node.namespace, state);
+    state.write(':');
+    this[node.name.type](node.name, state);
+  },
+  // {expression}
+  JSXExpressionContainer(node, state) {
+    state.write('{');
+    this[node.expression.type](node.expression, state);
+    state.write('}');
+  },
+  // anything between JSX nodes
+  JSXText(node, state) {
+    state.write(node.value);
+  },
+  // {...props}
+  JSXSpreadAttribute(node, state) {
+    state.write('...(');
+    if (node.argument.type === 'LogicalExpression') {
+      this[node.argument.left.type](node.argument.left, state);
+      state.write(' ');
+      state.write(node.argument.operator);
+      state.write(' ');
+      this[node.argument.right.type](node.argument.right, state);
+    }
+    else {
+      this[node.argument.type](node.argument, state);
+    }
+    state.write(')');
+  },
+  // <></>
+  JSXFragment(node, state) {
+    this.JSXElement({
+      openingElement: {
+        attributes: [],
+        name: {
+          type: 'JSXIdentifier',
+          name: 'React.Fragment'
+        }
+      },
+      children: node.children
+    }, state);
+  },
+  // {} (not very kosher)
+  JSXEmptyExpression(_node, state) {
+    state.write('{}');
+  },
+};
+
+// ES2017 TSX w/class members -> ES2017 React Component
+function convertToReactComponent(code) {
+  const ast = parse(code);
   // Create Function that returns React Component
   // Create React component by returning last member of body
   const lastStatement = ast.body[ast.body.length - 1];
-  if (lastStatement.type === 'ExpressionStatement') {
+  if (lastStatement.type === 'ExpressionStatement' && lastStatement.expression.type === 'JSXElement') {
     ast.body = [{
       type: 'ReturnStatement',
       argument: {
@@ -176,11 +294,20 @@ function transform(code) {
   }
 
   //console.log(ast)
-  code = generate(ast, { generator });
+  code = generate(ast, { generator: es2017Generator }).trim();
   //console.log(code)
-  return code;
+  return { code, hasTS: ast.sourceType === 'ts' };
+}
+
+// ES2017 TSX w/class members -> ES2017 JSX
+function convertToJSX(code) {
+  const ast = parse(code);
+  code = generate(ast, { generator: es2017GeneratorJSX }).trim();
+  return { code, hasTS: false };
 }
 
 module.exports = {
-  transform
+  convertToReactComponent,
+  convertToJSX
 };
+
