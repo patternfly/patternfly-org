@@ -70,11 +70,6 @@ export const Example = ({
         <CodeBlockCode>{code}</CodeBlockCode>
       </CodeBlock>
     );
-  } else if (lang === 'html') {
-    return <div
-      className={css('ws-preview-html', isFullscreen && 'pf-u-h-100')}
-      dangerouslySetInnerHTML={{ __html: "${code}" }}
-    />
   }
 
   const [editorCode, setEditorCode] = React.useState(code);
@@ -86,23 +81,32 @@ export const Example = ({
     ...reactCoreModule,
     ...reactTableModule,
   };
-  let livePreview;
-  try {
-    const { code: transformedCode, hasTS } = convertToReactComponent(editorCode);
-    if (hasTS) {
-      lang = 'ts';
-    } else {
-      lang = 'js';
-    }
-    const getPreviewComponent = new Function('React', ...Object.keys(scope), transformedCode);
-    const PreviewComponent = getPreviewComponent(React, ...Object.values(scope));
+  let livePreview = null;
+  if (lang === 'html') {
     livePreview = (
-      <ErrorBoundary>
-        <PreviewComponent />
-      </ErrorBoundary>
+      <div
+        className={css('ws-preview-html', isFullscreen && 'pf-u-h-100')}
+        dangerouslySetInnerHTML={{ __html: editorCode }}
+      />
     );
-  } catch (err) {
-    livePreview = errorComponent(err);
+  } else {
+    try {
+      const { code: transformedCode, hasTS } = convertToReactComponent(editorCode);
+      if (hasTS) {
+        lang = 'ts';
+      } else {
+        lang = 'js';
+      }
+      const getPreviewComponent = new Function('React', ...Object.keys(scope), transformedCode);
+      const PreviewComponent = getPreviewComponent(React, ...Object.values(scope));
+      livePreview = (
+        <ErrorBoundary>
+          <PreviewComponent />
+        </ErrorBoundary>
+      );
+    } catch (err) {
+      livePreview = errorComponent(err);
+    }
   }
   const previewId = getExampleId(source, section[0], id, title);
   const className = getExampleClassName(source, section[0], id);
