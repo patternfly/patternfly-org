@@ -21,6 +21,8 @@ Consider using a **skip to content** component on your page so that assistive te
 - If using notifications in the masthead, refer to notification badge accessibility guidelines.
 
 The following props/attributes have been added for you or are props/attributes that can be customized:
+
+
 | Reason used | React prop used to customize | HTML Attribute | React component that it should be applied to | Which HTML element it appears on in markup |
 | -- | -- | -- | -- | -- |
 | Labels the navigation toggle button | `aria-label` | aria-label="Global Navigation" | PageHeader |  |
