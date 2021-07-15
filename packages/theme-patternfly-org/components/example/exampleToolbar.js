@@ -7,6 +7,7 @@ import CodepenIcon from '@patternfly/react-icons/dist/esm/icons/codepen-icon';
 import CopyIcon from '@patternfly/react-icons/dist/esm/icons/copy-icon';
 import CodeIcon from '@patternfly/react-icons/dist/esm/icons/code-icon';
 import AngleDoubleRightIcon from '@patternfly/react-icons/dist/esm/icons/angle-double-right-icon';
+import ReplyAllIcon from '@patternfly/react-icons/dist/esm/icons/reply-all-icon';
 
 function getLanguage(lang) {
   if (lang === 'js') {
@@ -23,6 +24,7 @@ export const ExampleToolbar = ({
   codeBoxParams,
   lang,
   isFullscreen,
+  originalCode,
   code,
   setCode
 }) => {
@@ -50,6 +52,7 @@ export const ExampleToolbar = ({
   const codesandboxLabel = 'Open example in CodeSandbox';
   const fullscreenLabel = 'Open example in new window';
   const convertLabel = 'Convert example from Typescript to JavaScript';
+  const undoAllLabel = 'Undo all changes';
   const customControls = isFullscreen ? null : (
     <React.Fragment>
       <CodeEditorControl
@@ -114,7 +117,7 @@ export const ExampleToolbar = ({
           toolTipText={fullscreenLabel}
         />
       }
-      {lang === 'ts' && 
+      {isEditorOpen && lang === 'ts' &&
         <CodeEditorControl
           icon={(
             <React.Fragment>
@@ -126,8 +129,31 @@ export const ExampleToolbar = ({
           onClick={() => setCode(convertToJSX(code).code)}
         />
       }
+      {code !== originalCode &&
+        <CodeEditorControl
+          icon={<ReplyAllIcon />}
+          aria-label={undoAllLabel}
+          toolTipText={undoAllLabel}
+          onClick={() => setCode(originalCode)}
+        />
+      }
     </React.Fragment>
   );
+
+  // TODO: check if worth adding react, patternfly, and example types
+  // https://microsoft.github.io/monaco-editor/api/interfaces/monaco.languages.typescript.languageservicedefaults.html#addextralib
+  const onEditorDidMount = (_editor, monaco) => {
+    monaco.languages.typescript.typescriptDefaults.setCompilerOptions({
+      jsx: true,
+      ...monaco.languages.typescript.typescriptDefaults.getCompilerOptions()
+    });
+    monaco.languages.typescript.typescriptDefaults.setDiagnosticsOptions({
+      noSemanticValidation: true,
+      noSyntaxValidation: true,
+      noSuggestionDiagnostics: true,
+      onlyVisible: true
+    });
+  };
 
   return (
     <CodeEditor
@@ -137,6 +163,7 @@ export const ExampleToolbar = ({
       height="400px"
       code={code}
       onChange={newCode => setCode(newCode)}
+      onEditorDidMount={onEditorDidMount}
     />
   );
 }

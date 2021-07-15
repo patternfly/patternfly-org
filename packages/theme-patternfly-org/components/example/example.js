@@ -7,7 +7,15 @@ import { css } from '@patternfly/react-styles';
 import { getParameters } from 'codesandbox/lib/api/define';
 import { ExampleToolbar } from './exampleToolbar';
 import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
-import { slugger, getStaticParams, getReactParams, getExampleClassName, getExampleId, convertToReactComponent } from '../../helpers';
+import {
+  slugger,
+  getStaticParams,
+  getReactParams,
+  getExampleClassName,
+  getExampleId,
+  convertToReactComponent,
+  liveCodeTypes
+} from '../../helpers';
 import missingThumbnail from './missing-thumbnail.jpg';
 import './example.css';
 
@@ -46,7 +54,7 @@ export const Example = ({
   code,
   lang = '',
   source,
-  noLive = !['js', 'html'].includes(lang),
+  noLive = !liveCodeTypes.includes(lang),
   title = 'Untitled',
   isFullscreen,
   isFullscreenPreview,
@@ -164,6 +172,7 @@ export const Example = ({
         lang={lang}
         isFullscreen={isFullscreen}
         fullscreenLink={fullscreenLink}
+        originalCode={code}
         code={editorCode}
         setCode={debounce(setEditorCode, 300)}
         codeBoxParams={codeBoxParams}

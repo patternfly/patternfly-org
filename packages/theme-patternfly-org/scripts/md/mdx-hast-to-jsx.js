@@ -7,7 +7,7 @@ const { toTemplateLiteral } = require('@mdx-js/util');
 const { capitalize } = require('../../helpers/capitalize');
 const { slugger } = require('../../helpers/slugger');
 const { parse } = require('../../helpers/acorn');
-
+const { liveCodeTypes } = require('../../helpers/liveCodeTypes');
 
 // Adapted from https://github.com/mdx-js/mdx/blob/next/packages/mdx/mdx-hast-to-jsx.js
 function toJSX(node, parentNode = {}, options = {}) {
@@ -139,7 +139,7 @@ function serializeElement(node, options) {
   const indentText = '  '.repeat(indent);
   let res = '\n';
   const isFullscreenExample = type === 'Example'
-    && ['js', 'html'].includes(props.lang)
+    && liveCodeTypes.includes(props.lang)
     && !props.noLive;
   res += `${indentText}<${type}`;
   if (isFullscreenExample) {

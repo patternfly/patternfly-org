@@ -6,3 +6,4 @@ export * from './slugger';
 export * from './buble';
 export * from './extractExampleHelpers';
 export * from './getTitle';
+export * from './liveCodeTypes';

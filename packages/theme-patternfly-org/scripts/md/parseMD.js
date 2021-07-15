@@ -7,14 +7,15 @@ const toVfile = require('to-vfile'); // https://github.com/vfile/vfile
 const vfileReport = require('vfile-reporter');
 const yaml = require('js-yaml'); // https://github.com/nodeca/js-yaml
 const { makeSlug } = require('../../helpers/slugger');
+const { liveCodeTypes } = require('../../helpers/liveCodeTypes');
 const { tsDocgen } = require('../tsDocgen');
 const { sync } = require('glob');
 const chokidar = require('chokidar');
 
+let exitCode = 0;
 const outputBase = path.join(process.cwd(), `src/generated`);
 const tsDocs = {};
 const routes = {};
-let exitCode = 0;
 
 function toReactComponent(mdFilePath, source) {
   // vfiles allow for nicer error messages and have native `unified` support
@@ -41,11 +42,6 @@ function toReactComponent(mdFilePath, source) {
       // Fail early
       if (!frontmatter.id) {
         file.fail('id attribute is required in frontmatter for PatternFly docs');
-      }
-      if (frontmatter.section === 'overview') {
-        // Temporarily override section until https://github.com/patternfly/patternfly-react/pull/4862 is in react-docs
-        // Affected pages are release notes and upgrade guides
-        frontmatter.section = 'developer-resources';
       }
       source = frontmatter.source || source;
       const slug = makeSlug(source, frontmatter.section, frontmatter.id);
@@ -158,7 +154,7 @@ function toReactComponent(mdFilePath, source) {
       const isExample = node =>
         node.type === 'element'
         && node.tagName === 'Example'
-        && ['js', 'html'].includes(node.properties.lang)
+        && liveCodeTypes.includes(node.properties.lang)
         && !node.properties.noLive;
       visit(tree, isExample, node => {
         if (node.properties.isFullscreen) {
