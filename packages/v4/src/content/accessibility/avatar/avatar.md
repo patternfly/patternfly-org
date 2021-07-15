@@ -20,4 +20,4 @@ The following props/attributes have been added for you or are customizable in Pa
 
 | Reason used | React prop used to customize | HTML attribute | React component that it should be applied to | Which HTML element it appears on in markup |
 | -- | -- | -- | -- | -- |
-| Provides an accessible description of the avatar as it uses an image instead of text. | `alt` | img alt={alt prop} | Avatar | .pf-c-avatar |
+| Provides an accessible description of the avatar as it uses an image instead of text. | `alt` | img alt=[alt prop] | Avatar | .pf-c-avatar |
