@@ -141,20 +141,6 @@ const es2017Generator = {
   JSXEmptyExpression(_node, state) {
     state.write('null');
   },
-  // Browsers can't `import`, `export`, or understand types yet. Let's strip them.
-  // Strip imports
-  ImportDeclaration() {},
-  ImportExpression() {},
-  // Strip `export` part of exports
-  ExportDefaultDeclaration(node, state) {
-    this[node.declaration.type](node.declaration, state)
-  },
-  ExportNamedDeclaration(node, state) {
-    if (node.declaration) {
-      this[node.declaration.type](node.declaration, state)
-    }
-  },
-  ExportAllDeclaration() {},
 };
 
 // Stringify ES2017 TSX w/class members -> ES2017 JSX w/class members
@@ -259,6 +245,16 @@ const es2017GeneratorJSX = {
 // ES2017 TSX w/class members -> ES2017 React Component
 function convertToReactComponent(code) {
   const ast = parse(code);
+
+  // Modify AST for function creation
+  ast.body = ast.body.filter(node => !['ImportDeclaration', 'ExportAllDeclaration'].includes(node.type));
+  for (let i = 0; i < ast.body.length; i++) {
+    if (['ExportNamedDeclaration', 'ExportDefaultDeclaration'].includes(ast.body[i].type)) {
+      // Replace exports
+      ast.body[i] = ast.body[i].declaration;
+    }
+  }
+
   // Create Function that returns React Component
   // Create React component by returning last member of body
   let lastStatement = ast.body[ast.body.length - 1];
