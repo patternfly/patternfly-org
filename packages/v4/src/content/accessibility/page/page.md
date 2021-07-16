@@ -14,20 +14,19 @@ A page can be combined with many other components, so to create an accessible pa
 Consider using a **skip to content** component on your page so that assistive technology users don’t need to make their way through the entire navigation menu each time they go to another page.
 
 ## To make a page accessible:
-- Use roles to identify the main region and the banner region of a page.
-- Use aria-expanded on to indicate the state of the visibility of expandable content.
-- Use a tabindex of -1, as an entire page component should not be focusable by tabbing (though individual components within it may be).
+- Use semantic elements when possible, as these will have default roles. If this is not possible, manually add roles to identify different regions of the page as needed.
+- If there are multiple instances of one type of semantic element (for instance, two `<nav>` items), label the elements.
 - For every element that does not contain text, add an `aria-label` attribute that contains alternative text.
 - If using notifications in the masthead, refer to notification badge accessibility guidelines.
 
 The following props/attributes have been added for you or are props/attributes that can be customized:
 
-
-| Reason used | React prop used to customize | HTML Attribute | React component that it should be applied to | Which HTML element it appears on in markup |
-| -- | -- | -- | -- | -- |
-| Labels the navigation toggle button | `aria-label` | aria-label="Global Navigation" | PageHeader |  |
-| Identifies the element controlled by the toggle | `aria-controls` |  |  | .pf-c-page__header-brand-toggle > .pf-c-button |
-| Allows the main region to receive programmatic focus |  | tabindex="-1" |  | .pf-c-page__main |
-| Provides a hook for sending focus to new content. |  | id="[id]" |  | .pf-c-page__main |
-| Indicates that the expandable content is visible and the current state of the contents. |  | aria-expanded="true/false" |  | .pf-c-page__header-brand-toggle > .pf-c-button |
-
+| Reason used | React prop used to customize | HTML Attribute | React component that it should be applied to |
+| -- | -- | -- | -- |
+| Labels the navigation toggle button | `aria-label` | aria-label="Global Navigation" | PageHeader |
+| Identifies the element controlled by the toggle | `aria-controls` |  | PageHeader |
+| Labels the main section | `mainAriaLabel` |  | Page |
+| An id to use for the [role="main"] element | `mainContainerId` |  | Page |
+| A tabIndex to use for the [role="main"] element. Make this value null to unset it | `mainTabIndex` |  | Page |
+| Skip to content component for the page | `skipToContent` |  | Page |
+| Value for the role on the \<main\> element | `role` |  | Page |
