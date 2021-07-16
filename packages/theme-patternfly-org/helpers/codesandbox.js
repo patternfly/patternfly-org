@@ -63,6 +63,9 @@ const allowedIdentifiers = [
   'ExpressionStatement'
 ];
 function getExampleDeclaration(code) {
+  code = code
+    .replace(/export\s+default\s+/g, '')
+    .replace(/export\s+/g, '');
   return parse(code)
     .body
     .find(node => allowedIdentifiers.includes(node.type));
