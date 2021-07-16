@@ -1,6 +1,6 @@
 const versions  = require('../versions.json');
 const overpass = require('./fonts');
-const { jsxParser } = require('../helpers/acorn');
+const { parse } = require('../helpers/acorn');
 const { capitalize } = require('./capitalize');
 
 const getStaticParams = (title, html) => {
@@ -63,7 +63,10 @@ const allowedIdentifiers = [
   'ExpressionStatement'
 ];
 function getExampleDeclaration(code) {
-  return jsxParser.parse(code, { sourceType: 'module' })
+  code = code
+    .replace(/export\s+default\s+/g, '')
+    .replace(/export\s+/g, '');
+  return parse(code)
     .body
     .find(node => allowedIdentifiers.includes(node.type));
 }
