@@ -29,4 +29,4 @@ The following props/attributes have been added for you or are props/attributes t
 | An id to use for the [role="main"] element | `mainContainerId` |  | Page |
 | A tabIndex to use for the [role="main"] element. Make this value null to unset it | `mainTabIndex` |  | Page |
 | Skip to content component for the page | `skipToContent` |  | Page |
-| Value for the role on the \<main\> element | `role` |  | Page |
+| Value for the role on the `<main>` element | `role` |  | Page |
