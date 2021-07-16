@@ -261,7 +261,26 @@ function convertToReactComponent(code) {
   const ast = parse(code);
   // Create Function that returns React Component
   // Create React component by returning last member of body
-  const lastStatement = ast.body[ast.body.length - 1];
+  let lastStatement = ast.body[ast.body.length - 1];
+  // Convert `const Example` to `Example`
+  if (lastStatement.type === 'VariableDeclaration') {
+    const { declarations } = lastStatement;
+    if (declarations.length !== 1) {
+      throw new Error('The last example variable declaration must be a single expression.');
+    }
+    const declaration = declarations[0];
+    lastStatement = {
+      type: 'ExpressionStatement',
+      expression: {
+        type: 'AssignmentExpression',
+        operator: '=',
+        left: declaration.id,
+        right: declaration.init
+      }
+    };
+  }
+  // Convert `<InlineJSX />` or `Example = () => <InlineJSX />`
+  // to `function PreviewComponent() { return <InlineJSX />; }`
   if (lastStatement.type === 'ExpressionStatement' && lastStatement.expression.type === 'JSXElement') {
     ast.body = [{
       type: 'ReturnStatement',

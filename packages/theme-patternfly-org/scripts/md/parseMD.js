@@ -278,7 +278,6 @@ module.exports = {
     });
     Object.entries(globs.mdExternal).forEach(([key, { source, files }]) => {
       files.forEach(file => {
-        console.log('watch', file)
         const watcher = chokidar.watch(file, { ignoreInitial: true });
         watcher.on('change', () => {
           sourceMDFile(key, source);
