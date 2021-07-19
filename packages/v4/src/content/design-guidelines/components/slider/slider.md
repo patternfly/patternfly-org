@@ -7,7 +7,7 @@ A **slider** provides a quick and effective way for users to set and adjust a nu
  
 ## Elements
  
-<img src="img/slider.png" alt="Visual of slider" width="600"/>
+<img src="./img/slider.png" alt="Visual of slider" width="600"/>
  
 1. **Slider value (optional)**: Displays selected numeric value.
 2. **Helper text (optional)**: Provides supplementary information about the slider such as minimum and maximum values.
@@ -46,7 +46,7 @@ Allows users to select any value within the slider's range using a thumb indicat
  
 ### Discrete slider
  
-<img src="img/slider-discrete.png" alt="Visual of discrete slider" width="600"/>
+<img src="./img/slider-discrete.png" alt="Visual of discrete slider" width="600"/>
 Allows users to select a value by adjusting a thumb indicator to predefined values represented by tick marks on a track. Users can only select values indicated by a tick mark.  If they attempt to select an unmarked value, the thumb indicator will always shift to the closest tick mark.
  
 ### Slider within input groups
@@ -59,7 +59,7 @@ For more information about using input groups, visit our [input group guidelines
 #### With value input
  
 ##### Default value input
-<img src="img/input-value.png" alt="Visual of slider with input value" width="600"/>
+<img src="./img/input-value.png" alt="Visual of slider with input value" width="600"/>
  
 1. **Number input in hover state**: Allows users to type in their numeric input or to adapt the slider value by using caret buttons.
 2. **Unit (optional)**: Provides a unit symbol for the value in the input field, when applicable.
@@ -67,7 +67,7 @@ For more information about using input groups, visit our [input group guidelines
 Value input is restrained by prescribed maximum and minimum parameters, and appears on the right side of the slider.
  
 ##### Thumb value
-<img src="img/thumb value.png" alt="Visual of  slider with thumb value" width="600"/>
+<img src="./img/thumb value.png" alt="Visual of  slider with thumb value" width="600"/>
  
 1. **Input field**: Allows users to type in their numeric input.
 2. **Unit (optional)**: Provides a unit symbol for the value in the input field, when applicable.
@@ -80,7 +80,7 @@ For more information about using number inputs, visit our [number input guidelin
  
 * **Buttons**
  
-<img src="img/Slider-with-buttons.png" alt="Visual of slider with buttons" width="500"/>
+<img src="./img/Slider-with-buttons.png" alt="Visual of slider with buttons" width="500"/>
  
  
 Use buttons on either side of the slider to increase or decrease selected value by set increments.
@@ -88,10 +88,10 @@ Use buttons on either side of the slider to increase or decrease selected value 
 *  **Lock feature**
  
 **Unlocked value**
-<img src="img/Unlocked.png" alt="Visual of an unlocked slider" width="500"/>
+<img src="./img/Unlocked.png" alt="Visual of an unlocked slider" width="500"/>
  
 **Locked value**
-<img src="img/Locked.png" alt="Visual of a locked slider" width="500
+<img src="./img/Locked.png" alt="Visual of a locked slider" width="500
 "/>
  
 Use a lock icon along with a slider if there is a use case to lock or unlock the slider value. Use a lock icon to display different user permissions or to indicate the possibility of automatic value alteration. Clicking on a lock icon results in locking a selected value and disabling the slider. If the user permissions allow it, users can unlock value by clicking on a lock icon.
