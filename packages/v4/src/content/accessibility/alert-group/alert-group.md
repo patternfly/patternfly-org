@@ -7,13 +7,13 @@ An **alert group** positions one or multiple alerts in a layer over the main con
 
 **Static inline alert groups** don’t need additional accessibility attributes. If it appears inline on the page, it will be read along with the surrounding content. 
 
-**Dynamic and toast alerts** are injected into the DOM after page load and require additional measures to ensure that these content changes are announced to screen reader users. Discoverability is also different in this case because the alert content is often not near the primary markup/content for the page. The AlertGroup/Alerts are often rendered at a more global level within the DOM, like toward the end of the body tag so that the content can persist across page changes. 
+**Dynamic and toast alerts** are injected into the DOM after page load and require additional measures to ensure that these content changes are announced to screen reader users. This is the use case that requires/warrants turning an alert group into a live region. Discoverability is also different in this case because the alert content is often not near the primary markup/content for the page. The AlertGroup/Alerts are often rendered at a more global level within the DOM, like toward the end of the body tag so that the content can persist across page changes. 
 
 <br/>
 
 <ins>**To make dynamic alert groups accessible:**</ins>
-- Add `isLiveRegion` to make the AlertGroup a live region that alerts can be conditionally rendered inside the AlertGroup.
-- AlertGroup should always exist in the DOM on page load and alerts should be rendered inside the AlertGroup.
+- Add `isLiveRegion` to make the AlertGroup a live region that alerts can be conditionally rendered inside of.
+- AlertGroup should always exist in the DOM on page load and dynamic alerts should be rendered inside the AlertGroup.
 
 
 **For more specific customization**, add any of the following to AlertGroup:
@@ -22,7 +22,7 @@ An **alert group** positions one or multiple alerts in a layer over the main con
 
 - **aria-live="assertive"**- Assertive is used for high priority updates, when the user must be informed about updated information within the live region immediately. The update is provided to the user, interrupting their current task. 
 
-- **Aria-atomic**- The aria-atomic=BOOLEAN sets whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: false or true. The default setting is: false.
+- **Aria-atomic**- Setting aria-atomic to true causes the entire live region contents to be presented/announced when a change in any of the content is detected. Basically, "re-announce everything on change". This is significantly more verbose and should only be used in appropriate cases. One example of a fair use would be a dedicated live region for housing a countdown timer. Defaults to false.
 
 - **Aria-relevant**- The aria-relevant=[LIST_OF_CHANGES] sets what types of changes are relevant to a live region and what qualifies as an update to it. The possible settings are one or more of: additions, removals, text, all. The default setting is: additions text.
 
