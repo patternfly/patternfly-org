@@ -40,7 +40,7 @@ A **slider** provides a quick and effective way for users to set and adjust a nu
 ## Variations
 
 ### Continuous slider 
-<img src="img/slider_continuous.png" alt="Visual of continuous slider" width="600"/>
+<img src="./img/slider_continuous.png" alt="Visual of continuous slider" width="600"/>
 
 Allows users to select any value within the slider's range using a thumb indicator. Use this variation when any value within your slider’s range is valid for your use case.
 
