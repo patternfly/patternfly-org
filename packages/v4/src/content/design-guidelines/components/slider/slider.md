@@ -7,7 +7,7 @@ A **slider** provides a quick and effective way for users to set and adjust a nu
  
 ## Elements
  
-<img src="./img/slider.png" alt="Visual of slider" width="600"/>
+<img src="./img/Slider.png" alt="Visual of slider" width="600"/>
  
 1. **Slider value (optional)**: Displays selected numeric value.
 2. **Helper text (optional)**: Provides supplementary information about the slider such as minimum and maximum values.
@@ -59,7 +59,7 @@ For more information about using input groups, visit our [input group guidelines
 #### With value input
  
 ##### Default value input
-<img src="./img/input-value.png" alt="Visual of slider with input value" width="600"/>
+<img src="./img/Input-value.png" alt="Visual of slider with input value" width="600"/>
  
 1. **Number input in hover state**: Allows users to type in their numeric input or to adapt the slider value by using caret buttons.
 2. **Unit (optional)**: Provides a unit symbol for the value in the input field, when applicable.
