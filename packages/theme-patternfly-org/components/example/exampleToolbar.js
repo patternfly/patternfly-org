@@ -20,12 +20,19 @@ function getLanguage(lang) {
 }
 
 export const ExampleToolbar = ({
+  // Link to fullscreen example page (each example has one)
   fullscreenLink,
+  // Params to pass to codesandbox
   codeBoxParams,
+  // Language of code
   lang,
+  // Whether the example is fullscreen only
   isFullscreen,
+  // Original version of the code
   originalCode,
+  // Current code in editor
   code,
+  // Callback to set code in parent component
   setCode
 }) => {
   const [isEditorOpen, setIsEditorOpen] = React.useState(false);
@@ -164,6 +171,7 @@ export const ExampleToolbar = ({
       code={code}
       onChange={newCode => setCode(newCode)}
       onEditorDidMount={onEditorDidMount}
+      isReadOnly={isFullscreen}
     />
   );
 }

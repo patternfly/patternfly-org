@@ -51,18 +51,32 @@ class ErrorBoundary extends React.Component {
 
 // Props come from mdx-ast-to-mdx-hast.js
 export const Example = ({
+  // The ts/js/html code for the example
   code,
+  // The language of the code
   lang = '',
+  // Second parameter to sourceMD for file containing this code
+  // Should match tab name
   source,
+  // Whether to disable the live code editor
   noLive = !liveCodeTypes.includes(lang),
+  // Nearest parent h3
   title = 'Untitled',
+  // Whether the example is fullscreen only and we should show a thumbnail
   isFullscreen,
+  // Whether the example is open on the fullscreen page
   isFullscreenPreview,
+  // The image src thumbnail for the example
   thumbnail = missingThumbnail,
+  // Whether the example shows demo capability
   isBeta,
+  // Slugified source + title
   id,
+  // Section in frontmatter of MD file (components, demos, etc)
   section,
+  // Extra constants for example (images, extra JS files, etc)
   liveContext,
+  // Content that appears between h3 and code block to explain example
   children,
 }) => {
   if (isFullscreenPreview) {
