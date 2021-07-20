@@ -1,6 +1,6 @@
 ---
 id: Quick start
-section: components
+section: extensions
 ---
 
 A **quick start** is a set of step-by-step instructions and tasks presented in a side panel embedded in a product’s UI. Quick starts can help users get started with a product, and they often provide guidance around installation and setup.
