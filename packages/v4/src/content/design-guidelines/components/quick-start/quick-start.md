@@ -44,7 +44,18 @@ For quick starts in a mixed catalog of resources, we recommend including an acti
 <img src="./img/mixed-catalog.png" alt="Mixed resource catalog" width="1062"/>
 
 ### Side panel
-Quick starts use the [drawer component](https://www.patternfly.org/v4/components/drawer), which contains all the step-by-step instructions and tasks. Everything is contained in the drawer and remains anchored to the right, allowing the user to follow the steps without blocking any parts of the UI. The drawer does not overlay the UI and instead pushes it to the left, including the masthead. This prevents any modals or side panels within the UI from covering the quick start instructions. The side panel is also resizable.
+Quick starts use the [drawer component](https://www.patternfly.org/v4/components/drawer), which contains all the step-by-step instructions and tasks.
+
+<img src="./img/side-panel-elements.png" alt="Side panel elements" width="449"/>
+
+1. **Quick start title:** The quick start title that is shown on the card.
+2. **Duration:** The estimated amount of time the quick start will take to complete.
+3. **Close:** The close button allows the user to close the quick start at any time.
+4. **Button bar:** The button bar allows the user to advance between quick start tasks. The buttons are usually **Next**, **Back**, and **Restart**.
+
+
+
+Everything is contained in the drawer and remains anchored to the right, allowing the user to follow the steps without blocking any parts of the UI. The drawer does not overlay the UI and instead pushes it to the left, including the masthead. This prevents any modals or side panels within the UI from covering the quick start instructions. The side panel is also resizable.
 
 <img src="./img/side-panel.png" alt="Side panel" width="1680"/>
 
