@@ -22,12 +22,13 @@ Keyboard interactions for tree view:
 **Screen reader users** should be able to interact with the tree view using their mouse or keyboard. Nodes of a tree view should have descriptive text labels whenever possible. If a tree view node only contains a graphic (such as an icon), it should have alternative text: `aria-label` is the most common way to add this. A tree view should be identified as such when the screen reader first focuses on it. When users navigate to a new node, indicate its branch level , number of child nodes, and number of sibling nodes.
 
 ## To make tree view accessible:
-- Use aria roles to identify the tree (“tree”), the nodes in the tree (“treeitem”), and sets of child nodes (“group”).
-- Indicate a selected node with aria-selected.
-- **For every parent node**, add an `aria-expanded` attribute that says whether the node is collapsed or expanded. This will make the tree view more screen reader friendly.
+- For the search variant, use an aria-label describing what the user can search. For example, `searchProps={{ id: 'input-search', name: 'search-input', 'aria-label': 'Search input example' }}`.
+- For the checkbox variant, each of the checkboxes should have an aria-label or be associated: `checkProps: { 'aria-label': 'app-launcher-check', checked: false }`.
+- The actions variant should have an aria-label if you are using buttons without visible descriptive text
 
 The following props/attributes have been added for you or are customizable in PatternFly:
 
-| Reason used | React prop used to customize | HTML Attribute | React component that it should be applied to | Which HTML element it appears on in markup |
+| Reason used | React prop used to customize | HTML Attribute | React component that it should be applied to |
 | -- | -- | -- | -- | -- |
-| Provides an accessible name for the close button as it uses an icon instead of text. Default is “Close dialog”. Only used if you are customizing. | `closeButtonAriaLabel` | aria-label="[close button label]" | AboutModal | .pf-c-modal-box__close .pf-c-button |
+| Additional properties of the tree view item checkbox | `checkProps` | `{ checked: false }` | TreeViewListItem |
+| Additional props for search input | `searchProps` |  | TreeView or TreeViewList |
