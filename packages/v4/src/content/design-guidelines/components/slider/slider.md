@@ -11,7 +11,7 @@ A **slider** provides a quick and effective way for users to set and adjust a nu
  
 1. **Slider value (optional)**: Displays selected numeric value.
 2. **Helper text (optional)**: Provides supplementary information about the slider such as minimum and maximum values.
-3. **Track**: Orders the range of values users can set and adjust onto one line..
+3. **Track**: Orders the range of values users can set and adjust onto one line.
 4. **Filled track**: Illustrates a user’s selected numeric value within the slider’s pre-defined range.
 5. **Thumb**: Indicates a selected numeric value on the track using a positional indicator, typically a dot.
 6. **Tick marks (optional)**: Represents predetermined increments on the track to guide users toward positioning the thumb on set intervals.
@@ -40,6 +40,7 @@ instead.
 ## Variations
  
 ### Continuous slider
+
 <img src="./img/slider-continuous.png" alt="Visual of continuous slider" width="600"/>
  
 Allows users to select any value within the slider's range using a thumb indicator. Use this variation when any value within your slider’s range is valid for your use case.
@@ -54,19 +55,21 @@ Allows users to select a value by adjusting a thumb indicator to predefined valu
 When a slider is combined with other elements, it allows users to better control value selection.
 This variation combines multiple input types in one control and presents more options on how to adjust a selected value.
  
-For more information about using input groups, visit our [input group guidelines](/components/input-group/design-guidelines)
+For more information about using input groups, visit our [input group guidelines](/components/input-group/design-guidelines).
  
-#### With value input
+* #### With value input
  
 ##### Default value input
+
 <img src="./img/Input-value.png" alt="Visual of slider with input value" width="600"/>
  
 1. **Number input in hover state**: Allows users to type in their numeric input or to adapt the slider value by using caret buttons.
 2. **Unit (optional)**: Provides a unit symbol for the value in the input field, when applicable.
  
 Value input is restrained by prescribed maximum and minimum parameters, and appears on the right side of the slider.
- 
+
 ##### Thumb value
+
 <img src="./img/thumb value.png" alt="Visual of  slider with thumb value" width="600"/>
  
 1. **Input field**: Allows users to type in their numeric input.
@@ -76,21 +79,23 @@ In this slider variation, the value input is located over the thumb.
  
 For more information about using number inputs, visit our [number input guidelines](/components/number-input/design-guidelines).
  
-#### With action
+* #### With action
  
-* **Buttons**
+##### **Buttons**
  
 <img src="./img/Slider-with-buttons.png" alt="Visual of slider with buttons" width="500"/>
  
  
 Use buttons on either side of the slider to increase or decrease selected value by set increments.
  
-*  **Lock feature**
+ ##### **Lock feature**
  
-**Unlocked value**
+* ##### **Unlocked value**
+
 <img src="./img/Unlocked.png" alt="Visual of an unlocked slider" width="500"/>
  
-**Locked value**
+* ##### **Locked value**
+
 <img src="./img/Locked.png" alt="Visual of a locked slider" width="500
 "/>
  
