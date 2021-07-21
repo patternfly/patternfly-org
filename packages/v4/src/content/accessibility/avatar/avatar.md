@@ -18,6 +18,6 @@ If you’re combining an avatar with another component, make sure to check acces
 
 The following props/attributes have been added for you or are customizable in PatternFly:
 
-| Reason used | React prop used to customize | HTML attribute | React component that it should be applied to | Which HTML element it appears on in markup |
-| -- | -- | -- | -- | -- |
-| Provides an accessible description of the avatar as it uses an image instead of text. | `alt` | img alt=[alt prop] | Avatar | .pf-c-avatar |
+| React prop | React component that it should be applied to | Which HTML element it appears on in markup | Reason used |
+| -- | -- | -- | -- |
+| `alt` | Avatar | .pf-c-avatar | Provides an accessible description of the avatar as it uses an image instead of text. |
