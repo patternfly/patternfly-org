@@ -57,9 +57,9 @@ This variation combines multiple input types in one control and presents more op
  
 For more information about using input groups, visit our [input group guidelines](/components/input-group/design-guidelines).
  
-* #### With value input
+#### With value input
  
-##### Default value input
+#### Default value input
 
 <img src="./img/Input-value.png" alt="Visual of slider with input value" width="600"/>
  
@@ -68,7 +68,7 @@ For more information about using input groups, visit our [input group guidelines
  
 Value input is restrained by prescribed maximum and minimum parameters, and appears on the right side of the slider.
 
-##### Thumb value
+#### Thumb value
 
 <img src="./img/thumb value.png" alt="Visual of  slider with thumb value" width="600"/>
  
@@ -79,22 +79,22 @@ In this slider variation, the value input is located over the thumb.
  
 For more information about using number inputs, visit our [number input guidelines](/components/number-input/design-guidelines).
  
-* #### With action
+#### With action
  
-##### **Buttons**
+#### **Buttons**
  
 <img src="./img/Slider-with-buttons.png" alt="Visual of slider with buttons" width="500"/>
  
  
 Use buttons on either side of the slider to increase or decrease selected value by set increments.
  
- ##### **Lock feature**
+ #### **Lock feature**
  
-* ##### **Unlocked value**
+* **Unlocked value**
 
 <img src="./img/Unlocked.png" alt="Visual of an unlocked slider" width="500"/>
  
-* ##### **Locked value**
+*  **Locked value**
 
 <img src="./img/Locked.png" alt="Visual of a locked slider" width="500
 "/>
