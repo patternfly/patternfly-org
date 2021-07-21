@@ -18,7 +18,7 @@ A **button** is a box area or text that communicates and triggers user actions w
 
 The following props/attributes have been added for you or are customizable in PatternFly:
 
-| Reason used | React prop used to customize | React component that it should be applied to | Which HTML element it appears on in markup |
+| React prop | React component that it should be applied to | Which HTML element it appears on in markup | Reason used |
 | -- | -- | -- | -- |
-| Adds accessible text to the button if the button doesn’t contain descriptive text on its own. | `aria-label` | Button | .pf-c-button.pf-m-plain |
-| Adds disabled styling and communicates that the button is disabled using the aria-disabled html attribute | `isAriaDisabled` | Button | button.pf-c-button |
+| `aria-label` | Button | .pf-c-button.pf-m-plain | Adds accessible text to the button if the button doesn’t contain descriptive text on its own. |
+| `isAriaDisabled` | Button | button.pf-c-button | Adds disabled styling and communicates that the button is disabled using the aria-disabled html attribute |
