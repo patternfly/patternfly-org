@@ -8,7 +8,7 @@ worthy of being shared across projects may be contributed as a community extensi
 extension may be promoted as an officially supported extension if and when usage is proven across multiple 
 projects and it can be abstracted from any project-specific use cases.
 
-Extension components do not undergo the same rigorous design or coding review process as core PatternFly components 
+Community extension components do not undergo the same rigorous design or coding review process as core PatternFly components 
 and are not supported directly by the PatternFly team. For support, open issues in the project Github repositories
 and join the PatternFly <a href="//slack.patternfly.org/" target="_blank" rel="noopener noreferrer">Slack</a> workspace.
 
