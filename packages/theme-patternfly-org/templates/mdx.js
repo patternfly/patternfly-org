@@ -83,7 +83,9 @@ const MDXChildTemplate = ({
                 <PropsTable
                   key={component.name}
                   title={component.name}
-                  rows={component.props} />
+                  rows={component.props}
+                  allPropComponents={propComponents}
+                />
               ))}
             </React.Fragment>
           )}
