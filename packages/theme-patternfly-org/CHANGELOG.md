@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2021-07-21)
+
+
+### Features
+
+* **propsTable:** Convert component names referenced in prop types on the same page into links ([#2614](https://github.com/patternfly/patternfly-org/issues/2614)) ([9a1ae9e](https://github.com/patternfly/patternfly-org/commit/9a1ae9e2cca5bee0cc196bf732f5f30064b77e96))
+
+
+
+
+
 ## 0.5.32 (2021-07-21)
 
 **Note:** Version bump only for package theme-patternfly-org
