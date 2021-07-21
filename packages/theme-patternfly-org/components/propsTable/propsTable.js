@@ -8,10 +8,12 @@ import {
   cellWidth
 } from '@patternfly/react-table';
 import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
+import { PropTypeWithLinks } from './propTypeWithLinks';
 
 export const PropsTable = ({
   title,
-  rows
+  rows,
+  allPropComponents
 }) => {
   const columns = [
     { title: 'Name', transforms: [cellWidth(15)] },
@@ -44,7 +46,7 @@ export const PropsTable = ({
               )}
             </div>,
             <div className="pf-m-break-word">
-              {row.type}
+              <PropTypeWithLinks type={row.type} allPropComponents={allPropComponents} />
             </div>,
             <div>
               {row.required ? 'Yes' : 'No'}
