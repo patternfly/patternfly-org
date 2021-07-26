@@ -21,12 +21,12 @@ Consider using a **skip to content** component on your page so that assistive te
 
 The following props/attributes have been added for you or are props/attributes that can be customized:
 
-| Reason used | React prop used to customize | HTML Attribute | React component that it should be applied to |
+| React prop | React component that it should be applied to | Which HTML element it appears on in markup | Reason used |
 | -- | -- | -- | -- |
-| Labels the navigation toggle button | `aria-label` | aria-label="Global Navigation" | PageHeader |
-| Identifies the element controlled by the toggle | `aria-controls` |  | PageHeader |
-| Labels the main section | `mainAriaLabel` |  | Page |
-| An id to use for the [role="main"] element | `mainContainerId` |  | Page |
-| A tabIndex to use for the [role="main"] element. Make this value null to unset it | `mainTabIndex` |  | Page |
-| Skip to content component for the page | `skipToContent` |  | Page |
-| Value for the role on the `<main>` element | `role` |  | Page |
+| `aria-label` | PageHeader | .pf-c-button.pf-m-plain | Labels the navigation toggle button |
+| `aria-controls` | PageHeader | .pf-c-button.pf-m-plain | Identifies the element controlled by the toggle |
+| `mainAriaLabel` | Page | .pf-c-page__main | Labels the main section |
+| `mainContainerId` | Page | .pf-c-page__main | An id to use for the [role="main"] element |
+| `mainTabIndex` | Page | .pf-c-page__main | A tabIndex to use for the [role="main"] element. Defaults to -1; make this value null to unset it |
+| `skipToContent` | Page | .pf-c-button.pf-m-primary.pf-c-skip-to-content | Skip to content component for the page |
+| `role` | Page | .pf-c-page__main | Value for the role on the `<main>` element |
