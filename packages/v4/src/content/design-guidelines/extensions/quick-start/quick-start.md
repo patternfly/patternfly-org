@@ -18,7 +18,7 @@ Quick starts are usually surfaced within a [catalog](https://www.patternfly.org/
 1. **Icon:** An icon associated with the quick start topic can be included on the card. If no specific icon exists, use the rocket icon.
 2. **Title:** The title briefly communicates what the quick start covers.
 3. **Labels:** [Filled labels](https://www.patternfly.org/v4/components/label) communicate the estimated completion time and status. If the quick start is presented in a mixed catalog of resources, a label can indicate the type of resource.
-4. **Description:** The description summarizes the quick start outcome in one to three sentences.
+4. **Description:** The description summarizes the quick start outcome in four lines or fewer.
 5. **Prerequisites (optional):** Prerequisites communicate user requirements prior to starting the quick start. They’re displayed in a popover, and they’re organized into a bulleted list. The total number of prerequisites is listed in parentheses on the quick start card.
 
 <img src="./img/prerequisites.png" alt="Example of prerequisites" width="395"/>
