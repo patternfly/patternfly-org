@@ -17,7 +17,7 @@ Labels are easily customized to fit different use cases. There are two main type
 
 <img src="./img/filled-labels.png" alt="Filled labels" width="646"/>
 
-Use the filled option to add more visual prominence to a label. If your use case requires a mix of clickable and non-clickable labels, consider using unfilled for clickable and filled for non-clickable. Whatever convention you choose, be sure to maintain consistency through your UI.
+Use the filled option to add more visual prominence to a label. If your use case requires a mix of clickable and non-clickable labels, consider using one type for clickable and another for non-clickable. Whatever convention you choose, be sure to maintain consistency through your UI. 
 
 The default colors for labels are gray, blue, green, orange, red, purple, and cyan. We offer a wide array of colors to allow for color coding labels within UIs. If desired, label colors can be used to indicate status. Regardless, we recommend you avoid using the red or green labels unless they indicate danger/error or success, respectively.
 
@@ -50,7 +50,7 @@ You can also use them to distinguish labels of the same color if needed.
 
 ### When to use clickable labels
 
-You can also make labels clickable. A common use case for clickable labels is when a user may want to filter by a specific label. You can also use label links to redirect users to a new page. Clickable labels have hover and focus states.
+You can also make labels clickable. A common use case for clickable labels is when a user may want to filter by a specific label, or may want to surface more information in a popover. You can also use label links to redirect users to a new page. Clickable labels have hover and focus states.
 
 <img src="./img/clickable-label.png" alt="Example of a clickable label" width="219"/>
 
