@@ -28,7 +28,7 @@ Keyboard interactions for tree view:
 
 The following props/attributes have been added for you or are customizable in PatternFly:
 
-| React prop | HTML Attribute | React component that it should be applied to | Reason used |
+| React prop | React component that it should be applied to | Which HTML element it appears on in markup | Reason used |
 | -- | -- | -- | -- |
-| `checkProps` | `{ checked: false }` | TreeViewListItem | Additional properties of the tree view item checkbox |
-| `searchProps` |  | TreeView or TreeViewList | Additional props for search input |
+| `checkProps` | TreeViewListItem | checkbox input | Defaulted to `{ checked: false }` |
+| `searchProps` | TreeView or TreeViewList | .pf-c-form-control pf-m-search | Additional props for search input |
