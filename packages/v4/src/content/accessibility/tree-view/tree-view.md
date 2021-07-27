@@ -30,5 +30,5 @@ The following props/attributes have been added for you or are customizable in Pa
 
 | React prop | React component that it should be applied to | Which HTML element it appears on in markup | Reason used |
 | -- | -- | -- | -- |
-| `checkProps` | TreeViewListItem | checkbox input | Defaulted to `{ checked: false }` |
+| `checkProps` | TreeViewListItem | checkbox input | Additional properties of the tree view item checkbox; defaulted to `{ checked: false }` |
 | `searchProps` | TreeView or TreeViewList | .pf-c-form-control pf-m-search | Additional props for search input |
