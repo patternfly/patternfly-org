@@ -1,6 +1,6 @@
 ---
 id: Colors for charts
-section: guidelines
+section: charts
 hideSource: true
 ---
 
