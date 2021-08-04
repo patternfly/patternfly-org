@@ -1,5 +1,13 @@
 const acorn = require('acorn')
 const tt = acorn.tokTypes
+function DestructuringErrors() {
+  this.shorthandAssign =
+  this.trailingComma =
+  this.parenthesizedAssign =
+  this.parenthesizedBind =
+  this.doubleProto =
+    -1
+}
 
 const tsPredefinedType = {
   any: 'TSAnyKeyword',
@@ -156,6 +164,71 @@ module.exports = Parser => class TSParser extends Parser {
       node.returnType = this.parseTSTypeAnnotation(false)
     }
     super.parseFunctionBody(node, isArrowFunction)
+  }
+
+  parseParenAndDistinguishExpression(canBeArrow) {
+    let startPos = this.start, startLoc = this.startLoc, val, allowTrailingComma = this.options.ecmaVersion >= 8
+    if (this.options.ecmaVersion >= 6) {
+      this.next()
+
+      let innerStartPos = this.start, innerStartLoc = this.startLoc
+      let exprList = [], first = true, lastIsComma = false
+      let refDestructuringErrors = new DestructuringErrors, oldYieldPos = this.yieldPos, oldAwaitPos = this.awaitPos, spreadStart
+      this.yieldPos = 0
+      this.awaitPos = 0
+      // Do not save awaitIdentPos to allow checking awaits nested in parameters
+      while (this.type !== tt.parenR) {
+        first ? first = false : this.expect(tt.comma)
+        if (allowTrailingComma && this.afterTrailingComma(tt.parenR, true)) {
+          lastIsComma = true
+          break
+        } else if (this.type === tt.ellipsis) {
+          spreadStart = this.start
+          exprList.push(this.parseParenItem(this.parseRestBinding()))
+          if (this.type === tt.comma) this.raise(this.start, "Comma is not permitted after the rest element")
+          break
+        } else {
+          exprList.push(this.parseMaybeAssign(false, refDestructuringErrors, this.parseParenItem))
+        }
+        if (this.type === tt.colon) {
+          this.parseTSTypeAnnotation()
+        }
+      }
+      let innerEndPos = this.start, innerEndLoc = this.startLoc
+      this.expect(tt.parenR)
+
+      if (canBeArrow && !this.canInsertSemicolon() && this.eat(tt.arrow)) {
+        this.checkPatternErrors(refDestructuringErrors, false)
+        this.checkYieldAwaitInDefaultParams()
+        this.yieldPos = oldYieldPos
+        this.awaitPos = oldAwaitPos
+        return this.parseParenArrowList(startPos, startLoc, exprList)
+      }
+
+      if (!exprList.length || lastIsComma) this.unexpected(this.lastTokStart)
+      if (spreadStart) this.unexpected(spreadStart)
+      this.checkExpressionErrors(refDestructuringErrors, true)
+      this.yieldPos = oldYieldPos || this.yieldPos
+      this.awaitPos = oldAwaitPos || this.awaitPos
+
+      if (exprList.length > 1) {
+        val = this.startNodeAt(innerStartPos, innerStartLoc)
+        val.expressions = exprList
+        this.finishNodeAt(val, "SequenceExpression", innerEndPos, innerEndLoc)
+      } else {
+        val = exprList[0]
+      }
+    } else {
+      val = this.parseParenExpression()
+    }
+
+    if (this.options.preserveParens) {
+      let par = this.startNodeAt(startPos, startLoc)
+      par.expression = val
+      return this.finishNode(par, "ParenthesizedExpression")
+    } else {
+      return val
+    }
   }
 
   parseExpression() {
