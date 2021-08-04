@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.5.8 (2021-08-04)
+
+
+### Bug Fixes
+
+* **externalwatcher:** watch for adding files ([#2624](https://github.com/patternfly/patternfly-org/issues/2624)) ([3543888](https://github.com/patternfly/patternfly-org/commit/3543888e9b155efdff22abd1cae67ad4a5d7928a))
+
+
+
+
+
 ## 4.5.7 (2021-08-03)
 
 **Note:** Version bump only for package patternfly-org-4
