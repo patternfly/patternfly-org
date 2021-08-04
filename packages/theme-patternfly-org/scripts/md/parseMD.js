@@ -19,8 +19,6 @@ const routes = {};
 const globs = {
   props: [],
   md: [],
-  // [mdFile]: { source, files[] }
-  mdExternal: {}
 };
 
 function toReactComponent(mdFilePath, source) {
@@ -149,7 +147,15 @@ function toReactComponent(mdFilePath, source) {
     // .use(require('remark-rehype'))
     // .use(require('rehype-react'), { createElement: require('react').createElement })
     // Transform AST to JSX elements. Includes special code block parsing
-    .use(require('./mdx-ast-to-mdx-hast'), { mdExternal: globs.mdExternal, source })
+    .use(require('./mdx-ast-to-mdx-hast'), { 
+      watchExternal(file) {
+        const watcher = chokidar.watch(file, { ignoreInitial: true });
+        watcher.on('change', () => {
+          sourceMDFile(mdFilePath, source);
+          writeIndex();
+        });
+      }
+    })
     // Don't allow exports
     .use(() => tree => remove(tree, 'export'))
     // Comments aren't very useful in generated files no one wants to look at
@@ -276,14 +282,6 @@ module.exports = {
       mdWatcher.on('add', onMDFileChange);
       mdWatcher.on('change', onMDFileChange);
     });
-    Object.entries(globs.mdExternal).forEach(([key, { source, files }]) => {
-      files.forEach(file => {
-        const watcher = chokidar.watch(file, { ignoreInitial: true });
-        watcher.on('change', () => {
-          sourceMDFile(key, source);
-          writeIndex();
-        });
-      });
-    });
+
   }
 };
