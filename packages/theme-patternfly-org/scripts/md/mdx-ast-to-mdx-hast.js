@@ -13,7 +13,7 @@ const { liveCodeTypes } = require('../../helpers/liveCodeTypes');
 let srcCounter = 0;
 
 // Adapted from https://github.com/mdx-js/mdx/blob/next/packages/mdx/mdx-ast-to-mdx-hast.js
-function mdxAstToMdxHast({ mdExternal, source }) {
+function mdxAstToMdxHast({ watchExternal }) {
   return (tree, file) => {
     const srcImports = [];
 
@@ -102,9 +102,7 @@ function mdxAstToMdxHast({ mdExternal, source }) {
                 if (key === 'file') {
                   const filePath = path.join(dirname, val);
                   properties.code = fs.readFileSync(filePath, 'utf8');
-                  properties.file = filePath;
-                  mdExternal[file.history[0]] = mdExternal[file.history[0]] || { source, files: [] };
-                  mdExternal[file.history[0]].files.push(filePath);
+                  watchExternal(filePath);
                 } else {
                   properties[key] = val;
                 }
