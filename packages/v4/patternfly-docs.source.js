@@ -42,7 +42,7 @@ module.exports = (sourceMD, sourceProps) => {
       .resolve('@patternfly/react-log-viewer/package.json')
       .replace('package.json', 'src');
 
-  const reactPropsIgnore = '**/*.test.tsx';
+  const reactPropsIgnore = ['**/*.test.tsx', '**/examples/*.tsx'];
   sourceProps(path.join(reactCorePath, '/**/*.tsx'), reactPropsIgnore);
   sourceProps(path.join(reactTablePath, '/**/*.tsx'), reactPropsIgnore);
   sourceProps(path.join(reactCodeEditorPath, '/**/*.tsx'),reactPropsIgnore);
