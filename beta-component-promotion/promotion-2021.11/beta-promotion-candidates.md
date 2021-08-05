@@ -18,11 +18,6 @@ This implementation is only done in core and is consumed by other components, su
 
 ![inline-edit](./img/inline-edit.png)
 
-### LabelGroup
-A label group is used when there are multiple labels to display at once. Label groups can be oriented either horizontally or vertically and can optionally be named and dismissable.
-
-![label-group](./img/label-group.png)
-
 ### NumberInput
 A number input provides a quick and effective way for users to enter and modify a numeric value. Similar to input groups, number inputs combine two input types into one control: A text input field with buttons on either side. When combined, these elements allow users to input numeric values in a responsive and scalable way.
 
