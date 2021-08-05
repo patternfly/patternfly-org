@@ -60,12 +60,17 @@ Sub-steps can be added to the sidebar. Use sub-steps when there is a hierarchica
 
 
 1. **Sub-steps:** Sub-steps are always nested inside of a major step.
+2. **Expansion (optional):** Sub-steps may be shown or hidden using the caret next to the parent step.
 
 #### Behavior
 
 * You may force the user to execute sub-steps in order by disabling future steps. Or enable all steps if the user should be able to click freely between sub-steps.
 
 * Clicking "Next" or "Back" should navigate through the substeps as it would for the major steps.
+
+* If an expansion is used, sub-steps are hidden unless the user expands the parent step or has naturally arrived at the first of the substeps.
+
+* Parent steps are automatically closed once they are complete. However, the user can manually expand the parent back open at any time to see the sub-steps again while staying in context of their current step.
 
 ### Review and completion
 The last step in a wizard should always be a review step. This step should include a summary of what the user has input so the user may confirm them before committing their changes.
