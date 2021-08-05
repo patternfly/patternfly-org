@@ -66,9 +66,9 @@ Sub-steps can be added to the sidebar. Use sub-steps when there is a hierarchica
 
 * You may force the user to execute sub-steps in order by disabling future steps. Or enable all steps if the user should be able to click freely between sub-steps.
 
-* Clicking "Next" or "Back" should navigate through the substeps as it would for the major steps.
+* Clicking "Next" or "Back" should navigate through the sub-steps as it would for the major steps.
 
-* If an expansion is used, sub-steps are hidden unless the user expands the parent step or has naturally arrived at the first of the substeps.
+* If an expansion is used, sub-steps are hidden unless the user expands the parent step or has naturally arrived at the first of the sub-steps.
 
 * Parent steps are automatically closed once they are complete. However, the user can manually expand the parent back open at any time to see the sub-steps again while staying in context of their current step.
 
@@ -128,7 +128,7 @@ When a wizard is placed in the context of a page, it allows some freedom that is
 Be aware that anytime the user navigates aways from the wizard, there is a risk that any information entered up until that point will be lost. At a minimum, we recommend opening a modal alert when the user tries to do this warning of potential data loss and confirming that they want to leave the wizard. Optionally you should consider including a "Save as draft" feature that will allow work in progress to be saved and recalled upon returning to the wizard.
 
 ### Progressive wizard
-A progressive wizard takes the same form as the standard wizard or wizard with substeps above but accommodates a situation where the exact number of steps is not known when the wizard is first loaded. Steps in the sidebar can be changed or added as the user progresses through the wizard.
+A progressive wizard takes the same form as the standard wizard or wizard with sub-steps above but accommodates a situation where the exact number of steps is not known when the wizard is first loaded. Steps in the sidebar can be changed or added as the user progresses through the wizard.
 
 A walk-through of a progressive wizard might look like this:
 
