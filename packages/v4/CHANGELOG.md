@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.5.10 (2021-08-05)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
 ## 4.5.9 (2021-08-04)
 
 **Note:** Version bump only for package patternfly-org-4
