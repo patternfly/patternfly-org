@@ -189,8 +189,10 @@ const es2017GeneratorJSX = {
   JSXAttribute(node, state) {
     state.write(' ');
     this[node.name.type](node.name, state);
-    state.write('=');
-    this[node.value.type](node.value, state);
+    if (node.value) {
+      state.write('=');
+      this[node.value.type](node.value, state);
+    }
   },
   // namespaced:attr="something"
   JSXNamespacedName(node, state) {
