@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.14 (2021-08-06)
+
+
+### Bug Fixes
+
+* **ts->js:** bool attributes ([#2630](https://github.com/patternfly/patternfly-org/issues/2630)) ([71b8026](https://github.com/patternfly/patternfly-org/commit/71b8026020dc7fd92126a6120ca826f5c517a95d))
+
+
+
+
+
 ## 0.6.13 (2021-08-06)
 
 
