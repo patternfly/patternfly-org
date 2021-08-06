@@ -29,7 +29,7 @@ Allows a tooltip to be attached to a disabled dropdown menu item.
 
 ### [Log viewer enhancements](https://www.patternfly.org/v4/extensions/log-viewer)
 
-The log viewer extension has been updated to support a dark mode and full screen viewing. Note that log viewer has been moved from the Components to the new Expensions area on the PatternFly website.
+The log viewer extension has been updated to support a dark mode and full screen viewing. Note that log viewer has been moved from the Components to the new Extensions area on the PatternFly website.
 
 
 See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
