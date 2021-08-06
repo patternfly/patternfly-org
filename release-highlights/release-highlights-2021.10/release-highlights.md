@@ -7,7 +7,7 @@
 
   ![password strength demo](./img/password-strength.png)
 
-Adds a demo to show how to the new Helper text component to add password validation and a strength indicator to a password field.
+Adds a demo to show how to use the new Helper text component to add password validation and a strength indicator to a password field.
 
 ### [Editable label group](https://www.patternfly.org/v4/components/label-group#editable-labels)
 
