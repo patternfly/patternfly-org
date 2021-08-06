@@ -12,11 +12,12 @@ In general, the card component already has accessibility built in. However, vari
 - **Expandable variant:** for expandable variants it’s important to add additional details for screen reader users to understand this interaction. 
 Add:
 
-```
-toggleButtonProps=({
-  id: ‘toggleId’, 
-  ‘aria-label’: ‘toggleLabel’, 
-  ‘aria-labelledby’: ‘titleId toggleId’, 
-  ‘aria-expanded’: this.state.isExpanded
-)}
-```
+  ```
+    toggleButtonProps=({
+      id: ‘toggleId’, 
+      ‘aria-label’: ‘toggleLabel’, 
+      ‘aria-labelledby’: ‘titleId toggleId’, 
+      ‘aria-expanded’: this.state.isExpanded
+    )}
+  ```
+  Note in this example that the `aria-labelledby` is a combination of the id on the `CardTitle` and the id on the toggle button. This will then combine the card title and the toggle button's label (this is the `aria-label` with text defining the toggle button, like "Details") and create something like "Header Details, collapsed, button" for the screen reader user. These are highly recommended for accessibility.
