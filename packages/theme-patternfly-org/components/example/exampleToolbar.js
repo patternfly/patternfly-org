@@ -60,7 +60,7 @@ export const ExampleToolbar = ({
   const fullscreenLabel = 'Open example in new window';
   const convertLabel = 'Convert example from Typescript to JavaScript';
   const undoAllLabel = 'Undo all changes';
-  const customControls = isFullscreen ? null : (
+  const customControls = (
     <React.Fragment>
       <CodeEditorControl
         icon={
