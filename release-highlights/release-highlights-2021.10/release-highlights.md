@@ -63,7 +63,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Expandable inline alert](https://github.com/patternfly/patternfly/issues/4056) - Adds a new alert type with an expandable header that allows body content to be hidden for a more compact appearance.
 
-* [Disabled tabs](https://github.com/patternfly/patternfly/issues/4257) - Add a disabled variant for the tabs component. The use can place a tooltip on a disabled tab as they would for other disabled controls. 
+* [Disabled tabs](https://github.com/patternfly/patternfly/issues/4257) - Add a disabled variant for the tabs component. The user can place a tooltip on a disabled tab as they would for other disabled controls. 
 
 
 For a complete roadmap showing all items planned in future releases, see our [PatternFly Feature Roadmap](https://github.com/orgs/patternfly/projects/4?fullscreen=true) project board.
