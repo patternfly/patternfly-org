@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.5.13 (2021-08-06)
+
+
+### Bug Fixes
+
+* **example:** show readonly code for fullscreen example ([#2629](https://github.com/patternfly/patternfly-org/issues/2629)) ([0ef1e92](https://github.com/patternfly/patternfly-org/commit/0ef1e926b807068a2f65bf899bd953acd7a36615))
+
+
+
+
+
 ## 4.5.12 (2021-08-05)
 
 **Note:** Version bump only for package patternfly-org-4
