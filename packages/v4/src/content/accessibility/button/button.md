@@ -16,7 +16,7 @@ A **button** is a box area or text that communicates and triggers user actions w
 - A regular disabled button is not focusable, but an aria-disabled button is. `isAriaDisabled` should be used when a disabled button provides interactive elements (like a tooltip).
 - Screen readers may read buttons to users out of context. For example, screen reader users can navigate a page specifically by form controls. So button text should be unique and easily understood on its own. Refer to PatternFly's accessibility guide for more information.
 
-The following props/attributes have been added for you or are customizable in PatternFly:
+The following props can be added or are customizable in PatternFly:
 
 | React prop | React component that it should be applied to | Which HTML element it appears on in markup | Reason used |
 | -- | -- | -- | -- |
