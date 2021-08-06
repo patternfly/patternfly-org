@@ -31,6 +31,15 @@ Allows a tooltip to be attached to a disabled dropdown menu item.
 
 The log viewer extension has been updated to support a dark mode and full screen viewing. Note that log viewer has been moved from the Components to the new Extensions area on the PatternFly website.
 
+### [Website changes](https://www.patternfly.org/v4/)
+
+Two significant changes were made to our website for this release:
+
+1. Our workspaces now use the PatternFly code editor component for displaying code snippets.
+
+![new code editor](./img/code-snippet.png)
+
+2. A new [Extensions](https://www.patternfly.org/v4/extensions/community-extensions) section has been added to the website navigation. This includes PatternFly extensions that are developed and supported by the UXD development team as well as community extensions that are contributed and supported by the PatternFly community.
 
 See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
@@ -63,7 +72,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Expandable inline alert](https://github.com/patternfly/patternfly/issues/4056) - Adds a new alert type with an expandable header that allows body content to be hidden for a more compact appearance.
 
-* [Disabled tabs](https://github.com/patternfly/patternfly/issues/4257) - Add a disabled variant for the tabs component. The user can place a tooltip on a disabled tab as they would for other disabled controls. 
+* [Disabled tabs](https://github.com/patternfly/patternfly/issues/4257) - Add a disabled variant for the tabs component. The user can place a tooltip on a disabled tab as they would for other disabled controls.
 
 
 For a complete roadmap showing all items planned in future releases, see our [PatternFly Feature Roadmap](https://github.com/orgs/patternfly/projects/4?fullscreen=true) project board.
