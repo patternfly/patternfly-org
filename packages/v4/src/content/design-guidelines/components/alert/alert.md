@@ -83,6 +83,12 @@ Toast alerts are commonly used in the following situations:
 - Informing the user that their action was completed successfully
 - Informing the user that their action was completed with errors
 
+## Customizing alerts
+
+If your use case falls outside of PatternFly's standard alert variations, use [icons](/guidelines/icons) and [colors](/guidelines/colors) to create custom alerts that meet your needs.
+
+View custom alerts in action in our [custom alert examples](https://www.patternfly.org/v4/components/alert#custom-icons).
+
 ## Content
 
 
