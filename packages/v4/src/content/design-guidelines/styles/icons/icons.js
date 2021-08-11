@@ -689,6 +689,14 @@ export const iconsData = [
     "Contextual_usage": "Represents data view content in a dashboard",
   },
   {
+    "Style": "pf-icon",
+    "Name": "pf-icon-task",
+    "React_name": "TaskIcon",
+    "Type": "",
+    "Contextual_usage": "Indicates the ability to open a task drawer. Also can represent tasks or activity.",
+    "Label": "Tasks"
+  },
+  {
     "Style": "fas",
     "Name": "fa-th",
     "React_name": "ThIcon",
