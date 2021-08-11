@@ -64,9 +64,9 @@ Any action that can be represented as an icon button can be placed in one or mor
 ### Drilldown menu
 <img src="./img/drill-down-menu.png" alt="drilldown menu" width="935"/>
 
-Use a drilldown menu when data is structured into levels and includes a long list of options. When the parent with children is selected, the list is replaced with children items. A header displays the name of a parent with the option going one level back. 
+Use a drilldown menu when data is structured into levels and includes a long list of options. When the parent with children is selected, the list is replaced with the children items. A header displays the name of the parent, with the option to go back one level. 
 
-If data is more complex and has more than 2 levels, use drilldown menu with breadcrumbs instead. Breadcrumbs offer better navigation between different levels. The number of visited levels is shown in a grey badge with a dropdown menu showing the menu items between the first and last level. Badge allows you to go back to a specific visited level. If you need to see the whole structure of your data, use [tree view](/components/tree-view) instead. 
+If data is more complex and has more than 2 levels, use a drilldown menu with breadcrumbs instead. Breadcrumbs offer better navigation between different levels. The number of visited levels is shown in a grey badge with a dropdown menu showing the menu items between the first and last level. The badge allows you to go back to a specific visited level. If you need to see the whole structure of your data, use a [tree view](/components/tree-view) instead. 
 
 
 ## Usage
