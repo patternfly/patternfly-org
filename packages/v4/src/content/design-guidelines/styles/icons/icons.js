@@ -692,7 +692,7 @@ export const iconsData = [
     "Style": "pf-icon",
     "Name": "pf-icon-task",
     "React_name": "TaskIcon",
-    "Type": "",
+    "Type": "Framework, Object",
     "Contextual_usage": "Indicates the ability to open a task drawer. Also can represent tasks or activity.",
     "Label": "Tasks"
   },
