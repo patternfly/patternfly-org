@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.20 (2021-08-17)
+
+
+### Bug Fixes
+
+* **parser:** handle ambigous TSCallExpression ([#2648](https://github.com/patternfly/patternfly-org/issues/2648)) ([af4a16d](https://github.com/patternfly/patternfly-org/commit/af4a16d6ed87c5a135b5557b613b91e0bdaabc5a))
+
+
+
+
+
 ## 0.6.19 (2021-08-17)
 
 **Note:** Version bump only for package theme-patternfly-org
