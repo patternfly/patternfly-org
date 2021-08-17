@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.5.21 (2021-08-17)
+
+
+### Bug Fixes
+
+* **parser:** allow arrow function types and paretheses array types ([#2649](https://github.com/patternfly/patternfly-org/issues/2649)) ([35c2944](https://github.com/patternfly/patternfly-org/commit/35c29440df2850ef121ca838faac463c3f7cecf7))
+
+
+
+
+
 ## 4.5.20 (2021-08-17)
 
 
