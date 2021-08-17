@@ -197,15 +197,20 @@ module.exports = Parser => class TSParser extends Parser {
       let innerEndPos = this.start, innerEndLoc = this.startLoc
       this.expect(tt.parenR)
 
-      if (this.eat(tt.colon)) {
-        this.parseTSTypeAnnotation(false) // throw away
-      }
-      if (canBeArrow && !this.canInsertSemicolon() && this.eat(tt.arrow)) {
-        this.checkPatternErrors(refDestructuringErrors, false)
-        this.checkYieldAwaitInDefaultParams()
-        this.yieldPos = oldYieldPos
-        this.awaitPos = oldAwaitPos
-        return this.parseParenArrowList(startPos, startLoc, exprList)
+      if (canBeArrow && !this.canInsertSemicolon()) {
+        const branch = this._branch()
+        try {
+          if (branch.parseTSTypeAnnotation() && branch.eat(tt.arrow)) {
+            this.parseTSTypeAnnotation() // throw away type
+          }
+        } catch {}
+        if (this.eat(tt.arrow)) {
+          this.checkPatternErrors(refDestructuringErrors, false)
+          this.checkYieldAwaitInDefaultParams()
+          this.yieldPos = oldYieldPos
+          this.awaitPos = oldAwaitPos
+          return this.parseParenArrowList(startPos, startLoc, exprList)
+        }
       }
 
       if (!exprList.length || lastIsComma) this.unexpected(this.lastTokStart)
