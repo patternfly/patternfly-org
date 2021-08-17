@@ -197,6 +197,9 @@ module.exports = Parser => class TSParser extends Parser {
       let innerEndPos = this.start, innerEndLoc = this.startLoc
       this.expect(tt.parenR)
 
+      if (this.eat(tt.colon)) {
+        this.parseTSTypeAnnotation(false) // throw away
+      }
       if (canBeArrow && !this.canInsertSemicolon() && this.eat(tt.arrow)) {
         this.checkPatternErrors(refDestructuringErrors, false)
         this.checkYieldAwaitInDefaultParams()
@@ -555,6 +558,9 @@ module.exports = Parser => class TSParser extends Parser {
     this.expect(tt.parenL)
     this._parseTSTypeAnnotation(node)
     this.expect(tt.parenR)
+    if (this.eat(tt.bracketL)) {
+      this.expect(tt.bracketR)
+    }
     return this.finishNode(node, 'TSParenthesizedType')
   }
 
