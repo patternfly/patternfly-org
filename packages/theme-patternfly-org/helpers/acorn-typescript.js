@@ -191,7 +191,7 @@ module.exports = Parser => class TSParser extends Parser {
           exprList.push(this.parseMaybeAssign(false, refDestructuringErrors, this.parseParenItem))
         }
         if (this.type === tt.colon) {
-          this.parseTSTypeAnnotation()
+          this.parseTSTypeAnnotation() // Part I added
         }
       }
       let innerEndPos = this.start, innerEndLoc = this.startLoc
@@ -229,6 +229,23 @@ module.exports = Parser => class TSParser extends Parser {
     } else {
       return val
     }
+  }
+
+  // Fix ambiguity between BinaryExpressions and TSCallExpressions
+  parseSubscript(base) {
+    const branch = this._branch()
+    if (this._isStartOfTypeParameters()) { // <
+      try {
+        // will throw if no matching >
+        const typeParameters = branch.parseTSTypeParameterInstantiation()
+        if (typeParameters && branch.eat(tt.parenL)) {
+          // Update parser to match branch
+          base.typeParameters = this.parseTSTypeParameterInstantiation()
+        }
+      } catch {}
+    }
+
+    return super.parseSubscript.apply(this, arguments)
   }
 
   parseExpression() {
