@@ -31,7 +31,8 @@ export const Link = ({
       if (referencedElement) {
         referencedElement.scrollIntoView();
       }
-      window.location.hash = url;
+      // update URL without triggering route change
+      history.pushState({}, '', url);
     };
   }
   if (url.includes('//') || url.startsWith('#')) {
