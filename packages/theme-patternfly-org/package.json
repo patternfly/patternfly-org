@@ -1,7 +1,7 @@
 {
   "name": "theme-patternfly-org",
   "description": "A unified PatternFly and PatternFly-React theme.",
-  "version": "0.6.24",
+  "version": "0.6.25",
   "author": "Red Hat",
   "license": "MIT",
   "bin": {
