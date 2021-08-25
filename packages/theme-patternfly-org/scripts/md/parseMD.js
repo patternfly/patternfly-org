@@ -6,11 +6,12 @@ const visit = require('unist-util-visit');
 const toVfile = require('to-vfile'); // https://github.com/vfile/vfile
 const vfileReport = require('vfile-reporter');
 const yaml = require('js-yaml'); // https://github.com/nodeca/js-yaml
+const chokidar = require('chokidar');
+const { sync } = require('glob');
+const { typecheck } = require('./typecheck');
 const { makeSlug } = require('../../helpers/slugger');
 const { liveCodeTypes } = require('../../helpers/liveCodeTypes');
 const { tsDocgen } = require('../tsDocgen');
-const { sync } = require('glob');
-const chokidar = require('chokidar');
 
 let exitCode = 0;
 const outputBase = path.join(process.cwd(), `src/generated`);
@@ -162,7 +163,7 @@ function toReactComponent(mdFilePath, source) {
     .use(() => tree => remove(tree, 'comment'))
     // Extract examples to create fullscreen page routes
     // Needs to be run after mdx-ast-to-mdx-hast which parses meta properties
-    .use(() => tree => {
+    .use(() => (tree, file) => {
       const isExample = node =>
         node.type === 'element'
         && node.tagName === 'Example'
@@ -176,6 +177,20 @@ function toReactComponent(mdFilePath, source) {
         else {
           pageData.examples = pageData.examples || [];
           pageData.examples.push(node.title);
+        }
+        // Typecheck TS examples
+        if (node.properties.lang === 'ts') {
+          const typerrors = typecheck(
+            path.join(pageData.id, node.title + '.tsx'), // Needs to be unique per-example
+            node.properties.code
+          );
+          typerrors.forEach(({ line, character, message }) => {
+            console.log('\n\u001b[31m');
+            file.fail(
+              '\n  ' + message + '\u001b[0m\n',
+              { line: node.position.start.line + line, column: character }
+            );
+          });
         }
       });
     })
@@ -282,6 +297,5 @@ module.exports = {
       mdWatcher.on('add', onMDFileChange);
       mdWatcher.on('change', onMDFileChange);
     });
-
   }
 };
