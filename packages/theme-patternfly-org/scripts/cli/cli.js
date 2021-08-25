@@ -3,6 +3,7 @@ const program = require('commander');
 const { start } = require('./start');
 const { generate } = require('./generate');
 const { build } = require('./build');
+const { serve } = require('./serve');
 const { version } = require('../../package.json');
 
 program
@@ -26,6 +27,12 @@ program
   .option('-a, --analyze', 'use webpack-bundle-analyzer', false)
   .description('generates source files and runs webpack')
   .action(build);
+
+program
+  .command('serve <folder>')
+  .option('-p, --port <port>', 'port to serve on', 5000)
+  .description('serves a directory on a port')
+  .action(serve);
 
 program
   .command('screenshots')
