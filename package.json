@@ -15,7 +15,7 @@
     "copy:v3": "rm -rf build/patternfly-org/v3 && mkdir -p build/patternfly-org && cp -r packages/v3/_site build/patternfly-org/v3",
     "copy:v4": "rm -rf build/patternfly-org/v4 && mkdir -p build/patternfly-org && cp -r packages/v4/public build/patternfly-org/v4 && cp -r build/patternfly-org/v4/assets build/patternfly-org/assets",
     "clean": "lerna run clean && rm -rf build",
-    "serve": "serve build/patternfly-org",
+    "serve": "theme-patternfly-org serve build/patternfly-org",
     "test:v4": "yarn workspace patternfly-org-4 test:a11y:ci",
     "screenshots": "yarn workspace patternfly-org-4 screenshots",
     "start": "yarn start:v4",
