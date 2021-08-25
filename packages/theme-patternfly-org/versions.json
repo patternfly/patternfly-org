@@ -2,8 +2,27 @@
   "Releases": [
     {
       "name": "2021.10",
-      "date": "2021-08-04",
+      "date": "2021-08-26",
       "latest": true,
+      "versions": {
+        "@patternfly/patternfly": "4.132.2",
+        "@patternfly/react-catalog-view-extension": "4.12.56",
+        "@patternfly/react-charts": "6.15.20",
+        "@patternfly/react-code-editor": "4.3.42",
+        "@patternfly/react-core": "4.152.4",
+        "@patternfly/react-icons": "4.11.14",
+        "@patternfly/react-inline-edit-extension": "4.7.65",
+        "@patternfly/react-log-viewer": "4.5.4",
+        "@patternfly/react-styles": "4.11.13",
+        "@patternfly/react-table": "4.29.58",
+        "@patternfly/react-tokens": "4.12.15",
+        "@patternfly/react-topology": "4.9.62",
+        "@patternfly/react-virtualized-extension": "4.9.31"
+      }
+    },
+    {
+      "name": "2021.10",
+      "date": "2021-08-04",
       "versions": {
         "@patternfly/patternfly": "4.125.3",
         "@patternfly/react-catalog-view-extension": "4.12.36",
