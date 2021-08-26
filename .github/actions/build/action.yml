@@ -16,6 +16,7 @@ runs:
         if [[ "${{steps.yarn-cache.outputs.cache-hit}}" != "true" ]]; then
           yarn install --frozen-lockfile
         fi
+
       shell: bash
     # v4 build
     - uses: actions/cache@v2
@@ -40,12 +41,14 @@ runs:
         if [[ "${{steps.v3-artifact-cache.outputs.cache-hit}}" != "true" ]]; then
           cd packages/v3 && bundle install --jobs 4 --retry 3
         fi
+
       name: Install v3 ruby deps
       shell: bash
     - run: |
         if [[ "${{steps.v3-artifact-cache.outputs.cache-hit}}" != "true" ]]; then
           yarn build:v3
         fi
+
       name: Build v3 docs
       shell: bash
 
