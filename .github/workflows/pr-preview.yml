@@ -15,7 +15,7 @@ jobs:
           git fetch origin pull/$GH_PR_NUM/head:tmp
           git checkout tmp
       - id: build
-        uses: ./.github/actions/build@v1
+        uses: ./.github/actions/build
       # move v3 docs out to be uploaded separately
       - run: mkdir tmp
       - run: mv build/patternfly-org/v3 tmp
