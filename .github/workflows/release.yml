@@ -16,7 +16,7 @@ jobs:
         with:
           token: ${{ secrets.GH_TOKEN_REDALLEN }} # needs to be an admin token to get around branch protection
       - id: build
-        uses: ./.github/actions/build@v1
+        uses: ./.github/actions/build
       - run: .github/release.sh
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
