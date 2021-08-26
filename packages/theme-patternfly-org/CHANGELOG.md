@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.29 (2021-08-26)
+
+
+### Bug Fixes
+
+* **ci:** update node/ruby versions ([#2660](https://github.com/patternfly/patternfly-org/issues/2660)) ([f36372e](https://github.com/patternfly/patternfly-org/commit/f36372e9473ea969e7aecee2062107f668a267f9))
+
+
+
+
+
 ## 0.6.28 (2021-08-26)
 
 **Note:** Version bump only for package theme-patternfly-org
