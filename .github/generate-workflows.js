@@ -1,3 +1,10 @@
+/* For some reason Github's composite actions are limited to a small set
+ * of actions AND even if you get them working, the composite actions don't
+ * list all the steps out in an easily debuggable way.
+ *
+ * I've written this so common parts of pr preview/release builds need not
+ * be repeated.
+ */
 const path = require('path');
 const fs = require('fs');
 
