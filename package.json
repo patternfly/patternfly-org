@@ -21,7 +21,8 @@
     "start": "yarn start:v4",
     "start:v3": "yarn workspace patternfly-org-3 develop",
     "start:v4": "yarn develop:v4",
-    "uninstall": "find . -name node_modules | xargs rm -rf"
+    "uninstall": "find . -name node_modules | xargs rm -rf",
+    "workflows": "node .github/generate-workflows"
   },
   "workspaces": {
     "packages": [
