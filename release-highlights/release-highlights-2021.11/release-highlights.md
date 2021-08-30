@@ -37,25 +37,25 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Back to top component](https://github.com/patternfly/patternfly-react/issues/6166) - Introduce a new component that floats on top of content for long scrolling pages and navigates the user back to the top of the page in a single click.
 
-* [Plain alert variant](https://github.com/patternfly/patternfly-react/issues/6164) - Adds a new variant of an inline alert that removes borders and background styling.
+* [Plain alert variant](https://github.com/patternfly/patternfly-react/issues/6164) - Add a new variant of an inline alert that removes borders and background styling.
 
-* [Expandable inline alert](https://github.com/patternfly/patternfly-react/issues/5820) - Adds a new alert type with an expandable header that allows body content to be hidden for a more compact appearance.
+* [Expandable inline alert](https://github.com/patternfly/patternfly-react/issues/5820) - Add a new alert type with an expandable header that allows body content to be hidden for a more compact appearance.
 
 * [Disabled tabs](https://github.com/patternfly/patternfly-react/issues/6162) - Add a disabled variant for the tabs component. The user can place a tooltip on a disabled tab as they would for other disabled controls.
 
 * [Compact description list](https://github.com/patternfly/patternfly-react/issues/6181) - Add a more compact version of the description list with smaller text and tighter spacing.
 
-* [Auto-complete search input](https://github.com/patternfly/patternfly-react/issues/6210) - Adds auto-complete behavior to the search input component to expose a list of suggestions as the user types.
+* [Auto-complete search input](https://github.com/patternfly/patternfly-react/issues/6210) - Add auto-complete behavior to the search input component to expose a list of suggestions as the user types.
 
-* [Refactor page to use new masthead](https://github.com/patternfly/patternfly-react/issues/6174) - refactoring our page demos to utilize the new masthead component. This will provide a more flexible and responsive [masthead](https://www.patternfly.org/v4/components/masthead) for future projects.
+* [Refactor page to use new masthead](https://github.com/patternfly/patternfly-react/issues/6174) - Refactor our page demos to utilize the new masthead component. This will provide a more flexible and responsive [masthead](https://www.patternfly.org/v4/components/masthead) for future projects.
 
 
 ### 2021.13 (October 8)
 
 * [Horizontal table scrolling with sticky columns](https://github.com/patternfly/patternfly/issues/4218) - Allow a table to scroll horizontally while keeping some number of columns always visible.
 
-* [Progress stepper component](https://github.com/patternfly/patternfly/issues/4214) - introduce a new component that tracks progress of a linear, step-wise task.
+* [Progress stepper component](https://github.com/patternfly/patternfly/issues/4214) - Introduce a new component that tracks progress of a linear, step-wise task.
 
-* [Dual list selector enhancements](https://github.com/patternfly/patternfly-design/issues/1033) - add the ability to manually reorder the selected list in a dual list selector.
+* [Dual list selector enhancements](https://github.com/patternfly/patternfly-design/issues/1033) - Add the ability to manually reorder the selected list in a dual list selector.
 
 For a complete roadmap showing all items planned in future releases, see our [PatternFly Feature Roadmap](https://github.com/orgs/patternfly/projects/4?fullscreen=true) project board.
