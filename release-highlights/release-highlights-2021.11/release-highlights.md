@@ -24,7 +24,7 @@ Introduces a new horizontal secondary navigation bar that will replace the legac
 ### [Multi-select rows in a table](https://www.patternfly.org/v4/components/table#composable-selectable)
 Users can now use `shift+select` to select a range of rows in composable table component.
 
-### [Popover diagonal positioning](https://www.patternfly.org/v4/components/popover)
+### [Popover diagonal positioning](https://www.patternfly.org/v4/components/popover/#advanced)
 The popover component now supports diagonal as well as left, right, top, and bottom positioning.
 
 See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
