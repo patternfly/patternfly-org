@@ -41,6 +41,8 @@ For quick starts in a mixed catalog of resources, we recommend including an acti
 * **Continue:** Use if the quick start is in progress
 * **Restart:** Use if the quick start has already been completed
 
+There should only be one action displayed on a card at a time.
+
 <img src="./img/mixed-catalog.png" alt="Mixed resource catalog" width="1062"/>
 
 ### Side panel
@@ -51,7 +53,7 @@ Quick starts use the [drawer component](https://www.patternfly.org/v4/components
 1. **Quick start title:** The quick start title that is shown on the card.
 2. **Duration:** The estimated amount of time the quick start will take to complete.
 3. **Close:** The close button allows the user to close the quick start at any time.
-4. **Button bar:** The button bar allows the user to advance between quick start tasks. The buttons are usually **Next**, **Back**, and **Restart**.
+4. **Button bar:** The button bar allows the user to advance between quick start tasks. For task screens, the buttons are **Next**, **Back**, and **Restart**. For the intro screen, the only button is the **Start** button. On the completion screen, the buttons are **Close**, **Back**, and **Restart**.
 
 
 
