@@ -5,7 +5,8 @@ import {
   TableHeader,
   TableBody,
   fitContent,
-  cellWidth
+  cellWidth,
+  breakWord
 } from '@patternfly/react-table';
 import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
 import { PropTypeWithLinks } from './propTypeWithLinks';
@@ -17,7 +18,7 @@ export const PropsTable = ({
 }) => {
   const columns = [
     { title: 'Name', transforms: [cellWidth(15)] },
-    { title: 'Type', transforms: [cellWidth(15)] },
+    { title: 'Type', transforms: [cellWidth(20)] },
     { title: 'Required', transforms: [fitContent] },
     { title: 'Default', transforms: [] },
     { title: 'Description', transforms: [] }
@@ -54,7 +55,9 @@ export const PropsTable = ({
             <div className="pf-m-break-word">
               {row.defaultValue}
             </div>,
-            row.description
+            <div className="pf-m-break-word">
+              {row.description}
+            </div>
           ]
         }))}
       >
