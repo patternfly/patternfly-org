@@ -11,7 +11,7 @@ import { capitalize } from 'theme-patternfly-org/helpers/capitalize';
 import './trainingCard.css';
 
 const getTrainingIcon = trainingType => {
-  if (['html-css', 'react'].includes(trainingType)) {
+  if (['html-css', 'react', 'design'].includes(trainingType)) {
     return <CubesIcon className="pf-org__training-basics" />;
   }
   else if (trainingType === 'react-components') {
@@ -51,7 +51,7 @@ export const TrainingCard = ({
       {description}
     </CardBody>
     <CardFooter>
-    <Link to={`/training/${katacodaId}`} >
+    <Link to={katacodaId === 'sketch-design' ? `https://patternflyt-training.thinkific.com/courses/pf-sketch-e-training` : `/training/${katacodaId}`} >
       <Button variant="link">
         Start
         <ArrowRightIcon />
