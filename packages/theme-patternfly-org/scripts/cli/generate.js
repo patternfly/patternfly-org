@@ -8,7 +8,7 @@ function getSource(options) {
 function generate(options) {
   const start = new Date();
   console.log('write source files to src/generated');
-  getSource(options)(sourceMD, sourceProps);
+  getSource(options)(sourceMD(options._name), sourceProps);
   const exitCode = writeIndex();
   if (exitCode !== 0) {
     process.exit(exitCode);
