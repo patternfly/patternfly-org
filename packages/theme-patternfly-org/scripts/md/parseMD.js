@@ -279,11 +279,9 @@ module.exports = {
     globs.props.push({ glob, ignore });
     sync(glob, { ignore }).forEach(sourcePropsFile);
   },
-  sourceMD(buildMode) {
-    return function(glob, source, ignore) {
-      globs.md.push({ glob, source, ignore });
-      sync(glob, { ignore }).forEach(file => sourceMDFile(file, source, buildMode));
-    }
+  sourceMD(glob, source, ignore, buildMode) {
+    globs.md.push({ glob, source, ignore });
+    sync(glob, { ignore }).forEach(file => sourceMDFile(file, source, buildMode));
   },
   writeIndex,
   watchMD() {
