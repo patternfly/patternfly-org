@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.36 (2021-09-02)
+
+
+### Bug Fixes
+
+* **docs:** disable MD external file watcher when not running in dev mode ([#2672](https://github.com/patternfly/patternfly-org/issues/2672)) ([76acbcf](https://github.com/patternfly/patternfly-org/commit/76acbcf060d476a735cba153ac43016858857d89)), closes [#2661](https://github.com/patternfly/patternfly-org/issues/2661)
+
+
+
+
+
 ## 0.6.35 (2021-08-30)
 
 **Note:** Version bump only for package theme-patternfly-org
