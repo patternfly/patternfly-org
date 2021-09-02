@@ -22,7 +22,7 @@ const globs = {
   md: [],
 };
 
-function toReactComponent(mdFilePath, source) {
+function toReactComponent(mdFilePath, source, buildMode) {
   // vfiles allow for nicer error messages and have native `unified` support
   const vfile = toVfile.readSync(mdFilePath);
 
@@ -150,11 +150,13 @@ function toReactComponent(mdFilePath, source) {
     // Transform AST to JSX elements. Includes special code block parsing
     .use(require('./mdx-ast-to-mdx-hast'), { 
       watchExternal(file) {
-        const watcher = chokidar.watch(file, { ignoreInitial: true });
-        watcher.on('change', () => {
-          sourceMDFile(mdFilePath, source);
-          writeIndex();
-        });
+        if (buildMode === 'start') {
+          const watcher = chokidar.watch(file, { ignoreInitial: true });
+          watcher.on('change', () => {
+            sourceMDFile(mdFilePath, source, buildMode);
+            writeIndex();
+          });
+        }
       }
     })
     // Don't allow exports
@@ -236,11 +238,11 @@ function sourcePropsFile(file) {
     });
 }
 
-function sourceMDFile(file, source) {
+function sourceMDFile(file, source, buildMode) {
   if (path.basename(file).startsWith('_')) {
     return;
   }
-  const { jsx, pageData, outPath } = toReactComponent(file, source);
+  const { jsx, pageData, outPath } = toReactComponent(file, source, buildMode);
 
   if (jsx) {
     fs.outputFileSync(outPath, jsx);
@@ -277,9 +279,9 @@ module.exports = {
     globs.props.push({ glob, ignore });
     sync(glob, { ignore }).forEach(sourcePropsFile);
   },
-  sourceMD(glob, source, ignore) {
+  sourceMD(glob, source, ignore, buildMode) {
     globs.md.push({ glob, source, ignore });
-    sync(glob, { ignore }).forEach(file => sourceMDFile(file, source));
+    sync(glob, { ignore }).forEach(file => sourceMDFile(file, source, buildMode));
   },
   writeIndex,
   watchMD() {
@@ -291,7 +293,7 @@ module.exports = {
     globs.md.forEach(({ glob, source, ignore }) => {
       const mdWatcher = chokidar.watch(glob, { ignored: ignore, ignoreInitial: true });
       function onMDFileChange(file) {
-        sourceMDFile(file, source);
+        sourceMDFile(file, source, 'start');
         writeIndex();
       }
       mdWatcher.on('add', onMDFileChange);
