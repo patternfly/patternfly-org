@@ -1,5 +1,5 @@
 ---
-id: Quick start
+id: Quick starts
 section: extensions
 ---
 
