@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.37 (2021-09-08)
+
+
+### Bug Fixes
+
+* **docs:** remove RH font page, added it to PF wiki ([#2670](https://github.com/patternfly/patternfly-org/issues/2670)) ([3f7dbd3](https://github.com/patternfly/patternfly-org/commit/3f7dbd34c0fd5bdad4d2e4c1495659d758ea87a6))
+
+
+
+
+
 ## 0.6.36 (2021-09-02)
 
 
