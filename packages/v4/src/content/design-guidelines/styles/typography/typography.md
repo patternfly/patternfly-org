@@ -12,7 +12,10 @@ import incorrect from './typography_incorrect_spacing.png';
 import './typography.css';
 
 ## Our font family
-We use Red Hat Display and Red Hat Text.
+We use Red Hat Display and Red Hat Text. Red Hat Display should be used for **larger** text headlines, while Red Hat text should be used for **smaller** subheaders and body text, for better long-form readability.
+
+
+
 
 <Button style={{borderRadius: '0px', fontWeight: '600', paddingTop: '12px', paddingBottom: '12px', paddingLeft: '24px', paddingRight: '24px'}} variant="primary" component="a" href="https://github.com/RedHatOfficial/RedHatFont" target="_blank">DOWNLOAD</Button>
 
