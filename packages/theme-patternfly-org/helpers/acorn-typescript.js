@@ -526,6 +526,9 @@ module.exports = Parser => class TSParser extends Parser {
     node.objectType = objectType
     node.indexType = this._parseTSType()
     this.expect(tt.bracketR)
+    if (this.type === tt.bracketL) {
+      return this._parseMaybeTSArrayType(node, objectType)
+    }
     return this.finishNode(node, 'TSIndexedAccessType')
   }
 
