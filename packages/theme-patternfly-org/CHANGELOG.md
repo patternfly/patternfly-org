@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.40 (2021-09-13)
+
+
+### Bug Fixes
+
+* **ts:** nested type params ([#2678](https://github.com/patternfly/patternfly-org/issues/2678)) ([2b01b8a](https://github.com/patternfly/patternfly-org/commit/2b01b8ace56b462e0cf1584fa4a84271b2b4d67b))
+
+
+
+
+
 ## 0.6.39 (2021-09-13)
 
 **Note:** Version bump only for package theme-patternfly-org
