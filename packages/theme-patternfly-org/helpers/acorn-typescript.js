@@ -93,11 +93,11 @@ module.exports = Parser => class TSParser extends Parser {
   }
 
   _isStartOfTypeParameters() {
-    return this.type === tt.relational && this.value.charCodeAt(0) === 60 // <
+    return this.value && this.value.charCodeAt(0) === 60 // <
   }
 
   _isEndOfTypeParameters() {
-    return this.type === tt.relational && this.value.charCodeAt(0) === 62 // >
+    return this.value && this.value.charCodeAt(0) === 62 // >
   }
 
   _hasPrecedingLineBreak() {
@@ -801,15 +801,18 @@ module.exports = Parser => class TSParser extends Parser {
   parseTSTypeParameterInstantiation() {
     const node = this.startNode()
     const params = []
-    this.next()
+    this.next() // <
     let first = true
-    while (!this.eat(tt.relational)) {
-      first ? (first = false) : this.expect(tt.comma)
-      if (this._isEndOfTypeParameters()) {
-        break
+    while (this.value && !this._isEndOfTypeParameters()) {
+      if (first) {
+        first = false
+      } else {
+        this.expect(tt.comma)
       }
-      params.push(this._parseTSType())
+
+      params.push(this.parseTSTypeReference())
     }
+    this.next() // >
     node.params = params
     return this.finishNode(node, 'TSTypeParameterInstantiation')
   }
