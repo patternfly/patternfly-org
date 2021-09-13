@@ -381,6 +381,9 @@ module.exports = Parser => class TSParser extends Parser {
           case tsTypeOperator.infer:
             node = this.parseTSInferType()
             break
+          case tsTypeOperator.keyof:
+            node = this.parseTSKeyofType()
+            break
           default:
             node = this._parseTSUnionTypeOrIntersectionType()
         }
@@ -400,6 +403,9 @@ module.exports = Parser => class TSParser extends Parser {
         node = this._isStartOfTypeParameters()
           ? this.parseTSFunctionType()
           : this.unexpected()
+        break
+      case tt._typeof:
+        node = this.parseTSTypeofType()
         break
       default:
         node = this._parseTSUnionTypeOrIntersectionType()
@@ -653,6 +659,20 @@ module.exports = Parser => class TSParser extends Parser {
     this.next()
     node.typeParameter = this.parseTSTypeParameter()
     return this.finishNode(node, 'TSInferType')
+  }
+
+  parseTSKeyofType() {
+    const node = this.startNode()
+    this.next()
+    node.typeAnnotation = this.parseTSTypeAnnotation(false)
+    return this.finishNode(node, 'TSTypeOperator')
+  }
+
+  parseTSTypeofType() {
+    const node = this.startNode()
+    this.next()
+    node.exprName = this.parseIdent()
+    return this.finishNode(node, 'TSTypeQuery')
   }
 
   parseTSImportType(isTypeOf) {
