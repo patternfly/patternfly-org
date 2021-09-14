@@ -11,10 +11,10 @@ export const PropTypeWithLinks = ({ type, allPropComponents }) => {
       <React.Fragment>
         {type
           .split(new RegExp(`\\b(${referencedComponentNames.join("|")})\\b`))
-          .map((segment) =>
+          .map((segment, i) =>
             referencedComponentNames.includes(segment) ? (
               <a
-                key={segment}
+                key={segment + i}
                 onClick={(event) => {
                   event.preventDefault();
                   document.getElementById(slugger(segment)).scrollIntoView();
