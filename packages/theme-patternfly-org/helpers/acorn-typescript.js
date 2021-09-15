@@ -826,7 +826,7 @@ module.exports = Parser => class TSParser extends Parser {
     const params = []
     this.next() // <
     let first = true
-    while (this.value && !this._isEndOfTypeParameters()) {
+    while (this.value && !this._isEndOfTypeParameters() || this.type === tt.comma) {
       first ? (first = false) : this.expect(tt.comma)
 
       params.push(this._parseTSType())
