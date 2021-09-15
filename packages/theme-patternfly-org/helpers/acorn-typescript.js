@@ -829,12 +829,12 @@ module.exports = Parser => class TSParser extends Parser {
     while (this.value && !this._isEndOfTypeParameters()) {
       first ? (first = false) : this.expect(tt.comma)
 
-      params.push(this.parseTSTypeReference())
+      params.push(this._parseTSType())
     }
     if (this._isEndOfTypeParameters()) {
       this.next() // > or >>
     }
-  node.params = params
+    node.params = params
     return this.finishNode(node, 'TSTypeParameterInstantiation')
   }
 
