@@ -27,7 +27,7 @@ function styledTags() {
         // Match pf-c-table implementation
         // https://pf4.patternfly.org/components/table/html/basic-table/
         if (node.tagName === 'table') {
-          node.properties.className += ' pf-c-table pf-m-grid-lg';
+          node.properties.className += ' pf-c-table pf-m-grid-lg pf-m-compact';
           node.properties.role = 'grid';
           let columnHeaders = [];
           for (let child of node.children) {
