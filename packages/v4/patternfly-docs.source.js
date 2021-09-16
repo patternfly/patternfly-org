@@ -50,7 +50,7 @@ module.exports = (sourceMD, sourceProps) => {
   sourceProps(path.join(reactLogViewerPath, '/**/*.tsx'), reactPropsIgnore);
 
   // React MD
-  sourceMD(path.join(reactCorePath, '/**/examples/*.md'), 'react');
+  sourceMD(path.join(reactCorePath, '/**/examples/*.md', '/**/DragDrop/examples/*.md'), 'react');
   sourceMD(path.join(reactCorePath, '/**/demos/**/*.md'), 'react-demos');
 
   // React-table MD
