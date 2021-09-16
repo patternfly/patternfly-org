@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.5.45 (2021-09-16)
+
+
+### Bug Fixes
+
+* **docs:** update props table column widths & word breaks ([#2669](https://github.com/patternfly/patternfly-org/issues/2669)) ([cbef7a8](https://github.com/patternfly/patternfly-org/commit/cbef7a8b97a0a7d7cff08fb57980fd6980df6a98))
+
+
+
+
+
 ## 4.5.44 (2021-09-15)
 
 **Note:** Version bump only for package patternfly-org-4
