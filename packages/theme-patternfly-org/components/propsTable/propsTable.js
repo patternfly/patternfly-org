@@ -32,10 +32,7 @@ export const PropsTable = ({
         className="pf-u-mt-md pf-u-mb-lg"
         variant="compact"
         aria-label={title}
-        caption={(rows.some(prop => prop.required))
-          ? <div><span className="ws-prop-required">*</span>required</div>
-          : null
-        }
+        caption={<div><span className="ws-prop-required">*</span>required</div>}
         cells={columns}
         gridBreakPoint="grid-lg"
         rows={rows
