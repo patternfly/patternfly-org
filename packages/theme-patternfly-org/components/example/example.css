@@ -83,3 +83,7 @@
   --pf-c-badge--m-unread--Color: var(--pf-global--primary-color--100);
   border: 1px solid var(--pf-global--primary-color--100);
 }
+
+.ws-prop-required {
+  color: var(--pf-global--danger-color--100);
+}
