@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 module.exports = (_env, argv) => {
@@ -135,25 +135,10 @@ module.exports = (_env, argv) => {
         'process.env.prnum': JSON.stringify(process.env.CIRCLE_PR_NUMBER || process.env.PR_NUMBER || ''),
         'process.env.prurl': JSON.stringify(process.env.CIRCLE_PULL_REQUEST || ''),
       }),
-      new FaviconsWebpackPlugin({
-        logo: path.resolve(__dirname, '../../images/patternfly-logo.svg'),
-        favicons: {
-          appDescription: 'Home of PatternFly Design.',
-          cache: true,
-          background: '#4F5255',
-          theme_color: '#151515',
-          icons: {
-            android: true,
-            appleIcon: true,
-            appleStartup: false,
-            coast: false,
-            favicons: true,
-            firefox: false,
-            windows: false,
-            yandex: false
-          },
-          start_url: '/'
-        }
+      new CopyWebpackPlugin({
+        patterns: [
+          { from: path.join(__dirname, '../../assets'), to: 'assets' }
+        ]
       }),
       new MonacoWebpackPlugin(),
       ...(isProd
