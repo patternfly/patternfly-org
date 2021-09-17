@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.46 (2021-09-17)
+
+
+### Performance Improvements
+
+* **theme:** replace favicons-webpack-plugin ([#2689](https://github.com/patternfly/patternfly-org/issues/2689)) ([3ae9711](https://github.com/patternfly/patternfly-org/commit/3ae97111a6b3f01de951e7c81d52db03cfe658b9))
+
+
+
+
+
 ## 0.6.45 (2021-09-16)
 
 
