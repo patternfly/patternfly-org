@@ -61,7 +61,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Dual list selector enhancements](https://github.com/patternfly/patternfly-react/issues/6265) - Add the ability to manually reorder the selected list in a dual list selector.
 
-* [Flyout navigation]() - Add a new flyout navigation variant to be added to a vertical navigation menu.
+* [Flyout navigation](https://github.com/patternfly/patternfly-react/issues/6330) - Add a new flyout navigation variant to be added to a vertical navigation menu.
 
 
 ### 2021.14 (October 29)
