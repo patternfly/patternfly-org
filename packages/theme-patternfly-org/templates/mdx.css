@@ -9,6 +9,10 @@
   background-color: var(--pf-global--BackgroundColor--light-200);
 }
 
+#main-content {
+  flex-grow: 1;
+}
+
 .ws-release-notes-toc {
   margin-bottom: var(--pf-global--spacer--lg);
 }
