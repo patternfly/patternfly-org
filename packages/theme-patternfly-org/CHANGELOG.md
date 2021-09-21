@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2021-09-21)
+
+
+### Features
+
+* **docs:** added back to top button to site ([#2700](https://github.com/patternfly/patternfly-org/issues/2700)) ([f7b354f](https://github.com/patternfly/patternfly-org/commit/f7b354f12e9dded67cc0c16ec2919758743f8016))
+
+
+
+
+
 ## 0.6.51 (2021-09-21)
 
 **Note:** Version bump only for package theme-patternfly-org
