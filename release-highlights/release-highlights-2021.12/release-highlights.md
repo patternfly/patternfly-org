@@ -43,7 +43,7 @@ Demonstrates how to create an advanced search input with an attached form using 
 
 ![page with new masthead](./img/new-masthead.png)
 
-Refactors our page demos to utilize the new masthead component. This will provide a more flexible and responsive for future projects. Note changes to the configuration of the user menu to better integrate the avatar.
+Refactors our page demos to utilize the new masthead component. This will provide a more flexible and responsive page header for future projects. Note changes to the configuration of the user menu to better integrate the avatar.
 
 ### [Compact description list](https://www.patternfly.org/v4/components/description-list#compact)
 
