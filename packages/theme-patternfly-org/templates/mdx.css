@@ -305,3 +305,8 @@
   flex-grow: 1;
   padding: 0;
 }
+
+/* Overlay the footer */
+.ws-back-to-top {
+  z-index: 2;
+}

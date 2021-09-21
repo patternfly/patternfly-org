@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageSection, Title, PageNavigation, PageGroup, PageSectionVariants, Nav, NavList, NavItem } from '@patternfly/react-core';
+import { PageSection, Title, PageSectionVariants, BackToTop } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Router, useLocation } from '@reach/router';
@@ -176,6 +176,7 @@ export const MDXTemplate = ({
           </Router>
         )}
       </PageSection>
+      <BackToTop className="ws-back-to-top" scrollableSelector="#ws-page-main" />
     </React.Fragment>
   );
 }
