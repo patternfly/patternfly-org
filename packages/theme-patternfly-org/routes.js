@@ -48,10 +48,13 @@ const groupedRoutes = Object.entries(routes)
 
 const sourceOrder = {
   react: 1,
+  'react-composable': 1.1,
+  'react-legacy': 1.2,
   'react-demos': 2,
   html: 3,
   'html-demos': 4,
-  'design-guidelines': 99
+  'design-guidelines': 99,
+  'accessibility': 100
 };
 const defaultOrder = 50;
 

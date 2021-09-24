@@ -1,5 +1,5 @@
 ---
-id: Accessibility Fundamentals
+id: Accessibility fundamentals
 section: accessibility
 redirectFrom: /developer-resources/accessibility-guide
 ---

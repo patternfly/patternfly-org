@@ -3,6 +3,678 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2021-09-21)
+
+
+### Features
+
+* **docs:** added back to top button to site ([#2700](https://github.com/patternfly/patternfly-org/issues/2700)) ([f7b354f](https://github.com/patternfly/patternfly-org/commit/f7b354f12e9dded67cc0c16ec2919758743f8016))
+
+
+
+
+
+## 0.6.51 (2021-09-21)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.50 (2021-09-20)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.49 (2021-09-20)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.48 (2021-09-20)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.47 (2021-09-17)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.46 (2021-09-17)
+
+
+### Performance Improvements
+
+* **theme:** replace favicons-webpack-plugin ([#2689](https://github.com/patternfly/patternfly-org/issues/2689)) ([3ae9711](https://github.com/patternfly/patternfly-org/commit/3ae97111a6b3f01de951e7c81d52db03cfe658b9))
+
+
+
+
+
+## 0.6.45 (2021-09-16)
+
+
+### Bug Fixes
+
+* **docs:** update props table column widths & word breaks ([#2669](https://github.com/patternfly/patternfly-org/issues/2669)) ([cbef7a8](https://github.com/patternfly/patternfly-org/commit/cbef7a8b97a0a7d7cff08fb57980fd6980df6a98))
+
+
+
+
+
+## 0.6.44 (2021-09-15)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.43 (2021-09-15)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.42 (2021-09-15)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.41 (2021-09-14)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.40 (2021-09-13)
+
+
+### Bug Fixes
+
+* **ts:** nested type params ([#2678](https://github.com/patternfly/patternfly-org/issues/2678)) ([2b01b8a](https://github.com/patternfly/patternfly-org/commit/2b01b8ace56b462e0cf1584fa4a84271b2b4d67b))
+
+
+
+
+
+## 0.6.39 (2021-09-13)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.38 (2021-09-09)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.37 (2021-09-08)
+
+
+### Bug Fixes
+
+* **docs:** remove RH font page, added it to PF wiki ([#2670](https://github.com/patternfly/patternfly-org/issues/2670)) ([3f7dbd3](https://github.com/patternfly/patternfly-org/commit/3f7dbd34c0fd5bdad4d2e4c1495659d758ea87a6))
+
+
+
+
+
+## 0.6.36 (2021-09-02)
+
+
+### Bug Fixes
+
+* **docs:** disable MD external file watcher when not running in dev mode ([#2672](https://github.com/patternfly/patternfly-org/issues/2672)) ([76acbcf](https://github.com/patternfly/patternfly-org/commit/76acbcf060d476a735cba153ac43016858857d89)), closes [#2661](https://github.com/patternfly/patternfly-org/issues/2661)
+
+
+
+
+
+## 0.6.35 (2021-08-30)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.34 (2021-08-30)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.33 (2021-08-30)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.32 (2021-08-26)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.31 (2021-08-26)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.30 (2021-08-26)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.29 (2021-08-26)
+
+
+### Bug Fixes
+
+* **ci:** update node/ruby versions ([#2660](https://github.com/patternfly/patternfly-org/issues/2660)) ([f36372e](https://github.com/patternfly/patternfly-org/commit/f36372e9473ea969e7aecee2062107f668a267f9))
+
+
+
+
+
+## 0.6.28 (2021-08-26)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.27 (2021-08-26)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.26 (2021-08-25)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.25 (2021-08-25)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.24 (2021-08-25)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.23 (2021-08-24)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.22 (2021-08-24)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.21 (2021-08-17)
+
+
+### Bug Fixes
+
+* **parser:** allow arrow function types and paretheses array types ([#2649](https://github.com/patternfly/patternfly-org/issues/2649)) ([35c2944](https://github.com/patternfly/patternfly-org/commit/35c29440df2850ef121ca838faac463c3f7cecf7))
+
+
+
+
+
+## 0.6.20 (2021-08-17)
+
+
+### Bug Fixes
+
+* **parser:** handle ambigous TSCallExpression ([#2648](https://github.com/patternfly/patternfly-org/issues/2648)) ([af4a16d](https://github.com/patternfly/patternfly-org/commit/af4a16d6ed87c5a135b5557b613b91e0bdaabc5a))
+
+
+
+
+
+## 0.6.19 (2021-08-17)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.18 (2021-08-17)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.17 (2021-08-12)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.16 (2021-08-11)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.15 (2021-08-09)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.14 (2021-08-06)
+
+
+### Bug Fixes
+
+* **ts->js:** bool attributes ([#2630](https://github.com/patternfly/patternfly-org/issues/2630)) ([71b8026](https://github.com/patternfly/patternfly-org/commit/71b8026020dc7fd92126a6120ca826f5c517a95d))
+
+
+
+
+
+## 0.6.13 (2021-08-06)
+
+
+### Bug Fixes
+
+* **example:** show readonly code for fullscreen example ([#2629](https://github.com/patternfly/patternfly-org/issues/2629)) ([0ef1e92](https://github.com/patternfly/patternfly-org/commit/0ef1e926b807068a2f65bf899bd953acd7a36615))
+
+
+
+
+
+## 0.6.12 (2021-08-05)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.11 (2021-08-05)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.10 (2021-08-05)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.9 (2021-08-04)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.8 (2021-08-04)
+
+
+### Bug Fixes
+
+* **externalwatcher:** watch for adding files ([#2624](https://github.com/patternfly/patternfly-org/issues/2624)) ([3543888](https://github.com/patternfly/patternfly-org/commit/3543888e9b155efdff22abd1cae67ad4a5d7928a))
+
+
+
+
+
+## 0.6.7 (2021-08-03)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.6 (2021-08-02)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.5 (2021-07-30)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.4 (2021-07-26)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.3 (2021-07-26)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.2 (2021-07-26)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.6.1 (2021-07-23)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+# 0.6.0 (2021-07-21)
+
+
+### Features
+
+* **propsTable:** Convert component names referenced in prop types on the same page into links ([#2614](https://github.com/patternfly/patternfly-org/issues/2614)) ([9a1ae9e](https://github.com/patternfly/patternfly-org/commit/9a1ae9e2cca5bee0cc196bf732f5f30064b77e96))
+
+
+
+
+
+## 0.5.32 (2021-07-21)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.31 (2021-07-21)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.30 (2021-07-20)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.29 (2021-07-20)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.28 (2021-07-20)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.27 (2021-07-20)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.26 (2021-07-20)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.25 (2021-07-19)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.24 (2021-07-19)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.23 (2021-07-16)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.22 (2021-07-15)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.21 (2021-07-13)
+
+
+### Bug Fixes
+
+* **workspace:** vertically align docs tables ([#2606](https://github.com/patternfly/patternfly-org/issues/2606)) ([42b578b](https://github.com/patternfly/patternfly-org/commit/42b578b3ba787d32fcb9181036c019acfe8509ea))
+
+
+
+
+
+## 0.5.20 (2021-07-12)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.19 (2021-07-09)
+
+
+### Bug Fixes
+
+* **tsdocgen:** interface normalizer ([#2586](https://github.com/patternfly/patternfly-org/issues/2586)) ([7550dc5](https://github.com/patternfly/patternfly-org/commit/7550dc5e9046794034ee7997acd157b493c19bae))
+
+
+
+
+
+## 0.5.18 (2021-07-09)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.17 (2021-07-02)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.16 (2021-06-30)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.15 (2021-06-30)
+
+
+### Bug Fixes
+
+* **ci:** change master branch to main ([2a1c84e](https://github.com/patternfly/patternfly-org/commit/2a1c84edfdbc24b75d3d666ca03e3c43346d4286))
+
+
+
+
+
+## 0.5.14 (2021-06-30)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.13 (2021-06-29)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.12 (2021-06-29)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.11 (2021-06-28)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.10 (2021-06-28)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.9 (2021-06-24)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.5.8 (2021-06-23)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
 ## 0.5.7 (2021-06-22)
 
 **Note:** Version bump only for package theme-patternfly-org

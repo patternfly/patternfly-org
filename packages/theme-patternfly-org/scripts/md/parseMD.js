@@ -6,17 +6,23 @@ const visit = require('unist-util-visit');
 const toVfile = require('to-vfile'); // https://github.com/vfile/vfile
 const vfileReport = require('vfile-reporter');
 const yaml = require('js-yaml'); // https://github.com/nodeca/js-yaml
-const { makeSlug } = require('../../helpers/slugger');
-const { tsDocgen } = require('../tsDocgen');
-const { sync } = require('glob');
 const chokidar = require('chokidar');
+const { sync } = require('glob');
+const { typecheck } = require('./typecheck');
+const { makeSlug } = require('../../helpers/slugger');
+const { liveCodeTypes } = require('../../helpers/liveCodeTypes');
+const { tsDocgen } = require('../tsDocgen');
 
+let exitCode = 0;
 const outputBase = path.join(process.cwd(), `src/generated`);
 const tsDocs = {};
 const routes = {};
-let exitCode = 0;
+const globs = {
+  props: [],
+  md: [],
+};
 
-function toReactComponent(mdFilePath, source) {
+function toReactComponent(mdFilePath, source, buildMode) {
   // vfiles allow for nicer error messages and have native `unified` support
   const vfile = toVfile.readSync(mdFilePath);
 
@@ -41,11 +47,6 @@ function toReactComponent(mdFilePath, source) {
       // Fail early
       if (!frontmatter.id) {
         file.fail('id attribute is required in frontmatter for PatternFly docs');
-      }
-      if (frontmatter.section === 'overview') {
-        // Temporarily override section until https://github.com/patternfly/patternfly-react/pull/4862 is in react-docs
-        // Affected pages are release notes and upgrade guides
-        frontmatter.section = 'developer-resources';
       }
       source = frontmatter.source || source;
       const slug = makeSlug(source, frontmatter.section, frontmatter.id);
@@ -80,7 +81,7 @@ function toReactComponent(mdFilePath, source) {
         source,
         slug,
         sourceLink: `https://github.com/patternfly/${
-          sourceRepo}/blob/master/${
+          sourceRepo}/blob/main/${
           normalizedPath}`,
         hideTOC: frontmatter.hideTOC || false
       };
@@ -147,18 +148,28 @@ function toReactComponent(mdFilePath, source) {
     // .use(require('remark-rehype'))
     // .use(require('rehype-react'), { createElement: require('react').createElement })
     // Transform AST to JSX elements. Includes special code block parsing
-    .use(require('./mdx-ast-to-mdx-hast'))
+    .use(require('./mdx-ast-to-mdx-hast'), { 
+      watchExternal(file) {
+        if (buildMode === 'start') {
+          const watcher = chokidar.watch(file, { ignoreInitial: true });
+          watcher.on('change', () => {
+            sourceMDFile(mdFilePath, source, buildMode);
+            writeIndex();
+          });
+        }
+      }
+    })
     // Don't allow exports
     .use(() => tree => remove(tree, 'export'))
     // Comments aren't very useful in generated files no one wants to look at
     .use(() => tree => remove(tree, 'comment'))
     // Extract examples to create fullscreen page routes
     // Needs to be run after mdx-ast-to-mdx-hast which parses meta properties
-    .use(() => tree => {
+    .use(() => (tree, file) => {
       const isExample = node =>
         node.type === 'element'
         && node.tagName === 'Example'
-        && ['js', 'html'].includes(node.properties.lang)
+        && liveCodeTypes.includes(node.properties.lang)
         && !node.properties.noLive;
       visit(tree, isExample, node => {
         if (node.properties.isFullscreen) {
@@ -168,6 +179,20 @@ function toReactComponent(mdFilePath, source) {
         else {
           pageData.examples = pageData.examples || [];
           pageData.examples.push(node.title);
+        }
+        // Typecheck TS examples
+        if (node.properties.lang === 'ts') {
+          const typerrors = typecheck(
+            path.join(pageData.id, node.title + '.tsx'), // Needs to be unique per-example
+            node.properties.code
+          );
+          typerrors.forEach(({ line, character, message }) => {
+            console.log('\n\u001b[31m');
+            file.fail(
+              '\n  ' + message + '\u001b[0m\n',
+              { line: node.position.start.line + line, column: character }
+            );
+          });
         }
       });
     })
@@ -213,11 +238,11 @@ function sourcePropsFile(file) {
     });
 }
 
-function sourceMDFile(file, source) {
+function sourceMDFile(file, source, buildMode) {
   if (path.basename(file).startsWith('_')) {
     return;
   }
-  const { jsx, pageData, outPath } = toReactComponent(file, source);
+  const { jsx, pageData, outPath } = toReactComponent(file, source, buildMode);
 
   if (jsx) {
     fs.outputFileSync(outPath, jsx);
@@ -234,11 +259,6 @@ function sourceMDFile(file, source) {
     };
   }
 }
-
-const globs = {
-  props: [],
-  md: [],
-};
 
 function writeIndex() {
   const stringifyRoute = ([route, pageData]) => `'${route}': {\n    ${Object.entries(pageData)
@@ -259,25 +279,25 @@ module.exports = {
     globs.props.push({ glob, ignore });
     sync(glob, { ignore }).forEach(sourcePropsFile);
   },
-  sourceMD(glob, source, ignore) {
+  sourceMD(glob, source, ignore, buildMode) {
     globs.md.push({ glob, source, ignore });
-    sync(glob, { ignore }).forEach(file => sourceMDFile(file, source));
+    sync(glob, { ignore }).forEach(file => sourceMDFile(file, source, buildMode));
   },
   writeIndex,
   watchMD() {
     globs.props.forEach(({ glob, ignore }) => {
-      const mdWatcher = chokidar.watch(glob, { ignored: ignore, ignoreInitial: true });
-      mdWatcher.on('add', sourcePropsFile);
-      mdWatcher.on('change', sourcePropsFile);
+      const propWatcher = chokidar.watch(glob, { ignored: ignore, ignoreInitial: true });
+      propWatcher.on('add', sourcePropsFile);
+      propWatcher.on('change', sourcePropsFile);
     });
     globs.md.forEach(({ glob, source, ignore }) => {
-      const propWatcher = chokidar.watch(glob, { ignored: ignore, ignoreInitial: true });
+      const mdWatcher = chokidar.watch(glob, { ignored: ignore, ignoreInitial: true });
       function onMDFileChange(file) {
-        sourceMDFile(file, source);
+        sourceMDFile(file, source, 'start');
         writeIndex();
       }
-      propWatcher.on('add', onMDFileChange);
-      propWatcher.on('change', onMDFileChange);
+      mdWatcher.on('add', onMDFileChange);
+      mdWatcher.on('change', onMDFileChange);
     });
   }
 };

@@ -4,19 +4,21 @@ import {
   Table,
   TableHeader,
   TableBody,
-  fitContent,
   cellWidth
 } from '@patternfly/react-table';
 import { AutoLinkHeader } from '../autoLinkHeader/autoLinkHeader';
+import { PropTypeWithLinks } from './propTypeWithLinks';
+import { css } from '@patternfly/react-styles';
+import accessibleStyles from '@patternfly/react-styles/css/utilities/Accessibility/accessibility';
 
 export const PropsTable = ({
   title,
-  rows
+  rows,
+  allPropComponents
 }) => {
   const columns = [
-    { title: 'Name', transforms: [cellWidth(15)] },
-    { title: 'Type', transforms: [cellWidth(15)] },
-    { title: 'Required', transforms: [fitContent] },
+    { title: 'Name', transforms: [cellWidth(20)] },
+    { title: 'Type', transforms: [cellWidth(20)] },
     { title: 'Default', transforms: [] },
     { title: 'Description', transforms: [] }
   ];
@@ -30,31 +32,47 @@ export const PropsTable = ({
         className="pf-u-mt-md pf-u-mb-lg"
         variant="compact"
         aria-label={title}
+        caption={<div><span className="ws-prop-required">*</span>required</div>}
         cells={columns}
         gridBreakPoint="grid-lg"
-        rows={rows.map((row, idx) => ({
-          cells: [
-            <div className="pf-m-break-word">
-              {row.deprecated && 'Deprecated: '}
-              {row.name}
-              {row.beta && (
-                <Badge key={`${row.name}-${idx}`} className="ws-beta-badge pf-u-ml-sm">
-                  Beta
-                </Badge>
-              )}
-            </div>,
-            <div className="pf-m-break-word">
-              {row.type}
-            </div>,
-            <div>
-              {row.required ? 'Yes' : 'No'}
-            </div>,
-            <div className="pf-m-break-word">
-              {row.defaultValue}
-            </div>,
-            row.description
-          ]
-        }))}
+        rows={rows
+          // Sort required rows first
+          .sort((a,b) => a.required === b.required
+            ? 0
+            : a.required ? -1 : 1)
+          .map((row, idx) => ({
+            cells: [
+              <div className="pf-m-break-word">
+                {row.deprecated && 'Deprecated: '}
+                {row.name}
+                {row.required ? (
+                  <React.Fragment key={`${row.name}-required-prop`}>
+                    <span aria-hidden="true" key={`${row.name}-asterisk`} className="ws-prop-required">
+                      *
+                    </span>
+                    <span key={`${row.name}-required`} className={css(accessibleStyles.screenReader)}>
+                      required
+                    </span>
+                  </React.Fragment>
+                ) : ''}
+                {row.beta && (
+                  <Badge key={`${row.name}-${idx}`} className="ws-beta-badge pf-u-ml-sm">
+                    Beta
+                  </Badge>
+                )}
+              </div>,
+              <div className="pf-m-break-word">
+                <PropTypeWithLinks type={row.type} allPropComponents={allPropComponents} />
+              </div>,
+              <div className="pf-m-break-word">
+                {row.defaultValue}
+              </div>,
+              <div className="pf-m-break-word">
+                {row.description}
+              </div>
+            ]
+          }))
+        }
       >
         <TableHeader />
         <TableBody />

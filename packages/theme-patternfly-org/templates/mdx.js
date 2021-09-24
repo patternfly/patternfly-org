@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageSection, Title, PageNavigation, PageGroup, PageSectionVariants, Nav, NavList, NavItem } from '@patternfly/react-core';
+import { PageSection, Title, PageSectionVariants, BackToTop } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Router, useLocation } from '@reach/router';
@@ -53,7 +53,8 @@ const MDXChildTemplate = ({
       )}
       {beta && (
         <InlineAlert title="Beta feature">
-          This Beta component is currently under review, so please join in and give us your feedback on the <a href="https://forum.patternfly.org/">PatternFly forum</a>.
+          This Beta component is currently under review and is still open for further evolution. It is available for use in product.
+          Beta components are considered for promotion on a quarterly basis. Please join in and give us your feedback or submit any questions on the <a href="https://forum.patternfly.org/">PatternFly forum</a> or via <a href="//slack.patternfly.org/" target="_blank" rel="noopener noreferrer">Slack</a>.
         </InlineAlert>
       )}
       {katacodaBroken && (
@@ -82,7 +83,9 @@ const MDXChildTemplate = ({
                 <PropsTable
                   key={component.name}
                   title={component.name}
-                  rows={component.props} />
+                  rows={component.props}
+                  allPropComponents={propComponents}
+                />
               ))}
             </React.Fragment>
           )}
@@ -173,6 +176,7 @@ export const MDXTemplate = ({
           </Router>
         )}
       </PageSection>
+      <BackToTop className="ws-back-to-top" scrollableSelector="#ws-page-main" />
     </React.Fragment>
   );
 }

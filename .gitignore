@@ -25,7 +25,7 @@ coverage
 public
 static
 .cache
-build
+/build
 
 # IDE - VSCode
 .vscode

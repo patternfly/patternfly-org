@@ -9,6 +9,7 @@ module.exports = (sourceMD, sourceProps) => {
   sourceMD(path.join(contentBase, 'accessibility/**/*.md'), 'accessibility');
   sourceMD(path.join(contentBase, 'design-guidelines/**/*.md'), 'design-guidelines');
   sourceMD(path.join(contentBase, 'training/**/*.md'), 'training');
+  sourceMD(path.join(contentBase, 'extensions/**/*.md'), 'extensions');
 
   // Theme pages
   const themePagesPath = require
@@ -31,29 +32,31 @@ module.exports = (sourceMD, sourceProps) => {
   const reactTablePath = require
     .resolve('@patternfly/react-table/package.json')
     .replace('package.json', 'src');
-  const reactChartsPath = require
-    .resolve('@patternfly/react-charts/package.json')
-    .replace('package.json', 'src');
   const reactCodeEditorPath = require
     .resolve('@patternfly/react-code-editor/package.json')
     .replace('package.json', 'src');
+  const reactChartsPath = require
+      .resolve('@patternfly/react-charts/package.json')
+      .replace('package.json', 'src');
   const reactLogViewerPath = require
-    .resolve('@patternfly/react-log-viewer/package.json')
-    .replace('package.json', 'src');
-  const reactPropsIgnore = '**/*.test.tsx';
+      .resolve('@patternfly/react-log-viewer/package.json')
+      .replace('package.json', 'src');
+
+  const reactPropsIgnore = ['**/*.test.tsx', '**/examples/*.tsx'];
   sourceProps(path.join(reactCorePath, '/**/*.tsx'), reactPropsIgnore);
   sourceProps(path.join(reactTablePath, '/**/*.tsx'), reactPropsIgnore);
-  sourceProps(path.join(reactChartsPath, '/**/*.tsx'),reactPropsIgnore);
   sourceProps(path.join(reactCodeEditorPath, '/**/*.tsx'),reactPropsIgnore);
+  sourceProps(path.join(reactChartsPath, '/**/*.tsx'),reactPropsIgnore);
   sourceProps(path.join(reactLogViewerPath, '/**/*.tsx'), reactPropsIgnore);
 
   // React MD
-  sourceMD(path.join(reactCorePath, '/**/examples/*.md'), 'react');
+  sourceMD(path.join(reactCorePath, '/**/examples/*.md'), 'react', '/**/DragDrop/examples/*.md');
   sourceMD(path.join(reactCorePath, '/**/demos/**/*.md'), 'react-demos');
 
   // React-table MD
-  sourceMD(path.join(reactTablePath, '/**/examples/*.md'), 'react');
+  sourceMD(path.join(reactTablePath, '/**/TableComposable/examples/*.md'), 'react-composable');
   sourceMD(path.join(reactTablePath, '/**/demos/*.md'), 'react-demos');
+  sourceMD(path.join(reactTablePath, '/**/Table/examples/*.md'), 'react-legacy');
   
   // Charts MD (no demos yet)
   sourceMD(path.join(reactChartsPath, '/**/examples/*.md'), 'react');
@@ -63,6 +66,7 @@ module.exports = (sourceMD, sourceProps) => {
 
   // React-log-viewer MD
   sourceMD(path.join(reactLogViewerPath, '/**/examples/*.md'), 'react');
+  sourceMD(path.join(reactLogViewerPath, '/**/demos/*.md'), 'react-demos');
 
   // Release notes
   sourceMD(require.resolve('@patternfly/patternfly/RELEASE-NOTES.md'), 'html');
