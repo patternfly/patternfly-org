@@ -8,8 +8,9 @@ A dashboard provides overviews of key metrics or performance indicators relevant
 ## Elements
 While dashboards can vary greatly depending on what requirements and use cases they’re meant to fulfill, they can typically be distilled into two main parts:
 
-Cards: Information is communicated via cards. Each card should be designed to convey a single metric or a group of closely related metrics.
-Layout: The arrangement of cards, typically in a grid structure.
+- **Cards:** Information is communicated via cards. Each card should be designed to convey a single metric or a group of closely related metrics.
+
+- **Layout:** The arrangement of cards, typically in a grid structure.
 
 We’ll focus on these two aspects as we move through the dashboard design process. Here is an example of a dashboard containing four cards arranged in a grid.
 
