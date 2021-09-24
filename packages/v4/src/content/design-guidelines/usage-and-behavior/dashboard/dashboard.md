@@ -256,7 +256,7 @@ Next, add your cards in their appropriate sizes without any content. Don’t wor
 
 After placing our prioritized and sized card list on the four-column grid, the result should look like this example:
 
-<img src="./img/dashboard-4-column-cards-1.png" alt="dashboard layout populated with placeholder cards" width="1680"/>
+<img src="./img/dashboard-4-column.png" alt="dashboard layout populated with placeholder cards" width="1680"/>
 
 Note how loosely we stuck to those sizes. The details card is pretty small, but the events and history cards ended up being more like a large card. That’s fine.
 
