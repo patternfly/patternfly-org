@@ -33,7 +33,7 @@ declare module '\\*.svg' {
 
 const reactStylesDir = path.join(require.resolve('@patternfly/react-styles/package.json'), '../');
 const reactStyles = glob.sync(path.join(reactStylesDir, 'css/**/*.d.ts'))
-  .map(f => f.replace(reactStylesDir, '@patternfly/react-styles/').replace(/\.js$/, ''));
+  .map(f => f.replace(reactStylesDir, '@patternfly/react-styles/').replace(/\.d.ts$/, ''));
 const files = {
   'imports.ts': ['react', '@reach/router']
       .concat(Object.keys(versions.Releases[0].versions))
