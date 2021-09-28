@@ -187,11 +187,16 @@ function toReactComponent(mdFilePath, source, buildMode) {
             node.properties.code
           );
           typerrors.forEach(({ line, character, message }) => {
-            console.log('\n\u001b[31m');
-            file.fail(
-              '\n  ' + message + '\u001b[0m\n',
-              { line: node.position.start.line + line, column: character }
-            );
+            line = node.position.start.line + line + 1;
+            const column = character;
+            if (buildMode === 'start') {
+              // Don't fail to start over types
+              file.message(`\u001b[31m THIS WILL FAIL THE BUILD\u001b[0m\n  ${message}`, { line, column });
+            } else {
+              console.log('\u001b[31m');
+              file.fail(`\n  ${message}\n`, { line, column });
+              console.log('\u001b[0m');
+            }
           });
         }
       });
