@@ -1,3 +1,5 @@
+const path = require('path');
+const glob = require('glob');
 const ts = require('typescript');
 const versions = require('../../versions.json');
 
@@ -29,9 +31,13 @@ declare module '\\*.svg' {
 }
 `;
 
+const reactStylesDir = path.join(require.resolve('@patternfly/react-styles/package.json'), '../');
+const reactStyles = glob.sync(path.join(reactStylesDir, 'css/**/*.d.ts'))
+  .map(f => f.replace(reactStylesDir, '@patternfly/react-styles/').replace(/\.js$/, ''));
 const files = {
   'imports.ts': ['react', '@reach/router']
       .concat(Object.keys(versions.Releases[0].versions))
+      .concat(reactStyles)
       .filter(p => p !== '@patternfly/patternfly')
       .map(p => `import '${p}';`)
       .join('\n'),
@@ -124,3 +130,4 @@ function typecheck(fname, text) {
 module.exports = {
   typecheck
 };
+
