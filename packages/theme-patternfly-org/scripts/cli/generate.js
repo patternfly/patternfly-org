@@ -8,7 +8,7 @@ function getSource(options) {
 function generate(options) {
   const start = new Date();
   console.log('write source files to src/generated');
-  const sourceMDWithOptions = (...args) => sourceMD(...args, options._name);
+  const sourceMDWithOptions = (glob, source, ignore) => sourceMD(glob, source, ignore, options._name);
   getSource(options)(sourceMDWithOptions, sourceProps);
   const exitCode = writeIndex();
   if (exitCode !== 0) {
