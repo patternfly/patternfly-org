@@ -73,12 +73,12 @@ Sub-steps can be added to the sidebar. Use sub-steps when there is a hierarchica
 * Parent steps are automatically closed once they are complete. However, the user can manually expand the parent back open at any time to see the sub-steps again while staying in context of their current step.
 
 ### Wizard with optional steps
-Optional steps can be added to the sidebar. Use optional steps when there are steps that are do not need to be filled out to complete the wizard.
+Optional steps can be added to the wizard. Make steps optional when they do not need to be filled out to complete the wizard.
 
 <img src="./img/wizard-with-optional-steps.png" alt="Wizard with optional steps" />
 
 
-1. **Optional steps:** Optional steps are always nested inside of a major step.
+1. **Optional steps:** It's recommended to group all optional steps under one parent step.
 2. **Tooltip (optional):** This tooltip is optional, but recommended. It would help explain that the following steps in the wizard are not required and would give more context to the new "Review and finish" button. 
 
 #### Behavior
