@@ -1,4 +1,4 @@
-const { parse } = require('../../helpers/acorn');
+const { parse } = require('@patternfly/ast-helpers');
 
 module.exports = {
   parseJSXAttributes: jsx => {

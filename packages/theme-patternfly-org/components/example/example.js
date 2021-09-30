@@ -13,9 +13,9 @@ import {
   getReactParams,
   getExampleClassName,
   getExampleId,
-  convertToReactComponent,
   liveCodeTypes
 } from '../../helpers';
+import { convertToReactComponent } from '@patternfly/ast-helpers';
 import missingThumbnail from './missing-thumbnail.jpg';
 import './example.css';
 

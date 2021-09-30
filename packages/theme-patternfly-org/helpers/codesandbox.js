@@ -1,6 +1,6 @@
+const { parse } = require('@patternfly/ast-helpers');
 const versions  = require('../versions.json');
 const overpass = require('./fonts');
-const { parse } = require('../helpers/acorn');
 const { capitalize } = require('./capitalize');
 
 const getStaticParams = (title, html) => {
