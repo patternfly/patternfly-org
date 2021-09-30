@@ -11,8 +11,9 @@
     }
   },
   "packages": [
-    "packages/v4",
-    "packages/theme-patternfly-org"
+    "packages/ast-helpers",
+    "packages/theme-patternfly-org",
+    "packages/v4"
   ],
   "version": "independent"
 }

@@ -4,9 +4,9 @@ const { serializeTags } = require('remark-mdx/lib/serialize/mdx-element');
 const serializeMdxExpression = require('remark-mdx/lib/serialize/mdx-expression');
 const toH = require('hast-to-hyperscript');
 const { toTemplateLiteral } = require('@mdx-js/util');
+const { parse } = require('@patternfly/ast-helpers');
 const { capitalize } = require('../../helpers/capitalize');
 const { slugger } = require('../../helpers/slugger');
-const { parse } = require('../../helpers/acorn');
 const { liveCodeTypes } = require('../../helpers/liveCodeTypes');
 
 // Adapted from https://github.com/mdx-js/mdx/blob/next/packages/mdx/mdx-hast-to-jsx.js
