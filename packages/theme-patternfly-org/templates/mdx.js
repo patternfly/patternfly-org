@@ -160,7 +160,7 @@ export const MDXTemplate = ({
           </div>
         </PageSection>
       )}
-      <PageSection id="main-content" className={isSinglePage ? 'pf-m-fill' : 'pf-m-light'}>
+      <PageSection id="main-content" className={isSinglePage ? 'pf-m-fill' : 'pf-m-fill pf-m-light'}>
         {isSinglePage && (
             <MDXChildTemplate {...sources[0]} />
         )}
