@@ -4,6 +4,9 @@
   "version": "0.0.3",
   "author": "Red Hat",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "index.js",
   "dependencies": {
     "acorn": "^8.4.1",
