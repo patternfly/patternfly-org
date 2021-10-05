@@ -13,7 +13,7 @@ import MailBulkIcon from '@patternfly/react-icons/dist/esm/icons/mail-bulk-icon'
 import TwitterIcon from '@patternfly/react-icons/dist/esm/icons/twitter-icon';
 
 const CommunityPage = () => (
-    <PageSection variant={PageSectionVariants.light}>
+    <PageSection>
         <div className="ws-community-page">
             <Title size="4xl" className="pf-u-mb-lg ws-page-title" headingLevel="h2">Community</Title>
             <p>At the core of PatternFly is our community of people—in other words, our Flyers. Together, we celebrate creativity and foster a sense of teamwork and unity.</p>
