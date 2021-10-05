@@ -68,6 +68,9 @@ module.exports = (sourceMD, sourceProps) => {
   sourceMD(path.join(reactLogViewerPath, '/**/examples/*.md'), 'react');
   sourceMD(path.join(reactLogViewerPath, '/**/demos/*.md'), 'react-demos');
 
+  // React OUIA MD
+  sourceMD(path.join(reactCorePath, '/**/helpers/OUIA/*.md'), 'react');
+
   // Release notes
   sourceMD(require.resolve('@patternfly/patternfly/RELEASE-NOTES.md'), 'html');
   sourceMD(require.resolve('@patternfly/react-docs/RELEASE-NOTES.md'), 'react');
