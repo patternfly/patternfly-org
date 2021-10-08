@@ -114,11 +114,11 @@ Form submit buttons should be disabled until a user starts filling out the form 
 * For a processing form, use feedback messages and progress indicators like spinners or progress bars if the processing time might exceed user expectations.
 
 ## Form sections
-Form sections sort form fields into non-hierarchical groups based on common information type, step, or visual preference. PatternFly form sections support a header followed by a left-aligned list of unnested and uncollapsible form groups, so they create a relatively flat information hierarchy. Form sections are ideal for breaking lengthy forms into simple, evenly spaced segments with all information exposed. 
+Form sections sort form fields into non-hierarchical groups based on common information type, step, or visual preference. Form sections are ideal for breaking long forms into simple, evenly spaced segments with all information exposed. 
 
 Default to grouping data with form sections, especially if all form fields are required. If you need to visualize complex or nested information, use [field groups](#field-groups) instead.
 
-To distinguish between form sections, title them based on the reason you grouped their inputs together. You may forego form section titles, but make sure visual separation isn't incredibly meaningful to your content. To keep form sections accessible, add an `aria-label` to indicate why you're sectioning each set of form fields together.
+To distinguish between form sections, title them based on the reason you grouped their inputs together. You may forego form section titles and solely rely on the added spacing between sections, but don't leave section titles blank if that empty space will confuse your users. If you do decide to forego the form section titles, add an `aria'label` to indicate why you're sectioning each set of form fields together.
 
 Example: For a form section that allows users to configure traffic between pods by specifying origins, ports, and specific rules, add a title like *Ingress rules*.
 
