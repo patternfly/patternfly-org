@@ -3,7 +3,7 @@ id: Dashboards
 section: guidelines
 ---
 
-A dashboard provides overviews of key metrics or performance indicators relevant to an application, process, or business. The overall experience of dashboards can vary greatly depending on their use cases,. so it can be difficult to define a one-size-fits-all approach. These guidelines take a systematic approach to dashboard design that can be applied in a variety of situations.
+A dashboard provides overviews of key metrics or performance indicators relevant to an application, process, or business. The overall experience of dashboards can vary greatly depending on their use cases, so it can be difficult to define a one-size-fits-all approach. These guidelines take a systematic approach to dashboard design that can be applied in a variety of situations.
 
 ## Elements
 While dashboards can vary greatly depending on what requirements and use cases they’re meant to fulfill, they can typically be distilled into two main parts:
@@ -96,7 +96,8 @@ To design an effective dashboard, you first must have a solid understanding of t
 The first step is to create a simple list of the cards your dashboard needs to have. Think of this list as your kit of parts. These are your building blocks, your (very easy) puzzle pieces.
 
 Each card in a dashboard should be designed to display a single metric, a set of metrics, or a summary of important information. The scope of a card can be as narrow as the resource consumption of a single node, or as broad as a list of all system events listed in real time.
-Questions to answer
+
+Questions to answer:
 
 - What use cases does this dashboard need to fulfill?
 - What data or information is associated with those use cases?
@@ -138,7 +139,7 @@ Prioritize your list by determining which cards contain information most useful 
 
 Don’t spend too much time on this step; it doesn’t have to be perfect. You might have a clear hierarchy of importance amongst your list, or you may have a list of cards which are of equal importance. If you find yourself struggling, just move on to the next step.
 
-Ideally, all of the information you are displaying is important. The purpose of this step is to help us determine which cards we want front and center, and which we can receive less emphasis . This distinction is primarily important with responsive design. When your four-column layout becomes a one-column layout on a mobile viewport, ordering the cards appropriately will make sure that the most important information comes to the top.
+Ideally, all of the information you are displaying is important. The purpose of this step is to help us determine which cards we want front and center, and which we can receive less emphasis. This distinction is primarily important with responsive design. When your four-column layout becomes a one-column layout on a mobile viewport, ordering the cards appropriately will make sure that the most important information comes to the top.
 
 #### Example of a prioritized card list
 
@@ -177,6 +178,7 @@ Here are a few questions to ask yourself, along with some real-life examples to 
 Here are some examples of how to apply these questions to different types of cards to determine their appropriate sizing in your dashboard:
 
 **Details card**
+
 “What format would most clearly display this information?”
 - This card needs to list the various details of the cluster. Each detail will have a label and a value, for example: name // cluster-name
 - This looks like it calls for a two-column list of the data. One column for the label, and one for the value.
@@ -187,11 +189,12 @@ Here are some examples of how to apply these questions to different types of car
 “Is the amount of information in the card static or dynamic?”
 - The items in the card may be added or removed depending on user or stakeholder feedback, but they aren’t changed unless we decide to change them. Therefore, this information is static and we can expect this card to always contain the same amount of information.
 
-Conclusion
+Conclusion:
 - This card will always contain a two-column list of four items.
 - This card can be small.
 
 **Performance card**
+
 “What format would most clearly display this information?”
 - This card will display the current performance metrics for five different values. It must show the historical data of the values over time.
 - Show the current value in text and a line graph displaying the value over time. This means each of the five metrics will have a text label, a text value, and a line graph.
@@ -202,10 +205,11 @@ Conclusion
 “Is the amount of information in the card static or dynamic?”
 - This card will contain metrics that always show the same thing: A label for the metric, a current value, and the value over time. This information itself will change constantly but the amount of or density of information will not. Therefore, it is static.
 
-Conclusion
+Conclusion:
 - Include five line charts. This card will probably be large.
 
 **Events card**
+
 “What format would most clearly display this information?”
 - This card will display a list of events as they occur.
 - Each event list item will show a few lines of information: time occurred, event source, event description.
@@ -217,7 +221,7 @@ Conclusion
 “Is the amount of information in the card static or dynamic?”
 - As this is a list that could contain 0 events or could contain thousands, it is indeed dynamic.
 
-Conclusion
+Conclusion:
 - This card could contain a massive amount of events. We’ll need to give the card a max height based on the amount of items we think would be reasonable to see at once. Four items at once should be reasonable to set for our max height. The card will then scroll if the user wants to see more events.
 - Since we have a max height of four items and this list view only needs one column, we can estimate that a medium sizing should do.
 
@@ -242,7 +246,7 @@ Now that you have a prioritized and sized list of cards, use it to create the ca
 - For a standard desktop size (1200-1400px), try to have the column layout fill the full width of the page.
 - Draw your columns within the context of your project. For our example, we know we have a top masthead, a top header information area, a left hand navigation, and a canvas for the dashboard.
 
-You can use any common amount of columns for this step, but three and four column layouts are the most common. If you use Sketch, you can find templates for these layouts in the [PatternFly template](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89) . For the purpose of this tutorial, we will work with a standard four column layout.
+You can use any common amount of columns for this step, but three and four column layouts are the most common. If you use Sketch, you can find templates for these layouts in the [PatternFly template](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89). For the purpose of this tutorial, we will work with a standard four column layout.
 
 <img src="./img/dashboard-4-column.png" alt="four column dashboard layout" width="1680"/>
 
@@ -262,7 +266,7 @@ Note how loosely we stuck to those sizes. The details card is pretty small, but 
 
 When choosing whether or not your card should be wide or tall, it helps to consider the format of the information within the card. For example, the inventory and events cards both contain a list of data. Lists tend to lend themselves well to taller cards. The consumers card (bottom right) will contain a line graph. A line graph showing data over time lends itself well to a wider card.
 
-You can now Iterate on the arrangement of your cards. Approach this arrangement like a puzzle. If you have a strong prioritization of cards, that should be your primary driver. You want the most important cards at the top, with less important cards at the bottom. It’s OK to change the size of your cards a bit to make them fit better. In our example, the events and inventory cards probably don’t need to be that tall. Maybe we can find a better use of that space for another card that needs more room.
+You can now iterate on the arrangement of your cards. Approach this arrangement like a puzzle. If you have a strong prioritization of cards, that should be your primary driver. You want the most important cards at the top, with less important cards at the bottom. It’s OK to change the size of your cards a bit to make them fit better. In our example, the events and inventory cards probably don’t need to be that tall. Maybe we can find a better use of that space for another card that needs more room.
 
 
 The only boundaries you’ll encounter in this step are the general sizes you defined earlier. Don’t limit yourself by assuming that the inventory card always has to be that tall. We don’t know exactly how tall it really has to be yet, we just have a general idea that it probably should be medium-ish. If you find yourself struggling with a certain column layout, try a different one to see if it solves any problems.
@@ -318,7 +322,7 @@ The events card must display a list of system events and provide the ability to 
 <img src="./img/events-card-example.png" alt="events card content" width="439"/>
 
 #### Inventory card
-The inventory card is intended to list a count of current nodes, disks, pods, PVs, PVCs, and show if any are down or in error. For this use case, we can create a custom card. But since it has similar properties to the aggregate status card [link] for displaying object status, we can pull from some of the aggregate status card’s concepts.
+The inventory card is intended to list a count of current nodes, disks, pods, PVs, PVCs, and show if any are down or in error. For this use case, we can create a custom card. But since it has similar properties to the [aggregate status card](#aggregate-status-card) for displaying object status, we can pull from some of the aggregate status card’s concepts.
 
 <img src="./img/inventory-card-example.png" alt="inventory card content" width="439"/>
 
