@@ -2138,10 +2138,10 @@
     tippy.js "5.1.2"
     tslib "^2.0.0"
 
-"@patternfly/react-docs@5.23.8":
-  version "5.23.8"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-docs/-/react-docs-5.23.8.tgz#af9cfe422fec83568adedc4440d3c446df796f5e"
-  integrity sha512-AXdIXhoLhe66OFTd37ePr/qpJdAIYztnW2HahFVkcf1BHGh2rR3H3OC0+fefNg9eZ1QI5umhyRrjve3CVdXFog==
+"@patternfly/react-docs@5.23.9":
+  version "5.23.9"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-docs/-/react-docs-5.23.9.tgz#9cd3f22ea2a08eee12f573862bdd8f6a0a9a8a6c"
+  integrity sha512-jYse/CqhUib6xQM6+ctVxqdEurZ9OMUl11kdifFXLAx78rI0m32p+LB2CZ+UzRXIp0+krINraD82uOm6yiBhPA==
   dependencies:
     "@patternfly/patternfly" "4.144.4"
     "@patternfly/react-catalog-view-extension" "^4.13.17"
