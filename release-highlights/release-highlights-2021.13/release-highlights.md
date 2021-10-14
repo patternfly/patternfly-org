@@ -48,7 +48,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Non-actionable card](https://github.com/patternfly/patternfly/issues/4359) - introduce special styling for "non-actionable" cards that are included inside a grid of actionable cards (e.g. in a catalog view).
 
-* [Horizontal table scrolling with sticky columns](https://github.com/patternfly/patternfly/issues/4218) - Allow a table to scroll horizontally while keeping some number of columns always visible.
+* [Horizontal table scrolling with sticky columns](https://github.com/patternfly/patternfly-react/issues/6163) - Allow a table to scroll horizontally while keeping some number of columns always visible.
 
 * [Allow control over default table sort direction](https://github.com/patternfly/patternfly-react/issues/5329) - will allow the consumer to select whether the default sort should be ascending or descending when initially clicking on a column header.
 
