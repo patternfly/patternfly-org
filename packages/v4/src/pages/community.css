@@ -1,3 +1,7 @@
+.ws-community-page {
+  background-color: var(--pf-global--BackgroundColor--light-200);
+}
+
 .ws-community-page .ws-building-grid > * {
   padding: var(--pf-global--spacer--md);
   border: 1px solid var(--pf-global--palette--black-300);
