@@ -48,7 +48,7 @@ export const iconsData = [
   },
   {
     "Style": "",
-    "Name": "ansible",
+    "Name": "pf-icon-ansible-tower",
     "React_name": "AnsibleTowerIcon",
     "Type": "Brand",
     "Contextual_usage": "Represents \"Ansible Tower\"",
@@ -658,6 +658,7 @@ export const iconsData = [
     "React_name": "SortAmountDownAltIcon",
     "Type": "Action",
     "Contextual_usage": "Represents the smallest-to-largest, lowest-to-highest or first-to-last (ascending) sort order for any data type.",
+    "Unicode": "f884"
   },
   {
     "Style": "fas",
@@ -992,8 +993,8 @@ export const iconsData = [
     "Contextual_usage": "Represents a flavor",
   },
   {
-    "Style": "pf-icon",
-    "Name": "pf-icon-image",
+    "Style": "fas",
+    "Name": "fa-image",
     "React_name": "ImageIcon",
     "Type": "Object",
     "Contextual_usage": "Represents an image",
@@ -1063,7 +1064,7 @@ export const iconsData = [
   },
   {
     "Style": "pf-icon",
-    "Name": "pf-icon-network-range",
+    "Name": "pf-icon-pficon-network-range",
     "React_name": "PficonNetworkRangeIcon",
     "Type": "Object",
     "Contextual_usage": "Represents network range",
@@ -1181,15 +1182,16 @@ export const iconsData = [
     "Contextual_usage": "Represents status: is full",
   },
   {
-    "Style": "pf-icon",
-    "Name": "pf-icon-route",
+    "Style": "fas",
+    "Name": "fa-route",
     "React_name": "RouteIcon",
     "Type": "Object",
     "Contextual_usage": "Represents a route",
+    "Unicode": "f4d7"
   },
   {
     "Style": "pf-icon",
-    "Name": "pf-icon-satellite",
+    "Name": "pf-icon-pficon-satellite",
     "React_name": "PficonSatelliteIcon",
     "Type": "Brands",
     "Contextual_usage": "Represents brand: Satellite",
@@ -1245,7 +1247,7 @@ export const iconsData = [
   },
   {
     "Style": "pf-icon",
-    "Name": "pf-icon-template",
+    "Name": "pf-icon-pficon-template",
     "React_name": "PficonTemplateIcon",
     "Type": "Object",
     "Contextual_usage": "Represents a template; includes contents or instructions used to generate one or more instances of a final output",
@@ -1287,7 +1289,7 @@ export const iconsData = [
   },
   {
     "Style": "pf-icon",
-    "Name": "pf-icon-vcenter",
+    "Name": "pf-icon-pficon-vcenter",
     "React_name": "PficonVcenterIcon",
     "Type": "Object",
     "Contextual_usage": "Represents a vcenter",
