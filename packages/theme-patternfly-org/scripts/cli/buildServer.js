@@ -20,5 +20,5 @@ buildServer()
     console.error(err);
     process.exit(2);
   })
-  .then();
+  .then(() => process.exit(0));
 

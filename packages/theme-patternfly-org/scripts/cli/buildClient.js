@@ -20,4 +20,4 @@ buildClient()
     console.error(err);
     process.exit(3);
   })
-  .then();
+  .then(() => process.exit(0));
