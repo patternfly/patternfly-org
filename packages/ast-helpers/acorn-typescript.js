@@ -671,11 +671,20 @@ module.exports = Parser => class TSParser extends Parser {
     return this.finishNode(node, 'TSTypeOperator')
   }
 
-  parseTSTypeofType() {
+  parseTSTypeQuery() {
     const node = this.startNode()
     this.next()
     node.exprName = this.parseIdent()
     return this.finishNode(node, 'TSTypeQuery')
+  }
+
+  parseTSTypeofType() {
+    const typeQuery = this.parseTSTypeQuery()
+    if (this.eat(tt.bracketL)) {
+      const node = this.startNode()
+      return this.parseTSIndexedAccessType(node, typeQuery)
+    }
+    return typeQuery
   }
 
   parseTSImportType(isTypeOf) {
