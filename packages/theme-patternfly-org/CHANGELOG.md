@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.14 (2021-10-21)
+
+
+### Bug Fixes
+
+* **ts:** parse type a = typeof b[c] ([#2739](https://github.com/patternfly/patternfly-org/issues/2739)) ([36000a2](https://github.com/patternfly/patternfly-org/commit/36000a253733a88639b374f188751798e90d4696))
+
+
+
+
+
 ## 0.7.13 (2021-10-20)
 
 **Note:** Version bump only for package theme-patternfly-org
