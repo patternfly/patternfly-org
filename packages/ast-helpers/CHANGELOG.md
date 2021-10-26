@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.14 (2021-10-26)
+
+
+### Bug Fixes
+
+* **docs:** removed drag and drop from being excluded from react md source file ([#2735](https://github.com/patternfly/patternfly-org/issues/2735)) ([f1cef6b](https://github.com/patternfly/patternfly-org/commit/f1cef6b9cad980e407858171e86f49e526238aa5))
+
+
+
+
+
 ## 0.0.13 (2021-10-26)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
