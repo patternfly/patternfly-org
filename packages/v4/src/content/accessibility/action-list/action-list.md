@@ -1,5 +1,5 @@
 ---
-id: Action List
+id: Action list
 section: components
 ---
 
