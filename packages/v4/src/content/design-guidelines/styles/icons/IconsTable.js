@@ -30,8 +30,7 @@ import { iconsData } from './icons';
 import { saveAs } from 'file-saver';
 import { css } from '@patternfly/react-styles';
 import styles from '@patternfly/react-styles/css/components/Table/table';
-import * as faIconUnicodes from '@patternfly/patternfly/assets/icons/fa-unicodes.json';
-import * as pfIconUnicodes from '@patternfly/patternfly/assets/pficon/pf-unicodes.json';
+import * as iconUnicodes from '@patternfly/patternfly/assets/icons/iconUnicodes.json';
 
 export class IconsTable extends React.Component {
   state = {
@@ -125,7 +124,7 @@ export class IconsTable extends React.Component {
     // 2 unicodes are hard coded in icons.js, otherwise find in unicodes mapping from Core
     const iconUnicode = Unicode
       ? Unicode
-      : Name.indexOf('fa') === 0 ? faIconUnicodes.default[Name] : pfIconUnicodes.default[Name];
+      : iconUnicodes.default[Name];
   
     return {
       removeBorder,
