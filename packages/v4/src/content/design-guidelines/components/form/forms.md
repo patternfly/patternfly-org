@@ -119,7 +119,7 @@ Form sections sort form fields into non-hierarchical groups based on common info
 
 Default to grouping data with form sections, especially if all form fields are required. If you need to visualize complex or nested information, use [field groups](#field-groups) instead.
 
-To distinguish between form sections, title them based on the reason you grouped their inputs together. You may forego form section titles and solely rely on the added spacing between sections, but don't leave section titles blank if that empty space will confuse your users. If you do decide to forego the form section titles, add an `aria'label` to indicate why you're sectioning each set of form fields together.
+To distinguish between form sections, title them based on the reason you grouped their inputs together. You may forego form section titles and solely rely on the added spacing between sections, but don't leave section titles blank if that empty space will confuse your users. If you do decide to forego the form section titles, add an `aria-label` to indicate why you're sectioning each set of form fields together.
 
 <img src="./img/form-sections.png" alt="Example of form sections used to separate out a form." width="570"/>
 
