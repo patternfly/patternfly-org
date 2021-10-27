@@ -17,7 +17,7 @@ We’ll focus on these two aspects as we move through the dashboard design proce
 <img src="./img/dashboard-view-desktop.png" alt="example of a dashboard" width="1500"/>
 
 ## Standard cards
-PatternFly supports several common card layouts to help convey information in a consistent way. This is not an exhaustive list, but before designing your cards, you should see if the information you are trying to communicate fits into any of these common patterns.
+PatternFly supports several common card layouts to help convey information in a consistent way. This is not an exhaustive list, but before designing your cards, you should see if the information you are trying to communicate fits into any of these common patterns. Note that card layouts are flexible and can be customized. So if you don't see exactly what you are looking for here, we recommend that you use these standard layouts as a basis upon which to build your custom designs. For more information about cards and card usage see the [Card component](/components/card) documentation.
 
 ### Aggregate status card
 Aggregate status cards show a total number of objects and an aggregated status for them. For example, it can be used to provide users with a quick count of the number of nodes making up a large distributed network and identify the numbers that are down, that need maintenance, etc. There would also typically be a link to examine more details.
