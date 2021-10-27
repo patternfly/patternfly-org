@@ -1,5 +1,5 @@
 ---
-id: Calendar Month
+id: Calendar month
 section: components
 ---
 
@@ -11,7 +11,7 @@ A **calendar month** is a box area or text that communicates and triggers user a
 
 ## Accessibility application:
 
-- Make sure the calendar month is in a position that makes sense on the tab order so that keyboard and screen reader users do not end up focusing on it out of context
+- Make sure the calendar month is placed appropriately in the tab order so that users focus on it in context
 
 The following props/attributes have been added for you or are customizable in PatternFly:
 
