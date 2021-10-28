@@ -37,12 +37,11 @@ export class IconsTable extends React.Component {
     searchValue: '',
     columns: [
       'Icon',
-      { title: 'Name', transforms: [sortable] },
+      { title: 'Name', transforms: [sortable], props: { className: css(styles.modifiers.fitContent)} },
       'Style',
       'Type',
       'React',
-      { title: 'Contextual usage', transforms: [sortable] },
-      { title: 'Tooltip label', props: { style: { overflow: 'visible' } }},
+      { title: 'Usage/tooltip', transforms: [sortable] },
       { title: 'Unicode', props: { className: css(styles.modifiers.fitContent)}}
     ],
     sortBy: {},
@@ -116,7 +115,16 @@ export class IconsTable extends React.Component {
     );
   }
 
-  buildRows = ({Style = ' ', Name = ' ', React_name: ReactName = ' ', Type = ' ', Contextual_usage = ' ', color, Label = ' ', Unicode}, removeBorder = false) => {
+  buildRows = ({
+    Style = ' ', 
+    Name = ' ', 
+    React_name: ReactName = ' ', 
+    Type = ' ', 
+    Contextual_usage = ' ', 
+    color, 
+    Label = null, 
+    Unicode
+  }, removeBorder = false) => {
     const hasIcon = ReactName !== ' ';
     const Icon = hasIcon
       ? icons[ReactName]
@@ -146,12 +154,16 @@ export class IconsTable extends React.Component {
         },
         ReactName,
         {
-          title: Contextual_usage,
-          props: { column: 'Contextual usage' }
-        },
-        {
-          title: Label,
-          props: { column: 'Tooltip label' },
+          title: Label
+            ? (
+              <>
+                <div>{Contextual_usage}</div>
+                <br/>
+                <div>Tooltip: {Label}</div>
+              </>
+            )
+            : Contextual_usage,
+          props: { column: 'Usage/tooltip' }
         },
         {
           title: <Tooltip content={this.state.tooltipContent} position={TooltipPosition.bottom}><span onMouseEnter={this.onHoverUnicode} onClick={this.onCopyText} color={color}>{iconUnicode}</span></Tooltip>,
