@@ -30,6 +30,7 @@ import { iconsData } from './icons';
 import { saveAs } from 'file-saver';
 import { css } from '@patternfly/react-styles';
 import styles from '@patternfly/react-styles/css/components/Table/table';
+import * as iconUnicodes from '@patternfly/patternfly/assets/icons/iconUnicodes.json';
 
 export class IconsTable extends React.Component {
   state = {
@@ -39,11 +40,12 @@ export class IconsTable extends React.Component {
       { title: 'Name', transforms: [sortable], props: { className: css(styles.modifiers.fitContent)} },
       'Style',
       'Type',
-      { title: 'React', props: { className: css(styles.modifiers.fitContent)} },
-      { title: 'Contextual usage', transforms: [sortable] },
-      { title: 'Tooltip label', props: { style: { overflow: 'visible' } }},
+      'React',
+      { title: 'Usage/tooltip', transforms: [sortable] },
+      { title: 'Unicode', props: { className: css(styles.modifiers.fitContent)}}
     ],
-    sortBy: {}
+    sortBy: {},
+    tooltipContent: 'Copy'
   };
 
   handleSearchChange = (checked, event) => {
@@ -79,6 +81,22 @@ export class IconsTable extends React.Component {
     saveAs(blob, filename);
   };
 
+  onCopyText = event => {
+    const text = event.currentTarget.textContent;
+    const clipboard = event.currentTarget.parentElement;
+    const el = document.createElement('textarea');
+    el.value = text.toString();
+    clipboard.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    clipboard.removeChild(el);
+    this.setState({ tooltipContent: 'Copied' })
+  }
+
+  onHoverUnicode = () => {
+    this.setState({ tooltipContent: 'Copy' })
+  }
+
   customRowWrapper = ({
     trRef,
     rowProps,
@@ -97,11 +115,25 @@ export class IconsTable extends React.Component {
     );
   }
 
-  buildRows = ({Style = ' ', Name = ' ', React_name: ReactName = ' ', Type = ' ', Contextual_usage = ' ', color, Label = ' '}, removeBorder = false) => {
+  buildRows = ({
+    Style = ' ', 
+    Name = ' ', 
+    React_name: ReactName = ' ', 
+    Type = ' ', 
+    Contextual_usage = ' ', 
+    color, 
+    Label = null, 
+    Unicode
+  }, removeBorder = false) => {
     const hasIcon = ReactName !== ' ';
     const Icon = hasIcon
       ? icons[ReactName]
       : null;
+    // 2 unicodes are hard coded in icons.js, otherwise find in unicodes mapping from Core
+    const iconUnicode = Unicode
+      ? Unicode
+      : iconUnicodes.default[Name];
+  
     return {
       removeBorder,
       cells: [
@@ -122,12 +154,20 @@ export class IconsTable extends React.Component {
         },
         ReactName,
         {
-          title: Contextual_usage,
-          props: { column: 'Contextual usage' }
+          title: Label
+            ? (
+              <>
+                <div>{Contextual_usage}</div>
+                <br/>
+                <div>Tooltip: {Label}</div>
+              </>
+            )
+            : Contextual_usage,
+          props: { column: 'Usage/tooltip' }
         },
         {
-          title: Label,
-          props: { column: 'Tooltip label' },
+          title: <Tooltip content={this.state.tooltipContent} position={TooltipPosition.bottom}><span onMouseEnter={this.onHoverUnicode} onClick={this.onCopyText} color={color}>{iconUnicode}</span></Tooltip>,
+          props: { column: 'Unicode' }
         }
       ]
     }

@@ -43,7 +43,8 @@
   margin-bottom: 24px;
 }
 
-#ws-icons-table td[data-label="Icon"] svg {
+#ws-icons-table td[data-label="Icon"] svg,
+#ws-icons-table td[data-label="Unicode"] span {
   cursor: pointer;
 }
 
