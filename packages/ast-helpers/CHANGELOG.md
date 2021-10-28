@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2021-10-28)
+
+
+### Features
+
+* **icons:** fixed mislabeled icons, added unicode column ([#2736](https://github.com/patternfly/patternfly-org/issues/2736)) ([97bd78a](https://github.com/patternfly/patternfly-org/commit/97bd78ae1eaad5f6fac97c0ed5f4cf6a4ae9b1aa))
+
+
+
+
+
 ## 0.0.15 (2021-10-28)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
