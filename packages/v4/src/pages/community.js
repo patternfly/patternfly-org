@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'theme-patternfly-org/components';
-import { Grid, GridItem, PageSection, PageSectionVariants, Split, SplitItem, Title } from '@patternfly/react-core';
+import { Grid, GridItem, PageSection, Split, SplitItem, Title } from '@patternfly/react-core';
 import './community.css';
 import communityPageHeader from './community-page-header.svg';
 import community1 from './community-1.svg';
