@@ -21,6 +21,11 @@ Adds a "plain" variant of the Menu component that does not have borders for use 
 
 Allows placeholder text styling to be applied to a Select component to differentiate a null selection from other options.
 
+### [Text input group](https://www.patternfly.org/v4/components/text-input-group)
+
+![text input group](./img/text-input-group.png)
+
+The text input group is a new component that adds custom features to a standard text input, including the ability to embed a chip group and a clear button. We expect this new component to be useful in constructing composable solutions to common filter and search problems.
 
 See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
