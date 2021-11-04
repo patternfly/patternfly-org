@@ -144,7 +144,7 @@ export const Example = ({
   const codeBoxParams = getParameters(
     lang === 'html'
       ? getStaticParams(title, editorCode)
-      : getReactParams(title, editorCode, scope)
+      : getReactParams(title, editorCode, scope, lang)
   );
   const fullscreenLink = loc.pathname.replace(/\/$/, '')
     + (loc.pathname.endsWith(source) ? '' : `/${source}`)

@@ -106,7 +106,7 @@ function prettyExampleCode(title, code, declaration, identifier) {
 }
 
 // TODO: Make React examples work and use a template that has our assets.
-function getReactParams(title, code, scope) {
+function getReactParams(title, code, scope, lang) {
   let toRender = null;
   try {
     let declaration = getExampleDeclaration(code);
@@ -141,6 +141,10 @@ function getReactParams(title, code, scope) {
     '@patternfly/react-core': versions.Releases[0].versions['@patternfly/react-core']
   };
 
+  if (lang === 'ts') {
+    dependencies['@babel/runtime'] = 'latest';
+  }
+
   Object.entries(versions.Releases[0].versions)
     .filter(([pkg]) => code.includes(pkg))
     .forEach(([pkg, version]) => dependencies[pkg] = version);
@@ -163,7 +167,7 @@ function getReactParams(title, code, scope) {
 </body>
 </html>`,
       },
-      'index.js': {
+      [lang === 'ts' ? 'index.tsx' : 'index.js']: {
         content: `import ReactDOM from 'react-dom';
 import "@patternfly/react-core/dist/styles/base.css";
 import './fonts.css';
@@ -186,7 +190,7 @@ ReactDOM.render(<${toRender} />, rootElement);`
         },
       },
       'sandbox.config.json': {
-        content: { template: 'create-react-app' }
+        content: { template: lang === 'ts' ? 'create-react-app-typescript' : 'create-react-app' }
       }
     },
   }
