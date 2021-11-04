@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.5 (2021-11-04)
+
+
+### Bug Fixes
+
+* **docs:** Export TypeScript examples to CodeSandbox with the correct configuration ([#2745](https://github.com/patternfly/patternfly-org/issues/2745)) ([6fb3749](https://github.com/patternfly/patternfly-org/commit/6fb37490c7a95d1bacdb376e5cef832f2a555af8))
+
+
+
+
+
 ## 0.1.4 (2021-11-01)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
