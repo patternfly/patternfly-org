@@ -20,7 +20,7 @@ We’ll focus on these two aspects as we move through the dashboard design proce
 PatternFly supports several common card layouts to help convey information in a consistent way. This is not an exhaustive list, but before designing your cards, you should see if the information you are trying to communicate fits into any of these common patterns. Note that card layouts are flexible and can be customized. So if you don't see exactly what you are looking for here, we recommend that you use these standard layouts as a basis upon which to build your custom designs. For more information about cards and card usage see the [Card component](/components/card) documentation.
 
 ### Aggregate status card
-Aggregate status cards show a total number of objects and an aggregated status for them. For example, it can be used to provide users with a quick count of the number of nodes making up a large distributed network and identify the numbers that are down, that need maintenance, etc. There would also typically be a link to examine more details.
+Aggregate status cards show a total number of objects and an aggregated status for them. For example, they can be used to provide users with a quick count of the number of nodes making up a large distributed network and identify the numbers that are down, that need maintenance, etc. There would also typically be a link to examine more details.
 
 <img src="./img/aggregate-status-cards.png" alt="aggregate status card examples" width="542"/>
 
@@ -255,7 +255,8 @@ Four column layout with 16 px gutters. There are also 16px margins around the da
 Next, add your cards in their appropriate sizes without any content. Don’t worry about the arrangement yet, just draw all the cards at your estimated sizes.
 
 - There should be no real content in your cards yet, only each card’s name. At this point, the only thing we’re concerned about is getting a general size for each card.
-- Again, these are guesstimates. We’re not worried about the exact height of each card. Rather, we’reusing our column structure as a guide.
+
+- Again, these are guesstimates. We’re not worried about the exact height of each card. Rather, we’re using our column structure as a guide.
 
 
 After placing our prioritized and sized card list on the four-column grid, the result should look like this example:
@@ -277,15 +278,15 @@ You can rearrange cards multiple times until you find the layout that works:
 
 We knew details and performance were our top priority items, so we kept those up top and mainly iterated around the rest of the cards. Note how we changed the height of some of the cards to better fit the layout.
 
-Dynamic cards deserve special considerations. You want to avoid situations such as having a one column dynamic card expand and push down a two column card below it, creating a gap of unused space. We’ll explore how this might play out with ther events card in our next example.
+Dynamic cards deserve special considerations. You want to avoid situations such as having a one column dynamic card expand and push down a two column card below it, creating a gap of unused space. We’ll explore how this might play out with the events card in our next example.
 
 <img src="./img/dashboard-what-to-avoid.png" alt="dashboard layout with a gap" width="1680"/>
 
-We could solve this gap by setting the inventory card height to always match the events card. Another potential solution is to always have your events card at a defined height, introducing scroll for any information beyond that does not fit. Flexible and accommodating layouts usually provide the most effective long term solution.
+We could solve this gap by setting the inventory card height to always match the events card. Another potential solution is to always have your events card at a defined height, introducing scroll for any information that does not fit. Flexible and accommodating layouts usually provide the most effective long term solution.
 
 ### Step 5: Add your content and refine your layout
 
-Once you’ve found a couple layouts you’re comfortable with, add your actual content designs to each card and see how it affects their sizing. Start with the standard card templates [link] described at the start of this document. You can modify these or create custom card layouts to meet your needs. Let’s see how we can populate each of the cards in our preliminary layout.
+Once you’ve found a couple layouts you’re comfortable with, add your actual content designs to each card and see how it affects their sizing. Start with the [standard card templates](#Standard-cards) described at the start of this document. You can modify these or create custom card layouts to meet your needs. Let’s see how we can populate each of the cards in our preliminary layout.
 
 #### Details card
 Recall that in Step 1, we defined the Details card as needing to display the cluster name, the provider, and the OS version. This can easily be accomplished by using a standard details card.
