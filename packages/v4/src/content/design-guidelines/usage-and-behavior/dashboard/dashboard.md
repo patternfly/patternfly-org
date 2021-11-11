@@ -286,7 +286,7 @@ We could solve this gap by setting the inventory card height to always match the
 
 ### Step 5: Add your content and refine your layout
 
-Once you’ve found a couple layouts you’re comfortable with, add your actual content designs to each card and see how it affects their sizing. Start with the [standard card templates](#Standard-cards) described at the start of this document. You can modify these or create custom card layouts to meet your needs. Let’s see how we can populate each of the cards in our preliminary layout.
+Once you’ve found a couple layouts you’re comfortable with, add your actual content designs to each card and see how it affects their sizing. Start with the [standard card templates](#standard-cards) described at the start of this document. You can modify these or create custom card layouts to meet your needs. Let’s see how we can populate each of the cards in our preliminary layout.
 
 #### Details card
 Recall that in Step 1, we defined the Details card as needing to display the cluster name, the provider, and the OS version. This can easily be accomplished by using a standard details card.
