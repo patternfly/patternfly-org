@@ -81,13 +81,13 @@ and the degree to which it meets product requirements. Every quarter, stable
 components are proposed as promotion candidates. To view a list of current promotion candidates, visit 
 [this page](https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion).
 
-Once a beta component is promoted, we will not make any breaking changes to the components outside of a well advertised 
-breaking change release. Breaking changes are changes which introduce visual changes, changes to applied css 
+Once promoted, breaking changes are not made to components outside of a well-advertised 
+breaking change release. Breaking changes introduce visual changes, changes to applied CSS 
 class names, or changes to existing React props (new React props might be added).
 
 Occasionally, a component is promoted out of beta and subsequent enhancement requests require new CSS class names
 and React props to be introduced. Whenever these enhancements are substantial enough to open the possibility
-for further updates pending testing and feedback, then the newly introduced css class names or React props 
+for further updates pending testing and feedback, then the newly introduced CSS class names or React props 
 as well as relevant examples in the documentation are all labeled as beta.
 
 For more information about beta components, visit [this page](https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion).
