@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.7.13 (2021-12-07)
+
+
+### Bug Fixes
+
+* **pr-preview:** updated failing job to run conditionally ([#2766](https://github.com/patternfly/patternfly-org/issues/2766)) ([4214299](https://github.com/patternfly/patternfly-org/commit/42142996992a2e176fc1549139b1d7c35c9e7434))
+
+
+
+
+
 ## 4.7.12 (2021-11-23)
 
 **Note:** Version bump only for package patternfly-org-4
