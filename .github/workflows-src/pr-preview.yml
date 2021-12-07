@@ -19,6 +19,8 @@ jobs:
       # move v3 docs out to be uploaded separately
       - run: mkdir tmp
       - run: mv build/patternfly-org/v3 tmp
+        name: Move v3 docs
+        if: steps.v3-artifact-cache.outputs.cache-hit != 'true'
       - run: node .github/upload-preview.js build/patternfly-org v4
         name: Upload docs
       # only take the time to upload v3 if there's a change
