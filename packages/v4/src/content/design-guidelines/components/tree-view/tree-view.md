@@ -91,3 +91,12 @@ A tree view in a wizard allows users to apply multiple filters or select multipl
 A tree view in a [primary-detail](/demos/primary-detail) or [drawer](/components/drawer) allows users to switch content based on their selection from a tree. 
 
 <img src="./img/tree-view-primary-detail.png" width="1500" />
+
+## Compact tree view
+Compact tree view is useful when the nodes of a tree view contain more than one paragraph of text, or the content needs to be formatted. Compact tree views include guides that enhance the ability to more easily navigate between individual rows of data in the tree. You can use a compact tree view [with a background](/components/tree-view#compact) or [without background](/components/tree-view#compact-no-background), depending on your use case. 
+
+<img src="./img/compact-tree.png" width="887" />
+
+1. **Guide:** Connected lines between nodes in a tree view 
+2. **Row:** Content with one or multiple lines that can be formatted
+3. **Container:** Area that holds the content and visually distinguishes individual rows with a filled or transparent background
