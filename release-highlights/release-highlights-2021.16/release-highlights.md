@@ -40,9 +40,9 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Password generator demo](https://github.com/patternfly/patternfly-react/issues/6686) - adds a new demo that shows how to use existing components to build a password generator widget to use in creating user credentials.
 
-* [Description list: optionally fill columns first](https://github.com/patternfly/patternfly-react/issues/6683) - in a multi-column description list values are filled in across rows first. This enhancement introduces the option to fill columns first rather than rows.
+* [Description list: optionally fill columns first](https://github.com/patternfly/patternfly-react/issues/6685) - in a multi-column description list values are filled in across rows first. This enhancement introduces the option to fill columns first rather than rows.
 
-* [Progress button demo](https://github.com/patternfly/patternfly-react/issues/6684) - demonstrate how to use the [progress variation](https://www.patternfly.org/v4/components/button#progress)of the button component to reflect in progress and completion states.
+* [Progress button demo](https://github.com/patternfly/patternfly-react/issues/6684) - demonstrate how to use the [progress variation](https://www.patternfly.org/v4/components/button#progress) of the button component to reflect in progress and completion states.
 
 ### 2022.02 (February 18)
 
