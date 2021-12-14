@@ -13,7 +13,7 @@ We've introduced new styling for selectable cards to better distinguish the sele
 
 ![dropdown with secondary button styling](./img/secondary-dropdown.png)
 
-Adds a new variant of the Dropdown component that has secondary button styling. This complements the existing primary styled dropdown to present actions in an expandable menu when those actions are nor intended as the primary actions on a page.
+Adds a new variant of the Dropdown component that has secondary button styling. This complements the existing primary styled dropdown to present actions in an expandable menu when those actions are not intended as the primary actions on a page.
 
 ### [Auto-complete search demo](https://www.patternfly.org/v4/components/text-input-group/react-demos#auto-complete-search)
 
