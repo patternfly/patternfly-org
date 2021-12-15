@@ -1,7 +1,7 @@
 {
   "name": "@patternfly/ast-helpers",
   "description": "Acorn AST helpers for working with live code",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "author": "Red Hat",
   "license": "MIT",
   "publishConfig": {
