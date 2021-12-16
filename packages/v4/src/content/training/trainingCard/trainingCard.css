@@ -1,7 +1,7 @@
 .pf-c-card:not(.pf-org__card-small).pf-org__card {
   border: 2px solid #d2d2d2;
   box-shadow: unset;
-  height: 277px;
+  height: 100%;
 }
 
 .pf-org__card .pf-c-card__header {
@@ -74,6 +74,10 @@
 
 .pf-org__training-components {
   color: #a18fff;
+}
+
+.pf-org__training-design {
+  color: #00B9E4;
 }
 
 .pf-org__training-charts {
