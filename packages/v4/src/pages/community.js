@@ -11,6 +11,7 @@ import QuestionIcon from '@patternfly/react-icons/dist/esm/icons/question-icon';
 import CatalogIcon from '@patternfly/react-icons/dist/esm/icons/catalog-icon';
 import MailBulkIcon from '@patternfly/react-icons/dist/esm/icons/mail-bulk-icon';
 import TwitterIcon from '@patternfly/react-icons/dist/esm/icons/twitter-icon';
+import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-icon';
 
 const CommunityPage = () => (
     <PageSection className="ws-community-page">
@@ -121,6 +122,15 @@ const CommunityPage = () => (
                     <SplitItem isFilled>
                         <Title size="lg" className="ws-title" headingLevel="h4">Send us a Tweet</Title>
                         <a href="//twitter.com/patternfly" target="_blank" rel="noopener noreferrer">PatternFly Twitter</a>
+                    </SplitItem>
+                </Split>
+            </GridItem>
+            <GridItem>
+                <Split>
+                    <SplitItem style={{ marginRight: '12px' }}><CalendarIcon /></SplitItem>
+                    <SplitItem isFilled>
+                        <Title size="lg" className="ws-title" headingLevel="h4">Attend office hours</Title>
+                        <a href="//calendar.google.com/calendar/embed?src=patternflyteam%40gmail.com&ctz=America%2FNew_York" target="_blank" rel="noopener noreferrer">PatternFly calendar</a>
                     </SplitItem>
                 </Split>
             </GridItem>
