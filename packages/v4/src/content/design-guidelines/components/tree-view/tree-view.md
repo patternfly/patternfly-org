@@ -13,11 +13,11 @@ A default tree view consists of 5 elements:
 
 <img src="./img/tree-view-elements.png" width="332" />
 
-1. **Expand/collapse:** An option to expand or collapse parent nodes to reveal child nodes 
-2. **Parent node:** A node that contains other items (for example, a folder that contains multiple documents)
-3. **Child node:** A node within the parent node (for example, a document within a folder)
-4. **Leaf node:** A node without children
-5. **Truncation indicator:** Ellipses indicating truncated text for longer names that don't fit in the node width
+1. **Expand/collapse:** An option to expand or collapse parent nodes to reveal child nodes. 
+2. **Parent node:** A node that contains other items (for example, a folder that contains multiple documents).
+3. **Child node:** A node within the parent node (for example, a document within a folder).
+4. **Leaf node:** A node without children.
+5. **Truncation indicator:** Ellipses indicating truncated text for longer names that don't fit in the node width.  
 
 ## Usage
 
@@ -36,17 +36,17 @@ Use a tree view when:
 Don’t use a tree view when: 
 * You select 1 item from a small set. Instead, use [simple list](/components/simple-list), [select lists](/components/select), [radio buttons](/components/radio), [checkboxes](/components/checkbox), or a [dropdown](/components/dropdown).
 * You need to see an overview of a large amount of data.
-* You need to compare two large sets of data. Use [charts](/charts/about) for a better view. 
+* You need to compare 2 large sets of data. Use [charts](/charts/about) for a better view. 
 * The hierarchy is too deep and includes hundreds of items. Instead, use a [drill-down menu](/components/menu#drilldown).
 
 ## Tree view capabilities
 
 You can add these functionalities to a tree view:
-* **[Search bar](#adding-a-search-bar-to-a-tree-view)** for searching items in the tree view
-* **[Checkboxes](#adding-checkboxes-to-a-tree-view)** for selecting items in the tree view
-* **[Badges](#adding-badges-to-a-tree-view)** for showing the number of child nodes in the tree view
-* **[Icons](#adding-icons-to-a-tree-view)** for visually representing the node types in the tree view
-* **[Action items](#adding-action-items-to-a-tree-view)** for adding an action to each item in the tree view
+* **[Search bar](#adding-a-search-bar-to-a-tree-view)** for searching items in the tree view.
+* **[Checkboxes](#adding-checkboxes-to-a-tree-view)** for selecting items in the tree view.
+* **[Badges](#adding-badges-to-a-tree-view)** for showing the number of child nodes in the tree view.
+* **[Icons](#adding-icons-to-a-tree-view)** for visually representing the node types in the tree view.
+* **[Action items](#adding-action-items-to-a-tree-view)** for adding an action to each item in the tree view.
 
 ### Adding a search bar to a tree view
 
@@ -62,13 +62,13 @@ Add checkboxes to a tree view if you’re selecting multiple items or applying m
 
 ### Adding badges to a tree view
 
-Add badges to a tree view if you want to show the number of items inside. Don’t use it for displaying different information. Items without children can't have badges as they don't contain anything.
+Add badges to a tree view if you want to show the number of items inside. Don’t use it for displaying different information. Items without children can't have badges, as they don't contain anything.
 
 <img src="./img/with-badges.png" width="332" />
 
 ### Adding icons to a tree view
 
-Add icons to a tree view if you want to visually representing the type of items in a tree. For example, a folder system. If you choose to add icons to a tree view, apply the icons on all items in a tree or leave the items without children iconless, to maintain consistency. We don’t recommend using icons and checkboxes at the same time due to the large indentation and loss of space it would result in. 
+Add icons to a tree view if you want to visually representing the type of items in a tree. For example, a folder system. To maintain consistency, if you choose to add icons to a tree view, apply the icons on all items in a tree or leave the items without children iconless. We don’t recommend using icons and checkboxes at the same time due to the large indentation and loss of space it would result in. 
 
 <img src="./img/with-icons.png" width="761" />
 
@@ -97,6 +97,6 @@ Compact tree view is useful when the nodes of a tree view contain more than one 
 
 <img src="./img/compact-tree.png" width="887" />
 
-1. **Guide:** Connected lines between nodes in a tree view 
-2. **Row:** Content with one or multiple lines that can be formatted
-3. **Container:** Area that holds the content and visually distinguishes individual rows with a filled or transparent background
+1. **Guide:** Connected lines between nodes in a tree view. 
+2. **Row:** Content with one or multiple lines that can be formatted.
+3. **Container:** Area that holds the content and visually distinguishes individual rows with a filled or transparent background.
