@@ -39,6 +39,12 @@ Vertical tabs are placed on the left hand side of a page or container.
 
 <img src="./img/vertical-tabs.png" alt="Vertical tabs ex" width="1500"/>
 
+### Disabled tabs
+
+PatternFly supports a disabled tab variation for all tab types. A disabled tab can be used to indicate that a section is unavailable to the user, usually due to a lack of permissions. Information to explain why the tab is disabled may be provided by using a tooltip on the element.
+
+<img src="./img/disabled-tab.png" alt="Example of disabled tab with tooltip" width="986"/>
+
 ## Hierarchy
 
 When you have more than one tab level in your UI, you can either chose to use a mixture of boxed and default tabs to create hierarchy on a page, or you can chose to use primary and secondary tabs which differ in their font size, with primary tabs using 16pt font, and secondary tabs using 14pt font.
@@ -65,3 +71,4 @@ Use secondary tabs when, you have another set of tabs, in addition to a primary 
 <img src="./img/secondary-2-tabs.png" alt="Secondary tabs ex" width="1500"/>
 
 1. **Secondary tabs:** These should be used when tabs live within a component, like the modal.
+
