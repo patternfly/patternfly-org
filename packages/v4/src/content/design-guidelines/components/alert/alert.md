@@ -26,7 +26,7 @@ Toast alerts are always dismissible, and inline alerts can be both dismissable a
 3. **Close button**: The close button is used to dismiss the alert. It’s required for toast alerts and optional for inline alerts.  
 4. **Actions (optional)**: The actions area enables the user to take a specific action in relation to the alert. One or more actions can be placed inside of an alert.  
 5. **Description (optional)**: The description field communicates additional information to the user. It can also include a navigation link as an alternative to an action.
-
+6. **Expandable alert (optional)**: The expansion reveals additional information.
 
 ## Communicating severity
 The status icon, background, and alert title are coded to communicate the severity of an alert.
