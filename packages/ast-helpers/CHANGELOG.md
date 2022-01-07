@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2022-01-07)
+
+
+### Features
+
+* **docs:** add sketch design training to site ([#2671](https://github.com/patternfly/patternfly-org/issues/2671)) ([d533286](https://github.com/patternfly/patternfly-org/commit/d533286854c627b469aefe16867fa19d080bec3f))
+
+
+
+
+
 ## 0.1.21 (2021-12-21)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
