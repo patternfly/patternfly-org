@@ -25,7 +25,7 @@ A **navigation** organizes an application’s structure and content, making it e
 Vertical navigation is hierarchical global navigation that displays navigation options from top to bottom on the left side of a screen. PatternFly vertical navigation can be collapsed to provide additional screen real estate by using a menu icon button at the top left.
 
 #### When to use
-* You have five or more primary navigation items
+* You have 5 or more primary navigation items
 * You have secondary navigation items (even if you have less than five primary navigation items)
 * You expect your application to be used on mobile devices
 
@@ -58,8 +58,8 @@ Horizontal navigation is global navigation that displays navigation items from l
 <img src="./img/horizontal-nav.png" alt="Example of horizontal navigation" width="990"/>
 
 #### When to use
-* You have less than five primary navigation items
-* You have only one level of navigation and no secondary navigation items
+* You have less than 5 primary navigation items
+* You have only 1 level of navigation and no secondary navigation items
 
 ### Secondary horizontal navigation
 

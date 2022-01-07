@@ -3,7 +3,7 @@ id: Number input
 section: components
 ---
 
-A **number input** provides a quick and effective way for users to enter and modify a numeric value. Similar to <a href="https://www.patternfly.org/v4/components/input-group/">input groups</a>, number inputs combine two input types into one control: A text input field with buttons on either side. When combined, these elements allow users to input numeric values in a responsive and scalable way.
+A **number input** provides a quick and effective way for users to enter and modify a numeric value. Similar to <a href="https://www.patternfly.org/v4/components/input-group/">input groups</a>, number inputs combine 2 input types into 1 control: A text input field with buttons on either side. When combined, these elements allow users to input numeric values in a responsive and scalable way.
 
 ## Elements
 <img src="./img/number_input_anatomy.png" alt="Number input elements" width="537px"/>

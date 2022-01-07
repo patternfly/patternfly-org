@@ -3,7 +3,7 @@ id: Alert group
 section: components
 ---
 
-An **alert group** stacks and positions two or more alerts in a layer over the main content of a page. Alert groups should always rank alerts by age, stacking new alerts on top of old ones as they surface. 
+An **alert group** stacks and positions 2 or more alerts in a layer over the main content of a page. Alert groups should always rank alerts by age, stacking new alerts on top of old ones as they surface. 
 
 Use an alert group when you need to position multiple alerts on the same page, mainly [toast alerts](/components/alert/design-guidelines#elements). Toast alerts continue to stack until a user dismisses them or they reach an automatic timeout (8 seconds is recommended).
 

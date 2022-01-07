@@ -3,10 +3,10 @@ id: Code block
 section: components
 ---
 
-A **code block** is a component that contains two or more lines of ready-only code. The code in a code block can be copied to the clipboard.
+A **code block** is a component that contains 2 or more lines of ready-only code. The code in a code block can be copied to the clipboard.
 
 ## Elements
-Code block has four main components.
+Code block has 4 main components.
 
 <img src="./img/code-block-structure.png" alt="Elements of the code block component" width="441"/>
 

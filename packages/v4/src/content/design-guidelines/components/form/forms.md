@@ -72,23 +72,23 @@ PatternFly provides a variety of input components that enable a user to make a s
 
 #### Switch
 
-Use a [switch](/components/switch/design-guidelines) to toggle between two different states in a form.
+Use a [switch](/components/switch/design-guidelines) to toggle between 2 different states in a form.
 
 #### Radio buttons
 
-Use [radio buttons](/components/radio/design-guidelines) when users can only choose one option from a list of two to five mutually exclusive options.  
+Use [radio buttons](/components/radio/design-guidelines) when users can only choose 1 option from a list of 2 to 5 mutually exclusive options.  
 
 #### Checkboxes
 
-Use [checkboxes](/components/checkbox/design-guidelines) to enable users to select all, some, or none of the available options from a list of up to five items.
+Use [checkboxes](/components/checkbox/design-guidelines) to enable users to select all, some, or none of the available options from a list of up to 5 items.
 
 #### Select lists
 
-Use a [select list](/components/select/design-guidelines) to enable users to select one or more options from a list of more than five items.
+Use a [select list](/components/select/design-guidelines) to enable users to select 1 or more options from a list of more than 5 items.
 
 #### Data input arrangement
 
-Data inputs can be arranged in three different ways depending on space considerations.
+Data inputs can be arranged in 3 different ways depending on space considerations.
 
 1. **Horizontal placement:** Use when vertical space is scarce or to arrange three inputs or fewer.
 
@@ -170,7 +170,7 @@ If all form fields are required, don’t use an asterisk for each one. Instead, 
 
 ### User help
 
-There are three different methods for providing assistance within a form: [Placeholder text](#placeholder-text), [helper text](#helper-text), and [popovers](#popovers).
+There are 3 different methods for providing assistance within a form: [Placeholder text](#placeholder-text), [helper text](#helper-text), and [popovers](#popovers).
 
 
 #### Placeholder text
