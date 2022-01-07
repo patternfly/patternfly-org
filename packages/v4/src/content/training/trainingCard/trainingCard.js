@@ -6,6 +6,7 @@ import ClockIcon from '@patternfly/react-icons/dist/esm/icons/clock-icon';
 import RunningIcon from '@patternfly/react-icons/dist/esm/icons/running-icon';
 import PuzzlePieceIcon from '@patternfly/react-icons/dist/esm/icons/puzzle-piece-icon';
 import ChartBarIcon from '@patternfly/react-icons/dist/esm/icons/chart-bar-icon';
+import SketchIcon from '@patternfly/react-icons/dist/esm/icons/sketch-icon';
 import { Link } from 'theme-patternfly-org/components/link/link';
 import { capitalize } from 'theme-patternfly-org/helpers/capitalize';
 import './trainingCard.css';
@@ -16,6 +17,9 @@ const getTrainingIcon = trainingType => {
   }
   else if (trainingType === 'react-components') {
     return <PuzzlePieceIcon className="pf-org__training-components" />;
+  }
+  else if (trainingType === 'design') {
+    return <SketchIcon className="pf-org__training-design" />;
   }
 
   return <ChartBarIcon className="pf-org__training-charts" />;
@@ -28,7 +32,8 @@ export const TrainingCard = ({
   time,
   description,
   subsection,
-  katacodaId
+  katacodaId = null,
+  designUrl = null
 }) => (
   <Card className="pf-org__card" isCompact>
     <CardHeader>
@@ -51,12 +56,22 @@ export const TrainingCard = ({
       {description}
     </CardBody>
     <CardFooter>
-    <Link to={`/training/${katacodaId}`} >
-      <Button variant="link">
-        Start
-        <ArrowRightIcon />
-      </Button>
-    </Link>
+    {katacodaId && (
+      <Link to={`/training/${katacodaId}`} >
+        <Button variant="link">
+          Start
+          <ArrowRightIcon />
+        </Button>
+      </Link>
+    )}
+    {designUrl && (
+      <Link to={designUrl} >
+        <Button variant="link">
+          Start
+          <ArrowRightIcon />
+        </Button>
+      </Link>
+    )}
     </CardFooter>
   </Card>
 );
