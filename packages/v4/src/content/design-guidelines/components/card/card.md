@@ -47,7 +47,7 @@ PatternFly supports three types of cards:
 
 ### Border treatments
 
-PatternFly offers two types of border treatments for cards:
+PatternFly offers 2 types of border treatments for cards:
 
 <img src="./img/card-borders.png" alt="cards with default and flat borders " width="452" />
 

@@ -139,7 +139,7 @@ Help popovers at the modal level explain and provide documentation for an entire
 
 All modal content should be descriptive and specific so that users can scan, understand an action's context, and make a quick decision.
 
-A modal is comprised of three main content sections:
+A modal is comprised of 3 main content sections:
 
 1. **Headline:** A headline introduces a modal’s purpose, usually as a question. Use important key words like “permanently” to contextualize an action and its impact.
 

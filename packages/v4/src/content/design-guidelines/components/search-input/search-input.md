@@ -30,7 +30,7 @@ Another way to use search input is as a find function. This would mean that the 
 
 2. **Optional badge:** A badge, by itself, can be used to capture the total count of matches. In this case, since navigation is also being used, it displays the match number that the user is highlighting compared to the total number of matches.
 
-3. **Optional navigation:** The navigation feature allows the user to navigate one-by-one through the matched results. It will correspond to the count that is within the badge.
+3. **Optional navigation:** The navigation feature allows the user to navigate 1-by-1 through the matched results. It will correspond to the count that is within the badge.
 
 4. **Match highlight:** All matches will be highlighted using `gold-50`from the [PatternFly color palette](/guidelines/colors#color-palette).
 

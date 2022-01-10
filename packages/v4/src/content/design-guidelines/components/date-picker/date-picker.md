@@ -43,7 +43,7 @@ Combine a date picker and time picker when you want users to select a range of t
 
 When date pickers and time pickers are combined, each control’s behavior will remain the same. After users select the start date and time, the end date and time will be automatically set to the same hour of the next day.
 
-Depending on your use case, time pickers and date pickers can be arranged in two ways: Horizontal alignment and vertical alignment (in this case labels are recommended).
+Depending on your use case, time pickers and date pickers can be arranged in 2 ways: Horizontal alignment and vertical alignment (in this case labels are recommended).
 
 **Horizontal**
 

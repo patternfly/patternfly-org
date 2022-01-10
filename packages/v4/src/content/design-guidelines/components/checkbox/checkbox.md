@@ -6,7 +6,7 @@ section: components
 A **checkbox** is used to select a single item or multiple items, typically to choose elements to perform an action or to reflect a binary setting.
 
 ## Usage
-Checkboxes allow users to choose **one or more items** from a list of options.
+Checkboxes allow users to choose **1 or more items** from a list of options.
 
 <img src="./img/checkbox-horizontal.png" alt="Example of form question with checkboxes aligned horizontally" width="312"/>
 
@@ -17,7 +17,7 @@ You can also use a single checkbox to allow a user to enable or disable a featur
 #### General guidelines
 
 * Use checkboxes if you’re presenting 5 or fewer options to the user. If you’re presenting more than 5 options, use a [select list](/components/select/design-guidelines) instead.
-* Use checkboxes if the user can select multiple options. If the user can only select one option, then use radio buttons. 
+* Use checkboxes if the user can select multiple options. If the user can only select 1 option, then use radio buttons. 
 
 
 ### Labeling and alignment

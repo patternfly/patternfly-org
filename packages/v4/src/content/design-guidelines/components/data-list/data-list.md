@@ -6,7 +6,7 @@ related: ['Table']
 
 A **data list** is used to display large data sets when you need a flexible layout or need to include interactive content like charts.
 
-PatternFly offers two components for displaying large data sets: data lists and [tables](/components/table/design-guidelines). While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
+PatternFly offers 2 components for displaying large data sets: data lists and [tables](/components/table/design-guidelines). While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
 
 Use data lists when:
 * A flexible layout is more important than arranging information in a grid.
@@ -22,7 +22,7 @@ Think of each row in a data list as a container for some formatted content. In P
 * **[Flex](/layouts/flex/react):** Enables more customization control over the alignment and spacing options provided in the other layouts.
 
 ## Compact and default data lists
-PatterFly supports two main types of data lists:
+PatterFly supports 2 main types of data lists:
 
 1. **[Compact data list](#compact-spacing):** Use when you want to show as much data per page as possible.
 2. **[Default data list](#default-spacing):** Use when you don’t have to minimize paging.
