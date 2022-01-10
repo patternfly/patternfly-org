@@ -2,16 +2,16 @@
 id: Radio
 section: components
 ---
-A **radio button** is used to present the user with mutually exclusive choices. Always present radio buttons in groups of two or more.
+A **radio button** is used to present the user with mutually exclusive choices. Always present radio buttons in groups of 2 or more.
 
 ## Usage
-Radio buttons allow users to select **one item** from a list of options.
+Radio buttons allow users to select **1 item** from a list of options.
 
 <img src="./img/radio.png" alt="Example of radio button options" width="187"/>
 
 **General guidelines**
 
-*  Use radio buttons when a user needs to make one mutually exclusive choice, and only one option can be selected at a time.
+*  Use radio buttons when a user needs to make 1 mutually exclusive choice, and only one option can be selected at a time.
 * A default option should always be selected for the user. If the user selects a different option, the default option should be automatically deselected.
 * To enable the user to select a null option, provide a radio button with the label “None.”
 * Use radio buttons if you’re presenting 5 or fewer options to the user. If you’re presenting more than 5 options, use a [single select list](/components/select/design-guidelines#single-select). 

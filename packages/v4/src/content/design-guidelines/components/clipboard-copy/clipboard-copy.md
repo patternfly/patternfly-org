@@ -5,7 +5,7 @@ section: components
 The **clipboard copy** component allows users to quickly and easily copy content to their clipboard.
 
 ## Elements
-Clipboard copy has three main components.
+Clipboard copy has 3 main components.
 
 <img src="./img/clipboard-copy-elements.png" alt="Elements of the clipboard copy component" width="468"/>
 

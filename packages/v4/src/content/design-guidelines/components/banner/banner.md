@@ -3,12 +3,12 @@ id: Banner
 section: components
 ---
 
-A **banner** is a one-line, full color, full width container that can be used to communicate short snippets of information to users. Banners are un-intrusive, non-dismissible, and only support link buttons.
+A **banner** is a 1-line, full color, full width container that can be used to communicate short snippets of information to users. Banners are un-intrusive, non-dismissible, and only support link buttons.
  
 For use cases requiring more than a single line of content or requiring important actions for the user to take, the flow should make use of the [inline alert](/components/alert/design-guidelines#inline-alerts) or [hint pattern](/components/hint/design-guidelines) instead, as they allow for more flexibility around these use cases. 
  
 ## Usage
-PatternFly offers five different banner types detailed below.
+PatternFly offers 5 different banner types detailed below.
  
 <img src="./img/banner-types.png" alt="5 different types of banners" width="744"/>
  
@@ -20,7 +20,7 @@ PatternFly offers five different banner types detailed below.
 |Success|Green <br />(--pf-global--success-color--100) | White | Use for positive, success messages|
 |Warning |Orange <br />(--pf-global--warning-color--100) | Black | Use for warning or medium severity messages |
 <br />
-PatternFly suggests that users adopt one of these five colors, as they’ve been tested against their text colors for accessibility. However, if colors outside of these suggestions are used, we encourage using discretion when selecting the inner text color.
+PatternFly suggests that users adopt one of these 5 colors, as they’ve been tested against their text colors for accessibility. However, if colors outside of these suggestions are used, we encourage using discretion when selecting the inner text color.
  
 ### Placement
  

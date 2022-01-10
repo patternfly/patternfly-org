@@ -4,7 +4,7 @@ section: components
 ---
 A **table** is used to display large data sets that can be easily laid out in a simple grid with column headers.
 
-PatternFly offers two components for displaying large data sets: [data lists](/components/data-list/design-guidelines) and tables. While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
+PatternFly offers 2 components for displaying large data sets: [data lists](/components/data-list/design-guidelines) and tables. While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
 
 Use tables when:
 * Users will want to consume data as a grid (in other words, structured rows and columns).
@@ -15,7 +15,7 @@ Use tables when:
 Consider the structure of the data you want to display and organize that information into columns. Columns will typically have column headers. Every row within a table must have a consistent format. If the table row includes actions, they should always be placed in the rightmost column(s).
 
 ### Compact and default tables
-PatternFly supports two main types of tables:
+PatternFly supports 2 main types of tables:
 
 1. **[Compact table](#compact-spacing):** when you want to show as much data per page as possible.
 2. **[Default table](#default-spacing):** when you don’t have to minimize paging.
@@ -134,7 +134,7 @@ Whether to use a table/data list with compact or default spacing is up to you an
 A table may sometimes need to be compact to make more rows visible at a time. The more rows you can see, the less you need to use [pagination](/components/pagination/design-guidelines). Compact spacing is recommended for data with a simple structure. See an example below.
 
 **Use compact spacing when:**
-* You need to show as much data as possible on one page.
+* You need to show as much data as possible on 1 page.
 * You need to show data in a small space. For example in modal or wizard.
 * You need to minimize paging.
 * Readability is a secondary concern.
@@ -142,7 +142,7 @@ A table may sometimes need to be compact to make more rows visible at a time. Th
 <img src="./img/compact-spacing.png"  alt="Compact spacing"  width="1162"/>
 
 **Example:**
-* You can see more data on one page.
+* You can see more data on 1 page.
 * You have a good overview about the structure of data.
 * The structure of data is simple, informative and have less visual elements.
 

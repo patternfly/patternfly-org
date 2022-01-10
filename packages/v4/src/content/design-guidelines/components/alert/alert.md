@@ -6,7 +6,7 @@ related: ['Alert', 'Alert group']
 
 An **alert** is a notification that provides brief information to the user without blocking their workflow.
 
-There are two main types of alerts:  
+There are 2 main types of alerts:  
 
 - **Inline alerts**: Inline alerts communicate information about a specific user action on a page. An inline alert appears within the content area and disappears when the user closes it or navigates away from the page.
 
@@ -24,7 +24,7 @@ Toast alerts are always dismissible, and inline alerts can be both dismissable a
 1. **Status area**: The status area indicates the severity of the alert with a specific icon and color.   
 2. **Alert title**: The alert title concisely communicates the alert’s main message. Its text color is coded to match the alert type.  
 3. **Close button**: The close button is used to dismiss the alert. It’s required for toast alerts and optional for inline alerts.  
-4. **Actions (optional)**: The actions area enables the user to take a specific action in relation to the alert. One or more actions can be placed inside of an alert.  
+4. **Actions (optional)**: The actions area enables the user to take a specific action in relation to the alert. 1 or more actions can be placed inside of an alert.  
 5. **Description (optional)**: The description field communicates additional information to the user. It can also include a navigation link as an alternative to an action.
 6. **Expandable alert (optional)**: The expansion reveals additional information.
 

@@ -6,7 +6,7 @@ An **input group** includes multiple input types, like a text input and a button
 
 ## Usage
 
-Input groups can combine multiple elements. For example you could add buttons to one or both sides of a text input, like in a search field or an email input field. 
+Input groups can combine multiple elements. For example you could add buttons to 1 or both sides of a text input, like in a search field or an email input field. 
 
 <img src="./img/input-group.png" alt="Example of input groups" width="496"/>
 

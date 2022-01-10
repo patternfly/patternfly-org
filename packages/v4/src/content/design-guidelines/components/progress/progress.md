@@ -25,9 +25,9 @@ Use a progress bar when:
 
 * A user needs to monitor a background process, especially if that process may take a long time.
 
-Depending on your use case, you might choose between two types of loading indicators: Progress bars and [spinners](/components/spinner). Never use a progress bar and spinner together. 
+Depending on your use case, you might choose between 2 types of loading indicators: Progress bars and [spinners](/components/spinner). Never use a progress bar and spinner together. 
 
-Default to progress bars for processes that take longer than four seconds or require more specific information about process completion. If a process takes less than four seconds, use a [spinner](/components/spinner) instead. 
+Default to progress bars for processes that take longer than 4 seconds or require more specific information about process completion. If a process takes less than four seconds, use a [spinner](/components/spinner) instead. 
 
 ## Variations
 <img src="./img/progress_bar_blue_animated.gif" alt="An animated progress bar demonstrates how a progress track fills and progress value increases as a process moves toward completion." width="500" height="300" />
