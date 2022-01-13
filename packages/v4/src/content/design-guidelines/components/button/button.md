@@ -105,7 +105,13 @@ A progress button can be used to provide the user with feedback that an action i
 
 _Example of using a progress button_
 
-<img src="./img/progress-button.png" alt="Example of progress button usage" width="1856"/>
+<img src="./img/progress-button.png" alt="Example of progress button usage" width="1636"/>
+
+1. The user clicks the submit button.
+
+2. A spinner indicates that the operation is in progress.
+
+3. When complete, use a success icon (fa-check-circle) and a change in the label text to indicate that the operation was successfully completed.
 
 Use a progress button when clicking a submit button will not navigate the user to a new page or open a modal. For operations that will take more than a few seconds, use of a modal with a progress bar is recommended to reflect status and indicate time to completion.
 
