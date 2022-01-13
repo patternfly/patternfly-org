@@ -105,7 +105,7 @@ A progress button can be used to provide the user with feedback that an action i
 
 _Example of using a progress button_
 
-<img src="./img/progress-button.png" alt="Example of progress button usage" width="1636"/>
+<img src="./img/progress-button.png" alt="Example of progress button usage" width="1435"/>
 
 1. The user clicks the submit button.
 
