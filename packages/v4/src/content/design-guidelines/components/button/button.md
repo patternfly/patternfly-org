@@ -105,7 +105,7 @@ A progress button can be used to provide the user with feedback that an action i
 
 _Example of using a progress button_
 
-<img src="./img/progress-button.png" alt="Example of progress button usage" width="2563"/>
+<img src="./img/progress-button.png" alt="Example of progress button usage" width="1856"/>
 
 Use a progress button when clicking a submit button will not navigate the user to a new page or open a modal. For operations that will take more than a few seconds, use of a modal with a progress bar is recommended to reflect status and indicate time to completion.
 
