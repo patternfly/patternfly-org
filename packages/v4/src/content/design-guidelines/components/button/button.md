@@ -7,10 +7,10 @@ A **button** is a box area or text that communicates and triggers user actions w
 
 ## Usage
 
-Buttons can be used to communicate and immediately trigger actions a user can take in an application, like submitting a form, canceling a process, or creating a new object. Buttons can also be used to take a user to a new location, like another page inside of a web application, or an external site such as help or documentation. 
+Buttons can be used to communicate and immediately trigger actions a user can take in an application, like submitting a form, canceling a process, or creating a new object. Buttons can also be used to take a user to a new location, like another page inside of a web application, or an external site such as help or documentation.
 
 ### Button types
-The following button styles, shown in order of visual hierarchy, can be used in your designs according to your needs. 
+The following button styles, shown in order of visual hierarchy, can be used in your designs according to your needs.
 * [Danger button](#danger-button)
 * [Primary button](#primary-button)
 * [Secondary button](#secondary-button)
@@ -54,7 +54,7 @@ _Example of secondary buttons in data lists_
 
 Tertiary buttons are one the least visually prominent buttons and are designed to be less striking than a primary or secondary button, while still retaining a classic button format. Tertiary buttons are flexible and can be used as needed.
 
-In this example, you can see a tertiary button used to show a possible “Edit” action. This button format highlights the action, while making it clear that it is not the main call to action on the page. 
+In this example, you can see a tertiary button used to show a possible “Edit” action. This button format highlights the action, while making it clear that it is not the main call to action on the page.
 
 _Example of tertiary button on a page_
 
@@ -73,7 +73,7 @@ While all link buttons lack borders, they can still vary in appearance. Link but
 
 <img src="./img/link-right.png" alt="Example of link button with icon on the right" width="143"/>
 
-You might use a link button instead of a secondary button format to create greater visual hierarchy between two buttons. Examples include using text buttons as cancel buttons in modals or wizards, as well as for secondary actions in empty states. 
+You might use a link button instead of a secondary button format to create greater visual hierarchy between two buttons. Examples include using text buttons as cancel buttons in modals or wizards, as well as for secondary actions in empty states.
 
 _Example of a link button in a modal_
 
@@ -99,6 +99,16 @@ Call To Action buttons and links are used on websites to direct users to complet
 
 Call To Actions have similar variants to regular buttons (although they have a larger padding), and follow the same visual hierarchy. However, CTA buttons are used only to indicate a desired next step, whereas other button types may also be used to link to additional information or actions. Call To Actions should be used sparingly (ideally one per page, or a primary and secondary CTA).
 
+#### Progress button
+
+A progress button can be used to provide the user with feedback that an action is in progress after the button is clicked. To indicate that an action is taking place, a spinner is inserted in front of the button label. You can optionally replace the spinner with a completion icon when the action completes.
+
+_Example of using a progress button_
+
+<img src="./img/progress-button.png" alt="Example of progress button usage" width="2563"/>
+
+Use a progress button when clicking a submit button will not navigate the user to a new page or open a modal. For operations that will take more than a few seconds, use of a modal with a progress bar is recommended to reflect status and indicate time to completion.
+
 <!--  ### Using buttons in your designs
 We recommend aligning buttons to different elements or areas on the screen depending on the content being provided. The recommended alignment simplifies scanning and helps users complete and submit form content more quickly.  
 
@@ -121,11 +131,11 @@ The placement of buttons on wizards will depend on the layout of content you pre
 
 ## Usage guidelines
 
-There are certain cases where specific buttons must be used within your UI. 
+There are certain cases where specific buttons must be used within your UI.
 
 Follow these guidelines for buttons in wizards:  
-* The **Next** button should always be a primary button. 
-* The **Back** button should always be a secondary button. 
+* The **Next** button should always be a primary button.
+* The **Back** button should always be a secondary button.
 * The **Cancel** button should always be a text button.
 
 <img src="./img/wizard.png" alt="Example of buttons in a wizard" />
@@ -140,7 +150,7 @@ Always use link buttons in the following cases:
     <img src="./img/link_empty.png" alt="Example of a link button in an empty state" width="600"/>
 
 * For action buttons in tables
- 
+
     <img src="./img/link_table.png" alt="Example of link buttons in a table" />
 
 * For action buttons in alerts
@@ -151,7 +161,7 @@ Always use link buttons in the following cases:
 
 Buttons in forms, modals, or wizards should always be left aligned in the box. This solves for:
 * **Modularity and flexibility:** A standard alignment creates consistency in how objects appear across all areas of an app.
-* **Accessibility:** The form submit buttons are on the same scan line as the form fields, which benefits users who are sight-limited. Also, users who are blind can more easily navigate left-aligned form submit buttons because the button order is consistent across all contexts. 
+* **Accessibility:** The form submit buttons are on the same scan line as the form fields, which benefits users who are sight-limited. Also, users who are blind can more easily navigate left-aligned form submit buttons because the button order is consistent across all contexts.
 * **Responsiveness:** The most important actions (i.e., primary buttons) are encountered first when elements are stacked vertically.
 
 ## Button spacing and action lists
@@ -220,13 +230,13 @@ _Buttons placed in overflow menu due to limited space, with primary button persi
 
 **Writing button labels**
 
-* Be specific and clearly communicate the button's action. 
-* Screen readers may read buttons to users out of context, so button text should be unique and easily understood on its own. Refer to [PatternFly's accessibility guide](/developer-resources/accessibility-guide) for more information. 
+* Be specific and clearly communicate the button's action.
+* Screen readers may read buttons to users out of context, so button text should be unique and easily understood on its own. Refer to [PatternFly's accessibility guide](/developer-resources/accessibility-guide) for more information.
 * Use simple verbs or verb phrases.
 * To avoid wrapping, aim for short labels when possible (1–3 words).
 * Avoid using articles (for example, write “Add source” instead of “Add a source”).
-* Avoid punctuation on buttons. 
-* To call a user's attention to a button or to clarify the button's action, you can add an icon to the button. 
+* Avoid punctuation on buttons.
+* To call a user's attention to a button or to clarify the button's action, you can add an icon to the button.
 * Do not create icons on buttons using punctuation (for example, "+"). Instead, refer to [PatternFly's icons page](/guidelines/icons) for any icons you place on buttons.
 
 
