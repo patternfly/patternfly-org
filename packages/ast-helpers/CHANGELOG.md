@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.3 (2022-01-18)
+
+
+### Bug Fixes
+
+* About PatternFly - update path for global-css link ([#2810](https://github.com/patternfly/patternfly-org/issues/2810)) ([44ca890](https://github.com/patternfly/patternfly-org/commit/44ca890b891a0a2125264fa5becc7014074a5432))
+
+
+
+
+
 ## 0.2.2 (2022-01-11)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
