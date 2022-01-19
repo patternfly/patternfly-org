@@ -3,13 +3,9 @@ id: Button
 section: components
 ---
 
-A **button** is a box area or text that communicates and triggers user actions when clicked or selected.
+A **button** is a box area or text that communicates and triggers user actions when clicked or selected. Buttons can be used to communicate and immediately trigger actions a user can take in an application, like submitting a form, canceling a process, or creating a new object. Buttons can also be used to take a user to a new location, like another page inside of a web application, or an external site such as help or documentation.
 
-## Usage
-
-Buttons can be used to communicate and immediately trigger actions a user can take in an application, like submitting a form, canceling a process, or creating a new object. Buttons can also be used to take a user to a new location, like another page inside of a web application, or an external site such as help or documentation.
-
-### Button types
+## Button types
 The following button styles, shown in order of visual hierarchy, can be used in your designs according to your needs.
 * [Danger button](#danger-button)
 * [Primary button](#primary-button)
@@ -17,12 +13,14 @@ The following button styles, shown in order of visual hierarchy, can be used in 
 * [Tertiary button](#tertiary-button)
 * [Link button](#link-button)
 * [Icon button](#icon-button)
+* [Call To Action button](#Call-To-Action-(CTA)-button)
+* [Progress button](#Progress-button)
 
 <img src="./img/buttons.png" alt="Images of all button types" width="607"/>
 
 You don't need to use these buttons in the order that their labels imply. For example, you don't always need to use the secondary button as the second button in your designs. The most important thing is to establish a visual hierarchy between any buttons in your designs. There are, however, some best practices to keep in mind.
 
-#### Danger button ####
+### Danger button ###
 
 Danger buttons are the most prominent of all the button options. Use danger buttons for actions a user can take that are potentially destructive or difficult/impossible to undo, like deleting or removing user data. These are mostly found in modals to emphasize a destructive action the user is about to take.
 
@@ -30,7 +28,7 @@ _Example of a danger button in a modal_
 
 <img src="./img/danger.png" alt="Example of danger button used in a modal" width="521"/>
 
-#### Primary button ####
+### Primary button ###
 
 A primary button is the most prominent button on a page, used for the most important call to action on a page. Try to limit primary buttons to one per page.
 
@@ -42,7 +40,7 @@ _Example of a primary button inside an empty state_
 
 <img src="./img/prim_ex_2.png" alt="Example of a primary button inside an empty state" width="656"/>
 
-#### Secondary button ####
+### Secondary button ###
 
 Secondary buttons are buttons with less visual prominence than primary buttons. Use secondary buttons for general actions on a page, that don’t require as much emphasis as primary button actions. For example, you can use secondary buttons where there are multiple actions, like in toolbars or data lists.
 
@@ -50,7 +48,7 @@ _Example of secondary buttons in data lists_
 
 <img src="./img/sec_ex.png" alt="Example of secondary buttons in data lists" />
 
-#### Tertiary button ####
+### Tertiary button ###
 
 Tertiary buttons are one the least visually prominent buttons and are designed to be less striking than a primary or secondary button, while still retaining a classic button format. Tertiary buttons are flexible and can be used as needed.
 
@@ -60,7 +58,7 @@ _Example of tertiary button on a page_
 
 <img src="./img/tert_edit.png" alt="Example of tertiary button on a page" />
 
-#### Link button ####
+### Link button ###
 
 Links buttons are labeled buttons with no background or border. Link buttons can be used for actions that:
 * May not need as much emphasis.
@@ -83,7 +81,7 @@ _Example of link buttons in an empty state_
 
 <img src="./img/empty_state_links.png" alt="Example of link buttons in an empty state" width="640"/>
 
-#### Icon button ####
+### Icon button ###
 
 Icon buttons are useful in places where space is limited. For example, if you have too many actions within a menu, you could use a kebab icon to indicate more actions, or an export icon for exporting data. You can also use this button type for actions that are commonly associated with icons, like an exit icon to close a window or a hamburger icon to open a menu.
 
@@ -91,7 +89,7 @@ For example, this toolbar uses an export icon as an action button due to limited
 
 <img src="./img/icon_button.png" alt="Example of kebab used as an icon button inside a toolbar" />
 
-#### Call To Action (CTA) button ####
+### Call To Action (CTA) button ###
 
 Call To Action buttons and links are used on websites to direct users to complete an action. For example, a product detail page could include a CTA button labeled 'Try it now,' which would guide users to a purchase page.
 
@@ -99,9 +97,11 @@ Call To Action buttons and links are used on websites to direct users to complet
 
 Call To Actions have similar variants to regular buttons (although they have a larger padding), and follow the same visual hierarchy. However, CTA buttons are used only to indicate a desired next step, whereas other button types may also be used to link to additional information or actions. Call To Actions should be used sparingly (ideally one per page, or a primary and secondary CTA).
 
-#### Progress button
+### Progress button ###
 
 A progress button can be used to provide the user with feedback that an action is in progress after the button is clicked. To indicate that an action is taking place, a spinner is inserted in front of the button label. You can optionally replace the spinner with a completion icon when the action completes.
+
+Use a progress button when clicking a submit button will not navigate the user to a new page or open a modal. For operations that will take more than a few seconds, use of a modal with a progress bar is recommended to reflect status and indicate time to completion.
 
 _Example of using a progress button_
 
@@ -113,7 +113,6 @@ _Example of using a progress button_
 
 3. When complete, use a success icon (fa-check-circle) and a change in the label text to indicate that the operation was successfully completed.
 
-Use a progress button when clicking a submit button will not navigate the user to a new page or open a modal. For operations that will take more than a few seconds, use of a modal with a progress bar is recommended to reflect status and indicate time to completion.
 
 <!--  ### Using buttons in your designs
 We recommend aligning buttons to different elements or areas on the screen depending on the content being provided. The recommended alignment simplifies scanning and helps users complete and submit form content more quickly.  
@@ -135,7 +134,7 @@ We'll want to include some information for button usage on wizards when we have 
  #### Buttons on wizards
 The placement of buttons on wizards will depend on the layout of content you present. -->
 
-## Usage guidelines
+## Usage
 
 There are certain cases where specific buttons must be used within your UI.
 
