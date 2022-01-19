@@ -13,8 +13,8 @@ The following button styles, shown in order of visual hierarchy, can be used in 
 * [Tertiary button](#tertiary-button)
 * [Link button](#link-button)
 * [Icon button](#icon-button)
-* [Call To Action button](#Call-To-Action-(CTA)-button)
-* [Progress button](#Progress-button)
+* [Call To Action button](#call-to-action-button)
+* [Progress button](#progress-button)
 
 <img src="./img/buttons.png" alt="Images of all button types" width="607"/>
 
@@ -89,9 +89,9 @@ For example, this toolbar uses an export icon as an action button due to limited
 
 <img src="./img/icon_button.png" alt="Example of kebab used as an icon button inside a toolbar" />
 
-### Call To Action (CTA) button ###
+### Call To Action button ###
 
-Call To Action buttons and links are used on websites to direct users to complete an action. For example, a product detail page could include a CTA button labeled 'Try it now,' which would guide users to a purchase page.
+Call To Action (CTA) buttons and links are used on websites to direct users to complete an action. For example, a product detail page could include a CTA button labeled 'Try it now,' which would guide users to a purchase page.
 
 <img src="./img/CTAs.png" alt="Images of all CTA types" width="708"/>
 
