@@ -8,7 +8,7 @@ related: [
 ]
 ---
 
-A **popover** is in-app messaging that provides more information on specific product areas. Popovers display content in a new window that overlays the current page. Unlike modals, popovers don’t block the current page. 
+A **popover** is in-app messaging that provides more information on specific product areas. Popovers display content in a new window that overlays the current page. Unlike modals, popovers don’t block the current page.
 
 Popovers are triggered by a click and dismissed in one of the following ways:
 - The user clicks the exit icon. 
