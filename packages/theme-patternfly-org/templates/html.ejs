@@ -37,7 +37,7 @@
     <% } %>
     <% if (googleAnalyticsID) { %>
       <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47523816-1"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=<%= googleAnalyticsID %>"></script>
       <script>
         if(!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
           window.dataLayer = window.dataLayer || [];
