@@ -212,7 +212,7 @@ const es2017GeneratorJSX = {
   },
   // {...props}
   JSXSpreadAttribute(node, state) {
-    state.write('...(');
+    state.write(' {...(');
     if (node.argument.type === 'LogicalExpression') {
       this[node.argument.left.type](node.argument.left, state);
       state.write(' ');
@@ -223,7 +223,7 @@ const es2017GeneratorJSX = {
     else {
       this[node.argument.type](node.argument, state);
     }
-    state.write(')');
+    state.write(')}');
   },
   // <></>
   JSXFragment(node, state) {
@@ -232,8 +232,17 @@ const es2017GeneratorJSX = {
         attributes: [],
         name: {
           type: 'JSXIdentifier',
-          name: 'React.Fragment'
-        }
+          name: ''
+        },
+        type: 'JSXOpeningElement'
+      },
+      closingElement: {
+        attributes: [],
+        name: {
+          type: 'JSXIdentifier',
+          name: ''
+        },
+        type: 'JSXClosingElement'
       },
       children: node.children
     }, state);
