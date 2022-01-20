@@ -19,7 +19,7 @@ Popovers are triggered by a click and dismissed in one of the following ways:
  
 For information on other forms of on-screen help, see [Tooltip](/components/tooltip/design-guidelines) and [Hint](/components/hint/design-guidelines).
  
-## **Popover types**
+## Popover types
  
 **Default popovers** are plain-text and do not include icons. They are used to convey additional, non-imperative information to the user.
  
