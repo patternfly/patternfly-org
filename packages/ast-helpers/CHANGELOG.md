@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.7 (2022-01-21)
+
+
+### Bug Fixes
+
+* TS to JS conversion - Ability to spread props within components & allow for empty tags (fragments) ([#2816](https://github.com/patternfly/patternfly-org/issues/2816)) ([96e9706](https://github.com/patternfly/patternfly-org/commit/96e9706b05bb5ce18434a7a0dfde67c4e535e749))
+
+
+
+
+
 ## 0.2.6 (2022-01-19)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
