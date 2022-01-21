@@ -214,11 +214,11 @@ const es2017GeneratorJSX = {
   JSXSpreadAttribute(node, state) {
     state.write(' {...');
     if (node.argument.type === 'LogicalExpression') {
-      this[node.argument.left.type](node.argument.left, state);
       state.write('(');
-      state.write(node.argument.operator);
-      state.write(')');
+      this[node.argument.left.type](node.argument.left, state);
+      state.write(` ${node.argument.operator} `);
       this[node.argument.right.type](node.argument.right, state);
+      state.write(')');
     }
     else {
       this[node.argument.type](node.argument, state);
