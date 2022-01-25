@@ -11,7 +11,14 @@ export const TableOfContents = ({ items }) => {
           {item.map(renderItem)}
         </JumpLinksList>
       ) : (
-        <JumpLinksItem key={item.id} href={`#${item.id}`} className="ws-toc-item">
+        <JumpLinksItem key={item.id} href={`#${item.id}`} className="ws-toc-item" onClick={
+          () => console.log({ item }) // TODO: pass in title or slug from Component.getPageData() in mdx.js?
+          // () => sendEvent('component_tab_click', {
+          //   'event_category': 'click_event',
+          //   'tab_name': source,
+          //   'page_name': title
+          // })                 
+        }>
           {item.text}
         </JumpLinksItem>
       )

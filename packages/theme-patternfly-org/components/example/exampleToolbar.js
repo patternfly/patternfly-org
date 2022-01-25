@@ -9,6 +9,7 @@ import CodeIcon from '@patternfly/react-icons/dist/esm/icons/code-icon';
 import AngleDoubleRightIcon from '@patternfly/react-icons/dist/esm/icons/angle-double-right-icon';
 import ReplyAllIcon from '@patternfly/react-icons/dist/esm/icons/reply-all-icon';
 import { copy } from '../../helpers';
+import { sendEvent } from '../../helpers/sendEvent';
 
 function getLanguage(lang) {
   if (lang === 'js') {
@@ -70,7 +71,11 @@ export const ExampleToolbar = ({
             {' ' + lang.toUpperCase()}
           </React.Fragment>
         }
-        onClick={() => setIsEditorOpen(!isEditorOpen)}
+        onClick={() => {
+          setIsEditorOpen(!isEditorOpen);
+          console.log('toggle code');
+          // sendEvent();
+        }}
         aria-label={languageLabel}
         toolTipText={languageLabel}
         aria-expanded={isEditorOpen}
@@ -83,7 +88,11 @@ export const ExampleToolbar = ({
         maxWidth="100px"
         position="top"
       >
-        <Button onClick={copyCode} variant="control" aria-label={copyLabel}>
+        <Button onClick={() => {
+          copyCode();
+          console.log('copied code');
+          // sendEvent();
+        }} variant="control" aria-label={copyLabel}>
           <CopyIcon />
         </Button>
       </Tooltip>
@@ -107,6 +116,10 @@ export const ExampleToolbar = ({
               aria-label={codesandboxLabel}
               variant="control"
               type="submit"
+              onClick={() => {
+                console.log('codesandbox link')
+                // sendEvent();
+              }}
             >
               <input type="hidden" name="parameters" value={codeBoxParams} />
               <CodepenIcon />
@@ -123,6 +136,10 @@ export const ExampleToolbar = ({
           rel="noopener noreferrer"
           aria-label={fullscreenLabel}
           toolTipText={fullscreenLabel}
+          onClick={() => {
+            console.log('fullscreen link')
+            // sendEvent();
+          }}
         />
       }
       {isEditorOpen && lang === 'ts' &&
@@ -134,7 +151,11 @@ export const ExampleToolbar = ({
           )}
           aria-label={convertLabel}
           toolTipText={convertLabel}
-          onClick={() => setCode(convertToJSX(code).code)}
+          onClick={() => {
+            setCode(convertToJSX(code).code);
+            console.log('TS to JS');
+            // sendEvent();
+          }}
         />
       }
       {code !== originalCode &&
@@ -142,7 +163,11 @@ export const ExampleToolbar = ({
           icon={<ReplyAllIcon />}
           aria-label={undoAllLabel}
           toolTipText={undoAllLabel}
-          onClick={() => setCode(originalCode)}
+          onClick={() => {
+            setCode(originalCode);
+            console.log('reset code');
+            // sendEvent();
+          }}
         />
       }
     </React.Fragment>

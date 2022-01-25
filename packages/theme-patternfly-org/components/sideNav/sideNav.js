@@ -6,6 +6,7 @@ import { Location } from '@reach/router';
 import { slugger } from '../../helpers';
 import './sideNav.css';
 import globalBreakpointXl from "@patternfly/react-tokens/dist/esm/global_breakpoint_xl";
+import { sendEvent } from '../../helpers/sendEvent';
 
 const NavItem = ({ text, href }) => {
   const isMobileView = window.innerWidth < Number.parseInt(globalBreakpointXl.value, 10);
@@ -63,6 +64,10 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
                     isActive={isActive}
                     isExpanded={isActive}
                     className="ws-side-nav-group"
+                    onClick={() => {
+                      console.log('sidenav click: ', section);
+                      // sendEvent();
+                    }}
                   >
                     {Object.entries(groupedRoutes[section] || {})
                       .filter(([, { hideNavItem }]) => !Boolean(hideNavItem))

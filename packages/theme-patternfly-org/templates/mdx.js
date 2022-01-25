@@ -4,7 +4,7 @@ import { css } from '@patternfly/react-styles';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Router, useLocation } from '@reach/router';
 import { CSSVariables, PropsTable, TableOfContents, Link, AutoLinkHeader, InlineAlert } from '../components';
-import { capitalize, getTitle, slugger } from '../helpers';
+import { capitalize, getTitle, slugger, sendEvent } from '../helpers';
 import './mdx.css';
 
 const MDXChildTemplate = ({
@@ -22,6 +22,7 @@ const MDXChildTemplate = ({
     katacodaBroken,
     katacodaLayout
   } = Component.getPageData();
+  console.log({sourceLink}, Component.getPageData());
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
   const propsTitle = propComponents.length > 0 && 'Props';
   if (propsTitle && !toc.find(item => item.text === propsTitle)) {
@@ -151,6 +152,14 @@ export const MDXTemplate = ({
                     'pf-c-tabs__item',
                     activeSource === source && 'pf-m-current'
                   )}
+                  onClick={
+                    () =>console.log(`${source}:${title}`)
+                    // () => sendEvent('component_tab_click', {
+                    //   'event_category': 'click_event',
+                    //   'tab_name': source,
+                    //   'page_name': title
+                    // })                 
+                  }
                 >
                   <Link className="pf-c-tabs__link" to={`${path}${index === 0 ? '' : '/' + source}`}>
                     {capitalize(source.replace('html', 'HTML').replace(/-/g, ' '))}
