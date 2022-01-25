@@ -5,13 +5,16 @@ import { SideNavLayout } from 'theme-patternfly-org/layouts';
 import { Footer } from 'theme-patternfly-org/components';
 import { MDXTemplate } from 'theme-patternfly-org/templates/mdx';
 import { routes, groupedRoutes, fullscreenRoutes, getAsyncComponent } from './routes';
+import { googleAnalyticsID } from '../v4/patternfly-docs.config';
 import 'client-styles';
 
-const AppRoute = ({ child, katacodaLayout }) => {
+const AppRoute = ({ child, katacodaLayout, title }) => {
   const location = useLocation();
-  if (typeof window !== 'undefined' && window.ga) {
-    window.ga('set', 'page', location.pathname);
-    window.ga('send', 'pageview');
+  if (typeof window !== 'undefined' && window.gtag) {
+    gtag('config', googleAnalyticsID, {
+      'page_path': location.pathname,
+      'page_title': (title || location.pathname)
+    });
   }
   return (
     <React.Fragment>
@@ -35,6 +38,7 @@ const SideNavRouter = () => {
                 default={path === '/404'}
                 child={<Component />}
                 katacodaLayout={katacodaLayout}
+                title={title}
               />
             : <AppRoute
                 key={path}
@@ -47,6 +51,7 @@ const SideNavRouter = () => {
                   />
                 }
                 katacodaLayout={katacodaLayout}
+                title={title}
               />
           )
         }
