@@ -22,7 +22,6 @@ const MDXChildTemplate = ({
     katacodaBroken,
     katacodaLayout
   } = Component.getPageData();
-  console.log({sourceLink}, Component.getPageData());
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
   const propsTitle = propComponents.length > 0 && 'Props';
   if (propsTitle && !toc.find(item => item.text === propsTitle)) {
@@ -102,7 +101,7 @@ const MDXChildTemplate = ({
           {!katacodaLayout && sourceLink && (
             <React.Fragment>
               <br />
-              <a href={sourceLink} target="_blank">View source on GitHub</a>
+              <a href={sourceLink} target="_blank" onClick={() => sendEvent('view_source_click', 'click_event', source.toUpperCase())}>View source on GitHub</a>
             </React.Fragment>
           )}
         </div>
@@ -152,14 +151,8 @@ export const MDXTemplate = ({
                     'pf-c-tabs__item',
                     activeSource === source && 'pf-m-current'
                   )}
-                  onClick={
-                    () =>console.log(`${source}:${title}`)
-                    // () => sendEvent('component_tab_click', {
-                    //   'event_category': 'click_event',
-                    //   'tab_name': source,
-                    //   'page_name': title
-                    // })                 
-                  }
+                  // Send clicked tab name for analytics
+                  onClick={() => sendEvent('tab_click', 'click_event', source.toUpperCase())}
                 >
                   <Link className="pf-c-tabs__link" to={`${path}${index === 0 ? '' : '/' + source}`}>
                     {capitalize(source.replace('html', 'HTML').replace(/-/g, ' '))}
