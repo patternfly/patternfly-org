@@ -15,12 +15,6 @@ Introduces the ability to truncate text in the middle or at the beginning of a s
 
 Added a new demo that shows how to use existing components to build a password generator field to use in creating user credentials.
 
-### [Progress button demo](https://www.patternfly.org/v4/components/button/react-demos)
-
-![progress button demo](./img/progress-button-demo.png)
-
-Demonstrates how to use the [progress variation](https://www.patternfly.org/v4/components/button#progress) of the button component to reflect in-progress and completion states by substituting a success icon for the spinner when done.
-
 ### [Time picker enhancements](https://www.patternfly.org/v4/components/time-picker#with-seconds)
 
 ![time picker with seconds](./img/time-picker.png)
@@ -32,6 +26,9 @@ In a multi-column description list, this enhancement introduces the option to fi
 
 ### [Increased click-target size for table checkboxes](https://www.patternfly.org/v4/components/table#composable-selectable-with-checkbox)
 This update makes tables with selectable rows more usable by increasing the click target size around checkboxes used to select the row.
+
+### [Progress button demo](https://www.patternfly.org/v4/components/button/react-demos)
+Demonstrates how to use the [progress variation](https://www.patternfly.org/v4/components/button#progress) of the button component to reflect in-progress and completion states by substituting a success icon for the spinner when done.
 
 See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
