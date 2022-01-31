@@ -47,7 +47,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Move expand-all control from toolbar to table header](https://github.com/patternfly/patternfly-react/issues/6783) - based on user feedback, we are moving the expand-all control for expandable tables from the toolbar to the table header row.
 
-### 2022.02 (March 11)
+### 2022.03 (March 11)
 
 * [Adding an overflow feature to alert groups](https://github.com/patternfly/patternfly/issues/1181) - this enhancement will allow for better management of toast alerts. The overflow feature will allow users more control in viewing and acting on multiple alerts without alerts taking over the screen.
 
