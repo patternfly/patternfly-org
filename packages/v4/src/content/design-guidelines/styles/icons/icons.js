@@ -339,6 +339,13 @@ export const iconsData = [
   },
   {
     "Style": "fas",
+    "Name": "fa-file",
+    "React_name": "FileIcon",
+    "Type": " ",
+    "Contextual_usage": " ",
+  },
+  {
+    "Style": "fas",
     "Name": "fa-filter",
     "React_name": "FilterIcon",
     "Type": "Action",
