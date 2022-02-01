@@ -1,11 +1,8 @@
 import React from 'react';
 import {
   Divider,
-  InputGroup,
-  TextInput, 
-  Title, 
-  Button,
-  ButtonVariant,
+  SearchInput,
+  Title,
   Toolbar,
   ToolbarContent,
   ToolbarItem,
@@ -95,6 +92,10 @@ export class IconsTable extends React.Component {
 
   onHoverUnicode = () => {
     this.setState({ tooltipContent: 'Copy' })
+  }
+
+  onClear = () => {
+    this.setState({ searchValue: '' });
   }
 
   customRowWrapper = ({
@@ -219,19 +220,15 @@ export class IconsTable extends React.Component {
         <Toolbar id="data-toolbar-table">
           <ToolbarContent>
             <ToolbarItem>
-              <InputGroup>
-                <TextInput
-                  name="iconsSearch"
-                  id="iconsSearch" type="search"
-                  aria-label="Search icons"
-                  placeholder="Search for any icon, attribute, or usage guideline"
-                  value={searchValue}
-                  onChange={this.handleSearchChange}
-                />
-                <Button variant={ButtonVariant.control} aria-label="search button for search input">
-                  <SearchIcon />
-                </Button>
-              </InputGroup>
+              <SearchInput
+                name="iconsSearch"
+                id="iconsSearch"
+                aria-label="Search icons"
+                placeholder="Search for any icon, attribute, or usage guideline"
+                value={searchValue}
+                onChange={this.handleSearchChange}
+                onClear={this.onClear}
+              />
             </ToolbarItem>
             <ToolbarItem alignment={{ default: 'alignRight' }}>
               <b>{filteredRows.length} items</b>
