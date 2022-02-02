@@ -1,11 +1,8 @@
 import React from 'react';
 import {
   Divider,
-  InputGroup,
-  TextInput, 
-  Title, 
-  Button,
-  ButtonVariant,
+  SearchInput,
+  Title,
   Toolbar,
   ToolbarContent,
   ToolbarItem,
@@ -81,6 +78,10 @@ export class IconRecommendations extends React.Component {
         direction
       }
     });
+  }
+
+  onClear = () => {
+    this.setState({ searchValue: '' });
   }
 
   buildRecommendationRows = (searchTerm) => recommendationsArray.filter(recGroup => recGroup
@@ -159,19 +160,15 @@ export class IconRecommendations extends React.Component {
         <Toolbar id="data-toolbar-recs">
           <ToolbarContent>
             <ToolbarItem>
-              <InputGroup>
-                <TextInput
-                  name="recommendedIconsSearch"
-                  id="recommendedIconsSearch" type="search"
-                  aria-label="Search icons"
-                  placeholder="Search for any icon or usage guideline"
-                  value={searchValue}
-                  onChange={this.handleSearchChange}
-                />
-                <Button variant={ButtonVariant.control} aria-label="search button for search input">
-                  <SearchIcon />
-                </Button>
-              </InputGroup>
+              <SearchInput
+                name="recommendedIconsSearch"
+                id="recommendedIconsSearch"
+                aria-label="Search icons"
+                placeholder="Search for any icon or usage guideline"
+                value={searchValue}
+                onChange={this.handleSearchChange}
+                onClear={this.onClear}
+              />
             </ToolbarItem>
             <ToolbarItem alignment={{ default: 'alignRight' }}>
               <b>{iconRows.length} items</b>
