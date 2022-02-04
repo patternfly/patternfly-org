@@ -26,7 +26,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
   // vfiles allow for nicer error messages and have native `unified` support
   const vfile = toVfile.readSync(mdFilePath);
 
-  const relPath = path.relative(path.join(process.cwd(), '../..'), vfile.path);
+  const relPath = path.relative(path.join(process.cwd(), '../..'), vfile.path).split(path.sep).join(path.posix.sep);
 
   let jsx;
   let outPath;
@@ -212,7 +212,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
     // Transform HAST object to JSX string
     .use(require('./mdx-hast-to-jsx'), {
       getOutPath: () => outPath,
-      getRelPath: () => path.relative(path.dirname(outPath), vfile.dirname), // for imports
+      getRelPath: () => path.relative(path.dirname(outPath), vfile.dirname).split(path.sep).join(path.posix.sep), // for imports
       getPageData: () => pageData // For @reach/router routing
     })
     .process(vfile, (err, file) => {
