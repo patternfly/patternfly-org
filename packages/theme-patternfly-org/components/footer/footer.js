@@ -23,7 +23,7 @@ export const Footer = () => (
           className="pf-u-mb-lg pf-u-mb-0-on-sm"
         >
           <Grid className="pf-u-py-xl">
-            <GridItem sm={6} md={4} className="pf-u-ml-md pf-u-ml-0-on-md pf-u-ml-md pf-u-mb-xl pf-u-mb-0-on-md">
+            <GridItem sm={6} md={4} className="pf-u-ml-md pf-u-ml-0-on-md pf-u-mb-xl pf-u-mb-0-on-md">
               <p
                 className="pf-c-title ws-org-pfsite-footer-menu-list-title"
               >
