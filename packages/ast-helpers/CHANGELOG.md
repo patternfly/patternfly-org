@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.15 (2022-02-06)
+
+
+### Bug Fixes
+
+* **footer:** fix footer link styles ([#2831](https://github.com/patternfly/patternfly-org/issues/2831)) ([ab7d385](https://github.com/patternfly/patternfly-org/commit/ab7d385b1b76c28737ddcee7d3b57321717ab6ed))
+
+
+
+
+
 ## 0.2.14 (2022-02-04)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
