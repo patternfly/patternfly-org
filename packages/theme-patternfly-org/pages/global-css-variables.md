@@ -44,7 +44,7 @@ Where...
 
 ### Breakpoint variables and class suffixes
 
-PatternFly defines a number of standard breakpoints. These are always used as a min-width breakpoint; i.e. using the `-md` breakpoint would apply to everything at the `-md` width and wider.
+PatternFly defines a number of standard breakpoints. These are always used as a `min-width` breakpoint; i.e. using the `-md` breakpoint would apply to everything at the `-md` width and wider. (There is one exception to this, which is in the responsive behavior of the [table component](/components/table).)
 
 Breakpoint suffixes are used in utility classes and layouts as well as in many components as a way to apply class styles at a specified breakpoint. When available, `{-on-[breakpoint]}` will be shown as an available suffix for the class in the usage section of the documentation. The breakpoint suffix is optional and if not specified, the base class will be used. There are breakpoints for `sm`, `md`, `lg`, `xl`, and `2xl`, and the values for the corresponding breakpoints are defined below in the global variables `—pf-global—breakpoint—[breakpoint]`.
 
