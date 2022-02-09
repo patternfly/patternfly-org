@@ -19,11 +19,11 @@ To upload, a user can either:
 <img src="./img/Fileupload.png" alt="File Upload"/> 
 
 1. Label: Text to inform users about how they can interact with the component. The text should describe that you can either drag and drop a file into the drop zone, or click the button to upload a file.
-2. Button: A button to upload files if preferred.
+2. Button: A button to upload files if preferred. 
 
 ## Best practices
 
-- Show the process of uploading. If large file sizes will be supported in your context, showing progress is important. However, if the file size supported will always upload in a matter of a few seconds this may not be necessary. 
+- Show the process of uploading. If large file sizes will be supported in your context, showing progress is important. However, if the file size supported will always upload in a matter of a few seconds this may not be necessary.  
 
 ## Behavior
 ### Upload complete non-editable
