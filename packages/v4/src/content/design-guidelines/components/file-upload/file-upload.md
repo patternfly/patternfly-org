@@ -30,7 +30,7 @@ To upload, a user can either:
 
 ## Behavior
 ### Upload complete non-editable
-<img src="./img/noneditable.png" alt="File upload with greyed out text box"/> 
+<img src="./img/Noneditable.png" alt="File upload with greyed out text box"/> 
 Once the file is uploaded, users cannot edit the text displayed. The text box should be greyed out to indicate it cannot be changed.
 
 
