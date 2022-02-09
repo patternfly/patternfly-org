@@ -4,7 +4,7 @@ import { css } from '@patternfly/react-styles';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Router, useLocation } from '@reach/router';
 import { CSSVariables, PropsTable, TableOfContents, Link, AutoLinkHeader, InlineAlert } from '../components';
-import { capitalize, getTitle, slugger, sendEvent } from '../helpers';
+import { capitalize, getTitle, slugger, trackEvent, EventCategory } from '../helpers';
 import './mdx.css';
 
 const MDXChildTemplate = ({
@@ -101,7 +101,7 @@ const MDXChildTemplate = ({
           {!katacodaLayout && sourceLink && (
             <React.Fragment>
               <br />
-              <a href={sourceLink} target="_blank" onClick={() => sendEvent('view_source_click', 'click_event', source.toUpperCase())}>View source on GitHub</a>
+              <a href={sourceLink} target="_blank" onClick={() => trackEvent('view_source_click', EventCategory.Click, source.toUpperCase())}>View source on GitHub</a>
             </React.Fragment>
           )}
         </div>
@@ -152,7 +152,7 @@ export const MDXTemplate = ({
                     activeSource === source && 'pf-m-current'
                   )}
                   // Send clicked tab name for analytics
-                  onClick={() => sendEvent('tab_click', 'click_event', source.toUpperCase())}
+                  onClick={() => trackEvent('tab_click', EventCategory.Click, source.toUpperCase())}
                 >
                   <Link className="pf-c-tabs__link" to={`${path}${index === 0 ? '' : '/' + source}`}>
                     {capitalize(source.replace('html', 'HTML').replace(/-/g, ' '))}

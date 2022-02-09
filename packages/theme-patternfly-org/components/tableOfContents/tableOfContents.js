@@ -1,7 +1,7 @@
 import React from 'react';
 import { Title, JumpLinks, JumpLinksItem, JumpLinksList } from '@patternfly/react-core';
 import './tableOfContents.css';
-import { sendEvent } from '../../helpers';
+import { trackEvent, EventCategory } from '../../helpers';
 
 export const TableOfContents = ({ items }) => {
   function renderItem(item, index) {
@@ -11,7 +11,7 @@ export const TableOfContents = ({ items }) => {
           {item.map(renderItem)}
         </JumpLinksList>
       ) : (
-        <JumpLinksItem key={item.id} href={`#${item.id}`} className="ws-toc-item" onClick={() => sendEvent('jump_link_click', 'click_event', item.id.toUpperCase())
+        <JumpLinksItem key={item.id} href={`#${item.id}`} className="ws-toc-item" onClick={() => trackEvent('jump_link_click', EventCategory.Click, item.id.toUpperCase())
         }>
           {item.text}
         </JumpLinksItem>

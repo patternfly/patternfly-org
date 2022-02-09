@@ -6,7 +6,7 @@ import { Location } from '@reach/router';
 import { slugger } from '../../helpers';
 import './sideNav.css';
 import globalBreakpointXl from "@patternfly/react-tokens/dist/esm/global_breakpoint_xl";
-import { sendEvent } from '../../helpers';
+import { trackEvent, EventCategory } from '../../helpers';
 
 const NavItem = ({ text, href }) => {
   const isMobileView = window.innerWidth < Number.parseInt(globalBreakpointXl.value, 10);
@@ -69,7 +69,7 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
                       if (!event.target?.href) {
                         const isExpanded = event.currentTarget.classList.contains('pf-m-expanded');
                         // 1 === expand section, 0 === collapse section
-                        sendEvent('sidenav_section_click', 'click_event', section, isExpanded ? 0 : 1);
+                        trackEvent('sidenav_section_click', EventCategory.Click, section, isExpanded ? 0 : 1);
                       }
                     }}
                   >

@@ -9,7 +9,7 @@ import CodeIcon from '@patternfly/react-icons/dist/esm/icons/code-icon';
 import AngleDoubleRightIcon from '@patternfly/react-icons/dist/esm/icons/angle-double-right-icon';
 import ReplyAllIcon from '@patternfly/react-icons/dist/esm/icons/reply-all-icon';
 import { copy } from '../../helpers';
-import { sendEvent } from '../../helpers';
+import { trackEvent, EventCategory } from '../../helpers';
 
 function getLanguage(lang) {
   if (lang === 'js') {
@@ -74,7 +74,7 @@ export const ExampleToolbar = ({
         onClick={() => {
           setIsEditorOpen(!isEditorOpen);
           // 1 === expand code, 0 === collapse code
-          sendEvent('code_editor_control_click',  'click_event', 'TOGGLE_CODE', isEditorOpen ? 0 : 1);
+          trackEvent('code_editor_control_click',  EventCategory.Click, 'TOGGLE_CODE', isEditorOpen ? 0 : 1);
         }}
         aria-label={languageLabel}
         toolTipText={languageLabel}
@@ -90,7 +90,7 @@ export const ExampleToolbar = ({
       >
         <Button onClick={() => {
           copyCode();
-          sendEvent('code_editor_control_click', 'click_event', 'COPY_CODE');
+          trackEvent('code_editor_control_click', EventCategory.Click, 'COPY_CODE');
         }} variant="control" aria-label={copyLabel}>
           <CopyIcon />
         </Button>
@@ -116,7 +116,7 @@ export const ExampleToolbar = ({
               variant="control"
               type="submit"
               onClick={() => {
-                sendEvent('code_editor_control_click', 'click_event', 'CODESANDBOX_LINK');
+                trackEvent('code_editor_control_click', EventCategory.Click, 'CODESANDBOX_LINK');
               }}
             >
               <input type="hidden" name="parameters" value={codeBoxParams} />
@@ -135,7 +135,7 @@ export const ExampleToolbar = ({
           aria-label={fullscreenLabel}
           toolTipText={fullscreenLabel}
           onClick={() => {
-            sendEvent('code_editor_control_click', 'click_event', 'FULLSCREEN_LINK');
+            trackEvent('code_editor_control_click', EventCategory.Click, 'FULLSCREEN_LINK');
           }}
         />
       }
@@ -150,7 +150,7 @@ export const ExampleToolbar = ({
           toolTipText={convertLabel}
           onClick={() => {
             setCode(convertToJSX(code).code);
-            sendEvent('code_editor_control_click', 'click_event', 'TS_TO_JS');
+            trackEvent('code_editor_control_click', EventCategory.Click, 'TS_TO_JS');
           }}
         />
       }
@@ -161,7 +161,7 @@ export const ExampleToolbar = ({
           toolTipText={undoAllLabel}
           onClick={() => {
             setCode(originalCode);
-            sendEvent('code_editor_control_click', 'click_event', 'RESET_CODE');
+            trackEvent('code_editor_control_click', EventCategory.Click, 'RESET_CODE');
           }}
         />
       }

@@ -6,4 +6,4 @@ export * from './slugger';
 export * from './extractExampleHelpers';
 export * from './getTitle';
 export * from './liveCodeTypes';
-export * from './sendEvent';
+export * from './trackEvent';
