@@ -3,7 +3,8 @@ module.exports = {
   pathPrefix: '/v4',
   googleAnalyticsID: 'UA-47523816-6',
   algolia: {
-    apiKey: '06941733239da4f8617d272cf2ed4d5c',
+    apiKey: 'a8fb1726b78594ff97a3418757514404',
+    appId: '79P4ZBH7A3',
     indexName: 'patternfly'
   },
   hasGdprBanner: true,
