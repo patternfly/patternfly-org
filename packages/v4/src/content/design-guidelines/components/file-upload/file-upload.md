@@ -16,11 +16,11 @@ To upload, a user can either:
 
 
 ## Elements
-<img src="./img/Fileupload.png" alt="File Upload"/> 
+<img src="./img/Fileupload.png" alt="File Upload" width="1256"/> 
 
-1. Label: Text to inform users about how they can interact with the component. The text should describe that you can either drag and drop a file into the drop zone, or click the button to upload a file.
+1.**Label**: Text to inform users about how they can interact with the component. The text should describe that you can either drag and drop a file into the drop zone, or click the button to upload a file.
 
-2. Button: A button to upload files if preferred. 
+2.**Button**: A button to upload files if preferred. 
 
 
 ## Best practices
@@ -30,21 +30,21 @@ To upload, a user can either:
 
 ## Behavior
 ### Upload complete non-editable
-<img src="./img/Noneditable.png" alt="File upload with greyed out text box"/> 
+<img src="./img/Noneditable.png" alt="File upload with greyed out text box" width="442"/> 
 Once the file is uploaded, users cannot edit the text displayed. The text box should be greyed out to indicate it cannot be changed.
 
 
 ### Upload complete editable
-<img src="./img/editable.png" alt="File Upload with text editable"/> 
+<img src="./img/editable.png" alt="File Upload with text editable" width="442"/> 
 Once the file is uploaded, the user can edit the text displayed by clicking within the text box.
 
 
 ### Loading states
-<img src="./img/Loading.png" alt="File upload with loading symbol"/> 
+<img src="./img/Loading.png" alt="File upload with loading symbol" width="442"/> 
 While a file is being uploaded, the waiting icon is displayed.
 
 
 ### Error 
-<img src="./img/FileError.png" alt="File upload with a an error alert"/> 
+<img src="./img/FileError.png" alt="File upload with a an error alert" width="448"/> 
 
 When a specific file cannot be uploaded successfully, the corresponding file will show an error state. Error messages should provide clear guidance to help the user resolve the error.
