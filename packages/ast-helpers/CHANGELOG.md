@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2022-02-11)
+
+
+### Features
+
+* **docs:** added click event tracking ([#2828](https://github.com/patternfly/patternfly-org/issues/2828)) ([3892bfb](https://github.com/patternfly/patternfly-org/commit/3892bfbb4a257eafcf3e8fdb95800a1465e59e4a))
+
+
+
+
+
 ## 0.2.18 (2022-02-11)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
