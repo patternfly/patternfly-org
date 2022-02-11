@@ -9,6 +9,7 @@ import CodeIcon from '@patternfly/react-icons/dist/esm/icons/code-icon';
 import AngleDoubleRightIcon from '@patternfly/react-icons/dist/esm/icons/angle-double-right-icon';
 import ReplyAllIcon from '@patternfly/react-icons/dist/esm/icons/reply-all-icon';
 import { copy } from '../../helpers';
+import { trackEvent } from '../../helpers';
 
 function getLanguage(lang) {
   if (lang === 'js') {
@@ -70,7 +71,11 @@ export const ExampleToolbar = ({
             {' ' + lang.toUpperCase()}
           </React.Fragment>
         }
-        onClick={() => setIsEditorOpen(!isEditorOpen)}
+        onClick={() => {
+          setIsEditorOpen(!isEditorOpen);
+          // 1 === expand code, 0 === collapse code
+          trackEvent('code_editor_control_click',  'click_event', 'TOGGLE_CODE', isEditorOpen ? 0 : 1);
+        }}
         aria-label={languageLabel}
         toolTipText={languageLabel}
         aria-expanded={isEditorOpen}
@@ -83,7 +88,10 @@ export const ExampleToolbar = ({
         maxWidth="100px"
         position="top"
       >
-        <Button onClick={copyCode} variant="control" aria-label={copyLabel}>
+        <Button onClick={() => {
+          copyCode();
+          trackEvent('code_editor_control_click', 'click_event', 'COPY_CODE');
+        }} variant="control" aria-label={copyLabel}>
           <CopyIcon />
         </Button>
       </Tooltip>
@@ -107,6 +115,9 @@ export const ExampleToolbar = ({
               aria-label={codesandboxLabel}
               variant="control"
               type="submit"
+              onClick={() => {
+                trackEvent('code_editor_control_click', 'click_event', 'CODESANDBOX_LINK');
+              }}
             >
               <input type="hidden" name="parameters" value={codeBoxParams} />
               <CodepenIcon />
@@ -123,6 +134,9 @@ export const ExampleToolbar = ({
           rel="noopener noreferrer"
           aria-label={fullscreenLabel}
           toolTipText={fullscreenLabel}
+          onClick={() => {
+            trackEvent('code_editor_control_click', 'click_event', 'FULLSCREEN_LINK');
+          }}
         />
       }
       {isEditorOpen && lang === 'ts' &&
@@ -134,7 +148,10 @@ export const ExampleToolbar = ({
           )}
           aria-label={convertLabel}
           toolTipText={convertLabel}
-          onClick={() => setCode(convertToJSX(code).code)}
+          onClick={() => {
+            setCode(convertToJSX(code).code);
+            trackEvent('code_editor_control_click', 'click_event', 'TS_TO_JS');
+          }}
         />
       }
       {code !== originalCode &&
@@ -142,7 +159,10 @@ export const ExampleToolbar = ({
           icon={<ReplyAllIcon />}
           aria-label={undoAllLabel}
           toolTipText={undoAllLabel}
-          onClick={() => setCode(originalCode)}
+          onClick={() => {
+            setCode(originalCode);
+            trackEvent('code_editor_control_click', 'click_event', 'RESET_CODE');
+          }}
         />
       }
     </React.Fragment>
