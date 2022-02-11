@@ -341,8 +341,8 @@ export const iconsData = [
     "Style": "fas",
     "Name": "fa-file",
     "React_name": "FileIcon",
-    "Type": " ",
-    "Contextual_usage": " ",
+    "Type": "Framework",
+    "Contextual_usage": "Represents a file type",
   },
   {
     "Style": "fas",
