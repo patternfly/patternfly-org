@@ -5,13 +5,12 @@ import { SideNavLayout } from 'theme-patternfly-org/layouts';
 import { Footer } from 'theme-patternfly-org/components';
 import { MDXTemplate } from 'theme-patternfly-org/templates/mdx';
 import { routes, groupedRoutes, fullscreenRoutes, getAsyncComponent } from './routes';
-import { googleAnalyticsID } from '../v4/patternfly-docs.config';
 import 'client-styles';
 
 const AppRoute = ({ child, katacodaLayout, title }) => {
   const location = useLocation();
   if (typeof window !== 'undefined' && window.gtag) {
-    gtag('config', googleAnalyticsID, {
+    gtag('config', 'UA-47523816-6', {
       'page_path': location.pathname,
       'page_title': (title || location.pathname)
     });
