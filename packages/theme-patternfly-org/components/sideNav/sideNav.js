@@ -66,7 +66,7 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
                     className="ws-side-nav-group"
                     onClick={(event) => {
                       // Don't trigger for bubbled events from NavItems
-                      if (!event.target?.href) {
+                      if (!event.target.href) {
                         const isExpanded = event.currentTarget.classList.contains('pf-m-expanded');
                         // 1 === expand section, 0 === collapse section
                         trackEvent('sidenav_section_click', 'click_event', section, isExpanded ? 0 : 1);
