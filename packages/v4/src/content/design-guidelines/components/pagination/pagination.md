@@ -54,4 +54,4 @@ Use indeterminate pagination if it’s difficult to calculate the total number o
 
 <img src="./img/indeterminate-pagination.png" alt="Indeterminate pagination" width="446"/>
 
-**1. Text indicator:** Provides the user with control that displays indeterminate page count or items.
+The text indicator provides the user with a control that displays indeterminate page count or items.
