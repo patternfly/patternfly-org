@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.9.1 (2022-02-14)
+
+
+### Bug Fixes
+
+* **docs:** remove optional chain & breaking import ([#2849](https://github.com/patternfly/patternfly-org/issues/2849)) ([07ffa4b](https://github.com/patternfly/patternfly-org/commit/07ffa4bf9cf83cd880f3f029caf30b36dc55d9fe))
+
+
+
+
+
 # 4.9.0 (2022-02-11)
 
 
