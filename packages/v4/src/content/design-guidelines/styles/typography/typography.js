@@ -27,7 +27,7 @@ export const styleProps = {
     variableName: "--pf-global--FontSize--2xl",
     fontSize: "36px",
     lineHeight: "1.3",
-    fontFamily: "RedHatDisplay"
+    fontFamily: "RedHatDisplay",
     textStyle: "4xl (RHD md 36)"
   },
   hero: {
@@ -36,7 +36,7 @@ export const styleProps = {
     variableName: "--pf-global--FontSize--3xl",
     fontSize: "28px",
     lineHeight: "1.3",
-    fontFamily: "RedHatDisplay"
+    fontFamily: "RedHatDisplay",
     textStyle: "3xl (RHD md 28)"
   },
   first: {
@@ -45,7 +45,7 @@ export const styleProps = {
     variableName: "--pf-global--FontSize--2xl",
     fontSize: "24px",
     lineHeight: "1.3",
-    fontFamily: "RedHatDisplay"
+    fontFamily: "RedHatDisplay",
     textStyle: "2xl (RHD md 24)"
   },
   second: {
@@ -54,7 +54,7 @@ export const styleProps = {
     fontSize: "20px",
     variableName: "--pf-global--FontSize--xl",
     lineHeight: "1.5",
-    fontFamily: "RedHatDisplay"
+    fontFamily: "RedHatDisplay",
     textStyle: "xl (RHD md 20)"
   },
   third: {
@@ -63,7 +63,7 @@ export const styleProps = {
     fontSize: "18px",
     variableName: "--pf-global--FontSize--lg",
     lineHeight: "1.5",
-    fontFamily: "RedHatDisplay"
+    fontFamily: "RedHatDisplay",
     textStyle: "lg (RHD md 18)"
   },
   fourth: {
@@ -72,7 +72,7 @@ export const styleProps = {
     fontSize: "16px",
     variableName: "--pf-global--FontSize--md",
     lineHeight: "1.5",
-    fontFamily: "RedHatDisplay"
+    fontFamily: "RedHatDisplay",
     textStyle: "Md (RHD md 16)"
   },
   body: {
@@ -81,7 +81,7 @@ export const styleProps = {
     fontSize: "16px",
     variableName: "--pf-global--FontSize--md",
     lineHeight: "1.5",
-    fontFamily: "RedHatText"
+    fontFamily: "RedHatText",
     styleName: "Md (RHT rg 16)"
   },
   small: {
@@ -90,7 +90,7 @@ export const styleProps = {
     fontSize: "14px",
     variableName: "--pf-global--FontSize--sm",
     lineHeight: "1.5",
-    fontFamily: "RedHatText"
+    fontFamily: "RedHatText",
     textStyle: "Sm (RHT rg 14)"
   },
   tiny: {
@@ -99,7 +99,7 @@ export const styleProps = {
     fontSize: "12px",
     variableName: "--pf-global--FontSize--xs",
     lineHeight: "1.5",
-    fontFamily: "RedHatText"
+    fontFamily: "RedHatText",
     textStyle: "Xs (RHT rg 12)"
   },
   code: {
@@ -108,7 +108,7 @@ export const styleProps = {
     fontSize: "16px",
     variableName: "--pf-global--FontSize--md",
     lineHeight: "1.5",
-    fontFamily: "Red Hat Mono"
+    fontFamily: "Red Hat Mono",
     textStyle: "Code"
   }
 }
