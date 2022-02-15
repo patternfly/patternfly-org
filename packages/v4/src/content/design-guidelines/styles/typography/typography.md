@@ -36,7 +36,7 @@ The table below lists all common text styles that are used in PatternFly applica
   asGrid
   title="Super hero heading (4xl)"
   note="Use only for extra large titles in cards or similar locations. Do not use for page titles"
-  styleProps={styleProps.super-hero} />
+  styleProps={styleProps.superHero} />
 <TitleLevel
     asGrid
     title="Hero heading (3xl)"

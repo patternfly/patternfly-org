@@ -21,7 +21,7 @@ export const TitleLevel = ({ asGrid, styleProps, children, title = '', note = ''
 }
 
 export const styleProps = {
-  super-hero: {
+  superHero: {
     fontWeight: "400",
     fontWeightText: "400 (medium)",
     variableName: "--pf-global--FontSize--2xl",
