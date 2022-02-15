@@ -24,7 +24,7 @@ export const styleProps = {
   superHero: {
     fontWeight: "400",
     fontWeightText: "400 (medium)",
-    variableName: "--pf-global--FontSize--2xl",
+    variableName: "--pf-global--FontSize--4xl",
     fontSize: "36px",
     lineHeight: "1.3",
     fontFamily: "RedHatDisplay",
