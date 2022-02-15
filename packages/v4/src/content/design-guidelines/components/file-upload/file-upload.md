@@ -16,11 +16,11 @@ To upload, a user can either:
 
 
 ## Elements
-<img src="./img/Fileupload.png" alt="File Upload" width="1256"/> 
+<img src="./img/Fileupload.png" alt="File Upload" width="462"/> 
 
-1.**Label**: Text to inform users about how they can interact with the component. The text should describe that you can either drag and drop a file into the drop zone, or click the button to upload a file.
+1. **Label**: Text to inform users about how they can interact with the component. The text should describe that you can either drag and drop a file into the drop zone, or click the button to upload a file.
 
-2.**Button**: A button to upload files if preferred. 
+2. **Button**: A button to upload files if preferred. 
 
 
 ## Best practices
