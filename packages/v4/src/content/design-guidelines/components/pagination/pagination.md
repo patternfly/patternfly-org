@@ -47,3 +47,11 @@ Desktop compact pagination in toolbar
 **1. Items in view:** Allows the user to select the item count (number of listed items) per page, as seen in full pagination.
 
 **2. Compact pager:** Supplies the user with page-back and page-next controls only.
+
+## Indeterminate pagination
+
+Use indeterminate pagination if it’s difficult to calculate the total number of items or page count upfront. In these cases, you may use “many” instead of the usual page count that would appear.
+
+<img src="./img/indeterminate-pagination.png" alt="Indeterminate pagination" width="446"/>
+
+The text indicator provides the user with a control that displays indeterminate page count or items.
