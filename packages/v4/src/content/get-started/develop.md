@@ -153,6 +153,6 @@ The CSS variable system enables you to easily customize things like color or sha
 
 [**Learn more and view CSS variables**](/developer-resources/global-css-variables) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
-### Testing
+## Testing
 
-Many PatternFly components comply with the Open UI Automation (OUIA) guidelines, which are designed to ease the burder of creating and maintaining automated testing environments.  Additional details about Open UI Automation and the full list of compliant components can be found on the [Open UI Automation page](/developer-resources/open-ui-automation).
+Many PatternFly components comply with the Open UI Automation (OUIA) guidelines, which are designed to ease the burden of creating and maintaining automated testing environments.  Additional details about Open UI Automation and the full list of compliant components can be found on the [Open UI Automation page](/developer-resources/open-ui-automation).
