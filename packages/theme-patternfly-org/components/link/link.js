@@ -51,12 +51,14 @@ export const Link = ({
         };
         // Wait up to an extra 500ms on click before showing 'Loading...'
         props.onClick = ev => {
-          ev.preventDefault();
-          if (typeof window !== 'undefined' && url !== location.pathname) {
-            Promiseany([
-              preloadPromise,
-              new Promise(res => setTimeout(res, 500))
-            ]).then(() => navigate(url));
+          if (!(ev.ctrlKey || ev.metaKey)) { // avoid disallowing cmnd/ctrl+click opening in new tab
+            ev.preventDefault();
+            if (typeof window !== 'undefined' && url !== location.pathname) {
+              Promiseany([
+                preloadPromise,
+                new Promise(res => setTimeout(res, 500))
+              ]).then(() => navigate(url));
+            }
           }
         };
       }
