@@ -47,7 +47,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 ### 2022.03 (March 11)
 
-* [Adding an overflow feature to alert groups](https://github.com/patternfly/patternfly/issues/1181) - this enhancement will allow for better management of toast alerts. The overflow feature will allow users more control in viewing and acting on multiple alerts without alerts taking over the screen.
+* [Adding an overflow feature to alert groups](https://github.com/patternfly/patternfly-react/issues/6890) - this enhancement will allow for better management of toast alerts. The overflow feature will allow users more control in viewing and acting on multiple alerts without alerts taking over the screen.
 
 * [Date select demo](https://github.com/patternfly/patternfly-react/issues/6460) - show how a select component can be used to create a custom date select with predefined date ranges for use in filters and similar use cases.
 
