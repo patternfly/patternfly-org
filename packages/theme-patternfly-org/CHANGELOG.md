@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.11.0 (2022-02-23)
+
+
+### Features
+
+* **icons:** added FileIcon to icons page ([#2834](https://github.com/patternfly/patternfly-org/issues/2834)) ([08bfa92](https://github.com/patternfly/patternfly-org/commit/08bfa92fa1b13a50548f8bdddea9a9950ec5b881))
+
+
+
+
+
 ## 0.10.7 (2022-02-23)
 
 **Note:** Version bump only for package theme-patternfly-org
