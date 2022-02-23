@@ -88,7 +88,8 @@ The table below lists all common text styles that are used in PatternFly applica
 ## Line height and spacing
 <div style={{marginBottom: '32px'}}>Spacing represents margins above and below text. When measuring spacing in text-based content, plan for line height. Line height should be 1.5 times larger than text size. Use spacers to provide appropriate spacing between lines of text.
 
-For example, if a body of text uses a line height of 1.5 and the body text size is 16px, the final line height would be 24 px (16 * 1.5 = 24). In this case, include the 24px line height as part of the text when creating designs in the design software.
+For example, if a body of text uses a line height of 1.5 and the body text size is 16px, the final line height would be 24 px (16 * 1.5 = 24). In this case, include the 24px line height as part of the text when creating designs in the design software. Visit the [Spacers](/guidelines/spacers) page for more information about spacer usage.
+
 </div>
 
 <Grid>
