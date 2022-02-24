@@ -8,6 +8,8 @@
 
 #usage-guidelines ~ h3.ws-title {
   margin-top: 24px;
+  font-size: 18px
+  fontWeight: 400
 }
 
 .ws-typography-code-font + div {
@@ -19,7 +21,7 @@
 }
 
 .ws-typography-textColor {
-  color: #004368; 
+  color: #004368;
   max-width: 350px;
   font-size: 14px;
 }
