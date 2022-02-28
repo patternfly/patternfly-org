@@ -41,9 +41,9 @@ We still host the Patternfly 4 Overpass library and template files on Sketch Clo
 
 You are able to access them here:
 
-1. [Add the symbol library](https://www.sketch.com/s/92361fff-e23d-4d73-be75-3d9f8d43490a)
+1. [Add the symbol library](https://www.sketch.com/s/65cbc171-3b00-4bc7-b7ff-18e9a5b35ba8)
     - Make sure you download the Overpass font at https://overpassfont.org/ and select **Desktop OTF files**.
-2. [Download the template file](https://www.sketch.com/s/93349c0d-5087-4428-8424-be174d7e3f67)
+2. [Download the template file](https://www.sketch.com/s/2987fea0-aaee-4e44-9974-5612c949aef0)
 
 If you’d like to avoid out-of-date designs, we recommend moving to our Red Hat font and using the design kit supplied there!
 
