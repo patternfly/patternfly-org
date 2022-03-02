@@ -73,16 +73,16 @@ export const styleProps = {
     variableName: "--pf-global--FontSize--md",
     lineHeight: "1.5",
     fontFamily: "RedHatDisplay",
-    textStyle: "Md (RHD md 16)"
+    textStyle: "md (RHD md 16)"
   },
   body: {
     fontWeight: "400",
-    fontWeightText: "400 (regular)*",
+    fontWeightText: "400 (regular)",
     fontSize: "16px",
     variableName: "--pf-global--FontSize--md",
     lineHeight: "1.5",
     fontFamily: "RedHatText",
-    styleName: "Md (RHT rg 16)"
+    textStyle: "md (RHT rg 16)"
   },
   small: {
     fontWeight: "400",
@@ -91,7 +91,7 @@ export const styleProps = {
     variableName: "--pf-global--FontSize--sm",
     lineHeight: "1.5",
     fontFamily: "RedHatText",
-    textStyle: "Sm (RHT rg 14)"
+    textStyle: "sm (RHT rg 14)"
   },
   tiny: {
     fontWeight: "400",
@@ -100,7 +100,7 @@ export const styleProps = {
     variableName: "--pf-global--FontSize--xs",
     lineHeight: "1.5",
     fontFamily: "RedHatText",
-    textStyle: "Xs (RHT rg 12)"
+    textStyle: "xs (RHT rg 12)"
   },
   code: {
     fontWeight: "400",
