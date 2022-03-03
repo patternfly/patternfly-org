@@ -294,7 +294,7 @@
 
 .ws-mdx-content {
   flex-grow: 1;
-  width: 100%;
+  min-width: 0;
 }
 
 /* Design asked for this. A nice side effect is that the TOC doesn't "jump" between pages */
