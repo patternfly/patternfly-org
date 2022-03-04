@@ -22,7 +22,7 @@ We use Red Hat Display and Red Hat Text. Red Hat Display should be used for **la
 ## Usage guidelines
 Use typography to create visual hierarchy. A consistent and logical hierarchy makes it easier for users to quickly scan and understand information on a page.
 
-There are two components that can be used to place text content on a page. The [text component](/components/text) should be used for creating formatted blocks of text content and accepts all general HTML text formatting tags, including heading, paragraph, and list styles. The [title component](/components/title) is intended to be used specifically for headings or title text in cards or in similar elements. Title provides the flexibility to set the size of the text and heading level independently.
+There are two components that can be used to place text content on a page. The [text component](/components/text) should be used for creating formatted blocks of text content and accepts all general HTML text formatting tags, including headings, paragraphs, and lists. The [title component](/components/title) is intended to be used specifically for headings or title text in cards or in similar elements. Title provides the flexibility to set the size of the text and heading level independently.
 
 The table below lists all common text styles that are used in PatternFly applications, how they should be used, style settings, and default heading levels, where applicable. Here are further details about the information contained in the table:
 
@@ -30,7 +30,7 @@ The table below lists all common text styles that are used in PatternFly applica
 
 * **Text style:** This is the name used to refer to that text style in the PatternFly design kit.
 
-* **Font size CSS variable:** This is the CSS variable that controls the size of this text. You can customize type sizes in your application by modifying the values associated with these variables. In general, this is not advised, and should only be done with caution, as changes to text style can have far reaching side effects on spacing within certain components.
+* **Font size CSS variable:** This is the CSS variable that controls the size of this text. You can customize font sizes in your application by modifying the values associated with these variables. In general, this is not advised, and should only be done with caution, as changes to text style can have far reaching side effects on spacing within certain components.
 
 <TitleLevel
   asGrid
@@ -111,4 +111,4 @@ For example, if a body of text uses a line height of 1.5 and the body text size 
   </GridItem>
 </Grid>
 
-Note that use of the [text](/components/text) component will automatically apply the proper line height and spacing according to the specified text style.
+Note that use of the [text component](/components/text) will automatically apply the proper line height and spacing according to the specified text style.
