@@ -111,4 +111,4 @@ For example, if a body of text uses a line height of 1.5 and the body text size 
   </GridItem>
 </Grid>
 
-Note that use of the [text](/components/text) component will automatically apply the proper line height and spacing according to the specified text style.
+Note that use of the [text component](/components/text) will automatically apply the proper line height and spacing according to the specified text style.
