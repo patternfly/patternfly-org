@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.10.2 (2022-03-04)
+
+
+### Bug Fixes
+
+* stop example widths from being wider than parent on mobile viewports ([#2864](https://github.com/patternfly/patternfly-org/issues/2864)) ([cfd87d3](https://github.com/patternfly/patternfly-org/commit/cfd87d334b66383b57c07c03624b2327ddb81906))
+
+
+
+
+
 ## 4.10.1 (2022-02-28)
 
 **Note:** Version bump only for package patternfly-org-4
