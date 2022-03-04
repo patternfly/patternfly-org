@@ -25,8 +25,8 @@ Where...
 - A `modifier` is something like `sm` or `lg`.
 - A `state` is something like `hover` or `expanded`.
 
-Examples:
-- Note global variables are scoped to `:root`
+Example:
+- Note: global variables are scoped to `:root`
   ```css
   :root {
     /* Default & hovered link colors */
@@ -36,7 +36,7 @@ Examples:
   ```
 
 <br/>
-The full list of global CSS variables can be found [below](#global-css-variables).
+The [full list of global CSS variables](#global-css-variables) can be found below.
 
 ### Component variables
 
@@ -55,8 +55,8 @@ Where...
 - `breakpoint` is a media query breakpoint such as `sm` for `$pf-global--breakpoint--xs`.
 - `pseudo-element` is either `before` or `after`.
 
-Examples:
-- Note component variables are scoped to the top-level component selector
+Example:
+- Note: component variables are scoped to the top-level component selector
   ```css
   .pf-c-button {
     /* Default, primary, and primary hovered button background colors */
@@ -67,9 +67,9 @@ Examples:
   ```
 
 <br/>
-Component variables can be found listed at the bottom of each component page (ex: [button css variables](/components/button#css-variables)).
+Component variables are listed at the bottom of each component page (for example, [button css variables](/components/button#css-variables)).
 
-Note that all component variables are declared at the top component level (ex: `.pf-c-button`). The component variable table linked above also shows all usages of each variable and the values they evaluate to in each case - expand any component variable row to view the global variable it is mapped to.
+Note that all component variables are declared at the top component level (for example, `.pf-c-button`). The component variable table linked above also shows all usages of each variable and the values they evaluate to in each case - expand any component variable row to view the global variable it is mapped to.
 
 ![Component variable mapping](./img/component-variable-mapping.png)
 
@@ -83,19 +83,19 @@ Breakpoint suffixes are used in utility classes and layouts as well as in many c
 
 PatternFly 4 styles provide a default starting point. You can use the variable system to make adjustments to that default styling. When you change one or more elements, you should package those values into a new SCSS stylesheet to replace the default styling.
 
-Overrides to PatternFly variables should be made at the `:root` level (for global variables) or at the top-level component selector (for component variables, ex: `.pf-c-button`), as these overrides will cascade down to children elements accordingly.
+Overrides to PatternFly variables should be made at the `:root` level for global variables or at the top-level component selector for component variables (for example, `.pf-c-button`), as these overrides will cascade down to children elements accordingly.
 
 Example:
-- Change the global primary color from `#06c` to `red`, but keep the `#06c` color as the background for primary buttons.
+- Change the global primary color to red, but keep the original primary blue `#06c` color as the background for primary buttons.
   ```css
   /* Override global primary color 100 to red */
   :root {
-    --pf-global--primary-color--100: red;
+    --pf-global--primary-color--100: var(--pf-global--palette--red-400);;
   }
 
   /* Override the above override for only the primary button background color */
   .pf-c-button {
-    --pf-c-button--m-primary--BackgroundColor: #06c;
+    --pf-c-button--m-primary--BackgroundColor: var(--pf-global--palette--blue-400);
   }
   ```
 
