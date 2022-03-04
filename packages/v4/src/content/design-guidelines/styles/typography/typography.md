@@ -86,7 +86,7 @@ The table below lists all common text styles that are used in PatternFly applica
   No matter what visual customizations you choose to make, you should always maintain good visual hierarchy and mapping between heading levels and text sizes. In most cases, h1 should always be your largest heading and subheadings should get progressively smaller as you move down the hierarchy. Exceptions to this rule do occur. For example, there might be cases where card titles will use a text size that is larger than the h1 page title. We advise this approach to be used sparingly and only when it may be important to highlight critical data as in a dashboard.
 
 ## Line height and spacing
-<div style={{marginBottom: '32px'}}>Spacing represents margins above and below text. When measuring spacing in text-based content, plan for line height. Line height should be 1.5 times larger than text size. Use spacers to provide appropriate spacing between lines of text.
+Spacing represents margins above and below text. When measuring spacing in text-based content, plan for line height. To get the correct line height in pixels, multiply line height by text size. Use spacers to provide appropriate spacing between lines of text.
 
 For example, if a body of text uses a line height of 1.5 and the body text size is 16px, the final line height would be 24 px (16 * 1.5 = 24). In this case, include the 24px line height as part of the text when creating designs in the design software. Visit the [Spacers](/guidelines/spacers) page for more information about spacer usage.
 
