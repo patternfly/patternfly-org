@@ -30,7 +30,7 @@ The table below lists all common text styles that are used in PatternFly applica
 
 * **Text style:** This is the name used to refer to that text style in the PatternFly design kit.
 
-* **Font size CSS variable:** This is the CSS variable that controls the size of this text. You can customize type sizes in your application by modifying the values associated with these variables. In general, this is not advised, and should only be done with caution, as changes to text style can have far reaching side effects on spacing within certain components.
+* **Font size CSS variable:** This is the CSS variable that controls the size of this text. You can customize font sizes in your application by modifying the values associated with these variables. In general, this is not advised, and should only be done with caution, as changes to text style can have far reaching side effects on spacing within certain components.
 
 <TitleLevel
   asGrid
