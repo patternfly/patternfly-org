@@ -22,7 +22,7 @@ We use Red Hat Display and Red Hat Text. Red Hat Display should be used for **la
 ## Usage guidelines
 Use typography to create visual hierarchy. A consistent and logical hierarchy makes it easier for users to quickly scan and understand information on a page.
 
-There are two components that can be used to place text content on a page. The [text component](/components/text) should be used for creating formatted blocks of text content and accepts all general HTML text formatting tags, including heading, paragraph, and list styles. The [title component](/components/title) is intended to be used specifically for headings or title text in cards or in similar elements. Title provides the flexibility to set the size of the text and heading level independently.
+There are two components that can be used to place text content on a page. The [text component](/components/text) should be used for creating formatted blocks of text content and accepts all general HTML text formatting tags, including headings, paragraphs, and lists. The [title component](/components/title) is intended to be used specifically for headings or title text in cards or in similar elements. Title provides the flexibility to set the size of the text and heading level independently.
 
 The table below lists all common text styles that are used in PatternFly applications, how they should be used, style settings, and default heading levels, where applicable. Here are further details about the information contained in the table:
 
