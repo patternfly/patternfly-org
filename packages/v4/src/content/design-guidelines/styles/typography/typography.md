@@ -35,36 +35,48 @@ The table below lists all common text styles that are used in PatternFly applica
 ### Super hero heading (4xl)
 <TitleLevel
   asGrid
-  
   note="Use only for extra large titles in cards or similar locations. Do not use for page titles"
   styleProps={styleProps.superHero} />
+
+### Hero heading (3xl)
 <TitleLevel
     asGrid
-    title="Hero heading (3xl)"
     note="Use only for extra large titles in cards or similar locations. Do not use for page titles"
     styleProps={styleProps.hero} />
+
+### First level heading (2xl, h1)
 <TitleLevel
   asGrid
-  title="First level heading (2xl, h1)"
   note="Only one first level/h1 heading should ever exist on a page"
   styleProps={styleProps.first} />
-<TitleLevel asGrid title="Second level heading (xl, h2)" styleProps={styleProps.second} />
-<TitleLevel asGrid title="Third level heading (lg, h3)" styleProps={styleProps.third} />
-<TitleLevel asGrid title="Fourth level heading (md, h4)" styleProps = {styleProps.fourth} />
+
+### Second level heading (xl, h2)  
+<TitleLevel asGrid styleProps={styleProps.second} />
+
+### Third level heading (lg, h3)
+<TitleLevel asGrid styleProps={styleProps.third} />
+
+### Fourth level heading (md, h4)
+<TitleLevel asGrid styleProps = {styleProps.fourth} />
+
+### Default body text
 <TitleLevel
   asGrid
-  title="Default body text"
   note="This is the default text style for paragraphs, lists, tables, etc. Some components use RedHatText at 700 font weight, which is RedHatText Medium (such as alerts and navigation)"
   styleProps = {styleProps.body} />
-<TitleLevel asGrid title="Small text" styleProps = {styleProps.small} />
+
+### Small text  
+<TitleLevel asGrid styleProps = {styleProps.small} />
+
+### Tiny text
 <TitleLevel
   asGrid
-  title="Tiny text"
   styleProps = {styleProps.tiny} />
+
+### Code  
 <TitleLevel
   className="ws-typography-code-font"
   asGrid
-  title="Code"
   note="Used for code blocks "
   styleProps = {styleProps.code} />
 
