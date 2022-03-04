@@ -32,9 +32,10 @@ The table below lists all common text styles that are used in PatternFly applica
 
 * **Font size CSS variable:** This is the CSS variable that controls the size of this text. You can customize type sizes in your application by modifying the values associated with these variables. In general, this is not advised, and should only be done with caution, as changes to text style can have far reaching side effects on spacing within certain components.
 
+### Super hero heading (4xl)
 <TitleLevel
   asGrid
-  title="Super hero heading (4xl)"
+  
   note="Use only for extra large titles in cards or similar locations. Do not use for page titles"
   styleProps={styleProps.superHero} />
 <TitleLevel
@@ -110,4 +111,4 @@ For example, if a body of text uses a line height of 1.5 and the body text size 
   </GridItem>
 </Grid>
 
-Note that use of the [text](/components/text) component will automatically apply the proper line height and spacing according to the specified text style.
+Note that use of the [text component](/components/text) will automatically apply the proper line height and spacing according to the specified text style.
