@@ -86,11 +86,11 @@ PatternFly 4 styles provide a default starting point. You can use the variable s
 Overrides to PatternFly variables should be made at the `:root` level for global variables or at the top-level component selector for component variables (for example, `.pf-c-button`), as these overrides will cascade down to children elements accordingly.
 
 Example:
-- Change the global primary color to red, but keep the original primary blue `#06c` color as the background for primary buttons.
+- Change the global primary color to red, but keep the original primary blue color as the background for primary buttons.
   ```css
   /* Override global primary color 100 to red */
   :root {
-    --pf-global--primary-color--100: var(--pf-global--palette--red-400);;
+    --pf-global--primary-color--100: var(--pf-global--palette--red-400);
   }
 
   /* Override the above override for only the primary button background color */
