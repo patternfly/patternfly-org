@@ -32,50 +32,66 @@ The table below lists all common text styles that are used in PatternFly applica
 
 * **Font size CSS variable:** This is the CSS variable that controls the size of this text. You can customize type sizes in your application by modifying the values associated with these variables. In general, this is not advised, and should only be done with caution, as changes to text style can have far reaching side effects on spacing within certain components.
 
-### Super hero heading (4xl)
 <TitleLevel
+  title="Super hero heading (4xl)"
+  classname="pf-c-title pf-m-lg"
   asGrid
   note="Use only for extra large titles in cards or similar locations. Do not use for page titles"
   styleProps={styleProps.superHero} />
 
-### Hero heading (3xl)
 <TitleLevel
+    title="Hero heading (3xl)"
+    classname="pf-c-title pf-m-lg"
     asGrid
     note="Use only for extra large titles in cards or similar locations. Do not use for page titles"
     styleProps={styleProps.hero} />
 
-### First level heading (2xl, h1)
 <TitleLevel
+  title="First level heading (2xl, h1)"
   asGrid
   note="Only one first level/h1 heading should ever exist on a page"
   styleProps={styleProps.first} />
 
-### Second level heading (xl, h2)  
-<TitleLevel asGrid styleProps={styleProps.second} />
-
-### Third level heading (lg, h3)
-<TitleLevel asGrid styleProps={styleProps.third} />
-
-### Fourth level heading (md, h4)
-<TitleLevel asGrid styleProps = {styleProps.fourth} />
-
-### Default body text
 <TitleLevel
+  title="Second level heading (xl, h2)"
+  classname="pf-c-title pf-m-lg"
+  asGrid
+  styleProps={styleProps.second} />
+
+<TitleLevel
+  title="Third level heading (lg, h3)"
+  classname="pf-c-title pf-m-lg"
+  asGrid
+  styleProps={styleProps.third} />
+
+<TitleLevel
+  title="Fourth level heading (md, h4)"
+  classname="pf-c-title pf-m-lg"
+  asGrid
+  styleProps = {styleProps.fourth} />
+
+<TitleLevel
+  title="Default body text"
+  classname="pf-c-title pf-m-lg"
   asGrid
   note="This is the default text style for paragraphs, lists, tables, etc. Some components use RedHatText at 700 font weight, which is RedHatText Medium (such as alerts and navigation)"
   styleProps = {styleProps.body} />
 
-### Small text  
-<TitleLevel asGrid styleProps = {styleProps.small} />
-
-### Tiny text
 <TitleLevel
+  title="Small text"
+  classname="pf-c-title pf-m-lg"
+  asGrid
+  styleProps = {styleProps.small} />
+
+<TitleLevel
+  title="Tiny text"
+  classname="pf-c-title pf-m-lg"
   asGrid
   styleProps = {styleProps.tiny} />
 
-### Code  
 <TitleLevel
-  className="ws-typography-code-font"
+  title="Code"
+  classname="pf-c-title pf-m-lg"
   asGrid
   note="Used for code blocks "
   styleProps = {styleProps.code} />
@@ -123,4 +139,4 @@ For example, if a body of text uses a line height of 1.5 and the body text size 
   </GridItem>
 </Grid>
 
-Note that use of the [text component](/components/text) will automatically apply the proper line height and spacing according to the specified text style.
+Note that use of the [text](/components/text) and [title](/components/title) components will automatically apply the proper line height and spacing according to the specified text style.
