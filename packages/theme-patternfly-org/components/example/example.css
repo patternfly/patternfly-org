@@ -9,6 +9,12 @@
   border-bottom: var(--pf-global--BorderWidth--sm) solid #f8f8f8;
 }
 
+.ws-example > .ws-example-header,
+.pf-c-code-editor__header,
+#ws-react-c-card-modifiers > div:first-child {
+  background-color: var(--pf-global--BackgroundColor--200);
+}
+
 .ws-example-header > .ws-example-heading:not(:last-child) {
   margin-bottom: var(--pf-global--spacer--md);
 }
