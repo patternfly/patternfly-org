@@ -292,6 +292,12 @@
   border-width: 0;
 }
 
+@media screen and (max-width: 1450px) {
+  .ws-mdx-child-template {
+    flex-direction: column;
+  }
+}
+
 .ws-mdx-content {
   flex-grow: 1;
 }

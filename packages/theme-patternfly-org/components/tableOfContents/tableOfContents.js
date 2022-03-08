@@ -4,8 +4,6 @@ import './tableOfContents.css';
 import { trackEvent } from '../../helpers';
 
 export const TableOfContents = ({ items }) => {
-  const WrapperComponent = window.innerWidth > 1450 ? React.Fragment : ExpandableSection;
-
   function renderItem(item, index) {
     return Array.isArray(item)
       ? (
@@ -20,29 +18,16 @@ export const TableOfContents = ({ items }) => {
       )
   }
 
-  function getToc () {
-    return window.innerWidth > 1450
-      ? (
-        <>
-          <Title headingLevel="h2" size="lg">
-            Table of contents
-          </Title>
-          <JumpLinks isVertical scrollableSelector="#ws-page-main" className="ws-toc-list" offset={92}>
-            {items.map(renderItem)}
-          </JumpLinks>
-        </>
-      ) : (
-        <ExpandableSection displaySize='large' title='Table of contents'>
-          <JumpLinks isVertical scrollableSelector="#ws-page-main" className="ws-toc-list" offset={92}>
-            {items.map(renderItem)}
-          </JumpLinks>
-        </ExpandableSection>
-      )
-  }  
-
   return (
-    <nav className="ws-toc">
-      {getToc()}
-    </nav>
+    <JumpLinks
+      label="Table of contents"
+      isVertical
+      scrollableSelector="#ws-page-main"
+      className="ws-toc"
+      offset={148}
+      expandable={{ default: 'expandable', '2xl': 'nonExpandable' }}
+    >
+      {items.map(renderItem)}
+    </JumpLinks>
   );
 }
