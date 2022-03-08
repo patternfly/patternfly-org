@@ -4,8 +4,8 @@ import './tableOfContents.css';
 import { trackEvent } from '../../helpers';
 
 export const TableOfContents = ({ items }) => {
+  // Used to recalculate JumpLinks offset if screen size changes
   const [width, setWidth] = React.useState(window.innerWidth);
-
   const updateWidth = () => {
     const { innerWidth } = window;
     innerWidth !== width && setWidth(innerWidth);

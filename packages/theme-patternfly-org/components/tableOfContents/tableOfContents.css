@@ -46,8 +46,3 @@
 .ws-toc-item.pf-m-current .pf-c-jump-links__link::before {
   z-index: 1;
 }
-
-/* Hide left border */
-.ws-toc > .pf-c-expandable-section.pf-m-expanded::after {
-  content: none;
-}
