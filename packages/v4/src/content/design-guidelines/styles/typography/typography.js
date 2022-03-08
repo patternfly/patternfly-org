@@ -108,7 +108,7 @@ export const styleProps = {
     fontSize: "16px",
     variableName: "--pf-global--FontSize--md",
     lineHeight: "1.5",
-    fontFamily: "Red Hat Mono",
+    fontFamily: "RedHatMono",
     textStyle: "Code"
   }
 }
