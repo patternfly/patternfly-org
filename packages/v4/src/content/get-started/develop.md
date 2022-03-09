@@ -136,7 +136,7 @@ PatternFly uses Font Awesome 5. Font Awesome 5 can be utilized in two different 
 
   * **Built into PatternFly**
 
-  By default, Overpass is included as part of the PatternFly distributed CSS file. You do not need to do anything with your configuration to use this font family.
+  By default, Font Awesome is included as part of the PatternFly distributed CSS file. You do not need to do anything with your configuration to use this icon font family.
 
   * **Used as a CDN**
 
