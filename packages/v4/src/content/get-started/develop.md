@@ -140,7 +140,7 @@ PatternFly uses Font Awesome 5. Font Awesome 5 can be utilized in two different 
 
   * **Used as a CDN**
 
-  If you wish to use the CDN for Font Awesome 5 rather than the default approach, you need to update the ```utilities/variables.scss``` file (from source ```node_modules/@patternfly/patternfly/```) and build PatternFly as part of your build process.
+  If you wish to use the CDN for Font Awesome 5 rather than the default approach, you need to update the ```sass-utilities/scss-variables.scss``` file (from source ```node_modules/@patternfly/patternfly/```) and build PatternFly as part of your build process.
 
   To use the CDN vs the standard build, update the ```sass-utilities/scss-variables.scss``` file as follows:
 
