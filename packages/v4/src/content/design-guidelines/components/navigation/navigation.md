@@ -29,27 +29,77 @@ Vertical navigation is hierarchical global navigation that displays navigation o
 * You have secondary navigation items (even if you have less than five primary navigation items)
 * You expect your application to be used on mobile devices
 
-#### Variations
+### Verical navigation variants
 
-**Simple vertical navigation**
+#### Simple vertical navigation
 
 Use a simple, single-level vertical navigation when you only have one level of navigation to display.
 
 <img src="./img/single-level.png" alt="Example of simple vertical navigation" width="634"/>
 
-**Grouped navigation**
+#### Grouped navigation
 
 When you have a small amount of secondary navigation items, you can group your items and display them persistently beneath the primary navigation items.
 
 <img src="./img/two-level.png" alt="Example of grouped vertical navigation" width="634"/>
 
-**Expandable vertical navigation**
+#### Expandable two-level navigation
 
 When you have a large number of secondary navigation items, you can use an expandable navigation to collapse and expand options as needed.
 
 <img src="./img/expandable-nav.png" alt="Example of expandable vertical navigation" width="634"/>
 
+#### Expandable three-level navigation
 
+When you have three levels of navigation items, you can use a three-level expandable navigation to expose tertiary navigation items. Expansion works well when there are small numbers of items at the current level and the entire page hierarchy can be visualized at the same time.
+
+[three-level expansion image]
+
+#### Fly-out navigations
+
+Fly-out navigation exposes navigation items nested within a parent node in an overlay panel that appears to the right of the parent item on hover or click. Fly-out menus can be used to expose secondary or tertiary levels of navigation. While fly-out menus can be cascaded, this is not recommended as the mouse interaction required to operate cascading menus can be difficult for some users.
+
+The advantage of fly-out menus is that they allow a user to easily scan through menu items in a deep page hierarchy. But keep in mind that the page in view may not be exposed as a selected menu item at the top level. Therefore, when using fly-outs, we strongly recommend use of [breadcrumbs](/components/breadcrumb) to help users understand where they are currently working within the site hierarchy.
+
+Also, consider how likely it is that your application will be used on a mobile phone. Fly-outs are not mobile friendly and supporting unique  menu patterns on different platforms (mobile vs desktop).
+
+[fly-out navigation image]
+
+#### Drill-down navigation
+
+Drill-down menus replace the current navigation menu with the next set of child items in the page hierarchy when the user clicks on a parent item to drill down. A back link is provided at the top of the menu to return to the parent level.
+
+Using drill-down navigation, only the navigation items for the current page and its siblings will be visible at any given time. This pattern is very mobile-friendly as it minimizes the need for scrolling to see the entire menu. However, it should be avoided if you expect users to frequently move between levels.
+
+[drill-down navigation image]
+
+### Combining vertical navigation patterns
+
+PatternFly's vertical menus are designed to be composable. This means that you can combine different patterns within the same navigation system to address the needs of users working at different levels in the page hierarchy.
+
+When combining different types of menus, here are some guidelines:
+
+* Use a consistent approach to represent items at the same level in the page hierarchy. For example, if drill-down is used from level 1 - 2, all items with children at that level should display the same behavior., i.e. don’t mix fly-outs, drill-downs, and expansion at the same level.
+
+* Consider how important or likely it is for users to move between levels and/or across to items at the same level but in different branches of the hierarchy. Drill-downs are most effective when users will spend most of their time moving between pages with the same parent node. Avoid drill-downs when users are likely to move frequently up and down the tree or between branches.
+
+Here are some examples of hybrid navigation patterns that you may find useful.
+
+#### Fly-outs with tertiary drill-down
+By using fly-outs to expose secondary navigation items and then drilling into third level items, you can keep the current page and its siblings visible as the user works. This is a good pattern to use when you expect users to spend most of their time working within the same section of the application.
+
+[add image]
+
+#### Two-level expansion with drill-downs
+Similarly, you can use expanded menus to expose the first two or three levels of page hierarchy and then drill-down to the lowest level. This pattern is preferred to using fly-outs with a drill-down when there are fewer secondary level items and/or you require a mobile friendly solution.
+
+[add image]
+
+#### Drill-down with tertiary expansion
+
+You can also reverse this pattern by using a drill-down menu at the primary level and expansion to expose levels two and three. This approach works well well you want to make it easy for users to move between items at levels two and three by visualizing that hierarchy together without the need to frequently move back to the primary level to explore other branches.
+
+[add image]
 
 ### Horizontal navigation
 
@@ -65,7 +115,7 @@ Horizontal navigation is global navigation that displays navigation items from l
 
 Use secondary horizontal navigation when you want to provide more granular navigation specific to a particular page or window in your application. This differs from [tabs](/components/tabs), since tabs would allow you to switch perspective on the same page, while each secondary horizontal navigation item would be sending you to a distinct URL. For example, a user might use global navigation to get to a settings page, and then use local navigation to access privacy and general user settings.
 
-Secondary horizontal navigation can be paired with vertical or horizontal navigation. It provides deeper nesting to the vertical navigation, which may help prevent the navigation from becoming too long. 
+Secondary horizontal navigation can be paired with vertical or horizontal navigation. It provides deeper nesting to the vertical navigation, which may help prevent the navigation from becoming too long.
 
 <img src="./img/secondary-horizontal-nav.png" alt="Example of secondary horizontal navigation" width="880"/>
 
@@ -75,8 +125,7 @@ We recommend either using horizontal navigation OR vertical navigation as your p
 
 <img src="./img/horizontal-primary.png" alt="Example of secondary horizontal navigation as primary navigation" width="880"/>
 
-Secondary horizontal navigation follows a similar responsive design as our other horizontal navigation types. 
+Secondary horizontal navigation follows a similar responsive design as our other horizontal navigation types.
 Overflow items can be navigated to by using horizontal scroll or the arrows.
 
 <img src="./img/sec-nav-mobile.png" alt="Example of secondary navigation mobile responsiveness" width="320"/>
-
