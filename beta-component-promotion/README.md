@@ -19,6 +19,7 @@ as well as relevant examples in the documentation are all labeled as beta.
 
 | *Component currently in beta* | inital @patternfly/patternfly milestone | inital @patternfly/patternfly-react milestone |
 | ----------------------------| ----------------------------------------| ----------------------------------------------|
+| Alert group with overflow | 2022.02 | 2022.03 |
 | Back to top | 2021.11 | 2021.12 |
 | Calendar month | 2020.15 | 2020.15 |
 | DataList: draggable | 2021.12 | 2020.13 |
