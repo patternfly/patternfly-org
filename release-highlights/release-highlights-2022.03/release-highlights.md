@@ -3,7 +3,7 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-## [Overflow feature for alert groups](https://www.patternfly.org/v4/components/alert-group#toast-alert-group-with-overflow-capture)
+### [Overflow feature for alert groups](https://www.patternfly.org/v4/components/alert-group#toast-alert-group-with-overflow-capture)
 
 ![toast alerts with overflow capture](./img/alert-group-overflow.png)
 
