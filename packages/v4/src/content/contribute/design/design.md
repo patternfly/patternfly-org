@@ -13,7 +13,7 @@ Work with the PatternFly design team to design a new feature to be implemented i
 __Example__
 *I want to design and contribute a new design pattern that allows a user to favorite or like an item in a data list.*
 
-The PatternFly design team is comprised of a small number of visual and interaction designers who define the visual look and feel of the PatternFly library and provide direction to developers when implementing new features and enhancements. The team works following an agile process. All work is tracked and managed via a [Zenhub project board](https://app.zenhub.com/workspaces/pf4-design-workspace-5b2142ff9499cb7cdaf1e632/board?repos=61041252&showPRs=false&showClosed=false&showLabels=false&showEstimates=false&showMilestones=false&showEpics=false). You can look at the Design Backlog column on the project board to see issues needing design help or [open a new issue](https://github.com/patternfly/patternfly-design/issues) to propose a design.
+The PatternFly design team is comprised of a small number of visual and interaction designers who define the visual look and feel of the PatternFly library and provide direction to developers when implementing new features and enhancements. The team works following an agile process. The design backlog is tracked and managed via a [GitHub project board](https://github.com/orgs/patternfly/projects/7/views/30). You can look here to identify issues that are currently unassigned and waiting in the queue or [open a new issue](https://github.com/patternfly/patternfly-design/issues) to propose a design.
 
 ### Design guideline
 Design guidelines appear on the website and help designers to apply PatternFly components in their designs.  They are use case and solutions driven.
