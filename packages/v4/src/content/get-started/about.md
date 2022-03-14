@@ -90,6 +90,10 @@ and the degree to which it meets product requirements. Every quarter, stable
 components are proposed as promotion candidates. To view a list of current promotion candidates, visit
 [this page](https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion).
 
+There are two recommended steps to take when considering using a beta component in product:
+1. Play with the component examples in the docs and determine whether or not the current implementation meets your needs. Open issues for any missing features, enhancement requests, or bugs.
+2. Check the [PatternFly Issues GitHub Project board](https://github.com/orgs/patternfly/projects/7/views/5) where we have created a view to categorize most issues by component. Browse any open issues for the beta component to determine how much more the beta component could evolve in the near future.
+
 Once promoted, breaking changes are not made to components outside of a well-advertised
 breaking change release. Breaking changes introduce visual changes, changes to applied CSS
 class names, or changes to existing React props (new React props might be added).
