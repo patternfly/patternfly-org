@@ -53,7 +53,7 @@ When you have a large number of secondary navigation items, you can use an expan
 
 When you have three levels of navigation items, you can use a three-level expandable navigation to expose tertiary navigation items. Expansion works well when there are small numbers of items at the current level and the entire page hierarchy can be visualized at the same time.
 
-[three-level expansion image]
+<img src="./img/expandable-nav-tertiary.png" alt="Example of expandable tertiary vertical navigation" width="634"/>
 
 #### Fly-out navigations
 
@@ -63,7 +63,7 @@ The advantage of fly-out menus is that they allow a user to easily scan through 
 
 Also, consider how likely it is that your application will be used on a mobile phone. Fly-outs are not mobile friendly and supporting unique  menu patterns on different platforms (mobile vs desktop).
 
-[fly-out navigation image]
+<img src="./img/fly-out.png" alt="Example of fly-out navigation" width="917"/>
 
 #### Drill-down navigation
 
@@ -71,7 +71,7 @@ Drill-down menus replace the current navigation menu with the next set of child 
 
 Using drill-down navigation, only the navigation items for the current page and its siblings will be visible at any given time. This pattern is very mobile-friendly as it minimizes the need for scrolling to see the entire menu. However, it should be avoided if you expect users to frequently move between levels.
 
-[drill-down navigation image]
+<img src="./img/drill-down.png" alt="Example of drill-down navigation" width="916"/>
 
 ### Combining vertical navigation patterns
 
@@ -79,27 +79,27 @@ PatternFly's vertical menus are designed to be composable. This means that you c
 
 When combining different types of menus, here are some guidelines:
 
-* Use a consistent approach to represent items at the same level in the page hierarchy. For example, if drill-down is used from level 1 - 2, all items with children at that level should display the same behavior., i.e. don’t mix fly-outs, drill-downs, and expansion at the same level.
+* Use a consistent approach to represent items at the same level in the page hierarchy. For example, if drill-down is used from level 1 - 2, all items with children at that level should display the same behavior. Don’t mix fly-outs, drill-downs, and expansion at the same level.
 
-* Consider how important or likely it is for users to move between levels and/or across to items at the same level but in different branches of the hierarchy. Drill-downs are most effective when users will spend most of their time moving between pages with the same parent node. Avoid drill-downs when users are likely to move frequently up and down the tree or between branches.
+* Consider how important or likely it is for users to move between levels and/or across to items at the same level but in different branches of the hierarchy. Drill-downs are most effective when users will spend most of their time moving between pages with the same parent node. Therefore, drilling into a lower level in the page hierarchy and then employing expansions or fly-outs to navigate between pages at that level can be an effective approach.
 
 Here are some examples of hybrid navigation patterns that you may find useful.
 
 #### Fly-outs with tertiary drill-down
 By using fly-outs to expose secondary navigation items and then drilling into third level items, you can keep the current page and its siblings visible as the user works. This is a good pattern to use when you expect users to spend most of their time working within the same section of the application.
 
-[add image]
+<img src="./img/flyout-to-drill-down.png" alt="Example of composable navigation with fly-out and drill-down menus" width="1143"/>
 
 #### Two-level expansion with drill-downs
 Similarly, you can use expanded menus to expose the first two or three levels of page hierarchy and then drill-down to the lowest level. This pattern is preferred to using fly-outs with a drill-down when there are fewer secondary level items and/or you require a mobile friendly solution.
 
-[add image]
+<img src="./img/expansion-to-drill-down.png" alt="Example of composable navigation with expansion and drill-down menus" width="928"/>
 
 #### Drill-down with tertiary expansion
 
 You can also reverse this pattern by using a drill-down menu at the primary level and expansion to expose levels two and three. This approach works well well you want to make it easy for users to move between items at levels two and three by visualizing that hierarchy together without the need to frequently move back to the primary level to explore other branches.
 
-[add image]
+<img src="./img/drill-down-to-expansion.png" alt="Example of composable navigation with drill-down and expansion menus" width="916"/>
 
 ### Horizontal navigation
 
