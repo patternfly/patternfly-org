@@ -55,23 +55,23 @@ When you have three levels of navigation items, you can use a three-level expand
 
 <img src="./img/expandable-nav-tertiary.png" alt="Example of expandable tertiary vertical navigation" width="634"/>
 
-#### Fly-out navigations
+#### Fly-out navigation
 
 Fly-out navigation exposes navigation items nested within a parent node in an overlay panel that appears to the right of the parent item on hover or click. Fly-out menus can be used to expose secondary or tertiary levels of navigation. While fly-out menus can be cascaded, this is not recommended as the mouse interaction required to operate cascading menus can be difficult for some users.
+
+<img src="./img/fly-out.png" alt="Example of fly-out navigation" width="917"/>
 
 The advantage of fly-out menus is that they allow a user to easily scan through menu items in a deep page hierarchy. But keep in mind that the page in view may not be exposed as a selected menu item at the top level. Therefore, when using fly-outs, we strongly recommend use of [breadcrumbs](/components/breadcrumb) to help users understand where they are currently working within the site hierarchy.
 
 Also, consider how likely it is that your application will be used on a mobile phone. Fly-outs are not mobile friendly and supporting unique  menu patterns on different platforms (mobile vs desktop).
 
-<img src="./img/fly-out.png" alt="Example of fly-out navigation" width="917"/>
-
 #### Drill-down navigation
 
 Drill-down menus replace the current navigation menu with the next set of child items in the page hierarchy when the user clicks on a parent item to drill down. A back link is provided at the top of the menu to return to the parent level.
 
-Using drill-down navigation, only the navigation items for the current page and its siblings will be visible at any given time. This pattern is very mobile-friendly as it minimizes the need for scrolling to see the entire menu. However, it should be avoided if you expect users to frequently move between levels.
-
 <img src="./img/drill-down.png" alt="Example of drill-down navigation" width="916"/>
+
+Using drill-down navigation, only the navigation items for the current page and its siblings will be visible at any given time. This pattern is very mobile-friendly as it minimizes the need for scrolling to see the entire menu. However, it should be avoided if you expect users to frequently move between levels.
 
 ### Combining vertical navigation patterns
 
