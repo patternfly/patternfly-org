@@ -79,6 +79,7 @@ export const ExampleToolbar = ({
         aria-label={languageLabel}
         toolTipText={languageLabel}
         aria-expanded={isEditorOpen}
+        className="ws-code-editor-control"
       />
       <Tooltip
         trigger="mouseenter"
@@ -91,7 +92,7 @@ export const ExampleToolbar = ({
         <Button onClick={() => {
           copyCode();
           trackEvent('code_editor_control_click', 'click_event', 'COPY_CODE');
-        }} variant="control" aria-label={copyLabel}>
+        }} variant="plain" aria-label={copyLabel} className="ws-code-editor-control">
           <CopyIcon />
         </Button>
       </Tooltip>
@@ -113,11 +114,12 @@ export const ExampleToolbar = ({
           >
             <Button
               aria-label={codesandboxLabel}
-              variant="control"
+              variant="plain"
               type="submit"
               onClick={() => {
                 trackEvent('code_editor_control_click', 'click_event', 'CODESANDBOX_LINK');
               }}
+              className="ws-code-editor-control"
             >
               <input type="hidden" name="parameters" value={codeBoxParams} />
               <CodepenIcon />
@@ -137,6 +139,7 @@ export const ExampleToolbar = ({
           onClick={() => {
             trackEvent('code_editor_control_click', 'click_event', 'FULLSCREEN_LINK');
           }}
+          className="ws-code-editor-control"
         />
       }
       {isEditorOpen && lang === 'ts' &&
@@ -152,6 +155,7 @@ export const ExampleToolbar = ({
             setCode(convertToJSX(code).code);
             trackEvent('code_editor_control_click', 'click_event', 'TS_TO_JS');
           }}
+          className="ws-code-editor-control"
         />
       }
       {code !== originalCode &&
@@ -163,6 +167,7 @@ export const ExampleToolbar = ({
             setCode(originalCode);
             trackEvent('code_editor_control_click', 'click_event', 'RESET_CODE');
           }}
+          className="ws-code-editor-control"
         />
       }
     </React.Fragment>
@@ -193,6 +198,7 @@ export const ExampleToolbar = ({
       onChange={newCode => setCode(newCode)}
       onEditorDidMount={onEditorDidMount}
       isReadOnly={isFullscreen}
+      className="ws-code-editor"
     />
   );
 }

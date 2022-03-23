@@ -7,6 +7,11 @@
   z-index: 1;
   margin: calc(var(--pf-c-page__main-section--PaddingTop) * -1) calc(var(--pf-c-page__main-section--PaddingRight) * -2) var(--pf-global--spacer--md) calc(var(--pf-c-page__main-section--PaddingLeft) * -1);
   padding: var(--pf-global--spacer--md) 0 var(--pf-global--spacer--md) var(--pf-global--spacer--md);
+  box-shadow: var(--pf-global--BoxShadow--lg-bottom);
+}
+
+.ws-toc.pf-m-expanded {
+  box-shadow: var(--pf-global--BoxShadow--sm-bottom)
 }
 
 /* Hide TOC scrollbar Chrome, Safari & Opera */
@@ -27,6 +32,11 @@
     flex-grow: 1;
     background: none;
     margin: 0;
+  }
+
+  .ws-toc,
+  .ws-toc.pf-m-expanded {
+    box-shadow: none;
   }
 }
 
