@@ -22,7 +22,7 @@ The **drag and drop** interaction can be used to reposition elements on screen i
 
 5. Error state: If the list item is dragged outside the bounding box the borders on the dragged item will switch to `$pf-color-red-100` and the cursor will change to an error state to indicate an invalid placement. If the user releases the cursor outside the bounding area the dragged item will return to its default position.
 
-<img src="./img/simplelist_5.png" alt="Dragging outside the bounding box shows an error state on the dragged item." width="617"/>
+<img src="./img/Simple-list-drag-5-error.png" alt="Dragging outside the bounding box shows an error state on the dragged item."/>
 
 ### Multiple lists
 PatternFly drag and drop allows users to move items between different list groups. For example, in a To-Do list scenario users can quickly drag list items from the ”In progress” column to the “Done” column.
