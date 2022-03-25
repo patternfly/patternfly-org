@@ -38,22 +38,16 @@ export const ExampleToolbar = ({
   setCode
 }) => {
   const [isEditorOpen, setIsEditorOpen] = React.useState(false);
-  const [copied, setCopied] = React.useState(false);
-  let timer;
+  const [isCopied, setCopied] = React.useState(false);
 
   const copyCode = () => {
     copy(code);
 
-    if (timer) {
-      clearTimeout(timer);
+    setCopied(true);
+    // Reset isCopied after Tooltip fades out
+    setTimeout(() => {
       setCopied(false);
-    }
-    setCopied(true, () => {
-      timer = setTimeout(() => {
-        setCopied(false);
-        timer = null;
-      }, 2500);
-    });
+    }, 2500);
   };
 
   const copyLabel = 'Copy code to clipboard';
@@ -83,8 +77,8 @@ export const ExampleToolbar = ({
       />
       <Tooltip
         trigger="mouseenter"
-        content={<div>{copied ? 'Code copied' : copyLabel}</div>}
-        exitDelay={copied ? 1600 : 300}
+        content={<div>{isCopied ? 'Code copied' : copyLabel}</div>}
+        exitDelay={isCopied ? 1600 : 300}
         entryDelay={300}
         maxWidth="100px"
         position="top"
@@ -92,7 +86,7 @@ export const ExampleToolbar = ({
         <Button onClick={() => {
           copyCode();
           trackEvent('code_editor_control_click', 'click_event', 'COPY_CODE');
-        }} variant="plain" aria-label={copyLabel} className="ws-code-editor-control">
+        }} variant="control" aria-label={copyLabel} className="ws-code-editor-control">
           <CopyIcon />
         </Button>
       </Tooltip>
@@ -114,7 +108,7 @@ export const ExampleToolbar = ({
           >
             <Button
               aria-label={codesandboxLabel}
-              variant="plain"
+              variant="control"
               type="submit"
               onClick={() => {
                 trackEvent('code_editor_control_click', 'click_event', 'CODESANDBOX_LINK');
@@ -198,7 +192,7 @@ export const ExampleToolbar = ({
       onChange={newCode => setCode(newCode)}
       onEditorDidMount={onEditorDidMount}
       isReadOnly={isFullscreen}
-      className="ws-code-editor"
+      className={`${isEditorOpen ? 'ws-example-code-expanded ' : ''}ws-code-editor`}
     />
   );
 }

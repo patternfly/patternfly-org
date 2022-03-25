@@ -12,21 +12,24 @@
   margin-bottom: var(--pf-global--spacer--md);
 }
 
-.ws-code-editor > .pf-c-code-editor__header::before {
-  content: none;
+.ws-code-editor:not(.ws-example-code-expanded) > .pf-c-code-editor__header::before {
+  --pf-c-code-editor__header--before--BorderBottomWidth: 0;
 }
 
-.ws-code-editor-control::after {
-  display: none;
+.ws-code-editor-control {
+  --pf-c-button--m-control--BackgroundColor: transparent;
+  --pf-c-button--m-control--active--BackgroundColor: transparent;
+  --pf-c-button--m-control--focus--BackgroundColor: transparent;
+  --pf-c-button--m-control--hover--BackgroundColor: transparent;
 }
 
 .ws-code-editor-control.pf-c-button {
-  background: none;
+  --pf-c-button--after--BorderWidth: 0;
 }
 
 .ws-preview {
   padding: 1rem;
-  background-color: white;
+  background-color: var(--pf-global--BackgroundColor--100);
   border-bottom: 1px solid #f8f8f8;
   transition: width .2s ease-in-out;
 }
