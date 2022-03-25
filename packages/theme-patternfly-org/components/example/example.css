@@ -29,7 +29,7 @@
 
 .ws-preview {
   padding: 1rem;
-  background-color: var(--pf-global--BackgroundColor--100);
+  background-color: white;
   border-bottom: 1px solid #f8f8f8;
   transition: width .2s ease-in-out;
 }
