@@ -1,5 +1,4 @@
 .ws-example {
-  background-color: white;
   margin-top: 25px;
   margin-bottom: 25px;
 }
@@ -11,6 +10,21 @@
 
 .ws-example-header > .ws-example-heading:not(:last-child) {
   margin-bottom: var(--pf-global--spacer--md);
+}
+
+.ws-code-editor:not(.ws-example-code-expanded) > .pf-c-code-editor__header::before {
+  --pf-c-code-editor__header--before--BorderBottomWidth: 0;
+}
+
+.ws-code-editor-control {
+  --pf-c-button--m-control--BackgroundColor: transparent;
+  --pf-c-button--m-control--active--BackgroundColor: transparent;
+  --pf-c-button--m-control--focus--BackgroundColor: transparent;
+  --pf-c-button--m-control--hover--BackgroundColor: transparent;
+}
+
+.ws-code-editor-control.pf-c-button {
+  --pf-c-button--after--BorderWidth: 0;
 }
 
 .ws-preview {
