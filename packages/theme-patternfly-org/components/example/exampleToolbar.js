@@ -38,22 +38,16 @@ export const ExampleToolbar = ({
   setCode
 }) => {
   const [isEditorOpen, setIsEditorOpen] = React.useState(false);
-  const [copied, setCopied] = React.useState(false);
-  let timer;
+  const [isCopied, setCopied] = React.useState(false);
 
   const copyCode = () => {
     copy(code);
 
-    if (timer) {
-      clearTimeout(timer);
+    setCopied(true);
+    // Reset isCopied after Tooltip fades out
+    setTimeout(() => {
       setCopied(false);
-    }
-    setCopied(true, () => {
-      timer = setTimeout(() => {
-        setCopied(false);
-        timer = null;
-      }, 2500);
-    });
+    }, 2500);
   };
 
   const copyLabel = 'Copy code to clipboard';
@@ -79,11 +73,12 @@ export const ExampleToolbar = ({
         aria-label={languageLabel}
         toolTipText={languageLabel}
         aria-expanded={isEditorOpen}
+        className="ws-code-editor-control"
       />
       <Tooltip
         trigger="mouseenter"
-        content={<div>{copied ? 'Code copied' : copyLabel}</div>}
-        exitDelay={copied ? 1600 : 300}
+        content={<div>{isCopied ? 'Code copied' : copyLabel}</div>}
+        exitDelay={isCopied ? 1600 : 300}
         entryDelay={300}
         maxWidth="100px"
         position="top"
@@ -91,7 +86,7 @@ export const ExampleToolbar = ({
         <Button onClick={() => {
           copyCode();
           trackEvent('code_editor_control_click', 'click_event', 'COPY_CODE');
-        }} variant="control" aria-label={copyLabel}>
+        }} variant="control" aria-label={copyLabel} className="ws-code-editor-control">
           <CopyIcon />
         </Button>
       </Tooltip>
@@ -118,6 +113,7 @@ export const ExampleToolbar = ({
               onClick={() => {
                 trackEvent('code_editor_control_click', 'click_event', 'CODESANDBOX_LINK');
               }}
+              className="ws-code-editor-control"
             >
               <input type="hidden" name="parameters" value={codeBoxParams} />
               <CodepenIcon />
@@ -137,6 +133,7 @@ export const ExampleToolbar = ({
           onClick={() => {
             trackEvent('code_editor_control_click', 'click_event', 'FULLSCREEN_LINK');
           }}
+          className="ws-code-editor-control"
         />
       }
       {isEditorOpen && lang === 'ts' &&
@@ -152,6 +149,7 @@ export const ExampleToolbar = ({
             setCode(convertToJSX(code).code);
             trackEvent('code_editor_control_click', 'click_event', 'TS_TO_JS');
           }}
+          className="ws-code-editor-control"
         />
       }
       {code !== originalCode &&
@@ -163,6 +161,7 @@ export const ExampleToolbar = ({
             setCode(originalCode);
             trackEvent('code_editor_control_click', 'click_event', 'RESET_CODE');
           }}
+          className="ws-code-editor-control"
         />
       }
     </React.Fragment>
@@ -193,6 +192,7 @@ export const ExampleToolbar = ({
       onChange={newCode => setCode(newCode)}
       onEditorDidMount={onEditorDidMount}
       isReadOnly={isFullscreen}
+      className={`${isEditorOpen ? 'ws-example-code-expanded ' : ''}ws-code-editor`}
     />
   );
 }
