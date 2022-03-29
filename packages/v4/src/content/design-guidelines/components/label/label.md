@@ -3,7 +3,7 @@ id: Label
 section: components
 ---
 
-Use a **label** when you want to highlight an element on a page to draw attention to it or make it more searchable. Labels can also be used to tag items of the same category.
+Use a **label** when you want to highlight an element on a page to draw attention to it or make it more searchable. Labels can also be used to tag items of the same category. If you want to show a count, use a [badge](https://www.patternfly.org/v4/components/badge) instead.
 
 ## Usage
 There are 2 label types:
@@ -17,7 +17,12 @@ There are 2 label types:
 
 Both default and compact labels come in the following default colors: gray, blue, green, orange, red, purple, and cyan. We offer a wide array of colors to allow for color coding labels within UIs. Label colors can be used to indicate status if desired, but do not have to. Regardless, we recommend you avoid using the red label unless it indicates danger or an error state.
 
+
+<img src="./img/filled-labels.png" alt="Label colors" width="646"/>
+
+
 While you may use other colors for your labels, we recommend using the ones provided as they have been carefully selected to be accessible with the PatternFly library. If you choose to use other colors, be mindful of picking [accessible text color and icon color](https://www.patternfly.org/v4/accessibility/testing-your-accessibility) to go with the label background.
+
 
 ## Label features
 You can further customize labels by making them filled or unfilled, dismissable, adding icons, or making them clickable links. You can use any combination of these features in a single label.
@@ -74,4 +79,3 @@ Labels can be used almost anywhere in a UI, but are commonly used in table views
 
 <img src="./img/catalog-view.png" alt="Example labels in a catalog" width="1204"/>
 
-If you want to show a count, use a [badge](https://www.patternfly.org/v4/components/badge) instead.
