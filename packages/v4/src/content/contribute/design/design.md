@@ -37,6 +37,6 @@ We encourage designers to work with the existing PatternFly icon set when choosi
 __Example__
 *I want to add a new custom icon to PatternFly to meet my project specific need.*
 
-Start by opening an issue in the [patternfly-design]([open a new issue](https://github.com/patternfly/patternfly-design/issues) repo proposing a new icon and why it's needed. To contribute a new icon, you can follow the procedure outlined here for [creating custom icons](https://github.com/patternfly/patternfly-design/wiki/Creating-custom-icons) and adding them to the PatternFly icon set.
+Start by opening an issue in the [patternfly-design](https://github.com/patternfly/patternfly-design/issues) repo proposing a new icon and why it's needed. To contribute a new icon, you can follow the procedure outlined here for [creating custom icons](https://github.com/patternfly/patternfly-design/wiki/Creating-custom-icons) and adding them to the PatternFly icon set.
 
 **If you are interested in contributing to any of the projects above, feel free to reach out to us on the patternfly-design channel on [Slack](https://slack.patternfly.org/).**
