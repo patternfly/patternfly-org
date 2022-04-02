@@ -7,8 +7,8 @@ A **code editor** is the open sourced monaco code editor wrapped in PatternFly c
 manage the interactions or the code for the monaco editor itself. 
 
 **Keyboard users** should be able to focus on the code editor controls using **Tab** to move forward and 
-**Tab + Shift** to move backward through interactive elements. They should be able to select a focused control, 
-such using **Space** or **Enter**. Keyboard users should also be able to move focus onto the monaco
+**Tab + Shift** to move backward through interactive elements. They should be able to select a focused control 
+using **Space** or **Enter**. Keyboard users should also be able to move focus onto the monaco
 code editor using **Tab**, and then into the monaco code editor using the **Down arrow**. If focus is in the monaco 
 code editor, the user should be able to use **Tab + Shift** to move focus out of the monaco code editor.
 
