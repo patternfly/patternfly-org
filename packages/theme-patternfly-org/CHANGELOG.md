@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.11.12 (2022-04-04)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
 ## 0.11.11 (2022-03-30)
 
 **Note:** Version bump only for package theme-patternfly-org
