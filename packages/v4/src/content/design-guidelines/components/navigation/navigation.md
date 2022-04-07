@@ -90,13 +90,13 @@ By using fly-outs to expose secondary navigation items and then drilling into th
 <img src="./img/flyout-to-drill-down.png" alt="Example of composable navigation with fly-out and drill-down menus" width="1143"/>
 
 #### Two-level expansion with drill-downs
-Similarly, you can use expanded menus to expose the first two or three levels of page hierarchy and then drill-down to the lowest level. This pattern is preferred to using fly-outs with a drill-down when there are fewer secondary level items and/or you require a mobile friendly solution.
+You can use expanded menus to expose the first two or three levels of page hierarchy and then drill-down to the lowest level. This pattern is preferred to using fly-outs with a drill-down when there are fewer secondary level items and/or you require a mobile friendly solution.
 
 <img src="./img/expansion-to-drill-down.png" alt="Example of composable navigation with expansion and drill-down menus" width="928"/>
 
 #### Drill-down with tertiary expansion
 
-You can also reverse this pattern by using a drill-down menu at the primary level and expansion to expose levels two and three. This approach works well well you want to make it easy for users to move between items at levels two and three by visualizing that hierarchy together without the need to frequently move back to the primary level to explore other branches.
+Consider using a drill-down menu at the primary level and expansion to expose levels two and three when you want to make it easy for users to move between items at levels two and three without the need to frequently move back to the primary level to explore other branches.
 
 <img src="./img/drill-down-to-expansion.png" alt="Example of composable navigation with drill-down and expansion menus" width="916"/>
 
