@@ -3,9 +3,17 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Fit code editor to height]()  
+### [Fit code editor to height](https://www.patternfly.org/v4/components/code-editor#with-sizetofit-height-height-will-growshrink-with-content)  
 
-- enable the Monaco editor's "fit-to-height" option via a prop.
+![code editor with fit-to-height](./img/fit-to-height.png)
+
+Enables the Monaco editor's "fit-to-height" option via a prop.
+
+### [Description list - set column width](https://www.patternfly.org/v4/components/description-list#horizontal-using-custom-term-width-modifier)
+
+![description list with custom term width](./img/description-list-term-width.png)
+
+Allows for constraining the width of a column and forcing labels to wrap. This is useful when terms in the list have very different lengths.
 
 ### [Predefined sizes for the avatar](https://www.patternfly.org/v4/components/avatar)
 
@@ -15,9 +23,10 @@ The avatar component now supports predefined sizes from sm (24px) to xl (128px).
 
 The `date` prop is now optional which allows for opening the calendar without setting an initial date.
 
-### [Description list - set column width]()
+### [Website enhancements](https://www.patternfly.org/v4/components/about-modal)
+This release also includes some PatternFly website updates including a new responsive table of contents on component pages.
 
-Allows for constraining the width of a column and forcing labels to wrap. This is useful when terms in the list have very different lengths.
+![component page table of contents](./img/component-page.png)
 
 See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
