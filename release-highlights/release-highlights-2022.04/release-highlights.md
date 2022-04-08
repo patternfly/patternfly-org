@@ -24,9 +24,7 @@ The avatar component now supports predefined sizes from sm (24px) to xl (128px).
 The `date` prop is now optional which allows for opening the calendar without setting an initial date.
 
 ### [Website enhancements](https://www.patternfly.org/v4/components/about-modal)
-This release also includes some PatternFly website updates including a new responsive table of contents on component pages.
-
-![component page table of contents](./img/component-page.png)
+This release also includes some PatternFly website updates including a new responsive table of contents on component pages. The TOC will transform from a vertical sidebar to a dropdown menu as the viewport shrinks.
 
 See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
 
