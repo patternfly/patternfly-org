@@ -118,7 +118,7 @@ Secondary horizontal navigation can be paired with vertical or horizontal naviga
 
 <img src="./img/secondary-horizontal-nav.png" alt="Example of secondary horizontal navigation" width="880"/>
 
-1. **Selected nav item:** The title of the page should reflect the selected horizontal navigation item. You can provide further nested information by using tabs.
+**Selected nav item:** The title of the page should reflect the selected horizontal navigation item. You can provide further nested information by using tabs.
 
 We recommend either using horizontal navigation OR vertical navigation as your primary. The secondary horizontal navigation can be added to either and contains similar styling to the primary navigation either way.
 
