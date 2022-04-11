@@ -46,7 +46,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Switch enhancements](https://github.com/patternfly/patternfly/issues/4755) - the switch component will be enhanced to add an option to have both a checkmark and label when on. Off and disabled colors will also be updated for improved usability.
 
-* [Add and remove tabs](https://github.com/patternfly/patternfly/issues/4757) - the tab component will be enhanced to introduced the ability to add and remove tabs within a horizontal group of tabs.
+* [Add and remove tabs](https://github.com/patternfly/patternfly/issues/4757) - the tab component will be enhanced to introduce the ability to add and remove tabs within a horizontal group of tabs.
 
 * [Search input - dark variant](https://github.com/patternfly/patternfly/issues/4705) - adding a dark variant of the search input that can be used in the masthead or above the vertical navigation menu.
 
