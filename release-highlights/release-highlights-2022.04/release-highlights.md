@@ -34,7 +34,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 ### 2022.05 (April 22)
 
-* [Brand enhancements](https://github.com/patternfly/patternfly-react/issues/5637) - update the brand component to allow images to be swapped by breakpoint. This will allow a product to support unique brand images per platform (e.g. mobile vs desktop)
+* [Brand enhancements](https://github.com/patternfly/patternfly-react/issues/5637) - update the brand component to allow images to be swapped by breakpoint. This will allow a product to support unique brand images per platform (e.g. mobile vs desktop).
 
 * [Exposing onBlur events for select component](https://github.com/patternfly/patternfly-react/issues/6882) - will expose the onBlur event for the select component to make it easier to implement validation on the checkbox event variant.
 
