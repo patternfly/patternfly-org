@@ -243,6 +243,13 @@ export const iconsData = [
     "Label": "Copy"
   },
   {
+    "Style": "pf-icon",
+    "Name": "pf-icon-critical-risk",
+    "React_name": "CriticalRiskIcon",
+    "Type": "Status",
+    "Contextual_usage": "Represents potential critical impact on a system or cluster",
+  },
+  {
     "Style": "fas",
     "Name": "fa-cube",
     "React_name": "CubeIcon",

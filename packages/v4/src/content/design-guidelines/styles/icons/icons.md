@@ -97,7 +97,7 @@ Visit our [colors page](/guidelines/colors) to learn more about icon colors.
 ## All icons
 PatternFly uses custom icons and selections from <a href="https://fontawesome.com/icons?d=gallery&m=free">Font Awesome Free</a>. PatternFly icons are mostly two dimensional and flat. Navigate to Font Awesome’s website to download SVGs of any additional ‘fa’ icons within their free set. Proper attribution should be given as outlined on the Font Awesome site.
 
-Click on any single icon in the table to download it as an SVG. Download all icon SVGs <a href="https://patternfly-org.s3.us-east-2.amazonaws.com/patternfly-icons.zip">here</a>.
+Click on any single icon in the table to download it as an SVG. Download all icon SVGs <a href="https://github.com/patternfly/patternfly-design/raw/master/resources/patternfly-icon-svgs/patternfly-icons.zip">here</a>.
 
 If you’re a designer, these icons are the same set as the ones in the [PatternFly Sketch Design Kit.](/get-started/design) It is possible to use any FontAwesome icon as long it follows the guidelines above.
 
