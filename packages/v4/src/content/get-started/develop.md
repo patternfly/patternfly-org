@@ -114,21 +114,9 @@ Use these files to consume the library. The recommended consumption approach wil
 ### Using styles
 **Typography**
 
-PatternFly uses the Overpass font family. Overpass can be utilized in two different ways:
+PatternFly uses the Red Hat font family. By default, Red Hat fonts are included as part of the PatternFly distributed CSS file. You do not need to do anything with your configuration to use this font family.
 
-  * **Built into PatternFly**
-
-  By default, Overpass is included as part of the PatternFly distributed CSS file. You do not need to do anything with your configuration to use this font family.
-
-  * **Used as a CDN**
-
-  If you wish to use the CDN for Overpass rather than the default approach, you need to update the ```sass-utilities/scss-variables.scss``` file and build PatternFly as part of your build process.
-
-  To use the CDN vs the standard build, update the ```sass-utilities/scss-variables.scss``` file as follows:
-
-  ```scss
-  $pf-global--enable-font-overpass-cdn: true !default;
-  ```
+The official documentation for the Red Hat font family can be found at the [RedHatOfficial/RedHatFont repo](https://github.com/RedHatOfficial/RedHatFont). A number of opt-in classes to expand the feature set of the default Red Hat font family within PatternFly, including variable font files and updated monospace fonts, can be found on the [Red Hat font page](/developer-resources/red-hat-font/). For additional guidelines on typography implementation in PatternFly see the [PatternFly typography guidelines](/guidelines/typography/).
 
 **Icons**
 
