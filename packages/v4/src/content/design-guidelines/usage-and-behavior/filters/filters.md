@@ -33,12 +33,12 @@ Filters consisting of multiple attributes include:
 There are various ways to allow users to filter down content. Filtering methods include [text entry filters](#text-entry-filters), [single selects](#single-select) and [checkbox selects](#checkbox-select).
 
 ### Text entry filters
-A text entry filter provides the user with an input field to type in values that filter the view, whether or not their input is an exact match. There are two types of basic filters: One uses a [search input](/components/search-input) component, the other uses an [input group](/components/input-group) component.
+A text entry filter provides the user with an input field to type in values that filter the view, whether or not their input is an exact match. The text entry filter uses the [search input](/components/search-input) component which can be used with and without a button. 
 
 <img src="./img/text-input.png" alt="text input filters" width="880"/>
 
-1. **Search input:** Filters automatically, as soon as the user starts typing.
-2. **Input group:** Filters on enter, or click of search button.
+1. **Basic search input:** Filters automatically, as soon as the user starts typing.
+2. **Search input with button:** Filters on enter, or click of arrow button.
 
 Note, the placeholder text in your text entry filter should indicate what the user can filter on. If the inputted string is constrained to filter a **single column**, the placeholder text of the input field should read “Filter by _attribute name_”. If the inputted string filters **all columns**, the placeholder text of the input field should read “Filter” instead.
 
