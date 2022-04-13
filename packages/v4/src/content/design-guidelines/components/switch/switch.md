@@ -15,7 +15,7 @@ It is assumed that when a user toggles a switch, the change will save automatica
 3. **Switch without label:** Indicates the state of a switch with a checkmark inside the switch itself, used in place of a switch label
 4. **Switch with label and checkmark:** Indicates the state of a switch with a checkmark inside the switch itself and label with additional message 
 
-Both switch types display their state (on or off) through different methods and locations. A basic switch communicates its state with an exterior switch label added to its right, while a switch without a label uses a checkmark to communicate its state from inside the switch itself.
+All switch types display their state (on or off) through different methods and locations. A basic switch communicates its state with an exterior switch label added to its right, while a switch without a label uses a checkmark to communicate its state from inside the switch itself.
 
 **General guidelines**
 
