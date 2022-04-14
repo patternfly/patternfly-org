@@ -1,5 +1,5 @@
 ---
-id: Dashboards
+id: Dashboard
 section: demos
 ---
 
