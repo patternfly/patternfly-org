@@ -100,6 +100,10 @@ module.exports = Parser => class TSParser extends Parser {
     return this.value && this.value.charCodeAt(0) === 62 // >
   }
 
+  _isEndOfNestedTypeParameters() {
+    return this._isEndOfTypeParameters() && this.value.charCodeAt(1) === 62// >>
+  }
+
   _hasPrecedingLineBreak() {
     return acorn.lineBreak.test(this.input.slice(this.lastTokEnd, this.start))
   }
@@ -845,6 +849,14 @@ module.exports = Parser => class TSParser extends Parser {
     }
     node.params = params
     return this.finishNode(node, 'TSTypeParameterInstantiation')
+  }
+
+  readToken(code) {
+    if (this._isEndOfNestedTypeParameters()) {
+      return this.finishToken(tt.relational, this.value[1]);
+    } else {
+      return super.readToken(code)
+    }
   }
 
   parseMaybeTSTypeParameterInstantiation() {

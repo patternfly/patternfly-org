@@ -13,5 +13,12 @@ module.exports = {
       sourceType: 'module',
       allowReturnOutsideFunction: true
     });
+  },
+  tokenize(code) {
+    return jsxParser.tokenizer(code, {
+      ecmaVersion: 2018,
+      sourceType: 'module',
+      allowReturnOutsideFunction: true
+    })
   }
 };
