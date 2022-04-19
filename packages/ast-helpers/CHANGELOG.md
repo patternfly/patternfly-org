@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.25 (2022-04-19)
+
+
+### Bug Fixes
+
+* **docs:** fixed font awesome typos ([#2869](https://github.com/patternfly/patternfly-org/issues/2869)) ([58584b1](https://github.com/patternfly/patternfly-org/commit/58584b1b695719dfeefaa66a1cd91ae3a4f09091))
+
+
+
+
+
 ## 0.4.24 (2022-04-19)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
