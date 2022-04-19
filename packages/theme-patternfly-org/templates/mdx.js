@@ -55,7 +55,7 @@ const MDXChildTemplate = ({
         <InlineAlert title="Beta feature">
           This Beta component is currently under review and is still open for further evolution. It is available for use in product.
           Beta components are considered for promotion on a quarterly basis. Please join in and give us your feedback or submit any questions on the <a href="https://forum.patternfly.org/">PatternFly forum</a> or via <a href="//slack.patternfly.org/" target="_blank" rel="noopener noreferrer">Slack</a>.
-          Learn more about Beta components <a href="https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion">here</a>.
+          To learn more go to our <a href="https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion">Beta components</a> page on GitHub.
         </InlineAlert>
       )}
       {katacodaBroken && (
