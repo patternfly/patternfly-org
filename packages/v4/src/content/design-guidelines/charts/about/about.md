@@ -16,16 +16,18 @@ A **chart** visualizes data in an application. The type of chart you use will de
 4. **Chart tooltip:** A tooltip will appear on hover over certain elements of a chart, like bars in a bar chart or segments in a donut chart. [Chart tooltips](/charts/tooltip-chart) should display the specific values related to the element the user is hovering over. 
 
 ## Chart types
+<img src="./img/chart-legend.png" alt="Image displaying what chart types to use when" width="1024"/> 
+
 - [Area chart](/charts/area-chart/design-guidelines): Use to show trends over a continuous scale (usually time)
-- [Bar chart](/charts/bar-chart/design-guidelines): Use to show and compare categorical data
-  - [Stacked bar chart](/charts/stack-chart/design-guidelines)
+- [Bar chart](/charts/bar-chart/design-guidelines): Use to show and compare categorical data. Can be plotted vertically or horizontally.
+  - [Stacked bar chart](/charts/stack-chart/design-guidelines): Use to show and compare categorical data of more than one variable. Can be plotted vertically or horizontally.
 - [Bullet chart](/charts/bullet-chart/design-guidelines): Use as an extension to the bar chart to measure data with thresholds and static ranges
-- [Donut chart](/charts/donut-chart/design-guidelines): Use to show the relationship of a set of values to a whole, or progress completion as a percentage
+- [Donut chart](/charts/donut-chart/design-guidelines): Use to show the relationship of a set of values to a whole, or progress completion as a percentage; best used to display data with a small number of categories (example: 2-5 categories)
   - [Donut utilization](/charts/donut-utilization-chart/design-guidelines): Use to show utilization for an object as a percentage
-  - [Donut utilization with threshold](/charts/donut-utilization-chart/design-guidelines#donut-chart---utilization-with-threshold): Use to show utilization for an object in relation to threshold values
+  - [Donut utilization with threshold](/charts/donut-utilization-chart/design-guidelines#donut-chart---utilization-with-threshold): Use to show utilization for an object as a percentage in relation to threshold values
 - [Line chart](/charts/line-chart/design-guidelines): Use to compare several data sets, or to show data over a period of time
 - [Pie chart](/charts/pie-chart/design-guidelines): Use to show percentages or proportional data
-- [Sparkline](/charts/sparkline-chart/design-guidelines): Use to understand trends and patterns
+- [Sparkline](/charts/sparkline-chart/design-guidelines): Use to show how values change over time for multiple sets of data. Useful alternative to the line chart when multiple lines need to be plotted.
 
 ## Charts in cards
 If a chart lives in a card, the title of that chart will be placed on the header of that card instead of the chart. The rest of the chart guidelines should be followed for the chart itself.
