@@ -326,7 +326,7 @@ When grouping columns together in a multi-column form, organize them so that fie
 
 <img src="./img/multi-column-eg.png" alt="Example of correct and incorrect multi-column forms"/>
 
-Never design multi-column forms to read like a book, where the left column is completed first before moving on to the right. The form itself should still move and be filled from top to bottom, with related fields placed on the same line.
+Never design multi-column forms to read like a magazine or newspaper column, where the left column is completed first before moving on to the right. The form itself should still move and be filled line by line from top to bottom, with related fields placed on the same line.
 
 <img src="./img/multi-column-read.png" alt="Example of how multi-column forms should be read and presented, demonstrated by arrows that follow a user's path of consumption"/>
 
