@@ -133,7 +133,6 @@ export const MDXTemplate = ({
   return (
     <React.Fragment>
       <PageSection
-        className={isSinglePage ? 'ws-docs-title' : ''}
         variant={isSinglePage ? PageSectionVariants.default : PageSectionVariants.light}
       >
         {!katacodaLayout && <Title size="4xl" headingLevel="h1" id="ws-page-title">
@@ -141,8 +140,8 @@ export const MDXTemplate = ({
         </Title>}
       </PageSection>
       {!isSinglePage && (
-        <PageSection className="pf-m-light pf-u-pb-0 pf-u-pt-0">
-          <div className="pf-c-tabs ws-source-tabs">
+        <PageSection type="tabs">
+          <div className="pf-c-tabs pf-m-page-insets">
             <ul className="pf-c-tabs__list">
               {sourceKeys.map((source, index) => (
                 <li
@@ -163,7 +162,7 @@ export const MDXTemplate = ({
           </div>
         </PageSection>
       )}
-      <PageSection id="main-content" className={isSinglePage ? 'pf-m-fill' : 'pf-m-fill pf-m-light'}>
+      <PageSection id="main-content" className={isSinglePage ? 'pf-m-fill' : 'pf-m-fill'}>
         {isSinglePage && (
             <MDXChildTemplate {...sources[0]} />
         )}

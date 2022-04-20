@@ -1,5 +1,5 @@
 .ws-mdx-p {
-  font-size: 18px;
+  font-size: var(--pf-global--FontSize--lg);
 }
 
 .pf4-c-background-image {
@@ -7,7 +7,7 @@
   width: 100%;
   max-width: 100%;
   background-repeat: no-repeat;
-  background-image: none, linear-gradient(180deg,#004080,#06c);
+  background-image: none, linear-gradient(180deg, #004080, #06c);
   background-size: cover;
 }
 
@@ -35,10 +35,10 @@
 /* Get started CTA */
 .pf4-c-button__cta-primary,
 .pf4-c-button__cta-outline {
-  border: 1px solid #fff;
-  font-size: 18px;
-  line-height: 27px;
-  padding: 16px 24px;
+  border: var(--pf-global--BorderWidth--sm) solid #fff;
+  font-size: var(--pf-global--FontSize--lg);
+  line-height: 1.5;
+  padding: var(--pf-global--spacer--md) var(--pf-global--spacer--lg);
   transition: var(--pf-global--Transition);
 }
 
@@ -55,19 +55,15 @@
 }
 
 #hello-were-patternfly + .ws-mdx-p {
-  margin-bottom: 8px;
+  margin-bottom: var(--pf-global--spacer--sm);
 }
 
 #patternfly-principles {
-  font-size: 36px;
+  font-size: var(--pf-global--FontSize--4xl);
 }
 
 #flyer-fundamentals .ws-heading-anchor {
   color: var(--pf-global--Color--100);
-}
-
-.ws-get-started:hover {
-  color: var(--pf-global--Color--light-200);
 }
 
 .ws-pf-principle .pf-l-flex {
@@ -76,7 +72,7 @@
 }
 
 .ws-pf-principle .pf-l-flex > div:first-child {
-  margin-right: 64px;
+  margin-right: var(--pf-global--spacer--3xl);
   flex-shrink: 0;
   width: 93px;
   text-align: center;
@@ -86,9 +82,9 @@
   .ws-pf-principle .pf-l-flex {
     flex-wrap: wrap;
   }
-  
+
   .ws-pf-principle .ws-principles-img {
-    margin-bottom: 24px;
+    margin-bottom: var(--pf-global--spacer--lg);
   }
 }
 
@@ -96,7 +92,7 @@
   width: 100%;
   max-width: 100%;
   background-image: url("./lines-background.svg");
-  background-repeat: no-repeat,no-repeat;
+  background-repeat: no-repeat, no-repeat;
   background-position: 100% 0,100%;
 }
 
@@ -152,15 +148,11 @@
 
 .ws-homepage-main-section.pf4-c-background-image .pf4-site-c-hero {
   margin-bottom: 0;
-  margin: 24px auto 0;
-}
-
-.ws-homepage-gray {
-  background-color: var(--pf-global--BackgroundColor--light-200);
+  margin: var(--pf-global--spacer--xl) auto 0;
 }
 
 .ws-mdx-a {
-  font-size: 18px;
+  font-size: var(--pf-global--FontSize--lg);
 }
 
 @keyframes fadeIn {

@@ -1,17 +1,5 @@
-.ws-community-page {
-  background-color: var(--pf-global--BackgroundColor--light-200);
-}
-
-.ws-community-page .ws-building-grid > * {
-  padding: var(--pf-global--spacer--md);
-  border: 1px solid var(--pf-global--palette--black-300);
-  display: flex;
-  flex-direction: column;
-}
-
 .ws-community-page .ws-building-grid .ws-mdx-p {
-  margin-top: var(--pf-c-content--MarginTop);
-  margin-bottom: var(--pf-c-content--MarginBottom);
+  margin: var(--pf-c-content--MarginTop) 0 var(--pf-c-content--MarginBottom);
 }
 
 .ws-community-page .ws-building-grid h4:last-child {

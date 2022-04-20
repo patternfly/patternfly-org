@@ -9,11 +9,11 @@
 }
 
 .ws-switcher-divider {
-  padding: 0 16px;
+  padding: 0 var(--pf-global--spacer--md);
 }
 
 .ws-patternfly-3 > svg {
-  margin-left: 8px;
+  margin-left: var(--pf-global--spacer--sm);
 }
 
 @media (min-width: 1200px) {
@@ -39,7 +39,7 @@
   background-color: transparent;
   border: none;
   /* For icon */
-  padding-left: 32px;
+  padding-left: var(--pf-global--spacer--xl);
   width: 200px;
 }
 .ws-hide-search-input .algolia-autocomplete,

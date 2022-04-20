@@ -1,25 +1,22 @@
+.ws-heading {
+  position: relative;
+}
+
 .ws-heading-anchor {
-  color: black;
-  float: left;
-  margin-left: -12px;
+  color: var(--pf-global--Color--100);
+  transform: translate(calc(-100% - var(--pf-global--spacer--xs)), -50%);
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
 }
 
 .ws-heading-anchor-icon {
-  visibility: hidden;
   height: 0.5em;
   width: 0.5em;
 }
-h1:hover .ws-heading-anchor svg,
-h2:hover .ws-heading-anchor svg,
-h3:hover .ws-heading-anchor svg,
-h4:hover .ws-heading-anchor svg,
-h5:hover .ws-heading-anchor svg,
-h6:hover .ws-heading-anchor svg,
-h1 .ws-heading-anchor:focus svg,
-h2 .ws-heading-anchor:focus svg,
-h3 .ws-heading-anchor:focus svg,
-h4 .ws-heading-anchor:focus svg,
-h5 .ws-heading-anchor:focus svg,
-h6 .ws-heading-anchor:focus svg {
-  visibility: visible;
+
+.ws-heading:hover .ws-heading-anchor,
+.ws-heading-anchor:focus {
+  opacity: 1;
 }
