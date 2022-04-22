@@ -5,15 +5,15 @@ section: components
 
 **Tabs** allow users to navigate between views within the same page or context.
 
-**Keyboard users** should be able to use **Tab** and **Shift + Tab** navigate to and between tabs.
-Keyboard users should also be able to select tab using **Enter** and **Space**. Disabled tabs cannot receive
-browser focus. Whenever a disabled tab needs to be able to receive browser focus, such as in the case of
-disabled tabs with a tooltip, set `aria-disabled` to true.
+**Keyboard users** should be able to use standard keyboard user navigation (**Tab** and **Shift + Tab**) to move to and between tabs.
+Keyboard users should also be able to select a tab using **Enter** and **Space**. Disabled tabs cannot receive
+browser focus by default. Whenever a disabled tab needs to be able to receive browser focus, such as in the case of
+disabled tabs with a tooltip, use the `isAriaDisabled` prop instead of `isDisabled`.
 
-**Screen reader users** should be made aware that the tabs interactable, and which tab is currently active using
-`aria-selected="true"` on the active tab, and `aria-selected="false"` on the non-active tabs. Additionally, all buttons
-and controls used to maneuver the tabs (i.e. the left and right scroll buttons and the expandable tab toggle) should
-be labelled.
+**Screen reader users** should be made aware that the tabs are interactable screen reader cursor focus, and which 
+tab is currently active using `aria-selected="true"` on the active tab, and `aria-selected="false"` 
+on the non-active tabs. Additionally, all buttons and controls used to maneuver the tabs (i.e. the left and right
+scroll buttons and the expandable tab toggle) should be labelled.
 
 The following props/attributes have been added for you or are customizable in PatternFly:
 

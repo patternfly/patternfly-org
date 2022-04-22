@@ -14,7 +14,7 @@ associated expandable content is expanded or collapsed using the `aria-expanded`
 content. When the expandable content is detached from the expandable section toggle, the expandable content's `id` should be set as the value of the
 expandable section toggle's `aria-controls` attribute.
 
-The following props/attributes have been added for you or are customizable in PatternFly:
+The following props/attributes have been added for you and are customizable in PatternFly:
 
 | React component         | React prop            | Which HTML element it appears on in markup     | Explanation                                                                   | 
 |-------------------------|-----------------------|------------------------------------------------|-------------------------------------------------------------------------------|

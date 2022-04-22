@@ -18,3 +18,7 @@ The following props/attributes have been added for you or are customizable in Pa
 As a caution, labels can be styled using a variety of colors. Relying on color alone to communicate information causes barriers to
 access for many readers: colorblind and low vision users may not be able to perceive the color differences, and screen
 readers do not announce colors to non-sighted readers.
+
+Since the label doesn't get an accessible name and isn't focusable by default, each label must have adequate contextual information
+provided in the surrounding UI to convey the same information the color alone is conveying. A developer could consider
+using a label with an icon in it to supplement the color, or be sure the text on the label is descriptive.

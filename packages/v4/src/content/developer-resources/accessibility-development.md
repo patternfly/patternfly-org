@@ -106,9 +106,14 @@ container with an overflow rule and content which could possibly grow larger tha
 will automatically make any scrollable element focusable to ensure keyboard accessibility as long as they have a 
 non-negative tabindex.
 
+Additionally, when adding tabIndex in this scenario, it would also be beneficial to add an aria-label that describes the scrollable element.
+Some screen reader users navigate page elements via an element list or rotor menu and the default label for these scrollable elements
+will be driven by whatever text content exists inside the container. This generated label may not be suitable to describe the regions purpose, and 
+would likely be better described with a simple aria-label.
+
 Example:
 ```html noLive
-<div style="height: 200px; overflow-y: auto" tabindex="0">
+<div style="height: 200px; overflow-y: auto" tabindex="0" aria-label="Scrollable content">
     <div style="height: 2000px">
         <p>Content</p>
     </div>
