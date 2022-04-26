@@ -1,6 +1,6 @@
 ---
-id: Log Viewer
-section: Extensions
+id: Log viewer
+section: extensions
 ---
 
 A log viewer is a preconfigured component that gives you the option to visualize your log content. Log viewer renders log output in real time in a clear and structured way.
