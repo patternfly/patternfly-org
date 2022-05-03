@@ -88,10 +88,9 @@ const HomePage = () => (
                     PatternFly’s foundation is made of design guidelines, so help is always there when you need it. Check out our approach to icons, color, content, and more.
                   </Text>
                   <Text
-                    aria-label="view design guidelines"
                     className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
-                    <Link to="/guidelines/colors">
+                    <Link to="/guidelines/colors" aria-label="view design guidelines">
                       View design guidelines <ArrowRightIcon />
                     </Link>
                   </Text>
@@ -102,10 +101,9 @@ const HomePage = () => (
                     A layout provides a fully responsive page structure that keeps your components organized and aligned regardless of screen size.
                   </Text>
                   <Text
-                    aria-label="view layouts"
                     className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
-                    <Link to="/layouts/bullseye">
+                    <Link to="/layouts/bullseye" aria-label="view layouts">
                       View layouts <ArrowRightIcon />
                     </Link>
                   </Text>
@@ -116,10 +114,9 @@ const HomePage = () => (
                     Components are like building blocks. Designed to be flexible and modular, you can mix and match components to create a solution for almost any UI problem.
                   </Text>
                   <Text
-                    aria-label="view components"
                     className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
-                    <Link to="/components/about-modal">
+                    <Link to="/components/about-modal" aria-label="view components">
                       View components <ArrowRightIcon />
                     </Link>
                   </Text>
@@ -130,10 +127,9 @@ const HomePage = () => (
                     Components are better together. Demos show how multiple components can be used in a single design. They also provide  some useful starter code, so the days of creating complex layouts from scratch are over.
                   </Text>
                   <Text
-                    aria-label="view demos"
                     className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
-                    <Link to="/demos/primary-detail">
+                    <Link to="/demos/primary-detail" aria-label="view demos">
                       View demos <ArrowRightIcon />
                     </Link>
                   </Text>
@@ -256,20 +252,18 @@ const HomePage = () => (
         </TextContent>
         <div className="pf-u-pb-md">
           <Text
-            aria-label="get started developers"
             className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
           >
-            <Link to="/get-started/develop" className="pf-m-white ws-get-started">
+            <Link to="/get-started/develop" className="pf-m-white ws-get-started" aria-label="get started developers">
               Get started for developers <ArrowRightIcon />
             </Link>
           </Text>
         </div>
         <div className="pf-u-pb-md">
           <Text
-            aria-label="get started designers"
             className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
           >
-            <Link to="/get-started/design" className="pf-m-white ws-get-started">
+            <Link to="/get-started/design" className="pf-m-white ws-get-started" aria-label="get started designers">
               Get started for designers <ArrowRightIcon />
             </Link>
           </Text>
