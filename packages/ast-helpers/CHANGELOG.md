@@ -3,6 +3,54 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.34 (2022-05-02)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.33 (2022-04-28)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.32 (2022-04-27)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.31 (2022-04-26)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.30 (2022-04-25)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.29 (2022-04-24)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 ## 0.4.28 (2022-04-20)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
