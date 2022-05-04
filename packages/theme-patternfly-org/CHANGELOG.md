@@ -3,6 +3,257 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.11.34 (2022-05-02)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.33 (2022-04-28)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.32 (2022-04-27)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.31 (2022-04-26)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.30 (2022-04-25)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.29 (2022-04-24)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.28 (2022-04-20)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.27 (2022-04-20)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.26 (2022-04-19)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.25 (2022-04-19)
+
+
+### Bug Fixes
+
+* **docs:** fixed font awesome typos ([#2869](https://github.com/patternfly/patternfly-org/issues/2869)) ([58584b1](https://github.com/patternfly/patternfly-org/commit/58584b1b695719dfeefaa66a1cd91ae3a4f09091))
+
+
+
+
+
+## 0.11.24 (2022-04-19)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.23 (2022-04-19)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.22 (2022-04-18)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.21 (2022-04-13)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.20 (2022-04-12)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.19 (2022-04-11)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.18 (2022-04-11)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.17 (2022-04-11)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.16 (2022-04-08)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.15 (2022-04-08)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.14 (2022-04-07)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.13 (2022-04-05)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.12 (2022-04-04)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.11 (2022-03-30)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.10 (2022-03-30)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.9 (2022-03-26)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.8 (2022-03-21)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.7 (2022-03-11)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.6 (2022-03-10)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.5 (2022-03-10)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.4 (2022-03-08)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
 ## 0.11.3 (2022-03-04)
 
 **Note:** Version bump only for package theme-patternfly-org

@@ -5,7 +5,7 @@ related: [
   'Badge',
   'Chip',
   'Chip group',
-  'Input group',
+  'Search input',
   'Options menu',
   'Select',
   'Toolbar'
@@ -33,12 +33,12 @@ Filters consisting of multiple attributes include:
 There are various ways to allow users to filter down content. Filtering methods include [text entry filters](#text-entry-filters), [single selects](#single-select) and [checkbox selects](#checkbox-select).
 
 ### Text entry filters
-A text entry filter provides the user with an input field to type in values that filter the view, whether or not their input is an exact match. There are two types of basic filters: One uses a [search input](/components/search-input) component, the other uses an [input group](/components/input-group) component.
+A text entry filter provides the user with an input field to type in values that filter the view, whether or not their input is an exact match. The text entry filter uses the [search input](/components/search-input) component which can be used with or without a button. 
 
 <img src="./img/text-input.png" alt="text input filters" width="880"/>
 
-1. **Search input:** Filters automatically, as soon as the user starts typing.
-2. **Input group:** Filters on enter, or click of search button.
+1. **Basic search input:** Filters automatically, as soon as the user starts typing.
+2. **Search input with button:** Filters on enter, or click of arrow button.
 
 Note, the placeholder text in your text entry filter should indicate what the user can filter on. If the inputted string is constrained to filter a **single column**, the placeholder text of the input field should read “Filter by _attribute name_”. If the inputted string filters **all columns**, the placeholder text of the input field should read “Filter” instead.
 
@@ -120,7 +120,7 @@ The following elements make up an attribute-value (textbox) filter.
 1. **Attribute selector:** A select list that allows the user to select the attribute that they want to filter against.
 2. **Value selector:** A value selector that is used to pass a value to the filter. The value selector can be any data input component. Common components used for value selection include:
   
-    a. A **text entry field** for entering a value from the keyboard. Use when you will enter the value as unbounded data (e.g. a name). When the text entry field is a search input, the value will appear as a chip automatically, and the search will start being validated. When the text entry field is an input group, the value will appear as a chip and the search will be validated when the user presses the Enter key on their keyboard or the search button. 
+    a. A **text entry field** for entering a value from the keyboard. Use when you will enter the value as unbounded data (e.g. a name). When the text entry field is a basic search input, the value will appear as a chip automatically, and the search will start being validated. When the text entry field is a search input with a button, the value will appear as a chip and the search will be validated when the user presses the Enter key on their keyboard or the arrow button. 
    
     b. A **single select** for selecting a value from a predefined list. This will work the same as a stand alone single select, however since any selection in an attribute filter will result in a chip, there is no need to have an “All” option as part of your menu, as users can reset their filters via the filter chips.
     

@@ -1,9 +1,65 @@
 {
   "Releases": [
     {
+      "name": "2022.05",
+      "date": "2022-4-25",
+      "latest": true,
+      "versions": {
+        "@patternfly/patternfly": "4.192.1",
+        "@patternfly/react-catalog-view-extension": "4.57.1",
+        "@patternfly/react-charts": "6.59.1",
+        "@patternfly/react-code-editor": "4.47.1",
+        "@patternfly/react-core": "4.206.1",
+        "@patternfly/react-icons": "4.57.1",
+        "@patternfly/react-inline-edit-extension": "4.51.1",
+        "@patternfly/react-log-viewer": "4.51.1",
+        "@patternfly/react-styles": "4.56.1",
+        "@patternfly/react-table": "4.75.1",
+        "@patternfly/react-tokens": "4.58.1",
+        "@patternfly/react-topology": "4.53.1",
+        "@patternfly/react-virtualized-extension": "4.53.1"
+      }
+    }, {
+      "name": "2022.04",
+      "date": "2022-4-7",
+      "versions": {
+        "@patternfly/patternfly": "4.185.1",
+        "@patternfly/react-catalog-view-extension": "4.53.16",
+        "@patternfly/react-charts": "6.55.16",
+        "@patternfly/react-code-editor": "4.43.16",
+        "@patternfly/react-core": "4.202.16",
+        "@patternfly/react-icons": "4.53.16",
+        "@patternfly/react-inline-edit-extension": "4.47.16",
+        "@patternfly/react-log-viewer": "4.47.16",
+        "@patternfly/react-styles": "4.52.16",
+        "@patternfly/react-table": "4.71.16",
+        "@patternfly/react-tokens": "4.54.16",
+        "@patternfly/react-topology": "4.49.16",
+        "@patternfly/react-virtualized-extension": "4.49.16"
+      }
+    },
+    {
+      "name": "2022.03",
+      "date": "2022-3-10",
+      "versions": {
+        "@patternfly/patternfly": "4.183.1",
+        "@patternfly/react-catalog-view-extension": "4.49.19",
+        "@patternfly/react-charts": "6.51.19",
+        "@patternfly/react-code-editor": "4.39.19",
+        "@patternfly/react-core": "4.198.19",
+        "@patternfly/react-icons": "4.49.19",
+        "@patternfly/react-inline-edit-extension": "4.43.19",
+        "@patternfly/react-log-viewer": "4.43.19",
+        "@patternfly/react-styles": "4.48.19",
+        "@patternfly/react-table": "4.67.19",
+        "@patternfly/react-tokens": "4.50.19",
+        "@patternfly/react-topology": "4.45.19",
+        "@patternfly/react-virtualized-extension": "4.45.19"
+      }
+    },
+    {
       "name": "2022.02",
       "date": "2022-2-22",
-      "latest": true,
       "versions": {
         "@patternfly/patternfly": "4.179.1",
         "@patternfly/react-catalog-view-extension": "4.49.5",

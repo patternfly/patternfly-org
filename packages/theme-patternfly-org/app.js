@@ -5,15 +5,20 @@ import { SideNavLayout } from 'theme-patternfly-org/layouts';
 import { Footer } from 'theme-patternfly-org/components';
 import { MDXTemplate } from 'theme-patternfly-org/templates/mdx';
 import { routes, groupedRoutes, fullscreenRoutes, getAsyncComponent } from './routes';
+import { trackEvent } from './helpers';
 import 'client-styles';
 
-const AppRoute = ({ child, katacodaLayout, title }) => {
-  const location = useLocation();
+const AppRoute = ({ child, katacodaLayout, title, path }) => {
+  const pathname = useLocation().pathname;
   if (typeof window !== 'undefined' && window.gtag) {
     gtag('config', 'UA-47523816-6', {
-      'page_path': location.pathname,
-      'page_title': (title || location.pathname)
+      'page_path': pathname,
+      'page_title': (title || pathname)
     });
+  }
+  // Send 404 event if redirected to 404 page
+  if (path === '/404' && pathname.split('/').pop() !== '404') {
+    trackEvent('404_redirect', 'redirect', pathname);
   }
   return (
     <React.Fragment>
