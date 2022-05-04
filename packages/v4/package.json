@@ -17,10 +17,6 @@
     "screenshots": "theme-patternfly-org screenshots"
   },
   "dependencies": {
-    "@patternfly/react-docs": "5.63.17",
-    "react": "^16.8.0 || ^17.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0",
-    "theme-patternfly-org": "^0.11.28"
     "@patternfly/react-docs": "5.67.3",
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0",
