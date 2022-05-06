@@ -6,7 +6,7 @@
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
-    "analyze": "theme-patternfly-org build all --analyze",
+  "analyze": "theme-patternfly-org build all --analyze",
     "build": "theme-patternfly-org build all",
     "build:server": "theme-patternfly-org build server",
     "build:client": "theme-patternfly-org build client",
@@ -18,8 +18,8 @@
   },
   "dependencies": {
     "@patternfly/react-docs": "5.67.3",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0",
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0",
     "theme-patternfly-org": "^0.11.35"
   },
   "devDependencies": {
