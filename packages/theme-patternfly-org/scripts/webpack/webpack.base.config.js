@@ -56,8 +56,7 @@ module.exports = (_env, argv) => {
               }]],
               plugins: [
                 '@babel/plugin-transform-react-jsx',
-                '@babel/plugin-proposal-class-properties',
-                '@babel/plugin-proposal-optional-chaining'
+                '@babel/plugin-proposal-class-properties'
               ],
             }
           },
