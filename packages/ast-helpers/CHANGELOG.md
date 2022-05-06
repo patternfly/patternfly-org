@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.37 (2022-05-06)
+
+
+### Bug Fixes
+
+* **docs:** fixed 2 broken links ([#2954](https://github.com/patternfly/patternfly-org/issues/2954)) ([6f3f554](https://github.com/patternfly/patternfly-org/commit/6f3f55475ef98cf85880010779ae9ab605177b9c))
+
+
+
+
+
 ## 0.4.36 (2022-05-06)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
