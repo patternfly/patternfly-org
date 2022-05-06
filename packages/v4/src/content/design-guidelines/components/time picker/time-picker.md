@@ -65,14 +65,14 @@ For some use cases, users may wish to customize their time display or selection 
 
 <img src="./img/time zone.png" alt="time zone" width="260"/>
 
-Learn more about formatting and displaying time zones in our [date and time guidelines](/content/numerics).
+Learn more about formatting and displaying time zones in our [date and time guidelines](/ux-writing/numerics).
 
 ## Content
 ### Time format
 
 Time formats are product-specific and often depend on user locale. To minimize confusion, choose one time format and keep it consistent. If one time picker displays HH:MM, be sure to repeat the same format throughout your interface.
 
-Learn more about date and time best practices in our [date and time guidelines](/content/numerics).
+Learn more about date and time best practices in our [date and time guidelines](/ux-writing/numerics).
 
 ### Placeholder text
 Always use placeholder text in time fields to provide an example of the accepted time format. Placeholder text will disappear after users begin inputting their own time.
