@@ -27,7 +27,7 @@ Use 8px of padding between each alert in an alert group. Alert group alignment o
 
 <img src="./img/alert-group-mobile.png" alt="An example of a centered alert group over a mobile view." width="375" />
 
-## Managing Overflow
+## Managing overflow
 If you don't want multiple alerts to stack and fill the screen until the user dismisses them, you may use the overflow footer in an alert group to manage overflow. When applying overflow, you should decide how many alerts to display before showing the footer. A threshold of 3 alerts is recommended. After that, additional alerts added to the screen will cause older alerts to be hidden, and only the most recent 3 alerts are displayed.
 
 The overflow link should be configured to navigate to a place where the user can view and manage a complete list of incoming alerts. If a [notification drawer](/components/notification-drawer) is being used, it should open the drawer. You may customize the text accordingly to reflect the result of clicking the link. However, we recommend displaying the number of new/unread notifications present to give the user feedback about how many additional notifications are remaining to view as in the example below.
