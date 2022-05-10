@@ -27,9 +27,9 @@ Many accessibility issues can be found by doing a few simple checks:
 
 
 5. **Test with any screen reader available in your operating system.** We target these screen readers to test PatternFly:
-    - JAWS with Chrome, Windows ([keyboard shortcuts](//dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts))
-    - Voiceover with Safari, Mac ([keyboard shortcuts](//dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts))
-    - NVDA with Firefox, Windows ([keyboard shortcuts](//dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts))
+    - JAWS with Chrome, Windows ([JAWS keyboard shortcuts](//dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts))
+    - Voiceover with Safari, Mac ([Voiceover keyboard shortcuts](//dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts))
+    - NVDA with Firefox, Windows ([NVDA keyboard shortcuts](//dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts))
 
 
 
