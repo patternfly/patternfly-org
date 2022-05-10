@@ -54,6 +54,15 @@ export function ColorFamily({
             {title}
           </h3>
         </dt>
+        <dd
+          className={css(
+            'pf-c-accordion__toggle',
+            'ws-color-family-accordion-toggle',
+            expanded.length === familyTokens.length && 'pf-m-expanded'
+          )}
+        >
+          <p>CSS variables related to the {title} palette</p>
+        </dd>
         {familyTokens.map(token => {
           const isExpanded = expanded.includes(token.name);
           const isShadows = family === 'shadows';
