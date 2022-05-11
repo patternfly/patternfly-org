@@ -230,7 +230,7 @@ Different attributes can be added to different filters. These include:
 
 This table describes which features are **supported** for each filter type. Note that just because a feature is supported, does not mean it must be used in your filters. 
 
-|  &nbsp; &nbsp; &nbsp; &nbsp; | Filter chips | Type-ahead | Badge count
+|  Filter type | Filter chips | Type-ahead | Badge count
 | ----------------- | ------- | ------ | ------- | 
 | **Text entry**| Yes (if within an attribute filter) | Yes | No |
 | **Single select** | Yes (if within an attribute filter) | Yes | No |
