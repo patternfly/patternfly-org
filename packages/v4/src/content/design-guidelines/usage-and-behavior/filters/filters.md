@@ -177,7 +177,7 @@ Filter groups support [filter chips](#filter-chip), [badges](#badge-count), and 
 **Type-ahead** allows the user to narrow down their search and is supported for all value selection types except checkbox selects. Although typeahead is **not supported** for checkbox selects, you can add a search input inside the menu, above the items the user can select from.
 
 ### Toggle group
-A toggle group filter allows users to select from a set of predefined different elements to filter something on. This filter uses the [toggle group](/components/toggle-group) component.
+A toggle group filter allows users to select from a set of predefined different elements to filter something on. This filter uses the [toggle group component](/components/toggle-group).
 
 <img src="./img/toggle-group.png" alt="toggle group" width="541" />
 
