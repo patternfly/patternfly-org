@@ -13,7 +13,7 @@
     "clean": "rm -rf .cache public size-plugin.json src/generated/**/*.js",
     "develop": "theme-patternfly-org start",
     "generate": "theme-patternfly-org generate",
-    "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4",
+    "test:a11y": "patternfly-a11y --config patternfly-a11y.config",
     "screenshots": "theme-patternfly-org screenshots"
   },
   "dependencies": {
@@ -23,6 +23,7 @@
     "theme-patternfly-org": "^0.11.52"
   },
   "devDependencies": {
+    "@patternfly/patternfly-a11y": "4.2.1",
     "fs-extra": "^9.0.0",
     "glob": "^7.1.6"
   }

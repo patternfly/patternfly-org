@@ -415,7 +415,7 @@ For more button text guidance, see our [button content guidelines](/components/b
 
 ## Accessibility
 
-This section highlights accessibility considerations to keep in mind when creating forms. For more accessibility guidance, see our [PatternFly accessibility guide](/accessibility/accessibility-and-patternfly).
+This section highlights accessibility considerations to keep in mind when creating forms. For more accessibility guidance, see our [PatternFly accessibility guide](/accessibility/product-development-guide/).
 
 ### Form sections
 Follow these best practices to create accessible form sections:
