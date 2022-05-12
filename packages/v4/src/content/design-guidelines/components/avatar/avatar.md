@@ -13,7 +13,7 @@ There are four size variations available to use for different scenarios. The typ
 ### Small (24 px)
 This size variation should be used in components such as accordions, data lists, tables, etc.
 
-<img src="./img/small-avatar-data list & accordion.png" alt="Image displaying small avatar usage in data list and accordion" width="446"/>
+<img src="./img/small-avatar-data list & accordion.png" alt="Image displaying small avatar usage in data list and accordion" width="802"/>
 
 ### Medium (36 px)
 This size variation is the default avatar size and should be used in the masthead component.
@@ -23,7 +23,7 @@ This size variation is the default avatar size and should be used in the masthea
 ### Large (72 px)
 This size variation should be used in components such as cards.
 
-<img src="./img/large-avatar-card.png" alt="Image displaying large avatar usage in card" width="446"/> 
+<img src="./img/large-avatar-card.png" alt="Image displaying large avatar usage in card" width="353"/> 
 
 ### Extra Large (128 px)
 This size variation should be used in components such as profile displays.
