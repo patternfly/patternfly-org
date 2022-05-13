@@ -54,15 +54,6 @@ export function ColorFamily({
             {title}
           </h3>
         </dt>
-        <dd
-          className={css(
-            'pf-c-accordion__toggle',
-            'ws-color-family-accordion-toggle',
-            expanded.length === familyTokens.length && 'pf-m-expanded'
-          )}
-        >
-          <p>CSS variables related to the {title} palette</p>
-        </dd>
         {familyTokens.map(token => {
           const isExpanded = expanded.includes(token.name);
           const isShadows = family === 'shadows';
@@ -94,7 +85,7 @@ export function ColorFamily({
 
           return (
             <React.Fragment key={token.name}>
-              <dt
+              <dd
                 className={`${tokenClass} ws-color-family-accordion-toggle`}
                 style={itemStyle}
                 onClick={() => expand(token.name)}
@@ -111,7 +102,7 @@ export function ColorFamily({
                     #{normalizeColor(token.value.toUpperCase())}
                   </div>
                 )}
-              </dt>
+              </dd>
               {isExpanded && (
                 <dd className={`${tokenClass} ws-color-family-content`} style={expandedStyle}>
                   <label className="ws-color-family-label">CSS variables</label>
