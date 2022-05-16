@@ -1,4 +1,4 @@
-#PatternFly.org's Accessibility Report Card
+# PatternFly.org's Accessibility Report Card
 
 This report runs the [patternfly-a11y](https://github.com/patternfly/patternfly-a11y) tool, which is built using [axe-core](https://github.com/dequelabs/axe-core).
 It checks PatternFly.org's accessibility by running the automated testing on the following pages:
@@ -10,9 +10,9 @@ It checks PatternFly.org's accessibility by running the automated testing on the
 - Crawls the multiple tabs under each component's documentation pages
 - The composable table, legacy table, and html table document pages a second time at a mobile viewport width
 
-##Original report run May 16, 2022
+## Original report run May 16, 2022
 [View full report](pf-a11y_5-16-22.surge.sh)
-###Summary
+### Summary
 - Tested URLs: 457
 - Pass: 116
 - Fail: 341
@@ -28,9 +28,9 @@ Note: when running the report again but silencing the jumplinks a11y issue:
 - Pass rate: 73.96% 
 - Accessibility issues: 675
 
-##Report run on May 17th, 2022
+## Report run on May 17th, 2022
 [View full report](pf-a11y_5-17-22.surge.sh)
-###Summary
+### Summary
 - Tested URLs: 457
 - Pass: 117
 - Fail: 340
