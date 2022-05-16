@@ -27,6 +27,6 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Search input - dark variant](https://github.com/patternfly/patternfly/issues/4705) - adding a dark variant of the search input that can be used in the masthead or above the vertical navigation menu.
 
-* [Editable label group](https://github.com/patternfly/patternfly/issues/4756) - introduce the ability for the user to add new labels to a label group.
+* [Editable label group](https://github.com/patternfly/patternfly-react/issues/7351) - introduce the ability for the user to add new labels to a label group.
 
 For a complete roadmap showing all items planned in future releases, see our [PatternFly Feature Roadmap](https://github.com/orgs/patternfly/projects/4?fullscreen=true) project board.
