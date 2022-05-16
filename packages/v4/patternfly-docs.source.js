@@ -78,4 +78,10 @@ module.exports = (sourceMD, sourceProps) => {
   // Upgrade guides
   sourceMD(require.resolve('@patternfly/patternfly/UPGRADE-GUIDE.md'), 'html');
   sourceMD(require.resolve('@patternfly/react-docs/UPGRADE-GUIDE.md'), 'react');
+
+    // Quick starts
+  const quickStartsPath = require
+    .resolve('bare-qs-docs/package.json')
+    .replace('package.json', 'src');
+  sourceMD(path.join(quickStartsPath, '/**/__docs__/**/*.md'), 'react');
 }
