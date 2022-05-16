@@ -2,7 +2,7 @@
   "name": "patternfly-org-4",
   "description": "Documentation for PatternFly 4.",
   "private": true,
-  "version": "4.10.40",
+  "version": "4.10.41",
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
@@ -20,7 +20,7 @@
     "@patternfly/react-docs": "5.75.2",
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0",
-    "theme-patternfly-org": "^0.11.40"
+    "theme-patternfly-org": "^0.11.41"
   },
   "devDependencies": {
     "fs-extra": "^9.0.0",
