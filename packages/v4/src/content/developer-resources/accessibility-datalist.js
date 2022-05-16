@@ -110,7 +110,7 @@ export class AccessibilityDatalist extends React.Component {
               <DataListItemCells
                 dataListCells={[
                   <DataListCell key="primary content">
-                    <span id="ex-item1">Guideline</span>
+                    <span id="ex-item0">Guideline</span>
                   </DataListCell>,
                   <DataListCell key="secondary content">
                     <span>Link</span>
@@ -247,7 +247,7 @@ export class AccessibilityDatalist extends React.Component {
                   <DataListCell isIcon key="icon">
                   </DataListCell>,
                   <DataListCell key="tertiary content">
-                    <div id="ex-item3">Landmarks</div>
+                    <div id="ex-item4">Landmarks</div>
                   </DataListCell>,
                   <DataListCell key="secondary content">
                     <a href="//www.w3.org/TR/WCAG20-TECHS/ARIA11.html">ARIA11</a>
@@ -284,7 +284,7 @@ export class AccessibilityDatalist extends React.Component {
                   <DataListCell isIcon key="icon">
                   </DataListCell>,
                   <DataListCell key="tertiary content">
-                    <div id="ex-item3">Headings</div>
+                    <div id="ex-item5">Headings</div>
                   </DataListCell>,
                   <DataListCell key="secondary content">
                     <a href="//www.w3.org/WAI/WCAG21/quickref#section-headings">WCAG 2.4.10</a>
@@ -319,7 +319,7 @@ export class AccessibilityDatalist extends React.Component {
                   <DataListCell isIcon key="icon">
                   </DataListCell>,
                   <DataListCell key="tertiary content">
-                    <div id="ex-item3">Contents</div>
+                    <div id="ex-item6">Contents</div>
                   </DataListCell>,
                   <DataListCell key="secondary content">
                   </DataListCell>,
@@ -331,7 +331,7 @@ export class AccessibilityDatalist extends React.Component {
             </DataListItemRow>
             <DataListContent
               aria-label="Primary Content Details"
-              id="ex-expand5"
+              id="ex-expand6"
               isHidden={!this.state.expanded.includes('ex-toggle6')}
             >
             <p>
