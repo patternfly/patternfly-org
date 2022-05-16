@@ -30,7 +30,7 @@ The design kit is a collection of Sketch assets that make it easy for designers 
 ### Using other design tools
 
 #### Before you begin
-For non-Sketch users, we have created a compatible version of the symbol library to fit with any design tool of choice. We recommend importing the SVG versions into your design tool. Download the SVG set in the patternfly-design-kit repo [here](https://github.com/patternfly/patternfly-design-kit/tree/master/Symbols-SVGs).
+For non-Sketch users, we have created a compatible version of the symbol library to fit with any design tool of choice. We recommend importing the SVG versions into your design tool. Download the SVG set in the [patternfly-design-kit repo](https://github.com/patternfly/patternfly-design-kit/tree/master/Symbols-SVGs).
 
 #### Download the font
 PatternFly currently uses Red Hat Text and Red Hat Display. To download these fonts, go to https://github.com/RedHatOfficial/RedHatFont and download the whole repository. Then select all files in the "TTF" folder and double-click. This will install them onto your computer locally.
@@ -51,7 +51,7 @@ If you’d like to avoid out-of-date designs, we recommend moving to our Red Hat
 
 ### The template file
 
-The template file contains complex components and demos like charts and forms that make it faster and easier for you to add common design patterns to your wireframes. To view template examples click [here](/components/about-modal/html-demos).
+The template file contains complex components and demos like charts and forms that make it faster and easier for you to add common design patterns to your wireframes. Template examples can be viewed in [our demos](/components/about-modal/html-demos).
 
 The contents of the template file are organized alphabetically by component or demo name. If you want to use any of the artboards in the template file to create custom designs, you should follow these rules:
 1. Unhide “padding” group (this group contains all of the spacers we use to create the design)
@@ -88,7 +88,7 @@ The layout for all visual elements in Patternfly is determined by spacers. The s
 
 The [template library](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89) also contains examples of spacer use to clarify where elements should be placed within a given page or design.  These templates have been created in a way that reduces a user’s need to think about spacers. An example of a Login form template can be seen here with different sized spacers - demonstrated by their different colors - used to separate each symbol/component within the layout.
 
-To see more information about spacers and their use please click [here](/guidelines/spacers).
+To see more information about spacers and their use please see our [spacer guidelines](/guidelines/spacers).
 
 ### Layer styles
 Symbols in the symbol are organized by component; after selecting a component, you’ll see the variations and states of that component.

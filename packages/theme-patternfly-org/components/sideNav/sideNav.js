@@ -12,7 +12,7 @@ const NavItem = ({ text, href }) => {
   const isMobileView = window.innerWidth < Number.parseInt(globalBreakpointXl.value, 10);
   return (
     <PageContextConsumer key={href + text}>
-      {({onNavToggle}) => (
+      {({onNavToggle, isNavOpen }) => (
           <li key={href + text} className="pf-c-nav__item" onClick={() => isMobileView && onNavToggle()}>
             <Link
               to={href}
@@ -25,6 +25,7 @@ const NavItem = ({ text, href }) => {
                   )
                 }}
               }
+              tabIndex={isNavOpen ? undefined : -1}
             >
               {text}
             </Link>
