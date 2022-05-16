@@ -2074,6 +2074,20 @@
   dependencies:
     "@types/node" ">= 8"
 
+"@patternfly/patternfly-a11y@4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@patternfly/patternfly-a11y/-/patternfly-a11y-4.2.1.tgz#5bfd4c246c9222a4f0c192f922e71d71e2a3062d"
+  integrity sha512-tu0/ecztLqQOp+GG/jOh5aqtq8TAJXhymnBbV2BY+RPZfl1cwk1s/MAR0ukfmqz/UJ/EfHhFKp9F5ZdHym8D8Q==
+  dependencies:
+    axe-core "^4.3.2"
+    chromedriver "^85.0.1"
+    commander "^5.1.0"
+    fs-extra "^10.0.0"
+    junit-xml "^1.2.0"
+    puppeteer "^5.3.1"
+    puppeteer-cluster "^0.22.0"
+    xmldoc "^1.1.2"
+
 "@patternfly/patternfly@4.194.4":
   version "4.194.4"
   resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-4.194.4.tgz#87bd3c0a279146ad5d38dbc6a835f83c7dbcd252"
