@@ -11,7 +11,7 @@ It checks PatternFly.org's accessibility by running the automated testing on the
 - The composable table, legacy table, and html table document pages a second time at a mobile viewport width
 
 ## Original report run May 16, 2022
-[View full report](pf-a11y_5-16-22.surge.sh)
+[View full report](https://pf-a11y_5-16-22.surge.sh)
 ### Summary
 - Tested URLs: 490
 - Pass: 118
@@ -20,7 +20,7 @@ It checks PatternFly.org's accessibility by running the automated testing on the
 - Accessibility issues: 1066
 
 Note: when running the report again but silencing the jumplinks a11y issue:
-[pf-ally_5-16-22_no-jumplinks.surge.sh](pf-ally_5-16-22_no-jumplinks.surge.sh)
+[pf-ally_5-16-22_no-jumplinks.surge.sh](https://pf-ally_5-16-22_no-jumplinks.surge.sh)
 
 - Tested URLs: 490
 - Pass: 348
@@ -29,7 +29,7 @@ Note: when running the report again but silencing the jumplinks a11y issue:
 - Accessibility issues: 751
 
 ## Report run on May 17th, 2022
-[View full report](pf-a11y_5-17-22.surge.sh)
+[View full report](https://pf-a11y_5-17-22.surge.sh)
 ### Summary
 - Tested URLs: 491
 - Pass: 118
