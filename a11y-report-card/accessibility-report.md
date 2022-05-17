@@ -31,8 +31,8 @@ Note: when running the report again but silencing the jumplinks a11y issue:
 ## Report run on May 17th, 2022
 [View full report](pf-a11y_5-17-22.surge.sh)
 ### Summary
-- Tested URLs: 457
-- Pass: 117
-- Fail: 340
-- Pass rate: 25.38%
-- Accessibility issues: 923
+- Tested URLs: 491
+- Pass: 118
+- Fail: 373
+- Pass rate: 24.03%
+- Accessibility issues: 1053
