@@ -13,20 +13,20 @@ It checks PatternFly.org's accessibility by running the automated testing on the
 ## Original report run May 16, 2022
 [View full report](pf-a11y_5-16-22.surge.sh)
 ### Summary
-- Tested URLs: 457
-- Pass: 116
-- Fail: 341
-- Pass rate: 25.38%
-- Accessibility issues: 966
+- Tested URLs: 490
+- Pass: 118
+- Fail: 372
+- Pass rate: 24.08%
+- Accessibility issues: 1066
 
 Note: when running the report again but silencing the jumplinks a11y issue:
 [pf-ally_5-16-22_no-jumplinks.surge.sh](pf-ally_5-16-22_no-jumplinks.surge.sh)
 
-- Tested URLs: 457 
-- Pass: 338 
-- Fail: 119 
-- Pass rate: 73.96% 
-- Accessibility issues: 675
+- Tested URLs: 490
+- Pass: 348
+- Fail: 142 
+- Pass rate: 71.02% 
+- Accessibility issues: 751
 
 ## Report run on May 17th, 2022
 [View full report](pf-a11y_5-17-22.surge.sh)

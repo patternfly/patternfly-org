@@ -8,8 +8,9 @@ async function waitFor(page) {
 }
 
 module.exports = {
-  prefix: 'https://patternfly-org-pr-2961-v4.surge.sh/v4',
+  prefix: 'http://localhost:5000/v4',
   waitFor,
+  ignoreRules: 'list',
   crawl: true,
   urls: [
     {
@@ -67,5 +68,5 @@ module.exports = {
     }
   ],
   ignoreIncomplete: true,
-  skip: '(mailto)|(/(react|react-demos|react-legacy|react-composable|html|html-demos)/.+)|(/react)'
+  skip: '(mailto)|(/(react|react-demos|react-legacy|react-composable|html|html-demos)/.+)|(/react$)'
 };
