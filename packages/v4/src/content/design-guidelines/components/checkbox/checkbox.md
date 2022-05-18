@@ -46,6 +46,6 @@ The main difference between a switch and a checkbox is that a switch changes an 
 
     <img src="./img/switch-check-2.png" alt="Example 2 of do and don'ts for checkbox vs switch usee " width="661"/>
 
-* Use checkboxes when you may have an intermediate state where you can select all, none, or some actions.
+* Use checkboxes when you may have an indeterminate state where you can select all, none, or some actions.
 
     <img src="./img/switch-check-3.png" alt="Example 3 of do and don'ts for checkbox vs switch usee " width="661"/>
