@@ -334,3 +334,15 @@ Add your cards to the layout you created in Step 3 and take a look at the result
 Here’s our final dashboard after we made a few adjustments. You’ll see that the inventory card is taller than it needs to be. But that’s OK since it matches the height of surrounding cards and creates a uniform layout. It also allows space for further extension without introducing a scroll bar.
 
 <img src="./img/dashboard-example-final.png" alt="the finished dashboard" width="1680"/>
+
+## Dashbar
+A dashbar is a smaller dashboard placed inside of each application or dashboard to provide essential information so that you can take immediate action if it’s needed. It’s always placed at the top and takes up the upper half of the screen.
+
+Use dashbar when: 
+- Showing critical information about the current state of systems or other parts of an application. 
+- Presenting historical data. It can be presented by charts.
+- Filtering important data from a table.
+- Introducing a new feature. 
+- Showing the state of groups that can potentially have an impact on systems or any other parts of application.
+
+<img src="./img/dashbar.png" alt="Dashbar in dashboard" width="1552"/>
