@@ -88,6 +88,17 @@ An event card lists items that occur in time. These could be alerts, tasks, or o
 
 4. **Actions (optional):** If your card includes actions, add them as [link-style buttons](/components/button#variations) in the footer.
 
+## Dashbar
+A dashbar is a smaller dashboard placed inside of each application or dashboard to provide essential information so that you can take immediate action if it’s needed. It’s always placed at the top and takes up the upper half of the screen.
+
+Use dashbar when: 
+- Showing critical information about the current state of systems or other parts of an application. 
+- Presenting historical data. It can be presented by charts.
+- Filtering important data from a table.
+- Introducing a new feature. 
+- Showing the state of groups that can potentially have an impact on systems or any other parts of application.
+
+<img src="./img/dashbar.png" alt="Dashbar in dashboard" width="1552"/>
 
 ## Designing dashboards step-by-step
 To design an effective dashboard, you first must have a solid understanding of the requirements and use cases your dashboard is intended to fulfill. If you don’t have that yet, go back and ask more questions, do more research, and gain an overall better understanding of what your dashboard needs to do.
