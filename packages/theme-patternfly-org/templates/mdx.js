@@ -141,7 +141,7 @@ export const MDXTemplate = ({
       </PageSection>
       {!isSinglePage && (
         <PageSection type="tabs">
-          <div className="pf-c-tabs pf-m-page-insets">
+          <div className="pf-c-tabs pf-m-page-insets pf-m-no-border-bottom">
             <ul className="pf-c-tabs__list">
               {sourceKeys.map((source, index) => (
                 <li
@@ -162,7 +162,7 @@ export const MDXTemplate = ({
           </div>
         </PageSection>
       )}
-      <PageSection id="main-content" className={isSinglePage ? 'pf-m-fill' : 'pf-m-fill'}>
+      <PageSection id="main-content" isFilled className="pf-m-light-100">
         {isSinglePage && (
             <MDXChildTemplate {...sources[0]} />
         )}

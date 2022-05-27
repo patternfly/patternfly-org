@@ -10,5 +10,3 @@ import '@patternfly/patternfly/patternfly.css';
 import '@patternfly/patternfly/patternfly-addons.css';
 // Global theme CSS
 import 'theme-patternfly-org/global.css';
-// Patternfly dark theme
-import '@patternfly/patternfly/patternfly-theme-dark.css';

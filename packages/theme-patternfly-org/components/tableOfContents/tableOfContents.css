@@ -3,7 +3,7 @@
   align-self: flex-start;
   position: sticky;
   width: calc(100% + var(--pf-c-page__main-section--PaddingLeft) + var(--pf-c-page__main-section--PaddingRight));
-  background-color: var(--pf-global--BackgroundColor--100);
+  background-color: var(--pf-global--BackgroundColor--200);
   z-index: 1;
   margin: calc(var(--pf-c-page__main-section--PaddingTop) * -1) calc(var(--pf-c-page__main-section--PaddingRight) * -2) var(--pf-global--spacer--md) calc(var(--pf-c-page__main-section--PaddingLeft) * -1);
   padding: var(--pf-global--spacer--md) 0 var(--pf-global--spacer--md) var(--pf-global--spacer--md);

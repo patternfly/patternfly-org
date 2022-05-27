@@ -20,7 +20,7 @@ const CommunityPage = () => {
   }
 
   return (
-    <PageSection className="ws-community-page">
+    <PageSection className="ws-community-page pf-m-light-100">
       <Title size="4xl" className="pf-u-mb-lg ws-page-title" headingLevel="h1">Community</Title>
       <p>At the core of PatternFly is our community of people—in other words, our Flyers. Together, we celebrate creativity and foster a sense of teamwork and unity.</p>
 
