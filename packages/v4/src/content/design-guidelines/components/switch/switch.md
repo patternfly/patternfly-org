@@ -53,7 +53,7 @@ When writing form labels, keep the message short and specific. Ensure that the m
 
 | **Do** | **Don’t** |
 |:------:|:---------:|
-| Enabled encryption of installed disks| Encrypt installed disks|
+|Encrypt installed disks|Enabled encryption of installed disks| 
 
 </div>
 
@@ -63,9 +63,9 @@ In this example, “Enabled encryption of installed disks” implies that enable
 
 | **Do** | **Don’t** |
 |:------:|:---------:|
-| Turn on bluetooth| Bluetooth|
-| Turn off notifications| Notifications|
-| Give admins edit permissions| Admin edit permission|
+|Bluetooth|Turn on bluetooth|
+|Notifications|Turn off notifications|
+|Admin edit permission|Give admins edit permissions|
 
 </div>
 
@@ -76,8 +76,8 @@ Keep labels short and clear. Avoid end-of-sentence punctuation such as question 
 
 | **Do** | **Don’t** |
 |:------:|:---------:|
-| Refresh automatically?|  Automatically refresh|
-| Allow data collection?| Data collection|
-| Turn off notifications.| Notifications|
+|Automatically refresh| Refresh automatically?|  
+|Data collection| Allow data collection?| 
+|Notifications| Turn off notifications.|
 
 </div>
