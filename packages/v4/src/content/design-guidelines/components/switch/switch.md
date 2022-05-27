@@ -44,3 +44,40 @@ A switch changes an option and saves it simultaneously, while checkboxes require
 * Use checkboxes when you may have an intermediate state where you can select all, none, or some actions.
 
     <img src="./img/switch-check-3.png" alt="Example 3 of do's and don'ts for using a checkbox vs. a switch" width="661"/>
+
+## Content 
+### Form labels
+When writing form labels, keep the message short and specific. Ensure that the message is clear when the switch is toggled to both the “on” and “off” position. 
+
+<div class="ws-content-table">
+
+| **Do** | **Don’t** |
+|:------:|:---------:|
+| Enabled encryption of installed disks| Encrypt installed disks|
+
+</div>
+
+In this example, “Enabled encryption of installed disks” implies that enabled encryption is on, despite what position the switch is in. When the user toggles the switch to “off”, the form label “Enabled encryption of installed disks” could make them second-guess whether or not encryption is actually enabled. “Encrypt installed disks” makes sense when the option is both enabled and disabled, and does not imply that it is “on” or “off”. 
+
+<div class="ws-content-table">
+
+| **Do** | **Don’t** |
+|:------:|:---------:|
+| Turn on bluetooth| Bluetooth|
+| Turn off notifications| Notifications|
+| Give admins edit permissions| Admin edit permission|
+
+</div>
+
+### Punctuation 
+Keep labels short and clear. Avoid end-of-sentence punctuation such as question marks or exclamation points. 
+
+<div class="ws-content-table">
+
+| **Do** | **Don’t** |
+|:------:|:---------:|
+| Refresh automatically?|  Automatically refresh|
+| Allow data collection?| Data collection|
+| Turn off notifications.| Notifications|
+
+</div>
