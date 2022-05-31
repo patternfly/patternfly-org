@@ -172,7 +172,7 @@ export const Example = ({
               target="_blank"
               aria-label={`Open fullscreen ${title} example`}
             >
-              <img src={thumbnail.src} width={thumbnail.width} height={thumbnail.height} />
+              <img src={thumbnail.src} width={thumbnail.width} height={thumbnail.height} alt={`${title} screenshot`} />
             </a>
           </div>
         : <div
