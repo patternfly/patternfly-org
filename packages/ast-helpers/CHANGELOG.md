@@ -3,6 +3,73 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.47 (2022-05-27)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.46 (2022-05-27)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.45 (2022-05-26)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.44 (2022-05-18)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.43 (2022-05-17)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.42 (2022-05-16)
+
+
+### Bug Fixes
+
+* **docs:** resolve accessibility issues on static pages ([#2961](https://github.com/patternfly/patternfly-org/issues/2961)) ([cd03b92](https://github.com/patternfly/patternfly-org/commit/cd03b92dc14932c3b261500f32d162d4665e7b1c))
+
+
+
+
+
+## 0.4.41 (2022-05-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.40 (2022-05-13)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 ## 0.4.39 (2022-05-10)
 
 **Note:** Version bump only for package @patternfly/ast-helpers

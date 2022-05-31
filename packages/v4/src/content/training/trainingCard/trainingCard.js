@@ -58,7 +58,7 @@ export const TrainingCard = ({
     <CardFooter>
     {katacodaId && (
       <Link to={`/training/${katacodaId}`} >
-        <Button variant="link">
+        <Button variant="link" aria-label={`Start ${title} training`}>
           Start
           <ArrowRightIcon />
         </Button>
@@ -66,7 +66,7 @@ export const TrainingCard = ({
     )}
     {designUrl && (
       <Link to={designUrl} >
-        <Button variant="link">
+        <Button variant="link" aria-label={`Start ${title} training`}>
           Start
           <ArrowRightIcon />
         </Button>

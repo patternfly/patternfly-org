@@ -85,7 +85,7 @@ export function ColorFamily({
 
           return (
             <React.Fragment key={token.name}>
-              <dt
+              <dd
                 className={`${tokenClass} ws-color-family-accordion-toggle`}
                 style={itemStyle}
                 onClick={() => expand(token.name)}
@@ -102,7 +102,7 @@ export function ColorFamily({
                     #{normalizeColor(token.value.toUpperCase())}
                   </div>
                 )}
-              </dt>
+              </dd>
               {isExpanded && (
                 <dd className={`${tokenClass} ws-color-family-content`} style={expandedStyle}>
                   <label className="ws-color-family-label">CSS variables</label>
