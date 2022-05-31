@@ -24,18 +24,18 @@ Use an expandable section with a blue border to add more visual weight. This var
 
 
 ## Examples
-**Expandable section in a form**
+### Expandable section in a form
 
 <img src="./img/form.png" alt="Expandable section in a form" width="1514"/>
 
-**Expandable section in an inline alert**
+### Expandable section in an inline alert
 
 <img src="./img/inline-alert.png" alt="Expandable section in an inline alert" width="502"/>
 
-**Expandable section in a side panel**
+### Expandable section in a side panel
 
 <img src="./img/side-panel.png" alt="Expandable section in a side panel" width="1047"/>
 
-**Expandable section in a documentation page**
+### Expandable section in a documentation page
 
 <img src="./img/documentation.png" alt="Expandable section in a documentation page" width="644"/>
