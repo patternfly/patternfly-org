@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'theme-patternfly-org/components';
+import { Link } from '@breakaway/theme-patternfly-org/components';
 import {
   Button,
   Card,

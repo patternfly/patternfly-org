@@ -37,11 +37,11 @@ const serverConfig = () => {
     resolve: {
       alias: {
         // This stops prerender from hanging in `yarn build:client`
-        'd3-timer': 'theme-patternfly-org/helpers/d3-timer',
+        'd3-timer': '@breakaway/theme-patternfly-org/helpers/d3-timer',
         // The maintainer will not allow his bundle to be required from a node context
         // https://github.com/xtermjs/xterm.js/pull/3134
-        'xterm':  'theme-patternfly-org/helpers/xterm',
-        'xterm-addon-fit':  'theme-patternfly-org/helpers/xterm-addon-fit',
+        'xterm':  '@breakaway/theme-patternfly-org/helpers/xterm',
+        'xterm-addon-fit':  '@breakaway/theme-patternfly-org/helpers/xterm-addon-fit'
       },
     },
     // Load in prerender.js instead

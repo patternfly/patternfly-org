@@ -6,7 +6,7 @@ import {
     List,
     PageSection
 } from "@patternfly/react-core";
-import { Link } from 'theme-patternfly-org/components';
+import { Link } from '@breakaway/theme-patternfly-org/components';
 import { GithubIcon, TwitterIcon } from "@patternfly/react-icons";
 import redhatLogo from "./RHLogo.png";
 import "./footer.css";

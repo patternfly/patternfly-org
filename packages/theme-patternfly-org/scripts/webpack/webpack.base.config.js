@@ -56,7 +56,10 @@ module.exports = (_env, argv) => {
               }]],
               plugins: [
                 '@babel/plugin-transform-react-jsx',
-                '@babel/plugin-proposal-class-properties'
+                // fixes warnings of nature: Though the "loose" option was set to "true" in your @babel/preset-env config, it will not be used for...
+                ['@babel/plugin-proposal-class-properties', {loose: true}],
+                ['@babel/plugin-proposal-private-methods', {loose: true}],
+                ['@babel/plugin-proposal-private-property-in-object', {loose: true}]
               ],
             }
           },

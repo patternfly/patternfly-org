@@ -1,6 +1,6 @@
 // This module is shared between NodeJS and babelled ES5
-const { makeSlug, slugger } = require('theme-patternfly-org/helpers/slugger');
-const { asyncComponentFactory } = require('theme-patternfly-org/helpers/asyncComponentFactory');
+const { makeSlug, slugger } = require('@breakaway/theme-patternfly-org/helpers/slugger');
+const { asyncComponentFactory } = require('@breakaway/theme-patternfly-org/helpers/asyncComponentFactory');
 const clientRoutes = require('./routes-client'); // Webpack replaces this import
 const generatedRoutes = require('./routes-generated'); // Webpack replaces this import
 
@@ -69,7 +69,7 @@ const sortSources = ({ source: s1 }, { source: s2 }) => {
 }
 
 const getDefaultDesignGuidelines = ({ id, section, slug, title }) => {
-  const Component = () => require('theme-patternfly-org/templates/design-guidelines').DesignGuidelineTemplate
+  const Component = () => require('@breakaway/theme-patternfly-org/templates/design-guidelines').DesignGuidelineTemplate
   const pageData = {
     id,
     section,
