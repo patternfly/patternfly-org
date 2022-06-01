@@ -31,13 +31,23 @@ Use an option select menu when you want to persist selected items. This is typic
 3. **Descriptions (optional):** Descriptive text may be added below each menu item, but only when the menu item label itself may not be clear to all users. Keep descriptive text to two lines or less.
 
 ### Grouped menus
-You may decide to group menu items to associate related items or indicate a hierarchy within them. Items may be grouped using group headings, separators, or both.
+You may decide to group menu items to associate related items and/or to indicate a hierarchy of items. Items may be grouped using group headings and/or separators or in a [tree view](/components/tree-view).
 
-<img src="./img/grouped-menu.png" alt="grouped menu" width="630"/>
+<img src="./img/grouped-menu.png" alt="grouped menu options with separator, without, and in tree view" width="953"/>
 
 1. **Group heading (optional):** Add a group heading when you want to name the group.
 
 2. **Separator (optional):** Separators are horizontal dividers that help to group the menu items by clearly showing where one group ends and the next begins. You should consider whether a separator is needed to create visually distinct groups. In the first example above, a separator is used to create separation between the two groups of items. In the second example, the separator is not needed because the titled checkbox groups create two clearly grouped set of options on their own.
+
+3. **Expand/collapse:** The group heading or parent node would have the option to expand or collapse to reveal child nodes.
+
+4. **Parent node:** A menu item that contains child nodes/options a user can select.
+
+5. **Child node:** A menu item within the parent node that a user can select.
+
+6. **Leaf node:** A menu item without child nodes. An action or option that can be selected that will either trigger the action and dismiss the menu or appear selected with a checkmark.
+
+7. **Truncation indicator:** Ellipses indicating truncated text for longer names that don't fit in the node width.
 
 ### Multi-level fly-out menus
 Use fly-out menus when you want to expose sub-items from a parent node. PatternFly supports a single level fly-out, only.
