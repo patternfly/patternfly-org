@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.10.50 (2022-06-01)
+
+
+### Bug Fixes
+
+* **example:** added alt text to full-screen screenshots ([#2981](https://github.com/patternfly/patternfly-org/issues/2981)) ([a503ef3](https://github.com/patternfly/patternfly-org/commit/a503ef314629aa667dc0ce5492abf9ed232dc653))
+
+
+
+
+
 ## 4.10.49 (2022-06-01)
 
 
