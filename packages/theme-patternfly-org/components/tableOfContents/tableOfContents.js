@@ -10,15 +10,16 @@ export const TableOfContents = ({ items }) => {
     const { innerWidth } = window;
     innerWidth !== width && setWidth(innerWidth);
   }
+  let jumpLinksItems = [];
   let wasSublistRendered = false;
 
-  const renderSublist = (item, nextItem, idx) => {
+  const renderSublist = (item, nextItemArr) => {
     wasSublistRendered = true;
     return (
       <>
         {item.text}
         <JumpLinksList>
-          {nextItem.map(curItem => (
+          {nextItemArr.map(curItem => (
             <JumpLinksItem
               key={curItem.id}
               href={`#${curItem.id}`}
@@ -35,16 +36,13 @@ export const TableOfContents = ({ items }) => {
     );
   }
 
-  let jumpLinksItems = [];
-
   const renderJumpLinksItems = () => {
     items.forEach((item, index) => {
-      let cur = item;
-      let next = items[index + 1];
+      let nextItem = items[index + 1];
       // Don't render empty <JumpLinksItem> for an array of sublist items
       if (wasSublistRendered) {
         wasSublistRendered = false;
-        return null;
+        return;
       }
 
       jumpLinksItems.push(
@@ -56,7 +54,7 @@ export const TableOfContents = ({ items }) => {
           onMouseDown={updateWidth}
           onClick={() => trackEvent('jump_link_click', 'click_event', item.id.toUpperCase())}
         >
-          { Array.isArray(next) ? renderSublist(item, next, index) : item.text }
+          { Array.isArray(nextItem) ? renderSublist(item, nextItem) : item.text }
         </JumpLinksItem>
       );
     })
