@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.11.49 (2022-06-01)
+
+
+### Bug Fixes
+
+* **toc:** fixed jumplinks in TOC to resolve a11y nesting issue ([#2971](https://github.com/patternfly/patternfly-org/issues/2971)) ([5557097](https://github.com/patternfly/patternfly-org/commit/5557097a9f4ae6761c1dda72570d525f43396e0f))
+
+
+
+
+
 ## 0.11.48 (2022-06-01)
 
 **Note:** Version bump only for package theme-patternfly-org
