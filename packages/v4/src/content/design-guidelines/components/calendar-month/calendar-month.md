@@ -8,7 +8,7 @@ A **calendar month** component allows users to select and navigate between days,
 
 ## Elements
 
-<img src="./img/Calendar.png" alt="Calendar month elements" width="382"/>
+<img src="./img/Calendar.png" alt="Calendar month elements" width="328"/>
 
 1. **Selection arrows**: allow users to navigate between months.
 2. **Selected date**
