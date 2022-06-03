@@ -36,3 +36,12 @@ Note: when running the report again but silencing the jumplinks a11y issue:
 - Fail: 373
 - Pass rate: 24.03%
 - Accessibility issues: 1053
+
+## Report run on June 3rd, 2022
+[View full report](https://pf-a11y_6-3-22.surge.sh)
+### Summary
+- Tested URLs: 491
+- Pass: 398
+- Fail: 93
+- Pass rate: 81.06%
+- Accessibility issues: 538
