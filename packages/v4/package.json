@@ -23,7 +23,7 @@
     "theme-patternfly-org": "^0.11.52"
   },
   "devDependencies": {
-    "@patternfly/patternfly-a11y": "4.2.1",
+    "@patternfly/patternfly-a11y": "4.3.0",
     "fs-extra": "^9.0.0",
     "glob": "^7.1.6"
   }
