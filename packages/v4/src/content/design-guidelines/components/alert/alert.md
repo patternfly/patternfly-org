@@ -52,7 +52,17 @@ If an alert message applies globally to the content on a page, place the alert i
 
 If the alert applies only to specific content, place it inline with the page content to call attention to the error.
 
+
+
 <img src="./img/Inline-alert-specific-context.png" alt="inline alert inline with content" />
+
+If the alert is being used to indicate multiple errors, use an error validation summary in the page header area just below the title to indicate what errors are present. The summary should be a quick, general overview. Show an error alert next to the field that is causing the error. The error message should be concise and actionable. It should tell the user what happened and the next steps needed to fit it. 
+
+
+If multiple errors are present in the same location, order them from most to least severe.
+
+<img src="./img/Multiplealert.png" alt="Mutiple alerts in a page" />
+ 
 
 The user can dismiss information alerts by clicking the alert’s close button. Error-related alerts (warning and critical severity) should disappear only when the user addresses the issue that caused the alert. However, if the issue cannot be corrected on the current page and the user must take action to address a situation before proceeding, use a [modal](/components/modal) instead of an inline alert.
 
@@ -61,10 +71,10 @@ In addition to static message content and links, you have the option of includin
 <img src="./img/option-alert.png" alt="alert with radio button options" width="439px" />
 
 Inline alerts are commonly used in the following situations:
-- Informing the user that the information they entered into a form field isn’t valid
-- Informing the user of something that needs their attention
-- Informing the user that they need to set something up
-- Informing the user that a feature is temporarily unavailable
+- Informing the user that the information they entered into a form field isn’t valid.
+- Informing the user of something that needs their attention.
+- Informing the user that they need to set something up.
+- Informing the user that a feature is temporarily unavailable.
 
 ## Using toast alerts
 Use toast alerts to communicate an update, confirmation, or other activity to the user without blocking their workflow. For example, you can use a toast alert to inform the user that their message was sent. You can include links in a toast alert for a user to take action on the event that surfaced the alert, but the links should only be a shortcut for the user. A toast alert should never be used as the only means for taking actions on an alert event.
