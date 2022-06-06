@@ -18,3 +18,15 @@ The following props/attributes have been added for you and are customizable in P
 | React component | React prop  | Which HTML element it appears on in markup | Explanation                       | 
 |-----------------|-------------|--------------------------------------------|-----------------------------------|
 | ProgressStep    | aria-label  | .pf-c-progress-stepper__step               | Progress step for screen readers. |
+
+
+**Note:** When using a progress stepper in an application, it's also wise to consider how to best summarize the overall progress
+state to a screen reader user. The [basic progress stepper demo]('components/progress-stepper/react-demos#basic')
+demonstrates one approach of using an `aria-live` region which is updated to contain the progress stepper's status and
+is visible only to the screen reader.
+```js noLive
+<div className="pf-screen-reader" aria-live="polite">
+  On step 4.
+  Step 3 was successful.
+</div>
+```

@@ -22,3 +22,16 @@ readers do not announce colors to non-sighted readers.
 Since the label doesn't get an accessible name and isn't focusable by default, each label must have adequate contextual information
 provided in the surrounding UI to convey the same information the color alone is conveying. A developer could consider
 using a label with an icon in it to supplement the color, or be sure the text on the label is descriptive.
+
+Compare Figure 1 to Figure 2. Both figures include a blue informational label,
+a red error label , and a cyan link label. Note how difficult it is to determine the difference between the labels
+in Figure 1 with its lack of visual cues. In Figure 2, icons and updated text have increased the amount of helpful 
+infomation available without color.
+
+Figure 1.
+
+![labels without icons](../../../images/labels-no-icons.png)
+
+Figure 2.
+
+![labels with icons and better text](../../../images/labels-with-icons.png)
