@@ -44,19 +44,33 @@ export const TableOfContents = ({ items }) => {
         wasSublistRendered = false;
         return;
       }
-
-      jumpLinksItems.push(
-        <JumpLinksItem
-          key={item.id}
-          href={`#${item.id}`}
-          className="ws-toc-item"
-          onKeyDown={updateWidth}
-          onMouseDown={updateWidth}
-          onClick={() => trackEvent('jump_link_click', 'click_event', item.id.toUpperCase())}
-        >
-          { Array.isArray(nextItem) ? renderSublist(item, nextItem) : item.text }
-        </JumpLinksItem>
-      );
+      if (!Array.isArray(nextItem) && Array.isArray(item)) {
+        {item.map(curItem => jumpLinksItems.push(
+          <JumpLinksItem
+            key={curItem.id}
+            href={`#${curItem.id}`}
+            className="ws-toc-item"
+            onKeyDown={updateWidth}
+            onMouseDown={updateWidth}
+            onClick={() => trackEvent('jump_link_click', 'click_event', curItem.id.toUpperCase())}
+          >
+            {curItem.text}
+          </JumpLinksItem>
+        ))}
+      } else {
+        jumpLinksItems.push(
+          <JumpLinksItem
+            key={item.id}
+            href={`#${item.id}`}
+            className="ws-toc-item"
+            onKeyDown={updateWidth}
+            onMouseDown={updateWidth}
+            onClick={() => trackEvent('jump_link_click', 'click_event', item.id.toUpperCase())}
+          >
+            { Array.isArray(nextItem) ? renderSublist(item, nextItem) : item.text }
+          </JumpLinksItem>
+        );
+      }
     })
     return jumpLinksItems;
   }
