@@ -25,7 +25,9 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 * [Add gold label](https://github.com/patternfly/patternfly-react/issues/7449) - will add a new label variant that uses our gold palette.
 
-### 2022.09 - Breakaway milestone, no release
+### 2022.09 (July 15 - No release)
+* We will not do a feature release in July. Instead, we will use our 2022.09 milestone as a breakaway sprint to focus on process improvement and team driven initiatives.
+
 ### 2022.10 (August 5)
 
 * [Search input - dark variant](https://github.com/patternfly/patternfly/issues/4705) - adding a dark variant of the search input that can be used in the masthead or above the vertical navigation menu.
