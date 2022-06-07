@@ -80,7 +80,7 @@ Use plain inline alerts to communicate non-imperative messages to the user witho
 
 Plain inline alerts are non-dismissible, and it is not recommended to use them with actions or links.
 
-Using plain inline alerts on tabbed pages:
+**Using plain inline alerts on tabbed pages:**
 
 On a tabbed page that has a gray background, inline alerts do not offer enough contrast. Using them in this context requires additional formatting.
 - If the alert is relevant to the entire page and all the tabs within the page, it should be placed on the header:
