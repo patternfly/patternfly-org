@@ -75,7 +75,8 @@ module.exports = (sourceMD, sourceProps) => {
   sourceMD(require.resolve('@patternfly/patternfly/RELEASE-NOTES.md'), 'html');
   sourceMD(require.resolve('@patternfly/react-docs/RELEASE-NOTES.md'), 'react');
 
-  // Upgrade guides
-  sourceMD(require.resolve('@patternfly/patternfly/UPGRADE-GUIDE.md'), 'html');
-  sourceMD(require.resolve('@patternfly/react-docs/UPGRADE-GUIDE.md'), 'react');
+  const qsDocsPath = require
+    .resolve('@cooptest/quickstarts/package.json')
+    .replace('package.json', 'dist/docs/extensions/quickstarts');
+  sourceMD(path.join(qsDocsPath, '*.md'), 'extensions');
 }
