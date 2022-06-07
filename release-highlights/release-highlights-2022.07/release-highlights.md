@@ -3,7 +3,7 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Allow expandable section toggle to be an arbitrary component](https://staging.patternfly.org/v4/components/expandable-section#with-custom-toggle-content)
+### [Allow expandable section toggle to be an arbitrary component](https://www.patternfly.org/v4/components/expandable-section#with-custom-toggle-content)
 
 ![expandable section with custom toggle](./img/expandable-section.png)
 
