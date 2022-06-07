@@ -6,18 +6,18 @@ related: ['Alert', 'Alert group']
  
 An **alert** is a notification that provides brief information to the user without blocking their workflow.
  
-## **Inline alerts**
-### **Bordered inline alerts**
+## Inline alerts
+### Bordered inline alerts
 Bordered inline alerts communicate information about a specific user action on a page. An inline alert appears within the content area and disappears when the user closes it or navigates away from the page.
 
 ![inline notification placement](./img/inline-notification.png)
  
-### **Plain inline alerts**
+### Plain inline alerts
 Plain inline alerts are basic variations of inline alerts. They communicate information about a temporarily persistent error or other activity. A plain inline alert is less visually intrusive than a bordered inline alert, and is designed to be placed in content-heavy areas, such as within a form, wizard, or drawer. This alert type persists until the error or action is resolved.
  
 ![plain inline notification placement](./img/plain-inline-notification.png)
  
-### **Toast alerts**
+## Toast alerts
 Toast alerts communicate information about an update, confirmation, or other activity. A toast alert overlays content in the upper-right corner of the page and disappears when it times out or when the user dismisses it.
  
 ![toast notification placement](./img/toast-notification.png)
@@ -25,7 +25,6 @@ Toast alerts communicate information about an update, confirmation, or other act
 ## Elements
 Toast alerts are always dismissible, but bordered inline alerts can be both dismissable and non-dismissible. All other elements are consistent between toast and bordered inline alerts.
 Plain inline alerts are never dismissable, and consist of only a status area and alert title.
- 
  
 <img src="./img/alert-types.png" alt="Alert types" width="868" />
  
@@ -52,7 +51,7 @@ The status icon, background, and alert title are coded to communicate the severi
 For more information about what colors to use for status and severity, visit the [Colors page](/guidelines/colors/#status-and-state-colors).
  
 ## Using alerts
-### **Using bordered inline alerts**
+### Using bordered inline alerts
 Use bordered inline alerts to return feedback as the result of a user action within a page without blocking the user’s workflow. Common uses for bordered inline alerts include form validation and warning messages.
  
 If an alert message applies globally to the content on a page, place the alert in the page header area just below the title.
@@ -75,7 +74,7 @@ Bordered inline alerts are commonly used in the following situations:
 - Informing the user that they need to set something up
 - Informing the user that a feature is temporarily unavailable
  
-### **Using plain inline alerts**
+### Using plain inline alerts
  
 Use plain inline alerts to communicate non-imperative messages to the user without adding visual clutter. This alert type is particularly helpful within other components, such as wizards, drawers, modals, side panels, and popovers, which may already contain a lot of information.
 
@@ -97,7 +96,7 @@ Plain inline alerts are commonly used in the following situations:
 - Informing the user that a temporary error has occurred
 - Informing the user that a feature is temporarily unresponsive
  
-### **Using toast alerts**
+### Using toast alerts
 Use toast alerts to communicate an update, confirmation, or other activity to the user without blocking their workflow. For example, you can use a toast alert to inform the user that their message was sent. You can include links in a toast alert for a user to take action on the event that surfaced the alert, but the links should only be a shortcut for the user. A toast alert should never be used as the only means for taking actions on an alert event.
  
 Toast alerts stack in the upper-right corner of a page. To properly position and stack a set of alerts, use an [alert group](/components/alert-group) component. When alerts stack, the most recent alert appears at the top, and others move down as more alerts come in. When alerts are deleted, the remaining alerts move up.
