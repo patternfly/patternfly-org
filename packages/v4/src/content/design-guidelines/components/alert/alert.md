@@ -54,11 +54,11 @@ For more information about what colors to use for status and severity, visit the
 ### Using bordered inline alerts
 Use bordered inline alerts to return feedback as the result of a user action within a page without blocking the user’s workflow. Common uses for bordered inline alerts include form validation and warning messages.
  
-If an alert message applies globally to the content on a page, place the alert in the page header area just below the title.
+**If an alert message applies globally to the content on a page,** place the alert in the page header area just below the title.
  
 <img src="./img/Inline-alert-page-level.png" alt="global inline alert in a page" />
  
-If the alert applies only to specific content, place it inline with the page content to call attention to the error.
+**If the alert applies only to specific content,** place it inline with the page content to call attention to the error.
  
 <img src="./img/Inline-alert-specific-context.png" alt="inline alert inline with content" />
  
@@ -74,7 +74,7 @@ Bordered inline alerts are commonly used in the following situations:
 - Informing the user that they need to set something up
 - Informing the user that a feature is temporarily unavailable
 
-If the alert is being used to indicate errors, use an error validation summary at the top of the page to indicate what errors are present. The summary should be a quick, general overview. Show an error alert next to the field that is causing the error. The error message should be concise and actionable. It should tell the user what happened and the next steps needed to fit it. 
+**If the alert is being used to indicate errors,** use an error validation summary at the top of the page to indicate what errors are present. The summary should be a quick, general overview. Show an error alert next to the field that is causing the error. The error message should be concise and actionable. It should tell the user what happened and the next steps needed to fit it. 
 
 If multiple errors are present in the same location, order them from most to least severe. 
 
