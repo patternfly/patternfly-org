@@ -69,6 +69,7 @@ If multiple errors are present in the same location, order them from most to lea
 <img src="./img/Multiplealert.png" alt="multiple alerts on a page"/>
 
 **General guidance:**
+
 The user can dismiss information alerts by clicking the alert’s close button. Error-related alerts (warning and critical severity) should disappear only when the user addresses the issue that caused the alert. However, if the issue cannot be corrected on the current page and the user must take action to address a situation before proceeding, use a [modal](/components/modal) instead of an inline alert.
  
 In addition to static message content and links, you have the option of including interactive elements in the body of an inline alert to ask the user for further input or feedback.
