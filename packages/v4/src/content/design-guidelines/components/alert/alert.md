@@ -68,17 +68,18 @@ In addition to static message content and links, you have the option of includin
  
 <img src="./img/option-alert.png" alt="alert with radio button options" width="439px" />
  
-Bordered inline alerts are commonly used in the following situations:
-- Informing the user that the information they entered into a form field isn’t valid
-- Informing the user of something that needs their attention
-- Informing the user that they need to set something up
-- Informing the user that a feature is temporarily unavailable
 
 **If the alert is being used to indicate errors,** use an error validation summary at the top of the page to indicate what errors are present. The summary should be a quick, general overview. Show an error alert next to the field that is causing the error. The error message should be concise and actionable. It should tell the user what happened and the next steps needed to fit it. 
 
 If multiple errors are present in the same location, order them from most to least severe. 
 
 <img src="./img/Multiplealert.png" alt="multiple alerts on a page"/>
+
+Bordered inline alerts are commonly used in the following situations:
+- Informing the user that the information they entered into a form field isn’t valid
+- Informing the user of something that needs their attention
+- Informing the user that they need to set something up
+- Informing the user that a feature is temporarily unavailable
  
 ### Using plain inline alerts
  
