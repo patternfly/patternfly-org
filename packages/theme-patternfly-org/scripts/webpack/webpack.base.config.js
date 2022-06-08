@@ -15,6 +15,7 @@ module.exports = (_env, argv) => {
     hasDesignGuidelines = false,
     sideNavItems = [],
     topNavItems = [],
+    includePaths = []
   } = argv;
 
   const isProd = mode === 'production';
@@ -37,8 +38,9 @@ module.exports = (_env, argv) => {
             path.resolve(process.cwd(), 'src'),
             path.resolve(__dirname, '../..'), // Temporarily compile theme using webpack for development
             /react-[\w-]+\/src\/.*\/examples/,
-            /react-[\w-]+\\src\\.*\\examples/ // fix for Windows
-          ],
+            /react-[\w-]+\\src\\.*\\examples/, // fix for Windows
+            // /node_modules\/@patternfly-labs\/react-form-wizard/
+          ].concat(includePaths),
           exclude: [
             path.resolve(__dirname, '../../node_modules'), // Temporarily compile theme using webpack for development
           ],
@@ -48,18 +50,20 @@ module.exports = (_env, argv) => {
               cacheDirectory: '.cache/babel',
               cacheCompression: false,
               presets: [['@babel/preset-env', {
-                loose: true,
+                loose: false,
                 corejs: 3,
                 useBuiltIns: 'entry',
                 exclude: ['transform-regenerator', 'transform-async-to-generator'],
-                modules: false
+                modules: false,
+                targets: "> 0.25%, not dead"
               }]],
               plugins: [
                 '@babel/plugin-transform-react-jsx',
+                '@babel/plugin-proposal-nullish-coalescing-operator',
                 // fixes warnings of nature: Though the "loose" option was set to "true" in your @babel/preset-env config, it will not be used for...
-                ['@babel/plugin-proposal-class-properties', {loose: true}],
-                ['@babel/plugin-proposal-private-methods', {loose: true}],
-                ['@babel/plugin-proposal-private-property-in-object', {loose: true}]
+                // ['@babel/plugin-proposal-class-properties', {loose: false}],
+                // ['@babel/plugin-proposal-private-methods', {loose: false}],
+                // ['@babel/plugin-proposal-private-property-in-object', {loose: false}],
               ],
             }
           },

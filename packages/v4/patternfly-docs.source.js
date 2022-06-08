@@ -13,7 +13,7 @@ module.exports = (sourceMD, sourceProps) => {
 
   // Theme pages
   const themePagesPath = require
-    .resolve('theme-patternfly-org/package.json')
+    .resolve('@breakaway/theme-patternfly-org/package.json')
     .replace('package.json', 'pages');
   sourceMD(path.join(themePagesPath, '*.md'), 'pages-overview');
 

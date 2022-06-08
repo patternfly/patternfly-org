@@ -25,6 +25,8 @@ export const AutoLinkHeader = ({
 }) => {
   const slug = id || slugger(children);
 
+  const test = null ?? 'test';
+
   return (
     <Title
       id={slug}

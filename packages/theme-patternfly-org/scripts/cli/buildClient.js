@@ -11,6 +11,7 @@ async function buildClient() {
     ...options
   };
   const webpackClientConfig = await clientConfig(options.analyze && 'analyze', webpackArgv);
+  // console.log(JSON.stringify(webpackClientConfig, null, 2));
   console.log('build client');
   await buildWebpack(webpackClientConfig);
 }

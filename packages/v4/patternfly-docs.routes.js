@@ -10,7 +10,7 @@ module.exports = {
     title: 'Community'
   },
   '/404': {
-    SyncComponent: isClient && require('theme-patternfly-org/pages/404/index').default,
+    SyncComponent: isClient && require('@breakaway/theme-patternfly-org/pages/404/index').default,
     title: '404 Error'
   }
 };

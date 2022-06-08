@@ -22,6 +22,7 @@ function startWebpackDevServer(webpackConfig) {
 async function start(options) {
   generate(options, true);
   const webpackClientConfig = await clientConfig(null, { mode: 'development', ...getConfig(options) });
+  console.log(JSON.stringify(getConfig(options), null, 2));
   console.log('start webpack-dev-server');
   watchMD();
   startWebpackDevServer(webpackClientConfig);
