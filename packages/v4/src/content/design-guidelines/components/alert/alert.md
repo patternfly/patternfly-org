@@ -73,6 +73,12 @@ Bordered inline alerts are commonly used in the following situations:
 - Informing the user of something that needs their attention
 - Informing the user that they need to set something up
 - Informing the user that a feature is temporarily unavailable
+
+If the alert is being used to indicate errors, use an error validation summary at the top of the page to indicate what errors are present. The summary should be a quick, general overview. Show an error alert next to the field that is causing the error. The error message should be concise and actionable. It should tell the user what happened and the next steps needed to fit it. 
+
+If multiple errors are present in the same location, order them from most to least severe. 
+
+<img src="./img/Multiplealert.png" alt="multiple alerts on a page"/>
  
 ### Using plain inline alerts
  
