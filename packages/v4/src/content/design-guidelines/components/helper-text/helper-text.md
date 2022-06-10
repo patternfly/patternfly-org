@@ -3,33 +3,30 @@ id: Helper text
 section: components
 ---
 
-Helper text is an on-screen field guideline that helps provide context regarding field inputs. 
+**Helper text** is an on-screen field guideline that helps provide context regarding field inputs. 
 <br/>
-## Usage:
-**Helper text** is most commonly used in conjuction with form elements to provide additional hints and information for the user. It can also be used to explain why certain information is being requested, how to use a specific input or to suggest helpful hints. Helper text should always be visible and appears as a subheading, unlike [popover](https://www.patternfly.org/v4/components/popover/design-guidelines/) which display content in a new window.
+## Usage
+Helper text is most commonly used in conjuction with form elements to provide additional hints and information for the user. It can also be used to explain why certain information is being requested, how to use a specific input or to suggest helpful hints. Helper text should always be visible and appear as a subheading, unlike [popovers](https://www.patternfly.org/v4/components/popover/design-guidelines/) which display content in a new window.
 <br/>
-### When to use helper text:
-* Use helper text to provide imperative information regarding an input, such as character limits, password expectations, etc.  
+### When to use helper text
+* Use helper text to provide imperative information regarding an input, such as character limits, password expectations, and more.  
 * Use colored helper text to convey the status of a user's input. For example, if a user has met the character requirements, display helper text in green font to show success. Similarly, if a user has not met a password requirement, display the helper text in red to show failure/error. <br/>
-Example: 
-<img src="./img/errorhelpertext.png" alt="image showing error help text" width="452"/>
-<img src="./img/helpertextcolors.png" alt="image showing error help text" width="452"/>
+<img src="./img/errorhelptext.png" alt="image showing error help text" width="452"/>
+<img src="./img/coloredhelptext.png" alt="image showing error help text" width="452"/>
 
-### When not to use helper text:
+### When not to use helper text
 * Do not use helper text to explain what a form field is or to provide additional form context. Instead, use a popover to convey any additional, non-imperative information to a user. Popover content is displayed in a new window after the user clicks or toggles over the popover icon. Its content consists of longer descriptions, formatted text, and complete sentences. 
 <br/>
-Example: 
-<img src="./img/popover.png" alt="image showing popover" width="772"/>
+<img src="./img/popoverexample.png" alt="image showing popover" width="772"/>
 * Do not use helper text to provide formatting examples within a text box. Instead, use placeholder text to temporarily showcase what content should appear in a field before the user inputs information. 
-Example: 
-<img src="./img/placeholder.png" alt="image showing popover" width="772"/>
+<img src="./img/placeholdercopy.png" alt="image showing popover" width="772"/>
 <br/>
-<br/>
-For information regarding other forms of on-screen help, see [popovers](https://www.patternfly.org/v4/components/popover/design-guidelines/) and [tooltips](https://www.patternfly.org/v4/components/tooltip/design-guidelines)
-<br/>
-<br/>
+
+For information regarding other forms of on-screen help, see [popovers](https://www.patternfly.org/v4/components/popover/design-guidelines/) and [tooltips](https://www.patternfly.org/v4/components/tooltip/design-guidelines).
+
+
 Example
-<img src="./img/fullexample.png" alt="image showing all examples" width="1500"/>
+<img src="./img/helpertextexample.png" alt="image showing all examples" width="1500"/>
 <br/>
     1. Standard helper text
     2. Placeholder text
