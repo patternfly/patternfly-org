@@ -13,7 +13,7 @@ Helper text is most commonly used in conjuction with form elements to provide ad
 * Use colored helper text to convey the status of a user's input. For example, if a user has met the character requirements, display helper text in green font to show success. Similarly, if a user has not met a password requirement, display the helper text in red to show failure/error. <br/>
 <img src="./img/errorhelptext.png" alt="image showing error help text" width="452"/>
 
-    <img src="./img/coloredhelptext.png" alt="image showing error help text" width="226"/>
+    <img src="./img/correctcolors.png" alt="image showing colored help text" width="226"/>
 
 ### When not to use helper text
 * Do not use helper text to explain what a form field is or to provide additional form context. Instead, use a popover to convey any additional, non-imperative information to a user. Popover content is displayed in a new window after the user clicks or toggles over the popover icon. Its content consists of longer descriptions, formatted text, and complete sentences. 
