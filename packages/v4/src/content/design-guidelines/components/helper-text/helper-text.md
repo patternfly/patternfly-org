@@ -25,7 +25,7 @@ Helper text is most commonly used in conjuction with form elements to provide ad
 For information regarding other forms of on-screen help, see [popovers](https://www.patternfly.org/v4/components/popover/design-guidelines/) and [tooltips](https://www.patternfly.org/v4/components/tooltip/design-guidelines).
 
 
-Example
+### Example
 <img src="./img/helpertextexample.png" alt="image showing all examples" width="1500"/>
 <br/>
     1. Standard helper text
