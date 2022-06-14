@@ -34,6 +34,10 @@
   transition: width .2s ease-in-out;
 }
 
+.ws-preview-html {
+  overflow: hidden;
+}
+
 .ws-editor {
   font-size: 16px;
 }
