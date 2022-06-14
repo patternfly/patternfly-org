@@ -33,7 +33,7 @@ Use an option select menu when you want to persist selected items. This is typic
 ### Grouped menus
 You may decide to group menu items to associate related items and/or to indicate a hierarchy of items. Items may be grouped using group headings and/or separators or in a [tree view](/components/tree-view).
 
-<img src="./img/grouped-menu.png" alt="grouped menu options with separator, without, and in tree view" width="953"/>
+<img src="./img/grouped-menu.png" alt="Grouped menu options with separator, without, and in tree view" width="914"/>
 
 1. **Group heading (optional):** Add a group heading when you want to name the group.
 
