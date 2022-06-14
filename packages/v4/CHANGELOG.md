@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.10.59 (2022-06-14)
+
+
+### Bug Fixes
+
+* **docs:** hid overflow in HTML examples ([#3010](https://github.com/patternfly/patternfly-org/issues/3010)) ([744d6b9](https://github.com/patternfly/patternfly-org/commit/744d6b95d0458c3739cfd01d644663202d68dd8b))
+
+
+
+
+
 ## 4.10.58 (2022-06-13)
 
 **Note:** Version bump only for package patternfly-org-4
