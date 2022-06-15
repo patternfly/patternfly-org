@@ -133,7 +133,8 @@ export const MDXTemplate = ({
   return (
     <React.Fragment>
       <PageSection
-        variant={isSinglePage ? PageSectionVariants.default : PageSectionVariants.light}
+        className={isSinglePage ? "pf-m-light-100" : ""}
+        variant={!isSinglePage ? PageSectionVariants.light : ""}
       >
         {!katacodaLayout && <Title size="4xl" headingLevel="h1" id="ws-page-title">
           {title}
