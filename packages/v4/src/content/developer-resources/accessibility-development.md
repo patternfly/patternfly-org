@@ -98,3 +98,25 @@ The recommended interaction pattern for the modal components like the modal or p
 - For screen reader users, the other contents on the page should be hidden from the screen reader.
 
 Based on the [screen reader / browser combinations](https://www.patternfly.org/v4/get-started/accessibility-guide#testing) we use for testing, we recommend applying `aria-hidden="true"` to the parent wrapping element of the page contents. Note that the modal element of the component must not be a descendent of this element with `aria-hidden="true"` and should be included as a sibling to this element.
+
+### Scrollable elements
+Any elements with horizontal or vertical scroll need to be accessible via keyboard. It may be necessary to ensure every 
+container with an overflow rule and content which could possibly grow larger than its parent's height to have 
+`tabindex=0`. This will ensure that parent can capture browser focus and be scrolled using the arrow keys. Some browsers
+will automatically make any scrollable element focusable to ensure keyboard accessibility as long as they have a 
+non-negative tabindex.
+
+Additionally, when adding `tabIndex` in this scenario, add `role='region'` and an `aria-label` that describes the scrollable element
+or an `aria-labelledby` pointing to a heading with a descriptive, accessible name.
+Some screen reader users navigate page elements via an element list or rotor menu and the default label for these scrollable elements
+will be driven by whatever text content exists inside the container. This generated label may not be suitable to describe the regions purpose, and 
+would likely be better described with a simple `aria-label`. 
+
+Example:
+```html noLive
+<div role="region" style="height: 200px; overflow-y: auto" tabindex="0" aria-label="Scrollable content">
+    <div style="height: 2000px">
+        <p>Content</p>
+    </div>
+</div>
+```
