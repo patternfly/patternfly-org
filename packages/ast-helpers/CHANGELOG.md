@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.63 (2022-06-16)
+
+
+### Bug Fixes
+
+* **docs:** increased mobile TOC z-index to 501 to avoid overlapping examples ([#3013](https://github.com/patternfly/patternfly-org/issues/3013)) ([22e59de](https://github.com/patternfly/patternfly-org/commit/22e59de029022a74a6ea79f56cbc921a0b3404cd))
+
+
+
+
+
 ## 0.4.62 (2022-06-15)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
