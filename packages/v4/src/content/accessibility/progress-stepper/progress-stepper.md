@@ -15,13 +15,13 @@ reader users should also be able to access the contents of any popover associate
 
 The following props/attributes have been added for you and are customizable in PatternFly:
 
-| React component | React prop  | Which HTML element it appears on in markup | Explanation                       | 
-|-----------------|-------------|--------------------------------------------|-----------------------------------|
-| ProgressStep    | aria-label  | .pf-c-progress-stepper__step               | Progress step for screen readers. |
+| React component | React prop  | Which HTML element it appears on in markup | Explanation                                                                          | 
+|-----------------|-------------|--------------------------------------------|--------------------------------------------------------------------------------------|
+| ProgressStep    | aria-label  | .pf-c-progress-stepper__step               | Provides an accessible label describing the variant and status of the progress step. |
 
 
 **Note:** When using a progress stepper in an application, it's also wise to consider how to best summarize the overall progress
-state to a screen reader user. The [basic progress stepper demo]('components/progress-stepper/react-demos#basic')
+state to a screen reader user. The [basic progress stepper demo](/components/progress-stepper/react-demos#basic)
 demonstrates one approach of using an `aria-live` region which is updated to contain the progress stepper's status and
 is visible only to the screen reader.
 ```js noLive

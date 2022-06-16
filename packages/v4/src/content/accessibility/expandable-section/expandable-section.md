@@ -19,5 +19,4 @@ The following props/attributes have been added for you and are customizable in P
 | React component         | React prop            | Which HTML element it appears on in markup     | Explanation                                                                   | 
 |-------------------------|-----------------------|------------------------------------------------|-------------------------------------------------------------------------------|
 | ExpandableSection       | contentId             | .pf-c-expandable-section__content              | Id of the expandable section, associates this content with its toggle button. |
-| ExpandableSection       | toggleContent         | .pf-c-expandable-section__toggle-text          | Aria-label for the Context Selector Search button                             |
 | ExpandableSectionToggle | contentId             | .pf-c-expandable-section__toggle aria-controls | Associates this toggle button with the content that it reveals and hides.     |

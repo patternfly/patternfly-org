@@ -25,8 +25,8 @@ used to indicate that the second badge is associated with actionable or unread c
 
 Figure 1.
 
-![badges with no color and no icons](../../../images/badge-no-color-no-icons.png)
+![badges with no color and no icons](./badge-no-color-no-icons.png)
 
 Figure 2.
 
-![badges with no color with icons](../../../images/badge-no-color-with-icons.png)
+![badges with no color with icons](./badge-no-color-with-icons.png)

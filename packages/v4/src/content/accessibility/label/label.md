@@ -30,8 +30,8 @@ infomation available without color.
 
 Figure 1.
 
-![labels without icons](../../../images/labels-no-icons.png)
+![labels without icons](./labels-no-icons.png)
 
 Figure 2.
 
-![labels with icons and better text](../../../images/labels-with-icons.png)
+![labels with icons and better text](./labels-with-icons.png)
