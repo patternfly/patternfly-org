@@ -11,6 +11,7 @@ module.exports = {
   hasFooter: true,
   hasVersionSwitcher: true,
   hasDesignGuidelines: true,
+  hasDarkThemeSwitcher: true,
   sideNavItems: [
     { section: 'get-started' },
     { section: 'developer-resources' },
