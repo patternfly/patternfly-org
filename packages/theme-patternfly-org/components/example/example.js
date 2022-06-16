@@ -190,6 +190,7 @@ export const Example = ({
         code={editorCode}
         setCode={debounce(setEditorCode, 300)}
         codeBoxParams={codeBoxParams}
+        exampleTitle={title}
       />
     </div>
   );

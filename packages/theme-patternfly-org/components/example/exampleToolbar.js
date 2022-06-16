@@ -35,7 +35,9 @@ export const ExampleToolbar = ({
   // Current code in editor
   code,
   // Callback to set code in parent component
-  setCode
+  setCode,
+  // Title of example used in creating unique labels
+  exampleTitle
 }) => {
   const [isEditorOpen, setIsEditorOpen] = React.useState(false);
   const [isCopied, setCopied] = React.useState(false);
@@ -56,6 +58,14 @@ export const ExampleToolbar = ({
   const fullscreenLabel = 'Open example in new window';
   const convertLabel = 'Convert example from Typescript to JavaScript';
   const undoAllLabel = 'Undo all changes';
+
+  const copyAriaLabel = `Copy ${exampleTitle} examle code to clipboard`;
+  const languageAriaLabel = `Toggle ${lang.toUpperCase()} code in ${exampleTitle} examle`;
+  const codesandboxAriaLabel = `Open ${exampleTitle} example in CodeSandbox`;
+  const fullscreenAriaLabel = `Open ${exampleTitle} example in new window`;
+  const convertAriaLabel = `Convert ${exampleTitle} example from Typescript to JavaScript`;
+  const undoAllAriaLabel = `Undo all changes to ${exampleTitle}`;
+
   const customControls = (
     <React.Fragment>
       <CodeEditorControl
@@ -70,7 +80,7 @@ export const ExampleToolbar = ({
           // 1 === expand code, 0 === collapse code
           trackEvent('code_editor_control_click',  'click_event', 'TOGGLE_CODE', isEditorOpen ? 0 : 1);
         }}
-        aria-label={languageLabel}
+        aria-label={languageAriaLabel}
         toolTipText={languageLabel}
         aria-expanded={isEditorOpen}
         className="ws-code-editor-control"
@@ -86,7 +96,7 @@ export const ExampleToolbar = ({
         <Button onClick={() => {
           copyCode();
           trackEvent('code_editor_control_click', 'click_event', 'COPY_CODE');
-        }} variant="control" aria-label={copyLabel} className="ws-code-editor-control">
+        }} variant="control" aria-label={copyAriaLabel} className="ws-code-editor-control">
           <CopyIcon />
         </Button>
       </Tooltip>
@@ -100,14 +110,14 @@ export const ExampleToolbar = ({
           position="top"
         >
           <Form
-            aria-label={codesandboxLabel}
+            aria-label={`${codesandboxAriaLabel} form` }
             action="https://codesandbox.io/api/v1/sandboxes/define"
             method="POST"
             target="_blank"
             style={{ display: "inline-block" }}
           >
             <Button
-              aria-label={codesandboxLabel}
+              aria-label={codesandboxAriaLabel}
               variant="control"
               type="submit"
               onClick={() => {
@@ -128,7 +138,7 @@ export const ExampleToolbar = ({
           href={fullscreenLink} 
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={fullscreenLabel}
+          aria-label={fullscreenAriaLabel}
           toolTipText={fullscreenLabel}
           onClick={() => {
             trackEvent('code_editor_control_click', 'click_event', 'FULLSCREEN_LINK');
