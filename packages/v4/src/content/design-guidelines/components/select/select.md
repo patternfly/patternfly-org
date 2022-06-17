@@ -92,9 +92,9 @@ Favoriting can be associated with any select list option. In this case, making a
 <img src="./img/with-favorites.png" alt="select list with favorites" width="199"/>
 
 ### Select lists with validation
-Validation may be used to communicate field-level, validation states, where appropriate. It is presented after the user completes their input, to let users know if their selection is acceptable. For example, if you were using the select list to allocate storage, you may need to give the user feedback if the value they selected will exceed their allotted capacity.
+Validation may be used to communicate field-level validation states, where appropriate. It is presented after the user completes their input, to let users know if their selection is acceptable. For example, if you were using the select list to allocate storage, you may need to give the user feedback if the value they selected will exceed their allotted capacity.
 
-The Select component offers three validation-state presentations: Success, Warning, and Error. Depending on your use case, you may present one or all of these states to communicate the state of the user's selected input.
+The Select component offers three validation-state presentations: Success, Warning, and Error. Depending on your use case, you may present one or all of these states to communicate the state of the user's selected input. However, the only required validation-state is the error state, which should be used when an input error occurs.
 
 <img src="./img/validated.png" alt="select list with valdation styling" width="374"/>
 
