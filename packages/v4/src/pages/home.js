@@ -55,14 +55,14 @@ const HomePage = () => (
         </GridItem>
       </Grid>
     </PageSection>
-    <PageSection variant={PageSectionVariants.light} className="ws-homepage-gray ws-homepage-main-section">
+    <PageSection className="ws-homepage-main-section pf-m-light-100">
       <Grid>
         <GridItem sm={12} md={6} mdOffset={3} className="pf-u-py-2xl pf-u-text-align-center" id="about-patternfly-section">
           <AutoLinkHeader size="h1" headingLevel="h2" className="ws-title pf-u-mb-md">
             {aboutPatternFly}
           </AutoLinkHeader>
           <Text component={TextVariants.p} className="ws-mdx-p">
-            We think quality product experiences should be easy to build and easy to scale, so we provide the tools to make that happen. 
+            We think quality product experiences should be easy to build and easy to scale, so we provide the tools to make that happen.
           </Text>
           <Text component={TextVariants.p} className="ws-mdx-p">
             From documentation and components to code examples and tutorials, PatternFly has it all—and our community of Flyers help make it better every day.
@@ -70,7 +70,7 @@ const HomePage = () => (
         </GridItem>
       </Grid>
     </PageSection>
-    <PageSection variant={PageSectionVariants.light} className="ws-homepage-gray pf4-c-background-lines ws-homepage-main-section">
+    <PageSection className="pf4-c-background-lines ws-homepage-main-section pf-m-light-100">
       <Grid gutter="md" className="pf-u-pb-3xl-on-sm">
         <GridItem sm={12}>
           <Grid>
