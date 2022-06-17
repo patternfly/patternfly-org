@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.11.66 (2022-06-17)
+
+
+### Bug Fixes
+
+* **theme:** updated theme and v4 to be consistent with PF styles ([#2929](https://github.com/patternfly/patternfly-org/issues/2929)) ([70c1151](https://github.com/patternfly/patternfly-org/commit/70c11516f362b396db5e06a3cb019fc524e5f01b))
+
+
+
+
+
 ## 0.11.65 (2022-06-17)
 
 **Note:** Version bump only for package theme-patternfly-org
