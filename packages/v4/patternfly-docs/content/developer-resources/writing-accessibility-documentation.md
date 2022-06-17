@@ -7,23 +7,25 @@ Accessibility documentation is meant to help consumers improve accessibility for
 
 ## Content architecture
 
-Your accessibility documentation should generally follow the [design guidelines content architecture](/ux-writing/writing-design-guidelines-for-patternfly#content-architecture).
+Your accessibility documentation should generally follow the [design guidelines content architecture](/ux-writing/writing-design-guidelines-for-patternfly#content-architecture), with the below additions.
 
 ### Keyboard inputs
 
 When referencing specific inputs on a keyboard, wrap each input in a `kbd` element and capitalize the first letter of the input. When referencing a combination of inputs, place each input in its own `kbd` element with a "+" between them.
 
-For example:
+Example:
 
-"When a user presses <kbd>Tab</kbd> + <kbd>Shift</kbd>..."
+>When a user presses <kbd>Tab</kbd> + <kbd>Shift</kbd>...
 
 ### Person first language
 
 When referring to specific types of users in your documentation, use person first language. This places emphasis on the person before the assistive technology, disability, or limitation. 
 
-For example: 
+Example: 
 
-"Users interacting via keyboard..." or "Users with a color deficiency..." 
+>Users interacting via keyboard...
+>
+>Users with a color deficiency...
 
 ## General structure
 
@@ -43,13 +45,15 @@ Avoid detailing how the component achieves a specific accessibility functionalit
 
 Example:
 
->The following guidelines outline some of the ways that a PatternFly **accordion** should generally be operable, understandable, and perceivable in order to improve accessibility for users.
+>The following guidelines outline some of the ways that a PatternFly **componentName** should generally be operable, understandable, and perceivable in order to improve accessibility for users.
 >
 >- Bullet item describing a guideline...
 
 ### React library considerations
 
-This section should only refer to the React library. It should include what considerations PatternFly has taken and built into the component by default and why, often so that consumers are not required to manually pass anything in themselves (even if there is the option to do so). This can include expanding upon the previous section by explaining *how* some functionality occurs. For example, "The component has `tabIndex="0"` so that users interacting via keyboard can...".
+This section should only refer to the React library. It should include what considerations PatternFly has taken and built into the component by default and why, often so that consumers are not required to manually pass anything in themselves (even if there is the option to do so). This can include expanding upon the previous section by explaining *how* some functionality occurs:
+
+>The component has `tabIndex="0"` so that users interacting via keyboard can...
 
 Consumers should be able to read this section and understand what accessibility functionality is built into the component and for what purpose. This should provide them a better understanding of what functionality affects the component's accessibility should it be customized in some way.
 
@@ -103,12 +107,15 @@ Example:
 
 This section should include any additional considerations a consumer should take when using the component. It should only include more general considerations that don't pertain only to the React or HTML/CSS library, and have not been mentioned elsewhere in the documentation.
 
+Depending on your content, you can include sub-sections with a level 3 heading, an unordered list of considerations, or both.
+
 If there are no additional considerations, this section can be omitted.
 
 Example:
 
 >Consumers must ensure they take any additional considerations when customizing an accordion, using it in a way not described or recommended by PatternFly, or in various other specific use-cases not outlined elsewhere in this accessibility documentation.
 >
+> - A list item for an additional consideration...
 >### Consideration heading
 >
 >An explanation of an additional consideration...

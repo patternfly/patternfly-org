@@ -29,8 +29,10 @@ The table below outlines the various React props that can be passed in or custom
 | aria-label | Accordion | Adds an accessible name to the accordion for screen readers. If there is no other surrounding context provided for an accordion, especially if there are multiple accordions on a page, this should be passed in with a descriptive label. |
 | headingLevel | Accordion | When `asDefinitionList={false}` is passed in, sets the container for the accordion toggle to one of the six heading elements (`h3` by default). Be sure to not skip heading levels when passing this prop in. For example, if an accordion is within a section that has an `h2` heading, you should not pass `headingLevel="h4"`. |
 | aria-label | AccordionContent | Adds an accessible name to the content of an accordion item. |
-| isExpanded | AccordionToggle | Adds styling to visually determine whether the toggle is expanded or collapsed. Also sets the accessibility attribute `aria-expanded="true/false"`, which notifies screen readers whether the accordion toggle is expanded or collapsed. Should be used in conjunction with `isHidden` on the accordion content. |
-| isHidden | AccordionContent | Determines whether the content of the accordion item is visible or not. The value of this prop should always be the opposite of `isExpanded` on the accordion toggle. |
+| isHidden | AccordionContent | Determines whether the content of the accordion item is hidden or not. Should be used along with the `isExpanded` prop on the accordion toggle. |
+| isExpanded | AccordionToggle | Adds styling to visually determine whether the toggle is expanded or collapsed. Also sets the accessibility attribute `aria-expanded="true/false"`, which notifies screen readers whether the accordion toggle is expanded or collapsed. Should be used along with the `isHidden` prop on the accordion content. |
+
+The `isHidden` and `isExpanded` props should always have opposite values of one another; if an accordion toggle is collpased (`isExpanded={false}`), then the accordion content should be hidden (`isHidden={true}`).
 
 ## HTML/CSS library considerations
 
@@ -38,9 +40,9 @@ When using PatternFly's HTML/CSS library consumers must take several considerati
 
 | Attribute | Applied to | Reason | 
 |---|---|---|
-| aria-expanded="false" | .pf-c-accordion__toggle | Indicates that the expanded content element is collapsed to assistive technologies. **Required** |
-| aria-expanded="true" | .pf-c-accordion__toggle | Indicates that the expanded content element is expanded to assistive technologies. **Required** |
-| hidden | .pf-c-accordion__expanded-content | Visually hides the expanded content element. **Required** when `aria-expanded="false"` is passed in.
+| aria-expanded="false" | .pf-c-accordion__toggle | Indicates that the accordion toggle is collapsed to assistive technologies. **Required** |
+| aria-expanded="true" | .pf-c-accordion__toggle | Indicates that the accordion toggle is expanded to assistive technologies. **Required** |
+| hidden | .pf-c-accordion__expanded-content | Hides the accordion content. **Required** when `aria-expanded="false"` is passed in.
 | aria-hidden="true" | .pf-c-accordion__toggle-icon | Removes the accordion toggle icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required** |
 
 ## Additional considerations
