@@ -5,7 +5,7 @@
 }
 
 .ws-404-card-header {
-  padding: 1.5rem;
+  padding: var(--pf-global--spacer--lg);
 }
 
 div.ws-404-button-wrapper {

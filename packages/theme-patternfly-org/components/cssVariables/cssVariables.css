@@ -2,14 +2,14 @@
   display: inline-block;
   height: 18px;
   width: 18px;
-  border: 1px solid #72767b;
-  border-radius: 9px;
+  border: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--200);
+  border-radius: var(--pf-global--BorderRadius--lg);
 }
 
 .ws-td-text {
-  font-size: 14px !important;
+  font-size: var(--pf-global--FontSize--sm) !important;
 }
 
 .ws-css-property {
-  padding: 4px 16px 4px var(--pf-global--spacer--md);
+  padding: var(--pf-global--spacer--xs) var(--pf-global--spacer--md);
 }
