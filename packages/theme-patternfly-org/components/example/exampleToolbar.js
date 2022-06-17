@@ -59,8 +59,8 @@ export const ExampleToolbar = ({
   const convertLabel = 'Convert example from Typescript to JavaScript';
   const undoAllLabel = 'Undo all changes';
 
-  const copyAriaLabel = `Copy ${exampleTitle} examle code to clipboard`;
-  const languageAriaLabel = `Toggle ${lang.toUpperCase()} code in ${exampleTitle} examle`;
+  const copyAriaLabel = `Copy ${exampleTitle} example code to clipboard`;
+  const languageAriaLabel = `Toggle ${lang.toUpperCase()} code in ${exampleTitle} example`;
   const codesandboxAriaLabel = `Open ${exampleTitle} example in CodeSandbox`;
   const fullscreenAriaLabel = `Open ${exampleTitle} example in new window`;
   const convertAriaLabel = `Convert ${exampleTitle} example from Typescript to JavaScript`;
@@ -153,7 +153,7 @@ export const ExampleToolbar = ({
               {'TS '}<AngleDoubleRightIcon />{' JS'}
             </React.Fragment>
           )}
-          aria-label={convertLabel}
+          aria-label={convertAriaLabel}
           toolTipText={convertLabel}
           onClick={() => {
             setCode(convertToJSX(code).code);
@@ -165,7 +165,7 @@ export const ExampleToolbar = ({
       {code !== originalCode &&
         <CodeEditorControl
           icon={<ReplyAllIcon />}
-          aria-label={undoAllLabel}
+          aria-label={undoAllAriaLabel}
           toolTipText={undoAllLabel}
           onClick={() => {
             setCode(originalCode);
