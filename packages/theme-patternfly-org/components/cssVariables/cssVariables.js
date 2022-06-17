@@ -214,6 +214,8 @@ export class CSSVariables extends React.Component {
           rows={this.state.rows}
           onCollapse={this.onCollapse}
           gridBreakPoint="grid-lg"
+          contentId="css-variables-content"
+          expandId="css-variables-toggle"
         >
           <TableHeader />
           <TableBody />
