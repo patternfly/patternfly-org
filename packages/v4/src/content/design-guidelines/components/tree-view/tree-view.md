@@ -11,7 +11,7 @@ A default tree view provides a tree structure with items and arrows to expand or
 
 A default tree view consists of 5 elements:
 
-<img src="./img/tree-view-elements.png" width="332" />
+<img src="./img/default-treeview.png" alt="Default tree view" width="332" />
 
 1. **Expand/collapse:** An option to expand or collapse parent nodes to reveal child nodes. 
 2. **Parent node:** A node that contains other items (for example, a folder that contains multiple documents).
@@ -25,7 +25,7 @@ A tree view can be used for:
 1. Changing the content on a page based on the selected item. 
 2. Selecting items or applying filters. 
 
-<img src="./img/Default-tree-view.png" width="1004" />
+<img src="./img/treeview-usage.png" alt="Default tree view usage"  width="1004" />
 
 Use a tree view when:   
 * Selecting is the main use-case. 
@@ -52,31 +52,31 @@ You can add these functionalities to a tree view:
 
 Add a search bar to a tree view if you're including a large amount of data and need to provide users with a quick way to find a single item. If your dataset is small and easy to navigate, then you don't need to add a search bar.
 
-<img src="./img/with-search-bar.png" width="940" />
+<img src="./img/treeview-search.png" alt="Tree view with search usage" width="1004" />
 
 ### Adding checkboxes to a tree view
 
 Add checkboxes to a tree view if you’re selecting multiple items or applying multiple filters. Selecting should be a primary function of your use-case. If your dataset is small and you select just 1 item, use [select lists](/components/select), [radio buttons](/components/radio), [checkboxes](/components/checkbox), or a [dropdown](/components/dropdown) instead. 
 
-<img src="./img/with-checkboxes.png" width="932" />
+<img src="./img/treeview-checkboxes.png" alt="Tree view with checkboxes usage" width="1004" />
 
 ### Adding badges to a tree view
 
 Add badges to a tree view if you want to show the number of items inside. Don’t use it for displaying different information. Items without children can't have badges, as they don't contain anything.
 
-<img src="./img/with-badges.png" width="332" />
+<img src="./img/treeview-badges.png" alt="Tree view with badges usage" width="332" />
 
 ### Adding icons to a tree view
 
-Add icons to a tree view if you want to visually representing the type of items in a tree. For example, a folder system. To maintain consistency, if you choose to add icons to a tree view, apply the icons on all items in a tree or leave the items without children iconless. We don’t recommend using icons and checkboxes at the same time due to the large indentation and loss of space it would result in. 
+Add icons to a tree view if you want to visually represent the type of items in a tree. For example, a folder system. To maintain consistency, if you choose to add icons to a tree view, apply the icons on all items in a tree or leave the items without children iconless. We don’t recommend using icons and checkboxes at the same time due to the large indentation and loss of space it would result in. 
 
-<img src="./img/with-icons.png" width="761" />
+<img src="./img/treeview-icons.png" alt="Tree view with icons usage" width="718" />
 
 ### Adding action items to a tree view
 
 Add action items to a tree view if you’re triggering some type of action above the items. These actions appear on hover to avoid overcrowding the tree view. We recommend using 1 type of action across the whole tree and to limit the maximum of actions for 1 item to 1.
 
-<img src="./img/with-action-items.png" width="632" />
+<img src="./img/treeview-action.png" alt="Tree view action items usage" width="666" />
 
 ## Tree view in a page
 
@@ -85,17 +85,17 @@ Tree views can be included in pages within these components: [dropdown](/compone
 ### Tree view in a wizard
 A tree view in a wizard allows users to apply multiple filters or select multiple items that are specific to their current step.
 
-<img src="./img/tree-view-wizard.png" width="1500" />
+<img src="./img/treeview-wizard.png" alt="Tree view in wizard usage" width="1500" />
 
 ### Tree view in a primary-detail or drawer 
 A tree view in a [primary-detail](/demos/primary-detail) or [drawer](/components/drawer) allows users to switch content based on their selection from a tree. 
 
-<img src="./img/tree-view-primary-detail.png" width="1500" />
+<img src="./img/treeview-primarydetail-drawer.png" alt="Tree view in primary detail drawer usage" width="1500" />
 
 ## Compact tree view
 Compact tree view is useful when the nodes of a tree view contain more than one paragraph of text, or the content needs to be formatted. Compact tree views include guides that enhance the ability to more easily navigate between individual rows of data in the tree. You can use a compact tree view [with a background](/components/tree-view#compact) or [without background](/components/tree-view#compact-no-background), depending on your use case. 
 
-<img src="./img/compact-tree.png" width="887" />
+<img src="./img/treeview-compact.png" alt="Tree view compact usage" width="887" />
 
 1. **Guide:** Connected lines between nodes in a tree view. 
 2. **Row:** Content with one or multiple lines that can be formatted.
