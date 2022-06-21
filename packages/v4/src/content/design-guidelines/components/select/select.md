@@ -77,7 +77,7 @@ Select lists support the option of adding a number count to checkbox selects, bo
 
 ### Select list with view more
 When a select list contains more than 20 items, and the processing load may be too big to load all options at once, you have the option to add a “View more” link at the bottom of the menu.
-When the user clicks View more, more options are loaded and “view more” is replaced with the next available set of options. 
+When the user clicks View more, more options are loaded and “view more” is replaced with the next available set of options.
 
 <img src="./img/with-viewmore.png" alt="select list with view more button" width="757"/>
 
@@ -86,7 +86,16 @@ Descriptive text may be added below each menu item, but only when the menu item 
 
 <img src="./img/with-description.png" alt="select list with description" width="210"/>
 
-### Select lists with favorites 
+### Select lists with favorites
 Favoriting can be associated with any select list option. In this case, making an item a favorite will duplicate it at the top of the menu. This may be useful when you have a long list of possible options to choose from and want to allow the user to “pin” a subset of items to the top of the select list.
 
 <img src="./img/with-favorites.png" alt="select list with favorites" width="199"/>
+
+### Select lists with validation
+Validation may be used to communicate field-level validation states, where appropriate. It is presented after the user completes their input, to let users know if their selection is acceptable. For example, if you were using the select list to allocate storage, you may need to give the user feedback if the value they selected will exceed their allotted capacity.
+
+The Select component offers three validation-state presentations: Success, Warning, and Error. Depending on your use case, you may present one or all of these states to communicate the state of the user's selected input. The only required validation-state is the error state, which should be used when an input error occurs.
+
+<img src="./img/validated.png" alt="select list with valdation styling" width="374"/>
+
+For more information about general form validation, see the relevant material in the [Form guidelines](/components/form/design-guidelines#errors-and-validation).
