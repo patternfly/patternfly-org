@@ -14,7 +14,7 @@ Panels are commonly used
 <img src="./img/basic_panel.png" alt="A basic panel with a header, body and footer" width="500" />
 <br>
 The panel is used as a content block with a header, body, and footer.
-<br><br<br><br>
+<br><br><br><br>
 
 <img src="./img/search_panel.png" alt="The panel is used a dropdown menu for advanced search input
 " width="500" /><br>
