@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "@breakaway/theme-patternfly-org": {
+      "signature": "9d7fe34c0f56f7755559606f11fc7b7a",
+      "file": true,
+      "replaced": "^1.0.0"
+    }
+  }
+}

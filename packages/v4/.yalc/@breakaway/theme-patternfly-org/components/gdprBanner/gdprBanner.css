@@ -1,0 +1,14 @@
+.ws-gdpr-banner-container {
+  width: 100vw;
+  position: fixed;
+  bottom: 10px;
+  z-index: 201;
+  justify-content: center;
+}
+
+#ws-gdpr-banner {
+  max-width: 95vw;
+  flex-wrap: nowrap;
+  background: #FFF;
+  border: 1px solid #151515;
+}

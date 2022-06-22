@@ -1,0 +1,104 @@
+/* Page layout */
+/* tells .pf-c-page to consume the available space left over from the banners/footers */
+#ws-router {
+  display: flex;
+  flex-direction: column;
+}
+#ws-router > section:first-of-type:not(#nav-content) {
+  flex: 1;
+}
+
+.ws-switcher-divider {
+  padding: 0 16px;
+}
+
+.ws-patternfly-3 > svg {
+  margin-left: 8px;
+}
+
+@media (min-width: 1200px) {
+  .ws-page-sidebar {
+    box-shadow: none !important;
+  }
+}
+
+.ws-page-sidebar > .pf-c-page__sidebar-body {
+  padding-top: var(--pf-global--spacer--md);
+}
+
+/* Search */
+#ws-global-search-wrapper {
+  /* For icon */
+  position: relative;
+}
+#algolia-autocomplete-listbox-0 {
+  /* Fix search results overflowing page */
+  min-width: 480px !important;
+}
+#ws-global-search {
+  background-color: transparent;
+  border: none;
+  /* For icon */
+  padding-left: 32px;
+  width: 200px;
+}
+.ws-hide-search-input .algolia-autocomplete,
+.ws-hide-search-input #ws-global-search {
+  display: none !important;
+}
+.ws-toggle-search {
+  /* Search icon is taller than it is wide */
+  margin-top: 2px;
+}
+#ws-global-search-wrapper > .global-search-icon {
+  position: absolute;
+  top: 10px;
+  left: 4px;
+}
+#ws-global-search,
+#ws-global-search::placeholder {
+  color: #fff;
+}
+#ws-global-search:focus {
+  outline-offset: 2px;
+}
+
+/* TODO: PageHeaderTools on small viewports */
+@media (max-width: 670px) {
+  #ws-global-search-wrapper,
+  .ws-toggle-search {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media (max-width: 430px) {
+  .ws-page-header > .pf-c-page__header-brand > .pf-c-page__header-brand-link {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+/* Version toggle */
+.ws-org-version-toggle {
+  color: var(--pf-global--Color--light-100);
+}
+.ws-org-version-toggle::before {
+  content: none !important;
+}
+.ws-org-version-toggle:hover {
+  border-bottom: 1px solid #fff;
+}
+.ws-org-version-toggle-expanded::before {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid #fff;
+}
+/* For tiny (200px) viewports */
+.ws-org-version-switcher .pf-c-dropdown__toggle  >.pf-c-dropdown__toggle-text {
+  white-space: normal;
+}
+
+.ws-github-pageheader {
+  color: var(--pf-global--Color--light-100) !important;
+}

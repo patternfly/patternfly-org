@@ -6,7 +6,15 @@ import { Footer } from '@breakaway/theme-patternfly-org/components';
 import { MDXTemplate } from '@breakaway/theme-patternfly-org/templates/mdx';
 import { routes, groupedRoutes, fullscreenRoutes, getAsyncComponent } from './routes';
 import { trackEvent } from './helpers';
-import 'client-styles';
+import 'client-styles'; // Webpack replaces this import: patternfly-docs.css.js
+import './components/autoLinkHeader/autoLinkHeader.css';
+import './components/cssVariables/cssVariables.css';
+import './components/tableOfContents/tableOfContents.css';
+import './components/example/example.css';
+import './components/footer/footer.css';
+import './components/sideNav/sideNav.css';
+import './components/topNav/topNav.css';
+import './layouts/sideNavLayout/sideNavLayout.css';
 
 const AppRoute = ({ child, katacodaLayout, title, path }) => {
   const pathname = useLocation().pathname;

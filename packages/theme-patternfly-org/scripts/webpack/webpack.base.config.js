@@ -39,8 +39,7 @@ module.exports = (_env, argv) => {
             path.resolve(__dirname, '../..'), // Temporarily compile theme using webpack for development
             /react-[\w-]+\/src\/.*\/examples/,
             /react-[\w-]+\\src\\.*\\examples/, // fix for Windows
-            // /node_modules\/@patternfly-labs\/react-form-wizard/
-          ].concat(includePaths),
+          ].concat(includePaths.map(path => new RegExp(path))),
           exclude: [
             path.resolve(__dirname, '../../node_modules'), // Temporarily compile theme using webpack for development
           ],
@@ -115,13 +114,14 @@ module.exports = (_env, argv) => {
     resolve: {
       // Allow importing client routes
       alias: {
-        'client-styles': path.resolve(process.cwd(), 'patternfly-docs.css.js'),
-        './routes-client': path.resolve(process.cwd(), 'patternfly-docs.routes.js'),
+        'client-styles': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.css.js'),
+        './routes-client': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.routes.js'),
         './routes-generated': path.resolve(process.cwd(), 'src/generated/index.js'),
         'lodash': 'lodash-es' // Sanely bundle react-charts.
       },
       modules: [
         'node_modules',
+        'patternfly-docs',
         ...module.paths,
       ]
     },

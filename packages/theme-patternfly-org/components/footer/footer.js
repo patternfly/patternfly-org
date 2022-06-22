@@ -9,7 +9,7 @@ import {
 import { Link } from '@breakaway/theme-patternfly-org/components';
 import { GithubIcon, TwitterIcon } from "@patternfly/react-icons";
 import redhatLogo from "./RHLogo.png";
-import "./footer.css";
+// import "./footer.css";
 import logo from '../../layouts/logo.svg';
 
 export const Footer = () => (

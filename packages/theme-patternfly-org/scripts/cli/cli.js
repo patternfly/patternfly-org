@@ -2,9 +2,9 @@
 const program = require('commander');
 
 program
-  .option('-c, --config <path>', 'set config path', './patternfly-docs.config.js')
-  .option('-css, --cssconfig <path>', 'set css import file path', './patternfly-docs.css.js')
-  .option('-s, --source <path>', 'set source generation file path', './patternfly-docs.source.js');
+  .option('-c, --config <path>', 'set config path', 'patternfly-docs/patternfly-docs.config.js')
+  .option('-css, --cssconfig <path>', 'set css import file path', 'patternfly-docs/patternfly-docs.css.js')
+  .option('-s, --source <path>', 'set source generation file path', 'patternfly-docs/patternfly-docs.source.js');
 
 program
   .command('generate')

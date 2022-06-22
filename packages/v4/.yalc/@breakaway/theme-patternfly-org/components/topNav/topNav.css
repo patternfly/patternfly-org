@@ -1,0 +1,30 @@
+/* Don't bother with specifity war */
+.ws-top-nav-link.pf-c-nav__link {
+  color: var(--pf-global--BackgroundColor--light-100);
+}
+
+.ws-top-nav-link.pf-c-nav__link:active,
+.ws-top-nav-link.pf-c-nav__link:hover,
+.ws-top-nav-link.pf-c-nav__link.pf-m-current {
+  color: var(--pf-global--BackgroundColor--dark-100);
+  background-color: var(--pf-global--BackgroundColor--light-100);
+  transition: .5s;
+}
+
+/* Don't bother with specifity war */
+.ws-top-nav-link.pf-c-nav__link::before {
+  top: 0 !important;
+  bottom: auto !important;
+  right: 0 !important;
+  left: 0 !important;
+  border-color: var(--pf-global--link--Color--light--hover) !important;
+  transform: scaleX(0);
+}
+
+/* Animate bar growing outwards */
+.ws-top-nav-link.pf-c-nav__link:active::before,
+.ws-top-nav-link.pf-c-nav__link:hover::before,
+.ws-top-nav-link.pf-c-nav__link.pf-m-current::before {
+  transition: transform .5s;
+  transform: scaleX(1);
+}

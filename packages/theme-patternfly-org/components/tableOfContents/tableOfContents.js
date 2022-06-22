@@ -1,6 +1,6 @@
 import React from 'react';
 import { JumpLinks, JumpLinksItem, JumpLinksList } from '@patternfly/react-core';
-import './tableOfContents.css';
+// import './tableOfContents.css';
 import { trackEvent } from '../../helpers';
 
 export const TableOfContents = ({ items }) => {

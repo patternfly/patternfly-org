@@ -1,0 +1,103 @@
+.ws-example {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.ws-example > .ws-example-header {
+  padding: var(--pf-global--spacer--md);
+  border-bottom: var(--pf-global--BorderWidth--sm) solid #f8f8f8;
+}
+
+.ws-example-header > .ws-example-heading:not(:last-child) {
+  margin-bottom: var(--pf-global--spacer--md);
+}
+
+.ws-code-editor:not(.ws-example-code-expanded) > .pf-c-code-editor__header::before {
+  --pf-c-code-editor__header--before--BorderBottomWidth: 0;
+}
+
+.ws-code-editor-control {
+  --pf-c-button--m-control--BackgroundColor: transparent;
+  --pf-c-button--m-control--active--BackgroundColor: transparent;
+  --pf-c-button--m-control--focus--BackgroundColor: transparent;
+  --pf-c-button--m-control--hover--BackgroundColor: transparent;
+}
+
+.ws-code-editor-control.pf-c-button {
+  --pf-c-button--after--BorderWidth: 0;
+}
+
+.ws-preview {
+  padding: 1rem;
+  background-color: white;
+  border-bottom: 1px solid #f8f8f8;
+  transition: width .2s ease-in-out;
+}
+
+.ws-editor {
+  font-size: 16px;
+}
+
+.ws-editor .token.punctuation,
+.ws-editor .token.operator {
+  color: #c9190b;
+}
+
+.ws-preview__thumbnail-link {
+  position: relative;
+  line-height: 0;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.ws-preview__thumbnail-link::before,
+.ws-preview__thumbnail-link::after {
+  position: absolute;
+  z-index: 500;
+  transition: .2s;
+  opacity: 0;
+}
+
+.ws-preview__thumbnail-link:hover::before,
+.ws-preview__thumbnail-link:hover::after {
+  opacity: 1;
+}
+
+.ws-preview__thumbnail-link::before {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  background-color: rgba(0,0,0,.5);
+}
+
+.ws-preview__thumbnail-link::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Font Awesome 5 Free";
+  content: "\f35d";
+  font-size: 52px;
+  color: rgba(255,255,255,.4);
+}
+
+.ws-preview__thumbnail-link::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Font Awesome 5 Free";
+  content: "\f35d";
+  font-size: 52px;
+  color: rgba(255,255,255,.4);
+}
+
+.pf-c-badge.ws-beta-badge {
+  --pf-c-badge--m-unread--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-badge--m-unread--Color: var(--pf-global--primary-color--100);
+  border: 1px solid var(--pf-global--primary-color--100);
+}
+
+.ws-prop-required {
+  color: var(--pf-global--danger-color--100);
+}
