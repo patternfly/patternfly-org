@@ -30,7 +30,7 @@
 }
 
 /* Hide TOC scrollbar Chrome, Safari & Opera */
-.ws-toc::-webkit-scrollbar {
+.ws-toc .pf-c-jump-links__main::-webkit-scrollbar {
   display: none;
 }
 
