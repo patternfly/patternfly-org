@@ -29,6 +29,10 @@
   }
 }
 
+.ws-toc .pf-c-jump-links__main {
+  scrollbar-width: none;
+}
+
 /* Hide TOC scrollbar Chrome, Safari & Opera */
 .ws-toc .pf-c-jump-links__main::-webkit-scrollbar {
   display: none;
