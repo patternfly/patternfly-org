@@ -14,8 +14,27 @@
   box-shadow: var(--pf-global--BoxShadow--sm-bottom)
 }
 
+/* Mobile jumplinks */
+@media (max-width: 1450px) {
+  .ws-toc.pf-m-expanded .pf-c-jump-links__main {
+    max-height: 65vh;
+    overflow: auto;
+  }
+  
+  .ws-toc .pf-c-jump-links__header {
+    position: sticky;
+    top: 0;
+    background-color: var(--pf-global--BackgroundColor--200);
+    z-index: 2;
+  }
+}
+
+.ws-toc .pf-c-jump-links__main {
+  scrollbar-width: none;
+}
+
 /* Hide TOC scrollbar Chrome, Safari & Opera */
-.ws-toc::-webkit-scrollbar {
+.ws-toc .pf-c-jump-links__main::-webkit-scrollbar {
   display: none;
 }
 
