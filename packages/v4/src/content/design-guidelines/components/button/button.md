@@ -236,7 +236,7 @@ _Buttons placed in overflow menu due to limited space, with primary button persi
 **Writing button labels**
 
 * Be specific and clearly communicate the button's action.
-* Screen readers may read buttons to users out of context, so button text should be unique and easily understood on its own. Refer to [PatternFly's accessibility guide](/developer-resources/accessibility-guide) for more information.
+* Screen readers may read buttons to users out of context, so button text should be unique and easily understood on its own. Refer to [PatternFly's accessibility guide](/accessibility/product-development-guide) for more information.
 * Use simple verbs or verb phrases.
 * To avoid wrapping, aim for short labels when possible (1–3 words).
 * Avoid using articles (for example, write “Add source” instead of “Add a source”).
