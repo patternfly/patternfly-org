@@ -1,11 +1,10 @@
 .ws-example {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: var(--pf-global--spacer--lg);
+  margin-bottom: var(--pf-global--spacer--lg);
 }
 
 .ws-example > .ws-example-header {
   padding: var(--pf-global--spacer--md);
-  border-bottom: var(--pf-global--BorderWidth--sm) solid #f8f8f8;
 }
 
 .ws-example-header > .ws-example-heading:not(:last-child) {
@@ -28,19 +27,23 @@
 }
 
 .ws-preview {
-  padding: 1rem;
-  background-color: white;
-  border-bottom: 1px solid #f8f8f8;
+  padding: var(--pf-global--spacer--md);
+  background-color: var(--pf-global--BackgroundColor--100);
+  border-bottom: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--300);
   transition: width .2s ease-in-out;
 }
 
+.ws-preview-html {
+  overflow: hidden;
+}
+
 .ws-editor {
-  font-size: 16px;
+  font-size: var(--pf-global--FontSize--md);
 }
 
 .ws-editor .token.punctuation,
 .ws-editor .token.operator {
-  color: #c9190b;
+  color: var(--pf-global--danger-color--100);
 }
 
 .ws-preview__thumbnail-link {
@@ -95,7 +98,7 @@
 .pf-c-badge.ws-beta-badge {
   --pf-c-badge--m-unread--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-badge--m-unread--Color: var(--pf-global--primary-color--100);
-  border: 1px solid var(--pf-global--primary-color--100);
+  border: var(--pf-global--BorderWidth--sm) solid var(--pf-global--primary-color--100);
 }
 
 .ws-prop-required {

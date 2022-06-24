@@ -164,9 +164,16 @@ export class CSSVariables extends React.Component {
 
   onCollapse = (event, rowKey, isOpen) => {
     const { rows } = this.state;
-    rows[rowKey].isOpen = isOpen;
+    const collapseAll = rowKey === undefined;
+    let newRows = Array.from(rows);
+
+    if (collapseAll) {
+      newRows = newRows.map(r => (r.isOpen === undefined ? r : { ...r, isOpen }));
+    } else {
+      newRows[rowKey] = { ...newRows[rowKey], isOpen };
+    }
     this.setState({
-      rows
+      rows: newRows,
     });
   };
 
@@ -213,7 +220,11 @@ export class CSSVariables extends React.Component {
           cells={this.columns}
           rows={this.state.rows}
           onCollapse={this.onCollapse}
+          canCollapseAll={true}
+          collapseAllAriaLabel="expand all css variables"
           gridBreakPoint="grid-lg"
+          contentId="css-variables-content"
+          expandId="css-variables-toggle"
         >
           <TableHeader />
           <TableBody />

@@ -9,6 +9,6 @@
 #ws-gdpr-banner {
   max-width: 95vw;
   flex-wrap: nowrap;
-  background: #FFF;
-  border: 1px solid #151515;
+  background: var(--pf-global--BackgroundColor--100);
+  border: var(--pf-global--BorderWidth--sm) solid var(--pf-global--Color--100);
 }

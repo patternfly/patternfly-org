@@ -41,8 +41,8 @@
   margin-right: 0;
 }
 .ws-org-pfsite-l-footer-column .ws-org-pfsite-footer-menu-social-links {
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: var(--pf-global--spacer--md);
+  margin-bottom: var(--pf-global--spacer--md);
 }
 @media (max-width: 768px) {
   .ws-org-pfsite-l-footer-column .ws-org-pfsite-footer-menu-social-links {

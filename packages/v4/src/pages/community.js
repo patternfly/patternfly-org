@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'theme-patternfly-org/components';
-import { Grid, GridItem, PageSection, Split, SplitItem, Title } from '@patternfly/react-core';
+import { Card, CardBody, Grid, GridItem, PageSection, Split, SplitItem, Title } from '@patternfly/react-core';
 import './community.css';
 import { getTitle } from 'theme-patternfly-org/helpers/getTitle';
 import communityPageHeader from './community-page-header.svg';
@@ -20,11 +20,11 @@ const CommunityPage = () => {
   }
 
   return (
-    <PageSection className="ws-community-page">
+    <PageSection className="ws-community-page pf-m-light-100">
       <Title size="4xl" className="pf-u-mb-lg ws-page-title" headingLevel="h1">Community</Title>
       <p>At the core of PatternFly is our community of people—in other words, our Flyers. Together, we celebrate creativity and foster a sense of teamwork and unity.</p>
 
-      <Grid sm={12} md={6} gutter="sm" className="pf-l-grid pf-m-all-12-col-on-sm pf-m-all-6-col-on-md pf-m-gutter pf-u-mt-3xl">
+      <Grid sm={12} md={6} hasGutter className="pf-u-mt-3xl">
         <GridItem className="pf-u-pr-xl">
           <img src={communityPageHeader} alt="Website collaboration" />
         </GridItem>
@@ -37,39 +37,45 @@ const CommunityPage = () => {
       <Title size="3xl" className="pf-u-mb-sm ws-page-title pf-u-mt-3xl" headingLevel="h2">What we're building</Title>
       <p>Our work extends beyond products and apps. We’re always exploring new ways we can welcome ideas and build better experiences for the very people who make PatternFly what it is today. </p>
 
-      <Grid sm={12} md={4} className="pf-u-my-lg pf-l-grid pf-m-all-12-col-on-sm pf-m-all-4-col-on-md pf-u-text-align-center ws-building-grid">
-        <GridItem>
-          <img src={community1} alt="Globe" className="ws-community-grid-img" />
-          <Title size="xl" className="ws-title" headingLevel="h3">Building global connections</Title>
-          <p>
-            Flyers may be spread all over the globe, but we make sure to come together once a month to share updates and collect feedback. All meetings are recorded and published on <a href="https://www.youtube.com/channel/UCqLT0IEvYmb8z__9IFLSVyQ">PatternFly’s YouTube channel</a>, and you can join PatternFly’s mailing list for the invites.
-          </p>
-          <Title size="xl" className="ws-title" headingLevel="h3">
-            <a href="https://www.redhat.com/mailman/listinfo/patternfly"><strong>Join our mailing list</strong></a>
-          </Title>
-        </GridItem>
-        <GridItem>
-          <img src={community2} alt="Map" className="ws-community-grid-img" />
-          <Title size="xl" className="ws-title" headingLevel="h3">Building PatternFly roadmaps</Title>
-          <p>
-            To stay on top of all changes and keep everyone informed, we regularly update PatternFly roadmaps. This gives us an opportunity to share what Flyers are working on and what updates we’re planning.
-          </p>
-          <Title size="xl" className="ws-title" headingLevel="h3">
-            <a href="https://github.com/orgs/patternfly/projects/4?fullscreen=true"><strong>Explore PatternFly roadmaps</strong></a>
-          </Title>
-        </GridItem>
-        <GridItem>
-          <img src={community3} alt="Figure of a person" className="ws-community-grid-img" />
-          <Title size="xl" className="ws-title" headingLevel="h3">Building accessible experiences</Title>
-          <p>
-            A community isn’t really a community unless everyone is included, so accessible UX is important to us. We regularly test and audit PatternFly’s accessibility and share guidance whenever we can.
-          </p>
-          <Title size="xl" className="ws-title" headingLevel="h3">
-            <Link to="/accessibility/accessibility-fundamentals">
-              <strong>Read our accessibility guide</strong>
-            </Link>
-          </Title>
-        </GridItem>
+      <Grid sm={12} md={4} hasGutter className="pf-u-my-lg pf-u-text-align-center ws-building-grid">
+        <Card>
+          <CardBody>
+            <img src={community1} alt="Globe" className="ws-community-grid-img" />
+            <Title size="xl" className="ws-title" headingLevel="h3">Building global connections</Title>
+            <p>
+              Flyers may be spread all over the globe, but we make sure to come together once a month to share updates and collect feedback. All meetings are recorded and published on <a href="https://www.youtube.com/channel/UCqLT0IEvYmb8z__9IFLSVyQ">PatternFly’s YouTube channel</a>, and you can join PatternFly’s mailing list for the invites.
+            </p>
+            <Title size="xl" className="ws-title" headingLevel="h3">
+              <a href="https://www.redhat.com/mailman/listinfo/patternfly"><strong>Join our mailing list</strong></a>
+            </Title>
+          </CardBody>
+        </Card>
+        <Card>
+          <CardBody>
+            <img src={community2} alt="Map" className="ws-community-grid-img" />
+            <Title size="xl" className="ws-title" headingLevel="h3">Building PatternFly roadmaps</Title>
+            <p>
+              To stay on top of all changes and keep everyone informed, we regularly update PatternFly roadmaps. This gives us an opportunity to share what Flyers are working on and what updates we’re planning.
+            </p>
+            <Title size="xl" className="ws-title" headingLevel="h3">
+              <a href="https://github.com/orgs/patternfly/projects/4?fullscreen=true"><strong>Explore PatternFly roadmaps</strong></a>
+            </Title>
+          </CardBody>
+        </Card>
+        <Card>
+          <CardBody>
+            <img src={community3} alt="Figure of a person" className="ws-community-grid-img" />
+            <Title size="xl" className="ws-title" headingLevel="h3">Building accessible experiences</Title>
+            <p>
+              A community isn’t really a community unless everyone is included, so accessible UX is important to us. We regularly test and audit PatternFly’s accessibility and share guidance whenever we can.
+            </p>
+            <Title size="xl" className="ws-title" headingLevel="h3">
+              <Link to="/accessibility/accessibility-fundamentals">
+                <strong>Read our accessibility guide</strong>
+              </Link>
+            </Title>
+          </CardBody>
+        </Card>
       </Grid>
 
       <Title size="3xl" className="pf-u-mb-sm ws-page-title pf-u-mt-3xl" headingLevel="h2">Creating new communities</Title>
