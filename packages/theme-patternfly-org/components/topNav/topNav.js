@@ -7,7 +7,7 @@ import './topNav.css';
 export const TopNav = ({ navItems }) => (
   <Location>
     {({ location }) => 
-      <Nav aria-label="Nav" variant="horizontal">
+      <Nav aria-label="Patternfly top nav" variant="horizontal">
         <NavList>
           {navItems.map(({ path, text }) => (
             <NavItem
