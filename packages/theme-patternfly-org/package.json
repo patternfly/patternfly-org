@@ -1,7 +1,7 @@
 {
   "name": "@breakaway/documentation-framework",
   "description": "A unified PatternFly and PatternFly-React theme.",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "author": "Red Hat",
   "license": "MIT",
   "private": false,
