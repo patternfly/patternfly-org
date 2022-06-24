@@ -72,7 +72,7 @@ const HeaderTools = ({
     <PageHeaderTools>
       {hasDarkThemeSwitcher && (
         <PageHeaderToolsItem>
-          <Switch id="uncontrolled-switch-on" label="Dark theme" defaultChecked={false} onChange={() => 
+          <Switch id="ws-theme-switch" label="Dark theme" defaultChecked={false} onChange={() => 
           document.querySelector('html').classList.toggle('pf-theme-dark')} />
         </PageHeaderToolsItem>
       )}
