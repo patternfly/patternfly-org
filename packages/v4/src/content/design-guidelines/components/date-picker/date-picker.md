@@ -112,7 +112,7 @@ Some use cases will call for more advanced scheduling options, such as schedulin
 ### Date format
 Date formats are product-specific and often depend on user locale. To minimize confusion, choose one date format and keep it consistent. If one date picker displays MM/DD/YYYY, be sure to repeat the same date format throughout your interface.
 
-Learn more about recommended date and time conventions in our [date and time guidelines](/content/numerics).
+Learn more about recommended date and time conventions in our [date and time guidelines](/ux-writing/numerics).
 
 ### Placeholder text
 Always use placeholder text in date fields to provide an example of the accepted date format. Placeholder text will disappear after users begin inputting their own date.
