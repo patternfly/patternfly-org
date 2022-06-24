@@ -36,6 +36,7 @@ module.exports = (_env, argv) => {
           test: /\.[tj]sx?$/,
           include: [
             path.resolve(process.cwd(), 'src'),
+            path.resolve(process.cwd(), 'patternfly-docs'),
             path.resolve(__dirname, '../..'), // Temporarily compile theme using webpack for development
             /react-[\w-]+\/src\/.*\/examples/,
             /react-[\w-]+\\src\\.*\\examples/, // fix for Windows
@@ -59,6 +60,7 @@ module.exports = (_env, argv) => {
               plugins: [
                 '@babel/plugin-transform-react-jsx',
                 '@babel/plugin-proposal-nullish-coalescing-operator',
+                '@babel/plugin-proposal-class-properties'
                 // fixes warnings of nature: Though the "loose" option was set to "true" in your @babel/preset-env config, it will not be used for...
                 // ['@babel/plugin-proposal-class-properties', {loose: false}],
                 // ['@babel/plugin-proposal-private-methods', {loose: false}],
@@ -116,12 +118,11 @@ module.exports = (_env, argv) => {
       alias: {
         'client-styles': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.css.js'),
         './routes-client': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.routes.js'),
-        './routes-generated': path.resolve(process.cwd(), 'src/generated/index.js'),
+        './routes-generated': path.resolve(process.cwd(), 'patternfly-docs/generated/index.js'),
         'lodash': 'lodash-es' // Sanely bundle react-charts.
       },
       modules: [
         'node_modules',
-        'patternfly-docs',
         ...module.paths,
       ]
     },

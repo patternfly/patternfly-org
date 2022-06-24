@@ -73,6 +73,7 @@ async function build(cmd, options) {
     : cmd;
   const config = getConfig(options);
   config.analyze = options.analyze;
+  config.output = options.output;
 
   // These get passed to `fork`ed builds
   process.env.pathPrefix = config.pathPrefix;

@@ -14,7 +14,7 @@ const { liveCodeTypes } = require('../../helpers/liveCodeTypes');
 const { tsDocgen } = require('../tsDocgen');
 
 let exitCode = 0;
-const outputBase = path.join(process.cwd(), `src/generated`);
+const outputBase = path.join(process.cwd(), `patternfly-docs/generated`);
 const tsDocs = {};
 const routes = {};
 const globs = {

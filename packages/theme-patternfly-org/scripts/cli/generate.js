@@ -7,7 +7,7 @@ function getSource(options) {
 
 function generate(options) {
   const start = new Date();
-  console.log('write source files to src/generated');
+  console.log('write source files to patternfly-docs/generated');
   const sourceMDWithOptions = (glob, source, ignore) => sourceMD(glob, source, ignore, options._name);
   getSource(options)(sourceMDWithOptions, sourceProps);
   const exitCode = writeIndex();

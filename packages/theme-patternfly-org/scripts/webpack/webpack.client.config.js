@@ -26,7 +26,7 @@ const clientConfig = async (env, argv) => {
 
   return {
     output: {
-      path: path.resolve('public'),
+      path: argv.output ? path.resolve(argv.output) : path.resolve('public'),
       filename: '[name].[hash].bundle.js'
     },
     devServer: {

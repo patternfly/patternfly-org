@@ -1,12 +1,12 @@
 {
-  "name": "@breakaway/theme-patternfly-org",
+  "name": "@breakaway/documentation-framework",
   "description": "A unified PatternFly and PatternFly-React theme.",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "Red Hat",
   "license": "MIT",
   "private": false,
   "bin": {
-    "theme-patternfly-org": "scripts/cli/cli.js"
+    "pf-docs-framework": "scripts/cli/cli.js"
   },
   "dependencies": {
     "@babel/core": "7.18.2",

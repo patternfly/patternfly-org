@@ -25,6 +25,7 @@ program
 program
   .command('build <server|client|all>')
   .option('-a, --analyze', 'use webpack-bundle-analyzer', false)
+  .option('-o, --output <folder>', 'output folder', 'public')
   .description('generates source files and runs webpack')
   .action((cmd, options) => {
     const { build } = require('./build');
@@ -49,5 +50,14 @@ program
     writeScreenshots(options);
   });
 
+program
+  .command('init')
+  .option('-n, --name <extension>', 'name of the extension', 'extension')
+  .option('-s, --scripts', 'Adds script targets to package.json', false)
+  .description('Initialize patternfly-docs')
+  .action(options => {
+    const { init } = require('./init');
+    init(options);
+  });
 
 program.parse(process.argv);

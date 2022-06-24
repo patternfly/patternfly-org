@@ -5,7 +5,7 @@ const { Cluster } = require('puppeteer-cluster');
 const sharp = require('sharp');
 const { fullscreenRoutes } = require('../routes.js');
 
-const screenshotBase = path.join(process.cwd(), 'src/generated');
+const screenshotBase = path.join(process.cwd(), 'patternfly-docs/generated');
 sharp.cache(false);
 
 async function writeScreenshot({ page, data: { url, urlPrefix } }) {

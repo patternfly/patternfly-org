@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, useLocation } from '@reach/router';
-import { SideNavLayout } from '@breakaway/theme-patternfly-org/layouts';
-import { Footer } from '@breakaway/theme-patternfly-org/components';
-import { MDXTemplate } from '@breakaway/theme-patternfly-org/templates/mdx';
+import { SideNavLayout } from '@breakaway/documentation-framework/layouts';
+import { Footer } from '@breakaway/documentation-framework/components';
+import { MDXTemplate } from '@breakaway/documentation-framework/templates/mdx';
 import { routes, groupedRoutes, fullscreenRoutes, getAsyncComponent } from './routes';
 import { trackEvent } from './helpers';
 import 'client-styles'; // Webpack replaces this import: patternfly-docs.css.js

@@ -1,1 +1,1 @@
-module.exports = require(require('path').join(process.cwd(), 'src/generated'));
+module.exports = require(require('path').join(process.cwd(), 'patternfly-docs/generated'));
