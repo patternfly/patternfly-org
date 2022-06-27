@@ -1,7 +1,7 @@
 const glob = require('glob');
 const path = require('path');
 const fs = require('fs-extra');
-const versions = require('@breakaway/theme-patternfly-org/versions.json');
+const versions = require('@breakaway/documentation-framework/versions.json');
 
 const version = versions.Releases.find(release => release.latest).name;
 
