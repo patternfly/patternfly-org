@@ -3,33 +3,126 @@ id: Tooltip
 section: components
 ---
 
-A **tooltip** is in-app messaging used to identify elements on a page with short, clarifying text. The contents of a tooltip should be accessible to all users, regardless of the device or method used to navigate to the element that triggers the tooltip.
+import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
-**Mouse users** should be able to trigger a tooltip by hovering over the triggering element. The tooltip should also be hoverable and persist until the mouse pointer is no longer hovering over the triggering element or the tooltip itself.
+## Accessibility
 
-**Keyboard users** should be able to place focus on the triggering element in order to trigger the tooltip. The tooltip should persist as long as the triggering element has focus.
+To implement an accessible PatternFly **tooltip**:
 
-**Screen reader users** should have the contents of the tooltip announced to them when it is triggered. This can be best achieved by using the `children` prop and wrapping the tooltip around the intended trigger. Additionally, if a tooltip's contents is expected or intended to dynamically update (such as in response to a user action), the updated content should be announced to users.
+- Avoid using tooltips on static elements such as a `div` or `span`, except in cases of truncation.
+- Pass in `role="tooltip"` (HTML/CSS) to the element acting as the tooltip component.
+- Pass in `aria="labelledby"` to the tooltip component (PatternFly React) or the `aria-labelledby` attribute to the trigger (HTML/CSS) when the tooltip should act as the primary label for its trigger:
+  ```noLive
+  // PatternFly React
+  <Tooltip content="Copy to clipboard" aria="labelledby">
+    <button>
+      <CopyIcon />
+    </button>
+  </Tooltip>
 
-## Accessibility application
+  // HTML/CSS
+  <div class="pf-c-tooltip pf-m-top" role="tooltip">
+    <div class="pf-c-tooltip__arrow"></div>
+    <div class="pf-c-tooltip__content" id="tooltip-label-content">
+      Copy to clipboard
+    </div>
+  </div>
+  <button aria-labelledby="tooltip-label-content">
+    <CopyIcon />
+  </button>
+  ```
+- Pass in the `aria-describedby` attribute to the trigger (HTML/CSS) when the tooltip should act as supplementary information (this is the default behavior for PatternFly React):
+  ```noLive
+  // HTML/CSS
+  <div class="pf-c-tooltip pf-m-top" role="tooltip">
+    <div class="pf-c-tooltip__arrow"></div>
+    <div class="pf-c-tooltip__content" id="tooltip-description-content">
+      Supplementary information within a tooltip
+    </div>
+  </div>
+  <button aria-describedby="tooltip-description-content">
+    Button text label
+  </button>
+  ```
 
-The preferred method of using the tooltip is by wrapping it around its trigger via the `children` prop. However, there are situations where additional props must be passed in or where using the `reference` prop is needed or desired.
+## Testing
 
-To ensure the tooltip is used accessibly, follow these steps when applicable:
+At a minimumm, a tooltip should meet the following criteria:
 
-- Tooltips should not be added to static elements, such as a `div` or `span`.
-- When a tooltip should act as the primary label for an element, pass in `aria="labelledby"`. When a tooltip should act as supplementary information, keep the default `aria="describedby"`.
-    - This pattern should also be followed when manually passing in the `aria-labelledby` or `aria-describedby` attribute to a trigger.
-- When using the `reference` prop, you should also pass in the `id` prop and then manually pass in `aria-labelledby` or `aria-describedby` to the trigger. The aria attribute passed into the trigger should have the tooltip `id` passed in as a value.
-    - If you are instead using the `children` prop and you want to manually pass in `aria-describedby` or `aria-labelledby` to a trigger, you should also pass in `aria="none"` to the tooltip.
-- When the tooltip content is expected or intended to dynamically update and the `children` prop is being used, you must also pass in `aria-live="polite"` to ensure the updated content gets announced to users. This functionality gets set by default when using the `reference` prop.
-- A tooltip must be dismissable without needing to move the mouse pointer or remove focus from the trigger, such as by pressing the **Escape** key.
-- A tooltip must be automatically dismissed if its content is no longer valid.
+<List isPlain>
+  <ListItem>
+    <Checkbox id="tooltip-a11y-checkbox-1" label="Unless it is a case of truncation, the tooltip is not placed on a static element." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="tooltip-a11y-checkbox-2" label={<span>If using the HTML/CSS library, <code class="ws-code">role="tooltip"</code> is passed into the tooltip component.</span>} />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="tooltip-a11y-checkbox-3" label={<span>If the tooltip is meant to act as a primary label, the trigger has the <code class="ws-code">aria-labelledby</code> attribute linked to the tooltip contents.</span>} description="One use-case for this is when a button contains only an icon and no visible text label." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="tooltip-a11y-checkbox-4" label={<span>If the tooltip is meant to act as supplementary information, the trigger has the <code class="ws-code">aria-describedby</code> attribute linked to the tooltip contents.</span>} />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="tooltip-a11y-checkbox-5" label="Using a mouse to hover over the triggering element causes the tooltip to trigger, and the tooltip persists when hovering over the tooltip contents." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="tooltip-a11y-checkbox-6" label="The triggering element can receive focus via keyboard in order to trigger the tooltip, and the tooltip persists as long as the triggering element has focus." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="tooltip-a11y-checkbox-7" label="Users navigating via screen reader have the contents of the tooltip announced to them when it is triggered." description="This is best achieved by wrapping the tooltip component around the trigger." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="tooltip-a11y-checkbox-8" label={<span>The tooltip can be dismissed by pressing <kbd>Escape</kbd>.</span>} />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="tooltip-a11y-checkbox-9" label="If the tooltip content is no longer valid, the tooltip automatically gets dismissed." />
+  </ListItem>
+</List>
 
-The following props/attributes have been added for you or are customizable in PatternFly:
+## React customization
 
-| React prop/attribute | React component that it should be applied to | Which HTML element it appears on in markup | Reason used |
-| -- | -- | -- | -- |
-| `aria-live` | Tooltip | .pf-c-tooltip | Used when a tooltips' content is expected or intended to dynamically update. Only use a value of "polite" and only when also using the `children` prop (`aria-live="polite"` is set by default when using the `reference` prop). |
-| `aria` | Tooltip | .pf-c-tooltip | Used to decide whether the tooltip acts as supplementary information (default behavior with `aria="describedby"`) or acts as a primary label (`aria="labelledby"`). A value of "none" can also be passed in to prevent the tooltip from being announced or to set `aria-describedby` or `aria-labelledby`manually on a trigger. |
-| `id` | Tooltip | .pf-c-tooltip | Used to manually pass in the `id` attribute, which can then be passed in as a value to a triggers' `aria-describedby` or `aria-labelledby` attribute. |
+Various React props have been provided for more fine-tuned control over accessibility.
+
+| Prop | Applied to | Reason | 
+|---|---|---|
+| aria-live | Tooltip | When a value of "polite" is passed in, allows screen readers to announce the tooltip contents when it is expected or intended to dynamically update, such as in response to a user action. This should only be passed in when the `children` prop is also used on the tooltip. <br/><br/> `aria-live="polite"` is set by default when using the `reference` prop in order to allow screen readers to correctly announce tooltip contents regardless if it will dynamically update or not. |
+| aria | Tooltip | When a value of "describedby" (default behavior) or "labelledby" is passed in, allows screen readers to announce the tooltip contents when it is triggered. A value of "describedby" sets the trigger's `aria-describedby` attribute and should be used when the tooltip should act as supplementary information. A value of "labelledby" sets the trigger's `aria-labelledby` attribute and should be used when the tooltip should act as a primary label. <br/><br/> When a value of "none" is passed in, prevents `aria-labelledby` and `aria-describedby` from being set on the trigger. Only pass in a value of "none" when either `aria-labelledby` or `aria-describedby` is manually set on the trigger and the `id` prop is manually passed into the tooltip. <br/><br/> This prop should only be passed in when the `children` prop is also used on the tooltip. |
+| id | Tooltip | Sets the `id` attribute on the tooltip, which can be passed in as the value to a trigger's `aria-labelledby` or `aria-describedby` attribute. **Required** when either `aria-labelledby` or `aria-describedby` is manually set on the trigger or when the `reference` prop is passed into the tooltip. |
+| reference | Tooltip | Links the tooltip to a trigger when the `children` prop cannot be used. When passing in this prop, the `id` prop must also be passed in, and either `aria-labelledby` or `aria-describedby` must be set on the trigger with a value of the tooltip's `id`. |
+
+### Aria-live
+
+```noLive
+const [tooltipContent, setTooltipContent] = React.useState("Copy to clipboard");
+
+const onClick = () => {
+  setTooltipContent('Successfully copied to clipboard!")
+}
+
+<Tooltip aria-live="polite" content={tooltipContent}>
+  <button onClick={onClick}>
+    <CopyIcon />
+  </button>
+</Tooltip>
+```
+
+### Aria
+
+```noLive
+<Tooltip id="tooltip-without-aria" aria="none" content="Copy to clipboard">
+  <button aria-labelledby="tooltip-without-aria">
+    <CopyIcon />
+  </button>
+</Tooltip>
+```
+
+### Reference
+
+```noLive
+const tooltipRef = React.useRef();
+
+<Tooltip id="tooltip-with-reference" content="Copy to clipboard" reference={tooltipRef} />
+<button ref={tooltipRef} aria-labelledby="tooltip-with-reference">
+  <CopyIcon />
+</button>
+```
