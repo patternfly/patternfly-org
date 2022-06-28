@@ -14,12 +14,12 @@ The **back to top** component is a shortcut that allows users to quickly navigat
 
 ## Usage 
 
-### When to use: 
+### When to use
 
 * Use the back to top component on large-medium screens when content fills up more than two screens in length. 
 * Use on small screens when content fills up more than four screens in length. 
 
-### When not to use:
+### When not to use
 
 * Don’t use on pages with static content that is short in length. 
 
