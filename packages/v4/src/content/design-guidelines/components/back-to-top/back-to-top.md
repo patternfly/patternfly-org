@@ -20,7 +20,7 @@ Use the back to top component on large-medium screens when content fills up more
 
 **When not to use**:
 
-Don’t use on pages that consist of dynamic content (content that changes based on user preferences, behaviors or data) or pages with static content that is short in length. 
+Don’t use on pages with static content that is short in length. 
 
 ## Behavior 
 As the user scrolls down the page, the back to top component will reveal itself as a sticky button on the lower right edge of the screen. The color of the button will change on the hover to insinuate its clickability. Once the user selects the button the page will jump back to the top of the page.
