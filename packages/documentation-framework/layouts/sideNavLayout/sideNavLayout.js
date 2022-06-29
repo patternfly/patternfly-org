@@ -24,7 +24,6 @@ import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
 import logo from '../logo.svg';
-// import './sideNavLayout.css';
 
 const HeaderTools = ({
   versions,

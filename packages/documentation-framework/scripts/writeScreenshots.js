@@ -40,7 +40,7 @@ async function writeScreenshots({ urlPrefix }) {
     concurrency: Cluster.CONCURRENCY_CONTEXT,
     maxConcurrency: os.cpus().length,
     puppeteerOptions: {
-      headless: false, // set to true just for testing...
+      headless: true, // set to false for testing...
       args: ["--no-sandbox", "--disable-setuid-sandbox"]
     }
   });

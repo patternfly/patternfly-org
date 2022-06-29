@@ -50,7 +50,7 @@ module.exports = (_env, argv) => {
               cacheDirectory: '.cache/babel',
               cacheCompression: false,
               presets: [['@babel/preset-env', {
-                loose: false,
+                loose: true,
                 corejs: 3,
                 useBuiltIns: 'entry',
                 exclude: ['transform-regenerator', 'transform-async-to-generator'],
@@ -60,11 +60,8 @@ module.exports = (_env, argv) => {
               plugins: [
                 '@babel/plugin-transform-react-jsx',
                 '@babel/plugin-proposal-class-properties',
-                // '@babel/plugin-proposal-nullish-coalescing-operator',
-                // fixes warnings of nature: Though the "loose" option was set to "true" in your @babel/preset-env config, it will not be used for...
-                // ['@babel/plugin-proposal-class-properties', {loose: false}],
-                // ['@babel/plugin-proposal-private-methods', {loose: false}],
-                // ['@babel/plugin-proposal-private-property-in-object', {loose: false}],
+                ["@babel/plugin-proposal-private-methods", { "loose": false }],
+                ["@babel/plugin-proposal-private-property-in-object", { "loose": false }]
               ],
             }
           },

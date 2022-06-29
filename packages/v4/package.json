@@ -17,11 +17,10 @@
     "screenshots": "pf-docs-framework screenshots"
   },
   "dependencies": {
-    "@breakaway/documentation-framework": "^1.0.5",
     "@patternfly/react-docs": "5.75.2",
-    "@breakaway/react-log-viewer": "4.68.0",
     "react": "^16.8.0 || ^17.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0"
+    "react-dom": "^16.8.0 || ^17.0.0",
+    "@breakaway/documentation-framework": "^1.0.12"
   },
   "devDependencies": {
     "fs-extra": "^9.0.0",

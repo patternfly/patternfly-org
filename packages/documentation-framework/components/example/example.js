@@ -17,7 +17,6 @@ import {
 } from '../../helpers';
 import { convertToReactComponent } from '@patternfly/ast-helpers';
 import missingThumbnail from './missing-thumbnail.jpg';
-// import './example.css';
 
 const errorComponent = err => <pre>{err.toString()}</pre>;
 

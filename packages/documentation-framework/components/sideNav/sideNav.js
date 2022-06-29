@@ -4,7 +4,6 @@ import { Nav, NavList, NavExpandable, PageContextConsumer, capitalize } from '@p
 import { css } from '@patternfly/react-styles';
 import { Location } from '@reach/router';
 import { slugger } from '../../helpers';
-// import './sideNav.css';
 import globalBreakpointXl from "@patternfly/react-tokens/dist/esm/global_breakpoint_xl";
 import { trackEvent } from '../../helpers';
 

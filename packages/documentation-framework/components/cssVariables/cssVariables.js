@@ -13,8 +13,6 @@ import global_spacer_md from "@patternfly/react-tokens/dist/esm/global_spacer_md
 import LevelUpAltIcon from "@patternfly/react-icons/dist/esm/icons/level-up-alt-icon";
 import { CSSSearch } from './cssSearch';
 
-// import "./cssVariables.css";
-
 const isColorRegex = /^(#|rgb)/;
 
 const mappingAsList = (property, values) => (

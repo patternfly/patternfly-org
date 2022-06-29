@@ -38,16 +38,16 @@ module.exports = (sourceMD, sourceProps) => {
   const reactChartsPath = require
       .resolve('@patternfly/react-charts/package.json')
       .replace('package.json', 'src');
-  // const reactLogViewerPath = require
-  //     .resolve('@patternfly/react-log-viewer/package.json')
-  //     .replace('package.json', 'src');
+  const reactLogViewerPath = require
+      .resolve('@patternfly/react-log-viewer/package.json')
+      .replace('package.json', 'src');
 
   const reactPropsIgnore = ['**/*.test.tsx', '**/examples/*.tsx'];
   sourceProps(path.join(reactCorePath, '/**/*.tsx'), reactPropsIgnore);
   sourceProps(path.join(reactTablePath, '/**/*.tsx'), reactPropsIgnore);
   sourceProps(path.join(reactCodeEditorPath, '/**/*.tsx'),reactPropsIgnore);
   sourceProps(path.join(reactChartsPath, '/**/*.tsx'),reactPropsIgnore);
-  // sourceProps(path.join(reactLogViewerPath, '/**/*.tsx'), reactPropsIgnore);
+  sourceProps(path.join(reactLogViewerPath, '/**/*.tsx'), reactPropsIgnore);
 
   // React MD
   sourceMD(path.join(reactCorePath, '/**/examples/*.md'), 'react');
@@ -65,8 +65,8 @@ module.exports = (sourceMD, sourceProps) => {
   sourceMD(path.join(reactCodeEditorPath, '/**/examples/*.md'), 'react');
 
   // React-log-viewer MD
-  // sourceMD(path.join(reactLogViewerPath, '/**/examples/*.md'), 'react');
-  // sourceMD(path.join(reactLogViewerPath, '/**/demos/*.md'), 'react-demos');
+  sourceMD(path.join(reactLogViewerPath, '/**/examples/*.md'), 'react');
+  sourceMD(path.join(reactLogViewerPath, '/**/demos/*.md'), 'react-demos');
 
   // React OUIA MD
   sourceMD(path.join(reactCorePath, '/**/helpers/OUIA/*.md'), 'react');
@@ -78,11 +78,4 @@ module.exports = (sourceMD, sourceProps) => {
   // Upgrade guides
   sourceMD(require.resolve('@patternfly/patternfly/UPGRADE-GUIDE.md'), 'html');
   sourceMD(require.resolve('@patternfly/react-docs/UPGRADE-GUIDE.md'), 'react');
-
-  const reactLogViewerPath = require
-    .resolve('@breakaway/react-log-viewer/package.json')
-    .replace('package.json', 'src');
-  sourceProps(path.join(reactLogViewerPath, '/**/*.tsx'), reactPropsIgnore);
-  sourceMD(path.join(reactLogViewerPath, '../patternfly-docs/**/examples/*.md'), 'react');
-  sourceMD(path.join(reactLogViewerPath, '../patternfly-docs/**/demos/*.md'), 'react-demos');
 }

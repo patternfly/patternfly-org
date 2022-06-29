@@ -43,7 +43,6 @@ function toReactComponent(mdFilePath, source, buildMode) {
         return file.info('no frontmatter, skipping');
       }
       frontmatter = yaml.safeLoad(yamlNode.value);
-      // console.log(frontmatter);
 
       // Fail early
       if (!frontmatter.id) {
@@ -61,7 +60,6 @@ function toReactComponent(mdFilePath, source, buildMode) {
         sourceRepo = 'patternfly-react';
       }
 
-      // console.log(JSON.stringify(frontmatter.propComponents, null, 2));
       const propComponents = [...new Set(frontmatter.propComponents || [])]
         .filter(propComponent => {
           if (tsDocs[propComponent]) {
@@ -71,7 +69,6 @@ function toReactComponent(mdFilePath, source, buildMode) {
           return false;
         })
         .map(propComponent => tsDocs[propComponent])
-      // console.log(JSON.stringify(propComponents, null, 2));
 
       const normalizedPath = relPath
         .replace('node_modules/@patternfly/patternfly/docs', 'src/patternfly')
@@ -239,13 +236,11 @@ function toReactComponent(mdFilePath, source, buildMode) {
 }
 
 function sourcePropsFile(file) {
-  // console.log(file);
   tsDocgen(file)
     .filter(({ hide }) => !hide)
     .forEach(({ name, description, props }) => {
       tsDocs[name] = { name, description, props };
     });
-  // console.log(JSON.stringify(tsDocs, null, 2))
 }
 
 function sourceMDFile(file, source, buildMode) {
