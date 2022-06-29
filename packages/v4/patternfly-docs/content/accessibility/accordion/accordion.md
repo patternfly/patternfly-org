@@ -52,7 +52,7 @@ The `isHidden` and `isExpanded` props should always have opposite values of one 
 
 Various HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
 
-| Attribute | Applied to | Reason | 
+| Attribute or class | Applied to | Reason | 
 |---|---|---|
 | aria-label | .pf-c-accordion | Adds an accessible name to the accordion for screen readers. If there is no other surrounding context provided for an accordion, especially if there are multiple accordions on a page, this should be passed in with descriptive text. |
 | aria-expanded="false" | .pf-c-accordion__toggle | Indicates that the accordion toggle is collapsed to assistive technologies. **Required** if the toggle is collapsed. |
