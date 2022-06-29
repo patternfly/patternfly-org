@@ -59,8 +59,8 @@ module.exports = (_env, argv) => {
               }]],
               plugins: [
                 '@babel/plugin-transform-react-jsx',
-                '@babel/plugin-proposal-nullish-coalescing-operator',
-                '@babel/plugin-proposal-class-properties'
+                '@babel/plugin-proposal-class-properties',
+                // '@babel/plugin-proposal-nullish-coalescing-operator',
                 // fixes warnings of nature: Though the "loose" option was set to "true" in your @babel/preset-env config, it will not be used for...
                 // ['@babel/plugin-proposal-class-properties', {loose: false}],
                 // ['@babel/plugin-proposal-private-methods', {loose: false}],

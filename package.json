@@ -27,7 +27,7 @@
   "workspaces": {
     "packages": [
       "packages/ast-helpers",
-      "packages/theme-patternfly-org",
+      "packages/documentation-framework",
       "packages/v3",
       "packages/v4"
     ]
