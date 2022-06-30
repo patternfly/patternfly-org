@@ -4,11 +4,6 @@
   height: 100%;
 }
 
-#main-content,
-.ws-docs-title {
-  background-color: var(--pf-global--BackgroundColor--light-200);
-}
-
 .ws-release-notes-toc {
   margin-bottom: var(--pf-global--spacer--lg);
 }
@@ -18,7 +13,7 @@
 }
 
 .ws-release-notes-toc .pf-c-card__title {
-  padding-bottom: 4px;
+  padding-bottom: var(--pf-global--spacer--xs);
 }
 
 .ws-release-notes-toc .pf-c-card__title .pf-c-title {
@@ -26,7 +21,7 @@
 }
 
 .ws-release-notes-toc .pf-c-card__title a {
-  margin-right: 8px;
+  margin-right: var(--pf-global--spacer--sm);
 }
 
 .ws-release-notes-toc .pf-c-card__title .pf-c-badge {
@@ -36,16 +31,16 @@
 .ws-release-notes-toc .pf-c-card__body {
   color: #72767B;
   font-family: RedHatText;
-  font-size: 16px;
+  font-size: var(--pf-global--FontSize--md);
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.5;
 }
 
 .ws-code {
   display: inline-block;
-  background-color: #fff;
-  padding: 1px 8px;
-  border: 1px solid #ededed;
+  background-color: var(--pf-global--BackgroundColor--100);
+  padding: 1px var(--pf-global--spacer--sm);
+  border: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--300);
   white-space: pre-wrap;
   font-size: var(--pf-global--FontSize--sm);
   font-family: var(--pf-global--FontFamily--monospace);
@@ -73,7 +68,7 @@
   table-layout: fixed;
   width: 100%;
 }
-.ws-table td > code, 
+.ws-table td > code,
 .ws-table th > code,
 .ws-table tr > code {
   white-space: normal;
@@ -285,12 +280,6 @@
 @media screen and (min-width: 576px) {
   .ws-dd {
     grid-column: 2; } }
-
-
-.ws-source-tabs.pf-c-tabs::before {
-  border: none;
-  border-width: 0;
-}
 
 @media screen and (max-width: 1450px) {
   .ws-mdx-child-template {

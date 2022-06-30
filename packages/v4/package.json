@@ -2,7 +2,7 @@
   "name": "patternfly-org-4",
   "description": "Documentation for PatternFly 4.",
   "private": true,
-  "version": "4.10.47",
+  "version": "4.10.75",
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
@@ -13,16 +13,17 @@
     "clean": "rm -rf .cache public size-plugin.json patternfly-docs/generated/**/*.js",
     "develop": "pf-docs-framework start",
     "generate": "pf-docs-framework generate",
-    "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4",
+    "test:a11y": "patternfly-a11y --config patternfly-a11y.config",
     "screenshots": "pf-docs-framework screenshots"
   },
   "dependencies": {
-    "@patternfly/react-docs": "5.75.2",
+    "@patternfly/react-docs": "5.82.5",
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0",
     "@breakaway/documentation-framework": "^1.0.12"
   },
   "devDependencies": {
+    "@patternfly/patternfly-a11y": "4.3.0",
     "fs-extra": "^9.0.0",
     "glob": "^7.1.6"
   }

@@ -7,8 +7,8 @@ import RunningIcon from '@patternfly/react-icons/dist/esm/icons/running-icon';
 import PuzzlePieceIcon from '@patternfly/react-icons/dist/esm/icons/puzzle-piece-icon';
 import ChartBarIcon from '@patternfly/react-icons/dist/esm/icons/chart-bar-icon';
 import SketchIcon from '@patternfly/react-icons/dist/esm/icons/sketch-icon';
-import { Link } from 'theme-patternfly-org/components/link/link';
-import { capitalize } from 'theme-patternfly-org/helpers/capitalize';
+import { Link } from '@breakaway/documentation-framework/components/link/link';
+import { capitalize } from '@breakaway/documentation-framework/helpers/capitalize';
 import './trainingCard.css';
 
 const getTrainingIcon = trainingType => {

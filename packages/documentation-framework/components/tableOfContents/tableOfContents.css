@@ -4,7 +4,7 @@
   position: sticky;
   width: calc(100% + var(--pf-c-page__main-section--PaddingLeft) + var(--pf-c-page__main-section--PaddingRight));
   background-color: var(--pf-global--BackgroundColor--200);
-  z-index: 101;
+  z-index: 501;
   margin: calc(var(--pf-c-page__main-section--PaddingTop) * -1) calc(var(--pf-c-page__main-section--PaddingRight) * -2) var(--pf-global--spacer--md) calc(var(--pf-c-page__main-section--PaddingLeft) * -1);
   padding: var(--pf-global--spacer--md) 0 var(--pf-global--spacer--md) var(--pf-global--spacer--md);
   box-shadow: var(--pf-global--BoxShadow--lg-bottom);
@@ -14,8 +14,27 @@
   box-shadow: var(--pf-global--BoxShadow--sm-bottom)
 }
 
+/* Mobile jumplinks */
+@media (max-width: 1450px) {
+  .ws-toc.pf-m-expanded .pf-c-jump-links__main {
+    max-height: 65vh;
+    overflow: auto;
+  }
+  
+  .ws-toc .pf-c-jump-links__header {
+    position: sticky;
+    top: 0;
+    background-color: var(--pf-global--BackgroundColor--200);
+    z-index: 2;
+  }
+}
+
+.ws-toc .pf-c-jump-links__main {
+  scrollbar-width: none;
+}
+
 /* Hide TOC scrollbar Chrome, Safari & Opera */
-.ws-toc::-webkit-scrollbar {
+.ws-toc .pf-c-jump-links__main::-webkit-scrollbar {
   display: none;
 }
 

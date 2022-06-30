@@ -3,6 +3,245 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.75 (2022-06-29)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.74 (2022-06-29)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.73 (2022-06-28)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.72 (2022-06-24)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.71 (2022-06-24)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.70 (2022-06-24)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.69 (2022-06-24)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.68 (2022-06-21)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.67 (2022-06-21)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.66 (2022-06-17)
+
+
+### Bug Fixes
+
+* **theme:** updated theme and v4 to be consistent with PF styles ([#2929](https://github.com/patternfly/patternfly-org/issues/2929)) ([70c1151](https://github.com/patternfly/patternfly-org/commit/70c11516f362b396db5e06a3cb019fc524e5f01b))
+
+
+
+
+
+## 0.4.65 (2022-06-17)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.64 (2022-06-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.63 (2022-06-16)
+
+
+### Bug Fixes
+
+* **docs:** increased mobile TOC z-index to 501 to avoid overlapping examples ([#3013](https://github.com/patternfly/patternfly-org/issues/3013)) ([22e59de](https://github.com/patternfly/patternfly-org/commit/22e59de029022a74a6ea79f56cbc921a0b3404cd))
+
+
+
+
+
+## 0.4.62 (2022-06-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.61 (2022-06-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.60 (2022-06-14)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.59 (2022-06-14)
+
+
+### Bug Fixes
+
+* **docs:** hid overflow in HTML examples ([#3010](https://github.com/patternfly/patternfly-org/issues/3010)) ([744d6b9](https://github.com/patternfly/patternfly-org/commit/744d6b95d0458c3739cfd01d644663202d68dd8b))
+
+
+
+
+
+## 0.4.58 (2022-06-13)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.57 (2022-06-09)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.56 (2022-06-07)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.55 (2022-06-07)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.54 (2022-06-06)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.53 (2022-06-03)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.52 (2022-06-02)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.51 (2022-06-01)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.4.50 (2022-06-01)
+
+
+### Bug Fixes
+
+* **example:** added alt text to full-screen screenshots ([#2981](https://github.com/patternfly/patternfly-org/issues/2981)) ([a503ef3](https://github.com/patternfly/patternfly-org/commit/a503ef314629aa667dc0ce5492abf9ed232dc653))
+
+
+
+
+
+## 0.4.49 (2022-06-01)
+
+
+### Bug Fixes
+
+* **toc:** fixed jumplinks in TOC to resolve a11y nesting issue ([#2971](https://github.com/patternfly/patternfly-org/issues/2971)) ([5557097](https://github.com/patternfly/patternfly-org/commit/5557097a9f4ae6761c1dda72570d525f43396e0f))
+
+
+
+
+
+## 0.4.48 (2022-06-01)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 ## 0.4.47 (2022-05-27)
 
 **Note:** Version bump only for package @patternfly/ast-helpers

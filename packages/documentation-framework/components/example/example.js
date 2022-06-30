@@ -171,7 +171,7 @@ export const Example = ({
               target="_blank"
               aria-label={`Open fullscreen ${title} example`}
             >
-              <img src={thumbnail.src} width={thumbnail.width} height={thumbnail.height} />
+              <img src={thumbnail.src} width={thumbnail.width} height={thumbnail.height} alt={`${title} screenshot`} />
             </a>
           </div>
         : <div
@@ -189,6 +189,7 @@ export const Example = ({
         code={editorCode}
         setCode={debounce(setEditorCode, 300)}
         codeBoxParams={codeBoxParams}
+        exampleTitle={title}
       />
     </div>
   );

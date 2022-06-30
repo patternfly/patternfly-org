@@ -3,10 +3,10 @@ const isClient = Boolean(process.env.NODE_ENV);
 
 module.exports = {
   '/': {
-    SyncComponent: isClient && require('./pages/home/home').default
+    SyncComponent: isClient && require('./pages/home').default
   },
   '/community': {
-    Component: () => import(/* webpackChunkName: "community/index" */ './pages/community/community'),
+    Component: () => import(/* webpackChunkName: "community/index" */ './pages/community'),
     title: 'Community'
   },
   '/404': {

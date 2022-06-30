@@ -230,7 +230,7 @@ export const Footer = () => (
         </GridItem>
         <GridItem md={4} lg={3} xl={2}>
           <span className="ws-org-pfsite-site-copyright">
-            Copyright &copy; 2021 Red Hat, Inc.
+            Copyright &copy; 2022 Red Hat, Inc.
           </span>
         </GridItem>
         <GridItem md={4} lg={5} className="pf-u-ml-xl-on-xl">
