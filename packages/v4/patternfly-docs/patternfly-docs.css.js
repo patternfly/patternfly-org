@@ -9,4 +9,4 @@ import '@patternfly/patternfly/patternfly.css';
 // Patternfly utilities
 import '@patternfly/patternfly/patternfly-addons.css';
 // Global theme CSS
-import '@breakaway/documentation-framework/global.css';
+import '@patternfly/documentation-framework/global.css';

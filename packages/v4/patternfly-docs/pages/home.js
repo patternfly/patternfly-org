@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '@breakaway/documentation-framework/components';
+import { Link } from '@patternfly/documentation-framework/components';
 import {
   Flex,
   FlexItem,
@@ -20,7 +20,7 @@ import modular from '../images/modular.svg';
 import scale from '../images/scale.svg';
 import consistent from '../images/consistent.svg';
 import open from '../images/open.svg';
-import { AutoLinkHeader } from '@breakaway/documentation-framework/components/autoLinkHeader/autoLinkHeader';
+import { AutoLinkHeader } from '@patternfly/documentation-framework/components/autoLinkHeader/autoLinkHeader';
 import './home.css';
 
 const aboutPatternFly = `Hello, we're PatternFly.`;

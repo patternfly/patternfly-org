@@ -1,12 +1,12 @@
-# @breakaway/documentation-framework
+# @patternfly/documentation-framework
 
 ## Install
 
-We publish this theme [on npm.](https://www.npmjs.com/package/@breakaway/documentation-framework) Install it as a devDependency with your package manager.
+We publish this theme [on npm.](https://www.npmjs.com/package/@patternfly/documentation-framework) Install it as a devDependency with your package manager.
 
-`npm i --save-dev @breakaway/documentation-framework`
+`npm i --save-dev @patternfly/documentation-framework`
 
-`yarn add -D @breakaway/documentation-framework`
+`yarn add -D @patternfly/documentation-framework`
 
 ## First time setup
 

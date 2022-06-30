@@ -20,7 +20,7 @@
     "@patternfly/react-docs": "5.82.5",
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0",
-    "@breakaway/documentation-framework": "^1.0.12"
+    "@patternfly/documentation-framework": "^1.0.12"
   },
   "devDependencies": {
     "@patternfly/patternfly-a11y": "4.3.0",

@@ -88,7 +88,7 @@ function serializeRoot(node, options) {
     .join('');
 
   let res = `import React from 'react';
-import { AutoLinkHeader, Example, Link as PatternflyThemeLink } from '@breakaway/documentation-framework/components';
+import { AutoLinkHeader, Example, Link as PatternflyThemeLink } from '@patternfly/documentation-framework/components';
 ${importStatements}
 const pageData = ${JSON.stringify(pageData, null, 2)};
 `;

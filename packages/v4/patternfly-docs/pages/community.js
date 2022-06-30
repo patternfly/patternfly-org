@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from '@breakaway/documentation-framework/components';
+import { Link } from '@patternfly/documentation-framework/components';
 import { Card, CardBody, Grid, GridItem, PageSection, Split, SplitItem, Title } from '@patternfly/react-core';
 import './community.css';
-import { getTitle } from '@breakaway/documentation-framework/helpers/getTitle';
+import { getTitle } from '@patternfly/documentation-framework/helpers/getTitle';
 import communityPageHeader from './community-page-header.svg';
 import community1 from './community-1.svg';
 import community2 from './community-2.svg';
