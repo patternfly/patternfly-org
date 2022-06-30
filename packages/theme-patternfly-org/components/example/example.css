@@ -33,7 +33,8 @@
   transition: width .2s ease-in-out;
 }
 
-.ws-preview-html {
+.ws-core-c-page.ws-preview > .ws-preview-html,
+.ws-react-c-page.ws-preview > .pf-c-page {
   overflow: hidden;
 }
 
