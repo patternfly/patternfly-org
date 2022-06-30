@@ -176,15 +176,6 @@ View custom alerts in action in our [custom alert examples](https://www.patternf
  
 <br />
  
-## Accessibility considerations
-Toast alerts present special challenges for accessibility. Screen readers announce the arrival and message content of an incoming toast alert, but user focus will not be placed there. This makes it difficult for these users to directly act on the alert itself.
- 
-In any toast alert containing links for further user action, include text that describes how the user can navigate through the UI to perform the action.
- 
-For example, this toast alert is not accessible because it does not include text that explains to the user where to go within the UI to perform the action:
- 
-<img src="./img/alert-no-description.png" alt="alert without descriptive text" width="600px"/>
- 
-This toast alert is accessible to sighted and non-sighted users because it includes text that explains to the user where to go within the UI to perform the action:
- 
-<img src="./img/alert-description.png" alt="alert with descriptive text" width="600px"/>
+## Accessibility
+
+For information regarding accessibility, visit the [alert accessibility](/components/alert/accessibility) page.
