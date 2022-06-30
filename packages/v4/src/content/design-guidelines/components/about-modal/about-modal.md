@@ -2,6 +2,7 @@
 id: About modal
 section: components
 related: ['About modal', 'Backdrop', 'Background image', 'Button']
+summary: An about modal displays information about an application like product version number(s), as well as any appropriate legal text.
 ---
 
 An **about modal** displays information about an application like product version number(s), as well as any appropriate legal text.

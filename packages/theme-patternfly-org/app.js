@@ -35,7 +35,7 @@ const SideNavRouter = () => {
     <SideNavLayout groupedRoutes={groupedRoutes} navOpen={navOpen} >
       <Router id="ws-page-content-router">
         {Object.entries(routes)
-          .map(([path, { Component, title, sources, katacodaLayout }]) => Component
+          .map(([path, { Component, title, sources, katacodaLayout, summary }]) => Component
             ? <AppRoute
                 key={path}
                 path={path}
@@ -52,6 +52,7 @@ const SideNavRouter = () => {
                     path={path}
                     title={title}
                     sources={sources}
+                    summary={summary}
                   />
                 }
                 katacodaLayout={katacodaLayout}

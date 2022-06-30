@@ -115,7 +115,8 @@ const MDXChildTemplate = ({
 export const MDXTemplate = ({
   title,
   sources = [],
-  path
+  path,
+  summary
 }) => {
   const sourceKeys = sources.map(v => v.source);
   const isSinglePage = sourceKeys.length === 1;
@@ -140,6 +141,11 @@ export const MDXTemplate = ({
           {title}
         </Title>}
       </PageSection>
+      {!isSinglePage && summary && (
+        <PageSection variant={PageSectionVariants.light}>
+          <p>{summary}</p>
+        </PageSection>
+      )}
       {!isSinglePage && (
         <PageSection type="tabs">
           <div className="pf-c-tabs pf-m-page-insets pf-m-no-border-bottom">

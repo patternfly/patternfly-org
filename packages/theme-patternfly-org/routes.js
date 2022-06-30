@@ -8,6 +8,7 @@ const routes = {
   ...clientRoutes,
   ...generatedRoutes
 };
+console.log({routes});
 
 for (let route in routes) {
   const pageData = routes[route];
@@ -28,7 +29,7 @@ const isNull = o => o === null || o === undefined;
 const groupedRoutes = Object.entries(routes)
   .filter(([_slug, { id, section }]) => !isNull(id) && !isNull(section))
   .reduce((accum, [slug, pageData]) => {
-    const { section, id, title, source, katacodaLayout, hideNavItem } = pageData;
+    const { section, id, title, source, katacodaLayout, hideNavItem, summary } = pageData;
     accum[section] = accum[section] || {};
     accum[section][id] = accum[section][id] || {
       id,
@@ -42,9 +43,14 @@ const groupedRoutes = Object.entries(routes)
 
     pageData.slug = slug;
     accum[section][id].sources.push(pageData);
+    // Only assign component summary when it exists (design guidelines .md file)
+    if (summary) {
+      accum[section][id].summary = summary;
+    }
 
     return accum;
   }, {});
+  console.log(groupedRoutes);
 
 const sourceOrder = {
   react: 1,
@@ -93,9 +99,11 @@ Object.entries(groupedRoutes)
         delete routes[slug];
       });
       // Add design guidelines if doesn't exist
+      // except for component catalog page
       if (
         ['components', 'charts', 'layouts', 'demos'].includes(section) &&
         !pageData.sources.map(({ source }) => source).includes('design-guidelines') &&
+        pageData.id !== 'View all components' &&
         process.env.hasDesignGuidelines
       ) {
         pageData.sources.push(getDefaultDesignGuidelines(pageData));
