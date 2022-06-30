@@ -21,7 +21,7 @@ Use an overflow menu when additional options are available to the user but there
   <img src="./img/card.png" alt="image showing card overflow" width="370" />
 
 ### When not to use
-* Do not use an overflow menu when there are 2 or fewer actions available to the user
+* Do not use an overflow menu when there are 2 or fewer actions available to the user. 
 * Do not use in conjunction with label groups when there isn’t enough space to display each label. Instead, use an [overflow label](https://www.patternfly.org/v4/components/label-group).
 * Do not use an overflow menu to hide additional content that you dont want to be seen by default, instead use an [expandable section](https://www.patternfly.org/v4/components/expandable-section/design-guidelines).  
 
