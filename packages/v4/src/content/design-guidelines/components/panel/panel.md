@@ -12,7 +12,7 @@ Panels are commonly used:
 ## Examples
 
 The panel is used as a content block with a header, body, and footer.<br/>
-<img src="./img/basic_panel.png" alt="A basic panel with a header, body and footer" width="600" /><br/>
+<img src="./img/basic_panel.jpg" alt="A basic panel with a header, body and footer" width="600" /><br/>
 
 The panel is used a dropdown menu for <a href="https://www.patternfly.org/v4/components/search-input/react-demos/#composable-advanced-search">advanced search input</a>.<br/>
-<img src="./img/search_panel.png" alt="The panel is used a dropdown menu for advanced search input" width="600" />
+<img src="./img/search_panel.jpg" alt="The panel is used a dropdown menu for advanced search input" width="600" />
