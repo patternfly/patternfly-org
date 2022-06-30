@@ -46,7 +46,40 @@ Various React props have been provided for more fine-tuned control over accessib
 | isHidden | AccordionContent | Determines whether the content of the accordion item is hidden or not. Should be used along with the `isExpanded` prop on the accordion toggle. |
 | isExpanded | AccordionToggle | Adds styling to visually determine whether the toggle is expanded or collapsed. Also sets the accessibility attribute `aria-expanded` with a value of "true" or "false", which notifies screen readers whether the accordion toggle is expanded ("true") or collapsed ("false"). Should be used along with the `isHidden` prop on the accordion content. |
 
-The `isHidden` and `isExpanded` props should always have opposite values of one another; if an accordion toggle is collpased (`isExpanded={false}`), then the accordion content should be hidden (`isHidden={true}`).
+### isHidden and isExpanded
+
+The `isHidden` and `isExpanded` props should always have opposite values of one another; if an accordion toggle is collapsed (`isExpanded={false}`), then the accordion content should be hidden (`isHidden={true}`). For example:
+
+```noLive
+const [expandedItem, setExpandedItem] = React.useState('accordion-item-1');
+
+<Accordion>
+  <AccordionItem>
+    <AccordionToggle
+      isExpanded={expanded === 'accordion-item-1'}
+    >
+      Toggle text...
+    </AccordionToggle>
+    <AccordionContent isHidden={expanded !== 'accordion-item-1'}>
+      Content text...
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+
+### Aria-label
+
+Passing in the `aria-label` prop to the accordion component can be helpful when there are multiple accordions on a page, or when there is no other surrounding context:
+
+```noLive
+<Accordion aria-label="Billing questions">
+  ...
+</Accordion>
+
+<Accordion aria-label="Return and refund questions">
+  ...
+</Accordion>
+```
 
 ## HTML/CSS customization
 
@@ -54,7 +87,7 @@ Various HTML attributes and PatternFly classes can be used for more fine-tuned c
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| aria-label | .pf-c-accordion | Adds an accessible name to the accordion for screen readers. If there is no other surrounding context provided for an accordion, especially if there are multiple accordions on a page, this should be passed in with descriptive text. |
+| aria-label | .pf-c-accordion | Adds an accessible name to the accordion for screen readers. If there is no other surrounding context provided for an accordion, especially if there are multiple accordions on a page, this should be passed in with descriptive text. <br/><br/> See the [aria-label prop example](#aria-label) in the React customization section. |
 | aria-expanded="false" | .pf-c-accordion__toggle | Indicates that the accordion toggle is collapsed to assistive technologies. **Required** if the toggle is collapsed. |
 | aria-expanded="true" | .pf-c-accordion__toggle | Indicates that the accordion toggle is expanded to assistive technologies. **Required** if the toggle is expanded. |
 | aria-label | .pf-c-accordion__expanded-content | Adds an accessible name to the content of an accordion item. |
