@@ -8,7 +8,7 @@ A **date picker** helps users select a specific date, time, or range of time-rel
 
 ## Elements
 
-<img src="./img/date-picker.png" alt="Date picker elements" width="382"/>
+<img src="./img/date-picker.png" alt="Date picker elements" width="343"/>
 
 1. **Date fields**: Displays a user’s selected date. Always fill the date field with a placeholder date format (MM/DD/YYYY) or a pre-selected date before users make their selection via calendar or keyboard. The date field should never be empty.
 2. **Calendar icon**: Opens a calendar upon selection.
@@ -30,7 +30,7 @@ For more guidance on writing date formats, see the [content](#date-format) secti
 ### Date range selection
 Two date pickers can be used together to specify a date range. The first one functions as a start (“from”) date and the second one functions as an end (“to”) date. By default, when a user selects a start date, the end date will automatically display as the next calendar day.
 
-<img src="./img/Date range selection.png" alt="Date range selection - elements" width="482"/>
+<img src="./img/Date range selection.png" alt="Date range selection - elements" width="442"/>
 
 1. **Selected start date**
 2. **Time range**
@@ -112,7 +112,7 @@ Some use cases will call for more advanced scheduling options, such as schedulin
 ### Date format
 Date formats are product-specific and often depend on user locale. To minimize confusion, choose one date format and keep it consistent. If one date picker displays MM/DD/YYYY, be sure to repeat the same date format throughout your interface.
 
-Learn more about recommended date and time conventions in our [date and time guidelines](/content/numerics).
+Learn more about recommended date and time conventions in our [date and time guidelines](/ux-writing/numerics).
 
 ### Placeholder text
 Always use placeholder text in date fields to provide an example of the accepted date format. Placeholder text will disappear after users begin inputting their own date.

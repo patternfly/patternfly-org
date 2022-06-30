@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '@breakaway/documentation-framework/components';
+import { Link } from 'theme-patternfly-org/components';
 
 export const recommendationsArray = [
   [

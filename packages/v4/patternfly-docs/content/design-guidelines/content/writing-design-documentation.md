@@ -3,7 +3,7 @@ id: Writing design guidelines for PatternFly
 section: UX writing
 ---
 
-Design guidelines walk through building design patterns with PatternFly. This page focuses on how to write clear and consistent design documentation. To learn how to contribute design guidelines, see our [contribution guidelines](/contribute/design-guidelines/).
+Design guidelines walk through building design patterns with PatternFly. This page focuses on how to write clear and consistent design documentation. To learn how to contribute design guidelines, see our [contribution guide](/contribute/design/).
 
 ## Content architecture
 

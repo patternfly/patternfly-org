@@ -6,7 +6,7 @@ redirectFrom: /developer-resources/accessibility-guide
 
 When it comes to accessibility, there’s always room to improve. That’s why this guide is a work in progress. Your feedback can make it better, so tell us what you think.  
 
-Contribute to our [accessibility documentation](https://github.com/patternfly/patternfly-org) or [reach out to us](https://www.patternfly.org/v4/get-in-touch/)—we’d love to hear from you!
+Contribute to our [accessibility documentation](https://github.com/patternfly/patternfly-org) or [reach out to us](https://www.patternfly.org/v4/community/)—we’d love to hear from you!
 
 _“The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.”_ — Tim Berners-Lee, W3C Director and inventor of the World Wide Web
 

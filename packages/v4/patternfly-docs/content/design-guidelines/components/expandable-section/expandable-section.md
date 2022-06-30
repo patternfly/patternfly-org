@@ -17,19 +17,25 @@ Use an expandable section when you want to hide optional or advanced content by 
 
 We recommend using the dynamic toggle text when designing with the expandable section. Dynamic toggle text will update based on the state of the expandable section. For example, it may read **Show more** when the toggle is collapsed, and **Show less** when the toggle is open.
 
+## Variations
+Use an expandable section with a blue border to add more visual weight. This variation is recommended for marketing purposes.
+
+<img src="./img/disclosure.png" alt="Disclosure example" width="1060"/>
+
+
 ## Examples
-**Expandable section in a form**
+### Expandable section in a form
 
 <img src="./img/form.png" alt="Expandable section in a form" width="1514"/>
 
-**Expandable section in an inline alert**
+### Expandable section in an inline alert
 
 <img src="./img/inline-alert.png" alt="Expandable section in an inline alert" width="502"/>
 
-**Expandable section in a side panel**
+### Expandable section in a side panel
 
 <img src="./img/side-panel.png" alt="Expandable section in a side panel" width="1047"/>
 
-**Expandable section in a documentation page**
+### Expandable section in a documentation page
 
 <img src="./img/documentation.png" alt="Expandable section in a documentation page" width="644"/>
