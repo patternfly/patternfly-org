@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.11.79 (2022-07-01)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.78 (2022-07-01)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
+## 0.11.77 (2022-06-30)
+
+
+### Bug Fixes
+
+* **docs:** narrowed scope of rule hiding overflow on page examples ([#3037](https://github.com/patternfly/patternfly-org/issues/3037)) ([3c0db2e](https://github.com/patternfly/patternfly-org/commit/3c0db2eff5f933c76a4be02ceaa1c1c2f5212b33))
+
+
+
+
+
+## 0.11.76 (2022-06-30)
+
+**Note:** Version bump only for package theme-patternfly-org
+
+
+
+
+
 ## 0.11.75 (2022-06-29)
 
 **Note:** Version bump only for package theme-patternfly-org

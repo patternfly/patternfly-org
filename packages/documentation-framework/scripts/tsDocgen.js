@@ -95,6 +95,9 @@ function getInterfaceMetadata(filename, sourceText) {
 
       interfaces.push({
         displayName: statement.name.escapedText,
+        description: statement.jsDoc
+            ? statement.jsDoc.map(doc => doc.comment).join('\n')
+            : null,
         props
       });
     });
@@ -131,10 +134,30 @@ function normalizeProp([
   return res;
 }
 
+function getDescription(parsed, ) {
+
+}
+
 function tsDocgen(file) {
   const sourceText = fs.readFileSync(file, 'utf8');
   const componentMeta = getComponentMetadata(file, sourceText); // Array of components with props
   const interfaceMeta = getInterfaceMetadata(file, sourceText); // Array of interfaces with props
+  const interfaceMetaMap = interfaceMeta.reduce(function(target, interface) {
+    target[interface.displayName] = interface;
+    return target;
+  }, {})
+
+  // Go through each component and check if they have an interface with a jsDoc description
+  // If so copy it over (fix for https://github.com/patternfly/patternfly-react/issues/7612)
+  componentMeta.forEach(c => {
+    if (c.description) {
+      return c;
+    }
+    const interface = `${c.displayName}Props`;
+    if (interfaceMetaMap[interface] && interfaceMetaMap[interface].description) {
+      c.description = interfaceMetaMap[interface].description;
+    }
+  })
 
   return componentMeta
     .concat(interfaceMeta)

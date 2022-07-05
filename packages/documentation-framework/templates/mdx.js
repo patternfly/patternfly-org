@@ -84,6 +84,7 @@ const MDXChildTemplate = ({
                 <PropsTable
                   key={component.name}
                   title={component.name}
+                  description={component.description}
                   rows={component.props}
                   allPropComponents={propComponents}
                 />
