@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0 (2022-07-05)
+
+
+### Features
+
+* **docs:** add dark theme switcher ([#3014](https://github.com/patternfly/patternfly-org/issues/3014)) ([7d17d13](https://github.com/patternfly/patternfly-org/commit/7d17d13c5518d85123d12bd37c254123789b1d75))
+
+
+
+
+
 ## 0.11.79 (2022-07-01)
 
 **Note:** Version bump only for package theme-patternfly-org
