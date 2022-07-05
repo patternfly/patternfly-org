@@ -13,9 +13,8 @@ import {
   DropdownItem,
   DropdownGroup,
   Divider,
-  Text,
-  TextVariants,
-  SkipToContent
+  SkipToContent,
+  Switch
 } from '@patternfly/react-core';
 import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
@@ -30,6 +29,7 @@ const HeaderTools = ({
   versions,
   hasVersionSwitcher,
   hasSearch,
+  hasDarkThemeSwitcher,
   pathPrefix
 }) => {
   const initialVersion = staticVersions.Releases.find(release => release.latest);
@@ -70,6 +70,12 @@ const HeaderTools = ({
 
   return (
     <PageHeaderTools>
+      {hasDarkThemeSwitcher && (
+        <PageHeaderToolsItem>
+          <Switch id="ws-theme-switch" label="Dark theme" defaultChecked={false} onChange={() => 
+          document.querySelector('html').classList.toggle('pf-theme-dark')} />
+        </PageHeaderToolsItem>
+      )}
       {hasSearch && (
         <PageHeaderToolsItem id="ws-global-search-wrapper" className={isSearchExpanded ? '' : 'ws-hide-search-input'}>
           <TextInput id="ws-global-search" ref={searchRef} placeholder="Search" />
@@ -171,6 +177,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   const algolia = process.env.algolia;
   const hasGdprBanner = process.env.hasGdprBanner;
   const hasVersionSwitcher = process.env.hasVersionSwitcher;
+  const hasDarkThemeSwitcher = process.env.hasDarkThemeSwitcher;
   const sideNavItems = process.env.sideNavItems;
   const topNavItems = process.env.topNavItems;
   const prnum = process.env.prnum;
@@ -209,6 +216,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
         versions={versions}
         hasSearch={algolia}
         hasVersionSwitcher={hasVersionSwitcher}
+        hasDarkThemeSwitcher={hasDarkThemeSwitcher}
         pathPrefix={pathPrefix} />}
       logo={prnum ? `PR #${prnum}` : <Brand src={logo} alt="Patternfly Logo" />}
       logoProps={{ href: prurl || pathPrefix || '/' }}
