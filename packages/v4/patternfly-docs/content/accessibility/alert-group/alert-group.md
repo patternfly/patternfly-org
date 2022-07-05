@@ -3,54 +3,77 @@ id: Alert group
 section: components
 ---
 
-An **alert group** positions one or multiple alerts in a layer over the main content of a page. Use an alert group as a pre-existing container for dynamic alerts or when you need to position multiple alerts on the same page, mainly [toast alerts](https://www.patternfly.org/v4/components/alert/design-guidelines/#elements). 
+import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
-**Static inline alert groups** don’t need additional accessibility attributes. If it appears inline on the page, it will be read along with the surrounding content. 
+## Accessibility
 
-**Dynamic and toast alerts** are injected into the DOM after page load and require additional measures to ensure that these content changes are announced to screen reader users. This is the use case that requires/warrants turning an alert group into a live region. Discoverability is also different in this case because the alert content is often not near the primary markup/content for the page. The AlertGroup/Alerts are often rendered at a more global level within the DOM, like toward the end of the body tag so that the content can persist across page changes. 
+To implement an accessible PatternFly **alert group**:
 
-<br/>
+- Ensure the alert group exists in the DOM on page load for any alert(s) to be rendered inside of.
+- Pass in the `isLiveRegion` prop (PatternFly React) or the `aria-live="polite"` attribute (HTML/CSS) when intending or expecting to render dynamic/toast alerts in response to a user action or when an asynchronous event is triggered.
+  - Alternatively, pass in `aria-live="assertive"` <b>only if</b> dynamic/toast alerts within the alert group require immediate attention, such as for time-sensitive or critical information.
 
-<ins>**To make dynamic alert groups accessible:**</ins>
-- Add `isLiveRegion` to make the AlertGroup a live region that alerts can be conditionally rendered inside of.
-- AlertGroup should always exist in the DOM on page load and dynamic alerts should be rendered inside the AlertGroup.
+## Testing
 
+At a minimumm, an alert group should meet the following criteria:
 
-**For more specific customization**, add any of the following to AlertGroup:
+<List isPlain>
+  <ListItem>
+    <Checkbox id="alertGroup-a11y-checkbox-1" label="The alert group exists on page load and is not dynamically rendered." description="This should always exist in the DOM, especially when using dynamic/toast alerts." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="alertGroup-a11y-checkbox-2" label={<span>If using dynamic/toast alerts, the alert group has <code class="ws-code">aria-live="polite"</code>.</span>} description="This will allow assistive technologies to announce dynamically rendered alerts." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="alertGroup-a11y-checkbox-3" label={<span>If the alert group is intended or expected to contain time sensitive/critical information, the <code class="ws-code">aria-live</code> attribute has a value of "assertive" instead of "polite".</span>} description="This should be used sparingly, as it will interrupt whatever task users are currently in the middle of." />
+  </ListItem>
+</List>
 
-- **aria-live="polite"**- This politeness level is used when the user is not doing anything or when the user is waiting for the update to happen. If the user is busy with other tasks on the page, the screen reader shouldn’t interrupt to provide the updated live region content.
+## React customization
 
-- **aria-live="assertive"**- Assertive is used for high priority updates, when the user must be informed about updated information within the live region immediately. The update is provided to the user, interrupting their current task. 
+Various React props have been provided for more fine-tuned control over accessibility.
 
-- **Aria-atomic**- Setting aria-atomic to true causes the entire live region contents to be presented/announced when a change in any of the content is detected. Basically, "re-announce everything on change". This is significantly more verbose and should only be used in appropriate cases. One example of a fair use would be a dedicated live region for housing a countdown timer. Defaults to false.
+| Prop | Applied to | Reason | 
+|---|---|---|
+| `isLiveRegion` | `AlertGroup` | Makes the alert group a live region by setting `aria-live="polite"` and `aria-atomic="false"`. Instead of passing this prop in, you can manually set `aria-live` and `aria-atomic` by passing them in individually. Pass this prop in if you intend or expect the contents of the alert group to be dynamically updated. |
+| `isToast` | `AlertGroup` | Adds styling to position alerts in the top-right corner of the viewport. When passing this prop in, be sure to read [toast alert accessibility](/components/alert/accessibility#toast-alerts). |
+| `overflowMessage` | `AlertGroup` | When functionality is added for overflowing alerts, adds a custom message for the hidden overflow. When passing this prop in the message should include how many alerts are currently within the overflow and should update as more alerts are added. This will allow users of assistive technologies to be notified when an alert is added to the overflow, as otherwise the addition of the alert and the alert contents itself will not be announced to them. <br/><br/> When passing this prop in, the `isLiveRegion` prop must also be passed in. For more information about alert overflow, read [alert group - managing overflow](/components/alert-group/design-guidelines#managing-overflow). |
 
-- **Aria-relevant**- The aria-relevant=[LIST_OF_CHANGES] sets what types of changes are relevant to a live region and what qualifies as an update to it. The possible settings are one or more of: additions, removals, text, all. The default setting is: additions text.
+## HTML/CSS customization
 
+Various HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
 
+| Attribute or class | Applied to | Reason | 
+|---|---|---|
+| `aria-live` | `.pf-c-alert-group` | Makes the alert group a live region by passing in a value of "polite" (recommended) or "assertive". **Required** when dynamic/toast alerts are intended or expected to be rendered inside the alert group. |
+| `.pf-m-toast` | `.pf-c-alert-group` | Adds styling to position alerts in the top-right corner of the viewport. When passing this prop in, be sure to read [toast alert accessibility](/components/alert/accessibility#toast-alerts). |
 
-To further customize your alert group's accessibility, you can edit the following:
+When using an overflow button for alerts, read the `overflowMessage` prop row in the [React customization](#react-customization) section for details on an accessible implementation.
 
-| React component| Prop or attribute | Which HTML element it appears on in markup | Explanation | 
-|---|---|---|---|
-| Alert | aria-label | .pf-c-alert | Adds accessible text to the Alert |
-| Alert | variantLabel | Anywhere variant label is used, for example in close button | Variant label text for screen readers |
-| AlertActionCloseButton | aria-label | .pf-c-button | Label for the close button, defaults to "Close [alert variant]: alert: [alert title] |
-| AlertGroup | isLiveRegion | .pf-c-alert-group | Turns the container into a live region so that changes to content within the AlertGroup, such as appending an Alert, are reliably announced to assistive technology. |
+## Additional considerations
 
-<br/>
-**Toast alerts:**
+Consumers must ensure they take any additional considerations when customizing an alert group, using it in a way not described or recommended by PatternFly, or in various other specific use-cases not outlined elsewhere on this page.
 
-Toast alerts present special challenges for accessibility. Screen readers announce the arrival and message content of an incoming toast alert, but user focus will not be placed there, making it difficult for users to directly act on the alert itself. In any toast alert containing links for further user action, include text that describes how the user can navigate through the UI to perform the action.
+### Aria-atomic and aria-relevant
 
-For example, this toast alert is not accessible because it does not include text that explains to the user where to go within the UI to perform the action:
+You can further customize the way assistive technologies announce the contents of an alert group that is a live region via the `aria-atomic` and `aria-relevant` attributes.
 
-<img src="../../design-guidelines/components/alert/img/alert-no-description.png" alt="alert without descriptive text" width="600px"/>
+- `aria-atomic="true/false"` sets whether assistive technologies should announce the live region as a whole, even if only part of the region changes, ("true"), or if only the changes to the region should be announced ("false"). For example:
 
-This toast alert is accessible to sighted and non-sighted users because it includes text that explains to the user where to go within the UI to perform the action:
+  ```noLive
+  <AlertGroup aria-live="polite">
+  // rendered alerts...
+  </AlertGroup>
+  ```
 
-<img src="../../design-guidelines/components/alert/img/alert-description.png" alt="alert with descriptive text" width="600px"/>
+  In the above code block, if there were 2 alerts already rendered within the alert group and `aria-atomic="true"` was passed in, another alert being rendered into the container would cause all 3 alerts to be announced. If `aria-atomic="false"` were passed in instead, only the new alert would be announced.
 
-<br/>
-<br/>
+- `aria-relevant` sets what types of changes are relevant to a live region and what qualifies as an update to it. The value passed in is a space-separated list of one or more of "additions", "removals", or "text", or "all" for all 3. The default value is "additions text" if there is no ancestor with this attribute passed in. An example for when a value of "removals" is passed in:
 
-See our [alert guidelines](https://www.patternfly.org/v4/components/alert/design-guidelines/#using-toast-alerts) for more information about using alerts.
+  ```noLive
+  <AlertGroup aria-live="polite" aria-relevant="additions text removals">
+  // rendered alerts...
+  </AlertGroup>
+  ```
+
+  In the above code block, if an alert is removed from the alert group, assistive technologies will announce the updated contents of the alert group (in this case, whichever alerts are still rendered inside of it).

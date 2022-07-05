@@ -9,14 +9,7 @@ import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
 To implement an accessible PatternFly **alert**:
 
-- Add a container that exists in the DOM on page load for the alert(s) to be placed in (we recommend using the [alert group](/components/alert-group) component).
-- Make the alert container a live region when using dynamic/toast alerts that will be rendered into the DOM in response to a user action or when an asynchronous event is triggered:
-  ```noLive
-  <div aria-live="polite">
-    // dynamic or toast alerts will be rendered here
-  </div>
-  ```
-  - Use `aria-live="assertive"` <b>only if</b> a dynamic/toast alert requires immediate attention, such as for time-sensitive or critical information.
+- Add an [alert group](/components/alert-group) for alerts to be rendered inside of.
 
 ## Testing
 
@@ -24,13 +17,7 @@ At a minimumm, an alert should meet the following criteria:
 
 <List isPlain>
   <ListItem>
-    <Checkbox id="alert-a11y-checkbox-1" label="A container for alerts to be placed in exists on page load and is not dynamically rendered." description="This container should always exist in the DOM, especially when using dynamic/toast alerts." />
-  </ListItem>
-  <ListItem>
-    <Checkbox id="alert-a11y-checkbox-2" label="If using dynamic/toast alerts, the alert container is made into a live region." description="This will allow assistive technologies to announce dynamically rendered alerts." />
-  </ListItem>
-  <ListItem>
-    <Checkbox id="alert-a11y-checkbox-3" label={<span>An alert container that is a live region uses <code class="ws-code">aria-live="polite"</code>.</span>} description={<span><code class="ws-code">aria-live="assertive"</code> is only used when alerts contain time sensitive/critical information.</span>} />
+    <Checkbox id="alert-a11y-checkbox-1" label="An alert group for alerts to be rendered inside of exists on page load and is not dynamically rendered." description="The alert group should always exist in the DOM, especially when using dynamic/toast alerts." />
   </ListItem>
 </List>
 
@@ -40,15 +27,31 @@ Various React props have been provided for more fine-tuned control over accessib
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| aria-label | Alert | Adds an accessible name to the alert for assistive technologies. The value passed in should generally indicate the alert type/severity and the fact that it is an alert. By default the value is "[alert variant] Alert". | 
-| titleHeadingLevel | Alert | Sets the heading level for the alert title (`h4` by default). Be sure to not skip heading levels when using an alert or customizing this prop. |
-| variantLabel | Alert | Adds variant label text to the alert title that is accessible only to assistive technologies and is not visually rendered. The value passed in should provide additional context that prefaces the alert title. By default the value is "[alert variant] alert:". <br/><br/> The value of this prop and the `title` prop will automatically be applied to the toggle button for expandable alerts if the `toggleAriaLabel` prop has an empty string passed in as its value. |
-| isLiveRegion | Alert | Makes the alert a live region by setting `aria-live="polite"` and `aria-atomic="false"`. Instead of passing this prop in, you can manually set `aria-live` and `aria-atomic` by passing them in individually. Pass this prop in if you intend or expect an alert's content to be dynamically updated, or if alerts are not rendered inside a live region container. NEEDS CLARIFICATION. |
-| timeout | Alert | Automatically dismisses the alert after the specified time in milliseconds. A value of "true" will dismiss the alert after 8000 milliseconds. When customizing this prop, be sure to provide ample time for users to perceive the alert before it gets dismissed, especially if users have to navigate to another page for additional details related to the alert. |
-| customIcon | Alert | Allows setting a custom icon for the alert. When passing in this prop, be sure the icon has `aria-hidden="true"` to remove it from the accessibility tree, which will prevent assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. |
-| toggleAriaLabel | Alert | Adds an accessible name to the alert toggle when the `isExpandable` prop is also passed in. The value passed in should provide context as to which alert will be expanded/collapsed and what information is within the expandable area. By default the value is "[alert variant] alert details". |
-| aria-label | AlertActionCloseButton | Adds an accessible name to the alert close button. The value passed in should generally indicate that the the button will close the alert. By default the value is "Close [alert variant] alert: [alert title]". |
-| variantLabel | AlertActionCloseButton | If the `aria-label` prop is not passed into this component, adds variant label text to an alert close button that is accessible only to assistive technologies and is not visually rendered. The value of this prop and the alert's `title` prop are combined to create an accessible name for an alert's close button. The value passed in should provide additional context that prefaces the `title` text. <br/><br/> By default the value is the same as the `variantLabel` on the alert component. |
+| `aria-label` | `Alert` | Adds an accessible name to the alert for assistive technologies. The value passed in should generally indicate the alert type/severity and the fact that it is an alert. By default the value is "[alert variant] Alert". |
+| `customIcon` | `Alert` | Allows setting a custom icon for the alert. When passing in this prop, be sure the icon has `aria-hidden="true"` to remove it from the accessibility tree, which will prevent assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. |
+| `timeout` | `Alert` | Automatically dismisses the alert after the specified time in milliseconds. A value of "true" will dismiss the alert after 8000 milliseconds. When customizing this prop, be sure to provide ample time for users to perceive the alert before it gets dismissed, especially if users have to navigate to another page for additional details related to the alert. |
+| `titleHeadingLevel` | `Alert` | Sets the heading level for the alert title (`h4` by default). Be sure to not skip heading levels when using an alert or customizing this prop. |
+| `toggleAriaLabel` | `Alert` | Adds an accessible name to the alert toggle when the `isExpandable` prop is also passed in. The value passed in should provide context as to which alert will be expanded/collapsed and what type of information is within the expandable area. By default the value is "[alert variant] alert details". |
+| `variantLabel` | `Alert` | Adds variant label text to the alert title that is accessible only to assistive technologies and is not visually rendered. The value passed in should provide additional context that prefaces the alert title. By default the value is "[alert variant] alert:". <br/><br/> The value of this prop and the `title` prop will automatically be applied to the toggle button for expandable alerts if the `toggleAriaLabel` prop has an empty string passed in as its value. |
+| `aria-label` | `AlertActionCloseButton` | Adds an accessible name to the alert close button. The value passed in should generally indicate that the the button will close the alert. By default the value is "Close [alert variant] alert: [alert title]". |
+| `variantLabel` | `AlertActionCloseButton` | If the `aria-label` prop is not passed into this component, adds variant label text to an alert close button that is accessible only to assistive technologies and is not visually rendered. The value of this prop and the alert's `title` prop are combined to create an accessible name for an alert's close button. The value passed in should provide additional context that prefaces the `title` text. <br/><br/> By default the value is the same as the `variantLabel` on the alert component. |
+
+## HTML/CSS customization
+
+Various HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
+
+| Attribute or class | Applied to | Reason | 
+|---|---|---|
+| `aria-label="[variant] alert"` | `.pf-c-alert` | Adds an accessible name to the alert for assistive technologies. The value passed in place of `[variant]` should generally be one of either "default", "success", "danger", "warning", or "information". |
+| `.pf-u-screen-reader` | `.pf-c-alert__title <span>` | Should be used to add text to the alert title that is accessible only to assistive technologies and is not visually rendered. The text content of this element should state the type of alert and should preface the alert title. |
+| `aria-label="Close [variant] alert: [alert title]"` | `.pf-c-button.pf-m-plain` | Should be used to add an accessible name to the alert close button. |
+| `hidden` | `.pf-c-alert__description` | Hides the expandable alert description content. **Required** when `aria-expanded="false"` is passed into `.pf-c-alert__toggle`. |
+| `aria-expanded="false"` | `.pf-c-alert__toggle` | Indicates that the alert toggle is collapsed to assistive technologies and that the expandable alert description is hidden. **Required** if the toggle is collapsed. |
+| `aria-expanded="true"` | `.pf-c-alert__toggle` | Indicates that the alert toggle is expanded to assistive technologies and that the expandable alert description is visible. **Required** if the toggle is expanded. |
+| `aria-label="[variant] alert details"` | `.pf-c-button.pf-m-plain` | Should be used to add an accessible name to the alert toggle when an alert has the `aria-expanded` attribute passed in. |
+| `aria-hidden="true"` | `.pf-c-alert__icon <i>` | Removes the expandable alert toggle icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
+
+When using JavaScript to automatically dismiss alerts, read the `timeout` prop row in the [React customization](#react-customization) section for details on an accessible implementation.
 
 ## Additional considerations
 
@@ -66,10 +69,9 @@ In contrast, this toast alert is accessible to users with total, limited, or no 
 
 <img src="../../design-guidelines/components/alert/img/alert-description.png" alt="alert with descriptive text" width="600px"/>
 
-### Aria-atomic and aria-relevant
+## Further reading
 
-- **Aria-atomic**
-The aria-atomic=BOOLEAN sets whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: false or true. The default setting is: false.
+To read more about accessibility with alerts, refer to the resources listed below.
 
-- **Aria-relevant**
-The aria-relevant=[LIST_OF_CHANGES] sets what types of changes are relevant to a live region and what qualifies as an update to it. The possible settings are one or more of: additions, removals, text, all. The default setting is: additions text.
+- [ARIA Authoring Practices Guide - Alerts](https://www.w3.org/WAI/ARIA/apg/patterns/alert/)
+- [WCAG 2.0 success criterion 2.2.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-no-exceptions.html), if intending to use alerts that automatically get dismissed
