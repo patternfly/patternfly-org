@@ -1,7 +1,7 @@
 {
   "name": "@patternfly/documentation-framework",
   "description": "A framework to build documentation for PatternFly.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Red Hat",
   "license": "MIT",
   "private": false,
@@ -82,10 +82,6 @@
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0",
-    "@patternfly/patternfly": ">=4.185.1",
-    "@patternfly/react-core": ">=4.202.16",
-    "@patternfly/react-code-editor": ">=4.43.16",
-    "@patternfly/react-table": ">=4.71.16"
+    "react-dom": "^16.8.0 || ^17.0.0"
   }
 }
