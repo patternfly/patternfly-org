@@ -1,6 +1,8 @@
 # patternfly-org
 
-The PatternFly Org is the source for the official documentation for PatternFly 3 and PatternFly 4.
+This branch on PatternFly Org (patternfly-3) is the source for the official documentation for PatternFly 3.  It is hosted on an S3 bucket and includes the index.html file in packages/v3 and the v3 directory.  Initially - it is just a branch off main taken on July 6, 2022 but cn be used for necessary bug fixes.
+
+To publish this - rebuild the v3 site and copy the v3 files directly to the bucket.  Also ensure the v3 index.html file is placed in the root of the bucket.
 
 ## Development
 
