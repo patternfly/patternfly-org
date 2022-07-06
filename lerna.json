@@ -12,7 +12,7 @@
   },
   "packages": [
     "packages/ast-helpers",
-    "packages/theme-patternfly-org",
+    "packages/documentation-framework",
     "packages/v4"
   ],
   "version": "independent"
