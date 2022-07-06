@@ -5,8 +5,6 @@ section: components
 
 **Jump links** allow users to navigate to sections within a page.
 
-## Usage
-Jump links provide a way to navigate through section headings on a page without scrolling. The highlighted active section changes as the user scrolls to the next section.
 
 ## Elements
 
@@ -15,6 +13,9 @@ Jump links provide a way to navigate through section headings on a page without 
 1. **Active section:** current section of the page the user is on.
 
 2. **Inactive section:** other sections of the page that the user is not currently on. Clicking on an inactive section will bring the user to the selected section and make the section active.
+
+## Usage
+Jump links provide a way to navigate through section headings on a page without scrolling. The highlighted active section changes as the user scrolls to the next section.
 
 ## Variations
 Jump links can be displayed either horizontally or vertically. They can include optional subsections.
@@ -40,3 +41,5 @@ On smaller screen sizes, jump links collapse into an expandable component that i
 <img src="./img/jump-mobile.png" alt="Example jump link in a mobile format" width="800"/>
 
 
+## Accessibility 
+For information regarding accessibility, visit the [jump links accessibility](/components/jump-links/accessibility) page.
