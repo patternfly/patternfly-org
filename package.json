@@ -11,13 +11,11 @@
     "serve": "theme-patternfly-org serve build/patternfly-org",
     "start:v3": "yarn workspace patternfly-org-3 develop",
     "uninstall": "find . -name node_modules | xargs rm -rf",
-    "workflows": "node .github/generate-workflows",
+    "workflows": "node .github/generate-workflows"
   },
   "workspaces": {
     "packages": [
-      "packages/ast-helpers",
-      "packages/theme-patternfly-org",
-      "packages/v3",
+      "packages/v3"
     ]
   },
   "devDependencies": {
