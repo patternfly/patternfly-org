@@ -3,9 +3,9 @@ id: Tile
 section: components
 ---
 
-A **tile** component is a form of selection that can be used in place of a [radio button](/components/radio) and is commonly used in [forms](/components/form). A tile appears visually similar to a [selectable card](https://www.patternfly.org/v4/components/card/. However, tiles are used specifically when the user is selecting a static option, whereas a selectable card triggers an action or opens a quickstart or sidebar to provide additional information. 
+A **tile** component is a form of selection that can be used in place of a [radio button](/components/radio) and is commonly used in [forms](/components/form). A tile appears visually similar to a [selectable card](https://www.patternfly.org/v4/components/card/). However, tiles are used specifically when the user is selecting a static option, whereas a selectable card triggers an action or opens a quickstart or sidebar to provide additional information. 
 
-design-guidelines) 
+
 
 ## Usage
 
@@ -34,7 +34,7 @@ As the user hovers over the tile component, the color will change insinuating it
 
 1. Basic
 
-  <img src="./img/default.png" alt= "default example" width="222" />
+<img src="./img/default.png" alt= "default example" width="222" />
 
 2. Subtext
 
