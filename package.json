@@ -11,15 +11,14 @@
     "build": "yarn build:v4",
     "build:analyze": "yarn workspace patternfly-org-4 build:analyze && yarn copy:v4",
     "build:v4": "yarn workspace patternfly-org-4 build && yarn copy:v4",
-    "build:v3": "yarn workspace patternfly-org-3 build && yarn copy:v3",
-    "copy:v3": "rm -rf build/patternfly-org/v3 && mkdir -p build/patternfly-org && cp -r packages/v3/_site build/patternfly-org/v3",
+    "build:v3": "yarn copy:v3",
+    "copy:v3": "rm -rf build/patternfly-org/v3 && mkdir -p build/patternfly-org && cp -r packages/v3/readme.md build/patternfly-org/v3",
     "copy:v4": "rm -rf build/patternfly-org/v4 && mkdir -p build/patternfly-org && cp -r packages/v4/public build/patternfly-org/v4 && cp -r build/patternfly-org/v4/assets build/patternfly-org/assets",
     "clean": "lerna run clean && rm -rf build",
     "serve": "pf-docs-framework serve build/patternfly-org",
     "test:v4": "yarn workspace patternfly-org-4 test:a11y:ci",
     "screenshots": "yarn workspace patternfly-org-4 screenshots",
     "start": "yarn start:v4",
-    "start:v3": "yarn workspace patternfly-org-3 develop",
     "start:v4": "yarn develop:v4",
     "uninstall": "find . -name node_modules | xargs rm -rf",
     "workflows": "node .github/generate-workflows",
@@ -29,7 +28,6 @@
     "packages": [
       "packages/ast-helpers",
       "packages/documentation-framework",
-      "packages/v3",
       "packages/v4"
     ]
   },
