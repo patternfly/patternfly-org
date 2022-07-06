@@ -9,15 +9,6 @@
     key: ${{ runner.os }}-yarn-14-${{ hashFiles('yarn.lock') }}
 - run: yarn install --frozen-lockfile
   if: steps.yarn-cache.outputs.cache-hit != 'true'
-# v4 build
-- uses: actions/cache@v2
-  id: v4-cache
-  name: Load webpack cache
-  with:
-    path: 'packages/v4/.cache'
-    key: ${{ runner.os }}-v4-${{ hashFiles('yarn.lock') }}
-- run: yarn build:v4
-  name: Build docs
 # v3 build
 - uses: actions/cache@v2
   id: v3-artifact-cache
