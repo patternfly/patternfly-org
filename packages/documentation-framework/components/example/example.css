@@ -123,4 +123,9 @@
   height: 100%;
   background-color: var(--pf-global--BackgroundColor--100);
   opacity: 0.8;
+  box-shadow: var(--pf-global--BoxShadow--sm);
+}
+
+.pf-theme-dark .ws-theme-switch-full-page::before {
+  background-color: var(--pf-global--BackgroundColor--300);
 }
