@@ -9,7 +9,7 @@ import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
 To implement an accessible PatternFly **alert**:
 
-- Add an [alert group](/components/alert-group) for alerts to be rendered inside of.
+- Add an [alert group](/components/alert-group) for an alert to be rendered inside of if you intend or expect the alert to dynamically appear or update, such as a toast alert.
 
 ## Testing
 
@@ -17,7 +17,7 @@ At a minimumm, an alert should meet the following criteria:
 
 <List isPlain>
   <ListItem>
-    <Checkbox id="alert-a11y-checkbox-1" label="An alert group for alerts to be rendered inside of exists on page load and is not dynamically rendered." description="The alert group should always exist in the DOM, especially when using dynamic/toast alerts." />
+    <Checkbox id="alert-a11y-checkbox-1" label="If an alert will dynamically appear or update, it is rendered inside of an alert group component." />
   </ListItem>
 </List>
 
@@ -71,7 +71,7 @@ In contrast, this toast alert is accessible to users with total, limited, or no 
 
 ## Further reading
 
-To read more about accessibility with alerts, refer to the resources listed below.
+To read more about accessibility with alerts, refer to the following resources:
 
 - [ARIA Authoring Practices Guide - Alerts](https://www.w3.org/WAI/ARIA/apg/patterns/alert/)
-- [WCAG 2.0 success criterion 2.2.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-no-exceptions.html), if intending to use alerts that automatically get dismissed
+- [WCAG 2.0 success criterion 2.2.3 - no timing](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-no-exceptions.html), if intending to use alerts that automatically get dismissed

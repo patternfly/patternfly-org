@@ -9,9 +9,15 @@ import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
 To implement an accessible PatternFly **alert group**:
 
-- Ensure the alert group exists in the DOM on page load for any alert(s) to be rendered inside of.
-- Pass in the `isLiveRegion` prop (PatternFly React) or the `aria-live="polite"` attribute (HTML/CSS) when intending or expecting to render dynamic/toast alerts in response to a user action or when an asynchronous event is triggered.
-  - Alternatively, pass in `aria-live="assertive"` <b>only if</b> dynamic/toast alerts within the alert group require immediate attention, such as for time-sensitive or critical information.
+- Ensure the alert group exists in the DOM on page load.
+
+For the PatternFly React library:
+
+- Pass in the `isLiveRegion` prop when intending or expecting to render alerts that will dynamically appear or update.
+
+For the HTML/CSS library:
+
+- Pass in the `aria-live="polite"` attribute when intending or expecting to render alerts that will dynamically appear or update.
 
 ## Testing
 
@@ -19,13 +25,10 @@ At a minimumm, an alert group should meet the following criteria:
 
 <List isPlain>
   <ListItem>
-    <Checkbox id="alertGroup-a11y-checkbox-1" label="The alert group exists on page load and is not dynamically rendered." description="This should always exist in the DOM, especially when using dynamic/toast alerts." />
+    <Checkbox id="alertGroup-a11y-checkbox-1" label="The alert group exists on page load and is not dynamically rendered." description="This should always exist in the DOM, especially when alerts will dynamically appear or update within it." />
   </ListItem>
   <ListItem>
-    <Checkbox id="alertGroup-a11y-checkbox-2" label={<span>If using dynamic/toast alerts, the alert group has <code class="ws-code">aria-live="polite"</code>.</span>} description="This will allow assistive technologies to announce dynamically rendered alerts." />
-  </ListItem>
-  <ListItem>
-    <Checkbox id="alertGroup-a11y-checkbox-3" label={<span>If the alert group is intended or expected to contain time sensitive/critical information, the <code class="ws-code">aria-live</code> attribute has a value of "assertive" instead of "polite".</span>} description="This should be used sparingly, as it will interrupt whatever task users are currently in the middle of." />
+    <Checkbox id="alertGroup-a11y-checkbox-2" label={<span>If alerts will dynamically appear or update, the alert group has the <code class="ws-code">aria-live="polite"</code> attribute.</span>} description="This will allow assistive technologies to announce dynamically rendered alerts." />
   </ListItem>
 </List>
 
@@ -36,8 +39,8 @@ Various React props have been provided for more fine-tuned control over accessib
 | Prop | Applied to | Reason | 
 |---|---|---|
 | `isLiveRegion` | `AlertGroup` | Makes the alert group a live region by setting `aria-live="polite"` and `aria-atomic="false"`. Instead of passing this prop in, you can manually set `aria-live` and `aria-atomic` by passing them in individually. Pass this prop in if you intend or expect the contents of the alert group to be dynamically updated. |
-| `isToast` | `AlertGroup` | Adds styling to position alerts in the top-right corner of the viewport. When passing this prop in, be sure to read [toast alert accessibility](/components/alert/accessibility#toast-alerts). |
-| `overflowMessage` | `AlertGroup` | When functionality is added for overflowing alerts, adds a custom message for the hidden overflow. When passing this prop in the message should include how many alerts are currently within the overflow and should update as more alerts are added. This will allow users of assistive technologies to be notified when an alert is added to the overflow, as otherwise the addition of the alert and the alert contents itself will not be announced to them. <br/><br/> When passing this prop in, the `isLiveRegion` prop must also be passed in. For more information about alert overflow, read [alert group - managing overflow](/components/alert-group/design-guidelines#managing-overflow). |
+| `isToast` | `AlertGroup` | Adds styling to position alerts in the top-right corner of the viewport. When passing this prop in, the `isLiveRegion` prop must also be passed in. For more information about accessibility with toast alerts, read the [toast alerts](/components/alert/accessibility#toast-alerts) section of the alert accessibility tab. |
+| `overflowMessage` | `AlertGroup` | When functionality is added for overflowing alerts, adds a custom message for the hidden overflow. When passing this prop in the message should include how many alerts are currently within the overflow and should update as alerts are added or removed. This will allow users of assistive technologies to be notified when an alert is added to the overflow, as otherwise the addition of the alert and the alert contents itself will not be announced to them. <br/><br/> When passing this prop in, the `isLiveRegion` prop must also be passed in. For more information about alert overflow, read [alert group - managing overflow](/components/alert-group/design-guidelines#managing-overflow). |
 
 ## HTML/CSS customization
 
@@ -45,14 +48,20 @@ Various HTML attributes and PatternFly classes can be used for more fine-tuned c
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `aria-live` | `.pf-c-alert-group` | Makes the alert group a live region by passing in a value of "polite" (recommended) or "assertive". **Required** when dynamic/toast alerts are intended or expected to be rendered inside the alert group. |
-| `.pf-m-toast` | `.pf-c-alert-group` | Adds styling to position alerts in the top-right corner of the viewport. When passing this prop in, be sure to read [toast alert accessibility](/components/alert/accessibility#toast-alerts). |
+| `aria-live="polite"` | `.pf-c-alert-group` | Makes the alert group a live region. **Required** when alerts are intended or expected to dynamically appear or update within the alert group. |
+| `.pf-m-toast` | `.pf-c-alert-group` | Adds styling to position alerts in the top-right corner of the viewport. When passing this prop in, `aria-live="polite"` must also be passed in. For more information about accessibility with toast alerts, read the [toast alerts](/components/alert/accessibility#toast-alerts) section of the alert accessibility tab. |
 
 When using an overflow button for alerts, read the `overflowMessage` prop row in the [React customization](#react-customization) section for details on an accessible implementation.
 
 ## Additional considerations
 
 Consumers must ensure they take any additional considerations when customizing an alert group, using it in a way not described or recommended by PatternFly, or in various other specific use-cases not outlined elsewhere on this page.
+
+### Aria-live
+
+When intending or expecting the alert group to contain alerts that dynamically appear or update, the recommended method of creating a live region is by using an `aria-live` value of "polite".
+
+If the alert group is intended or expected to contain time sensitive/critical information, `aria-live="assertive"` can instead be manually passed in. This should be used sparingly, as it will interrupt whatever task users are currently in the middle of.
 
 ### Aria-atomic and aria-relevant
 
