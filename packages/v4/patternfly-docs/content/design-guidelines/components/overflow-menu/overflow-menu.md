@@ -19,7 +19,7 @@ Use an overflow menu when additional options are available to the user but there
   <img src="./img/tableoverflow.png" alt="image showing table with overflow" width="2315" />
 * Use an overflow menu within a card component to present additional menu options or provide action links.
  
-  <img src="./img/card.png" alt="image showing card overflow" width="370" />
+  <img src="./img/Card.png" alt="image showing card overflow" width="370" />
 
 ### When not to use
 * Do not use an overflow menu when there are 2 or fewer actions available to the user. 
