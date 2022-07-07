@@ -39,4 +39,4 @@ Some common use cases include using an accordion in the FAQ section and product 
 
 ## Accessibility
 
-For information regarding accessibility, visit the [accordion accessibility](/components/accordion/accessibility) page.
+For information regarding accessibility, visit the [accordion accessibility](/components/accordion/accessibility) tab.
