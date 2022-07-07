@@ -38,7 +38,8 @@ Both tooltips and [popovers](/components/popover/design-guidelines) provide more
 - Don’t use tooltips with question-circle icons to present contextual information in forms and other areas. Instead, use a [popover](/components/popover/design-guidelines).  
 
 ## Accessibility
-Every time a user with a screen reader tabs into a field with a tooltip, the screen reader reads the tooltip aloud.
+
+For information regarding accessibility, visit the [tooltip accessibility](/components/tooltip/accessibility) tab.
 
 
 
