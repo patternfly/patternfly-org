@@ -178,4 +178,4 @@ View custom alerts in action in our [custom alert examples](https://www.patternf
  
 ## Accessibility
 
-For information regarding accessibility, visit the [alert accessibility](/components/alert/accessibility) page.
+For information regarding accessibility, visit the [alert accessibility](/components/alert/accessibility) tab.
