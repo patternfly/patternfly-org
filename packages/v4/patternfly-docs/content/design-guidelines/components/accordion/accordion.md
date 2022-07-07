@@ -3,39 +3,35 @@ id: Accordion
 section: components
 ---
 
-An **accordion** is an interactive container that expands and collapses to hide or reveal the nested content. It takes advantage of progressive disclosure to help reduce page scrolling by allowing users to choose to show or hide more detailed information as needed.
+An **Accordion** is an interactive container that expands and collapses to hide or reveal nested content. It takes advantage of progressive disclosure to help reduce page scrolling, by allowing users to choose whether they want to show or hide more detailed information as needed.
 
-## Usage
-Accordions are one of many ways to handle large amounts of content. They are useful when you have a large amount of content, but limited space, with the header title giving an overview of the content that is hidden underneath it. Users can click or tap on the collapsed accordion to expand the content area and view additional details. Due to their high interaction cost, we recommend that you use them sparingly when you need an additional layer of structure to your content.
-
-## Single expand behavior
-This pattern is used to bring focus to a single row at a time. It is ideal for content that is mutually exclusive and does not need to be shown all at once. Whenever a new row is expanded, the previous one closes. Another benefit of this is real-estate management.
-
-### Use case
-Depending on the content, it can be useful to only expose users to one section at a time. This is particularly useful when working with forms. By default the first row is always open with all the others closed. Users can choose to close all rows, but only one can be opened at once.
-
-### Examples
-This variant is mostly used with navigation and sub-navigation.
+## Elements
 
 <img src="./img/single_expand_a.png" alt="Accordion single expand behavior"/>
-<img src="./img/single_expand_b.png" alt="Accordion single expand behavior"/>
 
 1. **Header:** Interactive link that expands or collapses to reveal the nested content.
 2. **Label:** Summary descriptions of the nested content.
 3. **Content panel:** Area that holds the information associated with the header.
 
+## Usage
+Accordians are one of many ways to organize large amounts of content when there is limited space. It provides a grouping structure while the header title gives an overview of the content hidden underneath it. Due to their high interaction cost, we recommend that you use accordions sparingly when you need an additional layer of structure to your content. 
+
+## Behavior
+Users click or tap on section header of collapsed accordion and content area will expand.
+
+## Variations
+
+* **Single expand behavior**: 
+Use when you are trying to bring focus to a single row at a time, by default the first row is always open. This is ideal for content that is mutually exclusive and doesn’t all need to be shown at once. Single expand accordians are particularly useful when working with forms, navigation and subnavigation.  
+
+  <img src="./img/single_expand_b.png" alt="Accordion single expand behavior"/>
 
 
-## Multiple expand behavior
-This pattern gives users the ability to open multiple rows at a time. It keeps the content always available and each row expands or closes per user interaction.
+* **Multiple expand behavior**: Use when users may want to view content from different sections simultaneously. This variation gives users the ability to open multiple rows at a time, content will expand or collapse per each interaction. This variation is frequently used in FAQ sections and product comparisons.
 
-### Use case
-The accordion is used not only to help shorten the page length, but also provides a grouping structure with a summary headline for each section. Users can still choose to expand all rows to display the additional information.
 
-### Examples
-Some common use cases include using an accordion in the FAQ section and product comparison.
-
-<img src="./img/multi_expand.png" alt="Accordion multi-expand behavior"/>
+  <img src="./img/multi_expand.png" alt="Accordion multi-expand behavior"/>
+ 
 
 ## Accessibility
 
