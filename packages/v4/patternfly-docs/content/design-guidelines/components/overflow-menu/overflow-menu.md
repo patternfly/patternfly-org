@@ -8,7 +8,7 @@ An **overflow menu** groups a set of actions in a responsive horizontal list to 
 ## Usage 
 Use an overflow menu when additional options are available to the user but there is a space constraint. Common usage for overflow menu's happen when switching a UI from a desktop to a mobile device. 
 
-### Examples
+### When to use
 * Use an overflow menu in a table toolbar to group a number of actions and create visual space. Avoid having more than 3 actions fully displayed within a toolbar.
 
 
@@ -19,7 +19,7 @@ Use an overflow menu when additional options are available to the user but there
   <img src="./img/tableoverflow.png" alt="image showing table with overflow" width="2315" />
 * Use an overflow menu within a card component to present additional menu options or provide action links.
  
-  <img src="./img/Card.png" alt="image showing card overflow" width="370" />
+  <img src="./img/cardoverflow.png" alt="image showing card overflow" width="370" />
 
 ### When not to use
 * Do not use an overflow menu when there are 2 or fewer actions available to the user. 
