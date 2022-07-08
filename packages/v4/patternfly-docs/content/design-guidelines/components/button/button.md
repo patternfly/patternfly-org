@@ -3,9 +3,45 @@ id: Button
 section: components
 ---
 
+
+## Usage
 A **button** is a box area or text that communicates and triggers user actions when clicked or selected. Buttons can be used to communicate and immediately trigger actions a user can take in an application, like submitting a form, canceling a process, or creating a new object. Buttons can also be used to take a user to a new location, like another page inside of a web application, or an external site such as help or documentation.
 
-## Button types
+There are certain cases where specific buttons must be used within your UI.
+
+Follow these guidelines for buttons in wizards (shown in the image below):  
+* The **Next** button should always be a [primary button](#primary-button).
+* The **Back** button should always be a [secondary button](#secondary-button).
+* The **Cancel** button should always be a text button.
+
+<img src="./img/wizard.png" alt="Example of buttons in a wizard" />
+
+Always use link buttons in the following cases:
+
+* For cancel buttons in wizards or modals
+
+     <img src="./img/link_modal.png" alt="Example of link button used in modal" width="446"/>
+
+* For more actions in empty states
+
+    <img src="./img/link_empty.png" alt="Example of a link button in an empty state" width="600"/>
+
+* For action buttons in tables
+
+    <img src="./img/link_table.png" alt="Example of link buttons in a table" />
+
+* For action buttons in alerts
+
+    <img src="./img/link_alert.png" alt="Example of link button in an alert" width="309"/>
+
+### Button placement
+
+Buttons in forms, modals, or wizards should always be left aligned in the box. This solves for:
+* **Modularity and flexibility:** A standard alignment creates consistency in how objects appear across all areas of an app.
+* **Accessibility:** The form submit buttons are on the same scan line as the form fields, which benefits users who are sight-limited. Also, users who are blind can more easily navigate left-aligned form submit buttons because the button order is consistent across all contexts.
+* **Responsiveness:** The most important actions (i.e., primary buttons) are encountered first when elements are stacked vertically.
+
+## Variations
 The following button styles, shown in order of visual hierarchy, can be used in your designs according to your needs.
 * [Danger button](#danger-button)
 * [Primary button](#primary-button)
@@ -134,42 +170,9 @@ We'll want to include some information for button usage on wizards when we have 
  #### Buttons on wizards
 The placement of buttons on wizards will depend on the layout of content you present. -->
 
-## Usage
+## Spacing
 
-There are certain cases where specific buttons must be used within your UI.
-
-Follow these guidelines for buttons in wizards:  
-* The **Next** button should always be a primary button.
-* The **Back** button should always be a secondary button.
-* The **Cancel** button should always be a text button.
-
-<img src="./img/wizard.png" alt="Example of buttons in a wizard" />
-
-Always use link buttons in the following cases:
-* For cancel buttons in wizards or modals
-
-     <img src="./img/link_modal.png" alt="Example of link button used in modal" width="446"/>
-
-* For more actions in empty states
-
-    <img src="./img/link_empty.png" alt="Example of a link button in an empty state" width="600"/>
-
-* For action buttons in tables
-
-    <img src="./img/link_table.png" alt="Example of link buttons in a table" />
-
-* For action buttons in alerts
-
-    <img src="./img/link_alert.png" alt="Example of link button in an alert" width="309"/>
-
-## Button placement
-
-Buttons in forms, modals, or wizards should always be left aligned in the box. This solves for:
-* **Modularity and flexibility:** A standard alignment creates consistency in how objects appear across all areas of an app.
-* **Accessibility:** The form submit buttons are on the same scan line as the form fields, which benefits users who are sight-limited. Also, users who are blind can more easily navigate left-aligned form submit buttons because the button order is consistent across all contexts.
-* **Responsiveness:** The most important actions (i.e., primary buttons) are encountered first when elements are stacked vertically.
-
-## Button spacing and action lists
+### Button spacing and action lists
 
 The standard spacing between each button is 16px, even for danger buttons. If buttons are stacked vertically, the spacing between each button should be 8px.
 
@@ -219,7 +222,7 @@ _Action group spacing_
 
 <img src="./img/button_action_group.png" alt="Action group spacing with spacers" width="416"/>
 
-## Buttons and overflow menus
+### Buttons and overflow menus
 
 There are cases where you will have multiple buttons next to each other, like in a toolbar. When the space shrinks (e.g., switching from desktop to mobile view), you can have the buttons collapse into a kebab overflow menu. Additionally, you can choose to make the primary action persist or have all options collapse into the kebab.
 
@@ -231,20 +234,26 @@ _Buttons placed in overflow menu due to limited space, with primary button persi
 
 <img src="./img/overflow_2.png" alt="Post-overflow menu in toolbar, where toolbar has become smaller in width, prompting an overflow menu for secondary actions, while primary button persists in the toolbar itself" />
 
-## Content
+## Content considerations
 
 **Writing button labels**
 
+When writing button lables:
+
 * Be specific and clearly communicate the button's action.
-* Screen readers may read buttons to users out of context, so button text should be unique and easily understood on its own. Refer to [PatternFly's accessibility guide](/accessibility/product-development-guide) for more information.
+* Make sure that button text is unique and easily understood on its own, so that screen readers may read buttons to users out of context. Refer to [PatternFly's accessibility guide](/accessibility/product-development-guide) for more information.
 * Use simple verbs or verb phrases.
-* To avoid wrapping, aim for short labels when possible (1–3 words).
+* Aim for short labels when possible (1–3 words), to avoid wrapping.
 * Avoid using articles (for example, write “Add source” instead of “Add a source”).
 * Avoid punctuation on buttons.
-* To call a user's attention to a button or to clarify the button's action, you can add an icon to the button.
+* Add an icon to the button to call a user's attention to it or to clarify the button's action.
 * Do not create icons on buttons using punctuation (for example, "+"). Instead, refer to [PatternFly's icons page](/guidelines/icons) for any icons you place on buttons.
 
 
 **Writing link labels**
 
 Use specific, action-focused labels that match what the user will see when they arrive at their location. For example, if you are sending a user to a dashboard, your link label might read _View dashboard_. For a link directing a user to a support forum, the label might read _Get help in the support forum_. See [PatternFly's content guidelines](/ux-writing/about) for additional guidance.
+
+## Accessibility 
+
+For information regarding accessibility, visit the [button accessibility page](components/button/accessibility).
