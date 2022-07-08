@@ -7,7 +7,7 @@ An **overflow menu** groups a set of actions in a responsive horizontal list to 
 ## Usage 
 Use an overflow menu when additional options are availble to the user but there is a space constraint.
 
-**Examples**
+### When to use
 
 * Use an overflow menu in a table toolbar to group a number of actions and create more visual space. Avoid having more than 3 actions fully displayed within a toolbar.
 
@@ -19,9 +19,9 @@ Use an overflow menu when additional options are availble to the user but there 
 
 * Use an overflow menu within a card component to present additional menu options.  
 
-  <img src="./img/Card.png" alt="card overflow examples" width="370" />
+  <img src="./img/cardoverflow.png" alt="card overflow examples" width="370" />
 
-**When not to use**:
+### When not to use
 * Do not use an overflow menu when there are 2 or fewer actions available to the user
 * Do not use in conjunction with label groups when there isn’t enough space to display each label. Instead, use an [overflow label](https://www.patternfly.org/v4/components/label-group/design-guidelines/).
 * Do not use an overflow menu to hide additional content that you dont want to be seen by default, instead use an [expandable section](https://www.patternfly.org/v4/components/label-group/design-guidelines/).  
