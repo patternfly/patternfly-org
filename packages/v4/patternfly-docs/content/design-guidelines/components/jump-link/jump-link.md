@@ -5,8 +5,6 @@ section: components
 
 **Jump links** allow users to navigate to sections within a page.
 
-## Usage
-Jump links provide a way to navigate through section headings on a page without scrolling. The highlighted active section changes as the user scrolls to the next section.
 
 ## Elements
 
@@ -16,18 +14,22 @@ Jump links provide a way to navigate through section headings on a page without 
 
 2. **Inactive section:** other sections of the page that the user is not currently on. Clicking on an inactive section will bring the user to the selected section and make the section active.
 
+## Usage
+Jump links provide a way to navigate through section headings on a page without scrolling. The highlighted active section changes as the user scrolls to the next section.
+
 ## Variations
 Jump links can be displayed either horizontally or vertically. They can include optional subsections.
+
+### Vertical jump links 
+As the user scrolls down the page, the active sections are highlighted from top to bottom. This is the recommended variation. 
+
+<img src="./img/jump-vertical.png" alt="Example of vertical jump link" width="800"/>
 
 ### Horizontal jump links
 As the user scrolls down the page, the active sections are highlighted from left to right. A jump link can be displayed left aligned or center aligned and with an optional label. 
 
 <img src="./img/jump-horizontal.png" alt="Example of horizontal jump link" width="800"/>
 
-### Vertical jump links 
-As the user scrolls down the page, the active sections are highlighted from top to bottom. 
-
-<img src="./img/jump-vertical.png" alt="Example of vertical jump link" width="800"/>
 
 ### Jump links with subsections
 If the page has subsections, they are shown as indented jump links under the parent section. Subsections can be individually selected. 
@@ -40,3 +42,5 @@ On smaller screen sizes, jump links collapse into an expandable component that i
 <img src="./img/jump-mobile.png" alt="Example jump link in a mobile format" width="800"/>
 
 
+## Accessibility 
+For information regarding accessibility, visit the [jump links accessibility](/components/jump-links/accessibility) tab.
