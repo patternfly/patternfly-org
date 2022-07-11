@@ -21,7 +21,7 @@ Jump links provide a way to navigate through section headings on a page without 
 Jump links can be displayed either horizontally or vertically. They can include optional subsections.
 
 ### Vertical jump links 
-As the user scrolls down the page, the active sections are highlighted from top to bottom. Recommended variation. 
+As the user scrolls down the page, the active sections are highlighted from top to bottom. This is the recommended variation. 
 
 <img src="./img/jump-vertical.png" alt="Example of vertical jump link" width="800"/>
 
@@ -43,4 +43,4 @@ On smaller screen sizes, jump links collapse into an expandable component that i
 
 
 ## Accessibility 
-For information regarding accessibility, visit the [jump links accessibility](/components/jump-links/accessibility) page.
+For information regarding accessibility, visit the [jump links accessibility](/components/jump-links/accessibility) tab.
