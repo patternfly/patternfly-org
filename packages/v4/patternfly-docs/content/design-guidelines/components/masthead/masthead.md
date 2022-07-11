@@ -5,6 +5,8 @@ section: components
 
 A **masthead** contains global properties such as logotype, navigation and settings in an organized fashion and it is accessible from all parts of the application. All pages should share a common masthead.
 
+## Elements 
+
 <img src="./img/masthead.png" alt="masthead" width="832"/>
 
 **1. Show/hide menu:**  The `fa-bars` icon at the left of the masthead provides a way for users to show or hide the vertical navigation. It is not included when horizontal navigation is being used. At large viewport (desktop) sizes, navigation is shown, by default, and the user can click this icon to hide it and expand the content area. Once hidden, the user can click the icon again to reveal it. At small viewport (tablet and phone) sizes, the vertical navigation will be hidden by default and the user must use this control to open the menu.
