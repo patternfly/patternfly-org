@@ -105,3 +105,27 @@
 .ws-prop-required {
   color: var(--pf-global--danger-color--100);
 }
+
+.ws-theme-switch-full-page {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: var(--pf-global--spacer--md);
+  z-index: var(--pf-global--ZIndex--2xl);
+}
+
+.ws-theme-switch-full-page::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--pf-global--BackgroundColor--100);
+  opacity: 0.8;
+  box-shadow: var(--pf-global--BoxShadow--sm);
+}
+
+.pf-theme-dark .ws-theme-switch-full-page::before {
+  background-color: var(--pf-global--BackgroundColor--300);
+}
