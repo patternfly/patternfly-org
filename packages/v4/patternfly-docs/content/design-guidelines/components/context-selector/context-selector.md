@@ -4,6 +4,15 @@ section: components
 ---
 A **context selector** can be used in addition to global navigation when the data or resources you show in the interface need to change depending on the user’s context.
 
+## Elements 
+
+<img src="./img/elements.png" alt="elements image with callouts " width="297"/>
+
+1. Dropdown
+2. Menu 
+3. Search (optional)
+4. Footer/ action button (optional)
+
 ## Usage
 
 Context selectors enable a user to switch between different application contexts. They can be placed at many levels of an application’s information architecture and may have different behavior expectations based on the level it is placed in. They can be placed in a page masthead, at the top of vertical navigations, or at the top of a page, depending on your website or product's navigation and preference.
