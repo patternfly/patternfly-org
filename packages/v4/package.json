@@ -17,6 +17,7 @@
     "screenshots": "pf-docs-framework screenshots"
   },
   "dependencies": {
+    "@cooptest/quickstarts": "1.0.12",
     "@patternfly/documentation-framework": "^1.0.6",
     "@patternfly/react-docs": "5.85.2",
     "react": "^16.8.0 || ^17.0.0",
