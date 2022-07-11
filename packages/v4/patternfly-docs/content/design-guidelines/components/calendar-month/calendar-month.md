@@ -17,4 +17,4 @@ A **calendar month** component allows users to select and navigate between days,
 5. **Disabled state**
 
 ## Accessibility 
-For information regarding accessibility, visit the [calendar month accessibility](/components/calendar-month/accessibility) page.
+For information regarding accessibility, visit the [calendar month accessibility](/components/calendar-month/accessibility) tab.
