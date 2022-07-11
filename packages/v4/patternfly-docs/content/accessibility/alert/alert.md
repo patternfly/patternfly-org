@@ -27,7 +27,6 @@ Various React props have been provided for more fine-tuned control over accessib
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `aria-label` | `Alert` | Adds an accessible name to the alert for assistive technologies. The value passed in should generally indicate the alert type/severity and the fact that it is an alert. By default the value is "[alert variant] Alert". |
 | `customIcon` | `Alert` | Allows setting a custom icon for the alert. When passing in this prop, be sure the icon has `aria-hidden="true"` to remove it from the accessibility tree, which will prevent assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. |
 | `timeout` | `Alert` | Automatically dismisses the alert after the specified time in milliseconds. A value of "true" will dismiss the alert after 8000 milliseconds. When customizing this prop, be sure to provide ample time for users to perceive the alert before it gets dismissed, especially if users have to navigate to another page for additional details related to the alert. |
 | `titleHeadingLevel` | `Alert` | Sets the heading level for the alert title (`h4` by default). Be sure to not skip heading levels when using an alert or customizing this prop. |
