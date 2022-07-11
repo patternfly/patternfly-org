@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from '@reach/router';
-import { Badge, CodeBlock, CodeBlockCode, debounce } from '@patternfly/react-core';
+import { Badge, CodeBlock, CodeBlockCode, debounce, Switch } from '@patternfly/react-core';
 import * as reactCoreModule from '@patternfly/react-core';
 import * as reactTableModule from '@patternfly/react-table';
 import { css } from '@patternfly/react-styles';
@@ -77,6 +77,8 @@ export const Example = ({
   liveContext,
   // Content that appears between h3 and code block to explain example
   children,
+  // Show dark theme switcher on full page examples
+  hasDarkThemeSwitcher = process.env.hasDarkThemeSwitcher
 }) => {
   if (isFullscreenPreview) {
     isFullscreen = false;
@@ -136,6 +138,12 @@ export const Example = ({
     return (
       <div id={previewId} className={css(className, 'pf-u-h-100')}>
         {livePreview}
+        {hasDarkThemeSwitcher && (
+          <div className="ws-theme-switch-full-page">
+            <Switch id="ws-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
+            document.querySelector('html').classList.toggle('pf-theme-dark')} />
+          </div>
+        )}
       </div>
     );
   }
