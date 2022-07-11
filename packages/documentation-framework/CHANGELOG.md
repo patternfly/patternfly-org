@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2022-07-11)
+
+
+### Features
+
+* **doc-framework:** add dark theme toggle for full page examples ([#3056](https://github.com/patternfly/patternfly-org/issues/3056)) ([aab143f](https://github.com/patternfly/patternfly-org/commit/aab143f764e46edafec6f690351e47fe14fa5404))
+
+
+
+
+
 ## 1.0.7 (2022-07-11)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
