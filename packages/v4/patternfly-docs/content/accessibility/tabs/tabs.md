@@ -3,7 +3,36 @@ id: Tabs
 section: components
 ---
 
-**Tabs** allow users to navigate between views within the same page or context.
+import { Checkbox, List, ListItem } from '@patternfly/react-core';
+
+## Accessibility
+
+To implement accessible PatternFly **tabs**:
+
+- Give each tab within a set of tabs a unique title.
+
+## Testing
+
+At a minimumm, tabs should meet the following criteria:
+
+<List isPlain>
+  <ListItem>
+    <Checkbox id="tabs-a11y-checkbox-1" label="Each tab within a set of tabs has a unique title." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="tabs-a11y-checkbox-2" label={<span>The active tab has the attribute <code class="ws-code">aria-selected</code> with a value of "true", while all other tabs within a set of tabs have a value of "false".</span>} description="This notifies users navigating via screen readers which tab is currently selected." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="tabs-a11y-checkbox-3" label={<span>The tab content of any inactive tabs has the <code class="ws-code">hidden</code> attribute.</span>} />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="tabs-a11y-checkbox-4" label="Standard keyboard navigation can be used to navigate between each tab within a set of tabs or other focusable elements." description={<span><kbd>Tab</kbd> navigates to the next tab or focusable element, and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous tab or focusable element.</span>} />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="tabs-a11y-checkbox-5" label={<span>Each tab can be selected via keyboard by pressing <kbd>Space</kbd> or <kbd>Enter</kbd>.</span>} description={<span>If a tab has the <code class="ws-code">href</code> attribute, then only <kbd>Enter</kbd> should activate the tab.</span>} />
+  </ListItem>
+</List>
+
 
 **Keyboard users** should be able to use standard keyboard user navigation (**Tab** and **Shift + Tab**) to move to and between tabs.
 Keyboard users should also be able to select a tab using **Enter** and **Space**. Disabled tabs cannot receive
