@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.2 (2022-07-11)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.6.1 (2022-07-11)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.6.0 (2022-07-11)
+
+
+### Features
+
+* **doc-framework:** add dark theme toggle for full page examples ([#3056](https://github.com/patternfly/patternfly-org/issues/3056)) ([aab143f](https://github.com/patternfly/patternfly-org/commit/aab143f764e46edafec6f690351e47fe14fa5404))
+
+
+
+
+
+## 0.5.3 (2022-07-11)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 ## 0.5.2 (2022-07-07)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
