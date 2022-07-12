@@ -9,7 +9,7 @@ import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
 To implement accessible PatternFly **tabs**:
 
-- Give each tab within a set of tabs a unique title.
+- Ensure each tab within a set of tabs contains unique text.
 
 ## Testing
 
@@ -17,7 +17,7 @@ At a minimumm, tabs should meet the following criteria:
 
 <List isPlain>
   <ListItem>
-    <Checkbox id="tabs-a11y-checkbox-1" label="Each tab within a set of tabs has a unique title." />
+    <Checkbox id="tabs-a11y-checkbox-1" label="Each tab within a set of tabs contains unique text." />
   </ListItem>
   <ListItem>
     <Checkbox id="tabs-a11y-checkbox-2" label={<span>The active tab has the attribute <code class="ws-code">aria-selected</code> with a value of "true", while all other tabs within a set of tabs have a value of "false".</span>} description="This notifies users navigating via screen readers which tab is currently selected and when a new tab has been selected." />
@@ -34,6 +34,9 @@ At a minimumm, tabs should meet the following criteria:
   <ListItem>
     <Checkbox id="tabs-a11y-checkbox-6" label={<span>When a set of tabs creates an overflow and one of the tabs has focus, pressing <kbd>Left Arrow</kbd> or <kbd>Right Arrow</kbd> scrolls the tablist.</span>} />
   </ListItem>
+  <ListItem>
+    <Checkbox id="tabs-a11y-checkbox-7" label={<span>If there are multiple sets of tabs on a page, each set of tabs has a unique <code class="ws-code">aria-label</code>.</span>} description="This provides better context to users navigating via landmarks with a screen reader, as it will differentiate each set of tabs." />
+  </ListItem>
 </List>
 
 ## React customization
@@ -42,7 +45,7 @@ Various React props have been provided for more fine-tuned control over accessib
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `title` | `Tab` | Sets the title of the tab. Each tab within a set of tabs should have a unique title. |
+| `title` | `Tab` | Sets the text label of the tab. Each tab within a set of tabs should have unique text passed into its `title` prop. |
 | `isDisabled` | `Tab` | Disables the tab and prevents it from being perceivable and operable by users navigating via assistive technologies. Use this prop to disable a tab if you don't expect or intend for the tab to ever need to receive focus. For example, if the tab will never have a tooltip, you should pass this prop in to disable it. |
 | `isAriaDisabled` | `Tab` | Disables the tab, but keeps the tab perceivable to users. Use this prop instead of `isDisabled` when you want users to still be aware of the tab and that it is disabled, or when you expect or intend for the tab to receive focus despite being disabled. For example, if the disabled tab has a tooltip, you should pass this prop in to disable it. |
 | `inoperableEvents` | `Tab` | Prevents events from firing when the `isAriaDisabled` prop is also passed in. Since the `aria-disabled` attribute doesn't change the behavior of an element, any events must be manually prevented. By default the value is `["onClick", "onKeyPress"]`. |
