@@ -6,7 +6,7 @@ related: ['Alert', 'Alert group']
  
 An **alert** is a notification that provides brief information to the user without blocking their workflow.
 
-## Elements: 
+## Elements
 Elements vary depending on the variation of Alert. Toast alerts are always dismissible, but bordered inline alerts can be both dismissable and non-dismissible. All other elements are consistent between toast and bordered inline alerts.
 Plain inline alerts are never dismissable, and consist of only a status area and alert title.
  
@@ -23,34 +23,33 @@ Plain inline alerts are never dismissable, and consist of only a status area and
 5. **Description (optional)**: The description field communicates additional information to the user. It can also include a navigation link as an alternative to an action.
 
 6. **Expandable alert (optional)**: The expansion reveals additional information.
+
 ### Communicating severity
 The status icon, background, and alert title are coded to communicate the severity of an alert.
+
 <img src="./img/alert-status.png" alt="alert styles" width="700" />
+
 |Type   |Icon   |Usage      |
 |---------|--------|--------------|
 |Default  |fa-bell | Use for generic messages with no associated severity
-|Information    |fa-info-circle|Use for general informational messages|
+|Information    |fa-info-circle |Use for general informational messages|
 |Warning  |fa-exclamation-triangle |Use to indicate that a non-critical error has occurred|
 |Critical |fa-exclamation-circle | Use to indicate that a critical or blocking error has occurred
 |Success  |fa-check-circle | Use to indicate that a task or process has completed successfully
 
 For more information about what colors to use for status and severity, visit the [Colors page](/guidelines/colors/#status-and-state-colors).
- 
-## Variations
-1. **Inline alerts**
 
-  * **Bordered inline alerts**: communicate information about a specific user action on a page. An inline alert appears within the content area and disappears when the user closes it or navigates away from the page.
+## Usage
+Use an alert component when you are trying to give the user essential information in a prominent way. More specific use cases differ based on component variation. 
+
+## Variations
+
+### Bordered inline alerts
+Bordered inline alerts communicate information about a specific user action on a page. An inline alert appears within the content area and disappears when the user closes it or navigates away from the page.
 
 ![inline notification placement](./img/inline-notification.png)
-* **Plain inline alerts**: communicate information about a temporarily persistent error or other activity. A plain inline alert is less visually intrusive than a bordered inline alert, and is designed to be placed in content-heavy areas, such as within a form, wizard, or drawer. This alert type persists until the error or action is resolved.
- 
-![plain inline notification placement](./img/plain-inline-notification.png)
- 
-2. **Toast alerts**: communicate information about an update, confirmation, or other activity. A toast alert overlays content in the upper-right corner of the page and disappears when it times out or when the user dismisses it.
- 
-![toast notification placement](./img/toast-notification.png)
- 
-### Using bordered inline alerts
+
+#### Using bordered inline alerts
 Use bordered inline alerts to return feedback as the result of a user action within a page without blocking the user’s workflow. Common uses for bordered inline alerts include form validation and warning messages.
  
 * **If an alert message applies globally to the content on a page,** place the alert in the page header area just below the title.
@@ -80,8 +79,13 @@ Bordered inline alerts are commonly used in the following situations:
 - Informing the user of something that needs their attention
 - Informing the user that they need to set something up
 - Informing the user that a feature is temporarily unavailable
+
+### Plain inline alerts
+Plain inline alerts communicate information about a temporarily persistent error or other activity. A plain inline alert is less visually intrusive than a bordered inline alert, and is designed to be placed in content-heavy areas, such as within a form, wizard, or drawer. This alert type persists until the error or action is resolved.
  
-### Using plain inline alerts
+![plain inline notification placement](./img/plain-inline-notification.png)
+
+#### Using plain inline alerts
  
 Use plain inline alerts to communicate non-imperative messages to the user without adding visual clutter. This alert type is particularly helpful within other components, such as wizards, drawers, modals, side panels, and popovers, which may already contain a lot of information.
 
@@ -103,7 +107,14 @@ Plain inline alerts are commonly used in the following situations:
 - Informing the user that a temporary error has occurred
 - Informing the user that a feature is temporarily unresponsive
  
-### Using toast alerts
+ 
+### Toast alerts
+Toast alerts communicate information about an update, confirmation, or other activity. A toast alert overlays content in the upper-right corner of the page and disappears when it times out or when the user dismisses it.
+ 
+![toast notification placement](./img/toast-notification.png)
+ 
+
+#### Using toast alerts
 Use toast alerts to communicate an update, confirmation, or other activity to the user without blocking their workflow. For example, you can use a toast alert to inform the user that their message was sent. You can include links in a toast alert for a user to take action on the event that surfaced the alert, but the links should only be a shortcut for the user. A toast alert should never be used as the only means for taking actions on an alert event.
  
 Toast alerts stack in the upper-right corner of a page. To properly position and stack a set of alerts, use an [alert group](/components/alert-group) component. When alerts stack, the most recent alert appears at the top, and others move down as more alerts come in. When alerts are deleted, the remaining alerts move up.
@@ -126,7 +137,7 @@ If your use case falls outside of PatternFly's standard alert variations, use [i
  
 View custom alerts in action in our [custom alert examples](https://www.patternfly.org/v4/components/alert#custom-icons).
  
-## Content Considerations
+## Content considerations
  
  
 - In inline alerts and toast alerts, avoid using “success” and “successfully.” They’re extraneous.
