@@ -6,32 +6,7 @@ related: ['Table']
 
 A **data list** is used to display large data sets when you need a flexible layout or need to include interactive content like charts.
 
-PatternFly offers 2 components for displaying large data sets: data lists and [tables](/components/table/design-guidelines). While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
-
-Use data lists when:
-* A flexible layout is more important than arranging information in a grid.
-* You want to include active content like a chart.
-* Content displayed may vary between rows.
-
-## Usage
-Think of each row in a data list as a container for some formatted content. In PatternFly, data list rows can accept any [layout](/layouts/bullseye) supported by the design system as long as all rows apply the same layout. Here are some common layouts that may be useful in a data list:
-
-* **[Grid](/layouts/grid/react):** Displays content in a responsive grid.
-* **[Level](/layouts/level/react):** Justifies content evenly over the width of the row and vertically aligns items in the center of the row.
-* **[Split](/layouts/split/react):** Distributes content evenly with a main content area in the center.
-* **[Flex](/layouts/flex/react):** Enables more customization control over the alignment and spacing options provided in the other layouts.
-
-## Compact and default data lists
-PatterFly supports 2 main types of data lists:
-
-1. **[Compact data list](#compact-spacing):** Use when you want to show as much data per page as possible.
-2. **[Default data list](#default-spacing):** Use when you don’t have to minimize paging.
-
-See [when to use compact vs. default spacing](#compact-vs-default-spacing) for more information about the styling and usage.
-
-<img src="./img/compact-and-default-list.png" alt="Compact and default data list" /> 
-
-## Data list elements
+## Elements
 The elements mentioned below are similar for a data list with compact or default spacing. This example shows a data list with compact spacing. 
 
 <img src="./img/compact-list.png" alt="Compact data list" /> 
@@ -44,7 +19,33 @@ The elements mentioned below are similar for a data list with compact or default
 6. **Global actions:** Actions that apply to all selected items.
 7. **Pagination footer:** When present, provides navigation to additional pages.
 
-## Data list capabilities
+
+## Usage
+Think of each row in a data list as a container for some formatted content. In PatternFly, data list rows can accept any [layout](/layouts/bullseye) supported by the design system as long as all rows apply the same layout. Here are some common layouts that may be useful in a data list:
+
+* **[Grid](/layouts/grid/react):** Displays content in a responsive grid.
+* **[Level](/layouts/level/react):** Justifies content evenly over the width of the row and vertically aligns items in the center of the row.
+* **[Split](/layouts/split/react):** Distributes content evenly with a main content area in the center.
+* **[Flex](/layouts/flex/react):** Enables more customization control over the alignment and spacing options provided in the other layouts.
+
+PatternFly offers 2 components for displaying large data sets: data lists and [tables](/components/table/design-guidelines). While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
+
+Use data lists when:
+* A flexible layout is more important than arranging information in a grid.
+* You want to include active content like a chart.
+* Content displayed may vary between rows.
+
+## Variations
+PatterFly supports 2 main types of data lists:
+
+1. **[Compact data list](#compact-spacing):** Use when you want to show as much data per page as possible.
+2. **[Default data list](#default-spacing):** Use when you don’t have to minimize paging.
+
+See [when to use compact vs. default spacing](#compact-vs-default-spacing) for more information about the styling and usage.
+
+<img src="./img/compact-and-default-list.png" alt="Compact and default data list" /> 
+
+### Data list capabilities
 Every data list can be extended with these functionalities:
 
 * **[Actionable data list](/components/data-list/design-guidelines#actionable-data-list)**
@@ -98,7 +99,7 @@ Draggable data list rows can be added to any data list and allow you to customiz
 #### When to use
 Use draggable data list rows when you want to allow users to order their choices within a list. A common example of this is [column management](/components/table/react-demos#column-management-with-draggable). Users can choose the number of columns and the order they are shown in a table by selecting and dragging rows in the **Manage columns** modal. Another common use case is ordering the importance of roles or types relative to a resource.
 
-## Compact vs. default spacing
+## Spacing
 Whether to use a data list with compact or default spacing is up to you and your use case. However, here is some guidance for when to use which option. You can see examples of each option for comparison. 
 
 ### Compact spacing 
