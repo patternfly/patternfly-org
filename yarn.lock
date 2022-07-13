@@ -1329,16 +1329,6 @@
     "@babel/helper-validator-identifier" "^7.18.6"
     to-fast-properties "^2.0.0"
 
-"@cooptest/quickstarts@1.0.12":
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/@cooptest/quickstarts/-/quickstarts-1.0.12.tgz#655a439d7c7d1bb27b00204637dd2fbaecd970a3"
-  integrity sha512-z+TK1Y7Wl+L7dlgdrd9pKXy31j1WIPkaldOkANxjP7PonwvliiDiWQnt7/QrHsJgTDszLfbNRuTxMg8F3JLSzg==
-  dependencies:
-    "@patternfly/react-catalog-view-extension" "4.12.15"
-    dompurify "^2.2.6"
-    history "^5.0.0"
-    showdown "1.8.6"
-
 "@evocateur/libnpmaccess@^3.1.2":
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/@evocateur/libnpmaccess/-/libnpmaccess-3.1.2.tgz#ecf7f6ce6b004e9f942b098d92200be4a4b1c845"
@@ -2394,6 +2384,16 @@
   version "4.202.1"
   resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-4.202.1.tgz#b4a6af16cb44c67e2a9e443c3dc20be093789353"
   integrity sha512-cQiiPqmwJOm9onuTfLPQNRlpAZwDIJ/zVfDQeaFqMQyPJtxtKn3lkphz5xErY5dPs9rR4X94ytQ1I9pkVzaPJQ==
+
+"@patternfly/quickstarts@^2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@patternfly/quickstarts/-/quickstarts-2.2.4.tgz#91677aded8d3adba87c0913c58fe45e34d5a729e"
+  integrity sha512-TXwJtXyiPDKrREaq3ujsAONVN6BUWLlSbHqWw812Oqp2ep9njUFYt4cwcMda+STXvB+QJX24gh08uGWD8en5kg==
+  dependencies:
+    "@patternfly/react-catalog-view-extension" "4.12.15"
+    dompurify "^2.2.6"
+    history "^5.0.0"
+    showdown "1.8.6"
 
 "@patternfly/react-catalog-view-extension@4.12.15":
   version "4.12.15"
@@ -6361,9 +6361,9 @@ domhandler@^2.3.0:
     domelementtype "1"
 
 dompurify@^2.2.6:
-  version "2.3.8"
-  resolved "https://registry.yarnpkg.com/dompurify/-/dompurify-2.3.8.tgz#224fe9ae57d7ebd9a1ae1ac18c1c1ca3f532226f"
-  integrity sha512-eVhaWoVibIzqdGYjwsBWodIQIaXFSB+cKDf4cfxLMsK0xiud6SE+/WCVx/Xw/UwQsa4cS3T2eITcdtmTg2UKcw==
+  version "2.3.9"
+  resolved "https://registry.yarnpkg.com/dompurify/-/dompurify-2.3.9.tgz#a4be5e7278338d6db09922dffcf6182cd099d70a"
+  integrity sha512-3zOnuTwup4lPV/GfGS6UzG4ub9nhSYagR/5tB3AvDEwqyy5dtyCM2dVjwGDCnrPerXifBKTYh/UWCGKK7ydhhw==
 
 domutils@1.5.1:
   version "1.5.1"

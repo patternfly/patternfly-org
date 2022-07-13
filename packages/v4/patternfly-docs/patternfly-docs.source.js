@@ -81,7 +81,7 @@ module.exports = (sourceMD, sourceProps) => {
 
   // Quickstarts extension
   const qsPath = require
-    .resolve('@cooptest/quickstarts/package.json')
+    .resolve('@patternfly/quickstarts/package.json')
   const qsContentBase = path.join(qsPath.replace('package.json', 'dist'), '/patternfly-docs/quick-starts');
   const qsPropsBase = qsPath.replace('package.json', 'src')
   const qsPropsIgnore = ['**/*.test.tsx', '**/examples/*.tsx'];
