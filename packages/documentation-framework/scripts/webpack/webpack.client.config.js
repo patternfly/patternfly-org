@@ -43,11 +43,11 @@ const clientConfig = async (env, argv) => {
         cacheGroups: {
           vendorStyles: {
             test: /[\\/]node_modules[\\/].*\.css$/,
-            priority: 10
+            priority: 9
           },
           mainStyles: {
             test: /\.css$/,
-            priority: 9
+            priority: 10
           },
           // This speeds up reloads 2x in React and doesn't affect org's reload times
           ...(!isProd && {
