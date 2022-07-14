@@ -28,3 +28,5 @@ In this example, an action list is used for the actions within a toolbar. The ac
 
 <img src="./img/action-toolbar.png" alt="Action list used inside of a toolbar"/>
 
+## Accessibility
+For information regarding accessibility, visit the [action list accessibility](/components/action-list/accessibility) tab. 

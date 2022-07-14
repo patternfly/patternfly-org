@@ -26,3 +26,6 @@ For longer lists, you can optionally add the ability to search the list and favo
 
 **Application launcher with favorites and search**
 <img src="./img/example2.png" alt="Example of the application launcher component with favorites and search" width="1680"/>
+
+## Accessibility
+For information regarding accessibility, visit the [application launcher accessibility](/components/application-launcher/accessibility) tab. 
