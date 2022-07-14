@@ -13,6 +13,6 @@ Use hints to share information about an interaction or prerequisite step that mi
 
 <img src="./img/hint-layout.png" alt="blue hint at the top of an application page" width="750"/> 
 
-## Content 
+## Content considerations 
 Use full sentences with punctuation.
 Include relevant links to documentation when necessary.   

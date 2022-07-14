@@ -67,7 +67,7 @@ For some use cases, users may wish to customize their time display or selection 
 
 Learn more about formatting and displaying time zones in our [date and time guidelines](/ux-writing/numerics).
 
-## Content
+## Content considerations
 ### Time format
 
 Time formats are product-specific and often depend on user locale. To minimize confusion, choose one time format and keep it consistent. If one time picker displays HH:MM, be sure to repeat the same format throughout your interface.
