@@ -87,7 +87,7 @@ export const LogGroupedRoutes = () => {
           <DrawerContentBody>
             <Gallery hasGutter>
               {Object.entries(components)
-                .filter(([componentName]) => componentName !== 'View all components' && componentName.includes(searchTerm))
+                .filter(([componentName]) => componentName !== 'View all components' && componentName.toLowerCase().includes(searchTerm.toLowerCase()))
                 .sort(([componentName1], [componentName2]) => componentName1.localeCompare(componentName2))
                 .map(([componentName, componentData], idx) => (
                   <GalleryItem span={4} key={idx}>
