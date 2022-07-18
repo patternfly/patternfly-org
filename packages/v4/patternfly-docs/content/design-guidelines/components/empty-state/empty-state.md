@@ -18,13 +18,7 @@ This is an example of a large, full-page empty state with all empty state elemen
 
 **Note**: Don't include toolbars or filters in a full-page empty state because the user doesn't have any items to search or filter. 
 
-## Usage 
-PatternFly offers four empty state variations: 
-
-- **Extra small empty state**: Use an extra small empty state inside cards or when there are space constraints. 
-- **Small empty state**: Use a small empty state inside tables, wizards, or modals. 
-- **Large empty state**: Use a large empty state as a full page. 
-- **Extra large empty state**: Use an extra large empty state for special instances only, such as full-page success empty states or getting started empty states. 
+## Usage  
 
 There are several common uses for empty states:  
 - [Getting started](#getting-started)
@@ -35,7 +29,14 @@ There are several common uses for empty states:
 - [Success](#success)
 - [Creation](#creation) 
 
-### Getting started 
+## Variations
+
+* **Extra small empty state**: Use an extra small empty state inside cards or when there are space constraints. 
+* **Small empty state**: Use a small empty state inside tables, wizards, or modals. 
+* **Large empty state**: Use a large empty state as a full page. 
+* **Extra large empty state**: Use an extra large empty state for special instances only, such as full-page success empty states or getting started empty states.
+
+### Getting started use case
 Getting started empty states appear when features haven’t been used yet. In your empty state message, explain why the feature is beneficial to the user and provide a next step so that they can get started.   
 
 Use the extra large empty state variation for getting started empty states. 
@@ -75,7 +76,7 @@ Use the extra large empty state variation for getting started empty states.
 </div>
 <br />  
 
-### No results
+### No results use case
 No results empty states appear when the system doesn’t find any data to show, such as when a user’s search criteria doesn’t yield any results.  
 
 In your empty state, explain that nothing was found and give the user a next step so that they can continue their search.  
@@ -105,7 +106,7 @@ Use the small empty state variation for no results empty states.
 
 </div>
 
-### Required configuration  
+### Required configuration use case
 Required configuration empty states appear when the user needs to configure, connect, or enable something before using a feature.  
 
 Use the large empty state variation for required configuration empty states.
@@ -145,7 +146,7 @@ Use the large empty state variation for required configuration empty states.
 </div>
 <br />  
 
-### No access 
+### No access use case
 No access empty states appear when the user doesn’t have the entitlements or access permissions to view a certain feature or product area.  
 
 Use the large empty state variation for no access empty states.
@@ -185,7 +186,7 @@ Use the large empty state variation for no access empty states.
 </div>
 <br />   
 
-### Back-end failure 
+### Back-end failure use case
 Back-end failure empty states appear when an error occurs that prevents the system from displaying the page content.  
 
 Use the large empty state variation for back-end failure empty states.
@@ -214,7 +215,7 @@ Use the large empty state variation for back-end failure empty states.
 </div>
 <br />   
 
-### Success 
+### Success use case
 Success empty states appear when the user successfully completes a process, such as a tutorial or a setup wizard. 
 
 Use the standard empty state variation for success empty states in a table or wizard.
@@ -258,7 +259,7 @@ Use the extra large empty state variation for success empty states in a full pag
 </div>
 <br />   
 
-### Creation 
+### Creation use case
 Creation empty states appear when the user needs to add or create something to view associated information.  
 
 Use the large empty state variation for creation empty states.
@@ -325,7 +326,7 @@ Here is when you should use each icon:
 ### Colors 
 Use color intentionally. If you’re not using a custom icon for a specific use case, an icon should be gray by default (except when it’s used as a status icon).
 
-## Content 
+## Content Considerations
 Content varies depending on the type of empty state. For specific information on what content to use  for each empty state type, see the earlier [Usage](#usage) section. 
 
 Regardless of empty state variation and type, all empty states should have a specific level of detail, consistent capitalization and punctuation, and an intentional voice and tone.  

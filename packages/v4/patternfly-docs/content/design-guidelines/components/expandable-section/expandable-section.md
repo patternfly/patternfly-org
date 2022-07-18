@@ -23,7 +23,7 @@ Use an expandable section with a blue border to add more visual weight. This var
 <img src="./img/disclosure.png" alt="Disclosure example" width="1060"/>
 
 
-## Examples
+
 ### Expandable section in a form
 
 <img src="./img/form.png" alt="Expandable section in a form" width="1514"/>
@@ -39,3 +39,7 @@ Use an expandable section with a blue border to add more visual weight. This var
 ### Expandable section in a documentation page
 
 <img src="./img/documentation.png" alt="Expandable section in a documentation page" width="644"/>
+
+
+
+For More information regarding accessibility, visit the [expandable-section accessibility](https://www.patternfly.org/v4/components/expandable-section/accessibility) tab. 
