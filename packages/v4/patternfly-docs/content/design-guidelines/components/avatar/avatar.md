@@ -29,3 +29,6 @@ This size variation should be used in components such as cards.
 This size variation should be used in components such as profile displays.
 
 <img src="./img/extra-large-avatar-profile display.png" alt="Image displaying extra large avatar usage in profile display" width="1024"/>
+
+## Accessibility
+For information regarding accessibility, visit the [avatar accessibility](/components/avatar/accessibility) tab. 
