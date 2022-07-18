@@ -4,9 +4,6 @@ section: components
 related: ['Button']
 ---
 
-import CheckIcon from '@patternfly/react-icons/dist/esm/icons/check-icon';
-import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
-
 A **modal** displays important information to a user without requiring them to navigate to a new page.
 
 ## Elements
