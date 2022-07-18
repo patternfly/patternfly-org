@@ -15,26 +15,6 @@ Follow these guidelines for buttons in wizards (shown in the image below):
 
 <img src="./img/wizard.png" alt="Example of buttons in a wizard"/>
 
-### When to use 
-
-Always use link buttons in the following cases:
-
-* For cancel buttons in wizards or modals
-
-     <img src="./img/link_modal.png" alt="Example of link button used in modal" width="446"/>
-
-* For more actions in empty states
-
-    <img src="./img/link_empty.png" alt="Example of a link button in an empty state" width="600"/>
-
-* For action buttons in tables
-
-    <img src="./img/link_table.png" alt="Example of link buttons in a table"/>
-
-* For action buttons in alerts
-
-    <img src="./img/link_alert.png" alt="Example of link button in an alert" width="309"/>
-
 ### Button placement
 
 Buttons in forms, modals, or wizards should always be left aligned in the box. This solves for:
@@ -117,6 +97,26 @@ _Example of a link button in a modal_
 _Example of link buttons in an empty state_
 
 <img src="./img/empty_state_links.png" alt="Example of link buttons in an empty state" width="640"/>
+
+### When to use 
+
+Always use link buttons in the following cases:
+
+* For cancel buttons in wizards or modals
+
+     <img src="./img/link_modal.png" alt="Example of link button used in modal" width="446"/>
+
+* For more actions in empty states
+
+    <img src="./img/link_empty.png" alt="Example of a link button in an empty state" width="600"/>
+
+* For action buttons in tables
+
+    <img src="./img/link_table.png" alt="Example of link buttons in a table"/>
+
+* For action buttons in alerts
+
+    <img src="./img/link_alert.png" alt="Example of link button in an alert" width="309"/>
 
 ### Icon button ###
 
@@ -239,7 +239,7 @@ _Buttons placed in overflow menu due to limited space, with primary button persi
 
 ### Writing button labels
 
-When writing button lables:
+When writing button labels:
 
 * Be specific and clearly communicate the button's action.
 * Make sure that button text is unique and easily understood on its own, so that screen readers may read buttons to users out of context. Refer to [PatternFly's accessibility guide](/accessibility/product-development-guide) for more information.
