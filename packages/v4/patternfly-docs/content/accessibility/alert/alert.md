@@ -9,7 +9,7 @@ import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
 To implement an accessible PatternFly **alert**:
 
-- Add an [alert group](/components/alert-group) for an alert to be rendered inside of if you intend or expect the alert to dynamically appear or update, such as a toast alert.
+- Add an [alert group](/components/alert-group) for an alert to be rendered inside of if you intend or expect the alert to dynamically appear or update, such as a toast alert. Be sure to read the [alert group accessibility](/components/alert-group/accessibility) documentation to use it and the alert component together in an accessible manner.
 
 ## Testing
 
@@ -33,7 +33,7 @@ Various React props have been provided for more fine-tuned control over accessib
 | `toggleAriaLabel` | `Alert` | Adds an accessible name to the alert toggle when the `isExpandable` prop is also passed in. The value passed in should provide context as to which alert will be expanded/collapsed and what type of information is within the expandable area. By default the value is "[alert variant] alert details". |
 | `variantLabel` | `Alert` | Adds variant label text to the alert title that is accessible only to assistive technologies and is not visually rendered. The value passed in should provide additional context that prefaces the alert title. By default the value is "[alert variant] alert:". <br/><br/> The value of this prop and the `title` prop will automatically be applied to the toggle button for expandable alerts if the `toggleAriaLabel` prop has an empty string passed in as its value. |
 | `aria-label` | `AlertActionCloseButton` | Adds an accessible name to the alert close button. The value passed in should generally indicate that the the button will close the alert. By default the value is "Close [alert variant] alert: [alert title]". |
-| `variantLabel` | `AlertActionCloseButton` | If the `aria-label` prop is not passed into this component, adds variant label text to an alert close button that is accessible only to assistive technologies and is not visually rendered. The value of this prop and the alert's `title` prop are combined to create an accessible name for an alert's close button. The value passed in should provide additional context that prefaces the `title` text. <br/><br/> By default the value is the same as the `variantLabel` on the alert component. |
+| `variantLabel` | `AlertActionCloseButton` | If the `aria-label` prop is not passed into this component, this prop adds variant label text to an alert close button that is accessible only to assistive technologies and is not visually rendered. The value of this prop and the alert's `title` prop are combined to create an accessible name for an alert's close button. The value passed in should provide additional context that prefaces the `title` text. <br/><br/> By default the value is the same as the `variantLabel` on the alert component. |
 
 ## HTML/CSS customization
 
