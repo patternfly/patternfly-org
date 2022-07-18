@@ -44,8 +44,6 @@ Use a time interval value such as “4 minutes remaining” to communicate progr
 
 Avoid using indeterminate progress bars to communicate progress that can’t be measured. To track progress that can’t be quantified with a percentage, time, or step, use a [spinner](/components/spinner) instead.
 
-## Styling for statuses
-Styling for progress bar statuses should follow accessibility guidelines by communicating each state through several messaging types: Color, microcopy, and icons. 
 
 Follow these general style guidelines when designing your progress bars. For information about writing progress bar titles for each status type, see the [Content](#content) section.
 
@@ -66,31 +64,6 @@ A red progress bar represents a process that has failed. Accompany a failed prog
 A green progress bar represents the successful completion of a process. Accompany a complete progress bar with a [green check-circle icon](/guidelines/icons/#all-icons) to demonstrate that the process has finished with no errors.
 
 <img src="./img/progress-bar-complete.png" alt="An example of a progress bar in a complete or successful state, with a green track, optional check-circle icon, and a title that indicates its status: 'Validated account credentials.'" width="560" />
-
-## Spacing and alignment
-
-Right-align progress value text when it’s placed above the progress track, in line with the title. 
-
-<img src="./img/progress-bar-right-aligned-progress-value.png" alt="A visual example of a progress bar with right-aligned progress value text above the progress track." width="560" />
-
-Left-align progress value text when it’s placed to the right of the track.
-
-<img src="./img/progress-bar-left-aligned-progress-value.png" alt="A visual example of a progress bar with left-aligned progress value text in line with the progress track." width="616" />
-
-Always set an “outside fixed width measure” for determinate progress bars. This fixed spacing should solve alignment use cases in which stacked progress bar values vary in length. 
-
-## Placement
-
-<img src="./img/progress-bar-do-dont.png" alt="A visual example of how to successfully place a progress bar in your designs, side by side with an example of unsuccessful placement. Never isolate a progress bar above, below, or outside of its corresponding content view — always align it with its relevant content." width="1135"/>
-
-Always place progress bars in alignment with their relevant context, such as the feature, function, or task they reflect. Keep progress bars within the user’s line of sight: Never isolate a progress bar at the top or bottom of a page, or outside of its relevant content view.
-
-Use progress bars to communicate progress in a variety of contexts including:
-
-* [In a table](#in-a-table)
-* [In a dashboard view](#in-a-dashboard-view)
-* [During a file download](#during-a-file-download)
-* [In a wizard](#in-a-wizard)
 
 ### In a table
 
@@ -125,7 +98,33 @@ Only use a progress bar in a wizard if its final validation process will take mo
 
 To learn more about using progress bars in wizard validation progress screens, see our [wizard guidelines](/components/wizard/design-guidelines).
 
-## Content
+## Spacing 
+
+Right-align progress value text when it’s placed above the progress track, in line with the title. 
+
+<img src="./img/progress-bar-right-aligned-progress-value.png" alt="A visual example of a progress bar with right-aligned progress value text above the progress track." width="560" />
+
+Left-align progress value text when it’s placed to the right of the track.
+
+<img src="./img/progress-bar-left-aligned-progress-value.png" alt="A visual example of a progress bar with left-aligned progress value text in line with the progress track." width="616" />
+
+Always set an “outside fixed width measure” for determinate progress bars. This fixed spacing should solve alignment use cases in which stacked progress bar values vary in length. 
+
+### Placement
+
+<img src="./img/progress-bar-do-dont.png" alt="A visual example of how to successfully place a progress bar in your designs, side by side with an example of unsuccessful placement. Never isolate a progress bar above, below, or outside of its corresponding content view — always align it with its relevant content." width="1135"/>
+
+Always place progress bars in alignment with their relevant context, such as the feature, function, or task they reflect. Keep progress bars within the user’s line of sight: Never isolate a progress bar at the top or bottom of a page, or outside of its relevant content view.
+
+Use progress bars to communicate progress in a variety of contexts including:
+
+* [In a table](#in-a-table)
+* [In a dashboard view](#in-a-dashboard-view)
+* [During a file download](#during-a-file-download)
+* [In a wizard](#in-a-wizard)
+
+
+## Content considerations
 
 Progress bars should be self-explanatory and therefore include minimal written content: A title and an optional progress value. 
 
@@ -183,3 +182,6 @@ For **complete** statuses, write your progress bar title in past tense. Use this
 </div>
 
 Progress bars should only use content in their title and progress value. Never write additional content inside the progress track.
+
+### Styling for statuses
+Styling for progress bar statuses should follow accessibility guidelines by communicating each state through several messaging types: Color, microcopy, and icons. 

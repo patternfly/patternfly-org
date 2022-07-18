@@ -17,7 +17,8 @@ A **navigation** organizes an application’s structure and content, making it e
 5. [**Secondary horizontal navigation**](#secondary-horizontal-navigation)
 
 
-## Vertical navigation usage
+## Usage
+### **Vertical navigation usage**
 
 <img src="./img/single-level.png" alt="Example of simple vertical navigation" width="634"/>
 
@@ -100,7 +101,7 @@ Consider using a drill-down menu at the primary level and expansion to expose le
 
 <img src="./img/drill-down-to-expansion.png" alt="Example of composable navigation with drill-down and expansion menus" width="916"/>
 
-## Horizontal navigation usage
+### **Horizontal navigation usage**
 
 Horizontal navigation is global navigation that displays navigation items from left to right in the application's masthead.
 

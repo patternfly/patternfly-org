@@ -9,7 +9,7 @@ import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
 
 A **modal** displays important information to a user without requiring them to navigate to a new page.
 
-## Primary elements
+## Elements
 
 <img src="./img/modal-call-outs.png" alt="An example of a modal in context with call outs to highlight each listed element" width="756"/>
 
@@ -21,35 +21,6 @@ A **modal** displays important information to a user without requiring them to n
 6. **Buttons** 
 
 See the [Content](#content) section for information about writing modal copy.
-
-## Spacing
-
-<img src="./img/modal-basic.png" alt="A basic modal with 24px spacers between the modal box and content, and 16px spacers between the headline and content area, and between each button" width="487" />
-
-Basic modals use a primary spacing of 24px to separate:
-
-- Each edge of the modal box from all modal content.
-- The content area from both buttons.
-
-A 16px spacing separates the modal's headline from the content area. 16px also separates each button.
-
-## Placement
-
-A modal can be aligned at the center or top of a page.
-
-### Center-aligned modal (default)
-
-A [center-aligned modal](/components/modal/html-demos/basic/) appears horizontally and vertically centered on a page, and should be used by default for most use cases.
-
-<img src="./img/center-aligned-modal.png" alt="A modal pictured in center alignment on a page" />
-
-### Top-aligned modal
-
-A [top-aligned modal](/components/modal/html-demos/top-aligned/) appears horizontally and vertically centered at the top of a page. 
-
-Use a top-aligned modal when your modal contains expanding content or when you'd like to keep content behind the modal visible to the user.
-
-<img src="./img/top-aligned-modal.png" alt="A modal pictured in top alignment on a page" />
 
 ## Usage
 
@@ -65,8 +36,8 @@ Modals can:
 
 Don’t use a modal unless its information is vital to user success and worth disrupting a user’s task flow.
 
-## Types of modals
 
+## Variations
 Modals serve several functions in a UI and appear in four main types:
 
 * [Confirmation dialogs](#confirmation-dialogs)
@@ -76,6 +47,7 @@ Modals serve several functions in a UI and appear in four main types:
 * [Passive dialogs](#passive-dialogs)
 
 * [Input dialogs](#input-dialogs)
+
 
 ### Confirmation dialogs
 
@@ -126,7 +98,7 @@ Never use a passive dialog for non-critical information. Instead, use an [inline
 
 Users may need to provide additional input to complete an action. To accomplish this, use forms or other elements within the modal, like in a [modal wizard](/components/modal/react#with-wizard).
 
-## Modals with help
+### Modals with help
 
 <img src="./img/modal-with-help.png" alt="A modal with help uses a help icon to open a help popover when clicked" />
 
@@ -134,8 +106,37 @@ Use a [modal with help](/components/modal#with-help) to make complex tasks easie
 
 Help popovers at the modal level explain and provide documentation for an entire task. Only place a help icon at the modal level if its information applies to all content in the modal. If the information you'd like to include in a help popover is specific to a particular input, place the help icon at that input level instead.
 
+## Spacing
 
-## Content
+<img src="./img/modal-basic.png" alt="A basic modal with 24px spacers between the modal box and content, and 16px spacers between the headline and content area, and between each button" width="487" />
+
+Basic modals use a primary spacing of 24px to separate:
+
+- Each edge of the modal box from all modal content.
+- The content area from both buttons.
+
+A 16px spacing separates the modal's headline from the content area. 16px also separates each button.
+
+## Placement
+
+A modal can be aligned at the center or top of a page.
+
+### Center-aligned modal (default)
+
+A [center-aligned modal](/components/modal/html-demos/basic/) appears horizontally and vertically centered on a page, and should be used by default for most use cases.
+
+<img src="./img/center-aligned-modal.png" alt="A modal pictured in center alignment on a page" />
+
+### Top-aligned modal
+
+A [top-aligned modal](/components/modal/html-demos/top-aligned/) appears horizontally and vertically centered at the top of a page. 
+
+Use a top-aligned modal when your modal contains expanding content or when you'd like to keep content behind the modal visible to the user.
+
+<img src="./img/top-aligned-modal.png" alt="A modal pictured in top alignment on a page" />
+
+
+## Content considerations
 
 All modal content should be descriptive and specific so that users can scan, understand an action's context, and make a quick decision.
 
