@@ -3,36 +3,17 @@ id: Button
 section: components
 ---
 
-
-## Usage
 A **button** is a box area or text that communicates and triggers user actions when clicked or selected. Buttons can be used to communicate and immediately trigger actions a user can take in an application, like submitting a form, canceling a process, or creating a new object. Buttons can also be used to take a user to a new location, like another page inside of a web application, or an external site such as help or documentation.
 
+## Usage
 There are certain cases where specific buttons must be used within your UI.
 
 Follow these guidelines for buttons in wizards (shown in the image below):  
 * The **Next** button should always be a [primary button](#primary-button).
 * The **Back** button should always be a [secondary button](#secondary-button).
-* The **Cancel** button should always be a text button.
+* The **Cancel** button should always be a [link button](#link-button).
 
-<img src="./img/wizard.png" alt="Example of buttons in a wizard" />
-
-Always use link buttons in the following cases:
-
-* For cancel buttons in wizards or modals
-
-     <img src="./img/link_modal.png" alt="Example of link button used in modal" width="446"/>
-
-* For more actions in empty states
-
-    <img src="./img/link_empty.png" alt="Example of a link button in an empty state" width="600"/>
-
-* For action buttons in tables
-
-    <img src="./img/link_table.png" alt="Example of link buttons in a table" />
-
-* For action buttons in alerts
-
-    <img src="./img/link_alert.png" alt="Example of link button in an alert" width="309"/>
+<img src="./img/wizard.png" alt="Example of buttons in a wizard"/>
 
 ### Button placement
 
@@ -116,6 +97,26 @@ _Example of a link button in a modal_
 _Example of link buttons in an empty state_
 
 <img src="./img/empty_state_links.png" alt="Example of link buttons in an empty state" width="640"/>
+
+### When to use 
+
+Always use link buttons in the following cases:
+
+* For cancel buttons in wizards or modals
+
+     <img src="./img/link_modal.png" alt="Example of link button used in modal" width="446"/>
+
+* For more actions in empty states
+
+    <img src="./img/link_empty.png" alt="Example of a link button in an empty state" width="600"/>
+
+* For action buttons in tables
+
+    <img src="./img/link_table.png" alt="Example of link buttons in a table"/>
+
+* For action buttons in alerts
+
+    <img src="./img/link_alert.png" alt="Example of link button in an alert" width="309"/>
 
 ### Icon button ###
 
@@ -236,9 +237,9 @@ _Buttons placed in overflow menu due to limited space, with primary button persi
 
 ## Content considerations
 
-**Writing button labels**
+### Writing button labels
 
-When writing button lables:
+When writing button labels:
 
 * Be specific and clearly communicate the button's action.
 * Make sure that button text is unique and easily understood on its own, so that screen readers may read buttons to users out of context. Refer to [PatternFly's accessibility guide](/accessibility/product-development-guide) for more information.
@@ -249,8 +250,7 @@ When writing button lables:
 * Add an icon to the button to call a user's attention to it or to clarify the button's action.
 * Do not create icons on buttons using punctuation (for example, "+"). Instead, refer to [PatternFly's icons page](/guidelines/icons) for any icons you place on buttons.
 
-
-**Writing link labels**
+### Writing link labels
 
 Use specific, action-focused labels that match what the user will see when they arrive at their location. For example, if you are sending a user to a dashboard, your link label might read _View dashboard_. For a link directing a user to a support forum, the label might read _Get help in the support forum_. See [PatternFly's content guidelines](/ux-writing/about) for additional guidance.
 
