@@ -17,3 +17,5 @@ Skeleton loading should be progressive –– it should load static text first, 
 - You do not know what the populated data may look like. For example, if you are loading a form (as they are not all structured the same).
 - When it is likely it will fail or show an empty state while waiting for actions to complete.
 
+## Accessibility
+For information regarding accessibility, visit the [skeleton accessibility](/components/skeleton/accessibility) tab. 
