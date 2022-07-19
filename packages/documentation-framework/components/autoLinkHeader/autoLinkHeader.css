@@ -1,0 +1,22 @@
+.ws-heading {
+  position: relative;
+}
+
+.ws-heading-anchor {
+  color: var(--pf-global--Color--100);
+  transform: translate(calc(-100% - var(--pf-global--spacer--xs)), -50%);
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.ws-heading-anchor-icon {
+  height: 0.5em;
+  width: 0.5em;
+}
+
+.ws-heading:hover .ws-heading-anchor,
+.ws-heading-anchor:focus {
+  opacity: 1;
+}
