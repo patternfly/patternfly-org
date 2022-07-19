@@ -1,0 +1,8 @@
+.ws-colors-gridtext {
+  max-width: 680px;
+}
+
+/* Specifity YEAH */
+.pf-c-divider.ws-colors-divider {
+  margin-top: var(--pf-c-content--h2--MarginTop);
+}

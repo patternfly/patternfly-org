@@ -3,6 +3,703 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.12.6 (2022-07-18)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.5 (2022-07-18)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.4 (2022-07-14)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.3 (2022-07-11)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.2 (2022-07-11)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.1 (2022-07-11)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+# 4.12.0 (2022-07-11)
+
+
+### Features
+
+* **doc-framework:** add dark theme toggle for full page examples ([#3056](https://github.com/patternfly/patternfly-org/issues/3056)) ([aab143f](https://github.com/patternfly/patternfly-org/commit/aab143f764e46edafec6f690351e47fe14fa5404))
+
+
+
+
+
+## 4.11.3 (2022-07-11)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.11.2 (2022-07-07)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.11.1 (2022-07-06)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+# 4.11.0 (2022-07-05)
+
+
+### Features
+
+* **docs:** add dark theme switcher ([#3014](https://github.com/patternfly/patternfly-org/issues/3014)) ([7d17d13](https://github.com/patternfly/patternfly-org/commit/7d17d13c5518d85123d12bd37c254123789b1d75))
+
+
+
+
+
+## 4.10.79 (2022-07-01)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.78 (2022-07-01)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.77 (2022-06-30)
+
+
+### Bug Fixes
+
+* **docs:** narrowed scope of rule hiding overflow on page examples ([#3037](https://github.com/patternfly/patternfly-org/issues/3037)) ([3c0db2e](https://github.com/patternfly/patternfly-org/commit/3c0db2eff5f933c76a4be02ceaa1c1c2f5212b33))
+
+
+
+
+
+## 4.10.76 (2022-06-30)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.75 (2022-06-29)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.74 (2022-06-29)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.73 (2022-06-28)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.72 (2022-06-24)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.71 (2022-06-24)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.70 (2022-06-24)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.69 (2022-06-24)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.68 (2022-06-21)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.67 (2022-06-21)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.66 (2022-06-17)
+
+
+### Bug Fixes
+
+* **theme:** updated theme and v4 to be consistent with PF styles ([#2929](https://github.com/patternfly/patternfly-org/issues/2929)) ([70c1151](https://github.com/patternfly/patternfly-org/commit/70c11516f362b396db5e06a3cb019fc524e5f01b))
+
+
+
+
+
+## 4.10.65 (2022-06-17)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.64 (2022-06-16)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.63 (2022-06-16)
+
+
+### Bug Fixes
+
+* **docs:** increased mobile TOC z-index to 501 to avoid overlapping examples ([#3013](https://github.com/patternfly/patternfly-org/issues/3013)) ([22e59de](https://github.com/patternfly/patternfly-org/commit/22e59de029022a74a6ea79f56cbc921a0b3404cd))
+
+
+
+
+
+## 4.10.62 (2022-06-15)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.61 (2022-06-15)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.60 (2022-06-14)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.59 (2022-06-14)
+
+
+### Bug Fixes
+
+* **docs:** hid overflow in HTML examples ([#3010](https://github.com/patternfly/patternfly-org/issues/3010)) ([744d6b9](https://github.com/patternfly/patternfly-org/commit/744d6b95d0458c3739cfd01d644663202d68dd8b))
+
+
+
+
+
+## 4.10.58 (2022-06-13)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.57 (2022-06-09)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.56 (2022-06-07)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.55 (2022-06-07)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.54 (2022-06-06)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.53 (2022-06-03)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.52 (2022-06-02)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.51 (2022-06-01)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.50 (2022-06-01)
+
+
+### Bug Fixes
+
+* **example:** added alt text to full-screen screenshots ([#2981](https://github.com/patternfly/patternfly-org/issues/2981)) ([a503ef3](https://github.com/patternfly/patternfly-org/commit/a503ef314629aa667dc0ce5492abf9ed232dc653))
+
+
+
+
+
+## 4.10.49 (2022-06-01)
+
+
+### Bug Fixes
+
+* **toc:** fixed jumplinks in TOC to resolve a11y nesting issue ([#2971](https://github.com/patternfly/patternfly-org/issues/2971)) ([5557097](https://github.com/patternfly/patternfly-org/commit/5557097a9f4ae6761c1dda72570d525f43396e0f))
+
+
+
+
+
+## 4.10.48 (2022-06-01)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.47 (2022-05-27)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.46 (2022-05-27)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.45 (2022-05-26)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.44 (2022-05-18)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.43 (2022-05-17)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.42 (2022-05-16)
+
+
+### Bug Fixes
+
+* **docs:** resolve accessibility issues on static pages ([#2961](https://github.com/patternfly/patternfly-org/issues/2961)) ([cd03b92](https://github.com/patternfly/patternfly-org/commit/cd03b92dc14932c3b261500f32d162d4665e7b1c))
+
+
+
+
+
+## 4.10.41 (2022-05-16)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.40 (2022-05-13)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.39 (2022-05-10)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.38 (2022-05-06)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.37 (2022-05-06)
+
+
+### Bug Fixes
+
+* **docs:** fixed 2 broken links ([#2954](https://github.com/patternfly/patternfly-org/issues/2954)) ([6f3f554](https://github.com/patternfly/patternfly-org/commit/6f3f55475ef98cf85880010779ae9ab605177b9c))
+
+
+
+
+
+## 4.10.36 (2022-05-06)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.35 (2022-05-06)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.34 (2022-05-02)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.33 (2022-04-28)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.32 (2022-04-27)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.31 (2022-04-26)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.30 (2022-04-25)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.29 (2022-04-24)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.28 (2022-04-20)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.27 (2022-04-20)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.26 (2022-04-19)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.25 (2022-04-19)
+
+
+### Bug Fixes
+
+* **docs:** fixed font awesome typos ([#2869](https://github.com/patternfly/patternfly-org/issues/2869)) ([58584b1](https://github.com/patternfly/patternfly-org/commit/58584b1b695719dfeefaa66a1cd91ae3a4f09091))
+
+
+
+
+
+## 4.10.24 (2022-04-19)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.23 (2022-04-19)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.22 (2022-04-18)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.21 (2022-04-13)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.20 (2022-04-12)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.19 (2022-04-11)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.18 (2022-04-11)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.17 (2022-04-11)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.16 (2022-04-08)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.15 (2022-04-08)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.14 (2022-04-07)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.13 (2022-04-05)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.12 (2022-04-04)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.11 (2022-03-30)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.10 (2022-03-30)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.9 (2022-03-26)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.10.8 (2022-03-21)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
 ## 4.10.7 (2022-03-11)
 
 **Note:** Version bump only for package patternfly-org-4

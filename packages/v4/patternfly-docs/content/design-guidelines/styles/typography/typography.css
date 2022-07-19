@@ -1,0 +1,105 @@
+#typography {
+  margin-bottom: 32px;
+}
+
+#usage-guidelines {
+  margin-top: 40px;
+}
+
+#usage-guidelines ~ h3.ws-title {
+  margin-top: 24px;
+}
+
+.ws-typography-code-font + div {
+  font-family: var(--pf-global--FontFamily--monospace) !important;
+}
+
+.table-typography {
+  background-color: transparent;
+}
+
+.ws-typography-textColor {
+  color: #004368;
+  max-width: 350px;
+  font-size: 14px;
+}
+
+.ws-typography-tableTypography {
+  background-color: transparent !important;
+}
+
+.ws-typography-tableTypography tr > td:first-child {
+  padding-left: 0 !important;
+}
+
+/* .ws-typography-tableTypography tr:nth-child(even) { */
+.ws-typography-tableTypography tr {
+  background-color: transparent !important;
+}
+
+.ws-typography-gridTitleSymbol {
+  font-size: 10px;
+  vertical-align: text-bottom;
+}
+
+.ws-typography-spacerBox-size-8 {
+  align-self: center;
+  width: 8px;
+  height: 8px;
+}
+
+.ws-typography-spacerBox-background-8 {
+  background-color: #9bd917;
+}
+
+.ws-typography-spacerBox-size-16 {
+  align-self: center;
+  width: 16px;
+  height: 16px;
+}
+
+.ws-typography-spacerBox-background-16 {
+  background-color: #51a549;
+}
+
+.ws-typography-spacerBox-size-24 {
+  align-self: center;
+  width: 24px;
+  height: 24px;
+}
+
+.ws-typography-spacerBox-background-24 {
+  background-color: #1b8793;
+}
+
+.ws-typography-spacerBox-showBorder {
+  border: 1px solid #3e9dd0;
+}
+
+.spacingItemStyle {
+  border-color: #3E9DD0;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.spacingTitleStyle {
+  color: #004368;
+  font-size: 14px;
+}
+
+#our-font-family ~ h3.ws-title + div {
+  border: 1px solid #D2D2D2;
+  background: #FFF;
+  padding: 8px;
+  margin: 16px 0;
+  display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  #our-font-family ~ .pf-l-grid.pf-m-gutter,
+  #our-font-family ~ #line-height + div,
+  #our-font-family ~ #line-height + div + .pf-l-grid,
+  #our-font-family ~ #spacing ~ div {
+      max-width: 680px;
+  }
+}

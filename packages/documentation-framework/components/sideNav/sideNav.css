@@ -1,0 +1,17 @@
+.ws-page-sidebar .pf-c-nav {
+  --pf-c-nav__link--before--BorderBottomWidth: 0;
+  --pf-c-nav--m-light__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+  --pf-c-nav--m-light__link--focus--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+  --pf-c-nav--m-light__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+  --pf-c-nav--m-light__link--active--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+  --pf-c-nav__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--200);
+}
+
+.ws-side-nav-list .pf-c-nav__item.pf-m-expandable::before {
+  border-bottom: 0;
+}
+
+.pf-c-nav__subsection-title {
+  color: var(--ws-toc-link--Color, var(--pf-global--Color--300));
+  font-size: var(--pf-global--FontSize--sm);
+}

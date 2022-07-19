@@ -1,0 +1,85 @@
+.pf-c-card:not(.pf-org__card-small).pf-org__card {
+  border: 2px solid #d2d2d2;
+  box-shadow: unset;
+  height: 100%;
+}
+
+.pf-org__card .pf-c-card__header {
+  position: relative;
+}
+
+.pf-org__card .pf-c-card__header:first-child {
+  padding-top: 24px !important;
+}
+
+.pf-org__card .pf-c-card__header:not(:last-child) {
+  padding-bottom: 24px !important;
+}
+
+.pf-org__card .pf-org__card-small {
+  position: absolute;
+  left: 0px;
+  padding: 8px 18px;
+  background-color: #fff;
+}
+
+.pf-org__card .pf-c-card__header .pf-org__level {
+  margin-left: auto;
+  font-size: 12px;
+  color: #737679;
+}
+
+.pf-org__card .pf-c-card__header .pf-org__level > svg {
+  margin-right: 8px;
+}
+
+.pf-org__card .pf-c-card__body {
+  font-size: 14px;
+}
+
+.pf-org__card .pf-c-card__body .pf-org__time {
+  color: #737679;
+  font-size: 12px;
+  padding-bottom: 12px;
+}
+
+.pf-org__card .pf-c-card__body .pf-org__time > svg {
+  margin-right: 8px;
+}
+
+.pf-org__card .pf-c-card__footer .pf-c-button.pf-m-link {
+  padding-left: 0;
+  font-weight: bold;
+}
+
+.pf-org__card .pf-c-card__footer .pf-c-button.pf-m-link > svg {
+  margin-left: 8px;
+}
+
+.pf-org__level-beginner {
+  color: #5ba352;
+}
+
+.pf-org__level-intermediate {
+  color: #f0ab00;
+}
+
+.pf-org__level-advanced {
+  color: #a30000;
+}
+
+.pf-org__training-basics {
+  color: #ec7a08;
+}
+
+.pf-org__training-components {
+  color: #a18fff;
+}
+
+.pf-org__training-design {
+  color: #00B9E4;
+}
+
+.pf-org__training-charts {
+  color: #6ec664
+}

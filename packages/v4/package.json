@@ -2,27 +2,28 @@
   "name": "patternfly-org-4",
   "description": "Documentation for PatternFly 4.",
   "private": true,
-  "version": "4.10.7",
+  "version": "4.12.6",
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
-    "analyze": "theme-patternfly-org build all --analyze",
-    "build": "theme-patternfly-org build all",
-    "build:server": "theme-patternfly-org build server",
-    "build:client": "theme-patternfly-org build client",
-    "clean": "rm -rf .cache public size-plugin.json src/generated/**/*.js",
-    "develop": "theme-patternfly-org start",
-    "generate": "theme-patternfly-org generate",
-    "test:a11y": "patternfly-a11y --file .cache/fullscreenPages.json --prefix http://localhost:9000/v4",
-    "screenshots": "theme-patternfly-org screenshots"
+    "analyze": "pf-docs-framework build all --analyze",
+    "build": "pf-docs-framework build all",
+    "build:server": "pf-docs-framework build server",
+    "build:client": "pf-docs-framework build client",
+    "clean": "rm -rf .cache public size-plugin.json patternfly-docs/generated/**/*.js",
+    "develop": "pf-docs-framework start",
+    "generate": "pf-docs-framework generate",
+    "test:a11y": "patternfly-a11y --config patternfly-a11y.config",
+    "screenshots": "pf-docs-framework screenshots"
   },
   "dependencies": {
-    "@patternfly/react-docs": "5.59.21",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0",
-    "theme-patternfly-org": "^0.11.7"
+    "@patternfly/documentation-framework": "^1.1.6",
+    "@patternfly/react-docs": "5.85.2",
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
   },
   "devDependencies": {
+    "@patternfly/patternfly-a11y": "4.3.0",
     "fs-extra": "^9.0.0",
     "glob": "^7.1.6"
   }

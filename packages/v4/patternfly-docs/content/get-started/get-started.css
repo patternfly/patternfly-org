@@ -1,0 +1,7 @@
+.ws-content-blueArrow {
+  color: #0066CC;
+}
+
+#supported-browsers.ws-title + table {
+  margin-bottom: 16px;
+}

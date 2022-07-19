@@ -1,0 +1,20 @@
+.ws-community-page .ws-building-grid .ws-mdx-p {
+  margin: var(--pf-c-content--MarginTop) 0 var(--pf-c-content--MarginBottom);
+}
+
+.ws-community-page .ws-building-grid h4:last-child {
+  margin-top: auto;
+}
+
+.ws-community-page .ws-keep-growing {
+  margin-top: var(--pf-global--spacer--2xl);
+}
+
+.ws-community-page .ws-get-in-touch {
+  margin-top: var(--pf-global--spacer--lg);
+}
+
+.ws-community-grid-img {
+  max-width: 300px;
+  margin: 0 auto;
+}
