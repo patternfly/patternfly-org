@@ -29,8 +29,8 @@ Use when you are trying to bring focus to a single row at a time, by default the
 
 * **Multiple expand behavior**: Use when users may want to view content from different sections simultaneously. This variation gives users the ability to open multiple rows at a time, content will expand or collapse per each interaction. This variation is frequently used in FAQ sections and product comparisons.
 
-
-  <img src="./img/multi_expand.png" alt="Accordion multi-expand behavior"/>
+  
+    <img src="./img/multi_expand.png" alt="Accordion multi-expand behavior"/>
  
 
 ## Accessibility
