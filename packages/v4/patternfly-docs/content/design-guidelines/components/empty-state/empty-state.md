@@ -19,27 +19,11 @@ This is an example of a large, full-page empty state with all empty state elemen
 **Note**: Don't include toolbars or filters in a full-page empty state because the user doesn't have any items to search or filter. 
 
 ## Usage  
-
-There are several common uses for empty states:  
-- [Getting started](#getting-started)
-- [No results](#no-results)
-- [Required configuration](#required-configuration)
-- [No access](#no-access)
-- [Back-end failure](#back-end-failure)
-- [Success](#success)
-- [Creation](#creation) 
-
-## Variations
-
-* **Extra small empty state**: Use an extra small empty state inside cards or when there are space constraints. 
-* **Small empty state**: Use a small empty state inside tables, wizards, or modals. 
-* **Large empty state**: Use a large empty state as a full page. 
-* **Extra large empty state**: Use an extra large empty state for special instances only, such as full-page success empty states or getting started empty states.
-
-### Getting started use case
+There are several common use cases for this component
+### Getting started 
 Getting started empty states appear when features haven’t been used yet. In your empty state message, explain why the feature is beneficial to the user and provide a next step so that they can get started.   
 
-Use the extra large empty state variation for getting started empty states. 
+Use the [extra large empty state](#extra-large-empty-state) variation for getting started empty states. 
 
 <img src="./img/xl-getstarted.png" alt="extra large empty state with welcome message" width="1500px"/>  
 
@@ -63,7 +47,6 @@ Use the extra large empty state variation for getting started empty states.
 | Access all the resources you need to build scalable experiences in the open. | PatternFly enables you to build scalable experiences in the open. |
 
 </div>
-<br />  
 
 **Button**: Give the user the ability to easily get started with the product.  
 
@@ -74,14 +57,13 @@ Use the extra large empty state variation for getting started empty states.
 | Get started | Exit |
 
 </div>
-<br />  
 
-### No results use case
+### No results 
 No results empty states appear when the system doesn’t find any data to show, such as when a user’s search criteria doesn’t yield any results.  
 
 In your empty state, explain that nothing was found and give the user a next step so that they can continue their search.  
 
-Use the small empty state variation for no results empty states. 
+Use the [small empty state](#small-empty-state) variation for no results empty states. 
 
 <img src="./img/no-data.png" alt="empty state showing no search results" width="1500px"/>    
 
@@ -106,10 +88,10 @@ Use the small empty state variation for no results empty states.
 
 </div>
 
-### Required configuration use case
+### Required configuration 
 Required configuration empty states appear when the user needs to configure, connect, or enable something before using a feature.  
 
-Use the large empty state variation for required configuration empty states.
+Use the [large empty state](#large-empty-state) variation for required configuration empty states.
 
 <img src="./img/configuration.png" alt="empty state with system configuration information" width="1500px"/>  
 
@@ -122,7 +104,6 @@ Use the large empty state variation for required configuration empty states.
 | Configure your system | You haven’t configured your system |
 
 </div>
-<br />  
 
 **Body text**: Explain what the user needs to do to complete the task. 
 
@@ -144,12 +125,11 @@ Use the large empty state variation for required configuration empty states.
 | Start configuration process | Exit |
 
 </div>
-<br />  
 
-### No access use case
+### No access
 No access empty states appear when the user doesn’t have the entitlements or access permissions to view a certain feature or product area.  
 
-Use the large empty state variation for no access empty states.
+Use the [large empty state](#large-empty-state) variation for no access empty states.
 
 <img src="./img/access-denied.png" alt="empty state with information about access permissions" width="1500px"/> 
 
@@ -184,12 +164,11 @@ Use the large empty state variation for no access empty states.
 | Return to dashboard | OK |
 
 </div>
-<br />   
 
-### Back-end failure use case
+### Back-end failure 
 Back-end failure empty states appear when an error occurs that prevents the system from displaying the page content.  
 
-Use the large empty state variation for back-end failure empty states.
+Use the [large empty state](#large-empty-state) variation for back-end failure empty states.
 
 <img src="./img/back-end-failure.png" alt="empty state with information about a connection error" width="1500px"/> 
 
@@ -201,8 +180,7 @@ Use the large empty state variation for back-end failure empty states.
 |:-------------------------------:|:--------------------------:|
 | Unable to connect | Failure #121212: Connection error |
 
-</div>
-<br />   
+</div>  
 
 **Body**: Explain how the user can resolve the error. 
 
@@ -213,16 +191,15 @@ Use the large empty state variation for back-end failure empty states.
 | Check your connection and reload the page. | We’re sorry. Something is wrong. |
 
 </div>
-<br />   
 
-### Success use case
+### Success 
 Success empty states appear when the user successfully completes a process, such as a tutorial or a setup wizard. 
 
 Use the standard empty state variation for success empty states in a table or wizard.
 
 <img src="./img/success-wizard.png" alt="empty state confirming that a project was created" width="1500px"/>  
 
-Use the extra large empty state variation for success empty states in a full page.
+Use the [extra large empty state](#extra-large-empty-state) variation for success empty states in a full page.
 
 <img src="./img/xl-success.png" alt="empty state confirming registration" width="1500px"/> 
 
@@ -257,12 +234,11 @@ Use the extra large empty state variation for success empty states in a full pag
 | Start exploring | Exit |
 
 </div>
-<br />   
 
-### Creation use case
+### Creation 
 Creation empty states appear when the user needs to add or create something to view associated information.  
 
-Use the large empty state variation for creation empty states.
+Use the [large empty state](#large-empty-state) variation for creation empty states.
 
 <img src="./img/add-or-create.png" alt="empty state with no accounts yet" width="1500px"/>  
 
@@ -286,7 +262,6 @@ Use the large empty state variation for creation empty states.
 | To get started, create a service account. | You have not created any service accounts. |
 
 </div>
-<br />  
 
 **Button**: Give the user the ability to easily take the next step.
 
@@ -297,13 +272,23 @@ Use the large empty state variation for creation empty states.
 | Create service account | Return to home page |
 
 </div>
-<br />  
 
 **Secondary button**: Give the user the ability to access additional resources that can help them through the creation process, such as a tour. 
 
 You can also use the extra small empty state variation inside of a card to present the user with another way to add a new card to their view. Place the empty state card where a new card would be added, such as the first (or last) card in the view. Be sure to also include a primary button in the toolbar so that the user can still perform the action even if the empty state is out of view. 
 
 <img src="./img/add-card-empty-state.png" alt="empty state inside of a card" width="1500px"/> 
+
+## Variations
+
+- ### Extra small empty state
+Use an extra small empty state inside cards or when there are space constraints. 
+- ### Small empty state
+Use a small empty state inside tables, wizards, or modals. 
+- ### Large empty state
+Use a large empty state as a full page. 
+- ### Extra large empty state
+Use an extra large empty state for special instances only, such as full-page success empty states or getting started empty states.
 
 ## Visual design 
 Icons and colors can help enhance users’ visual understanding of empty state messaging.
@@ -348,7 +333,7 @@ Pay close attention to the [voice and tone](/ux-writing/brand-voice-and-tone) in
 
 It’s OK to use “you” and “your,” but never assign blame to the user. Also, avoid using “please” in an empty state. It’s extraneous and can make your message sound too formal.  
 
-## Buttons and links
+### Buttons and links
 Use buttons and links in empty states to highlight calls to action for the user. There are multiple ways to do this.
 
 ### One primary call to action
@@ -378,7 +363,7 @@ For a filtering or search situation, you can use a stand-alone secondary button 
 
 <img src="./img/solo-link.png" alt="empty state with one hyperlink" width="393px"/>  
 
-## Alignment 
+### Alignment 
 Empty states can be a full page, or they can be included inside of other components on the page. 
 
 ### Full-page empty states 
