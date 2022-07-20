@@ -3,9 +3,7 @@ id: Label
 section: components
 ---
 
-Use a **label** when you want to highlight an element on a page to draw attention to it or make it more searchable. Labels can also be used to tag items of the same category. If you want to show a count, use a [badge](https://www.patternfly.org/v4/components/badge) instead.
-
-
+The **label** component allows users to add specific element captions for user clairty and convenience
 
 ## Elements
 You can further customize labels by making them filled or unfilled, dismissable, adding icons, or making them clickable links. You can use any combination of these elements in a single label.
@@ -21,7 +19,10 @@ You can further customize labels by making them filled or unfilled, dismissable,
 5. **Editable labels:** Has a dashed underline to communicate editability.
 
 ## Usage
-There are 2 label types:
+
+Use a **label** when you want to highlight an element on a page to draw attention to it or make it more searchable. Labels can also be used to tag items of the same category. If you want to show a count, use a [badge](https://www.patternfly.org/v4/components/badge) instead.
+
+There are 2 specific label types:
 
 <img src="./img/label-features-type.png" alt="Different label types" width="180"/>
 

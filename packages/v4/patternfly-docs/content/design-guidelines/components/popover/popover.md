@@ -43,9 +43,11 @@ For information on other forms of on-screen help, see [Tooltip](/components/tool
  
 ## Variations
  
-**Default popovers** are plain-text and do not include icons. They are used to convey additional, non-imperative information to the user.
+### Default popovers
+These popovers are plain-text and do not include icons. They are used to convey additional, non-imperative information to the user.
  
-**Alert popovers** are similar to default popovers, the key difference being the inclusion of status-like headers for the following alert types: default, info, success, warning, and danger.
+### Alert popovers
+These popover are similar to default popovers, the key difference being the inclusion of status-like headers for the following alert types: default, info, success, warning, and danger.
  
 <img src="./img/alert_popover_examples.png" alt="alert popover examples with placeholder text for the title and informational text" width="300"/>
 

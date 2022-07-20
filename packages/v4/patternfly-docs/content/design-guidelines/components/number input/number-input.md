@@ -15,18 +15,18 @@ A **number input** provides a quick and effective way for users to enter and mod
 5. **Unit (optional):** Provides a unit symbol for the value in the input field, when applicable. 
 
 ## Usage
-**Use a number input when:**
+### When to use
 * Users need a quick and precise way to adjust values within defined parameters.
 * Users need to make small incremental changes that require few clicks.
 * You need to bypass device limitations, such as keyboardless interactions and form submissions on mobile.
 
-**Don’t use a number input when:**
+### When not to use
 * The numeric value range is infinite.
 * The numeric value can be either a fractional or whole number.
 * The numeric value required is not part of a range, or is arbitrary. In this use case, use an <a href="https://www.patternfly.org/v4/components/input-group/">input group</a> instead.
 * There is not enough space in the UI to account for the interaction between the input field and the buttons.
 
-**When using number inputs, follow these best practices:**
+### Best practices
 * Display a default numeric value in the input field that users can modify by typing directly into the input field or scale using the increase or decrease buttons.
 * Keep labels concise and specific to effectively communicate what value the user should enter into the input field.
 * Determine an increment size relative to your specific value range. Scale your increment size to accommodate for the types of values users will input in context.

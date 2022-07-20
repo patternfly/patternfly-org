@@ -154,7 +154,7 @@ For more button guidance, see our [button label guidelines](/components/button/d
 For general content guidance to help write effective modal dialogs, see our [UX writing style guide](/ux-writing/about).
 
 
-#### Icon use in modal dialogs
+### Icon use in modal dialogs
 
 Icons are optional in modal dialogs. Use or omit them as your use case requires.
 

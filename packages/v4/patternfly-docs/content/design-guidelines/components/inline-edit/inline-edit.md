@@ -25,7 +25,7 @@ Elements vary depending on inline edit variation
 1. **[Page inline edit](/components/inline-edit/design-guidelines#page-inline-edit):** enables the user to edit a [specific field](/components/inline-edit/design-guidelines#table-inline-edit) in a details page or in a [full page](/components/inline-edit/design-guidelines#full-page-edit).
 2. **[Table inline edit](/components/inline-edit/design-guidelines#table-inline-edit):** enables the user to [edit elements in a row](/components/inline-edit/design-guidelines#row-editing).
  
-### **Page inline edit**
+### Page inline edit
 
 * **[Field-specific edit](/components/inline-edit/design-guidelines#field-specific-edit):** allows users to make changes to one field at a time
 * **[Full page edit](/components/inline-edit/design-guidelines#full-page-edit):** allows users to make multiple changes at a time, in a larger area with more fields
@@ -65,7 +65,7 @@ Any editing is triggered by an edit link for the whole section. All edits should
  
 <img src="./img/full-page-edit.png"  alt="Full page edit"  width="926"/>
  
-### **Table inline edit**
+### Table inline edit
 
 * **[Row edit](/components/inline-edit/design-guidelines#row-editing):** allows for making changes to 1 editable row in the table
  
