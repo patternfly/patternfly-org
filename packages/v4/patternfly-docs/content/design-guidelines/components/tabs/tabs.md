@@ -5,14 +5,18 @@ section: components
 **Tabs** allow users to navigate between views within the same page or context.
 
 ## Usage
+Use tabs when you want to organize information into highly scannable display for users. 
 
-PatternFly offers a few types of tabs:
+You can use as many tabs as you want in a page, although it is recommended you keep the total number of tabs to a minimum for a better user experience. If you have more tabs than fit on the page, you may use a [default overflow](/components/tabs#default-overflow) which would allow a user to horizontally scroll through your tabs. The uses of both default and boxed stylings are flexible, so use either according to your needs and preferences. 
 
+## Variations
 - [Default tabs](#default-tabs) (recommended)
 - [Boxed tabs](#boxed-tabs)
 - [Vertical tabs](#vertical-tabs)
+- [Disabled tabs](#disabled-tabs)
+- [Primary tabs](#primary-tabs)
+- [Secondary tabs](#secondary-tabs)
 
-You can use as many tabs as you want in a page, although it is recommended you keep the total number of tabs to a minimum for a better user experience. If you have more tabs than fit on the page, you may use a [default overflow](/components/tabs#default-overflow) which would allow a user to horizontal scroll through your tabs. The uses of both default and boxed stylings are flexible, so use either according to your needs and preferences. 
 
 ### Default tabs
 
@@ -45,13 +49,9 @@ PatternFly supports a disabled tab variation for all tab types. A disabled tab c
 
 <img src="./img/disabled-tab.png" alt="Example of disabled tab with tooltip" width="986"/>
 
-## Hierarchy
+### Hierarchy
 
-When you have more than one tab level in your UI, you can either chose to use a mixture of boxed and default tabs to create hierarchy on a page, or you can chose to use primary and secondary tabs which differ in their font size, with primary tabs using 16pt font, and secondary tabs using 14pt font.
-
-Two tab options provide hierarchy within a page:
-- [Primary tabs](#primary-tabs)
-- [Secondary tabs](#secondary-tabs)
+When you have more than one tab level in your UI, you can either choose to use a mixture of boxed and default tabs to create hierarchy on a page, or you can chose to use primary and secondary tabs which differ in their font size, with primary tabs using 16pt font, and secondary tabs using 14pt font.
 
 ### Primary tabs
 

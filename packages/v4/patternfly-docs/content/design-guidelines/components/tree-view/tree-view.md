@@ -7,7 +7,7 @@ A **tree view** is a structure that displays data in a hierarchical view. It can
 
 A default tree view provides a tree structure with items and arrows to expand or collapse child items. Every tree view can be extended with these [optional capabilities](#tree-view-capabilities).
 
-## Tree view elements
+## Elements
 
 A default tree view consists of 5 elements:
 
@@ -27,19 +27,19 @@ A tree view can be used for:
 
 <img src="./img/treeview-usage.png" alt="Default tree view usage"  width="1004" />
 
-Use a tree view when:   
+### When to use
 * Selecting is the main use-case. 
 * You apply filters that need to be structured in a clear hierarchy. 
 * The data is structured into levels.
 * You need to display hierarchies that have more than 2 levels.
 
-Don’t use a tree view when: 
+### When not to use
 * You select 1 item from a small set. Instead, use [simple list](/components/simple-list), [select lists](/components/select), [radio buttons](/components/radio), [checkboxes](/components/checkbox), or a [dropdown](/components/dropdown).
 * You need to see an overview of a large amount of data.
 * You need to compare 2 large sets of data. Use [charts](/charts/about) for a better view. 
 * The hierarchy is too deep and includes hundreds of items. Instead, use a [drill-down menu](/components/menu#drilldown).
 
-## Tree view capabilities
+### Tree view capabilities
 
 You can add these functionalities to a tree view:
 * **[Search bar](#adding-a-search-bar-to-a-tree-view)** for searching items in the tree view.
@@ -78,7 +78,7 @@ Add action items to a tree view if you’re triggering some type of action above
 
 <img src="./img/treeview-action.png" alt="Tree view action items usage" width="666" />
 
-## Tree view in a page
+### Tree view in a page
 
 Tree views can be included in pages within these components: [dropdown](/components/dropdown), [drawer](/components/drawer), [primary-detail](/demos/primary-detail), [modal](/components/modal), or [wizard](/components/wizard). 
 
@@ -92,7 +92,8 @@ A tree view in a [primary-detail](/demos/primary-detail) or [drawer](/components
 
 <img src="./img/treeview-primarydetail-drawer.png" alt="Tree view in primary detail drawer usage" width="1500" />
 
-## Compact tree view
+## Variation
+### Compact tree view
 Compact tree view is useful when the nodes of a tree view contain more than one paragraph of text, or the content needs to be formatted. Compact tree views include guides that enhance the ability to more easily navigate between individual rows of data in the tree. You can use a compact tree view [with a background](/components/tree-view#compact) or [without background](/components/tree-view#compact-no-background), depending on your use case. 
 
 <img src="./img/treeview-compact.png" alt="Tree view compact usage" width="887" />
