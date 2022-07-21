@@ -52,6 +52,21 @@ Do not use banners:
 
 - For use cases requiring important actions for the user to take. Use a [hint](/components/hint/design-guidelines) instead. 
 
+## Variations 
+
+### Placement
+ 
+All banners should be a solid bar that spans the top and/or bottom of either:
+- The full page, above the masthead.
+ 
+   <img src="./img/placement-1.png" alt="Example of banner placement above the masthead" width="990"/>
+ 
+- The content area of the page, below the masthead.
+ 
+   <img src="./img/placement-2.png" alt="Example of banner placement below the masthead, inside page content area" width="990"/>
+ 
+In all cases, the banner should be sticky to the top (and also to the bottom, if using a bottom banner in addition to the top banner).
+
 ## Spacing
 
 ### Padding
@@ -66,21 +81,6 @@ The padding required above and below a banner will depend on where you place it.
  
 <img src="./img/placement-2.png" alt="Padding when banner is placed below the masthead" width="990"/>
  
-## Variations 
-
-### Placement
- 
-All banners should be a solid bar that spans the top and/or bottom of either:
-1. The full page, above the masthead.
- 
-   <img src="./img/placement-1.png" alt="Example of banner placement above the masthead" width="990"/>
- 
-2. The content area of the page, below the masthead.
- 
-   <img src="./img/placement-2.png" alt="Example of banner placement below the masthead, inside page content area" width="990"/>
- 
-In all cases, the banner should be sticky to the top (and also to the bottom, if using a bottom banner in addition to the top banner).
-
 ## Accessibility 
 
 For information regarding accessibility, visit the [banner accessibility tab](https://www.patternfly.org/v4/components/banner/accessibility).
