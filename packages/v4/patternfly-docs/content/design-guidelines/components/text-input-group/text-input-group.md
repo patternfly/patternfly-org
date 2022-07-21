@@ -19,7 +19,7 @@ A **text input group** is a more flexible composable version of a [text input](/
 
 ## Usage
 
-The text input group component is useful for building more complex custom inputs. It's usage includes, but is not limited to, the following use cases. Each of these can be found in a [React demo here](/components/text-input-group/react-demos).
+The text input group component is useful for building more complex custom inputs. Its usage includes, but is not limited to, the following use cases. Interactive examples of these are available as [React demos](/components/text-input-group/react-demos).
 
 ### Attribute value filtering
 
