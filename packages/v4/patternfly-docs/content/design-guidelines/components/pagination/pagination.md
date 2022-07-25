@@ -9,9 +9,9 @@ Add pagination above and below content views so that users can easily navigate a
 
 <img src="./img/full-page.png" alt="Example of pagination on full page table" />
 
-**1. Top pagination:** Always right-align pagination in the top toolbar, above content views.
+1. **Top pagination:** Always right-align pagination in the top toolbar, above content views.
 
-**2. Bottom pagination:** Right-align pagination below content views, too. If you want the bottom pagination to be sticky so it does not scroll off the page when the content is taller that the viewport, place the pagination in a footer page section and apply the `pf-m-sticky-bottom` modifier section to 
+2. **Bottom pagination:** Right-align pagination below content views, too. If you want the bottom pagination to be sticky so it does not scroll off the page when the content is taller that the viewport, place the pagination in a footer page section and apply the `pf-m-sticky-bottom` modifier section to 
 create a sticky page footer.
 ## Variations 
 ### Full pagination
@@ -26,17 +26,17 @@ Desktop full pagination in toolbar
 
 <img src="./img/full-pagination.png" alt="Example of full pagination" />
 
-**1. Items in view:** Allows the user to select the item count (number of listed items) per page.
+1. **Items in view:** Allows the user to select the item count (number of listed items) per page.
 
-**2. Full pager:** Supplies all necessary pagination options including page-back and page-forward, page-first and page-last, and a manual option to type in a desired page number.
+2. **Full pager:** Supplies all necessary pagination options including page-back and page-forward, page-first and page-last, and a manual option to type in a desired page number.
 
 Mobile full pagination in toolbar
 
 <img src="./img/mobile-pagination.png" alt="Example of pagination on mobile table view" width="375"/>
 
-**1. Items in view:** At this screen size, the top toolbar only shows the item count to indicate items currently in view. It hides all other pagination controls.
+1. **Items in view:** At this screen size, the top toolbar only shows the item count to indicate items currently in view. It hides all other pagination controls.
 
-**2. Full pager:** Supplies the same pagination options as the desktop full pager, but in the bottom toolbar.
+2. **Full pager:** Supplies the same pagination options as the desktop full pager, but in the bottom toolbar.
 
 ### Compact pagination
 
@@ -46,9 +46,9 @@ Desktop compact pagination in toolbar
 
 <img src="./img/compact-pagination.png" alt="Example of compact pagination" />
 
-**1. Items in view:** Allows the user to select the item count (number of listed items) per page, as seen in full pagination.
+1. **Items in view:** Allows the user to select the item count (number of listed items) per page, as seen in full pagination.
 
-**2. Compact pager:** Supplies the user with page-back and page-next controls only.
+2. **Compact pager:** Supplies the user with page-back and page-next controls only.
 
 ### Indeterminate pagination
 
