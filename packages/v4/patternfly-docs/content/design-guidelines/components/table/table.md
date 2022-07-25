@@ -126,6 +126,13 @@ Adding the ability to favorite is possible for any table variation. Users can se
 * Users may want to easily access their most used/viewed items in a table.
 * You have a long list of items and want to favorite items by default for discoverability.
 
+### Using lists and tables in a page
+Lists and tables should be placed in the body of a page. The width should be set by the containing element.
+
+<img src="./img/data-table-example.png"  alt="Compact data table example"  width="1500"/>
+
+In this example, a table is positioned in the body of a page in a card.
+
 ## Spacing
 
 ### Compact vs. default spacing
@@ -168,11 +175,5 @@ The PatternFly table is designed to be fully responsive. When columns no longer 
 
 <img src="./img/Mobile-data-table-example.png"  alt="Mobile data table"  width="375"/>
 
-## Using lists and tables in a page
-Lists and tables should be placed in the body of a page. The width should be set by the containing element.
-
-<img src="./img/data-table-example.png"  alt="Compact data table example"  width="1500"/>
-
-In this example, a table is positioned in the body of a page in a card.
 
 

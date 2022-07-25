@@ -23,7 +23,7 @@ Use tooltips to:
 ### Tooltip delay on hover
 By default, tooltips have a 300ms entry delay when hovering over an object. Although this is the recommended delay time, you may customize it via prop. For example, if you have a tooltip on an icon, and you would like for it to appear immediately on hover, you may set the delay to 0 ms.
 
-### Tooltips vs. popovers
+### When to use tooltips vs. popovers
 Both tooltips and [popovers](/components/popover/design-guidelines) provide more information in context for users. However, they’re different in a few ways:
 
 - Tooltips are used for identification purposes, while popovers are used for added description or information in context. 

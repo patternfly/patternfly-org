@@ -22,7 +22,7 @@ Use cases also vary depending on variation.
 
 ### Single select toggle group
 Use single select toggle groups when you want to toggle between multiple items. There are many use cases where this can apply, such as:
-  - Selecting a single action within a group of actions (this can be useful for topology or similar canvas views).
+  - Selecting a single action within a group of actions (this can be useful for topology or similar canvas views)
   - Toggling between multiple views
   - Filtering by a specific value within a filter group
 
