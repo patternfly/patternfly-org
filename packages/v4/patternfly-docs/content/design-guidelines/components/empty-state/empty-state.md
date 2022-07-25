@@ -281,14 +281,17 @@ You can also use the extra small empty state variation inside of a card to prese
 
 ## Variations
 
-- ### Extra small empty state
-Use an extra small empty state inside cards or when there are space constraints. 
-- ### Small empty state
+### Extra small empty state
+Use an extra small empty state inside [cards](https://www.patternfly.org/v4/demos/card-view/design-guidelines/#action-card) or when there are space constraints. 
+
+### Small empty state
 Use a small empty state inside tables, wizards, or modals. 
-- ### Large empty state
-Use a large empty state as a full page. 
-- ### Extra large empty state
-Use an extra large empty state for special instances only, such as full-page success empty states or getting started empty states.
+
+### Large empty state
+Use a large empty state as a [full page.](#full-page-empty-states)
+
+### Extra large empty state
+Use an extra large empty state for special instances only, such as [full-page success](#success) empty states or [getting started](#getting-started) empty states.
 
 ## Visual design 
 Icons and colors can help enhance users’ visual understanding of empty state messaging.
@@ -311,7 +314,7 @@ Here is when you should use each icon:
 ### Colors 
 Use color intentionally. If you’re not using a custom icon for a specific use case, an icon should be gray by default (except when it’s used as a status icon).
 
-## Content Considerations
+## Content considerations
 Content varies depending on the type of empty state. For specific information on what content to use  for each empty state type, see the earlier [Usage](#usage) section. 
 
 Regardless of empty state variation and type, all empty states should have a specific level of detail, consistent capitalization and punctuation, and an intentional voice and tone.  
