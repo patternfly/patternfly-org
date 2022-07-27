@@ -4,7 +4,6 @@ section: components
 ---
 
 A **banner** is a 1-line, full color, full width container that can be used to communicate short snippets of information to users. Banners are un-intrusive, non-dismissible, and only support link buttons.
-
  
 ## Usage
 
