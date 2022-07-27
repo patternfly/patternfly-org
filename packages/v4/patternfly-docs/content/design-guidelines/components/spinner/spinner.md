@@ -12,15 +12,17 @@ Spinners are used to demonstrate data loading. Spinners are offered in different
 <img src="./img/spinner-sizes.png" alt="Visual of different spinner sizes" width="436"/>
 
 ### When to use
-- Use a spinner when the data you are dealing with is unknown in both quantity and shape.
-- Spinners are also good to use when in progress of loading a screen that may not have any data, for example an [empty state screen or failed outcome](/components/empty-state). 
-- Use a spinner within a table view, where the spinner can take up the area of the table before it loads.
-- Use a spinner when the expected wait time is between 1-5 seconds. 
+Use a spinner:
+- when the data you are dealing with is unknown in both quantity and shape.
+- when in progress of loading a screen that may not have any data, for example an [empty state screen or failed outcome](/components/empty-state). 
+- within a table view, where the spinner can take up the area of the table before it loads.
+- when the expected wait time is between 1-5 seconds. 
 
 ### When not to use
-- Do not use a spinner to replace a [progress bar](/components/progress). 
+Don't use a spinner:
+- to replace a [progress bar](/components/progress). 
 
-- Do not use a spinner if the loading process is less than 1 second. For experiences longer than 5 seconds, use a progress bar.
+- if the loading process is less than 1 second. For experiences longer than 5 seconds, use a progress bar.
 
 ### Spinner in context
 
