@@ -13,7 +13,7 @@ A basic dropdown consists of a toggle control to open and close a menu of action
 
 1. **Toggle:** The toggle is used to open and close the menu. It takes on all of the behaviors of a button. The toggle label is used to name the menu and should be descriptive of the actions that it contains. If no more descriptive name makes sense, use “Actions” as a default name.
 
-2. **Menu:** The menu contains a list of actions or links. Menus should optimally contain seven (7) or less items for easy scanning by the user. For longer menus, items may be grouped. See the [menu component guidelines](/components/menu/design-guidelines) for more information about supported options, including use of icons, grouping, and descriptions. The Dropdown component includes many common built-in menu variants. It’s also possible to attach a custom menu by using the [basic panel variant](/components/dropdown/react#basic-panel).
+2. **Menu:** The menu contains a list of actions or links. Menus should optimally contain seven (7) or less items for easy scanning by the user. For longer menus, items may be grouped. See the [menu component guidelines](/components/menu/design-guidelines) for more information about supported options, including use of icons, grouping, and descriptions. The Dropdown component includes many common built-in menu variants. It’s also possible to attach a custom menu by using the [basic panel variant](/components/dropdown#basic-panel).
 
 ## Variations
 In addition to the basic dropdown shown above, you may apply the following variants to the dropdown toggle element.

@@ -44,4 +44,4 @@ Use an expandable section with a blue border to add more visual weight. This var
 
 
 
-For more information regarding accessibility, visit the [expandable-section accessibility tab](https://www.patternfly.org/v4/components/expandable-section/accessibility).
+For more information regarding accessibility, visit the [expandable section accessibility tab](https://www.patternfly.org/v4/components/expandable-section/accessibility).
