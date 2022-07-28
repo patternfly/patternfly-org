@@ -69,7 +69,7 @@ export const Footer = () => (
                   <li className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="https://www.patternfly.org/v3/"
+                      to="https://pf3.patternfly.org/"
                       target="top"
                       aria-label="View the PatternFly 3 website"
                     >
