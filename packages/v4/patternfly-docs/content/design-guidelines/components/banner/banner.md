@@ -25,23 +25,23 @@ PatternFly suggests that users adopt one of these 5 colors, as they’ve been te
  
 Banners are flexible and can be used for any content and for several use cases outlined in the following examples.
  
-#### To indicate that an application/site is offline
+- To indicate that an application/site is offline
  
-In this example, a banner is used to indicate to the user that the site is undergoing maintenance and that they will have limited functionality as a result. The banner is shown at the top and bottom to ensure that the user does not miss this disclaimer. Since this is a general, non-severe message, a default banner was used.
+   In this example, a banner is used to indicate to the user that the site is undergoing maintenance and that they will have limited functionality as a result. The banner is shown at the top and bottom to ensure that the user does not miss this disclaimer. Since this is a general, non-severe message, a default banner was used.
  
-<img src="./img/example-1.png" alt="Example of default banner in use" width="990"/>
+   <img src="./img/example-1.png" alt="Example of default banner in use" width="990"/>
  
-#### To indicate that an application upgrade is available
+- To indicate that an application upgrade is available
  
-In this example, the user is notified of an available upgrade through a banner at the top of the page. Since the use case here is to convey information, an informational banner was used.
+   In this example, the user is notified of an available upgrade through a banner at the top of the page. Since the use case here is to convey information, an informational banner was used.
  
-<img src="./img/example-2.png" alt="Example of info banner in use" width="990"/>
+   <img src="./img/example-2.png" alt="Example of info banner in use" width="990"/>
  
-#### Government system classification banner
+- Government system classification banner
  
-In this example, a banner is used to display classification level on a webpage. When an information system is deployed into the U.S. Government, it must be approved of what type of data to process, such as data classification. This classification banner communicates what types of data users are working with. Since this information is considered highly important, a danger banner was used.
+   In this example, a banner is used to display classification level on a webpage. When an information system is deployed into the U.S. Government, it must be approved of what type of data to process, such as data classification. This classification banner communicates what types of data users are working with. Since this information is considered highly important, a danger banner was used.
  
-<img src="./img/example-3.png" alt="Example of danger banner in use" width="990"/>
+   <img src="./img/example-3.png" alt="Example of danger banner in use" width="990"/>
 
 ### When not to use
 
