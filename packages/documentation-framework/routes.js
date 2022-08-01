@@ -138,6 +138,7 @@ const fullscreenRoutes = Object.entries(allRoutes)
       .forEach(title => {
         const slug = `${path}/${slugger(title)}`;
         acc[slug] = {
+          path,
           title,
           Component,
           isFullscreen: true,
