@@ -17,7 +17,7 @@ A **progress bar** informs users about the completion status of an ongoing proce
 ## Usage
 Use a progress bar to keep users informed about how much effort or time they can expect to allocate for long or ongoing processes like loading or updating an app, submitting a form, or completing a multi-step tutorial.
 
-### When to use: 
+### When to use
 * A user must complete a series of tasks and will want indication that they are making progress.
 * A user needs indication that the system is progressing through loading, saving, or downloading.
 * A user needs to monitor a background process, especially if that process may take a long time.

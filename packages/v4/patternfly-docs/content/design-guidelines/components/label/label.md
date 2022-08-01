@@ -29,15 +29,6 @@ There are 2 specific label types:
 1. **Default labels:** Use by default when needing a label.
 2. **Compact labels:** Use when confronted by space limitations and a smaller label is required (for example, in a table).
 
-
-Both default and compact labels come in the following default colors: gray, blue, green, orange, red, purple, and cyan. We offer a wide array of colors to allow for color coding labels within UIs. Label colors can be used to indicate status if desired, but do not have to. Regardless, we recommend you avoid using the red label unless it indicates danger or an error state.
-
-
-<img src="./img/filled-labels.png" alt="Label colors" width="646"/>
-
-
-While you may use other colors for your labels, we recommend using the ones provided as they have been carefully selected to be accessible with the PatternFly library. If you choose to use other colors, be mindful of picking [accessible text color and icon color](https://www.patternfly.org/v4/accessibility/testing-your-accessibility) to go with the label background.
-
 Labels can be used almost anywhere in a UI, but are commonly used in table views and catalogs as shown below. 
 
 <img src="./img/table-view.png" alt="Example labels in a table" width="1209"/>
@@ -45,12 +36,12 @@ Labels can be used almost anywhere in a UI, but are commonly used in table views
 <img src="./img/catalog-view.png" alt="Example labels in a catalog" width="1204"/>
 
 ## Variations
-* Unfilled
-* Filled
-* Dismissable
-* With icons
-* Clickable
-* Editable
+* [Unfilled](#when-to-use-filled-or-unfilled-labels)
+* [Filled](#when-to-use-filled-or-unfilled-labels)
+* [Dismissable](#when-to-use-dismissable-labels)
+* [With icons](#when-to-use-labels-with-icons)
+* [Clickable](#when-to-use-clickable-labels)
+* [Editable](#when-to-use-editable-labels)
 
 ### When to use filled or unfilled labels
 
@@ -87,5 +78,13 @@ Use editable labels when you want to allow users to organize and select resource
 
 <img src="./img/editable-label-feature.png" alt="Example of a editable label" width="165"/>
 
+### Color considerations
+Both default and compact labels come in the following default colors: gray, blue, green, orange, red, purple, and cyan. We offer a wide array of colors to allow for color coding labels within UIs. Label colors can be used to indicate status if desired, but do not have to. Regardless, we recommend you avoid using the red label unless it indicates danger or an error state.
+
+
+<img src="./img/filled-labels.png" alt="Label colors" width="646"/>
+
+
+While you may use other colors for your labels, we recommend using the ones provided as they have been carefully selected to be accessible with the PatternFly library. If you choose to use other colors, be mindful of picking [accessible text color and icon color](https://www.patternfly.org/v4/accessibility/testing-your-accessibility) to go with the label background.
 
 
