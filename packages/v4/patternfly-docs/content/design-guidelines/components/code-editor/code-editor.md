@@ -39,6 +39,11 @@ Code editors can optionally include actions that are attached to the editor itse
 
 Actions are represented by an icon and should include a tooltip on hover explaining what action they perform. Some typical actions that are used are **Copy to clipboard**, **Download**, and **Upload**.
 
+#### Keyboard Shortcuts
+You can use the “View shortcuts” link in your code editor that, on click, opens up a popover containing a variety of keyboard commands and shortcuts with descriptions for developers.
+
+<img src="./img/code-editor-shortcuts.png" alt="Example of a code editor with shortcuts" width="800"/>
+
 ## Empty state
 You can use an empty state in a code editor to indicate that a user can drag a file or browse to upload.
 
