@@ -6,7 +6,7 @@ related: ['About modal', 'Backdrop', 'Background image', 'Button']
 
 An **about modal** displays information about an application like product version number(s), as well as any appropriate legal text.
 
-## Primary elements
+## Elements
 
 <img src="./img/about-modal.png" alt="About modal" />
 
@@ -25,7 +25,10 @@ An **about modal** displays information about an application like product versio
 ## Usage
 Use an about modal to provide information about a product including the product name, logo, version numbers, and any appropriate legal text.
 
-**Accessing the about modal**
+## Behavior
+About modals are clicked into through a users interaction with a button, link, or icon component. When the modal is launched, the user can only see content inside it, until clicking the close button. 
+
+### Accessing the about modal
 
 Provide access to an about modal using a help icon in the application masthead. Clicking the help icon will launch a dropdown menu. The help menu should always include an option labeled "About" that launches the about modal.
 
