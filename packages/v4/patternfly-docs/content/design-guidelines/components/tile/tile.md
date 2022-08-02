@@ -9,16 +9,16 @@ A **tile** component is a form of selection that can be used in place of a [radi
 
 ## Usage
 
-**Tiles can be used as a selection method when**:
-* The selection process would benefit from having the additional visual prominence that tiles provide
-* The selection includes additional information, like a brief description or an icon 
-* The selection consists of brief, static content 
-* There are few (typically 2-6) selections for the user to choose from
+### When to use
+* The selection process would benefit from having the additional visual prominence that tiles provide.
+* The selection includes additional information, like a brief description or an icon. 
+* The selection consists of brief, static content. 
+* There are few (typically 2-6) selections for the user to choose from.
 
-**Use card instead when**:
-* The option presented to the user includes an action link, button, or overflow menu
-* The option presented to the user requires more than 3 lines of content description
-*  The option opens an additional resource or triggers an action
+### When not to use
+* The option presented to the user includes an action link, button, or overflow menu. Instead, use a card.
+* The option presented to the user requires more than 3 lines of content description. Instead, use a card
+*  The option opens an additional resource or triggers an action. Instead, use a card. 
 
 **Example**
 
@@ -32,15 +32,15 @@ As the user hovers over the tile component, the color will change insinuating it
 
 ## Variations 
 
-1. Basic
+### Basic
 
 <img src="./img/default.png" alt= "default example" width="222" />
 
-2. Subtext
+### Subtext
 
 <img src="./img/subtext.png" alt= "subtext example" width="222" />
 
-3. Icon
+### Icon
 
 <img src="./img/icon.png" alt= "icon example" width="222" />
 
