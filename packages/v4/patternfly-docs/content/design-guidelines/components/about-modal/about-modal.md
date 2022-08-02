@@ -28,7 +28,7 @@ Use an about modal to provide information about a product including the product 
 ## Behavior
 About modals are clicked into through a users interaction with a button, link, or icon component. When the modal is launched, the user can only see content inside it, until clicking the close button. 
 
-**Accessing the about modal**
+### Accessing the about modal
 
 Provide access to an about modal using a help icon in the application masthead. Clicking the help icon will launch a dropdown menu. The help menu should always include an option labeled "About" that launches the about modal.
 
