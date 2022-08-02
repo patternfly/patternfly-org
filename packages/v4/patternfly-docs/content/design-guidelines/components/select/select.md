@@ -37,7 +37,7 @@ Single select lists allow users to select a single, mutually exclusive option. W
 ### Checkbox select
 Checkbox select lists allow users to select one or more options from a known list of options, using checkboxes as a selection method. You may choose to have a badge display in the toggle to show how many items have been selected. A common use case for checkbox select lists is in a toolbar filter for a table or page.
 
-### Use checkbox select when
+#### Use checkbox select when
 * Horizontal space is limited.
 * It is not crucial for the user to see their selections in the toggle itself.
 * Using a select list inside a toolbar. Toolbars have limited space, and the user will already be able to see their selection as chips below the filter itself.  
@@ -47,7 +47,7 @@ Checkbox select lists allow users to select one or more options from a known lis
 ### Multiple select
 Multiple select lists allow users to select one or more options from a list, with the selected options marked with a blue check. It differs from the checkbox select in that each option selected by the user appears in the top display area as chips. Once the number of selections reaches a certain number, the regular chips will be replaced by a gray chip indicating how many more items were selected. The default number of selections is 3, but you may change this number based on your use case.
 
-### Use multiple select when
+#### Use multiple select when
 * Horizontal space is not limited.
 * It is useful for the user to see their selections from the toggle itself.
 * In a form, where a user may benefit from being able to quickly scan their inputs before submitting.
