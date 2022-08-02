@@ -35,6 +35,16 @@ Labels can be used almost anywhere in a UI, but are commonly used in table views
 
 <img src="./img/catalog-view.png" alt="Example labels in a catalog" width="1204"/>
 
+### Color considerations
+Both default and compact labels come in the following default colors: gray, blue, green, orange, red, purple, and cyan. We offer a wide array of colors to allow for color coding labels within UIs. Label colors can be used to indicate status if desired, but do not have to. Regardless, we recommend you avoid using the red label unless it indicates danger or an error state.
+
+
+<img src="./img/filled-labels.png" alt="Label colors" width="646"/>
+
+
+While you may use other colors for your labels, we recommend using the ones provided as they have been carefully selected to be accessible with the PatternFly library. If you choose to use other colors, be mindful of picking [accessible text color and icon color](https://www.patternfly.org/v4/accessibility/testing-your-accessibility) to go with the label background.
+
+
 ## Variations
 * [Unfilled](#when-to-use-filled-or-unfilled-labels)
 * [Filled](#when-to-use-filled-or-unfilled-labels)
@@ -78,13 +88,5 @@ Use editable labels when you want to allow users to organize and select resource
 
 <img src="./img/editable-label-feature.png" alt="Example of a editable label" width="165"/>
 
-### Color considerations
-Both default and compact labels come in the following default colors: gray, blue, green, orange, red, purple, and cyan. We offer a wide array of colors to allow for color coding labels within UIs. Label colors can be used to indicate status if desired, but do not have to. Regardless, we recommend you avoid using the red label unless it indicates danger or an error state.
-
-
-<img src="./img/filled-labels.png" alt="Label colors" width="646"/>
-
-
-While you may use other colors for your labels, we recommend using the ones provided as they have been carefully selected to be accessible with the PatternFly library. If you choose to use other colors, be mindful of picking [accessible text color and icon color](https://www.patternfly.org/v4/accessibility/testing-your-accessibility) to go with the label background.
 
 
