@@ -61,4 +61,4 @@ Use the read-only state of the code editor when you only want to display large b
 The border of the code editor will turn gray to indicate that it is read-only. The user can still highlight text in the editor, but won’t be able to edit. Adding actions is optional and should be determined by use case.
 
 ## Accessibility 
-For information regarding accessibility, visit the [code editor accessibility](/components/code-editor/accessibility) tab. 
+For information regarding accessibility, visit the [code editor accessibility tab](/components/code-editor/accessibility). 
