@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 
 const outDir = 'build/patternfly-org';
-const v3_to = `${outDir}/v3`;
 const writeRedirect = (file, to) => {
   const parentFolder = path.dirname(file);
   if (!fs.existsSync(parentFolder)) {
@@ -33,23 +32,8 @@ fs.writeFileSync(`${outDir}/sitemap.xml`,
 `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://www.patternfly.org/v3/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
     <loc>https://www.patternfly.org/v4/sitemap.xml</loc>
   </sitemap>
 </sitemapindex>`);
 console.log('Wrote 4 static files');
 
-// Write PF3 redirects
-if (!process.argv.includes('--skip-v3')) {
-  const redirectPaths = require('glob').sync(
-    `${v3_to}/**/*.html`,
-    { ignore: [`${v3_to}/components/**`, `${v3_to}/*.html`] }
-  );
-
-  redirectPaths.forEach(file => {
-    writeRedirect(file.replace(v3_to, outDir), file.replace(outDir, ''))
-  });
-  console.log(`Wrote ${redirectPaths.length} redirects`);
-}
