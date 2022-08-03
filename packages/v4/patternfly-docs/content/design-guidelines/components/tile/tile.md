@@ -22,7 +22,8 @@ A **tile** component is a form of selection that can be used in place of a [radi
 
 **Example**
 
-  <img src="./img/tileexample.png" alt="image of tile" width="1668" />
+ <img src="./img/tileexample.png" alt="behavior example" width="1001" />
+
 
 ## Behavior
 
