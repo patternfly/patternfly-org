@@ -51,7 +51,7 @@ If you want to sort notifications by category, collapsible headers may be used t
 
 ### Placement in a page
 
-<img src="./img/Notification-drawer-in-page.png" alt="notification drawer placement" width="1354"/>
+<img src="./img/Notification-Drawer-in-page.png" alt="grouped notification drawer" width="724"/>
 
 
 1. **Notification badge:** Whenever the notification drawer is used, a [notification badge](/components/notification-badge) must be placed in the masthead. Clicking on the badge will toggle the drawer open or closed. Depending on options supported in the application, the badge can also be used to display the number of notifications in the drawer and whether there are unread or critical notifications needing attention. See the [notification badge](/components/notification-badge) usage guidelines for more information about these options.
