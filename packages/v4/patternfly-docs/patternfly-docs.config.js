@@ -11,7 +11,7 @@ module.exports = {
   hasFooter: true,
   hasVersionSwitcher: true,
   hasDesignGuidelines: true,
-  hasDarkThemeSwitcher: true, // change back before committing. DONT LET ME COMMIT THIS!
+  hasDarkThemeSwitcher: false,
   sideNavItems: [
     { section: 'get-started' },
     { section: 'developer-resources' },
