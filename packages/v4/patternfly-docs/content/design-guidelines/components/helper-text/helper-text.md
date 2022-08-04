@@ -35,11 +35,12 @@ For information regarding other forms of on-screen help, see [popovers](https://
 
 
 
-## Content
+## Content considerations
 * Should appear on 1 line (if possible) and be visible to the user
 * Should consist of clear, simple language 
 * Can be written in complete sentences or as a statement
 * Include hyperlinks to additional information if necessary
 * Use helper text for information critical to a user completing a task, such as password requirements, character requirements, invalid text alerts, etc. 
 
-
+## Accessibility 
+For information regarding accessibility, visit the [helper text accessibility](/components/helper-text/accessibility) tab. 

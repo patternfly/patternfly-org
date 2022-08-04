@@ -18,29 +18,12 @@ A local development server at http://localhost:8003 can be started with:
 
     yarn start
 
-#### Old server
-You can install the NPM dependencies with:
-
-    yarn install
-
-And the Ruby dependencies with:
-
-    cd packages/v3
-    bundle install
-
-An old grunt development server for v3 at http://localhost:9002 can then be started with:
-
-    yarn start:v3
 
 ### Build
 
 The new v4 site can be built with:
 
     yarn build:v4
-
-The old v3 [Jekyll](http://jekyllrb.com/) site can be built with:
-
-    yarn build:v3
 
 The static assets get copied to build/patternfly-org.
 

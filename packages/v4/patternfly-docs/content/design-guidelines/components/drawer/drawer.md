@@ -17,7 +17,7 @@ In addition to primary-details, the drawer component is frequently used in [noti
 
 A **splitter** allows you to create a layout with resizable panes. The orientation of a splitter can be set to **vertical** or **horizontal**.
 
-### Usage
+### When to use a splitter
 Add a splitter to a drawer if you need to resize the width or height of a panel to give content more space. If data shown in a drawer has enough space, then you don’t need to use a splitter.
 
 <img src="./img/splitter-drawer.png" width="1500" />

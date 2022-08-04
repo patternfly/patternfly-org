@@ -45,7 +45,7 @@ A switch changes an option and saves it simultaneously, while checkboxes require
 
     <img src="./img/switch-check-3.png" alt="Example 3 of do's and don'ts for using a checkbox vs. a switch" width="661"/>
 
-## Content 
+## Content considerations
 ### Form labels
 When writing form labels, keep the message short and specific. Ensure that the message is clear when the switch is toggled to both the “on” and “off” position. 
 
