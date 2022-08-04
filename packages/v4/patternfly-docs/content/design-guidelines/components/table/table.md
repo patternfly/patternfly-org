@@ -31,6 +31,13 @@ PatternFly offers 2 components for displaying large data sets: [data lists](/com
 **Use a [data list](/components/data-list/design-guidelines) when**:
 * The information you want to display cannot easily be organized into columns, or data is less structured. 
 
+### Using lists and tables in a page
+Lists and tables should be placed in the body of a page. The width should be set by the containing element.
+
+<img src="./img/data-table-example.png"  alt="Compact data table example"  width="1500"/>
+
+In this example, a table is positioned in the body of a page in a card.
+
 ## Variations
 PatternFly supports 2 main types of tables:
 
@@ -125,13 +132,6 @@ Adding the ability to favorite is possible for any table variation. Users can se
 #### When to use
 * Users may want to easily access their most used/viewed items in a table.
 * You have a long list of items and want to favorite items by default for discoverability.
-
-### Using lists and tables in a page
-Lists and tables should be placed in the body of a page. The width should be set by the containing element.
-
-<img src="./img/data-table-example.png"  alt="Compact data table example"  width="1500"/>
-
-In this example, a table is positioned in the body of a page in a card.
 
 ## Spacing
 
