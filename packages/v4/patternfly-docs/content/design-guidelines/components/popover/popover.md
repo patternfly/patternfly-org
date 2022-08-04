@@ -9,24 +9,7 @@ related: [
 ---
  
 A **popover** is in-app messaging that provides more information on specific product areas. Popovers display content in a new window that overlays the current page. Unlike modals, popovers don’t block the current page.
- 
-Popovers are triggered by a click and dismissed in one of the following ways:
-- The user clicks the exit icon.
-- The user clicks anywhere on the screen outside the popover.
-- The user clicks an action button inside the popover. (Note: This won't always close the popover; it depends on the action button.)
- 
-<img src="./img/popover-example.png" alt="popover example with placeholder text for the title and informational text" width="300"/>
- 
-For information on other forms of on-screen help, see [Tooltip](/components/tooltip/design-guidelines) and [Hint](/components/hint/design-guidelines).
- 
-## Popover types
- 
-**Default popovers** are plain-text and do not include icons. They are used to convey additional, non-imperative information to the user.
- 
-**Alert popovers** are similar to default popovers, the key difference being the inclusion of status-like headers for the following alert types: default, info, success, warning, and danger.
- 
-<img src="./img/alert_popover_examples.png" alt="alert popover examples with placeholder text for the title and informational text" width="300"/>
- 
+
 ## Usage
 Popovers are commonly used on form field labels, page titles or headings, or table column headings. Use popovers to:
 - Anticipate and answer questions for the user.
@@ -49,14 +32,34 @@ Use link button styling for the linked question, and add a blue question-circle 
  
 To provide additional information about an alert, use an alert popover. The alert popover will open upon hover or click.
  
-## Tooltips versus popovers
+### When to use tooltips vs. popovers
 Both [tooltips](/components/tooltip/design-guidelines) and popovers provide more information in context for users. However, they’re different in a few ways:
  
 - Tooltips are used for identification purposes, while popovers are used for added description or information in context. 
 - Tooltips contain short descriptions or labels, while popovers contain longer descriptions, formatted text, and optional images or links.
 - Tooltips appear on hover, while popovers appear on click.  
  
-## Content
+For information on other forms of on-screen help, see [Tooltip](/components/tooltip/design-guidelines) and [Hint](/components/hint/design-guidelines).
+ 
+## Variations
+ 
+### Default popovers
+These popovers are plain-text and do not include icons. They are used to convey additional, non-imperative information to the user.
+ 
+### Alert popovers
+These popover are similar to default popovers, the key difference being the inclusion of status-like headers for the following alert types: default, info, success, warning, and danger.
+ 
+<img src="./img/alert_popover_examples.png" alt="alert popover examples with placeholder text for the title and informational text" width="300"/>
+
+ ## Behavior
+Popovers are triggered when a user clicks on the popover icon and are dismissed in one of the following ways:
+- The user clicks the exit icon.
+- The user clicks anywhere on the screen outside the popover.
+- The user clicks an action button inside the popover. (Note: This won't always close the popover; it depends on the action button.)
+ 
+<img src="./img/popover-example.png" alt="popover example with placeholder text for the title and informational text" width="300"/>
+ 
+## Content Considerations
 - Popover copy is longer than tooltip copy, but it should still be concise. Aim for 1–3 sentences. 
 - Write in full sentences with punctuation.
 - Include relevant links to documentation when necessary.   

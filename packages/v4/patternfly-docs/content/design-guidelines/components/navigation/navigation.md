@@ -17,7 +17,23 @@ A **navigation** organizes an application’s structure and content, making it e
 5. [**Secondary horizontal navigation**](#secondary-horizontal-navigation)
 
 
-## Vertical navigation usage
+## Usage
+Use navigation to organize a pages structure and content for user clarity and convenience. Use cases differ depending on component variation.
+
+## Variations
+There are two main variations of the navigation component each of which contain subvariations. 
+
+* [Vertical navigation](#vertical-navigation)
+    * [Simple vertical navigation](#simple-vertical-navigation)
+    * [Grouped navigation](#grouped-navigation)
+    * [Expandable two-level navigation](#expandable-two-level-navigation)
+    * [Expandable three-level navigation](#expandable-three-level-navigation)
+    * [Fly-out navigation](#fly-out-navigation)
+    * [Drill-down navigation](#drill-down-navigation)
+* [Horizontal navigation](#horizontal-navigation)
+    * [Secondary horizontal navigation](#secondary-horizontal-navigation)
+
+### Vertical navigation 
 
 <img src="./img/single-level.png" alt="Example of simple vertical navigation" width="634"/>
 
@@ -100,7 +116,7 @@ Consider using a drill-down menu at the primary level and expansion to expose le
 
 <img src="./img/drill-down-to-expansion.png" alt="Example of composable navigation with drill-down and expansion menus" width="916"/>
 
-## Horizontal navigation usage
+### Horizontal navigation 
 
 Horizontal navigation is global navigation that displays navigation items from left to right in the application's masthead.
 

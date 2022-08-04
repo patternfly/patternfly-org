@@ -49,6 +49,7 @@ If you want to sort notifications by category, collapsible headers may be used t
     - **Unclear last**: Unclears that last cleared or set of cleared notifications (if supported).
     - **Settings**: Opens notification settings.
 
+
 ### Placement in a page
 
 <img src="./img/Notification-drawer-in-page.png" alt="grouped notification drawer" width="677"/>
@@ -58,16 +59,15 @@ If you want to sort notifications by category, collapsible headers may be used t
 
 2. **Drawer:** The notification drawer lives in slide-out panel that overlays page content and is anchored to the right-hand edge of the viewport.
 
-
 ## Usage
 
-#### When to use
+### When to use
 Use the notification drawer when you want a place for the user to easily access a history of notifications from any place within the application.
 
-#### When not to use
+### When not to use
 Do not use the notification drawer as the sole place to notify users about events requiring immediate action. In these cases, a modal message dialog is the preferred choice.
 
-#### How to use
+### How to use
 The notification drawer provides a flexible container where users can view and manage notifications. When using the notification drawer in an application, consider the following questions:
 
 - What notifications are important keep in the drawer?

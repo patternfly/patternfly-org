@@ -3,29 +3,10 @@ id: Label
 section: components
 ---
 
-Use a **label** when you want to highlight an element on a page to draw attention to it or make it more searchable. Labels can also be used to tag items of the same category. If you want to show a count, use a [badge](https://www.patternfly.org/v4/components/badge) instead.
+The **label** component allows users to add specific element captions for user clairty and convenience
 
-## Usage
-There are 2 label types:
-
-<img src="./img/label-features-type.png" alt="Different label types" width="180"/>
-
-1. **Default labels:** Use by default when needing a label.
-2. **Compact labels:** Use when confronted by space limitations and a smaller label is required (for example, in a table).
-
-
-
-Both default and compact labels come in the following default colors: gray, blue, green, orange, red, purple, and cyan. We offer a wide array of colors to allow for color coding labels within UIs. Label colors can be used to indicate status if desired, but do not have to. Regardless, we recommend you avoid using the red label unless it indicates danger or an error state.
-
-
-<img src="./img/filled-labels.png" alt="Label colors" width="646"/>
-
-
-While you may use other colors for your labels, we recommend using the ones provided as they have been carefully selected to be accessible with the PatternFly library. If you choose to use other colors, be mindful of picking [accessible text color and icon color](https://www.patternfly.org/v4/accessibility/testing-your-accessibility) to go with the label background.
-
-
-## Label features
-You can further customize labels by making them filled or unfilled, dismissable, adding icons, or making them clickable links. You can use any combination of these features in a single label.
+## Elements
+You can further customize labels by making them filled or unfilled, dismissable, adding icons, or making them clickable links. You can use any combination of these elements in a single label.
 
 
 <img src="./img/label-features.png" alt="Examples of different label features" width="180"/>
@@ -36,6 +17,41 @@ You can further customize labels by making them filled or unfilled, dismissable,
 3. **Label with icon:** Can be used to further clarify the label.
 4. **Clickable labels:** Has a hover state to show interactiveness.
 5. **Editable labels:** Has a dashed underline to communicate editability.
+
+## Usage
+
+Use a **label** when you want to highlight an element on a page to draw attention to it or make it more searchable. Labels can also be used to tag items of the same category. If you want to show a count, use a [badge](https://www.patternfly.org/v4/components/badge) instead.
+
+There are 2 specific label types:
+
+<img src="./img/label-features-type.png" alt="Different label types" width="180"/>
+
+1. **Default labels:** Use by default when needing a label.
+2. **Compact labels:** Use when confronted by space limitations and a smaller label is required (for example, in a table).
+
+Labels can be used almost anywhere in a UI, but are commonly used in table views and catalogs as shown below. 
+
+<img src="./img/table-view.png" alt="Example labels in a table" width="1209"/>
+
+<img src="./img/catalog-view.png" alt="Example labels in a catalog" width="1204"/>
+
+### Color considerations
+Both default and compact labels come in the following default colors: gray, blue, green, orange, red, purple, and cyan. We offer a wide array of colors to allow for color coding labels within UIs. Label colors can be used to indicate status if desired, but do not have to. Regardless, we recommend you avoid using the red label unless it indicates danger or an error state.
+
+
+<img src="./img/filled-labels.png" alt="Label colors" width="646"/>
+
+
+While you may use other colors for your labels, we recommend using the ones provided as they have been carefully selected to be accessible with the PatternFly library. If you choose to use other colors, be mindful of picking [accessible text color and icon color](https://www.patternfly.org/v4/accessibility/testing-your-accessibility) to go with the label background.
+
+
+## Variations
+* [Unfilled](#when-to-use-filled-or-unfilled-labels)
+* [Filled](#when-to-use-filled-or-unfilled-labels)
+* [Dismissable](#when-to-use-dismissable-labels)
+* [With icons](#when-to-use-labels-with-icons)
+* [Clickable](#when-to-use-clickable-labels)
+* [Editable](#when-to-use-editable-labels)
 
 ### When to use filled or unfilled labels
 
@@ -72,10 +88,5 @@ Use editable labels when you want to allow users to organize and select resource
 
 <img src="./img/editable-label-feature.png" alt="Example of a editable label" width="165"/>
 
-## Labels in context
-Labels can be used almost anywhere in a UI, but are commonly used in table views and catalogs.
 
-<img src="./img/table-view.png" alt="Example labels in a table" width="1209"/>
-
-<img src="./img/catalog-view.png" alt="Example labels in a catalog" width="1204"/>
 
