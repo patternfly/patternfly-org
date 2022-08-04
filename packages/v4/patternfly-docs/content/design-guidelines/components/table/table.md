@@ -4,27 +4,8 @@ section: components
 ---
 A **table** is used to display large data sets that can be easily laid out in a simple grid with column headers.
 
-PatternFly offers 2 components for displaying large data sets: [data lists](/components/data-list/design-guidelines) and tables. While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
 
-Use tables when:
-* Users will want to consume data as a grid (in other words, structured rows and columns).
-* You want column headers.
-
-## Usage
-
-Consider the structure of the data you want to display and organize that information into columns. Columns will typically have column headers. Every row within a table must have a consistent format. If the table row includes actions, they should always be placed in the rightmost column(s).
-
-### Compact and default tables
-PatternFly supports 2 main types of tables:
-
-1. **[Compact table](#compact-spacing):** when you want to show as much data per page as possible.
-2. **[Default table](#default-spacing):** when you don’t have to minimize paging.
-
-See [when to use compact vs. default spacing](#compact-vs-default-spacing) for more information about the styling and usage.
-
-<img src="./img/compact-and-default-table.png"  alt="Compact and default table"  width="857"/>
-
-## Table elements
+## Elements
 The elements mentioned below are similar for a table with compact or default spacing. This example shows a table with a compact spacing.
 
 <img src="./img/compact-data-table.png"  alt="Compact table"  width="1186"/>
@@ -37,7 +18,37 @@ The elements mentioned below are similar for a table with compact or default spa
 6. **Inline actions:** Actions that apply only to the current row/item
 7. **Pagination footer:** When present, provides navigation to additional pages
 
-## Table capabilities
+## Usage
+When using tables you need to consider the structure of the data you want to display and organize that information into columns. Columns will typically have column headers. Every row within a table must have a consistent format. If the table row includes actions, they should always be placed in the rightmost column(s).
+
+PatternFly offers 2 components for displaying large data sets: [data lists](/components/data-list/design-guidelines) and tables. While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
+
+### When to use a table vs. a data list
+
+**Use a table when**:
+* The information you want to display fits into a structured, tabular format (in other words, has distinct rows and columns).
+
+**Use a [data list](/components/data-list/design-guidelines) when**:
+* The information you want to display cannot easily be organized into columns, or data is less structured. 
+
+### Using lists and tables in a page
+Lists and tables should be placed in the body of a page. The width should be set by the containing element.
+
+<img src="./img/data-table-example.png"  alt="Compact data table example"  width="1500"/>
+
+In this example, a table is positioned in the body of a page in a card.
+
+## Variations
+PatternFly supports 2 main types of tables:
+
+1. **[Compact table](#compact-spacing):** when you want to show as much data per page as possible.
+2. **[Default table](#default-spacing):** when you don’t have to minimize paging.
+
+See [when to use compact vs. default spacing](#compact-vs-default-spacing) for more information about the styling and usage.
+
+<img src="./img/compact-and-default-table.png"  alt="Compact and default table"  width="857"/>
+
+### Table capabilities
 Every table can be extended with these functionalities:
 
 * [Expandable table](#expandable-table)
@@ -55,9 +66,7 @@ Every table can be extended with these functionalities:
 3. **Expansion panel:** Contains details associated with a row. See [expanded panel coloring](#expanded-panel-coloring) for more information.
 
 #### When to use
-
-**Use expandable table rows when:**
-* You have more information than will comfortably fit inside a row.
+* You have more information than what will comfortably fit inside a row.
 * You want to provide a way for advanced users to access information that is not applicable to all users.
 
 #### Expanded panel coloring
@@ -76,7 +85,6 @@ Every table can be extended with these functionalities:
 2. **Expansion panel:** Contains details associated with an expandable item.
 
 #### When to use
-**Use a compound expandable table when:**
 * You want multiple expansion panels that relate to specific table columns.
 * It would not make sense to combine all of this information into a single, simple expansion.
 
@@ -90,11 +98,10 @@ The actionable table provides checkboxes or radio buttons that enable users to s
 3. **Radio button**: Enables a user to select a single row at a time. Use when only one row can be selected at a time.
 3. **Global actions:** Actions that can be applied to **all** selected items.  If actions in the table are restricted to a single row or object, keep the actions at the row kebab level, instead of in the toolbar.
 
-#### When to use and when not
-**Use an actionable table when:**
+#### When to use 
 * You need to enable a user to select one or more items in the table, for example to make selections in a wizard, or to carry out actions in a full page table.
 
-**Don't use an actionable table when:**
+#### When not to use
 * Users can not take any actions on table items/rows.
 
 ### Sorting by columns
@@ -123,9 +130,10 @@ Adding the ability to favorite is possible for any table variation. Users can se
 2. **Favorites column header (optional):** Allows users to sort by favorites.
 
 #### When to use
-**Use a table with favorites when:**
 * Users may want to easily access their most used/viewed items in a table.
 * You have a long list of items and want to favorite items by default for discoverability.
+
+## Spacing
 
 ### Compact vs. default spacing
 Whether to use a table/data list with compact or default spacing is up to you and your use case. However, here is some guidance for when to use which option. You can see examples of each option for comparison.
@@ -167,17 +175,5 @@ The PatternFly table is designed to be fully responsive. When columns no longer 
 
 <img src="./img/Mobile-data-table-example.png"  alt="Mobile data table"  width="375"/>
 
-## Using lists and tables in a page
-Lists and tables should be placed in the body of a page. The width should be set by the containing element.
 
-<img src="./img/data-table-example.png"  alt="Compact data table example"  width="1500"/>
 
-In this example, a table is positioned in the body of a page in a card.
-
-### When to use a table vs. a data list
-
-**Use a table when**:
-* The information you want to display fits into a structured, tabular format (in other words, has distinct rows and columns).
-
-**Don't use a table**:
-* For less structured or variably structured data that cannot be easily organized into columns. In these situations, use a [data lists](/components/data-list/design-guidelines).
