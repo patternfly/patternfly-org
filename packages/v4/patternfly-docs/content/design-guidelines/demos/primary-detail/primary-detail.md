@@ -16,9 +16,9 @@ A primary component sits in a container on the page, and detail components typic
 When the page content has a white background, the drawer can be placed on the same level as the primary content with a divider line. Alternatively, the drawer can be elevated on top of the primary content. We recommend having a title in the drawer that relates back to the selected primary item. 
  
 **Common primary components:**
-- [Data list](/components/data-list) *
-- [Data table](/components/table) * 
-- [Card view](/components/card) *
+- [Data list](/components/data-list)*
+- [Data table](/components/table)* 
+- [Card view](/components/card)*
 - [Simple list](/components/simple-list)/[light nav](/components/navigation/react-demos/#legacylight-nav)
  
 *Any of the above may have associated toolbars. A toolbar can be placed in the card header of a component in the primary, but it may need to be placed in a page header if there is a card view or if there is the ability to switch between views (and/or toggle open and close the details drawer). 
@@ -28,7 +28,7 @@ When the page content has a white background, the drawer can be placed on the sa
 - [Description list](/components/description-list)
 - [Charts or graphs](/charts/about)
 - [Input forms](/components/input-group)
-- [Text](components/text)
+- [Text](/components/text)
  
 ## Usage
 Use a primary-detail layout when viewing details from an item in a large list or group on the same page. A primary-detail layout is useful for navigating back and forth through a list and making edits in the details of each list item, without losing context of the larger list. Primary-detail layouts look best on wider screens, but they can be responsive, too.
