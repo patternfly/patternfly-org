@@ -6,7 +6,7 @@ section: demos
 A **primary-detail layout** is an interface that shows a list of items and the corresponding details of the selected item.
  
 ## Elements
-A primary component sits in a container on the page, and detail components typically live in a slide-out [drawer](/components/drawer/react).
+A primary component sits in a container on the page, and detail components typically live in a slide-out [drawer](/components/drawer).
 
 <img src="./img/primary-detail-in-data-list.png"  alt="Image showing primary-detail component in data list"  width="1500"/>  
 
@@ -16,19 +16,19 @@ A primary component sits in a container on the page, and detail components typic
 When the page content has a white background, the drawer can be placed on the same level as the primary content with a divider line. Alternatively, the drawer can be elevated on top of the primary content. We recommend having a title in the drawer that relates back to the selected primary item. 
  
 **Common primary components:**
-- Data list*
-- Data table*
-- Card view *
-- Simple list/light nav
+- [Data list](/components/data-list) *
+- [Data table](/components/table) * 
+- [Card view](/components/card) *
+- [Simple list](/components/simple-list)/[light nav](/components/navigation/react-demos/#legacylight-nav)
  
 *Any of the above may have associated toolbars. A toolbar can be placed in the card header of a component in the primary, but it may need to be placed in a page header if there is a card view or if there is the ability to switch between views (and/or toggle open and close the details drawer). 
  
 **Common detail components:**
-- Markdown text form or code editor
-- Description list
-- Charts or graphs
-- Input forms
-- Text
+- Markdown text form or [code editor](/components/code-editor)
+- [Description list](/components/description-list)
+- [Charts or graphs](/charts/about)
+- [Input forms](/components/input-group)
+- [Text](components/text)
  
 ## Usage
 Use a primary-detail layout when viewing details from an item in a large list or group on the same page. A primary-detail layout is useful for navigating back and forth through a list and making edits in the details of each list item, without losing context of the larger list. Primary-detail layouts look best on wider screens, but they can be responsive, too.
@@ -58,7 +58,7 @@ In cases where the detail component in desktop view is non-dismissible and activ
  
 ## Variations
  
-### Selecting rows
+### Selectable rows
 Row selection differs from bulk/checkbox selection, and both selection types operate independent of each other.
  
 When checkbox select and row select are both available in a primary-detail layout, the details pane will populate an empty state and guide users to either make an action in the toolbar or clear the selected checkboxes to return to the selected row’s detail view. This empty state should show to alleviate confusion for the different select states when both are present in a table.
