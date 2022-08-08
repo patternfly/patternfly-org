@@ -22,14 +22,14 @@ A **tile** component is a form of selection that can be used in place of a [radi
 
 **Example**
 
- <img src="./img/tileexample.png" alt="behavior example" width="1001" />
+ <img src="./img/tileexample.png" alt="behavior example" width="783" />
 
 
 ## Behavior
 
 As the user hovers over the tile component, the color will change insinuating its clickability. Once the user chooses the title, it will appear with a blue border showing it has been selected. 
 
-  <img src="./img/behavior.png" alt="behavior example" width="222" />
+  <img src="./img/behavior.png" alt="behavior example" width="230" />
 
 ## Variations 
 
@@ -43,7 +43,7 @@ As the user hovers over the tile component, the color will change insinuating it
 
 ### Icon
 
-<img src="./img/icon.png" alt= "icon example" width="222" />
+<img src="./img/icon.png" alt= "icon example" width="230" />
 
 
 
