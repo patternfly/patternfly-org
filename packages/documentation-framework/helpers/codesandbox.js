@@ -130,6 +130,7 @@ function getReactParams(title, code, scope, lang) {
     // Ignore
   }
 
+  // Update image imports to point to pf.org
   const imgImportRegex = /import\s*(\w*).*['"](.*)(\.(png|jpe?g|webp|gif|svg))['"]/g;
   let imgImportMatch;
   while ((imgImportMatch = imgImportRegex.exec(code))) {
@@ -137,6 +138,19 @@ function getReactParams(title, code, scope, lang) {
     code = code.replace(imgImportMatch[0], `const ${imgName} = "https://www.patternfly.org/v4${scope[imgName]}"`);
   }
 
+  const relImportRegex = /(?<=import[\s*{])([\w*{}\n\r\t, ]+)(?=[\s*]from?[\s*]["']([\.+\/+]+.*)["'])/gm;
+  let relImportMatch;
+  while (relImportMatch = relImportRegex.exec(code)) {
+    const relImportPath = relImportMatch[2];
+    console.log({relImportMatch, relImportPath, scope});
+    if (scope[relImportPath]) {
+
+      code = code.replace(relImportPath, scope[relImportPath]);
+      console.log({code});
+    }
+  }
+
+  
   const dependencies = {
     '@patternfly/react-core': versions.Releases[0].versions['@patternfly/react-core']
   };
