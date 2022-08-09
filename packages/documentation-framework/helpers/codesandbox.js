@@ -142,11 +142,8 @@ function getReactParams(title, code, scope, lang) {
   let relImportMatch;
   while (relImportMatch = relImportRegex.exec(code)) {
     const relImportPath = relImportMatch[2];
-    console.log({relImportMatch, relImportPath, scope});
     if (scope[relImportPath]) {
-
       code = code.replace(relImportPath, scope[relImportPath]);
-      console.log({code});
     }
   }
 
