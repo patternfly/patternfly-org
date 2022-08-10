@@ -7,7 +7,7 @@ section: components
 
 Form control can be applied to various input components, including text boxes, dropdowns/select lists, and text areas.
 
-## Control types
+## Variations
 While form control styles differ slightly depending on the component, they all use some combination of underlines, color, and icons to give users **feedback** on their inputs and selections. For example, if a user types an invalid string into a text box, the box changes state to indicate the error.
 
 <img src="./img/formControlTypes.png" alt="Form control types" width="661px"/>
