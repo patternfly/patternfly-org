@@ -117,6 +117,7 @@ module.exports = (_env, argv) => {
         'client-styles': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.css.js'),
         './routes-client': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.routes.js'),
         './routes-generated': path.resolve(process.cwd(), 'patternfly-docs/generated/index.js'),
+        '@patternfly/react-core/next': '@patternfly/react-core/dist/js/next/index.js',
         'lodash': 'lodash-es' // Sanely bundle react-charts.
       },
       modules: [
