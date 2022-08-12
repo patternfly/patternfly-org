@@ -17,6 +17,10 @@ module.exports = (sourceMD, sourceProps) => {
     .replace('package.json', 'pages');
   sourceMD(path.join(themePagesPath, '*.md'), 'pages-overview');
 
+  // All components MD
+  sourceMD(path.join(__dirname, '../patternfly-docs/pages/componentcatalog.md'), 'index');
+
+
   // Core MD
   const coreDocsPath = require
     .resolve('@patternfly/patternfly/package.json')

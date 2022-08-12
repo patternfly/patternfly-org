@@ -8,7 +8,6 @@ const routes = {
   ...clientRoutes,
   ...generatedRoutes
 };
-console.log({routes});
 
 for (let route in routes) {
   const pageData = routes[route];
@@ -50,7 +49,6 @@ const groupedRoutes = Object.entries(routes)
 
     return accum;
   }, {});
-  console.log(groupedRoutes);
 
 const sourceOrder = {
   react: 1,

@@ -1,27 +1,22 @@
-import React from "react";
-import { groupedRoutes } from '../../routes';
-import { 
-  Button,
-  Card,
-  CardTitle,
-  CardBody,
-  Drawer,
-  DrawerPanelBody,
-  DrawerPanelContent,
-  DrawerContent,
-  DrawerContentBody,
-  DrawerHead,
-  DrawerActions,
-  DrawerCloseButton,
-  Gallery,
-  GalleryItem,
-  SearchInput
-} from '@patternfly/react-core';
+---
+id: View all components
+title: All components
+section: components
+---
+
+import { groupedRoutes } from '@patternfly/documentation-framework/routes';
+import {  Button, Card, CardTitle, CardBody, Drawer, DrawerPanelBody, DrawerPanelContent, DrawerContent, DrawerContentBody, DrawerHead, DrawerActions, DrawerCloseButton, Gallery, GalleryItem, SearchInput } from '@patternfly/react-core';
 import { Link } from '@reach/router';
 
-const { components } = groupedRoutes;
+```js
+import React from "react";
+import { groupedRoutes } from '@patternfly/documentation-framework/routes';
+import {  Button, Card, CardTitle, CardBody, Drawer, DrawerPanelBody, DrawerPanelContent, DrawerContent, DrawerContentBody, DrawerHead, DrawerActions, DrawerCloseButton, Gallery, GalleryItem, SearchInput } from '@patternfly/react-core';
+import { Link } from '@reach/router';
 
-export const LogGroupedRoutes = () => {
+
+LogGroupedRoutes = () => {
+  const { components } = groupedRoutes;
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCard, setSelectedCard] = React.useState('');
   const [isExpanded, setIsExpanded] = React.useState(false);
@@ -114,3 +109,4 @@ export const LogGroupedRoutes = () => {
     </>
   )
 }
+```
