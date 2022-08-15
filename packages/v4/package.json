@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@patternfly/documentation-framework": "^1.1.29",
-    "@patternfly/react-docs": "5.85.2",
+    "@patternfly/react-docs": "5.92.9",
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0"
   },
