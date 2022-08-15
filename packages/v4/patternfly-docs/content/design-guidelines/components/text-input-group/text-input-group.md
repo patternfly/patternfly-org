@@ -11,7 +11,7 @@ A **text input group** is a more flexible composable version of a [text input](/
 
 1. **Icon (optional):** An icon can be used in front of the input field to identify the purpose of the text input.
 
-2. **Input field:** The input field itself can be customized to use multiple text styles as shown here. This styling is not possible using a standard text input.
+2. **Input field:** The input field itself can be customized to use multiple text styles as shown here to provide hints for auto-completion or similar use cases. This styling is not possible using a standard text input.
 
 3. **Clear button (optional):** A clear button can be added to clear the contents of the field.
 
@@ -31,7 +31,7 @@ See the [attribute-value filtering demo](/components/text-input-group/react-demo
 
 ### Auto-complete search
 
-The text input group can also be used to create an auto-complete search component where suggestions are presented as a dropdown list as the user types.
+The text input group can also be used to create an auto-complete search component where suggestions are presented as a dropdown list as the user types. When only a single suggestion is available, the user can complete the entry without further typing by pressing the Tab key.
 
 <img src="./img/auto-complete-search.png" alt="auto complete search" width="464"/>
 
