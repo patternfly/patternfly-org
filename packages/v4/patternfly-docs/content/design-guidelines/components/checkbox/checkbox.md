@@ -3,8 +3,6 @@ id: Checkbox
 section: components
 ---
 
-A **checkbox** is used to select a single item or multiple items, typically to choose elements to perform an action or to reflect a binary setting.
-
 ## Usage
 Checkboxes allow users to choose **1 or more items** from a list of options.
 

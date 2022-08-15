@@ -2,8 +2,6 @@
 id: Action list
 section: components
 ---
-An **action list** is a group of actions with set spacing.
-
 ## Usage
 Use an action list to determine which spacing guidelines to use for a group of actions in [toolbars](/components/toolbar), [modals](/components/modal), [forms](/components/form), [data lists](/components/data-list), [wizards](/components/wizard), and more. Using an action list allows you to know what spacing to use for a group of actions, depending on your use case. 
 

@@ -1,0 +1,350 @@
+{
+  "about-modal": {
+    "image": "about-modal.png",
+    "description": "An **about modal** displays information about an application like product version number(s), as well as any appropriate legal text."
+  },
+  "accordian": {
+    "image": "accordian.png",
+    "description": "An **accordion** is an interactive container that expands and collapses to hide or reveal nested content. It takes advantage of progressive disclosure to help reduce page scrolling, by allowing users to choose whether they want to show or hide more detailed information as needed."
+  },
+  "action-list": {
+    "image": "action-list.png",
+    "description": "An **action list** is a group of actions with set spacing."
+  },
+  "alert-group": {
+    "image": "alert-group.png",
+    "description": "An **alert group** stacks and positions 2 or more alerts, either in a layer over the main content of a page or inline with the page content. Alert groups should always rank alerts by age, stacking new alerts on top of old ones as they surface."
+  },
+  "alert": {
+    "image": "alert.png",
+    "description": "An **alert** is a notification that provides brief information to the user without blocking their workflow."
+  },
+  "application-launcher": {
+    "image": "application-launcher.png",
+    "description": "An **application launcher** is an optional utility menu item that allows a user to launch a separate web application in a new browser window."
+  },
+  "avatar": {
+    "image": "avatar.png",
+    "description": "An **avatar** is a visual used to represent a user. It may contain an image or a placeholder graphic."
+  },
+  "back-to-top": {
+    "image": "back-to-top.png",
+    "description": "The **back to top** component is a shortcut that allows users to quickly navigate to the top of a lengthy content page. "
+  },
+  "backdrop": {
+    "image": "backdrop.png",
+    "description": "A **backdrop** is used to screen the main content of a page when a modal overlay is opened. It prevents the user from doing other work on the page until the modal is dismissed."
+  },
+  "background-image": {
+    "image": "background-image.png",
+    "description": "A **background image** allows you to place an image in the background of your page or area of a page."
+  },
+  "badge": {
+    "image": "badge.png",
+    "description": "A **badge** is used to annotate other information like a label or an object name."
+  },
+  "banner": {
+    "image": "banner.png",
+    "description": "A **banner** is a 1-line, full color, full width container that can be used to communicate short snippets of information to users. Banners are un-intrusive, non-dismissible, and only support link buttons."
+  },
+  "brand": {
+    "image": "brand.png",
+    "description": "A **brand** is used to place a product logotype on a screen."
+  },
+  "breadcrumb": {
+    "image": "breadcrumb.png",
+    "description": "A **breadcrumb** provides page context to help users navigate more efficiently and understand where they are in the application hierarchy."
+  },
+  "button": {
+    "image": "button.png",
+    "description": "A **button** is a box area or text that communicates and triggers user actions when clicked or selected. Buttons can be used to communicate and immediately trigger actions a user can take in an application, like submitting a form, canceling a process, or creating a new object. Buttons can also be used to take a user to a new location, like another page inside of a web application, or an external site such as help or documentation."
+  },
+  "calendar-month": {
+    "image": "calendar-month.png",
+    "description": "A **calendar month** component allows users to select and navigate between days, months and/or years. This component is usually used with the date picker component, to display date options and selections. For more information about usage, view [date picker guidelines](/components/date-picker/design-guidelines)."
+  },
+  "card": {
+    "image": "card.png",
+    "description": "A **card** is a square or rectangular container that can contain any kind of content. Cards symbolize units of information, and each one acts as an entry point for users to access more details. For example, in dashboards and catalog views, cards function as a preview of a detailed page. Cards may also be used in data displays like card views, or for positioning content on a page. "
+  },
+  "checkbox": {
+    "image": "checkbox.png",
+    "description": "A **checkbox** is used to select a single item or multiple items, typically to choose elements to perform an action or to reflect a binary setting."
+  },
+  "chip-group": {
+    "image": "chip-group.png",
+    "description": ""
+  },
+  "chip": {
+    "image": "chip.png",
+    "description": ""
+  },
+  "clipboard-copy": {
+    "image": "clipboard-copy.png",
+    "description": ""
+  },
+  "code-block": {
+    "image": "code-block.png",
+    "description": ""
+  },
+  "code-editor": {
+    "image": "code-editor.png",
+    "description": ""
+  },
+  "context-selector": {
+    "image": "context-selector.png",
+    "description": ""
+  },
+  "data-list": {
+    "image": "data-list.png",
+    "description": ""
+  },
+  "date-picker": {
+    "image": "date-picker.png",
+    "description": ""
+  },
+  "description-list": {
+    "image": "description-list.png",
+    "description": ""
+  },
+  "divider": {
+    "image": "divider.png",
+    "description": ""
+  },
+  "drag-and-drop": {
+    "image": "drag-and-drop.png",
+    "description": ""
+  },
+  "drawer": {
+    "image": "drawer.png",
+    "description": ""
+  },
+  "dropdown": {
+    "image": "dropdown.png",
+    "description": ""
+  },
+  "dual-list-selector": {
+    "image": "dual-list-selector.png",
+    "description": ""
+  },
+  "empty-state": {
+    "image": "empty-state.png",
+    "description": ""
+  },
+  "expandable-section": {
+    "image": "expandable-section.png",
+    "description": ""
+  },
+  "file-upload-multiple": {
+    "image": "file-upload-multiple.png",
+    "description": ""
+  },
+  "file-upload": {
+    "image": "file-upload.png",
+    "description": ""
+  },
+  "form-control": {
+    "image": "form-control.png",
+    "description": ""
+  },
+  "form": {
+    "image": "form.png",
+    "description": ""
+  },
+  "helper-text": {
+    "image": "helper-text.png",
+    "description": ""
+  },
+  "hint": {
+    "image": "hint.png",
+    "description": ""
+  },
+  "inline-edit": {
+    "image": "inline-edit.png",
+    "description": ""
+  },
+  "input-group": {
+    "image": "input-group.png",
+    "description": ""
+  },
+  "jump-links": {
+    "image": "jump-links.png",
+    "description": ""
+  },
+  "label-group": {
+    "image": "label-group.png",
+    "description": ""
+  },
+  "label": {
+    "image": "label.png",
+    "description": ""
+  },
+  "list": {
+    "image": "list.png",
+    "description": ""
+  },
+  "login-page": {
+    "image": "login-page.png",
+    "description": ""
+  },
+  "masthead": {
+    "image": "masthead.png",
+    "description": ""
+  },
+  "menu-toggle": {
+    "image": "menu-toggle.png",
+    "description": ""
+  },
+  "menu": {
+    "image": "menu.png",
+    "description": ""
+  },
+  "modal": {
+    "image": "modal.png",
+    "description": ""
+  },
+  "navigation": {
+    "image": "navigation.png",
+    "description": ""
+  },
+  "notification-badge": {
+    "image": "notification-badge.png",
+    "description": ""
+  },
+  "notification-drawer": {
+    "image": "notification-drawer.png",
+    "description": ""
+  },
+  "number-input": {
+    "image": "number-input.png",
+    "description": ""
+  },
+  "options-menu": {
+    "image": "options-menu.png",
+    "description": ""
+  },
+  "overflow-menu": {
+    "image": "overflow-menu.png",
+    "description": ""
+  },
+  "page": {
+    "image": "page.png",
+    "description": ""
+  },
+  "pagination": {
+    "image": "pagination.png",
+    "description": ""
+  },
+  "panel": {
+    "image": "panel.png",
+    "description": ""
+  },
+  "popover": {
+    "image": "popover.png",
+    "description": ""
+  },
+  "progress-stepper": {
+    "image": "progress-stepper.png",
+    "description": ""
+  },
+  "progress": {
+    "image": "progress.png",
+    "description": ""
+  },
+  "radio": {
+    "image": "radio.png",
+    "description": ""
+  },
+  "search-input": {
+    "image": "search-input.png",
+    "description": ""
+  },
+  "select": {
+    "image": "select.png",
+    "description": ""
+  },
+  "sidebar": {
+    "image": "sidebar.png",
+    "description": ""
+  },
+  "simple-list": {
+    "image": "simple-list.png",
+    "description": ""
+  },
+  "skeleton": {
+    "image": "skeleton.png",
+    "description": ""
+  },
+  "skip-to-content": {
+    "image": "skip-to-content.png",
+    "description": ""
+  },
+  "slider": {
+    "image": "slider.png",
+    "description": ""
+  },
+  "spinner": {
+    "image": "spinner.png",
+    "description": ""
+  },
+  "switch": {
+    "image": "switch.png",
+    "description": ""
+  },
+  "tab-content": {
+    "image": "tab-content.png",
+    "description": ""
+  },
+  "table": {
+    "image": "table.png",
+    "description": ""
+  },
+  "tabs": {
+    "image": "tabs.png",
+    "description": ""
+  },
+  "text-area": {
+    "image": "text-area.png",
+    "description": ""
+  },
+  "text-input-group": {
+    "image": "text-input-group.png",
+    "description": ""
+  },
+  "text-input": {
+    "image": "text-input.png",
+    "description": ""
+  },
+  "text": {
+    "image": "text.png",
+    "description": ""
+  },
+  "tile": {
+    "image": "tile.png",
+    "description": ""
+  },
+  "toggle-group": {
+    "image": "toggle-group.png",
+    "description": ""
+  },
+  "toolbar": {
+    "image": "toolbar.png",
+    "description": ""
+  },
+  "tooltip": {
+    "image": "tooltip.png",
+    "description": ""
+  },
+  "tree-view": {
+    "image": "tree-view.png",
+    "description": ""
+  },
+  "truncate": {
+    "image": "truncate.png",
+    "description": ""
+  },
+  "wizard": {
+    "image": "wizard.png",
+    "description": ""
+  }
+}
