@@ -3,7 +3,7 @@ id: Text input group
 section: components
 ---
 
-A **text input group** is a more flexible composable version of a [text input](/components/text-input). It enables consumers of PatternFly to build custom inputs for filtering and similar use cases by placing elements like icons, [chips groups](components/chip-group) and [buttons](components/button) within a text input.
+A **text input group** is a more flexible composable version of a [text input](/components/text-input). It enables consumers of PatternFly to build custom inputs for filtering and similar use cases by placing elements like icons, [chip groups](/components/chip-group) and [buttons](/components/button) within a text input.
 
 ## Elements
 
