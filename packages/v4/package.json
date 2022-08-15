@@ -2,7 +2,7 @@
   "name": "patternfly-org-4",
   "description": "Documentation for PatternFly 4.",
   "private": true,
-  "version": "4.12.28",
+  "version": "4.12.29",
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
@@ -17,7 +17,7 @@
     "screenshots": "pf-docs-framework screenshots"
   },
   "dependencies": {
-    "@patternfly/documentation-framework": "^1.1.28",
+    "@patternfly/documentation-framework": "^1.1.29",
     "@patternfly/react-docs": "5.85.2",
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0"
