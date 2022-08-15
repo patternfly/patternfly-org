@@ -59,7 +59,7 @@ Popovers are triggered when a user clicks on the popover icon and are dismissed 
  
 <img src="./img/popover-example.png" alt="popover example with placeholder text for the title and informational text" width="300"/>
  
-## Content Considerations
+## Content considerations
 - Popover copy is longer than tooltip copy, but it should still be concise. Aim for 1–3 sentences. 
 - Write in full sentences with punctuation.
 - Include relevant links to documentation when necessary.   
