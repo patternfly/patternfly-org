@@ -9,6 +9,8 @@ const routes = {
   ...generatedRoutes
 };
 
+console.log({routes});
+
 for (let route in routes) {
   const pageData = routes[route];
   if (pageData.SyncComponent) {

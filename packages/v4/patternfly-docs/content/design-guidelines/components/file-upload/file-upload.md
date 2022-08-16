@@ -2,7 +2,6 @@
 id: File upload
 section: components
 ---
-A **file upload** component allows the users to upload a single file into the browser. 
 
 ## Elements
 <img src="./img/Fileupload.png" alt="File Upload" width="442"/> 

@@ -4,8 +4,6 @@ section: components
 related: ['Page', 'Breadcrumb', 'Tabs']
 ---
 
-A **navigation** organizes an application’s structure and content, making it easy to find information and accomplish tasks. Navigation communicates relationships, context, and actions a user can take within an application.
-
 ## Elements
 
 <img src="./img/nav-elements.png" alt="Examples of different navigations offered by PatternFly" width="990"/>

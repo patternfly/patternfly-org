@@ -1,3 +1,5 @@
+const componentInfo = require('./components-info.json');
+
 // This module is shared between NodeJS and babelled ES5
 module.exports = {
   pathPrefix: '/v4',
@@ -12,6 +14,7 @@ module.exports = {
   hasVersionSwitcher: true,
   hasDesignGuidelines: true,
   hasDarkThemeSwitcher: false,
+  componentInfo,
   sideNavItems: [
     { section: 'get-started' },
     { section: 'developer-resources' },

@@ -3,8 +3,6 @@ id: Code editor
 section: components
 ---
 
-A **code editor** is a versatile text editor that allows for editing various languages. The code editor is built on top of the [Monaco Editor](https://microsoft.github.io/monaco-editor/).
-
 ## Elements
 By default, the bulk of the code editor is the text editor itself. The component is extremely flexible, so many of the features are optional. Much of the functionality of the Monaco Editor has been carried over to the code editor, so it’s possible to further customize the component based on their options.
 

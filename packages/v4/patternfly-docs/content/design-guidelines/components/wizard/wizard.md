@@ -3,8 +3,6 @@ id: Wizard
 section: components
 ---
 
-A **wizard** provides a guided workflow that offers a path to complete a task, create an object or objects, or finish a series of steps for some other outcome. Wizards should incite trust in the user and guide them through an otherwise overwhelming experience.
-
 ## Elements
 Except where noted, modal and in-page wizards have the same elements and behaviors. For the sake of simplicity, all screens here show the modal wizard.
 
