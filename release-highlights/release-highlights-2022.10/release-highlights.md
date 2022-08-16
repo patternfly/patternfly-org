@@ -43,7 +43,7 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 ### 2022.11 (August 26)
 
-* [Truncation/disclosure box with inline "show more/less" action](https://github.com/patternfly/patternfly/issues/4881) - will create the ability to truncate a block of text and allow the user to display the full content upon clicking "Show more."
+* [Truncation/disclosure box with inline "show more/less" action](https://github.com/patternfly/patternfly-react/issues/7780) - will create the ability to truncate a block of text and allow the user to display the full content upon clicking "Show more."
 
 * [Timestamp component](https://github.com/patternfly/patternfly-react/issues/7729) - will add a new component to convert a raw time value into a formatted string for displaying to the user.
 
@@ -51,9 +51,9 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 ### 2022.12 (September 16)
 
-* [Search input - dark variant](https://github.com/patternfly/patternfly/issues/4705) - adding a dark variant of the search input that can be used in the masthead or above the vertical navigation menu.
+* [Search input - expandable masthead variant](https://github.com/patternfly/patternfly-react/issues/7380) - adding a variant of the search input that can be used in the masthead and expanded or collapsed inline with other elements.
 
-* [Checkbox - add ability to indicate they are required](https://github.com/patternfly/patternfly/issues/4845) - want to add the ability to add the required indicator (red asterisk) to a checkbox label. This is useful when the user must acknowledge certain information (e.g. terms and conditions) before proceeding.
+* [Checkbox - add ability to indicate they are required](https://github.com/patternfly/patternfly-react/issues/7830) - want to add the ability to add the required indicator (red asterisk) to a checkbox label. This is useful when the user must acknowledge certain information (e.g. terms and conditions) before proceeding.
 
 
 
