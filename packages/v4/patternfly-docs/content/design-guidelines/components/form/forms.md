@@ -113,7 +113,9 @@ Form submit buttons should be disabled until a user starts filling out the form 
 * For a submitted form, disable the submit button while a user's responses are processing to avoid a duplicate submission.
 * For a processing form, use feedback messages and progress indicators like spinners or progress bars if the processing time might exceed user expectations.
 
-## Form sections
+## Usage
+
+### Form sections
 
 Form sections sort form fields into non-hierarchical groups based on common information type, step, or visual preference. Form sections are ideal for breaking long forms into simple, evenly spaced segments with all information exposed. 
 
@@ -125,7 +127,7 @@ To distinguish between form sections, title them based on the reason you grouped
 
 To view an interactive example of form sections, see our [form sections demo](/components/form/#form-sections).
 
-## Field groups
+### Field groups
 
 Field groups sort form fields into hierarchical, collapsible groups based on theme. All field groups are nested and indented by default, so they create a clearer information architecture between groups. Since all elements won't be visible at all times, always title field groups based on their purpose. Field groups are ideal for building a more dimensional form structure or condensing lengthy forms into digestible, expandable segments.
 
@@ -147,7 +149,7 @@ Example: For a form with multiple field groups, distinguish between each one by 
 
 To view an interactive example of field groups, see our [field groups demo](/components/form#field-groups).
 
-## User guidance
+### User guidance
 
 Due to their interactive nature, forms often include features that help communicate field importance and guidance as users complete them. 
 
@@ -157,7 +159,7 @@ Types of user guidance include:
 * **User help:** Assists users in context through placeholder text, helper text, and popovers.
 * **Progressive disclosure:** Hides and shows fields based on user selections to simplify their workflow.
 
-### Required fields
+#### Required fields
 
 Reserve required fields for information vital to user success. Indicate a required field with an asterisk ( * ) to the right of its field label.
 
@@ -168,12 +170,12 @@ If all form fields are required, don’t use an asterisk for each one. Instead, 
 <img src="./img/required-optional-forms.png" alt="Example of two forms with an indication at the top of whether all fields are required or all fields are optional"/>
 
 
-### User help
+#### User help
 
 There are 3 different methods for providing assistance within a form: [Placeholder text](#placeholder-text), [helper text](#helper-text), and [popovers](#popovers).
 
 
-#### Placeholder text
+##### Placeholder text
 
 <img src="./img/placeholder-text.png" alt="Example of a date placeholder text inside text input field" width="323"/>
 
@@ -200,7 +202,7 @@ Examples:
 
 For more information about writing effective placeholder text, see the [content](#content) section.
 
-#### Helper text
+##### Helper text
 
 <img src="./img/helper-text.png" alt="Example of helper text underneath the text input field" width="323"/>
 
@@ -210,7 +212,7 @@ Align helper text with the specific input for which it offers assistance. If you
 
 For more information about writing effective helper text, see the [content](#content) section.
 
-#### Popovers
+##### Popovers
 
 Use a [popover](/components/popover/design-guidelines) for fields that might require additional background or explanation. Popovers may also link to external help pages or other related documentation. 
 
@@ -228,12 +230,12 @@ Never hide critical information inside a popover, since popovers only surface wh
 
 For more information about writing effective popovers, see the [content](#content) section.
 
-### Progressive disclosure
+#### Progressive disclosure
 Use progressive disclosure to hide and show form fields based on a user’s selection to keep their workflow short and allow them to focus on fields relevant to them. Progressive disclosure also avoids using color to indicate whether or not a field is available, making forms more accessible for users with visual impairments.
 
  <img src="./img/progressive-disclosure.png" alt="Example of progressive disclosure with one radio button selected to only show the inputs associated with that option" width="562"/>
 
-## Errors and validation
+### Errors and validation
 
 When a form field submission results in an error, let users know as soon as possible and as close as possible to the error. Default to presenting error states on a form using field level errors whenever possible. 
 
@@ -250,7 +252,7 @@ Example: Instead of “Invalid input,” provide an error message that includes 
 
 Errors can be validated at two points in the workflow: On loss of focus or on submission. The error state you use depends on whether validation happens on the client side (loss of focus) or server side (on submission).
 
-### Error validation on loss of focus
+#### Error validation on loss of focus
 Validation on loss of focus occurs as soon as a field loses focus. It alerts users of errors immediately after they complete their input through inline validation, allowing them to quickly see and address issues.
 
 Validate errors on loss of focus when:
@@ -259,7 +261,7 @@ Validate errors on loss of focus when:
 * A user leaves a required field blank.
 * A user leaves a required field incomplete.
 
-### Error validation on submission
+#### Error validation on submission
 Validation on submission occurs when a user attempts to submit a form. In this scenario, the user completes the form in its entirety and the page reloads with any errors detected.
 
 For validation on submission, supplement field level errors with an [inline alert](/components/alert/design-guidelines#inline-alerts) to make it simple for the user to quickly identify and address areas that need attention. The inline alert should be placed below the form’s header and description, and it should equal the total width of the form. 
@@ -330,7 +332,7 @@ Never design multi-column forms to read like a magazine or newspaper column, whe
 
 <img src="./img/multi-column-read.png" alt="Example of how multi-column forms should be read and presented, demonstrated by arrows that follow a user's path of consumption"/>
 
-## Content
+## Content considerations
 
 When writing form content, use your understanding of the user’s task and context to plan your content hierarchy. As a user moves through a form, they input and select information based on the content provided, almost like a conversation. 
 
