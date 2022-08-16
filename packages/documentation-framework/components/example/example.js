@@ -79,7 +79,9 @@ export const Example = ({
   // Content that appears between h3 and code block to explain example
   children,
   // Show dark theme switcher on full page examples
-  hasDarkThemeSwitcher = process.env.hasDarkThemeSwitcher
+  hasDarkThemeSwitcher = process.env.hasDarkThemeSwitcher,
+  // Pass through descriptions/images for component gallery
+  componentInfo = process.env.componentInfo
 }) => {
   if (isFullscreenPreview) {
     isFullscreen = false;
@@ -95,6 +97,8 @@ export const Example = ({
       </CodeBlock>
     );
   }
+
+  console.log({componentInfo});
 
   const [editorCode, setEditorCode] = React.useState(code);
   const loc = useLocation();
