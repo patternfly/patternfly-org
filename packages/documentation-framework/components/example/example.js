@@ -97,20 +97,11 @@ export const Example = ({
   const [editorCode, setEditorCode] = React.useState(code);
   const loc = useLocation();
 
-  // Build unique list of module components for when core module names overlap with "next" module names.
-  const moduleComponents = Object.entries({ ...reactCoreModule, ...reactTableModule }).reduce((acc, [componentName, componentValue]) => {
-    if (source === 'react-next' && Object.keys(reactCoreNextModule).includes(componentName)) {
-      acc[componentName] = reactCoreNextModule[componentName];
-    } else {
-      acc[componentName] = componentValue;
-    }
-
-    return acc;
-  }, {});
-
   const scope = {
     ...liveContext,
-    ...moduleComponents
+    ...reactCoreModule,
+    ...reactTableModule,
+    ...(source === 'react-next' ? reactCoreNextModule : {})
   };
 
   let livePreview = null;
