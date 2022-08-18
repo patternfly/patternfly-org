@@ -36,7 +36,6 @@
     "surge": "^0.21.3"
   },
   "resolutions": {
-    "node-sass": ">=6.0.1",
-    "@patternfly/react-core": "^4.232.0"
+    "node-sass": ">=6.0.1"
   }
 }
