@@ -78,6 +78,8 @@ export const Example = ({
   liveContext,
   // Content that appears between h3 and code block to explain example
   children,
+  // Show dark theme switcher on full page examples
+  hasDarkThemeSwitcher = process.env.hasDarkThemeSwitcher
 }) => {
   if (isFullscreenPreview) {
     isFullscreen = false;
