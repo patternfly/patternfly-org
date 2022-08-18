@@ -46,7 +46,9 @@ async function buildWebpack(webpackConfig) {
 async function execFile(file, args) {
   const start = new Date();
   return new Promise((res, rej) => {
-    const child = fork(path.join(__dirname, file), args);
+    const child = fork(path.join(__dirname, file), args, {
+      execArgv: ['--max-old-space-size=4096']
+    });
     function errorHandler(err) {
       console.error(err);
       process.exit(1);
