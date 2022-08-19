@@ -52,7 +52,7 @@ PatternFly supports a disabled tab variation for all tab types. A disabled tab c
 
 ### Horizontal overflow
 
-Use horizontal overflow menu if there is not enough space on a screen to display all tabs. The overflow menu contains all the remaining tabs and is always placed as the last tab on the right. Selecting options from a menu changes the name of the main tab to the selected one. Show overflowing tab count next to overflow menu name, if it’s needed.
+Horizontal overflow menus are useful when there is not enough space on a screen to display all tabs. The overflow menu contains all the remaining tabs and is always placed as the last tab on the right. Selecting options from overflow menu changes the name of the main tab to the selected one. You may show an overflowing tab count next to the overflow menu name, if needed.
 
 <img src="./img/Horizontal-overflow.png" alt="Horizontal overflow interaction" width="735"/>
 
