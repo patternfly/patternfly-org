@@ -16,6 +16,7 @@ You can use as many tabs as you want in a page, although it is recommended you k
 - [Disabled tabs](#disabled-tabs)
 - [Primary tabs](#primary-tabs)
 - [Secondary tabs](#secondary-tabs)
+- [Horizontal overflow](#horizontal-overflow)
 
 
 ### Default tabs
@@ -48,6 +49,12 @@ Vertical tabs are placed on the left hand side of a page or container.
 PatternFly supports a disabled tab variation for all tab types. A disabled tab can be used to indicate that a section is unavailable to the user, usually due to a lack of permissions. Information to explain why the tab is disabled may be provided by using a tooltip on the element.
 
 <img src="./img/disabled-tab.png" alt="Example of disabled tab with tooltip" width="986"/>
+
+### Horizontal overflow
+
+Horizontal overflow menus are useful when there is not enough space on a screen to display all tabs. The overflow menu contains all the remaining tabs and is always placed as the last tab on the right. Selecting options from overflow menu changes the name of the main tab to the selected one. You may show an overflowing tab count next to the overflow menu name, if needed.
+
+<img src="./img/Horizontal-overflow.png" alt="Horizontal overflow interaction" width="735"/>
 
 ### Hierarchy
 
