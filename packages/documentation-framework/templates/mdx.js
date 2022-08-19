@@ -152,8 +152,7 @@ export const MDXTemplate = ({
       </PageSection>
       {!isSinglePage && summary && (
         <PageSection variant={PageSectionVariants.light}>
-          {/* <p dangerouslySetInnerHTML={{__html: summary}}></p> */}
-          { summary }
+          <p dangerouslySetInnerHTML={{__html: summary}}></p>
         </PageSection>
       )}
       {!isSinglePage && (
