@@ -14,7 +14,7 @@ module.exports = (_env, argv) => {
     hasVersionSwitcher = false,
     hasDesignGuidelines = false,
     hasDarkThemeSwitcher = false,
-    componentInfo = {},
+    componentsData = {},
     sideNavItems = [],
     topNavItems = [],
     includePaths = []
@@ -140,7 +140,7 @@ module.exports = (_env, argv) => {
         'process.env.hasVersionSwitcher': JSON.stringify(hasVersionSwitcher),
         'process.env.hasDesignGuidelines': JSON.stringify(hasDesignGuidelines),
         'process.env.hasDarkThemeSwitcher': JSON.stringify(hasDarkThemeSwitcher),
-        'process.env.componentInfo': JSON.stringify(componentInfo),
+        'process.env.componentsData': JSON.stringify(componentsData),
         'process.env.sideNavItems': JSON.stringify(sideNavItems),
         'process.env.topNavItems': JSON.stringify(topNavItems),
         'process.env.prnum': JSON.stringify(process.env.CIRCLE_PR_NUMBER || process.env.PR_NUMBER || ''),

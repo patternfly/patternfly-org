@@ -116,13 +116,22 @@ const MDXChildTemplate = ({
 export const MDXTemplate = ({
   title,
   sources = [],
-  path
+  path,
+  id,
+  componentsData
 }) => {
   const sourceKeys = sources.map(v => v.source);
   const isSinglePage = sourceKeys.length === 1;
   const { pathname } = useLocation();
   const { katacodaLayout } = sources[0].Component.getPageData();
   let activeSource = pathname.replace(/\/$/, '').split('/').pop();
+  let summary;
+  if (componentsData) {
+    // get summary to display above tabs on component pages
+    const componentId = id.split(' ').join('-').toLowerCase();
+    summary = componentsData?.[componentId]?.summary;
+  }
+
   if (!sourceKeys.includes(activeSource)) {
     activeSource = sourceKeys[0];
   }
@@ -141,6 +150,12 @@ export const MDXTemplate = ({
           {title}
         </Title>}
       </PageSection>
+      {!isSinglePage && summary && (
+        <PageSection variant={PageSectionVariants.light}>
+          {/* <p dangerouslySetInnerHTML={{__html: summary}}></p> */}
+          { summary }
+        </PageSection>
+      )}
       {!isSinglePage && (
         <PageSection type="tabs">
           <div className="pf-c-tabs pf-m-page-insets pf-m-no-border-bottom">
