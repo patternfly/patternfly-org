@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from '@reach/router';
-import { Badge, CodeBlock, CodeBlockCode, debounce } from '@patternfly/react-core';
+import { Badge, CodeBlock, CodeBlockCode, debounce, Switch } from '@patternfly/react-core';
 import * as reactCoreModule from '@patternfly/react-core';
 import * as reactCoreNextModule from '@patternfly/react-core/next';
 import * as reactTableModule from '@patternfly/react-table';
