@@ -44,6 +44,7 @@ Every table can be extended with these functionalities:
 * [Compound expandable table](#compound-expandable-table)
 * [Actionable table](#actionable-table)
 * [Sortable table](#sorting-by-columns)
+* [Row striping](#row-striping)
 * [Table with favoriting](#table-with-favoriting)
 
 ### Expandable table
@@ -113,6 +114,15 @@ The default sort order for a table should support the primary use case for the a
 If a table contains these two attributes: (System Name | Last Sync) you may want to show the most recently synced system at the top of the table (in other words, it is the default sort column), because a primary use case for this table is verifying that you have successfully connected or troubleshot the system’s connection to Cloud Services.
 
 If a table contains these three attributes: (System Name | Last Sync | Severity) you may want to show the system with the highest Severity because that is the system the user should tend to first.
+
+###Row striping
+Row striping can help improve legibility of a table when presenting large amounts of data. With row striping enabled, table rows will alternate between ```--pf-global--BackgroundColor--100``` and ```--pf-global--BackgroundColor--150``` to visually separate dense data sets.
+
+
+#### When to use row striping in tables
+1. Tables with 5 or more columns
+2. Virtualized tables (no pagination).
+3. Tables with horizontal scrolling 
 
 ### Table with favoriting
 Adding the ability to favorite is possible for any table variation. Users can set their favorites by clicking the star icon in the favorites row. By default, the star is grey; when an item is favorited, the star becomes yellow. Clicking the star again will unfavorite the item. When an item is favorited or unfavorited, it does not move in the list unless sorting is on.
