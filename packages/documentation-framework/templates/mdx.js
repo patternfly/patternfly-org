@@ -6,6 +6,7 @@ import { Router, useLocation } from '@reach/router';
 import { CSSVariables, PropsTable, TableOfContents, Link, AutoLinkHeader, InlineAlert } from '../components';
 import { capitalize, getTitle, slugger, trackEvent } from '../helpers';
 import './mdx.css';
+import { convertToReactComponent } from '@patternfly/ast-helpers';
 
 const MDXChildTemplate = ({
   Component,
@@ -126,10 +127,14 @@ export const MDXTemplate = ({
   const { katacodaLayout } = sources[0].Component.getPageData();
   let activeSource = pathname.replace(/\/$/, '').split('/').pop();
   let summary;
+  let SummaryComponent;
   if (componentsData) {
     // get summary to display above tabs on component pages
     const componentId = id.split(' ').join('-').toLowerCase();
     summary = componentsData?.[componentId]?.summary;
+    const summaryCode = convertToReactComponent(`<p>${summary}</p>`).code;
+    const getSummaryComponent = new Function('React', 'Link', summaryCode);
+    SummaryComponent = getSummaryComponent(React, Link);
   }
 
   if (!sourceKeys.includes(activeSource)) {
@@ -152,7 +157,7 @@ export const MDXTemplate = ({
       </PageSection>
       {!isSinglePage && summary && (
         <PageSection variant={PageSectionVariants.light}>
-          <p dangerouslySetInnerHTML={{__html: summary}}></p>
+          <SummaryComponent />
         </PageSection>
       )}
       {!isSinglePage && (
