@@ -54,6 +54,7 @@ Every table can be extended with these functionalities:
 * [Expandable table](#expandable-table)
 * [Compound expandable table](#compound-expandable-table)
 * [Actionable table](#actionable-table)
+* [Row striping](#row-striping)
 * [Sortable table](#sorting-by-columns)
 * [Table with favoriting](#table-with-favoriting)
 
@@ -104,6 +105,14 @@ The actionable table provides checkboxes or radio buttons that enable users to s
 #### When not to use
 * Users can not take any actions on table items/rows.
 
+### Row striping
+Row striping can help improve legibility of a table when presenting large amounts of data. With row striping enabled, table rows will alternate between ```--pf-global--BackgroundColor--100``` and ```--pf-global--BackgroundColor--150``` to visually separate dense data sets.
+
+#### When to use row striping in tables
+1. Tables with 5 or more columns
+2. Virtualized tables (no pagination).
+3. Tables with horizontal scrolling
+ 
 ### Sorting by columns
 Sorting by columns is possible for any table variation. Enabling the component within a table eases the ability to scan and read through the content. This option is favored over adding sorting functionality to the [toolbar](/components/toolbar/design-guidelines).
 
