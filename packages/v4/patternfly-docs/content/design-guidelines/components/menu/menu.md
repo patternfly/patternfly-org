@@ -80,7 +80,7 @@ When filtering menu items, a search input will be added to the top of the menu a
 ### Favoriting and other actions
 Favoriting or other optional actions can be associated with any menu item. In this case, making an item a favorite will duplicate it at the top of the menu. This may be useful when you have a long list of possible actions and want to “pin” a subset of items to the top of the menu.
 
-<img src="./img/favorities-menu.png" alt="menu with favorites" width="348"/>
+<img src="./img/favorites-menu.png" alt="menu with favorites" width="348"/>
 
 
 Any action that can be represented as an icon button can be placed in one or more menu items. In this case, the favoriting action is used to mark an item as a favorite.
