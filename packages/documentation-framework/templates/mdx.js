@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageSection, Title, PageSectionVariants, BackToTop } from '@patternfly/react-core';
+import { ExpandableSection, PageSection, Title, PageSectionVariants, BackToTop } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Router, useLocation } from '@reach/router';
@@ -76,7 +76,7 @@ const MDXChildTemplate = ({
           {InlineAlerts}
           <Component />
           {propsTitle && (
-            <React.Fragment>
+            <ExpandableSection toggleText={propsTitle}>
               <AutoLinkHeader size="h2" className="ws-h2" id="props">
                 {propsTitle}
               </AutoLinkHeader>
@@ -89,15 +89,16 @@ const MDXChildTemplate = ({
                   allPropComponents={propComponents}
                 />
               ))}
-            </React.Fragment>
+            </ExpandableSection>
           )}
           {cssVarsTitle && (
-            <React.Fragment>
+            <ExpandableSection toggleText={cssVarsTitle} toggleContent={
               <AutoLinkHeader size="h2" className="ws-h2" id="css-variables">
                 {cssVarsTitle}
               </AutoLinkHeader>
+            }>
               <CSSVariables prefix={cssPrefix} />
-            </React.Fragment>
+            </ExpandableSection>
           )}
           {!katacodaLayout && sourceLink && (
             <React.Fragment>
