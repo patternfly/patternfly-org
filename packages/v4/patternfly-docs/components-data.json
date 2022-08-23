@@ -319,7 +319,7 @@
   },
   "tile": {
     "illustration": "./images/component-illustrations/tile.png",
-    "summary": "A <b>tile</b> component is a form of selection that can be used in place of a <Link to='/components/radio'>radio button</Link> and is commonly used in <Link to='/components/form'>forms</Link>. A tile appears visually similar to a <Link to='https://www.patternfly.org/v4/components/card/>selectable card</Link>. However, tiles are used specifically when the user is selecting a static option, whereas a selectable card triggers an action or opens a quickstart or sidebar to provide additional information."
+    "summary": "A <b>tile</b> component is a form of selection that can be used in place of a <Link to='/components/radio'>radio button</Link> and is commonly used in <Link to='/components/form'>forms</Link>. A tile appears visually similar to a <Link to='/components/card/'>selectable card</Link>. However, tiles are used specifically when the user is selecting a static option, whereas a selectable card triggers an action or opens a quickstart or sidebar to provide additional information."
   },
   "time-picker": {
     "summary": "A <b>time picker</b> allows users to select a time from a list of options. Time can be displayed in hours and minutes, but not in seconds."
