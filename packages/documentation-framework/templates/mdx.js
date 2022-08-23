@@ -126,12 +126,11 @@ export const MDXTemplate = ({
   const { pathname } = useLocation();
   const { katacodaLayout } = sources[0].Component.getPageData();
   let activeSource = pathname.replace(/\/$/, '').split('/').pop();
-  let summary;
+  // get summary text, convert to JSX to display above tabs on component pages
+  const componentDasherized = id.split(' ').join('-').toLowerCase();
+  const summary = componentsData?.[componentDasherized]?.summary;
   let SummaryComponent;
-  if (componentsData) {
-    // get summary to display above tabs on component pages
-    const componentId = id.split(' ').join('-').toLowerCase();
-    summary = componentsData?.[componentId]?.summary;
+  if (summary) {
     const summaryCode = convertToReactComponent(`<p>${summary}</p>`).code;
     const getSummaryComponent = new Function('React', 'Link', summaryCode);
     SummaryComponent = getSummaryComponent(React, Link);
