@@ -135,7 +135,7 @@
     "illustration": "./images/component-illustrations/expandable-section.png",
     "summary": "An <b>expandable section</b> component is used to support progressive disclosure in a form or page by hiding additional content when you don't want it to be shown by default. An expandable section can contain any type of content such as plain text, form inputs, and charts."
   },
-  "file-upload-multiple": {
+  "file-upload---multiple": {
     "illustration": "./images/component-illustrations/file-upload-multiple.png",
     "summary": "The <b>file upload - multiple</b> component allows users to select 1 or more files to upload to a specific location. The component can be configured to support any file type as well as restrict the user's ability to upload 1 or more files. Users have the ability to select files from their system either natively using a file input or via drag and drop. Once uploaded, the user can edit any files."
   },
@@ -150,6 +150,9 @@
   "form": {
     "illustration": "./images/component-illustrations/form.png",
     "summary": "A <b>form</b> is a group of elements used to collect information from a user in a variety of contexts including in a modal, in a wizard, or on a page. Use cases for forms include tasks reliant on user-inputted information for completion like logging in, registering, configuring settings, or completing surveys."
+  },
+  "form-select": {
+    "summary": "A <b>form select</b> embeds browser native select lists into a form."
   },
   "helper-text": {
     "illustration": "./images/component-illustrations/helper-text.png",
