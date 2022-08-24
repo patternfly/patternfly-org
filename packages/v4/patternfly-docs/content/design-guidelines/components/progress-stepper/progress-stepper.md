@@ -105,5 +105,7 @@ For **complete** steps, write your progress stepper title in past tense. Use thi
 | Cluster installed | Installation is complete | 
 | Validated account credentials | Successfully validated account credentials | 
 
+</div>
+
 ## Accessibility
 For information regarding accessibility, visit the progress stepper [accessibility tab](/guidelines/progress-stepper).
