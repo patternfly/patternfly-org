@@ -10,7 +10,7 @@ Use a description list when you have a set of terms and definitions related to a
 
 <img src="./img/definitionlist.png" alt="Definition list" width="1440"/>
 
-## Types of description lists
+## Variations
 
 ### Default
 By default, the description list will be formatted so that the term stacks vertically above the description.
@@ -22,9 +22,7 @@ Description lists can also be horizontally formatted so that the term and descri
 
 <img src="./img/horizontal.png" alt="Horizontal" width="600"/>
 
-## Additional features
-
-### Columns
+### Using columns
 Columns can be applied in both vertical and horizontal formats. By default, there will be 24px gutters within the column grid.
 
 <img src="./img/default2column.png" alt="Default with 2 columns" width="600"/>

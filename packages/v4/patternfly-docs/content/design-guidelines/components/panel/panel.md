@@ -9,7 +9,7 @@ Panels are commonly used:
 - To provide more content structure through the UI.
 - To group content and components on a blank canvas.
 
-## Examples
+### Examples
 
 The panel is used as a content block with a header, body, and footer.<br/>
 <img src="./img/basic_panel.jpg" alt="A basic panel with a header, body and footer" width="600" /><br/>

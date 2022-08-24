@@ -30,8 +30,8 @@ Use a code editor when you:
 1. Want the user to create or edit large blocks of code.
 2. Want to display large blocks of code (see [Displaying code in a code editor](#displaying-code-in-a-code-editor) for guidance on when to use a code editor over a [code block](/components/code-block)).
 
-## Creating or editing with a code editor
-### Using actions
+### Creating or editing with a code editor
+#### Using actions
 Code editors can optionally include actions that are attached to the editor itself. Use a code editor with actions when you want the user to be able to perform some sort of action using the code.
 
 
@@ -39,7 +39,12 @@ Code editors can optionally include actions that are attached to the editor itse
 
 Actions are represented by an icon and should include a tooltip on hover explaining what action they perform. Some typical actions that are used are **Copy to clipboard**, **Download**, and **Upload**.
 
-## Empty state
+#### Keyboard Shortcuts
+You can use the “View shortcuts” link in your code editor that, on click, opens up a popover containing a variety of keyboard commands and shortcuts with descriptions for developers.
+
+<img src="./img/code-editor-shortcuts.png" alt="Example of a code editor with shortcuts" width="800"/>
+
+### Empty state
 You can use an empty state in a code editor to indicate that a user can drag a file or browse to upload.
 
 <img src="./img/code-editor-empty.png" alt="Example of a code editor with an empty state" width="800"/>
@@ -54,3 +59,6 @@ Use the read-only state of the code editor when you only want to display large b
 <img src="./img/code-editor-read-only.png" alt="Example of a read only code-editor" width="800"/>
 
 The border of the code editor will turn gray to indicate that it is read-only. The user can still highlight text in the editor, but won’t be able to edit. Adding actions is optional and should be determined by use case.
+
+## Accessibility 
+For information regarding accessibility, visit the [code editor accessibility tab](/components/code-editor/accessibility). 

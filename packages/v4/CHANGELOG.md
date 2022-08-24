@@ -3,6 +3,329 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.13.6 (2022-08-23)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.5 (2022-08-22)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.4 (2022-08-22)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.3 (2022-08-22)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.2 (2022-08-19)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.1 (2022-08-19)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+# 4.13.0 (2022-08-18)
+
+
+### Features
+
+* **doc-framework:** Allow for 'next' core component usage alongside core components ([#3126](https://github.com/patternfly/patternfly-org/issues/3126)) ([8617112](https://github.com/patternfly/patternfly-org/commit/8617112840dd7c26cd6660120c6b24b8ca91e7d3))
+
+
+
+
+
+## 4.12.36 (2022-08-17)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.35 (2022-08-17)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.34 (2022-08-16)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.33 (2022-08-16)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.32 (2022-08-16)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.31 (2022-08-16)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.30 (2022-08-15)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.29 (2022-08-15)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.28 (2022-08-09)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.27 (2022-08-08)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.26 (2022-08-04)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.25 (2022-08-04)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.24 (2022-08-04)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.23 (2022-08-04)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.22 (2022-08-03)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.21 (2022-08-03)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.20 (2022-08-03)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.19 (2022-08-02)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.18 (2022-08-02)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.17 (2022-08-01)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.16 (2022-08-01)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.15 (2022-07-28)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.14 (2022-07-28)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.13 (2022-07-27)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.12 (2022-07-25)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.11 (2022-07-21)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.10 (2022-07-21)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.9 (2022-07-19)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.8 (2022-07-19)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.7 (2022-07-19)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.6 (2022-07-18)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.5 (2022-07-18)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.12.4 (2022-07-14)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
 ## 4.12.3 (2022-07-11)
 
 **Note:** Version bump only for package patternfly-org-4

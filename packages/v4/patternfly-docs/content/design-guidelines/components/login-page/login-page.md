@@ -180,7 +180,7 @@ Another form of error state message is a warning message. These messages are tri
 | Session timed out | Your session has expired. Please log back in.
 
 
-## Content guidelines
+## Content considerations
 
 * Use “log in” to describe the verb of signing or logging in an account. Note, it is “log in” and not “log into”. 
 * Use “login” as an adjective to describe something related to the act of logging in to an application, like a page. The noun Login can also be used as an alternative for Username, but Username is recommended.
