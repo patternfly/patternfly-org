@@ -85,8 +85,8 @@ const CommunityPage = () => {
       <Title size="xl" className="pf-u-mb-sm ws-page-title pf-u-mt-xl" headingLevel="h3"><a href="https://patternflyelements.org">PatternFly Elements</a></Title>
       <p> PatternFly Elements is a community created by Red Hat's web-based developers. It focuses on creating web components for use across Red Hat's sites and SaaS products and features theming options available for your own brand library.</p>
 
-      <Title size="xl" className="pf-u-mb-sm ws-page-title pf-u-mt-xl" headingLevel="h3"><a href="https://github.com/patternfly-kotlin/patternfly-fritz2">PatternFly Fritz2</a></Title>
-      <p>PatternFly Fritz2 is a Kotlin implementation of PatternFly based on fritz2 targeting Kotlin/JS. The goal of this project is to provide all PatternFly components in Kotlin. This is done in a way that matches the reactive nature of fritz2. In particular, the components use stores, handlers, and other elements from the fritz2 API. To get a quick overview what this is all about head over to the <a href="https://patternfly-kotlin.github.io/patternfly-fritz2-showcase/#home">PatternFly Fritz2 showcase</a>.</p>
+      <Title size="xl" className="pf-u-mb-sm ws-page-title pf-u-mt-xl" headingLevel="h3"><a href="https://github.com/patternfly-kotlin/patternfly-kotlin">PatternFly Kotlin</a></Title>
+      <p>PatternFly Kotlin is a Kotlin implementation of PatternFly based on fritz2, targeting Kotlin/JS. The goal of this project is to provide all PatternFly components in Kotlin, matching the reactive nature of fritz2. The components use stores, handlers, and other elements from the fritz2 API. For a quick overview, check out the <a href="https://patternfly-kotlin.github.io/patternfly-kotlin-showcase/#home">PatternFly Kotlin showcase</a>.</p>
 
       <Title size="4xl" className="pf-u-mb-lg ws-page-title ws-keep-growing pf-u-mt-3xl" headingLevel="h2">Let's keep growing</Title>
       <p>The PatternFly community is never finished growing, and we want to keep it that way. Feel free to reach out whenever — we’re always open.</p>
