@@ -24,11 +24,11 @@ Use a progress stepper to convey to a user how many steps are required to comple
 
 <img src="./img/progress-stepper-card-view.png" alt="Image showing example of progress stepper in a card view." width="1600" />
 
-* A user is showing progression through a workflow in a table or canvas
+* A user is showing progression through a workflow in a table or card
 
 <img src="./img/progress-stepper-table-view.png" alt="Image showing example of progress stepper in a table view." width="1319" />
 
-<img src="./img/progress-stepper-canvas-view.png" alt="Image showing example of progress stepper in a canvas view." width="1600" />
+<img src="./img/progress-stepper-canvas-view.png" alt="Image showing example of progress stepper in a card view." width="1600" />
 
 * A user is checking the status of the installation process in a popover
 
@@ -108,4 +108,4 @@ For **complete** steps, write your progress stepper title in past tense. Use thi
 </div>
 
 ## Accessibility
-For information regarding accessibility, visit the progress stepper [accessibility tab](/guidelines/progress-stepper).
+For information regarding accessibility, visit the progress stepper [accessibility tab](/components/progress-stepper/accessibility).
