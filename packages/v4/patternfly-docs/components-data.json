@@ -1,6 +1,6 @@
 {
   "about-modal": {
-    "illustration": "./images/component-illustrations/./images/component-illustrations/about-modal.png",
+    "illustration": "./images/component-illustrations/about-modal.png",
     "summary": "An <b>about modal</b> displays information about an application like product version number(s), as well as any appropriate legal text."
   },
   "accordion": {
@@ -9,11 +9,11 @@
   },
   "action-list": {
     "illustration": "./images/component-illustrations/action-list.png",
-    "summary": "An <b>action list</b> is a group of actions with set spacing."
+    "summary": "An <b>action list</b> is a group of actions, controls, or buttons with set spacing."
   },
   "alert-group": {
     "illustration": "./images/component-illustrations/alert-group.png",
-    "summary": "An <b>alert group</b> stacks and positions 2 or more alerts, either in a layer over the main content of a page or inline with the page content. Alert groups should always rank alerts by age, stacking new alerts on top of old ones as they surface."
+    "summary": "An <b>alert group</b> stacks and positions 2 or more alerts in a live region, either in a layer over the main content of a page or inline with the page content. Alert groups should always rank alerts by age, stacking new alerts on top of old ones as they surface."
   },
   "alert": {
     "illustration": "./images/component-illustrations/alert.png",
@@ -21,7 +21,7 @@
   },
   "application-launcher": {
     "illustration": "./images/component-illustrations/application-launcher.png",
-    "summary": "An <b>application launcher</b> is an optional utility menu item that allows a user to launch a separate web application in a new browser window."
+    "summary": "An <b>application launcher</b> is an option menu that allows a user to launch a separate web application in a new browser window."
   },
   "avatar": {
     "illustration": "./images/component-illustrations/avatar.png",
@@ -168,7 +168,7 @@
   },
   "input-group": {
     "illustration": "./images/component-illustrations/input-group.png",
-    "summary": "An <b>input group</b> includes multiple input types, like a text input and a button, in one control."
+    "summary": "An <b>input group</b> groups multiple related controls or inputs together so they appear as one control."
   },
   "jump-links": {
     "illustration": "./images/component-illustrations/jump-links.png",
@@ -176,7 +176,7 @@
   },
   "label-group": {
     "illustration": "./images/component-illustrations/label-group.png",
-    "summary": "Use a <b>label group</b> when you have multiple <Link to='https://www.patternfly.org/v4/components/label'>labels</Link> to display at once. Label groups can be oriented either horizontally or vertically and can optionally be named and dismissable."
+    "summary": "Use a <b>label group</b> when you have multiple <Link to='/components/label'>labels</Link> to display at once. Label groups can be oriented either horizontally or vertically and can optionally be named and dismissable."
   },
   "label": {
     "illustration": "./images/component-illustrations/label.png",
@@ -196,7 +196,7 @@
   },
   "menu-toggle": {
     "illustration": "./images/component-illustrations/menu-toggle.png",
-    "summary": "The <b>menu toggle</b> component pairs with the <Link to='https://www.patternfly.org/v4/components/menu/design-guidelines'>menu</Link> component to create composable dropdown and select menus. Using a menu toggle with a menu enables you to create custom component configurations not supported by the standard dropdown or select components. However, from a design perspective, the dropdown, select, and menu toggle components are all visually the same. For more information about this component's usage, see the <Link to='https://www.patternfly.org/v4/components/dropdown/design-guidelines'>dropdown</Link>, <Link to='https://www.patternfly.org/v4/components/select/design-guidelines'>select</Link>, and <Link to='https://www.patternfly.org/v4/components/menu/design-guidelines'>menu</Link> component guidelines."
+    "summary": "The <b>menu toggle</b> component pairs with the <Link to='/components/menu/design-guidelines'>menu</Link> OR the <Link to='/components/panel/design-guidelines'>panel</Link> component to create more customizable dropdown and select implementations. Using a menu toggle with a menu enables you to create custom component configurations not supported by the standard dropdown or select components."
   },
   "menu": {
     "illustration": "./images/component-illustrations/menu.png",
@@ -220,7 +220,7 @@
   },
   "number-input": {
     "illustration": "./images/component-illustrations/number-input.png",
-    "summary": "A <b>number input</b> provides a quick and effective way for users to enter and modify a numeric value. Similar to <Link to='https://www.patternfly.org/v4/components/input-group/'>input groups</Link>, number inputs combine 2 input types into 1 control: A text input field with buttons on either side. When combined, these elements allow users to input numeric values in a responsive and scalable way."
+    "summary": "A <b>number input</b> provides a quick and effective way for users to enter and modify a numeric value. Similar to <Link to='/components/input-group/'>input groups</Link>, number inputs combine 2 input types into 1 control: A text input field with buttons on either side. When combined, these elements allow users to input numeric values in a responsive and scalable way."
   },
   "options-menu": {
     "illustration": "./images/component-illustrations/options-menu.png",
@@ -240,7 +240,7 @@
   },
   "panel": {
     "illustration": "./images/component-illustrations/panel.png",
-    "summary": "The <b>panel</b> component is a container that supports flexible content layouts. It can be used to house other components such as fields, forms, videos, buttons, and more. The panel should not be confused with the <Link to='https://www.patternfly.org/v4/components/drawer/design-guidelines/'>drawer</Link> component, which allows you to surface information via a collapsable container."
+    "summary": "The <b>panel</b> component is a container that supports flexible content layouts. It can be used to house other components such as fields, forms, videos, buttons, and more. The panel should not be confused with the <Link to='/components/drawer/design-guidelines/'>drawer</Link> component, which allows you to surface information via a collapsable container."
   },
   "popover": {
     "illustration": "./images/component-illustrations/popover.png",
@@ -336,7 +336,7 @@
   },
   "toolbar": {
     "illustration": "./images/component-illustrations/toolbar.png",
-    "summary": "A <b>toolbar</b> allows a user to manage and manipulate a data set. Data can be presented in any valid presentation, a table, a list, or a data visualization (chart), for example. The PatternFly Toolbar component is a flexible layout system that accommodates a variety of configurations that can be adapted to your specific needs."
+    "summary": "A <b>toolbar</b> allows a user to manage and manipulate a data set. Data can be presented in any valid presentation, a table, a list, or a data visualization (chart), for example. The toolbar responsively accommodates controls and displays applied filters in chip groups."
   },
   "tooltip": {
     "illustration": "./images/component-illustrations/tooltip.png",

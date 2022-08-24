@@ -155,7 +155,7 @@ export const MDXTemplate = ({
         </Title>}
       </PageSection>
       {!isSinglePage && summary && (
-        <PageSection variant={PageSectionVariants.light}>
+        <PageSection variant={PageSectionVariants.light} className="pf-u-pt-0">
           <SummaryComponent />
         </PageSection>
       )}
