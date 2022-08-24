@@ -76,7 +76,15 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
                     {Object.entries(groupedRoutes[section] || {})
                       .filter(([, { hideNavItem }]) => !Boolean(hideNavItem))
                       .map(([id, { slug }]) => ({ text: id, href: slug }))
-                      .sort(({ text: text1 }, { text: text2 }) => text1.localeCompare(text2))
+                      .sort(({ text: text1 }, { text: text2 }) => {
+                        // Sort 'View all components' to top of sidenav component section
+                        if (text1 === 'View all components') {
+                          return -1;
+                        } else if (text2 === 'View all components') {
+                          return 1;
+                        }
+                        return text1.localeCompare(text2);
+                      })
                       .map(NavItem)
                     }
                   </NavExpandable>
