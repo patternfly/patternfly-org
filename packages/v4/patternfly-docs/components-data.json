@@ -180,7 +180,7 @@
   },
   "label": {
     "illustration": "./images/component-illustrations/label.png",
-    "summary": "The <b>label</b> component allows users to add specific element captions for user clairty and convenience."
+    "summary": "The <b>label</b> component allows users to add specific element captions for user clarity and convenience."
   },
   "list": {
     "illustration": "./images/component-illustrations/list.png",
@@ -276,7 +276,7 @@
   },
   "skeleton": {
     "illustration": "./images/component-illustrations/skeleton.png",
-    "summary": "A <b>skeleton</b> is a type of loading state that allows you to expose content incrementally. For content that may take a long time to load, use a <Link to='/components/progress/react'>progress bar</Link> in place of a skeleton."
+    "summary": "A <b>skeleton</b> is a type of loading state that allows you to expose content incrementally. For content that may take a long time to load, use a <Link to='/components/progress'>progress bar</Link> in place of a skeleton."
   },
   "skip-to-content": {
     "illustration": "./images/component-illustrations/skip-to-content.png",
@@ -312,7 +312,7 @@
   },
   "text-input-group": {
     "illustration": "./images/component-illustrations/text-input-group.png",
-    "summary": "A <b>text input group</b> is a more flexible composable version of a <Link to='/components/text-input'>text input</Link>. It enables consumers of PatternFly to build custom inputs for filtering and similar use cases by placing elements like icons, <Link to='components/chip-group'>chips groups</Link> and <Link to='components/button'>buttons</Link> within a text input."
+    "summary": "A <b>text input group</b> is a more flexible composable version of a <Link to='/components/text-input'>text input</Link>. It enables consumers of PatternFly to build custom inputs for filtering and similar use cases by placing elements like icons, <Link to='/components/chip-group'>chips groups</Link> and <Link to='/components/button'>buttons</Link> within a text input."
   },
   "text-input": {
     "illustration": "./images/component-illustrations/text-input.png",
