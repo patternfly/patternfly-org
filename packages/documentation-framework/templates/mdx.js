@@ -160,7 +160,7 @@ export const MDXTemplate = ({
           <SummaryComponent />
         </PageSection>
       )}
-      {!isSinglePage && (
+      {!isSinglePage || isComponent && (
         <PageSection type="tabs">
           <div className="pf-c-tabs pf-m-page-insets pf-m-no-border-bottom">
             <ul className="pf-c-tabs__list">
