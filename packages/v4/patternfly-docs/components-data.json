@@ -121,7 +121,7 @@
   },
   "dropdown": {
     "illustration": "./images/component-illustrations/dropdown.png",
-    "summary": "A <b>dropdown</b> presents a menu of actions or links in a constrained space that will trigger a process or navigate to a new location. See <Link to='/components/select/'>select component guidelines</Link> for more information about making one or more selections from a list of items in a value list."
+    "summary": "A <b>dropdown</b> presents a menu of actions or links in a constrained space that will trigger a process or navigate to a new location. See <Link to='/components/select/design-guidelines'>select component guidelines</Link> for more information about making one or more selections from a list of items in a value list."
   },
   "dual-list-selector": {
     "illustration": "./images/component-illustrations/dual-list-selector.png",
