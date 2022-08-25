@@ -247,7 +247,8 @@
     "summary": "A <b>popover</b> is in-app messaging that provides more information on specific product areas. Popovers display content in a new window that overlays the current page. Unlike modals, popovers don't block the current page."
   },
   "progress-stepper": {
-    "illustration": "./images/component-illustrations/progress-stepper.png"
+    "illustration": "./images/component-illustrations/progress-stepper.png",
+    "summary": "A <b>progress stepper</b> displays a timeline of tasks in a workflow and tracks the user's current progress through this workflow."
   },
   "progress": {
     "illustration": "./images/component-illustrations/progress.png",
@@ -266,7 +267,8 @@
     "summary": "A <b>select</b> list enables users to select one or more items from a list. Use a select list when options are dynamic or variable."
   },
   "sidebar": {
-    "illustration": "./images/component-illustrations/sidebar.png"
+    "illustration": "./images/component-illustrations/sidebar.png",
+    "summary": "A <b>sidebar</b> splits content into a secondary area that can be placed relative to the main content on a page."
   },
   "simple-list": {
     "illustration": "./images/component-illustrations/simple-list.png",
@@ -326,6 +328,9 @@
   },
   "time-picker": {
     "summary": "A <b>time picker</b> allows users to select a time from a list of options. Time can be displayed in hours and minutes, but not in seconds."
+  },
+  "timestamp": {
+    "summary": "A <b>timestamp</b> provides consistent formats for displaying date and time values."
   },
   "title": {
     "summary": "A <b>title</b> component applies top and bottom margins, font-weight, font-size, and line-height to titles. The most common usage for a title is to define headings within a page. For more information about the relationship between title component sizes and HTML heading levels, see the <Link to='/guidelines/typography#customizing-heading-levels'>Typography guidelines</Link>."
