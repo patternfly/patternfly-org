@@ -5,10 +5,10 @@ section: get-started
 ---
 import './get-started.css';
 
-Whether you are converting from a PatternFly 3 application or starting fresh with the latest and greatest PatternFly design system, this document is intended to help provide designers with information regarding resources and support available.
+Whether you are converting from a preivous PatternFly application or starting fresh with the latest and greatest PatternFly design system, this page is intended to help provide designers with information regarding resources and support available.
 
 ## Designing with PatternFly
-PatternFly offers a variety of resources to help you make the most of the design system, including design guidelines for style, content, and component usage and behavior. You can use these assets in combination with the design kit to create consistent and usable product experiences.
+PatternFly offers a variety of resources to help you make the most of the design system, including design guidelines for style, content, and component usage, and behavior. You can use these assets in combination with the design kit to create consistent and usable product experiences.
 
 ### Style guidelines
 What typography should you be using? What about colors? Spacing? Check out styles to learn everything you need to know about our foundational design elements.
@@ -22,7 +22,7 @@ Should you use a wizard or a form to solve this problem? How do you write a good
 
 ### Content guidelines
 How do you write great microcopy and text for your user interface? Read our content guidelines for general principles, guidance on voice, and a style guide to help you with everything from capitalization to date and time formats.
-View content guidelines
+
 
 [**View content guidelines**](/ux-writing/about) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
@@ -39,6 +39,7 @@ See all the pieces working together with demos.
 [**View demos**](/demos/primary-detail) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 ## What's in the design kit?
+The design kit is a symbol library implemented in Sketch to help designers like you contribute to PatternFly.
 
 ### The template file
 
@@ -54,7 +55,7 @@ The PatternFly symbol library contains individual components like buttons, alert
 You can use any symbol offered in the Sketch symbol library to create your design. If you have any questions or need any clarification, you can post to the [PatternFly forum](https://forum.patternfly.org/). If you have any feedback about certain features or encounter a bug, you can file an issue against [patternfly-design-kit](https://github.com/patternfly/patternfly-design-kit/issues) on GitHub.
 
 #### Navigating the symbol library
-There are two kinds of symbols - library symbols and document symbols. Library symbols are available in any Sketch document, while document symbols are specific to the document in which they are found.
+There are 2 kinds of symbols - library symbols and document symbols. Library symbols are available in any Sketch document, while document symbols are specific to the document in which they are found.
 
 From the top toolbar in Sketch, select Insert → Symbols → Patternfly 4 to add symbols onto your page.
 
