@@ -11,19 +11,19 @@ Whether you are converting from a PatternFly 3 application or starting fresh wit
 
 The PatternFly design kit was originally developed for [Sketch users](#sketch-users), but is now available for use through [any design tool](#using-other-design-tools).
 
-### Sketch users
+### Using Sketch
 
-#### Before you begin
+#### Before you start designing
 The design kit is a collection of Sketch assets that make it easy for designers to create hi-fi mockups that accurately represent PatternFly components and layouts. It works with Sketch libraries. To use it, you need to install [Sketch version 68](https://www.sketch.com/) or above. 
 
-#### Download the font
+#### * Download the font
 1. PatternFly currently uses Red Hat Text and Red Hat Display. To download these fonts, go to https://github.com/RedHatOfficial/RedHatFont and download the whole repository. Then select all files in the "TTF" folder and double-click. This will install them onto your computer locally.
 
-#### Download the template file
+#### * Download the template file
 2. Access the [PatternFly template file](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89) on Sketch cloud.
 3. Click **Download Document** to open the file. Then, click File → Save as template.
 
-#### Add the symbol library
+#### * Add the symbol library
 4. Access the [PatternFly design library](https://www.sketch.com/s/2cf1063b-5283-4e0b-b8a6-cbb1ac07e29e) on Sketch cloud.
 5. Click **Add library to Sketch** on the bottom right to add the library. You'll be prompted with a modal. Click **Add library to Sketch** again. Sketch will show you the library in your preferences window.
 
@@ -32,7 +32,7 @@ The design kit is a collection of Sketch assets that make it easy for designers 
 #### Before you begin
 For non-Sketch users, we have created a compatible version of the symbol library to fit with any design tool of choice. We recommend importing the SVG versions into your design tool. Download the SVG set in the [patternfly-design-kit repo](https://github.com/patternfly/patternfly-design-kit/tree/master/Symbols-SVGs).
 
-#### Download the font
+#### * Download the font
 PatternFly currently uses Red Hat Text and Red Hat Display. To download these fonts, go to https://github.com/RedHatOfficial/RedHatFont and download the whole repository. Then select all files in the "TTF" folder and double-click. This will install them onto your computer locally.
 
 ### Looking for the Overpass design kit?
@@ -116,7 +116,7 @@ What typography should you be using? What about colors? Spacing? Check out style
 
 [**View styles**](/guidelines/colors) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
-### Get familiar with usage and behavior guidelines.
+### Usage and behavior guidelines
 Should you use a wizard or a form to solve this problem? How do you write a good button label? Which navigation makes the most sense? Check out our design guidelines to choose and use the right components for your use case.
 
 [**Usage and behavior guidelines**](/components/about-modal/design-guidelines) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
@@ -134,7 +134,7 @@ What does a toolbar look like? What about a filter chip? Components are the buil
 
 [**View components**](/components/about-modal) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
-### Still feeling unsure?
+### Want to see more?
 See all the pieces working together with demos.
 
 [**View demos**](/demos/primary-detail) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
