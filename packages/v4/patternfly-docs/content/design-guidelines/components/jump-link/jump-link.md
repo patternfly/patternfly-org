@@ -3,9 +3,6 @@ id: Jump links
 section: components
 ---
 
-**Jump links** allow users to navigate to sections within a page.
-
-
 ## Elements
 
 <img src="./img/jump-elements.png" alt="Elements of a jump link" width="249"/>

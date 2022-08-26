@@ -3,8 +3,6 @@ id: Avatar
 section: components
 ---
 
-An **avatar** is a visual used to represent a user. It may contain an image or a placeholder graphic.
-
 ## Usage
 
 There are four size variations available to use for different scenarios. The typical usage for an avatar is to represent the current user in the masthead. However, based on your product's use cases and needs, there is room for customization.

@@ -4,8 +4,6 @@ section: components
 related: ["Calendar month", "Date picker"]
 ---
 
-A **time picker** allows users to select a time from a list of options. Time can be displayed in hours and minutes, but not in seconds.
-
 ## Elements
 
 <img src="./img/Time picker- elements.png" alt="Time picker elements" width="362"/>

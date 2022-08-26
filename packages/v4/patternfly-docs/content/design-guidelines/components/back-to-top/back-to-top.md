@@ -2,7 +2,6 @@
 id: Back to top
 section: components
 ---
-The **back to top** component is a shortcut that allows users to quickly navigate to the top of a lengthy content page. 
 
 ## Elements 
 

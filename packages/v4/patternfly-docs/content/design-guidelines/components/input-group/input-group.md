@@ -2,7 +2,6 @@
 id: Input group
 section: components
 ---
-An **input group** includes multiple input types, like a text input and a button, in one control.
 
 ## Usage
 

@@ -3,8 +3,6 @@ id: Dropdown
 section: components
 ---
 
-A **dropdown** presents a menu of actions or links in a constrained space that will trigger a process or navigate to a new location. See [select component guidelines](/components/select/) for more information about making one or more selections from a list of items in a value list.
-
 ## Elements
 A basic dropdown consists of a toggle control to open and close a menu of actions or links.
 
