@@ -5,10 +5,17 @@ section: get-started
 ---
 import './get-started.css';
 
-Whether you are converting from a preivous PatternFly application or starting fresh with the latest and greatest PatternFly design system, this page is intended to help provide designers with information regarding resources and support available.
+Whether you are converting from a previous PatternFly application or starting fresh with the latest and greatest PatternFly design system, this page is intended to help provide designers with information regarding resources and support available.
 
 ## Designing with PatternFly
 PatternFly offers a variety of resources to help you make the most of the design system, including design guidelines for style, content, and component usage, and behavior. You can use these assets in combination with the design kit to create consistent and usable product experiences.
+
+### Design kit
+The design kit is a symbol library implemented in Sketch to help designers like you contribute to PatternFly.
+
+[**What's in the design kit?**](/v4/get-started/design#whats-in-the-design-kit) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+
+
 
 ### Style guidelines
 What typography should you be using? What about colors? Spacing? Check out styles to learn everything you need to know about our foundational design elements.
@@ -18,7 +25,7 @@ What typography should you be using? What about colors? Spacing? Check out style
 ### Usage and behavior guidelines
 Should you use a wizard or a form to solve this problem? How do you write a good button label? Which navigation makes the most sense? Check out our design guidelines to choose and use the right components for your use case.
 
-[**Usage and behavior guidelines**](/components/about-modal/design-guidelines) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**View usage and behavior guidelines**](/components/about-modal/design-guidelines) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 ### Content guidelines
 How do you write great microcopy and text for your user interface? Read our content guidelines for general principles, guidance on voice, and a style guide to help you with everything from capitalization to date and time formats.
@@ -39,7 +46,6 @@ See all the pieces working together with demos.
 [**View demos**](/demos/primary-detail) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 ## What's in the design kit?
-The design kit is a symbol library implemented in Sketch to help designers like you contribute to PatternFly.
 
 ### The template file
 
@@ -80,11 +86,11 @@ The design kit is a collection of Sketch assets that make it easy for designers 
 
 #### Download the template file
 1. Access the [PatternFly template file](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89) on Sketch cloud.
-2. Click **Download Document** to open the file. Then, click File → Save as template.
+2. From the "..." menu on the top right, click **Download** to download the file onto your computer.
 
 ####  Add the symbol library
 3. Access the [PatternFly design library](https://www.sketch.com/s/2cf1063b-5283-4e0b-b8a6-cbb1ac07e29e) on Sketch cloud.
-5. Click **Add library to Sketch** on the bottom right to add the library. You'll be prompted with a modal. Click **Add library to Sketch** again. Sketch will show you the library in your preferences window.
+5. From the "..." menu on the top right, click **Add library**. You'll be prompted with a modal - click "Open Sketch". Sketch should then open, and the download should happen automatically.
 
 ### Using other design tools
 
@@ -92,18 +98,6 @@ The design kit is a collection of Sketch assets that make it easy for designers 
 For non-Sketch users, we have created a compatible version of the symbol library to fit with any design tool of choice. We recommend importing the SVG versions into your design tool. Download the SVG set in the [patternfly-design-kit repo](https://github.com/patternfly/patternfly-design-kit/tree/master/Symbols-SVGs).
 
 
-
-### Looking for the Overpass design kit?
-
-We still host the Patternfly 4 Overpass library and template files on Sketch Cloud, although support for updating these files ceased in October. This means that any updates that come along with PatternFly releases will not be mirrored in this kit.
-
-You are able to access them here:
-
-1. [Add the symbol library](https://www.sketch.com/s/65cbc171-3b00-4bc7-b7ff-18e9a5b35ba8)
-    - Make sure you download the Overpass font at https://overpassfont.org/ and select **Desktop OTF files**.
-2. [Download the template file](https://www.sketch.com/s/2987fea0-aaee-4e44-9974-5612c949aef0)
-
-If you’d like to avoid out-of-date designs, we recommend moving to our Red Hat font and using the design kit supplied there!
 
 
 ## Using the design kit
