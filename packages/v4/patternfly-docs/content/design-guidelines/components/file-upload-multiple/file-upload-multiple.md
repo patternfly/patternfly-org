@@ -3,8 +3,6 @@ id: File upload - multiple
 section: components
 ---
 
-The **file upload - multiple** component allows users to select 1 or more files to upload to a specific location. The component can be configured to support any file type as well as restrict the user's ability to upload 1 or more files. Users have the ability to select files from their system either natively using a file input or via drag and drop. Once uploaded, the user can edit any files.
-
 A file upload component is commonly found in forms, but can also live as a standalone element.
 
 *Note: This component is for both single and multiple file upload scenarios that do not require a text preview. For a single file upload that supports text preview, see the [file upload component](/components/file-upload).*

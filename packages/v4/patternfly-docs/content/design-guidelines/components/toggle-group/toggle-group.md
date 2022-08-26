@@ -3,8 +3,6 @@ id: Toggle group
 section: components
 ---
 
-A **toggle group** is a group of controls that can be used to quickly switch between actions or states. 
-
 ## Elements
 Toggle items can consist of icons, text, or both. Styling of toggles is dependent on the background color. 
 

@@ -3,7 +3,6 @@ id: Inline edit
 section: components
 ---
 
-An **inline edit** component allows users to switch between a read-only view and an edit view of [description lists](/components/description-list), page text elements, or [tables](/components/table) as needed. Inline editing saves the user from opening a modal window or redirecting to a separate edit page so that they can edit in context of their current view. 
 ## Elements
 
 Elements vary depending on inline edit variation

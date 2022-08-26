@@ -4,8 +4,6 @@ section: components
 related: ['About modal', 'Backdrop', 'Background image', 'Button']
 ---
 
-An **about modal** displays information about an application like product version number(s), as well as any appropriate legal text.
-
 ## Elements
 
 <img src="./img/about-modal.png" alt="About modal" />

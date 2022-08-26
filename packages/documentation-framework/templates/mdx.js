@@ -6,6 +6,7 @@ import { Router, useLocation } from '@reach/router';
 import { CSSVariables, PropsTable, TableOfContents, Link, AutoLinkHeader, InlineAlert } from '../components';
 import { capitalize, getTitle, slugger, trackEvent } from '../helpers';
 import './mdx.css';
+import { convertToReactComponent } from '@patternfly/ast-helpers';
 
 const MDXChildTemplate = ({
   Component,
@@ -116,13 +117,26 @@ const MDXChildTemplate = ({
 export const MDXTemplate = ({
   title,
   sources = [],
-  path
+  path,
+  id,
+  componentsData
 }) => {
   const sourceKeys = sources.map(v => v.source);
   const isSinglePage = sourceKeys.length === 1;
+  const isComponent = sources.some(source => source.section === 'components');
   const { pathname } = useLocation();
   const { katacodaLayout } = sources[0].Component.getPageData();
   let activeSource = pathname.replace(/\/$/, '').split('/').pop();
+  // get summary text, convert to JSX to display above tabs on component pages
+  const componentDasherized = id.split(' ').join('-').toLowerCase();
+  const summary = componentsData?.[componentDasherized]?.summary;
+  let SummaryComponent;
+  if (summary) {
+    const summaryCode = convertToReactComponent(`<p>${summary}</p>`).code;
+    const getSummaryComponent = new Function('React', 'Link', summaryCode);
+    SummaryComponent = getSummaryComponent(React, Link);
+  }
+
   if (!sourceKeys.includes(activeSource)) {
     activeSource = sourceKeys[0];
   }
@@ -141,7 +155,12 @@ export const MDXTemplate = ({
           {title}
         </Title>}
       </PageSection>
-      {!isSinglePage && (
+      {isComponent && summary && (
+        <PageSection variant={PageSectionVariants.light} className="pf-u-pt-0">
+          <SummaryComponent />
+        </PageSection>
+      )}
+      {(!isSinglePage || isComponent) && (
         <PageSection type="tabs">
           <div className="pf-c-tabs pf-m-page-insets pf-m-no-border-bottom">
             <ul className="pf-c-tabs__list">

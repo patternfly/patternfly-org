@@ -9,8 +9,6 @@ related: [
 ]
 ---
 
-A **select list** enables users to select one or more items from a list. Use a select list when options are dynamic or variable.
-
 ## Elements
 
 A select component consists of a toggle control to open and close a menu of actions or links. Selects differ from [dropdowns](/components/dropdown) in that they persist selection, whereas dropdowns are typically used to present a list of actions or links.

@@ -3,8 +3,6 @@ id: Spinner
 section: components
 ---
 
-A **spinner** is used to indicate to users that an action is in progress. For actions that may take a long time, use a [progress bar](/components/progress) instead.
-
 ## Usage
 
 Spinners are used to demonstrate data loading. Spinners are offered in different sizes that follow the sizing of our icons. These sizes include extra small, small, medium and large. Depending on the size of information you are loading and the space you are dealing with, we recommend using the spinner size that generally matches.

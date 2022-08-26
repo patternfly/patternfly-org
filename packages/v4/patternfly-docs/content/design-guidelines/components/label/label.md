@@ -3,8 +3,6 @@ id: Label
 section: components
 ---
 
-The **label** component allows users to add specific element captions for user clairty and convenience
-
 ## Elements
 You can further customize labels by making them filled or unfilled, dismissable, adding icons, or making them clickable links. You can use any combination of these elements in a single label.
 

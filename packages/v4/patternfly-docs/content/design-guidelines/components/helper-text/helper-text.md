@@ -3,8 +3,6 @@ id: Helper text
 section: components
 ---
 
-**Helper text** is an on-screen field guideline that helps provide context regarding field inputs. 
-<br/>
 ## Usage
 Helper text is most commonly used in conjuction with form elements to provide additional hints and information for the user. It can also be used to explain why certain information is being requested, how to use a specific input or to suggest helpful hints. Helper text should always be visible and appear as a subheading, unlike [popovers](https://www.patternfly.org/v4/components/popover/design-guidelines/) which display content in a new window.
 <br/>
