@@ -11,7 +11,8 @@ When creating guidelines, information must be presented in the following order. 
 ### Elements (H2)
 Introduce the component and list the primary parts that make up its structure. This includes specific icons, headers, fields, symbols, or anything else included in the component.
 Example:
-<img src="sliderelements.png" alt="A screenshot of the slider component's element section with 8 elements outlined." width="479px" />
+
+<img src="./img/sliderelements.png" alt="A screenshot of the slider component's element section with 8 elements outlined." width="479px" />
 
 ### Usage (H2)
 Explain how the component is used, when to use it, and why it should be used. Include explanations of problems it could help solve and address its advantages over similar components. Include images for visual examples.
