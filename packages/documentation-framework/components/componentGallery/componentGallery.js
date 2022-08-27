@@ -66,7 +66,8 @@ export const ComponentGallery = () => {
               {Object.entries(components)
                 .filter(([componentName]) => componentName !== 'View all components' && componentName.toLowerCase().includes(searchTerm.toLowerCase()))
                 .sort(([componentName1], [componentName2]) => componentName1.localeCompare(componentName2))
-                .map(([componentName, componentData], idx) => (
+                .map(([componentName, componentData], idx) => {
+                  return (
                   <GalleryItem span={4} key={idx}>
                     <Card
                       id={componentData.id}
@@ -82,7 +83,7 @@ export const ComponentGallery = () => {
                       <CardBody>(preview image)</CardBody>
                     </Card>
                   </GalleryItem>
-                ))
+                )})
               }
             </Gallery>
           </DrawerContentBody>

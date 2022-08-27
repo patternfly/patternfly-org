@@ -123,6 +123,7 @@ export const MDXTemplate = ({
 }) => {
   const sourceKeys = sources.map(v => v.source);
   const isSinglePage = sourceKeys.length === 1;
+  const isComponent = sources.some(source => source.section === 'components');
   const { pathname } = useLocation();
   const { katacodaLayout } = sources[0].Component.getPageData();
   let activeSource = pathname.replace(/\/$/, '').split('/').pop();
@@ -154,12 +155,12 @@ export const MDXTemplate = ({
           {title}
         </Title>}
       </PageSection>
-      {!isSinglePage && summary && (
-        <PageSection variant={PageSectionVariants.light}>
+      {isComponent && summary && (
+        <PageSection variant={PageSectionVariants.light} className="pf-u-pt-0">
           <SummaryComponent />
         </PageSection>
       )}
-      {!isSinglePage && (
+      {(!isSinglePage || isComponent) && (
         <PageSection type="tabs">
           <div className="pf-c-tabs pf-m-page-insets pf-m-no-border-bottom">
             <ul className="pf-c-tabs__list">

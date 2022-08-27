@@ -181,6 +181,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   const topNavItems = process.env.topNavItems;
   const prnum = process.env.prnum;
   const prurl = process.env.prurl;
+  const componentsData = process.env.componentsData;
 
   const [versions, setVersions] = useState({ ...staticVersions });
 
@@ -224,6 +225,8 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
     />
   );
 
+  console.log({componentsData});
+
   return (
     <React.Fragment>
       <div id="ws-page-banners">
@@ -237,7 +240,8 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
         skipToContent={<SkipToContent href="#ws-page-main">Skip to content</SkipToContent>}
         isManagedSidebar
         defaultManagedSidebarIsOpen={navOpenProp}
-      >
+      >\
+        {console.log(children)}
         {children}
       </Page>
     </React.Fragment>

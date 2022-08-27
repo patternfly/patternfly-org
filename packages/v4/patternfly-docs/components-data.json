@@ -1,6 +1,6 @@
 {
   "about-modal": {
-    "illustration": "./images/component-illustrations/./images/component-illustrations/about-modal.png",
+    "illustration": "./images/component-illustrations/about-modal.png",
     "summary": "An <b>about modal</b> displays information about an application like product version number(s), as well as any appropriate legal text."
   },
   "accordion": {
@@ -9,11 +9,11 @@
   },
   "action-list": {
     "illustration": "./images/component-illustrations/action-list.png",
-    "summary": "An <b>action list</b> is a group of actions with set spacing."
+    "summary": "An <b>action list</b> is a group of actions, controls, or buttons with set spacing."
   },
   "alert-group": {
     "illustration": "./images/component-illustrations/alert-group.png",
-    "summary": "An <b>alert group</b> stacks and positions 2 or more alerts, either in a layer over the main content of a page or inline with the page content. Alert groups should always rank alerts by age, stacking new alerts on top of old ones as they surface."
+    "summary": "An <b>alert group</b> stacks and positions 2 or more alerts in a live region, either in a layer over the main content of a page or inline with the page content. Alert groups should always rank alerts by age, stacking new alerts on top of old ones as they surface."
   },
   "alert": {
     "illustration": "./images/component-illustrations/alert.png",
@@ -21,7 +21,7 @@
   },
   "application-launcher": {
     "illustration": "./images/component-illustrations/application-launcher.png",
-    "summary": "An <b>application launcher</b> is an optional utility menu item that allows a user to launch a separate web application in a new browser window."
+    "summary": "An <b>application launcher</b> is an option menu that allows a user to launch a separate web application in a new browser window."
   },
   "avatar": {
     "illustration": "./images/component-illustrations/avatar.png",
@@ -121,7 +121,7 @@
   },
   "dropdown": {
     "illustration": "./images/component-illustrations/dropdown.png",
-    "summary": "A <b>dropdown</b> presents a menu of actions or links in a constrained space that will trigger a process or navigate to a new location. See <Link to='/components/select/'>select component guidelines</Link> for more information about making one or more selections from a list of items in a value list."
+    "summary": "A <b>dropdown</b> presents a menu of actions or links in a constrained space that will trigger a process or navigate to a new location. See <Link to='/components/select/design-guidelines'>select component guidelines</Link> for more information about making one or more selections from a list of items in a value list."
   },
   "dual-list-selector": {
     "illustration": "./images/component-illustrations/dual-list-selector.png",
@@ -168,7 +168,7 @@
   },
   "input-group": {
     "illustration": "./images/component-illustrations/input-group.png",
-    "summary": "An <b>input group</b> includes multiple input types, like a text input and a button, in one control."
+    "summary": "An <b>input group</b> groups multiple related controls or inputs together so they appear as one control."
   },
   "jump-links": {
     "illustration": "./images/component-illustrations/jump-links.png",
@@ -176,11 +176,11 @@
   },
   "label-group": {
     "illustration": "./images/component-illustrations/label-group.png",
-    "summary": "Use a <b>label group</b> when you have multiple <Link to='https://www.patternfly.org/v4/components/label'>labels</Link> to display at once. Label groups can be oriented either horizontally or vertically and can optionally be named and dismissable."
+    "summary": "Use a <b>label group</b> when you have multiple <Link to='/components/label'>labels</Link> to display at once. Label groups can be oriented either horizontally or vertically and can optionally be named and dismissable."
   },
   "label": {
     "illustration": "./images/component-illustrations/label.png",
-    "summary": "The <b>label</b> component allows users to add specific element captions for user clairty and convenience."
+    "summary": "The <b>label</b> component allows users to add specific element captions for user clarity and convenience."
   },
   "list": {
     "illustration": "./images/component-illustrations/list.png",
@@ -196,7 +196,7 @@
   },
   "menu-toggle": {
     "illustration": "./images/component-illustrations/menu-toggle.png",
-    "summary": "The <b>menu toggle</b> component pairs with the <Link to='https://www.patternfly.org/v4/components/menu/design-guidelines'>menu</Link> component to create composable dropdown and select menus. Using a menu toggle with a menu enables you to create custom component configurations not supported by the standard dropdown or select components. However, from a design perspective, the dropdown, select, and menu toggle components are all visually the same. For more information about this component's usage, see the <Link to='https://www.patternfly.org/v4/components/dropdown/design-guidelines'>dropdown</Link>, <Link to='https://www.patternfly.org/v4/components/select/design-guidelines'>select</Link>, and <Link to='https://www.patternfly.org/v4/components/menu/design-guidelines'>menu</Link> component guidelines."
+    "summary": "The <b>menu toggle</b> component pairs with the <Link to='/components/menu/design-guidelines'>menu</Link> OR the <Link to='/components/panel/design-guidelines'>panel</Link> component to create more customizable dropdown and select implementations. Using a menu toggle with a menu enables you to create custom component configurations not supported by the standard dropdown or select components."
   },
   "menu": {
     "illustration": "./images/component-illustrations/menu.png",
@@ -220,7 +220,7 @@
   },
   "number-input": {
     "illustration": "./images/component-illustrations/number-input.png",
-    "summary": "A <b>number input</b> provides a quick and effective way for users to enter and modify a numeric value. Similar to <Link to='https://www.patternfly.org/v4/components/input-group/'>input groups</Link>, number inputs combine 2 input types into 1 control: A text input field with buttons on either side. When combined, these elements allow users to input numeric values in a responsive and scalable way."
+    "summary": "A <b>number input</b> provides a quick and effective way for users to enter and modify a numeric value. Similar to <Link to='/components/input-group/'>input groups</Link>, number inputs combine 2 input types into 1 control: A text input field with buttons on either side. When combined, these elements allow users to input numeric values in a responsive and scalable way."
   },
   "options-menu": {
     "illustration": "./images/component-illustrations/options-menu.png",
@@ -240,14 +240,15 @@
   },
   "panel": {
     "illustration": "./images/component-illustrations/panel.png",
-    "summary": "The <b>panel</b> component is a container that supports flexible content layouts. It can be used to house other components such as fields, forms, videos, buttons, and more. The panel should not be confused with the <Link to='https://www.patternfly.org/v4/components/drawer/design-guidelines/'>drawer</Link> component, which allows you to surface information via a collapsable container."
+    "summary": "The <b>panel</b> component is a container that supports flexible content layouts. It can be used to house other components such as fields, forms, videos, buttons, and more. The panel should not be confused with the <Link to='/components/drawer/design-guidelines/'>drawer</Link> component, which allows you to surface information via a collapsable container."
   },
   "popover": {
     "illustration": "./images/component-illustrations/popover.png",
     "summary": "A <b>popover</b> is in-app messaging that provides more information on specific product areas. Popovers display content in a new window that overlays the current page. Unlike modals, popovers don't block the current page."
   },
   "progress-stepper": {
-    "illustration": "./images/component-illustrations/progress-stepper.png"
+    "illustration": "./images/component-illustrations/progress-stepper.png",
+    "summary": "A <b>progress stepper</b> displays a timeline of tasks in a workflow and tracks the user's current progress through this workflow."
   },
   "progress": {
     "illustration": "./images/component-illustrations/progress.png",
@@ -266,7 +267,8 @@
     "summary": "A <b>select</b> list enables users to select one or more items from a list. Use a select list when options are dynamic or variable."
   },
   "sidebar": {
-    "illustration": "./images/component-illustrations/sidebar.png"
+    "illustration": "./images/component-illustrations/sidebar.png",
+    "summary": "A <b>sidebar</b> splits content into a secondary area that can be placed relative to the main content on a page."
   },
   "simple-list": {
     "illustration": "./images/component-illustrations/simple-list.png",
@@ -274,7 +276,7 @@
   },
   "skeleton": {
     "illustration": "./images/component-illustrations/skeleton.png",
-    "summary": "A <b>skeleton</b> is a type of loading state that allows you to expose content incrementally. For content that may take a long time to load, use a <Link to='/components/progress/react'>progress bar</Link> in place of a skeleton."
+    "summary": "A <b>skeleton</b> is a type of loading state that allows you to expose content incrementally. For content that may take a long time to load, use a <Link to='/components/progress'>progress bar</Link> in place of a skeleton."
   },
   "skip-to-content": {
     "illustration": "./images/component-illustrations/skip-to-content.png",
@@ -310,7 +312,7 @@
   },
   "text-input-group": {
     "illustration": "./images/component-illustrations/text-input-group.png",
-    "summary": "A <b>text input group</b> is a more flexible composable version of a <Link to='/components/text-input'>text input</Link>. It enables consumers of PatternFly to build custom inputs for filtering and similar use cases by placing elements like icons, <Link to='components/chip-group'>chips groups</Link> and <Link to='components/button'>buttons</Link> within a text input."
+    "summary": "A <b>text input group</b> is a more flexible composable version of a <Link to='/components/text-input'>text input</Link>. It enables consumers of PatternFly to build custom inputs for filtering and similar use cases by placing elements like icons, <Link to='/components/chip-group'>chips groups</Link> and <Link to='/components/button'>buttons</Link> within a text input."
   },
   "text-input": {
     "illustration": "./images/component-illustrations/text-input.png",
@@ -327,6 +329,9 @@
   "time-picker": {
     "summary": "A <b>time picker</b> allows users to select a time from a list of options. Time can be displayed in hours and minutes, but not in seconds."
   },
+  "timestamp": {
+    "summary": "A <b>timestamp</b> provides consistent formats for displaying date and time values."
+  },
   "title": {
     "summary": "A <b>title</b> component applies top and bottom margins, font-weight, font-size, and line-height to titles. The most common usage for a title is to define headings within a page. For more information about the relationship between title component sizes and HTML heading levels, see the <Link to='/guidelines/typography#customizing-heading-levels'>Typography guidelines</Link>."
   },
@@ -336,7 +341,7 @@
   },
   "toolbar": {
     "illustration": "./images/component-illustrations/toolbar.png",
-    "summary": "A <b>toolbar</b> allows a user to manage and manipulate a data set. Data can be presented in any valid presentation, a table, a list, or a data visualization (chart), for example. The PatternFly Toolbar component is a flexible layout system that accommodates a variety of configurations that can be adapted to your specific needs."
+    "summary": "A <b>toolbar</b> allows a user to manage and manipulate a data set. Data can be presented in any valid presentation, a table, a list, or a data visualization (chart), for example. The toolbar responsively accommodates controls and displays applied filters in chip groups."
   },
   "tooltip": {
     "illustration": "./images/component-illustrations/tooltip.png",
