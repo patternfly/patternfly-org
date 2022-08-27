@@ -67,5 +67,5 @@ module.exports = {
     }
   ],
   ignoreIncomplete: true,
-  skip: '(mailto)|(/(react|react-demos|react-legacy|react-composable|html|html-demos)/.+)|(/react$)'
+  skip: '(mailto)|(/(react|react-next|react-demos|react-legacy|react-composable|html|html-demos)/.+)|(/react$)'
 };
