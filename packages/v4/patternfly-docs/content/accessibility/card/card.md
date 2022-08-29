@@ -9,10 +9,9 @@ import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
 To implement an accessible PatternFly **card**:
 
-- Provide an accessible name for the card via the `aria-label` or `aria-labelledby` attribute.
+- Provide an accessible name for the card via the `aria-label` attribute, or by linking to a card title via the `aria-labelledby` attribute.
 - Ensure any other PatternFly components within a card follow their own accessibility documentation.
-- Place a set of multiple cards inside of a list container, with a list item wrapped around each card.
-- Give a card list container its own accessible name via the `aria-label` attribute if there is no other surrounding context.
+- Place cards inside of a list element whenever displaying a set of multiple cards, with a list item wrapped around each card. This list element must also have its own accessible name via the `aria-label` attribute if there is no other surrounding context.
 
 ## Testing
 
@@ -43,17 +42,15 @@ Various React props have been provided for more fine-tuned control over accessib
 | Prop | Applied to | Reason | 
 |---|---|---|
 | `aria-label` or `aria-labelledby` | `Card` | Adds an accessible name to the card. If the card has a `CardTitle`, the `aria-labelledby` prop should be passed in with a value of the `CardTitle`'s `id` prop. Otherwise the `aria-label` prop should be passed in to act as a title for the card. |
-| `component` | `Card` | Sets the base element for the sub-component (`article` element by default). If you primarily want to use a card for styling or layout purposes, it's recommended to pass in a value of "div" to this prop. |
+| `component` | `Card` | Sets the base element for the sub-component (`article` element by default). <br/><br/> If you primarily want to use a card for styling or layout purposes, it's recommended to pass in a value of "div" to this prop. When doing so, the `aria-label` or `aria-labelledby` prop should be omitted as these props are not well supported on `div` elements without a `role`. |
 | `hasSelectableInput` | `Card` | Adds a visually hidden input that notifies users navigating via assistive technologies that a card is selectable. This prop should only be passed in when only one card within a set of cards should be selectable at a time, such as for a [primary-detail view](/demos/primary-detail). <br/><br/> When this prop is passed in, either a `CardTitle` sub-component must exist in the card, or the `selectableInputAriaLabel` prop must be passed in. The hidden input will automatically be given an accessible name when a `CardTitle` exists within the card, otherwise the value given to the `selectableInputAriaLabel` prop will add an accessible name to the input. |
 | `isDisabledRaised` | `Card` | Adds styling to visually indicate that a selectable card is disabled. When the `hasSelectableInput` prop is passed in, this prop will also set the selectable input's `disabled` attribute. |
 | `isExpanded` | `Card` | Adds styling to a card toggle to visually indicate whether the expandable content is expanded or collapsed. When this prop is passed in, `onExpand` and `toggleButtonsProps` must be passed into the `CardHeader` sub-component. |
 | `isSelectable` or `isSelectableRaised` | `Card` | Adds styling on hover or focus to visually indicate that a card is selectable, and adds the `tabindex="0"` attribute so that the card can be navigated to with standard keyboard navigation. |
 | `isSelected` | `Card` | Adds styling to visually indicate that a card is currently selected. When the `hasSelectableInput` prop is passed in, this prop will also set the selectable input's `checked` attribute. |
 | `selectableInputAriaLabel` | `Card` | Adds an accessible name to the hidden input when `hasSelectableInput` is passed in and there is no `CardTitle` sub-component within the card. The value passed into this prop should act as a title for the card. |
-| `component` | `CardBody` | Sets the base element for the sub-component (`div` element by default). |
-| `component` | `CardFooter` | Sets the base element for the sub-component (`div` element by default). |
 | `onExpand` | `CardHeader` | Adds a toggle button with a caret icon to control whether a card is expanded or collapsed, and to visually indicate the card is expandable. <br/><br/> If an expandable card does not include a `CardTitle`, there should be some other visual context in the `CardHeader` to convey the content of the card to users that rely on sight, such as an image. |
-| `toggleButtonProps` | `CardHeader` | Sets props on the card's toggle. **Required** when a card is expandable. |
+| `toggleButtonProps` | `CardHeader` | Sets props on the card's toggle. **Required** when a card is expandable. For more information about this prop, see the [expandable toggle props](/components/card/accessibility#expandable-toggle-props) section. |
 | `component` | `CardTitle` | Sets the base element for the sub-component (`div` element by default). When one of the six heading elements (`h1` to `h6`) is passed in, you must ensure no heading levels are skipped within the surrounding context of the page. |
 
 ### Expandable toggle props
@@ -84,13 +81,9 @@ Various HTML attributes and PatternFly classes can be used for more fine-tuned c
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
 | `aria-label` or `aria-labelledby` | `.pf-c-card` | Adds an accessible name to the card. If the card has a `.pf-c-card__title`, the `aria-labelledby` attribute should be passed in with a value of the card title's `id` attribute. Otherwise the `aria-label` attribute should be passed in to act as a title for the card. |
-| `.pf-m-non-selectable-raised` | `.pf-c-card` | Adds styling to visually indicate that a selectable card is disabled. |
-| `.pf-m-selectable-raised` or `.pf-m-selectable` | `.pf-c-card` | Adds styling to visually indicate that a card is selectable. |
-| `.pf-m-selected-raised` or `.pf-m-selected` | `.pf-c-card` | Adds styling to visually indicate that a card is selected. |
 | `tabindex="0"` | `.pf-c-card.pf-m-selectable-raised` or `.pf-c-card.pf-m-selectable` | Inserts the card into the tab order of the page so that it can be navigated to with standard keyboard navigation. **Required** when a card is selectable. |
 | `aria-label` or `aria-labelledby` | `.pf-c-card__sr-input.pf-screen-reader` | Adds an accessible name to the hidden input that is used to improve accessibility for selectable cards. If the card has a `.pf-c-card__title`, the `aria-labelledby` attribute should be passed in with a value of the card title's `id` attribute. Otherwise the `aria-label` attribute should be passed in to act as a title for the card. |
 | `disabled` | `.pf-c-card__sr-input.pf-screen-reader` | Indicates a selectable card is disabled when the hidden input is used to improve accessibility for selectable cards. **Required** when a selectable card has the hidden input rendered and has the `.pf-m-non-selectable-raised` class. |
-| `.pf-m-expanded` | `.pf-c-card__header-toggle .pf-c-button.pf-m-plain` | Adds styling to visually indicate whether the expandable content is expanded or collapsed. |
 | `aria-expanded="false"` | `.pf-c-card__header-toggle .pf-c-button.pf-m-plain` | Indicates that the card toggle is collapsed to assistive technologies. **Required** if the toggle is collapsed. |
 | `aria-expanded="true"` | `.pf-c-card__header-toggle .pf-c-button.pf-m-plain` | Indicates that the card toggle is expanded to assistive technologies. **Required** if the toggle is expanded. |
 | `aria-hidden="true"` | `.pf-c-card__header-toggle-icon` | Removes the card toggle icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
