@@ -13,7 +13,7 @@ PatternFly offers a variety of resources to help you make the most of the design
 ### Design kit
 The design kit is a symbol library implemented in Sketch to help designers like you contribute to PatternFly.
 
-[**What's in the design kit?**](/v4/get-started/design#whats-in-the-design-kit) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**What's in the design kit?**](#whats-in-the-design-kit) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 
 
@@ -23,7 +23,7 @@ What typography should you be using? What about colors? Spacing? Check out style
 [**View styles**](/guidelines/colors) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 ### Usage and behavior guidelines
-Should you use a wizard or a form to solve this problem? How do you write a good button label? Which navigation makes the most sense? Check out our design guidelines to choose and use the right components for your use case.
+Should you use a wizard or a form to solve this problem? How do you write a good button label? Which navigation makes the most sense? Get answers by clicking the Design guidelines tab associated within each component page.
 
 [**View usage and behavior guidelines**](/components/about-modal/design-guidelines) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
