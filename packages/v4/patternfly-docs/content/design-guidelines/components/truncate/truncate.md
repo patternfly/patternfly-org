@@ -3,8 +3,6 @@ id: Truncate
 section: components
 ---
 
-A **truncate** is a tool used to shorten numeric and non-numeric character strings, typically when the string overflows its container. 
-
 ## Elements
 * **Content**: text string to truncate
 * **Position**: where the text will be truncated from, ie. front, middle, or end
@@ -45,7 +43,7 @@ Truncated items are indicated by an ellipsis (...) and are used when trying to a
    
   <img src="./img/endline.png" alt="image showing table truncate" width="331" />
 
-## Content
+## Content considerations
 * If the text string is part of a link, the ellipsis should also be a part of the link.
 * Always include hover tooltip to display the entire string to the user.
 * Avoid abbreviations or truncated text in navigation items.

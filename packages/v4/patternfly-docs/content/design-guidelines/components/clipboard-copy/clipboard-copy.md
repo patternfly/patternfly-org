@@ -2,7 +2,6 @@
 id: Clipboard copy
 section: components
 ---
-The **clipboard copy** component allows users to quickly and easily copy content to their clipboard.
 
 ## Elements
 Clipboard copy has 3 main components.

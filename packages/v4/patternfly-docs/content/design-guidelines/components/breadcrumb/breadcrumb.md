@@ -2,7 +2,6 @@
 id: Breadcrumb
 section: components
 ---
-A **breadcrumb** provides page context to help users navigate more efficiently and understand where they are in the application hierarchy.
 
 ## Usage
 
@@ -20,3 +19,5 @@ Breadcrumbs should be placed underneath the masthead, at the top of the page. Th
 
 <img src="./img/placement.png" alt="Placement of breadcrumbs and padding" width="825"/>
 
+## Accessibility
+For information regarding accessibility, visit the [breadcrumb accessibility](/components/breadcrumb/accessibility) tab. 

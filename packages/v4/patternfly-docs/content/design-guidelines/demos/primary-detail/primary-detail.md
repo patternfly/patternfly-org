@@ -6,60 +6,64 @@ section: demos
 A **primary-detail layout** is an interface that shows a list of items and the corresponding details of the selected item.
  
 ## Elements
-A primary component sits in a container on the page, and detail components typically live in a slide-out [drawer](/components/drawer/react).
+A primary component sits in a container on the page, and detail components typically live in a slide-out [drawer](/components/drawer).
 
-<img src="./img/floating-drawer.png"  alt="floating drawer with overview details"  width="990"/>  
+<img src="./img/primary-detail-in-data-list.png"  alt="Image showing primary-detail component in data list"  width="1500"/>  
+
+1. **Primary component:** Contains the grouping of elements that can be selected to initiate each element’s details drawer.
+2. **Drawer component:** Contains the details of each individual element.
 
 When the page content has a white background, the drawer can be placed on the same level as the primary content with a divider line. Alternatively, the drawer can be elevated on top of the primary content. We recommend having a title in the drawer that relates back to the selected primary item. 
  
 **Common primary components:**
-- Data list*
-- Data table*
-- Card view *
-- Simple list/light nav
+- [Data list](/components/data-list)*
+- [Data table](/components/table)* 
+- [Card view](/components/card)*
+- [Simple list](/components/simple-list)/[light nav](/components/navigation/react-demos/#legacylight-nav)
  
 *Any of the above may have associated toolbars. A toolbar can be placed in the card header of a component in the primary, but it may need to be placed in a page header if there is a card view or if there is the ability to switch between views (and/or toggle open and close the details drawer). 
  
 **Common detail components:**
-- Markdown text form or code editor
-- Description list
-- Charts or graphs
-- Input forms
-- Text
+- Markdown text form or [code editor](/components/code-editor)
+- [Description list](/components/description-list)
+- [Charts or graphs](/charts/about)
+- [Input forms](/components/input-group)
+- [Text](/components/text)
  
-## Characteristics of a primary-detail layout
+## Usage
+Use a primary-detail layout when viewing details from an item in a large list or group on the same page. A primary-detail layout is useful for navigating back and forth through a list and making edits in the details of each list item, without losing context of the larger list. Primary-detail layouts look best on wider screens, but they can be responsive, too.
+
+### Characteristics
 PatternFly supports a side-by-side view of a primary element on the left and a detail element on the right. The component in the primary pane is used to control the information shown in the details pane. 
  
-<img src="./img/primary-detail-card-view.png"  alt="primary-detail with card view"  width="990"/>  
+<img src="./img/primary-detail-in-card-view.png"  alt="Image showing primary-detail component in card view"  width="1500"/>  
  
 Primary-detail containers can begin below a page header. The width of the primary and detail panes can vary based on the amount and type of content they display. Typically the panes are in halves, thirds, or quarters of the view port. The height of the details pane is 100% of the primary container.
  
 A primary-detail layout usually takes up the full page, but it can be placed in a card for certain use cases. We suggest placing a primary-detail layout in a card when you’re using a simple navigation or data list and the details pane is always open. A drop shadow on the details pane is not recommended in this view. 
  
-<img src="./img/primary-detail-card-data-list.png"  alt="primary-detail with card data list"  width="990"/> 
+<img src="./img/primary-detail-in-card-demo-list.png"  alt="Image showing primary-detail component in card data list"  width="1500"/> 
  
-## When to use primary-detail layouts
-Use a primary-detail layout when viewing details from an item in a large list or group on the same page. A primary-detail layout is useful for navigating back and forth through a list and making edits in the details of each list item, without losing context of the larger list. Primary-detail layouts look best on wider screens, but they can be responsive, too.   
+## Behavior
+The primary-detail component functions by the user selecting an item from the primary component on the left which opens a detail component on the right. The user can dismiss the detail component and/or select another item from the primary component to switch views of the detail component. 
+
+### Responsive behavior
+The mobile behavior of the interaction will generally mirror the desktop behavior. Mobile views will only show 1 component at a time, either the primary component or the detail component. Upon selecting an item from the primary component, the detail component will slide in from the right and will overlay the primary component, taking the whole width of the viewport. The primary component’s title will remain constant as the header with clear navigation back to the primary component. The detail component will also be dismissable and will slide out to the right upon closing, revealing just the primary component. The viewport will switch to mobile view at a defined breakpoint, usually when it drops below 2x (which is the typical mobile width). 
  
-## Responsive behavior
-Mobile views show a primary-detail layout’s primary component only. Details show on a new page upon clicking, but the “primary item title” will appear as a header with clear navigation back to the primary component. The viewport will switch to mobile view at a defined breakpoint, usually when it drops below 2x (which is the typical mobile width).  
+<img src="./img/mobile-primary-detail-in-card-view.png"  alt="Image showing primary-detail component mobile behavior in card view"  width="943"/> 
  
-<img src="./img/card-view-mobile-layout.png"  alt="primary-detail with card view on mobile"  width="375"/> 
+In cases where the detail component in desktop view is non-dismissible and active at all times, the detail component becomes dismissible when switching to mobile view, and behaves as described above.
  
-In tablet/dt screens, the primary component may switch to its mobile view—while still maintaining a side-by-side view with the detail drawer—earlier than the typical mobile breakpoint. 
+<img src="./img/mobile-primary-detail-in-list-view.png"  alt="Image showing primary-detail component mobile behavior in non-dismissable list view"  width="2520"/> 
  
-<img src="./img/side-by-side-mobile.png"  alt="primary-detail with side-by-side view on mobile"  width="375"/> 
+## Variations
  
-If the primary and detail components are the same width or take up the same portion of the screen, then both will resize until they reach the mobile view’s defined breakpoint.
- 
-If the primary and detail components are different sizes, the larger container will resize, and the smaller container will remain as a fixed size until they reach the device’s defined breakpoint.
- 
-## Selecting rows
+### Selectable rows
 Row selection differs from bulk/checkbox selection, and both selection types operate independent of each other.
  
 When checkbox select and row select are both available in a primary-detail layout, the details pane will populate an empty state and guide users to either make an action in the toolbar or clear the selected checkboxes to return to the selected row’s detail view. This empty state should show to alleviate confusion for the different select states when both are present in a table.
  
-<img src="./img/primary-detail-bulk-selection.png"  alt="primary-detail with two items selected"  width="990"/> 
+<img src="./img/primary-detail-multi-select.png"  alt="Image showing primary-detail component with multi-select items"  width="1500"/> 
  
 Here are some other best practices to keep in mind:
 - There needs to be a **selected** state for the primary item (row or card) currently populating the details pane.
@@ -68,11 +72,10 @@ Here are some other best practices to keep in mind:
  
 For [empty states](/components/empty-state), if the details pane is automatically expanded on default but a primary item is not selected by default, then there should be an empty state in the details pane directing users to make a selection in the primary. In cases where there is bulk select capability in the primary component, an expanded details drawer should display an empty state informing users that multiple items have been selected. To view details of a single primary item, the user must clear their selection.
 
-## Splitter in a primary-detail
+### Splitter in a primary-detail
 
 A **splitter** allows you to create a layout with resizable panes. The orientation of a splitter can be set to **vertical** or **horizontal**.
 
-### Usage
 Add a splitter to a primary-detail if you need to resize the width or height of a panel to give content more space. It helps to prioritize the content you’re focusing on. If data shown in a primary-detail has enough space, then you don’t need to use a splitter.
 
-<img src="./img/splitter-primary-detail.png" width="1500" />
+<img src="./img/primary-detail-splitter.png" alt="Image showing primary-detail component with spliiter" width="1500" />

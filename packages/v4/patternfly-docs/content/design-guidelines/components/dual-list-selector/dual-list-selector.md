@@ -3,23 +3,21 @@ id: Dual list selector
 section: components
 ---
 
-A **dual list selector** allows users to select and move items from one list of available items to another list of selected items. Unlike a select list, a dual list selector separates the available options and the selected options into two separate lists, which allows users to easily scan the items they selected.
-
 ## Usage
 Dual list selectors are useful when you have a large set of options for users to pick from that would be difficult to digest in a select list. They’re useful in forms, wizards, and modals as a way for users to make selections from a list of options.
 
 ### When to use
-**Use a dual list selector when:**
+
 * You have a long list of items for users to pick from.
 * You want to distinguish the available items from the chosen items.
 * You want the ability to group the list of items
 * The user can select a large number of items and separating selections from available options would be helpful.
 
-**Do not use a dual list selector when:**
+### When not to use
 * Users have a list of actions to choose from. Instead, use a dropdown menu or tree view 
 * The list of items to choose from has fewer than 20 items. Instead, use a select list.
 
-## Types of dual list selectors
+## Variations
 There are two types of dual list selectors: basic dual lists and expandable dual lists.
 
 ### Basic dual list 
@@ -48,7 +46,7 @@ An expandable dual list contains a multi-leveled list of items for users to choo
 4. **Number of items:** indicator of how many items are selected, among the total items available in the list. <u>In expandable lists, only non-folder items are included in the item count.</u>
 5. **Badge (optional):** number of items inside a folder.
 
-### Dual list behavior
+## Behavior
 Users can select one or more items from the available list and use the arrows to move these items to the chosen list. Users can filter down the items by using the search input field.
 
 <img src="./img/dual list single.gif" alt="basic dual list behavior" width="880"/>

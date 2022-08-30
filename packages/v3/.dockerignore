@@ -1,9 +1,0 @@
-github.io
-node_modules
-.openshift
-php
-_site
-_build
-repos
-Dockerfile
-.dockerignore

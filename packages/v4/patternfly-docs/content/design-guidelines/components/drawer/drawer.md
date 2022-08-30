@@ -3,8 +3,6 @@ id: Drawer
 section: components
 ---
 
-A **drawer** is a sliding panel that enters from the right edge of the viewport. It can be configured to either overlay content on a page or create a sidebar by pushing that content to the left.
-
 ## Usage
 
 Drawers can be used to store and show more information than immediately presented on a page. A drawer with more information is usually prompted by a user click. Upon the click, the drawer comes out and shows more information, which is usually relevant to a whole page.
@@ -17,7 +15,7 @@ In addition to primary-details, the drawer component is frequently used in [noti
 
 A **splitter** allows you to create a layout with resizable panes. The orientation of a splitter can be set to **vertical** or **horizontal**.
 
-### Usage
+### When to use a splitter
 Add a splitter to a drawer if you need to resize the width or height of a panel to give content more space. If data shown in a drawer has enough space, then you don’t need to use a splitter.
 
 <img src="./img/splitter-drawer.png" width="1500" />

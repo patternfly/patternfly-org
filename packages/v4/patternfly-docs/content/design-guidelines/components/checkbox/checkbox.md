@@ -3,8 +3,6 @@ id: Checkbox
 section: components
 ---
 
-A **checkbox** is used to select a single item or multiple items, typically to choose elements to perform an action or to reflect a binary setting.
-
 ## Usage
 Checkboxes allow users to choose **1 or more items** from a list of options.
 
@@ -14,7 +12,7 @@ You can also use a single checkbox to allow a user to enable or disable a featur
 
 <img src="./img/one-checkbox.png" alt="Example of single checkbox" width="173"/>
 
-#### General guidelines
+### When to use
 
 * Use checkboxes if you’re presenting 5 or fewer options to the user. If you’re presenting more than 5 options, use a [select list](/components/select/design-guidelines) instead.
 * Use checkboxes if the user can select multiple options. If the user can only select 1 option, then use radio buttons. 
@@ -32,12 +30,9 @@ You also have the option to use progressive disclosure by nesting other controls
 
 <img src="./img/nested-controls-checkbox.png" alt="Example of nested control checkboxes" width="459"/>
 
-### When to use switches versus checkboxes
+### When to use switches vs. checkboxes
 
 The main difference between a switch and a checkbox is that a switch changes an option and saves it simultaneously, while checkboxes require a separate action such as pressing a “Submit” or “Save” button to save the selection. 
-
-**Here are some guidelines for when to use a switch versus a checkbox:**
-
 * Use checkboxes when the options do not save automatically and require the user to perform an additional action to save changes (in this case, pressing the “Save changes” button).
 
     <img src="./img/switch-check-1.png" alt="Example 1 of do and don'ts for checkbox vs switch usee " width="661"/>

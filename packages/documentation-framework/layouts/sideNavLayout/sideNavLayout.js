@@ -140,7 +140,7 @@ const HeaderTools = ({
                 key="PatternFly 3"
                 className="ws-patternfly-3"
                 target="_blank"
-                href="https://www.patternfly.org/v3"
+                href="https://pf3.patternfly.org/"
               >
                 PatternFly 3
                 <ExternalLinkAltIcon />

@@ -3,8 +3,6 @@ id: Avatar
 section: components
 ---
 
-An **avatar** is a visual used to represent a user. It may contain an image or a placeholder graphic.
-
 ## Usage
 
 There are four size variations available to use for different scenarios. The typical usage for an avatar is to represent the current user in the masthead. However, based on your product's use cases and needs, there is room for customization.
@@ -29,3 +27,6 @@ This size variation should be used in components such as cards.
 This size variation should be used in components such as profile displays.
 
 <img src="./img/extra-large-avatar-profile display.png" alt="Image displaying extra large avatar usage in profile display" width="1024"/>
+
+## Accessibility
+For information regarding accessibility, visit the [avatar accessibility](/components/avatar/accessibility) tab. 

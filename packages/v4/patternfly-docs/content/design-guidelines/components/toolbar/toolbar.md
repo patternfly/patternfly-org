@@ -4,9 +4,6 @@ section: components
 related: ['Overflow menu', 'Pagination']
 ---
 
-A **toolbar** allows a user to manage and manipulate a data set. Data can be presented in any valid presentation, a table, a list, or a data visualization (chart), for example. The PatternFly Toolbar component is a flexible layout system that accommodates a variety of configurations that can be adapted to your specific needs.
-
-
 ## Elements
 
 A toolbar is a container for holding a variety of elements (toolbar items and groups) that are used to manipulate a set of data. All items should be centered vertically within a toolbar.
@@ -110,7 +107,7 @@ For list and table views that are placed inside of an enclosing card, the toolba
 
 Toolbars should stretch to the width of the enclosing container, with the elements aligned in a horizontal row. There should be no spacers on the left and right edges of the toolbar as the toolbar provides its own padding.
 
-## The toolbar on mobile
+### The toolbar on mobile
 
 The toolbar adapts to smaller viewport sizes by collapsing or hiding elements that take significant space, including filters and actions. On mobile devices, when used, pagination will be available from the footer, only. When designing toolbars to be responsive:
 

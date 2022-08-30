@@ -3,8 +3,6 @@ id: Login page
 section: components
 ---
 
-A **login page** allows a user to gain access to an application by entering their username and password or by authenticating using a social media login.
-
 ## Elements
 
 <img src="./img/elements.png" alt="Elements of a login page" width="1500"/>
@@ -180,7 +178,7 @@ Another form of error state message is a warning message. These messages are tri
 | Session timed out | Your session has expired. Please log back in.
 
 
-## Content guidelines
+## Content considerations
 
 * Use “log in” to describe the verb of signing or logging in an account. Note, it is “log in” and not “log into”. 
 * Use “login” as an adjective to describe something related to the act of logging in to an application, like a page. The noun Login can also be used as an alternative for Username, but Username is recommended.

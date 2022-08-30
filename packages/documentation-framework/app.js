@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, useLocation } from '@reach/router';
+import 'client-styles'; // Webpack replaces this import: patternfly-docs.css.js
 import { SideNavLayout } from '@patternfly/documentation-framework/layouts';
 import { Footer } from '@patternfly/documentation-framework/components';
 import { MDXTemplate } from '@patternfly/documentation-framework/templates/mdx';
 import { routes, groupedRoutes, fullscreenRoutes, getAsyncComponent } from './routes';
 import { trackEvent } from './helpers';
-import 'client-styles'; // Webpack replaces this import: patternfly-docs.css.js
 import './components/autoLinkHeader/autoLinkHeader.css';
 import './components/cssVariables/cssVariables.css';
 import './components/tableOfContents/tableOfContents.css';
@@ -38,12 +38,13 @@ const AppRoute = ({ child, katacodaLayout, title, path }) => {
 
 const SideNavRouter = () => {
   const pathname = useLocation().pathname.replace(process.env.pathPrefix, '');
+  const componentsData = process?.env?.componentsData;
   const navOpen = !routes[pathname] || !routes[pathname].katacodaLayout;
   return (
     <SideNavLayout groupedRoutes={groupedRoutes} navOpen={navOpen} >
       <Router id="ws-page-content-router">
         {Object.entries(routes)
-          .map(([path, { Component, title, sources, katacodaLayout }]) => Component
+          .map(([path, { Component, title, sources, katacodaLayout, id }]) => Component
             ? <AppRoute
                 key={path}
                 path={path}
@@ -60,6 +61,8 @@ const SideNavRouter = () => {
                     path={path}
                     title={title}
                     sources={sources}
+                    id={id}
+                    componentsData={componentsData}
                   />
                 }
                 katacodaLayout={katacodaLayout}

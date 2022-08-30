@@ -3,14 +3,7 @@ id: Page
 section: components
 ---
 
-The **page** component is used to define the basic layout of a page with either vertical or horizontal navigation.
-
-## Basic layouts
-PatternFly includes a flexible layout system for defining pages. Page layouts are defined using page sections as explained below. While the layout system is flexible, you should adhere to the guidelines for common elements like the masthead and page header to maintain consistency across applications.
-
-### Page sections
-Page sections allow you to define areas on a page to group content. The header, body, and footer on a page are examples of page sections. Page sections have 24px padding on left and right edges or no padding to allow the contents to extend to the edge of a page. At screen sizes smaller than 1200px, the left/right padding is reduced to 16px to create a tighter layout. Page sections can also be made sticky such that they will remain visible at the top or bottom of the viewport when the page scrolls. This is useful for creating sticky headers, footers, or other elements.
-
+## Elements
 The basic layout of a page differs depending on whether your application uses vertical or horizontal primary navigation as illustrated below.
 
 ### Page with vertical navigation
@@ -34,3 +27,10 @@ The basic layout of a page differs depending on whether your application uses ve
 <img src="./img/page-horizontal-nav.png" alt="page with horizontal navigation" width="832"/>
 
 When using a horizontal primary navigation, the left-hand sidebar is removed and the navigation is placed inline with other masthead elements. All other page elements remain the same.
+
+## Usage
+PatternFly includes a flexible layout system for defining pages. Page layouts are defined using page sections as explained below. While the layout system is flexible, you should adhere to the guidelines for common elements like the masthead and page header to maintain consistency across applications.
+
+### Page sections
+Page sections allow you to define areas on a page to group content. The header, body, and footer on a page are examples of page sections. Page sections have 24px padding on left and right edges or no padding to allow the contents to extend to the edge of a page. At screen sizes smaller than 1200px, the left/right padding is reduced to 16px to create a tighter layout. Page sections can also be made sticky such that they will remain visible at the top or bottom of the viewport when the page scrolls. This is useful for creating sticky headers, footers, or other elements.
+

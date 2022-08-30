@@ -4,8 +4,6 @@ section: components
 related: ["Calendar month", "Time picker"]
 ---
 
-A **date picker** helps users select a specific date, time, or range of time-related values.
-
 ## Elements
 
 <img src="./img/date-picker.png" alt="Date picker elements" width="343"/>
@@ -107,7 +105,7 @@ Some use cases will call for more advanced scheduling options, such as schedulin
 
 <img src="./img/Advance scheduling modal.png" alt="Example of a date picker used with other scheduling options" width="500"/>
 
-## Content
+## Content considerations
 
 ### Date format
 Date formats are product-specific and often depend on user locale. To minimize confusion, choose one date format and keep it consistent. If one date picker displays MM/DD/YYYY, be sure to repeat the same date format throughout your interface.
