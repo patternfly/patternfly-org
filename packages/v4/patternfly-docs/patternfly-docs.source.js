@@ -79,4 +79,14 @@ module.exports = (sourceMD, sourceProps) => {
   // Upgrade guides
   sourceMD(require.resolve('@patternfly/patternfly/UPGRADE-GUIDE.md'), 'html');
   sourceMD(require.resolve('@patternfly/react-docs/UPGRADE-GUIDE.md'), 'react');
+
+  // Quickstarts extension
+  const qsPath = require
+    .resolve('@patternfly/quickstarts/package.json')
+  const qsContentBase = path.join(qsPath.replace('package.json', 'dist'), '/patternfly-docs/quick-starts');
+  const qsPropsBase = qsPath.replace('package.json', 'src')
+  const qsPropsIgnore = ['**/*.test.tsx', '**/examples/*.tsx'];
+
+  sourceProps(path.join(qsPropsBase, '/**/*.tsx'), qsPropsIgnore);
+  sourceMD(path.join(qsContentBase, '**/*.md'));
 }
