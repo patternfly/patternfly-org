@@ -4,8 +4,6 @@ section: components
 related: ["Calendar month", "Time picker"]
 ---
 
-A **date picker** helps users select a specific date, time, or range of time-related values.
-
 ## Elements
 
 <img src="./img/date-picker.png" alt="Date picker elements" width="343"/>

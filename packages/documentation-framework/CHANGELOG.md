@@ -3,6 +3,260 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.12 (2022-08-31)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.11 (2022-08-30)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.10 (2022-08-29)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.9 (2022-08-29)
+
+
+### Bug Fixes
+
+* **example:** increase code editor button tooltip size, other cleanup ([#3162](https://github.com/patternfly/patternfly-org/issues/3162)) ([fab30f5](https://github.com/patternfly/patternfly-org/commit/fab30f5b94b648605fd9efb980fc6eea2e772a79))
+
+
+
+
+
+## 1.2.8 (2022-08-26)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.7 (2022-08-24)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.6 (2022-08-23)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.5 (2022-08-22)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.4 (2022-08-22)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.3 (2022-08-22)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.2 (2022-08-19)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.1 (2022-08-19)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 1.2.0 (2022-08-18)
+
+
+### Features
+
+* **doc-framework:** Allow for 'next' core component usage alongside core components ([#3126](https://github.com/patternfly/patternfly-org/issues/3126)) ([8617112](https://github.com/patternfly/patternfly-org/commit/8617112840dd7c26cd6660120c6b24b8ca91e7d3))
+
+
+
+
+
+## 1.1.36 (2022-08-17)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.1.35 (2022-08-17)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.1.34 (2022-08-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.1.33 (2022-08-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.1.32 (2022-08-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.1.31 (2022-08-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.1.30 (2022-08-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.1.29 (2022-08-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.1.28 (2022-08-09)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.1.27 (2022-08-08)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.1.26 (2022-08-04)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.1.25 (2022-08-04)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.1.24 (2022-08-04)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.1.23 (2022-08-04)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.1.22 (2022-08-03)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.1.21 (2022-08-03)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.1.20 (2022-08-03)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.1.19 (2022-08-02)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 1.1.18 (2022-08-02)
 
 **Note:** Version bump only for package @patternfly/documentation-framework

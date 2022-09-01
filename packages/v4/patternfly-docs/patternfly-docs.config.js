@@ -1,3 +1,5 @@
+const componentsData = require('./components-data.json');
+
 // This module is shared between NodeJS and babelled ES5
 module.exports = {
   pathPrefix: '/v4',
@@ -11,7 +13,8 @@ module.exports = {
   hasFooter: true,
   hasVersionSwitcher: true,
   hasDesignGuidelines: true,
-  hasDarkThemeSwitcher: true, // change back before committing. DONT LET ME COMMIT THIS!
+  hasDarkThemeSwitcher: false,
+  componentsData,
   sideNavItems: [
     { section: 'get-started' },
     { section: 'developer-resources' },

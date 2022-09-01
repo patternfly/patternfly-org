@@ -3,9 +3,21 @@ id: Menu
 section: components
 ---
 
-A **menu** is a list of options or actions that users can choose from. It can be used in a variety of contexts whenever the user needs to choose between multiple values, options, or actions. A menu can be opened in a [dropdown](/components/dropdown) or [select list](/components/select), or it can be revealed by right clicking on a specific region within a page.
+## Elements
+Elements vary depending on [menu variation](#Variations)
 
-## Elements and variations
+## Usage
+
+| **When you want to...** |                     |
+| ------------------- | ------------------- |
+| Expose a list of actions | Use an actions menu with actions and/or links. Add icons in front of menu items only if they will help to make items more recognizable. Include descriptive text for menu items that may require further definition. |
+| Create logical groupings of menu items | Use separators to group items. Include group headings if you don’t feel like the meaning of the groups will be obvious. |
+| Expose a list of nested actions | Use a fly-out menu. Any optional attributes of basic menus, including icons, groups, and descriptions can also be applied to flyout menus.|
+| Select from a list of options | Use an options select menu for selecting between values rather than actions. Icons, descriptions, and groupings can be used with option select menus to improve recognition or create logical option groups.| 
+
+
+## Variations
+
 ### Action menu
 An action menu presents a list of actions or links.
 
@@ -66,7 +78,7 @@ When filtering menu items, a search input will be added to the top of the menu a
 ### Favoriting and other actions
 Favoriting or other optional actions can be associated with any menu item. In this case, making an item a favorite will duplicate it at the top of the menu. This may be useful when you have a long list of possible actions and want to “pin” a subset of items to the top of the menu.
 
-<img src="./img/favorities-menu.png" alt="menu with favorites" width="348"/>
+<img src="./img/favorites-menu.png" alt="menu with favorites" width="348"/>
 
 
 Any action that can be represented as an icon button can be placed in one or more menu items. In this case, the favoriting action is used to mark an item as a favorite.
@@ -78,17 +90,7 @@ Use a drilldown menu when data is structured into levels and includes a long lis
 
 If data is more complex and has more than 2 levels, use a drilldown menu with breadcrumbs instead. Breadcrumbs offer better navigation between different levels. The number of visited levels is shown in a grey badge with a dropdown menu showing the menu items between the first and last level. The badge allows you to go back to a specific visited level. If you need to see the whole structure of your data, use a [tree view](/components/tree-view) instead. 
 
-
-## Usage
-
-| **When you want to...** |                     |
-| ------------------- | ------------------- |
-| Expose a list of actions | Use an actions menu with actions and/or links. Add icons in front of menu items only if they will help to make items more recognizable. Include descriptive text for menu items that may require further definition. |
-| Create logical groupings of menu items | Use separators to group items. Include group headings if you don’t feel like the meaning of the groups will be obvious. |
-| Expose a list of nested actions | Use a fly-out menu. Any optional attributes of basic menus, including icons, groups, and descriptions can also be applied to flyout menus.|
-| Select from a list of options | Use an options select menu for selecting between values rather than actions. Icons, descriptions, and groupings can be used with option select menus to improve recognition or create logical option groups. |
-
-## Content guidelines
+## Content considerations
 When creating menu item labels, keep in mind the following guidelines:
 
 * Keep menu items short. In most cases, 1-3 words should suffice.

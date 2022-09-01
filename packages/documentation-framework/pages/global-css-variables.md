@@ -44,7 +44,7 @@ Component variables are used to define custom properties at the component-level.
 
 Component variables follow this formula:
 
-`--pf-c-block__element--modifier--state--breakpoint--pseudo-element--PropertyCamelCase`
+`--pf-c-block__element--modifier--state--breakpoint--['child'|tag|c-component]pseudo-element--PropertyCamelCase`
 
 Where...
 
@@ -54,6 +54,7 @@ Where...
 - `state` is something like `hover` or `active`.
 - `breakpoint` is a media query breakpoint such as `sm` for `$pf-global--breakpoint--xs`.
 - `pseudo-element` is either `before` or `after`.
+- `child`, `tag`, or `c-component` refers to a child element. It could be a tag or component name, like `svg` or `c-menu`, or it could use `child` to refer to any child element. If any modifiers, states, breakpoints, or pseudo-elements are on the child, include those after this portion of the name.
 
 Example:
 - Note: component variables are scoped to the top-level component selector

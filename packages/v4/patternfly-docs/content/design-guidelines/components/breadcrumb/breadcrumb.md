@@ -2,7 +2,6 @@
 id: Breadcrumb
 section: components
 ---
-A **breadcrumb** provides page context to help users navigate more efficiently and understand where they are in the application hierarchy.
 
 ## Usage
 

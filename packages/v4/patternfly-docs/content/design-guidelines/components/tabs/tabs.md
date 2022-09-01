@@ -2,17 +2,21 @@
 id: Tabs
 section: components
 ---
-**Tabs** allow users to navigate between views within the same page or context.
 
 ## Usage
+Use tabs when you want to organize information into highly scannable display for users.
 
-PatternFly offers a few types of tabs:
+You can use as many tabs as you want in a page, although it is recommended you keep the total number of tabs to a minimum for a better user experience. If you have more tabs than fit on the page, you may use a [default overflow](/components/tabs#default-overflow) which would allow a user to horizontally scroll through your tabs. The uses of both default and boxed stylings are flexible, so use either according to your needs and preferences.
 
+## Variations
 - [Default tabs](#default-tabs) (recommended)
 - [Boxed tabs](#boxed-tabs)
 - [Vertical tabs](#vertical-tabs)
+- [Disabled tabs](#disabled-tabs)
+- [Primary tabs](#primary-tabs)
+- [Secondary tabs](#secondary-tabs)
+- [Horizontal overflow](#horizontal-overflow)
 
-You can use as many tabs as you want in a page, although it is recommended you keep the total number of tabs to a minimum for a better user experience. If you have more tabs than fit on the page, you may use a [default overflow](/components/tabs#default-overflow) which would allow a user to horizontal scroll through your tabs. The uses of both default and boxed stylings are flexible, so use either according to your needs and preferences. 
 
 ### Default tabs
 
@@ -45,13 +49,15 @@ PatternFly supports a disabled tab variation for all tab types. A disabled tab c
 
 <img src="./img/disabled-tab.png" alt="Example of disabled tab with tooltip" width="986"/>
 
-## Hierarchy
+### Horizontal overflow
 
-When you have more than one tab level in your UI, you can either chose to use a mixture of boxed and default tabs to create hierarchy on a page, or you can chose to use primary and secondary tabs which differ in their font size, with primary tabs using 16pt font, and secondary tabs using 14pt font.
+Horizontal overflow menus are useful when there is not enough space on a screen to display all tabs. The overflow menu contains all the remaining tabs and is always placed as the last tab on the right. Selecting options from overflow menu changes the name of the main tab to the selected one. You may show an overflowing tab count next to the overflow menu name, if needed.
 
-Two tab options provide hierarchy within a page:
-- [Primary tabs](#primary-tabs)
-- [Secondary tabs](#secondary-tabs)
+<img src="./img/Horizontal-overflow.png" alt="Horizontal overflow interaction" width="735"/>
+
+### Hierarchy
+
+When you have more than one tab level in your UI, you can either choose to use a mixture of boxed and default tabs to create hierarchy on a page, or you can chose to use primary and secondary tabs which differ in their font size, with primary tabs using 16pt font, and secondary tabs using 14pt font.
 
 ### Primary tabs
 

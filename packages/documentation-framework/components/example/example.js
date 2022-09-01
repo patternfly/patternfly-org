@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from '@reach/router';
 import { Badge, CodeBlock, CodeBlockCode, debounce, Switch } from '@patternfly/react-core';
 import * as reactCoreModule from '@patternfly/react-core';
+import * as reactCoreNextModule from '@patternfly/react-core/next';
 import * as reactTableModule from '@patternfly/react-table';
 import { css } from '@patternfly/react-styles';
 import { getParameters } from 'codesandbox/lib/api/define';
@@ -25,7 +26,7 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { error: null, errorInfo: null };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     errorInfo._suppressLogging = true;
     this.setState({
@@ -39,13 +40,13 @@ class ErrorBoundary extends React.Component {
       this.setState({ error: null, errorInfo: null });
     }
   }
-  
+
   render() {
     if (this.state.errorInfo) {
       return errorComponent(this.state.error);
     }
     return this.props.children;
-  }  
+  }
 }
 
 // Props come from mdx-ast-to-mdx-hast.js
@@ -105,7 +106,9 @@ export const Example = ({
     // These 2 are in the bundle anyways for the site since we dogfood
     ...reactCoreModule,
     ...reactTableModule,
+    ...(source === 'react-next' ? reactCoreNextModule : {})
   };
+
   let livePreview = null;
   if (lang === 'html') {
     livePreview = (
@@ -122,8 +125,13 @@ export const Example = ({
       } else {
         lang = 'js';
       }
-      const getPreviewComponent = new Function('React', ...Object.keys(scope), transformedCode);
-      const PreviewComponent = getPreviewComponent(React, ...Object.values(scope));
+
+      const componentNames = Object.keys(scope);
+      const componentValues = Object.values(scope);
+
+      const getPreviewComponent = new Function('React', ...componentNames, transformedCode);
+      const PreviewComponent = getPreviewComponent(React, ...componentValues);
+
       livePreview = (
         <ErrorBoundary>
           <PreviewComponent />

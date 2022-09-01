@@ -3,8 +3,6 @@ id: Number input
 section: components
 ---
 
-A **number input** provides a quick and effective way for users to enter and modify a numeric value. Similar to <a href="https://www.patternfly.org/v4/components/input-group/">input groups</a>, number inputs combine 2 input types into 1 control: A text input field with buttons on either side. When combined, these elements allow users to input numeric values in a responsive and scalable way.
-
 ## Elements
 <img src="./img/number_input_anatomy.png" alt="Number input elements" width="537px"/>
 
@@ -15,18 +13,18 @@ A **number input** provides a quick and effective way for users to enter and mod
 5. **Unit (optional):** Provides a unit symbol for the value in the input field, when applicable. 
 
 ## Usage
-**Use a number input when:**
+### When to use
 * Users need a quick and precise way to adjust values within defined parameters.
 * Users need to make small incremental changes that require few clicks.
 * You need to bypass device limitations, such as keyboardless interactions and form submissions on mobile.
 
-**Don’t use a number input when:**
+### When not to use
 * The numeric value range is infinite.
 * The numeric value can be either a fractional or whole number.
 * The numeric value required is not part of a range, or is arbitrary. In this use case, use an <a href="https://www.patternfly.org/v4/components/input-group/">input group</a> instead.
 * There is not enough space in the UI to account for the interaction between the input field and the buttons.
 
-**When using number inputs, follow these best practices:**
+### Best practices
 * Display a default numeric value in the input field that users can modify by typing directly into the input field or scale using the increase or decrease buttons.
 * Keep labels concise and specific to effectively communicate what value the user should enter into the input field.
 * Determine an increment size relative to your specific value range. Scale your increment size to accommodate for the types of values users will input in context.
@@ -40,10 +38,10 @@ Number inputs can function in one of two ways:
 1. **Default:** Buttons increase and decrease the numeric value within a given range.
 2. **With thresholds:** Buttons are disabled when the user reaches a certain threshold within a given range.
 
-## Default
+### Default
 A default number input allows users to input and modify a numeric value without thresholds. Use this variation when any value within your number input’s range is valid for your use case (for example, providing the number of storage drives associated with their computer or reporting their storage capacity).
 
-## With thresholds
+### With thresholds
 A number input with thresholds disables each button when a user’s numeric input passes a certain threshold. Use number inputs with thresholds to add maximum or minimum restrictions to user inputted values. 
 
 When adding thresholds to a number input, be sure to inform users with text to minimize their risk for input errors. If a number input for the number of storage drives has a maximum input value of 20, communicate this limit in helper text: <i>Maximum capacity 20</i>.

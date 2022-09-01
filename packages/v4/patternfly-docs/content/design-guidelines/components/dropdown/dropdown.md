@@ -3,8 +3,6 @@ id: Dropdown
 section: components
 ---
 
-A **dropdown** presents a menu of actions or links in a constrained space that will trigger a process or navigate to a new location. See [select component guidelines](/components/select/) for more information about making one or more selections from a list of items in a value list.
-
 ## Elements
 A basic dropdown consists of a toggle control to open and close a menu of actions or links.
 
@@ -18,10 +16,17 @@ A basic dropdown consists of a toggle control to open and close a menu of action
 ## Variations
 In addition to the basic dropdown shown above, you may apply the following variants to the dropdown toggle element.
 
-<img src="./img/dropdown-variants.png" alt="dropdown variantions" width="772"/>
+<img src="./img/dropdown-variants.png" alt="Image showing dropdown variations" width="999"/>
 
 ### Primary toggle
 The primary toggle should be used in the same way as you would use a primary button. If you want to draw the user’s attention to a dropdown menu as the primary place to take action on a page, consider using a dropdown with primary styling.
+
+### Secondary toggle
+The secondary toggle is a variation of the primary toggle. It has less visual prominence than the primary toggle, but more visual prominence than the basic toggle and other toggle variations.
+
+<img src="./img/secondary-toggle.png" alt="Image showing usage of secondary toggle" width="1440"/>
+
+Use a secondary toggle when other toggle variations would appear visually inconsistent, or lack the sufficient prominence needed to create a visual hierarchy.
 
 ### Plain toggle
 Plain styling removes the border treatment from a dropdown toggle. This is useful in places where the default border treatment might make your layout feel visually cluttered or crowded.

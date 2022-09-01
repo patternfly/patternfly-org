@@ -3,29 +3,33 @@ id: Inline edit
 section: components
 ---
 
-An **inline edit** component allows users to switch between a read-only view and an edit view of [description lists](/components/description-list), page text elements, or [tables](/components/table) as needed. Inline editing saves the user from opening a modal window or redirecting to a separate edit page so that they can edit in context of their current view. 
+## Elements
+
+Elements vary depending on inline edit variation
+* [Page inline elements](#page-inline-elements)
+* [Table inline elements](#table-inline-elements)
 
 ## Usage
 
-Use inline edit when:
+### When to use
 * All editable elements can be viewed within the row or expanded row.
 * The data needs to be updated frequently.
- 
-Don’t use inline edit when:
+
+### When not to use
 * The editing is the primary function of the view. For example, in an edit modal.
 
 <img src="./img/inline-edit.gif" width="960" height="540" />.
  
-PatternFly supports 2 types of inline editing:
+## Variations
 1. **[Page inline edit](/components/inline-edit/design-guidelines#page-inline-edit):** enables the user to edit a [specific field](/components/inline-edit/design-guidelines#table-inline-edit) in a details page or in a [full page](/components/inline-edit/design-guidelines#full-page-edit).
 2. **[Table inline edit](/components/inline-edit/design-guidelines#table-inline-edit):** enables the user to [edit elements in a row](/components/inline-edit/design-guidelines#row-editing).
  
-## Page inline edit
-There are 2 types of inline edit for forms:
+### Page inline edit
+
 * **[Field-specific edit](/components/inline-edit/design-guidelines#field-specific-edit):** allows users to make changes to one field at a time
 * **[Full page edit](/components/inline-edit/design-guidelines#full-page-edit):** allows users to make multiple changes at a time, in a larger area with more fields
  
-### Elements
+### Page inline elements
  
 <img src="./img/elements-form-inline-edit.png"  alt="Form inline edit elements"  width="785"/>
  
@@ -37,6 +41,7 @@ There are 2 types of inline edit for forms:
 ### Field-specific edit
  
 #### When to use
+
 Use field-specific edit when you want to allow users to make small edits to specific fields in a page. 
  
 #### How to use
@@ -59,11 +64,11 @@ Any editing is triggered by an edit link for the whole section. All edits should
  
 <img src="./img/full-page-edit.png"  alt="Full page edit"  width="926"/>
  
-## Table inline edit
-There is 1 type of inline edit for tables:
+### Table inline edit
+
 * **[Row edit](/components/inline-edit/design-guidelines#row-editing):** allows for making changes to 1 editable row in the table
  
-### Elements
+### Table inline elements
  
 <img src="./img/table-inline-edit-elements.png"  alt="Table inline edit elements"  width="1010"/>
  
