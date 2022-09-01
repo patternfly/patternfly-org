@@ -24,6 +24,8 @@ import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
 import logo from '../logo.svg';
 
+console.log(process.env.componentsData);
+
 const HeaderTools = ({
   versions,
   hasVersionSwitcher,
@@ -240,8 +242,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
         skipToContent={<SkipToContent href="#ws-page-main">Skip to content</SkipToContent>}
         isManagedSidebar
         defaultManagedSidebarIsOpen={navOpenProp}
-      >\
-        {console.log(children)}
+      >
         {children}
       </Page>
     </React.Fragment>

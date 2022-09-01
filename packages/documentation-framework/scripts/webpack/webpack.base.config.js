@@ -17,7 +17,8 @@ module.exports = (_env, argv) => {
     componentsData = {},
     sideNavItems = [],
     topNavItems = [],
-    includePaths = []
+    includePaths = [],
+    userConfigPath = ''
   } = argv;
 
   const isProd = mode === 'production';
@@ -145,6 +146,7 @@ module.exports = (_env, argv) => {
         'process.env.topNavItems': JSON.stringify(topNavItems),
         'process.env.prnum': JSON.stringify(process.env.CIRCLE_PR_NUMBER || process.env.PR_NUMBER || ''),
         'process.env.prurl': JSON.stringify(process.env.CIRCLE_PULL_REQUEST || ''),
+        'process.env.userConfigPath': JSON.stringify(userConfigPath || process.env.userConfigPath || path.relative(__dirname, path.resolve(process.cwd(), 'patternfly-docs')) || '')
       }),
       new CopyWebpackPlugin({
         patterns: [

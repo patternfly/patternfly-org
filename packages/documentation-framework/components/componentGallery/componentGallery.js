@@ -2,6 +2,8 @@ import React from "react";
 import { groupedRoutes } from '@patternfly/documentation-framework/routes';
 import {  Button, Card, CardTitle, CardBody, Drawer, DrawerPanelBody, DrawerPanelContent, DrawerContent, DrawerContentBody, DrawerHead, DrawerActions, DrawerCloseButton, Gallery, GalleryItem, SearchInput } from '@patternfly/react-core';
 import { Link } from '@reach/router';
+import path from 'path';
+import { convertToReactComponent } from "@patternfly/ast-helpers";
 
 export const ComponentGallery = () => {
   const { components } = groupedRoutes;
@@ -51,11 +53,13 @@ export const ComponentGallery = () => {
         </DrawerActions>
       </DrawerHead>
       <DrawerPanelBody>
-        <p>{ drawerPanelData.summary }</p>
+        <p>{ drawerPanelData.id ? `${process.env.componentsData[drawerPanelData.id.split(' ').join('-').toLowerCase()].summary}` : '' }</p>
         <Button component={(props) => <Link {...props} to={drawerPanelData.slug} />}>View component</Button>
       </DrawerPanelBody>
     </DrawerPanelContent>
-  )
+  );
+
+  console.log({__filename});
   return (
     <>
       <SearchInput value={searchTerm} onChange={setSearchTerm} onClear={() => setSearchTerm('')} placeholder="Search components by name" />
@@ -66,8 +70,7 @@ export const ComponentGallery = () => {
               {Object.entries(components)
                 .filter(([componentName]) => componentName !== 'View all components' && componentName.toLowerCase().includes(searchTerm.toLowerCase()))
                 .sort(([componentName1], [componentName2]) => componentName1.localeCompare(componentName2))
-                .map(([componentName, componentData], idx) => {
-                  return (
+                .map(([componentName, componentData], idx) => (
                   <GalleryItem span={4} key={idx}>
                     <Card
                       id={componentData.id}
@@ -80,10 +83,10 @@ export const ComponentGallery = () => {
                       isSelected={selectedCard === componentData.id}
                     >
                       <CardTitle>{componentName}</CardTitle>
-                      <CardBody>(preview image)</CardBody>
+                      <CardBody><p>img src=`./patternfly-docs/process.env.componentsData[componentData.id.split(' ').join('-').toLowerCase()].illustration</p></CardBody>
                     </Card>
                   </GalleryItem>
-                )})
+                ))
               }
             </Gallery>
           </DrawerContentBody>
