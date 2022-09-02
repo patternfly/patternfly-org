@@ -3,9 +3,9 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
- ### [Expandable section with inline "show more/less" action]()
+ ### [Expandable section with inline "show more/less" action](https://www.patternfly.org/v4/components/expandable-section#truncate-expansion)
 
-
+![expandable section with truncated text](./img/expandable-truncate.png)
 
  Adds the ability to truncate a block of text and allow the user to display the full content upon clicking "Show more."
 
@@ -15,7 +15,7 @@
 
  Adds a new component to convert a raw time value into a formatted string for displaying to the user.
 
- ### [Number input with status icon]()
+ ### [Number input with status icon](https://www.patternfly.org/v4/components/number-input#with-status)
 
 ![number input with status icon](./img/number-input-status.png)
 
