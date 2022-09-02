@@ -138,12 +138,12 @@ function getReactParams(title, code, scope, lang, relativeImports) {
     code = code.replace(imgImportMatch[0], `const ${imgName} = "https://www.patternfly.org/v4${scope[imgName]}"`);
   }
 
-  const relImportRegex = /(?<=import[\s*{])([\w*{}\n\r\t, ]+)(?=[\s*]from?[\s*]["']([\.+\/+]+.*)["'])/gm;
+  const relImportRegex = /(?<=import[\s*{])([\w*{}\n\r\t, ]+)(?=[\s*]from\s["']([\.\/]+.*)["'])/gm;
   let relImportMatch;
   while (relImportMatch = relImportRegex.exec(code)) {
-    debugger;
     const relImportPath = relImportMatch[2];
     if (relativeImports[relImportPath]) {
+      console.log({code, relImportPath, scope, relativeImports});
       code = code.replace(relImportPath, relativeImports[relImportPath]);
     }
   }

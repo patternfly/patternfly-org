@@ -75,11 +75,12 @@ function serializeRoot(node, options) {
   const relativeImportsRegex = /(?:[\.+\/+]+.*)(@.*)['"]/gm;
   let relativeImportMatch;
   let relativeImportMatches = {};
+  if (importStatements.length && importStatements[0].includes('DashboardWrapper')) debugger;
   while (relativeImportMatch = relativeImportsRegex.exec(importStatements[0])) {
     const [_match, importPath] = relativeImportMatch;
     if (importPath && !importPath.includes('srcImport')) {
       // `@patternfly/react-core/src/demos/./examples/DashboardWrapper` to `./examples/DashboardWrapper`
-      let relativeFileImport = /(?<=\/)(\.\/.*)/gm.exec(importPath);
+      let relativeFileImport = /(?<=\/)(\.+\/.*)/gm.exec(importPath);
       if (relativeFileImport) {
         // Build map of relative imports (from example.js code) to npm package import path (used in codesandbox.js)
         const relativeFileName = relativeFileImport[1];
