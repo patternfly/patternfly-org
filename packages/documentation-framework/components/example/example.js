@@ -102,7 +102,6 @@ export const Example = ({
   const loc = useLocation();
   const scope = {
     ...liveContext,
-    ...relativeImports,
     // These 2 are in the bundle anyways for the site since we dogfood
     ...reactCoreModule,
     ...reactTableModule,
@@ -161,7 +160,7 @@ export const Example = ({
   const codeBoxParams = getParameters(
     lang === 'html'
       ? getStaticParams(title, editorCode)
-      : getReactParams(title, editorCode, scope, lang)
+      : getReactParams(title, editorCode, scope, lang, relativeImports)
   );
   const fullscreenLink = loc.pathname.replace(/\/$/, '')
     + (loc.pathname.endsWith(source) ? '' : `/${source}`)

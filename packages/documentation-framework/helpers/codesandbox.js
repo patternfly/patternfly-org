@@ -106,7 +106,7 @@ function prettyExampleCode(title, code, declaration, identifier) {
 }
 
 // TODO: Make React examples work and use a template that has our assets.
-function getReactParams(title, code, scope, lang) {
+function getReactParams(title, code, scope, lang, relativeImports) {
   let toRender = null;
   try {
     let declaration = getExampleDeclaration(code);
@@ -141,9 +141,10 @@ function getReactParams(title, code, scope, lang) {
   const relImportRegex = /(?<=import[\s*{])([\w*{}\n\r\t, ]+)(?=[\s*]from?[\s*]["']([\.+\/+]+.*)["'])/gm;
   let relImportMatch;
   while (relImportMatch = relImportRegex.exec(code)) {
+    debugger;
     const relImportPath = relImportMatch[2];
-    if (scope[relImportPath]) {
-      code = code.replace(relImportPath, scope[relImportPath]);
+    if (relativeImports[relImportPath]) {
+      code = code.replace(relImportPath, relativeImports[relImportPath]);
     }
   }
 
