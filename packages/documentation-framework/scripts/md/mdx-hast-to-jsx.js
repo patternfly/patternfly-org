@@ -72,7 +72,7 @@ function serializeRoot(node, options) {
     .map(imp => imp.replace(/(['"])\./g, (_, match) => `${match}${getRelPath()}${path.posix.sep}\.`));
 
   // Map relative import path to '@package...'
-  const relativeImportsRegex = /(?:[\.+\/+]+.*)(@.*)['"]/gm;
+  const relativeImportsRegex = /(?:[\.\/]+.*)(@.*)['"]/gm;
   let relativeImportMatch;
   let relativeImportMatches = {};
   if (importStatements.length && importStatements[0].includes('DashboardWrapper')) debugger;
