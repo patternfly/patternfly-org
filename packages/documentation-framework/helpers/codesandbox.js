@@ -141,10 +141,10 @@ function getReactParams(title, code, scope, lang, relativeImports) {
   const relImportRegex = /(?<=import[\s*{])([\w*{}\n\r\t, ]+)(?=[\s*]from\s["']([\.\/]+.*)["'])/gm;
   let relImportMatch;
   while (relImportMatch = relImportRegex.exec(code)) {
-    const relImportPath = relImportMatch[2];
-    if (relativeImports[relImportPath]) {
-      console.log({code, relImportPath, scope, relativeImports});
-      code = code.replace(relImportPath, relativeImports[relImportPath]);
+    const [ relImportName, _name, relImportPath ] = relImportMatch;
+    console.log({relImportPath}, relativeImports[relImportName]);
+    if (relativeImports[relImportName]) {
+      code = code.replace(relImportPath, relativeImports[relImportName]);
     }
   }
 
