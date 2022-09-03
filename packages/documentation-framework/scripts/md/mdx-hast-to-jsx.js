@@ -71,7 +71,7 @@ function serializeRoot(node, options) {
     .map(node => node.value)
     .map(imp => imp.replace(/(['"])\./g, (_, match) => `${match}${getRelPath()}${path.posix.sep}\.`));
 
-  // Map relative import path to '@package...'
+  // Map relative import name to '@package...'
   const relativeImportsRegex = /(?:[\.\/]+.*)(@.*)['"]/gm;
   let relativeImportMatch;
   let relativeImportMatches = {};
@@ -88,7 +88,6 @@ function serializeRoot(node, options) {
           .pop()
           .split('.')
           .shift();
-        // { DashboardWrapper: ['./examples/DashboardWrapper', '@patternfly...DashboardWrapper]}
         relativeImportMatches[relativeImportName] = absoluteImportPath;
       }
     }
