@@ -2,6 +2,7 @@ const { parse } = require('@patternfly/ast-helpers');
 const versions  = require('../versions.json');
 const overpass = require('./fonts');
 const { capitalize } = require('./capitalize');
+const pathPrefix = process.env.pathPrefix;
 
 const getStaticParams = (title, html) => {
   const imgAssetRegex = /['"](\/assets\/images\/.*)['"]/g;
@@ -135,7 +136,7 @@ function getReactParams(title, code, scope, lang, relativeImports) {
   let imgImportMatch;
   while ((imgImportMatch = imgImportRegex.exec(code))) {
     const imgName = imgImportMatch[1];
-    code = code.replace(imgImportMatch[0], `const ${imgName} = "https://www.patternfly.org/v4${scope[imgName]}"`);
+    code = code.replace(imgImportMatch[0], `const ${imgName} = "https://www.patternfly.org/${pathPrefix}${scope[imgName]}"`);
   }
 
   const relImportRegex = /(?<=import[\s*{])([\w*{}\n\r\t, ]+)(?=[\s*]from\s["']([\.\/]+.*)["'])/gm;
