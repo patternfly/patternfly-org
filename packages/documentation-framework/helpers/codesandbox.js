@@ -130,13 +130,12 @@ function getReactParams(title, code, scope, lang, relativeImports) {
   catch (err) {
     // Ignore
   }
-
   // Update image imports to point to pf.org
   const imgImportRegex = /import\s*(\w*).*['"](.*)(\.(png|jpe?g|webp|gif|svg))['"]/g;
   let imgImportMatch;
   while ((imgImportMatch = imgImportRegex.exec(code))) {
     const imgName = imgImportMatch[1];
-    code = code.replace(imgImportMatch[0], `const ${imgName} = "https://www.patternfly.org/${pathPrefix}${scope[imgName]}"`);
+    code = code.replace(imgImportMatch[0], `const ${imgName} = "https://www.patternfly.org/v4${scope[imgName]}"`);
   }
 
   const relImportRegex = /(?<=import[\s*{])([\w*{}\n\r\t, ]+)(?=[\s*]from\s["']([\.\/]+.*)["'])/gm;
