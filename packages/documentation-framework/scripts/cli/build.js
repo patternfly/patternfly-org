@@ -46,9 +46,11 @@ async function buildWebpack(webpackConfig) {
 async function execFile(file, args) {
   const start = new Date();
   return new Promise((res, rej) => {
-    const child = fork(path.join(__dirname, file), args, {
-      execArgv: ['--max-old-space-size=4096']
-    });
+    const child_argv = [JSON.stringify(args)];
+    const child_execArgv = [
+      '--max-old-space-size=4096'
+    ];
+    const child = fork(path.join(__dirname, file), child_argv, { execArgv: child_execArgv });
     function errorHandler(err) {
       console.error(err);
       process.exit(1);
@@ -84,10 +86,10 @@ async function build(cmd, options) {
   if (toBuild.includes('server')) {
     // Need to fork since first webpack build puts pressure on GC
     // Otherwise CircleCI will fail with 4GB RAM
-    await execFile('buildServer.js', [JSON.stringify(config)]);
+    await execFile('buildServer.js', config);
   }
   if (toBuild.includes('client')) {
-    await execFile('buildClient.js', [JSON.stringify(config)]);
+    await execFile('buildClient.js', config);
   }
 }
 
