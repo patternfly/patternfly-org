@@ -3,8 +3,6 @@ id: Drawer
 section: components
 ---
 
-A **drawer** is a sliding panel that enters from the right edge of the viewport. It can be configured to either overlay content on a page or create a sidebar by pushing that content to the left.
-
 ## Usage
 
 Drawers can be used to store and show more information than immediately presented on a page. A drawer with more information is usually prompted by a user click. Upon the click, the drawer comes out and shows more information, which is usually relevant to a whole page.

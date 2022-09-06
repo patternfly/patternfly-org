@@ -2,7 +2,6 @@
 id: Badge
 section: components
 ---
-A **badge** is used to annotate other information like a label or an object name. 
 
 ## Usage
 

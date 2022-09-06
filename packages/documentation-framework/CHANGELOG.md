@@ -3,6 +3,65 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.13 (2022-09-02)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.12 (2022-08-31)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.11 (2022-08-30)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.10 (2022-08-29)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.9 (2022-08-29)
+
+
+### Bug Fixes
+
+* **example:** increase code editor button tooltip size, other cleanup ([#3162](https://github.com/patternfly/patternfly-org/issues/3162)) ([fab30f5](https://github.com/patternfly/patternfly-org/commit/fab30f5b94b648605fd9efb980fc6eea2e772a79))
+
+
+
+
+
+## 1.2.8 (2022-08-26)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.7 (2022-08-24)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 1.2.6 (2022-08-23)
 
 **Note:** Version bump only for package @patternfly/documentation-framework

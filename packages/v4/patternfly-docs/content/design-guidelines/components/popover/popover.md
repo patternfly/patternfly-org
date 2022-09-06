@@ -8,8 +8,6 @@ related: [
 ]
 ---
  
-A **popover** is in-app messaging that provides more information on specific product areas. Popovers display content in a new window that overlays the current page. Unlike modals, popovers don’t block the current page.
-
 ## Usage
 Popovers are commonly used on form field labels, page titles or headings, or table column headings. Use popovers to:
 - Anticipate and answer questions for the user.

@@ -7,8 +7,6 @@ related: ['Button']
 import CheckIcon from '@patternfly/react-icons/dist/esm/icons/check-icon';
 import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
 
-A **modal** displays important information to a user without requiring them to navigate to a new page.
-
 ## Elements
 
 <img src="./img/modal-call-outs.png" alt="An example of a modal in context with call outs to highlight each listed element" width="756"/>
@@ -18,7 +16,7 @@ A **modal** displays important information to a user without requiring them to n
 3. **Headline**
 4. **Close icon**
 5. **Content area**
-6. **Buttons** 
+6. **Buttons**
 
 See the [Content](#content) section for information about writing modal copy.
 

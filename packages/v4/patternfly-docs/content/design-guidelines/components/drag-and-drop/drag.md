@@ -2,7 +2,6 @@
 id: Drag and drop
 section: components
 ---
-The **drag and drop** interaction can be used to reposition elements on screen into a layout that benefits the user. This gives the user more flexibility to arrange and/or group items without having to make code changes.
 
 ## Usage
 ### Simple list

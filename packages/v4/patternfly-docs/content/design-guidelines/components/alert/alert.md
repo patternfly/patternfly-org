@@ -4,8 +4,6 @@ section: components
 related: ['Alert', 'Alert group']
 ---
  
-An **alert** is a notification that provides brief information to the user without blocking their workflow.
-
 ## Elements
 Elements vary depending on the variation of Alert. Toast alerts are always dismissible, but bordered inline alerts can be both dismissable and non-dismissible. All other elements are consistent between toast and bordered inline alerts.
 Plain inline alerts are never dismissable, and consist of only a status area and alert title.
