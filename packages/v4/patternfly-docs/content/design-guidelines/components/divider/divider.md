@@ -2,7 +2,6 @@
 id: Divider
 section: components
 ---
-A **divider** is a horizontal or vertical line that is placed between screen elements to create visual divisions and content groupings. 
 
 ## Usage
 Use a divider as a visual cue to help to convey content separations and groupings.

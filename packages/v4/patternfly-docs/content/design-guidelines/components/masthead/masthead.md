@@ -3,9 +3,7 @@ id: Masthead
 section: components
 ---
 
-A **masthead** contains global properties such as logotype, navigation and settings in an organized fashion and it is accessible from all parts of the application. All pages should share a common masthead.
-
-## Elements 
+## Elements
 
 <img src="./img/masthead.png" alt="masthead" width="832"/>
 

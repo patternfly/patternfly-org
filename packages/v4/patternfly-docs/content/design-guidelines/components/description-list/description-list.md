@@ -3,8 +3,6 @@ id: Description list
 section: components
 ---
 
-A **description list** contains terms and their corresponding descriptions.
-
 ## Usage
 Use a description list when you have a set of terms and definitions related to a single item. The content within the definitions is not limited to only plain text. This component can be extremely useful in context of Detail pages for a certain resource or item.
 

@@ -3,8 +3,6 @@ id: Progress
 section: components
 ---
 
-A **progress bar** informs users about the completion status of an ongoing process or task.
-
 ## Elements
 <img src="./img/progress-bar-callouts.png" alt="A progress bar with arrows pointing to each of its four elements: Its title, track, progress value, and indicator." width="608" />
 

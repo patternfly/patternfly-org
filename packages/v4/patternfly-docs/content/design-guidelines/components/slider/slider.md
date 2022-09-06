@@ -3,8 +3,6 @@ id: Slider
 section: components
 ---
  
-A **slider** provides a quick and effective way for users to set and adjust a numeric value from a defined range of values.
- 
 ## Elements
  
 <img src="./img/Slider.png" alt="Visual of slider" width="600"/>

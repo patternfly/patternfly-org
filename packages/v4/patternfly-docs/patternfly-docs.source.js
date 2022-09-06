@@ -50,14 +50,15 @@ module.exports = (sourceMD, sourceProps) => {
   sourceProps(path.join(reactLogViewerPath, '/**/*.tsx'), reactPropsIgnore);
 
   // React MD
-  sourceMD(path.join(reactCorePath, '/**/examples/*.md'), 'react');
+  sourceMD(path.join(reactCorePath, '/components/**/examples/*.md'), 'react');
+  sourceMD(path.join(reactCorePath, '/next/components/**/examples/*.md'), 'react-next');
   sourceMD(path.join(reactCorePath, '/**/demos/**/*.md'), 'react-demos');
 
   // React-table MD
   sourceMD(path.join(reactTablePath, '/**/TableComposable/examples/*.md'), 'react-composable');
   sourceMD(path.join(reactTablePath, '/**/demos/*.md'), 'react-demos');
   sourceMD(path.join(reactTablePath, '/**/Table/examples/*.md'), 'react-legacy');
-  
+
   // Charts MD (no demos yet)
   sourceMD(path.join(reactChartsPath, '/**/examples/*.md'), 'react');
 
@@ -78,4 +79,14 @@ module.exports = (sourceMD, sourceProps) => {
   // Upgrade guides
   sourceMD(require.resolve('@patternfly/patternfly/UPGRADE-GUIDE.md'), 'html');
   sourceMD(require.resolve('@patternfly/react-docs/UPGRADE-GUIDE.md'), 'react');
+
+  // Quickstarts extension
+  const qsPath = require
+    .resolve('@patternfly/quickstarts/package.json')
+  const qsContentBase = path.join(qsPath.replace('package.json', 'dist'), '/patternfly-docs/quick-starts');
+  const qsPropsBase = qsPath.replace('package.json', 'src')
+  const qsPropsIgnore = ['**/*.test.tsx', '**/examples/*.tsx'];
+
+  sourceProps(path.join(qsPropsBase, '/**/*.tsx'), qsPropsIgnore);
+  sourceMD(path.join(qsContentBase, '**/*.md'));
 }
