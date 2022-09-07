@@ -138,11 +138,11 @@ Currently, all PatternFly text styles use Red Hat Text and Red Hat Display fonts
 When inserting text into your design, always assign it a text style by selecting the text item, followed by selecting a text style from the appearance menu on the right toolbar.
 
 ## Staying up to date
-Adjustments and bug fixes are made to the kit on a regular basis. When we make a change to any of the libraries, you will be notified via a purple pop-up in the top right corner of the Sketch window that says “Shared Library Update Available”. To update, simply click on the pop-up and followed by “download” to update your library.
+Adjustments and bug fixes are made to the kit on a regular basis. When we make a change to any of the libraries, you'll be notified via the bell icon in the top right corner of the Sketch window that says “Library Update Available”. To update, click "Update" on the pop-up that appears. 
 
 We recommend that you keep your kit as up to date as possible. Once a change is accepted, you will not be able to revert to the previous version.
 
 Please note that the Patternfly template will NOT be automatically updated as the symbol library is. Every time this template file is updated, you will need to re-download and re-save this as a template. We have added [release notes](https://github.com/patternfly/patternfly-design-kit/blob/master/PatternFly%20release%20notes.md) to the [design-kit-repo](https://github.com/patternfly/patternfly-design-kit/) that document additions and edits to the design kit. This is a good place to start to review what has been added to the template file.
 
-Did you use the old versions of the symbols that were updated in files already? No problem -  you will receive another notification in the top right of that specific Sketch file that will allow you to update them.
+Did you use the old versions of the symbols that were updated in files already? No problem -  you'll receive another notification in the top right of that specific Sketch file that will allow you to update them.
 
