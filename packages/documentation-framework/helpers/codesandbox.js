@@ -2,6 +2,7 @@ const { parse } = require('@patternfly/ast-helpers');
 const versions  = require('../versions.json');
 const overpass = require('./fonts');
 const { capitalize } = require('./capitalize');
+const pathPrefix = process.env.pathPrefix;
 
 const getStaticParams = (title, html) => {
   const imgAssetRegex = /['"](\/assets\/images\/.*)['"]/g;
@@ -106,7 +107,7 @@ function prettyExampleCode(title, code, declaration, identifier) {
 }
 
 // TODO: Make React examples work and use a template that has our assets.
-function getReactParams(title, code, scope, lang) {
+function getReactParams(title, code, scope, lang, relativeImports) {
   let toRender = null;
   try {
     let declaration = getExampleDeclaration(code);
@@ -129,7 +130,7 @@ function getReactParams(title, code, scope, lang) {
   catch (err) {
     // Ignore
   }
-
+  // Update image imports to point to pf.org
   const imgImportRegex = /import\s*(\w*).*['"](.*)(\.(png|jpe?g|webp|gif|svg))['"]/g;
   let imgImportMatch;
   while ((imgImportMatch = imgImportRegex.exec(code))) {
@@ -137,6 +138,16 @@ function getReactParams(title, code, scope, lang) {
     code = code.replace(imgImportMatch[0], `const ${imgName} = "https://www.patternfly.org/v4${scope[imgName]}"`);
   }
 
+  const relImportRegex = /(?<=import[\s*{])([\w*{}\n\r\t, ]+)(?=[\s*]from\s["']([\.\/]+.*)["'])/gm;
+  let relImportMatch;
+  while (relImportMatch = relImportRegex.exec(code)) {
+    const [ relImportName, _name, relImportPath ] = relImportMatch;
+    if (relativeImports[relImportName]) {
+      code = code.replace(relImportPath, relativeImports[relImportName]);
+    }
+  }
+
+  
   const dependencies = {
     '@patternfly/react-core': versions.Releases[0].versions['@patternfly/react-core']
   };
