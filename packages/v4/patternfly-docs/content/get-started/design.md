@@ -11,7 +11,7 @@ Whether you are converting from a previous PatternFly application or starting fr
 PatternFly offers a variety of resources to help you make the most of the design system, including design guidelines for style, content, and component usage, and behavior. You can use these assets in combination with the design kit to create consistent and usable product experiences.
 
 ### Design kit
-The design kit is a symbol library implemented in Sketch to help designers like you contribute to PatternFly.
+The design kit is a symbol library implemented in Sketch to help designers, like you, contribute to PatternFly.
 
 [**What's in the design kit?**](#whats-in-the-design-kit) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 

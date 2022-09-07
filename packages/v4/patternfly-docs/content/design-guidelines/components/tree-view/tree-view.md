@@ -3,8 +3,6 @@ id: Tree view
 section: components
 ---
 
-A **tree view** is a structure that displays data in a hierarchical view. It can be used in a [dropdown](/components/dropdown), [drawer](/components/drawer), [primary-detail](/demos/primary-detail), [modal](/components/modal), or [wizard](/components/wizard).
-
 A default tree view provides a tree structure with items and arrows to expand or collapse child items. Every tree view can be extended with these [optional variations](#variations).
 
 ## Elements

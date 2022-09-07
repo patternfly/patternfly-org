@@ -42,16 +42,6 @@ export const ExampleToolbar = ({
   const [isEditorOpen, setIsEditorOpen] = React.useState(false);
   const [isCopied, setCopied] = React.useState(false);
 
-  const copyCode = () => {
-    copy(code);
-
-    setCopied(true);
-    // Reset isCopied after Tooltip fades out
-    setTimeout(() => {
-      setCopied(false);
-    }, 2500);
-  };
-
   const copyLabel = 'Copy code to clipboard';
   const languageLabel = `Toggle ${lang.toUpperCase()} code`;
   const codesandboxLabel = 'Open example in CodeSandbox';
@@ -65,6 +55,22 @@ export const ExampleToolbar = ({
   const fullscreenAriaLabel = `Open ${exampleTitle} example in new window`;
   const convertAriaLabel = `Convert ${exampleTitle} example from Typescript to JavaScript`;
   const undoAllAriaLabel = `Undo all changes to ${exampleTitle}`;
+
+  const editorControlProps = {
+    maxWidth: 'var(--ws-code-editor--tooltip--MaxWidth)',
+    className: "ws-code-editor-control",
+    exitDelay: 300
+  };
+
+  const copyCode = () => {
+    copy(code);
+
+    setCopied(true);
+    // Reset isCopied after Tooltip fades out
+    setTimeout(() => {
+      setCopied(false);
+    }, 2500);
+  };
 
   const customControls = (
     <React.Fragment>
@@ -83,38 +89,37 @@ export const ExampleToolbar = ({
         aria-label={languageAriaLabel}
         toolTipText={languageLabel}
         aria-expanded={isEditorOpen}
-        className="ws-code-editor-control"
+        {...editorControlProps}
       />
       <Tooltip
         trigger="mouseenter"
         content={<div>{isCopied ? 'Code copied' : copyLabel}</div>}
-        exitDelay={isCopied ? 1600 : 300}
-        entryDelay={300}
-        maxWidth="100px"
-        position="top"
+        {...(isCopied && {exitDelay: 1600})}
+        maxWidth={editorControlProps.maxWidth}
       >
-        <Button onClick={() => {
-          copyCode();
-          trackEvent('code_editor_control_click', 'click_event', 'COPY_CODE');
-        }} variant="control" aria-label={copyAriaLabel} className="ws-code-editor-control">
+        <Button
+          onClick={() => {
+            copyCode();
+            trackEvent('code_editor_control_click', 'click_event', 'COPY_CODE');
+          }}
+          variant="control"
+          aria-label={copyAriaLabel}
+          className={editorControlProps.className}
+        >
           <CopyIcon />
         </Button>
       </Tooltip>
       {codeBoxParams &&
-        <Tooltip
-          trigger="mouseenter"
-          content={codesandboxLabel}
-          exitDelay={300}
-          entryDelay={300}
-          maxWidth="100px"
-          position="top"
+        <Form
+          aria-label={`${codesandboxAriaLabel} form` }
+          action="https://codesandbox.io/api/v1/sandboxes/define"
+          method="POST"
+          target="_blank"
+          style={{ display: "inline-block" }}
         >
-          <Form
-            aria-label={`${codesandboxAriaLabel} form` }
-            action="https://codesandbox.io/api/v1/sandboxes/define"
-            method="POST"
-            target="_blank"
-            style={{ display: "inline-block" }}
+          <Tooltip
+            content={codesandboxLabel}
+            maxWidth={editorControlProps.maxWidth}
           >
             <Button
               aria-label={codesandboxAriaLabel}
@@ -123,13 +128,13 @@ export const ExampleToolbar = ({
               onClick={() => {
                 trackEvent('code_editor_control_click', 'click_event', 'CODESANDBOX_LINK');
               }}
-              className="ws-code-editor-control"
+              className={editorControlProps.className}
             >
-              <input type="hidden" name="parameters" value={codeBoxParams} />
               <CodepenIcon />
             </Button>
-          </Form>
-        </Tooltip>
+          </Tooltip>
+          <input type="hidden" name="parameters" value={codeBoxParams} />
+        </Form>
       }
       {fullscreenLink && 
         <CodeEditorControl
@@ -143,7 +148,7 @@ export const ExampleToolbar = ({
           onClick={() => {
             trackEvent('code_editor_control_click', 'click_event', 'FULLSCREEN_LINK');
           }}
-          className="ws-code-editor-control"
+          {...editorControlProps}
         />
       }
       {isEditorOpen && lang === 'ts' &&
@@ -159,7 +164,7 @@ export const ExampleToolbar = ({
             setCode(convertToJSX(code).code);
             trackEvent('code_editor_control_click', 'click_event', 'TS_TO_JS');
           }}
-          className="ws-code-editor-control"
+          {...editorControlProps}
         />
       }
       {code !== originalCode &&
@@ -171,7 +176,7 @@ export const ExampleToolbar = ({
             setCode(originalCode);
             trackEvent('code_editor_control_click', 'click_event', 'RESET_CODE');
           }}
-          className="ws-code-editor-control"
+          {...editorControlProps}
         />
       }
     </React.Fragment>

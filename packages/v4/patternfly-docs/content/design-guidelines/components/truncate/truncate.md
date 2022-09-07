@@ -3,8 +3,6 @@ id: Truncate
 section: components
 ---
 
-A **truncate** is a tool used to shorten numeric and non-numeric character strings, typically when the string overflows its container. 
-
 ## Elements
 * **Content**: text string to truncate
 * **Position**: where the text will be truncated from, ie. front, middle, or end

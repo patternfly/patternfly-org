@@ -1,3 +1,7 @@
+:root {
+  --ws-code-editor--tooltip--MaxWidth: 16ch;
+}
+
 .ws-example {
   margin-top: var(--pf-global--spacer--lg);
   margin-bottom: var(--pf-global--spacer--lg);
