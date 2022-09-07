@@ -4,6 +4,6 @@ title: All components
 section: components
 ---
 
-import { ComponentGallery } from '../components/componentGallery/componentGallery';
+import { ComponentGallery } from './componentGallery';
 
 <ComponentGallery />

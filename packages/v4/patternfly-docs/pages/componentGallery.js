@@ -2,18 +2,19 @@ import React from "react";
 import { groupedRoutes } from '@patternfly/documentation-framework/routes';
 import {  Button, Card, CardTitle, CardBody, Drawer, DrawerPanelBody, DrawerPanelContent, DrawerContent, DrawerContentBody, DrawerHead, DrawerActions, DrawerCloseButton, Gallery, GalleryItem, SearchInput } from '@patternfly/react-core';
 import { Link } from '@reach/router';
-import path from 'path';
 import { convertToReactComponent } from "@patternfly/ast-helpers";
+import componentsData from '../components-data.json';
+import * as illustrations from '../images/component-illustrations';
 
 export const ComponentGallery = () => {
   const { components } = groupedRoutes;
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCard, setSelectedCard] = React.useState('');
   const [isExpanded, setIsExpanded] = React.useState(false);
-  const [drawerPanelData, setDrawerPanelData] = React.useState({})
+  const [drawerPanelData, setDrawerPanelData] = React.useState({});
   const drawerRef = React.useRef();
+
   const onChange = (labelledById, _event) => {
-    console.log({labelledById, searchTerm});
     const newSelectedCard = labelledById === selectedCard ? null : labelledById;
     setSelectedCard(newSelectedCard);
   };
@@ -53,13 +54,12 @@ export const ComponentGallery = () => {
         </DrawerActions>
       </DrawerHead>
       <DrawerPanelBody>
-        <p>{ drawerPanelData.id ? `${process.env.componentsData[drawerPanelData.id.split(' ').join('-').toLowerCase()].summary}` : '' }</p>
+        <p>{ drawerPanelData.id ? componentsData[drawerPanelData.id.split(' ').join('-').toLowerCase()].summary : '' }</p>
         <Button component={(props) => <Link {...props} to={drawerPanelData.slug} />}>View component</Button>
       </DrawerPanelBody>
     </DrawerPanelContent>
   );
 
-  console.log({__filename});
   return (
     <>
       <SearchInput value={searchTerm} onChange={setSearchTerm} onClear={() => setSearchTerm('')} placeholder="Search components by name" />
@@ -70,23 +70,25 @@ export const ComponentGallery = () => {
               {Object.entries(components)
                 .filter(([componentName]) => componentName !== 'View all components' && componentName.toLowerCase().includes(searchTerm.toLowerCase()))
                 .sort(([componentName1], [componentName2]) => componentName1.localeCompare(componentName2))
-                .map(([componentName, componentData], idx) => (
-                  <GalleryItem span={4} key={idx}>
-                    <Card
-                      id={componentData.id}
-                      key={idx}
-                      isSelectableRaised
-                      hasSelectableInput
-                      onClick={() => onClick(componentData)}
-                      onKeyDown={evt => onKeyDown(evt, componentData)}
-                      onSelectableInputChange={onChange}
-                      isSelected={selectedCard === componentData.id}
-                    >
-                      <CardTitle>{componentName}</CardTitle>
-                      <CardBody><p>img src=`./patternfly-docs/process.env.componentsData[componentData.id.split(' ').join('-').toLowerCase()].illustration</p></CardBody>
-                    </Card>
-                  </GalleryItem>
-                ))
+                .map(([componentName, componentData], idx) => {
+                  return (
+                    <GalleryItem span={4} key={idx}>
+                      <Card
+                        id={componentData.id}
+                        key={idx}
+                        isSelectableRaised
+                        hasSelectableInput
+                        onClick={() => onClick(componentData)}
+                        onKeyDown={evt => onKeyDown(evt, componentData)}
+                        onSelectableInputChange={onChange}
+                        isSelected={selectedCard === componentData.id}
+                      >
+                        <CardTitle>{componentName}</CardTitle>
+                        <CardBody><img src={`${illustrations[componentName.split(' ').join('_').toLowerCase()]}`} /></CardBody>
+                      </Card>
+                    </GalleryItem>
+                  );
+                })
               }
             </Gallery>
           </DrawerContentBody>
