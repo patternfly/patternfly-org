@@ -69,12 +69,36 @@ function serializeRoot(node, options) {
 
   const importStatements = groups.import
     .map(node => node.value)
-    .map(imp => imp.replace(/(['"])\./g, (_, match) => `${match}${getRelPath()}${path.posix.sep}\.`))
+    .map(imp => imp.replace(/(['"])\./g, (_, match) => `${match}${getRelPath()}${path.posix.sep}\.`));
+
+  // Map relative import name to '@package...'
+  const relativeImportsRegex = /(?:[\.\/]+.*)(@.*)['"]/gm;
+  let relativeImportMatch;
+  let relativeImportMatches = {};
+  while (relativeImportMatch = relativeImportsRegex.exec(importStatements[0])) {
+    const [_match, absoluteImportPath] = relativeImportMatch;
+    if (absoluteImportPath && !absoluteImportPath.includes('srcImport')) {
+      // `@patternfly/react-core/src/demos/./examples/DashboardWrapper` to `DashboardWrapper`
+      let relativeFileImport = /(?<=\/)(\.+\/.*)/gm.exec(absoluteImportPath);
+      if (relativeFileImport) {
+        // Build map of relative imports (from example.js code) to npm package import path (used in codesandbox.js)
+        const relativeFilePath = relativeFileImport[0];
+        const relativeImportName = relativeFilePath
+          .split('/')
+          .pop()
+          .split('.')
+          .shift();
+        relativeImportMatches[relativeImportName] = absoluteImportPath;
+      }
+    }
+  }
+
+  const importStatementsWithThumbnails = importStatements
     .concat(thumbnailImports)
-    .join('\n')
+    .join('\n');
 
   // https://astexplorer.net/#/gist/9c531dd372dfc57e194c13c2889d31c3/03f2d6e889db1a733c6a079554e8af7784863739
-  options.importSpecifiers = parse(importStatements).body
+  options.importSpecifiers = parse(importStatementsWithThumbnails).body
     .map(node => node.specifiers)
     .flat(1)
     .map(spec => spec.local ? spec.local.name : null)
@@ -82,20 +106,26 @@ function serializeRoot(node, options) {
   const liveContext = options.importSpecifiers
     .filter(localName => !/srcImport.*/.test(localName)) // Images in MD like [!img](./src)
     .join(',\n  ');
-
   const childNodes = groups.rest
     .map(childNode => toJSX(childNode, node, options))
     .join('');
 
   let res = `import React from 'react';
 import { AutoLinkHeader, Example, Link as PatternflyThemeLink } from '@patternfly/documentation-framework/components';
-${importStatements}
+${importStatementsWithThumbnails}
 const pageData = ${JSON.stringify(pageData, null, 2)};
 `;
   if (liveContext) {
     res += `pageData.liveContext = {\n${
       '  ' + liveContext
     }\n};\n`
+  }
+  if (relativeImportMatches) {
+    res += `pageData.relativeImports = {\n${
+      '  ' + Object.entries(relativeImportMatches)
+        .map(([key, val]) => `'${key}': '${val}'`)
+        .join(',\n  ')
+    }\n};\n`;
   }
   if (examples) {
     res += `pageData.examples = {\n${
