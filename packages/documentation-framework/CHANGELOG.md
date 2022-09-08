@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.17 (2022-09-08)
+
+
+### Bug Fixes
+
+* **docs:** added support for optional chaining in documentation-framework ([#3176](https://github.com/patternfly/patternfly-org/issues/3176)) ([146b7ca](https://github.com/patternfly/patternfly-org/commit/146b7ca6a6d5383b7eb583156342c4d59b004834))
+
+
+
+
+
 ## 1.2.16 (2022-09-08)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
