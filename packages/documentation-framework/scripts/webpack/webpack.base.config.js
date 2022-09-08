@@ -62,6 +62,7 @@ module.exports = (_env, argv) => {
               plugins: [
                 '@babel/plugin-transform-react-jsx',
                 '@babel/plugin-proposal-class-properties',
+                '@babel/plugin-proposal-optional-chaining',
                 ["@babel/plugin-proposal-private-methods", { "loose": false }],
                 ["@babel/plugin-proposal-private-property-in-object", { "loose": false }]
               ],
