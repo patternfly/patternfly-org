@@ -24,8 +24,6 @@ import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
 import logo from '../logo.svg';
 
-console.log(process.env.componentsData);
-
 const HeaderTools = ({
   versions,
   hasVersionSwitcher,
@@ -226,8 +224,6 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
       topNav={topNavItems.length > 0 && <TopNav navItems={topNavItems} />}
     />
   );
-
-  console.log({componentsData});
 
   return (
     <React.Fragment>

@@ -28,7 +28,7 @@ const isNull = o => o === null || o === undefined;
 const groupedRoutes = Object.entries(routes)
   .filter(([_slug, { id, section }]) => !isNull(id) && !isNull(section))
   .reduce((accum, [slug, pageData]) => {
-    const { section, id, title, source, katacodaLayout, hideNavItem } = pageData;
+    const { section, id, title, source, katacodaLayout, hideNavItem, hideSourceTabs } = pageData;
     accum[section] = accum[section] || {};
     accum[section][id] = accum[section][id] || {
       id,
@@ -37,7 +37,8 @@ const groupedRoutes = Object.entries(routes)
       slug: makeSlug(source, section, id, true),
       sources: [],
       katacodaLayout,
-      hideNavItem
+      hideNavItem,
+      hideSourceTabs
     };
 
     pageData.slug = slug;

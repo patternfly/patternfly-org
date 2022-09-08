@@ -119,7 +119,8 @@ export const MDXTemplate = ({
   sources = [],
   path,
   id,
-  componentsData
+  componentsData,
+  hideSourceTabs
 }) => {
   const sourceKeys = sources.map(v => v.source);
   const isSinglePage = sourceKeys.length === 1;
@@ -160,7 +161,8 @@ export const MDXTemplate = ({
           <SummaryComponent />
         </PageSection>
       )}
-      {(!isSinglePage || isComponent) && (
+
+      {(!isSinglePage || isComponent) && !hideSourceTabs && (
         <PageSection type="tabs">
           <div className="pf-c-tabs pf-m-page-insets pf-m-no-border-bottom">
             <ul className="pf-c-tabs__list">

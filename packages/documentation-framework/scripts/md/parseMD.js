@@ -85,7 +85,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
         sourceLink: `https://github.com/patternfly/${
           sourceRepo}/blob/main/${
           normalizedPath}`,
-        hideTOC: frontmatter.hideTOC || false
+        hideTOC: frontmatter.hideTOC || false,
       };
       // Temporarily override section for Demo tabs until we port this upstream
       if (frontmatter.section === 'demos' && routes[slug.replace('demos', 'components')]) {
@@ -120,6 +120,9 @@ function toReactComponent(mdFilePath, source, buildMode) {
       }
       if (frontmatter.hideNavItem) {
         pageData.hideNavItem = frontmatter.hideNavItem;
+      }
+      if (frontmatter.hideSourceTabs) {
+        pageData.hideSourceTabs = frontmatter.hideSourceTabs || false;
       }
     })
     // Delete HTML comments
@@ -261,7 +264,8 @@ function sourceMDFile(file, source, buildMode) {
       section: pageData.section,
       source: pageData.source,
       ...(pageData.katacodaLayout && { katacodaLayout: pageData.katacodaLayout }),
-      ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem })
+      ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem }),
+      ...(pageData.hideSourceTabs && { hideSourceTabs: pageData.hideSourceTabs })
     };
   }
 }

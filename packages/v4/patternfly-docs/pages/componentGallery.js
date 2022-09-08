@@ -1,6 +1,6 @@
 import React from "react";
 import { groupedRoutes } from '@patternfly/documentation-framework/routes';
-import {  Button, Card, CardTitle, CardBody, Drawer, DrawerPanelBody, DrawerPanelContent, DrawerContent, DrawerContentBody, DrawerHead, DrawerActions, DrawerCloseButton, Gallery, GalleryItem, SearchInput } from '@patternfly/react-core';
+import {  Button, Card, CardTitle, CardBody, Drawer, DrawerPanelBody, DrawerPanelContent, DrawerContent, DrawerContentBody, DrawerHead, DrawerActions, DrawerCloseButton, Gallery, GalleryItem, SearchInput, Toolbar, ToolbarContent, ToolbarGroup, ToolbarItem, Text, TextVariants } from '@patternfly/react-core';
 import { Link } from '@reach/router';
 import { convertToReactComponent } from "@patternfly/ast-helpers";
 import componentsData from '../components-data.json';
@@ -13,6 +13,13 @@ export const ComponentGallery = () => {
   const [isExpanded, setIsExpanded] = React.useState(false);
   const [drawerPanelData, setDrawerPanelData] = React.useState({});
   const drawerRef = React.useRef();
+  const filteredComponents = Object.entries(components)
+    .filter(([componentName]) => (
+      componentName !== 'View all components' &&
+      componentName
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase()))
+    );
 
   const onChange = (labelledById, _event) => {
     const newSelectedCard = labelledById === selectedCard ? null : labelledById;
@@ -62,13 +69,25 @@ export const ComponentGallery = () => {
 
   return (
     <>
-      <SearchInput value={searchTerm} onChange={setSearchTerm} onClear={() => setSearchTerm('')} placeholder="Search components by name" />
+      <Toolbar>
+        <ToolbarContent>
+          <ToolbarGroup alignment={{default: 'alignLeft'}}>
+            <ToolbarItem widths = {{default: '350px'}}>
+              <SearchInput value={searchTerm} onChange={setSearchTerm} onClear={() => setSearchTerm('')} placeholder="Search components by name" />
+            </ToolbarItem>
+          </ToolbarGroup>
+          <ToolbarGroup alignment={{default: 'alignRight'}}>
+            <ToolbarItem alignment={{default: 'alightRight'}}>
+            <Text component={TextVariants.small}>{filteredComponents.length} items</Text>
+            </ToolbarItem>
+          </ToolbarGroup>
+        </ToolbarContent>
+      </Toolbar>
       <Drawer position="right" isExpanded={isExpanded} onExpand={onExpand}>
         <DrawerContent panelContent={panelContent}>
           <DrawerContentBody>
             <Gallery hasGutter>
-              {Object.entries(components)
-                .filter(([componentName]) => componentName !== 'View all components' && componentName.toLowerCase().includes(searchTerm.toLowerCase()))
+              {filteredComponents
                 .sort(([componentName1], [componentName2]) => componentName1.localeCompare(componentName2))
                 .map(([componentName, componentData], idx) => {
                   return (
