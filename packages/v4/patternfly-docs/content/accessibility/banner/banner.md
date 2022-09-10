@@ -3,7 +3,7 @@ id: Banner
 section: components
 ---
 
-A **banner** is a one-line, full color, full width container that can be used to communicate short snippets of information to users. Banners are un-intrusive, non-dismissible, and only support link buttons.
+A **banner** is a one-line, full color, full width container that can be used to communicate short snippets of information to users. Banners are un-intrusive and non-dismissible.
 
 **Keyboard users** should not be able to focus on a banner, as it is not an interactive element.
 
