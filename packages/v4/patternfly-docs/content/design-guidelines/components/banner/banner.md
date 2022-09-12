@@ -5,19 +5,19 @@ section: components
 
 ## Usage
 
-PatternFly offers 5 different banner types detailed below.
+PatternFly offers 5 different banner types detailed below. We suggest that users adopt one of these 5 colors, as they’ve been tested with their text colors for accessibility. However, if colors outside of these variations are used, we encourage manually checking color contrast to ensure the banner text is accessible.
  
 <img src="./img/banner-types.png" alt="5 different types of banners"/>
- 
-|Type |Background color |Text color | Usage |
-|-|-|-|-|
-| Default | `--pf-global--BackgroundColor--dark-400` | White | Generic messages with no associated severity |
-| Blue | `--pf-global--info-color--100` | Black | General information messages |
-| Red | `--pf-global--danger-color--100` | White | High severity messages
-| Green | `--pf-global--success-color--100` | White | Positive, success messages |
-| Gold | `--pf-global--warning-color--100` | Black | Warning or medium severity messages |
 
-PatternFly suggests that users adopt one of these 5 colors, as they’ve been tested with their text colors for accessibility. However, if colors outside of these suggestions are used, we encourage using discretion when selecting the text color.
+A basic banner should only be used when the banner color does not represent status or severity. When a banner is used to convey status, it is advised to add an icon that also conveys status visually.
+
+| Type | Background color | Text color | Status/severity usage |
+| - | - | - | - |
+| Default | `--pf-global--BackgroundColor--dark-400` | White | Generic messages |
+| Blue | `--pf-global--info-color--100` | Black | General information messages |
+| Red | `--pf-global--danger-color--100` | White | High severity/danger messages |
+| Green | `--pf-global--success-color--100` | White | Positive/success messages |
+| Gold | `--pf-global--warning-color--100` | Black | Medium severity/warning messages |
 
 ### When to use
  

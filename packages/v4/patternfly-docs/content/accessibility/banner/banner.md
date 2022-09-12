@@ -3,8 +3,6 @@ id: Banner
 section: components
 ---
 
-A **banner** is a one-line, full color, full width container that can be used to communicate short snippets of information to users. Banners are un-intrusive and non-dismissible.
-
 **Keyboard users** should not be able to focus on a banner, as it is not an interactive element.
 
 **Screen reader users** should be able to have a screen reader describe the contents of a banner, but not focus on or interact with a banner otherwise.
