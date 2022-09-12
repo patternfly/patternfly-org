@@ -33,6 +33,9 @@ At a minimum, a card should meet the following criteria:
   <ListItem>
     <Checkbox id="card-a11y-checkbox-5" label={<span>If there's no surrounding context, a card list container has its own accessible name via the <code class="ws-code">aria-label</code> attribute.</span>} description="An example of surrounding context would be a heading element that directly precedes the group of cards." />
   </ListItem>
+  <ListItem>
+    <Checkbox id="card-a11y-checkbox-6" label={<span>If building a single-selectable card for a <a href="/demos/primary-detail">primary detail view</a>, the card has an associated hidden checkbox input.</span>} description={<span>This notifies users navigating via screen readers and similar assistive technologies that a checkbox can be selected and of its current selected status. See the <a href="/components/card#selectable-card-accessibility-features">React selectable card accessibility features example</a> or <a href="/components/card/html#selectable-with-a-hidden-input-for-improved-screen-reader-accessibility">HTML selectable with hidden input example</a> for implementation information.</span>} />
+  </ListItem>
 </List>
 
 ## React customization
