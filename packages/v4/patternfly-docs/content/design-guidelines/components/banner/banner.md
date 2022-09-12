@@ -27,7 +27,7 @@ Banners are flexible and can be used for any content and for several use cases o
  
    <img src="./img/example-1.png" alt="Example of default banner in use" />
  
-- **To indicate that an application upgrade is available.** In this example, the user is notified of an available upgrade through a banner at the top of the page. Since the use case here is to convey information, an blue status banner was used.
+- **To indicate that an application upgrade is available.** In this example, the user is notified of an available upgrade through a banner at the top of the page. Since the use case here is to convey information, a blue status banner was used.
  
    <img src="./img/example-2.png" alt="Example of blue informational status banner in use" />
  
