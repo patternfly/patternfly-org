@@ -68,7 +68,7 @@ The padding required above and below a banner will depend on where it is placed.
  
   <img src="./img/placement-1.png" alt="Padding when banner is placed above and below the page" />
  
-- **When placed above the main content area,** there should be no padding above the banner, and in most cases there should be 24px padding below it. The only exception is when breadcrumbs are directly below the banner &mdash; in that case, the padding should be 16px.
+- **When placed above the main content area,** there should be no padding above the banner, and in most cases there should be 24px padding below it. The only exception is when breadcrumbs are directly below the banner &mdash; in that case, the padding should be 16px below the banner.
 
   <img src="./img/placement-2.png" alt="Padding when banner is placed above the main content area of the page" />
 
