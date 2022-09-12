@@ -64,7 +64,7 @@ In all cases, the banner should be sticky to where it is used.
  
 The padding required above and below a banner will depend on where it is placed.
  
-- **When placed above or below the page,** the padding above and below should be 0px, as the banner should touch top and/or bottom of the page.
+- **When placed above or below the page,** the padding above and below should be 0px, as the banner should touch the top and/or bottom of the page.
  
   <img src="./img/placement-1.png" alt="Padding when banner is placed above and below the page" />
  
