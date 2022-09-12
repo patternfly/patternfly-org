@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.18 (2022-09-12)
+
+
+### Bug Fixes
+
+* **banner:** update docs, screenshots to reference new variation names ([#3178](https://github.com/patternfly/patternfly-org/issues/3178)) ([2b7149d](https://github.com/patternfly/patternfly-org/commit/2b7149d4b24e4cacf2e79b9dbc1e2a7140bd7148))
+
+
+
+
+
 ## 1.2.17 (2022-09-08)
 
 
