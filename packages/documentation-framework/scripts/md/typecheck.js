@@ -38,6 +38,7 @@ const defaultImports = [
   'react',
   '@reach/router',
   '@patternfly/react-core/next',
+  'react-dropzone',
 ];
 const files = {
   'imports.ts': defaultImports
