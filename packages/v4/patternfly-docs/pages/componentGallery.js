@@ -97,7 +97,10 @@ export const ComponentGallery = () => {
         <ToolbarContent>
           <ToolbarGroup alignment={{default: 'alignLeft'}}>
             <ToolbarItem widths = {{default: '350px'}}>
-              <SearchInput value={searchTerm} onChange={setSearchTerm} onClear={() => setSearchTerm('')} placeholder="Search components by name" />
+              <SearchInput value={searchTerm} onChange={setSearchTerm} placeholder="Search components by name" />
+            </ToolbarItem>
+            <ToolbarItem>
+              <Button variant="link" onClick={() => setSearchTerm('')} isInline>Reset</Button>
             </ToolbarItem>
           </ToolbarGroup>
           <ToolbarGroup alignment={{default: 'alignRight'}}>

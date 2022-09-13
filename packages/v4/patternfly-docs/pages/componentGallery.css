@@ -15,6 +15,11 @@
   --pf-c-toolbar__content--PaddingLeft: var(--pf-c-page__main-section--PaddingLeft);
 }
 
+/* Hide searchinput "x" button in favor of "Reset" text */
+.ws-component-gallery > .pf-c-toolbar .pf-c-text-input-group__utilities {
+  display: none;
+}
+
 /* Sidebar styles */
 .ws-component-gallery > .pf-c-sidebar__main > .pf-c-sidebar__panel {
   border-left: var(--pf-c-page__sidebar--m-light--BorderRightWidth) solid var(--pf-c-page__sidebar--m-light--BorderRightColor);
