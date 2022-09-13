@@ -20,7 +20,10 @@ export const ComponentGallery = () => {
         .toLowerCase()
         .includes(searchTerm.toLowerCase()))
     );
-  const [drawerPanelData, setDrawerPanelData] = React.useState(filteredComponents[0][1] || {title: '', id: '', slug: ''});
+  const [
+    drawerPanelData = {title: '', id: '', slug: ''},
+    setDrawerPanelData
+  ] = React.useState(filteredComponents?.[0]?.[1]);
   const drawerRef = React.useRef();
   // convert summary text in drawer from string to jsx
   const SummaryComponent = ({ id }) => {
