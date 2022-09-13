@@ -8,6 +8,7 @@
   left: calc(var(--pf-c-page__main-section--PaddingLeft) * -1);
   border-bottom: var(--pf-c-page__sidebar--m-light--BorderRightWidth) solid var(--pf-c-page__sidebar--m-light--BorderRightColor);
   margin-bottom: var(--pf-global--spacer--md);
+  width: calc(100% + var(--pf-c-page__main-section--PaddingLeft));
 }
 
 .ws-component-gallery > .pf-c-toolbar > .pf-c-toolbar__content {
