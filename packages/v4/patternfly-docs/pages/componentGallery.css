@@ -1,0 +1,28 @@
+/* .ws-component-gallery {
+  width: calc(100vw - 350px);
+} */
+
+/* Toolbar styles */
+.ws-component-gallery > .pf-c-toolbar {
+  position: relative;
+  left: calc(var(--pf-c-page__main-section--PaddingLeft) * -1);
+  border-bottom: var(--pf-c-page__sidebar--m-light--BorderRightWidth) solid var(--pf-c-page__sidebar--m-light--BorderRightColor);
+  margin-bottom: var(--pf-global--spacer--md);
+}
+
+.ws-component-gallery > .pf-c-toolbar > .pf-c-toolbar__content {
+  --pf-c-toolbar__content--PaddingLeft: var(--pf-c-page__main-section--PaddingLeft);
+}
+
+/* Sidebar styles */
+.ws-component-gallery > .pf-c-sidebar__main > .pf-c-sidebar__panel {
+  border-left: var(--pf-c-page__sidebar--m-light--BorderRightWidth) solid var(--pf-c-page__sidebar--m-light--BorderRightColor);
+  margin-left: var(--pf-global--spacer--md);
+  padding-left: var(--pf-global--spacer--md);
+  margin-top: calc(var(--pf-global--spacer--md) * -1);
+  padding-top: var(--pf-global--spacer--md);
+}
+
+.ws-component-gallery .ws-view-component {
+  margin-top: var(--pf-global--spacer--md);
+}
