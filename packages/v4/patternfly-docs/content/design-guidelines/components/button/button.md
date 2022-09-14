@@ -71,7 +71,7 @@ In this example, you can see a tertiary button used to show a possible â€œEditâ€
 
 _Example of tertiary button on a page_
 
-<img src="./img/tert_edit.png" alt="Example of tertiary button on a page" />
+<img src="./img/tert_edit.png" alt="Example of tertiary button on a page" width="1500" />
 
 ### Link button ###
 
