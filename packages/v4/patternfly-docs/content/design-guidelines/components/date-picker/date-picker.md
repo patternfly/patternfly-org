@@ -75,22 +75,22 @@ Date pickers can be added to a toolbar as filters, placed next to other stand al
 
 For more guidance on using filter groups, see our [toolbar design guidelines](/components/toolbar/design-guidelines).
 
-<img src="./img/Date picker in toolbar.png" alt="Example of date picker in toolbar filter group" width="780"/>
+<img src="./img/Date picker in toolbar.png" alt="Example of date picker in toolbar filter group" width="585"/>
 
 Some use cases may call for a two-lined toolbar. If your toolbar spans two lines, include your dropdown and filters on the top line and your date pickers below.
 
-<img src="./img/In toolbar filter group vertical.png" alt="Example of date picker in toolbar filter group - two liner" width="350"/>
+<img src="./img/In toolbar filter group vertical.png" alt="Example of date picker in toolbar filter group - two liner" width="457"/>
 
 For more information about using different types of filters, see our [filters guidelines](/guidelines/filters).
 
 ##### Additional dropdown for simplified date-range filtering 
 Add an optional dropdown to date-range filters within a toolbar to allow users to filter by the most common date-range options associated with the corresponding table. 
 
-<img src="./img/Custom date range filtering.png" alt="Example of date picker in toolbar filter group - two liner" width="700"/>
+<img src="./img/Custom date range filtering.png" alt="Example of date picker in toolbar filter group - two liner" width="939"/>
 
 When a user selects an option from this additional dropdown, the date picker automatically populates with the first and last day of their specified range.
 
-<img src="./img/Custom date range - the most frequent options.png" alt="Example of date picker in toolbar filter group - two liner" width="700"/>
+<img src="./img/Custom date range - the most frequent options.png" alt="Example of date picker in toolbar filter group - two liner" width="939"/>
 
 Example:  If a user selects **Last month**  from the date-range dropdown, the date picker will display the first day (11/1/2020) and last day (11/30/2020) of that date range. 
 
