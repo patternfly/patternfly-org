@@ -10,6 +10,7 @@ module.exports = (sourceMD, sourceProps) => {
   sourceMD(path.join(contentBase, 'design-guidelines/**/*.md'), 'design-guidelines');
   sourceMD(path.join(contentBase, 'training/**/*.md'), 'training');
   sourceMD(path.join(contentBase, 'extensions/**/*.md'), 'extensions');
+  sourceMD(path.join(contentBase, 'patterns/**/*.md'), 'patterns');
 
   // Theme pages
   const themePagesPath = require

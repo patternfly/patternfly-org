@@ -27,6 +27,7 @@ module.exports = {
     { section: 'demos' },
     { section: 'layouts' },
     { section: 'utilities' },
+    { section: 'patterns'}
     { section: 'contribute' },
     { section: 'training' },
     { href: '/community' }
