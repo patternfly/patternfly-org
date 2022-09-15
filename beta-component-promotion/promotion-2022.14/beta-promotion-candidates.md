@@ -24,11 +24,6 @@ A code editor is a versatile text editor that allows for editing various languag
 ### [Data list: selectableRow prop](https://www.patternfly.org/v4/components/data-list#datalist)
 Using the `selectableRow` property causes the data list to render hidden inputs in its selectable rows. This improve selectable item accessibility.
 
-### [Date picker](https://www.patternfly.org/v4/components/date-picker)
-A date picker helps users select a specific date, time, or range of time-related values.
-
-![date-picker](./img/date-picker.png)
-
 ### [Dual list selector](https://www.patternfly.org/v4/components/dual-list-selector)
 A dual list selector allows users to select and move items from one list of available items to another list of selected items. Unlike a select list, a dual list selector separates the available options and the selected options into two separate lists, which allows users to easily scan the items they selected.
 
@@ -97,11 +92,6 @@ A slider provides a quick and effective way for users to set and adjust a numeri
 Displays hierarchical tabular data. It provides a tree structure with items and errors to expand or collapse child items.
 
 ![table-tree-view](./img/table-tree-view.png)
-
-### [Tile](https://www.patternfly.org/v4/components/tile)
-A tile component is a form of selection that can be used in place of a radio button and is commonly used in forms. A tile appears visually similar to a selectable card. However, tiles are used specifically when the user is selecting a static option, whereas a selectable card triggers an action or opens a quickstart or sidebar to provide additional information.
-
-![tile](./img/tile.png)
 
 ### [Tree view](https://www.patternfly.org/v4/components/tree-view)
 A tree view is a structure that displays data in a hierarchical view. It can be used in a dropdown, drawer, primary-detail, modal, or wizard. Tree views are often used when grouping similar decisions, action items, or navigation elements together.
