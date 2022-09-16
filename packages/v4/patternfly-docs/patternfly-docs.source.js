@@ -23,8 +23,9 @@ module.exports = (sourceMD, sourceProps) => {
     .resolve('@patternfly/patternfly/package.json')
     .replace('package.json', 'docs');
   const coreDocsIgnore = path.join(coreDocsPath, '/pages/**'); // Compatibility for old gatsby workspace
-  sourceMD(path.join(coreDocsPath, '!(demos)/**/examples/**/*.md'), 'html', coreDocsIgnore);
+  sourceMD(path.join(coreDocsPath, '!(demos|patterns)/**/examples/**/*.md'), 'html', coreDocsIgnore);
   sourceMD(path.join(coreDocsPath, 'demos/**/*.md'), 'html-demos', coreDocsIgnore);
+  sourceMD(path.join(coreDocsPath, 'patterns/**/*.md'), 'html-demos', coreDocsIgnore);
 
   // React props
   const reactCorePath = require
@@ -54,7 +55,7 @@ module.exports = (sourceMD, sourceProps) => {
   sourceMD(path.join(reactCorePath, '/components/**/examples/*.md'), 'react');
   sourceMD(path.join(reactCorePath, '/next/components/**/examples/*.md'), 'react-next');
   sourceMD(path.join(reactCorePath, '/**/demos/**/*.md'), 'react-demos');
-  sourceMD(path.join(reactCorePath, '/patterns/**/*.md'), 'demos');
+  sourceMD(path.join(reactCorePath, '/patterns/**/*.md'), 'react-demos');
 
   // React-table MD
   sourceMD(path.join(reactTablePath, '/**/TableComposable/examples/*.md'), 'react-composable');

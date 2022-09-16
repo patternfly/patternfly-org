@@ -3,4 +3,4 @@ id: Card view
 section: patterns
 ---
 
-Card view content.
+Sample card view content to see tabs.
