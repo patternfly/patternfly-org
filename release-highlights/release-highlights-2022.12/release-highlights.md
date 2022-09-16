@@ -15,6 +15,12 @@
 
  Allows for adding the required indicator (red asterisk) to a checkbox label. This is useful when the user must acknowledge certain information (e.g. terms and conditions) before proceeding.
 
+ ### [Button with count](https://www.patternfly.org/v4/components/button#button-with-count)
+
+ ![button with count](./img/button-with-count.png)
+
+ Adds a optional badge to a button that can annotate the button label with a count value.
+
  ### [PageSection - specifying HTML elements via props](https://www.patternfly.org/v4/components/page)
 
  It's now possible to specify the underlying HTML element used in a PageSection, similar to Card and other components.
