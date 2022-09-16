@@ -3,17 +3,25 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
- ### [Expandable section with inline "show more/less" action](https://www.patternfly.org/v4/components/expandable-section#truncate-expansion)
+ ### [Expandable search input](https://www.patternfly.org/v4/components/search-input#with-expandable-button)
 
-![expandable section with truncated text](./img/expandable-truncate.png)
+![search input expanded](./img/expandable-search.png)
 
- Adds the ability to truncate a block of text and allow the user to display the full content upon clicking "Show more."
+ Adds a variant of the search input that can be collapsed to an icon for use in a masthead or other places with limited space. When expanded, it will open inline.
 
- * [Search input - expandable masthead variant](https://github.com/patternfly/patternfly-react/issues/7380) - adding a variant of the search input that can be used in the masthead and expanded or collapsed inline with other elements.
+ ### [Required checkboxes](https://www.patternfly.org/v4/components/checkbox#required-input)
 
- * [Checkbox - add ability to indicate they are required](https://github.com/patternfly/patternfly-react/issues/7830) - want to add the ability to add the required indicator (red asterisk) to a checkbox label. This is useful when the user must acknowledge certain information (e.g. terms and conditions) before proceeding.
+![required checkbox](./img/checkbox-required.png)
 
- * [PageSection - add ability to specify HTML elements via props](https://github.com/patternfly/patternfly-react/issues/7419) - add an additional prop to PageSection that allows users to specify the underlying HTML element used, similar to Card and other components.
+ Allows for adding the required indicator (red asterisk) to a checkbox label. This is useful when the user must acknowledge certain information (e.g. terms and conditions) before proceeding.
+
+ ### [PageSection - specifying HTML elements via props](https://www.patternfly.org/v4/components/page)
+
+ It's now possible to specify the underlying HTML element used in a PageSection, similar to Card and other components.
+
+ ### Next components
+
+ This release introduces Next versions of the [Dropdown](https://www.patternfly.org/v4/components/dropdown/react-next) and [Wizard](https://www.patternfly.org/v4/components/wizard/react-next) components. These are newer implementations of the components that will replace existing versions in the next major release.
 
 
 See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
