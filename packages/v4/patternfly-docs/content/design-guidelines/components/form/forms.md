@@ -32,10 +32,10 @@ Use forms to accomplish tasks reliant on user-inputted information like logging 
 
 Most forms contain four basic elements:
 
-1. **Labels:** Indicate desired information for each field.
-2. **Text inputs:** Provide space for users to enter text.
-3. **Data inputs:** Allow users to enter information that is not freeform text using components like checkboxes, radio buttons, or dropdowns.
-4. **Buttons:** Enable a user to submit or exit a form.
+1. [**Labels:**](#Labels) Indicate desired information for each field.
+2. [**Text inputs:**](Text-inputs) Provide space for users to enter text.
+3. [**Data inputs:**](Data-inputs) Allow users to enter information that is not freeform text using components like checkboxes, radio buttons, or dropdowns.
+4. [**Buttons:**](Buttons) Enable a user to submit or exit a form.
 
 ### Labels
 Always provide labels for text and data inputs so that users understand the information each form field asks of them. Default to top-aligned labels unless you’re working within limited vertical space, then use left-aligned labels. 
@@ -113,7 +113,7 @@ Form submit buttons should be disabled until a user starts filling out the form 
 * For a submitted form, disable the submit button while a user's responses are processing to avoid a duplicate submission.
 * For a processing form, use feedback messages and progress indicators like spinners or progress bars if the processing time might exceed user expectations.
 
-##Variations
+## Variations
 
 ### Form sections
 
@@ -153,11 +153,11 @@ To view an interactive example of field groups, see our [field groups demo](/com
 
 Due to their interactive nature, forms often include features that help communicate field importance and guidance as users complete them. 
 
-### Types of user guidance include:
-
-* **Required fields:** Call attention to input fields crucial to user success.
-* **User help:** Assists users in context through placeholder text, helper text, and popovers.
-* **Progressive disclosure:** Hides and shows fields based on user selections to simplify their workflow.
+### Types of user guidance
+Types of user guidance include:
+* [**Required fields:**](#Required-fields) Call attention to input fields crucial to user success.
+* [**User help:**](#User-help) Assists users in context through placeholder text, helper text, and popovers.
+* [**Progressive disclosure:**](#Progressive-disclosure) Hides and shows fields based on user selections to simplify their workflow.
 
 #### Required fields
 
@@ -172,7 +172,7 @@ If all form fields are required, don’t use an asterisk for each one. Instead, 
 
 #### User help
 
-There are 3 different methods for providing assistance within a form: [Placeholder text](#placeholder-text), [helper text](#helper-text), and [popovers](#popovers).
+There are 3 different methods for providing assistance within a form: [placeholder text](#placeholder-text), [helper text](#helper-text), and [popovers](#popovers).
 
 
 ##### Placeholder text
@@ -181,16 +181,18 @@ There are 3 different methods for providing assistance within a form: [Placehold
 
 Within a form field, placeholder text provides an example of the required or recommended format for text input. 
 
-Use placeholder text when:
+**Use placeholder text when:**
 
 * The requested data type requires data to be inputted with specific format or syntax requirements.
 * The requested data type might be unfamiliar to the user.
 
-Never use placeholder text to replace field labels or communicate crucial information since it disappears as soon as a user begins typing in a field.
+**Never use placeholder text when:**
+* Replacing field labels 
+* Communicating crucial information since it disappears as soon as a user begins typing in a field.
 
 If your placeholder text shares an example, precede it with “Example,” followed by a space so that users accessing the form with screen readers will know the difference between the field label and the provided placeholder text. 
 
-Examples:
+**Examples:**
 
 * *Example, John Smith*
 * *Example, (555) 555-5555*
@@ -214,7 +216,7 @@ For more information about writing effective helper text, see the [content](#con
 
 ##### Popovers
 
-Use a [popover](/components/popover/design-guidelines) for fields that might require additional background or explanation. Popovers may also link to external help pages or other related documentation. 
+**Use a [popover](/components/popover/design-guidelines)** for fields that might require additional background or explanation. Popovers may also link to external help pages or other related documentation. 
 
 In a form, indicate a popover with an unfilled question mark circle that reveals information when clicked. Place popovers to the right of their corresponding form label.
 
@@ -353,7 +355,7 @@ Use field labels to specify the most critical information about what data the us
 
 Whenever possible, keep field labels under five words and avoid using the same field label more than once in the same form.
 
-Examples:
+**Examples:**
 
 * *Full name*
 * *Email*
@@ -365,13 +367,13 @@ Use placeholder text to demonstrate correct inputs so that users are aware of fo
 
 If your placeholder text demonstrates a correct input, introduce it as an example so that users can distinguish impermanent examples from field labels and their own inputted text.
 
-Examples:
+**Examples:**
 * *Example, John Smith*
 * *Example, (555) 555-5555*
 
 Placeholder text that doesn’t give an example doesn’t need to be introduced as one. If your placeholder text simply communicates a field's required format, write the format without an introduction.
 
-Examples:
+**Examples:**
 * *MM-DD-YYYY*
 * *johnsmith@example.com*
 
@@ -387,7 +389,7 @@ Use helper text to display critical secondary information that helps users input
 
 Use popovers to supply background information and additional context as field-level help. Popover content should help define unfamiliar terms or concepts that novice users may not know offhand. Popover content can also help users find required information, such as an account number, order number, or employee ID.
 
-Examples:
+**Examples:**
 - *Find your order number in your order confirmation email or at the top of your paper receipt.*
 - *You can find your employee ID number at the bottom of your employee ID card.*
 
@@ -401,7 +403,7 @@ If a user leaves a required field empty or incomplete, use a field level error m
 
 If a user formats an input incorrectly, avoid unclear error messages like *Invalid input*. Instead, specify what constitutes a valid input.
 
-Examples:
+**Examples:**
 * *Date format must be MM-DD-YYYY*
 * *Enter a valid email: email@provider.com*
 
