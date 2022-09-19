@@ -44,10 +44,11 @@ Showcase the different content that could be included within your component. Her
 - Localization considerations.
 
 ### Accessibility (H2)
-Each component should list the following sentence:
+Each component that has an assessibility tab should include the following sentence:
 
-For information regarding accessibility, visit the [component name] accessibility tab [linked].
+For information regarding accessibility, visit the [component name] accessibility tab.
 
+Then, link the component's accessibilty tab to the words "accessibility tab".
 
 
 
@@ -125,6 +126,7 @@ When writing design guidelines, use:
 
 If you're linking to other PatternFly pages, use relative URLs instead of full URLs.
 
-Relative URL: /components/tooltip/design-guidelines
-Full URL: https://www.patternfly.org/v4/components/tooltip/design-guidelines
+**Relative URL:** /components/tooltip/design-guidelines
+
+**Full URL:** https://www.patternfly.org/v4/components/tooltip/design-guidelines
 
