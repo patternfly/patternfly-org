@@ -17,19 +17,19 @@ section: components
 8. **Maximum range parameter (optional)**: Marks the end of a slider with its maximum value.
  
 ## Usage
-**Use a slider when**:
+### When to use:
 * Users need a quick way to adjust values within a defined range, such as in a form.
 * Users need to make small incremental changes.
 * The numeric value can either be a whole number or fractional.
 * You need to bypass device limitations, such as keyboardless interactions and form submissions on mobile.
  
-**Don’t use a slider when**:
+### When not to use:
 * The numeric value range is infinite.
 * The numeric value required is not part of a range, or is arbitrary. For this use case, use an [input group](/components/input-group)
 instead.
 * There is not enough space in the UI.
  
-**When using sliders, follow these best practices**:
+### Best practices:
 * Display a default numeric value that users can modify by using the slider or by typing directly into the input field, or scale using the increase or decrease buttons.
 * Always keep the selected slider value visible to the user.
 * Communicate maximum and minimum parameters of the range, especially with unusual parameters.
