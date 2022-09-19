@@ -3,6 +3,70 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.27 (2022-09-19)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.26 (2022-09-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.25 (2022-09-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.24 (2022-09-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.23 (2022-09-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.22 (2022-09-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.21 (2022-09-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.20 (2022-09-14)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 1.2.19 (2022-09-13)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
