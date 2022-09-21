@@ -28,10 +28,10 @@ We publish this theme [on npm.](https://www.npmjs.com/package/@patternfly/docume
 This should not be needed, but if you encounter errors installing the above devDependencies, try adding one or more of these resolutions to your package.json file:
 ```
 "resolutions": {
-  "@types/react": "^16.8.0",
-  "@types/react-dom": "^16.8.0",
-  "react": "16.8.0",
-  "react-dom": "16.8.0",
+  "@types/react": "^18",
+  "@types/react-dom": "^18",
+  "react": "^18",
+  "react-dom": "^18",
   "chromedriver": "102.0.0",
   "node-sass": "7.0.1",
   "puppeteer": "14.3.0",

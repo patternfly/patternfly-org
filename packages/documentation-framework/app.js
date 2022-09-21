@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import { Router, useLocation } from '@reach/router';
 import 'client-styles'; // Webpack replaces this import: patternfly-docs.css.js
 import { SideNavLayout } from '@patternfly/documentation-framework/layouts';
@@ -107,8 +107,15 @@ const isPrerender = process.env.PRERENDER;
 // Don't use ReactDOM in SSR
 if (!isPrerender) {
   function render() {
-    const renderFn = isProd ? ReactDOM.hydrate : ReactDOM.render;
-    renderFn(<App />, document.getElementById('root'));
+    const container = document.getElementById('root');
+    // TODO: Enable StrictMode: https://reactjs.org/docs/strict-mode.html
+    const app = <App />;
+
+    if (isProd) {
+      hydrateRoot(container, app);
+    } else {
+      createRoot(container).render(app);
+    }
   }
   // On first load, await promise for the current page to avoid flashing a "Loading..." state
   const Component = getAsyncComponent(null);
