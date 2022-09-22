@@ -9,7 +9,7 @@ A card usually consists of four parts:
  
 <img src="./img/card.png" alt="4 parts of a card" width="394"/> 
  
-1. **Header (optional):** When included, defines the contents of a card. Card headers can contain images as well as the title of a card and an actions menu represented by the right-aligned kabob. In most cases, your card should include a header. The only exceptions are when cards being used as a layout element to create a white background behind other content.
+1. **Header (optional):** When included, defines the contents of a card. Card headers can contain images as well as the title of a card and an actions menu represented by the right-aligned kebab. In most cases, your card should include a header. The only exceptions are when cards being used as a layout element to create a white background behind other content.
  
 2. **Title (optional):** Communicates the title of a card if it's not included in the header.
  
