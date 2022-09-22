@@ -80,7 +80,7 @@ PatternFly currently uses Red Hat Text and Red Hat Display. To download these fo
 ### Using Sketch
 
 #### Before you start designing
-The design kit is a collection of Sketch assets that make it easy for designers to create hi-fi mockups that accurately represent PatternFly components and layouts. It works with Sketch libraries. To use it, you need to install [Sketch version 68](https://www.sketch.com/) or above. 
+The design kit is a collection of Sketch assets that make it easy for designers to create hi-fi mockups that accurately represent PatternFly components and layouts. It works with Sketch libraries. To use it, you need to install [Sketch version 68](https://www.sketch.com/) or above.
 
 
 
@@ -138,7 +138,7 @@ Currently, all PatternFly text styles use Red Hat Text and Red Hat Display fonts
 When inserting text into your design, always assign it a text style by selecting the text item, followed by selecting a text style from the appearance menu on the right toolbar.
 
 ## Staying up to date
-Adjustments and bug fixes are made to the kit on a regular basis. When we make a change to any of the libraries, you'll be notified via the bell icon in the top right corner of the Sketch window that says “Library Update Available”. To update, click "Update" on the pop-up that appears. 
+Adjustments and bug fixes are made to the kit on a regular basis. When we make a change to any of the libraries, you'll be notified via the bell icon in the top right corner of the Sketch window that says “Library Update Available”. To update, click "Update" on the pop-up that appears.
 
 We recommend that you keep your kit as up to date as possible. Once a change is accepted, you will not be able to revert to the previous version.
 
@@ -146,3 +146,7 @@ Please note that the Patternfly template will NOT be automatically updated as th
 
 Did you use the old versions of the symbols that were updated in files already? No problem -  you'll receive another notification in the top right of that specific Sketch file that will allow you to update them.
 
+## PatternFly wireframe kit
+A PatternFly wireframe kit is also available for creating low or mid-fidelity mockups that are compatible with PatternFly styles.
+
+[**Learn more about the PatternFly wireframe kit**](https://github.com/patternfly/patternfly-design-kit/blob/master/PatternFly%204%20-%20Wireframe%20library%20and%20template/Wireframe%20kit%20guideline.md) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
