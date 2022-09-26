@@ -21,6 +21,7 @@ import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external
 import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
 import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
+import { Link } from '@patternfly/documentation-framework/components';
 import staticVersions from '../../versions.json';
 import logo from '../logo.svg';
 
@@ -39,9 +40,9 @@ const HeaderTools = ({
     <DropdownItem
       key={version.name}
       component={
-        <a href={version.latest ? '/v4' : `/${version.name}`}>
+        <Link to={version.latest ? '/v4' : `/${version.name}`}>
           {`Release ${version.name}`}
-        </a>
+        </Link>
       }
     />
   );
