@@ -20,8 +20,7 @@ import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
 import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
-import { SideNav, TopNav, GdprBanner } from '../../components';
-import { Link } from '@patternfly/documentation-framework/components';
+import { Link, SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
 import logo from '../logo.svg';
 
