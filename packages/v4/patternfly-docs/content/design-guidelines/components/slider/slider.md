@@ -18,12 +18,14 @@ section: components
  
 ## Usage
 ### When to use
+Use a slider when:
 * Users need a quick way to adjust values within a defined range, such as in a form.
 * Users need to make small incremental changes.
 * The numeric value can either be a whole number or fractional.
 * You need to bypass device limitations, such as keyboardless interactions and form submissions on mobile.
  
 ### When not to use
+Do not use a slider when:
 * The numeric value range is infinite.
 * The numeric value required is not part of a range, or is arbitrary. For this use case, use an [input group](/components/input-group)
 instead.
@@ -46,6 +48,7 @@ Allows users to select any value within the slider's range using a thumb indicat
 ### Discrete slider
  
 <img src="./img/slider-discrete.png" alt="Visual of discrete slider" width="600"/>
+
 Allows users to select a value by adjusting a thumb indicator to predefined values represented by tick marks on a track. Users can only select values indicated by a tick mark.  If they attempt to select an unmarked value, the thumb indicator will always shift to the closest tick mark.
  
 ### Slider within input groups
