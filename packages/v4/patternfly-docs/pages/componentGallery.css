@@ -1,11 +1,6 @@
-/* .ws-component-gallery {
-  width: calc(100vw - 350px);
-} */
-
 /* Toolbar styles */
 .ws-component-gallery > .pf-c-toolbar {
-  position: relative;
-  left: calc(var(--pf-c-page__main-section--PaddingLeft) * -1);
+  margin-left: calc(var(--pf-c-page__main-section--PaddingLeft) * -1);
   border-bottom: var(--pf-c-page__sidebar--m-light--BorderRightWidth) solid var(--pf-c-page__sidebar--m-light--BorderRightColor);
   margin-bottom: var(--pf-global--spacer--md);
   width: calc(100% + var(--pf-c-page__main-section--PaddingLeft));
@@ -27,6 +22,8 @@
   padding-left: var(--pf-global--spacer--md);
   margin-top: calc(var(--pf-global--spacer--md) * -1);
   padding-top: var(--pf-global--spacer--md);
+  top: 70px;
+  height: calc(100vh - 146px);
 }
 
 .ws-component-gallery .ws-view-component {

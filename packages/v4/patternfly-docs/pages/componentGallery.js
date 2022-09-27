@@ -1,6 +1,6 @@
 import React from "react";
 import { groupedRoutes } from '@patternfly/documentation-framework/routes';
-import {  Button, Card, CardTitle, CardBody, Drawer, DrawerPanelBody, DrawerPanelContent, DrawerContent, DrawerContentBody, DrawerHead, DrawerActions, DrawerCloseButton, Gallery, GalleryItem, SearchInput, Toolbar, ToolbarContent, ToolbarGroup, ToolbarItem, Text, TextContent, TextVariants, Sidebar, SidebarPanel, SidebarContent, ToggleGroup, ToggleGroupItem } from '@patternfly/react-core';
+import {  Button, Card, CardTitle, CardBody, Gallery, GalleryItem, SearchInput, Toolbar, ToolbarContent, ToolbarGroup, ToolbarItem, Text, TextContent, TextVariants, Sidebar, SidebarPanel, SidebarContent } from '@patternfly/react-core';
 import { Link } from '@reach/router';
 import { convertToReactComponent } from "@patternfly/ast-helpers";
 import componentsData from '../components-data.json';
@@ -12,7 +12,6 @@ export const ComponentGallery = () => {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCard, setSelectedCard] = React.useState('');
   const [isExpanded, setIsExpanded] = React.useState(false);
-  const [toggleOption, setToggleOption] = React.useState('sidebar');
   const filteredComponents = Object.entries(components)
     .filter(([componentName]) => (
       componentName !== 'View all components' &&
@@ -51,12 +50,6 @@ export const ComponentGallery = () => {
       setIsExpanded(!isExpanded);
     }
   };
-  const onCloseClick = () => {
-    setIsExpanded(false);
-  };
-  const onExpand = () => {
-    drawerRef.current && drawerRef.current.focus();
-  };
   const onKeyDown = (event, componentData) => {
     if (event.target !== event.currentTarget) {
       return;
@@ -66,38 +59,14 @@ export const ComponentGallery = () => {
       onClick(componentData);
     }
   };
-  const panelContent = (
-    <DrawerPanelContent>
-      <DrawerHead>
-        <TextContent>
-          <Text component={TextVariants.h2} tabIndex={isExpanded ? 0 : -1} ref={drawerRef}>
-            {drawerPanelData.title}
-          </Text>
-        </TextContent>
-        <DrawerActions>
-          <DrawerCloseButton onClick={onCloseClick} />
-        </DrawerActions>
-      </DrawerHead>
-      <DrawerPanelBody>
-        { drawerPanelData.id && <SummaryComponent id={drawerPanelData.id}/> }
-      </DrawerPanelBody>
-      <DrawerPanelBody>
-        <Button component={(props) => <Link {...props} to={drawerPanelData.slug || ''} />}>View component</Button>
-      </DrawerPanelBody>
-    </DrawerPanelContent>
-  );
 
   return (
     <div className="ws-component-gallery">
-      <ToggleGroup>
-        <ToggleGroupItem text="Drawer" buttonId="drawer" onChange={() => setToggleOption('drawer')} isSelected={toggleOption === 'drawer'}></ToggleGroupItem>
-        <ToggleGroupItem text="Sidebar" buttonId="sidebar" onChange={() => setToggleOption('sidebar')} isSelected={toggleOption === 'sidebar'}></ToggleGroupItem>
-      </ToggleGroup>
-      <Toolbar>
+      <Toolbar isSticky>
         <ToolbarContent>
           <ToolbarGroup alignment={{default: 'alignLeft'}}>
             <ToolbarItem widths = {{default: '350px'}}>
-              <SearchInput value={searchTerm} onChange={setSearchTerm} placeholder="Search components by name" />
+              <SearchInput value={searchTerm} placeholder="Search components by name" onChange={setSearchTerm} />
             </ToolbarItem>
             <ToolbarItem>
               <Button variant="link" onClick={() => setSearchTerm('')} isInline>Reset</Button>
@@ -110,81 +79,47 @@ export const ComponentGallery = () => {
           </ToolbarGroup>
         </ToolbarContent>
       </Toolbar>
-      {(toggleOption === 'drawer') && (
-        <Drawer position='right' isExpanded={isExpanded} onExpand={onExpand}>
-          <DrawerContent panelContent={panelContent}>
-            <DrawerContentBody>
-              <Gallery hasGutter>
-                {filteredComponents
-                  .sort(([componentName1], [componentName2]) => componentName1.localeCompare(componentName2))
-                  .map(([componentName, componentData], idx) => {
-                    return (
-                      <GalleryItem span={4} key={idx}>
-                        <Card
-                          id={componentData.id}
-                          key={idx}
-                          isSelectableRaised
-                          hasSelectableInput
-                          onClick={() => onClick(componentData)}
-                          onKeyDown={evt => onKeyDown(evt, componentData)}
-                          onSelectableInputChange={onChange}
-                          isSelected={selectedCard === componentData.id}
-                        >
-                          <CardTitle>{componentName}</CardTitle>
-                          <CardBody><img src={`${illustrations[componentName.split(' ').join('_').toLowerCase()]}`} /></CardBody>
-                        </Card>
-                      </GalleryItem>
-                    );
-                  })
-                }
-              </Gallery>
-            </DrawerContentBody>
-          </DrawerContent>
-        </Drawer>
-      )}
-      {(toggleOption === 'sidebar') && (
-        <Sidebar isPanelRight className='ws-component-gallery'>
-          <SidebarPanel>
-            <TextContent>
-              <Text component={TextVariants.h2}>
-                <span tabIndex={isExpanded ? 0 : -1} ref={drawerRef}>
-                  {drawerPanelData.title}
-                </span>
-              </Text>
-              <Text>
-                { drawerPanelData.id ? <SummaryComponent id={drawerPanelData.id}/> : null }
-              </Text>
-            </TextContent>
-            <Button className="ws-view-component" component={(props) => <Link {...props} to={drawerPanelData.slug} />}>View component</Button>
-          </SidebarPanel>
-          <SidebarContent>
-            <Gallery hasGutter>
-              {filteredComponents
-                .sort(([componentName1], [componentName2]) => componentName1.localeCompare(componentName2))
-                .map(([componentName, componentData], idx) => {
-                  return (
-                    <GalleryItem span={4} key={idx}>
-                      <Card
-                        id={componentData.id}
-                        key={idx}
-                        isSelectableRaised
-                        hasSelectableInput
-                        onClick={() => onClick(componentData)}
-                        onKeyDown={evt => onKeyDown(evt, componentData)}
-                        onSelectableInputChange={onChange}
-                        isSelected={selectedCard === componentData.id}
-                      >
-                        <CardTitle>{componentName}</CardTitle>
-                        <CardBody><img src={`${illustrations[componentName.split(' ').join('_').toLowerCase()]}`} /></CardBody>
-                      </Card>
-                    </GalleryItem>
-                  );
-                })
-              }
-            </Gallery>
-          </SidebarContent>
-        </Sidebar>
-      )}
+      <Sidebar isPanelRight className='ws-component-gallery' tabIndex={1}>
+        <SidebarPanel variant="sticky">
+          <TextContent>
+            <Text component={TextVariants.h2}>
+              <span tabIndex={isExpanded ? 0 : -1} ref={drawerRef}>
+                {drawerPanelData.title}
+              </span>
+            </Text>
+            <Text>
+              { drawerPanelData.id ? <SummaryComponent id={drawerPanelData.id}/> : null }
+            </Text>
+          </TextContent>
+          <Button className="ws-view-component" component={(props) => <Link {...props} to={drawerPanelData.slug} />}>View component</Button>
+        </SidebarPanel>
+        <SidebarContent>
+          <Gallery hasGutter>
+            {filteredComponents
+              .sort(([componentName1], [componentName2]) => componentName1.localeCompare(componentName2))
+              .map(([componentName, componentData], idx) => {
+                return (
+                  <GalleryItem span={4} key={idx}>
+                    <Card
+                      id={componentData.id}
+                      key={idx}
+                      isSelectableRaised
+                      hasSelectableInput
+                      onClick={() => onClick(componentData)}
+                      onKeyDown={evt => onKeyDown(evt, componentData)}
+                      onSelectableInputChange={onChange}
+                      isSelected={selectedCard === componentData.id}
+                    >
+                      <CardTitle>{componentName}</CardTitle>
+                      <CardBody><img src={`${illustrations[componentName.split(' ').join('_').toLowerCase()]}`} /></CardBody>
+                    </Card>
+                  </GalleryItem>
+                );
+              })
+            }
+          </Gallery>
+        </SidebarContent>
+      </Sidebar>
     </div>
   )
 };

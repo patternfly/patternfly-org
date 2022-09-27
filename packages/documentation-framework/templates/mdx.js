@@ -123,7 +123,7 @@ export const MDXTemplate = ({
   hideSourceTabs
 }) => {
   const sourceKeys = sources.map(v => v.source);
-  const isSinglePage = sourceKeys.length === 1;
+  const isSinglePage = sourceKeys.length === 1 && !hideSourceTabs;
   const isComponent = sources.some(source => source.section === 'components');
   const { pathname } = useLocation();
   const { katacodaLayout } = sources[0].Component.getPageData();
