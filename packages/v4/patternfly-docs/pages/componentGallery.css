@@ -4,6 +4,7 @@
   border-bottom: var(--pf-c-page__sidebar--m-light--BorderRightWidth) solid var(--pf-c-page__sidebar--m-light--BorderRightColor);
   margin-bottom: var(--pf-global--spacer--md);
   width: calc(100% + var(--pf-c-page__main-section--PaddingLeft));
+  z-index: 101;
 }
 
 .ws-component-gallery > .pf-c-toolbar > .pf-c-toolbar__content {
@@ -18,12 +19,22 @@
 /* Sidebar styles */
 .ws-component-gallery > .pf-c-sidebar__main > .pf-c-sidebar__panel {
   border-left: var(--pf-c-page__sidebar--m-light--BorderRightWidth) solid var(--pf-c-page__sidebar--m-light--BorderRightColor);
-  margin-left: var(--pf-global--spacer--md);
-  padding-left: var(--pf-global--spacer--md);
-  margin-top: calc(var(--pf-global--spacer--md) * -1);
-  padding-top: var(--pf-global--spacer--md);
-  top: 70px;
-  height: calc(100vh - 146px);
+  padding: var(--pf-global--spacer--md);
+  top: 69px;
+  z-index: 101;
+  margin: calc(var(--pf-global--spacer--md) * -1) 0 var(--pf-global--spacer--md) calc(var(--pf-global--spacer--md) * -1);
+}
+
+@media (min-width: 768px) {
+  .ws-component-gallery > .pf-c-sidebar__main > .pf-c-sidebar__panel {
+    height: calc(100vh - 146px);
+    margin-left: var(--pf-global--spacer--md);
+    margin-bottom: 0;
+   }
+}
+
+.ws-component-gallery .pf-c-card {
+  height: 100%;
 }
 
 .ws-component-gallery .ws-view-component {

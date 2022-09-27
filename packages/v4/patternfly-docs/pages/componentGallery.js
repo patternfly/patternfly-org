@@ -32,8 +32,8 @@ export const ComponentGallery = () => {
       return null;
     }
     const { code } = convertToReactComponent(`<>${summary}</>`);
-    const getSummaryComponent = new Function('React', code);
-    return getSummaryComponent(React);
+    const getSummaryComponent = new Function('React', 'Link', code);
+    return getSummaryComponent(React, Link);
   }
 
   const onChange = (labelledById, _event) => {
@@ -65,21 +65,23 @@ export const ComponentGallery = () => {
       <Toolbar isSticky>
         <ToolbarContent>
           <ToolbarGroup alignment={{default: 'alignLeft'}}>
-            <ToolbarItem widths = {{default: '350px'}}>
+            <ToolbarItem widths={{default: '320px'}}>
               <SearchInput value={searchTerm} placeholder="Search components by name" onChange={setSearchTerm} />
             </ToolbarItem>
-            <ToolbarItem>
+          </ToolbarGroup>
+          <ToolbarGroup>
+            <ToolbarItem alignment={{default: 'alignLeft'}}>
               <Button variant="link" onClick={() => setSearchTerm('')} isInline>Reset</Button>
             </ToolbarItem>
           </ToolbarGroup>
-          <ToolbarGroup alignment={{default: 'alignRight'}}>
-            <ToolbarItem alignment={{default: 'alightRight'}}>
-            <Text component={TextVariants.small}>{filteredComponents.length} items</Text>
+          <ToolbarGroup alignment={{default: 'alignRight'}} spacer={{default: 'spacerMd', md: 'spacerNone'}}>
+            <ToolbarItem alignment={{default: 'alignRight'}}>
+              <Text component={TextVariants.small}>{filteredComponents.length} items</Text>
             </ToolbarItem>
           </ToolbarGroup>
         </ToolbarContent>
       </Toolbar>
-      <Sidebar isPanelRight className='ws-component-gallery' tabIndex={1}>
+      <Sidebar isPanelRight className='ws-component-gallery' tabIndex={1} orientation={() => (window.innerWidth < 768 ? 'stack' : 'split')}>
         <SidebarPanel variant="sticky">
           <TextContent>
             <Text component={TextVariants.h2}>
@@ -98,6 +100,14 @@ export const ComponentGallery = () => {
             {filteredComponents
               .sort(([componentName1], [componentName2]) => componentName1.localeCompare(componentName2))
               .map(([componentName, componentData], idx) => {
+                // Convert to lowercase-camelcase ex: File upload - multiple ==> file_upload_multiple
+                const illustrationName = componentName
+                  .replace('-', '')
+                  .replace('  ',' ')
+                  .split(' ')
+                  .join('_')
+                  .toLowerCase();
+                const illustration = illustrations[illustrationName];
                 return (
                   <GalleryItem span={4} key={idx}>
                     <Card
@@ -111,7 +121,11 @@ export const ComponentGallery = () => {
                       isSelected={selectedCard === componentData.id}
                     >
                       <CardTitle>{componentName}</CardTitle>
-                      <CardBody><img src={`${illustrations[componentName.split(' ').join('_').toLowerCase()]}`} /></CardBody>
+                      {illustration && (
+                        <CardBody>
+                          <img src={illustration} alt={`${componentName} illustration`} />
+                        </CardBody>
+                      )}
                     </Card>
                   </GalleryItem>
                 );
