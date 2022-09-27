@@ -162,6 +162,9 @@
     "illustration": "./images/component-illustrations/hint.png",
     "summary": "A <b>hint</b> is in-app messaging that provides a one-step reminder, explanation, or call to action for a page or modal."
   },
+  "icon": {
+    "summary": "An <b>icon</b> component is a container that allows for <Link to='/guidelines/icons/#all-icons'>icons</Link> of varying dimensions, as well as <Link to='/components/spinner'>spinners</Link>, to seamlessly replace each other without shifting surrounding content.<br/><br/>PatternFly's <Link to='/guidelines/icons/#all-icons'>icons guidelines</Link> contain PatternFly's icon set, as well as more information about icon usage."
+  },
   "inline-edit": {
     "illustration": "./images/component-illustrations/inline-edit.png",
     "summary": "An <b>inline edit</b> component allows users to switch between a read-only view and an edit view of <Link to='/components/description-list'>description lists</Link>, page text elements, or <Link to='/components/table'>tables</Link> as needed. Inline editing saves the user from opening a modal window or redirecting to a separate edit page so that they can edit in context of their current view."
