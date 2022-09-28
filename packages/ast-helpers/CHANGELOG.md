@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.33 (2022-09-27)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.32 (2022-09-26)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.31 (2022-09-23)
+
+
+### Bug Fixes
+
+* remove lookbacks in regex to support safari 16 ([#3205](https://github.com/patternfly/patternfly-org/issues/3205)) ([a89fdbb](https://github.com/patternfly/patternfly-org/commit/a89fdbb52af22aa56c0f89c9bdbc3efd78502c55))
+
+
+
+
+
+## 0.7.30 (2022-09-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.29 (2022-09-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.28 (2022-09-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 ## 0.7.27 (2022-09-19)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
