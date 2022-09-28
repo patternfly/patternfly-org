@@ -7,9 +7,9 @@ section: components
 
 PatternFly offers 5 different banner types detailed below. We suggest that users adopt one of these 5 colors, as they’ve been tested with their text colors for accessibility. However, if colors outside of these variations are used, we encourage manually checking color contrast to ensure the banner text is accessible.
  
-<img src="./img/banner-types.png" alt="5 different types of banners"/>
+<img src="./img/banner-types.png" alt="5 different types of banners" width="744" />
 
-A basic banner should only be used when the banner color does not represent status or severity. When a banner is used to convey status, it is advised to add an icon that also conveys status visually.
+A default banner should only be used when the banner color does not represent status or severity. When a banner is used to convey status, it is advised to add an icon that also conveys status visually.
 
 | Type | Background color | Text color | Status/severity usage |
 | - | - | - | - |
@@ -23,9 +23,9 @@ A basic banner should only be used when the banner color does not represent stat
  
 Banners are flexible and can be used for any content and for several use cases outlined in the following examples.
  
-- **To indicate that an application/site is offline.** In this example, a banner is used to indicate to the user that the site is undergoing maintenance and that they will have limited functionality as a result. The banner is shown at the top and bottom to ensure that the user does not miss this disclaimer. Since this is a general, non-severe message, a default banner was used.
+- **To indicate that an application/site is offline.** In this example, a banner is used to indicate to the user that the site is undergoing maintenance and that they will have limited functionality as a result. The banner is shown at the top to ensure that the user does not miss this disclaimer. Since this is a general, non-severe message, a default banner was used.
  
-   <img src="./img/example-1.png" alt="Example of default banner in use" />
+   <img src="./img/example-1.png" alt="Example of default banner in use" width="1500" />
  
 - **To indicate that an application upgrade is available.** In this example, the user is notified of an available upgrade through a banner at the top of the page. Since the use case here is to convey information, a blue status banner was used.
  
@@ -47,16 +47,15 @@ Do not use banners:
 
 ### Placement
  
-All banners should be a solid bar that spans the top and/or bottom of either:
-- The full page
+All banners should be a solid bar spanning the width of either the full page or the main content area of the page and should be sticy to where it is used.
+
+- The banner should span the top and bottom when it is used for a full page.
  
-   <img src="./img/placement-1.png" alt="Example of banner placement above and below the page" />
+   <img src="./img/placement-1.png" alt="Example of banner placement above and below the page" width="1500" />
  
-- The main content area of the page
+- The banner should span only the top when it is used for the main content area of the page.
  
-   <img src="./img/placement-2.png" alt="Example of banner placement below above and below the main content area of the page" />
- 
-In all cases, the banner should be sticky to where it is used.
+   <img src="./img/placement-2.png" alt="Example of banner placement below above the main content area of the page" width="1500" />
 
 ## Spacing
 
