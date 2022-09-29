@@ -5,7 +5,7 @@ section: components
 
 ## Usage
 
-PatternFly offers 5 different banner types detailed below. We suggest that users adopt one of these 5 colors, as they’ve been tested with their text colors for accessibility. However, if colors outside of these variations are used, we encourage manually checking color contrast to ensure the banner text is accessible.
+PatternFly offers 5 different banner types detailed below. We suggest that users adopt one of these 5 colors, as they’ve been tested with their text colors for accessibility. However, if colors outside of these variations are used, we encourage manually checking color contrast to ensure the banner text is accessible. The text can be positioned on the left, middle, and/or right of the banner.
  
 <img src="./img/banner-types.png" alt="5 different types of banners" width="744" />
 
@@ -47,7 +47,7 @@ Do not use banners:
 
 ### Placement
  
-All banners should be a solid bar spanning the width of either the full page or the main content area of the page and should be sticy to where it is used.
+All banners should be a solid bar spanning the width of either the full page or the main content area of the page and should be sticky to where it is used.
 
 - The banner should span the top and bottom when it is used for a full page.
  
