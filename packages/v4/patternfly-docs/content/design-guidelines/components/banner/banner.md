@@ -45,6 +45,10 @@ Do not use banners:
 
 ## Variations 
 
+### Banners with icons
+Banner with icons can be used for added emphasis. Use icon banners when indicating status to make the banner more accessible.
+<img src="./img/banner-variations.png" alt="Banners with icons variation" width="744" />
+
 ### Placement
  
 All banners should be a solid bar spanning the width of either the full page or the main content area of the page and should be sticky to where it is used.
