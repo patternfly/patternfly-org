@@ -1,5 +1,4 @@
 .ws-toc {
-  /* top: 60px; */
   align-self: flex-start;
   position: sticky;
   width: calc(100% + var(--pf-c-page__main-section--PaddingLeft) + var(--pf-c-page__main-section--PaddingRight));
