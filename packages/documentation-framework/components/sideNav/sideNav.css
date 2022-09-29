@@ -16,6 +16,6 @@
   font-size: var(--pf-global--FontSize--sm);
 }
 
-.pf-c-page__main-tabs.pf-m-sticky-top.ws-sticky-nav-tabs {
+#ws-sticky-nav-tabs {
   z-index: var(--pf-global--ZIndex--2xl);
 }

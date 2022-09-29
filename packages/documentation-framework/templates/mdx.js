@@ -162,7 +162,7 @@ export const MDXTemplate = ({
           </PageSection>
         )}
         {(!isSinglePage || isComponent) && (
-            <PageSection className="ws-sticky-nav-tabs" stickyOnBreakpoint={{'default':'top'}} type="tabs">
+            <PageSection id="ws-sticky-nav-tabs" stickyOnBreakpoint={{'default':'top'}} type="tabs">
               <div className="pf-c-tabs pf-m-page-insets pf-m-no-border-bottom">
                 <ul className="pf-c-tabs__list">
                   {sourceKeys.map((source, index) => (
