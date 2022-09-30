@@ -3,8 +3,6 @@ id: Alert group
 section: components
 ---
 
-An **alert group** stacks and positions 2 or more alerts, either in a layer over the main content of a page or inline with the page content. Alert groups should always rank alerts by age, stacking new alerts on top of old ones as they surface.
-
 ## Elements
 
 <img src="./img/alert-group-elements.png" alt="An example of an alert group stacked on a page. Each alert is labeled according to its place in the stack hierarchy: Newest on top, second newest in the middle, and oldest on the bottom." />

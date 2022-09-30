@@ -3,8 +3,6 @@ id: Dual list selector
 section: components
 ---
 
-A **dual list selector** allows users to select and move items from one list of available items to another list of selected items. Unlike a select list, a dual list selector separates the available options and the selected options into two separate lists, which allows users to easily scan the items they selected.
-
 ## Usage
 Dual list selectors are useful when you have a large set of options for users to pick from that would be difficult to digest in a select list. They’re useful in forms, wizards, and modals as a way for users to make selections from a list of options.
 

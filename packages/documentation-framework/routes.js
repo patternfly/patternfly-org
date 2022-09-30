@@ -93,14 +93,6 @@ Object.entries(groupedRoutes)
       pageData.sources.forEach(({ slug }) => {
         delete routes[slug];
       });
-      // Add design guidelines if doesn't exist
-      if (
-        ['components', 'charts', 'layouts', 'demos'].includes(section) &&
-        !pageData.sources.map(({ source }) => source).includes('design-guidelines') &&
-        process.env.hasDesignGuidelines
-      ) {
-        pageData.sources.push(getDefaultDesignGuidelines(pageData));
-      }
       // Sort sources for tabs
       pageData.sources = pageData.sources.sort(sortSources);
       // Add grouped route

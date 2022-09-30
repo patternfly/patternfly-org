@@ -3,8 +3,6 @@ id: Empty state
 section: components
 ---
 
-An **empty state** is a screen that is not yet populated with data or information. Empty states typically contain a short message and next steps for the user.
-
 ## Elements
 This is an example of a large, full-page empty state with all empty state elements. Other empty state variations contain the same elements and differ only in spacing and text sizes. 
 

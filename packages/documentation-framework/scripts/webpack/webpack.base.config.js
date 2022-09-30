@@ -14,6 +14,7 @@ module.exports = (_env, argv) => {
     hasVersionSwitcher = false,
     hasDesignGuidelines = false,
     hasDarkThemeSwitcher = false,
+    componentsData = {},
     sideNavItems = [],
     topNavItems = [],
     includePaths = []
@@ -61,6 +62,7 @@ module.exports = (_env, argv) => {
               plugins: [
                 '@babel/plugin-transform-react-jsx',
                 '@babel/plugin-proposal-class-properties',
+                '@babel/plugin-proposal-optional-chaining',
                 ["@babel/plugin-proposal-private-methods", { "loose": false }],
                 ["@babel/plugin-proposal-private-property-in-object", { "loose": false }]
               ],
@@ -139,6 +141,7 @@ module.exports = (_env, argv) => {
         'process.env.hasVersionSwitcher': JSON.stringify(hasVersionSwitcher),
         'process.env.hasDesignGuidelines': JSON.stringify(hasDesignGuidelines),
         'process.env.hasDarkThemeSwitcher': JSON.stringify(hasDarkThemeSwitcher),
+        'process.env.componentsData': JSON.stringify(componentsData),
         'process.env.sideNavItems': JSON.stringify(sideNavItems),
         'process.env.topNavItems': JSON.stringify(topNavItems),
         'process.env.prnum': JSON.stringify(process.env.CIRCLE_PR_NUMBER || process.env.PR_NUMBER || ''),

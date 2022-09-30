@@ -4,8 +4,6 @@ section: components
 related: ['Table']
 ---
 
-A **data list** is used to display large data sets when you need a flexible layout or need to include interactive content like charts.
-
 ## Elements
 The elements mentioned below are similar for a data list with compact or default spacing. This example shows a data list with compact spacing. 
 

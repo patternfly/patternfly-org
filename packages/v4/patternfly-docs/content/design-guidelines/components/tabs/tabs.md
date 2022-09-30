@@ -2,12 +2,11 @@
 id: Tabs
 section: components
 ---
-**Tabs** allow users to navigate between views within the same page or context.
 
 ## Usage
-Use tabs when you want to organize information into highly scannable display for users. 
+Use tabs when you want to organize information into highly scannable display for users.
 
-You can use as many tabs as you want in a page, although it is recommended you keep the total number of tabs to a minimum for a better user experience. If you have more tabs than fit on the page, you may use a [default overflow](/components/tabs#default-overflow) which would allow a user to horizontally scroll through your tabs. The uses of both default and boxed stylings are flexible, so use either according to your needs and preferences. 
+You can use as many tabs as you want in a page, although it is recommended you keep the total number of tabs to a minimum for a better user experience. If you have more tabs than fit on the page, you may use a [default overflow](/components/tabs#default-overflow) which would allow a user to horizontally scroll through your tabs. The uses of both default and boxed stylings are flexible, so use either according to your needs and preferences.
 
 ## Variations
 - [Default tabs](#default-tabs) (recommended)

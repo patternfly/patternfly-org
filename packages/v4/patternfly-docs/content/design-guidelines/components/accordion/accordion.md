@@ -3,8 +3,6 @@ id: Accordion
 section: components
 ---
 
-An **accordion** is an interactive container that expands and collapses to hide or reveal nested content. It takes advantage of progressive disclosure to help reduce page scrolling, by allowing users to choose whether they want to show or hide more detailed information as needed.
-
 ## Elements
 
 <img src="./img/single_expand_a.png" alt="Accordion single expand behavior"/>

@@ -3,8 +3,6 @@ id: Label group
 section: components
 ---
 
-Use a **label group** when you have multiple [labels](https://www.patternfly.org/v4/components/label) to display at once. Label groups can be oriented either horizontally or vertically and can optionally be named and dismissable.
-
 ## Elements
 Label groups have a number of components to them.
 

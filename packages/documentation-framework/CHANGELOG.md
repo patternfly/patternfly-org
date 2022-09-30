@@ -3,6 +3,237 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.33 (2022-09-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.32 (2022-09-26)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.31 (2022-09-23)
+
+
+### Bug Fixes
+
+* remove lookbacks in regex to support safari 16 ([#3205](https://github.com/patternfly/patternfly-org/issues/3205)) ([a89fdbb](https://github.com/patternfly/patternfly-org/commit/a89fdbb52af22aa56c0f89c9bdbc3efd78502c55))
+
+
+
+
+
+## 1.2.30 (2022-09-22)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.29 (2022-09-22)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.28 (2022-09-22)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.27 (2022-09-19)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.26 (2022-09-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.25 (2022-09-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.24 (2022-09-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.23 (2022-09-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.22 (2022-09-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.21 (2022-09-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.20 (2022-09-14)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.19 (2022-09-13)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.18 (2022-09-12)
+
+
+### Bug Fixes
+
+* **banner:** update docs, screenshots to reference new variation names ([#3178](https://github.com/patternfly/patternfly-org/issues/3178)) ([2b7149d](https://github.com/patternfly/patternfly-org/commit/2b7149d4b24e4cacf2e79b9dbc1e2a7140bd7148))
+
+
+
+
+
+## 1.2.17 (2022-09-08)
+
+
+### Bug Fixes
+
+* **docs:** added support for optional chaining in documentation-framework ([#3176](https://github.com/patternfly/patternfly-org/issues/3176)) ([146b7ca](https://github.com/patternfly/patternfly-org/commit/146b7ca6a6d5383b7eb583156342c4d59b004834))
+
+
+
+
+
+## 1.2.16 (2022-09-08)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.15 (2022-09-07)
+
+
+### Bug Fixes
+
+* **docs:** codesandbox relative imports point to package import ([#3122](https://github.com/patternfly/patternfly-org/issues/3122)) ([fbecd9d](https://github.com/patternfly/patternfly-org/commit/fbecd9d1b120d657910f3bb00486a49bf90360b6))
+
+
+
+
+
+## 1.2.14 (2022-09-06)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.13 (2022-09-02)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.12 (2022-08-31)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.11 (2022-08-30)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.10 (2022-08-29)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.9 (2022-08-29)
+
+
+### Bug Fixes
+
+* **example:** increase code editor button tooltip size, other cleanup ([#3162](https://github.com/patternfly/patternfly-org/issues/3162)) ([fab30f5](https://github.com/patternfly/patternfly-org/commit/fab30f5b94b648605fd9efb980fc6eea2e772a79))
+
+
+
+
+
+## 1.2.8 (2022-08-26)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.7 (2022-08-24)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 1.2.6 (2022-08-23)
 
 **Note:** Version bump only for package @patternfly/documentation-framework

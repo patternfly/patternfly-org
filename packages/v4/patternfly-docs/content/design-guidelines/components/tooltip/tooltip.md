@@ -2,7 +2,6 @@
 id: Tooltip
 section: components
 ---
-A **tooltip** is in-app messaging used to identify elements on a page with short, clarifying text.
 
 For information on other forms of on-screen help, see [popover](/components/popover/design-guidelines) and [hint](/components/hint/design-guidelines). 
 

@@ -2,7 +2,6 @@
 id: Switch
 section: components
 ---
-A **switch** toggles the state of a setting (between on and off). Switches and [checkboxes](/components/checkbox) can often be used interchangeably, but the switch provides a more explicit, visible representation on a setting.
 
 ## Usage
 

@@ -3,8 +3,6 @@ id: Button
 section: components
 ---
 
-A **button** is a box area or text that communicates and triggers user actions when clicked or selected. Buttons can be used to communicate and immediately trigger actions a user can take in an application, like submitting a form, canceling a process, or creating a new object. Buttons can also be used to take a user to a new location, like another page inside of a web application, or an external site such as help or documentation.
-
 ## Usage
 There are certain cases where specific buttons must be used within your UI.
 
@@ -51,7 +49,7 @@ A primary button is the most prominent button on a page, used for the most impor
 
 _Example of a primary button inside a toolbar_
 
-<img src="./img/prim_ex_1.png" alt="Example of a primary button inside a toolbar" />
+<img src="./img/prim_ex_1.png" alt="Example of a primary button inside a toolbar" width="1159"/>
 
 _Example of a primary button inside an empty state_
 
@@ -73,7 +71,7 @@ In this example, you can see a tertiary button used to show a possible â€œEditâ€
 
 _Example of tertiary button on a page_
 
-<img src="./img/tert_edit.png" alt="Example of tertiary button on a page" />
+<img src="./img/tert_edit.png" alt="Example of tertiary button on a page" width="1500" />
 
 ### Link button ###
 
@@ -124,7 +122,7 @@ Icon buttons are useful in places where space is limited. For example, if you ha
 
 For example, this toolbar uses an export icon as an action button due to limited space.
 
-<img src="./img/icon_button.png" alt="Example of kebab used as an icon button inside a toolbar" />
+<img src="./img/icon_button.png" alt="Example of kebab used as an icon button inside a toolbar" width="1159"/>
 
 ### Call To Action button ###
 
@@ -229,11 +227,11 @@ There are cases where you will have multiple buttons next to each other, like in
 
 _Buttons appear in the toolbar_
 
-<img src="./img/overflow_1.png" alt="Pre-over flow menu in toolbar, where all actions appear in the toolbar itself" />
+<img src="./img/overflow_1.png" alt="Pre-over flow menu in toolbar, where all actions appear in the toolbar itself" width="1191"/>
 
 _Buttons placed in overflow menu due to limited space, with primary button persisting_
 
-<img src="./img/overflow_2.png" alt="Post-overflow menu in toolbar, where toolbar has become smaller in width, prompting an overflow menu for secondary actions, while primary button persists in the toolbar itself" />
+<img src="./img/overflow_2.png" alt="Post-overflow menu in toolbar, where toolbar has become smaller in width, prompting an overflow menu for secondary actions, while primary button persists in the toolbar itself" width="1010"/>
 
 ## Content considerations
 

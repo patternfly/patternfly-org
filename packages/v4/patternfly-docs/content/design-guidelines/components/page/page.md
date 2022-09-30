@@ -3,8 +3,6 @@ id: Page
 section: components
 ---
 
-The **page** component is used to define the basic layout of a page with either vertical or horizontal navigation.
-
 ## Elements
 The basic layout of a page differs depending on whether your application uses vertical or horizontal primary navigation as illustrated below.
 

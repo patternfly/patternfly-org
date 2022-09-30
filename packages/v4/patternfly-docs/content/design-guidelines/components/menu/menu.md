@@ -3,8 +3,6 @@ id: Menu
 section: components
 ---
 
-A **menu** is a list of options or actions that users can choose from. It can be used in a variety of contexts whenever the user needs to choose between multiple values, options, or actions. A menu can be opened in a [dropdown](/components/dropdown) or [select list](/components/select), or it can be revealed by right clicking on a specific region within a page.
-
 ## Elements
 Elements vary depending on [menu variation](#Variations)
 
