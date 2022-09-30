@@ -47,6 +47,7 @@ Do not use banners:
 
 ### Banners with icons
 Banner with icons can be used for added emphasis. Use icon banners when indicating status to make the banner more accessible.
+
 <img src="./img/banner-variations.png" alt="Banners with icons variation" width="744" />
 
 ### Placement
