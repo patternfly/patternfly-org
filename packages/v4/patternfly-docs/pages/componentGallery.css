@@ -20,9 +20,15 @@
 .ws-component-gallery > .pf-c-sidebar__main > .pf-c-sidebar__panel {
   border-left: var(--pf-c-page__sidebar--m-light--BorderRightWidth) solid var(--pf-c-page__sidebar--m-light--BorderRightColor);
   padding: var(--pf-global--spacer--md);
-  top: 69px;
+  top: 93px;
   z-index: 101;
   margin: calc(var(--pf-global--spacer--md) * -1) 0 var(--pf-global--spacer--md) calc(var(--pf-global--spacer--md) * -1);
+}
+
+@media (min-width: 508px) {
+  .ws-component-gallery > .pf-c-sidebar__main > .pf-c-sidebar__panel {
+    top: 69px;
+  }
 }
 
 @media (min-width: 768px) {
