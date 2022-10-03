@@ -3,26 +3,54 @@ id: Writing design guidelines for PatternFly
 section: UX writing
 ---
 
-Design guidelines walk through building design patterns with PatternFly. This page focuses on how to write clear and consistent design documentation. To learn how to contribute design guidelines, see our [contribution guide](/contribute/design/).
+Design guidelines walk through building design patterns with PatternFly. This page focuses on how to write clear and consistent design documentation. To learn how to contribute design guidelines, see our [contribution guide](https://github.com/patternfly/patternfly-org/wiki/Contributing-to-patternfly-org-for-designers).
 
-## Content architecture
+## Design guidelines template
+When creating guidelines, information must be presented in the following order. Sections may be omitted, but if present must be under one of the following headings.
 
-Use headings, hierarchy, formatting, and lists to organize your design guidelines into digestible sections.
-
-### Headings
-
-Use headings to divide your content into topic-specific sections for easy navigation. Effective headings are:
-
-- Structured around users' main goals.
-- Front-loaded with descriptors for easy scanning.
-- Attentive to parallel structure.
-- Written in sentence case.
-
-Headings should cascade levels without skipping––always progress from level to level, H1 to H2 to H3. Put your headings in H2 and subheadings in H3. If more sections appear beneath your subheading, style them in H4.
-
+### Elements (H2)
+Introduce the component and list the primary parts that make up its structure. This includes specific icons, headers, fields, symbols, or anything else included in the component.
 Example:
 
-![An example of how different headings cascade in design documentation. We removed the body copy between them for easy comparison between levels. It reads: "Menu (H1), Vertical navigation (H2), When to use (H3)."](./img/desguidelines1.png)
+<img src="./img/sliderelements.png" alt="A screenshot of the slider component's element section with 8 elements outlined." width="479px" />
+
+### Usage (H2)
+Explain how the component is used, when to use it, and why it should be used. Include explanations of problems it could help solve and address its advantages over similar components. Include images for visual examples.
+
+Additional sub-sections to include: 
+#### When to use
+#### When not to use
+#### When to use X vs. Y
+#### Examples of incorrect usage
+
+
+### Behavior (H2)
+Explain how the component functions and break down how its elements interact with each other to achieve its purpose.
+
+### Variations (H2)
+Showcase different forms of your component and include explanations indicating when to use each one. 
+
+Additional sub-sections to include:
+#### When to use X variation vs. when to use Y variation
+
+### Spacing (H2)
+Introduce spacing requirements for components and their content. For more information regarding proper spacing, refer to our [spacing guidelines.](https://www.patternfly.org/v4/guidelines/spacers/)
+
+### Content considerations (H2)
+Showcase the different content that could be included within your component. Here is where you can also give additional tips and tricks the user may want to know. Content guidance includes:
+
+- Editorial guidelines for labeling and message text.
+- Length restrictions and what to do when text overflows.
+- Localization considerations.
+
+### Accessibility (H2)
+Each component that has an assessibility tab should include the following sentence:
+
+For information regarding accessibility, visit the [component name] accessibility tab.
+
+Then, link the component's accessibilty tab to the words "accessibility tab".
+
+
 
 ## Formatting 
 
@@ -46,7 +74,7 @@ Example: A **card** is a square or rectangle container of related information.
 
 ### Lists
 
-Lists package long, complex content into shorter, scannable sections. Use lists to introduce use cases, exceptions, and procedures.
+Lists help organize lengthy, complex content into shorter, scannable sections. Use lists to introduce use cases, exceptions, and procedures.
 
 When building lists, follow these best practices:
 
@@ -98,37 +126,7 @@ When writing design guidelines, use:
 
 If you're linking to other PatternFly pages, use relative URLs instead of full URLs.
 
-Relative URL: /components/tooltip/design-guidelines
-Full URL: https://www.patternfly.org/v4/components/tooltip/design-guidelines
+**Relative URL:** /components/tooltip/design-guidelines
 
-## Design guidelines template
+**Full URL:** https://www.patternfly.org/v4/components/tooltip/design-guidelines
 
-Use this template as a guide to structure your document. Depending on your content, you might have different sections and headings.
-
-### Design guideline name
-
-Title your page with your component or pattern name. Begin with a short 1-2 sentence description or definition of the design problem, topic, or function addressed in your document.
-
-Example:
-
-"**Pagination** splits data across multiple pages, typically within a table, list, or card view. If you use infinite scrolling, you don't need to use pagination."
-
-### Elements
-
-Introduce your component and the primary elements that compose it. List them and include explanatory copy for each one.
-
-### Usage
-
-Inform your readers about how and when to use this component or pattern. Include an explanation of the problems it solves along with the variations and best practices PatternFly users should be aware of when applying it in their designs.
-
-This section might have subheadings that give further details about using your component in context.
-
-### Content
-
-Provide guidance for writing content that might appear in your component or pattern. This content section, if applicable, demonstrates how general terminology and wording best practices carry over to component-specific guidelines.
-
-Content guidance includes:
-
-- Editorial guidelines for labeling and message text.
-- Length restrictions and what to do when text overflows.
-- Localization considerations.

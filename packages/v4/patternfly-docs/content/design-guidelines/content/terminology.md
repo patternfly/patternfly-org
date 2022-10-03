@@ -109,7 +109,7 @@ _For Red Hat product terminology and documentation standards, see [Red Hat's sup
 **Utilize**: Do not use. Opt for the less formal version, *Use*.
 
 ## Abbreviations and acronyms
-Use abbreviations that users are familiar with, and write out uncommon abbreviations. Abbreviate units of measurement, and use abbreviations consistently.
+Use abbreviations that users are familiar with, and write out uncommon abbreviations. Abbreviate units of measurement, and use abbreviations consistently. When referring to a product, default to how the company refers to it themselves. Only use an abbreviation that has already been established and never make up an abbreviation or acronym yourself to help keep consistency in your products.
 
 | **Abbreviation** | **Usage** |
 |------------------|-----------|

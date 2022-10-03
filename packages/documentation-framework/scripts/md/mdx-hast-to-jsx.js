@@ -79,7 +79,7 @@ function serializeRoot(node, options) {
     const [_match, absoluteImportPath] = relativeImportMatch;
     if (absoluteImportPath && !absoluteImportPath.includes('srcImport')) {
       // `@patternfly/react-core/src/demos/./examples/DashboardWrapper` to `DashboardWrapper`
-      let relativeFileImport = /(?<=\/)(\.+\/.*)/gm.exec(absoluteImportPath);
+      let relativeFileImport = /(\.+\/.*)/gm.exec(absoluteImportPath);
       if (relativeFileImport) {
         // Build map of relative imports (from example.js code) to npm package import path (used in codesandbox.js)
         const relativeFilePath = relativeFileImport[0];

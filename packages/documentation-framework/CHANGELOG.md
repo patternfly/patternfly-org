@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.35 (2022-09-30)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.34 (2022-09-30)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.33 (2022-09-27)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.32 (2022-09-26)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.31 (2022-09-23)
+
+
+### Bug Fixes
+
+* remove lookbacks in regex to support safari 16 ([#3205](https://github.com/patternfly/patternfly-org/issues/3205)) ([a89fdbb](https://github.com/patternfly/patternfly-org/commit/a89fdbb52af22aa56c0f89c9bdbc3efd78502c55))
+
+
+
+
+
+## 1.2.30 (2022-09-22)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 1.2.29 (2022-09-22)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
