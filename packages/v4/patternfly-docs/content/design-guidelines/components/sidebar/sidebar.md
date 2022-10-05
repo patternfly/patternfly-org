@@ -3,7 +3,8 @@ id: Sidebar
 section: components
 ---
 
-A **sidebar** is a component which orients a **panel box** and **content box** relative to content on a page. The panel and content can be stacked on top of one another, or side-by-side. 
+## Usage
+Sidebars orient a panel box and a content box on a page. The panel and content can be stacked on top of one another, or placed side-by-side.
 
 Sidebars can contain jumplinks and vertical tabs that provide easy access to different sections within a panel. However, they are also frequently used for context-sensitive content, frequently changed properties, and information regarding functionality. 
 
