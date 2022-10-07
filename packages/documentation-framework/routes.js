@@ -28,20 +28,39 @@ const isNull = o => o === null || o === undefined;
 const groupedRoutes = Object.entries(routes)
   .filter(([_slug, { id, section }]) => !isNull(id) && !isNull(section))
   .reduce((accum, [slug, pageData]) => {
-    const { section, id, title, source, katacodaLayout, hideNavItem } = pageData;
+    // debugger;
+    const { section, subSection = null, id, title, source, katacodaLayout, hideNavItem } = pageData;
     accum[section] = accum[section] || {};
-    accum[section][id] = accum[section][id] || {
-      id,
-      section,
-      title,
-      slug: makeSlug(source, section, id, true),
-      sources: [],
-      katacodaLayout,
-      hideNavItem
-    };
+    if (subSection) {
+      debugger;
+      accum[section][subSection] = accum[section][subSection] || {};
+      accum[section][subSection][id] = accum[section][subSection][id] || {
+        id,
+        section,
+        subSection,
+        title,
+        slug: makeSlug(source, section, id, true, subSection),
+        sources: [],
+        katacodaLayout,
+        hideNavItem
+      }
+      accum[section][subSection].isSubsection = true;
+    } else {
+        accum[section][id] = accum[section][id] || {
+        id,
+        section,
+        title,
+        slug: makeSlug(source, section, id, true),
+        sources: [],
+        katacodaLayout,
+        hideNavItem
+      }
+    }
 
     pageData.slug = slug;
-    accum[section][id].sources.push(pageData);
+    subSection
+      ? accum[section][subSection][id].sources.push(pageData)
+      : accum[section][id].sources.push(pageData);
 
     return accum;
   }, {});
@@ -84,13 +103,17 @@ const getDefaultDesignGuidelines = ({ id, section, slug, title }) => {
 
   return pageData;
 }
-
+console.log('routes.js -- ', {groupedRoutes});
 Object.entries(groupedRoutes)
-  .forEach(([_section, ids]) => {
-    Object.values(ids).forEach(pageData => {
-      const { slug, section } = pageData;
-      // Remove source routes for `app.js`
-      pageData.sources.forEach(({ slug }) => {
+.forEach(([_section, ids]) => {
+  Object.values(ids).forEach(pageData => {
+    if (!pageData.slug && !pageData.section) {
+      pageData = Object.values(pageData)[0];
+    }
+    const { slug, section } = pageData;
+    // Remove source routes for `app.js`
+    console.log({pageData});
+    pageData.sources.forEach(({ slug }) => {
         delete routes[slug];
       });
       // Sort sources for tabs

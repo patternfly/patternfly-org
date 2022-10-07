@@ -35,6 +35,7 @@ const NavItem = ({ text, href }) => {
 };
 
 export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
+  console.log('SideNav.js:  -- ', {groupedRoutes});
   React.useEffect(() => {
     if (typeof window === 'undefined') {
       return;
@@ -49,6 +50,33 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
       lastElement.scrollIntoView({ block: 'center' });
     }
   }, []);
+
+  const buildTertiaryNav = ({text: subSection}, isActive, section) => (
+    <NavExpandable
+      title={capitalize(subSection.replace(/-/g, ' '))}
+      isActive={isActive}
+      isExpanded={isActive}
+      className="ws-side-nav-group"
+      onClick={(event) => {
+        // Don't trigger for bubbled events from NavItems
+        if (!event.target.href) {
+          const isExpanded = event.currentTarget.classList.contains('pf-m-expanded');
+          // 1 === expand section, 0 === collapse section
+          trackEvent('sidenav_section_click', 'click_event', subSection, isExpanded ? 0 : 1);
+        }
+      }}
+    >
+      {Object.entries(groupedRoutes[section][subSection] || {})
+        .filter(([id, { hideNavItem }]) => !Boolean(hideNavItem) && (id !== 'isSubsection'))
+        .map(([id, { slug }]) => ({ text: id, href: slug }))
+        .sort(({ text: text1 }, { text: text2 }) => text1.localeCompare(text2))
+        .map(thing => {
+          console.log({thing});
+          return NavItem(thing);
+        })
+      }
+    </NavExpandable>
+  )
   
   return (
     <Nav aria-label="Side Nav" theme="light">
@@ -75,9 +103,13 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
                   >
                     {Object.entries(groupedRoutes[section] || {})
                       .filter(([, { hideNavItem }]) => !Boolean(hideNavItem))
-                      .map(([id, { slug }]) => ({ text: id, href: slug }))
+                      .map(([id, { slug, isSubsection = false }]) => ({ text: id, href: slug, isSubsection }))
                       .sort(({ text: text1 }, { text: text2 }) => text1.localeCompare(text2))
-                      .map(NavItem)
+                      // .map(NavItem)
+                      .map(navObj => navObj.isSubsection
+                        ? buildTertiaryNav(navObj, isActive, section)
+                        : NavItem(navObj)
+                      )
                     }
                   </NavExpandable>
                 );
