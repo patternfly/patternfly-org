@@ -53,6 +53,7 @@ export const Link = ({
         props.onClick = ev => {
           if (!(ev.ctrlKey || ev.metaKey)) { // avoid disallowing cmnd/ctrl+click opening in new tab
             ev.preventDefault();
+            document.querySelector("#ws-page-main").scrollTo({top: 0}); // scroll to top of page
             if (typeof window !== 'undefined' && url !== location.pathname) {
               Promiseany([
                 preloadPromise,

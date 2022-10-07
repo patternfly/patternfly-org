@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageSection, Title, PageSectionVariants, BackToTop } from '@patternfly/react-core';
+import { PageSection, Title, PageSectionVariants, BackToTop, PageGroup, Page } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Router, useLocation } from '@reach/router';
@@ -148,60 +148,61 @@ export const MDXTemplate = ({
 
   return (
     <React.Fragment>
-      <PageSection
-        className={isSinglePage ? "pf-m-light-100" : ""}
-        variant={!isSinglePage ? PageSectionVariants.light : ""}
-      >
-        {!katacodaLayout && <Title size="4xl" headingLevel="h1" id="ws-page-title">
-          {title}
-        </Title>}
-      </PageSection>
-      {isComponent && summary && (
-        <PageSection variant={PageSectionVariants.light} className="pf-u-pt-0">
-          <SummaryComponent />
+      <PageGroup>
+        <PageSection
+          className={isSinglePage ? "pf-m-light-100" : ""}
+          variant={!isSinglePage ? PageSectionVariants.light : ""}
+        >
+          {!katacodaLayout && <Title size="4xl" headingLevel="h1" id="ws-page-title">
+            {title}
+          </Title>}
         </PageSection>
-      )}
-
-      {(!isSinglePage || isComponent) && !hideSourceTabs && (
-        <PageSection type="tabs">
-          <div className="pf-c-tabs pf-m-page-insets pf-m-no-border-bottom">
-            <ul className="pf-c-tabs__list">
-              {sourceKeys.map((source, index) => (
-                <li
-                  key={source}
-                  className={css(
-                    'pf-c-tabs__item',
-                    activeSource === source && 'pf-m-current'
-                  )}
-                  // Send clicked tab name for analytics
-                  onClick={() => trackEvent('tab_click', 'click_event', source.toUpperCase())}
-                >
-                  <Link className="pf-c-tabs__link" to={`${path}${index === 0 ? '' : '/' + source}`}>
-                    {capitalize(source.replace('html', 'HTML').replace(/-/g, ' '))}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+        {isComponent && summary && (
+          <PageSection variant={PageSectionVariants.light} className="pf-u-pt-0">
+            <SummaryComponent />
+          </PageSection>
+        )}
+        {(!isSinglePage || isComponent) && !hideSourceTabs && (
+          <PageSection id="ws-sticky-nav-tabs" stickyOnBreakpoint={{'default':'top'}} type="tabs">
+            <div className="pf-c-tabs pf-m-page-insets pf-m-no-border-bottom">
+              <ul className="pf-c-tabs__list">
+                {sourceKeys.map((source, index) => (
+                  <li
+                    key={source}
+                    className={css(
+                      'pf-c-tabs__item',
+                      activeSource === source && 'pf-m-current'
+                    )}
+                    // Send clicked tab name for analytics
+                    onClick={() => trackEvent('tab_click', 'click_event', source.toUpperCase())}
+                  >
+                    <Link className="pf-c-tabs__link" to={`${path}${index === 0 ? '' : '/' + source}`}>
+                      {capitalize(source.replace('html', 'HTML').replace(/-/g, ' '))}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </PageSection>
+        )}
+        <PageSection id="main-content" isFilled className="pf-m-light-100">
+          {isSinglePage && (
+              <MDXChildTemplate {...sources[0]} />
+          )}
+          {!isSinglePage && (
+            <Router className="pf-u-h-100" primary={false}>
+              {sources
+                .map((source, index) => {
+                  source.index = index;
+                  return source;
+                })
+                .map(MDXChildTemplate)
+              }
+            </Router>
+          )}
         </PageSection>
-      )}
-      <PageSection id="main-content" isFilled className="pf-m-light-100">
-        {isSinglePage && (
-            <MDXChildTemplate {...sources[0]} />
-        )}
-        {!isSinglePage && (
-          <Router className="pf-u-h-100" primary={false}>
-            {sources
-              .map((source, index) => {
-                source.index = index;
-                return source;
-              })
-              .map(MDXChildTemplate)
-            }
-          </Router>
-        )}
-      </PageSection>
-      <BackToTop className="ws-back-to-top" scrollableSelector="#ws-page-main" />
+        <BackToTop className="ws-back-to-top" scrollableSelector="#ws-page-main" />
+      </PageGroup>
     </React.Fragment>
   );
 }

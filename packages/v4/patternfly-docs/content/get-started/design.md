@@ -11,11 +11,14 @@ Whether you are converting from a previous PatternFly application or starting fr
 PatternFly offers a variety of resources to help you make the most of the design system, including design guidelines for style, content, and component usage, and behavior. You can use these assets in combination with the design kit to create consistent and usable product experiences.
 
 ### Design kit
-The design kit is a symbol library implemented in Sketch to help designers, like you, contribute to PatternFly.
+The design kit is a symbol library implemented in Sketch to help designers, like you, create high-fidelity mockups that reflect PatternFly styling.
 
 [**What's in the design kit?**](#whats-in-the-design-kit) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
+### Wireframe kit
+A PatternFly wireframe kit (implemented in Sketch) is also available for creating low or mid-fidelity mockups that are compatible with PatternFly styles. The wireframe kit is separate from the design kit, but the two can be used together for a comprehensive approach to the design life-cycle.
 
+[**Learn more about the wireframe kit**](https://github.com/patternfly/patternfly-design-kit/blob/master/PatternFly%204%20-%20Wireframe%20library%20and%20template/Wireframe%20kit%20guideline.md) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
 
 ### Style guidelines
 What typography should you be using? What about colors? Spacing? Check out styles to learn everything you need to know about our foundational design elements.
@@ -80,7 +83,7 @@ PatternFly currently uses Red Hat Text and Red Hat Display. To download these fo
 ### Using Sketch
 
 #### Before you start designing
-The design kit is a collection of Sketch assets that make it easy for designers to create hi-fi mockups that accurately represent PatternFly components and layouts. It works with Sketch libraries. To use it, you need to install [Sketch version 68](https://www.sketch.com/) or above. 
+The design kit is a collection of Sketch assets that make it easy for designers to create hi-fi mockups that accurately represent PatternFly components and layouts. It works with Sketch libraries. To use it, you need to install [Sketch version 68](https://www.sketch.com/) or above.
 
 
 
@@ -138,11 +141,10 @@ Currently, all PatternFly text styles use Red Hat Text and Red Hat Display fonts
 When inserting text into your design, always assign it a text style by selecting the text item, followed by selecting a text style from the appearance menu on the right toolbar.
 
 ## Staying up to date
-Adjustments and bug fixes are made to the kit on a regular basis. When we make a change to any of the libraries, you'll be notified via the bell icon in the top right corner of the Sketch window that says “Library Update Available”. To update, click "Update" on the pop-up that appears. 
+Adjustments and bug fixes are made to the kit on a regular basis. When we make a change to any of the libraries, you'll be notified via the bell icon in the top right corner of the Sketch window that says “Library Update Available”. To update, click "Update" on the pop-up that appears.
 
 We recommend that you keep your kit as up to date as possible. Once a change is accepted, you will not be able to revert to the previous version.
 
 Please note that the Patternfly template will NOT be automatically updated as the symbol library is. Every time this template file is updated, you will need to re-download and re-save this as a template. We have added [release notes](https://github.com/patternfly/patternfly-design-kit/blob/master/PatternFly%20release%20notes.md) to the [design-kit-repo](https://github.com/patternfly/patternfly-design-kit/) that document additions and edits to the design kit. This is a good place to start to review what has been added to the template file.
 
 Did you use the old versions of the symbols that were updated in files already? No problem -  you'll receive another notification in the top right of that specific Sketch file that will allow you to update them.
-
