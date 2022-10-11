@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { groupedRoutes } from '@patternfly/documentation-framework/routes';
 import {  Button, Card, CardTitle, CardBody, Gallery, GalleryItem, SearchInput, Toolbar, ToolbarContent, ToolbarGroup, ToolbarItem, Text, TextContent, TextVariants, Sidebar, SidebarPanel, SidebarContent } from '@patternfly/react-core';
 import { Link } from '@reach/router';
@@ -60,6 +60,10 @@ export const ComponentGallery = () => {
     }
   };
 
+  useEffect(() => {
+    setDrawerPanelData(filteredComponents?.[0]?.[1]);
+  }, [searchTerm])
+
   return (
     <div className="ws-component-gallery">
       <Toolbar isSticky>
@@ -81,21 +85,23 @@ export const ComponentGallery = () => {
           </ToolbarGroup>
         </ToolbarContent>
       </Toolbar>
-      <Sidebar isPanelRight className='ws-component-gallery' tabIndex={1} orientation={() => (window.innerWidth < 768 ? 'stack' : 'split')}>
-        <SidebarPanel variant="sticky">
-          <TextContent>
-            <Text component={TextVariants.h2}>
-              <span tabIndex={isExpanded ? 0 : -1} ref={drawerRef}>
-                {drawerPanelData.title}
-              </span>
-            </Text>
-            <Text>
-              { drawerPanelData.id ? <SummaryComponent id={drawerPanelData.id}/> : null }
-            </Text>
-          </TextContent>
-          <Button className="ws-view-component" component={(props) => <Link {...props} to={drawerPanelData.slug} />}>View component</Button>
-        </SidebarPanel>
-        <SidebarContent>
+      <Sidebar isPanelRight className='ws-component-gallery' tabIndex={1}>
+        {filteredComponents.length > 0 && (
+          <SidebarPanel variant="sticky">
+            <TextContent>
+              <Text component={TextVariants.h2}>
+                <span tabIndex={isExpanded ? 0 : -1} ref={drawerRef}>
+                  {drawerPanelData.title}
+                </span>
+              </Text>
+              <Text>
+                { drawerPanelData.id ? <SummaryComponent id={drawerPanelData.id}/> : null }
+              </Text>
+              <Button className="ws-view-component" component={(props) => <Link {...props} to={drawerPanelData.slug} />}>View component</Button>
+            </TextContent>
+          </SidebarPanel>
+        )}
+        <SidebarContent hasNoBackground>
           <Gallery hasGutter>
             {filteredComponents
               .sort(([componentName1], [componentName2]) => componentName1.localeCompare(componentName2))

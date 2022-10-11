@@ -42,7 +42,3 @@
 .ws-component-gallery .pf-c-card {
   height: 100%;
 }
-
-.ws-component-gallery .ws-view-component {
-  margin-top: var(--pf-global--spacer--md);
-}
