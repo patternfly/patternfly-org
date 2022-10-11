@@ -32,12 +32,6 @@ A dual list selector allows users to select and move items from one list of avai
 ### [Icon sprites](https://www.patternfly.org/v4/components/form-control#icon-sprite)
 The icons for the success, invalid, calendar, etc varations in form control elemements are applied as background images to the form element. By default, the image URLs for these icons are data URIs. However, there may be cases where data URIs are not ideal, such as in an application with a content security policy that disallows data URIs for security reasons. The .pf-m-icon-sprite variation changes the icon source to an external SVG file that serves as a sprite for all of the supported icons.
 
-### [Label: editable](https://www.patternfly.org/v4/components/label#editable)
-An editable label can be edited when it is in its editable state. There is also a corresponding [editable label group example](https://www.patternfly.org/v4/components/label-group#editable-labels) and an [editable label group with add button example](https://www.patternfly.org/v4/components/label-group#editable-labels-with-add-button)
-
-![editable-label](./img/editable-label.png)
-![editable-label-group](./img/editable-label-group.png)
-
 ### [Label group](https://www.patternfly.org/v4/components/label-group)
 Use a label group when you have multiple labels to display at once. Label groups can be oriented either horizontally or vertically and can optionally be named and dismissible.
 
