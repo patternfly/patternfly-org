@@ -9,7 +9,9 @@ export const TableOfContents = ({ items }) => {
   const [stickyNavHeight, setStickyNavHeight] = React.useState(0);
 
   React.useEffect(() => {
-    setStickyNavHeight(document.getElementById("ws-sticky-nav-tabs").offsetHeight);
+    if (document.getElementById("ws-sticky-nav-tabs")) {
+      setStickyNavHeight(document.getElementById("ws-sticky-nav-tabs").offsetHeight);
+    }
   }, [])
 
   const updateWidth = () => {
