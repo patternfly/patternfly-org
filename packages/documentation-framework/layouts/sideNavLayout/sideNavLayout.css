@@ -38,12 +38,9 @@
 #ws-global-search {
   background-color: transparent;
   border: none;
-  /* For icon */
-  padding-left: var(--pf-global--spacer--xl);
-  width: 200px;
 }
 .ws-hide-search-input .algolia-autocomplete,
-.ws-hide-search-input #ws-global-search {
+.ws-hide-search-input {
   display: none !important;
 }
 .ws-toggle-search {

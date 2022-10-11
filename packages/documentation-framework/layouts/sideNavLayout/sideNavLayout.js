@@ -2,23 +2,32 @@ import React, { useEffect, useState } from 'react';
 import {
   Button,
   Page,
-  PageHeader,
   PageSidebar,
-  PageHeaderTools,
-  PageHeaderToolsItem,
-  TextInput,
   Brand,
   Dropdown,
   DropdownToggle,
   DropdownItem,
   DropdownGroup,
   Divider,
+  Masthead,
+  MastheadToggle,
+  MastheadMain,
+  MastheadContent,
+  MastheadBrand,
+  PageToggleButton,
+  Toolbar,
+  ToolbarGroup,
+  ToolbarContent,
+  ToolbarItem,
+  TextInputGroup,
+  TextInputGroupUtilities,
   SkipToContent,
   Switch
 } from '@patternfly/react-core';
 import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
+import BarsIcon from '@patternfly/react-icons/dist/esm/icons/bars-icon';
 import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
@@ -68,88 +77,106 @@ const HeaderTools = ({
   }, []);
 
   return (
-    <PageHeaderTools>
-      {hasDarkThemeSwitcher && (
-        <PageHeaderToolsItem>
-          <Switch id="ws-theme-switch" label="Dark theme" defaultChecked={false} onChange={() => 
-          document.querySelector('html').classList.toggle('pf-theme-dark')} />
-        </PageHeaderToolsItem>
-      )}
-      {hasSearch && (
-        <PageHeaderToolsItem id="ws-global-search-wrapper" className={isSearchExpanded ? '' : 'ws-hide-search-input'}>
-          <TextInput id="ws-global-search" ref={searchRef} placeholder="Search" />
-          {isSearchExpanded && <SearchIcon className="global-search-icon" />}
-        </PageHeaderToolsItem>
-      )}
-      {hasSearch && (
-        <Button
-        aria-label={`${isSearchExpanded ? 'Collapse' : 'Expand'} search input`}
-        variant="plain"
-        className="ws-toggle-search"
-        onClick={() => {
-            setSearchExpanded(!isSearchExpanded);
-            if (!isSearchExpanded) {
-              setTimeout(() => searchRef.current && searchRef.current.focus(), 0);
-            }
-          }}
-          >
-          {isSearchExpanded
-            ? <TimesIcon />
-            : <SearchIcon className="global-search-icon" />
-          }
-        </Button>
-      )}
-      <PageHeaderToolsItem>
-        <Button
-          component="a"
-          variant="link"
-          href="//github.com/patternfly"
-          target="top"
-          aria-label="Link to PatternFly GitHub page"
-          className="ws-github-pageheader pf-u-mr-sm"
+    <Toolbar>
+      <ToolbarContent>
+        <ToolbarGroup
+          alignment={{ default: 'alignRight' }}
+          spacer={{ default: 'spacerNone', md: 'spacerMd' }}
+          variant="button-group"
         >
-          <GithubIcon />
-        </Button>
-      </PageHeaderToolsItem>
-      {hasVersionSwitcher && (
-        <PageHeaderToolsItem>
-          <Dropdown
-            className="ws-org-version-switcher"
-            onSelect={() => setDropdownOpen(!isDropdownOpen)}
-            toggle={(
-              <DropdownToggle
-                className={`ws-org-version-toggle${isDropdownOpen ? '-expanded': ''}`}
-                onToggle={() => setDropdownOpen(!isDropdownOpen)}
-              >
-                Release {initialVersion.name}
-              </DropdownToggle>
-            )}
-            isOpen={isDropdownOpen}
-            dropdownItems={[
-              <DropdownGroup key="latest" label="Latest">
-                {getDropdownItem(latestVersion)}
-              </DropdownGroup>,
-              <DropdownGroup key="Previous" label="Previous releases">
-                {Object.values(versions.Releases)
-                  .filter(version => !version.hidden && !version.latest)
-                  .slice(0,3)
-                  .map(getDropdownItem)}
-              </DropdownGroup>,
-              <Divider key="divider" className="ws-switcher-divider"/>,
-              <DropdownItem
-                key="PatternFly 3"
-                className="ws-patternfly-3"
-                target="_blank"
-                href="https://pf3.patternfly.org/"
-              >
-                PatternFly 3
-                <ExternalLinkAltIcon />
-              </DropdownItem>
-            ]}
-          />
-        </PageHeaderToolsItem>
-      )}
-    </PageHeaderTools>
+          {hasDarkThemeSwitcher && (
+            <ToolbarItem>
+              <Switch id="ws-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
+                document.querySelector('html').classList.toggle('pf-theme-dark')} />
+            </ToolbarItem>
+          )}
+          {hasSearch && (
+            <ToolbarItem>
+              <TextInputGroup>
+                <span id="ws-global-search-wrapper" className={isSearchExpanded ? '' : 'ws-hide-search-input'}>
+                  <div className="pf-c-text-input-group__main pf-m-icon">
+                    <span className="pf-c-text-input-group__text">
+                      <span className="pf-c-text-input-group__icon">
+                        <SearchIcon />
+                      </span>
+                      <input type="text" className="pf-c-text-input-group__text-input ds-input" aria-label="Type to filter" placeholder="Search" id="ws-global-search" />
+                    </span>
+                  </div>
+                </span>
+                <TextInputGroupUtilities>
+                  <Button
+                    aria-label={`${isSearchExpanded ? 'Collapse' : 'Expand'} search input`}
+                    variant="plain"
+                    className="ws-toggle-search"
+                    onClick={() => {
+                      setSearchExpanded(!isSearchExpanded);
+                      if (!isSearchExpanded) {
+                        setTimeout(() => searchRef.current && searchRef.current.focus(), 0);
+                      }
+                    }}
+                  >
+                    {isSearchExpanded
+                      ? <TimesIcon />
+                      : <SearchIcon className="global-search-icon" />
+                    }
+                  </Button>
+                </TextInputGroupUtilities>
+              </TextInputGroup>
+            </ToolbarItem>
+          )}
+          <ToolbarItem>
+            <Button
+              component="a"
+              variant="link"
+              href="//github.com/patternfly"
+              target="top"
+              aria-label="Link to PatternFly GitHub page"
+              className="ws-github-pageheader"
+            >
+              <GithubIcon />
+            </Button>
+          </ToolbarItem>
+          {hasVersionSwitcher && (
+            <ToolbarItem>
+              <Dropdown
+                className="ws-org-version-switcher"
+                onSelect={() => setDropdownOpen(!isDropdownOpen)}
+                toggle={(
+                  <DropdownToggle
+                    className={`ws-org-version-toggle${isDropdownOpen ? '-expanded': ''}`}
+                    onToggle={() => setDropdownOpen(!isDropdownOpen)}
+                  >
+                    Release {initialVersion.name}
+                  </DropdownToggle>
+                )}
+                isOpen={isDropdownOpen}
+                dropdownItems={[
+                  <DropdownGroup key="latest" label="Latest">
+                    {getDropdownItem(latestVersion)}
+                  </DropdownGroup>,
+                  <DropdownGroup key="Previous" label="Previous releases">
+                    {Object.values(versions.Releases)
+                      .filter(version => !version.hidden && !version.latest)
+                      .slice(0,3)
+                      .map(getDropdownItem)}
+                  </DropdownGroup>,
+                  <Divider key="divider" className="ws-switcher-divider"/>,
+                  <DropdownItem
+                    key="PatternFly 3"
+                    className="ws-patternfly-3"
+                    target="_blank"
+                    href="https://pf3.patternfly.org/"
+                  >
+                    PatternFly 3
+                    <ExternalLinkAltIcon />
+                  </DropdownItem>
+                ]}
+              />
+            </ToolbarItem>
+          )}
+        </ToolbarGroup>
+      </ToolbarContent>
+    </Toolbar>
   );
 }
 
@@ -209,20 +236,29 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   );
 
   const Header = (
-    <PageHeader
-      className="ws-page-header"
-      headerTools={(algolia || hasVersionSwitcher) && <HeaderTools
-        versions={versions}
-        hasSearch={algolia}
-        hasVersionSwitcher={hasVersionSwitcher}
-        hasDarkThemeSwitcher={hasDarkThemeSwitcher}
-        pathPrefix={pathPrefix} />}
-      logo={prnum ? `PR #${prnum}` : <Brand src={logo} alt="Patternfly Logo" />}
-      logoProps={{ href: prurl || pathPrefix || '/' }}
-      showNavToggle
-      topNav={topNavItems.length > 0 && <TopNav navItems={topNavItems} />}
-    />
-  );
+    <Masthead className="ws-page-header">
+      <MastheadToggle>
+        <PageToggleButton variant="plain" aria-label="Global navigation">
+          <BarsIcon />
+        </PageToggleButton>
+      </MastheadToggle>
+      <MastheadMain>
+        <MastheadBrand href={prurl || pathPrefix || '/'}>
+          {prnum ? `PR #${prnum}` : <Brand src={logo} alt="Patternfly Logo" />}
+        </MastheadBrand>
+      </MastheadMain>
+      <MastheadContent>
+        {(algolia || hasVersionSwitcher) && (
+          <HeaderTools
+            versions={versions}
+            hasSearch={algolia}
+            hasVersionSwitcher={hasVersionSwitcher}
+            hasDarkThemeSwitcher={hasDarkThemeSwitcher}
+            pathPrefix={pathPrefix} />
+        )}
+      </MastheadContent>
+    </Masthead>
+  )
 
   return (
     <React.Fragment>
