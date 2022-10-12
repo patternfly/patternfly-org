@@ -9,17 +9,9 @@ const screenshotBase = path.join(process.cwd(), 'patternfly-docs/generated');
 sharp.cache(false);
 
 async function writeScreenshot({ page, data: { url, urlPrefix } }) {
-  // Default viewport is 800x600
-  await page.setViewport({
-    width: 1920,
-    height: 1080,
-  });
   await page.goto(url);
+  await page.addStyleTag({content: '*,*::before,*::after{animation-delay:-1ms !important;animation-duration:1ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:0s !important;transition-delay:0s !important;}'}); // disable animations/transitions so they don't interfere with screenshot tool
   await page.waitForSelector('.pf-u-h-100');
-  // Wait extra 300ms
-  await new Promise(resolve => {
-    setTimeout(resolve, 300);
-  });
   const outfile = path.join(
     screenshotBase,
     url.replace(`${urlPrefix}/`, '') + '.png'
@@ -41,7 +33,8 @@ async function writeScreenshots({ urlPrefix }) {
     maxConcurrency: os.cpus().length,
     puppeteerOptions: {
       headless: true, // set to false for testing...
-      args: ["--no-sandbox", "--disable-setuid-sandbox"]
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+      defaultViewport: {width: 1920, height: 1080}
     }
   });
 
