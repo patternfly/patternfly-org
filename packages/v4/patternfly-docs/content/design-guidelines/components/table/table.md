@@ -111,9 +111,9 @@ Row striping can help improve legibility of a table when presenting large amount
 <img src="./img/row-striping-example.png"  alt="Row striping in tables"  width="1500"/>
 
 #### When to use
-1. Tables with 5 or more columns
+1. Tables with 5 or more columns.
 2. Virtualized tables (no pagination).
-3. Tables with horizontal scrolling
+3. Tables with horizontal scrolling.
  
 ### Sorting by columns
 Sorting by columns is possible for any table variation. Enabling the component within a table eases the ability to scan and read through the content. This option is favored over adding sorting functionality to the [toolbar](/components/toolbar/design-guidelines).
