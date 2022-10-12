@@ -18,7 +18,7 @@ Elements vary depending on inline edit variation
 ### When not to use
 * The editing is the primary function of the view. For example, in an edit modal.
 
-<img src="./img/inline-edit.gif" width="960" height="540" />.
+<img src="./img/inline-edit.gif" alt="Inline edit elements" width="960" height="540" />.
  
 ## Variations
 1. **[Page inline edit](/components/inline-edit/design-guidelines#page-inline-edit):** enables the user to edit a [specific field](/components/inline-edit/design-guidelines#table-inline-edit) in a details page or in a [full page](/components/inline-edit/design-guidelines#full-page-edit).
