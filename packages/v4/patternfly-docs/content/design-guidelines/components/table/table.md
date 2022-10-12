@@ -108,7 +108,9 @@ The actionable table provides checkboxes or radio buttons that enable users to s
 ### Row striping
 Row striping can help improve legibility of a table when presenting large amounts of data. With row striping enabled, table rows will alternate between ```--pf-global--BackgroundColor--100``` and ```--pf-global--BackgroundColor--150``` to visually separate dense data sets.
 
-#### When to use row striping in tables
+<img src="./img/row-striping-example.png"  alt="Row striping in tables"  width="1500"/>
+
+#### When to use
 1. Tables with 5 or more columns
 2. Virtualized tables (no pagination).
 3. Tables with horizontal scrolling
