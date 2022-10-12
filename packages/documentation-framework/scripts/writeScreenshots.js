@@ -10,7 +10,7 @@ sharp.cache(false);
 
 async function writeScreenshot({ page, data: { url, urlPrefix } }) {
   await page.goto(url);
-  await page.addStyleTag({content: '*,*::before,*::after{animation-delay:-1ms !important;animation-duration:1ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:0s !important;transition-delay:0s !important;}'}); // disable animations/transitions so they don't interfere with screenshot tool
+  await page.addStyleTag({content: '*,*::before,*::after{animation-delay:-1ms !important;animation-duration:1ms !important;animation-iteration-count:1 !important;transition-duration:0s !important;transition-delay:0s !important;}'}); // disable animations/transitions so they don't interfere with screenshot tool
   await page.waitForSelector('.pf-u-h-100');
   const outfile = path.join(
     screenshotBase,
