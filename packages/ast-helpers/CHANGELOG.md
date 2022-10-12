@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.43 (2022-10-12)
+
+
+### Bug Fixes
+
+* **screenshot:** fix timing issue with component animation ([#3229](https://github.com/patternfly/patternfly-org/issues/3229)) ([3a79acb](https://github.com/patternfly/patternfly-org/commit/3a79acbeb5866029732461a8a47727081700d98a))
+
+
+
+
+
 ## 0.7.42 (2022-10-11)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
