@@ -33,6 +33,10 @@ This is a new demo that shows how the overflow feature of an alert group can be 
 
  Introduces a new set of full page demos that show how various filter patterns as described in the [Filters design guidelines](https://www.patternfly.org/v4/guidelines/filters) can be applied to a table.
 
+ ### [React-next version of Select](https://www.patternfly.org/v4/components/select/react-next)
+
+ We have introduced a new version of the Select component that has been optimized to be lighter-weight and more flexible. This is still considered beta, but you are encouraged to check it out!
+
  ### [PatternFly wireframe kit](https://github.com/patternfly/patternfly-design-kit/blob/master/PatternFly%204%20-%20Wireframe%20library%20and%20template/Wireframe%20kit%20guideline.md)
 
  With this release we are also introducing a PatternFly wireframe kit. This is a new symbol library implemented in Sketch that helps designers create low or mid-fidelity mockups that are compatible with PatternFly styles.
