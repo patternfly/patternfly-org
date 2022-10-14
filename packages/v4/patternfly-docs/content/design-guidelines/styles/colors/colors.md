@@ -93,7 +93,6 @@ import './colors.css';
     <img width="443px" src="./patternfly-status.png" alt="PatternFly status colors" />
   </GridItem>
   <GridItem xl={6} lg={12}>
-    <GridItem xl={6} lg={12}>
     <h3>Default</h3>
     <ColorSwatch color="--pf-global--default-color--300" caption="alert title">
       This color is used as the title color for the default alert component.
@@ -105,6 +104,7 @@ import './colors.css';
       This color is used as the background color for the default inline alert component.
     </ColorSwatch>
   </GridItem>
+  <GridItem xl={6} lg={12}>
   <h3>Danger</h3>
     <ColorSwatch color="--pf-global--danger-color--200" caption="alert title">
       This color is used as the title color for the danger alert component.
