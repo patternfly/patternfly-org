@@ -79,7 +79,9 @@ export const Example = ({
   // Content that appears between h3 and code block to explain example
   children,
   // Show dark theme switcher on full page examples
-  hasDarkThemeSwitcher = process.env.hasDarkThemeSwitcher
+  hasDarkThemeSwitcher = process.env.hasDarkThemeSwitcher,
+  // Map of relative imports matched to their npm package import path (passed to Codesandbox)
+  relativeImports
 }) => {
   if (isFullscreenPreview) {
     isFullscreen = false;
@@ -98,9 +100,9 @@ export const Example = ({
 
   const [editorCode, setEditorCode] = React.useState(code);
   const loc = useLocation();
-
   const scope = {
     ...liveContext,
+    // These 2 are in the bundle anyways for the site since we dogfood
     ...reactCoreModule,
     ...reactTableModule,
     ...(source === 'react-next' ? reactCoreNextModule : {})
@@ -158,7 +160,7 @@ export const Example = ({
   const codeBoxParams = getParameters(
     lang === 'html'
       ? getStaticParams(title, editorCode)
-      : getReactParams(title, editorCode, scope, lang)
+      : getReactParams(title, editorCode, scope, lang, relativeImports)
   );
   const fullscreenLink = loc.pathname.replace(/\/$/, '')
     + (loc.pathname.endsWith(source) ? '' : `/${source}`)

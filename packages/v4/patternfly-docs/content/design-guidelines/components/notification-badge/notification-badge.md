@@ -3,7 +3,6 @@ id: Notification badge
 section: components
 related: ['Notification drawer', 'Page']
 ---
-A **notification badge** is intended to be used with a [notification drawer](/components/notification-drawer) as a visible indicator to alert the user about incoming notifications.
 
 ## Elements
 

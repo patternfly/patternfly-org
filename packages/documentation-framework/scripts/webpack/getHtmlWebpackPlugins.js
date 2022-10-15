@@ -20,7 +20,7 @@ async function getHtmlWebpackPlugin({
     templateParameters: {
       title: getTitle(title),
       // Don't prerender fullscreen pages (expensive!)
-      prerendering: (isProd && !isFullscreen && !url.includes('extensions')) ? await prerender(url, pathPrefix) : 'Loading...',
+      prerendering: (isProd && !isFullscreen && !url.includes('extensions')) ? await prerender(url, pathPrefix) : null,
       // Don't use GA in dev mode
       googleAnalyticsID: isProd ? googleAnalyticsID : false,
       algolia

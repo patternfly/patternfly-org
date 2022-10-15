@@ -3,6 +3,336 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.13.44 (2022-10-13)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.43 (2022-10-12)
+
+
+### Bug Fixes
+
+* **screenshot:** fix timing issue with component animation ([#3229](https://github.com/patternfly/patternfly-org/issues/3229)) ([3a79acb](https://github.com/patternfly/patternfly-org/commit/3a79acbeb5866029732461a8a47727081700d98a))
+
+
+
+
+
+## 4.13.42 (2022-10-11)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.41 (2022-10-11)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.40 (2022-10-10)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.39 (2022-10-06)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.38 (2022-10-04)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.37 (2022-10-04)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.36 (2022-10-04)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.35 (2022-09-30)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.34 (2022-09-30)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.33 (2022-09-27)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.32 (2022-09-26)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.31 (2022-09-23)
+
+
+### Bug Fixes
+
+* remove lookbacks in regex to support safari 16 ([#3205](https://github.com/patternfly/patternfly-org/issues/3205)) ([a89fdbb](https://github.com/patternfly/patternfly-org/commit/a89fdbb52af22aa56c0f89c9bdbc3efd78502c55))
+
+
+
+
+
+## 4.13.30 (2022-09-22)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.29 (2022-09-22)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.28 (2022-09-22)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.27 (2022-09-19)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.26 (2022-09-16)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.25 (2022-09-16)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.24 (2022-09-16)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.23 (2022-09-15)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.22 (2022-09-15)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.21 (2022-09-15)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.20 (2022-09-14)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.19 (2022-09-13)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.18 (2022-09-12)
+
+
+### Bug Fixes
+
+* **banner:** update docs, screenshots to reference new variation names ([#3178](https://github.com/patternfly/patternfly-org/issues/3178)) ([2b7149d](https://github.com/patternfly/patternfly-org/commit/2b7149d4b24e4cacf2e79b9dbc1e2a7140bd7148))
+
+
+
+
+
+## 4.13.17 (2022-09-08)
+
+
+### Bug Fixes
+
+* **docs:** added support for optional chaining in documentation-framework ([#3176](https://github.com/patternfly/patternfly-org/issues/3176)) ([146b7ca](https://github.com/patternfly/patternfly-org/commit/146b7ca6a6d5383b7eb583156342c4d59b004834))
+
+
+
+
+
+## 4.13.16 (2022-09-08)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.15 (2022-09-07)
+
+
+### Bug Fixes
+
+* **docs:** codesandbox relative imports point to package import ([#3122](https://github.com/patternfly/patternfly-org/issues/3122)) ([fbecd9d](https://github.com/patternfly/patternfly-org/commit/fbecd9d1b120d657910f3bb00486a49bf90360b6))
+
+
+
+
+
+## 4.13.14 (2022-09-06)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.13 (2022-09-02)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.12 (2022-08-31)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.11 (2022-08-30)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.10 (2022-08-29)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.9 (2022-08-29)
+
+
+### Bug Fixes
+
+* **example:** increase code editor button tooltip size, other cleanup ([#3162](https://github.com/patternfly/patternfly-org/issues/3162)) ([fab30f5](https://github.com/patternfly/patternfly-org/commit/fab30f5b94b648605fd9efb980fc6eea2e772a79))
+
+
+
+
+
+## 4.13.8 (2022-08-26)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.7 (2022-08-24)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.6 (2022-08-23)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
 ## 4.13.5 (2022-08-22)
 
 **Note:** Version bump only for package patternfly-org-4

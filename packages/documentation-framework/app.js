@@ -38,12 +38,13 @@ const AppRoute = ({ child, katacodaLayout, title, path }) => {
 
 const SideNavRouter = () => {
   const pathname = useLocation().pathname.replace(process.env.pathPrefix, '');
+  const componentsData = process?.env?.componentsData;
   const navOpen = !routes[pathname] || !routes[pathname].katacodaLayout;
   return (
     <SideNavLayout groupedRoutes={groupedRoutes} navOpen={navOpen} >
       <Router id="ws-page-content-router">
         {Object.entries(routes)
-          .map(([path, { Component, title, sources, katacodaLayout }]) => Component
+          .map(([path, { Component, title, sources, katacodaLayout, id }]) => Component
             ? <AppRoute
                 key={path}
                 path={path}
@@ -60,6 +61,8 @@ const SideNavRouter = () => {
                     path={path}
                     title={title}
                     sources={sources}
+                    id={id}
+                    componentsData={componentsData}
                   />
                 }
                 katacodaLayout={katacodaLayout}
