@@ -157,7 +157,7 @@ export const MDXTemplate = ({
           </Title>}
         </PageSection>
         {isComponent && summary && (
-          <PageSection variant={PageSectionVariants.light} className="pf-u-pt-0">
+          <PageSection variant={PageSectionVariants.light} isWidthLimited style={{'--pf-c-page__main-section--PaddingTop':0}}>
             <SummaryComponent />
           </PageSection>
         )}
