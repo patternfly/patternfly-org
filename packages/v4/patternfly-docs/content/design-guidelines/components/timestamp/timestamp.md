@@ -8,9 +8,9 @@ section: components
 <img src="./img/timestamp-with-tooltip-underline.png" alt="Timestamp with tooltip underline"/>
 <img src="./img/timestamp-tooltip-popover.png" alt="Timestamp with tooltip popover"/>
 
-1. **Day:** Spelled out or abbreviated format. [Guide](https://www.patternfly.org/v4/ux-writing/numerics)
-2. **Date:** Can be spelled out, abbreviated form, or digit format. [Guide](https://www.patternfly.org/v4/ux-writing/numerics)
-3. **Time:** Should be displayed in 12-hour or 24-hour ((HH:MM:SS). [Guide](https://www.patternfly.org/v4/ux-writing/numerics)
+1. **Day:** Spelled out or abbreviated format. [See Numerics guidelines for more information](https://www.patternfly.org/v4/ux-writing/numerics)
+2. **Date:** Can be spelled out, abbreviated form, or digit format. [See Numerics guidelines for more information](https://www.patternfly.org/v4/ux-writing/numerics)
+3. **Time:** Should be displayed in 12-hour or 24-hour ((HH:MM:SS). [See Numerics guidelines for more information](https://www.patternfly.org/v4/ux-writing/numerics)
 4. **UTC/Timezone:** Should always be displayed last, in shorthand form and be in 24-hour format.
 5. **Tooltip:** Dotted line displayed if there is tooltip available.
 
@@ -31,7 +31,7 @@ You want to represent the exact date and time that an event occurred When users 
 - Displays time in UTC (Coordinated Universal Time).
 - Should be formatted the same as the timestamp. 
 
-For information about relative time best practices, see the [Numerics page.](https://www.patternfly.org/v4/ux-writing/numerics)
+See UX [numerics guidelines](https://www.patternfly.org/v4/ux-writing/numerics) for more information about relative time best practices.
 
 ## Variations
 ### 12-hour format
