@@ -32,10 +32,10 @@ Use forms to accomplish tasks reliant on user-inputted information like logging 
 
 Most forms contain four basic elements:
 
-1. [**Labels:**](#Labels) Indicate desired information for each field.
-2. [**Text inputs:**](Text-inputs) Provide space for users to enter text.
-3. [**Data inputs:**](Data-inputs) Allow users to enter information that is not freeform text using components like checkboxes, radio buttons, or dropdowns.
-4. [**Buttons:**](Buttons) Enable a user to submit or exit a form.
+1. [**Labels:**](#labels) Indicate desired information for each field.
+2. [**Text inputs:**](#text-inputs) Provide space for users to enter text.
+3. [**Data inputs:**](#data-inputs) Allow users to enter information that is not freeform text using components like checkboxes, radio buttons, or dropdowns.
+4. [**Buttons:**](#buttons) Enable a user to submit or exit a form.
 
 ### Labels
 Always provide labels for text and data inputs so that users understand the information each form field asks of them. Default to top-aligned labels unless you’re working within limited vertical space, then use left-aligned labels. 
@@ -56,7 +56,7 @@ Avoid using left-aligned labels unless you’re working with limited vertical sp
 
 To accommodate mobile views, left-aligned labels should responsively adjust to top alignment for smaller screens.
 
-For guidance on how to write effective form labels, see the [content](#content) section.
+For guidance on how to write effective form labels, see the [content](##content-considerations) section.
 
 ### Text inputs
 
@@ -155,9 +155,9 @@ Due to their interactive nature, forms often include features that help communic
 
 ### Types of user guidance
 Types of user guidance include:
-* [**Required fields:**](#Required-fields) Call attention to input fields crucial to user success.
-* [**User help:**](#User-help) Assists users in context through placeholder text, helper text, and popovers.
-* [**Progressive disclosure:**](#Progressive-disclosure) Hides and shows fields based on user selections to simplify their workflow.
+* [**Required fields:**](#required-fields) Call attention to input fields crucial to user success.
+* [**User help:**](#user-help) Assists users in context through placeholder text, helper text, and popovers.
+* [**Progressive disclosure:**](#progressive-disclosure) Hides and shows fields based on user selections to simplify their workflow.
 
 #### Required fields
 
@@ -202,7 +202,7 @@ If your placeholder text shares an example, precede it with “Example,” follo
 
 <img src="./img/placeholder-format.png" alt="Example of a date placeholder text inside text input field" width="323"/>
 
-For more information about writing effective placeholder text, see the [content](#content) section.
+For more information about writing effective placeholder text, see the [content](#content-considerations) section.
 
 ##### Helper text
 
@@ -212,7 +212,7 @@ Helper text is brief, permanent text below a form field that helps a user provid
 
 Align helper text with the specific input for which it offers assistance. If your helper text contains information about the label rather than the input field, place it with the label instead.
 
-For more information about writing effective helper text, see the [content](#content) section.
+For more information about writing effective helper text, see the [content](#content-considerations) section.
 
 ##### Popovers
 
@@ -230,7 +230,7 @@ In a form, indicate a popover with an unfilled question mark circle that reveals
 
 Never hide critical information inside a popover, since popovers only surface when a user triggers them.
 
-For more information about writing effective popovers, see the [content](#content) section.
+For more information about writing effective popovers, see the [content](#content-considerations) section.
 
 ### Progressive disclosure
 Use progressive disclosure to hide and show form fields based on a user’s selection to keep their workflow short and allow them to focus on fields relevant to them. Progressive disclosure also avoids using color to indicate whether or not a field is available, making forms more accessible for users with visual impairments.
@@ -270,7 +270,7 @@ For validation on submission, supplement field level errors with an [inline aler
 
 <img src="./img/validation-submission.png" alt="Example of errors after validation on submission, including an inline alert at the top, and field level errors" width="794"/>
 
-Learn more about writing error messages in the [content](#content) section.
+Learn more about writing error messages in the [content](#content-considerations) section.
 
 ## Spacing
 Forms may be placed in several contexts including on a page, in a wizard, or in a modal. Your chosen form placement may impact specific spacing considerations, but general form spacing requirements apply across these contexts.
