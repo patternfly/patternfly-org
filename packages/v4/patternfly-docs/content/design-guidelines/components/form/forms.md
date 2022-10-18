@@ -56,7 +56,7 @@ Avoid using left-aligned labels unless you’re working with limited vertical sp
 
 To accommodate mobile views, left-aligned labels should responsively adjust to top alignment for smaller screens.
 
-For guidance on how to write effective form labels, see the [content](##content-considerations) section.
+For guidance on how to write effective form labels, see the [content](#content-considerations) section.
 
 ### Text inputs
 
@@ -143,7 +143,7 @@ Use field groups to:
 
 Because field groups call for more clicks, tabs, and interactions to reach form fields, they require additional accessibility considerations. Clearly label field group content so that it's clear to all users. For more field group accessibility guidance, see the [Accessibility guidelines](#accessibility).
 
-Example: For a form with multiple field groups, distinguish between each one by adding titles that convey each group's unique theme such as *Routing*, *Build configuration*, *Deployment*, or *Scaling*.
+**Example:** For a form with multiple field groups, distinguish between each one by adding titles that convey each group's unique theme such as *Routing*, *Build configuration*, *Deployment*, or *Scaling*.
 
 <img src="./img/field-groups.png" alt="Example of nested, expandable field groups in a form." width="800"/>
 
@@ -216,17 +216,17 @@ For more information about writing effective helper text, see the [content](#con
 
 ##### Popovers
 
-**Use a [popover](/components/popover/design-guidelines)** for fields that might require additional background or explanation. Popovers may also link to external help pages or other related documentation. 
+[popovers](/components/popover/design-guidelines) are useful for fields that might require additional background or explanation. Popovers may also link to external help pages or other related documentation. 
 
 In a form, indicate a popover with an unfilled question mark circle that reveals information when clicked. Place popovers to the right of their corresponding form label.
 
  <img src="./img/popover.png" alt="Example of a popover used in a form field to provide additional context for where a user can find the required information" width="411"/>
 
- Use popovers to:
+ **Use popovers when:**
 
-* Guide users to where they can find essential information needed to complete a given form field.
+* Guiding users to where they can find essential information needed to complete a given form field.
 
-* Provide content that requires formatting like numbered or bulleted lists, or that requires you to include additional elements like buttons, links, or images.
+* Providing content that requires formatting like numbered or bulleted lists, or that requires you to include additional elements like buttons, links, or images.
 
 Never hide critical information inside a popover, since popovers only surface when a user triggers them.
 
@@ -248,7 +248,7 @@ After a form error occurs, users won’t have access to placeholder text (replac
 * What is the error?
 * What can the user do to fix it?
 
-Example: Instead of “Invalid input,” provide an error message that includes the correct format to re-write the input: “Date format must be MM-DD-YYYY.”
+**Example:** Instead of “Invalid input,” provide an error message that includes the correct format to re-write the input: “Date format must be MM-DD-YYYY.”
 
  <img src="./img/error-message.png" alt="Visualized example for right vs. wrong way to write an input error. Do communicate specific format errors; don't just indicate an 'invalid input.'" width="649"/>
 
@@ -413,7 +413,7 @@ For more error message guidance, see our [UX writing style guide](/ux-writing/er
 
 Use button text to clearly and specifically communicate the action it triggers. Whenever possible, use specific verbs to write button text that communicates what a user accomplishes by submitting a form.
 
-Example: Instead of *Submit*, a submit button on a subscription form should read *Subscribe*.
+**Example:** Instead of *Submit*, a submit button on a subscription form should read *Subscribe*.
 
 For more button text guidance, see our [button content guidelines](/components/button/design-guidelines#content).
 
