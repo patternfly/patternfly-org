@@ -36,15 +36,15 @@ See UX [numerics guidelines](https://www.patternfly.org/v4/ux-writing/numerics) 
 ## Variations
 ### 12-hour format
 In the 12-hour format use AM to refer to a time of day before noon, and PM to speak of a time between noon and midnight.
-<br>
+
 <img src="./img/timestamp-am-pm-format.png" alt="Timestamp AM/PM format"/>
 
 ### 24-hour format
 In the 24-hour clock format, each day runs from midnight to midnight and is divided into 24 hours, starting at 1 a.m. 
-<br>
+
 <img src="./img/timestamp-24-hour-format.png" alt="Timestamp with 24 hour format"/>
 
 ### Abbreviated date
 Abbreviated date usage is recommended when you have space restrictions. When abbreviating dates follow the date and time format. 
-<br>
+
 <img src="./img/timestamp-abbreviated-date.png" alt="Timestamp with abbreviated date format"/>
