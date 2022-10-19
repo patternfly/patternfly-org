@@ -17,7 +17,7 @@ While form control styles differ slightly depending on the component, they all u
 
 1. **Default component:** State of the input component before any form control is applied.
 2. **Status area:** Icon and underline color indicate the status of the input or selection.
-3. **[Grey-out controls](#grey-out-controls)** Actionless form control can be either disabled or read only. The only difference visually is the underline for read only input.
+3. **[Grey-out controls](#grey-out-controls):** Actionless form control can be either disabled or read only. The only difference visually is the underline for read only input.
 4. **Form fields with icon:** Custom icons can be included in input fields.
 
 ### Status/state controls
@@ -33,7 +33,7 @@ Use success controls to indicate valid user input for fields that require a spec
 
 <img src="./img/success_example.png" alt="Valid input example" width="762px"/>
 
-### Gray-out controls
+### Grey-out controls
 Input fields should be grayed out when the user cannot perform actions. Gray-out controls indicate that a field is either temporarily disabled, or permanently read-only.
 
 #### Disable controls
