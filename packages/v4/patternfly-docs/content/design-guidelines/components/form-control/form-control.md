@@ -3,8 +3,6 @@ id: Form control
 section: components
 ---
 
-**Form controls** refer to the different visual states that data input components can take to help guide users in completing forms.
-
 Form control can be applied to various input components, including text boxes, dropdowns/select lists, and text areas.
 
 ## Usage

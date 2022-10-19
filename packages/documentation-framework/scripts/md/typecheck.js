@@ -34,13 +34,19 @@ declare module '\\*.svg' {
 const reactStylesDir = path.join(require.resolve('@patternfly/react-styles/package.json'), '../');
 const reactStyles = glob.sync(path.join(reactStylesDir, 'css/**/*.d.ts'))
   .map(f => f.replace(reactStylesDir, '@patternfly/react-styles/').replace(/\.d.ts$/, ''));
+const defaultImports = [
+  'react',
+  '@reach/router',
+  '@patternfly/react-core/next',
+  'react-dropzone',
+];
 const files = {
-  'imports.ts': ['react', '@reach/router']
-      .concat(Object.keys(versions.Releases[0].versions))
-      .concat(reactStyles)
-      .filter(p => p !== '@patternfly/patternfly')
-      .map(p => `import '${p}';`)
-      .join('\n'),
+  'imports.ts': defaultImports
+    .concat(Object.keys(versions.Releases[0].versions))
+    .concat(reactStyles)
+    .filter(p => p !== '@patternfly/patternfly')
+    .map(p => `import '${p}';`)
+    .join('\n'),
   'declarations.d.ts': defaultDeclarations
 };
 
@@ -130,4 +136,3 @@ function typecheck(fname, text) {
 module.exports = {
   typecheck
 };
-

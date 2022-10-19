@@ -2,11 +2,10 @@
 id: Context selector
 section: components
 ---
-A **context selector** can be used in addition to global navigation when the data or resources you show in the interface need to change depending on the user’s context.
 
 ## Elements 
 
-<img src="./img/elements.png" alt="elements image with callouts " width="297"/>
+<img src="./img/elements.png" alt="elements image with callouts " width="357"/>
 
 1. Dropdown
 2. Menu 
@@ -22,13 +21,13 @@ Context selectors differ from filters in that a filter takes an overall set of c
 ### Using actions in a context selector
 If your context selector has a lot of options, you may opt to add a search bar at the top of the menu, divided by a separator.
 
-<img src="./img/search.png" alt="Example of a context selector with a search bar at the top" width="312"/>
+<img src="./img/search.png" alt="Example of a context selector with a search bar at the top" width="280"/>
 
 ### Using footers in context selector
 If you have more actions you would like to add to a context selector, you may add a footer with actions at the bottom of the menu. The menu list inside it will be scrollable, while the footer will remain fixed so that the action is always visible. For the actions inside the footer, you may use a secondary or link button.
 
 
-<img src="./img/actions.png" alt="Example of a context selector with an action footer at the bottom of the menu list" width="624"/>
+<img src="./img/actions.png" alt="Example of a context selector with an action footer at the bottom of the menu list" width="640"/>
 
 ## Variations
 * [Application-wide impact](#application-wide-impact)
@@ -71,5 +70,5 @@ A common use case for using a page-level context selector is as a means for user
 #### Placement
 It is recommended that a page-level context selector be placed at the top of the page or page section that the context selector controls.
 
-<img src="./img/tertiary-lower.png" alt="Example of a context selector with page impact, placed at the top of a page" width="990"/>
+<img src="./img/tertiary-lower.png" alt="Example of a context selector with page impact, placed at the top of a page" width="1500"/>
 

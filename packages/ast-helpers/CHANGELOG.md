@@ -3,6 +3,467 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.46 (2022-10-18)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.45 (2022-10-17)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.44 (2022-10-13)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.43 (2022-10-12)
+
+
+### Bug Fixes
+
+* **screenshot:** fix timing issue with component animation ([#3229](https://github.com/patternfly/patternfly-org/issues/3229)) ([3a79acb](https://github.com/patternfly/patternfly-org/commit/3a79acbeb5866029732461a8a47727081700d98a))
+
+
+
+
+
+## 0.7.42 (2022-10-11)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.41 (2022-10-11)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.40 (2022-10-10)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.39 (2022-10-06)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.38 (2022-10-04)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.37 (2022-10-04)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.36 (2022-10-04)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.35 (2022-09-30)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.34 (2022-09-30)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.33 (2022-09-27)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.32 (2022-09-26)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.31 (2022-09-23)
+
+
+### Bug Fixes
+
+* remove lookbacks in regex to support safari 16 ([#3205](https://github.com/patternfly/patternfly-org/issues/3205)) ([a89fdbb](https://github.com/patternfly/patternfly-org/commit/a89fdbb52af22aa56c0f89c9bdbc3efd78502c55))
+
+
+
+
+
+## 0.7.30 (2022-09-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.29 (2022-09-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.28 (2022-09-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.27 (2022-09-19)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.26 (2022-09-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.25 (2022-09-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.24 (2022-09-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.23 (2022-09-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.22 (2022-09-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.21 (2022-09-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.20 (2022-09-14)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.19 (2022-09-13)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.18 (2022-09-12)
+
+
+### Bug Fixes
+
+* **banner:** update docs, screenshots to reference new variation names ([#3178](https://github.com/patternfly/patternfly-org/issues/3178)) ([2b7149d](https://github.com/patternfly/patternfly-org/commit/2b7149d4b24e4cacf2e79b9dbc1e2a7140bd7148))
+
+
+
+
+
+## 0.7.17 (2022-09-08)
+
+
+### Bug Fixes
+
+* **docs:** added support for optional chaining in documentation-framework ([#3176](https://github.com/patternfly/patternfly-org/issues/3176)) ([146b7ca](https://github.com/patternfly/patternfly-org/commit/146b7ca6a6d5383b7eb583156342c4d59b004834))
+
+
+
+
+
+## 0.7.16 (2022-09-08)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.15 (2022-09-07)
+
+
+### Bug Fixes
+
+* **docs:** codesandbox relative imports point to package import ([#3122](https://github.com/patternfly/patternfly-org/issues/3122)) ([fbecd9d](https://github.com/patternfly/patternfly-org/commit/fbecd9d1b120d657910f3bb00486a49bf90360b6))
+
+
+
+
+
+## 0.7.14 (2022-09-06)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.13 (2022-09-02)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.12 (2022-08-31)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.11 (2022-08-30)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.10 (2022-08-29)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.9 (2022-08-29)
+
+
+### Bug Fixes
+
+* **example:** increase code editor button tooltip size, other cleanup ([#3162](https://github.com/patternfly/patternfly-org/issues/3162)) ([fab30f5](https://github.com/patternfly/patternfly-org/commit/fab30f5b94b648605fd9efb980fc6eea2e772a79))
+
+
+
+
+
+## 0.7.8 (2022-08-26)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.7 (2022-08-24)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.6 (2022-08-23)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.5 (2022-08-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.4 (2022-08-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.3 (2022-08-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.2 (2022-08-19)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.7.1 (2022-08-19)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.7.0 (2022-08-18)
+
+
+### Features
+
+* **doc-framework:** Allow for 'next' core component usage alongside core components ([#3126](https://github.com/patternfly/patternfly-org/issues/3126)) ([8617112](https://github.com/patternfly/patternfly-org/commit/8617112840dd7c26cd6660120c6b24b8ca91e7d3))
+
+
+
+
+
+## 0.6.36 (2022-08-17)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.6.35 (2022-08-17)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.6.34 (2022-08-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.6.33 (2022-08-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.6.32 (2022-08-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.6.31 (2022-08-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.6.30 (2022-08-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.6.29 (2022-08-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 ## 0.6.28 (2022-08-09)
 
 **Note:** Version bump only for package @patternfly/ast-helpers

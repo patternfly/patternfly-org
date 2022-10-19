@@ -3,8 +3,6 @@ id: Text input
 section: components
 ---
 
-A **text input** is used to gather free-form text from a user.
-
 ## Elements
 
 <img src="./img/textinput-elements.png" alt="Text input elements" width="488"/>

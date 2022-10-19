@@ -22,8 +22,6 @@ related: [
 ]
 ---
 
-A **form** is a group of elements used to collect information from a user in a variety of contexts including in a modal, in a wizard, or on a page. Use cases for forms include tasks reliant on user-inputted information for completion like logging in, registering, configuring settings, or completing surveys.
-
 Use forms to accomplish tasks reliant on user-inputted information like logging in, registering for accounts or services, configuring settings, or completing surveys.
 
 ## Elements
@@ -112,6 +110,7 @@ Form submit buttons should be disabled until a user starts filling out the form 
 * For long scrolling forms, don’t disable the submit button since the missing field and submit button may not be visible on the screen at the same time.
 * For a submitted form, disable the submit button while a user's responses are processing to avoid a duplicate submission.
 * For a processing form, use feedback messages and progress indicators like spinners or progress bars if the processing time might exceed user expectations.
+
 
 ## Variations
 
@@ -232,7 +231,7 @@ Never hide critical information inside a popover, since popovers only surface wh
 
 For more information about writing effective popovers, see the [content](#content-considerations) section.
 
-### Progressive disclosure
+#### Progressive disclosure
 Use progressive disclosure to hide and show form fields based on a user’s selection to keep their workflow short and allow them to focus on fields relevant to them. Progressive disclosure also avoids using color to indicate whether or not a field is available, making forms more accessible for users with visual impairments.
 
  <img src="./img/progressive-disclosure.png" alt="Example of progressive disclosure with one radio button selected to only show the inputs associated with that option" width="562"/>

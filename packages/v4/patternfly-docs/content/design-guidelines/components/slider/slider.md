@@ -3,8 +3,6 @@ id: Slider
 section: components
 ---
  
-A **slider** provides a quick and effective way for users to set and adjust a numeric value from a defined range of values.
- 
 ## Elements
  
 <img src="./img/Slider.png" alt="Visual of slider" width="600"/>
@@ -19,19 +17,21 @@ A **slider** provides a quick and effective way for users to set and adjust a nu
 8. **Maximum range parameter (optional)**: Marks the end of a slider with its maximum value.
  
 ## Usage
-**Use a slider when**:
+### When to use
+Use a slider when:
 * Users need a quick way to adjust values within a defined range, such as in a form.
 * Users need to make small incremental changes.
 * The numeric value can either be a whole number or fractional.
 * You need to bypass device limitations, such as keyboardless interactions and form submissions on mobile.
  
-**Don’t use a slider when**:
+### When not to use
+Do not use a slider when:
 * The numeric value range is infinite.
 * The numeric value required is not part of a range, or is arbitrary. For this use case, use an [input group](/components/input-group)
 instead.
 * There is not enough space in the UI.
  
-**When using sliders, follow these best practices**:
+### Best practices
 * Display a default numeric value that users can modify by using the slider or by typing directly into the input field, or scale using the increase or decrease buttons.
 * Always keep the selected slider value visible to the user.
 * Communicate maximum and minimum parameters of the range, especially with unusual parameters.
@@ -48,6 +48,7 @@ Allows users to select any value within the slider's range using a thumb indicat
 ### Discrete slider
  
 <img src="./img/slider-discrete.png" alt="Visual of discrete slider" width="600"/>
+
 Allows users to select a value by adjusting a thumb indicator to predefined values represented by tick marks on a track. Users can only select values indicated by a tick mark.  If they attempt to select an unmarked value, the thumb indicator will always shift to the closest tick mark.
  
 ### Slider within input groups

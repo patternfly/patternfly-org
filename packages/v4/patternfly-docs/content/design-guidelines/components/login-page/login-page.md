@@ -3,8 +3,6 @@ id: Login page
 section: components
 ---
 
-A **login page** allows a user to gain access to an application by entering their username and password or by authenticating using a social media login.
-
 ## Elements
 
 <img src="./img/elements.png" alt="Elements of a login page" width="1500"/>

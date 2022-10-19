@@ -4,8 +4,6 @@ section: components
 related: ['Alert', 'Alert group']
 ---
  
-An **alert** is a notification that provides brief information to the user without blocking their workflow.
-
 ## Elements
 Elements vary depending on the variation of Alert. Toast alerts are always dismissible, but bordered inline alerts can be both dismissable and non-dismissible. All other elements are consistent between toast and bordered inline alerts.
 Plain inline alerts are never dismissable, and consist of only a status area and alert title.
@@ -41,6 +39,13 @@ For more information about what colors to use for status and severity, visit the
 
 ## Usage
 Use an alert component when you are trying to give the user essential information in a prominent way. More specific use cases differ based on component variation. 
+
+### Customizing alerts
+ 
+If your use case falls outside of PatternFly's standard alert variations, use [icons](/guidelines/icons) and [colors](/guidelines/colors) to create custom alerts that meet your needs.
+ 
+View custom alerts in action in our [custom alert examples](https://www.patternfly.org/v4/components/alert#custom-icons).
+ 
 
 ## Variations
 
@@ -131,12 +136,7 @@ Toast alerts are commonly used in the following situations:
 - Informing the user that their action was completed successfully
 - Informing the user that their action was completed with errors
  
-## Customizing alerts
- 
-If your use case falls outside of PatternFly's standard alert variations, use [icons](/guidelines/icons) and [colors](/guidelines/colors) to create custom alerts that meet your needs.
- 
-View custom alerts in action in our [custom alert examples](https://www.patternfly.org/v4/components/alert#custom-icons).
- 
+
 ## Content considerations
  
  

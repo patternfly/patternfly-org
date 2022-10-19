@@ -8,8 +8,6 @@ related: [
 ]
 ---
  
-A **popover** is in-app messaging that provides more information on specific product areas. Popovers display content in a new window that overlays the current page. Unlike modals, popovers don’t block the current page.
-
 ## Usage
 Popovers are commonly used on form field labels, page titles or headings, or table column headings. Use popovers to:
 - Anticipate and answer questions for the user.
@@ -59,7 +57,7 @@ Popovers are triggered when a user clicks on the popover icon and are dismissed 
  
 <img src="./img/popover-example.png" alt="popover example with placeholder text for the title and informational text" width="300"/>
  
-## Content Considerations
+## Content considerations
 - Popover copy is longer than tooltip copy, but it should still be concise. Aim for 1–3 sentences. 
 - Write in full sentences with punctuation.
 - Include relevant links to documentation when necessary.   

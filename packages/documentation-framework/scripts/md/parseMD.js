@@ -60,15 +60,17 @@ function toReactComponent(mdFilePath, source, buildMode) {
         sourceRepo = 'patternfly-react';
       }
 
-      const propComponents = [...new Set(frontmatter.propComponents || [])]
-        .filter(propComponent => {
-          if (tsDocs[propComponent]) {
-            return true;
-          }
-          file.message(`Prop component ${propComponent} missing from tsDocgen`);
-          return false;
-        })
-        .map(propComponent => tsDocs[propComponent])
+      const propComponents = [...new Set(frontmatter.propComponents || [])].reduce((acc, componentName) => {
+        const name = getTsDocName(componentName, source === 'react-next');
+
+        if (tsDocs[name]) {
+          acc.push(tsDocs[name]);
+        } else {
+          file.message(`Prop component ${name} is missing from tsDocgen`);
+        }
+
+        return acc;
+      }, []);
 
       const normalizedPath = relPath
         .replace('node_modules/@patternfly/patternfly/docs', 'src/patternfly')
@@ -123,7 +125,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
     // Delete HTML comments
     .use(require('./remove-comments'))
     // remark-mdx removes auto-link support
-    // this adds it back ONLY for links which are easily differentiable from JSX 
+    // this adds it back ONLY for links which are easily differentiable from JSX
     .use(require('./auto-link-url'))
     // Support for JSX in MD
     .use(require('remark-mdx'))
@@ -148,7 +150,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
     // .use(require('remark-rehype'))
     // .use(require('rehype-react'), { createElement: require('react').createElement })
     // Transform AST to JSX elements. Includes special code block parsing
-    .use(require('./mdx-ast-to-mdx-hast'), { 
+    .use(require('./mdx-ast-to-mdx-hast'), {
       watchExternal(file) {
         if (buildMode === 'start') {
           const watcher = chokidar.watch(file, { ignoreInitial: true });
@@ -220,7 +222,6 @@ function toReactComponent(mdFilePath, source, buildMode) {
         console.error(vfileReport(err));
         exitCode = 2;
       } else {
-        // console.log(relPath, '->', path.relative(process.cwd(), outPath));
         if (file.messages.length > 0) {
           console.log(vfileReport(file));
         }
@@ -239,7 +240,7 @@ function sourcePropsFile(file) {
   tsDocgen(file)
     .filter(({ hide }) => !hide)
     .forEach(({ name, description, props }) => {
-      tsDocs[name] = { name, description, props };
+      tsDocs[getTsDocName(name, file.includes('/next'))] = { name, description, props };
     });
 }
 
@@ -278,6 +279,11 @@ function writeIndex() {
 
   return exitCode;
 }
+
+// Build unique names for components if they are a part of the "next" module.
+function getTsDocName(name, isNextComponent) {
+  return `${name}${isNextComponent ? '-next' : ''}`;
+};
 
 module.exports = {
   sourceProps(glob, ignore) {

@@ -2,7 +2,6 @@
 id: Form select
 section: components
 ---
-A **form select** embeds browser native select lists into a form.
 
 ## Usage
 

@@ -48,8 +48,9 @@ const groupedRoutes = Object.entries(routes)
 
 const sourceOrder = {
   react: 1,
-  'react-composable': 1.1,
-  'react-legacy': 1.2,
+  'react-next': 1.1,
+  'react-composable': 1.2,
+  'react-legacy': 1.3,
   'react-demos': 2,
   html: 3,
   'html-demos': 4,
@@ -92,14 +93,6 @@ Object.entries(groupedRoutes)
       pageData.sources.forEach(({ slug }) => {
         delete routes[slug];
       });
-      // Add design guidelines if doesn't exist
-      if (
-        ['components', 'charts', 'layouts', 'demos'].includes(section) &&
-        !pageData.sources.map(({ source }) => source).includes('design-guidelines') &&
-        process.env.hasDesignGuidelines
-      ) {
-        pageData.sources.push(getDefaultDesignGuidelines(pageData));
-      }
       // Sort sources for tabs
       pageData.sources = pageData.sources.sort(sortSources);
       // Add grouped route
