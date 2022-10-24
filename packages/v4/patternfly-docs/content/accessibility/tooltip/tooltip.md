@@ -53,7 +53,7 @@ For the HTML/CSS library:
 
 ## Testing
 
-At a minimumm, a tooltip should meet the following criteria:
+At a minimum, a tooltip should meet the following criteria:
 
 <List isPlain>
   <ListItem>

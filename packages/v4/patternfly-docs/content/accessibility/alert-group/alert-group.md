@@ -21,7 +21,7 @@ For the HTML/CSS library:
 
 ## Testing
 
-At a minimumm, an alert group should meet the following criteria:
+At a minimum, an alert group should meet the following criteria:
 
 <List isPlain>
   <ListItem>
