@@ -5,14 +5,12 @@ section: components
 
 import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
-An **avatar** is a visual used to represent a user. It may contain an image or a placeholder graphic. Typical usage is to represent the current user in the masthead.
-
 ## Accessibility
 
 To implement an accessible PatternFly **avatar**:
 
 - Pass in `alt` as a React prop or HTML attribute to provide alternative text for the avatar image.
-- If you are using an SVG element for the avatar, [learn how to create accessible SVGs](https://www.deque.com/blog/creating-accessible-svgs/) and reference the different SVG patterns. Screen reader accessibility for SVGs varies based on the pattern being used.
+- If you are using an SVG element for the avatar, make sure the SVG is accessible (see [How to create accessible SVGs](https://www.deque.com/blog/creating-accessible-svgs/)) and reference the different SVG patterns. Screen reader accessibility for SVGs varies based on the pattern being used.
 - If you’re combining an avatar with another component, make sure to check accessibility guidelines for that component as well.
 
 ## Testing
