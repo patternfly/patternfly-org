@@ -13,7 +13,7 @@ import logo from '../../layouts/logo.svg';
 
 export const Footer = () => (
   <React.Fragment>
-    <PageSection isWidthLimited key="footer-1" className="ws-org-pfsite-l-footer">
+    <PageSection key="footer-1" className="ws-org-pfsite-l-footer">
       <Grid>
         <GridItem
           sm={12}
@@ -212,7 +212,7 @@ export const Footer = () => (
         </GridItem>
       </Grid>
     </PageSection>
-    <PageSection isWidthLimited key="footer-2" className="ws-org-pfsite-l-footer-dark pf-m-no-fill">
+    <PageSection key="footer-2" className="ws-org-pfsite-l-footer-dark pf-m-no-fill">
       <Grid className="pf-u-py-xl-on-sm pf-u-py-0-on-md pf-u-align-items-center">
         <GridItem md={2} mdOffset={1}>
           <Link
