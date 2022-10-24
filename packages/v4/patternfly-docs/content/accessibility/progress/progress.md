@@ -9,7 +9,7 @@ section: components
 To implement an accessible PatternFly **progress** component:
 - Ensure that a `title` is being used or an `aria-label` is being used in its place to give context to users. If there is existing content that makes more sense to label the progress bar with, `aria-labelledby` should be passed in with a value of the associated content's `id`. 
 - Ensure that a live region exists on the page through `aria-live` prior to updating the value of the progress component
-- Add a message to screen readers inside of the live region when the progress value updates, for example: `{`Progress value is ${currentValue}%.`}`
+- Add a message to screen readers inside of the live region when the progress value updates, for example: <code class="ws-code">`Progress value is ${currentValue}%.`</code>
 
 
 ## Testing
