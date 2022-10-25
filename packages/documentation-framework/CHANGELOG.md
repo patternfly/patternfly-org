@@ -3,6 +3,81 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.48 (2022-10-25)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.47 (2022-10-24)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.46 (2022-10-18)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.45 (2022-10-17)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.44 (2022-10-13)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.43 (2022-10-12)
+
+
+### Bug Fixes
+
+* **screenshot:** fix timing issue with component animation ([#3229](https://github.com/patternfly/patternfly-org/issues/3229)) ([3a79acb](https://github.com/patternfly/patternfly-org/commit/3a79acbeb5866029732461a8a47727081700d98a))
+
+
+
+
+
+## 1.2.42 (2022-10-11)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.41 (2022-10-11)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.40 (2022-10-10)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 1.2.39 (2022-10-06)
 
 **Note:** Version bump only for package @patternfly/documentation-framework

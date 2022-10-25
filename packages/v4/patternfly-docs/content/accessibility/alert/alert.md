@@ -13,7 +13,7 @@ To implement an accessible PatternFly **alert**:
 
 ## Testing
 
-At a minimumm, an alert should meet the following criteria:
+At a minimum, an alert should meet the following criteria:
 
 <List isPlain>
   <ListItem>

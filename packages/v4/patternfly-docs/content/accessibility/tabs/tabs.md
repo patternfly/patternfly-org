@@ -13,7 +13,7 @@ To implement accessible PatternFly **tabs**:
 
 ## Testing
 
-At a minimumm, tabs should meet the following criteria:
+At a minimum, tabs should meet the following criteria:
 
 <List isPlain>
   <ListItem>
