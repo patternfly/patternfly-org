@@ -34,7 +34,7 @@ section: components
 #### For tooltip:
 - Not required but recommended to provide more precise time for relative times. Tooltips should show timestamps in UTC time.
 - Recommend displaying time in 24-hour format.
-- Displays time in UTC (Coordinated Universal Time).
+- Displays time in UTC (Universal Time Coordinated).
 - Should be formatted the same as the timestamp. 
 
 <<<<<<< HEAD
