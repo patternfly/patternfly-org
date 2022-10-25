@@ -23,7 +23,7 @@ At a minimum, a progress component should meet the following criteria:
     <Checkbox id="progress-a11y-checkbox-1" label={<span>The progress component has an accessible name via the <code class="ws-code">title</code> or <code class="ws-code">aria-label</code> attribute.</span>} description="This will give context when announced to users of assistive technologies when navigating through a page or a screen reader's rotor menu." />
   </ListItem>
   <ListItem>
-    <Checkbox id="progress-a11y-checkbox-2" label={<span>If progress status will dynamically appear or update, there is a live region with <code class="ws-code">aria-live="polite"</code> on page load where updates are rendered.</span>} description="This will allow assistive technologies to announce dynamically rendered alerts." />
+    <Checkbox id="progress-a11y-checkbox-2" label={<span>If progress status will dynamically appear or update, there is a live region with <code class="ws-code">aria-live="polite"</code> on page load where updates are rendered.</span>} description="This will allow assistive technologies to announce dynamically rendered updates." />
   </ListItem>
 </List>
 
@@ -66,7 +66,7 @@ If the progress component is intended or expected to contain time sensitive/crit
 
 ### Aria-atomic and aria-relevant
 
-You can further customize the way assistive technologies announce the contents of an alert group that is a live region via the `aria-atomic` and `aria-relevant` attributes.
+You can further customize the way assistive technologies announce the contents of a live region via the `aria-atomic` and `aria-relevant` attributes.
 
 - `aria-atomic="true/false"` sets whether assistive technologies should announce the live region as a whole, even if only part of the region changes, ("true"), or if only the changes to the region should be announced ("false"). For example:
 
