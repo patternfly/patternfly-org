@@ -21,7 +21,7 @@ For the HTML/CSS library:
 
 ## Testing
 
-At a minimumm, an accordion should meet the following criteria:
+At a minimum, an accordion should meet the following criteria:
 
 <List isPlain>
   <ListItem>
