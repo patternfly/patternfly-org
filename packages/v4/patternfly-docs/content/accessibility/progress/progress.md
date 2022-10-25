@@ -9,7 +9,7 @@ import { Checkbox, List, ListItem } from '@patternfly/react-core';
 ## Accessibility
 
 To implement an accessible PatternFly **progress** component:
-- Ensure that a `title` is being used or an `aria-label` is being used in its place to give context to users. If there is existing content that makes more sense to label the progress bar with, `aria-labelledby` should be passed in with a value of the associated content's `id`. 
+- Ensure a `title` or an `aria-label` are being used to give context to users. Additional context could also be provided via an `aria-labelledby` attribute mapping to the `id` of existing content on the page.
 - Ensure that a live region exists on the page through `aria-live` prior to updating the value of the progress component
 - Add a message to screen readers inside of the live region when the progress value updates, for example: <code class="ws-code">`Progress value is ${currentValue}%.`</code>
 
@@ -47,7 +47,7 @@ Various React props have been provided for more fine-tuned control over accessib
 | `aria-valuenow=""` | `.pf-c-progress__bar` |  This value needs to be updated as progress continues. |
 | `aria-valuemin="0"` | `.pf-c-progress__bar` |  The minimum value for the progress bar. |
 | `aria-valuemax="100"` | `.pf-c-progress__bar` |  The maximum value for the progress bar. If the progress is only defined using `aria-valuenow` (e.g a percentage), the value should be set to "100". If the progress is defined using `aria-valuetext`, then this value can be a number other than 100. For example, if `aria-valuetext` is "2 of 5 units", then `aria-valuemax` can be "5" and `aria-valuenow` can be "2". |
-| `aria-label="[id of .pf-c-progress__description]"` | `.pf-c-progress__bar` | Provides an accessible name for the progress component. |
+| `aria-label="["label text"` | `.pf-c-progress__bar` | Provides an accessible name for the progress component. |
 | `aria-labelledby="[id element that labels the progress]"` | `.pf-c-progress__bar` | Provides an accessible name for the progress component. |
 | `aria-describedby="[id of element that describes the progress]"` | `.pf-c-progress__bar` | Provides an accessible description for the progress component. |
 | `aria-valuetext="[loading state]"` | `.pf-c-progress__bar` |  Provide a text string that communicates current status. Only use if the important information about status is included in the text string. Do not use if percentage is the most important value to communicate. Some screen readers will ignore the percentage value determined from `aria-valuenow` when `aria-valuetext` is used. |
