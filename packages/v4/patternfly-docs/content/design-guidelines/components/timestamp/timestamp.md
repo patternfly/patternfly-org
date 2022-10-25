@@ -69,5 +69,5 @@ Abbreviated date usage is recommended when you have space restrictions. When abb
 <img src="./img/timestamp-abbreviated-date.png" alt="Timestamp with abbreviated date format" width="832"/>
 =======
 
-<img src="./img/timestamp-abbreviated-date.png" alt="Timestamp with abbreviated date format"  width="832"/>
+<img src="./img/timestamp-abbreviated-date.png" alt="Timestamp with abbreviated date format" width="832"/>
 >>>>>>> a73f42d7c64c71130ec39ab04c7d890bda14c680
