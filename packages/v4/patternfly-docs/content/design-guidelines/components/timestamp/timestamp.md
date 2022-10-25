@@ -20,7 +20,6 @@ section: components
 4. **UTC/Timezone:** Should always be displayed last, in shorthand form and be in 24-hour format.
 5. **Tooltip:** Dotted line displayed if there is tooltip available.
 
-
 ## Usage
 ### Use a timestamp when:
 -You want to represent the exact date and time that an event occurred.
