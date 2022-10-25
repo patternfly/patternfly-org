@@ -5,8 +5,8 @@ section: components
 
 ## Elements
 
-<img src="./img/timestamp-with-tooltip-underline.png" alt="Timestamp with tooltip underline" width="832"/>
-<img src="./img/timestamp-tooltip-popover.png" alt="Timestamp with tooltip popover" width="832"/>
+<img src="./img/timestamp-with-tooltip-underline.png" alt="Timestamp component with tooltip underline" width="832"/>
+<img src="./img/timestamp-tooltip-popover.png" alt="Timestamp component with tooltip popover" width="832"/>
 
 <<<<<<< HEAD
 1. **Day:** Spelled out or abbreviated format. [Guide](https://www.patternfly.org/v4/ux-writing/numerics).
