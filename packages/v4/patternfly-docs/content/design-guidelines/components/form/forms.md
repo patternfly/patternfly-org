@@ -215,7 +215,7 @@ For more information about writing effective helper text, see the [content](#con
 
 ##### Popovers
 
-[popovers](/components/popover/design-guidelines) are useful for fields that might require additional background or explanation. Popovers may also link to external help pages or other related documentation. 
+[Popovers](/components/popover/design-guidelines) are useful for fields that might require additional background or explanation. Popovers may also link to external help pages or other related documentation. 
 
 In a form, indicate a popover with an unfilled question mark circle that reveals information when clicked. Place popovers to the right of their corresponding form label.
 
