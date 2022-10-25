@@ -16,10 +16,10 @@ To implement an accessible PatternFly **backdrop**:
 
 <List isPlain>
   <ListItem>
-    <Checkbox id="alertGroup-a11y-checkbox-1" label="Users cannot interact with or navigate to the backdrop using keyboard navigation." />
+    <Checkbox id="backdrop-a11y-checkbox-1" label="Users cannot interact with or navigate to the backdrop or any content beneath it using keyboard navigation." />
   </ListItem>
   <ListItem>
-    <Checkbox id="alertGroup-a11y-checkbox-2" label="Users cannot interact with the backdrop using a screen reader." />
+    <Checkbox id="backdrop-a11y-checkbox-2" label="Users cannot interact with the backdrop using a screen reader." />
   </ListItem>
 </List>
 
