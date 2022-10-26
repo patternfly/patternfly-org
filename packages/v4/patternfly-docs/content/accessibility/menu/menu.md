@@ -40,7 +40,7 @@ Various React props have been provided for more fine-tuned control over accessib
 
 
 ## HTML/CSS customization
-| Attribute | Applied | Outcome |
+| Attribute | Applied | Reason |
 | -- | -- | -- |
 | `role="menu"` | `.pf-c-menu__list` | Declares `.pf-c-menu__list` as a menu. |
 | `disabled` | `button.pf-c-menu__item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
