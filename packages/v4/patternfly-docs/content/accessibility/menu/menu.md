@@ -19,10 +19,10 @@ At a minimum, a menu component should meet the following criteria:
 
 <List isPlain>
   <ListItem>
-    <Checkbox id="menu-a11y-checkbox-1" label={<span>Users should be able to use keyboard navigation to enter the menu, navigate between menu items, select an option, or escape the menu.</span>} description="<kbd>Tab</kbd> navigates to the menu, <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous focusable element, up and down arrow keys should be used to navigate between menu times, and <kbd>Escape</kbd> should close the menu."/>
+    <Checkbox id="menu-a11y-checkbox-1" label={<span>Users should be able to use keyboard navigation to enter the menu, navigate between menu items, select an option, or escape the menu.</span>} description="<span><kbd>Tab</kbd> navigates to the menu, <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous focusable element, up and down arrow keys should be used to navigate between menu times, and <kbd>Escape</kbd> should close the menu."</span>/>
   </ListItem>
   <ListItem>
-    <Checkbox id="menu-a11y-checkbox-2" label={<span>If using menu item actions, the actions have an accessible name via the <code class="ws-code">aria-label</code></span>} description="This will differentiate each action when announced to users of assistive technologies when navigating through a page or a screen reader's rotor menu." />
+    <Checkbox id="menu-a11y-checkbox-2" label={<span>If using menu item actions, the actions have an accessible name via the <code className="ws-code">aria-label</code></span>} description="This will differentiate each action when announced to users of assistive technologies when navigating through a page or a screen reader's rotor menu." />
   </ListItem>
 </List>
 
@@ -33,9 +33,9 @@ Various React props have been provided for more fine-tuned control over accessib
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `aria-label` | `Menu` | Adds an accessible name to the menu |
-| `aria-label` | `MenuItem` | Adds an accessible name to the menu item |
-| `aria-label` | `MenuItemAction` | Adds an accessible name to the action item on the menu |
+| `aria-label` | `Menu` | Adds an accessible name to the menu. |
+| `aria-label` | `MenuItem` | Adds an accessible name to the menu item. |
+| `aria-label` | `MenuItemAction` | Adds an accessible name to the action item on the menu. |
 
 
 
