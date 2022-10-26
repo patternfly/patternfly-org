@@ -81,7 +81,7 @@ When a navigation has expandable content, `buttonProps` must be passed into the 
 
 ## Additional considerations
 
-Consumers must ensure they take any additional considerations when customizing a progress component, using it in a way not described or recommended by PatternFly, or in various other specific use-cases not outlined elsewhere on this page.
+Consumers must ensure they take any additional considerations when customizing a navigation component, using it in a way not described or recommended by PatternFly, or in various other specific use-cases not outlined elsewhere on this page.
 
 
 ### Flyout Variation
