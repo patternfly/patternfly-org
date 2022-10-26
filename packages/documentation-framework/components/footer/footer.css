@@ -2,8 +2,10 @@
   font-family: "RedHatText";
   font-weight: 300;
   background-color: #1a1a1a !important;
-  padding: 48px;
-  padding-top: 32px;
+  --pf-c-page__main-section--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-page__main-section--PaddingRight: var(--pf-global--spacer--2xl);
+  --pf-c-page__main-section--PaddingBottom: var(--pf-global--spacer--2xl);
+  --pf-c-page__main-section--PaddingLeft: var(--pf-global--spacer--2xl);
   /* Hide long overflowing tocs */
   z-index: 1;
 }
