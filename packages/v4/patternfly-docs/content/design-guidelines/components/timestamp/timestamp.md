@@ -47,4 +47,4 @@ In the 24-hour clock format, each day runs from midnight to midnight and is divi
 ### Abbreviated date
 Abbreviated date usage is recommended when you have space restrictions. When abbreviating dates follow the date and time format. 
 
-<img src="./img/timestamp-Abbreviated-date.png" alt="Timestamp with abbreviated date format" width="832"/>
+<img src="./img/timestamp-abbreviated-date.png" alt="Timestamp with abbreviated date format" width="832"/>
