@@ -70,7 +70,7 @@ When a navigation has expandable content, `buttonProps` must be passed into the 
 | -- | -- | -- |
 | `aria-label` | `.pf-c-nav` |  Describes `<nav>` landmark. |
 | `aria-label` | `.pf-c-nav__section` |  Describes a nav `<section>`, where a `.pf-c-nav__section-title` is not present. |
-| `aria-labelledby` | `.pf-c-nav__subnav` |  Gives the subnav `<section>` landmark an accessible name by referring to the element that provides the subnav `<section>` landmark title. The `aria-labelledby` attribute should be passed in with a value of the card title's id attribute.|
+| `aria-labelledby` | `.pf-c-nav__subnav` |  Gives the subnav `<section>` landmark an accessible name by referring to the element that provides the subnav `<section>` landmark title. The `aria-labelledby` attribute should be passed in with a value of the label's id attribute.|
 | `aria-expanded="false"` | `.pf-c-nav__link` |  Indicates that subnav section is hidden. |
 | `aria-expanded="true"` | `.pf-c-nav__link` |  Indicates that subnav section is visible. |
 | `hidden` | `.pf-c-nav__subnav` |  Indicates that the subnav section is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
