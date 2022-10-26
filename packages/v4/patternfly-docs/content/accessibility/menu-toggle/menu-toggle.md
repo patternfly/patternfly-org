@@ -20,7 +20,7 @@ At a minimum, a menu component should meet the following criteria:
 
 <List isPlain>
   <ListItem>
-    <Checkbox id="menutoggle-a11y-checkbox-1" label={<span>Users should be able to use keyboard navigation to activate the menu toggle with <kbd>Enter</kbd> or <kbd>Space</kbd> to enter a menu, navigate between menu items, select an option, or escape the menu.</span>} description="<span><kbd>Tab</kbd> navigates to the menu, <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous focusable element, up and down arrow keys should be used to navigate between menu times, and <kbd>Escape</kbd> should close the menu."</span>/>
+    <Checkbox id="menutoggle-a11y-checkbox-1" label={<span>Users should be able to use keyboard navigation to activate the menu toggle with <kbd>Enter</kbd> or <kbd>Space</kbd> to enter a menu, navigate between menu items, select an option, or escape the menu.</span>} description={<span><kbd>Tab</kbd> navigates to the menu, <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous focusable element, up and down arrow keys should be used to navigate between menu times, and <kbd>Escape</kbd> should close the menu."</span>}/>
   </ListItem>
   <ListItem>
     <Checkbox id="menutoggle-a11y-checkbox-2" label={<span>If there is not text within the menu toggle, such as a kebab menu toggle, an <code className="ws-code">aria-label</code> is used on the `MenuToggle`.</span>} description="This will communicate what the menu toggle is to users of assistive technologies when navigating through a page or a screen reader's rotor menu." />
