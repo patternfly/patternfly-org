@@ -3,11 +3,30 @@ id: Backdrop
 section: components
 ---
 
-A **backdrop** is used to screen the main content of a page when a modal overlay is opened. It prevents the user from doing other work on the page until the modal is dismissed.
- 
-**Keyboard users** should not be able to interact with or navigate to the backdrop, as they must address the modal overlay until the modal is dismissed.
- 
-**Screen reader users** should also not be able to interact with the backdrop for the same reasons.
+import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
-## Accessibility application:
-- If using just a Backdrop component rather than PatternFly's Modal, you must trap focus inside of the modal and disable any functionality outside of it. This can be done with a FocusTrap or any alternative means of disabling all of the content behind the Backdrop.
+## Accessibility
+
+To implement an accessible PatternFly **backdrop**:
+
+- If using just a backdrop component rather than PatternFly's [modal](/components/modal), you must trap focus inside of the modal and disable any functionality outside of it. This can be done with a `FocusTrap` or any alternative means of disabling all of the content behind the backdrop.
+## Testing
+
+ At a minimum, a backdrop should meet the following criteria:
+
+<List isPlain>
+  <ListItem>
+    <Checkbox id="backdrop-a11y-checkbox-1" label="Users cannot interact with or navigate to the backdrop or any content beneath it using keyboard navigation." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="backdrop-a11y-checkbox-2" label="Users cannot interact with the backdrop using a screen reader." />
+  </ListItem>
+</List>
+
+## React customization
+
+A backdrop does not have any further React props for accessibility. 
+
+## HTML/CSS customization
+
+A backdrop does not have any further HTML/CSS attributes or classes for accessibility.
