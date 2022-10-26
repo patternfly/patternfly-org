@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.13.51 (2022-10-26)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
+## 4.13.50 (2022-10-26)
+
+
+### Bug Fixes
+
+* **components:** width limit the description section ([#3237](https://github.com/patternfly/patternfly-org/issues/3237)) ([3080e84](https://github.com/patternfly/patternfly-org/commit/3080e8440acb7cec49f24c44160c48a9aa4caff7))
+
+
+
+
+
+## 4.13.49 (2022-10-26)
+
+**Note:** Version bump only for package patternfly-org-4
+
+
+
+
+
 ## 4.13.48 (2022-10-25)
 
 **Note:** Version bump only for package patternfly-org-4

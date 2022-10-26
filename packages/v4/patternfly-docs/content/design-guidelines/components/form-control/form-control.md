@@ -5,14 +5,17 @@ section: components
 
 Form control can be applied to various input components, including text boxes, dropdowns/select lists, and text areas.
 
-## Control types
+## Usage
+While form controls are useful in providing feedback on user input, they don't need to be implemented for every input instance. Only use form controls when it is essential to convey information to the user. For example, if any string is valid for a text input, or any selection in a list is acceptable, form controls are not necessary.
+
+## Variations
 While form control styles differ slightly depending on the component, they all use some combination of underlines, color, and icons to give users **feedback** on their inputs and selections. For example, if a user types an invalid string into a text box, the box changes state to indicate the error.
 
 <img src="./img/formControlTypes.png" alt="Form control types" width="661px"/>
 
 1. **Default component:** State of the input component before any form control is applied.
 2. **Status area:** Icon and underline color indicate the status of the input or selection.
-3. **Grey-out controls:** Actionless form control can be either disabled or read only. The only difference visually is the underline for read only input.
+3. **[Grey-out controls](#grey-out-controls):** Actionless form control can be either disabled or read only. The only difference visually is the underline for read only input.
 4. **Form fields with icon:** Custom icons can be included in input fields.
 
 ### Status/state controls
@@ -28,7 +31,7 @@ Use success controls to indicate valid user input for fields that require a spec
 
 <img src="./img/success_example.png" alt="Valid input example" width="762px"/>
 
-### Gray-out controls
+### Grey-out controls
 Input fields should be grayed out when the user cannot perform actions. Gray-out controls indicate that a field is either temporarily disabled, or permanently read-only.
 
 #### Disable controls
@@ -50,5 +53,4 @@ Icons can be included within form fields to indicate the type of input required.
 
 As a designer, you can choose to design input components with custom icons. Make sure that whatever icon you choose informs the user about the type of input that field requires.
 
-### General guidelines
-While form controls are useful in providing feedback on user input, they don't need to be implemented for every input instance. Only use form controls when it is essential to convey information to the user. For example, if any string is valid for a text input, or any selection in a list is acceptable, form controls are not necessary.
+
