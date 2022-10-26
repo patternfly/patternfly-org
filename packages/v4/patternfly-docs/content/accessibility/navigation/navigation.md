@@ -23,7 +23,7 @@ At a minimum, a navigation component should meet the following criteria:
     <Checkbox id="navigation-a11y-checkbox-1" label={<span>The navigation has an accessible name via the <code class="ws-code">aria-label</code></span>} description="This will differentiate each navigation when announced to users of assistive technologies when navigating through a page or a screen reader's rotor menu." />
   </ListItem>
   <ListItem>
-    <Checkbox id="navigation-a11y-checkbox-2" label="Standard keyboard navigation can be used to navigate between focusable elements within the navigation." description={<span><kbd>Tab</kbd> navigates to the next focusable element, and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous focusable element. Expandable items can be opened with <kbd>Enter</kbd> or <kbd>Space</kbd>. Flyout menu items use arrow keys to navigate between flyout items, and press <kbd>Escape</kbd> or left arrow to close a flyout. When the navigation is collapsed, you should not be able to navigate to any of the elements.</span>} />
+    <Checkbox id="navigation-a11y-checkbox-2" label="Standard keyboard navigation can be used to navigate between focusable elements within the navigation." description={<span><kbd>Tab</kbd> navigates to the next focusable element, and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous focusable element. Expandable items can be opened with <kbd>Enter</kbd> or <kbd>Space</kbd>.  When the navigation is collapsed, you should not be able to navigate to any of the elements.</span>} />
   </ListItem>
   <ListItem>
     <Checkbox id="navigation-a11y-checkbox-3" label={<span>For expandable or grouped navigation, an accessible name via the <code class="ws-code">title</code> or <code class="ws-code">aria-label</code> is used.</span>} description="This will differentiate each navigation when announced to users of assistive technologies when navigating through a page or a screen reader's rotor menu." />
@@ -38,11 +38,15 @@ Various React props have been provided for more fine-tuned control over accessib
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `aria-label` | `Nav` | 	Accessible label for the nav when there are multiple navs on the page |
-| `ariaLeftScroll` | `NavList` | Aria-label for the left scroll button |
-| `ariaRightScroll` | `NavList` | Aria-label for the right scroll button |
-| `title` | `NavExpandable` | Title shown for the expandable list |
-| `buttonProps` | `NavExpandable` | Additional props added to the NavExpandable `<button>`|
+| `aria-label` | `Nav` | 	Adds an accessible label for the nav when there are multiple navs on the page |
+| `ariaLeftScroll` | `NavList` | Adds an aria-label for the left scroll button |
+| `ariaRightScroll` | `NavList` | Adds an aria-label for the right scroll button |
+| `id` | `NavGroup` | Used as an identifier to use when there is an `aria-labelledby` on a section element |
+| `title` | `NavGroup` | Adds a title shown for the group |
+| `isActive` | `NavItem` |  Will add the `aria-current` attribute on a nav item when active |
+| `isExpanded` | `NavExpandable` | Adds the `aria-expanded` attribute when is expanded and `hidden` attribute when collapsed |
+| `title` | `NavExpandable` | Adds a title shown for the expandable list |
+| `buttonProps` | `NavExpandable` | Adds any additional props added to the NavExpandable `<button>`|
 | `srText` | `NavExpandable` | If defined, screen readers will read this text instead of the list title |
 
 
@@ -62,11 +66,11 @@ When a navigation has expandable content, `buttonProps` must be passed into the 
 
 ## HTML/CSS customization
 
-| Attribute | Applied to | Outcome |
+| Attribute | Applied to | Reason |
 | -- | -- | -- |
-| `aria-label="[landmark description]"` | `.pf-c-nav` |  Describes `<nav>` landmark. |
-| `aria-label="[section title]"` | `.pf-c-nav__section` |  Describes a nav `<section>`, where a `.pf-c-nav__section-title` is not present. |
-| `aria-labelledby="[id value of link describing subnav]"` | `.pf-c-nav__subnav` |  Gives the subnav `<section>` landmark an accessible name by referring to the element that provides the subnav `<section>` landmark title. |
+| `aria-label` | `.pf-c-nav` |  Describes `<nav>` landmark. |
+| `aria-label` | `.pf-c-nav__section` |  Describes a nav `<section>`, where a `.pf-c-nav__section-title` is not present. |
+| `aria-labelledby` | `.pf-c-nav__subnav` |  Gives the subnav `<section>` landmark an accessible name by referring to the element that provides the subnav `<section>` landmark title. The `aria-labelledby` attribute should be passed in with a value of the card title's id attribute.|
 | `aria-expanded="false"` | `.pf-c-nav__link` |  Indicates that subnav section is hidden. |
 | `aria-expanded="true"` | `.pf-c-nav__link` |  Indicates that subnav section is visible. |
 | `hidden` | `.pf-c-nav__subnav` |  Indicates that the subnav section is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
@@ -75,3 +79,11 @@ When a navigation has expandable content, `buttonProps` must be passed into the 
 | `aria-haspopup="true"` | `.pf-c-nav__link` | Declares that a nav item has a submenu. |
 
 
+## Additional considerations
+
+Consumers must ensure they take any additional considerations when customizing a progress component, using it in a way not described or recommended by PatternFly, or in various other specific use-cases not outlined elsewhere on this page.
+
+
+### Flyout Variation
+
+The Flyout navigation will use slightly different keyboard interactions compared to other navigation variations. Users will need to open a flyout using `Space` or `right arrow`, and Flyout menu items use arrow keys to navigate between flyout menu items. Pressing `Escape` or `left arrow` should close a flyout. It's important to remember that while keyboard users will prefer to use arrow keys to open a flyout since it will match the visual representation, screen reader users will likely still rely on `Space` or `Enter` since they tend to rely on click events. Remember that every interactive element should only be associated with one action. For example, you should not have a link on a button that is also a flyout. The action of selecting should only be associated with either opening the menu or taking an action but not both.
