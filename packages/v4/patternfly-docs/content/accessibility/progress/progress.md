@@ -11,7 +11,7 @@ import { Checkbox, List, ListItem } from '@patternfly/react-core';
 To implement an accessible PatternFly **progress** component:
 - Ensure a `title` or an `aria-label` are being used to give context to users. Additional context could also be provided via an `aria-labelledby` attribute mapping to the `id` of existing content on the page.
 - Ensure that a live region exists on the page through `aria-live` prior to updating the value of the progress component
-- Add a message to screen readers inside of the live region when the progress value updates, for example: <code class="ws-code">`Progress value is ${currentValue}%.`</code>
+- Add a message to screen readers inside of the live region when the progress value updates, for example: `Progress value is ${currentValue}%.`
 
 
 ## Testing
@@ -34,19 +34,25 @@ Various React props have been provided for more fine-tuned control over accessib
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `aria-label` | `Progress` | Adds accessible text to the ProgressBar. Required when title not used and there is not any label associated with the progress bar |
-| `aria-labelledby` | `Progress` | Associates the ProgressBar with it's label for accessibility purposes. Required when title not used |
+| `aria-label` | `Progress` | Adds accessible text to the ProgressBar. Required when title not used and there is not any label associated with the progress bar. |
+| `aria-labelledby` | `Progress` | Associates the ProgressBar with it's label for accessibility purposes. The `aria-labelledby` attribute should be passed in with a value of the label's id attribute. Required when title not used. |
+| `id` | `Progress` | Used as a DOM id for progress component. |
+| `label` | `Progress` | Adds a text description of current progress value to display instead of percentage. |
+| `min` | `Progress` | Minimal value of progress. |
+| `max` | `Progress` | Maximum value of progress. |
+| `valueText` | `Progress` | Adds an accessible text description of current progress value, for when value is not a percentage. Use with label. |
+
 
 
 
 ## HTML/CSS customization
 
-| Attribute | Applied to | Outcome |
+| Attribute | Applied to | Reason |
 | -- | -- | -- |
 | `role="progressbar"` | `.pf-c-progress__bar` |  This role is used for an element that displays the progress status for a task that takes a long time or consists of several steps. |
 | `aria-valuenow=""` | `.pf-c-progress__bar` |  This value needs to be updated as progress continues. |
 | `aria-valuemin="0"` | `.pf-c-progress__bar` |  The minimum value for the progress bar. |
-| `aria-valuemax="100"` | `.pf-c-progress__bar` |  The maximum value for the progress bar. If the progress is only defined using `aria-valuenow` (e.g a percentage), the value should be set to "100". If the progress is defined using `aria-valuetext`, then this value can be a number other than 100. For example, if `aria-valuetext` is "2 of 5 units", then `aria-valuemax` can be "5" and `aria-valuenow` can be "2". |
+| `aria-valuemax="100"` | `.pf-c-progress__bar` |  The maximum value for the progress bar. If the progress is only defined using `aria-valuenow` (e.g a percentage), the value should be set to "100." If the progress is defined using `aria-valuetext`, then this value can be a number other than 100. For example, if `aria-valuetext` is "2 of 5 units," then `aria-valuemax` can be "5" and `aria-valuenow` can be "2." |
 | `aria-label="["label text"` | `.pf-c-progress__bar` | Provides an accessible name for the progress component. |
 | `aria-labelledby="[id element that labels the progress]"` | `.pf-c-progress__bar` | Provides an accessible name for the progress component. |
 | `aria-describedby="[id of element that describes the progress]"` | `.pf-c-progress__bar` | Provides an accessible description for the progress component. |
@@ -60,7 +66,7 @@ Consumers must ensure they take any additional considerations when customizing a
 
 ### Aria-live
 
-When intending or expecting the progress to contain updates that dynamically appear or update, the recommended method of creating a live region is by using an `aria-live` value of "polite".
+When intending or expecting the progress to contain updates that dynamically appear or update, the recommended method of creating a live region is by using an `aria-live` value of "polite."
 
 If the progress component is intended or expected to contain time sensitive/critical information, `aria-live="assertive"` can instead be manually passed in. This should be used sparingly, as it will interrupt whatever task users are currently in the middle of.
 
@@ -68,7 +74,7 @@ If the progress component is intended or expected to contain time sensitive/crit
 
 You can further customize the way assistive technologies announce the contents of a live region via the `aria-atomic` and `aria-relevant` attributes.
 
-- `aria-atomic="true/false"` sets whether assistive technologies should announce the live region as a whole, even if only part of the region changes, ("true"), or if only the changes to the region should be announced ("false"). For example:
+- `aria-atomic="true/false"` sets whether assistive technologies should announce the live region as a whole, even if only part of the region changes, (true), or if only the changes to the region should be announced (false). For example:
 
   ```noLive
     <div className="pf-screen-reader" aria-live="polite">
@@ -80,7 +86,7 @@ You can further customize the way assistive technologies announce the contents o
 
   In the above code block, if there were 2 progress updates already rendered within the live region and `aria-atomic="true"` was passed in, another update being rendered into the container would cause all 3 updates to be announced. If `aria-atomic="false"` were passed in instead, only the new update would be announced.
 
-- `aria-relevant` sets what types of changes are relevant to a live region and what qualifies as an update to it. The value passed in is a space-separated list of one or more of "additions", "removals", or "text", or "all" for all 3. The default value is "additions text" if there is no ancestor with this attribute passed in. An example for when a value of "removals" is passed in:
+- `aria-relevant` sets what types of changes are relevant to a live region and what qualifies as an update to it. The value passed in is a space-separated list of one or more of "additions," "removals," or "text," or "all" for all 3. The default value is "additions text" if there is no ancestor with this attribute passed in. An example for when a value of "removals" is passed in:
 
   ```noLive
     <div className="pf-screen-reader" aria-live="polite" aria-relevant="additions text removals">
