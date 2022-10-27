@@ -16,8 +16,8 @@ section: components
 
 ## Usage
 ### Use a timestamp when:
--You want to represent the exact date and time that an event occurred.
--Users can go back and make use of past content.
+- You want to represent the exact date and time that an event occurred.
+- Users can go back and make use of past content.
 
 ### Best practices
 #### For timestamp:
@@ -26,7 +26,8 @@ section: components
 - Timestamp at minimum should include date, time, and timezone (shorthand format).
 - Every element does not need to be used when implementing a timestamp.
 #### For tooltip:
-- Not required but recommended to provide more precise time for relative times. Tooltips should show timestamps in UTC time.
+- Not required but recommended to provide more precise time for relative times. 
+- Tooltips should show timestamps in UTC time.
 - Recommend displaying time in 24-hour format.
 - Displays time in UTC (Universal Coordinated Time).
 - Should be formatted the same as the timestamp. 
