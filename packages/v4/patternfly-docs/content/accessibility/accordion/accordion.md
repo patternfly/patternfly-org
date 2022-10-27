@@ -43,7 +43,7 @@ At a minimum, an accordion should meet the following criteria:
 
 ## React customization
 
-Various React props have been provided for more fine-tuned control over accessibility.
+The following React props have been provided for more fine-tuned control over accessibility.
 
 | Prop | Applied to | Reason | 
 |---|---|---|
@@ -90,7 +90,7 @@ Passing in the `aria-label` prop to the accordion component can be helpful when 
 
 ## HTML/CSS customization
 
-Various HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
+The following HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
