@@ -24,7 +24,7 @@ At a minimum, an banner should meet the following criteria:
     <Checkbox id="banner-a11y-checkbox-2" label="A user should be able to have a screen reader describe the contents of the banner, but not focus on or interact with the banner otherwise." />
   </ListItem>
   <ListItem>
-    <Checkbox id="banner-a11y-checkbox-3" label={<span>If the banner conveys status, a status icon and <code>.pf-screen-reader</code> element is included.</span>} />
+    <Checkbox id="banner-a11y-checkbox-3" label={<span>If the banner conveys status, a status icon and <code className="ws-code">.pf-screen-reader</code> element is included.</span>} />
   </ListItem>
 </List>
 
