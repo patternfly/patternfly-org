@@ -47,9 +47,9 @@ Various React props have been provided for more fine-tuned control over accessib
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `aria-label` | `Accordion` | Adds an accessible name to the accordion for screen readers. If there is no other surrounding context provided for an accordion, especially if there are multiple accordions on a page, this should be passed in with descriptive text. |
-| `headingLevel` | `Accordion` | When `asDefinitionList={false}` is passed in, sets the container for the accordion toggle to one of the six heading elements (`h3` by default). Be sure to not skip heading levels when passing this prop in. For example, if an accordion is within a page section that has an `h2` heading, you should not pass `headingLevel="h4"`. |
-| `aria-label` | `AccordionContent` | Adds an accessible name to the content of an accordion item. |
+| `aria-label="[text describing the accordion component]"` | `Accordion` | Adds an accessible name to the accordion for screen readers. If there is no other surrounding context provided for an accordion, especially if there are multiple accordions on a page, this should be passed in with descriptive text. |
+| `headingLevel="[a heading tag]"` | `Accordion` | When `asDefinitionList={false}` is passed in, sets the container for the accordion toggle to one of the six heading elements (`h3` by default). Be sure to not skip heading levels when passing this prop in. For example, if an accordion is within a page section that has an `h2` heading, you should not pass `headingLevel="h4"`. |
+| `aria-label="[text describing the accordion content]"` | `AccordionContent` | Adds an accessible name to the content of an accordion item. |
 | `isHidden` | `AccordionContent` | Determines whether the content of the accordion item is hidden or not. Should be used along with the `isExpanded` prop on the accordion toggle. |
 | `isExpanded` | `AccordionToggle` | Adds styling to visually determine whether the toggle is expanded or collapsed. Also sets the accessibility attribute `aria-expanded` with a value of "true" or "false", which notifies screen readers whether the accordion toggle is expanded ("true") or collapsed ("false"). Should be used along with the `isHidden` prop on the accordion content. |
 
@@ -94,10 +94,9 @@ Various HTML attributes and PatternFly classes can be used for more fine-tuned c
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `aria-label` | `.pf-c-accordion` | Adds an accessible name to the accordion for screen readers. If there is no other surrounding context provided for an accordion, especially if there are multiple accordions on a page, this should be passed in with descriptive text. <br/><br/> See the [aria-label prop example](#aria-label) in the React customization section. |
-| `aria-expanded="false"` | `.pf-c-accordion__toggle` | Indicates that the accordion toggle is collapsed to assistive technologies. **Required** if the toggle is collapsed. |
-| `aria-expanded="true"` | `.pf-c-accordion__toggle` | Indicates that the accordion toggle is expanded to assistive technologies. **Required** if the toggle is expanded. |
-| `aria-label` | `.pf-c-accordion__expanded-content` | Adds an accessible name to the content of an accordion item. |
+| `aria-label="[text describing the accordion component]"` | `.pf-c-accordion` | Adds an accessible name to the accordion for screen readers. If there is no other surrounding context provided for an accordion, especially if there are multiple accordions on a page, this should be passed in with descriptive text. <br/><br/> See the [aria-label prop example](#aria-label) in the React customization section. |
+| `aria-expanded="[true or false]"` | `.pf-c-accordion__toggle` | Indicates whether the accordion toggle is expanded (true) or collapsed (false) to assistive technologies. **Required**. |
+| `aria-label="[text describing the accordion content]"` | `.pf-c-accordion__expanded-content` | Adds an accessible name to the content of an accordion item. |
 | `hidden` | `.pf-c-accordion__expanded-content` | Hides the accordion content. **Required** when `aria-expanded="false"` is passed in. |
 | `aria-hidden="true"` | `.pf-c-accordion__toggle-icon` | Removes the accordion toggle icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
 
