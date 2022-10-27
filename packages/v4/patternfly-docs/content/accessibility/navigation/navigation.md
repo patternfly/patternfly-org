@@ -34,20 +34,20 @@ At a minimum, a navigation component should meet the following criteria:
 
 ## React customization
 
-Various React props have been provided for more fine-tuned control over accessibility.
+The following React props have been provided for more fine-tuned control over accessibility.
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `aria-label` | `Nav` | 	Adds an accessible label for the nav when there are multiple navs on the page |
-| `ariaLeftScroll` | `NavList` | Adds an aria-label for the left scroll button |
-| `ariaRightScroll` | `NavList` | Adds an aria-label for the right scroll button |
+| `aria-label="[text describing the nav component]"` | `Nav` | 	Adds an accessible label for the nav when there are multiple navs on the page |
+| `ariaLeftScroll="[text describing the left scroll button]"` | `NavList` | Adds an aria-label for the left scroll button |
+| `ariaRightScroll="[text describing the right scroll button]"` | `NavList` | Adds an aria-label for the right scroll button |
 | `id` | `NavGroup` | Used as an identifier to use when there is an `aria-labelledby` on a section element |
-| `title` | `NavGroup` | Adds a title shown for the group |
+| `title="[text label for an expandable nav]"` | `NavGroup` | Adds a title shown for the group |
 | `isActive` | `NavItem` |  Will add the `aria-current` attribute on a nav item when active |
 | `isExpanded` | `NavExpandable` | Adds the `aria-expanded` attribute when is expanded and `hidden` attribute when collapsed |
 | `title` | `NavExpandable` | Adds a title shown for the expandable list |
-| `buttonProps` | `NavExpandable` | Adds any additional props added to the NavExpandable `<button>`|
-| `srText` | `NavExpandable` | If defined, screen readers will read this text instead of the list title |
+| `buttonProps={[an object containing button props]}` | `NavExpandable` | Adds any additional props added to the NavExpandable `<button>`|
+| `srText="[text describing an expandable nav]"` | `NavExpandable` | If defined, screen readers will read this text instead of the list title |
 
 
 ### Expandable toggle props
@@ -66,11 +66,13 @@ When a navigation has expandable content, `buttonProps` must be passed into the 
 
 ## HTML/CSS customization
 
-| Attribute | Applied to | Reason |
+The following HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
+
+| Attribute or class | Applied to | Reason |
 | -- | -- | -- |
-| `aria-label` | `.pf-c-nav` |  Describes `<nav>` landmark. |
-| `aria-label` | `.pf-c-nav__section` |  Describes a nav `<section>`, where a `.pf-c-nav__section-title` is not present. |
-| `aria-labelledby` | `.pf-c-nav__subnav` |  Gives the subnav `<section>` landmark an accessible name by referring to the element that provides the subnav `<section>` landmark title. The `aria-labelledby` attribute should be passed in with a value of the label's id attribute.|
+| `aria-label="[text describing the nav component]"` | `.pf-c-nav` |  Describes `<nav>` landmark. |
+| `aria-label="[text describing a nav section]"` | `.pf-c-nav__section` |  Describes a nav `<section>`, where a `.pf-c-nav__section-title` is not present. |
+| `aria-labelledby="[id of the element that labels the subnav]"` | `.pf-c-nav__subnav` |  Gives the subnav `<section>` landmark an accessible name by referring to the element that provides the subnav `<section>` landmark title. The `aria-labelledby` attribute should be passed in with a value of the label's id attribute.|
 | `aria-expanded="false"` | `.pf-c-nav__link` |  Indicates that subnav section is hidden. |
 | `aria-expanded="true"` | `.pf-c-nav__link` |  Indicates that subnav section is visible. |
 | `hidden` | `.pf-c-nav__subnav` |  Indicates that the subnav section is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
