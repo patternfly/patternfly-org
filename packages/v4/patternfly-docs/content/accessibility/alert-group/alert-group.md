@@ -28,7 +28,7 @@ At a minimum, an alert group should meet the following criteria:
     <Checkbox id="alertGroup-a11y-checkbox-1" label="The alert group exists on page load and is not dynamically rendered." description="This should always exist in the DOM, especially when alerts will dynamically appear or update within it." />
   </ListItem>
   <ListItem>
-    <Checkbox id="alertGroup-a11y-checkbox-2" label={<span>If alerts will dynamically appear or update, the alert group has the <code class="ws-code">aria-live="polite"</code> attribute.</span>} description="This will allow assistive technologies to announce dynamically rendered alerts." />
+    <Checkbox id="alertGroup-a11y-checkbox-2" label={<span>If alerts will dynamically appear or update, the alert group has the <code className="ws-code">aria-live="polite"</code> attribute.</span>} description="This will allow assistive technologies to announce dynamically rendered alerts." />
   </ListItem>
 </List>
 
