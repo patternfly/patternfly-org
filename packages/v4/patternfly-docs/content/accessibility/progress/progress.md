@@ -34,20 +34,22 @@ Various React props have been provided for more fine-tuned control over accessib
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `aria-label` | `Progress` | Adds accessible text to the ProgressBar. Required when title not used and there is not any label associated with the progress bar. |
-| `aria-labelledby` | `Progress` | Associates the ProgressBar with it's label for accessibility purposes. The `aria-labelledby` attribute should be passed in with a value of the label's id attribute. Required when title not used. |
+| `aria-label="[text describing the progress bar]"` | `Progress` | Adds accessible text to the ProgressBar. Required when title not used and there is not any label associated with the progress bar. |
+| `aria-labelledby="[id of the element that labels the progress bar]"` | `Progress` | Associates the ProgressBar with it's label for accessibility purposes. The `aria-labelledby` attribute should be passed in with a value of the label's id attribute. Required when title not used. |
 | `id` | `Progress` | Used as a DOM id for progress component. |
-| `label` | `Progress` | Adds a text description of current progress value to display instead of percentage. |
-| `min` | `Progress` | Minimal value of progress. |
-| `max` | `Progress` | Maximum value of progress. |
-| `valueText` | `Progress` | Adds an accessible text description of current progress value, for when value is not a percentage. Use with label. |
+| `label="[text describing current progress value]"` | `Progress` | Adds a text description of current progress value to display instead of percentage. |
+| `min={a number}` | `Progress` | Minimum value of progress. |
+| `max={a number}` | `Progress` | Maximum value of progress. |
+| `valueText="[text describing the current progress value]"` | `Progress` | Adds a visually hidden text description of current progress value, for when value is not a percentage. Also sets the accessibility attribute `aria-valuetext`. This prop should be used alongside the `label` prop. |
 
 
 
 
 ## HTML/CSS customization
 
-| Attribute | Applied to | Reason |
+The following HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
+
+| Attribute or class | Applied to | Reason |
 | -- | -- | -- |
 | `role="progressbar"` | `.pf-c-progress__bar` |  This role is used for an element that displays the progress status for a task that takes a long time or consists of several steps. |
 | `aria-valuenow=""` | `.pf-c-progress__bar` |  This value needs to be updated as progress continues. |
