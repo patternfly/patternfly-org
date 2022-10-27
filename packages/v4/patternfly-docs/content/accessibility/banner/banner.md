@@ -30,14 +30,14 @@ At a minimum, an banner should meet the following criteria:
 
 ## React customization
 
-Various React props have been provided for more fine-tuned control over accessibility.
+The following React props have been provided for more fine-tuned control over accessibility.
 
 | Prop | Applied to | Reason  |
 | -- | -- | -- |
 |`screenReaderText`| `Banner` | Adds text that is accessible only to assistive technologies and is not visually rendered. This prop should only be passed in when the banner is meant to convey status. |
 ## HTML/CSS customization
 
-Various HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
+The following HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
