@@ -34,7 +34,7 @@ Various React props have been provided for more fine-tuned control over accessib
 
 | Prop | Applied to | Reason  |
 | -- | -- | -- |
-|`screenReaderText`| `Banner` | Text announced by screen readers to indicate the type of banner. Defaults to `${variant} banner` if this prop is not passed in. |
+|`screenReaderText`| `Banner` | Adds text that is accessible only to assistive technologies and is not visually rendered. This prop should only be passed in when the banner is meant to convey status. |
 ## HTML/CSS customization
 
 Various HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
