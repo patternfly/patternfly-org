@@ -60,13 +60,13 @@ At a minimum, a tooltip should meet the following criteria:
     <Checkbox id="tooltip-a11y-checkbox-1" label="Unless it is a case of truncation, the tooltip is not placed on a static element." />
   </ListItem>
   <ListItem>
-    <Checkbox id="tooltip-a11y-checkbox-2" label={<span>The tooltip component has the <code class="ws-code">role="tooltip"</code> attribute.</span>} />
+    <Checkbox id="tooltip-a11y-checkbox-2" label={<span>The tooltip component has the <code className="ws-code">role="tooltip"</code> attribute.</span>} />
   </ListItem>
   <ListItem>
-    <Checkbox id="tooltip-a11y-checkbox-3" label={<span>If the tooltip is meant to act as a primary label, the trigger has the <code class="ws-code">aria-labelledby</code> attribute linked to the tooltip contents.</span>} description="One use-case for this is when a button contains only an icon and no visible text label." />
+    <Checkbox id="tooltip-a11y-checkbox-3" label={<span>If the tooltip is meant to act as a primary label, the trigger has the <code className="ws-code">aria-labelledby</code> attribute linked to the tooltip contents.</span>} description="One use-case for this is when a button contains only an icon and no visible text label." />
   </ListItem>
   <ListItem>
-    <Checkbox id="tooltip-a11y-checkbox-4" label={<span>If the tooltip is meant to act as supplementary information, the trigger has the <code class="ws-code">aria-describedby</code> attribute linked to the tooltip contents.</span>} />
+    <Checkbox id="tooltip-a11y-checkbox-4" label={<span>If the tooltip is meant to act as supplementary information, the trigger has the <code className="ws-code">aria-describedby</code> attribute linked to the tooltip contents.</span>} />
   </ListItem>
   <ListItem>
     <Checkbox id="tooltip-a11y-checkbox-5" label="Using a mouse to hover over the triggering element causes the tooltip to trigger, and the tooltip persists while hovering over the trigger or the tooltip itself." />
@@ -87,14 +87,14 @@ At a minimum, a tooltip should meet the following criteria:
 
 ## React customization
 
-Various React props have been provided for more fine-tuned control over accessibility.
+The following React props have been provided for more fine-tuned control over accessibility.
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `aria-live` | `Tooltip` | When a value of "polite" is passed in, allows assistive technologies to announce the tooltip contents when it is expected or intended to dynamically update, such as in response to a user action. This should only be passed in when the `children` prop is also used on the tooltip. <br/><br/> `aria-live="polite"` is set by default when using the `reference` prop in order to allow assistive technologies to correctly announce tooltip contents regardless if it will dynamically update or not. |
-| `aria` | `Tooltip` | When a value of "describedby" (default behavior) or "labelledby" is passed in, allows assistive technologies to announce the tooltip contents when it is triggered. A value of "describedby" sets the trigger's `aria-describedby` attribute and should be used when the tooltip should act as supplementary information. A value of "labelledby" sets the trigger's `aria-labelledby` attribute and should be used when the tooltip should act as a primary label. <br/><br/> When a value of "none" is passed in, prevents `aria-labelledby` and `aria-describedby` from being set on the trigger. Only pass in a value of "none" when either `aria-labelledby` or `aria-describedby` is manually set on the trigger and the `id` prop is manually passed into the tooltip. <br/><br/> This prop should only be passed in when the `children` prop is also used on the tooltip. |
+| `aria-live="polite"` | `Tooltip` | When a value of "polite" is passed in, allows assistive technologies to announce the tooltip contents when it is expected or intended to dynamically update, such as in response to a user action. This should only be passed in when the `children` prop is also used on the tooltip. <br/><br/> `aria-live="polite"` is set by default when using the `reference` prop in order to allow assistive technologies to correctly announce tooltip contents regardless if it will dynamically update or not. |
+| `aria="[describedby, labelledby, or none]"` | `Tooltip` | When a value of "describedby" (default behavior) or "labelledby" is passed in, allows assistive technologies to announce the tooltip contents when it is triggered. A value of "describedby" sets the trigger's `aria-describedby` attribute and should be used when the tooltip should act as supplementary information. A value of "labelledby" sets the trigger's `aria-labelledby` attribute and should be used when the tooltip should act as a primary label. <br/><br/> When a value of "none" is passed in, prevents `aria-labelledby` and `aria-describedby` from being set on the trigger. Only pass in a value of "none" when either `aria-labelledby` or `aria-describedby` is manually set on the trigger and the `id` prop is manually passed into the tooltip. <br/><br/> This prop should only be passed in when the `children` prop is also used on the tooltip. |
 | `id` | `Tooltip` | Sets the `id` attribute on the tooltip, which can be passed in as the value to a trigger's `aria-labelledby` or `aria-describedby` attribute. **Required** when either `aria-labelledby` or `aria-describedby` is manually set on the trigger or when the `reference` prop is passed into the tooltip. |
-| `reference` | `Tooltip` | Links the tooltip to a trigger when the `children` prop cannot be used. When passing in this prop, the `id` prop must also be passed in, and either `aria-labelledby` or `aria-describedby` must be set on the trigger with a value of the tooltip's `id`. |
+| `reference={an HTML element or React ref}` | `Tooltip` | Links the tooltip to a trigger when the `children` prop cannot be used. When passing in this prop, the `id` prop must also be passed in, and either `aria-labelledby` or `aria-describedby` must be set on the trigger with a value of the tooltip's `id`. |
 
 ### Aria-live
 
@@ -141,15 +141,15 @@ const tooltipRef = React.useRef();
 
 ## HTML/CSS customization
 
-Various HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
+The following HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
 | `aria-live="polite"` | `.pf-c-tooltip` | Allows assistive technologies to announce the tooltip contents when it is expected or intended to dynamically update, such as in response to a user action. |
 | `id` | `.pf-c-tooltip` | Used to link the tooltip to a trigger by passing in the tooltip's `id` as the value to the trigger's `aria-describedby` or `aria-labelledby` attribute. **Required**. |
 | `role="tooltip"` | `.pf-c-tooltip` | Adds a tooltip role to the component. **Required**. |
-| `aria-describedby` | element that triggers the tooltip | Allows assistive technologies to announce the tooltip contents when it is triggered. **Required** when the tooltip should act as supplementary information. |
-| `aria-labelledby` | element that triggers the tooltip | Allows assistive technologies to announce the tooltip contents when it is triggered. **Required** when the tooltip should act as the primarly label of the trigger. |
+| `aria-describedby="[id of the element that describes this element]"` | element that triggers the tooltip | Allows assistive technologies to announce the tooltip contents when it is triggered. **Required** when the tooltip should act as supplementary information. |
+| `aria-labelledby="[id of the element that labels this element]"` | element that triggers the tooltip | Allows assistive technologies to announce the tooltip contents when it is triggered. **Required** when the tooltip should act as the primarly label of the trigger. |
 
 ## Additional considerations
 
