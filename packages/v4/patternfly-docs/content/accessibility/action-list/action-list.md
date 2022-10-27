@@ -22,7 +22,7 @@ At a minimum, an action list should meet the following criteria:
     <Checkbox id="action-list-a11y-checkbox-1" label="Standard keyboard navigation can be used to navigate between each action or other focusable elements." description={<span><kbd>Tab</kbd> navigates to the next action or focusable element, and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous action or focusable element.</span>} />
   </ListItem>
   <ListItem>
-    <Checkbox id="action-list-a11y-checkbox-2" label={<span>If an action does not have its own visible text content, an <code class="ws-code">aria-label</code> is applied to it.</span>} description="An example for when you must do this is if an action list item contains only an icon." />
+    <Checkbox id="action-list-a11y-checkbox-2" label={<span>If an action does not have its own visible text content, an <code className="ws-code">aria-label</code> is applied to it.</span>} description="An example for when you must do this is if an action list item contains only an icon." />
   </ListItem>
 </List>
 
