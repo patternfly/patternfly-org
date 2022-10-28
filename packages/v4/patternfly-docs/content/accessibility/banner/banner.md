@@ -14,7 +14,7 @@ To implement an accessible PatternFly **banner**:
 
 ## Testing
 
-At a minimum, an banner should meet the following criteria:
+At a minimum, a banner should meet the following criteria:
 
 <List isPlain>
   <ListItem>
@@ -32,9 +32,10 @@ At a minimum, an banner should meet the following criteria:
 
 The following React props have been provided for more fine-tuned control over accessibility.
 
-| Prop | Applied to | Reason  |
+| Prop | Applied to | Reason |
 | -- | -- | -- |
-|`screenReaderText`| `Banner` | Adds text that is accessible only to assistive technologies and is not visually rendered. This prop should only be passed in when the banner is meant to convey status. |
+| `screenReaderText` | `Banner` | Adds text that is accessible only to assistive technologies and is not visually rendered. This prop should only be passed in when the banner is meant to convey status. |
+
 ## HTML/CSS customization
 
 The following HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
