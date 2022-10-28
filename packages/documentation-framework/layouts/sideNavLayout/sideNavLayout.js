@@ -19,14 +19,11 @@ import {
   ToolbarGroup,
   ToolbarContent,
   ToolbarItem,
-  TextInputGroup,
-  TextInputGroupUtilities,
   SkipToContent,
-  Switch
+  Switch,
+  SearchInput
 } from '@patternfly/react-core';
-import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
-import TimesIcon from '@patternfly/react-icons/dist/esm/icons/times-icon';
 import BarsIcon from '@patternfly/react-icons/dist/esm/icons/bars-icon';
 import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
@@ -36,49 +33,52 @@ import logo from '../logo.svg';
 const HeaderTools = ({
   versions,
   hasVersionSwitcher,
-  hasSearch,
+  algolia,
   hasDarkThemeSwitcher,
+  topNavItems,
   pathPrefix
 }) => {
   const initialVersion = staticVersions.Releases.find(release => release.latest);
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const [isSearchExpanded, setSearchExpanded] = useState(false);
   const latestVersion = versions.Releases.find(version => version.latest);
+  const hasSearch = algolia;
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [searchValue, setSearchValue] = React.useState('');
+  const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
+
   const getDropdownItem = version => (
     <DropdownItem
-      key={version.name}
-      component={
-        <a href={version.latest ? '/v4' : `/${version.name}`}>
+    key={version.name}
+    component={
+      <a href={version.latest ? '/v4' : `/${version.name}`}>
           {`Release ${version.name}`}
         </a>
       }
     />
   );
-  const searchRef = React.useRef();
+
+  const onChange = (value) => {
+    setSearchValue(value);
+  };
+
+  const onToggleExpand = (isSearchExpanded) => {
+    setIsSearchExpanded(!isSearchExpanded);
+  };
 
   useEffect(() => {
-    const handleSearchHotkeys = (event) => {
-      const tagName = event.target.tagName.toLowerCase();
-      const isContentEditable = event.target.contentEditable === 'true';
-      if (
-        (event.code === 'Slash' || event.code === 'KeyS') &&
-        tagName !== 'input' &&
-        tagName !== 'textarea' &&
-        !isContentEditable
-      ) {
-        setSearchExpanded(true);
-        setTimeout(() => searchRef.current && searchRef.current.focus(), 0);
-      } else if (event.code === 'Escape' && event.target === searchRef.current) {
-        setSearchExpanded(false);
-      }
-    };
-    window.addEventListener('keyup', handleSearchHotkeys);
-    return () => window.removeEventListener('keyup', handleSearchHotkeys);
-  }, []);
+    // reattach algolia to input each time search is expanded
+    if (hasSearch && isSearchExpanded) {
+      attachDocSearch(algolia, '.ws-global-search .pf-c-text-input-group__text-input', 1000);
+    }
+  }, [isSearchExpanded])
 
   return (
-    <Toolbar>
+    <Toolbar isFullHeight>
       <ToolbarContent>
+        {topNavItems.length > 0 && (
+          <ToolbarItem className="pf-m-overflow-container">
+            <TopNav navItems={topNavItems} />
+          </ToolbarItem>
+        )}
         <ToolbarGroup
           alignment={{ default: 'alignRight' }}
           spacer={{ default: 'spacerNone', md: 'spacerMd' }}
@@ -92,36 +92,14 @@ const HeaderTools = ({
           )}
           {hasSearch && (
             <ToolbarItem>
-              <TextInputGroup>
-                <span id="ws-global-search-wrapper" className={isSearchExpanded ? '' : 'ws-hide-search-input'}>
-                  <div className="pf-c-text-input-group__main pf-m-icon">
-                    <span className="pf-c-text-input-group__text">
-                      <span className="pf-c-text-input-group__icon">
-                        <SearchIcon />
-                      </span>
-                      <input type="text" className="pf-c-text-input-group__text-input ds-input" aria-label="Type to filter" placeholder="Search" id="ws-global-search" />
-                    </span>
-                  </div>
-                </span>
-                <TextInputGroupUtilities>
-                  <Button
-                    aria-label={`${isSearchExpanded ? 'Collapse' : 'Expand'} search input`}
-                    variant="plain"
-                    className="ws-toggle-search"
-                    onClick={() => {
-                      setSearchExpanded(!isSearchExpanded);
-                      if (!isSearchExpanded) {
-                        setTimeout(() => searchRef.current && searchRef.current.focus(), 0);
-                      }
-                    }}
-                  >
-                    {isSearchExpanded
-                      ? <TimesIcon />
-                      : <SearchIcon className="global-search-icon" />
-                    }
-                  </Button>
-                </TextInputGroupUtilities>
-              </TextInputGroup>
+              <SearchInput
+                className="ws-global-search"
+                placeholder="Search"
+                value={searchValue}
+                onChange={onChange}
+                onClear={() => onChange('')}
+                expandableInput={{ isExpanded: isSearchExpanded, onToggleExpand, toggleAriaLabel: 'Expandable search input toggle' }}
+              />
             </ToolbarItem>
           )}
           <ToolbarItem>
@@ -187,7 +165,7 @@ export function attachDocSearch(algolia, inputSelector, timeout) {
       inputSelector,
       autocompleteOptions: {
         hint: false,
-        appendTo: `${inputSelector}-wrapper`,
+        appendTo: `.ws-global-search .pf-c-text-input-group`,
       },
       debug: process.env.NODE_ENV !== 'production',
       ...algolia
@@ -215,9 +193,6 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
     if (typeof window === 'undefined') {
       return;
     }
-    if (algolia) {
-      attachDocSearch(algolia, '#ws-global-search', 1000);
-    }
     if (hasVersionSwitcher && window.fetch) {
       fetch('/versions.json').then(res => {
         if (res.ok) {
@@ -236,7 +211,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   );
 
   const Header = (
-    <Masthead className="ws-page-header">
+    <Masthead className="ws-masthead">
       <MastheadToggle>
         <PageToggleButton variant="plain" aria-label="Global navigation">
           <BarsIcon />
@@ -251,10 +226,12 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
         {(algolia || hasVersionSwitcher) && (
           <HeaderTools
             versions={versions}
-            hasSearch={algolia}
+            algolia={algolia}
             hasVersionSwitcher={hasVersionSwitcher}
             hasDarkThemeSwitcher={hasDarkThemeSwitcher}
-            pathPrefix={pathPrefix} />
+            pathPrefix={pathPrefix}
+            topNavItems={topNavItems}
+          />
         )}
       </MastheadContent>
     </Masthead>
