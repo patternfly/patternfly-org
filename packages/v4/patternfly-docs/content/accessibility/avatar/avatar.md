@@ -34,16 +34,16 @@ At a minimum, an avatar should meet the following criteria:
 
 ## React customization
 
-Various React props have been provided for more fine-tuned control over accessibility.
+The following React props have been provided for more fine-tuned control over accessibility.
 
 | Prop | Applied to | Reason  |
 | -- | -- | -- |
-| `alt` | `Avatar` |  Provides an accessible description of the avatar. **Required**|
+| `alt="[text describing the avatar]"` | `Avatar` |  Provides an accessible description of the avatar. **Required**|
 
 ## HTML/CSS customization
 
-Various HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
+The following HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `alt` | `.pf-c-avatar` | Provides an accessible description of the avatar. **Required** |
+| `alt="[text describing the avatar]"` | `.pf-c-avatar` | Provides an accessible description of the avatar. **Required** |
