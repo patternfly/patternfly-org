@@ -47,9 +47,9 @@ const HeaderTools = ({
 
   const getDropdownItem = version => (
     <DropdownItem
-    key={version.name}
-    component={
-      <a href={version.latest ? '/v4' : `/${version.name}`}>
+      key={version.name}
+      component={
+        <a href={version.latest ? '/v4' : `/${version.name}`}>
           {`Release ${version.name}`}
         </a>
       }

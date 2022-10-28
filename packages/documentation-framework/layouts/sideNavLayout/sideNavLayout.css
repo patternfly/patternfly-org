@@ -36,10 +36,6 @@
   --pf-c-input-group--BackgroundColor: none;
 }
 
-.ws-masthead .pf-c-nav.pf-m-horizontal {
-  width: 100%;
-}
-
 /* TODO: PageHeaderTools on small viewports */
 @media (max-width: 430px) {
   .ws-page-header > .pf-c-page__header-brand > .pf-c-page__header-brand-link {
