@@ -37,10 +37,10 @@ The following React props have been provided for more fine-tuned control over ac
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `aria-label="[text describing the menu toggle]"` | `MenuToggle` | Adds an accessible name to the menu toggle. |
+| `aria-label="[text describing the menu toggle]"` | `MenuToggle` | Adds an accessible name to the menu toggle. Required when there is no text displayed in the menu toggle. |
 | `icon={[custom icon]}` | `MenuToggle` | Adds an optional icon rendered inside the toggle, before the children content. Add `aria-hidden` to the icon to hide the decorative item from screen reader elements. |
-| `aria-label="[text describing the action]"` | `MenuToggleAction` | Adds an accessible name to the menu toggle action. |
-| `aria-label="[text labeling the checkbox]"` | `MenuToggleCheckbox` | Adds an accessible name to the checkbox item on the menu toggle. |
+| `aria-label="[text describing the action]"` | `MenuToggleAction` | Adds an accessible name to the menu toggle action when the action is represented by an icon and no text. |
+| `aria-label="[text labeling the checkbox]"` | `MenuToggleCheckbox` | Adds an accessible name to the checkbox item on the menu toggle when there is no associated visible label text. |
 
 
 
@@ -52,5 +52,5 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 | -- | -- | -- |
 | `aria-expanded="true"` | `.pf-c-menu-toggle`, `.pf-c-menu-toggle__button` | Indicates that the menu toggle component is in the expanded state. |
 | `aria-expanded="false"` | `.pf-c-menu-toggle`, `.pf-c-menu-toggle__button` | Indicates that the menu toggle component is in the collapsed state. |
-| `aria-label="[text describing the menu toggle]"` | `.pf-c-menu-toggle.pf-m-plain` | Gives the plain menu toggle component an accessible label. |
+| `aria-label="[text describing the menu toggle]"` | `.pf-c-menu-toggle` | An accessible label for the menu toggle when there is no visible text within the toggle. Required when using a `pf-m-plain` with no text. |
 | `aria-hidden="true"` | `.pf-c-menu-toggle__toggle-icon` | Makes the decorative icon on the toggle hidden from screen reader users. **Required when the toggle contains only an icon**| 
