@@ -30,7 +30,7 @@ At a minimum, a progress component should meet the following criteria:
 
 ## React customization
 
-Various React props have been provided for more fine-tuned control over accessibility.
+The following React props have been provided for more fine-tuned control over accessibility.
 
 | Prop | Applied to | Reason | 
 |---|---|---|
