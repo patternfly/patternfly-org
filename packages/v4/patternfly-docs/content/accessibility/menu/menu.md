@@ -39,7 +39,7 @@ The following React props have been provided for more fine-tuned control over ac
 | `isExternalLink` | `MenuItem` | Renders an icon on the item when it receives focus or is hovered, as well as visually hidden text, to let users of certain assistive technologies know that the item will open in a new tab/window. **Required if the item opens a new tab/window**. |
 | `aria-label=[text labeling the menu item's action]` | `MenuItemAction` | Adds an accessible name to the action item on the menu. |
 |`icon={<Icon aria-hidden />}` | `MenuItemAction` | Renders an icon to a menu item action. When icon is decorative, pass an `aria-hidden` to the icon to hide it from screen reader users. |
-| `labelHeadingLevel=[a heading tag]` | `MenuGroup` | Adds a group label's heading level. Default is `h1`. Be sure to not skip heading levels when passing this prop in. For example, if an accordion is within a page section that has an `h2` heading, you should not pass `headingLevel="h4"`. |
+| `labelHeadingLevel=[a heading tag]` | `MenuGroup` | Adds a group label's heading level. Default is `h1`. Be sure to not skip heading levels when passing this prop in. For example, if a menu group is within a page section that has an `h2` heading, you should not pass `headingLevel="h4"`. |
 
 
 
