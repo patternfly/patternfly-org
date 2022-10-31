@@ -21,12 +21,12 @@ Use a timestamp when:
 - Users can go back and make use of past content.
 
 ### Best practices
-#### For timestamp:
+#### For timestamp
 - Depending on the context, show either date or time, or both date and time.
 - Locale should be appropriately set so that users see dates and times in a familiar format.
 - Timestamp at minimum should include date, time, and timezone (shorthand format).
 - Every element does not need to be used when implementing a timestamp.
-#### For tooltip:
+#### For tooltip
 - Not required but recommended to provide more precise time for relative times. 
 - Tooltips should show timestamps in UTC time.
 - Recommend displaying time in 24-hour format.
