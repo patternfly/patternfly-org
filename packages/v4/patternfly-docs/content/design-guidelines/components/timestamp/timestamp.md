@@ -15,7 +15,7 @@ section: components
 5. **Tooltip:** Dotted line displayed if there is tooltip available.
 
 ## Usage
-### When to use:
+### When to use
 Use a timestamp when:
 - You want to represent the exact date and time that an event occurred.
 - Users can go back and make use of past content.
