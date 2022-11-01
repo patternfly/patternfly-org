@@ -24,6 +24,7 @@ export { default as code_editor } from './code-editor.png';
 export { default as context_selector } from './context-selector.png';
 export { default as data_list } from './data-list.png';
 export { default as date_picker } from './date-picker.png';
+export { default as default_placeholder } from './default-placeholder.png';
 export { default as description_list } from './description-list.png';
 export { default as divider } from './divider.png';
 export { default as drag_and_drop } from './drag-and-drop.png';

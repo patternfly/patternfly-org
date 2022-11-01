@@ -47,6 +47,7 @@ export const ComponentGallery = () => {
       setDrawerPanelData(componentData);
       setIsExpanded(true);
     } else {
+      setSelectedCard(null);
       setIsExpanded(!isExpanded);
     }
   };
@@ -65,7 +66,7 @@ export const ComponentGallery = () => {
   }, [searchTerm])
 
   return (
-    <div className="ws-component-gallery">
+    <div className="ws-component-gallery-container">
       <Toolbar isSticky>
         <ToolbarContent>
           <ToolbarGroup alignment={{default: 'alignLeft'}}>
@@ -86,7 +87,7 @@ export const ComponentGallery = () => {
         </ToolbarContent>
       </Toolbar>
       <Sidebar isPanelRight className='ws-component-gallery' tabIndex={1}>
-        {filteredComponents.length > 0 && (
+        {isExpanded && filteredComponents.length > 0 && (
           <SidebarPanel variant="sticky">
             <TextContent>
               <Text component={TextVariants.h2}>
@@ -113,7 +114,7 @@ export const ComponentGallery = () => {
                   .split(' ')
                   .join('_')
                   .toLowerCase();
-                const illustration = illustrations[illustrationName];
+                const illustration = illustrations[illustrationName] || illustrations.default_placeholder;
                 return (
                   <GalleryItem span={4} key={idx}>
                     <Card
