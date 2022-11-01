@@ -19,7 +19,7 @@ module.exports = {
     { section: 'get-started' },
     { section: 'developer-resources' },
     { section: 'accessibility' },
-    { section: 'guidelines' },
+    { section: 'design-foundations' },
     { section: 'UX writing' },
     { section: 'components' },
     { section: 'patterns' },
