@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageSection, Title, PageSectionVariants, BackToTop, PageGroup, Page } from '@patternfly/react-core';
+import { PageSection, Title, PageSectionVariants, BackToTop, PageGroup, Page, Text, TextContent } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Router, useLocation } from '@reach/router';
@@ -152,10 +152,12 @@ export const MDXTemplate = ({
         <PageSection
           className={isSinglePage ? "pf-m-light-100" : ""}
           variant={!isSinglePage ? PageSectionVariants.light : ""}
+          isWidthLimited
         >
-          {!katacodaLayout && <Title size="4xl" headingLevel="h1" id="ws-page-title">
-            {title}
-          </Title>}
+          <TextContent>
+          {!katacodaLayout && <Title headingLevel='h1' size='4xl' id="ws-page-title">{title}</Title>}
+          {isComponent && summary && (<SummaryComponent />)}
+          </TextContent>
         </PageSection>
         {isComponent && summary && (
           <PageSection variant={PageSectionVariants.light} className="pf-u-pt-0">

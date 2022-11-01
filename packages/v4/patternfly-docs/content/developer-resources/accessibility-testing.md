@@ -69,37 +69,37 @@ These are some of the main areas we check for on the PatternFly team. We recomme
 
 **General questions**
 
-<label><input type="checkbox" unchecked /> VO Rotor Navigation can discover all information. </label><br/>
-<label><input type="checkbox" unchecked /> VO Shortcut Navigation can discover all information. </label><br/>
-<label><input type="checkbox" unchecked /> VO Cursor Navigation can discover all information (dependent on component and use case- easy way to navigate to component). </label><br/>
-<label><input type="checkbox" unchecked /> Tabbed Keyboard Navigation can discover all information. </label>
+<label><input type="checkbox" /> VO Rotor Navigation can discover all information. </label><br/>
+<label><input type="checkbox" /> VO Shortcut Navigation can discover all information. </label><br/>
+<label><input type="checkbox" /> VO Cursor Navigation can discover all information (dependent on component and use case- easy way to navigate to component). </label><br/>
+<label><input type="checkbox" /> Tabbed Keyboard Navigation can discover all information. </label>
 - However, if content should be hidden from a screen reader, for instance, if it’s offscreen or just presentational, make sure that content is set to aria-hidden=”true”.  <br/>
 
-<label><input type="checkbox" unchecked /> Is it understandable and usable? </label><br/>
-  - <label><input type="checkbox" unchecked /> When you navigate to an item by keyboard or by screen reader, you can easily understand and use the item. </label><br/>
-  - <label><input type="checkbox" unchecked /> The flow of information makes sense when navigating. Screen readers navigate the page in DOM order. If you used CSS to visually reposition elements, they might be announced in a nonsensical sequence. Instead, if you need something to appear earlier in the page, try to physically move it earlier in the DOM.</label>
+<label><input type="checkbox" /> Is it understandable and usable? </label><br/>
+  - <label><input type="checkbox" /> When you navigate to an item by keyboard or by screen reader, you can easily understand and use the item. </label><br/>
+  - <label><input type="checkbox" /> The flow of information makes sense when navigating. Screen readers navigate the page in DOM order. If you used CSS to visually reposition elements, they might be announced in a nonsensical sequence. Instead, if you need something to appear earlier in the page, try to physically move it earlier in the DOM.</label>
 
 **Accessibility points** <br />
-<label><input type="checkbox" unchecked /> **Structure:** The visual information architecture should map to the various rotor menus that exist by default. </label><br />
-- <label><input type="checkbox" unchecked /> **Check rotor:** Are there good headings, landmarks, links, form controls, and other elements? Do they make sense, and are they descriptive without overloading information? </label><br />
-  - <label><input type="checkbox" unchecked /> Headings: Check that heading levels convey structure/content and do not skip. A common practice is to use a single h1 for the primary headline or logo on a page, h2s for designating major sections, and h3s for supporting sections. </label><br />
-  - <label><input type="checkbox" unchecked /> Links </label><br />
-  - <label><input type="checkbox" unchecked /> Form controls </label><br />
-  - <label><input type="checkbox" unchecked /> Landmarks </label><br />
-  - <label><input type="checkbox" unchecked /> Tables </label><br />
+<label><input type="checkbox" /> **Structure:** The visual information architecture should map to the various rotor menus that exist by default. </label><br />
+- <label><input type="checkbox" /> **Check rotor:** Are there good headings, landmarks, links, form controls, and other elements? Do they make sense, and are they descriptive without overloading information? </label><br />
+  - <label><input type="checkbox" /> Headings: Check that heading levels convey structure/content and do not skip. A common practice is to use a single h1 for the primary headline or logo on a page, h2s for designating major sections, and h3s for supporting sections. </label><br />
+  - <label><input type="checkbox" /> Links </label><br />
+  - <label><input type="checkbox" /> Form controls </label><br />
+  - <label><input type="checkbox" /> Landmarks </label><br />
+  - <label><input type="checkbox" /> Tables </label><br />
 
 
-<label><input type="checkbox" unchecked /> **Labels:**</label>
-- <label><input type="checkbox" unchecked /> **Links:** Labels should be unique unless they have the same url. They should be descriptive/informative.</label>
-- <label><input type="checkbox" unchecked /> **Buttons and form controls:**</label>
+<label><input type="checkbox" /> **Labels:**</label>
+- <label><input type="checkbox" /> **Links:** Labels should be unique unless they have the same url. They should be descriptive/informative.</label>
+- <label><input type="checkbox" /> **Buttons and form controls:**</label>
   - Go through form controls and check if they all have labels. (Remember that there is a difference between being accessible and having a good, accessible experience. Clear, descriptive labels help create a better experience.)
   - **Expandable buttons:** There should be some indication that it has the expandable control.
-- <label><input type="checkbox" unchecked /> **Form inputs:** These inputs should have some label even if it's not visible.</label>
-- <label><input type="checkbox" unchecked /> **Icons**: Where you don’t visibly see text there should still be some kind of text for screen reader.</label>
-- <label><input type="checkbox" unchecked /> **Images**: Check all images for proper alt text. The exception to this practice is when images are primarily for presentation purposes and are not essential pieces of content. To signify that an image should be skipped by a screen reader, set the value of the alt attribute to an empty string, e.g., `alt=””`.</label>
-- <label><input type="checkbox" unchecked /> **Landmarks:** Landmark regions should have labels when there is more than one type of landmark and they are not the same (navigation, main, form, etc.).
+- <label><input type="checkbox" /> **Form inputs:** These inputs should have some label even if it's not visible.</label>
+- <label><input type="checkbox" /> **Icons**: Where you don’t visibly see text there should still be some kind of text for screen reader.</label>
+- <label><input type="checkbox" /> **Images**: Check all images for proper alt text. The exception to this practice is when images are primarily for presentation purposes and are not essential pieces of content. To signify that an image should be skipped by a screen reader, set the value of the alt attribute to an empty string, e.g., `alt=””`.</label>
+- <label><input type="checkbox" /> **Landmarks:** Landmark regions should have labels when there is more than one type of landmark and they are not the same (navigation, main, form, etc.).
 Section element shouldn’t be used unless it has a label.</label>
-- <label><input type="checkbox" unchecked /> **Tables**: Can you tell what the table is and what’s in it? (https://webaim.org/techniques/tables/)</label>
-- <label><input type="checkbox" unchecked /> **Aria**: If there is visible text then there doesn’t need to be an `aria-label`. (Aria aids in description to screen reader users. It doesn’t have to reiterate or override what might already be there so you should check that your aria is useful.)</label>
+- <label><input type="checkbox" /> **Tables**: Can you tell what the table is and what’s in it? (https://webaim.org/techniques/tables/)</label>
+- <label><input type="checkbox" /> **Aria**: If there is visible text then there doesn’t need to be an `aria-label`. (Aria aids in description to screen reader users. It doesn’t have to reiterate or override what might already be there so you should check that your aria is useful.)</label>
   - It’s important to understand that ARIA can only affect the _semantics_ of an element; it has no effect on the _behavior_ of the element. 
   - For example, while you can make an element hidden to screen readers with `aria-hidden=”true”`, that does not change the focus behavior for that element. 

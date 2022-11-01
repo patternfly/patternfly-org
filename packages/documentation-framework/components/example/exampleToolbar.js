@@ -57,19 +57,17 @@ export const ExampleToolbar = ({
   const undoAllAriaLabel = `Undo all changes to ${exampleTitle}`;
 
   const editorControlProps = {
-    maxWidth: 'var(--ws-code-editor--tooltip--MaxWidth)',
     className: "ws-code-editor-control",
-    exitDelay: 300
   };
+
+  const commonTooltipProps = {
+    exitDelay: 300,
+    maxWidth: 'var(--ws-code-editor--tooltip--MaxWidth)'
+  }
 
   const copyCode = () => {
     copy(code);
-
     setCopied(true);
-    // Reset isCopied after Tooltip fades out
-    setTimeout(() => {
-      setCopied(false);
-    }, 2500);
   };
 
   const customControls = (
@@ -86,16 +84,19 @@ export const ExampleToolbar = ({
           // 1 === expand code, 0 === collapse code
           trackEvent('code_editor_control_click',  'click_event', 'TOGGLE_CODE', isEditorOpen ? 0 : 1);
         }}
+        tooltipProps={{
+          content: languageLabel,
+          ...commonTooltipProps
+        }}
         aria-label={languageAriaLabel}
-        toolTipText={languageLabel}
         aria-expanded={isEditorOpen}
         {...editorControlProps}
       />
       <Tooltip
-        trigger="mouseenter"
         content={<div>{isCopied ? 'Code copied' : copyLabel}</div>}
-        {...(isCopied && {exitDelay: 1600})}
         maxWidth={editorControlProps.maxWidth}
+        exitDelay={isCopied ? "300" : 1600}
+        onTooltipHidden={() => setCopied(false)}
       >
         <Button
           onClick={() => {
@@ -144,7 +145,10 @@ export const ExampleToolbar = ({
           target="_blank"
           rel="noopener noreferrer"
           aria-label={fullscreenAriaLabel}
-          toolTipText={fullscreenLabel}
+          tooltipProps={{
+            content: fullscreenLabel,
+            ...commonTooltipProps
+          }}
           onClick={() => {
             trackEvent('code_editor_control_click', 'click_event', 'FULLSCREEN_LINK');
           }}
@@ -159,7 +163,10 @@ export const ExampleToolbar = ({
             </React.Fragment>
           )}
           aria-label={convertAriaLabel}
-          toolTipText={convertLabel}
+          tooltipProps={{
+            content: convertLabel,
+            ...commonTooltipProps
+          }}
           onClick={() => {
             setCode(convertToJSX(code).code);
             trackEvent('code_editor_control_click', 'click_event', 'TS_TO_JS');
@@ -171,7 +178,10 @@ export const ExampleToolbar = ({
         <CodeEditorControl
           icon={<ReplyAllIcon />}
           aria-label={undoAllAriaLabel}
-          toolTipText={undoAllLabel}
+          tooltipProps={{
+            content: undoAllLabel,
+            ...commonTooltipProps
+          }}
           onClick={() => {
             setCode(originalCode);
             trackEvent('code_editor_control_click', 'click_event', 'RESET_CODE');

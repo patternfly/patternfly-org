@@ -1092,6 +1092,13 @@ export const iconsData = [
   },
   {
     "Style": "pf-icon",
+    "Name": "pf-icon-open-drawer-right",
+    "React_name": "OpenDrawerRightIcon",
+    "Type": "Action",
+    "Contextual_usage": "Open or close a drawer",
+  },
+  {
+    "Style": "pf-icon",
     "Name": "pf-icon-optimize",
     "React_name": "OptimizeIcon",
     "Type": "Action",

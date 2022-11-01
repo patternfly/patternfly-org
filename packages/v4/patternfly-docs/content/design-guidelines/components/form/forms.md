@@ -30,10 +30,10 @@ Use forms to accomplish tasks reliant on user-inputted information like logging 
 
 Most forms contain four basic elements:
 
-1. **Labels:** Indicate desired information for each field.
-2. **Text inputs:** Provide space for users to enter text.
-3. **Data inputs:** Allow users to enter information that is not freeform text using components like checkboxes, radio buttons, or dropdowns.
-4. **Buttons:** Enable a user to submit or exit a form.
+1. [**Labels:**](#labels) Indicate desired information for each field.
+2. [**Text inputs:**](#text-inputs) Provide space for users to enter text.
+3. [**Data inputs:**](#data-inputs) Allow users to enter information that is not freeform text using components like checkboxes, radio buttons, or dropdowns.
+4. [**Buttons:**](#buttons) Enable a user to submit or exit a form.
 
 ### Labels
 Always provide labels for text and data inputs so that users understand the information each form field asks of them. Default to top-aligned labels unless you’re working within limited vertical space, then use left-aligned labels. 
@@ -54,7 +54,7 @@ Avoid using left-aligned labels unless you’re working with limited vertical sp
 
 To accommodate mobile views, left-aligned labels should responsively adjust to top alignment for smaller screens.
 
-For guidance on how to write effective form labels, see the [content](#content) section.
+For guidance on how to write effective form labels, see the [content](#content-considerations) section.
 
 ### Text inputs
 
@@ -111,7 +111,8 @@ Form submit buttons should be disabled until a user starts filling out the form 
 * For a submitted form, disable the submit button while a user's responses are processing to avoid a duplicate submission.
 * For a processing form, use feedback messages and progress indicators like spinners or progress bars if the processing time might exceed user expectations.
 
-## Usage
+
+## Variations
 
 ### Form sections
 
@@ -141,21 +142,21 @@ Use field groups to:
 
 Because field groups call for more clicks, tabs, and interactions to reach form fields, they require additional accessibility considerations. Clearly label field group content so that it's clear to all users. For more field group accessibility guidance, see the [Accessibility guidelines](#accessibility).
 
-Example: For a form with multiple field groups, distinguish between each one by adding titles that convey each group's unique theme such as *Routing*, *Build configuration*, *Deployment*, or *Scaling*.
+**Example:** For a form with multiple field groups, distinguish between each one by adding titles that convey each group's unique theme such as *Routing*, *Build configuration*, *Deployment*, or *Scaling*.
 
 <img src="./img/field-groups.png" alt="Example of nested, expandable field groups in a form." width="800"/>
 
 To view an interactive example of field groups, see our [field groups demo](/components/form#field-groups).
 
-### User guidance
+## Usage
 
 Due to their interactive nature, forms often include features that help communicate field importance and guidance as users complete them. 
 
+### Types of user guidance
 Types of user guidance include:
-
-* **Required fields:** Call attention to input fields crucial to user success.
-* **User help:** Assists users in context through placeholder text, helper text, and popovers.
-* **Progressive disclosure:** Hides and shows fields based on user selections to simplify their workflow.
+* [**Required fields:**](#required-fields) Call attention to input fields crucial to user success.
+* [**User help:**](#user-help) Assists users in context through placeholder text, helper text, and popovers.
+* [**Progressive disclosure:**](#progressive-disclosure) Hides and shows fields based on user selections to simplify their workflow.
 
 #### Required fields
 
@@ -170,7 +171,7 @@ If all form fields are required, don’t use an asterisk for each one. Instead, 
 
 #### User help
 
-There are 3 different methods for providing assistance within a form: [Placeholder text](#placeholder-text), [helper text](#helper-text), and [popovers](#popovers).
+There are 3 different methods for providing assistance within a form: [placeholder text](#placeholder-text), [helper text](#helper-text), and [popovers](#popovers).
 
 
 ##### Placeholder text
@@ -179,16 +180,18 @@ There are 3 different methods for providing assistance within a form: [Placehold
 
 Within a form field, placeholder text provides an example of the required or recommended format for text input. 
 
-Use placeholder text when:
+**Use placeholder text when:**
 
 * The requested data type requires data to be inputted with specific format or syntax requirements.
 * The requested data type might be unfamiliar to the user.
 
-Never use placeholder text to replace field labels or communicate crucial information since it disappears as soon as a user begins typing in a field.
+**Never use placeholder text when:**
+* Replacing field labels 
+* Communicating crucial information since it disappears as soon as a user begins typing in a field.
 
 If your placeholder text shares an example, precede it with “Example,” followed by a space so that users accessing the form with screen readers will know the difference between the field label and the provided placeholder text. 
 
-Examples:
+**Examples:**
 
 * *Example, John Smith*
 * *Example, (555) 555-5555*
@@ -198,7 +201,7 @@ Examples:
 
 <img src="./img/placeholder-format.png" alt="Example of a date placeholder text inside text input field" width="323"/>
 
-For more information about writing effective placeholder text, see the [content](#content) section.
+For more information about writing effective placeholder text, see the [content](#content-considerations) section.
 
 ##### Helper text
 
@@ -208,25 +211,25 @@ Helper text is brief, permanent text below a form field that helps a user provid
 
 Align helper text with the specific input for which it offers assistance. If your helper text contains information about the label rather than the input field, place it with the label instead.
 
-For more information about writing effective helper text, see the [content](#content) section.
+For more information about writing effective helper text, see the [content](#content-considerations) section.
 
 ##### Popovers
 
-Use a [popover](/components/popover/design-guidelines) for fields that might require additional background or explanation. Popovers may also link to external help pages or other related documentation. 
+[Popovers](/components/popover/design-guidelines) are useful for fields that might require additional background or explanation. Popovers may also link to external help pages or other related documentation. 
 
 In a form, indicate a popover with an unfilled question mark circle that reveals information when clicked. Place popovers to the right of their corresponding form label.
 
  <img src="./img/popover.png" alt="Example of a popover used in a form field to provide additional context for where a user can find the required information" width="411"/>
 
- Use popovers to:
+ **Use popovers when:**
 
-* Guide users to where they can find essential information needed to complete a given form field.
+* Guiding users to where they can find essential information needed to complete a given form field.
 
-* Provide content that requires formatting like numbered or bulleted lists, or that requires you to include additional elements like buttons, links, or images.
+* Providing content that requires formatting like numbered or bulleted lists, or that requires you to include additional elements like buttons, links, or images.
 
 Never hide critical information inside a popover, since popovers only surface when a user triggers them.
 
-For more information about writing effective popovers, see the [content](#content) section.
+For more information about writing effective popovers, see the [content](#content-considerations) section.
 
 #### Progressive disclosure
 Use progressive disclosure to hide and show form fields based on a user’s selection to keep their workflow short and allow them to focus on fields relevant to them. Progressive disclosure also avoids using color to indicate whether or not a field is available, making forms more accessible for users with visual impairments.
@@ -244,7 +247,7 @@ After a form error occurs, users won’t have access to placeholder text (replac
 * What is the error?
 * What can the user do to fix it?
 
-Example: Instead of “Invalid input,” provide an error message that includes the correct format to re-write the input: “Date format must be MM-DD-YYYY.”
+**Example:** Instead of “Invalid input,” provide an error message that includes the correct format to re-write the input: “Date format must be MM-DD-YYYY.”
 
  <img src="./img/error-message.png" alt="Visualized example for right vs. wrong way to write an input error. Do communicate specific format errors; don't just indicate an 'invalid input.'" width="649"/>
 
@@ -266,7 +269,7 @@ For validation on submission, supplement field level errors with an [inline aler
 
 <img src="./img/validation-submission.png" alt="Example of errors after validation on submission, including an inline alert at the top, and field level errors" width="794"/>
 
-Learn more about writing error messages in the [content](#content) section.
+Learn more about writing error messages in the [content](#content-considerations) section.
 
 ## Spacing
 Forms may be placed in several contexts including on a page, in a wizard, or in a modal. Your chosen form placement may impact specific spacing considerations, but general form spacing requirements apply across these contexts.
@@ -351,7 +354,7 @@ Use field labels to specify the most critical information about what data the us
 
 Whenever possible, keep field labels under five words and avoid using the same field label more than once in the same form.
 
-Examples:
+**Examples:**
 
 * *Full name*
 * *Email*
@@ -363,13 +366,13 @@ Use placeholder text to demonstrate correct inputs so that users are aware of fo
 
 If your placeholder text demonstrates a correct input, introduce it as an example so that users can distinguish impermanent examples from field labels and their own inputted text.
 
-Examples:
+**Examples:**
 * *Example, John Smith*
 * *Example, (555) 555-5555*
 
 Placeholder text that doesn’t give an example doesn’t need to be introduced as one. If your placeholder text simply communicates a field's required format, write the format without an introduction.
 
-Examples:
+**Examples:**
 * *MM-DD-YYYY*
 * *johnsmith@example.com*
 
@@ -385,7 +388,7 @@ Use helper text to display critical secondary information that helps users input
 
 Use popovers to supply background information and additional context as field-level help. Popover content should help define unfamiliar terms or concepts that novice users may not know offhand. Popover content can also help users find required information, such as an account number, order number, or employee ID.
 
-Examples:
+**Examples:**
 - *Find your order number in your order confirmation email or at the top of your paper receipt.*
 - *You can find your employee ID number at the bottom of your employee ID card.*
 
@@ -399,7 +402,7 @@ If a user leaves a required field empty or incomplete, use a field level error m
 
 If a user formats an input incorrectly, avoid unclear error messages like *Invalid input*. Instead, specify what constitutes a valid input.
 
-Examples:
+**Examples:**
 * *Date format must be MM-DD-YYYY*
 * *Enter a valid email: email@provider.com*
 
@@ -409,7 +412,7 @@ For more error message guidance, see our [UX writing style guide](/ux-writing/er
 
 Use button text to clearly and specifically communicate the action it triggers. Whenever possible, use specific verbs to write button text that communicates what a user accomplishes by submitting a form.
 
-Example: Instead of *Submit*, a submit button on a subscription form should read *Subscribe*.
+**Example:** Instead of *Submit*, a submit button on a subscription form should read *Subscribe*.
 
 For more button text guidance, see our [button content guidelines](/components/button/design-guidelines#content).
 
