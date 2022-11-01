@@ -40,15 +40,6 @@ export const ComponentGallery = () => {
     const newSelectedCard = labelledById === selectedCard ? null : labelledById;
     setSelectedCard(newSelectedCard);
   };
-
-  const onSearchChange = val => {
-    setSearchTerm(val);
-    if (!filteredComponents.some(([componentName]) => componentName.toLowerCase().includes(val))) {
-      // Hide side panel & reset selection only when search results don't include selected card
-      setIsExpanded(false);
-      setSelectedCard(null);
-    }
-  }
   
   const onClick = (componentData) => {
     if (selectedCard !== componentData.id) {
@@ -71,15 +62,19 @@ export const ComponentGallery = () => {
   };
 
   useEffect(() => {
-    setDrawerPanelData(filteredComponents?.[0]?.[1]);
-  }, [searchTerm])
+    // Hide side panel & reset selection only when search results don't include selected card
+    if (!filteredComponents.some(([componentName]) => componentName === selectedCard)) {
+      setIsExpanded(false);
+      setSelectedCard(null);
+    }
+  }, [filteredComponents])
 
   return (
     <div className="ws-component-gallery-container">
       <Toolbar isSticky>
         <ToolbarContent>
           <ToolbarItem variant="search-filter" widths={{default: '100%', md: '320px'}}>
-            <SearchInput onClear={false} value={searchTerm} placeholder="Search components by name" onChange={onSearchChange} />
+            <SearchInput onClear={false} value={searchTerm} placeholder="Search components by name" onChange={setSearchTerm} />
           </ToolbarItem>
           {searchTerm && (
             <ToolbarItem>
