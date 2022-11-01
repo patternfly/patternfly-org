@@ -20,13 +20,13 @@ At a minimum, a navigation component should meet the following criteria:
 
 <List isPlain>
   <ListItem>
-    <Checkbox id="navigation-a11y-checkbox-1" label={<span>The navigation has an accessible name via the <code class="ws-code">aria-label</code></span>} description="This will differentiate each navigation when announced to users of assistive technologies when navigating through a page or a screen reader's rotor menu." />
+    <Checkbox id="navigation-a11y-checkbox-1" label={<span>The navigation has an accessible name via the <code className="ws-code">aria-label</code></span>} description="This will differentiate each navigation when announced to users of assistive technologies when navigating through a page or a screen reader's rotor menu." />
   </ListItem>
   <ListItem>
     <Checkbox id="navigation-a11y-checkbox-2" label="Standard keyboard navigation can be used to navigate between focusable elements within the navigation." description={<span><kbd>Tab</kbd> navigates to the next focusable element, and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous focusable element. Expandable items can be opened with <kbd>Enter</kbd> or <kbd>Space</kbd>.  When the navigation is collapsed, you should not be able to navigate to any of the elements.</span>} />
   </ListItem>
   <ListItem>
-    <Checkbox id="navigation-a11y-checkbox-3" label={<span>For expandable or grouped navigation, an accessible name via the <code class="ws-code">title</code> or <code class="ws-code">aria-label</code> is used.</span>} description="This will differentiate each navigation when announced to users of assistive technologies when navigating through a page or a screen reader's rotor menu." />
+    <Checkbox id="navigation-a11y-checkbox-3" label={<span>For expandable or grouped navigation, an accessible name via the <code className="ws-code">title</code> or <code className="ws-code">aria-label</code> is used.</span>} description="This will differentiate each navigation when announced to users of assistive technologies when navigating through a page or a screen reader's rotor menu." />
   </ListItem>
 </List>
 

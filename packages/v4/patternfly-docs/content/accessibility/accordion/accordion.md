@@ -37,7 +37,7 @@ At a minimum, an accordion should meet the following criteria:
     <Checkbox id="accordion-a11y-checkbox-4" label="If headings are used in an accordion toggle, heading levels are not skipped within the context surrounding the accordion." />
   </ListItem>
   <ListItem>
-    <Checkbox id="accordion-a11y-checkbox-5" label="A user navigating via a screen reader will be notified of the current accordion toggle state, as well as when that state gets updated." description={<span>This can be checked with a screen reader, or by checking that the <code class="ws-code">aria-expanded</code> attribute is accurate and updating in the DOM.</span>} />
+    <Checkbox id="accordion-a11y-checkbox-5" label="A user navigating via a screen reader will be notified of the current accordion toggle state, as well as when that state gets updated." description={<span>This can be checked with a screen reader, or by checking that the <code className="ws-code">aria-expanded</code> attribute is accurate and updating in the DOM.</span>} />
   </ListItem>
 </List>
 
