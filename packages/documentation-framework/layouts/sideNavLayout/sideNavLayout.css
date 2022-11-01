@@ -61,14 +61,9 @@
   border-bottom: 2px solid #fff;
 }
 /* For tiny (200px) viewports */
-.ws-org-version-switcher .pf-c-dropdown__toggle  >.pf-c-dropdown__toggle-text {
-  white-space: normal;
-}
-
-.ws-github-pageheader {
-  color: var(--pf-global--Color--light-100) !important;
-}
-
 .ws-masthead .pf-c-toolbar  {
   min-width: 0;
+}
+.ws-github-pageheader {
+  color: var(--pf-global--Color--light-100) !important;
 }
