@@ -81,8 +81,7 @@ const HeaderTools = ({
         )}
         <ToolbarGroup
           alignment={{ default: 'alignRight' }}
-          spacer={{ default: 'spacerNone', md: 'spacerMd' }}
-          variant="button-group"
+          spacerItems={{ default: 'spacerNone', md: 'spacerMd' }}
         >
           {hasDarkThemeSwitcher && (
             <ToolbarItem>

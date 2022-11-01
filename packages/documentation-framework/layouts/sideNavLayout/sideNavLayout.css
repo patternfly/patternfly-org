@@ -68,3 +68,7 @@
 .ws-github-pageheader {
   color: var(--pf-global--Color--light-100) !important;
 }
+
+.ws-masthead .pf-c-toolbar  {
+  min-width: 0;
+}
