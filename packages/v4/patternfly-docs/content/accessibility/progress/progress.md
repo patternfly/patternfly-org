@@ -35,7 +35,7 @@ The following React props have been provided for more fine-tuned control over ac
 | Prop | Applied to | Reason | 
 |---|---|---|
 | `aria-label="[text describing the progress bar]"` | `Progress` | Adds accessible text to the ProgressBar. Required when title not used and there is not any label associated with the progress bar. |
-| `aria-labelledby="[id of the element that labels the progress bar]"` | `Progress` | Associates the ProgressBar with it's label for accessibility purposes. The `aria-labelledby` attribute should be passed in with a value of the label's id attribute. Required when title not used. |
+| `aria-labelledby="[id of the element that labels the progress bar]"` | `Progress` | Associates the ProgressBar with its label for accessibility purposes. The `aria-labelledby` attribute should be passed in with a value of the label's id attribute. Required when title not used. |
 | `id` | `Progress` | Used as a DOM id for progress component. |
 | `label="[text describing current progress value]"` | `Progress` | Adds a text description of current progress value to display instead of percentage. |
 | `min={a number}` | `Progress` | Minimum value of progress. |
@@ -64,7 +64,7 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 ## Additional considerations
 
-Consumers must ensure they take any additional considerations when customizing a progress component, using it in a way not described or recommended by PatternFly, or in various other specific use-cases not outlined elsewhere on this page.
+Consumers must ensure they take any additional considerations when customizing a progress component, using it in a way not described or recommended by PatternFly, or in various other specific use cases not outlined elsewhere on this page.
 
 ### Aria-live
 
@@ -86,7 +86,7 @@ You can further customize the way assistive technologies announce the contents o
     <Progress value={currentValue} title="Title" />
   ```
 
-  In the above code block, if there were 2 progress updates already rendered within the live region and `aria-atomic="true"` was passed in, another update being rendered into the container would cause all 3 updates to be announced. If `aria-atomic="false"` were passed in instead, only the new update would be announced.
+  In the code block above, if there were 2 progress updates already rendered within the live region and `aria-atomic="true"` was passed in, another update being rendered into the container would cause all 3 updates to be announced. If `aria-atomic="false"` were passed in instead, only the new update would be announced.
 
 - `aria-relevant` sets what types of changes are relevant to a live region and what qualifies as an update to it. The value passed in is a space-separated list of one or more of "additions," "removals," or "text," or "all" for all 3. The default value is "additions text" if there is no ancestor with this attribute passed in. An example for when a value of "removals" is passed in:
 
