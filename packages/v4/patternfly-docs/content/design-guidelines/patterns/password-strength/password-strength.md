@@ -1,9 +1,9 @@
 ---
 id: Password strength
-section: demos
+section: patterns
 ---
 
-A **password strength indicator** is displayed to a user after they have entered a password in a field. It allows the user to understand the strength of a password after it has met the password requirements. The strength of the password is determined by a validation algorithm after the specific rules are met.  Using a password strength indicator allows users to create stronger passwords, offering better protection from breaches. 
+A **password strength indicator** is displayed to a user after they have entered a password in a field. It allows the user to understand the strength of a password after it has met the password requirements. The strength of the password is determined by a validation algorithm after the specific rules are met.  Using a password strength indicator allows users to create stronger passwords, offering better protection from breaches.
 
 ## Elements
 

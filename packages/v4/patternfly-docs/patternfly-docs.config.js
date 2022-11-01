@@ -22,12 +22,11 @@ module.exports = {
     { section: 'guidelines' },
     { section: 'UX writing' },
     { section: 'components' },
+    { section: 'patterns' },
     { section: 'extensions' },
     { section: 'charts' },
-    { section: 'demos' },
     { section: 'layouts' },
     { section: 'utilities' },
-    { section: 'patterns'},
     { section: 'contribute' },
     { section: 'training' },
     { href: '/community' }
