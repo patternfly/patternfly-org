@@ -22,7 +22,7 @@ export const ComponentGallery = () => {
   const [
     drawerPanelData = {title: '', id: '', slug: ''},
     setDrawerPanelData
-  ] = React.useState(filteredComponents?.[0]?.[1]);
+  ] = React.useState({});
   const drawerRef = React.useRef();
   // convert summary text in drawer from string to jsx
   const SummaryComponent = ({ id }) => {
@@ -40,6 +40,15 @@ export const ComponentGallery = () => {
     const newSelectedCard = labelledById === selectedCard ? null : labelledById;
     setSelectedCard(newSelectedCard);
   };
+
+  const onSearchChange = val => {
+    setSearchTerm(val);
+    if (!filteredComponents.some(([componentName]) => componentName.toLowerCase().includes(val))) {
+      // Hide side panel & reset selection only when search results don't include selected card
+      setIsExpanded(false);
+      setSelectedCard(null);
+    }
+  }
   
   const onClick = (componentData) => {
     if (selectedCard !== componentData.id) {
@@ -69,21 +78,17 @@ export const ComponentGallery = () => {
     <div className="ws-component-gallery-container">
       <Toolbar isSticky>
         <ToolbarContent>
-          <ToolbarGroup alignment={{default: 'alignLeft'}}>
-            <ToolbarItem widths={{default: '320px'}}>
-              <SearchInput value={searchTerm} placeholder="Search components by name" onChange={setSearchTerm} />
+          <ToolbarItem variant="search-filter" widths={{default: '100%', md: '320px'}}>
+            <SearchInput onClear={false} value={searchTerm} placeholder="Search components by name" onChange={onSearchChange} />
+          </ToolbarItem>
+          {searchTerm && (
+            <ToolbarItem>
+              <Button variant="link" onClick={() => setSearchTerm('')}>Reset</Button>
             </ToolbarItem>
-          </ToolbarGroup>
-          <ToolbarGroup>
-            <ToolbarItem alignment={{default: 'alignLeft'}}>
-              <Button variant="link" onClick={() => setSearchTerm('')} isInline>Reset</Button>
-            </ToolbarItem>
-          </ToolbarGroup>
-          <ToolbarGroup alignment={{default: 'alignRight'}} spacer={{default: 'spacerMd', md: 'spacerNone'}}>
-            <ToolbarItem alignment={{default: 'alignRight'}}>
-              <Text component={TextVariants.small}>{filteredComponents.length} items</Text>
-            </ToolbarItem>
-          </ToolbarGroup>
+          )}
+          <ToolbarItem variant="pagination" spacer={{default: 'spacerMd', md: 'spacerNone'}} style={{'--pf-c-toolbar__item--MinWidth': "max-content"}}>
+            <Text component={TextVariants.small}>{filteredComponents.length} items</Text>
+          </ToolbarItem>
         </ToolbarContent>
       </Toolbar>
       <Sidebar isPanelRight className='ws-component-gallery' tabIndex={1}>
