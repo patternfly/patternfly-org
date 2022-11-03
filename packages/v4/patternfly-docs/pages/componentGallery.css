@@ -25,6 +25,7 @@
   padding: var(--pf-global--spacer--md);
   top: 93px;
   margin: calc(var(--pf-global--spacer--md) * -1) 0 var(--pf-global--spacer--md) calc(var(--pf-global--spacer--md) * -1);
+  z-index: 101;
 }
 
 .ws-component-gallery .pf-c-sidebar__content {
@@ -35,17 +36,13 @@
   height: 100%;
 }
 
-@media (min-width: 508px) {
-  .ws-component-gallery .pf-c-sidebar__panel {
-    top: 69px;
-  }
-}
-
 @media (min-width: 768px) {
   .ws-component-gallery .pf-c-sidebar__panel {
     height: calc(100vh - 146px);
     margin-left: var(--pf-global--spacer--md);
     margin-bottom: 0;
+    z-index: 0;
+    top: 69px;
    }
 
    .ws-component-gallery .pf-c-sidebar__panel + .pf-c-sidebar__content {

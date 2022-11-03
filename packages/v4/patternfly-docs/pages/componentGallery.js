@@ -87,21 +87,21 @@ export const ComponentGallery = () => {
         </ToolbarContent>
       </Toolbar>
       <Sidebar isPanelRight className='ws-component-gallery' tabIndex={1}>
-        {isExpanded && filteredComponents.length > 0 && (
           <SidebarPanel variant="sticky">
-            <TextContent>
-              <Text component={TextVariants.h2}>
-                <span tabIndex={isExpanded ? 0 : -1} ref={drawerRef}>
-                  {drawerPanelData.title}
-                </span>
-              </Text>
-              <Text>
-                { drawerPanelData.id ? <SummaryComponent id={drawerPanelData.id}/> : null }
-              </Text>
-              <Button className="ws-view-component" component={(props) => <Link {...props} to={drawerPanelData.slug} />}>View component</Button>
-            </TextContent>
+            {selectedCard && (
+              <TextContent>
+                <Text component={TextVariants.h2}>
+                  <span tabIndex={isExpanded ? 0 : -1} ref={drawerRef}>
+                    {drawerPanelData.title}
+                  </span>
+                </Text>
+                <Text>
+                  { drawerPanelData.id ? <SummaryComponent id={drawerPanelData.id}/> : null }
+                </Text>
+                <Button className="ws-view-component" component={(props) => <Link {...props} to={drawerPanelData.slug} />}>View component</Button>
+              </TextContent>
+            )}
           </SidebarPanel>
-        )}
         <SidebarContent hasNoBackground>
           <Gallery hasGutter>
             {filteredComponents
