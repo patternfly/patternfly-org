@@ -252,7 +252,6 @@ function sourceMDFile(file, source, buildMode) {
   const { jsx, pageData, outPath } = toReactComponent(file, source, buildMode);
 
   if (jsx) {
-    // debugger;
     fs.outputFileSync(outPath, jsx);
     routes[pageData.slug] = {
       id: pageData.id,

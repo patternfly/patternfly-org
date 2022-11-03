@@ -28,11 +28,9 @@ const isNull = o => o === null || o === undefined;
 const groupedRoutes = Object.entries(routes)
   .filter(([_slug, { id, section }]) => !isNull(id) && !isNull(section))
   .reduce((accum, [slug, pageData]) => {
-    // debugger;
     const { section, subSection = null, id, title, source, katacodaLayout, hideNavItem } = pageData;
     accum[section] = accum[section] || {};
     if (subSection) {
-      debugger;
       accum[section][subSection] = accum[section][subSection] || {};
       accum[section][subSection][id] = accum[section][subSection][id] || {
         id,
