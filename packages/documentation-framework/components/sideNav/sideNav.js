@@ -3,9 +3,14 @@ import { Link } from '../link/link';
 import { Nav, NavList, NavExpandable, PageContextConsumer, capitalize } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { Location } from '@reach/router';
-import { slugger } from '../../helpers';
+import { makeSlug } from '../../helpers';
 import globalBreakpointXl from "@patternfly/react-tokens/dist/esm/global_breakpoint_xl";
 import { trackEvent } from '../../helpers';
+
+const getIsActive = (location, section, subSection = null) => {
+  const slug = makeSlug(null, section, null, null, subSection);
+  return location.pathname.startsWith(`${process.env.pathPrefix}${slug}`);
+}
 
 const NavItem = ({ text, href }) => {
   const isMobileView = window.innerWidth < Number.parseInt(globalBreakpointXl.value, 10);
@@ -34,8 +39,43 @@ const NavItem = ({ text, href }) => {
   )
 };
 
+const ExpandableNav = ({groupedRoutes, location, section, subSection = null}) => {
+  const isActive = getIsActive(location, section, subSection);
+  const routes = subSection
+    ? groupedRoutes[section][subSection]
+    : groupedRoutes[section];
+  const currentSection = subSection ? subSection : section;
+
+  return (
+    <NavExpandable
+      title={capitalize(currentSection.replace(/-/g, ' '))}
+      key={capitalize(currentSection.replace(/-/g, ' '))}
+      isActive={isActive}
+      isExpanded={isActive}
+      className="ws-side-nav-group"
+      onClick={(event) => {
+        // Don't trigger for bubbled events from NavItems
+        if (!event.target.href) {
+          const isExpanded = event.currentTarget.classList.contains('pf-m-expanded');
+          // 1 === expand section, 0 === collapse section
+          trackEvent('sidenav_section_click', 'click_event', currentSection, isExpanded ? 0 : 1);
+        }
+      }}
+    >
+      {Object.entries(routes || {})
+        .filter(([id, { hideNavItem }]) => !Boolean(hideNavItem) && (id !== 'isSubsection'))
+        .map(([id, { slug, isSubsection = false }]) => ({ text: id, href: slug, isSubsection }))
+        .sort(({ text: text1 }, { text: text2 }) => text1.localeCompare(text2))
+        .map(navObj => navObj.isSubsection
+          ? ExpandableNav({groupedRoutes, location, section, subSection: navObj.text})
+          : NavItem(navObj)
+        )
+      }
+    </NavExpandable>
+  );
+}
+
 export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
-  console.log('SideNav.js:  -- ', {groupedRoutes});
   React.useEffect(() => {
     if (typeof window === 'undefined') {
       return;
@@ -50,33 +90,6 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
       lastElement.scrollIntoView({ block: 'center' });
     }
   }, []);
-
-  const buildTertiaryNav = ({text: subSection}, isActive, section) => (
-    <NavExpandable
-      title={capitalize(subSection.replace(/-/g, ' '))}
-      isActive={isActive}
-      isExpanded={isActive}
-      className="ws-side-nav-group"
-      onClick={(event) => {
-        // Don't trigger for bubbled events from NavItems
-        if (!event.target.href) {
-          const isExpanded = event.currentTarget.classList.contains('pf-m-expanded');
-          // 1 === expand section, 0 === collapse section
-          trackEvent('sidenav_section_click', 'click_event', subSection, isExpanded ? 0 : 1);
-        }
-      }}
-    >
-      {Object.entries(groupedRoutes[section][subSection] || {})
-        .filter(([id, { hideNavItem }]) => !Boolean(hideNavItem) && (id !== 'isSubsection'))
-        .map(([id, { slug }]) => ({ text: id, href: slug }))
-        .sort(({ text: text1 }, { text: text2 }) => text1.localeCompare(text2))
-        .map(thing => {
-          console.log({thing});
-          return NavItem(thing);
-        })
-      }
-    </NavExpandable>
-  )
   
   return (
     <Nav aria-label="Side Nav" theme="light">
@@ -84,36 +97,7 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
         {navItems.map(({ section, text, href }) => section
           ? (
             <Location key={section}>
-              {({ location }) => {
-                const isActive = location.pathname.startsWith(`${process.env.pathPrefix}/${slugger(section)}`);
-                return (
-                  <NavExpandable
-                    title={capitalize(section.replace(/-/g, ' '))}
-                    isActive={isActive}
-                    isExpanded={isActive}
-                    className="ws-side-nav-group"
-                    onClick={(event) => {
-                      // Don't trigger for bubbled events from NavItems
-                      if (!event.target.href) {
-                        const isExpanded = event.currentTarget.classList.contains('pf-m-expanded');
-                        // 1 === expand section, 0 === collapse section
-                        trackEvent('sidenav_section_click', 'click_event', section, isExpanded ? 0 : 1);
-                      }
-                    }}
-                  >
-                    {Object.entries(groupedRoutes[section] || {})
-                      .filter(([, { hideNavItem }]) => !Boolean(hideNavItem))
-                      .map(([id, { slug, isSubsection = false }]) => ({ text: id, href: slug, isSubsection }))
-                      .sort(({ text: text1 }, { text: text2 }) => text1.localeCompare(text2))
-                      // .map(NavItem)
-                      .map(navObj => navObj.isSubsection
-                        ? buildTertiaryNav(navObj, isActive, section)
-                        : NavItem(navObj)
-                      )
-                    }
-                  </NavExpandable>
-                );
-              }}
+              {({ location }) => ExpandableNav({groupedRoutes, location, section})}
             </Location>
           )
           : NavItem({

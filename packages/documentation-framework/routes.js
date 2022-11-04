@@ -101,7 +101,7 @@ const getDefaultDesignGuidelines = ({ id, section, slug, title }) => {
 
   return pageData;
 }
-console.log('routes.js -- ', {groupedRoutes});
+
 Object.entries(groupedRoutes)
 .forEach(([_section, ids]) => {
   Object.values(ids).forEach(pageData => {
@@ -110,7 +110,6 @@ Object.entries(groupedRoutes)
     }
     const { slug, section } = pageData;
     // Remove source routes for `app.js`
-    console.log({pageData});
     pageData.sources.forEach(({ slug }) => {
         delete routes[slug];
       });
