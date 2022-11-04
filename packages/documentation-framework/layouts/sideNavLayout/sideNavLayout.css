@@ -61,7 +61,7 @@
   border-bottom: 2px solid #fff;
 }
 /* For tiny (200px) viewports */
-.ws-masthead .pf-c-toolbar  {
+.ws-masthead .pf-c-toolbar__item  {
   min-width: 0;
 }
 .ws-github-pageheader {
