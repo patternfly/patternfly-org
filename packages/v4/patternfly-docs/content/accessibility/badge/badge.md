@@ -3,25 +3,56 @@ id: Badge
 section: components
 ---
 
-A **badge** is used to annotate other information like a label or an object name. Badges are typically used to reflect counts, like number of unread notifications. Badges are not interactive.
+import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
-**Keyboard users** should not be able to focus on a badge.
+## Accessibility
 
-**Screen reader users** should be able to have a screen reader describe the contents of and purpose of a badge when it pops up, but not focus on it otherwise.
+To implement an accessible PatternFly **badge**:
 
-No props need to be added or modified for badge accessibility.
+- Ensure the badge itself is not interactive in anyway. 
+- Ensure that the surrounding context can convey to users via screen reader or similar assistive technologies the purpose of the badge.
+- Ensure badge information is not conveyed by only color, such as a read or unread badge.
 
-**As a caution**, badges can be styled using a variety of colors. Do not rely on color alone to communicate information 
-because it causes barriers to access for many readers. For example, colorblind and low vision users may not be able 
-to perceive the color differences, and screen readers do not announce colors to non-sighted readers.
+## Testing
 
-Since the badge doesn't get an accessible name and isn't focusable, each badge must have adequate contextual information 
-provided in the surrounding UI to convey the same information the color alone is conveying. A developer could consider
-using a label with an icon in it to supplement the color.
+ At a minimum, a badge should meet the following criteria:
 
-Note how difficult it is to determine that there are unread or actionable items associated with either of the badges
-in Figure 1 with its lack of visual cues. Compare Figure 1 to Figure 2 where there is an icon
-used to indicate that the second badge is associated with actionable or unread content.
+<List isPlain>
+  <ListItem>
+    <Checkbox id="badge-a11y-checkbox-1" label="Users should not be able to interact with or navigate to the badge with the keyboard, as it is not an interactive element." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="badge-a11y-checkbox-2" label="Users navigating via screen reader or similar assistive technology should understand the purpose of the badge by its surrounding context." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="badge-a11y-checkbox-3" label="Information about a badge is not conveyed by only color."/>
+  </ListItem>
+</List>
+
+## React customization
+
+A badge does not have any further React props for accessibility.
+
+## HTML/CSS customization
+
+A badge does not have any further HTML/CSS attributes or classes for accessibility.
+
+## Additional considerations
+
+Consumers must ensure they take any additional considerations when customizing a badge, using it in a way not described or recommended by PatternFly, or in various other specific use-cases not outlined elsewhere on this page.
+
+### Color
+
+Generally you should avoid using only color to convey information about a badge. One possible exception to this rule may be if a badge is only ever rendered in a specific scenario, such as only when there are unread notifications, and will otherwise not be rendered for any other purpose. Caution should still be used when using color in this way, though.
+
+If a badge will always be rendered whether it's unread or read, or different badges will convey different types of information, it may be difficult for users to perceive or understand the difference between the two badges.
+
+There are two ways in which to supplement color in order to more accessibly convey badge information:
+
+- Adding an icon to visually convey information
+- Adding a visually-hidden element via the `pf-screen-reader` class to convey information to users of screen readers and similar assistive technologies
+
+Note how difficult it is to determine that there are unread or actionable items associated with either of the badges in Figure 1 with its lack of visual cues. Compare Figure 1 to Figure 2 where there is an icon used to indicate that the second badge is associated with actionable or unread content.
 
 Figure 1.
 
@@ -29,4 +60,4 @@ Figure 1.
 
 Figure 2.
 
-![badges with no color with icons](./badge-no-color-with-icons.png)
+![badges with no color and with icons](./badge-no-color-with-icons.png)
