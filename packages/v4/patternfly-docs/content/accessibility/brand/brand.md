@@ -35,7 +35,7 @@ The following React props have been provided for more fine-tuned control over ac
 
 | Prop | Applied to | Reason |
 | -- | -- | -- |
-| `alt` | `Brand` | Provides an accessible description of the brand. **Required** <br/><br/> This prop will be used for all `source` elements and the fallback `img` when a `picture` brand is used. |
+| `alt="[the brand name or text describing the brand]"` | `Brand` | Provides an accessible description of the brand. **Required** <br/><br/> This prop will be used for all `source` elements and the fallback `img` when a `picture` brand is used. |
 
 ## HTML/CSS customization
 
@@ -43,7 +43,7 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `alt` | `.pf-c-brand > img` | Provides an accessible description of the brand. **Required** <br/><br/> This prop will be used for all `source` elements and the fallback `img` when a `picture` brand is used. |
+| `alt="[the brand name or text describing the brand]"` | `.pf-c-brand > img` | Provides an accessible description of the brand. **Required** <br/><br/> This prop will be used for all `source` elements and the fallback `img` when a `picture` brand is used. |
 
 ## Further reading
 
