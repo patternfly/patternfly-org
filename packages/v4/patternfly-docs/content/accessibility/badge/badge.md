@@ -9,8 +9,8 @@ import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
 To implement an accessible PatternFly **badge**:
 
-- Ensure the badge itself is not interactive in anyway. 
-- Ensure that the surrounding context can convey to users via screen reader or similar assistive technologies the purpose of the badge.
+- Ensure the badge itself is not interactive in any way. 
+- Ensure that the surrounding context can convey the purpose of the badge to users via screen reader or similar assistive technologies.
 - Ensure badge information is not conveyed by only color, such as a read or unread badge.
 
 ## Testing
@@ -39,7 +39,7 @@ A badge does not have any further HTML/CSS attributes or classes for accessibili
 
 ## Additional considerations
 
-Consumers must ensure they take any additional considerations when customizing a badge, using it in a way not described or recommended by PatternFly, or in various other specific use-cases not outlined elsewhere on this page.
+Consumers must ensure they take any additional considerations when customizing a badge, using it in a way not described or recommended by PatternFly, or in various other specific use cases not outlined elsewhere on this page.
 
 ### Color
 
@@ -47,12 +47,12 @@ Generally you should avoid using only color to convey information about a badge.
 
 If a badge will always be rendered whether it's unread or read, or different badges will convey different types of information, it may be difficult for users to perceive or understand the difference between the two badges.
 
-There are two ways in which to supplement color in order to more accessibly convey badge information:
+You should do the following to supplement color to convey badge information:
 
-- Adding an icon to visually convey information
-- Adding a visually-hidden element via the `pf-screen-reader` class to convey information to users of screen readers and similar assistive technologies
+- Add an icon to visually convey information
+- Add a visually-hidden element via the `pf-screen-reader` class to convey information to users of screen readers and similar assistive technologies
 
-Note how difficult it is to determine that there are unread or actionable items associated with either of the badges in Figure 1 with its lack of visual cues. Compare Figure 1 to Figure 2 where there is an icon used to indicate that the second badge is associated with actionable or unread content.
+In Figure 1, note that the lack of visual cues make it difficult to differentiate unread or actionable items associated with the badges. Compare this to Figure 2, where an icon indicates that the second badge is associated with actionable or unread content.
 
 Figure 1.
 

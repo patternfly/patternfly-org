@@ -63,7 +63,7 @@ At a minimum, a tooltip should meet the following criteria:
     <Checkbox id="tooltip-a11y-checkbox-2" label={<span>The tooltip component has the <code className="ws-code">role="tooltip"</code> attribute.</span>} />
   </ListItem>
   <ListItem>
-    <Checkbox id="tooltip-a11y-checkbox-3" label={<span>If the tooltip is meant to act as a primary label, the trigger has the <code className="ws-code">aria-labelledby</code> attribute linked to the tooltip contents.</span>} description="One use-case for this is when a button contains only an icon and no visible text label." />
+    <Checkbox id="tooltip-a11y-checkbox-3" label={<span>If the tooltip is meant to act as a primary label, the trigger has the <code className="ws-code">aria-labelledby</code> attribute linked to the tooltip contents.</span>} description="One use case for this is when a button contains only an icon and no visible text label." />
   </ListItem>
   <ListItem>
     <Checkbox id="tooltip-a11y-checkbox-4" label={<span>If the tooltip is meant to act as supplementary information, the trigger has the <code className="ws-code">aria-describedby</code> attribute linked to the tooltip contents.</span>} />
