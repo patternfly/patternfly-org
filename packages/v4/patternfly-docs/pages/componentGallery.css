@@ -21,12 +21,12 @@
   flex-wrap: nowrap;
 }
 
-.ws-component-gallery .pf-c-sidebar__content {
-  margin-right: var(--pf-global--spacer--md);
-}
-
 .ws-component-gallery .pf-c-card {
   height: 100%;
+}
+
+.ws-component-gallery .pf-c-data-list {
+  max-width: 956px;
 }
 
 @media (min-width: 1200px) {
