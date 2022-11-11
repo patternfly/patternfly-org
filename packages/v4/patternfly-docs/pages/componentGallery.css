@@ -1,11 +1,11 @@
-.ws-component-gallery-container {
+.ws-component-gallery {
   /* Gallery width & top placement */
   margin-top: calc(var(--pf-c-page__main-section--PaddingTop) * -1);
-  width: calc(100vw - var(--pf-c-page__main-section--PaddingRight));
+  width: calc(100vw - var(--pf-c-page__main-section--PaddingRight) - var(--pf-c-page__main-section--PaddingLeft));
 }
 
 /* Toolbar styles */
-.ws-component-gallery-container .pf-c-toolbar {
+.ws-component-gallery .pf-c-toolbar {
   margin-left: calc(var(--pf-c-page__main-section--PaddingLeft) * -1);
   border-bottom: var(--pf-c-page__sidebar--m-light--BorderRightWidth) solid var(--pf-c-page__sidebar--m-light--BorderRightColor);
   margin-bottom: var(--pf-global--spacer--md);
@@ -13,19 +13,12 @@
   z-index: 101;
 }
 
-.ws-component-gallery-container .pf-c-toolbar .pf-c-toolbar__content {
+.ws-component-gallery .pf-c-toolbar .pf-c-toolbar__content {
   --pf-c-toolbar__content--PaddingLeft: var(--pf-c-page__main-section--PaddingLeft);
 }
 
-.ws-component-gallery .pf-c-toolbar__content-section { flex-wrap: nowrap; }
-
-/* Sidebar styles */
-.ws-component-gallery .pf-c-sidebar__panel {
-  border-left: var(--pf-c-page__sidebar--m-light--BorderRightWidth) solid var(--pf-c-page__sidebar--m-light--BorderRightColor);
-  padding: var(--pf-global--spacer--md);
-  top: 93px;
-  margin: calc(var(--pf-global--spacer--md) * -1) 0 var(--pf-global--spacer--md) calc(var(--pf-global--spacer--md) * -1);
-  z-index: 101;
+.ws-component-gallery .pf-c-toolbar__content-section {
+  flex-wrap: nowrap;
 }
 
 .ws-component-gallery .pf-c-sidebar__content {
@@ -36,22 +29,8 @@
   height: 100%;
 }
 
-@media (min-width: 768px) {
-  .ws-component-gallery .pf-c-sidebar__panel {
-    height: calc(100vh - 146px);
-    margin-left: var(--pf-global--spacer--md);
-    margin-bottom: 0;
-    z-index: 0;
-    top: 69px;
-   }
-
-   .ws-component-gallery .pf-c-sidebar__panel + .pf-c-sidebar__content {
-    margin-right: 0;
-  }
-}
-
 @media (min-width: 1200px) {
-  .ws-component-gallery-container {
-    width: calc(100vw - var(--pf-c-page__sidebar--Width) - var(--pf-c-page__main-section--PaddingRight));
+  .ws-component-gallery {
+    width: calc(100vw - var(--pf-c-page__sidebar--Width) - var(--pf-c-page__main-section--PaddingRight) - var(--pf-c-page__main-section--PaddingLeft));
   }
 }

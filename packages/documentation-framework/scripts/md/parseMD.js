@@ -265,7 +265,8 @@ function sourceMDFile(file, source, buildMode) {
       source: pageData.source,
       ...(pageData.katacodaLayout && { katacodaLayout: pageData.katacodaLayout }),
       ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem }),
-      ...(pageData.hideSourceTabs && { hideSourceTabs: pageData.hideSourceTabs })
+      ...(pageData.hideSourceTabs && { hideSourceTabs: pageData.hideSourceTabs }),
+      ...(pageData.beta && { beta: pageData.beta })
     };
   }
 }
