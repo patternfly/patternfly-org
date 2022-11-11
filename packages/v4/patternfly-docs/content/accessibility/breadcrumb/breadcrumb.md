@@ -39,16 +39,13 @@ At a minimum, a breadcrumb should meet the following criteria:
     <Checkbox id="breadcrumb-a11y-checkbox-3" label="Users are able to tell whether a breadcrumb item will open in a new tab or window." description={<span>This can be best achieved by rendering an icon for visual context, and passing in visually-hidden text via the <code className="ws-code">pf-screen-reader</code> class.</span>} />
   </ListItem>
   <ListItem>
-    <Checkbox id="breadcrumb-a11y-checkbox-4" label="Users are able to tell whether a breadcrumb item will open in a new tab or window." description={<span>This can be best achieved by rendering an icon for visual context, and passing in visually-hidden text via the <code className="ws-code">pf-screen-reader</code> class.</span>} />
+    <Checkbox id="breadcrumb-a11y-checkbox-4" label={<span>The breadcrumb has an <code className="ws-code">aria-label</code> if there are other <code className="ws-code">nav</code> elements or breacrumbs on the page.</span>} description="This helps users of assistive technologies to differentiate between multiple navigational elements." />
   </ListItem>
   <ListItem>
-    <Checkbox id="breadcrumb-a11y-checkbox-5" label={<span>The breacrumb has an <code className="ws-code">aria-label</code> if there are other <code className="ws-code">nav</code> elements or breacrumbs on the page.</span>} description="This helps differentiate the various navigations to users of assistive technologies." />
+    <Checkbox id="breadcrumb-a11y-checkbox-5" label="Any other components used within a breadcrumb follow their own accessibility documentation." />
   </ListItem>
   <ListItem>
-    <Checkbox id="breadcrumb-a11y-checkbox-6" label="Any other components used within a breadcrumb follow their own accessibility documentation." />
-  </ListItem>
-  <ListItem>
-    <Checkbox id="breadcrumb-a11y-checkbox-7" label={<span>The breadcrumb item whose page is currently active has the <code className="ws-code">aria-current="page"</code> attribute.</span>} description="This notifies users of assistive technologies which breadcrumb item corresponds to the page they are currently on." />
+    <Checkbox id="breadcrumb-a11y-checkbox-6" label={<span>The breadcrumb item whose page is currently active has the <code className="ws-code">aria-current="page"</code> attribute.</span>} description="This notifies users of assistive technologies which breadcrumb item corresponds to the page they are currently on." />
   </ListItem>
 </List>
 
