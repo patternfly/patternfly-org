@@ -155,15 +155,10 @@ export const MDXTemplate = ({
           isWidthLimited
         >
           <TextContent>
-          {!katacodaLayout && <Title headingLevel='h1' size='4xl' id="ws-page-title">{title}</Title>}
-          {isComponent && summary && (<SummaryComponent />)}
+            {!katacodaLayout && <Title headingLevel='h1' size='4xl' id="ws-page-title">{title}</Title>}
+            {isComponent && summary && (<SummaryComponent />)}
           </TextContent>
         </PageSection>
-        {isComponent && summary && (
-          <PageSection variant={PageSectionVariants.light} className="pf-u-pt-0">
-            <SummaryComponent />
-          </PageSection>
-        )}
         {(!isSinglePage || isComponent) && !hideSourceTabs && (
           <PageSection id="ws-sticky-nav-tabs" stickyOnBreakpoint={{'default':'top'}} type="tabs">
             <div className="pf-c-tabs pf-m-page-insets pf-m-no-border-bottom">
