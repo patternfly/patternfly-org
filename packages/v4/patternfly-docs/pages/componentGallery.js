@@ -1,6 +1,6 @@
 import React from "react";
 import { groupedRoutes } from '@patternfly/documentation-framework/routes';
-import {  Button, Card, CardTitle, CardBody, CardFooter, Gallery, GalleryItem, Label, SearchInput, Toolbar, ToolbarContent, ToolbarGroup, ToolbarItem, Text, TextContent, TextVariants, DataList, DataListItem, DataListItemRow, DataListItemCells, DataListCell, DataListAction, ToggleGroup, ToggleGroupItem } from '@patternfly/react-core';
+import {  Button, Card, CardTitle, CardBody, CardFooter, DataList, DataListItem, DataListItemRow, DataListItemCells, DataListCell, DataListAction, Gallery, GalleryItem, Label, SearchInput, Toolbar, ToolbarContent, ToolbarGroup, ToolbarItem, Text, TextContent, TextVariants, ToggleGroup, ToggleGroupItem } from '@patternfly/react-core';
 import { Link, navigate } from '@reach/router';
 import { convertToReactComponent } from "@patternfly/ast-helpers";
 import componentsData from '../components-data.json';
@@ -35,6 +35,16 @@ export const ComponentGallery = () => {
   const layoutProps = layoutView === 'grid'
     ? { hasGutter: true }
     : { onSelectDataListItem: () => {}};
+  const Illustration = ({component: IllustrationWrapper, illustration, componentName}) => (
+    <IllustrationWrapper>
+      <img src={illustration} alt={`${componentName} illustration`} />
+    </IllustrationWrapper>
+  );
+  const BetaLabel = ({component: LabelWrapper}) => (
+    <LabelWrapper>
+      <Label color="gold">Beta feature</Label>
+    </LabelWrapper>
+  );
 
   return (
     <div className="ws-component-gallery">
@@ -76,7 +86,7 @@ export const ComponentGallery = () => {
             const illustration = illustrations[illustrationName] || illustrations.default_placeholder;
             const {title, id, slug, sources} = componentData;
             const isBeta = sources.some(src => src.beta);
-            
+
             return layoutView === 'grid'
               ? (
                 <GalleryItem span={4} key={idx}>
@@ -84,20 +94,11 @@ export const ComponentGallery = () => {
                     id={componentData.id}
                     key={idx}
                     isSelectableRaised
-                    onClick={() => navigate(slug)}
-                    onKeyDown={evt => onKeyDown(evt, componentData)}
+                    onClick={() => navigate(`${process.env.pathPrefix}${slug}`)}
                   >
                     <CardTitle>{componentName}</CardTitle>
-                    {illustration && (
-                      <CardBody>
-                        <img src={illustration} alt={`${componentName} illustration`} />
-                      </CardBody>
-                    )}
-                    {isBeta && (
-                      <CardFooter>
-                        <Label color="gold">Beta feature</Label>
-                      </CardFooter>
-                    )}
+                    {illustration && <Illustration component={CardBody} illustration={illustration} componentName={componentName} />}
+                    {isBeta && <BetaLabel component={CardFooter} />}
                   </Card>
                 </GalleryItem>
               ) : (
@@ -105,11 +106,7 @@ export const ComponentGallery = () => {
                   <DataListItemRow>
                     <DataListItemCells dataListCells={[
                       <DataListCell width={1} key="illustration">
-                        {illustration && (
-                          <div>
-                            <img src={illustration} alt={`${componentName} illustration`} />
-                          </div>
-                        )}
+                        {illustration && <Illustration component={'div'} illustration={illustration} componentName={componentName} />}
                       </DataListCell>,
                       <DataListCell width={5} key="text-description">
                         <TextContent>
@@ -124,11 +121,7 @@ export const ComponentGallery = () => {
                         </TextContent>
                       </DataListCell>
                     ]} />
-                    {isBeta && (
-                      <DataListAction>
-                        <Label color="gold">Beta feature</Label>
-                      </DataListAction>
-                    )}
+                    {isBeta && <BetaLabel component={DataListAction} />}
                   </DataListItemRow>
                 </DataListItem>
               )

@@ -35,6 +35,7 @@ const NavItem = ({ text, href }) => {
 };
 
 export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
+  console.log({groupedRoutes})
   React.useEffect(() => {
     if (typeof window === 'undefined') {
       return;
