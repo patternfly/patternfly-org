@@ -1,7 +1,7 @@
 import React from "react";
 import { groupedRoutes } from '@patternfly/documentation-framework/routes';
 import {  Button, Card, CardTitle, CardBody, CardFooter, DataList, DataListItem, DataListItemRow, DataListItemCells, DataListCell, DataListAction, Gallery, GalleryItem, Label, SearchInput, Toolbar, ToolbarContent, ToolbarGroup, ToolbarItem, Text, TextContent, TextVariants, ToggleGroup, ToggleGroupItem } from '@patternfly/react-core';
-import { Link, navigate } from '@reach/router';
+import { Link } from '@patternfly/documentation-framework/components';
 import { convertToReactComponent } from "@patternfly/ast-helpers";
 import componentsData from '../components-data.json';
 import * as illustrations from '../images/component-illustrations';
@@ -90,40 +90,45 @@ export const ComponentGallery = () => {
             return layoutView === 'grid'
               ? (
                 <GalleryItem span={4} key={idx}>
-                  <Card
-                    id={componentData.id}
-                    key={idx}
-                    isSelectableRaised
-                    onClick={() => navigate(`${process.env.pathPrefix}${slug}`)}
-                  >
-                    <CardTitle>{componentName}</CardTitle>
-                    {illustration && <Illustration component={CardBody} illustration={illustration} componentName={componentName} />}
-                    {isBeta && <BetaLabel component={CardFooter} />}
-                  </Card>
+                  <Link to={slug}>
+                    <Card
+                      id={componentData.id}
+                      key={idx}
+                      isSelectableRaised
+                      // onClick={() => navigate(`${process.env.pathPrefix}${slug}`)}
+                    >
+                      <CardTitle>{componentName}</CardTitle>
+                      {illustration && <Illustration component={CardBody} illustration={illustration} componentName={componentName} />}
+                      {isBeta && <BetaLabel component={CardFooter} />}
+                    </Card>
+                  </Link>
                 </GalleryItem>
               ) : (
-                <DataListItem onClick={({target}) => { target.href ? navigate(target.href) : navigate(slug)}} key={idx}>
-                  <DataListItemRow>
-                    <DataListItemCells dataListCells={[
-                      <DataListCell width={1} key="illustration">
-                        {illustration && <Illustration component={'div'} illustration={illustration} componentName={componentName} />}
-                      </DataListCell>,
-                      <DataListCell width={5} key="text-description">
-                        <TextContent>
-                          <Text component={TextVariants.h2}>
-                            <span>
-                              {title}
-                            </span>
-                          </Text>
-                          <Text>
-                            { id ? <SummaryComponent id={id}/> : null }
-                          </Text>
-                        </TextContent>
-                      </DataListCell>
-                    ]} />
-                    {isBeta && <BetaLabel component={DataListAction} />}
-                  </DataListItemRow>
-                </DataListItem>
+                <Link to={slug}>
+                  <DataListItem key={idx}>
+                  {/* onClick={({target}) => { target.href ? navigate(target.href) : navigate(slug)}} */}
+                    <DataListItemRow>
+                      <DataListItemCells dataListCells={[
+                        <DataListCell width={1} key="illustration">
+                          {illustration && <Illustration component={'div'} illustration={illustration} componentName={componentName} />}
+                        </DataListCell>,
+                        <DataListCell width={5} key="text-description">
+                          <TextContent>
+                            <Text component={TextVariants.h2}>
+                              <span>
+                                {title}
+                              </span>
+                            </Text>
+                            <Text>
+                              { id ? <SummaryComponent id={id}/> : null }
+                            </Text>
+                          </TextContent>
+                        </DataListCell>
+                      ]} />
+                      {isBeta && <BetaLabel component={DataListAction} />}
+                    </DataListItemRow>
+                  </DataListItem>
+                </Link>
               )
           })
         }
