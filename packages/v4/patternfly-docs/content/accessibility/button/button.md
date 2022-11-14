@@ -37,7 +37,7 @@ At a minimum, a button should meet the following criteria:
     <Checkbox id="button-a11y-checkbox-3" label="Users are able to tell whether a button as a link will open in a new tab or window." description={<span>This can be best achieved by rendering an icon for visual context, and passing in visually-hidden text via the <code className="ws-code">pf-screen-reader</code> class.</span>} />
   </ListItem>
   <ListItem>
-    <Checkbox id="button-a11y-checkbox-3" label={<span>If a button should be disabled, but remain focusable, it has the <code className="ws-code">aria-disabled="true"</code> attribute instead of the standard <code className="ws-code">disabled</code> attribute.</span>} description="One example for when you should do this is if the button has a tooltip that should be triggered when the button receives focus." />
+    <Checkbox id="button-a11y-checkbox-4" label={<span>If a button should be disabled, but remain focusable, it has the <code className="ws-code">aria-disabled="true"</code> attribute instead of the standard <code className="ws-code">disabled</code> attribute.</span>} description="One example for when you should do this is if the button has a tooltip that should be triggered when the button receives focus." />
   </ListItem>
 </List>
 
