@@ -77,10 +77,11 @@ const MDXChildTemplate = ({
           {InlineAlerts}
           <Component />
           {propsTitle && (
-            <ExpandableSection toggleText={propsTitle}>
+            <ExpandableSection toggleText={propsTitle} toggleContent={
               <AutoLinkHeader size="h2" className="ws-h2" id="props">
                 {propsTitle}
               </AutoLinkHeader>
+            }>
               {propComponents.map(component => (
                 <PropsTable
                   key={component.name}
