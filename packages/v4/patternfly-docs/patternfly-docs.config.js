@@ -1,4 +1,5 @@
 const componentsData = require('./components-data.json');
+// const illustrations = require('./images/component-illustrations');
 
 // This module is shared between NodeJS and babelled ES5
 module.exports = {
@@ -15,6 +16,7 @@ module.exports = {
   hasDesignGuidelines: true,
   hasDarkThemeSwitcher: false,
   componentsData,
+  // illustrations,
   sideNavItems: [
     { section: 'get-started' },
     { section: 'developer-resources' },
