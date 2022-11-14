@@ -109,7 +109,8 @@ export const Example = ({
     // These 2 are in the bundle anyways for the site since we dogfood
     ...reactCoreModule,
     ...reactTableModule,
-    ...(source === 'react-next' ? reactCoreNextModule : {})
+    ...(source === 'react-next' ? reactCoreNextModule : {}),
+    ...(source === 'react-deprecated' ? reactCoreDeprecatedModule : {})
   };
 
   let livePreview = null;

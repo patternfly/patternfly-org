@@ -61,7 +61,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
       }
 
       const propComponents = [...new Set(frontmatter.propComponents || [])].reduce((acc, componentName) => {
-        const name = getTsDocName(componentName, source === 'react-next');
+        const name = getTsDocName(componentName, source === 'react-next', source === 'react-deprecated');
 
         if (tsDocs[name]) {
           acc.push(tsDocs[name]);
@@ -242,7 +242,7 @@ function sourcePropsFile(file) {
   tsDocgen(file)
     .filter(({ hide }) => !hide)
     .forEach(({ name, description, props }) => {
-      tsDocs[getTsDocName(name, file.includes('/next'))] = { name, description, props };
+      tsDocs[getTsDocName(name, file.includes('/next'), file.includes('/deprecated'))] = { name, description, props };
     });
 }
 
@@ -284,9 +284,14 @@ function writeIndex() {
 }
 
 // Build unique names for components if they are a part of the "next" module.
-function getTsDocName(name, isNextComponent) {
-  return `${name}${isNextComponent ? '-next' : ''}`;
-};
+function getTsDocName(name, isNextComponent, isDeprecatedComponent) {
+  if (isNextComponent) {
+    return `${name}-next`;
+  } else if (isDeprecatedComponent) {
+    return `${name}-deprecated`;
+  }
+  return name;
+}
 
 module.exports = {
   sourceProps(glob, ignore) {
