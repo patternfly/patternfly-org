@@ -120,7 +120,8 @@ module.exports = (_env, argv) => {
         './routes-client': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.routes.js'),
         './routes-generated': path.resolve(process.cwd(), 'patternfly-docs/generated/index.js'),
         '@patternfly/react-core/next': '@patternfly/react-core/dist/esm/next/index.js', // Can remove when webpack is updated to v5
-        '@patternfly/react-core/deprecated': '@patternfly/react-core/dist/esm/deprecated/index.js' // Can remove when webpack is updated to v5
+        '@patternfly/react-core/deprecated': '@patternfly/react-core/dist/esm/deprecated/index.js', // Can remove when webpack is updated to v5
+        '@patternfly/react-table/deprecated': '@patternfly/react-table/dist/esm/deprecated/index.js' // Can remove when webpack is updated to v5
       },
       modules: [
         'node_modules',

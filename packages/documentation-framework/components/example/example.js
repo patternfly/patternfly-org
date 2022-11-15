@@ -4,6 +4,7 @@ import { Badge, CodeBlock, CodeBlockCode, debounce, Switch } from '@patternfly/r
 import * as reactCoreModule from '@patternfly/react-core';
 import * as reactCoreNextModule from '@patternfly/react-core/next';
 import * as reactTableModule from '@patternfly/react-table';
+import * as reactTableDeprecatedModule from '@patternfly/react-table/deprecated';
 import { css } from '@patternfly/react-styles';
 import { getParameters } from 'codesandbox/lib/api/define';
 import { ExampleToolbar } from './exampleToolbar';
@@ -110,7 +111,7 @@ export const Example = ({
     ...reactCoreModule,
     ...reactTableModule,
     ...(source === 'react-next' ? reactCoreNextModule : {}),
-    ...(source === 'react-deprecated' ? reactCoreDeprecatedModule : {})
+    ...(source === 'react-deprecated' ? reactTableDeprecatedModule : {})
   };
 
   let livePreview = null;
