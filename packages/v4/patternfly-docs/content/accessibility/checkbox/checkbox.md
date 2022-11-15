@@ -3,17 +3,78 @@ id: Checkbox
 section: components
 ---
 
-A **checkbox** is used to select a single item or multiple items, typically to choose elements to perform an action or to reflect a binary setting.
+import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
-Keyboard users will be able to interact with the checkbox component by pressing **Space** to select the input. We have added any attributes necessary to make it properly announced to screen readers.
+## Accessibility
 
-In general, the checkbox component already has accessibility built in. The **standalone input variant** will need special consideration.
+To implement an accessible PatternFly **checkbox** component:
 
-To make the checkbox **standalone input variant** accessible, add an `aria-label` with a label for the input. You can also use `aria-labelledby` to associate the checkbox with visible text on the page to explain the checkbox. 
+- Ensure the checkbox can be navigated to and interacted with via keyboard and other assistive technologies such as a screen reader
+- Ensure the checkbox can be toggled by clicking its visible text label, if it has one
+- Ensure the checkbox label has hover styles to indicate that it can be clicked
+- Ensure the checkbox input provides enough clickable space on its own
+- Provide an `aria-label` if the checkbox does not have a visible text label
+- Place related checkboxes inside of a list element, and that list inside of an element that has the `role="group"` attribute
 
-<br/>
-If you’d like to customize the checkbox component’s accessibility, edit the following:
+For the PatternFly React library:
 
-| React component| React prop | Which HTML element it appears on in markup | Explanation | 
-|---|---|---|---|
-| Checkbox | aria-label | .pf-c-check__input | Aria-label or accessible text for the checkbox. |
+- Include the `isRequired` prop if the checkbox must be checked
+
+For the HTML/CSS library:
+
+- Include the `required` attribute if the checkbox must be checked
+
+## Testing
+
+At a minimum, a checkbox should meet the following criteria:
+
+<List isPlain>
+  <ListItem>
+    <Checkbox id="checkbox-a11y-checkbox-1" label="Standard keyboard navigation can be used to navigate between checkboxes or other focusable elements." description={<span><kbd>Tab</kbd> navigates to the next checkbox or focusable element, and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous checkbox or focusable element. If a checkbox is inside of a menu, follow the [menu accessibility documentation](/components/menu/accessibility) instead.</span>} />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="checkbox-a11y-checkbox-2" label="Standard keyboard interaction can be used to interact with the checkbox." description={<span>Only <kbd>Space</kbd> should be able to toggle the checkbox.</span>} />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="checkbox-a11y-checkbox-3" label="If the checkbox has a visible text label, clicking the label toggles the checkbox." description="This provides extra clickable space for users who may have trouble clicking the checkbox input itself, such as on mobile or due to a motor or physical impairment." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="checkbox-a11y-checkbox-4" label="If the checkbox has a visible text label, that label has hover styles to indicate to users that it can be interacted with." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="checkbox-a11y-checkbox-5" label="The checkbox input provides enough clickable space to toggle it, even without a visible text label." description="Similar to ensuring a visible text label is clickable, this can help users who may have trouble clicking smaller checkbox inputs." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="checkbox-a11y-checkbox-6" label={<span>If the checkbox does not have a visible text label, it has an <code className="ws-code">aria-label</code>.</span>} description="This provides context to users who may not be able to see or understand the visual context, such as a checkbox that selects a table row." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="checkbox-a11y-checkbox-7" label={<span>Multiple related checkboxes are inside of a list element, and that list element is inside of another element that has the <code className="ws-code">role="group"</code> attribute.</span>} description={<span>The <code className="ws-code">role</code> attribute notifies users of assistive technologies that they are in a group of checkboxes, while the list element notifies them of how many checkboxes there are in the group.</span>} />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="checkbox-a11y-checkbox-8" label={<span>If the checkbox is required to be checked, it has the <code className="ws-code">required</code> attribute.</span>} />
+  </ListItem>
+</List>
+
+## React customization
+
+The following React props have been provided for more fine-tuned control over accessibility.
+
+| Prop | Applied to | Reason | 
+|---|---|---|
+| `aria-label="[text describing the checkbox]"` | `Checkbox` | Adds an accessible name to the checkbox when there is no visible text label. **Required** when there is no visible text label. |
+| `id` | `Checkbox` | Links the checkbox input with its text label, which allows clicking the label to toggle the checkbox. The linked label text is also used as the accessible name of the checkbox. **Required**. |
+| `isRequired` | `Checkbox` | Adds the `required` attribute to the checkbox and adds visual styling to notify users the checkbox must be checked. **Required** when users must check the checkbox. |
+| `isValid={[true or false]}` | `Checkbox` | Sets the `aria-invalid` attribute, notifying users of assistive technologies whether the checkbox value is invalid. |
+| `label="[text describing the checkbox]"` | `Checkbox` | Adds a visible text label for the checkbox, which also acts as its accessible name. |
+
+## HTML/CSS customization
+
+The following HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
+
+| Attribute or class | Applied to | Reason | 
+|---|---|---|
+| `aria-invalid={[true or false]}` | `.pf-c-check__input` | Notifies users of assistive technologies whether the checkbox value is invalid. |
+| `aria-label="[text describing the checkbox]"` | `.pf-c-check__input` | Adds an accessible name to the checkbox when there is no visible text label. **Required** when there is no visible text label. |
+| `id` | `.pf-c-check__input` | Links the checkbox input with its text label, which allows clicking the label to toggle the checkbox. The linked label text is also used as the accessible name of the checkbox. **Required**. |
+| `label="[text describing the checkbox]"` | `label.pf-c-check__label > span.pf-c-check__label-required` | Adds styling to visually notify users that the checkbox is required and to differentiate the content from the checkbox label. Usually an asterisk `*` is used to visually convey that an input is required. **Required** when users must check the checkbox. |
+| `required` | `.pf-c-check__input` | Notifies users that the checkbox must be checked. **Required** when users must check the checkbox. |
