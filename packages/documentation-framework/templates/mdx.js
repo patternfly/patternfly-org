@@ -123,9 +123,37 @@ export const MDXTemplate = ({
 }) => {
   const sourceKeys = sources.map(v => v.source);
   const isSinglePage = sourceKeys.length === 1;
-  const isComponent = sources.some(source => source.section === 'components');
-  const isUtility = sources.some((source) => source.section === "utilities");
-  const isDemo = sources.some((source) => source.section === "demos");
+
+  let isDevResources, isComponent, isExtension, isChart, isDemo, isLayout, isUtility;
+
+  const getSection = () => {
+    return sources.some((source) => {
+      switch (source.section) {
+        case "developer-resources":
+          isDevResources = true;
+          return;
+        case "components":
+          isComponent = true;
+          return;
+        case "extensions":
+          isExtension = true;
+          return;
+        case "charts":
+          isChart = true;
+          return;
+        case "demos":
+          isDemo = true;
+          return;
+        case "layouts":
+          isLayout = true;
+          return;
+        case "utilities":
+          isUtility = true;
+          return;
+      }
+    });
+  };
+
   // hide tab if it doesn't include the strings below
   const hideTabName = sourceKeys.some(
     (e) => e.includes("pages") || e.includes("training")
@@ -151,11 +179,24 @@ export const MDXTemplate = ({
     document.title = getTitle(title);
   }
 
+  const getClassName = () => {
+    getSection();
+    if (isChart || isDevResources || isExtension) {
+      if (isSinglePage) {
+        return "pf-m-light-100";
+      }
+      return "pf-m-light";
+    } else if (isUtility || isDemo || isLayout || isComponent) {
+      return "pf-m-light";
+    }
+    return "pf-m-light-100";
+  };
+
   return (
     <React.Fragment>
       <PageGroup>
         <PageSection
-          className={hideTabName ? "pf-m-light-100" : "pf-m-light"}
+          className={getClassName()}
           variant={!isSinglePage ? PageSectionVariants.light : ""}
           isWidthLimited
         >
