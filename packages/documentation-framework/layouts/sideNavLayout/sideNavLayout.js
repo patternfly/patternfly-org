@@ -104,11 +104,10 @@ const HeaderTools = ({
           <ToolbarItem>
             <Button
               component="a"
-              variant="link"
+              variant="plain"
               href="//github.com/patternfly"
               target="top"
-              aria-label="Link to PatternFly GitHub page"
-              className="ws-github-pageheader"
+              aria-label="PatternFly GitHub page"
             >
               <GithubIcon />
             </Button>
@@ -116,17 +115,16 @@ const HeaderTools = ({
           {hasVersionSwitcher && (
             <ToolbarItem>
               <Dropdown
-                className="ws-org-version-switcher"
+                isFullHeight
                 onSelect={() => setDropdownOpen(!isDropdownOpen)}
+                isOpen={isDropdownOpen}
                 toggle={(
                   <DropdownToggle
-                    className={`ws-org-version-toggle${isDropdownOpen ? '-expanded': ''}`}
                     onToggle={() => setDropdownOpen(!isDropdownOpen)}
                   >
                     Release {initialVersion.name}
                   </DropdownToggle>
                 )}
-                isOpen={isDropdownOpen}
                 dropdownItems={[
                   <DropdownGroup key="latest" label="Latest">
                     {getDropdownItem(latestVersion)}

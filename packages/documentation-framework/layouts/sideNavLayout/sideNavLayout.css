@@ -44,26 +44,7 @@
   }
 }
 
-/* Version toggle */
-.ws-org-version-toggle {
-  color: var(--pf-global--Color--light-100);
-}
-.ws-org-version-toggle::before {
-  content: none !important;
-}
-.ws-org-version-toggle:hover {
-  border-bottom: 1px solid #fff;
-}
-.ws-org-version-toggle-expanded::before {
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  border-bottom: 2px solid #fff;
-}
 /* For tiny (200px) viewports */
 .ws-masthead .pf-c-toolbar__item  {
   min-width: 0;
-}
-.ws-github-pageheader {
-  color: var(--pf-global--Color--light-100) !important;
 }
