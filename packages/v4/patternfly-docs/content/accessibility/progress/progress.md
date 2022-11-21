@@ -20,10 +20,10 @@ At a minimum, a progress component should meet the following criteria:
 
 <List isPlain>
   <ListItem>
-    <Checkbox id="progress-a11y-checkbox-1" label={<span>The progress component has an accessible name via the <code class="ws-code">title</code> or <code class="ws-code">aria-label</code> attribute.</span>} description="This will give context when announced to users of assistive technologies when navigating through a page or a screen reader's rotor menu." />
+    <Checkbox id="progress-a11y-checkbox-1" label={<span>The progress component has an accessible name via the <code className="ws-code">title</code> or <code className="ws-code">aria-label</code> attribute.</span>} description="This will give context when announced to users of assistive technologies when navigating through a page or a screen reader's rotor menu." />
   </ListItem>
   <ListItem>
-    <Checkbox id="progress-a11y-checkbox-2" label={<span>If progress status will dynamically appear or update, there is a live region with <code class="ws-code">aria-live="polite"</code> on page load where updates are rendered.</span>} description="This will allow assistive technologies to announce dynamically rendered updates." />
+    <Checkbox id="progress-a11y-checkbox-2" label={<span>If progress status will dynamically appear or update, there is a live region with <code className="ws-code">aria-live="polite"</code> on page load where updates are rendered.</span>} description="This will allow assistive technologies to announce dynamically rendered updates." />
   </ListItem>
 </List>
 
