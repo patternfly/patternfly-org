@@ -28,7 +28,9 @@ import BarsIcon from '@patternfly/react-icons/dist/esm/icons/bars-icon';
 import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
 import staticVersions from '../../versions.json';
-import logo from '../logo.svg';
+import logoMd from '@patternfly/patternfly/assets/images/logo__pf--reverse-on-md.svg';
+import logo from '@patternfly/patternfly/assets/images/logo__pf--reverse--base.svg';
+import logoBase from '@patternfly/patternfly/assets/images/logo__pf--reverse--base.png';
 
 const HeaderTools = ({
   versions,
@@ -216,7 +218,12 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
       </MastheadToggle>
       <MastheadMain>
         <MastheadBrand href={prurl || pathPrefix || '/'}>
-          {prnum ? `PR #${prnum}` : <Brand src={logo} alt="Patternfly Logo" />}
+          {prnum ? `PR #${prnum}` : (
+            <Brand src={logoBase} alt="PatternFly logo" widths={{ default: '180px', md: '220px' }}>
+              <source media="(min-width: 768px)" srcSet={logoMd} />
+              <source srcSet={logo} />
+            </Brand>
+          )}
         </MastheadBrand>
       </MastheadMain>
       <MastheadContent>
