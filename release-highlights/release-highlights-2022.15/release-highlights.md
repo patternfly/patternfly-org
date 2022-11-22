@@ -15,9 +15,9 @@ For multiple file uploads, this gives consumers the ability to customize the pro
 
 Adds the ability to open a help popover from a tab to provide more information about its contents.
 
-### Data sync and data source icons
+### Data sink and data source icons
 
-![data sync and data source icons](./img/new-icons.png)
+![data sink and data source icons](./img/new-icons.png)
 
 Added Data Sync and Data Source as new custom icons.
 
