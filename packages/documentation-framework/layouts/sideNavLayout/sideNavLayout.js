@@ -219,7 +219,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
       <MastheadMain>
         <MastheadBrand href={prurl || pathPrefix || '/'}>
           {prnum ? `PR #${prnum}` : (
-            <Brand src={logoBase} alt="PatternFly logo" widths={{ default: '180px', md: '220px' }}>
+            <Brand src={logoBase} alt="PatternFly logo" widths={{ default: '180px', '2xl': '220px' }}>
               <source media="(min-width: 768px)" srcSet={logoMd} />
               <source srcSet={logo} />
             </Brand>
