@@ -103,20 +103,30 @@ const getDefaultDesignGuidelines = ({ id, section, slug, title }) => {
 }
 
 Object.entries(groupedRoutes)
-.forEach(([_section, ids]) => {
-  Object.values(ids).forEach(pageData => {
-    if (!pageData.slug && !pageData.section) {
-      pageData = Object.values(pageData)[0];
-    }
-    const { slug, section } = pageData;
-    // Remove source routes for `app.js`
-    pageData.sources.forEach(({ slug }) => {
-        delete routes[slug];
+  .forEach(([_section, ids]) => {
+    Object.values(ids).forEach(pageData => {
+      let pageDataArr = [];
+      // Loop through each page in expandable subsection
+      if (pageData.isSubsection) {
+        Object.entries(pageData).map(([_section, ids]) => {
+          if (_section !== 'isSubsection') {
+            pageDataArr.push(ids);
+          }
+        })
+      } else {
+        pageDataArr = [pageData];
+      }
+      pageDataArr.forEach(pageDataObj => {
+        const { slug, section } = pageDataObj;
+        // Remove source routes for `app.js`
+        pageDataObj.sources.forEach(({ slug }) => {
+          delete routes[slug];
+        });
+        // Sort sources for tabs
+        pageDataObj.sources = pageDataObj.sources.sort(sortSources);
+        // Add grouped route
+        routes[slug] = pageDataObj;
       });
-      // Sort sources for tabs
-      pageData.sources = pageData.sources.sort(sortSources);
-      // Add grouped route
-      routes[slug] = pageData;
     })
   });
 
