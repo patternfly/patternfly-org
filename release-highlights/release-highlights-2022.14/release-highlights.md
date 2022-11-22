@@ -3,7 +3,7 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-(https://www.patternfly.org/v4/components/menu#danger-menu-item)
+### [Menu - new danger menu item](https://www.patternfly.org/v4/components/menu#danger-menu-item)
 
 ![menu with danger item](./img/danger-menu-item.png)
 
