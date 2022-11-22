@@ -5,6 +5,15 @@ import { trackEvent } from '../../helpers';
 export const TableOfContents = ({ items }) => {
   // Used to recalculate JumpLinks offset if screen size changes
   const [width, setWidth] = React.useState(window.innerWidth);
+  // Used to calculate where TOC is positioned in smaller viewports
+  const [stickyNavHeight, setStickyNavHeight] = React.useState(0);
+
+  React.useEffect(() => {
+    if (document.getElementById("ws-sticky-nav-tabs")) {
+      setStickyNavHeight(document.getElementById("ws-sticky-nav-tabs").offsetHeight);
+    }
+  }, [])
+
   const updateWidth = () => {
     const { innerWidth } = window;
     innerWidth !== width && setWidth(innerWidth);
@@ -80,7 +89,8 @@ export const TableOfContents = ({ items }) => {
       isVertical
       scrollableSelector="#ws-page-main"
       className="ws-toc"
-      offset={width > 1450 ? 92 : 148}
+      style={{ 'top': stickyNavHeight }}
+      offset={width > 1450 ? 108 + stickyNavHeight : 148 + stickyNavHeight}
       expandable={{ default: 'expandable', '2xl': 'nonExpandable' }}
     >
       { renderJumpLinksItems() }

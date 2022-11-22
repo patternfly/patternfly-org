@@ -21,30 +21,30 @@ For the HTML/CSS library:
 
 ## Testing
 
-At a minimumm, an alert group should meet the following criteria:
+At a minimum, an alert group should meet the following criteria:
 
 <List isPlain>
   <ListItem>
     <Checkbox id="alertGroup-a11y-checkbox-1" label="The alert group exists on page load and is not dynamically rendered." description="This should always exist in the DOM, especially when alerts will dynamically appear or update within it." />
   </ListItem>
   <ListItem>
-    <Checkbox id="alertGroup-a11y-checkbox-2" label={<span>If alerts will dynamically appear or update, the alert group has the <code class="ws-code">aria-live="polite"</code> attribute.</span>} description="This will allow assistive technologies to announce dynamically rendered alerts." />
+    <Checkbox id="alertGroup-a11y-checkbox-2" label={<span>If alerts will dynamically appear or update, the alert group has the <code className="ws-code">aria-live="polite"</code> attribute.</span>} description="This will allow assistive technologies to announce dynamically rendered alerts." />
   </ListItem>
 </List>
 
 ## React customization
 
-Various React props have been provided for more fine-tuned control over accessibility.
+The following React props have been provided for more fine-tuned control over accessibility.
 
 | Prop | Applied to | Reason | 
 |---|---|---|
 | `isLiveRegion` | `AlertGroup` | Makes the alert group a live region by setting `aria-live="polite"` and `aria-atomic="false"`. Instead of passing this prop in, you can manually set `aria-live` and `aria-atomic` by passing them in individually. Pass this prop in if you intend or expect the contents of the alert group to be dynamically updated. |
 | `isToast` | `AlertGroup` | Adds styling to position alerts in the top-right corner of the viewport. When passing this prop in, the `isLiveRegion` prop must also be passed in. For more information about accessibility with toast alerts, read the [toast alerts](/components/alert/accessibility#toast-alerts) section of the alert accessibility tab. |
-| `overflowMessage` | `AlertGroup` | When functionality is added for overflowing alerts, this prop adds a custom message for the hidden overflow. When passing this prop in, the message should include how many alerts are currently within the overflow and should update as alerts are added or removed. This will allow users of assistive technologies to be notified when an alert is added to the overflow, as otherwise the addition of the alert and the alert contents itself will not be announced to them. <br/><br/> When passing this prop in, the `isLiveRegion` prop must also be passed in. For more information about alert overflow, read [alert group - managing overflow](/components/alert-group/design-guidelines#managing-overflow). |
+| `overflowMessage="[text to display for the overflow message]"` | `AlertGroup` | When functionality is added for overflowing alerts, this prop adds a custom message for the hidden overflow. When passing this prop in, the message should include how many alerts are currently within the overflow and should update as alerts are added or removed. This will allow users of assistive technologies to be notified when an alert is added to the overflow, as otherwise the addition of the alert and the alert contents itself will not be announced to them. <br/><br/> When passing this prop in, the `isLiveRegion` prop must also be passed in. For more information about alert overflow, read [alert group - managing overflow](/components/alert-group/design-guidelines#managing-overflow). |
 
 ## HTML/CSS customization
 
-Various HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
+The following HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|

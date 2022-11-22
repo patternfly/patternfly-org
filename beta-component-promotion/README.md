@@ -23,43 +23,28 @@ as well as relevant examples in the documentation are all labeled as beta.
 
 | *Component currently in beta*          | inital @patternfly/patternfly milestone | inital @patternfly/patternfly-react milestone |
 |----------------------------------------|-----------------------------------------|-----------------------------------------------|
-| Alert group with overflow              | 2022.02                                 | 2022.03                                       |
-| Calendar month                         | 2020.15                                 | 2020.15                                       |
-| Card: raised variant                   | 2021.14                                 | 2021.15                                       |
-| Code editor                            | 2020.12                                 | 2021.01                                       |
+| Button: with count                     | 2022.11                                 | 2022.12                                       |
 | DataList: draggable                    | 2021.12                                 | 2020.13                                       |
-| DataList: selectableRow prop           | --                                      | 2022.07                                       |
 | Date picker                            | 2020.13                                 | 2020.15                                       |
 | Drag and drop                          | 2021.13                                 | 2021.14                                       |
-| Dual list selector                     | 2020.15                                 | 2020.15                                       |
 | Expandable section: truncate expansion | 2022.11                                 | 2022.11                                       |
-| Icon sprites                           | 2022.03                                 | 2022.04                                       |
+| Icon                                   | 2022.12                                 | 2022.13                                       |
 | Label: Editable                        | 2021.07                                 | 2021.10                                       |
-| LabelGroup                             | 2020.11                                 | 2020.12                                       |
-| Masthead                               | 2021.02                                 | 2021.11                                       |
-| Menu: checkbox                         | 2022.03                                 | 2023.07                                       |
+| LabelGroup: Editable                   | 2022.08                                 | 2022.08                                       |
 | Menu: flyout                           | 2020.11                                 | 2021.10                                       |
 | Menu: drilldown                        | 2020.11                                 | 2021.03                                       |
-| Menu Toggle                            | 2021.02                                 | 2021.06                                       |
-| Multi file upload                      | 2022.01                                 | 2022.03                                       |      
 | Nav: flyout                            | 2021.13                                 | 2021.13                                       |
 | Nav: drilldown                         | 2021.12                                 | --                                            |
-| NotificationDrawer                     | 2020.01                                 | 2020.06                                       |
 | Number input: validated                | 2020.10                                 | 2020.11                                       |
-| Panel                                  | 2021.14                                 | 2021.15                                       |
-| Popover: alert severity & icon         | 2021.14                                 | 2021.16                                       |
 | Progress stepper                       | 2021.12                                 | 2021.13                                       |
 | SearchInput                            | 2020.09                                 | 2020.10                                       |
-| Select: loading variant                | 2021.05                                 | 2021.06                                       |
-| Slider                                 | 2020.16                                 | 2021.01                                       |
 | Table: draggable rows                  | 2021.08                                 | 2021.08                                       |
-| Table: tree table                      | 2021.02                                 | 2021.04                                       |
 | Tabs: dynamic                          | 2022.05                                 | 2022.06                                       |
 | Tabs: horizontal overflow              | 2022.10                                 | 2022.10                                       |
 | Text input group                       | 2021.13                                 | 2021.14                                       |
 | Tile                                   | 2020.09                                 | 2020.11                                       |
 | TimePicker                             | --                                      | 2020.16                                       |
 | Timestamp                              | 2022.10                                 | 2022.11                                       |
-| TreeView                               | 2020.10                                 | 2020.11                                       |
+| Truncate                               | 2021.16                                 | 2022.01                                       |
 
 

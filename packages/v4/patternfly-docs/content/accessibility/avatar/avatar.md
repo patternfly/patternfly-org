@@ -3,21 +3,47 @@ id: Avatar
 section: components
 ---
 
-An **avatar** is a visual used to represent a user. It may contain an image or a placeholder graphic. Typical usage is to represent the current user in the masthead.
+import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
-**Keyboard users** shouldn’t be able to interact with the avatar on its own. Thus, the user should not be able to focus on the avatar using **Tab** to move forward and **Tab + Shift** to move backwards through interactive elements.
+## Accessibility
 
-**Screen reader users** should be able to navigate to the avatar and it should have alternative text, since it’s an image element. You can use the `alt` prop to provide alternative text.
+To implement an accessible PatternFly **avatar**:
 
-If you’re combining an avatar with another component, make sure to check accessibility guidelines for that component as well.
+- Pass in `alt` as a React prop or HTML attribute to provide alternative text for the avatar image.
+- If you are using an SVG element for the avatar, make sure the SVG is accessible (see [How to create accessible SVGs](https://www.deque.com/blog/creating-accessible-svgs/)) and reference the different SVG patterns. Screen reader accessibility for SVGs varies based on the pattern being used.
+- If you’re combining an avatar with another component, make sure to check accessibility guidelines for that component as well.
 
+## Testing
 
-## To make avatar accessible:
-- You may use the `alt` React prop to provide alternative text for the avatar image.
-- If you are using an SVG element for the avatar, [learn how to create accessible SVGs](https://www.deque.com/blog/creating-accessible-svgs/) and reference the different SVG patterns. Screen reader accessibility for SVGs varies based on the pattern being used.
+At a minimum, an avatar should meet the following criteria:
 
-The following props/attributes have been added for you or are customizable in PatternFly:
+<List isPlain>
+  <ListItem>
+    <Checkbox id="avatar-a11y-checkbox-4" label="Users can navigate to the avatar via the screen reader." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="avatar-a11y-checkbox-1" label="The avatar image has alternative text." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="avatar-a11y-checkbox-2" label="Any SVGs used are accessible." description={<span><a href="https://www.deque.com/blog/creating-accessible-svgs/">How to create accessible SVGs</a></span>}/>
+  </ListItem>
+  <ListItem>
+    <Checkbox id="avatar-a11y-checkbox-3" label={<span>Keyboard users should not be able to interact with the avatar on its own (via <kbd>Tab</kbd> and <kbd>Tab + Shift</kbd>).</span>} />
+  </ListItem>
+</List>
 
-| React prop | React component that it should be applied to | Which HTML element it appears on in markup | Reason used |
-| -- | -- | -- | -- |
-| `alt` | Avatar | .pf-c-avatar | Provides an accessible description of the avatar as it uses an image instead of text. |
+## React customization
+
+The following React props have been provided for more fine-tuned control over accessibility.
+
+| Prop | Applied to | Reason  |
+| -- | -- | -- |
+| `alt="[text describing the avatar]"` | `Avatar` |  Provides an accessible description of the avatar. **Required**|
+
+## HTML/CSS customization
+
+The following HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
+
+| Attribute or class | Applied to | Reason | 
+|---|---|---|
+| `alt="[text describing the avatar]"` | `.pf-c-avatar` | Provides an accessible description of the avatar. **Required** |
