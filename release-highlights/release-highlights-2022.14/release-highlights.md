@@ -3,13 +3,13 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Menu - new danger menu item]()
+(https://www.patternfly.org/v4/components/menu#danger-menu-item)
 
 ![menu with danger item](./img/danger-menu-item.png)
 
 Adds optional "danger" menu option styling to use for potentially destructive actions.
 
-### [Banner - support for status icons]()
+### [Banner - support for status icons](https://www.patternfly.org/v4/components/banner#status)
 
 ![banner with status icons](./img/banner-icon.png)
 
