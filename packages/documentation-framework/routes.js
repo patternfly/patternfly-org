@@ -60,8 +60,6 @@ const groupedRoutes = Object.entries(routes)
     return accum;
   }, {});
 
-  console.log({groupedRoutes});
-
 const sourceOrder = {
   react: 1,
   'react-next': 1.1,
