@@ -28,40 +28,39 @@ const isNull = o => o === null || o === undefined;
 const groupedRoutes = Object.entries(routes)
   .filter(([_slug, { id, section }]) => !isNull(id) && !isNull(section))
   .reduce((accum, [slug, pageData]) => {
-    const { section, subSection = null, id, title, source, katacodaLayout, hideNavItem } = pageData;
-    accum[section] = accum[section] || {};
-    if (subSection) {
-      accum[section][subSection] = accum[section][subSection] || {};
-      accum[section][subSection][id] = accum[section][subSection][id] || {
-        id,
-        section,
-        subSection,
-        title,
-        slug: makeSlug(source, section, id, true, subSection),
-        sources: [],
-        katacodaLayout,
-        hideNavItem
-      }
-      accum[section][subSection].isSubsection = true;
-    } else {
-        accum[section][id] = accum[section][id] || {
-        id,
-        section,
-        title,
-        slug: makeSlug(source, section, id, true),
-        sources: [],
-        katacodaLayout,
-        hideNavItem
-      }
-    }
-
+    const { section, subsection = null, id, title, source, katacodaLayout, hideNavItem } = pageData;
     pageData.slug = slug;
-    subSection
-      ? accum[section][subSection][id].sources.push(pageData)
-      : accum[section][id].sources.push(pageData);
+    // add section to groupedRoutes obj if not yet created
+    accum[section] = accum[section] || {};
+    // define data for page to be added to groupedRoutes obj
+    const data = {
+      id,
+      section,
+      subsection,
+      title,
+      slug: makeSlug(source, section, id, true, subsection),
+      sources: [],
+      katacodaLayout,
+      hideNavItem
+    }
+    // add page to groupedRoutes obj section or subsection
+    if (!subsection) {
+      // add page to section
+      accum[section][id] = accum[section][id] || data;
+      accum[section][id].sources.push(pageData);
+    } else {
+      // add subsection to section
+      accum[section][subsection] = accum[section][subsection] || {};
+      accum[section][subsection].isSubsection = true;
+      // add page to subsection
+      accum[section][subsection][id] = accum[section][subsection][id] || data;
+      accum[section][subsection][id].sources.push(pageData);
+    }
 
     return accum;
   }, {});
+
+  console.log({groupedRoutes});
 
 const sourceOrder = {
   react: 1,

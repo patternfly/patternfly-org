@@ -1,7 +1,7 @@
 ---
 id: Develop
 section: get-started
-subSection: contribute
+subsection: contribute
 ---
 
 ## Ways to contribute

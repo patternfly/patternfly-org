@@ -7,8 +7,8 @@ import { makeSlug } from '../../helpers';
 import globalBreakpointXl from "@patternfly/react-tokens/dist/esm/global_breakpoint_xl";
 import { trackEvent } from '../../helpers';
 
-const getIsActive = (location, section, subSection = null) => {
-  const slug = makeSlug(null, section, null, null, subSection);
+const getIsActive = (location, section, subsection = null) => {
+  const slug = makeSlug(null, section, null, null, subsection);
   return location.pathname.startsWith(`${process.env.pathPrefix}${slug}`);
 }
 
@@ -39,12 +39,12 @@ const NavItem = ({ text, href }) => {
   )
 };
 
-const ExpandableNav = ({groupedRoutes, location, section, subSection = null}) => {
-  const isActive = getIsActive(location, section, subSection);
-  const routes = subSection
-    ? groupedRoutes[section][subSection]
+const ExpandableNav = ({groupedRoutes, location, section, subsection = null}) => {
+  const isActive = getIsActive(location, section, subsection);
+  const routes = subsection
+    ? groupedRoutes[section][subsection]
     : groupedRoutes[section];
-  const currentSection = subSection ? subSection : section;
+  const currentSection = subsection ? subsection : section;
 
   return (
     <NavExpandable
@@ -67,7 +67,7 @@ const ExpandableNav = ({groupedRoutes, location, section, subSection = null}) =>
         .map(([id, { slug, isSubsection = false }]) => ({ text: id, href: slug, isSubsection }))
         .sort(({ text: text1 }, { text: text2 }) => text1.localeCompare(text2))
         .map(navObj => navObj.isSubsection
-          ? ExpandableNav({groupedRoutes, location, section, subSection: navObj.text})
+          ? ExpandableNav({groupedRoutes, location, section, subsection: navObj.text})
           : NavItem(navObj)
         )
       }

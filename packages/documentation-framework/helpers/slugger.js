@@ -11,13 +11,13 @@ const slugger = children => {
     .replace(/[^A-Za-z0-9.\-~]/g, '');
 }
 
-const makeSlug = (source, section, id, noSource, subSection) => {
+const makeSlug = (source, section, id, noSource, subsection) => {
   let url = '';
 
   if (section) {
     url += `/${slugger(section)}`
-    if (subSection) {
-      url += `/${slugger(subSection)}`
+    if (subsection) {
+      url += `/${slugger(subsection)}`
     }
   }
 
