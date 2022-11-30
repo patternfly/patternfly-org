@@ -12,17 +12,8 @@ To implement an accessible PatternFly **checkbox** component:
 - Ensure the checkbox can be navigated to and interacted with via keyboard and other assistive technologies such as a screen reader
 - Ensure the checkbox can be toggled by clicking its visible text label, if it has one
 - Ensure the checkbox label has hover styles to indicate that it can be clicked
-- Ensure the checkbox input provides enough clickable space on its own
 - Provide an `aria-label` if the checkbox does not have a visible text label
 - Place related checkboxes inside of a list element, and that list inside of an element that has the `role="group"` attribute
-
-For the PatternFly React library:
-
-- Include the `isRequired` prop if the checkbox must be checked
-
-For the HTML/CSS library:
-
-- Include the `required` attribute if the checkbox must be checked
 
 ## Testing
 
@@ -42,16 +33,10 @@ At a minimum, a checkbox should meet the following criteria:
     <Checkbox id="checkbox-a11y-checkbox-4" label="If the checkbox has a visible text label, that label has hover styles to indicate to users that it can be interacted with." />
   </ListItem>
   <ListItem>
-    <Checkbox id="checkbox-a11y-checkbox-5" label="The checkbox input provides enough clickable space to toggle it, even without a visible text label." description="Similar to ensuring a visible text label is clickable, this can help users who may have trouble clicking smaller checkbox inputs." />
-  </ListItem>
-  <ListItem>
     <Checkbox id="checkbox-a11y-checkbox-6" label={<span>If the checkbox does not have a visible text label, it has an <code className="ws-code">aria-label</code>.</span>} description="This provides context to users who may not be able to see or understand the visual context, such as a checkbox that selects a table row." />
   </ListItem>
   <ListItem>
     <Checkbox id="checkbox-a11y-checkbox-7" label={<span>Multiple related checkboxes are inside of a list element, and that list element is inside of another element that has the <code className="ws-code">role="group"</code> attribute.</span>} description={<span>The <code className="ws-code">role</code> attribute notifies users of assistive technologies that they are in a group of checkboxes, while the list element notifies them of how many checkboxes there are in the group.</span>} />
-  </ListItem>
-  <ListItem>
-    <Checkbox id="checkbox-a11y-checkbox-8" label={<span>If the checkbox is required to be checked, it has the <code className="ws-code">required</code> attribute.</span>} />
   </ListItem>
 </List>
 
