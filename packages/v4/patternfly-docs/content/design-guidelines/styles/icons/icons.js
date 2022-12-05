@@ -958,6 +958,20 @@ export const iconsData = [
   },
   {
     "Style": "pf-icon",
+    "Name": "pf-icon-data-sink",
+    "React_name": "DataSinkIcon",
+    "Type": "Status",
+    "Contextual_usage": "Represents a data sink",
+  },
+  {
+    "Style": "pf-icon",
+    "Name": "pf-icon-data-source",
+    "React_name": "DataSourceIcon",
+    "Type": "Status",
+    "Contextual_usage": "Represents a data source",
+  },
+  {
+    "Style": "pf-icon",
     "Name": "pf-icon-degraded",
     "React_name": "DegradedIcon",
     "Type": "Status",
