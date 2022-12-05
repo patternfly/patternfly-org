@@ -47,6 +47,7 @@ Wizards can be modal or placed within the content area of a page. Behavior may c
 * [Modal wizard](#modal-wizards)
 * [With sub-steps](#wizard-with-sub-steps)
 * [With optional steps](#wizard-with-optional-steps)
+* [With a panel](#wizard-with-a-panel)
 
 ### In-page wizard
 A wizard may be embedded in a page as shown below.
@@ -94,7 +95,6 @@ Sub-steps can be added to the sidebar. Use sub-steps when there is a hierarchica
 
 <img src="./img/wizard-with-substeps.png" alt="Wizard with substeps" />
 
-
 1. **Sub-steps:** Sub-steps are always nested inside of a major step.
 2. **Expansion (optional):** Sub-steps may be shown or hidden using the caret next to the parent step.
 
@@ -122,6 +122,19 @@ Optional steps can be added to the wizard. Make steps optional when they do not 
 * The review step is enabled once all required steps have been filled out.
 
 * Once required steps have been filled, a tertiary button would appear to the right of the next/back buttons. Once clicked, this button would jump users ahead to the final review step. 
+ 
+ ### Wizard with a panel
+
+<img src="./img/wizard-with-a-panel.png" alt="Wizard with a panel" />
+
+The drawer inside a wizard is useful in situations where you need to show more information while keeping the user in the context of the wizard. When opened, the drawer overlays the data, rather than pushing it to the side. There are two types of drawers: dismissable and non-dismissible. For opening and closing a drawer use a link button or a link button with an icon.
+
+#### When to use
+
+Use a drawer when:
+* When you want to let customers review additional information without switching contexts.
+* When you need to add context  or more description around the information you are showing
+* For additional learning resources
 
 ### Review and completion
 The last step in a wizard should always be a review step. This step should include a summary of what the user has input so the user may confirm them before committing their changes.
