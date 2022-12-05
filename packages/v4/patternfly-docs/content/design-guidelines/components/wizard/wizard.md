@@ -125,14 +125,14 @@ Optional steps can be added to the wizard. Make steps optional when they do not 
  
  ### Wizard with a panel
 
-<img src="./img/wizard-with-a-panel.png" alt="Wizard with a panel" />
+<img src="./img/wizard-with-a-panel.png" alt="Wizard with a panel"/>
 
-The drawer inside a wizard is useful in situations where you need to show more information while keeping the user in the context of the wizard. When opened, the drawer overlays the data, rather than pushing it to the side. There are two types of drawers: dismissable and non-dismissible. For opening and closing a drawer use a link button or a link button with an icon.
+The drawer inside a wizard is useful in situations where you need to show more information while keeping the user in the context of the wizard. When opened, the drawer overlays the data, rather than pushing it to the side. There are two types of drawers: dismissable and non-dismissible. For opening and closing a drawer, use a link button or a link button with an icon.
 
 #### When to use
 
 Use a drawer when:
-* When you want to let customers review additional information without switching contexts.
+* When you want to let customers review additional information without switching contexts
 * When you need to add context  or more description around the information you are showing
 * For additional learning resources
 
