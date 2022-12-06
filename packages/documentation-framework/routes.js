@@ -44,17 +44,17 @@ const groupedRoutes = Object.entries(routes)
       hideNavItem
     }
     // add page to groupedRoutes obj section or subsection
-    if (!subsection) {
-      // add page to section
-      accum[section][id] = accum[section][id] || data;
-      accum[section][id].sources.push(pageData);
-    } else {
+    if (subsection) {
       // add subsection to section
       accum[section][subsection] = accum[section][subsection] || {};
       accum[section][subsection].isSubsection = true;
       // add page to subsection
       accum[section][subsection][id] = accum[section][subsection][id] || data;
       accum[section][subsection][id].sources.push(pageData);
+    } else {
+      // add page to section
+      accum[section][id] = accum[section][id] || data;
+      accum[section][id].sources.push(pageData);
     }
 
     return accum;
@@ -105,8 +105,8 @@ Object.entries(groupedRoutes)
       let pageDataArr = [];
       // Loop through each page in expandable subsection
       if (pageData.isSubsection) {
-        Object.entries(pageData).map(([_section, ids]) => {
-          if (_section !== 'isSubsection') {
+        Object.entries(pageData).map(([section, ids]) => {
+          if (section !== 'isSubsection') {
             pageDataArr.push(ids);
           }
         })
@@ -114,7 +114,7 @@ Object.entries(groupedRoutes)
         pageDataArr = [pageData];
       }
       pageDataArr.forEach(pageDataObj => {
-        const { slug, section } = pageDataObj;
+        const { slug } = pageDataObj;
         // Remove source routes for `app.js`
         pageDataObj.sources.forEach(({ slug }) => {
           delete routes[slug];
