@@ -123,7 +123,7 @@ Optional steps can be added to the wizard. Make steps optional when they do not 
 
 * Once required steps have been filled, a tertiary button would appear to the right of the next/back buttons. Once clicked, this button would jump users ahead to the final review step. 
  
- ### Wizard with a panel
+### Wizard with a panel
 
 <img src="./img/wizard-with-a-panel.png" alt="Wizard with a panel"/>
 
