@@ -1,7 +1,6 @@
 ---
 id: Design
-section: get-started
-subsection: contribute
+section: contribute
 ---
 
 ## Ways to contribute
