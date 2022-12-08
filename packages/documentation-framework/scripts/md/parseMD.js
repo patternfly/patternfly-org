@@ -49,7 +49,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
         file.fail('id attribute is required in frontmatter for PatternFly docs');
       }
       source = frontmatter.source || source;
-      const slug = makeSlug(source, frontmatter.section, frontmatter.id);
+      const slug = makeSlug(source, frontmatter.section, frontmatter.id, false, frontmatter.subsection);
       outPath = path.join(outputBase, `${slug}.js`);
 
       let sourceRepo = 'patternfly-org';
@@ -80,6 +80,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
       pageData = {
         id: frontmatter.id,
         section: frontmatter.section || '',
+        subsection: frontmatter.subsection || '',
         source,
         slug,
         sourceLink: `https://github.com/patternfly/${
@@ -92,7 +93,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
         // Temporarily override section until https://github.com/patternfly/patternfly-react/pull/4862 is in react-docs
         pageData.section = 'components';
         pageData.source = `${source}-demos`;
-        pageData.slug = makeSlug(pageData.source, pageData.section, pageData.id);
+        pageData.slug = makeSlug(pageData.source, pageData.section, pageData.id, false, pageData.subsection);
         outPath = path.join(outputBase, `${pageData.slug}.js`);
       }
       if (frontmatter.title) {
@@ -259,6 +260,7 @@ function sourceMDFile(file, source, buildMode) {
       ...(pageData.examples && { examples: pageData.examples }),
       ...(pageData.fullscreenExamples && { fullscreenExamples: pageData.fullscreenExamples }),
       section: pageData.section,
+      subsection: pageData.subsection,
       source: pageData.source,
       ...(pageData.katacodaLayout && { katacodaLayout: pageData.katacodaLayout }),
       ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem })
