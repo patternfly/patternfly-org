@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2022-12-08)
+
+
+### Features
+
+* **docs:** enabled tertiary nav in sidenav ([#3274](https://github.com/patternfly/patternfly-org/issues/3274)) ([b2a6804](https://github.com/patternfly/patternfly-org/commit/b2a6804d7d93026b3b3a7a7e06b53c51be998e1e))
+
+
+
+
+
 ## 1.2.70 (2022-12-07)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
