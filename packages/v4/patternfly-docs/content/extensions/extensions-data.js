@@ -1,20 +1,5 @@
 export const communityExtensions = [
   {
-    "component": "Catalog view",
-    "description": "Implements a catalog view using PatternFly components.",
-    "tags": ["App services"],
-    "links": [
-      {
-        "name": "Doc",
-        "href": "https://patternfly-react.surge.sh/extensions/catalog-view-item-header"
-      },
-      {
-        "name": "Code",
-        "href": "https://www.npmjs.com/package/@patternfly/react-catalog-view-extension"
-      }
-    ]
-  },
-  {
     "component": "Console",
     "description": "Implements a React-console extension.",
     "tags": ["App services"],

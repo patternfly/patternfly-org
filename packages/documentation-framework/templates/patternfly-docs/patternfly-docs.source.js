@@ -1,7 +1,9 @@
 const path = require('path');
 
 module.exports = (sourceMD, sourceProps) => {
-  // Parse source content for props so that we can display them
+  /** Parse source content for props so that we can display them. You must source props before sourcing the markdown
+  files, otherwise the props table won't be rendered.
+  */
   const propsIgnore = ['**/*.test.tsx', '**/examples/*.tsx'];
   const extensionPath = path.join(__dirname, '../src');
   sourceProps(path.join(extensionPath, '/**/*.tsx'), propsIgnore);
