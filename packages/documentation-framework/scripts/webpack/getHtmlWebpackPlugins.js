@@ -22,8 +22,7 @@ async function getHtmlWebpackPlugin({
       // Don't prerender fullscreen pages (expensive!)
       prerendering: (isProd && !isFullscreen && !url.includes('extensions')) ? await prerender(url, pathPrefix) : null,
       // Don't use GA in dev mode
-      // googleAnalyticsID: isProd ? googleAnalyticsID : false,
-      googleAnalyticsID: googleAnalyticsID,
+      googleAnalyticsID: isProd ? googleAnalyticsID : false,
       algolia
     },
     scriptLoading: 'defer',
