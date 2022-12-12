@@ -22,7 +22,7 @@ At a minimum, a calendar month should meet the following criteria:
     <Checkbox id="calendarMonth-a11y-checkbox-1" label="Standard keyboard navigation can be used to navigate between the contents of a calendar month or other focusable elements." description={<span><kbd>Tab</kbd> navigates to the next calendar month content or focusable element, and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous calendar month content or focusable element.</span>} />
   </ListItem>
   <ListItem>
-    <Checkbox id="calendarMonth-a11y-checkbox-2" label="Standard keyboard interaction can be used to interact with the calendar month header content." description={<span><kbd>Enter</kbd> and <kbd>Space</kbd> should be able to activate the "previous month" and "next month" buttons, open the month dropdown, and select a month dropdown item. <kbd>Escape</kbd> and <kbd>Tab</kbd> should close the month dropdown if it is open. Arrow keys should navigate between each individual date cell.</span>} />
+    <Checkbox id="calendarMonth-a11y-checkbox-2" label="Standard keyboard interaction can be used to interact with the calendar month header content." description={<span><kbd>Enter</kbd> and <kbd>Space</kbd> should be able to activate the "previous month" and "next month" buttons, open the month dropdown, and select a month dropdown item. <kbd>Escape</kbd> and <kbd>Tab</kbd> should close the month dropdown if it is open.</span>} />
   </ListItem>
   <ListItem>
     <Checkbox id="calendarMonth-a11y-checkbox-3" label="Standard keyboard interaction can be used to interact with the calendar month date cells." description={<span>Arrow keys should navigate between each individual date cell. <kbd>Enter</kbd> and <kbd>Space</kbd> should select a date cell.</span>} />
