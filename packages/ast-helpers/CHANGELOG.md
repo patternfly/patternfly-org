@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.1 (2022-12-12)
+
+
+### Bug Fixes
+
+* **documentation-framework:** added local brand logos ([#3314](https://github.com/patternfly/patternfly-org/issues/3314)) ([bcf5efe](https://github.com/patternfly/patternfly-org/commit/bcf5efe27a7ed17bc92a6105eabb07fba9184ef0))
+
+
+
+
+
 # 0.8.0 (2022-12-08)
 
 
