@@ -21,30 +21,36 @@ and React props to be introduced. Whenever these enhancements are substantial en
 for further updates pending testing and feedback, then the newly introduced CSS class names or React props 
 as well as relevant examples in the documentation are all labeled as beta.
 
-| *Component currently in beta*          | inital @patternfly/patternfly milestone | inital @patternfly/patternfly-react milestone |
-|----------------------------------------|-----------------------------------------|-----------------------------------------------|
-| Button: with count                     | 2022.11                                 | 2022.12                                       |
-| DataList: draggable                    | 2021.12                                 | 2020.13                                       |
-| Date picker                            | 2020.13                                 | 2020.15                                       |
-| Drag and drop                          | 2021.13                                 | 2021.14                                       |
-| Expandable section: truncate expansion | 2022.11                                 | 2022.11                                       |
-| Icon                                   | 2022.12                                 | 2022.13                                       |
-| Label: Editable                        | 2021.07                                 | 2021.10                                       |
-| LabelGroup: Editable                   | 2022.08                                 | 2022.08                                       |
-| Menu: flyout                           | 2020.11                                 | 2021.10                                       |
-| Menu: drilldown                        | 2020.11                                 | 2021.03                                       |
-| Nav: flyout                            | 2021.13                                 | 2021.13                                       |
-| Nav: drilldown                         | 2021.12                                 | --                                            |
-| Number input: validated                | 2020.10                                 | 2020.11                                       |
-| Progress stepper                       | 2021.12                                 | 2021.13                                       |
-| SearchInput                            | 2020.09                                 | 2020.10                                       |
-| Table: draggable rows                  | 2021.08                                 | 2021.08                                       |
-| Tabs: dynamic                          | 2022.05                                 | 2022.06                                       |
-| Tabs: horizontal overflow              | 2022.10                                 | 2022.10                                       |
-| Text input group                       | 2021.13                                 | 2021.14                                       |
-| Tile                                   | 2020.09                                 | 2020.11                                       |
-| TimePicker                             | --                                      | 2020.16                                       |
-| Timestamp                              | 2022.10                                 | 2022.11                                       |
-| Truncate                               | 2021.16                                 | 2022.01                                       |
+| *Component currently in beta*                  | inital @patternfly/patternfly milestone | inital @patternfly/patternfly-react milestone |
+|------------------------------------------------|-----------------------------------------|-----------------------------------------------|
+| Button: with count                             | 2022.11                                 | 2022.12                                       |
+| DataList: draggable                            | 2021.12                                 | 2020.13                                       |
+| Date picker                                    | 2020.13                                 | 2020.15                                       |
+| Drag and drop                                  | 2021.13                                 | 2021.14                                       |
+| Expandable section: truncate expansion         | 2022.11                                 | 2022.11                                       |
+| File upload - multiple: progressHelperTextBeta | 2022.15                                 | 2022.16                                       |
+| Icon                                           | 2022.12                                 | 2022.13                                       |
+| Label: Editable                                | 2021.07                                 | 2021.10                                       |
+| LabelGroup: Editable                           | 2022.08                                 | 2022.08                                       |
+| Menu: flyout                                   | 2020.11                                 | 2021.10                                       |
+| Menu: drilldown                                | 2020.11                                 | 2021.03                                       |
+| Nav: flyout                                    | 2021.13                                 | 2021.13                                       |
+| Nav: drilldown                                 | 2021.12                                 | --                                            |
+| Number input: validated                        | 2020.10                                 | 2020.11                                       |
+| Pagination: insets                             | 2022.15                                 | 2022.16                                       |
+| Progress: helper text                          | 2022.15                                 | 2022.16                                       |
+| Progress stepper                               | 2021.12                                 | 2021.13                                       |
+| removeFindDomNode                              | --                                      | 2022.15                                       |
+| SearchInput                                    | 2020.09                                 | 2020.10                                       |
+| Spinner: inline                                | 2022.14                                 | 2022.15                                       |
+| Table: draggable rows                          | 2021.08                                 | 2021.08                                       |
+| Tabs: dynamic                                  | 2022.05                                 | 2022.06                                       |
+| Tabs: horizontal overflow                      | 2022.10                                 | 2022.10                                       |
+| Tabs: actions                                  | 2022.14                                 | 2022.15                                       |
+| Text input group                               | 2021.13                                 | 2021.14                                       |
+| Tile                                           | 2020.09                                 | 2020.11                                       |
+| TimePicker                                     | --                                      | 2020.16                                       |
+| Timestamp                                      | 2022.10                                 | 2022.11                                       |
+| Truncate                                       | 2021.16                                 | 2022.01                                       |
 
 
