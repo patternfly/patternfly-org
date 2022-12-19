@@ -13,7 +13,7 @@ Label groups have a number of components to them.
 3. **Overflow:** indicates if there are more labels to show.
 4. **Group close:** deletes the entire label group.
 
-Label groups can use various combinations of these features to build custom label groups.
+Label groups can use various combinations of these features to build custom label groups. 
 
 ## Usage
 Label groups should be used when there are multiple labels assigned to a component. They can be used almost anywhere in a UI, but are commonly used in table views and description lists.
