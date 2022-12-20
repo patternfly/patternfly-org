@@ -179,7 +179,7 @@
   },
   "label-group": {
     "illustration": "./images/component-illustrations/label-group.png",
-    "summary": "Use a <b>label group</b> when you have multiple <Link to='/components/label'>labels</Link> to display at once. Label groups can be oriented either horizontally or vertically and can optionally be named and dismissable."
+    "summary": "Use a <b>label group</b> when you have multiple <Link to='/components/label'>labels</Link> to display at once. Label groups can be oriented either horizontally or vertically and can optionally be named and be dismissable. You may also make the label group editable to allow users to edit an existing label or add a new label."
   },
   "label": {
     "illustration": "./images/component-illustrations/label.png",
