@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.14.4 (2022-12-20)
+
+
+### Bug Fixes
+
+* **lodash:** add lodash.constant to global._ ([#3324](https://github.com/patternfly/patternfly-org/issues/3324)) ([a2d79a4](https://github.com/patternfly/patternfly-org/commit/a2d79a4b5b8776fbc81907a146dfa5a09626cb8f))
+
+
+
+
+
 ## 4.14.3 (2022-12-19)
 
 **Note:** Version bump only for package patternfly-org-4
