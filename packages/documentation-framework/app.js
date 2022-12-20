@@ -17,7 +17,7 @@ import './components/sideNav/sideNav.css';
 import './components/topNav/topNav.css';
 import './layouts/sideNavLayout/sideNavLayout.css';
 
-global._ = { ...global?._, constant }
+global._ = { ...global?._, constant } // temporary fix for '_.constant is not a function' bug in a topology dependency
 
 const AppRoute = ({ child, katacodaLayout, title, path }) => {
   const pathname = useLocation().pathname;
