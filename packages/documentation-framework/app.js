@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, useLocation } from '@reach/router';
 import 'client-styles'; // Webpack replaces this import: patternfly-docs.css.js
-import { constant } from 'lodash';
 import { SideNavLayout } from '@patternfly/documentation-framework/layouts';
 import { Footer } from '@patternfly/documentation-framework/components';
 import { MDXTemplate } from '@patternfly/documentation-framework/templates/mdx';
@@ -16,8 +15,6 @@ import './components/footer/footer.css';
 import './components/sideNav/sideNav.css';
 import './components/topNav/topNav.css';
 import './layouts/sideNavLayout/sideNavLayout.css';
-
-global._ = { ...global?._, constant } // temporary fix for '_.constant is not a function' bug in a topology dependency
 
 const AppRoute = ({ child, katacodaLayout, title, path }) => {
   const pathname = useLocation().pathname;
