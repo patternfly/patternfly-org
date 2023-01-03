@@ -47,7 +47,9 @@ const HeaderTools = ({
   const [searchValue, setSearchValue] = React.useState('');
   const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
 
-  const getDropdownItem = (version, isLatest = false) => (
+  const getDropdownItem = (version, isLatest = false) => {
+    console.log({version, isLatest});
+    return (
     <DropdownItem
       key={version.name}
       component={
@@ -56,7 +58,8 @@ const HeaderTools = ({
         </a>
       }
     />
-  );
+    );
+  }
 
   const onChange = (value) => {
     setSearchValue(value);
@@ -135,7 +138,7 @@ const HeaderTools = ({
                     {Object.values(versions.Releases)
                       .filter(version => !version.hidden && !version.latest)
                       .slice(0,3)
-                      .map(getDropdownItem)}
+                      .map(version => getDropdownItem(version))}
                   </DropdownGroup>,
                   <Divider key="divider" className="ws-switcher-divider"/>,
                   <DropdownItem
