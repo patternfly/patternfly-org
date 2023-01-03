@@ -12,6 +12,7 @@ To implement an accessible PatternFly **calendar month** component:
 - Ensure the contents of the calendar month can be navigated to and interacted with via keyboard and other assistive technologies such as a screen reader
 - Ensure the currently selected date cell has the `aria-current="date"` attribute
 - Ensure the contents of the calendar month is announced to assistive technologies correctly. For example, the month dropdown should indicate the currently selected month, and the date cells should indicate the currently selected and focused cell.
+- If the calendar month is displayed inline rather than within a popover, provide a visible title that labels the calendar month
 
 ## Testing
 
@@ -30,6 +31,9 @@ At a minimum, a calendar month should meet the following criteria:
   <ListItem>
     <Checkbox id="calendarMonth-a11y-checkbox-4" label={<span>The currently selected date cell has the <code className="ws-code">aria-current="date"</code> attribute.</span>} />
   </ListItem>
+  <ListItem>
+    <Checkbox id="calendarMonth-a11y-checkbox-5" label="The calendar month has a visible title labeling it if it's displayed inline." />
+  </ListItem>
 </List>
 
 ## React customization
@@ -43,12 +47,34 @@ The following React props have been provided for more fine-tuned control over ac
 | `prevMonthAriaLabel` | `CalendarMonth` | Adds an accessible name to the "previous month" button. |
 | `prevMonthAriaLabel` | `CalendarMonth` | Adds an accessible name to the year input. |
 
+### Inline props
+
+If the calendar month is intended to be displayed inline - rather than inside of a popover as seen in our [date picker](/components/date-picker) component - the `inlineProps` prop object should be passed in with the following:
+
+- **component**: provides a wrapper for the calendar month. Typically this should be "article".
+- **title**: renders a visible title above the calendar month. An `id` attribute should be passed into the title so that its value can be passed to the `ariaLabelleby` of the `inlineProps` object.
+- **ariaLabelledby**: provides an accessible name for the calendar month. If a `title` is passed into the `inlineProps` object, the title's `id` should be passed into this prop.
+
+For example:
+
+```noLive
+const inlineProps = {
+  component: "article",
+  title: (
+    <Title id="example-title">Choose a date</Title>
+  ),
+  ariaLabelledby: "example-title
+}
+<CalendarMonth inlineProps={inlineProps} />
+```
+
 ## HTML/CSS customization
 
 The following HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
+| `aria-labelledby="[id of the element that labels the calendar month]"` | `article` | Adds an accessible name to a wrapper element when the calendar month is displayed inline. |
 | `aria-current="date"` | `.pf-c-calendar-month__date` | Notifies users of assistive technologies when a date cell is currently selected. **Required** if a date cell is selected. |
 | `aria-label="[text describing the date]"` | `.pf-c-calendar-month__date` | Adds an accessible name to the date button. Typically the value passed in should be the full date. For example, `aria-label="14 February 2023"`. |
 | `disabled` | `.pf-c-calendar-month__date` | Disables the date button, preventing interaction and navigation via keyboard and other assistive technologies. **Required** when this element's parent is `.pf-c-calendar-month__dates-cell.pf-m-disabled`. |
