@@ -52,7 +52,7 @@ The following React props have been provided for more fine-tuned control over ac
 If the calendar month is intended to be displayed inline - rather than inside of a popover as seen in our [date picker](/components/date-picker) component - the `inlineProps` prop object should be passed in with the following:
 
 - **component**: provides a wrapper for the calendar month. Typically this should be "article".
-- **title**: renders a visible title above the calendar month. An `id` attribute should be passed into the title so that its value can be passed to the `ariaLabelleby` of the `inlineProps` object.
+- **title**: renders a visible title above the calendar month. An `id` attribute should be passed into the title so that its value can be passed to the `ariaLabelledby` of the `inlineProps` object.
 - **ariaLabelledby**: provides an accessible name for the calendar month. If a `title` is passed into the `inlineProps` object, the title's `id` should be passed into this prop.
 
 For example:
