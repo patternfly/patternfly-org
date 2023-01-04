@@ -94,7 +94,7 @@ module.exports = (sourceMD, sourceProps) => {
   sourceMD(path.join(qsContentBase, '**/*.md'));
 
   // Catalog view extension
-  const catalogViewPath = require.resolve("@ausuliv/react-catalog-view-extension/package.json")
+  const catalogViewPath = require.resolve("@patternfly/react-catalog-view-extension/package.json")
   const reactCatalogViewDocsPath = catalogViewPath.replace("package.json", "patternfly-docs");
   const reactCatalogViewSrcPath = catalogViewPath.replace("package.json", "src/components");
 
