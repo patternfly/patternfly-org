@@ -47,9 +47,7 @@ const HeaderTools = ({
   const [searchValue, setSearchValue] = React.useState('');
   const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
 
-  const getDropdownItem = (version, isLatest = false) => {
-    console.log({version, isLatest});
-    return (
+  const getDropdownItem = (version, isLatest = false) => (
     <DropdownItem
       key={version.name}
       component={
@@ -58,8 +56,7 @@ const HeaderTools = ({
         </a>
       }
     />
-    );
-  }
+  );
 
   const onChange = (value) => {
     setSearchValue(value);
