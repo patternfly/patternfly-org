@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.6 (2023-01-05)
+
+
+### Bug Fixes
+
+* **lodash:** remove lodash alias ([#3327](https://github.com/patternfly/patternfly-org/issues/3327)) ([2fcfda1](https://github.com/patternfly/patternfly-org/commit/2fcfda1e4f4da5341048d47a29729aedc0fcda54))
+
+
+
+
+
 ## 0.8.5 (2022-12-20)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
