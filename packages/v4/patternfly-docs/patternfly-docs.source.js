@@ -17,10 +17,6 @@ module.exports = (sourceMD, sourceProps) => {
     .replace('package.json', 'pages');
   sourceMD(path.join(themePagesPath, '*.md'), 'pages-overview');
 
-  // View all components
-  const viewAllComponentsBase = path.join(__dirname, '../patternfly-docs/pages');
-  sourceMD(path.join(viewAllComponentsBase, '*.md'), 'react & html');
-
   // Core MD
   const coreDocsPath = require
     .resolve('@patternfly/patternfly/package.json')

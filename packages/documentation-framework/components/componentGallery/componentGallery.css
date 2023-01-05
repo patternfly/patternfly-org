@@ -21,6 +21,11 @@
   flex-wrap: nowrap;
 }
 
+.ws-component-gallery-component {
+  text-decoration: inherit;
+  color: inherit;
+}
+
 .ws-component-gallery .pf-c-card {
   height: 100%;
 }

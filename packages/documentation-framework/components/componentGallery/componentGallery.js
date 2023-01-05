@@ -27,9 +27,11 @@ export const ComponentGallery = () => {
     if (!summary) {
       return null;
     }
-    const { code } = convertToReactComponent(`<>${summary}</>`);
-    const getSummaryComponent = new Function('React', 'Link', code);
-    return getSummaryComponent(React, Link);
+    // Remove anchor tags to avoid <a> in summary nested within <a> of Link card/datalistitem
+    const summaryNoLinks = summary.replace(/<Link[^>]*>([^<]+)<\/Link>/gm, '$1');
+    const { code } = convertToReactComponent(`<>${summaryNoLinks}</>`);
+    const getSummaryComponent = new Function('React', code);
+    return getSummaryComponent(React);
   }
   const GalleryLayout = layoutView === 'grid' ? Gallery : DataList;
   const layoutProps = layoutView === 'grid'
@@ -84,17 +86,17 @@ export const ComponentGallery = () => {
               .toLowerCase();
             const illustration = illustrations[illustrationName] || illustrations.default_placeholder;
             const {title, id, slug, sources} = componentData;
-            const isBeta = sources.some(src => src.beta);
+            // Display beta label if tab other than a '-next' tab is marked Beta
+            const isBeta = sources.some(src => src.beta && !src.source.includes('-next'));
 
             return layoutView === 'grid'
               ? (
                 <GalleryItem span={4} key={idx}>
-                  <Link to={slug}>
+                  <Link to={slug} className="ws-component-gallery-component">
                     <Card
                       id={componentData.id}
                       key={idx}
                       isSelectableRaised
-                      // onClick={() => navigate(`${process.env.pathPrefix}${slug}`)}
                     >
                       <CardTitle>{componentName}</CardTitle>
                       {illustration && <Illustration component={CardBody} illustration={illustration} componentName={componentName} />}
@@ -103,9 +105,8 @@ export const ComponentGallery = () => {
                   </Link>
                 </GalleryItem>
               ) : (
-                <Link to={slug} key={idx}>
+                <Link to={slug} key={idx} className="ws-component-gallery-component">
                   <DataListItem>
-                  {/* onClick={({target}) => { target.href ? navigate(target.href) : navigate(slug)}} */}
                     <DataListItemRow>
                       <DataListItemCells dataListCells={[
                         <DataListCell width={1} key="illustration">
