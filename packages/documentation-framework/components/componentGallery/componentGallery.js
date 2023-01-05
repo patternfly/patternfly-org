@@ -3,17 +3,13 @@ import { groupedRoutes } from '../../routes';
 import {  Button, Card, CardTitle, CardBody, CardFooter, DataList, DataListItem, DataListItemRow, DataListItemCells, DataListCell, DataListAction, Gallery, GalleryItem, Label, SearchInput, Toolbar, ToolbarContent, ToolbarGroup, ToolbarItem, Text, TextContent, TextVariants, ToggleGroup, ToggleGroupItem } from '@patternfly/react-core';
 import { Link } from '../link/link';
 import { convertToReactComponent } from "@patternfly/ast-helpers";
-// import componentsData from '../components-data.json';
-const illustrations = {};
-// import * as illustrations from '../images/component-illustrations';
+import * as illustrations from 'component-previews';
 import './componentGallery.css';
 import ListIcon from '@patternfly/react-icons/dist/esm/icons/list-icon';
 import ThIcon from'@patternfly/react-icons/dist/esm/icons/th-icon';
 
 export const ComponentGallery = () => {
-  // pull componentsData from process
   const componentsData = process.env.componentsData;
-  // const illustrations = process.env.illustrations;
   const { components } = groupedRoutes;
   const [searchTerm, setSearchTerm] = React.useState('');
   const [layoutView, setLayoutView] = React.useState('grid');
@@ -75,7 +71,6 @@ export const ComponentGallery = () => {
           </ToolbarItem>
         </ToolbarContent>
       </Toolbar>
-      {/* Grid view */}
       <GalleryLayout {...layoutProps}>
         {filteredComponents
           .sort(([componentName1], [componentName2]) => componentName1.localeCompare(componentName2))
@@ -108,8 +103,8 @@ export const ComponentGallery = () => {
                   </Link>
                 </GalleryItem>
               ) : (
-                <Link to={slug}>
-                  <DataListItem key={idx}>
+                <Link to={slug} key={idx}>
+                  <DataListItem>
                   {/* onClick={({target}) => { target.href ? navigate(target.href) : navigate(slug)}} */}
                     <DataListItemRow>
                       <DataListItemCells dataListCells={[
