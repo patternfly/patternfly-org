@@ -23,34 +23,51 @@ as well as relevant examples in the documentation are all labeled as beta.
 
 | *Component currently in beta*                  | inital @patternfly/patternfly milestone | inital @patternfly/patternfly-react milestone |
 |------------------------------------------------|-----------------------------------------|-----------------------------------------------|
+| Banner (html)                                  | ??                                      | already promoted                              |
 | Button: with count                             | 2022.11                                 | 2022.12                                       |
+| Charts: Patterns                               | --                                      | 2022.08                                       |
 | DataList: draggable                            | 2021.12                                 | 2020.13                                       |
 | Date picker                                    | 2020.13                                 | 2020.15                                       |
+| Description list (html)                        | ??                                      | already promoted                              |
 | Drag and drop                                  | 2021.13                                 | 2021.14                                       |
+| Dropdown: bulk select loading state            | 2022.16                                 | 2023.01                                       |
+| Dropdown - next                                | --                                      | 2023.01                                       |
 | Expandable section: truncate expansion         | 2022.11                                 | 2022.11                                       |
 | File upload - multiple: progressHelperTextBeta | 2022.15                                 | 2022.16                                       |
+| Helper text demo (html)                        | ??                                      | already promoted                              |
 | Icon                                           | 2022.12                                 | 2022.13                                       |
 | Label: Editable                                | 2021.07                                 | 2021.10                                       |
 | LabelGroup: Editable                           | 2022.08                                 | 2022.08                                       |
+| LoginPage: header utilities                    | --                                      | 2022.11                                       |
 | Menu: flyout                                   | 2020.11                                 | 2021.10                                       |
 | Menu: drilldown                                | 2020.11                                 | 2021.03                                       |
+| MenuItem: hasCheck                             | --                                      | 2022.07                                       |
 | Nav: flyout                                    | 2021.13                                 | 2021.13                                       |
 | Nav: drilldown                                 | 2021.12                                 | --                                            |
 | Number input: validated                        | 2020.10                                 | 2020.11                                       |
+| Page demos    (html)                           | ??                                      | already promoted                              |
 | Pagination: insets                             | 2022.15                                 | 2022.16                                       |
+| Password strength demo (html)                  | ??                                      | already promoted                              |
 | Progress: helper text                          | 2022.15                                 | 2022.16                                       |
 | Progress stepper                               | 2021.12                                 | 2021.13                                       |
 | removeFindDomNode                              | --                                      | 2022.15                                       |
 | SearchInput                                    | 2020.09                                 | 2020.10                                       |
+| Select next                                    | --                                      | 2023.01                                       |
+| Select: isCreateSelectOptionObject             | --                                      | ??                                            |
+| Select: loadingVariant                         | --                                      | ??                                            |
+| Select: isInputFilterPersisted                 | --                                      | ??                                            |
 | Spinner: inline                                | 2022.14                                 | 2022.15                                       |
 | Table: draggable rows                          | 2021.08                                 | 2021.08                                       |
 | Tabs: dynamic                                  | 2022.05                                 | 2022.06                                       |
 | Tabs: horizontal overflow                      | 2022.10                                 | 2022.10                                       |
 | Tabs: actions                                  | 2022.14                                 | 2022.15                                       |
+| Tabs: close button props                       | --                                      | ??                                            |
+| Text area: icon sprite                         |                                         | ??                                            |
 | Text input group                               | 2021.13                                 | 2021.14                                       |
 | Tile                                           | 2020.09                                 | 2020.11                                       |
 | TimePicker                                     | --                                      | 2020.16                                       |
 | Timestamp                                      | 2022.10                                 | 2022.11                                       |
 | Truncate                                       | 2021.16                                 | 2022.01                                       |
+| Wizard next                                    | --                                      | 2023.01                                       |
 
 
