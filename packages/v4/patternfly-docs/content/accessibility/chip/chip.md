@@ -9,10 +9,6 @@ import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
 To implement an accessible PatternFly **chip** component:
 
-- Ensure any close button within a chip can be navigated to and interacted with via keyboard and other assistive technologies such as a screen reader
-- Ensure the entire chip can receive focus, not just the chip's close button, when the chip content is truncated
-- Ensure any truncated text within a chip is displayed as a tooltip when the chip is hovered via mouse or has focus
-- Follow the [tooltip accessibility documentation](/components/tooltip/accessibility) for truncated chip content
 - Render the chip as a button when using it as an overflow chip
 - Follow the [chip group accessibility documentation](/components/chip-group/accessibility) when rendering multiple, related chips within a group
 

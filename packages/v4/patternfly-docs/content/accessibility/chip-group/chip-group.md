@@ -10,10 +10,7 @@ import { Checkbox, List, ListItem } from '@patternfly/react-core';
 To implement an accessible PatternFly **chip group** component:
 
 - Ensure any interactive elements - such as close buttons or overflow chips - within a chip group can be navigated to and interacted with via keyboard and other assistive technologies such as a screen reader
-- Ensure the entire chip group category name can receive focus, not just the chip group's close button, when the category name is truncated
-- Ensure any truncated text within a chip group category name is displayed as a tooltip when the category name is hovered via mouse or has focus
 - Provide an `aria-label` if the chip group does not have a visible text category name
-- Follow the [tooltip accessibility documentation](/components/tooltip/accessibility) for truncated content
 - Follow the [chip accessibility documentation](/components/chip/accessibility) when rendering chips
 ## Testing
 
