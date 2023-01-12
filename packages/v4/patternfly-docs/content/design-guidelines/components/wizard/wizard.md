@@ -125,16 +125,16 @@ Optional steps can be added to the wizard. Make steps optional when they do not 
  
 ### Wizard with a panel
 
-<img src="./img/wizard-with-a-panel.png" alt="Wizard with a panel"/>
+<img src="./img/wizard-with-panel-closed.png" alt="Wizard with a closed panel"/>
+<img src="./img/wizard-with-panel-open.png" alt="Wizard with a closed open"/>
 
 The drawer inside a wizard is useful in situations where you need to show more information while keeping the user in the context of the wizard. When opened, the drawer overlays the data, rather than pushing it to the side. There are two types of drawers: dismissable and non-dismissible. For opening and closing a drawer, use a link button or a link button with an icon.
 
 #### When to use
 
-Use a drawer when:
-* When you want to let customers review additional information without switching contexts
-* When you need to add context  or more description around the information you are showing
-* For additional learning resources
+* You want to let consumers review additional information without switching contexts
+* You need to add context or more description around the information you are showing
+* You want to display additional learning resources
 
 ### Review and completion
 The last step in a wizard should always be a review step. This step should include a summary of what the user has input so the user may confirm them before committing their changes.
