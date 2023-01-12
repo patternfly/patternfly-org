@@ -10,8 +10,15 @@ import { Checkbox, List, ListItem } from '@patternfly/react-core';
 To implement an accessible PatternFly **badge**:
 
 - Ensure the badge itself is not interactive in any way. 
-- Ensure that the surrounding context can convey the purpose of the badge to users via screen reader or similar assistive technologies.
 - Ensure badge information is not conveyed by only color, such as a read or unread badge.
+- Ensure that the surrounding context can convey the purpose of the badge to users via screen reader or similar assistive technologies.
+  - A heading or other text element prefacing the badge or visually hidden text content accessible only to assistive technologies are some examples of a surrounding context.
+
+  ```
+  <h2>Notificaitons <Badge>5</Badge></h2>
+
+  <Badge>5 <span class="pf-screen-reader">unread notifications</span></Badge>
+  ```
 
 ## Testing
 
@@ -22,10 +29,10 @@ To implement an accessible PatternFly **badge**:
     <Checkbox id="badge-a11y-checkbox-1" label="Users should not be able to interact with or navigate to the badge with the keyboard, as it is not an interactive element." />
   </ListItem>
   <ListItem>
-    <Checkbox id="badge-a11y-checkbox-2" label="Users navigating via screen reader or similar assistive technology should understand the purpose of the badge by its surrounding context." />
+    <Checkbox id="badge-a11y-checkbox-2" label="Information about a badge is not conveyed by only color."/>
   </ListItem>
   <ListItem>
-    <Checkbox id="badge-a11y-checkbox-3" label="Information about a badge is not conveyed by only color."/>
+    <Checkbox id="badge-a11y-checkbox-3" label="Users navigating via screen reader or similar assistive technology should understand the purpose of the badge by its surrounding context." />
   </ListItem>
 </List>
 
@@ -43,7 +50,7 @@ Consumers must ensure they take any additional considerations when customizing a
 
 ### Color
 
-Generally you should avoid using only color to convey information about a badge. One possible exception to this rule may be if a badge is only ever rendered in a specific scenario, such as only when there are unread notifications, and will otherwise not be rendered for any other purpose. Caution should still be used when using color in this way, though.
+Generally you should avoid using only color to convey information about different types of badges, such as between read and unread notifications.
 
 If a badge will always be rendered whether it's unread or read, or different badges will convey different types of information, it may be difficult for users to perceive or understand the difference between the two badges.
 
