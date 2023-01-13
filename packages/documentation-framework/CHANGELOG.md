@@ -3,6 +3,114 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.9 (2023-01-12)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.3.8 (2023-01-09)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.3.7 (2023-01-06)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.3.6 (2023-01-05)
+
+
+### Bug Fixes
+
+* **lodash:** remove lodash alias ([#3327](https://github.com/patternfly/patternfly-org/issues/3327)) ([2fcfda1](https://github.com/patternfly/patternfly-org/commit/2fcfda1e4f4da5341048d47a29729aedc0fcda54))
+
+
+
+
+
+## 1.3.5 (2022-12-20)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.3.4 (2022-12-20)
+
+
+### Bug Fixes
+
+* **lodash:** add lodash.constant to global._ ([#3324](https://github.com/patternfly/patternfly-org/issues/3324)) ([a2d79a4](https://github.com/patternfly/patternfly-org/commit/a2d79a4b5b8776fbc81907a146dfa5a09626cb8f))
+
+
+
+
+
+## 1.3.3 (2022-12-19)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.3.2 (2022-12-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.3.1 (2022-12-12)
+
+
+### Bug Fixes
+
+* **documentation-framework:** added local brand logos ([#3314](https://github.com/patternfly/patternfly-org/issues/3314)) ([bcf5efe](https://github.com/patternfly/patternfly-org/commit/bcf5efe27a7ed17bc92a6105eabb07fba9184ef0))
+
+
+
+
+
+# 1.3.0 (2022-12-08)
+
+
+### Features
+
+* **docs:** enabled tertiary nav in sidenav ([#3274](https://github.com/patternfly/patternfly-org/issues/3274)) ([b2a6804](https://github.com/patternfly/patternfly-org/commit/b2a6804d7d93026b3b3a7a7e06b53c51be998e1e))
+
+
+
+
+
+## 1.2.70 (2022-12-07)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.2.69 (2022-12-05)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 1.2.68 (2022-11-28)
 
 **Note:** Version bump only for package @patternfly/documentation-framework

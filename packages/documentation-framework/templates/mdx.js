@@ -123,7 +123,41 @@ export const MDXTemplate = ({
 }) => {
   const sourceKeys = sources.map(v => v.source);
   const isSinglePage = sourceKeys.length === 1;
-  const isComponent = sources.some(source => source.section === 'components');
+
+  let isDevResources, isComponent, isExtension, isChart, isDemo, isLayout, isUtility;
+
+  const getSection = () => {
+    return sources.some((source) => {
+      switch (source.section) {
+        case "developer-resources":
+          isDevResources = true;
+          return;
+        case "components":
+          isComponent = true;
+          return;
+        case "extensions":
+          isExtension = true;
+          return;
+        case "charts":
+          isChart = true;
+          return;
+        case "demos":
+          isDemo = true;
+          return;
+        case "layouts":
+          isLayout = true;
+          return;
+        case "utilities":
+          isUtility = true;
+          return;
+      }
+    });
+  };
+
+  // hide tab if it doesn't include the strings below
+  const hideTabName = sourceKeys.some(
+    (e) => e.includes("pages") || e.includes("training")
+  );
   const { pathname } = useLocation();
   const { katacodaLayout } = sources[0].Component.getPageData();
   let activeSource = pathname.replace(/\/$/, '').split('/').pop();
@@ -145,11 +179,24 @@ export const MDXTemplate = ({
     document.title = getTitle(title);
   }
 
+  const getClassName = () => {
+    getSection();
+    if (isChart || isDevResources || isExtension) {
+      if (isSinglePage) {
+        return "pf-m-light-100";
+      }
+      return "pf-m-light";
+    } else if (isUtility || isDemo || isLayout || isComponent) {
+      return "pf-m-light";
+    }
+    return "pf-m-light-100";
+  };
+
   return (
     <React.Fragment>
       <PageGroup>
         <PageSection
-          className={isSinglePage ? "pf-m-light-100" : ""}
+          className={getClassName()}
           variant={!isSinglePage ? PageSectionVariants.light : ""}
           isWidthLimited
         >
@@ -158,7 +205,10 @@ export const MDXTemplate = ({
           {isComponent && summary && (<SummaryComponent />)}
           </TextContent>
         </PageSection>
-        {(!isSinglePage || isComponent) && (
+        {((!isSinglePage && !hideTabName) ||
+          isComponent ||
+          isUtility ||
+          isDemo) && (
             <PageSection id="ws-sticky-nav-tabs" stickyOnBreakpoint={{'default':'top'}} type="tabs">
               <div className="pf-c-tabs pf-m-page-insets pf-m-no-border-bottom">
                 <ul className="pf-c-tabs__list">
@@ -179,12 +229,10 @@ export const MDXTemplate = ({
                   ))}
                 </ul>
               </div>
-              </PageSection>
+            </PageSection>
         )}
         <PageSection id="main-content" isFilled className="pf-m-light-100">
-          {isSinglePage && (
-              <MDXChildTemplate {...sources[0]} />
-          )}
+          {isSinglePage && <MDXChildTemplate {...sources[0]} />}
           {!isSinglePage && (
             <Router className="pf-u-h-100" primary={false}>
               {sources
@@ -192,8 +240,7 @@ export const MDXTemplate = ({
                   source.index = index;
                   return source;
                 })
-                .map(MDXChildTemplate)
-              }
+                .map(MDXChildTemplate)}
             </Router>
           )}
         </PageSection>
