@@ -45,7 +45,7 @@ _For Red Hat product terminology and documentation standards, see [Red Hat's sup
 **Expand**: (v.) Use to describe expanding a container element (like a list or message) to show all its contents.
 - Opposite: Collapse
 
-**Filter**: (v.) Use to describe the action of narrowing a set of search results to show only items meeting a certain criteria. Filtering is mostly associate with card views like tables, lists, and card grids and assumes that a search has previously been performed to return an initial results list.
+**Filter**: (v.) Use to describe the action of narrowing a set of search results to show only items meeting a certain criteria. Filtering is mostly associated with views like tables, lists, and card grids and assumes that a search has previously been performed to return an initial results list.
 
 **Hide**: (v.) Use to describe hiding something that is displayed in the interface.
 - Opposite: Show
@@ -82,7 +82,7 @@ _For Red Hat product terminology and documentation standards, see [Red Hat's sup
 **Save**: (v.) Use to describe preserving changes made by the user. 
 - Opposite: Cancel
 
-**Search** (v.) Use to decribe the action of querying a data set to return a results list. Searching will always be applied against some criteria and may be narrow or broard. 
+**Search** (v.) Use to decribe the action of querying a data set to return a results list. Searching will always be applied against some criteria and may be narrow or broad. 
 
 **Select**: (v.) Use to prompt the user to select an item from a list, group, view, or other container element.
 - Opposite: Deselect
