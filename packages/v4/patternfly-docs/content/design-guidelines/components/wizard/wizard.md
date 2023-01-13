@@ -18,7 +18,7 @@ Except where noted, modal and in-page wizards have the same elements and behavio
 8. **Button footer:** Buttons control the wizard flow. Default buttons are "Next," "Back," and "Cancel." You may optionally add other actions, such as "Skip to finish" or "Start over." There should only be one primary action in the footer and it should be the farthest left action.
 
 ## Usage
-### When to use:
+### When to use
 * The task is long/complex and benefits from being broken into smaller more manageable steps. This allows the user to focus on smaller tasks and not feel overwhelmed.
 * There is a known step by step order of tasks, and these steps can be broken up into clearly defined categories/sections which can be indicated via labels on the steps.
 * This process is prescriptive. The actions a user takes in one step influence downstream steps.
@@ -125,10 +125,10 @@ Optional steps can be added to the wizard. Make steps optional when they do not 
  
 ### Wizard with a panel
 
+The drawer inside a wizard is useful in situations where you need to show more information while keeping the user in the context of the wizard. When opened, the drawer overlays the data, rather than pushing it to the side. There are two types of drawers: dismissable and non-dismissible. For opening and closing a drawer, use a link button or a link button with an icon.
+
 <img src="./img/wizard-with-panel-closed.png" alt="Wizard with a closed panel"/>
 <img src="./img/wizard-with-panel-open.png" alt="Wizard with a closed open"/>
-
-The drawer inside a wizard is useful in situations where you need to show more information while keeping the user in the context of the wizard. When opened, the drawer overlays the data, rather than pushing it to the side. There are two types of drawers: dismissable and non-dismissible. For opening and closing a drawer, use a link button or a link button with an icon.
 
 #### When to use
 
