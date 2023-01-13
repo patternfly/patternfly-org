@@ -130,7 +130,7 @@ The drawer inside a wizard is useful in situations where you need to show more i
 <img src="./img/wizard-with-panel-closed.png" alt="Wizard with a closed panel"/>
 <img src="./img/wizard-with-panel-open.png" alt="Wizard with a closed open"/>
 
-#### When to use
+#### Use panel when
 
 * You want to let consumers review additional information without switching contexts
 * You need to add context or more description around the information you are showing
