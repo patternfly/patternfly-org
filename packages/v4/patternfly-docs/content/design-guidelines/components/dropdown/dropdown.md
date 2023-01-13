@@ -22,7 +22,7 @@ In addition to the basic dropdown shown above, you may apply the following varia
 The primary toggle should be used in the same way as you would use a primary button. If you want to draw the user’s attention to a dropdown menu as the primary place to take action on a page, consider using a dropdown with primary styling.
 
 ### Secondary toggle
-The secondary toggle is a variation of the primary toggle. It has less visual prominence than the primary toggle, but more visual prominence than the basic toggle and other toggle variations.
+The secondary toggle is a variation of the primary toggle. It has less visual prominence than the primary toggle, but more visual prominence than the basic toggle and other toggle variations. Use a secondary toggle when the actions in the dropdown are the secondary actions you’d want a user to take.
 
 <img src="./img/secondary-toggle.png" alt="Image showing usage of secondary toggle" width="1440"/>
 
