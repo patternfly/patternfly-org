@@ -47,7 +47,7 @@ Wizards can be modal or placed within the content area of a page. Behavior may c
 * [Modal wizard](#modal-wizards)
 * [With sub-steps](#wizard-with-sub-steps)
 * [With optional steps](#wizard-with-optional-steps)
-* [With a panel](#wizard-with-a-panel)
+* [With a drawer](#wizard-with-a-drawer)
 
 ### In-page wizard
 A wizard may be embedded in a page as shown below.
