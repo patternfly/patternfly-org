@@ -29,7 +29,7 @@ The secondary toggle is a variation of the primary toggle. It has less visual pr
 Use a secondary toggle when other toggle variations would appear visually inconsistent, or lack the sufficient prominence needed to create a visual hierarchy.
 
 ### Plain toggle
-Plain styling removes the border treatment from a dropdown toggle. This is useful in places where the default border treatment might make your layout feel visually cluttered or crowded.
+Plain styling removes the border treatment from a dropdown toggle. This is useful in places where the default border treatment might make your layout feel visually cluttered or crowded. Use a plain toggle when further action hierarchy needs to be established and you already have primary or secondary action toggle on the page.
 
 ### Icon toggle
 When there is not enough space for a labeled button, an icon can be used instead. Icon toggles are best used when you can use a common icon that has a well understood meaning or when you are working with limited space. A common default is to use the vertical ellipses (kebab) icon to generally indicate that it is connected with a menu as shown above.
