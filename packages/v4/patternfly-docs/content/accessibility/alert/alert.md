@@ -22,10 +22,10 @@ At a minimum, an alert should meet the following criteria:
     <Checkbox id="alert-a11y-checkbox-1" label="If an alert will dynamically appear or update, it is rendered inside of an alert group component." />
   </ListItem>
   <ListItem>
-    <Checkbox id="alert-a11y-checkbox-2" label="If an alert is using a heading level for its title, the heading level should fit the page heading level order so that heading levels are not skipped." />
+    <Checkbox id="alert-a11y-checkbox-2" label="If an alert is using a heading element for its title, the heading level fits the page heading level order so that heading levels are not skipped." />
   </ListItem>
   <ListItem>
-    <Checkbox id="alert-a11y-checkbox-2" label="If an alert's title is not describing any content in a description below it, the title should be wrapped in a non-heading element such as a 'span' or a 'div'." />
+    <Checkbox id="alert-a11y-checkbox-3" label="If an alert does not have any description below its title, the title is wrapped in a non-heading element such as a 'span' or a 'div'." description="Without a description, a heading element in the title may cause other, unrelated content that follows seem related when navigating the page via rotor menus."/>
   </ListItem>
 </List>
 
