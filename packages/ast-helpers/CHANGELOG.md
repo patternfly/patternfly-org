@@ -3,6 +3,65 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.12 (2023-01-17)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.8.11 (2023-01-17)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.8.10 (2023-01-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.8.9 (2023-01-12)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.8.8 (2023-01-09)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.8.7 (2023-01-06)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.8.6 (2023-01-05)
+
+
+### Bug Fixes
+
+* **lodash:** remove lodash alias ([#3327](https://github.com/patternfly/patternfly-org/issues/3327)) ([2fcfda1](https://github.com/patternfly/patternfly-org/commit/2fcfda1e4f4da5341048d47a29729aedc0fcda54))
+
+
+
+
+
 ## 0.8.5 (2022-12-20)
 
 **Note:** Version bump only for package @patternfly/ast-helpers

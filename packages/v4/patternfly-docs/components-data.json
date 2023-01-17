@@ -85,7 +85,7 @@
   },
   "code-block": {
     "illustration": "./images/component-illustrations/code-block.png",
-    "summary": "A <b>code block</b> is a component that contains 2 or more lines of ready-only code. The code in a code block can be copied to the clipboard."
+    "summary": "A <b>code block</b> is a component that contains 2 or more lines of read-only code. The code in a code block can be copied to the clipboard."
   },
   "code-editor": {
     "illustration": "./images/component-illustrations/code-editor.png",
