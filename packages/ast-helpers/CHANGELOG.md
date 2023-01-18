@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2023-01-18)
+
+
+### Features
+
+* **docs:** add frontmatter option to fix extensions view source link ([#3351](https://github.com/patternfly/patternfly-org/issues/3351)) ([a3bce76](https://github.com/patternfly/patternfly-org/commit/a3bce76d9cb499217647e702236c5d1fa9c3fafa))
+
+
+
+
+
 ## 0.8.13 (2023-01-18)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
