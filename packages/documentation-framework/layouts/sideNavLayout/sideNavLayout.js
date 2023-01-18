@@ -47,11 +47,11 @@ const HeaderTools = ({
   const [searchValue, setSearchValue] = React.useState('');
   const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
 
-  const getDropdownItem = version => (
+  const getDropdownItem = (version, isLatest = false) => (
     <DropdownItem
       key={version.name}
       component={
-        <a href={version.latest ? '/v4' : `/${version.name}`}>
+        <a href={isLatest ? '/' : `/${version.name}`}>
           {`Release ${version.name}`}
         </a>
       }
@@ -129,13 +129,13 @@ const HeaderTools = ({
                 )}
                 dropdownItems={[
                   <DropdownGroup key="latest" label="Latest">
-                    {getDropdownItem(latestVersion)}
+                    {getDropdownItem(latestVersion, true)}
                   </DropdownGroup>,
                   <DropdownGroup key="Previous" label="Previous releases">
                     {Object.values(versions.Releases)
                       .filter(version => !version.hidden && !version.latest)
                       .slice(0,3)
-                      .map(getDropdownItem)}
+                      .map(version => getDropdownItem(version))}
                   </DropdownGroup>,
                   <Divider key="divider" className="ws-switcher-divider"/>,
                   <DropdownItem
