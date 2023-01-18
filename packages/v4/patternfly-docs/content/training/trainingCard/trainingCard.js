@@ -32,7 +32,7 @@ export const TrainingCard = ({
   time,
   description,
   subsection,
-  katacodaId = null,
+  name = null,
   designUrl = null
 }) => (
   <Card className="pf-org__card" isCompact>
@@ -56,8 +56,8 @@ export const TrainingCard = ({
       {description}
     </CardBody>
     <CardFooter>
-    {katacodaId && (
-      <Link to={`/training/${katacodaId}`} >
+    {name && (
+      <Link to={`/training/${name}`} >
         <Button variant="link" aria-label={`Start ${title} training`}>
           Start
           <ArrowRightIcon />
