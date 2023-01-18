@@ -1,6 +1,8 @@
 const path = require('path');
 
 module.exports = (sourceMD, sourceProps) => {
+  // Note: you must source props before sourcing the markdown files, otherwise the props table won't be rendered.
+
   // Content md
   const contentBase = path.join(__dirname, '../patternfly-docs/content');
   sourceMD(path.join(contentBase, 'contribute/**/*.md'), 'pages-contribute');
@@ -90,4 +92,12 @@ module.exports = (sourceMD, sourceProps) => {
 
   sourceProps(path.join(qsPropsBase, '/**/*.tsx'), qsPropsIgnore);
   sourceMD(path.join(qsContentBase, '**/*.md'));
+
+  // Catalog view extension
+  const catalogViewPath = require.resolve("@patternfly/react-catalog-view-extension/package.json")
+  const reactCatalogViewDocsPath = catalogViewPath.replace("package.json", "patternfly-docs");
+  const reactCatalogViewSrcPath = catalogViewPath.replace("package.json", "src/components");
+
+  sourceProps(path.join(reactCatalogViewSrcPath, "/**/*.tsx"), reactPropsIgnore);
+  sourceMD(path.join(reactCatalogViewDocsPath, '/**/examples/*.md'), 'react');
 }
