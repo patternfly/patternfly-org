@@ -179,14 +179,16 @@ function getReactParams(title, code, scope, lang, relativeImports) {
 </html>`,
       },
       [lang === 'ts' ? 'index.tsx' : 'index.js']: {
-        content: `import ReactDOM from 'react-dom';
+        content: `import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import "@patternfly/react-core/dist/styles/base.css";
 import './fonts.css';
 
 ${code}
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<${toRender} />, rootElement);`
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<StrictMode><${toRender} /></StrictMode>);`
       },
       'fonts.css': {
         content: overpass
@@ -195,8 +197,8 @@ ReactDOM.render(<${toRender} />, rootElement);`
         content: {
           dependencies: {
             ...dependencies,
-            'react': '^16.8.0',
-            'react-dom': '^16.8.0'
+            'react': '^18',
+            'react-dom': '^18'
           }
         },
       },

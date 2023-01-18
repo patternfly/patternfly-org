@@ -12,7 +12,7 @@ const serverConfig = () => {
     target: 'node', // Load chunks using require
     plugins: [
       new webpack.DefinePlugin({
-        'process.env.PRERENDER': true // In app.js don't call ReactDOM.render
+        'process.env.PRERENDER': true // In app.js don't call render
       }),
     ],
     optimization: {

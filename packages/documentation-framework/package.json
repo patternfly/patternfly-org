@@ -81,7 +81,7 @@
     "@patternfly/react-code-editor": ">=4.43.16",
     "@patternfly/react-core": ">=4.202.16",
     "@patternfly/react-table": ">=4.71.16",
-    "react": "^16.8.0 || ^17.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0"
+    "react": "^16.8 || ^17 || ^18",
+    "react-dom": "^16.8 || ^17 || ^18"
   }
 }
