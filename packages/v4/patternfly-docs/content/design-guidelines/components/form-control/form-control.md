@@ -39,12 +39,21 @@ Disable controls indicate dependency and can be used to guide the user in a sequ
 
 Use the disabled state when input is required in **all** use cases, but content depends on prior actions. Alternatively, if a previous action eliminates the need for an input entirely, the component should be hidden rather than disabled.
 
-<img src="./img/disable_example.png" alt="Disabled input example" width="762px"/>
+<img src="./img/greyedout-2023 update.png" alt="Disabled input example" width="762px"/>
 
 #### Read only controls
 Use the read only state when an input will *never* be editable. This state differs slightly from the disabled state, as shown below.
 
 <img src="./img/greyedout.png" alt="Gray-out input" width="644px"/>
+
+#### Disabled variation
+Implies that there is a way for fiend to become enabled.
+##### Read Only variation
+Differes from disabled state in that read-only is never changeable.
+#### Plain variation
+Use when you don't have the need to copy to clipboard.
+#### Boxed variation
+Use when you have a need to copy to clipboard.
 
 ### Custom icons
 Icons can be included within form fields to indicate the type of input required. The most common example is the Search field, shown below. All icons should be right-aligned within the input component.
