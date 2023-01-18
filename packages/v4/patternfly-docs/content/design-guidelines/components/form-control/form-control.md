@@ -42,9 +42,19 @@ Use the disabled state when input is required in **all** use cases, but content 
 <img src="./img/disable_example.png" alt="Disabled input example" width="762px"/>
 
 #### Read only controls
+
 Use the read only state when an input will *never* be editable. This state differs slightly from the disabled state, as shown below.
 
-<img src="./img/greyedout.png" alt="Gray-out input" width="644px"/>
+<img src="./img/greyedout-2023 update.png" alt="Gray-out input" width="644px"/>
+
+#### Disabled variation
+Implies that there is a way for fiend to become enabled.
+##### Read Only variation
+Differes from disabled state in that read-only is never changeable.
+#### Plain variation
+Use when you don't have the need to copy to clipboard.
+#### Boxed variation
+Use when you have a need to copy to clipboard.
 
 ### Custom icons
 Icons can be included within form fields to indicate the type of input required. The most common example is the Search field, shown below. All icons should be right-aligned within the input component.
@@ -52,5 +62,3 @@ Icons can be included within form fields to indicate the type of input required.
 <img src="./img/search.png" alt="Search field" width="644px" />
 
 As a designer, you can choose to design input components with custom icons. Make sure that whatever icon you choose informs the user about the type of input that field requires.
-
-
