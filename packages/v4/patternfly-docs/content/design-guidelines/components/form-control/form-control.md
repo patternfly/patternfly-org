@@ -50,7 +50,7 @@ Use the read only state when an input will *never* be editable. This state diffe
 * Red delete text styling should only be used for very destructive actions.
 * A divider should be used for destructive actions.
 
-<img src="./img/red-delete-text.png" alt="red text down down menu" width="86px3”/>
+<img src="./img/red-delete-text.png" alt="red text down down menu" width="863px”/>
 
 ### Custom icons
 Icons can be included within form fields to indicate the type of input required. The most common example is the Search field, shown below. All icons should be right-aligned within the input component.
