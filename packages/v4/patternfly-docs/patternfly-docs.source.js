@@ -114,4 +114,12 @@ module.exports = (sourceMD, sourceProps) => {
 
   sourceProps(path.join(reactCatalogViewSrcPath, "/**/*.tsx"), reactPropsIgnore);
   sourceMD(path.join(reactCatalogViewDocsPath, '/**/examples/*.md'), 'react');
+
+  // Console extension
+  const consolePath = require.resolve("@patternfly/react-console/package.json");
+  const consoleDocsPath = consolePath.replace("package.json", "patternfly-docs/content/extensions/react-console");
+  const consoleSrcPath = consolePath.replace("package.json", "src/components");
+
+  sourceProps(path.join(consoleSrcPath, "/**/*.tsx"), reactPropsIgnore);
+  sourceMD(path.join(consoleDocsPath, "/examples/*.md"), 'react');
 }
