@@ -81,7 +81,10 @@ export const Example = ({
   // Show dark theme switcher on full page examples
   hasDarkThemeSwitcher = process.env.hasDarkThemeSwitcher,
   // Map of relative imports matched to their npm package import path (passed to Codesandbox)
-  relativeImports
+  relativeImports,
+  // md file location in node_modules, used to resolve relative import paths in examples
+  relPath,
+  sourceLink
 }) => {
   if (isFullscreenPreview) {
     isFullscreen = false;
@@ -160,13 +163,13 @@ export const Example = ({
   const codeBoxParams = getParameters(
     lang === 'html'
       ? getStaticParams(title, editorCode)
-      : getReactParams(title, editorCode, scope, lang, relativeImports)
+      : getReactParams(title, editorCode, scope, lang, relativeImports, relPath, sourceLink)
   );
   const fullscreenLink = loc.pathname.replace(/\/$/, '')
     + (loc.pathname.endsWith(source) ? '' : `/${source}`)
     + '/'
     + slugger(title);
-
+    
   return (
     <div className="ws-example">
       <div className="ws-example-header">

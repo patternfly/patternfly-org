@@ -86,7 +86,8 @@ function toReactComponent(mdFilePath, source, buildMode) {
         sourceLink: `https://github.com/patternfly/${
           sourceRepo}/blob/main/${
           normalizedPath}`,
-        hideTOC: frontmatter.hideTOC || false
+        hideTOC: frontmatter.hideTOC || false,
+        relPath
       };
       // Temporarily override section for Demo tabs until we port this upstream
       if (frontmatter.section === 'demos' && routes[slug.replace('demos', 'components')]) {
