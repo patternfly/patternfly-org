@@ -160,6 +160,20 @@ function getReactParams(title, code, scope, lang, relativeImports) {
     .filter(([pkg]) => code.includes(pkg))
     .forEach(([pkg, version]) => dependencies[pkg] = version);
 
+  
+  // Get any additional dependencies from example code
+  const importMatch = /(?:import [^'"`]*)(?:['"`])((?!.\/)[^'"`]*)/gm;
+  let depImport;
+  while (depImport = importMatch.exec(code)) {
+    let res = depImport[1];
+    // Only include package name, not full import path
+    if (!dependencies[res] && res.includes('@') && res.includes('/')) {
+      const importArr = res.split('/');
+      res = `${importArr[0]}/${importArr[1]}`;
+    }
+    dependencies[res] = dependencies[res] || 'latest';
+  }
+
   return {
     files: {
       'index.html': {
