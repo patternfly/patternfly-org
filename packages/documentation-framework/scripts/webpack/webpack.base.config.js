@@ -39,9 +39,12 @@ module.exports = (_env, argv) => {
           include: [
             path.resolve(process.cwd(), 'src'),
             path.resolve(process.cwd(), 'patternfly-docs'),
+            path.resolve(process.cwd(), 'examples'),
             path.resolve(__dirname, '../..'), // Temporarily compile theme using webpack for development
             /react-[\w-]+\/src\/.*\/examples/,
             /react-[\w-]+\\src\\.*\\examples/, // fix for Windows
+            /react-[\w-]+\/patternfly-docs\/.*\/examples/, //fixes for extensions
+            /react-[\w-]+\\patternfly-docs\\.*\\examples/,
           ].concat(includePaths.map(path => new RegExp(path))),
           exclude: [
             path.resolve(__dirname, '../../node_modules'), // Temporarily compile theme using webpack for development
