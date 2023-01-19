@@ -26,7 +26,7 @@ A tree view can be used for:
 <img src="./img/treeview-usage.png" alt="Default tree view usage"  width="1004" />
 
 ### When to use
-* Selecting is the main use-case. 
+* Selecting is the main use case. 
 * You apply filters that need to be structured in a clear hierarchy. 
 * The data is structured into levels.
 * You need to display hierarchies that have more than 2 levels.

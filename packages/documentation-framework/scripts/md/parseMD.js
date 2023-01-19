@@ -83,7 +83,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
         subsection: frontmatter.subsection || '',
         source,
         slug,
-        sourceLink: `https://github.com/patternfly/${
+        sourceLink: frontmatter.sourceLink || `https://github.com/patternfly/${
           sourceRepo}/blob/main/${
           normalizedPath}`,
         hideTOC: frontmatter.hideTOC || false,
