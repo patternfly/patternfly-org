@@ -45,7 +45,7 @@ Use the disabled state when input is required in **all** use cases, but content 
 
 Use the read only state when an input will *never* be editable. This state differs slightly from the disabled state, as shown below.
 
-<img src="./img/greyedout-2023 update.png" alt="Gray-out input" width="644px"/>
+<img src="./img/greyedout-2023.png" alt="Gray-out input" width="644px"/>
 
 #### Disabled variation
 Implies that there is a way for fiend to become enabled.
