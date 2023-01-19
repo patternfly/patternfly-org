@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.15.2 (2023-01-19)
+
+
+### Bug Fixes
+
+* update codesandbox dependencies per example import ([#3352](https://github.com/patternfly/patternfly-org/issues/3352)) ([cd67873](https://github.com/patternfly/patternfly-org/commit/cd67873352e8b9b6080c91d2c5ede9fe7ddf448a))
+
+
+
+
+
 ## 4.15.1 (2023-01-18)
 
 **Note:** Version bump only for package patternfly-org-4
