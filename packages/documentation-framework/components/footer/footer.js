@@ -137,7 +137,7 @@ export const Footer = () => (
                   <li className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="//slack.patternfly.org"
+                      to="//patternfly.slack.com"
                       target="top"
                       aria-label="Join the PatternFly 4 Slack"
                     >
