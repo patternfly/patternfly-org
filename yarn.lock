@@ -2478,6 +2478,19 @@
     tippy.js "5.1.2"
     tslib "^2.0.0"
 
+"@patternfly/react-core@^4.273.0":
+  version "4.274.0"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-4.274.0.tgz#cea721bfd63202c542b0c2997b53c11aeb393d27"
+  integrity sha512-Sr/mYLsU5TOGLamMU7/RyrJzHnZk0M/ZqWcET7pQsIu4zbItbedFZ4wx5zVrjz/07JfcFE+ago8/qL+XJOlMVQ==
+  dependencies:
+    "@patternfly/react-icons" "^4.93.5"
+    "@patternfly/react-styles" "^4.92.5"
+    "@patternfly/react-tokens" "^4.94.5"
+    focus-trap "6.9.2"
+    react-dropzone "9.0.0"
+    tippy.js "5.1.2"
+    tslib "^2.0.0"
+
 "@patternfly/react-docs@5.103.2":
   version "5.103.2"
   resolved "https://registry.yarnpkg.com/@patternfly/react-docs/-/react-docs-5.103.2.tgz#ce1e3ef9fceab1ccd3c3530c146c3cad174423e4"
@@ -2507,6 +2520,11 @@
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-4.93.3.tgz#ba617b1daefce81ba903bc702ff66060413e2a9f"
   integrity sha512-OIEeTc4Noi9XOIRF3OB3sz9dRnxr1h4eNIzIeZwRd8xXWCQxYcrllxPV98F3+RpL4ZCH2QWb/2gG4mHrVyX+0A==
 
+"@patternfly/react-icons@^4.93.5":
+  version "4.93.5"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-4.93.5.tgz#001bc33ddef0f861452ab3cce8b8a22640138d34"
+  integrity sha512-0TRgONPr0C0/wzOjwlOI9WB068m/8VG9sW3Y+4PBDyimVRUg2blSzeQbeAjWu/O1mNMwpGtqSqk9XHjGmAxwJQ==
+
 "@patternfly/react-inline-edit-extension@^4.86.68":
   version "4.86.85"
   resolved "https://registry.yarnpkg.com/@patternfly/react-inline-edit-extension/-/react-inline-edit-extension-4.86.85.tgz#d815c791a324548f51dfb18d977e3c4bd5fab7b0"
@@ -2516,6 +2534,17 @@
     "@patternfly/react-icons" "^4.93.3"
     "@patternfly/react-styles" "^4.92.3"
     "@patternfly/react-table" "^4.112.6"
+
+"@patternfly/react-log-viewer@4.87.98":
+  version "4.87.98"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-log-viewer/-/react-log-viewer-4.87.98.tgz#74f199f608828629be285276b7d4655790d7c924"
+  integrity sha512-GaDCyag/qdzawiv5H8iaqs3XI2NTMPWrT9lWwFEfDbRtUfU5+8r//tEWnQclgjTDsB0x1fhRSw+N+dJxbs7K2w==
+  dependencies:
+    "@patternfly/react-core" "^4.273.0"
+    "@patternfly/react-icons" "^4.93.3"
+    "@patternfly/react-styles" "^4.92.3"
+    memoize-one "^5.1.0"
+    resize-observer-polyfill "^1.5.1"
 
 "@patternfly/react-log-viewer@^4.87.62":
   version "4.87.77"
@@ -2543,6 +2572,11 @@
   resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-4.92.3.tgz#046acee6e38c996cf41c288819eca17c3634a782"
   integrity sha512-jC8F71trFWVYM7YVTP/3MBLwLZDCY3tgHeAmSKdcw6R607LK4rtCzfw5lt2IHNmAjQ0ggqDlJGWsJAfGMe4iPA==
 
+"@patternfly/react-styles@^4.92.5":
+  version "4.92.5"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-4.92.5.tgz#a4b91c02e3a8e6b107785a3c06542436f4b81f73"
+  integrity sha512-oV7grkjEw/68Q5+CReaDddgz89He5QkdToIklvcTOCqzI1GmpAACmsfCb3wusqcwROj0hOHBAzf2cRZcRkdqAg==
+
 "@patternfly/react-table@^4.111.45", "@patternfly/react-table@^4.112.6":
   version "4.112.6"
   resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-4.112.6.tgz#7550ee9571b4650a5a87fd65be1494874ea52582"
@@ -2564,6 +2598,11 @@
   version "4.94.3"
   resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-4.94.3.tgz#efc7e61ed94299423443db7416a6a52d8b56d8c6"
   integrity sha512-Rq8RMJ/iu/nTDidEb/xQWUMXFW+W4MuoLBonTAFv/Bx8G3gFMHU2JGtv9R5SvAYU6Eux9EkjCG7h3xiLqwH3jg==
+
+"@patternfly/react-tokens@^4.94.5":
+  version "4.94.5"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-4.94.5.tgz#3595848e4fc7c7043cea42106ddeeb6a98c67c0c"
+  integrity sha512-IbGIUkt0wL9JRXfQZBm072sFlZBDJMiwJRJ8XrIPrfiQka5OMWOcgM2d8BmExkV+SqnpahbOnHD0wBG0kWdsLg==
 
 "@patternfly/react-topology@^4.90.23":
   version "4.90.38"
@@ -7844,9 +7883,9 @@ humps@^2.0.1:
   integrity sha1-3QLqYIG9BWjcXQcxhEY5V7qe+ao=
 
 i@0.3.x:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/i/-/i-0.3.6.tgz#d96c92732076f072711b6b10fd7d4f65ad8ee23d"
-  integrity sha1-2WyScyB28HJxG2sQ/X1PZa2O4j0=
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/i/-/i-0.3.7.tgz#2a7437a923d59c14b17243dc63a549af24d85799"
+  integrity sha512-FYz4wlXgkQwIPqhzC5TdNMLSE5+GS1IIDJZY/1ZiEPCT2S3COUVZeT5OW4BmW4r5LHLQuOosSwsvnroG9GR59Q==
 
 iconv-lite@0.4, iconv-lite@0.4.24, iconv-lite@^0.4.24:
   version "0.4.24"
