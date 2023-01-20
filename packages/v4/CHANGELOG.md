@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.15.4 (2023-01-20)
+
+
+### Bug Fixes
+
+* **react-log-viewer:**  Added react log viewer extension updates ([#3365](https://github.com/patternfly/patternfly-org/issues/3365)) ([e747760](https://github.com/patternfly/patternfly-org/commit/e747760209e47a20d8465154ccca459bb870d8e8))
+
+
+
+
+
 ## 4.15.3 (2023-01-19)
 
 **Note:** Version bump only for package patternfly-org-4
