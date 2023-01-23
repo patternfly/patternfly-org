@@ -3,28 +3,66 @@ id: Modal
 section: components
 ---
 
-A **modal** displays important information to a user without requiring them to navigate to a new page.
+import { Checkbox, List, ListItem } from '@patternfly/react-core';
 
-**Keyboard and mouse users** shouldn’t be able to interact with the rest of the page outside of an open modal. Set initial focus on the first focusable element in the modal. The user should be able to Tab to any interactive elements within the modal and use Tab + Shift to move backward through interactive elements. Keyboard users should be able to leave the modal by pressing Esc and focus should return to the element that invoked the modal. 
+## Accessibility
 
-**Screen reader users** shouldn’t be able to interact with the rest of the page outside an open modal. Add alternative text for any images or non-textual buttons (like icon buttons). Images should use the alt attribute: `aria-label` is most common to label icon buttons. Write a clear headline that describes the modal, and be sure to follow our modal content guidelines to clearly communicate information contained within it. 
+To implement an accessible PatternFly **modal** component:
 
-Bear in mind that any components placed inside the modal should also follow that component’s accessibility requirements.
-<br/>
-<br/>
+- Add an `aria-label` to the modal if it doesn't have a visible text title
+- Ensure any other PatternFly components follow their respective accessibility documentation
 
-**To make modal accessible:**
+## Testing
 
-- **If you don’t use a title in your modal**, add an `aria-label` to give the modal an accessible name. It will look like `aria-label=”[title of modal]” on the AboutModal and will appear directly on the class .pf-c-about-modal-box. 
-- Use `aria-describedby` for any description you add to the modal.
+At a minimum, a modal should meet the following criteria:
 
-<br/>
-The following props can be added or are customizable in PatternFly:
+<List isPlain>
+  <ListItem>
+    <Checkbox id="modal-a11y-checkbox-1" label="Any content that is on the page but outside of the modal cannot be interacted with or navigated to while the modal is open." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="modal-a11y-checkbox-2" label="Standard keyboard navigation can be used to navigate between the contents of a modal." description={<span><kbd>Tab</kbd> navigates to the next focusable element inside a modal, and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous focusable element.</span>} />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="modal-a11y-checkbox-3" label={<span>The <kbd>Escape</kbd> key should close the modal, if no components within the modal are open.</span>} description={<span>If a dropdown is open within an open modal, pressing <kbd>Escape</kbd> once should close the dropdown only, and pressing <kbd>Escape</kbd> again should close the modal.</span>} />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="modal-a11y-checkbox-4" label="When a modal closes, focus should return to the last focused item before the modal was opened." description="Exceptions to this include if the last focused item no longer exists, or if focusing another element makes more sense from a work flow perspective." />
+  </ListItem>
+</List>
 
-| React component | React prop | Which HTML element it appears on in markup | Explanation | 
-|---|---|---|---|
-| Modal | aria-describedby | .pf-c-modal-box | Id to use for Modal Box descriptor |
-| Modal | aria-label | .pf-c-modal-box | Accessible descriptor of modal (use if no title) |
-| Modal | aria-labelledby | .pf-c-modal-box | Id to use for Modal Box label (use if no title) |
-| Modal | title | .pf-c-modal-box | Simple text content of the Modal Header, also used for aria-label on the body |
-| Modal | titleLabel | .pf-c-modal-box__title | Optional title label text for screen readers |
+## React customization
+
+The following React props have been provided for more fine-tuned control over accessibility.
+
+| Prop | Applied to | Reason | 
+|---|---|---|
+
+
+## HTML/CSS customization
+
+The following HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
+
+| Attribute or class | Applied to | Reason | 
+|---|---|---|
+| `aria-describedby="[id of the element that describes the modal"` | `.pf-c-modal-box` | Adds an accessible description to the modal. Typically this will be the id of the primary modal content. |
+| `aria-label="[text describing the modal]"` | `.pf-c-modal-box` | Adds an accessible name to the modal. **Required** if there is no visible text that acts as the modal title. |
+| `aria-labelledby="[id of the .pf-c-modal-box__title element or another title element]"` | `.pf-c-modal-box` | Adds an accessible name to the modal. **Required** if `.pf-c-modal-box__title` or another title element is present. |
+| `aria-modal="true"` | `.pf-c-modal-box` | Notifies users of assistive technologies that the contents underneath the modal are not available for interaction. This does not prevent other content from being interacted with, nor does it make the element a modal itself. **Required**. |
+| `role="dialog"` | `.pf-c-modal-box` | Identifies the element that serves as the modal container. **Required**. |
+| `tab-index="0"` | `.pf-c-modal-box__body` | Makes the modal body focusable via keyboard and other assistive technologies. **Required** if the modal body content renders a scrollbar due to overflow and if there is no other focusable element within the scrollable region. |
+| `aria-label="Close"` | `.pf-c-modal-box__close .pf-c-button` | Adds an accessible name to the close button of a modal. **Required**. |
+| `form="[id of the form element in the modal body]"` | `.pf-c-modal-box__footer .pf-c-button` | Links a "submit" button in the modal footer with a form in the modal body. **Required** when the submit button is outside of a `<form>` element. |
+| `aria-hidden="true"` | Parent element that contains the page contents | Removes the specified content from the accessibility tree, preventing assistive technologies from interacting with it. The `.pf-c-modal-box` element must not be a descendent of the element that has this attribute. **Required** when the modal is open. |
+
+## Additional considerations
+
+Consumers must ensure they take any additional considerations when customizing a modal, using it in a way not described or recommended by PatternFly, or in various other specific use cases not outlined elsewhere on this page.
+
+### Focus
+
+## Further reading
+
+To read more about accessibility with a modal, refer to the following resources:
+
+- [ARIA Authoring Practices Guide - Dialog](https://www.w3.org/WAI/ARIA/apg/patterns/dialogmodal/)
