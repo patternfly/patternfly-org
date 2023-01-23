@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.4.5 (2023-01-23)
+
+
+### Bug Fixes
+
+* **slack-link:** update slack link in footer and community page ([#3368](https://github.com/patternfly/patternfly-org/issues/3368)) ([6f10f1e](https://github.com/patternfly/patternfly-org/commit/6f10f1ed52841d0f8dbfb96dfcecc6efcbd3ae0d))
+
+
+
+
+
 ## 1.4.4 (2023-01-20)
 
 
