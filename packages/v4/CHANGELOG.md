@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.15.6 (2023-01-23)
+
+
+### Bug Fixes
+
+* **Alert:** update alert a11y to address title elements ([#3348](https://github.com/patternfly/patternfly-org/issues/3348)) ([525c86f](https://github.com/patternfly/patternfly-org/commit/525c86fe90372351f3de801fca91debe54fe03f6))
+
+
+
+
+
 ## 4.15.5 (2023-01-23)
 
 
