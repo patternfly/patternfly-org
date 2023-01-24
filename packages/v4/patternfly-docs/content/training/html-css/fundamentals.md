@@ -3,6 +3,8 @@ id: HTML fundamentals training
 section: training
 hideNavItem: true
 ---
+import { Button, ClipboardCopy } from '@patternfly/react-core';
+import { CopyCodeBlock } from '../copyCodeBlock/copyCodeBlock';
 
 # Fundamentals
 
@@ -15,27 +17,24 @@ PatternFly consists of isolated and modular structures that fall into three cate
 - Demos illustrate how to assemble complex structures with components and layouts only
 
 ## Components
-In PatternFly, components which cannot be broken down into smaller parts are known as the basic building blocks of user interfaces. Examples include the button, label and badge components. <a href="https://codesandbox.io/s/html-fundamentals-start-hy2erg?file=/index.html" target="_blank">A codesandbox has been provided</a> to experiment with and follow the proceeding steps.
+In PatternFly, components which cannot be broken down into smaller parts are known as the basic building blocks of user interfaces. Examples include the button, label and badge components. A codesandbox link has been provided to experiment with and follow the proceeding steps.
+
+<Button variant="primary" component="a" href="https://codesandbox.io/s/html-fundamentals-start-hy2erg?file=/index.html" target="_blank">Codesandbox - HTML fundamentals</Button>
 
 ### Step 1. Add a button component.
 In the `<body>` of the index.html file, add a button element, and apply the PatternFly styles to it so that it is a PatternFly button by adding the class `pf-c-button`. Apply the ‘primary’ styles to the button to make it a bright blue color by adding the `pf-m-primary` class to the button as well.
 
-```noLive
-<button class="pf-c-button pf-m-primary" type="button">
-  Primary
-</button>
-```
+<CopyCodeBlock>
+{`<button class="pf-c-button pf-m-primary" type="button">\n  Primary\n</button>`}
+</CopyCodeBlock>
 
 **Note:** A simple component can be reused multiple times.
 
-```noLive
-<button class="pf-c-button pf-m-primary" type="button">
-  Primary
-</button>
-<button class="pf-c-button pf-m-primary" type="button">
-  Primary
-</button>
-```
+<CopyCodeBlock>
+{`<button class="pf-c-button pf-m-primary" type="button">
+Primary\n</button>\n<button class="pf-c-button pf-m-primary" type="button">
+Primary\n</button>`}
+</CopyCodeBlock>
 
 ### Step 2. Build more complex components
 Simple components can be combined to make more complex components that are still reusable.
@@ -45,27 +44,25 @@ In this step, add a badge component to the chip component.
 #### Step 2.1 
 To build a chip component replace the contents of the `<body>` in the index.html file with the following code snippet.
 
-```noLive
-<div class="pf-c-chip">
-  <span class="pf-c-chip__text">
-    Chip
-  </span>
-  <button class="pf-c-button pf-m-plain">
+<CopyCodeBlock>
+{`<div class="pf-c-chip">
+<span class="pf-c-chip__text">
+  Chip
+</span>
+<button class="pf-c-button pf-m-plain">
   <i class="fas fa-times"></i>
-  </button>
-</div>
-```
+</button>\n</div>`}
+</CopyCodeBlock>
 
 This is the default chip component that already has another component in it: the button. This is why the chip can be considered as a more complex component.
 
 #### Step 2.2
 Add the badge inside the chip. To do this, add this block of code between pf-c-chip__text and pf-c-button.
 
-```noLive
-<span class="pf-c-badge pf-m-read">
-  7
-</span>
-```
+<CopyCodeBlock>
+{`<span class="pf-c-badge pf-m-read">
+7\n</span>`}
+</CopyCodeBlock>
 
 **Note:** Remember this is a component and not a demo because the chip component includes styles that handle how the badge looks within the chip. For example, when the badge component is added to the chip, it receives styling that gives it a margin. You can read more in the documentation here
 
@@ -79,21 +76,21 @@ In PatternFly, layouts allow for organizing and grouping elements. This tutorial
 
 #### Step 3.1 
 Copy code into the `<body>` of the `index.html` file.
-```noLive
-<div>
-  <div class="pf-c-card">
-    <div class="pf-c-card__title">
-      Title
-    </div>
-    <div class="pf-c-card__body">
-      Body
-    </div>
-    <div class="pf-c-card__footer">
-      Footer
-    </div>
+
+<CopyCodeBlock>
+{`<div>
+<div class="pf-c-card">
+  <div class="pf-c-card__title">
+    Title
   </div>
-</div>
-```
+  <div class="pf-c-card__body">
+    Body
+  </div>
+  <div class="pf-c-card__footer">
+    Footer
+  </div>
+</div>\n</div>`}
+</CopyCodeBlock>
 
 #### Step 3.2 
 Add the `pf-l-bullseye` class to the card. This will center the card horizontally and vertically on the page.
@@ -110,22 +107,21 @@ Create a form demo using components and layouts.
 ### Step 1. Add five form components.
 Copy and paste this block of code five times in the index.html file.
 
-```noLive
- <form class="pf-c-form">
-    <div class="pf-c-form__group">
-      <div class="pf-c-form__group-label">
-        <label class="pf-c-form__label">
-          <span class="pf-c-form__label-text">
-            Form label
-          </span>
-        </label>
-      </div>
-      <div class="pf-c-form__group-control">
-        <input class="pf-c-form-control"/>
-      </div>
-    </div>
- </form>
- ```
+<CopyCodeBlock>
+{`<form class="pf-c-form">
+<div class="pf-c-form__group">
+  <div class="pf-c-form__group-label">
+    <label class="pf-c-form__label">
+      <span class="pf-c-form__label-text">
+        Form label
+      </span>
+    </label>
+  </div>
+  <div class="pf-c-form__group-control">
+    <input class="pf-c-form-control"/>
+  </div>
+</div>\n</form>`}
+</CopyCodeBlock>
 
 ### Step 2. Apply a grid layout
 
@@ -134,7 +130,7 @@ Add one `<div>` wrapper around all five form components with the `pf-l-grid` lay
 
 ```noLive
 <div class="pf-l-grid">
-  // Five form components are here
+  /* Five form components are here */
 </div>
 ```
 
@@ -144,7 +140,7 @@ The wrapper should look like this:
 
 ```noLive
 <div class=”pf-l-grid__item”>
-  // code for individual form component
+  /* code for individual form component */
 </div>
 ```
 
@@ -166,6 +162,9 @@ Add `pf-m-6-col` to the first two grid items and add `pf-m-4-col` to the last th
 The first two grid items should look like: `<div class="pf-l-grid__item pf-m-6-col">`
 The second two grid items should look like: `<div class="pf-l-grid__item pf-m-4-col">`
 
-Compare your results.
-A fully constructed demo can be viewed and modified in <a href="https://codesandbox.io/s/html-fundamentals-final-o7g08o?file=/index.html" target="_blank">this codesandbox solution</a>. Compare your work with the solution.
+### Compare your results.
+
+A fully constructed demo can be viewed and modified in the provided codesandbox solution. Compare your work with the solution.
+
+<Button variant="primary" component="a" href="https://codesandbox.io/s/html-fundamentals-final-o7g08o?file=/index.html" target="_blank">Codesandbox solution - HTML fundamentals</Button>
 

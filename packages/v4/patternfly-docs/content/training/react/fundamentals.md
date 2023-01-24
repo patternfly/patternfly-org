@@ -4,6 +4,9 @@ section: training
 hideNavItem: true
 ---
 
+import { Button, ClipboardCopy } from '@patternfly/react-core';
+import { CopyCodeBlock } from '../copyCodeBlock/copyCodeBlock';
+
 # React Fundamentals
 PatternFly React is made up of components, layouts, and demos. The PatternFly React library provides a collection of React components used to build interfaces with consistent markup, styling, and behavior.
 
@@ -18,14 +21,27 @@ In this exercise, create a card to match design in figure 1 with an image, close
 **Figure 1**
 <img src="../img/basic-card.png" alt="Basic card layout" width="868" />
 
-The design in Figure 1 can be broken down into the card’s various subcomponents as demonstrated in Figure 2. And the React components used to construct this card can be arranged as demonstrated in Figure 3. You are also able to view this code and modify it yourself in [this codesandbox](https://codesandbox.io/s/flamboyant-orla-gi8ho1).
+The design in Figure 1 can be broken down into the card’s various subcomponents as demonstrated in Figure 2. And the React components used to construct this card can be arranged as demonstrated in the card structure code snippet below. You are also able to view this code and modify it yourself in the provided codesandbox.
+
+<Button variant="primary" component="a" href="https://codesandbox.io/s/flamboyant-orla-gi8ho1" target="_blank">Codesandbox - React fundamentals</Button>
+
 
 **Figure 2**
+
 <img src="../img/card-layout.png" alt="Basic card visually segmented into various subcomponents" width="868" />
 
-**Figure 3**
+**Card structure**
 
-<img src="../img/card-structure.png" alt="Representation of the React components used to construct the card" width="500" />
+<CopyCodeBlock>
+{`<Card>
+<CardHeader>
+  <CardHeaderMain></CardHeaderMain>
+  <CardActions></CardActions>
+</CardHeader>
+<CardTitle></CardTitle>
+<CardBody></CardBody>
+<CardFooter></CardFooter>\n</Card>`}
+</CopyCodeBlock>
 
 ## Step 2. Build out the `CardHeader`
 The `CardHeader` contains `CardHeaderMain` and `CardActions`.
@@ -34,28 +50,27 @@ The `CardHeader` contains `CardHeaderMain` and `CardActions`.
 Add the brand to the `CardHeaderMain` component. The brand component is used to place a product logotype on a screen. All that is needed is the source image or SVG and alt text. Here the PatternFly logo is used.
 Insert the brand inside of the `CardHeaderMain` component.
 
-```noLive
-<Brand
-  src="https://pf4.patternfly.org/assets/images/pf-logo-small.svg"
-  alt="Patternfly Logo"
-/>
-```
+<CopyCodeBlock>
+{`<Brand
+src="https://pf4.patternfly.org/assets/images/pf-logo-small.svg"
+alt="Patternfly Logo"\n/>`}
+</CopyCodeBlock>
 
 ### Step 2.2
 Add a close button to the `CardActions` component. Buttons communicate and trigger actions a user can take in an application or website. They come in several variations, such as primary, secondary, tertiary, danger, plain, link, and control.
 Add a button using the plain variant.
 
-```noLive 
-<Button variant="plain"> </Button>
-```
+<CopyCodeBlock>
+{`Button variant="plain"> </Button>`}
+</CopyCodeBlock>
 
 ### Step 2.3
 Add an icon inside the button. PatternFly React provides a variety of icons. They're easy to use and compile into SVG files. Use them inside buttons and other components.
 Add a TimesIcon so that the card can be closed.
 
-```noLive
-<TimesIcon />
-```
+<CopyCodeBlock>
+{`<TimesIcon />`}
+</CopyCodeBlock>
 
 ## Step 3. Build out the `CardTitle`
 
@@ -64,23 +79,21 @@ Add the text component with a variant inside of the `<CardTitle>`. The text comp
 Use the ‘p’ variation, which is specified with `component={TextVariants.p}`.
 Add the following code inside the `CardTitle` component:
 
-```noLive
-<Text component={TextVariants.p}>
-  PatternFly
-</Text>
-```
+<CopyCodeBlock>
+{`<Text component={TextVariants.p}>
+PatternFly\n</Text>`}
+</CopyCodeBlock>
 
 ### Step 3.2
 Add a subhead below the text added in step 3.1. `TextContent` is used to wrap `Text` components and provides text with extra spacing and styling.
 Add the following code inside of the Text component that is inside of the `CardTitle`:
 
-```noLive
- <TextContent>
-    <Text component={TextVariants.small}>
-      Provided by Red Hat
-    </Text>
- </TextContent>
-```
+<CopyCodeBlock>
+{`<TextContent>
+<Text component={TextVariants.small}>
+  Provided by Red Hat
+</Text>\n</TextContent>`}
+</CopyCodeBlock>
 
 ## Step 4. Add content to the `CardBody` component
 Any filler text can be added as a child of the `CardBody` component.
@@ -93,35 +106,37 @@ Add a split layout to the `CardFooter` component.
 PatternFly offers several layout options, including grid, bullseye, and split layouts.
 Use a split layout to separate a pair of buttons in the footer of the card. The split layout is designed to position items horizontally. Add a `<SplitItem>` component inside `<Split>` for each item in the layout.
 
-```noLive
-<Split>
-  <SplitItem>
-  </SplitItem>
-  <SplitItem>
-  </SplitItem>
-</Split>
-```
+<CopyCodeBlock>
+{`<Split>
+<SplitItem>
+</SplitItem>
+<SplitItem>
+</SplitItem>\n</Split>`}
+</CopyCodeBlock>
 
 ### Step 5.2
 Add a button to the first `SplitItem` component. Use the link variant of the button and add an `isInline` property so that the buttons are inline rather than block elements.
 
-```noLive
-<Button variant="link" isInline>Link to PatternFly</Button>
-```
+<CopyCodeBlock>
+{`<Button variant="link" isInline>Link to PatternFly</Button>`}
+</CopyCodeBlock>
 
 ### Step 5.3
 Add a button to the second `SplitItem` component. Use the same variant and properties as step 5.2.
 
-```noLive
-<Button variant="link" isInline>Link to home</Button>
-```
+<CopyCodeBlock>
+{`<Button variant="link" isInline>Link to home</Button>`}
+</CopyCodeBlock>
 
 ### Step 5.4
 Add a hasGutter property to the `Split` component to add more spacing between the buttons. The `Split` component should look like this with the hasGutter property set.
 
-```noLive
-<Split hasGutter>
-```
+<CopyCodeBlock>
+{`<Split hasGutter >`}
+</CopyCodeBlock>
 
 ## Compare your results
-A fully constructed card can be viewed and modified in [this codesandbox solution](https://codesandbox.io/s/react-fundamentals-start-forked-0krbsb?file=/src/App.js). Compare your work with the solution.
+
+A fully constructed card can be viewed and modified in the codesandbox solution. Compare your work with the solution.
+
+<Button variant="primary" component="a" href="https://codesandbox.io/s/react-fundamentals-start-forked-0krbsb?file=/src/App.js" target="_blank">Codesandbox solution - React fundamentals</Button>
