@@ -131,9 +131,7 @@ export class IconsTable extends React.Component {
       ? icons[ReactName]
       : null;
     // 2 unicodes are hard coded in icons.js, otherwise find in unicodes mapping from Core
-    const iconUnicode = Unicode
-      ? Unicode
-      : iconUnicodes.default[Name];
+    const iconUnicode = Unicode || iconUnicodes.default[Name] || '';
   
     return {
       removeBorder,
