@@ -64,7 +64,7 @@ export class IconRecommendations extends React.Component {
     sortBy: {}
   };
 
-  handleSearchChange = (checked, event) => {
+  handleSearchChange = (event, _checked) => {
     const searchValue = event.target.value;
     this.setState(() => ({
       searchValue
