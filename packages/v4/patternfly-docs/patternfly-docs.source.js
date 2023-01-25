@@ -38,11 +38,15 @@ module.exports = (sourceMD, sourceProps) => {
     .resolve('@patternfly/react-code-editor/package.json')
     .replace('package.json', 'src');
   const reactChartsPath = require
-      .resolve('@patternfly/react-charts/package.json')
-      .replace('package.json', 'src');
+    .resolve('@patternfly/react-charts/package.json')
+    .replace('package.json', 'src');
   const reactLogViewerPath = require
-      .resolve('@patternfly/react-log-viewer/package.json')
-      .replace('package.json', 'src');
+    .resolve('@patternfly/react-log-viewer/package.json')
+    .replace('package.json', 'src');
+
+  const logViewerContentBase = require
+    .resolve('@patternfly/react-log-viewer/package.json')
+    .replace('package.json', 'patternfly-docs/content/extensions/react-log-viewer');
 
   const reactPropsIgnore = ['**/*.test.tsx', '**/examples/*.tsx'];
   sourceProps(path.join(reactCorePath, '/**/*.tsx'), reactPropsIgnore);
@@ -69,8 +73,8 @@ module.exports = (sourceMD, sourceProps) => {
   sourceMD(path.join(reactCodeEditorPath, '/**/examples/*.md'), 'react');
 
   // React-log-viewer MD
-  sourceMD(path.join(reactLogViewerPath, '/**/examples/*.md'), 'react');
-  sourceMD(path.join(reactLogViewerPath, '/**/demos/*.md'), 'react-demos');
+  sourceMD(path.join(logViewerContentBase, '/**/examples/*.md'), 'react');
+  sourceMD(path.join(logViewerContentBase, '/**/demos/*.md'), 'react-demos');
 
   // React OUIA MD
   sourceMD(path.join(reactCorePath, '/**/helpers/OUIA/*.md'), 'react');
