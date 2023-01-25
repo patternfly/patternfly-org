@@ -59,4 +59,4 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 | `aria-expanded="[true or false]"` | `.pf-c-clipboard-copy__group .pf-c-button.pf-m-control` | Indicates whether the expandable toggle is expanded (true) or collapsed (false) to assistive technologies. **Required**. |
 | `aria-label="[text labeling the expandable toggle]"` | `.pf-c-clipboard-copy__group .pf-c-button.pf-m-control` | Adds an accessible name to the expandable toggle. **Required** if the clipboard copy can be expanded. |
 | `aria-label="[text labeling the text input]"` | `.pf-c-clipboard-copy__group .pf-c-form-control` | Adds an accessible name to the text input. **Required** if the clipboard copy has a text input. |
-| `readonly"` | `.pf-c-clipboard-copy__group .pf-c-form-control` | Adds visual styling and notifies users that a text input is not editable. **Required** if the text input is not editable. |
+| `readonly` | `.pf-c-clipboard-copy__group .pf-c-form-control` | Adds visual styling and notifies users that a text input is not editable. **Required** if the text input is not editable. |
