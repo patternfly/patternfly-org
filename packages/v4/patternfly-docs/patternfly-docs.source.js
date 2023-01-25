@@ -40,6 +40,8 @@ module.exports = (sourceMD, sourceProps) => {
   const reactChartsPath = require
     .resolve('@patternfly/react-charts/package.json')
     .replace('package.json', 'src');
+  //const reactDragDropPath = require.resolve('@patternfly/react-drag-drop/package.json').replace('package.json', 'src');
+
   const reactLogViewerPath = require
     .resolve('@patternfly/react-log-viewer/package.json')
     .replace('package.json', 'src');
@@ -54,11 +56,13 @@ module.exports = (sourceMD, sourceProps) => {
   sourceProps(path.join(reactCodeEditorPath, '/**/*.tsx'),reactPropsIgnore);
   sourceProps(path.join(reactChartsPath, '/**/*.tsx'),reactPropsIgnore);
   sourceProps(path.join(reactLogViewerPath, '/**/*.tsx'), reactPropsIgnore);
+  //sourceProps(path.join(reactDragDropPath, '/**/*.tsx'), reactPropsIgnore);
 
   // React MD
   sourceMD(path.join(reactCorePath, '/components/**/examples/*.md'), 'react');
   sourceMD(path.join(reactCorePath, '/layouts/**/examples/*.md'), 'react');
   sourceMD(path.join(reactCorePath, '/next/components/**/examples/*.md'), 'react-next');
+  sourceMD(path.join(reactCorePath, '/deprecated/components/**/examples/*.md'), 'react-deprecated');
   sourceMD(path.join(reactCorePath, '/**/demos/**/*.md'), 'react-demos');
 
   // React-table MD
@@ -72,6 +76,9 @@ module.exports = (sourceMD, sourceProps) => {
 
   // React-code-editor MD
   sourceMD(path.join(reactCodeEditorPath, '/**/examples/*.md'), 'react');
+
+  // Drag drop MD
+  //sourceMD(path.join(reactDragDropPath, '/**/examples/*.md'), 'react');
 
   // React-log-viewer MD
   sourceMD(path.join(logViewerContentBase, '/**/examples/*.md'), 'react');

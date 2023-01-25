@@ -38,6 +38,7 @@ const defaultImports = [
   'react',
   '@reach/router',
   '@patternfly/react-core/next',
+  '@patternfly/react-core/deprecated',
   '@patternfly/react-table/deprecated',
   'react-dropzone',
 ];
