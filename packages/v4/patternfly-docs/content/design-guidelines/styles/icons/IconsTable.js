@@ -45,7 +45,7 @@ export class IconsTable extends React.Component {
     tooltipContent: 'Copy'
   };
 
-  handleSearchChange = (checked, event) => {
+  handleSearchChange = (event, _checked) => {
     const searchValue = event.target.value;
     this.setState(() => ({
       searchValue
