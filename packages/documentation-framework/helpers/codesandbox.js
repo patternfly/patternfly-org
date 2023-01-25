@@ -132,30 +132,6 @@ function getReactParams(title, code, scope, lang, relativeImports, relPath, sour
     // Ignore
   }
 
-  /* 
-  -- Below code updates codesandbox code correctly to resolve relative image imports  --
-  -- to their location within package dependency, but images not displaying correctly --
-  -- within codesandbox preview - base64 encoding is either incorrect or too long to  --
-  -- pass correctly through API - received one 414 error. Base64 encoding image using --
-  -- online converter then copying that into <img> src attribute did display correctly. --
-
-  // Resolve relative image imports to their absolute package path
-  const imgImportRegex = /(?:import [^'"`]*['"`])(.*\.(?:png|jpe?g|webp|gif|svg))['"]/gm;
-  let imgImportMatch;
-  while ((imgImportMatch = imgImportRegex.exec(code))) {
-    const relImgPath = imgImportMatch[1];
-    // node_modules/@patternfly/react-core/src/demos/Card/Card.md => @patternfly/react-core/src/demos/Card
-    const imgImportPkgPath = path.dirname(relPath).split('node_modules/')[1];
-    // convert relative image import to absolute path based on imgImportPkgPath
-    let absImgPath = path.resolve(imgImportPkgPath, relImgPath);
-    if (absImgPath[0] === '/') {
-      absImgPath = absImgPath.substring(1);
-    }
-    // import pfIcon from './pf-logo-small.svg'; => import pfIcon from '@patternfly/react-core/src/demos/Card/pf-logo-small.svg';
-    code = code.replace(relImgPath, absImgPath);
-  }
-  */
-
   // Point to sourcelink for @patternfly images
   if (relPath.includes('@patternfly')) {
     const imgImportRegex = /(import \W*(\w*)\W*[^'"`]*['"`](.*\.(?:png|jpe?g|webp|gif|svg))['"])/gm;

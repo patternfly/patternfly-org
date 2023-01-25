@@ -83,8 +83,9 @@ export const Example = ({
   // Map of relative imports matched to their npm package import path (passed to Codesandbox)
   relativeImports,
   // md file location in node_modules, used to resolve relative import paths in examples
-  relPath,
-  sourceLink
+  relPath = '',
+  // absolute url to hosted file
+  sourceLink = ''
 }) => {
   if (isFullscreenPreview) {
     isFullscreen = false;
