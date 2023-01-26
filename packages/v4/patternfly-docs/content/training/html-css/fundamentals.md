@@ -3,9 +3,10 @@ id: HTML fundamentals training
 section: training
 hideNavItem: true
 ---
-import { Button, ClipboardCopy } from '@patternfly/react-core';
+import { Card, CardBody, ClipboardCopy, Divider, PageSection } from '@patternfly/react-core';
 import { CopyCodeBlock } from '../copyCodeBlock/copyCodeBlock';
 
+<PageSection variant="light">
 # Fundamentals
 
 PatternFly Core is based on the principles of <a href="http://bradfrost.com/blog/post/atomic-web-design/" target="_blank">Atomic design</a> and <a href="http://getbem.com/introduction/" target="_blank">BEM</a> (Block, Element, Modifier).
@@ -19,8 +20,11 @@ PatternFly consists of isolated and modular structures that fall into three cate
 ## Components
 In PatternFly, components which cannot be broken down into smaller parts are known as the basic building blocks of user interfaces. Examples include the button, label and badge components. A codesandbox link has been provided to experiment with and follow the proceeding steps.
 
-<Button variant="primary" component="a" href="https://codesandbox.io/s/html-fundamentals-start-hy2erg?file=/index.html" target="_blank">Codesandbox - HTML fundamentals</Button>
-
+<Card style={{maxWidth: "400px"}} component="div" isSelectableRaised onClick={() => window.open("https://codesandbox.io/s/html-fundamentals-start-hy2erg?file=/index.html", '_blank')}>
+  <CardBody>Codesandbox - HTML fundamentals</CardBody>
+</Card>
+</PageSection>
+<PageSection>
 ### Step 1. Add a button component.
 In the `<body>` of the index.html file, add a button element, and apply the PatternFly styles to it so that it is a PatternFly button by adding the class `pf-c-button`. Apply the ‘primary’ styles to the button to make it a bright blue color by adding the `pf-m-primary` class to the button as well.
 
@@ -69,12 +73,14 @@ Add the badge inside the chip. To do this, add this block of code between pf-c-c
 The resulting Chip should match the following image.
 
 <img src="../img/chip.png" alt="Example of a rendered and styled chip component" width="150" />
-
+</PageSection>
+<Divider />
+<PageSection>
 ## Layouts
-### Step 3. Add a bullseye layout
+
 In PatternFly, layouts allow for organizing and grouping elements. This tutorial covers just one of the seven layouts.
 
-#### Step 3.1 
+### Step 1 
 Copy code into the `<body>` of the `index.html` file.
 
 <CopyCodeBlock>
@@ -92,13 +98,15 @@ Copy code into the `<body>` of the `index.html` file.
 </div>\n</div>`}
 </CopyCodeBlock>
 
-#### Step 3.2 
+### Step 2 
 Add the `pf-l-bullseye` class to the card. This will center the card horizontally and vertically on the page.
 Find the outermost `<div>` wrapper for the card and add the class `pf-l-bullseye`.
 It should look like: `<div class="pf-l-bullseye">`
 
 **Note:** It’s important to follow the documentation for layouts because it demonstrates where to add the layout class. The <a href="/layouts/bullseye/html" target="_blank">documentation for bullseye</a> specifies to add the class `pf-l-bullseye` to the parent container of its child.
-
+</PageSection>
+<Divider />
+<PageSection>
 ## Demos
 Demos show how PatternFly’s components and layouts are put together to build more complex structures. Demos have no additional styling; they are strictly made from components and layouts. If styling is needed for a certain demo, then instead create new components or layouts, or variants of the components or layouts.
 
@@ -161,10 +169,14 @@ Add `pf-m-6-col` to the first two grid items and add `pf-m-4-col` to the last th
 
 The first two grid items should look like: `<div class="pf-l-grid__item pf-m-6-col">`
 The second two grid items should look like: `<div class="pf-l-grid__item pf-m-4-col">`
-
-### Compare your results.
+</PageSection>
+<Divider />
+<PageSection>
+## Compare your results.
 
 A fully constructed demo can be viewed and modified in the provided codesandbox solution. Compare your work with the solution.
 
-<Button variant="primary" component="a" href="https://codesandbox.io/s/html-fundamentals-final-o7g08o?file=/index.html" target="_blank">Codesandbox solution - HTML fundamentals</Button>
-
+<Card style={{maxWidth: "400px"}} component="div" isSelectableRaised onClick={() => window.open("https://codesandbox.io/s/html-fundamentals-final-o7g08o?file=/index.html", '_blank')}>
+  <CardBody>Codesandbox solution - HTML fundamentals</CardBody>
+</Card>
+</PageSection>
