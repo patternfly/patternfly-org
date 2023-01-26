@@ -4,6 +4,7 @@ section: components
 ---
 
 import { Checkbox, List, ListItem } from '@patternfly/react-core';
+import { Link } from '@patternfly/documentation-framework/components/link/link';
 
 ## Accessibility
 
@@ -19,7 +20,7 @@ At a minimum, a modal should meet the following criteria:
 
 <List isPlain>
   <ListItem>
-    <Checkbox id="modal-a11y-checkbox-1" label="Any content that is on the page, but outside of the modal, cannot be interacted with or navigated to while the modal is open." description={<span>Learn more about <a href="/v4/accessibility/product-development-guide/#trapping-focus">trapping focus</a> in our product development guide for accessibility.</span>} />
+    <Checkbox id="modal-a11y-checkbox-1" label="Any content that is on the page, but outside of the modal, cannot be interacted with or navigated to while the modal is open." description={<span>Learn more about <Link href="/accessibility/product-development-guide/#trapping-focus">trapping focus</Link> in our product development guide for accessibility.</span>} />
   </ListItem>
   <ListItem>
     <Checkbox id="modal-a11y-checkbox-2" label="Standard keyboard navigation can be used to navigate between the contents of a modal." description={<span><kbd>Tab</kbd> navigates to the next focusable element inside a modal, and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous focusable element.</span>} />
