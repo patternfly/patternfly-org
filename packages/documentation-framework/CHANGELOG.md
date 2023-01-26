@@ -3,6 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.4.9 (2023-01-25)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.4.8 (2023-01-24)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.4.7 (2023-01-23)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.4.6 (2023-01-23)
+
+
+### Bug Fixes
+
+* **Alert:** update alert a11y to address title elements ([#3348](https://github.com/patternfly/patternfly-org/issues/3348)) ([525c86f](https://github.com/patternfly/patternfly-org/commit/525c86fe90372351f3de801fca91debe54fe03f6))
+
+
+
+
+
+## 1.4.5 (2023-01-23)
+
+
+### Bug Fixes
+
+* **slack-link:** update slack link in footer and community page ([#3368](https://github.com/patternfly/patternfly-org/issues/3368)) ([6f10f1e](https://github.com/patternfly/patternfly-org/commit/6f10f1ed52841d0f8dbfb96dfcecc6efcbd3ae0d))
+
+
+
+
+
+## 1.4.4 (2023-01-20)
+
+
+### Bug Fixes
+
+* **react-log-viewer:**  Added react log viewer extension updates ([#3365](https://github.com/patternfly/patternfly-org/issues/3365)) ([e747760](https://github.com/patternfly/patternfly-org/commit/e747760209e47a20d8465154ccca459bb870d8e8))
+
+
+
+
+
 ## 1.4.3 (2023-01-19)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
