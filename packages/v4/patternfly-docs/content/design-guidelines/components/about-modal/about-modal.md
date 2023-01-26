@@ -31,3 +31,9 @@ About modals are clicked into through a users interaction with a button, link, o
 Provide access to an about modal using a help icon in the application masthead. Clicking the help icon will launch a dropdown menu. The help menu should always include an option labeled "About" that launches the about modal.
 
 <img src="./img/about-dropdown.png" alt="About modal dropdown" />
+
+testing addition
+
+second additions
+
+other additions
