@@ -28,9 +28,14 @@ See the [latest release notes](https://www.patternfly.org/v4/developer-resources
 
 ## What we’re working on...
 
-### 2023.01 (January 27)
+This will be the last planned release for PatternFly 4. A major new release  (PatternFly 5) is slated for June 2023. This will include many new features, including:
 
+* An updated CSS variable system to provide official support for dark theme and additional themes moving forward.
 
-Note that this will be the last planned release for PatternFly 4. After January the team will shift focus to delivering a new PatternFly 5 release slated for June 2023.
+* React 18 support.
 
-For a complete roadmap showing all items planned in future releases, see our [PatternFly Feature Roadmap](https://github.com/orgs/patternfly/projects/4?fullscreen=true) project board.
+* Improvements to existing components to aid make them more flexible and efficient to work with.
+
+* Website improvements to make it easier to find what you are looking for, preview components in light or dark theme, and expose documentation for PatternFly extensions.
+
+Codemods, documentation, and developer support will be available to make it easy to migrate from PatternFly 4.
