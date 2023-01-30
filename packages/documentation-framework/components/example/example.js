@@ -112,8 +112,7 @@ export const Example = ({
     ...reactCoreModule,
     ...reactTableModule,
     ...(source === 'react-next' ? reactCoreNextModule : {}),
-    ...(source === 'react-deprecated' ? reactCoreDeprecatedModule : {}),
-    ...(source === 'react-deprecated' ? reactTableDeprecatedModule : {})
+    ...(source === 'react-deprecated' ? {...reactCoreDeprecatedModule, ...reactTableDeprecatedModule} : {})
   };
 
   let livePreview = null;
