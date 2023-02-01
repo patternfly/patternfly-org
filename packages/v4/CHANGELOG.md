@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.15.13 (2023-02-01)
+
+
+### Bug Fixes
+
+* **docs-framework:** skip topology in prerendering step ([#3389](https://github.com/patternfly/patternfly-org/issues/3389)) ([e65bffd](https://github.com/patternfly/patternfly-org/commit/e65bffd9bd7fc4655459b08e40e1edb8c9c69df1))
+
+
+
+
+
 ## 4.15.12 (2023-02-01)
 
 **Note:** Version bump only for package patternfly-org-4
