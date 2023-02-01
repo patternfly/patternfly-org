@@ -20,6 +20,7 @@
     "@patternfly/documentation-framework": "^1.4.11",
     "@patternfly/quickstarts": "^2.2.4",
     "@patternfly/react-catalog-view-extension": "4.95.2",
+    "@patternfly/react-topology": "^4.91.26",
     "@patternfly/react-docs": "5.103.64",
     "@patternfly/react-log-viewer": "4.87.100",
     "react": "^16.8.0 || ^17.0.0",
