@@ -22,7 +22,7 @@
     "@patternfly/react-catalog-view-extension": "4.95.2",
     "@patternfly/react-docs": "5.103.66",
     "@patternfly/react-log-viewer": "4.87.100",
-    "@patternfly/react-console": "4.94.0",
+    "@patternfly/react-console": "4.95.1",
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0"
   },
