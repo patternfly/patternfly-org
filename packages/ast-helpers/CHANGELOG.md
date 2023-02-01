@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.11 (2023-02-01)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.9.10 (2023-01-26)
+
+
+### Bug Fixes
+
+* update codesandbox dependencies per example import ([#3367](https://github.com/patternfly/patternfly-org/issues/3367)) ([31b75a3](https://github.com/patternfly/patternfly-org/commit/31b75a346dd0ba03bb697d9917a729a32dad76be))
+
+
+
+
+
 ## 0.9.9 (2023-01-25)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
