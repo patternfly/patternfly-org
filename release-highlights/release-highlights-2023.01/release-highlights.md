@@ -3,23 +3,21 @@
 ----------------------------------------------------------
 ## New features and enhancements
 
-### [Bulk selection - display loading state]() 
+### [Processor icon](https://www.patternfly.org/v4/guidelines/icons) 
 
-[add image]
-
-Adds an inline spinner to the split button used for bulk selection to provide better feedback when bulk select actions will take time to complete.
-
-### [Processor icon]() 
-
-[add image]
+![data-processor icon](./img/processor-icon.png)
 
 Added a new icon named `pf-icon-data-processor` to represent a processor object.
 
-### [Dual list selector - empty state]()
+### [Dual list selector - empty state](https://www.patternfly.org/v4/components/dual-list-selector#composable-structure)
 
-[add image]
+![dual list selector with empty state](./img/dual-list-empty-state.png)
 
 A "no results" empty state message is added to the composable Dual list selector when a filter is applied and all the options are filtered out.
+
+### [Bulk selection - display loading state](https://www.patternfly.org/v4/components/dropdown#split-button-progress-checkbox) 
+
+Adds an inline spinner to the split button used for bulk selection to provide better feedback when bulk select actions will take time to complete.
 
 
 See the [latest release notes](https://www.patternfly.org/v4/developer-resources/release-notes) for a more detailed list of changes.
