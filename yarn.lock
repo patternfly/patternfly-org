@@ -2453,10 +2453,10 @@
     react-dropzone "9.0.0"
     tslib "^2.0.0"
 
-"@patternfly/react-console@4.95.1":
-  version "4.95.1"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-console/-/react-console-4.95.1.tgz#83ea3d1cff45a77fffac6c5059b0c95e600a6339"
-  integrity sha512-xGFXBSB5xsvxsN9T/2S8AdIuwX34pRUfCWz5ysPCWHvZWhDrDfuC+tsNg9JTQ3BpB5tOtkAdXhiU30Ou6Y0rsA==
+"@patternfly/react-console@^4.95.2":
+  version "4.95.2"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-console/-/react-console-4.95.2.tgz#c1bf0e1c2b84c4b54478b78334f1ba6e78b0da9b"
+  integrity sha512-NFO9TocSsWPkFCRXNE59G6QNhtEzxXylUnoyzLKEmo3o2Icl2YXCU/cFweTmORLaLKL2pbvg1n76Jkd5gmBfAA==
   dependencies:
     "@novnc/novnc" "^1.3.0"
     "@patternfly/patternfly" "4.224.1"
