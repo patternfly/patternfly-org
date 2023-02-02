@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.15.16 (2023-02-02)
+
+
+### Bug Fixes
+
+* **docs:** update screenshots ([#3391](https://github.com/patternfly/patternfly-org/issues/3391)) ([df2070f](https://github.com/patternfly/patternfly-org/commit/df2070f08672180a414566fa8c3a5b4452ff1417))
+
+
+
+
+
 ## 4.15.15 (2023-02-02)
 
 
