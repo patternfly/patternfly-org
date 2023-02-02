@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.15 (2023-02-02)
+
+
+### Bug Fixes
+
+* **topology-docs:** move them to the top level of the nav ([#3390](https://github.com/patternfly/patternfly-org/issues/3390)) ([7430690](https://github.com/patternfly/patternfly-org/commit/7430690ff377a09c297c24f9d78789fcc754f484))
+
+
+
+
+
 ## 0.9.14 (2023-02-02)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
