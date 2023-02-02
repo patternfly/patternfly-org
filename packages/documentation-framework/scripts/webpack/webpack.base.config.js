@@ -118,8 +118,7 @@ module.exports = (_env, argv) => {
       alias: {
         'client-styles': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.css.js'),
         './routes-client': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.routes.js'),
-        './routes-generated': path.resolve(process.cwd(), 'patternfly-docs/generated/index.js'),
-        '@patternfly/react-core/next': '@patternfly/react-core/dist/esm/next/index.js' // Can remove when webpack is updated to v5
+        './routes-generated': path.resolve(process.cwd(), 'patternfly-docs/generated/index.js')
       },
       modules: [
         'node_modules',

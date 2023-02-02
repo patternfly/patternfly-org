@@ -40,6 +40,7 @@ module.exports = (sourceMD, sourceProps) => {
   const reactChartsPath = require
     .resolve('@patternfly/react-charts/package.json')
     .replace('package.json', 'src');
+
   const reactLogViewerPath = require
     .resolve('@patternfly/react-log-viewer/package.json')
     .replace('package.json', 'src');
@@ -63,12 +64,14 @@ module.exports = (sourceMD, sourceProps) => {
   sourceMD(path.join(reactCorePath, '/components/**/examples/*.md'), 'react');
   sourceMD(path.join(reactCorePath, '/layouts/**/examples/*.md'), 'react');
   sourceMD(path.join(reactCorePath, '/next/components/**/examples/*.md'), 'react-next');
+  sourceMD(path.join(reactCorePath, '/deprecated/components/**/examples/*.md'), 'react-deprecated');
   sourceMD(path.join(reactCorePath, '/**/demos/**/*.md'), 'react-demos');
 
   // React-table MD
-  sourceMD(path.join(reactTablePath, '/**/TableComposable/examples/*.md'), 'react-composable');
-  sourceMD(path.join(reactTablePath, '/**/demos/*.md'), 'react-demos');
+  sourceMD(path.join(reactTablePath, '/**/TableComposable/examples/*.md'), 'react');
   sourceMD(path.join(reactTablePath, '/**/Table/examples/*.md'), 'react-legacy');
+  sourceMD(path.join(reactTablePath, '/deprecated/components/**/examples/*.md'), 'react-deprecated');
+  sourceMD(path.join(reactTablePath, '/**/demos/*.md'), 'react-demos');
 
   // Charts MD (no demos yet)
   sourceMD(path.join(reactChartsPath, '/**/examples/*.md'), 'react');
