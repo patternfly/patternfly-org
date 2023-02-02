@@ -32,7 +32,7 @@ This will be the last planned release for PatternFly 4. A major new release  (Pa
 
 * React 18 support.
 
-* Improvements to existing components to aid make them more flexible and efficient to work with.
+* Improvements to existing components to make them more flexible and efficient to work with.
 
 * Website improvements to make it easier to find what you are looking for, preview components in light or dark theme, and expose documentation for PatternFly extensions.
 
