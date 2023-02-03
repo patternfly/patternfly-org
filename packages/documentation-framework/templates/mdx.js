@@ -121,7 +121,15 @@ export const MDXTemplate = ({
   id,
   componentsData
 }) => {
-  const sourceKeys = sources.map(v => v.source);
+  // Build obj mapping source names to text displayed on tabs
+  const tabNames = sources.reduce((acc, curSrc) => {
+    const { source, tabText } = curSrc;
+    // use tabText for tab name if present, otherwise default to source
+    let tabName = tabText || capitalize(source.replace('html', 'HTML').replace(/-/g, ' '));
+    acc[source] = tabName;
+    return acc;
+  }, {});
+  const sourceKeys = Object.keys(tabNames);
   const isSinglePage = sourceKeys.length === 1;
 
   let isDevResources, isComponent, isExtension, isChart, isDemo, isLayout, isUtility;
@@ -223,7 +231,7 @@ export const MDXTemplate = ({
                       onClick={() => trackEvent('tab_click', 'click_event', source.toUpperCase())}
                     >
                       <Link className="pf-c-tabs__link" to={`${path}${index === 0 ? '' : '/' + source}`}>
-                        {capitalize(source.replace('html', 'HTML').replace(/-/g, ' '))}
+                        {tabNames[source]}
                       </Link>
                     </li>
                   ))}

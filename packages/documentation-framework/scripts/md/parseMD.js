@@ -82,6 +82,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
         section: frontmatter.section || '',
         subsection: frontmatter.subsection || '',
         source,
+        tabText: frontmatter.tabText || null,
         slug,
         sourceLink: frontmatter.sourceLink || `https://github.com/patternfly/${
           sourceRepo}/blob/main/${
@@ -263,6 +264,7 @@ function sourceMDFile(file, source, buildMode) {
       section: pageData.section,
       subsection: pageData.subsection,
       source: pageData.source,
+      tabText: pageData.tabText,
       ...(pageData.katacodaLayout && { katacodaLayout: pageData.katacodaLayout }),
       ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem })
     };
