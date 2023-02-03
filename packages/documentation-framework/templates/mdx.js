@@ -123,10 +123,10 @@ export const MDXTemplate = ({
 }) => {
   // Build obj mapping source names to text displayed on tabs
   const tabNames = sources.reduce((acc, curSrc) => {
-    const { source, tabText } = curSrc;
-    // use tabText for tab name if present, otherwise default to source
-    let tabName = tabText || capitalize(source.replace('html', 'HTML').replace(/-/g, ' '));
-    acc[source] = tabName;
+    const { source, tabName } = curSrc;
+    // use tabName for tab name if present, otherwise default to source
+    let tabLinkText = tabName || capitalize(source.replace('html', 'HTML').replace(/-/g, ' '));
+    acc[source] = tabLinkText;
     return acc;
   }, {});
   const sourceKeys = Object.keys(tabNames);
