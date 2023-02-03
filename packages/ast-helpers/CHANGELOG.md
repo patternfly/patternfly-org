@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.10.0 (2023-02-02)
+
+
+### Features
+
+* add deprecated subpaths ([#3291](https://github.com/patternfly/patternfly-org/issues/3291)) ([b4324a7](https://github.com/patternfly/patternfly-org/commit/b4324a7ef10123a37ad8334e3b3da8be76fc35dc))
+
+
+
+
+
 ## 0.9.16 (2023-02-02)
 
 

@@ -3,7 +3,9 @@ import { useLocation } from '@reach/router';
 import { Badge, CodeBlock, CodeBlockCode, debounce, Switch } from '@patternfly/react-core';
 import * as reactCoreModule from '@patternfly/react-core';
 import * as reactCoreNextModule from '@patternfly/react-core/next';
+import * as reactCoreDeprecatedModule from '@patternfly/react-core/deprecated';
 import * as reactTableModule from '@patternfly/react-table';
+import * as reactTableDeprecatedModule from '@patternfly/react-table/deprecated';
 import { css } from '@patternfly/react-styles';
 import { getParameters } from 'codesandbox/lib/api/define';
 import { ExampleToolbar } from './exampleToolbar';
@@ -109,7 +111,8 @@ export const Example = ({
     // These 2 are in the bundle anyways for the site since we dogfood
     ...reactCoreModule,
     ...reactTableModule,
-    ...(source === 'react-next' ? reactCoreNextModule : {})
+    ...(source === 'react-next' ? reactCoreNextModule : {}),
+    ...(source === 'react-deprecated' ? {...reactCoreDeprecatedModule, ...reactTableDeprecatedModule} : {})
   };
 
   let livePreview = null;
