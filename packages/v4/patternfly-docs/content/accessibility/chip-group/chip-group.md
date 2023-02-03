@@ -40,8 +40,8 @@ The following React props have been provided for more fine-tuned control over ac
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `aria-label="[text describing the chip group]"` | `ChipGroup` | Adds an accessible name to the chip group. **Required** when the chip group does not have a visible category name. |
-| `closeBtnAriaLabel="[text describing the close button]"` | `ChipGroup` | Adds an accessible name to the chip group's close button. **Required**. <br/><br/> When passing in a custom value, you do not need to repeat the chip group's category name and should only include a verb such as "close" or "remove". |
+| `aria-label="[text that labels the chip group]"` | `ChipGroup` | Adds an accessible name to the chip group. **Required** when the chip group does not have a visible category name. |
+| `closeBtnAriaLabel="[text that labels the chip group close button]"` | `ChipGroup` | Adds an accessible name to the chip group's close button. **Required**. <br/><br/> When passing in a custom value, you do not need to repeat the chip group's category name and should only include a verb such as "close" or "remove". |
 
 ## HTML/CSS customization
 
@@ -49,7 +49,8 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `aria-label="[text describing the close button]"` | `.pf-c-chip-group__close > button` | Adds an accessible name to the chip group's close button. **Required** when the close button does not contain any visible text. |
+| `aria-label="[text that labels the chip group]"` or `aria-labelledby="[id of the element that labels the chip group]"` | `.pf-c-chip-group__list` | Adds an accessible name to the chip group. **Required** when the chip group does not have a visible category name.  |
+| `aria-label="[text that labels the chip group close button]"` | `.pf-c-chip-group__close > button` | Adds an accessible name to the chip group's close button. **Required** when the close button does not contain any visible text. |
 | `aria-labelledby="[space separated list of the chip group's and close button's ID]"` | `.pf-c-chip-group__close > button` | Combines the accessible name of the close button and the chip group's category name, providing more context to users regarding which chip group will be closed. **Required**. |
 | `id` | `.pf-c-chip-group__close > button` | The value of this attribute is passed into the close button's `aria-labelledby` attribute. **Required**. |
 | `aria-hidden="true"` | `.pf-c-chip-group__close > button > i` | Removes the close button icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required** if the close button contains an icon. |

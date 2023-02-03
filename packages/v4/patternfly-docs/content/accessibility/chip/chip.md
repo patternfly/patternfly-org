@@ -40,7 +40,7 @@ The following React props have been provided for more fine-tuned control over ac
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `closeBtnAriaLabel="[text describing the close button]"` | `Chip` | Adds an accessible name to the chip's close button. **Required**. <br/><br/> When passing in a custom value, you do not need to repeat the chip's content and should only include a verb such as "close" or "remove". |
+| `closeBtnAriaLabel="[text that labels the chip close button]"` | `Chip` | Adds an accessible name to the chip's close button. **Required**. <br/><br/> When passing in a custom value, you do not need to repeat the chip's content and should only include a verb such as "close" or "remove". |
 | `component="[element tag]"` | `Chip` | Sets the base element for the chip (`div` element by default). <br/><br/> When using a chip as an overflow chip, or in any manner where clicking the chip itself causes an action to trigger, the value passed in should be "button" to provide the built-in interaction necessary for improved accessibility. |
 
 ## HTML/CSS customization
@@ -50,7 +50,7 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
 | `id` | `.pf-c-chip` | The value of this attribute is passed into the close button's `aria-labelledby` attribute. **Required** when a chip has a close button. |
-| `aria-label="[text describing the close button]"` | `.pf-c-chip > button` | Adds an accessible name to the chip's close button. **Required** when the close button does not contain any visible text. |
+| `aria-label="[text that labels the chip close button]"` | `.pf-c-chip > button` | Adds an accessible name to the chip's close button. **Required** when the close button does not contain any visible text. |
 | `aria-labelledby="[space separated list of the chip's and close button's ID]"` | `.pf-c-chip > button` | Combines the accessible name of the close button and the chip content, providing more context to users regarding which chip will be closed. **Required**. |
 | `id` | `.pf-c-chip > button` | The value of this attribute is passed into the close button's `aria-labelledby` attribute. **Required**. |
 | `aria-hidden="true"` | `.pf-c-chip > button > i` | Removes the close button icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required** if the close button contains an icon. |

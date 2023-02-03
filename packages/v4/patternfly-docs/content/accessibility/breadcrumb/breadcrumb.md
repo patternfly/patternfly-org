@@ -55,7 +55,7 @@ The following React props have been provided for more fine-tuned control over ac
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `aria-label="[text describing the breadcrumb]"` | `Breadcrumb` | Adds an accessible name to the breadcrumb's internal `nav` element. |
+| `aria-label="[text that labels the breadcrumb]"` | `Breadcrumb` | Adds an accessible name to the breadcrumb's internal `nav` element. |
 | `isActive` | `BreadcrumbItem` | Sets the `aria-current` attribute on the breadcrumb item, which indicates the current page to users of assistive technologies. |
 
 ## HTML/CSS customization
@@ -64,6 +64,6 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `aria-label="[text describing the breadcrumb]"` | `.pf-c-breadcrumb` | Adds an accessible name to the breadcrumb's internal `nav` element. |
+| `aria-label="[text that labels the breadcrumb]"` | `.pf-c-breadcrumb` | Adds an accessible name to the breadcrumb's internal `nav` element. |
 | `aria-current="page"` | `.pf-c-breadcrumb__item`, `.pf-c-breadcrumb__link` | Indicates the current page to users of assistive technologies. |
 

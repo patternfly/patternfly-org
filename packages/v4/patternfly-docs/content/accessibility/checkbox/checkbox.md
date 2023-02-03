@@ -46,11 +46,11 @@ The following React props have been provided for more fine-tuned control over ac
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `aria-label="[text describing the checkbox]"` | `Checkbox` | Adds an accessible name to the checkbox when there is no visible text label. **Required** when there is no visible text label. |
+| `aria-label="[text that labels the checkbox]"` | `Checkbox` | Adds an accessible name to the checkbox when there is no visible text label. **Required** when there is no visible text label. If there is already a visible text label via the `label` prop, this prop should not be passed in. |
 | `id` | `Checkbox` | Links the checkbox input with its text label, which allows clicking the label to toggle the checkbox. The linked label text is also used as the accessible name of the checkbox. **Required**. |
 | `isRequired` | `Checkbox` | Adds the `required` attribute to the checkbox and adds visual styling to notify users the checkbox must be checked. **Required** when users must check the checkbox. |
 | `isValid={[true or false]}` | `Checkbox` | Sets the `aria-invalid` attribute, notifying users of assistive technologies whether the checkbox value is invalid. |
-| `label="[text describing the checkbox]"` | `Checkbox` | Adds a visible text label for the checkbox, which also acts as its accessible name. |
+| `label="[text that labels the checkbox]"` | `Checkbox` | Adds a visible text label for the checkbox, which also acts as its accessible name. |
 
 ## HTML/CSS customization
 
@@ -59,7 +59,8 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
 | `aria-invalid={[true or false]}` | `.pf-c-check__input` | Notifies users of assistive technologies whether the checkbox value is invalid. |
-| `aria-label="[text describing the checkbox]"` | `.pf-c-check__input` | Adds an accessible name to the checkbox when there is no visible text label. **Required** when there is no visible text label. |
+| `aria-label="[text that labels the checkbox]"` | `.pf-c-check__input` | Adds an accessible name to the checkbox when there is no visible text label. **Required** when there is no visible text label. If there is already a visible text label via the `label` element, this attribute should not be passed in.|
 | `id` | `.pf-c-check__input` | Links the checkbox input with its text label, which allows clicking the label to toggle the checkbox. The linked label text is also used as the accessible name of the checkbox. **Required**. |
-| `label="[text describing the checkbox]"` | `label.pf-c-check__label > span.pf-c-check__label-required` | Adds styling to visually notify users that the checkbox is required and to differentiate the content from the checkbox label. Usually an asterisk `*` is used to visually convey that an input is required. **Required** when users must check the checkbox. |
 | `required` | `.pf-c-check__input` | Notifies users that the checkbox must be checked. **Required** when users must check the checkbox. |
+| `for="[id of the associated checkbox]"` | `label` | Links the `label` element to the checkbox, providing a larger clickable area to toggle the checkbox. **Required** if the checkbox is not already wrapped inside the `label` element. |
+|`.pf-c-check__label-required` | `label > span` | Adds styling to visually notify users that the checkbox is required and to differentiate the content from the checkbox label. Usually an asterisk `*` is used to visually convey that an input is required. **Required** when users must check the checkbox. |
