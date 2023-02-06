@@ -35,16 +35,23 @@ Use success controls to indicate valid user input for fields that require a spec
 Input fields should be grayed out when the user cannot perform actions. Gray-out controls indicate that a field is either temporarily disabled, or permanently read-only.
 
 #### Disable controls
-Disable controls indicate dependency and can be used to guide the user in a sequential workflow. In the example below, the field *Target namespace* is disabled, because the user must select a *Target provider* first. The component is disabled until the user makes the first selection, because namespace options are **dependent** on the selected provider.
-
-Use the disabled state when input is required in **all** use cases, but content depends on prior actions. Alternatively, if a previous action eliminates the need for an input entirely, the component should be hidden rather than disabled.
+Disable controls indicate dependency and can be used to guide the user in a sequential workflow. In the example below, the field Target namespace is disabled, because the user must select a Target provider first. The component is disabled until the user makes the first selection, because namespace options are dependent on the selected provider. Disabled controls should be used over read only controls in scenarios where there is a way for a field to become enabled, for example, in the case of user access/permission restrictions.
 
 <img src="./img/disable_example.png" alt="Disabled input example" width="762px"/>
 
 #### Read only controls
-Use the read only state when an input will *never* be editable. This state differs slightly from the disabled state, as shown below.
 
-<img src="./img/greyedout.png" alt="Gray-out input" width="644px"/>
+Use the read only state when an input will *never* be editable. This state differs slightly from the disabled state in that read-only is never changeable. 
+
+#### Plain variation
+Use when you don't have the need to copy to clipboard.
+
+<img src="./img/greyedout-plain.png" alt="Plain input" width="644px"/>
+
+#### Boxed variation
+Use when you have a need to copy to clipboard.
+
+<img src="./img/greyedout-boxed.png" alt="Boxed input" width="644px"/>
 
 ### Custom icons
 Icons can be included within form fields to indicate the type of input required. The most common example is the Search field, shown below. All icons should be right-aligned within the input component.
