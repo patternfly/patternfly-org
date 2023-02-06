@@ -49,7 +49,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
         file.fail('id attribute is required in frontmatter for PatternFly docs');
       }
       source = frontmatter.source || source;
-      const slug = makeSlug(source, frontmatter.section, frontmatter.id);
+      const slug = makeSlug(source, frontmatter.section, frontmatter.id, false, frontmatter.subsection);
       outPath = path.join(outputBase, `${slug}.js`);
 
       let sourceRepo = 'patternfly-org';
@@ -61,7 +61,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
       }
 
       const propComponents = [...new Set(frontmatter.propComponents || [])].reduce((acc, componentName) => {
-        const name = getTsDocName(componentName, source === 'react-next');
+        const name = getTsDocName(componentName, getTsDocNameVariant(source));
 
         if (tsDocs[name]) {
           acc.push(tsDocs[name]);
@@ -80,19 +80,21 @@ function toReactComponent(mdFilePath, source, buildMode) {
       pageData = {
         id: frontmatter.id,
         section: frontmatter.section || '',
+        subsection: frontmatter.subsection || '',
         source,
         slug,
-        sourceLink: `https://github.com/patternfly/${
+        sourceLink: frontmatter.sourceLink || `https://github.com/patternfly/${
           sourceRepo}/blob/main/${
           normalizedPath}`,
         hideTOC: frontmatter.hideTOC || false,
+        relPath
       };
       // Temporarily override section for Demo tabs until we port this upstream
       if (frontmatter.section === 'demos' && routes[slug.replace('demos', 'components')]) {
         // Temporarily override section until https://github.com/patternfly/patternfly-react/pull/4862 is in react-docs
         pageData.section = 'components';
         pageData.source = `${source}-demos`;
-        pageData.slug = makeSlug(pageData.source, pageData.section, pageData.id);
+        pageData.slug = makeSlug(pageData.source, pageData.section, pageData.id, false, pageData.subsection);
         outPath = path.join(outputBase, `${pageData.slug}.js`);
       }
       if (frontmatter.title) {
@@ -243,7 +245,7 @@ function sourcePropsFile(file) {
   tsDocgen(file)
     .filter(({ hide }) => !hide)
     .forEach(({ name, description, props }) => {
-      tsDocs[getTsDocName(name, file.includes('/next'))] = { name, description, props };
+      tsDocs[getTsDocName(name, getTsDocNameVariant(file))] = { name, description, props };
     });
 }
 
@@ -262,6 +264,7 @@ function sourceMDFile(file, source, buildMode) {
       ...(pageData.examples && { examples: pageData.examples }),
       ...(pageData.fullscreenExamples && { fullscreenExamples: pageData.fullscreenExamples }),
       section: pageData.section,
+      subsection: pageData.subsection,
       source: pageData.source,
       ...(pageData.katacodaLayout && { katacodaLayout: pageData.katacodaLayout }),
       ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem }),
@@ -285,10 +288,20 @@ function writeIndex() {
   return exitCode;
 }
 
-// Build unique names for components if they are a part of the "next" module.
-function getTsDocName(name, isNextComponent) {
-  return `${name}${isNextComponent ? '-next' : ''}`;
-};
+// Build unique names for components with a "variant" extension
+function getTsDocName(name, variant) {
+  return `${name}${variant ? `-${variant}` : ''}`;
+}
+
+function getTsDocNameVariant(source) {
+  if (source.includes('next')) {
+    return 'next';
+  }
+
+  if (source.includes('deprecated')) {
+    return 'deprecated';
+  }
+}
 
 module.exports = {
   sourceProps(glob, ignore) {

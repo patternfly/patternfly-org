@@ -1,6 +1,6 @@
 ---
 id: Filters
-section: guidelines
+section: demos
 related: [
   'Badge',
   'Chip',

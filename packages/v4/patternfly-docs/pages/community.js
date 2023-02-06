@@ -100,7 +100,7 @@ const CommunityPage = () => {
             <SplitItem style={{ marginRight: '12px' }}><ChatIcon /></SplitItem>
             <SplitItem isFilled>
               <Title size="lg" className="ws-title" headingLevel="h3">Chat with us</Title>
-              <a href="//slack.patternfly.org/" target="_blank" rel="noopener noreferrer">Slack</a>
+              <a href="//join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ" target="_blank" rel="noopener noreferrer">Slack</a>
             </SplitItem>
           </Split>
         </GridItem>

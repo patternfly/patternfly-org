@@ -28,21 +28,36 @@ const isNull = o => o === null || o === undefined;
 const groupedRoutes = Object.entries(routes)
   .filter(([_slug, { id, section }]) => !isNull(id) && !isNull(section))
   .reduce((accum, [slug, pageData]) => {
-    const { section, id, title, source, katacodaLayout, hideNavItem, hideSourceTabs } = pageData;
+    const { section, subsection = null, id, title, source, katacodaLayout, hideNavItem, hideSourceTabs, relPath } = pageData;
+    pageData.slug = slug;
+    // add section to groupedRoutes obj if not yet created
     accum[section] = accum[section] || {};
-    accum[section][id] = accum[section][id] || {
+    // define data for page to be added to groupedRoutes obj
+    const data = {
       id,
       section,
+      subsection,
       title,
-      slug: makeSlug(source, section, id, true),
+      slug: makeSlug(source, section, id, true, subsection),
       sources: [],
       katacodaLayout,
       hideNavItem,
-      hideSourceTabs
-    };
-
-    pageData.slug = slug;
-    accum[section][id].sources.push(pageData);
+      hideSourceTabs,
+      relPath
+    }
+    // add page to groupedRoutes obj section or subsection
+    if (subsection) {
+      // add subsection to section
+      accum[section][subsection] = accum[section][subsection] || {};
+      accum[section][subsection].isSubsection = true;
+      // add page to subsection
+      accum[section][subsection][id] = accum[section][subsection][id] || data;
+      accum[section][subsection][id].sources.push(pageData);
+    } else {
+      // add page to section
+      accum[section][id] = accum[section][id] || data;
+      accum[section][id].sources.push(pageData);
+    }
 
     return accum;
   }, {});
@@ -51,7 +66,8 @@ const sourceOrder = {
   react: 1,
   'react-next': 1.1,
   'react-composable': 1.2,
-  'react-legacy': 1.3,
+  'react-deprecated': 1.3,
+  'react-legacy': 1.4,
   'react-demos': 2,
   html: 3,
   'html-demos': 4,
@@ -89,15 +105,28 @@ const getDefaultDesignGuidelines = ({ id, section, slug, title }) => {
 Object.entries(groupedRoutes)
   .forEach(([_section, ids]) => {
     Object.values(ids).forEach(pageData => {
-      const { slug, section } = pageData;
-      // Remove source routes for `app.js`
-      pageData.sources.forEach(({ slug }) => {
-        delete routes[slug];
+      let pageDataArr = [];
+      // Loop through each page in expandable subsection
+      if (pageData.isSubsection) {
+        Object.entries(pageData).map(([section, ids]) => {
+          if (section !== 'isSubsection') {
+            pageDataArr.push(ids);
+          }
+        })
+      } else {
+        pageDataArr = [pageData];
+      }
+      pageDataArr.forEach(pageDataObj => {
+        const { slug } = pageDataObj;
+        // Remove source routes for `app.js`
+        pageDataObj.sources.forEach(({ slug }) => {
+          delete routes[slug];
+        });
+        // Sort sources for tabs
+        pageDataObj.sources = pageDataObj.sources.sort(sortSources);
+        // Add grouped route
+        routes[slug] = pageDataObj;
       });
-      // Sort sources for tabs
-      pageData.sources = pageData.sources.sort(sortSources);
-      // Add grouped route
-      routes[slug] = pageData;
     })
   });
 
