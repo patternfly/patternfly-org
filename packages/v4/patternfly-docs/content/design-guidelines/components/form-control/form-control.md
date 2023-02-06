@@ -35,7 +35,7 @@ Use success controls to indicate valid user input for fields that require a spec
 Input fields should be grayed out when the user cannot perform actions. Gray-out controls indicate that a field is either temporarily disabled, or permanently read-only.
 
 #### Disable controls
-Disable controls indicate dependency and can be used to guide the user in a sequential workflow. In the example below, the field Target namespace is disabled, because the user must select a Target provider first. The component is disabled until the user makes the first selection, because namespace options are dependent on the selected provider. Disabled controls should be used over read only controls in scenarios where there is a way for a field to become enabled, for example, in the case of user access/permission restrictions..
+Disable controls indicate dependency and can be used to guide the user in a sequential workflow. In the example below, the field Target namespace is disabled, because the user must select a Target provider first. The component is disabled until the user makes the first selection, because namespace options are dependent on the selected provider. Disabled controls should be used over read only controls in scenarios where there is a way for a field to become enabled, for example, in the case of user access/permission restrictions.
 
 <img src="./img/disable_example.png" alt="Disabled input example" width="762px"/>
 
