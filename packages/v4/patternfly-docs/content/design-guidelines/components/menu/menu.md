@@ -90,6 +90,13 @@ Use a drilldown menu when data is structured into levels and includes a long lis
 
 If data is more complex and has more than 2 levels, use a drilldown menu with breadcrumbs instead. Breadcrumbs offer better navigation between different levels. The number of visited levels is shown in a grey badge with a dropdown menu showing the menu items between the first and last level. The badge allows you to go back to a specific visited level. If you need to see the whole structure of your data, use a [tree view](/components/tree-view) instead. 
 
+### Red text menu
+If you have destructive items in a dropdown menu, you can optionally use red text styling for that item. A divider should be used to separate the destructive menu items from the non-destructive items. Red text is used to visually distinguish a dangerous action from other items. 
+
+When using red text for destructive actions, it is still recommended to require a confirmation dialog before proceeding.
+
+<img src="./img/red-delete-text.png" alt="drilldown menu" width="935"/>
+
 ## Content considerations
 When creating menu item labels, keep in mind the following guidelines:
 

@@ -52,5 +52,3 @@ Icons can be included within form fields to indicate the type of input required.
 <img src="./img/search.png" alt="Search field" width="644px" />
 
 As a designer, you can choose to design input components with custom icons. Make sure that whatever icon you choose informs the user about the type of input that field requires.
-
-
