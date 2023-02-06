@@ -23,6 +23,7 @@ module.exports = {
     { section: 'UX writing' },
     { section: 'components' },
     { section: 'extensions' },
+    { section: 'topology' },
     { section: 'charts' },
     { section: 'demos' },
     { section: 'layouts' },

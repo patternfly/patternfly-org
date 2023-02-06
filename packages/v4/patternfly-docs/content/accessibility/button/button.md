@@ -12,6 +12,7 @@ To implement an accessible PatternFly **button** component:
 - Ensure the button can be navigated to and interacted with via keyboard and other assistive technologies such as a screen reader
 - Provide unique, descriptive text content to the button, or an `aria-label` if the button does not contain any visible text
 - Provide context that a link will open in a new tab/window when using a button as a link
+- Do not place other interactive content inside of a button
 
 For the PatternFly React library:
 
@@ -41,6 +42,9 @@ At a minimum, a button should meet the following criteria:
   </ListItem>
   <ListItem>
     <Checkbox id="button-a11y-checkbox-5" label={<span>If a button should be disabled, but remain focusable, it has the <code className="ws-code">aria-disabled="true"</code> attribute instead of the standard <code className="ws-code">disabled</code> attribute.</span>} description="One example for when you should do this is if the button has a tooltip that should be triggered when the button receives focus." />
+  </ListItem>
+  <ListItem>
+    <Checkbox id="button-a11y-checkbox-6" label="There is no interactive content inside of the button." />
   </ListItem>
 </List>
 

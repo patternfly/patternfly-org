@@ -958,6 +958,13 @@ export const iconsData = [
   },
   {
     "Style": "pf-icon",
+    "Name": "pf-icon-data-processor",
+    "React_name": "DataProcessorIcon",
+    "Type": "Status",
+    "Contextual_usage": "Represents a data processor",
+  },
+  {
+    "Style": "pf-icon",
     "Name": "pf-icon-data-sink",
     "React_name": "DataSinkIcon",
     "Type": "Status",

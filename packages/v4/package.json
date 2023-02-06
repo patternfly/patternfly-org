@@ -2,7 +2,7 @@
   "name": "patternfly-org-4",
   "description": "Documentation for PatternFly 4.",
   "private": true,
-  "version": "4.15.1",
+  "version": "4.16.1",
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
@@ -17,10 +17,12 @@
     "screenshots": "pf-docs-framework screenshots"
   },
   "dependencies": {
-    "@patternfly/documentation-framework": "^1.4.1",
+    "@patternfly/documentation-framework": "^1.5.1",
     "@patternfly/quickstarts": "^2.2.4",
-    "@patternfly/react-catalog-view-extension": "4.95.1",
-    "@patternfly/react-docs": "5.103.2",
+    "@patternfly/react-catalog-view-extension": "4.95.2",
+    "@patternfly/react-docs": "5.103.66",
+    "@patternfly/react-log-viewer": "4.87.100",
+    "@patternfly/react-topology": "^4.91.26",
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0"
   },

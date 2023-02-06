@@ -361,7 +361,7 @@ const ColorsGrid = () => (
         </GridItem>
         <GridItem span={10}>
           <div className="ws-content-chart-colors-gallery--information">
-            <div>#D2D2D2</div>
+            <div>#F0F0F0</div>
             <div><code className="ws-content-css-var-text ws-code">--pf-chart-color-black-100</code></div>
           </div>
         </GridItem>
@@ -370,7 +370,7 @@ const ColorsGrid = () => (
         </GridItem>
         <GridItem span={10}>
           <div className="ws-content-chart-colors-gallery--information">
-            <div>#BBB</div>
+            <div>#D2D2D2</div>
             <div><code className="ws-content-css-var-text ws-code">--pf-chart-color-black-200</code></div>
           </div>
         </GridItem>
@@ -379,7 +379,7 @@ const ColorsGrid = () => (
         </GridItem>
         <GridItem span={10}>
           <div className="ws-content-chart-colors-gallery--information">
-            <div>#8B8D8F</div>
+            <div>#B8BBBE</div>
             <div><code className="ws-content-css-var-text ws-code">--pf-chart-color-black-300</code></div>
           </div>
         </GridItem>
@@ -388,7 +388,7 @@ const ColorsGrid = () => (
         </GridItem>
         <GridItem span={10}>
           <div className="ws-content-chart-colors-gallery--information">
-            <div>#72767B</div>
+            <div>#8A8D90</div>
             <div><code className="ws-content-css-var-text ws-code">--pf-chart-color-black-400</code></div>
           </div>
         </GridItem>
@@ -397,7 +397,7 @@ const ColorsGrid = () => (
         </GridItem>
         <GridItem span={10}>
           <div className="ws-content-chart-colors-gallery--information">
-            <div>#4D5258</div>
+            <div>#6A6E73</div>
             <div><code className="ws-content-css-var-text ws-code">--pf-chart-color-black-500</code></div>
           </div>
         </GridItem>

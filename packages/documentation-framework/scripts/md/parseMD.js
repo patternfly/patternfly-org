@@ -61,7 +61,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
       }
 
       const propComponents = [...new Set(frontmatter.propComponents || [])].reduce((acc, componentName) => {
-        const name = getTsDocName(componentName, source === 'react-next');
+        const name = getTsDocName(componentName, getTsDocNameVariant(source));
 
         if (tsDocs[name]) {
           acc.push(tsDocs[name]);
@@ -86,7 +86,8 @@ function toReactComponent(mdFilePath, source, buildMode) {
         sourceLink: frontmatter.sourceLink || `https://github.com/patternfly/${
           sourceRepo}/blob/main/${
           normalizedPath}`,
-        hideTOC: frontmatter.hideTOC || false
+        hideTOC: frontmatter.hideTOC || false,
+        relPath
       };
       // Temporarily override section for Demo tabs until we port this upstream
       if (frontmatter.section === 'demos' && routes[slug.replace('demos', 'components')]) {
@@ -241,7 +242,7 @@ function sourcePropsFile(file) {
   tsDocgen(file)
     .filter(({ hide }) => !hide)
     .forEach(({ name, description, props }) => {
-      tsDocs[getTsDocName(name, file.includes('/next'))] = { name, description, props };
+      tsDocs[getTsDocName(name, getTsDocNameVariant(file))] = { name, description, props };
     });
 }
 
@@ -282,10 +283,20 @@ function writeIndex() {
   return exitCode;
 }
 
-// Build unique names for components if they are a part of the "next" module.
-function getTsDocName(name, isNextComponent) {
-  return `${name}${isNextComponent ? '-next' : ''}`;
-};
+// Build unique names for components with a "variant" extension
+function getTsDocName(name, variant) {
+  return `${name}${variant ? `-${variant}` : ''}`;
+}
+
+function getTsDocNameVariant(source) {
+  if (source.includes('next')) {
+    return 'next';
+  }
+
+  if (source.includes('deprecated')) {
+    return 'deprecated';
+  }
+}
 
 module.exports = {
   sourceProps(glob, ignore) {

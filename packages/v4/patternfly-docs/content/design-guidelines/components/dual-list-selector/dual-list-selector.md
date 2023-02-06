@@ -17,6 +17,15 @@ Dual list selectors are useful when you have a large set of options for users to
 * Users have a list of actions to choose from. Instead, use a dropdown menu or tree view 
 * The list of items to choose from has fewer than 20 items. Instead, use a select list.
 
+## Behavior
+Users can select one or more items from the available list and use the arrows to move these items to the chosen list. Users can filter down the items by using the search input field.
+
+<img src="./img/dual list single.gif" alt="basic dual list behavior" width="880"/>
+
+In an expandable dual list, when users move an item from the available list to the chosen list, the item still appears in its original group structure. For example, if the item Option 6  in the group Folder 2  is moved from the available list to the chosen list, the Option 6 item will appear in the chosen list under the Folder 2 group.  It won’t appear as a stand-alone, single-level item.
+
+<img src="./img/dual list folders.gif" alt="basic dual list behavior" width="880"/>
+
 ## Variations
 There are two types of dual list selectors: basic dual lists and expandable dual lists.
 
@@ -46,11 +55,17 @@ An expandable dual list contains a multi-leveled list of items for users to choo
 4. **Number of items:** indicator of how many items are selected, among the total items available in the list. <u>In expandable lists, only non-folder items are included in the item count.</u>
 5. **Badge (optional):** number of items inside a folder.
 
-## Behavior
-Users can select one or more items from the available list and use the arrows to move these items to the chosen list. Users can filter down the items by using the search input field.
+### Drag and drop dual list
+Drag and drop functionality inside of a dual list allows users to customize the order in which items within the Chosen options are displayed. The fa-grip icon at the start of the item row is used to indicate that the items are draggable.
 
-<img src="./img/dual list single.gif" alt="basic dual list behavior" width="880"/>
+1. **onDrag event:** Upon click & hold a `--pf-global--active-color--100` border will show the draggable area that is available. The list item being dragged will also use a `--pf-global--active-color--100` border to highlight it as the item being dragged and all other list items will switch to a disabled state.
 
-In an expandable dual list, when users move an item from the available list to the chosen list, the item still appears in its original group structure. For example, if the item Option 6  in the group Folder 2  is moved from the available list to the chosen list, the Option 6 item will appear in the chosen list under the Folder 2 group.  It won’t appear as a stand-alone, single-level item.
+<img src="./img/Drag-drop-Dual-list-selector-selected-step-1-final.png" alt="Dual list drag interaction 1 - Drag in progress" width="880"/>
 
-<img src="./img/dual list folders.gif" alt="basic dual list behavior" width="880"/>
+2. **postDrag event:** Once dropped, the items will be reordered based on the user’s action. 
+
+<img src="./img/Drag-drop-Dual-list-selector-selected-step-2-final.png" alt="Dual list drag interaction 2 - Drag & drop completed" width="880"/>
+
+3. **Error state:** If the list item is dragged outside the bounding box the borders on the dragged item will switch to `--pf-global--danger-color--100` and the cursor will change to not-allowed to indicate an invalid placement. If the user releases the cursor outside the bounding area the dragged item will return to its default position.
+
+<img src="./img/Drag-drop-Dual-list-selector-selected-step-3-final.png" alt="Dual list drag interactionstep 3 - Error state" width="880"/>

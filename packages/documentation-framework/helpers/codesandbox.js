@@ -2,6 +2,7 @@ const { parse } = require('@patternfly/ast-helpers');
 const versions  = require('../versions.json');
 const overpass = require('./fonts');
 const { capitalize } = require('./capitalize');
+const path = require('path');
 const pathPrefix = process.env.pathPrefix;
 
 const getStaticParams = (title, html) => {
@@ -107,7 +108,7 @@ function prettyExampleCode(title, code, declaration, identifier) {
 }
 
 // TODO: Make React examples work and use a template that has our assets.
-function getReactParams(title, code, scope, lang, relativeImports) {
+function getReactParams(title, code, scope, lang, relativeImports, relPath, sourceLink) {
   let toRender = null;
   try {
     let declaration = getExampleDeclaration(code);
@@ -130,12 +131,18 @@ function getReactParams(title, code, scope, lang, relativeImports) {
   catch (err) {
     // Ignore
   }
-  // Update image imports to point to pf.org
-  const imgImportRegex = /import\s*(\w*).*['"](.*)(\.(png|jpe?g|webp|gif|svg))['"]/g;
-  let imgImportMatch;
-  while ((imgImportMatch = imgImportRegex.exec(code))) {
-    const imgName = imgImportMatch[1];
-    code = code.replace(imgImportMatch[0], `const ${imgName} = "https://www.patternfly.org/v4${scope[imgName]}"`);
+
+  // Point to sourcelink for @patternfly images
+  if (relPath.includes('@patternfly')) {
+    const imgImportRegex = /(import \W*(\w*)\W*[^'"`]*['"`](.*\.(?:png|jpe?g|webp|gif|svg))['"])/gm;
+    let imgImportMatch;
+    while ((imgImportMatch = imgImportRegex.exec(code))) {
+      const [match, importDeclaration, imgName, relImgPath] = imgImportMatch;
+      // Point to sourceLink hosted file
+      const sourceLinkPath = new URL(relImgPath, sourceLink.replace('/blob/', '/raw/')).href;
+      const hostedImageDeclaration = `const ${imgName} = "${sourceLinkPath}"`;
+      code = code.replace(importDeclaration, hostedImageDeclaration);
+    }
   }
 
   const relImportRegex = /(import[\s*{])([\w*{}\n\r\t, ]+)([\s*]from\s["']([\.\/]+.*)["'])/gm;
@@ -159,6 +166,19 @@ function getReactParams(title, code, scope, lang, relativeImports) {
   Object.entries(versions.Releases[0].versions)
     .filter(([pkg]) => code.includes(pkg))
     .forEach(([pkg, version]) => dependencies[pkg] = version);
+
+  // Get any additional dependencies from example code, exclude relative imports
+  const importMatch = /(?:import [^'"`]*)(?:['"`])((?!.\/)[^'"`]*)/gm;
+  let depImport;
+  while (depImport = importMatch.exec(code)) {
+    let res = depImport[1];
+    // Only include package name, not full import path
+    if (!dependencies[res] && res.includes('@') && res.includes('/')) {
+      const importArr = res.split('/');
+      res = `${importArr[0]}/${importArr[1]}`;
+    }
+    dependencies[res] = dependencies[res] || 'latest';
+  }
 
   return {
     files: {
