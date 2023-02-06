@@ -4,6 +4,7 @@ section: components
 ---
 
 import { Checkbox, List, ListItem } from '@patternfly/react-core';
+import { Link } from '@patternfly/documentation-framework/components/link/link';
 
 ## Accessibility
 
@@ -21,7 +22,7 @@ At a minimum, a checkbox should meet the following criteria:
 
 <List isPlain>
   <ListItem>
-    <Checkbox id="checkbox-a11y-checkbox-1" label="Standard keyboard navigation can be used to navigate between checkboxes or other focusable elements." description={<span><kbd>Tab</kbd> navigates to the next checkbox or focusable element, and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous checkbox or focusable element. If a checkbox is inside of a menu, follow the <a href="/components/menu/accessibility">menu accessibility documentation</a> instead.</span>} />
+    <Checkbox id="checkbox-a11y-checkbox-1" label="Standard keyboard navigation can be used to navigate between checkboxes or other focusable elements." description={<span><kbd>Tab</kbd> navigates to the next checkbox or focusable element, and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous checkbox or focusable element. If a checkbox is inside of a menu, follow the <Link href="/components/menu/accessibility">menu accessibility documentation</Link> instead.</span>} />
   </ListItem>
   <ListItem>
     <Checkbox id="checkbox-a11y-checkbox-2" label="Standard keyboard interaction can be used to interact with the checkbox." description={<span>Only <kbd>Space</kbd> should be able to toggle the checkbox.</span>} />

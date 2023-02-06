@@ -4,6 +4,7 @@ section: components
 ---
 
 import { Checkbox, List, ListItem } from '@patternfly/react-core';
+import { Link } from '@patternfly/documentation-framework/components/link/link';
 
 ## Accessibility
 
@@ -27,7 +28,7 @@ At a minimum, a chip group should meet the following criteria:
     <Checkbox id="chipGroup-a11y-checkbox-3" label="If the chip group's category name is truncated, the entire category name can receive focus, not just the chip group's close button." description={<span>This can be achieved by ensuring the category name itself has the <code className="ws-code">tabindex="0"</code> attribute. A category name should then be included in the standard keyboard navigation.</span>} />
   </ListItem>
   <ListItem>
-    <Checkbox id="chipGroup-a11y-checkbox-4" label="If the chip group's category name is truncated, it has a tooltip that displays on hover or focus." description={<span>Follow the <a href="/components/tooltip/accessibility">tooltip accessibility documentation</a>.</span>} />
+    <Checkbox id="chipGroup-a11y-checkbox-4" label="If the chip group's category name is truncated, it has a tooltip that displays on hover or focus." description={<span>Follow the <Link href="/components/tooltip/accessibility">tooltip accessibility documentation</Link>.</span>} />
   </ListItem>
   <ListItem>
     <Checkbox id="chipGroup-a11y-checkbox-5" label={<span>If a chip group does not have a visible category name, it has an <code className="ws-code">aria-label</code> instead.</span>} description="This will help users of assistive technologies differentiate multiple chip groups on a page, and provide context of what content the chip group contains." />

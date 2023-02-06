@@ -4,7 +4,7 @@ section: components
 ---
 
 import { Checkbox, List, ListItem } from '@patternfly/react-core';
-
+import { Link } from '@patternfly/documentation-framework/components/link/link';
 
 ## Accessibility
 
@@ -20,7 +20,7 @@ At a minimum, a menu toggle component should meet the following criteria:
 
 <List isPlain>
   <ListItem>
-    <Checkbox id="menutoggle-a11y-checkbox-1" label={<span>Users should be able to use keyboard navigation to activate the menu toggle with <kbd>Enter</kbd> or <kbd>Space</kbd> to enter a menu.</span>} description={<span><kbd>Tab</kbd> navigates to the menu and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous focusable element. Refer to our <a href="/components/menu/accessibility">menu accessibility documentation</a> for more implementation details when using these components together. </span>}/>
+    <Checkbox id="menutoggle-a11y-checkbox-1" label={<span>Users should be able to use keyboard navigation to activate the menu toggle with <kbd>Enter</kbd> or <kbd>Space</kbd> to enter a menu.</span>} description={<span><kbd>Tab</kbd> navigates to the menu and <kbd>Shift</kbd> + <kbd>Tab</kbd> navigates to the previous focusable element. Refer to our <Link href="/components/menu/accessibility">menu accessibility documentation</Link> for more implementation details when using these components together. </span>}/>
   </ListItem>
   <ListItem>
     <Checkbox id="menutoggle-a11y-checkbox-2" label={<span>If there is not text within the menu toggle, such as a kebab menu toggle, an <code className="ws-code">aria-label</code> is used on the <code className="ws-code">MenuToggle</code>.</span>} description="This will communicate what the menu toggle is to users of assistive technologies when navigating through a page or a screen reader's rotor menu." />

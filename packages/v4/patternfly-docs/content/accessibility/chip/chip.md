@@ -4,6 +4,7 @@ section: components
 ---
 
 import { Checkbox, List, ListItem } from '@patternfly/react-core';
+import { Link } from '@patternfly/documentation-framework/components/link/link';
 
 ## Accessibility
 
@@ -27,7 +28,7 @@ At a minimum, a chip should meet the following criteria:
     <Checkbox id="chip-a11y-checkbox-3" label="If the chip content is truncated, the entire chip can receive focus, not just the chip's close button." description={<span>This can be achieved by ensuring the chip component itself has the <code className="ws-code">tabindex="0"</code> attribute. A chip should then be included in the standard keyboard navigation.</span>} />
   </ListItem>
   <ListItem>
-    <Checkbox id="chip-a11y-checkbox-4" label="If the chip content is truncated, it has a tooltip that displays on hover or focus." description={<span>Follow the <a href="/components/tooltip/accessibility">tooltip accessibility documentation</a>.</span>} />
+    <Checkbox id="chip-a11y-checkbox-4" label="If the chip content is truncated, it has a tooltip that displays on hover or focus." description={<span>Follow the <Link href="/components/tooltip/accessibility">tooltip accessibility documentation</Link>.</span>} />
   </ListItem>
   <ListItem>
     <Checkbox id="chip-a11y-checkbox-5" label="An overflow chip is rendered as a button element." />
