@@ -4,36 +4,34 @@ section: training
 hideNavItem: true
 ---
 
-import { Card, CardBody, ClipboardCopy, Divider, PageSection } from '@patternfly/react-core';
+import { Button, ClipboardCopy, Divider, PageSection } from '@patternfly/react-core';
 import { CopyCodeBlock } from '../copyCodeBlock/copyCodeBlock';
 
 <PageSection variant="light">
-# React Fundamentals
+# React fundamentals
 PatternFly React is made up of components, layouts, and demos. The PatternFly React library provides a collection of React components used to build interfaces with consistent markup, styling, and behavior.
 
 To become familiar with building UIs with PatternFly, you will build a PatternFly card. A card is a flexible element for containing any type of content. Cards are used on dashboards, in data displays, or for positioning content on a page.
 </PageSection>
 <PageSection>
-## Step 1. Consider and evaluate the design.
+## Step 1. Consider and evaluate the design
 Consider the design in Figure 1 and evaluate which components and subcomponents compose the design. 
 
 
 **Figure 1**
 <img src="../img/basic-card.png" alt="Basic card layout" width="868" />
 
-Figure 1 is a design using PatternFly's card component, and PatternFly has documentation regarding the <a href="/components/card" target="_blank">card's React implementation</a> and the <a href="/components/card/html" target="_blank">card's HTML structure</a>.
-In PatternFly, subcomponents compose the various regions of a card so its structure is flexible enough to accommodate a range of designs. For example, a card can contain one or more of its various subcomponents such as `CardHeader`, `CardHeaderMain`, `CardActions`, or `CardTitle`.
-In this exercise, create a card to match design in figure 1 with an image, close action, header, body, and footer.
+Figure 1 is a design using PatternFly's card component. To learn more, read the documentation for a card's <a href="/components/card" target="_blank">React implementation</a> and the <a href="/components/card/html" target="_blank">HTML structure</a>.
+In PatternFly, subcomponents compose the various regions of a card so its structure is flexible enough to accommodate a range of designs. For example, a card can contain 1 or more of its various subcomponents such as `CardHeader`, `CardHeaderMain`, `CardActions`, or `CardTitle`.
+In this exercise, create a card to match the design in figure 1 with an image, close action, header, body, and footer.
 
 **Figure 2**
 
 <img src="../img/card-layout.png" alt="Basic card visually segmented into various subcomponents" width="868" />
 
-The design in Figure 1 can be broken down into the card’s various subcomponents as demonstrated in Figure 2. And the React components used to construct this card can be arranged as demonstrated in the card structure code snippet below. You are also able to view this code and modify it yourself in the provided CodeSandbox.
+The design in Figure 1 can be broken down into the card’s various subcomponents, as demonstrated in Figure 2. The React components used to construct this card can be arranged, as demonstrated in the card structure code snippet below. You can also view and modify this code in the provided CodeSandbox.
 
-<Card style={{maxWidth: "400px"}} component="div" isSelectableRaised onClick={() => window.open("https://codesandbox.io/s/flamboyant-orla-gi8ho1", '_blank')}>
-  <CardBody>CodeSandbox - React fundamentals</CardBody>
-</Card>
+<Button variant="primary" component="a" href="https://codesandbox.io/s/flamboyant-orla-gi8ho1" target="_blank">Codesandbox - React fundamentals</Button>
 
 </PageSection>
 <PageSection>
@@ -57,8 +55,7 @@ The design in Figure 1 can be broken down into the card’s various subcomponent
 The `CardHeader` contains `CardHeaderMain` and `CardActions`.
 
 ### Step 2.1
-Add the brand to the `CardHeaderMain` component. The brand component is used to place a product logotype on a screen. All that is needed is the source image or SVG and alt text. Here the PatternFly logo is used.
-Insert the brand inside of the `CardHeaderMain` component.
+Add a `brand` component to the `CardHeaderMain` component to place a product logotype on a screen. All that is needed is the source image or SVG and alt text. Here the PatternFly logo is used.
 
 <CopyCodeBlock>
 {`<Brand
@@ -67,8 +64,8 @@ alt="Patternfly Logo"\n/>`}
 </CopyCodeBlock>
 
 ### Step 2.2
-Add a close button to the `CardActions` component. Buttons communicate and trigger actions a user can take in an application or website. They come in several variations, such as `primary`, `secondary`, `tertiary`, `danger`, `plain`, `link`, and `control`.
-Add a button using the plain variant.
+Add a close button to the `CardActions` component. Buttons communicate and trigger actions a user can take in an application or website. They come in several variants, such as `primary`, `secondary`, `tertiary`, `danger`, `plain`, `link`, and `control`.
+Add a button using the `plain` variant.
 
 <CopyCodeBlock>
 {`Button variant="plain"> </Button>`}
@@ -76,7 +73,7 @@ Add a button using the plain variant.
 
 ### Step 2.3
 Add an icon inside the button. PatternFly React provides a variety of icons. They're easy to use and compile into SVG files. Use them inside buttons and other components.
-Add a TimesIcon so that the card can be closed.
+Add a `TimesIcon` so that the card can be closed.
 
 <CopyCodeBlock>
 {`<TimesIcon />`}
@@ -97,7 +94,7 @@ PatternFly\n</Text>`}
 </CopyCodeBlock>
 
 ### Step 3.2
-Add a subhead below the text added in step 3.1. `TextContent` is used to wrap `Text` components and provides text with extra spacing and styling.
+Add a subhead below the text added in Step 3.1. `TextContent` is used to wrap `Text` components and provides text with extra spacing and styling.
 Add the following code inside of the Text component that is inside of the `CardTitle`:
 
 <CopyCodeBlock>
@@ -138,14 +135,14 @@ Add a button to the first `SplitItem` component. Use the link variant of the but
 </CopyCodeBlock>
 
 ### Step 5.3
-Add a button to the second `SplitItem` component. Use the same variant and properties as step 5.2.
+Add a button to the second `SplitItem` component. Use the same variant and properties as Step 5.2.
 
 <CopyCodeBlock>
 {`<Button variant="link" isInline>Link to home</Button>`}
 </CopyCodeBlock>
 
 ### Step 5.4
-Add a hasGutter property to the `Split` component to add more spacing between the buttons. The `Split` component should look like this with the hasGutter property set.
+Add a `hasGutter` property to the `Split` component to add more spacing between the buttons. The `Split` component should look like this with the `hasGutter` property set.
 
 <CopyCodeBlock>
 {`<Split hasGutter >`}
@@ -157,7 +154,6 @@ Add a hasGutter property to the `Split` component to add more spacing between th
 
 A fully constructed card can be viewed and modified in the CodeSandbox solution. Compare your work with the solution.
 
-<Card style={{maxWidth: "400px"}} component="div" isSelectableRaised onClick={() => window.open("https://codesandbox.io/s/react-fundamentals-start-forked-0krbsb?file=/src/App.js", '_blank')}>
-  <CardBody>CodeSandbox solution - React fundamentals</CardBody>
-</Card>
+<Button variant="primary" component="a" href="https://codesandbox.io/s/react-fundamentals-start-forked-0krbsb?file=/src/App.js" target="_blank">Codesandbox solution - React fundamentals</Button>
+
 </PageSection>

@@ -3,30 +3,29 @@ id: HTML fundamentals training
 section: training
 hideNavItem: true
 ---
-import { Card, CardBody, ClipboardCopy, Divider, PageSection } from '@patternfly/react-core';
+import { Button, ClipboardCopy, Divider, PageSection } from '@patternfly/react-core';
 import { CopyCodeBlock } from '../copyCodeBlock/copyCodeBlock';
 
 <PageSection variant="light">
 # Fundamentals
 
-PatternFly Core is based on the principles of <a href="http://bradfrost.com/blog/post/atomic-web-design/" target="_blank">Atomic design</a> and <a href="http://getbem.com/introduction/" target="_blank">BEM</a> (Block, Element, Modifier).
+PatternFly Core is based on the principles of <a href="http://bradfrost.com/blog/post/atomic-web-design/" target="_blank">Atomic Design</a> and <a href="http://getbem.com/introduction/" target="_blank">BEM</a> (Block, Element, Modifier).
 
-Atomic design is a methodology for creating design systems. In Atomic Design user interfaces are broken down into reusable components that can be re-assembled to create reusable interaction patterns.
+Atomic Design is a methodology for creating design systems. Using Atomic Design, user interfaces are broken down into reusable components that can be reassembled to create reusable interaction patterns.
 PatternFly consists of isolated and modular structures that fall into three categories:
-- Components are modular and independent structures concerned with presentation
-- Layouts allow for organizing and grouping their immediate children on the page
-- Demos illustrate how to assemble complex structures with components and layouts only
+- Components are modular and independent structures concerned with presentation.
+- Layouts allow for the organization and grouping of their immediate children on the page.
+- Demos illustrate how to assemble components and layouts into complex structures.
 
 ## Components
-In PatternFly, components which cannot be broken down into smaller parts are known as the basic building blocks of user interfaces. Examples include the button, label and badge components. A codesandbox link has been provided to experiment with and follow the proceeding steps.
+In PatternFly, components are the basic building blocks of user interfaces. They cannot be broken down into smaller parts. Examples include the button, label, and badge components. A CodeSandbox link has been provided to experiment with and follow the proceeding steps.
 
-<Card style={{maxWidth: "400px"}} component="div" isSelectableRaised onClick={() => window.open("https://codesandbox.io/s/html-fundamentals-start-hy2erg?file=/index.html", '_blank')}>
-  <CardBody>Codesandbox - HTML fundamentals</CardBody>
-</Card>
+<Button variant="primary" component="a" href="https://codesandbox.io/s/html-fundamentals-start-hy2erg?file=/index.html" target="_blank">CodeSandbox - HTML fundamentals</Button>
+
 </PageSection>
 <PageSection>
 ### Step 1. Add a button component.
-In the `<body>` of the index.html file, add a button element, and apply the PatternFly styles to it so that it is a PatternFly button by adding the class `pf-c-button`. Apply the ‘primary’ styles to the button to make it a bright blue color by adding the `pf-m-primary` class to the button as well.
+Add a button element to the `<body>` of the `index.html` file. To apply PatternFly styling to the button, add the class `pf-c-button`. To also apply ‘primary’ styling to the button and make it a bright blue color, add the `pf-m-primary` class.
 
 <CopyCodeBlock>
 {`<button class="pf-c-button pf-m-primary" type="button">\n  Primary\n</button>`}
@@ -46,7 +45,7 @@ When simpler components are used within more complex components, the layout of t
 In this step, add a badge component to the chip component.
 
 #### Step 2.1 
-To build a chip component replace the contents of the `<body>` in the index.html file with the following code snippet.
+To build a chip component, replace the contents of the `<body>` in the index.html file with the following code snippet.
 
 <CopyCodeBlock>
 {`<div class="pf-c-chip">
@@ -61,16 +60,16 @@ To build a chip component replace the contents of the `<body>` in the index.html
 This is the default chip component that already has another component in it: the button. This is why the chip can be considered as a more complex component.
 
 #### Step 2.2
-Add the badge inside the chip. To do this, add this block of code between pf-c-chip__text and pf-c-button.
+Add the badge inside the chip. To do this, add this block of code between `pf-c-chip__text` and `pf-c-button`.
 
 <CopyCodeBlock>
 {`<span class="pf-c-badge pf-m-read">
 7\n</span>`}
 </CopyCodeBlock>
 
-**Note:** Remember this is a component and not a demo because the chip component includes styles that handle how the badge looks within the chip. For example, when the badge component is added to the chip, it receives styling that gives it a margin. You can read more in the documentation here
+**Note:** Remember, this is a component and not a demo because the chip component includes styles that handle how the badge looks within the chip. For example, when the badge component is added to the chip, it receives styling that gives it a margin. You can see that the badge in a chip has its own CSS variable, `--pf-c-chip__c-badge--MarginLeft`, defined for the right margin under the <a href="/components/chip/html#css-variables">CSS Variables section of the chip documentation</a>.
 
-The resulting Chip should match the following image.
+The resulting chip should match the following image.
 
 <img src="../img/chip.png" alt="Example of a rendered and styled chip component" width="150" />
 </PageSection>
@@ -78,7 +77,7 @@ The resulting Chip should match the following image.
 <PageSection>
 ## Layouts
 
-In PatternFly, layouts allow for organizing and grouping elements. This tutorial covers just one of the seven layouts.
+In PatternFly, layouts allow for organizing and grouping elements. This tutorial covers just 1 of the 7 layouts.
 
 ### Step 1 
 Copy code into the `<body>` of the `index.html` file.
@@ -112,8 +111,8 @@ Demos show how PatternFly’s components and layouts are put together to build m
 
 Create a form demo using components and layouts.
 
-### Step 1. Add five form components.
-Copy and paste this block of code five times in the index.html file.
+### Step 1. Add five form components
+Copy and paste this block of code 5 times in the index.html file.
 
 <CopyCodeBlock>
 {`<form class="pf-c-form">
@@ -134,11 +133,11 @@ Copy and paste this block of code five times in the index.html file.
 ### Step 2. Apply a grid layout
 
 #### Step 2.1 
-Add one `<div>` wrapper around all five form components with the `pf-l-grid` layout class. It should look like this this:
+Add one `<div>` wrapper around all 5 form components with the `pf-l-grid` layout class. It should look like this:
 
 ```noLive
 <div class="pf-l-grid">
-  /* Five form components are here */
+  /* 5 form components are here */
 </div>
 ```
 
@@ -157,7 +156,7 @@ Adding the `pf-m-gutter` modifier class to the grid layout ensures there is equa
 
 Add the class `pf-m-gutter` after `pf-l-grid` to the outermost wrapper, inside the quotation marks.
 It should look like: `<div class="pf-l-grid pf-m-gutter">`
-**Note:** Learn how modifier classes work with layout classes by looking at <a href="/layouts/grid/html#usage" target="_blank">the grid documentation</a> on the PatternFly website.
+**Note:** Learn how modifier classes work with layout classes by looking at PatternFly's <a href="/layouts/grid/html#usage" target="_blank">grid documentation</a>.
 
 ### Step 5. Add modifier classes to the grid item classes.
 This step modifies the number of columns that a grid item spans. The maximum number of columns that a grid item can span is 12 (which is equivalent to 100%).
@@ -165,18 +164,17 @@ This step modifies the number of columns that a grid item spans. The maximum num
 Find each `pf-l-grid__item` that was added in step 3 and add the class `pf-m-[number from 1 - 12]`. The numbers across a row should add up to 12.
 
 #### Step 5.2 
-Add `pf-m-6-col` to the first two grid items and add `pf-m-4-col` to the last three grid items.
+Add `pf-m-6-col` to the first 2 grid items and add `pf-m-4-col` to the last 3 grid items.
 
-The first two grid items should look like: `<div class="pf-l-grid__item pf-m-6-col">`
-The second two grid items should look like: `<div class="pf-l-grid__item pf-m-4-col">`
+The first 2 grid items should look like: `<div class="pf-l-grid__item pf-m-6-col">`
+The second 2 grid items should look like: `<div class="pf-l-grid__item pf-m-4-col">`
 </PageSection>
 <Divider />
 <PageSection>
 ## Compare your results.
 
-A fully constructed demo can be viewed and modified in the provided codesandbox solution. Compare your work with the solution.
+A fully constructed demo can be viewed and modified in the provided CodeSandbox solution. Compare your work with the solution.
 
-<Card style={{maxWidth: "400px"}} component="div" isSelectableRaised onClick={() => window.open("https://codesandbox.io/s/html-fundamentals-final-o7g08o?file=/index.html", '_blank')}>
-  <CardBody>Codesandbox solution - HTML fundamentals</CardBody>
-</Card>
+<Button variant="primary" component="a" href="https://codesandbox.io/s/html-fundamentals-final-o7g08o?file=/index.html" target="_blank">CodeSandbox solution - HTML fundamentals</Button>
+
 </PageSection>

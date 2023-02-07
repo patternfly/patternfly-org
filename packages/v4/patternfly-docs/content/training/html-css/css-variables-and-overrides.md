@@ -3,7 +3,7 @@ id: HTML CSS variables and overrides training
 section: training
 hideNavItem: true
 ---
-import { Card, CardBody, ClipboardCopy, Divider, PageSection } from '@patternfly/react-core';
+import { Button, ClipboardCopy, Divider, PageSection } from '@patternfly/react-core';
 
 <PageSection variant="light">
 # CSS variables and overrides
@@ -28,9 +28,7 @@ In PatternFly, component-level custom properties follow this general formula:
 
 To explore this concept, you can practice overriding the title color custom property in the success variation of the alert component using the provided CodeSandbox.
 
-<Card style={{maxWidth: "400px"}} component="div" isSelectableRaised onClick={() => window.open("https://codesandbox.io/s/html-fundamentals-start-hy2erg", '_blank')}>
-  <CardBody>CodeSandbox - Part 1</CardBody>
-</Card>
+<Button variant="primary" component="a" href="https://codesandbox.io/s/html-fundamentals-start-hy2erg" target="_blank">Codesandbox - Part 1</Button>
 
 ### Step 1. Familiarize with `index.html`
 Note the alert component in the `<body>` of `index.html`.
@@ -84,9 +82,7 @@ Global properties are prefixed with the word global.
 
 To explore this concept, override the global link color by setting it to the custom property for danger using the provided CodeSandbox for part 2. The `index.html` file contains a button and expandable component to demonstrate how changing a global variable has an impact across components.
 
-<Card style={{maxWidth: "400px"}} component="div" isSelectableRaised onClick={() => window.open("https://codesandbox.io/s/override-global-css-variables-start-llcub8", '_blank')}>
-  <CardBody>CodeSandbox - Part 2</CardBody>
-</Card>
+<Button variant="primary" component="a" href="https://codesandbox.io/s/override-global-css-variables-start-llcub8" target="_blank">Codesandbox - Part 2</Button>
 
 ### Step 1. Familiarize with `index.html`
 Note the button component and the expandable section component in the `<body>` of the `index.html` file.
@@ -125,20 +121,18 @@ The resulting UI in the CodeSandbox should match Figure 2.
 <Divider />
 <PageSection>
 ## Part 3: Create and use component level CSS variables to override PatternFly styles
-It is important to understand how BEM is used to override variables and also to create them.
+It is important to understand how BEM is used to create and override variables.
 
 To explore this concept, add a BEM element and custom styles with CSS custom properties to support a badge element in the label component using the provided CodeSandbox for part 3. Assume there is a common use case for adding a badge to the left of text in the label component. When adding the custom badge element to the label component, also apply a margin-right of 8px.
 
-<Card style={{maxWidth: "400px"}} component="div" isSelectableRaised onClick={() => window.open("https://codesandbox.io/s/creating-new-component-css-vars-start-t98i06", '_blank')}>
-  <CardBody>CodeSandbox - Part 3</CardBody>
-</Card>
+<Button variant="primary" component="a" href="https://codesandbox.io/s/creating-new-component-css-vars-start-t98i06" target="_blank">Codesandbox - Part 3</Button>
 
 ### Step 1. Familiarize with `index.html`
 Note the label component in the `<body>` of the `index.html`. This label contains a badge component and some text. The default PatternFly label component only styles the label itself and the text inside. Since there has been a badge component passed into the label, it is necessary to add space between the badge and the text beside it.
 
 To do this the BEM way, a BEM element class `(pf-c-label__badge)` has been applied to the badge.
 
-### Step 2. Style the badge.
+### Step 2. Style the badge
 **Note:** Never apply a global custom property as the value for a property in a component's CSS.
 
 #### Step 2.1 
@@ -149,10 +143,10 @@ It should look like: `--pf-c-label`
 #### Step 2.2 
 Define the value of the new custom property. Add the element after the name of the component.
 
-The custom property should now be: `--pf-c-label__badge`.
+The custom property should now be: `--pf-c-label__badge`
 
 #### Step 2.3 
-Add the property being applied to the badge. Add the property after the element.
+Add the property being applied to the badge after the element.
 
 It should look like this: `--pf-c-label__badge--MarginRight`
 
@@ -173,13 +167,11 @@ It should look like this: `margin-right: var(--pf-c-label__badge--MarginRight);`
 <Divider />
 <PageSection>
 ## Part 4: Create and use global CSS variables to override PatternFly styles
-To explore this concept, create a new global custom property for a 5xl font size. Use this new global variation to make a new variation of the title component using the provided CodeSandbox for part 4.
+To explore this concept, create a new global custom property for a 5xl font size. Use this new global property to make a new variation of the title component using the provided CodeSandbox for part 4.
 
-Referencing <a href="/design-guidelines/styles/typography" target="_blank">PatternFly's typography design guidelines</a>, the largest font size PatternFly offers is a "Hero title" size. It is 36px represented by the global variable `pf-global--FontSize--4xl`. Assume that there is a need for a larger font size for the title component that is used across the entire application.
+Referencing <a href="/guidelines/typography" target="_blank">PatternFly's typography design guidelines</a>, the largest font size PatternFly offers is a "super hero heading" size. It is 36px represented by the global variable `pf-global--FontSize--4xl`. Assume that there is a need for a larger font size for the title component that is used across the entire application.
 
-<Card style={{maxWidth: "400px"}} component="div" isSelectableRaised onClick={() => window.open("https://codesandbox.io/s/creating-new-global-css-vars-start-cqb8nw", '_blank')}>
-  <CardBody>CodeSandbox - Part 4</CardBody>
-</Card>
+<Button variant="primary" component="a" href="https://codesandbox.io/s/creating-new-global-css-vars-start-cqb8nw" target="_blank">Codesandbox - Part 4</Button>
 
 ### Step 1. Familiarize with `index.html`
 Note the title component in the `<body>` of the `index.html` file. It has a modifier class applied to it which has no PatternFly styles defined for it thus far.
@@ -201,7 +193,7 @@ Create a local component level custom property in the `.pf-c-title{}` block in t
 The local custom property should represent the 5xl variation's font size.
 
 #### Step 3.1 
-Beginning with the component name, write the custom property and add it to the `.pf-c-title{}` block in the `myapp.scss` file.
+Beginning with the component name, write the custom property and add it to the `.pf-c-title{}` block in the `style.css` file.
 
 It should look like this: `--pf-c-title`
 
@@ -242,7 +234,5 @@ It should look like: `font-size: var(--pf-c-title--m-5xl--FontSize);` inside of 
 ### Compare your results.
 A fully constructed card can be viewed and modified in the CodeSandbox solution for part 4. Compare your work with the solution.
 
-<Card style={{maxWidth: "400px"}} component="div" isSelectableRaised onClick={() => window.open("https://codesandbox.io/s/creating-new-global-css-vars-final-cugbq0?file=/style.css", '_blank')}>
-  <CardBody>CodeSandbox - Part 4 solution</CardBody>
-</Card>
+<Button variant="primary" component="a" href="https://codesandbox.io/s/creating-new-global-css-vars-final-cugbq0?file=/style.css" target="_blank">Codesandbox - Part 4 Solution</Button>
 </PageSection>
