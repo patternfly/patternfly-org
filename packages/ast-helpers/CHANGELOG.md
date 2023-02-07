@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.11.0 (2023-02-07)
+
+
+### Features
+
+* **docs:** allow propComponents from another source ([#3397](https://github.com/patternfly/patternfly-org/issues/3397)) ([017b568](https://github.com/patternfly/patternfly-org/commit/017b568ae2ff3c8aaca53566dab4fdea6f3fe492))
+
+
+
+
+
 ## 0.10.4 (2023-02-07)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
