@@ -17,18 +17,18 @@
     "screenshots": "pf-docs-framework screenshots"
   },
   "dependencies": {
-    "@patternfly/documentation-framework": "^1.6.0",
-    "@patternfly/quickstarts": "^2.2.4",
-    "@patternfly/react-catalog-view-extension": "4.95.2",
-    "@patternfly/react-docs": "5.103.66",
+    "@patternfly/documentation-framework": "^2.0.0-alpha.0",
+    "@patternfly/quickstarts": "^2.3.3",
+    "@patternfly/react-catalog-view-extension": "4.95.1",
+    "@patternfly/react-docs": "6.0.0-alpha.8",
     "@patternfly/react-log-viewer": "4.87.100",
-    "@patternfly/react-topology": "^4.91.26",
-    "react": "^16.8.0 || ^17.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0"
+    "@patternfly/react-topology": "^4.91.27",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
-    "@patternfly/patternfly-a11y": "4.3.0",
-    "fs-extra": "^9.0.0",
-    "glob": "^7.1.6"
+    "@patternfly/patternfly-a11y": "4.3.1",
+    "fs-extra": "^11.1.0",
+    "glob": "^8.1.0"
   }
 }

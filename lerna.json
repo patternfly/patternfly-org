@@ -15,5 +15,6 @@
     "packages/documentation-framework",
     "packages/v4"
   ],
-  "version": "independent"
+  "version": "independent",
+  "allowBranch": ["main", "v5"]
 }
