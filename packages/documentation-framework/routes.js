@@ -4,6 +4,8 @@ const { asyncComponentFactory } = require('@patternfly/documentation-framework/h
 const clientRoutes = require('./routes-client'); // Webpack replaces this import: patternfly-docs.routes.js
 const generatedRoutes = require('./routes-generated'); // Webpack replaces this import: patternfly-docs/generated/index.js
 
+const defaultOrder = 50;
+
 const routes = {
   ...clientRoutes,
   ...generatedRoutes
@@ -28,7 +30,7 @@ const isNull = o => o === null || o === undefined;
 const groupedRoutes = Object.entries(routes)
   .filter(([_slug, { id, section }]) => !isNull(id) && !isNull(section))
   .reduce((accum, [slug, pageData]) => {
-    const { section, subsection = null, id, title, source, katacodaLayout, hideNavItem, relPath } = pageData;
+    const { section, subsection = null, id, title, source, katacodaLayout, hideNavItem, relPath, sortValue = false } = pageData;
     pageData.slug = slug;
     // add section to groupedRoutes obj if not yet created
     accum[section] = accum[section] || {};
@@ -52,10 +54,20 @@ const groupedRoutes = Object.entries(routes)
       // add page to subsection
       accum[section][subsection][id] = accum[section][subsection][id] || data;
       accum[section][subsection][id].sources.push(pageData);
+      // add sortValue for nav item ordering
+      accum[section][subsection][id] = {
+        ...accum[section][subsection][id],
+        ...(sortValue && { sortValue:  accum[section][subsection].sortValue || sortValue})
+      }
     } else {
       // add page to section
       accum[section][id] = accum[section][id] || data;
       accum[section][id].sources.push(pageData);
+      // add sortValue for nav item ordering
+      accum[section][id] = {
+        ...accum[section][id],
+        ...(sortValue && { sortValue:  accum[section].sortValue || sortValue})
+      }
     }
 
     return accum;
@@ -73,7 +85,6 @@ const sourceOrder = {
   'design-guidelines': 99,
   'accessibility': 100
 };
-const defaultOrder = 50;
 
 const sortSources = ({ source: s1 }, { source: s2 }) => {
   const s1Index = sourceOrder[s1] || defaultOrder;

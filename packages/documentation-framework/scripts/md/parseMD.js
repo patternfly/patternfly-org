@@ -90,7 +90,8 @@ function toReactComponent(mdFilePath, source, buildMode) {
           sourceRepo}/blob/main/${
           normalizedPath}`,
         hideTOC: frontmatter.hideTOC || false,
-        relPath
+        relPath,
+        sortValue: frontmatter.sortValue || false
       };
       // Temporarily override section for Demo tabs until we port this upstream
       if (frontmatter.section === 'demos' && routes[slug.replace('demos', 'components')]) {
@@ -267,7 +268,8 @@ function sourceMDFile(file, source, buildMode) {
       subsection: pageData.subsection,
       source: pageData.source,
       ...(pageData.katacodaLayout && { katacodaLayout: pageData.katacodaLayout }),
-      ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem })
+      ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem }),
+      ...(pageData.sortValue && { sortValue: pageData.sortValue })
     };
   }
 }
