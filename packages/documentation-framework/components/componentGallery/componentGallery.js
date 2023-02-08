@@ -8,6 +8,8 @@ import './componentGallery.css';
 import ListIcon from '@patternfly/react-icons/dist/esm/icons/list-icon';
 import ThIcon from'@patternfly/react-icons/dist/esm/icons/th-icon';
 
+console.log('componentGallery: ',{groupedRoutes});
+
 export const ComponentGallery = () => {
   const componentsData = process.env.componentsData;
   const { components } = groupedRoutes;

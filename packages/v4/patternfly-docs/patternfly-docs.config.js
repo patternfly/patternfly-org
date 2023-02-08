@@ -23,7 +23,10 @@ module.exports = {
     { section: 'accessibility' },
     { section: 'guidelines' },
     { section: 'UX writing' },
-    { section: 'components' },
+    { 
+      section: 'components',
+      hasOverview: true
+    },
     { section: 'extensions' },
     { section: 'topology' },
     { section: 'charts' },

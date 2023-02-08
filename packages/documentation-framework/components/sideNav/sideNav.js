@@ -39,7 +39,7 @@ const NavItem = ({ text, href }) => {
   )
 };
 
-const ExpandableNav = ({groupedRoutes, location, section, subsection = null}) => {
+const ExpandableNav = ({groupedRoutes, location, section, subsection = null, hasOverview}) => {
   const isActive = getIsActive(location, section, subsection);
   const isSubsection = subsection;
   const routes = isSubsection
@@ -47,6 +47,7 @@ const ExpandableNav = ({groupedRoutes, location, section, subsection = null}) =>
     : groupedRoutes[section];
   const currentSection = isSubsection ? subsection : section;
   const analyticsName = isSubsection ? `${section}/${subsection}` : section;
+  console.log({section, subsection, location, hasOverview});
 
   return (
     <NavExpandable
@@ -78,10 +79,12 @@ const ExpandableNav = ({groupedRoutes, location, section, subsection = null}) =>
           }
           return text1.localeCompare(text2);
         })
-        .map(navObj => navObj.isSubsection
+        .map(navObj => {
+          console.log({navObj});
+            return navObj.isSubsection
           ? ExpandableNav({groupedRoutes, location, section, subsection: navObj.text})
           : NavItem(navObj)
-        )
+          })
       }
     </NavExpandable>
   );
@@ -107,10 +110,10 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
   return (
     <Nav aria-label="Side Nav" theme="light">
       <NavList className="ws-side-nav-list">
-        {navItems.map(({ section, text, href }) => section
+        {navItems.map(({ section, text, href, hasOverview = false }) => section
           ? (
             <Location key={section}>
-              {({ location }) => ExpandableNav({groupedRoutes, location, section})}
+              {({ location }) => ExpandableNav({groupedRoutes, location, section, hasOverview})}
             </Location>
           )
           : NavItem({
