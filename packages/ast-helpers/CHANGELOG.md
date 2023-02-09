@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.13.0 (2023-02-09)
+
+
+### Features
+
+* **docs:** enabled manual ordering of sidenav ([#3403](https://github.com/patternfly/patternfly-org/issues/3403)) ([b630ed9](https://github.com/patternfly/patternfly-org/commit/b630ed9e7062e1302d58793bfec65d49da7764d3))
+
+
+
+
+
 # 0.12.0 (2023-02-09)
 
 
