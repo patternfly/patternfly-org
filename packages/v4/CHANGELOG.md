@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.18.0 (2023-02-09)
+
+
+### Features
+
+* **docs:** customize tabs with optional tabText frontmatter ([#3394](https://github.com/patternfly/patternfly-org/issues/3394)) ([093c6c7](https://github.com/patternfly/patternfly-org/commit/093c6c77053f544605d40f8918dc5621829ac7c3))
+
+
+
+
+
 ## 4.17.1 (2023-02-09)
 
 **Note:** Version bump only for package patternfly-org-4
