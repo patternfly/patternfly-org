@@ -125,7 +125,7 @@ export const MDXTemplate = ({
   const tabNames = sources.reduce((acc, curSrc) => {
     const { source, tabName } = curSrc;
     // use tabName for tab name if present, otherwise default to source
-    let tabLinkText = tabName || capitalize(source.replace('html', 'HTML').replace(/-/g, ' '));
+    const tabLinkText = tabName || capitalize(source.replace('html', 'HTML').replace(/-/g, ' '));
     acc[source] = tabLinkText;
     return acc;
   }, {});
