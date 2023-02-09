@@ -127,6 +127,12 @@ function toReactComponent(mdFilePath, source, buildMode) {
       if (frontmatter.hideNavItem) {
         pageData.hideNavItem = frontmatter.hideNavItem;
       }
+      if (frontmatter.sortValue) {
+        pageData.sortValue = frontmatter.sortValue;
+      }
+      if (frontmatter.subsectionSortValue) {
+        pageData.subsectionSortValue = frontmatter.subsectionSortValue;
+      }
     })
     // Delete HTML comments
     .use(require('./remove-comments'))
@@ -269,7 +275,9 @@ function sourceMDFile(file, source, buildMode) {
       source: pageData.source,
       tabName: pageData.tabName,
       ...(pageData.katacodaLayout && { katacodaLayout: pageData.katacodaLayout }),
-      ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem })
+      ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem }),
+      ...(pageData.sortValue && { sortValue: pageData.sortValue }),
+      ...(pageData.subsectionSortValue && { subsectionSortValue: pageData.subsectionSortValue })
     };
   }
 }
