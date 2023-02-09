@@ -69,10 +69,10 @@ const ExpandableNav = ({groupedRoutes, location, section, subsection = null}) =>
       }}
     >
       {Object.entries(routes || {})
-        .filter(([id, { hideNavItem }]) => !Boolean(hideNavItem) && (id !== 'isSubsection'))
-        .map(([id, { slug, isSubsection = false, sortValue = defaultValue }]) => ({ text: id, href: slug, isSubsection, sortValue }))
-        .sort(({ text: text1, sortValue: sortValue1 }, { text: text2, sortValue: sortValue2 }) => {
-          if (sortValue1 === defaultValue && sortValue2 === defaultValue) {
+        .filter(([id, navObj]) => !Boolean(navObj.hideNavItem) && (Object.entries(navObj).length > 0))
+        .map(([id, { slug, isSubsection = false, sortValue = defaultValue, subsectionSortValue = defaultValue }]) => ({ text: id, href: slug, isSubsection, sortValue: (isSubsection ? subsectionSortValue : sortValue) }))
+        .sort(({text: text1, sortValue: sortValue1}, {text: text2, sortValue: sortValue2}) => {
+          if (sortValue1 === sortValue2) {
             return text1.localeCompare(text2);
           }
           return sortValue1 > sortValue2 ? 1 : -1;

@@ -4,12 +4,12 @@ const { asyncComponentFactory } = require('@patternfly/documentation-framework/h
 const clientRoutes = require('./routes-client'); // Webpack replaces this import: patternfly-docs.routes.js
 const generatedRoutes = require('./routes-generated'); // Webpack replaces this import: patternfly-docs/generated/index.js
 
-const defaultOrder = 50;
-
 const routes = {
   ...clientRoutes,
   ...generatedRoutes
 };
+
+const defaultOrder = 50;
 
 for (let route in routes) {
   const pageData = routes[route];
@@ -30,7 +30,7 @@ const isNull = o => o === null || o === undefined;
 const groupedRoutes = Object.entries(routes)
   .filter(([_slug, { id, section }]) => !isNull(id) && !isNull(section))
   .reduce((accum, [slug, pageData]) => {
-    const { section, subsection = null, id, title, source, katacodaLayout, hideNavItem, relPath, sortValue = false } = pageData;
+    const { section, subsection = null, id, title, source, katacodaLayout, hideNavItem, relPath, sortValue = null, subsectionSortValue = null } = pageData;
     pageData.slug = slug;
     // add section to groupedRoutes obj if not yet created
     accum[section] = accum[section] || {};
@@ -44,7 +44,9 @@ const groupedRoutes = Object.entries(routes)
       sources: [],
       katacodaLayout,
       hideNavItem,
-      relPath
+      relPath,
+      ...(sortValue && { sortValue }),
+      ...(subsectionSortValue && { subsectionSortValue })
     }
     // add page to groupedRoutes obj section or subsection
     if (subsection) {
@@ -54,19 +56,20 @@ const groupedRoutes = Object.entries(routes)
       // add page to subsection
       accum[section][subsection][id] = accum[section][subsection][id] || data;
       accum[section][subsection][id].sources.push(pageData);
-      // add sortValue for nav item ordering
-      accum[section][subsection][id] = {
-        ...accum[section][subsection][id],
-        ...(sortValue && { sortValue:  accum[section][subsection].sortValue || sortValue})
+      // nav item ordering
+      if (sortValue) {
+        accum[section][subsection].sortValue = sortValue;
+      }
+      if (subsectionSortValue) {
+        accum[section][subsection].subsectionSortValue = subsectionSortValue;
       }
     } else {
       // add page to section
       accum[section][id] = accum[section][id] || data;
       accum[section][id].sources.push(pageData);
-      // add sortValue for nav item ordering
-      accum[section][id] = {
-        ...accum[section][id],
-        ...(sortValue && { sortValue:  accum[section].sortValue || sortValue})
+      // nav item ordering
+      if (sortValue) {
+        accum[section][id].sortValue = sortValue;
       }
     }
 
@@ -119,7 +122,8 @@ Object.entries(groupedRoutes)
       // Loop through each page in expandable subsection
       if (pageData.isSubsection) {
         Object.entries(pageData).map(([section, ids]) => {
-          if (section !== 'isSubsection') {
+          // only push nested page objects
+          if (ids && ids?.id) {
             pageDataArr.push(ids);
           }
         })

@@ -90,8 +90,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
           sourceRepo}/blob/main/${
           normalizedPath}`,
         hideTOC: frontmatter.hideTOC || false,
-        relPath,
-        sortValue: frontmatter.sortValue || false
+        relPath
       };
       // Temporarily override section for Demo tabs until we port this upstream
       if (frontmatter.section === 'demos' && routes[slug.replace('demos', 'components')]) {
@@ -126,6 +125,12 @@ function toReactComponent(mdFilePath, source, buildMode) {
       }
       if (frontmatter.hideNavItem) {
         pageData.hideNavItem = frontmatter.hideNavItem;
+      }
+      if (frontmatter.sortValue) {
+        pageData.sortValue = frontmatter.sortValue;
+      }
+      if (frontmatter.subsectionSortValue) {
+        pageData.subsectionSortValue = frontmatter.subsectionSortValue;
       }
     })
     // Delete HTML comments
@@ -269,7 +274,8 @@ function sourceMDFile(file, source, buildMode) {
       source: pageData.source,
       ...(pageData.katacodaLayout && { katacodaLayout: pageData.katacodaLayout }),
       ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem }),
-      ...(pageData.sortValue && { sortValue: pageData.sortValue })
+      ...(pageData.sortValue && { sortValue: pageData.sortValue }),
+      ...(pageData.subsectionSortValue && { subsectionSortValue: pageData.subsectionSortValue })
     };
   }
 }
