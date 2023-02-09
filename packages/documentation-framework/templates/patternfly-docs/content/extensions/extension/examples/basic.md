@@ -11,6 +11,7 @@ source: react
 tabName: My custom tab-name
 # If you use typescript, the name of the interface to display props for
 # These are found through the sourceProps function provdided in patternfly-docs.source.js
+# Can also pass object { component: string, source: string } allowing to specify the source
 propComponents: ['Button']
 ---
 

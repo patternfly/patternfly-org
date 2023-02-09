@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.6.0 (2023-02-07)
+
+
+### Features
+
+* **docs:** allow propComponents from another source ([#3397](https://github.com/patternfly/patternfly-org/issues/3397)) ([017b568](https://github.com/patternfly/patternfly-org/commit/017b568ae2ff3c8aaca53566dab4fdea6f3fe492))
+
+
+
+
+
+## 1.5.4 (2023-02-07)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.5.3 (2023-02-06)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.5.2 (2023-02-06)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 1.5.1 (2023-02-03)
 
 **Note:** Version bump only for package @patternfly/documentation-framework

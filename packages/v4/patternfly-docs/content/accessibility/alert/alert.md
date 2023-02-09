@@ -50,12 +50,12 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
 | `aria-label="[variant] alert"` | `.pf-c-alert` | Adds an accessible name to the alert for assistive technologies. The value passed in place of `[variant]` should generally be one of either "default", "success", "danger", "warning", or "information". |
-| `.pf-screen-reader` | `.pf-c-alert__title <span>` | Should be used to add text to the alert title that is accessible only to assistive technologies and is not visually rendered. The text content of this element should state the type of alert and should preface the alert title. |
+| `.pf-screen-reader` | `.pf-c-alert__title span` | Should be used to add text to the alert title that is accessible only to assistive technologies and is not visually rendered. The text content of this element should state the type of alert and should preface the alert title. |
 | `aria-label="Close [variant] alert: [alert title]"` | `.pf-c-button.pf-m-plain` | Should be used to add an accessible name to the alert close button. |
 | `hidden` | `.pf-c-alert__description` | Hides the expandable alert description content. **Required** when `aria-expanded="false"` is passed into `.pf-c-alert__toggle`. |
 | `aria-expanded="[true or false]"` | `.pf-c-alert__toggle` | Indicates whether the alert toggle is expanded (true) or collapsed (false) to assistive technologies and that the expandable alert description is hidden. **Required**. |
 | `aria-label="[variant] alert details"` | `.pf-c-button.pf-m-plain` | Should be used to add an accessible name to the alert toggle when an alert has the `aria-expanded` attribute passed in. |
-| `aria-hidden="true"` | `.pf-c-alert__icon <i>` | Removes the expandable alert toggle icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
+| `aria-hidden="true"` | `.pf-c-alert__icon i` | Removes the expandable alert toggle icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
 
 When using JavaScript to automatically dismiss alerts, read the `timeout` prop row in the [React customization](#react-customization) section for details on an accessible implementation.
 

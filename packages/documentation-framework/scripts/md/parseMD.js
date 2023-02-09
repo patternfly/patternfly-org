@@ -61,7 +61,10 @@ function toReactComponent(mdFilePath, source, buildMode) {
       }
 
       const propComponents = [...new Set(frontmatter.propComponents || [])].reduce((acc, componentName) => {
-        const name = getTsDocName(componentName, getTsDocNameVariant(source));
+        // Use object properties if passed as propComponent
+        const component = componentName.component || componentName;
+        const src = componentName.source || source;
+        const name = getTsDocName(component, getTsDocNameVariant(src));
 
         if (tsDocs[name]) {
           acc.push(tsDocs[name]);
