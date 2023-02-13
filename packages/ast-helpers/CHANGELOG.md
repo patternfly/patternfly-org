@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.0 (2023-02-13)
+
+
+### Features
+
+* **v5:** pull in alphas, set up doc-framework alpha ([#3401](https://github.com/patternfly/patternfly-org/issues/3401)) ([082d048](https://github.com/patternfly/patternfly-org/commit/082d048f33505fb1efc39a3c9928d1552c7f9cea))
+
+
+
+
+
 # 0.11.0 (2023-02-07)
 
 
