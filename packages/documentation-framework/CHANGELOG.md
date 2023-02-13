@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.2 (2023-02-13)
+
+
+### Bug Fixes
+
+* **whitespace:** test github actions ([2e04c13](https://github.com/patternfly/patternfly-org/commit/2e04c137472fe5b4bd96c25cc32ab9c45238f70b))
+
+
+
+
+
 # 2.0.0-alpha.1 (2023-02-13)
 
 
