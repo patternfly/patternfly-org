@@ -18,7 +18,6 @@ A local development server at http://localhost:8003 can be started with:
 
     yarn start
 
-
 ### Build
 
 The new v4 site can be built with:
