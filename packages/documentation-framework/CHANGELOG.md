@@ -3,115 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## 1.10.4 (2023-03-27)
-
-
-### Bug Fixes
-
-* **release:** update docs for 2023.02 release ([#3453](https://github.com/patternfly/patternfly-org/issues/3453)) ([f5066aa](https://github.com/patternfly/patternfly-org/commit/f5066aa0faff8e0ac0045daf4a689cf40b1bddcf))
-
-
-
-
-
-## 1.10.3 (2023-03-13)
-
-**Note:** Version bump only for package @patternfly/documentation-framework
-
-
-
-
-
-## 1.10.2 (2023-03-08)
-
-
-### Bug Fixes
-
-* **menu:** update and clarify description ([#3438](https://github.com/patternfly/patternfly-org/issues/3438)) ([d06eb61](https://github.com/patternfly/patternfly-org/commit/d06eb619e6bfd185ade10fcfcd703003ec0e606f))
-
-
-
-
-
-## 1.10.1 (2023-03-02)
-
-**Note:** Version bump only for package @patternfly/documentation-framework
-
-
-
-
-
-# 1.10.0 (2023-03-01)
+# 2.0.0-alpha.1 (2023-02-13)
 
 
 ### Features
 
-* **docs:** add react console documentation ([#3366](https://github.com/patternfly/patternfly-org/issues/3366)) ([f3eb5bf](https://github.com/patternfly/patternfly-org/commit/f3eb5bf0ee2557c93068e01e68de1953d6f67716))
-
-
-
-
-
-## 1.9.2 (2023-03-01)
-
-**Note:** Version bump only for package @patternfly/documentation-framework
-
-
-
-
-
-## 1.9.1 (2023-02-27)
-
-**Note:** Version bump only for package @patternfly/documentation-framework
-
-
-
-
-
-# 1.9.0 (2023-02-27)
-
-
-### Features
-
-* **trainings:** remove broken trainings and replace some with blog style training ([#3353](https://github.com/patternfly/patternfly-org/issues/3353)) ([a8dee99](https://github.com/patternfly/patternfly-org/commit/a8dee99d6b4d1f702b070653a6823e389f7d9759))
-
-
-
-
-
-## 1.8.1 (2023-02-20)
-
-**Note:** Version bump only for package @patternfly/documentation-framework
-
-
-
-
-
-# 1.8.0 (2023-02-09)
-
-
-### Features
-
-* **docs:** enabled manual ordering of sidenav ([#3403](https://github.com/patternfly/patternfly-org/issues/3403)) ([b630ed9](https://github.com/patternfly/patternfly-org/commit/b630ed9e7062e1302d58793bfec65d49da7764d3))
-
-
-
-
-
-# 1.7.0 (2023-02-09)
-
-
-### Features
-
-* **docs:** customize tabs with optional tabText frontmatter ([#3394](https://github.com/patternfly/patternfly-org/issues/3394)) ([093c6c7](https://github.com/patternfly/patternfly-org/commit/093c6c77053f544605d40f8918dc5621829ac7c3))
-
-
-
-
-
-## 1.6.1 (2023-02-09)
-
-**Note:** Version bump only for package @patternfly/documentation-framework
+* **v5:** pull in alphas, set up doc-framework alpha ([#3401](https://github.com/patternfly/patternfly-org/issues/3401)) ([082d048](https://github.com/patternfly/patternfly-org/commit/082d048f33505fb1efc39a3c9928d1552c7f9cea))
 
 
 
