@@ -10,7 +10,7 @@ const getStaticParams = (title, html) => {
   let imgAsset;
   while ((imgAsset = imgAssetRegex.exec(html))) {
     const imgName = imgAsset[1];
-    html = html.replace(imgName, `https://www.patternfly.org/v4${imgName}`);
+    html = html.replace(imgName, `https://www.patternfly.org/v5${imgName}`);
   }
 
   return {

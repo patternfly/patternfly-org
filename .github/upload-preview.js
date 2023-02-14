@@ -56,8 +56,8 @@ if (prnum) {
         commentBody += '\n';
       }
 
-      if (uploadName === 'v4') {
-        commentBody += tryAddComment(`PF4 preview: https://${uploadURL}/v4`, commentBody);
+      if (uploadName === 'v5') {
+        commentBody += tryAddComment(`PF4 preview: https://${uploadURL}/v5`, commentBody);
       }
       else if (uploadFolderName === 'coverage') {
         commentBody += tryAddComment(`A11y report: https://${uploadURL}`, commentBody);

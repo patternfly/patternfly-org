@@ -16,5 +16,5 @@ jobs:
           git checkout tmp
       # Injected by generate-workflows.js
       %build%
-      - run: node .github/upload-preview.js build/patternfly-org v4
+      - run: node .github/upload-preview.js build/patternfly-org v5
         name: Upload docs
