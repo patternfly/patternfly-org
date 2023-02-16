@@ -87,7 +87,7 @@ import './colors.css';
 ## Status and state colors
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
-    Status and state colors are important considerations when communicating data and actions to the user through the UI. Our status colors cover default, danger, success, information, and warning statuses.
+      Status and state colors are important indicators that communicate data and actions to the user through the UI. Our status colors cover default, danger, success, information, and warning statuses.
   </GridItem>
   <GridItem xl={6} lg={12} rowSpan={6}>
     <img width="443px" src="./patternfly-status.png" alt="PatternFly status colors" />
@@ -100,7 +100,7 @@ import './colors.css';
     <ColorSwatch color="--pf-global--default-color--200" caption="alert icon">
       This color is used as the icon color for the default alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--palette--cyan-50" caption="alert background">
+    <ColorSwatch color="--pf-global--palette--cyan-50" caption="inline alert background">
       This color is used as the background color for the default inline alert component.
     </ColorSwatch>
   </GridItem>
@@ -124,7 +124,7 @@ import './colors.css';
     <ColorSwatch color="--pf-global--success-color--100" caption="alert icon">
       This color is used as the icon color for the success alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--palette--green-50" caption="alert background">
+    <ColorSwatch color="--pf-global--palette--green-50" caption="inline alert background">
       This color is used as the background color for the success inline alert component.
     </ColorSwatch>
   </GridItem>
@@ -148,8 +148,20 @@ import './colors.css';
     <ColorSwatch color="--pf-global--warning-color--100" caption="alert icon">
       This color is used as the icon color for the warning alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--palette--gold-50" caption="alert background">
+    <ColorSwatch color="--pf-global--palette--gold-50" caption="inline alert background">
       This color is used as the background color for the warning inline alert component.
+    </ColorSwatch>
+  </GridItem>
+   <GridItem xl={6} lg={12}>
+    <h3>Disabled</h3>
+    <ColorSwatch color="--pf-global--disabled-color--100">
+      This color is used as the text color when components are disabled.
+    </ColorSwatch>
+    <ColorSwatch color="--pf-global--disabled-color--200">
+      This color is used as the background color for many components when they are disabled, such as buttons and the application launcher.
+    </ColorSwatch>
+    <ColorSwatch color="--pf-global--disabled-color--300">
+      This color is used as an alternate background color for components when they are disabled, such as dropdowns and options menus.
     </ColorSwatch>
   </GridItem>
 </Grid>
@@ -195,7 +207,7 @@ Our palettes are created as a system designed to reinforce application content a
 
 <Grid hasGutter>
   <GridItem xl2RowSpan={1} xl2={4} xl={6} xlRowSpan={2} sm={12}>
-    <ColorFamily title="Grey family" family="black" />
+    <ColorFamily title="Gray family" family="black" />
   </GridItem>
   <GridItem xl2={4} xl={6} sm={12}>
     <ColorFamily title="Blue family" family="blue" />
