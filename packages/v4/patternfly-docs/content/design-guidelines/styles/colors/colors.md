@@ -87,7 +87,7 @@ import './colors.css';
 ## Status and state colors
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
-      Status and state colors are important indicators that communicate data and actions to the user through the UI. Our status colors cover default, danger, success, information, and warning statuses.
+      Status and state colors are indicators that communicate data and actions to users through the UI. Our status colors cover default, danger, success, information, and warning statuses, as well as disabled states.
   </GridItem>
   <GridItem xl={6} lg={12} rowSpan={6}>
     <img width="443px" src="./patternfly-status.png" alt="PatternFly status colors" />
