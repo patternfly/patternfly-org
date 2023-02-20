@@ -1,5 +1,5 @@
 ---
-id: Designer-contributions
+id: Designer contributions
 section: get-started
 subsection: contribute
 ---

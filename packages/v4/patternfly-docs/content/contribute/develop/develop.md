@@ -1,5 +1,5 @@
 ---
-id: Developer-contributions
+id: Developer contributions
 section: get-started
 subsection: contribute
 ---
