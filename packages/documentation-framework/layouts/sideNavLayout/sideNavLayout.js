@@ -151,6 +151,15 @@ const HeaderTools = ({
                     >
                       PatternFly 3
                     </DropdownItem>
+                    <DropdownItem
+                      key="PatternFly 4"
+                      className="ws-patternfly-3"
+                      target="_blank"
+                      href="#"
+                    >
+                      PatternFly 4
+                      <ExternalLinkAltIcon />
+                    </DropdownItem>
                   </DropdownList>
                 </DropdownGroup>
               </Dropdown>
