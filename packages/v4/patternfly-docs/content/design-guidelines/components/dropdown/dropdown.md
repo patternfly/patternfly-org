@@ -57,6 +57,6 @@ In this case, the user can either click on the primary button, or on the caret t
 
 **Example**
 
-<img src="./img/split-toggle-example.png" alt="split button" width="772"/>
+<img src="./img/split-toggle-example.png" alt="example of split button used inside of a modal" width="655"/>
 
 A split action button is used in a modal where there are different possible submit variations. Here, all the buttons are related in that they are different ways to submit the modal, but the surfaced option is the most likely to be used, while the ones housed in the toggle are other less likely options.
