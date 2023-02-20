@@ -9,6 +9,8 @@ const routes = {
   ...generatedRoutes
 };
 
+const defaultOrder = 50;
+
 for (let route in routes) {
   const pageData = routes[route];
   if (pageData.SyncComponent) {
@@ -28,7 +30,7 @@ const isNull = o => o === null || o === undefined;
 const groupedRoutes = Object.entries(routes)
   .filter(([_slug, { id, section }]) => !isNull(id) && !isNull(section))
   .reduce((accum, [slug, pageData]) => {
-    const { section, subsection = null, id, title, source, katacodaLayout, hideNavItem } = pageData;
+    const { section, subsection = null, id, title, source, katacodaLayout, hideNavItem, relPath, sortValue = null, subsectionSortValue = null } = pageData;
     pageData.slug = slug;
     // add section to groupedRoutes obj if not yet created
     accum[section] = accum[section] || {};
@@ -41,7 +43,10 @@ const groupedRoutes = Object.entries(routes)
       slug: makeSlug(source, section, id, true, subsection),
       sources: [],
       katacodaLayout,
-      hideNavItem
+      hideNavItem,
+      relPath,
+      ...(sortValue && { sortValue }),
+      ...(subsectionSortValue && { subsectionSortValue })
     }
     // add page to groupedRoutes obj section or subsection
     if (subsection) {
@@ -51,10 +56,21 @@ const groupedRoutes = Object.entries(routes)
       // add page to subsection
       accum[section][subsection][id] = accum[section][subsection][id] || data;
       accum[section][subsection][id].sources.push(pageData);
+      // nav item ordering
+      if (sortValue) {
+        accum[section][subsection].sortValue = sortValue;
+      }
+      if (subsectionSortValue) {
+        accum[section][subsection].subsectionSortValue = subsectionSortValue;
+      }
     } else {
       // add page to section
       accum[section][id] = accum[section][id] || data;
       accum[section][id].sources.push(pageData);
+      // nav item ordering
+      if (sortValue) {
+        accum[section][id].sortValue = sortValue;
+      }
     }
 
     return accum;
@@ -64,14 +80,14 @@ const sourceOrder = {
   react: 1,
   'react-next': 1.1,
   'react-composable': 1.2,
-  'react-legacy': 1.3,
+  'react-deprecated': 1.3,
+  'react-legacy': 1.4,
   'react-demos': 2,
   html: 3,
   'html-demos': 4,
   'design-guidelines': 99,
   'accessibility': 100
 };
-const defaultOrder = 50;
 
 const sortSources = ({ source: s1 }, { source: s2 }) => {
   const s1Index = sourceOrder[s1] || defaultOrder;
@@ -106,7 +122,8 @@ Object.entries(groupedRoutes)
       // Loop through each page in expandable subsection
       if (pageData.isSubsection) {
         Object.entries(pageData).map(([section, ids]) => {
-          if (section !== 'isSubsection') {
+          // only push nested page objects
+          if (ids && ids?.id) {
             pageDataArr.push(ids);
           }
         })

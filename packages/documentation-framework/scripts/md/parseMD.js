@@ -61,7 +61,10 @@ function toReactComponent(mdFilePath, source, buildMode) {
       }
 
       const propComponents = [...new Set(frontmatter.propComponents || [])].reduce((acc, componentName) => {
-        const name = getTsDocName(componentName, source === 'react-next');
+        // Use object properties if passed as propComponent
+        const component = componentName.component || componentName;
+        const src = componentName.source || source;
+        const name = getTsDocName(component, getTsDocNameVariant(src));
 
         if (tsDocs[name]) {
           acc.push(tsDocs[name]);
@@ -82,11 +85,13 @@ function toReactComponent(mdFilePath, source, buildMode) {
         section: frontmatter.section || '',
         subsection: frontmatter.subsection || '',
         source,
+        tabName: frontmatter.tabName || null,
         slug,
-        sourceLink: `https://github.com/patternfly/${
+        sourceLink: frontmatter.sourceLink || `https://github.com/patternfly/${
           sourceRepo}/blob/main/${
           normalizedPath}`,
-        hideTOC: frontmatter.hideTOC || false
+        hideTOC: frontmatter.hideTOC || false,
+        relPath
       };
       // Temporarily override section for Demo tabs until we port this upstream
       if (frontmatter.section === 'demos' && routes[slug.replace('demos', 'components')]) {
@@ -121,6 +126,12 @@ function toReactComponent(mdFilePath, source, buildMode) {
       }
       if (frontmatter.hideNavItem) {
         pageData.hideNavItem = frontmatter.hideNavItem;
+      }
+      if (frontmatter.sortValue) {
+        pageData.sortValue = frontmatter.sortValue;
+      }
+      if (frontmatter.subsectionSortValue) {
+        pageData.subsectionSortValue = frontmatter.subsectionSortValue;
       }
     })
     // Delete HTML comments
@@ -241,7 +252,7 @@ function sourcePropsFile(file) {
   tsDocgen(file)
     .filter(({ hide }) => !hide)
     .forEach(({ name, description, props }) => {
-      tsDocs[getTsDocName(name, file.includes('/next'))] = { name, description, props };
+      tsDocs[getTsDocName(name, getTsDocNameVariant(file))] = { name, description, props };
     });
 }
 
@@ -262,8 +273,11 @@ function sourceMDFile(file, source, buildMode) {
       section: pageData.section,
       subsection: pageData.subsection,
       source: pageData.source,
+      tabName: pageData.tabName,
       ...(pageData.katacodaLayout && { katacodaLayout: pageData.katacodaLayout }),
-      ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem })
+      ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem }),
+      ...(pageData.sortValue && { sortValue: pageData.sortValue }),
+      ...(pageData.subsectionSortValue && { subsectionSortValue: pageData.subsectionSortValue })
     };
   }
 }
@@ -282,10 +296,20 @@ function writeIndex() {
   return exitCode;
 }
 
-// Build unique names for components if they are a part of the "next" module.
-function getTsDocName(name, isNextComponent) {
-  return `${name}${isNextComponent ? '-next' : ''}`;
-};
+// Build unique names for components with a "variant" extension
+function getTsDocName(name, variant) {
+  return `${name}${variant ? `-${variant}` : ''}`;
+}
+
+function getTsDocNameVariant(source) {
+  if (source.includes('next')) {
+    return 'next';
+  }
+
+  if (source.includes('deprecated')) {
+    return 'deprecated';
+  }
+}
 
 module.exports = {
   sourceProps(glob, ignore) {
