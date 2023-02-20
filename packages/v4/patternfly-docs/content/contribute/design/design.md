@@ -1,6 +1,7 @@
 ---
-id: Design
-section: contribute
+id: Designer-contributions
+section: get-started
+subsection: contribute
 ---
 
 ## Ways to contribute

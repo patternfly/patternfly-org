@@ -1,6 +1,6 @@
 ---
-id: About
-section: contribute
+id: Contributing-to-PatternFly
+section: get-started
 ---
 
 The PatternFly open source community depends on contributions to help our design system grow and evolve. We encourage everyone, regardless of background, to make suggestions for enhancements, contribute new design patterns and ideas, help identify bugs in code, and more. With your help, we can stay on top of the latest and greatest implementation solutions.  

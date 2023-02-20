@@ -1,6 +1,6 @@
 ---
 id: Usage and behavior
-section: guidelines
+section: design-foundations
 ---
 
 As you design with PatternFly, you might encounter common use cases where multiple components apply. This page gives advice for which component to use in these situations and shares where to find more detailed usage guidelines.
