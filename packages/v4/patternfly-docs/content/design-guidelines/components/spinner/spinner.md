@@ -7,6 +7,7 @@ section: components
 
 Spinners are used to demonstrate data loading. Spinners are offered in different sizes that follow the sizing of our icons. These sizes include extra small, small, medium and large. Depending on the size of information you are loading and the space you are dealing with, we recommend using the spinner size that generally matches.
 
+
 <img src="./img/spinner-sizes.png" alt="Visual of different spinner sizes" width="436"/>
 
 ### When to use
