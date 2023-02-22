@@ -19,7 +19,7 @@ Use a skeleton when:
 - You don’t know what the structure of the component is going to look like
 
 **Show a [spinner](/components/spinner/react) when:**
-- You have multiple elements on the page that are loading at different speeds, use a spinner once the structure of at least one element is loaded on the page
+- Multiple elements on the page that are loading at different speeds, use a spinner once the structure of at least one element is loaded on the page
 - You are attempting to load in a component that sits on top of a page with an expected structure
 - It is likely it will fail or show an empty state while waiting for actions to complete.
 
