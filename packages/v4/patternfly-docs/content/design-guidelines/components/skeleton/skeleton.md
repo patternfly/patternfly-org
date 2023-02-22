@@ -9,18 +9,18 @@ A skeleton is a type of loading state that allows you to expose content incremen
 ### When to use a skeleton vs. a loading spinner
 Use a skeleton when:
 - The structure of a page has loaded in but the content has not.
-- When some content of a page has loaded, but not all. For example, in a dashboard, you may have some loaded cards, while others are still loading. 
+- Some content of a page has loaded, but not all. For example, in a dashboard, you may have some loaded cards, while others are still loading. 
 - You want to show loading content inside of a card, table, data list or more.
 
 **Show a skeleton when:**
 - You know what the populated data is going to look like (even if it results in an empty state).
 
 **Do not show a skeleton when:**
-- You don’t know what the structure of the component is going to look like
+- You don’t know what the structure of the component is going to look like.
 
 **Show a [spinner](/components/spinner/react) when:**
-- You have multiple elements on the page that are loading at different speeds, use a spinner once the structure of at least one element is loaded on the page
-- You are attempting to load in a component that sits on top of a page with an expected structure
+- You have multiple elements on the page that are loading at different speeds, use a spinner once the structure of at least one element is loaded on the page.
+- You are attempting to load in a component that sits on top of a page with an expected structure.
 - It is likely it will fail or show an empty state while waiting for actions to complete.
 
 ## Accessibility
