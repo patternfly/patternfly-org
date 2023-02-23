@@ -42,7 +42,7 @@ At a minimum, a card should meet the following criteria:
 
 The following React props have been provided for more fine-tuned control over accessibility.
 
-| Prop | Applied to | Reason | 
+| Prop | Applied to | Reason |
 |---|---|---|
 | `aria-label="[text describing the card]"` or `aria-labelledby="[id of the element that labels the card]"` | `Card` | Adds an accessible name to the card. If the card has a `CardTitle`, the `aria-labelledby` prop should be passed in with a value of the `CardTitle`'s `id` prop. Otherwise the `aria-label` prop should be passed in to act as a title for the card. |
 | `component="[element tag]"` | `Card` | Sets the base element for the sub-component (`div` element by default). <br/><br/> When using `div` as the component, the `aria-label` and `aria-labelledby` props should be omitted as these props are not well supported on `div` elements without a `role`. |
@@ -69,7 +69,7 @@ When a card has expandable content, `toggleButtonProps` must be passed into the 
   )}
 ```
 
-The `aria-label` property gives the toggle an accessible name for assistive technologies to announce to users, e.g. "Toggle label, button". 
+The `aria-label` property gives the toggle an accessible name for assistive technologies to announce to users, e.g. "Toggle label, button".
 
 The `aria-labelledby` should include the `id` of a `CardTitle` sub-component if one exists or the `id` of the card itself, as well as the `id` of the toggle. This will combine the accessible name of both the `CardTitle` or `Card` and toggle, e.g. "Card title Toggle label, button". The order in which the ID's are passed in will determine this combined accessible name.
 
@@ -81,7 +81,7 @@ The `aria-label` and `id` attributes can be omitted from the `toggleButtonProps`
 
 The following HTML attributes and PatternFly classes can be used for more fine-tuned control over accessibility.
 
-| Attribute or class | Applied to | Reason | 
+| Attribute or class | Applied to | Reason |
 |---|---|---|
 | `aria-label="[text describing the card]"` or `aria-labelledby="[id of the element that labels the card]"` | `.pf-c-card` | Adds an accessible name to the card. If the card has a `.pf-c-card__title`, the `aria-labelledby` attribute should be passed in with a value of the card title's `id` attribute. Otherwise the `aria-label` attribute should be passed in to act as a title for the card. |
 | `tabindex="0"` | `.pf-c-card.pf-m-selectable-raised` or `.pf-c-card.pf-m-selectable` | Inserts the card into the tab order of the page so that it can be navigated to with standard keyboard navigation. **Required** when a card is selectable. |
@@ -103,4 +103,4 @@ You should generally ensure a card does not have an excessive amount of function
 
 For both the React and HTML/CSS library, several sub-components have a default element that is used as a wrapper. For example, the `Card`/`.pf-c-card` sub-component uses the `article` element as its default wrapper.
 
-While this wrapper element can be customized in both libraries, you must ensure doing so does not create invalid markup nor makes the card as a whole less accessible. 
+While this wrapper element can be customized in both libraries, you must ensure doing so does not create invalid markup nor makes the card as a whole less accessible.
