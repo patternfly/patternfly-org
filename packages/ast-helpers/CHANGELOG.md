@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.3 (2023-02-27)
+
+
+### Bug Fixes
+
+* **README:** small wording change to test build ([45ede1b](https://github.com/patternfly/patternfly-org/commit/45ede1b356392df6982fd5cbf3b3a4d976f54e06))
+
+
+
+
+
 # 0.12.0-alpha.2 (2023-02-13)
 
 
