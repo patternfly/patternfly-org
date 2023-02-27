@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.9.0 (2023-02-27)
+
+
+### Features
+
+* **trainings:** remove broken trainings and replace some with blog style training ([#3353](https://github.com/patternfly/patternfly-org/issues/3353)) ([a8dee99](https://github.com/patternfly/patternfly-org/commit/a8dee99d6b4d1f702b070653a6823e389f7d9759))
+
+
+
+
+
 ## 1.8.1 (2023-02-20)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
