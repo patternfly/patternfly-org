@@ -1,6 +1,6 @@
 # patternfly-org
 
-The PatternFly Org is the source for the official documentation for PatternFly 3 and PatternFly 4.
+The PatternFly Org is the source for the official documentation for PatternFly.
 
 ## Development
 
