@@ -5,8 +5,8 @@ import {
   Card,
   CardTitle,
   CardBody,
+  CardHeader,
   CardFooter,
-  CardHeaderMain,
   EmptyState,
   EmptyStateBody,
   EmptyStateIcon,
@@ -36,9 +36,9 @@ const Card404 = ({
 }) => (
   <GridItem xl={3} md={6} xs={12}>
     <Card style={{ height: '340px' }}>
-      <CardHeaderMain className="ws-404-card-header">
+      <CardHeader className="ws-404-card-header">
         <img src={img} alt={alt} width="64px" />
-      </CardHeaderMain>
+      </CardHeader>
       <CardTitle>
         {title}
       </CardTitle>
