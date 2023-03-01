@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.10.0 (2023-03-01)
+
+
+### Features
+
+* **docs:** add react console documentation ([#3366](https://github.com/patternfly/patternfly-org/issues/3366)) ([f3eb5bf](https://github.com/patternfly/patternfly-org/commit/f3eb5bf0ee2557c93068e01e68de1953d6f67716))
+
+
+
+
+
 ## 1.9.2 (2023-03-01)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
