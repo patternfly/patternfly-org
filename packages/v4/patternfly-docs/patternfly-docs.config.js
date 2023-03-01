@@ -29,7 +29,6 @@ module.exports = {
     { section: 'utilities' },
     { section: 'developer-resources' },
     { section: 'training' }, 
-    { href: '/community' }
   ],
   topNavItems: [],
   port: 8003,
