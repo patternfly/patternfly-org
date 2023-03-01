@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.4 (2023-03-01)
+
+
+### Bug Fixes
+
+* **404 Page:** Removed CardHeaderMain ([#3429](https://github.com/patternfly/patternfly-org/issues/3429)) ([6169fed](https://github.com/patternfly/patternfly-org/commit/6169fedd3dc57b9c206197c498d6cebc559e2a93))
+
+
+
+
+
 # 0.12.0-alpha.3 (2023-02-27)
 
 
