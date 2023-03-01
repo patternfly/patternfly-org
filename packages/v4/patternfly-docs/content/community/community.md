@@ -1,5 +1,6 @@
 ---
 id: Community
+title: PatternFly community
 section: get-started
 ---
 
