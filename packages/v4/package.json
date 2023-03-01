@@ -23,6 +23,7 @@
     "@patternfly/react-docs": "5.103.66",
     "@patternfly/react-log-viewer": "4.87.100",
     "@patternfly/react-topology": "^4.91.26",
+    "@patternfly/react-console": "^4.95.3",
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0"
   },
