@@ -4,6 +4,7 @@ section: components
 ---
 
 import { Checkbox, List, ListItem } from '@patternfly/react-core';
+import { Link } from '@patternfly/documentation-framework/components/link/link';
 
 ## Accessibility
 
@@ -25,7 +26,7 @@ At a minimum, an avatar should meet the following criteria:
     <Checkbox id="avatar-a11y-checkbox-1" label="The avatar image has alternative text." />
   </ListItem>
   <ListItem>
-    <Checkbox id="avatar-a11y-checkbox-2" label="Any SVGs used are accessible." description={<span><a href="https://www.deque.com/blog/creating-accessible-svgs/">How to create accessible SVGs</a></span>}/>
+    <Checkbox id="avatar-a11y-checkbox-2" label="Any SVGs used are accessible." description={<span><Link href="https://www.deque.com/blog/creating-accessible-svgs/">How to create accessible SVGs</Link></span>}/>
   </ListItem>
   <ListItem>
     <Checkbox id="avatar-a11y-checkbox-3" label={<span>Keyboard users should not be able to interact with the avatar on its own (via <kbd>Tab</kbd> and <kbd>Tab + Shift</kbd>).</span>} />

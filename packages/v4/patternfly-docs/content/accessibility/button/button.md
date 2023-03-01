@@ -54,7 +54,7 @@ The following React props have been provided for more fine-tuned control over ac
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `aria-label="[text describing the button]` | `Button` | Adds an accessible name to the button. **Required** if the button does not contain visible text, such as the `plain` button variant. |
+| `aria-label="[text that labels the button]` | `Button` | Adds an accessible name to the button. **Required** if the button does not contain visible text, such as the `plain` button variant. |
 | `isAriaDisabled` | `Button` | Disables the button, but keeps it perceivable to users. Use this prop instead of `isDisabled` when you want users to still be aware of the button and that it is disabled, or when you expect or intend for the button to receive focus despite being disabled. For example, if the disabled button has a tooltip, you should pass this prop in to disable it. |
 
 ## HTML/CSS customization
@@ -63,7 +63,7 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `aria-label="[text describing the button]"` | `.pf-c-button` | Adds an accessible name to the button. **Required** if the button does not contain visible text, such as the `plain` button variant. |
+| `aria-label="[text that labels the button]"` | `.pf-c-button` | Adds an accessible name to the button. **Required** if the button does not contain visible text, such as the `plain` button variant. |
 | `aria-disabled="true"` | `.pf-c-button` | Disables the button, but keeps it perceivable to users. Use this prop instead of `isDisabled` when you want users to still be aware of the button and that it is disabled, or when you expect or intend for the button to receive focus despite being disabled. For example, if the disabled button has a tooltip, you should pass this prop in to disable it. |
 | `tabindex="-1"` | `a.pf-c-button.pf-m-disabled`, `span.pf-c-button.pf-m-link.pf-m-inline.pf-m-disabled` | When a non-button element is used, prevents it from being focusable via keyboard. **Required** when the element is disabled. |
 | `tabindex="0"` | `span.pf-c-button.pf-m-link.pf-m-inline` | Inserts the `span` into the tab order so that is is focusable via keyboard. **Required** when the element is a `span`. |
