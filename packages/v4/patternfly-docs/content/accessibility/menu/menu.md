@@ -33,11 +33,11 @@ The following React props have been provided for more fine-tuned control over ac
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `aria-label=[text labeling the menu]` | `Menu` | Adds an accessible name to the menu. |
-| `aria-label=[text labeling the menu item]` | `MenuItem` | Adds an accessible name to the menu item. |
+| `aria-label=[text that labels the menu]` | `Menu` | Adds an accessible name to the menu. |
+| `aria-label=[text that labels the menu item]` | `MenuItem` | Adds an accessible name to the menu item. |
 | `icon={<Icon aria-hidden />}`  | `MenuItem` | Renders an icon to a menu item. When icon is decorative, pass an `aria-hidden` to the icon to hide it from screen reader users. |
 | `isExternalLink` | `MenuItem` | Renders an icon on the item when it receives focus or is hovered, as well as visually hidden text, to let users of certain assistive technologies know that the item will open in a new tab/window. **Required if the item opens a new tab/window**. |
-| `aria-label=[text labeling the menu item's action]` | `MenuItemAction` | Adds an accessible name to the action item on the menu. |
+| `aria-label=[text that labels the menu item's action]` | `MenuItemAction` | Adds an accessible name to the action item on the menu. |
 |`icon={<Icon aria-hidden />}` | `MenuItemAction` | Renders an icon to a menu item action. When icon is decorative, pass an `aria-hidden` to the icon to hide it from screen reader users. |
 | `labelHeadingLevel=[a heading tag]` | `MenuGroup` | Adds a group label's heading level. Default is `h1`. Be sure to not skip heading levels when passing this prop in. For example, if a menu group is within a page section that has an `h2` heading, you should not pass `headingLevel="h4"`. |
 
@@ -57,5 +57,5 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 | `aria-disabled="true"` | `a.pf-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
 | `tabindex="-1"` | `a.pf-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
 | `aria-hidden="true"` | `.pf-c-menu__item-icon`, `.pf-c-menu__item-action-icon`, `.pf-c-menu__item-external-icon`, `.pf-c-menu__item-toggle-icon`, `.pf-c-menu__item-select-icon` | Hides the icon from assistive technologies. |
-| `aria-label="Not starred"` | `.pf-c-menu__item-action-icon.pf-m-favorite` | Provides an accessible label indicating that the favorite action is not selected. |
-| `aria-label="Starred"` | `.pf-c-menu__item-action-icon.pf-m-favorite.pf-m-favorited` | Provides an accessible label indicating that the favorite action is selected. |
+| `aria-label="[text that labels the action]"` | `.pf-c-menu__item-action-icon.pf-m-favorite` | Provides an accessible label indicating that the favorite action is not selected. |
+| `aria-label="[text that labels the action]"` | `.pf-c-menu__item-action-icon.pf-m-favorite.pf-m-favorited` | Provides an accessible label indicating that the favorite action is selected. |
