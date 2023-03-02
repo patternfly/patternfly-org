@@ -8,6 +8,7 @@ module.exports = (_env, argv) => {
   const {
     pathPrefix = '',
     mode,
+    googleAnalyticsID = false,
     algolia = {},
     hasGdprBanner = false,
     hasFooter = false,
@@ -136,6 +137,7 @@ module.exports = (_env, argv) => {
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(mode),
         'process.env.pathPrefix': JSON.stringify(isProd ? pathPrefix : ''),
+        'process.env.googleAnalyticsID': JSON.stringify(isProd ? googleAnalyticsID : ''),
         'process.env.algolia': JSON.stringify(algolia),
         'process.env.hasGdprBanner': JSON.stringify(hasGdprBanner),
         'process.env.hasFooter': JSON.stringify(hasFooter),
