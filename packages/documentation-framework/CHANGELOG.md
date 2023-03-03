@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.8 (2023-03-03)
+
+
+### Features
+
+* **docs-framework:** add legacy ssl cli option ([#3433](https://github.com/patternfly/patternfly-org/issues/3433)) ([ccb56fb](https://github.com/patternfly/patternfly-org/commit/ccb56fb27026ebe4be5f5166a86cf3c2f995a872))
+
+
+
+
+
 # 2.0.0-alpha.7 (2023-03-01)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
