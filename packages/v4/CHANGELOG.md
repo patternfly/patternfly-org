@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.21.2 (2023-03-08)
+
+
+### Bug Fixes
+
+* **menu:** update and clarify description ([#3438](https://github.com/patternfly/patternfly-org/issues/3438)) ([d06eb61](https://github.com/patternfly/patternfly-org/commit/d06eb619e6bfd185ade10fcfcd703003ec0e606f))
+
+
+
+
+
 ## 4.21.1 (2023-03-02)
 
 **Note:** Version bump only for package patternfly-org-4
