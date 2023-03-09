@@ -14,6 +14,8 @@ Spinners are used to demonstrate data loading. Spinners are offered in different
 
 Position the spinner in the center of the element that is loading. To ensure proper background contrast, use a white or light background
 
+<img src="./img/spinner-full-page.png" alt="Example of spinner in full page" width="990"/>
+
 ### When to use
 Use a spinner:
 - when the user is advancing to a new page or step where the structure has not been loaded in yet.
@@ -31,21 +33,21 @@ Don't use a spinner:
 
 Spinners are centered within the container AND the viewport by default in all use cases. Although this is the standard position of it, the spinner may be repositioned if necessary for particular screens and screen sizes.
 
-### Spinner in select list (small)
+### Spinner in a wizard
 
-<img src="./img/spinner-in-select.png" alt="Example of spinner in select menu" width="990"/>
+<img src="./img/wizard-with-spinner.png" alt="Example of spinner in a wizard" width="990"/>
 
-### Spinner in cards within a dashboard (medium)
+### Spinner in a full page
 
-<img src="./img/spinner-in-cards.png" alt="Example of spinner in cards" width="990"/>
+<img src="./img/spinner-full-page.png" alt="Example of spinner in full page" width="990"/>
+
+### Spinner in a modal window
+
+<img src="./img/spinner-in-modal.png" alt="Example of spinner in a modal window" width="990"/>
 
 ### Spinner in a data list or table (large)
 
 <img src="./img/spinner-in-table.png" alt="Example of spinner in table" width="990"/>
-
-### Spinner in a full page (large)
-
-<img src="./img/spinner-full-page.png" alt="Example of spinner in full page" width="990"/>
 
 ### When to use a loading spinner vs. a skeleton
 
