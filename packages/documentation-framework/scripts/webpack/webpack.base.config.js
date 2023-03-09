@@ -21,7 +21,7 @@ module.exports = (_env, argv) => {
   } = argv;
 
   const isProd = mode === 'production';
-  
+
   return {
     entry: path.resolve(__dirname, '../../app.js'),
     output: {

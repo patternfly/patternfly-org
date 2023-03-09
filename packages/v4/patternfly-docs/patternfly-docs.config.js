@@ -16,17 +16,13 @@ module.exports = {
   hasDesignGuidelines: true,
   hasDarkThemeSwitcher: false,
   componentsData,
-  // illustrations,
   sideNavItems: [
     { section: 'get-started' },
     { section: 'developer-resources' },
     { section: 'accessibility' },
     { section: 'guidelines' },
     { section: 'UX writing' },
-    { 
-      section: 'components',
-      hasOverview: true
-    },
+    { section: 'components' },
     { section: 'extensions' },
     { section: 'topology' },
     { section: 'charts' },

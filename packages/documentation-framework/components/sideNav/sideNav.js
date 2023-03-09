@@ -39,7 +39,7 @@ const NavItem = ({ text, href }) => {
   )
 };
 
-const ExpandableNav = ({groupedRoutes, location, section, subsection = null, hasOverview}) => {
+const ExpandableNav = ({groupedRoutes, location, section, subsection = null}) => {
   const isActive = getIsActive(location, section, subsection);
   const isSubsection = subsection;
   const routes = isSubsection
@@ -47,7 +47,6 @@ const ExpandableNav = ({groupedRoutes, location, section, subsection = null, has
     : groupedRoutes[section];
   const currentSection = isSubsection ? subsection : section;
   const analyticsName = isSubsection ? `${section}/${subsection}` : section;
-  console.log({section, subsection, location, hasOverview});
 
   return (
     <NavExpandable
@@ -79,19 +78,16 @@ const ExpandableNav = ({groupedRoutes, location, section, subsection = null, has
           }
           return text1.localeCompare(text2);
         })
-        .map(navObj => {
-          console.log({navObj});
-            return navObj.isSubsection
+        .map(navObj => navObj.isSubsection
           ? ExpandableNav({groupedRoutes, location, section, subsection: navObj.text})
           : NavItem(navObj)
-          })
+        )
       }
     </NavExpandable>
   );
 }
 
 export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
-  console.log({groupedRoutes})
   React.useEffect(() => {
     if (typeof window === 'undefined') {
       return;
@@ -110,10 +106,10 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
   return (
     <Nav aria-label="Side Nav" theme="light">
       <NavList className="ws-side-nav-list">
-        {navItems.map(({ section, text, href, hasOverview = false }) => section
+        {navItems.map(({ section, text, href }) => section
           ? (
             <Location key={section}>
-              {({ location }) => ExpandableNav({groupedRoutes, location, section, hasOverview})}
+              {({ location }) => ExpandableNav({ groupedRoutes, location, section })}
             </Location>
           )
           : NavItem({

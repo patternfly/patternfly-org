@@ -102,8 +102,6 @@ const getDefaultDesignGuidelines = ({ id, section, slug, title }) => {
   return pageData;
 }
 
-console.log('routes.js: ',{groupedRoutes});
-
 Object.entries(groupedRoutes)
   .forEach(([_section, ids]) => {
     Object.values(ids).forEach(pageData => {

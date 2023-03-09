@@ -8,10 +8,33 @@ import './componentGallery.css';
 import ListIcon from '@patternfly/react-icons/dist/esm/icons/list-icon';
 import ThIcon from'@patternfly/react-icons/dist/esm/icons/th-icon';
 
-console.log('componentGallery: ',{groupedRoutes});
+const Illustration = ({component: IllustrationWrapper, illustration, componentName}) => (
+  <IllustrationWrapper>
+    <img src={illustration} alt={`${componentName} illustration`} />
+  </IllustrationWrapper>
+);
+const BetaLabel = ({component: LabelWrapper}) => (
+  <LabelWrapper>
+    <Label color="gold">Beta feature</Label>
+  </LabelWrapper>
+);
+
+// convert summary text in drawer from string to jsx
+const SummaryComponent = ({ id }) => {
+  const componentsData = process.env.componentsData;
+  const componentDasherized = id.split(' ').join('-').toLowerCase();
+  const summary = componentsData?.[componentDasherized]?.summary;
+  if (!summary) {
+    return null;
+  }
+  // Remove anchor tags to avoid <a> in summary nested within <a> of Link card/datalistitem
+  const summaryNoLinks = summary.replace(/<Link[^>]*>([^<]+)<\/Link>/gm, '$1');
+  const { code } = convertToReactComponent(`<>${summaryNoLinks}</>`);
+  const getSummaryComponent = new Function('React', code);
+  return getSummaryComponent(React);
+}
 
 export const ComponentGallery = () => {
-  const componentsData = process.env.componentsData;
   const { components } = groupedRoutes;
   const [searchTerm, setSearchTerm] = React.useState('');
   const [layoutView, setLayoutView] = React.useState('grid');
@@ -20,42 +43,20 @@ export const ComponentGallery = () => {
       componentName !== 'View all components' &&
       componentName
         .toLowerCase()
-        .includes(searchTerm.toLowerCase()))
-    );
-  // convert summary text in drawer from string to jsx
-  const SummaryComponent = ({ id }) => {
-    const componentDasherized = id.split(' ').join('-').toLowerCase();
-    const summary = componentsData?.[componentDasherized]?.summary;
-    if (!summary) {
-      return null;
-    }
-    // Remove anchor tags to avoid <a> in summary nested within <a> of Link card/datalistitem
-    const summaryNoLinks = summary.replace(/<Link[^>]*>([^<]+)<\/Link>/gm, '$1');
-    const { code } = convertToReactComponent(`<>${summaryNoLinks}</>`);
-    const getSummaryComponent = new Function('React', code);
-    return getSummaryComponent(React);
-  }
+        .includes(searchTerm.toLowerCase())
+    ));
   const GalleryLayout = layoutView === 'grid' ? Gallery : DataList;
   const layoutProps = layoutView === 'grid'
     ? { hasGutter: true }
     : { onSelectDataListItem: () => {}};
-  const Illustration = ({component: IllustrationWrapper, illustration, componentName}) => (
-    <IllustrationWrapper>
-      <img src={illustration} alt={`${componentName} illustration`} />
-    </IllustrationWrapper>
-  );
-  const BetaLabel = ({component: LabelWrapper}) => (
-    <LabelWrapper>
-      <Label color="gold">Beta feature</Label>
-    </LabelWrapper>
-  );
+  
 
   return (
     <div className="ws-component-gallery">
       <Toolbar isSticky>
         <ToolbarContent>
           <ToolbarItem variant="search-filter" widths={{default: '100%', md: '320px'}}>
-            <SearchInput onClear={false} value={searchTerm} placeholder="Search components by name" onChange={setSearchTerm} />
+            <SearchInput onClear={false} value={searchTerm} placeholder="Search components by name" onChange={(_evt, val) => setSearchTerm(val)} />
           </ToolbarItem>
           {searchTerm && (
             <ToolbarItem>
