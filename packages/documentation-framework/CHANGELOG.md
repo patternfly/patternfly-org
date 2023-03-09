@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.9 (2023-03-09)
+
+
+### Bug Fixes
+
+* **versions:** fix typo ([a9b8fe2](https://github.com/patternfly/patternfly-org/commit/a9b8fe296a9c28bdd9ada01a80b1653810802ddf))
+
+
+
+
+
 # 2.0.0-alpha.8 (2023-03-03)
 
 
