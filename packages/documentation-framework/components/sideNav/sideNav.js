@@ -12,6 +12,8 @@ const getIsActive = (location, section, subsection = null) => {
   return location.pathname.startsWith(`${process.env.pathPrefix}${slug}`);
 }
 
+const defaultValue = 50;
+
 const NavItem = ({ text, href }) => {
   const isMobileView = window.innerWidth < Number.parseInt(globalBreakpointXl.value, 10);
   return (
@@ -67,16 +69,13 @@ const ExpandableNav = ({groupedRoutes, location, section, subsection = null}) =>
       }}
     >
       {Object.entries(routes || {})
-        .filter(([id, { hideNavItem }]) => !Boolean(hideNavItem) && (id !== 'isSubsection'))
-        .map(([id, { slug, isSubsection = false }]) => ({ text: id, href: slug, isSubsection }))
-        .sort(({ text: text1 }, { text: text2 }) => {
-          // Sort 'View all components' to top of sidenav component section
-          if (text1 === 'View all components') {
-            return -1;
-          } else if (text2 === 'View all components') {
-            return 1;
+        .filter(([id, navObj]) => !Boolean(navObj.hideNavItem) && (Object.entries(navObj).length > 0))
+        .map(([id, { slug, isSubsection = false, sortValue = defaultValue, subsectionSortValue = defaultValue }]) => ({ text: id, href: slug, isSubsection, sortValue: (isSubsection ? subsectionSortValue : sortValue) }))
+        .sort(({text: text1, sortValue: sortValue1}, {text: text2, sortValue: sortValue2}) => {
+          if (sortValue1 === sortValue2) {
+            return text1.localeCompare(text2);
           }
-          return text1.localeCompare(text2);
+          return sortValue1 > sortValue2 ? 1 : -1;
         })
         .map(navObj => navObj.isSubsection
           ? ExpandableNav({groupedRoutes, location, section, subsection: navObj.text})

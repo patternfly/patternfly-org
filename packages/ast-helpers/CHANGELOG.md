@@ -3,6 +3,136 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.15.2 (2023-03-08)
+
+
+### Bug Fixes
+
+* **menu:** update and clarify description ([#3438](https://github.com/patternfly/patternfly-org/issues/3438)) ([d06eb61](https://github.com/patternfly/patternfly-org/commit/d06eb619e6bfd185ade10fcfcd703003ec0e606f))
+
+
+
+
+
+## 0.15.1 (2023-03-02)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.15.0 (2023-03-01)
+
+
+### Features
+
+* **docs:** add react console documentation ([#3366](https://github.com/patternfly/patternfly-org/issues/3366)) ([f3eb5bf](https://github.com/patternfly/patternfly-org/commit/f3eb5bf0ee2557c93068e01e68de1953d6f67716))
+
+
+
+
+
+## 0.14.2 (2023-03-01)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.14.1 (2023-02-27)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.14.0 (2023-02-27)
+
+
+### Features
+
+* **trainings:** remove broken trainings and replace some with blog style training ([#3353](https://github.com/patternfly/patternfly-org/issues/3353)) ([a8dee99](https://github.com/patternfly/patternfly-org/commit/a8dee99d6b4d1f702b070653a6823e389f7d9759))
+
+
+
+
+
+## 0.13.1 (2023-02-20)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.13.0 (2023-02-09)
+
+
+### Features
+
+* **docs:** enabled manual ordering of sidenav ([#3403](https://github.com/patternfly/patternfly-org/issues/3403)) ([b630ed9](https://github.com/patternfly/patternfly-org/commit/b630ed9e7062e1302d58793bfec65d49da7764d3))
+
+
+
+
+
+# 0.12.0 (2023-02-09)
+
+
+### Features
+
+* **docs:** customize tabs with optional tabText frontmatter ([#3394](https://github.com/patternfly/patternfly-org/issues/3394)) ([093c6c7](https://github.com/patternfly/patternfly-org/commit/093c6c77053f544605d40f8918dc5621829ac7c3))
+
+
+
+
+
+## 0.11.1 (2023-02-09)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.11.0 (2023-02-07)
+
+
+### Features
+
+* **docs:** allow propComponents from another source ([#3397](https://github.com/patternfly/patternfly-org/issues/3397)) ([017b568](https://github.com/patternfly/patternfly-org/commit/017b568ae2ff3c8aaca53566dab4fdea6f3fe492))
+
+
+
+
+
+## 0.10.4 (2023-02-07)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.10.3 (2023-02-06)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.10.2 (2023-02-06)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 ## 0.10.1 (2023-02-03)
 
 **Note:** Version bump only for package @patternfly/ast-helpers

@@ -8,6 +8,7 @@ module.exports = (_env, argv) => {
   const {
     pathPrefix = '',
     mode,
+    googleAnalyticsID = false,
     algolia = {},
     hasGdprBanner = false,
     hasFooter = false,
@@ -39,9 +40,12 @@ module.exports = (_env, argv) => {
           include: [
             path.resolve(process.cwd(), 'src'),
             path.resolve(process.cwd(), 'patternfly-docs'),
+            path.resolve(process.cwd(), 'examples'),
             path.resolve(__dirname, '../..'), // Temporarily compile theme using webpack for development
             /react-[\w-]+\/src\/.*\/examples/,
             /react-[\w-]+\\src\\.*\\examples/, // fix for Windows
+            /react-[\w-]+\/patternfly-docs\/.*\/examples/, //fixes for extensions
+            /react-[\w-]+\\patternfly-docs\\.*\\examples/,
           ].concat(includePaths.map(path => new RegExp(path))),
           exclude: [
             path.resolve(__dirname, '../../node_modules'), // Temporarily compile theme using webpack for development
@@ -134,6 +138,7 @@ module.exports = (_env, argv) => {
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(mode),
         'process.env.pathPrefix': JSON.stringify(isProd ? pathPrefix : ''),
+        'process.env.googleAnalyticsID': JSON.stringify(isProd ? googleAnalyticsID : ''),
         'process.env.algolia': JSON.stringify(algolia),
         'process.env.hasGdprBanner': JSON.stringify(hasGdprBanner),
         'process.env.hasFooter': JSON.stringify(hasFooter),

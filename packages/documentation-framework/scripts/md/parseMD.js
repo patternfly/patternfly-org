@@ -61,7 +61,10 @@ function toReactComponent(mdFilePath, source, buildMode) {
       }
 
       const propComponents = [...new Set(frontmatter.propComponents || [])].reduce((acc, componentName) => {
-        const name = getTsDocName(componentName, getTsDocNameVariant(source));
+        // Use object properties if passed as propComponent
+        const component = componentName.component || componentName;
+        const src = componentName.source || source;
+        const name = getTsDocName(component, getTsDocNameVariant(src));
 
         if (tsDocs[name]) {
           acc.push(tsDocs[name]);
@@ -82,6 +85,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
         section: frontmatter.section || '',
         subsection: frontmatter.subsection || '',
         source,
+        tabName: frontmatter.tabName || null,
         slug,
         sourceLink: frontmatter.sourceLink || `https://github.com/patternfly/${
           sourceRepo}/blob/main/${
@@ -125,6 +129,12 @@ function toReactComponent(mdFilePath, source, buildMode) {
       }
       if (frontmatter.hideSourceTabs) {
         pageData.hideSourceTabs = frontmatter.hideSourceTabs || false;
+      }
+      if (frontmatter.sortValue) {
+        pageData.sortValue = frontmatter.sortValue;
+      }
+      if (frontmatter.subsectionSortValue) {
+        pageData.subsectionSortValue = frontmatter.subsectionSortValue;
       }
     })
     // Delete HTML comments
@@ -266,10 +276,13 @@ function sourceMDFile(file, source, buildMode) {
       section: pageData.section,
       subsection: pageData.subsection,
       source: pageData.source,
+      tabName: pageData.tabName,
       ...(pageData.katacodaLayout && { katacodaLayout: pageData.katacodaLayout }),
       ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem }),
       ...(pageData.hideSourceTabs && { hideSourceTabs: pageData.hideSourceTabs }),
-      ...(pageData.beta && { beta: pageData.beta })
+      ...(pageData.beta && { beta: pageData.beta }),
+      ...(pageData.sortValue && { sortValue: pageData.sortValue }),
+      ...(pageData.subsectionSortValue && { subsectionSortValue: pageData.subsectionSortValue })
     };
   }
 }
