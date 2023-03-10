@@ -185,7 +185,6 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   const topNavItems = process.env.topNavItems;
   const prnum = process.env.prnum;
   const prurl = process.env.prurl;
-  const componentsData = process.env.componentsData;
 
   const [versions, setVersions] = useState({ ...staticVersions });
 

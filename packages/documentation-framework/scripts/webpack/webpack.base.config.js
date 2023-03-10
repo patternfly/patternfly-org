@@ -122,8 +122,7 @@ module.exports = (_env, argv) => {
       alias: {
         'client-styles': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.css.js'),
         './routes-client': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.routes.js'),
-        './routes-generated': path.resolve(process.cwd(), 'patternfly-docs/generated/index.js'),
-        'component-previews': path.resolve(process.cwd(), 'patternfly-docs/images/component-illustrations') // Access 'view all components' illustrations in consuming package
+        './routes-generated': path.resolve(process.cwd(), 'patternfly-docs/generated/index.js')
       },
       modules: [
         'node_modules',
