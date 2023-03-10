@@ -34,15 +34,6 @@
   max-width: 956px;
 }
 
-.ws-section-gallery .ws-section-gallery-item-summary {
-  display: flex;
-  align-items: center;
-}
-
-.ws-section-gallery .ws-section-gallery-item-beta-label {
-  padding-top: 0;
-}
-
 @media (min-width: 1200px) {
   .ws-section-gallery {
     width: calc(100vw - var(--pf-c-page__sidebar--Width) - var(--pf-c-page__main-section--PaddingRight) - var(--pf-c-page__main-section--PaddingLeft));

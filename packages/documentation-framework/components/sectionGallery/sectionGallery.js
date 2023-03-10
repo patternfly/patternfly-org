@@ -1,6 +1,6 @@
 import React from "react";
 import { groupedRoutes } from '../../routes';
-import {  Button, Card, CardTitle, CardBody, CardFooter, DataList, DataListItem, DataListItemRow, DataListItemCells, DataListCell, DataListAction, Gallery, GalleryItem, Label, SearchInput, Toolbar, ToolbarContent, ToolbarGroup, ToolbarItem, Text, TextContent, TextVariants, ToggleGroup, ToggleGroupItem } from '@patternfly/react-core';
+import {  Button, Card, CardTitle, CardBody, CardFooter, DataList, DataListItem, DataListItemRow, DataListItemCells, DataListCell, DataListAction, Gallery, GalleryItem, Label, SearchInput, Toolbar, ToolbarContent, ToolbarGroup, ToolbarItem, Text, TextContent, TextVariants, ToggleGroup, ToggleGroupItem, Split, SplitItem } from '@patternfly/react-core';
 import { Link } from '../link/link';
 import { convertToReactComponent } from "@patternfly/ast-helpers";
 import './sectionGallery.css';
@@ -11,11 +11,6 @@ const Illustration = ({component: IllustrationWrapper, illustration, itemName}) 
   <IllustrationWrapper>
     <img src={illustration} alt={`${itemName} illustration`} />
   </IllustrationWrapper>
-);
-const BetaLabel = ({component: LabelWrapper}) => (
-  <LabelWrapper>
-    <Label color="gold">Beta feature</Label>
-  </LabelWrapper>
 );
 
 // convert summary text in drawer from string to jsx
@@ -131,20 +126,26 @@ export const SectionGallery = ({section, subsection = null, galleryItemsData, il
                         <DataListCell width={1} key="illustration">
                           {illustration && <Illustration component={'div'} illustration={illustration} itemName={itemName} />}
                         </DataListCell>,
-                        <DataListCell width={5} key="text-description" className="ws-section-gallery-item-summary">
+                        <DataListCell width={5} key="text-description">
+                          <Split className="pf-u-mb-md">
+                            <SplitItem isFilled>
+                              <TextContent>
+                                <Text component={TextVariants.h2}>
+                                  <span>
+                                    {title}
+                                  </span>
+                                </Text>
+                              </TextContent>
+                            </SplitItem>  
+                            <SplitItem>
+                              {isBeta && <Label color="gold">Beta feature</Label>}
+                            </SplitItem>
+                          </Split>
                           <TextContent>
-                            <Text component={TextVariants.h2}>
-                              <span>
-                                {title}
-                              </span>
-                            </Text>
                             <Text>
                               { id ? <SummaryComponent id={id} itemsData={galleryItemsData} /> : null }
                             </Text>
                           </TextContent>
-                        </DataListCell>,
-                        <DataListCell className="ws-section-gallery-item-beta-label">
-                          {isBeta && <BetaLabel component={DataListAction} />}
                         </DataListCell>
                       ]} />
                     </DataListItemRow>
