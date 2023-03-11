@@ -10,4 +10,4 @@ import { SectionGallery } from '@patternfly/documentation-framework/components/s
 import * as illustrations from '../../../images/component-illustrations';
 import componentsData from '../../../components-data.json';
 
-<SectionGallery illustrations={illustrations} section="components" galleryItemsData={componentsData} />
+<SectionGallery section="components" illustrations={illustrations} galleryItemsData={componentsData} />
