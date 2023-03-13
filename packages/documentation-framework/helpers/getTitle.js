@@ -1,5 +1,5 @@
 module.exports = {
   getTitle(title) {
-    return `PatternFly 4${title ? ` • ${title}` : ''}`;
+    return `PatternFly 5${title ? ` • ${title}` : ''}`;
   }
 }
