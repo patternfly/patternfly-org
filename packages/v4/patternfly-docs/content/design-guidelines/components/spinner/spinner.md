@@ -12,26 +12,26 @@ Spinners are used to demonstrate data loading. Spinners are offered in different
 
 ## Placement
 
-Position the spinner in the center of the element that is loading. To ensure proper background contrast, use a white or light background
+Position the spinner in the center of the element that is loading. To ensure proper background contrast, use a white or light background.
 
 <img src="./img/spinner-full-page.png" alt="Example of spinner in full page" width="990"/>
 
 ### When to use
 Use a spinner:
-- when the user is advancing to a new page or step where the structure has not been loaded in yet.
-- when the data you are dealing with is unknown in both quantity and shape.
-- when in progress of loading a screen that may not have any data, for example an [empty state screen or failed outcome](/components/empty-state). 
-- when the expected wait time is between 1-5 seconds. 
+- When the user is advancing to a new page or step where the structure has not been loaded in yet.
+- When the data you are dealing with is unknown in both quantity and shape. 
+- When the expected wait time is between 1-5 seconds. 
 
 ### When not to use
 Don't use a spinner:
-- to replace a [progress bar](/components/progress). 
-- if the loading process is less than 1 second. For experiences longer than 5 seconds, use a progress bar.
-- in components that load on top of the page, for example in cards or dropdowns. In this case use a [skeleton] (/components/skeleton) to reflect the structure of the data
+- To replace a [progress bar](/components/progress). 
+- If the loading process is less than 1 second. For experiences longer than 5 seconds, use a progress bar.
+- In components that load on top of the page, for example in cards or dropdowns. In this case use a [skeleton](/components/skeleton) to reflect the structure of the data
+- When a loading screen does not have any data, use an [empty state screen or failed outcome](/components/empty-state) instead.
 
 ### Spinner in context
 
-Spinners are centered within the container AND the viewport by default in all use cases. Although this is the standard position of it, the spinner may be repositioned if necessary for particular screens and screen sizes.
+Spinners are centered within the container AND the viewport by default in all use cases.
 
 ### Spinner in a wizard
 
