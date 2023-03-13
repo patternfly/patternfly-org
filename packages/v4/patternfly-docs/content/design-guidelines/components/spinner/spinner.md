@@ -26,7 +26,7 @@ Use a spinner:
 Don't use a spinner:
 - To replace a [progress bar](/components/progress). 
 - If the loading process is less than 1 second. For experiences longer than 5 seconds, use a progress bar.
-- In components that load on top of the page, for example in cards or dropdowns. In this case use a [skeleton](/components/skeleton) to reflect the structure of the data
+- In components that load on top of the page, for example in cards or dropdowns. In this case use a [skeleton](/components/skeleton) to reflect the structure of the data.
 - When a loading screen does not have any data, use an [empty state screen or failed outcome](/components/empty-state) instead.
 
 ### Spinner in context
@@ -57,4 +57,4 @@ Spinners are centered within the container AND the viewport by default in all us
 
 **Use a [skeleton](/components/skeleton/react) when:**
 - You know what the populated data is going to look like (even if it results in an empty state).
-- The structure of the data has fully loaded and can be displayed
+- The structure of the data has fully loaded and can be displayed.
