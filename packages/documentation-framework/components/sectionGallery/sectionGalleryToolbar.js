@@ -3,11 +3,11 @@ import { Button, SearchInput, Toolbar, ToolbarContent, ToolbarGroup, ToolbarItem
 import ListIcon from '@patternfly/react-icons/dist/esm/icons/list-icon';
 import ThIcon from'@patternfly/react-icons/dist/esm/icons/th-icon';
 
-export const SectionGalleryToolbar = ({ galleryItems, searchTerm, setSearchTerm, layoutView, setLayoutView }) => (
+export const SectionGalleryToolbar = ({ galleryItems, searchTerm, setSearchTerm, layoutView, setLayoutView, placeholderText ="Search by name", countText=" items" }) => (
   <Toolbar isSticky>
     <ToolbarContent>
       <ToolbarItem variant="search-filter" widths={{default: '100%', md: '320px'}}>
-        <SearchInput onClear={false} value={searchTerm} placeholder="Search components by name" onChange={(_evt, val) => setSearchTerm(val)} />
+        <SearchInput onClear={false} value={searchTerm} placeholder={placeholderText} onChange={(_evt, val) => setSearchTerm(val)} />
       </ToolbarItem>
       {searchTerm && (
         <ToolbarItem>
@@ -23,7 +23,7 @@ export const SectionGalleryToolbar = ({ galleryItems, searchTerm, setSearchTerm,
         </ToolbarItem>
       </ToolbarGroup>
       <ToolbarItem variant="pagination" spacer={{default: 'spacerMd', md: 'spacerNone'}} style={{'--pf-c-toolbar__item--MinWidth': "max-content"}}>
-        <Text component={TextVariants.small}>{galleryItems.length} items</Text>
+        <Text component={TextVariants.small}>{ galleryItems.length }{ countText }</Text>
       </ToolbarItem>
     </ToolbarContent>
   </Toolbar>
