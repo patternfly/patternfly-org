@@ -62,7 +62,7 @@ If an action can be performed globally on multiple cards, or if it leads to mult
 #### Action card
 You may use an extra-small empty state inside a card to present users with another way to add more cards to the existing card view. We recommend using this feature **in addition to** a primary button in the toolbar, to ensure that the user is still able to perform the action from any page of the card view. Place the action card where a new card will be added, most likely as the very first or last card in the card view.
 
-<img src="./img/cardview-add-emptystate.png" alt="example of card view with addition card and empthy state" width="1500" >
+<img src="./img/cardview-add-emptystate.png" alt="example of card view with addition card and empthy state" width="1500" />
 
 
 ### Bottom pagination
