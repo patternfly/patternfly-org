@@ -84,7 +84,7 @@ Favoriting or other optional actions can be associated with any menu item. In th
 Any action that can be represented as an icon button can be placed in one or more menu items. In this case, the favoriting action is used to mark an item as a favorite.
 
 ### Drilldown menu
-<img src="./img/drill-down-menu.png" alt="drilldown menu" width="385"/>
+<img src="./img/drill-down-menu.png" alt="drilldown menu" width="935"/>
 
 Use a drilldown menu when data is structured into levels and includes a long list of options. When the parent with children is selected, the list is replaced with the children items. A header displays the name of the parent, with the option to go back one level. 
 
@@ -107,7 +107,7 @@ Menus or menu items can be disabled for multiple reasons. The reason an action i
 
     If a user needs to complete a prerequisite to enable an action, disable the action and add a [tooltip](components/tooltip). The tooltip should explain what the user needs to do to enable the action. 
 
-    <img src="./img/dropdown-disabled-action-tooltip.png" alt="disabled action tooltip" width="935"/>
+    <img src="./img/dropdown-disabled-action-tooltip.png" alt="disabled action tooltip" width="385"/>
 
     Example: A user can’t perform bulk actions until they select resources in the list.
 
