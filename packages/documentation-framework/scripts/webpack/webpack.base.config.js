@@ -83,21 +83,18 @@ module.exports = (_env, argv) => {
         },
         {
           test: /\.(gif|svg)$/,
-          use: {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[contenthash].[ext]',
-              outputPath: 'images/'
-            },
+          type: 'asset/resource',
+          dependency: { not: ['url'] },
+          generator: {
+            filename: 'images/[name].[contenthash].[ext]'
           }
         },
         {
           test: /\.(pdf)$/,
-          use: {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[contenthash].[ext]',
-            }
+          type: 'asset/resource',
+          dependency: { not: ['url'] },
+          generator: {
+            filename: '[name][ext][query]'
           }
         },
         {
@@ -154,7 +151,9 @@ module.exports = (_env, argv) => {
           { from: path.join(__dirname, '../../assets'), to: 'assets' }
         ]
       }),
-      new MonacoWebpackPlugin(),
+      new MonacoWebpackPlugin({
+        globalAPI: true,
+      })
     ],
     stats: 'minimal'
   };
