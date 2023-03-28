@@ -262,6 +262,11 @@ Validate errors on loss of focus when:
 * A user leaves a required field blank.
 * A user leaves a required field incomplete.
 
+#### Error validation on Test button click
+Validation on Test button click occurs when a user wants to test their form input is working correctly. In this scenario, the user can check their form input for errors using the inline Test button to validate.
+
+<img src="./img/inline-validation-on-fields.png" alt="Example of errors after validation with a test button, including an inline alert at the top, and field level errors" width="794"/>
+
 #### Error validation on submission
 Validation on submission occurs when a user attempts to submit a form. In this scenario, the user completes the form in its entirety and the page reloads with any errors detected.
 
