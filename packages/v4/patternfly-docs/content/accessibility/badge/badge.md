@@ -15,7 +15,7 @@ To implement an accessible PatternFly **badge**:
   - A heading or other text element prefacing the badge or visually hidden text content accessible only to assistive technologies are some examples of a surrounding context.
 
   ```
-  <h2>Notificaitons <Badge>5</Badge></h2>
+  <h2>Notifications <Badge>5</Badge></h2>
 
   <Badge>5 <span class="pf-screen-reader">unread notifications</span></Badge>
   ```
