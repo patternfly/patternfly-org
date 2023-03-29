@@ -89,6 +89,9 @@ import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-ic
   <Title size="xl" className="pf-u-mb-sm ws-page-title pf-u-mt-xl" headingLevel="h3"><a href="https://www.sketch.com/s/6ccbd710-267d-4b69-9dae-bc19e1551056">Ansible Component Guide and Sketch Library</a></Title>
   <p>The Ansible Component Guide and Sketch Library is an additional resource that designers can use that is built on top of existing PatternFly components. It is a rapid mockup prototyping tool that can be used to quickly put together repeatable design patterns and layouts across projects. Although this is specific to Ansible, many of the components are generalized and can fit many product use cases and are easily detachable to update as needed.</p>
 
+  <Title size="xl" className="pf-u-mb-sm ws-page-title pf-u-mt-xl" headingLevel="h3"><a href="https://github.com/ctron/patternfly-yew">PatternFly for Yew</a></Title>
+  <p>PatternFly for Yew provides PatternFly components for the Yew framework. Yew is a Rust based framework for creating web applications, and is also able to run in the browser using WASM. The project aims to create Yew components for all components and concepts found in PatternFly. For a quick demo and starter template, see the <a href="https://github.com/ctron/patternfly-yew-quickstart">PatternFly Yew Quickstart.</a></p>
+
   <Title size="4xl" className="pf-u-mb-lg ws-page-title ws-keep-growing pf-u-mt-3xl" headingLevel="h2">Let's keep growing</Title>
   <p>The PatternFly community is never finished growing, and we want to keep it that way. Feel free to reach out whenever — we're always open.</p>
 
