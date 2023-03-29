@@ -1,6 +1,6 @@
 ---
 id: Dashboard
-section: demos
+section: patterns
 ---
 
 A dashboard provides overviews of key metrics or performance indicators relevant to an application, process, or business. The overall experience of dashboards can vary greatly depending on their use cases, so it can be difficult to define a one-size-fits-all approach. These guidelines take a systematic approach to dashboard design that can be applied in a variety of situations.

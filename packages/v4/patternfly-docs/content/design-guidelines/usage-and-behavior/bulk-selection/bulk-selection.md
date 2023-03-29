@@ -1,6 +1,6 @@
 ---
 id: Bulk selection
-section: guidelines
+section: patterns
 ---
 
 ## Bulk selection
