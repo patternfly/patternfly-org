@@ -1,6 +1,6 @@
 ---
 id: Primary-detail
-section: demos
+section: patterns
 ---
 
 A **primary-detail layout** is an interface that shows a list of items and the corresponding details of the selected item.
