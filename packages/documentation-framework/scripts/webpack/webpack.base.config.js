@@ -86,7 +86,7 @@ module.exports = (_env, argv) => {
           type: 'asset/resource',
           dependency: { not: ['url'] },
           generator: {
-            filename: 'images/[name].[contenthash].[ext]'
+            filename: 'images/[hash][ext][query]'
           }
         },
         {
@@ -94,7 +94,7 @@ module.exports = (_env, argv) => {
           type: 'asset/resource',
           dependency: { not: ['url'] },
           generator: {
-            filename: '[name][ext][query]'
+            filename: '[hash][ext][query]'
           }
         },
         {

@@ -11,11 +11,10 @@ function startWebpackDevServer(webpackConfig) {
   const compiler = webpack(webpackConfig);
   const server = new WebpackDevServer(webpackConfig.devServer, compiler);
 
-  server.listen(port, 'localhost', err => {
-    if (err) {
-      console.log(err);
-    }
-  });
+  (async () => {
+    await server.start();
+    console.log(`Dev server is listening on port ${port}`);
+  })();
 }
 
 async function start(options) {
