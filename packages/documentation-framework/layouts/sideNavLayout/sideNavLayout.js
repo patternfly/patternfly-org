@@ -87,7 +87,7 @@ const HeaderTools = ({
         >
           {hasDarkThemeSwitcher && (
             <ToolbarItem>
-              <Switch id="ws-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
+              <Switch id="ws-theme-switch" label="Dark theme" defaultChecked={true} onChange={() =>
                 document.querySelector('html').classList.toggle('pf-theme-dark')} />
             </ToolbarItem>
           )}

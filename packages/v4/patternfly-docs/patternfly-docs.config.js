@@ -13,7 +13,7 @@ module.exports = {
   hasFooter: true,
   hasVersionSwitcher: true,
   hasDesignGuidelines: true,
-  hasDarkThemeSwitcher: false,
+  hasDarkThemeSwitcher: true,
   componentsData,
   sideNavItems: [
     { section: 'get-started' },
