@@ -5,6 +5,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
 const baseConfig = require('./webpack.base.config');
 const { getHtmlWebpackPlugins } = require('./getHtmlWebpackPlugins');
 
@@ -23,18 +24,20 @@ const reactJSRegex = /react-([^\\/]*)[\\/]dist[\\/].*\.js$/
 
 const clientConfig = async (env, argv) => {
   const isProd = argv.mode === 'production';
-
   return {
     output: {
       path: argv.output ? path.resolve(argv.output) : path.resolve('public'),
-      filename: '[name].[hash].bundle.js'
+      filename: '[name].[contenthash].bundle.js'
     },
     devServer: {
       hot: true,
       historyApiFallback: true,
+      compress: true,
       port: argv.port,
-      clientLogLevel: 'info',
-      stats: 'minimal'
+      client: {
+        logging: 'info',
+      },
+      static: {}
     },
     optimization: {
       splitChunks: {
@@ -71,10 +74,7 @@ const clientConfig = async (env, argv) => {
       },
       minimize: isProd ? true : false,
       minimizer: [
-        new TerserPlugin({
-          cache: path.join(process.cwd(), '.cache/terser'),
-          ...(process.env.CI ? { parallel: 2 } : {})
-        }),
+        new TerserPlugin(),
       ],
       runtimeChunk: 'single',
     },
@@ -82,7 +82,6 @@ const clientConfig = async (env, argv) => {
       rules: [
         {
           test: /\.css$/,
-          exclude: reactCSSRegex,
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
@@ -106,13 +105,12 @@ const clientConfig = async (env, argv) => {
             }
           ]
         },
-        {
-          test: reactCSSRegex,
-          use: 'null-loader'
-        },
       ]
     },
     plugins: [
+      new webpack.DefinePlugin({
+        'process.env.PRERENDER': false,
+      }),
       new MiniCssExtractPlugin(!isProd ? {} : {
         filename: '[name].[contenthash].css',
         chunkFilename: '[name].[contenthash].css',

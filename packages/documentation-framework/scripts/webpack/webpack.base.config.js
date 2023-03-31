@@ -27,7 +27,8 @@ module.exports = (_env, argv) => {
     output: {
       publicPath: isProd ? `${pathPrefix}/` : '/',
       pathinfo: false, // https://webpack.js.org/guides/build-performance/#output-without-path-info,
-      hashDigestLength: 8
+      hashDigestLength: 8,
+      clean: true, // Clean the output directory before emit.
     },
     amd: false, // We don't use any AMD modules, helps performance
     mode: isProd ? 'production' : 'development',
@@ -82,35 +83,28 @@ module.exports = (_env, argv) => {
         },
         {
           test: /\.(gif|svg)$/,
-          use: {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[contenthash].[ext]',
-              outputPath: 'images/'
-            },
+          type: 'asset/resource',
+          dependency: { not: ['url'] },
+          generator: {
+            filename: 'images/[hash][ext][query]'
           }
         },
         {
           test: /\.(pdf)$/,
-          use: {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[contenthash].[ext]',
-            }
+          type: 'asset/resource',
+          dependency: { not: ['url'] },
+          generator: {
+            filename: '[hash][ext][query]'
           }
         },
         {
           test: /.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[name].[ext]',
-                outputPath: 'fonts/'
-              }
-            }
-          ]
-        }
+          type: 'asset/resource',
+          dependency: { not: ['url'] },
+          generator: {
+            filename: 'fonts/[name][ext][query]'
+          }
+        },
       ]
     },
     resolve: {
@@ -118,18 +112,25 @@ module.exports = (_env, argv) => {
       alias: {
         'client-styles': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.css.js'),
         './routes-client': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.routes.js'),
-        './routes-generated': path.resolve(process.cwd(), 'patternfly-docs/generated/index.js')
+        './routes-generated': path.resolve(process.cwd(), 'patternfly-docs/generated/index.js'),
+        process: "process/browser"
       },
       modules: [
         'node_modules',
         ...module.paths,
-      ]
+      ],
+      fallback: {
+        "path": require.resolve("path-browserify")
+      },
     },
     // Use this module's node_modules first (for use in Core/React workspaces)
     resolveLoader: {
       modules: module.paths,
     },
     plugins: [
+      new webpack.ProvidePlugin({
+        process: 'process/browser',
+      }),
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(mode),
         'process.env.pathPrefix': JSON.stringify(isProd ? pathPrefix : ''),
@@ -150,13 +151,9 @@ module.exports = (_env, argv) => {
           { from: path.join(__dirname, '../../assets'), to: 'assets' }
         ]
       }),
-      new MonacoWebpackPlugin(),
-      ...(isProd
-        ? [
-          new CleanWebpackPlugin()
-        ]
-        : []
-      )
+      new MonacoWebpackPlugin({
+        globalAPI: true,
+      })
     ],
     stats: 'minimal'
   };
