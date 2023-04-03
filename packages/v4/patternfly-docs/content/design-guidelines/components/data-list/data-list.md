@@ -54,9 +54,9 @@ See [when to use compact vs. default spacing](#when-to-use-a-data-list-vs.-a-tab
 ### Data list capabilities
 Every data list can be extended with these functionalities:
 
-* **[Selectable data list](/components/data-list/design-guidelines#selectable-data-list)**
-* **[Clickable data list](/components/data-list/design-guidelines#clickable-data-list)**
-* **[Expandable data list](/components/data-list/design-guidelines#expandable-data-list)**
+* **[Selectable data list](#selectable-data-list)**
+* **[Clickable data list](#clickable-data-list)**
+* **[Expandable data list](#expandable-data-list)**
 * **[Draggable data list rows](#draggable-data-list-rows)**
 
 ### Selectable data list

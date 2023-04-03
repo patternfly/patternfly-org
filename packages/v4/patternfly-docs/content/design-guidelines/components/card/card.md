@@ -24,7 +24,7 @@ Cards primarily appear in [catalog views](#cards-in-catalog-views), [primary-det
 Use cards to:
 - To visually group content or distinguish information from the rest of a page’s content. Examples include dashboards and catalog views.
 - To organize content in layouts with multiple columns or grids. 
-- To compare separate groups of information, and make it selectable or clickable
+- To compare separate groups of information, and make it selectable or clickable.
 - To make media easier to scan, such as images or videos. 
  
 ### When not to use
@@ -67,7 +67,7 @@ Use clickable cards when you want to present an overview of a set of objects and
  
 Use cards in a dashboard view to visualize information. Each card should display a different and specific piece of information, such as a bar chart, area chart, or other data type.
  
-<img src="./img/dashboard.png" alt="example of card view in a dashboard with charts" width="1223"/>
+<img src="./img/cards-dashboard.png" alt="example of card view in a dashboard with charts" width="1223"/>
  
 ## Variations
  
