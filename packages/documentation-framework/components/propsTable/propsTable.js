@@ -1,15 +1,15 @@
 import React from "react";
-import { Badge } from "@patternfly/react-core";
+//import { Badge } from "@patternfly/react-core";
 import {
-  Table,
-  TableHeader,
-  TableBody,
+//  Table,
+//  TableHeader,
+//  TableBody,
   cellWidth,
 } from "@patternfly/react-table";
 import { AutoLinkHeader } from "../autoLinkHeader/autoLinkHeader";
-import { PropTypeWithLinks } from "./propTypeWithLinks";
-import { css } from "@patternfly/react-styles";
-import accessibleStyles from "@patternfly/react-styles/css/utilities/Accessibility/accessibility";
+//import { PropTypeWithLinks } from "./propTypeWithLinks";
+//import { css } from "@patternfly/react-styles";
+//import accessibleStyles from "@patternfly/react-styles/css/utilities/Accessibility/accessibility";
 
 export const PropsTable = ({ title, description, rows, allPropComponents }) => {
   const columns = [
@@ -22,7 +22,7 @@ export const PropsTable = ({ title, description, rows, allPropComponents }) => {
   return (
     <React.Fragment>
       <AutoLinkHeader size="h3">{title}</AutoLinkHeader>
-      <Table
+      {/*<Table
         className="pf-u-mt-md pf-u-mb-lg"
         variant="compact"
         aria-label={title}
@@ -85,7 +85,7 @@ export const PropsTable = ({ title, description, rows, allPropComponents }) => {
       >
         <TableHeader />
         <TableBody />
-      </Table>
+      </Table>*/}
     </React.Fragment>
   );
 };
