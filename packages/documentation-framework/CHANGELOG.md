@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.14 (2023-04-03)
+
+
+### Bug Fixes
+
+* **Tables:** temporarily comment out tables so Table can be deprecated ([#3468](https://github.com/patternfly/patternfly-org/issues/3468)) ([f4aa5ed](https://github.com/patternfly/patternfly-org/commit/f4aa5ed791161851cdc92d02d0c752eef4028306))
+
+
+
+
+
 # 2.0.0-alpha.13 (2023-03-31)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
