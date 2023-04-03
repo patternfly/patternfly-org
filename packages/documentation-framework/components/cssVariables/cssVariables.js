@@ -1,9 +1,9 @@
 import React from "react";
 import { debounce } from "@patternfly/react-core";
 import {
-  Table,
-  TableHeader,
-  TableBody,
+//  Table,
+//  TableHeader,
+//  TableBody,
   sortable,
   SortByDirection,
   expandable
@@ -210,7 +210,7 @@ export class CSSVariables extends React.Component {
     return (
       <React.Fragment>
         <CSSSearch getDebouncedFilteredRows={this.getDebouncedFilteredRows} />
-        <Table
+{/*        <Table
           variant="compact"
           aria-label={`CSS Variables for prefixes ${this.prefix.join(" ")}`}
           sortBy={this.state.sortBy}
@@ -226,7 +226,7 @@ export class CSSVariables extends React.Component {
         >
           <TableHeader />
           <TableBody />
-        </Table>
+        </Table>*/}
       </React.Fragment>
     );
   }
