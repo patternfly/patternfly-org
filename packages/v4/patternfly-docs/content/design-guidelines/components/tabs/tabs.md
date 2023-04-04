@@ -20,22 +20,17 @@ You can use as many tabs as you want in a page, although it is recommended you k
 
 ### Default tabs
 
-Default tabs do not have any borders, other than the bottom line to distinguish between a selected tab, a hovered over tab, and a non-active tab. These tabs are most commonly used as top page header tabs or nested within components.
+Default tabs do not have any borders, other than the bottom line to distinguish between a selected tab, a hovered over tab, and a non-active tab. Is it recommended to use these tabs over other tab types for top page header tabs or tabs nested within components.
 
 <img src="./img/default-tabs.png" alt="Default tabs ex" width="1500"/>
 
-Default tabs can be formatted as standard or filled.  Filled tabs stretch to fit the width of the container that they are placed in. They can be used in screens with narrower widths, such as a drawer within a [primary detail view](/demos/primary-detail). When in doubt, stick with the standard styled tabs. 
-
-<img src="./img/default-vs-filled-tabs.png" alt="Standard and filled tabs ex" width="1500"/>
-
-1. Standard styled tabs
-2. Filled styled tabs
+Default tabs can be formatted as standard or filled.  Filled tabs stretch to fit the width of the container that they are placed in. 
 
 ### Boxed tabs
 
-Box tabs are functionally the same as default tabs, but they are outlined by a box to emphasize the area that the tab spans. Boxed tabs can be used interchangeably with default tabs, but we recommend using the default tabs over boxed tabs. Boxed tabs can be used in combination with default tabs to create more hierarchy on the page.
+Box tabs are functionally the same as default tabs, but they are outlined by a box to emphasize the area that the tab spans. Boxed tabs can be used in screens with narrower widths, such as a drawer within a primary detail view. 
 
-<img src="./img/boxed-tabs.png" alt="Boxed tabs ex" width="1500"/>
+<img src="./img/default-vs-filled-tabs.png" alt="Standard and filled tabs ex" width="1500"/>
 
 ### Vertical tabs
 
@@ -57,7 +52,7 @@ Horizontal overflow menus are useful when there is not enough space on a screen 
 
 ### Hierarchy
 
-When you have more than one tab level in your UI, you can either choose to use a mixture of boxed and default tabs to create hierarchy on a page, or you can chose to use primary and secondary tabs which differ in their font size, with primary tabs using 16pt font, and secondary tabs using 14pt font.
+When designing tab organization with two levels of tabs, it's important to create a clear hierarchy. To achieve this, the top level tabs should use the default open tabs, which feature a 16pt font. Meanwhile, the bottom level tabs should use the secondary open tabs, which feature a 14pt font.
 
 ### Primary tabs
 
@@ -67,13 +62,15 @@ Use primary tabs only for top page header tabs and vertical tabs. Primary tabs u
 
 ### Secondary tabs
 
-When designing tab organization with two levels of tabs, it's important to create a clear hierarchy. To achieve this, the top level tabs should use the default open tabs, which feature a 16pt font. Meanwhile, the bottom level tabs should use the secondary open tabs, which feature a 14pt font. This will help to differentiate between the two levels of tabs and make it easier for users to navigate through the interface.
+Use secondary tabs to help differentiate between two levels of tabs and make it easier for users to navigate through the interface.
+
 <img src="./img/secondary-1-tabs.png" alt="Secondary tabs ex" width="1500"/>
 
 1. Primary tabs
 2. Secondary tabs
 
+Secondary tabs should also be used when tabs live within a component, or are in a non-full page context, like in modal.
+
 <img src="./img/secondary-2-tabs.png" alt="Secondary tabs ex" width="1500"/>
 
-1. **Secondary tabs:** These should be used when tabs live within a component, like the modal.
 
