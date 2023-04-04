@@ -67,8 +67,7 @@ Use primary tabs only for top page header tabs and vertical tabs. Primary tabs u
 
 ### Secondary tabs
 
-Use secondary tabs when, you have another set of tabs, in addition to a primary level, or when using tabs within a component, for example in a modal. Secondary tabs use 14px text.
-
+When designing tab organization with two levels of tabs, it's important to create a clear hierarchy. To achieve this, the top level tabs should use the default open tabs, which feature a 16pt font. Meanwhile, the bottom level tabs should use the secondary open tabs, which feature a 14pt font. This will help to differentiate between the two levels of tabs and make it easier for users to navigate through the interface.
 <img src="./img/secondary-1-tabs.png" alt="Secondary tabs ex" width="1500"/>
 
 1. Primary tabs
