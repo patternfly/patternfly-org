@@ -20,11 +20,12 @@ You can use as many tabs as you want in a page, although it is recommended you k
 
 ### Default tabs
 
-Default tabs do not have any borders, other than the bottom line to distinguish between a selected tab, a hovered over tab, and a non-active tab. Is it recommended to use these tabs over other tab types for top page header tabs or tabs nested within components.
+Default tabs do not have any borders, other than the bottom line to distinguish between a selected tab, a hovered over tab, and a non-active tab. They can be formatted as standard or filled.  Filled tabs stretch to fit the width of the container that they are placed in. 
+
+Is it recommended to use these tabs over other tab types in most cases - specifically for top page header tabs or tabs nested within components.
 
 <img src="./img/default-tabs.png" alt="Default tabs ex" width="1500"/>
 
-Default tabs can be formatted as standard or filled.  Filled tabs stretch to fit the width of the container that they are placed in. 
 
 ### Boxed tabs
 
@@ -69,7 +70,7 @@ Use secondary tabs to help differentiate between two levels of tabs and make it 
 1. Primary tabs
 2. Secondary tabs
 
-Secondary tabs should also be used when tabs live within a component, or are in a non-full page context, like in modal.
+Secondary tabs should also be used when tabs live within a component, or are in a non-full page context, like in a modal.
 
 <img src="./img/secondary-2-tabs.png" alt="Secondary tabs ex" width="1500"/>
 
