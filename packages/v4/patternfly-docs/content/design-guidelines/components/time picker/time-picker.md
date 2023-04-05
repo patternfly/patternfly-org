@@ -1,6 +1,7 @@
 ---
 id: Time picker
 section: components
+subsection: date-and-time
 related: ["Calendar month", "Date picker"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: Form select
 section: components
+subsection: forms
 ---
 
 ## Usage

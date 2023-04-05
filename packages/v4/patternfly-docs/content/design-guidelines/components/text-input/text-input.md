@@ -1,6 +1,7 @@
 ---
 id: Text input
 section: components
+subsection: forms
 ---
 
 ## Elements

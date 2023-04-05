@@ -1,6 +1,7 @@
 ---
 id: Menu toggle
 section: components
+subsection: menus
 ---
 
 From a design perspective, the dropdown, select, and menu toggle components are all visually the same.

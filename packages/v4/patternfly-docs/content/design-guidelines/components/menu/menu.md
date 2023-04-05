@@ -1,6 +1,7 @@
 ---
 id: Menu
 section: components
+subsection: menus
 ---
 
 ## Elements
