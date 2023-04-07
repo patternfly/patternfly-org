@@ -5,15 +5,16 @@ import {
   PageSidebar,
   Brand,
   Dropdown,
-  DropdownToggle,
   DropdownItem,
   DropdownGroup,
+  DropdownList,
   Divider,
   Masthead,
   MastheadToggle,
   MastheadMain,
   MastheadContent,
   MastheadBrand,
+  MenuToggle,
   PageToggleButton,
   Toolbar,
   ToolbarGroup,
@@ -48,14 +49,9 @@ const HeaderTools = ({
   const [isSearchExpanded, setIsSearchExpanded] = React.useState(false);
 
   const getDropdownItem = (version, isLatest = false) => (
-    <DropdownItem
-      key={version.name}
-      component={
-        <a href={isLatest ? '/' : `/${version.name}`}>
-          {`Release ${version.name}`}
-        </a>
-      }
-    />
+    <DropdownItem itemId={version.name} key={version.name} to={isLatest ? '/' : `/${version.name}`}>
+      {`Release ${version.name}`}
+    </DropdownItem>
   );
 
   const onChange = (_evt, value) => {
@@ -117,42 +113,51 @@ const HeaderTools = ({
           {hasVersionSwitcher && (
             <ToolbarItem>
               <Dropdown
-                isFullHeight
                 onSelect={() => setDropdownOpen(!isDropdownOpen)}
+                onOpenChange={(isOpen) => setDropdownOpen(isOpen)}
                 isOpen={isDropdownOpen}
-                toggle={(
-                  <DropdownToggle
-                    onToggle={() => setDropdownOpen(!isDropdownOpen)}
+                toggle={(toggleRef) => (
+                  <MenuToggle
+                    isFullHeight
+                    ref={toggleRef}
+                    onClick={() => setDropdownOpen(!isDropdownOpen)}
+                    isExpanded={isDropdownOpen}
                   >
                     Release {initialVersion.name}
-                  </DropdownToggle>
+                  </MenuToggle>
                 )}
-                dropdownItems={[
-                  <DropdownGroup key="latest" label="Latest">
+              >
+                <DropdownGroup key="Latest" label="Latest">
+                  <DropdownList>
                     {getDropdownItem(latestVersion, true)}
-                  </DropdownGroup>,
-                  <DropdownGroup key="Previous" label="Previous releases">
+                  </DropdownList>
+                </DropdownGroup>
+                <DropdownGroup key="Previous releases" label="Previous releases">
+                  <DropdownList>
                     {Object.values(versions.Releases)
                       .filter(version => !version.hidden && !version.latest)
                       .slice(0,3)
                       .map(version => getDropdownItem(version))}
-                  </DropdownGroup>,
-                  <Divider key="divider" className="ws-switcher-divider"/>,
-                  <DropdownItem
-                    key="PatternFly 3"
-                    className="ws-patternfly-3"
-                    target="_blank"
-                    href="https://pf3.patternfly.org/"
-                  >
-                    PatternFly 3
-                    <ExternalLinkAltIcon />
-                  </DropdownItem>
-                ]}
-              />
+                  </DropdownList>
+                </DropdownGroup>
+                <Divider key="divider" className="ws-switcher-divider"/>
+                <DropdownGroup key="Previous versions" label="Previous versions">
+                  <DropdownList>
+                    <DropdownItem
+                      key="PatternFly 3"
+                      className="ws-patternfly-3"
+                      isExternalLink
+                      to="https://pf3.patternfly.org/"
+                      itemId="patternfly-3"
+                    >
+                      PatternFly 3
+                    </DropdownItem>
+                  </DropdownList>
+                </DropdownGroup>
+              </Dropdown>
             </ToolbarItem>
           )}
-        </ToolbarGroup>
-      </ToolbarContent>
+        </ToolbarGroup></ToolbarContent>
     </Toolbar>
   );
 }
