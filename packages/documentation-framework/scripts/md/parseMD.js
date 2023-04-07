@@ -12,10 +12,12 @@ const { typecheck } = require('./typecheck');
 const { makeSlug } = require('../../helpers/slugger');
 const { liveCodeTypes } = require('../../helpers/liveCodeTypes');
 const { tsDocgen } = require('../tsDocgen');
+const { getPackageFunctionDocumentation } = require("../typeDocGen");
 
 let exitCode = 0;
 const outputBase = path.join(process.cwd(), `patternfly-docs/generated`);
 const tsDocs = {};
+let functionDocs = {};
 const routes = {};
 const globs = {
   props: [],
@@ -75,6 +77,24 @@ function toReactComponent(mdFilePath, source, buildMode) {
         return acc;
       }, []);
 
+      const functionDocumentation = Object.keys(
+        frontmatter.functions || {}
+      ).reduce((acc, fileName) => {
+        const functionNames = frontmatter.functions[fileName];
+
+        functionNames.forEach((functionName) => {
+          if (functionDocs[fileName] && functionDocs[fileName][functionName]) {
+            const functionDescriptionWithName = { functionName, ...functionDocs[fileName][functionName]}
+            acc.push(functionDescriptionWithName);
+          } else {
+            file.message(
+              `function documentation for ${functionName} is missing from function docs generation`
+            );
+          }
+        });
+        return acc;
+      }, []);
+
       const normalizedPath = relPath
         .replace('node_modules/@patternfly/patternfly/docs', 'src/patternfly')
         .replace(/node_modules\/@patternfly\/react-([\w-])/, (_, match) => `packages/react-${match}`)
@@ -106,6 +126,9 @@ function toReactComponent(mdFilePath, source, buildMode) {
       }
       if (propComponents.length > 0) {
         pageData.propComponents = propComponents;
+      }
+      if (functionDocumentation.length > 0) {
+        pageData.functionDocumentation = functionDocumentation;
       }
       if (frontmatter.optIn) {
         pageData.optIn = frontmatter.optIn;
@@ -275,6 +298,10 @@ function sourceMDFile(file, source, buildMode) {
   }
 }
 
+function sourceFunctionDocs(packageName) {
+  functionDocs = getPackageFunctionDocumentation(packageName);
+}
+
 function writeIndex() {
   const stringifyRoute = ([route, pageData]) => `'${route}': {\n    ${Object.entries(pageData)
     .map(([key, val]) => `${key}: ${JSON.stringify(val)}`)
@@ -313,6 +340,7 @@ module.exports = {
     globs.md.push({ glob, source, ignore });
     sync(glob, { ignore }).forEach(file => sourceMDFile(file, source, buildMode));
   },
+  sourceFunctionDocs,
   writeIndex,
   watchMD() {
     globs.props.forEach(({ glob, ignore }) => {
