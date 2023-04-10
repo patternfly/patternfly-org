@@ -48,7 +48,7 @@ Any global actions that apply to selected data items are included left-aligned f
 <img src= "./img/three-as-a-group.png" alt= "single button" width="196">
  * In the specific case where three actions are needed, the suggested guidance is to opt for an overflow menu with two items. This will prevent the toolbar from becoming too crowded, and also prevent the overflow menu from containing just one item. 
 
- **Three or more clickable actions**
+ **More than three clickable actions**
  <img src= "./img/greater-than-three.png" alt= "single button" width="196">
 1. Use a primary button to indicate the most important action within the table
 2. Use a secondary button for a second action you want to surface in the toolbar, if it is too important to place in an overflow menu
