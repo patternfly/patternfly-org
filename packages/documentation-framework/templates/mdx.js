@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageSection, Title, PageSectionVariants, BackToTop, PageGroup, Page, Text, TextContent } from '@patternfly/react-core';
+import { PageSection, Title, Tooltip, PageSectionVariants, Button, BackToTop, Flex, FlexItem, PageGroup, Page, Text, TextContent, Label } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Router, useLocation } from '@reach/router';
@@ -22,6 +22,8 @@ const MDXChildTemplate = ({
     cssPrefix = [],
     optIn,
     beta,
+    deprecated,
+    newImplementationLink,
     functionDocumentation = []
   } = Component.getPageData();
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
@@ -60,9 +62,19 @@ const MDXChildTemplate = ({
           To learn more about the process, visit our <Link to="/get-started/about#beta-components">about page</Link> or our <a href="https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion">Beta components</a> page on GitHub.
         </InlineAlert>
       )}
+      {deprecated && (
+        <InlineAlert title="Deprecated feature" variant="warning">
+          This implementation has been deprecated in favor of a newer implementation, and is no longer getting maintained or enhanced.
+          {newImplementationLink && (
+            <React.Fragment>
+              You can find the <Link to={newImplementationLink}>updated implementation here</Link>.
+            </React.Fragment>
+          )}
+          To learn more about the process, visit our <Link to="/get-started/about#major-release-cadence">about page</Link>.
+        </InlineAlert>
+      )}
     </React.Fragment>
   );
-  console.log(id);
   // Create dynamic component for @reach/router
   const ChildComponent = () => (
     <div className="pf-v5-u-display-flex ws-mdx-child-template">
@@ -126,6 +138,9 @@ export const MDXTemplate = ({
   id,
   componentsData
 }) => {
+  const isDeprecated = sources.some(source => source.source === "react-deprecated") && !sources.some(source => source.source === "react");
+  const isBeta = sources.some(source => source.beta)
+  const isDemo = sources.some(source => source.source === "react-demos" || source.source === "html-demos") && !sources.some(source => source.source === "react" || source.source === "html");
   // Build obj mapping source names to text displayed on tabs
   const tabNames = sources.reduce((acc, curSrc) => {
     const { source, tabName } = curSrc;
@@ -137,7 +152,7 @@ export const MDXTemplate = ({
   const sourceKeys = Object.keys(tabNames);
   const isSinglePage = sourceKeys.length === 1;
 
-  let isDevResources, isComponent, isExtension, isChart, isDemo, isLayout, isUtility;
+  let isDevResources, isComponent, isExtension, isChart, isPattern, isLayout, isUtility;
 
   const getSection = () => {
     return sources.some((source) => {
@@ -154,8 +169,8 @@ export const MDXTemplate = ({
         case "charts":
           isChart = true;
           return;
-        case "demos":
-          isDemo = true;
+        case "patterns":
+          isPattern = true;
           return;
         case "layouts":
           isLayout = true;
@@ -198,7 +213,7 @@ export const MDXTemplate = ({
         return "pf-m-light-100";
       }
       return "pf-m-light";
-    } else if (isUtility || isDemo || isLayout || isComponent) {
+    } else if (isUtility || isPattern || isLayout || isComponent) {
       return "pf-m-light";
     }
     return "pf-m-light-100";
@@ -208,10 +223,9 @@ export const MDXTemplate = ({
     (!isSinglePage && !hideTabName) ||
     isComponent ||
     isUtility ||
-    isDemo
+    isPattern
   );
 
-  console.log(id);
   return (
     <React.Fragment>
       <PageGroup>
@@ -221,7 +235,44 @@ export const MDXTemplate = ({
           isWidthLimited
         >
           <TextContent>
-            <Title headingLevel='h1' size='4xl' id="ws-page-title">{title}</Title>
+            <Flex alignItems={{ default: 'alignItemsCenter'}}>
+              <FlexItem>
+                <Title headingLevel='h1' size='4xl' id="ws-page-title">
+                  {title}
+                </Title>
+              </FlexItem>
+              <FlexItem>
+                <Flex display={{ default: 'inlineFlex' }}>
+                  {isDeprecated && (
+                    <FlexItem spacer={{ default: 'spacerSm' }}>
+                      <Tooltip content="Deprecated components are available for use, but are no longer being enhanced">
+                        <Button isInline component="span" variant="link">
+                          <Label color="grey">Deprecated</Label>
+                        </Button>
+                      </Tooltip>
+                    </FlexItem>
+                  )}
+                  {isDemo && (
+                    <FlexItem spacer={{ default: 'spacerSm' }}>
+                      <Tooltip content="Demos show how multiple components can be used in a single design">
+                        <Button isInline component="span" variant="link">
+                          <Label color="purple">Demo</Label>
+                        </Button>
+                      </Tooltip>
+                    </FlexItem>
+                  )}
+                  {isBeta && (
+                    <FlexItem spacer={{ default: 'spacerSm' }}>
+                      <Tooltip content="This beta component is currently under review and is still open for further evolution">
+                        <Button isInline component="span" variant="link">
+                          <Label color="blue">Beta</Label>
+                        </Button>
+                      </Tooltip>
+                    </FlexItem>
+                  )}
+                </Flex>
+              </FlexItem>
+            </Flex>
             {isComponent && summary && (<SummaryComponent />)}
           </TextContent>
         </PageSection>
