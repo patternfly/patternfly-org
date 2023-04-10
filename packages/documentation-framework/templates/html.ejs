@@ -16,9 +16,7 @@
     <%= htmlWebpackPlugin.tags.headTags %>
   </head>
   <body class="pf-m-redhat-updated-font pf-m-redhatmono-font">
-    <div id="root">
-      <%= prerendering %>
-    </div>
+    <div id="root"><%= prerendering %></div>
     <%= htmlWebpackPlugin.tags.bodyTags %>
     <% if (algolia) { %>
     <script

@@ -1,6 +1,7 @@
 ---
-id: Develop
-section: contribute
+id: Developer contributions
+section: get-started
+subsection: contribute
 ---
 
 ## Ways to contribute

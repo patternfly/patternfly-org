@@ -1,6 +1,6 @@
 # patternfly-org
 
-The PatternFly Org is the source for the official documentation for PatternFly 3 and PatternFly 4.
+The PatternFly Org is the source for the official documentation for PatternFly.
 
 ## Development
 
@@ -39,4 +39,3 @@ When PatternFly does a release (currently every 3 weeks) this bucket is copied t
 You might have a dirty file tree with old submodules and folders lying around. You can remove these with:
 
     git clean -dfx
-

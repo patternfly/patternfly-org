@@ -2,8 +2,11 @@ const path = require('path');
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base.config');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const reactCSSRegex = /(react-[\w-]+\/dist|react-styles\/css)\/.*\.css$/;
 
-const serverConfig = () => {
+const serverConfig = async (env, argv) => {
+  const isProd = argv.mode === 'production';
   return {
     output: {
       path: path.resolve('.cache/ssr-build'), // Don't bloat `public` dir
@@ -25,13 +28,26 @@ const serverConfig = () => {
       rules: [
         {
           test: /\.css$/,
-          use: 'null-loader'
+          use: [
+            {
+              loader: 'css-loader'
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: [
+                    require('autoprefixer')({
+                      env: '>0.25%, not ie 11, not op_mini all',
+                      flexbox: false,
+                      grid: false
+                    })
+                  ]
+                }
+              }
+            }
+          ]
         },
-        // This does weird things to document
-        {
-          test: /(novnc-core|@novnc\/novnc)\/.*\.js/,
-          use: 'null-loader'
-        }
       ]
     },
     resolve: {
@@ -41,7 +57,7 @@ const serverConfig = () => {
         // The maintainer will not allow his bundle to be required from a node context
         // https://github.com/xtermjs/xterm.js/pull/3134
         'xterm':  '@patternfly/documentation-framework/helpers/xterm',
-        'xterm-addon-fit':  '@patternfly/documentation-framework/helpers/xterm-addon-fit'
+        'xterm-addon-fit':  '@patternfly/documentation-framework/helpers/xterm-addon-fit',
       },
     },
     // Load in prerender.js instead
@@ -49,7 +65,7 @@ const serverConfig = () => {
   };
 }
 
-module.exports = (env = {}, argv) => merge(
+module.exports = async (env = {}, argv) => merge(
   baseConfig(env, argv),
-  serverConfig(env, argv)
+  await serverConfig(env, argv)
 );

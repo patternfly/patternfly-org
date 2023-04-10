@@ -38,9 +38,9 @@ The following React props have been provided for more fine-tuned control over ac
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `aria-label="[text describing the nav component]"` | `Nav` | 	Adds an accessible label for the nav when there are multiple navs on the page |
-| `ariaLeftScroll="[text describing the left scroll button]"` | `NavList` | Adds an aria-label for the left scroll button |
-| `ariaRightScroll="[text describing the right scroll button]"` | `NavList` | Adds an aria-label for the right scroll button |
+| `aria-label="[text that labels the nav component]"` | `Nav` | 	Adds an accessible label for the nav when there are multiple navs on the page |
+| `ariaLeftScroll="[text that labels the left scroll button]"` | `NavList` | Adds an aria-label for the left scroll button |
+| `ariaRightScroll="[text that labels the right scroll button]"` | `NavList` | Adds an aria-label for the right scroll button |
 | `id` | `NavGroup` | Used as an identifier to use when there is an `aria-labelledby` on a section element |
 | `title="[text label for an expandable nav]"` | `NavGroup` | Adds a title shown for the group |
 | `isActive` | `NavItem` |  Will add the `aria-current` attribute on a nav item when active |
@@ -70,8 +70,8 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason |
 | -- | -- | -- |
-| `aria-label="[text describing the nav component]"` | `.pf-c-nav` |  Describes `<nav>` landmark. |
-| `aria-label="[text describing a nav section]"` | `.pf-c-nav__section` |  Describes a nav `<section>`, where a `.pf-c-nav__section-title` is not present. |
+| `aria-label="[text that labels the nav component]"` | `.pf-c-nav` |  Describes `<nav>` landmark. |
+| `aria-label="[text that labels a nav section]"` | `.pf-c-nav__section` |  Describes a nav `<section>`, where a `.pf-c-nav__section-title` is not present. |
 | `aria-labelledby="[id of the element that labels the subnav]"` | `.pf-c-nav__subnav` |  Gives the subnav `<section>` landmark an accessible name by referring to the element that provides the subnav `<section>` landmark title. The `aria-labelledby` attribute should be passed in with a value of the label's id attribute.|
 | `aria-expanded="false"` | `.pf-c-nav__link` |  Indicates that subnav section is hidden. |
 | `aria-expanded="true"` | `.pf-c-nav__link` |  Indicates that subnav section is visible. |
