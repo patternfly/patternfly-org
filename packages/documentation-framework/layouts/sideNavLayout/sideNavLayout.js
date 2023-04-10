@@ -24,7 +24,6 @@ import {
   Switch,
   SearchInput
 } from '@patternfly/react-core';
-import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import BarsIcon from '@patternfly/react-icons/dist/esm/icons/bars-icon';
 import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
 import { SideNav, TopNav, GdprBanner } from '../../components';
@@ -78,7 +77,7 @@ const HeaderTools = ({
           </ToolbarItem>
         )}
         <ToolbarGroup
-          alignment={{ default: 'alignRight' }}
+          align={{ default: 'alignRight' }}
           spaceItems={{ default: 'spacerNone', md: 'spacerMd' }}
         >
           {hasDarkThemeSwitcher && (

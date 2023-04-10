@@ -53,6 +53,21 @@ const iconSvgs = {
 
 export const IconRecommendations = () => {
   const [searchValue, setSearchValue] = React.useState('');
+  const [sortByIndex, setSortByIndex] = React.useState();
+  const [sortDirection, setSortDirection] = React.useState();
+
+  const getSortParams = columnIndex => ({
+    sortBy: {
+      index: sortByIndex,
+      direction: sortDirection,
+      defaultDirection: 'asc' // starting sort direction when first sorting a column. Defaults to 'asc'
+    },
+    onSort: (_event, index, direction) => {
+      setSortByIndex(index);
+      setSortDirection(direction);
+    },
+    columnIndex
+  });
 
   const filteredRows = React.useMemo(() => {
     return recommendationsArray.filter(recommendation => {
@@ -66,6 +81,21 @@ export const IconRecommendations = () => {
         newRec.type.toLowerCase().includes(searchValue.toLowerCase())
     });
   }, [searchValue]);
+
+  const sortedRows = React.useMemo(() => {
+    let rows = filteredRows;
+    if (sortByIndex !== null) {
+      rows.sort((a, b) => {
+        const cellA = sortByIndex === 0 ? a[0].iconName.toLowerCase() : a[a.length - 1].iconName.toLowerCase();
+        const cellB = sortByIndex === 0 ? b[0].iconName.toLowerCase() : b[b.length - 1].iconName.toLowerCase();
+        return cellA < cellB
+          ? -1
+          : cellA > cellB
+            ? 1 : 0
+      });
+    }
+    return sortDirection === 'asc' ? rows : rows.reverse();
+  }, [sortByIndex, sortDirection, filteredRows]);
 
   return (
     <div>
@@ -95,14 +125,14 @@ export const IconRecommendations = () => {
       >
         <Thead>
           <Tr>
-            <Th>Old icon</Th>
-            <Th>Updated icon</Th>
+            <Th sort={getSortParams(0)}>Old icon</Th>
+            <Th sort={getSortParams(1)}>Updated icon</Th>
             <Th>Contextual usage</Th>
           </Tr>
         </Thead>
         <Tbody>
-          {filteredRows.map((recommendation, index) => (
-            <Tr key={index}>
+          {sortedRows.map(recommendation => (
+            <Tr key={recommendation[0].iconName}>
               <Td data-label="Old icon" modifier="fitContent">
                 {recommendation.map(oldRec => {
                   if (oldRec.iconType === "old") {
@@ -110,12 +140,12 @@ export const IconRecommendations = () => {
                       <img src={iconSvgs[oldRec.iconName]} className="ws-icon-svg" alt={`${oldRec.iconName} icon`}/>;
                     const OldIcon = oldRec.reactIcon !== 'svg' && icons[oldRec.reactIcon];
                     return (
-                      <div className="ws-recommendations-entry">
-                      <span className="ws-recommendations-icon">
-                        {OldIcon && <OldIcon/>}
-                        {oldIconSvg}
-                      </span>
-                        {oldRec.iconName}
+                      <div className="ws-recommendations-entry" key={oldRec.iconName + oldRec.iconType + oldRec.iconUsage}>
+                        <span className="ws-recommendations-icon">
+                          {OldIcon && <OldIcon/>}
+                          {oldIconSvg}
+                        </span>
+                          {oldRec.iconName}
                       </div>
                     );
                   } else return '';
@@ -128,7 +158,7 @@ export const IconRecommendations = () => {
                       <img src={iconSvgs[newRec.iconName]} className="ws-icon-svg" alt={`${newRec.iconName} icon`}/>;
                     const NewIcon = newRec.reactIcon !== 'svg' && icons[newRec.reactIcon];
                     return (
-                      <div className="ws-recommendations-entry">
+                      <div className="ws-recommendations-entry" key={newRec.iconName + newRec.iconType + newRec.iconUsage}>
                         <span className="ws-recommendations-icon">
                           {NewIcon && <NewIcon/>}
                           {newIconSvg}

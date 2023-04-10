@@ -32,6 +32,21 @@ export const IconsTable = () => {
   const columns = ['Icon', 'Name', 'Style', 'React', 'Usage/tooltip', 'Unicode'];
   const [searchValue, setSearchValue] = React.useState('');
   const [isCopied, setCopied] = React.useState(false);
+  const [sortByIndex, setSortByIndex] = React.useState();
+  const [sortDirection, setSortDirection] = React.useState();
+
+  const getSortParams = columnIndex => ({
+    sortBy: {
+      index: sortByIndex,
+      direction: sortDirection,
+      defaultDirection: 'asc' // starting sort direction when first sorting a column. Defaults to 'asc'
+    },
+    onSort: (_event, index, direction) => {
+      setSortByIndex(index);
+      setSortDirection(direction);
+    },
+    columnIndex
+  });
 
   const onDownloadSvg = (currentTarget, name) => {
     const domNode = currentTarget.children[0].cloneNode(true);
@@ -65,6 +80,21 @@ export const IconsTable = () => {
     });
   }, [searchValue]);
 
+  const sortedRows = React.useMemo(() => {
+    let rows = filteredRows;
+    if (sortByIndex !== null) {
+      rows.sort((a, b) => {
+        const cellA = sortByIndex === 1 ? a.Name.toLowerCase() : a.Contextual_usage.toLowerCase();
+        const cellB = sortByIndex === 1 ? b.Name.toLowerCase() : b.Contextual_usage.toLowerCase();
+        return cellA < cellB
+          ? -1
+          : cellA > cellB
+            ? 1 : 0
+      });
+    }
+    return sortDirection === 'asc' ? rows : rows.reverse();
+  }, [sortByIndex, sortDirection, filteredRows]);
+
   return (
     <div>
       <Toolbar id="data-toolbar-table">
@@ -94,20 +124,19 @@ export const IconsTable = () => {
         <Thead>
           <Tr>
             <Th>{columns[0]}</Th>
-            <Th>{columns[1]}</Th>
+            <Th sort={getSortParams(1)}>{columns[1]}</Th>
             <Th>{columns[2]}</Th>
             <Th>{columns[3]}</Th>
-            <Th>{columns[4]}</Th>
-            <Th>{columns[5]}</Th>
-            <Th modifier="fitContent">{columns[6]}</Th>
+            <Th sort={getSortParams(4)}>{columns[4]}</Th>
+            <Th modifier="fitContent">{columns[5]}</Th>
           </Tr>
         </Thead>
         <Tbody>
-          {filteredRows.map(icon => {
+          {sortedRows.map((icon, index) => {
             const Icon = icons[icon.React_name];
             const iconUnicode = icon.Unicode || iconUnicodes.default[icon.Name] || '';
             return (
-              <Tr key={icon.Name}>
+              <Tr key={index}>
                 <Td dataLabel={columns[0]} className="pf-c-table__favorite">
                   <Tooltip content="Download SVG" position={TooltipPosition.right}>
                     <Button

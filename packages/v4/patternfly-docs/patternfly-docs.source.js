@@ -44,9 +44,9 @@ module.exports = (sourceMD, sourceProps) => {
   const reactLogViewerPath = require
     .resolve('@patternfly/react-log-viewer/package.json')
     .replace('package.json', 'src');
-    const reactTopologyPath = require
-    .resolve('@patternfly/react-topology/package.json')
-    .replace('package.json', 'src');
+  //const reactTopologyPath = require
+  //  .resolve('@patternfly/react-topology/package.json')
+  //  .replace('package.json', 'src');
 
   const logViewerContentBase = require
     .resolve('@patternfly/react-log-viewer/package.json')
@@ -58,7 +58,7 @@ module.exports = (sourceMD, sourceProps) => {
   sourceProps(path.join(reactCodeEditorPath, '/**/*.tsx'),reactPropsIgnore);
   sourceProps(path.join(reactChartsPath, '/**/*.tsx'),reactPropsIgnore);
   sourceProps(path.join(reactLogViewerPath, '/**/*.tsx'), reactPropsIgnore);
-  sourceProps(path.join(reactTopologyPath, '/**/*.tsx'), reactPropsIgnore);
+  //sourceProps(path.join(reactTopologyPath, '/**/*.tsx'), reactPropsIgnore);
 
   // React MD
   sourceMD(path.join(reactCorePath, '/components/**/examples/*.md'), 'react');
@@ -83,7 +83,8 @@ module.exports = (sourceMD, sourceProps) => {
   sourceMD(path.join(logViewerContentBase, '/**/demos/*.md'), 'react-demos');
 
   // React-topology MD
-  sourceMD(path.join(reactTopologyPath, '/**/examples/*.md'), 'react');
+  // Topology mappings commented out until Topology is compatible with v5
+  // sourceMD(path.join(reactTopologyPath, '/**/examples/*.md'), 'react');
 
   // React OUIA MD
   sourceMD(path.join(reactCorePath, '/**/helpers/OUIA/*.md'), 'react');
