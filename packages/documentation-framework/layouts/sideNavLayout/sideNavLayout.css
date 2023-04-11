@@ -12,10 +12,6 @@
   padding: 0 var(--pf-global--spacer--md);
 }
 
-.ws-patternfly-3 > svg {
-  margin-left: var(--pf-global--spacer--sm);
-}
-
 @media (min-width: 1200px) {
   .ws-page-sidebar {
     box-shadow: none !important;

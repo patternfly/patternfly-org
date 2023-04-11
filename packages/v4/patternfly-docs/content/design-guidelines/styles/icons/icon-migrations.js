@@ -1196,20 +1196,20 @@ export const recommendationsArray = [
   ],
   [
     {
-      style: "",
-      iconName: "pficon-arrow",
-      type: "",
-      iconUsage: "",
-      iconType: "old",
-      reactIcon: "ArrowIcon"
-    },
-    {
       style: "fas",
       iconName: "fas fa-share-square",
       type: "Action",
       iconUsage: "Indicates the ability to share via various methods with others",
       iconType: "new",
       reactIcon: "ShareSquareIcon"
+    },
+    {
+      style: "",
+      iconName: "pficon-arrow",
+      type: "",
+      iconUsage: "",
+      iconType: "old",
+      reactIcon: "ArrowIcon"
     }
   ],
   [
@@ -1313,7 +1313,7 @@ export const recommendationsArray = [
       style: "",
       iconName: "",
       type: "",
-      iconUsage: <span>Use the animated <Link to="/components/spinner">PatternFly Spinner component</Link> to indicate that something is "loading" or in the middle of processing</span>,
+      iconUsage: <span key="spinner component">Use the animated <Link to="/components/spinner">PatternFly Spinner component</Link> to indicate that something is "loading" or in the middle of processing</span>,
       iconType: "new",
       reactIcon: "PF-Spinner-Component"
     }

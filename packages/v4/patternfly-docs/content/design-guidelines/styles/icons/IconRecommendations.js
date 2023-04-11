@@ -2,13 +2,12 @@ import React from 'react';
 import {
   Divider,
   SearchInput,
-  Title,
   Toolbar,
   ToolbarContent,
   ToolbarItem,
-  EmptyState, 
-  EmptyStateVariant, 
-  EmptyStateIcon, 
+  EmptyState,
+  EmptyStateHeader,
+  EmptyStateIcon,
   EmptyStateBody,
   Spinner
 } from '@patternfly/react-core';
@@ -16,14 +15,12 @@ import * as icons from '@patternfly/react-icons';
 import './icons.css';
 import {
   Table,
-  TableHeader,
-  TableBody,
-  TableVariant,
-  sortable,
-  SortByDirection
+  Thead,
+  Th,
+  Tr,
+  Td,
+  Tbody
 } from '@patternfly/react-table';
-import { css } from '@patternfly/react-styles';
-import styles from '@patternfly/react-styles/css/components/Table/table';
 import { recommendationsArray } from './icon-migrations';
 import faArrowCircleODown from './fa-arrow-circle-o-down.svg';
 import faArrowCircleOUp from './fa-arrow-circle-o-up.svg';
@@ -37,6 +34,7 @@ import pfIconHistory from './pf-icon-history.svg';
 import pficonKey from './pficon-key.svg';
 import pficonSearch from './pficon-search.svg';
 import pficonSettings from './pficon-settings.svg';
+import SearchIcon from "@patternfly/react-icons/dist/esm/icons/search-icon";
 
 const iconSvgs = {
   'fa-arrow-circle-o-down': faArrowCircleODown,
@@ -53,154 +51,156 @@ const iconSvgs = {
   'pficon-settings': pficonSettings
 };
 
-export class IconRecommendations extends React.Component {
-  state = {
-    searchValue: '',
-    columns: [
-      { title: 'Old icon', transforms: [sortable], props: { className: css(styles.modifiers.fitContent)} },
-      { title: 'Updated icon', transforms: [sortable], props: { className: css(styles.modifiers.fitContent)} },
-      'Contextual usage'
-    ],
-    sortBy: {}
-  };
+const concatChildText = (children, text = '') => {
+  React.Children.forEach(children, (child) => {
+    if (typeof child === 'string') {
+      text += child;
+    } else if (React.isValidElement(child)) {
+      text = concatChildText(child.props.children, text);
+    }
+  });
+  return text;
+}
 
-  handleSearchChange = (event, _checked) => {
-    const searchValue = event.target.value;
-    this.setState(() => ({
-      searchValue
-    }));
-  };
+export const IconRecommendations = () => {
+  const [searchValue, setSearchValue] = React.useState('');
+  const [sortByIndex, setSortByIndex] = React.useState();
+  const [sortDirection, setSortDirection] = React.useState();
 
-  onSort = (_event, index, direction) => {
-    this.setState({
-      sortBy: {
-        index,
-        direction
-      }
-    });
-  }
+  const getSortParams = columnIndex => ({
+    sortBy: {
+      index: sortByIndex,
+      direction: sortDirection,
+      defaultDirection: 'asc' // starting sort direction when first sorting a column. Defaults to 'asc'
+    },
+    onSort: (_event, index, direction) => {
+      setSortByIndex(index);
+      setSortDirection(direction);
+    },
+    columnIndex
+  });
 
-  onClear = () => {
-    this.setState({ searchValue: '' });
-  }
-
-  buildRecommendationRows = (searchTerm) => recommendationsArray.filter(recGroup => recGroup
-    .some(obj => Object.values(obj).some(val => {
-      const cellText = val?.props?.children ? val.props.children : val;
-      return cellText.indexOf(searchTerm) > -1;
-    })))
-    .map(iconRow => iconRow
-      .reduce((acc, cur) => {
-        acc[cur.iconType].push({
-          name: cur.iconName,
-          icon: cur.iconName,
-          style: cur.style,
-          reactIcon: cur.reactIcon
+  const filteredRows = React.useMemo(() => {
+    return recommendationsArray.filter(recommendation => (
+      recommendation.some(iconObj => {
+        // match if any text value for an icon contains searchValue
+        return Object.values(iconObj).some(val => {
+          // extract & search text in nested JSX
+          const cellText = concatChildText(val);
+          return cellText.toLowerCase().includes(searchValue.toLowerCase());
         });
-        if (cur.iconType === 'new') {
-          acc['iconUsage'].push(<div>{cur.iconUsage}</div>);
-        }
-        return acc;
-      }, {
-        old: [],
-        new: [],
-        iconUsage: []
       })
-    );
+    ))
+  }, [searchValue]);
 
-  render() {
-    const { searchValue, columns, sortBy } = this.state;
-    const { direction, index } = sortBy;
-    const SearchIcon = icons.SearchIcon;
-    const iconRecommendations = this.buildRecommendationRows(searchValue);
-    let iconRows = iconRecommendations.map((rowObj, idx) => {
-      const columnNames = Object.keys(rowObj);
-      const cells = columnNames.map(columnName => { // old
-        const cellObj = {
-          title: [],
-          key: `${columnName}-${idx}`
-        }; 
-        rowObj[columnName].map((cellLine, index) => {
-          const { icon, name, reactIcon } = cellLine;
-          const Icon = reactIcon !== 'svg' && icons[reactIcon];
-          const iconSvg = reactIcon === 'svg' && <img src={iconSvgs[name]} className="ws-icon-svg" alt={`${icon} icon`} />;
-          const SpinnerComponent = reactIcon === 'PF-Spinner-Component';
-          
-          (columnName === 'iconUsage')
-            ? cellObj.title.push(<div className="ws-recommendations-entry" key={`${name}-${index}`}>{cellLine}</div>)
-            : cellObj.title.push(<div className={`${css(styles.modifiers.fitContent)} ws-recommendations-entry`} key={`${name}-${index}`}>
-              <span className="ws-recommendations-icon">
-                {Icon && <Icon />}
-                {iconSvg}
-                {SpinnerComponent && <Spinner size='md' />}
-              </span>
-              {icon}
-            </div>);
-
-          return null;
-        });
-        return cellObj;
-      });
-      return cells;
-    });
-
-    if (direction) {
-      const sortedRows = iconRows.sort((a, b) => {
-        const cellA = a[index].title[0].key.toLowerCase();
-        const cellB = b[index].title[0].key.toLowerCase();
+  const sortedRows = React.useMemo(() => {
+    let rows = filteredRows;
+    if (sortByIndex !== null) {
+      rows.sort((a, b) => {
+        const cellA = sortByIndex === 0 ? a[0].iconName.toLowerCase() : a[a.length - 1].iconName.toLowerCase();
+        const cellB = sortByIndex === 0 ? b[0].iconName.toLowerCase() : b[b.length - 1].iconName.toLowerCase();
         return cellA < cellB
           ? -1
           : cellA > cellB
-            ? 1 : 0});
-      iconRows = direction === SortByDirection.asc ? sortedRows : sortedRows.reverse();
+            ? 1 : 0
+      });
     }
-    
-    return (
-      <div>
-        <Toolbar id="data-toolbar-recs">
-          <ToolbarContent>
-            <ToolbarItem>
-              <SearchInput
-                name="recommendedIconsSearch"
-                id="recommendedIconsSearch"
-                aria-label="Search icons"
-                placeholder="Search for any icon or usage guideline"
-                value={searchValue}
-                onChange={this.handleSearchChange}
-                onClear={this.onClear}
-              />
-            </ToolbarItem>
-            <ToolbarItem alignment={{ default: 'alignRight' }}>
-              <b>{iconRows.length} items</b>
-            </ToolbarItem>
-          </ToolbarContent>
-        </Toolbar>
-        <Divider />
-        <Table
-          aria-label="Updated icons table"
-          cells={columns}
-          rows={iconRows}
-          className="ws-icons-recommendations"
-          sortBy={sortBy}
-          onSort={this.onSort}
-          variant={TableVariant.compact}
-        >
-          <TableHeader />
-          <TableBody />
-        </Table>
+    return sortDirection === 'asc' ? rows : rows.reverse();
+  }, [sortByIndex, sortDirection, filteredRows]);
 
-          {iconRows.length === 0 && (
-          <EmptyState variant={EmptyStateVariant.full}>
-            <EmptyStateIcon icon={icons.SearchIcon}/>
-            <Title headingLevel="h5" size="2xl">
-              No results found for "{ searchValue }".
-            </Title>
-            <EmptyStateBody>
-              We couldn't find any icons that matched your search. Try entering a new search term to find what you're looking for.
-            </EmptyStateBody>
-          </EmptyState>
-        )}
-      </div>
-    );
-  }
+  return (
+    <div>
+      <Toolbar id="data-toolbar-recs">
+        <ToolbarContent>
+          <ToolbarItem>
+            <SearchInput
+              name="recommendedIconsSearch"
+              id="recommendedIconsSearch"
+              aria-label="Search update icon recommendations"
+              placeholder="Search for any icon or usage guideline"
+              value={searchValue}
+              onChange={(_, value) => setSearchValue(value)}
+              onClear={() => setSearchValue('')}
+            />
+          </ToolbarItem>
+          <ToolbarItem align={{ default: 'alignRight' }}>
+            <b>{filteredRows.length} items</b>
+          </ToolbarItem>
+        </ToolbarContent>
+      </Toolbar>
+      <Divider />
+      <Table
+        aria-label="Updated icons table"
+        className="ws-icons-recommendations"
+        variant="compact"
+      >
+        <Thead>
+          <Tr>
+            <Th sort={getSortParams(0)}>Old icon</Th>
+            <Th sort={getSortParams(1)}>Updated icon</Th>
+            <Th>Contextual usage</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          {sortedRows.map(recommendation => (
+            <Tr key={recommendation[0].iconName}>
+              <Td data-label="Old icon" modifier="fitContent">
+                {recommendation.map(oldRec => {
+                  if (oldRec.iconType === "old") {
+                    const oldIconSvg = oldRec.reactIcon === 'svg' &&
+                      <img src={iconSvgs[oldRec.iconName]} className="ws-icon-svg" alt={`${oldRec.iconName} icon`}/>;
+                    const OldIcon = oldRec.reactIcon !== 'svg' && icons[oldRec.reactIcon];
+                    return (
+                      <div className="ws-recommendations-entry" key={oldRec.iconName + oldRec.iconType + oldRec.iconUsage}>
+                        <span className="ws-recommendations-icon">
+                          {OldIcon && <OldIcon/>}
+                          {oldIconSvg}
+                        </span>
+                          {oldRec.iconName}
+                      </div>
+                    );
+                  } else return '';
+                })}
+              </Td>
+              <Td data-label="Updated icon"  modifier="fitContent">
+                {recommendation.map(newRec => {
+                  if (newRec.iconType === "new") {
+                    const newIconSvg = newRec.reactIcon === 'svg' &&
+                      <img src={iconSvgs[newRec.iconName]} className="ws-icon-svg" alt={`${newRec.iconName} icon`}/>;
+                    const NewIcon = newRec.reactIcon !== 'svg' && icons[newRec.reactIcon];
+                    return (
+                      <div className="ws-recommendations-entry" key={newRec.iconName + newRec.iconType + newRec.iconUsage}>
+                        <span className="ws-recommendations-icon">
+                          {NewIcon && <NewIcon/>}
+                          {newIconSvg}
+                          {newRec.reactIcon === 'PF-Spinner-Component' && <Spinner size='md'/>}
+                        </span>
+                        {newRec.iconName}
+                      </div>
+                    );
+                  } else return '';
+                })}
+              </Td>
+              <Td data-label="Contextual usage">
+                {recommendation.map(rec => {
+                  // Only display iconUsage for recommended icons
+                  if (rec.iconType === 'new') {
+                    return <div key={`${rec.style}-${rec.iconName}-contextual-usage`}>{rec.iconUsage}</div>
+                  }
+                })}
+              </Td>
+            </Tr>
+          ))}
+        </Tbody>
+      </Table>
+      {filteredRows.length === 0 && (
+        <EmptyState>
+          <EmptyStateHeader titleText={`No results found for "${ searchValue }"`} headingLevel="h5" icon={<EmptyStateIcon icon={SearchIcon} />} />
+          <EmptyStateBody>
+            We couldn't find any icons that matched your search. Try entering a new search term to find what you're looking for.
+          </EmptyStateBody>
+        </EmptyState>
+      )}
+    </div>
+  );
 }

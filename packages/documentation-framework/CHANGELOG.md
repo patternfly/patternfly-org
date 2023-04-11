@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.17 (2023-04-11)
+
+
+### Bug Fixes
+
+* **docs:** fixes display & search bugs on icons page ([#3483](https://github.com/patternfly/patternfly-org/issues/3483)) ([39b225c](https://github.com/patternfly/patternfly-org/commit/39b225cdcbdc4c01c5002750600708eab6427f60))
+
+
+
+
+
+# 2.0.0-alpha.16 (2023-04-11)
+
+
+### Features
+
+* **tables:** update tables, context selector ([#3474](https://github.com/patternfly/patternfly-org/issues/3474)) ([cd82c35](https://github.com/patternfly/patternfly-org/commit/cd82c356f568f3368bc22319d614fde8dd74fb38))
+
+
+
+
+
 # 2.0.0-alpha.15 (2023-04-06)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
