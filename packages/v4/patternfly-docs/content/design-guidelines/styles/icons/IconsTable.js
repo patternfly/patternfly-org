@@ -75,6 +75,7 @@ export const IconsTable = () => {
         icon.Contextual_usage?.toLowerCase().includes(searchValue.toLowerCase()) ||
         icon.Extra_context?.toLowerCase().includes(searchValue.toLowerCase()) ||
         icon.Label?.toLowerCase().includes(searchValue.toLowerCase()) ||
+        icon.React_name.toLowerCase().includes(searchValue.toLowerCase()) ||
         (typeof icon.Type === "string" && icon.Type.toLowerCase().includes(searchValue.toLowerCase())) ||
         (Array.isArray(icon.Type) && icon.Type.filter((type) => type.toLowerCase().includes(searchValue.toLowerCase())).length > 0)
     });

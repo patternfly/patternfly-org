@@ -51,6 +51,17 @@ const iconSvgs = {
   'pficon-settings': pficonSettings
 };
 
+const concatChildText = (children, text = '') => {
+  React.Children.forEach(children, (child) => {
+    if (typeof child === 'string') {
+      text += child;
+    } else if (React.isValidElement(child)) {
+      text = concatChildText(child.props.children, text);
+    }
+  });
+  return text;
+}
+
 export const IconRecommendations = () => {
   const [searchValue, setSearchValue] = React.useState('');
   const [sortByIndex, setSortByIndex] = React.useState();
@@ -70,16 +81,16 @@ export const IconRecommendations = () => {
   });
 
   const filteredRows = React.useMemo(() => {
-    return recommendationsArray.filter(recommendation => {
-      const oldRec = recommendation[0];
-      const newRec = recommendation[1];
-      return oldRec.iconName.toLowerCase().includes(searchValue.toLowerCase()) ||
-        oldRec.iconUsage.toLowerCase().includes(searchValue.toLowerCase()) ||
-        oldRec.type.toLowerCase().includes(searchValue.toLowerCase()) ||
-        newRec.iconName.toLowerCase().includes(searchValue.toLowerCase()) ||
-        newRec.iconUsage.toLowerCase().includes(searchValue.toLowerCase()) ||
-        newRec.type.toLowerCase().includes(searchValue.toLowerCase())
-    });
+    return recommendationsArray.filter(recommendation => (
+      recommendation.some(iconObj => {
+        // match if any text value for an icon contains searchValue
+        return Object.values(iconObj).some(val => {
+          // extract & search text in nested JSX
+          const cellText = concatChildText(val);
+          return cellText.toLowerCase().includes(searchValue.toLowerCase());
+        });
+      })
+    ))
   }, [searchValue]);
 
   const sortedRows = React.useMemo(() => {
@@ -172,7 +183,10 @@ export const IconRecommendations = () => {
               </Td>
               <Td data-label="Contextual usage">
                 {recommendation.map(rec => {
-                  return rec.iconUsage
+                  // Only display iconUsage for recommended icons
+                  if (rec.iconType === 'new') {
+                    return <div key={`${rec.style}-${rec.iconName}-contextual-usage`}>{rec.iconUsage}</div>
+                  }
                 })}
               </Td>
             </Tr>
