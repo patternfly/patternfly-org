@@ -202,7 +202,7 @@ export class CSSVariables extends React.Component {
                           rowIndex,
                           isExpanded: row.isOpen,
                           onToggle: this.onCollapse,
-                          expandId: 'composable-expandable-example'
+                          expandId: 'css-vars-expandable-toggle'
                         }
                         : undefined
                     }
