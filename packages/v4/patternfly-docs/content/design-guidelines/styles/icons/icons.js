@@ -27,18 +27,14 @@ export const iconsData = [
     "Type": "Framework",
     "Contextual_usage": "Indicates the ability to navigate to the previous page of a multi-page data set",
   },
-  [
-    {
-      "Style": "fas",
-      "Name": "fa-angle-right",
-      "React_name": "AngleRightIcon",
-      "Type": "Framework",
-      "Contextual_usage": "Indicates expandable elements such as accordions, progressive disclosures, or expandable lists are currently collapsed. Clicking this will expand the element.",
-    },
-    {
-      "Contextual_usage": "Also indicates the ability to navigate to the next page in a multipage data set.",
-    }
-  ],
+  {
+    "Style": "fas",
+    "Name": "fa-angle-right",
+    "React_name": "AngleRightIcon",
+    "Type": "Framework",
+    "Contextual_usage": "Indicates expandable elements such as accordions, progressive disclosures, or expandable lists are currently collapsed. Clicking this will expand the element.",
+    "Extra_context": "Also indicates the ability to navigate to the next page in a multipage data set."
+  },
   {
     "Style": "fas",
     "Name": "fa-angle-up",
@@ -103,7 +99,6 @@ export const iconsData = [
     "Type": "Framework",
     "Contextual_usage": "Indicates the ability to collapse a navigation menu",
   },
-  [
     {
       "Style": "fas",
       "Name": "fa-bell",
@@ -114,7 +109,7 @@ export const iconsData = [
     },
     {
       "Style": "",
-      "Name": "fa-bell",
+      "Name": "fa-bell (blue)",
       "React_name": "BellIcon",
       "Type": "Status",
       "Contextual_usage": "Represents status: default notification",
@@ -126,8 +121,7 @@ export const iconsData = [
       "React_name": "AttentionBellIcon",
       "Type": "Status",
       "Contextual_usage": "Represents status: attention",
-    }
-  ],
+    },
   {
     "Style": "fas",
     "Name": "fa-bug",
@@ -156,20 +150,15 @@ export const iconsData = [
     "Type": "Status",
     "Contextual_usage": "Represents status: Indicates a switch toggle is in the enabled position",
   },
-  [
-    {
-      "Style": "fas",
-      "Name": "fa-check-circle",
-      "React_name": "CheckCircleIcon",
-      "Type": "Action",
-      "Contextual_usage": "Indicates the ability to commit edited changes.",
-      color: 'var(--pf-global--success-color--100)',
-    },
-    {
-      "Type": "Status",
-      "Contextual_usage": "Represents status: OK in content views such as a tables",
-    }
-  ],
+  {
+    "Style": "fas",
+    "Name": "fa-check-circle",
+    "React_name": "CheckCircleIcon",
+    "Type": ["Action","Status"],
+    "Contextual_usage": "Indicates the ability to commit edited changes",
+    "Extra_context": "Represents status: OK in content views such as a tables",
+    color: 'var(--pf-global--success-color--100)',
+  },
   {
     "Style": "fas",
     "Name": "fa-clipboard-check",
@@ -358,43 +347,30 @@ export const iconsData = [
     "Type": "Action",
     "Contextual_usage": "Indicates the ability to filter search results or datasets",
   },
-  [
-    {
-      "Style": "fas",
-      "Name": "fa-flag",
-      "React_name": "FlagIcon",
-      "Type": "Object",
-      "Contextual_usage": "Represents a message",
-    },
-    {
-      "Type": "Action",
-      "Contextual_usage": "Also indicates the ability to access a messages",
-    }
-  ],
-  [
-    {
-      "Style": "fas",
-      "Name": "fa-folder",
-      "React_name": "FolderIcon",
-      "Type": "Framework",
-      "Contextual_usage": "Represents a collapsed hierarchical group.",
-    },
-    {
-      "Contextual_usage": "Indicates the ability to expand the group.",
-    }
-  ],
-  [
-    {
-      "Style": "fas",
-      "Name": "fa-folder-open",
-      "React_name": "FolderOpenIcon",
-      "Type": "Framework",
-      "Contextual_usage": "Represents an expanded hierarchical group.",
-    },
-    {
-      "Contextual_usage": "Indicates the ability to collapse the group.",
-    }
-  ],
+  {
+    "Style": "fas",
+    "Name": "fa-flag",
+    "React_name": "FlagIcon",
+    "Type": ["Object", "Action"],
+    "Contextual_usage": "Represents a message.",
+    "Extra_context": "Also indicates the ability to access a messages.",
+  },
+  {
+    "Style": "fas",
+    "Name": "fa-folder",
+    "React_name": "FolderIcon",
+    "Type": "Framework",
+    "Contextual_usage": "Represents a collapsed hierarchical group.",
+    "Extra_context": "Indicates the ability to expand the group.",
+  },
+  {
+    "Style": "fas",
+    "Name": "fa-folder-open",
+    "React_name": "FolderOpenIcon",
+    "Type": "Framework",
+    "Contextual_usage": "Represents an expanded hierarchical group.",
+    "Extra_context": "Indicates the ability to collapse the group.",
+  },
   {
     "Style": "fas",
     "Name": "fa-grip-horizontal",
@@ -609,7 +585,7 @@ export const iconsData = [
   },
   {
     "Style": "far",
-    "Name": "fa-question-circle",
+    "Name": "fa-question-circle (outlined)",
     "React_name": "OutlinedQuestionCircleIcon",
     "Type": "Framework",
     "Contextual_usage": "Indicates the availability of contextual help",
@@ -761,19 +737,14 @@ export const iconsData = [
     "Type": "Action",
     "Contextual_usage": "Indicates an upload function is available",
   },
-  [
-    {
-      "Style": "fas",
-      "Name": "fa-user",
-      "React_name": "UserIcon",
-      "Type": "Object",
-      "Contextual_usage": "Represents a user (in a dataset, paired with a username).",
+  {
+    "Style": "fas",
+    "Name": "fa-user",
+    "React_name": "UserIcon",
+    "Type": ["Framework","Object"],
+    "Contextual_usage": "Represents a user (in a dataset, paired with a username).",
+    "Extra_context": "Indicates the availability of a user profile (in the masthead, paired with a username).",
     },
-    {
-      "Type": "Framework",
-      "Contextual_usage": "Indicates the availability of a user profile (in the masthead, paired with a username)",
-    }
-  ],
   {
     "Style": "fas",
     "Name": "fa-users",

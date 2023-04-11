@@ -1,14 +1,14 @@
 import React from 'react';
 import {
+  Button,
   Divider,
   SearchInput,
-  Title,
   Toolbar,
   ToolbarContent,
   ToolbarItem,
-  EmptyState, 
-  EmptyStateVariant, 
-  EmptyStateIcon, 
+  EmptyState,
+  EmptyStateHeader,
+  EmptyStateIcon,
   EmptyStateBody,
   Tooltip,
   TooltipPosition
@@ -17,58 +17,44 @@ import * as icons from '@patternfly/react-icons';
 import './icons.css';
 import {
   Table,
-  TableHeader,
-  TableBody,
-  TableVariant,
-  sortable,
-  SortByDirection
+  Tbody,
+  Thead,
+  Tr,
+  Th,
+  Td
 } from '@patternfly/react-table';
 import { iconsData } from './icons';
 import { saveAs } from 'file-saver';
-import { css } from '@patternfly/react-styles';
-import styles from '@patternfly/react-styles/css/components/Table/table';
+import SearchIcon from '@patternfly/react-icons/dist/esm/icons/search-icon';
 import * as iconUnicodes from '@patternfly/patternfly/assets/icons/iconUnicodes.json';
 
-export class IconsTable extends React.Component {
-  state = {
-    searchValue: '',
-    columns: [
-      'Icon',
-      { title: 'Name', transforms: [sortable], props: { className: css(styles.modifiers.fitContent)} },
-      'Style',
-      'Type',
-      'React',
-      { title: 'Usage/tooltip', transforms: [sortable] },
-      { title: 'Unicode', props: { className: css(styles.modifiers.fitContent)}}
-    ],
-    sortBy: {},
-    tooltipContent: 'Copy'
-  };
+export const IconsTable = () => {
+  const columns = ['Icon', 'Name', 'Style', 'React', 'Usage/tooltip', 'Unicode'];
+  const [searchValue, setSearchValue] = React.useState('');
+  const [isCopied, setCopied] = React.useState(false);
+  const [sortByIndex, setSortByIndex] = React.useState();
+  const [sortDirection, setSortDirection] = React.useState();
 
-  handleSearchChange = (event, _checked) => {
-    const searchValue = event.target.value;
-    this.setState(() => ({
-      searchValue
-    }));
-  };
+  const getSortParams = columnIndex => ({
+    sortBy: {
+      index: sortByIndex,
+      direction: sortDirection,
+      defaultDirection: 'asc' // starting sort direction when first sorting a column. Defaults to 'asc'
+    },
+    onSort: (_event, index, direction) => {
+      setSortByIndex(index);
+      setSortDirection(direction);
+    },
+    columnIndex
+  });
 
-  onSort = (_event, index, direction) => {
-    this.setState({
-      sortBy: {
-        index,
-        direction
-      }
-    });
-  }
-
-  onDownloadSvg = ({ currentTarget }) => {
-    const domNode = currentTarget.cloneNode(true);
+  const onDownloadSvg = (currentTarget, name) => {
+    const domNode = currentTarget.children[0].cloneNode(true);
     domNode.setAttribute("xmlns", "http://www.w3.org/2000/svg");
     domNode.setAttribute("width", "100%");
     domNode.setAttribute("height", "100%");
     const { outerHTML } = domNode;
     const preface = '<?xml version="1.0" standalone="no"?>\r\n';
-    const name = currentTarget.parentElement.nextSibling.textContent;
     const filename = `${name}.svg`;
 
     const blob = new Blob([preface, outerHTML], {
@@ -78,189 +64,137 @@ export class IconsTable extends React.Component {
     saveAs(blob, filename);
   };
 
-  onCopyText = event => {
-    const text = event.currentTarget.textContent;
-    const clipboard = event.currentTarget.parentElement;
-    const el = document.createElement('textarea');
-    el.value = text.toString();
-    clipboard.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    clipboard.removeChild(el);
-    this.setState({ tooltipContent: 'Copied' })
-  }
-
-  onHoverUnicode = () => {
-    this.setState({ tooltipContent: 'Copy' })
-  }
-
-  onClear = () => {
-    this.setState({ searchValue: '' });
-  }
-
-  customRowWrapper = ({
-    trRef,
-    rowProps,
-    ...props
-  }) => {
-    const removeBorder = props.row.removeBorder;
-    const customStyle = {
-      borderBottom: 'none'
-    }
-    return (
-      <tr
-        {...props}
-        ref={trRef}
-        style={removeBorder ? customStyle : {}}
-      />
-    );
-  }
-
-  buildRows = ({
-    Style = ' ', 
-    Name = ' ', 
-    React_name: ReactName = ' ', 
-    Type = ' ', 
-    Contextual_usage = ' ', 
-    color, 
-    Label = null, 
-    Unicode
-  }, removeBorder = false) => {
-    const hasIcon = ReactName !== ' ';
-    const Icon = hasIcon
-      ? icons[ReactName]
-      : null;
-    // 2 unicodes are hard coded in icons.js, otherwise find in unicodes mapping from Core
-    const iconUnicode = Unicode || iconUnicodes.default[Name] || '';
-  
-    return {
-      removeBorder,
-      cells: [
-        {
-          title: hasIcon
-            ? (<Tooltip content="Download SVG" position={TooltipPosition.bottom}><Icon onClick={this.onDownloadSvg} color={color} /></Tooltip>)
-            : ' ',
-          props: { column: 'Icon' }
-        },
-        {
-          title: Name,
-          props: { column: 'Name' }
-        },
-        Style,
-        {
-          title: Type,
-          props: { column: 'Type' }
-        },
-        ReactName,
-        {
-          title: Label
-            ? (
-              <>
-                <div>{Contextual_usage}</div>
-                <br/>
-                <div>Tooltip: {Label}</div>
-              </>
-            )
-            : Contextual_usage,
-          props: { column: 'Usage/tooltip' }
-        },
-        {
-          title: <Tooltip content={this.state.tooltipContent} position={TooltipPosition.bottom}><span onMouseEnter={this.onHoverUnicode} onClick={this.onCopyText} color={color}>{iconUnicode}</span></Tooltip>,
-          props: { column: 'Unicode' }
-        }
-      ]
-    }
+  const clipboardCopyFunc = (event, text) => {
+    navigator.clipboard.writeText(text.toString());
+    setCopied(true);
   };
 
-  render() {
-    const { searchValue, columns, sortBy } = this.state;
-    const { direction, index } = sortBy;
-    const SearchIcon = icons.SearchIcon;
-    const searchRE = new RegExp(searchValue, 'i');
-    const iconRows = iconsData
-      .map(row => {
-        if (Array.isArray(row)) {
-          const lastIdx = row.length - 1;
-          return row.map((subRow, idx) => idx < lastIdx
-            ? this.buildRows(subRow, true)
-            : this.buildRows(subRow, false)
-          )
-        }
-        return this.buildRows(row);
-      })
+  const filteredRows = React.useMemo(() => {
+    return iconsData.filter(icon => {
+      return icon.Name.toLowerCase().includes(searchValue.toLowerCase()) ||
+        icon.Contextual_usage?.toLowerCase().includes(searchValue.toLowerCase()) ||
+        icon.Extra_context?.toLowerCase().includes(searchValue.toLowerCase()) ||
+        icon.Label?.toLowerCase().includes(searchValue.toLowerCase()) ||
+        (typeof icon.Type === "string" && icon.Type.toLowerCase().includes(searchValue.toLowerCase())) ||
+        (Array.isArray(icon.Type) && icon.Type.filter((type) => type.toLowerCase().includes(searchValue.toLowerCase())).length > 0)
+    });
+  }, [searchValue]);
 
-    let filteredRows = iconRows.filter(row => {
-      const isSearchMatch = row =>row.cells.some(cell => {
-        const searchField = typeof cell.title === 'string'
-          ? cell.title
-          : cell;
-        return searchRE.test(searchField);
-      })
-
-      return Array.isArray(row)
-        ? row.some(subRow => isSearchMatch(subRow))
-        : isSearchMatch(row)
-    })
-
-    if (direction) {
-      const sortedRows = filteredRows.sort((a, b) => {
-        a = Array.isArray(a) ? a[0] : a;
-        b = Array.isArray(b) ? b[0] : b;
-        return a.cells[index].title < b.cells[index].title
+  const sortedRows = React.useMemo(() => {
+    let rows = filteredRows;
+    if (sortByIndex !== null) {
+      rows.sort((a, b) => {
+        const cellA = sortByIndex === 1 ? a.Name.toLowerCase() : a.Contextual_usage.toLowerCase();
+        const cellB = sortByIndex === 1 ? b.Name.toLowerCase() : b.Contextual_usage.toLowerCase();
+        return cellA < cellB
           ? -1
-          : a.cells[index].title > b.cells[index].title
-            ? 1 : 0});
-      filteredRows = direction === SortByDirection.asc ? sortedRows : sortedRows.reverse();
+          : cellA > cellB
+            ? 1 : 0
+      });
     }
-    
-    return (
-      <div>
-        <Toolbar id="data-toolbar-table">
-          <ToolbarContent>
-            <ToolbarItem>
-              <SearchInput
-                name="iconsSearch"
-                id="iconsSearch"
-                aria-label="Search icons"
-                placeholder="Search for any icon, attribute, or usage guideline"
-                value={searchValue}
-                onChange={this.handleSearchChange}
-                onClear={this.onClear}
-              />
-            </ToolbarItem>
-            <ToolbarItem alignment={{ default: 'alignRight' }}>
-              <b>{filteredRows.length} items</b>
-            </ToolbarItem>
-          </ToolbarContent>
-        </Toolbar>
-        <Divider />
-        <Table
-          aria-label="Sortable Table"
-          sortBy={sortBy}
-          onSort={this.onSort}
-          cells={columns}
-          rows={filteredRows.flat()}
-          variant={TableVariant.compact}
-          id="ws-icons-table"
-          rowWrapper={this.customRowWrapper}
-        >
-          <TableHeader />
-          <TableBody />
-        </Table>
+    return sortDirection === 'asc' ? rows : rows.reverse();
+  }, [sortByIndex, sortDirection, filteredRows]);
 
-        {filteredRows.length === 0 && (
-          <EmptyState variant={EmptyStateVariant.full}>
-            <EmptyStateIcon icon={icons.SearchIcon}/>
-            <Title headingLevel="h5" size="2xl">
-              No results found for "{ searchValue }"
-            </Title>
-            <EmptyStateBody>
-            We couldn't find any icons that matched your search. If none of the icons listed fit 
+  return (
+    <div>
+      <Toolbar id="data-toolbar-table">
+        <ToolbarContent>
+          <ToolbarItem>
+            <SearchInput
+              name="iconsSearch"
+              id="iconsSearch"
+              aria-label="Search icons"
+              placeholder="Search for any icon, attribute, or usage guideline"
+              value={searchValue}
+              onChange={(_, value) => setSearchValue(value)}
+              onClear={() => setSearchValue('')}
+            />
+          </ToolbarItem>
+          <ToolbarItem align={{ default: 'alignRight' }}>
+            <b>{filteredRows.length} items</b>
+          </ToolbarItem>
+        </ToolbarContent>
+      </Toolbar>
+      <Divider />
+      <Table
+        aria-label="Filterable PatternFly icons"
+        variant={'compact'}
+        id="ws-icons-table"
+      >
+        <Thead>
+          <Tr>
+            <Th>{columns[0]}</Th>
+            <Th sort={getSortParams(1)}>{columns[1]}</Th>
+            <Th>{columns[2]}</Th>
+            <Th>{columns[3]}</Th>
+            <Th sort={getSortParams(4)}>{columns[4]}</Th>
+            <Th modifier="fitContent">{columns[5]}</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          {sortedRows.map((icon, index) => {
+            const Icon = icons[icon.React_name];
+            const iconUnicode = icon.Unicode || iconUnicodes.default[icon.Name] || '';
+            return (
+              <Tr key={index}>
+                <Td dataLabel={columns[0]} className="pf-c-table__favorite">
+                  <Tooltip content="Download SVG" position={TooltipPosition.right}>
+                    <Button
+                      aria-label={`Download SVG ${icon.Name}`}
+                      onClick={(event) => onDownloadSvg(event.currentTarget, icon.Name)}
+                      variant="plain"
+                    >
+                      <Icon color={icon.color || 'var(--pf-global--Color--100)'} />
+                    </Button>
+                  </Tooltip>
+                </Td>
+                <Td dataLabel={columns[1]} modifier="fitContent">{icon.Name}</Td>
+                <Td dataLabel={columns[2]}>{icon.Style}</Td>
+                <Td dataLabel={columns[4]}>{icon.React_name}</Td>
+                <Td dataLabel={columns[5]}>
+                  {icon.Contextual_usage}
+                  {icon.Extra_context && (
+                    <React.Fragment>
+                      <br/><br/>{icon.Extra_context}
+                    </React.Fragment>
+                  )}
+                  {icon.Label && (
+                    <React.Fragment>
+                      <br/><br/>Tooltip:{icon.Label}
+                    </React.Fragment>
+                  )}
+                </Td>
+                <Td dataLabel={columns[6]}>
+                  <Tooltip
+                    trigger="mouseenter focus click"
+                    content={<div>{isCopied ? 'Copied' : 'Copy'}</div>}
+                    position={TooltipPosition.left}
+                    exitDelay={isCopied ? 1000 : 100}
+                    onTooltipHidden={() => setCopied(false)}
+                  >
+                    <Button
+                      aria-label={`Copy ${icon.Name} icon unicode to clipboard`}
+                      variant="plain"
+                      onClick={(event) => clipboardCopyFunc(event, iconUnicode)}
+                    >
+                      {iconUnicode}
+                    </Button>
+                  </Tooltip>
+                </Td>
+              </Tr>
+            )
+          })}
+        </Tbody>
+      </Table>
+
+      {filteredRows.length === 0 && (
+        <EmptyState>
+          <EmptyStateHeader titleText={`No results found for "${ searchValue }"`} headingLevel="h4" icon={<EmptyStateIcon icon={SearchIcon} />} />
+          <EmptyStateBody>We couldn't find any icons that matched your search. If none of the icons listed fit
             your use case, you may use any additional 'fa' icons within <a href="https://fontawesome.com/icons?d=gallery&amp;m=free">Font Awesome's free set</a>.
-            </EmptyStateBody>
-          </EmptyState>
-        )}
-      </div>
-    );
-  }
+          </EmptyStateBody>
+        </EmptyState>
+      )}
+    </div>
+  );
 }
