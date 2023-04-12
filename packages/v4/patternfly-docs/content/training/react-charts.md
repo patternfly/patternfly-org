@@ -1,6 +1,5 @@
 ---
 id: React charts
-section: training
 ---
 
 import { Gallery, GalleryItem } from '@patternfly/react-core';
