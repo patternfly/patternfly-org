@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  TableComposable,
+  Table,
   Caption,
   Thead,
   Tr,
@@ -21,7 +21,7 @@ export const FunctionsTable = ({ functionDescriptions }) => {
     parameters.map((param) => `${param.name}: ${param.default}; `);
 
   return (
-    <TableComposable
+    <Table
       aria-label="Function documentation table"
       variant="compact"
     >
@@ -52,6 +52,6 @@ export const FunctionsTable = ({ functionDescriptions }) => {
           </Tr>
         ))}
       </Tbody>
-    </TableComposable>
+    </Table>
   );
 };
