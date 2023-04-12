@@ -1,5 +1,5 @@
 import React from "react";
-import { TextInput } from "@patternfly/react-core";
+import { SearchInput } from "@patternfly/react-core";
 
 export class CSSSearch extends React.Component {
   constructor(props) {
@@ -9,7 +9,7 @@ export class CSSSearch extends React.Component {
     };
   }
 
-  onFilterChange = (_change, event) => {
+  onFilterChange = (event) => {
     this.setState(
       {
         filterValue: event.target.value
@@ -20,8 +20,7 @@ export class CSSSearch extends React.Component {
 
   render() {
     return (
-      <TextInput
-        type="text"
+      <SearchInput
         aria-label="Filter CSS Variables"
         placeholder="Filter CSS Variables"
         value={this.state.filterValue}

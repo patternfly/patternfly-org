@@ -19,7 +19,7 @@ import './layouts/sideNavLayout/sideNavLayout.css';
 const AppRoute = ({ child, katacodaLayout, title, path }) => {
   const pathname = useLocation().pathname;
   if (typeof window !== 'undefined' && window.gtag) {
-    gtag('config', 'UA-47523816-6', {
+    gtag('config', process.env.googleAnalyticsID, {
       'page_path': pathname,
       'page_title': (title || pathname)
     });
