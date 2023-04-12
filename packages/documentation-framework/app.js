@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import { Router, useLocation } from '@reach/router';
 import 'client-styles'; // Webpack replaces this import: patternfly-docs.css.js
 import { SideNavLayout } from '@patternfly/documentation-framework/layouts';
@@ -19,7 +19,7 @@ import './layouts/sideNavLayout/sideNavLayout.css';
 const AppRoute = ({ child, katacodaLayout, title, path }) => {
   const pathname = useLocation().pathname;
   if (typeof window !== 'undefined' && window.gtag) {
-    gtag('config', 'UA-47523816-6', {
+    gtag('config', process.env.googleAnalyticsID, {
       'page_path': pathname,
       'page_title': (title || pathname)
     });
@@ -107,8 +107,12 @@ const isPrerender = process.env.PRERENDER;
 // Don't use ReactDOM in SSR
 if (!isPrerender) {
   function render() {
-    const renderFn = isProd ? ReactDOM.hydrate : ReactDOM.render;
-    renderFn(<App />, document.getElementById('root'));
+    const container = document.getElementById('root');
+    if (isProd) {
+        hydrateRoot(container, <App />);
+    } else {
+        createRoot(container).render(<App />);
+    }
   }
   // On first load, await promise for the current page to avoid flashing a "Loading..." state
   const Component = getAsyncComponent(null);

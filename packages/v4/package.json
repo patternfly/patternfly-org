@@ -2,7 +2,7 @@
   "name": "patternfly-org-4",
   "description": "Documentation for PatternFly 4.",
   "private": true,
-  "version": "4.15.7",
+  "version": "4.21.4",
   "author": "Red Hat",
   "license": "MIT",
   "scripts": {
@@ -17,17 +17,19 @@
     "screenshots": "pf-docs-framework screenshots"
   },
   "dependencies": {
-    "@patternfly/documentation-framework": "^1.4.7",
-    "@patternfly/quickstarts": "^2.2.4",
-    "@patternfly/react-catalog-view-extension": "4.95.1",
-    "@patternfly/react-docs": "5.103.2",
-    "@patternfly/react-log-viewer": "4.87.98",
-    "react": "^16.8.0 || ^17.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0"
+    "@patternfly/documentation-framework": "^2.0.0-alpha.14",
+    "@patternfly/quickstarts": "^2.4.0",
+    "@patternfly/react-catalog-view-extension": "5.0.0-alpha.1",
+    "@patternfly/react-console": "^5.0.0-alpha.1",
+    "@patternfly/react-docs": "6.0.0-alpha.58",
+    "@patternfly/react-log-viewer": "4.87.100",
+    "@patternfly/react-topology": "^4.91.40",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
-    "@patternfly/patternfly-a11y": "4.3.0",
-    "fs-extra": "^9.0.0",
-    "glob": "^7.1.6"
+    "@patternfly/patternfly-a11y": "4.3.1",
+    "fs-extra": "^11.1.0",
+    "glob": "^8.1.0"
   }
 }

@@ -12,7 +12,7 @@ export const InlineAlert = ({
     className="pf-u-my-md"
     style={{ marginBottom: '1rem' }}
     isInline
-    titleHeadingLevel="h2"
+    component="h2"
   >
     {children}
   </Alert>

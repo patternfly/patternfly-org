@@ -42,10 +42,10 @@ The following React props have been provided for more fine-tuned control over ac
 
 | Prop | Applied to | Reason | 
 |---|---|---|
-| `cellAriaLabel` | `CalendarMonth` | Adds an accessible name to the date cell. <br/><br/> Note: unlike most of PatternFly's other "AriaLabel"/`aria-label` props, this prop expects a function that has a Date object as an argument and returns a string. Typically the string that is returned should be the full date, such as "14 February 2023". |
-| `nextMonthAriaLabel` | `CalendarMonth` | Adds an accessible name to the "next month" button. |
-| `prevMonthAriaLabel` | `CalendarMonth` | Adds an accessible name to the "previous month" button. |
-| `prevMonthAriaLabel` | `CalendarMonth` | Adds an accessible name to the year input. |
+| `cellAriaLabel={[function that returns a string that labels the date]}` | `CalendarMonth` | Adds an accessible name to the date cell. <br/><br/> Note: unlike most of PatternFly's other "AriaLabel"/`aria-label` props, this prop expects a function that has a Date object as an argument and returns a string. Typically the string that is returned should be the full date, such as "14 February 2023". |
+| `nextMonthAriaLabel="[text that labels the next month button]"` | `CalendarMonth` | Adds an accessible name to the "next month" button. |
+| `prevMonthAriaLabel="[text that labels the previous month button]"` | `CalendarMonth` | Adds an accessible name to the "previous month" button. |
+| `yearInputAriaLabel="[text that labels the year input]"` | `CalendarMonth` | Adds an accessible name to the year input. |
 
 ### Inline props
 
@@ -76,9 +76,9 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 |---|---|---|
 | `aria-labelledby="[id of the element that labels the calendar month]"` | `article` | Adds an accessible name to a wrapper element when the calendar month is displayed inline. |
 | `aria-current="date"` | `.pf-c-calendar-month__date` | Notifies users of assistive technologies when a date cell is currently selected. **Required** if a date cell is selected. |
-| `aria-label="[text describing the date]"` | `.pf-c-calendar-month__date` | Adds an accessible name to the date button. Typically the value passed in should be the full date. For example, `aria-label="14 February 2023"`. |
+| `aria-label="[text that labels the date]"` | `.pf-c-calendar-month__date` | Adds an accessible name to the date button. Typically the value passed in should be the full date. For example, `aria-label="14 February 2023"`. |
 | `disabled` | `.pf-c-calendar-month__date` | Disables the date button, preventing interaction and navigation via keyboard and other assistive technologies. **Required** when this element's parent is `.pf-c-calendar-month__dates-cell.pf-m-disabled`. |
 | `aria-hidden="true"` | `.pf-c-calendar-month__day > span` | Removes the span containing the visual day letter from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. <br/><br/> This attribute should not be applied to the same `span` that has the `aria-label` attribute. |
 | `.pf-screen-reader` | `.pf-c-calendar-month__day > span` | Should be used to contain the full weekday name so that it is accessible only to assistive technologies and is not visually rendered. **Required**. <br/><br/> This attribute should not be applied to the same `span` that has the `aria-hidden` attribute. |
-| `aria-label="[Prev/Next] month"` | `.pf-c-calendar-month__header-nav-control > button` | Adds an accessible name to the "previous month" and "next month" buttons. |
+| `aria-label="[text that labels the previous and next month buttons]"` | `.pf-c-calendar-month__header-nav-control > button` | Adds an accessible name to the "previous month" and "next month" buttons. |
 | `aria-hidden="true"` | `.pf-c-calendar-month__header-nav-control > button > [icon]` | Removes the button icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |

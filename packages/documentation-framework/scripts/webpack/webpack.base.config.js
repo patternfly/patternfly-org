@@ -8,6 +8,7 @@ module.exports = (_env, argv) => {
   const {
     pathPrefix = '',
     mode,
+    googleAnalyticsID = false,
     algolia = {},
     hasGdprBanner = false,
     hasFooter = false,
@@ -27,7 +28,8 @@ module.exports = (_env, argv) => {
     output: {
       publicPath: isProd ? `${pathPrefix}/` : '/',
       pathinfo: false, // https://webpack.js.org/guides/build-performance/#output-without-path-info,
-      hashDigestLength: 8
+      hashDigestLength: 8,
+      clean: true, // Clean the output directory before emit.
     },
     amd: false, // We don't use any AMD modules, helps performance
     mode: isProd ? 'production' : 'development',
@@ -39,9 +41,12 @@ module.exports = (_env, argv) => {
           include: [
             path.resolve(process.cwd(), 'src'),
             path.resolve(process.cwd(), 'patternfly-docs'),
+            path.resolve(process.cwd(), 'examples'),
             path.resolve(__dirname, '../..'), // Temporarily compile theme using webpack for development
             /react-[\w-]+\/src\/.*\/examples/,
             /react-[\w-]+\\src\\.*\\examples/, // fix for Windows
+            /react-[\w-]+\/patternfly-docs\/.*\/examples/, //fixes for extensions
+            /react-[\w-]+\\patternfly-docs\\.*\\examples/,
           ].concat(includePaths.map(path => new RegExp(path))),
           exclude: [
             path.resolve(__dirname, '../../node_modules'), // Temporarily compile theme using webpack for development
@@ -82,35 +87,28 @@ module.exports = (_env, argv) => {
         },
         {
           test: /\.(gif|svg)$/,
-          use: {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[contenthash].[ext]',
-              outputPath: 'images/'
-            },
+          type: 'asset/resource',
+          dependency: { not: ['url'] },
+          generator: {
+            filename: 'images/[hash][ext][query]'
           }
         },
         {
           test: /\.(pdf)$/,
-          use: {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[contenthash].[ext]',
-            }
+          type: 'asset/resource',
+          dependency: { not: ['url'] },
+          generator: {
+            filename: '[hash][ext][query]'
           }
         },
         {
           test: /.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[name].[ext]',
-                outputPath: 'fonts/'
-              }
-            }
-          ]
-        }
+          type: 'asset/resource',
+          dependency: { not: ['url'] },
+          generator: {
+            filename: 'fonts/[name][ext][query]'
+          }
+        },
       ]
     },
     resolve: {
@@ -119,21 +117,28 @@ module.exports = (_env, argv) => {
         'client-styles': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.css.js'),
         './routes-client': path.resolve(process.cwd(), 'patternfly-docs/patternfly-docs.routes.js'),
         './routes-generated': path.resolve(process.cwd(), 'patternfly-docs/generated/index.js'),
-        '@patternfly/react-core/next': '@patternfly/react-core/dist/esm/next/index.js' // Can remove when webpack is updated to v5
+        process: "process/browser"
       },
       modules: [
         'node_modules',
         ...module.paths,
-      ]
+      ],
+      fallback: {
+        "path": require.resolve("path-browserify")
+      },
     },
     // Use this module's node_modules first (for use in Core/React workspaces)
     resolveLoader: {
       modules: module.paths,
     },
     plugins: [
+      new webpack.ProvidePlugin({
+        process: 'process/browser',
+      }),
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(mode),
         'process.env.pathPrefix': JSON.stringify(isProd ? pathPrefix : ''),
+        'process.env.googleAnalyticsID': JSON.stringify(isProd ? googleAnalyticsID : ''),
         'process.env.algolia': JSON.stringify(algolia),
         'process.env.hasGdprBanner': JSON.stringify(hasGdprBanner),
         'process.env.hasFooter': JSON.stringify(hasFooter),
@@ -151,13 +156,9 @@ module.exports = (_env, argv) => {
           { from: path.join(__dirname, '../../assets'), to: 'assets' }
         ]
       }),
-      new MonacoWebpackPlugin(),
-      ...(isProd
-        ? [
-          new CleanWebpackPlugin()
-        ]
-        : []
-      )
+      new MonacoWebpackPlugin({
+        globalAPI: true,
+      })
     ],
     stats: 'minimal'
   };

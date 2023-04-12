@@ -4,7 +4,7 @@ section: components
 ---
 
 ## Elements
-Elements vary depending on [menu variation](#Variations)
+Elements vary depending on [menu variation](#variations).
 
 ## Usage
 
@@ -89,6 +89,48 @@ Any action that can be represented as an icon button can be placed in one or mor
 Use a drilldown menu when data is structured into levels and includes a long list of options. When the parent with children is selected, the list is replaced with the children items. A header displays the name of the parent, with the option to go back one level. 
 
 If data is more complex and has more than 2 levels, use a drilldown menu with breadcrumbs instead. Breadcrumbs offer better navigation between different levels. The number of visited levels is shown in a grey badge with a dropdown menu showing the menu items between the first and last level. The badge allows you to go back to a specific visited level. If you need to see the whole structure of your data, use a [tree view](/components/tree-view) instead. 
+
+### Red text menu
+If you have destructive items in a dropdown menu, you can optionally use red text styling for that item. A divider should be used to separate the destructive menu items from the non-destructive items. Red text is used to visually distinguish a dangerous action from other items. 
+
+When using red text for destructive actions, it is still recommended to require a confirmation dialog before proceeding.
+
+<img src="./img/red-delete-text.png" alt="drilldown menu" width="935"/>
+
+### Disabled menus and menu options
+
+#### When to use disabled menus and menu options
+
+Menus or menu items can be disabled for multiple reasons. The reason an action is disabled informs which design pattern you should use.
+
+Use a disabled menu when:
+
+* **An action is unavailable due to an unmet prerequisite, condition, permission, or status.**
+
+    If a user needs to complete a prerequisite to enable an action, disable the action and add a [tooltip](/components/tooltip). The tooltip should explain what the user needs to do to enable the action. 
+
+    <img src="./img/dropdown-disabled-action-tooltip.png" alt="disabled action tooltip" width="385"/>
+
+    Example: A user can’t perform bulk actions until they select resources in the list.
+
+    Example: A user cannot view past logs until their container is finished restarting.
+
+* **An action cannot be performed due to a product constraint or rule.**
+
+    If an action cannot be taken because of a product constraint or rule, hide the action. 
+
+    Example: While a user can delete a resource they own, they cannot delete a template or default resource.
+
+#### When not to use a disabled menu
+
+Do not use a disabled menu when:
+
+* **An action can be performed, but is not recommended.**
+
+    When an action can be performed but may result in an undesirable outcome, do not disable it. Instead, add a [confirmation modal](/components/modal). When the user clicks on the action, use a modal to explain the potential consequences and ask the user if they are sure they want to proceed.
+
+    Example: A user wants to delete a system.
+
 
 ## Content considerations
 When creating menu item labels, keep in mind the following guidelines:
