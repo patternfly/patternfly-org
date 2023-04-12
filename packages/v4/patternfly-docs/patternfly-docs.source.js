@@ -13,6 +13,11 @@ module.exports = (sourceMD, sourceProps) => {
   sourceMD(path.join(contentBase, 'training/**/*.md'), 'training');
   sourceMD(path.join(contentBase, 'extensions/**/*.md'), 'extensions');
 
+  // Gallery pages
+  const galleryBase = path.join(__dirname, '../patternfly-docs/pages');
+  sourceMD(path.join(galleryBase, 'landing-pages/**/*.md'), 'about');
+
+
   // Theme pages
   const themePagesPath = require
     .resolve('@patternfly/documentation-framework/package.json')
