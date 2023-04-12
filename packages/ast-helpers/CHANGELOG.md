@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.17 (2023-04-11)
+
+
+### Bug Fixes
+
+* **cssVariables:** Update expandId ([b9b0a6e](https://github.com/patternfly/patternfly-org/commit/b9b0a6edcc103c442f24caae086b68558415be57))
+
+
+
+
+
 # 0.12.0-alpha.16 (2023-04-11)
 
 
