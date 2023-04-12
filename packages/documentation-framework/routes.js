@@ -30,7 +30,7 @@ const isNull = o => o === null || o === undefined;
 const groupedRoutes = Object.entries(routes)
   .filter(([_slug, { id, section }]) => !isNull(id) && !isNull(section))
   .reduce((accum, [slug, pageData]) => {
-    const { section, subsection = null, id, title, source, katacodaLayout, hideNavItem, hideSourceTabs, relPath, sortValue = null, subsectionSortValue = null } = pageData;
+    const { section, subsection = null, id, title, source, katacodaLayout, hideNavItem, relPath, sortValue = null, subsectionSortValue = null } = pageData;
     pageData.slug = slug;
     // add section to groupedRoutes obj if not yet created
     accum[section] = accum[section] || {};
@@ -44,7 +44,6 @@ const groupedRoutes = Object.entries(routes)
       sources: [],
       katacodaLayout,
       hideNavItem,
-      hideSourceTabs,
       relPath,
       ...(sortValue && { sortValue }),
       ...(subsectionSortValue && { subsectionSortValue })

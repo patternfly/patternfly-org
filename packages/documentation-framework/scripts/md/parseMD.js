@@ -127,9 +127,6 @@ function toReactComponent(mdFilePath, source, buildMode) {
       if (frontmatter.hideNavItem) {
         pageData.hideNavItem = frontmatter.hideNavItem;
       }
-      if (frontmatter.hideSourceTabs) {
-        pageData.hideSourceTabs = frontmatter.hideSourceTabs || false;
-      }
       if (frontmatter.sortValue) {
         pageData.sortValue = frontmatter.sortValue;
       }
@@ -279,7 +276,6 @@ function sourceMDFile(file, source, buildMode) {
       tabName: pageData.tabName,
       ...(pageData.katacodaLayout && { katacodaLayout: pageData.katacodaLayout }),
       ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem }),
-      ...(pageData.hideSourceTabs && { hideSourceTabs: pageData.hideSourceTabs }),
       ...(pageData.beta && { beta: pageData.beta }),
       ...(pageData.sortValue && { sortValue: pageData.sortValue }),
       ...(pageData.subsectionSortValue && { subsectionSortValue: pageData.subsectionSortValue })

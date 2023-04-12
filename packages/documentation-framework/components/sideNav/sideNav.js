@@ -108,7 +108,7 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
         {navItems.map(({ section, text, href }) => section
           ? (
             <Location key={section}>
-              {({ location }) => ExpandableNav({ groupedRoutes, location, section })}
+              {({ location }) => ExpandableNav({groupedRoutes, location, section})}
             </Location>
           )
           : NavItem({

@@ -119,8 +119,7 @@ export const MDXTemplate = ({
   sources = [],
   path,
   id,
-  componentsData,
-  hideSourceTabs
+  componentsData
 }) => {
   // Build obj mapping source names to text displayed on tabs
   const tabNames = sources.reduce((acc, curSrc) => {
@@ -131,7 +130,7 @@ export const MDXTemplate = ({
     return acc;
   }, {});
   const sourceKeys = Object.keys(tabNames);
-  const isSinglePage = sourceKeys.length === 1 && !hideSourceTabs;
+  const isSinglePage = sourceKeys.length === 1;
 
   let isDevResources, isComponent, isExtension, isChart, isDemo, isLayout, isUtility;
 
@@ -201,6 +200,13 @@ export const MDXTemplate = ({
     return "pf-m-light-100";
   };
 
+  const showTabs = (
+    (!isSinglePage && !hideTabName) ||
+    isComponent ||
+    isUtility ||
+    isDemo
+  );
+
   return (
     <React.Fragment>
       <PageGroup>
@@ -214,36 +220,29 @@ export const MDXTemplate = ({
             {isComponent && summary && (<SummaryComponent />)}
           </TextContent>
         </PageSection>
-        {
-          (!hideSourceTabs && (
-            (!isSinglePage && !hideTabName) ||
-            isComponent ||
-            isUtility ||
-            isDemo
-          )) && (
-            <PageSection id="ws-sticky-nav-tabs" stickyOnBreakpoint={{'default':'top'}} type="tabs">
-              <div className="pf-c-tabs pf-m-page-insets pf-m-no-border-bottom">
-                <ul className="pf-c-tabs__list">
-                  {sourceKeys.map((source, index) => (
-                    <li
-                      key={source}
-                      className={css(
-                        'pf-c-tabs__item',
-                        activeSource === source && 'pf-m-current'
-                      )}
-                      // Send clicked tab name for analytics
-                      onClick={() => trackEvent('tab_click', 'click_event', source.toUpperCase())}
-                    >
-                      <Link className="pf-c-tabs__link" to={`${path}${index === 0 ? '' : '/' + source}`}>
-                        {tabNames[source]}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </PageSection>
-          )
-        }
+        { showTabs && (
+          <PageSection id="ws-sticky-nav-tabs" stickyOnBreakpoint={{'default':'top'}} type="tabs">
+            <div className="pf-c-tabs pf-m-page-insets pf-m-no-border-bottom">
+              <ul className="pf-c-tabs__list">
+                {sourceKeys.map((source, index) => (
+                  <li
+                    key={source}
+                    className={css(
+                      'pf-c-tabs__item',
+                      activeSource === source && 'pf-m-current'
+                    )}
+                    // Send clicked tab name for analytics
+                    onClick={() => trackEvent('tab_click', 'click_event', source.toUpperCase())}
+                  >
+                    <Link className="pf-c-tabs__link" to={`${path}${index === 0 ? '' : '/' + source}`}>
+                      {tabNames[source]}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </PageSection>
+        )}
         <PageSection id="main-content" isFilled className="pf-m-light-100">
           {isSinglePage && <MDXChildTemplate {...sources[0]} />}
           {!isSinglePage && (
