@@ -79,7 +79,7 @@ Cards are flexible and customizable to your use case. Here are some different wa
  
 2. In the second version, the title is moved to the header area to give a more compact footprint.
  
-3. In the third version, the card header contains an image as well as text to define the card title. The title is a link, allowing users to drill into the details of the card. This makes the footprint of the card smaller. The linked title should be reserved for when using a card that can be both clickable and selectable, where clicking the title would open the primary-detail drawer or navigate the user to a new page and selecting the card would be done by clicking on the checkbox.
+3. In the third version, the card header contains an image as well as text to define the card title. This makes the footprint of the card smaller. The title is a link, allowing users to drill into the details of the card. The linked title should be reserved for when using a card that can be both clickable and selectable, where clicking the title would open the primary-detail drawer or navigate the user to a new page and selecting the card would be done by clicking on the checkbox.
  
 ### Expandable cards
  
@@ -89,7 +89,7 @@ The header element can be made expandable in situations where you want to hide t
  
  
 ### Selectable cards
-It is often useful to make cards selectable.  If there are no other links on the card, and a checkbox or radio button is present, the card only allows for a single action in which the whole card could be clicked to make the selection. PatternFly supports two types of selectable cards:
+Selectable cards have a checkbox or radio button to indicate that a card is selectable. To select a card, users can click anywhere on the card. PatternFly supports two types of selectable cards:
  
 <img src="./img/cards-selectable.png" alt="example of multiselect and single selectable cards" width="736" />
  
@@ -98,14 +98,16 @@ It is often useful to make cards selectable.  If there are no other links on the
 2. **Single-select card (with radio button):** Features a radio button in the upper righthand corner, which allow users to indicate which option they are selecting.
 
 ### Clickable cards
-Cards can be made clickable to trigger an action, such as opening a primary-detail drawer, or navigating to a new page. If there are no other links on the card, the card only allows for a single click action in which the whole card can be clicked to view more details.
+Clickable cards trigger an action, such as opening a primary-detail drawer, or navigating to a new page. Similar to selectable cards, the whole body of a clickable card is clickable.
 
 <img src="./img/cards-clickable.png" alt="example of clickable cards and their states" width="1024" />
 
 ### Selectable and clickable cards
-Cards can be both selectable and clickable. When having both actions available in a card, the interactions differ from solely selectable cards or solely clickable cards.
+The selectable and clickable card can be utilized when there are multiple actions on a card. However, each action has a separate affordance. When using a card that is both selectable and clickable, clicking the whole body of the card will not produce an interaction. To trigger the actions, users have to click a specific area of the card instead.
 
-For cards with both, the selectable aspect changes so only clicking on the checkboxes on the top right selects a card, instead of the whole card, and the clickable aspect changes so only the linked header will be clickable, instead of the whole card.
+**For selectable cards**, a user must use the checkbox or radio button on the top right of the card to select the card.
+
+**For clickable cards**, a user must click on the card header linked in blue to trigger an action.
 
 <img src="./img/cards-selectable-clickable.png" alt="example of selectable and clickable cards and their states" width="1355" />
  
