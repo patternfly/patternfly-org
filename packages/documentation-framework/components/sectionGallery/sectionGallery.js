@@ -15,8 +15,24 @@ import { SectionGalleryWrapper } from "./sectionGalleryWrapper";
  * @param {string} [countText= items] - Optional text to be displayed after the number of search results
 */
 
-export const SectionGallery = ({ illustrations, section, galleryItemsData, placeholderText, countText }) => (
-  <SectionGalleryWrapper illustrations={illustrations} section={section} galleryItemsData={galleryItemsData}>
+export const SectionGallery = ({
+  illustrations,
+  section,
+  subsection = null,
+  includeSubsections = false,
+  parseSubsections = false,
+  galleryItemsData,
+  placeholderText,
+  countText
+}) => (
+  <SectionGalleryWrapper
+    illustrations={illustrations}
+    section={section}
+    subsection={subsection}
+    includeSubsections={includeSubsections}
+    parseSubsections={parseSubsections}
+    galleryItemsData={galleryItemsData}
+  >
     {(sectionGalleryItems, searchTerm, setSearchTerm, layoutView, setLayoutView) => {
     return (
       <>

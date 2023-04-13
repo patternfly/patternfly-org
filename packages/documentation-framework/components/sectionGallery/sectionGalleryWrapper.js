@@ -1,13 +1,39 @@
 import React from "react";
 import { groupedRoutes } from '../../routes';
 
-export const SectionGalleryWrapper = ({section, subsection = null, galleryItemsData, illustrations, children }) => {
-  const galleryItems = subsection ? groupedRoutes[section][subsection] : groupedRoutes[section];
+export const SectionGalleryWrapper = ({section, subsection, galleryItemsData, illustrations, includeSubsections, parseSubsections, children }) => {
+  let sectionRoutes = subsection ? groupedRoutes[section][subsection] : groupedRoutes[section];
+  if (!includeSubsections || parseSubsections) {
+    const sectionRoutesArr = Object.entries(sectionRoutes);
+    // loop through galleryItems object and build new object to handle subsections
+    sectionRoutes = sectionRoutesArr.reduce((acc, [navName, routeData]) => {
+      // exit immediately if current item is isSubsection flag
+      if (navName === 'isSubsection') {
+        return acc;
+      }
+      // add current item
+      if (includeSubsections || !routeData.isSubsection) {
+        acc[navName] = routeData;
+      }
+      // drill down into current item if subsection and parseSubsections === true
+      if (parseSubsections && routeData.isSubsection) {
+        // loop through each subsection item & add
+        Object.entries(routeData).map(([subitemName, subitemData]) => {
+          if (subitemName !== 'isSubsection') {
+            acc[subitemName] = subitemData;
+          }
+        })
+      }
+      return acc;
+    }, {})
+  }
+
   const [searchTerm, setSearchTerm] = React.useState('');
   const [layoutView, setLayoutView] = React.useState('grid');
-  const filteredItems = Object.entries(galleryItems)
-    .filter(([itemName]) => (
-      itemName !== 'View all components' &&
+  const filteredItems = Object.entries(sectionRoutes)
+    .filter(([itemName, { slug }]) => (
+      // exclude current gallery page from results
+      slug !== location.pathname &&
       itemName
         .toLowerCase()
         .includes(searchTerm.toLowerCase())
