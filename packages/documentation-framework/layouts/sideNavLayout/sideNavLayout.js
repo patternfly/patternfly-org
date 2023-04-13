@@ -154,8 +154,9 @@ const HeaderTools = ({
                     <DropdownItem
                       key="PatternFly 4"
                       className="ws-patternfly-3"
-                      target="_blank"
-                      href="#"
+                      isExternalLink
+                      to="http://v4-archive.patternfly.org/v4/"
+                      itemId="patternfly-4"
                     >
                       PatternFly 4
                       <ExternalLinkAltIcon />
