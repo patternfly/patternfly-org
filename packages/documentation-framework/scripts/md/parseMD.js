@@ -118,12 +118,6 @@ function toReactComponent(mdFilePath, source, buildMode) {
           ? frontmatter.cssPrefix
           : [frontmatter.cssPrefix];
       }
-      if (frontmatter.katacodaBroken) {
-        pageData.katacodaBroken = frontmatter.katacodaBroken;
-      }
-      if (frontmatter.katacodaLayout) {
-        pageData.katacodaLayout = frontmatter.katacodaLayout;
-      }
       if (frontmatter.hideNavItem) {
         pageData.hideNavItem = frontmatter.hideNavItem;
       }
@@ -274,7 +268,6 @@ function sourceMDFile(file, source, buildMode) {
       subsection: pageData.subsection,
       source: pageData.source,
       tabName: pageData.tabName,
-      ...(pageData.katacodaLayout && { katacodaLayout: pageData.katacodaLayout }),
       ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem }),
       ...(pageData.sortValue && { sortValue: pageData.sortValue }),
       ...(pageData.subsectionSortValue && { subsectionSortValue: pageData.subsectionSortValue })
