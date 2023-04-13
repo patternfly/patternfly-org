@@ -5,7 +5,7 @@ subsection: menus
 ---
 
 ## Elements
-Elements vary depending on [menu variation](#Variations)
+Elements vary depending on [menu variation](#variations).
 
 ## Usage
 
@@ -97,6 +97,41 @@ If you have destructive items in a dropdown menu, you can optionally use red tex
 When using red text for destructive actions, it is still recommended to require a confirmation dialog before proceeding.
 
 <img src="./img/red-delete-text.png" alt="drilldown menu" width="935"/>
+
+### Disabled menus and menu options
+
+#### When to use disabled menus and menu options
+
+Menus or menu items can be disabled for multiple reasons. The reason an action is disabled informs which design pattern you should use.
+
+Use a disabled menu when:
+
+* **An action is unavailable due to an unmet prerequisite, condition, permission, or status.**
+
+    If a user needs to complete a prerequisite to enable an action, disable the action and add a [tooltip](/components/tooltip). The tooltip should explain what the user needs to do to enable the action. 
+
+    <img src="./img/dropdown-disabled-action-tooltip.png" alt="disabled action tooltip" width="385"/>
+
+    Example: A user can’t perform bulk actions until they select resources in the list.
+
+    Example: A user cannot view past logs until their container is finished restarting.
+
+* **An action cannot be performed due to a product constraint or rule.**
+
+    If an action cannot be taken because of a product constraint or rule, hide the action. 
+
+    Example: While a user can delete a resource they own, they cannot delete a template or default resource.
+
+#### When not to use a disabled menu
+
+Do not use a disabled menu when:
+
+* **An action can be performed, but is not recommended.**
+
+    When an action can be performed but may result in an undesirable outcome, do not disable it. Instead, add a [confirmation modal](/components/modal). When the user clicks on the action, use a modal to explain the potential consequences and ask the user if they are sure they want to proceed.
+
+    Example: A user wants to delete a system.
+
 
 ## Content considerations
 When creating menu item labels, keep in mind the following guidelines:

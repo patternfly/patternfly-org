@@ -1,6 +1,6 @@
 import React from 'react';
 import tokens from '@patternfly/react-tokens/dist/esm/patternfly_variables';
-import { Popover } from '@patternfly/react-core';
+import { Popover, Button } from '@patternfly/react-core';
 import { normalizeColor, tokenName } from './helpers';
 import './ColorSwatch.css';
 
@@ -35,7 +35,7 @@ export function ColorSwatch({
         {color}
       </code>
       <p>
-        <a href={token.value.replace('#', '#color-')}>
+        <a href='/developer-resources/global-css-variables#global-css-variables'>
           See all global CSS color variables
         </a>
       </p>
@@ -61,15 +61,17 @@ export function ColorSwatch({
         aria-label="Global CSS variable"
         bodyContent={popoverContent}
       >
-        <svg
-          width="44px"
-          height="44px"
-          viewBox="0 0 44 44"
-          style={isBoxShadow ? { boxShadow: `var(${color})` } : {}}
-        >
-          <circle cx="22" cy="22" r="22" style={{ fill: isBoxShadow ? 'white' : `var(${color})`, stroke: 'var(--pf-global--palette--black-300)' }} />
-          {label === 'Hover' && handSVG}
-        </svg>
+        <Button variant="plain" aria-label={`Global CSS variable info for ${color}`}>
+          <svg
+            width="44px"
+            height="44px"
+            viewBox="0 0 44 44"
+            style={isBoxShadow ? { boxShadow: `var(${color})` } : {}}
+          >
+            <circle cx="22" cy="22" r="22" style={{ fill: isBoxShadow ? 'white' : `var(${color})`, stroke: 'var(--pf-global--palette--black-300)' }} />
+            {label === 'Hover' && handSVG}
+          </svg>
+        </Button>
       </Popover>
       <div className="ws-color-swatch-description">
         <label className="ws-color-swatch-description-label">

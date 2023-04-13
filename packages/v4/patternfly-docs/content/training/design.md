@@ -15,7 +15,7 @@ import './design.css'
     The Sketch design training is powered with a tool called Thinkific. You will need to create a free account in order to complete this training.
   </HintBody>
   <HintFooter>
-    <Button component="a" href="https://patternflyt-training.thinkific.com/users/sign_up" variant="link" isInline>
+    <Button component="a" href="https://patternfly-training.thinkific.com/users/sign_up" variant="link" isInline>
       Create a PatternFly Sketch training account now!
     </Button>
   </HintFooter>
@@ -29,7 +29,7 @@ import './design.css'
       level="beginner"
       time="5 minutes"
       description="Set up your design environment with Sketch."
-      designUrl="https://patternflyt-training.thinkific.com/courses/take/pf-sketch-e-training/lessons/12824668-video"
+      designUrl="https://patternfly-training.thinkific.com/courses/take/pf-sketch-e-training/lessons/12824668-video"
     />
   </GalleryItem>
   <GalleryItem>
@@ -39,7 +39,7 @@ import './design.css'
       level="beginner"
       time="20 minutes"
       description="Learn the types of mockup fidelity as well as pros and cons of each."
-      designUrl="https://patternflyt-training.thinkific.com/courses/take/pf-sketch-e-training/lessons/12854000-video"
+      designUrl="https://patternfly-training.thinkific.com/courses/take/pf-sketch-e-training/lessons/12854000-video"
     />
   </GalleryItem>
   <GalleryItem>
@@ -49,7 +49,7 @@ import './design.css'
       level="beginner"
       time="5 minutes"
       description="Learn what the PatternFly Library and the PatternFly Template are and highlight the connections between them."
-      designUrl="https://patternflyt-training.thinkific.com/courses/take/pf-sketch-e-training/lessons/12855027-video"
+      designUrl="https://patternfly-training.thinkific.com/courses/take/pf-sketch-e-training/lessons/12855027-video"
     />
   </GalleryItem>
   <GalleryItem>
@@ -59,7 +59,7 @@ import './design.css'
       level="beginner"
       time="45 minutes"
       description="Get up to speed with common Sketch shortcuts and skills."
-      designUrl="https://patternflyt-training.thinkific.com/courses/take/pf-sketch-e-training/lessons/12855102-video"
+      designUrl="https://patternfly-training.thinkific.com/courses/take/pf-sketch-e-training/lessons/12855102-video"
     />
   </GalleryItem>
   <GalleryItem>
@@ -69,7 +69,7 @@ import './design.css'
       level="intermediate"
       time="20 minutes"
       description="Learn about symbol overrides, what they are, and why they are important."
-      designUrl="https://patternflyt-training.thinkific.com/courses/take/pf-sketch-e-training/lessons/12855787-video"
+      designUrl="https://patternfly-training.thinkific.com/courses/take/pf-sketch-e-training/lessons/12855787-video"
     />
   </GalleryItem>
   <GalleryItem>
@@ -79,7 +79,7 @@ import './design.css'
       level="intermediate"
       time="25 minutes"
       description="Get familiar with the PatternFly spacing system and explain how it fits into the design kit."
-      designUrl="https://patternflyt-training.thinkific.com/courses/take/pf-sketch-e-training/lessons/12856030-video"
+      designUrl="https://patternfly-training.thinkific.com/courses/take/pf-sketch-e-training/lessons/12856030-video"
     />
   </GalleryItem>
   <GalleryItem>
@@ -89,7 +89,7 @@ import './design.css'
       level="advanced"
       time="15 minutes"
       description="Learn when designers should detach from symbols in the PatternFly library and how to retain PatternFly standards when doing so."
-      designUrl="https://patternflyt-training.thinkific.com/courses/take/pf-sketch-e-training/lessons/12856104-video"
+      designUrl="https://patternfly-training.thinkific.com/courses/take/pf-sketch-e-training/lessons/12856104-video"
     />
   </GalleryItem>
   <GalleryItem>
@@ -99,7 +99,7 @@ import './design.css'
       level="beginner"
       time="10 minutes"
       description="Learn how to stay up to date with design components, how to contribute, and where to ask questions."
-      designUrl="https://patternflyt-training.thinkific.com/courses/take/pf-sketch-e-training/lessons/12856217-video"
+      designUrl="https://patternfly-training.thinkific.com/courses/take/pf-sketch-e-training/lessons/12856217-video"
     />
   </GalleryItem>
 </Gallery>

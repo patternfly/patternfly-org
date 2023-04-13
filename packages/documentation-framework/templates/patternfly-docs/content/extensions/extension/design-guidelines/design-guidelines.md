@@ -7,6 +7,8 @@ section: extensions
 id: My extension
 # Tab (react | react-demos | html | html-demos | design-guidelines | accessibility)
 source: design-guidelines
+# Optional custom text to display in tab in place of source
+tabName: My custom tab-name
 ---
 
 Design guidelines intro
