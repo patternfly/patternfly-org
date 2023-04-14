@@ -40,19 +40,22 @@ A search filter is intended to be used with a filter group as shown below when y
 Any global actions that apply to selected data items are included left-aligned following filter and icon buttons. Be selective about which actions to surface on the toolbar, exposing no more than two buttons and reserving the rest for an [overflow menu](#overflow-menu) component to save space.
 
  **One or two clickable actions**
- <img src= "./img/primary-button.png" alt= "single button" width="196"/>
+ <img src= "./img/primary-button.png" alt= "single button" width="1162"/>
+
 * Use a primary button for any call to action you want a user to take
 * In the case that using the action represented should not be encouraged, opt for a secondary button
 
  **Three clickable actions**
-<img src= "./img/three-as-a-group.png" alt= "three actions" width="196"/>
+<img src= "./img/three-as-a-group.png" alt= "three actions" width="1162"/>
+
  * In the specific case where three actions are needed, the suggested guidance is to opt for an overflow menu with two items. This will prevent the toolbar from becoming too crowded, and also prevent the overflow menu from containing just one item. 
 
  **More than three clickable actions**
- <img src= "./img/greater-than-three.png" alt= "primary and secondary button" width="196"/>
-1. Use a primary button to indicate the most important action within the table
-2. Use a secondary button for a second action you want to surface in the toolbar, if it is too important to place in an overflow menu
-3. Except for a primary button, and a secondary button in cases where absolutely necessary, put all other actions in an overflow menu
+ <img src= "./img/greater-than-three.png" alt= "primary and secondary button" width="1162"/>
+
+* Use a primary button to indicate the most important action within the table
+* Use a secondary button for a second action you want to surface in the toolbar, if it is too important to place in an overflow menu
+* Except for a primary button, and a secondary button in cases where absolutely necessary, put all other actions in an overflow menu
 
  ### Overflow menu
  <img src="./img/overflow-menu.png" alt="button group" width="357" />
