@@ -15,14 +15,16 @@ Toolbar items are individual components that can be placed inside of a toolbar. 
 ### Bulk selector
 <img src="./img/bulk-selector.png" alt="bulk selector item" width="218" />
 
- A bulk selector can be added when you want to give users the ability to select multiple items within a page. Besides allowing the user to select and deselect all items on a page, other application specific options can be added in the dropdown. Bulk selection allows the user to select or deselect all items on a page and provide an indeterminate state that notifies the user when only some items are selected. Bulk selectors should always be the left-most element in a toolbar and has a 24px spacer to its right.
+A bulk selector can be added when you want to give users the ability to select multiple items within a page. Besides allowing the user to select and deselect all items on a page, other application specific options can be added in the dropdown. Bulk selection allows the user to select or deselect all items on a page and provide an indeterminate state that notifies the user when only some items are selected. Bulk selectors should always be the left-most element in a toolbar and has a 24px spacer to its right.
 
- ### Filter group
- <img src="./img/filter-group.png" alt="filter group" width="355" />
+### Filter group
 
-  A filter group combines multiple select filters into a single group. See [filters](/guidelines/filters) for more information about using filter groups.
+<img src="./img/filter-group.png" alt="filter group" width="355" />
+
+A filter group combines multiple select filters into a single group. See [filters](/guidelines/filters) for more information about using filter groups.
 
 ### Search filter
+
 <img src="./img/search-filter.png" alt="search filter" width="355" />
 
 A search filter is intended to be used with a filter group as shown below when you want to include a single search field together with one or more select filters. It includes an 8px spacer to the right of the item to enforce association with other filters. See the [filters](/guidelines/filters) documentation for more information about using search filters.
@@ -39,30 +41,35 @@ A search filter is intended to be used with a filter group as shown below when y
 
 Any global actions that apply to selected data items are included left-aligned following filter and icon buttons. Be selective about which actions to surface on the toolbar, exposing no more than two buttons and reserving the rest for an [overflow menu](#overflow-menu) component to save space.
 
- **One or two clickable actions**
- <img src= "./img/primary-button.png" alt= "single button" width="1162"/>
+**One or two clickable actions**
+
+<img src= "./img/primary-button.png" alt= "single button" width="1162"/>
 
 * Use a primary button for any call to action you want a user to take
 * In the case that using the action represented should not be encouraged, opt for a secondary button
 
- **Three clickable actions**
+**Three clickable actions**
+
 <img src= "./img/three-as-a-group.png" alt= "three actions" width="1162"/>
 
- * In the specific case where three actions are needed, the suggested guidance is to opt for an overflow menu with two items. This will prevent the toolbar from becoming too crowded, and also prevent the overflow menu from containing just one item. 
+* In the specific case where three actions are needed, the suggested guidance is to opt for an overflow menu with two items. This will prevent the toolbar from becoming too crowded, and also prevent the overflow menu from containing just one item. 
 
- **More than three clickable actions**
- <img src= "./img/greater-than-three.png" alt= "primary and secondary button" width="1162"/>
+**More than three clickable actions**
+
+<img src= "./img/greater-than-three.png" alt= "primary and secondary button" width="1162"/>
 
 * Use a primary button to indicate the most important action within the table
 * Use a secondary button for a second action you want to surface in the toolbar, if it is too important to place in an overflow menu
 * Except for a primary button, and a secondary button in cases where absolutely necessary, put all other actions in an overflow menu
 
- ### Overflow menu
- <img src="./img/overflow-menu.png" alt="button group" width="357" />
+### Overflow menu
 
- An overflow menu is a component that can be used in a toolbar (or elsewhere) to group a number of actions that should be collapsed into a kebab at a certain breakpoint. In the toolbar, the overflow menu will commonly be used to group a set of actions that are intended to collapse into the kebab at smaller viewport sizes.
+<img src="./img/overflow-menu.png" alt="button group" width="357" />
+
+An overflow menu is a component that can be used in a toolbar (or elsewhere) to group a number of actions that should be collapsed into a kebab at a certain breakpoint. In the toolbar, the overflow menu will commonly be used to group a set of actions that are intended to collapse into the kebab at smaller viewport sizes.
 
 ### Pagination
+
 <img src="./img/pagination.png" alt="pagination" width="432" />
 
  When pagination is supported, a pagination component will be included. Pagination will always be right aligned in the toolbar. If pagination is not used, substitute the item count for pagination control. For example, report “17 items” to represent the total number of items or “10 of 17 items” to indicate that 10 items were returned as the result of a filter event.
