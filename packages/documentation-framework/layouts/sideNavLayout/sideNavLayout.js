@@ -143,15 +143,6 @@ const HeaderTools = ({
                 <DropdownGroup key="Previous versions" label="Previous versions">
                   <DropdownList>
                     <DropdownItem
-                      key="PatternFly 3"
-                      className="ws-patternfly-3"
-                      isExternalLink
-                      to="https://pf3.patternfly.org/"
-                      itemId="patternfly-3"
-                    >
-                      PatternFly 3
-                    </DropdownItem>
-                    <DropdownItem
                       key="PatternFly 4"
                       className="ws-patternfly-3"
                       isExternalLink
@@ -159,7 +150,15 @@ const HeaderTools = ({
                       itemId="patternfly-4"
                     >
                       PatternFly 4
-                      <ExternalLinkAltIcon />
+                    </DropdownItem>
+                    <DropdownItem
+                      key="PatternFly 3"
+                      className="ws-patternfly-3"
+                      isExternalLink
+                      to="https://pf3.patternfly.org/"
+                      itemId="patternfly-3"
+                    >
+                      PatternFly 3
                     </DropdownItem>
                   </DropdownList>
                 </DropdownGroup>
