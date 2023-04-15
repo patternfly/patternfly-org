@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.21 (2023-04-15)
+
+
+### Bug Fixes
+
+* clean up references to katacoda ([#3491](https://github.com/patternfly/patternfly-org/issues/3491)) ([5de986b](https://github.com/patternfly/patternfly-org/commit/5de986b917ee7edf9c476bb2df2f2ee4d454a7e1))
+
+
+
+
+
 # 2.0.0-alpha.20 (2023-04-14)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
