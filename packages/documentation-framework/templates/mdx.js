@@ -7,6 +7,7 @@ import { CSSVariables, PropsTable, TableOfContents, Link, AutoLinkHeader, Inline
 import { capitalize, getTitle, slugger, trackEvent } from '../helpers';
 import './mdx.css';
 import { convertToReactComponent } from '@patternfly/ast-helpers';
+import { FunctionsTable } from '../components/functionsTable/functionsTable';
 
 const MDXChildTemplate = ({
   Component,
@@ -19,7 +20,8 @@ const MDXChildTemplate = ({
     sourceLink,
     cssPrefix = [],
     optIn,
-    beta
+    beta,
+    functionDocumentation = []
   } = Component.getPageData();
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
   const propsTitle = propComponents.length > 0 && 'Props';
@@ -69,6 +71,14 @@ const MDXChildTemplate = ({
         <div className="ws-mdx-content-content">
           {InlineAlerts}
           <Component />
+          {functionDocumentation.length > 0 && (
+            <React.Fragment>
+              <AutoLinkHeader size="h2" className="ws-h2" id="functions">
+                Functions
+              </AutoLinkHeader>
+              <FunctionsTable functionDescriptions={functionDocumentation}/>
+            </React.Fragment>
+          )}
           {propsTitle && (
             <React.Fragment>
               <AutoLinkHeader size="h2" className="ws-h2" id="props">
