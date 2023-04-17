@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.22 (2023-04-17)
+
+
+### Features
+
+* **docs-framework:** add support for exposing function documentation ([#3485](https://github.com/patternfly/patternfly-org/issues/3485)) ([2f19ded](https://github.com/patternfly/patternfly-org/commit/2f19deda84c75042df1870c0950bb173eb2c3d84))
+
+
+
+
+
 # 0.12.0-alpha.21 (2023-04-17)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
