@@ -1,28 +1,28 @@
-const fs = require('fs');
-const reactDocgen = require('react-docgen');
-const ts = require('typescript');
+const fs = require("fs");
+const reactDocgen = require("react-docgen");
+const ts = require("typescript");
 
 const annotations = [
   {
     regex: /@deprecated/,
-    name: 'deprecated',
-    type: 'Boolean'
+    name: "deprecated",
+    type: "Boolean",
   },
   {
     regex: /@hide/,
-    name: 'hide',
-    type: 'Boolean'
+    name: "hide",
+    type: "Boolean",
   },
   {
     regex: /@beta/,
-    name: 'beta',
-    type: 'Boolean'
+    name: "beta",
+    type: "Boolean",
   },
   {
     regex: /@propType\s+(.*)/,
-    name: 'type',
-    type: 'String'
-  }
+    name: "type",
+    type: "String",
+  },
 ];
 
 function addAnnotations(prop) {
@@ -30,12 +30,12 @@ function addAnnotations(prop) {
     annotations.forEach(({ regex, name }) => {
       const match = prop.description.match(regex);
       if (match) {
-        prop.description = prop.description.replace(regex, '').trim();
+        prop.description = prop.description.replace(regex, "").trim();
         if (name) {
           prop[name] = match[2] || match[1] || true;
         }
       }
-    })
+    });
   }
 
   return prop;
@@ -55,74 +55,101 @@ function getComponentMetadata(filename, sourceText) {
     // console.warn(`No component found in ${filename}:`, err);
   }
 
-  return (parsedComponents || []).filter(parsed => parsed && parsed.displayName);
+  return (parsedComponents || []).filter(
+    (parsed) => parsed && parsed.displayName
+  );
 }
 
-function getInterfaceMetadata(filename, sourceText) {
-  const ast = ts.createSourceFile(
+const getNodeText = (node, sourceText) => {
+  if (!node || !node.pos || !node.end) {
+    return undefined;
+  }
+
+  return sourceText.substring(node.pos, node.end).trim();
+};
+
+const buildJsDocProps = (nodes, sourceText) =>
+  nodes?.reduce((acc, member) => {
+    const name =
+      (member.name && member.name.escapedText) ||
+      (member.parameters &&
+        `[${getNodeText(member.parameters[0], sourceText)}]`) ||
+      "Unknown";
+    acc[name] = {
+      description: member.jsDoc
+        ? member.jsDoc.map((doc) => doc.comment).join("\n")
+        : null,
+      required: member.questionToken === undefined,
+      type: {
+        raw: getNodeText(member.type, sourceText).trim(),
+      },
+    };
+    return acc;
+  }, {});
+
+const getSourceFileStatements = (filename, sourceText) => {
+  const { statements } = ts.createSourceFile(
     filename,
     sourceText,
     ts.ScriptTarget.Latest // languageVersion
   );
-  
-  function getText(node) {
-    if (!node || !node.pos || !node.end) {
-      return undefined;
-    }
-    return sourceText.substring(node.pos, node.end).trim();
-  }
 
-  const interfaces = [];
-  
-  ast.statements
-    .filter(statement => statement.kind === ts.SyntaxKind.InterfaceDeclaration)
-    .forEach(statement => {
-      const props = statement.members.reduce((acc, member) => {
-        const name = (member.name && member.name.escapedText)
-          || (member.parameters && `[${getText(member.parameters[0])}]`)
-          || 'Unknown';
-        acc[name] = {
-          description: member.jsDoc
-            ? member.jsDoc.map(doc => doc.comment).join('\n')
-            : null,
-          required: member.questionToken === undefined,
-          type: {
-            raw: getText(member.type).trim()
+  return statements;
+};
+
+const getInterfaceMetadata = (filename, sourceText) =>
+  getSourceFileStatements(filename, sourceText).reduce(
+    (metaDataAcc, statement) => {
+      if (statement.kind === ts.SyntaxKind.InterfaceDeclaration) {
+        metaDataAcc.push({
+          displayName: statement.name.escapedText,
+          description: statement.jsDoc?.map((doc) => doc.comment).join("\n"),
+          props: buildJsDocProps(statement.members, sourceText),
+        });
+      }
+
+      return metaDataAcc;
+    },
+    []
+  );
+
+const getTypeAliasMetadata = (filename, sourceText) =>
+  getSourceFileStatements(filename, sourceText).reduce(
+    (metaDataAcc, statement) => {
+      if (statement.kind === ts.SyntaxKind.TypeAliasDeclaration) {
+        const props = statement.type.types?.reduce((propAcc, type) => {
+          if (type.members) {
+            propAcc.push(buildJsDocProps(type.members, sourceText));
           }
-        };
-        return acc;
-      }, {});
 
-      interfaces.push({
-        displayName: statement.name.escapedText,
-        description: statement.jsDoc
-            ? statement.jsDoc.map(doc => doc.comment).join('\n')
-            : null,
-        props
-      });
-    });
-  return interfaces;
-}
+          return propAcc;
+        }, []);
+
+        metaDataAcc.push({
+          props,
+          displayName: statement.name.escapedText,
+          description: statement.jsDoc?.map((doc) => doc.comment).join("\n"),
+        });
+      }
+
+      return metaDataAcc;
+    },
+    []
+  );
 
 function normalizeProp([
   name,
-  {
-    required,
-    annotatedType,
-    type,
-    tsType,
-    description,
-    defaultValue
-  }
+  { required, annotatedType, type, tsType, description, defaultValue },
 ]) {
   const res = {
     name,
-    type: annotatedType
-      || (type && type.name)
-      || (type && (type.raw || type.name))
-      || (tsType && (tsType.raw || tsType.name))
-      || 'No type info',
-    description
+    type:
+      annotatedType ||
+      (type && type.name) ||
+      (type && (type.raw || type.name)) ||
+      (tsType && (tsType.raw || tsType.name)) ||
+      "No type info",
+    description,
   };
   if (required) {
     res.required = true;
@@ -134,45 +161,46 @@ function normalizeProp([
   return res;
 }
 
-function getDescription(parsed, ) {
-
-}
-
 function tsDocgen(file) {
-  const sourceText = fs.readFileSync(file, 'utf8');
+  const sourceText = fs.readFileSync(file, "utf8");
   const componentMeta = getComponentMetadata(file, sourceText); // Array of components with props
   const interfaceMeta = getInterfaceMetadata(file, sourceText); // Array of interfaces with props
-  const interfaceMetaMap = interfaceMeta.reduce(function(target, interface) {
-    target[interface.displayName] = interface;
+  const typeAliasMeta = getTypeAliasMetadata(file, sourceText); // Array of type aliases with props
+  const propsMetaMap = [...interfaceMeta, ...typeAliasMeta].reduce(function (
+    target,
+    interfaceOrTypeAlias
+  ) {
+    target[interfaceOrTypeAlias.displayName] = interfaceOrTypeAlias;
     return target;
-  }, {})
+  },
+  {});
 
-  // Go through each component and check if they have an interface with a jsDoc description
+  // Go through each component and check if they have an interface or type alias with a jsDoc description
   // If so copy it over (fix for https://github.com/patternfly/patternfly-react/issues/7612)
-  componentMeta.forEach(c => {
+  componentMeta.forEach((c) => {
     if (c.description) {
       return c;
     }
-    const interface = `${c.displayName}Props`;
-    if (interfaceMetaMap[interface] && interfaceMetaMap[interface].description) {
-      c.description = interfaceMetaMap[interface].description;
-    }
-  })
 
-  return componentMeta
-    .concat(interfaceMeta)
-    .map(parsed => ({
+    const propsName = `${c.displayName}Props`;
+    if (propsMetaMap[propsName]?.description) {
+      c.description = propsMetaMap[propsName].description;
+    }
+  });
+
+  return [...componentMeta, ...interfaceMeta, ...typeAliasMeta].map(
+    (parsed) => ({
       name: parsed.displayName,
-      description: parsed.description || '',
+      description: parsed.description || "",
       props: Object.entries(parsed.props || {})
         .map(normalizeProp)
         .map(addAnnotations)
-        .filter(prop => !prop.hide)
-        .sort((p1, p2) => p1.name.localeCompare(p2.name))
-    }));
+        .filter((prop) => !prop.hide)
+        .sort((p1, p2) => p1.name.localeCompare(p2.name)),
+    })
+  );
 }
 
 module.exports = {
-  tsDocgen
+  tsDocgen,
 };
-
