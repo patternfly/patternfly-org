@@ -27,7 +27,7 @@ async function writeScreenshot({ page, data: { url, urlPrefix } }) {
   await sharp(buffer).toFile(outfile);
 }
 
-async function writeScreenshots({ urlPrefix }) {
+async function writeScreenshots({ urlPrefix, allRoutes }) {
   const cluster = await Cluster.launch({
     concurrency: Cluster.CONCURRENCY_CONTEXT,
     maxConcurrency: os.cpus().length,
@@ -43,7 +43,7 @@ async function writeScreenshots({ urlPrefix }) {
 
   // Add some pages to queue
   Object.entries(fullscreenRoutes)
-    .filter(([, { isFullscreenOnly }]) => isFullscreenOnly)
+    .filter(([, { isFullscreenOnly }]) => allRoutes || isFullscreenOnly)
     .forEach(([url,]) => cluster.queue({
       url: `${urlPrefix}${url}`,
       urlPrefix
