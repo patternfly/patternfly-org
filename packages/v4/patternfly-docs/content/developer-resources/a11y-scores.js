@@ -4,7 +4,7 @@ export const a11yScores = [
   {
     'Nov 21, 2022': [
       {
-        criteria: 'Preliminary A11y report generated using axe-core based tooling',
+        criteria: 'Preliminary accessibility report generated using axe-core based tooling',
         score: 'Y',
         notes: (
           <>
@@ -19,7 +19,7 @@ export const a11yScores = [
         notes: ''
       },
       {
-        criteria: `A11y violations in product itemized and prioritized
+        criteria: `Accessibility violations in product itemized and prioritized
         Notes should indicate how violations were identified - i.e. via generated report and/or manual testing.`,
         score: 'Y',
         notes: (
@@ -30,7 +30,7 @@ export const a11yScores = [
         )
       },
       {
-        criteria: 'Current state of resolving critical and major a11y violations identified in item #3 (reported as a %)',
+        criteria: 'Current state of resolving critical and major accessibility violations identified in item #3 (reported as a %)',
         score: '96%',
         notes: (
           <>
@@ -40,24 +40,24 @@ export const a11yScores = [
         )
       },
       {
-        criteria: 'PR/Code acceptance criteria updated to include automated a11y checks',
+        criteria: 'Pull request or equivalent code acceptance criteria evaluation includes automated accessibility checks',
         score: 'N',
         notes: ''
       },
       {
-        criteria: 'PR/Code acceptance criteria updated to include manual keyboard and screen reader a11y checks',
+        criteria: 'Pull request or equivalent code acceptance criteria evaluation includes manual keyboard and screen reader accessibility checks',
         score: 'Y',
-        notes: `A11y devs identified and tagged on relevant PRs to manually review screen reader and keyboard interactions`
+        notes: `Accessibility devs identified and tagged on relevant PRs to manually review screen reader and keyboard interactions`
       },
       {
-        criteria: <>CI/CD Process established to track a11y violations/regressions
+        criteria: <>CI/CD Process established to track accessibility violations/regressions
         CI/CD process could be wired up to use <a href="https://www.deque.com/axe/">https://www.deque.com/axe/</a> or the patternfly-a11y tool (also built using axe)</>,
         score: 'N',
         notes: <>Report <a href="https://github.com/patternfly/patternfly-org/blob/main/packages/v4/patternfly-a11y.config.js">configuration</a> created, needs to be hooked into CI/CD</>
       },
       {
         criteria: `UI built with PatternFly React 
-        Could note alternate design systems/component libraries along with reference to their a11y docs
+        Could note alternate design systems/component libraries along with reference to their accessibility docs
         `,
         score: 'Y',
         notes: ''
