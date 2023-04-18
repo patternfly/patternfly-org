@@ -16,7 +16,7 @@ import './components/sideNav/sideNav.css';
 import './components/topNav/topNav.css';
 import './layouts/sideNavLayout/sideNavLayout.css';
 
-const AppRoute = ({ child, katacodaLayout, title, path }) => {
+const AppRoute = ({ child, title, path }) => {
   const pathname = useLocation().pathname;
   if (typeof window !== 'undefined' && window.gtag) {
     gtag('config', process.env.googleAnalyticsID, {
@@ -31,7 +31,7 @@ const AppRoute = ({ child, katacodaLayout, title, path }) => {
   return (
     <React.Fragment>
       {child}
-      {!katacodaLayout && process.env.hasFooter && <Footer />}
+      {process.env.hasFooter && <Footer />}
     </React.Fragment>
   );
 }
@@ -39,18 +39,17 @@ const AppRoute = ({ child, katacodaLayout, title, path }) => {
 const SideNavRouter = () => {
   const pathname = useLocation().pathname.replace(process.env.pathPrefix, '');
   const componentsData = process?.env?.componentsData;
-  const navOpen = !routes[pathname] || !routes[pathname].katacodaLayout;
+  const navOpen = !routes[pathname];
   return (
     <SideNavLayout groupedRoutes={groupedRoutes} navOpen={navOpen} >
       <Router id="ws-page-content-router">
         {Object.entries(routes)
-          .map(([path, { Component, title, sources, katacodaLayout, id }]) => Component
+          .map(([path, { Component, title, sources, id }]) => Component
             ? <AppRoute
                 key={path}
                 path={path}
                 default={path === '/404'}
                 child={<Component />}
-                katacodaLayout={katacodaLayout}
                 title={title}
               />
             : <AppRoute
@@ -65,7 +64,6 @@ const SideNavRouter = () => {
                     componentsData={componentsData}
                   />
                 }
-                katacodaLayout={katacodaLayout}
                 title={title}
               />
           )

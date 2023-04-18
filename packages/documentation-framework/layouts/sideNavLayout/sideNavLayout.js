@@ -143,6 +143,15 @@ const HeaderTools = ({
                 <DropdownGroup key="Previous versions" label="Previous versions">
                   <DropdownList>
                     <DropdownItem
+                      key="PatternFly 4"
+                      className="ws-patternfly-3"
+                      isExternalLink
+                      to="http://v4-archive.patternfly.org/v4/"
+                      itemId="patternfly-4"
+                    >
+                      PatternFly 4
+                    </DropdownItem>
+                    <DropdownItem
                       key="PatternFly 3"
                       className="ws-patternfly-3"
                       isExternalLink

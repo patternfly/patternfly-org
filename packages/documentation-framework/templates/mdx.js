@@ -7,6 +7,7 @@ import { CSSVariables, PropsTable, TableOfContents, Link, AutoLinkHeader, Inline
 import { capitalize, getTitle, slugger, trackEvent } from '../helpers';
 import './mdx.css';
 import { convertToReactComponent } from '@patternfly/ast-helpers';
+import { FunctionsTable } from '../components/functionsTable/functionsTable';
 
 const MDXChildTemplate = ({
   Component,
@@ -20,8 +21,7 @@ const MDXChildTemplate = ({
     cssPrefix = [],
     optIn,
     beta,
-    katacodaBroken,
-    katacodaLayout
+    functionDocumentation = []
   } = Component.getPageData();
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
   const propsTitle = propComponents.length > 0 && 'Props';
@@ -59,11 +59,6 @@ const MDXChildTemplate = ({
           To learn more about the process, visit our <Link to="/get-started/about#beta-components">about page</Link> or our <a href="https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion">Beta components</a> page on GitHub.
         </InlineAlert>
       )}
-      {katacodaBroken && (
-        <InlineAlert variant="warning" title="Down for maintenance">
-          The embedded version of our tutorials are broken, but you can still access our tutorials on <a href="https://www.katacoda.com/patternfly">Katacoda.com <ExternalLinkAltIcon /></a>.
-        </InlineAlert>
-      )}
     </React.Fragment>
   );
   // Create dynamic component for @reach/router
@@ -72,10 +67,18 @@ const MDXChildTemplate = ({
       {toc.length > 1 && (
         <TableOfContents items={toc} />
       )}
-      <div className={katacodaLayout? "ws-mdx-content-katacoda" : "ws-mdx-content"}>
-        <div className={katacodaLayout ? "" : "ws-mdx-content-content"}>
+      <div className="ws-mdx-content">
+        <div className="ws-mdx-content-content">
           {InlineAlerts}
           <Component />
+          {functionDocumentation.length > 0 && (
+            <React.Fragment>
+              <AutoLinkHeader size="h2" className="ws-h2" id="functions">
+                Functions
+              </AutoLinkHeader>
+              <FunctionsTable functionDescriptions={functionDocumentation}/>
+            </React.Fragment>
+          )}
           {propsTitle && (
             <React.Fragment>
               <AutoLinkHeader size="h2" className="ws-h2" id="props">
@@ -100,7 +103,7 @@ const MDXChildTemplate = ({
               <CSSVariables prefix={cssPrefix} />
             </React.Fragment>
           )}
-          {!katacodaLayout && sourceLink && (
+          {sourceLink && (
             <React.Fragment>
               <br />
               <a href={sourceLink} target="_blank" onClick={() => trackEvent('view_source_click', 'click_event', source.toUpperCase())}>View source on GitHub</a>
@@ -167,7 +170,6 @@ export const MDXTemplate = ({
     (e) => e.includes("pages") || e.includes("training")
   );
   const { pathname } = useLocation();
-  const { katacodaLayout } = sources[0].Component.getPageData();
   let activeSource = pathname.replace(/\/$/, '').split('/').pop();
   // get summary text, convert to JSX to display above tabs on component pages
   const componentDasherized = id.split(' ').join('-').toLowerCase();
@@ -216,7 +218,7 @@ export const MDXTemplate = ({
           isWidthLimited
         >
           <TextContent>
-            {!katacodaLayout && <Title headingLevel='h1' size='4xl' id="ws-page-title">{title}</Title>}
+            <Title headingLevel='h1' size='4xl' id="ws-page-title">{title}</Title>
             {isComponent && summary && (<SummaryComponent />)}
           </TextContent>
         </PageSection>
