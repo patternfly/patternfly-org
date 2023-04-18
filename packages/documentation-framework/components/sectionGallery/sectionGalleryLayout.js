@@ -6,7 +6,7 @@ export const SectionGalleryLayout = ({ galleryItems, layoutView }) => {
   if (layoutView !== 'grid') {
     return null;
   }
-  
+
   return (
     <Gallery hasGutter>
       {galleryItems.map(({idx, slug, id, itemName, illustration, isBeta}) => (
@@ -25,7 +25,7 @@ export const SectionGalleryLayout = ({ galleryItems, layoutView }) => {
               )}
               {isBeta && (
                 <CardFooter>
-                  <Label color="gold">Beta feature</Label>
+                  <Label color="blue">Beta feature</Label>
                 </CardFooter>
               )}
             </Card>

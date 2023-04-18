@@ -1,7 +1,10 @@
+..ws-mdx-content-content {
+  max-width: initial !important;
+}
+
 .ws-section-gallery {
-  /* Gallery width & top placement */
+  /* top placement */
   margin-top: calc(var(--pf-c-page__main-section--PaddingTop) * -1);
-  width: calc(100vw - var(--pf-c-page__main-section--PaddingRight) - var(--pf-c-page__main-section--PaddingLeft));
 }
 
 /* Toolbar styles */
@@ -38,11 +41,4 @@
 /* Limit width for data list view only */
 .ws-section-gallery .pf-c-data-list {
   max-width: 956px;
-}
-
-/* Avoid gallery overflowing width when sidebar is expanded */
-@media (min-width: 1200px) {
-  .ws-section-gallery {
-    width: calc(100vw - var(--pf-c-page__sidebar--Width) - var(--pf-c-page__main-section--PaddingRight) - var(--pf-c-page__main-section--PaddingLeft));
-  }
 }

@@ -1,5 +1,5 @@
 ---
-id: View all components
+id: All components
 title: All components
 section: components
 sortValue: 1
