@@ -1,7 +1,7 @@
 {
   "name": "@patternfly/documentation-framework",
   "description": "A framework to build documentation for PatternFly.",
-  "version": "2.0.0-alpha.19",
+  "version": "2.0.0-alpha.24",
   "author": "Red Hat",
   "license": "MIT",
   "private": false,
@@ -69,6 +69,7 @@
     "sharp": "0.30.6",
     "style-to-object": "0.3.0",
     "to-vfile": "6.1.0",
+    "typedoc": "0.22.X",
     "typescript": "4.3.5",
     "unified": "9.1.0",
     "unist-util-remove": "2.0.0",

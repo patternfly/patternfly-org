@@ -297,11 +297,6 @@
   max-width: 832px;
 }
 
-.ws-mdx-content-katacoda {
-  flex-grow: 1;
-  padding: 0;
-}
-
 /* Overlay the footer */
 .ws-back-to-top {
   z-index: 2;
