@@ -262,6 +262,12 @@ Validate errors on loss of focus when:
 * A user leaves a required field blank.
 * A user leaves a required field incomplete.
 
+#### Validation with Test button
+
+An inline Test button can be used as a way to validate the contents of a single input at any stage of a form workflow. For example, if users want to check a link to an external code repository they can use the Test button to confirm access without changing focus to and from the form input or waiting until for final submission.   
+
+<img src="./img/inline-validation-on-fields.png" alt="Example of errors after validation with a test button, including an inline alert at the top, and field level errors" width="794"/>  
+
 #### Error validation on submission
 Validation on submission occurs when a user attempts to submit a form. In this scenario, the user completes the form in its entirety and the page reloads with any errors detected.
 
