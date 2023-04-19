@@ -84,6 +84,22 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 Consumers must ensure they take any additional considerations when customizing a label or label group, using them in a way not described or recommended by PatternFly, or in various other specific use-cases not outlined elsewhere on this page.
 
+### Tooltips on labels
+
+Labels by default are not interactive components and typically should not be given a tooltip. If you need a label to have a tooltip - such as due to truncation - you should wrap the label text content in a button and give the intended tooltip to that button instead. For example, using our button component:
+
+```
+<Label>
+  <Tooltip content="Grey label that overflows and truncates">
+    <Button isInline variant="link">
+      Grey label that overflows and truncates
+    </Button>
+  </Tooltip>
+</Label>
+```
+
+You should also follow our [tooltip accessibility documentation](/components/tooltip/accessibility).
+
 ### Accessible label status and severity
 
 While labels can be styled using a variety of colors, relying on color alone to communicate information such as status or severity ("Loading" or "Danger") causes barriers to access. Users that are colorblind or have limited or no vision may not be able to perceive and understand a label's color, and users that rely on assistive technologies such as screen readers won't have those colors announced to them.
