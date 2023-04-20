@@ -1,6 +1,7 @@
 ---
 id: Calendar month
 section: components
+subsection: date-and-time
 ---
 
 import { Checkbox, List, ListItem } from '@patternfly/react-core';
