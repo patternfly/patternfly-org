@@ -10,7 +10,7 @@ Input groups can combine multiple elements. For example you could add buttons to
 <img src="./img/input-group.png" alt="Example of input groups" width="506"/>
 
 ### When to use
-Use an input group when the elements are directly connected to eachother. Examples include an action button to act on the text, a mandatory and fixed piece of text, a class of text when in a filter, a unit of currency, and more.
+Use an input group when the elements are directly connected to each other. Examples include an action button to act on the text, a mandatory and fixed piece of text, a class of text when in a filter, a unit of currency, and more.
 
 ### When not to use
 Do not use an input group when you're performing different actions on the item, such as a text entry and a remove action.
