@@ -118,7 +118,7 @@ const CommunityPage = () => {
             <SplitItem style={{ marginRight: '12px' }}><QuestionIcon /></SplitItem>
             <SplitItem isFilled>
               <Title size="lg" className="ws-title" headingLevel="h3">Ask a question</Title>
-              <a href="//forum.patternfly.org/" target="_blank" rel="noopener noreferrer">PatternFly forum</a>
+              <a href="//github.com/orgs/patternfly/discussions" target="_blank" rel="noopener noreferrer">PatternFly discussions</a>
             </SplitItem>
           </Split>
         </GridItem>

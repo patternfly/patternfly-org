@@ -147,11 +147,11 @@ export const Footer = () => (
                   <li className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="//forum.patternfly.org"
+                      to="//github.com/orgs/patternfly/discussions"
                       target="top"
-                      aria-label="Visit the PatternFly 4 forum"
+                      aria-label="Visit the PatternFly discussion forum"
                     >
-                      Forum
+                      Discussions
                     </Link>
                   </li>
                   <li className="ws-org-pfsite-footer-menu-list-item">
