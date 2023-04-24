@@ -55,7 +55,7 @@ const CommunityPage = () => {
             <img src={community2} alt="Map" className="ws-community-grid-img" />
             <Title size="xl" className="ws-title" headingLevel="h3">Building new features</Title>
             <p>
-              To continue to grow and improve our PatternFly component library, we welcome the ideas and contributions of our community. Visit our Disussions board to submit an idea or comment on or upvote an existing request.
+              To continue to grow and improve our PatternFly component library, we welcome ideas from our community. Visit our Disussions board to submit an idea, comment on, or upvote an existing request.
             </p>
             <Title size="xl" className="ws-title" headingLevel="h3">
               <a href="https://github.com/orgs/patternfly/discussions/categories/feature-requests"><strong>View or submit feature requests</strong></a>
