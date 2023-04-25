@@ -10,7 +10,7 @@
     "build": "pf-docs-framework build all",
     "build:server": "pf-docs-framework build server",
     "build:client": "pf-docs-framework build client",
-    "clean": "rm -rf .cache public size-plugin.json patternfly-docs/generated/**/*.js",
+    "clean": "rimraf -rf .cache public size-plugin.json patternfly-docs/generated/**/*.js",
     "develop": "pf-docs-framework start",
     "generate": "pf-docs-framework generate",
     "test:a11y": "patternfly-a11y --config patternfly-a11y.config",

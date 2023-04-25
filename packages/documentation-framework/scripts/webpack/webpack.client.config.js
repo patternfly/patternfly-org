@@ -82,6 +82,7 @@ const clientConfig = async (env, argv) => {
       rules: [
         {
           test: /\.css$/,
+          exclude: reactCSSRegex,
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
@@ -104,6 +105,10 @@ const clientConfig = async (env, argv) => {
               }
             }
           ]
+        },
+        {
+          test: reactCSSRegex,
+          use: 'null-loader'
         },
       ]
     },

@@ -28,25 +28,12 @@ const serverConfig = async (env, argv) => {
       rules: [
         {
           test: /\.css$/,
-          use: [
-            {
-              loader: 'css-loader'
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                postcssOptions: {
-                  plugins: [
-                    require('autoprefixer')({
-                      env: '>0.25%, not ie 11, not op_mini all',
-                      flexbox: false,
-                      grid: false
-                    })
-                  ]
-                }
-              }
-            }
-          ]
+          use: 'null-loader'
+        },
+        // This does weird things to document
+        {
+          test: /(novnc-core|@novnc\/novnc)\/.*\.js/,
+          use: 'null-loader'
         },
       ]
     },
