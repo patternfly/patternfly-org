@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.26 (2023-04-25)
+
+
+### Bug Fixes
+
+* **docs:** Update static dir and fix null loading ([#3505](https://github.com/patternfly/patternfly-org/issues/3505)) ([e65a1b2](https://github.com/patternfly/patternfly-org/commit/e65a1b21ae7671322adcbcef1ada69436fd07802))
+
+
+
+
+
 # 0.12.0-alpha.25 (2023-04-21)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
