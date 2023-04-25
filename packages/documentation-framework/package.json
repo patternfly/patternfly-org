@@ -49,6 +49,7 @@
     "mini-css-extract-plugin": "2.7.5",
     "monaco-editor": "0.34.1",
     "monaco-editor-webpack-plugin": "7.0.1",
+    "null-loader": "4.0.1",
     "parse-entities": "2.0.0",
     "path-browserify": "1.0.1",
     "postcss": "7.0.32",
@@ -84,9 +85,9 @@
   },
   "peerDependencies": {
     "@patternfly/patternfly": "^5.0.0-alpha.37",
-    "@patternfly/react-code-editor": "^5.0.0-alpha.54",
-    "@patternfly/react-core": "^5.0.0-alpha.53",
-    "@patternfly/react-table": "^5.0.0-alpha.54",
+    "@patternfly/react-code-editor": "^5.0.0-alpha.76",
+    "@patternfly/react-core": "^5.0.0-alpha.75",
+    "@patternfly/react-table": "^5.0.0-alpha.77",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0"
   }
