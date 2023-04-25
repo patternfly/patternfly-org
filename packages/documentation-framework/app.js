@@ -39,9 +39,8 @@ const AppRoute = ({ child, title, path }) => {
 const SideNavRouter = () => {
   const pathname = useLocation().pathname.replace(process.env.pathPrefix, '');
   const componentsData = process?.env?.componentsData;
-  const navOpen = !routes[pathname];
   return (
-    <SideNavLayout groupedRoutes={groupedRoutes} navOpen={navOpen} >
+    <SideNavLayout groupedRoutes={groupedRoutes} navOpen={true} >
       <Router id="ws-page-content-router">
         {Object.entries(routes)
           .map(([path, { Component, title, sources, id }]) => Component
