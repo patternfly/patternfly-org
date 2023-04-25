@@ -15,7 +15,7 @@ A card usually consists of four parts:
  
 3. **Body:** Provides details about the item. A card body can include any combination of static text and/or active content.
  
-4. **Footer (optional):** Contains links, actions, or static text at the bottom of a card.
+4. **Footer (optional):** Contains external links, actions, or static text at the bottom of a card.
  
 ## Usage
 Cards primarily appear in [catalog views](#cards-in-catalog-views), [primary-detail views](#cards-in-primary-detail-views), and [dashboards](#cards-in-dashboards).
@@ -75,7 +75,7 @@ Cards are flexible and customizable to your use case. Here are some different wa
  
 <img src="./img/card-variants.png" alt="example of three card variants" width="1202"/>
  
-1. The first version places an image in the header with a separate title. The CTA that would direct the user to a new page is located in the footer.
+1. The first version places an image in the header with a separate title and has a linked footer. Use links in footers to link out to an external page, such as documentation.
  
 2. In the second version, the title is moved to the header area to give a more compact footprint.
  
@@ -98,7 +98,7 @@ Selectable cards have a checkbox or radio button to indicate that a card is sele
 2. **Single-select card (with radio button):** Features a radio button in the upper righthand corner, which allow users to indicate which option they are selecting.
 
 ### Clickable cards
-Clickable cards trigger an action, such as opening a primary-detail drawer, or navigating to a new page. Similar to selectable cards, the whole body of a clickable card is clickable.
+Clickable cards trigger an action, such as opening a primary-detail drawer, or navigating to a new page as a drilldown of the card and within the context of the application. Similar to selectable cards, the whole body of a clickable card is clickable.
 
 <img src="./img/cards-clickable.png" alt="example of clickable cards and their states" width="1024" />
 
@@ -111,6 +111,11 @@ The selectable and clickable card can be utilized when there are multiple action
 
 <img src="./img/cards-selectable-clickable.png" alt="example of selectable and clickable cards and their states" width="1355" />
  
+ ### Card with link
+An in-action card can be utilized when needing to link out to an external website or out of the context of the application. This would use a linked footer in the card and would be the interactable element of the card. Although this may be the only action on a card, the whole body of the card would not be clickable. If you want to have a clickable card AND a link in the footer, make the clickable action come from the header of the card, and keep the external link in the footer.
+
+<img src="./img/card-withlink.png" alt="example of cards with link" width="1568" />
+
 ## Spacing
 ### Content spacing
  
