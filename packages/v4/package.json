@@ -18,12 +18,13 @@
   },
   "dependencies": {
     "@patternfly/documentation-framework": "^1.10.5",
-    "@patternfly/quickstarts": "^2.4.0",
+    "@patternfly/quickstarts": "^2.4.2",
     "@patternfly/react-catalog-view-extension": "^4.96.0",
     "@patternfly/react-console": "^4.95.5",
-    "@patternfly/react-docs": "5.103.82",
-    "@patternfly/react-log-viewer": "4.87.100",
-    "@patternfly/react-topology": "^4.91.40",
+    "@patternfly/react-docs": "5.103.84",
+    "@patternfly/react-log-viewer": "^4.87.100",
+    "@patternfly/react-topology": "^4.93.5",
+    "@patternfly/react-user-feedback": "^1.0.9",
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0"
   },

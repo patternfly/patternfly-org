@@ -44,9 +44,6 @@ module.exports = (sourceMD, sourceProps) => {
   const reactLogViewerPath = require
     .resolve('@patternfly/react-log-viewer/package.json')
     .replace('package.json', 'src');
-    const reactTopologyPath = require
-    .resolve('@patternfly/react-topology/package.json')
-    .replace('package.json', 'src');
 
   const logViewerContentBase = require
     .resolve('@patternfly/react-log-viewer/package.json')
@@ -58,7 +55,6 @@ module.exports = (sourceMD, sourceProps) => {
   sourceProps(path.join(reactCodeEditorPath, '/**/*.tsx'),reactPropsIgnore);
   sourceProps(path.join(reactChartsPath, '/**/*.tsx'),reactPropsIgnore);
   sourceProps(path.join(reactLogViewerPath, '/**/*.tsx'), reactPropsIgnore);
-  sourceProps(path.join(reactTopologyPath, '/**/*.tsx'), reactPropsIgnore);
 
   // React MD
   sourceMD(path.join(reactCorePath, '/components/**/examples/*.md'), 'react');
@@ -83,9 +79,6 @@ module.exports = (sourceMD, sourceProps) => {
   sourceMD(path.join(logViewerContentBase, '/**/examples/*.md'), 'react');
   sourceMD(path.join(logViewerContentBase, '/**/demos/*.md'), 'react-demos');
 
-  // React-topology MD
-  sourceMD(path.join(reactTopologyPath, '/**/examples/*.md'), 'react');
-
   // React OUIA MD
   sourceMD(path.join(reactCorePath, '/**/helpers/OUIA/*.md'), 'react');
 
@@ -97,7 +90,7 @@ module.exports = (sourceMD, sourceProps) => {
   sourceMD(require.resolve('@patternfly/patternfly/UPGRADE-GUIDE.md'), 'html');
   sourceMD(require.resolve('@patternfly/react-docs/UPGRADE-GUIDE.md'), 'react');
 
-  // Quickstarts extension
+  // Quick starts extension
   const qsPath = require
     .resolve('@patternfly/quickstarts/package.json')
   const qsContentBase = path.join(qsPath.replace('package.json', 'dist'), '/patternfly-docs/quick-starts');
@@ -122,4 +115,21 @@ module.exports = (sourceMD, sourceProps) => {
 
   sourceProps(path.join(consoleSrcPath, "/**/*.tsx"), reactPropsIgnore);
   sourceMD(path.join(consoleDocsPath, "/examples/*.md"), 'react');
+
+  // React-topology
+  const topologyPath = require.resolve("@patternfly/react-topology/package.json");
+  const topologyDocsPath = topologyPath.replace("package.json", "patternfly-docs/content");
+  const topologySrcPath = topologyPath.replace("package.json", "src/components");
+
+  sourceProps(path.join(topologySrcPath, "/**/*.tsx"), reactPropsIgnore);
+  sourceMD(path.join(topologyDocsPath, "/examples/*.md"), 'react');
+
+  // React-user-feedback
+  const userFeedbackPath = require.resolve("@patternfly/react-user-feedback/package.json");
+  const userFeedbackDocsPath = userFeedbackPath.replace("package.json", "patternfly-docs/content");
+  const userFeedbackSrcPath = userFeedbackPath.replace("package.json", "src/components");
+
+  sourceProps(path.join(userFeedbackSrcPath, "/**/*.tsx"), reactPropsIgnore);
+  sourceMD(path.join(userFeedbackDocsPath, "**/*.md"));
+
 }
