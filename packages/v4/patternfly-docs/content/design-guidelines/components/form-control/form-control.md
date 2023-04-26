@@ -1,6 +1,7 @@
 ---
 id: Form control
 section: components
+subsection: forms
 ---
 
 Form control can be applied to various input components, including text boxes, dropdowns/select lists, and text areas.

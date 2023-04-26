@@ -1,6 +1,7 @@
 ---
 id: Application launcher
 section: components
+subsection: menus
 ---
 
 import { Checkbox, List, ListItem } from '@patternfly/react-core';

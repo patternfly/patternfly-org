@@ -1,6 +1,7 @@
 ---
-id: File upload - multiple
+id: Multiple file upload
 section: components
+subsection: file-upload
 ---
 
 A file upload component is commonly found in forms, but can also live as a standalone element.

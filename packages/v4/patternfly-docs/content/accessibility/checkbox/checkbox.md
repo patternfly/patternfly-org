@@ -1,6 +1,7 @@
 ---
 id: Checkbox
 section: components
+subsection: forms
 ---
 
 import { Checkbox, List, ListItem } from '@patternfly/react-core';

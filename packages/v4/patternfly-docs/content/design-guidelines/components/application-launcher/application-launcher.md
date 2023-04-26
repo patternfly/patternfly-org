@@ -1,6 +1,7 @@
 ---
 id: Application launcher
 section: components
+subsection: menus
 ---
 ## Elements
 An application launcher has two main elements.

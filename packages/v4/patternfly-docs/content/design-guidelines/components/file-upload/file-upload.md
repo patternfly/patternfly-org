@@ -1,6 +1,7 @@
 ---
-id: File upload
+id: Simple file upload
 section: components
+subsection: file-upload
 ---
 
 ## Elements

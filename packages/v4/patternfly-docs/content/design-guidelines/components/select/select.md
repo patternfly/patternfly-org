@@ -1,6 +1,7 @@
 ---
 id: Select
 section: components
+subsection: menus
 related: [
   'Switch',
   'Checkbox',

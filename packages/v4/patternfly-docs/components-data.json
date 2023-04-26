@@ -135,13 +135,13 @@
     "illustration": "./images/component-illustrations/expandable-section.png",
     "summary": "An <b>expandable section</b> component is used to support progressive disclosure in a form or page by hiding additional content when you don't want it to be shown by default. An expandable section can contain any type of content such as plain text, form inputs, and charts."
   },
-  "file-upload---multiple": {
+  "multiple-file-upload": {
     "illustration": "./images/component-illustrations/file-upload-multiple.png",
-    "summary": "The <b>file upload - multiple</b> component allows users to select 1 or more files to upload to a specific location. The component can be configured to support any file type as well as restrict the user's ability to upload 1 or more files. Users have the ability to select files from their system either natively using a file input or via drag and drop. Once uploaded, the user can edit any files."
+    "summary": "A <b>multiple file upload</b> component allows users to select 1 or more files to upload to a specific location. The component can be configured to support any file type as well as restrict the user's ability to upload 1 or more files. Users have the ability to select files from their system either natively using a file input or via drag and drop. Once uploaded, the user can edit any files."
   },
-  "file-upload": {
+  "simple-file-upload": {
     "illustration": "./images/component-illustrations/file-upload.png",
-    "summary": "A <b>file upload</b> component allows the users to upload a single file into the browser."
+    "summary": "A <b>simple file upload</b> component allows the users to upload a single file into the browser. This is primarily used for uploading and previewing text files, but other file types will also be accepted."
   },
   "form-control": {
     "illustration": "./images/component-illustrations/form-control.png",

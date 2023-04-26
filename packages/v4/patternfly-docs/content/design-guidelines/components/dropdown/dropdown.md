@@ -1,6 +1,7 @@
 ---
 id: Dropdown
 section: components
+subsection: menus
 ---
 
 ## Elements
