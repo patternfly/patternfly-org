@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.29 (2023-04-26)
+
+
+### Bug Fixes
+
+* sidebar open by default ([#3506](https://github.com/patternfly/patternfly-org/issues/3506)) ([fb5f086](https://github.com/patternfly/patternfly-org/commit/fb5f08611d3edde80a559635b39dab7138f06d1d))
+
+
+
+
+
 # 2.0.0-alpha.28 (2023-04-26)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
