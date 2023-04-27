@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.30 (2023-04-27)
+
+
+### Bug Fixes
+
+* white space change to test CI ([e9e7ed3](https://github.com/patternfly/patternfly-org/commit/e9e7ed3cf6007fcf022dd7693bfed12bdf9d7e9a))
+
+
+
+
+
 # 2.0.0-alpha.29 (2023-04-26)
 
 
