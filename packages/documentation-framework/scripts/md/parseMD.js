@@ -292,6 +292,7 @@ function sourceMDFile(file, source, buildMode) {
       source: pageData.source,
       tabName: pageData.tabName,
       ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem }),
+      ...(pageData.beta && { beta: pageData.beta }),
       ...(pageData.sortValue && { sortValue: pageData.sortValue }),
       ...(pageData.subsectionSortValue && { subsectionSortValue: pageData.subsectionSortValue })
     };
