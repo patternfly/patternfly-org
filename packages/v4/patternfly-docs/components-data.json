@@ -323,7 +323,7 @@
   },
   "text": {
     "illustration": "./images/component-illustrations/text.png",
-    "summary": "A <b>text</b> component can wrap any static HTML content you want to place on your page to provide correct formatting when using standard HTML tags."
+    "summary": "<b>Text</b> and <TextList> components are always wrapped in <b>TextContent</b> and provide correct formatting to a number of standard HTML tags."
   },
   "tile": {
     "illustration": "./images/component-illustrations/tile.png",
