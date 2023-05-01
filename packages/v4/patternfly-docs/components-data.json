@@ -11,10 +11,6 @@
     "illustration": "./images/component-illustrations/action-list.png",
     "summary": "An <b>action list</b> is a group of actions, controls, or buttons with set spacing."
   },
-  "alert-group": {
-    "illustration": "./images/component-illustrations/alert-group.png",
-    "summary": "An <b>alert group</b> stacks and positions 2 or more alerts in a live region, either in a layer over the main content of a page or inline with the page content. Alert groups should always rank alerts by age, stacking new alerts on top of old ones as they surface."
-  },
   "alert": {
     "illustration": "./images/component-illustrations/alert.png",
     "summary": "An <b>alert</b> is a notification that provides brief information to the user without blocking their workflow."
@@ -71,10 +67,6 @@
     "illustration": "./images/component-illustrations/checkbox.png",
     "summary": "A <b>checkbox</b> is used to select a single item or multiple items, typically to choose elements to perform an action or to reflect a binary setting."
   },
-  "chip-group": {
-    "illustration": "./images/component-illustrations/chip-group.png",
-    "summary": "A <b>chip group</b> represents an attribute that has been assigned one or more values. An OR relationship is implied between values in the group. Chip groups are useful to express complex filters to a data set, for example."
-  },
   "chip": {
     "illustration": "./images/component-illustrations/chip.png",
     "summary": "A <b>chip</b> is used to communicate a value or a set of attribute-value pairs within workflows that involve filtering a set of objects."
@@ -95,13 +87,21 @@
     "illustration": "./images/component-illustrations/context-selector.png",
     "summary": "A <b>context selector</b> can be used in addition to global navigation when the data or resources you show in the interface need to change depending on the user's context."
   },
+  "custom-menus": {
+    "illustration": "./images/component-illustrations/custom-menus.png",
+    "summary": "<b>Custom menus</b> can be created by combining <Link to='/components/menus/menu'>menu</Link> and <Link to='/components/menus/menu-toggle'>menu toggles</Link> to satisfy a variety of use cases."
+  },
   "data-list": {
     "illustration": "./images/component-illustrations/data-list.png",
     "summary": "A <b>data list</b> is used to display large data sets when you need a flexible layout or need to include interactive content like charts."
   },
   "date-picker": {
     "illustration": "./images/component-illustrations/date-picker.png",
-    "summary": "A <b>date picker</b> helps users select a specific date, time, or range of time-related values."
+    "summary": "A <b>date picker</b> helps users enter or select a specific date from a calendar."
+  },
+  "date-and-time-picker": {
+    "illustration": "./images/component-illustrations/date-and-time-picker.png",
+    "summary": "A <b>date and time picker</b> helps users select both a specific date and a time by combining <Link to='/components/date-and-time/date-picker'>date picker</Link> and <Link to='/components/date-and-time/time-picker'>time picker</Link> components."
   },
   "description-list": {
     "illustration": "./images/component-illustrations/description-list.png",
@@ -177,10 +177,6 @@
     "illustration": "./images/component-illustrations/jump-links.png",
     "summary": "<b>Jump links</b> allow users to navigate to sections within a page."
   },
-  "label-group": {
-    "illustration": "./images/component-illustrations/label-group.png",
-    "summary": "Use a <b>label group</b> when you have multiple <Link to='/components/label'>labels</Link> to display at once. Label groups can be oriented either horizontally or vertically and can optionally be named and be dismissable. You may also make the label group editable to allow users to edit an existing label or add a new label."
-  },
   "label": {
     "illustration": "./images/component-illustrations/label.png",
     "summary": "The <b>label</b> component allows users to add specific element captions for user clarity and convenience."
@@ -244,6 +240,14 @@
   "panel": {
     "illustration": "./images/component-illustrations/panel.png",
     "summary": "The <b>panel</b> component is a container that supports flexible content layouts. It can be used to house other components such as fields, forms, videos, buttons, and more. The panel should not be confused with the <Link to='/components/drawer/design-guidelines/'>drawer</Link> component, which allows you to surface information via a collapsable container."
+  },
+  "password-generator": {
+    "illustration": "./images/component-illustrations/password-generator.png",
+    "summary": "This demo shows you how to create an input field that can be used to generate unique passwords."
+  },
+  "password-strength": {
+    "illustration": "./images/component-illustrations/password-strength.png",
+    "summary": "This demo shows how to use PatternFly component to validate and return feedback about password strength according to consumer-defined rules."
   },
   "popover": {
     "illustration": "./images/component-illustrations/popover.png",
