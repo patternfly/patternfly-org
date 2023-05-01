@@ -108,4 +108,4 @@ For more information about beta components, visit [this page](https://github.com
 ## Requesting new features and enhancements
 PatternFly is built on the needs of our community of stakeholders. To request a new feature or an enhancement to an existing feature, first open a new discussion topic in the [PatternFly Feature Request discussion forum](https://github.com/orgs/patternfly/discussions/categories/feature-requests). 
 
-The PatternFly team will review and prioritize your issue, taking into account scope and technical constraints. If accepted, your feature request will be placed on the PatternFly feature roadmap for fruther design and development. After this, the PatternFly design team will work with you to create a design proposal and facilitate reviews.
+The PatternFly team will review and prioritize your issue, taking into account scope and technical constraints. If accepted, your feature request will be placed on the PatternFly feature roadmap for further design and development. After this, the PatternFly design team will work with you to create a design proposal and facilitate reviews.
