@@ -3,6 +3,7 @@ import {
   Button,
   Page,
   PageSidebar,
+  PageSidebarBody,
   Brand,
   Dropdown,
   DropdownItem,
@@ -218,8 +219,11 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
     <PageSidebar
       className="ws-page-sidebar"
       theme="light"
-      nav={<SideNav navItems={sideNavItems} groupedRoutes={groupedRoutes} />}
-    />
+    >
+      <PageSidebarBody>
+        <SideNav navItems={sideNavItems} groupedRoutes={groupedRoutes} />
+      </PageSidebarBody>
+    </PageSidebar>
   );
 
   const Header = (
