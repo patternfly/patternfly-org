@@ -53,7 +53,7 @@ PatternFly offers 2 types of border treatments for cards:
  
 Use cards in a catalog view to present users with a series of selectable items, typically arranged into a grid.
  
-Note that this view uses cards with a multi-select option so that bulk actions can be performed from the toolbar on a group of cards at once. For more information on cards used in a catalog or card view, see the [card view design guidelines](/demos/card-view/design-guidelines).
+Note that this view uses cards with a multi-select option so that bulk actions can be performed from the toolbar on a group of cards at once. For more information on cards used in a catalog or card view, see the [card view design guidelines](/patterns/card-view/design-guidelines).
  
 <img src="./img/cards-multiselect-catalog.png" alt="example of cards in a catalog view " width="1210" />
  

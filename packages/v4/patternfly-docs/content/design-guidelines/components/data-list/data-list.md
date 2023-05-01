@@ -29,7 +29,7 @@ Think of each row in a data list as a container for some formatted content. In P
 
 PatternFly offers 2 components for displaying large data sets: data lists and [tables](/components/table/design-guidelines). While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
 
-Data lists can also appear in primary-detail views. Visit the [primary-detail guidelines](/demos/primary-detail/design-guidelines) to learn more about the functionality. 
+Data lists can also appear in primary-detail views. Visit the [primary-detail guidelines](/patterns/primary-detail/design-guidelines) to learn more about the functionality. 
 
 ### When to use a data list vs. a table
 **Use a data list when**:

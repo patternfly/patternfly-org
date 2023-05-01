@@ -24,7 +24,7 @@ When using tables you need to consider the structure of the data you want to dis
 
 PatternFly offers 2 components for displaying large data sets: [data lists](/components/data-list/design-guidelines) and tables. While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
 
-Tables can also appear in primary-detail views. Visit the [primary-detail guidelines](/demos/primary-detail/design-guidelines) to learn more about the functionality.
+Tables can also appear in primary-detail views. Visit the [primary-detail guidelines](/patterns/primary-detail/design-guidelines) to learn more about the functionality.
 
 ### When to use a table vs. a data list
 
