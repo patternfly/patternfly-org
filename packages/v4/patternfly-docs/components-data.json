@@ -323,7 +323,7 @@
   },
   "text": {
     "illustration": "./images/component-illustrations/text.png",
-    "summary": "<b>Text</b> and <TextList> components are always wrapped in <b>TextContent</b> and provide correct formatting to a number of standard HTML tags."
+    "summary": "<b>Text</b> and <b>TextList</b> components are always wrapped in <b>TextContent</b> and provide correct formatting to a number of standard HTML tags."
   },
   "tile": {
     "illustration": "./images/component-illustrations/tile.png",
