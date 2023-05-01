@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.30 (2023-05-01)
+
+
+### Bug Fixes
+
+* update Text component summary to fix build ([64b3590](https://github.com/patternfly/patternfly-org/commit/64b359029fa14be143ddec212fdf89a3033145d5))
+
+
+
+
+
 # 0.12.0-alpha.29 (2023-04-27)
 
 
