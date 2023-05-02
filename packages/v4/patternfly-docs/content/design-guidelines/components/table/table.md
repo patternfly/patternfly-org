@@ -7,20 +7,24 @@ section: components
 ## Elements
 The elements mentioned below are similar for a table with compact or default spacing. This example shows a table with a compact spacing.
 
-<img src="./img/compact-data-table.png"  alt="Compact table"  width="1186"/>
+<img src="./img/table-elements.png"  alt="example of table and the elements"  width="1189"/>
 
 1. **[Toolbar](/components/toolbar/design-guidelines):** Sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
 2. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information.
-3. **Column headers:** Should align with the content they contain. If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on one column at a time. See [sorting by columns](#sorting-by-columns) for more information on the sort component.
-4. **Select checkbox:** Selects this row
-5. **Global actions:** Actions that apply to all selected items
-6. **Inline actions:** Actions that apply only to the current row/item
-7. **Pagination footer:** When present, provides navigation to additional pages
+3. **Global actions:** Actions that apply to all selected items.
+4. **Expansion:** Expand all the rows in the table.
+5. **Column headers:** Should align with the content they contain. If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on one column at a time. See [sorting by columns](#sorting-by-columns) for more information on the sort component.
+6. **Inline actions:** Actions that apply only to the current row/item.
+7. **Select checkbox:** Selects this row.
+8. **Expanded panel:** Expanded table row content.
+9. **Pagination footer:** When present, provides navigation to additional pages.
 
 ## Usage
 When using tables you need to consider the structure of the data you want to display and organize that information into columns. Columns will typically have column headers. Every row within a table must have a consistent format. If the table row includes actions, they should always be placed in the rightmost column(s).
 
 PatternFly offers 2 components for displaying large data sets: [data lists](/components/data-list/design-guidelines) and tables. While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
+
+Tables can also appear in primary-detail views. Visit the [primary-detail guidelines](/patterns/primary-detail/design-guidelines) to learn more about the functionality.
 
 ### When to use a table vs. a data list
 
@@ -33,7 +37,7 @@ PatternFly offers 2 components for displaying large data sets: [data lists](/com
 ### Using lists and tables in a page
 Lists and tables should be placed in the body of a page. The width should be set by the containing element.
 
-<img src="./img/data-table-example.png"  alt="Compact data table example"  width="1500"/>
+<img src="./img/table-dataexample.png"  alt="example of compact data table example"  width="1500"/>
 
 In this example, a table is positioned in the body of a page in a card.
 
@@ -59,27 +63,20 @@ Every table can be extended with these functionalities:
 
 ### Expandable table
 
-<img src="./img/expandable-table.png"  alt="Expandable table"  width="1186"/>
+<img src="./img/table-expandable.png"  alt="example of expandable table"  width="1198"/>
 
 1. **Expand all (optional)**: Expands every row at the same time.
 2. **Expansion:** Expands single row.
-3. **Expansion panel:** Contains details associated with a row. See [expanded panel coloring](#expanded-panel-coloring) for more information.
+3. **Expansion panel:** Contains details associated with a row.
 
 #### When to use
 * You have more information than what will comfortably fit inside a row.
 * You want to provide a way for advanced users to access information that is not applicable to all users.
 
-#### Expanded panel coloring
-**Use a dark blue line for expanded rows:**
-* In a non-selectable table.
-* In a selectable table for a selected row. The selected row would use a dark blue line, while the other expanded un-selected rows would use a light blue line.
-
-**Use a light blue line for expanded rows:**
-* In a selectable table for unselected expanded rows. The unselected expanded rows would use a light blue line, while the selected expanded rows would use a dark blue line.
 
 ### Compound-expandable table
 
-<img src="./img/compound-expandable-data-table.png"  alt="Compound expandable table"  width="1189"/>
+<img src="./img/table-compoundexpandable.png"  alt="example of compound expandable table"  width="1193"/>
 
 1. **Expandable cell:** A cell that can be clicked to reveal more detail about an item. If the expansion for an item is already open, clicking on a different cell will close the current item and open a new one.
 2. **Expansion panel:** Contains details associated with an expandable item.
@@ -91,7 +88,7 @@ Every table can be extended with these functionalities:
 ### Actionable table
 The actionable table provides checkboxes or radio buttons that enable users to select one or more rows in a table. Users may then act on those selections using options in the [toolbar](/components/toolbar/design-guidelines),.
 
-<img src="./img/actionable-table.png"  alt="Actionable table"  width="1174"/>
+<img src="./img/table-actionable.png"  alt="example of actionable table"  width="1214"/>
 
 1. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table with checkboxes. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information.
 2. **Checkbox**: Enables a user to select a row. Use when multiple rows can be selected at the same time.
