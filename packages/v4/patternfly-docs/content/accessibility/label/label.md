@@ -27,7 +27,7 @@ To implement an accessible PatternFly **label** and **label group**:
     <Checkbox id="label-a11y-checkbox-2" label="Standard keyboard interaction can be used to interact with the label group close button, label close button, or other interactive elements inside the chip group." description={<span><kbd>Enter</kbd> and <kbd>Space</kbd> should be able to activate the label group close button, individual label close buttons, or an overflow chip. This can usually be achieved by using "click" events.</span>} />
   </ListItem>
   <ListItem>
-    <Checkbox id="label-a11y-checkbox-3" label="If the label group's category name or an individual label's content is truncated, the entire category name or label can receive focus, not just the close button." description={<span>This can be achieved by ensuring the category name or label component itself has the <code className="ws-code">tabindex="0"</code> attribute. The category name/label should then be included in the standard keyboard navigation.</span>} />
+    <Checkbox id="label-a11y-checkbox-3" label="If the label group's category name or an individual label's content is truncated, the entire category name or label can receive focus, not just the close button." description={<span>This can be achieved by ensuring the category name or label component itself has the <code className="ws-code">tabindex="0"</code> attribute. The category name/label content should then be included in the standard keyboard navigation.</span>} />
   </ListItem>
   <ListItem>
     <Checkbox id="label-a11y-checkbox-4" label="If the label group's category name or an individual label's content is truncated, it has a tooltip that displays on hover or focus." description={<span>Follow the <Link href="/components/tooltip/accessibility">tooltip accessibility documentation</Link>.</span>} />
@@ -84,21 +84,21 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 Consumers must ensure they take any additional considerations when customizing a label or label group, using them in a way not described or recommended by PatternFly, or in various other specific use-cases not outlined elsewhere on this page.
 
-### Tooltips on labels
+### Custom tooltips
 
-Labels by default are not interactive components and typically should not be given a tooltip. If you need a label to have a tooltip - such as due to truncation - you should wrap the label text content in a button and give the intended tooltip to that button instead. For example, using our button component:
+Labels and label group category names are not interactive by default and typically should not be given custom tooltips. Tooltips on static elements may not be announced by some assistive technologies, meaning any additional context provided by a tooltip may be lost.
 
-```
+One alternative to placing a tooltip on a static element is to wrap the text content that would trigger the tooltip in a button, then apply the tooltip to that button instead. For example:
+
+```noLive
 <Label>
-  <Tooltip content="Grey label that overflows and truncates">
-    <Button isInline variant="link">
-      Grey label that overflows and truncates
-    </Button>
+  <Tooltip content="Supplementary information about the tooltip">
+    <Button>Label content</Button>
   </Tooltip>
 </Label>
 ```
 
-You should also follow our [tooltip accessibility documentation](/components/tooltip/accessibility).
+You should still follow any [tooltip accessibility documentation](/components/tooltip) as well as [button accessibility documentation](/components/button). One thing to note is that buttons typically will trigger an action to occur upon clicking it, so it might be confusing to some users navigating via screen reader or similar assistive technologies if they click the button and nothing happens.
 
 ### Accessible label status and severity
 
