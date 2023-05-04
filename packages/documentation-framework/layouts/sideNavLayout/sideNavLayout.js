@@ -84,7 +84,7 @@ const HeaderTools = ({
           {hasDarkThemeSwitcher && (
             <ToolbarItem>
               <Switch id="ws-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
-                document.querySelector('html').classList.toggle('pf-theme-dark')} />
+                document.querySelector('html').classList.toggle('pf-v5-theme-dark')} />
             </ToolbarItem>
           )}
           {hasSearch && (
