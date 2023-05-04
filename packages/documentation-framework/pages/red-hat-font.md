@@ -37,4 +37,4 @@ This is a global class that can be applied to any element to enable monospaced n
 
 ### Using opt-in classes
 
-To opt-in to any of the new fonts (`.pf-m-redhat-updated-font`, `.pf-m-redhatmono-font`, and `.pf-m-redhatVF-font`), add the opt-in class to the `<body>` tag of your application. To opt-in to monospaced numbers globally across your application, apply `.pf-m-tabular-nums` to any element that wraps your entire application (eg, `<body>`, `<div id="root">`, `<div class="pf-c-page">`, etc). To opt-in to monospaced numbers on a particular element and its children, add the class to that element itself.
+To opt-in to any of the new fonts (`.pf-m-redhat-updated-font`, `.pf-m-redhatmono-font`, and `.pf-m-redhatVF-font`), add the opt-in class to the `<body>` tag of your application. To opt-in to monospaced numbers globally across your application, apply `.pf-m-tabular-nums` to any element that wraps your entire application (eg, `<body>`, `<div id="root">`, `<div class="pf-v5-c-page">`, etc). To opt-in to monospaced numbers on a particular element and its children, add the class to that element itself.

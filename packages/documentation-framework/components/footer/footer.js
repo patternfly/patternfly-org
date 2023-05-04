@@ -19,12 +19,12 @@ export const Footer = () => (
           sm={12}
           md={6}
           mdOffset={1}
-          className="pf-u-mb-lg pf-u-mb-0-on-sm"
+          className="pf-v5-u-mb-lg pf-v5-u-mb-0-on-sm"
         >
-          <Grid className="pf-u-py-xl">
-            <GridItem sm={6} md={4} className="pf-u-ml-md pf-u-ml-0-on-md pf-u-mb-xl pf-u-mb-0-on-md">
+          <Grid className="pf-v5-u-py-xl">
+            <GridItem sm={6} md={4} className="pf-v5-u-ml-md pf-v5-u-ml-0-on-md pf-v5-u-mb-xl pf-v5-u-mb-0-on-md">
               <p
-                className="pf-c-title ws-org-pfsite-footer-menu-list-title"
+                className="pf-v5-c-title ws-org-pfsite-footer-menu-list-title"
               >
                 QUICKLINKS
               </p>
@@ -82,10 +82,10 @@ export const Footer = () => (
             <GridItem
               sm={6}
               md={4}
-              className="pf-u-mt-lg pf-u-mt-0-on-sm pf-u-ml-md pf-u-ml-0-on-md pf-u-mb-xl pf-u-mb-0-on-md"
+              className="pf-v5-u-mt-lg pf-v5-u-mt-0-on-sm pf-v5-u-ml-md pf-v5-u-ml-0-on-md pf-v5-u-mb-xl pf-v5-u-mb-0-on-md"
             >
               <p
-                className="pf-c-title ws-org-pfsite-footer-menu-list-title"
+                className="pf-v5-c-title ws-org-pfsite-footer-menu-list-title"
               >
                 CONTRIBUTE
               </p>
@@ -125,7 +125,7 @@ export const Footer = () => (
             <GridItem
               sm={6}
               md={4}
-              className="pf-u-mt-lg pf-u-mt-0-on-md pf-u-ml-md pf-u-ml-0-on-md"
+              className="pf-v5-u-mt-lg pf-v5-u-mt-0-on-md pf-v5-u-ml-md pf-v5-u-ml-0-on-md"
             >
               <p
                 className="ws-org-pfsite-footer-menu-list-title"
@@ -180,10 +180,10 @@ export const Footer = () => (
           </Grid>
         </GridItem>
         <GridItem sm={12} md={4}>
-          <Grid className="pf-u-pt-xl ws-org-pfsite-l-footer-column">
-            <GridItem className="pf-u-px-xl">
+          <Grid className="pf-v5-u-pt-xl ws-org-pfsite-l-footer-column">
+            <GridItem className="pf-v5-u-px-xl">
               <Link
-                className="pf-c-page__header-brand-link pf-c-brand ws-org-pfsite-footer-menu-about-logo pf-u-pb-md"
+                className="pf-v5-c-page__header-brand-link pf-v5-c-brand ws-org-pfsite-footer-menu-about-logo pf-v5-u-pb-md"
                 to="/"
               >
                 <Brand src={logo} alt="Patternfly Logo" />
@@ -192,7 +192,7 @@ export const Footer = () => (
                 PatternFly is an open source design system built to drive consistency and unify teams. From documentation and components to code examples and tutorials, PatternFly is a place where design and development can thrive. We’re on a mission to help teams build consistent, accessible, and scalable enterprise product experiences—the open source way.
               </p>
             </GridItem>
-            <GridItem className="ws-org-pfsite-footer-menu-social-links pf-u-px-xl">
+            <GridItem className="ws-org-pfsite-footer-menu-social-links pf-v5-u-px-xl">
               <Link
                 to="//github.com/patternfly"
                 target="top"
@@ -213,7 +213,7 @@ export const Footer = () => (
       </Grid>
     </PageSection>
     <PageSection key="footer-2" className="ws-org-pfsite-l-footer-dark pf-m-no-fill">
-      <Grid className="pf-u-py-xl-on-sm pf-u-py-0-on-md pf-u-align-items-center">
+      <Grid className="pf-v5-u-py-xl-on-sm pf-v5-u-py-0-on-md pf-v5-u-align-items-center">
         <GridItem md={2} mdOffset={1}>
           <Link
             to="//www.redhat.com"
@@ -233,7 +233,7 @@ export const Footer = () => (
             Copyright &copy; 2022 Red Hat, Inc.
           </span>
         </GridItem>
-        <GridItem md={4} lg={5} className="pf-u-ml-xl-on-xl">
+        <GridItem md={4} lg={5} className="pf-v5-u-ml-xl-on-xl">
           <Link
             to="//www.redhat.com/en/about/privacy-policy"
             target="top"

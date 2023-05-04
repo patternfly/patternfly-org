@@ -65,7 +65,7 @@ const HeaderTools = ({
   useEffect(() => {
     // reattach algolia to input each time search is expanded
     if (hasSearch && isSearchExpanded) {
-      attachDocSearch(algolia, '.ws-global-search .pf-c-text-input-group__text-input', 1000);
+      attachDocSearch(algolia, '.ws-global-search .pf-v5-c-text-input-group__text-input', 1000);
     }
   }, [isSearchExpanded])
 
@@ -178,7 +178,7 @@ export function attachDocSearch(algolia, inputSelector, timeout) {
       inputSelector,
       autocompleteOptions: {
         hint: false,
-        appendTo: `.ws-global-search .pf-c-text-input-group`,
+        appendTo: `.ws-global-search .pf-v5-c-text-input-group`,
       },
       debug: process.env.NODE_ENV !== 'production',
       ...algolia

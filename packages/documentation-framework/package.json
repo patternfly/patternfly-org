@@ -84,7 +84,7 @@
     "webpack-merge": "5.8.0"
   },
   "peerDependencies": {
-    "@patternfly/patternfly": "^5.0.0-alpha.37",
+    "@patternfly/patternfly": "^5.0.0-alpha.45",
     "@patternfly/react-code-editor": "^5.0.0-alpha.84",
     "@patternfly/react-core": "^5.0.0-alpha.83",
     "@patternfly/react-table": "^5.0.0-alpha.85",
