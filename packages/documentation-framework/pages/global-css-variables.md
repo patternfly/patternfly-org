@@ -16,7 +16,7 @@ Global variables define and enforce global style elements (like values for color
 
 Global variables follow this formula:
 
-`--pf-global--concept--PropertyCamelCase--modifier--state`
+`--pf-v5-global--concept--PropertyCamelCase--modifier--state`
 
 Where...
 
@@ -30,8 +30,8 @@ Example:
   ```css
   :root {
     /* Default & hovered link colors */
-    --pf-global--link--Color: #06c;
-    --pf-global--link--Color--hover: #004080;
+    --pf-v5-global--link--Color: #06c;
+    --pf-v5-global--link--Color--hover: #004080;
   }
   ```
 
@@ -44,33 +44,33 @@ Component variables are used to define custom properties at the component-level.
 
 Component variables follow this formula:
 
-`--pf-c-block__element--modifier--state--breakpoint--['child'|tag|c-component]pseudo-element--PropertyCamelCase`
+`--pf-v5-c-block__element--modifier--state--breakpoint--['child'|tag|c-component]pseudo-element--PropertyCamelCase`
 
 Where...
 
-- `pf-c-block` refers to the block, usually the component or layout name, like `pf-c-alert`.
+- `pf-v5-c-block` refers to the block, usually the component or layout name, like `pf-v5-c-alert`.
 - `__element` refers to the element inside of the block, like `__title`.
 - `modifier` is prefixed with`-m` and refers to a modifier class such as `.pf-m-danger`.
 - `state` is something like `hover` or `active`.
-- `breakpoint` is a media query breakpoint such as `sm` for `$pf-global--breakpoint--xs`.
+- `breakpoint` is a media query breakpoint such as `sm` for `$pf-v5-global--breakpoint--xs`.
 - `pseudo-element` is either `before` or `after`.
 - `child`, `tag`, or `c-component` refers to a child element. It could be a tag or component name, like `svg` or `c-menu`, or it could use `child` to refer to any child element. If any modifiers, states, breakpoints, or pseudo-elements are on the child, include those after this portion of the name.
 
 Example:
 - Note: component variables are scoped to the top-level component selector
   ```css
-  .pf-c-button {
+  .pf-v5-c-button {
     /* Default, primary, and primary hovered button background colors */
-    --pf-c-button--BackgroundColor: transparent;
-    --pf-c-button--m-primary--BackgroundColor: var(--pf-global--primary-color--100);
-    --pf-c-button--m-primary--hover--BackgroundColor: var(--pf-global--primary-color--200);
+    --pf-v5-c-button--BackgroundColor: transparent;
+    --pf-v5-c-button--m-primary--BackgroundColor: var(--pf-v5-global--primary-color--100);
+    --pf-v5-c-button--m-primary--hover--BackgroundColor: var(--pf-v5-global--primary-color--200);
   }
   ```
 
 <br/>
 Component variables are listed at the bottom of each component page (for example, [button css variables](/components/button#css-variables)).
 
-Note that all component variables are declared at the top component level (for example, `.pf-c-button`). The component variable table linked above also shows all usages of each variable and the values they evaluate to in each case - expand any component variable row to view the global variable it is mapped to.
+Note that all component variables are declared at the top component level (for example, `.pf-v5-c-button`). The component variable table linked above also shows all usages of each variable and the values they evaluate to in each case - expand any component variable row to view the global variable it is mapped to.
 
 ![Component variable mapping](./img/component-variable-mapping.png)
 
@@ -78,25 +78,25 @@ Note that all component variables are declared at the top component level (for e
 
 PatternFly defines a number of standard breakpoints. These are always used as a `min-width` breakpoint; i.e. using the `-md` breakpoint would apply to everything at the `-md` width and wider. (There is one exception to this, which is in the responsive behavior of the [table component](/components/table).)
 
-Breakpoint suffixes are used in utility classes and layouts as well as in many components as a way to apply class styles at a specified breakpoint. When available, `{-on-[breakpoint]}` will be shown as an available suffix for the class in the usage section of the documentation. The breakpoint suffix is optional and if not specified, the base class will be used. There are breakpoints for `sm`, `md`, `lg`, `xl`, and `2xl`, and the values for the corresponding breakpoints are defined below in the global variables `—pf-global—breakpoint—[breakpoint]`.
+Breakpoint suffixes are used in utility classes and layouts as well as in many components as a way to apply class styles at a specified breakpoint. When available, `{-on-[breakpoint]}` will be shown as an available suffix for the class in the usage section of the documentation. The breakpoint suffix is optional and if not specified, the base class will be used. There are breakpoints for `sm`, `md`, `lg`, `xl`, and `2xl`, and the values for the corresponding breakpoints are defined below in the global variables `—pf-v5-global—breakpoint—[breakpoint]`.
 
 ### Using the variable system
 
 PatternFly 4 styles provide a default starting point. You can use the variable system to make adjustments to that default styling. When you change one or more elements, you should package those values into a new SCSS stylesheet to replace the default styling.
 
-Overrides to PatternFly variables should be made at the `:root` level for global variables or at the top-level component selector for component variables (for example, `.pf-c-button`), as these overrides will cascade down to children elements accordingly.
+Overrides to PatternFly variables should be made at the `:root` level for global variables or at the top-level component selector for component variables (for example, `.pf-v5-c-button`), as these overrides will cascade down to children elements accordingly.
 
 Example:
 - Change the global primary color to red, but keep the original primary blue color as the background for primary buttons.
   ```css
   /* Override global primary color 100 to red */
   :root {
-    --pf-global--primary-color--100: var(--pf-global--palette--red-400);
+    --pf-v5-global--primary-color--100: var(--pf-v5-global--palette--red-400);
   }
 
   /* Override the above override for only the primary button background color */
-  .pf-c-button {
-    --pf-c-button--m-primary--BackgroundColor: var(--pf-global--palette--blue-400);
+  .pf-v5-c-button {
+    --pf-v5-c-button--m-primary--BackgroundColor: var(--pf-v5-global--palette--blue-400);
   }
   ```
 

@@ -73,7 +73,7 @@ const Page404 = () => {
         <Title headingLevel="h1" size="2xl">
           404: That page no longer exists
         </Title>
-        <p style={{ marginTop: 'var(--pf-global--spacer--sm)' }}>
+        <p style={{ marginTop: 'var(--pf-v5-global--spacer--sm)' }}>
           Another page might have the information you need, so try searching PatternFly.
         </p>
         <EmptyStateBody>

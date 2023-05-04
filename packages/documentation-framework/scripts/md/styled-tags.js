@@ -24,10 +24,10 @@ function styledTags() {
         node.properties.className = node.properties.className || '';
         node.properties.className += node.properties.className ? ' ' : '';
         node.properties.className += `ws-${node.tagName}`;
-        // Match pf-c-table implementation
+        // Match pf-v5-c-table implementation
         // https://pf4.patternfly.org/components/table/html/basic-table/
         if (node.tagName === 'table') {
-          node.properties.className += ' pf-c-table pf-m-grid-lg pf-m-compact';
+          node.properties.className += ' pf-v5-c-table pf-m-grid-lg pf-m-compact';
           node.properties.role = 'grid';
           let columnHeaders = [];
           for (let child of node.children) {

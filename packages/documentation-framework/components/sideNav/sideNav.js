@@ -19,14 +19,14 @@ const NavItem = ({ text, href }) => {
   return (
     <PageContextConsumer key={href + text}>
       {({onNavToggle, isNavOpen }) => (
-          <li key={href + text} className="pf-c-nav__item" onClick={() => isMobileView && onNavToggle()}>
+          <li key={href + text} className="pf-v5-c-nav__item" onClick={() => isMobileView && onNavToggle()}>
             <Link
               to={href}
               getProps={({ isCurrent, href, location }) => {
                 const { pathname } = location;
                 return {
                   className: css(
-                    'pf-c-nav__link',
+                    'pf-v5-c-nav__link',
                     (isCurrent || pathname.startsWith(href + '/')) && 'pf-m-current'
                   )
                 }}

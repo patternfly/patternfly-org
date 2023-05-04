@@ -9,7 +9,7 @@ export const InlineAlert = ({
   <Alert
     variant={variant}
     title={title}
-    className="pf-u-my-md"
+    className="pf-v5-u-my-md"
     style={{ marginBottom: '1rem' }}
     isInline
     component="h2"

@@ -119,7 +119,7 @@ export const Example = ({
   if (lang === 'html') {
     livePreview = (
       <div
-        className={css('ws-preview-html', isFullscreenPreview && 'pf-u-h-100')}
+        className={css('ws-preview-html', isFullscreenPreview && 'pf-v5-u-h-100')}
         dangerouslySetInnerHTML={{ __html: editorCode }}
       />
     );
@@ -152,7 +152,7 @@ export const Example = ({
 
   if (isFullscreenPreview) {
     return (
-      <div id={previewId} className={css(className, 'pf-u-h-100')}>
+      <div id={previewId} className={css(className, 'pf-v5-u-h-100')}>
         {livePreview}
         {hasDarkThemeSwitcher && (
           <div className="ws-theme-switch-full-page">
@@ -178,7 +178,7 @@ export const Example = ({
     <div className="ws-example">
       <div className="ws-example-header">
         <AutoLinkHeader
-          metaText={isBeta && <Badge className="ws-beta-badge pf-u-ml-xs">Beta</Badge>}
+          metaText={isBeta && <Badge className="ws-beta-badge pf-v5-u-ml-xs">Beta</Badge>}
           size="h4"
           headingLevel="h3"
           className="ws-example-heading"
