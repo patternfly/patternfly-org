@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.32 (2023-05-04)
+
+
+### Bug Fixes
+
+* **css:** update css selectors for v5 versioning ([#3516](https://github.com/patternfly/patternfly-org/issues/3516)) ([f681945](https://github.com/patternfly/patternfly-org/commit/f681945e2de1200fbb7d2d6ab8262091b1e72a8e))
+
+
+
+
+
 # 0.12.0-alpha.31 (2023-05-02)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
