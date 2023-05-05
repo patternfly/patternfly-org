@@ -13,11 +13,11 @@ A default banner should only be used when the banner color does not represent st
 
 | Type | Background color | Text color | Status/severity usage |
 | - | - | - | - |
-| Default | `--pf-global--BackgroundColor--dark-400` | White | Generic messages |
-| Blue | `--pf-global--info-color--100` | Black | General information messages |
-| Red | `--pf-global--danger-color--100` | White | High severity/danger messages |
-| Green | `--pf-global--success-color--100` | White | Positive/success messages |
-| Gold | `--pf-global--warning-color--100` | Black | Medium severity/warning messages |
+| Default | `--pf-v5-global--BackgroundColor--dark-400` | White | Generic messages |
+| Blue | `--pf-v5-global--info-color--100` | Black | General information messages |
+| Red | `--pf-v5-global--danger-color--100` | White | High severity/danger messages |
+| Green | `--pf-v5-global--success-color--100` | White | Positive/success messages |
+| Gold | `--pf-v5-global--warning-color--100` | Black | Medium severity/warning messages |
 
 ### When to use
  

@@ -14,7 +14,7 @@ export const ExtensionsDataList = (props) =>
         {props.data.map(item => {
             const links = item.links.map((link, index) => {
                 return (
-                    <span key={index} className="pf-c-extensions__link">
+                    <span key={index} className="pf-v5-c-extensions__link">
                         <a href={link.href} target="_blank" rel="noopener noreferrer">{link.name}</a>
                     </span>
                 );
@@ -26,7 +26,7 @@ export const ExtensionsDataList = (props) =>
                             dataListCells={[
                                 <DataListCell key="primary content" width={2}>
                                     <Title headingLevel="h3">{item.component}</Title>
-                                    <span className="pf-c-extensions__component-description">{item.description}</span>
+                                    <span className="pf-v5-c-extensions__component-description">{item.description}</span>
                                 </DataListCell>,
                                 <DataListCell key="secondary content">{links}</DataListCell>
                             ]}

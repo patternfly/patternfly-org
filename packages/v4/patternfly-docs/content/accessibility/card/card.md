@@ -84,13 +84,13 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason |
 |---|---|---|
-| `aria-label="[text that labels the card]"` or `aria-labelledby="[id of the element that labels the card]"` | `.pf-c-card` | Adds an accessible name to the card. If the card has a `.pf-c-card__title`, the `aria-labelledby` attribute should be passed in with a value of the card title's `id` attribute. Otherwise the `aria-label` attribute should be passed in to act as a title for the card. |
-| `tabindex="0"` | `.pf-c-card.pf-m-selectable-raised` or `.pf-c-card.pf-m-selectable` | Inserts the card into the tab order of the page so that it can be navigated to with standard keyboard navigation. **Required** when a card is selectable. |
-| `aria-label="[text that labels the hidden selectable input]"` or `aria-labelledby="[id of the element that labels the hidden selectable input]"` | `.pf-c-card__sr-input.pf-screen-reader` | Adds an accessible name to the hidden input that is used to improve accessibility for selectable cards. If the card has a `.pf-c-card__title`, the `aria-labelledby` attribute should be passed in with a value of the card title's `id` attribute. Otherwise the `aria-label` attribute should be passed in to act as a title for the card. |
-| `disabled` | `.pf-c-card__sr-input.pf-screen-reader` | Indicates a selectable card is disabled when the hidden input is used to improve accessibility for selectable cards. **Required** when a selectable card has the hidden input rendered and has the `.pf-m-non-selectable-raised` class. |
-| `aria-expanded="[true or false]"` | `.pf-c-card__header-toggle .pf-c-button.pf-m-plain` | Indicates whether the card toggle is expanded (true) or collapsed (false) to assistive technologies. **Required**. |
-| `aria-hidden="true"` | `.pf-c-card__header-toggle-icon` | Removes the card toggle icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
-| `aria-label="[text that labels the toggle]"` or `aria-labelledby="[id of the element that labels the toggle]"` | `.pf-c-card__header-toggle-icon` | Adds an accessible name to the card toggle. For information about setting these attributes on the toggle, see [expandable toggle props](/components/card/accessibility#expandable-toggle-props) in the React customization section. |
+| `aria-label="[text that labels the card]"` or `aria-labelledby="[id of the element that labels the card]"` | `.pf-v5-c-card` | Adds an accessible name to the card. If the card has a `.pf-v5-c-card__title`, the `aria-labelledby` attribute should be passed in with a value of the card title's `id` attribute. Otherwise the `aria-label` attribute should be passed in to act as a title for the card. |
+| `tabindex="0"` | `.pf-v5-c-card.pf-m-selectable-raised` or `.pf-v5-c-card.pf-m-selectable` | Inserts the card into the tab order of the page so that it can be navigated to with standard keyboard navigation. **Required** when a card is selectable. |
+| `aria-label="[text that labels the hidden selectable input]"` or `aria-labelledby="[id of the element that labels the hidden selectable input]"` | `.pf-v5-c-card__sr-input.pf-screen-reader` | Adds an accessible name to the hidden input that is used to improve accessibility for selectable cards. If the card has a `.pf-v5-c-card__title`, the `aria-labelledby` attribute should be passed in with a value of the card title's `id` attribute. Otherwise the `aria-label` attribute should be passed in to act as a title for the card. |
+| `disabled` | `.pf-v5-c-card__sr-input.pf-screen-reader` | Indicates a selectable card is disabled when the hidden input is used to improve accessibility for selectable cards. **Required** when a selectable card has the hidden input rendered and has the `.pf-m-non-selectable-raised` class. |
+| `aria-expanded="[true or false]"` | `.pf-v5-c-card__header-toggle .pf-v5-c-button.pf-m-plain` | Indicates whether the card toggle is expanded (true) or collapsed (false) to assistive technologies. **Required**. |
+| `aria-hidden="true"` | `.pf-v5-c-card__header-toggle-icon` | Removes the card toggle icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
+| `aria-label="[text that labels the toggle]"` or `aria-labelledby="[id of the element that labels the toggle]"` | `.pf-v5-c-card__header-toggle-icon` | Adds an accessible name to the card toggle. For information about setting these attributes on the toggle, see [expandable toggle props](/components/card/accessibility#expandable-toggle-props) in the React customization section. |
 
 ## Additional considerations
 
@@ -102,6 +102,6 @@ You should generally ensure a card does not have an excessive amount of function
 
 ### Altering elements of wrappers
 
-For both the React and HTML/CSS library, several sub-components have a default element that is used as a wrapper. For example, the `Card`/`.pf-c-card` sub-component uses the `article` element as its default wrapper.
+For both the React and HTML/CSS library, several sub-components have a default element that is used as a wrapper. For example, the `Card`/`.pf-v5-c-card` sub-component uses the `article` element as its default wrapper.
 
 While this wrapper element can be customized in both libraries, you must ensure doing so does not create invalid markup nor makes the card as a whole less accessible.

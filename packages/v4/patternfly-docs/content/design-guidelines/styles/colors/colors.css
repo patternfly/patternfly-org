@@ -3,6 +3,6 @@
 }
 
 /* Specifity YEAH */
-.pf-c-divider.ws-colors-divider {
-  margin-top: var(--pf-c-content--h2--MarginTop);
+.pf-v5-c-divider.ws-colors-divider {
+  margin-top: var(--pf-v5-c-content--h2--MarginTop);
 }

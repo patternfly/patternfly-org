@@ -13,7 +13,7 @@ The following props/attributes have been added for you or are customizable in Pa
 
 | React component | React prop | Which HTML element it appears on in markup | Explanation | 
 |---|---|---|---|
-| Label | closeBtnProps | .pf-c-label | Customize the props on the close button of the label. For example, to change the `aria-label`, pass `closeBtnProps={{'aria-label': 'new label'}}` to the Label component. |
+| Label | closeBtnProps | .pf-v5-c-label | Customize the props on the close button of the label. For example, to change the `aria-label`, pass `closeBtnProps={{'aria-label': 'new label'}}` to the Label component. |
 
 As a caution, labels can be styled using a variety of colors. Relying on color alone to communicate information causes barriers to
 access for many readers: colorblind and low vision users may not be able to perceive the color differences, and screen

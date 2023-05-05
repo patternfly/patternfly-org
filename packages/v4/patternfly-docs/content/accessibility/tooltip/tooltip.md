@@ -27,9 +27,9 @@ For the HTML/CSS library:
 - Pass in `role="tooltip"` to the element acting as the tooltip component.
 - Pass in the `aria-labelledby` attribute to the trigger when the tooltip should act as the primary label for its trigger:
   ```noLive
-  <div class="pf-c-tooltip pf-m-top" role="tooltip">
-    <div class="pf-c-tooltip__arrow"></div>
-    <div class="pf-c-tooltip__content" id="tooltip-label-content">
+  <div class="pf-v5-c-tooltip pf-m-top" role="tooltip">
+    <div class="pf-v5-c-tooltip__arrow"></div>
+    <div class="pf-v5-c-tooltip__content" id="tooltip-label-content">
       Copy to clipboard
     </div>
   </div>
@@ -40,9 +40,9 @@ For the HTML/CSS library:
 - Pass in the `aria-describedby` attribute to the trigger when the tooltip should act as supplementary information:
 
   ```noLive
-  <div class="pf-c-tooltip pf-m-top" role="tooltip">
-    <div class="pf-c-tooltip__arrow"></div>
-    <div class="pf-c-tooltip__content" id="tooltip-description-content">
+  <div class="pf-v5-c-tooltip pf-m-top" role="tooltip">
+    <div class="pf-v5-c-tooltip__arrow"></div>
+    <div class="pf-v5-c-tooltip__content" id="tooltip-description-content">
       Supplementary information within a tooltip
     </div>
   </div>
@@ -147,9 +147,9 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `aria-live="polite"` | `.pf-c-tooltip` | Allows assistive technologies to announce the tooltip contents when it is expected or intended to dynamically update, such as in response to a user action. |
-| `id` | `.pf-c-tooltip` | Used to link the tooltip to a trigger by passing in the tooltip's `id` as the value to the trigger's `aria-describedby` or `aria-labelledby` attribute. **Required**. |
-| `role="tooltip"` | `.pf-c-tooltip` | Adds a tooltip role to the component. **Required**. |
+| `aria-live="polite"` | `.pf-v5-c-tooltip` | Allows assistive technologies to announce the tooltip contents when it is expected or intended to dynamically update, such as in response to a user action. |
+| `id` | `.pf-v5-c-tooltip` | Used to link the tooltip to a trigger by passing in the tooltip's `id` as the value to the trigger's `aria-describedby` or `aria-labelledby` attribute. **Required**. |
+| `role="tooltip"` | `.pf-v5-c-tooltip` | Adds a tooltip role to the component. **Required**. |
 | `aria-describedby="[id of the element that describes this element]"` | Element that triggers the tooltip | Allows assistive technologies to announce the tooltip contents when it is triggered. **Required** when the tooltip should act as supplementary information. |
 | `aria-labelledby="[id of the element that labels this element]"` | element that triggers the tooltip | Allows assistive technologies to announce the tooltip contents when it is triggered. **Required** when the tooltip should act as the primarly label of the trigger. |
 
