@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.33 (2023-05-05)
+
+
+### Features
+
+* **docs:** Update docs framework with latest react code ([#3517](https://github.com/patternfly/patternfly-org/issues/3517)) ([2df0147](https://github.com/patternfly/patternfly-org/commit/2df014737dbbe35033d0b28ee71b40d5fbe22ed2))
+
+
+
+
+
 # 0.12.0-alpha.32 (2023-05-04)
 
 
