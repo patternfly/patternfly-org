@@ -122,7 +122,7 @@ module.exports = (sourceMD, sourceProps) => {
   const topologySrcPath = topologyPath.replace("package.json", "src/components");
 
   sourceProps(path.join(topologySrcPath, "/**/*.tsx"), reactPropsIgnore);
-  sourceMD(path.join(topologyDocsPath, "/examples/*.md"), 'react');
+  sourceMD(path.join(topologyDocsPath, "/examples/*.md"), 'extensions');
 
   // React-user-feedback
   const userFeedbackPath = require.resolve("@patternfly/react-user-feedback/package.json");
