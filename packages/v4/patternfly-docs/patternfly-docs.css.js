@@ -9,8 +9,8 @@ import '@patternfly/patternfly/patternfly-addons.css';
 import '@patternfly/documentation-framework/global.css';
 
 // Extensions styles
-import '@patternfly/react-topology/dist/esm/css/topology-controlbar.css';
-import '@patternfly/react-topology/dist/esm/css/topology-side-bar.css';
-import '@patternfly/react-topology/dist/esm/css/topology-view.css';
-import '@patternfly/react-topology/dist/esm/css/topology-components.css';
-import '@patternfly/react-topology/dist/esm/css/topology-pipelines.css';
+import '@patternfly/react-topology/src/css/topology-controlbar.css';
+import '@patternfly/react-topology/src/css/topology-side-bar.css';
+import '@patternfly/react-topology/src/css/topology-view.css';
+import '@patternfly/react-topology/src/css/topology-components.css';
+import '@patternfly/react-topology/src/css/topology-pipelines.css';
