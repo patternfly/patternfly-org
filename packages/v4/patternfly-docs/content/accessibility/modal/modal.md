@@ -61,19 +61,19 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `aria-describedby="[id of the element that describes the modal"` | `.pf-c-modal-box` | Adds an accessible description to the modal. Typically this will be the id of the primary modal content. |
-| `aria-label="[text that labels the modal]"` | `.pf-c-modal-box` | Adds an accessible name to the modal. **Required** if there is no visible text that acts as the modal title. |
-| `aria-labelledby="[id of the element that labels the modal]"` | `.pf-c-modal-box` | Adds an accessible name to the modal. **Required** if `.pf-c-modal-box__title` or another title element is present. |
-| `aria-modal="true"` | `.pf-c-modal-box` | Notifies users of assistive technologies that the contents underneath the modal are not available for interaction. This does not prevent other content from being interacted with, nor does it make the element a modal itself. **Required**. |
-| `role="dialog"` | `.pf-c-modal-box` | Identifies the element that serves as the modal container. **Required**. |
-| `aria-label="[text labeling the modal body]"` | `.pf-c-modal-box__body` | Adds an accessible name to the modal body. This attribute should only be passed in if the `role` attribute is also passed in. **Required** if the modal body content renders a scrollbar due to overflow. |
-| `role="[role of the modal body]"` | `.pf-c-modal-box__body` | Adds an accessible role to the modal body. Typically "region" is passed in as the role. **Required** if the modal body content renders a scrollbar due to overflow. |
-| `tab-index="0"` | `.pf-c-modal-box__body` | Makes the modal body focusable via keyboard and other assistive technologies. **Required** if the modal body content renders a scrollbar due to overflow. |
-| `aria-label="Close"` | `.pf-c-modal-box__close .pf-c-button` | Adds an accessible name to the close button of a modal. **Required**. |
-| `form="[id of the form element in the modal body]"` | `.pf-c-modal-box__footer .pf-c-button` | Links a "submit" button in the modal footer with a form in the modal body. **Required** when the submit button is outside of a `<form>` element. |
-| `aria-hidden="true"` | `.pf-c-modal-box .pf-c-button i`, `.pf-c-modal-box__header-help .pf-c-button i` | Removes the close button and help button icons from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
-| `.pf-screen-reader` | `.pf-c-modal-box__title span` | Should be used to add text to the modal title that is accessible only to assistive technologies and is not visually rendered. The text content of this element should state the status or severity of the modal and should preface the modal title. |
-| `aria-hidden="true"` | Parent element that contains the page contents | Removes the specified content from the accessibility tree, preventing assistive technologies from interacting with it. The `.pf-c-modal-box` element must not be a descendent of the element that has this attribute. **Required** when the modal is open. |
+| `aria-describedby="[id of the element that describes the modal"` | `.pf-v5-c-modal-box` | Adds an accessible description to the modal. Typically this will be the id of the primary modal content. |
+| `aria-label="[text that labels the modal]"` | `.pf-v5-c-modal-box` | Adds an accessible name to the modal. **Required** if there is no visible text that acts as the modal title. |
+| `aria-labelledby="[id of the element that labels the modal]"` | `.pf-v5-c-modal-box` | Adds an accessible name to the modal. **Required** if `.pf-v5-c-modal-box__title` or another title element is present. |
+| `aria-modal="true"` | `.pf-v5-c-modal-box` | Notifies users of assistive technologies that the contents underneath the modal are not available for interaction. This does not prevent other content from being interacted with, nor does it make the element a modal itself. **Required**. |
+| `role="dialog"` | `.pf-v5-c-modal-box` | Identifies the element that serves as the modal container. **Required**. |
+| `aria-label="[text labeling the modal body]"` | `.pf-v5-c-modal-box__body` | Adds an accessible name to the modal body. This attribute should only be passed in if the `role` attribute is also passed in. **Required** if the modal body content renders a scrollbar due to overflow. |
+| `role="[role of the modal body]"` | `.pf-v5-c-modal-box__body` | Adds an accessible role to the modal body. Typically "region" is passed in as the role. **Required** if the modal body content renders a scrollbar due to overflow. |
+| `tab-index="0"` | `.pf-v5-c-modal-box__body` | Makes the modal body focusable via keyboard and other assistive technologies. **Required** if the modal body content renders a scrollbar due to overflow. |
+| `aria-label="Close"` | `.pf-v5-c-modal-box__close .pf-v5-c-button` | Adds an accessible name to the close button of a modal. **Required**. |
+| `form="[id of the form element in the modal body]"` | `.pf-v5-c-modal-box__footer .pf-v5-c-button` | Links a "submit" button in the modal footer with a form in the modal body. **Required** when the submit button is outside of a `<form>` element. |
+| `aria-hidden="true"` | `.pf-v5-c-modal-box .pf-v5-c-button i`, `.pf-v5-c-modal-box__header-help .pf-v5-c-button i` | Removes the close button and help button icons from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
+| `.pf-screen-reader` | `.pf-v5-c-modal-box__title span` | Should be used to add text to the modal title that is accessible only to assistive technologies and is not visually rendered. The text content of this element should state the status or severity of the modal and should preface the modal title. |
+| `aria-hidden="true"` | Parent element that contains the page contents | Removes the specified content from the accessibility tree, preventing assistive technologies from interacting with it. The `.pf-v5-c-modal-box` element must not be a descendent of the element that has this attribute. **Required** when the modal is open. |
 
 ## Additional considerations
 

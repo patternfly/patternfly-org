@@ -22,8 +22,8 @@ import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-ic
 <div className="ws-community-page pf-m-light-100">
   <p>At the core of PatternFly is our community of people—in other words, our Flyers. Together, we celebrate creativity and foster a sense of teamwork and unity.</p>
 
-  <Grid sm={12} md={6} hasGutter className="pf-u-mt-3xl">
-    <GridItem className="pf-u-pr-xl">
+  <Grid sm={12} md={6} hasGutter className="pf-v5-u-mt-3xl">
+    <GridItem className="pf-v5-u-pr-xl">
       <img src={communityPageHeader} alt="Website collaboration" />
     </GridItem>
     <GridItem>
@@ -32,10 +32,10 @@ import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-ic
     </GridItem>
   </Grid>
 
-  <Title size="3xl" className="pf-u-mb-sm ws-page-title pf-u-mt-3xl" headingLevel="h2">What we're building</Title>
+  <Title size="3xl" className="pf-v5-u-mb-sm ws-page-title pf-v5-u-mt-3xl" headingLevel="h2">What we're building</Title>
   <p>Our work extends beyond products and apps. We're always exploring new ways we can welcome ideas and build better experiences for the very people who make PatternFly what it is today. </p>
 
-  <Grid sm={12} md={4} hasGutter className="pf-u-my-lg pf-u-text-align-center ws-building-grid">
+  <Grid sm={12} md={4} hasGutter className="pf-v5-u-my-lg pf-v5-u-text-align-center ws-building-grid">
     <Card>
       <CardBody>
         <img src={community1} alt="Globe" className="ws-community-grid-img" />
@@ -76,26 +76,26 @@ import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-ic
     </Card>
   </Grid>
 
-  <Title size="3xl" className="pf-u-mb-sm ws-page-title pf-u-mt-3xl" headingLevel="h2">Creating new communities</Title>
+  <Title size="3xl" className="pf-v5-u-mb-sm ws-page-title pf-v5-u-mt-3xl" headingLevel="h2">Creating new communities</Title>
   <p>Sometimes Flyers branch out and build groups of their own, which is how new communities are born. While PatternFly communities are separate from PatternFly and not supported as part of the design system, we still love seeing our Flyers forming new groups and developing their visions into actions.</p>
   <br/>
 
-  <Title size="xl" className="pf-u-mb-sm ws-page-title pf-u-mt-xl" headingLevel="h3"><a href="https://patternflyelements.org">PatternFly Elements</a></Title>
+  <Title size="xl" className="pf-v5-u-mb-sm ws-page-title pf-v5-u-mt-xl" headingLevel="h3"><a href="https://patternflyelements.org">PatternFly Elements</a></Title>
   <p> PatternFly Elements is a community created by Red Hat's web-based developers. It focuses on creating web components for use across Red Hat's sites and SaaS products and features theming options available for your own brand library.</p>
 
-  <Title size="xl" className="pf-u-mb-sm ws-page-title pf-u-mt-xl" headingLevel="h3"><a href="https://github.com/patternfly-kotlin/patternfly-kotlin">PatternFly Kotlin</a></Title>
+  <Title size="xl" className="pf-v5-u-mb-sm ws-page-title pf-v5-u-mt-xl" headingLevel="h3"><a href="https://github.com/patternfly-kotlin/patternfly-kotlin">PatternFly Kotlin</a></Title>
   <p>PatternFly Kotlin is a Kotlin implementation of PatternFly based on fritz2, targeting Kotlin/JS. The goal of this project is to provide all PatternFly components in Kotlin, matching the reactive nature of fritz2. The components use stores, handlers, and other elements from the fritz2 API. For a quick overview, check out the <a href="https://patternfly-kotlin.github.io/patternfly-kotlin-showcase/#home">PatternFly Kotlin showcase</a>.</p>
 
-  <Title size="xl" className="pf-u-mb-sm ws-page-title pf-u-mt-xl" headingLevel="h3"><a href="https://www.sketch.com/s/6ccbd710-267d-4b69-9dae-bc19e1551056">Ansible Component Guide and Sketch Library</a></Title>
+  <Title size="xl" className="pf-v5-u-mb-sm ws-page-title pf-v5-u-mt-xl" headingLevel="h3"><a href="https://www.sketch.com/s/6ccbd710-267d-4b69-9dae-bc19e1551056">Ansible Component Guide and Sketch Library</a></Title>
   <p>The Ansible Component Guide and Sketch Library is an additional resource that designers can use that is built on top of existing PatternFly components. It is a rapid mockup prototyping tool that can be used to quickly put together repeatable design patterns and layouts across projects. Although this is specific to Ansible, many of the components are generalized and can fit many product use cases and are easily detachable to update as needed.</p>
 
-  <Title size="xl" className="pf-u-mb-sm ws-page-title pf-u-mt-xl" headingLevel="h3"><a href="https://github.com/ctron/patternfly-yew">PatternFly for Yew</a></Title>
+  <Title size="xl" className="pf-v5-u-mb-sm ws-page-title pf-v5-u-mt-xl" headingLevel="h3"><a href="https://github.com/ctron/patternfly-yew">PatternFly for Yew</a></Title>
   <p>PatternFly for Yew provides PatternFly components for the Yew framework. Yew is a Rust based framework for creating web applications, and is also able to run in the browser using WASM. The project aims to create Yew components for all components and concepts found in PatternFly. For a quick demo and starter template, see the <a href="https://github.com/ctron/patternfly-yew-quickstart">PatternFly Yew Quickstart.</a></p>
 
-  <Title size="4xl" className="pf-u-mb-lg ws-page-title ws-keep-growing pf-u-mt-3xl" headingLevel="h2">Let's keep growing</Title>
+  <Title size="4xl" className="pf-v5-u-mb-lg ws-page-title ws-keep-growing pf-v5-u-mt-3xl" headingLevel="h2">Let's keep growing</Title>
   <p>The PatternFly community is never finished growing, and we want to keep it that way. Feel free to reach out whenever — we're always open.</p>
 
-  <Grid sm={12} md={6} gutter="sm" className="pf-u-my-lg pf-l-grid pf-m-all-12-col-on-sm pf-m-all-6-col-on-md pf-m-gutter" style={{ maxWidth: '450px' }}>
+  <Grid sm={12} md={6} gutter="sm" className="pf-v5-u-my-lg pf-v5-l-grid pf-m-all-12-col-on-sm pf-m-all-6-col-on-md pf-m-gutter" style={{ maxWidth: '450px' }}>
     <GridItem>
       <Split>
         <SplitItem style={{ marginRight: '12px' }}><ChatIcon /></SplitItem>

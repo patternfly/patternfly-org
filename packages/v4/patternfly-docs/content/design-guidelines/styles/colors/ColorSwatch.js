@@ -31,7 +31,7 @@ export function ColorSwatch({
   const popoverContent = (
     <div className="ws-color-swatch-popover">
       <label className="ws-color-swatch-popover-label">Global CSS variable</label>
-      <code className="ws-color-swatch-description-code ws-color-swatch-popover-code ws-code pf-u-font-size-xs">
+      <code className="ws-color-swatch-description-code ws-color-swatch-popover-code ws-code pf-v5-u-font-size-xs">
         {color}
       </code>
       <p>
@@ -68,7 +68,7 @@ export function ColorSwatch({
             viewBox="0 0 44 44"
             style={isBoxShadow ? { boxShadow: `var(${color})` } : {}}
           >
-            <circle cx="22" cy="22" r="22" style={{ fill: isBoxShadow ? 'white' : `var(${color})`, stroke: 'var(--pf-global--palette--black-300)' }} />
+            <circle cx="22" cy="22" r="22" style={{ fill: isBoxShadow ? 'white' : `var(${color})`, stroke: 'var(--pf-v5-global--palette--black-300)' }} />
             {label === 'Hover' && handSVG}
           </svg>
         </Button>
@@ -77,7 +77,7 @@ export function ColorSwatch({
         <label className="ws-color-swatch-description-label">
           {label || token && `#${normalizeColor(token.value)}`} {caption && `(${caption})`}
         </label>
-        <code className="ws-color-swatch-description-code ws-code pf-u-font-size-xs">
+        <code className="ws-color-swatch-description-code ws-code pf-v5-u-font-size-xs">
           {color}
         </code>
       </div>

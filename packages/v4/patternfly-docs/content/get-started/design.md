@@ -13,40 +13,40 @@ PatternFly offers a variety of resources to help you make the most of the design
 ### Design kit
 The design kit is a symbol library implemented in Sketch to help designers, like you, create high-fidelity mockups that reflect PatternFly styling.
 
-[**What's in the design kit?**](#whats-in-the-design-kit) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**What's in the design kit?**](#whats-in-the-design-kit) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
 
 ### Wireframe kit
 A PatternFly wireframe kit (implemented in Sketch) is also available for creating low or mid-fidelity mockups that are compatible with PatternFly styles. The wireframe kit is separate from the design kit, but the two can be used together for a comprehensive approach to the design life-cycle.
 
-[**Learn more about the wireframe kit**](https://github.com/patternfly/patternfly-design-kit/blob/master/PatternFly%204%20-%20Wireframe%20library%20and%20template/Wireframe%20kit%20guideline.md) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**Learn more about the wireframe kit**](https://github.com/patternfly/patternfly-design-kit/blob/master/PatternFly%204%20-%20Wireframe%20library%20and%20template/Wireframe%20kit%20guideline.md) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
 
 ### Style guidelines
 What typography should you be using? What about colors? Spacing? Check out styles to learn everything you need to know about our foundational design elements.
 
-[**View styles**](/guidelines/colors) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**View styles**](/guidelines/colors) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
 
 ### Usage and behavior guidelines
 Should you use a wizard or a form to solve this problem? How do you write a good button label? Which navigation makes the most sense? Get answers by clicking the Design guidelines tab associated within each component page.
 
-[**View usage and behavior guidelines**](/components/about-modal/design-guidelines) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**View usage and behavior guidelines**](/components/about-modal/design-guidelines) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
 
 ### Content guidelines
 How do you write great microcopy and text for your user interface? Read our content guidelines for general principles, guidance on voice, and a style guide to help you with everything from capitalization to date and time formats.
 
 
-[**View content guidelines**](/ux-writing/about) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**View content guidelines**](/ux-writing/about) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
 
 
 
 ### Start building with components.
 What does a toolbar look like? What about a filter chip? Components are the building blocks of the design system. Check out individual component pages to view examples, understand states and behaviors, and check out the code samples (if you’re into that kind of thing).
 
-[**View components**](/components/about-modal) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**View components**](/components/about-modal) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
 
 ### Want to see more?
 See all the pieces working together with demos.
 
-[**View demos**](/demos/primary-detail) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**View demos**](/demos/primary-detail) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
 
 ## What's in the design kit?
 
@@ -113,7 +113,7 @@ It’s important to understand some specific aspects about the design kit and th
 ### Sketch design training
 There’s a lot to learn when it comes to making smart use of the Sketch template and library. Whether you are new to PatternFly, new to Sketch, or even an experienced Sketch user, just looking to see how other designers use the application, the Sketch design training is a great place to start when using the design kit.
 
-[**Start Sketch design training**](https://patternflyt-training.thinkific.com/courses/pf-sketch-e-training) <i class="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**Start Sketch design training**](https://patternflyt-training.thinkific.com/courses/pf-sketch-e-training) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
 
 ### Spacers
 The layout for all visual elements in Patternfly is determined by spacers. The spacers are used as padding between elements to ensure consistent layout and placement of components into a design that adhere to PatternFly guidelines. All symbols in the symbol library and templates have been made using spacers which are built-in to ensure correct use of elements.
