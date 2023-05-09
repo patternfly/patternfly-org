@@ -88,14 +88,14 @@ Consumers must ensure they take any additional considerations when customizing a
 
 Labels and label group category names are not interactive by default and typically should not be given custom tooltips. Tooltips on static elements may not be announced by some assistive technologies, meaning any additional context provided by a tooltip may be lost.
 
-One alternative to placing a tooltip on a static element is to wrap the text content that would trigger the tooltip in a button, then apply the tooltip to that button instead. For example:
+One alternative to placing a tooltip on a static element is to wrap the label in a button, then apply the tooltip to that button instead. For example:
 
 ```noLive
-<Label>
-  <Tooltip content="Supplementary information about the tooltip">
-    <Button>Label content</Button>
-  </Tooltip>
-</Label>
+<Tooltip content="Supplementary information about the label">
+  <Button size="sm" variant="plain">
+    <Label>Non-truncating label with tooltip</Label>
+  </Button>
+</Tooltip>
 ```
 
 You should still follow any [tooltip accessibility documentation](/components/tooltip) as well as [button accessibility documentation](/components/button). One thing to note is that buttons typically will trigger an action to occur upon clicking it, so it might be confusing to some users navigating via screen reader or similar assistive technologies if they click the button and nothing happens.
