@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.35 (2023-05-09)
+
+
+### Bug Fixes
+
+* **org:** Fix up org css issues after doc framework update ([#3518](https://github.com/patternfly/patternfly-org/issues/3518)) ([a6f20c5](https://github.com/patternfly/patternfly-org/commit/a6f20c569a8ba8df2da23722c48f73f750e229e3))
+
+
+
+
+
 # 2.0.0-alpha.34 (2023-05-05)
 
 
