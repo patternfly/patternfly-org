@@ -37,6 +37,11 @@ jobs:
           key: ${{ runner.os }}-v4-${{ hashFiles('yarn.lock') }}
       - run: yarn build:v4
         name: Build docs
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: build
       - run: .github/release.sh
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
