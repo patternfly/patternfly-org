@@ -41,7 +41,6 @@ async function writeScreenshots({ urlPrefix }) {
   // Define a task (in this case: screenshot of page)
   await cluster.task(writeScreenshot);
 
-  console.log(fullscreenRoutes);
   // Add some pages to queue
   Object.entries(fullscreenRoutes)
     .filter(([, { isFullscreenOnly }]) => isFullscreenOnly)
