@@ -51,12 +51,12 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied | Reason |
 | -- | -- | -- |
-| `role="menu"` | `.pf-c-menu__list` | Declares `.pf-c-menu__list` as a menu. |
-| `disabled` | `button.pf-c-menu__item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
-| `role="menuitem"` | `.pf-c-menu__item`, `.pf-c-menu__list-item` (checkbox) | Assigns `.pf-c-menu__item` as an option in a set of choices contained by a menu. |
-| `role="none"` | `.pf-c-menu__list-item` | Removes semantic meaning from `.pf-c-menu__list-item`. |
-| `aria-disabled="true"` | `a.pf-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
-| `tabindex="-1"` | `a.pf-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
-| `aria-hidden="true"` | `.pf-c-menu__item-icon`, `.pf-c-menu__item-action-icon`, `.pf-c-menu__item-external-icon`, `.pf-c-menu__item-toggle-icon`, `.pf-c-menu__item-select-icon` | Hides the icon from assistive technologies. |
-| `aria-label="[text that labels the action]"` | `.pf-c-menu__item-action-icon.pf-m-favorite` | Provides an accessible label indicating that the favorite action is not selected. |
-| `aria-label="[text that labels the action]"` | `.pf-c-menu__item-action-icon.pf-m-favorite.pf-m-favorited` | Provides an accessible label indicating that the favorite action is selected. |
+| `role="menu"` | `.pf-v5-c-menu__list` | Declares `.pf-v5-c-menu__list` as a menu. |
+| `disabled` | `button.pf-v5-c-menu__item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
+| `role="menuitem"` | `.pf-v5-c-menu__item`, `.pf-v5-c-menu__list-item` (checkbox) | Assigns `.pf-v5-c-menu__item` as an option in a set of choices contained by a menu. |
+| `role="none"` | `.pf-v5-c-menu__list-item` | Removes semantic meaning from `.pf-v5-c-menu__list-item`. |
+| `aria-disabled="true"` | `a.pf-v5-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
+| `tabindex="-1"` | `a.pf-v5-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
+| `aria-hidden="true"` | `.pf-v5-c-menu__item-icon`, `.pf-v5-c-menu__item-action-icon`, `.pf-v5-c-menu__item-external-icon`, `.pf-v5-c-menu__item-toggle-icon`, `.pf-v5-c-menu__item-select-icon` | Hides the icon from assistive technologies. |
+| `aria-label="[text that labels the action]"` | `.pf-v5-c-menu__item-action-icon.pf-m-favorite` | Provides an accessible label indicating that the favorite action is not selected. |
+| `aria-label="[text that labels the action]"` | `.pf-v5-c-menu__item-action-icon.pf-m-favorite.pf-m-favorited` | Provides an accessible label indicating that the favorite action is selected. |

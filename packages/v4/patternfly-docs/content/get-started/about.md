@@ -36,7 +36,7 @@ Usage and behavior guidelines communicate standards and best practices for commo
 
 Content guidelines provide principles and best practices around writing for user experience along with general voice and style guidance.
 
-[**View design guidelines**](/guidelines/colors) <i className="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**View design guidelines**](/guidelines/colors) <i className="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
 
 ## Additional tools
 
@@ -50,7 +50,7 @@ Global variables define and enforce style elements (like global values for color
 **Component variables**
 Component variables are used to define custom properties at the component level. Component variables are always defined by global variables.
 
-[**Learn more and view CSS variables**](/developer-resources/global-css-variables) <i className="ws-content-blueArrow fas fa-arrow-right pf-u-mx-sm"></i>
+[**Learn more and view CSS variables**](/developer-resources/global-css-variables) <i className="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
 
 ### Utilities
 
@@ -74,7 +74,7 @@ If you encounter an issue with an earlier browser version and have a question ab
 Flexibility
 PatternFly was built to be flexible and is scoped to work in tandem with other design systems. This means you’re able to use PatternFly components alongside components from systems like Bootstrap, Material.io, or older versions of PatternFly.
 
-For example, our code is written like pf-c-alert
+For example, our code is written like pf-v5-c-alert
 alert
 So if you had …
 Include an example -->

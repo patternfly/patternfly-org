@@ -76,12 +76,12 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `.pf-screen-reader` | `.pf-c-alert__title <span>` | Should be used to add text to the alert title that is accessible only to assistive technologies and is not visually rendered. The text content of this element should state the type of alert and should preface the alert title. |
-| `aria-label="[text that labels the alert close button]"` | `.pf-c-button.pf-m-plain` | Adds an accessible name to the alert close button. The value passed in should generally indicate that the button will close the alert and what alert will be closed, typically by referencing the alert title. |
-| `hidden` | `.pf-c-alert__description` | Hides the expandable alert description content. **Required** when `aria-expanded="false"` is passed into `.pf-c-alert__toggle`. |
-| `aria-expanded="[true or false]"` | `.pf-c-alert__toggle` | Indicates whether the alert toggle is expanded (true) or collapsed (false) to assistive technologies and that the expandable alert description is hidden. **Required**. |
-| `aria-label="[text that labels the alert toggle]"` | `.pf-c-button.pf-m-plain` | Adds an accessible name to the alert toggle when the `aria-expanded` attribute is also passed in. The value passed in should provide context as to which alert will be expanded/collapsed and what type of information is within the expandable area.  |
-| `aria-hidden="true"` | `.pf-c-alert__icon <i>` | Removes the expandable alert toggle icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
+| `.pf-screen-reader` | `.pf-v5-c-alert__title <span>` | Should be used to add text to the alert title that is accessible only to assistive technologies and is not visually rendered. The text content of this element should state the type of alert and should preface the alert title. |
+| `aria-label="[text that labels the alert close button]"` | `.pf-v5-c-button.pf-m-plain` | Adds an accessible name to the alert close button. The value passed in should generally indicate that the button will close the alert and what alert will be closed, typically by referencing the alert title. |
+| `hidden` | `.pf-v5-c-alert__description` | Hides the expandable alert description content. **Required** when `aria-expanded="false"` is passed into `.pf-v5-c-alert__toggle`. |
+| `aria-expanded="[true or false]"` | `.pf-v5-c-alert__toggle` | Indicates whether the alert toggle is expanded (true) or collapsed (false) to assistive technologies and that the expandable alert description is hidden. **Required**. |
+| `aria-label="[text that labels the alert toggle]"` | `.pf-v5-c-button.pf-m-plain` | Adds an accessible name to the alert toggle when the `aria-expanded` attribute is also passed in. The value passed in should provide context as to which alert will be expanded/collapsed and what type of information is within the expandable area.  |
+| `aria-hidden="true"` | `.pf-v5-c-alert__icon <i>` | Removes the expandable alert toggle icon from the accessibility tree, preventing assistive technologies from potentially announcing duplicate or unnecessary information without visually hiding it. **Required**. |
 
 When using JavaScript to automatically dismiss alerts, read the `timeout` prop row in the [React customization](#react-customization) section for details on an accessible implementation.
 
@@ -89,8 +89,8 @@ When using JavaScript to automatically dismiss alerts, read the `timeout` prop r
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `aria-live="polite"` | `.pf-c-alert-group` | Makes the alert group a live region. **Required** when alerts are intended or expected to dynamically appear or update within the alert group. |
-| `.pf-m-toast` | `.pf-c-alert-group` | Adds styling to position alerts in the top-right corner of the viewport. When passing this prop in, `aria-live="polite"` must also be passed in. For more information about accessibility with toast alerts, read the [toast alerts](/components/alert/accessibility#toast-alerts) section of the alert accessibility tab. |
+| `aria-live="polite"` | `.pf-v5-c-alert-group` | Makes the alert group a live region. **Required** when alerts are intended or expected to dynamically appear or update within the alert group. |
+| `.pf-m-toast` | `.pf-v5-c-alert-group` | Adds styling to position alerts in the top-right corner of the viewport. When passing this prop in, `aria-live="polite"` must also be passed in. For more information about accessibility with toast alerts, read the [toast alerts](/components/alert/accessibility#toast-alerts) section of the alert accessibility tab. |
 
 When using an overflow button for alerts, read the `overflowMessage` prop row in the [React customization](#react-customization) section for details on an accessible implementation.
 

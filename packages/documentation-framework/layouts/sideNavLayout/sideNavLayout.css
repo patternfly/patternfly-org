@@ -1,5 +1,5 @@
 /* Page layout */
-/* tells .pf-c-page to consume the available space left over from the banners/footers */
+/* tells .pf-v5-c-page to consume the available space left over from the banners/footers */
 #ws-router {
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
 }
 
 .ws-switcher-divider {
-  padding: 0 var(--pf-global--spacer--md);
+  padding: 0 var(--pf-v5-global--spacer--md);
 }
 
 @media (min-width: 1200px) {
@@ -18,8 +18,8 @@
   }
 }
 
-.ws-page-sidebar > .pf-c-page__sidebar-body {
-  padding-top: var(--pf-global--spacer--md);
+.ws-page-sidebar > .pf-v5-c-page__sidebar-body {
+  padding-top: var(--pf-v5-global--spacer--md);
 }
 
 /* Search */
@@ -27,12 +27,12 @@
   /* Fix search results overflowing page */
   min-width: 480px !important;
 }
-.ws-global-search.pf-c-input-group {
+.ws-global-search.pf-v5-c-input-group {
   /* remove white background on dark Masthead */
-  --pf-c-input-group--BackgroundColor: none;
+  --pf-v5-c-input-group--BackgroundColor: none;
 }
 
 /* For tiny (200px) viewports */
-.ws-masthead .pf-c-toolbar__item  {
+.ws-masthead .pf-v5-c-toolbar__item  {
   min-width: 0;
 }

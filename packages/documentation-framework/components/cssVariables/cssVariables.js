@@ -103,12 +103,12 @@ export class CSSVariables extends React.Component {
           <div key={rowKey}>
             <div
               key={`${rowKey}_1`}
-              className="pf-l-flex pf-m-space-items-sm"
+              className="pf-v5-l-flex pf-m-space-items-sm"
             >
               {isColorRegex.test(value) && (
                 <div
                   key={`${rowKey}_2`}
-                  className="pf-l-flex pf-m-column pf-m-align-self-center"
+                  className="pf-v5-l-flex pf-m-column pf-m-align-self-center"
                 >
                   <span
                     className="ws-color-box"
@@ -118,7 +118,7 @@ export class CSSVariables extends React.Component {
               )}
               <div
                 key={`${rowKey}_3`}
-                className="pf-l-flex pf-m-column pf-m-align-self-center ws-td-text"
+                className="pf-v5-l-flex pf-m-column pf-m-align-self-center ws-td-text"
               >
                 {value}
               </div>

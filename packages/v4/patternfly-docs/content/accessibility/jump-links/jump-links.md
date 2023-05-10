@@ -22,8 +22,8 @@ The following props/attributes have been added for you or are customizable in Pa
 
 | React component | React prop      | Which HTML element it appears on in markup   | Explanation                                                   | 
 |-----------------|-----------------|----------------------------------------------|---------------------------------------------------------------|
-| JumpLinks       | aria-label      | nav.pf-c-jump-links aria-label               | Labels the nav to reflect the current nav description.        |
-| JumpLinks       | toggleAriaLabel | .pf-c-jump-links__toggle > button aria-label | Accessible label for the expandable jump links toggle button. |
+| JumpLinks       | aria-label      | nav.pf-v5-c-jump-links aria-label               | Labels the nav to reflect the current nav description.        |
+| JumpLinks       | toggleAriaLabel | .pf-v5-c-jump-links__toggle > button aria-label | Accessible label for the expandable jump links toggle button. |
 
 **Note:** Whenever multiple navigation elements are present on a page, an aria-label is highly recommended. Screen reader users
 navigating a page via an elements list or rotor menu will be unable to distinguish between the various navigation elements. Using an aria-label

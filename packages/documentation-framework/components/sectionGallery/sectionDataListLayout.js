@@ -37,7 +37,7 @@ export const SectionDataListLayout = ({ galleryItems, layoutView }) => {
                   )}
                 </DataListCell>,
                 <DataListCell width={5} key="text-description">
-                  <Split className="pf-u-mb-md">
+                  <Split className="pf-v5-u-mb-md">
                     <SplitItem isFilled>
                       <TextContent>
                         <Text component={TextVariants.h2}>

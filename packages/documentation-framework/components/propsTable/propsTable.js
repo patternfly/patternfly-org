@@ -18,9 +18,9 @@ import accessibleStyles from "@patternfly/react-styles/css/utilities/Accessibili
 export const PropsTable = ({ title, description, rows, allPropComponents }) => (
   <React.Fragment>
     <AutoLinkHeader size="h3">{title}</AutoLinkHeader>
-    <Table className="pf-u-mt-md pf-u-mb-lg" variant="compact" aria-label={title} gridBreakPoint="grid-lg">
+    <Table className="pf-v5-u-mt-md pf-v5-u-mb-lg" variant="compact" aria-label={title} gridBreakPoint="grid-lg">
       <Caption>
-        {description && <div className="pf-u-mb-md">{description}</div>}
+        {description && <div className="pf-v5-u-mb-md">{description}</div>}
         <div>
           <span className="ws-prop-required">*</span>required
         </div>
@@ -64,7 +64,7 @@ export const PropsTable = ({ title, description, rows, allPropComponents }) => (
                   {row.beta && (
                     <Badge
                       key={`${row.name}-${idx}`}
-                      className="ws-beta-badge pf-u-ml-sm"
+                      className="ws-beta-badge pf-v5-u-ml-sm"
                     >
                       Beta
                     </Badge>

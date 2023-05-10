@@ -25,17 +25,17 @@ In PatternFly, components are the basic building blocks of user interfaces. They
 </PageSection>
 <PageSection>
 ### Step 1. Add a button component.
-Add a button element to the `<body>` of the `index.html` file. To apply PatternFly styling to the button, add the class `pf-c-button`. To also apply ‘primary’ styling to the button and make it a bright blue color, add the `pf-m-primary` class.
+Add a button element to the `<body>` of the `index.html` file. To apply PatternFly styling to the button, add the class `pf-v5-c-button`. To also apply ‘primary’ styling to the button and make it a bright blue color, add the `pf-m-primary` class.
 
 <CopyCodeBlock>
-{`<button class="pf-c-button pf-m-primary" type="button">\n  Primary\n</button>`}
+{`<button class="pf-v5-c-button pf-m-primary" type="button">\n  Primary\n</button>`}
 </CopyCodeBlock>
 
 **Note:** A simple component can be reused multiple times.
 
 <CopyCodeBlock>
-{`<button class="pf-c-button pf-m-primary" type="button">
-Primary\n</button>\n<button class="pf-c-button pf-m-primary" type="button">
+{`<button class="pf-v5-c-button pf-m-primary" type="button">
+Primary\n</button>\n<button class="pf-v5-c-button pf-m-primary" type="button">
 Primary\n</button>`}
 </CopyCodeBlock>
 
@@ -48,11 +48,11 @@ In this step, add a badge component to the chip component.
 To build a chip component, replace the contents of the `<body>` in the index.html file with the following code snippet.
 
 <CopyCodeBlock>
-{`<div class="pf-c-chip">
-<span class="pf-c-chip__text">
+{`<div class="pf-v5-c-chip">
+<span class="pf-v5-c-chip__text">
   Chip
 </span>
-<button class="pf-c-button pf-m-plain">
+<button class="pf-v5-c-button pf-m-plain">
   <i class="fas fa-times"></i>
 </button>\n</div>`}
 </CopyCodeBlock>
@@ -60,14 +60,14 @@ To build a chip component, replace the contents of the `<body>` in the index.htm
 This is the default chip component that already has another component in it: the button. This is why the chip can be considered as a more complex component.
 
 #### Step 2.2
-Add the badge inside the chip. To do this, add this block of code between `pf-c-chip__text` and `pf-c-button`.
+Add the badge inside the chip. To do this, add this block of code between `pf-v5-c-chip__text` and `pf-v5-c-button`.
 
 <CopyCodeBlock>
-{`<span class="pf-c-badge pf-m-read">
+{`<span class="pf-v5-c-badge pf-m-read">
 7\n</span>`}
 </CopyCodeBlock>
 
-**Note:** Remember, this is a component and not a demo because the chip component includes styles that handle how the badge looks within the chip. For example, when the badge component is added to the chip, it receives styling that gives it a margin. You can see that the badge in a chip has its own CSS variable, `--pf-c-chip__c-badge--MarginLeft`, defined for the right margin under the <a href="/components/chip/html#css-variables">CSS Variables section of the chip documentation</a>.
+**Note:** Remember, this is a component and not a demo because the chip component includes styles that handle how the badge looks within the chip. For example, when the badge component is added to the chip, it receives styling that gives it a margin. You can see that the badge in a chip has its own CSS variable, `--pf-v5-c-chip__c-badge--MarginLeft`, defined for the right margin under the <a href="/components/chip/html#css-variables">CSS Variables section of the chip documentation</a>.
 
 The resulting chip should match the following image.
 
@@ -84,25 +84,25 @@ Copy code into the `<body>` of the `index.html` file.
 
 <CopyCodeBlock>
 {`<div>
-<div class="pf-c-card">
-  <div class="pf-c-card__title">
+<div class="pf-v5-c-card">
+  <div class="pf-v5-c-card__title">
     Title
   </div>
-  <div class="pf-c-card__body">
+  <div class="pf-v5-c-card__body">
     Body
   </div>
-  <div class="pf-c-card__footer">
+  <div class="pf-v5-c-card__footer">
     Footer
   </div>
 </div>\n</div>`}
 </CopyCodeBlock>
 
 ### Step 2 
-Add the `pf-l-bullseye` class to the card. This will center the card horizontally and vertically on the page.
-Find the outermost `<div>` wrapper for the card and add the class `pf-l-bullseye`.
-It should look like: `<div class="pf-l-bullseye">`
+Add the `pf-v5-l-bullseye` class to the card. This will center the card horizontally and vertically on the page.
+Find the outermost `<div>` wrapper for the card and add the class `pf-v5-l-bullseye`.
+It should look like: `<div class="pf-v5-l-bullseye">`
 
-**Note:** It’s important to follow the documentation for layouts because it demonstrates where to add the layout class. The <a href="/layouts/bullseye/html" target="_blank">documentation for bullseye</a> specifies to add the class `pf-l-bullseye` to the parent container of its child.
+**Note:** It’s important to follow the documentation for layouts because it demonstrates where to add the layout class. The <a href="/layouts/bullseye/html" target="_blank">documentation for bullseye</a> specifies to add the class `pf-v5-l-bullseye` to the parent container of its child.
 </PageSection>
 <Divider />
 <PageSection>
@@ -115,17 +115,17 @@ Create a form demo using components and layouts.
 Copy and paste this block of code 5 times in the index.html file.
 
 <CopyCodeBlock>
-{`<form class="pf-c-form">
-<div class="pf-c-form__group">
-  <div class="pf-c-form__group-label">
-    <label class="pf-c-form__label">
-      <span class="pf-c-form__label-text">
+{`<form class="pf-v5-c-form">
+<div class="pf-v5-c-form__group">
+  <div class="pf-v5-c-form__group-label">
+    <label class="pf-v5-c-form__label">
+      <span class="pf-v5-c-form__label-text">
         Form label
       </span>
     </label>
   </div>
-  <div class="pf-c-form__group-control">
-    <input class="pf-c-form-control"/>
+  <div class="pf-v5-c-form__group-control">
+    <input class="pf-v5-c-form-control"/>
   </div>
 </div>\n</form>`}
 </CopyCodeBlock>
@@ -133,20 +133,20 @@ Copy and paste this block of code 5 times in the index.html file.
 ### Step 2. Apply a grid layout
 
 #### Step 2.1 
-Add one `<div>` wrapper around all 5 form components with the `pf-l-grid` layout class. It should look like this:
+Add one `<div>` wrapper around all 5 form components with the `pf-v5-l-grid` layout class. It should look like this:
 
 ```noLive
-<div class="pf-l-grid">
+<div class="pf-v5-l-grid">
   /* 5 form components are here */
 </div>
 ```
 
 ### Step 3. 
-Wrap each form component in its own `pf-l-grid__item` layout class. To do this, look for each `pf-c-form` in `index.html` and wrap it in the `pf-l-grid__item` class.
+Wrap each form component in its own `pf-v5-l-grid__item` layout class. To do this, look for each `pf-v5-c-form` in `index.html` and wrap it in the `pf-v5-l-grid__item` class.
 The wrapper should look like this:
 
 ```noLive
-<div class=”pf-l-grid__item”>
+<div class=”pf-v5-l-grid__item”>
   /* code for individual form component */
 </div>
 ```
@@ -154,20 +154,20 @@ The wrapper should look like this:
 ### Step 4. Add the `pf-m-gutter` modifier class to the grid layout 
 Adding the `pf-m-gutter` modifier class to the grid layout ensures there is equal spacing around all children.
 
-Add the class `pf-m-gutter` after `pf-l-grid` to the outermost wrapper, inside the quotation marks.
-It should look like: `<div class="pf-l-grid pf-m-gutter">`
+Add the class `pf-m-gutter` after `pf-v5-l-grid` to the outermost wrapper, inside the quotation marks.
+It should look like: `<div class="pf-v5-l-grid pf-m-gutter">`
 **Note:** Learn how modifier classes work with layout classes by looking at PatternFly's <a href="/layouts/grid/html#usage" target="_blank">grid documentation</a>.
 
 ### Step 5. Add modifier classes to the grid item classes.
 This step modifies the number of columns that a grid item spans. The maximum number of columns that a grid item can span is 12 (which is equivalent to 100%).
 #### Step 5.1 
-Find each `pf-l-grid__item` that was added in step 3 and add the class `pf-m-[number from 1 - 12]`. The numbers across a row should add up to 12.
+Find each `pf-v5-l-grid__item` that was added in step 3 and add the class `pf-m-[number from 1 - 12]`. The numbers across a row should add up to 12.
 
 #### Step 5.2 
 Add `pf-m-6-col` to the first 2 grid items and add `pf-m-4-col` to the last 3 grid items.
 
-The first 2 grid items should look like: `<div class="pf-l-grid__item pf-m-6-col">`
-The second 2 grid items should look like: `<div class="pf-l-grid__item pf-m-4-col">`
+The first 2 grid items should look like: `<div class="pf-v5-l-grid__item pf-m-6-col">`
+The second 2 grid items should look like: `<div class="pf-v5-l-grid__item pf-m-4-col">`
 </PageSection>
 <Divider />
 <PageSection>

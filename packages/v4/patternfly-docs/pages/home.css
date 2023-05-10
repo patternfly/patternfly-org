@@ -1,5 +1,5 @@
 .ws-mdx-p {
-  font-size: var(--pf-global--FontSize--lg);
+  font-size: var(--pf-v5-global--FontSize--lg);
 }
 
 .pf4-c-background-image {
@@ -35,56 +35,56 @@
 /* Get started CTA */
 .pf4-c-button__cta-primary,
 .pf4-c-button__cta-outline {
-  border: var(--pf-global--BorderWidth--sm) solid #fff;
-  font-size: var(--pf-global--FontSize--lg);
+  border: var(--pf-v5-global--BorderWidth--sm) solid #fff;
+  font-size: var(--pf-v5-global--FontSize--lg);
   line-height: 1.5;
-  padding: var(--pf-global--spacer--md) var(--pf-global--spacer--lg);
-  transition: var(--pf-global--Transition);
+  padding: var(--pf-v5-global--spacer--md) var(--pf-v5-global--spacer--lg);
+  transition: var(--pf-v5-global--Transition);
 }
 
 .pf4-c-button__cta-primary,
 .pf4-c-button__cta-outline:hover {
-  background-color: var(--pf-global--Color--light-100);
+  background-color: var(--pf-v5-global--Color--light-100);
   color: #06c !important;
 }
 
 .pf4-c-button__cta-outline,
 .pf4-c-button__cta-primary:hover {
   background-color: transparent;
-  color: var(--pf-global--Color--light-100)!important;
+  color: var(--pf-v5-global--Color--light-100)!important;
 }
 
 #hello-were-patternfly + .ws-mdx-p {
-  margin-bottom: var(--pf-global--spacer--sm);
+  margin-bottom: var(--pf-v5-global--spacer--sm);
 }
 
 #patternfly-principles {
-  font-size: var(--pf-global--FontSize--4xl);
+  font-size: var(--pf-v5-global--FontSize--4xl);
 }
 
 #flyer-fundamentals .ws-heading-anchor {
-  color: var(--pf-global--Color--100);
+  color: var(--pf-v5-global--Color--100);
 }
 
-.ws-pf-principle .pf-l-flex {
+.ws-pf-principle .pf-v5-l-flex {
   align-items: flex-start;
   flex-wrap: nowrap;
 }
 
-.ws-pf-principle .pf-l-flex > div:first-child {
-  margin-right: var(--pf-global--spacer--3xl);
+.ws-pf-principle .pf-v5-l-flex > div:first-child {
+  margin-right: var(--pf-v5-global--spacer--3xl);
   flex-shrink: 0;
   width: 93px;
   text-align: center;
 }
 
 @media (max-width: 767px) {
-  .ws-pf-principle .pf-l-flex {
+  .ws-pf-principle .pf-v5-l-flex {
     flex-wrap: wrap;
   }
 
   .ws-pf-principle .ws-principles-img {
-    margin-bottom: var(--pf-global--spacer--lg);
+    margin-bottom: var(--pf-v5-global--spacer--lg);
   }
 }
 
@@ -143,16 +143,16 @@
 }
 
 .ws-homepage-main-section {
-  padding: var(--pf-global--spacer--xl) var(--pf-global--spacer--2xl) var(--pf-global--spacer--2xl);
+  padding: var(--pf-v5-global--spacer--xl) var(--pf-v5-global--spacer--2xl) var(--pf-v5-global--spacer--2xl);
 }
 
 .ws-homepage-main-section.pf4-c-background-image .pf4-site-c-hero {
   margin-bottom: 0;
-  margin: var(--pf-global--spacer--xl) auto 0;
+  margin: var(--pf-v5-global--spacer--xl) auto 0;
 }
 
 .ws-mdx-a {
-  font-size: var(--pf-global--FontSize--lg);
+  font-size: var(--pf-v5-global--FontSize--lg);
 }
 
 @keyframes fadeIn {

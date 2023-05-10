@@ -51,6 +51,6 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or Class | Applied to | Reason |
 | -- | -- | -- |
-| `aria-expanded="true or false"` | `.pf-c-menu-toggle`, `.pf-c-menu-toggle__button` | Indicates that the menu toggle component is in the expanded or collapsed state. |
-| `aria-label="[text that labels the menu toggle]"` | `.pf-c-menu-toggle` | An accessible label for the menu toggle when there is no visible text within the toggle. Required when using a `pf-m-plain` with no text. |
-| `aria-hidden="true"` | `.pf-c-menu-toggle__toggle-icon` | Makes the decorative icon on the toggle hidden from screen reader users. **Required when the toggle contains only an icon**| 
+| `aria-expanded="true or false"` | `.pf-v5-c-menu-toggle`, `.pf-v5-c-menu-toggle__button` | Indicates that the menu toggle component is in the expanded or collapsed state. |
+| `aria-label="[text that labels the menu toggle]"` | `.pf-v5-c-menu-toggle` | An accessible label for the menu toggle when there is no visible text within the toggle. Required when using a `pf-m-plain` with no text. |
+| `aria-hidden="true"` | `.pf-v5-c-menu-toggle__toggle-icon` | Makes the decorative icon on the toggle hidden from screen reader users. **Required when the toggle contains only an icon**| 

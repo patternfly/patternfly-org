@@ -2,14 +2,14 @@
   display: inline-block;
   height: 18px;
   width: 18px;
-  border: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--200);
-  border-radius: var(--pf-global--BorderRadius--lg);
+  border: var(--pf-v5-global--BorderWidth--sm) solid var(--pf-v5-global--BorderColor--200);
+  border-radius: var(--pf-v5-global--BorderRadius--lg);
 }
 
 .ws-td-text {
-  font-size: var(--pf-global--FontSize--sm) !important;
+  font-size: var(--pf-v5-global--FontSize--sm) !important;
 }
 
 .ws-css-property {
-  padding: var(--pf-global--spacer--xs) var(--pf-global--spacer--md);
+  padding: var(--pf-v5-global--spacer--xs) var(--pf-v5-global--spacer--md);
 }

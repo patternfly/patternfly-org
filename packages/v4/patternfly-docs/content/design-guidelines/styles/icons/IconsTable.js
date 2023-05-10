@@ -138,14 +138,14 @@ export const IconsTable = () => {
             const iconUnicode = icon.Unicode || iconUnicodes.default[icon.Name] || '';
             return (
               <Tr key={index}>
-                <Td dataLabel={columns[0]} className="pf-c-table__favorite">
+                <Td dataLabel={columns[0]} className="pf-v5-c-table__favorite">
                   <Tooltip content="Download SVG" position={TooltipPosition.right}>
                     <Button
                       aria-label={`Download SVG ${icon.Name}`}
                       onClick={(event) => onDownloadSvg(event.currentTarget, icon.Name)}
                       variant="plain"
                     >
-                      <Icon color={icon.color || 'var(--pf-global--Color--100)'} />
+                      <Icon color={icon.color || 'var(--pf-v5-global--Color--100)'} />
                     </Button>
                   </Tooltip>
                 </Td>

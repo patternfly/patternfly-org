@@ -58,7 +58,7 @@ An expandable dual list contains a multi-leveled list of items for users to choo
 ### Drag and drop dual list
 Drag and drop functionality inside of a dual list allows users to customize the order in which items within the Chosen options are displayed. The fa-grip icon at the start of the item row is used to indicate that the items are draggable.
 
-1. **onDrag event:** Upon click & hold a `--pf-global--active-color--100` border will show the draggable area that is available. The list item being dragged will also use a `--pf-global--active-color--100` border to highlight it as the item being dragged and all other list items will switch to a disabled state.
+1. **onDrag event:** Upon click & hold a `--pf-v5-global--active-color--100` border will show the draggable area that is available. The list item being dragged will also use a `--pf-v5-global--active-color--100` border to highlight it as the item being dragged and all other list items will switch to a disabled state.
 
 <img src="./img/Drag-drop-Dual-list-selector-selected-step-1-final.png" alt="Dual list drag interaction 1 - Drag in progress" width="880"/>
 
@@ -66,6 +66,6 @@ Drag and drop functionality inside of a dual list allows users to customize the 
 
 <img src="./img/Drag-drop-Dual-list-selector-selected-step-2-final.png" alt="Dual list drag interaction 2 - Drag & drop completed" width="880"/>
 
-3. **Error state:** If the list item is dragged outside the bounding box the borders on the dragged item will switch to `--pf-global--danger-color--100` and the cursor will change to not-allowed to indicate an invalid placement. If the user releases the cursor outside the bounding area the dragged item will return to its default position.
+3. **Error state:** If the list item is dragged outside the bounding box the borders on the dragged item will switch to `--pf-v5-global--danger-color--100` and the cursor will change to not-allowed to indicate an invalid placement. If the user releases the cursor outside the bounding area the dragged item will return to its default position.
 
 <img src="./img/Drag-drop-Dual-list-selector-selected-step-3-final.png" alt="Dual list drag interactionstep 3 - Error state" width="880"/>

@@ -17,7 +17,7 @@ The following props/attributes have been added for you and are customizable in P
 
 | React component | React prop  | Which HTML element it appears on in markup | Explanation                                                                          | 
 |-----------------|-------------|--------------------------------------------|--------------------------------------------------------------------------------------|
-| ProgressStep    | aria-label  | .pf-c-progress-stepper__step               | Provides an accessible label describing the variant and status of the progress step. |
+| ProgressStep    | aria-label  | .pf-v5-c-progress-stepper__step               | Provides an accessible label describing the variant and status of the progress step. |
 
 
 **Note:** When using a progress stepper in an application, it's also wise to consider how to best summarize the overall progress

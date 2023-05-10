@@ -3,6 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.37 (2023-05-10)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.36 (2023-05-10)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.35 (2023-05-09)
+
+
+### Bug Fixes
+
+* **org:** Fix up org css issues after doc framework update ([#3518](https://github.com/patternfly/patternfly-org/issues/3518)) ([a6f20c5](https://github.com/patternfly/patternfly-org/commit/a6f20c569a8ba8df2da23722c48f73f750e229e3))
+
+
+
+
+
+# 2.0.0-alpha.34 (2023-05-05)
+
+
+### Features
+
+* **docs:** Update docs framework with latest react code ([#3517](https://github.com/patternfly/patternfly-org/issues/3517)) ([2df0147](https://github.com/patternfly/patternfly-org/commit/2df014737dbbe35033d0b28ee71b40d5fbe22ed2))
+
+
+
+
+
+# 2.0.0-alpha.33 (2023-05-04)
+
+
+### Bug Fixes
+
+* **css:** update css selectors for v5 versioning ([#3516](https://github.com/patternfly/patternfly-org/issues/3516)) ([f681945](https://github.com/patternfly/patternfly-org/commit/f681945e2de1200fbb7d2d6ab8262091b1e72a8e))
+
+
+
+
+
+# 2.0.0-alpha.32 (2023-05-02)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 # 2.0.0-alpha.31 (2023-05-01)
 
 
