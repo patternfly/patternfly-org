@@ -163,6 +163,6 @@ module.exports = (_env, argv) => {
         : []
       )
     ],
-    stats: 'minimal'
+    stats: 'verbose'
   };
 }

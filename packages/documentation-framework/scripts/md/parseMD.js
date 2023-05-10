@@ -263,6 +263,9 @@ function sourceMDFile(file, source, buildMode) {
   const { jsx, pageData, outPath } = toReactComponent(file, source, buildMode);
 
   if (jsx) {
+    if (outPath.indexOf('generated/extensions/quick-starts/Basic-quick-start') >= 0){
+      console.log(jsx);
+    }
     fs.outputFileSync(outPath, jsx);
     routes[pageData.slug] = {
       id: pageData.id,
