@@ -134,9 +134,6 @@ Call To Actions have similar variants to regular buttons (although they have a l
 
 ### Progress button ###
 
-A progress button indicates ongoing action after being clicked by the user, using a spinner alongside the button label. Its main purpose is for in-page checks that must be completed before proceeding to the next screen, without navigating to a new page or opening a modal. For operations taking more than a few seconds, or operations that do open to a new page, it is recommended to use a progress bar.
-For operations that will take more than a few seconds, use of a modal with a progress bar is recommended to reflect status and indicate time to completion.
-
 _Example of using a progress button to test a repository before final configuration_
 
 <img src="./img/progress-bar-stages.png" alt="Example of progress button usage" width="1828"/>
