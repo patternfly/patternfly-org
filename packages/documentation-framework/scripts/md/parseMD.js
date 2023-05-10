@@ -48,9 +48,9 @@ function toReactComponent(mdFilePath, source, buildMode) {
       if (!frontmatter.id) {
         file.fail('id attribute is required in frontmatter for PatternFly docs');
       }
-      if (frontmatter.id === 'Quick starts') {
-        console.log('~~~frontmatter', frontmatter);
-      }
+      // if (frontmatter.id === 'Quick starts') {
+      //   console.log('~~~frontmatter', frontmatter);
+      // }
       source = frontmatter.source || source;
       const slug = makeSlug(source, frontmatter.section, frontmatter.id, false, frontmatter.subsection);
       outPath = path.join(outputBase, `${slug}.js`);
@@ -189,9 +189,9 @@ function toReactComponent(mdFilePath, source, buildMode) {
         && liveCodeTypes.includes(node.properties.lang)
         && !node.properties.noLive;
       visit(tree, isExample, node => {
-        if (frontmatter.id === 'Quick starts') {
-          console.log('~~~node', node);
-        }
+        // if (frontmatter.id === 'Quick starts') {
+        //   console.log('~~~node', node);
+        // }
         if (node.properties.isFullscreen) {
           pageData.fullscreenExamples = pageData.fullscreenExamples || [];
           pageData.fullscreenExamples.push(node.title);
@@ -269,9 +269,9 @@ function sourceMDFile(file, source, buildMode) {
   const { jsx, pageData, outPath } = toReactComponent(file, source, buildMode);
 
   if (jsx) {
-    if (outPath.indexOf('generated/extensions/quick-starts/Basic-quick-start') >= 0){
-      console.log(jsx);
-    }
+    // if (outPath.indexOf('generated/extensions/quick-starts/Basic-quick-start') >= 0){
+    //   console.log(jsx);
+    // }
     fs.outputFileSync(outPath, jsx);
     routes[pageData.slug] = {
       id: pageData.id,

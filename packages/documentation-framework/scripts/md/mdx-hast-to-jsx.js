@@ -63,14 +63,24 @@ function serializeRoot(node, options) {
   }
 
   const thumbnailFolder = path.join(path.dirname(getOutPath()), pageData.source);
+  if (thumbnailFolder.indexOf('Basic-quick-starts') >= 0) {
+    console.log('thumbnail info', thumbnailFolder, pageData);
+  }
   const thumbnails = fs.existsSync(thumbnailFolder) ? fs.readdirSync(thumbnailFolder) : [];
   const thumbnailImports = thumbnails.map(img =>
     `import srcImport${path.basename(img, '.png').replace(/-/g, '')} from './${pageData.source}/${img}';`)
+
+  if (thumbnailFolder.indexOf('Basic-quick-starts') >= 0) {
+    console.log('thumbnail imports', thumbnailImports);
+  }
 
   const importStatements = groups.import
     .map(node => node.value)
     .map(imp => imp.replace(/(['"])\./g, (_, match) => `${match}${getRelPath()}${path.posix.sep}\.`));
 
+  if (thumbnailFolder.indexOf('Basic-quick-starts') >= 0) {
+    console.log('thumbnail imports - 2', importStatements);
+  }
   // Map relative import name to '@package...'
   const relativeImportsRegex = /(?:[\.\/]+.*)(@.*)['"]/gm;
   let relativeImportMatch;
@@ -96,7 +106,10 @@ function serializeRoot(node, options) {
   const importStatementsWithThumbnails = importStatements
     .concat(thumbnailImports)
     .join('\n');
-
+  if (thumbnailFolder.indexOf('Basic-quick-starts') >= 0) {
+    console.log('thumbnail imports - 3', importStatementsWithThumbnails);
+  }
+  
   // https://astexplorer.net/#/gist/9c531dd372dfc57e194c13c2889d31c3/03f2d6e889db1a733c6a079554e8af7784863739
   options.importSpecifiers = parse(importStatementsWithThumbnails).body
     .map(node => node.specifiers)
