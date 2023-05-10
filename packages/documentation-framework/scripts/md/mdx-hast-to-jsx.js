@@ -66,12 +66,31 @@ function serializeRoot(node, options) {
   if (thumbnailFolder.indexOf('Basic-quick-starts') >= 0) {
     console.log('thumbnail info', thumbnailFolder, pageData);
   }
+
+  if (thumbnailFolder.indexOf('react-console') >= 0) {
+    console.log('console thumbnail info', thumbnailFolder, pageData);
+  }
+
+  if (thumbnailFolder.indexOf('Basic-quick-starts') >= 0) {
+    console.log('thumbnail info -- true', fs.existsSync(thumbnailFolder));
+  }
+
+  if (thumbnailFolder.indexOf('react-console') >= 0) {
+    console.log('console thumbnail info -- true', fs.existsSync(thumbnailFolder));
+  }
+
+
   const thumbnails = fs.existsSync(thumbnailFolder) ? fs.readdirSync(thumbnailFolder) : [];
   const thumbnailImports = thumbnails.map(img =>
     `import srcImport${path.basename(img, '.png').replace(/-/g, '')} from './${pageData.source}/${img}';`)
 
+    // we don't even see these . . . 
   if (thumbnailFolder.indexOf('Basic-quick-starts') >= 0) {
     console.log('thumbnail imports', thumbnailImports);
+  }
+
+  if (thumbnailFolder.indexOf('react-console') >= 0) {
+    console.log('console thumbnail info', thumbnailImports);
   }
 
   const importStatements = groups.import
