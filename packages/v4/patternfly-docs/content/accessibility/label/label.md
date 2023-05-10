@@ -108,12 +108,12 @@ When a label is intended or expected to convey information such as status or sev
 
 - An appropriate color that matches the information being conveyed, if applicable. For example, "red" is commonly used to convey "danger" or "error".
 - An icon that matches the information being conveyed. For example, a lowercase "i" icon is commonly used to convey an informational status.
-- Visually hidden text that is accessible only to assistive technologies that conveys the status or severity. This can best be achieved by using the `pf-screen-reader` class on an element within the label content. For example:
+- Visually hidden text that is accessible only to assistive technologies that conveys the status or severity. This can best be achieved by using the `pf-v5-screen-reader` class on an element within the label content. For example:
 
     ```
     <Label>
       <span 
-        className="pf-screen-reader"
+        className="pf-v5-screen-reader"
       >
         Hidden text accessible only to assistive technologies
       </span>
