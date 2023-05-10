@@ -53,7 +53,7 @@ Users who have difficulty processing information benefit from well-written conte
 <br />
 <br />
 
-These are some of the main user groups, but it is not an exhaustive list. Often “the Persona Spectrum”, coined by Microsoft, can be used to understand related mismatches and motivations across a spectrum of permanent, temporary, and situational scenarios.
+These are some of the main user groups, but it is not an exhaustive list. Often the “Persona Spectrum”, coined by Microsoft, can be used to understand related mismatches and motivations across a spectrum of permanent, temporary, and situational scenarios.
 
 While accessibility tends to focus on those with disabilities, everyone benefits from accessible products. For example:
 
