@@ -63,9 +63,11 @@ While accessibility tends to focus on those with disabilities, everyone benefits
 
 There are plenty more examples we could include. Essentially, accessibility takes _all users_ into account.
 
-The image below shows that accessibility is a spectrum. Different kinds of cognitive and physical impairments impact how users interact with products. It is important to take all these differing disabilities into account when building accessible products.
+<p className="ws-p pf-v5-u-screen-reader">
+  The image below shows that accessibility is a spectrum. Different kinds of cognitive and physical impairments impact how users interact with products. It is important to take all these differing disabilities into account when building accessible products.
+</p>
 
-<img src="./PF-a11y.png" alt="Accessibility spectrum image. Described in paragraph above image." />
+<img src="./PF-a11y.png" alt="Accessibility spectrum image" />
 <br />
 <br />
 
