@@ -47,4 +47,4 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `alt="[text describing the avatar]"` | `.pf-c-avatar` | Provides an accessible description of the avatar. **Required** |
+| `alt="[text describing the avatar]"` | `.pf-v5-c-avatar` | Provides an accessible description of the avatar. **Required** |

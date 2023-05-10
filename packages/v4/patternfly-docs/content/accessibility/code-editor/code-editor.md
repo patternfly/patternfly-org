@@ -20,12 +20,12 @@ The following props/attributes have been added for you or are customizable in Pa
 
 | React prop | React component it should be applied to | Which HTML element it appears on in markup | Reason used |
 | -- | -- | -- | -- |
-| copyButtonAriaLabel | CodeEditor | `.pf-c-code-editor__controls button` | Aria-label for the copy button |
-| downloadButtonAriaLabel | CodeEditor | `.pf-c-code-editor__controls button` | Aria-label for the download button |
-| uploadButtonAriaLabel | CodeEditor | `.pf-c-code-editor__controls button` | Aria-label for the upload button |
-| 'aria-label' | CodeEditorControl | `.pf-c-code-editor__controls button` | Aria-label for a custom control button |
-| shortcutsPopoverButtonText | CodeEditor | `.pf-c-code-editor__keyboard-shortcuts` | Text to show in the button to open the shortcut popover |
-| shortcutsPopoverProps | CodeEditor | `.pf-c-code-editor__controls button` | Properties for the shortcut popover. Should contain 'bodyContent' to provide keybaord shortcuts built into the code editor |
+| copyButtonAriaLabel | CodeEditor | `.pf-v5-c-code-editor__controls button` | Aria-label for the copy button |
+| downloadButtonAriaLabel | CodeEditor | `.pf-v5-c-code-editor__controls button` | Aria-label for the download button |
+| uploadButtonAriaLabel | CodeEditor | `.pf-v5-c-code-editor__controls button` | Aria-label for the upload button |
+| 'aria-label' | CodeEditorControl | `.pf-v5-c-code-editor__controls button` | Aria-label for a custom control button |
+| shortcutsPopoverButtonText | CodeEditor | `.pf-v5-c-code-editor__keyboard-shortcuts` | Text to show in the button to open the shortcut popover |
+| shortcutsPopoverProps | CodeEditor | `.pf-v5-c-code-editor__controls button` | Properties for the shortcut popover. Should contain 'bodyContent' to provide keybaord shortcuts built into the code editor |
 
 The monaco code editor comes with some keyboard shortcuts built in, so it is recommended that consumers communicate 
 information about the following built in key commands:

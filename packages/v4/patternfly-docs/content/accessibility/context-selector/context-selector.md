@@ -18,4 +18,4 @@ In general, the context selector component already has accessibility built in. H
 | React component| React prop | Which HTML element it appears on in markup | Explanation | 
 |---|---|---|---|
 | ContextSelector | screenReaderLabel | #pf-context-selector-label-id-0 hidden span on context selector | Labels the Context Selector for screen readers. |
-| ContextSelector | searchButtonAriaLabel | .pf-c-button search button | Aria-label for the Context Selector Search button |
+| ContextSelector | searchButtonAriaLabel | .pf-v5-c-button search button | Aria-label for the Context Selector Search button |

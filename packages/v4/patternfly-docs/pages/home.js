@@ -30,25 +30,25 @@ const HomePage = () => (
   <React.Fragment>
     <PageSection variant={PageSectionVariants.light} className="pf4-c-background-image ws-homepage-main-section">
       <Grid>
-        <GridItem sm={12} md={8} mdOffset={2} lg={6} lgOffset={3} className="pf-u-py-2xl pf-u-text-align-center">
+        <GridItem sm={12} md={8} mdOffset={2} lg={6} lgOffset={3} className="pf-v5-u-py-2xl pf-v5-u-text-align-center">
           <TextContent>
             <img src={orb} alt="PatternFly logo" className="fadeInDown animated fadeInOne" />
             <Title headingLevel="h1" size="4xl" className="pf-m-white pf4-site-c-hero fadeIn animated fadeInTwo">
               Build scalable experiences in the open.
             </Title>
-            <Text className="pf-c-title pf-m-xl pf-m-white pf-u-mb-md pf-u-mt-lg pf-u-mb-3xl-on-md fadeInUp animated fadeInThree">
+            <Text className="pf-v5-c-title pf-m-xl pf-m-white pf-v5-u-mb-md pf-v5-u-mt-lg pf-v5-u-mb-3xl-on-md fadeInUp animated fadeInThree">
               PatternFly is an open source design system built to drive consistency and unify teams.
             </Text>
-            <div className="pf-u-display-flex pf-u-justify-content-center pf-u-flex-direction-column pf-u-flex-direction-row-on-md">
+            <div className="pf-v5-u-display-flex pf-v5-u-justify-content-center pf-v5-u-flex-direction-column pf-v5-u-flex-direction-row-on-md">
               <Link
                 to="/get-started/about"
-                className="pf-c-button pf4-c-button__cta-primary pf-u-mr-0 pf-u-mb-md pf-u-mb-0-on-md pf-u-mr-xl-on-md fadeIn animated fadeInFour"
+                className="pf-v5-c-button pf4-c-button__cta-primary pf-v5-u-mr-0 pf-v5-u-mb-md pf-v5-u-mb-0-on-md pf-v5-u-mr-xl-on-md fadeIn animated fadeInFour"
                 aria-label="Get started with PatternFly"
               >
                 Get started
               </Link>
-              <a className="pf-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour" href="//github.com/patternfly" target="_blank">
-                <GithubIcon className="pf-u-mr-sm" />GitHub
+              <a className="pf-v5-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour" href="//github.com/patternfly" target="_blank">
+                <GithubIcon className="pf-v5-u-mr-sm" />GitHub
               </a>
             </div>
           </TextContent>
@@ -57,7 +57,7 @@ const HomePage = () => (
     </PageSection>
     <PageSection className="ws-homepage-main-section pf-m-light-100">
       <Grid>
-        <GridItem sm={12} md={6} mdOffset={3} className="pf-u-py-2xl pf-u-text-align-center" id="about-patternfly-section">
+        <GridItem sm={12} md={6} mdOffset={3} className="pf-v5-u-py-2xl pf-v5-u-text-align-center" id="about-patternfly-section">
           <TextContent>
             <AutoLinkHeader size="h1" headingLevel="h2" className="ws-title">
               {aboutPatternFly}
@@ -73,7 +73,7 @@ const HomePage = () => (
       </Grid>
     </PageSection>
     <PageSection className="pf4-c-background-lines ws-homepage-main-section pf-m-light-100">
-      <Grid gutter="md" className="pf-u-pb-3xl-on-sm">
+      <Grid gutter="md" className="pf-v5-u-pb-3xl-on-sm">
         <GridItem sm={12}>
           <Grid>
             <GridItem
@@ -81,55 +81,55 @@ const HomePage = () => (
               md={4}
               mdOffset={1}
               lgOffset={2}
-              className="pf-u-display-flex pf-u-display-block-on-sm pf-u-flex-direction-column pf-u-pt-2xl pf-u-pt-0-on-sm"
+              className="pf-v5-u-display-flex pf-v5-u-display-block-on-sm pf-v5-u-flex-direction-column pf-v5-u-pt-2xl pf-v5-u-pt-0-on-sm"
             >
               <TextContent>
-                <div className="pf-u-pb-2xl">
+                <div className="pf-v5-u-pb-2xl">
                   <Text component={TextVariants.h2}>We guide, you decide</Text>
                   <Text component={TextVariants.p} className="ws-mdx-p">
                     PatternFly’s foundation is made of design guidelines, so help is always there when you need it. Check out our approach to icons, color, content, and more.
                   </Text>
                   <Text
-                    className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
+                    className="pf-v5-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
                     <Link to="/guidelines/colors" aria-label="view design guidelines">
                       View design guidelines <ArrowRightIcon />
                     </Link>
                   </Text>
                 </div>
-                <div className="pf-u-pb-2xl">
+                <div className="pf-v5-u-pb-2xl">
                   <Text component={TextVariants.h2}>Lay it out</Text>
                   <Text component={TextVariants.p} className="ws-mdx-p">
                     A layout provides a fully responsive page structure that keeps your components organized and aligned regardless of screen size.
                   </Text>
                   <Text
-                    className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
+                    className="pf-v5-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
                     <Link to="/layouts/bullseye" aria-label="view layouts">
                       View layouts <ArrowRightIcon />
                     </Link>
                   </Text>
                 </div>
-                <div className="pf-u-pb-2xl">
+                <div className="pf-v5-u-pb-2xl">
                   <Text component={TextVariants.h2}>Build things your way</Text>
                   <Text component={TextVariants.p} className="ws-mdx-p">
                     Components are like building blocks. Designed to be flexible and modular, you can mix and match components to create a solution for almost any UI problem.
                   </Text>
                   <Text
-                    className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
+                    className="pf-v5-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
                     <Link to="/components/about-modal" aria-label="view components">
                       View components <ArrowRightIcon />
                     </Link>
                   </Text>
                 </div>
-                <div className="pf-u-pb-2xl">
+                <div className="pf-v5-u-pb-2xl">
                   <Text component={TextVariants.h2}>See it in action</Text>
                   <Text component={TextVariants.p} className="ws-mdx-p">
                     Components are better together. Demos show how multiple components can be used in a single design. They also provide  some useful starter code, so the days of creating complex layouts from scratch are over.
                   </Text>
                   <Text
-                    className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
+                    className="pf-v5-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
                     <Link to="/demos/primary-detail" aria-label="view demos">
                       View demos <ArrowRightIcon />
@@ -149,10 +149,10 @@ const HomePage = () => (
       </Grid>
     </PageSection>
     <PageSection variant={PageSectionVariants.darker} className="pf4-c-background-image-principles ws-homepage-main-section">
-    <Grid gutter="md" className="pf-u-py-3xl">
-      <GridItem sm={12} md={6} mdOffset={3} className="pf-u-text-align-center">
+    <Grid gutter="md" className="pf-v5-u-py-3xl">
+      <GridItem sm={12} md={6} mdOffset={3} className="pf-v5-u-text-align-center">
         <TextContent>
-          <Title headingLevel="h2" size="4xl" className="pf-u-mb-4xl pf-m-white pf-u-text-align-center" id="patternfly-principles">
+          <Title headingLevel="h2" size="4xl" className="pf-v5-u-mb-4xl pf-m-white pf-v5-u-text-align-center" id="patternfly-principles">
             {patternFlyPrinciples}
           </Title>
           <Text component={TextVariants.p} className="ws-mdx-p">
@@ -176,7 +176,7 @@ const HomePage = () => (
                 </FlexItem>
                 <FlexItem>
                   <Text component={TextVariants.h2}>Make it flexible.</Text>
-                  <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
+                  <Text component={TextVariants.p} className="pf-v5-u-mb-3xl ws-mdx-p">
                     Open source thrives on variety, and our resources do too. Our components can be arranged in any number of ways, and our CSS variable system can be used for all kinds of customization.
                   </Text>
                 </FlexItem>
@@ -193,7 +193,7 @@ const HomePage = () => (
                 </FlexItem>
                 <FlexItem>
                   <Text component={TextVariants.h2}>Make it accessible.</Text>
-                  <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
+                  <Text component={TextVariants.p} className="pf-v5-u-mb-3xl ws-mdx-p">
                     Building applications that work for everyone, regardless of ability, is just the right thing to do. Our accessible markup and guidance is geared towards creating experiences that people of all abilities can enjoy.
                   </Text>
                 </FlexItem>
@@ -210,7 +210,7 @@ const HomePage = () => (
                   </FlexItem>
                   <FlexItem>
                   <Text component={TextVariants.h2}>Make it consistent.</Text>
-                  <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
+                  <Text component={TextVariants.p} className="pf-v5-u-mb-3xl ws-mdx-p">
                     The best product experiences stem from teamwork. Our clear guidelines and tools help streamline communication so that all teams can create unified applications and interfaces.
                   </Text>
                 </FlexItem>
@@ -227,7 +227,7 @@ const HomePage = () => (
                   </FlexItem>
                   <FlexItem>
                   <Text component={TextVariants.h2}>Make it scalable.</Text>
-                  <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
+                  <Text component={TextVariants.p} className="pf-v5-u-mb-3xl ws-mdx-p">
                   Helping teams work productively at scale is at the heart of everything we do. Our components are designed for enterprise IT applications used in businesses of all sizes.
                   </Text>
                 </FlexItem>
@@ -244,7 +244,7 @@ const HomePage = () => (
                   </FlexItem>
                   <FlexItem>
                   <Text component={TextVariants.h2}>Make it open.</Text>
-                  <Text component={TextVariants.p} className="pf-u-mb-3xl ws-mdx-p">
+                  <Text component={TextVariants.p} className="pf-v5-u-mb-3xl ws-mdx-p">
                     We're focused on shaping the future of open source design and development, and we can't do this alone. So we work as an open source community, where everyone is free to share their ideas and contribute their work.
                   </Text>
                 </FlexItem>
@@ -252,18 +252,18 @@ const HomePage = () => (
             </GridItem>
           </Grid>
         </TextContent>
-        <div className="pf-u-pb-md">
+        <div className="pf-v5-u-pb-md">
           <Text
-            className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
+            className="pf-v5-u-pl-0 pf4-c-link__text ws-mdx-a"
           >
             <Link to="/get-started/develop" className="pf-m-white ws-get-started" aria-label="get started developers">
               Get started for developers <ArrowRightIcon />
             </Link>
           </Text>
         </div>
-        <div className="pf-u-pb-md">
+        <div className="pf-v5-u-pb-md">
           <Text
-            className="pf-u-pl-0 pf4-c-link__text ws-mdx-a"
+            className="pf-v5-u-pl-0 pf4-c-link__text ws-mdx-a"
           >
             <Link to="/get-started/design" className="pf-m-white ws-get-started" aria-label="get started designers">
               Get started for designers <ArrowRightIcon />

@@ -12,8 +12,8 @@ An **about modal** displays information about an application like product versio
 <br/>
 
 **To make About Modal accessible:**
-- **If you use a brand image**, use the React prop `brandImageAlt` on the AboutModal component to give the brand image alternative text for assistive technology and low bandwidth users. This will look like `alt=”[title of image]”` in the HTML markup on the image with class .pf-c-brand. 
-- **If you don’t use a title in your modal**, add an `aria-label` to give the modal an accessible name. It will look like `aria-label=”[title of modal]” on the AboutModal and will appear directly on the class .pf-c-about-modal-box. 
+- **If you use a brand image**, use the React prop `brandImageAlt` on the AboutModal component to give the brand image alternative text for assistive technology and low bandwidth users. This will look like `alt=”[title of image]”` in the HTML markup on the image with class .pf-v5-c-brand. 
+- **If you don’t use a title in your modal**, add an `aria-label` to give the modal an accessible name. It will look like `aria-label=”[title of modal]” on the AboutModal and will appear directly on the class .pf-v5-c-about-modal-box. 
 
 <br/>
 
@@ -21,8 +21,8 @@ The following props can be added or are customizable in PatternFly:
 
 | React component| React prop | Which HTML element it appears on in markup | Explanation | 
 |---|---|---|---|
-| AboutModal | brandImageAlt | .pf-c-about-modal-box__brand-image | The alternate text of the brand image |
-| AboutModal | closeButtonAriaLabel | .pf-c-modal-box__close .pf-c-button  | Provides an accessible name for the close button as it uses an icon instead of text. Default is “Close dialog”. Only used if you are customizing. |
+| AboutModal | brandImageAlt | .pf-v5-c-about-modal-box__brand-image | The alternate text of the brand image |
+| AboutModal | closeButtonAriaLabel | .pf-v5-c-modal-box__close .pf-v5-c-button  | Provides an accessible name for the close button as it uses an icon instead of text. Default is “Close dialog”. Only used if you are customizing. |
 
 
 

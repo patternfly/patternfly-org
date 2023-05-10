@@ -13,8 +13,8 @@ export const GdprBanner = () => {
   }
 
   return !isBannerOpen ? null : (
-    <div className="ws-gdpr-banner-container pf-l-flex">
-      <div id="ws-gdpr-banner" className="pf-l-flex pf-v5-u-py-md pf-m-align-items-center">
+    <div className="ws-gdpr-banner-container pf-v5-l-flex">
+      <div id="ws-gdpr-banner" className="pf-v5-l-flex pf-v5-u-py-md pf-m-align-items-center">
         <p id="ws-gdpr-banner-text" className="pf-v5-u-ml-xl">
           We use cookies on our websites to deliver our online services.
           Details about how we use cookies and how you may disable them are set out in our <a href="//www.redhat.com/en/about/privacy-policy">Privacy Statement</a>.

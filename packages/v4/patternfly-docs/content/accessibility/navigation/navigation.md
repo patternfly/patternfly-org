@@ -70,15 +70,15 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason |
 | -- | -- | -- |
-| `aria-label="[text that labels the nav component]"` | `.pf-c-nav` |  Describes `<nav>` landmark. |
-| `aria-label="[text that labels a nav section]"` | `.pf-c-nav__section` |  Describes a nav `<section>`, where a `.pf-c-nav__section-title` is not present. |
-| `aria-labelledby="[id of the element that labels the subnav]"` | `.pf-c-nav__subnav` |  Gives the subnav `<section>` landmark an accessible name by referring to the element that provides the subnav `<section>` landmark title. The `aria-labelledby` attribute should be passed in with a value of the label's id attribute.|
-| `aria-expanded="false"` | `.pf-c-nav__link` |  Indicates that subnav section is hidden. |
-| `aria-expanded="true"` | `.pf-c-nav__link` |  Indicates that subnav section is visible. |
-| `hidden` | `.pf-c-nav__subnav` |  Indicates that the subnav section is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
-| `disabled` | `.pf-c-nav__scroll-button` | Indicates that a scroll button is disabled, when at the first or last item of a list. **Required when disabled** |
-| `aria-current="page"` | `.pf-c-nav__link` |  Indicates the current page link. Can only occur once on page. |
-| `aria-haspopup="true"` | `.pf-c-nav__link` | Declares that a nav item has a submenu. |
+| `aria-label="[text that labels the nav component]"` | `.pf-v5-c-nav` |  Describes `<nav>` landmark. |
+| `aria-label="[text that labels a nav section]"` | `.pf-v5-c-nav__section` |  Describes a nav `<section>`, where a `.pf-v5-c-nav__section-title` is not present. |
+| `aria-labelledby="[id of the element that labels the subnav]"` | `.pf-v5-c-nav__subnav` |  Gives the subnav `<section>` landmark an accessible name by referring to the element that provides the subnav `<section>` landmark title. The `aria-labelledby` attribute should be passed in with a value of the label's id attribute.|
+| `aria-expanded="false"` | `.pf-v5-c-nav__link` |  Indicates that subnav section is hidden. |
+| `aria-expanded="true"` | `.pf-v5-c-nav__link` |  Indicates that subnav section is visible. |
+| `hidden` | `.pf-v5-c-nav__subnav` |  Indicates that the subnav section is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
+| `disabled` | `.pf-v5-c-nav__scroll-button` | Indicates that a scroll button is disabled, when at the first or last item of a list. **Required when disabled** |
+| `aria-current="page"` | `.pf-v5-c-nav__link` |  Indicates the current page link. Can only occur once on page. |
+| `aria-haspopup="true"` | `.pf-v5-c-nav__link` | Declares that a nav item has a submenu. |
 
 
 ## Additional considerations

@@ -69,15 +69,15 @@ The meaning of a semantic icon must be provided in alternative ways to the user.
 
 - For **non-interactive icons**, include .pf-screen-reader text near the icon. Depending on the component, the .pf-screen-reader text might not be a direct sibling to the icon element.  
 
-  Example: In the alert component, the icon label text is adjacent to the message. This way, when role="alert" is added to .pf-c-alert__body for dynamically displayed alerts, the type of message is announced along with the message text.
+  Example: In the alert component, the icon label text is adjacent to the message. This way, when role="alert" is added to .pf-v5-c-alert__body for dynamically displayed alerts, the type of message is announced along with the message text.
 
     ```html noLive
-    <div class="pf-c-alert pf-m-success" aria-label="Success Alert">
-      <div aria-hidden="true" class="pf-c-alert__icon">
+    <div class="pf-v5-c-alert pf-m-success" aria-label="Success Alert">
+      <div aria-hidden="true" class="pf-v5-c-alert__icon">
         <i class="fas fa-check-circle"></i>
       </div>
-      <div class="pf-c-alert__body">
-        <h4 class="pf-c-alert__title">
+      <div class="pf-v5-c-alert__body">
+        <h4 class="pf-v5-c-alert__title">
           {{#> screen-reader}}Success:{{/screen-reader}} Success alert title
         </h4>
       </div>

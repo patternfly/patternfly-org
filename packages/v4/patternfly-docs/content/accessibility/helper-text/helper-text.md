@@ -48,5 +48,5 @@ The following props/attributes have been added for you or are customizable in Pa
 | React prop/attribute | React component that it should be applied to | Which HTML element it appears on in markup | Reason used |
 | -- | -- | -- | -- |
 | `aria-describedby` | TextInput or another form component |  | Used to pass in one or more `id`'s as a string, allowing assistive technologies to announce the helper text content to users. |
-| `id` | HelperText \| HelperTextItem | .pf-c-helper-text \| .pf-c-helper-text__item | Used to pass into a form component's `aria-describedby` prop. |
-| `isLiveRegion` | HelperText | .pf-c-helper-text | Creates an `aria-live="polite"` live region, which allows assistive technologies to announce content updates within it. |
+| `id` | HelperText \| HelperTextItem | .pf-v5-c-helper-text \| .pf-v5-c-helper-text__item | Used to pass into a form component's `aria-describedby` prop. |
+| `isLiveRegion` | HelperText | .pf-v5-c-helper-text | Creates an `aria-live="polite"` live region, which allows assistive technologies to announce content updates within it. |

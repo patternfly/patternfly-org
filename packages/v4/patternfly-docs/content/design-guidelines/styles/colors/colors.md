@@ -14,10 +14,10 @@ import './colors.css';
     <p>
       Primary colors are those displayed most frequently across your application screens and components. Our primary colors are used across components and are typically applied to default, active, focus, and hover states.
     </p>
-    <ColorSwatch label="Default" color="--pf-global--primary-color--100">
+    <ColorSwatch label="Default" color="--pf-v5-global--primary-color--100">
       This color usually indicates a default or active state for many components, including badges and spinners.
     </ColorSwatch>
-    <ColorSwatch label="Hover" color="--pf-global--primary-color--200">
+    <ColorSwatch label="Hover" color="--pf-v5-global--primary-color--200">
       This color is most commonly used as the hover or focus state for components that use the default primary color, such as buttons and dropdowns.
     </ColorSwatch>
   </GridItem>
@@ -35,13 +35,13 @@ import './colors.css';
     <p>
       Typography and iconography colors are extremely similar because they can be used in the same context, such as for a link button. We have multiple shades of text colors on light and dark backgrounds so that you can emphasize hierarchy.
     </p>
-    <ColorSwatch color="--pf-global--Color--100">
+    <ColorSwatch color="--pf-v5-global--Color--100">
       This color is used for standard text, icons, and as a hover state color for icon buttons. It is most commonly used as a text color for many components and application screens.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--Color--200">
+    <ColorSwatch color="--pf-v5-global--Color--200">
       This color is used as a secondary text color and as a default color for icon buttons. It is most commonly used for many components, such as the app launcher and empty states.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--link--Color">
+    <ColorSwatch color="--pf-v5-global--link--Color">
       This color is most commonly used for link text and icons for many components, such as navigation and accordions. Blue icons use the same primary color variable as the blue text.
     </ColorSwatch>
   </GridItem>
@@ -58,22 +58,22 @@ import './colors.css';
     <p>
       Background colors are used throughout components and for certain screens, depending on the use case. Light colors can be used interchangeably with full-screen backgrounds, while dark background colors are strictly used within components.
     </p>
-    <ColorSwatch color="--pf-global--BackgroundColor--200">
+    <ColorSwatch color="--pf-v5-global--BackgroundColor--200">
       This color is most commonly used as a secondary background color for full application screens and hover backgrounds.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--BackgroundColor--100">
+    <ColorSwatch color="--pf-v5-global--BackgroundColor--100">
       This color is most commonly used as a primary background color for full application screens and many components, such as cards and tables/data lists.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--BackgroundColor--dark-100">
+    <ColorSwatch color="--pf-v5-global--BackgroundColor--dark-100">
       This color is most commonly used as a background color for many components, such as tooltips and wizards.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--BackgroundColor--dark-200">
+    <ColorSwatch color="--pf-v5-global--BackgroundColor--dark-200">
       This color is used as a background color for navigation.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--BackgroundColor--dark-300">
+    <ColorSwatch color="--pf-v5-global--BackgroundColor--dark-300">
       This color is most commonly used as a background color for many components, such as navigation.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--BackgroundColor--dark-400">
+    <ColorSwatch color="--pf-v5-global--BackgroundColor--dark-400">
       This color is used as a background color for navigation.
     </ColorSwatch>
   </GridItem>
@@ -94,73 +94,73 @@ import './colors.css';
   </GridItem>
   <GridItem xl={6} lg={12}>
     <h3>Default</h3>
-    <ColorSwatch color="--pf-global--default-color--300" caption="alert title">
+    <ColorSwatch color="--pf-v5-global--default-color--300" caption="alert title">
       This color is used as the title color for the default alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--default-color--200" caption="alert icon">
+    <ColorSwatch color="--pf-v5-global--default-color--200" caption="alert icon">
       This color is used as the icon color for the default alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--palette--cyan-50" caption="inline alert background">
+    <ColorSwatch color="--pf-v5-global--palette--cyan-50" caption="inline alert background">
       This color is used as the background color for the default inline alert component.
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
   <h3>Danger</h3>
-    <ColorSwatch color="--pf-global--danger-color--200" caption="alert title">
+    <ColorSwatch color="--pf-v5-global--danger-color--200" caption="alert title">
       This color is used as the title color for the danger alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--danger-color--100" caption="alert icon">
+    <ColorSwatch color="--pf-v5-global--danger-color--100" caption="alert icon">
       This color is used as the icon color for the danger alert component.
     </ColorSwatch> 
-    <ColorSwatch color="--pf-global--palette--red-50" caption="inline alert background">
+    <ColorSwatch color="--pf-v5-global--palette--red-50" caption="inline alert background">
       This color is used as the background color for danger inline alert component.
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
     <h3>Success</h3>
-    <ColorSwatch color="--pf-global--success-color--200" caption="alert title">
+    <ColorSwatch color="--pf-v5-global--success-color--200" caption="alert title">
       This color is used as the title color for the success alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--success-color--100" caption="alert icon">
+    <ColorSwatch color="--pf-v5-global--success-color--100" caption="alert icon">
       This color is used as the icon color for the success alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--palette--green-50" caption="inline alert background">
+    <ColorSwatch color="--pf-v5-global--palette--green-50" caption="inline alert background">
       This color is used as the background color for the success inline alert component.
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
     <h3>Info</h3>
-    <ColorSwatch color="--pf-global--info-color--200" caption="alert title">
+    <ColorSwatch color="--pf-v5-global--info-color--200" caption="alert title">
       This color is used as the title color for the info alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--info-color--100" caption="alert icon">
+    <ColorSwatch color="--pf-v5-global--info-color--100" caption="alert icon">
       This color is used as the icon color for the default alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--palette--blue-50" caption="alert background">
+    <ColorSwatch color="--pf-v5-global--palette--blue-50" caption="alert background">
       This color is used as the background color for the info inline alert component.
     </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
     <h3>Warning</h3>
-    <ColorSwatch color="--pf-global--warning-color--200" caption="alert title">
+    <ColorSwatch color="--pf-v5-global--warning-color--200" caption="alert title">
       This color is used as the title color for the warning alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--warning-color--100" caption="alert icon">
+    <ColorSwatch color="--pf-v5-global--warning-color--100" caption="alert icon">
       This color is used as the icon color for the warning alert component.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--palette--gold-50" caption="inline alert background">
+    <ColorSwatch color="--pf-v5-global--palette--gold-50" caption="inline alert background">
       This color is used as the background color for the warning inline alert component.
     </ColorSwatch>
   </GridItem>
    <GridItem xl={6} lg={12}>
     <h3>Disabled</h3>
-    <ColorSwatch color="--pf-global--disabled-color--100">
+    <ColorSwatch color="--pf-v5-global--disabled-color--100">
       This color is used as the text color when components are disabled.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--disabled-color--200">
+    <ColorSwatch color="--pf-v5-global--disabled-color--200">
       This color is used as the background color for many components when they are disabled, such as buttons and the application launcher.
     </ColorSwatch>
-    <ColorSwatch color="--pf-global--disabled-color--300">
+    <ColorSwatch color="--pf-v5-global--disabled-color--300">
       This color is used as an alternate background color for components when they are disabled, such as dropdowns and options menus.
     </ColorSwatch>
   </GridItem>
@@ -174,13 +174,13 @@ import './colors.css';
     <p>
       Shadows provide specifics about depth, movement direction, and surface edges. Depending on the surface’s elevation and relationships to other surfaces, the type of shadow will change.
     </p>
-    <ColorSwatch label="Large" color="--pf-global--BoxShadow--lg">
+    <ColorSwatch label="Large" color="--pf-v5-global--BoxShadow--lg">
       This variable displays a large shadow for many components, such as alerts and modals.
     </ColorSwatch>
-    <ColorSwatch label="Medium" color="--pf-global--BoxShadow--md">
+    <ColorSwatch label="Medium" color="--pf-v5-global--BoxShadow--md">
       This variable displays a medium shadow for many components, such as accordions and dropdowns.
     </ColorSwatch>
-    <ColorSwatch label="Small" color="--pf-global--BoxShadow--sm">
+    <ColorSwatch label="Small" color="--pf-v5-global--BoxShadow--sm">
       This variable displays a small shadow for the card component.
     </ColorSwatch>
   </GridItem>

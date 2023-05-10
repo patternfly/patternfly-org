@@ -19,4 +19,4 @@ The following props/attributes have been added for you or are customizable in Pa
 
 | React prop | React component it should be applied to | Which HTML element it appears on in markup | Reason used |
 | -- | -- | -- | -- |
-| tabindex | Sidebar | `.pf-c-sidebar` | Tab index should be set to 0 if the content of the sidebar is scrollable |
+| tabindex | Sidebar | `.pf-v5-c-sidebar` | Tab index should be set to 0 if the content of the sidebar is scrollable |
