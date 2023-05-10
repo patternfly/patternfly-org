@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.21.8 (2023-05-10)
+
+
+### Bug Fixes
+
+* revert quickstarts dependency to fix docs ([#3524](https://github.com/patternfly/patternfly-org/issues/3524)) ([cc889e0](https://github.com/patternfly/patternfly-org/commit/cc889e07e1e2dfad1a2bdc24a921b9bfa21a193a))
+
+
+
+
+
 ## 4.21.7 (2023-05-09)
 
 **Note:** Version bump only for package patternfly-org-4
