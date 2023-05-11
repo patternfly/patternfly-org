@@ -104,3 +104,16 @@ for further updates pending testing and feedback, then the newly introduced CSS 
 as well as relevant examples in the documentation are all labeled as beta.
 
 For more information about beta components, visit [this page](https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion).
+
+<div id="retainable-rss-embed" 
+      data-rss="https://medium.com/feed/retainable,
+      https://medium.com/feed/patternfly"
+      data-maxcols="4" 
+      data-layout="grid" 
+      data-poststyle="inline" 
+      data-readmore="Read more" 
+      data-buttonclass="btn btn-primary" 
+      data-offset="-100">
+</div>
+
+<script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
