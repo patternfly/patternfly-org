@@ -194,6 +194,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
   const algolia = process.env.algolia;
   const hasGdprBanner = process.env.hasGdprBanner;
   const hasVersionSwitcher = process.env.hasVersionSwitcher;
+  const hasDarkThemeSwitcher = process.env.hasDarkThemeSwitcher;
   const sideNavItems = process.env.sideNavItems;
   const topNavItems = process.env.topNavItems;
   const prnum = process.env.prnum;
@@ -248,7 +249,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
             versions={versions}
             algolia={algolia}
             hasVersionSwitcher={hasVersionSwitcher}
-            hasDarkThemeSwitcher
+            hasDarkThemeSwitcher={hasDarkThemeSwitcher}
             pathPrefix={pathPrefix}
             topNavItems={topNavItems}
           />
