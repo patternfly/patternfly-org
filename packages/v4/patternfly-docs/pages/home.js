@@ -149,131 +149,18 @@ const HomePage = () => (
       </Grid>
     </PageSection>
     <PageSection variant={PageSectionVariants.darker} className="pf4-c-background-image-principles ws-homepage-main-section">
-    <Grid gutter="md" className="pf-v5-u-py-3xl">
-      <GridItem sm={12} md={6} mdOffset={3} className="pf-v5-u-text-align-center">
-        <TextContent>
-          <Title headingLevel="h2" size="4xl" className="pf-v5-u-mb-4xl pf-m-white pf-v5-u-text-align-center" id="patternfly-principles">
-            {patternFlyPrinciples}
-          </Title>
-          <Text component={TextVariants.p} className="ws-mdx-p">
-            Every Flyer is unique, with different ideas and opinions. But there are some things we all agree on. These are our Flyer fundamentals.
-          </Text>
-        </TextContent>
-      </GridItem>
-    </Grid>
-    <Grid className="pf-m-white" gutter="lg">
-      <GridItem span={12} md={10} mdOffset={1} lg={9} lgOffset={2}>
-        <TextContent>
-          <Grid>
-            <GridItem span={12} lg={11} className="ws-pf-principle">
-              <Flex>
-                <FlexItem>
-                  <img
-                    className="ws-principles-img"
-                    src={modular}
-                    aria-hidden
-                  />
-                </FlexItem>
-                <FlexItem>
-                  <Text component={TextVariants.h2}>Make it flexible.</Text>
-                  <Text component={TextVariants.p} className="pf-v5-u-mb-3xl ws-mdx-p">
-                    Open source thrives on variety, and our resources do too. Our components can be arranged in any number of ways, and our CSS variable system can be used for all kinds of customization.
-                  </Text>
-                </FlexItem>
-              </Flex>
-            </GridItem>
-            <GridItem span={12} lg={11} className="ws-pf-principle">
-              <Flex>
-                <FlexItem>
-                  <img
-                  className="ws-principles-img"
-                  src={accessible}
-                  aria-hidden
-                />
-                </FlexItem>
-                <FlexItem>
-                  <Text component={TextVariants.h2}>Make it accessible.</Text>
-                  <Text component={TextVariants.p} className="pf-v5-u-mb-3xl ws-mdx-p">
-                    Building applications that work for everyone, regardless of ability, is just the right thing to do. Our accessible markup and guidance is geared towards creating experiences that people of all abilities can enjoy.
-                  </Text>
-                </FlexItem>
-              </Flex>
-            </GridItem>
-            <GridItem span={12} lg={11} className="ws-pf-principle">
-              <Flex>
-                <FlexItem>
-                  <img
-                    className="ws-principles-img"
-                    src={consistent}
-                    aria-hidden
-                  />
-                  </FlexItem>
-                  <FlexItem>
-                  <Text component={TextVariants.h2}>Make it consistent.</Text>
-                  <Text component={TextVariants.p} className="pf-v5-u-mb-3xl ws-mdx-p">
-                    The best product experiences stem from teamwork. Our clear guidelines and tools help streamline communication so that all teams can create unified applications and interfaces.
-                  </Text>
-                </FlexItem>
-              </Flex>
-            </GridItem>
-            <GridItem span={12} lg={11} className="ws-pf-principle">
-              <Flex>
-                <FlexItem>
-                  <img
-                    className="ws-principles-img"
-                    src={scale}
-                    aria-hidden
-                  />
-                  </FlexItem>
-                  <FlexItem>
-                  <Text component={TextVariants.h2}>Make it scalable.</Text>
-                  <Text component={TextVariants.p} className="pf-v5-u-mb-3xl ws-mdx-p">
-                  Helping teams work productively at scale is at the heart of everything we do. Our components are designed for enterprise IT applications used in businesses of all sizes.
-                  </Text>
-                </FlexItem>
-              </Flex>
-            </GridItem>
-            <GridItem span={12} lg={11} className="ws-pf-principle">
-              <Flex>
-                <FlexItem>
-                  <img
-                    className="ws-principles-img"
-                    src={open}
-                    aria-hidden
-                  />
-                  </FlexItem>
-                  <FlexItem>
-                  <Text component={TextVariants.h2}>Make it open.</Text>
-                  <Text component={TextVariants.p} className="pf-v5-u-mb-3xl ws-mdx-p">
-                    We're focused on shaping the future of open source design and development, and we can't do this alone. So we work as an open source community, where everyone is free to share their ideas and contribute their work.
-                  </Text>
-                </FlexItem>
-              </Flex>
-            </GridItem>
-          </Grid>
-        </TextContent>
-        <div className="pf-v5-u-pb-md">
-          <Text
-            className="pf-v5-u-pl-0 pf4-c-link__text ws-mdx-a"
-          >
-            <Link to="/get-started/develop" className="pf-m-white ws-get-started" aria-label="get started developers">
-              Get started for developers <ArrowRightIcon />
-            </Link>
-          </Text>
-        </div>
-        <div className="pf-v5-u-pb-md">
-          <Text
-            className="pf-v5-u-pl-0 pf4-c-link__text ws-mdx-a"
-          >
-            <Link to="/get-started/design" className="pf-m-white ws-get-started" aria-label="get started designers">
-              Get started for designers <ArrowRightIcon />
-            </Link>
-          </Text>
-        </div>
-      </GridItem>
-    </Grid>
+    <div id="retainable-rss-embed" 
+      data-rss="https://medium.com/feed/retainable,
+      https://medium.com/feed/patternfly"
+      data-maxcols="4" 
+      data-layout="grid" 
+      data-poststyle="inline" 
+      data-readmore="Read more" 
+      data-buttonclass="btn btn-primary" 
+      data-offset="-100"></div>
   </PageSection>
   </React.Fragment>
 );
 
 export default HomePage;
+<script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
