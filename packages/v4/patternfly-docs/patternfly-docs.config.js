@@ -26,7 +26,7 @@ module.exports = {
     { section: 'charts' },
     { section: 'topology' },
     { section: 'layouts' },  
-    { section: 'utility classes' },
+    { section: 'utility-classes' },
     { section: 'developer-resources' },
     { section: 'training' }, 
   ],
