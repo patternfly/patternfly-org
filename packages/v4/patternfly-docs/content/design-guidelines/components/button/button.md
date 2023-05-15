@@ -140,7 +140,7 @@ Use a progress button when clicking a submit button will not navigate the user t
 
 _Example of using a progress button_
 
-<img src="./img/progress_button.png" alt="Example of progress button usage" width="1828"/>
+<img src="./img/progress-button.png" alt="Example of progress button usage" width="1435"/>
 
 1. The user clicks the submit button.
 
