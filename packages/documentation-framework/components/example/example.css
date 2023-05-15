@@ -130,6 +130,6 @@
   box-shadow: var(--pf-v5-global--BoxShadow--sm);
 }
 
-.pf-theme-dark .ws-theme-switch-full-page::before {
+.pf-v5-theme-dark .ws-theme-switch-full-page::before {
   background-color: var(--pf-v5-global--BackgroundColor--300);
 }
