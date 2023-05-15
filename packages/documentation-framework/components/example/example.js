@@ -157,7 +157,7 @@ export const Example = ({
         {hasDarkThemeSwitcher && (
           <div className="ws-theme-switch-full-page">
             <Switch id="ws-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
-            document.querySelector('html').classList.toggle('pf-theme-dark')} />
+            document.querySelector('html').classList.toggle('pf-v5-theme-dark')} />
           </div>
         )}
       </div>
