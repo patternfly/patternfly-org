@@ -132,22 +132,6 @@ Call To Action (CTA) buttons and links are used on websites to direct users to c
 
 Call To Actions have similar variants to regular buttons (although they have a larger padding), and follow the same visual hierarchy. However, CTA buttons are used only to indicate a desired next step, whereas other button types may also be used to link to additional information or actions. Call To Actions should be used sparingly (ideally one per page, or a primary and secondary CTA).
 
-### Progress button ###
-
-A progress button indicates ongoing action after being clicked by the user, using a spinner alongside the button label. Its main purpose is for in-page checks that must be completed before proceeding to the next screen, without navigating to a new page or opening a modal. For operations taking more than a few seconds, or operations that do open to a new page, it is recommended to use a progress bar.
-For operations that will take more than a few seconds, use of a modal with a progress bar is recommended to reflect status and indicate time to completion.
-
-_Example of using a progress button to test a repository before final configuration_
-
-<img src="./img/progress-bar-stages.png" alt="Example of progress button usage" width="1828"/>
-
-1. The user clicks “try sample repository".
-
-2. The spinner will become disabled, indicating to the user that a process is loading and there is no action to take on the button at this time.
-
-3. When complete, a toast message will appear to indicate the status of the process (successful or unsuccessful), and the progress button will return to it’s initial state.
-
-
 <!--  ### Using buttons in your designs
 We recommend aligning buttons to different elements or areas on the screen depending on the content being provided. The recommended alignment simplifies scanning and helps users complete and submit form content more quickly.  
 
