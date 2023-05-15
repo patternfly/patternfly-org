@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.39 (2023-05-15)
+
+
+### Bug Fixes
+
+* **docs:** use correct theme class on full page dark theme switcher ([#3532](https://github.com/patternfly/patternfly-org/issues/3532)) ([0008236](https://github.com/patternfly/patternfly-org/commit/0008236da2b105fd1789db2263323c59780b5194))
+
+
+
+
+
+# 0.12.0-alpha.38 (2023-05-11)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.37 (2023-05-11)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 0.12.0-alpha.36 (2023-05-10)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
