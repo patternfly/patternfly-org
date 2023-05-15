@@ -4,8 +4,8 @@ export const a11yScores = [
   {
     'Nov 21, 2022': [
       {
-        criteria: 'Preliminary accessibility report generated using axe-core based tooling',
-        score: 'Y',
+        criteria: 'Preliminary accessibility report generated using axe-core based tooling.',
+        score: '✅',
         notes: (
           <>
             <a href="https://pf-a11y_5-16-22.surge.sh/">Initial report (May 16th, 2022)</a>
@@ -14,14 +14,14 @@ export const a11yScores = [
         )
       },
       {
-        criteria: 'Manual keyboard and screen reader testing conducted',
-        score: 'N',
+        criteria: 'Manual keyboard and screen reader testing conducted.',
+        score: '--',
         notes: ''
       },
       {
-        criteria: `Accessibility violations in product itemized and prioritized
-        Notes should indicate how violations were identified - i.e. via generated report and/or manual testing.`,
-        score: 'Y',
+        criteria: `Accessibility violations in product itemized and prioritized. Notes should indicate how violations 
+        were identified - i.e. via generated report and/or manual testing.`,
+        score: '✅',
         notes: (
           <>
             <a href="https://github.com/patternfly/patternfly-org/issues/2920">patternfly/patternfly-org issue #2920</a>
@@ -30,7 +30,7 @@ export const a11yScores = [
         )
       },
       {
-        criteria: 'Current state of resolving critical and major accessibility violations identified in item #3 (reported as a %)',
+        criteria: 'Critical and major accessibility violations identified in item #3 resolved (%).',
         score: '96%',
         notes: (
           <>
@@ -40,38 +40,36 @@ export const a11yScores = [
         )
       },
       {
-        criteria: 'Pull request or equivalent code acceptance criteria evaluation includes automated accessibility checks',
-        score: 'N',
+        criteria: `Automated accessibility checks added to pull request or equivalent code acceptance criteria.`,
+        score: '--',
         notes: ''
       },
       {
-        criteria: 'Pull request or equivalent code acceptance criteria evaluation includes manual keyboard and screen reader accessibility checks',
-        score: 'Y',
+        criteria: 'Manual keyboard and screen reader accessibility checks added to pull request or equivalent code acceptance criteria.',
+        score: '✅',
         notes: `Accessibility devs identified and tagged on relevant PRs to manually review screen reader and keyboard interactions`
       },
       {
-        criteria: <>CI/CD Process established to track accessibility violations/regressions
-        CI/CD process could be wired up to use <a href="https://www.deque.com/axe/">https://www.deque.com/axe/</a> or the patternfly-a11y tool (also built using axe)</>,
-        score: 'N',
+        criteria: <>CI/CD Process established to track accessibility violations/regressions. CI/CD process could be wired up to use <a href="https://www.deque.com/axe/">https://www.deque.com/axe/</a> or the patternfly-a11y tool (also built using axe)</>,
+        score: '--',
         notes: <>Report <a href="https://github.com/patternfly/patternfly-org/blob/main/packages/v4/patternfly-a11y.config.js">configuration</a> created, needs to be hooked into CI/CD</>
       },
       {
-        criteria: `UI built with PatternFly React 
-        Could note alternate design systems/component libraries along with reference to their accessibility docs
-        `,
-        score: 'Y',
+        criteria: `Website built with PatternFly React components. Could note alternate design systems/component 
+        libraries along with reference to their accessibility docs.`,
+        score: '✅',
         notes: ''
       },
       {
         criteria: 'PatternFly React is up to date with the latest release',
-        score: 'Y',
+        score: '✅',
         notes: `Current versions:
         "@patternfly/patternfly": ">=4.185.1",
         "@patternfly/react-core": ">=4.202.16"`
       },
       {
-        criteria: 'Extra credit 🌟 User testing conducted',
-        score: 'N',
+        criteria: 'User testing conducted (Extra credit 🌟)',
+        score: '--',
         notes: ''
       }
     ]
