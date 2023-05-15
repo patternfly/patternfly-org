@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.41 (2023-05-15)
+
+
+### Bug Fixes
+
+* broken link in search-input summary ([7cbf968](https://github.com/patternfly/patternfly-org/commit/7cbf968c1b00aef2257ef8b7434c7ff8b9a4255a))
+
+
+
+
+
 # 2.0.0-alpha.40 (2023-05-15)
 
 
