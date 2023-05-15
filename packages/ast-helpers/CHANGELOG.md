@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.15.10 (2023-05-15)
+
+
+### Bug Fixes
+
+* broken link in search-input summary ([534611c](https://github.com/patternfly/patternfly-org/commit/534611c40d292ca71ac4579a2b01e6d8d751f3b0))
+
+
+
+
+
 ## 0.15.9 (2023-05-11)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
