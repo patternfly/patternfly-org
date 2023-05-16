@@ -71,27 +71,22 @@ function serializeRoot(node, options) {
     .map(node => node.value)
     .map(imp => imp.replace(/(['"])\./g, (_, match) => `${match}${getRelPath()}${path.posix.sep}\.`));
 
-  // Map relative import name to '@package...'
-  const relativeImportsRegex = /(?:[\.\/]+.*)(@.*)['"]/gm;
-  let relativeImportMatch;
-  let relativeImportMatches = {};
-  while (relativeImportMatch = relativeImportsRegex.exec(importStatements[0])) {
-    const [_match, absoluteImportPath] = relativeImportMatch;
-    if (absoluteImportPath && !absoluteImportPath.includes('srcImport')) {
-      // `@patternfly/react-core/src/demos/./examples/DashboardWrapper` to `DashboardWrapper`
-      let relativeFileImport = /(\.+\/.*)/gm.exec(absoluteImportPath);
-      if (relativeFileImport) {
-        // Build map of relative imports (from example.js code) to npm package import path (used in codesandbox.js)
-        const relativeFilePath = relativeFileImport[0];
-        const relativeImportName = relativeFilePath
-          .split('/')
-          .pop()
-          .split('.')
-          .shift();
-        relativeImportMatches[relativeImportName] = absoluteImportPath;
+    // Map relative import name to '@package...'
+    const relativeImportsRegex = /(?:[\.\/]+.*)(@.*)['"]/gm;
+    let relativeImportMatch;
+    let relativeImportMatches = {};
+    while (relativeImportMatch = relativeImportsRegex.exec(importStatements.join())) {
+      const [_match, absoluteImportPath] = relativeImportMatch;
+      if (absoluteImportPath && !absoluteImportPath.includes('srcImport')) {
+        // `@patternfly/react-core/src/demos/./examples/DashboardWrapper` to `./examples/DashboardWrapper`
+        let relativeFileImport = /(\.+\/.*)/gm.exec(absoluteImportPath);
+        if (relativeFileImport) {
+          // Build map of relative imports (from example.js code) to absolute npm package import path (used in codesandbox.js)
+          const relativeFilePath = relativeFileImport[0];
+          relativeImportMatches[relativeFilePath] = absoluteImportPath;
+        }
       }
     }
-  }
 
   const importStatementsWithThumbnails = importStatements
     .concat(thumbnailImports)

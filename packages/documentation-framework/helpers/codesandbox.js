@@ -145,12 +145,17 @@ function getReactParams(title, code, scope, lang, relativeImports, relPath, sour
     }
   }
 
-  const relImportRegex = /(import[\s*{])([\w*{}\n\r\t, ]+)([\s*]from\s["']([\.\/]+.*)["'])/gm;
+  const relImportRegex = /import[\s*{]([\w*{}\n\r\t, ]+)[\s*]from\s["']([\.\/]+.*)["']/gm;
   let relImportMatch;
   while (relImportMatch = relImportRegex.exec(code)) {
-    const [ relImportName, _name, relImportPath ] = relImportMatch;
-    if (relativeImports[relImportName]) {
-      code = code.replace(relImportPath, relativeImports[relImportName]);
+    const [ _relImportStatement, _relImportItems, relImportPath ] = relImportMatch;
+    // Trim relative import to one level to match abs import
+    // ex ../../something.js => ../something.js
+    const relImportPathArr = relImportPath.split('./');
+    const len = relImportPathArr.length;
+    const relImportPathOneLevel = relImportPathArr[len-2].concat('./').concat(relImportPathArr[len-1]);
+    if (relativeImports[relImportPathOneLevel]) {
+      code = code.replace(relImportPath, relativeImports[relImportPathOneLevel]);
     }
   }
 
