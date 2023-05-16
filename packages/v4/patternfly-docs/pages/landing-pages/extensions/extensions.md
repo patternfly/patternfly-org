@@ -1,6 +1,6 @@
 ---
 id: Extensions
-title: Extensions
+title: About
 section: extensions
 sortValue: 1
 ---

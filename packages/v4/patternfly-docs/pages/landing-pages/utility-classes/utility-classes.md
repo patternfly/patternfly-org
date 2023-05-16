@@ -1,6 +1,6 @@
 ---
 id: Utility classes
-title: Utility classes
+title: About
 section: utility-classes
 sortValue: 1
 ---

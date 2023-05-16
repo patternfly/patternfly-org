@@ -1,6 +1,6 @@
 ---
 id: Design foundations
-title: Design foundations
+title: About
 section: design-foundations
 sortValue: 1
 ---

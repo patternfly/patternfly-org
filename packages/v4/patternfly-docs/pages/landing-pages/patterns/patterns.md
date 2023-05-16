@@ -1,6 +1,6 @@
 ---
 id: Patterns
-title: Patterns
+title: About
 section: patterns
 sortValue: 1
 ---

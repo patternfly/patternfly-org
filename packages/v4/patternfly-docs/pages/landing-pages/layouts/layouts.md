@@ -1,6 +1,6 @@
 ---
 id: Layouts
-title: Layouts
+title: About
 section: layouts
 sortValue: 1
 ---
