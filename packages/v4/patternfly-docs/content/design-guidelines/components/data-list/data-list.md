@@ -7,15 +7,16 @@ related: ['Table']
 ## Elements
 The elements mentioned below are similar for a data list with compact or default spacing. This example shows a data list with compact spacing. 
 
-<img src="./img/compact-list.png" alt="Compact data list" /> 
+<img src="./img/datalist-elements.png" alt="example of elements on a data list" width="1273"/> 
 
 1. **[Toolbar](/components/toolbar/design-guidelines):** Sits above the list and contains controls for manipulating list data. Common actions include filtering, sorting, and pagination.
 2. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information.
-3. **Row:** Row height may be variable and sizes to the content. Rows in a data list may take any supported layout.
-4. **Select checkbox:** Selects this row.
-5. **Inline actions:** These actions apply only to the current row/item.
-6. **Global actions:** Actions that apply to all selected items.
-7. **Pagination footer:** When present, provides navigation to additional pages.
+3. **Global actions:** Actions that apply to all selected items.
+4. **Row:** Row height may be variable and sizes to the content. Rows in a data list may take any supported layout.
+5. **Expand:** Expands this row.
+6. **Select checkbox:** Selects this row.
+7. **Inline actions:** These actions apply only to the current row/item.
+8. **Pagination footer:** When present, provides navigation to additional pages.
 
 
 ## Usage
@@ -27,6 +28,8 @@ Think of each row in a data list as a container for some formatted content. In P
 * **[Flex](/layouts/flex):** Enables more customization control over the alignment and spacing options provided in the other layouts.
 
 PatternFly offers 2 components for displaying large data sets: data lists and [tables](/components/table/design-guidelines). While they satisfy similar use cases, choosing the correct component to use in your design will be dependent on the type of data you need to display.
+
+Data lists can also appear in primary-detail views. Visit the [primary-detail guidelines](/patterns/primary-detail/design-guidelines) to learn more about the functionality. 
 
 ### When to use a data list vs. a table
 **Use a data list when**:
@@ -51,14 +54,15 @@ See [when to use compact vs. default spacing](#when-to-use-a-data-list-vs.-a-tab
 ### Data list capabilities
 Every data list can be extended with these functionalities:
 
-* **[Actionable data list](/components/data-list/design-guidelines#actionable-data-list)**
-* **[Expandable data list](/components/data-list/design-guidelines#expandable-data-list)**
+* **[Selectable data list](#selectable-data-list)**
+* **[Clickable data list](#clickable-data-list)**
+* **[Expandable data list](#expandable-data-list)**
 * **[Draggable data list rows](#draggable-data-list-rows)**
 
-### Actionable data list
-The actionable data list provides checkboxes that enable users to select one or more rows in the list. Users may then act on those selections using options in the [toolbar](/components/toolbar/design-guidelines).
+### Selectable data list
+The selectable data list provides checkboxes that enable users to select one or more rows in the list. Users may then act on those selections using options in the [toolbar](/components/toolbar/design-guidelines).
 
-<img src="./img/actionable-list.png" alt="Actionable list" /> 
+<img src="./img/datalist-selectable.png" alt="example of selectable data list" width="1214"/> 
 
 1. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information. 
 2. **Checkbox:** Enables a user to select a row.
@@ -70,10 +74,23 @@ The actionable data list provides checkboxes that enable users to select one or 
 
 * **Don't use an actionable data list** when users can not take any actions on data list items/rows.
 
+### Clickable data list
+The clickable data list can be used when data lists need to provide additional information while keeping the row information available via a primary-detail drawer. This can be done by clicking on the row itself.
+
+<img src="./img/datalist-clickable.png" alt="example of clickable data list" width="2606"/> 
+
+1. **Row:** Enables the user to click on the row to trigger the action of opening a primary-detail drawer
+2. **Primary-detail:** Additional drawer of information that allows the user to still see the data list
+
+### When to use
+
+* **Use a clickable data list** when you need to allow the user to trigger an action of opening a primary-detail drawer to view more information
+* **Don't use a clickable data list** when users don't need to see more information in addition to the data list information
+
 ### Expandable data list
 The expandable list adds an expansion panel to every row to reveal more details about the item.
 
-<img src="./img/expandable-data-list.png" alt="Expandable data list" width="1241"/> 
+<img src="./img/datalist-expandable.png" alt="example of expandable data list" width="1273"/> 
 
 1. **Expand all (optional):** Expands or collapses every row in the data list at the same time.
 2. **Expansion caret:** Toggles the expansion open and closed for the individual row.
@@ -89,12 +106,12 @@ The expandable list adds an expansion panel to every row to reveal more details 
 
 Draggable data list rows can be added to any data list and allow you to customize the order of rows within a data list.
 
-<img src="./img/datalistdraggable1.png" alt="Example of draggable date list" width="880"/> 
+<img src="./img/datalist-draggable1.png" alt="example of draggable data list" width="1011"/> 
 
 1. **Drag icon:** To indicate a row is draggable, use the fa-grip icon. Use grip-vertical to indicate the ability to move a vertically-oriented component via drag and drop. Use grip-horizontal to move a horizontally-oriented component via drag and drop. For example, if you are selecting items to be dragged from two parallel lists.
 2. **Dragged row:** When dragging a row, it becomes slightly less opaque and floats above the static rows to indicate that it is the one moving.
 
-<img src="./img/datalistdraggable2.png" alt="Example of draggable date list" width="880"/> 
+<img src="./img/datalist-draggable2.png" alt="example of draggable data list" width="1006"/> 
 
 3. **Dragged row positioning:** When positioning the row, the other elements in the data list will move to indicate the dragged row’s position.
 4. **Final position:** After the row has been placed where desired, the data list becomes static again, until the user decides to drag another row.

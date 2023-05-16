@@ -267,7 +267,7 @@
   },
   "search-input": {
     "illustration": "./images/component-illustrations/search-input.png",
-    "summary": "A <b>search input</b> is a type of input field that can be user to search, find, or filter. See <Link to='/guidelines/filters'>filter guidelines</Link> for more information on using search input as a filter."
+    "summary": "A <b>search input</b> is a type of input field that can be user to search, find, or filter. See <Link to='/patterns/filters/design-guidelines'>filter guidelines</Link> for more information on using search input as a filter."
   },
   "select": {
     "illustration": "./images/component-illustrations/select.png",

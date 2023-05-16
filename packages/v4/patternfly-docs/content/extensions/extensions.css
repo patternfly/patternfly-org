@@ -1,11 +1,11 @@
 
-.pf-c-extensions__link:not(:last-child) {
-    padding-right: var(--pf-global--spacer--md);
-    margin-right: var(--pf-global--spacer--md);
-    border-right: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--100);
+.pf-v5-c-extensions__link:not(:last-child) {
+    padding-right: var(--pf-v5-global--spacer--md);
+    margin-right: var(--pf-v5-global--spacer--md);
+    border-right: var(--pf-v5-global--BorderWidth--sm) solid var(--pf-v5-global--BorderColor--100);
 }
 
-.pf-c-extensions__component-description {
-    font-size: var(--pf-global--FontSize--sm);
-    color: var(--pf-global--Color--200);
+.pf-v5-c-extensions__component-description {
+    font-size: var(--pf-v5-global--FontSize--sm);
+    color: var(--pf-v5-global--Color--200);
 }

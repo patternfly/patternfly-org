@@ -1,18 +1,18 @@
-.pf-c-card:not(.pf-org__card-small).pf-org__card {
+.pf-v5-c-card:not(.pf-org__card-small).pf-org__card {
   border: 2px solid #d2d2d2;
   box-shadow: unset;
   height: 100%;
 }
 
-.pf-org__card .pf-c-card__header {
+.pf-org__card .pf-v5-c-card__header {
   position: relative;
 }
 
-.pf-org__card .pf-c-card__header:first-child {
+.pf-org__card .pf-v5-c-card__header:first-child {
   padding-top: 24px !important;
 }
 
-.pf-org__card .pf-c-card__header:not(:last-child) {
+.pf-org__card .pf-v5-c-card__header:not(:last-child) {
   padding-bottom: 24px !important;
 }
 
@@ -23,36 +23,36 @@
   background-color: #fff;
 }
 
-.pf-org__card .pf-c-card__header .pf-org__level {
+.pf-org__card .pf-v5-c-card__header .pf-org__level {
   margin-left: auto;
   font-size: 12px;
   color: #737679;
 }
 
-.pf-org__card .pf-c-card__header .pf-org__level > svg {
+.pf-org__card .pf-v5-c-card__header .pf-org__level > svg {
   margin-right: 8px;
 }
 
-.pf-org__card .pf-c-card__body {
+.pf-org__card .pf-v5-c-card__body {
   font-size: 14px;
 }
 
-.pf-org__card .pf-c-card__body .pf-org__time {
+.pf-org__card .pf-v5-c-card__body .pf-org__time {
   color: #737679;
   font-size: 12px;
   padding-bottom: 12px;
 }
 
-.pf-org__card .pf-c-card__body .pf-org__time > svg {
+.pf-org__card .pf-v5-c-card__body .pf-org__time > svg {
   margin-right: 8px;
 }
 
-.pf-org__card .pf-c-card__footer .pf-c-button.pf-m-link {
+.pf-org__card .pf-v5-c-card__footer .pf-v5-c-button.pf-m-link {
   padding-left: 0;
   font-weight: bold;
 }
 
-.pf-org__card .pf-c-card__footer .pf-c-button.pf-m-link > svg {
+.pf-org__card .pf-v5-c-card__footer .pf-v5-c-button.pf-m-link > svg {
   margin-left: 8px;
 }
 

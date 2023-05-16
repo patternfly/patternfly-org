@@ -24,7 +24,7 @@ export const styleProps = {
   superHero: {
     fontWeight: "400",
     fontWeightText: "400 (medium)",
-    variableName: "--pf-global--FontSize--4xl",
+    variableName: "--pf-v5-global--FontSize--4xl",
     fontSize: "36px",
     lineHeight: "1.3",
     fontFamily: "RedHatDisplay",
@@ -33,7 +33,7 @@ export const styleProps = {
   hero: {
     fontWeight: "400",
     fontWeightText: "400 (medium)",
-    variableName: "--pf-global--FontSize--3xl",
+    variableName: "--pf-v5-global--FontSize--3xl",
     fontSize: "28px",
     lineHeight: "1.3",
     fontFamily: "RedHatDisplay",
@@ -42,7 +42,7 @@ export const styleProps = {
   first: {
     fontWeight: "400",
     fontWeightText: "400 (medium)",
-    variableName: "--pf-global--FontSize--2xl",
+    variableName: "--pf-v5-global--FontSize--2xl",
     fontSize: "24px",
     lineHeight: "1.3",
     fontFamily: "RedHatDisplay",
@@ -52,7 +52,7 @@ export const styleProps = {
     fontWeight: "400",
     fontWeightText: "400 (medium)",
     fontSize: "20px",
-    variableName: "--pf-global--FontSize--xl",
+    variableName: "--pf-v5-global--FontSize--xl",
     lineHeight: "1.5",
     fontFamily: "RedHatDisplay",
     textStyle: "xl (RHD md 20)"
@@ -61,7 +61,7 @@ export const styleProps = {
     fontWeight: "400",
     fontWeightText: "400 (medium)",
     fontSize: "18px",
-    variableName: "--pf-global--FontSize--lg",
+    variableName: "--pf-v5-global--FontSize--lg",
     lineHeight: "1.5",
     fontFamily: "RedHatDisplay",
     textStyle: "lg (RHD md 18)"
@@ -70,7 +70,7 @@ export const styleProps = {
     fontWeight: "400",
     fontWeightText: "400 (medium)",
     fontSize: "16px",
-    variableName: "--pf-global--FontSize--md",
+    variableName: "--pf-v5-global--FontSize--md",
     lineHeight: "1.5",
     fontFamily: "RedHatDisplay",
     textStyle: "md (RHD md 16)"
@@ -79,7 +79,7 @@ export const styleProps = {
     fontWeight: "400",
     fontWeightText: "400 (regular)",
     fontSize: "16px",
-    variableName: "--pf-global--FontSize--md",
+    variableName: "--pf-v5-global--FontSize--md",
     lineHeight: "1.5",
     fontFamily: "RedHatText",
     textStyle: "md (RHT rg 16)"
@@ -88,7 +88,7 @@ export const styleProps = {
     fontWeight: "400",
     fontWeightText: "400 (regular)",
     fontSize: "14px",
-    variableName: "--pf-global--FontSize--sm",
+    variableName: "--pf-v5-global--FontSize--sm",
     lineHeight: "1.5",
     fontFamily: "RedHatText",
     textStyle: "sm (RHT rg 14)"
@@ -97,7 +97,7 @@ export const styleProps = {
     fontWeight: "400",
     fontWeightText: "400 (regular)",
     fontSize: "12px",
-    variableName: "--pf-global--FontSize--xs",
+    variableName: "--pf-v5-global--FontSize--xs",
     lineHeight: "1.5",
     fontFamily: "RedHatText",
     textStyle: "xs (RHT rg 12)"
@@ -106,7 +106,7 @@ export const styleProps = {
     fontWeight: "400",
     fontWeightText: "400 (regular)",
     fontSize: "16px",
-    variableName: "--pf-global--FontSize--md",
+    variableName: "--pf-v5-global--FontSize--md",
     lineHeight: "1.5",
     fontFamily: "RedHatMono",
     textStyle: "Code"
@@ -121,10 +121,10 @@ export const TypographyGrid = ({title, note, symbol, fontWeight, fontWeightText,
     </PfStyledText>
     <Grid gutter="sm">
       <GridItem span={12}>
-        <table className="pf-c-table pf-m-compact ws-typography-tableTypography" aria-label="typography usage guidelines breakout">
+        <table className="pf-v5-c-table pf-m-compact ws-typography-tableTypography" aria-label="typography usage guidelines breakout">
           <tbody>
             <tr>
-              <td className="pf-u-pr-sm">Font family:</td>
+              <td className="pf-v5-u-pr-sm">Font family:</td>
               <td>{fontFamily}</td>
             </tr>
             <tr>
@@ -177,7 +177,7 @@ export const Spacer = ({color, size, description, showBorder}) => {
     backgroundColor = '#1b8793';
   }
   return (
-    <div className="pf-l-flex pf-m-space-items-md pf-m-align-items-center">
+    <div className="pf-v5-l-flex pf-m-space-items-md pf-m-align-items-center">
       {description && <div>{description}</div>}
       <div className={`
         ws-typography-spacerBox-size-${size}

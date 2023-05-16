@@ -1,7 +1,7 @@
 {
   "name": "@patternfly/documentation-framework",
   "description": "A framework to build documentation for PatternFly.",
-  "version": "2.0.0-alpha.31",
+  "version": "2.0.0-alpha.41",
   "author": "Red Hat",
   "license": "MIT",
   "private": false,
@@ -84,10 +84,10 @@
     "webpack-merge": "5.8.0"
   },
   "peerDependencies": {
-    "@patternfly/patternfly": "^5.0.0-alpha.37",
-    "@patternfly/react-code-editor": "^5.0.0-alpha.84",
-    "@patternfly/react-core": "^5.0.0-alpha.83",
-    "@patternfly/react-table": "^5.0.0-alpha.85",
+    "@patternfly/patternfly": "^5.0.0-alpha.46",
+    "@patternfly/react-code-editor": "^5.0.0-alpha.92",
+    "@patternfly/react-core": "^5.0.0-alpha.91",
+    "@patternfly/react-table": "^5.0.0-alpha.93",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0"
   }

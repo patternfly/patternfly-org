@@ -65,7 +65,7 @@ const HeaderTools = ({
   useEffect(() => {
     // reattach algolia to input each time search is expanded
     if (hasSearch && isSearchExpanded) {
-      attachDocSearch(algolia, '.ws-global-search .pf-c-text-input-group__text-input', 1000);
+      attachDocSearch(algolia, '.ws-global-search .pf-v5-c-text-input-group__text-input', 1000);
     }
   }, [isSearchExpanded])
 
@@ -84,7 +84,7 @@ const HeaderTools = ({
           {hasDarkThemeSwitcher && (
             <ToolbarItem>
               <Switch id="ws-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
-                document.querySelector('html').classList.toggle('pf-theme-dark')} />
+                document.querySelector('html').classList.toggle('pf-v5-theme-dark')} />
             </ToolbarItem>
           )}
           {hasSearch && (
@@ -178,7 +178,7 @@ export function attachDocSearch(algolia, inputSelector, timeout) {
       inputSelector,
       autocompleteOptions: {
         hint: false,
-        appendTo: `.ws-global-search .pf-c-text-input-group`,
+        appendTo: `.ws-global-search .pf-v5-c-text-input-group`,
       },
       debug: process.env.NODE_ENV !== 'production',
       ...algolia

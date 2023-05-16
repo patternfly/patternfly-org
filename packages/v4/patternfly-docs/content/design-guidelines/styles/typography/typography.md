@@ -34,65 +34,65 @@ The table below lists all common text styles that are used in PatternFly applica
 
 <TitleLevel
   title="Super hero heading (4xl)"
-  className="pf-c-title pf-m-lg"
+  className="pf-v5-c-title pf-m-lg"
   asGrid
   note="Use only for extra large titles in cards or similar locations. Do not use for page titles"
   styleProps={styleProps.superHero} />
 
 <TitleLevel
     title="Hero heading (3xl)"
-    className="pf-c-title pf-m-lg"
+    className="pf-v5-c-title pf-m-lg"
     asGrid
     note="Use only for extra large titles in cards or similar locations. Do not use for page titles"
     styleProps={styleProps.hero} />
 
 <TitleLevel
   title="First level heading (2xl, h1)"
-  className="pf-c-title pf-m-lg"
+  className="pf-v5-c-title pf-m-lg"
   asGrid
   note="Only one first level/h1 heading should ever exist on a page"
   styleProps={styleProps.first} />
 
 <TitleLevel
   title="Second level heading (xl, h2)"
-  className="pf-c-title pf-m-lg"
+  className="pf-v5-c-title pf-m-lg"
   asGrid
   styleProps={styleProps.second} />
 
 <TitleLevel
   title="Third level heading (lg, h3)"
-  className="pf-c-title pf-m-lg"
+  className="pf-v5-c-title pf-m-lg"
   asGrid
   styleProps={styleProps.third} />
 
 <TitleLevel
   title="Fourth level heading (md, h4)"
-  className="pf-c-title pf-m-lg"
+  className="pf-v5-c-title pf-m-lg"
   asGrid
   styleProps = {styleProps.fourth} />
 
 <TitleLevel
   title="Default body text"
-  className="pf-c-title pf-m-lg"
+  className="pf-v5-c-title pf-m-lg"
   asGrid
   note="This is the default text style for paragraphs, lists, tables, etc. Some components use RedHatText at 700 font weight, which is RedHatText Medium (such as alerts and navigation)"
   styleProps = {styleProps.body} />
 
 <TitleLevel
   title="Small text"
-  className="pf-c-title pf-m-lg"
+  className="pf-v5-c-title pf-m-lg"
   asGrid
   styleProps = {styleProps.small} />
 
 <TitleLevel
   title="Tiny text"
-  className="pf-c-title pf-m-lg"
+  className="pf-v5-c-title pf-m-lg"
   asGrid
   styleProps = {styleProps.tiny} />
 
 <TitleLevel
   title="Code"
-  className="pf-c-title pf-m-lg"
+  className="pf-v5-c-title pf-m-lg"
   asGrid
   note="Used for code blocks "
   styleProps = {styleProps.code} />

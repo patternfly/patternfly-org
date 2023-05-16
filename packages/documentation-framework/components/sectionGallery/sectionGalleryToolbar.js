@@ -22,7 +22,7 @@ export const SectionGalleryToolbar = ({ galleryItems, searchTerm, setSearchTerm,
           </ToggleGroup>
         </ToolbarItem>
       </ToolbarGroup>
-      <ToolbarItem variant="pagination" spacer={{default: 'spacerMd', md: 'spacerNone'}} style={{'--pf-c-toolbar__item--MinWidth': "max-content"}}>
+      <ToolbarItem variant="pagination" spacer={{default: 'spacerMd', md: 'spacerNone'}} style={{'--pf-v5-c-toolbar__item--MinWidth': "max-content"}}>
         <Text component={TextVariants.small}>{ galleryItems.length }{ countText }</Text>
       </ToolbarItem>
     </ToolbarContent>

@@ -23,10 +23,10 @@ The following props/attributes have been added for you or are props/attributes t
 
 | React prop | React component that it should be applied to | Which HTML element it appears on in markup | Reason used |
 | -- | -- | -- | -- |
-| `aria-label` | PageHeader | .pf-c-button.pf-m-plain | Labels the navigation toggle button |
-| `aria-controls` | PageHeader | .pf-c-button.pf-m-plain | Identifies the element controlled by the toggle |
-| `mainAriaLabel` | Page | .pf-c-page__main | Labels the main section |
-| `mainContainerId` | Page | .pf-c-page__main | An id to use for the [role="main"] element |
-| `mainTabIndex` | Page | .pf-c-page__main | A tabIndex to use for the [role="main"] element. Defaults to -1; make this value null to unset it |
-| `skipToContent` | Page | .pf-c-button.pf-m-primary.pf-c-skip-to-content | Skip to content component for the page |
-| `role` | Page | .pf-c-page__main | Value for the role on the `<main>` element |
+| `aria-label` | PageHeader | .pf-v5-c-button.pf-m-plain | Labels the navigation toggle button |
+| `aria-controls` | PageHeader | .pf-v5-c-button.pf-m-plain | Identifies the element controlled by the toggle |
+| `mainAriaLabel` | Page | .pf-v5-c-page__main | Labels the main section |
+| `mainContainerId` | Page | .pf-v5-c-page__main | An id to use for the [role="main"] element |
+| `mainTabIndex` | Page | .pf-v5-c-page__main | A tabIndex to use for the [role="main"] element. Defaults to -1; make this value null to unset it |
+| `skipToContent` | Page | .pf-v5-c-button.pf-m-primary.pf-v5-c-skip-to-content | Skip to content component for the page |
+| `role` | Page | .pf-v5-c-page__main | Value for the role on the `<main>` element |

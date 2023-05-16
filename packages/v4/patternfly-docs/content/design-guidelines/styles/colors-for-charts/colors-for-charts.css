@@ -203,6 +203,6 @@
 	max-width: 680px;
 }
 
-.pf-c-divider.ws-chart-colors-divider {
-	margin-top: var(--pf-c-content--h2--MarginTop);
+.pf-v5-c-divider.ws-chart-colors-divider {
+	margin-top: var(--pf-v5-c-content--h2--MarginTop);
 }

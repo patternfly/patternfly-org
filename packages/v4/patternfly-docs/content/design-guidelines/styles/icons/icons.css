@@ -1,8 +1,8 @@
-.pf-c-divider.ws-icons-divider {
+.pf-v5-c-divider.ws-icons-divider {
   margin: 48px 0;
 }
 
-.pf-c-divider.ws-icons-divider:first-of-type {
+.pf-v5-c-divider.ws-icons-divider:first-of-type {
   margin-top:8px;
 }
 
@@ -81,7 +81,7 @@
   text-align: center;
 }
 
-.ws-icon-size-examples .ws-icons-appLauncher .pf-c-app-launcher__menu {
+.ws-icon-size-examples .ws-icons-appLauncher .pf-v5-c-app-launcher__menu {
   position: static;
 }
 
@@ -93,12 +93,12 @@
   width: 100%;
 }
 
-.ws-icon-size-examples .ws-icons-appLauncher .pf-c-app-launcher__toggle,
-.ws-icon-size-examples .ws-icons-appLauncher .pf-c-app-launcher__group:first-child {
+.ws-icon-size-examples .ws-icons-appLauncher .pf-v5-c-app-launcher__toggle,
+.ws-icon-size-examples .ws-icons-appLauncher .pf-v5-c-app-launcher__group:first-child {
   display: none;
 }
 
-.ws-icon-size-examples .pf-c-card__body:first-child {
+.ws-icon-size-examples .pf-v5-c-card__body:first-child {
   padding: 16px;
   padding-top: 8px;
 }
@@ -118,7 +118,7 @@
   width: 100%;
 }
 
-.ws-icons-empty-state.pf-c-empty-state {
+.ws-icons-empty-state.pf-v5-c-empty-state {
   padding-top: 0;
   padding-bottom: 0;
 }

@@ -1,5 +1,5 @@
 .ws-community-page .ws-building-grid .ws-mdx-p {
-  margin: var(--pf-c-content--MarginTop) 0 var(--pf-c-content--MarginBottom);
+  margin: var(--pf-v5-c-content--MarginTop) 0 var(--pf-v5-c-content--MarginBottom);
 }
 
 .ws-community-page .ws-building-grid h4:last-child {
@@ -7,11 +7,11 @@
 }
 
 .ws-community-page .ws-keep-growing {
-  margin-top: var(--pf-global--spacer--2xl);
+  margin-top: var(--pf-v5-global--spacer--2xl);
 }
 
 .ws-community-page .ws-get-in-touch {
-  margin-top: var(--pf-global--spacer--lg);
+  margin-top: var(--pf-v5-global--spacer--lg);
 }
 
 .ws-community-grid-img {

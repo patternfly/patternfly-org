@@ -4,26 +4,26 @@
 
 .ws-section-gallery {
   /* top placement */
-  margin-top: calc(var(--pf-c-page__main-section--PaddingTop) * -1);
+  margin-top: calc(var(--pf-v5-c-page__main-section--PaddingTop) * -1);
 }
 
 /* Toolbar styles */
-.ws-section-gallery .pf-c-toolbar {
-  margin-left: calc(var(--pf-c-page__main-section--PaddingLeft) * -1);
-  border-bottom: var(--pf-c-page__sidebar--m-light--BorderRightWidth) solid var(--pf-c-page__sidebar--m-light--BorderRightColor);
-  margin-bottom: var(--pf-global--spacer--md);
-  width: calc(100% + var(--pf-c-page__main-section--PaddingLeft) + var(--pf-c-page__main-section--PaddingRight));
+.ws-section-gallery .pf-v5-c-toolbar {
+  margin-left: calc(var(--pf-v5-c-page__main-section--PaddingLeft) * -1);
+  border-bottom: var(--pf-v5-c-page__sidebar--m-light--BorderRightWidth) solid var(--pf-v5-c-page__sidebar--m-light--BorderRightColor);
+  margin-bottom: var(--pf-v5-global--spacer--md);
+  width: calc(100% + var(--pf-v5-c-page__main-section--PaddingLeft) + var(--pf-v5-c-page__main-section--PaddingRight));
   /* avoid hoverable data list items overlapping toolbar */
-  z-index: calc(var(--pf-global--ZIndex--xs) + 2);
+  z-index: calc(var(--pf-v5-global--ZIndex--xs) + 2);
 }
 
 /* Match toolbar left-padding to gallery left-padding */
-.ws-section-gallery .pf-c-toolbar .pf-c-toolbar__content {
-  --pf-c-toolbar__content--PaddingLeft: var(--pf-c-page__main-section--PaddingLeft);
+.ws-section-gallery .pf-v5-c-toolbar .pf-v5-c-toolbar__content {
+  --pf-v5-c-toolbar__content--PaddingLeft: var(--pf-v5-c-page__main-section--PaddingLeft);
 }
 
 /* Avoid toolbar wrap on smaller screens */
-.ws-section-gallery .pf-c-toolbar__content-section {
+.ws-section-gallery .pf-v5-c-toolbar__content-section {
   flex-wrap: nowrap;
 }
 
@@ -34,11 +34,11 @@
 }
 
 /* Ensure same height for all cards in a gallery row */
-.ws-section-gallery .pf-c-card {
+.ws-section-gallery .pf-v5-c-card {
   height: 100%;
 }
 
 /* Limit width for data list view only */
-.ws-section-gallery .pf-c-data-list {
+.ws-section-gallery .pf-v5-c-data-list {
   max-width: 956px;
 }

@@ -3,52 +3,52 @@
 }
 
 .ws-example {
-  margin-top: var(--pf-global--spacer--lg);
-  margin-bottom: var(--pf-global--spacer--lg);
+  margin-top: var(--pf-v5-global--spacer--lg);
+  margin-bottom: var(--pf-v5-global--spacer--lg);
 }
 
 .ws-example > .ws-example-header {
-  padding: var(--pf-global--spacer--md);
+  padding: var(--pf-v5-global--spacer--md);
 }
 
 .ws-example-header > .ws-example-heading:not(:last-child) {
-  margin-bottom: var(--pf-global--spacer--md);
+  margin-bottom: var(--pf-v5-global--spacer--md);
 }
 
-.ws-code-editor:not(.ws-example-code-expanded) > .pf-c-code-editor__header::before {
-  --pf-c-code-editor__header--before--BorderBottomWidth: 0;
+.ws-code-editor:not(.ws-example-code-expanded) > .pf-v5-c-code-editor__header::before {
+  --pf-v5-c-code-editor__header--before--BorderBottomWidth: 0;
 }
 
 .ws-code-editor-control {
-  --pf-c-button--m-control--BackgroundColor: transparent;
-  --pf-c-button--m-control--active--BackgroundColor: transparent;
-  --pf-c-button--m-control--focus--BackgroundColor: transparent;
-  --pf-c-button--m-control--hover--BackgroundColor: transparent;
+  --pf-v5-c-button--m-control--BackgroundColor: transparent;
+  --pf-v5-c-button--m-control--active--BackgroundColor: transparent;
+  --pf-v5-c-button--m-control--focus--BackgroundColor: transparent;
+  --pf-v5-c-button--m-control--hover--BackgroundColor: transparent;
 }
 
-.ws-code-editor-control.pf-c-button {
-  --pf-c-button--after--BorderWidth: 0;
+.ws-code-editor-control.pf-v5-c-button {
+  --pf-v5-c-button--after--BorderWidth: 0;
 }
 
 .ws-preview {
-  padding: var(--pf-global--spacer--md);
-  background-color: var(--pf-global--BackgroundColor--100);
-  border-bottom: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--300);
+  padding: var(--pf-v5-global--spacer--md);
+  background-color: var(--pf-v5-global--BackgroundColor--100);
+  border-bottom: var(--pf-v5-global--BorderWidth--sm) solid var(--pf-v5-global--BorderColor--300);
   transition: width .2s ease-in-out;
 }
 
 .ws-core-c-page.ws-preview > .ws-preview-html,
-.ws-react-c-page.ws-preview > .pf-c-page {
+.ws-react-c-page.ws-preview > .pf-v5-c-page {
   overflow: hidden;
 }
 
 .ws-editor {
-  font-size: var(--pf-global--FontSize--md);
+  font-size: var(--pf-v5-global--FontSize--md);
 }
 
 .ws-editor .token.punctuation,
 .ws-editor .token.operator {
-  color: var(--pf-global--danger-color--100);
+  color: var(--pf-v5-global--danger-color--100);
 }
 
 .ws-preview__thumbnail-link {
@@ -100,22 +100,22 @@
   color: rgba(255,255,255,.4);
 }
 
-.pf-c-badge.ws-beta-badge {
-  --pf-c-badge--m-unread--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-badge--m-unread--Color: var(--pf-global--primary-color--100);
-  border: var(--pf-global--BorderWidth--sm) solid var(--pf-global--primary-color--100);
+.pf-v5-c-badge.ws-beta-badge {
+  --pf-v5-c-badge--m-unread--BackgroundColor: var(--pf-v5-global--BackgroundColor--100);
+  --pf-v5-c-badge--m-unread--Color: var(--pf-v5-global--primary-color--100);
+  border: var(--pf-v5-global--BorderWidth--sm) solid var(--pf-v5-global--primary-color--100);
 }
 
 .ws-prop-required {
-  color: var(--pf-global--danger-color--100);
+  color: var(--pf-v5-global--danger-color--100);
 }
 
 .ws-theme-switch-full-page {
   position: fixed;
   right: 0;
   bottom: 0;
-  padding: var(--pf-global--spacer--md);
-  z-index: var(--pf-global--ZIndex--2xl);
+  padding: var(--pf-v5-global--spacer--md);
+  z-index: var(--pf-v5-global--ZIndex--2xl);
 }
 
 .ws-theme-switch-full-page::before {
@@ -125,11 +125,11 @@
   content: "";
   width: 100%;
   height: 100%;
-  background-color: var(--pf-global--BackgroundColor--100);
+  background-color: var(--pf-v5-global--BackgroundColor--100);
   opacity: 0.8;
-  box-shadow: var(--pf-global--BoxShadow--sm);
+  box-shadow: var(--pf-v5-global--BoxShadow--sm);
 }
 
-.pf-theme-dark .ws-theme-switch-full-page::before {
-  background-color: var(--pf-global--BackgroundColor--300);
+.pf-v5-theme-dark .ws-theme-switch-full-page::before {
+  background-color: var(--pf-v5-global--BackgroundColor--300);
 }

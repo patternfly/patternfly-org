@@ -60,9 +60,9 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `aria-invalid={[true or false]}` | `.pf-c-check__input` | Notifies users of assistive technologies whether the checkbox value is invalid. |
-| `aria-label="[text that labels the checkbox]"` | `.pf-c-check__input` | Adds an accessible name to the checkbox when there is no visible text label. **Required** when there is no visible text label. If there is already a visible text label via the `label` element, this attribute should not be passed in.|
-| `id` | `.pf-c-check__input` | Links the checkbox input with its text label, which allows clicking the label to toggle the checkbox. The linked label text is also used as the accessible name of the checkbox. **Required**. |
-| `required` | `.pf-c-check__input` | Notifies users that the checkbox must be checked. **Required** when users must check the checkbox. |
+| `aria-invalid={[true or false]}` | `.pf-v5-c-check__input` | Notifies users of assistive technologies whether the checkbox value is invalid. |
+| `aria-label="[text that labels the checkbox]"` | `.pf-v5-c-check__input` | Adds an accessible name to the checkbox when there is no visible text label. **Required** when there is no visible text label. If there is already a visible text label via the `label` element, this attribute should not be passed in.|
+| `id` | `.pf-v5-c-check__input` | Links the checkbox input with its text label, which allows clicking the label to toggle the checkbox. The linked label text is also used as the accessible name of the checkbox. **Required**. |
+| `required` | `.pf-v5-c-check__input` | Notifies users that the checkbox must be checked. **Required** when users must check the checkbox. |
 | `for="[id of the associated checkbox]"` | `label` | Links the `label` element to the checkbox, providing a larger clickable area to toggle the checkbox. **Required** if the checkbox is not already wrapped inside the `label` element. |
-|`.pf-c-check__label-required` | `label > span` | Adds styling to visually notify users that the checkbox is required and to differentiate the content from the checkbox label. Usually an asterisk `*` is used to visually convey that an input is required. **Required** when users must check the checkbox. |
+|`.pf-v5-c-check__label-required` | `label > span` | Adds styling to visually notify users that the checkbox is required and to differentiate the content from the checkbox label. Usually an asterisk `*` is used to visually convey that an input is required. **Required** when users must check the checkbox. |

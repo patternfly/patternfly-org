@@ -64,6 +64,6 @@ The following HTML attributes and PatternFly classes can be used for more fine-t
 
 | Attribute or class | Applied to | Reason | 
 |---|---|---|
-| `aria-label="[text that labels the breadcrumb]"` | `.pf-c-breadcrumb` | Adds an accessible name to the breadcrumb's internal `nav` element. |
-| `aria-current="page"` | `.pf-c-breadcrumb__item`, `.pf-c-breadcrumb__link` | Indicates the current page to users of assistive technologies. |
+| `aria-label="[text that labels the breadcrumb]"` | `.pf-v5-c-breadcrumb` | Adds an accessible name to the breadcrumb's internal `nav` element. |
+| `aria-current="page"` | `.pf-v5-c-breadcrumb__item`, `.pf-v5-c-breadcrumb__link` | Indicates the current page to users of assistive technologies. |
 

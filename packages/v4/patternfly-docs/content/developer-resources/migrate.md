@@ -40,7 +40,7 @@ If you run into trouble and need support, the PatternFly team is here to help. S
 
 Use the following command to update your configuration in the `src/patternfly/sass-utilities/scss-variables.scss` file to state false:
 
-`$pf-global--enable-reset: false !default;`
+`$pf-v5-global--enable-reset: false !default;`
 
 **Note:** You will need to compile your CSS manually if you want to run PatternFly 3 and PatternFly 4 together.
 
