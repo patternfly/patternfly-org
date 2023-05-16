@@ -1,11 +1,11 @@
 ---
-id: Utility classes
-title: About
+id: About
+title: Utility classes
 section: utility-classes
 sortValue: 1
 ---
 
-# Utility classes
+# About
 
 PatternFly’s utility classes enable you to further customize and modify elements in your project without having to write any custom CSS.
 

@@ -1,11 +1,11 @@
 ---
-id: Extensions
-title: About
+id: About
+title: Extensions
 section: extensions
 sortValue: 1
 ---
 
-# Extensions 
+# About 
 
 Extensions are complex solutions that utilize multiple PatternFly components. They span products and platforms to drive consistent experiences across a user’s journey. 
 

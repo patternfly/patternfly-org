@@ -1,11 +1,11 @@
 ---
-id: Layouts
-title: About
+id: About
+title: Layouts
 section: layouts
 sortValue: 1
 ---
 
-# Layouts
+# About
 
 PatternFly’s layouts are used to place components on a page. They create a fully responsive structure to keep components organized and aligned across screen sizes. 
 
