@@ -120,7 +120,7 @@ Always use link buttons in the following cases:
 
 Icon buttons are useful in places where space is limited. For example, if you have too many actions within a menu, you could use a kebab icon to indicate more actions, or an export icon for exporting data. You can also use this button type for actions that are commonly associated with icons, like an exit icon to close a window or a hamburger icon to open a menu.
 
-For example, this toolbar uses an export icon as an action button due to limited space.
+For example, this toolbar uses a kebab icon as an action button due to limited space.
 
 <img src="./img/icon_button.png" alt="Example of kebab used as an icon button inside a toolbar" width="1159"/>
 
