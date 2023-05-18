@@ -59,12 +59,11 @@ npx @patternfly/pf-codemods <path to your source code> --exclude menu-search-ren
 
 4. Make note of the changes made in your product's the code base.
 
-5. Clean up and note the errors flagged by the linter that were not automatically fixed
+5. Note any errors flagged that were not automatically fixed and manually repair issues that are critical.
 
-6. Try building again
+6. Try building again.
 
-7. Try running code mods multiple times
-
+7. Try running Codemods multiple times.
 
 If you experience any issues, refer to the following resources to reach out to the PatternFly team.
 
