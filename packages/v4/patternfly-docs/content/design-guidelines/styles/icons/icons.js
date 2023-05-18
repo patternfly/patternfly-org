@@ -1063,6 +1063,13 @@ export const iconsData = [
   },
   {
     "Style": "pf-icon",
+    "Name": "pf-icon-multicuster",
+    "React_name": "MulticlusterIcon",
+    "Type": "Object",
+    "Contextual_usage": "Indicates a multicluster object",
+  },
+  {
+    "Style": "pf-icon",
     "Name": "pf-icon-network",
     "React_name": "NetworkIcon",
     "Type": "Object",
