@@ -62,7 +62,7 @@ const MDXChildTemplate = ({
           To learn more about the process, visit our <Link to="/get-started/about#beta-components">about page</Link> or our <a href="https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion">Beta components</a> page on GitHub.
         </InlineAlert>
       )}
-      {deprecated && (
+      {(deprecated || source === 'react-deprecated') && (
         <InlineAlert title="Deprecated feature" variant="warning">
           This implementation has been deprecated in favor of a newer implementation, and is no longer getting maintained or enhanced.
           {newImplementationLink && (
