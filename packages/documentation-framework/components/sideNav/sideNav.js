@@ -33,7 +33,7 @@ const NavItem = ({ text, href, isDeprecated, isBeta, isDemo }) => {
               }
               tabIndex={isNavOpen ? undefined : -1}
             >
-              <Flex>
+              <Flex spaceItems={{ default: 'spaceItemsSm'}}>
                 <FlexItem>{text}</FlexItem>
                 {(isBeta || isDemo || isDeprecated) && (
                   <FlexItem>
