@@ -34,6 +34,9 @@ const MDXChildTemplate = ({
   }
   if (cssVarsTitle && !toc.find(item => item.text === cssVarsTitle)) {
     toc.push({ text: cssVarsTitle });
+    if (cssPrefix.length > 1) {
+      toc.push(cssPrefix.map(cssPrefix => ({ text: `Prefixed with '${cssPrefix}'` })));
+    }
   }
   // We don't add `id`s in anchor-header.js for items where id === slugger(text)
   // in order to save ~10KB bandwidth.
@@ -109,12 +112,14 @@ const MDXChildTemplate = ({
               ))}
             </React.Fragment>
           )}
-          {cssVarsTitle && (
+          {cssPrefix.length > 0 && (
             <React.Fragment>
               <AutoLinkHeader size="h2" className="ws-h2" id="css-variables">
                 {cssVarsTitle}
               </AutoLinkHeader>
-              <CSSVariables prefix={cssPrefix} />
+              {cssPrefix.map(prefix => (
+                <CSSVariables autoLinkHeader={cssPrefix.length > 1} prefix={prefix} />
+              ))}
             </React.Fragment>
           )}
           {sourceLink && (
