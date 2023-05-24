@@ -36,7 +36,7 @@ Usage and behavior guidelines communicate standards and best practices for commo
 
 Content guidelines provide principles and best practices around writing for user experience along with general voice and style guidance.
 
-[**View design guidelines**](/guidelines/colors) <i className="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
+[**View design guidelines**](/design-foundations/colors/) <i className="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
 
 ## Additional tools
 
