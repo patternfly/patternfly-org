@@ -277,7 +277,7 @@
   },
   "select": {
     "illustration": "./images/component-illustrations/select.png",
-    "summary": "A <b>select</b> list enables users to select one or more items from a list. Use a select list when options are dynamic or variable. <br/><br/>A newer React implementation of the select will replace the existing implementation at the next major release. The documentation for the newer implementation is under the <Link to='/components/menus/select/react-deprecated'>React next</Link> tab, and this newer implementation can be imported from @patternfly/react-core/next."
+    "summary": "A <b>select</b> list enables users to select one or more items from a list. Use a select list when options are dynamic or variable. <br/><br/>A newer React implementation of the select will replace the existing implementation at the next major release. The documentation for the newer implementation is under the <Link to='/components/select/react-next'>React next</Link> tab, and this newer implementation can be imported from @patternfly/react-core/next."
   },
   "sidebar": {
     "illustration": "./images/component-illustrations/sidebar.png",
@@ -373,6 +373,6 @@
   },
   "wizard": {
     "illustration": "./images/component-illustrations/wizard.png",
-    "summary": "A <b>wizard</b> provides a guided workflow that offers a path to complete a task, create an object or objects, or finish a series of steps for some other outcome. Wizards should incite trust in the user and guide them through an otherwise overwhelming experience.<br/><br/>A newer React implementation of the wizard will replace the existing implementation at the next major release. The documentation for the newer implementation is under the <Link to='/components/wizard/react-next'>React next</Link> tab, and this newer implementation can be imported from @patternfly/react-core/next."
+    "summary": "A <b>wizard</b> provides a guided workflow that offers a path to complete a task, create an object or objects, or finish a series of steps for some other outcome. Wizards should incite trust in the user and guide them through an otherwise overwhelming experience.<br/><br/>A newer React implementation of the wizard will replace the existing implementation at the next major release. The documentation for the newer implementation is under the <Link to='/components/wizard/react-deprecated'>React next</Link> tab, and this newer implementation can be imported from @patternfly/react-core/next."
   }
 }
