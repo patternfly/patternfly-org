@@ -7,7 +7,7 @@ If you don't want multiple alerts to stack and fill the screen until the user di
 ![alert group overflow](./img/alert-group-overflow.png)
 
 ### [Calendar month](https://www.patternfly.org/v4/components/calendar-month)
-A calendar month com. This component is usually used with the date picker component, to display date options and selections.
+A calendar month component allows users to select and navigate between days, months and/or years. This component is usually used with the date picker component, to display date options and selections.
 
 ![calendar month](./img/calendar-month.png)
 

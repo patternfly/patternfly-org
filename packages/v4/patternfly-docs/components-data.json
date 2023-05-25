@@ -57,7 +57,7 @@
   },
   "calendar-month": {
     "illustration": "./images/component-illustrations/calendar-month.png",
-    "summary": "A <b>calendar month</b> com. This component is usually used with the date picker component, to display date options and selections. For more information about usage, view <Link to='/components/date-and-time/date-picker'>date picker guidelines</Link>."
+    "summary": "A <b>calendar month</b> component allows users to select and navigate between days, months and/or years. This component is usually used with the date picker component, to display date options and selections. For more information about usage, view <Link to='/components/date-and-time/date-picker'>date picker guidelines</Link>."
   },
   "card": {
     "illustration": "./images/component-illustrations/card.png",
