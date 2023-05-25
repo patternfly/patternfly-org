@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from '@reach/router';
-import { Badge, CodeBlock, CodeBlockCode, debounce, Switch } from '@patternfly/react-core';
+import { Button, CodeBlock, CodeBlockCode, debounce, Label, Switch, Tooltip } from '@patternfly/react-core';
 import * as reactCoreModule from '@patternfly/react-core';
 import * as reactCoreNextModule from '@patternfly/react-core/next';
 import * as reactCoreDeprecatedModule from '@patternfly/react-core/deprecated';
@@ -71,7 +71,11 @@ export const Example = ({
   // The image src thumbnail for the example
   thumbnail = missingThumbnail,
   // Whether the example shows demo capability
+  isDemo,
+  // Whether the example is open to further evolution
   isBeta,
+  // Whether the example is deprecated
+  isDeprecated,
   // Slugified source + title
   id,
   // Section in frontmatter of MD file (components, demos, etc)
@@ -157,7 +161,7 @@ export const Example = ({
         {hasDarkThemeSwitcher && (
           <div className="ws-theme-switch-full-page">
             <Switch id="ws-theme-switch" label="Dark theme" defaultChecked={false} onChange={() =>
-            document.querySelector('html').classList.toggle('pf-theme-dark')} />
+            document.querySelector('html').classList.toggle('pf-v5-theme-dark')} />
           </div>
         )}
       </div>
@@ -173,12 +177,36 @@ export const Example = ({
     + (loc.pathname.endsWith(source) ? '' : `/${source}`)
     + '/'
     + slugger(title);
-    
+
   return (
     <div className="ws-example">
       <div className="ws-example-header">
         <AutoLinkHeader
-          metaText={isBeta && <Badge className="ws-beta-badge pf-v5-u-ml-xs">Beta</Badge>}
+          metaText={
+            <React.Fragment>
+              {isBeta && (
+                <Tooltip content="This beta component is currently under review and is still open for further evolution.">
+                  <Button variant="plain">
+                    <Label isCompact color="blue">Beta</Label>
+                  </Button>
+                </Tooltip>
+              )}
+              {isDemo && (
+                <Tooltip content="Demos show how multiple components can be used in a single design.">
+                  <Button variant="plain">
+                    <Label isCompact color="purple">Demo</Label>
+                  </Button>
+                </Tooltip>
+              )}
+              {isDeprecated && (
+                <Tooltip content="Deprecated components are available for use but are no longer being maintained or enhanced.">
+                  <Button variant="plain">
+                    <Label isCompact color="grey">Deprecated</Label>
+                  </Button>
+                </Tooltip>
+              )}
+            </React.Fragment>
+          }
           size="h4"
           headingLevel="h3"
           className="ws-example-heading"
