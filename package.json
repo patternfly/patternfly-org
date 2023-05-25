@@ -10,6 +10,7 @@
     "develop:v5": "yarn workspace patternfly-org-4 develop",
     "build": "yarn build:v5",
     "build:analyze": "yarn workspace patternfly-org-4 build:analyze && yarn copy:v5",
+    "build:v4": "yarn build:v5",
     "build:v5": "yarn workspace patternfly-org-4 build && yarn copy:v5",
     "copy:v5": "rm -rf build/patternfly-org/v5 && mkdir -p build/patternfly-org && cp -r packages/v4/public build/patternfly-org/v5 && cp -r build/patternfly-org/v5/assets build/patternfly-org/assets",
     "clean": "lerna run clean && rm -rf build",
