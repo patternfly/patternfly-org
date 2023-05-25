@@ -53,12 +53,12 @@ const CommunityPage = () => {
         <Card>
           <CardBody>
             <img src={community2} alt="Map" className="ws-community-grid-img" />
-            <Title size="xl" className="ws-title" headingLevel="h3">Building PatternFly roadmaps</Title>
+            <Title size="xl" className="ws-title" headingLevel="h3">Building new features</Title>
             <p>
-              To stay on top of all changes and keep everyone informed, we regularly update PatternFly roadmaps. This gives us an opportunity to share what Flyers are working on and what updates we’re planning.
+              To continue to grow and improve our PatternFly component library, we welcome ideas from our community. Visit our GitHub discussions board to submit an idea, comment on, or upvote an existing request.
             </p>
             <Title size="xl" className="ws-title" headingLevel="h3">
-              <a href="https://github.com/orgs/patternfly/projects/4?fullscreen=true"><strong>Explore PatternFly roadmaps</strong></a>
+              <a href="https://github.com/orgs/patternfly/discussions/categories/feature-requests"><strong>View or submit feature requests</strong></a>
             </Title>
           </CardBody>
         </Card>
@@ -118,7 +118,7 @@ const CommunityPage = () => {
             <SplitItem style={{ marginRight: '12px' }}><QuestionIcon /></SplitItem>
             <SplitItem isFilled>
               <Title size="lg" className="ws-title" headingLevel="h3">Ask a question</Title>
-              <a href="//forum.patternfly.org/" target="_blank" rel="noopener noreferrer">PatternFly forum</a>
+              <a href="//github.com/orgs/patternfly/discussions" target="_blank" rel="noopener noreferrer">PatternFly discussions</a>
             </SplitItem>
           </Split>
         </GridItem>

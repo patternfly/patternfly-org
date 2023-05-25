@@ -3,6 +3,71 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.10.11 (2023-05-18)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.10.10 (2023-05-15)
+
+
+### Bug Fixes
+
+* broken link in search-input summary ([534611c](https://github.com/patternfly/patternfly-org/commit/534611c40d292ca71ac4579a2b01e6d8d751f3b0))
+
+
+
+
+
+## 1.10.9 (2023-05-11)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.10.8 (2023-05-10)
+
+
+### Bug Fixes
+
+* revert quickstarts dependency to fix docs ([#3524](https://github.com/patternfly/patternfly-org/issues/3524)) ([cc889e0](https://github.com/patternfly/patternfly-org/commit/cc889e07e1e2dfad1a2bdc24a921b9bfa21a193a))
+
+
+
+
+
+## 1.10.7 (2023-05-09)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 1.10.6 (2023-05-09)
+
+
+### Bug Fixes
+
+* update for special extensions release ([#3508](https://github.com/patternfly/patternfly-org/issues/3508)) ([7203f7f](https://github.com/patternfly/patternfly-org/commit/7203f7f6b57a57dc7c13c70eaffe7740511a94c9))
+
+
+
+
+
+## 1.10.5 (2023-05-03)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 1.10.4 (2023-03-27)
 
 
