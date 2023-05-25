@@ -1,20 +1,20 @@
 - uses: actions/setup-node@v1
   with:
-    node-version: '16'
+    node-version: "16"
 - uses: actions/cache@v2
   id: yarn-cache
-  name: Load  v4 npm deps from cache
+  name: Load  v5 npm deps from cache
   with:
-    path: '**/node_modules'
+    path: "**/node_modules"
     key: ${{ runner.os }}-yarn-14-${{ hashFiles('yarn.lock') }}
 - run: yarn install --frozen-lockfile
   if: steps.yarn-cache.outputs.cache-hit != 'true'
-# v4 build
+# v5 build
 - uses: actions/cache@v2
-  id: v4-cache
+  id: v5-cache
   name: Load webpack cache
   with:
-    path: 'packages/v4/.cache'
-    key: ${{ runner.os }}-v4-${{ hashFiles('yarn.lock') }}
-- run: yarn build:v4
+    path: "packages/v4/.cache"
+    key: ${{ runner.os }}-v5-${{ hashFiles('yarn.lock') }}
+- run: yarn build:v5
   name: Build docs
