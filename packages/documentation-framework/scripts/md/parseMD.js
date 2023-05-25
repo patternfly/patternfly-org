@@ -107,6 +107,7 @@ function toReactComponent(mdFilePath, source, buildMode) {
         deprecated: frontmatter.deprecated || false,
         beta: frontmatter.beta || false,
         demo: frontmatter.demo || false,
+        newImplementationLink: frontmatter.newImplementationLink || false,
         source,
         tabName: frontmatter.tabName || null,
         slug,

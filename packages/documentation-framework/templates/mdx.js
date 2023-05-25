@@ -60,9 +60,7 @@ const MDXChildTemplate = ({
       )}
       {beta && (
         <InlineAlert title="Beta feature">
-          This beta component is currently under review and is still open for further evolution. It is available for use in product.
-          Beta components are considered for promotion on a quarterly basis. Please join in and give us your feedback or submit any questions on the <a href="https://forum.patternfly.org/">PatternFly forum</a> or via <a href="//slack.patternfly.org/" target="_blank" rel="noopener noreferrer">Slack</a>.
-          To learn more about the process, visit our <Link to="/get-started/about#beta-components">about page</Link> or our <a href="https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion">Beta components</a> page on GitHub.
+          This beta component is currently under review and is still open for further evolution. It is available for use in product. Beta components are considered for promotion on a quarterly basis. Please join in and give us your feedback or submit any questions on the <a href="https://forum.patternfly.org/">PatternFly forum</a> or via <a href="//slack.patternfly.org/" target="_blank" rel="noopener noreferrer">Slack</a>. To learn more about the process, visit our <Link to="/get-started/about#beta-components">about page</Link> or our <a href="https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion">Beta components</a> page on GitHub.
         </InlineAlert>
       )}
       {(deprecated || source === 'react-deprecated') && (
@@ -73,7 +71,7 @@ const MDXChildTemplate = ({
               You can find the <Link to={newImplementationLink}>updated implementation here</Link>.
             </React.Fragment>
           )}
-          To learn more about the process, visit our <Link to="/get-started/about#major-release-cadence">about page</Link>.
+          {' '}To learn more about the process, visit our <Link to="/get-started/about#major-release-cadence">about page</Link>.
         </InlineAlert>
       )}
     </React.Fragment>
@@ -250,7 +248,7 @@ export const MDXTemplate = ({
                 <Flex display={{ default: 'inlineFlex' }}>
                   {isDeprecated && (
                     <FlexItem spacer={{ default: 'spacerSm' }}>
-                      <Tooltip content="Deprecated components are available for use, but are no longer being enhanced">
+                      <Tooltip content="Deprecated components are available for use but are no longer being maintained or enhanced.">
                         <Button isInline component="span" variant="link">
                           <Label color="grey">Deprecated</Label>
                         </Button>
@@ -259,7 +257,7 @@ export const MDXTemplate = ({
                   )}
                   {isDemo && (
                     <FlexItem spacer={{ default: 'spacerSm' }}>
-                      <Tooltip content="Demos show how multiple components can be used in a single design">
+                      <Tooltip content="Demos show how multiple components can be used in a single design.">
                         <Button isInline component="span" variant="link">
                           <Label color="purple">Demo</Label>
                         </Button>
@@ -268,7 +266,7 @@ export const MDXTemplate = ({
                   )}
                   {isBeta && (
                     <FlexItem spacer={{ default: 'spacerSm' }}>
-                      <Tooltip content="This beta component is currently under review and is still open for further evolution">
+                      <Tooltip content="This beta component is currently under review and is still open for further evolution.">
                         <Button isInline component="span" variant="link">
                           <Label color="blue">Beta</Label>
                         </Button>
