@@ -21,7 +21,7 @@ PatternFly currently supports the following extensions:
 
 A catalog view constructs an interface that is composed of different elements, like tiles, tabs, panels, and headers.
 
-[View examples and documentation for catalog view](extensions/catalog-view/catalog-item-header)
+[View examples and documentation for catalog view](/extensions/catalog-view/catalog-item-header)
 
 ### Log viewer 
 
