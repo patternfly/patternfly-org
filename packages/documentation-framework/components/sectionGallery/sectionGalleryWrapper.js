@@ -1,7 +1,7 @@
 import React from "react";
 import { groupedRoutes } from '../../routes';
 
-export const SectionGalleryWrapper = ({section, subsection, galleryItemsData, illustrations, includeSubsections, parseSubsections, children }) => {
+export const SectionGalleryWrapper = ({section, subsection, galleryItemsData, illustrations, includeSubsections, parseSubsections, defaultLayout, children }) => {
   let sectionRoutes = subsection ? groupedRoutes[section][subsection] : groupedRoutes[section];
   if (!includeSubsections || parseSubsections) {
     const sectionRoutesArr = Object.entries(sectionRoutes);
@@ -29,7 +29,7 @@ export const SectionGalleryWrapper = ({section, subsection, galleryItemsData, il
   }
 
   const [searchTerm, setSearchTerm] = React.useState('');
-  const [layoutView, setLayoutView] = React.useState('grid');
+  const [layoutView, setLayoutView] = React.useState(defaultLayout);
   const filteredItems = Object.entries(sectionRoutes)
     .filter(([itemName, { slug }]) => (
       // exclude current gallery page from results
@@ -41,15 +41,21 @@ export const SectionGalleryWrapper = ({section, subsection, galleryItemsData, il
   const sectionGalleryItems = filteredItems
     .sort(([itemName1], [itemName2]) => itemName1.localeCompare(itemName2))
     .map(([itemName, itemData], idx) => {
-      // Convert to lowercase-camelcase ex: File upload - multiple ==> file_upload_multiple
-      const illustrationName = itemName
-        .replace('-', '')
-        .replace('  ',' ')
-        .split(' ')
-        .join('_')
-        .toLowerCase();
-      const illustration = illustrations[illustrationName] || illustrations.default_placeholder;
-      const { title, id, sources, isSubsection = false } = itemData;
+      let illustration = null;
+      if (illustrations) {
+        // Convert to lowercase-camelcase ex: File upload - multiple ==> file_upload_multiple
+        const illustrationName = itemName
+          .replace('-', '')
+          .replace('  ',' ')
+          .split(' ')
+          .join('_')
+          .toLowerCase();
+        illustration = illustrations[illustrationName] || illustrations.default_placeholder;
+      }
+      const { sources, isSubsection = false } = itemData;
+      // Subsections don't have title or id, default to itemName aka sidenav text
+      const title = itemData.title || itemName;
+      const id = itemData.id || title;
       // Display beta label if tab other than a '-next' tab is marked Beta
       const isBeta = !isSubsection && sources && sources.some(src => src.beta && !src.source.includes('-next'));
       let slug = itemData.slug;
@@ -59,14 +65,14 @@ export const SectionGalleryWrapper = ({section, subsection, galleryItemsData, il
         const sortedSubsectionItems = subsectionItems.sort((
           [name1, {sortValue: sortValue1 = 50}],
           [name2, {sortValue: sortValue2 = 50}]
-        ) => {
-          if (sortValue1 === sortValue2) {
-            return name1.localeCompare(name2);
-          }
-          return sortValue1 > sortValue2 ? 1 : -1;
-        });
-        const firstSubsectionItem = sortedSubsectionItems[0];
-        slug = firstSubsectionItem[1].slug;   
+          ) => {
+            if (sortValue1 === sortValue2) {
+              return name1.localeCompare(name2);
+            }
+            return sortValue1 > sortValue2 ? 1 : -1;
+          });
+          const firstSubsectionItem = sortedSubsectionItems[0];
+          slug = firstSubsectionItem[1].slug;
       }
 
       return {

@@ -23,7 +23,8 @@ export const SectionGallery = ({
   parseSubsections = false,
   galleryItemsData,
   placeholderText,
-  countText
+  countText,
+  defaultLayout = "grid"
 }) => (
   <SectionGalleryWrapper
     illustrations={illustrations}
@@ -32,6 +33,7 @@ export const SectionGallery = ({
     includeSubsections={includeSubsections}
     parseSubsections={parseSubsections}
     galleryItemsData={galleryItemsData}
+    defaultLayout={defaultLayout}
   >
     {(sectionGalleryItems, searchTerm, setSearchTerm, layoutView, setLayoutView) => {
     return (

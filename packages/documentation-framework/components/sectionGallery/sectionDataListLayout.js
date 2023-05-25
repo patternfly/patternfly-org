@@ -21,7 +21,7 @@ export const SectionDataListLayout = ({ galleryItems, layoutView }) => {
   if (layoutView !== 'list') {
     return null;
   }
-  
+
   return (
     <DataList onSelectDataListItem={() => {}}>
       {galleryItems.map(({ idx, slug, illustration, itemName, title, isBeta, id, galleryItemsData }) => (
@@ -29,13 +29,13 @@ export const SectionDataListLayout = ({ galleryItems, layoutView }) => {
           <DataListItem>
             <DataListItemRow>
               <DataListItemCells dataListCells={[
-                <DataListCell width={1} key="illustration">
-                  {illustration && (
+                illustration && (
+                  <DataListCell width={1} key="illustration">
                     <div>
                       <img src={illustration} alt={`${itemName} illustration`} />
                     </div>
-                  )}
-                </DataListCell>,
+                  </DataListCell>
+                ),
                 <DataListCell width={5} key="text-description">
                   <Split className="pf-v5-u-mb-md">
                     <SplitItem isFilled>
