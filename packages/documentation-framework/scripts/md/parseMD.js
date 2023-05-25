@@ -104,6 +104,10 @@ function toReactComponent(mdFilePath, source, buildMode) {
         id: frontmatter.id,
         section: frontmatter.section || '',
         subsection: frontmatter.subsection || '',
+        deprecated: frontmatter.deprecated || false,
+        beta: frontmatter.beta || false,
+        demo: frontmatter.demo || false,
+        newImplementationLink: frontmatter.newImplementationLink || false,
         source,
         tabName: frontmatter.tabName || null,
         slug,
@@ -132,9 +136,6 @@ function toReactComponent(mdFilePath, source, buildMode) {
       }
       if (frontmatter.optIn) {
         pageData.optIn = frontmatter.optIn;
-      }
-      if (frontmatter.beta) {
-        pageData.beta = frontmatter.beta;
       }
       if (frontmatter.cssPrefix) {
         pageData.cssPrefix = Array.isArray(frontmatter.cssPrefix)
@@ -293,6 +294,8 @@ function sourceMDFile(file, source, buildMode) {
       tabName: pageData.tabName,
       ...(pageData.hideNavItem && { hideNavItem: pageData.hideNavItem }),
       ...(pageData.beta && { beta: pageData.beta }),
+      ...(pageData.deprecated && { deprecated: pageData.deprecated }),
+      ...(pageData.demo && { demo: pageData.demo }),
       ...(pageData.sortValue && { sortValue: pageData.sortValue }),
       ...(pageData.subsectionSortValue && { subsectionSortValue: pageData.subsectionSortValue })
     };
