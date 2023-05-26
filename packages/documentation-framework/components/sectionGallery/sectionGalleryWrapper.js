@@ -33,7 +33,7 @@ export const SectionGalleryWrapper = ({section, subsection, galleryItemsData, il
   const filteredItems = Object.entries(sectionRoutes)
     .filter(([itemName, { slug }]) => (
       // exclude current gallery page from results
-      slug !== location.pathname &&
+      !location.pathname.endsWith(slug) &&
       itemName
         .toLowerCase()
         .includes(searchTerm.toLowerCase())
