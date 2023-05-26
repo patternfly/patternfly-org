@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.45 (2023-05-25)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.44 (2023-05-25)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.43 (2023-05-25)
+
+
+### Features
+
+* **labels:** add deprecated/demo/beta labels to headers + nav items ([#3547](https://github.com/patternfly/patternfly-org/issues/3547)) ([010a0e0](https://github.com/patternfly/patternfly-org/commit/010a0e05baea661964660d2a733569a34abbf243))
+
+
+
+
+
+# 2.0.0-alpha.42 (2023-05-18)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 # 2.0.0-alpha.41 (2023-05-15)
 
 
