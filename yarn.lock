@@ -2611,6 +2611,18 @@
     react-dropzone "^14.2.3"
     tslib "^2.5.0"
 
+"@patternfly/react-core@^5.0.0-alpha.115":
+  version "5.0.0-alpha.115"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-5.0.0-alpha.115.tgz#e25b56e3b4fa44675d8ce8f764742e5fc6cb435e"
+  integrity sha512-hkpu7KbUeMGukuF34QxOuTHUd5EnVuhH5VZ0S9IaOrgRiXnK/xZsf5YQPj/2TL4lx8QOPiOOzDzvxLgpNSYaBQ==
+  dependencies:
+    "@patternfly/react-icons" "^5.0.0-alpha.19"
+    "@patternfly/react-styles" "^5.0.0-alpha.16"
+    "@patternfly/react-tokens" "^5.0.0-alpha.14"
+    focus-trap "7.4.2"
+    react-dropzone "^14.2.3"
+    tslib "^2.5.0"
+
 "@patternfly/react-core@^5.0.0-alpha.50":
   version "5.0.0-alpha.59"
   resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-5.0.0-alpha.59.tgz#113de42c9ca6c90dedeaec88dc50b0fd1043d5ea"
@@ -2647,7 +2659,7 @@
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-4.93.6.tgz#4aff18724afa30157e3ffd6a6414951dbb39dcb3"
   integrity sha512-ZrXegc/81oiuTIeWvoHb3nG/eZODbB4rYmekBEsrbiysyO7m/sUFoi/RLvgFINrRoh6YCJqL5fj06Jg6d7jX1g==
 
-"@patternfly/react-icons@^5.0.0-alpha.19", "@patternfly/react-icons@^5.0.0-alpha.7", "@patternfly/react-icons@^5.0.0-alpha.8":
+"@patternfly/react-icons@^5.0.0-alpha.19":
   version "5.0.0-alpha.19"
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-5.0.0-alpha.19.tgz#b94cc9352f5d2a11b8887fb9dc0732cc24c829ef"
   integrity sha512-jyVSK6f9ueIO+pI2K2njI/4qdQR9WK953IUJtQ6PtNhLHKsAHOnqwHjBUrqxWOBZ+ty5MpqHPoB9Yd34i8vcxg==
