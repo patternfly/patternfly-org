@@ -4,7 +4,7 @@ section: patterns
 ---
 
 ## Bulk selection
-Use a bulk selection pattern when you want to select or deselect multiple items in a content view (list, table, or card grid). The bulk selector uses a [Split button](/components/dropdown/react#split-button) component to control selection from the [Toolbar](/components/toolbar). Besides controlling selection, the bulk selector reflects the selection status of the related component (partially selected, all items selected, or no items selected).
+Use a bulk selection pattern when you want to select or deselect multiple items in a content view (list, table, or card grid). The bulk selector uses a [Split button](/components/menus/dropdown/html) component to control selection from the [Toolbar](/components/toolbar). Besides controlling selection, the bulk selector reflects the selection status of the related component (partially selected, all items selected, or no items selected).
 
 ## Bulk selector
 The bulk selector is created using a Split button and is always located as the leftmost item in a toolbar.

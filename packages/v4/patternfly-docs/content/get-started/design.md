@@ -120,7 +120,7 @@ The layout for all visual elements in Patternfly is determined by spacers. The s
 
 The [template library](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89) also contains examples of spacer use to clarify where elements should be placed within a given page or design.  These templates have been created in a way that reduces a user’s need to think about spacers. An example of a Login form template can be seen here with different sized spacers - demonstrated by their different colors - used to separate each symbol/component within the layout.
 
-To see more information about spacers and their use please see our [spacer guidelines](/guidelines/spacers).
+To see more information about spacers and their use please see our [spacer guidelines](/design-foundations/spacers).
 
 ### Layer styles
 Symbols in the symbol are organized by component; after selecting a component, you’ll see the variations and states of that component.
