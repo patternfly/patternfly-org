@@ -254,4 +254,4 @@ Use specific, action-focused labels that match what the user will see when they 
 
 ## Accessibility 
 
-For information regarding accessibility, visit the [button accessibility page](components/button/accessibility).
+For information regarding accessibility, visit the [button accessibility page](/components/button/accessibility).
