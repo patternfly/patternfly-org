@@ -82,7 +82,7 @@ Some use cases may call for a two-lined toolbar. If your toolbar spans two lines
 
 <img src="./img/In toolbar filter group vertical.png" alt="Example of date picker in toolbar filter group - two liner" width="457"/>
 
-For more information about using different types of filters, see our [filters guidelines](/guidelines/filters).
+For more information about using different types of filters, see our [filters guidelines](/patterns/filters).
 
 ##### Additional dropdown for simplified date-range filtering 
 Add an optional dropdown to date-range filters within a toolbar to allow users to filter by the most common date-range options associated with the corresponding table. 
