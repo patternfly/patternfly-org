@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageSection, Title, PageSectionVariants, BackToTop, PageGroup, Page, Text, TextContent } from '@patternfly/react-core';
+import { PageSection, Title, Tooltip, PageSectionVariants, Button, BackToTop, Flex, FlexItem, PageGroup, Page, Text, TextContent, Label } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/esm/icons/external-link-alt-icon';
 import { Router, useLocation } from '@reach/router';
@@ -22,6 +22,8 @@ const MDXChildTemplate = ({
     cssPrefix = [],
     optIn,
     beta,
+    deprecated,
+    newImplementationLink,
     functionDocumentation = []
   } = Component.getPageData();
   const cssVarsTitle = cssPrefix.length > 0 && 'CSS variables';
@@ -32,6 +34,9 @@ const MDXChildTemplate = ({
   }
   if (cssVarsTitle && !toc.find(item => item.text === cssVarsTitle)) {
     toc.push({ text: cssVarsTitle });
+    if (cssPrefix.length > 1) {
+      toc.push(cssPrefix.map(cssPrefix => ({ text: `Prefixed with '${cssPrefix}'` })));
+    }
   }
   // We don't add `id`s in anchor-header.js for items where id === slugger(text)
   // in order to save ~10KB bandwidth.
@@ -55,14 +60,22 @@ const MDXChildTemplate = ({
       )}
       {beta && (
         <InlineAlert title="Beta feature">
-          This beta component is currently under review and is still open for further evolution. It is available for use in product.
-          Beta components are considered for promotion on a quarterly basis. Please join in and give us your feedback or submit any questions on the <a href="https://forum.patternfly.org/">PatternFly forum</a> or via <a href="//slack.patternfly.org/" target="_blank" rel="noopener noreferrer">Slack</a>.
-          To learn more about the process, visit our <Link to="/get-started/about#beta-components">about page</Link> or our <a href="https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion">Beta components</a> page on GitHub.
+          This beta component is currently under review and is still open for further evolution. It is available for use in product. Beta components are considered for promotion on a quarterly basis. Please join in and give us your feedback or submit any questions on the <a href="https://forum.patternfly.org/">PatternFly forum</a> or via <a href="//slack.patternfly.org/" target="_blank" rel="noopener noreferrer">Slack</a>. To learn more about the process, visit our <Link to="/get-started/about#beta-components">about page</Link> or our <a href="https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion">Beta components</a> page on GitHub.
+        </InlineAlert>
+      )}
+      {(deprecated || source === 'react-deprecated') && (
+        <InlineAlert title="Deprecated feature" variant="warning">
+          This implementation has been deprecated in favor of a newer implementation, and is no longer getting maintained or enhanced.
+          {newImplementationLink && (
+            <React.Fragment>
+              You can find the <Link to={newImplementationLink}>updated implementation here</Link>.
+            </React.Fragment>
+          )}
+          {' '}To learn more about the process, visit our <Link to="/get-started/about#major-release-cadence">about page</Link>.
         </InlineAlert>
       )}
     </React.Fragment>
   );
-
   // Create dynamic component for @reach/router
   const ChildComponent = () => (
     <div className="pf-v5-u-display-flex ws-mdx-child-template">
@@ -97,12 +110,14 @@ const MDXChildTemplate = ({
               ))}
             </React.Fragment>
           )}
-          {cssVarsTitle && (
+          {cssPrefix.length > 0 && (
             <React.Fragment>
               <AutoLinkHeader size="h2" className="ws-h2" id="css-variables">
                 {cssVarsTitle}
               </AutoLinkHeader>
-              <CSSVariables prefix={cssPrefix} />
+              {cssPrefix.map(prefix => (
+                <CSSVariables autoLinkHeader={cssPrefix.length > 1} prefix={prefix} />
+              ))}
             </React.Fragment>
           )}
           {sourceLink && (
@@ -126,6 +141,9 @@ export const MDXTemplate = ({
   id,
   componentsData
 }) => {
+  const isDeprecated = sources.some(source => source.source === "react-deprecated") && !sources.some(source => source.source === "react");
+  const isBeta = sources.some(source => source.beta)
+  const isDemo = sources.some(source => source.source === "react-demos" || source.source === "html-demos") && !sources.some(source => source.source === "react" || source.source === "html");
   // Build obj mapping source names to text displayed on tabs
   const tabNames = sources.reduce((acc, curSrc) => {
     const { source, tabName } = curSrc;
@@ -137,7 +155,7 @@ export const MDXTemplate = ({
   const sourceKeys = Object.keys(tabNames);
   const isSinglePage = sourceKeys.length === 1;
 
-  let isDevResources, isComponent, isExtension, isChart, isDemo, isLayout, isUtility;
+  let isDevResources, isComponent, isExtension, isChart, isPattern, isLayout, isUtility;
 
   const getSection = () => {
     return sources.some((source) => {
@@ -154,8 +172,8 @@ export const MDXTemplate = ({
         case "charts":
           isChart = true;
           return;
-        case "demos":
-          isDemo = true;
+        case "patterns":
+          isPattern = true;
           return;
         case "layouts":
           isLayout = true;
@@ -198,7 +216,7 @@ export const MDXTemplate = ({
         return "pf-m-light-100";
       }
       return "pf-m-light";
-    } else if (isUtility || isDemo || isLayout || isComponent) {
+    } else if (isUtility || isPattern || isLayout || isComponent) {
       return "pf-m-light";
     }
     return "pf-m-light-100";
@@ -208,7 +226,7 @@ export const MDXTemplate = ({
     (!isSinglePage && !hideTabName) ||
     isComponent ||
     isUtility ||
-    isDemo
+    isPattern
   );
 
   return (
@@ -220,7 +238,44 @@ export const MDXTemplate = ({
           isWidthLimited
         >
           <TextContent>
-            <Title headingLevel='h1' size='4xl' id="ws-page-title">{title}</Title>
+            <Flex alignItems={{ default: 'alignItemsCenter'}}>
+              <FlexItem>
+                <Title headingLevel='h1' size='4xl' id="ws-page-title">
+                  {title}
+                </Title>
+              </FlexItem>
+              <FlexItem>
+                <Flex display={{ default: 'inlineFlex' }}>
+                  {isDeprecated && (
+                    <FlexItem spacer={{ default: 'spacerSm' }}>
+                      <Tooltip content="Deprecated components are available for use but are no longer being maintained or enhanced.">
+                        <Button isInline component="span" variant="link">
+                          <Label color="grey">Deprecated</Label>
+                        </Button>
+                      </Tooltip>
+                    </FlexItem>
+                  )}
+                  {isDemo && (
+                    <FlexItem spacer={{ default: 'spacerSm' }}>
+                      <Tooltip content="Demos show how multiple components can be used in a single design.">
+                        <Button isInline component="span" variant="link">
+                          <Label color="purple">Demo</Label>
+                        </Button>
+                      </Tooltip>
+                    </FlexItem>
+                  )}
+                  {isBeta && (
+                    <FlexItem spacer={{ default: 'spacerSm' }}>
+                      <Tooltip content="This beta component is currently under review and is still open for further evolution.">
+                        <Button isInline component="span" variant="link">
+                          <Label color="blue">Beta</Label>
+                        </Button>
+                      </Tooltip>
+                    </FlexItem>
+                  )}
+                </Flex>
+              </FlexItem>
+            </Flex>
             {isComponent && summary && (<SummaryComponent />)}
           </TextContent>
         </PageSection>

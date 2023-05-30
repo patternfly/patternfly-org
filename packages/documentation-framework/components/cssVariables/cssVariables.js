@@ -8,6 +8,7 @@ import {
   Tbody,
   Td
 } from "@patternfly/react-table";
+import { AutoLinkHeader } from "../autoLinkHeader/autoLinkHeader";
 import * as tokensModule from "@patternfly/react-tokens/dist/esm/componentIndex";
 import global_spacer_md from "@patternfly/react-tokens/dist/esm/global_spacer_md";
 import LevelUpAltIcon from "@patternfly/react-icons/dist/esm/icons/level-up-alt-icon";
@@ -59,12 +60,9 @@ const flattenList = files => {
 export class CSSVariables extends React.Component {
   constructor(props) {
     super(props);
-    // Ensure array in case of multiple prefixes
-    this.prefix =
-      typeof props.prefix === "string" ? [props.prefix] : props.prefix;
-    const prefixTokens = this.prefix.map(prefix => prefix.replace("pf-", "").replace(/-+/g, "_"));
+    const prefixToken = props.prefix.replace("pf-v5-", "").replace(/-+/g, "_");
     const applicableFiles = Object.entries(tokensModule)
-      .filter(([key, val]) => prefixTokens.includes(key))
+      .filter(([key, val]) => prefixToken === key)
       .sort(([key1], [key2]) => key1.localeCompare(key2))
       .map(([key, val]) => {
         if (props.selector) {
@@ -170,10 +168,11 @@ export class CSSVariables extends React.Component {
   render() {
     return (
       <React.Fragment>
+        {this.props.autoLinkHeader && <AutoLinkHeader size="h3" className="pf-v5-u-mt-lg pf-v5-u-mb-md">{`Prefixed with '${this.props.prefix}'`}</AutoLinkHeader>}
         <CSSSearch getDebouncedFilteredRows={this.getDebouncedFilteredRows} />
         <Table
           variant="compact"
-          aria-label={`CSS Variables for prefixes ${this.prefix.join(" ")}`}
+          aria-label={`CSS Variables prefixed with ${this.props.prefix}`}
         >
           <Thead>
             <Tr>
