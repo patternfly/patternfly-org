@@ -10,7 +10,7 @@ The elements mentioned below are similar for a data list with compact or default
 <img src="./img/datalist-elements.png" alt="example of elements on a data list" width="1273"/> 
 
 1. **[Toolbar](/components/toolbar/design-guidelines):** Sits above the list and contains controls for manipulating list data. Common actions include filtering, sorting, and pagination.
-2. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information.
+2. **[Bulk selection](/patterns/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/patterns/bulk-selection) for more information.
 3. **Global actions:** Actions that apply to all selected items.
 4. **Row:** Row height may be variable and sizes to the content. Rows in a data list may take any supported layout.
 5. **Expand:** Expands this row.
@@ -64,7 +64,7 @@ The selectable data list provides checkboxes that enable users to select one or 
 
 <img src="./img/datalist-selectable.png" alt="example of selectable data list" width="1214"/> 
 
-1. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information. 
+1. **[Bulk selection](/patterns/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/patterns/bulk-selection) for more information. 
 2. **Checkbox:** Enables a user to select a row.
 3. **Global actions:** Actions that can be applied to **all** selected items. If actions in the data list are restricted to a single row or object, keep the actions at the individual row level, instead of in the toolbar.
 

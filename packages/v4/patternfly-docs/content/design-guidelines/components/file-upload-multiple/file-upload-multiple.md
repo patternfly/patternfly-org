@@ -6,7 +6,7 @@ subsection: file-upload
 
 A file upload component is commonly found in forms, but can also live as a standalone element.
 
-*Note: This component is for both single and multiple file upload scenarios that do not require a text preview. For a single file upload that supports text preview, see the [file upload component](/components/file-upload).*
+*Note: This component is for both single and multiple file upload scenarios that do not require a text preview. For a single file upload that supports text preview, see the [file upload component](/components/file-upload/simple-file-upload).*
 
 
 ## Elements

@@ -17,7 +17,7 @@ section: components
 
 * **Application specific item(s):** Applications may include additional utility items in the masthead. These items should expose tasks or information that are meaningful to users at a global level.  
 
-* **Application launcher:** When switching between applications is supported, an [application launcher](/components/application-launcher) component can be inserted in the masthead to provide that capability.
+* **Application launcher:** When switching between applications is supported, an [application launcher](/components/menus/application-launcher) component can be inserted in the masthead to provide that capability.
 
 * **Settings:**  The settings menu contains ways to configure and customize an application. Interacting with settings either takes users to a settings area or reveals a dropdown menu with more options. The settings menu is represented by the `fa-cog` icon.
 
