@@ -32,8 +32,8 @@ export const IconsTable = () => {
   const columns = ['Icon', 'Name', 'Style', 'React', 'Usage/tooltip', 'Unicode'];
   const [searchValue, setSearchValue] = React.useState('');
   const [isCopied, setCopied] = React.useState(false);
-  const [sortByIndex, setSortByIndex] = React.useState();
-  const [sortDirection, setSortDirection] = React.useState();
+  const [sortByIndex, setSortByIndex] = React.useState(1);
+  const [sortDirection, setSortDirection] = React.useState('asc');
 
   const getSortParams = columnIndex => ({
     sortBy: {
@@ -136,6 +136,7 @@ export const IconsTable = () => {
           {sortedRows.map((icon, index) => {
             const Icon = icons[icon.React_name];
             const iconUnicode = icon.Unicode || iconUnicodes.default[icon.Name] || '';
+
             return (
               <Tr key={index}>
                 <Td dataLabel={columns[0]} className="pf-v5-c-table__favorite">

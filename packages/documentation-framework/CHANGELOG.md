@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.48 (2023-05-31)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.47 (2023-05-31)
+
+
+### Bug Fixes
+
+* **CSSVariables:** check for values before looping over them ([f2d167f](https://github.com/patternfly/patternfly-org/commit/f2d167f57c0cd38b289ade62d98022d7902de38f))
+
+
+
+
+
+# 2.0.0-alpha.46 (2023-05-31)
+
+
+### Bug Fixes
+
+* **CSSVariables:** resolve a11y issues in tables ([41a7837](https://github.com/patternfly/patternfly-org/commit/41a78379de36c08d7b36fe48a9ff40a4140cdc63))
+
+
+
+
+
+# 2.0.0-alpha.45 (2023-05-25)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.44 (2023-05-25)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 # 2.0.0-alpha.43 (2023-05-25)
 
 
