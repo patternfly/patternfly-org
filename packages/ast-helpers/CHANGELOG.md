@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.46 (2023-05-31)
+
+
+### Bug Fixes
+
+* **CSSVariables:** check for values before looping over them ([f2d167f](https://github.com/patternfly/patternfly-org/commit/f2d167f57c0cd38b289ade62d98022d7902de38f))
+
+
+
+
+
 # 0.12.0-alpha.45 (2023-05-31)
 
 
