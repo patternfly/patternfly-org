@@ -152,6 +152,7 @@
     "summary": "A <b>form</b> is a group of elements used to collect information from a user in a variety of contexts including in a modal, in a wizard, or on a page. Use cases for forms include tasks reliant on user-inputted information for completion like logging in, registering, configuring settings, or completing surveys."
   },
   "form-select": {
+    "illustration": "./images/component-illustrations/form-select.png",
     "summary": "A <b>form select</b> embeds browser native select lists into a form."
   },
   "helper-text": {
@@ -163,6 +164,7 @@
     "summary": "A <b>hint</b> is in-app messaging that provides a one-step reminder, explanation, or call to action for a page or modal."
   },
   "icon": {
+    "illustration": "./images/component-illustrations/icon.png",
     "summary": "An <b>icon</b> component is a container that allows for <Link to='/guidelines/icons/#all-icons'>icons</Link> of varying dimensions, as well as <Link to='/components/spinner'>spinners</Link>, to seamlessly replace each other without shifting surrounding content.<br/><br/>PatternFly's <Link to='/guidelines/icons/#all-icons'>icons guidelines</Link> contain PatternFly's icon set, as well as more information about icon usage."
   },
   "inline-edit": {
@@ -334,12 +336,15 @@
     "summary": "A <b>tile</b> component is a form of selection that can be used in place of a <Link to='/components/radio'>radio button</Link> and is commonly used in <Link to='/components/form'>forms</Link>. A tile appears visually similar to a <Link to='/components/card/'>selectable card</Link>. However, tiles are used specifically when the user is selecting a static option, whereas a selectable card triggers an action or opens a quickstart or sidebar to provide additional information."
   },
   "time-picker": {
+    "illustration": "./images/component-illustrations/time-picker.png",
     "summary": "A <b>time picker</b> allows users to select a time from a list of options. Time can be displayed in hours and minutes, but not in seconds."
   },
   "timestamp": {
+    "illustration": "./images/component-illustrations/time-stamp.png",
     "summary": "A <b>timestamp</b> provides consistent formats for displaying date and time values."
   },
   "title": {
+    "illustration": "./images/component-illustrations/title.png",
     "summary": "A <b>title</b> component applies top and bottom margins, font-weight, font-size, and line-height to titles. The most common usage for a title is to define headings within a page. For more information about the relationship between title component sizes and HTML heading levels, see the <Link to='/guidelines/typography#customizing-heading-levels'>Typography guidelines</Link>."
   },
   "toggle-group": {
