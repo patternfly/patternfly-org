@@ -178,11 +178,7 @@ export class CSSVariables extends React.Component {
             <Tr>
               {!this.props.hideSelectorColumn && (
                 <React.Fragment>
-                  <Th expand={{
-                    areAllExpanded: this.state.allRowsExpanded,
-                    collapseAllAriaLabel: "Expand or collapse all CSS variables",
-                    onToggle: this.onCollapse
-                  }}/>
+                  <Th />
                   <Th>Selector</Th>
                 </React.Fragment>
               )}
@@ -201,7 +197,7 @@ export class CSSVariables extends React.Component {
                           rowIndex,
                           isExpanded: row.isOpen,
                           onToggle: this.onCollapse,
-                          expandId: 'css-vars-expandable-toggle'
+                          expandId: `css-vars-expandable-toggle-${this.props.prefix}`
                         }
                         : undefined
                     }
