@@ -20,12 +20,12 @@ Toolbar items are individual components that can be placed inside of a toolbar. 
  ### Filter group
  <img src="./img/filter-group.png" alt="filter group" width="355" />
 
-  A filter group combines multiple select filters into a single group. See [filters](/guidelines/filters) for more information about using filter groups.
+  A filter group combines multiple select filters into a single group. See [filters](/demos/filters/design-guidelines) for more information about using filter groups.
 
 ### Search filter
 <img src="./img/search-filter.png" alt="search filter" width="355" />
 
-A search filter is intended to be used with a filter group as shown below when you want to include a single search field together with one or more select filters. It includes an 8px spacer to the right of the item to enforce association with other filters. See the [filters](/guidelines/filters) documentation for more information about using search filters.
+A search filter is intended to be used with a filter group as shown below when you want to include a single search field together with one or more select filters. It includes an 8px spacer to the right of the item to enforce association with other filters. See the [filters](/demos/filters/design-guidelines) documentation for more information about using search filters.
 
 <img src="./img/toolbar-multiple-filters.png" alt="toolbar with a search filter and filter group" width="1210"/>
 
@@ -76,7 +76,7 @@ The PatternFly toolbar is designed to be very flexible and allow a variety of co
 
 The basic toolbar is sufficient for most cases. The example above shows the toolbar with default spacing. It includes the following elements:
 1. **Bulk selector:** The bulk selector supports selection of multiple items in a list, table, or card grid. It is always the leftmost item.
-2. **Filter:** The example shows an attribute-value filter, but any supported filter can be used here. See [filters](/guidelines/filters) usage guidelines for more information.
+2. **Filter:** The example shows an attribute-value filter, but any supported filter can be used here. See [filters](/demos/filters/design-guidelines) usage guidelines for more information.
 3. **Overflow menu:** In this example an overflow menu is used to hold global actions. But a simple button group could also be used here if you have two or less actions.
 4. **Item count**: When a filter is applied, the item count will be updated to represent the filtered subset of items. For example, “10 of 17 items.” The item count should be the right-most element.
 
