@@ -4,7 +4,7 @@ import { a11yScores } from './a11y-scores';
 import { capitalize } from '@patternfly/documentation-framework/helpers/capitalize';
 
 export const AccessibilityScorecard = () => {
-  const columnNames = ['criteria', 'score', 'notes'];
+  const columnNames = ['criteria', 'status', 'notes'];
 
   // Get latest report data
   const latestReport = Object.entries(a11yScores[0])[0];
