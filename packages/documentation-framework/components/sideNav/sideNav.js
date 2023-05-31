@@ -9,7 +9,7 @@ import { trackEvent } from '../../helpers';
 
 const getIsActive = (location, section, subsection = null) => {
   const slug = makeSlug(null, section, null, null, subsection);
-  return location.pathname.startsWith(`${process.env.pathPrefix}${slug}`);
+  return location.pathname.startsWith(`${slug}`);
 }
 
 const defaultValue = 50;

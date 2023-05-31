@@ -36,7 +36,6 @@ const AppRoute = ({ child, title, path }) => {
 }
 
 const SideNavRouter = () => {
-  const pathname = useLocation().pathname.replace(process.env.pathPrefix, '');
   const componentsData = process?.env?.componentsData;
   return (
     <SideNavLayout groupedRoutes={groupedRoutes} navOpen={true} >
@@ -83,7 +82,7 @@ const FullscreenComponent = ({ Component, title }) => {
 
 // Export for SSR
 export const App = () => (
-  <Router basepath={process.env.pathPrefix} id="ws-router">
+  <Router id="ws-router">
     <SideNavRouter path="/*" />
     {Object.entries(fullscreenRoutes)
       .map(([path, { title, Component }]) =>

@@ -44,7 +44,7 @@ program
 
 program
   .command('screenshots')
-  .option('-u, --urlPrefix <prefix>', 'where fullscreen pages are hosted', 'http://localhost:5000/v5')
+  .option('-u, --urlPrefix <prefix>', 'where fullscreen pages are hosted', 'http://localhost:5000/')
   .option('-a, --allRoutes', 'true if screenshots of all examples - not just full screen', false)
   .description('updates screenshots for generated components')
   .action(options => {

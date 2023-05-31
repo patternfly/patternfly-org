@@ -3,7 +3,7 @@
     node-version: "16"
 - uses: actions/cache@v2
   id: yarn-cache
-  name: Load  v5 npm deps from cache
+  name: Load npm deps from cache
   with:
     path: "**/node_modules"
     key: ${{ runner.os }}-yarn-14-${{ hashFiles('yarn.lock') }}
@@ -11,10 +11,10 @@
   if: steps.yarn-cache.outputs.cache-hit != 'true'
 # v5 build
 - uses: actions/cache@v2
-  id: v5-cache
+  id: site-cache
   name: Load webpack cache
   with:
     path: "packages/v4/.cache"
-    key: ${{ runner.os }}-v5-${{ hashFiles('yarn.lock') }}
-- run: yarn build:v5
+    key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
+- run: yarn build
   name: Build docs

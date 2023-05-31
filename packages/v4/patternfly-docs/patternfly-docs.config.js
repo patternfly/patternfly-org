@@ -2,7 +2,6 @@ const componentsData = require('./components-data.json');
 
 // This module is shared between NodeJS and babelled ES5
 module.exports = {
-  pathPrefix: '/v5',
   googleAnalyticsID: 'UA-47523816-6',
   algolia: {
     apiKey: 'a8fb1726b78594ff97a3418757514404',
