@@ -93,8 +93,8 @@ Please refer to branding guidelines when using logos for social login page. Exam
 * [Stack Exchange brand guidelines](https://stackexchange.com/legal/trademark-guidance)
 * [Google brand guidelines](https://developers.google.com/identity/branding-guidelines)
 * [LinkedIn brand guidelines](https://brand.linkedin.com/)
-* [OpenID brand guidelines](https://openid.net/add-openid/logos/)
-* [Instagram brand guidelines](https://en.instagram-brand.com/)
+* [OpenID brand guidelines](http://openid.net/add-openid/logos/)
+* [Instagram brand guidelines](https://about.meta.com/brand/resources/instagram/instagram-brand/)
 
 ### Error states
 
