@@ -23,6 +23,12 @@ const AppRoute = ({ child, title, path }) => {
       'page_title': (title || pathname)
     });
   }
+
+  if(pathname.startsWith("/v4")){
+    window.location.href = `https://v4-archive.patternfly.org${pathname}`;
+    return;
+  }
+
   // Send 404 event if redirected to 404 page
   if (path === '/404' && pathname.split('/').pop() !== '404') {
     trackEvent('404_redirect', 'redirect', pathname);
