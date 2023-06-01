@@ -1,7 +1,7 @@
 {
   "name": "@patternfly/documentation-framework",
   "description": "A framework to build documentation for PatternFly.",
-  "version": "2.0.0-alpha.48",
+  "version": "2.0.0-alpha.49",
   "author": "Red Hat",
   "license": "MIT",
   "private": false,
