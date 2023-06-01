@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.50 (2023-06-01)
+
+
+### Bug Fixes
+
+* **labels:** Update label logic to include html components ([#3567](https://github.com/patternfly/patternfly-org/issues/3567)) ([32bdc0f](https://github.com/patternfly/patternfly-org/commit/32bdc0fe2120e2c86f39c1e5da94e3f2d11d9705))
+
+
+
+
+
 # 2.0.0-alpha.49 (2023-06-01)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
