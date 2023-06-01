@@ -340,7 +340,7 @@
     "summary": "A <b>time picker</b> allows users to select a time from a list of options. Time can be displayed in hours and minutes, but not in seconds."
   },
   "timestamp": {
-    "illustration": "./images/component-illustrations/time-stamp.png",
+    "illustration": "./images/component-illustrations/timestamp.png",
     "summary": "A <b>timestamp</b> provides consistent formats for displaying date and time values."
   },
   "title": {
