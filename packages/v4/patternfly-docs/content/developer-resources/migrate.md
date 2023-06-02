@@ -12,7 +12,7 @@ Our latest major release introduces new support and functionality to PatternFly,
 
 To upgrade from PatternFly 4 to PatternFly 5, complete the following steps.
 
-### Step 1: Upgrade deprecated components 
+## Step 1: Upgrade deprecated components 
 
 You will have until our next major release to update the code for your components to match our newest recommendations. If you have not adopted our recommended implementation at that time, your components will be outdated and may not function as needed.
 
@@ -23,13 +23,17 @@ PatternFly 5 brings a new implementation to the following components, which can 
 - [Dropdown ](/components/dropdown) 
 - [Wizard](/components/wizard)
 
-### Step 2: Run Codemods 
+## Step 2: Review and update CSS variables
+
+Because PatternFly 5 brings changes to class and  variable  names, your existing CSS overrides may be targeting outdated styles. Review your overrides and ensure that they align with our [updated CSS classes and variables.](developer-resources/global-css-variables)
+
+## Step 3: Run Codemods 
 
 When you upgrade your product to PatternFly 5, several breaking changes will likely be introduced to your product’s codebase. We are using a suite of Codemods to simplify and streamline the upgrade process. Instead of requiring you to manually identify errors and issues in your codebase, you can run our Codemods to quickly identify and fix all issues. 
 
 To utilize our Codemods, [view the project on GitHub](https://github.com/patternfly/pf-codemods/) and refer to the following instructions.
 
-##  Running Codemods
+###  Running Codemods
 
 To run our Codemods, complete the following steps:
 
