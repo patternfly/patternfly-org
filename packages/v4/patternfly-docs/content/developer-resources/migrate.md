@@ -1,50 +1,37 @@
 ---
-id: Migrate
-title: PatternFly 5 migration guide
+id: Upgrade
+title: PatternFly 5 upgrade guide
 section: developer-resources
 ---
 
-PatternFly's latest major release introduces new support and functionality to PatternFly, including: 
+Our latest major release introduces new support and functionality to PatternFly, including: 
 
 - React 18 support, 
 - Official dark theme support, and
-- An enhanced system of versioned CSS classes and variables.
+- An enhanced system of CSS classes and variables.
 
-Note: Several components have been deprecated and will be removed at the next major release. Consumers will have a year to adopt our new recommendations before a deprecated component is removed.
+To upgrade from PatternFly 4 to PatternFly 5, complete the following steps.
 
-## Plan your migration strategy
+### Step 1: Upgrade deprecated components 
 
-To move from PatternFly 4 to PatternFly 5, you should first develop a migration strategy that helps prioritize your work and identify areas where critical design elements will be impacted by the migration.
+You will have until our next major release to update the code for your components to match our newest recommendations. If you have not adopted our recommended implementation at that time, your components will be outdated and may not function as needed.
 
-To help you begin developing your migration strategy, we’ve identified the following milestones that you should plan for.
+PatternFly 5 brings a new implementation to the following components, which can be upgraded following the linked documentation:
 
-### Milestone 1: Upgrade deprecated components 
+- [Table](/components/table) 
+- [Select](/components/select)
+- [Dropdown ](/components/dropdown) 
+- [Wizard](/components/wizard)
 
-PatternFly 5 brings a new React implementation to some of our components. For each compnent impacted by this change, as described in the following secttions, complete the outlined steps to upgrade your components.
+### Step 2: Run Codemods 
 
-- Table 
-    1. Add instructions 
+When you upgrade your product to PatternFly 5, several breaking changes will likely be introduced to your product’s codebase. We are using a suite of Codemods to simplify and streamline the upgrade process. Instead of requiring you to manually identify errors and issues in your codebase, you can run our Codemods to quickly identify and fix all issues. 
 
-- Select 
-    1. Add instructions 
-
-- Dropdown  
-    1. Add instructions 
-
-- Wizard
-    1. Add instructions 
-
-### Milestone 2: Run Codemods 
-
-To help products migrate from PatternFly 4 to PatternFly 5, we are using a suite of Codemods to simplify and streamline the upgrade process.
-
-When a product updates to PatternFly 5 dependencies, several breaking changes will likely be introduced to its codebase. Instead of requiring the manual identification of errors and code issues, products can run our Codemods (which should identify all of code issues) and fix as many errors as possible using the `--fix` flag. Any issues not automatically fixed may simply be warnings, but developers will be able to view and take action on a list of all remaining issues identified.
-
-You can [view the Codemods project on GitHub](https://github.com/patternfly/pf-codemods/) and continue reading for instructions on how to run Codemods.
+To utilize our Codemods, [view the project on GitHub](https://github.com/patternfly/pf-codemods/) and refer to the following instructions.
 
 ##  Running Codemods
 
-If you update your product to use PatternFly packages and discover compile errors when attempting to complete the build, run Codemods to locate specific issues. To run our Codemods, complete the following steps.
+To run our Codemods, complete the following steps:
 
 1. Run the following command, adding in the path to your product's source code: 
 
@@ -55,23 +42,18 @@ npx @patternfly/pf-codemods <path to your source code> --exclude menu-search-ren
 
 2. Make note of any issues that get flagged.
 
-3. Add the `–fix` flag to your original command and run it again. 
+3. Add the `–fix` flag to the end of your original command and run it again. 
 
-4. Make note of the changes made in your product's the code base.
+4. Make note of the changes applied to your product's code base.
 
-5. Note any errors flagged that were not automatically fixed and manually repair issues that are critical.
+5. Note any errors that were not automatically fixed (some may simply be warnings) and manually repair issues that are critical.
 
-6. Try building again.
+6. Build your product.
 
-7. Try running Codemods multiple times.
+7. Run Codemods multiple times to ensure that all issues are flagged and addressed.
 
-If you experience any issues, refer to the following resources to reach out to the PatternFly team.
+If you experience any issues, you can get help from the PatternFly team in a couple of ways, outlined in the next section.
 
 ## Get help
 
 If you need support as you migrate to PatternFly 5, the PatternFly team is here to help. Reach out to us on [Slack](https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ) or ask a question on our [GitHub discussion board](https://github.com/orgs/patternfly/discussions). We'll always do our best to answer your questions and connect you with the right people quickly. 
-
-## Start building with PatternFly 5 libraries
-[Get started with React](/get-started/develop#react)
-
-[Get started with HTML/CSS](/get-started/develop#htmlcss)
