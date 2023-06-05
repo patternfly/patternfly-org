@@ -19,6 +19,10 @@ if (!uploadFolder) {
   process.exit(1);
 }
 
+if(uploadFolder === 'build/patternfly-org') {
+  uploadFolder = 'build/patternfly-org/site';
+}
+
 const uploadFolderName = path.basename(uploadFolder);
 let uploadURL = `${repo}${prnum ? `-pr-${prnum}` : ''}`.replace(/[\/|\.]/g, '-');
 
