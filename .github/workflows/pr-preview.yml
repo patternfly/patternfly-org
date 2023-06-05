@@ -32,7 +32,7 @@ jobs:
         id: site-cache
         name: Load webpack cache
         with:
-          path: "packages/v4/.cache"
+          path: "packages/documentation-site/.cache"
           key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
       - run: yarn build
         name: Build docs

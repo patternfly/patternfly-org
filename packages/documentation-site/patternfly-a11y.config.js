@@ -8,7 +8,7 @@ async function waitFor(page) {
 }
 
 module.exports = {
-  prefix: 'http://localhost:5000/v4',
+  prefix: 'http://localhost:5000/',
   waitFor,
   crawl: true,
   urls: [
