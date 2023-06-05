@@ -56,7 +56,7 @@ if (prnum) {
         commentBody += '\n';
       }
 
-      if (uploadName === 'site') {
+      if (uploadName === 'v4') {
         commentBody += tryAddComment(`PF4 preview: https://${uploadURL}`, commentBody);
       }
       else if (uploadFolderName === 'coverage') {

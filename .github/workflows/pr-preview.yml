@@ -36,5 +36,5 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
       - run: yarn build
         name: Build docs
-      - run: node .github/upload-preview.js build/patternfly-org site
+      - run: node .github/upload-preview.js build/patternfly-org v4
         name: Upload docs
