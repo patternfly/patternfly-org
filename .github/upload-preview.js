@@ -12,7 +12,7 @@ const owner = process.env.CIRCLE_PROJECT_USERNAME || ghrepo.split('/')[0]; // pa
 const repo = process.env.CIRCLE_PROJECT_REPONAME || ghrepo.split('/')[1];
 const prnum = process.env.CIRCLE_PR_NUMBER || process.env.GH_PR_NUM;
 
-const uploadFolder = process.argv[2];
+let uploadFolder = process.argv[2];
 const uploadName = process.argv[3] || uploadFolder;
 if (!uploadFolder) {
   console.log('Usage: upload-preview uploadFolder');
