@@ -13,14 +13,19 @@ const repo = process.env.CIRCLE_PROJECT_REPONAME || ghrepo.split('/')[1];
 const prnum = process.env.CIRCLE_PR_NUMBER || process.env.GH_PR_NUM;
 
 let uploadFolder = process.argv[2];
-const uploadName = process.argv[3] || uploadFolder;
+let uploadName = process.argv[3] || uploadFolder;
 if (!uploadFolder) {
   console.log('Usage: upload-preview uploadFolder');
   process.exit(1);
 }
 
+// The two if blocks are workarounds for GH not fully using updated workflow
+// Can be removed after workflow update is merged
 if(uploadFolder === 'build/patternfly-org') {
   uploadFolder = 'build/patternfly-org/site';
+}
+if(uploadName === 'v4') {
+  uploadName = 'site';
 }
 
 const uploadFolderName = path.basename(uploadFolder);
@@ -60,7 +65,7 @@ if (prnum) {
         commentBody += '\n';
       }
 
-      if (uploadName === 'v4') {
+      if (uploadName === 'site') {
         commentBody += tryAddComment(`PF4 preview: https://${uploadURL}`, commentBody);
       }
       else if (uploadFolderName === 'coverage') {
