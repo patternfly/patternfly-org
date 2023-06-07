@@ -24,7 +24,7 @@ export const TextSummary = ({ id, itemsData }) => {
   return (
     <TextContent>
       <Text>
-        { id ? <SummaryComponent id={id} itemsData={itemsData} /> : null }
+        <SummaryComponent id={id} itemsData={itemsData} />
       </Text>
     </TextContent>
   )
