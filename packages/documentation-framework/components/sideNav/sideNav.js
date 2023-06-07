@@ -38,8 +38,8 @@ const NavItem = ({ text, href, isDeprecated, isBeta, isDemo }) => {
                 {(isBeta || isDemo || isDeprecated) && (
                   <FlexItem>
                     {isBeta && (<Label color="blue" isCompact>Beta</Label>)}
-                    {!isBeta && isDemo && (<Label color="purple" isCompact>Demo</Label>)}
-                    {!isBeta && !isDemo && isDeprecated && (<Label color="grey" isCompact>Deprecated</Label>)}
+                    {!isBeta && isDeprecated && (<Label color="grey" isCompact>Deprecated</Label>)}
+                    {!isBeta && !isDeprecated && isDemo && (<Label color="purple" isCompact>Demo</Label>)}
                   </FlexItem>
                 )}
               </Flex>
@@ -92,9 +92,15 @@ const ExpandableNav = ({groupedRoutes, location, section, subsection = null}) =>
             ? ExpandableNav({groupedRoutes, location, section, subsection: navObj.text})
             : NavItem({
               ...navObj,
-              isDeprecated: navObj.href?.includes('components') && navObj.sources.some(source => source.source === "react-deprecated") && !navObj.sources.some(source => source.source === "react"),
+              isDeprecated: navObj.href?.includes('components') && navObj.sources.some(source => (
+                  source.source === "react-deprecated" || source.source === "html-deprecated")
+                && !navObj.sources.some(source => source.source === "react" || source.source === "html")
+              ),
               isBeta: navObj.sources.some(source => source.beta),
-              isDemo: navObj.sources.some(source => source.source === "react-demos" || source.source === "html-demos") && !navObj.sources.some(source => source.source === "react" || source.source === "html")
+              isDemo: navObj.sources.some(source => (
+                  source.source === "react-demos" || source.source === "html-demos")
+                && !navObj.sources.some(source => source.source === "react" || source.source === "html")
+              )
             })
         )}
     </NavExpandable>
