@@ -76,7 +76,6 @@ const MDXChildTemplate = ({
       )}
     </React.Fragment>
   );
-
   // Create dynamic component for @reach/router
   const ChildComponent = () => (
     <div className="pf-v5-u-display-flex ws-mdx-child-template">
