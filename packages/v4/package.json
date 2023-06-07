@@ -21,9 +21,9 @@
     "@patternfly/quickstarts": "^2.4.0",
     "@patternfly/react-catalog-view-extension": "5.0.0-alpha.1",
     "@patternfly/react-console": "^5.0.0-alpha.1",
-    "@patternfly/react-docs": "6.0.0-alpha.113",
-    "@patternfly/react-log-viewer": "4.87.100",
-    "@patternfly/react-topology": "^4.91.40",
+    "@patternfly/react-docs": "6.0.0-alpha.123",
+    "@patternfly/react-log-viewer": "^5.0.0-alpha.1",
+    "@patternfly/react-topology": "^5.0.0-alpha.1",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0"
   },
