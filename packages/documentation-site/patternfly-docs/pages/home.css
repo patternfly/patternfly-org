@@ -2,59 +2,12 @@
   font-size: var(--pf-v5-global--FontSize--lg);
 }
 
-.pf4-c-background-image {
-  background-size: contain;
-  width: 100%;
-  max-width: 100%;
-  background-repeat: no-repeat;
-  background-image: none, linear-gradient(180deg, #004080, #06c);
-  background-size: cover;
-}
-
-@media (min-width: 576px) {
-  .pf4-c-background-image {
-    background-position: 50%, 100%;
-    background-image: url("../images/aboutPF4Lines.svg"), linear-gradient(to bottom, #004080, #0066cc);
-    background-size: contain;
-  }
-}
-
-@media (min-width: 992px) {
-  .pf4-c-background-image {
-    background-image: url("../images/homeHeroLines.svg"), linear-gradient(to bottom, #004080, #0066cc);
-    background-position: top, right;
-    background-size: cover;
-  }
-}
-
 .pf-m-white,
 .pf-m-white.ws-mdx-a {
   color: white;
 }
 
-/* Get started CTA */
-.pf4-c-button__cta-primary,
-.pf4-c-button__cta-outline {
-  border: var(--pf-v5-global--BorderWidth--sm) solid #fff;
-  font-size: var(--pf-v5-global--FontSize--lg);
-  line-height: 1.5;
-  padding: var(--pf-v5-global--spacer--md) var(--pf-v5-global--spacer--lg);
-  transition: var(--pf-v5-global--Transition);
-}
-
-.pf4-c-button__cta-primary,
-.pf4-c-button__cta-outline:hover {
-  background-color: var(--pf-v5-global--Color--light-100);
-  color: #06c !important;
-}
-
-.pf4-c-button__cta-outline,
-.pf4-c-button__cta-primary:hover {
-  background-color: transparent;
-  color: var(--pf-v5-global--Color--light-100)!important;
-}
-
-#hello-were-patternfly + .ws-mdx-p {
+#hello-were-patternfly+.ws-mdx-p {
   margin-bottom: var(--pf-v5-global--spacer--sm);
 }
 
@@ -71,7 +24,7 @@
   flex-wrap: nowrap;
 }
 
-.ws-pf-principle .pf-v5-l-flex > div:first-child {
+.ws-pf-principle .pf-v5-l-flex>div:first-child {
   margin-right: var(--pf-v5-global--spacer--3xl);
   flex-shrink: 0;
   width: 93px;
@@ -88,62 +41,29 @@
   }
 }
 
-.pf4-c-background-lines {
-  width: 100%;
-  max-width: 100%;
-  background-image: url("./lines-background.svg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: 100% 0,100%;
+.pf-v5-theme-dark .pf-v5-l-flex.pf-m-flex-3-on-md.pf-v5-c-image__light-showcase {
+  display: none;
 }
 
-.pf4-c-image__laptop {
-  height: 40%;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-image: url("../images/laptop.svg");
+.pf-v5-l-flex.pf-m-flex-3-on-md.pf-v5-c-image__dark-showcase {
+  display: none;
 }
 
-.pf4-c-image__phone {
-  position: relative;
-  top: -120px;
-  height: 25%;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: 32%;
-  background-image: url("../images/phone.svg");
+.pf-v5-theme-dark .pf-v5-l-flex.pf-m-flex-3-on-md.pf-v5-c-image__dark-showcase {
+  display: block;
 }
 
-.pf4-c-image__screen {
-  position: relative;
-  top: -225px;
-  height: 25%;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: 60%;
-  z-index: 2;
-  background-image: url("../images/screen.svg");
+
+section.pf-v5-c-page__main-section.pf-m-limit-width.v5-featured-posts>div.pf-v5-c-page__main-body {
+  padding-bottom: 0px;
 }
 
-.pf4-c-image__desktop {
-  position: relative;
-  top: -300px;
-  height: 42%;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: 42%;
-  background-image: url("../images/desktop.svg");
-}
-
-.pf4-c-background-image-principles {
-  background-position-x: 100%, 100%;
-  background-position-y: 0, 50%;
-  background-repeat: no-repeat;
-  background-image: url("./principles-background.svg"), linear-gradient(180deg,#06c,#004080);
+section.pf-v5-c-page__main-section.pf-m-limit-width.ws-homepage-main-section>div.pf-v5-c-page__main-body {
+  padding-right: 0px;
 }
 
 .ws-homepage-main-section {
-  padding: var(--pf-v5-global--spacer--xl) var(--pf-v5-global--spacer--2xl) var(--pf-v5-global--spacer--2xl);
+  /* padding: var(--pf-v5-global--spacer--xl) var(--pf-v5-global--spacer--2xl) var(--pf-v5-global--spacer--2xl); */
 }
 
 .ws-homepage-main-section.pf4-c-background-image .pf4-site-c-hero {
@@ -220,4 +140,11 @@
 
 .fadeInFour {
   animation-delay: 1.4s;
+}
+
+.pf-v5-c-page {
+  --pf-v5-c-page__main-section--PaddingTop: var(--pf-v5-global--spacer--2xl);
+  --pf-v5-c-page__main-section--PaddingRight: var(--pf-v5-global--spacer--2xl);
+  --pf-v5-c-page__main-section--PaddingBottom: var(--pf-v5-global--spacer--2xl);
+  --pf-v5-c-page__main-section--PaddingLeft: var(--pf-v5-global--spacer--2xl);
 }
