@@ -38,13 +38,13 @@ Until the user selects a start time, the end time field will be disabled.
 ### Date and time range selection
 Combine a date picker and time picker when you want users to select a range of times across multiple days. 
 
-For more information about using date and time pickers together, visit our [date picker guidelines](/components/date-and-time/date-picker).
+For more information about using date and time pickers together, visit our [date picker guidelines](/components/date-and-time/date-picker/design-guidelines).
 
 ## Variations
 ### Time picker in a toolbar
 Use time pickers as filters in a toolbar. Note that time pickers aren't commonly used on their own, and will usually be accompanied by a [date picker](/components/date-picker).
 
-See the [date picker usage guidelines](/components/date-and-time/date-picker) to learn more about using date pickers and time pickers in a toolbar. 
+See the [date picker usage guidelines](/components/date-and-time/date-picker/design-guidelines) to learn more about using date pickers and time pickers in a toolbar. 
 
 ### Time picker in a form
 Use a time picker in a form to display basic scheduling options, typically for future events. In some use cases, you may preselect and display the most common time options users can choose from.
