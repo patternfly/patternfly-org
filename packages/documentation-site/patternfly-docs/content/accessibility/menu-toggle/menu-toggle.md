@@ -10,7 +10,7 @@ import { Link } from '@patternfly/documentation-framework/components/link/link';
 ## Accessibility
 
 To implement an accessible PatternFly **menu toggle** component:
-- Due to the composable nature of the menu and menu toggle components, keyboard interaction will need to be added manually between the menu toggle and the menu. See the [composable menu demos](/components/menus/custom-menus) to see how this is done.
+- Due to the composable nature of the menu and menu toggle components, keyboard interaction will need to be added manually between the menu toggle and the menu. See the [custom menu demos](/components/menus/custom-menus) to see how this is done.
 - When adding an action to the menu toggle, an `aria-label` will need to be added to the `MenuToggleAction` or the `MenuToggleCheckbox` to communicate to users what this action will do.
 - When adding any additional elements to the menu toggle, remember to follow that element's specific considerations. For example, if you are adding an avatar to the menu toggle, you will need to provide an `alt` attribute with a description of the image.
 
