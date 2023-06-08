@@ -94,7 +94,7 @@ Never use a passive dialog for non-critical information. Instead, use an [inline
 
 ### Input dialogs
 
-Users may need to provide additional input to complete an action. To accomplish this, use forms or other elements within the modal, like in a [modal wizard](/components/modal).
+Users may need to provide additional input to complete an action. To accomplish this, use forms or other elements within the modal, like in a [modal wizard](/components/wizard#within-modal).
 
 ### Modals with help
 

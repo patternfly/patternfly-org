@@ -67,7 +67,7 @@ Add the badge inside the chip. To do this, add this block of code between `pf-v5
 7\n</span>`}
 </CopyCodeBlock>
 
-**Note:** Remember, this is a component and not a demo because the chip component includes styles that handle how the badge looks within the chip. For example, when the badge component is added to the chip, it receives styling that gives it a margin. You can see that the badge in a chip has its own CSS variable, `--pf-v5-c-chip__c-badge--MarginLeft`, defined for the right margin under the <a href="/components/chip/html">CSS Variables section of the chip documentation</a>.
+**Note:** Remember, this is a component and not a demo because the chip component includes styles that handle how the badge looks within the chip. For example, when the badge component is added to the chip, it receives styling that gives it a margin. You can see that the badge in a chip has its own CSS variable, `--pf-v5-c-chip__c-badge--MarginLeft`, defined for the right margin under the <a href="/components/chip/html#css-variables">CSS Variables section of the chip documentation</a>.
 
 The resulting chip should match the following image.
 
@@ -156,7 +156,7 @@ Adding the `pf-m-gutter` modifier class to the grid layout ensures there is equa
 
 Add the class `pf-m-gutter` after `pf-v5-l-grid` to the outermost wrapper, inside the quotation marks.
 It should look like: `<div class="pf-v5-l-grid pf-m-gutter">`
-**Note:** Learn how modifier classes work with layout classes by looking at PatternFly's <a href="/layouts/grid/html" target="_blank">grid documentation</a>.
+**Note:** Learn how modifier classes work with layout classes by looking at PatternFly's <a href="/layouts/grid/html#usage" target="_blank">grid documentation</a>.
 
 ### Step 5. Add modifier classes to the grid item classes.
 This step modifies the number of columns that a grid item spans. The maximum number of columns that a grid item can span is 12 (which is equivalent to 100%).

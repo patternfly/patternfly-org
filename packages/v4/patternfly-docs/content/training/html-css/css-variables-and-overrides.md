@@ -42,7 +42,7 @@ In the `style.css` file, in the `.pf-v5-c-alert{}` block, write the custom prope
 In reference to the formula described in Part 1, this should be: `--pf-v5-c-alert`
 
 #### Step 2.2 
-Add the modifier to the custom property name. As displayed in the CSS variables of PatternFly's <a href="/components/alert/html" target="_blank">alert component documentation</a>, the success variation modifier class `pf-m-success` applies to `pf-v5-c-alert`. Add that modifier to the custom property.
+Add the modifier to the custom property name. As displayed in the CSS variables of PatternFly's <a href="/components/alert/html#css-variables" target="_blank">alert component documentation</a>, the success variation modifier class `pf-m-success` applies to `pf-v5-c-alert`. Add that modifier to the custom property.
 
 The custom property name should now be: `--pf-v5-c-alert--m-success`
 
