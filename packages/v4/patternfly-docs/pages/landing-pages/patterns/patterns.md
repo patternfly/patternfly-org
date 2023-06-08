@@ -16,24 +16,24 @@ PatternFly currently supports the following patterns:
 ## Bulk selection 
 Bulk selection allows users to select or deselect multiple items in a content view. 
 
-[View bulk selection guidelines]()
+[View bulk selection guidelines](/patterns/bulk-selection)
 
 ## Card view
 A card view assembles a grid of cards in a gallery.
 
-[View card view guidelines]()
+[View card view guidelines](/patterns/card-view)
 
 ## Dashboard 
 A dashboard provides an overview of key metrics or performance indicators.
 
-[View dashboard guidelines]()
+[View dashboard guidelines](/patterns/dashboard)
 
 ## Filters
 Filters allow users to narrow down content from data.
 
-[View filters guidelines]()
+[View filters guidelines](/patterns/filters)
 
 ## Primary-detail
 A primary-detail layout shows users a list of items and corresponding details for a selected item.
 
-[View primary-detail guidelines]()
+[View primary-detail guidelines](/patterns/primary-detail)
