@@ -24,6 +24,7 @@ const AppRoute = ({ child, title, path }) => {
     });
   }
 
+  // Redirect all v4 url paths to the archived v4 site
   if(pathname.startsWith("/v4")){
     window.location.href = `https://v4-archive.patternfly.org${pathname}`;
     return;
