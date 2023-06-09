@@ -19,7 +19,7 @@ Use bold text (not quotation marks) when referring to an element or text in the 
 
 ## Buttons 
 - Avoid punctuation on buttons. 
-- Do not create icons on buttons using punctuation (for example, "+"). Instead, refer to [PatternFly's icons page](/guidelines/icons) for any icons you place on buttons.
+- Do not create icons on buttons using punctuation (for example, "+"). Instead, refer to [PatternFly's icons page](/design-foundations/icons) for any icons you place on buttons.
 
 ## Commas
 When a conjunction connects two independent clauses, a comma should precede it. Also put a comma before “and” if it’s the Oxford comma.

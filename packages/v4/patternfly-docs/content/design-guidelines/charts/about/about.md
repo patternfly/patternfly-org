@@ -13,7 +13,7 @@ A **chart** visualizes data in an application. The type of chart you use will de
 1. **Title:** Titles should be left-aligned and appear above your chart.
 2. **Axis labels and scale values:**  We recommend using tick marks to clearly mark scale values on the y-axis. The text for axis labels and scale values should be 12px font in standard text color. All scale values should be equally distributed across the axis and the axis label should fall outside the scale values, centered with the axis line.
 3. **Legends:** We recommend using legends when charts include more than one variable and therefore use more than one color. When datasets are overlapping, an [interactive legend](#interactive-chart-legends) can be used. If space is not available to display names of horizontal and vertical axes, a legend must be added instead. The legend should list the colors that each variable obtains and the name of the variable. The text on the legend should be 14px size and standard text color. They can either be placed left-aligned to the right of the chart or centered below the chart.
-4. **Chart tooltip:** A tooltip will appear on hover over certain elements of a chart, like bars in a bar chart or segments in a donut chart. [Chart tooltips](/charts/tooltip-chart) should display the specific values related to the element the user is hovering over. 
+4. **Chart tooltip:** A tooltip will appear on hover over certain elements of a chart, like bars in a bar chart or segments in a donut chart. [Chart tooltips](/charts/tooltips) should display the specific values related to the element the user is hovering over. 
 
 ## Chart types
 <img src="./img/chart-legend.png" alt="Image displaying what chart types to use when" width="1024"/> 
