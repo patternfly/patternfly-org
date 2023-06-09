@@ -1,23 +1,9 @@
 import React from "react";
 import { DataList, DataListItem, DataListItemRow, DataListItemCells, DataListCell, Split, SplitItem, TextContent, Text, TextVariants, Label } from "@patternfly/react-core";
 import { Link } from '../link/link';
-import { convertToReactComponent } from "@patternfly/ast-helpers";
+import { TextSummary } from './TextSummary';
 
-// convert summary text in drawer from string to jsx
-const SummaryComponent = ({ id, itemsData }) => {
-  const itemDasherized = id.split(' ').join('-').toLowerCase();
-  const summary = itemsData?.[itemDasherized]?.summary;
-  if (!summary) {
-    return null;
-  }
-  // Remove anchor tags to avoid <a> in summary nested within <a> of Link card/datalistitem
-  const summaryNoLinks = summary.replace(/<Link[^>]*>([^<]+)<\/Link>/gm, '$1');
-  const { code } = convertToReactComponent(`<>${summaryNoLinks}</>`);
-  const getSummaryComponent = new Function('React', code);
-  return getSummaryComponent(React);
-}
-
-export const SectionDataListLayout = ({ galleryItems, layoutView }) => {
+export const SectionDataListLayout = ({ galleryItems, layoutView, hasListText, hasListImages }) => {
   if (layoutView !== 'list') {
     return null;
   }
@@ -29,15 +15,15 @@ export const SectionDataListLayout = ({ galleryItems, layoutView }) => {
           <DataListItem>
             <DataListItemRow>
               <DataListItemCells dataListCells={[
-                <DataListCell width={1} key="illustration">
-                  {illustration && (
+                hasListImages && illustration && (
+                  <DataListCell width={1} key="illustration">
                     <div>
                       <img src={illustration} alt={`${itemName} illustration`} />
                     </div>
-                  )}
-                </DataListCell>,
+                  </DataListCell>
+                ),
                 <DataListCell width={5} key="text-description">
-                  <Split className="pf-v5-u-mb-md">
+                  <Split className={ hasListText ? "pf-v5-u-mb-md" : null }>
                     <SplitItem isFilled>
                       <TextContent>
                         <Text component={TextVariants.h2}>
@@ -51,11 +37,7 @@ export const SectionDataListLayout = ({ galleryItems, layoutView }) => {
                       {isBeta && <Label color="gold">Beta feature</Label>}
                     </SplitItem>
                   </Split>
-                  <TextContent>
-                    <Text>
-                      { id ? <SummaryComponent id={id} itemsData={galleryItemsData} /> : null }
-                    </Text>
-                  </TextContent>
+                  { hasListText && <TextSummary id={id} itemsData={galleryItemsData} /> }
                 </DataListCell>
               ]} />
             </DataListItemRow>
