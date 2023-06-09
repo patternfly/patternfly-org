@@ -4,6 +4,8 @@ title: Release highlights
 section: get-started
 ---
 
+import './get-started.css';
+
 # 2023.06
 [View full details for this release on GitHub](https://github.com/patternfly/patternfly-react/releases).
 
