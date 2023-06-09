@@ -40,4 +40,4 @@ __Example__
 
 To contribute a new icon, start by opening an issue in the [patternfly-design](https://github.com/patternfly/patternfly-design/issues) repo proposing a new icon and why it's needed. Then, follow the procedure outlined here for [creating custom icons](https://github.com/patternfly/patternfly-design/wiki/Creating-custom-icons) and adding them to the PatternFly icon set.
 
-**If you are interested in contributing to any of the projects above, feel free to reach out to us on the patternfly-design channel on [Slack](https://slack.patternfly.org/).**
+**If you are interested in contributing to any of the projects above, feel free to reach out to us on the patternfly-design channel on [Slack](http://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ).**
