@@ -165,12 +165,8 @@
     "summary": "A <b>hint</b> is in-app messaging that provides a one-step reminder, explanation, or call to action for a page or modal."
   },
   "icon": {
-<<<<<<< HEAD
     "illustration": "./images/component-illustrations/icon.png",
-    "summary": "An <b>icon</b> component is a container that allows for <Link to='/guidelines/icons/#all-icons'>icons</Link> of varying dimensions, as well as <Link to='/components/spinner'>spinners</Link>, to seamlessly replace each other without shifting surrounding content.<br/><br/>PatternFly's <Link to='/guidelines/icons/#all-icons'>icons guidelines</Link> contain PatternFly's icon set, as well as more information about icon usage."
-=======
     "summary": "An <b>icon</b> component is a container that allows for <Link to='/design-foundations/icons#all-icons'>icons</Link> of varying dimensions, as well as <Link to='/components/spinner'>spinners</Link>, to seamlessly replace each other without shifting surrounding content.<br/><br/>PatternFly's <Link to='/design-foundations/icons#all-icons'>icons guidelines</Link> contain PatternFly's icon set, as well as more information about icon usage."
->>>>>>> de70c7eb (chore: URLupdate2)
   },
   "inline-edit": {
     "illustration": "./images/component-illustrations/inline-edit.png",
