@@ -16,25 +16,20 @@ To learn about the biggest changes in this release, read our [release highlights
 
 This guide outlines the major steps you should take to upgrade your product's codebase from PatternFly 4 to PatternFly 5, as well as a detailed list of our [major release notes](get-started/upgrade.md#major-release-notes). 
 
-## Most impactful changes 
-
-### Event handler callback changes
-
-Consumer requested to have our callbacks meet industry standards in order to make it easier to integrate our components with third party libraries, so that they don’t have to build wrappers to use with third party libraries. 
-
-
-## Get help
+## Get help 
 
 If you need support as you upgrade to PatternFly 5, the PatternFly team is here to help. Reach out to us on [Slack](https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ) or ask a question on our [GitHub discussion board](https://github.com/orgs/patternfly/discussions). We'll always do our best to answer your questions and connect you with the right people quickly. 
 
 
-# Use Codemods to upgrade your product's codebase
+# Upgrade your product's codebase
 
 When you upgrade your product to PatternFly 5, several breaking changes will likely be introduced to your product’s codebase. We are using a suite of Codemods to simplify and streamline the upgrade process. Instead of requiring you to manually identify errors and issues in your codebase, you can run our Codemods to quickly identify and fix all issues. 
 
 To utilize our Codemods, you can [view the project on GitHub](https://github.com/patternfly/pf-codemods/) and refer to the following instructions.
 
-##  How to run our Codemods
+##  Run our Codemods
+
+**Note:** Running Codemods after making manual changes will lead to even more manual intervention and cleanup. Because of this, we strongly recommend running Codemods _before_ making any manual changes to your codebase.
 
 To run our Codemods, complete the following steps:
 
@@ -57,14 +52,26 @@ npx @patternfly/pf-codemods@latest <path to your source code> --exclude menu-sea
 
 7. Run Codemods multiple times to ensure that all issues are flagged and addressed.
 
+# Review and update variable and class names
 
-# Review and update CSS variables
+We changed component class names, layout class names, utility class names, CSS variables, and SCSS variables. Modifier class names have not changed as part of this major release.
 
-Because PatternFly 5 brings changes to class and  variable  names, your existing CSS overrides may be targeting outdated styles. Review your overrides and ensure that they align with our [updated CSS classes and variables.](developer-resources/global-css-variables)
+These changes mean that any existing CSS overrides will likely be targeting outdated styles. Review your overrides and ensure that they align with our [updated CSS classes and variables.](developer-resources/global-css-variables) 
 
+The following table outlines some of the general changes that were made to variable prefixes, but we recommend checking your code against our global css variable guide to cover all changes. 
 
+| Language/style | v4 prefix | v5 prefix|  Note |
+| --- | ---| --- | ---  |
+|  CSS |  `--pf-` |  `$pf-v5-` |
+|  SCSS |  `.pf-`  | `$pf-v5-`  |
+|  SCSS | `@mixin pf-`  | `@mixin pf-v5-`  |
+|  SCSS | `@function pf-`  | `@function pf-v5-`  |
+|  SCSS | `%pf-`  | `%pf-v5-`  |
+| HTML class names  | `.pf-`  |  `.pf-v5-`  | excludes `.pf-m ` |
 
-# Upgrade deprecated components before our next major release
+You may utilize our [class name updator utility](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater) to assist with this work, but keep in mind that this tool has not been thoroughly tested and isn't quaranteed to catch everything. If you use this tool, it is important that you also manually check your selectors to ensure that nothing is missed.
+
+# Upgrade deprecated components
 
 You will have until our next major release to update the code for your components to match our newest recommendations. If you have not adopted our recommended implementation at that time, your components will be outdated and may not function as needed.
 
@@ -79,6 +86,8 @@ PatternFly 5 brings a new implementation to the following components, which can 
 # Major release notes 
 
 The following notes outline the changes we made to our React and HTML (Core) libraries for this major release. Breaking changes affect your product’s existing implementation and require you to adjust your codebase.
+
+Some of these changes can be flagged and fixed automically by using our Codemods, but other changes must be manually addressed. When a change require manual intervention, it will be marked accordingly in the notes.
 
 ## Global changes
 
