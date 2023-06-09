@@ -23,7 +23,7 @@ You can also use a single checkbox to allow a user to enable or disable a featur
 
 Checkbox labels fall to the right of the checkbox control. If placed vertically, all checkbox controls should be aligned with the left edge of other controls or input fields, in the form or on the page. 
 
-You can use headings to label a group of checkboxes. The placement of headings will depend on the layout of other content in the form or on the page you’re designing. For more information on how to arrange checkboxes, see our [forms documentation](/components/form/design-guidelines).
+You can use headings to label a group of checkboxes. The placement of headings will depend on the layout of other content in the form or on the page you’re designing. For more information on how to arrange checkboxes, see our [forms documentation](/components/forms/form/design-guidelines).
 
 <img src="./img/group-checkbox.png" alt="Example of a group of checkboxes" width="443"/>
 
