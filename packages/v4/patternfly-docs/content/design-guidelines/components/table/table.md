@@ -10,7 +10,7 @@ The elements mentioned below are similar for a table with compact or default spa
 <img src="./img/table-elements.png"  alt="example of table and the elements"  width="1189"/>
 
 1. **[Toolbar](/components/toolbar/design-guidelines):** Sits above the table and contains controls for manipulating table data. Common actions include filtering, sorting, and pagination.
-2. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information.
+2. **[Bulk selection](/patterns/bulk-selection):** When present, selects all items in a table. If pagination is being used, this will only select items on the current page. See [bulk selection](/patterns/bulk-selection) for more information.
 3. **Global actions:** Actions that apply to all selected items.
 4. **Expansion:** Expand all the rows in the table.
 5. **Column headers:** Should align with the content they contain. If the user is able to sort on a column, the first click on the header will sort the content of the table on the content in that column. Subsequent clicks will toggle the direction of the sort. Table data can only be sorted on one column at a time. See [sorting by columns](#sorting-by-columns) for more information on the sort component.
@@ -90,7 +90,7 @@ The actionable table provides checkboxes or radio buttons that enable users to s
 
 <img src="./img/table-actionable.png"  alt="example of actionable table"  width="1214"/>
 
-1. **[Bulk selection](/guidelines/bulk-selection):** When present, selects all items in a table with checkboxes. If pagination is being used, this will only select items on the current page. See [bulk selection](/guidelines/bulk-selection) for more information.
+1. **[Bulk selection](/patterns/bulk-selection):** When present, selects all items in a table with checkboxes. If pagination is being used, this will only select items on the current page. See [bulk selection](/patterns/bulk-selection) for more information.
 2. **Checkbox**: Enables a user to select a row. Use when multiple rows can be selected at the same time.
 3. **Radio button**: Enables a user to select a single row at a time. Use when only one row can be selected at a time.
 3. **Global actions:** Actions that can be applied to **all** selected items.  If actions in the table are restricted to a single row or object, keep the actions at the row kebab level, instead of in the toolbar.
