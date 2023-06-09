@@ -36,7 +36,7 @@ Usage and behavior guidelines communicate standards and best practices for commo
 
 Content guidelines provide principles and best practices around writing for user experience along with general voice and style guidance.
 
-[**View design guidelines**](/guidelines/colors) <i className="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
+[**View design guidelines**](/design-foundations/colors/) <i className="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
 
 ## Additional tools
 
@@ -104,3 +104,15 @@ for further updates pending testing and feedback, then the newly introduced CSS 
 as well as relevant examples in the documentation are all labeled as beta.
 
 For more information about beta components, visit [this page](https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion).
+
+### Major release cadence
+
+Currently, PatternFly plans to release a new major release each June. Major releases will be the only releases with 
+planned breaking changes. Along with each major release, the PatternFly team will provide thorough migration guides and 
+code mods to aid product teams in upgrading.
+
+Periodically, previews of updated React implementations of PatternFly components will be made available under a 'React 
+next' tab in the component docs. During major releases, these React next implementations may be promoted to the
+recommended implementation. In such instances, the previous implementation will be marked deprecated. Any deprecated 
+implementation of components will remain available (though will not be further enhanced or maintained) until at least 
+the subsequent major release.

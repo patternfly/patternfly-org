@@ -16,4 +16,4 @@ related: ["Date picker", "Time picker"]
 5. **Disabled state**
 
 ## Accessibility 
-For information regarding accessibility, visit the [calendar month accessibility](/components/calendar-month/accessibility) tab.
+For information regarding accessibility, visit the [calendar month accessibility](/components/date-and-time/calendar-month/accessibility) tab.

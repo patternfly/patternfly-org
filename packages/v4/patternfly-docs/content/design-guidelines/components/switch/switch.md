@@ -18,7 +18,7 @@ All switch types display their state (on or off) through different methods and l
 
 **General guidelines**
 
-* Use a basic switch by default unless space is limited, then use a [switch without a label](/components/switch/react#without-label).
+* Use a basic switch by default unless space is limited, then use a [switch without a label](/components/switch#without-label).
 * Add a form label in front of your switch to specify what setting a switch turns on or off, such as *Wi-fi* or *Bluetooth*.
 * If you're using a basic switch, add switch labels to clarify between toggled settings, such as *On* and *Off*.
 * Don't include the state of a switch in a label if you're using a switch with a label and a checkmark. 

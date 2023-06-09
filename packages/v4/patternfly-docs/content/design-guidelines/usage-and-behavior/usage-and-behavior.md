@@ -36,7 +36,7 @@ Contextual help can include any on-screen elements intended to guide the user in
 **[2]** Hint could be used to convey information to advanced users (“pro-tips,” for example). However because a hint adds static content directly to the page, consider whether it’s important for this information to be shown at all times.
 
 ## Progressive disclosure
-Progressive disclosure is the practice of hiding information or providing it only when needed in order to simplify a user interface. PatternFly supports several components that can be used to progressively disclose information on a page. The [accordion](/components/accordion) component allows content to be placed in stackable, expandable containers so that content can be hidden from view to simplify presentation and reduce the need for scrolling. [Expandable sections](/components/expandable-section) allow designers to hide a single block of content or settings behind a show/hide link. [Expandable field groups](/components/form) allow designers to group form elements into expandable containers.
+Progressive disclosure is the practice of hiding information or providing it only when needed in order to simplify a user interface. PatternFly supports several components that can be used to progressively disclose information on a page. The [accordion](/components/accordion) component allows content to be placed in stackable, expandable containers so that content can be hidden from view to simplify presentation and reduce the need for scrolling. [Expandable sections](/components/expandable-section) allow designers to hide a single block of content or settings behind a show/hide link. [Expandable field groups](/components/forms/form) allow designers to group form elements into expandable containers.
 
 | Use case | [Accordion](/components/accordion) | [Expandable section](/components/expandable-section) | [Field groups](/components/form)|
 |---- | :----: | :----: | :----: |
@@ -45,9 +45,9 @@ Progressive disclosure is the practice of hiding information or providing it onl
 |You want to give the user the ability to show or hide chunks of information on a long scrolling page.|⛔|✔|⛔
 
 ## Inputting data on forms
-Data input controls allow the user to input information into a form. There are two types of input controls for bound and unbound input. Bound input controls are constrained to only input data within a defined range. Examples of bound input controls include [sliders](/components/slider) and [number inputs](/components/number-input). Unbound controls do not enforce constraints on entry and include [text inputs](/components/text-input) and [text area](/components/text-area) controls.
+Data input controls allow the user to input information into a form. There are two types of input controls for bound and unbound input. Bound input controls are constrained to only input data within a defined range. Examples of bound input controls include [sliders](/components/slider) and [number inputs](/components/number-input). Unbound controls do not enforce constraints on entry and include [text inputs](/components/forms/text-input) and [text area](/components/forms/text-area) controls.
 
-| Use case | [Text input](/components/text-input) or [text area](/components/text-area) | [Number input](/components/number-input) | [Slider](/components/slider) |
+| Use case | [Text input](/components/forms/text-input) or [text area](/components/forms/text-area) | [Number input](/components/number-input) | [Slider](/components/slider) |
 |------------------------ | :----: | :----: | :----: |
 |You want to enter text from the keyboard. Possible values are alpha-numeric, unconstrained, or dependent on context.|✔ [1]|⛔|⛔|
 |You want to constrain the input of numeric data to a specified range.|✔ [2]|✔|✔|
@@ -59,10 +59,10 @@ Data input controls allow the user to input information into a form. There are t
 **[2]** It’s possible to use a standard text input for this use case and validate the entered value, but using either a number input or slider will be a more direct way to constrain the values that a user can input.
 
 ## Selecting between options on a form
-Depending on the nature of options being presented, [checkbox](/components/checkbox), [radio](/components/radio), or [switch](/components/switch) components may be used. Checkboxes are used to select one or more items from a list of options. Radio buttons are used to select from a set of mutually exclusive options. Switches indicate the state of a binary setting or object — on or off, enabled or disabled.
+Depending on the nature of options being presented, [checkbox](/components/forms/checkbox), [radio](/components/forms/radio), or [switch](/components/switch) components may be used. Checkboxes are used to select one or more items from a list of options. Radio buttons are used to select from a set of mutually exclusive options. Switches indicate the state of a binary setting or object — on or off, enabled or disabled.
 
 
-| Use case | [Checkbox](/components/checkbox) | [Radio](/components/radio) | [Switch](/components/switch) |
+| Use case | [Checkbox](/components/forms/checkbox) | [Radio](/components/forms/radio) | [Switch](/components/switch) |
 |------------------------ | :---: | :-------: | :---------------: |
 |The user wants to select one or more items from a list of items.|✔|⛔|✔ [1]|
 |The user wants to select from a set of mutually exclusive options.|⛔|✔|⛔|
@@ -110,9 +110,9 @@ It is often necessary to display more details about an object listed in a summar
 **[3]** Both inline and overlay drawers are available. If you don’t want to cover content on a page, we recommend the [inline drawer](/components/drawer#basic-inline) variation.
 
 ## Dropdown menus for actions and selections
-PatternFly provides three types of dropdown components for selecting between items in a menu. The [select](/components/select) component is used to select one or more values from a list. The [options menu](/components/options-menu) is similar to a select but is more often used for selecting between optional settings. [Dropdowns](/components/dropdown) are used to expose a list of possible actions.
+PatternFly provides three types of dropdown components for selecting between items in a menu. The [select](/components/menus/select) component is used to select one or more values from a list. The [options menu](/components/menus/options-menu) is similar to a select but is more often used for selecting between optional settings. [Dropdowns](/components/menus/dropdown) are used to expose a list of possible actions.
 
-| Use case | [Select](/components/select) | [Options menu](/components/options-menu) | [Dropdown](/components/dropdown) |
+| Use case | [Select](/components/menus/select) | [Options menu](/components/menus/options-menu) | [Dropdown](/components/menus/dropdown) |
 |------------------------ | :---: | :-------: | :---------------: |
 |You want to select a value or multiple values from a list.|✔|⛔|⛔|
 |You want to select filter terms from a list.|✔|⛔|⛔|

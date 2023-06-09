@@ -11,10 +11,6 @@
     "illustration": "./images/component-illustrations/action-list.png",
     "summary": "An <b>action list</b> is a group of actions, controls, or buttons with set spacing."
   },
-  "alert-group": {
-    "illustration": "./images/component-illustrations/alert-group.png",
-    "summary": "An <b>alert group</b> stacks and positions 2 or more alerts in a live region, either in a layer over the main content of a page or inline with the page content. Alert groups should always rank alerts by age, stacking new alerts on top of old ones as they surface."
-  },
   "alert": {
     "illustration": "./images/component-illustrations/alert.png",
     "summary": "An <b>alert</b> is a notification that provides brief information to the user without blocking their workflow."
@@ -71,10 +67,6 @@
     "illustration": "./images/component-illustrations/checkbox.png",
     "summary": "A <b>checkbox</b> is used to select a single item or multiple items, typically to choose elements to perform an action or to reflect a binary setting."
   },
-  "chip-group": {
-    "illustration": "./images/component-illustrations/chip-group.png",
-    "summary": "A <b>chip group</b> represents an attribute that has been assigned one or more values. An OR relationship is implied between values in the group. Chip groups are useful to express complex filters to a data set, for example."
-  },
   "chip": {
     "illustration": "./images/component-illustrations/chip.png",
     "summary": "A <b>chip</b> is used to communicate a value or a set of attribute-value pairs within workflows that involve filtering a set of objects."
@@ -95,13 +87,21 @@
     "illustration": "./images/component-illustrations/context-selector.png",
     "summary": "A <b>context selector</b> can be used in addition to global navigation when the data or resources you show in the interface need to change depending on the user's context."
   },
+  "custom-menus": {
+    "illustration": "./images/component-illustrations/custom-menus.png",
+    "summary": "<b>Custom menus</b> can be created by combining <Link to='/components/menus/menu'>menu</Link> and <Link to='/components/menus/menu-toggle'>menu toggles</Link> to satisfy a variety of use cases."
+  },
   "data-list": {
     "illustration": "./images/component-illustrations/data-list.png",
     "summary": "A <b>data list</b> is used to display large data sets when you need a flexible layout or need to include interactive content like charts."
   },
   "date-picker": {
     "illustration": "./images/component-illustrations/date-picker.png",
-    "summary": "A <b>date picker</b> helps users select a specific date, time, or range of time-related values."
+    "summary": "A <b>date picker</b> helps users enter or select a specific date from a calendar."
+  },
+  "date-and-time-picker": {
+    "illustration": "./images/component-illustrations/date-and-time-picker.png",
+    "summary": "A <b>date and time picker</b> helps users select both a specific date and a time by combining <Link to='/components/date-and-time/date-picker'>date picker</Link> and <Link to='/components/date-and-time/time-picker'>time picker</Link> components."
   },
   "description-list": {
     "illustration": "./images/component-illustrations/description-list.png",
@@ -152,6 +152,7 @@
     "summary": "A <b>form</b> is a group of elements used to collect information from a user in a variety of contexts including in a modal, in a wizard, or on a page. Use cases for forms include tasks reliant on user-inputted information for completion like logging in, registering, configuring settings, or completing surveys."
   },
   "form-select": {
+    "illustration": "./images/component-illustrations/form-select.png",
     "summary": "A <b>form select</b> embeds browser native select lists into a form."
   },
   "helper-text": {
@@ -163,6 +164,7 @@
     "summary": "A <b>hint</b> is in-app messaging that provides a one-step reminder, explanation, or call to action for a page or modal."
   },
   "icon": {
+    "illustration": "./images/component-illustrations/icon.png",
     "summary": "An <b>icon</b> component is a container that allows for <Link to='/guidelines/icons/#all-icons'>icons</Link> of varying dimensions, as well as <Link to='/components/spinner'>spinners</Link>, to seamlessly replace each other without shifting surrounding content.<br/><br/>PatternFly's <Link to='/guidelines/icons/#all-icons'>icons guidelines</Link> contain PatternFly's icon set, as well as more information about icon usage."
   },
   "inline-edit": {
@@ -176,10 +178,6 @@
   "jump-links": {
     "illustration": "./images/component-illustrations/jump-links.png",
     "summary": "<b>Jump links</b> allow users to navigate to sections within a page."
-  },
-  "label-group": {
-    "illustration": "./images/component-illustrations/label-group.png",
-    "summary": "Use a <b>label group</b> when you have multiple <Link to='/components/label'>labels</Link> to display at once. Label groups can be oriented either horizontally or vertically and can optionally be named and be dismissable. You may also make the label group editable to allow users to edit an existing label or add a new label."
   },
   "label": {
     "illustration": "./images/component-illustrations/label.png",
@@ -245,6 +243,14 @@
     "illustration": "./images/component-illustrations/panel.png",
     "summary": "The <b>panel</b> component is a container that supports flexible content layouts. It can be used to house other components such as fields, forms, videos, buttons, and more. The panel should not be confused with the <Link to='/components/drawer/design-guidelines/'>drawer</Link> component, which allows you to surface information via a collapsable container."
   },
+  "password-generator": {
+    "illustration": "./images/component-illustrations/password-generator.png",
+    "summary": "This demo shows you how to create an input field that can be used to generate unique passwords."
+  },
+  "password-strength": {
+    "illustration": "./images/component-illustrations/password-strength.png",
+    "summary": "This demo shows how to use PatternFly component to validate and return feedback about password strength according to consumer-defined rules."
+  },
   "popover": {
     "illustration": "./images/component-illustrations/popover.png",
     "summary": "A <b>popover</b> is in-app messaging that provides more information on specific product areas. Popovers display content in a new window that overlays the current page. Unlike modals, popovers don't block the current page."
@@ -263,7 +269,7 @@
   },
   "search-input": {
     "illustration": "./images/component-illustrations/search-input.png",
-    "summary": "A <b>search input</b> is a type of input field that can be user to search, find, or filter. See <Link to='/guidelines/filters'>filter guidelines</Link> for more information on using search input as a filter."
+    "summary": "A <b>search input</b> is a type of input field that can be user to search, find, or filter. See <Link to='/patterns/filters/design-guidelines'>filter guidelines</Link> for more information on using search input as a filter."
   },
   "select": {
     "illustration": "./images/component-illustrations/select.png",
@@ -330,12 +336,15 @@
     "summary": "A <b>tile</b> component is a form of selection that can be used in place of a <Link to='/components/radio'>radio button</Link> and is commonly used in <Link to='/components/form'>forms</Link>. A tile appears visually similar to a <Link to='/components/card/'>selectable card</Link>. However, tiles are used specifically when the user is selecting a static option, whereas a selectable card triggers an action or opens a quickstart or sidebar to provide additional information."
   },
   "time-picker": {
+    "illustration": "./images/component-illustrations/time-picker.png",
     "summary": "A <b>time picker</b> allows users to select a time from a list of options. Time can be displayed in hours and minutes, but not in seconds."
   },
   "timestamp": {
+    "illustration": "./images/component-illustrations/timestamp.png",
     "summary": "A <b>timestamp</b> provides consistent formats for displaying date and time values."
   },
   "title": {
+    "illustration": "./images/component-illustrations/title.png",
     "summary": "A <b>title</b> component applies top and bottom margins, font-weight, font-size, and line-height to titles. The most common usage for a title is to define headings within a page. For more information about the relationship between title component sizes and HTML heading levels, see the <Link to='/guidelines/typography#customizing-heading-levels'>Typography guidelines</Link>."
   },
   "toggle-group": {

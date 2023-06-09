@@ -57,7 +57,7 @@ Add the property that is being modified. In this case, modify the color property
 The custom property name should now be: `--pf-v5-c-alert--m-success__title--Color`
 
 #### Step 2.5 
-Define the value of the component-level CSS variable. PatternFly's global danger color is: `--pf-v5-global--danger-color--100`. You can reference PatternFly’s <a href="/guidelines/colors/#primary-colors" target="_blank">global colors documentation</a> for more information.
+Define the value of the component-level CSS variable. PatternFly's global danger color is: `--pf-v5-global--danger-color--100`. You can reference PatternFly’s <a href="/design-foundations/colors" target="_blank">global colors documentation</a> for more information.
 
 Assign the custom property name `(--pf-v5-c-alert--m-success__title--Color)` that is already inside the `.pf-v5-c-alert{}` block to the global danger color.
 
@@ -151,7 +151,7 @@ Add the property being applied to the badge after the element.
 It should look like this: `--pf-v5-c-label__badge--MarginRight`
 
 #### Step 2.4 
-Define the value of the new custom CSS variable. PatternFly's global variable for 8px of space is `--pf-v5-global--spacer--sm`. You can reference <a href="/guidelines/spacers" target="_blank">PatternFly’s documentation about spacers</a> for more information.
+Define the value of the new custom CSS variable. PatternFly's global variable for 8px of space is `--pf-v5-global--spacer--sm`. You can reference <a href="/design-foundations/spacers" target="_blank">PatternFly’s documentation about spacers</a> for more information.
 
 Assign the custom property name `--pf-v5-c-label__badge--MarginRight` that is already inside of the `.pf-v5-c-label{}` block to the global variable for 8px of space.
 
@@ -169,7 +169,7 @@ It should look like this: `margin-right: var(--pf-v5-c-label__badge--MarginRight
 ## Part 4: Create and use global CSS variables to override PatternFly styles
 To explore this concept, create a new global custom property for a 5xl font size. Use this new global property to make a new variation of the title component using the provided CodeSandbox for part 4.
 
-Referencing <a href="/guidelines/typography" target="_blank">PatternFly's typography design guidelines</a>, the largest font size PatternFly offers is a "super hero heading" size. It is 36px represented by the global variable `pf-v5-global--FontSize--4xl`. Assume that there is a need for a larger font size for the title component that is used across the entire application.
+Referencing <a href="/design-foundations/typography" target="_blank">PatternFly's typography design guidelines</a>, the largest font size PatternFly offers is a "super hero heading" size. It is 36px represented by the global variable `pf-v5-global--FontSize--4xl`. Assume that there is a need for a larger font size for the title component that is used across the entire application.
 
 <Button variant="primary" component="a" href="https://codesandbox.io/s/creating-new-global-css-vars-start-cqb8nw" target="_blank">Codesandbox - Part 4</Button>
 

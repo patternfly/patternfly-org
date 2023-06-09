@@ -131,4 +131,4 @@ PatternFly supports three types of cards:
  
 ## Accessibility
  
-For information regarding accessibility, visit the [card accessibility page](components/card/accessibility).
+For information regarding accessibility, visit the [card accessibility page](/components/card/accessibility).

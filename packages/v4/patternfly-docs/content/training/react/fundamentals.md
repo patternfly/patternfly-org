@@ -68,7 +68,7 @@ Add a close button to the `CardActions` component. Buttons communicate and trigg
 Add a button using the `plain` variant.
 
 <CopyCodeBlock>
-{`Button variant="plain"> </Button>`}
+{`<Button variant="plain"> </Button>`}
 </CopyCodeBlock>
 
 ### Step 2.3

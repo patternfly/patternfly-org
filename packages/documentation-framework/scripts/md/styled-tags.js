@@ -32,14 +32,15 @@ function styledTags() {
           let columnHeaders = [];
           for (let child of node.children) {
             if (child.tagName === 'thead') {
+              child.properties.className = 'pf-v5-c-table__thead';
               // Find column headers
               const tr = child.children.find(child => child.tagName === 'tr');
               tr.properties.role = 'row';
+              tr.properties.className = 'pf-v5-c-table__tr';
               tr.children
                 .filter(child => child.tagName === 'th')
                 .forEach(th => {
-                  th.properties.className = th.properties.className || '';
-                  th.properties.className += ' pf-m-wrap';
+                  th.properties.className = `${th.properties.className} pf-v5-c-table__th pf-m-wrap`;
                   th.properties.role = 'columnheader';
                   th.properties.scope = 'col';
                   let colName = '';
@@ -56,14 +57,17 @@ function styledTags() {
             }
             else if (child.tagName === 'tbody') {
               child.properties.role = 'rowgroup';
+              child.properties.className = 'pf-v5-c-table__tbody';
               child.children
                 .filter(tr => tr.tagName === 'tr')
                 .forEach(tr => {
                   tr.properties.role = 'row';
+                  tr.properties.className = 'pf-v5-c-table__tr';
                   tr.children
                     .filter(td => td.tagName === 'td')
                     .forEach((td, i) => {
                       td.properties.role = 'cell';
+                      td.properties.className = 'pf-v5-c-table__td';
                       if (columnHeaders[i]) {
                         td.properties['data-label'] = columnHeaders[i];
                       }

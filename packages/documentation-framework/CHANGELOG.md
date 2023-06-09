@@ -3,6 +3,144 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.54 (2023-06-09)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.53 (2023-06-09)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.52 (2023-06-07)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.51 (2023-06-06)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.50 (2023-06-01)
+
+
+### Bug Fixes
+
+* **labels:** Update label logic to include html components ([#3567](https://github.com/patternfly/patternfly-org/issues/3567)) ([32bdc0f](https://github.com/patternfly/patternfly-org/commit/32bdc0fe2120e2c86f39c1e5da94e3f2d11d9705))
+
+
+
+
+
+# 2.0.0-alpha.49 (2023-06-01)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.48 (2023-05-31)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.47 (2023-05-31)
+
+
+### Bug Fixes
+
+* **CSSVariables:** check for values before looping over them ([f2d167f](https://github.com/patternfly/patternfly-org/commit/f2d167f57c0cd38b289ade62d98022d7902de38f))
+
+
+
+
+
+# 2.0.0-alpha.46 (2023-05-31)
+
+
+### Bug Fixes
+
+* **CSSVariables:** resolve a11y issues in tables ([41a7837](https://github.com/patternfly/patternfly-org/commit/41a78379de36c08d7b36fe48a9ff40a4140cdc63))
+
+
+
+
+
+# 2.0.0-alpha.45 (2023-05-25)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.44 (2023-05-25)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.43 (2023-05-25)
+
+
+### Features
+
+* **labels:** add deprecated/demo/beta labels to headers + nav items ([#3547](https://github.com/patternfly/patternfly-org/issues/3547)) ([010a0e0](https://github.com/patternfly/patternfly-org/commit/010a0e05baea661964660d2a733569a34abbf243))
+
+
+
+
+
+# 2.0.0-alpha.42 (2023-05-18)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.41 (2023-05-15)
+
+
+### Bug Fixes
+
+* broken link in search-input summary ([7cbf968](https://github.com/patternfly/patternfly-org/commit/7cbf968c1b00aef2257ef8b7434c7ff8b9a4255a))
+
+
+
+
+
+# 2.0.0-alpha.40 (2023-05-15)
+
+
+### Bug Fixes
+
+* **docs:** use correct theme class on full page dark theme switcher ([#3532](https://github.com/patternfly/patternfly-org/issues/3532)) ([0008236](https://github.com/patternfly/patternfly-org/commit/0008236da2b105fd1789db2263323c59780b5194))
+
+
+
+
+
 # 2.0.0-alpha.39 (2023-05-11)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
