@@ -54,11 +54,11 @@ npx @patternfly/pf-codemods@latest <path to your source code> --exclude menu-sea
 
 # Review and update variable and class names
 
-We changed component class names, layout class names, utility class names, CSS variables, and SCSS variables. Modifier class names have not changed as part of this major release.
+We changed component class names, layout class names, utility class names, CSS variables, and SCSS variables. These changes mean that any existing CSS overrides will likely be targeting outdated styles. These changes will break all custom CSS overrides that reference any PatternFly class names or CSS variables, so it is important to review your overrides and ensure that they align with our updated naming conventions, which are detailed in this section. 
 
-These changes mean that any existing CSS overrides will likely be targeting outdated styles. Review your overrides and ensure that they align with our [updated CSS classes and variables.](developer-resources/global-css-variables) 
+There are some cases where multiple applications that use PatternFly all plug into a larger application. In such cases, it's nearly impossible to coordinate a simultaneous update from PatternFly 4 to PatternFly 5. To prevent style collisions when multiple versions of PatternFly could be simultaneously running side by side in one UI, PatternFly has versioned all of its CSS using versioned prefixes.
 
-The following table outlines some of the general changes that were made to variable prefixes, but we recommend checking your code against our global css variable guide to cover all changes. 
+For PatternFly 5, class names, variable names, and SCSS objects have all had `v5` added to their prefix in the following ways:
 
 | Language/style | v4 prefix | v5 prefix|  Note |
 | --- | ---| --- | ---  |
@@ -69,7 +69,13 @@ The following table outlines some of the general changes that were made to varia
 |  SCSS | `%pf-`  | `%pf-v5-`  |
 | HTML class names  | `.pf-`  |  `.pf-v5-`  | excludes `.pf-m ` |
 
-You may utilize our [class name updator utility](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater) to assist with this work, but keep in mind that this tool has not been thoroughly tested and isn't quaranteed to catch everything. If you use this tool, it is important that you also manually check your selectors to ensure that nothing is missed.
+**Note:** PatternFly modifier classes, such as `pf-m-expanded` are not versioned and retain the same formatting that they had for PatternFly 4. 
+
+## Utilize our `class-name-updater` Codemod
+
+We offer [a `class-name-updater` Codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater) to help support your updates. This utility automatically identifies class names that need to be updated as a result of the introduction of versioned class names in Patternfly v5, which helps highlight places in your codebase that may require changes to class names. Add the `--fix` flag to allow run the code mod and fix issues where possible. 
+
+**Note:** It is important to consider that this utility performs a simple ‘find and replace’, so it's possible that it will inadvertently identify code that is formatted similarly to a PatternFly class name, but is not one.
 
 # Upgrade deprecated components
 
@@ -82,12 +88,11 @@ PatternFly 5 brings a new implementation to the following components, which can 
 - [Dropdown ](/components/dropdown) 
 - [Wizard](/components/wizard)
 
-
 # Major release notes 
 
-The following notes outline the changes we made to our React and HTML (Core) libraries for this major release. Breaking changes affect your product’s existing implementation and require you to adjust your codebase.
+The following notes outline the changes we made to our React and HTML (Core) libraries for this major release. 
 
-Some of these changes can be flagged and fixed automically by using our Codemods, but other changes must be manually addressed. When a change require manual intervention, it will be marked accordingly in the notes.
+Some of these changes can be flagged and fixed automatically by using our Codemods, but other changes must be manually addressed. When a change requires manual intervention, it will be marked accordingly in the notes.
 
 ## Global changes
 
@@ -102,7 +107,21 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
-- Removed the `KEY_CODES` constant from our constants file. If your code relies on it we suggest that you refactor to use `KeyTypes` as `KeyboardEvent.keyCode` is deprecated. This rule will raise an error when `KEY_CODES` is imported in a file, but it will not make any code changes.[(#8174)](https://github.com/patternfly/patternfly-react/pull/8174)
+- Removed the `KEY_CODES` constant from our constants file. If your code relies on it we suggest that you refactor to use `KeyTypes` as `KeyboardEvent.keyCode` is deprecated. This rule will raise an error when `KEY_CODES` is imported in a file, but it will not make any code changes ([#8174](https://github.com/patternfly/patternfly-react/pull/8174))
+
+- Removed the `popperMatchesTriggerWidth` property. `minWidth`, `maxWidth`, and `width` properties can be used to modify the Popper width instead [(#8724)](https://github.com/patternfly/patternfly-react/pull/8724)
+
+    Previous implementation:
+
+    ```jsx
+    <Popper popperMatchesTriggerWidth />
+    ```
+
+    New implementation:
+
+    ```jsx
+    <Popper  />
+    ```
 
 ## Icons
 
@@ -112,17 +131,17 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
-- Removed the `size`, `color`, and `noVerticalAlign` properties from icons which are imported from @patternfly/react-icons. Wrap your react-icon with the <Icon> component to customize its size and color. This rule will raise a warning when any of these three props are used, but will not make any code changes.[(#5275)](/ https://github.com/patternfly/patternfly-react/pull/5275)
+- Removed the `size`, `color`, and `noVerticalAlign` properties from icons which are imported from @patternfly/react-icons. Wrap your react-icon with the `<Icon>` component to customize its size and color. This rule will raise a warning when any of these threeproperties are used, but will not make any code changes ([#5275](/ https://github.com/patternfly/patternfly-react/pull/5275))
 
 ## Fonts
 
-- Removed support for Overpass font ([#5169](https://github.com/patternfly/patternfly/pull/5169))
+- Removed support for the Overpass font ([#5169](https://github.com/patternfly/patternfly/pull/5169))
 
 ## Charts 
 
 **React**
 
-- Removed the `getResizeObserver` function from`react-charts` in favor of `react-core`'s `getResizeObserver`. This helper function now has a third parameter, `useRequestAnimationFrame`, and allows a single function to be maintained going forward [(#8533)](https://github.com/patternfly/patternfly-react/pull/8533)
+- Replaced the `getResizeObserver` function from`react-charts` with the `getResizeObserver` function of `react-core`. This helper function now has a third parameter, `useRequestAnimationFrame`, and allows a single function to be maintained going forward [(#8533)](https://github.com/patternfly/patternfly-react/pull/8533)
 
     Previous implementation:
 
@@ -138,7 +157,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 - Renamed all light theme objects to remove `Light` from their name and marked all as `@private`. Instead of using these objects directly, you should use the `getTheme` function from `react-charts`. This rule will throw an error, but will not make any changes [(#8590)](https://github.com/patternfly/patternfly-react/pull/8590)
 
-- Removed `ChartThemeVariant` from `react-charts` [(#8590)](https://github.com/patternfly/patternfly-react/pull/8590)
+- Removed `ChartThemeVariant` from `react-charts` ([#8590](https://github.com/patternfly/patternfly-react/pull/8590))
 
     Previous implementation:
 
@@ -165,7 +184,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     import { ChartLegend } from '@patternfly/react-charts'
     ```
 
-- Removed the deprecated `themeVariant` properties from all `react-charts` components and the removed the `react-charts` `getCustomTheme` function. This functionality is replaced by Core's dark theme support [(#8590)](https://github.com/patternfly/patternfly-react/pull/8590)
+- Removed the deprecated `themeVariant` properties and `getCustomTheme` function. This functionality is replaced by Core's dark theme support [(#8590)](https://github.com/patternfly/patternfly-react/pull/8590)
 
     Previous implementation:
 
@@ -198,25 +217,25 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **Core** 
 
-- Updated components using a plain checkbox or radio input to instead use the `.pf-m-standalone` variation of the checkbox/radio ([#5355](https://github.com/patternfly/patternfly/pull/5355))
+- Updated components using a plain checkbox or radio input to instead use the `.pf-m-standalone` variation ([#5355](https://github.com/patternfly/patternfly/pull/5355))
+
 - Removed `visibility` CSS across components where it was unnecessary ([#5209](https://github.com/patternfly/patternfly/pull/5209))
 
 **React** 
 
-- Updated several ARIA related props so that they will now only be conditionally applied when passed in for the following components:
+- Updated several ARIA related properties so that they will now only be conditionally applied when passed in for the following components:
 
-    | Component | Prop | Condition |
+    | Component | Property| Condition |
     | -- | -- | -- |
-    | `Wizard` | `mainAriaLabel`, `mainAriaLabelledBy` | Only when the Wizard's body contents overflows and causes a scrollbar. A tabindex of "0" will also be applied when the contents oveflows. |
-    | `WizardBody` (Next implementation) | `aria-label`, `aria-labelledby` | Only when the WizardBody contents overflows and causes a scrollbar. A tabindex of "0" will also be applied when the contents oveflows. |
-    | `MenuItem` | `aria-label` | When `hasCheckbox` is also passed, the prop is applied to the internal `<li>` element. Otherwise it is applied to the element passed into the `component` prop. |
+    | `Wizard` | `mainAriaLabel`, `mainAriaLabelledBy` | Only when the Wizard's body contents overflows and causes a scrollbar. A tabindex of "0" will also be applied when the contents overflow. |
+    | `WizardBody` (Next implementation) | `aria-label`, `aria-labelledby` | Only when the `WizardBody` contents overflows and causes a scrollbar. A tabindex of "0" will also be applied when the contents overflow. |
+    | `MenuItem` | `aria-label` | Applied to the internal `<li>` element when `hasCheckbox` is also passed in. Otherwise it is applied to the element passed into the `component` property. |
     | `PageGroup`, `PageNavigation` | `aria-label` | Only when `hasOverflowScroll` is true. |
-
-    Additionally, the internal `aria-labelledby` for ProgressStep will only be applied when the `popoverRender` prop is also passed.
+| `ProgressStep` | `aria-labelledby` | When the `popoverRender` property is also passed in. |
 
     This rule will raise a warning, but will not make any code changes [(#8649)](https://github.com/patternfly/patternfly-react/pull/8649)
 
-- Renamed the `hasCheck` prop for TreeView, MenuItem, and the Next implementation of SelectOption to `hasCheckbox` (#8403)](https://github.com/patternfly/patternfly-react/pull/8403)
+- Renamed the `hasCheck` property to `hasCheckbox` for `TreeView`, `MenuItem`, and the Next implementation of `SelectOption` (#8403)](https://github.com/patternfly/patternfly-react/pull/8403)
 
     Previous implementation:
 
@@ -234,7 +253,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <MenuItem hasCheckbox />
     ```
 
-- We've promoted the "Next" implementations of our Dropdown, Select, and Wizard components and they are now our default implementation. This rule will update import and/or export paths.
+- Promoted the Next implementations of our `Dropdown`, `Select`, and `Wizard` components and they are now our default implementation. This rule will update import and/or export paths.
 [(#8821)](https://github.com/patternfly/patternfly-react/pull/8821) [(#8825)](https://github.com/patternfly/patternfly-react/pull/8825) [(#8835)](https://github.com/patternfly/patternfly-react/pull/8835)
 
     Previous implementation:
@@ -249,7 +268,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     import { Dropdown /* data-codemods */ } from '@patternfly/react-core';
     ```
 
-- Updated the `onToggle` function to include the `event` as its first parameter for the following components: `ApplicationLauncher`, `BadgeToggle`, `DropdownToggle`, `KebabToggle`, `Toggle`, `Select`, and `SelectToggle`. Handlers for these components may require an update [(#8667)](https://github.com/patternfly/patternfly-react/pull/8667)
+- Updated the `onToggle` function to include the `event` as its first parameter for `ApplicationLauncher`, `BadgeToggle`, `DropdownToggle`, `KebabToggle`, `Toggle`, `Select`, and `SelectToggle`. Handlers for these components may require an update [(#8667)](https://github.com/patternfly/patternfly-react/pull/8667)
 
     Previous implementation:
 
@@ -275,10 +294,9 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <DropdownToggle onToggle={toggleDropdown}>
     ```
 
-- The `react-dropzone` dependency used with FileUpload, MultipleFileUpload, and CodeEditor has been updated from version 9 to version 14. As part of this upgrade, FileUpload has had type changes to its `onFileInputChange` and `dropzoneProps` props, and MultipleFileUpload has had a type change to its `dropzoneProps` prop. This rule will raise a warning when any of these three components are imported, but will not make any code changes [(#7926)](https://github.com/patternfly/patternfly-react/pull/7926)
+- Updated from version 9 to version 14 for the `react-dropzone` dependency used with `FileUpload`, `MultipleFileUpload`, and `CodeEditor`. As part of this upgrade, `FileUpload` has had type changes to its `onFileInputChange` and `dropzoneProps` properties, and `MultipleFileUpload` has had a type change to its `dropzoneProps` property. This rule will raise a warning when any of these three components are imported, but will not make any code changes [(#7926)](https://github.com/patternfly/patternfly-react/pull/7926)
 
-- Removed the `removeFindDomNode` property as it is now the default behavior. The affected components are as follows:`ApplicationLauncer`, ClipboardCopy, ContextSelector, Dropdown, NavItem, OptionsMenu, Popover, SearchInput, Select, OverflowTab, Timepicker, Tooltip, Truncate.
-[(#8371)](https://github.com/patternfly/patternfly-react/pull/8371) [(#8316)](https://github.com/patternfly/patternfly-react/pull/8316)
+- Removed the `removeFindDomNode` property as it is now the default behavior. The affected components are `ApplicationLauncher`, `ClipboardCopy`, `ContextSelector`, `Dropdown`, `NavItem`, `OptionsMenu`, `Popover`, `SearchInput`, `Select`, `OverflowTab`, `Timepicker`, `Tooltip`, `Truncate` [(#8371)](https://github.com/patternfly/patternfly-react/pull/8371) [(#8316)](https://github.com/patternfly/patternfly-react/pull/8316)
 
     Previous implementation:
 
@@ -316,12 +334,11 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <Truncate  />
     ```
 
-- Removed the deprecated `ToggleMenuBaseProps` interface.
-[(#8235)](https://github.com/patternfly/patternfly-react/pull/8235)
+- Removed the deprecated `ToggleMenuBaseProps` interface [(#8235)](https://github.com/patternfly/patternfly-react/pull/8235)
 
-- Updated the default value of the `getResizeObserver` helper function's third parameter, `useRequestAnimationFrame`. This rule will only provide two suggestions detailing when to pass which boolean into this parameter. [(#8324)](https://github.com/patternfly/patternfly-react/pull/8324)
+- Updated the default value of the `getResizeObserver` helper function's third parameter, `useRequestAnimationFrame`. This rule will only provide 2 suggestions of when to pass which boolean into this parameter [(#8324)](https://github.com/patternfly/patternfly-react/pull/8324)
 
-- We've renamed `disable` prop to `isDisabled` inside `TdSelectType` and `TdActionsType` interfaces. These interfaces are used as types of `Td` component's props `select` (`TdSelectType`) and `actions` (`TdActionsType`) [(#8861,](https://github.com/patternfly/patternfly-react/pull/8861) [#8904)](https://github.com/patternfly/patternfly-react/pull/8904)
+- Renamed the `disable` property to `isDisabled` inside the `TdSelectType` and `TdActionsType` interfaces that are used as types of `Td` component's properties `select` (`TdSelectType`) and `actions` (`TdActionsType`) [(#8861,](https://github.com/patternfly/patternfly-react/pull/8861) [#8904)](https://github.com/patternfly/patternfly-react/pull/8904)
 
     Previous implementation:
 
@@ -360,15 +377,15 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     ```
 
 
-- The following props have been removed from their respective components:
+- The following properties have been removed from their respective components:
 
-    | Component | Prop |
-    |--|--|
+    | Component | Property |
+    | --- | --- |
     | `FormSelect` | `isIconSprite` |
     | `TextArea` | `isIconSprite` and `isReadOnly` |
-    | `TextInput` | `isIconSprite`, `isReadOnly`, `iconVariant`, `customIconUrl`, and `customIconDimensions` |
+    | `TextInput` | `isIconSprite`, `isReadOnly`, `iconVariant`, `customIconUrl`, `customIconDimensions` |
 
-    The `isReadOnly` prop should be replaced with the `readOnlyVariant` prop, and the `iconVariant` & `customIconUrl` props should be replaced with the `customIcon` prop [(#9132)](https://github.com/patternfly/patternfly-react/pull/9132)
+    The `isReadOnly` property should be replaced with `readOnlyVariant`, and the `iconVariant` & `customIconUrl` properties should be replaced with `customIcon`  [(#9132)](https://github.com/patternfly/patternfly-react/pull/9132)
 
     Previous implementation:
 
@@ -392,11 +409,11 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <TextArea  readOnlyVariant="plain" >
     ```
 
-- Renamed option `'default'` to `'custom'` for:
+- Renamed the `'default'` option to `'custom'` for:
     - `AlertVariant` enum
-    - `variant` prop of `Alert`, `AlertIcon` and `NotificationDrawerListItemHeader` components
-    - `titleIconVariant` prop of `Modal` and `ModalContent` components
-    - `alertSeverityVariant` prop of `Popover` component
+    - `variant` property of `Alert`, `AlertIcon` and `NotificationDrawerListItemHeader` 
+    - `titleIconVariant` property of `Modal` and `ModalContent` 
+    - `alertSeverityVariant` property of `Popover` 
     [(#8924)](https://github.com/patternfly/patternfly-react/pull/8924)
 
     Previous implementation:
@@ -433,7 +450,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     </>;
     ```
 
-- Renamed the `reference` property to `triggerRef` for Popover and Tooltip 
+- Renamed the `reference` property to `triggerRef` for `Popover` and `Tooltip` 
 [(#8733)](https://github.com/patternfly/patternfly-react/pull/8733)
 
     Previous implementation:
@@ -450,8 +467,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <Tooltip triggerRef={componentRef} />
     ```
 
-
-- The markup for the following components has been changed. Selectors may need to be updated.
+- Changed the markup for the following components. 
 
     - FormSelect
     - TextArea
@@ -463,23 +479,22 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     - LoginPage
     - NumberInput
     - SearchInput
-    - Slider - only when the `isInputVisible` prop is passed in
+    - Slider - only when the `isInputVisible` propertyis passed in
     - TreeViewSearch
-    - Select - only the deprecated implementation with the `hasInlineFilter` prop passed in
+    - Select - only the deprecated implementation with the `hasInlineFilter` propertypassed in
 
-    This rule will raise a warning, but will not make any changes. [(#9132)](https://github.com/patternfly/patternfly-react/pull/9132)
+    Selectors may need to be updated. This rule will raise a warning, but will not make any changes. [(#9132)](https://github.com/patternfly/patternfly-react/pull/9132)
 
 
 ### About modal 
 
 **Core** 
 
-- Updated to be a regular block element that is placed inside of the existing modal component ([#5216](https://github.com/patternfly/patternfly/pull/5216))
+- Updated to be a regular block element that is placed inside of the existing `Modal` component ([#5216](https://github.com/patternfly/patternfly/pull/5216))
 
 **React**
 
-- The AboutModalBoxHero sub-component has been removed from AboutModal. Selectors in tests may need to be updated. This rule will raise a warning, but will not make any code changes.[(#8931)](https://github.com/patternfly/patternfly-react/pull/8931)
-
+- The `AboutModalBoxHero` sub-component has been removed from AboutModal. Selectors in tests may need to be updated. This rule will raise a warning, but will not make any code changes.[(#8931)](https://github.com/patternfly/patternfly-react/pull/8931)
 
 ### Accordion 
 
@@ -503,7 +518,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <AccordionExpandableContentBody>Body</AccordionExpandableContentBody>
     ```
 
-- Renamed the `large` prop value of `displaySize` to `lg` [(#8212)](https://github.com/patternfly/patternfly-react/pull/8212)
+- Renamed the `large` property value of `displaySize` to `lg` [(#8212)](https://github.com/patternfly/patternfly-react/pull/8212)
 
     Previous implementation:
 
@@ -521,7 +536,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
-- Removed the `aria-label` prop from Alert because it is not well supported by assistive technologies on `<div>` elements [(#8649)](https://github.com/patternfly/patternfly-react/pull/8649)
+- Removed the `aria-label` property from `Alert` because it is not well supported by assistive technologies on `<div>` elements [(#8649)](https://github.com/patternfly/patternfly-react/pull/8649)
 
     Previous implementation:
 
@@ -535,7 +550,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <Alert  />
     ```
 
-- Replaced the `titleHeadlingLevel` with the `component` prop [(#8518)](https://github.com/patternfly/patternfly-react/pull/8518)
+- Replaced the `titleHeadlingLevel` property with `component` [(#8518)](https://github.com/patternfly/patternfly-react/pull/8518)
 
     Previous implementation:
 
@@ -556,16 +571,16 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     Previous implementation:
 
     ```jsx
-    import {`ApplicationLauncer` } from '@patternfly/react-core';
+    import {`ApplicationLauncher` } from '@patternfly/react-core';
     ```
 
     New implementation:
 
     ```jsx
-    import {`ApplicationLauncer` } from '@patternfly/react-core/deprecated';
+    import {`ApplicationLauncher` } from '@patternfly/react-core/deprecated';
     ```
 
-- Updated the `onFavorite` and `onSearch` props for`ApplicationLauncer` to include the `event` as their first parameter. Handlers may require an update [(#8756)](https://github.com/patternfly/patternfly-react/pull/8756)
+- Updated the `onFavorite` and `onSearch`properties for`ApplicationLauncher` to include `event` as their first parameter. Handlers may require an update [(#8756)](https://github.com/patternfly/patternfly-react/pull/8756)
 
     Previous implementation:
 
@@ -591,13 +606,13 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <ApplicationLauncher onFavorite={handler2} onSearch={searchHandler2}>
     ```
 
-- Updated the internal input in`ApplicationLauncer` to the PatternFly SearchInput. Any relative selectors, such as in unit tests, may need to be updated [(#8293)](https://github.com/patternfly/patternfly-react/pull/8293)
+- Updated the internal input in`ApplicationLauncher` to the PatternFly `SearchInput`. Any relative selectors, such as in unit tests, may need to be updated [(#8293)](https://github.com/patternfly/patternfly-react/pull/8293)
 
 ### Background image 
 
 **React**
 
-- Removed the `filter` prop from BackgroundImage. Updated the type of the `src` prop to be a string, and the prop will no longer accept a `BackgroundImageSrcMap` object. This rule won't update the `src` prop, but will raise an error if its value is not a string [(#8931)](https://github.com/patternfly/patternfly-react/pull/8931)
+- Removed the `filter` property from `BackgroundImage`. Updated the type of the `src` property to be a string, and the property will no longer accept a `BackgroundImageSrcMap` object. This rule won't update the `src` prop, but will raise an error if its value is not a string [(#8931)](https://github.com/patternfly/patternfly-react/pull/8931)
 
     Previous implementation:
 
@@ -637,7 +652,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
-- Updated the `variant` prop to replace the following status values with a color value 
+- Updated the `variant` property to replace the following status values with a color value 
 [(#8204)](https://github.com/patternfly/patternfly-react/issues/8204):
     | Old status value | New color value |
     | - | - |
@@ -662,7 +677,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
-- Replaced the `isSmall` and `isLarge` props with the `size` prop using the values `"sm"` and `"lg"`, respectively [(#8144)](https://github.com/patternfly/patternfly-react/pull/8144)
+- Replaced the `isSmall` and `isLarge`properties with the `size` property using the values `"sm"` and `"lg"`, respectively [(#8144)](https://github.com/patternfly/patternfly-react/pull/8144)
 
     Previous implementation:
 
@@ -681,7 +696,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 ### Calendar 
 
 **React** 
-- Updated the `onMonthChange` prop for CalendarMonth to include the `event` as its first parameter. Handlers may require an update [(#8753)](https://github.com/patternfly/patternfly-react/pull/8753)
+- Updated the `onMonthChange` property for `CalendarMonth` to include `event` as its first parameter. Handlers may require an update [(#8753)](https://github.com/patternfly/patternfly-react/pull/8753)
 
     Previous implementation:
 
@@ -717,15 +732,15 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React**
 
-- The following props have been deprecated on Card:
+- Deprecated the following properties:
 
-    - isSelectableRaised
-    - isDisabledRaised
-    - hasSelectableInput
-    - selectableInputAriaLabel
-    - onSelectableInputChange
+    - `isSelectableRaised`
+    - `isDisabledRaised`
+    - `hasSelectableInput`
+    - `selectableInputAriaLabel`
+    - `onSelectableInputChange`
 
-    We recommend using our new implementation of clickable and selectable cards instead. This rule will raise a warning, but can provide fixes when using the `isSelectableRaised` or `isDisabledRaised` props. [(#9092)](https://github.com/patternfly/patternfly-react/pull/9092)
+    We recommend using our new implementation of clickable and selectable cards instead. This rule will raise a warning, but can provide fixes when using the `isSelectableRaised` or `isDisabledRaised` properties [(#9092)](https://github.com/patternfly/patternfly-react/pull/9092)
 
     Previous implementation:
 
@@ -741,7 +756,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <Card isSelectable hasSelectableInput tabIndex={0} />
     ```
 
-- Removed the deprecated `isHoverable` prop [(#8196)](https://github.com/patternfly/patternfly-react/pull/8196)
+- Removed the deprecated `isHoverable` property [(#8196)](https://github.com/patternfly/patternfly-react/pull/8196)
   
     Previous implementation:
 
@@ -755,7 +770,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <Card  />
     ```
 
-- Updated the `onSelectableInputChange` prop include the `event` as its first parameter. Handlers may require an update [(#8752)](https://github.com/patternfly/patternfly-react/pull/8752)
+- Updated the `onSelectableInputChange` property include `event` as its first parameter. Handlers may require an update [(#8752)](https://github.com/patternfly/patternfly-react/pull/8752)
 
     Previous implementation:
 
@@ -777,9 +792,9 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <Card onSelectableInputChange={handler2}>
     ```
 
-- Changed the internal default value of the `component` prop from 'article' to 'div'. Related references, such as in unit tests, may need to be updated [(#8601)](https://github.com/patternfly/patternfly-react/pull/8601)
+- Changed the internal default value of the `component` property from 'article' to 'div'. Related references, such as in unit tests, may need to be updated [(#8601)](https://github.com/patternfly/patternfly-react/pull/8601)
 
-- Updated `CardHeaderMain` and `CardActions` to berendered internally within the `CardHeader` sub-component, rather than being imported from PatternFly. Any `CardHeaderMain` content and `CardActions` content or props should be passed directly to `CardHeader` instead [(#8759)](https://github.com/patternfly/patternfly-react/pull/8759)
+- Updated `CardHeaderMain` and `CardActions` to be rendered internally within the `CardHeader` sub-component, rather than being imported from PatternFly. Any `CardHeaderMain` content and `CardActions` content or properties should be passed directly to `CardHeader` instead [(#8759)](https://github.com/patternfly/patternfly-react/pull/8759)
 
     Previous implementation:
 
@@ -837,7 +852,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
-- Updated the `onChange` prop for `ClipboardCopy` to include  `event` as its first parameter. `onChange` handlers may require an update [(#8747)](https://github.com/patternfly/patternfly-react/pull/8747)
+- Updated the `onChange` property for `ClipboardCopy` to include `event` as its first parameter. `onChange` handlers may require an update [(#8747)](https://github.com/patternfly/patternfly-react/pull/8747)
 
     Previous implementation:
 
@@ -859,7 +874,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <ClipboardCopy onChange={toggle2}>
     ```
 
-- Removed the `PopoverPosition` type for the `position` prop on  `ClipboardCopy` and `ClipboardCopyButton` [(#8226)](https://github.com/patternfly/patternfly-react/pull/8226)
+- Removed the `PopoverPosition` type for the `position` property on  `ClipboardCopy` and `ClipboardCopyButton` [(#8226)](https://github.com/patternfly/patternfly-react/pull/8226)
 
     Previous implementation:
 
@@ -875,7 +890,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <ClipboardCopyButton position="bottom" />
     ``` 
 
-- Removed the `switchDelay` prop from the `ClipBoardCopy` component [(#8619)](https://github.com/patternfly/patternfly-react/pull/8619)
+- Removed the `switchDelay` property from the `ClipBoardCopy` component [(#8619)](https://github.com/patternfly/patternfly-react/pull/8619)
 
     Previous implementation:
 
@@ -894,6 +909,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 **Core** 
 
 - Removed legacy examples and add support for the `__main` element ([#5356](https://github.com/patternfly/patternfly/pull/5356))
+
 - Replaced margins in examples with gap spacing ([#5293](https://github.com/patternfly/patternfly/pull/5293))
 
 ### Code block
@@ -906,7 +922,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React**
 
-- Removed the deprecated `entryDelay`, `exitDelay`, `maxWidth`, `position`, and `toolTipText` props. This rule will remove them from your code and suggest that you use the `tooltipProps` prop instead [(#8624)](https://github.com/patternfly/patternfly-react/pull/8624)
+- Removed the deprecated `entryDelay`, `exitDelay`, `maxWidth`, `position`, and `toolTipText`properties. This rule will remove them from your code and suggest that you use the `tooltipProps` property instead [(#8624)](https://github.com/patternfly/patternfly-react/pull/8624)
 
     Previous implementation:
 
@@ -928,9 +944,9 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
     The following imports will be affected by this deprecation:
 
-    - ContextSelector
-    - ContextSelectorItem
-    - ContextSelectorFooter
+    - `ContextSelector`
+    - `ContextSelectorItem`
+    - `ContextSelectorFooter`
 
     Previous implementation:
 
@@ -948,7 +964,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React**
 
-- Removed the deprecated `onDragFinish`, `onDragStart`, `onDragMove`, `onDragCancel`, and `itemOrder` props. This rule will suggest using the `DragDrop` component instead of the `onDrag...` props [(#8388)](https://github.com/patternfly/patternfly-react/pull/8388)
+- Removed the deprecated `onDragFinish`, `onDragStart`, `onDragMove`, `onDragCancel`, and `itemOrder`properties. This rule will suggest using the `DragDrop` component instead of the `onDrag...`properties [(#8388)](https://github.com/patternfly/patternfly-react/pull/8388)
 
     Previous implementation:
 
@@ -962,7 +978,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <DataList      />
     ```
 
-- Replaced the `selectableRow` prop with `onSelectableRowChange`. The value of the `selectableRow`'s `onChange` field was a callback, which can now be directly passed to the `onSelectableRowChange` prop. The order of the params in the callback has been updated so that the event param is first [(#8827)](https://github.com/patternfly/patternfly-react/pull/8827)
+- Replaced the `selectableRow` property with `onSelectableRowChange`. The value of the `selectableRow`'s `onChange` field was a callback, which can now be directly passed to the `onSelectableRowChange` property. The order of the params in the callback has been updated so that the event param is first [(#8827)](https://github.com/patternfly/patternfly-react/pull/8827)
 
     Previous implementation:
 
@@ -990,7 +1006,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
     ```
 
-- Updated the `onSelectDataListItem` prop to include the `event` as its first parameter. Handlers may require an update [(#8723)](https://github.com/patternfly/patternfly-react/pull/8723)
+- Updated the `onSelectDataListItem` property to include the `event` as its first parameter. Handlers may require an update [(#8723)](https://github.com/patternfly/patternfly-react/pull/8723)
 
     Previous implementation:
 
@@ -1016,7 +1032,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <DataList onSelectDataListItem={toggle2}>
     ```
 
-- Updated the `onChange` prop for `DataListCheck` so that the `event` parameter is the first parameter. Handlers may require an update [(#8735)](https://github.com/patternfly/patternfly-react/pull/8735)
+- Updated the `onChange` propertyfor `DataListCheck` so that `event` is the first parameter. Handlers may require an update [(#8735)](https://github.com/patternfly/patternfly-react/pull/8735)
 
     Previous implementation:
 
@@ -1046,9 +1062,9 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React**
 
-- Updated the default value of the `appendTo` prop, which may cause markup changes and require you to update selectors in tests. This rule will raise a warning, but will not make any changes [(#8636)](https://github.com/patternfly/patternfly-react/pull/8636)
+- Updated the default value of the `appendTo` property, which may cause markup changes and require you to update selectors in tests. This rule will raise a warning, but will not make any changes [(#8636)](https://github.com/patternfly/patternfly-react/pull/8636)
 
-- The `helperText` property of `DatePicker` now expects the <HelperText> component. This rule will raise a warning, but will not make any code changes [(#8833)](https://github.com/patternfly/patternfly-react/pull/8833)
+- Updated the `helperText` property of `DatePicker` to expect the `HelperText` component. This rule will raise a warning, but will not make any code changes [(#8833)](https://github.com/patternfly/patternfly-react/pull/8833)
 
 ### Divider 
 
@@ -1070,7 +1086,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
-- Updated the `onResize` prop for `DrawerPanelContent `to include the `event` as its first parameter. Handlers may require an update [(#8736)](https://github.com/patternfly/patternfly-react/pull/8736)
+- Updated the `onResize` property for `DrawerPanelContent` to include `event` as its first parameter. Handlers may require an update [(#8736)](https://github.com/patternfly/patternfly-react/pull/8736)
 
     Previous implementation:
 
@@ -1100,23 +1116,23 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React**
 
-- Deprecated the v4 implementation of dropdown. To continue using the deprecated implementation, update the import path to our deprecated package and ensure that specifiers are aliased. However, we suggest updating to our newer implementation of dropdown. The following imports will be affected by this deprecation:
+- Deprecated the v4 implementation of `Dropdown`. To continue using the deprecated implementation, update the import path to our deprecated package and ensure that specifiers are aliased. However, we suggest updating to our newer implementation of `Dropdown`. The following imports will be affected by this deprecation:
 
-    - BadgeToggle
-    - Dropdown
-    - DropdownPosition
-    - DropdownDirection
-    - DropdownContext
-    - DropdownArrowContext
-    - DropdownGroup
-    - DropdownItem
-    - DropdownMenu
-    - DropdownSeparator
-    - DropdownToggle
-    - DropdownToggleAction
-    - DropdownToggleCheckbox
-    - DropdownWithContext
-    - KebabToggle
+    - `BadgeToggle`
+    - `Dropdown`
+    - `DropdownPosition`
+    - `DropdownDirection`
+    - `DropdownContext`
+    - `DropdownArrowContext`
+    - `DropdownGroup`
+    - `DropdownItem`
+    - `DropdownMenu`
+    - `DropdownSeparator`
+    - `DropdownToggle`
+    - `DropdownToggleAction`
+    - `DropdownToggleCheckbox`
+    - `DropdownWithContext`
+    - `KebabToggle`
 
     [(#8835)](https://github.com/patternfly/patternfly-react/pull/8835)
 
@@ -1133,7 +1149,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     import { Dropdown, DropdownPosition } from '@patternfly/react-core/deprecated';
     ```
 
-- Removed the `isHovered` prop for `DropdownItem` [(#8179)](https://github.com/patternfly/patternfly-react/pull/8179)
+- Removed the `isHovered` property for `DropdownItem` [(#8179)](https://github.com/patternfly/patternfly-react/pull/8179)
 
     Previous implementation:
 
@@ -1146,7 +1162,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <DropdownItem  />
     ```
 
-- Removed the `openedOnEnter` prop for  `DropdownMenu` [(#8179)](https://github.com/patternfly/patternfly-react/pull/8179)
+- Removed the `openedOnEnter` property for  `DropdownMenu` [(#8179)](https://github.com/patternfly/patternfly-react/pull/8179)
 
     Previous implementation:
 
@@ -1159,7 +1175,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <DropdownMenu  />
     ```
 
-- Replaced the deprecated `isPrimary` prop with the "primary" value on the `toggleVariant` prop  [(#8179)](https://github.com/patternfly/patternfly-react/pull/8179)
+- Replaced the deprecated `isPrimary` property with the "primary" value on the `toggleVariant` property [(#8179)](https://github.com/patternfly/patternfly-react/pull/8179)
 
     Previous implementation:
 
@@ -1173,7 +1189,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <DropdownToggle toggleVariant="primary" />
     ```
 
--  Updated the `onChange` prop for `DropdownToggleCheckbox` to include the `event` as its first parameter. Handlers may require an update [(#8784)](https://github.com/patternfly/patternfly-react/issues/8784)
+-  Updated the `onChange` property for `DropdownToggleCheckbox` to include the `event` as its first parameter. Handlers may require an update [(#8784)](https://github.com/patternfly/patternfly-react/issues/8784)
 
     Previous implementation:
 
@@ -1198,7 +1214,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React**
 
-- Updated the `onAvailableOptionsSearchInputChanged`, `onChosenOptionsSearchInputChanged` and `onListChange` props so that the `event` parameter is the first parameter. Handlers may require an update [(#8793)](https://github.com/patternfly/patternfly-react/pull/8793)
+- Updated the `onAvailableOptionsSearchInputChanged`, `onChosenOptionsSearchInputChanged` and `onListChange`properties so that the `event` parameter is the first parameter. Handlers may require an update [(#8793)](https://github.com/patternfly/patternfly-react/pull/8793)
 
     Previous implementation:
 
@@ -1281,7 +1297,9 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     </>
     ```
 
-- Added the `EmptyStateHeader` component, which should be passed as an `EmptyStateIcon` to the `icon` prop. The main title should be passed to `titleText` prop. You can also explicitly specify a title's heading level with the `headingLevel` prop. Added the `EmptyStateFooter` component. It should wrap the content of an `EmptyStateBody` inside an `EmptyState`. This rule produces only warnings, but suggested changes are fixable via the `--fix` flag [(#8737)](https://github.com/patternfly/patternfly-react/pull/8737)
+- Added the `EmptyStateHeader` component, which should be passed as an `EmptyStateIcon` to the `icon` property. The main title should be passed to `titleText` property. You can also explicitly specify a title's heading level with the `headingLevel` property. 
+
+Added the `EmptyStateFooter` component. It should wrap the content of an `EmptyStateBody` inside an `EmptyState`. This rule produces only warnings, but suggested changes are fixable via the `--fix` flag [(#8737)](https://github.com/patternfly/patternfly-react/pull/8737)
 
     Previous implementation:
 
@@ -1324,9 +1342,9 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     </EmptyStateFooter></EmptyState>
     ```
 
-- We've made the `icon` prop required on `EmptyStateIcon`. This rule will throw an error, but will not make any changes [(#8737)](https://github.com/patternfly/patternfly-react/pull/8737)
+- We've made the `icon` property required on `EmptyStateIcon`. This rule will throw an error, but will not make any changes [(#8737)](https://github.com/patternfly/patternfly-react/pull/8737)
 
-- Removed the `variant` prop from `EmptyStateIcon`. Replaced the `component` prop of `EmptyStateIcon` with the `icon` prop [(#8737)](https://github.com/patternfly/patternfly-react/pull/8737)
+- Removed the `variant` property from `EmptyStateIcon`. Replaced the `component` property of `EmptyStateIcon` with the `icon` property[(#8737)](https://github.com/patternfly/patternfly-react/pull/8737)
 
     Previous implementation:
 
@@ -1342,7 +1360,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <EmptyStateIcon icon={Spinner} />
     ```
 
-- Renamed the `EmptyStateVariant` enum and prop values 'small' to 'sm' and 'large' to 'lg' [(#8737)](https://github.com/patternfly/patternfly-react/pull/8737)
+- Renamed the `EmptyStateVariant` enum and property values 'small' to 'sm' and 'large' to 'lg' [(#8737)](https://github.com/patternfly/patternfly-react/pull/8737)
 
     Previous implementation:
 
@@ -1366,7 +1384,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React**
 
-- Renamed the `large` prop value of `displaySize` to `lg` [(#8212)](https://github.com/patternfly/patternfly-react/pull/8212)
+- Renamed the `large` property value of `displaySize` to `lg` [(#8212)](https://github.com/patternfly/patternfly-react/pull/8212)
     Previous implementation:
 
     ```jsx
@@ -1379,7 +1397,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <ExpandableSection displaySize="lg" />
     ```
 
-- (Not yet included in `pf-react`) Updated the `onToggle` prop for ExpandableSection so that the `event` parameter is the first parameter. Handlers may require an update [(#8880)](https://github.com/patternfly/patternfly-react/pull/8880)
+- (Not yet included in `pf-react`) Updated the `onToggle` property for `ExpandableSection` so that `event` is the first parameter. Handlers may require an update [(#8880)](https://github.com/patternfly/patternfly-react/pull/8880)
 
     Previous implementation:
 
@@ -1405,7 +1423,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
-- Updated the `onTextChange` prop for `FileUploadField` and `FileUpload` so that the `event` parameter is the first parameter. Handlers may require an update [(#8955)](https://github.com/patternfly/patternfly-react/pull/8955)
+- Updated the `onTextChange` property for `FileUploadField` and `FileUpload` so that `event` is the first parameter. Handlers may require an update [(#8955)](https://github.com/patternfly/patternfly-react/pull/8955)
 
 
     Previous implementation:
@@ -1438,7 +1456,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <FileUploadField onTextChange={textHandler5} />
     ```
 
-- Updated the `onDataChange`, `onReadFailed`, `onReadFinished`, and `onReadStarted` props for `FileUpload` so that the `event` parameter is the first parameter. Handlers may require an update [(#8960)](https://github.com/patternfly/patternfly-react/pull/8960)
+- Updated the `onDataChange`, `onReadFailed`, `onReadFinished`, and `onReadStarted`properties for `FileUpload` so that `event` is the first parameter. Handlers may require an update [(#8960)](https://github.com/patternfly/patternfly-react/pull/8960)
 
     Previous implementation:
 
@@ -1506,7 +1524,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     />;
     ```
 
-- Removed the deprecated `onChange` prop. This rule will remove the prop from the `FileUpload` component and suggest replacing it with the `onFileInputChange`, `onTextChange`, `onDataChange`, and `onClearClick` props as needed (#8155)](https://github.com/patternfly/patternfly-react/pull/8155)
+- Removed the deprecated `onChange` property. This rule will remove the property from the `FileUpload` component and suggest replacing it with the `onFileInputChange`, `onTextChange`, `onDataChange`, and `onClearClick`properties as needed (#8155)](https://github.com/patternfly/patternfly-react/pull/8155)
 
     Previous implementation:
 
@@ -1524,7 +1542,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
-- Removed the helper text related props from `FormGroup`: `helperText`, `helperTextInvalid`, `validated`, `helperTextIcon`, `helperTextInvalidIcon`, and `isHelperTextBeforeField`. The `FormHelperText`, `HelperText`, and `HelperTextItem` components should now be used directly as part of `children` instead of these props. This rule will throw an error but not make any changes [(#8810)](https://github.com/patternfly/patternfly-react/pull/8810)
+- (Manual fix required) Removed the helper text related properties from `FormGroup`: `helperText`, `helperTextInvalid`, `validated`, `helperTextIcon`, `helperTextInvalidIcon`, and `isHelperTextBeforeField`. The `FormHelperText`, `HelperText`, and `HelperTextItem` components should now be used directly as part of `children` instead of these properties. This rule will throw an error but not make any changes [(#8810)](https://github.com/patternfly/patternfly-react/pull/8810)
 
 #### Example manual fix
 
@@ -1566,7 +1584,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     </FormGroup>
     ```
 
-- Removed functionality from `FormHelperText` as now the logic will be covered by `HelperText` and `HelperTextItem`. This rule will remove the `isError`, `isHidden`, `icon`, and `component` props if present. The `HelperText` and `HelperTextItem` components should now be used directly as part of `children` instead of these props [(#8810)](https://github.com/patternfly/patternfly-react/pull/8810)
+- Removed functionality from `FormHelperText` that is now covered by `HelperText` and `HelperTextItem`. This rule will remove the `isError`, `isHidden`, `icon`, and `component`properties if present. The `HelperText` and `HelperTextItem` components should now be used directly as part of `children` instead of these properties [(#8810)](https://github.com/patternfly/patternfly-react/pull/8810)
 
     Previous implementation:
 
@@ -1584,7 +1602,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
-- Updated the `onChange` prop for FormSelect so that the `event` parameter is the first parameter. Handlers may require an update [(#8998)](https://github.com/patternfly/patternfly-react/pull/8998)
+- Updated the `onChange` property for FormSelect so that the `event` parameter is the first parameter. Handlers may require an update [(#8998)](https://github.com/patternfly/patternfly-react/pull/8998)
 
     Previous implementation:
 
@@ -1612,7 +1630,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
-- We've added the InputGroupItem component, which must wrap all non-InputGroupText children passed to an InputGroup. The InputGroupItem component may need to have the `isFill`, `isBox`, and/or `isPlain` props adjusted to retain styling [(#9074)](https://github.com/patternfly/patternfly-react/pull/9074) and [(#9176)](https://github.com/patternfly/patternfly-react/pull/9176)
+- We've added the `InputGroupItem` component, which must wrap all non-`InputGroupText` children passed to an `InputGroup`. The `InputGroupItem` component may need to have the `isFill`, `isBox`, and/or `isPlain`properties adjusted to retain styling [(#9074)](https://github.com/patternfly/patternfly-react/pull/9074) and [(#9176)](https://github.com/patternfly/patternfly-react/pull/9176)
 
     Previous implementation:
 
@@ -1640,7 +1658,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     </InputGroup>
     ```
 
-- Removed the `variant` prop for InputGroupText [(#9147)](https://github.com/patternfly/patternfly-react/pull/9147)
+- Removed the `variant` property for `InputGroupText` [(#9147)](https://github.com/patternfly/patternfly-react/pull/9147)
 
     Previous implementation:
 
@@ -1665,7 +1683,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React**
 
-- Removed the `isTruncated` property from Label. This is now the default behavior. In addition, you can limit the text width using the new `textMaxWidth` property [(#8771)](https://github.com/patternfly/patternfly-react/pull/8771)
+- Removed the `isTruncated` property from `Label`. This is now the default behavior. In addition, you can limit the text width using the new `textMaxWidth` property [(#8771)](https://github.com/patternfly/patternfly-react/pull/8771)
 
     Previous implementation:
 
@@ -1683,7 +1701,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
--  Updated the `onChangeUsername`, `onChangePassword`, and `onChangeRememberMe` props for LoginForm so that the `event` parameter is the first parameter. Handlers may require an update [(#8996)](https://github.com/patternfly/patternfly-react/pull/8996)
+-  Updated the `onChangeUsername`, `onChangePassword`, and `onChangeRememberMe` properties for `LoginForm` so that `event` is the first parameter. Handlers may require an update [(#8996)](https://github.com/patternfly/patternfly-react/pull/8996)
 
     Previous implementation:
 
@@ -1739,7 +1757,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React**
 
-- Removed the `backgroundImgAlt` prop from LoginPage. Additionally, Updated the type of the `backgroundImgSrc` prop to just a string, and the prop will no longer accept a `BackgroundImageSrcMap` object. This rule won't update the `backgroundImgSrc` prop, but will raise an error if its value is not a string  [(#8931)](https://github.com/patternfly/patternfly-react/pull/8931)
+- Removed the `backgroundImgAlt` property from `LoginPage`. Updated the type of the `backgroundImgSrc` property to a string that will no longer accept a `BackgroundImageSrcMap` object. This rule won't update the `backgroundImgSrc` property, but will raise an error if its value is not a string  [(#8931)](https://github.com/patternfly/patternfly-react/pull/8931)
 
     Previous implementation:
 
@@ -1765,7 +1783,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
-- Updated `MastheadBrand` to only be an anchor if an `href` is specified, otherwise it will be a `span`. Explicitly declared `component` properties will remain unchanged, but if it is not specified a default will be added [(#8655)](https://github.com/patternfly/patternfly-react/pull/8655)
+- Updated `MastheadBrand` to only be an anchor if an `href` is specified, otherwise it will be a `span`. Explicitly declared `component` properties will remain unchanged, but undeclared properties will have a default added [(#8655)](https://github.com/patternfly/patternfly-react/pull/8655)
 
     Previous implementation:
 
@@ -1785,8 +1803,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
-- Removed the `aria-label` prop on Menu as it should be passed to MenuList instead. If you are also using MenuGroup with a `label` prop passed to it, an `aria-label` on MenuList is not necessary [(#8649)](https://github.com/patternfly/patternfly-react/pull/8649)
-
+- Removed the `aria-label` property on `Menu` as it should be passed to `MenuList` instead. If you are also using `MenuGroup` with a `label` property passed to it, an `aria-label` on `MenuList` is not necessary [(#8649)](https://github.com/patternfly/patternfly-react/pull/8649)
 
     Previous implementation:
 
@@ -1842,7 +1859,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     </Menu>
     ```
 
-- `MenuInput` has been renamed to `MenuSearchInput` and `MenuSearch` has been added as a wrapper [(#8820)](https://github.com/patternfly/patternfly-react/pull/8820)
+- Renamed `MenuInput` to `MenuSearchInput` and added `MenuSearch` as a wrapper [(#8820)](https://github.com/patternfly/patternfly-react/pull/8820)
 
     Previous implementation:
 
@@ -1856,9 +1873,9 @@ Some of these changes can be flagged and fixed automically by using our Codemods
         <MenuSearch><MenuSearchInput><SearchInput /></MenuSearchInput></MenuSearch>
     ```
 
-- We've update the `aria-label` prop on MenuItemAction, making it required instead of optional [(#8617)](https://github.com/patternfly/patternfly-react/pull/8617)
+- Mage the `aria-label` property on `MenuItemAction` required [(#8617)](https://github.com/patternfly/patternfly-react/pull/8617)
 
-- Updated the `onFileDrop` prop for MultipleFileUpload so that the `event` parameter is the first parameter. Handlers may require an update [(#8995)](https://github.com/patternfly/patternfly-react/pull/8995)
+- Updated the `onFileDrop` property for `MultipleFileUpload` so that `event` is the first parameter. Handlers may require an update [(#8995)](https://github.com/patternfly/patternfly-react/pull/8995)
 
     Previous implementation:
 
@@ -1880,13 +1897,13 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <MultipleFileUpload onFileDrop={handler2} />
     ```
 
-### Nav
+### Navigation
 
 **React**
 
-- Updated the default value of the `aria-label` attribute for Nav with a `horizontal-subnav` variant to "local" (previously the default value was "Global") [(#8213)](https://github.com/patternfly/patternfly-react/pull/8213)
+- Updated the default value of the `aria-label` attribute for `Nav` with a `horizontal-subnav` variant to "local" (previously the default value was "Global") [(#8213)](https://github.com/patternfly/patternfly-react/pull/8213)
 
-- Updated the `onSelect` and `onToggle` props for Nav so that the `event` parameter is the first parameter, and have removed the event property from the `selectedItem` and `toggledItem` object parameters respectively. Handlers may require an update [(#8997)](https://github.com/patternfly/patternfly-react/pull/8997)
+- Updated the `onSelect` and `onToggle` properties for `Nav` so that `event` is the first parameter. Removed the `event` property from the `selectedItem` and `toggledItem` object parameters. Handlers may require an update [(#8997)](https://github.com/patternfly/patternfly-react/pull/8997)
 
     Previous implementation:
 
@@ -1920,13 +1937,13 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <Navigation onToggle={toggleHandler2} />
     ```
 
-- The placement Nav flyouts in the DOM has been changed, if you have Nav elements with flyouts you may need to update some selectors or snapshots in your test suites. This rule will raise a warning, but will not make any changes [(#8628)](https://github.com/patternfly/patternfly-react/pull/8628)
+- Changed the placement of `Nav` flyouts in the DOM. If you have `Nav` elements with flyouts you may need to update some selectors or snapshots in your test suites. This rule will raise a warning, but will not make any changes [(#8628)](https://github.com/patternfly/patternfly-react/pull/8628)
 
 ### Notification badge 
 
 **React** 
 
-- Removed the `isRead` prop from NotificationBadge, use "read" or "unread" on the `variant` prop instead [(#8626)](https://github.com/patternfly/patternfly-react/pull/8626)
+- Removed the `isRead` property from `NotificationBadge`, use "read" or "unread" on the `variant` property instead [(#8626)](https://github.com/patternfly/patternfly-react/pull/8626)
 
     Previous implementation:
 
@@ -1962,7 +1979,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
-- Removed the `allowEmptyInput` prop from NumberInput [(#8715)](https://github.com/patternfly/patternfly-react/pull/8715)
+- Removed the `allowEmptyInput` property from `NumberInput` [(#8715)](https://github.com/patternfly/patternfly-react/pull/8715)
 
     Previous implementation:
 
@@ -1998,9 +2015,9 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
-- OverflowMenuDropdownItem now uses the Next implementation of DropdownItem and DropdownItemProps internally, and may require updating selectors for tests. Any other Dropdown componments used to build an OverflowMenu should also use the Next Dropdown components. This rule will raise a warning when OverflowMenuDropdownItem is imported, but will not update any code [(#8359)](https://github.com/patternfly/patternfly-react/pull/8359)
+- `OverflowMenuDropdownItem` now uses the Next implementation of `DropdownItem` and `DropdownItemProps` internally, and may require updating selectors for tests. Any other `Dropdown` components used to build an `OverflowMenu` should also use the Next `Dropdown` components. This rule will raise a warning when `OverflowMenuDropdownItem` is imported, but will not update any code [(#8359)](https://github.com/patternfly/patternfly-react/pull/8359)
 
-- We've renamed the `index` prop for OverflowMenuDropdownItem to `itemId`, and updated its type to `string | number` [(#8359)](https://github.com/patternfly/patternfly-react/pull/8359)
+- Renamed the `index` property for `OverflowMenuDropdownItem` to `itemId`, and updated its type to `string | number` [(#8359)](https://github.com/patternfly/patternfly-react/pull/8359)
 
     Previous implementation:
 
@@ -2018,9 +2035,9 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
-- The following props have been updated for the specified Page sub-components:
+- The following properties have been updated for the specified `Page` sub-components:
 
-    | Sub-component | Old prop name | New prop name |
+    | Sub-component | Old propertyname | New propertyname |
     |--|--|--|
     | `PageSidebar` | `isNavOpen` | `isSidebarOpen` |
     | `PageToggleButton` | `isNavOpen` | `isSidebarOpen` |
@@ -2042,7 +2059,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <PageToggleButton isSidebarOpen={true} onSidebarToggle={() => {}} />
     ```
 
-- Updated the `onPageResize` prop for Page to include the `event` as its first parameter. Handlers may require an update [(#9011)](https://github.com/patternfly/patternfly-react/pull/9011)
+- Updated the `onPageResize` property for `Page` to include `event` as the first parameter. Handlers may require an update [(#9011)](https://github.com/patternfly/patternfly-react/pull/9011)
 
     Previous implementation:
 
@@ -2068,7 +2085,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <Page onPageResize={resize2}>
     ```
 
-- We've deprecated the `PageHeader`, `PageHeaderTools`, `PageHeaderToolsGroup`, and `PageHeaderToolsItem` components. A fix will update code to point to the new deprecated import, but we recommend replacing with `Masthead` and its related components [(#8854)](https://github.com/patternfly/patternfly-react/pull/8854)
+- Deprecated the `PageHeader`, `PageHeaderTools`, `PageHeaderToolsGroup`, and `PageHeaderToolsItem` components. A fix will update code to point to the new deprecated import, but we recommend replacing with `Masthead` and its related components [(#8854)](https://github.com/patternfly/patternfly-react/pull/8854)
 
     Previous implementation:
 
@@ -2096,7 +2113,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     } from '@patternfly/react-core/deprecated';
     ```
 
--  Updated `PageHeader`'s logo to only be an anchor if an `href` is specified, otherwise it will be a `span`. Explicitly declared `logoComponent` properties will remain unchanged, but if it is not specified a default will be added [(#8655)](https://github.com/patternfly/patternfly-react/pull/8655)
+-  Updated `PageHeader`'s logo to only be an anchor if an `href` is specified, otherwise it will be a `span`. Explicitly declared `logoComponent` properties will remain unchanged, but a default will be added to undeclared properties [(#8655)](https://github.com/patternfly/patternfly-react/pull/8655)
 
     Previous implementation:
 
@@ -2112,7 +2129,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     <PageHeader logoComponent="div" />
     ```
 
-- The PageSidebar API has been updated. The `nav` prop has been renamed to `children`, and any content passed to the prop should be wrapped in our new PageSidebarBody sub-component [(#8942)](https://github.com/patternfly/patternfly-react/pull/8942)
+- Updated the `PageSidebar` API. Renamed the `nav` property to `children`, and any content passed to the property should be wrapped in our new `PageSidebarBody` sub-component [(#8942)](https://github.com/patternfly/patternfly-react/pull/8942)
 
     Previous implementation:
 
@@ -2130,7 +2147,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     </PageSidebar>
     ```
 
-- Removed the deprecated `sticky` prop from `PageSection`, `PageGroup`, `PageNavigation`, and `PageBreadcrumb` [(#8220)](https://github.com/patternfly/patternfly-react/pull/8220)
+- Removed the deprecated `sticky` property from `PageSection`, `PageGroup`, `PageNavigation`, and `PageBreadcrumb` [(#8220)](https://github.com/patternfly/patternfly-react/pull/8220)
 
     Previous implementation:
 
@@ -2155,13 +2172,11 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React** 
 
-- Removed the `OptionsToggle` used by `Pagination` and replaced it with `Menu` and `MenuToggle`  [(#8319)](https://github.com/patternfly/patternfly-react/pull/8319)
+- Replaced the `OptionsToggle` property with `Menu` and `MenuToggle`  [(#8319)](https://github.com/patternfly/patternfly-react/pull/8319)
 
-- We've renamed and/or removed several props for Pagination:
-    - `defaultToFullPage`: `isLastFullPageShown`,
-    - `perPageComponenet`: removed
+- Renamed the `defaultToFullPage` property to `isLastFullPageShown` and removed `perPageComponenet`.
 
-    We've also renamed several sub-props of Pagination's "title" prop:
+    Renamed several sub-properties of Pagination's "title" property:
     - `currPage`: `currPageAriaLabel`,
     - `paginationTitle`: `paginationAriaLabel`,
     - `toFirstPage`: `toFirstPageAriaLabel`,
@@ -2207,7 +2222,7 @@ Some of these changes can be flagged and fixed automically by using our Codemods
     />
     ```
 
-- We've renamed `ToggleTemplateProps` to `PaginationToggleTemplateProps` [(#8134)](https://github.com/patternfly/patternfly-react/pull/8134)
+- Renamed `ToggleTemplateProps` to `PaginationToggleTemplateProps` [(#8134)](https://github.com/patternfly/patternfly-react/pull/8134)
 
     Previous implementation:
 
@@ -2227,15 +2242,9 @@ Some of these changes can be flagged and fixed automically by using our Codemods
 
 **React**
 
-- [(#8621)](https://github.com/patternfly/patternfly-react/pull/8621)
+- Updated the default value of `appendTo`, which may cause markup changes that require you to update selectors in tests. This rule will raise a warning, but will not make any changes [(#8621)](https://github.com/patternfly/patternfly-react/pull/8621)
 
-The default value of the `appendTo` prop on Popover has been updated, which may cause markup changes that require updating selectors in tests. This rule will raise a warning, but will not make any changes.
-
-- [(#8201)](https://github.com/patternfly/patternfly-react/pull/8201)
-
-Removed the `boundary` and `tippyProps` from Popover, as well as removed the first parameter of `shouldClose` and all parameters of `onHidden`, `onHide`, `onMount`, `onShow`, and `onShown`.
-
-
+- Removed `boundary` and `tippyProps` properties. Removed the first parameter of `shouldClose` and all parameters of `onHidden`, `onHide`, `onMount`, `onShow`, and `onShown` [(#8201)](https://github.com/patternfly/patternfly-react/pull/8201)
 
     Previous implementation:
 
@@ -2268,11 +2277,7 @@ Removed the `boundary` and `tippyProps` from Popover, as well as removed the fir
     />
     ```
 
-- popover-swap-shouldClose-shouldOpen-params [(#9054)](https://github.com/patternfly/patternfly-react/pull/9054)
-
-Updated the `shouldClose` and `shouldOpen` props for Popover so that the `event` parameter is the first parameter. Handlers may require an update.
-
-
+- Updated the `shouldClose` and `shouldOpen`properties so that `event` is the first parameter. Handlers may require an update [(#9054)](https://github.com/patternfly/patternfly-react/pull/9054)
 
     Previous implementation:
 
@@ -2300,27 +2305,7 @@ Updated the `shouldClose` and `shouldOpen` props for Popover so that the `event`
     <Popover shouldOpen={openHandler2} shouldClose={closeHandler2} />
     ```
 
-- [(#8621)](https://github.com/patternfly/patternfly-react/pull/8621)
-
-The default value of the `appendTo` prop on Popover has been updated, which may cause markup changes that require updating selectors in tests. This rule will raise a warning, but will not make any changes.
-
-- [(#8724)](https://github.com/patternfly/patternfly-react/pull/8724)
-
-Removed the `popperMatchesTriggerWidth` prop from Popper. `minWidth`, `maxWidth`, and `width` props can instead be used to modify the Popper width.
-
-
-
-    Previous implementation:
-
-    ```jsx
-    <Popper popperMatchesTriggerWidth />
-    ```
-
-    New implementation:
-
-    ```jsx
-    <Popper  />
-    ```
+- Updated the default value of the `appendTo` property, which may cause markup changes that require you to update selectors in tests. This rule will raise a warning, but will not make any changes [(#8621)](https://github.com/patternfly/patternfly-react/pull/8621)
 
 ### Radio 
 
@@ -2330,13 +2315,9 @@ Removed the `popperMatchesTriggerWidth` prop from Popper. `minWidth`, `maxWidth`
 
 **React**
 
-- [(#8965)](https://github.com/patternfly/patternfly-react/pull/8965)
+- **Not yet included in pf-react**
 
-**Not yet included in pf-react**
-
-Updated the `onChange` prop for Radio so that the `event` parameter is the first parameter. Handlers may require an update.
-
-
+Updated the `onChange` property so that `event` is the first parameter. Handlers may require an update [(#8965)](https://github.com/patternfly/patternfly-react/pull/8965)
 
     Previous implementation:
 
@@ -2360,15 +2341,12 @@ Updated the `onChange` prop for Radio so that the `event` parameter is the first
     <Radio onChange={handler2} />
     ```
 
-
-
 ### Select 
 
 **React** 
-- Our deprecated implementation of Select has had its markup changed. Selectors may require updating. This rule will raise a warning, but will not make any changes [(#9172)](https://github.com/patternfly/patternfly-react/pull/9172)
+- Changed the markup for our deprecated implementation of `Select`. Selectors may require updating. This rule will raise a warning, but will not make any changes [(#9172)](https://github.com/patternfly/patternfly-react/pull/9172)
 
--  We've deprecated the `Select` components. A fix will update code to point to the new deprecated import, but we suggest using our new `Select` implementation.
-[(#8825)](https://github.com/patternfly/patternfly-react/pull/8825)
+-  Deprecated the v4 `Select` components. A fix will update code to point to the new deprecated import, but we suggest using our new `Select` implementation [(#8825)](https://github.com/patternfly/patternfly-react/pull/8825)
 
     Previous implementation:
 
@@ -2391,7 +2369,7 @@ Updated the `onChange` prop for Radio so that the `event` parameter is the first
     } from '@patternfly/react-core/deprecated';
     ```
 
-- The `itemId` prop for our new implementation of SelectOption and DropdownItem has been renamed to `value` [(#9175)](https://github.com/patternfly/patternfly-react/pull/9175)
+- Renamed the `itemId` property to `value` for our new implementation of `SelectOption` and `DropdownItem`  [(#9175)](https://github.com/patternfly/patternfly-react/pull/9175)
 
     Previous implementation:
 
@@ -2411,7 +2389,7 @@ Updated the `onChange` prop for Radio so that the `event` parameter is the first
 
 **React** 
 
-- Removed the deprecated the `isCurrent` prop. This rule wil replace it with `isActive` [(#8132)](https://github.com/patternfly/patternfly-react/pull/8132)
+- Removed the deprecated `isCurrent` property. This rule will replace it with `isActive` [(#8132)](https://github.com/patternfly/patternfly-react/pull/8132)
 
     Previous implementation:
 
@@ -2429,7 +2407,8 @@ Updated the `onChange` prop for Radio so that the `event` parameter is the first
 
 **React** 
 
-- {Not yet included in pf-react) Updated the `onChange` prop for Slider so that the `event` parameter is the first parameter. Handlers may require an update [(#8970)](https://github.com/patternfly/patternfly-react/pull/8970)
+- **Not yet included in pf-react** 
+Updated the `onChange` property so that the `event` parameter is the first parameter. Handlers may require an update [(#8970)](https://github.com/patternfly/patternfly-react/pull/8970)
 
     Previous implementation:
 
@@ -2451,7 +2430,6 @@ Updated the `onChange` prop for Radio so that the `event` parameter is the first
     <Slider onChange={handler2} />
     ```
 
-
 ### Skip to content
 
 **Core** 
@@ -2462,7 +2440,7 @@ Updated the `onChange` prop for Radio so that the `event` parameter is the first
 
 **React** 
 
-- Updated the Spinner to exclusively use an SVG, and have removed the isSVG prop [(#8616)](https://github.com/patternfly/patternfly-react/pull/8616)
+- Updated to exclusively use an SVG, and removed the `isSVG` property [(#8616)](https://github.com/patternfly/patternfly-react/pull/8616)
 
     Previous implementation:
 
@@ -2480,7 +2458,7 @@ Updated the `onChange` prop for Radio so that the `event` parameter is the first
 
 **React**
 
-- Updated the `onChange` prop for Switch so that the `event` parameter is the first parameter. Handlers may require an update [(#9037)](https://github.com/patternfly/patternfly-react/pull/9037)
+- Updated the `onChange` property so that `event` is the first parameter. Handlers may require an update [(#9037)](https://github.com/patternfly/patternfly-react/pull/9037)
 
     Previous implementation:
 
@@ -2508,7 +2486,7 @@ Updated the `onChange` prop for Radio so that the `event` parameter is the first
 
 **React** 
 
-- Renamed the `isHoverable` prop for Table components to `isClickable`. This rule provides a fix for the `Tr` component when using our new default, composable implementation of Table. If using our now deprecated implementation of Table with the `rows` prop passed in, only an error message will be thrown and any usage of `isHoverable` will need to be updated manually [((#9083))](https://github.com/patternfly/patternfly-react/pull/9083)
+- (Needs manual updates) Renamed the `isHoverable` property to `isClickable`. This rule provides a fix for the `Tr` component when using our new default, composable implementation of `Table`. If using our deprecated v4 implementation of `Table` with the `rows` property passed in, only an error message will be thrown and any usage of `isHoverable` will need to be updated manually [((#9083))](https://github.com/patternfly/patternfly-react/pull/9083)
 
     Previous implementation:
 
@@ -2540,13 +2518,12 @@ Updated the `onChange` prop for Radio so that the `event` parameter is the first
     <Table />
     ```
 
+- Deprecated the v4 implementation of `Table`. In order to continue using this deprecated implementation, update the import path to point to our deprecated package and ensure that specifiers are aliased. However, we suggest updating to our composable `Table` implementation. The following imports will be affected by this deprecation:
 
-- Deprecated the current implementation of Table. In order to continue using this deprecated implementation, the import path must be updated to our deprecated package and specifiers must be aliased. However, we suggest updating to our composable Table implementation. The following imports will be affected by this deprecation:
-
-    - Table
-    - TableBody
-    - TableHeader
-    - TableProps
+    - `Table`
+    - `TableBody`
+    - `TableHeader`
+    - `TableProps`
 [(#8892)](https://github.com/patternfly/patternfly-react/pull/8892)
 
     Previous implementation:
@@ -2566,11 +2543,11 @@ Updated the `onChange` prop for Radio so that the `event` parameter is the first
     } from '@patternfly/react-table/deprecated';
     ```
   
-- Table and TableComposable's `ActionsColumn` has been updated to use our new implementation of Dropdown. The toggle passed to the actions column should now be a `MenuToggle` instead of the deprecated `DropdownToggle`. The `dropdownPosition`, `dropdownDirection` and `menuAppendTo` properties are removed and `Popper` properties can be passed in using `popperProps` instead (via `direction`, `position`, `appendTo`, etc.) [(#8629)](https://github.com/patternfly/patternfly-react/pull/8629)
+-  Updated `ActionsColumn` to use our new implementation of Dropdown. The toggle passed to the actions column should now be a `MenuToggle` instead of the deprecated `DropdownToggle`. The `dropdownPosition`, `dropdownDirection` and `menuAppendTo` properties are removed and `Popper` properties can be passed in using `popperProps` instead (via `direction`, `position`, `appendTo`, etc.) [(#8629)](https://github.com/patternfly/patternfly-react/pull/8629)
 
-- `collapseAllAriaLabel` on `ThExpandType` has been updated to a `string` from `''`. Workarounds casting this property to an empty string are no longer required [(#8634)](https://github.com/patternfly/patternfly-react/pull/8634)
+- Updated `collapseAllAriaLabel` on `ThExpandType` to a `string` from `''`. Workarounds casting this property to an empty string are no longer required [(#8634)](https://github.com/patternfly/patternfly-react/pull/8634)
 
-- Removed the deprecated `hasSelectableRowCaption` prop [(#8352)](https://github.com/patternfly/patternfly-react/pull/8352)
+- Removed the deprecated `hasSelectableRowCaption` property [(#8352)](https://github.com/patternfly/patternfly-react/pull/8352)
 
     Previous implementation:
 
@@ -2584,7 +2561,7 @@ Updated the `onChange` prop for Radio so that the `event` parameter is the first
     <TableComposable  />
     ```
 
-- Updated the `onSelect` and `onSelect` props for EditableSelectInputCell so that the `event` parameter is their first parameter. Handlers may require an update [(#9057)](https://github.com/patternfly/patternfly-react/pull/9057)
+- Updated the `onSelect` and `onSelect` properties for `EditableSelectInputCell` so that `event` is their first parameter. Handlers may require an update [(#9057)](https://github.com/patternfly/patternfly-react/pull/9057)
 
     Previous implementation:
 
@@ -2620,7 +2597,7 @@ Updated the `onChange` prop for Radio so that the `event` parameter is the first
 
 **React**
 
-- Updated the `onToggle` prop for Tabs so that the `event` parameter is the first parameter. Handlers may require an update [(#9059)](https://github.com/patternfly/patternfly-react/pull/9059)
+- Updated the `onToggle` property so that `event` is the first parameter. Handlers may require an update [(#9059)](https://github.com/patternfly/patternfly-react/pull/9059)
 
     Previous implementation:
 
@@ -2642,11 +2619,7 @@ Updated the `onChange` prop for Radio so that the `event` parameter is the first
     <Tabs onToggle={handler2} />
     ```
 
-- [(#8517)](https://github.com/patternfly/patternfly-react/pull/8517)
-
-We've renamed the `hasBorderBottom` prop to `hasNoBorderBottom`.
-
-
+- Renamed the `hasBorderBottom` property to `hasNoBorderBottom` [(#8517)](https://github.com/patternfly/patternfly-react/pull/8517)
 
     Previous implementation:
 
@@ -2666,11 +2639,7 @@ We've renamed the `hasBorderBottom` prop to `hasNoBorderBottom`.
     <Tabs hasNoBorderBottom={!someVar} />
     ```
 
-- [(#8517)](https://github.com/patternfly/patternfly-react/pull/8517)
-
-Removed the deprecated `hasSecondaryBorderBottom` prop.
-
-
+- Removed the deprecated `hasSecondaryBorderBottom` property [(#8517)](https://github.com/patternfly/patternfly-react/pull/8517)
 
     Previous implementation:
 
@@ -2684,17 +2653,13 @@ Removed the deprecated `hasSecondaryBorderBottom` prop.
     <Tabs  />
     ```
 
-- [(#8217)](https://github.com/patternfly/patternfly-react/pull/8217)
-
-We've restricted the type of elements that can be passed to the `Tabs` component.
-
-This rule will raise a warning when `Tabs` is imported in a file, even if the children passed to it are already of the appropriate type. It will not make any code changes.
+- Restricted the type of elements that can be passed to the `Tabs` component. This rule will raise a warning when `Tabs` is imported in a file, even if the children passed to it are already of the appropriate type. It will not make any code changes. [(#8217)](https://github.com/patternfly/patternfly-react/pull/8217)
 
 ### Text 
 
 **React** 
 
-- Updated the `onChange` prop for TextArea so that the `event` parameter is the first parameter. Handlers may require an update [(#9061)](https://github.com/patternfly/patternfly-react/pull/9061)
+- Updated the `onChange` property for `TextArea` so that the `event` parameter is the first parameter. Handlers may require an update [(#9061)](https://github.com/patternfly/patternfly-react/pull/9061)
 
     Previous implementation:
 
@@ -2722,7 +2687,7 @@ This rule will raise a warning when `Tabs` is imported in a file, even if the ch
 
 **React** 
 
-- Updated the `onChange` prop for TextInput so that the `event` parameter is the first parameter. Handlers may require an update [(#9064)](https://github.com/patternfly/patternfly-react/pull/9064)
+- Updated the `onChange` property for `TextInput` so that `event` is the first parameter. Handlers may require an update [(#9064)](https://github.com/patternfly/patternfly-react/pull/9064)
 
     Previous implementation:
 
@@ -2750,13 +2715,13 @@ This rule will raise a warning when `Tabs` is imported in a file, even if the ch
 
 **React**
 
-- The helperText property of `DatePicker` now expects the <HelperText> component, and `TimePicker` now uses a <HelperText> component internally. This rule will raise a warning, but will not make any code changes [(#8833)](https://github.com/patternfly/patternfly-react/pull/8833)
+- Updated the `helperText` property to expect the <HelperText> component. This rule will raise a warning, but will not make any code changes [(#8833)](https://github.com/patternfly/patternfly-react/pull/8833)
 
 ### Toggle group
 
 **React**
 
-- Removed the deprecated `isPrimary` prop. This rule wil replace it with the "primary" value on the `toggleVariant` prop [(#8179)](https://github.com/patternfly/patternfly-react/pull/8179)
+- Removed the deprecated `isPrimary` property. This rule will replace it with the "primary" value on the `toggleVariant` property [(#8179)](https://github.com/patternfly/patternfly-react/pull/8179)
 
     Previous implementation:
 
@@ -2770,7 +2735,7 @@ This rule will raise a warning when `Tabs` is imported in a file, even if the ch
     <Toggle toggleVariant="primary" />
     ```
 
-- Updated the `onChange` prop for ToggleGroupItem so that the `event` parameter is the first parameter. Handlers may require an update [(#9067)](https://github.com/patternfly/patternfly-react/pull/9067)
+- Updated the `onChange` property for `ToggleGroupItem` so that `event` is the first parameter. Handlers may require an update [(#9067)](https://github.com/patternfly/patternfly-react/pull/9067)
 
     Previous implementation:
 
@@ -2802,7 +2767,7 @@ This rule will raise a warning when `Tabs` is imported in a file, even if the ch
 
 **React**
 
-- Removed the deprecated `visiblity` prop. This rule will replace it with the correctly spelled `visibility` prop [(#8212)](https://github.com/patternfly/patternfly-react/pull/8212)
+- Removed the deprecated `visiblity` property. This rule will replace it with the correctly spelled `visibility` property [(#8212)](https://github.com/patternfly/patternfly-react/pull/8212)
 
     Previous implementation:
 
@@ -2816,7 +2781,7 @@ This rule will raise a warning when `Tabs` is imported in a file, even if the ch
     <ToolbarContent visibility={{ default: "hidden" }} />
     ```
 
--  Removed the `alignment` prop from `ToolbarContent`, `ToolbarGroup`, and `ToolbarItem`. For `ToolbarGroup` and `ToolbarItem` it has been replaced with `align` [(#8563)](https://github.com/patternfly/patternfly-react/pull/8563)
+-  Removed the `alignment` property from `ToolbarContent`, `ToolbarGroup`, and `ToolbarItem`. For `ToolbarGroup` and `ToolbarItem` it has been replaced with `align` [(#8563)](https://github.com/patternfly/patternfly-react/pull/8563)
 
     Previous implementation:
 
@@ -2834,7 +2799,6 @@ This rule will raise a warning when `Tabs` is imported in a file, even if the ch
     <ToolbarItem align={{ default: 'alignLeft' }} />
     ```
 
-
 ### Tooltip
 
 **Core** 
@@ -2845,7 +2809,7 @@ This rule will raise a warning when `Tabs` is imported in a file, even if the ch
 
 - Removed the `boundary`, `tippyProps`, and `isAppLauncher` properties [(#8231)](https://github.com/patternfly/patternfly-react/pull/8231)
 
-- Tooltips without a `triggerRef` will now have a wrapping div which may cause issues. Snapshots may need to be updated, or to avoid the wrapping div add a `triggerRef` with a ref which is attached to the trigger element. This rule will raise a warning when a `Tooltip` is imported without a `triggerRef` or `reference` prop, but will not make any code changes [(#8733)](https://github.com/patternfly/patternfly-react/pull/8733)
+- Tooltips without a `triggerRef` will now have a wrapping `<div>`, which may cause issues. Snapshots may need to be updated or, to avoid the wrapping `<div>`, add a `triggerRef` with an attached ref to the trigger element. This rule will raise a warning when a `Tooltip` is imported without a `triggerRef` or `reference` prop, but will not make any code changes [(#8733)](https://github.com/patternfly/patternfly-react/pull/8733)
 
     Previous implementation:
 
@@ -2859,27 +2823,28 @@ This rule will raise a warning when `Tabs` is imported in a file, even if the ch
     <Tooltip     />
     ```
 
--  When using the `Tooltip` component inside of a `react-charts` component, the Tooltip should be wrapped inside a `foreignObject`. The Tooltip may not render properly otherwise due to it outputting a `<div>` element inside an `<svg>` element. This rule will raise a warning when Tooltip is imported from `@patternfly/react-core` and at least one other import is from `@patternfly/react-charts`, but will not update any code [(#8592)](https://github.com/patternfly/patternfly-react/pull/8592)
+-  When using the `Tooltip` component inside of a `react-charts` component, the `Tooltip` should be wrapped inside a `foreignObject`. Otherwise, it  may not render properly due to it outputting a `<div>` element inside an `<svg>` element. This rule will raise a warning when `Tooltip` is imported from `@patternfly/react-core` and at least one other import is from `@patternfly/react-charts`, but will not update any code [(#8592)](https://github.com/patternfly/patternfly-react/pull/8592)
 
 ### Wizard 
 
 **Core** 
 
 - Removed style that was breaking drawer example ([#5322](https://github.com/patternfly/patternfly/pull/5322))
+
 - Reordered footer buttons ([#5148](https://github.com/patternfly/patternfly/pull/5148))
 
 **React**
 
-- Deprecated the v4 implementation of wizaed. In order to continue using the deprecated implementation, update the import path to our deprecated package and ensure that  specifiers are aliased. We suggest updating to our newer implementation of Wizard. The following imports will be affected by this deprecation:
+- Deprecated the v4 implementation of `Wizard`. In order to continue using the deprecated implementation, update the import path to our deprecated package and ensure that  specifiers are aliased. We suggest updating to our newer implementation of `Wizard`. The following imports will be affected by this deprecation:
 
-    - Wizard
-    - WizardContext
-    - WizardNav
-    - WizardNavItem
-    - WizardHeader
-    - WizardBody
-    - WizardFooter
-    - WizardToggle
+    - `Wizard`
+    - `WizardContext`
+    - `WizardNav`
+    - `WizardNavItem`
+    - `WizardHeader`
+    - `WizardBody`
+    - `WizardFooter`
+    - `WizardToggle`
 [(#8821)](https://github.com/patternfly/patternfly-react/pull/8821)
 
     Previous implementation:
@@ -2895,5 +2860,4 @@ This rule will raise a warning when `Tabs` is imported in a file, even if the ch
     import { Wizard } from '@patternfly/react-core/deprecated';
     ```
 
-- Updated  the order of the "next" and "back" buttons so that with the "next" button comes after the "back" button. This update has also been made in the Next implementation of the `WizardFooter`. We recommend updating any tests that may rely on relative selectors and updating any composable implementations to match this new button order. This rule will raise a warning when `Wizard` is imported from `@patternfly/react-core` or `WizardFooter` is imported from `@patternfly/react-core/next`, but it will not make any code changes[(#8409)](https://github.com/patternfly/patternfly-react/pull/8409)
-
+- Updated  the order of the "next" and "back" buttons so that the "next" button comes after the "back" button. This update has also been made in the Next implementation of the `WizardFooter`. We recommend updating any tests that may rely on relative selectors and any composable implementations to match this new button order. This rule will raise a warning when `Wizard` is imported from `@patternfly/react-core` or `WizardFooter` is imported from `@patternfly/react-core/next`, but it will not make any code changes[(#8409)](https://github.com/patternfly/patternfly-react/pull/8409)
