@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.55 (2023-06-12)
+
+
+### Features
+
+* turn on dark switcher, remove extra css ([#3519](https://github.com/patternfly/patternfly-org/issues/3519)) ([0059891](https://github.com/patternfly/patternfly-org/commit/005989134d6a962189690a49faccb8dfc6e3de77))
+
+
+
+
+
 # 0.12.0-alpha.54 (2023-06-12)
 
 
