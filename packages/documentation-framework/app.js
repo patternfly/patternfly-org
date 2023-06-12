@@ -13,7 +13,6 @@ import './components/tableOfContents/tableOfContents.css';
 import './components/example/example.css';
 import './components/footer/footer.css';
 import './components/sideNav/sideNav.css';
-import './components/topNav/topNav.css';
 import './layouts/sideNavLayout/sideNavLayout.css';
 
 const AppRoute = ({ child, title, path }) => {

@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.56 (2023-06-12)
+
+
+### Features
+
+* turn on dark switcher, remove extra css ([#3519](https://github.com/patternfly/patternfly-org/issues/3519)) ([0059891](https://github.com/patternfly/patternfly-org/commit/005989134d6a962189690a49faccb8dfc6e3de77))
+
+
+
+
+
+# 2.0.0-alpha.55 (2023-06-12)
+
+
+### Bug Fixes
+
+* **whitespace:** whitespace change to push out new release ([84d1bb3](https://github.com/patternfly/patternfly-org/commit/84d1bb3ccc79a9ef2c4cf5fb93b19fbb719b6078))
+
+
+
+
+
 # 2.0.0-alpha.54 (2023-06-09)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
