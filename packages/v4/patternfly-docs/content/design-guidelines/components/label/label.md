@@ -104,7 +104,7 @@ Label groups have a number of components to them.
 Label groups can use various combinations of these features to build custom label groups.
 
 ### Usage
-Label groups should be used when there are multiple labels assigned to a component. They can be used almost anywhere in a UI, but are commonly used in table views and description lists.
+Label groups should be used when there are multiple labels assigned to a component. They can be used almost anywhere in a UI, but are commonly used in table views and description lists. Label groups can be oriented either horizontally or vertically and can optionally be named and be dismissable. You may also make the label group editable to allow users to edit an existing label or add a new label.
 
 #### Label groups in a table
 <img src="./img/table-view.png" alt="Table with labels" width="1200"/>
