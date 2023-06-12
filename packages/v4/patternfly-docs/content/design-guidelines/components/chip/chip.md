@@ -9,7 +9,7 @@ Chips are mainly used within chip groups, which represent an attribute that has 
 
 Chip groups contain two elements.
 
-<img src="./img/chip-group-elements.png" alt="Chip group elements" width="148" />
+<img src="./img/chip-group-elements.png" alt="Chip group elements" width="273" />
 
 1. **Chip group:** indicates the main attribute in which selections were made.
 2. **Chip:** indicates the selections made within the attribute.
