@@ -43,7 +43,7 @@ const flattenList = files => {
   let list = [];
   files.forEach(file => {
     Object.entries(file).forEach(([selector, values]) => {
-      if(values?.length) {
+      if(values !== undefined) {
         Object.entries(values).forEach(([key, val]) => {
           list.push({
             selector,
