@@ -9,6 +9,7 @@ export const SectionGalleryWrapper = ({
   includeSubsections,
   parseSubsections,
   initialLayout,
+  isFullWidth,
   children
 }) => {
   let sectionRoutes = subsection ? groupedRoutes[section][subsection] : groupedRoutes[section];
@@ -97,7 +98,7 @@ export const SectionGalleryWrapper = ({
     });
 
   return (
-    <div className="ws-section-gallery">
+    <div className={`ws-section-gallery${ isFullWidth ? ' ws-section-gallery-full-width' : '' }`}>
       { children(sectionGalleryItems, searchTerm, setSearchTerm, layoutView, setLayoutView) }
     </div>
   )

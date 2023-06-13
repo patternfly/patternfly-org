@@ -18,6 +18,7 @@ import { SectionGalleryWrapper } from "./sectionGalleryWrapper";
  * @param {Boolean} [hasGridImages=false] - Optional boolean to toggle images on grid layout cards
  * @param {Boolean} [hasListText=false] - Optional boolean to toggle text on list layout rows
  * @param {Boolean} [hasListImages=false] - Optional boolean to toggle images on list layout rows
+ * @param {Boolean} [isFullWidth=true] - Optional boolean to disable component from exceeding default max-width for page
 */
 
 export const SectionGallery = ({
@@ -33,7 +34,8 @@ export const SectionGallery = ({
   hasGridText = false,
   hasGridImages = true,
   hasListText = true,
-  hasListImages = true
+  hasListImages = true,
+  isFullWidth = true
 }) => (
   <SectionGalleryWrapper
     illustrations={illustrations}
@@ -43,6 +45,7 @@ export const SectionGallery = ({
     parseSubsections={parseSubsections}
     galleryItemsData={galleryItemsData}
     initialLayout={initialLayout}
+    isFullWidth={isFullWidth}
   >
     {(sectionGalleryItems, searchTerm, setSearchTerm, layoutView, setLayoutView) => (
       <>
