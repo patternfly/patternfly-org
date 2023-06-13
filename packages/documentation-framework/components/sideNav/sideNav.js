@@ -18,8 +18,8 @@ const NavItem = ({ text, href, isDeprecated, isBeta, isDemo }) => {
   const isMobileView = window.innerWidth < Number.parseInt(globalBreakpointXl.value, 10);
   return (
     <PageContextConsumer key={href + text}>
-      {({onNavToggle, isNavOpen }) => (
-          <li key={href + text} className="pf-v5-c-nav__item" onClick={() => isMobileView && onNavToggle && onNavToggle()}>
+      {({onSidebarToggle, isSidebarOpen }) => (
+          <li key={href + text} className="pf-v5-c-nav__item" onClick={() => isMobileView && onSidebarToggle && onSidebarToggle()}>
             <Link
               to={href}
               getProps={({ isCurrent, href, location }) => {
@@ -31,7 +31,7 @@ const NavItem = ({ text, href, isDeprecated, isBeta, isDemo }) => {
                   )
                 }}
               }
-              tabIndex={isNavOpen ? undefined : -1}
+              tabIndex={isSidebarOpen ? undefined : -1}
             >
               <Flex spaceItems={{ default: 'spaceItemsSm'}}>
                 <FlexItem>{text}</FlexItem>
