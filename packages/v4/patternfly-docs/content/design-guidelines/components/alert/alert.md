@@ -42,7 +42,7 @@ Use an alert component when you are trying to give the user essential informatio
 
 ### Customizing alerts
  
-If your use case falls outside of PatternFly's standard alert variations, use [icons](/guidelines/icons) and [colors](/guidelines/colors) to create custom alerts that meet your needs.
+If your use case falls outside of PatternFly's standard alert variations, use [icons](/design-foundations/icons) and [colors](/guidelines/colors) to create custom alerts that meet your needs.
  
 View custom alerts in action in our [custom alert examples](https://www.patternfly.org/v4/components/alert#custom-icons).
  

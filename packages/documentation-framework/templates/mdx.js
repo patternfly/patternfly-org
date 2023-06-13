@@ -63,7 +63,7 @@ const MDXChildTemplate = ({
           This beta component is currently under review and is still open for further evolution. It is available for use in product. Beta components are considered for promotion on a quarterly basis. Please join in and give us your feedback or submit any questions on the <a href="https://forum.patternfly.org/">PatternFly forum</a> or via <a href="//slack.patternfly.org/" target="_blank" rel="noopener noreferrer">Slack</a>. To learn more about the process, visit our <Link to="/get-started/about#beta-components">about page</Link> or our <a href="https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion">Beta components</a> page on GitHub.
         </InlineAlert>
       )}
-      {(deprecated || source === 'react-deprecated') && (
+      {(deprecated || source === 'react-deprecated' || source === 'html-deprecated') && (
         <InlineAlert title="Deprecated feature" variant="warning">
           This implementation has been deprecated in favor of a newer implementation, and is no longer getting maintained or enhanced.
           {newImplementationLink && (
@@ -141,7 +141,7 @@ export const MDXTemplate = ({
   id,
   componentsData
 }) => {
-  const isDeprecated = sources.some(source => source.source === "react-deprecated") && !sources.some(source => source.source === "react");
+  const isDeprecated = sources.some(source => source.source === "react-deprecated" || source.source === "html-deprecated") && !sources.some(source => source.source === "react"  || source.source === "html");
   const isBeta = sources.some(source => source.beta)
   const isDemo = sources.some(source => source.source === "react-demos" || source.source === "html-demos") && !sources.some(source => source.source === "react" || source.source === "html");
   // Build obj mapping source names to text displayed on tabs

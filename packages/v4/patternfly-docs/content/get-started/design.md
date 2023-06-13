@@ -23,7 +23,7 @@ A PatternFly wireframe kit (implemented in Sketch) is also available for creatin
 ### Style guidelines
 What typography should you be using? What about colors? Spacing? Check out styles to learn everything you need to know about our foundational design elements.
 
-[**View styles**](/guidelines/colors) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
+[**View styles**](/design-foundations/colors) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
 
 ### Usage and behavior guidelines
 Should you use a wizard or a form to solve this problem? How do you write a good button label? Which navigation makes the most sense? Get answers by clicking the Design guidelines tab associated within each component page.
@@ -46,7 +46,7 @@ What does a toolbar look like? What about a filter chip? Components are the buil
 ### Want to see more?
 See all the pieces working together with demos.
 
-[**View demos**](/demos/primary-detail) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
+[**View demos**](/patterns/primary-detail) <i class="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
 
 ## What's in the design kit?
 
@@ -120,7 +120,7 @@ The layout for all visual elements in Patternfly is determined by spacers. The s
 
 The [template library](https://www.sketch.com/s/729c2eee-e8b6-4fcd-8a79-f6faa8c30f89) also contains examples of spacer use to clarify where elements should be placed within a given page or design.  These templates have been created in a way that reduces a user’s need to think about spacers. An example of a Login form template can be seen here with different sized spacers - demonstrated by their different colors - used to separate each symbol/component within the layout.
 
-To see more information about spacers and their use please see our [spacer guidelines](/guidelines/spacers).
+To see more information about spacers and their use please see our [spacer guidelines](/design-foundations/spacers).
 
 ### Layer styles
 Symbols in the symbol are organized by component; after selecting a component, you’ll see the variations and states of that component.

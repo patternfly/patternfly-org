@@ -13,6 +13,11 @@ import { SectionGalleryWrapper } from "./sectionGalleryWrapper";
  * @param {Object} galleryItemsData - Object containing the image location & summary text mapped to the gallery item's hyphenated-name
  * @param {string} [placeholderText=Search by name] - Optional text to be displayed as placeholder for SearchInput
  * @param {string} [countText= items] - Optional text to be displayed after the number of search results
+ * @param {string} [initialLayout=grid] - Optional text to indicate whether to default to grid or list layout
+ * @param {Boolean} [hasGridText=false] - Optional boolean to toggle text on grid layout cards
+ * @param {Boolean} [hasGridImages=false] - Optional boolean to toggle images on grid layout cards
+ * @param {Boolean} [hasListText=false] - Optional boolean to toggle text on list layout rows
+ * @param {Boolean} [hasListImages=false] - Optional boolean to toggle images on list layout rows
 */
 
 export const SectionGallery = ({
@@ -23,7 +28,12 @@ export const SectionGallery = ({
   parseSubsections = false,
   galleryItemsData,
   placeholderText,
-  countText
+  countText,
+  initialLayout = "grid",
+  hasGridText = false,
+  hasGridImages = true,
+  hasListText = true,
+  hasListImages = true
 }) => (
   <SectionGalleryWrapper
     illustrations={illustrations}
@@ -32,9 +42,9 @@ export const SectionGallery = ({
     includeSubsections={includeSubsections}
     parseSubsections={parseSubsections}
     galleryItemsData={galleryItemsData}
+    initialLayout={initialLayout}
   >
-    {(sectionGalleryItems, searchTerm, setSearchTerm, layoutView, setLayoutView) => {
-    return (
+    {(sectionGalleryItems, searchTerm, setSearchTerm, layoutView, setLayoutView) => (
       <>
         <SectionGalleryToolbar
           galleryItems={sectionGalleryItems}
@@ -45,9 +55,19 @@ export const SectionGallery = ({
           placeholderText={placeholderText}
           countText={countText}
         />
-        <SectionGalleryLayout galleryItems={sectionGalleryItems} layoutView={layoutView} />
-        <SectionDataListLayout galleryItems={sectionGalleryItems} layoutView={layoutView} />
+        <SectionGalleryLayout
+          galleryItems={sectionGalleryItems}
+          layoutView={layoutView}
+          hasGridText={hasGridText}
+          hasGridImages={hasGridImages}
+        />
+        <SectionDataListLayout
+          galleryItems={sectionGalleryItems}
+          layoutView={layoutView}
+          hasListText={hasListText}
+          hasListImages={hasListImages}
+        />
       </>
-    )}}
+    )}
   </SectionGalleryWrapper>
 );
