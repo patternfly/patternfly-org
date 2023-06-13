@@ -30,7 +30,7 @@
 
 .ws-release-notes-toc .pf-v5-c-card__body {
   color: #72767B;
-  font-family: RedHatText;
+  font-family: var(--pf-v5-global--FontFamily--text);
   font-size: var(--pf-v5-global--FontSize--md);
   font-weight: 400;
   line-height: 1.5;
