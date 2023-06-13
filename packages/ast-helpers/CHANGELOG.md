@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.59 (2023-06-13)
+
+
+### Bug Fixes
+
+* **docs:** fixed gallery styles affecting width, font vars ([#3596](https://github.com/patternfly/patternfly-org/issues/3596)) ([04f1b54](https://github.com/patternfly/patternfly-org/commit/04f1b54f947e1afca88926d8f371d3bf37a70e25))
+
+
+
+
+
 # 0.12.0-alpha.58 (2023-06-13)
 
 **Note:** Version bump only for package @patternfly/ast-helpers

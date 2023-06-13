@@ -83,7 +83,7 @@ const MDXChildTemplate = ({
         <TableOfContents items={toc} />
       )}
       <div className="ws-mdx-content">
-        <div className={id === 'All components' ? "" : "ws-mdx-content-content"}>
+        <div className={source === 'landing-pages' ? "ws-landing-page" : "ws-mdx-content-content"}>
           {InlineAlerts}
           <Component />
           {functionDocumentation.length > 0 && (
