@@ -86,7 +86,7 @@
   --pf-v5-c-content--FontSize: var(--pf-v5-global--FontSize--md);
   --pf-v5-c-content--FontWeight: var(--pf-v5-global--FontWeight--normal);
   --pf-v5-c-content--Color: var(--pf-v5-global--Color--100);
-  --pf-v5-c-content--heading--FontFamily: var(--pf-v5-global--FontFamily--heading--sans-serif);
+  --pf-v5-c-content--heading--FontFamily: var(--pf-v5-global--FontFamily--heading);
   --pf-v5-c-content--h1--MarginTop: var(--pf-v5-global--spacer--lg);
   --pf-v5-c-content--h1--MarginBottom: var(--pf-v5-global--spacer--sm);
   --pf-v5-c-content--h1--LineHeight: var(--pf-v5-global--LineHeight--sm);
