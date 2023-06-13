@@ -2,7 +2,7 @@
 id: Upgrade
 title: Major release upgrade guide
 section: get-started
-source: Upgrade guide
+source: Major-release-upgrade
 ---
 
 # PatternFly 5
@@ -10,23 +10,23 @@ source: Upgrade guide
 Our latest major release introduces new support and functionality to PatternFly, including: 
 
 - React 18 support, 
-- Official dark theme support, and
-- An enhanced system of CSS classes and variables.
+- Official dark theme support, 
+- An enhanced system of CSS classes and variables, 
+- And more!
 
-To learn about the biggest changes in this release, read our [release highlights](/get-started/release-higlights.md). 
+To learn about the most significant changes in this release, read our [release highlights](/get-started/release-higlights.md). A detailed list of all changes can be found in our [major release notes](get-started/upgrade.md#major-release-notes). 
 
-This guide outlines the major steps you should take to upgrade your product's codebase from PatternFly 4 to PatternFly 5, as well as a detailed list of our [major release notes](get-started/upgrade.md#major-release-notes). 
+This guide outlines the major steps you should take to upgrade your product's codebase from PatternFly 4 to PatternFly 5. 
 
 ## Get help 
 
 If you need support as you upgrade to PatternFly 5, the PatternFly team is here to help. Reach out to us on [Slack](https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ) or ask a question on our [GitHub discussion board](https://github.com/orgs/patternfly/discussions). We'll always do our best to answer your questions and connect you with the right people quickly. 
 
-
 # Upgrade your product's codebase
 
-When you upgrade your product to PatternFly 5, several breaking changes will likely be introduced to your product’s codebase. We are using a suite of Codemods to simplify and streamline the upgrade process. Instead of requiring you to manually identify errors and issues in your codebase, you can run our Codemods to quickly identify and fix all issues. 
+When you upgrade your product to PatternFly 5, several breaking changes will likely be introduced to your product’s codebase. We are using a suite of Codemods to simplify and streamline the upgrade process. Instead of requiring you to manually identify all errors and issues in your codebase, you can run our Codemods to quickly identify and fix major issues. Keep in mind that some changes will still require manual intervention, but our Codemods can automatically fix a large amount of issues and flag any issues that do require manual work.
 
-To utilize our Codemods, you can [view the project on GitHub](https://github.com/patternfly/pf-codemods/) and refer to the following instructions.
+To utilize our Codemods, refer to the following instructions. You can also [view the project on GitHub](https://github.com/patternfly/pf-codemods/) for additional details.
 
 ##  Run our Codemods
 

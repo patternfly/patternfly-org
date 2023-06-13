@@ -2,7 +2,7 @@
 id: Upgrade
 title: Major release notes
 section: get-started
-source: Upgrade release notes
+source: Major-release-notes
 ---
 
 # PatternFly 5 
