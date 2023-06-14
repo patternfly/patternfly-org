@@ -6,7 +6,7 @@ section: components
 ## Elements
 Except where noted, modal and in-page wizards have the same elements and behaviors. For the sake of simplicity, all screens here show the modal wizard.
 
-<img src="./img/standard-wizard.png" alt="Simple wizard" />
+<img src="./img/simple-wizard.png" alt="Simple wizard" />
 
 1. **Header (modal wizard only):** Modal wizards always have a header area that minimally contains the wizard title and a close button. The title should be action oriented and reflect the intended outcome of the wizard, such as "Create resource." You may optionally also include a description below the wizard title.
 2. **Steps sidebar:** Enumerated steps are displayed in the sidebar. Steps can be fixed or updated as the user proceeds through the process (see progressive wizard).
@@ -52,7 +52,7 @@ Wizards can be modal or placed within the content area of a page. Behavior may c
 ### In-page wizard
 A wizard may be embedded in a page as shown below.
 
-<img src="./img/wizard-in-page.png" alt="In-page wizard" />
+<img src="./img/in-page-wizard.png" alt="In-page wizard" />
 
 Wizards can also be added to the content area of a page. This will allow greater flexibility in navigating to other locations in your application while within a wizard flow, but it also places greater responsibility on the system to manage state.
 
