@@ -49,14 +49,14 @@ The status icon, background, and alert title are coded to communicate the severi
 |Critical |fa-exclamation-circle | Use to indicate that a critical or blocking error has occurred
 |Success  |fa-check-circle | Use to indicate that a task or process has completed successfully
 
-For more information about what colors to use for status and severity, visit the [Colors page](/guidelines/colors/#status-and-state-colors).
+For more information about what colors to use for status and severity, visit the [Colors page](/design-foundations/colors/#status-and-state-colors).
 
 ## Usage
 Use an alert component when you are trying to give the user essential information in a prominent way. More specific use cases differ based on component variation. 
 
 ### Customizing alerts
  
-If your use case falls outside of PatternFly's standard alert variations, use [icons](/design-foundations/icons) and [colors](/guidelines/colors) to create custom alerts that meet your needs.
+If your use case falls outside of PatternFly's standard alert variations, use [icons](/design-foundations/icons) and [colors](/design-foundations/colors) to create custom alerts that meet your needs.
  
 View custom alerts in action in our [custom alert examples](https://www.patternfly.org/v4/components/alert#custom-icons).
 
@@ -161,7 +161,7 @@ Toast alerts communicate information about an update, confirmation, or other act
 #### Using toast alerts
 Use toast alerts to communicate an update, confirmation, or other activity to the user without blocking their workflow. For example, you can use a toast alert to inform the user that their message was sent. You can include links in a toast alert for a user to take action on the event that surfaced the alert, but the links should only be a shortcut for the user. A toast alert should never be used as the only means for taking actions on an alert event.
  
-Toast alerts stack in the upper-right corner of a page. To properly position and stack a set of alerts, use an [alert group](/components/alert-group) component. When alerts stack, the most recent alert appears at the top, and others move down as more alerts come in. When alerts are deleted, the remaining alerts move up.
+Toast alerts stack in the upper-right corner of a page. To properly position and stack a set of alerts, use an [alert group](#alert-groups) component. When alerts stack, the most recent alert appears at the top, and others move down as more alerts come in. When alerts are deleted, the remaining alerts move up.
  
 ![alert group](./img/toast-notification-multiple.png)
  
