@@ -57,7 +57,7 @@
   },
   "calendar-month": {
     "illustration": "./images/component-illustrations/calendar-month.png",
-    "summary": "A <b>calendar month</b> component allows users to select and navigate between days, months and/or years. This component is usually used with the date picker component, to display date options and selections. For more information about usage, view <Link to='/components/date-picker/design-guidelines'>date picker guidelines</Link>."
+    "summary": "A <b>calendar month</b> component allows users to select and navigate between days, months and/or years. This component is usually used with the date picker component, to display date options and selections. For more information about usage, view <Link to='/components/date-and-time/date-picker/design-guidelines'>date picker guidelines</Link>."
   },
   "card": {
     "illustration": "./images/component-illustrations/card.png",
@@ -121,7 +121,8 @@
   },
   "dropdown": {
     "illustration": "./images/component-illustrations/dropdown.png",
-    "summary": "A <b>dropdown</b> presents a menu of actions or links in a constrained space that will trigger a process or navigate to a new location. See <Link to='/components/select/design-guidelines'>select component guidelines</Link> for more information about making one or more selections from a list of items in a value list.<br/><br/>A newer React implementation of the dropdown will replace the existing implementation at the next major release. The documentation for the newer implementation is under the <Link to='/components/dropdown/react-next'>React next</Link> tab, and this newer implementation can be imported from @patternfly/react-core/next."
+    
+    "summary": "A <b>dropdown</b> presents a menu of actions or links in a constrained space that will trigger a process or navigate to a new location. See <Link to='/components/menus/select/design-guidelines'>select component guidelines</Link> for more information about making one or more selections from a list of items in a value list.<br/><br/>A newer React implementation of the dropdown has replaced the deprecated implementation. The documentation for the deprecated implementation is under the <Link to='/components/menus/dropdown/react-deprecated'>React deprecated</Link> tab, and this deprecated implementation can be imported from @patternfly/react-core/deprecated."
   },
   "dual-list-selector": {
     "illustration": "./images/component-illustrations/dual-list-selector.png",
@@ -165,7 +166,7 @@
   },
   "icon": {
     "illustration": "./images/component-illustrations/icon.png",
-    "summary": "An <b>icon</b> component is a container that allows for <Link to='/guidelines/icons/#all-icons'>icons</Link> of varying dimensions, as well as <Link to='/components/spinner'>spinners</Link>, to seamlessly replace each other without shifting surrounding content.<br/><br/>PatternFly's <Link to='/guidelines/icons/#all-icons'>icons guidelines</Link> contain PatternFly's icon set, as well as more information about icon usage."
+    "summary": "An <b>icon</b> component is a container that allows for <Link to='/design-foundations/icons#all-icons'>icons</Link> of varying dimensions, as well as <Link to='/components/spinner'>spinners</Link>, to seamlessly replace each other without shifting surrounding content.<br/><br/>PatternFly's <Link to='/design-foundations/icons#all-icons'>icons guidelines</Link> contain PatternFly's icon set, as well as more information about icon usage."
   },
   "inline-edit": {
     "illustration": "./images/component-illustrations/inline-edit.png",
@@ -197,7 +198,7 @@
   },
   "menu-toggle": {
     "illustration": "./images/component-illustrations/menu-toggle.png",
-    "summary": "The <b>menu toggle</b> component pairs with the <Link to='/components/menu/design-guidelines'>menu</Link> OR the <Link to='/components/panel/design-guidelines'>panel</Link> component to create more customizable dropdown and select implementations. Using a menu toggle with a menu enables you to create custom component configurations not supported by the standard dropdown or select components."
+    "summary": "The <b>menu toggle</b> component pairs with the <Link to='/components/menus/menu'>menu</Link> OR the <Link to='/components/panel/design-guidelines'>panel</Link> component to create more customizable dropdown and select implementations. Using a menu toggle with a menu enables you to create custom component configurations not supported by the standard dropdown or select components."
   },
   "menu": {
     "illustration": "./images/component-illustrations/menu.png",
@@ -369,6 +370,6 @@
   },
   "wizard": {
     "illustration": "./images/component-illustrations/wizard.png",
-    "summary": "A <b>wizard</b> provides a guided workflow that offers a path to complete a task, create an object or objects, or finish a series of steps for some other outcome. Wizards should incite trust in the user and guide them through an otherwise overwhelming experience.<br/><br/>A newer React implementation of the wizard will replace the existing implementation at the next major release. The documentation for the newer implementation is under the <Link to='/components/wizard/react-next'>React next</Link> tab, and this newer implementation can be imported from @patternfly/react-core/next."
+    "summary": "A <b>wizard</b> provides a guided workflow that offers a path to complete a task, create an object or objects, or finish a series of steps for some other outcome. Wizards should incite trust in the user and guide them through an otherwise overwhelming experience.<br/><br/>A newer React implementation of the wizard has replaced the now deprecated implementation. The documentation for the deprecated implementation is under the <Link to='/components/wizard/react-deprecated'>React deprecated</Link> tab, and this deprecated implementation can be imported from @patternfly/react-core/deprecated."
   }
 }
