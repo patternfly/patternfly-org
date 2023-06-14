@@ -1,0 +1,23 @@
+{
+  "bullseye": {
+    "summary": "Bullseye layouts center content vertically and horizontally."
+  },
+  "flex": {
+    "summary": "Flex layouts create consistently spaced custom layouts that are responsive to other layouts and PatternFly components."
+  },
+  "gallery": {
+    "summary": "Gallery layouts arrange content in a responsive grid of uniform rows and columns."
+  },
+  "grid": {
+    "summary": "Grid layouts arrange content on a fixed-size 12 column grid."
+  },
+  "level": {
+    "summary": "Level layouts evenly distribute content horizontally."
+  },
+  "split": {
+    "summary": "Split layouts distribute multiple items horizontally, which adapt to viewport resizing."
+  },
+  "stack": {
+    "summary": "Stack layouts distribute multiple items vertically, which adapt to the available space of a container."
+  }
+}
