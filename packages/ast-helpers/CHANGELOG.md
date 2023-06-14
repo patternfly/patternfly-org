@@ -3,6 +3,87 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.60 (2023-06-14)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.59 (2023-06-13)
+
+
+### Bug Fixes
+
+* **docs:** fixed gallery styles affecting width, font vars ([#3596](https://github.com/patternfly/patternfly-org/issues/3596)) ([04f1b54](https://github.com/patternfly/patternfly-org/commit/04f1b54f947e1afca88926d8f371d3bf37a70e25))
+
+
+
+
+
+# 0.12.0-alpha.58 (2023-06-13)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.57 (2023-06-13)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.56 (2023-06-12)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.55 (2023-06-12)
+
+
+### Features
+
+* turn on dark switcher, remove extra css ([#3519](https://github.com/patternfly/patternfly-org/issues/3519)) ([0059891](https://github.com/patternfly/patternfly-org/commit/005989134d6a962189690a49faccb8dfc6e3de77))
+
+
+
+
+
+# 0.12.0-alpha.54 (2023-06-12)
+
+
+### Bug Fixes
+
+* **whitespace:** whitespace change to push out new release ([84d1bb3](https://github.com/patternfly/patternfly-org/commit/84d1bb3ccc79a9ef2c4cf5fb93b19fbb719b6078))
+
+
+
+
+
+# 0.12.0-alpha.53 (2023-06-09)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.52 (2023-06-09)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 0.12.0-alpha.51 (2023-06-07)
 
 **Note:** Version bump only for package @patternfly/ast-helpers

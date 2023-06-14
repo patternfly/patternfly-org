@@ -16,7 +16,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
 
   // Gallery pages
   const galleryBase = path.join(__dirname, '../patternfly-docs/pages');
-  sourceMD(path.join(galleryBase, 'landing-pages/**/*.md'), 'pages-landing-page');
+  sourceMD(path.join(galleryBase, 'landing-pages/**/*.md'), 'landing-pages');
 
 
   // Theme pages

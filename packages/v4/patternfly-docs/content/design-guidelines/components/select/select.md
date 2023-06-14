@@ -69,7 +69,7 @@ Typeahead allows users to narrow a displayed list of options by typing into the 
 
 <img src="./img/typeahead.png" alt="Visual of a typeahead being used" width="361"/>
 
-When providing fewer than 5 options, you can use [radio buttons](/components/radio/react) or [checkboxes](/components/checkbox/react) to display all options to the user simultaneously if you don’t have any space constraints.
+When providing fewer than 5 options, you can use [radio buttons](/components/forms/radio) or [checkboxes](/components/forms/checkbox) to display all options to the user simultaneously if you don’t have any space constraints.
 
 ### Select list with count
 Select lists support the option of adding a number count to checkbox selects, both (1) as a badge in the toggle to indicate number of items selected, or (2) at the item level to indicate the number of items that match a certain filter option.

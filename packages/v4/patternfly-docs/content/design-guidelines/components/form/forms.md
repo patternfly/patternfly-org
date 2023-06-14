@@ -59,7 +59,7 @@ For guidance on how to write effective form labels, see the [content](#content-c
 
 ### Text inputs
 
-Follow our [text input guidelines](/components/text-input/design-guidelines) for using text inputs in a form.
+Follow our [text input guidelines](/components/forms/text-input/design-guidelines) for using text inputs in a form.
 
 
 ### Data inputs
@@ -75,11 +75,11 @@ Use a [switch](/components/switch/design-guidelines) to toggle between 2 differe
 
 #### Radio buttons
 
-Use [radio buttons](/components/radio/design-guidelines) when users can only choose 1 option from a list of 2 to 5 mutually exclusive options.  
+Use [radio buttons](/components/forms/radio/design-guidelines) when users can only choose 1 option from a list of 2 to 5 mutually exclusive options.  
 
 #### Checkboxes
 
-Use [checkboxes](/components/checkbox/design-guidelines) to enable users to select all, some, or none of the available options from a list of up to 5 items.
+Use [checkboxes](/components/forms/checkbox/design-guidelines) to enable users to select all, some, or none of the available options from a list of up to 5 items.
 
 #### Select lists
 
@@ -125,7 +125,7 @@ To distinguish between form sections, title them based on the reason you grouped
 
 <img src="./img/form-sections.png" alt="Example of form sections used to separate out a form." width="570"/>
 
-To view an interactive example of form sections, see our [form sections demo](/components/form/#form-sections).
+To view an interactive example of form sections, see our [form sections demo](/components/forms/form).
 
 ### Field groups
 

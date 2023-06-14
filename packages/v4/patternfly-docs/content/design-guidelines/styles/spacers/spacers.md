@@ -180,5 +180,5 @@ We use spacers to define fixed amounts of space between elements. Spacers make i
 </p>
 
 <p class="pf-v5-u-my-3xl ws-content-p">
-  For more information about line height and typography, go to the [typography page.](/guidelines/typography)
+  For more information about line height and typography, go to the [typography page.](/design-foundations/typography)
 </p>

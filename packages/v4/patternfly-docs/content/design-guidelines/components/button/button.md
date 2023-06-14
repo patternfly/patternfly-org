@@ -120,7 +120,7 @@ Always use link buttons in the following cases:
 
 Icon buttons are useful in places where space is limited. For example, if you have too many actions within a menu, you could use a kebab icon to indicate more actions, or an export icon for exporting data. You can also use this button type for actions that are commonly associated with icons, like an exit icon to close a window or a hamburger icon to open a menu.
 
-For example, this toolbar uses an export icon as an action button due to limited space.
+For example, this toolbar uses a kebab icon as an action button due to limited space.
 
 <img src="./img/icon_button.png" alt="Example of kebab used as an icon button inside a toolbar" width="1159"/>
 
@@ -134,20 +134,25 @@ Call To Actions have similar variants to regular buttons (although they have a l
 
 ### Progress button ###
 
-A progress button can be used to provide the user with feedback that an action is in progress after the button is clicked. To indicate that an action is taking place, a spinner is inserted in front of the button label. You can optionally replace the spinner with a completion icon when the action completes.
+A progress button can be used to provide the user with feedback that an action is in progress after the button is clicked. To indicate that an action is taking place, a spinner is inserted in front of the button label. 
 
-Use a progress button when clicking a submit button will not navigate the user to a new page or open a modal. For operations that will take more than a few seconds, use of a modal with a progress bar is recommended to reflect status and indicate time to completion.
+**When to use a progress button**
 
-_Example of using a progress button_
+Use a progress button for in-page checks that must be completed before proceeding to the next screen.
 
-<img src="./img/progress-button.png" alt="Example of progress button usage" width="1435"/>
+**When not to use a progress button**
 
-1. The user clicks the submit button.
+Do not use a progress button for operations that will take more than a few seconds, or operations that open to a new page. Instead, use a [progress bar](/components/progress).
 
-2. A spinner indicates that the operation is in progress.
+_Example of using a progress button to test a repository before final configuration_
 
-3. When complete, use a success icon (fa-check-circle) and a change in the label text to indicate that the operation was successfully completed.
+<img src="./img/progress_bar_stages.png" alt="Example of progress button usage" width="1828"/>
 
+1. The user clicks “try sample repository".
+
+2. The spinner will become disabled, indicating to the user that a process is loading and there is no action to take on the button at this time.
+
+3. When complete, a toast message will appear to indicate the status of the process (successful or unsuccessful), and the progress button will return to it’s initial state.
 
 <!--  ### Using buttons in your designs
 We recommend aligning buttons to different elements or areas on the screen depending on the content being provided. The recommended alignment simplifies scanning and helps users complete and submit form content more quickly.  
@@ -246,7 +251,7 @@ When writing button labels:
 * Avoid using articles (for example, write “Add source” instead of “Add a source”).
 * Avoid punctuation on buttons.
 * Add an icon to the button to call a user's attention to it or to clarify the button's action.
-* Do not create icons on buttons using punctuation (for example, "+"). Instead, refer to [PatternFly's icons page](/guidelines/icons) for any icons you place on buttons.
+* Do not create icons on buttons using punctuation (for example, "+"). Instead, refer to [PatternFly's icons page](/design-foundations/icons) for any icons you place on buttons.
 
 ### Writing link labels
 
@@ -254,4 +259,4 @@ Use specific, action-focused labels that match what the user will see when they 
 
 ## Accessibility 
 
-For information regarding accessibility, visit the [button accessibility page](components/button/accessibility).
+For information regarding accessibility, visit the [button accessibility page](/components/button/accessibility).

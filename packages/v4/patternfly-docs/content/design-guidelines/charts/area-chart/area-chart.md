@@ -12,5 +12,5 @@ You may stack area charts to compare more than one continuous data sets. Stackin
 ### Example
 <img src="./img/area-chart.png" alt="Area chart" width="489"/> 
 
-1. **Data area fill:** The area fill is presented below the data line. Data area fills use colors that conform with the [colors for charts](/guidelines/colors-for-charts).
+1. **Data area fill:** The area fill is presented below the data line. Data area fills use colors that conform with the [colors for charts](/charts/colors-for-charts).
 2. **Chart tooltip:** Use the chart tooltip to drill into the data related to any data point provided on your area chart.
