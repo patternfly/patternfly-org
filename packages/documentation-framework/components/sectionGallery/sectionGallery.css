@@ -1,5 +1,9 @@
-.ws-mdx-content-content {
-  max-width: initial !important;
+.ws-landing-page > * {
+  max-width: 832px;
+}
+
+.ws-landing-page > .ws-section-gallery-full-width {
+  max-width: initial;
 }
 
 .ws-section-gallery {

@@ -18,7 +18,7 @@ const getStaticParams = (title, html) => {
       'index.html': {
         content: `
           <!DOCTYPE html>
-          <html lang="en" class="pf-m-redhat-font">
+          <html lang="en">
             <head>
               <meta charset="utf-8" />
               <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -184,7 +184,7 @@ function getReactParams(title, code, scope, lang, relativeImports, relPath, sour
     files: {
       'index.html': {
         content: `<!DOCTYPE html>
-<html lang="en" class="pf-m-redhat-font">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
