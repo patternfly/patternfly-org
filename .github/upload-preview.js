@@ -66,7 +66,7 @@ if (prnum) {
       }
 
       if (uploadName === 'site') {
-        commentBody += tryAddComment(`PF4 preview: https://${uploadURL}`, commentBody);
+        commentBody += tryAddComment(`Preview: https://${uploadURL}`, commentBody);
       }
       else if (uploadFolderName === 'coverage') {
         commentBody += tryAddComment(`A11y report: https://${uploadURL}`, commentBody);

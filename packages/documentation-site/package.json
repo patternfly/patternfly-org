@@ -1,6 +1,6 @@
 {
-  "name": "patternfly-org-4",
-  "description": "Documentation for PatternFly 4.",
+  "name": "patternfly-org",
+  "description": "Documentation for PatternFly.",
   "private": true,
   "version": "4.21.4",
   "author": "Red Hat",

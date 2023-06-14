@@ -5,23 +5,23 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "analyze": "yarn workspace patternfly-org-4 analyze",
+    "analyze": "yarn workspace patternfly-org analyze",
     "develop": "yarn develop:v5",
-    "develop:v5": "yarn workspace patternfly-org-4 develop",
+    "develop:v5": "yarn workspace patternfly-org develop",
     "build": "yarn build:v5",
-    "build:analyze": "yarn workspace patternfly-org-4 build:analyze && yarn copy:v5",
+    "build:analyze": "yarn workspace patternfly-org build:analyze && yarn copy:v5",
     "build:v4": "yarn build:v5",
-    "build:v5": "yarn workspace patternfly-org-4 build && yarn copy:v5",
+    "build:v5": "yarn workspace patternfly-org build && yarn copy:v5",
     "copy:v5": "rm -rf build/patternfly-org/site && mkdir -p build/patternfly-org && cp -r packages/documentation-site/public build/patternfly-org/site",
     "clean": "lerna run clean && rm -rf build",
     "serve": "pf-docs-framework serve build/patternfly-org/site",
-    "test:v5": "yarn workspace patternfly-org-4 test:a11y:ci",
-    "screenshots": "yarn workspace patternfly-org-4 screenshots",
+    "test:v5": "yarn workspace patternfly-org test:a11y:ci",
+    "screenshots": "yarn workspace patternfly-org screenshots",
     "start": "yarn start:v5",
     "start:v5": "yarn develop:v5",
     "uninstall": "find . -name node_modules | xargs rm -rf",
     "workflows": "node .github/generate-workflows",
-    "test:a11y": "yarn workspace patternfly-org-4 test:a11y"
+    "test:a11y": "yarn workspace patternfly-org test:a11y"
   },
   "workspaces": {
     "packages": [
