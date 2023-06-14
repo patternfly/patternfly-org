@@ -76,11 +76,12 @@ New design:
 <img src="./img/v5-selectable-card.png" alt="Shown is an image of two example cards. The first card is both in focus and underlined in blue."/>
 
 As a result, our previous design has been deprecated, along with the following properties:
-    - `isSelectableRaised`
-    - `isDisabledRaised`
-    - `hasSelectableInput`
-    - `selectableInputAriaLabel`
-    - `onSelectableInputChange`
+
+- `isSelectableRaised`
+- `isDisabledRaised`
+- `hasSelectableInput`
+- `selectableInputAriaLabel`
+- `onSelectableInputChange`
 
 We recommend that you upgrade to these new cards if your use case calls for them. You can read more about their intended usage [in our card documentation.](components/card/design-guidelines#variations)
 
