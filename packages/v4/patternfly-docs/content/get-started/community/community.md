@@ -25,14 +25,6 @@ import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-ic
   <Title size="3xl" className="ws-title" headingLevel="h2">Who we are</Title>
       <p>We're made of designers, developers, and other UX professionals with a passion for open source. We each have different ways of working with others and supporting the community—there's no one way to be a Flyer. Whether we're contributing to PatternFly or just staying up to date on new releases, we work together to make PatternFly a vibrant community of passionate people.</p>
 
-  <!-- in case we want to add the image back <Grid sm={12} md={6} hasGutter className="pf-v5-u-mt-3xl">
-    <GridItem className="pf-v5-u-pr-xl">
-      <img src={communityPageHeader} alt="Website collaboration" />
-    </GridItem>
-    <GridItem>
-      
-    </GridItem>
-  </Grid>-->
 
   <Title size="3xl" className="pf-v5-u-mb-sm ws-page-title pf-v5-u-mt-3xl" headingLevel="h2">What we're building</Title>
   <p>Our work extends beyond products and apps. We're always exploring new ways we can welcome ideas and build better experiences for the very people who make PatternFly what it is today. </p>
