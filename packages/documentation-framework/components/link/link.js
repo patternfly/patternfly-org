@@ -39,8 +39,6 @@ export const Link = ({
     return <a href={url} onClick={onClick} {...props} />;
   }
   else if (url.startsWith('/')) {
-    url = url.substr(1);
-
     if (!process.env.PRERENDER) {
       const Component = getAsyncComponent(url);
       if (Component) {
@@ -65,5 +63,6 @@ export const Link = ({
       }
     }
   }
+
   return <ReachLink to={url} {...props} />;
 }
