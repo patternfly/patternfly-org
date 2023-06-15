@@ -86,7 +86,6 @@ async function build(cmd, options) {
   config.legacySSL = options.legacySSL
 
   // These get passed to `fork`ed builds
-  process.env.pathPrefix = config.pathPrefix;
   process.env.hasDesignGuidelines = config.hasDesignGuidelines;
   // console.log('build', cmd, options.parent.cssconfig);
   if (toBuild.includes('server')) {
