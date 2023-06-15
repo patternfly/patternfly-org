@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.62 (2023-06-14)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.61 (2023-06-14)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 0.12.0-alpha.60 (2023-06-14)
 
 **Note:** Version bump only for package @patternfly/ast-helpers

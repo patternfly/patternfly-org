@@ -5,7 +5,9 @@ related: ['Alert', 'Alert group']
 ---
  
 ## Elements
-Elements vary depending on the variation of Alert. Toast alerts are always dismissible, but bordered inline alerts can be both dismissable and non-dismissible. All other elements are consistent between toast and bordered inline alerts.
+
+### Alerts
+Alert elements vary depending on the variation of alert. Toast alerts are always dismissible, but bordered inline alerts can be both dismissable and non-dismissible. All other elements are consistent between toast and bordered inline alerts.
 Plain inline alerts are never dismissable, and consist of only a status area and alert title.
  
 <img src="./img/alert-types.png" alt="Alert types" width="868" />
@@ -22,6 +24,18 @@ Plain inline alerts are never dismissable, and consist of only a status area and
 
 6. **Expandable alert (optional)**: The expansion reveals additional information.
 
+### Alert groups
+
+An alert group stacks and positions 2 or more alerts in a live region, either in a layer over the main content of a page or inline with the page content. Alert groups should always rank alerts by age, stacking new alerts on top of old ones as they surface.
+
+<img src="./img/alert-group-elements.png" alt="An example of an alert group stacked on a page. Each alert is labeled according to its place in the stack hierarchy: Newest on top, second newest in the middle, and oldest on the bottom." />
+
+1. **Newest notification:** Always appears at the top of the alert group.
+2. **Second newest notification:** Moves down when a newer notification surfaces.
+3. **Oldest notification:** Continues to move down the stack as newer notifications surface, until a user closes it.
+4. **Overflow footer (optional):** Use this when you do not want to display more than a specified number of alerts at the same time on the user's screen. See [Managing overflow](#managing-overflow) for more information about overflow footer interactions.
+
+
 ### Communicating severity
 The status icon, background, and alert title are coded to communicate the severity of an alert.
 
@@ -35,17 +49,42 @@ The status icon, background, and alert title are coded to communicate the severi
 |Critical |fa-exclamation-circle | Use to indicate that a critical or blocking error has occurred
 |Success  |fa-check-circle | Use to indicate that a task or process has completed successfully
 
-For more information about what colors to use for status and severity, visit the [Colors page](/guidelines/colors/#status-and-state-colors).
+For more information about what colors to use for status and severity, visit the [Colors page](/design-foundations/colors/#status-and-state-colors).
 
 ## Usage
 Use an alert component when you are trying to give the user essential information in a prominent way. More specific use cases differ based on component variation. 
 
 ### Customizing alerts
  
-If your use case falls outside of PatternFly's standard alert variations, use [icons](/design-foundations/icons) and [colors](/guidelines/colors) to create custom alerts that meet your needs.
+If your use case falls outside of PatternFly's standard alert variations, use [icons](/design-foundations/icons) and [colors](/design-foundations/colors) to create custom alerts that meet your needs.
  
 View custom alerts in action in our [custom alert examples](https://www.patternfly.org/v4/components/alert#custom-icons).
- 
+
+### Placement
+Toast alerts should be placed on the top right of a page. Use 8px of padding between each alert in an alert group. Alert group alignment on a page will depend on your use case.
+
+**For desktop views**, right-align toast alert groups over your page content. Each alert should stack on top of one another with 8px of padding in between.
+
+<img src="./img/alert-group-desktop.png" alt="An example of a right-aligned toast alert group over a desktop view." />
+
+**For mobile views**, center toast alert groups over your page content.
+
+<img src="./img/alert-group-mobile.png" alt="An example of a centered toast alert group over a mobile view." width="375" />
+
+<img src="./img/alert-group-mobile.png" alt="An example of a centered toast alert group over a mobile view." width="375" />
+
+See our [toast alert guidelines](/components/alert/design-guidelines/#using-toast-alerts) for more information about using toast alerts.
+
+### Managing overflow
+
+If you don't want multiple alerts to stack and fill the screen until the user dismisses them, you may use the overflow footer in an alert group to manage overflow. When applying overflow, you should decide how many alerts to display before showing the footer. A threshold of 3 alerts is recommended. After that, additional alerts added to the screen will cause older alerts to be hidden, and only the most recent 3 alerts are displayed.
+
+The overflow link should be configured to navigate to a place where the user can view and manage a complete list of incoming alerts. If a [notification drawer](/components/notification-drawer) is being used, it should open the drawer. You may customize the text accordingly to reflect the result of clicking the link. However, we recommend displaying the number of new/unread notifications present to give the user feedback about how many additional notifications are remaining to view as in the example below.
+
+<img src="./img/alert-group-with-overflow.png" alt="An example of an alert group with overflow footer" width="662" />
+
+See our [toast alert guidelines](/components/alert/design-guidelines/#using-toast-alerts) for more information about using toast alerts.
+
 
 ## Variations
 
@@ -122,7 +161,7 @@ Toast alerts communicate information about an update, confirmation, or other act
 #### Using toast alerts
 Use toast alerts to communicate an update, confirmation, or other activity to the user without blocking their workflow. For example, you can use a toast alert to inform the user that their message was sent. You can include links in a toast alert for a user to take action on the event that surfaced the alert, but the links should only be a shortcut for the user. A toast alert should never be used as the only means for taking actions on an alert event.
  
-Toast alerts stack in the upper-right corner of a page. To properly position and stack a set of alerts, use an [alert group](/components/alert-group) component. When alerts stack, the most recent alert appears at the top, and others move down as more alerts come in. When alerts are deleted, the remaining alerts move up.
+Toast alerts stack in the upper-right corner of a page. To properly position and stack a set of alerts, use an [alert group](#alert-groups) component. When alerts stack, the most recent alert appears at the top, and others move down as more alerts come in. When alerts are deleted, the remaining alerts move up.
  
 ![alert group](./img/toast-notification-multiple.png)
  
