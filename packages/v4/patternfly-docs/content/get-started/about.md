@@ -102,7 +102,7 @@ as well as relevant examples in the documentation are all labeled as beta.
 
 For more information about beta components, visit [this page](https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion).
 
-### PatternFly release cadence
+## PatternFly release cadence
 
 Currently, PatternFly plans to release a new major release annually. Major releases will be the only releases with 
 planned breaking changes. Along with each major release, the PatternFly team will provide thorough migration guides and 
@@ -115,3 +115,8 @@ next' tab in the component docs. During major releases, these React next impleme
 recommended implementation. In such instances, the previous implementation will be marked deprecated. Any deprecated 
 implementation of components will remain available (though will not be further enhanced or maintained) until at least 
 the subsequent major release.
+
+## Requesting new features and enhancements
+PatternFly is built on the needs of our community of stakeholders. To request a new feature or an enhancement to an existing feature, first open a new discussion topic in the [PatternFly Feature Request discussion forum](https://github.com/orgs/patternfly/discussions/categories/feature-requests). 
+
+The PatternFly team will review and prioritize your issue, taking into account scope and technical constraints. If accepted, your feature request will be placed on the PatternFly feature roadmap for further design and development. After this, the PatternFly design team will work with you to create a design proposal and facilitate reviews.
