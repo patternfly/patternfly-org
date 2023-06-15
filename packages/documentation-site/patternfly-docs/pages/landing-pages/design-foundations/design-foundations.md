@@ -18,4 +18,5 @@ Our design foundations provide standards and guidance to help designers and deve
   placeholderText="Search design foundations by name"
   includeSubsections={true}
   hasGridText={true}
+  isFullWidth={false}
 />

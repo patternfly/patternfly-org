@@ -22,4 +22,5 @@ PatternFly currently supports the following layouts:
   placeholderText="Search layouts by name"
   includeSubsections={true}
   hasGridText={true}
+  isFullWidth={false}
 />

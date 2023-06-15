@@ -20,4 +20,5 @@ To contribute an idea for a new extension, [create a new discussion on GitHub.](
   placeholderText="Search extensions by name"
   includeSubsections={true}
   hasGridText={true}
+  isFullWidth={false}
 />

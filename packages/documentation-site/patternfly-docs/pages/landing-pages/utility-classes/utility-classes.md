@@ -22,4 +22,5 @@ PatternFly currently offers utilities for the following:
   placeholderText="Search utility classes by name"
   includeSubsections={true}
   hasGridText={true}
+  isFullWidth={false}
 />

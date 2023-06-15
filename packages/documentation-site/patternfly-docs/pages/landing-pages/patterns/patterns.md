@@ -22,4 +22,5 @@ PatternFly currently supports the following patterns:
   placeholderText="Search patterns by name"
   includeSubsections={true}
   hasGridText={true}
+  isFullWidth={false}
 />
