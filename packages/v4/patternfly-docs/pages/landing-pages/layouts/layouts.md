@@ -20,6 +20,6 @@ PatternFly currently supports the following layouts:
   section="layouts"
   galleryItemsData={layoutsData}
   placeholderText="Search layouts by name"
-  parseSubsections={true}
+  includeSubsections={true}
   hasGridText={true}
 />

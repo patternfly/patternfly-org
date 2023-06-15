@@ -1,0 +1,32 @@
+{
+  "accessibility": {
+    "summary": "Accessibility utility classes allow you to modify how an element interacts with assistive technologies."
+  },
+  "alignment": {
+    "summary": "Alignment utility classes allow you to modify how text is aligned in a page section."
+  },
+  "background-color": {
+    "summary": "Background color utility classes allow you to modify the background color of an element."
+  },
+  "box-shadow": {
+    "summary": "Box shadow utility classes all you to apply shadows to an element."
+  },
+  "display": {
+    "summary": "Display utility classes allow you to modify how an element is displayed in a page section."
+  },
+  "flex": {
+    "summary": "Flex utility classes allow you to modify the layout and alignment of elements in a page section."
+  },
+  "float": {
+    "summary": "Float utility classes allow you to float elements inside of a page section."
+  },
+  "sizing": {
+    "summary": "Sizing utility classes allow you to modify the width and height of elements in a page section."
+  },
+  "spacing": {
+    "summary": "Spacing utility classes allow you to modify the spacing of elements in a page section."
+  },
+  "text": {
+    "summary": "Text utility classes allow you to modify the styling of text elements."
+  }
+}

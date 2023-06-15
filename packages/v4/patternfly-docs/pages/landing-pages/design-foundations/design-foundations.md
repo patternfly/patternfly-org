@@ -16,5 +16,6 @@ Our design foundations provide standards and guidance to help designers and deve
   section="design-foundations"
   galleryItemsData={designFoundationsData}
   placeholderText="Search design foundations by name"
-  parseSubsections={true}
+  includeSubsections={true}
+  hasGridText={true}
 />
