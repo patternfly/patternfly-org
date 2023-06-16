@@ -95,7 +95,7 @@ The table below lists all common text styles that are used in PatternFly applica
   styleProps = {styleProps.code} />
 
 ### Customizing heading levels
- If you use the [title component](/components/title) to create headings on your page, you can modify the default relationship between heading levels and text sizes. In using title, you must specify a heading level that will apply to the target text. The table below shows the default mapping of heading level to text size:
+If you use the [title component](/components/title) to create headings on your page, you can modify the default relationship between heading levels and text sizes. In using title, you must specify a heading level that will apply to the target text. The table below shows the default mapping of heading level to text size:
 
 | Heading level | Default size|
 |----|-----------|
