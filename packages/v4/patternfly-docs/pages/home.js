@@ -23,22 +23,14 @@ import open from '../images/open.svg';
 import { AutoLinkHeader } from '@patternfly/documentation-framework/components/autoLinkHeader/autoLinkHeader';
 import './home.css';
 
-
 const aboutPatternFly = `Hello, we're PatternFly.`;
 const patternFlyPrinciples = 'Flyer fundamentals';
 
 const HomePage = () => (
   <React.Fragment>
-    <div id="pf4-banner" class="pf4-banner">
-      <div class="pf4-banner-wrapper">
-        <span class="rhDisplayRegular pf4-banner-text">
-          PatternFly 5 is live! Visit the website for new design, code samples, and documentation.
-        </span>
-        <a href="https://www.patternfly.org/" class="rhDisplaySemiBold pf4-banner-link">
-          Go to PatternFly 5 <ArrowRightIcon />
-        </a>
-      </div>
-    </div>
+    <PageSection variant={PageSectionVariants.light} stickyOnBreakpoint={{ default: 'top' }} className="pf-u-font-size-lg">
+      PatternFly 5 is live! Visit the website for new design, code samples, and documentation. <a href="https://www.patternfly.org/" class="pf4-banner-link pf-u-font-weight-bold">Go to PatternFly 5 <ArrowRightIcon /></a>
+    </PageSection>
     <PageSection variant={PageSectionVariants.light} className="pf4-c-background-image ws-homepage-main-section">
       <Grid>
         <GridItem sm={12} md={8} mdOffset={2} lg={6} lgOffset={3} className="pf-u-py-2xl pf-u-text-align-center">
@@ -47,7 +39,6 @@ const HomePage = () => (
             <Title headingLevel="h1" size="4xl" className="pf-m-white pf4-site-c-hero fadeIn animated fadeInTwo">
               Build scalable experiences in the open.
             </Title>
-
             <Text className="pf-c-title pf-m-xl pf-m-white pf-u-mb-md pf-u-mt-lg pf-u-mb-3xl-on-md fadeInUp animated fadeInThree">
               PatternFly is an open source design system built to drive consistency and unify teams.
             </Text>

@@ -223,34 +223,5 @@
 }
 
 .pf4-banner-link{
-  font-size: 18px;
-  margin-left: 8px;
-  color: #06c;
-}
-
-.pf4-banner-text{
-  margin-left: 32px;
-  font-size: 18px;
-}
-
-.pf4-banner{
-  background-color: #fff;
-  display: flex;
-  justify-content: space-between;
-}
-
-.pf4-banner-wrapper{
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.pf4-banner-link{
-  font-size: 18px;
-  color: #06c;
-  margin-right: 16px;
-  margin-left: 16px;
-  font-weight: 800!important;
-}
-.pf4-banner-link:hover{
-  color: #004080;
+  white-space: nowrap;
 }
