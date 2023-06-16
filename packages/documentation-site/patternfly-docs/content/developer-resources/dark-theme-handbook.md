@@ -1,6 +1,6 @@
 ---
-id: Dark Theme Handbook
-title: PatternFly Dark Theme Handbook
+id: Dark theme handbook
+title: PatternFly dark theme handbook
 section: developer-resources
 ---
 
