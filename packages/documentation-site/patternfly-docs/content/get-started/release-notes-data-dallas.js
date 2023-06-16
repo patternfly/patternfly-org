@@ -62,7 +62,11 @@ export const releaseNotes = [
     },
     {
         component: "Dropdown",
-        description: (<>Deprecated the current implementation of Dropdown. In order to continue using this deprecated implementation, the import path must be updated to our deprecated package and specifiers must be aliased. However, we suggest updating to our newer implementation of Dropdown.
+        description: (<>Deprecated the current implementation of Dropdown.</>),
+        pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8835",
+        details: (
+            <TextContent>
+            <Text component={TextVariants.p}>In order to continue using this deprecated implementation, the import path must be updated to our deprecated package and specifiers must be aliased. However, we suggest updating to our newer implementation of Dropdown.
     
     The following imports will be affected by this deprecation:
     
@@ -82,10 +86,7 @@ export const releaseNotes = [
     <li>DropdownToggleCheckbox</li>
     <li>DropdownWithContext</li>
     <li>KebabToggle </li>
-    </ul></>),
-        pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8835",
-        details: (
-            <TextContent>
+    </ul></Text>
             <Text component={TextVariants.h2}>Example in</Text>
             <CodeBlock>
                 <CodeBlockCode>
@@ -642,16 +643,16 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "FormControls",
-        description: (<>The following props have been removed from their respective components:<br/>
-        <ul>
-            <li>FormSelect - isIconSprite</li>
-            <li>TextArea - isIconSprite, isReadOnly</li>
-            <li>TextInput - isIconSprite, isReadOnly, iconVariant, customIconUrl, customIconDimensions</li>
-        </ul></>),
+        component: "FormControl - Multiple",
+        description: (<>Some properties have been removed from a few form control components.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9132",
         details: (
             <TextContent>
+            <Text component={TextVariants.p}>Affected components - props:<ul>
+                <li>FormSelect - isIconSprite</li>
+                <li>TextArea - isIconSprite, isReadOnly</li>
+                <li>TextInput - isIconSprite, isReadOnly, iconVariant, customIconUrl, customIconDimensions</li>
+            </ul></Text>
             <Text component={TextVariants.h2}>Example in</Text>
             <CodeBlock>
                 <CodeBlockCode>
@@ -680,24 +681,31 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },    
     {
-        component: "FormControls",
-        description: (<>The markup for the following components has been changed. Selectors may need to be updated.<br/>
-    <ul>
-        <li>FormSelect</li>
-        <li>TextArea</li>
-        <li>TextInput</li>
-        <li>TimePicker</li>
-        <li>ClipboardCopy</li>
-        <li>DatePicker</li>
-        <li>FileUpload</li>
-        <li>LoginPage</li>
-        <li>NumberInput</li>
-        <li>SearchInput</li>
-        <li>Slider - only when the <code className='ws-code'>isInputVisible</code> prop is passed in</li>
-        <li>TreeViewSearch</li>
-        <li>Select - only the deprecated implementation with the <code className='ws-code'>hasInlineFilter</code> prop passed in</li>
-    </ul></>),
+        component: "FormControl - Multiple",
+        description: (<>The markup for the several form control components has been changed. Selectors may need to be updated.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9132",
+        details: (
+            <TextContent>
+              <Text component={TextVariants.p}>
+                  Affected components:
+                  <ul>
+                    <li>FormSelect</li>
+                    <li>TextArea</li>
+                    <li>TextInput</li>
+                    <li>TimePicker</li>
+                    <li>ClipboardCopy</li>
+                    <li>DatePicker</li>
+                    <li>FileUpload</li>
+                    <li>LoginPage</li>
+                    <li>NumberInput</li>
+                    <li>SearchInput</li>
+                    <li>Slider - only when the <code className='ws-code'>isInputVisible</code> prop is passed in</li>
+                    <li>TreeViewSearch</li>
+                    <li>Select - only the deprecated implementation with the <code className='ws-code'>hasInlineFilter</code> prop passed in</li>
+                    </ul>
+                </Text>
+            </TextContent>
+          ),
         repo: "react",
         fixedWithCodeMod: false
     },
