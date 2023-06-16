@@ -1,3 +1,6 @@
+import React from "react";
+import { CodeBlock, CodeBlockCode, TextContent, Text, TextVariants } from '@patternfly/react-core';
+
 export const releaseNotes = [
     {
         component: "Divider",

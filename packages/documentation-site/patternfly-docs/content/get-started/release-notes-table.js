@@ -40,6 +40,7 @@ import SearchIcon from "@patternfly/react-icons/dist/esm/icons/search-icon";
 import { releaseNotes as releaseNotesCard } from "./release-notes-data.js";
 import { releaseNotes as releaseNotesAshley } from "./release-notes-data-ashley.js";
 import { releaseNotes as releaseNotesAustin } from "./release-notes-data-austin.js";
+import { releaseNotes as releaseNotesDallas } from "./release-notes-data-dallas.js";
 import { releaseNotes as releaseNotesEric } from "./release-notes-data-eric.js";
 import { releaseNotes as releaseNotesJenny } from "./release-notes-data-jenny.js";
 import { releaseNotes as releaseNotesKatie } from "./release-notes-data-katie.js";
@@ -49,6 +50,7 @@ const releaseNotes = [
   ...releaseNotesCard,
   ...releaseNotesAshley,
   ...releaseNotesAustin,
+  ...releaseNotesDallas,
   ...releaseNotesEric,
   ...releaseNotesJenny,
   ...releaseNotesKatie,
