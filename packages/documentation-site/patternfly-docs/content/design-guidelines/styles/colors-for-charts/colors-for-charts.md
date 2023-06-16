@@ -11,6 +11,7 @@ import manyVariables from './manyvariables.png';
 import nestedVariables from './nestedvariables.png';
 import { Alert, Grid, GridItem, Divider } from '@patternfly/react-core';
 import ColorsGrid from './colors-grid.js';
+import '@patternfly/patternfly/patternfly-charts.css';
 import './colors-for-charts.css';
 
 ## Chart colors

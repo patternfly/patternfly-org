@@ -57,7 +57,7 @@
 }
 
 .ws-content-correct {
-  color: #486b00;
+  color: var(--pf-v5-global--info-color--100);
 }
 
 .ws-content-correct i {
@@ -65,7 +65,7 @@
 }
 
 .ws-content-incorrect {
-  color: #a30000;
+  color: var(--pf-v5-global--danger-color--100);
 }
 
 .ws-content-incorrect i {
@@ -73,7 +73,7 @@
 }
 
 .ws-content-demo {
-  background-color: #fff;
+  background-color: var(--pf-v5-global--BackgroundColor--100);
   flex-wrap: wrap;
   max-width: 680px;
 }

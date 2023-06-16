@@ -26,11 +26,6 @@
   font-weight: bold;
 }
 
-.ws-color-swatch-description-code {
-  border: 2px solid #d1d1d1;
-  background: var(--pf-v5-global--palette--black-150);
-}
-
 .ws-color-swatch-popover {
   font-size: var(--pf-v5-global--FontSize--sm);
 }
