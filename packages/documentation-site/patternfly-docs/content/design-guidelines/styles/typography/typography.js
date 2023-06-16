@@ -1,8 +1,9 @@
 import React from 'react';
 import { Grid, GridItem } from '@patternfly/react-core';
+import { Table, Tr, Tbody, Td } from '@patternfly/react-table';
 
 export const PfStyledText = ({ children, variableName, fontWeight, lineHeight, fontFamily }) => (
-  <div style={{ fontFamily, fontWeight, fontSize: `var(${variableName})`, lineHeight }}>
+  <div style={{ fontFamily, fontWeight, fontSize: `var(${variableName})`, lineHeight }} className="ws-title-level">
     {children || 'Design is where science and art break even.'}
   </div>
 );
@@ -121,34 +122,34 @@ export const TypographyGrid = ({title, note, symbol, fontWeight, fontWeightText,
     </PfStyledText>
     <Grid gutter="sm">
       <GridItem span={12}>
-        <table className="pf-v5-c-table pf-m-compact ws-typography-tableTypography" aria-label="typography usage guidelines breakout">
-          <tbody>
-            <tr>
-              <td className="pf-v5-u-pr-sm">Font family:</td>
-              <td>{fontFamily}</td>
-            </tr>
-            <tr>
-              <td>Font weight:</td>
-              <td>{fontWeightText}</td>
-            </tr>
-            <tr>
-              <td>Line height:</td>
-              <td>{lineHeight}</td>
-            </tr>
-            <tr>
-              <td>Font size:</td>
-              <td>{fontSize}</td>
-            </tr>
-            <tr>
-              <td>Text style:</td>
-              <td>{textStyle}</td>
-            </tr>
-            <tr>
-              <td>Font size CSS variable:</td>
-              <td><code className="ws-code">{variableName}</code></td>
-            </tr>
-          </tbody>
-        </table>
+        <Table variant="compact" className="ws-typography-tableTypography" aria-label="typography usage guidelines breakout">
+          <Tbody>
+            <Tr>
+              <Td className="pf-v5-u-pr-sm">Font family:</Td>
+              <Td>{fontFamily}</Td>
+            </Tr>
+            <Tr>
+              <Td>Font weight:</Td>
+              <Td>{fontWeightText}</Td>
+            </Tr>
+            <Tr>
+              <Td>Line height:</Td>
+              <Td>{lineHeight}</Td>
+            </Tr>
+            <Tr>
+              <Td>Font size:</Td>
+              <Td>{fontSize}</Td>
+            </Tr>
+            <Tr>
+              <Td>Text style:</Td>
+              <Td>{textStyle}</Td>
+            </Tr>
+            <Tr>
+              <Td>Font size CSS variable:</Td>
+              <Td><code className="ws-code">{variableName}</code></Td>
+            </Tr>
+          </Tbody>
+        </Table>
       </GridItem>
       {note && <GridItem span={12}><div className="ws-typography-textColor">{note}</div></GridItem>}
     </Grid>
