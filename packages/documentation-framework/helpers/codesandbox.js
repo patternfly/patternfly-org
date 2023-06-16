@@ -3,7 +3,12 @@ const versions  = require('../versions.json');
 const overpass = require('./fonts');
 const { capitalize } = require('./capitalize');
 
+
 const getStaticParams = (title, html) => {
+  const isProd = process.env.NODE_ENV === 'production';
+  const pfStylesheet = isProd
+    ? 'https://unpkg.com/@patternfly/patternfly/patternfly.css'
+    : 'https://unpkg.com/@patternfly/patternfly@alpha/patternfly.min.css';
   const imgAssetRegex = /['"](\/assets\/images\/.*)['"]/g;
   let imgAsset;
   while ((imgAsset = imgAssetRegex.exec(html))) {
@@ -24,7 +29,7 @@ const getStaticParams = (title, html) => {
               <!-- Include latest PatternFly CSS via CDN -->
               <link 
                 rel="stylesheet" 
-                href="https://unpkg.com/@patternfly/patternfly/patternfly.css" 
+                href="${pfStylesheet}" 
                 crossorigin="anonymous"
               >
               <link rel="stylesheet" href="style.css" />
