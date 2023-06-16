@@ -26,8 +26,8 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "DrawerPanelContent",
-        description: (<>The <code className='ws-code'>onResize</code> prop now takes the <code className='ws-code'>event</code> as its first parameter. Handlers may require an update.</>),
+        component: "Drawer",
+        description: (<>The <code className='ws-code'>onResize</code> prop in <code className='ws-code'>DrawerPanelContent</code> now takes the <code className='ws-code'>event</code> as its first parameter. Handlers may require an update.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8736",
         details: (
             <TextContent>
@@ -67,9 +67,9 @@ export const releaseNotes = [
         details: (
             <TextContent>
             <Text component={TextVariants.p}>In order to continue using this deprecated implementation, the import path must be updated to our deprecated package and specifiers must be aliased. However, we suggest updating to our newer implementation of Dropdown.
-    
+
     The following imports will be affected by this deprecation:
-    
+
     <ul>
     <li>BadgeToggle</li>
     <li>Dropdown</li>
@@ -106,8 +106,8 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "DropdownItem",
-        description: (<>removed the <code className='ws-code'>isHovered</code> prop.</>),
+        component: "Dropdown",
+        description: (<>removed the <code className='ws-code'>isHovered</code> prop from <code className='ws-code'>DropdownItem</code>.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8179",
         details: (
             <TextContent>
@@ -129,8 +129,8 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "DropdownMenu",
-        description: (<>Removed the <code className='ws-code'>openedOnEnter</code> prop.</>),
+        component: "Dropdown",
+        description: (<>Removed the <code className='ws-code'>openedOnEnter</code> prop from <code className='ws-code'>DropdownMenu</code>.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8179",
         details: (
             <TextContent>
@@ -153,8 +153,8 @@ export const releaseNotes = [
     },
 
     {
-        component: "DropdownToggle",
-        description: (<>Replaced the deprecated <code className='ws-code'>isPrimary</code> prop "primary" value on the <code className='ws-code'>toggleVariant</code> prop.</>),
+        component: "Dropdown",
+        description: (<>Replaced the deprecated <code className='ws-code'>isPrimary</code> prop "primary" value on the <code className='ws-code'>toggleVariant</code> prop from <code className='ws-code'>DropdownToggle</code></>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8179",
         details: (
             <TextContent>
@@ -176,8 +176,8 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "DropdownToggleCheckbox",
-        description: (<>Updated <code className='ws-code'>onChange</code> prop so that the <code className='ws-code'>event</code> parameter is included as the first parameter. Handlers may need to be updated.</>),
+        component: "Dropdown",
+        description: (<>Updated <code className='ws-code'>onChange</code> prop from <code className='ws-code'>DropdownToggleCheckbox</code> so that the <code className='ws-code'>event</code> parameter is included as the first parameter. Handlers may need to be updated.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8787",
         details: (
             <TextContent>
@@ -205,8 +205,8 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "DualListSelector",
-        description: (<>The <code class='ws-code'>onAvailableOptionsSearchInputChanged</code>, <code class='ws-code'>onChosenOptionsSearchInputChanged</code> and <code class='ws-code'>onListChange</code> props now take <code class='ws-code'>event</code> as the first parameter. Handlers may need to be updated.</>),
+        component: "Dual list selector",
+        description: (<>The <code className='ws-code'>onAvailableOptionsSearchInputChanged</code>, <code className='ws-code'>onChosenOptionsSearchInputChanged</code> and <code className='ws-code'>onListChange</code> props now take <code className='ws-code'>event</code> as the first parameter. Handlers may need to be updated.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8793",
         details: (
             <TextContent>
@@ -264,8 +264,8 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "EditableSelectInputCell",
-        description: (<>The <code class='ws-code'>onSelect</code> and <code class='ws-code'>clearSelection</code> props now take <code class='ws-code'>event</code> as the first parameter. Handlers may need to be updated.</>),
+        component: "Table",
+        description: (<>The <code className='ws-code'>onSelect</code> and <code className='ws-code'>clearSelection</code> props on <code className='ws-code'>EditableSelectInputCell</code> now take <code className='ws-code'>event</code> as the first parameter. Handlers may need to be updated.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9057",
         details: (
             <TextContent>
@@ -301,7 +301,7 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "EmptyState",
+        component: "Empty state",
         description: (<>Replaced the <code className='ws-code'>EmptyStatePrimary</code> and <code className='ws-code'>EmptyStateSecondaryActions</code> components with <code className='ws-code'>EmptyStateActions</code>.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8737",
         details: (
@@ -332,9 +332,9 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "EmptyState",
+        component: "Empty state",
         description: (<>Added the <code className='ws-code'>EmptyStateHeader</code> component, which should now be passed an <code className='ws-code'>EmptyStateIcon</code> to the <code className='ws-code'>icon</code> prop
-        and the main title should be passed to <code className='ws-code'>titleText</code> prop. You can also explicitly specify title's heading level 
+        and the main title should be passed to <code className='ws-code'>titleText</code> prop. You can also explicitly specify title's heading level
         with <code className='ws-code'>headingLevel</code> prop.<br/><br/>
         Added the <code className='ws-code'>EmptyStateFooter</code> component. It should wrap the content which follows after EmptyStateBody inside EmptyState.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8737",
@@ -387,15 +387,15 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "EmptyStateIcon",
-        description: (<>The <code className='ws-code'>icon</code> prop is now required.</>),
+        component: "Empty state",
+        description: (<>The <code className='ws-code'>icon</code> prop on <code className='ws-code'>EmtpyStateIcon</code> is now required.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8737",
         repo: "react",
         fixedWithCodeMod: false
     },
     {
-        component: "EmptyStateIcon",
-        description: (<>Removed the <code className='ws-code'>variant</code> prop from EmptyStateIcon. Replaced the <code className='ws-code'>component</code> prop with the <code className='ws-code'>icon</code> prop.</>),
+        component: "Empty state",
+        description: (<>Removed the <code className='ws-code'>variant</code> prop from <code className='ws-code'>EmtpyStateIcon</code>. Replaced the <code className='ws-code'>component</code> prop with the <code className='ws-code'>icon</code> prop.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8737",
         details: (
             <TextContent>
@@ -417,10 +417,10 @@ export const releaseNotes = [
         ),
         repo: "react",
         fixedWithCodeMod: true
-    },    
+    },
     {
-        component: "EmptyState",
-        description: (<>Renamed the EmptyStateVariant enum and prop values 'small' to 'sm' and 'large' to 'lg'</>),
+        component: "Empty state",
+        description: (<>Renamed the <code className='ws-code'>EmptyStateVariant</code> enum and prop values 'small' to 'sm' and 'large' to 'lg'</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8737",
         details: (
             <TextContent>
@@ -448,7 +448,7 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "ExpandableSection",
+        component: "Expandable section",
         description: (<>Renamed the <code className='ws-code'>large</code> prop value of <code className='ws-code'>displaySize</code> to <code className='ws-code'>lg</code></>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8212",
         details: (
@@ -471,7 +471,7 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "ExpandableSection",
+        component: "Expandable section",
         description: (<>Updated the <code className='ws-code'>onToggle</code> prop so that the <code className='ws-code'>event</code> parameter is the first parameter. Handlers may require an update</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8880",
         details: (
@@ -502,7 +502,7 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "FileUpload",
+        component: "File upload",
         description: (<>updated the <code className='ws-code'>onTextChange</code> prop for FileUploadField and FileUpload so that the <code className='ws-code'>event</code> parameter is the first parameter. Handlers may require an update.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8955",
         details: (
@@ -543,7 +543,7 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "FileUpload",
+        component: "File upload",
         description: (<>Updated the <code className='ws-code'>onDataChange</code>, <code className='ws-code'>onReadFailed</code>, <code className='ws-code'>onReadFinished</code>, and <code className='ws-code'>onReadStarted</code> props so that the <code className='ws-code'>event</code> parameter is the first parameter. Handlers may require an update.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8960",
         details: (
@@ -620,7 +620,7 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "FileUpload",
+        component: "File upload",
         description: (<>Removed the deprecated <code className='ws-code'>onChange</code> prop. This rule will remove the prop and suggest replacing it with the <code className='ws-code'>onFileInputChange</code>, <code className='ws-code'>onTextChange</code>, <code className='ws-code'>onDataChange</code>, and <code className='ws-code'>onClearClick</code> props as needed.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8155",
         details: (
@@ -643,7 +643,7 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "FormControl - Multiple",
+        component: "Form control",
         description: (<>Some properties have been removed from a few form control components.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9132",
         details: (
@@ -679,9 +679,9 @@ export const releaseNotes = [
         ),
         repo: "react",
         fixedWithCodeMod: true
-    },    
+    },
     {
-        component: "FormControl - Multiple",
+        component: "Form control",
         description: (<>The markup for the several form control components has been changed. Selectors may need to be updated.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9132",
         details: (
@@ -710,7 +710,7 @@ export const releaseNotes = [
         fixedWithCodeMod: false
     },
     {
-        component: "FormGroup",
+        component: "Form group",
         description: (<>Removed the helper text related props from <code className='ws-code'>FormGroup</code>: <code className='ws-code'>helperText</code>, <code className='ws-code'>helperTextInvalid</code>, <code className='ws-code'>validated</code>, <code className='ws-code'>helperTextIcon</code>, <code className='ws-code'>helperTextInvalidIcon</code>, and <code className='ws-code'>isHelperTextBeforeField</code>. The <code className='ws-code'>FormHelperText</code>, <code className='ws-code'>HelperText</code>, and <code className='ws-code'>HelperTextItem</code> components should now be used directly as part of <code className='ws-code'>children</code> instead of these props. This rule will throw an error but not make any changes.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8810",
         details: (
@@ -761,7 +761,7 @@ export const releaseNotes = [
         fixedWithCodeMod: false
     },
     {
-        component: "FormHelperText",
+        component: "Form helper text",
         description: (<>Removed functionality from <code className='ws-code'>FormHelperText</code> as now the logic will be covered by <code className='ws-code'>HelperText</code> and <code className='ws-code'>HelperTextItem</code>. This rule will remove the <code className='ws-code'>isError</code>, <code className='ws-code'>isHidden</code>, <code className='ws-code'>icon</code>, and <code className='ws-code'>component</code> props if present. The <code className='ws-code'>HelperText</code> and <code className='ws-code'>HelperTextItem</code> components should now be used directly as part of <code className='ws-code'>children</code> instead of these props.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8810",
         details: (
@@ -784,7 +784,7 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "FormSelect",
+        component: "Form select",
         description: (<>Updated the <code className='ws-code'>onChange</code> prop so that the <code className='ws-code'>event</code> parameter is the first parameter. Handlers may require an update.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8998",
         details: (
@@ -817,7 +817,7 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "SelectOption",
+        component: "Select option",
         description: (<>Renamed the <code className='ws-code'>hasCheck</code> prop for the Next implementation of SelectOption to <code className='ws-code'>hasCheckbox</code>.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8403",
         details: (
@@ -840,8 +840,8 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "MenuItem",
-        description: (<>Renamed the <code className='ws-code'>hasCheck</code> prop to <code className='ws-code'>hasCheckbox</code>.</>),
+        component: "Menu",
+        description: (<>Renamed the <code className='ws-code'>hasCheck</code> prop on <code className='ws-code'>MenuItem</code> to <code className='ws-code'>hasCheckbox</code>.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8403",
         details: (
             <TextContent>
@@ -863,7 +863,7 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "TreeView",
+        component: "Tree view",
         description: (<>Renamed the <code className='ws-code'>hasCheck</code> prop to <code className='ws-code'>hasCheckbox</code>.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8403",
         details: (
@@ -893,7 +893,7 @@ export const releaseNotes = [
         fixedWithCodeMod: false
     },
     {
-        component: "InputGroup",
+        component: "Input group",
         description: (<>PR #9176 affects this as well as #9074. Added the InputGroupItem component, which must wrap all non-InputGroupText children passed to an InputGroup. The InputGroupItem component may need to have the <code className='ws-code'>isFill</code>, <code className='ws-code'>isBox</code>, and/or <code className='ws-code'>isPlain</code> props adjusted to retain styling.</>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9074",
         details: (
@@ -930,8 +930,8 @@ export const releaseNotes = [
         fixedWithCodeMod: true
     },
     {
-        component: "InputGroupText",
-        description: (<>Removed the <code className='ws-code'>variant</code> prop</>),
+        component: "Input group",
+        description: (<>Removed the <code className='ws-code'>variant</code> prop on <code className='ws-code'>InputGroupText</code></>),
         pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9147",
         details: (
             <TextContent>

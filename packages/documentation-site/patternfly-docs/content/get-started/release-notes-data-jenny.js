@@ -81,10 +81,10 @@ export const releaseNotes = [
     fixedWithCodeMod: true,
   },
   {
-    component: "LoginForm",
+    component: "Login page",
     description: (
       <>
-        Updated callback props to include the <code className="ws-code">event</code>{" "}
+        Updated callback props on <code className="ws-code">LoginForm</code> to include the <code className="ws-code">event</code>{" "}
         parameter as the first parameter. Handlers may require an update.
       </>
     ),
@@ -152,7 +152,7 @@ function rememberMeHandler2(_event, id) {};
     fixedWithCodeMod: true,
   },
   {
-    component: "LoginPage",
+    component: "Login page",
     description: (
       <>
         Removed the <code className="ws-code">backgroundImgAlt</code> prop.
@@ -189,7 +189,7 @@ const srcPath = {xs: 'file/path'};
     fixedWithCodeMod: false,
   },
   {
-    component: "MastheadBrand",
+    component: "Masthead",
     description: (
       <>
         Updated <code className="ws-code">MastheadBrand</code> to only be
@@ -297,7 +297,7 @@ const srcPath = {xs: 'file/path'};
     fixedWithCodeMod: true,
   },
   {
-    component: "MenuInput",
+    component: "Menu",
     description: (
       <>
         <code className="ws-code">MenuInput</code> has been renamed to{" "}
@@ -327,7 +327,7 @@ const srcPath = {xs: 'file/path'};
     fixedWithCodeMod: true,
   },
   {
-    component: "MenuItemAction",
+    component: "Menu",
     description: (
       <>
         Updated the <code className="ws-code">aria-label</code> prop on
@@ -339,7 +339,7 @@ const srcPath = {xs: 'file/path'};
     fixedWithCodeMod: false,
   },
   {
-    component: "MultipleFileUpload",
+    component: "Multiple file upload",
     description: (
       <>
         Updated the <code className="ws-code">onFileDrop</code> prop for
@@ -527,7 +527,7 @@ function toggleHandler2(_event, id) {};
     fixedWithCodeMod: true,
   },
   {
-    component: "NotificationBadge",
+    component: "Notification badge",
     description: (
       <>
         Removed the <code className="ws-code">isRead</code> prop from
@@ -562,7 +562,7 @@ function toggleHandler2(_event, id) {};
     fixedWithCodeMod: true,
   },
   {
-    component: "NumberInput",
+    component: "Number input",
     description: (
       <>
         Removed the <code className="ws-code">allowEmptyInput</code> prop from
@@ -635,7 +635,7 @@ function toggleDropdown(_event, isOpen) {};
     fixedWithCodeMod: true,
   },
   {
-    component: "OptionsMenu",
+    component: "Options menu",
     description: (
       <>
         Deprecated <code className="ws-code">OptionsMenu</code> components.
@@ -662,7 +662,7 @@ function toggleDropdown(_event, isOpen) {};
     fixedWithCodeMod: true,
   },
   {
-    component: "OverflowMenu",
+    component: "Overflow menu",
     description: (
       <>
         OverflowMenuDropdownItem now uses the Next implementation of
@@ -674,7 +674,7 @@ function toggleDropdown(_event, isOpen) {};
     fixedWithCodeMod: false,
   },
   {
-    component: "OverflowMenu",
+    component: "Overflow menu",
     description: (
       <>
         Renamed the <code className="ws-code">index</code> prop for
@@ -800,7 +800,7 @@ function toggleDropdown(_event, isOpen) {};
     fixedWithCodeMod: true,
   },
   {
-    component: "PageHeader",
+    component: "Page header",
     description: (
       <>
         Deprecated the <code className="ws-code">PageHeader</code> components.
@@ -845,7 +845,7 @@ import {
     fixedWithCodeMod: true,
   },
   {
-    component: "PageHeader",
+    component: "Page header",
     description: (
       <>
         Updated <code className="ws-code">PageHeader</code>'s logo to only be an
@@ -875,10 +875,10 @@ import {
     fixedWithCodeMod: true,
   },
   {
-    component: "PageSidebar",
+    component: "Page",
     description: (
       <>
-        API has been updated. The <code className="ws-code">nav</code> prop has been
+        <code className="ws-code">PageSidebar</code> API has been updated. The <code className="ws-code">nav</code> prop has been
         renamed to <code className="ws-code">children</code>. Any content passed to
         the prop should be wrapped in PageSidebarBody.
       </>
