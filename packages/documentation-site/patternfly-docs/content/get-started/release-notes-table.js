@@ -45,6 +45,7 @@ import { releaseNotes as releaseNotesEric } from "./release-notes-data-eric.js";
 import { releaseNotes as releaseNotesJenny } from "./release-notes-data-jenny.js";
 import { releaseNotes as releaseNotesKatie } from "./release-notes-data-katie.js";
 import { releaseNotes as releaseNotesNicole } from "./release-notes-data-nicole-portion.js";
+import { releaseNotes as releaseNotesTitani } from "./release-notes-data-titani.js";
 
 const releaseNotes = [
   ...releaseNotesCard,
@@ -54,7 +55,8 @@ const releaseNotes = [
   ...releaseNotesEric,
   ...releaseNotesJenny,
   ...releaseNotesKatie,
-  ...releaseNotesNicole
+  ...releaseNotesNicole,
+  ...releaseNotesTitani
 ]
 
 export const ReleaseNotesTable = () => {

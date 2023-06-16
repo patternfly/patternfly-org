@@ -1,5 +1,5 @@
 ---
-id: Upgrade guide
+id: Upgrade
 source: release notes
 title: Release notes
 section: get-started
