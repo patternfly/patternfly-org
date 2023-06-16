@@ -6,7 +6,6 @@ const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 module.exports = (_env, argv) => {
   const {
-    pathPrefix = '',
     mode,
     googleAnalyticsID = false,
     algolia = {},
@@ -26,7 +25,7 @@ module.exports = (_env, argv) => {
   return {
     entry: path.resolve(__dirname, '../../app.js'),
     output: {
-      publicPath: isProd ? `${pathPrefix}/` : '/',
+      publicPath: '/',
       pathinfo: false, // https://webpack.js.org/guides/build-performance/#output-without-path-info,
       hashDigestLength: 8,
       clean: true, // Clean the output directory before emit.
@@ -137,7 +136,6 @@ module.exports = (_env, argv) => {
       }),
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(mode),
-        'process.env.pathPrefix': JSON.stringify(isProd ? pathPrefix : ''),
         'process.env.googleAnalyticsID': JSON.stringify(isProd ? googleAnalyticsID : ''),
         'process.env.algolia': JSON.stringify(algolia),
         'process.env.hasGdprBanner': JSON.stringify(hasGdprBanner),

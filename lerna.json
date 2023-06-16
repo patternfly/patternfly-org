@@ -13,7 +13,7 @@
   "packages": [
     "packages/ast-helpers",
     "packages/documentation-framework",
-    "packages/v4"
+    "packages/documentation-site"
   ],
   "version": "independent",
   "allowBranch": ["main", "v5"]

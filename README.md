@@ -9,7 +9,9 @@ Development setup requires yarn. If you do not already have yarn installed on yo
 A Node version greater than 18.16.0 is also required.
 
 ### Live Reload Server
+
 #### New server
+
 You can install the NPM dependencies with:
 
     yarn install
@@ -20,9 +22,9 @@ A local development server at http://localhost:8003 can be started with:
 
 ### Build
 
-The new v4 site can be built with:
+The new v5 site can be built with:
 
-    yarn build:v4
+    yarn build:v5
 
 The static assets get copied to build/patternfly-org.
 
