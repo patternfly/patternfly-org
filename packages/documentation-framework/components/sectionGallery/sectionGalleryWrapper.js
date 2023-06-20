@@ -67,7 +67,10 @@ export const SectionGalleryWrapper = ({
       const title = itemData.title || itemName;
       const id = itemData.id || title;
       // Display beta label if tab other than a '-next' tab is marked Beta
+      const isDeprecated = !isSubsection && sources && sources.some(source => source.source === "react-deprecated" || source.source === "html-deprecated") && !sources.some(source => source.source === "react"  || source.source === "html");
       const isBeta = !isSubsection && sources && sources.some(src => src.beta && !src.source.includes('-next'));
+      const isDemo = !isSubsection && sources && sources.some(source => source.source === "react-demos" || source.source === "html-demos") && !sources.some(source => source.source === "react" || source.source === "html");
+
       let slug = itemData.slug;
       if (!slug && isSubsection) {
         // Update slug to link to first page in subsection
@@ -91,6 +94,8 @@ export const SectionGalleryWrapper = ({
         itemName,
         illustration,
         isBeta,
+        isDeprecated,
+        isDemo,
         title,
         id,
         galleryItemsData

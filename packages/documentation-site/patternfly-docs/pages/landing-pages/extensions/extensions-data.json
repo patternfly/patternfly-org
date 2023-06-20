@@ -1,18 +1,18 @@
 {
   "catalog-view": {
-    "summary": "A catalog view constructs an interface that is composed of different elements, like tiles, tabs, panels, and headers."
+    "summary": "Constructs an interface that is composed of different elements, like tiles, tabs, panels, and headers."
   },
   "log-viewer": {
-    "summary": "A log viewer enables you to clearly visualize your project's log content in real time."
+    "summary": "Enables you to clearly visualize your project's log content in real time."
   },
   "quick-starts": {
-    "summary": "Quick starts contain two product documentation tools: quick starts and in-app documentation. These tools allow you to provide users guidance and documentation that is embedded within a product."
+    "summary": "Contain two product documentation tools: quick starts and in-app documentation. These tools allow you to provide users guidance and documentation that is embedded within a product."
   },
   "react-console": {
-    "summary": "React console provides additional React components to enable access to virtual machines or server consoles."
+    "summary": "Provides additional React components to enable access to virtual machines or server consoles."
   },
   "user-feedback": {
-    "summary": "User feedback enables products to collect asynchronous feedback from users."
+    "summary": "Enables products to collect asynchronous feedback from users."
   },
   "community-extensions": {
     "summary": "Community extensions are developed and maintained by members of the PatternFly community. While they are featured on PatternFly, they are not directly supported by the PatternFly team. The code and documentation for each community extension is hosted outside of PatternFly's GitHub repositories.\nOccasionally a community extension may be promoted as an officially supported extension when its usage is proven across multiple projects and its value extends beyond project-specific use cases."

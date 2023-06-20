@@ -1,17 +1,17 @@
 {
   "colors": {
-    "summary": "PatternFly’s colors have been carefully selected to support flexible and effective visual communication. Our colors help us create more accessible and inclusive user experiences."
+    "summary": "Carefully selected to support flexible and effective visual communication, our colors can help create more accessible and inclusive user experiences."
   },
   "icons": {
-    "summary": "PatternFly supports a range of icons of different sizes and colors to enhance components and indicate functionality."
+    "summary": "We support a range of icons of different sizes and colors that can help enhance components and indicate functionality to users."
   },
   "spacers": {
-    "summary": "PatternFly uses spacers to lay out components using a consistent spacing system and simplify communication between designers and developers."
+    "summary": "Our spacers help lay out components consistently and also simplify communication between designers and developers."
   },
   "typography": {
-    "summary": "PatternFly’s typography guidelines allow designers to use different font and text styles to create strong visual hierarchies."
+    "summary": "Our typography guidelines specify how you can use different font and text styles to create strong visual hierarchies."
   },
   "usage-and-behavior": {
-    "summary": "There are a handful of common design scenarios where multiple PatternFly components could be used. Our guidelines direct designers to the best component for each case."
+    "summary": "Our usage and behavior guidelines help you decide when to use the best component for scenarios where multiple may be relevant."
   }
 }

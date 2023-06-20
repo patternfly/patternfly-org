@@ -10,7 +10,7 @@ export const SectionGalleryLayout = ({ galleryItems, layoutView, hasGridText, ha
 
   return (
     <Gallery hasGutter>
-      {galleryItems.map(({idx, slug, id, itemName, illustration, isBeta, title, galleryItemsData}) => (
+      {galleryItems.map(({idx, slug, id, itemName, illustration, isBeta, isDeprecated, isDemo, title, galleryItemsData}) => (
         <GalleryItem span={4} key={idx}>
           <Link to={slug} className="ws-section-gallery-item">
             <Card
@@ -25,9 +25,11 @@ export const SectionGalleryLayout = ({ galleryItems, layoutView, hasGridText, ha
                   { hasGridText && <TextSummary id={id} itemsData={galleryItemsData} /> }
                 </CardBody>
               )}
-              {isBeta && (
+              {(isBeta || isDeprecated || isDemo) && (
                 <CardFooter>
-                  <Label color="blue">Beta feature</Label>
+                  {isBeta && (<Label color="blue" isCompact>Beta</Label>)}
+                  {!isBeta && isDeprecated && (<Label color="grey" isCompact>Deprecated</Label>)}
+                  {!isBeta && !isDeprecated && isDemo && (<Label color="purple" isCompact>Demo</Label>)}
                 </CardFooter>
               )}
             </Card>

@@ -1,17 +1,17 @@
 {
   "bulk-selection": {
-    "summary": "Bulk selection allows users to select or deselect multiple items in a content view."
+    "summary": "Allows users to select or deselect multiple items in a content view."
   },
   "card-view": {
-    "summary": "A card view assembles a grid of cards in a gallery."
+    "summary": "Assembles a grid of cards in a gallery."
   },
   "dashboard": {
-    "summary": "A dashboard provides an overview of key metrics or performance indicators."
+    "summary": "Provides an overview of key metrics or performance indicators."
   },
   "filters": {
-    "summary": "Filters allow users to narrow down content from data."
+    "summary": "Allow users to narrow down content from data."
   },
   "primary-detail": {
-    "summary": "A primary-detail layout shows users a list of items and corresponding details for a selected item."
+    "summary": "Shows users a list of items and corresponding details for a selected item."
   }
 }
