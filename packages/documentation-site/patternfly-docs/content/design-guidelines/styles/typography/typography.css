@@ -6,35 +6,26 @@
   margin-top: 40px;
 }
 
-#usage-guidelines ~ h3.ws-title {
-  margin-top: 24px;
+.ws-title-level-heading {
+  margin-top: var(--pf-v5-global--spacer--lg);
 }
 
 .ws-typography-code-font + div {
   font-family: var(--pf-v5-global--FontFamily--monospace) !important;
 }
 
-.table-typography {
-  background-color: transparent;
-}
-
 .ws-typography-textColor {
-  color: #004368;
+  color: var(--pf-v5-global--info-color--100);
   max-width: 350px;
   font-size: 14px;
 }
 
 .ws-typography-tableTypography {
-  background-color: transparent !important;
+  --pf-v5-c-table--BackgroundColor: transparent;
 }
 
 .ws-typography-tableTypography tr > td:first-child {
   padding-left: 0 !important;
-}
-
-/* .ws-typography-tableTypography tr:nth-child(even) { */
-.ws-typography-tableTypography tr {
-  background-color: transparent !important;
 }
 
 .ws-typography-gridTitleSymbol {
@@ -87,12 +78,20 @@
   font-size: 14px;
 }
 
-#our-font-family ~ h3.ws-title + div {
-  border: 1px solid #D2D2D2;
-  background: #FFF;
-  padding: 8px;
-  margin: 16px 0;
+.ws-title-level {
+  border: var(--pf-v5-global--BorderWidth--sm) solid var(--pf-v5-global--BorderColor--100);
+  background: var(--pf-v5-global--BackgroundColor--100);
+  padding: var(--pf-v5-global--spacer--sm);
+  margin: var(--pf-v5-global--spacer--md) 0;
   display: inline-block;
+}
+
+#customizing-heading-levels {
+  margin-top: var(--pf-v5-global--spacer--lg);
+}
+
+#line-height-and-spacing {
+  margin-top: var(--pf-v5-global--spacer--md);
 }
 
 @media screen and (min-width: 768px) {
