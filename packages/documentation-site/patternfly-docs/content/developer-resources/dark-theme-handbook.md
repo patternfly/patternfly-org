@@ -13,23 +13,40 @@ Dark theme can also be applied based on the browser’s `prefers-color-scheme` m
 ## What’s changed?
 The following are some notable changes and differences between light and dark themes. 
 
-| Color palette changes | Variable(s) affected | New or updated color values|
-| ---------------| -------------------- | -------------------- |
-|Black color palette updated and a new lighter gray was added| --pf-v5-global--palette--black-50  | #e0e0e0 |
-|                           | --pf-v5-global--palette--black-100 | #c6c7c8 |
-|                           | --pf-v5-global--palette--black-200 | #aaabac |
-|                           | --pf-v5-global--palette--black-300 | #868789 |
-|                           | --pf-v5-global--palette--black-400 | #57585a |
-|                           | --pf-v5-global--palette--black-500 | #444548 |
-|                           | --pf-v5-global--palette--black-600 | #36373a |
-|                           | --pf-v5-global--palette--black-700 | #26292d |
-|                           | --pf-v5-global--palette--black-800 | #1b1d21 |
-|                           | --pf-v5-global--palette--black-850 | #212427 |
-|                           | --pf-v5-global--palette--black-900 | #0f1214 |
-|                           | --pf-v5-global--palette--black-1000| #030303 |
-|New red colors added       | --pf-v5-global--palette--red-9999  | #fe5142 |
-|                           | --pf-v5-global--palette--red-8888  | #ff7468 |
-|New primary blue added     | --pf-v5-global--palette--blue-300 | #1fa7f8 |
+**Black color palette**
+
+Black color palette updated and a new lighter gray was added.
+
+| Variable(s) affected | New or updated color values|
+| -------------------- | -------------------- |
+| --pf-v5-global--palette--black-50  | #e0e0e0 |
+| --pf-v5-global--palette--black-100 | #c6c7c8 |
+| --pf-v5-global--palette--black-200 | #aaabac |
+| --pf-v5-global--palette--black-300 | #868789 |
+| --pf-v5-global--palette--black-400 | #57585a |
+| --pf-v5-global--palette--black-500 | #444548 |
+| --pf-v5-global--palette--black-600 | #36373a |
+| --pf-v5-global--palette--black-700 | #26292d |
+| --pf-v5-global--palette--black-800 | #1b1d21 |
+| --pf-v5-global--palette--black-850 | #212427 |
+| --pf-v5-global--palette--black-900 | #0f1214 |
+| --pf-v5-global--palette--black-1000| #030303 |
+
+**Red color palette**
+Two new red colors added.
+
+| Variable(s) affected | New or updated color values|
+| -------------------- | -------------------- |
+| --pf-v5-global--palette--red-9999  | #fe5142 |
+| --pf-v5-global--palette--red-8888  | #ff7468 |
+
+**Blue color palette**
+
+blue-300 was updated to support an additional variation of primary blue.
+
+| Variable(s) affected | New or updated color values|
+| -------------------- | -------------------- |
+| --pf-v5-global--palette--blue-300 | #1fa7f8 |
 
 
 
