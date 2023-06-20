@@ -111,7 +111,7 @@ Minor feature releases will be available quarterly to include new features and e
 
 Periodically, previews of updated React implementations of PatternFly components will be made available under a 'React 
 next' tab in the component docs. During major releases, these React next implementations may be promoted to the
-recommended implementation. In such instances, the previous implementation will be marked deprecated. Any deprecated 
+recommended implementation. In such instances, the previous implementation will be marked as deprecated. Any deprecated 
 implementation of components will remain available (though will not be further enhanced or maintained) until at least 
 the subsequent major release.
 
