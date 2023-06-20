@@ -112,8 +112,7 @@ Minor feature releases will be available quarterly to include new features and e
 Periodically, previews of updated React implementations of PatternFly components will be made available under a 'React 
 next' tab in the component docs. During major releases, these React next implementations may be promoted to the
 recommended implementation. In such instances, the previous implementation will be marked as deprecated. Any deprecated 
-implementation of components will remain available (though will not be further enhanced or maintained) until at least 
-the subsequent major release.
+implementation of components will remain available until at least the subsequent major release, but it will not be further enhanced or maintained.
 
 ## Requesting new features and enhancements
 PatternFly is built on the needs of our community of stakeholders. To request a new feature or an enhancement to an existing feature, first open a new discussion topic in the [PatternFly Feature Request discussion forum](https://github.com/orgs/patternfly/discussions/categories/feature-requests). 
