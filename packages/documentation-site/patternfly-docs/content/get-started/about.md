@@ -105,8 +105,7 @@ For more information about beta components, visit [this page](https://github.com
 ## PatternFly release cadence
 
 Currently, PatternFly plans to release a new major release annually. Major releases will be the only releases with 
-planned breaking changes. Along with each major release, the PatternFly team will provide thorough migration guides and 
-code mods to aid product teams in upgrading.
+planned breaking changes. Along with each major release, the PatternFly team will provide thorough upgrade guides and Codemods to support the work needed to upgrade to the latest version of PatternFly.
 
 Minor feature releases will be available quarterly to include new features and enhancements (non-breaking), with interim bug fix releases available on demand.
 
