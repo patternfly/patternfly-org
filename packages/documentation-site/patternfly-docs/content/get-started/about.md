@@ -24,7 +24,7 @@ Layouts provide a way to arrange componpents on a page. Use of PatternFly layout
 
 ### Patterns
 
-Patterns document best practices and solutions to common use cases and design problems. Some patterns are accompanied by demos that provide an interactive example of the pattern for demonstration and reuse.
+Patterns document best practices and solutions to common use cases and design problems. Some patterns are accompanied by demos that provide an interactive example and reusable code to support implementation.
 
 ### Design and accessibility guidelines
 
