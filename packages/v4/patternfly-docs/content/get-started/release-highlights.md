@@ -21,7 +21,7 @@ There are a couple of ways to enable dark theme in your products. You can:
 1. Add `patternfly-theme-dark.css` to a page and add the `.pf-theme-dark` class to the page's `<html>` element, or 
 2. Apply the `.pf-theme-dark` class to the browser's `prefers-color-scheme` media query. 
 
-For information regarding the shipping and implementation processes for dark theme, as well as general advice for its use read our [dark theme handbook.](https://docs.google.com/document/d/1mRYEfUoOjTsSt7hiqjbeplqhfo3_rVDO0QqMj2p67pw/edit?usp=sharing)
+For information regarding the shipping and implementation processes for dark theme, as well as general advice for its use read our [dark theme handbook.](/developer-resources/dark-theme-handbook)
 
 ## React 18 support
 
@@ -33,13 +33,13 @@ We wanted to ensure that our variable naming conventions were clear and consiste
 
 For more details, refer to [our upgrade guide](/get-started/upgrade#review-and-update-variable-and-class-names) and our [updated CSS classes and variables](developer-resources/global-css-variables) documentation.
 
-### Event handler parameter 
+## Event handler parameter consistency updates
 
-Previously, our event handler parameters weren’t consistently ordered. To meet industry standards, and get everything on the same page, we’ve updated all callback signatures for component event handling properties so that the event is the first parameter. This change will make it easier to incorporate third party libraries, especially in the case of form building tools, like Formik.
+Previously, our event handler parameters weren’t consistently ordered. To meet industry standards, and get everything on the same page, we added event parameters to all of our callbacks and reordered handlers to consistently list the event as the first parameter. Additionally, we made sure that all of our event handlers now pass back an event. This change will make it easier to incorporate third party libraries, especially in the case of form building tools, like Formik.
 
 Our [Codemods](/get-started/upgrade#run-our-codemods) should take care of most of these changes, but if your callback function is defined at the class level you will need to manually update your code.
 
-### Icons
+## Changes to icons
 
 To improve the consistency of icon usage across projects adopting PatternFly, we are no longer using inline styles, color, or size for icons. Now, React icons come with a built-in class `pf-v5-svg`, which gives an icon a default height, width, and color.
 
@@ -47,7 +47,7 @@ If you want a custom color or size, wrap your icon in the [`<Icon>` React compon
 
 If you are not importing `@patternfly/react-styles`, but are still using `@patternfly/react-icons` you will need to provide the generic styles that you have separated from the icons and moved into `@patternfly/react-styles`. For more information, [refer to the @patternfly/react-icons README file.](https://github.com/patternfly/patternfly-react/blob/main/packages/react-icons/README.md)
 
-## Component updates and enhancements
+## Major component updates and enhancements
 
 ### Card
 
@@ -83,7 +83,7 @@ As a result, our previous design has been deprecated, along with the following p
 - `selectableInputAriaLabel`
 - `onSelectableInputChange`
 
-We recommend that you upgrade to these new cards if your use case calls for them. You can read more about their intended usage [in our card documentation.](components/card/design-guidelines#variations)
+We recommend that you upgrade to these new cards if your use case calls for them. You can read more about their intended usage [in our card documentation.](/components/card/design-guidelines#variations)
 
 ### Empty state
 
@@ -122,22 +122,22 @@ Previously, the input group styles were too narrowly coupled with the types of c
 
 As a result, input group items no longer automatically fill the available space of their container. To retain previous styling, new `InputGroupItem` components may need to have the `isFill`, `isBox`, and/or `isPlain` properties adjusted. This is likely necessary for `FormSelect`, `TextInput`, `Select`, and `TextArea`, which may particularly require the `isFill` property to be passed to `InputGroupItem`.
 
-## Refactored components 
+## Refactored and deprecated components 
 
 As PatternFly has matured, a number of its popular components have been repeatedly enhanced. Their complexity and fragility has grown to become an ever-growing maintenance problem. Rather than continuing to enhance these delicate components, as part of PatternFly 5, we have adjusted our implementation and recommendations to support new components that are more flexible, composable, and easier to maintain. As a result, we are deprecating our previous implementations in favor of our newer, more composable components.
 
 The following table outlines the components that are affected, as well as the component(s) that we recommend using as a replacement.
 
-| Component  | Recommended replacement  |
+| Deprecated component  | Recommended replacement  |
 | --- | --- |
-| [Application launcher](/components/menus/application-launcher/react-deprecated)  | [Dropdown-next](/components/menus/dropdown), [select-next](/components/menus/select)|
+| [Application launcher](/components/menus/application-launcher/react-deprecated)  | [Dropdown](/components/menus/dropdown), [select](/components/menus/select)|
 | [Context selector](components/menus/context-selector/react-deprecated)  | [Menu](/components/menu)   |
-|  [Dropdown](/components/menus/dropdown/react-deprecated) |  [Dropdown-next](/components/menus/dropdown)  |
-| [Options menu](components/menus/options-menu/react-deprecated)  |  [Dropdown-next](/components/menus/dropdown), [select-next](/components/menus/select)
+|  [Dropdown (deprecated)](/components/menus/dropdown/react-deprecated) |  [Dropdown](/components/menus/dropdown)  |
+| [Options menu](components/menus/options-menu/react-deprecated)  |  [Dropdown](/components/menus/dropdown), [select](/components/menus/select)
 | `PageHeader`, `PageHeaderTools`, `PageHeaderToolsGroup`, `PageHeaderToolsItem`,  | [Masthead](/components/masthead)   |
-| [Select](/components/menus/select/react-deprecated)  | [Select-next](/components/menus/select) |
-|  [Table](/components/table/react-deprecated) | [Table-next](/components/table)
-| [Wizard](/components/wizard/react-deprecated) | [Wizard-next](/components/wizard)|
+| [Select (deprecated)](/components/menus/select/react-deprecated)  | [Select](/components/menus/select) |
+|  [Table (deprecated)](/components/table/react-deprecated) | [Table](/components/table)
+| [Wizard (deprecated)](/components/wizard/react-deprecated) | [Wizard](/components/wizard)|
 
 **Note:** To understand how our new composable menus can be used to replace deprecated components, [view our custom menus examples](/components/menus/custom-menus).
 
