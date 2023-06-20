@@ -8,7 +8,7 @@ The PatternFly open source community depends on contributions to help our design
 
 ## PatternFly on GitHub
 PatternFly has a few repos you can contribute to:
-- [patternfly](https://github.com/patternfly/patternfly) ("Core"): For core HTML and CSS contributions. All component contributions should start in Core.
+- [patternfly](https://github.com/patternfly/patternfly): For HTML and CSS contributions. All component contributions should start here.
 - [patternfly-react](https://github.com/patternfly/patternfly-react): For React contributions.
 - [patternfly-org](https://github.com/patternfly/patternfly-org): For PatternFly website content and design documentation contributions.
 
