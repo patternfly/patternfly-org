@@ -22,7 +22,7 @@ import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-ic
 <div className="ws-community-page pf-m-light-100">
   <p>At the core of PatternFly is our community of people—in other words, our Flyers. Together, we celebrate creativity and foster a sense of teamwork and unity.</p>
 
-  <Title size="3xl" className="ws-title" headingLevel="h2">Who we are</Title>
+  <Title size="3xl" className="ws-title pf-v5-u-mt-3xl" headingLevel="h2">Who we are</Title>
       <p>We're made of designers, developers, and other UX professionals with a passion for open source. We each have different ways of working with others and supporting the community—there's no one way to be a Flyer. Whether we're contributing to PatternFly or just staying up to date on new releases, we work together to make PatternFly a vibrant community of passionate people.</p>
 
 
