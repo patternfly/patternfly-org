@@ -28,6 +28,9 @@ const patternFlyPrinciples = 'Flyer fundamentals';
 
 const HomePage = () => (
   <React.Fragment>
+    <PageSection variant={PageSectionVariants.light} stickyOnBreakpoint={{ default: 'top' }} className="pf-u-font-size-lg">
+      PatternFly 5 is live! Visit the website for new design, code samples, and documentation. <a href="https://www.patternfly.org/" class="pf4-banner-link pf-u-font-weight-bold">Go to PatternFly 5 <ArrowRightIcon /></a>
+    </PageSection>
     <PageSection variant={PageSectionVariants.light} className="pf4-c-background-image ws-homepage-main-section">
       <Grid>
         <GridItem sm={12} md={8} mdOffset={2} lg={6} lgOffset={3} className="pf-u-py-2xl pf-u-text-align-center">

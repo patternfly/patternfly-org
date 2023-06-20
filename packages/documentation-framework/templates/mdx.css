@@ -1,7 +1,7 @@
 #ws-page-content-router {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex-shrink: 0;
 }
 
 .ws-release-notes-toc {

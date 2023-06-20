@@ -221,3 +221,7 @@
 .fadeInFour {
   animation-delay: 1.4s;
 }
+
+.pf4-banner-link{
+  white-space: nowrap;
+}
