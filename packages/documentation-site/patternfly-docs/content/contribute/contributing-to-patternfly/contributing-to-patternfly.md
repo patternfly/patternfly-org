@@ -15,7 +15,7 @@ PatternFly has a few repos you can contribute to:
 
 ## PatternFly feature lifecycle
 
-PatternFly features go through a life-cycle development process that requires contributions from multiple disciplines including design, development, and content authoring. The typical feature lifecycle is illustrated below.
+PatternFly features go through a life-cycle development process that requires contributions from multiple disciplines including design, development, and content authoring. The typical feature lifecycle includes 4 phases: discovery, design, implementation, and documentation.
 
 ![Contribution guide](./about-flowchart.png)
 
