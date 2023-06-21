@@ -54,9 +54,9 @@ Two new colors were added to our red color palette.
 
 **Global variables added**
 
-`--pf-v5-global--BackgroundColor--300` added as background color for elements that appear on top of others. Examples include popovers and dropdown menus.
+`--pf-v5-global--BackgroundColor--300` was added as background color for elements that appear on top of other, such as popovers and dropdown menus.
 
-`--pf-v5-global--BackgroundColor--400` added as background color for hover/interaction state of items placed on top of other dark background. Examples include hover/focus backgrounds for items in a dropdown menu or popover and control elements like text inputs, textareas, menu toggles.
+`--pf-v5-global--BackgroundColor--400` was added as a background color for hover and interaction states of items that are placed on top of a dark background, such as dropdown menu items, text inputs, text areas, and menu toggles.
 
 `--pf-v5-global--BorderColor--400` was added as a bottom border color for control elements.
 
