@@ -14,7 +14,6 @@ PatternFly’s layouts are used to place components on a page. They create a ful
 
 Think of layouts as the scaffolding within which your components will live. When laying out your page, consider the layout pattern that suits your content. Multiple layouts can be used within the same page to create versatile and effective UIs. 
 
-
 <SectionGallery
   section="layouts"
   galleryItemsData={layoutsData}

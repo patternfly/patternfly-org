@@ -14,7 +14,6 @@ Patterns are reusable, best practices solutions that solve common user problems.
 
 A pattern may also have related React or HTML demos that present interactive examples and general implementation code. These demos are contained in a tab separate from the design guidelines.
 
-
 <SectionGallery
   section="patterns"
   galleryItemsData={patternsData}

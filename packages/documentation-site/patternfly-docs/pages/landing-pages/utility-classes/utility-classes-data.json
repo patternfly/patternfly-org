@@ -1,32 +1,32 @@
 {
   "accessibility": {
-    "summary": "Allow you to modify how an element interacts with assistive technologies."
+    "summary": "Modifies how an element interacts with assistive technologies."
   },
   "alignment": {
-    "summary": "Allow you to modify how text is aligned in a page section."
+    "summary": "Modifies how text is aligned in a page section."
   },
   "background-color": {
-    "summary": "Allow you to modify the background color of an element."
+    "summary": "Modifies the background color of an element."
   },
   "box-shadow": {
-    "summary": "Allow you to apply shadows to an element."
+    "summary": "Applies shadows to an element."
   },
   "display": {
-    "summary": "Allow you to modify how an element is displayed in a page section."
+    "summary": "Modifies how an element is displayed in a page section."
   },
   "flex": {
-    "summary": "Allow you to modify the layout and alignment of elements in a page section."
+    "summary": "Modifies the layout and alignment of elements in a page section."
   },
   "float": {
-    "summary": "Allow you to float elements inside of a page section."
+    "summary": "Floats elements inside of a page section."
   },
   "sizing": {
-    "summary": "Allow you to modify the width and height of elements in a page section."
+    "summary": "Modifies the width and height of elements in a page section."
   },
   "spacing": {
-    "summary": "Allow you to modify the spacing of elements in a page section."
+    "summary": "Modifies the spacing of elements in a page section."
   },
   "text": {
-    "summary": "Allow you to modify the styling of text elements."
+    "summary": "Modifies the styling of text elements."
   }
 }

@@ -9,7 +9,7 @@
     "summary": "Provides an overview of key metrics or performance indicators."
   },
   "filters": {
-    "summary": "Allow users to narrow down content from data."
+    "summary": "Allows users to narrow down content from data."
   },
   "primary-detail": {
     "summary": "Shows users a list of items and corresponding details for a selected item."
