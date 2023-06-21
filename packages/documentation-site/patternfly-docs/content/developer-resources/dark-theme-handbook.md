@@ -44,7 +44,7 @@ Two new colors were added to our red color palette.
 
 **Blue color palette**
 
-blue-300 was updated to support an additional variation of primary blue.
+`blue-300` was updated to support an additional variation of primary blue.
 
 | Variable(s) affected | New or updated color values|
 | -------------------- | -------------------- |
