@@ -19,7 +19,7 @@ To view a list of all dark theme CSS overrides [view our override file on GitHub
 
 Our black color palette was updated and a new, lighter gray was added.
 
-| Variable(s) affected | New or updated color values|
+| Variables affected | New or updated color values|
 | -------------------- | -------------------- |
 | --pf-v5-global--palette--black-50  | #e0e0e0 |
 | --pf-v5-global--palette--black-100 | #c6c7c8 |
@@ -52,7 +52,7 @@ Two new colors were added to our red color palette.
 
 
 
-**Global variables added**
+**Global variables**
 
 `--pf-v5-global--BackgroundColor--300` was added as background color for elements that appear on top of other, such as popovers and dropdown menus.
 
@@ -60,7 +60,7 @@ Two new colors were added to our red color palette.
 
 `--pf-v5-global--BorderColor--400` was added as a bottom border color for control elements.
 
-**Status colors added**
+**Status colors**
 
 `--pf-v5-global--primary-color--300` was added as a new primary background color to meet contrast requirements for elements that have text on top, such as primary buttons and unread badges.
 
