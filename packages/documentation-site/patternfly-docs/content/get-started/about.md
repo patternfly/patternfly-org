@@ -10,46 +10,49 @@ PatternFly is an open source design system created to enable consistency and usa
 
 ## What's included in PatternFly?
 
-### Design foundations
+### [Design foundations](/design-foundations/about)
 
 These are the foundational elements of the design system, like color, typography, icons, and spacing.
 
-### Components
+### [Components](/components/all-components)
 
-Components are like building blocks. Designed to be flexible and modular, you can mix and match components to create a solution for almost any UI problem. Many components are accompanied by demos that show how the component can be used in context. They also provide useful starter code that can be copied and reused.
+Components are like building blocks. Designed to be flexible and modular, you can mix and match components to create a solution for almost any UI problem. Many components are accompanied by demos and design guidelines that show how the component can be used in context. Demos and examples also provide useful starter code that can be copied and reused.
 
-### Layouts
+### [Layouts](/layouts/about)
 
 Layouts provide a way to arrange componpents on a page. Use of PatternFly layouts will ensure that your application is responsive to changes in screen size.
 
-### Patterns
+### [Patterns](/patterns/about)
 
 Patterns document best practices and solutions to common use cases and design problems. Some patterns are accompanied by demos that provide an interactive example and reusable code to support implementation.
 
-### Design and accessibility guidelines
+### [Accessibility guidelines](/accessibility/accessibility-fundamentals)
 
-Design and accessibility guidelines help designers and developers apply components to create applications that are usable and accessible.
+Accessibility guidelines help designers and developers apply components to create applications that are usable and accessible by all users.
 
-### UX writing style guide
+### [UX writing style guide](/ux-writing/about)
 
 Content guidelines provide principles and best practices around writing for user experience along with general voice and style guidance.
 
+### [Extensions](/extensions/about)
+
+Extensions are holistic solutions that utilize multiple PatternFly components, typically addressing cross-project use cases. They provide reusable code that can drive consistency throughout a user’s journey across products and platforms.
 
 ## Additional developer resources
 
-### CSS variable system
+### [CSS variable system](developer-resources/global-css-variables)
 
 You can customize PatternFly for your project using the CSS variable system, which enables you to change style elements like color across your project. The CSS variable system is a two-layer theming system where global variables inform component variables.
 
 **Global variables**
+
 Global variables define and enforce style elements (like global values for color, spacing, and font size) across the entire system.
 
 **Component variables**
+
 Component variables are used to define custom properties at the component level. Component variables are always defined by global variables.
 
-[**Learn more and view CSS variables**](/developer-resources/global-css-variables) <i className="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
-
-### Utility classes
+### [Utility classes](/utility-classes/about)
 
 Utility classes enable you to further customize and modify elements in your project without having to write any custom CSS.
 
