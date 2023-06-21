@@ -11,7 +11,9 @@ Dark theme styles ship with PatternFly CSS by default. To enable dark theme, add
 Dark theme can also be applied based on the browser’s `prefers-color-scheme` media query. The recommended way to apply dark theme based on this media query is to use Javascript (JS) to detect the media query and apply the `pf-theme-dark` class via the JS code. This allows a product to simply manipulate a single class to toggle dark theme based on user preference. [Adam Argyle wrote a great article](https://web.dev/building-a-theme-switch-component/#javascript) on using JS to manage dark theme preference, using the `prefers-color-scheme` media query alongside a manual button to toggle dark theme on or off. 
 
 ## What’s changed?
-The following are some notable changes and differences between light and dark themes. 
+There are some notable changes and differences between light and dark themes, outlined in this section. 
+
+To view a list of all dark theme CSS overrides [view our override file on GitHub.](https://github.com/patternfly/patternfly/blob/main/src/patternfly/sass-utilities/themes/dark/scss-variables.scss). 
 
 **Black color palette**
 
