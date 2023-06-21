@@ -31,5 +31,5 @@ export function getContrastRatio(c1, c2) {
 }
 
 export function tokenName(cssVar) {
-  return cssVar.substr(5).replace(/-+/g, '_');
+  return cssVar.substr(8).replace(/-+/g, '_');
 }

@@ -27,7 +27,9 @@ export function ColorSwatch({
   children
 }) {
   const isBoxShadow = color.includes('BoxShadow');
-  const token = tokens[":root"][tokenName(color)];
+  console.log(tokenName(color));
+  const token = tokens[":where(:root)"][tokenName(color)];
+  console.log(token);
   const popoverContent = (
     <div className="ws-color-swatch-popover">
       <label className="ws-color-swatch-popover-label">Global CSS variable</label>

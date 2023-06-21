@@ -12,7 +12,7 @@ export function ColorFamily({
   family
 }) {
   const [expanded, setExpanded] = React.useState([]);
-  const rootTokens = tokens[':root'];
+  const rootTokens = tokens[':where(:root)'];
 
   const familyTokens = family === 'shadows'
     ? [rootTokens.global_BoxShadow_sm, rootTokens.global_BoxShadow_md, rootTokens.global_BoxShadow_lg]
