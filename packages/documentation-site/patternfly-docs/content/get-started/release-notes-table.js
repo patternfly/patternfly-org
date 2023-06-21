@@ -130,23 +130,23 @@ export const ReleaseNotesTable = () => {
         <SelectGroup label="Repo">
           <SelectList>
             <SelectOption
-              itemId="html/css"
+              itemId="HTML/CSS"
               hasCheckbox
-              isSelected={filters.includes("html/css")}
+              isSelected={filters.includes("HTML/CSS")}
             >
-              html/css
+              HTML/CSS
             </SelectOption>
             <SelectOption
-              itemId="react"
+              itemId="React"
               hasCheckbox
-              isSelected={filters.includes("react")}
+              isSelected={filters.includes("React")}
             >
-              react
+              React
             </SelectOption>
           </SelectList>
         </SelectGroup>
         <Divider />
-        <SelectGroup label="Fixed with codemod">
+        <SelectGroup label="Fixed with code mods">
           <SelectList>
             <SelectOption
               itemId="codemod-yes"
@@ -275,8 +275,8 @@ export const ReleaseNotesTable = () => {
                 </Th>
                 <Th width={50}>Description</Th>
                 <Th width={10}>PR link</Th>
-                <Th width={10} sort={getSortParams(2)}>
-                  Fixed with code mod
+                <Th width={20} modifier="wrap" sort={getSortParams(2)}>
+                  Fixed with code mods
                 </Th>
               </Tr>
             </Thead>
@@ -285,7 +285,7 @@ export const ReleaseNotesTable = () => {
                 const noteId = `release-notes-${rowIndex}-${row.pullRequestURL}`;
                 return (
                   <Tbody key={rowIndex} isExpanded={isNoteExpanded(noteId)}>
-                    <Tr>
+                    <Tr key="parent-row">
                       <Td
                         expand={
                           row.details
@@ -321,12 +321,12 @@ export const ReleaseNotesTable = () => {
                           </TextList>
                         )}
                       </Td>
-                      <Td dataLabel="Fixed with code mod">
+                      <Td dataLabel="Fixed with code mods">
                         {row.fixedWithCodeMod ? "Yes" : "No"}
                       </Td>
                     </Tr>
                     {row.details ? (
-                      <Tr isExpanded={isNoteExpanded(noteId)}>
+                      <Tr isExpanded={isNoteExpanded(noteId)}  key="child-row">
                         <Td />
                         <Td dataLabel="Details" colSpan={4}>
                           <ExpandableRowContent>

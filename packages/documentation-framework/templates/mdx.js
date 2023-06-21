@@ -51,6 +51,16 @@ const MDXChildTemplate = ({
     }
     ensureID(toc);
   }
+  const innerContentWrapperClass = () => {
+    if (source === 'landing-page') {
+      return 'landing-pages';
+    }
+    if (source === 'release-notes') {
+      return '';
+    }
+    return 'ws-mdx-content-content'
+  };
+
   const InlineAlerts = (
     <React.Fragment>
       {optIn && (
@@ -83,7 +93,7 @@ const MDXChildTemplate = ({
         <TableOfContents items={toc} />
       )}
       <div className="ws-mdx-content">
-        <div className={source === 'landing-pages' ? "ws-landing-page" : "ws-mdx-content-content"}>
+        <div className={innerContentWrapperClass()}>
           {InlineAlerts}
           <Component />
           {functionDocumentation.length > 0 && (
