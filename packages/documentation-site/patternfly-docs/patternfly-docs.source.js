@@ -32,6 +32,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   const coreDocsIgnore = path.join(coreDocsPath, '/pages/**'); // Compatibility for old gatsby workspace
   sourceMD(path.join(coreDocsPath, '!(demos)/**/examples/**/*.md'), 'html', coreDocsIgnore);
   sourceMD(path.join(coreDocsPath, 'demos/**/*.md'), 'html-demos', coreDocsIgnore);
+  sourceMD(path.join(coreDocsPath, 'components/**/deprecated/**/*.md'), 'html-deprecated', coreDocsIgnore);
 
   // React props
   const reactCorePath = require
@@ -94,14 +95,6 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
 
   // React OUIA MD
   sourceMD(path.join(reactCorePath, '/**/helpers/OUIA/*.md'), 'react');
-
-  // Release notes
-  sourceMD(require.resolve('@patternfly/patternfly/RELEASE-NOTES.md'), 'html');
-  sourceMD(require.resolve('@patternfly/react-docs/RELEASE-NOTES.md'), 'react');
-
-  // Upgrade guides
-  sourceMD(require.resolve('@patternfly/patternfly/UPGRADE-GUIDE.md'), 'html');
-  sourceMD(require.resolve('@patternfly/react-docs/UPGRADE-GUIDE.md'), 'react');
 
   // Quickstarts extension
   const qsPath = require
