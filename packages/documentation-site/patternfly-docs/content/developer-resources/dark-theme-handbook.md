@@ -13,7 +13,7 @@ Dark theme can also be applied based on the browser’s `prefers-color-scheme` m
 ## What’s changed?
 There are some notable changes and differences between light and dark themes, outlined in this section. 
 
-To view a list of all dark theme CSS overrides [view our override file on GitHub.](https://github.com/patternfly/patternfly/blob/main/src/patternfly/sass-utilities/themes/dark/scss-variables.scss). 
+To view a list of all dark theme CSS overrides [view our override file on GitHub](https://github.com/patternfly/patternfly/blob/main/src/patternfly/sass-utilities/themes/dark/scss-variables.scss). 
 
 **Black color palette**
 
