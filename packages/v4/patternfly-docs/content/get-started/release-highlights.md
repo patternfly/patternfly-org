@@ -39,7 +39,7 @@ Previously, our event handler parameters weren’t consistently ordered. To meet
 
 Our [Codemods](/get-started/upgrade#run-our-codemods) should take care of most of these changes, but if your callback function is defined at the class level you will need to manually update your code.
 
-## Changes to icons
+## Changes to React icons
 
 To improve the consistency of icon usage across projects adopting PatternFly, we are no longer using inline styles, color, or size for icons. Now, React icons come with a built-in class `pf-v5-svg`, which gives an icon a default height, width, and color.
 
@@ -69,11 +69,11 @@ To improve accessibility and usability for both keyboard and screen reader users
 
 Previous design:
 
-<img src="./img/v4-selectable-card.png" alt="Shown is an image of two example cards. The first card is in focus."/>
+<img src="./img/pf4-selectable-card.png" alt="Shown is an image of two example cards. The first card is in focus."/>
 
 New design:
 
-<img src="./img/v5-selectable-card.png" alt="Shown is an image of two example cards. The first card is both in focus and underlined in blue."/>
+<img src="./img/pf5-selectable-card.png" alt="Shown is an image of two example cards. The first card is both in focus and underlined in blue."/>
 
 As a result, our previous design has been deprecated, along with the following properties:
 
