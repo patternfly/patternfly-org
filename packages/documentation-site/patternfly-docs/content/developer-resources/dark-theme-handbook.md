@@ -62,9 +62,7 @@ Two new colors were added to our red color palette.
 
 **Status colors added**
 
-`--pf-v5-global--primary-color--300` added as a new primary background color that meets contrast requirements for elements that will have text on top, including primary buttons and unread badges.
-
-Here is a link to [all global var overrides](https://github.com/patternfly/patternfly/blob/main/src/patternfly/sass-utilities/themes/dark/scss-variables.scss) for dark theme for your reference. 
+`--pf-v5-global--primary-color--300` was added as a new primary background color to meet contrast requirements for elements that have text on top, such as primary buttons and unread badges.
 
 ## Best practices
 
