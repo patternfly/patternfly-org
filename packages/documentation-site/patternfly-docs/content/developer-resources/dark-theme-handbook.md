@@ -69,7 +69,7 @@ Two new colors were added to our red color palette.
 
 To make it easier to support light and dark theming in your application, we recommend considering these best practices during design and development:
 
-* Using PatternFly components without customizations will make it easier to implement dark theme in your application. Most of the problems encountered have been around the use of custom styles, overrides to PatternFly styles, and non-PatternFly components. To ensure consistent styling and behavior when switching themes, try and use PatternFly components as they are.
+* Using PatternFly components without customizations will make it easier to implement dark theme in your application. Most of the problems encountered have been around the use of custom styles, overrides to PatternFly styles, and non-PatternFly components. To ensure consistent styling and behavior when switching themes, try to use PatternFly components as they are.
 
 
 * When making overrides, utilize the global and component CSS variable system to define the override. For example, to override a primary button’s background color, declare `.pf-v5-c-button { --pf-v5-c-button--m-primary--BackgroundColor: [color]; }` instead of `.pf-v5-c-button.pf-m-primary { background-color: [color]; }`.
