@@ -1,4 +1,4 @@
-const componentsData = require('./components-data.json');
+const componentsData = require('./pages/landing-pages/components/components-data.json');
 
 // This module is shared between NodeJS and babelled ES5
 module.exports = {
