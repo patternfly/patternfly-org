@@ -46,7 +46,7 @@ Two new colors were added to our red color palette.
 
 `blue-300` was updated to support an additional variation of primary blue.
 
-| Variable(s) affected | New or updated color values|
+| Variable affected | New or updated color values|
 | -------------------- | -------------------- |
 | --pf-v5-global--palette--blue-300 | #1fa7f8 |
 
