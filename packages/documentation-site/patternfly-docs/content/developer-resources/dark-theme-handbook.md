@@ -35,7 +35,7 @@ Our black color palette was updated and a new, lighter gray was added.
 | --pf-v5-global--palette--black-1000| #030303 |
 
 **Red color palette**
-Two new red colors added.
+Two new colors were added to our red color palette.
 
 | Variable(s) affected | New or updated color values|
 | -------------------- | -------------------- |
