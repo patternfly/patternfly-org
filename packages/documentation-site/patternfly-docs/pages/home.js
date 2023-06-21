@@ -92,7 +92,7 @@ const HomePage = () => (
                   <Text
                     className="pf-v5-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
-                    <Link to="/guidelines/colors" aria-label="view design guidelines">
+                    <Link to="/design-foundations/colors" aria-label="view design guidelines">
                       View design guidelines <ArrowRightIcon />
                     </Link>
                   </Text>
@@ -131,7 +131,7 @@ const HomePage = () => (
                   <Text
                     className="pf-v5-u-pl-0 pf4-c-link__text ws-mdx-a"
                   >
-                    <Link to="/demos/primary-detail" aria-label="view demos">
+                    <Link to="/patterns/primary-detail" aria-label="view demos">
                       View demos <ArrowRightIcon />
                     </Link>
                   </Text>

@@ -97,7 +97,7 @@ The recommended interaction pattern for the modal components like the modal or p
 - For keyboard-only users that use the tab key to navigate the interface, this means that focus cannot be shifted outside of the modal when using the tab key. Instead, when focus leaves the last focusable item, it should be placed on the first focusable item of the modal. 
 - For screen reader users, the other contents on the page should be hidden from the screen reader.
 
-Based on the [screen reader / browser combinations](https://www.patternfly.org/v4/get-started/accessibility-guide#testing) we use for testing, we recommend applying `aria-hidden="true"` to the parent wrapping element of the page contents. Note that the modal element of the component must not be a descendent of this element with `aria-hidden="true"` and should be included as a sibling to this element.
+Based on the [screen reader / browser combinations](https://www.patternfly.org/v4/accessibility/testing-your-accessibility) we use for testing, we recommend applying `aria-hidden="true"` to the parent wrapping element of the page contents. Note that the modal element of the component must not be a descendent of this element with `aria-hidden="true"` and should be included as a sibling to this element.
 
 ### Scrollable elements
 Any elements with horizontal or vertical scroll need to be accessible via keyboard. It may be necessary to ensure every 

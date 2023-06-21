@@ -22,15 +22,9 @@ import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-ic
 <div className="ws-community-page pf-m-light-100">
   <p>At the core of PatternFly is our community of people—in other words, our Flyers. Together, we celebrate creativity and foster a sense of teamwork and unity.</p>
 
-  <Grid sm={12} md={6} hasGutter className="pf-v5-u-mt-3xl">
-    <GridItem className="pf-v5-u-pr-xl">
-      <img src={communityPageHeader} alt="Website collaboration" />
-    </GridItem>
-    <GridItem>
-      <Title size="3xl" className="ws-title" headingLevel="h2">Who we are</Title>
+  <Title size="3xl" className="ws-title pf-v5-u-mt-3xl" headingLevel="h2">Who we are</Title>
       <p>We're made of designers, developers, and other UX professionals with a passion for open source. We each have different ways of working with others and supporting the community—there's no one way to be a Flyer. Whether we're contributing to PatternFly or just staying up to date on new releases, we work together to make PatternFly a vibrant community of passionate people.</p>
-    </GridItem>
-  </Grid>
+
 
   <Title size="3xl" className="pf-v5-u-mb-sm ws-page-title pf-v5-u-mt-3xl" headingLevel="h2">What we're building</Title>
   <p>Our work extends beyond products and apps. We're always exploring new ways we can welcome ideas and build better experiences for the very people who make PatternFly what it is today. </p>
@@ -44,19 +38,19 @@ import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-ic
           Flyers may be spread all over the globe, but we make sure to come together once a month to share updates and collect feedback. All meetings are recorded and published on <a href="https://www.youtube.com/channel/UCqLT0IEvYmb8z__9IFLSVyQ">PatternFly's YouTube channel</a>, and you can join PatternFly's mailing list for the invites.
         </p>
         <Title size="xl" className="ws-title" headingLevel="h3">
-          <a href="https://www.redhat.com/mailman/listinfo/patternfly"><strong>Join our mailing list</strong></a>
+          <a href="https://www.redhat.com/mailman/listinfo/patternfly">Join our mailing list</a>
         </Title>
       </CardBody>
     </Card>
     <Card>
       <CardBody>
         <img src={community2} alt="Map" className="ws-community-grid-img" />
-        <Title size="xl" className="ws-title" headingLevel="h3">Building PatternFly roadmaps</Title>
+        <Title size="xl" className="ws-title" headingLevel="h3">Building new features</Title>
         <p>
-          To stay on top of all changes and keep everyone informed, we regularly update PatternFly roadmaps. This gives us an opportunity to share what Flyers are working on and what updates we're planning.
+          To continue to grow and improve our PatternFly component library, we welcome ideas from our community. Visit our GitHub discussions board to submit an idea, comment on, or upvote an existing request.
         </p>
         <Title size="xl" className="ws-title" headingLevel="h3">
-          <a href="https://github.com/orgs/patternfly/projects/4?fullscreen=true"><strong>Explore PatternFly roadmaps</strong></a>
+          <a href="https://github.com/orgs/patternfly/discussions/categories/feature-requests">View or submit feature requests</a>
         </Title>
       </CardBody>
     </Card>
@@ -69,7 +63,7 @@ import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-ic
         </p>
         <Title size="xl" className="ws-title" headingLevel="h3">
           <Link to="/accessibility/accessibility-fundamentals">
-            <strong>Read our accessibility guide</strong>
+            Read our accessibility guide
           </Link>
         </Title>
       </CardBody>
@@ -119,7 +113,7 @@ import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-ic
         <SplitItem style={{ marginRight: '12px' }}><QuestionIcon /></SplitItem>
         <SplitItem isFilled>
           <Title size="lg" className="ws-title" headingLevel="h3">Ask a question</Title>
-          <a href="//forum.patternfly.org/" target="_blank" rel="noopener noreferrer">PatternFly forum</a>
+          <a href="//github.com/orgs/patternfly/discussions" target="_blank" rel="noopener noreferrer">PatternFly discussions</a>
         </SplitItem>
       </Split>
     </GridItem>
