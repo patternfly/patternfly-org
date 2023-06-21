@@ -3,6 +3,92 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.65 (2023-06-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.64 (2023-06-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.63 (2023-06-15)
+
+
+### Bug Fixes
+
+* **Sidenav:** updated PageContext props ([#3593](https://github.com/patternfly/patternfly-org/issues/3593)) ([1cc24ea](https://github.com/patternfly/patternfly-org/commit/1cc24ea1ef88c42a6b62a4a6b2421d157bc298d8))
+
+
+
+
+
+# 0.12.0-alpha.62 (2023-06-14)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.61 (2023-06-14)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.60 (2023-06-14)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.59 (2023-06-13)
+
+
+### Bug Fixes
+
+* **docs:** fixed gallery styles affecting width, font vars ([#3596](https://github.com/patternfly/patternfly-org/issues/3596)) ([04f1b54](https://github.com/patternfly/patternfly-org/commit/04f1b54f947e1afca88926d8f371d3bf37a70e25))
+
+
+
+
+
+# 0.12.0-alpha.58 (2023-06-13)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.57 (2023-06-13)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.56 (2023-06-12)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 0.12.0-alpha.55 (2023-06-12)
 
 

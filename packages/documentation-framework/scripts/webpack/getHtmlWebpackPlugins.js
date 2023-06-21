@@ -9,7 +9,6 @@ async function getHtmlWebpackPlugin({
   isProd,
   googleAnalyticsID,
   algolia,
-  pathPrefix = '',
   url,
   title,
   isFullscreen
@@ -20,7 +19,7 @@ async function getHtmlWebpackPlugin({
     templateParameters: {
       title: getTitle(title),
       // Don't prerender fullscreen pages (expensive!)
-      prerendering: (isProd && !isFullscreen && !url.includes('topology') && !url.includes('extensions')) ? await prerender(url, pathPrefix) : null,
+      prerendering: (isProd && !isFullscreen && !url.includes('topology') && !url.includes('extensions')) ? await prerender(url) : null,
       // Don't use GA in dev mode
       googleAnalyticsID: isProd ? googleAnalyticsID : false,
       algolia

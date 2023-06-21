@@ -24,7 +24,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY}}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
-      - run: node scripts/writeV3Redirects.js
+      - run: node scripts/writeVersionRedirects.js
       - run: node scripts/writeVersionPrefix.js
       - run: du -sh build/patternfly-org/*
         name: Check size of docs
