@@ -17,7 +17,7 @@ To view a list of all dark theme CSS overrides [view our override file on GitHub
 
 **Black color palette**
 
-Black color palette updated and a new lighter gray was added.
+Our black color palette was updated and a new, lighter gray was added.
 
 | Variable(s) affected | New or updated color values|
 | -------------------- | -------------------- |
