@@ -69,11 +69,11 @@ To improve accessibility and usability for both keyboard and screen reader users
 
 Previous design:
 
-<img src="./img/pf4-selectable-card.png" alt="Shown is an image of two example cards. The first card is in focus."/>
+<img src="./img/pf4-selectable-card.png" alt="Shown is a UI with a grid of cards, one of which is selected and underlined in blue."/>
 
 New design:
 
-<img src="./img/pf5-selectable-card.png" alt="Shown is an image of two example cards. The first card is both in focus and underlined in blue."/>
+<img src="./img/pf5-selectable-card.png" alt="Shown is a UI with a grid of cards, one of which is selected and outlined in blue."/>
 
 As a result, our previous design has been deprecated, along with the following properties:
 
