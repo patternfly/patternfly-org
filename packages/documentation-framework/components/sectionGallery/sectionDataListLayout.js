@@ -10,7 +10,7 @@ export const SectionDataListLayout = ({ galleryItems, layoutView, hasListText, h
   
   return (
     <DataList onSelectDataListItem={() => {}}>
-      {galleryItems.map(({ idx, slug, illustration, itemName, title, isBeta, id, galleryItemsData }) => (
+      {galleryItems.map(({ idx, slug, illustration, itemName, title, isBeta, isDeprecated, isDemo, id, galleryItemsData }) => (
         <Link to={slug} key={idx} className="ws-section-gallery-item">
           <DataListItem>
             <DataListItemRow>
@@ -34,7 +34,9 @@ export const SectionDataListLayout = ({ galleryItems, layoutView, hasListText, h
                       </TextContent>
                     </SplitItem>  
                     <SplitItem>
-                      {isBeta && <Label color="gold">Beta feature</Label>}
+                      {isBeta && (<Label color="blue" isCompact>Beta</Label>)}
+                      {!isBeta && isDeprecated && (<Label color="grey" isCompact>Deprecated</Label>)}
+                      {!isBeta && !isDeprecated && isDemo && (<Label color="purple" isCompact>Demo</Label>)}
                     </SplitItem>
                   </Split>
                   { hasListText && <TextSummary id={id} itemsData={galleryItemsData} /> }

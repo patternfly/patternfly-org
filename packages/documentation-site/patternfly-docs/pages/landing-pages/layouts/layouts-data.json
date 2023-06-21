@@ -1,0 +1,23 @@
+{
+  "bullseye": {
+    "summary": "Centers content vertically and horizontally."
+  },
+  "flex": {
+    "summary": "Creates consistently spaced custom layouts that are responsive to other layouts and PatternFly components."
+  },
+  "gallery": {
+    "summary": "Arranges content in a responsive grid of uniform rows and columns."
+  },
+  "grid": {
+    "summary": "Arranges content on a fixed-size 12 column grid."
+  },
+  "level": {
+    "summary": "Evenly distributes content horizontally."
+  },
+  "split": {
+    "summary": "Distributes multiple items horizontally, which adapt to viewport resizing."
+  },
+  "stack": {
+    "summary": "Distributes multiple items vertically, which adapt to the available space of a container."
+  }
+}

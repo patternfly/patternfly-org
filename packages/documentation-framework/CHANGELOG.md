@@ -3,6 +3,65 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.68 (2023-06-21)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.67 (2023-06-21)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.66 (2023-06-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.65 (2023-06-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.64 (2023-06-15)
+
+
+### Bug Fixes
+
+* **Sidenav:** updated PageContext props ([#3593](https://github.com/patternfly/patternfly-org/issues/3593)) ([1cc24ea](https://github.com/patternfly/patternfly-org/commit/1cc24ea1ef88c42a6b62a4a6b2421d157bc298d8))
+
+
+
+
+
+# 2.0.0-alpha.63 (2023-06-14)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 2.0.0-alpha.62 (2023-06-14)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 # 2.0.0-alpha.61 (2023-06-14)
 
 **Note:** Version bump only for package @patternfly/documentation-framework

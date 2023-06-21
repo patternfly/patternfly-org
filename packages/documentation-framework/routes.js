@@ -145,8 +145,6 @@ function getAsyncComponent(url) {
   if (!url && typeof window !== 'undefined') {
     url = window.location.pathname.replace(/\/$/, '') || '/';
   }
-  // Normalize path for matching
-  url = url.replace(process.env.pathPrefix, '');
   let res;
 
   if (allRoutes[url]) {
