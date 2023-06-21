@@ -50,7 +50,7 @@ import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-ic
           To continue to grow and improve our PatternFly component library, we welcome ideas from our community. Visit our GitHub discussions board to submit an idea, comment on, or upvote an existing request.
         </p>
         <Title size="xl" className="ws-title" headingLevel="h3">
-          <a href="https://github.com/orgs/patternfly/discussions/categories/feature-requests"><strong>View or submit feature requests</strong></a>
+          <a href="https://github.com/orgs/patternfly/discussions/categories/feature-requests">View or submit feature requests</a>
         </Title>
       </CardBody>
     </Card>
