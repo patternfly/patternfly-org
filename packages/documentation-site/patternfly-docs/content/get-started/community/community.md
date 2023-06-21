@@ -63,7 +63,7 @@ import CalendarIcon from '@patternfly/react-icons/dist/esm/icons/calendar-alt-ic
         </p>
         <Title size="xl" className="ws-title" headingLevel="h3">
           <Link to="/accessibility/accessibility-fundamentals">
-            <strong>Read our accessibility guide</strong>
+            Read our accessibility guide
           </Link>
         </Title>
       </CardBody>
