@@ -37,7 +37,7 @@ Our black color palette was updated and a new, lighter gray was added.
 **Red color palette**
 Two new colors were added to our red color palette.
 
-| Variable(s) affected | New or updated color values|
+| Variables affected | New or updated color values|
 | -------------------- | -------------------- |
 | --pf-v5-global--palette--red-9999  | #fe5142 |
 | --pf-v5-global--palette--red-8888  | #ff7468 |
