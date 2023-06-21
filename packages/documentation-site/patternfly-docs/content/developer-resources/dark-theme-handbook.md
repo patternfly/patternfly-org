@@ -66,7 +66,7 @@ Two new colors were added to our red color palette.
 
 ## Best practices
 
-The following are some best practices for designing and implementing applications to make it easier to support light and dark theming. We recommend that you keep these considerations in mind for any new development.
+To make it easier to support light and dark theming in your application, we recommend considering these best practices during design and development:
 
 * Using PatternFly components without customizations will make it easier to implement dark theme in your application. Most of the problems encountered have been around the use of custom styles, overrides to PatternFly styles, and non-PatternFly components. Whenever possible, to ensure consistent styling and behavior when switching themes, try and use PatternFly components as they are.
 
