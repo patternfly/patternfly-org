@@ -5,7 +5,7 @@ section: get-started
 source: Major-release-upgrade
 ---
 
-# PatternFly 5
+# PatternFly 5 
 
 Our latest major release introduces new support and functionality to PatternFly, including: 
 
@@ -22,13 +22,13 @@ This guide outlines the major steps you should take to upgrade your product's co
 
 If you need support as you upgrade to PatternFly 5, the PatternFly team is here to help. Reach out to us on [Slack](https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ) or ask a question on our [GitHub discussion board](https://github.com/orgs/patternfly/discussions). We'll always do our best to answer your questions and connect you with the right people quickly. 
 
-# Upgrade your product's codebase
+## Upgrade your product's codebase
 
 When you upgrade your product to PatternFly 5, several breaking changes will likely be introduced to your product’s codebase. We are using a suite of Codemods to simplify and streamline the upgrade process. Instead of requiring you to manually identify all errors and issues in your codebase, you can run our Codemods to quickly identify and fix major issues. Keep in mind that some changes will still require manual intervention, but our Codemods can automatically fix a large amount of issues and flag any issues that do require manual work.
 
 To utilize our Codemods, refer to the following instructions. You can also [view the project on GitHub](https://github.com/patternfly/pf-codemods/) for additional details.
 
-##  Run our Codemods
+###  Run our Codemods
 
 **Note:** Running Codemods after making manual changes will lead to even more manual intervention and cleanup. Because of this, we strongly recommend running Codemods _before_ making any manual changes to your codebase.
 
@@ -53,7 +53,7 @@ npx @patternfly/pf-codemods@latest <path to your source code> --exclude menu-sea
 
 7. Run Codemods multiple times to ensure that all issues are flagged and addressed.
 
-# Review and update variable and class names
+## Review and update variable and class names
 
 We changed component class names, layout class names, utility class names, CSS variables, and SCSS variables. These changes mean that any existing CSS overrides will likely be targeting outdated styles. These changes will break all custom CSS overrides that reference any PatternFly class names or CSS variables, so it is important to review your overrides and ensure that they align with our updated naming conventions, which are detailed in this section. 
 
@@ -72,13 +72,13 @@ For PatternFly 5, class names, variable names, and SCSS objects have all had `v5
 
 **Note:** PatternFly modifier classes, such as `pf-m-expanded` are not versioned and retain the same formatting that they had for PatternFly 4. 
 
-## Utilize our `class-name-updater` Codemod
+### Utilize our `class-name-updater` Codemod
 
 We offer [a `class-name-updater` Codemod](https://github.com/patternfly/pf-codemods/tree/main/packages/class-name-updater) to help support your updates. This utility automatically identifies class names that need to be updated as a result of the introduction of versioned class names in Patternfly v5, which helps highlight places in your codebase that may require changes to class names. Add the `--fix` flag to allow run the code mod and fix issues where possible. 
 
 **Note:** It is important to consider that this utility performs a simple ‘find and replace’, so it's possible that it will inadvertently identify code that is formatted similarly to a PatternFly class name, but is not one.
 
-# Upgrade deprecated components
+## Upgrade deprecated components
 
 You will have until our next major release to update the code for your components to match our newest recommendations. If you have not adopted our recommended implementation at that time, your components will be outdated and may not function as needed.
 
