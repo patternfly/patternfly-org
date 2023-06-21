@@ -38,8 +38,7 @@ const HeaderTools = ({
   hasVersionSwitcher,
   algolia,
   hasDarkThemeSwitcher,
-  topNavItems,
-  pathPrefix
+  topNavItems
 }) => {
   const initialVersion = staticVersions.Releases.find(release => release.latest);
   const latestVersion = versions.Releases.find(version => version.latest);
@@ -190,7 +189,6 @@ export function attachDocSearch(algolia, inputSelector, timeout) {
 }
 
 export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp }) => {
-  const pathPrefix = process.env.pathPrefix;
   const algolia = process.env.algolia;
   const hasGdprBanner = process.env.hasGdprBanner;
   const hasVersionSwitcher = process.env.hasVersionSwitcher;
@@ -234,7 +232,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
         </PageToggleButton>
       </MastheadToggle>
       <MastheadMain>
-        <MastheadBrand href={prurl || pathPrefix || '/'}>
+        <MastheadBrand href={prurl || '/'}>
           {prnum ? `PR #${prnum}` : (
             <Brand src={logoBase} alt="PatternFly logo" widths={{ default: '180px', '2xl': '220px' }}>
               <source media="(min-width: 768px)" srcSet={logoMd} />
@@ -250,7 +248,6 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
             algolia={algolia}
             hasVersionSwitcher={hasVersionSwitcher}
             hasDarkThemeSwitcher={hasDarkThemeSwitcher}
-            pathPrefix={pathPrefix}
             topNavItems={topNavItems}
           />
         )}

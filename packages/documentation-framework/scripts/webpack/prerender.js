@@ -8,8 +8,7 @@ const ssrPrepass = require('react-ssr-prepass');
 
 // This function is effectively synchronous because it mutates global.setTimeout
 // Only allow one copy at a time to run
-async function prerender(url, pathPrefix) {
-  url = `${pathPrefix}${url}`;
+async function prerender(url) {
   const location = { pathname: url };
   // For @reach/router
   global.history = {};
