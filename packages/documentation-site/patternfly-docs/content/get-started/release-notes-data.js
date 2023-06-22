@@ -840,10 +840,10 @@ function handler2(_event, id) {};
   },
   {
     component: "Empty state",
-    description: (<>Added the <code className='ws-code'>EmptyStateHeader</code> component, which should now be passed an <code className='ws-code'>EmptyStateIcon</code> to the <code className='ws-code'>icon</code> prop
+    description: (<>Added the <code className='ws-code'>EmptyStateHeader</code> component, which should now be passed an <code className='ws-code'>EmptyStateIcon</code> to the <code className='ws-code'>icon</code> property
       and the main title should be passed to <code className='ws-code'>titleText</code> property. You can also explicitly specify title's heading level
       with <code className='ws-code'>headingLevel</code>  property.<br/><br/>
-      Added the <code className='ws-code'>EmptyStateFooter</code> component. It should wrap the content which follows after EmptyStateBody inside EmptyState.</>),
+      Added the <code className='ws-code'>EmptyStateFooter</code> component. It should wrap the content which follows after <code className='ws-code'>EmptyStateBody</code> inside <code className='ws-code'>EmptyState</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8737",
     details: (
       <TextContent>
@@ -895,7 +895,7 @@ function handler2(_event, id) {};
   },
   {
     component: "Empty state",
-    description: (<>Updated the <code className='ws-code'>icon</code> property on <code className='ws-code'>EmtpyStateIcon</code> to be required.</>),
+    description: (<>Updated the <code className='ws-code'>icon</code> property on <code className='ws-code'>EmptyStateIcon</code> to be required.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8737",
     repo: "React",
     fixedWithCodeMod: false
@@ -927,7 +927,7 @@ function handler2(_event, id) {};
   },
   {
     component: "Empty state",
-    description: (<>Renamed the <code className='ws-code'>EmptyStateVariant</code> enum and property values 'small' to 'sm' and 'large' to 'lg'.</>),
+    description: (<>Renamed the <code className='ws-code'>EmptyStateVariant</code> enum and property values "small" to "sm" and "large" to "lg".</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8737",
     details: (
       <TextContent>
@@ -1010,7 +1010,7 @@ function handler2(_event, id) {};
   },
   {
     component: "File upload",
-    description: (<>Updated the <code className='ws-code'>onTextChange</code> property for FileUploadField and FileUpload so that the <code className='ws-code'>event</code> parameter is the first parameter. Handlers may require an update.</>),
+    description: (<>Updated the <code className='ws-code'>onTextChange</code> property for <code className='ws-code'>FileUploadField</code> and <code className='ws-code'>FileUpload</code> so that the <code className='ws-code'>event</code> parameter is the first parameter. Handlers may require an update.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8955",
     details: (
       <TextContent>
@@ -1323,7 +1323,7 @@ function handler2(_event, id) {};
     fixedWithCodeMod: true
   },
   {
-    component: "Select option",
+    component: "Select",
     description: (<>Renamed the <code className='ws-code'>hasCheck</code> property for the next implementation of SelectOption to <code className='ws-code'>hasCheckbox</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8403",
     details: (
@@ -1392,7 +1392,7 @@ function handler2(_event, id) {};
     fixedWithCodeMod: true
   },
   {
-    component: "Nav",
+    component: "Navigation",
     description: (<>Updated the default value of the <code className='ws-code'>aria-label</code> attribute with a <code className='ws-code'>horizontal-subnav</code> variant to "local" (previously the default value was "Global").</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8213",
     repo: "React",
@@ -1400,7 +1400,7 @@ function handler2(_event, id) {};
   },
   {
     component: "Input group",
-    description: (<>pull request #9176 affects this as well as #9074. Added the InputGroupItem component, which must wrap all non-InputGroupText children passed to an InputGroup. The InputGroupItem component may need to have the <code className='ws-code'>isFill</code>, <code className='ws-code'>isBox</code>, and/or <code className='ws-code'>isPlain</code> properties adjusted to retain styling.</>),
+    description: (<>pull request #9176 affects this as well as #9074. Added the <code className='ws-code'>InputGroupItem</code> component, which must wrap all non-<code className='ws-code'>InputGroupText</code> children passed to an <code className='ws-code'>InputGroup</code>. The <code className='ws-code'>InputGroupItem</code> component may need to have the <code className='ws-code'>isFill</code>, <code className='ws-code'>isBox</code>, and/or <code className='ws-code'>isPlain</code> properties adjusted to retain styling.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9074",
     details: (
       <TextContent>
@@ -2050,7 +2050,7 @@ function handleChange2(_event, text) {};
     fixedWithCodeMod: true
   }, {
     component: "Code editor",
-    description: (<>Removed various deprecated propertiesfrom <code className='ws-code'>CodeEditorControl</code>. Codemods will suggest using the <code className='ws-code'>tooltipProps</code> property instead.</>),
+    description: (<>Removed various deprecated properties from <code className='ws-code'>CodeEditorControl</code>. Codemods will suggest using the <code className='ws-code'>tooltipProps</code> property instead.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8624",
     details: (
       <TextContent>
@@ -2097,7 +2097,7 @@ function handleChange2(_event, text) {};
     repo: "React",
     fixedWithCodeMod: false
   }, {
-    component: "ProgressStepper",
+    component: "Progress stepper",
     description: (<>Updated the internal <code className='ws-code'>aria-labelledby</code> for <code className='ws-code'>ProgressStep</code> to be conditionally applied only when the <code className='ws-code'>popoverRender</code> property is also passed.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8649",
     repo: "React",
@@ -2450,7 +2450,7 @@ const srcPath = {xs: 'file/path'};
     description: (
       <>
         Removed the <code className="ws-code">aria-label</code> property on
-        Menu as it should be passed to MenuList instead.
+        <code className="ws-code">Menu</code> as it should be passed to <code className="ws-code">MenuList</code> instead.
       </>
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8649",
@@ -2601,11 +2601,11 @@ function handler2(_event, id) {};
     fixedWithCodeMod: true,
   },
   {
-    component: "Nav",
+    component: "Navigation",
     description: (
       <>
         Updated the <code className="ws-code">onSelect</code> and{" "}
-        <code className="ws-code">onToggle</code> properties for Nav so that the{" "}
+        <code className="ws-code">onToggle</code> properties for nav so that the{" "}
         <code className="ws-code">event</code> parameter is the first parameter, and
         have removed the event property from the{" "}
         <code className="ws-code">selectedItem</code> and{" "}
@@ -2652,8 +2652,8 @@ function toggleHandler2(_event, id) {};
     fixedWithCodeMod: true,
   },
   {
-    component: "Nav",
-    description: <>The placement of Nav flyouts in the DOM has been changed.</>,
+    component: "Navigation",
+    description: <>hanged the placement of nav flyouts in the DOM.</>,
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/8628",
     repo: "React",
     fixedWithCodeMod: false,
@@ -2662,7 +2662,7 @@ function toggleHandler2(_event, id) {};
     component: "Dropdown", // TODO: make sure this is in the correct place once everything is merged
     description: (
       <>
-        Promoted the "Next" implementation of our Dropdown and it is now the
+        Promoted the new implementation of dropdown, which is now the
         default implementation.
       </>
     ),
@@ -2693,7 +2693,7 @@ function toggleHandler2(_event, id) {};
     component: "Select", // TODO: make sure this is in the correct place once everything is merged
     description: (
       <>
-        Promoted the "Next" implementation of our Select and it is now the
+        Promoted the new implementation of select, which is now the
         default implementation.
       </>
     ),
@@ -2724,7 +2724,7 @@ function toggleHandler2(_event, id) {};
     component: "Wizard", // TODO: make sure this is in the correct place once everything is merged
     description: (
       <>
-        Promoted the "Next" implementation of our Wizard and it is now the
+        Promoted the new implementation of wizard, which is now
         default implementation.
       </>
     ),
@@ -4179,7 +4179,7 @@ function handler2(_event, id) {};
         <Text component={TextVariants.p}>The following changes were also made:</Text>
         <TextList>
           <TextListItem>The toggle passed to the <code  className='ws-code'>ActionsColumn</code> must be a <code  className='ws-code'>MenuToggle</code> component</TextListItem>
-          <TextListItem>Removed the <code  className='ws-code'>dropdownPosition</code>, <code  className='ws-code'>dropdownDirection</code>, and <code  className='ws-code'>menuAppendTo</code> properties, which should be replaced with the <code  className='ws-code'>popperProps</code> prop</TextListItem>
+          <TextListItem>Removed the <code  className='ws-code'>dropdownPosition</code>, <code  className='ws-code'>dropdownDirection</code>, and <code  className='ws-code'>menuAppendTo</code> properties, which should be replaced with the <code  className='ws-code'>popperProps</code> property</TextListItem>
         </TextList>
       </TextContent>
     ),
@@ -4717,7 +4717,7 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
     fixedWithCodeMod: false
   }, {
     component: "Label/Label group",
-    description: "Used gap instead of item margins",
+    description: "Used gap instead of item margins.",
     pullRequestURL: "https://github.com/patternfly/patternfly/pull/5221",
     details: "Updated the label component to use CSS `gap` to space its children instead of using `margin` (same as chip).",
     repo: "HTML/CSS",
@@ -4733,7 +4733,7 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
   },
   {
     component: "Label/Label group",
-    description: " Allow text to truncate",
+    description: " Allow text to truncate.",
     pullRequestURL: " https://github.com/patternfly/patternfly/pull/5364",
     details: "Updated the HTML structure so that text truncation is supported by default.",
     repo: "HTML/CSS",
@@ -4741,9 +4741,9 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
   },
   {
     component: "Layouts",
-    description: "Updated level, split, stack to use gap",
+    description: "Updated level, split, stack to use gap.",
     pullRequestURL: "https://github.com/patternfly/patternfly/pull/5585",
-    details: "Updated the “gutter” variation of these layouts to use CSS `gap` to create gutters between children instead of `margin`",
+    details: "Updated the “gutter” variation of these layouts to use CSS `gap` to create gutters between children instead of `margin`.",
     repo: "HTML/CSS",
     fixedWithCodeMod: false
   },
