@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.71 (2023-06-22)
+
+
+### Bug Fixes
+
+* **deps:** update docs-framework to the latest prereleases ([#3615](https://github.com/patternfly/patternfly-org/issues/3615)) ([54091c3](https://github.com/patternfly/patternfly-org/commit/54091c358f01f65269f314c2717ad58767aa669a))
+
+
+
+
+
 # 0.12.0-alpha.70 (2023-06-22)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
