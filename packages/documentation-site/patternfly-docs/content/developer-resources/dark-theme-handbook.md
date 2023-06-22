@@ -11,9 +11,9 @@ Dark theme styles ship with PatternFly CSS by default. To enable dark theme, add
 Dark theme can also be applied based on the browser’s `prefers-color-scheme` media query. The recommended way to apply dark theme based on this media query is to use JavaScript to detect the media query and apply the `pf-v5-theme-dark` class. This allows a product to simply manipulate a single class to toggle dark theme based on user preference. [Adam Argyle wrote a great article](https://web.dev/building-a-theme-switch-component/#javascript) on using JavaScript to manage dark theme preference, using the `prefers-color-scheme` media query alongside a manual button to toggle dark theme on or off. 
 
 ## What’s changed?
-There are some notable changes and differences between light and dark themes, outlined in this section. 
+There are some notable changes and differences between light and dark themes, outlined in this section. Dark theme contains a number of additions and overrides to our color palettes, global variables, and component specific CSS. 
 
-To view a list of all dark theme CSS overrides [view our override file on GitHub](https://github.com/patternfly/patternfly/blob/main/src/patternfly/sass-utilities/themes/dark/scss-variables.scss). 
+Outlined below are the main changes to our colors and global variables - to view the full source of these changes, see the [dark theme color overrides](https://github.com/patternfly/patternfly/blob/main/src/patternfly/sass-utilities/themes/dark/colors.scss) and [dark theme global variable overrides](https://github.com/patternfly/patternfly/blob/main/src/patternfly/sass-utilities/themes/dark/scss-variables.scss) on GitHub. 
 
 **Black color palette**
 
@@ -64,6 +64,10 @@ Two new colors were added to our red color palette.
 **Status colors**
 
 `--pf-v5-global--primary-color--300` was added as a new primary background color to meet contrast requirements for elements that have text on top, such as primary buttons and unread badges.
+
+**Component style overrides**
+
+Where there are dark theme style overrides needed for specific components, you can find them alongside the components stylesheet in a folder with the structure `themes/dark/[component].scss`. For example, the button component's dark theme overrides are in [components/Button/themes/dark/button.scss](https://github.com/patternfly/patternfly/blob/main/src/patternfly/components/Button/themes/dark/button.scss)
 
 ## Best practices
 
