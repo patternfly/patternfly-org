@@ -13,11 +13,10 @@
         "@patternfly/react-styles": "5.0.0-prerelease.5",
         "@patternfly/react-table": "5.0.0-prerelease.13",
         "@patternfly/react-tokens": "5.0.0-prerelease.5",
-        "@patternfly/react-catalog-view-extension": "4.95.1",
+        "@patternfly/react-catalog-view-extension": "5.0.0-alpha.2",
         "@patternfly/react-console": "5.0.0-alpha.2",
-        "@patternfly/react-inline-edit-extension": "4.86.118",
-        "@patternfly/react-log-viewer": "4.87.100",
-        "@patternfly/react-topology": "4.91.27",
+        "@patternfly/react-log-viewer": "5.0.0-alpha.2",
+        "@patternfly/react-topology": "5.0.0-alpha.2",
         "@patternfly/react-virtualized-extension": "4.88.113"
       }
     },
