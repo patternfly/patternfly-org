@@ -2564,7 +2564,7 @@ const srcPath = {xs: 'file/path'};
     fixedWithCodeMod: false,
   },
   {
-    component: "Multiple file upload",
+    component: "File upload (multiple)",
     description: (
       <>
         Updated the <code className="ws-code">onFileDrop</code> property for
@@ -3025,7 +3025,7 @@ function toggleDropdown(_event, isOpen) {};
     fixedWithCodeMod: true,
   },
   {
-    component: "Page header",
+    component: "Page",
     description: (
       <>
         Deprecated the <code className="ws-code">PageHeader</code> components.
@@ -3070,7 +3070,7 @@ import {
     fixedWithCodeMod: true,
   },
   {
-    component: "Page header",
+    component: "Page",
     description: (
       <>
         Updated <code className="ws-code">PageHeader</code>'s logo to only be an
@@ -4716,7 +4716,7 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
     repo: "React",
     fixedWithCodeMod: false
   }, {
-    component: "Label/Label group",
+    component: "Label",
     description: "Used gap instead of item margins.",
     pullRequestURL: "https://github.com/patternfly/patternfly/pull/5221",
     details: "Updated the label component to use CSS `gap` to space its children instead of using `margin` (same as chip).",
@@ -4724,7 +4724,7 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
     fixedWithCodeMod: false
   },
   {
-    component: "Label/Label group",
+    component: "Label",
     description: " Add wrappers for content and actions to manage styling embedded components",
     pullRequestURL: " https://github.com/patternfly/patternfly/pull/5360",
     details: "Added wrapping elements for both the label content and actions to make the layout more flexible. (same as chip).",
@@ -4732,7 +4732,7 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
     fixedWithCodeMod: false
   },
   {
-    component: "Label/Label group",
+    component: "Label",
     description: " Allow text to truncate.",
     pullRequestURL: " https://github.com/patternfly/patternfly/pull/5364",
     details: "Updated the HTML structure so that text truncation is supported by default.",
