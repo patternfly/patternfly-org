@@ -40,7 +40,7 @@ Extensions are holistic solutions that utilize multiple PatternFly components, t
 
 ## Additional developer resources
 
-### [CSS variable system](developer-resources/global-css-variables)
+### [CSS variable system](/developer-resources/global-css-variables)
 
 You can customize PatternFly for your project using the CSS variable system, which enables you to change style elements like color across your project. The CSS variable system is a two-layer theming system where global variables inform component variables.
 
