@@ -69,10 +69,7 @@ const cardData = [
 
 const AggregateCards = () => {
   return (
-    <Gallery
-      hasGutter
-      minWidths={{ xl: '30%' }}
-    >
+    <Gallery hasGutter minWidths={{xl: "30%"}}>
       {cardData.map((card, cardIndex) => {
         let cardAlign;
         return (
@@ -188,7 +185,9 @@ const HomePage = () => (
     <PageSection isWidthLimited className="v5-featured-posts">
       <Flex direction={{default: "column", md: "row"}} gap={{default: "gapMd"}}>
         <FlexItem flex={{default: "flex_1"}}>
-          <Title headingLevel="h2" size="2xl">Featured blog posts</Title>
+          <Title headingLevel="h2" size="2xl">
+            Featured blog posts
+          </Title>
         </FlexItem>
         <Button
           isInline
@@ -293,7 +292,9 @@ const HomePage = () => (
     <PageSection isWidthLimited className="v5-featured-posts">
       <Flex direction={{default: "column", md: "row"}} gap={{default: "gapMd"}}>
         <FlexItem flex={{default: "flex_1"}}>
-          <Title headingLevel="h2" size="2xl">Stay informed</Title>
+          <Title headingLevel="h2" size="2xl">
+            Stay informed
+          </Title>
         </FlexItem>
         <Button
           isInline
@@ -309,9 +310,7 @@ const HomePage = () => (
       </Flex>
     </PageSection>
     <PageSection isWidthLimited>
-      <Flex>
-        <AggregateCards />
-      </Flex>
+      <AggregateCards />
     </PageSection>
   </React.Fragment>
 );
