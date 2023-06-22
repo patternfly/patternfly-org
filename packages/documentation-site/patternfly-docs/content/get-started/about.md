@@ -8,53 +8,53 @@ import './get-started.css';
 
 PatternFly is an open source design system created to enable consistency and usability across a wide range of applications and use cases. PatternFly provides clear standards, guidance, and tools that help designers and developers work together more efficiently and build better user experiences.
 
-## Basic structure
+## What's included in PatternFly?
 
-### Components
+### [Design foundations](/design-foundations/about)
 
-Components are like building blocks. Designed to be flexible and modular, you can mix and match components to create a solution for almost any UI problem.
+These are the foundational elements of the design system, like color, typography, icons, and spacing.
 
-### Layouts
+### [Components](/components/all-components)
 
-A layout provides a fully responsive page structure that keeps your components organized and aligned regardless of screen size.
+Components are like building blocks. Designed to be flexible and modular, you can mix and match components to create a solution for almost any UI problem. Many components are accompanied by demos and design guidelines that show how the component can be used in context. Demos and examples also provide useful starter code that can be copied and reused.
 
-### Demos
+### [Layouts](/layouts/about)
 
-Components are better together. Demos show how multiple components can be used in a single design. They also provide some useful starter code, so the days of creating complex layouts from scratch are over.
+Layouts provide a way to arrange componpents on a page. Use of PatternFly layouts will ensure that your application is responsive to changes in screen size.
 
-## Design guidelines
+### [Patterns](/patterns/about)
 
-### Styles
+Patterns document best practices and solutions to common use cases and design problems. Some patterns are accompanied by demos that provide an interactive example and reusable code to support implementation.
 
-Style guidelines define foundational elements of the design system, like color, typography, and spacing.
+### [Accessibility guidelines](/accessibility/accessibility-fundamentals)
 
-### Usage and behavior
+Accessibility guidelines help designers and developers apply components to create applications that are usable and accessible by all users.
 
-Usage and behavior guidelines communicate standards and best practices for common design patterns like navigation, dashboards, or forms.
-
-### UX writing
+### [UX writing style guide](/ux-writing/about)
 
 Content guidelines provide principles and best practices around writing for user experience along with general voice and style guidance.
 
-[**View design guidelines**](/design-foundations/colors/) <i className="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
+### [Extensions](/extensions/about)
 
-## Additional tools
+Extensions are holistic solutions that utilize multiple PatternFly components, typically addressing cross-project use cases. They provide reusable code that can drive consistency throughout a user’s journey across products and platforms.
 
-### CSS variables
+## Additional developer resources
+
+### [CSS variable system](/developer-resources/global-css-variables)
 
 You can customize PatternFly for your project using the CSS variable system, which enables you to change style elements like color across your project. The CSS variable system is a two-layer theming system where global variables inform component variables.
 
 **Global variables**
+
 Global variables define and enforce style elements (like global values for color, spacing, and font size) across the entire system.
 
 **Component variables**
+
 Component variables are used to define custom properties at the component level. Component variables are always defined by global variables.
 
-[**Learn more and view CSS variables**](/developer-resources/global-css-variables) <i className="ws-content-blueArrow fas fa-arrow-right pf-v5-u-mx-sm"></i>
+### [Utility classes](/utility-classes/about)
 
-### Utilities
-
-Utilities are a set of classes that enable you to further customize and modify elements in your project without having to write any custom CSS.
+Utility classes enable you to further customize and modify elements in your project without having to write any custom CSS.
 
 For example, you might use a utility class to add additional spacing between elements, align content in a layout, or even add a box shadow to an element.
 
@@ -67,7 +67,7 @@ For example, you might use a utility class to add additional spacing between ele
 | Safari  | latest  |
 | Edge    | latest  |
 
-If you encounter an issue with an earlier browser version and have a question about whether or not that behavior should be supported, please feel free to contact us.
+If you encounter an issue with an earlier browser version and have a question about whether or not that behavior should be supported, please feel free to [contact us](/get-started/community).
 
 <!-- This section is WIP ** we need to wait to see how this content gets included **
 
@@ -105,14 +105,19 @@ as well as relevant examples in the documentation are all labeled as beta.
 
 For more information about beta components, visit [this page](https://github.com/patternfly/patternfly-org/tree/main/beta-component-promotion).
 
-### Major release cadence
+## PatternFly release cadence
 
-Currently, PatternFly plans to release a new major release each June. Major releases will be the only releases with 
-planned breaking changes. Along with each major release, the PatternFly team will provide thorough migration guides and 
-code mods to aid product teams in upgrading.
+Currently, PatternFly plans to release a new major release annually. Major releases will be the only releases with 
+planned breaking changes. Along with each major release, the PatternFly team will provide thorough upgrade guides and Codemods to support the work needed to upgrade to the latest version of PatternFly.
+
+Minor feature releases will be available quarterly to include new features and enhancements (non-breaking), with interim bug fix releases available on demand.
 
 Periodically, previews of updated React implementations of PatternFly components will be made available under a 'React 
 next' tab in the component docs. During major releases, these React next implementations may be promoted to the
-recommended implementation. In such instances, the previous implementation will be marked deprecated. Any deprecated 
-implementation of components will remain available (though will not be further enhanced or maintained) until at least 
-the subsequent major release.
+recommended implementation. In such instances, the previous implementation will be marked as deprecated. Any deprecated 
+implementation of components will remain available until at least the subsequent major release, but it will not be further enhanced or maintained.
+
+## Requesting new features and enhancements
+PatternFly is built on the needs of our community of stakeholders. To request a new feature or an enhancement to an existing feature, first open a new discussion topic in the [PatternFly feature request discussion forum](https://github.com/orgs/patternfly/discussions/categories/feature-requests). 
+
+The PatternFly team will review and prioritize your issue, taking into account scope and technical constraints. If accepted, your feature request will be placed on the PatternFly feature roadmap for further design and development. After this, the PatternFly design team will work with you to create a design proposal and facilitate reviews.

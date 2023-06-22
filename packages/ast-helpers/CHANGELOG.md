@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0-alpha.70 (2023-06-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.69 (2023-06-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.68 (2023-06-22)
+
+
+### Bug Fixes
+
+* **docs:** fixed broken css vars header link ([#3617](https://github.com/patternfly/patternfly-org/issues/3617)) ([ad2b012](https://github.com/patternfly/patternfly-org/commit/ad2b01252d68cf8c4e53fac283b142b13994b222))
+
+
+
+
+
+# 0.12.0-alpha.67 (2023-06-21)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.66 (2023-06-21)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.65 (2023-06-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 0.12.0-alpha.64 (2023-06-15)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
