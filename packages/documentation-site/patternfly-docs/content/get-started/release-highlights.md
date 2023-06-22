@@ -67,11 +67,11 @@ With our previous implementation of cards, screen readers were unable to determi
 
 To improve accessibility and usability for both keyboard and screen reader users, our new [selectable and clickable cards](/components/card#selectable) are redesigned to help users determine when a card can be selected.
 
-Previous design:
+Our **previous design** styled selected cards with a colored underline:
 
 <img src="./img/pf4-selectable-card.png" alt="Shown is a UI with a grid of cards, one of which is selected and underlined in blue."/>
 
-New design:
+Our **new design** styles selected cards with a colored outline and darkened background color:
 
 <img src="./img/pf5-selectable-card.png" alt="Shown is a UI with a grid of cards, one of which is selected and outlined in blue."/>
 
@@ -151,12 +151,12 @@ Whenever a new component or major component enhancement is introduced to Pattern
 
 - [Charts with patterns](/charts/patterns)
 - [Date picker](/components/date-and-time/date-picker)
-- [Dropdown-next (our new recommendation for Dropdown)](/components/menus/dropdown)
+- [Dropdown-next (our new recommendation for dropdown)](/components/menus/dropdown)
 - [Icon](/components/icon)
 - [Progress stepper](/components/progress-stepper)
 - [Progress with helper text](/components/progress#helper-text)
 - [Search input](/components/search-input)
-- [Select-next (our new recommendation for Select)](/components/menus/select)
+- [Select-next (our new recommendation for select)](/components/menus/select)
 - Tabs variants: 
     - [Dynamic](/components/tabs#dynamic-tabs)
     - [Horizontal overflow](/components/tabs#horizontal-overflow-tabs)
@@ -165,4 +165,4 @@ Whenever a new component or major component enhancement is introduced to Pattern
 - [Text input group](/components/text-input-group)
 - [Tile](/components/tile)
 - [Truncate](/components/truncate)
-- [Wizard-next (our new recommendation for Wizard)](/components/wizard)
+- [Wizard-next (our new recommendation for wizard)](/components/wizard)
