@@ -46,31 +46,5 @@
         }
       </script>
     <% } %>
-    <script>
-      (() => {
-        if (window.matchMedia('(prefers-color-scheme)').media === 'not all') {
-          return;
-        }
-        
-        const favicons = document.querySelectorAll('link[rel*="icon"]');
-        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        const updateFavicon = (darkModeOn) => {
-          favicons.forEach((link) => {      
-            link.href = darkModeOn ? link.dataset.hrefDark : link.dataset.hrefLight;   
-          });
-        };
-
-        darkModeMediaQuery.addEventListener('change', (e) => {
-          const darkModeOn = e.matches;
-          console.log({darkModeOn, favicons});
-          updateFavicon(darkModeOn);
-        });
-
-        // trigger on initial page load
-        updateFavicon(darkModeMediaQuery.matches);
-  })();
-
-      
-    </script>
   </body>
 </html>
