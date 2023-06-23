@@ -15,6 +15,9 @@ const colorFamilies = [
 
 const ColorEntry = ({varColor, idx, computedStyles}) => {
   const varName = `--pf-v5-chart-color-${varColor}-${idx}00`;
+  const varValue = computedStyles?.getPropertyValue
+    ? computedStyles.getPropertyValue(varName).toUpperCase()
+    : ''; 
   return (
     <>
       <GridItem span={2}>
@@ -22,7 +25,7 @@ const ColorEntry = ({varColor, idx, computedStyles}) => {
       </GridItem>
       <GridItem span={10}>
         <div className="ws-content-chart-colors-gallery--information">
-          <div>{computedStyles.getPropertyValue(varName).toUpperCase()}</div>
+          <div>{varValue}</div>
           <div><code className="ws-code">{varName}</code></div>
         </div>
       </GridItem>
@@ -47,8 +50,7 @@ const ColorFamily = ({headingText, varColor, computedStyles}) => {
 };
 
 const ColorsGrid = () => {
-  const getInitialRootStyles = () => getComputedStyle(document.documentElement);
-  let [computedStyles, setComputedStyles] = React.useState(getInitialRootStyles);
+  let [computedStyles, setComputedStyles] = React.useState();
 
   const updateComputedStyles = mutationList => {
     for (const mutation of mutationList) {
@@ -60,9 +62,11 @@ const ColorsGrid = () => {
       }
     }
   }
-  const observer = new MutationObserver(updateComputedStyles);
   
   React.useEffect(() => {
+    const getInitialRootStyles = () => typeof window !== "undefined" && window.getComputedStyle && getComputedStyle(document.documentElement);
+    setComputedStyles(getInitialRootStyles);
+    const observer = new MutationObserver(updateComputedStyles);
     observer.observe(document.documentElement, {attributes: true});
     return () => observer.disconnect();
   }, []);
