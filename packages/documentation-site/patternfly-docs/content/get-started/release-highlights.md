@@ -16,10 +16,7 @@ While PatternFly has supported a dark theme in beta for some time, our dark them
 
 We are also currently working on introducing more robust theming capabilities in a future PatternFly major release. Going forward, all future themes will include a light and dark theme.
 
-There are a couple of ways to enable dark theme in your products. You can: 
-
-1. Add `patternfly-theme-dark.css` to a page and add the `.pf-theme-dark` class to the page's `<html>` element, or 
-2. Apply the `.pf-theme-dark` class to the browser's `prefers-color-scheme` media query. 
+To enable dark theme in your products, add the `.pf-theme-dark` class to the `<html>` element.
 
 For information regarding the shipping and implementation processes for dark theme, as well as general advice for its use read our [dark theme handbook.](/developer-resources/dark-theme-handbook)
 
@@ -41,7 +38,7 @@ Our [codemods](/get-started/upgrade#run-our-codemods) should take care of most o
 
 ## Changes to React icons
 
-To improve the consistency of icon usage across projects adopting PatternFly, we are no longer using inline styles, color, or size for icons. Now, React icons come with a built-in class `pf-v5-svg`, which gives an icon a default height, width, and color.
+To improve the consistency of icon usage across projects adopting PatternFly, we are no longer using inline styles, color, or size for icons. Instead, React icons come with a built-in class `pf-v5-svg`, which gives an icon a default height, width, and vertical alignment. An icon's color is now set on the SVG file itself, using the `fill` attribute.
 
 If you want a custom color or size, wrap your icon in the [`<Icon>` React component](/components/icon), which comes with colors, size, etc.
 
