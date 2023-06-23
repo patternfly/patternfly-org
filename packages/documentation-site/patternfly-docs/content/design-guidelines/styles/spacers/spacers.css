@@ -57,7 +57,7 @@
 }
 
 .ws-content-correct {
-  color: var(--pf-v5-global--info-color--100);
+  color: var(--pf-v5-global--success-color--100);
 }
 
 .ws-content-correct i {

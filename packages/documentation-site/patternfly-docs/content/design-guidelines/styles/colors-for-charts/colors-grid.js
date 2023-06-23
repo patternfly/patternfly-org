@@ -1,50 +1,51 @@
 import React from 'react';
-import { Grid, GridItem } from '@patternfly/react-core';
+import { Grid, GridItem, Flex, FlexItem } from '@patternfly/react-core';
+import '@patternfly/patternfly/patternfly-charts.css';
 import '@patternfly/patternfly/patternfly-charts-theme-dark.css';
 
 const colorFamilies = [
-  {headingText: 'Blue', varColor: 'blue'},
-  {headingText: 'Green', varColor: 'green'},
-  {headingText: 'Cyan', varColor: 'cyan'},
-  {headingText: 'Purple', varColor: 'purple'},
-  {headingText: 'Gold', varColor: 'gold'},
-  {headingText: 'Orange', varColor: 'orange'},
-  {headingText: 'Red', varColor: 'red'},
-  {headingText: 'Grey', varColor: 'black'}
+  'Blue',
+  'Green',
+  'Cyan',
+  'Purple',
+  'Gold',
+  'Orange',
+  'Red',
+  'Black'
 ];
 
-const ColorEntry = ({varColor, idx, computedStyles}) => {
-  const varName = `--pf-v5-chart-color-${varColor}-${idx}00`;
+const ColorEntry = ({color, idx, computedStyles}) => {
+  const varName = `--pf-v5-chart-color-${color.toLowerCase()}-${idx}00`;
   const varValue = computedStyles?.getPropertyValue
     ? computedStyles.getPropertyValue(varName).toUpperCase()
     : ''; 
   return (
-    <>
-      <GridItem span={2}>
+    <Flex gap={{ default: 'gapSm' }} alignItems={{ default: 'alignItemsCenter'}}>
+      <FlexItem>
         <div className="ws-content-chart-colors" style={{ backgroundColor: `var(${varName})`}}></div>
-      </GridItem>
-      <GridItem span={10}>
-        <div className="ws-content-chart-colors-gallery--information">
-          <div>{varValue}</div>
-          <div><code className="ws-code">{varName}</code></div>
-        </div>
-      </GridItem>
-    </>
+      </FlexItem>
+      <FlexItem>
+        <Flex className="ws-content-chart-colors-gallery--information" direction={{ default: 'column' }} gap={{ default: 'gapXs' }}>
+          <FlexItem>{varValue}</FlexItem>
+          <FlexItem><code className="ws-code">{varName}</code></FlexItem>
+        </Flex>
+      </FlexItem>
+    </Flex>
   );
 };
 
-const ColorFamily = ({headingText, varColor, computedStyles}) => {
+const ColorFamily = ({color, computedStyles}) => {
   const entries = [];
   for (let i = 1; i < 6; i++) {
-    entries.push(<ColorEntry varColor={varColor} idx={i} computedStyles={computedStyles} key={`${varColor}-${i}`} />);
+    entries.push(<ColorEntry color={color} idx={i} computedStyles={computedStyles} key={`${color}-${i}`} />);
   }
 
   return (
-    <GridItem sm={12} md={6} lg={4}>
-      <h3 className="pf-v5-c-title pf-m-xl ws-heading ws-title ws-h3">{headingText} family</h3>
-      <Grid>
+    <GridItem>
+      <h3 className="pf-v5-c-title pf-m-xl ws-heading ws-title ws-h3">{color} family</h3>
+      <Flex direction={{ default: 'column' }}  gap={{ default: 'gapMd' }}>
         {entries}
-      </Grid>
+      </Flex>
     </GridItem>
   );
 };
@@ -72,9 +73,9 @@ const ColorsGrid = () => {
   }, []);
 
   return (
-    <Grid>
-      {colorFamilies.map(({headingText, varColor}) => (
-        <ColorFamily headingText={headingText} varColor={varColor} computedStyles={computedStyles} key={`${headingText}`} />
+    <Grid hasGutter sm={12} md={6} lg={4}>
+      {colorFamilies.map(color => (
+        <ColorFamily color={color} computedStyles={computedStyles} key={color} />
       ))}
     </Grid>
   )
