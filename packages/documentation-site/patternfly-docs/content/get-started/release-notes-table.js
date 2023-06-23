@@ -146,7 +146,7 @@ export const ReleaseNotesTable = () => {
           </SelectList>
         </SelectGroup>
         <Divider />
-        <SelectGroup label="Fixed with code mods">
+        <SelectGroup label="Fixed with codemods">
           <SelectList>
             <SelectOption
               itemId="codemod-yes"
@@ -276,7 +276,7 @@ export const ReleaseNotesTable = () => {
                 <Th width={50}>Description</Th>
                 <Th width={10}>PR link</Th>
                 <Th width={20} modifier="wrap" sort={getSortParams(2)}>
-                  Fixed with code mods
+                  Fixed with codemods
                 </Th>
               </Tr>
             </Thead>
@@ -321,7 +321,7 @@ export const ReleaseNotesTable = () => {
                           </TextList>
                         )}
                       </Td>
-                      <Td dataLabel="Fixed with code mods">
+                      <Td dataLabel="Fixed with codemods">
                         {row.fixedWithCodeMod ? "Yes" : "No"}
                       </Td>
                     </Tr>
