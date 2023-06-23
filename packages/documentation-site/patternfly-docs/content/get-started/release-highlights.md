@@ -37,7 +37,7 @@ For more details, refer to [our upgrade guide](/get-started/upgrade#review-and-u
 
 Previously, our event handler parameters weren’t consistently ordered. To meet industry standards, and get everything on the same page, we added event parameters to all of our callbacks and reordered handlers to consistently list the event as the first parameter. Additionally, we made sure that all of our event handlers now pass back an event. This change will make it easier to incorporate third party libraries, especially in the case of form building tools, like Formik.
 
-Our [Codemods](/get-started/upgrade#run-our-codemods) should take care of most of these changes, but if your callback function is defined at the class level you will need to manually update your code.
+Our [codemods](/get-started/upgrade#run-our-codemods) should take care of most of these changes, but if your callback function is defined at the class level you will need to manually update your code.
 
 ## Changes to React icons
 
