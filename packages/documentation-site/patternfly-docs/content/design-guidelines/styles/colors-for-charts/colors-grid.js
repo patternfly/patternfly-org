@@ -36,7 +36,7 @@ const ColorEntry = ({varColor, idx, computedStyles}) => {
 const ColorFamily = ({headingText, varColor, computedStyles}) => {
   const entries = [];
   for (let i = 1; i < 6; i++) {
-    entries.push(<ColorEntry varColor={varColor} idx={i} computedStyles={computedStyles} />);
+    entries.push(<ColorEntry varColor={varColor} idx={i} computedStyles={computedStyles} key={`${varColor}-${i}`} />);
   }
 
   return (
@@ -74,7 +74,7 @@ const ColorsGrid = () => {
   return (
     <Grid>
       {colorFamilies.map(({headingText, varColor}) => (
-        <ColorFamily headingText={headingText} varColor={varColor} computedStyles={computedStyles} />
+        <ColorFamily headingText={headingText} varColor={varColor} computedStyles={computedStyles} key={`${headingText}`} />
       ))}
     </Grid>
   )
