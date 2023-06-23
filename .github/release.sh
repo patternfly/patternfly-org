@@ -18,10 +18,10 @@ LOG=$(git log --format="%s" -1 | grep -Poe "#\d+")
 PR_NUM=${LOG:1}
 
 # for running a dry run
-yarn run lerna version --conventional-commits --no-private --yes --no-git-tag-version --no-push
+# yarn run lerna version --conventional-commits --no-private --yes --no-git-tag-version --no-push
 
 # for publishing
-# yarn run lerna publish --conventional-commits --create-release=github --no-verify-access --no-private  --yes 2>&1 | tee lerna-output.txt
+yarn run lerna publish --conventional-commits --create-release=github --no-verify-access --no-private  --yes 2>&1 | tee lerna-output.txt
 
 if grep -i "Successfully published" lerna-output.txt; # Leave a Github comment
 then
