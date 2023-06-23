@@ -24,15 +24,15 @@ If you need support as you upgrade to PatternFly 5, the PatternFly team is here 
 
 ## Upgrade your product's codebase
 
-When you upgrade your product to PatternFly 5, several breaking changes will likely be introduced to your product’s codebase. We are using a suite of Codemods to simplify and streamline the upgrade process. Instead of requiring you to manually identify all errors and issues in your codebase, you can run our Codemods to quickly identify and fix major issues. Keep in mind that some changes will still require manual intervention, but our Codemods can automatically fix a large amount of issues and flag any issues that do require manual work.
+When you upgrade your product to PatternFly 5, several breaking changes will likely be introduced to your product’s codebase. We are using a suite of codemods to simplify and streamline the upgrade process. Instead of requiring you to manually identify all errors and issues in your codebase, you can run our codemods to quickly identify and fix major issues. Keep in mind that some changes will still require manual intervention, but our codemods can automatically fix a large amount of issues and flag any issues that do require manual work.
 
-To utilize our Codemods, refer to the following instructions. You can also [view the project on GitHub](https://github.com/patternfly/pf-codemods/) for additional details.
+To utilize our codemods, refer to the following instructions. You can also [view the project on GitHub](https://github.com/patternfly/pf-codemods/) for additional details.
 
-###  Run our Codemods
+###  Run our codemods
 
-**Note:** Running Codemods after making manual changes will lead to even more manual intervention and cleanup. Because of this, we strongly recommend running Codemods _before_ making any manual changes to your codebase.
+**Note:** Running codemods after making manual changes will lead to even more manual intervention and cleanup. Because of this, we strongly recommend running codemods _before_ making any manual changes to your codebase.
 
-To run our Codemods, complete the following steps:
+To run our codemods, complete the following steps:
 
 1. Run the following command, adding in the path to your product's source code: 
 
@@ -50,7 +50,7 @@ To run our Codemods, complete the following steps:
 
 6. Build your product.
 
-7. Run Codemods multiple times to ensure that all issues are flagged and addressed.
+7. Run codemods multiple times to ensure that all issues are flagged and addressed.
 
 ## Review and update variable and class names
 
