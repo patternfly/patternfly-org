@@ -37,24 +37,6 @@ const pagePropsTableRows = [
 export const releaseNotes = [
   {
     component: "Card",
-    description: "Updated design for selectable and clickable cards.",
-    pullRequestURL: "https://github.com/patternfly/patternfly/pull/5409",
-    repo: "HTML/CSS",
-    fixedWithCodeMod: false
-  }, {
-    component: "Card",
-    description: "Refactored the card header code to be more flexible and improved the visual appearance of card header items.",
-    pullRequestURL: "https://github.com/patternfly/patternfly/pull/5280",
-    repo: "HTML/CSS",
-    fixedWithCodeMod: false
-  }, {
-    component: "Card",
-    description: "Refactored the card title to be more flexible and changed the default card title font weight to normal.",
-    pullRequestURL: "https://github.com/patternfly/patternfly/pull/5363",
-    repo: "HTML/CSS",
-    fixedWithCodeMod: false
-  }, {
-    component: "Card",
     description: "Deprecated various properties.",
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9092",
     details: (
@@ -292,7 +274,7 @@ function handler2(_event, id) {};
   },
   {
     component: "@All",
-    description: "Fixed global background color, other cleanup.",
+    description: "Added transparent background to various buttons, other cleanup.",
     pullRequestURL: "https://github.com/patternfly/patternfly/pull/5379",
     repo: "HTML/CSS",
     fixedWithCodeMod: false,
@@ -398,7 +380,7 @@ function handler2(_event, id) {};
       <>
         Removed declaration setting font-size on HTML element and associated
         SCSS var{" "}
-        <code className="ws-code">.$pf-global--unset-root-font-size</code>.
+        <code className="ws-code">$pf-global--unset-root-font-size</code>.
       </>
     ),
     pullRequestURL: "https://github.com/patternfly/patternfly/pull/5339",
@@ -407,7 +389,7 @@ function handler2(_event, id) {};
   },
   {
     component: "@All",
-    description: "Updated all of our ‘redhatfont’ files to the latest versions.",
+    description: "Updated all of our RedHatFont files to the latest versions.",
     pullRequestURL: "https://github.com/patternfly/patternfly/pull/5503",
     repo: "HTML/CSS",
     fixedWithCodeMod: false,
@@ -4741,7 +4723,7 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
   },
   {
     component: "Layouts",
-    description: "Updated level, split, stack to use gap.",
+    description: "Updated level, split, and stack to use gap.",
     pullRequestURL: "https://github.com/patternfly/patternfly/pull/5585",
     details: "Updated the “gutter” variation of these layouts to use CSS `gap` to create gutters between children instead of `margin`.",
     repo: "HTML/CSS",
@@ -4789,7 +4771,7 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
   },
   {
     component: "Page",
-    description: "Added multiple body support",
+    description: "Set page height to 100vh",
     pullRequestURL: "https://github.com/patternfly/patternfly/pull/5093",
     details: "Updated the page component sidebar to support multiple body elements, instead of a single body element used to position vertical navigation.",
     repo: "HTML/CSS",
@@ -4821,7 +4803,7 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
   },
   {
     component: "Popover",
-    description: "Added header, title, close elements",
+    description: "Added header, title, and close elements",
     pullRequestURL: "https://github.com/patternfly/patternfly/pull/5370 ",
     details: "Refactored the popover component HTML to be more flexible and consistent with similarly structured components. Added a structural HTML element to the container that is used to wrap the close button. Made the header element required. Updated the popover title to be more flexible",
     repo: "HTML/CSS",
@@ -4829,9 +4811,9 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
   },
   {
     component: "Progress",
-    description: "Prevented empty description and status from rendering",
+    description: "Use gap instead of margin for status box",
     pullRequestURL: "https://github.com/patternfly/patternfly/pull/5387",
-    details: "The title isn’t a breaking change. However, this pull request also updated the progress status element to use CSS `gap` to space its children instead of `margin`.",
+    details: "Updates the progress status element to use CSS `gap` to space its children instead of `margin`, which impacts the space between the status icon text specifically.",
     repo: "HTML/CSS",
     fixedWithCodeMod: false
   },

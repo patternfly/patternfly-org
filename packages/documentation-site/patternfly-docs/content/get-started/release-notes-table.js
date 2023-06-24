@@ -266,16 +266,16 @@ export const ReleaseNotesTable = () => {
           >
             <Thead>
               <Tr>
-                <Th width={10} />
-                <Th width={10} sort={getSortParams(0)}>
+                <Th width={9} />
+                <Th width={9} sort={getSortParams(0)}>
                   Component
                 </Th>
-                <Th width={10} sort={getSortParams(1)}>
+                <Th width={9} sort={getSortParams(1)}>
                   Repo
                 </Th>
                 <Th width={50}>Description</Th>
-                <Th width={10}>PR link</Th>
-                <Th width={20} modifier="wrap" sort={getSortParams(2)}>
+                <Th width={9}>PR link</Th>
+                <Th width={14} modifier="wrap" sort={getSortParams(2)}>
                   Fixed with codemods
                 </Th>
               </Tr>
