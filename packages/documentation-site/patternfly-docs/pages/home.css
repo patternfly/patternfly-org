@@ -41,18 +41,6 @@
   }
 }
 
-.pf-v5-theme-dark .pf-v5-l-flex.pf-m-flex-3-on-md.pf-v5-c-image__light-showcase {
-  display: none;
-}
-
-.pf-v5-l-flex.pf-m-flex-3-on-md.pf-v5-c-image__dark-showcase {
-  display: none;
-}
-
-.pf-v5-theme-dark .pf-v5-l-flex.pf-m-flex-3-on-md.pf-v5-c-image__dark-showcase {
-  display: block;
-}
-
 .v5-featured-posts, .v5-stay-informed {
   --pf-v5-c-page__main-section--PaddingRight: var(--pf-v5-global--spacer--2xl);
   --pf-v5-c-page__main-section--PaddingLeft: var(--pf-v5-global--spacer--2xl);

@@ -19,10 +19,10 @@ import {
 } from "@patternfly/react-core";
 import ArrowRightIcon from "@patternfly/react-icons/dist/esm/icons/arrow-right-icon";
 import ExternalLinkAltIcon from "@patternfly/react-icons/dist/esm/icons/external-link-alt-icon";
-import lightshowcase from "../images/light-showcase.svg";
-import darkshowcase from "../images/dark-showcase.svg";
+import lightshowcase from "../images/light-showcase.png";
+import darkshowcase from "../images/dark-showcase.png";
 import "./home.css";
-import featuredPostsData from "./featured-posts-data.json";
+import { featuredPostsData } from "./featured-posts-data";
 
 const cardData = [
   {
