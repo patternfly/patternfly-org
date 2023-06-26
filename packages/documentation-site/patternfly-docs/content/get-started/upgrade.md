@@ -84,6 +84,6 @@ You will have until our next major release to update the code for your component
 PatternFly 5 brings a new implementation to the following components, which can be upgraded according to the linked documentation:
 
 - [Table](/components/table) 
-- [Select](/components/select)
-- [Dropdown ](/components/dropdown) 
+- [Select](/components/menus/select)
+- [Dropdown ](/components/menus/dropdown) 
 - [Wizard](/components/wizard)
