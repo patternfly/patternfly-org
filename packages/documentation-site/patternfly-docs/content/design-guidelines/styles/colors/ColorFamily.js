@@ -68,7 +68,10 @@ export function ColorFamily({
             itemStyle.boxShadow = `var(${token.name})`;
           }
           else if (getContrastRatio(token.value, '#151515') <= 4.5) {
-            itemStyle.color = '#fafafa';
+            itemStyle.color = 'var(--pf-v5-global--Color--light-100)';
+          }
+          else if (getContrastRatio(token.value, '#151515') > 4.5) {
+            itemStyle.color = 'var(--pf-v5-global--palette--black-900)';
           }
           const expandedStyle = {};
           if (isExpanded && !isShadows) {
