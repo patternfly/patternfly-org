@@ -73,7 +73,7 @@ const ColorsGrid = () => {
   }, []);
 
   return (
-    <Grid hasGutter sm={12} md={6} lg={4}>
+    <Grid className="ws-colors-grid" hasGutter sm={12} md={6} lg={4}>
       {colorFamilies.map(color => (
         <ColorFamily color={color} computedStyles={computedStyles} key={color} />
       ))}

@@ -1,12 +1,11 @@
+.ws-colors-grid {
+	--pf-v5-l-grid--m-gutter--GridGap: var(--pf-v5-global--spacer--lg);
+}
+
 .ws-content-chart-colors {
 	height: 44px;
 	width: 44px;
 	border-radius: 50%;
-}
-
-.ws-content-chart-colors-gallery--information {
-	margin-top: 8px;
-	margin-bottom: 16px
 }
 
 .ws-content-chart-colors-gallery--information>* {
