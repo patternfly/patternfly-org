@@ -51,6 +51,17 @@ const MDXChildTemplate = ({
     }
     ensureID(toc);
   }
+  const innerContentWrapperClass = () => {
+    console.log(source);
+    if (source === 'landing-page') {
+      return 'landing-pages';
+    }
+    if (source === 'release-notes') {
+      return '';
+    }
+    return 'ws-mdx-content-content'
+  };
+
   const InlineAlerts = (
     <React.Fragment>
       {optIn && (
@@ -83,7 +94,7 @@ const MDXChildTemplate = ({
         <TableOfContents items={toc} />
       )}
       <div className="ws-mdx-content">
-        <div className={source === 'landing-pages' ? "ws-landing-page" : "ws-mdx-content-content"}>
+        <div className={innerContentWrapperClass()}>
           {InlineAlerts}
           <Component />
           {functionDocumentation.length > 0 && (
@@ -155,7 +166,7 @@ export const MDXTemplate = ({
   const sourceKeys = Object.keys(tabNames);
   const isSinglePage = sourceKeys.length === 1;
 
-  let isDevResources, isComponent, isExtension, isChart, isPattern, isLayout, isUtility;
+  let isDevResources, isComponent, isExtension, isChart, isPattern, isLayout, isUtility, isUpgrade;
 
   const getSection = () => {
     return sources.some((source) => {
@@ -180,6 +191,11 @@ export const MDXTemplate = ({
           return;
         case "utilities":
           isUtility = true;
+          return;
+        case "get-started":
+          if (source.source.includes('upgrade')) {
+            isUpgrade = true;
+          }
           return;
       }
     });
@@ -216,7 +232,7 @@ export const MDXTemplate = ({
         return "pf-m-light-100";
       }
       return "pf-m-light";
-    } else if (isUtility || isPattern || isLayout || isComponent) {
+    } else if (isUtility || isPattern || isLayout || isComponent || isUpgrade) {
       return "pf-m-light";
     }
     return "pf-m-light-100";
