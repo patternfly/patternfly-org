@@ -79,20 +79,28 @@ const AggregateCards = () => {
               key={`${cardIndex}`}
               component="div"
               isFullHeight
+              isClickable
             >
-              <CardTitle>
-                <a href={card.link} isInline>
-                  {card.title}
-                  {card.hasExtLinkIcon ? (
-                    <>
-                      {" "}
-                      <ExternalLinkAltIcon />
-                    </>
-                  ) : (
-                    ""
-                  )}
-                </a>
-              </CardTitle>
+              <CardHeader
+                selectableActions={{
+                  to: card.link,
+                  selectableActionId: `clickable-stay-informed-card-${cardIndex}`,
+                }}
+              >
+                <CardTitle>
+                  <a href={card.link} isInline>
+                    {card.title}
+                    {card.hasExtLinkIcon ? (
+                      <>
+                        {" "}
+                        <ExternalLinkAltIcon />
+                      </>
+                    ) : (
+                      ""
+                    )}
+                  </a>
+                </CardTitle>
+              </CardHeader>
               <CardFooter>{card.body}</CardFooter>
             </Card>
           </GalleryItem>
@@ -159,29 +167,31 @@ const HomePage = () => (
             </FlexItem>
           </Flex>
         </Flex>
-        <Flex
+        <style>
+          {`
+          :root {
+            --pf-v5-c-image-showcase-url: url(${lightshowcase});
+          }
+          .pf-v5-c-image-showcase {
+            background-image: var(--pf-v5-c-image-showcase-url);
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+          }
+          .pf-v5-theme-dark {
+            --pf-v5-c-image-showcase-url: url(${darkshowcase});
+          }
+        `}
+        </style>
+        <FlexItem
           flex={{md: "flex_3"}}
-          className="pf-v5-c-image__light-showcase"
-          style={{
-            backgroundImage: `url(${lightshowcase})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "auto 100%",
-            alignSelf: "stretch",
-          }}
-        ></Flex>
-        <Flex
-          flex={{md: "flex_3"}}
-          className="pf-v5-c-image__dark-showcase"
-          style={{
-            backgroundImage: `url(${darkshowcase})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "auto 100%",
-            alignSelf: "stretch",
-          }}
-        ></Flex>
+          alignSelf={{default: "alignSelfStretch"}}
+          className="pf-v5-c-image-showcase"
+        ></FlexItem>
       </Flex>
     </PageSection>
-    <Divider inset={{default: "inset2xl"}} />
+    <PageSection isWidthLimited>
+      <Divider inset={{default: "insetLg"}} />
+    </PageSection>
     <PageSection isWidthLimited className="v5-featured-posts">
       <Flex direction={{default: "column", md: "row"}} gap={{default: "gapMd"}}>
         <FlexItem flex={{default: "flex_1"}}>
@@ -201,16 +211,17 @@ const HomePage = () => (
         </Button>
       </Flex>
     </PageSection>
-    <PageSection isWidthLimited>
+    <PageSection isWidthLimited className="v5-featured-posts-cards">
       <Grid hasGutter md={6} xl={3}>
-        <Card isFullHeight>
+        <Card component="article" isClickable>
           <CardHeader
+            className="v5-featured-posts-card-header-img"
+            selectableActions={{
+              to: featuredPostsData.post1.URL,
+              selectableActionId: "clickable-card-article-1",
+            }}
             style={{
-              minHeight: "200px",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
               backgroundImage: `url(${featuredPostsData.post1.imageURL})`,
-              height: "300px",
             }}
           ></CardHeader>
           <Divider />
@@ -224,14 +235,15 @@ const HomePage = () => (
             {featuredPostsData.post1.author} • {featuredPostsData.post1.length}
           </CardFooter>
         </Card>
-        <Card isFullHeight>
+        <Card component="article" isClickable>
           <CardHeader
+            className="v5-featured-posts-card-header-img"
+            selectableActions={{
+              to: featuredPostsData.post2.URL,
+              selectableActionId: "clickable-card-article-2",
+            }}
             style={{
-              minHeight: "200px",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
               backgroundImage: `url(${featuredPostsData.post2.imageURL})`,
-              height: "300px",
             }}
           ></CardHeader>
           <Divider />
@@ -245,14 +257,15 @@ const HomePage = () => (
             {featuredPostsData.post2.author} • {featuredPostsData.post2.length}
           </CardFooter>
         </Card>
-        <Card isFullHeight>
+        <Card component="article" isClickable>
           <CardHeader
+            className="v5-featured-posts-card-header-img"
+            selectableActions={{
+              to: featuredPostsData.post3.URL,
+              selectableActionId: "clickable-card-article-3",
+            }}
             style={{
-              minHeight: "200px",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
               backgroundImage: `url(${featuredPostsData.post3.imageURL})`,
-              height: "300px",
             }}
           ></CardHeader>
           <Divider />
@@ -266,14 +279,15 @@ const HomePage = () => (
             {featuredPostsData.post3.author} • {featuredPostsData.post3.length}
           </CardFooter>
         </Card>
-        <Card isFullHeight>
+        <Card component="article" isClickable>
           <CardHeader
+            className="v5-featured-posts-card-header-img"
+            selectableActions={{
+              to: featuredPostsData.post4.URL,
+              selectableActionId: "clickable-card-article-4",
+            }}
             style={{
-              minHeight: "200px",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
               backgroundImage: `url(${featuredPostsData.post4.imageURL})`,
-              height: "300px",
             }}
           ></CardHeader>
           <Divider />
@@ -289,7 +303,7 @@ const HomePage = () => (
         </Card>
       </Grid>
     </PageSection>
-    <PageSection isWidthLimited className="v5-featured-posts">
+    <PageSection isWidthLimited className="v5-stay-informed">
       <Flex direction={{default: "column", md: "row"}} gap={{default: "gapMd"}}>
         <FlexItem flex={{default: "flex_1"}}>
           <Title headingLevel="h2" size="2xl">
@@ -303,13 +317,12 @@ const HomePage = () => (
           href="https://github.com/patternfly"
           variant="link"
           aria-label="Patternfly on Github"
-          style={{float: "right"}}
         >
           View our Github repositories <ArrowRightIcon />
         </Button>
       </Flex>
     </PageSection>
-    <PageSection isWidthLimited>
+    <PageSection isWidthLimited className="v5-stay-informed-cards">
       <AggregateCards />
     </PageSection>
   </React.Fragment>
