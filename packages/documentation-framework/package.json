@@ -1,14 +1,10 @@
 {
   "name": "@patternfly/documentation-framework",
   "description": "A framework to build documentation for PatternFly.",
-  "version": "2.0.0-alpha.73",
+  "version": "5.0.1",
   "author": "Red Hat",
   "license": "MIT",
   "private": false,
-  "publishConfig": {
-    "access": "public",
-    "tag": "alpha"
-  },
   "bin": {
     "pf-docs-framework": "scripts/cli/cli.js"
   },

@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.12.1 (2023-06-23)
+
+
+### Bug Fixes
+
+* turn dry run off ([#3627](https://github.com/patternfly/patternfly-org/issues/3627)) ([f0a2d51](https://github.com/patternfly/patternfly-org/commit/f0a2d510b75b69b18cdbbd7ceb663241ef30093f))
+
+
+
+
+
+# 0.12.0-alpha.73 (2023-06-23)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 0.12.0-alpha.72 (2023-06-23)
 
 **Note:** Version bump only for package @patternfly/ast-helpers
