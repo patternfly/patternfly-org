@@ -50,7 +50,7 @@ A blue progress bar represents a process that is currently underway.
 
 ### Error state or failure
 
-A red progress bar represents a process that has failed. Accompany a failed progress bar with a [red danger icon](/guidelines/icons/#all-icons) to demonstrate that an error occurred in the process.
+A red progress bar represents a process that has failed. Accompany a failed progress bar with a [red danger icon](/design-foundations/icons/#all-icons) to demonstrate that an error occurred in the process.
 
 <img src="./img/progress-bar-error-state.png" alt="An example of a progress bar in an error or failed state, with a red track, optional danger icon, and a title that indicates its status: 'Could not validate account credentials.'" width="560" />
 

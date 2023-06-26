@@ -10,6 +10,6 @@ The PatternFly team has created the accessibility scorecard to evaluate the stat
 using PatternFly. The scorecard represents the state of accessibility for a UI at the date of evaluation. The 
 PatternFly team has used this scorecard to evaluate the PatternFly documentation on PatternFly.org. A UI which desires 
 an accessibility evaluation and scorecard can reach out via the PatternFly 
-<a href="//slack.patternfly.org/" target="_blank" rel="noopener noreferrer">Slack</a> workspace.
+<a href="https://join.slack.com/t/patternfly/shared_invite/zt-1npmqswgk-bF2R1E2rglV8jz5DNTezMQ" target="_blank" rel="noopener noreferrer">Slack</a> workspace.
 
 <AccessibilityScorecard />

@@ -38,7 +38,7 @@ Contextual help can include any on-screen elements intended to guide the user in
 ## Progressive disclosure
 Progressive disclosure is the practice of hiding information or providing it only when needed in order to simplify a user interface. PatternFly supports several components that can be used to progressively disclose information on a page. The [accordion](/components/accordion) component allows content to be placed in stackable, expandable containers so that content can be hidden from view to simplify presentation and reduce the need for scrolling. [Expandable sections](/components/expandable-section) allow designers to hide a single block of content or settings behind a show/hide link. [Expandable field groups](/components/forms/form) allow designers to group form elements into expandable containers.
 
-| Use case | [Accordion](/components/accordion) | [Expandable section](/components/expandable-section) | [Field groups](/components/form)|
+| Use case | [Accordion](/components/accordion) | [Expandable section](/components/expandable-section) | [Field groups](/components/forms/form)|
 |---- | :----: | :----: | :----: |
 |You want to group a list of actions, links, or other data into expandable groups.|✔|⛔|⛔|
 |You want to hide advanced or seldomly used options within a form.|⛔|✔|✔|
