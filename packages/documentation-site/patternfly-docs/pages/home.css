@@ -71,6 +71,12 @@
   --pf-v5-c-page__main-section--PaddingLeft: var(--pf-v5-global--spacer--2xl);
 }
 
+@media (max-width: 992px) {
+  .ws-homepage-main-section {
+    --pf-v5-c-page__main-section--PaddingRight: var(--pf-v5-global--spacer--2xl);
+  }
+}
+
 .ws-homepage-main-section.pf4-c-background-image .pf4-site-c-hero {
   margin-bottom: 0;
   margin: var(--pf-v5-global--spacer--xl) auto 0;
