@@ -18,7 +18,7 @@ A select component consists of a toggle control to open and close a menu of acti
 
 1. **Toggle:** The toggle is used to open and close the menu. It takes on all of the behaviors of a button. The toggle label always reflects the currently selected item or may hold a placeholder if nothing is selected.
 
-2. **Menu:** The menu contains a list of options or values. Menus should optimally present 7 or less items for easy scanning by the user. For longer menus, items may be grouped or scrolling may be exposed by limiting the height of the menu. See the [menu component guidelines](/components/menus/menu/design-guidelines) for more information about supported options, including use of icons, grouping, and descriptions. The Select component includes many common built-in menu variants. It’s also possible to attach a custom menu by using the [basic panel variant](/components/menus/select/react#panel).
+2. **Menu:** The menu contains a list of options or values. Menus should optimally present 7 or less items for easy scanning by the user. For longer menus, items may be grouped or scrolling may be exposed by limiting the height of the menu. See the [menu component guidelines](/components/menus/menu/design-guidelines) for more information about supported options, including use of icons, grouping, and descriptions. 
 
 ## Usage
 
