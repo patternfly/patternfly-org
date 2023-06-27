@@ -3,16 +3,17 @@ id: Brand voice and tone
 section: UX writing
 ---
 
-In a business context, brand is the identity of a company that people recognize based on an emotional and psychological connection as well as factual information.
+In a business context, brand is the identity of a company that people recognize based on an emotional and psychological connection, as well as factual information.
 
-All your UX copy should align with your company’s brand, contributing to a consistent and authentic experience across every content channel users interact with.
-To keep your UX copy on-brand, consider style, voice, and tone:
+All of your UX copy should align with your company’s brand to contributet to a consistent and authentic experience across every content channel users interact with. To keep your UX copy on-brand, consider style, voice, and tone:
 
 - **Style** is the way you use grammar, punctuation, and syntax. It’s influenced by how your words work together and what effect your writing has on the user. 
 
-- **Voice** is the personality that’s reflected in your writing.
+- **Voice** is the personality that’s reflected in your writing. For example, your content's voice may be "helpful".
 
-- **Tone** is the approach you take that’s appropriate for the context of your content. Tone encompasses the user’s emotions that need to be accounted for and the resulting approach you must take.
+- **Tone** encompasses the user’s emotions that need to be accounted for and the resulting approach you must take. It is important to choose a tone that's appropriate for the context of your content.
+
+## Voice 
 
 Let’s consider how we use the Red Hat brand voice in our UX copy. If Red Hat were a person, they would be:
 
@@ -21,8 +22,8 @@ Let’s consider how we use the Red Hat brand voice in our UX copy. If Red Hat w
 - Open but ordered (not chaotic).
 - Brave but balanced (not reckless).
 
-## Voice traits
-To reflect the Red Hat voice in UX copy for Red Hat products, we have UX voice traits. Each voice trait is an extension of the Red Hat voice.
+### Voice traits
+To reflect the Red Hat voice in our products' UX copy, we consider UX voice traits. Each voice trait is an extension of the Red Hat voice.
 
 <div class="ws-content-table">
 
