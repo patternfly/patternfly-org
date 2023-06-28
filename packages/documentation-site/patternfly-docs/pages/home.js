@@ -1,278 +1,330 @@
-import React from 'react';
-import { Link } from '@patternfly/documentation-framework/components';
+import React from "react";
+import {Link} from "@patternfly/documentation-framework/components";
 import {
+  Button,
+  Card,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+  Gallery,
+  GalleryItem,
+  Divider,
   Flex,
   FlexItem,
   Grid,
-  GridItem,
   PageSection,
-  PageSectionVariants,
   Title,
-  TextContent,
   Text,
-  TextVariants
-} from '@patternfly/react-core';
-import ArrowRightIcon from '@patternfly/react-icons/dist/esm/icons/arrow-right-icon';
-import GithubIcon from '@patternfly/react-icons/dist/esm/icons/github-icon';
-import orb from '../images/pf4-logo.svg';
-import accessible from '../images/accessible.svg';
-import modular from '../images/modular.svg';
-import scale from '../images/scale.svg';
-import consistent from '../images/consistent.svg';
-import open from '../images/open.svg';
-import { AutoLinkHeader } from '@patternfly/documentation-framework/components/autoLinkHeader/autoLinkHeader';
-import './home.css';
+  TextVariants,
+} from "@patternfly/react-core";
+import ArrowRightIcon from "@patternfly/react-icons/dist/esm/icons/arrow-right-icon";
+import ExternalLinkAltIcon from "@patternfly/react-icons/dist/esm/icons/external-link-alt-icon";
+import lightshowcase from "../images/light-showcase.png";
+import darkshowcase from "../images/dark-showcase.png";
+import "./home.css";
+import { featuredPostsData } from "./featured-posts-data";
 
-const aboutPatternFly = `Hello, we're PatternFly.`;
-const patternFlyPrinciples = 'Flyer fundamentals';
+const cardData = [
+  {
+    title: "Upgrade to PatternFly v5",
+    body: "Reference our upgrade guide to learn how you can update to the latest version of PatternFly.",
+    link: "/get-started/upgrade",
+    layout: "withSubtitle",
+  },
+  {
+    title: "Read our latest release highlights",
+    body: "Stay informed about every PatternFly release by reading through our highlights, which lay out important code changes and design updates.",
+    link: "/get-started/release-highlights",
+    layout: "withSubtitle",
+  },
+  {
+    title: "Attend PatternFly community events",
+    body: "Join one of our regular meetings where we set time aside to share information and address questions or issues presented by the community.",
+    link: "https://calendar.google.com/calendar/embed?src=patternflyteam%40gmail.com&ctz=America%2FNew_York",
+    layout: "withSubtitle",
+    hasExtLinkIcon: true,
+  },
+  {
+    title: "Explore our roadmaps",
+    body: "Take a look at our issue boards on GitHub to see what we’re working on now and what we have planned next.",
+    link: "https://github.com/orgs/patternfly/projects/7",
+    layout: "withSubtitle",
+    hasExtLinkIcon: true,
+  },
+  {
+    title: "Follow us on Twitter",
+    body: "Stay up to date on timely PatternFly news and updates through our Twitter.",
+    layout: "withSubtitle",
+    link: "https://twitter.com/patternfly",
+    hasExtLinkIcon: true,
+  },
+  {
+    title: "Join the discussion",
+    body: "Visit our discussion board on GitHub to help drive future design and development plans.",
+    link: "https://github.com/orgs/patternfly/discussions",
+    layout: "withSubtitle",
+    hasExtLinkIcon: true,
+  },
+];
+
+const AggregateCards = () => {
+  return (
+    <Gallery hasGutter minWidths={{xl: "30%"}}>
+      {cardData.map((card, cardIndex) => {
+        let cardAlign;
+        return (
+          <GalleryItem>
+            <Card
+              style={{textAlign: cardAlign}}
+              key={`${cardIndex}`}
+              component="div"
+              isFullHeight
+              isClickable
+            >
+              <CardHeader
+                selectableActions={{
+                  to: card.link,
+                  selectableActionId: `clickable-stay-informed-card-${cardIndex}`,
+                }}
+              >
+                <CardTitle>
+                  <a href={card.link} isInline>
+                    {card.title}
+                    {card.hasExtLinkIcon ? (
+                      <>
+                        {" "}
+                        <ExternalLinkAltIcon />
+                      </>
+                    ) : (
+                      ""
+                    )}
+                  </a>
+                </CardTitle>
+              </CardHeader>
+              <CardFooter>{card.body}</CardFooter>
+            </Card>
+          </GalleryItem>
+        );
+      })}
+    </Gallery>
+  );
+};
 
 const HomePage = () => (
   <React.Fragment>
-    <PageSection variant={PageSectionVariants.light} className="pf4-c-background-image ws-homepage-main-section">
-      <Grid>
-        <GridItem sm={12} md={8} mdOffset={2} lg={6} lgOffset={3} className="pf-v5-u-py-2xl pf-v5-u-text-align-center">
-          <TextContent>
-            <img src={orb} alt="PatternFly logo" className="fadeInDown animated fadeInOne" />
-            <Title headingLevel="h1" size="4xl" className="pf-m-white pf4-site-c-hero fadeIn animated fadeInTwo">
-              Build scalable experiences in the open.
-            </Title>
-            <Text className="pf-v5-c-title pf-m-xl pf-m-white pf-v5-u-mb-md pf-v5-u-mt-lg pf-v5-u-mb-3xl-on-md fadeInUp animated fadeInThree">
-              PatternFly is an open source design system built to drive consistency and unify teams.
-            </Text>
-            <div className="pf-v5-u-display-flex pf-v5-u-justify-content-center pf-v5-u-flex-direction-column pf-v5-u-flex-direction-row-on-md">
-              <Link
-                to="/get-started/about"
-                className="pf-v5-c-button pf4-c-button__cta-primary pf-v5-u-mr-0 pf-v5-u-mb-md pf-v5-u-mb-0-on-md pf-v5-u-mr-xl-on-md fadeIn animated fadeInFour"
-                aria-label="Get started with PatternFly"
-              >
-                Get started
-              </Link>
-              <a className="pf-v5-c-button pf4-c-button__cta-outline fadeIn animated fadeInFour" href="//github.com/patternfly" target="_blank">
-                <GithubIcon className="pf-v5-u-mr-sm" />GitHub
-              </a>
-            </div>
-          </TextContent>
-        </GridItem>
-      </Grid>
-    </PageSection>
-    <PageSection className="ws-homepage-main-section pf-m-light-100">
-      <Grid>
-        <GridItem sm={12} md={6} mdOffset={3} className="pf-v5-u-py-2xl pf-v5-u-text-align-center" id="about-patternfly-section">
-          <TextContent>
-            <AutoLinkHeader size="h1" headingLevel="h2" className="ws-title">
-              {aboutPatternFly}
-            </AutoLinkHeader>
-            <Text component={TextVariants.p} className="ws-mdx-p">
-              We think quality product experiences should be easy to build and easy to scale, so we provide the tools to make that happen.
-            </Text>
-            <Text component={TextVariants.p} className="ws-mdx-p">
-              From documentation and components to code examples and tutorials, PatternFly has it all—and our community of Flyers help make it better every day.
-            </Text>
-          </TextContent>
-        </GridItem>
-      </Grid>
-    </PageSection>
-    <PageSection className="pf4-c-background-lines ws-homepage-main-section pf-m-light-100">
-      <Grid gutter="md" className="pf-v5-u-pb-3xl-on-sm">
-        <GridItem sm={12}>
-          <Grid>
-            <GridItem
-              sm={12}
-              md={4}
-              mdOffset={1}
-              lgOffset={2}
-              className="pf-v5-u-display-flex pf-v5-u-display-block-on-sm pf-v5-u-flex-direction-column pf-v5-u-pt-2xl pf-v5-u-pt-0-on-sm"
+    <PageSection isWidthLimited className="ws-homepage-main-section">
+      <Flex
+        direction={{default: "column", lg: "row"}}
+        gap={{default: "gap2xl"}}
+        alignItems={{lg: "alignItemsStretch"}}
+      >
+        <Flex
+          direction={{default: "column"}}
+          flex={{md: "flex_3"}}
+          gap={{default: "gap2xl"}}
+        >
+          <Flex
+            direction={{default: "column"}}
+            spaceItems={{default: "spaceItemsLg"}}
+          >
+            <Title
+              className="pf-v5-u-font-weight-bold"
+              headingLevel="h1"
+              size="4xl"
             >
-              <TextContent>
-                <div className="pf-v5-u-pb-2xl">
-                  <Text component={TextVariants.h2}>We guide, you decide</Text>
-                  <Text component={TextVariants.p} className="ws-mdx-p">
-                    PatternFly’s foundation is made of design guidelines, so help is always there when you need it. Check out our approach to icons, color, content, and more.
-                  </Text>
-                  <Text
-                    className="pf-v5-u-pl-0 pf4-c-link__text ws-mdx-a"
-                  >
-                    <Link to="/design-foundations/colors" aria-label="view design guidelines">
-                      View design guidelines <ArrowRightIcon />
-                    </Link>
-                  </Text>
-                </div>
-                <div className="pf-v5-u-pb-2xl">
-                  <Text component={TextVariants.h2}>Lay it out</Text>
-                  <Text component={TextVariants.p} className="ws-mdx-p">
-                    A layout provides a fully responsive page structure that keeps your components organized and aligned regardless of screen size.
-                  </Text>
-                  <Text
-                    className="pf-v5-u-pl-0 pf4-c-link__text ws-mdx-a"
-                  >
-                    <Link to="/layouts/bullseye" aria-label="view layouts">
-                      View layouts <ArrowRightIcon />
-                    </Link>
-                  </Text>
-                </div>
-                <div className="pf-v5-u-pb-2xl">
-                  <Text component={TextVariants.h2}>Build things your way</Text>
-                  <Text component={TextVariants.p} className="ws-mdx-p">
-                    Components are like building blocks. Designed to be flexible and modular, you can mix and match components to create a solution for almost any UI problem.
-                  </Text>
-                  <Text
-                    className="pf-v5-u-pl-0 pf4-c-link__text ws-mdx-a"
-                  >
-                    <Link to="/components/about-modal" aria-label="view components">
-                      View components <ArrowRightIcon />
-                    </Link>
-                  </Text>
-                </div>
-                <div className="pf-v5-u-pb-2xl">
-                  <Text component={TextVariants.h2}>See it in action</Text>
-                  <Text component={TextVariants.p} className="ws-mdx-p">
-                    Components are better together. Demos show how multiple components can be used in a single design. They also provide  some useful starter code, so the days of creating complex layouts from scratch are over.
-                  </Text>
-                  <Text
-                    className="pf-v5-u-pl-0 pf4-c-link__text ws-mdx-a"
-                  >
-                    <Link to="/patterns/primary-detail" aria-label="view demos">
-                      View demos <ArrowRightIcon />
-                    </Link>
-                  </Text>
-                </div>
-              </TextContent>
-            </GridItem>
-            <GridItem sm={12} md={6}>
-              <div className="pf4-c-image__laptop" aria-hidden />
-              <div className="pf4-c-image__phone" aria-hidden />
-              <div className="pf4-c-image__screen" aria-hidden />
-              <div className="pf4-c-image__desktop" aria-hidden />
-            </GridItem>
-          </Grid>
-        </GridItem>
+              {" "}
+              Design and build better product experiences in the
+              <Text component="span" className="pf-v5-u-primary-color-100">
+                {" "}
+                open{" "}
+              </Text>
+              with PatternFly
+            </Title>
+            <Text component={TextVariants.p} className="ws-mdx-p">
+              PatternFly is an open source design system that enables teams to
+              create consistent and scalable enterprise products. PatternFly is
+              sponsored and maintained by Red Hat, but is open to all.
+            </Text>
+          </Flex>
+          <Flex gap={{default: "gapMd"}}>
+            <FlexItem>
+              <Link
+                to="/get-started/design"
+                className="pf-v5-c-button pf-m-secondary pf-m-display-lg"
+                aria-label="Start designing"
+              >
+                Start designing
+              </Link>
+            </FlexItem>
+            <FlexItem>
+              <Link
+                to="/get-started/develop"
+                className="pf-v5-c-button pf-m-secondary pf-m-display-lg"
+                aria-label="Start developing"
+              >
+                Start developing
+              </Link>
+            </FlexItem>
+          </Flex>
+        </Flex>
+        <style>
+          {`
+          :root {
+            --pf-v5-c-image-showcase-url: url(${lightshowcase});
+          }
+          .pf-v5-c-image-showcase {
+            background-image: var(--pf-v5-c-image-showcase-url);
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+          }
+          .pf-v5-theme-dark {
+            --pf-v5-c-image-showcase-url: url(${darkshowcase});
+          }
+        `}
+        </style>
+        <FlexItem
+          flex={{md: "flex_3"}}
+          alignSelf={{default: "alignSelfStretch"}}
+          className="pf-v5-c-image-showcase"
+        ></FlexItem>
+      </Flex>
+    </PageSection>
+    <PageSection isWidthLimited>
+      <Divider inset={{default: "insetLg"}} />
+    </PageSection>
+    <PageSection isWidthLimited className="v5-featured-posts">
+      <Flex direction={{default: "column", md: "row"}} gap={{default: "gapMd"}}>
+        <FlexItem flex={{default: "flex_1"}}>
+          <Title headingLevel="h2" size="2xl">
+            Featured blog posts
+          </Title>
+        </FlexItem>
+        <Button
+          isInline
+          size="lg"
+          component="a"
+          href="https://medium.com/patternfly"
+          variant="link"
+          aria-label="explore our blog"
+        >
+          Explore our blog <ArrowRightIcon />
+        </Button>
+      </Flex>
+    </PageSection>
+    <PageSection isWidthLimited className="v5-featured-posts-cards">
+      <Grid hasGutter md={6} xl={3}>
+        <Card component="article" isClickable>
+          <CardHeader
+            className="v5-featured-posts-card-header-img"
+            selectableActions={{
+              to: featuredPostsData.post1.URL,
+              selectableActionId: "clickable-card-article-1",
+            }}
+            style={{
+              backgroundImage: `url(${featuredPostsData.post1.imageURL})`,
+            }}
+          ></CardHeader>
+          <Divider />
+          <CardTitle>
+            {" "}
+            <a href={featuredPostsData.post1.URL}>
+              {featuredPostsData.post1.title}
+            </a>
+          </CardTitle>
+          <CardFooter className="pf-v5-u-color-200">
+            {featuredPostsData.post1.author} • {featuredPostsData.post1.length}
+          </CardFooter>
+        </Card>
+        <Card component="article" isClickable>
+          <CardHeader
+            className="v5-featured-posts-card-header-img"
+            selectableActions={{
+              to: featuredPostsData.post2.URL,
+              selectableActionId: "clickable-card-article-2",
+            }}
+            style={{
+              backgroundImage: `url(${featuredPostsData.post2.imageURL})`,
+            }}
+          ></CardHeader>
+          <Divider />
+          <CardTitle>
+            {" "}
+            <a href={featuredPostsData.post2.URL}>
+              {featuredPostsData.post2.title}
+            </a>
+          </CardTitle>
+          <CardFooter className="pf-v5-u-color-200">
+            {featuredPostsData.post2.author} • {featuredPostsData.post2.length}
+          </CardFooter>
+        </Card>
+        <Card component="article" isClickable>
+          <CardHeader
+            className="v5-featured-posts-card-header-img"
+            selectableActions={{
+              to: featuredPostsData.post3.URL,
+              selectableActionId: "clickable-card-article-3",
+            }}
+            style={{
+              backgroundImage: `url(${featuredPostsData.post3.imageURL})`,
+            }}
+          ></CardHeader>
+          <Divider />
+          <CardTitle>
+            {" "}
+            <a href={featuredPostsData.post3.URL}>
+              {featuredPostsData.post3.title}
+            </a>
+          </CardTitle>
+          <CardFooter className="pf-v5-u-color-200">
+            {featuredPostsData.post3.author} • {featuredPostsData.post3.length}
+          </CardFooter>
+        </Card>
+        <Card component="article" isClickable>
+          <CardHeader
+            className="v5-featured-posts-card-header-img"
+            selectableActions={{
+              to: featuredPostsData.post4.URL,
+              selectableActionId: "clickable-card-article-4",
+            }}
+            style={{
+              backgroundImage: `url(${featuredPostsData.post4.imageURL})`,
+            }}
+          ></CardHeader>
+          <Divider />
+          <CardTitle>
+            {" "}
+            <a href={featuredPostsData.post4.URL}>
+              {featuredPostsData.post4.title}
+            </a>
+          </CardTitle>
+          <CardFooter className="pf-v5-u-color-200">
+            {featuredPostsData.post4.author} • {featuredPostsData.post4.length}
+          </CardFooter>
+        </Card>
       </Grid>
     </PageSection>
-    <PageSection variant={PageSectionVariants.darker} className="pf4-c-background-image-principles ws-homepage-main-section">
-    <Grid gutter="md" className="pf-v5-u-py-3xl">
-      <GridItem sm={12} md={6} mdOffset={3} className="pf-v5-u-text-align-center">
-        <TextContent>
-          <Title headingLevel="h2" size="4xl" className="pf-v5-u-mb-4xl pf-m-white pf-v5-u-text-align-center" id="patternfly-principles">
-            {patternFlyPrinciples}
+    <PageSection isWidthLimited className="v5-stay-informed">
+      <Flex direction={{default: "column", md: "row"}} gap={{default: "gapMd"}}>
+        <FlexItem flex={{default: "flex_1"}}>
+          <Title headingLevel="h2" size="2xl">
+            Stay informed
           </Title>
-          <Text component={TextVariants.p} className="ws-mdx-p">
-            Every Flyer is unique, with different ideas and opinions. But there are some things we all agree on. These are our Flyer fundamentals.
-          </Text>
-        </TextContent>
-      </GridItem>
-    </Grid>
-    <Grid className="pf-m-white" gutter="lg">
-      <GridItem span={12} md={10} mdOffset={1} lg={9} lgOffset={2}>
-        <TextContent>
-          <Grid>
-            <GridItem span={12} lg={11} className="ws-pf-principle">
-              <Flex>
-                <FlexItem>
-                  <img
-                    className="ws-principles-img"
-                    src={modular}
-                    aria-hidden
-                  />
-                </FlexItem>
-                <FlexItem>
-                  <Text component={TextVariants.h2}>Make it flexible.</Text>
-                  <Text component={TextVariants.p} className="pf-v5-u-mb-3xl ws-mdx-p">
-                    Open source thrives on variety, and our resources do too. Our components can be arranged in any number of ways, and our CSS variable system can be used for all kinds of customization.
-                  </Text>
-                </FlexItem>
-              </Flex>
-            </GridItem>
-            <GridItem span={12} lg={11} className="ws-pf-principle">
-              <Flex>
-                <FlexItem>
-                  <img
-                  className="ws-principles-img"
-                  src={accessible}
-                  aria-hidden
-                />
-                </FlexItem>
-                <FlexItem>
-                  <Text component={TextVariants.h2}>Make it accessible.</Text>
-                  <Text component={TextVariants.p} className="pf-v5-u-mb-3xl ws-mdx-p">
-                    Building applications that work for everyone, regardless of ability, is just the right thing to do. Our accessible markup and guidance is geared towards creating experiences that people of all abilities can enjoy.
-                  </Text>
-                </FlexItem>
-              </Flex>
-            </GridItem>
-            <GridItem span={12} lg={11} className="ws-pf-principle">
-              <Flex>
-                <FlexItem>
-                  <img
-                    className="ws-principles-img"
-                    src={consistent}
-                    aria-hidden
-                  />
-                  </FlexItem>
-                  <FlexItem>
-                  <Text component={TextVariants.h2}>Make it consistent.</Text>
-                  <Text component={TextVariants.p} className="pf-v5-u-mb-3xl ws-mdx-p">
-                    The best product experiences stem from teamwork. Our clear guidelines and tools help streamline communication so that all teams can create unified applications and interfaces.
-                  </Text>
-                </FlexItem>
-              </Flex>
-            </GridItem>
-            <GridItem span={12} lg={11} className="ws-pf-principle">
-              <Flex>
-                <FlexItem>
-                  <img
-                    className="ws-principles-img"
-                    src={scale}
-                    aria-hidden
-                  />
-                  </FlexItem>
-                  <FlexItem>
-                  <Text component={TextVariants.h2}>Make it scalable.</Text>
-                  <Text component={TextVariants.p} className="pf-v5-u-mb-3xl ws-mdx-p">
-                  Helping teams work productively at scale is at the heart of everything we do. Our components are designed for enterprise IT applications used in businesses of all sizes.
-                  </Text>
-                </FlexItem>
-              </Flex>
-            </GridItem>
-            <GridItem span={12} lg={11} className="ws-pf-principle">
-              <Flex>
-                <FlexItem>
-                  <img
-                    className="ws-principles-img"
-                    src={open}
-                    aria-hidden
-                  />
-                  </FlexItem>
-                  <FlexItem>
-                  <Text component={TextVariants.h2}>Make it open.</Text>
-                  <Text component={TextVariants.p} className="pf-v5-u-mb-3xl ws-mdx-p">
-                    We're focused on shaping the future of open source design and development, and we can't do this alone. So we work as an open source community, where everyone is free to share their ideas and contribute their work.
-                  </Text>
-                </FlexItem>
-              </Flex>
-            </GridItem>
-          </Grid>
-        </TextContent>
-        <div className="pf-v5-u-pb-md">
-          <Text
-            className="pf-v5-u-pl-0 pf4-c-link__text ws-mdx-a"
-          >
-            <Link to="/get-started/develop" className="pf-m-white ws-get-started" aria-label="get started developers">
-              Get started for developers <ArrowRightIcon />
-            </Link>
-          </Text>
-        </div>
-        <div className="pf-v5-u-pb-md">
-          <Text
-            className="pf-v5-u-pl-0 pf4-c-link__text ws-mdx-a"
-          >
-            <Link to="/get-started/design" className="pf-m-white ws-get-started" aria-label="get started designers">
-              Get started for designers <ArrowRightIcon />
-            </Link>
-          </Text>
-        </div>
-      </GridItem>
-    </Grid>
-  </PageSection>
+        </FlexItem>
+        <Button
+          isInline
+          size="lg"
+          component="a"
+          href="https://github.com/patternfly"
+          variant="link"
+          aria-label="Patternfly on Github"
+        >
+          View our Github repositories <ArrowRightIcon />
+        </Button>
+      </Flex>
+    </PageSection>
+    <PageSection isWidthLimited className="v5-stay-informed-cards">
+      <AggregateCards />
+    </PageSection>
   </React.Fragment>
 );
 
