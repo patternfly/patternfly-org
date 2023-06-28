@@ -167,5 +167,5 @@ Whenever a new component or major component enhancement is introduced to Pattern
 
 ## Extensions updates
 
-All PatternFly extensions have been updated to be compatible with PatternFly 5. For details on the nature of the changes made to each extension, please see [the PatternFly 5 release notes](/get-started/release-notes).
+All PatternFly extensions have been updated to be compatible with PatternFly 5. For details on the nature of the changes made to each extension, please see [the PatternFly 5 release notes](/get-started/upgrade/release-notes).
 Most notably, topology's D3 dependency has been updated to version 7, and some event handler callback signatures were updated.
