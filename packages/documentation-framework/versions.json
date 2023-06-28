@@ -1,23 +1,24 @@
 {
   "Releases": [
     {
-      "name": "alphas",
-      "date": "2022-02-08",
+      "name": "5.0.0",
+      "date": "2023-07-07",
       "latest": true,
       "versions": {
-        "@patternfly/patternfly": "5.0.0-prerelease.10",
-        "@patternfly/react-charts": "7.0.0-prerelease.6",
-        "@patternfly/react-code-editor": "5.0.0-prerelease.13",
-        "@patternfly/react-core": "5.0.0-prerelease.13",
-        "@patternfly/react-icons": "5.0.0-prerelease.7",
-        "@patternfly/react-styles": "5.0.0-prerelease.5",
-        "@patternfly/react-table": "5.0.0-prerelease.13",
-        "@patternfly/react-tokens": "5.0.0-prerelease.5",
-        "@patternfly/react-catalog-view-extension": "5.0.0-alpha.2",
-        "@patternfly/react-console": "5.0.0-alpha.2",
-        "@patternfly/react-log-viewer": "5.0.0-alpha.2",
-        "@patternfly/react-topology": "5.0.0-alpha.2",
-        "@patternfly/react-virtualized-extension": "4.88.113"
+        "@patternfly/patternfly": "5.0.0",
+        "@patternfly/react-charts": "7.0.0",
+        "@patternfly/react-code-editor": "5.0.0",
+        "@patternfly/react-core": "5.0.0",
+        "@patternfly/react-icons": "5.0.0",
+        "@patternfly/react-styles": "5.0.0",
+        "@patternfly/react-table": "5.0.0",
+        "@patternfly/react-tokens": "5.0.0",
+        "@patternfly/react-catalog-view-extension": "5.0.0",
+        "@patternfly/react-console": "5.0.0",
+        "@patternfly/react-log-viewer": "5.0.0",
+        "@patternfly/react-topology": "5.0.0",
+        "@patternfly/react-user-feedback": "5.0.0",
+        "@patternfly/react-virtualized-extension": "5.0.0"
       }
     },
     {
