@@ -19,15 +19,6 @@ if (!uploadFolder) {
   process.exit(1);
 }
 
-// The two if blocks are workarounds for GH not fully using updated workflow
-// Can be removed after workflow update is merged
-if(uploadFolder === 'build/patternfly-org') {
-  uploadFolder = 'build/patternfly-org/site';
-}
-if(uploadName === 'v4') {
-  uploadName = 'site';
-}
-
 const uploadFolderName = path.basename(uploadFolder);
 let uploadURL = `${repo}${prnum ? `-pr-${prnum}` : ''}`.replace(/[\/|\.]/g, '-');
 
