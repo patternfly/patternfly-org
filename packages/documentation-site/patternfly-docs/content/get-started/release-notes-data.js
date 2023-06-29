@@ -4834,14 +4834,14 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
     fixedWithCodeMod: false
   },
   {
-    component: "Quickstarts",
+    component: "Quick starts",
     description: "Made compatible with V5",
     pullRequestURL: ["https://github.com/patternfly/patternfly-quickstarts/pull/250", "https://github.com/patternfly/patternfly-quickstarts/pull/252"],
     repo: "Quickstarts",
     fixedWithCodeMod: false
   },
   {
-    component: "Quickstarts",
+    component: "Quick starts",
     description: "React 18, webpack 5, node 18 support, updated eslint & some other dependencies",
     pullRequestURL: "https://github.com/patternfly/patternfly-quickstarts/pull/247",
     repo: "Quickstarts",
