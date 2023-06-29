@@ -56,7 +56,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
    .replace('package.json', 'patternfly-docs/content/examples');
   const reactUserFeedbackPath = require
    .resolve('@patternfly/react-user-feedback/package.json')
-   .replace('package.json', 'patternfly-docs/content/examples');
+   .replace('package.json', 'patternfly-docs/');
 
   const logViewerContentBase = require
     .resolve('@patternfly/react-log-viewer/package.json')
@@ -97,7 +97,8 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   sourceMD(path.join(reactTopologyPath, '/**/*.md'), 'react');
 
   // React-user-feedback MD
-  sourceMD(path.join(reactUserFeedbackPath, '/**/*.md'), 'react');
+  sourceMD(path.join(reactUserFeedbackPath, '/**/examples/*.md'), 'react');
+  sourceMD(path.join(reactUserFeedbackPath, '/**/design-guidelines/*.md'), 'design-guidelines');
 
   // React OUIA MD
   sourceMD(path.join(reactCorePath, '/**/helpers/OUIA/*.md'), 'react');
