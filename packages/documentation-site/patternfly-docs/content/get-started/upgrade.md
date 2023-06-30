@@ -42,7 +42,7 @@ To run our codemods, complete the following steps:
 
 2. Make note of any issues that get flagged.
 
-3. Add the `–fix` flag to the end of your original command and run it again. 
+3. Add the `--fix` flag to the end of your original command and run it again. 
 
 4. Make note of the changes applied to your product's code base.
 
