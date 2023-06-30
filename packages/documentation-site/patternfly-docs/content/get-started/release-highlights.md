@@ -150,6 +150,7 @@ Whenever a new component or major component enhancement is introduced to Pattern
 - [Date picker](/components/date-and-time/date-picker)
 - [Dropdown-next (our new recommendation for dropdown)](/components/menus/dropdown)
 - [Icon](/components/icon)
+- [Log viewer extension](/extensions/log-viewer)
 - [Progress stepper](/components/progress-stepper)
 - [Progress with helper text](/components/progress#helper-text)
 - [Search input](/components/search-input)
@@ -163,3 +164,8 @@ Whenever a new component or major component enhancement is introduced to Pattern
 - [Tile](/components/tile)
 - [Truncate](/components/truncate)
 - [Wizard-next (our new recommendation for wizard)](/components/wizard)
+
+## Extensions updates
+
+All PatternFly extensions have been updated to be compatible with PatternFly 5. For details on the nature of the changes made to each extension, please see [the PatternFly 5 release notes](/get-started/upgrade/release-notes).
+Most notably, topology's D3 dependency has been updated to version 7, and some event handler callback signatures were updated.

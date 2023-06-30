@@ -51,9 +51,12 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   const reactLogViewerPath = require
     .resolve('@patternfly/react-log-viewer/package.json')
     .replace('package.json', 'src');
-  //const reactTopologyPath = require
-  //  .resolve('@patternfly/react-topology/package.json')
-  //  .replace('package.json', 'src');
+  const reactTopologyPath = require
+   .resolve('@patternfly/react-topology/package.json')
+   .replace('package.json', 'patternfly-docs/content/examples');
+  const reactUserFeedbackPath = require
+   .resolve('@patternfly/react-user-feedback/package.json')
+   .replace('package.json', 'patternfly-docs/');
 
   const logViewerContentBase = require
     .resolve('@patternfly/react-log-viewer/package.json')
@@ -65,7 +68,8 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   sourceProps(path.join(reactCodeEditorPath, '/**/*.tsx'),reactPropsIgnore);
   sourceProps(path.join(reactChartsPath, '/**/*.tsx'),reactPropsIgnore);
   sourceProps(path.join(reactLogViewerPath, '/**/*.tsx'), reactPropsIgnore);
-  //sourceProps(path.join(reactTopologyPath, '/**/*.tsx'), reactPropsIgnore);
+  sourceProps(path.join(reactTopologyPath, '/**/*.tsx'), reactPropsIgnore);
+  sourceProps(path.join(reactUserFeedbackPath, '/**/*.tsx'), reactPropsIgnore);
 
   // React MD
   sourceMD(path.join(reactCorePath, '/components/**/examples/*.md'), 'react');
@@ -90,8 +94,11 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   sourceMD(path.join(logViewerContentBase, '/**/demos/*.md'), 'react-demos');
 
   // React-topology MD
-  // Topology mappings commented out until Topology is compatible with v5
-  // sourceMD(path.join(reactTopologyPath, '/**/examples/*.md'), 'react');
+  sourceMD(path.join(reactTopologyPath, '/**/*.md'), 'react');
+
+  // React-user-feedback MD
+  sourceMD(path.join(reactUserFeedbackPath, '/**/examples/*.md'), 'react');
+  sourceMD(path.join(reactUserFeedbackPath, '/**/design-guidelines/*.md'), 'design-guidelines');
 
   // React OUIA MD
   sourceMD(path.join(reactCorePath, '/**/helpers/OUIA/*.md'), 'react');

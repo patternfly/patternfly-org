@@ -4828,9 +4828,117 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
   {
     component: "Search input",
     description: "Removed component",
-    pullRequestURL: "https://github.com/patternfly/patternfly/pull/5506 ",
+    pullRequestURL: "https://github.com/patternfly/patternfly/pull/5506",
     details: "The search input component was removed in favor of the text input group component.",
     repo: "HTML/CSS",
     fixedWithCodeMod: false
-  }
+  },
+  {
+    component: "Quick starts",
+    description: "Made compatible with V5",
+    pullRequestURL: ["https://github.com/patternfly/patternfly-quickstarts/pull/250", "https://github.com/patternfly/patternfly-quickstarts/pull/252"],
+    repo: "Quickstarts",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Quick starts",
+    description: "React 18, webpack 5, node 18 support, updated eslint & some other dependencies",
+    pullRequestURL: "https://github.com/patternfly/patternfly-quickstarts/pull/247",
+    repo: "Quickstarts",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Topology",
+    description: "Made compatible with V5",
+    pullRequestURL: ["https://github.com/patternfly/react-topology/pull/72","https://github.com/patternfly/react-topology/pull/68"],
+    repo: "react-topology",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Topology",
+    description: "Set strictFunctionTypes",
+    pullRequestURL: "https://github.com/patternfly/react-topology/pull/53",
+    details: "Topology code and demo code now enforce strict typing to allow for use in projects that have this requirement. You may need to update your custom components (nodes, edges) to take the GraphElement rather than the specific Node or Edge types.",
+    repo: "react-topology",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Topology",
+    description: "Added lead icon to task nodes",
+    pullRequestURL: "https://github.com/patternfly/react-topology/pull/67",
+    repo: "react-topology",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Topology",
+    description: "Fixed integralShapePath for almost parallel nodes",
+    pullRequestURL: "https://github.com/patternfly/react-topology/pull/47",
+    repo: "react-topology",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Topology",
+    description: "Updated version of D3 to version 7",
+    pullRequestURL: "https://github.com/patternfly/react-topology/pull/59",
+    details: "This only requires a change on your part if your application uses D3 directly. If you have your own layout implementation that handles D3 events, you will need to update based on D3 updated API params.",
+    repo: "react-topology",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Topology",
+    description: "Upgraded to latest mobx",
+    pullRequestURL: "https://github.com/patternfly/react-topology/pull/61",
+    repo: "react-topology",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Topology",
+    description: "Added WithContextMenu support for Promise",
+    pullRequestURL: "https://github.com/patternfly/react-topology/pull/58",
+    repo: "react-topology",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Catalog view",
+    description: "Made compatible with V5",
+    pullRequestURL: ["https://github.com/patternfly/react-catalog-view/pull/44", "https://github.com/patternfly/react-catalog-view/pull/45"],
+    details: <>If you are using TypeScript and the <code className='ws-code'>CatalogTile</code> component, you may need to update the type of the event arg in their <code className='ws-code'>onClick</code> handler to <code className='ws-code'>{"React.FormEvent<HTMLInputElement> | React.MouseEvent<Element, MouseEvent>"}</code>.</>,
+    repo: "react-catalog-view",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Log viewer",
+    description: "Promoted log viewer out of beta",
+    pullRequestURL: "https://github.com/patternfly/react-log-viewer/pull/27",
+    repo: "react-log-viewer",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Log viewer",
+    description: "Made compatible with V5",
+    pullRequestURL: "https://github.com/patternfly/react-log-viewer/pull/31",
+    repo: "react-log-viewer",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Console",
+    description: "Made compatible with V5",
+    pullRequestURL: "https://github.com/patternfly/react-console/pull/38",
+    repo: "react-console",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "User feedback",
+    description: "Made compatible with V5",
+    pullRequestURL: "https://github.com/patternfly/react-user-feedback/pull/60",
+    repo: "react-console",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "User feedback",
+    description: "Added support for promises",
+    pullRequestURL: "https://github.com/patternfly/react-user-feedback/pull/51",
+    repo: "react-user-feedback",
+    fixedWithCodeMod: false
+  },
 ];

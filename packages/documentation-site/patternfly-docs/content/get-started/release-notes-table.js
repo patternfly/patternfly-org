@@ -213,7 +213,9 @@ export const ReleaseNotesTable = () => {
       (typeof note.description === "string"
         ? note.description.search(searchValueExp) >= 0
         : findText(note.description)?.search(searchValueExp) >= 0) ||
-      note.pullRequestURL.search(searchValueExp) >= 0 ||
+      (typeof note.pullRequestURL === "string"
+        ? note.pullRequestURL.search(searchValueExp) >= 0
+        : note.pullRequestURL.findIndex(url => url.includes(searchValue)) >= 0) ||
       (note.details && findText(note.details)?.search(searchValueExp) >= 0);
 
     const hasRepoFilter =
@@ -305,7 +307,7 @@ export const ReleaseNotesTable = () => {
                       <Td dataLabel="PR link">
                         {typeof row.pullRequestURL === "string" ? (
                           <a target="_blank" href={row.pullRequestURL}>
-                            #{row.pullRequestURL.slice(-4)}
+                            #{row.pullRequestURL.match(/(\d+)/)[0]}
                           </a>
                         ) : (
                           <TextList isPlain>
@@ -314,7 +316,7 @@ export const ReleaseNotesTable = () => {
                                 key={`${rowIndex}-${url.slice(-4)}`}
                               >
                                 <a target="_blank" href={url}>
-                                  #{url.slice(-4)}
+                                  #{url.match(/(\d+)/)[0]}
                                 </a>
                               </TextListItem>
                             ))}

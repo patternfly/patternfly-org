@@ -1,9 +1,11 @@
 ---
 id: Upgrade
 source: release-notes
-title: PatternFly 5 release notes
+title: PatternFly 5 Upgrade
 section: get-started
 ---
+
+## PatternFly 5 release notes
 
 import { ReleaseNotesTable } from './release-notes-table.js';
 
