@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.8 (2023-07-05)
+
+
+### Bug Fixes
+
+* **documentation:** remove excludes from codemod command ([#3633](https://github.com/patternfly/patternfly-org/issues/3633)) ([0401c9b](https://github.com/patternfly/patternfly-org/commit/0401c9b7968e8bc2f4600854b1a071937b3fab9d))
+
+
+
+
+
 ## 5.0.7 (2023-06-30)
 
 
