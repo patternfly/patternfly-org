@@ -131,7 +131,7 @@ The following table outlines the components that are affected, as well as the co
 | [Context selector](/components/menus/context-selector/react-deprecated)         | [Menu](/components/menus/menu)                                             |
 | [Dropdown (deprecated)](/components/menus/dropdown/react-deprecated)            | [Dropdown](/components/menus/dropdown)                                     |
 | [Options menu](/components/menus/options-menu/react-deprecated)                 | [Dropdown](/components/menus/dropdown), [select](/components/menus/select) 
-| [PageHeader](/components/page/react-deprecated)                                 | [Masthead](/components/masthead)                                           |
+| [Page header](/components/page/react-deprecated)                                | [Masthead](/components/masthead)                                           |
 | [Select (deprecated)](/components/menus/select/react-deprecated)                | [Select](/components/menus/select)                                         |
 | [Table (deprecated)](/components/table/react-deprecated)                        | [Table](/components/table)                                                 
 | [Wizard (deprecated)](/components/wizard/react-deprecated)                      | [Wizard](/components/wizard)                                               |
