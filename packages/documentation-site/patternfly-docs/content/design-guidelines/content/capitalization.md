@@ -8,15 +8,15 @@ Consistent capitalization adds clarity and creates unity across your products' U
 ## Capitalization types
 
 
-**Title case** capitalizes only the first letter of each word in a sentence except for smaller words like articles and conjunctions that have fewer than four letters.
+**Title case** capitalizes only the first letter of each word in a sentence, except for smaller words like articles and conjunctions that have fewer than four letters.
 
-Example: "PatternFly Design Resources With Tips and Best Practices"
+**Example:** "PatternFly Design Resources With Tips and Best Practices"
 
 Hyperlinked articles in a UI are not displayed as titles. Instead, the copy typically reads something like, "Learn more about [tool name]." 
 
 **Sentence case** only capitalizes the first letter of the first word in a title, heading, subtitle, or subheading except for proper nouns, product names, acronyms, and initialisms.
 
-Example: “PatternFly’s design resources with tips and best practices” 
+**Example:** “PatternFly’s design resources with tips and best practices” 
 
 
 ## Capitalization across PatternFly

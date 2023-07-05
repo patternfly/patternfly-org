@@ -75,14 +75,13 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
     | Deliver concepts and ideas with an air of confident simplicity. | Don’t belittle others or make jokes at their expense. We can laugh at ourselves but not at our users. |
     | Add real-world, global-friendly examples.                       | Don’t use others as examples of what not to do.                                                       |
 
-When crafting your brand voice, consider your company or team values (if you have them) and align your voice traits accordingly.
+When crafting your brand voice, align your voice traits to any company or team values that you have.
 
-If you’re contributing PatternFly content (such as website copy or documentation), keep the above voice traits in mind. If you’re adopting PatternFly as part of another organization, you should go through a similar process to document the attributes of your own brand voice. 
+If you’re contributing content (such as website copy or documentation) to PatternFly content, keep Red Hat's voice traits in mind. If you’re adopting PatternFly as part of another organization, you should go through a similar process to document the attributes of your own brand voice. 
 
 ## Tone
-Tone is the approach you take that’s appropriate for the context of your content. Tone encompasses the user’s emotions that need to be accounted for and the resulting approach you must take.
-
 Unlike voice, tone can change. To determine tone, ask yourself the following questions:
+
 - What does the user need at this time?
 - What is the user thinking?
 - How is the user feeling?
@@ -90,6 +89,7 @@ Unlike voice, tone can change. To determine tone, ask yourself the following que
 The tone you use is based on the answers to those questions. PatternFly’s tone typically varies between casual, professional, informative, and supportive.
 
 Here are some examples of how tone varies depending on context:
+
 - You’re writing a blog post about a PatternFly event—exciting! Your tone is casual.
 - You’re writing a social media post addressing a product delay or failure—not exciting. Your tone is professional.
 - You’re writing an email to inform a user of an overdue payment. Your tone is informative and professional.
