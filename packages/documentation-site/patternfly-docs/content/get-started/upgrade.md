@@ -37,12 +37,12 @@ To run our codemods, complete the following steps:
 1. Run the following command, adding in the path to your product's source code: 
 
     ```{
-    npx @patternfly/pf-codemods@latest <path to your source code> --exclude menu-search-rename,alert-remove-titleHeadingLevel,datetimepicker-warn-helperText,formgroup-remove-helpertextProps,formhelpertext-remove-props,alert-remove-titleHeadingLevel
+    npx @patternfly/pf-codemods@latest <path to your source code>
     ```
 
 2. Make note of any issues that get flagged.
 
-3. Add the `–fix` flag to the end of your original command and run it again. 
+3. Add the `--fix` flag to the end of your original command and run it again. 
 
 4. Make note of the changes applied to your product's code base.
 
