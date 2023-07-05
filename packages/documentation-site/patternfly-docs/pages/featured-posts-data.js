@@ -1,12 +1,12 @@
 export const featuredPostsData = {
   post1: {
-    title: "Accessibility best practices",
-    author: "Agnieszka Gancarczyk",
-    length: "8 min read",
-    URL: "https://medium.com/patternfly/accessibility-best-practices-e98a13bdb29",
+    title: "PatternFly’s major release: Everything you need to know",
+    author: "Allison Wolfe",
+    length: "3 min read",
+    URL: "https://medium.com/patternfly/patternflys-major-release-everything-you-need-to-know-62f7c890ff57",
     // Use resize:fit:600 in URL
     imageURL:
-      "https://miro.medium.com/v2/resize:fit:600/format:webp/1*9Z-1w5Qu9MoVLlhia94lQw.png",
+      "https://miro.medium.com/v2/resize:fit:1400/0*mv2oK__r8GVxoySa",
   },
   post2: {
     title: "Explaining content design to non-UXers",
