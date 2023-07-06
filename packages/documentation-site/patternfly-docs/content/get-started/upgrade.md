@@ -67,7 +67,7 @@ For PatternFly 5, class names, variable names, and SCSS objects have all had `v5
 
 | Language/style | v4 prefix | v5 prefix|  Note |
 | --- | ---| --- | ---  |
-|  CSS |  `--pf-` |  `$pf-v5-` |
+|  CSS |  `--pf-` |  `--pf-v5-` |
 |  SCSS |  `.pf-`  | `$pf-v5-`  |
 |  SCSS | `@mixin pf-`  | `@mixin pf-v5-`  |
 |  SCSS | `@function pf-`  | `@function pf-v5-`  |
