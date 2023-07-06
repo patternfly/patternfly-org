@@ -40,6 +40,11 @@ To run our codemods, complete the following steps:
     npx @patternfly/pf-codemods@latest <path to your source code>
     ```
 
+   * You should see an output similar to running `lint`, with both a list of warnings and errors, as well as a total count of each, as shown in the following example:
+     ![Example codemod output.](./img/codemod-output.png)
+
+   * If you see something different, please reach out before going further as there may be an issue.
+
 2. Make note of any issues that get flagged.
 
 3. Add the `--fix` flag to the end of your original command and run it again. 
