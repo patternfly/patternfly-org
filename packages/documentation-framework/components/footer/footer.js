@@ -62,16 +62,6 @@ export const Footer = () => (
                       Styles
                     </Link>
                   </li>
-                  <li className="ws-org-pfsite-footer-menu-list-item">
-                    <Link
-                      className="ws-org-pfsite-footer-menu-link"
-                      to="https://pf3.patternfly.org/"
-                      target="top"
-                      aria-label="View the PatternFly 3 website"
-                    >
-                      PatternFly 3
-                    </Link>
-                  </li>
                 </List>
               </nav>
             </GridItem>

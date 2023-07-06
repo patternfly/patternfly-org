@@ -33,7 +33,7 @@ __Example__
 To open an issue or browse existing issues, visit the [patternfly-design-kit repo](https://github.com/patternfly/patternfly-design-kit/) on GitHub.
 
 ### Contributing new icons
-We encourage designers to work with the existing PatternFly icon set when choosing icons to use in their project. These include both custom and existing Font Awesome icons that cover most common use cases. To see what's available, vist our [Icons page](https://www.patternfly.org/v4/design-foundations/icons). However, there may be occasions where you want to propose a new icon to be added to PatternFly.
+We encourage designers to work with the existing PatternFly icon set when choosing icons to use in their project. These include both custom and existing Font Awesome icons that cover most common use cases. To see what's available, vist our [Icons page](/design-foundations/icons). However, there may be occasions where you want to propose a new icon to be added to PatternFly.
 
 __Example__
 *I want to add a new custom icon to PatternFly to meet my project specific need.*

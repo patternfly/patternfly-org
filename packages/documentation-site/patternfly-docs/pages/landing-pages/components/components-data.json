@@ -274,7 +274,7 @@
   },
   "select": {
     "illustration": "./images/component-illustrations/select.png",
-    "summary": "A <b>select</b> list enables users to select one or more items from a list. Use a select list when options are dynamic or variable. <br/><br/>A newer React implementation of the select will replace the existing implementation at the next major release. The documentation for the newer implementation is under the <Link to='/components/select/react-next'>React next</Link> tab, and this newer implementation can be imported from @patternfly/react-core/next."
+    "summary": "A <b>select</b> list enables users to select one or more items from a list. Use a select list when options are dynamic or variable."
   },
   "sidebar": {
     "illustration": "./images/component-illustrations/sidebar.png",
@@ -302,7 +302,7 @@
   },
   "switch": {
     "illustration": "./images/component-illustrations/switch.png",
-    "summary": "A <b>switch</b> toggles the state of a setting (between on and off). Switches and <Link to='/components/checkbox'>checkboxes</Link> can often be used interchangeably, but the switch provides a more explicit, visible representation on a setting."
+    "summary": "A <b>switch</b> toggles the state of a setting (between on and off). Switches and <Link to='/components/forms/checkbox'>checkboxes</Link> can often be used interchangeably, but the switch provides a more explicit, visible representation on a setting."
   },
   "tab-content": {
     "illustration": "./images/component-illustrations/tab-content.png",
@@ -322,7 +322,7 @@
   },
   "text-input-group": {
     "illustration": "./images/component-illustrations/text-input-group.png",
-    "summary": "A <b>text input group</b> is a more flexible composable version of a <Link to='/components/text-input'>text input</Link>. It enables consumers of PatternFly to build custom inputs for filtering and similar use cases by placing elements like icons, <Link to='/components/chip-group'>chips groups</Link> and <Link to='/components/button'>buttons</Link> within a text input."
+    "summary": "A <b>text input group</b> is a more flexible composable version of a <Link to='/components/forms/text-input'>text input</Link>. It enables consumers of PatternFly to build custom inputs for filtering and similar use cases by placing elements like icons, <Link to='/components/chip#chip-groups'>chips groups</Link> and <Link to='/components/button'>buttons</Link> within a text input."
   },
   "text-input": {
     "illustration": "./images/component-illustrations/text-input.png",
@@ -346,7 +346,7 @@
   },
   "title": {
     "illustration": "./images/component-illustrations/title.png",
-    "summary": "A <b>title</b> component applies top and bottom margins, font-weight, font-size, and line-height to titles. The most common usage for a title is to define headings within a page. For more information about the relationship between title component sizes and HTML heading levels, see the <Link to='/guidelines/typography#customizing-heading-levels'>Typography guidelines</Link>."
+    "summary": "A <b>title</b> component applies top and bottom margins, font-weight, font-size, and line-height to titles. The most common usage for a title is to define headings within a page. For more information about the relationship between title component sizes and HTML heading levels, see the <Link to='/design-foundations/typography#customizing-heading-levels'>Typography guidelines</Link>."
   },
   "toggle-group": {
     "illustration": "./images/component-illustrations/toggle-group.png",
@@ -362,7 +362,7 @@
   },
   "tree-view": {
     "illustration": "./images/component-illustrations/tree-view.png",
-    "summary": "A <b>tree view</b> is a structure that displays data in a hierarchical view. It can be used in a <Link to='/components/dropdown'>dropdown</Link>, <Link to='/components/drawer'>drawer</Link>, <Link to='/demos/primary-detail'>primary-detail</Link>, <Link to='/components/modal'>modal</Link>, or <Link to='/components/wizard'>wizard</Link>."
+    "summary": "A <b>tree view</b> is a structure that displays data in a hierarchical view. It can be used in a <Link to='/components/menus/dropdown'>dropdown</Link>, <Link to='/components/drawer'>drawer</Link>, <Link to='/patterns/primary-detail'>primary-detail</Link>, <Link to='/components/modal'>modal</Link>, or <Link to='/components/wizard'>wizard</Link>."
   },
   "truncate": {
     "illustration": "./images/component-illustrations/truncate.png",

@@ -14,7 +14,7 @@ Our latest major release introduces new support and functionality to PatternFly,
 - An enhanced system of CSS classes and variables, 
 - And more!
 
-To learn about the most significant changes in this release, read our [release highlights](/get-started/release-higlights.md). A detailed list of all changes can be found in our [major release notes](get-started/upgrade.md#major-release-notes). 
+To learn about the most significant changes in this release, read our [release highlights](/get-started/release-highlights). A detailed list of all changes can be found in our [major release notes](/get-started/upgrade/release-notes). 
 
 This guide outlines the major steps you should take to upgrade your product's codebase from PatternFly 4 to PatternFly 5. 
 
@@ -84,6 +84,6 @@ You will have until our next major release to update the code for your component
 PatternFly 5 brings a new implementation to the following components, which can be upgraded according to the linked documentation:
 
 - [Table](/components/table) 
-- [Select](/components/select)
-- [Dropdown ](/components/dropdown) 
+- [Select](/components/menus/select)
+- [Dropdown ](/components/menus/dropdown) 
 - [Wizard](/components/wizard)

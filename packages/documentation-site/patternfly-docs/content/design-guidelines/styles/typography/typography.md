@@ -113,7 +113,7 @@ No matter what visual customizations you choose to make, you should always maint
 ## Line height and spacing
 Spacing represents margins above and below text. When measuring spacing in text-based content, plan for line height. To get the correct line height in pixels, multiply line height by text size. Use spacers to provide appropriate spacing between lines of text.
 
-For example, if a body of text uses a line height of 1.5 and the body text size is 16px, the final line height would be 24 px (16 * 1.5 = 24). In this case, include the 24px line height as part of the text when creating designs in the design software. Visit the [Spacers](/guidelines/spacers) page for more information about spacer usage.
+For example, if a body of text uses a line height of 1.5 and the body text size is 16px, the final line height would be 24 px (16 * 1.5 = 24). In this case, include the 24px line height as part of the text when creating designs in the design software. Visit the [Spacers](/design-foundations/spacers) page for more information about spacer usage.
 
 <Grid>
   <GridItem span={12}>

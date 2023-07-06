@@ -22,7 +22,7 @@ All switch types display their state (on or off) through different methods and l
 * Add a form label in front of your switch to specify what setting a switch turns on or off, such as *Wi-fi* or *Bluetooth*.
 * If you're using a basic switch, add switch labels to clarify between toggled settings, such as *On* and *Off*.
 * Don't include the state of a switch in a label if you're using a switch with a label and a checkmark. 
-* Don’t use a switch if the options you’re presenting to the user are anything other than “on” or “off.” Instead, use [radio buttons](/components/radio/design-guidelines). 
+* Don’t use a switch if the options you’re presenting to the user are anything other than “on” or “off.” Instead, use [radio buttons](/components/forms/radio/design-guidelines). 
 
 
 

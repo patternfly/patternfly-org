@@ -385,7 +385,7 @@ Placeholder text that doesn’t give an example doesn’t need to be introduced 
 
 **Note:** Once users start typing, placeholder text disappears. Consider communicating crucial formatting requirements or directions with helper text instead.
 
-See our [text input guidelines](/components/text-input/design-guidelines) for more specific guidance on writing placeholder text for text input fields.
+See our [text input guidelines](/components/forms/text-input/design-guidelines) for more specific guidance on writing placeholder text for text input fields.
 
 ### Helper text
 

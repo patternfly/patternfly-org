@@ -22,4 +22,4 @@ Radio buttons allow users to select **1 item** from a list of options.
 
 ### Labeling and alignment
 
-Radio button labels fall to the right of the radio button control. You can use headings to label a group of radio buttons. The placement of headings will depend on the layout of other content in the form or on the page you’re designing. For more information on how to arrange radio buttons, see the [forms design guidelines](/components/form/design-guidelines#data-input-arrangement).
+Radio button labels fall to the right of the radio button control. You can use headings to label a group of radio buttons. The placement of headings will depend on the layout of other content in the form or on the page you’re designing. For more information on how to arrange radio buttons, see the [forms design guidelines](/components/forms/form/design-guidelines#data-input-arrangement).

@@ -116,7 +116,7 @@ Use these files to consume the library. The recommended consumption approach wil
 
 PatternFly uses the Red Hat font family. By default, Red Hat fonts are included as part of the PatternFly distributed CSS file. You do not need to do anything with your configuration to use this font family.
 
-The official documentation for the Red Hat font family can be found at the [RedHatOfficial/RedHatFont repo](https://github.com/RedHatOfficial/RedHatFont). A number of opt-in classes to expand the feature set of the default Red Hat font family within PatternFly, including variable font files and updated monospace fonts, can be found on the [Red Hat font page](/developer-resources/red-hat-font/). For additional guidelines on typography implementation in PatternFly see the [PatternFly typography guidelines](/design-foundations/typography).
+The official documentation for the Red Hat font family can be found at the [RedHatOfficial/RedHatFont repo](https://github.com/RedHatOfficial/RedHatFont). For additional guidelines on typography implementation in PatternFly see the [PatternFly typography guidelines](/design-foundations/typography).
 
 **Icons**
 
