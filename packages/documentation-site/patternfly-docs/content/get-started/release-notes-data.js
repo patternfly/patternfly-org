@@ -4941,4 +4941,158 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
     repo: "react-user-feedback",
     fixedWithCodeMod: false
   },
+  {
+    component: "Form control",
+    description: "Changes all the divs in a form control to be spans to allow a form control to be inside phrasing content.",
+    pullRequestURL: "https://github.com/patternfly/patternfly/pull/5703",
+    repo: "HTML/CSS",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Select",
+    description: "Fixed typeahead form control border styles.",
+    pullRequestURL: "https://github.com/patternfly/patternfly/pull/5698",
+    repo: "HTML/CSS",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Charts",
+    description: (<>Fixed dark theme chart var prefix from <code className='ws-code'>pf-v5-c-chart</code> to <code className='ws-code'>pf-v5-chart</code>.</>),
+    pullRequestURL: "https://github.com/patternfly/patternfly/pull/5673",
+    repo: "HTML/CSS",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Fonts",
+    description: "Fixed RHD bold incorrect font mapping to italic font.",
+    pullRequestURL: "https://github.com/patternfly/patternfly/pull/5678",
+    repo: "HTML/CSS",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Text input group",
+    description: "Addressed the cause of the earch input icon and placeholder text being the wrong color when in a masthead or dark block.",
+    pullRequestURL: "https://github.com/patternfly/patternfly/pull/5666",
+    repo: "HTML/CSS",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Card",
+    description: "Fixed how the newly introduced selectable cards are fixed in light theme.",
+    pullRequestURL: "https://github.com/patternfly/patternfly/pull/5668",
+    repo: "HTML/CSS",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Button",
+    description: <>Re-introduced a CSS var override in the button's <code className='ws-code'>pf-t-dark</code> placeholder that sets the primary button background.</>,
+    pullRequestURL: "https://github.com/patternfly/patternfly/pull/5652",
+    repo: "HTML/CSS",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "@All",
+    description: "Prefixed and relocated variable font opt-in.",
+    pullRequestURL: "https://github.com/patternfly/patternfly/pull/5617",
+    repo: "HTML/CSS",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Menu toggle",
+    description: "Removed the background from full height menu toggles in dark theme.",
+    pullRequestURL: "https://github.com/patternfly/patternfly/pull/5643",
+    repo: "HTML/CSS",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Calendar month",
+    description: "Updated background color of calendar month date ranges.",
+    pullRequestURL: "https://github.com/patternfly/patternfly/pull/5624",
+    repo: "HTML/CSS",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "OUIA",
+    description: (<>Updated the OUIA <code className='ws-code'>data-ouia-component-type</code> prefix from <code className='ws-code'>PF4</code> to <code className='ws-code'>PF5</code>.</>),
+    pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9250",
+    repo: "React",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Popover",
+    description: (<>Reverted default value of popover <code className='ws-code'>appendTo</code> prop so it is now <code className='ws-code'>() => document.body</code>.</>),
+    pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9252",
+    repo: "React",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Toolbar",
+    description: (<>Allows <code className='ws-code'>alignItems</code> and <code className='ws-code'>alignSelf</code> on <code className='ws-code'>ToolbarContent</code>, <code className='ws-code'>ToolbarGroup</code> and <code className='ws-code'>ToolbarItem</code> to have values <code className='ws-code'>start</code>, <code className='ws-code'>center</code>, and <code className='ws-code'>baseline</code>.</>),
+    pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9325",
+    repo: "React",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Text input",
+    description: (<>Changed divs in form control elements to spans.</>),
+    pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9334",
+    repo: "React",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Text area",
+    description: (<>Changed divs in form control elements to spans.</>),
+    pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9334",
+    repo: "React",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Form select",
+    description: (<>Changed divs in form control elements to spans.</>),
+    pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9334",
+    repo: "React",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Charts",
+    description: (<>Exported <code className='ws-code'>getThemeColors</code>.</>),
+    pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9338",
+    repo: "React",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Select",
+    description: (<>Used text input component in the typeahead toggle for the deprecated select.</>),
+    pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9317",
+    repo: "React",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Select",
+    description: (<>Used text input component in the typeahead toggle for the deprecated select.</>),
+    pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9317",
+    repo: "React",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "@All",
+    description: (<>Create component level package.json files to enable federated modules.</>),
+    pullRequestURL: ["https://github.com/patternfly/patternfly-react/pull/9287","https://github.com/patternfly/patternfly-react/pull/9260", "https://github.com/patternfly/patternfly-react/pull/9272"],
+    repo: "React",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Charts",
+    description: (<>Update Victory packages to the latest version (36.6.11).</>),
+    pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9276",
+    repo: "React",
+    fixedWithCodeMod: false
+  },
+  {
+    component: "Icons",
+    description: (<>Added fallback width and height attributes to icons from @patternfly/react-icons.</>),
+    pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9257",
+    repo: "React",
+    fixedWithCodeMod: false
+  }
 ];
