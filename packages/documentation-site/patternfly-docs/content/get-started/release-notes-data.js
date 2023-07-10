@@ -4943,7 +4943,7 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
   },
   {
     component: "Form control",
-    description: "Changes all the divs in a form control to be spans to allow a form control to be inside phrasing content.",
+    description: "Changed all the divs in a form control to be spans to allow a form control to be inside phrasing content.",
     pullRequestURL: "https://github.com/patternfly/patternfly/pull/5703",
     repo: "HTML/CSS",
     fixedWithCodeMod: false
@@ -4964,14 +4964,14 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
   },
   {
     component: "Fonts",
-    description: "Fixed RHD bold incorrect font mapping to italic font.",
+    description: "Fixed incorrect font mapping from bold to italic for RHD font.",
     pullRequestURL: "https://github.com/patternfly/patternfly/pull/5678",
     repo: "HTML/CSS",
     fixedWithCodeMod: false
   },
   {
     component: "Text input group",
-    description: "Addressed the cause of the earch input icon and placeholder text being the wrong color when in a masthead or dark block.",
+    description: "Addressed the cause of the search input icon and placeholder text being the wrong color when in a masthead or dark block.",
     pullRequestURL: "https://github.com/patternfly/patternfly/pull/5666",
     repo: "HTML/CSS",
     fixedWithCodeMod: false
@@ -5027,7 +5027,7 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
   },
   {
     component: "Toolbar",
-    description: (<>Allows <code className='ws-code'>alignItems</code> and <code className='ws-code'>alignSelf</code> on <code className='ws-code'>ToolbarContent</code>, <code className='ws-code'>ToolbarGroup</code> and <code className='ws-code'>ToolbarItem</code> to have values <code className='ws-code'>start</code>, <code className='ws-code'>center</code>, and <code className='ws-code'>baseline</code>.</>),
+    description: (<>Updated <code className='ws-code'>alignItems</code> and <code className='ws-code'>alignSelf</code> on <code className='ws-code'>ToolbarContent</code>, <code className='ws-code'>ToolbarGroup</code> and <code className='ws-code'>ToolbarItem</code> to have values <code className='ws-code'>start</code>, <code className='ws-code'>center</code>, and <code className='ws-code'>baseline</code>.</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9325",
     repo: "React",
     fixedWithCodeMod: false
@@ -5076,14 +5076,14 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
   },
   {
     component: "@All",
-    description: (<>Create component level package.json files to enable federated modules.</>),
+    description: (<>Created component level package.json files to enable federated modules.</>),
     pullRequestURL: ["https://github.com/patternfly/patternfly-react/pull/9287","https://github.com/patternfly/patternfly-react/pull/9260", "https://github.com/patternfly/patternfly-react/pull/9272"],
     repo: "React",
     fixedWithCodeMod: false
   },
   {
     component: "Charts",
-    description: (<>Update Victory packages to the latest version (36.6.11).</>),
+    description: (<>Updated Victory packages to the latest version (36.6.11).</>),
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9276",
     repo: "React",
     fixedWithCodeMod: false
