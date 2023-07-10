@@ -3,16 +3,19 @@ id: Writing design guidelines for PatternFly
 section: UX writing
 ---
 
-Design guidelines walk through building design patterns with PatternFly. This page focuses on how to write clear and consistent design documentation. To learn how to contribute design guidelines, see our [contribution guide](https://github.com/patternfly/patternfly-org/wiki/Contributing-to-patternfly-org-for-designers).
+PatternFly's design guidelines provide users with information regarding the design, usage, behavior, and more of PatternFly's elements and components. This guide provides instructions for writing clear and consistent design documentation for PatternFly. 
+
+To learn how to contribute design guidelines, see our [contribution guide](https://github.com/patternfly/patternfly-org/wiki/Contributing-to-patternfly-org-for-designers).
 
 ## Design guidelines template
-When creating guidelines, information must be presented in the following order. Sections may be omitted, but if present must be under one of the following headings.
+When creating guidelines, information must be presented in the following order. Sections may be omitted, but if present they must be contained under one of the following headings.
 
 ### Elements (H2)
-Introduce the component and list the primary parts that make up its structure. This includes specific icons, headers, fields, symbols, or anything else included in the component.
+Display an image of the component containing numbered annotation tags for each major part of the component's visual design. Include specific icons, headers, fields, symbols, and anything else included in the component's structure. Following the image, list all the parts you tagged, aligning with the number displayed in the respective annotation tag. In this list, provide a description of each one. 
+
 Example:
 
-<img src="./img/sliderelements.png" alt="A screenshot of the slider component's element section with 8 elements outlined." width="479px" />
+<img src="./img/sliderelements.png" alt="A screenshot of the slider component's element section with 8 elements outlined." width="600px" />
 
 ### Usage (H2)
 Explain how the component is used, when to use it, and why it should be used. Include explanations of problems it could help solve and address its advantages over similar components. Include images for visual examples.
@@ -23,9 +26,8 @@ Additional sub-sections to include:
 #### When to use X vs. Y
 #### Examples of incorrect usage
 
-
 ### Behavior (H2)
-Explain how the component functions and break down how its elements interact with each other to achieve its purpose.
+Explain how the component functions and break down how its elements interact with each other to achieve its purpose. It may be helpful to include additional images or animations to demonstrate how the component works.
 
 ### Variations (H2)
 Showcase different forms of your component and include explanations indicating when to use each one. 
@@ -44,31 +46,29 @@ Showcase the different content that could be included within your component. Her
 - Localization considerations.
 
 ### Accessibility (H2)
-Each component that has an assessibility tab should include the following sentence:
+Each component that has an assessibility tab should include the following sentence within this section:
 
-For information regarding accessibility, visit the [component name] accessibility tab.
+"For information regarding accessibility, visit the [component name] accessibility tab."
 
 Then, link the component's accessibilty tab to the words "accessibility tab".
 
-
-
 ## Formatting 
+
+The following best practices should inform the way that you format the content in your design documentation.
 
 ### Capitalization
 
 Our [capitalization style guidelines](/ux-writing/capitalization/) outline best practices for capitalization across PatternFly. 
 
-Always write headings in sentence case. Write component names in lowercase.
+Always write headings in sentence case. Write component names in lowercase. 
 
-Example: 
-
-"Usage guidelines for card views"
+For example, "Usage guidelines for card views"
 
 ### Bolds and italics
 
 **Bold** component names when you first introduce them.
 
-Example: A **card** is a square or rectangle container of related information.
+For example, "A **card** is a square or rectangle container of related information."
 
 *Italicize* words for emphasis, but do so sparingly.
 
@@ -82,7 +82,7 @@ When building lists, follow these best practices:
 - Introduce your list with a clause or phrase that describes the information it shares. 
 - Start each item with a capital letter.
 - End list items with a period if they're sentences, or if they form a full sentence when combined with the clause/phrase that introduces the list.
-- Maintain parallel structure. Start every list item with the same part of speech. (Each item of this list starts with a verb.)
+- Maintain parallel structure. Start every list item with the same part of speech. (For example, each item of this list starts with a verb.)
 
 ## Images
 
@@ -90,25 +90,21 @@ Design documentation includes images to contextualize elements in a UI and demon
 
 ### Annotations
 
-Callouts demonstrate your design in action by highlighting specific areas in an image.
+Annotations highlight specific areas in an image. Follow these best practices when using annotations:
 
-Use numbered callouts to call out multiple areas in your image, then use a corresponding numbered list to explain each one.
+- Use numbered callouts to call out multiple areas in your image, then use a corresponding numbered list to explain each one. For example:
 
-Example:
+    ![Two callouts highlight multiple items on a toolbar.](./img/desguidelines2.png)
 
-![Two callouts highlight multiple items on a toolbar.](./img/desguidelines2.png)
+    **1. Items in view:** Allows the user to select the item count (number of listed items) per page, as seen in full pagination
 
-**1. Items in view:** Allows the user to select the item count (number of listed items) per page, as seen in full pagination
+    **2. Compact pager:** Supplies the user with page-back and page-next controls only
 
-**2. Compact pager:** Supplies the user with page-back and page-next controls only
+- Avoid using a callout to highlight a single item, unless you're pointing out a small part of a large view, or the item isn't clearly shown in your image. Use a blank, unnumbered callout to mark the area, then bold it in your explanation. For example:
 
-Avoid using a callout to highlight a single item, unless you're pointing out a small part of a large view, or the item isn't clearly shown in your image. Use a blank, unnumbered callout to mark the area, then bold it in your explanation.
+    ![#A single callout highlights the login button on a large screen.](./img/desguidelines3.png)
 
-Example:
-
-![#A single callout highlights the login button on a large screen.](./img/desguidelines3.png)
-
-Always write your **login button** as two words: "Log in."
+    Always write your **login button** as two words: "Log in."
 
 ## Style, voice, and tone
 
@@ -126,7 +122,7 @@ When writing design guidelines, use:
 
 If you're linking to other PatternFly pages, use relative URLs instead of full URLs.
 
-**Relative URL:** /components/tooltip/design-guidelines
+- **Relative URL:** /components/tooltip/design-guidelines
 
-**Full URL:** https://www.patternfly.org/v4/components/tooltip/design-guidelines
+- **Full URL:** https://www.patternfly.org/v4/components/tooltip/design-guidelines
 
