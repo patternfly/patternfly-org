@@ -54,7 +54,7 @@ Include text for screen readers. Screen readers are most useful when the words r
 
 - Make sure that labels for elements like buttons or links make sense when pulled out of context. Use descriptive hyperlinks instead of raw links or vague linked text, such as “Click here.”  
 
-- When you define an aria-label for an element that also has associated visible text in the UI, ensure the aria-label begins with the same text that displays in the UI to avoid confusion with screen reader users who have vision. 
+- When you define an aria-label for an element that also has associated visible text in the UI, ensure the aria-label begins with the same text that is displayed in the UI to avoid confusing screen reader users who have vision. 
 
 - Avoid unnecessary capitalization. 
 
@@ -67,6 +67,7 @@ Accessibility is closely related to localization and translation. The more acces
 - Translated text can be a drastically different length than the source text. Collaborate with UX designers to ensure that the text you use can appear 50% shorter or 50% longer with no negative impact on design.
 
 - Character width is affected by double-byte characters.
+
 - Avoid describing objects with human characteristics, for example “the computer knows when you log on.”
 
 - Avoid idioms, jargon, or regional metaphors, such as “on the ball.” They don’t make sense in all languages.
