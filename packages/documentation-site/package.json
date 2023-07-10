@@ -1,0 +1,36 @@
+{
+  "name": "patternfly-org",
+  "description": "Documentation for PatternFly.",
+  "private": true,
+  "version": "4.21.4",
+  "author": "Red Hat",
+  "license": "MIT",
+  "scripts": {
+    "analyze": "pf-docs-framework build all --analyze",
+    "build": "pf-docs-framework build all",
+    "build:server": "pf-docs-framework build server",
+    "build:client": "pf-docs-framework build client",
+    "clean": "rimraf -rf .cache public size-plugin.json patternfly-docs/generated/**/*.js",
+    "develop": "pf-docs-framework start",
+    "generate": "pf-docs-framework generate",
+    "test:a11y": "patternfly-a11y --config patternfly-a11y.config",
+    "screenshots": "pf-docs-framework screenshots"
+  },
+  "dependencies": {
+    "@patternfly/documentation-framework": "^5.0.1",
+    "@patternfly/quickstarts": "^5.0.0-prerelease.1",
+    "@patternfly/react-catalog-view-extension": "5.0.0-prerelease.1",
+    "@patternfly/react-console": "5.0.0-prerelease.1",
+    "@patternfly/react-docs": "6.0.0-prerelease.13",
+    "@patternfly/react-log-viewer": "5.0.0-prerelease.1",
+    "@patternfly/react-topology": "5.0.0-prerelease.1",
+    "@patternfly/react-user-feedback": "5.0.0-prerelease.1",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@patternfly/patternfly-a11y": "4.3.1",
+    "fs-extra": "^11.1.0",
+    "glob": "^8.1.0"
+  }
+}

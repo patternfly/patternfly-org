@@ -1,19 +1,13 @@
 import React from "react";
-import {
-    Brand,
-    Grid,
-    GridItem,
-    List,
-    PageSection
-} from "@patternfly/react-core";
-import { Link } from '@patternfly/documentation-framework/components';
-import { GithubIcon, TwitterIcon } from "@patternfly/react-icons";
+import {Brand, Grid, GridItem, List, PageSection, Text} from "@patternfly/react-core";
+import {Link} from "@patternfly/documentation-framework/components";
+import {GithubIcon, TwitterIcon} from "@patternfly/react-icons";
 import redhatLogo from "./RHLogo.png";
-import logo from '../../layouts/logo.svg';
+import logo from "../../layouts/PF-HorizontalLogo-Reverse.svg";
 
 export const Footer = () => (
   <React.Fragment>
-    <PageSection key="footer-1" className="ws-org-pfsite-l-footer">
+    <PageSection key="footer-1" className="ws-org-pfsite-l-footer" component="footer">
       <Grid>
         <GridItem
           sm={12}
@@ -22,10 +16,12 @@ export const Footer = () => (
           className="pf-v5-u-mb-lg pf-v5-u-mb-0-on-sm"
         >
           <Grid className="pf-v5-u-py-xl">
-            <GridItem sm={6} md={4} className="pf-v5-u-ml-md pf-v5-u-ml-0-on-md pf-v5-u-mb-xl pf-v5-u-mb-0-on-md">
-              <p
-                className="pf-v5-c-title ws-org-pfsite-footer-menu-list-title"
-              >
+            <GridItem
+              sm={6}
+              md={4}
+              className="pf-v5-u-ml-md pf-v5-u-ml-0-on-md pf-v5-u-mb-xl pf-v5-u-mb-0-on-md"
+            >
+              <p className="pf-v5-c-title ws-org-pfsite-footer-menu-list-title">
                 QUICKLINKS
               </p>
               <nav aria-label="Quick Links">
@@ -66,16 +62,6 @@ export const Footer = () => (
                       Styles
                     </Link>
                   </li>
-                  <li className="ws-org-pfsite-footer-menu-list-item">
-                    <Link
-                      className="ws-org-pfsite-footer-menu-link"
-                      to="https://pf3.patternfly.org/"
-                      target="top"
-                      aria-label="View the PatternFly 3 website"
-                    >
-                      PatternFly 3
-                    </Link>
-                  </li>
                 </List>
               </nav>
             </GridItem>
@@ -84,9 +70,7 @@ export const Footer = () => (
               md={4}
               className="pf-v5-u-mt-lg pf-v5-u-mt-0-on-sm pf-v5-u-ml-md pf-v5-u-ml-0-on-md pf-v5-u-mb-xl pf-v5-u-mb-0-on-md"
             >
-              <p
-                className="pf-v5-c-title ws-org-pfsite-footer-menu-list-title"
-              >
+              <p className="pf-v5-c-title ws-org-pfsite-footer-menu-list-title">
                 CONTRIBUTE
               </p>
               <nav aria-label="Contribute">
@@ -127,9 +111,7 @@ export const Footer = () => (
               md={4}
               className="pf-v5-u-mt-lg pf-v5-u-mt-0-on-md pf-v5-u-ml-md pf-v5-u-ml-0-on-md"
             >
-              <p
-                className="ws-org-pfsite-footer-menu-list-title"
-              >
+              <p className="ws-org-pfsite-footer-menu-list-title">
                 STAY IN TOUCH
               </p>
               <nav aria-label="Stay in touch">
@@ -147,11 +129,11 @@ export const Footer = () => (
                   <li className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="//forum.patternfly.org"
+                      to="//github.com/orgs/patternfly/discussions"
                       target="top"
-                      aria-label="Visit the PatternFly 4 forum"
+                      aria-label="Visit the PatternFly discussion forum"
                     >
-                      Forum
+                      Discussions
                     </Link>
                   </li>
                   <li className="ws-org-pfsite-footer-menu-list-item">
@@ -186,11 +168,22 @@ export const Footer = () => (
                 className="pf-v5-c-page__header-brand-link pf-v5-c-brand ws-org-pfsite-footer-menu-about-logo pf-v5-u-pb-md"
                 to="/"
               >
-                <Brand src={logo} alt="Patternfly Logo" />
+                <Brand
+                  src={logo}
+                  alt="PatternFly"
+                  heights={{default: "32px"}}
+                >
+                  <source srcSet={logo} />
+                </Brand>
               </Link>
-              <p className="ws-org-pfsite-footer-menu-about-description">
-                PatternFly is an open source design system built to drive consistency and unify teams. From documentation and components to code examples and tutorials, PatternFly is a place where design and development can thrive. We’re on a mission to help teams build consistent, accessible, and scalable enterprise product experiences—the open source way.
-              </p>
+              <Text className="ws-org-pfsite-footer-menu-about-description">
+                PatternFly is an open source design system built to drive
+                consistency and unify teams. From documentation and components
+                to code examples and tutorials, PatternFly is a place where
+                design and development can thrive. We’re on a mission to help
+                teams build consistent, accessible, and scalable enterprise
+                product experiences—the open source way.
+              </Text>
             </GridItem>
             <GridItem className="ws-org-pfsite-footer-menu-social-links pf-v5-u-px-xl">
               <Link
@@ -212,17 +205,19 @@ export const Footer = () => (
         </GridItem>
       </Grid>
     </PageSection>
-    <PageSection key="footer-2" className="ws-org-pfsite-l-footer-dark pf-m-no-fill">
+    <PageSection
+      key="footer-2"
+      className="ws-org-pfsite-l-footer-dark pf-m-no-fill"
+    >
       <Grid className="pf-v5-u-py-xl-on-sm pf-v5-u-py-0-on-md pf-v5-u-align-items-center">
         <GridItem md={2} mdOffset={1}>
           <Link
             to="//www.redhat.com"
             target="top"
-            aria-label="Visit Red Hat.com"
           >
             <img
               src={redhatLogo}
-              alt="Red Hat logo"
+              alt="Red Hat"
               width="145px"
               height="613px"
             />

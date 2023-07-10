@@ -2,15 +2,13 @@ const { parse } = require('@patternfly/ast-helpers');
 const versions  = require('../versions.json');
 const overpass = require('./fonts');
 const { capitalize } = require('./capitalize');
-const path = require('path');
-const pathPrefix = process.env.pathPrefix;
 
 const getStaticParams = (title, html) => {
   const imgAssetRegex = /['"](\/assets\/images\/.*)['"]/g;
   let imgAsset;
   while ((imgAsset = imgAssetRegex.exec(html))) {
     const imgName = imgAsset[1];
-    html = html.replace(imgName, `https://www.patternfly.org/v4${imgName}`);
+    html = html.replace(imgName, `https://www.patternfly.org${imgName}`);
   }
 
   return {
@@ -18,7 +16,7 @@ const getStaticParams = (title, html) => {
       'index.html': {
         content: `
           <!DOCTYPE html>
-          <html lang="en" class="pf-m-redhat-font">
+          <html lang="en">
             <head>
               <meta charset="utf-8" />
               <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -189,7 +187,7 @@ function getReactParams(title, code, scope, lang, relativeImports, relPath, sour
     files: {
       'index.html': {
         content: `<!DOCTYPE html>
-<html lang="en" class="pf-m-redhat-font">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

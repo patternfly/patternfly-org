@@ -1,7 +1,17 @@
 import React from "react";
 import { groupedRoutes } from '../../routes';
 
-export const SectionGalleryWrapper = ({section, subsection, galleryItemsData, illustrations, includeSubsections, parseSubsections, children }) => {
+export const SectionGalleryWrapper = ({
+  section,
+  subsection,
+  galleryItemsData,
+  illustrations,
+  includeSubsections,
+  parseSubsections,
+  initialLayout,
+  isFullWidth,
+  children
+}) => {
   let sectionRoutes = subsection ? groupedRoutes[section][subsection] : groupedRoutes[section];
   if (!includeSubsections || parseSubsections) {
     const sectionRoutesArr = Object.entries(sectionRoutes);
@@ -29,11 +39,11 @@ export const SectionGalleryWrapper = ({section, subsection, galleryItemsData, il
   }
 
   const [searchTerm, setSearchTerm] = React.useState('');
-  const [layoutView, setLayoutView] = React.useState('grid');
+  const [layoutView, setLayoutView] = React.useState(initialLayout);
   const filteredItems = Object.entries(sectionRoutes)
     .filter(([itemName, { slug }]) => (
       // exclude current gallery page from results
-      slug !== location.pathname &&
+      !location.pathname.endsWith(slug) &&
       itemName
         .toLowerCase()
         .includes(searchTerm.toLowerCase())
@@ -41,17 +51,26 @@ export const SectionGalleryWrapper = ({section, subsection, galleryItemsData, il
   const sectionGalleryItems = filteredItems
     .sort(([itemName1], [itemName2]) => itemName1.localeCompare(itemName2))
     .map(([itemName, itemData], idx) => {
-      // Convert to lowercase-camelcase ex: File upload - multiple ==> file_upload_multiple
-      const illustrationName = itemName
-        .replace('-', '')
-        .replace('  ',' ')
-        .split(' ')
-        .join('_')
-        .toLowerCase();
-      const illustration = illustrations[illustrationName] || illustrations.default_placeholder;
-      const { title, id, sources, isSubsection = false } = itemData;
+      let illustration = null;
+      if (illustrations) {
+        // Convert to lowercase-camelcase ex: File upload - multiple ==> file_upload_multiple
+        const illustrationName = itemName
+          .replace('-', '')
+          .replace('  ',' ')
+          .split(' ')
+          .join('_')
+          .toLowerCase();
+        illustration = illustrations[illustrationName] || illustrations.default_placeholder;
+      }
+      const { sources, isSubsection = false } = itemData;
+      // Subsections don't have title or id, default to itemName aka sidenav text
+      const title = itemData.title || itemName;
+      const id = itemData.id || title;
       // Display beta label if tab other than a '-next' tab is marked Beta
+      const isDeprecated = !isSubsection && sources && sources.some(source => source.source === "react-deprecated" || source.source === "html-deprecated") && !sources.some(source => source.source === "react"  || source.source === "html");
       const isBeta = !isSubsection && sources && sources.some(src => src.beta && !src.source.includes('-next'));
+      const isDemo = !isSubsection && sources && sources.some(source => source.source === "react-demos" || source.source === "html-demos") && !sources.some(source => source.source === "react" || source.source === "html");
+
       let slug = itemData.slug;
       if (!slug && isSubsection) {
         // Update slug to link to first page in subsection
@@ -75,6 +94,8 @@ export const SectionGalleryWrapper = ({section, subsection, galleryItemsData, il
         itemName,
         illustration,
         isBeta,
+        isDeprecated,
+        isDemo,
         title,
         id,
         galleryItemsData
@@ -82,7 +103,7 @@ export const SectionGalleryWrapper = ({section, subsection, galleryItemsData, il
     });
 
   return (
-    <div className="ws-section-gallery">
+    <div className={`ws-section-gallery${ isFullWidth ? ' ws-section-gallery-full-width' : '' }`}>
       { children(sectionGalleryItems, searchTerm, setSearchTerm, layoutView, setLayoutView) }
     </div>
   )

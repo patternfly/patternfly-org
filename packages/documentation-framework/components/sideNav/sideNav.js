@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from '../link/link';
-import { Nav, NavList, NavExpandable, PageContextConsumer, capitalize } from '@patternfly/react-core';
+import { Label, Nav, NavList, NavExpandable, PageContextConsumer, capitalize, Flex, FlexItem } from '@patternfly/react-core';
 import { css } from '@patternfly/react-styles';
 import { Location } from '@reach/router';
 import { makeSlug } from '../../helpers';
@@ -9,17 +9,17 @@ import { trackEvent } from '../../helpers';
 
 const getIsActive = (location, section, subsection = null) => {
   const slug = makeSlug(null, section, null, null, subsection);
-  return location.pathname.startsWith(`${process.env.pathPrefix}${slug}`);
+  return location.pathname.startsWith(slug);
 }
 
 const defaultValue = 50;
 
-const NavItem = ({ text, href }) => {
+const NavItem = ({ text, href, isDeprecated, isBeta, isDemo }) => {
   const isMobileView = window.innerWidth < Number.parseInt(globalBreakpointXl.value, 10);
   return (
     <PageContextConsumer key={href + text}>
-      {({onNavToggle, isNavOpen }) => (
-          <li key={href + text} className="pf-v5-c-nav__item" onClick={() => isMobileView && onNavToggle()}>
+      {({onSidebarToggle, isSidebarOpen }) => (
+          <li key={href + text} className="pf-v5-c-nav__item" onClick={() => isMobileView && onSidebarToggle && onSidebarToggle()}>
             <Link
               to={href}
               getProps={({ isCurrent, href, location }) => {
@@ -31,9 +31,20 @@ const NavItem = ({ text, href }) => {
                   )
                 }}
               }
-              tabIndex={isNavOpen ? undefined : -1}
+              tabIndex={isSidebarOpen ? undefined : -1}
             >
-              {text}
+              <Flex spaceItems={{ default: 'spaceItemsSm'}}>
+                <FlexItem>{text}</FlexItem>
+                {(isBeta || isDemo || isDeprecated) && (
+                  <FlexItem>
+                    {isBeta && (<Label color="blue" isCompact>Beta</Label>)}
+                    {!isBeta && isDeprecated && (<Label color="grey" isCompact>Deprecated</Label>)}
+                    {!isBeta && !isDeprecated && isDemo && (<Label color="purple" isCompact>Demo</Label>)}
+                  </FlexItem>
+                )}
+              </Flex>
+
+
             </Link>
           </li>
       )}
@@ -70,7 +81,7 @@ const ExpandableNav = ({groupedRoutes, location, section, subsection = null}) =>
     >
       {Object.entries(routes || {})
         .filter(([id, navObj]) => !Boolean(navObj.hideNavItem) && (Object.entries(navObj).length > 0))
-        .map(([id, { slug, isSubsection = false, sortValue = defaultValue, subsectionSortValue = defaultValue }]) => ({ text: id, href: slug, isSubsection, sortValue: (isSubsection ? subsectionSortValue : sortValue) }))
+        .map(([id, { slug, isSubsection = false, sortValue = defaultValue, subsectionSortValue = defaultValue, sources }]) => ({ text: id, href: slug, isSubsection, sortValue: (isSubsection ? subsectionSortValue : sortValue), sources }))
         .sort(({text: text1, sortValue: sortValue1}, {text: text2, sortValue: sortValue2}) => {
           if (sortValue1 === sortValue2) {
             return text1.localeCompare(text2);
@@ -78,10 +89,20 @@ const ExpandableNav = ({groupedRoutes, location, section, subsection = null}) =>
           return sortValue1 > sortValue2 ? 1 : -1;
         })
         .map(navObj => navObj.isSubsection
-          ? ExpandableNav({groupedRoutes, location, section, subsection: navObj.text})
-          : NavItem(navObj)
-        )
-      }
+            ? ExpandableNav({groupedRoutes, location, section, subsection: navObj.text})
+            : NavItem({
+              ...navObj,
+              isDeprecated: navObj.href?.includes('components') && navObj.sources.some(source => (
+                  source.source === "react-deprecated" || source.source === "html-deprecated")
+                && !navObj.sources.some(source => source.source === "react" || source.source === "html")
+              ),
+              isBeta: navObj.sources.some(source => source.beta),
+              isDemo: navObj.sources.some(source => (
+                  source.source === "react-demos" || source.source === "html-demos")
+                && !navObj.sources.some(source => source.source === "react" || source.source === "html")
+              )
+            })
+        )}
     </NavExpandable>
   );
 }
@@ -101,7 +122,7 @@ export const SideNav = ({ groupedRoutes = {}, navItems = [] }) => {
       lastElement.scrollIntoView({ block: 'center' });
     }
   }, []);
-  
+
   return (
     <Nav aria-label="Side Nav" theme="light">
       <NavList className="ws-side-nav-list">

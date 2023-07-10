@@ -3,6 +3,397 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.12.11 (2023-07-06)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.12.10 (2023-07-06)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.12.9 (2023-07-05)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.12.8 (2023-07-05)
+
+
+### Bug Fixes
+
+* **documentation:** remove excludes from codemod command ([#3633](https://github.com/patternfly/patternfly-org/issues/3633)) ([0401c9b](https://github.com/patternfly/patternfly-org/commit/0401c9b7968e8bc2f4600854b1a071937b3fab9d))
+
+
+
+
+
+## 0.12.7 (2023-06-30)
+
+
+### Bug Fixes
+
+* add extensions docs and release notes ([#3632](https://github.com/patternfly/patternfly-org/issues/3632)) ([ab67be2](https://github.com/patternfly/patternfly-org/commit/ab67be25fd33c530d198f662ce5ca689ddd8d18f))
+
+
+
+
+
+## 0.12.6 (2023-06-28)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.12.5 (2023-06-28)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.12.4 (2023-06-27)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.12.3 (2023-06-26)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.12.2 (2023-06-26)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+## 0.12.1 (2023-06-23)
+
+
+### Bug Fixes
+
+* turn dry run off ([#3627](https://github.com/patternfly/patternfly-org/issues/3627)) ([f0a2d51](https://github.com/patternfly/patternfly-org/commit/f0a2d510b75b69b18cdbbd7ceb663241ef30093f))
+
+
+
+
+
+# 0.12.0-alpha.73 (2023-06-23)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.72 (2023-06-23)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.71 (2023-06-22)
+
+
+### Bug Fixes
+
+* **deps:** update docs-framework to the latest prereleases ([#3615](https://github.com/patternfly/patternfly-org/issues/3615)) ([54091c3](https://github.com/patternfly/patternfly-org/commit/54091c358f01f65269f314c2717ad58767aa669a))
+
+
+
+
+
+# 0.12.0-alpha.70 (2023-06-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.69 (2023-06-22)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.68 (2023-06-22)
+
+
+### Bug Fixes
+
+* **docs:** fixed broken css vars header link ([#3617](https://github.com/patternfly/patternfly-org/issues/3617)) ([ad2b012](https://github.com/patternfly/patternfly-org/commit/ad2b01252d68cf8c4e53fac283b142b13994b222))
+
+
+
+
+
+# 0.12.0-alpha.67 (2023-06-21)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.66 (2023-06-21)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.65 (2023-06-16)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.64 (2023-06-15)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.63 (2023-06-15)
+
+
+### Bug Fixes
+
+* **Sidenav:** updated PageContext props ([#3593](https://github.com/patternfly/patternfly-org/issues/3593)) ([1cc24ea](https://github.com/patternfly/patternfly-org/commit/1cc24ea1ef88c42a6b62a4a6b2421d157bc298d8))
+
+
+
+
+
+# 0.12.0-alpha.62 (2023-06-14)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.61 (2023-06-14)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.60 (2023-06-14)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.59 (2023-06-13)
+
+
+### Bug Fixes
+
+* **docs:** fixed gallery styles affecting width, font vars ([#3596](https://github.com/patternfly/patternfly-org/issues/3596)) ([04f1b54](https://github.com/patternfly/patternfly-org/commit/04f1b54f947e1afca88926d8f371d3bf37a70e25))
+
+
+
+
+
+# 0.12.0-alpha.58 (2023-06-13)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.57 (2023-06-13)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.56 (2023-06-12)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.55 (2023-06-12)
+
+
+### Features
+
+* turn on dark switcher, remove extra css ([#3519](https://github.com/patternfly/patternfly-org/issues/3519)) ([0059891](https://github.com/patternfly/patternfly-org/commit/005989134d6a962189690a49faccb8dfc6e3de77))
+
+
+
+
+
+# 0.12.0-alpha.54 (2023-06-12)
+
+
+### Bug Fixes
+
+* **whitespace:** whitespace change to push out new release ([84d1bb3](https://github.com/patternfly/patternfly-org/commit/84d1bb3ccc79a9ef2c4cf5fb93b19fbb719b6078))
+
+
+
+
+
+# 0.12.0-alpha.53 (2023-06-09)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.52 (2023-06-09)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.51 (2023-06-07)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.50 (2023-06-06)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.49 (2023-06-01)
+
+
+### Bug Fixes
+
+* **labels:** Update label logic to include html components ([#3567](https://github.com/patternfly/patternfly-org/issues/3567)) ([32bdc0f](https://github.com/patternfly/patternfly-org/commit/32bdc0fe2120e2c86f39c1e5da94e3f2d11d9705))
+
+
+
+
+
+# 0.12.0-alpha.48 (2023-06-01)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.47 (2023-05-31)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.46 (2023-05-31)
+
+
+### Bug Fixes
+
+* **CSSVariables:** check for values before looping over them ([f2d167f](https://github.com/patternfly/patternfly-org/commit/f2d167f57c0cd38b289ade62d98022d7902de38f))
+
+
+
+
+
+# 0.12.0-alpha.45 (2023-05-31)
+
+
+### Bug Fixes
+
+* **CSSVariables:** resolve a11y issues in tables ([41a7837](https://github.com/patternfly/patternfly-org/commit/41a78379de36c08d7b36fe48a9ff40a4140cdc63))
+
+
+
+
+
+# 0.12.0-alpha.44 (2023-05-25)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.43 (2023-05-25)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 0.12.0-alpha.42 (2023-05-25)
+
+
+### Features
+
+* **labels:** add deprecated/demo/beta labels to headers + nav items ([#3547](https://github.com/patternfly/patternfly-org/issues/3547)) ([010a0e0](https://github.com/patternfly/patternfly-org/commit/010a0e05baea661964660d2a733569a34abbf243))
+
+
+
+
+
+# 0.12.0-alpha.41 (2023-05-18)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
 # 0.12.0-alpha.40 (2023-05-15)
 
 

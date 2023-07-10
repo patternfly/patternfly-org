@@ -78,10 +78,8 @@ const groupedRoutes = Object.entries(routes)
 const sourceOrder = {
   react: 1,
   'react-next': 1.1,
-  'react-composable': 1.2,
-  'react-deprecated': 1.3,
-  'react-legacy': 1.4,
   'react-demos': 2,
+  'react-deprecated': 2.1,
   html: 3,
   'html-demos': 4,
   'design-guidelines': 99,
@@ -147,8 +145,6 @@ function getAsyncComponent(url) {
   if (!url && typeof window !== 'undefined') {
     url = window.location.pathname.replace(/\/$/, '') || '/';
   }
-  // Normalize path for matching
-  url = url.replace(process.env.pathPrefix, '');
   let res;
 
   if (allRoutes[url]) {

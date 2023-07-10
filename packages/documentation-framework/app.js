@@ -13,7 +13,6 @@ import './components/tableOfContents/tableOfContents.css';
 import './components/example/example.css';
 import './components/footer/footer.css';
 import './components/sideNav/sideNav.css';
-import './components/topNav/topNav.css';
 import './layouts/sideNavLayout/sideNavLayout.css';
 
 const AppRoute = ({ child, title, path }) => {
@@ -24,6 +23,13 @@ const AppRoute = ({ child, title, path }) => {
       'page_title': (title || pathname)
     });
   }
+
+  // Redirect all v4 url paths to the archived v4 site
+  if(pathname.startsWith("/v4")){
+    window.location.href = `https://v4-archive.patternfly.org${pathname}`;
+    return;
+  }
+
   // Send 404 event if redirected to 404 page
   if (path === '/404' && pathname.split('/').pop() !== '404') {
     trackEvent('404_redirect', 'redirect', pathname);
@@ -37,7 +43,6 @@ const AppRoute = ({ child, title, path }) => {
 }
 
 const SideNavRouter = () => {
-  const pathname = useLocation().pathname.replace(process.env.pathPrefix, '');
   const componentsData = process?.env?.componentsData;
   return (
     <SideNavLayout groupedRoutes={groupedRoutes} navOpen={true} >
@@ -84,7 +89,7 @@ const FullscreenComponent = ({ Component, title }) => {
 
 // Export for SSR
 export const App = () => (
-  <Router basepath={process.env.pathPrefix} id="ws-router">
+  <Router id="ws-router">
     <SideNavRouter path="/*" />
     {Object.entries(fullscreenRoutes)
       .map(([path, { title, Component }]) =>

@@ -1,6 +1,6 @@
 # @patternfly/documentation-framework
 
-## The PatternFly documentation framework lets you develop component examples in markdown format, so that they can be added to [patternfly.org](https://www.patternfly.org/v4/).
+## The PatternFly documentation framework lets you develop component examples in markdown format, so that they can be added to [patternfly.org](https://www.patternfly.org/).
 
 ## Install
 

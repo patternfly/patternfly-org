@@ -6,10 +6,12 @@ The PatternFly Org is the source for the official documentation for PatternFly.
 
 Development setup requires yarn. If you do not already have yarn installed on your system, see https://yarnpkg.com/en/.
 
-A Node version between 13.7 and 14.19.2 is also required.
+A Node version greater than 18.16.0 is also required.
 
 ### Live Reload Server
+
 #### New server
+
 You can install the NPM dependencies with:
 
     yarn install
@@ -20,9 +22,9 @@ A local development server at http://localhost:8003 can be started with:
 
 ### Build
 
-The new v4 site can be built with:
+The new v5 site can be built with:
 
-    yarn build:v4
+    yarn build:v5
 
 The static assets get copied to build/patternfly-org.
 
@@ -39,4 +41,3 @@ When PatternFly does a release (currently every 3 weeks) this bucket is copied t
 You might have a dirty file tree with old submodules and folders lying around. You can remove these with:
 
     git clean -dfx
-
