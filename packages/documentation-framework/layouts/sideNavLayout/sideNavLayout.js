@@ -235,9 +235,7 @@ export const SideNavLayout = ({ children, groupedRoutes, navOpen: navOpenProp })
       <MastheadMain>
         <MastheadBrand href={prurl || '/'}>
           {prnum ? `PR #${prnum}` : (
-            <Brand src={v5Logo} alt="PatternFly" heights={{ default: '40px' }} widths={{ default: '180px', '2xl': '220px' }}>
-              <source srcSet={v5Logo} />
-            </Brand>
+            <Brand src={v5Logo} alt="PatternFly" heights={{ default: '36px' }} />
           )}
         </MastheadBrand>
       </MastheadMain>
