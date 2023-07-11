@@ -27,7 +27,7 @@ PatternFly date and time formats follow the American standard. When localizing, 
 
 ## Absolute or relative time
 
-Using **absolute** or **relative** timestamps depends on the context. 
+Whether you use **absolute** or **relative** timestamps will depend on context. 
 
 To represent the exact date and time that an event occurred, use an absolute timestamp following examples provided in the [table of date and time formats](#date-and-time-formats).
 
@@ -63,7 +63,7 @@ To allow users to more quickly scan through content, use numerals instead of wri
 
 ### Digit grouping
 
-When grouping digits within large numbers, use the American notation standard. Separate thousands with a comma and seperate cents with a decimal. For example:
+When grouping digits within large numbers, use the American notation standard. Separate thousands with a comma and separate cents with a decimal. For example:
 
 - 1,000,000,000
 - 1,000,000.00

@@ -19,11 +19,13 @@ To create accessible content, refer to the following best practices:
     <br />
     <img src="./img/submit-form.png" alt="blue PatternFly primary button reading Submit form" width="150"/>
 
+    <br />
+
     <div class="ws-content-table">
 
     | **Do** | **Don't** |
     |--------|-----------|
-    | Click **Submit form**. | Click the blue button.|
+    | Say "Click **Submit form**". | Say "Click the blue button."|
 
     </div> 
     <br /> 
@@ -32,9 +34,9 @@ To create accessible content, refer to the following best practices:
 
 - Use proper heading levels (H1, H2) to articulate the page content’s organization. Headings are useful in identifying content changes, and machine translation recognizes each heading level as a new segment, which is important with text-laden pages. Headings are ranked hierarchically from H1 through H6, with H1 headings representing the most important idea on a page. 
 
-- Consistently [describe UI elements](accessibility/product-development-guide#labeling-with-aria) in tooltips and product documentation. For example:  
-    - Kebab icon tooltip text: More options
-    - Product documentation: Click **More options**. 
+- Consistently [describe UI elements](accessibility/product-development-guide#labeling-with-aria) in tooltips and product documentation. For example, for a kebab icon:  
+    - The tooltip text might be "More options"
+    - In product documentation, you would then say "Click **More options**". 
 
 - Label UI elements (buttons, icons, menus) consistently and descriptively to clearly represent the element’s function.
 

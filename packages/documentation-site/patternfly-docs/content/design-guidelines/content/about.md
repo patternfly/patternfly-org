@@ -1,6 +1,8 @@
 ---
 id: About
 section: UX writing
+sortValue: 1
+
 ---
 The words in a UI, commonly referred to as "UX copy" or "microcopy," are just as important as the visual design and layout. UX copy is an essential element of design that can be used strategically to drive better UX decisions and guide users to succeed. 
 

@@ -19,7 +19,8 @@ Effective 404 pages combine several elements to regroup, redirect, and empower l
 
 1. **Link to home page:** Provide a quick and easy way for users to navigate back to your site’s home page.
 
-## 404 page content best practiecs
+## Best practices for 404 error content
+
 Consider your 404 page as a flight path instead of a dead end. Use clear, informative microcopy to point users in the right direction. To see an example, visit [PatternFly’s 404 page](/404/). 
 
 To create effective 404 pages, follow these best practice guidelines:

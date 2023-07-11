@@ -65,7 +65,7 @@ In general, follow these guidelines:
   | User Access  | “Manage user access for your organization using the User Access feature.”                                          | The first “user access” is lowercase because it refers to user access as a concept. The second “user access” is capitalized because it refers to the User Access feature offered on cloud.redhat.com. |
   | Sources      | “Add a source by going to **Settings > Sources.**” "Check the **Sources** table for status." Button text: "Add source" | “Sources” is only capitalized when it directly refers to a subsection, feature, or location in the UI. Always write buttons in sentence case. |
 
-A UI that adheres to these guidelines may resemble the folowing image: 
+A UI that adheres to these guidelines may resemble the following image: 
 
 <img src="./img/user-menu-example.png" alt="title case navigation items and sentence case menu items" width="750px"/>   
 
