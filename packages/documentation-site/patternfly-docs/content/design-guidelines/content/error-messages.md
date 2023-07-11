@@ -11,7 +11,7 @@ Make your error messages brief yet descriptive. A useful pattern to follow is to
 - **Description**: What happened? 
     - For example, if the user's login failed.
 - **Reason**: Why did it happen? 
-    - For example, an SSH key isn't allowing auto-login.
+    - For example, an SSH key doesn't allow auto-login.
 - **Resolution**: How can it be resolved?
     - For example, a user may need  to manually log in to the host.
     
@@ -27,68 +27,78 @@ _To manually log in to the host, click **Log in.**_
 
 Keep these best practices in mind when crafting error messages:
 
-1. **Don’t blame users**. A user should never feel like the error is their fault. Avoid language like “You did something wrong.” Depending on your message, you may need to use the passive voice instead of the active voice so that you don't assign blame to the user.   
+#### **Don’t blame users**. 
 
-    <div class="ws-content-table">
+A user should never feel like the error is their fault. Avoid language like “You did something wrong.” Depending on your message, you may need to use the passive voice instead of the active voice so that you don't assign blame to the user.   
 
-    | **Before** | **After** |
-    |:-----------------:|:-----------------:|
-    | You did not provide your authentication credentials. | Authentication credentials weren't provided.| 
+<div class="ws-content-table">
 
-    </div> 
-    <br /> 
+| **Before** | **After** |
+|:-----------------:|:-----------------:|
+| You did not provide your authentication credentials. | Authentication credentials weren't provided.| 
 
-1. **Give users a next step**: A user should never feel stuck. If they’re hit with an error, give them the information they need to continue with their task. 
+</div> 
+<br /> 
 
-    <div class="ws-content-table">
+#### **Give users a next step**.
 
-    | **Before** | **After** |
-    |:-------------:|:------------------:|
-    | Your list already has the maximum number of items. You are not able to continue customizing. | Your list has the maximum number of items. To continue customizing, remove an item.|
+A user should never feel stuck. If they’re hit with an error, give them the information they need to continue with their task. 
 
-    </div>
-    <br /> 
+<div class="ws-content-table">
 
-1. **Avoid jargon**: Error messages are frustrating enough without technical terms that users might not understand. Avoid jargon and use terms that are familiar to your users. 
+| **Before** | **After** |
+|:-------------:|:------------------:|
+| Your list already has the maximum number of items. You are not able to continue customizing. | Your list has the maximum number of items. To continue customizing, remove an item.|
 
-    <div class="ws-content-table">
+</div>
+<br /> 
 
-    | **Before** | **After** |
-    |:---------------:|:-----------------:|
-    | Error code 5959: Outdated version information. Task termination pending. | Your task is outdated. To keep it active, update its version.|
+#### **Avoid jargon**.
 
-    </div>
-    <br />
+Error messages are frustrating enough without technical terms that users might not understand. Avoid jargon and use terms that are familiar to your users. 
 
-1. **Include the right amount of description**: Tell your user what is wrong. An error without an explanation can add to their frustration and prevent them from finding a solution.  
+<div class="ws-content-table">
 
-    <div class="ws-content-table">
+| **Before** | **After** |
+|:---------------:|:-----------------:|
+| Error code 5959: Outdated version information. Task termination pending. | Your task is outdated. To keep it active, update its version.|
 
-    | **Before** | **After** |
-    |:-------------:|:----------------:|
-    | An error occurred. The email cannot be sent. | To send this email, turn on your email permissions in user settings.|
+</div>
+<br />
 
-    </div>
-    <br />
+#### **Include the right amount of description**.
 
-    However, don’t include too much information. The user doesn’t need to know exactly what is going on behind the scenes. Only give them information about what went wrong and what they can do next.  
+Tell your user what is wrong. An error without an explanation can add to their frustration and prevent them from finding a solution.  
 
-    <div class="ws-content-table"> 
+<div class="ws-content-table">
 
-    | **Before** | **After** |
-    |:------------:|:------------:|
-    | Your information cannot be saved. Our system is currently designed to accommodate 1 record per user. The system memory is unable to store more at this time. | Only 1 record can be saved. To continue, remove one of your records.|
+| **Before** | **After** |
+|:-------------:|:----------------:|
+| An error occurred. The email cannot be sent. | To send this email, turn on your email permissions in user settings.|
 
-    </div> 
-    <br /> 
+</div>
+<br />
+
+However, don’t include too much information. The user doesn’t need to know exactly what is going on behind the scenes. Only give them information about what went wrong and what they can do next.  
+
+<div class="ws-content-table"> 
+
+| **Before** | **After** |
+|:------------:|:------------:|
+| Your information cannot be saved. Our system is currently designed to accommodate 1 record per user. The system memory is unable to store more at this time. | Only 1 record can be saved. To continue, remove one of your records.|
+
+</div> 
+<br /> 
 
 
-1. **Lead with the benefit**. When providing users with a resolution, start the sentence with their goal ("the benefit"), followed by what they need to do to continue.  
+#### **Lead with the benefit**. 
 
-    <div class="ws-content-table"> 
+When providing users with a resolution, start the sentence with their goal ("the benefit"), followed by what they need to do to continue.  
 
-    | **Before** | **After** |
-    |:-----------------:|:----------------:|
-    | Click **Log in** to manually log in. | To manually log in, click **Log in.**| 
+<div class="ws-content-table"> 
 
-    </div>
+| **Before** | **After** |
+|:-----------------:|:----------------:|
+| Click **Log in** to manually log in. | To manually log in, click **Log in.**| 
+
+</div>

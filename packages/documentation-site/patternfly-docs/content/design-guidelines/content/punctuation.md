@@ -64,8 +64,8 @@ To add emphasis to a phrase or sentence following it, use an **em dash (—)**. 
 ### En dash
 To separate numbers in a series, use an **en dash ( – )**. For example, "We plan on having 100–150 attendees."
 
-### Hypen
-Use a **hyphen ( - )** if it's part of a term (such as "walk-through") or someone's name (such as "Mary-Jane").  
+### Hyphen
+Use a **hyphen ( - )** if it's part of a term (such as "walk-through") or someone's name (such as "Mary-Jane").  
 
 Also, use a hyphen for a compound adjective that comes before the noun it modifies, but omit the hyphen if the first adjective ends in "-ly". For example:
 
@@ -74,16 +74,16 @@ Also, use a hyphen for a compound adjective that comes before the noun it modifi
 - "He is a highly talented writer." 
 - "She is a high-quality job candidate."    
 
-For most prefixes, you should *not* use a hyphen. In particular, do not use a hypen for the following: 
+For most prefixes, you should *not* use a hyphen. In particular, do not use a hyphen for the following: 
 
 - Auto- (such as autopopulate; autoloading)
 - Pre- (such as prerequisite) 
 - Re-  (such as recreate)
 - Sub- (such as submerge)
 
-An exception for this rule is when you add a modifer prefix like “non". In these cases, you should use a hypen. For example, "non-Red Hatter." 
+An exception for this rule is when you add a modifier prefix like “non". In these cases, you should use a hyphen. For example, "non-Red Hatter." 
 
-If you're unsure about the use of a hypen, refer to [Merriam-Webster's online dictionary.](https://www.merriam-webster.com/)
+If you're unsure about the use of a hyphen, refer to [Merriam-Webster's online dictionary.](https://www.merriam-webster.com/)
 
 ## Exclamation mark
 Use **exclamation marks** sparingly. Don’t use one to generate excitement; only use an exclamation mark if the user is actually experiencing something exciting. You can also use an exclamation mark for something cautionary, like “Stop!” or “Watch out!”
@@ -111,7 +111,7 @@ While double quotation marks are the standard in American English, single quotat
 Double quotation marks and single quotation marks are sometimes used interchangeably across various publications. In some contexts, they can mean the same thing. But they are not always interchangeable, particularly when you need to use quotation marks within quotation marks. In this case, single quotation marks are used inside of double quotation marks. For example:
 
 - An article title within a dialogue:  *Abi said, “I love the article Cat wrote. It’s called ‘Improving product design with an open source mindset,’ and it’s such a fun read.”*
-- A quote within a dialogue: *“I like Cat’s article too, Abi. My co-worker told me, ‘PatternFly has the best publication ever.’ That made me smile.”*
+- A quote within a dialogue: *“I like Cat’s article too, Abi. My coworker told me, ‘PatternFly has the best publication ever.’ That made me smile.”*
 
 ## Colon and semicolon
 Use a **colon** to introduce a list or a series. You can also use it as a pause before introducing related information. For example:
@@ -125,3 +125,6 @@ Use a **semicolon** to connect two closely related independent clauses. You can 
 - "Every morning, I enjoy eating toast, bacon, and eggs; reading a book; and relaxing on the porch."
 
 **Note**: If you're tempted to use a semicolon in the UI, try breaking up the sentence and cutting down on your words instead. This often leads to content that is more readable and clear.
+
+
+

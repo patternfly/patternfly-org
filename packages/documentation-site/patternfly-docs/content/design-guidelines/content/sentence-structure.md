@@ -23,7 +23,7 @@ Try to avoid using third person "he/she/they/it." Third person sounds formal and
 
 **Active voice** is when the subject of the sentence performs the action. **Passive voice** is when the subject of the sentence receives the action.
 
-Use active voice whenever possible. It makes a sentence shorter and gets the point across faster.
+Use an active voice whenever possible. It makes a sentence shorter and gets the point across faster.
 
 <div class="ws-content-table">
 
