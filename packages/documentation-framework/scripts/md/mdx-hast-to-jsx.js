@@ -72,18 +72,24 @@ function serializeRoot(node, options) {
     .map(imp => imp.replace(/(['"])\./g, (_, match) => `${match}${getRelPath()}${path.posix.sep}\.`));
 
     // Map relative import name to '@package...'
-    const relativeImportsRegex = /(?:[\.\/]+.*)(@.*)['"]/gm;
+    const relativeImportsRegex = /(import [^'"]*)['"](?:[\.\/]+.*)(@[^'"]*)['"]/gm;
     let relativeImportMatch;
-    let relativeImportMatches = {};
+    // let relativeImportMatches = {};
+    let relativeImportMatches = [];
     while (relativeImportMatch = relativeImportsRegex.exec(importStatements.join())) {
-      const [_match, absoluteImportPath] = relativeImportMatch;
+      const [_match, importItems, absoluteImportPath] = relativeImportMatch;
+      if (absoluteImportPath.includes('@patternfly/react-table')) debugger;
+      if (importItems.includes('Icon2')) debugger;
       if (absoluteImportPath && !absoluteImportPath.includes('srcImport')) {
         // `@patternfly/react-core/src/demos/./examples/DashboardWrapper` to `./examples/DashboardWrapper`
         let relativeFileImport = /(\.+\/.*)/gm.exec(absoluteImportPath);
         if (relativeFileImport) {
+          const relPath = getRelPath();
+          // if (relPath && relPath?.includes && relPath.includes('demos') && relPath.includes('Table')) debugger;
           // Build map of relative imports (from example.js code) to absolute npm package import path (used in codesandbox.js)
           const relativeFilePath = relativeFileImport[0];
-          relativeImportMatches[relativeFilePath] = absoluteImportPath;
+          // relativeImportMatches[relativeFilePath] = absoluteImportPath;
+          relativeImportMatches.push(`${importItems}'${absoluteImportPath}';`);
         }
       }
     }
@@ -115,12 +121,8 @@ const pageData = ${JSON.stringify(pageData, null, 2)};
       '  ' + liveContext
     }\n};\n`
   }
-  if (relativeImportMatches) {
-    res += `pageData.relativeImports = {\n${
-      '  ' + Object.entries(relativeImportMatches)
-        .map(([key, val]) => `'${key}': '${val}'`)
-        .join(',\n  ')
-    }\n};\n`;
+  if (relativeImportMatches.length > 0) {
+    res += `pageData.relativeImports = "${relativeImportMatches.join('";\n"')}",\n  `;
   }
   if (examples) {
     res += `pageData.examples = {\n${

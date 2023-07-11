@@ -143,7 +143,10 @@ function getReactParams(title, code, scope, lang, relativeImports, relPath, sour
     }
   }
 
-  const relImportRegex = /import[\s*{]([\w*{}\n\r\t, ]+)[\s*]from\s["']([\.\/]+.*)["']/gm;
+  if (relativeImports.length > 0) {
+    code = `${relativeImports}\n${code}`;
+  }
+  const relImportRegex = /import[\s*{]([\w*{}\n\r\t, ]+)[\s*]from\s["']([\.\/]+.*)["'];?/gm;
   let relImportMatch;
   while (relImportMatch = relImportRegex.exec(code)) {
     const [ _relImportStatement, _relImportItems, relImportPath ] = relImportMatch;
@@ -152,9 +155,11 @@ function getReactParams(title, code, scope, lang, relativeImports, relPath, sour
     const relImportPathArr = relImportPath.split('./');
     const len = relImportPathArr.length;
     const relImportPathOneLevel = relImportPathArr[len-2].concat('./').concat(relImportPathArr[len-1]);
-    if (relativeImports[relImportPathOneLevel]) {
-      code = code.replace(relImportPath, relativeImports[relImportPathOneLevel]);
-    }
+    // if (relativeImports[relImportPathOneLevel]) {
+    //   code = code.replace(relImportPath, relativeImports[relImportPathOneLevel]);
+    // }
+    code = code.replace(_relImportStatement, '');
+    debugger;
   }
 
   
