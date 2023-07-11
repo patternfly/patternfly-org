@@ -130,7 +130,7 @@ The following table outlines the components that are affected, as well as the co
 | [Application launcher](/components/menus/application-launcher/react-deprecated) | [Dropdown](/components/menus/dropdown) |
 | [Context selector](/components/menus/context-selector/react-deprecated)         | [Dropdown](/components/menus/dropdown) |
 | [Dropdown (deprecated)](/components/menus/dropdown/react-deprecated)            | [Dropdown](/components/menus/dropdown) |
-| [Options menu](/components/menus/options-menu/react-deprecated)                 | [select](/components/menus/select)     |
+| [Options menu](/components/menus/options-menu/react-deprecated)                 | [Select](/components/menus/select)     |
 | [Page header](/components/page/react-deprecated)                                | [Masthead](/components/masthead)       |
 | [Select (deprecated)](/components/menus/select/react-deprecated)                | [Select](/components/menus/select)     |
 | [Table (deprecated)](/components/table/react-deprecated)                        | [Table](/components/table)             |
