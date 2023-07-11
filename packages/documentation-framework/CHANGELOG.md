@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.12 (2023-07-11)
+
+
+### Bug Fixes
+
+* **documentation-framework:** updated page logo size, props ([#3644](https://github.com/patternfly/patternfly-org/issues/3644)) ([642714d](https://github.com/patternfly/patternfly-org/commit/642714d9f8f9f1e681d87632d4eb4d7d1c3aec8a))
+
+
+
+
+
 ## 5.0.11 (2023-07-06)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
