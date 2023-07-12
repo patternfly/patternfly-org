@@ -1,6 +1,7 @@
 ---
 id: 404 error pages
 section: UX writing
+sortValue: 1
 ---
 
 A "404 page" is an error page that a user lands on when the content they're trying to view either doesn’t exist or can’t be found. 404 pages are named after the type of error they communicate: “Error 404: Not found.”
