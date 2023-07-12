@@ -17,11 +17,11 @@ Make your error messages brief yet descriptive. A useful pattern to follow is to
     
 Combine your description, reason, and resolution with a title to create a strong error message. For example:
 
-_**Login failed**_ 
+_**Login failed**_ (description)
 
-_The SSH key for auto-login is either not available, is unauthorized, or is password protected._
+_The SSH key for auto-login is either not available, is unauthorized, or is password protected._ (reason)
 
-_To manually log in to the host, click **Log in.**_
+_To manually log in to the host, click **Log in.**_ (resolution)
 
 ## Best practices for writing error messages
 

@@ -36,9 +36,11 @@ To reflect the Red Hat voice in our products' UX copy, we consider UX voice trai
 
 </div>
 
+When crafting your brand voice, align your voice traits to any company or team values that you have.
+
 You can’t *tell* your users what your voice is. You need to *show* them who you are in your writing. To do this, consider utilizing "Do and Don’t” charts. For example, Red Hat's UX copy voice charts look like:
 
-#### **Voice trait**: Friendly
+#### Voice trait: Friendly
 
 **Description**: Our #1 focus is the user. We make them feel welcome and create a sense of belonging and understanding.
 
@@ -52,7 +54,7 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 
 </div>
 
-#### **Voice trait**: Approachable
+#### Voice trait: Approachable
 
 **Description**: People are comfortable engaging with us. We’re open to listening and changing our ways when better ideas come along.
 
@@ -60,12 +62,12 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 
 | **Do** | **Don't** |
 |--------|-----------|
-| Say what you mean.                                             | Don’t use jargon, idioms, bizspeak, or formal language. |
-| Be direct and transparent with descriptive, specific language. ||
+| Say what you mean. | Don’t use jargon, idioms, bizspeak, or formal language. |
+| Be direct and transparent with descriptive, specific language. |
 
 </div>
 
-#### **Voice trait**: Collaborative
+#### Voice trait: Collaborative
 
 **Description**: We embody Red Hat’s open source mission with our collaborative working style and our sense of community.
 
@@ -73,12 +75,12 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 
 | **Do** | **Don't** |
 |--------|-----------|
-| Deliver content in a way that includes everyone.                                     | Don’t rely on inside jokes, colloquial expressions, culture-specific examples, or other alienating language to get your point across. |
+| Deliver content in a way that includes everyone. | Don’t rely on inside jokes, colloquial expressions, culture-specific examples, or other alienating language to get your point across. |
 | Use “you” and the active voice to put emphasis on the user and power in their hands. | Don’t use “I” too much. Make the user the star of every story you tell. |
 
 </div>
 
-#### **Voice trait**: Inventive
+#### Voice trait: Inventive
 
 **Description**: We have a fearless edge, challenging the assumption that UX is for a niche group of techies. We’re also not afraid to share our ideas and welcome new ones.
 
@@ -87,13 +89,11 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 | **Do** | **Don't** |
 |--------|-----------|
 | Deliver concepts and ideas with an air of confident simplicity. | Don’t belittle others or make jokes at their expense. We can laugh at ourselves but not at our users. |
-| Add real-world, global-friendly examples.                       | Don’t use others as examples of what not to do.                                                       |
+| Add real-world, global-friendly examples.| Don’t use others as examples of what not to do.|
 
 </div>
 
-When crafting your brand voice, align your voice traits to any company or team values that you have.
-
-If you’re contributing content (such as website copy or documentation) to PatternFly content, keep Red Hat's voice traits in mind. If you’re adopting PatternFly as part of another organization, you should go through a similar process to document the attributes of your own brand voice. 
+If you’re contributing content (such as website copy or documentation) to PatternFly, keep Red Hat's voice traits in mind. If you’re adopting PatternFly as part of another organization, you should go through a similar process to document the attributes of your own brand voice. 
 
 ## Tone
 Unlike voice, tone can change. To determine tone, ask yourself the following questions:
@@ -102,11 +102,9 @@ Unlike voice, tone can change. To determine tone, ask yourself the following que
 - What is the user thinking?
 - How is the user feeling?
 
-The tone you use is based on the answers to those questions. PatternFly’s tone typically varies between casual, professional, informative, and supportive.
+The tone you use is based on the answers to those questions. PatternFly’s tone typically varies between casual, professional, informative, and supportive, depending on context. For example: 
 
-Here are some examples of how tone varies depending on context:
-
-- You’re writing a blog post about a PatternFly event—exciting! Your tone is casual.
-- You’re writing a social media post addressing a product delay or failure—not exciting. Your tone is professional.
-- You’re writing an email to inform a user of an overdue payment. Your tone is informative and professional.
-- You’re guiding a user through a new interface. Your tone is informative and supportive.
+- You’re writing a blog post about a PatternFly event—exciting! Your tone is **casual**.
+- You’re writing a social media post addressing a product delay or failure—not exciting. Your tone is **professional**.
+- You’re writing an email to inform a user of an overdue payment. Your tone is **informative** and **professional**.
+- You’re guiding a user through a new interface. Your tone is **informative** and **supportive**.

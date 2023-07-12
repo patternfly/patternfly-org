@@ -1,5 +1,5 @@
 ---
-id: Writing design guidelines for PatternFly
+id: Writing PatternFly design guidelines
 section: UX writing
 ---
 
@@ -21,10 +21,10 @@ Example:
 Explain how the component is used, when to use it, and why it should be used. Include explanations of problems it could help solve and address its advantages over similar components. Include images for visual examples.
 
 Additional sub-sections to include: 
-#### When to use
-#### When not to use
-#### When to use X vs. Y
-#### Examples of incorrect usage
+#### When to use (H3)
+#### When not to use (H3)
+#### When to use X vs. Y (H3)
+#### Examples of incorrect usage (H3)
 
 ### Behavior (H2)
 Explain how the component functions and break down how its elements interact with each other to achieve its purpose. It may be helpful to include additional images or animations to demonstrate how the component works.
@@ -33,7 +33,7 @@ Explain how the component functions and break down how its elements interact wit
 Showcase different forms of your component and include explanations indicating when to use each one. 
 
 Additional sub-sections to include:
-#### When to use X variation vs. when to use Y variation
+#### When to use X variation vs. when to use Y variation (H3)
 
 ### Spacing (H2)
 Introduce spacing requirements for components and their content. For more information regarding proper spacing, refer to our [spacing guidelines.](https://www.patternfly.org/design-foundations/spacers/)

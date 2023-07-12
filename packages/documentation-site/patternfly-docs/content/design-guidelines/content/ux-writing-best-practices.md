@@ -7,6 +7,8 @@ Treat words as part of your design, not something to be added at the end. UX cop
 
 By making writing part of your design process, you’ll also be able to uncover design issues at the very beginning. If a design is too difficult to explain with words, then it might still need some work. By the time you create high-fidelity mockups, you’ll already have a few rounds of content feedback under your belt and can focus on refinement. Work across teams to fine-tune your copy and align your words with voice and tone standards.
 
+This guide details the best practices that you should follow when writing for UX.
+
 ## Know your users
 Before you write, understand who you're writing for. Get to know your users’ needs and what words will resonate.
 
@@ -17,7 +19,7 @@ To understand your users, create user personas (or use the ones your team alread
 - Do your own research into your user domain by reading popular blogs or forums.
 
 ## Focus on goals and tasks
-Consider what your user is trying to accomplish (the goal) and the steps they’ll take to get there (the tasks). By understanding the entire user journey, you can provide the right content to the right user in the right place at the right time.
+Consider what your user is trying to accomplish (the **goal**) and the steps they’ll take to get there (the **tasks**). By understanding the entire user journey, you can provide the right content to the right user in the right place at the right time.
 
 Frame each task as a conversation. Imagine you are sitting in a room with your user, and write out the conversation you might have to help them accomplish their task. This activity can help you:
 
@@ -37,7 +39,9 @@ Users carry around a lot of baggage, so it’s important to know where they’re
 
     Use that context to choose the right terminology and prioritize your content.
 
-- **Emotionally**: Consider how your user is likely to be feeling in the situation you’re designing for. Is this situation stressful (paying a bill)? Frustrating (account creation error)? Empathize with them, and be sure to use an appropriate tone.
+- **Emotionally**: Consider how your user is likely to be feeling in the situation you’re designing for. Is this situation stressful (paying a bill)? Frustrating (account creation error)? 
+
+    Empathize with them, and be sure to use an appropriate tone.
 
 ## Sound like a person
 Jargon, bizpeak, and formal language make you sound more like a brochure than a human. Users need to relate to your brand and like you before they can trust you. Talk with them as people using familiar, conversational words.

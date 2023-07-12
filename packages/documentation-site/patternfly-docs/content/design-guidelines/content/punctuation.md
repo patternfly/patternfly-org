@@ -29,16 +29,29 @@ All items in a list or series should be of the same part of speech. For example:
 Avoid using **ampersands** (&), and use "and" instead.
 
 ## Buttons 
-Avoid using punctuation on buttons. 
+Avoid using punctuation on **buttons**. 
 
-Do not use punctuation to create icons on buttons (for example, "+"). Instead, refer to [PatternFly's icons page](/design-foundations/icons) for any icons you place on buttons.
+Do not use punctuation to create icons on buttons (for example, do not use a plus sign "+"). Instead, refer to [PatternFly's icons page](/design-foundations/icons) for any icons you place on buttons.
+
+## Colon and semicolon
+Use a **colon** to introduce a list or a series. You can also use it as a pause before introducing related information. For example:
+
+- "I enjoy the following hobbies: cooking, drawing, and traveling."
+- "That leads me to my favorite hobby: running."
+
+Use a **semicolon** to connect two closely related independent clauses. You can also use a semicolon instead of a comma to separate long list items for extra clarity. For example:
+
+- "I love running in the morning; it wakes me up."
+- "Every morning, I enjoy eating toast, bacon, and eggs; reading a book; and relaxing on the porch."
+
+**Note**: If you're tempted to use a semicolon in the UI, try breaking up the sentence and cutting down on your words instead. This often leads to content that is more readable and clear.
 
 ## Commas
 When a conjunction connects two independent clauses, a **comma** should precede it. Also put a comma before “and” if it’s the Oxford comma. For example:
 
-- *I like to run, and I like to swim* — A comma is needed before “and” because “and” connects two independent clauses.
-- *I like to run and swim* — A comma is not needed before “and” because “and” does not connect two independent clauses.
-- *I like to run, swim, and hike* — The Oxford comma is included before “and.”
+- "I like to run, and I like to swim" — A comma is needed before “and” because “and” connects two independent clauses.
+- "I like to run and swim: — A comma is not needed before “and” because “and” does not connect two independent clauses.
+- "I like to run, swim, and hike" — The Oxford comma is included before “and.”
 
 ## Ellipses (...)
 **Ellipses (...)** are commonly used when information is omitted. Use ellipses when you cannot fit all words onto a line or when you remove less relevant information (like in a quote). For example:
@@ -88,7 +101,7 @@ If you're unsure about the use of a hyphen, refer to [Merriam-Webster's online d
 ## Exclamation mark
 Use **exclamation marks** sparingly. Don’t use one to generate excitement; only use an exclamation mark if the user is actually experiencing something exciting. You can also use an exclamation mark for something cautionary, like “Stop!” or “Watch out!”
 
-To more accurately capture human expression, use an exclamation mark after just a few words, not after a long sentence. For example,
+To more accurately capture human expression, use an exclamation mark after just a few words, not after a long sentence. For example:
 
 <div class="ws-content-table">
 
@@ -101,7 +114,7 @@ To more accurately capture human expression, use an exclamation mark after just 
 ## Parentheses 
 Use **parentheses** to offer more context to a term or phrase (such as a description or short example).
 
-Do not use parentheses to indicate a possible plural of something, like "Account(s)." When a user can select one thing or multiple things, use the plural form.
+Do not use parentheses to indicate a possible plural of something, like "account(s)." When a user can either select one thing or multiple things, use the plural form.
 
 ## Quotation marks
 Use double **quotation marks** (“Example”) for quotes and article titles. Use single quotation marks (‘Example’) for quotes or article titles within double quotation marks.
@@ -112,19 +125,3 @@ Double quotation marks and single quotation marks are sometimes used interchange
 
 - An article title within a dialogue:  *Abi said, “I love the article Cat wrote. It’s called ‘Improving product design with an open source mindset,’ and it’s such a fun read.”*
 - A quote within a dialogue: *“I like Cat’s article too, Abi. My coworker told me, ‘PatternFly has the best publication ever.’ That made me smile.”*
-
-## Colon and semicolon
-Use a **colon** to introduce a list or a series. You can also use it as a pause before introducing related information. For example:
-
-- "I enjoy the following hobbies: cooking, drawing, and traveling."
-- "That leads me to my favorite hobby: running."
-
-Use a **semicolon** to connect two closely related independent clauses. You can also use a semicolon instead of a comma to separate long list items for extra clarity. For example:
-
-- "I love running in the morning; it wakes me up."
-- "Every morning, I enjoy eating toast, bacon, and eggs; reading a book; and relaxing on the porch."
-
-**Note**: If you're tempted to use a semicolon in the UI, try breaking up the sentence and cutting down on your words instead. This often leads to content that is more readable and clear.
-
-
-
