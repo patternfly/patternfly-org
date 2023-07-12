@@ -36,9 +36,13 @@ Use a progress stepper to convey to a user how many steps are required to comple
 
 ### When to use progress stepper vs. wizard
 
-Use a progress stepper to indicate to the user where they are in a step-by-step linear process on a single page. The steps in the process could be completed by the user or happening in the background without the user completing the task themselves. 
+Use a progress stepper:
+* To indicate to the user where they are in a step-by-step linear process on a single page. 
+* When the steps in the process could be completed by the user or happening in the background without the user completing the task themselves. 
 
-Use a [wizard](/v4/components/wizard) to guide the user through a multi-step flow where they must complete specific tasks in order. Use a wizard when the steps are complex enough to need multiple pages. 
+Use a [wizard](/v4/components/wizard):
+* To guide the user through a multi-step flow where they must complete specific tasks in order. 
+* When the steps are complex enough to need to broken up into smaller, more manageable steps and does not keep user on the same screen.
 
 ## Variations
 There are a few variations of the progress stepper that can be used for different use cases. All variations can be displayed horizontally or vertically, and the text on each step can be left justified or centered.
