@@ -92,3 +92,28 @@ PatternFly 5 brings a new implementation to the following components, which can 
 - [Select](/components/menus/select)
 - [Dropdown ](/components/menus/dropdown) 
 - [Wizard](/components/wizard)
+
+## Other notes
+
+As you upgrade to PatternFly 5, keep in mind the following considerations:
+
+
+When updating the react-topology package, note that the topology styles have been removed from their previous home in @patternfly/react-styles and now need to be imported directly from [react-topology.](https://github.com/patternfly/react-topology)
+
+<div class="ws-content-table">
+
+| **Before**                                                                                    | **After**                                                                          |
+|-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| `import styles from '@patternfly/react-styles/css/components/Topology/topology-components';`  | `import styles from '@patternfly/react-topology/dist/js/css/topology-components';` |
+
+</div>
+
+In general, though PatternFly ships a `src` directory in it's npm package, it is not advised to import components from a `src` directory. Instead, when importing via absolute paths, import components from `dist` directories.
+
+<div class="ws-content-table">
+
+| **Before**                                                      | **After**                                                           |
+|-----------------------------------------------------------------|---------------------------------------------------------------------|
+| `import { Node } from '@patternfly/react-topology/src/types';`  | `import { Node } from '@patternfly/react-topology/dist/esm/types';` |
+
+</div>
