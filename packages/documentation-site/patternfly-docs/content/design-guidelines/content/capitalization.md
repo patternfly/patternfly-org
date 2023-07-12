@@ -3,7 +3,7 @@ id: Capitalization
 section: UX writing
 ---
 
-Consistent capitalization adds clarity and creates unity across your products' user interfaces (UIs).
+Consistent capitalization adds clarity and creates unity across your products' UIs.
 
 ## Capitalization types
 
@@ -11,13 +11,13 @@ We recommend using title and sentence case as appropriate:
 
 - **Title case** capitalizes only the first letter of each word in a sentence, except for smaller words with fewer than four letters, like articles and conjunctions. 
 
-    - Example: "PatternFly Design Resources With Tips and Best Practices".
+    - For example: "PatternFly Design Resources With Tips and Best Practices".
 
     - **Note:** Hyperlinked articles in a UI are not displayed as titles. Instead, the copy typically reads something like, "Learn more about [tool name]." 
 
 - **Sentence case** only capitalizes the first letter of the first word in a title, heading, subtitle, or subheading except for proper nouns, product names, acronyms, and initialisms. 
     
-    - For example, “PatternFly’s design resources with tips and best practices”.
+    - For example: “PatternFly’s design resources with tips and best practices”.
 
 ## Capitalization in breadcrumb trails
 
@@ -29,7 +29,7 @@ For example, this may look like: *Rules* > *Systems* > *System Tool* > *vagrant-
 
 ## Capitalization across PatternFly
 
-Follow these guidelines for **PatternFly content**, including documentation, UX copy, blog articles, and more. 
+Follow these guidelines for PatternFly content, including documentation, UX copy, blog articles, and more. 
 
 - Use **sentence case** for page titles, menu items, navigation items, headings, subtitles, and subheading. 
 
@@ -58,16 +58,19 @@ In general, follow these guidelines:
 - **Capitalize** proper nouns, acronyms, initialisms, product names, services, and features. 
 - Keep capitalization for custom resources the same as the capitalization used during creation. For example, if a custom resource was created in all lowercase letters, don't change any of the letters to uppercase. 
 - Capitalize **Red Hat feature names** when they’re used as proper nouns or when they refer to a capitalized UI term (like a navigation item). Write them in lowercase when they’re used to describe generic concepts. For more specifics, reference the following table:
+    <div class="ws-content-table">
 
-  | **Feature name** | **UI text**  | **Reasoning**    |
-  |------------------|--------------|------------------|
-  | Compliance   | “Check your system compliance using Red Hat Insights Compliance.”                                                  | The first “compliance” is lowercase since it refers to compliance as a concept. The second “compliance” refers to a specific feature offered on cloud.redhat.com.                                     |
-  | User Access  | “Manage user access for your organization using the User Access feature.”                                          | The first “user access” is lowercase because it refers to user access as a concept. The second “user access” is capitalized because it refers to the User Access feature offered on cloud.redhat.com. |
-  | Sources      | “Add a source by going to **Settings > Sources.**” "Check the **Sources** table for status." Button text: "Add source" | “Sources” is only capitalized when it directly refers to a subsection, feature, or location in the UI. Always write buttons in sentence case. |
+    | **Feature name** | **UI text**  | **Reasoning**    |
+    |------------------|--------------|------------------|
+    | Compliance   | “Check your system compliance using Red Hat Insights Compliance.”                                                  | The first “compliance” is lowercase since it refers to compliance as a concept. The second “compliance” refers to a specific feature offered on cloud.redhat.com.                                     |
+    | User Access  | “Manage user access for your organization using the User Access feature.”                                          | The first “user access” is lowercase because it refers to user access as a concept. The second “user access” is capitalized because it refers to the User Access feature offered on cloud.redhat.com. |
+    | Sources      | “Add a source by going to **Settings > Sources.**” "Check the **Sources** table for status." Button text: "Add source" | “Sources” is only capitalized when it directly refers to a subsection, feature, or location in the UI. Always write buttons in sentence case. |
+
+    </div>
 
 A UI that adheres to these guidelines may resemble the following image: 
 
-<img src="./img/user-menu-example.png" alt="title case navigation items and sentence case menu items" width="750px"/>   
+<img src="./img/user-menu-example.png" alt="title case navigation items and sentence case menu items" width="3330px"/>   
 
 1. **Navigation**: Navigation items are in title case. 
 1. **Menu**: Menu items are in sentence case.

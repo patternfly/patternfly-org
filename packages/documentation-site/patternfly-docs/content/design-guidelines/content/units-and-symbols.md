@@ -7,12 +7,14 @@ section: UX writing
 
 Use consistent formatting, terminology, and symbols when displaying units of measurement in your UI, including:
 
-- Date and time,
-- Data storage,
-- Data bandwidth, and
-- Currency.
+- Currency, 
+- Data bandwidth,
+- Data storage, and
+- Time.
 
 When displaying quantitative values for measurements in your UI, use the [International System of Units](https://www.nist.gov/pml/owm/metric-si/si-units) (SI unit) so that your content can be understood by global users. The following table outlines the base units and symbols you should use to describe different quantities:
+
+<div class="ws-content-table">
 
 | **Measurement** | **Unit** | **Symbol** |
 | --- | --- | ---|
@@ -23,48 +25,21 @@ When displaying quantitative values for measurements in your UI, use the [Intern
 | Amount of substance | Mole | mol
 | Luminous intensity | Candela | cd
 
+</div>
+
 For example:
+
+<div class="ws-content-table">
 
 |**Before**  | **After** |
 |------------|-----------|
 | The table is 10 feet long. | The table is 3m long. |
 
-## Time
+</div>
 
-Whenever possible, write the full name of each time unit. 
+## Currency
 
-For example, write "6 minutes" instead of "6 min."
-
-If space is limited, use symbols to communicate the same units of time in less space: 
-
-| **Unit** | **Symbol**|
-| --- | --- |
-| Millisecond | ms
-| Second | s
-| Minute | min
-| Hour | hr
-
-Avoid using symbols for days, weeks, months, and years.
-
-## Data storage
-
-Computer storage and memory are typically measured in bytes. Bytes can be shown in **binary units** (gibibytes) or **decimal/metric units** (gigabytes).
-
-To remain consistent and reduce confusion, use binary units to express amounts of digital information. This practice aligns with most computing and open source software.
-
-| **Binary unit** | **Symbol** | **Value**        |
-|-----------------|------------|------------------|
-| 1 kibibyte      | KiB        | 1024             |
-| 1 mebibyte      | MiB        | 1024<sup>2</sup> |
-| 1 gibibyte      | GiB        | 1024<sup>3</sup> |
-| 1 tebibyte      | TiB        | 1024<sup>4</sup> |
-
-| **Metric unit** | **Symbol** | **Value**        |
-|-----------------|------------|------------------|
-| 1 kilobyte     | KB       | 1000             |
-| 1 megabyte     | MB        | 1000<sup>2</sup> |
-| 1 gigabyte     | GB        | 1000<sup>3</sup> |
-| 1 terabyte     | TB       | 1000<sup>4</sup> |
+Wherever possible, display currency in three-letter code according to [ISO Standard 4217](https://www.iso.org/iso-4217-currency-codes.html). See our [numerics](/ux-writing/numerics#numbers-and-currency) guidelines for more information about writing currency.
 
 ## Data bandwidth
 
@@ -91,13 +66,60 @@ Data transfer rates can be measured in binary or metric units. Always align this
 
 **Note**: Pay special attention to letter case when writing symbols for bits (b) and bytes (B). Eight bits (b) make up one byte (B), so using the wrong symbol will change your meaning. 
 
-## Currency
+## Data storage
 
-Wherever possible, display currency in three-letter code according to [ISO Standard 4217](https://www.iso.org/iso-4217-currency-codes.html). See our [numerics](/ux-writing/numerics#numbers-and-currency) guidelines for more information about writing currency.
+Computer storage and memory are typically measured in bytes. Bytes can be shown in **binary units** (gibibytes) or **decimal/metric units**(gigabytes).
+
+To remain consistent and reduce confusion, use binary units to express amounts of digital information. This practice aligns with most computing and open source software.
+
+<div class="ws-content-table">
+
+| **Binary unit** | **Symbol** | **Value**        |
+|-----------------|------------|------------------|
+| 1 kibibyte      | KiB        | 1024             |
+| 1 mebibyte      | MiB        | 1024<sup>2</sup> |
+| 1 gibibyte      | GiB        | 1024<sup>3</sup> |
+| 1 tebibyte      | TiB        | 1024<sup>4</sup> |
+
+</div>
+
+<div class="ws-content-table">
+
+| **Metric unit** | **Symbol** | **Value**        |
+|-----------------|------------|------------------|
+| 1 kilobyte     | KB       | 1000             |
+| 1 megabyte     | MB        | 1000<sup>2</sup> |
+| 1 gigabyte     | GB        | 1000<sup>3</sup> |
+| 1 terabyte     | TB       | 1000<sup>4</sup> |
+
+</div>
+
+## Time
+
+Whenever possible, write the full name of each time unit. 
+
+For example, write "6 minutes" instead of "6 min."
+
+If space is limited, use symbols to communicate the same units of time in less space: 
+
+<div class="ws-content-table">
+
+| **Unit** | **Symbol**|
+| --- | --- |
+| Millisecond | ms
+| Second | s
+| Minute | min
+| Hour | hr
+
+</div>
+
+Avoid using symbols for days, weeks, months, and years.
 
 ## Best practices for writing units of measurement
 
 Follow these general best practices for writing units of measurement:
+
+<div class="ws-content-table">
 
 | **Best practice** | **Examples**  |
 |------------------------|--------------------------|
@@ -111,3 +133,5 @@ Follow these general best practices for writing units of measurement:
 | Clearly express units for two or more related quantities. If necessary, you can include the unit after each numeral.  | Write *6 to 8 inches* or *6 inches to 8 inches*. |
 | Use symbols to display derived units of measure (units formed using a calculation). | *38 mph, 27 ft/s<sup>2</sup>*   |
 | For derived units of measure, use the symbol that represents its word form, since it will be more familiar to your users. | Use *Hz* for Hertz instead of the derivation *cycles per second (cycles/second)*.     
+
+</div>

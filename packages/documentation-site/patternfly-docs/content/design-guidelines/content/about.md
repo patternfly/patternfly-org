@@ -4,7 +4,7 @@ section: UX writing
 sortValue: 1
 
 ---
-The words in a UI, commonly referred to as "UX copy" or "microcopy," are just as important as the visual design and layout. UX copy is an essential element of design that can be used strategically to drive better UX decisions and guide users to succeed. 
+The words in a user interface (UI), commonly referred to as "UX copy" or "microcopy," are just as important as the visual design and layout. UX copy is an essential element of design that can be used strategically to drive better UX decisions and guide users to succeed. 
 
 Our UX writing guidelines provide a place for UX professionals like you to learn about designing with words.
 
@@ -17,7 +17,7 @@ As a PatternFly community, our goal with this style guide is to help UX professi
 - Make products sound more conversational and human.
 - Use written content to create unified, on-brand experiences for all users.
 
-With that said, we recognize that the *PatternFly* way is not the *only* way. This guide isn’t meant to:
+With that said, we recognize that the PatternFly way is not the *only* way. This guide isn’t meant to:
 - Overrule another style guide.
 - Provide a complete list of all writing rules across all channels.
 - Serve as hard requirements that everyone must follow. 

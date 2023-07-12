@@ -19,7 +19,7 @@ To create accessible content, refer to the following best practices:
     <br />
     <img src="./img/submit-form.png" alt="blue PatternFly primary button reading Submit form" width="150"/>
 
-    <br />
+    <br/>
 
     <div class="ws-content-table">
 
@@ -32,35 +32,14 @@ To create accessible content, refer to the following best practices:
 
 - Write for responsive design. If your application is accessible by multiple devices, such as a tablet, laptop, television, and smartphone, then consider that on some devices you may slide or tap the screen, while on others you may select options by clicking or pressing. 
 
-- Use proper heading levels (H1, H2) to articulate the page content’s organization. Headings are useful in identifying content changes, and machine translation recognizes each heading level as a new segment, which is important with text-laden pages. Headings are ranked hierarchically from H1 through H6, with H1 headings representing the most important idea on a page. 
+- Use proper heading levels (H1, H2) to articulate the page content’s organization. Headings are useful in identifying content changes, and machine translation recognizes each heading level as a new segment, which is important with text-laden pages. 
+    - Headings are ranked hierarchically from H1 through H6, with H1 headings representing the most important idea on a page. 
 
 - Consistently [describe UI elements](accessibility/product-development-guide#labeling-with-aria) in tooltips and product documentation. For example, for a kebab icon:  
     - The tooltip text might be "More options"
     - In product documentation, you would then say "Click **More options**". 
 
 - Label UI elements (buttons, icons, menus) consistently and descriptively to clearly represent the element’s function.
-
-## Using accessible and global-friendly graphics
-
-- Verify that you have rights to use graphics without infringing on copyrights.
-
-- Include alt text for images that provide additional meaning or content to the page. If the image is decorative or if the alt text would be duplicated by adjacent text, then use an empty alt attribute instead, `alt=""`. An empty alt attribute communicates to screen readers that the image provides no additional content and can be ignored.
-
-- Select a text-free image and use callouts to caption the image. When localizing content, graphics containing text may require translation, and translating a static image requires graphic editing. Callouts are easier to localize.
-
-## Writing for screen readers
-
-Include text for screen readers. Screen readers are most useful when the words represent what is visually shown on the screen. When writing text that is visible only to a screen reader, such as an aria-label that describes an icon button, reference the following guidelines:  
-
-- Avoid redundancy. Screen readers announce the component or element as well as the associated property and state when the HTML is defined correctly. For example, the search button is announced as the label and the button: Search button. Label the button as "Search", not "Search button".
-
-- Make sure that labels for elements like buttons or links make sense when pulled out of context. Use descriptive hyperlinks instead of raw links or vague linked text, such as “Click here.”  
-
-- When you define an aria-label for an element that also has associated visible text in the UI, ensure the aria-label begins with the same text that is displayed in the UI to avoid confusing screen reader users who have vision. 
-
-- Avoid unnecessary capitalization. 
-
-- Avoid leet speak, which uses numbers or special characters in place of letters (for example, "a11y" for accessibility). 
 
 ## Writing for localization and translation
 
@@ -80,9 +59,29 @@ Accessibility is closely related to localization and translation. The more acces
 
 - Use humor sparingly. It generally doesn’t translate well.
 
+## Writing for screen readers
 
+Include text for screen readers. Screen readers are most useful when the words represent what is visually shown on the screen. When writing text that is visible only to a screen reader, such as an aria-label that describes an icon button, reference the following guidelines:  
 
+- Avoid redundancy. Screen readers announce the component or element as well as the associated property and state when the HTML is defined correctly. For example, the search button is announced as the label and the button: Search button. Label the button as "Search", not "Search button".
 
+- Make sure that labels for elements like buttons or links make sense when pulled out of context. Use descriptive hyperlinks instead of raw links or vague linked text, such as “Click here.”  
+
+- When you define an aria-label for an element that also has associated visible text in the UI, ensure the aria-label begins with the same text that is displayed in the UI to avoid confusing screen reader users who have vision. 
+
+- Avoid unnecessary capitalization. 
+
+- Avoid leet speak, which uses numbers or special characters in place of letters (for example, "a11y" for accessibility). 
+
+## Using accessible and global-friendly graphics
+
+The graphics that you use in your UI should meet accessibility and localization standard by following these best practices:
+
+- Verify that you have rights to use graphics without infringing on copyrights.
+
+- Include alt text for images that provide additional meaning or content to the page. If the image is decorative or if the alt text would be duplicated by adjacent text, then use an empty alt attribute instead, `alt=""`. An empty alt attribute communicates to screen readers that the image provides no additional content and can be ignored.
+
+- Select a text-free image and use callouts to caption the image. When localizing content, graphics containing text may require translation, and translating a static image requires graphic editing. Callouts are easier to localize.
 
 
 
