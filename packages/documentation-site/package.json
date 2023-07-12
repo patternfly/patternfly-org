@@ -21,7 +21,7 @@
     "@patternfly/quickstarts": "^5.0.0-prerelease.1",
     "@patternfly/react-catalog-view-extension": "5.0.0-prerelease.1",
     "@patternfly/react-console": "5.0.0-prerelease.1",
-    "@patternfly/react-docs": "6.0.0-prerelease.13",
+    "@patternfly/react-docs": "6.0.0-prerelease.23",
     "@patternfly/react-log-viewer": "5.0.0-prerelease.1",
     "@patternfly/react-topology": "5.0.0-prerelease.1",
     "@patternfly/react-user-feedback": "5.0.0-prerelease.1",
