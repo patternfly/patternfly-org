@@ -63,7 +63,7 @@ Use abbreviations that users are familiar with, and write out uncommon abbreviat
 | **K8** | Stands for *Kubernetes*. |
 | **KVM** | Refers to a kernel-based virtual machine. Write *KVM* in all caps. |
 | **sysadmin** | Avoid using abbreviations like *sysadmin* and *SysAdmin* because they’re too informal and not always easily understood. *System* should be singular (not *Systems administrator*) because it can include both a single system and multiple systems, similar to *brain surgeon*, who works on more than one brain. <br /><br /> Taken from Red Hat Corporate Style Guide. |
-| **U.S.** | As a noun, use *United States* unless there are space constraints. As an adjective, use *U.S.* (for example, *U.S. soldier*). As part of an organization, use *U.S.* <br><br> Taken from Red Hat Corporate Style Guide. | 
+| **U.S.** | As a noun, use *United States* unless there are space constraints. As an adjective, use *U.S.* (for example, *U.S. soldier*). As part of an organization, use *U.S.* <br /><br /> Taken from Red Hat Corporate Style Guide. | 
 | **URL** | Stands for *Uniform Resource Locator*. Write *URL* in all caps. |
 | **VM** | Refers to a virtual machine. OK to abbreviate as long as you've spelled it out once in the first occurrence and as long as *VM* won't be confused with other terms that share that acronym. <br /><br />Taken from Red Hat Corporate Style Guide. |
 | ** N/A ** | Refers to *data not applicable*, meaning data will never apply to the object and will never populate. |
