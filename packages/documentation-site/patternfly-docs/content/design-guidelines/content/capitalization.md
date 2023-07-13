@@ -58,6 +58,7 @@ In general, follow these guidelines:
 - **Capitalize** proper nouns, acronyms, initialisms, product names, services, and features. 
 - Keep capitalization for custom resources the same as the capitalization used during creation. For example, if a custom resource was created in all lowercase letters, don't change any of the letters to uppercase. 
 - Capitalize **Red Hat feature names** when they’re used as proper nouns or when they refer to a capitalized UI term (like a navigation item). Write them in lowercase when they’re used to describe generic concepts. For more specifics, reference the following table:
+    
     <div class="ws-content-table">
 
     | **Feature name** | **UI text**  | **Reasoning**    |
