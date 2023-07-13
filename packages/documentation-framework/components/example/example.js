@@ -173,8 +173,6 @@ export const Example = ({
       ? getStaticParams(title, editorCode)
       : getReactParams(title, editorCode, scope, lang, relativeImports, relPath, sourceLink)
   );
-  console.log({codeBoxParams});
-  debugger;
   const fullscreenLink = loc.pathname.replace(/\/$/, '')
     + (loc.pathname.endsWith(source) ? '' : `/${source}`)
     + '/'
