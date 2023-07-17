@@ -80,7 +80,7 @@ To separate numbers in a series, use an **en dash ( – )**. For example, "We pl
 ### Hyphen
 Use a **hyphen ( - )** if it's part of a term (such as "walk-through") or someone's name (such as "Mary-Jane").  
 
-Also, use a hyphen for a compound adjective that comes before the noun it modifies, but omit the hyphen if the first adjective ends in "-ly". For example:
+Also, use a hyphen for a compound adjective that comes before the noun it modifies, but omit the hyphen if the first adjective ends in "-ly." For example:
 
 - "I like when my documentation is up to date." 
 - "I write up-to-date documentation." 

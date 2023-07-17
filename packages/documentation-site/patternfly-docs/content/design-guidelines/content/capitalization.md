@@ -11,13 +11,13 @@ We recommend using title and sentence case as appropriate:
 
 - **Title case** capitalizes only the first letter of each word in a sentence, except for smaller words with fewer than four letters, like articles and conjunctions. 
 
-    - For example: "PatternFly Design Resources With Tips and Best Practices".
+    - For example: "PatternFly Design Resources With Tips and Best Practices."
 
     - **Note:** Hyperlinked articles in a UI are not displayed as titles. Instead, the copy typically reads something like, "Learn more about [tool name]." 
 
 - **Sentence case** only capitalizes the first letter of the first word in a title, heading, subtitle, or subheading except for proper nouns, product names, acronyms, and initialisms. 
     
-    - For example: “PatternFly’s design resources with tips and best practices”.
+    - For example: “PatternFly’s design resources with tips and best practices.”
 
 ## Capitalization in breadcrumb trails
 
