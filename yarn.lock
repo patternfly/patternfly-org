@@ -2560,7 +2560,7 @@
     xterm "^4.8.1"
     xterm-addon-fit "^0.2.1"
 
-"@patternfly/react-core@5.0.0-prerelease.13", "@patternfly/react-core@^5.0.0-prerelease.13":
+"@patternfly/react-core@^5.0.0-prerelease.13":
   version "5.0.0-prerelease.13"
   resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-5.0.0-prerelease.13.tgz#878b9d27b639bb870e79c6c388fcf617e3793641"
   integrity sha512-NhZmaagCjEDhfOI0VPG5oeYeQkzUAUZB/gDg8VSDvs+2jnwrqRH/Wk+Sot9ix9GaU7Xad3jdkEY9HAqKomVsnw==
@@ -2598,7 +2598,7 @@
     "@patternfly/react-table" "^5.0.0-prerelease.21"
     "@patternfly/react-tokens" "^5.0.0-prerelease.6"
 
-"@patternfly/react-icons@5.0.0-prerelease.7", "@patternfly/react-icons@^5.0.0-prerelease.7":
+"@patternfly/react-icons@^5.0.0-prerelease.7":
   version "5.0.0-prerelease.7"
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-5.0.0-prerelease.7.tgz#f98dd22e363324a6174e70fcaaaa8f834316f2fc"
   integrity sha512-nR4kv5pKN9csN6uZ/0HZg55ZM9S2ngpCL8s/pAc1PtwdOpvm5fUEb3HnCKJmf2pjRxPr7FKIF3aAAAGRd1ORIA==
@@ -2608,17 +2608,17 @@
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-5.0.0-prerelease.8.tgz#8288683e68057cb979cd16355cb2a13798d09969"
   integrity sha512-zXtpMQTDE6xHI7wxHWZzfnSFjvfAqBRw9Tc/denBWBY87OjJZap8MdPBM1krNrF+R9xLz/OQzSSuN7PM6z7sHw==
 
-"@patternfly/react-log-viewer@5.0.0-prerelease.1":
-  version "5.0.0-prerelease.1"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-log-viewer/-/react-log-viewer-5.0.0-prerelease.1.tgz#b523efe96b47f56933c5747681fa70c351fd2286"
-  integrity sha512-XAfMOunP3IzMLZ53A1pyubWCRSUww9zu36bpjXwkhacy8fcJUgjRXwj4yWCIPpjqqYtX1KJG80tEKPMdOPgHDQ==
+"@patternfly/react-log-viewer@5.0.0-prerelease.2":
+  version "5.0.0-prerelease.2"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-log-viewer/-/react-log-viewer-5.0.0-prerelease.2.tgz#9ff96b0071162a65304268448b56f8d959d87c66"
+  integrity sha512-HFEZx/gAOL3awZkcuvvUQ7v0nhWdsNGnZWu4vDqc4VqyNmK7HSXUdTsEm8n9WgPK4D6JctKVwXLSDDD0oWkAxg==
   dependencies:
-    "@patternfly/react-core" "5.0.0-prerelease.13"
-    "@patternfly/react-icons" "5.0.0-prerelease.7"
-    "@patternfly/react-styles" "5.0.0-prerelease.5"
+    "@patternfly/react-core" "^5.0.0-prerelease.13"
+    "@patternfly/react-icons" "^5.0.0-prerelease.7"
+    "@patternfly/react-styles" "^5.0.0-prerelease.5"
     memoize-one "^5.1.0"
 
-"@patternfly/react-styles@5.0.0-prerelease.5", "@patternfly/react-styles@^5.0.0-prerelease.5":
+"@patternfly/react-styles@^5.0.0-prerelease.5":
   version "5.0.0-prerelease.5"
   resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-5.0.0-prerelease.5.tgz#cdd20855331fd1fde670c764cb3ec7faf3be93e4"
   integrity sha512-1hMBVpW/LXuDOyfGhI7hhaBnUJn18wh2+Zbfj3Xh4J3jhI1iVr9XIudu/rjwheCKLcELid41IYWF43Pg6FmNSQ==
