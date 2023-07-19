@@ -4,7 +4,7 @@ section: UX writing
 ---
 A product tour, also referred to as an "onboarding flow", includes a series of dialog boxes or pop-ups that introduce users to a new tool or a redesigned tool.
 
-In product tours, your UX copy is never intended only to tell a user *how* something works. You need to convince them that the product—and learning about the product—is worth their time.
+In product tours, your UX copy is never intended only to tell a user *how* something works. You need to convince them that using and learning about the product is worth their time.
 
 When writing a product tour, refer to the following best practice guidelines and their respective before/after example:
 
@@ -30,7 +30,7 @@ When writing a product tour, refer to the following best practice guidelines and
     </div>
     <br />
 
-1. **Empathize with the user**: Learning new things can be scary, so don’t stuff your onboarding flow with exclamation marks, and avoid telling the user how hard you worked on the new tool or how excited you are. Instead, understand that the user might be a little intimidated. Focus on giving them information and guidance in a straightforward way.
+1. **Empathize with the user**: Learning new things can be scary, so don’t stuff your onboarding flow with exclamation marks, and avoid telling the user how hard you worked on the new tool or how excited you are. Instead, understand that the user might be a little intimidated and focus on giving them information and guidance in a straightforward way.
 
     <div class="ws-content-table">
 

@@ -64,7 +64,7 @@ Data transfer rates can be measured in binary or metric units. Always align this
 | 1 gigabyte/second | GBps | 
 | 1 terabyte/second | TBps | 
 
-**Note**: Pay special attention to letter case when writing symbols for bits (b) and bytes (B). Eight bits (b) make up one byte (B), so using the wrong symbol will change your meaning. 
+**Note**: Pay special attention to the letter case when writing symbols for bits (b) and bytes (B). Eight bits (b) make up one byte (B), so using the wrong symbol will change your meaning. 
 
 ## Data storage
 

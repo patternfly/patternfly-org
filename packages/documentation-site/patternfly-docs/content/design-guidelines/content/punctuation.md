@@ -4,7 +4,7 @@ section: UX writing
 ---
 
 ## Referring to text in the UI
-When referring to an element or text in the UI, use bold text (not quotation marks or italics). For example:
+When referring to an element or text in the UI, use bold text. Don't use quotation marks or italics -- those should be reserved for quotes and emphasis, respectively. For example:
 
 <div class="ws-content-table">
 
@@ -80,14 +80,14 @@ To separate numbers in a series, use an **en dash ( – )**. For example, "We pl
 ### Hyphen
 Use a **hyphen ( - )** if it's part of a term (such as "walk-through") or someone's name (such as "Mary-Jane").  
 
-Also, use a hyphen for a compound adjective that comes before the noun it modifies, but omit the hyphen if the first adjective ends in "-ly." For example:
+You should also use a hyphen for a compound adjective that comes before the noun it modifies, but omit the hyphen if the first adjective ends in "-ly." For example:
 
 - "I like when my documentation is up to date." 
 - "I write up-to-date documentation." 
 - "He is a highly talented writer." 
 - "She is a high-quality job candidate."    
 
-For most prefixes, you should *not* use a hyphen. In particular, do not use a hyphen for the following: 
+For most prefixes, you should *not* use a hyphen. For example:
 
 - Auto- (such as autopopulate; autoloading)
 - Pre- (such as prerequisite) 
@@ -121,7 +121,7 @@ Use double **quotation marks** (“Example”) for quotes and article titles. Us
 
 While double quotation marks are the standard in American English, single quotation marks are usually the standard in British English.
 
-Double quotation marks and single quotation marks are sometimes used interchangeably across various publications. In some contexts, they can mean the same thing. But they are not always interchangeable, particularly when you need to use quotation marks within quotation marks. In this case, single quotation marks are used inside of double quotation marks. For example:
+Double quotation marks and single quotation marks are sometimes used interchangeably across various publications. In some contexts, they can mean the same thing, but they are not always interchangeable. For instance, when you need to use nested quotation marks, single quotation marks should be used inside of double quotation marks. For example:
 
 - An article title within a dialogue:  *Abi said, “I love the article Cat wrote. It’s called ‘Improving product design with an open source mindset,’ and it’s such a fun read.”*
 - A quote within a dialogue: *“I like Cat’s article too, Abi. My coworker told me, ‘PatternFly has the best publication ever.’ That made me smile.”*

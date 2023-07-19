@@ -5,13 +5,13 @@ section: UX writing
 
 In a business context, brand is the identity of a company that people recognize based on an emotional and psychological connection, as well as factual information.
 
-All of your UX copy should align with your company’s brand to contributet to a consistent and authentic experience across every content channel users interact with. To keep your UX copy on-brand, consider style, voice, and tone:
+All of your UX copy should align with your company’s brand to contribute to a consistent and authentic experience across every content channel users interact with. To keep your UX copy on-brand, consider style, voice, and tone:
 
 - **Style** is the way you use grammar, punctuation, and syntax. It’s influenced by how your words work together and what effect your writing has on the user. 
 
 - **Voice** is the personality that’s reflected in your writing. For example, your content's voice may be "helpful".
 
-- **Tone** encompasses the user’s emotions that need to be accounted for and the resulting approach you must take. It is important to choose a tone that's appropriate for the context of your content.
+- **Tone** encompasses the user’s emotions that need to be accounted for and the resulting approach you must take. It is important to choose a tone that's appropriate for the context of your content. For example, your content's tone may be "casual" or "professional".
 
 ## Voice 
 
@@ -76,7 +76,7 @@ You can’t *tell* your users what your voice is. You need to *show* them who yo
 | **Do** | **Don't** |
 |--------|-----------|
 | Deliver content in a way that includes everyone. | Don’t rely on inside jokes, colloquial expressions, culture-specific examples, or other alienating language to get your point across. |
-| Use “you” and the active voice to put emphasis on the user and power in their hands. | Don’t use “I” too much. Make the user the star of every story you tell. |
+| Use “you” and the active voice to put emphasis on the user and the power in their hands. | Don’t use “I” too much. Make the user the star of every story you tell. |
 
 </div>
 
