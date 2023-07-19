@@ -1,5 +1,5 @@
 ---
-id: 404 error pages
+id: HTTP 404 error pages
 section: UX writing
 ---
 
@@ -13,11 +13,11 @@ Effective 404 pages combine several elements to regroup, redirect, and empower l
 
 1. **Heading:** Communicates what a 404 error is in plain language that users can understand. Avoid including “404” or “404 error” unless it’s clearly defined after: “404: That page no longer exists.” Write 404 headings without end punctuation (no period), unless punctuated page headings align with your brand or product.
 
-1. **Next steps:** Define how users can proceed, typically by inviting them to search the site, explore suggested content, or both. Always write next steps in full sentences and punctuate accordingly.
+1. **Next steps:** Defines how users can proceed, typically by inviting them to search the site, explore suggested content, or both. Always write the next steps in full sentences and punctuate accordingly.
 
 1. **Suggested content (optional):** Points users toward relevant pages such as onboarding information, reference guides, or FAQs.
 
-1. **Link to home page:** Provide a quick and easy way for users to navigate back to your site’s home page.
+1. **Link to home page:** Provides a quick and easy way for users to navigate back to your site’s home page.
 
 ## Best practices for 404 error content
 

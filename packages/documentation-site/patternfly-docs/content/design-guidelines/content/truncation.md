@@ -13,16 +13,14 @@ Also truncate table or list view cells that contain long strings or lots of data
 
 ![#truncation1](./img/truncation2@2x.jpg)
 
-Utilize this guide to determine when and where to utilize truncation.
-
 ## Where to truncate
 Whether you should truncate strings at the beginning, end, or in the middle requires a bit of research.
 
 If your product has a default truncation scheme, such as a setting for how to truncate host names, you should follow that practice. 
 
-If the product doesn't have a default truncation scheme, think about how the product's users are apt to name objects. Is it more likely that the unique part of the name will be at the beginning or end of the string? Based on the answer, you should either truncate at the end of the string (abcdef...) or in the middle of the string (abc...ghi). To decide on a method, ask yourself: *Which part of the string that is not truncated is more likely to differentiate the item?*
+If the product doesn't have a default truncation scheme, think about how the product's users tend to name objects. Is it more likely that the unique part of the name will be at the beginning or end of the string? Based on the answer, you should either truncate at the end of the string (abcdef...) or in the middle of the string (abc...ghi). To decide on a method, ask yourself: *Which part of the string is more likely to differentiate the item?*
 
-And if users are able to customize settings regarding truncation, then you should match their chosen preference:
+If users are able to customize settings regarding truncation, then you should match their chosen preference:
 
 ![#truncation1](./img/truncation3@2x.jpg)
 
@@ -35,7 +33,7 @@ When considering when and how to truncate, follow these guidelines:
 - Leave no fewer than 4 characters when truncating text. Leave enough characters to give a fair idea of what the string says 
     - For example, don't truncate “demo1.internal-el6.satellite” to “de…”, since that doesn't properly convey the meaning of the full string.
 
-- In any container holding a string, if there is not sufficient room for the full spelling or hyphenated word, consider abbreviating the text. 
+- In any string within a container, if there is not sufficient room for the full spelling or hyphenated word, consider abbreviating the text. 
 
 - Avoid abbreviations or truncated text in navigation items (all levels of navigation in the masthead and left navigation).
 

@@ -3,7 +3,7 @@ id: Writing PatternFly design guidelines
 section: UX writing
 ---
 
-PatternFly's design guidelines provide users with information regarding the design, usage, behavior, and more of PatternFly's elements and components. This guide provides instructions for writing clear and consistent design documentation for PatternFly. 
+This guide provides instructions for writing clear and consistent design documentation for PatternFly. PatternFly's design guidelines provide users with information regarding the design, usage, behavior, and more of PatternFly's elements and components. 
 
 To learn how to contribute design guidelines, see our [contribution guide](https://github.com/patternfly/patternfly-org/wiki/Contributing-to-patternfly-org-for-designers).
 

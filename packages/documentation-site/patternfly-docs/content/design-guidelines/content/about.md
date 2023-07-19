@@ -24,7 +24,7 @@ With that said, we recognize that the PatternFly way is not the *only* way. This
 
 ## Additional resources 
 
-We provide thorough guidance acrosss our UX writing guidelines, but you may find the following supplementary resources to also be useful.
+We provide thorough guidance across our UX writing guidelines, but you may find the following supplementary resources to also be useful.
 
 - For component-specific microcopy guidance, see the component's [design guidelines](/components/about-modal/design-guidelines).
 - For microcopy guidance that’s not included in this guide, see [IBM Carbon’s UX content guidelines](https://www.carbondesignsystem.com/guidelines/content/overview). 

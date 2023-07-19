@@ -29,9 +29,11 @@ PatternFly date and time formats follow the American standard. When localizing, 
 
 Whether you use **absolute** or **relative** timestamps will depend on context. 
 
-To represent the exact date and time that an event occurred, use an absolute timestamp following examples provided in the [table of date and time formats](#date-and-time-formats).
+To represent the exact date and time that an event occurred, use an absolute timestamp, while referencing the examples provided in the [table of date and time formats](#date-and-time-formats).
 
-To represent how long ago an event occurred, use a relative timestamp. When reporting relative time, align with the following language:
+To represent how long ago an event occurred, use a relative timestamp.
+
+When reporting relative time, align with the following language:
 
 <div class="ws-content-table">
   

@@ -10,13 +10,13 @@ By making writing part of your design process, you’ll also be able to uncover 
 This guide details the best practices that you should follow when writing for UX.
 
 ## Know your users
-Before you write, understand who you're writing for. Get to know your users’ needs and what words will resonate.
+Before you write, understand who you're writing for. Getting to know your users’ needs and experiences can inform you on what words will resonate with them.
 
 To understand your users, create user personas (or use the ones your team already has) and reference them as you work. If your team is in the process of gathering information about users, there are a few ways you can get involved:
 
 - Ask to sit in on any interviews and listen.
 - Make notes about specific words being used, standards being referenced, or concepts that keep coming up.
-- Do your own research into your user domain by reading popular blogs or forums.
+- Do your own research into your users’ domain by reading popular blogs, forums, or documentation.
 
 ## Focus on goals and tasks
 Consider what your user is trying to accomplish (the **goal**) and the steps they’ll take to get there (the **tasks**). By understanding the entire user journey, you can provide the right content to the right user in the right place at the right time.

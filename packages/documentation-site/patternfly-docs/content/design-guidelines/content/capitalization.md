@@ -11,7 +11,7 @@ We recommend using title and sentence case as appropriate:
 
 - **Title case** capitalizes only the first letter of each word in a sentence, except for smaller words with fewer than four letters, like articles and conjunctions. 
 
-    - For example: "PatternFly Design Resources With Tips and Best Practices."
+    - For example: "PatternFly Design Resources with Tips and Best Practices."
 
     - **Note:** Hyperlinked articles in a UI are not displayed as titles. Instead, the copy typically reads something like, "Learn more about [tool name]." 
 
@@ -31,7 +31,7 @@ For example, this may look like: *Rules* > *Systems* > *System Tool* > *vagrant-
 
 Follow these guidelines for PatternFly content, including documentation, UX copy, blog articles, and more. 
 
-- Use **sentence case** for page titles, menu items, navigation items, headings, subtitles, and subheading. 
+- Use **sentence case** for page titles, menu items, navigation items, headings, subtitles, and subheadings. 
 
     - For example: On PatternFly's website, all navigation items, button text, and headings are written in sentence case:  
 
