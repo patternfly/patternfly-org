@@ -7,12 +7,14 @@ import { ColorSwatch } from './ColorSwatch';
 import { ColorFamily } from './ColorFamily';
 import './colors.css';
 
+# PatternFly colors
+
 ## Primary colors
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
     ### PatternFly blue
     <p>
-      Primary colors are those displayed most frequently across your application screens and components. Our primary colors are used across components and are typically applied to default, active, focus, and hover states.
+      Primary colors are those displayed most frequently across your application screens and components. Our primary colors (PatternFly blue) are used across components and are typically applied to default, active, focus, and hover states.
     </p>
     <ColorSwatch label="Default" color="--pf-v5-global--primary-color--100">
       This color usually indicates a default or active state for many components, including badges and spinners.
@@ -20,20 +22,22 @@ import './colors.css';
     <ColorSwatch label="Hover" color="--pf-v5-global--primary-color--200">
       This color is most commonly used as the hover or focus state for components that use the default primary color, such as buttons and dropdowns.
     </ColorSwatch>
+    <ColorSwatch label="High contrast" color="--pf-v5-global--primary-color--300">
+      This color meets contrast requirements for dark-theme elements that have text on top, such as primary buttons and unread badges.
+    </ColorSwatch>
   </GridItem>
   <GridItem xl={6} lg={12}>
     <img width="480px" src="./patternfly-blue.png" alt="PatternFly blue colors" />
   </GridItem>
 </Grid>
 
-<Divider className="ws-colors-divider" />
+## Global colors
 
-## Typography and iconography colors
+### Text and icons
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
-    ### Text and icons
     <p>
-      Typography and iconography colors are extremely similar because they can be used in the same context, such as for a link button. We have multiple shades of text colors on light and dark backgrounds so that you can emphasize hierarchy.
+      Text and icon colors are extremely similar because they can be used in the same context, such as for a link button. We have multiple shades of text colors for both light and dark backgrounds so that you can emphasize hierarchy in any color scenario.
     </p>
     <ColorSwatch color="--pf-v5-global--Color--100">
       This color is used for standard text, icons, and as a hover state color for icon buttons. It is most commonly used as a text color for many components and application screens.
@@ -50,9 +54,7 @@ import './colors.css';
   </GridItem>
 </Grid>
 
-<Divider className="ws-colors-divider" />
-
-## Background colors
+### Background colors
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
     <p>
@@ -82,9 +84,7 @@ import './colors.css';
   </GridItem>
 </Grid>
 
-<Divider className="ws-colors-divider" />
-
-## Status and state colors
+### Status and state colors
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
       Status and state colors are indicators that communicate data and actions to users through the UI. Our status colors cover default, danger, success, information, and warning statuses, as well as disabled states.
@@ -166,9 +166,7 @@ import './colors.css';
   </GridItem>
 </Grid>
 
-<Divider className="ws-colors-divider" />
-
-## Shadows
+### Shadows
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
     <p>
@@ -189,8 +187,6 @@ import './colors.css';
   </GridItem>
 </Grid>
 
-<Divider className="ws-colors-divider" />
-
 ## Contrast ratios
 <p>
   <a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/" target="_blank" className="pf-m-link">Level AA in the Web Content Accessibility Guidelines 2.1</a> requires a contrast ratio of at least 4.5:1 for normal text, 3:1 for large text, and 3:1 for graphics and UI components (such as form input borders).
@@ -199,8 +195,6 @@ import './colors.css';
 Check the contrast between the background color and text color using a <a href="https://color.a11y.com/?wc3" target="_blank" className="pf-m-link">WCAG AA-compliance tool.</a>
 
 Make sure that, on hover, the link text color has ample contrast from both the background color and the default state link color.
-
-<Divider className="ws-colors-divider" />
 
 ## Color palette
 Our palettes are created as a system designed to reinforce application content and workflows. Bright colors are reserved for specific interactions, such as reinforcing status, and are used sparingly. Our palettes are simple, consolidated, and versatile to allow them to be easily deployed for any situation.
