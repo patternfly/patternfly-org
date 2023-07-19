@@ -5094,5 +5094,12 @@ import { Wizard } from '@patternfly/react-core/deprecated';`}
     pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9257",
     repo: "React",
     fixedWithCodeMod: false
+  },
+  {
+    component: "Brand",
+    description: (<>Allowed heights/widths to be set together and be used when no children are passed</>),
+    pullRequestURL: "https://github.com/patternfly/patternfly-react/pull/9342",
+    repo: "React",
+    fixedWithCodeMod: false
   }
 ];
