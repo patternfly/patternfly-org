@@ -9,6 +9,12 @@ import './colors.css';
 
 # PatternFly colors
 
+PatternFly color pal
+
+[See a list of all global CSS variables.](/developer-resources/global-css-variables/#global-css-variables)
+
+## Dark theme colors 
+
 ## Primary colors
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
@@ -60,9 +66,15 @@ import './colors.css';
     <p>
       Background colors are used throughout components and for certain screens, depending on the use case. Light colors can be used interchangeably with full-screen backgrounds, while dark background colors are strictly used within components.
     </p>
-    <ColorSwatch color="--pf-v5-global--BackgroundColor--200">
-      This color is most commonly used as a secondary background color for full application screens and hover backgrounds.
+    <ColorSwatch color="--pf-v5-global--BackgroundColor--400">
+      This color is the background color for hover and interaction states of items that are placed on top of a dark background, such as dropdown menu items, text inputs, text areas, and menu toggles.
     </ColorSwatch>
+    <ColorSwatch color="--pf-v5-global--BackgroundColor--300">
+      This color is the background color for elements that appear on top of others, such as popovers and dropdown menus.
+    </ColorSwatch>
+    <ColorSwatch color="--pf-v5-global--BackgroundColor--200">
+      This color is most commonly used as a secondary background color for full application screens and hover backgrounds.    
+      </ColorSwatch>
     <ColorSwatch color="--pf-v5-global--BackgroundColor--100">
       This color is most commonly used as a primary background color for full application screens and many components, such as cards and tables/data lists.
     </ColorSwatch>
