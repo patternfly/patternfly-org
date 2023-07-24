@@ -3,21 +3,21 @@ id: Writing PatternFly design guidelines
 section: UX writing
 ---
 
-This guide provides instructions for writing clear and consistent design documentation for PatternFly. PatternFly's design guidelines provide users with information regarding the design, usage, behavior, and more of PatternFly's elements and components. 
+This guide provides instructions for writing clear and consistent design documentation for PatternFly. PatternFly's design guidelines provide users with information regarding the design, usage, behavior, and more of PatternFly's elements and components.
 
 To learn how to contribute design guidelines, see our [contribution guide](https://github.com/patternfly/patternfly-org/wiki/Contributing-to-patternfly-org-for-designers).
 
-## Design guidelines template
-When creating guidelines, information must be presented in the following order. Sections may be omitted, but if present they must be contained under one of the following headings.
+## Design guidelines sections
+When creating guidelines, information must be presented in the following order. Sections may be omitted, but if present must use the following section headings (H2).
 
-### Elements (H2)
+### Elements 
 Display an image of the component containing numbered annotation tags for each major part of the component's visual design. Include specific icons, headers, fields, symbols, and anything else included in the component's structure. Following the image, list all the parts you tagged, aligning with the number displayed in the respective annotation tag. In this list, provide a description of each one. 
 
 Example:
 
 <img src="./img/sliderelements.png" alt="A screenshot of the slider component's element section with 8 elements outlined." width="600px" />
 
-### Usage (H2)
+### Usage 
 Explain how the component is used, when to use it, and why it should be used. Include explanations of problems it could help solve and address its advantages over similar components. Include images for visual examples.
 
 Additional sub-sections to include: 
@@ -26,26 +26,26 @@ Additional sub-sections to include:
 #### When to use X vs. Y (H3)
 #### Examples of incorrect usage (H3)
 
-### Behavior (H2)
+### Behavior 
 Explain how the component functions and break down how its elements interact with each other to achieve its purpose. It may be helpful to include additional images or animations to demonstrate how the component works.
 
-### Variations (H2)
+### Variations 
 Showcase different forms of your component and include explanations indicating when to use each one. 
 
 Additional sub-sections to include:
 #### When to use X variation vs. when to use Y variation (H3)
 
-### Spacing (H2)
+### Spacing 
 Introduce spacing requirements for components and their content. For more information regarding proper spacing, refer to our [spacing guidelines.](https://www.patternfly.org/v4/guidelines/spacers/)
 
-### Content considerations (H2)
+### Content considerations 
 Showcase the different content that could be included within your component. Here is where you can also give additional tips and tricks the user may want to know. Content guidance includes:
 
 - Editorial guidelines for labeling and message text.
 - Length restrictions and what to do when text overflows.
 - Localization considerations.
 
-### Accessibility (H2)
+### Accessibility 
 Each component that has an accessibility tab should include the following sentence within this section:
 
 "For information regarding accessibility, visit the [component name] accessibility tab."

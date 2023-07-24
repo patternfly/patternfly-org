@@ -26,7 +26,7 @@ All items in a list or series should be of the same part of speech. For example:
 </div>
 
 ## Ampersand (&)
-Avoid using **ampersands** (&), and use "and" instead.
+For clarity, avoid using **ampersands** (&), and use "and" instead.
 
 ## Buttons 
 Avoid using punctuation on **buttons**. 

@@ -12,7 +12,7 @@ Use consistent formatting, terminology, and symbols when displaying units of mea
 - Data storage, and
 - Time.
 
-When displaying quantitative values for measurements in your UI, use the [International System of Units](https://www.nist.gov/pml/owm/metric-si/si-units) (SI unit) so that your content can be understood by global users. The following table outlines the base units and symbols you should use to describe different quantities:
+When displaying quantitative values for measurements in your UI, use the [International System of Units](https://www.nist.gov/pml/owm/metric-si/si-units) (SI unit) so that your content can be understood by global users. The following table outlines the base units and symbols you should use to describe different quantitative values:
 
 <div class="ws-content-table">
 
@@ -27,13 +27,13 @@ When displaying quantitative values for measurements in your UI, use the [Intern
 
 </div>
 
-For example:
+For example, when a sentence contains a measurement, you should use the SI unit rather than the full word:
 
 <div class="ws-content-table">
 
 |**Before**  | **After** |
 |------------|-----------|
-| The table is 10 feet long. | The table is 3m long. |
+| The road is 10 feet wide. | The road is 3.048m wide. |
 
 </div>
 

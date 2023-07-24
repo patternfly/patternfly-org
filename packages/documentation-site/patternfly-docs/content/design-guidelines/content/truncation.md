@@ -5,13 +5,9 @@ section: UX writing
 
 **Truncate**, or shorten, your content whenever a string overflows the container and you don't want multiple lines of text. Typically, this is done by utilizing ellipses (...).
 
-For example, truncate page titles that show object/host names:
+For example, truncation appears in table cells that contain long strings or lots of data:
 
-![#truncation1](./img/truncation1@2x.jpg)
-
-Also truncate table or list view cells that contain long strings or lots of data:
-
-![#truncation1](./img/truncation2@2x.jpg)
+![#truncation1](./img/truncation-example.png)
 
 ## Where to truncate
 Whether you should truncate strings at the beginning, end, or in the middle requires a bit of research.
