@@ -4,8 +4,11 @@ section: UX writing
 ---
 
 In a business context, brand is the identity of a company that people recognize based on an emotional and psychological connection, as well as factual information.
+It is important to recognize that, while you can guide users through your products, and influence their experience, you cannot fully control the way users perceive your brand. A large part of your brand identity is shaped by your users’  perception.
 
-All of your UX copy should align with your company’s brand to contribute to a consistent and authentic experience across every content channel users interact with. To keep your UX copy on-brand, consider style, voice, and tone:
+What you can do to encourage a brand identity is carefully and intentionally choose the words you use. All of your UX copy should align with your company’s brand to contribute to a consistent and authentic experience across every content channel users interact with. 
+
+To keep your UX copy on-brand, consider style, voice, and tone:
 
 - **Style** is the way you use grammar, punctuation, and syntax. It’s influenced by how your words work together and what effect your writing has on the user. 
 
