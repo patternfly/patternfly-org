@@ -1,7 +1,6 @@
 ---
 id: Sentence structure
-section: Content
-subsection: Foundations
+section: UX writing
 ---
 
 ## Point of view 

@@ -1,7 +1,6 @@
 ---
 id: Punctuation
-section: Content
-subsection: Foundations
+section: UX writing
 ---
 
 ## Referring to text in the UI

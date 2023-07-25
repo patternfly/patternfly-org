@@ -1,7 +1,6 @@
 ---
 id: Capitalization
-section: Content
-subsection: Foundations
+section: UX writing
 ---
 
 Consistent capitalization adds clarity and creates unity across your products' UIs.

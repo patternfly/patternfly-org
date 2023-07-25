@@ -1,7 +1,6 @@
 ---
 id: Error messages
-section: Content
-subsection: Foundations
+section: UX writing
 ---
 
 ## Error message structure

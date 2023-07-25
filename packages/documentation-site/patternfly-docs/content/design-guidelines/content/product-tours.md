@@ -1,7 +1,6 @@
 ---
 id: Product tours
-section: Content
-subsection: Writing guides
+section: UX writing
 ---
 A product tour, also referred to as an "onboarding flow", includes a series of dialog boxes or pop-ups that introduce users to a new tool or a redesigned tool.
 

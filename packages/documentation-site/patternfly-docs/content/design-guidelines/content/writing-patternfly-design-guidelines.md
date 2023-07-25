@@ -1,7 +1,6 @@
 ---
 id: Writing PatternFly design guidelines
-section: Content
-subsection: Writing guides
+section: UX writing
 ---
 
 This guide provides instructions for writing clear and consistent design documentation for PatternFly. PatternFly's design guidelines provide users with information regarding the design, usage, behavior, and more of PatternFly's elements and components.
@@ -95,7 +94,7 @@ Annotations highlight specific areas in an image. Follow these best practices wh
 
 - Use numbered callouts to call out multiple areas in your image, then use a corresponding numbered list to explain each one. For example:
 
-    ![Two callouts highlight multiple items on a toolbar.](./img/desguidelines2.png)
+    ![Two callouts highlight multiple items on a toolbar.](../img/desguidelines2.png)
 
     **1. Items in view:** Allows the user to select the item count (number of listed items) per page, as seen in full pagination
 
@@ -103,7 +102,7 @@ Annotations highlight specific areas in an image. Follow these best practices wh
 
 - Avoid using a callout to highlight a single item, unless you're pointing out a small part of a large view, or the item isn't clearly shown in your image. Use a blank, unnumbered callout to mark the area, then bold it in your explanation. For example:
 
-    ![#A single callout highlights the login button on a large screen.](./img/desguidelines3.png)
+    ![#A single callout highlights the login button on a large screen.](../img/desguidelines3.png)
 
     Always write your **login button** as two words: "Log in."
 
