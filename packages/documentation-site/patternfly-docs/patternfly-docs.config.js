@@ -18,7 +18,7 @@ module.exports = {
     { section: 'get-started' },
     { section: 'design-foundations' },
     { section: 'accessibility' },
-    { section: 'UX writing' },
+    { section: 'Content' },
     { section: 'components' },
     { section: 'patterns' },
     { section: 'extensions' }, 
