@@ -1,6 +1,7 @@
 ---
 id: Units and symbols
-section: UX writing
+section: Content
+subsection: Foundations
 ---
 
 # Communicating measurements

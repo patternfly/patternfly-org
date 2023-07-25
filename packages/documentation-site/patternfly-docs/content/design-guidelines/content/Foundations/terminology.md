@@ -1,6 +1,7 @@
 ---
 id: Terminology
-section: UX writing
+section: Content
+subsection: Foundations
 ---
 
 This resource overviews common UI terms and their usage. 

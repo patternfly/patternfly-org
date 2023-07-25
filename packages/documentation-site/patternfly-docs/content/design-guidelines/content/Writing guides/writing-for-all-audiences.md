@@ -1,6 +1,7 @@
 ---
 id: Writing for all audiences
-section: UX writing
+section: Content
+subsection: Writing guides
 --- 
 
 By following accessibility and global writing best practices, you’ll be better equipped to create product experiences for users of all abilities and backgrounds. 

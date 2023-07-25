@@ -1,6 +1,8 @@
 ---
 id: Brand voice and tone
-section: UX writing
+section: Content
+subsection: Foundations
+
 ---
 
 In a business context, brand is the identity of a company that people recognize based on an emotional and psychological connection, as well as factual information.

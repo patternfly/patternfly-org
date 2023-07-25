@@ -1,6 +1,7 @@
 ---
 id: Writing PatternFly design guidelines
-section: UX writing
+section: Content
+subsection: Writing guides
 ---
 
 This guide provides instructions for writing clear and consistent design documentation for PatternFly. PatternFly's design guidelines provide users with information regarding the design, usage, behavior, and more of PatternFly's elements and components.

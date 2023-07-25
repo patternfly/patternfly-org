@@ -1,6 +1,7 @@
 ---
 id: Truncation
-section: UX writing
+section: Content
+subsection: Foundations
 ---
 
 **Truncate**, or shorten, your content whenever a string overflows the container and you don't want multiple lines of text. Typically, this is done by utilizing ellipses (...).

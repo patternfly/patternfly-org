@@ -1,6 +1,7 @@
 ---
 id: Numerics
-section: UX writing
+section: Content
+subsection: Foundations
 ---
 
 ## Date and time formats
