@@ -28,7 +28,7 @@ For Red Hat product terminology and documentation standards, see [Red Hat's supp
 | **Duplicate** (v.) |Use to describe creating a copy of an object (like a file or configuration). The duplicate item may be edited upon or after creation. | | Do not use interchangeably with *Copy*.
 | **Edit** (v.) | Use to describe making changes to an object (like a file, configuration, or policy). | | *Modify* and *Change* are not recommended for this use case.|
 | **Expand** (v.) | Use to describe expanding a container element (like a list or message) to show all its contents. | *Collapse*
-| Export (v.) | Use to describe packing the contents (like a project or spreadsheet) from a website or application to a file format (like .pdf or .xslx) to your system. | *Import* | Do not use interchangeably with *Download*.
+| **Export** (v.) | Use to describe packing the contents (like a project or spreadsheet) from a website or application to a file format (like .pdf or .xslx) to your system. | *Import* | Do not use interchangeably with *Download*.
 | **Export** (v.) | Use to describe packing the contents (like a project or spreadsheet) from a website or application to a file format (like .pdf or .xslx) to your system. | *Import* | Do not use interchangeably with *Download*.
 | **Filter** (v.) | Use to describe the action of narrowing a set of search results to show only items meeting a certain criteria. Filtering is mostly associated with views like tables, lists, and card grids and assumes that a search has previously been performed to return an initial results list.
 | **Hide** (v.) | Use to describe hiding something that is displayed in the interface. | *Show*
@@ -42,6 +42,7 @@ For Red Hat product terminology and documentation standards, see [Red Hat's supp
 | **OK** (adj.) | Use to collect confirmation or understanding from the user. | | Do not use *Okay,* *O.K.,* *Ok,* or *ok* in the UI.
 | **Open** (v.) | Use to describe launching something (like system preferences).| *Close*
 | **Quit** (v.) | Use to describe exiting an application.
+| **Please** (adv.) | **Do not use**  | Do not precede UI terms with "please". It is extraneous and overly formal. | 
 | **Remove** (v.) | Use to describe removing an item from a list, group, view, or other container element without completely deleting it. Also see *Add* and *Delete*. | *Add* | If what you’re removing is not readily apparent from the context, consider adding a noun (like “Remove file”).
 | **Save** (v.) | Use to describe preserving changes made by the user. | *Cancel*
 | **Search** (v.) | Use to decribe the action of querying a data set to return a results list. Searching will always be applied against some criteria and may be narrow or broad. 
@@ -54,7 +55,7 @@ For Red Hat product terminology and documentation standards, see [Red Hat's supp
 | **View** (v.) | Use to describe accessing another page to see details. (n.) Use to represent an arrangement of data in the interface (like a list view). | | Do not use interchangeably with *Show* or *Expand*.
 | **Upload** (v.) | Use to describe loading a copy of a file to a server.| | Do not use interchangeably with *Import*.
 | **Username** (n.) | Usually a unique ID (like ssmith123).
-| **Utilize** | **Do not use.** Opt for the less formal version, *Use*.
+| **Utilize** (v.) | **Do not use.** Opt for the less formal version, *Use*.
 
 </div> 
 
