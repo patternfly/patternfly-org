@@ -85,10 +85,12 @@ const AggregateCards = () => {
                 selectableActions={{
                   to: card.link,
                   selectableActionId: `clickable-stay-informed-card-${cardIndex}`,
+                  name: 'homepage-card',
+                  isExternalLink: card.hasExtLinkIcon
                 }}
               >
                 <CardTitle>
-                  <a href={card.link} isInline>
+                  <a href={card.link}>
                     {card.title}
                     {card.hasExtLinkIcon ? (
                       <>
@@ -206,6 +208,7 @@ const HomePage = () => (
           href="https://medium.com/patternfly"
           variant="link"
           aria-label="explore our blog"
+          target="_blank"
         >
           Explore our blog <ArrowRightIcon />
         </Button>
@@ -219,6 +222,8 @@ const HomePage = () => (
             selectableActions={{
               to: featuredPostsData.post1.URL,
               selectableActionId: "clickable-card-article-1",
+              name: 'homepage-card',
+              isExternalLink: true
             }}
             style={{
               backgroundImage: `url(${featuredPostsData.post1.imageURL})`,
@@ -241,6 +246,8 @@ const HomePage = () => (
             selectableActions={{
               to: featuredPostsData.post2.URL,
               selectableActionId: "clickable-card-article-2",
+              name: 'homepage-card',
+              isExternalLink: true
             }}
             style={{
               backgroundImage: `url(${featuredPostsData.post2.imageURL})`,
@@ -263,6 +270,8 @@ const HomePage = () => (
             selectableActions={{
               to: featuredPostsData.post3.URL,
               selectableActionId: "clickable-card-article-3",
+              name: 'homepage-card',
+              isExternalLink: true
             }}
             style={{
               backgroundImage: `url(${featuredPostsData.post3.imageURL})`,
@@ -285,6 +294,8 @@ const HomePage = () => (
             selectableActions={{
               to: featuredPostsData.post4.URL,
               selectableActionId: "clickable-card-article-4",
+              name: 'homepage-card',
+              isExternalLink: true
             }}
             style={{
               backgroundImage: `url(${featuredPostsData.post4.imageURL})`,
@@ -317,6 +328,7 @@ const HomePage = () => (
           href="https://github.com/patternfly"
           variant="link"
           aria-label="Patternfly on Github"
+          target="_blank"
         >
           View our Github repositories <ArrowRightIcon />
         </Button>
