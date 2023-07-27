@@ -7,3 +7,9 @@ import '@patternfly/patternfly/patternfly.css';
 import '@patternfly/patternfly/patternfly-addons.css';
 // Global theme CSS
 import '@patternfly/documentation-framework/global.css';
+// Patternfly topology
+import '@patternfly/react-topology/src/css/topology-controlbar.css';
+import '@patternfly/react-topology/src/css/topology-side-bar.css';
+import '@patternfly/react-topology/src/css/topology-view.css';
+import '@patternfly/react-topology/src/css/topology-components.css';
+import '@patternfly/react-topology/src/css/topology-pipelines.css';

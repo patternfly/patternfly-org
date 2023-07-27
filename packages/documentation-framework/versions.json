@@ -5,7 +5,7 @@
       "date": "2023-07-27",
       "latest": true,
       "versions": {
-        "@patternfly/patternfly": "5.0.0",
+        "@patternfly/patternfly": "5.0.2",
         "@patternfly/react-charts": "7.0.0",
         "@patternfly/react-code-editor": "5.0.0",
         "@patternfly/react-core": "5.0.0",

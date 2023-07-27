@@ -94,7 +94,7 @@ module.exports = (sourceMD, sourceProps, sourceFunctionDocs) => {
   sourceMD(path.join(logViewerContentBase, '/**/demos/*.md'), 'react-demos');
 
   // React-topology MD
-  sourceMD(path.join(reactTopologyPath, '/**/*.md'), 'react');
+  sourceMD(path.join(reactTopologyPath, '/**/*.md'), 'extensions');
 
   // React-user-feedback MD
   sourceMD(path.join(reactUserFeedbackPath, '/**/examples/*.md'), 'react');
