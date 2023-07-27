@@ -2074,17 +2074,6 @@
     node-addon-api "^3.2.1"
     node-gyp-build "^4.3.0"
 
-"@patternfly/ast-helpers@^0.4.57":
-  version "0.4.79"
-  resolved "https://registry.yarnpkg.com/@patternfly/ast-helpers/-/ast-helpers-0.4.79.tgz#7d738323681d5a1138d973b1daf534f1a05080b2"
-  integrity sha512-Nn2Uut7Z1nQwDr5LAf1bns6yCFQFQWwXE2I1Ucvbk6s2Gl2X/85VGvww8FVO+YiW/plLZMLBFRPJMP4fs2N8Cg==
-  dependencies:
-    acorn "^8.4.1"
-    acorn-class-fields "^1.0.0"
-    acorn-jsx "^5.3.2"
-    acorn-static-class-features "^1.0.0"
-    astring "^1.7.5"
-
 "@patternfly/patternfly-a11y@4.3.1":
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/@patternfly/patternfly-a11y/-/patternfly-a11y-4.3.1.tgz#09f050d3a899a60471519f552d64ecaaeb5fec2f"
