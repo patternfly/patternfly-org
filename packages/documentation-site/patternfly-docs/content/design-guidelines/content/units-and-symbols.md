@@ -27,16 +27,6 @@ When displaying quantitative values for measurements in your UI, use the [Intern
 
 </div>
 
-For example, when a sentence contains a measurement, you should use the SI unit rather than the full word:
-
-<div class="ws-content-table">
-
-|**Before**  | **After** |
-|------------|-----------|
-| The road is 10 feet wide. | The road is 3.048m wide. |
-
-</div>
-
 ## Currency
 
 Wherever possible, display currency in three-letter code according to [ISO Standard 4217](https://www.iso.org/iso-4217-currency-codes.html). See our [numerics](/ux-writing/numerics#numbers-and-currency) guidelines for more information about writing currency.

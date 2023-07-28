@@ -5,9 +5,9 @@ section: UX writing
 
 **Truncate**, or shorten, your content whenever a string overflows the container and you don't want multiple lines of text. Typically, this is done by utilizing ellipses (...).
 
-For example, truncation appears in table cells that contain long strings or lots of data:
+For example, use truncation when a URL overflows its container:
 
-![#truncation1](./img/truncation-example.png)
+<img src="./img/longurl.png" alt="image showing long url truncation" width="500" />
 
 ## Where to truncate
 Whether you should truncate strings at the beginning, end, or in the middle requires a bit of research.
@@ -18,7 +18,7 @@ If the product doesn't have a default truncation scheme, think about how the pro
 
 If users are able to customize settings regarding truncation, then you should match their chosen preference:
 
-![#truncation1](./img/truncation3@2x.jpg)
+<img src="./img/truncation3@2x.jpg" alt="image showing user selected truncation options" width="500" />
 
 ## Truncation guidelines and best practices
 
