@@ -18,7 +18,7 @@ If the product doesn't have a default truncation scheme, think about how the pro
 
 If users are able to customize settings regarding truncation, then you should match their chosen preference:
 
-<img src="./img/truncation3@2x.jpg" alt="image showing user selected truncation options" width="500" />
+<img src="./img/truncation3@2x.jpg" alt="image showing user selected truncation options"/>
 
 ## Truncation guidelines and best practices
 
