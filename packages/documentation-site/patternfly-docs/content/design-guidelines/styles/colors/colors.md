@@ -9,16 +9,53 @@ import './colors.css';
 
 # PatternFly colors
 
-PatternFly color pal
+This guide outlines the colors recommended by PatternFly and specifies which colors to use in different scenarios. 
 
-[See a list of all global CSS variables.](/developer-resources/global-css-variables/#global-css-variables)
+[A list of all global CSS variables is available in our developer resources.](/developer-resources/global-css-variables/#global-css-variables)
 
-## Dark theme colors 
+## PatternFly color palettes
+
+Our palettes are created as a system designed to reinforce application content and workflows. Bright colors are reserved for specific interactions, such as reinforcing status, and are used sparingly. Our palettes are simple, consolidated, and versatile to allow them to be easily deployed for any situation.
+
+<Grid hasGutter>
+  <GridItem xl2RowSpan={1} xl2={4} xl={6} xlRowSpan={2} sm={12}>
+    <ColorFamily title="Gray family" family="black" />
+  </GridItem>
+  <GridItem xl2={4} xl={6} sm={12}>
+    <ColorFamily title="Blue family" family="blue" />
+  </GridItem>
+  <GridItem xl2={4} xl={6} sm={12}>
+    <ColorFamily title="Shadows" family="shadows" />
+  </GridItem>
+  <GridItem xl2={4} xl={6} sm={12}>
+    <ColorFamily title="Green family" family="green" />
+  </GridItem>
+  <GridItem xl2={4} xl={6} sm={12}>
+    <ColorFamily title="Cyan family" family="cyan" />
+  </GridItem>
+  <GridItem xl2={4} xl={6} sm={12}>
+    <ColorFamily title="Purple family" family="purple" />
+  </GridItem>
+  <GridItem xl2={4} xl={6} sm={12}>
+    <ColorFamily title="Light blue family" family="light-blue" />
+  </GridItem>
+  <GridItem xl2={4} xl={6} sm={12}>
+    <ColorFamily title="Gold family" family="gold" />
+  </GridItem>
+  <GridItem xl2={4} xl={6} sm={12}>
+    <ColorFamily title="Light green family" family="light-green" />
+  </GridItem>
+  <GridItem xl2={4} xl={6} sm={12}>
+    <ColorFamily title="Orange family" family="orange" />
+  </GridItem>
+  <GridItem xl2={4} xl={6} sm={12}>
+    <ColorFamily title="Red family" family="red" />
+  </GridItem>
+</Grid>
 
 ## Primary colors
 <Grid hasGutter>
   <GridItem xl={6} lg={12} className="ws-colors-gridtext">
-    ### PatternFly blue
     <p>
       Primary colors are those displayed most frequently across your application screens and components. Our primary colors (PatternFly blue) are used across components and are typically applied to default, active, focus, and hover states.
     </p>
@@ -37,7 +74,10 @@ PatternFly color pal
   </GridItem>
 </Grid>
 
-## Global colors
+## Dark theme colors 
+
+
+## Color guidance
 
 ### Text and icons
 <Grid hasGutter>
@@ -45,16 +85,29 @@ PatternFly color pal
     <p>
       Text and icon colors are extremely similar because they can be used in the same context, such as for a link button. We have multiple shades of text colors for both light and dark backgrounds so that you can emphasize hierarchy in any color scenario.
     </p>
-    <ColorSwatch color="--pf-v5-global--Color--100">
-      This color is used for standard text, icons, and as a hover state color for icon buttons. It is most commonly used as a text color for many components and application screens.
-    </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--Color--200">
-      This color is used as a secondary text color and as a default color for icon buttons. It is most commonly used for many components, such as the app launcher and empty states.
-    </ColorSwatch>
-    <ColorSwatch color="--pf-v5-global--link--Color">
-      This color is most commonly used for link text and icons for many components, such as navigation and accordions. Blue icons use the same primary color variable as the blue text.
-    </ColorSwatch>
+
+  #### Standard text and icons
+  
+  <ColorSwatch color="--pf-v5-global--Color--100">
+  </ColorSwatch>
+    
+  This color is used for standard text, icons, and as a hover state color for icon buttons. It is most commonly used as a text color for many components and application screens.
+
+  #### Secondary text and icons
+
+  <ColorSwatch color="--pf-v5-global--Color--200">
+  </ColorSwatch>
+
+  This color is used as a secondary text color and as a default color for icon buttons. It is most commonly used for many components, such as the app launcher and empty states.
+  
+  ### Blue text and icons
+
+  <ColorSwatch color="--pf-v5-global--link--Color">
+  </ColorSwatch>
+
+  This color is most commonly used for link text and icons for many components, such as navigation and accordions. Blue icons use the same primary color variable as the blue text.
   </GridItem>
+
   <GridItem xl={6} lg={12}>
     <img width="480px" src="./patternfly-typography.png" alt="PatternFly typography colors" />
   </GridItem>
@@ -207,42 +260,3 @@ PatternFly color pal
 Check the contrast between the background color and text color using a <a href="https://color.a11y.com/?wc3" target="_blank" className="pf-m-link">WCAG AA-compliance tool.</a>
 
 Make sure that, on hover, the link text color has ample contrast from both the background color and the default state link color.
-
-## Color palette
-Our palettes are created as a system designed to reinforce application content and workflows. Bright colors are reserved for specific interactions, such as reinforcing status, and are used sparingly. Our palettes are simple, consolidated, and versatile to allow them to be easily deployed for any situation.
-
-<Grid hasGutter>
-  <GridItem xl2RowSpan={1} xl2={4} xl={6} xlRowSpan={2} sm={12}>
-    <ColorFamily title="Gray family" family="black" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Blue family" family="blue" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Shadows" family="shadows" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Green family" family="green" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Cyan family" family="cyan" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Purple family" family="purple" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Light blue family" family="light-blue" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Gold family" family="gold" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Light green family" family="light-green" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Orange family" family="orange" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Red family" family="red" />
-  </GridItem>
-</Grid>
