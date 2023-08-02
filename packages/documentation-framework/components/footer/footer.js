@@ -56,7 +56,7 @@ export const Footer = () => (
                   <li className="ws-org-pfsite-footer-menu-list-item">
                     <Link
                       className="ws-org-pfsite-footer-menu-link"
-                      to="/guidelines/colors"
+                      to="/design-foundations/colors"
                       aria-label="PatternFly 4 styles"
                     >
                       Styles
