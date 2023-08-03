@@ -90,7 +90,7 @@ If you're a developer, check out our [getting started](/get-started/develop#usin
 <Divider className="ws-icons-divider" />
 
 ## Icon colors
-Visit our [colors page](/guidelines/colors) to learn more about icon colors.
+Visit our [colors page](/design-foundations/colors) to learn more about icon colors.
 
 <Divider className="ws-icons-divider" />
 
