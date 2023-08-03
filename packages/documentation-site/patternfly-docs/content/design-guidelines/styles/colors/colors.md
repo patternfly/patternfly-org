@@ -181,49 +181,49 @@ Our palettes are created as a system designed to reinforce application content a
 
 Our color palette is organized into color "families", the details of which can be explored in the following resources.
 
-<ColorFamily title="Gray family" family="black" width="500px/>
+<ColorFamily title="Gray family" family="black" width="500px"/>
 
 <br/>
 
-<ColorFamily title="Blue family" family="blue" width="500px/>
+<ColorFamily title="Blue family" family="blue" width="500px"/>
 
 <br/>
 
-<ColorFamily title="Shadows" family="shadows" width="500px/>
+<ColorFamily title="Shadows" family="shadows" width="500px"/>
 
 <br/>
 
-<ColorFamily title="Green family" family="green" width="500px/>
+<ColorFamily title="Green family" family="green" width="500px"/>
 
 <br/>
 
-<ColorFamily title="Cyan family" family="cyan" width="500px/>
+<ColorFamily title="Cyan family" family="cyan" width="500px"/>
 
 <br/>
 
-<ColorFamily title="Purple family" family="purple" width="500px/>
+<ColorFamily title="Purple family" family="purple" width="500px"/>
 
 <br/>
 
-<ColorFamily title="Light blue family" family="light-blue" width="500px/>
+<ColorFamily title="Light blue family" family="light-blue" width="500px"/>
 
 <br/>
 
-<ColorFamily title="Gold family" family="gold" width="500px/>
+<ColorFamily title="Gold family" family="gold" width="500px"/>
 
 <br/>
 
-<ColorFamily title="Light green family" family="light-green" width="500px/>
+<ColorFamily title="Light green family" family="light-green" width="500px"/>
 
 <br/>
 
-<ColorFamily title="Orange family" family="orange" width="500px/>
+<ColorFamily title="Orange family" family="orange" width="500px"/>
 
 <br/>
 
-<ColorFamily title="Red family" family="red" width="500px/>
+<ColorFamily title="Red family" family="red" width="500px"/>
   
 <br/>
 
 ## Dark theme
-Our [dark theme handbook](developer-resources/dark-theme-handbook) details important information about PatternFly's dark theme and its implmenetation process.
+Our [dark theme handbook](/developer-resources/dark-theme-handbook) details important information about PatternFly's dark theme and its implmenetation process.
