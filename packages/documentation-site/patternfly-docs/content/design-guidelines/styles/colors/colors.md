@@ -161,38 +161,26 @@ Make sure that, on hover, the link text color has ample contrast from both the b
 ## Color palette
 Our palettes are created as a system designed to reinforce application content and workflows. Bright colors are reserved for specific interactions, such as reinforcing status, and are used sparingly. Our palettes are simple, consolidated, and versatile to allow them to be easily deployed for any situation.
 
-<Grid hasGutter>
-  <GridItem xl2RowSpan={1} xl2={4} xl={6} xlRowSpan={2} sm={12}>
-    <ColorFamily title="Gray family" family="black" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Blue family" family="blue" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Shadows" family="shadows" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Green family" family="green" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Cyan family" family="cyan" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Purple family" family="purple" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Light blue family" family="light-blue" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Gold family" family="gold" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Light green family" family="light-green" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Orange family" family="orange" />
-  </GridItem>
-  <GridItem xl2={4} xl={6} sm={12}>
-    <ColorFamily title="Red family" family="red" />
-  </GridItem>
-</Grid>
+
+<ColorFamily title="Gray family" family="black" />
+
+<ColorFamily title="Blue family" family="blue" />
+
+<ColorFamily title="Shadows" family="shadows" />
+
+<ColorFamily title="Green family" family="green" />
+
+<ColorFamily title="Cyan family" family="cyan" />
+
+<ColorFamily title="Purple family" family="purple" />
+
+<ColorFamily title="Light blue family" family="light-blue" />
+
+<ColorFamily title="Gold family" family="gold" />
+
+<ColorFamily title="Light green family" family="light-green" />
+
+<ColorFamily title="Orange family" family="orange" />
+
+<ColorFamily title="Red family" family="red" />
+  
