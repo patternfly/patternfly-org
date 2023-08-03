@@ -18,6 +18,8 @@ This color usually indicates a default or active state for many components.
 <ColorSwatch label="Hover" color="--pf-v5-global--primary-color--200">
 This color is most commonly used as the hover or focus state for components that use the default primary color.
 </ColorSwatch>
+
+<br/>
   
 ## Text and icon colors
 
@@ -35,6 +37,8 @@ This color is used as a secondary text color and as a default color for icon but
 This color is used for link text and icons.
 </ColorSwatch>
   
+ <br/>
+ 
 ## Background colors
 
 Background colors are used throughout components and, depending on the use case, for certain screens.
@@ -57,8 +61,9 @@ This color is most commonly used as a background color for many components, such
 <ColorSwatch color="--pf-v5-global--BackgroundColor--dark-400">
 This color is used as a background color for navigation.
 </ColorSwatch>
-  
-<Divider className="ws-colors-divider" />
+
+<br/>
+
 
 ## Status and state colors
 
@@ -78,6 +83,8 @@ Status and state colors are indicators that communicate data and actions to user
   This color is used as the background color for the default inline alert component.
 </ColorSwatch>
 
+<br/>
+
 ### Danger
 <ColorSwatch color="--pf-v5-global--danger-color--200" caption="alert title">
 This color is used as the title color for the danger alert component.
@@ -89,6 +96,8 @@ This color is used as the icon color for the danger alert component.
 This color is used as the background color for danger inline alert component.
 </ColorSwatch>
 
+<br/>
+
 ### Success
 <ColorSwatch color="--pf-v5-global--success-color--200" caption="alert title">
 This color is used as the title color for the success alert component.
@@ -99,6 +108,8 @@ This color is used as the icon color for the success alert component.
 <ColorSwatch color="--pf-v5-global--palette--green-50" caption="inline alert background">
 This color is used as the background color for the success inline alert component.
 </ColorSwatch>
+
+<br/>
 
 ### Info
 
@@ -112,6 +123,8 @@ This color is used as the icon color for the default alert component.
 This color is used as the background color for the info inline alert component.
 </ColorSwatch>
 
+<br/>
+
 ### Warning
 <ColorSwatch color="--pf-v5-global--warning-color--200" caption="alert title">
   This color is used as the title color for the warning alert component.
@@ -123,6 +136,8 @@ This color is used as the background color for the info inline alert component.
   This color is used as the background color for the warning inline alert component.
 </ColorSwatch>
 
+<br/>
+
 ### Disabled
 <ColorSwatch color="--pf-v5-global--disabled-color--100">
   This color is used as the text color when components are disabled.
@@ -133,6 +148,8 @@ This color is used as the background color for the info inline alert component.
 <ColorSwatch color="--pf-v5-global--disabled-color--300">
   This color is used as an alternate background color for components when they are disabled, such as dropdowns and options menus.
 </ColorSwatch>
+
+<br/>
 
 ## Shadows
 
@@ -148,39 +165,65 @@ This variable displays a medium shadow for many components, such as accordions a
 This variable displays a small shadow for the card component.
 </ColorSwatch>
 
+<br/>
+
 
 ## Contrast ratios
-<p>
-  <a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/" target="_blank" className="pf-m-link">Level AA in the Web Content Accessibility Guidelines 2.1</a> requires a contrast ratio of at least 4.5:1 for normal text, 3:1 for large text, and 3:1 for graphics and UI components (such as form input borders).
-</p>
 
-Check the contrast between the background color and text color using a <a href="https://color.a11y.com/?wc3" target="_blank" className="pf-m-link">WCAG AA-compliance tool.</a>
+<a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/" target="_blank" className="pf-m-link">Level AA in the Web Content Accessibility Guidelines 2.1</a> requires a contrast ratio of at least 4.5:1 for normal text, 3:1 for large text, and 3:1 for graphics and UI components (such as form input borders).
 
-Make sure that, on hover, the link text color has ample contrast from both the background color and the default state link color.
+Check the contrast between your background color and text color using a <a href="https://color.a11y.com/?wc3" target="_blank" className="pf-m-link">WCAG AA-compliance tool.</a>
+
+Make sure that, on hover, any link text color has ample contrast from both your background color and default state link color.
 
 ## Color palette
 Our palettes are created as a system designed to reinforce application content and workflows. Bright colors are reserved for specific interactions, such as reinforcing status, and are used sparingly. Our palettes are simple, consolidated, and versatile to allow them to be easily deployed for any situation.
 
+Our color palette is organized into color "families", the details of which can be explored in the following resources.
 
-<ColorFamily title="Gray family" family="black" />
+<ColorFamily title="Gray family" family="black" width="500px/>
 
-<ColorFamily title="Blue family" family="blue" />
+<br/>
 
-<ColorFamily title="Shadows" family="shadows" />
+<ColorFamily title="Blue family" family="blue" width="500px/>
 
-<ColorFamily title="Green family" family="green" />
+<br/>
 
-<ColorFamily title="Cyan family" family="cyan" />
+<ColorFamily title="Shadows" family="shadows" width="500px/>
 
-<ColorFamily title="Purple family" family="purple" />
+<br/>
 
-<ColorFamily title="Light blue family" family="light-blue" />
+<ColorFamily title="Green family" family="green" width="500px/>
 
-<ColorFamily title="Gold family" family="gold" />
+<br/>
 
-<ColorFamily title="Light green family" family="light-green" />
+<ColorFamily title="Cyan family" family="cyan" width="500px/>
 
-<ColorFamily title="Orange family" family="orange" />
+<br/>
 
-<ColorFamily title="Red family" family="red" />
+<ColorFamily title="Purple family" family="purple" width="500px/>
+
+<br/>
+
+<ColorFamily title="Light blue family" family="light-blue" width="500px/>
+
+<br/>
+
+<ColorFamily title="Gold family" family="gold" width="500px/>
+
+<br/>
+
+<ColorFamily title="Light green family" family="light-green" width="500px/>
+
+<br/>
+
+<ColorFamily title="Orange family" family="orange" width="500px/>
+
+<br/>
+
+<ColorFamily title="Red family" family="red" width="500px/>
   
+<br/>
+
+## Dark theme
+Our [dark theme handbook](developer-resources/dark-theme-handbook) details important information about PatternFly's dark theme and its implmenetation process.
